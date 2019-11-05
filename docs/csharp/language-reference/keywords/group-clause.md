@@ -9,12 +9,12 @@ helpviewer_keywords:
 - group keyword [C#]
 - group clause [C#]
 ms.assetid: c817242e-b12c-4baa-a57e-73ee138f34d1
-ms.openlocfilehash: 160b25bd93f7d7c69ec104a31a0608e930e2dee3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 806bc3de138ebae682d2e248593230c753eb7ba2
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54534895"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422766"
 ---
 # <a name="group-clause-c-reference"></a>Предложение group (Справочник по C#)
 
@@ -54,7 +54,7 @@ ms.locfileid: "54534895"
 
 ### <a name="grouping-by-numeric-range"></a>Группировка по числовому диапазону
 
-В следующем примере с помощью выражения создаются числовые ключи групп, обозначающие диапазоны значений в выборке. Обратите внимание на удобное использование [let](let-clause.md) для хранения результатов вызова метода, чтобы в предложении `group` не приходилось вызывать метод дважды. Дополнительные сведения о безопасном использовании методов в выражениях запросов см. в практическом руководстве по [ обработке исключений в выражениях запросов](../../programming-guide/linq-query-expressions/how-to-handle-exceptions-in-query-expressions.md).
+В следующем примере с помощью выражения создаются числовые ключи групп, обозначающие диапазоны значений в выборке. Обратите внимание на удобное использование [let](let-clause.md) для хранения результатов вызова метода, чтобы в предложении `group` не приходилось вызывать метод дважды. Дополнительные сведения о безопасном использовании методов в выражениях запросов см. в практическом руководстве по [ обработке исключений в выражениях запросов](../../linq/handle-exceptions-in-query-expressions.md).
 
 [!code-csharp[cscsrefQueryKeywords#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Group.cs#15)]
 

@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 06f3b504-085f-4142-934a-25381fe23d4c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: babb1ace1385c241b782691f22bfb4fbb689e310
-ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
+ms.openlocfilehash: 2a36c9808f29c038e3185157078c235959baf13c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274074"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132364"
 ---
 # <a name="cor_debug_il_to_native_map-structure"></a>Структура COR_DEBUG_IL_TO_NATIVE_MAP
 Содержит смещения, которые используются для сопоставления кода MSIL с машинным кодом.  
@@ -36,7 +34,7 @@ typedef struct COR_DEBUG_IL_TO_NATIVE_MAP {
 } COR_DEBUG_IL_TO_NATIVE_MAP;  
 ```  
   
-## <a name="members"></a>Участники  
+## <a name="members"></a>Члены  
   
 |Член|Описание|  
 |------------|-----------------|  
@@ -45,11 +43,11 @@ typedef struct COR_DEBUG_IL_TO_NATIVE_MAP {
 |`nativeEndOffset`|Смещение конца машинного кода.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
- **Заголовок.** CorProf. idl, CorDebug. idl  
+ **Заголовок:** CorProf. idl, CorDebug. idl  
   
- **Библиотечная** Коргуидс. lib  
+ **Библиотека:** CorGuids.lib  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

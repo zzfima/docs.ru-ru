@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - anonymous types [C#], for subsets of element properties
 ms.assetid: fabdf349-f443-4e3f-8368-6c471be1dd7b
-ms.openlocfilehash: 2c9fea2189819058187020c2e67b8826659fbed4
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 196383731507137bf4309d38d27b36f29b23a06c
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70205448"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73419302"
 ---
 # <a name="how-to-return-subsets-of-element-properties-in-a-query-c-programming-guide"></a>Практическое руководство. Руководство по программированию на C#. Возвращение подмножества свойств элементов в запросе
 Используйте анонимный тип в выражении запроса, если выполняются оба следующих условия:  
@@ -50,4 +50,4 @@ Console.WriteLine(student.First + " " + student.Last);
 
 - [Руководство по программированию на C#](../index.md)
 - [Анонимные типы](./anonymous-types.md)
-- [Выражения запросов LINQ](../linq-query-expressions/index.md)
+- [LINQ в C#](../../linq/index.md)

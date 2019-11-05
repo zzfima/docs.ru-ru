@@ -9,21 +9,21 @@ helpviewer_keywords:
 - Windows Forms, anchoring and docking WPF content
 - interoperability [WPF]
 ms.assetid: 5efb1c53-1484-43d6-aa8a-f4861b99bb8a
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 7858ffd708c78d6397d533f613ccc2ea78d6cbed
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: c9db49ae299870479a5cfa6372c25d793a92ff8f
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69658526"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460680"
 ---
-# <a name="walkthrough-arrange-wpf-content-on-windows-forms-at-design-time"></a>Пошаговое руководство. Размещение содержимого WPF на Windows Forms во время разработки
+# <a name="walkthrough-arrange-wpf-content-on-windows-forms-at-design-time"></a>Пошаговое руководство. размещение содержимого WPF на Windows Forms во время разработки
 
 В этой статье показано, как использовать функции макета Windows Forms, такие как привязка и линии привязки, для упорядочения элементов управления Windows Presentation Foundation (WPF).
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>Необходимые компоненты
 
 Для выполнения шагов, описанных в этом руководстве, вам понадобится Visual Studio.
 
@@ -38,13 +38,13 @@ ms.locfileid: "69658526"
 
 После добавления в проект элемента управления WPF можно разместить его в форме.
 
-1. Добавьте в проект новый элемент управления WPF <xref:System.Windows.Controls.UserControl>. Используйте имя по умолчанию для этого типа элемента управления (`UserControl1.xaml`). Дополнительные сведения см. в разделе [Пошаговое руководство: Создание нового содержимого WPF на Windows Forms во время](walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md)разработки.
+1. Добавьте в проект новый элемент управления WPF <xref:System.Windows.Controls.UserControl>. Используйте имя по умолчанию для этого типа элемента управления (`UserControl1.xaml`). Дополнительные сведения см. в разделе [Пошаговое руководство. Создание нового содержимого WPF на Windows Forms во время разработки](walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md).
 
 2. Убедитесь в том, что элемент `UserControl1` выбран в представлении конструирования.
 
 3. В окне **Свойства** задайте для свойств <xref:System.Windows.FrameworkElement.Width%2A> и <xref:System.Windows.FrameworkElement.Height%2A> значение **200**.
 
-4. Присвойте <xref:System.Windows.Controls.Control.Background%2A> свойству значение **Blue**.
+4. Присвойте свойству <xref:System.Windows.Controls.Control.Background%2A> значение **Blue**.
 
 5. Выполните построение проекта.
 
@@ -54,29 +54,29 @@ ms.locfileid: "69658526"
 
 1. Откройте `Form1` в конструкторе Windows Forms.
 
-2. В **области элементов**перетащите <xref:System.Windows.Forms.TableLayoutPanel> элемент управления на форму.
+2. На **панели элементов**перетащите элемент управления <xref:System.Windows.Forms.TableLayoutPanel> на форму.
 
-3. На панели смарт-тегов элементауправлениявыберитеудалитьпоследнюю<xref:System.Windows.Forms.TableLayoutPanel> строку.
+3. На панели смарт-тегов элемента управления <xref:System.Windows.Forms.TableLayoutPanel> выберите **удалить последнюю строку**.
 
 4. Увеличьте высоту и ширину элемента управления <xref:System.Windows.Forms.TableLayoutPanel>.
 
-5. В **области элементов**дважды щелкните `UserControl1` , чтобы `UserControl1` создать экземпляр в первой ячейке <xref:System.Windows.Forms.TableLayoutPanel> элемента управления.
+5. На **панели элементов**дважды щелкните `UserControl1`, чтобы создать экземпляр `UserControl1` в первой ячейке элемента управления <xref:System.Windows.Forms.TableLayoutPanel>.
 
    Экземпляр `UserControl1` разместится в новом элементе управления <xref:System.Windows.Forms.Integration.ElementHost> с именем `elementHost1`.
 
-6. В **области элементов**дважды щелкните `UserControl1` , чтобы создать другой экземпляр во <xref:System.Windows.Forms.TableLayoutPanel> второй ячейке элемента управления.
+6. На **панели элементов**дважды щелкните `UserControl1`, чтобы создать другой экземпляр во второй ячейке элемента управления <xref:System.Windows.Forms.TableLayoutPanel>.
 
 7. В окне **Структура документа** выберите `tableLayoutPanel1`.
 
-8. В окне **Свойства** присвойте <xref:System.Windows.Forms.Control.Padding%2A> свойству значение **10, 10, 10, 10**.
+8. В окне **Свойства** присвойте свойству <xref:System.Windows.Forms.Control.Padding%2A> значение **10, 10, 10, 10**.
 
    Размер обоих элементов управления <xref:System.Windows.Forms.Integration.ElementHost> изменится в соответствии с новой структурой.
 
 ## <a name="use-snaplines-to-align-wpf-controls"></a>Использование линий привязки для выровняйте элементы управления WPF
 
-Линии привязки позволяют легко выравнивать элементы управления в форме. Линии привязки также можно использовать для выравнивания элементов управления WPF. Дополнительные сведения см. в разделе [Пошаговое руководство: Упорядочивание элементов управления в Windows Forms с](../controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)помощью линий привязки.
+Линии привязки позволяют легко выравнивать элементы управления в форме. Линии привязки также можно использовать для выравнивания элементов управления WPF. Дополнительные сведения см. [в разделе Пошаговое руководство. Упорядочивание элементов управления в Windows Forms с помощью линий привязки](../controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md).
 
-1. Перетащите экземпляр `UserControl1` из **области элементов**в форму и поместите его в пространство под <xref:System.Windows.Forms.TableLayoutPanel> элементом управления.
+1. Из **панели элементов**перетащите экземпляр `UserControl1` на форму и поместите его в пространство под элементом управления <xref:System.Windows.Forms.TableLayoutPanel>.
 
    Экземпляр `UserControl1` разместится в новом элементе управления <xref:System.Windows.Forms.Integration.ElementHost> с именем `elementHost3`.
 
@@ -90,7 +90,7 @@ ms.locfileid: "69658526"
 
 6. Перемещайте `elementHost3` от элемента управления <xref:System.Windows.Forms.TableLayoutPanel> до тех пор, пока между элементами управления снова не появится центральная линия привязки. Теперь центральная линия привязки указывает на поле шириной в 20 точек.
 
-7. Перейти `elementHost3` вправо до тех пор, пока его левый элемент не будет сопоставлен с левым `elementHost1`ребром.
+7. Переместить `elementHost3` вправо до тех пор, пока его левый элемент не выйдет по левому краю `elementHost1`.
 
 8. Изменяйте ширину элемента `elementHost3` до тех пор, пока его правый край не будет выровнен относительно правого края элемента управления `elementHost2`.
 
@@ -100,7 +100,7 @@ ms.locfileid: "69658526"
 
 1. Выберите `elementHost1`.
 
-2. В окне **Свойства** задайте <xref:System.Windows.Forms.Control.Anchor%2A> для свойства значение **сверху, снизу, слева, справа**.
+2. В окне **Свойства** задайте для свойства <xref:System.Windows.Forms.Control.Anchor%2A> значение **сверху, снизу, слева, справа**.
 
 3. Увеличьте размер элемента управления <xref:System.Windows.Forms.TableLayoutPanel>.
 
@@ -108,7 +108,7 @@ ms.locfileid: "69658526"
 
 4. Выберите `elementHost2`.
 
-5. В окне **Свойства** присвойте <xref:System.Windows.Forms.Control.Dock%2A> свойству <xref:System.Windows.Forms.DockStyle.Fill>значение.
+5. В окне **Свойства** присвойте свойству <xref:System.Windows.Forms.Control.Dock%2A> значение <xref:System.Windows.Forms.DockStyle.Fill>.
 
    Элемент управления `elementHost2` заполнит всю ячейку.
 
@@ -126,15 +126,15 @@ ms.locfileid: "69658526"
 
     Размер всех трех элементов управления <xref:System.Windows.Forms.Integration.ElementHost> изменится соответствующим образом.
 
-    Дополнительные сведения см. в разделе [Практическое руководство. Привязка и закрепление дочерних элементов управления в элементе](../controls/how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)управления TableLayoutPanel.
+    Дополнительные сведения см. [в разделе инструкции. привязка и закрепление дочерних элементов управления в элементе управления TableLayoutPanel](../controls/how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md).
 
 ## <a name="see-also"></a>См. также
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [Практическое руководство. Привязка и закрепление дочерних элементов управления в элементе управления TableLayoutPanel](../controls/how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)
-- [Практическое руководство. Выровняйте элемент управления по краям форм во время разработки](../controls/how-to-align-a-control-to-the-edges-of-forms-at-design-time.md)
-- [Пошаговое руководство: Упорядочивание элементов управления в Windows Forms с помощью линий привязки](../controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
+- [Практическое руководство. Выравнивание элементов управления по границам формы во время выполнения](../controls/how-to-align-a-control-to-the-edges-of-forms-at-design-time.md)
+- [Пример. Упорядочение элементов управления в формах Windows Forms с помощью линий привязки](../controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
 - [Миграция и взаимодействие систем](../../wpf/advanced/migration-and-interoperability.md)
 - [Использование элементов управления WPF](using-wpf-controls.md)
-- [Проектирование XAML в Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)
+- [Проектирование XAML в Visual Studio](/visualstudio/xaml-tools/designing-xaml-in-visual-studio)

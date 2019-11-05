@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c431617a-b055-44a0-8730-48b7a86d9610
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b1a044d1600f7e21e3abfbf704daef5213617b4c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 87549118742da797ef0dd1b08ae9e72c466f7841
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780051"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139574"
 ---
 # <a name="icorruntimehostgetconfiguration-method"></a>Метод ICorRuntimeHost::GetConfiguration
-Возвращает объект, который позволяет основному приложению задавать конфигурацию обратного вызова для общеязыковой среды выполнения (CLR).  
+Возвращает объект, позволяющий основному приложению указывать конфигурацию обратного вызова среды CLR.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,19 +35,19 @@ HRESULT GetConfiguration(
   
 ## <a name="parameters"></a>Параметры  
  `pConfiguration`  
- [out] Указатель на адрес [ICorConfiguration](../../../../docs/framework/unmanaged-api/hosting/icorconfiguration-interface.md) объект, который можно использовать для настройки среды CLR.  
+ заполняет Указатель на адрес объекта [ICorConfiguration](../../../../docs/framework/unmanaged-api/hosting/icorconfiguration-interface.md) , который может использоваться для настройки среды CLR.  
   
-## <a name="remarks"></a>Примечания  
- Среда CLR должен быть настроен до инициализации; в противном случае `GetConfiguration` метод возвращает значение HRESULT, указывающее, произошла ошибка.  
+## <a name="remarks"></a>Заметки  
+ Прежде чем инициализировать среду CLR, ее необходимо настроить. в противном случае метод `GetConfiguration` возвращает значение HRESULT, указывающее на ошибку.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** MSCorEE.h  
+ **Заголовок:** MSCorEE. h  
   
- **Библиотека:** Включена как ресурс в MSCorEE.dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MSCorEE. dll  
   
- **Версии платформы .NET framework:** 1.0, 1.1  
+ **.NET Framework версии:** 1,0, 1,1  
   
 ## <a name="see-also"></a>См. также
 

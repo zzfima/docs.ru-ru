@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 189c36be-028c-4fba-a002-5edfb8fcd07f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 82f6c96e64b1197b5762c0ad7dbed5458b5d71a3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8cebb66ecf298eaaca0e7af23a9b8c6a2932c23f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67760891"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131825"
 ---
 # <a name="icordebugstackwalknext-method"></a>Метод ICorDebugStackWalk::Next
-Перемещает [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) объекта следующий кадр.  
+Перемещает объект [икордебугстакквалк](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) в следующий кадр.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,20 +36,20 @@ HRESULT Next();
   
 |HRESULT|Описание|  
 |-------------|-----------------|  
-|S_OK|Среда выполнения успешно развернута на следующий кадр (см. в разделе "Примечания").|  
-|E_FAIL|`ICorDebugStackWalk` Не удалось перевести объект.|  
-|CORDBG_S_AT_END_OF_STACK|В результате разворачивания достигнут конец стека.|  
-|CORDBG_E_PAST_END_OF_STACK|Указатель кадра уже находится в конце стека; Таким образом может осуществляться без дополнительных кадров.|  
+|S_OK|Среда выполнения успешно развернута до следующего кадра (см. примечания).|  
+|E_FAIL|Объект `ICorDebugStackWalk` не может быть расширен.|  
+|CORDBG_S_AT_END_OF_STACK|В результате этого очистки достигнут конец стека.|  
+|CORDBG_E_PAST_END_OF_STACK|Указатель фрейма уже находится в конце стека; Поэтому доступ к дополнительным кадрам невозможен.|  
   
 ## <a name="exceptions"></a>Исключения  
   
-## <a name="remarks"></a>Примечания  
- `Next` Метод перемещает `ICorDebugStackWalk` объекта вызывающий кадр только в том случае, если среда выполнения может развернуть текущего кадра. В противном случае этот объект перемещается к следующему кадру, который среда выполнения может развернуть.  
+## <a name="remarks"></a>Заметки  
+ Метод `Next` перемещает объект `ICorDebugStackWalk` в вызывающий кадр только в том случае, если среда выполнения может очистить текущий кадр. В противном случае объект переходит к следующему кадру, который среда выполнения может очистить.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 35c2173e-3b0b-4b2a-950d-e0a01c6df052
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: aeb4c9935d5e9e4063497dd56276edfe6e62752a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0ce822533b0699f3467dc08044aa4dab59285a77
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67765585"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120318"
 ---
 # <a name="iclrruntimeinfogetdefaultstartupflags-method"></a>Метод ICLRRuntimeInfo::GetDefaultStartupFlags
-Получает флаги загрузки и файл конфигурации узла, который будет использоваться для запуска среды выполнения.  
+Возвращает флаги запуска и файл конфигурации узла, которые будут использоваться для запуска среды выполнения.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,30 +36,30 @@ HRESULT GetDefaultStartupFlags(
   
 ## <a name="parameters"></a>Параметры  
  `pdwStartupFlags`  
- [out] Указатель на флаги запуска узла, которые в настоящее время заданы.  
+ заполняет Указатель на установленные в данный момент флаги запуска узла.  
   
  `pwzHostConfigFile`  
- [out] Указатель на путь к каталогу текущего файла конфигурации узла.  
+ заполняет Указатель на путь к каталогу текущего файла конфигурации узла.  
   
  `pcchHostConfigFile`  
- [in, out] На входе размер `pwzHostConfigFile`, чтобы избежать переполнения буфера. Если `pwzHostConfigFile` имеет значение null, метод возвращает требуемый размер `pwzHostConfigFile` для предварительного выделения.  
+ [вход, выход] На входе — размер `pwzHostConfigFile`, чтобы избежать переполнения буфера. Если `pwzHostConfigFile` имеет значение null, метод возвращает требуемый размер `pwzHostConfigFile` для предварительного выделения.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Этот метод возвращает следующие конкретных ошибках HRESULT а также ошибки HRESULT, которые указывают на сбой метода.  
+ Этот метод возвращает следующее конкретное значение HRESULT, а также ошибки HRESULT, которые указывают на сбой метода.  
   
 |HRESULT|Описание|  
 |-------------|-----------------|  
 |S_OK|Метод завершился успешно.|  
   
-## <a name="remarks"></a>Примечания  
- Этот метод возвращает значения по умолчанию флаг (`STARTUP_CONCURRENT_GC` и `NULL`), или значения, предоставленные предыдущего вызова [метод ICLRRuntimeInfo::SetDefaultStartupFlags](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-setdefaultstartupflags-method.md), или значения, заданные по любому `CorBind*` методы, если они привязаны к этой среде выполнения.  
+## <a name="remarks"></a>Заметки  
+ Этот метод возвращает значения флагов по умолчанию (`STARTUP_CONCURRENT_GC` и `NULL`) или значения, предоставленные предыдущим вызовом [метода ICLRRuntimeInfo:: сетдефаултстартупфлагс](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-setdefaultstartupflags-method.md), или значения, заданные любыми методами `CorBind*`, если они привязаны к этой среде выполнения.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** MetaHost.h  
+ **Заголовок:** Метахост. h  
   
- **Библиотека:** Включена как ресурс в MSCorEE.dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: e835062c-c7d6-4945-8a44-2de7ebf3928e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5a408995793caf879f8d5624ab727102c4859195
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 008143c608cd19bee9dd115e97620906fb5b93b9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69959614"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129409"
 ---
 # <a name="iclrdebugmanager-interface"></a>Интерфейс ICLRDebugManager
 Предоставляет методы, позволяющие узлу связать набор задач с идентификатором и понятным именем.  
@@ -38,20 +36,20 @@ ms.locfileid: "69959614"
 |[Метод SetDacl](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-setdacl-method.md)|Этот метод не реализован.|  
 |[Метод SetSymbolReadingPolicy](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-setsymbolreadingpolicy-method.md)|Задает политику чтения файлов базы данных программы (PDB). Политика определяет, включаются ли в стеки вызовов сведения о номерах строк и файлах.|  
   
-## <a name="remarks"></a>Примечания  
- В сценариях отладки узлу может потребоваться сгруппировать задачи в соответствии с собственной логикой программирования. Например, группирование позволит разработчику видеть только задачи, необходимые API разработчика, а не выполнять все задачи, выполняемые в процессе. `ICLRDebugManager`позволяет ведущему приложению реализовать такой тип группирования.  
+## <a name="remarks"></a>Заметки  
+ В сценариях отладки узлу может потребоваться сгруппировать задачи в соответствии с собственной логикой программирования. Например, группирование позволит разработчику видеть только задачи, необходимые API разработчика, а не выполнять все задачи, выполняемые в процессе. `ICLRDebugManager` позволяет узлу реализовать такой тип группирования.  
   
 > [!IMPORTANT]
-> Три `ICLRDebugManager` метода `BeginConnection` ,и`EndConnection`,зависят друг от друга. `SetConnectionTasks` Их необходимо вызывать в заданном порядке, чтобы работать должным образом.  
+> Три метода `ICLRDebugManager`, `BeginConnection`, `SetConnectionTasks` и `EndConnection`, зависят друг от друга. Их необходимо вызывать в заданном порядке, чтобы работать должным образом.  
   
  Группирование и идентификаторы и понятные имена, которые узел назначает группе, не имеют смысла для среды CLR. CLR просто передает информацию в отладчик.  
   
 ## <a name="requirements"></a>Требования  
- **Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** MSCorEE. h  
+ **Заголовок:** MSCorEE. h  
   
- **Библиотечная** Включается в качестве ресурса в библиотеку MSCorEE. dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

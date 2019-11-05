@@ -5,12 +5,12 @@ ms.date: 04/20/2018
 helpviewer_keywords:
 - unsafe code [C#], pointers
 - pointers [C#]
-ms.openlocfilehash: 4d0801cd81e00c84be278b44730058798b0acfa9
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: b9b9f145f8f2d945fa06d53efa89f5754766963f
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69588189"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423130"
 ---
 # <a name="pointer-types-c-programming-guide"></a>Типы указателей (Руководство по программированию на C#)
 
@@ -23,7 +23,7 @@ void* identifier; //allowed but not recommended
 
 Тип, указанный до `*` в типе указателя, называется **ссылочным типом**. Ссылочным типом может быть только [неуправляемый тип](../../language-reference/builtin-types/unmanaged-types.md).
 
-Типы указателей не наследуются от [объекта](../../language-reference/keywords/object.md), а типы указателей не преобразуются в `object`. Кроме того, упаковка-преобразование и распаковка-преобразование не поддерживают указатели. Однако можно выполнять преобразования между различными типами указателей, а также между типами указателей и целочисленными типами.
+Типы указателей не наследуются от [объекта](../../language-reference/builtin-types/reference-types.md), а типы указателей не преобразуются в `object`. Кроме того, упаковка-преобразование и распаковка-преобразование не поддерживают указатели. Однако можно выполнять преобразования между различными типами указателей, а также между типами указателей и целочисленными типами.
 
 При объявлении нескольких указателей в одном объявлении знак * указывается только с базовым типом; он не используется в качестве префикса для каждого имени указателя. Например:
 
@@ -87,5 +87,5 @@ int* myVariable;
 - [Руководство по программированию на C#](../index.md)
 - [Небезопасный код и указатели](index.md)
 - [Преобразования указателей](pointer-conversions.md)
-- [Типы](../../language-reference/keywords/types.md)
+- [Типы](/dotnet/csharp/language-reference/keywords)
 - [unsafe](../../language-reference/keywords/unsafe.md)

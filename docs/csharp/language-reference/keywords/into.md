@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - into keyword [C#]
 ms.assetid: 81ec62c1-f0b1-4755-8a31-959876e77f65
-ms.openlocfilehash: dc1e2ee004c21bb3d05155eec3e42ea80bf641a1
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: ccb1463db51510d275b7053955a0257bd4fe621e
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69608637"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422713"
 ---
 # <a name="into-c-reference"></a>into (Справочник по C#)
 
@@ -32,5 +32,5 @@ ms.locfileid: "69608637"
 ## <a name="see-also"></a>См. также
 
 - [Ключевые слова запроса (LINQ)](query-keywords.md)
-- [Выражения запросов LINQ](../../programming-guide/linq-query-expressions/index.md)
+- [LINQ в C#](../../linq/index.md)
 - [предложение group](group-clause.md)

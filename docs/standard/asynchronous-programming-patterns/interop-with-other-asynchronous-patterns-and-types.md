@@ -12,14 +12,12 @@ helpviewer_keywords:
 - Task-based Asynchronous Pattern, .NET Framework support for
 - .NET Framework, asynchronous design patterns
 ms.assetid: f120a5d9-933b-4d1d-acb6-f034a57c3749
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: cb99d6d78fc381e0b56efae51307eb469c535a9a
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: f9fe33bb46f0ba78756c4172032dfbaf45d6fc89
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457349"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123980"
 ---
 # <a name="interop-with-other-asynchronous-patterns-and-types"></a>Взаимодействие с другими асинхронными шаблонами и типами
 В .NET Framework 1.0 появился шаблон <xref:System.IAsyncResult> , также известный как [Asynchronous Programming Model (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md)или шаблон `Begin/End` .  В .NET Framework 2.0 добавлен [Event-based Asynchronous Pattern (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md).  Начиная с платформы .NET Framework 4 [Task-based Asynchronous Pattern (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md) заменяет APM и EAP, но при этом предоставляет возможность легко строить процедуры миграции с более ранних шаблонов.  

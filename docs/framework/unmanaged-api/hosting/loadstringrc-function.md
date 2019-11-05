@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: 752e49b4-987c-4c28-a118-1a0c1ed510c5
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9047bf973224cdbc1f67463ef70f15f81089f827
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 66d4c14234c7929af443922f86098b46a4aa6eb7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67768468"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122017"
 ---
 # <a name="loadstringrc-function"></a>Функция LoadStringRC
-Преобразовывает значение HRESULT в сообщение об ошибке с помощью языка и региональных параметров по умолчанию текущего потока.  
+Преобразует значение HRESULT в сообщение об ошибке с помощью языка и региональных параметров по умолчанию текущего потока.  
   
- Эта функция является устаревшим в .NET Framework 4.  
+ Эта функция является устаревшей в .NET Framework 4.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -41,34 +39,34 @@ HRESULT LoadStringRC (
   
 ## <a name="parameters"></a>Параметры  
  `iResourceID`  
- [in] Значение HRESULT.  
+ окне Значение HRESULT.  
   
  `szBuffer`  
- [out] Буфер, который содержит сообщение об ошибке после успешного завершения.  
+ заполняет Буфер, содержащий сообщение об ошибке после успешного завершения.  
   
  `iMax`  
- [in] Размер буфера сообщений ошибок.  
+ окне Размер буфера сообщений об ошибках.  
   
  `bQuiet`  
- [in] Игнорируется.  
+ окне Игнорируют.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Этот метод возвращает стандартные коды ошибок объектов модели компонентов (COM), как определено в файле WinError.h, помимо следующих значений.  
+ Этот метод возвращает коды стандартных ошибок модели COM, как определено в файле WinError. h, в дополнение к следующим значениям.  
   
 |Код возврата|Описание|  
 |-----------------|-----------------|  
 |S_OK|Метод завершился успешно.|  
-|E_INVALIDARG|`szBuffer` имеет значение null или `iMax` равно нулю (0).|  
+|E_INVALIDARG|`szBuffer` имеет значение null или `iMax` равен нулю (0).|  
   
-## <a name="remarks"></a>Примечания  
- Если метод завершается успешно, `szBuffer` содержит пустую строку.  
+## <a name="remarks"></a>Заметки  
+ Если метод не завершается успешно, `szBuffer` содержит пустую строку.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** MSCorEE.h  
+ **Заголовок:** MSCorEE. h  
   
- **Библиотека:** Библиотек MSCorEE.dll и Mscorwks.dll. Используйте библиотеку MSCorEE.dll вместо "Mscorwks.dll", чтобы обеспечить целевых правильную версию платформы .NET Framework.  
+ **Библиотека:** MSCorEE. dll и mscorwks. dll. Используйте библиотеку MSCorEE. dll вместо Mscorwks. dll, чтобы обеспечить правильную версию .NET Framework.  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

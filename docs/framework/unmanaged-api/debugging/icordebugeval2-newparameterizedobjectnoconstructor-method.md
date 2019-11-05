@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: f15b5b78-94f4-4eb9-b3b3-a621272f357c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e4434f5d0eaa45c9cfcbadb20b29564f0643a2dc
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 770a9280d27c84b950e00e71328c9b28e61c9e7c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67754443"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73084807"
 ---
 # <a name="icordebugeval2newparameterizedobjectnoconstructor-method"></a>Метод ICorDebugEval2::NewParameterizedObjectNoConstructor
-Создает новый объект параметризованного типа указанного класса не пытается вызвать метод-конструктор.  
+Создает новый объект параметризованного типа указанного класса без попытки вызова метода конструктора.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,21 +37,21 @@ HRESULT NewParameterizedObjectNoConstructor (
   
 ## <a name="parameters"></a>Параметры  
  `pClass`  
- [in] Указатель на объект ICorDebugClass, который представляет класс для создания экземпляра объекта.  
+ окне Указатель на объект ICorDebugClass, представляющий класс объекта, для которого создается экземпляр.  
   
  `nTypeArgs`  
- [in] Передано число аргументов типа.  
+ окне Число переданных аргументов типа.  
   
  `ppTypeArgs`  
- [in] Массив указателей, каждый из которых указывает на объект, представляющий аргумент типа для объекта, экземпляр которого создается ICorDebugType.  
+ окне Массив указателей, каждый из которых указывает на объект ICorDebugType, представляющий аргумент типа для объекта, для которого создается экземпляр.  
   
-## <a name="remarks"></a>Примечания  
- `NewParameterizedObjectNoConstructor` Метод завершится ошибкой, если неверное число аргументов типа, или неправильный типы аргументов типа передаются.  
+## <a name="remarks"></a>Заметки  
+ Метод `NewParameterizedObjectNoConstructor` завершится ошибкой, если передается неверное число аргументов типа или неправильные типы аргументов типа.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 55e57640-b3d2-413d-b4f4-fbc27fb8e37c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c9d42c85502c12d4d77694626a533c69af97da67
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 87316b20c5835d9b887355a1f9374fa5f2156e5c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67750258"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122173"
 ---
 # <a name="icordebugdatatargetreadvirtual-method"></a>Метод ICorDebugDataTarget::ReadVirtual
-Получает блок непрерывной памяти, начиная с указанного адреса и возвращает его в указанный буфер.  
+Возвращает блок непрерывной памяти, начиная с указанного адреса, и возвращает его в указанном буфере.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,24 +38,24 @@ HRESULT ReadVirtual(
   
 ## <a name="parameters"></a>Параметры  
  `address`  
- [in] Начальный адрес требуемым объемом свободной памяти.  
+ окне Начальный адрес запрошенной памяти.  
   
  `pbuffer`  
- [out] Буфер, где будет храниться память.  
+ заполняет Буфер, в котором будет храниться память.  
   
  `bytesRequested`  
- [in] Число байтов для получения из целевой адрес.  
+ окне Число байтов, получаемых с целевого адреса.  
   
  `pBytesRead`  
- [out] Число байтов, фактически считанных из целевой адрес. Это может быть меньше, чем `bytesRequested`.  
+ заполняет Число байтов, фактически считанных из целевого адреса. Это число может быть меньше `bytesRequested`.  
   
-## <a name="remarks"></a>Примечания  
- Если первый байт (по адресу указанной начальной) могут считываться, вызов возвращает успех (для поддержки эффективного чтения структур данных с самоописанием длины, например, строки с завершающим нулем).  
+## <a name="remarks"></a>Заметки  
+ Если можно считать первый байт (с указанным начальным адресом), вызов должен вернуть результат (для поддержки эффективного чтения структур данных с самоописывающей длиной, например со строками, завершающимися нулем).  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

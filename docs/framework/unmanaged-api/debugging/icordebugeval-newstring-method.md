@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 29e7a14b-d50e-4852-bfda-011b76c0c9ee
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 50a18f435063b74b837dbfe9e4f1d986bb735039
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8a5d421bf0eb8ec5a34fe21d6efc79bbe56c294c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67753339"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137644"
 ---
 # <a name="icordebugevalnewstring-method"></a>Метод ICorDebugEval::NewString
 Выделяет новый экземпляр строки с указанным содержимым.  
@@ -37,15 +35,15 @@ HRESULT NewString (
   
 ## <a name="parameters"></a>Параметры  
  `string`  
- [in] Указатель на содержимое для строки.  
+ окне Указатель на содержимое строки.  
   
-## <a name="remarks"></a>Примечания  
- Строка всегда создается в домене приложения, в котором в настоящее время выполняется поток.  
+## <a name="remarks"></a>Заметки  
+ Строка всегда создается в домене приложения, в котором в данный момент выполняется поток.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

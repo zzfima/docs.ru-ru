@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data binding [WPF], binding source
 - binding sources [WPF]
 ms.assetid: 2df2cd11-6aac-4bdf-ab7b-ea5f464cd5ca
-ms.openlocfilehash: cf5873cdf137573826d5361d077e0534e8cba1f0
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: 5d0d28213ed8b4a0d464793aeba6823db2405bbe
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920293"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459014"
 ---
 # <a name="binding-sources-overview"></a>Общие сведения об источниках привязки
 В привязке данных объект источника привязки (источник) ссылается на объект, из которого вы получаете данные. В этом разделе рассматриваются типы объектов, которые можно использовать в качестве источника привязки.
@@ -54,7 +54,7 @@ ms.locfileid: "72920293"
 ## <a name="using-entire-objects-as-a-binding-source"></a>Использование всего объекта в качестве источника привязки
  В качестве источника привязки можно использовать весь объект. Источник привязки можно указать с помощью <xref:System.Windows.Data.Binding.Source%2A> или свойства <xref:System.Windows.FrameworkElement.DataContext%2A>, а затем указать пустое объявление привязки: `{Binding}`. Сценарии, в которых это полезно, включают привязку к объектам строкового типа, привязку к объектам с несколькими интересующими вас свойствами или привязку к коллекции объектов. Пример привязки к целому объекту коллекции см. в разделе [Использование шаблона "главный — подчиненный" с иерархическими данными](how-to-use-the-master-detail-pattern-with-hierarchical-data.md).
 
- Обратите внимание, что может потребоваться применить пользовательскую логику, чтобы данные имели смысл для свойства целевого объекта привязки. Пользовательская логика может быть в виде пользовательского преобразователя (если преобразование типа по умолчанию не существует) или <xref:System.Windows.DataTemplate>. Дополнительные сведения о преобразователях см. в подразделе "Преобразование данных" раздела [Общие сведения о привязке данных](data-binding-overview.md). Дополнительные сведения о шаблонах данных см. в разделе [Общие сведения о шаблонах данных](data-templating-overview.md).
+ Обратите внимание, что может потребоваться применить пользовательскую логику, чтобы данные имели смысл для свойства целевого объекта привязки. Пользовательская логика может быть в виде пользовательского преобразователя (если преобразование типа по умолчанию не существует) или <xref:System.Windows.DataTemplate>. Дополнительные сведения о преобразователях см. в подразделе "Преобразование данных" раздела [Общие сведения о привязке данных](../../../desktop-wpf/data/data-binding-overview.md). Дополнительные сведения о шаблонах данных см. в разделе [Общие сведения о шаблонах данных](data-templating-overview.md).
 
 <a name="collections"></a>
 ## <a name="using-collection-objects-as-a-binding-source"></a>Объекты коллекции, используемые в качестве источника привязки
@@ -64,7 +64,7 @@ ms.locfileid: "72920293"
 
  Класс <xref:System.Collections.ObjectModel.ObservableCollection%601> является встроенной реализацией коллекции данных, предоставляющей интерфейс <xref:System.Collections.Specialized.INotifyCollectionChanged>. Отдельные объекты данных в коллекции должны удовлетворять требованиям, описанным в предыдущих разделах. Пример см. в разделе [Создание и привязка ObservableCollection](how-to-create-and-bind-to-an-observablecollection.md). Перед реализацией собственной коллекции рассмотрите возможность использования <xref:System.Collections.ObjectModel.ObservableCollection%601> или одного из существующих классов коллекций, таких как <xref:System.Collections.Generic.List%601>, <xref:System.Collections.ObjectModel.Collection%601>и <xref:System.ComponentModel.BindingList%601>, между многими другими.
 
- WPF никогда не реализует прямую привязку к коллекции. Если в качестве источника привязки указана коллекция, WPF фактически выполняет привязку к представлению коллекции по умолчанию. Сведения о представлениях по умолчанию см. в разделе [Общие сведения о привязке данных](data-binding-overview.md).
+ WPF никогда не реализует прямую привязку к коллекции. Если в качестве источника привязки указана коллекция, WPF фактически выполняет привязку к представлению коллекции по умолчанию. Сведения о представлениях по умолчанию см. в разделе [Общие сведения о привязке данных](../../../desktop-wpf/data/data-binding-overview.md).
 
  Если у вас есть расширенный сценарий и вы хотите реализовать собственную коллекцию, рассмотрите возможность использования интерфейса <xref:System.Collections.IList>. <xref:System.Collections.IList> предоставляет неуниверсальную коллекцию объектов, к которой можно получить доступ по отдельности по индексу, что может повысить производительность.
 
@@ -97,6 +97,6 @@ ms.locfileid: "72920293"
 - <xref:System.Windows.Data.ObjectDataProvider>
 - <xref:System.Windows.Data.XmlDataProvider>
 - [Указание источника привязки](how-to-specify-the-binding-source.md)
-- [Общие сведения о привязке данных](data-binding-overview.md)
+- [Общие сведения о привязке данных](../../../desktop-wpf/data/data-binding-overview.md)
 - [Общие сведения о привязке данных WPF с помощью LINQ to XML](wpf-data-binding-with-linq-to-xml-overview.md)
 - [Оптимизация производительности привязки данных](../advanced/optimizing-performance-data-binding.md)

@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 988718c1-1a4a-40f2-a04c-7d67e5cfe1e2
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7336f958019c2f696a9b1a26b075c076cfc84f5d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: feaf5bd25e276bb93c076f200912965c612af453
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69953016"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139004"
 ---
 # <a name="icordebugstepperenum-interface"></a>Интерфейс ICorDebugStepperEnum
 Реализует методы ICorDebugEnum и перечисляет массивы ICorDebugStepper.  
@@ -30,19 +28,19 @@ ms.locfileid: "69953016"
   
 |Метод|Описание|  
 |------------|-----------------|  
-|[Метод Next](../../../../docs/framework/unmanaged-api/debugging/icordebugstepperenum-next-method.md)|Возвращает указанное количество `ICorDebugStepper` экземпляров из перечисления, начиная с текущей позиции.|  
+|[Метод Next](../../../../docs/framework/unmanaged-api/debugging/icordebugstepperenum-next-method.md)|Возвращает указанное число экземпляров `ICorDebugStepper` из перечисления, начиная с текущей позиции.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
   
 > [!NOTE]
 > Этот интерфейс не поддерживает удаленные вызовы между компьютерами или между процессами.  
   
 ## <a name="requirements"></a>Требования  
- **Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug. idl, CorDebug. h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
- **Библиотечная** Коргуидс. lib  
+ **Библиотека:** CorGuids.lib  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

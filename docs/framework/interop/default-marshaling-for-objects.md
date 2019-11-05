@@ -8,14 +8,12 @@ helpviewer_keywords:
 - objects, interop marshaling
 - interop marshaling, objects
 ms.assetid: c2ef0284-b061-4e12-b6d3-6a502b9cc558
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b2c6e8a013d6486ec55723b91d6bfb6b838c9be5
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
-ms.translationtype: HT
+ms.openlocfilehash: e0de715a3ed33eedf212fc3e0e9930c9cbaa0a38
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044168"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123589"
 ---
 # <a name="default-marshaling-for-objects"></a>Маршалинг по умолчанию для объектов
 
@@ -312,7 +310,7 @@ mo.SetVariant(new CurrencyWrapper(new Decimal(5.25)));
 
 В следующей таблице описываются общие правила распространения для вариантов и объектов.
 
-|Исходный тип|Кому|Возвращаемые изменения|
+|Исходный тип|Целевой тип|Возвращаемые изменения|
 |----------|--------|-----------------------------|
 |**Вариант**  *v*|**Объект**  *o*|Никогда|
 |**Объект**  *o*|**Вариант**  *v*|Никогда|

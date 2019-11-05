@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: bbc0881c-6a59-41a0-b5ee-2f3d1b71684c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: bd79299dcfdb03b703c2cab214ba448631daa6f2
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3afefdc3d704044184ea20d061eb9449458b5060
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67763480"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129579"
 ---
 # <a name="icordebugmodulegetglobalvariablevalue-method"></a>Метод ICorDebugModule::GetGlobalVariableValue
-Получает значение указанной глобальной переменной.  
+Возвращает значение указанной глобальной переменной.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,15 +36,15 @@ HRESULT GetGlobalVariableValue(
   
 ## <a name="parameters"></a>Параметры  
  `fieldDef`  
- [in] `mdFieldDef` Маркер, который ссылается на метаданные, описывающие глобальной переменной.  
+ окне Токен `mdFieldDef`, который ссылается на метаданные, описывающие глобальную переменную.  
   
  `ppValue`  
- [out] Указатель на адрес ICorDebugValue объект, представляющий значение указанной глобальной переменной.  
+ заполняет Указатель на адрес объекта ICorDebugValue, представляющий значение указанной глобальной переменной.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

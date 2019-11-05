@@ -8,14 +8,12 @@ helpviewer_keywords:
 - foreground threads
 - background threads
 ms.assetid: cfe0d632-dd35-47e0-91ad-f742a444005e
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8dbad5da42f5ed4e03751534a3a183615a9757cc
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 9e93f07b3b84264373db0317919b6ee519c8127c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69960026"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138055"
 ---
 # <a name="foreground-and-background-threads"></a>Основные и фоновые потоки
 Управляемый поток может быть основным или фоновым. Фоновые потоки отличаются от основных только в одном аспекте: фоновый поток не поддерживает работу управляемой среды выполнения. После того, как в управляемом процессе (где управляемой сборкой является файл EXE) остановятся все основные потоки, система принудительно останавливает все фоновые потоки и завершает работу процесса.  

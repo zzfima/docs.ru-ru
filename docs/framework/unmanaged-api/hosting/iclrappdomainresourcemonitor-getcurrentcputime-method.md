@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: ebc9cc33-fcd6-4cae-9ecb-ea21c51874e6
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 10245541718fd5e5f30ef6bba4ab289bcef767fc
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: de57fec05c338e51d0691ccfa0d0bffb334848de
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69950205"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73126788"
 ---
 # <a name="iclrappdomainresourcemonitorgetcurrentcputime-method"></a>Метод ICLRAppDomainResourceMonitor::GetCurrentCpuTime
 Возвращает общее время процессора, которое использовалось всеми потоками во время выполнения в текущем домене приложения, так как был создан домен приложения.  
@@ -47,17 +45,17 @@ HRESULT GetCurrentCpuTime([in]  DWORD dwAppDomainId,
 |-------------|-----------------|  
 |S_OK|Метод завершился успешно.|  
 |COR_E_APPDOMAINUNLOADED|Домен приложения был выгружен или не существует.|  
-|E_FAIL|Отслеживание ресурсов домена приложений не включено.<br /><br /> -или-<br /><br /> Все остальные сбои.|  
+|E_FAIL|Отслеживание ресурсов домена приложений не включено.<br /><br /> \- или -<br /><br /> Все остальные сбои.|  
   
-## <a name="remarks"></a>Примечания  
- Этот метод является неуправляемым эквивалентом управляемого <xref:System.AppDomain.MonitoringTotalProcessorTime%2A?displayProperty=nameWithType> свойства.  
+## <a name="remarks"></a>Заметки  
+ Этот метод является неуправляемым эквивалентом управляемого свойства <xref:System.AppDomain.MonitoringTotalProcessorTime%2A?displayProperty=nameWithType>.  
   
 ## <a name="requirements"></a>Требования  
- **Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** Метахост. h  
+ **Заголовок:** Метахост. h  
   
- **Библиотечная** Включается в качестве ресурса в библиотеку MSCorEE. dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

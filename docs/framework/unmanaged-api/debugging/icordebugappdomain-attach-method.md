@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0358b84a-4236-4c34-945b-4babff7df570
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9d30b6cb083cc2f92bcbe089bf8e990fedd8e8f7
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 66ec64b1a855a3d31f14f3ef29dde0b82361f5d7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738091"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133984"
 ---
 # <a name="icordebugappdomainattach-method"></a>Метод ICorDebugAppDomain::Attach
 Присоединяет отладчик к домену приложения.  
@@ -33,13 +31,13 @@ ms.locfileid: "67738091"
 HRESULT Attach ();  
 ```  
   
-## <a name="remarks"></a>Примечания  
- Отладчик должен быть подключен к домену приложения для получения событий и включение отладки домена приложения.  
+## <a name="remarks"></a>Заметки  
+ Отладчик должен быть присоединен к домену приложения для получения событий и включения отладки домена приложения.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

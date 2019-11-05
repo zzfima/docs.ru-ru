@@ -18,14 +18,12 @@ helpviewer_keywords:
 ms.assetid: a5cab4c6-990e-47f3-8798-cf422b791015
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6e1104a98afb32dea687949e9c723124014c1e62
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: fe61503cdf46b6b2cf568deb78b96f8fa885c203
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69925319"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136936"
 ---
 # <a name="corexitprocess-function"></a>Функция CorExitProcess
 Завершает текущий неуправляемый процесс.  
@@ -44,17 +42,17 @@ void STDMETHODCALLTYPE CorExitProcess (
  `exitCode`  
  Целое число, указывающее код завершения процесса.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
   
 > [!NOTE]
-> Начиная с .NET Framework 4, `CorExitProcess` завершает каждую запущенную среду выполнения в процессе, а не только среду выполнения, к которой привязаны API прежних версий.  
+> Начиная с .NET Framework 4 `CorExitProcess` завершает каждую запущенную среду выполнения в процессе, а не только среду выполнения, к которой привязаны API прежних версий.  
   
 ## <a name="requirements"></a>Требования  
- **Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** MSCorEE. h  
+ **Заголовок:** MSCorEE. h  
   
- **Библиотечная** MSCorEE. dll  
+ **Библиотека:** MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: f94b9d53-d8f8-4424-a95e-53a1bfd26e4a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d02dab01eca3bd4f8ce3ae7ace7f9d4be8233dca
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 08c2946a9bd6251f377ea594c0c3ca5d1bd98c67
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69917007"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73095094"
 ---
 # <a name="icordebugilframe2-interface"></a>Интерфейс ICorDebugILFrame2
 
@@ -31,20 +29,20 @@ ms.locfileid: "69917007"
   
 |Метод|Описание|  
 |------------|-----------------|  
-|[Метод EnumerateTypeParameters](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe2-enumeratetypeparameters-method.md)|Возвращает объект ICorDebugTypeEnum, содержащий <xref:System.Type> параметры в этом кадре.|  
+|[Метод EnumerateTypeParameters](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe2-enumeratetypeparameters-method.md)|Возвращает объект ICorDebugTypeEnum, содержащий параметры <xref:System.Type> в этом кадре.|  
 |[Метод RemapFunction](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe2-remapfunction-method.md)|Повторно сопоставляет отредактированную функцию, указывая новое смещение MSIL.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
   
 > [!NOTE]
 > Этот интерфейс не поддерживает удаленные вызовы между компьютерами или между процессами.  
   
 ## <a name="requirements"></a>Требования  
- **Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug. idl, CorDebug. h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
- **Библиотечная** Коргуидс. lib  
+ **Библиотека:** CorGuids.lib  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

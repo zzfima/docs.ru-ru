@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 429d8fce-b1b1-49d7-895c-28c1c1aa2dbd
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c6edee34c8560c989040475fee4a35c6bd2ddb3e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6506b11d97490f796486729dbeb612e47762b60a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61697996"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73111439"
 ---
 # <a name="iclrdebugging-interface"></a>Интерфейс ICLRDebugging
 Предоставляет методы, обрабатывающие загрузку и выгрузку модулей для отладки.  
@@ -30,16 +28,16 @@ ms.locfileid: "61697996"
   
 |Метод|Описание|  
 |------------|-----------------|  
-|[Метод OpenVirtualProcess](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-openvirtualprocess-method.md)|Получает интерфейс «ICorDebugProcess», который соответствует общий язык среды выполнения (CLR) модуль загружается в процесс.|  
-|[Метод CanUnloadNow](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-canunloadnow-method.md)|Определяет, является ли библиотеку, предоставленным [ICLRDebuggingLibraryProvider](../../../../docs/framework/unmanaged-api/debugging/iclrdebugginglibraryprovider-interface.md) интерфейс по-прежнему используется, или может быть выгружен.|  
+|[Метод OpenVirtualProcess](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-openvirtualprocess-method.md)|Возвращает интерфейс "ICorDebugProcess", соответствующий модулю среды CLR, загруженному в процессе.|  
+|[Метод CanUnloadNow](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-canunloadnow-method.md)|Определяет, используется ли по-прежнему Библиотека, предоставленная интерфейсом [иклрдебуггинглибрарипровидер](../../../../docs/framework/unmanaged-api/debugging/iclrdebugginglibraryprovider-interface.md) , или она может быть выгружена.|  
   
-## <a name="remarks"></a>Примечания  
- Можно получить экземпляр `ICLRDebugging` интерфейса с помощью [CLRCreateInstance](../../../../docs/framework/unmanaged-api/hosting/clrcreateinstance-function.md) функции.  
+## <a name="remarks"></a>Заметки  
+ Экземпляр интерфейса `ICLRDebugging` можно получить с помощью функции [клркреатеинстанце](../../../../docs/framework/unmanaged-api/hosting/clrcreateinstance-function.md) .  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

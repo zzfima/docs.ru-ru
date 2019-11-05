@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 98ae174f-bff0-48f1-9e05-6cb63b451824
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2996acd9678557b08fcfa543ecc7648ed639b143
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 36851ac4573d0d65caffaa3f82a1f6fc8440a2d0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67748341"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73092753"
 ---
 # <a name="iclrruntimeinfosetdefaultstartupflags-method"></a>Метод ICLRRuntimeInfo::SetDefaultStartupFlags
-Задает флаги запуска и файле конфигурации главного узла, который будет использоваться для запуска среды выполнения. Этот метод заменяет `startupFlags` параметр в [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) и [CorBindToRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimehost-function.md) функции.  
+Задает флаги запуска и файл конфигурации узла, который будет использоваться для запуска среды выполнения. Этот метод заменяет использование параметра `startupFlags` в функциях [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) и [корбиндторунтимехост](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimehost-function.md) .  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,27 +35,27 @@ HRESULT SetDefaultStartupFlags(
   
 ## <a name="parameters"></a>Параметры  
  `dwStartupFlags`  
- [in] Флаги запуска узла, для установки. Используйте те же флаги, как и с [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) и [CorBindToRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimehost-function.md) функции.  
+ окне Заданные флаги запуска узла. Используйте те же флаги, что и для функций [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) и [корбиндторунтимехост](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimehost-function.md) .  
   
  `pwzHostConfigFile`  
- [in] Файл конфигурации узла, чтобы задать путь к каталогу.  
+ окне Путь к каталогу устанавливаемого файла конфигурации узла.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Этот метод возвращает следующие конкретных ошибках HRESULT а также ошибки HRESULT, которые указывают на сбой метода.  
+ Этот метод возвращает следующее конкретное значение HRESULT, а также ошибки HRESULT, которые указывают на сбой метода.  
   
 |HRESULT|Описание|  
 |-------------|-----------------|  
 |S_OK|Метод завершился успешно.|  
   
-## <a name="remarks"></a>Примечания  
- Многопоточные узла необходимо синхронизировать вызовы этого метода. В противном случае может вызывать потока A `SetStartupFlags` метод после завершения вызова потока B `SetStartupFlags` и прежде, чем поток B запускает среду выполнения.  
+## <a name="remarks"></a>Заметки  
+ Многопоточный узел должен синхронизировать вызовы этого метода. В противном случае поток A может вызвать метод `SetStartupFlags` после того, как поток б завершит вызов `SetStartupFlags` и до того, как поток B запустит среду выполнения.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** MetaHost.h  
+ **Заголовок:** Метахост. h  
   
- **Библиотека:** Включена как ресурс в MSCorEE.dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

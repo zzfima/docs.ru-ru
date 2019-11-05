@@ -1,17 +1,15 @@
 ---
-title: Метод ICorDebugSymbolProvider::GetAssemblyImageMetadata
+title: 'Метод метод icordebugsymbolprovider:: GetAssemblyImageMetadata'
 ms.date: 03/30/2017
 ms.assetid: c3c9de67-b865-4ecf-b887-1f1d0719a0c0
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ad86c42d0f23de25fe0e5b9123a0dba3695d8d64
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: fb08df3b594e0c34dfe4ca791983b0c111239b23
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964648"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138904"
 ---
-# <a name="icordebugsymbolprovidergetassemblyimagemetadata-method"></a>Метод ICorDebugSymbolProvider::GetAssemblyImageMetadata
+# <a name="icordebugsymbolprovidergetassemblyimagemetadata-method"></a>Метод метод icordebugsymbolprovider:: GetAssemblyImageMetadata
 Возвращает метаданные из объединенной сборки.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -26,17 +24,17 @@ HRESULT GetAssemblyImageMetadata(
  `ppMemoryBuffer`  
  заполняет Указатель на адрес объекта [икордебугмеморибуффер](../../../../docs/framework/unmanaged-api/debugging/icordebugmemorybuffer-interface.md) , который содержит сведения о размере и адресе метаданных объединенной сборки.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
   
 > [!NOTE]
 > Этот метод доступен только в машинном коде .NET.  
   
 ## <a name="requirements"></a>Требования  
- **Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug. idl, CorDebug. h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
- **Библиотечная** Коргуидс. lib  
+ **Библиотека:** CorGuids.lib  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

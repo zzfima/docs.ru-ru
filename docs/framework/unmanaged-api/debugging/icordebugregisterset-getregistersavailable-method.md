@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4ba08ffa-55a2-4662-9d6d-4738f1db60c9
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d600b4687b86f5872f94a60ad3422be764cf5307
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9d8bd6ab13fa408fd7390aaeb76baee274742f48
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67747204"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137703"
 ---
 # <a name="icordebugregistersetgetregistersavailable-method"></a>Метод ICorDebugRegisterSet::GetRegistersAvailable
-Получает маску немного, указывающее, который регистрирует в этом [ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md) в настоящее время доступны.  
+Возвращает битовую маску, указывающую, какие регистры в этом [ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md) в настоящее время доступны.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,17 +35,17 @@ HRESULT GetRegistersAvailable (
   
 ## <a name="parameters"></a>Параметры  
  `pAvailable`  
- [out] Битовая маска, которая указывает, какие регистры в настоящее время доступны.  
+ заполняет Битовая маска, указывающая, какие регистры доступны в настоящее время.  
   
-## <a name="remarks"></a>Примечания  
- Регистр может быть недоступен, если его значение нельзя определить для данной ситуации.  
+## <a name="remarks"></a>Заметки  
+ Регистр может быть недоступен, если его значение не может быть определено для данной ситуации.  
   
- Возвращаемая маска содержит один бит для каждого из регистров (1 << индекс регистра). Битовое значение равно 1, если регистр доступен, или 0, если он не доступен.  
+ Возвращаемая маска содержит бит для каждого регистра (1 < < индексе регистра). Значение бита равно 1, если регистр доступен, или 0, если он недоступен.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

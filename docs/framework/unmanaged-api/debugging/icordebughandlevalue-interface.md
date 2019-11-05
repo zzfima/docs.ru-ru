@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 66fcd2b8-ac66-414b-83a8-75a925e17772
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3219554cf953b8de31e236b2f484478172673f7b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 94472e84b73cdffe09505088b1e7fbc20a209bc3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69915009"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138484"
 ---
 # <a name="icordebughandlevalue-interface"></a>Интерфейс ICorDebugHandleValue
 
@@ -31,21 +29,21 @@ ms.locfileid: "69915009"
   
 |Метод|Описание|  
 |------------|-----------------|  
-|[Метод Dispose](../../../../docs/framework/unmanaged-api/debugging/icordebughandlevalue-dispose-method.md)|Освобождает дескриптор, на который ссылается `ICorDebugHandleValue` этот объект, без явного освобождения указателя интерфейса.|  
-|[Метод GetHandleType](../../../../docs/framework/unmanaged-api/debugging/icordebughandlevalue-gethandletype-method.md)|Возвращает значение Кордебугхандлетипе, описывающее тип маркера, на который ссылается `ICorDebugHandleValue`this.|  
+|[Метод Dispose](../../../../docs/framework/unmanaged-api/debugging/icordebughandlevalue-dispose-method.md)|Освобождает дескриптор, на который ссылается данный объект `ICorDebugHandleValue`, без явного освобождения указателя интерфейса.|  
+|[Метод GetHandleType](../../../../docs/framework/unmanaged-api/debugging/icordebughandlevalue-gethandletype-method.md)|Возвращает значение Кордебугхандлетипе, описывающее тип маркера, на который ссылается этот `ICorDebugHandleValue`.|  
   
-## <a name="remarks"></a>Примечания  
- `ICorDebugReferenceValue` Объект становится недействительным при прерывании выполнения отлаживаемого кода. `ICorDebugHandleValue` Сохраняет ссылку на разрывы и продолжения до тех пор, пока он не будет явно освобожден.  
+## <a name="remarks"></a>Заметки  
+ Объект `ICorDebugReferenceValue` становится недействительным при прерывании выполнения отлаживаемого кода. `ICorDebugHandleValue` сохраняет свои ссылки с помощью разрывов и продолжений, пока он не будет явно освобожден.  
   
 > [!NOTE]
 > Этот интерфейс не поддерживает удаленные вызовы между компьютерами или между процессами.  
   
 ## <a name="requirements"></a>Требования  
- **Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug. idl, CorDebug. h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
- **Библиотечная** Коргуидс. lib  
+ **Библиотека:** CorGuids.lib  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

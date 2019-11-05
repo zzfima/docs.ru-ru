@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: f91d0f89-f356-49ac-aafb-50fad963c13d
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4839f098a41e0d2b8e87616791b69ffd83e139f0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0c9adcc252fe16c95da8b2afca45bb2ee5dc545a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67748200"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73135207"
 ---
 # <a name="iclrstrongnamegethashfromblob-method"></a>Метод ICLRStrongName::GetHashFromBlob
 Получает хэш сборки по указанному адресу памяти с помощью указанного хэш-алгоритма.  
@@ -42,32 +40,32 @@ HRESULT GetHashFromBlob (
   
 ## <a name="parameters"></a>Параметры  
  `pbBlob`  
- [in] Указатель на адрес блока памяти, хэширование которого требуется выполнить.  
+ окне Указатель на адрес блока памяти, который необходимо хэшировать.  
   
  `cchBlob`  
- [in] Длина в байтах блока памяти.  
+ окне Длина блока памяти в байтах.  
   
  `piHashAlg`  
- [in, out] Константа, указывающая хэш-алгоритм. Использовать нуль для алгоритма по умолчанию.  
+ [вход, выход] Константа, указывающая хэш-алгоритм. Используйте нуль для алгоритма по умолчанию.  
   
  `pbHash`  
- [out] Буфер, возвращенный хэша.  
+ заполняет Возвращаемый буфер хэша.  
   
  `cchHash`  
- [in] Запрошенный максимальный размер `pbHash`.  
+ окне Запрошенный максимальный размер `pbHash`.  
   
  `pchHash`  
- [out] Размер в байтах, возвращаемого `pbHash`.  
+ заполняет Размер возвращаемого `pbHash`в байтах.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- `S_OK` Если метод успешно завершена; в противном случае — значение HRESULT, указывающее на сбой (см. в разделе [часто встречающихся значений HRESULT](https://go.microsoft.com/fwlink/?LinkId=213878) список).  
+ `S_OK`, если метод успешно выполнен; в противном случае — значение HRESULT, указывающее на сбой (см. раздел [Общие значения HRESULT](https://go.microsoft.com/fwlink/?LinkId=213878) для списка).  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** MetaHost.h  
+ **Заголовок:** Метахост. h  
   
- **Библиотека:** Включена как ресурс в MSCorEE.dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

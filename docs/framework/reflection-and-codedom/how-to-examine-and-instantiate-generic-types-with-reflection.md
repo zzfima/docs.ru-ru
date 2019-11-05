@@ -9,14 +9,12 @@ helpviewer_keywords:
 - reflection, generic types
 - generics [.NET Framework], reflection
 ms.assetid: f93b03b0-1778-43fc-bc6d-35983d210e74
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6e15ef69c4777cdafe2e5861050a1ccc1f6a1a70
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 62e4e066740d0422f8f7045b043a5725278c209c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71046016"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130135"
 ---
 # <a name="how-to-examine-and-instantiate-generic-types-with-reflection"></a>Практическое руководство. Изучение универсальных типов и создание их экземпляров при помощи отражения
 Сведения об универсальных типах получаются аналогично сведениям о других типах: путем изучения объекта <xref:System.Type>, который представляет универсальный тип. Принципиальная разница заключается в том, что универсальный тип имеет список объектов <xref:System.Type>, представляющих его параметры универсального типа. В первой процедуре данного раздела изучаются универсальные типы.  

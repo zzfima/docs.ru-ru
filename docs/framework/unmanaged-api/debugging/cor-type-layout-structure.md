@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 43a7addd-f25a-4049-9907-abec3eb17af2
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6bd274b1eb14532629580e777288317186544912
-ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
+ms.openlocfilehash: 12c594f157c803d5fc179e09a8ca6c0ef40f3f44
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274166"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73099026"
 ---
 # <a name="cor_type_layout-structure"></a>Структура COR_TYPE_LAYOUT
 Предоставляет сведения о расположении объекта в памяти.  
@@ -38,7 +36,7 @@ typedef struct COR_TYPE_LAYOUT {
 } COR_TYPE_LAYOUT;  
 ```  
   
-## <a name="members"></a>Участники  
+## <a name="members"></a>Члены  
   
 |Член|Описание|  
 |------------|-----------------|  
@@ -48,15 +46,15 @@ typedef struct COR_TYPE_LAYOUT {
 |`boxOffset`|Если этот тип упакован, начальное смещение полей объекта. Это поле допустимо только для типов значений, таких как примитивы и структуры.|  
 |`type`|Корелементтипе, к которому принадлежит этот тип.|  
   
-## <a name="remarks"></a>Примечания  
- Если `numFields` значение больше нуля, можно вызвать метод [метод ICorDebugProcess5:: жеттипефиелдс](icordebugprocess5-gettypefields-method.md) для получения сведений о полях этого типа. Если `type` имеет `ELEMENT_TYPE_STRING`значение ,`ELEMENT_TYPE_ARRAY` или`ELEMENT_TYPE_SZARRAY`, то размер объектов этого типа является переменным, и можно передать структуру [COR_TYPEID](cor-typeid-structure.md) в метод [метод ICorDebugProcess5:: жетаррайлайаут](icordebugprocess5-getarraylayout-method.md) .  
+## <a name="remarks"></a>Заметки  
+ Если `numFields` больше нуля, можно вызвать метод [метод ICorDebugProcess5:: жеттипефиелдс](icordebugprocess5-gettypefields-method.md) для получения сведений о полях этого типа. Если `type` имеет `ELEMENT_TYPE_STRING`, `ELEMENT_TYPE_ARRAY`или `ELEMENT_TYPE_SZARRAY`, размер объектов этого типа является переменным, и можно передать структуру [COR_TYPEID](cor-typeid-structure.md) в метод [метод ICorDebugProcess5:: жетаррайлайаут](icordebugprocess5-getarraylayout-method.md) .  
   
 ## <a name="requirements"></a>Требования  
- **Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug. idl, CorDebug. h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
- **Библиотечная** Коргуидс. lib  
+ **Библиотека:** CorGuids.lib  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   

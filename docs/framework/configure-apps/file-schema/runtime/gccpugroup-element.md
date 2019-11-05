@@ -5,22 +5,20 @@ helpviewer_keywords:
 - GCCpuGroup element
 - <GCCpuGroup> element
 ms.assetid: c1fc7d6c-7220-475c-a312-5b8b201f66e0
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9ff646f13c5619b0bfca1b61c86013a981c274e3
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 352890519c1a227d664d877c3123866e5e4e1657
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252564"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73116836"
 ---
-# <a name="gccpugroup-element"></a>\<Элемент > Гккпуграуп
+# <a name="gccpugroup-element"></a>\<Гккпуграуп > элемент
 
 Определяет, поддерживает ли сборка мусора несколько групп ЦП.
 
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> среды выполнения**](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<GCCpuGroup>**  
+&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
+&nbsp;&nbsp;&nbsp;&nbsp; **\<гккпуграуп >**  
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -41,14 +39,14 @@ ms.locfileid: "70252564"
 
 ## <a name="enabled-attribute"></a>Атрибут enabled
 
-|Значение|Описание|
+|значения|Описание|
 |-----------|-----------------|
 |`false`|Сборка мусора не поддерживает несколько групп ЦП. Это значение по умолчанию.|
 |`true`|Сборка мусора поддерживает несколько групп ЦП, если включена сборка мусора сервера.|
 
 ### <a name="child-elements"></a>Дочерние элементы
 
-Нет.
+Отсутствует.
 
 ### <a name="parent-elements"></a>Родительские элементы
 
@@ -57,12 +55,12 @@ ms.locfileid: "70252564"
 |`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.|
 |`runtime`|Содержит сведения о привязке сборок и сборке мусора.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
-Если на компьютере установлено несколько групп ЦП и включена сборка мусора сервера (см [ \<. элемент > gcServer](gcserver-element.md) ), включение этого элемента расширяет сбор мусора во всех группах ЦП и учитывает все ядра при создании и сбалансированные кучи.
+Если на компьютере установлено несколько групп ЦП и включена сборка мусора сервера (см. элемент [\<gcServer >](gcserver-element.md) ), включение этого элемента расширяет сбор мусора во всех группах ЦП и учитывает все ядра при создании и сбалансированные кучи.
 
 > [!NOTE]
-> Этот элемент применяется только к потокам сборки мусора. Чтобы среда выполнения распространяла пользовательские потоки во всех группах ЦП, необходимо также включить [ \<элемент > Thread_UseAllCpuGroups](thread-useallcpugroups-element.md) .
+> Этот элемент применяется только к потокам сборки мусора. Чтобы среда выполнения распространяла пользовательские потоки во всех группах ЦП, необходимо также включить элемент [\<Thread_UseAllCpuGroups >](thread-useallcpugroups-element.md) .
 
 ## <a name="example"></a>Пример
 

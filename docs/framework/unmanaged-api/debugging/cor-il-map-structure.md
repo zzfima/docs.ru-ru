@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 534ebc17-963d-4b26-8375-8cd940281db3
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5ae4c5743b01c4a9087323678d315473631cb32f
-ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
+ms.openlocfilehash: c37f039d9636854c464e7981693c573bd60deab9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274040"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132343"
 ---
 # <a name="cor_il_map-structure"></a>Структура COR_IL_MAP
 Указывает изменения в относительном смещении функции.  
@@ -36,16 +34,16 @@ typedef struct _COR_IL_MAP {
 } COR_IL_MAP;  
 ```  
   
-## <a name="members"></a>Участники  
+## <a name="members"></a>Члены  
   
 |Член|Описание|  
 |------------|-----------------|  
 |`oldOffset`|Старый сдвиг на языке MSIL относительно начала функции.|  
 |`newOffset`|Новое смещение MSIL относительно начала функции.|  
-|`fAccurate`|`true`значение, если сопоставление известно как точное; в противном случае —. `false`|  
+|`fAccurate`|`true`, если сопоставление известно как точное; в противном случае `false`.|  
   
-## <a name="remarks"></a>Примечания  
- Формат схемы выглядит следующим образом: В отладчике предполагается, `oldOffset` что ссылается на смещение MSIL в исходном, неизмененном коде MSIL. `newOffset` Параметр ссылается на соответствующее смещение MSIL в новом, инструментированном коде.  
+## <a name="remarks"></a>Заметки  
+ Формат схемы выглядит следующим образом. отладчик предполагает, что `oldOffset` ссылается на смещение MSIL в исходном, неизмененном коде MSIL. Параметр `newOffset` ссылается на соответствующее смещение MSIL в новом, инструментированном коде.  
   
  Чтобы пошаговая работа работала правильно, должны выполняться следующие требования:  
   
@@ -82,11 +80,11 @@ typedef struct _COR_IL_MAP {
 - Новое смещение, равное 20 или выше, будет сопоставлено старому смещению 9.  
   
 ## <a name="requirements"></a>Требования  
- **Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug. idl, CorProf. idl  
+ **Заголовок:** CorDebug. idl, CorProf. idl  
   
- **Библиотечная** Коргуидс. lib  
+ **Библиотека:** CorGuids.lib  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

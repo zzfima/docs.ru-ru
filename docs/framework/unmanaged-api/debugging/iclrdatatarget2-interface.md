@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 94249397-861b-4294-a538-cf01466a66d3
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d21bced214242866c47f40f392593f3f51cda02f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1f0f4331302e56a90b4aefd657e07981994022ec
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61697944"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73112315"
 ---
 # <a name="iclrdatatarget2-interface"></a>Интерфейс ICLRDataTarget2
 Подкласс [ICLRDataTarget](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md) , используемый уровнем служб доступа к данным для управления областями виртуальной памяти в целевом процессе.  
@@ -31,15 +29,15 @@ ms.locfileid: "61697944"
 |Метод|Описание|  
 |------------|-----------------|  
 |[Метод AllocVirtual](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget2-allocvirtual-method.md)|Выделяет память в адресном пространстве целевого процесса.|  
-|[Метод FreeVirtual](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget2-freevirtual-method.md)|Освобождает память, выделенную ранее в адресном пространстве целевого процесса.|  
+|[Метод FreeVirtual](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget2-freevirtual-method.md)|Освобождает память, которая была ранее выделена в адресном пространстве целевого процесса.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
  Клиент API (то есть отладчик) должен реализовывать этот интерфейс для определенного целевого процесса по мере необходимости. Например, реализация активного процесса будет отличаться от реализации дампа памяти. Целевой объект может не поддерживать изменение областей его памяти.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** ClrData.idl, ClrData.h  
+ **Заголовок:** Клрдата. idl, Клрдата. h  
   
  **Библиотека:** CorGuids.lib  
   

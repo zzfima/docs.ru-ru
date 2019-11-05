@@ -2,14 +2,12 @@
 title: Метод ICorDebugDataTarget3::GetLoadedModules
 ms.date: 03/30/2017
 ms.assetid: 9a48c05b-1949-416e-933c-52549b6fcf5e
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 120b839b2b11c85f42bb1a0ae4701de0dea33879
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 6ee2215e2b3e3bd911158b3fc801361fc4e22db1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69912826"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136689"
 ---
 # <a name="icordebugdatatarget3getloadedmodules-method"></a>Метод ICorDebugDataTarget3::GetLoadedModules
 Возвращает список модулей, загруженных на данный момент.  
@@ -34,17 +32,17 @@ HRESULT GetLoadedModules(
  `pLoadedModules`  
  заполняет Указатель на массив объектов [икордебуглоадедмодуле](../../../../docs/framework/unmanaged-api/debugging/icordebugloadedmodule-interface.md) , которые предоставляют сведения о загруженных модулях.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
   
 > [!NOTE]
 > Этот метод доступен только в машинном коде .NET.  
   
 ## <a name="requirements"></a>Требования  
- **Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug. idl, CorDebug. h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
- **Библиотечная** Коргуидс. lib  
+ **Библиотека:** CorGuids.lib  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

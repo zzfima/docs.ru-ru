@@ -1,17 +1,15 @@
 ---
-title: Метод ICorDebugExceptionDebugEvent::GetStackPointer
+title: 'Метод Икордебужексцептиондебужевент:: Жетстаккпоинтер'
 ms.date: 03/30/2017
 ms.assetid: d8f66a1c-16be-4264-afc5-bc2dfbb4a682
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 47f60b151166804d612292fb32b7ff154e417342
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 688f5aec457298a43d95a35fdbc6e04e29a306a4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69928205"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73084673"
 ---
-# <a name="icordebugexceptiondebugeventgetstackpointer-method"></a>Метод ICorDebugExceptionDebugEvent::GetStackPointer
+# <a name="icordebugexceptiondebugeventgetstackpointer-method"></a>Метод Икордебужексцептиондебужевент:: Жетстаккпоинтер
 Получает указатель стека для этого события отладки исключения.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -26,7 +24,7 @@ HRESULT GetStackPointer(
  `pStackPointer`  
  [out] Указатель на адрес указателя стека для этого события отладки исключения. Дополнительные сведения см. в разделе "Примечания".  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
  Смысл этого указателя стека зависит от типа события, как показано в следующей таблице.  
   
 |Тип события.|Смысл значения `pStackPointer`|  
@@ -42,11 +40,11 @@ HRESULT GetStackPointer(
  Тип события доступен в методе [ICorDebugDebugEvent:: GetEventKind](../../../../docs/framework/unmanaged-api/debugging/icordebugdebugevent-geteventkind-method.md) .  
   
 ## <a name="requirements"></a>Требования  
- **Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug. idl, CorDebug. h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
- **Библиотечная** Коргуидс. lib  
+ **Библиотека:** CorGuids.lib  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

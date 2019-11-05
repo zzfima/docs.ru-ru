@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5245d4b5-b6c3-48df-9cb9-8caf059f43fb
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 75b3fc0b1dde35e743e699d22c5766cab4cf0faf
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b2fc1d6c45eb72410ccfa1071064aa1a31ae46e6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964720"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121405"
 ---
 # <a name="ihosttaskalert-method"></a>Метод IHostTask::Alert
 Запрашивает выход узла из задачи, представленной текущим экземпляром [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) , поэтому задачу можно прервать.  
@@ -44,18 +42,18 @@ HRESULT Alert ();
 |HOST_E_ABANDONED|Событие было отменено, пока заблокированный поток или волокно ожидают его.|  
 |E_FAIL|Произошла неизвестная фатальная ошибка. Когда метод возвращает значение E_FAIL, среда CLR больше не может использоваться в процессе. Последующие вызовы методов размещения возвращают HOST_E_CLRNOTAVAILABLE.|  
   
-## <a name="remarks"></a>Примечания  
- Среда CLR вызывает `Alert` метод, когда <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> вызывается из пользовательского кода, или когда объект <xref:System.AppDomain> , связанный с текущим <xref:System.Threading.Thread> , завершает работу. Узел должен возвращаться немедленно, так как вызов выполняется асинхронно. Если узел не может немедленно предупредить задачу, он должен пробудиться при следующем входе в состояние, в котором она может быть оповещена.  
+## <a name="remarks"></a>Заметки  
+ Среда CLR вызывает метод `Alert` при вызове <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> из пользовательского кода или при завершении работы <xref:System.AppDomain>, связанного с текущим <xref:System.Threading.Thread>. Узел должен возвращаться немедленно, так как вызов выполняется асинхронно. Если узел не может немедленно предупредить задачу, он должен пробудиться при следующем входе в состояние, в котором она может быть оповещена.  
   
 > [!NOTE]
-> `Alert`затрагивает только те задачи, к которым среда выполнения передала значение [WAIT_OPTION](../../../../docs/framework/unmanaged-api/hosting/wait-option-enumeration.md) WAIT_ALERTABLE в такие методы, как [Join](../../../../docs/framework/unmanaged-api/hosting/ihosttask-join-method.md).  
+> `Alert` влияет только на те задачи, к которым среда выполнения передала значение [WAIT_OPTION](../../../../docs/framework/unmanaged-api/hosting/wait-option-enumeration.md) WAIT_ALERTABLE для таких методов, как [Join](../../../../docs/framework/unmanaged-api/hosting/ihosttask-join-method.md).  
   
 ## <a name="requirements"></a>Требования  
- **Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** MSCorEE. h  
+ **Заголовок:** MSCorEE. h  
   
- **Библиотечная** Включается в качестве ресурса в библиотеку MSCorEE. dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

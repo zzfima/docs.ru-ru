@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 05558daa-39e2-4c38-aeaf-e2aec4a09468
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9bbc3379ff9523564f4eae7da96fca2247601fcd
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d9f0eff35dbe0058398d2d1c851ef85effa9cd28
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67765158"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122424"
 ---
 # <a name="icordebugthread4hadunhandledexception-method"></a>Метод ICorDebugThread4::HadUnhandledException
-Указывает, возникало ли когда-либо поток необработанное исключение.  
+Указывает, имел ли когда-либо поток необработанное исключение.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,23 +35,23 @@ HRESULT GetBlockingObjects (
   
 ## <a name="parameters"></a>Параметры  
  `ppBlockingObjectEnum`  
- [out] Указатель на адрес, упорядоченный перечисления [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) структуры.  
+ заполняет Указатель на адрес упорядоченного перечисления структур [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) .  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Этот метод возвращает следующие конкретные результаты HRESULT, а также ошибки HRESULT, которые указывают на сбой метода.  
   
 |HRESULT|Описание|  
 |-------------|-----------------|  
-|S_OK|Поток был необработанное исключение с момента его создания.|  
-|S_FALSE|Поток никогда не устанавливался необработанное исключение.|  
+|S_OK|В потоке возникло необработанное исключение с момента его создания.|  
+|S_FALSE|В потоке никогда не было необработанного исключения.|  
   
-## <a name="remarks"></a>Примечания  
- Этот метод указывает, возникало ли когда-либо поток необработанное исключение. К моменту запущен обратный вызов необработанного исключения или собственного JIT-присоединением инициируется, этот метод гарантированно возвращает S_OK. Нет никакой гарантии, [ICorDebugThread.GetCurrentException](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-getcurrentexception-method.md) метод возвращает необработанное исключение; тем не менее, он будет, если процесс не еще продолжается после получения обратного вызова необработанного исключения или при собственного JIT-присоединения. Кроме того можно (хотя и маловероятно) иметь более одного потока с необработанное исключение во время активации собственного JIT-присоединением. В этом случае нет способа определить, какое исключение инициировало JIT-присоединением.  
+## <a name="remarks"></a>Заметки  
+ Этот метод указывает, имел ли у потока когда-либо необработанное исключение. К моменту срабатывания обратного вызова необработанного исключения или инициализации собственного JIT-присоединения этот метод гарантированно возвращает значение S_OK. Нет никакой гарантии, что метод [ICorDebugThread. жеткуррентексцептион](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-getcurrentexception-method.md) будет возвращать необработанное исключение; Тем не менее, если процесс еще не был продолжен после получения обратного вызова необработанного исключения или собственного JIT-присоединения. Кроме того, во время выполнения собственного JIT-присоединения можно (хотя маловероятно) иметь более одного потока с необработанным исключением. В этом случае нет способа определить, какое исключение активировало JIT-присоединение.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: f1de4584-92df-42f3-9da4-fca03a1c6821
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 11e21e913e4749705ba6c7f91016be21b4de1712
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 48d2af96b50bf77347256b3d5860405e460a09d3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67769967"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133451"
 ---
 # <a name="icordebugthreadgetid-method"></a>Метод ICorDebugThread::GetID
-Возвращает идентификатор текущей операционной системы, активной части ICorDebugThread.  
+Возвращает идентификатор текущей операционной системы активной части этого ICorDebugThread.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,15 +35,15 @@ HRESULT GetID (
   
 ## <a name="parameters"></a>Параметры  
  `pdwThreadId`  
- [out] Идентификатор потока.  
+ заполняет Идентификатор потока.  
   
-## <a name="remarks"></a>Примечания  
- Идентификатор операционной системы может измениться во время выполнения процесса и может быть другое значение для разных частей потока.  
+## <a name="remarks"></a>Заметки  
+ Идентификатор операционной системы потенциально может изменяться во время выполнения процесса и может быть другим значением для разных частей потока.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

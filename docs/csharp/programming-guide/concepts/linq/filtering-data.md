@@ -2,12 +2,12 @@
 title: Фильтрация данных (C#)
 ms.date: 07/20/2015
 ms.assetid: fbaece0d-0f23-47f7-89c5-f3ea8db692b6
-ms.openlocfilehash: 17d3a65b6042c9679a263eff0048f5360c4aa546
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: eb448c1c2ea6d9b3fcf0120043cafebc01cd3805
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69594398"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73418479"
 ---
 # <a name="filtering-data-c"></a>Фильтрация данных (C#)
 Фильтрация — это операция по ограничению значений в результирующем наборе только элементами, соответствующими указанному условию. Это также называется выборкой.  
@@ -50,7 +50,7 @@ foreach (string str in query)
 - <xref:System.Linq>
 - [Общие сведения о стандартных операторах запроса (C#)](./standard-query-operators-overview.md)
 - [предложение where](../../../language-reference/keywords/where-clause.md)
-- [Практическое руководство. Динамическое определение фильтров предикатов во время выполнения](../../linq-query-expressions/how-to-dynamically-specify-predicate-filters-at-runtime.md)
+- [Практическое руководство. Динамическое определение фильтров предикатов во время выполнения](../../../linq/dynamically-specify-predicate-filters-at-runtime.md)
 - [Практическое руководство. Выполнение запроса к метаданным сборки при помощи отражения (LINQ) (C#)](./how-to-query-an-assembly-s-metadata-with-reflection-linq.md)
 - [Практическое руководство. Запрос файлов с указанным атрибутом или именем (C#)](./how-to-query-for-files-with-a-specified-attribute-or-name.md)
 - [Практическое руководство. Сортировка или фильтрация текстовых данных по любому слову или полю (LINQ) (C#)](./how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)

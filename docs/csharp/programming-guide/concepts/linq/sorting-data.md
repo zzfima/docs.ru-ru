@@ -2,12 +2,12 @@
 title: Сортировка данных (C#)
 ms.date: 07/20/2015
 ms.assetid: d93fa055-2f19-46d2-9898-e2aed628f1c9
-ms.openlocfilehash: 28cf4025d0b9bca841695c9873a0ff7972726b98
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 78b263c384895b736b11cc524befa42b4a896380
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69591037"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73418193"
 ---
 # <a name="sorting-data-c"></a>Сортировка данных (C#)
 Операция сортировки упорядочивает элементы последовательности на основе одного или нескольких атрибутов. Первый критерий сортировки выполняет первичную сортировку элементов. Указав второй критерий поиска, можно сортировать элементы внутри каждой группы первичной сортировки.  
@@ -131,5 +131,5 @@ foreach (string str in query)
 - <xref:System.Linq>
 - [Общие сведения о стандартных операторах запроса (C#)](./standard-query-operators-overview.md)
 - [предложение orderby](../../../language-reference/keywords/orderby-clause.md)
-- [Практическое руководство. Упорядочение результатов предложения соединения](../../linq-query-expressions/how-to-order-the-results-of-a-join-clause.md)
+- [Практическое руководство. Упорядочение результатов предложения соединения](../../../linq/order-the-results-of-a-join-clause.md)
 - [Практическое руководство. Сортировка или фильтрация текстовых данных по любому слову или полю (LINQ) (C#)](./how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)

@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: e32fd546-7757-4681-be3d-658e93281e50
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 353898b72f41acd0c49a43ff05e54f61b99444c4
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 9e441d4da64e9704fbda2368d2b07289aaea610a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798994"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125201"
 ---
 # <a name="strongnamekeyinstall-function"></a>Функция StrongNameKeyInstall
 
@@ -42,19 +40,19 @@ BOOLEAN StrongNameKeyInstall (
 ## <a name="parameters"></a>Параметры
 
 `wszKeyContainer`\
-окне Имя контейнера ключей. `wszKeyContainer`значение должно быть непустой строкой.
+окне Имя контейнера ключей. `wszKeyContainer` должен быть непустой строкой.
 
 `pbKeyBlob`\
 окне Пара двоичных ключей.
 
 `cbKeyBlob`\
-окне Размер (в байтах `pbKeyBlob`).
+окне Размер `pbKeyBlob`в байтах.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-`true`При успешном завершении; в противном случае —. `false`
+`true` при успешном завершении; в противном случае `false`.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
 Чтобы удалить контейнер ключей, используйте функцию [StrongNameKeyDelete](strongnamekeydelete-function.md) .
 
@@ -62,11 +60,11 @@ BOOLEAN StrongNameKeyInstall (
 
 ## <a name="requirements"></a>Требования
 
-**Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).
+**Платформы:** см. раздел [Требования к системе](../../get-started/system-requirements.md).
 
-**Заголовок.** StrongName. h
+**Заголовок:** StrongName. h
 
-**Библиотечная** Включается в качестве ресурса в библиотеку MsCorEE. dll
+**Библиотека:** Включается в качестве ресурса в библиотеку MsCorEE. dll
 
 **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
 

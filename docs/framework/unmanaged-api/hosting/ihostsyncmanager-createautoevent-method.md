@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3153643e-cf5c-4b44-8e0e-c2b22cb08208
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ad704ff1e38d59df9e26d34b6dc62c40522aa728
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b3778e12dd96d4f4653633252e13469601c4879d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67753456"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139434"
 ---
 # <a name="ihostsyncmanagercreateautoevent-method"></a>Метод IHostSyncManager::CreateAutoEvent
 Создает объект события автоматического сброса.  
@@ -37,29 +35,29 @@ HRESULT CreateAutoEvent (
   
 ## <a name="parameters"></a>Параметры  
  `ppEvent`  
- [out] Указатель на адрес [IHostAutoEvent](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-interface.md) экземпляр реализованного узлом, или значение null, если не удалось создать объект события.  
+ заполняет Указатель на адрес экземпляра [ихостаутоевент](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-interface.md) , реализуемого узлом, или значение null, если не удалось создать объект события.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
   
 |HRESULT|Описание|  
 |-------------|-----------------|  
-|S_OK|`CreateAutoEvent` успешно возвращен.|  
-|ЗНАЧЕНИЕ HOST_E_CLRNOTAVAILABLE|Общеязыковая среда выполнения (CLR) не был загружен в процесс или находится в состоянии, в котором не может выполнять управляемый код или успешно обработать вызов.|  
-|HOST_E_TIMEOUT|Истекло время ожидания вызова.|  
-|HOST_E_NOT_OWNER|Вызывающий объект не является владельцем блокировки.|  
-|HOST_E_ABANDONED|Событие было отменено с сохранением заблокированный поток или ожидал волокон.|  
-|E_FAIL|Неизвестный Разрушительный сбой. Когда метод вернет значение E_FAIL, среда CLR больше не может использоваться в процессе. Последующие вызовы к размещению методы возвращают значение HOST_E_CLRNOTAVAILABLE.|  
-|E_OUTOFMEMORY|Недостаточно памяти, доступного для создания запрошенного объекта события.|  
+|S_OK|`CreateAutoEvent` успешно возвращено.|  
+|HOST_E_CLRNOTAVAILABLE|Среда CLR не была загружена в процесс, или среда CLR находится в состоянии, в котором она не может выполнить управляемый код или успешно обработать вызов.|  
+|HOST_E_TIMEOUT|Время ожидания вызова истекло.|  
+|HOST_E_NOT_OWNER|Вызывающий объект не владеет блокировкой.|  
+|HOST_E_ABANDONED|Событие было отменено, пока заблокированный поток или волокно ожидают его.|  
+|E_FAIL|Произошла неизвестная фатальная ошибка. Когда метод возвращает значение E_FAIL, среда CLR больше не может использоваться в процессе. Последующие вызовы методов размещения возвращают HOST_E_CLRNOTAVAILABLE.|  
+|E_OUTOFMEMORY|Недостаточно свободной памяти для создания запрошенного объекта события.|  
   
-## <a name="remarks"></a>Примечания  
- `CreateAutoEvent` Создает объект автоматического события, состояние которого будет автоматически изменено на несигнальное после выпуска ожидающий поток. Этот метод отражает Win32 `CreateEvent` функции со значением `false` указанный для `bManualReset` параметр  
+## <a name="remarks"></a>Заметки  
+ `CreateAutoEvent` создает объект автоматического события, состояние которого автоматически меняется на несигнальное после освобождения ожидающего потока. Этот метод отражает функцию `CreateEvent` Win32 со значением `false`, указанным для параметра `bManualReset`  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** MSCorEE.h  
+ **Заголовок:** MSCorEE. h  
   
- **Библиотека:** Включена как ресурс в MSCorEE.dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

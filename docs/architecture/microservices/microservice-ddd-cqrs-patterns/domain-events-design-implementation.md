@@ -2,12 +2,12 @@
 title: События предметной области. Проектирование и реализация
 description: Архитектура микрослужб .NET для контейнерных приложений .NET | Подробный обзор событий предметной области, ключевая концепция для установления связи между агрегатами.
 ms.date: 10/08/2018
-ms.openlocfilehash: 4fe0c1fa04bbecb64783e070838ab796de4f90d6
-ms.sourcegitcommit: 10db6551ea3c971470cf5d2cc21ba1cbcefe5c55
+ms.openlocfilehash: eea72633d3460f51821e8a939b14acff2f17965c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/08/2019
-ms.locfileid: "72031837"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73093958"
 ---
 # <a name="domain-events-design-and-implementation"></a>События предметной области: проектирование и реализация
 
@@ -145,9 +145,9 @@ public class OrderStartedDomainEvent : INotification
 ```csharp
 public abstract class Entity
 {
-     //... 
+     //...
      private List<INotification> _domainEvents;
-     public List<INotification> DomainEvents => _domainEvents; 
+     public List<INotification> DomainEvents => _domainEvents;
 
      public void AddDomainEvent(INotification eventItem)
      {
@@ -194,7 +194,7 @@ public class OrderingContext : DbContext, IUnitOfWork
         // handlers that are using the same DbContext with Scope lifetime
         // B) Right AFTER committing data (EF SaveChanges) into the DB. This makes
         // multiple transactions. You will need to handle eventual consistency and
-        // compensatory actions in case of failures.        
+        // compensatory actions in case of failures.
         await _mediator.DispatchDomainEventsAsync(this);
 
         // After this line runs, all the changes (from the Command Handler and Domain
@@ -208,7 +208,7 @@ public class OrderingContext : DbContext, IUnitOfWork
 
 Общий результат заключается в том, что вызов события предметной области (простого добавления в список в памяти) разделен от его отправки в обработчик событий. Кроме того, в зависимости от типа используемого диспетчера события можно отправлять синхронно или асинхронно.
 
-Следует иметь в виду, что здесь начинают играть важную роль транзакционные ограничения. Если единица работы и транзакция могут относиться к нескольким агрегатам (как при использовании EF Core и реляционной базы данных), этот вариант может быть успешным. Но если транзакция не может использоваться в агрегатах, например при использовании базы данных NoSQL, такой как Azure CosmosDB, необходимо реализовать дополнительные действия для обеспечения согласованности. Это еще одна причина, по которой пропуск сохраняемости не является универсальным. Он зависит от используемой системы хранения. 
+Следует иметь в виду, что здесь начинают играть важную роль транзакционные ограничения. Если единица работы и транзакция могут относиться к нескольким агрегатам (как при использовании EF Core и реляционной базы данных), этот вариант может быть успешным. Но если транзакция не может использоваться в агрегатах, например при использовании базы данных NoSQL, такой как Azure CosmosDB, необходимо реализовать дополнительные действия для обеспечения согласованности. Это еще одна причина, по которой пропуск сохраняемости не является универсальным. Он зависит от используемой системы хранения.
 
 ### <a name="single-transaction-across-aggregates-versus-eventual-consistency-across-aggregates"></a>Одна транзакция между агрегатами и итоговая согласованность между агрегатами
 
@@ -303,7 +303,7 @@ public class ValidateOrAddBuyerAggregateWhenOrderStartedDomainEventHandler
 
     public async Task Handle(OrderStartedDomainEvent orderStartedEvent)
     {
-        var cardTypeId = (orderStartedEvent.CardTypeId != 0) ? orderStartedEvent.CardTypeId : 1;        
+        var cardTypeId = (orderStartedEvent.CardTypeId != 0) ? orderStartedEvent.CardTypeId : 1;
         var userGuid = _identityService.GetUserIdentity();
         var buyer = await _buyerRepository.FindAsync(userGuid);
         bool buyerOriginallyExisted = (buyer == null) ? false : true;
@@ -321,7 +321,7 @@ public class ValidateOrAddBuyerAggregateWhenOrderStartedDomainEventHandler
                                        orderStartedEvent.CardExpiration,
                                        orderStartedEvent.Order.Id);
 
-        var buyerUpdated = buyerOriginallyExisted ? _buyerRepository.Update(buyer) 
+        var buyerUpdated = buyerOriginallyExisted ? _buyerRepository.Update(buyer)
                                                                       : _buyerRepository.Add(buyer);
 
         await _buyerRepository.UnitOfWork

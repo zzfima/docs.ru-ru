@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 29746b24-3766-4255-8813-0426c45e73e5
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 003a6546b3316f2a2a65bce4537c60dcf62b3197
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f80bdffbf5c0ba39980bd27c6e89a368547340c0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67752850"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129811"
 ---
 # <a name="icordebugmdagetxml-method"></a>Метод ICorDebugMDA::GetXML
-Получает полный XML-потока, связанного с управляемый помощник по отладке (MDA), представленный [ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md).  
+Возвращает полный XML-поток, связанный с помощником по отладке управляемого кода (MDA), представленным [ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -43,18 +41,18 @@ HRESULT GetXML (
  [in] Размер массива `szName`.  
   
  `pcchName`  
- [out] Указатель на длину потока XML.  
+ заполняет Указатель на длину XML-потока.  
   
  `szName`  
- [out] Массив, в котором будет храниться поток XML. Массив может быть пустым.  
+ заполняет Массив, в котором хранится XML-поток. Массив может быть пустым.  
   
-## <a name="remarks"></a>Примечания  
- `GetXML` Метод могут повлиять на производительность, в зависимости от размера связанного потока XML.  
+## <a name="remarks"></a>Заметки  
+ Метод `GetXML` потенциально может повлиять на производительность в зависимости от размера соответствующего потока XML.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 571912bc-3429-4ff8-8eb2-ea993ffbd901
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0e1a2358590b95b39b6495b74078f079c5b34876
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2a6dc878f156d5d18970fed72c9722bab60f9ba8
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67765676"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120407"
 ---
 # <a name="iclrruntimehostunloadappdomain-method"></a>Метод ICLRRuntimeHost::UnloadAppDomain
-Выгружает управляемый <xref:System.AppDomain> , соответствующий указанный числовой идентификатор.  
+Выгружает управляемые <xref:System.AppDomain>, соответствующие указанному числовому идентификатору.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,31 +36,31 @@ HRESULT UnloadAppDomain(
   
 ## <a name="parameters"></a>Параметры  
  `dwAppDomainId`  
- [in] Числовой идентификатор для выгрузки домена приложения.  
+ окне Числовой идентификатор домена приложения для выгрузки.  
   
  `fWaitUntilDone`  
- [in] `true` для указания, что общеязыковая среда выполнения (CLR) необходимо дождаться завершения выполнения текущего потока приложения, прежде чем попытаться выгрузить домен приложения.  
+ [in] `true`, чтобы указать, что общеязыковая среда выполнения (CLR) должна ожидать завершения выполнения текущего потока приложения перед попыткой выгрузить домен приложения.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
   
 |HRESULT|Описание|  
 |-------------|-----------------|  
-|S_OK|`UnloadAppDomain` успешно возвращен.|  
-|ЗНАЧЕНИЕ HOST_E_CLRNOTAVAILABLE|Среда CLR не был загружен в процесс или находится в состоянии, в котором не может выполнять управляемый код или успешно обработать вызов.|  
-|HOST_E_TIMEOUT|Истекло время ожидания вызова.|  
-|HOST_E_NOT_OWNER|Вызывающий объект не является владельцем блокировки.|  
-|HOST_E_ABANDONED|Событие было отменено с сохранением заблокированный поток или ожидал волокон.|  
-|E_FAIL|Неизвестный Разрушительный сбой. Если метод вернет значение E_FAIL, среда CLR больше не может использоваться в процессе. Последующие вызовы к размещению методы возвращают значение HOST_E_CLRNOTAVAILABLE.|  
+|S_OK|`UnloadAppDomain` успешно возвращено.|  
+|HOST_E_CLRNOTAVAILABLE|Среда CLR не была загружена в процесс, или среда CLR находится в состоянии, в котором она не может выполнить управляемый код или успешно обработать вызов.|  
+|HOST_E_TIMEOUT|Время ожидания вызова истекло.|  
+|HOST_E_NOT_OWNER|Вызывающий объект не владеет блокировкой.|  
+|HOST_E_ABANDONED|Событие было отменено, пока заблокированный поток или волокно ожидают его.|  
+|E_FAIL|Произошла неизвестная фатальная ошибка. Если метод возвращает значение E_FAIL, среда CLR больше не может использоваться в процессе. Последующие вызовы методов размещения возвращают HOST_E_CLRNOTAVAILABLE.|  
   
-## <a name="remarks"></a>Примечания  
- Можно получить числовой идентификатор домена приложения, в котором выполняется текущий поток, вызвав [GetCurrentAppDomainId](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-getcurrentappdomainid-method.md). Этот идентификатор соответствует <xref:System.AppDomain.Id%2A> свойство управляемых <xref:System.AppDomain> типа.  
+## <a name="remarks"></a>Заметки  
+ Вы можете получить числовой идентификатор домена приложения, в котором выполняется текущий поток, вызвав [жеткуррентаппдомаинид](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-getcurrentappdomainid-method.md). Этот идентификатор соответствует свойству <xref:System.AppDomain.Id%2A> типа управляемого <xref:System.AppDomain>.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** MSCorEE.h  
+ **Заголовок:** MSCorEE. h  
   
- **Библиотека:** Включена как ресурс в MSCorEE.dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

@@ -13,18 +13,18 @@ helpviewer_keywords:
 - file extensions [WPF], registering
 - registering MIME types [WPF]
 ms.assetid: c6e8c2cb-9ba2-4e75-a0d5-180ec9639433
-ms.openlocfilehash: 3a9bf79a9d505fef53b62cb589920adcf95ae92a
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: a731dc49556a73c585c6201a80ea3ea77c15cb11
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69611502"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124417"
 ---
 # <a name="how-to-configure-iis-50-and-iis-60-to-deploy-wpf-applications"></a>Практическое руководство. Настройка служб IIS 5.0 и IIS 6.0 для развертывания приложений WPF
 
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Приложение можно развернуть с большинства веб-серверов, если они настроены с использованием соответствующих типов MIME. По умолчанию Microsoft службы IIS (IIS) 7,0 настроены с этими типами MIME, но Microsoft службы IIS (IIS) 5,0 и Microsoft службы IIS (IIS) 6,0.
+Можно развернуть [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] приложение с большинства веб-серверов, если оно настроено с использованием соответствующих типов MIME. По умолчанию Microsoft службы IIS (IIS) 7,0 настроены с этими типами MIME, но Microsoft службы IIS (IIS) 5,0 и Microsoft службы IIS (IIS) 6,0.
 
-В этом разделе описано, как настроить Microsoft службы IIS (IIS) 5,0 и Microsoft службы IIS (IIS) 6,0 для [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] развертывания приложений.
+В этом разделе описано, как настроить Microsoft службы IIS (IIS) 5,0 и Microsoft службы IIS (IIS) 6,0 для развертывания приложений [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].
 
 > [!NOTE]
 > Вы можете проверить строку *UserAgent* в реестре, чтобы определить, установлена ли в системе .NET Framework. Дополнительные сведения и сценарий, проверяющий строку *UserAgent* для определения того, установлена ли .NET Framework в системе, см. в разделе [обнаружение установки .NET Framework 3,0](how-to-detect-whether-the-net-framework-3-0-is-installed.md).
@@ -63,7 +63,7 @@ ms.locfileid: "69611502"
 > [!NOTE]
 > Не нужно регистрировать типы MIME или расширения файлов в клиентских системах. Они регистрируются автоматически при установке Microsoft .NET Framework.
 
-Следующий пример Microsoft Visual Basic Scripting Edition (VBScript) автоматически добавляет необходимые типы MIME в IIS. Чтобы использовать скрипт, скопируйте код в VBS-файл на своем сервере. Затем выполните скрипт, запустив файл из командной строки или дважды щелкнув этот файл в [!INCLUDE[TLA#tla_winexpl](../../../../includes/tlasharptla-winexpl-md.md)].
+Следующий пример Microsoft Visual Basic Scripting Edition (VBScript) автоматически добавляет необходимые типы MIME в IIS. Чтобы использовать скрипт, скопируйте код в VBS-файл на своем сервере. Затем запустите сценарий, запустив файл из командной строки или дважды щелкнув файл в проводнике Microsoft Windows.
 
 ```vb
 ' This script adds the necessary Windows Presentation Foundation MIME types

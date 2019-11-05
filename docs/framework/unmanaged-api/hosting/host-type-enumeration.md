@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 51f848be-84c5-4036-9839-c762c576bbf5
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: caf76fa7962de9392b06591777ac862aa548d20d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: cc0cea10b4a209583fb7afb551a6b80d52ad7f62
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779552"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127032"
 ---
-# <a name="hosttype-enumeration"></a>Перечисление HOST_TYPE
-Содержит значения, указывающие тип узла, которое запускает приложение.  
+# <a name="host_type-enumeration"></a>Перечисление HOST_TYPE
+Содержит значения, указывающие тип узла, запускающего приложение.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -36,20 +34,20 @@ typedef enum {
 } HOST_TYPE;  
 ```  
   
-## <a name="members"></a>Участники  
+## <a name="members"></a>Члены  
   
 |Член|Описание|  
 |------------|-----------------|  
-|`HOST_TYPE_APPLAUNCH`|Запустите приложение из AppLaunch.exe.<br /><br /> Используйте это значение для частично доверенных приложениях.|  
-|`HOST_TYPE_CORFLAG`|Запустите приложение напрямую. То есть запуска приложения из свой собственный файл .exe.<br /><br /> Это значение используется для приложений с полным уровнем доверия.|  
-|`HOST_TYPE_DEFAULT`|Совпадает со значением HOST_TYPE_APPLAUNCH.|  
+|`HOST_TYPE_APPLAUNCH`|Запустите приложение из Апплаунч. exe.<br /><br /> Используйте это значение для частично доверенных приложений.|  
+|`HOST_TYPE_CORFLAG`|Запустите приложение напрямую. То есть запустите приложение из собственного EXE-файла.<br /><br /> Используйте это значение для полностью доверенных приложений.|  
+|`HOST_TYPE_DEFAULT`|То же, что и HOST_TYPE_APPLAUNCH.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** MSCorEE.h  
+ **Заголовок:** MSCorEE. h  
   
- **Библиотека:** MSCorEE.dll  
+ **Библиотека:** MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

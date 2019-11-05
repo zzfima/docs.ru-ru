@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8e89d5ee-e4e3-4738-8302-0b7d1cf4846e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0eacb4b0a06fbe086935b59eba7d33135b6bef19
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d773368c85fd42fd169109cf1c7e6635705ebb7e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67759712"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73090227"
 ---
 # <a name="icordebugmanagedcallbackcreateprocess-method"></a>Метод ICorDebugManagedCallback::CreateProcess
-Уведомляет отладчик присоединен процесс или запускается в первый раз.  
+Уведомляет отладчик о том, что процесс был присоединен или запущен в первый раз.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,15 +35,15 @@ HRESULT CreateProcess (
   
 ## <a name="parameters"></a>Параметры  
  `pProcess`  
- [in] Указатель на объект ICorDebugProcess, представляющий процесс, которые присоединены и к работе.  
+ окне Указатель на объект ICorDebugProcess, представляющий процесс, который был присоединен или запущен.  
   
-## <a name="remarks"></a>Примечания  
- Этот метод не вызывается до инициализации среда CLR. Большая часть [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) методы возвращают CORDBG_E_NOTREADY перед `CreateProcess` обратного вызова.  
+## <a name="remarks"></a>Заметки  
+ Этот метод не вызывается до тех пор, пока не будет инициализирована среда CLR. Большая часть методов [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) возвратит CORDBG_E_NOTREADY перед обратным вызовом `CreateProcess`.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

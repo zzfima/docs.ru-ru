@@ -8,14 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - parallelism, data
 ms.assetid: 3f05f33f-f1da-4b16-81c2-9ceff1bef449
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 19e518db75fe3e45f57cbb6fab8c5281cceb4d34
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 72696a41cd3b71f47fdcf43e4ece70ebeb7d34d1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69939330"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123164"
 ---
 # <a name="data-parallelism-task-parallel-library"></a>Параллелизм данных (библиотека параллельных задач)
 Понятие *Параллелизм данных* относится к сценариям, в которых одна и та же операция выполняется одновременно (то есть параллельно) для элементов в исходной коллекции или массиве. В параллельных операциях с данными исходная коллекция секционируются таким образом, чтобы несколько потоков могли одновременно работать в разных сегментах.  
@@ -41,7 +39,7 @@ ms.locfileid: "69939330"
   
 ## <a name="related-topics"></a>См. также  
   
-|Заголовок|ОПИСАНИЕ|  
+|Заголовок|Описание|  
 |-----------|-----------------|  
 |[Практическое руководство. Написание простого цикла Parallel.For](../../../docs/standard/parallel-programming/how-to-write-a-simple-parallel-for-loop.md)|Описание способа написания цикла <xref:System.Threading.Tasks.Parallel.For%2A> по какому-либо массиву или индексируемой исходной коллекции <xref:System.Collections.Generic.IEnumerable%601>.|  
 |[Практическое руководство. Написание простого цикла Parallel.ForEach](../../../docs/standard/parallel-programming/how-to-write-a-simple-parallel-foreach-loop.md)|Описание способа написания цикла <xref:System.Threading.Tasks.Parallel.ForEach%2A> по какой-либо исходной коллекции <xref:System.Collections.Generic.IEnumerable%601>.|  

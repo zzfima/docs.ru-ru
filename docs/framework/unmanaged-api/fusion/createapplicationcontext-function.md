@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7bf8a141-b2c0-4058-9885-1cef7dcaa811
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 25364330dafdf858c4b41e9a05731c37e97fbb57
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: e188fe80e770481aac02244a2c105639e4da19e2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70795432"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73108894"
 ---
 # <a name="createapplicationcontext-function"></a>Функция CreateApplicationContext
 Эта функция поддерживает .NET Frameworkную инфраструктуру и не предназначена для непосредственного использования в коде.  
@@ -43,11 +41,11 @@ HRESULT CreateApplicationContext (
  заполняет Указатель на контекст приложения.  
   
 ## <a name="requirements"></a>Требования  
- **Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
- **Заголовок.** Fusion. h  
+ **Заголовок:** Fusion. h  
   
- **Библиотечная** Включается в качестве ресурса в Fusion. dll  
+ **Библиотека:** Включается в качестве ресурса в Fusion. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

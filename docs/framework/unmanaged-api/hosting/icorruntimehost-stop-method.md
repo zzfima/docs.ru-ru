@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 46a0d450-b516-4bef-8b71-8d3bf265cbed
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ca51b87e7afc8e9e48d541a32b3bd60a19a5ff70
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 5fcf8bc861b2ef0b8ea9f5a5e46585564cc26615
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69965971"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127699"
 ---
 # <a name="icorruntimehoststop-method"></a>Метод ICorRuntimeHost::Stop
 Останавливает выполнение кода в среде выполнения для текущего процесса.  
@@ -42,18 +40,18 @@ HRESULT Stop ();
 |E_FAIL|Произошла неизвестная фатальная ошибка. Если метод возвращает значение E_FAIL, среда CLR больше не может использоваться в процессе. Последующие вызовы любых API размещения возвращают HOST_E_CLRNOTAVAILABLE.|  
 |HOST_E_CLRNOTAVAILABLE|Среда CLR не была загружена в процесс, или среда CLR находится в состоянии, в котором она не может выполнить управляемый код или успешно обработать вызов.|  
   
-## <a name="remarks"></a>Примечания  
- Как правило, вызов `Stop` метода не требуется, поскольку код прекращает выполнение при завершении процесса.  
+## <a name="remarks"></a>Заметки  
+ Обычно нет необходимости вызывать метод `Stop`, так как код прекращает выполнение при завершении процесса.  
   
 > [!NOTE]
 > После вызова `Stop`среда CLR не может быть инициализирована в том же процессе.  
   
 ## <a name="requirements"></a>Требования  
- **Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** MSCorEE. h  
+ **Заголовок:** MSCorEE. h  
   
- **Библиотечная** Включается в качестве ресурса в библиотеку MSCorEE. dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MSCorEE. dll  
   
  **.NET Framework версии:** 1,0, 1,1  
   

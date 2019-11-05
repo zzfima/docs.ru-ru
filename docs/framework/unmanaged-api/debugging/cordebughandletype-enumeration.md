@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 84296b55-c2c5-424c-ac9c-8e28e2895945
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f6f5cd47abd4c17021bc324898a096ff70a3db2e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5a957a042875b546a18a17422f355b712756e91c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739994"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73098174"
 ---
 # <a name="cordebughandletype-enumeration"></a>Перечисление CorDebugHandleType
 Указывает тип обработки.  
@@ -35,17 +33,17 @@ typedef enum CorDebugHandleType {
 } CorDebugHandleType;  
 ```  
   
-## <a name="members"></a>Участники  
+## <a name="members"></a>Члены  
   
 |Член|Описание|  
 |------------|-----------------|  
-|`HANDLE_STRONG`|Этот дескриптор является строгим, запрещающая объект освобождается при сборке мусора.|  
-|`HANDLE_WEAK_TRACK_RESURRECTION`|Дескриптор является ненадежным, который запрещает объект освобождается при сборке мусора.<br /><br /> Дескриптор становится недействительным, если этот объект собран.|  
+|`HANDLE_STRONG`|Этот маркер является строгим, что предотвращает освобождение объекта при сборке мусора.|  
+|`HANDLE_WEAK_TRACK_RESURRECTION`|Этот маркер является слабым, который не предотвращает освобождение объекта при сборке мусора.<br /><br /> При сборе объекта этот маркер становится недействительным.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

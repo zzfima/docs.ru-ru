@@ -10,14 +10,12 @@ helpviewer_keywords:
 - reflection,partial trust
 - link demands
 ms.assetid: 42d9dc2a-8fcc-4ff3-b002-4ff260ef3dc5
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 852490c57a2954e9d56799ef8deebbef31d5f665
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 1d5289ce15c213024af576c99fe039f5d6c1a247
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71045888"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130069"
 ---
 # <a name="security-considerations-for-reflection"></a>Соображения о безопасности для отражения
 
@@ -69,9 +67,9 @@ ms.locfileid: "71045888"
 
 |Уровень безопасности|IsSecurityCritical|IsSecuritySafeCritical|IsSecurityTransparent|
 |--------------------|------------------------|----------------------------|---------------------------|
-|Critical|`true`|`false`|`false`|
+|Критические важное|`true`|`false`|`false`|
 |Критический в плане безопасности|`true`|`true`|`false`|
-|Прозрачный|`false`|`false`|`true`|
+|Прозрачно|`false`|`false`|`true`|
 
 Использовать эти свойства гораздо проще, чем просматривать заметки о безопасности для сборки и ее типов, проверять текущий уровень доверия и пытаться дублировать правила среды выполнения. Например, один и тот же тип может быть критическим с точки зрения безопасности при запуске из командной строки или прозрачным для системы безопасности при запуске в изолированном домене приложения.
 
@@ -88,7 +86,7 @@ ms.locfileid: "71045888"
   > [!NOTE]
   > По умолчанию политика безопасности отказывает в предоставлении этого разрешения коду, полученному из Интернета. Это разрешение ни в коем случае нельзя предоставлять коду, источником которого является Интернет.
 
-- Чтобы разрешить коду вызывать любой закрытый член, только если набор прав сборки, содержащей вызываемый член, идентичен набору прав сборки, содержащей вызывающий код, или является его подмножеством: Коду необходимо предоставить разрешение <xref:System.Security.Permissions.ReflectionPermission> с флагом <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>.
+- Чтобы разрешить коду вызывать любой закрытый член, только если набор прав сборки, содержащей вызываемый член, идентичен набору прав сборки, содержащей вызывающий код, или является его подмножеством, коду необходимо предоставить разрешение <xref:System.Security.Permissions.ReflectionPermission> с флагом <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>.
 
 Предположим, вы предоставляете домену приложения разрешения на доступ к Интернету плюс разрешение <xref:System.Security.Permissions.ReflectionPermission> с флагом <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>, а затем запускаете веб-приложение с двумя сборками, A и B.
 

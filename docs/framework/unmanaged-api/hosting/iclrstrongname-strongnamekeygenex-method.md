@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1f8b59d0-5b72-45b8-ab74-c2b43ffc806e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: acbf401ac2abb5ded151a48017a8a977cd0f4b71
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1a5bcfb7a272af694126025f28ca3efe5a881c15
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67747795"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73135019"
 ---
 # <a name="iclrstrongnamestrongnamekeygenex-method"></a>Метод ICLRStrongName::StrongNameKeyGenEx
-Создает новую пару открытого и закрытого ключа с заданным размером ключа, для использования строгого имени.  
+Создает новую пару открытого и закрытого ключей с указанным размером ключа для использования строгого имени.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -41,38 +39,38 @@ HRESULT StrongNameKeyGenEx (
   
 ## <a name="parameters"></a>Параметры  
  `wszKeyContainer`  
- [in] Имя запрошенного контейнера ключа. `wszKeyContainer` должен быть непустой строкой или значение null, чтобы создать временное имя.  
+ окне Запрошенное имя контейнера ключей. `wszKeyContainer` должен быть непустой строкой или иметь значение NULL для создания временного имени.  
   
  `dwFlags`  
- [in] Значение, указывающее, следует ли оставить ключ зарегистрирован. Поддерживаются следующие значения:  
+ окне Значение типа, указывающее, следует ли оставлять зарегистрированный ключ. Поддерживаются следующие значения:  
   
-- 0x00000000 — используется, когда `wszKeyContainer` имеет значение null, если для создания временного имени контейнера ключа.  
+- 0x00000000 — используется, если `wszKeyContainer` имеет значение NULL для создания временного имени контейнера ключей.  
   
 - 0x00000001 (`SN_LEAVE_KEY`) — указывает, что ключ должен оставаться зарегистрированным.  
   
  `dwKeySize`  
- [in] Запрошенный размер ключа в битах.  
+ окне Запрошенный размер ключа в битах.  
   
  `ppbKeyBlob`  
- [out] Возвращаемый ключа пары открытого и закрытого.  
+ заполняет Возвращаемая пара открытого и закрытого ключей.  
   
  `pcbKeyBlob`  
- [out] Размер в байтах из `ppbKeyBlob`.  
+ заполняет Размер `ppbKeyBlob`в байтах.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- `S_OK` Если метод успешно завершена; в противном случае — значение HRESULT, указывающее на сбой (см. в разделе [часто встречающихся значений HRESULT](https://go.microsoft.com/fwlink/?LinkId=213878) список).  
+ `S_OK`, если метод успешно выполнен; в противном случае — значение HRESULT, указывающее на сбой (см. раздел [Общие значения HRESULT](https://go.microsoft.com/fwlink/?LinkId=213878) для списка).  
   
-## <a name="remarks"></a>Примечания  
- Требуется .NET Framework версий 1.0 и 1.1 `dwKeySize` 1024 бит для подписи сборки строгим именем; версии 2.0 добавлена поддержка 2048-разрядные ключи.  
+## <a name="remarks"></a>Заметки  
+ Для подписи сборки строгим именем в .NET Framework версиях 1,0 и 1,1 требуется `dwKeySize` 1024 бит. в версии 2,0 добавлена поддержка для 2048-разрядных ключей.  
   
- После извлечения ключа должно вызвать [ICLRStrongName::StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md) метод для освобождения выделенной памяти.  
+ После извлечения ключа необходимо вызвать метод [метод iclrstrongname:: StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md) , чтобы освободить выделенную память.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** MetaHost.h  
+ **Заголовок:** Метахост. h  
   
- **Библиотека:** Включена как ресурс в MSCorEE.dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

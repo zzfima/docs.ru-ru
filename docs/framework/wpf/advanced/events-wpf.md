@@ -8,17 +8,17 @@ helpviewer_keywords:
 - events [WPF], windows
 - WPF [WPF], events
 ms.assetid: d3b93c6f-aa6b-486d-a010-d097ea8a516b
-ms.openlocfilehash: e6aa6fea3c19d452013e4e77d7ef4773a2f45343
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 70fbd1a4c4062708ab6082c4ec39e3e99354b004
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62010349"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460499"
 ---
 # <a name="events-wpf"></a>События (WPF)
 В [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] представлены перенаправленные события, которые могут вызывать обработчики, существующие в разных прослушивателях дерева элементов в приложении.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>Содержание  
  [Общие сведения о перенаправленных событиях](routed-events-overview.md)  
  [Общие сведения о вложенных событиях](attached-events-overview.md)  
  [События времени жизни объекта](object-lifetime-events.md)  
@@ -29,7 +29,7 @@ ms.locfileid: "62010349"
  [Шаблоны слабых событий](weak-event-patterns.md)  
  [Разделы практического руководства](events-how-to-topics.md)  
   
-## <a name="reference"></a>Ссылка  
+## <a name="reference"></a>Справочники  
  <xref:System.Windows.RoutedEvent>  
   
  <xref:System.Windows.EventManager>  
@@ -44,6 +44,6 @@ ms.locfileid: "62010349"
   [Свойства](properties-wpf.md)  
   [Ввод](input-wpf.md)  
   [Ресурсы](resources-wpf.md)  
-  [Стилизация и использование шаблонов](../controls/styling-and-templating.md)  
+  [Стилизация и использование шаблонов](../../../desktop-wpf/fundamentals/styles-templates-overview.md)  
   [Модель содержимого WPF](../controls/wpf-content-model.md)  
   [Потоковая модель](threading-model.md)

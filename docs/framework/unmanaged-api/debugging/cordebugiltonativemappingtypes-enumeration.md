@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: c35e2919-42c3-4ba0-ae28-443c35f66f93
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c7d9f5373f2b4ea216ca517813b1334b9f5c38a6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 949d04fe8d9ce492fb320fb4732677ffb35302ef
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739966"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132828"
 ---
 # <a name="cordebugiltonativemappingtypes-enumeration"></a>Перечисление CorDebugIlToNativeMappingTypes
-Указывает, соответствует ли определенный диапазон машинных инструкций, представленной экземпляром структуры COR_DEBUG_IL_TO_NATIVE_MAP, области кода.  
+Указывает, соответствует ли определенный диапазон машинных инструкций, представленных экземпляром структуры COR_DEBUG_IL_TO_NATIVE_MAP, специальной области кода.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -36,18 +34,18 @@ typedef enum CorDebugIlToNativeMappingTypes {
 } CorDebugIlToNativeMappingTypes;  
 ```  
   
-## <a name="members"></a>Участники  
+## <a name="members"></a>Члены  
   
 |Член|Описание|  
 |------------|-----------------|  
-|`NO_MAPPING`|Диапазон машинных инструкций не соответствует любой области кода.|  
-|`PROLOG`|Диапазон машинных инструкций соответствует пролога.|  
-|`EPILOG`|Диапазон машинных инструкций соответствует эпилога.|  
+|`NO_MAPPING`|Диапазон машинных инструкций не соответствует ни одной специальной области кода.|  
+|`PROLOG`|Диапазон машинных инструкций соответствует прологу.|  
+|`EPILOG`|Диапазон машинных инструкций соответствует заключительному фрагменту.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

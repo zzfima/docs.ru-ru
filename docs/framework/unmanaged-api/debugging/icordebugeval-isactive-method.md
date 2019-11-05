@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: bf2bba24-d278-43bd-b1c5-35680e748d3e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: be7dde136c5bc26148468d3d8031426b17f44292
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: bd10af53d7803964ed6e699ce5328aa8a860216c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67753127"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73085025"
 ---
 # <a name="icordebugevalisactive-method"></a>Метод ICorDebugEval::IsActive
-Получает значение, указывающее, является ли этот объект ICorDebugEval в данный момент.  
+Возвращает значение, указывающее, выполняется ли в данный момент объект ICorDebugEval.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,12 +35,12 @@ HRESULT IsActive (
   
 ## <a name="parameters"></a>Параметры  
  `pbActive`  
- [out] Указатель на значение, указывающее, активна ли эта оценка.  
+ заполняет Указатель на значение, указывающее, активна ли эта оценка.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

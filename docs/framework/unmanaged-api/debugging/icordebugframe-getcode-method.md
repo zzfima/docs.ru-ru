@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: fbaa0794-a031-4015-8beb-2749e47ac340
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ca64e392b930ed57691f05ae771bbaf305df8eb3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9a4f533c0ab817d800c2d35b7d64c7aee78faaea
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67754073"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121171"
 ---
 # <a name="icordebugframegetcode-method"></a>Метод ICorDebugFrame::GetCode
-Возвращает указатель на код, связанный с данным кадром стека.  
+Возвращает указатель на код, связанный с этим кадром стека.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,12 +35,12 @@ HRESULT GetCode (
   
 ## <a name="parameters"></a>Параметры  
  `ppCode`  
- [out] Указатель на адрес объекта ICorDebugCode, представляющее код, связанный с данным кадром.  
+ заполняет Указатель на адрес объекта ICorDebugCode, представляющий код, связанный с этим кадром.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

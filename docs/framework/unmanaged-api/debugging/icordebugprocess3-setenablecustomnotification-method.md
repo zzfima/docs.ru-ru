@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: afd88ee9-2589-4461-a75a-9b6fe55a2525
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 58e50a0c02f15590e5bbbcadaabeaa7e3886b74b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ec60274648315c4fa38f3832d8d39c1a269956b1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67736816"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129708"
 ---
 # <a name="icordebugprocess3setenablecustomnotification-method"></a>Метод ICorDebugProcess3::SetEnableCustomNotification
-Включает и отключает пользовательскими уведомлениями отладчика указанного типа.  
+Включает и отключает настраиваемые уведомления отладчика указанного типа.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -36,20 +34,20 @@ HRESULT SetEnableCustomNotification(ICorDebugClass * pClass,
   
 ## <a name="parameters"></a>Параметры  
  `pClass`  
- [in] Тип, который задает пользовательскими уведомлениями отладчика.  
+ окне Тип, указывающий пользовательские уведомления отладчика.  
   
  `fEnable`  
- [in] `true` для включения пользовательскими уведомлениями отладчика; `false` отключение уведомлений. Значение по умолчанию — `false`.  
+ [in] `true` включить пользовательские уведомления отладчика; `false`, чтобы отключить уведомления. Значение по умолчанию — `false`.  
   
-## <a name="remarks"></a>Примечания  
- Когда `fEnable` присваивается `true`, вызовы <xref:System.Diagnostics.Debugger.NotifyOfCrossThreadDependency%2A?displayProperty=nameWithType> триггера метод [ICorDebugManagedCallback3::CustomNotification](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback3-customnotification-method.md) обратного вызова. Уведомления отключены по умолчанию. Таким образом отладчик необходимо указать все типы уведомлений, он знает о и может обработать. Так как [ICorDebugClass](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) действия класса доменом приложения, необходимо вызвать отладчик `SetEnableCustomNotification` для каждого домена приложений в процессе, если требуется получать уведомления из всего процесса.  
+## <a name="remarks"></a>Заметки  
+ Если `fEnable` имеет значение `true`, вызовы метода <xref:System.Diagnostics.Debugger.NotifyOfCrossThreadDependency%2A?displayProperty=nameWithType> активируют обратный вызов [ICorDebugManagedCallback3:: CustomNotification](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback3-customnotification-method.md) . По умолчанию уведомления отключены. Поэтому в отладчике должны быть указаны все типы уведомлений, о которых он знает, и требуется его обработку. Поскольку класс [ICorDebugClass](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) ограничивается доменом приложения, отладчик должен вызвать `SetEnableCustomNotification` для каждого домена приложения в процессе, если он хочет получить уведомление во всем процессе.  
   
- Начиная с .NET Framework 4, только поддерживаемые это уведомление зависимости между потоками.  
+ Начиная с .NET Framework 4, единственным поддерживаемым уведомлением является уведомление о зависимости между потоками.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

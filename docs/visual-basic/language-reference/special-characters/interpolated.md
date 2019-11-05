@@ -1,16 +1,16 @@
 ---
-title: $ (Справочник по языку Visual Basic)
+title: $ (Справочник по Visual Basic)
 ms.date: 10/31/2017
-ms.openlocfilehash: 1927e8277b0fdeda13d715b62c6e7cede28b3c52
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f9de6f0d8289b4f37ced347eda0683a4db331369
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945162"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423665"
 ---
-# <a name="-visual-basic-reference"></a>$ (Справочник по языку Visual Basic)
+# <a name="-visual-basic-reference"></a>$ (Справочник по Visual Basic)
 
-Идентифицирует строковый литерал как [интерполированную строку](../../programming-guide/language-features/strings/interpolated-strings.md). Интерполированная строка — это шаблонная строка, содержащая текст вместе с *интерполированным выражением*. При разрешении интерполированной строки, например в операторе присваивания или вызове метода, ее интерполированные выражения заменяются строковыми представлениями в результирующей строке. Интерполированные строки являются заменами [строк составного формата](../../../standard/base-types/composite-format.md), поддерживаемыми платформой .NET Framework.
+Идентифицирует строковый литерал как [интерполированную строку](../../programming-guide/language-features/strings/interpolated-strings.md). Интерполированная строка — это шаблонная строка, содержащая текст вместе с *интерполированным выражением*. При разрешении интерполированной строки, например в операторе присваивания или вызове метода, ее интерполированные выражения заменяются строковыми представлениями в результирующей строке. Интерполированные строки являются заменами [строк составного формата](../../../standard/base-types/composite-formatting.md), поддерживаемыми платформой .NET Framework.
 
 В следующем примере символ `$` используется для определения интерполированной строки.
 
@@ -21,4 +21,4 @@ ms.locfileid: "61945162"
 ## <a name="see-also"></a>См. также
 
 - [Справочник по Visual Basic](../index.md)
-- [Специальные символы в Visual Basic](index.md)
+- [Visual Basic специальные символы](index.md)

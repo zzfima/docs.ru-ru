@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual C#, coding conventions
 - C# language, coding conventions
 ms.assetid: f4f60de9-d49b-4fb6-bab1-20e19ea24710
-ms.openlocfilehash: 27001d1697def083580ecdc742b4b8db924545aa
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 42e1814af38fa442255f6da79fb4862ce3d0f361
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69589411"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423206"
 ---
 # <a name="c-coding-conventions-c-programming-guide"></a>Соглашения о написании кода на C# (Руководство по программированию на C#)
  Соглашения о написании кода предназначены для реализации следующих целей.  
@@ -93,7 +93,7 @@ ms.locfileid: "69589411"
   
      [!code-csharp[csProgGuideCodingConventions#10](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#10)]  
   
-- Рекомендуется избегать использования `var` вместо [dynamic](../../language-reference/keywords/dynamic.md).  
+- Рекомендуется избегать использования `var` вместо [dynamic](../../language-reference/builtin-types/reference-types.md).  
   
 - Рекомендуется использовать неявное типизирование для определения типа переменной цикла в циклах [for](../../language-reference/keywords/for.md) и [foreach](../../language-reference/keywords/foreach-in.md).  
   

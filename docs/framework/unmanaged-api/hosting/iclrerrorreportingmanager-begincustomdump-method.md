@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 93424a87-ba13-4fa1-b4dc-69d44437b7ae
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 98eebd489792f57f7f98d3596d4f25be2e847441
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 7153ac214ab99228ac9c59032aa8248d06d14c3b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966282"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129297"
 ---
 # <a name="iclrerrorreportingmanagerbegincustomdump-method"></a>Метод ICLRErrorReportingManager::BeginCustomDump
 Задает конфигурацию дампов пользовательской кучи для отчетов об ошибках.  
@@ -43,10 +41,10 @@ HRESULT BeginCustomDump (
  окне Значение [екустомдумпфлавор](../../../../docs/framework/unmanaged-api/hosting/ecustomdumpflavor-enumeration.md) , указывающее тип дампа кучи, на основе которого создается дамп пользовательской кучи.  
   
  `dwNumItems`  
- окне Длина `items` массива. Если `dwFlavor` значение не DUMP_FLAVOR_Mini, `dwNumItems` должно быть равно нулю.  
+ окне Длина массива `items`. Если `dwFlavor` не DUMP_FLAVOR_Mini, `dwNumItems` должен быть равен нулю.  
   
  `items`  
- окне Массив экземпляров [кустомдумпитем](../../../../docs/framework/unmanaged-api/hosting/customdumpitem-structure.md) , указывающий элементы для добавления в мини-дамп. Если `dwFlavor` значение не DUMP_FLAVOR_Mini, `items` должно быть равно null.  
+ окне Массив экземпляров [кустомдумпитем](../../../../docs/framework/unmanaged-api/hosting/customdumpitem-structure.md) , указывающий элементы для добавления в мини-дамп. Если `dwFlavor` не DUMP_FLAVOR_Mini, `items` должен иметь значение null.  
   
  `dwReserved`  
  окне Зарезервировано для будущего использования.  
@@ -62,18 +60,18 @@ HRESULT BeginCustomDump (
 |HOST_E_ABANDONED|Событие было отменено, пока заблокированный поток или волокно ожидают его.|  
 |E_FAIL|Произошла неизвестная фатальная ошибка. После того как метод вернет значение E_FAIL, среда CLR больше не будет использоваться в процессе. Последующие вызовы методов размещения возвращают HOST_E_CLRNOTAVAILABLE.|  
   
-## <a name="remarks"></a>Примечания  
- `BeginCustomDump` Метод задает конфигурацию дампа пользовательской кучи. Метод [ендкустомдумп](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-endcustomdump-method.md) очищает конфигурацию дампа пользовательской кучи и освобождает любое связанное состояние. Он должен вызываться после завершения создания дампа пользовательской кучи.  
+## <a name="remarks"></a>Заметки  
+ Метод `BeginCustomDump` задает конфигурацию дампа пользовательской кучи. Метод [ендкустомдумп](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-endcustomdump-method.md) очищает конфигурацию дампа пользовательской кучи и освобождает любое связанное состояние. Он должен вызываться после завершения создания дампа пользовательской кучи.  
   
 > [!IMPORTANT]
 > Сбой вызова `EndCustomDump` приводит к утечке памяти.  
   
 ## <a name="requirements"></a>Требования  
- **Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** MSCorEE. h  
+ **Заголовок:** MSCorEE. h  
   
- **Библиотечная** Включается в качестве ресурса в библиотеку MSCorEE. dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

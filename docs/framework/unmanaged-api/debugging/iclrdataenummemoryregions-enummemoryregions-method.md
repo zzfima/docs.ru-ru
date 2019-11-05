@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 22d2e339-f174-40b5-a478-0b744501566f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 489ea22e17178398f53e103da04a47e8fe15a936
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 693ec07176f80711709cd9b85c6886bea8be74b2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738933"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122964"
 ---
 # <a name="iclrdataenummemoryregionsenummemoryregions-method"></a>Метод ICLRDataEnumMemoryRegions::EnumMemoryRegions
 Перечисляет указанные области памяти.  
@@ -39,23 +37,23 @@ HRESULT EnumMemoryRegions (
   
 ## <a name="parameters"></a>Параметры  
  `callback`  
- [in] Указатель на [ICLRDataEnumMemoryRegionsCallback](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregionscallback-interface.md) экземпляра, который вызывается этот метод для каждой области памяти, перечисления в уведомлении отладчика результата.  
+ окне Указатель на экземпляр [иклрдатаенуммеморирегионскаллбакк](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregionscallback-interface.md) , вызываемый этим методом для каждой области памяти, перечисленной для уведомления отладчика о результатах.  
   
  Перечисление областей памяти продолжится, даже если обратный вызов указывает на сбой.  
   
  `miniDumpFlags`  
- [in] Не используется.  
+ окне Не используется.  
   
  `clrFlags`  
- [in] Значение [CLRDataEnumMemoryFlags](../../../../docs/framework/unmanaged-api/debugging/clrdataenummemoryflags-enumeration.md) перечисление, указывающее области памяти, которые необходимо перечислить.  
+ окне Значение перечисления [CLRDataEnumMemoryFlags](../../../../docs/framework/unmanaged-api/debugging/clrdataenummemoryflags-enumeration.md) , указывающее области памяти для перечисления.  
   
-## <a name="remarks"></a>Примечания  
- Этот метод использует указанный [ICLRDataEnumMemoryRegionsCallback](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregionscallback-interface.md) экземпляр для уведомления вызывающей стороны результатов.  
+## <a name="remarks"></a>Заметки  
+ Этот метод использует указанный экземпляр [иклрдатаенуммеморирегионскаллбакк](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregionscallback-interface.md) для уведомления вызывающего объекта о результатах.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** ClrData.idl, ClrData.h  
+ **Заголовок:** Клрдата. idl, Клрдата. h  
   
  **Библиотека:** CorGuids.lib  
   

@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrAppModel_CantGetMemoryMappedFile
 ms.assetid: 0d9f2a30-ff72-4355-8060-744f22339359
-ms.openlocfilehash: 8130eee93ab5c14043283c28f522da53f9047e85
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9643d14b3e94e814c492b362b9db3e37cff4ce9f
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64646893"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73197374"
 ---
 # <a name="an-unexpected-error-has-occurred-because-an-operating-system-resource-required-for-single-instance-startup-cannot-be-acquired"></a>Непредвиденная ошибка, так как операционная система не может получить ресурсы, требуемые для запуска одного экземпляра.
 Приложению не удалось получить требуемый ресурс операционной системы. Вот некоторые возможные причины этой проблемы.  
@@ -34,4 +34,4 @@ ms.locfileid: "64646893"
 
 - [Страница "Приложение" в конструкторе проектов (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)
 - [Основы отладки](/visualstudio/debugger/debugger-basics)
-- [Обращайтесь к нам](/visualstudio/ide/talk-to-us)
+- [Обращайтесь к нам](/visualstudio/ide/feedback-options)

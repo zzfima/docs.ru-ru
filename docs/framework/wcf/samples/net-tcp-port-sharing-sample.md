@@ -2,12 +2,12 @@
 title: Пример совместного использования портов Net.TCP
 ms.date: 03/30/2017
 ms.assetid: 03da5959-0574-4e91-8a53-05854b6c55dc
-ms.openlocfilehash: 56d248a8349e4f38bfdef6a887fc41b117402d02
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 240579ef36405d730bb04ea171846c8e5ef9322e
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70039189"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73416759"
 ---
 # <a name="nettcp-port-sharing-sample"></a>Пример совместного использования портов Net.TCP
 Протокол TCP/IP использует 16-разрядное число, называемое номером порта, чтобы различать подключения к разным сетевым приложениям, выполняющимся на одном компьютере. Если приложение ожидает передачи данных через порт, то весь трафик TCP через этот порт перенаправляется данному приложению. Другие приложения не могут одновременно ожидать передачи данных через тот же порт.  
@@ -17,7 +17,7 @@ ms.locfileid: "70039189"
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Если этот каталог не существует, перейдите к [примерам Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] и примеры. Этот образец расположен в следующем каталоге.  
+> Если этот каталог не существует, перейдите к [примерам Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Samples. Этот образец расположен в следующем каталоге.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\TCP\PortSharing`  
   
@@ -25,9 +25,9 @@ ms.locfileid: "70039189"
   
  Совместное использование портов NetTcp — это функция Windows Communication Foundation (WCF), которая аналогично позволяет нескольким сетевым приложениям совместно использовать один порт. Служба общего доступа к портам NetTcp принимает подключения с помощью протокола net.tcp и перенаправляет сообщения в зависимости от их адреса назначения.  
   
- По умолчанию служба общего доступа к портам NetTcp отключена. Перед запуском этого образца необходимо вручную включить эту службу. Дополнительные сведения см. в разделе [Практическое руководство. Включите службу](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md)общего доступа к портам Net. TCP. Если служба отключена, при запуске серверного приложения создается исключение.  
+ По умолчанию служба общего доступа к портам NetTcp отключена. Перед запуском этого образца необходимо вручную включить эту службу. Дополнительные сведения см. [в разделе инструкции. Включение службы совместного использования портов net. TCP](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md). Если служба отключена, при запуске серверного приложения создается исключение.  
   
-```  
+```console
 Unhandled Exception: System.ServiceModel.CommunicationException: The TransportManager failed to listen on the supplied URI using the NetTcpPortSharing service: failed to start the service because it is disabled. An administrator can enable it by running 'sc.exe config NetTcpPortSharing start= demand'.. ---> System.InvalidOperationException: Cannot start service NetTcpPortSharing on computer '.'. ---> System.ComponentModel.Win32Exception: The service cannot be started, either because it is disabled or because it has no enabled devices associated with it  
 ```  
   
@@ -51,7 +51,7 @@ host.Open();
 
  Если общий доступ к портам включен, службу можно запускать несколько раз без конфликта по поводу номера порта. Если изменить код и отключить общий доступ к портам, то в случае запуска двух экземпляров службы при запуске второго экземпляра будет создано исключение <xref:System.ServiceModel.AddressAlreadyInUseException>.  
   
-```  
+```console  
 Unhandled Exception: System.ServiceModel.AddressAlreadyInUseException: There is already a listener on IP endpoint 0.0.0.0:9000.  Make sure that you are not trying to use this endpoint multiple times in your application and that there are no other applications listening on this endpoint. ---> System.Net.Sockets.SocketException: Only one usage of each socket address (protocol/network address/port) is normally permitted  
 ```  
   
@@ -104,14 +104,14 @@ class client
 
  Каждый экземпляр службы выводит собственный уникальный номер и адрес. Например, при запуске файла service.exe можно увидеть следующий текст.  
   
-```  
+```console  
 Service #4381 listening on net.tcp://localhost:9000/calculator/4381.  
 Press <ENTER> to terminate service.  
 ```  
   
  При запуске файла client.exe введите показанный номер службы.  
   
-```  
+```console  
 Enter the service number to test: 4381  
 Add(100,15.99) = 115.99  
 Subtract(145,76.54) = 68.46  
@@ -127,7 +127,7 @@ Press <ENTER> to terminate client.
   
 1. Установите ASP.NET 4,0 с помощью следующей команды.  
   
-    ```  
+    ```console  
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   

@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: a3f5c266-3fcc-4ad1-aaf5-4cdbe26304ad
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c5f38231eb6a5911527c21ee3304fc77cfcf8e90
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 61aafb8dc99bb908fc603945ff6ea74054f812c4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776519"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141421"
 ---
 # <a name="validatorflags-enumeration"></a>Перечисление ValidatorFlags
-Содержит значения, указывающие тип проверки, которое должно выполняться при вызове [ICLRValidator::Validate](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-validate-method.md) метод.  
+Содержит значения, указывающие тип проверки, которая должна быть выполнена при вызове метода [иклрвалидатор:: Validate](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-validate-method.md) .  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,22 +36,22 @@ enum ValidatorFlags {
 };  
 ```  
   
-## <a name="members"></a>Участники  
+## <a name="members"></a>Члены  
   
 |Член|Описание|  
 |------------|-----------------|  
-|`VALIDATOR_CHECK_ILONLY`|Указывает, что должна быть проверена только промежуточный язык Майкрософт (MSIL) в исполняемом файле.|  
-|`VALIDATOR_CHECK_PEFORMAT_ONLY`|Указывает, что должна быть проверена только формат исполняемого файла.|  
-|`VALIDATOR_EXTRA_VERBOSE`|Указывает, что выполнены все типы проверки и они будут составляться.|  
-|`VALIDATOR_NOCHECK_PEFORMAT`|Указывает, что формат исполняемого файла не должна быть проверена.|  
-|`VALIDATOR_SHOW_SOURCE_LINES`|Указывает, что сообщения об ошибках проверки должны содержать строки исходного кода, которые вызывают ошибки проверки. Значение этого поля не допускается в .NET Framework версии 2.0.|  
+|`VALIDATOR_CHECK_ILONLY`|Указывает, что следует проверять только промежуточный язык MSIL в исполняемом файле.|  
+|`VALIDATOR_CHECK_PEFORMAT_ONLY`|Указывает, что должен проверяться только формат исполняемого файла.|  
+|`VALIDATOR_EXTRA_VERBOSE`|Указывает, что следует выполнять все типы проверки и сообщать о них.|  
+|`VALIDATOR_NOCHECK_PEFORMAT`|Указывает, что формат исполняемого файла не должен проверяться.|  
+|`VALIDATOR_SHOW_SOURCE_LINES`|Указывает, что сообщения об ошибках проверки должны включать строки исходного кода, вызывающие ошибки проверки. Это значение поля недопустимо в .NET Framework версии 2,0.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** IValidator.idl в файле IValidator.h  
+ **Заголовок:** IValidator. idl, IValidator. h  
   
- **Библиотека:** MSCorEE.dll  
+ **Библиотека:** MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

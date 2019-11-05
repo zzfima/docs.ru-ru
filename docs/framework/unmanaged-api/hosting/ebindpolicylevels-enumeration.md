@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: a9e00b4f-b6d0-4257-bd88-4fe9af97b8fa
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e61acbb15844c5ddfc8b7aa98c41bb18c6e9ade5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 81aef6beb9ee6d622519738d24fdd0a4d42a75b1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67769760"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136555"
 ---
 # <a name="ebindpolicylevels-enumeration"></a>Перечисление EBindPolicyLevels
-Предоставляет флаги для указания уровня, по которому следует применить или изменить политику сборок.  
+Предоставляет флаги для указания уровня применения или изменения политики сборки.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -41,28 +39,28 @@ typedef enum {
 } EBindPolicyLevels;  
 ```  
   
-## <a name="members"></a>Участники  
+## <a name="members"></a>Члены  
   
 |Член|Описание|  
 |------------|-----------------|  
-|`ePolicyLevelAdmin`|Указывает, что политика должна применяться на уровне администратора.|  
-|`ePolicyLevelApp`|Указывает, что политика должна применяться на уровне приложения.|  
-|`ePolicyLevelHost`|Указывает, что политика должна применяться на уровне узла.|  
-|`ePolicyLevelNone`|Указывает флаги не уровня политики.|  
+|`ePolicyLevelAdmin`|Указывает, что политику следует применять на уровне администратора.|  
+|`ePolicyLevelApp`|Указывает, что политику следует применять на уровне приложения.|  
+|`ePolicyLevelHost`|Указывает, что политику следует применять на уровне узла.|  
+|`ePolicyLevelNone`|Указывает отсутствие флагов уровня политики.|  
 |`ePolicyLevelPublisher`|Указывает, что политика должна применяться на уровне издателя.|  
-|`ePolicyLevelRetargetable`|Указывает, что политика применяется на уровнях переменной.|  
-|`ePolicyPortability`|Указывает, что политики должно поддерживать переносимости между реализациями сборки платформы .NET Framework. См. в разделе [ \<supportPortability >](../../../../docs/framework/configure-apps/file-schema/runtime/supportportability-element.md) элемент файла конфигурации.|  
-|`ePolicyUnifiedToCLR`|Указывает, что политика должна соответствовать политике, общеязыковой среды выполнения (CLR).|  
+|`ePolicyLevelRetargetable`|Указывает, что политика должна быть применима на уровнях переменных.|  
+|`ePolicyPortability`|Указывает, что политика должна поддерживать переносимость между реализациями сборки .NET Framework. См. раздел файла конфигурации [\<тег supportportability >](../../../../docs/framework/configure-apps/file-schema/runtime/supportportability-element.md) .|  
+|`ePolicyUnifiedToCLR`|Указывает, что политика должна быть унифицированной для среды CLR.|  
   
-## <a name="remarks"></a>Примечания  
- Это перечисление передается методам [ICLRHostBindingPolicyManager](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-interface.md) интерфейс для выполнения изменений в политике приложения.  
+## <a name="remarks"></a>Заметки  
+ Это перечисление передается методам интерфейса [ICLRHostBindingPolicyManager](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-interface.md) для указания изменений в политике приложения.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** MSCorEE.h  
+ **Заголовок:** MSCorEE. h  
   
- **Библиотека:** MSCorEE.dll  
+ **Библиотека:** MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

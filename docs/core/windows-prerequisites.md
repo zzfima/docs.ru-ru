@@ -5,12 +5,12 @@ f1_keywords:
 - NETSDK1045
 ms.custom: updateeachvsrelease
 ms.date: 09/20/2019
-ms.openlocfilehash: b1557e6910cb6d0b6d7e2b3ce2aec97d3715fec7
-ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
+ms.openlocfilehash: 6885f6c853efb0dcb2cb64b83f07e12b1dc2e3cf
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/28/2019
-ms.locfileid: "71591671"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771952"
 ---
 # <a name="prerequisites-for-net-core-on-windows"></a>Необходимые компоненты для .NET Core в Windows
 
@@ -51,7 +51,7 @@ ms.locfileid: "71591671"
 > Убедитесь, что помимо обновления KB2999226 также установлено обновление [KB2533623](https://support.microsoft.com/help/2533623/microsoft-security-advisory-insecure-library-loading-could-allow-remot). Если это обновление не установлено, при запуске приложения .NET Core появится примерно следующая ошибка: `The library hostfxr.dll was found, but loading it from C:\<path_to_app>\hostfxr.dll failed`.
 
 ## <a name="prerequisites-to-develop-net-core-apps-with-visual-studio"></a>Необходимые компоненты для разработки приложений .NET Core с помощью Visual Studio
-    
+
 Хотя вы можете использовать любой редактор для разработки приложений .NET Core с помощью SDK для .NET Core, Visual Studio 2017 и более поздние версии предоставляют интегрированную среду разработки для приложений .NET Core в Windows.
 
 <a name="vs-mapping"></a>

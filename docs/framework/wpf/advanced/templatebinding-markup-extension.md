@@ -8,12 +8,12 @@ helpviewer_keywords:
 - XAML [WPF], TemplateBinding markup extension
 - TemplateBinding markup extensions [WPF]
 ms.assetid: 1d25bbfc-dbc2-499d-9f12-419d23d4ac6a
-ms.openlocfilehash: c004560a0b7ab367fbf4fbb48b0e8d8b63f3d8f4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 399e4ac223d2fcb728ece2c92d25a087990992f2
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62053045"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458668"
 ---
 # <a name="templatebinding-markup-extension"></a>Расширение разметки TemplateBinding
 Связывает значение свойства в шаблоне элемента управления со значением другого свойства элемента управления-шаблона.  
@@ -35,14 +35,14 @@ ms.locfileid: "62053045"
 |||  
 |-|-|  
 |`propertyName`|<xref:System.Windows.DependencyProperty.Name%2A?displayProperty=nameWithType> для свойства задается в синтаксисе метода задания значения.|  
-|`sourceProperty`|Другое свойство зависимостей для типа, который используется в качестве шаблона, задается с помощью <xref:System.Windows.DependencyProperty.Name%2A?displayProperty=nameWithType>.<br /><br /> -или-<br /><br /> "Краткое" имя свойства, которое определяется типом, отличным от целевого шаблонного типа. Фактически это <xref:System.Windows.PropertyPath>. См. в разделе [синтаксис PropertyPath XAML](propertypath-xaml-syntax.md).|  
+|`sourceProperty`|Другое свойство зависимостей для типа, который используется в качестве шаблона, задается с помощью <xref:System.Windows.DependencyProperty.Name%2A?displayProperty=nameWithType>.<br /><br /> -или-<br /><br /> "Краткое" имя свойства, которое определяется типом, отличным от целевого шаблонного типа. Фактически это <xref:System.Windows.PropertyPath>. См. раздел [синтаксис языка XAML PropertyPath](propertypath-xaml-syntax.md).|  
   
-## <a name="remarks"></a>Примечания  
- Объект `TemplateBinding` является оптимизированной формой [привязки](binding-markup-extension.md) для сценариев шаблонов, аналогично `Binding` создан с параметром `{Binding RelativeSource={RelativeSource TemplatedParent}}`. `TemplateBinding` всегда является односторонней привязкой, даже если используемые свойства по умолчанию используют двустороннюю привязку. Оба используемых свойства должны быть свойствами зависимостей. Чтобы добиться двухстороннюю привязку для шаблонного родительского элемента следующая инструкция привязки вместо этого используйте `{Binding RelativeSource={RelativeSource TemplatedParent}, Mode=TwoWay, Path=MyDependencyProperty}`. 
+## <a name="remarks"></a>Заметки  
+ `TemplateBinding` — это оптимизированная форма [привязки](binding-markup-extension.md) для сценариев шаблонов, аналогичная `Binding`, созданной с помощью `{Binding RelativeSource={RelativeSource TemplatedParent}}`. `TemplateBinding` всегда является односторонней привязкой, даже если используемые свойства по умолчанию используют двустороннюю привязку. Оба используемых свойства должны быть свойствами зависимостей. Чтобы обеспечить двустороннюю привязку к шаблонному родителю, вместо этого используйте следующую инструкцию привязки `{Binding RelativeSource={RelativeSource TemplatedParent}, Mode=TwoWay, Path=MyDependencyProperty}`. 
   
- [RelativeSource](relativesource-markupextension.md) является еще одним расширением разметки, которое иногда используется в сочетании с или instead of `TemplateBinding` для выполнения относительной привязки свойства в шаблоне.  
+ [RelativeSource](relativesource-markupextension.md) — это еще одно расширение разметки, которое иногда используется вместе с или вместо `TemplateBinding` для выполнения относительной привязки свойства в шаблоне.  
   
- Шаблоны элементов управления в качестве концепции здесь нет; Дополнительные сведения см. в разделе [управления стили и шаблоны](../controls/control-styles-and-templates.md).  
+ Описание шаблонов элементов управления в качестве концепции не рассматривается здесь. Дополнительные сведения см. в разделе [стили и шаблоны элемента управления](../controls/control-styles-and-templates.md).  
   
  Синтаксис атрибутов является наиболее распространенным синтаксисом, используемым с этим расширением разметки. Строковая лексема, указываемая после строки идентификатора `TemplateBinding`, присваивается в качестве значения <xref:System.Windows.TemplateBindingExtension.Property%2A> соответствующего класса расширения <xref:System.Windows.TemplateBindingExtension>.  
   
@@ -56,16 +56,16 @@ ms.locfileid: "62053045"
   
  Подробное определение зачастую удобно использовать для расширений, которые имеют несколько устанавливаемых свойств, а также в том случае, если некоторые свойства являются необязательными. Так как `TemplateBinding` имеет только одно устанавливаемое свойство, которое является обязательным, это использование не является типичным.  
   
- В [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] реализации обработчика XAML обработка данного расширения разметки определяется <xref:System.Windows.TemplateBindingExtension> класса.  
+ В [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] реализации процессора XAML обработка этого расширения разметки определяется классом <xref:System.Windows.TemplateBindingExtension>.  
   
- `TemplateBinding` является расширением разметки. Расширения разметки обычно реализуются, если требуется заменить значения атрибутов на нелитеральные значения или имена обработчиков и если требуется больше, чем простая настройка преобразователей типов на работу с определенными типами или свойствами. Все расширения разметки в XAML используют `{` и `}` символов в синтаксисе их атрибутов, который является соглашением, по которому обработчик XAML узнает, что расширение разметки должно обработать атрибут. Дополнительные сведения см. в разделе [Расширения разметки и XAML WPF](markup-extensions-and-wpf-xaml.md).  
+ `TemplateBinding` является расширением разметки. Расширения разметки обычно реализуются, если требуется заменить значения атрибутов на нелитеральные значения или имена обработчиков и если требуется больше, чем простая настройка преобразователей типов на работу с определенными типами или свойствами. Все расширения разметки в XAML используют `{` и `}` символов в синтаксисе атрибутов, который является соглашением, по которому обработчик XAML распознает, что расширение разметки должно обработать атрибут. Дополнительные сведения см. в разделе [Расширения разметки и XAML WPF](markup-extensions-and-wpf-xaml.md).  
   
 ## <a name="see-also"></a>См. также
 
 - <xref:System.Windows.Style>
 - <xref:System.Windows.Controls.ControlTemplate>
 - [Стилизация и использование шаблонов](../controls/styling-and-templating.md)
-- [Общие сведения о языке XAML (WPF)](xaml-overview-wpf.md)
+- [Общие сведения о языке XAML (WPF)](../../../desktop-wpf/fundamentals/xaml.md)
 - [Расширения разметки и XAML WPF](markup-extensions-and-wpf-xaml.md)
 - [Расширение разметки RelativeSource](relativesource-markupextension.md)
 - [Привязка расширения разметки](binding-markup-extension.md)

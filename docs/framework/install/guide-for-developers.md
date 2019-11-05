@@ -8,14 +8,12 @@ helpviewer_keywords:
 - installing .NET Framework
 - installation [.NET Framework]
 ms.assetid: daf9d9d5-84ac-4bd9-a864-27665ffd0f5c
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0c1a14f0ee36341c9579683f711ae78fc4df3f97
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 8c4b328cdecb468af57fe699283584e901772175
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71833655"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73091999"
 ---
 # <a name="install-the-net-framework-for-developers"></a>Установка .NET Framework для разработчиков
 
@@ -37,7 +35,7 @@ ms.locfileid: "71833655"
 
 |Версия платформы .NET Framework|Установка для разработчиков|Установка распространяемого пакета|Поддержка платформ|
 |----------------------------|----------------------------|----------------------------------|----------------------|
-|**4.8**|[.NET Framework 4.8 Developer Pack](https://go.microsoft.com/fwlink/?linkid=2088517)|[Веб-установщик центра загрузки 4.8](http://go.microsoft.com/fwlink/?LinkId=2085155)<br/><br/>[Автономный установщик центра загрузки 4.8](https://go.microsoft.com/fwlink/?linkid=2088631)|**Входит в состав:**<br/><br/>Обновления Windows 10 за май 2019 г.<br /><br /> **Можно установить в:**<br/><br/>Обновление Windows 10 за октябрь 2018 г.<br/>Обновление Windows 10 за апрель 2018 г.<br/>Windows 10 Fall Creators Update<br/>Обновление Windows 10 Creators Update <br /> Юбилейное обновление Windows 10 Anniversary Update<br /> Windows 8.1 и более ранней версии<br /> Windows Server 2019<br/>Windows Server, версия 1809<br/>Windows Server, версия 1803<br /><br/> (полный список см. в разделе [Требования к системе](../get-started/system-requirements.md))||
+|**4.8**|[.NET Framework 4.8 Developer Pack](https://go.microsoft.com/fwlink/?linkid=2088517)|[Веб-установщик центра загрузки 4.8](https://go.microsoft.com/fwlink/?LinkId=2085155)<br/><br/>[Автономный установщик центра загрузки 4.8](https://go.microsoft.com/fwlink/?linkid=2088631)|**Входит в состав:**<br/><br/>Обновления Windows 10 за май 2019 г.<br /><br /> **Можно установить в:**<br/><br/>Обновление Windows 10 за октябрь 2018 г.<br/>Обновление Windows 10 за апрель 2018 г.<br/>Windows 10 Fall Creators Update<br/>Обновление Windows 10 Creators Update <br /> Юбилейное обновление Windows 10 Anniversary Update<br /> Windows 8.1 и более ранней версии<br /> Windows Server 2019<br/>Windows Server, версия 1809<br/>Windows Server, версия 1803<br /><br/> (полный список см. в разделе [Требования к системе](../get-started/system-requirements.md))||
 |**4.7.2**|[NET Framework 4.7.2 Developer Pack](https://go.microsoft.com/fwlink/?LinkId=874338)|[Веб-установщик центра загрузки 4.7.2](https://go.microsoft.com/fwlink/?LinkId=863262)<br/><br/>[Автономный установщик центра загрузки 4.7.2](https://go.microsoft.com/fwlink/?LinkId=863265)|**Входит в состав:** <br/><br/>Обновление Windows 10 за октябрь 2018 г.<br/>Обновление Windows 10 за апрель 2018 г.<br/>Windows Server 2019<br/>Windows Server, версия 1809<br/>Windows Server, версия 1803<br /><br /> **Можно установить в:**<br/> <br/>Windows 10 Fall Creators Update<br/>Обновление Windows 10 Creators Update <br /> Юбилейное обновление Windows 10 Anniversary Update<br /> Windows 8.1 и более ранней версии<br /> Windows Server, версия 1709 и более ранние<br /><br/> (полный список см. в разделе [Требования к системе](../get-started/system-requirements.md))||
 |**4.7.1**|[NET Framework 4.7.1 Developer Pack](https://go.microsoft.com/fwlink/?LinkId=852105)|[Страница загрузки веб-установщика 4.7.1](https://go.microsoft.com/fwlink/?LinkId=852095)<br /><br /> [Страница загрузки автономного установщика 4.7.1](https://go.microsoft.com/fwlink/?LinkId=852107)|**Входит в состав:** <br/><br/>Windows 10 Fall Creators Update<br/>Windows Server, версия 1709<br /><br /> **Можно установить в:**<br/><br/> Обновление Windows 10 Creators Update <br /> Юбилейное обновление Windows 10 Anniversary Update<br /> Windows 8.1 и более ранней версии<br /> Windows Server 2016 и более ранние версии<br /> (полный список см. в разделе [Требования к системе](../get-started/system-requirements.md))||
 |**4.7**|[NET Framework 4.7 Developer Pack](https://go.microsoft.com/fwlink/?LinkId=825319)|[Страница загрузки веб-установщика 4.7](https://go.microsoft.com/fwlink/?LinkId=825299)<br /><br /> [Страница загрузки автономного установщика 4.7](https://go.microsoft.com/fwlink/?LinkId=825303)|**Входит в состав:** <br/><br/>Обновление Windows 10 Creators Update<br /><br /> **Можно установить в:**<br /><br/> Юбилейное обновление Windows 10 Anniversary Update<br /> Windows 8.1 и более ранней версии<br /> Windows Server 2016 и более ранние версии<br /> (полный список см. в разделе [Требования к системе](../get-started/system-requirements.md))||
@@ -170,7 +168,7 @@ ms.locfileid: "71833655"
 
 1. Откройте страницу загрузки языковых пакетов для установленной версии платформы .NET Framework:
 
-    - [Языковые пакеты .NET Framework 4.8](http://go.microsoft.com/fwlink/?LinkId=2053984)
+    - [Языковые пакеты .NET Framework 4.8](https://go.microsoft.com/fwlink/?LinkId=2053984)
 
     - [Языковые пакеты .NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkID=863258)
 

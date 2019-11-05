@@ -11,14 +11,12 @@ helpviewer_keywords:
 - calendars [.NET Framework], displaying dates
 - displaying date and time data
 ms.assetid: ed324eff-4aff-4a76-b6c0-04e6c0d8f5a9
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: cdd500d8eda81708d67254cbc5dc8da701ae4e09
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 455996d091f92367667e7077a4524898cd8face6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963359"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138754"
 ---
 # <a name="how-to-display-dates-in-non-gregorian-calendars"></a>Практическое руководство. Отображение дат в календарях, отличных от григорианского
 Для типов<xref:System.DateTime> и <xref:System.DateTimeOffset> в качестве календаря по умолчанию используется григорианский календарь. Это означает, что вызов метода `ToString` для значения даты и времени выведет строковое представление даты и времени по григорианскому календарю даже в том случае, если значение даты и времени создавалось с помощью другого календаря. Это показано в следующем примере, в котором двумя разными способами создаются значения даты и времени с персидским календарем. При вызове метода <xref:System.DateTime.ToString%2A> значения даты и времени по-прежнему отображаются в григорианском календаре. В этом примере представлены два часто используемых неверных способа отображения даты в заданном календаре.  

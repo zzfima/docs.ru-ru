@@ -10,14 +10,12 @@ api_type:
 ms.assetid: 1d4424ab-5143-4e50-a84a-ceeb4ddf3bba
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 676489880cb30ca540cb78d70797dbf4eedf7395
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 239e3a82df0e6010278669f9f429bfad0d163319
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739596"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133724"
 ---
 # <a name="cordebugstatechange-enumeration"></a>Перечисление CorDebugStateChange
 
@@ -33,22 +31,22 @@ typedef enum CorDebugStateChange
 } CorDebugStateChange;
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 | Член            | Описание                                                              |
 | ----------------- | ------------------------------------------------------------------------ |
 | `PROCESS_RUNNING` | Процесс достиг нового состояния памяти с помощью механизма прямого выполнения.            |
 | `FLUSH_ALL`       | Память процесса может отличаться произвольным образом от предыдущего варианта. |
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
- Является членом `CorDebugStateChange` перечисление предоставляется в качестве аргумента при вызове отладчиком `ProcessStateChanged` метод с помощью [ICorDebugProcess4::ProcessStateChanged](icordebugprocess4-processstatechanged-method.md) или [ICorDebugProcess6:: ProcessStateChanged](icordebugprocess6-processstatechanged-method.md)
+ Член перечисления `CorDebugStateChange` предоставляется в качестве аргумента, когда отладчик вызывает метод `ProcessStateChanged` с помощью [ICorDebugProcess4::P роцессстатечанжед](icordebugprocess4-processstatechanged-method.md) или [ICorDebugProcess6::P роцессстатечанжед](icordebugprocess6-processstatechanged-method.md)
 
 ## <a name="requirements"></a>Требования
 
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).
 
- **Заголовок.** CorDebug.idl, CorDebug.h
+ **Заголовок:** CorDebug.idl, CorDebug.h
 
  **Библиотека:** CorGuids.lib
 

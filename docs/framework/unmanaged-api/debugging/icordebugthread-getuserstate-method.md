@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: ae0cfd73-8ead-4d36-9310-dccaac9db0bd
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f7d3325c8aee44849ff1fb7a6cc06a0ed7c2c6f8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f3511ff5ee9b9221037c64a5e17d61f6bf52e5f3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67769100"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133419"
 ---
 # <a name="icordebugthreadgetuserstate-method"></a>Метод ICorDebugThread::GetUserState
-Получает текущее состояние пользователя ICorDebugThread.  
+Возвращает текущее пользовательское состояние этого ICorDebugThread.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,15 +35,15 @@ HRESULT GetUserState (
   
 ## <a name="parameters"></a>Параметры  
  `pState`  
- [out] Указатель на побитовое сочетание значений перечисления CorDebugUserState, которые описывают текущее состояние пользователя для данного потока.  
+ заполняет Указатель на побитовую комбинацию значений перечисления Кордебугусерстате, описывающих текущее пользовательское состояние этого потока.  
   
-## <a name="remarks"></a>Примечания  
- Состояние пользователя потока — состояние потока, анализируется отлаживаемой программой. Для потока может быть задано несколько битов состояния.  
+## <a name="remarks"></a>Заметки  
+ Пользовательское состояние потока — это состояние потока, которое проверяется отлаживаемой программой. Для потока может быть задано несколько битов состояния.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

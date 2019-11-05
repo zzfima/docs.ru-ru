@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: fc7d9448-3186-494d-9f0d-ea39717e9a82
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9c4fa79f4918412720592bce449a001a349ae657
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e20ea6addc1ae3f99b4b3d65f532e0128ac160b3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67766562"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134970"
 ---
 # <a name="igchostcollect-method"></a>Метод IGCHost::Collect
-Принудительное выполнения сборки для данного поколения, независимо от состояния текущей сборки мусора.  
+Принудительно выполняет сбор данных для данного поколения независимо от состояния текущей сборки мусора.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,14 +35,14 @@ HRESULT Collect (
   
 ## <a name="parameters"></a>Параметры  
  `Generation`  
- [in] Поколение, для которого следует выполнить сбор мусора. Значение -1 указывает, что все поколения пройдут сборку мусора.  
+ окне Поколение, на котором выполняется сборка мусора. Значение-1 указывает, что все поколения проходят сборку мусора.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** GCHost.idl GCHost.h  
+ **Заголовок:** Гчост. idl, Гчост. h  
   
- **Библиотека:** Включена как ресурс в MSCorEE.dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

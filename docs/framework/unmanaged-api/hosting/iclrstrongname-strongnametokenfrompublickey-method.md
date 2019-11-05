@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7962ce88-7e86-4a6f-8298-621b01ffc3c2
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 17947526513bd1fbe3cb093e8ecaa7ed67983a7c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f37cd6ef85985784303aeb976776b03fbc74dec3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67759166"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73092529"
 ---
 # <a name="iclrstrongnamestrongnametokenfrompublickey-method"></a>Метод ICLRStrongName::StrongNameTokenFromPublicKey
-Возвращает токен, представляющий открытый ключ. Маркер строгого имени — это сокращенная форма открытого ключа.  
+Возвращает маркер, представляющий открытый ключ. Маркер строгого имени — это сокращенная форма открытого ключа.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,29 +38,29 @@ HRESULT StrongNameTokenFromPublicKey (
   
 ## <a name="parameters"></a>Параметры  
  `pbPublicKeyBlob`  
- [in] Структура типа [PublicKeyBlob](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md) , содержащий открытую часть пары ключей, использованного для создания подписи строгого имени.  
+ окне Структура типа [публиккэйблоб](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md) , содержащая открытую часть пары ключей, используемую для создания подписи строгого имени.  
   
  `cbPublicKeyBlob`  
- [in] Размер в байтах из `pbPublicKeyBlob`.  
+ окне Размер `pbPublicKeyBlob`в байтах.  
   
  `ppbStrongNameToken`  
- [out] Токен строгое имя, соответствующее ключу, переданный в `pbPublicKeyBlob`. Среда CLR выделяет память, в котором для возврата токена. Вызывающий объект должен освободить эту память с помощью [ICLRStrongName::StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md) метод.  
+ заполняет Маркер строгого имени, соответствующий ключу, переданному в `pbPublicKeyBlob`. Среда CLR выделяет память, в которую возвращается маркер. Вызывающий объект должен освободить эту память с помощью метода [метод iclrstrongname:: StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md) .  
   
  `pcbStrongNameToken`  
- [out] Размер в байтах, возвращенный строгое имя маркера.  
+ заполняет Размер возвращенного маркера строгого имени в байтах.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- `S_OK` Если метод успешно завершена; в противном случае — значение HRESULT, указывающее на сбой (см. в разделе [часто встречающихся значений HRESULT](https://go.microsoft.com/fwlink/?LinkId=213878) список).  
+ `S_OK`, если метод успешно выполнен; в противном случае — значение HRESULT, указывающее на сбой (см. раздел [Общие значения HRESULT](https://go.microsoft.com/fwlink/?LinkId=213878) для списка).  
   
-## <a name="remarks"></a>Примечания  
- Маркер строгого имени — это сокращенная форма открытого ключа, который используется для экономии места, при сохранении информации ключа в метаданных. В частности маркеры строгого имени используются в ссылках сборок для ссылки на зависимые сборки.  
+## <a name="remarks"></a>Заметки  
+ Маркер строгого имени — это сокращенная форма открытого ключа, используемая для экономии места при хранении ключевых сведений в метаданных. В частности, маркеры строгого имени используются в ссылках на сборки для ссылки на зависимую сборку.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** MetaHost.h  
+ **Заголовок:** Метахост. h  
   
- **Библиотека:** Включена как ресурс в mscoree.dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку Mscoree. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

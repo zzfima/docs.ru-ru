@@ -2,14 +2,12 @@
 title: Метод ICorDebugDebugEvent::GetEventKind
 ms.date: 03/30/2017
 ms.assetid: c37aaceb-c948-46bd-a943-08be4cbb76f4
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a87dda8d8a263df1989a685d94c5163212f41382
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 92606d7bd0a277dd327ce4fd430ce963a260206d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69911337"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136660"
 ---
 # <a name="icordebugdebugeventgeteventkind-method"></a>Метод ICorDebugDebugEvent::GetEventKind
 Указывает тип события, который представляет этот объект `ICorDebugDebugEvent`.  
@@ -26,18 +24,18 @@ HRESULT GetEventKind(
  pDebugEventKind  
  Указатель на элемент перечисления [CorDebugDebugEventKind](../../../../docs/framework/unmanaged-api/debugging/cordebugdebugeventkind-enumeration.md) , указывающий тип события.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
  На основе значения `pDebugEventKind` можно вызвать `QueryInterface`, чтобы получить более точный интерфейс событий отладки, содержащий дополнительные данные.  
   
 > [!NOTE]
 > Этот метод доступен только в машинном коде .NET.  
   
 ## <a name="requirements"></a>Требования  
- **Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug. idl, CorDebug. h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
- **Библиотечная** Коргуидс. lib  
+ **Библиотека:** CorGuids.lib  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

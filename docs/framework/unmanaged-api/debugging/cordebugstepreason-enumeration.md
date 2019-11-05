@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: fe248069-b33c-48e1-a777-06ac9b239c54
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3d9dc94689083d79858319387747eb9dafe8b2f6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6c73afb00cbd104cff3d310d1369097b459c131e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739563"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133676"
 ---
 # <a name="cordebugstepreason-enumeration"></a>Перечисление CorDebugStepReason
 Указывает результат отдельного шага.  
@@ -40,22 +38,22 @@ typedef enum CorDebugStepReason {
 } CorDebugStepReason;  
 ```  
   
-## <a name="members"></a>Участники  
+## <a name="members"></a>Члены  
   
 |Член|Описание|  
 |------------|-----------------|  
-|`STEP_NORMAL`|Пошаговое выполнение завершено нормально в ту же функцию.|  
-|`STEP_RETURN`|Шаг с заходом продолжена нормально после возвращения функции.|  
-|`STEP_CALL`|Шаг с заходом продолжена нормально в начале вновь вызванной функции.|  
-|`STEP_EXCEPTION_FILTER`|Возникло исключение и передан элемент управления фильтра исключений.|  
-|`STEP_EXCEPTION_HANDLER`|Возникло исключение, и элемент управления был передан в обработчик исключений.|  
-|`STEP_INTERCEPT`|Управление было передано перехватчику.|  
-|`STEP_EXIT`|Выход потока до выполнения шага.|  
+|`STEP_NORMAL`|Пошаговое завершение нормального выполнения в одной и той же функции.|  
+|`STEP_RETURN`|Пошаговое продолжение обычно после возвращения функции.|  
+|`STEP_CALL`|Пошаговое продолжение обычно в начале вновь вызванной функции.|  
+|`STEP_EXCEPTION_FILTER`|Было создано исключение, и управление было передано в фильтр исключений.|  
+|`STEP_EXCEPTION_HANDLER`|Было создано исключение, а Управление было передано обработчику исключений.|  
+|`STEP_INTERCEPT`|Элемент управления передан перехватчику.|  
+|`STEP_EXIT`|Поток завершил работу до завершения шага.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

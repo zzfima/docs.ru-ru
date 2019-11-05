@@ -9,64 +9,64 @@ helpviewer_keywords:
 - styles [WPF], DatePicker
 - states [WPF], DatePicker
 ms.assetid: c430a657-692f-44bd-a549-2341f92d6115
-ms.openlocfilehash: 013076fdac8666b974fdf0ce9b09740197031c15
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
+ms.openlocfilehash: 323768b6221061d46446ab18f85555f5f7415e74
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67170537"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460368"
 ---
 # <a name="datepicker-styles-and-templates"></a>Стили и шаблоны элемента DatePicker
-В этом разделе описываются стили и шаблоны для <xref:System.Windows.Controls.DatePicker> элемента управления. Вы можете изменить значение по умолчанию <xref:System.Windows.Controls.ControlTemplate> предоставить уникальный внешний вид элемента управления. Подробнее см. в разделе [Настройка внешнего вида существующего элемента управления путем создания объекта ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
+В этом разделе описываются стили и шаблоны для элемента управления <xref:System.Windows.Controls.DatePicker>. Можно изменить <xref:System.Windows.Controls.ControlTemplate> по умолчанию, чтобы обеспечить уникальность внешнего вида элемента управления. Подробнее см. в разделе [Настройка внешнего вида существующего элемента управления путем создания объекта ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
   
-## <a name="datepicker-parts"></a>DatePicker частей  
- В следующей таблице перечислены именованные части <xref:System.Windows.Controls.DatePicker> элемента управления.  
+## <a name="datepicker-parts"></a>Части DatePicker  
+ В следующей таблице перечислены именованные части для элемента управления <xref:System.Windows.Controls.DatePicker>.  
   
-|Отделение|Тип|Описание|  
+|Отделение|Type|Описание|  
 |-|-|-|  
-|PART_Root|<xref:System.Windows.Controls.Grid>|Корневой элемент управления.|  
+|PART_Root|<xref:System.Windows.Controls.Grid>|Корень элемента управления.|  
 |PART_Button|<xref:System.Windows.Controls.Button>|Кнопка, которая открывает и закрывает <xref:System.Windows.Controls.Calendar>.|  
-|PART_TextBox|<xref:System.Windows.Controls.Primitives.DatePickerTextBox>|Текстовое поле для ввода даты.|  
-|PART_Popup|<xref:System.Windows.Controls.Primitives.Popup>|Контекстное меню для <xref:System.Windows.Controls.DatePicker> элемента управления.|  
+|PART_TextBox|<xref:System.Windows.Controls.Primitives.DatePickerTextBox>|Текстовое поле, позволяющее ввести дату.|  
+|PART_Popup|<xref:System.Windows.Controls.Primitives.Popup>|Всплывающее окно для элемента управления <xref:System.Windows.Controls.DatePicker>.|  
   
-## <a name="datepicker-states"></a>DatePicker состояний  
- В следующей таблице перечислены визуальные состояния <xref:System.Windows.Controls.DatePicker> элемента управления.  
+## <a name="datepicker-states"></a>Состояния DatePicker  
+ В следующей таблице перечислены визуальные состояния для элемента управления <xref:System.Windows.Controls.DatePicker>.  
   
 |Имя VisualState|Имя VisualStateGroup|Описание|  
 |-|-|-|  
 |Норм.|CommonStates|Состояние по умолчанию.|  
-|Отключено|CommonStates|<xref:System.Windows.Controls.DatePicker> Отключена.|  
-|Valid|ValidationStates|Элемент управления использует <xref:System.Windows.Controls.Validation> класс и <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> присоединенное свойство `false`.|  
-|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Присоединенное свойство `true` имеет элемент управления имеет фокус.|  
-|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Присоединенное свойство `true` имеет элемент управления не имеет фокуса.|  
+|Отключено.|CommonStates|<xref:System.Windows.Controls.DatePicker> отключена.|  
+|Valid|ValidationStates|Элемент управления использует класс <xref:System.Windows.Controls.Validation>, а <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> присоединенным свойством является `false`.|  
+|InvalidFocused|ValidationStates|Присоединенное <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> свойство имеет `true` элемент управления имеет фокус.|  
+|InvalidUnfocused|ValidationStates|Присоединенное <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> свойство имеет `true` элемент управления не имеет фокуса.|  
   
-## <a name="datepickertextbox-parts"></a>DatePickerTextBox частей  
- В следующей таблице перечислены именованные части <xref:System.Windows.Controls.Primitives.DatePickerTextBox> элемента управления.  
+## <a name="datepickertextbox-parts"></a>Датепиккертекстбокс части  
+ В следующей таблице перечислены именованные части для элемента управления <xref:System.Windows.Controls.Primitives.DatePickerTextBox>.  
   
-|Отделение|Тип|Описание|  
+|Отделение|Type|Описание|  
 |-|-|-|  
 |PART_Watermark|<xref:System.Windows.Controls.ContentControl>|Элемент, содержащий начальный текст в <xref:System.Windows.Controls.DatePicker>.|  
 |PART_ContentElement|<xref:System.Windows.FrameworkElement>|Визуальный элемент, который может содержать <xref:System.Windows.FrameworkElement>. Текст <xref:System.Windows.Controls.TextBox> отображается в этом элементе.|  
   
-## <a name="datepickertextbox-states"></a>DatePickerTextBox состояний  
- В следующей таблице перечислены визуальные состояния <xref:System.Windows.Controls.Primitives.DatePickerTextBox> элемента управления.  
+## <a name="datepickertextbox-states"></a>Состояния Датепиккертекстбокс  
+ В следующей таблице перечислены визуальные состояния для элемента управления <xref:System.Windows.Controls.Primitives.DatePickerTextBox>.  
   
 |Имя VisualState|Имя VisualStateGroup|Описание|  
 |-|-|-|  
 |Норм.|CommonStates|Состояние по умолчанию.|  
-|Отключено|CommonStates|<xref:System.Windows.Controls.Primitives.DatePickerTextBox> Отключена.|  
-|MouseOver|CommonStates|Указатель мыши наведен на <xref:System.Windows.Controls.Primitives.DatePickerTextBox>.|  
-|ReadOnly|CommonStates|Пользователю запрещено изменять текст в <xref:System.Windows.Controls.Primitives.DatePickerTextBox>.|  
+|Отключено.|CommonStates|<xref:System.Windows.Controls.Primitives.DatePickerTextBox> отключена.|  
+|MouseOver|CommonStates|Указатель мыши располагается на <xref:System.Windows.Controls.Primitives.DatePickerTextBox>.|  
+|ReadOnly|CommonStates|Пользователь не может изменить текст в <xref:System.Windows.Controls.Primitives.DatePickerTextBox>.|  
 |Focused|FocusStates|Элемент управления имеет фокус.|  
 |Без фокуса ввода|FocusStates|Элемент управления не имеет фокуса.|  
-|Добавлять водяные знаки|WatermarkStates|Элемент управления отображает начальный текст.  <xref:System.Windows.Controls.Primitives.DatePickerTextBox> Находится в состоянии, когда пользователь не ввел текст и не выбрал дату.|  
-|Unwatermarked|WatermarkStates|Пользователь ввел текст в <xref:System.Windows.Controls.Primitives.DatePickerTextBox> или выбрал дату в <xref:System.Windows.Controls.DatePicker>.|  
-|Valid|ValidationStates|Элемент управления использует <xref:System.Windows.Controls.Validation> класс и <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> присоединенное свойство `false`.|  
-|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Присоединенное свойство `true` и элемент управления имеет фокус.|  
-|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Присоединенное свойство `true` и элемент управления не имеет фокуса.|  
+|Водяные|ватермаркстатес|Элемент управления отображает исходный текст.  <xref:System.Windows.Controls.Primitives.DatePickerTextBox> находится в состоянии, когда пользователь не вводит текст или не выбрал дату.|  
+|Неводяной знак|ватермаркстатес|Пользователь вводит текст в <xref:System.Windows.Controls.Primitives.DatePickerTextBox> или выбрал дату в <xref:System.Windows.Controls.DatePicker>.|  
+|Valid|ValidationStates|Элемент управления использует класс <xref:System.Windows.Controls.Validation>, а <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> присоединенным свойством является `false`.|  
+|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> присоединенным свойством является `true`, а элемент управления имеет фокус.|  
+|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> присоединенным свойством является `true`, а элемент управления не имеет фокуса.|  
   
-## <a name="datepicker-controltemplate-example"></a>Пример шаблона элемента управления DatePicker  
- В следующем примере показано определение <xref:System.Windows.Controls.ControlTemplate> для <xref:System.Windows.Controls.DatePicker> элемента управления.  
+## <a name="datepicker-controltemplate-example"></a>Пример объекта ControlTemplate для DatePicker  
+ В следующем примере показано, как определить <xref:System.Windows.Controls.ControlTemplate> для элемента управления <xref:System.Windows.Controls.DatePicker>.  
   
  [!code-xaml[ControlTemplateExamples#DatePicker](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/datepicker.xaml#datepicker)]  
   
@@ -82,5 +82,5 @@ ms.locfileid: "67170537"
 - <xref:System.Windows.Controls.ControlTemplate>
 - [Стили и шаблоны элемента управления](control-styles-and-templates.md)
 - [Настройка элементов управления](control-customization.md)
-- [Стилизация и использование шаблонов](styling-and-templating.md)
+- [Стилизация и использование шаблонов](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
 - [Настройка внешнего вида существующего элемента управления путем создания объекта ControlTemplate](customizing-the-appearance-of-an-existing-control.md)

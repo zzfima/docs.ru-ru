@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c8706356-d50b-4f87-a40c-39c3b7f4fd38
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 29fc1b491aa4e340c3d8ad6f761d0d6d901649ac
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 85f06b49aab1f1d1745bd7e359ed311c2ba1e44d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67758562"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130982"
 ---
 # <a name="icordebugilframegetlocalvariable-method"></a>Метод ICorDebugILFrame::GetLocalVariable
-Получает значение указанной локальной переменной в кадре стека промежуточного языка MSIL.  
+Возвращает значение указанной локальной переменной в кадре стека MSIL.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,18 +36,18 @@ HRESULT GetLocalVariable (
   
 ## <a name="parameters"></a>Параметры  
  `dwIndex`  
- [in] Индекс локальной переменной в кадре стека MSIL.  
+ окне Индекс локальной переменной в этом кадре стека MSIL.  
   
  `ppValue`  
- [out] Указатель на адрес объекта ICorDebugValue, представляющего извлеченное значение.  
+ заполняет Указатель на адрес объекта ICorDebugValue, представляющего извлеченное значение.  
   
-## <a name="remarks"></a>Примечания  
- `GetLocalVariable` Метод может использоваться в кадре стека MSIL или во фрейме скомпилированного just-in-time (JIT).  
+## <a name="remarks"></a>Заметки  
+ Метод `GetLocalVariable` можно использовать либо в кадре стека MSIL, либо в кадре JIT-компиляции.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

@@ -6,75 +6,73 @@ helpviewer_keywords:
 - configuration schema [.NET Framework], runtime settings
 - runtime settings schema
 ms.assetid: f04816ab-110d-4e28-9283-845d6d9a4a68
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5b340ef99b489b66c62971cacedccdfe609d0b1a
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 5a46a2fcb0fe5a9dfc426cea589c8a9eec47e7a3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252521"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73116555"
 ---
 # <a name="runtime-settings-schema"></a>Схема параметров среды выполнения
 
 Параметры среды выполнения используются средой CLR для настройки приложений, предназначенных для .NET Framework.
 
-## <a name="the-runtime-section-and-its-parent-and-child-elements"></a>Раздел \<> среды выполнения, а также его родительский и дочерний элементы
+## <a name="the-runtime-section-and-its-parent-and-child-elements"></a>Раздел > среды выполнения \<и его родительские и дочерние элементы
 
 [\<configuration>](../configuration-element.md)\
-&nbsp;&nbsp;[\<> среды выполнения](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[\<Алвайсфловимперсонатионполици >](alwaysflowimpersonationpolicy-element.md)\
+[> среды выполнения\<](runtime-element.md) &nbsp;&nbsp;\
+&nbsp;&nbsp;&nbsp;&nbsp;[\<алвайсфловимперсонатионполици >](alwaysflowimpersonationpolicy-element.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;[\<AppContextSwitchOverrides >](appcontextswitchoverrides-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[\<Аппдомаинманажерассембли >](appdomainmanagerassembly-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[\<Аппдомаинманажертипе >](appdomainmanagertype-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[\<Аппдомаинресаурцемониторинг >](appdomainresourcemonitoring-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[\<аппдомаинманажерассембли >](appdomainmanagerassembly-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[\<аппдомаинманажертипе >](appdomainmanagertype-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[\<аппдомаинресаурцемониторинг >](appdomainresourcemonitoring-element.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;[\<assemblyBinding >](assemblybinding-element-for-runtime.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\<dependentAssembly >](dependentassembly-element.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\<assemblyIdentity >](assemblyidentity-element-for-runtime.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\<> bindingRedirect](bindingredirect-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\<База кода >](codebase-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\<Publisherpolicy Apply >](publisherpolicy-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\<Проверка >](probing-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\<bindingRedirect >](bindingredirect-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\<codeBase >](codebase-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\<publisherpolicy apply >](publisherpolicy-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<[зондирование](probing-element.md) >\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\<qualifyAssembly >](qualifyassembly-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\<Тег supportportability >](supportportability-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[\<Элемент bypasstrustedappstrongnames >](bypasstrustedappstrongnames-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[\<Компатсортнлсверсион >](compatsortnlsversion-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\<тег supportportability >](supportportability-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[\<элемент bypasstrustedappstrongnames >](bypasstrustedappstrongnames-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[\<компатсортнлсверсион >](compatsortnlsversion-element.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;[\<developmentMode >](developmentmode-element.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;[\<disableCachingBindingFailures >](disablecachingbindingfailures-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[\<Дисаблекоммитсреадстакк >](disablecommitthreadstack-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[\<Дисаблефусионупдатесфромадманажер >](disablefusionupdatesfromadmanager-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[\<Енаблеампмпарсеаджустмент >](enableampmparseadjustment-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[\<Енфорцефипсполици >](enforcefipspolicy-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[\<Етвенабле >](etwenable-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[\<Форцеперформанцекаунтеруникуешаредмемориреадс >](forceperformancecounteruniquesharedmemoryreads-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[\<дисаблекоммитсреадстакк >](disablecommitthreadstack-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[\<дисаблефусионупдатесфромадманажер >](disablefusionupdatesfromadmanager-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[\<енаблеампмпарсеаджустмент >](enableampmparseadjustment-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[\<енфорцефипсполици >](enforcefipspolicy-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[\<етвенабле >](etwenable-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[\<форцеперформанцекаунтеруникуешаредмемориреадс >](forceperformancecounteruniquesharedmemoryreads-element.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;[\<gcAllowVeryLargeObjects >](gcconcurrent-element.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;[\<gcConcurrent >](gcconcurrent-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[\<Гккпуграуп >](gccpugroup-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[\<гккпуграуп >](gccpugroup-element.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;[\<gcServer >](gcserver-element.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;[\<generatePublisherEvidence >](generatepublisherevidence-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[\<Легацикорруптедстатиксцептионсполици >](legacycorruptedstateexceptionspolicy-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[\<Легациимперсонатионполици >](legacyimpersonationpolicy-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[\<Лоадфромремотесаурцес >](loadfromremotesources-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[\<легацикорруптедстатиксцептионсполици >](legacycorruptedstateexceptionspolicy-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[\<легациимперсонатионполици >](legacyimpersonationpolicy-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[\<лоадфромремотесаурцес >](loadfromremotesources-element.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;[\<NetFx40_LegacySecurityPolicy >](netfx40-legacysecuritypolicy-element.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;[\<NetFx40_PInvokeStackResilience >](netfx40-pinvokestackresilience-element.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;[\<NetFx45_CultureAwareComparerGetHashCode_LongStrings >](netfx45-cultureawarecomparergethashcode-longstrings-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[\<Преферкоминстеадофманажедремотинг >](prefercominsteadofmanagedremoting-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[\<преферкоминстеадофманажедремотинг >](prefercominsteadofmanagedremoting-element.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;[\<relativeBindForResources >](relativebindforresources-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[\<Элемент shadowcopyverifybytimestamp >](shadowcopyverifybytimestamp-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[\<элемент shadowcopyverifybytimestamp >](shadowcopyverifybytimestamp-element.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;[\<Thread_UseAllCpuGroups >](thread-useallcpugroups-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[\<Сровунобсерведтаскексцептионс >](throwunobservedtaskexceptions-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[\<сровунобсерведтаскексцептионс >](throwunobservedtaskexceptions-element.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;[\<TimeSpan_LegacyFormatMode >](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[\<Элемент uselegacyjit >](uselegacyjit-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[\<элемент uselegacyjit >](uselegacyjit-element.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;[\<UseRandomizedStringHashAlgorithm >](userandomizedstringhashalgorithm-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[\<Усесмаллинтерналсреадстаккс >](usesmallinternalthreadstacks-element.md)\
-&nbsp;&nbsp;[\<System. Runtime. Caching >](system-runtime-caching-element-cache-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[\<усесмаллинтерналсреадстаккс >](usesmallinternalthreadstacks-element.md)\
+&nbsp;&nbsp;[\<System. Runtime. caching >](system-runtime-caching-element-cache-settings.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;[\<memoryCache >](memorycache-element-cache-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\<Намедкачес >](namedcaches-element-cache-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\<Добавить >](add-element-for-namedcaches.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\<очистить >](clear-element-for-namedcaches.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\<Удалить >](remove-element-for-namedcaches.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\<намедкачес >](namedcaches-element-cache-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\<добавить >](add-element-for-namedcaches.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\<clear >](clear-element-for-namedcaches.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\<удалить >](remove-element-for-namedcaches.md)  
 
-## <a name="alphabetical-list-of-runtime-elements"></a>Алфавитный список \<элементов среды выполнения >
+## <a name="alphabetical-list-of-runtime-elements"></a>Алфавитный список элементов > среды выполнения \<
 
 |Элемент|Описание|
 |-------------|-----------------|
@@ -108,7 +106,7 @@ ms.locfileid: "70252521"
 |[\<legacyCorruptedStateExceptionsPolicy>](legacycorruptedstateexceptionspolicy-element.md)|Указывает, позволяет ли среда выполнения управляемому коду перехватывать нарушения прав доступа и другие исключения поврежденного состояния.|
 |[\<legacyImpersonationPolicy>](legacyimpersonationpolicy-element.md)|Указывает, что удостоверение Windows не проходит через асинхронные точки, независимо от параметров потока для контекста выполнения в текущем потоке.|
 |[\<loadfromRemoteSources>](loadfromremotesources-element.md)|Указывает, загружены ли сборки из удаленных источников как полностью доверенные.|
-|[\<memoryCache>](memorycache-element-cache-settings.md)|Определяет элемент, используемый для настройки кэша, который основан на классе <xref:System.Runtime.Caching.MemoryCache>.|
+|[\<memoryCache>](memorycache-element-cache-settings.md)|Определяет элемент, используемый для настройки кэша, который основан на классе <xref:System.Runtime.Caching.MemoryCache> .|
 |[\<namedCaches>](namedcaches-element-cache-settings.md)|Содержит коллекцию параметров конфигурации для экземпляра `namedCache` .|
 |[\<NetFx40_LegacySecurityPolicy >](netfx40-legacysecuritypolicy-element.md)|Указывает, использует ли среда выполнения устаревшую политику разграничения доступа кода.|
 |[\<NetFx40_PInvokeStackResilience >](netfx40-pinvokestackresilience-element.md)|Указывает, исправляет ли автоматически среда выполнения неправильные объявления вызова неуправляемого кода во время выполнения за счет скорости перехода между управляемыми и неуправляемым кодом.|

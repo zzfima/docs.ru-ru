@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 392e9009-40ef-40e3-ad4d-7ce93a989e78
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: bf285b6e1f703c8776937fa33c7ab5801f04f80f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 62fcdb60b83c88738ebe2e39455b8eae60fb705e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69950164"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73126782"
 ---
 # <a name="iclrappdomainresourcemonitorgetcurrentsurvived-method"></a>Метод ICLRAppDomainResourceMonitor::GetCurrentSurvived
 Возвращает число байтов, сохранившихся последней полной блокирующей сборки мусора, на которые ссылается текущий домен приложения.  
@@ -54,17 +52,17 @@ HRESULT STDMETHODCALLTYPE GetCurrentSurvived(
 |S_OK|Метод завершился успешно.|  
 |COR_E_APPDOMAINUNLOADED|Домен приложения был выгружен или не существует.|  
   
-## <a name="remarks"></a>Примечания  
- Статистика обновляется только после полной блокированной сборки мусора; то есть коллекция, включающая все поколения и останавливающая работу приложения во время сбора. Например, <xref:System.GC.Collect?displayProperty=nameWithType> перегрузка метода выполняет полную блокированную коллекцию. Параллельная сборка мусора выполняется в фоновом режиме и не блокирует приложение.  
+## <a name="remarks"></a>Заметки  
+ Статистика обновляется только после полной блокированной сборки мусора; то есть коллекция, включающая все поколения и останавливающая работу приложения во время сбора. Например, перегрузка метода <xref:System.GC.Collect?displayProperty=nameWithType> выполняет полную блокированную коллекцию. Параллельная сборка мусора выполняется в фоновом режиме и не блокирует приложение.  
   
- Метод является неуправляемым эквивалентом управляемого <xref:System.AppDomain.MonitoringSurvivedMemorySize%2A?displayProperty=nameWithType> свойства. `GetCurrentSurvived`  
+ Метод `GetCurrentSurvived` является неуправляемым эквивалентом управляемого свойства <xref:System.AppDomain.MonitoringSurvivedMemorySize%2A?displayProperty=nameWithType>.  
   
 ## <a name="requirements"></a>Требования  
- **Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** Метахост. h  
+ **Заголовок:** Метахост. h  
   
- **Библиотечная** Включается в качестве ресурса в библиотеку MSCorEE. dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

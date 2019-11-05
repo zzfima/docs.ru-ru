@@ -157,14 +157,12 @@ helpviewer_keywords:
 - Windows Runtime Metadata Export Tool, error messages
 - error messages, Winmdexp.exe
 ms.assetid: 8271973c-deba-47a6-8e5e-04ce63f146ad
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ad4ea3b2d5fb828c425f30e76244772f5ca9a11a
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 5d75f60cb96ddb7bd9e24a7cdc4b8d2b61aff8f4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71043977"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73104192"
 ---
 # <a name="winmdexpexe-error-messages"></a>Сообщения об ошибках Winmdexp.exe
 Процесс сборки вызывает программу [Winmdexp.exe (средство экспорта метаданных среды выполнения Windows)](winmdexp-exe-windows-runtime-metadata-export-tool.md) при использовании шаблона **компонента среды выполнения Windows** в Visual Studio 2012, поэтому сообщения об ошибках Winmdexp.exe отображаются в **Списке ошибок**. Программа Winmdexp.exe работает в модуле, который компилируется с параметром `/target:winmdobj`. Поскольку в качестве входных данных этой программе требуется скомпилированный модуль, в случае сбоя компиляции сообщения об ошибках Winmdexp.exe не отображаются.  

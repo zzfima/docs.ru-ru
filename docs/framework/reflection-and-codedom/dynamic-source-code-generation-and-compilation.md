@@ -10,14 +10,12 @@ helpviewer_keywords:
 - source code in multiple languages
 - languages, multiple language support by CodeDOM
 ms.assetid: d077a3e8-bd81-4bdf-b6a3-323857ea30fb
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5fb95ab7ff4fcac7169238d90637d7b83078d6dd
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: a7e341bb5bfb5b4648a222409951275169a29b79
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71046105"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130246"
 ---
 # <a name="dynamic-source-code-generation-and-compilation"></a>Динамическое создание и компиляция исходного кода
 В среду .NET Framework включен механизм, который называется Code Document Object Model (CodeDOM). Он позволяет разработчикам программ, порождающих исходный код, создавать код на нескольких языках программирования во время выполнения на основе единой модели, представляющей код для визуализации.  
@@ -30,7 +28,7 @@ ms.locfileid: "71046105"
   
  В платформе .NET Framework имеются генераторы и компиляторы кода для языков <xref:Microsoft.CSharp.CSharpCodeProvider>, <xref:Microsoft.JScript.JScriptCodeProvider> и <xref:Microsoft.VisualBasic.VBCodeProvider>.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>Содержание  
  [Использование CodeDOM](using-the-codedom.md)  
  Описываются общие случаи применения, а также демонстрируется создание простого графа объектов с использованием CodeDOM.  
   
@@ -43,7 +41,7 @@ ms.locfileid: "71046105"
  [Практическое руководство. Создание класса с помощью CodeDOM](how-to-create-a-class-using-codedom.md)  
  Описание использования CodeDOM для создания класса, содержащего поля, свойства, метод, конструктор и точку входа.  
   
-## <a name="reference"></a>Справочник  
+## <a name="reference"></a>Справочники  
  <xref:System.CodeDom>  
  Определяет элементы, представляющие элементы кода на языках программирования, предназначенных для среды CLR.  
   

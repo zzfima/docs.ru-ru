@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 172ef8c4-2ead-4cfc-bd2e-dee4fb7191cd
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 54981be7104eb04ac6347ad13b61a69f40d4377c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 33219d9a67379244e23da49c13617a4c4a2fa66d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67770623"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133463"
 ---
 # <a name="icordebugthreadgethandle-method"></a>Метод ICorDebugThread::GetHandle
-Получает текущий дескриптор для активной части ICorDebugThread.  
+Возвращает текущий маркер для активной части этого ICorDebugThread.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,17 +35,17 @@ HRESULT GetHandle (
   
 ## <a name="parameters"></a>Параметры  
  `phThreadHandle`  
- [out] Указатель на HTHREAD, представляющую собой дескриптор активной части этого потока.  
+ заполняет Указатель на ХСРЕАД, который является маркером активной части этого потока.  
   
-## <a name="remarks"></a>Примечания  
- Дескриптор может меняться, процесс выполнения, и может быть разным для разных частей потока.  
+## <a name="remarks"></a>Заметки  
+ Этот маркер может измениться при выполнении процесса и может отличаться для разных частей потока.  
   
- Этот дескриптор является владельцем API отладки. Отладчик должен его скопировать перед его использованием.  
+ Этот обработчик принадлежит API отладки. Отладчик должен дублировать его перед использованием.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

@@ -14,14 +14,12 @@ helpviewer_keywords:
 - GetQualifierSet function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 845d5ea93a06859840c87c65b415ead0f846d538
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 489e240af3f26e82f2459ac4b4dbd944639f78fc
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798460"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127440"
 ---
 # <a name="getqualifierset-function"></a>Функция Жеткуалифиерсет
 Получает набор квалификатор для экземпляра или определения класса.
@@ -53,24 +51,24 @@ HRESULT GetQualifierSet (
 
 Следующие значения, возвращаемые этой функцией, определены в файле заголовка *вбемкли. h* , или их можно определить как константы в коде:
 
-|Константа  |Значение  |Описание  |
+|Константа  |значения  |Описание  |
 |---------|---------|---------|
 |`WBEM_E_FAILED` | 0x80041001 | Общий сбой. |
 |`WBEM_E_NOT_FOUND` | 0x80041002 | Указанный метод не существует. |
 |`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Недостаточно памяти для завершения операции. |
-|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Параметр имеет значение `null`. |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Параметр — `null`. |
 |`WBEM_S_NO_ERROR` | 0 | Вызов функции выполнен успешно.  |
   
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
 Эта функция заключает в оболочку вызов метода [ивбемклассобжект:: жеткуалифиерсет](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getqualifierset) . 
 
 [Указатель ивбемкуалифиерсет](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) позволяет вызывающей стороне добавлять, изменять или удалять эти квалификаторы. Такие добавленные, измененные или удаленные квалификаторы применяются ко всему определению экземпляра или класса.
 
 ## <a name="requirements"></a>Требования  
-**Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).  
+**Платформы:** см. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
- **Заголовок.** WMINet_Utils. idl  
+ **Заголовок:** WMINet_Utils. idl  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   

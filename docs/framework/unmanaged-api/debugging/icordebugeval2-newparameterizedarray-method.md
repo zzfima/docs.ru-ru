@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 45efb8ba-c4de-4109-945f-e734d376b43c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 973f975885bbbf5cbed74adef7b9f4f423c42583
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9476bcc9706e89fd3d7e0abc14031f70a0aa0ad0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67753654"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73084839"
 ---
 # <a name="icordebugeval2newparameterizedarray-method"></a>Метод ICorDebugEval2::NewParameterizedArray
-Выделяет новый массив элементов указанного типа и измерений.  
+Выделяет новый массив указанного типа элемента и измерений.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,24 +38,24 @@ HRESULT NewParameterizedArray(
   
 ## <a name="parameters"></a>Параметры  
  `pElementType`  
- [in] Указатель на интерфейс ICorDebugType объект, представляющий тип элементов, которые хранятся в массиве.  
+ окне Указатель на объект ICorDebugType, представляющий тип элемента, хранящегося в массиве.  
   
  `rank`  
- [in] Число измерений массива. В платформе .NET Framework версии 2.0 это значение должно быть 1.  
+ окне Число измерений массива. В .NET Framework версии 2,0 это значение должно быть равно 1.  
   
  `dims`  
- [in] Размер в байтах каждого измерения массива.  
+ окне Размер каждого измерения массива в байтах.  
   
  `lowBounds`  
- [в] Необязательно. Нижняя граница каждого измерения массива. Если это значение указано, для каждого измерения предполагается нижнюю границу, равную нулю.  
+ [в] Необязательно. Нижняя граница каждого измерения массива. Если это значение пропущено, для каждого измерения предполагается Нижняя граница, равная нулю.  
   
-## <a name="remarks"></a>Примечания  
- Элементы массива могут быть экземпляры универсального типа. Массив всегда создается в домене приложения, в котором поток выполняется в данный момент. В .NET Framework 2.0, значение `rank` должно быть равно 1.  
+## <a name="remarks"></a>Заметки  
+ Элементы массива могут быть экземплярами универсального типа. Массив всегда создается в домене приложения, в котором в данный момент выполняется поток. В .NET Framework 2,0 значение `rank` должно быть равно 1.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

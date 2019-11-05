@@ -2,19 +2,17 @@
 title: Метод ISymUnmanagedWriter4::GetDebugInfoWithPadding
 ms.date: 03/30/2017
 ms.assetid: 881e20ca-8131-4bd0-ba41-c2d6391b0fe2
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 191aa16c285b3a28beed65004d65525c9214ec93
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 274bf79175bda9e880b1ef3cf8f125a017ad0734
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61650743"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121660"
 ---
 # <a name="isymunmanagedwriter4getdebuginfowithpadding-method"></a>Метод ISymUnmanagedWriter4::GetDebugInfoWithPadding
-Работает так же, как [метод GetDebugInfo](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-getdebuginfo-method.md) за исключением того, что строка пути дополняется нулей, завершающий нуль-символ, чтобы сделать строковые данные фиксированный размер `MAX_PATH`. Заполнение предоставляется только в том случае, если длина строки пути, сам меньше, чем `MAX_PATH`.  
+Функция аналогична [методу GetDebugInfo](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-getdebuginfo-method.md) , за исключением того, что строка пути дополнена нулями после завершающего нуль-символа, чтобы сделать строку фиксированным размером `MAX_PATH`. Заполнение задается только в том случае, если длина строки пути меньше `MAX_PATH`.  
   
- Это упрощает для записи этого файла различий PE средства.  
+ Это упрощает написание средств, которые отличаются от PE файлов.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -35,7 +33,7 @@ HRESULT GetDebugInfoWithPadding(    [in, out] IMAGE_DEBUG_DIRECTORY *pIDD,    [i
  Возвращает `HRESULT`.  
   
 ## <a name="requirements"></a>Требования  
- **Заголовок.** CorSym.idl CorSym.h  
+ **Заголовок:** Корсим. idl, Корсим. h  
   
 ## <a name="see-also"></a>См. также
 

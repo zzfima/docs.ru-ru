@@ -15,21 +15,21 @@ helpviewer_keywords:
 - WPF [WPF], about Windows Presentation Foundation
 - 3-D rendering [WPF]
 ms.assetid: 582a314e-e23d-4144-b45b-acbbd5579252
-ms.openlocfilehash: d2a0cdb7e49fb584d0824edcefe710313ba21d4a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 536022a1273b9992541d83f0a55f06d2b9efb9a4
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61934684"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459620"
 ---
 # <a name="introduction-to-wpf-in-visual-studio"></a>Введение в WPF в Visual Studio
-Windows Presentation Foundation (WPF) в Visual Studio предоставляет разработчикам унифицированную модель программирования для создания бизнес-приложений Windows настольных систем.  
+Windows Presentation Foundation (WPF) в Visual Studio предоставляет разработчикам унифицированную модель программирования для создания настольных бизнес-приложений в Windows.  
   
  [Создание классических приложений с помощью Windows Presentation Foundation](/visualstudio/designers/create-modern-desktop-applications-with-windows-presentation-foundation)  
 
  [Разработка XAML в Visual Studio и Blend для Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)  
   
- [Введение в WPF](/visualstudio/designers/introduction-to-wpf)  
+ [Введение в WPF](../introduction-to-wpf.md)  
   
  [WPF в .NET Framework](../index.md)  
   

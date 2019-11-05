@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1f1e3239-438e-4be9-a3bb-7d0722d3a76d
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a73232fb9327880f0038097d71698ddf8bf005e3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c5d6cfa3826667514eb70f9bb0df118d9ba0d07c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779904"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127821"
 ---
 # <a name="icorconfigurationadddebuggerspecialthread-method"></a>Метод ICorConfiguration::AddDebuggerSpecialThread
-Указывает службы отладки, что определенным потоком должны продолжить выполнение при завершении работы приложения во время сценариев отладки управляемого или неуправляемого отладчика.  
+Указывает службам отладки, что определенному потоку должен быть разрешено продолжать выполнение, пока отладчик не остановит работу приложения во время управляемых или неуправляемых сценариев отладки.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,17 +35,17 @@ HRESULT AddDebuggerSpecialThread (
   
 ## <a name="parameters"></a>Параметры  
  `dwSpecialThreadId`  
- [in] Идентификатор потока, должны продолжать выполнение.  
+ окне Идентификатор потока, который должен быть разрешен для продолжения выполнения.  
   
-## <a name="remarks"></a>Примечания  
- Указанный поток не разрешено выполнять управляемый код, или введите среды выполнения любым способом. Примером такой поток будет поток в процессе, для поддержки сценариев прежних версий отладчики.  
+## <a name="remarks"></a>Заметки  
+ Указанный поток не может выполнять управляемый код или вводить среду выполнения каким бы то ни было образом. Примером такого потока может быть внутрипроцессный поток для поддержки устаревших отладчиков скриптов.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** MSCorEE.h  
+ **Заголовок:** MSCorEE. h  
   
- **Библиотека:** Включена как ресурс в MSCorEE.dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

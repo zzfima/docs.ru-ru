@@ -5,14 +5,12 @@ helpviewer_keywords:
 - names [.NET Framework], assemblies
 - assemblies [.NET Framework], names
 ms.assetid: 8f8c2c90-f15d-400e-87e7-a757e4f04d0e
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 22e35450460436e164db922fce76a53c437f6bdf
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: a35be7c2a2cb4b499496f526d263bb1825a3614b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71835319"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73107120"
 ---
 # <a name="assembly-names"></a>Имена сборок
 Имя сборки хранится в метаданных и в значительной степени влияет на ее область определения и использование в приложениях. Сборки со строгим именем имеют полное имя, в состав которого входит имя сборки, язык и региональные параметры, открытый ключ и номер версии. Оно часто называется отображаемым именем; у загружаемых сборок его можно получить через свойство <xref:System.Reflection.Assembly.FullName%2A>.  

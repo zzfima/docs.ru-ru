@@ -5,21 +5,19 @@ helpviewer_keywords:
 - UseSmallInternalThreadStacks element
 - <UseSmallInternalThreadStacks> element
 ms.assetid: 1e3f6ec0-1cac-4e1c-9c81-17d948ae5874
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 515ea076c5eaead50b41e45e415725d0439914bc
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 2fd776ce8605e6dcf288dcb3852ded16638a1873
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252211"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73114925"
 ---
-# <a name="usesmallinternalthreadstacks-element"></a>\<Элемент > Усесмаллинтерналсреадстаккс
+# <a name="usesmallinternalthreadstacks-element"></a>\<Усесмаллинтерналсреадстаккс > элемент
 Запрашивает уменьшение использования памяти средой CLR, указывая явные размеры стека при создании определенных потоков, используемых внутренним образом, вместо использования размера стека по умолчанию для этих потоков.  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> среды выполнения**](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<UseSmallInternalThreadStacks>**  
+&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
+&nbsp;&nbsp;&nbsp;&nbsp; **\<усесмаллинтерналсреадстаккс >**  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,13 +36,13 @@ ms.locfileid: "70252211"
   
 ## <a name="enabled-attribute"></a>Атрибут enabled  
   
-|Значение|Описание|  
+|значения|Описание|  
 |-----------|-----------------|  
 |true|Запрос явных размеров стека.|  
-|false|Используйте размер стека по умолчанию. Это значение по умолчанию для .NET Framework 4.|  
+|Ложь|Используйте размер стека по умолчанию. Это значение по умолчанию для .NET Framework 4.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
- Нет.  
+ Отсутствует.  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
@@ -53,7 +51,7 @@ ms.locfileid: "70252211"
 |`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.|  
 |`runtime`|Содержит сведения о привязке сборок и сборке мусора.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
  Этот элемент конфигурации используется для запроса уменьшенного использования виртуальной памяти в процессе, поскольку явные размеры потоков, используемые средой CLR для внутренних потоков, если запрос обрабатывается, меньше размера по умолчанию.  
   
 > [!IMPORTANT]

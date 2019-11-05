@@ -4,12 +4,12 @@ description: Обзор инструмента Microsoft WCF dotnet-svcutil, к�
 author: mlacouture
 ms.date: 02/22/2019
 ms.custom: seodec18
-ms.openlocfilehash: 49b0579c284af74d270cac04d302ce231dcb9357
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 89fe72c8116498ff60d439ce17ef2e857edf621e
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72522828"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771985"
 ---
 # <a name="wcf-dotnet-svcutil-tool-for-net-core"></a>Средство WCF dotnet-svcutil для .NET Core
 

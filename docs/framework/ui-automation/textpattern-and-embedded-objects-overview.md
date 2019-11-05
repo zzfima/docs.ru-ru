@@ -7,12 +7,12 @@ helpviewer_keywords:
 - accessing embedded objects
 - embedded objects, UI Automation
 ms.assetid: 93fdfbb9-0025-4b72-8ca0-0714adbb70d5
-ms.openlocfilehash: ba4df55c3359e2a81eef0b4947a744d80ed49497
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: a718a85ed42c4f8081348de20a195899f3c18c0a
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040592"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458115"
 ---
 # <a name="textpattern-and-embedded-objects-overview"></a>Общие сведения об объектах TextPattern и Embedded
 > [!NOTE]
@@ -20,7 +20,7 @@ ms.locfileid: "73040592"
   
  В этом обзоре описано, как [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] представляет внедренные объекты или дочерние элементы в текстовом документе или контейнере.  
   
- В [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] внедренный объект — это любой элемент с нетекстовыми границами; Например, изображение, гиперссылка, таблица или тип документа, например [!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)] электронной таблице или файл Microsoft Windows Media. Это отличается от стандартного определения, где элемент создается в одном приложении и внедряется или связывается в другом. То, может ли объект редактироваться в его исходном приложении, не важно в контексте [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)].  
+ В [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] внедренный объект — это любой элемент с нетекстовыми границами; Например, изображение, гиперссылка, таблица или тип документа, например электронная таблица Microsoft Excel или файл Microsoft Windows Media. Это отличается от стандартного определения, где элемент создается в одном приложении и внедряется или связывается в другом. То, может ли объект редактироваться в его исходном приложении, не важно в контексте [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)].  
   
 <a name="Embedded_Objects_and_the_UI_Automation_Tree"></a>   
 ## <a name="embedded-objects-and-the-ui-automation-tree"></a>Внедренные объекты и дерево модели автоматизации пользовательского интерфейса  

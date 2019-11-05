@@ -13,17 +13,15 @@ helpviewer_keywords:
 - SetAppDomainManagerType method, ICLRDomainManager interface [.NET Framework hosting]
 - ICLRDomainManager::SetAppDomainManagerType method [.NET Framework hosting]
 ms.assetid: ee91abb0-cb74-41dd-927b-e117fb8ffdf4
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9b142f1a05036eddf44c69d8b7da95091dc8f445
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 5c61e2e1208cec0bda1492964a8d02bd71f5a1c6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963093"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129330"
 ---
 # <a name="iclrdomainmanagersetappdomainmanagertype-method"></a>Метод ICLRDomainManager::SetAppDomainManagerType
-Задает тип, производный от <xref:System.AppDomainManager?displayProperty=nameWithType> класса диспетчера домена приложения, который будет использоваться для инициализации домена приложения по умолчанию.  
+Задает тип, производный от класса <xref:System.AppDomainManager?displayProperty=nameWithType> диспетчера домена приложения, который будет использоваться для инициализации домена приложения по умолчанию.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -53,20 +51,20 @@ HRESULT SetAppDomainManagerType(
 |S_OK|Метод завершился успешно.|  
 |HOST_E_CLRNOTAVAILABLE|Среда CLR не была загружена в процесс, или среда CLR находится в состоянии, в котором она не может выполнить управляемый код или успешно обработать вызов.|  
   
-## <a name="remarks"></a>Примечания  
- В настоящее время единственным определенным значением для `dwInitializeDomainFlags` является `eInitializeNewDomainFlags_NoSecurityChanges`, которое указывает среде CLR, что диспетчер домена приложения не изменяет параметры безопасности <xref:System.AppDomainManager.InitializeNewDomain%2A?displayProperty=nameWithType> во время выполнения метода. Это позволяет среде CLR оптимизировать загрузку сборок с условным <xref:System.Security.AllowPartiallyTrustedCallersAttribute> атрибутом (APTCA). Это может привести к значительному улучшению времени запуска, если транзитивное замыкание этого набора сборок велико.  
+## <a name="remarks"></a>Заметки  
+ В настоящее время единственным определенным значением для `dwInitializeDomainFlags` является `eInitializeNewDomainFlags_NoSecurityChanges`, которое указывает среде CLR, что диспетчер домена приложения не изменяет параметры безопасности во время выполнения метода <xref:System.AppDomainManager.InitializeNewDomain%2A?displayProperty=nameWithType>. Это позволяет среде CLR оптимизировать загрузку сборок с атрибутом Conditional <xref:System.Security.AllowPartiallyTrustedCallersAttribute> (APTCA). Это может привести к значительному улучшению времени запуска, если транзитивное замыкание этого набора сборок велико.  
   
 > [!IMPORTANT]
-> Если узел указан `eInitializeNewDomainFlags_NoSecurityChanges` для диспетчера доменов приложений <xref:System.InvalidOperationException> , создается исключение, если выполняется любая попытка изменить безопасность домена приложения.  
+> Если узел указывает `eInitializeNewDomainFlags_NoSecurityChanges` для диспетчера доменов приложений, при любой попытке изменить безопасность домена приложения создается исключение <xref:System.InvalidOperationException>.  
   
  Вызов метода [ICLRControl:: SetAppDomainManagerType](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-setappdomainmanagertype-method.md)эквивалентен вызову `ICLRDomainManager::SetAppDomainManagerType` с `eInitializeNewDomainFlags_None`.  
   
 ## <a name="requirements"></a>Требования  
- **Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** Метахост. h  
+ **Заголовок:** Метахост. h  
   
- **Библиотечная** Включается в качестве ресурса в библиотеку MSCorEE. dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

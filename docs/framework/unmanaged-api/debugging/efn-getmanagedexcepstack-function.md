@@ -14,16 +14,14 @@ helpviewer_keywords:
 ms.assetid: 21ceed9e-62b2-4024-b027-6d095109955a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 61f4e057a487462feb385ca0e3ca977fdd165f56
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9bcc03cc97a62b4c1cadacd7c0b2bc46b9fec470
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739095"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134139"
 ---
-# <a name="efngetmanagedexcepstack-function"></a>\_EFN\_GetManagedExcepStack-функция
+# <a name="_efn_getmanagedexcepstack-function"></a>\_ЕФН\_функция Жетманажедексцепстакк
 Учитывая адрес объекта управляемого исключения, возвращает строковую версию трассировки стека, содержащейся внутри.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -39,26 +37,26 @@ HRESULT _EFN_GetManagedExcepStack(
   
 ## <a name="parameters"></a>Параметры  
  `Client`  
- [in] Клиент, для которого выполняется отладка.  
+ окне Отлаживаемый клиент.  
   
  `StackObjAddr`  
- [in] Указатель на управляемый объект, производный от <xref:System.Exception>.  
+ окне Указатель на управляемый объект, производный от <xref:System.Exception>.  
   
- szStackString  
- [out] Возвращаемая строка.  
+ сзстаккстринг  
+ заполняет Возвращаемая строка.  
   
  `cbString`  
- [out] Доступное число символов в буфере строк.  
+ заполняет Число символов, доступных в буфере строк.  
   
-## <a name="remarks"></a>Примечания  
- Если отсутствует управляемый код в потоке в данный момент в контексте, функция возвращает HRESULT SOS_E_NOMANAGEDCODE со значением сообщения 0xa0 и кодом ошибки 0x1000.  
+## <a name="remarks"></a>Заметки  
+ Если в текущем потоке нет управляемого кода, функция возвращает HRESULT SOS_E_NOMANAGEDCODE с значением устройства 0x82 и кодом ошибки 0x1000.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** SOS_Stacktrace.h  
+ **Заголовок:** SOS_Stacktrace. h  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версия .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
 

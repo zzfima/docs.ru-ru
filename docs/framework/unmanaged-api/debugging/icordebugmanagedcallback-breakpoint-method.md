@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 60b279b0-a726-46d2-8c53-76986a007ebb
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4f49fac3951c130c3cf06b6861beb06b89c27dfb
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8a4f7d4f422d80d044bcb92065dbefc7f421a069
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67759891"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122605"
 ---
 # <a name="icordebugmanagedcallbackbreakpoint-method"></a>Метод ICorDebugManagedCallback::Breakpoint
-Уведомляет отладчик о достижении точки останова.  
+Уведомляет отладчик об обнаружении точки останова.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,18 +37,18 @@ HRESULT Breakpoint (
   
 ## <a name="parameters"></a>Параметры  
  `pAppDomain`  
- [in] Указатель на объект ICorDebugAppDomain, представляющий домен приложения, содержащего точку останова.  
+ окне Указатель на объект ICorDebugAppDomain, представляющий домен приложения, содержащий точку останова.  
   
  `pThread`  
- [in] Указатель на объект ICorDebugThread, представляющий поток, который содержит точку останова.  
+ окне Указатель на объект ICorDebugThread, представляющий поток, содержащий точку останова.  
   
  `pBreakpoint`  
- [in] Указатель на объект ICorDebugBreakpoint, представляющий точку останова.  
+ окне Указатель на объект Икордебугбреакпоинт, представляющий точку останова.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

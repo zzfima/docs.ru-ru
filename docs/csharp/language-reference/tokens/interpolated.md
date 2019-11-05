@@ -11,13 +11,12 @@ helpviewer_keywords:
 - string interpolation [C#]
 - interpolated string [C#]
 author: pkulikov
-ms.author: ronpet
-ms.openlocfilehash: 53a8938a373136df65e23c162b94c4d8dc1f30b4
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: cda8582da9ca8262ec2ce6bcfbb76e2e2f5f6006
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253867"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73421859"
 ---
 # <a name="---string-interpolation-c-reference"></a>$ — интерполяция строк (справочные материалы по C#)
 
@@ -59,7 +58,7 @@ ms.locfileid: "70253867"
 
 [!code-csharp-interactive[example with ternary conditional operator](~/samples/snippets/csharp/language-reference/tokens/string-interpolation.cs#3)]
 
-Интерполированная строка verbatim начинается с символа `$`, за которым следует символ `@`. Дополнительные сведения о буквальных строках см. в разделах о [строках](../keywords/string.md) и [буквальном идентификаторе](verbatim.md)).
+Интерполированная строка verbatim начинается с символа `$`, за которым следует символ `@`. Дополнительные сведения о буквальных строках см. в разделах о [строках](../builtin-types/reference-types.md) и [буквальном идентификаторе](verbatim.md)).
 
 > [!NOTE]
 > Начиная с C# 8.0 маркеры `$` и `@` можно использовать в любом порядке: `$@"..."` и `@$"..."` являются допустимыми интерполированными строками verbatim. В более ранних версиях C# маркер`$` должен располагаться перед маркером `@`.

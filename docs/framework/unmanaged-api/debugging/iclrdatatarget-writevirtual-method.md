@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: d627e8b7-a605-40ac-b9bb-da9a3f1b66d9
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a0ad4b7e907412aced911d7869ffce81eb867448
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c6b4303163140c9c5553d02855c64dd2a3f5b134
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738508"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73112736"
 ---
 # <a name="iclrdatatargetwritevirtual-method"></a>Метод ICLRDataTarget::WriteVirtual
-Записывает данные из указанного буфера указанного адреса виртуальной памяти.  
+Записывает данные из указанного буфера в указанный адрес виртуальной памяти.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -41,21 +39,21 @@ HRESULT WriteVirtual (
   
 ## <a name="parameters"></a>Параметры  
  `address`  
- [in] CLRDATA_ADDRESS, который хранит адрес виртуальной памяти.  
+ окне Объект CLRDATA_ADDRESS, в котором хранится адрес виртуальной памяти.  
   
  `buffer`  
- [in] Указатель на буфер, в котором хранятся данные для записи.  
+ окне Указатель на буфер, в котором хранятся записываемые данные.  
   
  `bytesRequested`  
- [in] Число байтов для записи.  
+ окне Число записываемых байтов.  
   
  `bytesWritten`  
- [out] Указатель на фактическое число байтов, которые были записаны.  
+ заполняет Указатель на фактическое число записанных байтов.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** ClrData.idl, ClrData.h  
+ **Заголовок:** Клрдата. idl, Клрдата. h  
   
  **Библиотека:** CorGuids.lib  
   

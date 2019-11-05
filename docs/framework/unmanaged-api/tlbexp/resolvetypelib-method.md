@@ -13,14 +13,12 @@ helpviewer_keywords:
 ms.assetid: 95d2aa0d-8eeb-4a9f-a216-5249f7e2c167
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ce0f11547d4b16516b7c78d1b1947f5c4bc831a3
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 46cd8b5c22f48ba45c4da7fa8876d6807a21f2b3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798803"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124144"
 ---
 # <a name="resolvetypelib-method"></a>Метод ResolveTypeLib
 Разрешает простое имя библиотеки типов, возвращая полный путь.  
@@ -58,19 +56,19 @@ HRESULT ResolveTypeLib(
  окне Флаг [Сискинд](https://docs.microsoft.com/windows/win32/api/oaidl/ne-oaidl-syskind) , определяющий операционную среду. Распространенные значения — SYS_WIN32 и SYS_WIN64.  
   
  `pbstrResolvedTlbName`  
- заполняет Указатель на [BSTR](https://docs.microsoft.com/previous-versions/windows/desktop/automat/bstr) , содержащий полный путь к библиотеке типов с именем в `bstrSimpleName` параметре.  
+ заполняет Указатель на [BSTR](https://docs.microsoft.com/previous-versions/windows/desktop/automat/bstr) , содержащий полный путь к библиотеке типов с именем в параметре `bstrSimpleName`.  
   
-## <a name="remarks"></a>Примечания  
- Метод вызывается [функцией LoadTypeLibWithResolver](loadtypelibwithresolver-function.md) во время обработки программы [Tlbexp. exe (программа экспорта библиотек типов).](../../tools/tlbexp-exe-type-library-exporter.md) `ResolveTypeLib`  
+## <a name="remarks"></a>Заметки  
+ Метод `ResolveTypeLib` вызывается [функцией LoadTypeLibWithResolver](loadtypelibwithresolver-function.md) во время обработки программы [Tlbexp. exe (программа экспорта библиотек типов)](../../tools/tlbexp-exe-type-library-exporter.md) .  
   
- Пользовательские реализации этого интерфейса должны возвращать [строку BSTR](https://docs.microsoft.com/previous-versions/windows/desktop/automat/bstr) , содержащую полный путь к библиотеке типов с именем в `bstrSimpleName` параметре.  
+ Пользовательские реализации этого интерфейса должны возвращать [строку BSTR](https://docs.microsoft.com/previous-versions/windows/desktop/automat/bstr) , содержащую полный путь к библиотеке типов с именем в параметре `bstrSimpleName`.  
   
 ## <a name="requirements"></a>Требования  
- **Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
- **Заголовок.** Тлбреф. idl, Тлбреф. h  
+ **Заголовок:** Тлбреф. idl, Тлбреф. h  
   
- **Библиотечная** Тлбреф. lib  
+ **Библиотека:** Тлбреф. lib  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

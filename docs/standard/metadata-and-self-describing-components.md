@@ -15,14 +15,12 @@ helpviewer_keywords:
 - PE files, metadata
 - components [.NET Framework], metadata
 ms.assetid: 3dd13c5d-a508-455b-8dce-0a852882a5a7
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1a35f4ffa88211d914dbf84c87da49fafa89a929
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: a4f4c0e1af379d31c5b478472780d5c7de813bf6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71353896"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121936"
 ---
 # <a name="metadata-and-self-describing-components"></a>Метаданные и компоненты с самоописанием
 
@@ -162,7 +160,7 @@ JIT-компилятор считывает код MSIL для всего мет
 |Строка|Относительный виртуальный адрес (RVA)|Неявные флаги|Флаги|name<br /><br /> (Указывает на кучу строк.)|Сигнатура (указывает на кучу больших двоичных объектов)|
 |---------|--------------------------------------|---------------|-----------|-----------------------------------------|----------------------------------------|
 |1|0x00002050|IL<br /><br /> Управляемый|Public<br /><br /> ReuseSlot<br /><br /> SpecialName<br /><br /> RTSpecialName<br /><br /> .ctor|.ctor (конструктор)||
-|2|0x00002058|IL<br /><br /> Управляемый|Public<br /><br /> Статические<br /><br /> ReuseSlot|Главная ветвь|String|
+|2|0x00002058|IL<br /><br /> Управляемый|Public<br /><br /> Статические<br /><br /> ReuseSlot|Главная ветвь|Строка|
 |3|0x0000208c|IL<br /><br /> Управляемый|Public<br /><br /> Статические<br /><br /> ReuseSlot|Add|int, int, int|
 
 В каждом столбце таблицы содержатся важные сведения о коде. Значения в столбце **RVA** позволяют среде выполнения вычислить начальный адрес в памяти кода MSIL, определяющего этот метод. Столбцы **Неявные флаги** и **Флаги** содержат битовые маски, описывающие метод (например, является ли метод общим или закрытым). Столбец **Имя** содержит указатель имени метода из кучи строк. Столбец **Сигнатура** содержит указатель определения сигнатуры метода в куче больших двоичных объектов.

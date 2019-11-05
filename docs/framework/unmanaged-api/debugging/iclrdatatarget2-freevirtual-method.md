@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 26fb69f8-1467-4711-bd24-cb117c63938f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6d51c445d6f375f805253b9f640ab61ab3dccc58
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c084a3fcbbc02504124a511c6e136be32f408d21
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738490"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73112327"
 ---
 # <a name="iclrdatatarget2freevirtual-method"></a>Метод ICLRDataTarget2::FreeVirtual
-Вызывается службами доступа к данным среды выполнения (CLR) для освобождения памяти, который ранее был выделен в адресном пространстве целевого процесса.  
+Вызывается службами доступа к данным среды CLR для освобождения памяти, которая была ранее выделена в адресном пространстве целевого процесса.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,23 +37,23 @@ HRESULT FreeVirtual(
   
 ## <a name="parameters"></a>Параметры  
  `addr`  
- [in] Объект `CLRDATA_ADDRESS` значение, указывающее начальный адрес освобождаемой памяти.  
+ окне Значение `CLRDATA_ADDRESS`, указывающее начальный адрес памяти для высвобождения.  
   
  `size`  
- [in] Размер в байтах освобождаемой памяти.  
+ окне Размер (в байтах) памяти, которая должна быть освобождена.  
   
  `typeFlags`  
- [in] Флаги, управляющие освобождение памяти. См. в разделе Win32 `VirtualFree` функции.  
+ окне Флаги, управляющие освобождением памяти. См. функцию Win32 `VirtualFree`.  
   
-## <a name="remarks"></a>Примечания  
- `FreeVirtual` Метод служит в качестве логической программой-оболочкой для Win32 `VirtualFree` функции.  
+## <a name="remarks"></a>Заметки  
+ `FreeVirtual` метод служит логической оболочкой для функции Win32 `VirtualFree`.  
   
  Этот метод реализуется модулем записи отладчика.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** ClrData.idl, ClrData.h  
+ **Заголовок:** Клрдата. idl, Клрдата. h  
   
  **Библиотека:** CorGuids.lib  
   

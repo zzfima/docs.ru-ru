@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6dcc4a4b-3a78-4369-bcc7-c0be6dde57d4
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 62e78ca9b842d4554e933d3f09f008f68559b0c5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d76fbb727386c84f2419ceaeecc6756514c2f124
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67749380"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132966"
 ---
 # <a name="ihosttaskmanagersetstackguarantee-method"></a>Метод IHostTaskManager::SetStackGuarantee
 Зарезервировано только для внутреннего использования.  
@@ -36,11 +34,11 @@ HRESULT SetStackGuarantee(
 ```  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** MSCorEE.h  
+ **Заголовок:** MSCorEE. h  
   
- **Библиотека:** Включена как ресурс в MSCorEE.dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1c7276f7-7e54-470c-808c-e13745ac07a1
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 43a502682e6ccfc36931970d0121f91529f51711
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a9a6ca9ae3cdb1c6a7398d08c9f99e3cde125cf6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744722"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131902"
 ---
 # <a name="icordebugremotetargetgethostname-method"></a>Метод ICorDebugRemoteTarget::GetHostName
-Возвращает полное доменное имя или IPv4-адрес удаленной отладки целевой машины. IPv6 не поддерживается в настоящее время.  
+Возвращает полное доменное имя или IPv4-адрес целевого компьютера удаленной отладки. В настоящее время IPV6 не поддерживается.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,32 +37,32 @@ HRESULT GetHostName (
   
 ## <a name="parameters"></a>Параметры  
  `cchHostName`  
- [in] Размер в символах, из `szHostName` буфера. Если этот параметр равен 0 (ноль), `szHostName` должен иметь значение null.  
+ окне Размер `szHostName`ного буфера в символах. Если этот параметр имеет значение 0 (ноль), `szHostName` должен иметь значение null.  
   
  `pcchHostName`  
- [out] Число символов, включая завершающий нуль-символ, имя узла или IP-адрес. Этот параметр может быть нулевым.  
+ заполняет Количество символов, включая знак завершения null, в имени узла или IP-адресе. Этот параметр может быть нулевым.  
   
  `szHostName`  
- [out] Буфер, содержащий имя узла или IP-адрес.  
+ заполняет Буфер, содержащий имя узла или IP-адрес.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  S_OK  
- Имя узла или IP-адрес был успешно возвращен.  
+ Имя узла или IP-адрес успешно возвращены.  
   
  E_FAIL (или другие коды возврата E_)  
- Не удалось получить имя узла или IP-адрес.  
+ Не удалось вернуть имя узла или IP-адрес.  
   
-## <a name="remarks"></a>Примечания  
- Этот метод реализуется модулем записи отладчика. Он должен соответствовать несколько парадигма вызова: При первом вызове, вызывающий объект передает null в оба `cchHostName` и `szHostName`, и `pcchHostName` возвращает размер буфера. При втором вызове, переданный размер, который был ранее возвращен `cchHostName`, и переданный буфера `szHostName`.  
+## <a name="remarks"></a>Заметки  
+ Этот метод реализуется модулем записи отладчика. Он должен следовать парадигме нескольких вызовов: при первом вызове вызывающий объект передает значение NULL в `cchHostName` и `szHostName`, а `pcchHostName` возвращает размер требуемого буфера. При втором вызове размер, который был ранее возвращен, передается `cchHostName`, и буфер соответствующего размера передается в `szHostName`.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl  
+ **Заголовок:** CorDebug. idl  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** 3.5 с пакетом обновления 1 (SP1)  
+ **.NET Framework версии:** 3,5 SP1  
   
 ## <a name="see-also"></a>См. также
 

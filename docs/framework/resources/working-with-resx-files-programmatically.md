@@ -8,14 +8,12 @@ helpviewer_keywords:
 - resource files, .resx files
 - .resx files
 ms.assetid: 168f941a-2b84-43f8-933f-cf4a8548d824
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7e5a57664c5d86ebf394ce026608be9a55872eb8
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 2bbca5712639e14370d090e95b78bb89eba134e4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71045534"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129910"
 ---
 # <a name="working-with-resx-files-programmatically"></a>Работа с RESX-файлами программным способом
 Поскольку XML-файлы ресурсов (RESX-файлы) должны иметь четко определенный XML-формат (включая заголовок, который должен соответствовать конкретной схеме и за которым следуют данные в парах "имя-значение"), создание этих файлов вручную может приводить к ошибкам. RESX-файлы можно также создавать программным способом, используя типы и члены из библиотеки классов .NET. Кроме того, библиотеку классов .NET можно использовать для извлечения ресурсов, хранящихся в RESX-файлах. В этой статье рассматривается использование типов и членов из пространства имен <xref:System.Resources> для работы с RESX-файлами.

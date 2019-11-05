@@ -5,21 +5,19 @@ helpviewer_keywords:
 - appDomainResourceMonitoring element
 - <appDomainResourceMonitoring> element
 ms.assetid: 02119ab6-1e91-448e-97ad-e7b2e5c4bbbd
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1395ee64d94e33693344b678c7a949665f994079
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 991833500cae4d96e9c28f7e94ca366e9b976a9d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252826"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73118258"
 ---
-# <a name="appdomainresourcemonitoring-element"></a>\<Элемент > Аппдомаинресаурцемониторинг
+# <a name="appdomainresourcemonitoring-element"></a>\<Аппдомаинресаурцемониторинг > элемент
 Указывает среде собирать статистику для всех доменов приложений в процессе за весь период его существования.  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> среды выполнения**](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<Аппдомаинресаурцемониторинг >**  
+&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
+&nbsp;&nbsp;&nbsp;&nbsp; **\<аппдомаинресаурцемониторинг >**  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,13 +37,13 @@ ms.locfileid: "70252826"
   
 ## <a name="enabled-attribute"></a>Атрибут enabled  
   
-|Значение|Описание|  
+|значения|Описание|  
 |-----------|-----------------|  
 |`true`|Собираются статистические данные для отслеживания ресурсов домена приложения.|  
 |`false`|Статистика по мониторингу ресурсов домена приложений не собирается.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
- Нет.  
+ Отсутствует.  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
@@ -54,10 +52,10 @@ ms.locfileid: "70252826"
 |`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.|  
 |`runtime`|Содержит сведения о привязке сборок и сборке мусора.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
  Мониторинг ресурсов домена приложений доступен через класс домена управляемого приложения, интерфейс размещения [ICLRAppDomainResourceMonitor](../../../unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md) и трассировку событий для Windows (ETW). При включении мониторинга статистика собирается для всех доменов приложений в процессе в течение жизненного цикла процесса.  
   
- Чтобы включить мониторинг из управляемого кода, используйте <xref:System.AppDomain.MonitoringIsEnabled%2A> свойство.  
+ Чтобы включить мониторинг из управляемого кода, используйте свойство <xref:System.AppDomain.MonitoringIsEnabled%2A>.  
   
  Этот элемент конфигурации доступен только в .NET Framework 4 и более поздних версиях.  
   

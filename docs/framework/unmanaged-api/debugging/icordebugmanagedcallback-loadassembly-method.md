@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 55cb673a-e240-43a6-a406-6912e7c0fe66
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d3aa76b88d89e83c400b3f372d846c1a31add255
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c6d77ff1393bc0ba4884dfa34810fee5316e33ef
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761480"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130750"
 ---
 # <a name="icordebugmanagedcallbackloadassembly-method"></a>Метод ICorDebugManagedCallback::LoadAssembly
-Уведомляет отладчик, что сборки среды выполнения (CLR) CLR была успешно загружена.  
+Уведомляет отладчик о том, что сборка среды CLR была успешно загружена.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,15 +36,15 @@ HRESULT LoadAssembly (
   
 ## <a name="parameters"></a>Параметры  
  `pAppDomain`  
- [in] Указатель на объект ICorDebugAppDomain, который представляет домен приложения, в который была загружена сборка.  
+ окне Указатель на объект ICorDebugAppDomain, представляющий домен приложения, в который была загружена сборка.  
   
  `pAssembly`  
- [in] Указатель на объект ICorDebugAssembly, представляющий сборку.  
+ окне Указатель на объект ICorDebugAssembly, представляющий сборку.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

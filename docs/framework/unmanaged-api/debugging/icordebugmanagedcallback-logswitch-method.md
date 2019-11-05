@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0ac59d27-783f-4a87-b7a8-baa3ccc54582
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9d7432771a7d8eee9cea10f883dd3bd91f5ffb74
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a72eabb1b405c67f5603164e56a589a237603d2f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761385"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130697"
 ---
 # <a name="icordebugmanagedcallbacklogswitch-method"></a>Метод ICorDebugManagedCallback::LogSwitch
-Уведомляет отладчик о том, что нитью среды выполнения (CLR) управляемый язык вызвал метод <xref:System.Diagnostics.Switch> класса для создания, изменения или удаления коммутатора отладки и трассировки.  
+Уведомляет отладчик о том, что управляемый поток среды CLR вызвал метод в классе <xref:System.Diagnostics.Switch> для создания, изменения или удаления переключателя отладки или трассировки.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -41,27 +39,27 @@ HRESULT LogSwitch (
   
 ## <a name="parameters"></a>Параметры  
  `PAppDomain`  
- [in] Указатель на объект ICorDebugAppDomain, который представляет домен приложения, содержащий управляемый поток, который создан, изменен или удален переключателе отладки и трассировки.  
+ окне Указатель на объект ICorDebugAppDomain, представляющий домен приложения, содержащий управляемый поток, который создал, изменил или удалил параметр отладки/трассировки.  
   
  `pThread`  
- [in] Указатель на объект ICorDebugThread, который представляет управляемый поток.  
+ окне Указатель на объект ICorDebugThread, представляющий управляемый поток.  
   
  `lLevel`  
- [in] Значение, указывающее уровень серьезности описательное сообщение, которые были записаны в журнал событий.  
+ окне Значение, указывающее степень серьезности описательного сообщения, записанного в журнал событий.  
   
  `ulReason`  
- [in] Значение [LogSwitchCallReason](../../../../docs/framework/unmanaged-api/debugging/logswitchcallreason-enumeration.md) перечисление, указывающее, операции, выполняемые на переключателе отладки и трассировки.  
+ окне Значение перечисления [логсвитчкаллреасон](../../../../docs/framework/unmanaged-api/debugging/logswitchcallreason-enumeration.md) , указывающее операцию, выполняемую с переключателем "Отладка/трассировка".  
   
  `pLogSwitchName`  
- [in] Указатель на имя переключателя отладки и трассировки.  
+ окне Указатель на имя переключателя отладки/трассировки.  
   
  `pParentName`  
- [in] Указатель на имя родительского элемента переключателе отладки и трассировки.  
+ окне Указатель на имя родителя переключателя "Отладка/трассировка".  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

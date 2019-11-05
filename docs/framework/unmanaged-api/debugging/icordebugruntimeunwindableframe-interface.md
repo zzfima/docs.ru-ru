@@ -14,25 +14,23 @@ helpviewer_keywords:
 ms.assetid: cd6a3982-6ed3-4909-808d-a66055e813e0
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: bf6bc73683a6c37ceaaffc635a58803b71c3b6cd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2902744b6af3c7b2bd4def73b04807ce3333a8a1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61782763"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131892"
 ---
 # <a name="icordebugruntimeunwindableframe-interface"></a>Интерфейс ICorDebugRuntimeUnwindableFrame
 Предоставляет поддержку для неуправляемых методов, которым требуется среда CLR для раскручивания кадра.  
   
-## <a name="remarks"></a>Примечания  
- `ICorDebugRuntimeUnwindableFrame` является специальной версией ICorDebugFrame интерфейса. Он используется неуправляемых методов, которым требуется среда выполнения для раскручивания кадра текущего стека. Существующие соглашения по раскрутке не работают, так как они не используют JIT-скомпилированный код. Когда отладчик видит нераскручиваемых кадр, следует использовать [ICorDebugStackWalk::Next](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-next-method.md) способ очистки, но она проверку должен выполнять самостоятельно. Когда отладчик получает `ICorDebugRuntimeUnwindableFrame`, оно может вызвать [ICorDebugStackWalk::GetContext](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-getcontext-method.md) метод для извлечения контекста фрейма.  
+## <a name="remarks"></a>Заметки  
+ `ICorDebugRuntimeUnwindableFrame` является специализированной версией интерфейса ICorDebugFrame. Он используется неуправляемыми методами, требующими от среды выполнения очистки кадра в текущем стеке. Существующие правила очистки не работают, так как они не используют JIT-скомпилированный код. Когда отладчик видит неотображаемый кадр, он должен использовать метод [икордебугстакквалк:: Next](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-next-method.md) для его очистки, но должен выполнить проверку. Когда отладчик получает `ICorDebugRuntimeUnwindableFrame`, он может вызвать метод [икордебугстакквалк:: oncontext](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-getcontext-method.md) для получения контекста кадра.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

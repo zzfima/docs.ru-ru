@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4083b505-5b59-44fb-8c5d-129db6a96c10
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 81c3eec9b33f51bd30cf8724eaf010d7cd0b6cd4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 77210edfdc954f38ff06bc43a8b41a6abe8dc3d6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67760929"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131837"
 ---
 # <a name="icordebugstackwalkgetframe-method"></a>Метод ICorDebugStackWalk::GetFrame
-Получает текущий кадр [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) объекта.  
+Возвращает текущий кадр в объекте [икордебугстакквалк](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) .  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -35,28 +33,28 @@ HRESULT GetFrame([out] ICorDebugFrame ** pFrame);
   
 ## <a name="parameters"></a>Параметры  
  `pFrame`  
- [in] Указатель на адрес объекта созданный кадр, который представляет текущий кадр стека.  
+ окне Указатель на адрес созданного объекта Frame, представляющий текущий кадр в стеке.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Этот метод возвращает следующие конкретные результаты HRESULT, а также ошибки HRESULT, которые указывают на сбой метода.  
   
 |HRESULT|Описание|  
 |-------------|-----------------|  
-|S_OK|Среда выполнения успешно возвращено текущего кадра.|  
-|E_FAIL|Текущий кадр не возвращен.|  
-|S_FALSE|Текущий кадр является кадром стека.|  
+|S_OK|Среда выполнения успешно вернула текущий кадр.|  
+|E_FAIL|Текущий кадр не был возвращен.|  
+|S_FALSE|Текущий кадр является машинным кадром стека.|  
 |E_INVALIDARG|Параметр `pFrame` имеет значение null.|  
-|CORDBG_E_PAST_END_OF_STACK|Указатель кадра уже находится в конце стека; Таким образом может осуществляться без дополнительных кадров.|  
+|CORDBG_E_PAST_END_OF_STACK|Указатель фрейма уже находится в конце стека; Поэтому доступ к дополнительным кадрам невозможен.|  
   
 ## <a name="exceptions"></a>Исключения  
   
-## <a name="remarks"></a>Примечания  
- `ICorDebugStackWalk` Возвращает только фактические кадры стека. Используйте [ICorDebugThread3::GetActiveInternalFrames](../../../../docs/framework/unmanaged-api/debugging/icordebugthread3-getactiveinternalframes-method.md) метод для возврата внутренних кадрах. (Внутренние кадры — это структуры данных, помещается в стек средой выполнения для хранения временных данных.)  
+## <a name="remarks"></a>Заметки  
+ `ICorDebugStackWalk` возвращает только фактические кадры стека. Используйте метод [ICorDebugThread3:: жетактивеинтерналфрамес](../../../../docs/framework/unmanaged-api/debugging/icordebugthread3-getactiveinternalframes-method.md) для возврата внутренних кадров. (Внутренние кадры — это структуры данных, помещаемые в стек средой выполнения для хранения временных данных.)  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

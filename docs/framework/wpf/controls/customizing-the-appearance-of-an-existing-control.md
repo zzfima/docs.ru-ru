@@ -12,12 +12,12 @@ helpviewer_keywords:
 - controls [WPF], appearance specified by state
 - templates [WPF], custom for existing controls
 ms.assetid: 678dd116-43a2-4b8c-82b5-6b826f126e31
-ms.openlocfilehash: 0c79ba3dd42f2e65eb241409946e921577ced5f1
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: 6d7401f9614e663351968dc6a2f85548735a176d
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920056"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460419"
 ---
 # <a name="customizing-the-appearance-of-an-existing-control-by-creating-a-controltemplate"></a>Настройка внешнего вида существующего элемента управления путем создания объекта ControlTemplate
 <a name="introduction"></a><xref:System.Windows.Controls.ControlTemplate> задает визуальную структуру и визуальное поведение элемента управления. Внешний вид элемента управления можно настроить, присвоив ему новый <xref:System.Windows.Controls.ControlTemplate>. При создании <xref:System.Windows.Controls.ControlTemplate>вы заменяете внешний вид существующего элемента управления, не изменяя его функциональность. Например, можно сделать так, чтобы кнопки в приложении округлялись вместо квадратной фигуры по умолчанию, но кнопка по-прежнему будет вызывать событие <xref:System.Windows.Controls.Primitives.ButtonBase.Click>.
@@ -262,4 +262,4 @@ ms.locfileid: "72920056"
 
 ## <a name="see-also"></a>См. также
 
-- [Стилизация и использование шаблонов](styling-and-templating.md)
+- [Стилизация и использование шаблонов](../../../desktop-wpf/fundamentals/styles-templates-overview.md)

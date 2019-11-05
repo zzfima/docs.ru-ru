@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 738c98d7-a60c-45fe-a296-220af05e6991
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 53384a5aa7f8d11f868057f892f7b60aac2e9f02
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: c656f73748faf8be7124be65f3ed455f2d5fd07a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70799040"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73105190"
 ---
 # <a name="strongnamehashsize-function"></a>Функция StrongNameHashSize
 Получает размер буфера, необходимый для хэша, с помощью указанного хэш-алгоритма.  
@@ -45,17 +43,17 @@ BOOLEAN StrongNameHashSize (
  заполняет Размер возвращенного буфера в байтах.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- `true`При успешном завершении; в противном случае —. `false`  
+ `true` при успешном завершении; в противном случае `false`.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
  Если функция `StrongNameHashSize` не завершается успешно, вызовите функцию [StrongNameErrorInfo](strongnameerrorinfo-function.md), чтобы получить последнюю созданную ошибку.  
   
 ## <a name="requirements"></a>Требования  
- **Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
- **Заголовок.** StrongName. h  
+ **Заголовок:** StrongName. h  
   
- **Библиотечная** Включается в качестве ресурса в библиотеку MsCorEE. dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

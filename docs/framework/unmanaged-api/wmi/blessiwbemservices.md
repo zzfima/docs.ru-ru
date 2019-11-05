@@ -14,14 +14,12 @@ helpviewer_keywords:
 - BlessIWbemServices function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e00197b72ca7fc8941475ae51159351d53da12d3
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 946d29892052ea69c2a8a3bf11e7be7a1b2d7068
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70855968"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138783"
 ---
 # <a name="blessiwbemservices-function"></a>Функция BlessIWbemServices
 Указывает, допускают ли учетные данные пользователя доступ к указанному классу [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) .   
@@ -65,7 +63,7 @@ HRESULT BlessIWbemServices (
 
 Следующие значения, возвращаемые этой функцией, определены в файле заголовка *Winerror. h* , или их можно определить как константы в коде:
 
-|Константа  |Значение  |Описание  |
+|Константа  |значения  |Описание  |
 |---------|---------|---------|
 | `E_INVALIDARG` | 0x80070057 | Один или несколько аргументов недопустимы. |
 | `E_POINTER` | 0x80004003 | Свойство `pIWbemServices` имеет значение `null`. | 
@@ -75,9 +73,9 @@ HRESULT BlessIWbemServices (
 
 ## <a name="requirements"></a>Требования  
 
- **Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
- **Заголовок.** WMINet_Utils. idl  
+ **Заголовок:** WMINet_Utils. idl  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   

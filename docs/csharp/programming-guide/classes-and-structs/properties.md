@@ -8,12 +8,12 @@ helpviewer_keywords:
 - properties [C#]
 - C# language, properties
 ms.assetid: e295a8a2-b357-4ee7-a12e-385a44146fa8
-ms.openlocfilehash: dec4d4239fd1a953da6e64a1e1aff9593e2863e2
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 16dbfddb6f947ca07b60ab0e676e8c0ed118ac40
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69596151"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73418856"
 ---
 # <a name="properties-c-programming-guide"></a>Свойства (Руководство по программированию в C#)
 
@@ -72,7 +72,7 @@ ms.locfileid: "69596151"
   
 ## <a name="c-language-specification"></a>Спецификация языка C#  
 
-Дополнительные сведения см. в разделе [Свойства](~/_csharplang/spec/classes.md#properties) в [Спецификации языка C#](../../language-reference/language-specification/index.md). Спецификация языка является предписывающим источником информации о синтаксисе и использовании языка C#.
+Дополнительные сведения см. в разделе [Свойства](~/_csharplang/spec/classes.md#properties) в [Спецификации языка C#](/dotnet/csharp/language-reference/language-specification/introduction). Спецификация языка является предписывающим источником информации о синтаксисе и использовании языка C#.
   
 ## <a name="see-also"></a>См. также
 

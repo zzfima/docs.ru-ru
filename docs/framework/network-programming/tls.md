@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Internet, security
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
-ms.openlocfilehash: ad15c0d4bd69417fffd8bcad0805a3b78321e05b
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 2433d8b8563cace4415fb8fcd2d110f75d7d4304
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894945"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73196380"
 ---
 # <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a>Рекомендации по использованию протокола TLS с .NET Framework
 
@@ -56,7 +56,7 @@ ms.locfileid: "70894945"
 
 Для приложений ASP.NET проверьте элемент `<system.web><httpRuntime targetFramework>` в файле _web.config_ и убедитесь, что используется нужная версия .NET Framework.
 
-Для приложений Windows Forms и других приложений см. [руководство по определить целевую версию .NET Framework](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework).
+Для приложений Windows Forms и других приложений см. [руководство по определить целевую версию .NET Framework](/visualstudio/ide/visual-studio-multi-targeting-overview).
 
 Ознакомьтесь со следующими разделами, чтобы проверить, не используются ли определенные версии TLS или SSL.
 
@@ -241,7 +241,7 @@ Windows Registry Editor Version 5.00
 
 ## <a name="the-sch_use_strong_crypto-flag"></a>Флаг SCH_USE_STRONG_CRYPTO
 
-Если флаг `SCH_USE_STRONG_CRYPTO` включен (по умолчанию с помощью параметра `AppContext` или в реестре Windows), .NET Framework использует его, когда приложение запрашивает протокол безопасности TLS. Флаг `SCH_USE_STRONG_CRYPTO` может быть включен по умолчанию с помощью параметра `AppContext` или реестра. Операционная система передает флаг `Schannel`, чтобы отключать известные ненадежные алгоритмы шифрования, наборы шифров, версии протоколов TLS и SSL, которые могут быть включены для улучшения взаимодействия. Дополнительные сведения:
+Если флаг `SCH_USE_STRONG_CRYPTO` включен (по умолчанию с помощью параметра `AppContext` или в реестре Windows), .NET Framework использует его, когда приложение запрашивает протокол безопасности TLS. Флаг `SCH_USE_STRONG_CRYPTO` может быть включен по умолчанию с помощью параметра `AppContext` или реестра. Операционная система передает флаг `Schannel`, чтобы отключать известные ненадежные алгоритмы шифрования, наборы шифров, версии протоколов TLS и SSL, которые могут быть включены для улучшения взаимодействия. Дополнительные сведения можно найти в разделе
 
 - [Secure Channel](/windows/desktop/SecAuthN/secure-channel)
 - [SCHANNEL_CRED structure](/windows/win32/api/schannel/ns-schannel-schannel_cred) (Структура SCHANNEL_CRED)

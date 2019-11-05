@@ -5,12 +5,12 @@ ms.date: 09/12/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to
-ms.openlocfilehash: 31169116abdda7308ed216902b335a6b77fbcfc4
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 4f805c638df9e60160c27fa08995ce393e59d007
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72321281"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774531"
 ---
 # <a name="deploy-a-model-to-azure-functions"></a>Развертывание модели в Функциях Azure
 
@@ -21,7 +21,7 @@ ms.locfileid: "72321281"
 
 ## <a name="prerequisites"></a>Предварительные требования
 
-- [Visual Studio 2017 версии 15.6 и выше](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) с установленной рабочей нагрузкой "Кроссплатформенная разработка .NET Core" и "Разработка в Azure".
+- [Visual Studio 2017 версии 15.6 и более поздней](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) с установленной рабочей нагрузкой "Кроссплатформенная разработка .NET Core" и "Разработка в Azure".
 - Пакет NuGet Microsoft.NET.Sdk.Functions версии 1.0.28 или более поздней.
 - [Средства Функций Azure](/azure/azure-functions/functions-develop-vs#check-your-tools-version).
 - PowerShell.
@@ -151,12 +151,12 @@ ms.locfileid: "72321281"
 
 > [!TIP]
 > Кроме того, можно использовать метод `FromUri` при работе с моделями, сохраненными удаленно. Вместо наблюдения за событиями изменения файлов `FromUri` опрашивает удаленное расположение на предмет изменений. Интервал опроса по умолчанию равен 5 минутам. Вы можете увеличить или уменьшить интервал опроса в зависимости от требований вашего приложения. В приведенном ниже примере кода `PredictionEnginePool` опрашивает модель, сохраненную по указанному универсальному коду ресурса (URI), каждую минуту.
->    
+>
 >```csharp
 >builder.Services.AddPredictionEnginePool<SentimentData, SentimentPrediction>()
 >   .FromUri(
->       modelName: "SentimentAnalysisModel", 
->       uri:"https://github.com/dotnet/samples/raw/master/machine-learning/models/sentimentanalysis/sentiment_model.zip", 
+>       modelName: "SentimentAnalysisModel",
+>       uri:"https://github.com/dotnet/samples/raw/master/machine-learning/models/sentimentanalysis/sentiment_model.zip",
 >       period: TimeSpan.FromMinutes(1));
 >```
 

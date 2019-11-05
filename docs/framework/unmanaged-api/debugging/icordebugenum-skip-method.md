@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: e925d88a-67a5-4f76-88b8-09cedeed0232
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 53b892cddbf716afbd137ead36a69aa42f22d331
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2c5cd7435ec34e852b80031cfe0310ee517b7bc5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67752228"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73103476"
 ---
 # <a name="icordebugenumskip-method"></a>Метод ICorDebugEnum::Skip
-Перемещение курсора вперед в перечислении на указанное число элементов.  
+Перемещает курсор вперед в перечислении на указанное число элементов.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,12 +35,12 @@ HRESULT Skip (
   
 ## <a name="parameters"></a>Параметры  
  `celt`  
- [in] Число элементов, по которому выполняется перемещение курсора вперед.  
+ окне Число элементов, по которым перемещается курсор.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

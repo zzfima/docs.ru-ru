@@ -13,14 +13,12 @@ helpviewer_keywords:
 - regular expressions [.NET Framework], examples
 - pattern-matching with regular expressions, examples
 ms.assetid: fae2c15b-7adf-4b15-b118-58eb3906994f
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4e743f32637a7e15b4b017bbe30aa02ad8388fbe
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: d8546980dd0cf58ca7c095750f2749d5a6bc7723
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56975970"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73084214"
 ---
 # <a name="regular-expression-example-scanning-for-hrefs"></a>Пример регулярных выражений: поиск ссылок HREF
 В следующем примере показаны поиск и вывод всех значений href="...", а также их позиций в строке.  
@@ -38,7 +36,7 @@ ms.locfileid: "56975970"
   
  Возможные интерпретации шаблона регулярного выражения `href\s*=\s*(?:["'](?<1>[^"']*)["']|(?<1>\S+))` показаны в следующей таблице.  
   
-|Шаблон|Описание|  
+|Шаблон|ОПИСАНИЕ|  
 |-------------|-----------------|  
 |`href`|Совпадение с литеральной строкой "href". Сопоставление не учитывает регистр.|  
 |`\s*`|Соответствует нулю или нескольким символам пробела.|  

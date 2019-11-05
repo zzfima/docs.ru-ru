@@ -16,14 +16,12 @@ helpviewer_keywords:
 - formatting numbers [.NET Framework]
 - format specifiers, custom numeric format strings
 ms.assetid: 6f74fd32-6c6b-48ed-8241-3c2b86dea5f4
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5cacccc182b3361ffd635f2b5f32ce8c17100d08
-ms.sourcegitcommit: 77e33b682db39955e331b8e8eda4ef1925a24e78
+ms.openlocfilehash: 72b60d0a91fda3e89448a19b506a6f8457835304
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70133633"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124410"
 ---
 # <a name="custom-numeric-format-strings"></a>Строки настраиваемых числовых форматов
 

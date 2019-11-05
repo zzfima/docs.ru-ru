@@ -9,40 +9,40 @@ helpviewer_keywords:
 - filtering data in views [WPF]
 - data binding [WPF], filtering data in views
 ms.assetid: c76e8606-4cc4-45a8-9110-e2ec66dc6afd
-ms.openlocfilehash: a31c07e6be26f67cc29813a14745ecf4a83ab98a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ea49897ca5e9cb6b639cf7d98ff05bd287c51761
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61931531"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73453479"
 ---
 # <a name="how-to-filter-data-in-a-view"></a>Практическое руководство. Фильтрация данных в представлении
-В этом примере показано, как для фильтрации данных в представлении.  
+В этом примере показано, как фильтровать данные в представлении.  
   
 ## <a name="example"></a>Пример  
- Чтобы создать фильтр, определите метод, который предоставляет логику фильтрации. Метод используется в качестве обратного вызова и принимает параметр типа `object`. Следующий метод возвращает все `Order` объекты с `filled` , имеющим значение «Нет», отфильтровывая остальные объекты.  
+ Чтобы создать фильтр, определите метод, который предоставляет логику фильтрации. Метод используется в качестве обратного вызова и принимает параметр типа `object`. Следующий метод возвращает все объекты `Order` со свойством `filled`, для которого задано значение "нет", отфильтровывая остальные объекты.  
   
  [!code-csharp[SortFilter#2](~/samples/snippets/csharp/VS_Snippets_Wpf/SortFilter/CSharp/Page1.xaml.cs#2)]
  [!code-vb[SortFilter#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SortFilter/VisualBasic/Page1.xaml.vb#2)]  
   
- Затем можно применить фильтр, как показано в следующем примере. В этом примере `myCollectionView` является <xref:System.Windows.Data.ListCollectionView> объекта.  
+ Затем можно применить фильтр, как показано в следующем примере. В этом примере `myCollectionView` является объектом <xref:System.Windows.Data.ListCollectionView>.  
   
  [!code-csharp[SortFilter#Filter](~/samples/snippets/csharp/VS_Snippets_Wpf/SortFilter/CSharp/Page1.xaml.cs#filter)]
  [!code-vb[SortFilter#Filter](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SortFilter/VisualBasic/Page1.xaml.vb#filter)]  
   
- Чтобы отменить фильтрацию, можно задать <xref:System.Windows.Data.CollectionView.Filter%2A> свойства `null`:  
+ Чтобы отменить фильтрацию, можно задать для свойства <xref:System.Windows.Data.CollectionView.Filter%2A> значение `null`.  
   
  [!code-csharp[SortFilter#Unfilter](~/samples/snippets/csharp/VS_Snippets_Wpf/SortFilter/CSharp/Page1.xaml.cs#unfilter)]
  [!code-vb[SortFilter#Unfilter](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SortFilter/VisualBasic/Page1.xaml.vb#unfilter)]  
   
- Сведения о том, как для создания или получения представления, см. в разделе [получение представления по умолчанию для коллекции данных](how-to-get-the-default-view-of-a-data-collection.md). Полный пример см. в разделе [Сортировка и фильтрация элементов в представлении-пример](https://go.microsoft.com/fwlink/?LinkID=160040).  
+ Сведения о создании или получении представления см. [в разделе Получение представления по умолчанию для коллекции данных](how-to-get-the-default-view-of-a-data-collection.md). Полный пример см. в разделе [Сортировка и фильтрация элементов в образце представления](https://go.microsoft.com/fwlink/?LinkID=160040).  
   
- Если объект представления генерируется из <xref:System.Windows.Data.CollectionViewSource> объекта, применять логику фильтрации, установив обработчик событий для <xref:System.Windows.Data.CollectionViewSource.Filter> событий. В следующем примере `listingDataView` является экземпляром класса <xref:System.Windows.Data.CollectionViewSource>.  
+ Если объект представления поступает из <xref:System.Windows.Data.CollectionViewSource> объекта, логику фильтрации необходимо задать с помощью обработчика событий для события <xref:System.Windows.Data.CollectionViewSource.Filter>. В следующем примере `listingDataView` является экземпляром <xref:System.Windows.Data.CollectionViewSource>.  
   
  [!code-csharp[DataBindingLab#10](~/samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/MainWindow.xaml.cs#10)]
  [!code-vb[DataBindingLab#10](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DataBindingLab/VisualBasic/MainWindow.xaml.vb#10)]  
   
- Ниже приведена реализация примера `ShowOnlyBargainsFilter` обработчик событий фильтра. Этот обработчик событий использует <xref:System.Windows.Data.FilterEventArgs.Accepted%2A> свойство, чтобы отфильтровать `AuctionItem` объектов, имеющих `CurrentPrice` $ 25 или более поздней версии.  
+ Ниже показана реализация примера обработчика событий фильтра `ShowOnlyBargainsFilter`. Этот обработчик событий использует свойство <xref:System.Windows.Data.FilterEventArgs.Accepted%2A> для фильтрации `AuctionItem` объектов, имеющих `CurrentPrice` $25 или более.  
   
  [!code-csharp[DataBindingLab#5](~/samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/MainWindow.xaml.cs#5)]
  [!code-vb[DataBindingLab#5](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DataBindingLab/VisualBasic/MainWindow.xaml.vb#5)]  
@@ -51,6 +51,6 @@ ms.locfileid: "61931531"
 
 - <xref:System.Windows.Data.CollectionView.CanFilter%2A>
 - <xref:System.Windows.Data.BindingListCollectionView.CustomFilter%2A>
-- [Общие сведения о привязке данных](data-binding-overview.md)
+- [Общие сведения о привязке данных](../../../desktop-wpf/data/data-binding-overview.md)
 - [Сортировка данных в представлении](how-to-sort-data-in-a-view.md)
 - [Разделы практического руководства](data-binding-how-to-topics.md)

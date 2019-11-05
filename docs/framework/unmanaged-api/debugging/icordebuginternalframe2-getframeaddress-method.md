@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4ee8d058-ffc8-4967-9133-a5adfef4e518
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3062e636921ea959716a500dae689fbe07915006
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 40e64bdb35cff4e6ad6132c0806cfddd2767443c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67760000"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122677"
 ---
 # <a name="icordebuginternalframe2getframeaddress-method"></a>Метод ICorDebugInternalFrame2::GetFrameAddress
-Возвращает адрес внутреннего кадра стека.  
+Возвращает адрес стека внутреннего кадра.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -35,7 +33,7 @@ HRESULT GetFrameAddress([out] CORDB_ADDRESS *pAddress);
   
 ## <a name="parameters"></a>Параметры  
  `pAddress`  
- [out] Указатель на `CORDB_ADDRESS` для внутреннего кадра.  
+ заполняет Указатель на `CORDB_ADDRESS` для внутреннего кадра.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Этот метод возвращает следующие конкретные результаты HRESULT, а также ошибки HRESULT, которые указывают на сбой метода.  
@@ -43,16 +41,16 @@ HRESULT GetFrameAddress([out] CORDB_ADDRESS *pAddress);
 |HRESULT|Описание|  
 |-------------|-----------------|  
 |S_OK|Адрес внутреннего кадра успешно возвращен.|  
-|E_FAIL|Адрес внутреннего кадра не могут быть возвращены.|  
+|E_FAIL|Не удалось вернуть адрес внутреннего кадра.|  
 |E_INVALIDARG|Свойство `pAddress` имеет значение `null`.|  
   
-## <a name="remarks"></a>Примечания  
- Значение, возвращаемое в `pAddress` может использоваться для определения расположения внутреннего кадра относительно других фреймы в стеке. Даже на компьютерах с архитектурой IA-64 внутренний кадр существует только в стеке, и нет соответствующего указателя в резервное хранилище.  
+## <a name="remarks"></a>Заметки  
+ Значение, возвращаемое в `pAddress`, можно использовать для определения расположения внутреннего кадра относительно других кадров в стеке. Даже на компьютерах на базе IA-64 внутренний кадр находится только в стеке и не имеет соответствующего указателя на резервное хранилище.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

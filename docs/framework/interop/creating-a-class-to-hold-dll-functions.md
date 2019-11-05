@@ -10,14 +10,12 @@ helpviewer_keywords:
 - platform invoke, creating class for functions
 - DLL functions
 ms.assetid: e08e4c34-0223-45f7-aa55-a3d8dd979b0f
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 275aa5bb664e9f5a50f44a72f2506d7984234b31
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 765d4344553a6e65b930a7bf586a41144d220fc6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71051824"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123627"
 ---
 # <a name="creating-a-class-to-hold-dll-functions"></a>Создание класса, содержащего функции DLL
 Упаковка часто используемых функций DLL в управляемый класс позволяет эффективно инкапсулировать функциональные возможности платформы. Делать это в каждом случае необязательно, однако использование оболочки класса удобно, поскольку определение функций DLL может быть затруднительно и нередко приводит к ошибкам. При программировании на языке Visual Basic или C# необходимо объявлять функции DLL в классе или модуле Visual Basic.  

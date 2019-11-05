@@ -5,15 +5,15 @@ helpviewer_keywords:
 - XAML 2009 [XAML Services]
 - XAML [XAML Services], XAML 2009
 ms.assetid: f6bb18d8-c86a-4549-8862-323e6b32a8dd
-ms.openlocfilehash: 05f811cd0d95f7605963dae851430fb6bf0e9f7a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ac18be4732d223561d3a0afcef0e650587385822
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61938812"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459892"
 ---
 # <a name="xaml-2009-language-features"></a>Возможности языка XAML 2009
-XAML 2009 — это сокращение для новых компонентов языка XAML, которые расширяют существующую спецификацию языка XAML. XAML 2009 содержит ряд новых директив и конструкций. К ним относятся [x: Arguments Directive](x-arguments-directive.md); [директива x: FactoryMethod](x-factorymethod-directive.md); [x: Reference Markup Extension](x-reference-markup-extension.md); [директива x: TypeArguments ](x-typearguments-directive.md); и встроенные типы для общих примитивов языка (например `x:Char`).  
+XAML 2009 — это сокращение для новых компонентов языка XAML, которые расширяют существующую спецификацию языка XAML. XAML 2009 содержит ряд новых директив и конструкций. К ним относятся [Директива x:Arguments](x-arguments-directive.md). [Директива x:FactoryMethod](x-factorymethod-directive.md); [расширение разметки x:Reference](x-reference-markup-extension.md); [Директива x:TypeArguments](x-typearguments-directive.md); и встроенные типы для общих языковых примитивов (например `x:Char`).  
   
 <a name="xaml_2009_support_in_wpf_and_visual_studio"></a>   
 ## <a name="xaml-2009-support-in-wpf-and-visual-studio"></a>Поддержка XAML 2009 в WPF и Visual Studio  
@@ -34,4 +34,4 @@ XAML 2009 — это сокращение для новых компоненто
   
 ## <a name="see-also"></a>См. также
 
-- [Общие сведения о языке XAML (WPF)](../wpf/advanced/xaml-overview-wpf.md)
+- [Общие сведения о языке XAML (WPF)](../../desktop-wpf/fundamentals/xaml.md)

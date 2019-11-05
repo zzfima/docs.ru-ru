@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2644f48b-db3c-429f-ae62-76f1c98a1af5
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: bd68df77adafb8b21e7684b28fe978722ca37e16
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3a895f432ed640cc35a492df0c91cece34893062
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67736794"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122370"
 ---
 # <a name="icordebugtypegetclass-method"></a>Метод ICorDebugType::GetClass
-Получает указатель на интерфейс ICorDebugClass, представляющий универсального типа без экземпляров.  
+Возвращает указатель интерфейса на объект ICorDebugClass, представляющий универсальный тип, экземпляр которого не был создан.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,15 +35,15 @@ HRESULT GetClass (
   
 ## <a name="parameters"></a>Параметры  
  `ppClass`  
- [out] Указатель на адрес `ICorDebugClass` интерфейс, который представляет универсального типа без экземпляров.  
+ заполняет Указатель на адрес интерфейса `ICorDebugClass`, представляющий универсальный тип, экземпляр которого не был создан.  
   
-## <a name="remarks"></a>Примечания  
- `GetClass` может вызываться только при определенных условиях. Вызовите [ICorDebugType::GetType](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-gettype-method.md) перед вызовом `GetClass`. Если `ICorDebugType::GetType` возвращает значение CorElementType ELEMENT_TYPE_CLASS или ELEMENT_TYPE_VALUETYPE, `GetClass` может вызываться для получения типа без экземпляров для универсального типа.  
+## <a name="remarks"></a>Заметки  
+ `GetClass` могут вызываться только при определенных условиях. Вызовите метод [ICorDebugType:: GetType](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-gettype-method.md) перед вызовом `GetClass`. Если `ICorDebugType::GetType` возвращает значение Корелементтипе, ELEMENT_TYPE_CLASS или ELEMENT_TYPE_VALUETYPE, можно вызвать `GetClass`, чтобы получить неэкземплярный тип для универсального типа.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

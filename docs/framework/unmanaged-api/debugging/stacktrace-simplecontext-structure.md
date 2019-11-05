@@ -15,16 +15,14 @@ helpviewer_keywords:
 ms.assetid: d4cef11f-a8ca-49bc-a1b8-6631f9e28f3e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: bc0fc18e31b89b22ffd30d99a8b079ed7b87fa1b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1cd3c34fc292e4a050fa8a75078283e34425fc8f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67752500"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139134"
 ---
-# <a name="stacktracesimplecontext-structure"></a>Структура StackTrace_SimpleContext
+# <a name="stacktrace_simplecontext-structure"></a>Структура StackTrace_SimpleContext
 Обеспечивает простой контекст, который может использоваться вместо полной структуры `CONTEXT`.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -38,21 +36,21 @@ struct StackTrace_SimpleContext
 };  
 ```  
   
-## <a name="members"></a>Участники  
+## <a name="members"></a>Члены  
   
 |Член|Описание|  
 |------------|-----------------|  
-|`StackOffset`|Указатель стека или указатель стека ввод (ESP) на x86 платформ.|  
-|`FrameOffset`|Смещение кадра или регистр EBP на x86 платформ.|  
-|`InstructionOffset`|Указатель инструкций или указатель инструкции ввод (EIP) на x86 платформ.|  
+|`StackOffset`|Указатель стека или ввод указателя стека (ESP) на платформах x86.|  
+|`FrameOffset`|Смещение кадра или регистр EBP на платформах x86.|  
+|`InstructionOffset`|Указатель инструкции или ввод указателя инструкции (EIP) на платформах x86.|  
   
-## <a name="remarks"></a>Примечания  
- Так как функции трассировки стека обычно нужно вернуть только адрес, смещение кадров и адрес в стеке, при необходимости можно использовать `SimpleContext` структуры вместо большой `CONTEXT` структуры.  
+## <a name="remarks"></a>Заметки  
+ Так как функции трассировки стека обычно должны возвращать только адрес, Смещение фрейма и адрес стека, при необходимости можно использовать структуру `SimpleContext` вместо большой структуры `CONTEXT`.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** SOS_Stacktrace.h  
+ **Заголовок:** SOS_Stacktrace. h  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

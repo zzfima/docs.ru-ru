@@ -9,21 +9,19 @@ helpviewer_keywords:
 - <qualifyAssembly> element
 - qualifyAssembly element
 ms.assetid: ad6442f6-1a9d-43b6-b733-04ac1b7f9b82
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 581b19cf74dcb5c2d5c4a549847629503fe0b6ff
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 17cfe9fc39d65f146beef5d02c701f5e3e2fbbe1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252372"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73115788"
 ---
-# <a name="qualifyassembly-element"></a>\<Элемент > qualifyAssembly
+# <a name="qualifyassembly-element"></a>\<qualifyAssembly > элемент
 Задает полное имя сборки, которая должна загружаться динамически в случае использования неполного имени.  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> среды выполнения**](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<assemblyBinding >** ](assemblybinding-element-for-runtime.md)\
+&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
+&nbsp; &nbsp; &nbsp; &nbsp;[ **\<assemblyBinding**](assemblybinding-element-for-runtime.md) > \
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<qualifyAssembly >**  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -45,7 +43,7 @@ ms.locfileid: "70252372"
 |`fullName`|Обязательный атрибут.<br /><br /> Задает полное имя сборки в том виде, в каком оно отображается в глобальном кэше сборок.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
- Нет.  
+ Отсутствует.  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
@@ -55,13 +53,13 @@ ms.locfileid: "70252372"
 |`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.|  
 |`runtime`|Содержит сведения о привязке сборок и сборке мусора.|  
   
-## <a name="remarks"></a>Примечания  
- <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> Вызов метода с использованием частичных имен сборок приводит к тому, что среда CLR ищет сборку только в базовом каталоге приложения. Используйте элемент qualifyAssembly > в файле конфигурации приложения, чтобы предоставить полные сведения о сборке (имя, версию, маркер открытого ключа и язык и региональные параметры) и заставить среду CLR искать сборку в  **\<** глобальный кэш сборок.  
+## <a name="remarks"></a>Заметки  
+ Вызов метода <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> с использованием частичных имен сборок приводит к тому, что среда CLR ищет сборку только в базовом каталоге приложения. Используйте элемент **\<qualifyAssembly >** в файле конфигурации приложения, чтобы предоставить полные сведения о сборке (имя, версию, маркер открытого ключа и язык и региональные параметры) и заставить среду CLR искать сборку в глобальном кэш сборок.  
   
- Атрибут **FullName** должен включать четыре поля удостоверения сборки: имя, версия, токен открытого ключа и язык и региональные параметры. Атрибут **партиалнаме** должен ссылаться на сборку частично. Необходимо указать по крайней мере текстовое имя сборки (наиболее распространенный случай), но можно также включить версию, токен открытого ключа или язык и региональные параметры (или любое сочетание четырех, но не все четыре). **Партиалнаме** должно соответствовать имени, указанному в вызове. Например, нельзя указать `"math"` в файле конфигурации в качестве атрибута **партиалнаме** и вызвать `Assembly.Load("math, Version=3.3.3.3")` в коде.  
+ Атрибут **FullName** должен включать четыре поля удостоверения сборки: имя, версия, токен открытого ключа и язык и региональные параметры. Атрибут **партиалнаме** должен ссылаться на сборку частично. Необходимо указать по крайней мере текстовое имя сборки (наиболее распространенный случай), но можно также включить версию, токен открытого ключа или язык и региональные параметры (или любое сочетание четырех, но не все четыре). **Партиалнаме** должно соответствовать имени, указанному в вызове. Например, нельзя указать `"math"` в качестве атрибута **партиалнаме** в файле конфигурации и вызвать `Assembly.Load("math, Version=3.3.3.3")` в коде.  
   
 ## <a name="example"></a>Пример  
- Следующий пример логически включает вызов `Assembly.Load("math")`. `Assembly.Load("math,version=1.0.0.0,publicKeyToken=a1690a5ea44bab32,culture=neutral")`  
+ Следующий пример логически преобразует `Assembly.Load("math")` вызова в `Assembly.Load("math,version=1.0.0.0,publicKeyToken=a1690a5ea44bab32,culture=neutral")`.  
   
 ```xml  
 <configuration>  

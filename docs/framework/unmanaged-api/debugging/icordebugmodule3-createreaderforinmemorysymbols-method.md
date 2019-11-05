@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: af317171-d66d-4114-89eb-063554c74940
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 944e02fe83ba71b51ffb154748acff9c6dd662fe
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2655151d34275b1b0fdc5d0903dd57fcea646014
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67764020"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137302"
 ---
 # <a name="icordebugmodule3createreaderforinmemorysymbols-method"></a>Метод ICorDebugModule3::CreateReaderForInMemorySymbols
 Создает средство чтения символов отладки для динамического модуля.  
@@ -37,39 +35,39 @@ HRESULT CreateReaderForInMemorySymbols (
   
 ## <a name="parameters"></a>Параметры  
  riid  
- [in] Идентификатор IID интерфейса COM для возврата. Как правило, это [интерфейс ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md).  
+ окне Идентификатор IID возвращаемого COM-интерфейса. Как правило, это [Интерфейс ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md).  
   
- ppObj  
- [out] Указатель на указатель на возвращенный интерфейс.  
+ ппобж  
+ заполняет Указатель на указатель на возвращенный интерфейс.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  S_OK  
- Успешно создано средство чтения.  
+ Модуль чтения успешно создан.  
   
  CORDBG_E_MODULE_LOADED_FROM_DISK  
- Модуль не является модулем в памяти или динамическим.  
+ Модуль не является ни в памяти, ни динамическим модулем.  
   
  CORDBG_E_SYMBOLS_NOT_AVAILABLE  
- Символы не были предоставлены приложением или еще не доступны.  
+ Символы не были предоставлены приложением или пока недоступны.  
   
  E_FAIL (или другие коды возврата E_)  
- Не удалось создать средство чтения.  
+ Не удалось создать модуль чтения.  
   
-## <a name="remarks"></a>Примечания  
- Этот метод может также быть используется, чтобы создать объект средства чтения символов для модулей в памяти (нединамичного), но только после символы будут доступны (обозначается [метод UpdateModuleSymbols](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-updatemodulesymbols-method.md) обратного вызова).  
+## <a name="remarks"></a>Заметки  
+ Этот метод можно также использовать для создания объекта средства чтения символов для модулей, не являющихся динамическими, но только после того, как символы будут первыми доступны (обозначены обратным вызовом [метода UpdateModuleSymbols](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-updatemodulesymbols-method.md) ).  
   
- Этот метод возвращает новый экземпляр средства чтения, каждый раз при его вызове (как [CComPtrBase::CoCreateInstance](/cpp/atl/reference/ccomptrbase-class#cocreateinstance)). Таким образом, отладчик должен кэш-памяти результат и запрашивать новый экземпляр только при изменении базовых данных (то есть, в том случае, когда [метод LoadClass](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadclass-method.md) обратного вызова).  
+ Этот метод возвращает новый экземпляр модуля чтения при каждом вызове (например, [ккомптрбасе:: CoCreateInstance](/cpp/atl/reference/ccomptrbase-class#cocreateinstance)). Поэтому отладчик должен кэшировать результат и запросить новый экземпляр только в том случае, если базовые данные могли измениться (то есть при получении обратного вызова [метода loadClass](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadclass-method.md) ).  
   
- Динамические модули не могут содержать любые символы, которые, только после загрузки первый тип (как указано в [метод LoadClass](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadclass-method.md) обратного вызова).  
+ Динамические модули не имеют доступных символов, пока не будет загружен первый тип (как указано в обратном вызове [метода loadClass](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadclass-method.md) ).  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** 4.5, 4, 3.5 С ПАКЕТОМ ОБНОВЛЕНИЯ 1  
+ **.NET Framework версии:** 4,5, 4, 3,5 SP1  
   
 ## <a name="see-also"></a>См. также
 

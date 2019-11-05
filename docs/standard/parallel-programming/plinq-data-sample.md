@@ -8,14 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, sample data
 ms.assetid: 4fccbb35-eaa5-44e9-a252-a5c3d4bc7604
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 60693a6570eff6f9d4980d8f29f1385bc7462f08
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: b13a2608df486f1de42514d4f8eaac49f04d345e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71353157"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140010"
 ---
 # <a name="plinq-data-sample"></a>Пример данных PLINQ
 Этот пример содержит тестовые данные в формате CSV и несколько методов, которые преобразуют эти данные в коллекции в памяти (клиенты, продукты, заказы и сведения о заказе). Чтобы поэкспериментировать с PLINQ, вы можете вставить в этот код примеры кода из других статей и вызвать его из метода `Main`. Также вы можете применить собственные запросы PLINQ к этим данным.  
@@ -46,7 +44,7 @@ ms.locfileid: "71353157"
  [!code-csharp[PLINQ#50](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#50)]
  [!code-vb[PLINQ#50](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinqsnippets1.vb#50)]  
   
-## <a name="data"></a>Данные  
+## <a name="data"></a>Data  
   
 ```console  
 CUSTOMERS  

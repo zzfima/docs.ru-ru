@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c8a34916-0eef-4987-8d29-c8bcb4be9cf6
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c0507d59011f6b584ecb1ae11c35c456c80793af
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5bb41b2b49922475550997f18832b391522e2f26
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67754598"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137873"
 ---
 # <a name="icordebugfunctiongetnativecode-method"></a>Метод ICorDebugFunction::GetNativeCode
-Получает машинный код для функции, представленного данным экземпляром ICorDebugFunction.  
+Возвращает машинный код для функции, представленной этим экземпляром ICorDebugFunction.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,15 +35,15 @@ HRESULT GetNativeCode (
   
 ## <a name="parameters"></a>Параметры  
  `ppCode`  
- [out] Указатель на интерфейс ICorDebugCode экземпляр, который представляет машинный код для этой функции, или значение null, если эта функция представляет код MSIL (MSIL), не был just-in-time (JIT) компиляции.  
+ заполняет Указатель на экземпляр ICorDebugCode, представляющий машинный код для этой функции, или значение null, если эта функция является кодом MSIL, который не был скомпилирован JIT-КОМПИЛЯТОРом.  
   
-## <a name="remarks"></a>Примечания  
- Если функция, которая представляется этим `ICorDebugFunction` экземпляр был JIT-компиляции более одного раза, как в случае универсальных типов `GetNativeCode` возвращает объект случайных машинного кода.  
+## <a name="remarks"></a>Заметки  
+ Если функция, представленная этим `ICorDebugFunction`ным экземпляром, была скомпилирована JIT-компилятором более одного раза, как в случае универсальных типов, `GetNativeCode` Возвращает произвольный объект машинного кода.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: b8d1def7-0ebc-4314-a3a2-fd36a75973e7
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 12787382686cc056c157ed7a6e8e4984ab93588f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 55e331ff4e6ada73dc92bb2e880f555887639714
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737609"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73088796"
 ---
 # <a name="icordebugappdomainenumnext-method"></a>Метод ICorDebugAppDomainEnum::Next
 Возвращает указанное число доменов приложений из коллекции, начиная с текущей позиции курсора.  
@@ -40,18 +38,18 @@ HRESULT Next (
   
 ## <a name="parameters"></a>Параметры  
  `celt`  
- [in] Количество доменов приложений требуется получить.  
+ окне Число извлекаемых доменов приложений.  
   
  `values`  
- [out] Массив указателей, каждый из которых указывает на объект ICorDebugAppDomain, который представляет домен приложения.  
+ заполняет Массив указателей, каждый из которых указывает на объект ICorDebugAppDomain, представляющий домен приложения.  
   
  `pceltFetched`  
- [out] Указатель на количество фактически возвращенных доменов приложений. Это значение может иметь значение null Если `celt` — один.  
+ заполняет Указатель на число фактически возвращенных доменов приложений. Это значение может быть равно null, если `celt` является одним.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

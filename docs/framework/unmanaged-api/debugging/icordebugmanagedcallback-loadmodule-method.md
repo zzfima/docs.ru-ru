@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 66ec04e9-87cb-42ce-9720-81522abb5d5a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: dde8971f9f08cc9e0930f6ea133d9a06b22e4c96
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d13c5be314dc39f3e7b42a8d6b13f6a25751067d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761421"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130714"
 ---
 # <a name="icordebugmanagedcallbackloadmodule-method"></a>Метод ICorDebugManagedCallback::LoadModule
-Уведомляет отладчик, что общий модуль среды выполнения (CLR) язык был успешно загружен.  
+Уведомляет отладчик о том, что модуль среды CLR успешно загружен.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,18 +36,18 @@ HRESULT LoadModule (
   
 ## <a name="parameters"></a>Параметры  
  `pAppDomain`  
- [in] Указатель на объект ICorDebugAppDomain, который представляет домен приложения, в который загружен модуль.  
+ окне Указатель на объект ICorDebugAppDomain, представляющий домен приложения, в который был загружен модуль.  
   
  `pModule`  
- [in] Указатель на объект ICorDebugModule, который представляет модуль среды CLR.  
+ окне Указатель на объект ICorDebugModule, представляющий модуль CLR.  
   
-## <a name="remarks"></a>Примечания  
- `LoadModule` Обратного вызова предоставляет подходящий момент для просмотра метаданных для модуля, задать флаги компилятора just-in-time (JIT), или включить или отключить обратные вызовы для модуля загрузки.  
+## <a name="remarks"></a>Заметки  
+ Обратный вызов `LoadModule` предоставляет подходящее время для проверки метаданных модуля, установки флагов JIT-компилятора или включения или отключения обратных вызовов при загрузке класса для модуля.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

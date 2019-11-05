@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - WPF application [WPF], building
 ms.assetid: a58696fd-bdad-4b55-9759-136dfdf8b91c
-ms.openlocfilehash: a5254de07029e53dd6b72bd2c096c38525a661b6
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 04183b2404d26c783e14dc6f4cb4141bab0d7621
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69958710"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424439"
 ---
 # <a name="building-a-wpf-application-wpf"></a>Построение приложения WPF
 
@@ -28,7 +28,7 @@ ms.locfileid: "69958710"
 
 - С помощью Microsoft Build Engine (MSBuild). Помимо кода и файлов XAML приложение должно содержать файл проекта MSBuild. Дополнительные сведения см. в разделе "MSBuild".
 
-- Visual Studio. Visual Studio — это интегрированная среда разработки, которая компилирует приложения WPF с помощью MSBuild и включает визуальный конструктор для создания пользовательского интерфейса. Дополнительные сведения см. в статьях [Создание кода и управление им с помощью Visual Studio](/visualstudio/ide/index-writing-code) и [Разработка XAML в Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio).
+- Visual Studio. Visual Studio — это интегрированная среда разработки, которая компилирует приложения WPF с помощью MSBuild и включает визуальный конструктор для создания пользовательского интерфейса. Дополнительные сведения см. в статьях [Создание кода и управление им с помощью Visual Studio](/visualstudio/ide/index-writing-code) и [Разработка XAML в Visual Studio](/visualstudio/xaml-tools/designing-xaml-in-visual-studio).
 
 <a name="The_Windows_Presentation_Foundation_Build_Pipeline"></a>
 
@@ -52,13 +52,13 @@ ms.locfileid: "69958710"
 
 - Свойство для путей поиска сборки.
 
-Первое расположение, где MSBuild ищет сборки, — это каталог ссылочной сборки (%ProgramFiles%\Reference\\assemblies\microsoft\framework\v3.0.). На этом шаге процесс сборки также инициализирует различные свойства и группы элементов и выполняет все необходимые действия по очистке.
+Первое расположение, где MSBuild ищет сборки, — это каталог ссылочной сборки (%ProgramFiles%\Reference Assemblies\microsoft\framework\v3.0.\\). На этом шаге процесс сборки также инициализирует различные свойства и группы элементов и выполняет все необходимые действия по очистке.
 
 <a name="Resolving_references"></a>
 
 ### <a name="resolving-references"></a>Разрешение ссылок
 
-Процесс сборки находит и привязывает сборки, которые требуются для выполнения сборки проекта приложения. Эта логика содержится в задаче `ResolveAssemblyReference`. Все сборки, объявленные как `Reference` в файле проекта, предоставляются в задачу вместе с информацией о путях поиска и метаданными в сборках, уже установленных в системе. Задача ищет сборки и использует метаданные установленной сборки для фильтрации этих основных сборок [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], которые не должны отображаться в манифестах выходных данных. Это позволяет избежать избыточных сведений в манифесте ClickOnce. Например, поскольку PresentationFramework. dll может считаться репрезентативным для приложения, построенного на, а [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] также для и более [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] , так как все сборки находятся в одном расположении на каждом компьютере с .NET Framework установлено, не нужно включать все сведения обо всех .NET Framework ссылок на сборки в манифестах.
+Процесс сборки находит и привязывает сборки, которые требуются для выполнения сборки проекта приложения. Эта логика содержится в задаче `ResolveAssemblyReference`. Все сборки, объявленные как `Reference` в файле проекта, предоставляются в задачу вместе с информацией о путях поиска и метаданными в сборках, уже установленных в системе. Задача ищет сборки и использует метаданные установленной сборки для фильтрации этих основных сборок [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], которые не должны отображаться в манифестах выходных данных. Это позволяет избежать избыточных сведений в манифесте ClickOnce. Например, поскольку PresentationFramework. dll может считаться репрезентативным для приложения, построенного на, и для [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] и более, так как все сборки [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] находятся в одном расположении на каждом компьютере с установленным .NET Framework, не нужно включать все сведения обо всех .NET Framework ссылок на сборки в манифестах.
 
 <a name="Markup_Compilation___Pass_1"></a>
 
@@ -74,9 +74,9 @@ ms.locfileid: "69958710"
 
 3. Создается представление CodeDOM нового разделяемого класса и копируется в папку obj\Release.
 
-Кроме того, создается отдельный языковой файл кода для каждого файла [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Например, для страницы «страница кода. XAML» в проекте Visual Basic создается элемент «a. g. vb». для страницы "страница с. XAML" C# в проекте создается Page1.g.cs. ".g" в имени файла указывает, что это файл созданного кода, который имеет объявление разделяемого класса для элемента верхнего уровня файла разметки (например, `Page` или `Window`). Класс объявляется с `partial` модификатором в C# (`Extends` в Visual Basic), чтобы указать еще одно объявление для класса в другом расположении, обычно в файле кода программной части Page1.XAML.cs.
+Кроме того, создается отдельный языковой файл кода для каждого файла [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Например, для страницы «страница кода. XAML» в проекте Visual Basic создается элемент «a. g. vb». для страницы "страница с. XAML" C# в проекте создается Page1.g.cs. ".g" в имени файла указывает, что это файл созданного кода, который имеет объявление разделяемого класса для элемента верхнего уровня файла разметки (например, `Page` или `Window`). Класс объявлен с модификатором `partial` в C# (`Extends` в Visual Basic), чтобы указать еще одно объявление для класса в другом расположении, обычно в файле кода программной части Page1.XAML.cs.
 
-Разделяемый класс расширяется из соответствующего базового класса (например <xref:System.Windows.Controls.Page> , для страницы) и <xref:System.Windows.Markup.IComponentConnector?displayProperty=nameWithType> реализует интерфейс. <xref:System.Windows.Markup.IComponentConnector> Интерфейс имеет методы для инициализации компонента и подключения имен и событий к элементам в его содержимом. Следовательно, в созданном файле кода имеется реализация метода, подобная следующей:
+Разделяемый класс расширяется из соответствующего базового класса (например, <xref:System.Windows.Controls.Page> для страницы) и реализует интерфейс <xref:System.Windows.Markup.IComponentConnector?displayProperty=nameWithType>. Интерфейс <xref:System.Windows.Markup.IComponentConnector> имеет методы для инициализации компонента и подключения имен и событий к элементам в его содержимом. Следовательно, в созданном файле кода имеется реализация метода, подобная следующей:
 
 ```csharp
 public void InitializeComponent() {
@@ -108,7 +108,7 @@ Public Sub InitializeComponent() _
 End Sub
 ```
 
-По умолчанию компиляция разметки выполняется в том <xref:System.AppDomain> же виде, что и модуль MSBuild. Это обеспечивает значительный выигрыш в производительности. Это поведение можно переключать с помощью свойства `AlwaysCompileMarkupFilesInSeparateDomain`. Это имеет преимущество выгрузки всех ссылочных сборок путем выгрузки отдельного <xref:System.AppDomain>.
+По умолчанию компиляция разметки выполняется в том же <xref:System.AppDomain>, что и модуль MSBuild. Это обеспечивает значительный выигрыш в производительности. Это поведение можно переключать с помощью свойства `AlwaysCompileMarkupFilesInSeparateDomain`. Это имеет преимущество выгрузки всех ссылочных сборок путем выгрузки отдельных <xref:System.AppDomain>.
 
 <a name="Pass_2_of_Markup_Compilation"></a>
 
@@ -136,13 +136,13 @@ End Sub
 
 После завершения процесса сборки, после того как все сборки приложения и файлы содержимого будут готовы, создаются манифесты ClickOnce для приложения.
 
-Файл манифеста развертывания описывает модель развертывания: текущую версию, поведение обновления и идентификатор издателя вместе с цифровой подписью. Этот манифест должен создаваться администраторами, управляющими развертыванием. Файл имеет расширение .xbap (для [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]) и .application для установленных приложений. Первое диктуется свойством проекта `HostInBrowser`, и в результате манифест идентифицирует приложение как браузерное.
+Файл манифеста развертывания описывает модель развертывания: текущую версию, поведение обновления и идентификатор издателя вместе с цифровой подписью. Этот манифест должен создаваться администраторами, управляющими развертыванием. Расширение файла —. XBAP (для приложений браузера XAML (XBAP)) и приложения для установленных приложений. Первое диктуется свойством проекта `HostInBrowser`, и в результате манифест идентифицирует приложение как браузерное.
 
 Манифест приложения (файл .exe.manifest) описывает сборки приложения и зависимые библиотеки, а также перечисляет разрешения, необходимые для приложения. Этот файл должен быть создан разработчиком приложения. Чтобы запустить приложение ClickOnce, пользователь открывает файл манифеста развертывания приложения.
 
-Эти файлы манифеста всегда создаются для [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]. Для установленных приложений они не создаются, если в файле проекта не будет задано свойство `GenerateManifests` со значением `true`.
+Эти файлы манифеста всегда создаются для XBAP. Для установленных приложений они не создаются, если в файле проекта не будет задано свойство `GenerateManifests` со значением `true`.
 
-[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]получите два дополнительных разрешения выше и выше этих разрешений, назначенных типичным приложениям зоны <xref:System.Security.Permissions.WebBrowserPermission> Интернета <xref:System.Security.Permissions.MediaPermission>: и. Система сборки [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] объявляет эти разрешения в манифесте приложения.
+XBAP получают два дополнительных разрешения в отношении и выше этих разрешений, назначенных типичным приложениям зоны Интернета: <xref:System.Security.Permissions.WebBrowserPermission> и <xref:System.Security.Permissions.MediaPermission>. Система сборки [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] объявляет эти разрешения в манифесте приложения.
 
 <a name="Incremental_Build_Support"></a>
 
@@ -168,7 +168,7 @@ End Sub
 
   - [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] объявляется как `Page` в проекте: если [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] не имеет локально определенных ссылок на типы, перекомпилируется этот [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] плюс все страницы [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] с локальными ссылками; если [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] имеет локальные ссылки, перекомпилируются все страницы [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] с локальными ссылками.
 
-  - Если [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] объявляется как `ApplicationDefinition` в проекте: перекомпилируются все [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] страницы <xref:System.Windows.Application> (причина: Каждая [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] содержит ссылку на тип, который мог быть изменен).
+  - Если [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] объявляется как `ApplicationDefinition` в проекте: перекомпилируются все [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] страницы (причина: каждый [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] имеет ссылку на тип <xref:System.Windows.Application>, который мог быть изменен).
 
 - Если файл проекта объявляет файл кода как определение приложения вместо файла [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]:
 
@@ -191,4 +191,4 @@ End Sub
 - [Развертывание приложений WPF](deploying-a-wpf-application-wpf.md)
 - [Справочные сведения о WPF для MSBuild](/visualstudio/msbuild/wpf-msbuild-reference)
 - [URI типа "pack" в WPF](pack-uris-in-wpf.md)
-- [Файлы ресурсов, содержимого и данных WPF-приложения](wpf-application-resource-content-and-data-files.md)
+- [Файлы ресурсов, контента и данных WPF-приложения](wpf-application-resource-content-and-data-files.md)

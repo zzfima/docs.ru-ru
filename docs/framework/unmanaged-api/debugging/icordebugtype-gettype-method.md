@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: d6e64534-4d47-4ad0-a340-7590e07e2b4a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 78f2733584e07433171c91d6a2674d3a67c8e283
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 7f3010cccc584288608b3f6ba95efbeb95f271fb
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67772518"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132062"
 ---
 # <a name="icordebugtypegettype-method"></a>Метод ICorDebugType::GetType
-Получает значение CorElementType, описывающее в собственный тип общеязыковой среды выполнения (CLR) <xref:System.Type> представленный ICorDebugType.  
+Возвращает значение Корелементтипе, которое описывает собственный тип <xref:System.Type> среды CLR, представленный этим объектом ICorDebugType.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,15 +35,15 @@ HRESULT GetType (
   
 ## <a name="parameters"></a>Параметры  
  `ty`  
- [out] Указатель на значение `CorElementType` перечисление, указывающее, среда CLR <xref:System.Type> этим `ICorDebugType` представляет.  
+ заполняет Указатель на значение перечисления `CorElementType`, указывающее <xref:System.Type> среды CLR, которую представляет этот `ICorDebugType`.  
   
-## <a name="remarks"></a>Примечания  
- Если значение `ty` ELEMENT_TYPE_CLASS или ELEMENT_TYPE_VALUETYPE, [ICorDebugType::GetClass](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getclass-method.md) метод может вызываться для получения типа без экземпляров универсального типа; в противном случае не вызывайте `ICorDebugType::GetClass`.  
+## <a name="remarks"></a>Заметки  
+ Если значение `ty` — ELEMENT_TYPE_CLASS или ELEMENT_TYPE_VALUETYPE, то метод [ICorDebugType:: coclass](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getclass-method.md) можно вызвать, чтобы получить неэкземплярный тип для универсального типа. в противном случае не вызывайте `ICorDebugType::GetClass`.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

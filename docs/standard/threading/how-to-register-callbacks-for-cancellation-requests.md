@@ -8,14 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - cancellation, how to register callbacks
 ms.assetid: 8838dd75-18ed-4b8b-b322-cd4531faac64
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 187d47f04761b85420f894c98d9495cd74c0c253
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 87ba1ab9ac095c733a53f766d00ebb7530a8d9c4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69913292"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138003"
 ---
 # <a name="how-to-register-callbacks-for-cancellation-requests"></a>Практическое руководство. Регистрация обратных вызовов для запросов на отмену
 В следующем примере показана процедура регистрации делегата, который будет вызываться при принятии свойством <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> значения true в результате вызова <xref:System.Threading.CancellationTokenSource.Cancel%2A> для объекта, который создал токен. Этот прием используется для отмены асинхронных операций, в которых отсутствует встроенная поддержка унифицированной инфраструктуры отмены, а также для разблокирования методов, ожидающих завершения асинхронной операции.  

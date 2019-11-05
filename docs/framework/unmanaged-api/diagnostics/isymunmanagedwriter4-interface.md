@@ -2,14 +2,12 @@
 title: Интерфейс ISymUnmanagedWriter4
 ms.date: 03/30/2017
 ms.assetid: 4af5e8c0-987d-405e-b934-8b9e70fcae6e
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e5732cc08512df25a14cc8ea9dcaa03c56207dde
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a656777461c50b5a1593917278eb54abda982dc2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61962343"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134565"
 ---
 # <a name="isymunmanagedwriter4-interface"></a>Интерфейс ISymUnmanagedWriter4
 Интерфейс ISymUnmanagedWriter4.  
@@ -25,10 +23,10 @@ ms.locfileid: "61962343"
   
 |Метод|Описание|  
 |------------|-----------------|  
-|[Метод GetDebugInfoWithPadding](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter4-getdebuginfowithpadding-method.md)|Работает так же, как [метод GetDebugInfo](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-getdebuginfo-method.md) за исключением того, что строка пути дополняется нулей, завершающий нуль-символ, чтобы сделать строковые данные фиксированный размер `MAX_PATH`. Заполнение предоставляется только в том случае, если длина строки пути, сам меньше, чем `MAX_PATH`.<br /><br /> Это упрощает для записи этого файла различий PE средства.|  
+|[Метод GetDebugInfoWithPadding](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter4-getdebuginfowithpadding-method.md)|Функция аналогична [методу GetDebugInfo](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-getdebuginfo-method.md) , за исключением того, что строка пути дополнена нулями после завершающего нуль-символа, чтобы сделать строку фиксированным размером `MAX_PATH`. Заполнение задается только в том случае, если длина строки пути меньше `MAX_PATH`.<br /><br /> Это упрощает написание средств, которые отличаются от PE файлов.|  
   
 ## <a name="requirements"></a>Требования  
- **Заголовок.** CorSym.idl CorSym.h  
+ **Заголовок:** Корсим. idl, Корсим. h  
   
 ## <a name="see-also"></a>См. также
 

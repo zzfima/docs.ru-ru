@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: e58dac7b-85c3-41ca-b9aa-3a7fc9ae6680
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5619dea17b9a7140238fd559d2f6b1a5d190ac33
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d23b695550c8444264934f7aca4fa185064e89c5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761898"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130730"
 ---
 # <a name="icordebugmanagedcallbackloadclass-method"></a>Метод ICorDebugManagedCallback::LoadClass
 Уведомляет отладчик о том, что класс был загружен.  
@@ -38,20 +36,20 @@ HRESULT LoadClass (
   
 ## <a name="parameters"></a>Параметры  
  `pAppDomain`  
- [in] Указатель на объект ICorDebugAppDomain, который представляет домен приложения, в которую был загружен класс.  
+ окне Указатель на объект ICorDebugAppDomain, представляющий домен приложения, в который был загружен класс.  
   
  `c`  
- [in] Указатель на объект, представляющий класс ICorDebugClass.  
+ окне Указатель на объект ICorDebugClass, представляющий класс.  
   
-## <a name="remarks"></a>Примечания  
- Этот обратный вызов происходит только в том случае, если загрузка класса была включена для модуля, содержащего класса. Загрузка класса всегда включена для динамических модулей.  
+## <a name="remarks"></a>Заметки  
+ Этот обратный вызов происходит, только если для модуля, содержащего класс, была включена загрузка класса. Загрузка класса всегда включена для динамических модулей.  
   
- `LoadClass` Обратного вызова предоставляет подходящий момент привязка точки останова к только что созданных классов в динамических модулях.  
+ Обратный вызов `LoadClass` предоставляет соответствующее время для привязки точек останова к вновь созданным классам в динамических модулях.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

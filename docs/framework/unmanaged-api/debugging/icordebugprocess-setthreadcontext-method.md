@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: a7b50175-2bf1-40be-8f65-64aec7aa1247
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7b949961e854facf8414c81c47f995b2ac57af3f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3c57021061c1566b369cdd43847e3994cf54e2da
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67755384"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139675"
 ---
 # <a name="icordebugprocesssetthreadcontext-method"></a>Метод ICorDebugProcess::SetThreadContext
 Задает контекст для данного потока в этом процессе.  
@@ -39,27 +37,27 @@ HRESULT SetThreadContext(
   
 ## <a name="parameters"></a>Параметры  
  `threadID`  
- [in] Идентификатор потока, для которого необходимо задать контекст.  
+ окне Идентификатор потока, для которого задается контекст.  
   
  `contextSize`  
  [in] Размер массива `context`.  
   
  `context`  
- [in] Массив байтов, описывающие контекст потока.  
+ окне Массив байтов, описывающих контекст потока.  
   
- Контекст задает архитектуру процессора, на котором выполняется поток.  
+ Контекст указывает архитектуру процессора, на котором работает поток.  
   
-## <a name="remarks"></a>Примечания  
- Отладчик должен вызвать этот метод вместо Win32 `SetThreadContext` работать, поскольку фактически поток может находиться в состоянии «перехваченного», в котором его контекст был временно изменен. Этот метод должен использоваться только в том случае, когда поток находится в машинном коде. Используйте [ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md) для потоков в управляемом коде. Никогда не требуется изменения контекста потока во время события отладки (OOB)-каналу.  
+## <a name="remarks"></a>Заметки  
+ Отладчик должен вызывать этот метод вместо функции Win32 `SetThreadContext`, так как поток может находиться в состоянии "перехвачено", в котором его контекст был временно изменен. Этот метод следует использовать только в том случае, если поток находится в машинном коде. Используйте [ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md) для потоков в управляемом коде. Никогда не нужно изменять контекст потока во время события нестандартного управления (OOB).  
   
- Данные, передаваемые должно быть структурой контекст для текущей платформы.  
+ Передаваемые данные должны быть структурой контекста для текущей платформы.  
   
- Этот метод может привести к повреждению среды выполнения при неправильном.  
+ Этот метод может повредить среду выполнения при неправильном использовании.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

@@ -2,14 +2,12 @@
 title: 'Метод Икордебугмержедассемблирекорд:: DataCulture'
 ms.date: 03/30/2017
 ms.assetid: 030b2f8c-8c21-40b7-855d-3afa78975a17
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f0f3ecee5a003587771871a178356d6dbfd8a636
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f39a1f17c80d27a38c0f2a8a516405f72c79bbcf
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69936846"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131415"
 ---
 # <a name="icordebugmergedassemblyrecordgetculture-method"></a>Метод Икордебугмержедассемблирекорд:: DataCulture
 Возвращает строку с названием языка и региональных параметров сборки.  
@@ -34,18 +32,18 @@ HRESULT GetCulture(
  `szCulture`  
  [выходной] Массив символов, содержащий название языка и региональных параметров.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
  Название языка и региональных параметров — это уникальная строка, определяющая язык и региональные параметры, например "en-US" (для английского языка (США)) или "neutral" (для нейтрального языка и региональных параметров).  
   
 > [!NOTE]
 > Этот метод доступен только в машинном коде .NET.  
   
 ## <a name="requirements"></a>Требования  
- **Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug. idl, CorDebug. h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
- **Библиотечная** Коргуидс. lib  
+ **Библиотека:** CorGuids.lib  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

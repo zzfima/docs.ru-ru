@@ -12,17 +12,17 @@ helpviewer_keywords:
 - controls [Windows Forms], positioning
 - z-order
 ms.assetid: 1acc4281-2976-4715-86f4-bda68134baaf
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 2e4c6a3236b3a2a2afaad73fee21c3cf59b992b8
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: 5b8f6c00e70df94ae3a82c2c195fa781f0840a53
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69987567"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458353"
 ---
-# <a name="how-to-layer-objects-on-windows-forms"></a>Практическое руководство. Объекты слоя на Windows Forms
+# <a name="how-to-layer-objects-on-windows-forms"></a>Как выполнять слои объектов на Windows Forms
 
 При создании сложного пользовательского интерфейса или работе с формой многодокументного интерфейса (MDI) часто требуется послойировать как элементы управления, так и дочерние формы, чтобы создать более сложные пользовательские интерфейсы. Чтобы перемещать и контролировать элементы управления и окна в контексте группы, вы управляете их *z-порядком*. Z-порядок — это визуальное расположение элементов управления на форме вдоль оси z формы (глубина). Окно, расположенное в верхней части z-порядка, перекрывает все остальные окна. Все остальные окна перекрываются в нижней части z-порядка.
 
@@ -34,9 +34,9 @@ ms.locfileid: "69987567"
 
 ## <a name="to-layer-controls-programmatically"></a>Программное управление слоями
 
-Используйте методы <xref:System.Windows.Forms.Control.SendToBack%2A> и для обработки z-порядка элементов управления. <xref:System.Windows.Forms.Control.BringToFront%2A>
+Используйте методы <xref:System.Windows.Forms.Control.BringToFront%2A> и <xref:System.Windows.Forms.Control.SendToBack%2A>, чтобы управлять z-порядком элементов управления.
 
-Например, если <xref:System.Windows.Forms.TextBox> элемент управления, `txtFirstName`, находится под другим элементом управления и требуется его поверх, используйте следующий код:
+Например, если элемент управления <xref:System.Windows.Forms.TextBox>, `txtFirstName`, находится под другим элементом управления и требуется его поверх, используйте следующий код:
 
 ```vb
 txtFirstName.BringToFront()
@@ -51,7 +51,7 @@ txtFirstName->BringToFront();
 ```
 
 > [!NOTE]
-> Windows Forms поддерживает *Включение элементов управления*. Включение элемента управления включает в себя размещение ряда элементов управления внутри содержащего его элемента управления, например, ряда <xref:System.Windows.Forms.RadioButton> элементов <xref:System.Windows.Forms.GroupBox> управления. Затем можно послойировать элементы управления внутри содержащего его элемента управления. Перемещение поля группы также приводит к перемещению элементов управления, так как они находятся внутри него.
+> Windows Forms поддерживает *Включение элементов управления*. Включение элемента управления включает в себя размещение нескольких элементов управления внутри содержащего их элемента управления, например число элементов управления <xref:System.Windows.Forms.RadioButton> в элементе управления <xref:System.Windows.Forms.GroupBox>. Затем можно послойировать элементы управления внутри содержащего его элемента управления. Перемещение поля группы также приводит к перемещению элементов управления, так как они находятся внутри него.
 
 ## <a name="see-also"></a>См. также
 

@@ -5,14 +5,12 @@ ms.technology: dotnet-standard
 helpviewer_keywords:
 - data structures, multi-threading
 ms.assetid: bdc82f2f-4754-45a1-a81e-fe2e9c30cef9
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 87ea2cbb46aca87af15b2c12321322c1b048df56
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a2271feae78100940b4ecac3c42c9bfefa7e1769
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625597"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123151"
 ---
 # <a name="data-structures-for-parallel-programming"></a>Структуры данных для параллельного программирования
 На платформе .NET Framework версии 4 появились несколько новых типов для параллельного программирования, включая набор классов параллельных коллекций, упрощенные примитивы синхронизации и типы отложенной инициализации. Эти типы можно использовать с любым кодом многопоточного приложения, включая библиотеку параллельных задач и PLINQ.  
@@ -22,7 +20,7 @@ ms.locfileid: "64625597"
   
  В следующей таблице перечислены новые классы параллельных коллекций.  
   
-|Тип|Описание|  
+|Тип|ОПИСАНИЕ|  
 |----------|-----------------|  
 |<xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType>|Предоставляет возможности блокировки и ограничения для потокобезопасных коллекций, реализующих <xref:System.Collections.Concurrent.IProducerConsumerCollection%601?displayProperty=nameWithType>. Потоки-производителя блокируются, если нет доступных слотов или коллекция заполнена. Потоки-потребители блокируются, если коллекция пуста. Этот тип также поддерживает неблокирующий доступ для потребителей и производителей. <xref:System.Collections.Concurrent.BlockingCollection%601> можно использовать в качестве базового класса или резервного хранилища с поддержкой блокировок и ограничений для любого класса коллекции с поддержкой <xref:System.Collections.Generic.IEnumerable%601>.|  
 |<xref:System.Collections.Concurrent.ConcurrentBag%601?displayProperty=nameWithType>|Потокобезопасная реализация контейнера, которая предоставляет масштабируемые операции добавления и получения.|  
@@ -37,7 +35,7 @@ ms.locfileid: "64625597"
   
  В следующей таблице перечислены новые типы синхронизации.  
   
-|Тип|Описание|  
+|Тип|ОПИСАНИЕ|  
 |----------|-----------------|  
 |<xref:System.Threading.Barrier?displayProperty=nameWithType>|Позволяет нескольким потокам работать над выполнением алгоритма параллельно, поддерживая точку регистрации, в которой каждая задача отмечает свою доступность и ожидает новых задач. Дополнительные сведения см. в разделе [Барьер](../../../docs/standard/threading/barrier.md).|  
 |<xref:System.Threading.CountdownEvent?displayProperty=nameWithType>|Упрощает сценарии ветвления и соединения, предоставляя удобный механизм взаимодействия. Более подробную информацию можно найти в [описании события CountdownEvent](../../../docs/standard/threading/countdownevent.md).|  
@@ -46,7 +44,7 @@ ms.locfileid: "64625597"
 |<xref:System.Threading.SpinLock?displayProperty=nameWithType>|Примитив взаимоисключающей блокировки, при использовании которого поток, который пытается получить блокировку, применяет *цикл ожидания* в течение заданного времени, прежде чем получить свою часть времени. В сценариях, где прогнозируется короткий период ожидания блокировки, <xref:System.Threading.SpinLock> обеспечит более высокую производительность по сравнению с другими формами блокировки. Дополнительные сведения см. в [описании SpinLock](../../../docs/standard/threading/spinlock.md).|  
 |<xref:System.Threading.SpinWait?displayProperty=nameWithType>|Небольшой и нетребовательный к ресурсам тип, который реализует небольшую паузу, и только по истечении заданного времени переходит в состояние ожидания.  Дополнительные сведения см. в [описании SpinWait](../../../docs/standard/threading/spinwait.md).|  
   
- Дополнительные сведения:  
+ Дополнительные сведения можно найти в разделе  
   
 - [Практическое руководство. SpinLock и низкоуровневая синхронизация](../../../docs/standard/threading/how-to-use-spinlock-for-low-level-synchronization.md)  
   
@@ -57,7 +55,7 @@ ms.locfileid: "64625597"
   
  В следующей таблице перечислены типы отложенной инициализации.  
   
-|Тип|Описание|  
+|Тип|ОПИСАНИЕ|  
 |----------|-----------------|  
 |<xref:System.Lazy%601?displayProperty=nameWithType>|Легкая и потокобезопасная реализация отложенной инициализации.|  
 |<xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType>|Предоставляет отложенно инициализированное значение для каждого потока, при этом каждый поток вызывает функцию отложенной инициализации.|  

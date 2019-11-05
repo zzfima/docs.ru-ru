@@ -14,31 +14,29 @@ helpviewer_keywords:
 ms.assetid: 7d5385d3-f4a5-47c4-8478-a3513b5e9406
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e4bf3605331e6900fd890e49bb3f71f4ca4409c7
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 1f46866a1b975455acd294221e38ef3b4c358660
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66377597"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140206"
 ---
 # <a name="icordebugvalue3-interface"></a>Интерфейс ICorDebugValue3
-Расширяет интерфейс «ICorDebugValue» и «ICorDebugValue2» для обеспечения поддержки массивов, размер которых превышает 2 ГБ.  
+Расширяет интерфейсы "ICorDebugValue" и "ICorDebugValue2", чтобы обеспечить поддержку массивов, размер которых превышает 2 ГБ.  
   
 ## <a name="methods"></a>Методы  
   
 |Метод|Описание|  
 |------------|-----------------|  
-|[Метод GetSize64](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-getsize64-method.md)|Получает размер в байтах, это `ICorDebugValue3` объекта.|  
+|[Метод GetSize64](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-getsize64-method.md)|Возвращает размер данного объекта `ICorDebugValue3` в байтах.|  
   
-## <a name="remarks"></a>Примечания  
- [ICorDebugValue::GetSize](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-getsize64-method.md) метод возвращает размер объекта, в диапазоне от 0 до 2 147 483 647 байт. В .NET Framework 4.5 размер массивов может превышать 2 ГБ. `ICorDebugValue3` Интерфейса позволяет определить размер этих массивов.  
+## <a name="remarks"></a>Заметки  
+ Метод [ICorDebugValue::](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-getsize64-method.md) GetBytes возвращает размер объекта в диапазоне от 0 до 2 147 483 647 байт. В .NET Framework 4,5 размер массивов может превышать 2 ГБ. Интерфейс `ICorDebugValue3` позволяет определить размер этих массивов.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

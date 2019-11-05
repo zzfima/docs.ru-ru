@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: e235ea80-b84c-4442-a4c3-fc96c25a8eb9
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e3b17ca32051cd5fc0673ef26124b855a66f9785
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 429ce0510162b3256cdf58f4820b04dd80243e29
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779977"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139634"
 ---
 # <a name="icorruntimehostcreateevidence-method"></a>Метод ICorRuntimeHost::CreateEvidence
-Получает указатель интерфейса типа <xref:System.Security.Principal.IIdentity?displayProperty=nameWithType>, что позволяет сайту создавать свидетельство безопасности для передачи [CreateDomain](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomain-method.md) или [CreateDomainEx](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomainex-method.md) метод.  
+Возвращает указатель интерфейса типа <xref:System.Security.Principal.IIdentity?displayProperty=nameWithType>, который позволяет основному приложению создавать доказательства безопасности для передачи в метод [CreateDomain](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomain-method.md) или [CreateDomainEx](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomainex-method.md) .  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,7 +35,7 @@ HRESULT CreateEvidence (
   
 ## <a name="parameters"></a>Параметры  
  `pEvidence`  
- [out] Указатель интерфейса на <xref:System.Security.Principal.IIdentity?displayProperty=nameWithType> экземпляр, используемый для создания свидетельством безопасности. Этот указатель является типизированным `IUnknown`, поэтому вызывающие объекты обычно следует вызывать `QueryInterface` на этом интерфейсе, чтобы получить указатель на <xref:System.Security.Principal.IIdentity?displayProperty=nameWithType>.  
+ заполняет Указатель интерфейса на экземпляр <xref:System.Security.Principal.IIdentity?displayProperty=nameWithType>, используемый для создания свидетельств безопасности. Этот указатель типизирован `IUnknown`, поэтому вызывающие объекты обычно должны вызывать `QueryInterface` для этого интерфейса, чтобы получить указатель на <xref:System.Security.Principal.IIdentity?displayProperty=nameWithType>.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
   
@@ -45,20 +43,20 @@ HRESULT CreateEvidence (
 |-------------|-----------------|  
 |S_OK|Операция выполнена успешно.|  
 |S_FALSE|Не удалось завершить операцию.|  
-|E_FAIL|Произошла неизвестная, разрушительного сбоя. Если метод вернет значение E_FAIL, общеязыковой среды выполнения (CLR) больше не может использоваться в процессе. Последующие вызовы для любого API хостинга, возвращают значение HOST_E_CLRNOTAVAILABLE.|  
-|ЗНАЧЕНИЕ HOST_E_CLRNOTAVAILABLE|Среда CLR не был загружен в процесс или находится в состоянии, в котором не может выполнять управляемый код или успешно обработать вызов.|  
+|E_FAIL|Произошла неизвестная фатальная ошибка. Если метод возвращает значение E_FAIL, среда CLR больше не может использоваться в процессе. Последующие вызовы любых API размещения возвращают HOST_E_CLRNOTAVAILABLE.|  
+|HOST_E_CLRNOTAVAILABLE|Среда CLR не была загружена в процесс, или среда CLR находится в состоянии, в котором она не может выполнить управляемый код или успешно обработать вызов.|  
   
-## <a name="remarks"></a>Примечания  
- Этот метод возвращает пустую коллекцию, не может быть заполнен из машинного кода. Следует использовать <xref:System.Security.Policy.Evidence> метод вместо этого.  
+## <a name="remarks"></a>Заметки  
+ Этот метод возвращает пустую коллекцию, которая не может быть заполнена из машинного кода. Вместо этого следует использовать метод <xref:System.Security.Policy.Evidence>.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** MSCorEE.h  
+ **Заголовок:** MSCorEE. h  
   
- **Библиотека:** Включена как ресурс в MSCorEE.dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MSCorEE. dll  
   
- **Версии платформы .NET framework:** 1.0, 1.1  
+ **Версия .NET Framework:** 1,0, 1,1  
   
 ## <a name="see-also"></a>См. также
 

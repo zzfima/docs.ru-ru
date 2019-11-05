@@ -8,14 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - tasks, continuations
 ms.assetid: 0b45e9a2-de28-46ce-8212-1817280ed42d
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1f88308dcea250c02d9c6cd7f326570f8bc0133c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: bf8a1c028b7b987cb9a7340597087d799dfd4321
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64630115"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123176"
 ---
 # <a name="chaining-tasks-by-using-continuation-tasks"></a>Создание цепочки задач с помощью задач продолжения
 В асинхронном программировании при завершении одной асинхронной операции принято вызывать вторую операцию и передавать в нее данные. В большинстве случаев непрерывность достигается с помощью методов обратного вызова. В библиотеке параллельных задач эта функциональность обеспечивается *задачами продолжения*. Задача продолжения (также называемая просто продолжением) — это асинхронная задача, вызываемая другой задачей, которая называется *предшествующей*, при завершении этой предшествующей задачи.  

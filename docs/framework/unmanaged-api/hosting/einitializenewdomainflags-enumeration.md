@@ -12,17 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - EInitializeNewDomainFlags enumeration [.NET Framework hosting]
 ms.assetid: 3a120ab2-f5ef-4c9b-8595-d3ed7247c342
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d69b12404459de5dbc1c7748deee6ca09c1e5182
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3693285e13d0650f7662e2187471027cc4c40704
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67772408"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129422"
 ---
 # <a name="einitializenewdomainflags-enumeration"></a>Перечисление EInitializeNewDomainFlags
-Ведущее приложение может предоставлять среде выполнения сведения об инициализации домена приложения.  
+Позволяет узлу предоставлять среде выполнения сведения об инициализации домена приложения.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -33,22 +31,22 @@ typedef enum {
 } EInitializeNewDomainFlags;  
 ```  
   
-## <a name="members"></a>Участники  
+## <a name="members"></a>Члены  
   
 |Член|Описание|  
 |------------|-----------------|  
-|`eInitializeNewDomainFlags_None`|Флаги отсутствуют.|  
-|`eInitializeNewDomainFlags_NoSecurityChanges`|Информирует общеязыковой среды выполнения (CLR) о том, что узел не будет вносить изменения в состояние безопасности домена приложения в <xref:System.AppDomainManager.InitializeNewDomain%2A> метод.|  
+|`eInitializeNewDomainFlags_None`|Нет флагов.|  
+|`eInitializeNewDomainFlags_NoSecurityChanges`|Информирует среду CLR о том, что узел не будет вносить изменения в состояние безопасности домена приложения в методе <xref:System.AppDomainManager.InitializeNewDomain%2A>.|  
   
-## <a name="remarks"></a>Примечания  
- [ICLRDomainManager::SetAppDomainManagerType](../../../../docs/framework/unmanaged-api/hosting/iclrdomainmanager-setappdomainmanagertype-method.md) метод принимает параметр типа `EInitializeNewDomainFlags`.  
+## <a name="remarks"></a>Заметки  
+ Метод [иклрдомаинманажер:: SetAppDomainManagerType](../../../../docs/framework/unmanaged-api/hosting/iclrdomainmanager-setappdomainmanagertype-method.md) принимает параметр типа `EInitializeNewDomainFlags`.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** MSCorEE.h  
+ **Заголовок:** MSCorEE. h  
   
- **Библиотека:** MSCorEE.dll  
+ **Библиотека:** MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

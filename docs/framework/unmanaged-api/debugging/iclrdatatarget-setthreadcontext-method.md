@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 103c8502-81fe-40d7-9c1e-9008d8fb19e1
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: edd70dd4cfc2e26b30ee0deec79b7d126d1f76a1
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: cceafc8358ce2b0eafa62a3855c4eb1e96adae11
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738585"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73113316"
 ---
 # <a name="iclrdatatargetsetthreadcontext-method"></a>Метод ICLRDataTarget::SetThreadContext
-Задает текущий контекст заданного потока в целевом процессе. Этот метод вызывается службами доступа к данным среды CLR.  
+Задает текущий контекст указанного потока в целевом процессе. Этот метод вызывается службами доступа к данным среды CLR.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,23 +38,23 @@ HRESULT SetThreadContext (
   
 ## <a name="parameters"></a>Параметры  
  `threadID`  
- [in] Идентификатор потока в целевом процессе операционной системы.  
+ окне Идентификатор операционной системы потока в целевом процессе.  
   
  `contextSize`  
- [in] Размер контекста.  
+ окне Размер контекста.  
   
  `context`  
- [in] Указатель на буфер, содержащий контекст.  
+ окне Указатель на буфер, содержащий контекст.  
   
- Данные в `context` буфера будет иметь формат для Win32 `CONTEXT` структуры. Контекст задает данные конкретного процессора регистра, поэтому определение Win32 `CONTEXT` структура зависит от архитектуры процессора. Ссылки на файл заголовка WinNT.h, для определения Win32 `CONTEXT` структуры.  
+ Данные в буфере `context` будут в формате структуры `CONTEXT` Win32. Контекст задает зависящие от процессора данные регистра, поэтому определение структуры `CONTEXT` Win32 зависит от архитектуры процессора. Описание структуры `CONTEXT` Win32 см. в файле заголовка WinNT. h.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
  Этот метод реализуется модулем записи отладчика.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** ClrData.idl, ClrData.h  
+ **Заголовок:** Клрдата. idl, Клрдата. h  
   
  **Библиотека:** CorGuids.lib  
   

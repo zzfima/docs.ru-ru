@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5be25292-8357-445f-a09b-f997c0de761c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7a20ab7a7ecb5d01351d0c912e08955f44b26d5f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4719f155957f04471d4ad2b8d71bec9c0f0d30c0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67756999"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73096087"
 ---
 # <a name="icordebugobjectvaluegetclass-method"></a>Метод ICorDebugObjectValue::GetClass
-Возвращает класс значение этого объекта.  
+Возвращает класс этого значения объекта.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,15 +35,15 @@ HRESULT GetClass (
   
 ## <a name="parameters"></a>Параметры  
  `ppClass`  
- [out] Указатель на адрес объекта «ICorDebugClass», который представляет класс объекта значение объекта, представленный этим объектом «ICorDebugObjectValue».  
+ заполняет Указатель на адрес объекта "ICorDebugClass", который представляет класс значения объекта, представленного этим объектом "ICorDebugObjectValue".  
   
-## <a name="remarks"></a>Примечания  
- `GetClass` И [ICorDebugValue::GetType](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-gettype-method.md) методы возвращают сведения о типе значения; они оба заменяемые поддержкой универсальных типов [ICorDebugValue2::GetExactType](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue2-getexacttype-method.md).  
+## <a name="remarks"></a>Заметки  
+ Методы `GetClass` и [ICorDebugValue:: GetType](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-gettype-method.md) возвращают сведения о типе значения; они заменяются универсальными шаблонами [ICorDebugValue2:: GetExactType](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue2-getexacttype-method.md).  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

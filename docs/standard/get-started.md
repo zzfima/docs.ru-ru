@@ -6,12 +6,12 @@ ms.author: mairaw
 ms.date: 05/01/2017
 ms.technology: dotnet-standard
 ms.assetid: 81c07080-acdf-4aef-a66d-0ab52fab2c04
-ms.openlocfilehash: 5c162258d6d365da8c6048590eb4c5eec6162973
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: ac9ad7e3730f8c430d42c4c8c8b63ab3d9cd091f
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70799304"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423816"
 ---
 # <a name="get-started"></a>Приступая к работе
 
@@ -21,7 +21,7 @@ ms.locfileid: "70799304"
 
 * В статье о [начале работы с C#](../csharp/getting-started/index.md) и [руководстве по языку C#](../csharp/tutorials/index.md) описываются различные способы начала работы с помощью языка C#.
 
-* В руководствах [по началу работы с F#](../fsharp/tutorials/getting-started/index.md) представлены три основных способа использования языка F#: с помощью Visual Studio, Visual Studio Code или средств командной строки.
+* В руководствах [по началу работы с F#](../fsharp/get-started/index.md) представлены три основных способа использования языка F#: с помощью Visual Studio, Visual Studio Code или средств командной строки.
 
 * В статьях, посвященных [началу работы с Visual Basic](../visual-basic/getting-started/index.md), содержатся инструкции по использованию Visual Basic в Visual Studio.
 

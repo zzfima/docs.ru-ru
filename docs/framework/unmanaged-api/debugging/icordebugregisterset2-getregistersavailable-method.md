@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: f3ed344b-0d3a-44e8-8000-2a97e0805a2c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5d4ab49aaccd77fac497bd86413915e82c99ed3e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d0b6960a24e246c7a538e8ffc59fa380a4b8e2a7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744906"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131374"
 ---
 # <a name="icordebugregisterset2getregistersavailable-method"></a>Метод ICorDebugRegisterSet2::GetRegistersAvailable
-Возвращает массив байтов, предоставляет битовую схему, доступных регистров.  
+Возвращает массив байтов, предоставляющий битовую карту доступных регистров.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -41,23 +39,23 @@ HRESULT GetRegistersAvailable (
  [in] Размер массива `availableRegChunks`.  
   
  `availableRegChunks`  
- [out] Массив байтов, каждый бит соответствует регистру. Если регистр, устанавливается соответствующий бит в регистре.  
+ заполняет Массив байтов, каждый бит которого соответствует регистру. Если регистр доступен, устанавливается соответствующий бит регистра.  
   
-## <a name="remarks"></a>Примечания  
- Значения перечисления CorDebugRegister указывают регистры различных микропроцессоров. Старшие разряды пять каждому значению типа являются порядковым номером в `availableRegChunks` массив байтов. Нижние три бит каждого значения идентифицируют положение бита в индексируемом байте. Учитывая `CorDebugRegister` значение, указывающее определенный регистр, положение регистра в маске определяется следующим образом:  
+## <a name="remarks"></a>Заметки  
+ Значения перечисления CorDebugRegister указывают регистры различных микропроцессоров. Верхние пять битов каждого значения являются индексом в `availableRegChunks` массиве байтов. Младшие три бита каждого значения обозначают битовую точку в индексируемом байте. При указании `CorDebugRegister` значения, указывающего конкретный регистр, расположение регистра в маске определяется следующим образом:  
   
-1. Извлечь индекс, необходимые для доступа к правильный байта в `availableRegChunks` массива:  
+1. Извлеките индекс, необходимый для доступа к правильному байту в массиве `availableRegChunks`:  
   
-     `CorDebugRegister` Значение >> 3  
+     `CorDebugRegister` значение > > 3  
   
-2. Извлеките положение бита в индексированных байт, где нулевой бит — наименее значимым битом.  
+2. Извлечение битовой позиции в индексируемом байте, где нулевой бит является наименее значимым битом:  
   
      `CorDebugRegister` значение & 7  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

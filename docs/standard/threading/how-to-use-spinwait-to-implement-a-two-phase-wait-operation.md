@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Использование объекта SpinWait для реализации двухэтапной операции ожидания
+title: Практическое руководство. Использование объекта SpinWait для реализации двухэтапной операции ожидания
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,16 +8,14 @@ dev_langs:
 helpviewer_keywords:
 - SpinWait, how to synchronize two-phase wait
 ms.assetid: b2ac4e4a-051a-4f65-b4b9-f8e103aff195
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 52b9164546d2061a65c79fb167b14543b0dae5a9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5bac174660177fd47e1f345e64581e35ae4c0ffc
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54576516"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137943"
 ---
-# <a name="how-to-use-spinwait-to-implement-a-two-phase-wait-operation"></a>Как выполнить Использование объекта SpinWait для реализации двухэтапной операции ожидания
+# <a name="how-to-use-spinwait-to-implement-a-two-phase-wait-operation"></a>Практическое руководство. Использование объекта SpinWait для реализации двухэтапной операции ожидания
 В примере ниже показано, как использовать объект <xref:System.Threading.SpinWait?displayProperty=nameWithType> для реализации двухэтапной операции ожидания. На первом этапе объект синхронизации `Latch` выполняет несколько циклов, в которых проверяет доступность блокировки. На втором этапе, если блокировка стала доступной, метод `Wait` возвращается, не вызывая <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType> для ожидания. В противном случае `Wait` выполняет операцию ожидания.  
   
 ## <a name="example"></a>Пример  

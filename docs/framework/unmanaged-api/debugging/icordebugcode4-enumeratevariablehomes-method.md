@@ -1,5 +1,5 @@
 ---
-title: Метод ICorDebugCode4::EnumerateVariableHomes
+title: 'Метод ICorDebugCode4:: Енумератевариаблехомес'
 ms.date: 03/30/2017
 api_name:
 - ICorDebugCode4.EnumerateVariableHomes
@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 802c01ff-8b80-4733-b6dd-03ab6ff7fa11
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e0e6acdf6996f437c85b629b0af886287b1aef03
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 850cbd2367dddd9f46375817e271cb8e7183cf64
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67748556"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121090"
 ---
-# <a name="icordebugcode4enumeratevariablehomes-method"></a>Метод ICorDebugCode4::EnumerateVariableHomes
-Получает перечислитель для локальных переменных и аргументов в функции.  
+# <a name="icordebugcode4enumeratevariablehomes-method"></a>Метод ICorDebugCode4:: Енумератевариаблехомес
+Возвращает перечислитель для локальных переменных и аргументов в функции.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,15 +35,15 @@ HRESULT EnumerateVariableHomes(
   
 ## <a name="parameters"></a>Параметры  
  `ppEnum`  
- Указатель на адрес [ICorDebugVariableHomeEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehomeenum-interface.md) объект интерфейса, который является перечислителем для локальных переменных и аргументов в функции.  
+ Указатель на адрес объекта интерфейса [ICorDebugVariableHomeEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehomeenum-interface.md) , который является перечислителем для локальных переменных и аргументов в функции.  
   
-## <a name="remarks"></a>Примечания  
- [ICorDebugVariableHomeEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehomeenum-interface.md) объект интерфейс является производным от «ICorDebugEnum» интерфейс, который позволяет перечислять стандартный перечислитель [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) объектов. Коллекции могут включать несколько [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) объектов для тот же индекс слота или аргумент, если они имеют разные домов в разные моменты в функции.  
+## <a name="remarks"></a>Заметки  
+ Объект интерфейса [ICorDebugVariableHomeEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehomeenum-interface.md) является стандартным перечислителем, производным от интерфейса "ICorDebugEnum", который позволяет перечислить объекты [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) . Коллекция может содержать несколько объектов [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) для одного и того же индекса слота или аргумента, если они имеют разные расположения в разных точках функции.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

@@ -1,7 +1,7 @@
 ---
 title: Числовые типы с плавающей запятой — справочник по C#
 description: Общие сведения о встроенных типах с плавающей запятой в C#
-ms.date: 10/18/2019
+ms.date: 10/22/2019
 f1_keywords:
 - float
 - float_CSharpKeyword
@@ -18,12 +18,12 @@ helpviewer_keywords:
 - floating-point numbers [C#], float keyword
 - double data type [C#]
 - decimal keyword [C#]
-ms.openlocfilehash: fa6cbb869d90113414cc6f8ffe231386c3596b1d
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 4d71f7eea3f574e483dc4250f5c87e1ffd551f2f
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72579372"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771902"
 ---
 # <a name="floating-point-numeric-types-c-reference"></a>Числовые типы с плавающей запятой (справочник по C#)
 
@@ -105,13 +105,7 @@ Console.WriteLine(m);  // output: 1500000
 
 ## <a name="conversions"></a>Преобразования
 
-Существует неявное преобразование (называемое *расширяющим преобразованием*) из `float` в `double`, так как диапазон значений `float` является строгим подмножеством объекта `double` и при преобразовании из `float` в `double` не теряется точность.
-
-Если неявное преобразование между двумя типами с плавающей запятой не определено, необходимо использовать явное приведение. Это называется *сужающим преобразованием*. Явное приведение требуется по той причине, что преобразование может привести к потере данных. Не существует неявного преобразования между другими типами с плавающей запятой и типом `decimal`, так как тип `decimal` имеет большую точность, чем `float` или `double`.
-
-Дополнительные сведения о неявных числовых преобразованиях см. в разделе [Таблица неявных числовых преобразований](../keywords/implicit-numeric-conversions-table.md).
-
-Дополнительные сведения о явных числовых преобразованиях см. в разделе [Таблица явных числовых преобразований](../keywords/explicit-numeric-conversions-table.md).
+Существует только одно неявное преобразование между числовыми типами с плавающей запятой: из `float` в `double`. Однако можно преобразовать любой тип с плавающей запятой в любой другой тип с плавающей запятой с помощью[явного приведения](../operators/type-testing-and-cast.md#cast-operator-). Для получения дополнительной информации см. статью [Встроенные числовые преобразования](numeric-conversions.md).
 
 ## <a name="c-language-specification"></a>Спецификация языка C#
 
@@ -124,10 +118,9 @@ Console.WriteLine(m);  // output: 1500000
 ## <a name="see-also"></a>См. также
 
 - [справочник по C#](../index.md)
-- [Целочисленные типы](integral-numeric-types.md)
 - [Таблица встроенных типов](../keywords/built-in-types-table.md)
-- [Числовые значения в .NET](../../../standard/numerics.md)
-- [Приведение и преобразование типов](../../programming-guide/types/casting-and-type-conversions.md)
-- <xref:System.Numerics.Complex?displayProperty=nameWithType>
+- [Целочисленные типы](integral-numeric-types.md)
 - [Таблица форматирования числовых результатов](../keywords/formatting-numeric-results-table.md)
 - [Строки стандартных числовых форматов](../../../standard/base-types/standard-numeric-format-strings.md)
+- [Числовые значения в .NET](../../../standard/numerics.md)
+- <xref:System.Numerics.Complex?displayProperty=nameWithType>

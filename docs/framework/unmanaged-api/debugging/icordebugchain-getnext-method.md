@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8d9744a5-e08b-4ab2-9855-5c22711cc1e6
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 990786fbb3cc853f7f399d60fa686bb5d60018af
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 132734dfb6ba9d70836638ab67564fc215e9bc40
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67745700"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73192129"
 ---
 # <a name="icordebugchaingetnext-method"></a>Метод ICorDebugChain::GetNext
-Получает следующую цепь кадров для потока.  
+Возвращает следующую цепь кадров для потока.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,12 +35,12 @@ HRESULT GetNext (
   
 ## <a name="parameters"></a>Параметры  
  `ppChain`  
- [out] Указатель на адрес ICorDebugChain объект, представляющий Далее цепочки кадров для потока. Если эта цепь является последней, `ppChain` имеет значение null.  
+ заполняет Указатель на адрес объекта ICorDebugChain, который представляет следующую цепь кадров для потока. Если цепочка является последней, `ppChain` имеет значение null.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

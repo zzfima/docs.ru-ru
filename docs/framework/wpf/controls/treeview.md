@@ -8,28 +8,28 @@ helpviewer_keywords:
 - controls [WPF], TreeView
 - hierarchical structure [WPF], TreeView control
 ms.assetid: 805c235c-0a0e-4e34-8d96-9dc3865cf2df
-ms.openlocfilehash: b353b413f7486990b6dd8ae5126809b27590ae3c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bb8d77bd3df848e6e9ed186cc621c02d36842175
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61761344"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458288"
 ---
 # <a name="treeview"></a>TreeView
-<xref:System.Windows.Controls.TreeView> Элемент управления отображает сведения в виде иерархической структуры с помощью сворачиваемых узлов.  
+Элемент управления <xref:System.Windows.Controls.TreeView> отображает сведения в иерархической структуре с помощью свертываемых узлов.  
   
- На следующем рисунке показан пример <xref:System.Windows.Controls.TreeView> элемент управления, который имеет вложенные <xref:System.Windows.Controls.TreeViewItem> элементов управления:  
+ На следующем рисунке показан пример элемента управления <xref:System.Windows.Controls.TreeView> с вложенными элементами управления <xref:System.Windows.Controls.TreeViewItem>:  
   
- ![Рисунок, показывающий вложенные элементы управления TreeViewItem.](./media/treeview/nested-treeviewitem-controls.jpg)  
+ ![Иллюстрация, на которой показаны вложенные элементы управления TreeViewItem.](./media/treeview/nested-treeviewitem-controls.jpg)  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>Содержание  
  [Обзор элемента управления TreeView](treeview-overview.md)  
  [Разделы практического руководства](treeview-how-to-topics.md)  
   
-## <a name="reference"></a>Ссылка  
+## <a name="reference"></a>Справочники  
  <xref:System.Windows.Controls.TreeView>  
   <xref:System.Windows.Controls.TreeViewItem>  
   
 ## <a name="related-sections"></a>Связанные разделы  
- [Общие сведения о привязке данных](../data/data-binding-overview.md)  
+ [Общие сведения о привязке данных](../../../desktop-wpf/data/data-binding-overview.md)  
   [Общие сведения о шаблонах данных](../data/data-templating-overview.md)

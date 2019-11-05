@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: fee56a29-3154-4192-958d-71da2ced3740
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 96e63d121bb64fd1aa6433881f7806b5c4058115
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 72a1b6fdc40f3169500d8cf3b3028315106ecc69
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67774001"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140228"
 ---
 # <a name="icordebugvalue3getsize64-method"></a>Метод ICorDebugValue3::GetSize64
-Получает размер в байтах, это [ICorDebugValue3](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-interface.md) объекта.  
+Возвращает размер данного объекта [ICorDebugValue3](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-interface.md) в байтах.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -36,18 +34,18 @@ HRESULT GetSize64(
 ```  
   
 ## <a name="parameters"></a>Параметры  
- pSize  
- [out] Указатель на размер в байтах этого объекта.  
+ псизе  
+ заполняет Указатель на размер данного объекта в байтах.  
   
-## <a name="remarks"></a>Примечания  
- Если это значение тип является ссылочным типом, этот метод возвращает размер указателя, а не размер объекта.  
+## <a name="remarks"></a>Заметки  
+ Если этот тип значения является ссылочным, этот метод возвращает размер указателя, а не размер объекта.  
   
- `ICorDebugValue3::GetSize` Метод отличается от [ICorDebugValue::GetSize](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-getsize-method.md) метода в типе параметра выходных данных. В [ICorDebugValue::GetSize](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-getsize-method.md), выходной параметр имеет `ULONG32`, в списке `ICorDebugValue3::GetSize`, это `ULONG64`. Это позволяет [ICorDebugValue3](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-interface.md) интерфейс сообщить размер массивов, которые превышают 2 ГБ.  
+ Метод `ICorDebugValue3::GetSize` отличается от метода [ICorDebugValue:: resize](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-getsize-method.md) в типе выходного параметра. В [ICorDebugValue::-size](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-getsize-method.md)выходной параметр является `ULONG32`; в `ICorDebugValue3::GetSize`это `ULONG64`. Это позволяет интерфейсу [ICorDebugValue3](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-interface.md) сообщать размер массивов, ПРЕВЫШАЮЩИХ 2 ГБ.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

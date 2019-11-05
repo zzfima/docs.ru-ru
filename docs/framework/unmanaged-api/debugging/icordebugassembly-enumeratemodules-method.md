@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: c7ba51a1-0dd5-4452-b471-232febe0f897
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e1d8d76084bcf0b5951c6431c6f21f352406050b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b55bd41039fce84a21c5d651d93b56f5d84b7611
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737370"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73088182"
 ---
 # <a name="icordebugassemblyenumeratemodules-method"></a>Методы ICorDebugAssembly::EnumerateModules
 Возвращает перечислитель для модулей, содержащихся в `ICorDebugAssembly`.  
@@ -37,12 +35,12 @@ HRESULT EnumerateModules (
   
 ## <a name="parameters"></a>Параметры  
  `ppModules`  
- [out] Указатель на адрес интерфейс ICorDebugModuleEnum, который является перечислителем.  
+ заполняет Указатель на адрес интерфейса Икордебугмодулинум, который является перечислителем.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

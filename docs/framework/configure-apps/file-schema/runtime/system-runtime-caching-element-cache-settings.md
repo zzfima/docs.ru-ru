@@ -6,21 +6,19 @@ helpviewer_keywords:
 - caching [.NET Framework], configuration
 - system.runtime.caching element
 ms.assetid: 9b44daee-874a-4bd1-954e-83bf53565590
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e36e2ed96a0748a69f2bd9ee32432901f0bf0898
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 70573f92f1799a54116bc91f7a39d157a7ae5b36
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252292"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73115506"
 ---
-# <a name="systemruntimecaching-element-cache-settings"></a>\<Элемент System. Runtime. Caching > (параметры кэша)
+# <a name="systemruntimecaching-element-cache-settings"></a>\<System. Runtime. Caching > элемент (параметры кэша)
 
 Обеспечивает настройку реализации <xref:System.Runtime.Caching.ObjectCache> в памяти по умолчанию посредством записи `memoryCache` в файле конфигурации.  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp; **\<System. Runtime. Caching >**  
+&nbsp;&nbsp; **\<System. Runtime. caching >**  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -50,16 +48,16 @@ ms.locfileid: "70252292"
 |-------------|-----------------|  
 |[\<configuration>](../configuration-element.md)|Указывает корневой элемент в каждом файле конфигурации, который используется средой CLR и .NET Framework приложениями.|  
   
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
 Классы в этом пространстве имен предоставляют способ использования средств кэширования, например таких, которые имеются в ASP.NET, но без зависимости от сборки `System.Web` . Для получения дополнительной информации см. [Caching in .NET Framework Applications](../../../performance/caching-in-net-framework-applications.md).  
   
 > [!NOTE]
-> Функции кэширования вывода и типы в <xref:System.Runtime.Caching> пространстве имен являются новыми в .NET Framework 4.  
+> Функции кэширования выходных данных и типы в пространстве имен <xref:System.Runtime.Caching> являются новыми в .NET Framework 4.  
   
 ## <a name="example"></a>Пример
 
-В следующем примере кода показано, как настроить кэш, основанный на классе <xref:System.Runtime.Caching.MemoryCache> . В примере показано, как построить экземпляр записи `namedCaches` для кэша памяти. Для имени кэша задается имя записи кэша по умолчанию, присвоенное `name` атрибуту значения "default".  
+В следующем примере кода показано, как настроить кэш, основанный на классе <xref:System.Runtime.Caching.MemoryCache> . В примере показано, как построить экземпляр записи `namedCaches` для кэша памяти. Для имени кэша задается имя записи кэша по умолчанию, присвоенное атрибуту `name` значение "по умолчанию".  
   
 Атрибутам `cacheMemoryLimitMegabytes` и `physicalMemoryPercentage` присваивается нулевое значение. Это означает, что эвристика автомасштабирования <xref:System.Runtime.Caching.MemoryCache> используется по умолчанию. Реализация кэша должна каждые две минуты сравнивать текущую загрузку памяти с абсолютными и процентными ограничениями по памяти.  
   
@@ -80,4 +78,4 @@ ms.locfileid: "70252292"
   
 ## <a name="see-also"></a>См. также
 
-- [\<Элемент > memoryCache (параметры кэша)](memorycache-element-cache-settings.md)
+- [Элемент \<memoryCache > (параметры кэша)](memorycache-element-cache-settings.md)

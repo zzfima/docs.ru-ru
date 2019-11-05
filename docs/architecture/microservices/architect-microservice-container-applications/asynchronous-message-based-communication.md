@@ -2,12 +2,12 @@
 title: Асинхронное взаимодействие на основе сообщений
 description: Архитектура микрослужб .NET для контейнерных приложений .NET | Асинхронная связь на основе сообщений является основным понятием в архитектуре микрослужб, так как это лучший способ обеспечить независимость микрослужб друг от друга и при этом синхронизировать их.
 ms.date: 09/20/2018
-ms.openlocfilehash: c362bdaf41fee5ee20516b89b8bec12d6c0557cf
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 84eaf70178cce91a86dae8a55badb0b4ddd6a7c1
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72522756"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73454233"
 ---
 # <a name="asynchronous-message-based-communication"></a>Асинхронное взаимодействие на основе сообщений
 
@@ -77,7 +77,7 @@ ms.locfileid: "72522756"
 
 - Использование полной модели [источников событий](https://docs.microsoft.com/azure/architecture/patterns/event-sourcing).
 
-- Использование [модели исходящих сообщений](http://www.kamilgrzybek.com/design/the-outbox-pattern/), таблицы базы данных транзакций как очереди сообщений, которая служит основой для компонента генерации событий, создающего и публикующего события.
+- Использование [модели исходящих сообщений](https://www.kamilgrzybek.com/design/the-outbox-pattern/), таблицы базы данных транзакций как очереди сообщений, которая служит основой для компонента генерации событий, создающего и публикующего события.
 
 При использовании асинхронного взаимодействия следует дополнительно рассмотреть вопросы идемпотентности и дедупликации сообщений. Эти вопросы рассматриваются в разделе [Реализация взаимодействия между микрослужбами на основе событий (события интеграции)](../multi-container-microservice-net-applications/integration-event-based-microservice-communications.md) далее в этом руководстве.
 

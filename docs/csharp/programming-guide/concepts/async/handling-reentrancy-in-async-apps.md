@@ -2,12 +2,12 @@
 title: Обработка повторного входа в асинхронных приложениях (C#)
 ms.date: 07/20/2015
 ms.assetid: 47c5075e-c448-45ce-9155-ed4e7e98c677
-ms.openlocfilehash: 3b6c5e29559a5350bdce7ad8bcf971281bb79994
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 9a6189624eff988ec6b0ac8a93330d591ed46a8c
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70204295"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72772026"
 ---
 # <a name="handling-reentrancy-in-async-apps-c"></a>Обработка повторного входа в асинхронных приложениях (C#)
 
@@ -29,6 +29,9 @@ ms.locfileid: "70204295"
 
 > [!NOTE]
 > Для выполнения этого примера на компьютере должны быть установлены Visual Studio 2012 или более поздней версии и .NET Framework 4.5 или более поздней версии.
+
+> [!NOTE]
+> Версия протокола TLS 1.2 теперь является минимальной версией для использования в разработке приложений. Если приложение предназначено для более ранней версии .NET Framework, чем 4.7, обратитесь к следующей статье, чтобы ознакомиться с [рекомендациями по протоколу TLS в .NET Framework](../../../../framework/network-programming/tls.md) 
 
 ## <a name="BKMK_RecognizingReentrancy"></a> Распознавание поддержки повторного входа
 
@@ -581,7 +584,7 @@ private async Task FinishOneGroupAsync(List<string> urls, Task<byte[]>[] content
 
 4. В списке типов проектов выберите **Приложение WPF**.
 
-5. Дайте проекту имя `WebsiteDownloadWPF` и нажмите кнопку **ОК**.
+5. Присвойте проекту имя `WebsiteDownloadWPF`, выберите .NET Framework версии 4.6 или более поздней, а затем нажмите кнопку **ОК**.
 
      В **обозревателе решений** появится новый проект.
 
@@ -609,7 +612,9 @@ private async Task FinishOneGroupAsync(List<string> urls, Task<byte[]>[] content
 
      В представлении **Конструктор** файла MainWindow.xaml появится простое окно, содержащее кнопку и текстовое поле.
 
-8. Добавьте ссылку для <xref:System.Net.Http>.
+8. В **обозревателе решений** щелкните правой кнопкой мыши **Ссылки** и выберите **Добавить ссылку**.
+
+     Добавьте ссылку на <xref:System.Net.Http>, если она еще не выбрана.
 
 9. В **обозревателе решений** откройте контекстное меню для MainWindow.xaml.cs и выберите пункт **Просмотреть код**.
 
@@ -641,6 +646,7 @@ private async Task FinishOneGroupAsync(List<string> urls, Task<byte[]>[] content
         {
             public MainWindow()
             {
+                System.Net.ServicePointManager.SecurityProtocol |= System.Net.SecurityProtocolType.Tls12;
                 InitializeComponent();
             }
 

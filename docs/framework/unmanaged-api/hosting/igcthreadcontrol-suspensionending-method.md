@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 70814265-c734-4ddc-9502-fe8b28d2b414
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: cc91ff0676fcec5d614f9d6fa4850eb2c81086b4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8d8efccde56d8d37a75b1d9bbec706411c6b1f45
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779495"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134786"
 ---
 # <a name="igcthreadcontrolsuspensionending-method"></a>Метод IGCThreadControl::SuspensionEnding
-Уведомляет основное приложение, что среда выполнения возобновляет выполнение после сбора мусора или по другим причинам.  
+Уведомляет узел о том, что среда выполнения возобновляет потоки после сборки мусора или другой приостановки.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,17 +35,17 @@ HRESULT SuspensionEnding (
   
 ## <a name="parameters"></a>Параметры  
  `Generation`  
- [in] Поколение, для которого был выполнен сбор мусора.  
+ окне Поколение, на котором была выполнена сборка мусора.  
   
-## <a name="remarks"></a>Примечания  
- Не повторного планирования во время обсуждения `SuspensionEnding` обратного вызова.  
+## <a name="remarks"></a>Заметки  
+ Не Перепланируйте потоки во время обратного вызова `SuspensionEnding`.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** MSCorEE.h  
+ **Заголовок:** MSCorEE. h  
   
- **Библиотека:** Включена как ресурс в MSCorEE.dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

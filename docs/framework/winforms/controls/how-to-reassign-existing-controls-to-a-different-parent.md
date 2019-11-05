@@ -6,21 +6,21 @@ helpviewer_keywords:
 - layout [Windows Forms], resizing
 - layout [Windows Forms], child controls
 ms.assetid: 5a5723ff-34e0-4b6f-a57b-be4ebe35cb34
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 84e662e0bd2689115abe128c6442e4462eed3e18
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: 1767fcff1742f4ad630b4b996c709b7ded53a129
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69987035"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459199"
 ---
-# <a name="how-to-reassign-existing-controls-to-a-different-parent"></a>Практическое руководство. Переназначить существующие элементы управления другому родителю
+# <a name="how-to-reassign-existing-controls-to-a-different-parent"></a>Как переназначить существующие элементы управления другому родителю
 
 Можно назначать существующие в форме элементы управления новому контейнерному элементу управления.
 
-1. В Visual Studio перетащите на форму <xref:System.Windows.Forms.Button> три элемента управления из **панели элементов** . Расположите их рядом друг с другом, но не выравнивайте.
+1. В Visual Studio перетащите три элемента управления <xref:System.Windows.Forms.Button> из **панели элементов** в форму. Расположите их рядом друг с другом, но не выравнивайте.
 
 2. В **панели элементов**щелкните значок элемента управления <xref:System.Windows.Forms.FlowLayoutPanel> . (Не перетаскивайте значок на форму.)
 
@@ -42,5 +42,5 @@ ms.locfileid: "69987035"
 
 - <xref:System.Windows.Forms.FlowLayoutPanel>
 - <xref:System.Windows.Forms.TableLayoutPanel>
-- [Пошаговое руководство: Упорядочивание элементов управления в Windows Forms с помощью TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
-- [Пошаговое руководство: Упорядочивание элементов управления в Windows Forms с помощью линий привязки](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
+- [Пошаговое руководство. Упорядочение элементов управления в формах Windows Forms с помощью элемента TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
+- [Пример. Упорядочение элементов управления в формах Windows Forms с помощью линий привязки](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)

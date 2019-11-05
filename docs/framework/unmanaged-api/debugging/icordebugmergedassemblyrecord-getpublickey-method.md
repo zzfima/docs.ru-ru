@@ -1,17 +1,15 @@
 ---
-title: Метод ICorDebugMergedAssemblyRecord::GetPublicKey
+title: 'Метод Икордебугмержедассемблирекорд:: GetPublicKey'
 ms.date: 03/30/2017
 ms.assetid: 6f4e78ba-082b-489d-8b58-4c35fbcc7a5b
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e08b1edcef3e93caa82be3a4342c6a0264734bea
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 9cf5f6b6d12303b3f59588c5fb663c457da79cb9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69940023"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131400"
 ---
-# <a name="icordebugmergedassemblyrecordgetpublickey-method"></a>Метод ICorDebugMergedAssemblyRecord::GetPublicKey
+# <a name="icordebugmergedassemblyrecordgetpublickey-method"></a>Метод Икордебугмержедассемблирекорд:: GetPublicKey
 Возвращает открытый ключ сборки.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -33,17 +31,17 @@ HRESULT GetPublicKey(
  `pbPublicKey`  
  [out] Указатель на массив байтов, содержащий открытый ключ сборки.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
   
 > [!NOTE]
 > Этот метод доступен только в машинном коде .NET.  
   
 ## <a name="requirements"></a>Требования  
- **Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug. idl, CorDebug. h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
- **Библиотечная** Коргуидс. lib  
+ **Библиотека:** CorGuids.lib  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

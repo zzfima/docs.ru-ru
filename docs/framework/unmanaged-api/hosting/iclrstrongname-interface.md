@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 2fac66fd-6b3b-4dbd-8baf-86038bd85526
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: abe967195694dd61b4af18fb4eebbc3caad2ef4f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4f774915cdbb12b13fa334db37c8e0fa2a7e5829
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61771479"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73135132"
 ---
 # <a name="iclrstrongname-interface"></a>Интерфейс ICLRStrongName
-Предоставляет базовые глобальные статические функции для подписи сборок со строгими именами. Все `ICLRStrongName` методы возвращают стандартный COM HRESULT.  
+Предоставляет базовые глобальные статические функции для подписи сборок со строгими именами. Все методы `ICLRStrongName` возвращают стандартные значения HRESULT COM.  
   
 ## <a name="methods"></a>Методы  
   
@@ -37,7 +35,7 @@ ms.locfileid: "61771479"
 |[Метод GetHashFromFileW](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfilew-method.md)|Создает хэш содержимого файла, указанного строкой Юникода.|  
 |[Метод GetHashFromHandle](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromhandle-method.md)|Создает хэш содержимого файла с заданным дескриптором файла с помощью указанного хэш-алгоритма.|  
 |[Метод StrongNameCompareAssemblies](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamecompareassemblies-method.md)|Определяет, отличаются ли две сборки только подписями строгого имени.|  
-|[Метод StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md)|Освобождает память, выделенную предыдущим вызовом метода строгого имени, таких как [StrongNameGetPublicKey](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetpublickey-method.md), [StrongNameTokenFromPublicKey](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfrompublickey-method.md), или [StrongNameSignatureGeneration ](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturegeneration-method.md).|  
+|[Метод StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md)|Освобождает память, выделенную с помощью предыдущего вызова метода строгого имени, такого как [StrongNameGetPublicKey](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetpublickey-method.md), [StrongNameTokenFromPublicKey](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfrompublickey-method.md)или [StrongNameSignatureGeneration](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturegeneration-method.md).|  
 |[Метод StrongNameGetBlob](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetblob-method.md)|Заполняет указанный буфер двоичным представлением исполняемого файла по указанному адресу.|  
 |[Метод StrongNameGetBlobFromImage](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetblobfromimage-method.md)|Получает двоичное представление образа сборки по указанному адресу памяти.|  
 |[Метод StrongNameGetPublicKey](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetpublickey-method.md)|Получает открытый ключ из пары закрытого и открытого ключей.|  
@@ -56,15 +54,15 @@ ms.locfileid: "61771479"
 |[Метод StrongNameTokenFromAssemblyEx](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfromassemblyex-method.md)|Создает маркер строгого имени из указанного файла сборки и возвращает открытый ключ.|  
 |[Метод StrongNameTokenFromPublicKey](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfrompublickey-method.md)|Получает маркер, представляющий открытый ключ.|  
   
-## <a name="remarks"></a>Примечания  
- Можно получить экземпляр `ICLRStrongName` путем вызова [ICLRRuntimeInfo::GetInterface](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getinterface-method.md) с помощью метода `CLSID_CLRStrongName` и `IID_ICLRStrongName` в качестве параметров.  
+## <a name="remarks"></a>Заметки  
+ Экземпляр `ICLRStrongName` можно получить, вызвав метод [ICLRRuntimeInfo::](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getinterface-method.md) WebMethod, используя `CLSID_CLRStrongName` и `IID_ICLRStrongName` в качестве параметров.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** MetaHost.h  
+ **Заголовок:** Метахост. h  
   
- **Библиотека:** Включена как ресурс в MSCorEE.dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

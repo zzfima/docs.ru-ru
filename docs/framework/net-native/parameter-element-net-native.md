@@ -1,17 +1,15 @@
 ---
-title: <Parameter>Элемент (.NET Native)
+title: Элемент <Parameter> (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: 22aaa1f3-596f-4733-93db-f4bcabcb5240
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5c9a462e75df535504d0e98c22c34c11ff7af7d8
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: c6dfc347d44a794ee8496c45ca879f9daab12b22
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049350"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128196"
 ---
-# <a name="parameter-element-net-native"></a>\<Элемент > параметра (.NET Native)
+# <a name="parameter-element-net-native"></a>Элемент > параметра \<(.NET Native)
 Применяет политику отражения к типу аргумента, переданного методу.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -51,18 +49,18 @@ ms.locfileid: "71049350"
   
 ## <a name="name-attribute"></a>Name - атрибут  
   
-|Значение|Описание|  
+|значения|Описание|  
 |-----------|-----------------|  
 |*parameter_name*|Имя параметра метода, к которому применяется политика. Например, сигнатура метода `String.CompareTo(Object value)`, значение `Name` — атрибут «value».|  
   
 ## <a name="all-other-attributes"></a>Все остальные атрибуты  
   
-|Значение|Описание|  
+|значения|Описание|  
 |-----------|-----------------|  
 |*policy_setting*|Параметр, применяемый для этого типа политики. Допустимые значения: `All`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` и `Required All`. Дополнительные сведения см. в разделе [Параметры политики директив среды выполнения](runtime-directive-policy-settings.md).|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
- Нет.  
+ Отсутствует.  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
@@ -70,7 +68,7 @@ ms.locfileid: "71049350"
 |-------------|-----------------|  
 |[\<Method>](method-element-net-native.md)|Применяет политику отражения среды выполнения к конструктору или методу.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
  Элемент `<Parameter>` является дочерним по отношению к элементу [\<Method>](method-element-net-native.md) и используется для применения политики к конкретному параметру метода. Конкретный параметр метода указывается по имени, а не по типу. По крайней мере один атрибут, который представляет тип политики, такие как `Activate` или `Dynamic`, должен присутствовать.  
   
 ## <a name="see-also"></a>См. также

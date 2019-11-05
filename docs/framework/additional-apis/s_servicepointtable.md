@@ -1,5 +1,5 @@
 ---
-title: Поле ServicePointManager.s_ServicePointTable
+title: ServicePointManager. s_ServicePointTable, поле
 ms.date: 05/01/2017
 topic_type:
 - apiref
@@ -10,18 +10,18 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: 24459679-291c-401a-9def-e42b29466fcf
-author: rpetrusha
+author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 840d068d282e3ba35df5aee6a11ff96d9e6bfdbd
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: 68445f4a290b9f4fe2696e35cda391b6c0ee8f85
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66301388"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120001"
 ---
-# <a name="servicepointmanagersservicepointtable-field"></a>ServicePointManager.s\_ServicePointTable поля
+# <a name="servicepointmanagers_servicepointtable-field"></a>ServicePointManager. s\_поле Сервицепоинттабле
 
-`ServicePointManager.s_ServicePointTable` — <xref:System.Collections.Hashtable> , содержащий список активных подключений HTTP (<xref:System.Net.ServicePoint>s) в <xref:System.AppDomain>.
+`ServicePointManager.s_ServicePointTable` — это <xref:System.Collections.Hashtable>, содержащий список активных HTTP-подключений (<xref:System.Net.ServicePoint>s) в <xref:System.AppDomain>.
 
 ## <a name="syntax"></a>Синтаксис
   
@@ -30,14 +30,14 @@ private static Hashtable s_ServicePointTable
 ```
 
 > [!WARNING]
-> `ServicePointManager.s_ServicePointTable` Поле является закрытым и не предназначен для непосредственного использования в коде.
+> Поле `ServicePointManager.s_ServicePointTable` является закрытым и не предназначено для непосредственного использования в коде.
 > 
-> Майкрософт не поддерживает использование этого поля в рабочем приложении ни при каких обстоятельствах.
+> Корпорация Майкрософт не поддерживает использование этого поля в рабочем приложении при каких-либо обстоятельствах.
 
 ## <a name="requirements"></a>Требования
 
 **Пространство имен:** <xref:System.Net>
 
-**Сборка:** Системы (в System.dll)
+**Сборка:** Система (в System. dll)
 
-**Версии платформы .NET framework:** Доступно с версии 2.0.
+**.NET Framework версии:** Доступно с 2,0.

@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 891ceb43-5161-421e-a0bf-299962fd7efd
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6c557df3c69b9d18b95ebf33815b92dcb9097f4e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: aa0bc34c3cb3ac330582cee0843022e913376fc2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69987537"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73192161"
 ---
 # <a name="icordebugassemblyenum-interface"></a>Интерфейс ICorDebugAssemblyEnum
 
@@ -31,19 +29,19 @@ ms.locfileid: "69987537"
   
 |Метод|Описание|  
 |------------|-----------------|  
-|[Метод Next](../../../../docs/framework/unmanaged-api/debugging/icordebugassemblyenum-next-method.md)|Возвращает указанное количество `ICorDebugAssembly` экземпляров в перечислении, начиная с текущего положения.|  
+|[Метод Next](../../../../docs/framework/unmanaged-api/debugging/icordebugassemblyenum-next-method.md)|Возвращает указанное число экземпляров `ICorDebugAssembly` в перечислении, начиная с текущей положения.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
   
 > [!NOTE]
 > Этот интерфейс не поддерживает удаленные вызовы между компьютерами или между процессами.  
   
 ## <a name="requirements"></a>Требования  
- **Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug. idl, CorDebug. h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
- **Библиотечная** Коргуидс. lib  
+ **Библиотека:** CorGuids.lib  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

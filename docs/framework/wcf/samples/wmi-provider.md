@@ -2,12 +2,12 @@
 title: Поставщик WMI
 ms.date: 03/30/2017
 ms.assetid: 462f0db3-f4a4-4a4b-ac26-41fc25c670a4
-ms.openlocfilehash: 89e2d370919519953e714cb0d0020587b3f53c9d
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: dd24a6d270a0bd9012bbda2a53913167c9697bc5
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70038514"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424511"
 ---
 # <a name="wmi-provider"></a>Поставщик WMI
 В этом примере показано, как собирать данные из служб Windows Communication Foundation (WCF) во время выполнения с помощью поставщика инструментарий управления Windows (WMI) (WMI), встроенного в WCF. Кроме того, в образце показано, как добавлять в службу пользовательский объект инструментария WMI. В примере активируется поставщик WMI для [Начало работы](../../../../docs/framework/wcf/samples/getting-started-sample.md) и демонстрируется сбор данных из `ICalculator` службы во время выполнения.  
@@ -16,7 +16,7 @@ ms.locfileid: "70038514"
   
  WCF реализует поставщик WMI, компонент, который предоставляет инструментирование во время выполнения через интерфейс, совместимый с WBEM. Средства управления могут подключаться к службам через интерфейс во время выполнения. WCF предоставляет атрибуты служб, такие как адреса, привязки, поведения и прослушиватели.  
   
- Встроенный поставщик инструментария WMI активируется в файле конфигурации приложения. Это делается с помощью `wmiProviderEnabled` атрибута [ \<> диагностики](../../../../docs/framework/configure-apps/file-schema/wcf/diagnostics.md) в [ \<разделе > System. ServiceModel](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) , как показано в следующем образце конфигурации:  
+ Встроенный поставщик инструментария WMI активируется в файле конфигурации приложения. Это выполняется с помощью атрибута `wmiProviderEnabled` [диагностики\<](../../../../docs/framework/configure-apps/file-schema/wcf/diagnostics.md) в разделе [\<system. ServiceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) , как показано в следующем образце конфигурации:  
   
 ```xml  
 <system.serviceModel>  
@@ -32,19 +32,19 @@ ms.locfileid: "70038514"
  Добавление в службу объектов WMI позволяет предоставлять доступ к пользовательским сведениям, а также к сведениям встроенного поставщика WMI. Для этого необходимо опубликовать схему службы в инструментарии WMI с помощью приложения Installutil.exe. Соответствующие инструкции, а также более подробные сведения, см в инструкция по установке в конце этого раздела.  
   
 ## <a name="accessing-wmi-information"></a>Доступ к сведениям WMI  
- Доступ к данным инструментария WMI может осуществляться несколькими различными способами. Корпорация Майкрософт предоставляет API-интерфейсы WMI для сценариев, C++ Visual Basic приложений, приложений и .NET Framework https://docs.microsoft.com/windows/desktop/wmisdk/using-wmi) (.  
+ Доступ к данным инструментария WMI может осуществляться несколькими различными способами. Корпорация Майкрософт предоставляет API-интерфейсы WMI для сценариев, C++ Visual Basic приложений, приложений и .NET Framework (https://docs.microsoft.com/windows/desktop/wmisdk/using-wmi).  
   
  В этом образце используется два скрипта Java: один - для перечисления выполняющихся на компьютере служб и некоторых их свойств, а второй - для просмотра пользовательских данных инструментария WMI. Скрипт открывает подключение к поставщику инструментария WMI, анализирует данные и отображает собранные данные.  
   
  Запустите пример, чтобы создать запущенный экземпляр службы WCF. Во время работы службы выполните каждый из скриптов Java с помощью следующей команды командной строки:  
   
-```  
+```console  
 cscript EnumerateServices.js  
 ```  
   
  Этот скрипт обращается к хранящемуся в службе инструментированию и создает следующий результат:  
   
-```  
+```console  
 Microsoft (R) Windows Script Host Version 5.6  
 Copyright © Microsoft Corporation 1996-2001. All rights reserved.  
   
@@ -102,13 +102,13 @@ Copyright © Microsoft Corporation 1996-2001. All rights reserved.
   
  Затем выполните второй скрипт Java, чтобы отобразить пользовательские данные WMI:  
   
-```  
+```console  
 cscript EnumerateCustomObjects.js  
 ```  
   
  Этот скрипт обращается к хранящемуся в службах пользовательскому инструментированию и создает следующий результат:  
   
-```  
+```console 
 1 WMIObject(s) found.  
 |-PID:           30285bfd-9d66-4c4e-9be2-310499c5cef5  
 |-InstanceId:    3839  
@@ -139,7 +139,7 @@ cscript EnumerateCustomObjects.js
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Если этот каталог не существует, перейдите к [примерам Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] и примеры. Этот образец расположен в следующем каталоге.  
+> Если этот каталог не существует, перейдите к [примерам Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Samples. Этот образец расположен в следующем каталоге.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\WMIProvider`  
   

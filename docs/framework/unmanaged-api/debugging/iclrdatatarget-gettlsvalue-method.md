@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0d8a7730-edc9-4728-898f-41b219cf5a28
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7de415b998ef97e7500c289a1bca4402d203b152
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 205ad3af81fb6fabda5cbe291536f8858999f831
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738687"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73113704"
 ---
 # <a name="iclrdatatargetgettlsvalue-method"></a>Метод ICLRDataTarget::GetTLSValue
-Возвращает значение из локального хранилища потока (TLS) из указанного потока в целевом процессе. Этот метод вызывается службами доступа к данным среды CLR.  
+Возвращает значение из локального хранилища потока (TLS) указанного потока в целевом процессе. Этот метод вызывается службами доступа к данным среды CLR.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,21 +37,21 @@ HRESULT GetTLSValue (
   
 ## <a name="parameters"></a>Параметры  
  `threadID`  
- [in] Идентификатор потока в целевом процессе операционной системы.  
+ окне Идентификатор операционной системы потока в целевом процессе.  
   
  `index`  
- [in] Индекс расположения. Это значение должно быть допустимым индексом в локальном хранилище из указанного потока.  
+ окне Индекс расположения. Это значение должно быть допустимым индексом в локальном хранилище указанного потока.  
   
  `value`  
- [out] Указатель на `CLRDATA_ADDRESS` возвращается значение, которое указывает значение из заданного расположения TLS.  
+ заполняет Указатель на значение `CLRDATA_ADDRESS`, указывающее значение, возвращаемое из заданного расположения TLS.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
  Этот метод реализуется модулем записи отладчика.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** ClrData.idl, ClrData.h  
+ **Заголовок:** Клрдата. idl, Клрдата. h  
   
  **Библиотека:** CorGuids.lib  
   

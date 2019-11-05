@@ -12,14 +12,12 @@ api_type:
 ms.assetid: 0e350a1b-6997-46d0-bfc5-962a5011ef43
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 839e698c8921f916fad174bae4f4cc8bb4d02994
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f35e979a5107064d2987a385a989075ef71283ff
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61609078"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73098860"
 ---
 # <a name="cordebugehclause-structure"></a>Структура CorDebugEHClause
 [Поддерживается в .NET Framework 4.5.2 и более поздних версиях.]  
@@ -40,7 +38,7 @@ typedef struct _CorDebugEHClause {
 } CorDebugEHClause;  
 ```  
   
-## <a name="members"></a>Участники  
+## <a name="members"></a>Члены  
   
 |Член|Описание|  
 |------------|-----------------|  
@@ -52,14 +50,14 @@ typedef struct _CorDebugEHClause {
 |`ClassToken`|Токен метаданных для обработчика исключений на основе типа.|  
 |`FilterOffset`|Смещение в байтах от начала тела метода для обработчика исключений на основе фильтра.|  
   
-## <a name="remarks"></a>Примечания  
- Массив `CoreDebugEHClause` возвращаемые значения [GetEHClauses](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-getehclauses-method.md) метод.  
+## <a name="remarks"></a>Заметки  
+ Массив значений `CoreDebugEHClause` возвращается методом [GetEHClauses](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-getehclauses-method.md) .  
   
- Информация о предложении обработки исключений определяется спецификацией CLI. Дополнительные сведения см. в разделе [стандартный ECMA-355: Common Language Infrastructure (CLI), изд. 6](https://www.ecma-international.org/publications/standards/Ecma-335.htm).  
+ Информация о предложении обработки исключений определяется спецификацией CLI. Дополнительные сведения см. в разделе [Standard ECMA-355: Common Language Infrastructure (CLI), 6-й выпуск](https://www.ecma-international.org/publications/standards/Ecma-335.htm).  
   
  Поле `flags` может содержать следующие флаги. Обратите внимание, что они не определены в CorDebug.idl или CorDebug.h.  
   
-|Flag|Значение|Описание|  
+|Flag|значения|Описание|  
 |----------|-----------|-----------------|  
 |`COR_ILEXCEPTION_CLAUSE_EXCEPTION`|0x00000000|Введенное предложение исключений.|  
 |`COR_ILEXCEPTION_CLAUSE_FILTER`|0x00000001|Фильтр исключений и предложение обработчика.|  
@@ -67,9 +65,9 @@ typedef struct _CorDebugEHClause {
 |`COR_ILEXCEPTION_CLAUSE_FAULT`|0x00000004|Неправильное предложение (предложение `finally`, которое вызывается только при возникновении исключения).|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

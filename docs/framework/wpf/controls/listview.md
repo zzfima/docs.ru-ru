@@ -7,29 +7,29 @@ helpviewer_keywords:
 - controls [WPF], ListView
 - ListView control [WPF]
 ms.assetid: fc3784a7-c9e8-4e2b-909a-7af37cef9b43
-ms.openlocfilehash: c90849c27f7bbef2338ef255350a7dccd40c99e3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 45f5b054b946e746e490c64b2b051bec80fc6b17
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61932591"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459328"
 ---
 # <a name="listview"></a>ListView
-<xref:System.Windows.Controls.ListView> Управления предоставляет инфраструктуру для отображения набора элементов данных в различных макетах или представлениях.  
+Элемент управления <xref:System.Windows.Controls.ListView> предоставляет инфраструктуру для отображения набора элементов данных в различных макетах или представлениях.  
   
- На следующем рисунке показано <xref:System.Windows.Controls.ListView>.  
+ На следующем рисунке показан <xref:System.Windows.Controls.ListView>.  
   
- ![Снимок экрана с ListView с выводом GridView.](./media/gridview-overview/listview-gridview-output.jpg)  
+ ![Снимок экрана, на котором показан ListView с выходными данными GridView.](./media/gridview-overview/listview-gridview-output.jpg)  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>Содержание  
  [Разделы общих сведений](listview-overviews.md)  
  [Разделы практического руководства](listview-how-to-topics.md)  
   
-## <a name="reference"></a>Ссылка  
+## <a name="reference"></a>Справочники  
  <xref:System.Windows.Controls.ListView>  
   <xref:System.Windows.Controls.ListViewItem>  
   <xref:System.Windows.Controls.GridView>  
   
 ## <a name="related-sections"></a>Связанные разделы  
- [Общие сведения о привязке данных](../data/data-binding-overview.md)  
+ [Общие сведения о привязке данных](../../../desktop-wpf/data/data-binding-overview.md)  
   [Общие сведения о шаблонах данных](../data/data-templating-overview.md)

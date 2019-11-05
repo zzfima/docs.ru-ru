@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: f0922545-c2cf-40c8-9ef6-ca033563e682
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d964a5a77569762ff4fd69e419324a377b820d97
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2e49dd95cf5d78c0a0f4fa075126eca19dea2693
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67768943"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138715"
 ---
 # <a name="icordebugthread2getvolatileosthreadid-method"></a>Метод ICorDebugThread2::GetVolatileOSThreadID
-Получает идентификатор потока операционной системы для ICorDebugThread2.  
+Возвращает идентификатор потока операционной системы для этого ICorDebugThread2.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,12 +35,12 @@ HRESULT GetVolatileOSThreadID (
   
 ## <a name="parameters"></a>Параметры  
  `pdwTid`  
- [out] Идентификатор потока операционной системы для данного потока.  
+ заполняет Идентификатор потока операционной системы для этого потока.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

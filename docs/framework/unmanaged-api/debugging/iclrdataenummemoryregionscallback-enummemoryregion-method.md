@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9bb93fab-57e8-4f9a-9ef3-1794504fa896
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c5c03b7010418f75aff984102d7fa4fb089c4d59
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2ebe7ef37fb072e3688cc4dcfa5ed89832e886e9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738820"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122938"
 ---
 # <a name="iclrdataenummemoryregionscallbackenummemoryregion-method"></a>Метод ICLRDataEnumMemoryRegionsCallback::EnumMemoryRegion
-Вызывается средой [ICLRDataEnumMemoryRegions::EnumMemoryRegions](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregions-enummemoryregions-method.md) для сообщающий отладчику результат попытки перечисления заданной области памяти.  
+Вызывается методом [иклрдатаенуммеморирегионс:: енуммеморирегионс](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregions-enummemoryregions-method.md) для передачи в отладчик результата попытки перечисления указанной области памяти.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,20 +36,20 @@ HRESULT EnumMemoryRegion (
   
 ## <a name="parameters"></a>Параметры  
  `address`  
- [in] Начальный адрес области памяти, которые необходимо перечислить.  
+ окне Начальный адрес области памяти, которая должна быть перечислена.  
   
  `size`  
- [in] Размер в байтах, выделяемой области памяти.  
+ окне Размер области памяти в байтах.  
   
-## <a name="remarks"></a>Примечания  
- `ICLRDataEnumMemoryRegions::EnumMemoryRegions` Метод будет вызывать этот метод обратного вызова после каждой попытки перечисления области памяти. Перечисление продолжится, даже если этот метод возвращает значение HRESULT, указывающее на сбой.  
+## <a name="remarks"></a>Заметки  
+ Метод `ICLRDataEnumMemoryRegions::EnumMemoryRegions` будет вызывать этот метод обратного вызова после каждой попытки перечисления области памяти. Перечисление продолжится, даже если этот метод возвращает значение HRESULT, указывающее на сбой.  
   
- Регионы, о которых сообщает этот обратный вызов может быть дубликаты и перекрывающиеся области.  
+ Регионы, сообщаемые этим обратным вызовом, могут быть дубликатами или перекрывающимися областями.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** ClrData.idl, ClrData.h  
+ **Заголовок:** Клрдата. idl, Клрдата. h  
   
  **Библиотека:** CorGuids.lib  
   

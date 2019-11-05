@@ -2,12 +2,12 @@
 title: Команда dotnet new
 description: Команда dotnet new создает проекты .NET Core на основе указанного шаблона.
 ms.date: 05/06/2019
-ms.openlocfilehash: b61b5fd53f470c30b636026fa19ebfad834d6354
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: c9529e135f48c80f445c91038294a3e7266486f1
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117667"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73420477"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -776,6 +776,6 @@ dotnet new [-h|--help]
 ## <a name="see-also"></a>См. также
 
 - [Пользовательские шаблоны для команды dotnet new](custom-templates.md)
-- [Создание пользовательского шаблона для dotnet](../tutorials/create-custom-template.md)
+- [Создание пользовательского шаблона для dotnet](../tutorials/cli-templates-create-item-template.md)
 - [Репозиторий dotnet/dotnet-template-samples в GitHub](https://github.com/dotnet/dotnet-template-samples)
 - [Доступные шаблоны для команды dotnet new](https://github.com/dotnet/templating/wiki/Available-templates-for-dotnet-new)

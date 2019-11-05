@@ -31,19 +31,20 @@ helpviewer_keywords:
 - ConnectionClosed enumeration member
 - SecureChannelFailure enumeration member
 ms.assetid: 657141cd-5cf5-4fdb-a4b2-4c040eba84b5
-ms.openlocfilehash: bb478f0742e85cadd9509de823abb0d486170d37
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 7084c4579dd5fca0075c7516754195f7cea9e27c
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71048502"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458037"
 ---
 # <a name="handling-errors"></a>Обработка ошибок
+
 Классы <xref:System.Net.WebRequest> и <xref:System.Net.WebResponse> вызывают одновременно системные исключения (например, <xref:System.ArgumentException>) и веб-исключения (исключения <xref:System.Net.WebException>, вызываемые методом <xref:System.Net.WebRequest.GetResponse%2A>).  
   
- Каждый класс **WebException** включает свойство <xref:System.Net.WebException.Status%2A>, которое содержит значение перечисления <xref:System.Net.WebExceptionStatus>. Значение свойства **Status** позволяет определить произошедшую ошибку и действия, которые следует предпринять для ее устранения.  
+Каждый класс **WebException** включает свойство <xref:System.Net.WebException.Status%2A>, которое содержит значение перечисления <xref:System.Net.WebExceptionStatus>. Значение свойства **Status** позволяет определить произошедшую ошибку и действия, которые следует предпринять для ее устранения.  
   
- В следующей таблице описаны возможные значения свойства **Status**.  
+В следующей таблице описаны возможные значения свойства **Status**.  
   
 |Status|ОПИСАНИЕ|  
 |------------|-----------------|  
@@ -66,9 +67,9 @@ ms.locfileid: "71048502"
 |ProxyNameResolutionFailure|Службе разрешения имен не удалось разрешить имя узла прокси-сервера.|  
 |UnknownError|Возникло исключение неизвестного типа.|  
   
- Если свойство **Status** имеет значение **WebExceptionStatus.ProtocolError**, доступен **WebResponse**, содержащий ответ сервера. Содержимое этого ответа позволяет определить фактический источник ошибки протокола.  
+Если свойство **Status** имеет значение **WebExceptionStatus.ProtocolError**, доступен **WebResponse**, содержащий ответ сервера. Содержимое этого ответа позволяет определить фактический источник ошибки протокола.  
   
- В следующем примере демонстрируется перехват исключения **WebException**.  
+В следующем примере демонстрируется перехват исключения **WebException**.  
   
 ```csharp  
 try   
@@ -163,11 +164,11 @@ Catch e As Exception
 End Try  
 ```  
   
- Приложения, использующие класс <xref:System.Net.Sockets.Socket>, вызывают исключение <xref:System.Net.Sockets.SocketException> при возникновении ошибки в сокете Windows. Классы <xref:System.Net.Sockets.TcpClient>, <xref:System.Net.Sockets.TcpListener> и <xref:System.Net.Sockets.UdpClient> построены на основе класса **Socket** и также вызывают исключения **SocketException**.  
+Приложения, использующие класс <xref:System.Net.Sockets.Socket>, вызывают исключение <xref:System.Net.Sockets.SocketException> при возникновении ошибки в сокете Windows. Классы <xref:System.Net.Sockets.TcpClient>, <xref:System.Net.Sockets.TcpListener> и <xref:System.Net.Sockets.UdpClient> построены на основе класса **Socket** и также вызывают исключения **SocketException**.  
   
- Если возникает исключение **SocketException**, класс **SocketException** присваивает свойству <xref:System.Net.Sockets.SocketException.ErrorCode%2A> значение, отражающее последнюю ошибку сокета операционной системы. Дополнительные сведения о кодах ошибок сокета см. в документации по кодам ошибок API Winsock 2.0 на веб-сайте MSDN.  
+Если возникает исключение **SocketException**, класс **SocketException** присваивает свойству <xref:System.Net.Sockets.SocketException.ErrorCode%2A> значение, отражающее последнюю ошибку сокета операционной системы. Дополнительные сведения о кодах ошибок сокета см. в документации по кодам ошибок API Winsock 2.0 на веб-сайте MSDN.  
   
 ## <a name="see-also"></a>См. также
 
-- [Основы обработки исключений](../../standard/exceptions/exception-handling-fundamentals.md)
+- [Обработка и создание исключений в .NET](../../standard/exceptions/index.md)
 - [Запрос данных](requesting-data.md)

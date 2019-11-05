@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: 37118465-ddf3-41f0-bf27-335b72777e63
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 31d93ac427ec67726c9456d623aeb683c9029ccd
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d39e15a2ba71ba0c0147482259f5618dcb5d298b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67773765"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73192098"
 ---
 # <a name="callfunctionshim-function"></a>Функция CallFunctionShim
-Вызывает функцию, которая имеет указанные имя и параметры в указанной библиотеке.  
+Вызывает функцию с указанным именем и параметрами в указанной библиотеке.  
   
- Эта функция является устаревшим в .NET Framework 4.  
+ Эта функция является устаревшей в .NET Framework 4.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -43,29 +41,29 @@ HRESULT CallFunctionShim (
   
 ## <a name="parameters"></a>Параметры  
  `szDllName`  
- [in] Имя библиотеки, содержащей функцию.  
+ окне Имя библиотеки, содержащей функцию.  
   
  `szFunctionName`  
- [in] Имя функции.  
+ окне Имя функции.  
   
  `lpvArgument1`  
- [in] Первый аргумент, передаваемый в функцию.  
+ окне Первый аргумент для передачи в функцию.  
   
  `lpvArgument2`  
- [in] Второй аргумент, передаваемый в функцию.  
+ окне Второй аргумент для передачи в функцию.  
   
  `szVersion`  
- [in] Версия библиотеки, содержащей функцию.  
+ окне Версия библиотеки, которая содержит функцию.  
   
  `pvReserved`  
- [in] Зарезервировано для будущего использования. Передайте нулевое значение в этом параметре.  
+ окне Зарезервировано для будущего использования. В этом параметре следует передать ноль.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** MSCorEE.h  
+ **Заголовок:** MSCorEE. h  
   
- **Библиотека:** MSCorEE.dll  
+ **Библиотека:** MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

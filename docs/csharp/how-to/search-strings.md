@@ -6,12 +6,12 @@ helpviewer_keywords:
 - strings [C#], searching with String methods
 - strings [C#], searching with regular expressions
 ms.assetid: fb1d9a6d-598d-4a35-bd5f-b86012edcb2b
-ms.openlocfilehash: b9c27e419d37b6c0730f214d3b2b9bbdf7e30d11
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 12fb0e7c9fe02c3438fa989059dbea6238d24104
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57202877"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73420314"
 ---
 # <a name="how-to-search-strings"></a>Практическое руководство. Поиск по строкам
 
@@ -19,7 +19,7 @@ ms.locfileid: "57202877"
 
 [!INCLUDE[interactive-note](~/includes/csharp-interactive-note.md)]
 
-Тип [string](../language-reference/keywords/string.md) является псевдонимом класса <xref:System.String?displayProperty=nameWithType> и реализует ряд полезных методов для поиска содержимого строк. Среди них: <xref:System.String.Contains%2A>, <xref:System.String.StartsWith%2A>, <xref:System.String.EndsWith%2A>, <xref:System.String.IndexOf%2A>, <xref:System.String.LastIndexOf%2A>. Класс <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> предоставляет широкие возможности словаря для поиска шаблонов в тексте. В этой статье вы узнаете, как применять эти методы и как выбрать наилучший способ в зависимости от ваших потребностей.
+Тип [string](../language-reference/builtin-types/reference-types.md#the-string-type) является псевдонимом класса <xref:System.String?displayProperty=nameWithType> и реализует ряд полезных методов для поиска содержимого строк. Среди них: <xref:System.String.Contains%2A>, <xref:System.String.StartsWith%2A>, <xref:System.String.EndsWith%2A>, <xref:System.String.IndexOf%2A>, <xref:System.String.LastIndexOf%2A>. Класс <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> предоставляет широкие возможности словаря для поиска шаблонов в тексте. В этой статье вы узнаете, как применять эти методы и как выбрать наилучший способ в зависимости от ваших потребностей.
 
 ## <a name="does-a-string-contain-text"></a>Содержит ли строка текст?
 
@@ -39,7 +39,7 @@ ms.locfileid: "57202877"
 
 Класс <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> можно использовать для поиска строк. Такой поиск может отличаться по сложности от самых простых до очень сложных текстовых шаблонов.
 
-В следующем примере кода выполняется поиск слов "the" и "their" в предложении без учета регистра. Статический метод <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> выполняет поиск. В метод передается строка и шаблон поиска. В нашем примере третий аргумент задает поиск без учета регистра. Для получения дополнительной информации см. <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType>.  
+В следующем примере кода выполняется поиск слов "the" и "their" в предложении без учета регистра. Статический метод <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> выполняет поиск. В метод передается строка и шаблон поиска. В нашем примере третий аргумент задает поиск без учета регистра. Дополнительные сведения можно найти по адресу: <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType>.  
 
 Шаблон поиска описывает текст для поиска. Следующая таблица описывает каждый элемент шаблона поиска. (В таблице ниже используется одинарный символ `\`, который в строке на языке C# необходимо экранировать как `\\`.)
 

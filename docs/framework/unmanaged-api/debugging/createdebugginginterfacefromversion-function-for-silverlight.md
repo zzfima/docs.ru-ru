@@ -8,17 +8,15 @@ helpviewer_keywords:
 - debugging API [Silverlight]
 - Silverlight, debugging
 ms.assetid: 35c7a18f-133a-4584-bd25-bb338568b0c6
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 96968956b513e1ae80a25f5fb4afea48bf888876
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 438af9f191f48a86207c3b343ba428eef2c1fabc
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739267"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132201"
 ---
 # <a name="createdebugginginterfacefromversion-function-for-silverlight"></a>Функция CreateDebuggingInterfaceFromVersion Silverlight
-Принимает общую строку версии среды выполнения (CLR) языка, возвращенный [функция CreateVersionStringFromModule](../../../../docs/framework/unmanaged-api/debugging/createversionstringfrommodule-function.md)и возвращает соответствующий интерфейс отладчика (как правило, [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)).  
+Принимает строку версии среды CLR, возвращаемую [функцией CreateVersionStringFromModule](../../../../docs/framework/unmanaged-api/debugging/createversionstringfrommodule-function.md), и возвращает соответствующий интерфейс отладчика (как правило, [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -31,14 +29,14 @@ HRESULT CreateDebuggingInterfaceFromVersion (
   
 ## <a name="parameters"></a>Параметры  
  `szDebuggeeVersion`  
- [in] Строка версии среды CLR в целевом отлаживаемом объекте, который возвращается методом [функция CreateVersionStringFromModule](../../../../docs/framework/unmanaged-api/debugging/createversionstringfrommodule-function.md).  
+ окне Строка версии среды CLR в целевом отлаживаемом объекте, возвращаемом [функцией CreateVersionStringFromModule](../../../../docs/framework/unmanaged-api/debugging/createversionstringfrommodule-function.md).  
   
  `ppCordb`  
- [out] Указатель на COM-объект (`IUnknown`). Этот объект будет привести к [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) объекта перед возвратом.  
+ [out] Указатель на COM-объект (`IUnknown`). Перед возвращением этот объект будет приведен к объекту [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) .  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  S_OK  
- `ppCordb` ссылается на допустимый объект, реализующий [интерфейс ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) интерфейс.  
+ `ppCordb` ссылается на допустимый объект, реализующий интерфейс [интерфейса ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) .  
   
  E_INVALIDARG  
  Либо `szDebuggeeVersion`, либо `ppCordb` имеет значение null.  
@@ -50,16 +48,16 @@ HRESULT CreateDebuggingInterfaceFromVersion (
  Версия mscordbi.dll или mscordaccore.dll не совпадает с версией целевого объекта CoreCLR.dll.  
   
  E_FAIL (или другие коды возврата E_)  
- Не удалось вернуть [интерфейс ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md).  
+ Не удалось вернуть [Интерфейс ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md).  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
  Возвращаемый интерфейс предоставляет средства для подключения к среде CLR в целевом процессе и отладки управляемого кода, который выполняется в этой среде CLR.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** dbgshim.h  
+ **Заголовок:** dbgshim. h  
   
- **Библиотека:** dbgshim.dll  
+ **Библиотека:** dbgshim. dll  
   
- **Версии платформы .NET framework:** 3.5 с пакетом обновления 1 (SP1)
+ **.NET Framework версии:** 3,5 SP1

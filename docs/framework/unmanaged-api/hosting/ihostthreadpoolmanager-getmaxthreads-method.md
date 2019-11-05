@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: db268876-6178-4a81-aca3-318ee7f96001
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1d5b865906f797c25783c4d8a306dc91769ef9a9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e53265556de026e84af7ca345a5f82be3c5ff812
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67749290"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122057"
 ---
 # <a name="ihostthreadpoolmanagergetmaxthreads-method"></a>Метод IHostThreadPoolManager::GetMaxThreads
-Возвращает максимальное число потоков, ведущий одновременно в пуле потоков.  
+Возвращает максимальное число потоков, которые обслуживается одновременно в пуле потоков.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,31 +35,31 @@ HRESULT GetMaxThreads (
   
 ## <a name="parameters"></a>Параметры  
  `pdwMaxWorkerThreads`  
- [out] Указатель на максимальное число потоков, ведущий в пуле потоков.  
+ заполняет Указатель на максимальное число потоков, поддерживаемых узлом в пуле потоков.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
   
 |HRESULT|Описание|  
 |-------------|-----------------|  
-|S_OK|`GetMaxThreads` успешно возвращен.|  
-|ЗНАЧЕНИЕ HOST_E_CLRNOTAVAILABLE|Среда CLR (CLR (не было загружено в процесс, или среда CLR находится в состоянии, в котором она не удается запустить управляемого кода или процесс вызова.|  
-|HOST_E_TIMEOUT|Истекло время ожидания вызова.|  
-|HOST_E_NOT_OWNER|Вызывающий объект не является владельцем блокировки.|  
-|HOST_E_ABANDONED|Событие было отменено с сохранением заблокированный поток или ожидал волокон.|  
-|E_FAIL|Неизвестный Разрушительный сбой. Когда метод вернет значение E_FAIL, среда CLR больше не может использоваться в процессе. Последующие вызовы к размещению методы возвращают значение HOST_E_CLRNOTAVAILABLE.|  
-|E_NOTIMPL|Узел не поддерживает реализацию `GetMaxThreads`.|  
+|S_OK|`GetMaxThreads` успешно возвращено.|  
+|HOST_E_CLRNOTAVAILABLE|Общеязыковая среда выполнения (CLR не загружена в процесс, или среда CLR находится в состоянии, в котором она не может выполнить управляемый код или успешно обработать вызов.|  
+|HOST_E_TIMEOUT|Время ожидания вызова истекло.|  
+|HOST_E_NOT_OWNER|Вызывающий объект не владеет блокировкой.|  
+|HOST_E_ABANDONED|Событие было отменено, пока заблокированный поток или волокно ожидают его.|  
+|E_FAIL|Произошла неизвестная фатальная ошибка. Когда метод возвращает значение E_FAIL, среда CLR больше не может использоваться в процессе. Последующие вызовы методов размещения возвращают HOST_E_CLRNOTAVAILABLE.|  
+|E_NOTIMPL|Узел не предоставляет реализацию `GetMaxThreads`.|  
   
-## <a name="remarks"></a>Примечания  
- Среда CLR вызывает `GetMaxThreads` чтобы определить общее число потоков в пуле потоков. [GetAvailableThreads](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-getavailablethreads-method.md) метод возвращает число потоков, которые в настоящий момент не обрабатывает рабочие элементы. Все запросы, превышающие возвращаемым значением `pdwMaxWorkerThreads` параметр остаются в очереди, пока не станут доступными потоков.  
+## <a name="remarks"></a>Заметки  
+ Среда CLR вызывает `GetMaxThreads`, чтобы определить общее число потоков в пуле потоков. Метод [GetAvailableThreads](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-getavailablethreads-method.md) возвращает число потоков, которые в данный момент не обрабатывают рабочие элементы. Все запросы выше возвращенного значения параметра `pdwMaxWorkerThreads` остаются в очереди до тех пор, пока потоки не станут доступными.  
   
- Если узел не поддерживает реализацию `GetMaxThreads`, он должен возвращать значение HRESULT E_NOTIMPL.  
+ Если узел не предоставляет реализацию `GetMaxThreads`, он должен возвращать значение HRESULT, равное E_NOTIMPL.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** MSCorEE.h  
+ **Заголовок:** MSCorEE. h  
   
- **Библиотека:** Включена как ресурс в MSCorEE.dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

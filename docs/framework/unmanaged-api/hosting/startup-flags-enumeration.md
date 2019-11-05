@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4f043594-0c45-4bc6-988e-a6793f0d8d06
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f39608b39be7d5c25b916fb20877aa73d6e5a8bc
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 1799e0af91fa6074f174120b29e2302a27230c62
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69916224"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141466"
 ---
 # <a name="startup_flags-enumeration"></a>Перечисление STARTUP_FLAGS
 Содержит значения, которые указывают на поведение среды CLR при запуске. По умолчанию сборка мусора не параллельна, и в область, нейтральную к домену, загружается только Библиотека базовых классов.  
@@ -53,7 +51,7 @@ typedef enum {
 } STARTUP_FLAGS;  
 ```  
   
-## <a name="members"></a>Участники  
+## <a name="members"></a>Члены  
   
 |Член|Описание|  
 |------------|-----------------|  
@@ -70,16 +68,16 @@ typedef enum {
 |`STARTUP_LEGACY_IMPERSONATION`|Указывает, что олицетворение не должно проходить через асинхронные точки по умолчанию.|  
 |`STARTUP_DISABLE_COMMITTHREADSTACK`|Указывает, что весь стек потоков не должен зафиксироваться при запуске потока.|  
 |`STARTUP_ALWAYSFLOW_IMPERSONATION`|Указывает, что управляемые олицетворения и олицетворения, полученные через вызов неуправляемого кода, будут передаваться через асинхронные точки. По умолчанию только управляемые олицетворения будут проходить через асинхронные точки.|  
-|`STARTUP_TRIM_GC_COMMIT`|Указывает, что при нехватке системной памяти сборка мусора будет использовать меньше зафиксированного пространства. См `gcTrimCommitOnLowMemory` . раздел [Оптимизация для размещения общих веб-](../../../standard/garbage-collection/optimization-for-shared-web-hosting.md)сайтов.|  
+|`STARTUP_TRIM_GC_COMMIT`|Указывает, что при нехватке системной памяти сборка мусора будет использовать меньше зафиксированного пространства. См. `gcTrimCommitOnLowMemory` в разделе [Оптимизация для размещения общих веб-](../../../standard/garbage-collection/optimization-for-shared-web-hosting.md)сайтов.|  
 |`STARTUP_ETW`|Указывает, что трассировка событий для Windows (ETW) включена для событий общеязыковой среды выполнения. Начиная с Windows Vista, трассировка событий всегда включена, поэтому этот флаг не действует. См. раздел [Управление ведением журнала .NET Framework](../../../../docs/framework/performance/controlling-logging.md).|  
-|`STARTUP_ARM`|Указывает, что отслеживание ресурсов домена приложения включено. См. [ \<свойствоиэлемент > аппдомаинресаурцемониторинг.](../../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md) <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType>|  
+|`STARTUP_ARM`|Указывает, что отслеживание ресурсов домена приложения включено. См. свойства <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType> и [\<элемент > аппдомаинресаурцемониторинг](../../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md).|  
   
 ## <a name="requirements"></a>Требования  
- **Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** MSCorEE. h  
+ **Заголовок:** MSCorEE. h  
   
- **Библиотечная** MSCorEE. dll  
+ **Библиотека:** MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

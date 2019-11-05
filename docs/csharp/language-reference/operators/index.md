@@ -9,12 +9,12 @@ helpviewer_keywords:
 - operator associativity [C#]
 - expressions [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 7d69528804cf0cee1302fd62fa2301e06076897a
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 78233b9a18f4369ebb086f2016af3f945b6a654a
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72579204"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039018"
 ---
 # <a name="c-operators-c-reference"></a>Операторы C# (справочник по C#)
 
@@ -85,7 +85,7 @@ Console.WriteLine($"a = {a}, b = {b}");  // output: a = 1, b = 6
 |`a / b + c * d`|a, b, /, c, d, *, +|
 |`a / (b + c) * d`|a, b, c, +, /, d, *|
 
-Как правило, оцениваются все операнды операторов. Некоторые операторы оценивают операнды условно. То есть значение первого операнда такого оператора определяет, следует ли оценивать другие операнды. Эти операторы являются условными логическими операторами [И (`&&`)](boolean-logical-operators.md#conditional-logical-and-operator-) и [ИЛИ (`||`) ](boolean-logical-operators.md#conditional-logical-or-operator-), [операторами объединения со значением NULL`??` и `??=`](null-coalescing-operator.md), [условными операторами со значением NULL `?.` и `?[]` и ](member-access-operators.md#null-conditional-operators--and-)[условным оператором `?:`](conditional-operator.md). Подробнее см. в описании каждого оператора.
+Как правило, оцениваются все операнды операторов. Однако некоторые операторы оценивают операнды условно. То есть значение крайнего левого операнда такого оператора определяет, следует ли оценивать другие операнды. Эти операторы являются условными логическими операторами [И (`&&`)](boolean-logical-operators.md#conditional-logical-and-operator-) и [ИЛИ (`||`) ](boolean-logical-operators.md#conditional-logical-or-operator-), [операторами объединения со значением NULL`??` и `??=`](null-coalescing-operator.md), [условными операторами со значением NULL `?.` и `?[]` и ](member-access-operators.md#null-conditional-operators--and-)[условным оператором `?:`](conditional-operator.md). Дополнительные сведения см. в описании каждого оператора.
 
 ## <a name="c-language-specification"></a>Спецификация языка C#
 

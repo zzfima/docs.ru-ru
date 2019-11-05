@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7e42a928-5068-4ba6-b8c3-806551a01fa8
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 72b95b634ffc352b7fad006e0ccd68e6e159dee9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9e90772ae8c3e6be5744fcccc9901123df871831
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779104"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131946"
 ---
 # <a name="coinitializeee-function"></a>Функция CoInitializeEE
-Гарантирует, что ядро выполнения среды выполнения загружается в процесс. Эта функция является устаревшей в .NET Framework 4. Используйте [ICLRRuntimeHost::Start](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md) метод вместо этого.  
+Гарантирует, что подсистема выполнения среды CLR загружается в процесс. Эта функция является устаревшей в .NET Framework 4. Используйте вместо этого метод [ICLRRuntimeHost:: Start](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md) .  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,26 +35,26 @@ HRESULT CoInitializeEE (
   
 ## <a name="parameters"></a>Параметры  
  `fFlags`  
- [in] Один из [COINITIEE](../../../../docs/framework/unmanaged-api/metadata/coinitiee-enumeration.md) константы перечисления.  
+ окне Одна из констант перечисления [коинитии](../../../../docs/framework/unmanaged-api/metadata/coinitiee-enumeration.md) .  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Этот метод возвращает стандартные коды ошибок COM, как определено в файле Winerror.h, а также значения в следующей таблице.  
+ Этот метод возвращает стандартные коды ошибок COM, определенные в файле Winerror. h, и значения, приведенные в следующей таблице.  
   
 |Код возврата|Описание|  
 |-----------------|-----------------|  
-|S_OK|Подсистема выполнения была успешно загружена.|  
-|S_FALSE|Подсистема выполнения уже загружен.|  
+|S_OK|Подсистема выполнения успешно загружена.|  
+|S_FALSE|Подсистема выполнения уже загружена.|  
 |E_FAIL|Не удалось загрузить подсистему выполнения.|  
   
-## <a name="remarks"></a>Примечания  
- Этот метод загружает ядро выполнения, если он не был загружен ранее.  
+## <a name="remarks"></a>Заметки  
+ Этот метод загружает подсистему выполнения, если он не был загружен ранее.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** Cor.h  
+ **Заголовок:** COR. h  
   
- **Библиотека:** Включена как ресурс в MsCorEE.dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

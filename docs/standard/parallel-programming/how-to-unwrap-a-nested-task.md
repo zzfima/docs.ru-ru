@@ -8,14 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - tasks, how to unwrap nested tasks
 ms.assetid: a0769dd2-0f6d-48ca-8418-a9d39de7f450
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3cc468da70d3c62c139a98a6637e7a3c7990c378
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c72654a2bc21035fe706d76018bb163d8ba01ee8
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54602056"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73106909"
 ---
 # <a name="how-to-unwrap-a-nested-task"></a>Практическое руководство. Извлечение вложенной задачи
 Вы можете вернуть задачу из метода, и затем ожидать ее выполнения или продолжить работу после нее, как показано в следующем примере.  

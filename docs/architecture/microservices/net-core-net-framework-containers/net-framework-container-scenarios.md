@@ -2,12 +2,12 @@
 title: Выбор .NET Framework для контейнеров Docker
 description: Архитектура микрослужб .NET для упакованных в контейнеры приложений .NET | Выбор .NET Framework для контейнеров Docker
 ms.date: 01/07/2019
-ms.openlocfilehash: 575af1bc1966a25a01acdcfe106870ad1b7c477d
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 8316d17aae09ddbd70bd80af4f06d8cb029f2752
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71039642"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73093767"
 ---
 # <a name="when-to-choose-net-framework-for-docker-containers"></a>Выбор .NET Framework для контейнеров Docker
 
@@ -27,7 +27,7 @@ ms.locfileid: "71039642"
 
 Несмотря на значительный прогресс, достигнутый после выхода .NET Standard 2.0 и .NET Core 2.1, некоторые пакеты NuGet пока запускаются только в ОС Windows и не поддерживают .NET Core. Если эти пакеты имеют важное значение для вашего приложения, необходимо использовать .NET Framework в контейнерах Windows.
 
-## <a name="using-net-technologies-not-available-for-net-core"></a>Использование технологий .NET, недоступных для .NET Core 
+## <a name="using-net-technologies-not-available-for-net-core"></a>Использование технологий .NET, недоступных для .NET Core
 
 Некоторые технологии .NET Framework отсутствуют в текущей версии .NET Core (версии 2.2 на момент написания этой статьи). Поддержка некоторых из них будет добавлена в последующих выпусках .NET Core (.NET Core 2.x), однако остальные технологии не применяются к новым шаблонам приложений, используемым в среде .NET Core, и будут недоступными всегда.
 

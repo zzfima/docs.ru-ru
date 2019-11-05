@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5c8f11b4-35d3-4c39-9bbd-58b896ba5ba6
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1cb314f2afce0cbbf1c5fb185f516a30ad8313af
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 72f7bee79e74c69acff90861ceada8a91afe2157
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780508"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134915"
 ---
 # <a name="idebuggerthreadcontrolstartblockingfordebugger-method"></a>Метод IDebuggerThreadControl::StartBlockingForDebugger
-Уведомляет основное приложение, что службы отладки будут вскоре запущены блокировку всех потоков.  
+Уведомляет узел о том, что служба отладки собирается начать блокирование всех потоков.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,17 +35,17 @@ HRESULT StartBlockingForDebugger (
   
 ## <a name="parameters"></a>Параметры  
  `dwUnused`  
- [in] Зарезервировано для будущего использования.  
+ окне Зарезервировано для будущего использования.  
   
-## <a name="remarks"></a>Примечания  
- `StartBlockingForDebugger` Метод может вызываться в потоке среды выполнения.  
+## <a name="remarks"></a>Заметки  
+ Метод `StartBlockingForDebugger` может быть вызван в потоке среды выполнения.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** MSCorEE.h  
+ **Заголовок:** MSCorEE. h  
   
- **Библиотека:** Включена как ресурс в MSCorEE.dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

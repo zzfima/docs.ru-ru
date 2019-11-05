@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: c0822423-a9df-4961-950d-50dcc152f863
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f857f773f02da25fe6650000be777b8290f5af91
-ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
+ms.openlocfilehash: 78e34d9d33d34047e3ebd2effb4894bc7b709585
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274058"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132361"
 ---
 # <a name="cor_field-structure"></a>Структура COR_FIELD
 Предоставляет сведения о поле в объекте.  
@@ -37,23 +35,23 @@ typedef struct COR_FIELD{
 } COR_FIELD;  
 ```  
   
-## <a name="members"></a>Участники  
+## <a name="members"></a>Члены  
   
 |Член|Описание|  
 |------------|-----------------|  
-|`token`|`mdFieldDef` Токен, который можно использовать для получения сведений о полях.|  
+|`token`|Токен `mdFieldDef`, который можно использовать для получения сведений о полях.|  
 |`offset`|Смещение в байтах для данных поля в объекте.|  
 |`id`|Значение [COR_TYPEID](cor-typeid-structure.md) , определяющее тип этого поля.|  
 |`fieldType`|Значение перечисления Корелементтипе, указывающее тип поля.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
   
 ## <a name="requirements"></a>Требования  
- **Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug. idl, CorDebug. h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
- **Библиотечная** Коргуидс. lib  
+ **Библиотека:** CorGuids.lib  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   

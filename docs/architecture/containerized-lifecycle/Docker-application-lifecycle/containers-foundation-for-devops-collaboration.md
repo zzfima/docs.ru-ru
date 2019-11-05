@@ -2,12 +2,12 @@
 title: Контейнеры как основа для совместной работы DevOps
 description: Сведения о ключевой роли контейнеров в оптимизации DevOps.
 ms.date: 02/15/2019
-ms.openlocfilehash: 16cccef0545f0da14128e31dc8f7ad78369cf23a
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 8258f4331212d92376d64fef318adcdff492f61f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72394814"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73094502"
 ---
 # <a name="containers-as-the-foundation-for-devops-collaboration"></a>Контейнеры как основа для совместной работы DevOps
 
@@ -51,7 +51,7 @@ ms.locfileid: "72394814"
 
 - Как использовать средства и платформы с открытым исходным кодом для работы с контейнерами в Microsoft Azure?
 
-Если у вас есть ответы на все эти вопросы, вы будете лучше готовы к переносу существующих и новых приложений в контейнеры Docker. 
+Если у вас есть ответы на все эти вопросы, вы будете лучше готовы к переносу существующих и новых приложений в контейнеры Docker.
 
 ## <a name="introduction-to-a-generic-end-to-end-docker-application-life-cycle-workflow"></a>Общие сведения об универсальном комплексном рабочем процессе, связанном с жизненным циклом приложений Docker
 

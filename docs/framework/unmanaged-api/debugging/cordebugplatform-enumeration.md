@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: c5444816-7378-4521-afd3-bf5e4b5303d5
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b8c0644dc247225c510e1c84254417551b490416
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5d66503487e1b997e2b8cc7d3d46e210a4dbbe05
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739665"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132753"
 ---
 # <a name="cordebugplatform-enumeration"></a>Перечисление CorDebugPlatform
-Предоставляет значения целевой платформы, используемые [ICorDebugDataTarget::GetPlatform](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md) метод.  
+Предоставляет значения целевой платформы, используемые методом [ICorDebugDataTarget::](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md) WebMethod.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -41,22 +39,22 @@ typedef enum CorDebugPlatform
 } CorDebugPlatform;  
 ```  
   
-## <a name="members"></a>Участники  
+## <a name="members"></a>Члены  
   
 |Член|Описание|  
 |------------|-----------------|  
 |CORDB_PLATFORM_WINDOWS_X86|Целевая платформа — ОС Windows, работающая на процессоре Intel x86.|  
 |CORDB_PLATFORM_WINDOWS_AMD64|Целевая платформа — 64-разрядная версия ОС Windows, работающая на процессоре AMD64 или Intel EM64T.|  
 |CORDB_PLATFORM_WINDOWS_IA64|Целевая платформа — 32-разрядная версия ОС Windows, работающая на процессоре IA-64.|  
-|CORDB_PLATFORM_MAC_PPC|Целевая платформа — ОС Macintosh, работающая на процессоре PowerPC.|  
-|CORDB_PLATFORM_MAC_X86|Целевая платформа — ОС Macintosh, работающая на процессоре Intel x86.|  
-|CORDB_PLATFORM_WINDOWS_ARM|Целевая платформа — ОС Macintosh, работающая на процессоре Windows ARM.|  
-|CORDB_PLATFORM_MAC_AMD64|Целевая платформа — ОС Macintosh, работающая на процессоре AMD64.|  
+|CORDB_PLATFORM_MAC_PPC|Целевая платформа — это операционная система Macintosh, которая работает на оборудовании PowerPC.|  
+|CORDB_PLATFORM_MAC_X86|Целевая платформа — это операционная система Macintosh, работающая на оборудовании Intel x86.|  
+|CORDB_PLATFORM_WINDOWS_ARM|Целевая платформа — это операционная система Macintosh, которая работает на оборудовании Windows ARM.|  
+|CORDB_PLATFORM_MAC_AMD64|Целевая платформа — это операционная система Macintosh, работающая на оборудовании AMD64.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

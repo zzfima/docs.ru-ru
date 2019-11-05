@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: a7732bfc-689a-4926-88fd-4f81e6f9ed78
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c196eafbc2ff1d851471355a630b860c7c02ba1b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: cedda39aeebc62c6bf43f42ae2daf6f6f515fd27
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67765536"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120273"
 ---
 # <a name="iclrruntimeinfogetprocaddress-method"></a>Метод ICLRRuntimeInfo::GetProcAddress
-Получает адрес заданной функции, которая была экспортирована из общеязыковой среды выполнения (CLR), связанных с этим интерфейсом.  
+Возвращает адрес указанной функции, которая была экспортирована из среды CLR, связанной с этим интерфейсом.  
   
- Этот метод заменяет [GetRealProcAddress](../../../../docs/framework/unmanaged-api/hosting/getrealprocaddress-function.md) функции.  
+ Этот метод заменяет функцию [жетреалпрокаддресс](../../../../docs/framework/unmanaged-api/hosting/getrealprocaddress-function.md) .  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,10 +37,10 @@ HRESULT GetProcAddress(
   
 ## <a name="parameters"></a>Параметры  
  `pszProcName`  
- [in] Имя экспортируемой функции.  
+ окне Имя экспортированной функции.  
   
  `ppProc`  
- [out] Адрес экспортированной функции.  
+ заполняет Адрес экспортированной функции.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Этот метод возвращает следующие конкретные результаты HRESULT, а также ошибки HRESULT, которые указывают на сбой метода.  
@@ -51,17 +49,17 @@ HRESULT GetProcAddress(
 |-------------|-----------------|  
 |S_OK|Метод завершился успешно.|  
 |E_POINTER|`pszProcName` или `ppProc` равно null.|  
-|CLR_E_SHIM_RUNTIMEEXPORT|Указанная функция не экспортированную функцию.|  
+|CLR_E_SHIM_RUNTIMEEXPORT|Указанная функция не является экспортированной функцией.|  
   
-## <a name="remarks"></a>Примечания  
- Этот метод вызывает среды CLR загружено, но не инициализирован.  
+## <a name="remarks"></a>Заметки  
+ Этот метод приводит к тому, что среда CLR загружается, но не инициализируется.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** MetaHost.h  
+ **Заголовок:** Метахост. h  
   
- **Библиотека:** Включена как ресурс в MSCorEE.dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

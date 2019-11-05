@@ -1,17 +1,15 @@
 ---
-title: Пример Обработка исключений при привязке данных
+title: 'Пример: Обработка исключений при привязке данных'
 ms.date: 03/30/2017
 ms.assetid: bd63ed96-9853-46dc-ade5-7bd1b0f39110
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8f7c40d1a179c29c3b92ca37848db6d1383e5d2d
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 7ab5477257bd6d32d901ad01518f7a75081d2a10
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049892"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128461"
 ---
-# <a name="example-handling-exceptions-when-binding-data"></a>Пример Обработка исключений при привязке данных
+# <a name="example-handling-exceptions-when-binding-data"></a>Пример: Обработка исключений при привязке данных
 > [!NOTE]
 > В этом разделе рассматривается предварительная версия программного обеспечения для разработчиков машинного кода .NET. Предварительную версию можно скачать на [веб-сайте Microsoft Connect](https://go.microsoft.com/fwlink/?LinkId=394611) (требуется регистрация).  
   
@@ -39,7 +37,7 @@ Windows_UI_Xaml!DirectUI::PropertyPathListener::ConnectPathStep+0x113
 ```  
   
 ## <a name="what-was-the-app-doing"></a>Что делало это приложение?  
- В базе стека кадры из <xref:Windows.UI.Xaml?displayProperty=nameWithType> пространства имен указывают, что обработчик визуализации XAML запущен.   Использование метода <xref:System.Reflection.PropertyInfo.GetValue%2A?displayProperty=nameWithType>указывает на поиск на основе отражения значения свойства типа, метаданные которого были удалены.  
+ В базе стека кадры из пространства имен <xref:Windows.UI.Xaml?displayProperty=nameWithType> указывают на то, что обработчик визуализации XAML запущен.   Использование метода <xref:System.Reflection.PropertyInfo.GetValue%2A?displayProperty=nameWithType>указывает на поиск на основе отражения значения свойства типа, метаданные которого были удалены.  
   
  На первом шаге предоставления директивы метаданных следовало бы добавить метаданные `serialize` для типа, чтобы его свойства стали доступны:  
   
@@ -57,7 +55,7 @@ Windows_UI_Xaml!DirectUI::PropertyPathListener::ConnectPathStep+0x113
 ## <a name="could-the-code-be-rewritten-to-not-use-reflection"></a>Можно переписать код, чтобы не использовать отражение?  
  Так как привязки данных интенсивно использует отражение, изменение кода, чтобы избежать отражения невозможно.  
   
- Однако, существуют способы задания `ViewModel` странице XAML таким образом, чтобы цепочка инструментов могла связать привязки свойства с нужным типом во время компиляции и сохранить метаданные без использования директивы среды выполнения.  Например, <xref:Windows.UI.Xaml.Data.BindableAttribute?displayProperty=nameWithType> атрибут можно применить к свойствам. Это вынуждает компилятор XAML создать необходимые таблицы подстановок и избежать использования директивы среды выполнения в файле Default.rd.xml.  
+ Однако, существуют способы задания `ViewModel` странице XAML таким образом, чтобы цепочка инструментов могла связать привязки свойства с нужным типом во время компиляции и сохранить метаданные без использования директивы среды выполнения.  Например, можно применить атрибут <xref:Windows.UI.Xaml.Data.BindableAttribute?displayProperty=nameWithType> к свойствам. Это вынуждает компилятор XAML создать необходимые таблицы подстановок и избежать использования директивы среды выполнения в файле Default.rd.xml.  
   
 ## <a name="see-also"></a>См. также
 

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: b12bfcd9-1e29-48bf-9a3d-44bfae5df5e8
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8826644ae3bdfbef76e9143de5f8f449c1555095
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 70aaf32b9da751b49571ab98a95e432b7f84caa9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761214"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130641"
 ---
 # <a name="icordebugmanagedcallbackunloadmodule-method"></a>Метод ICorDebugManagedCallback::UnloadModule
-Уведомляет отладчик о выгрузке общий модуль среды выполнения языка (DLL).  
+Уведомляет отладчик о выгрузке модуля общеязыковой среды выполнения (DLL).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,18 +36,18 @@ HRESULT UnloadModule (
   
 ## <a name="parameters"></a>Параметры  
  `pAppDomain`  
- [in] Указатель на объект ICorDebugAppDomain, который представляет домен приложения, который содержал модуля.  
+ окне Указатель на объект ICorDebugAppDomain, представляющий домен приложения, в котором содержится модуль.  
   
  `pModule`  
- [in] Указатель на объект, представляющий модуль ICorDebugModule.  
+ окне Указатель на объект ICorDebugModule, представляющий модуль.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
  Модуль не должен использоваться после этого вызова.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

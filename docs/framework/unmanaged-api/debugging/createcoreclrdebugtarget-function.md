@@ -16,17 +16,15 @@ helpviewer_keywords:
 ms.assetid: 1cf4ca8e-d9bb-4633-9adf-5e24315bf87a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: dbcf6c842e7eee55609a9ea2a25cda4360f8dc95
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d52757f82a950c382c7c8f2162630eda7d7795e7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739286"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132097"
 ---
 # <a name="createcoreclrdebugtarget-function"></a>Функция CreateCoreClrDebugTarget
-Создает подключение к прокси-серверу отладчика, который выполняется на удаленном компьютере и возвращает [ICoreClrDebugTarget](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-interface.md) объект, который может использоваться для запроса выполняющихся процессов и загруженных сред выполнения на удаленном компьютере.  
+Создает подключение к прокси-серверу отладчика, запущенному на удаленном компьютере, и возвращает объект [ICoreClrDebugTarget](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-interface.md) , который можно использовать для запроса выполняющихся процессов и загрузки сред выполнения на удаленном компьютере.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -42,7 +40,7 @@ HRESULT CreateCoreClrDebugTarget (
  [in] IPv4-адрес удаленного целевого компьютера.  
   
  `ppTarget`  
- [out] Указатель на указатель на [ICoreClrDebugTarget](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-interface.md) объект, который будет создан.  
+ заполняет Указатель на указатель на объект [ICoreClrDebugTarget](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-interface.md) , который будет создан.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  S_OK  
@@ -55,10 +53,10 @@ HRESULT CreateCoreClrDebugTarget (
  Прочие сбои.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CoreClrRemoteDebuggingInterfaces.h  
+ **Заголовок:** Кореклрремотедебуггингинтерфацес. h  
   
- **Library:** mscordbi_macx86.dll  
+ **Библиотека:** mscordbi_macx86. dll  
   
- **Версии платформы .NET framework:** 3.5 с пакетом обновления 1 (SP1)
+ **.NET Framework версии:** 3,5 SP1

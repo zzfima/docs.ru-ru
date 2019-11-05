@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0aba6096-5b38-435c-a72a-86d35db4daef
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8f0643ba9e750e7c64d2dae8eb5744df7bc26931
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5a6e0b009674ff52595aaa0ae4a060f1cdfd1398
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737797"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73089050"
 ---
 # <a name="icordebugappdomain2getfunctionpointertype-method"></a>Метод ICorDebugAppDomain2::GetFunctionPointerType
-Получает указатель на функцию с заданной подписью.  
+Возвращает указатель на функцию с заданной сигнатурой.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,18 +37,18 @@ HRESULT GetFunctionPointerType (
   
 ## <a name="parameters"></a>Параметры  
  `nTypeArgs`  
- [in] Количество аргументов типа для функции.  
+ окне Число аргументов типа для функции.  
   
  `ppTypeArgs`  
- [in] Массив указателей, каждый из которых указывает ICorDebugType объект, представляющий аргумент типа функции. Первый элемент — тип возвращаемого значения; Каждый из остальных элементов является типом параметра.  
+ окне Массив указателей, каждый из которых указывает на объект ICorDebugType, представляющий аргумент типа функции. Первый элемент является типом возвращаемого значения; Каждый из остальных элементов является типом параметра.  
   
  `ppType`  
- [out] Указатель на адрес `ICorDebugType` , представляющий указатель на функцию.  
+ заполняет Указатель на адрес объекта `ICorDebugType`, который представляет указатель на функцию.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

@@ -14,20 +14,18 @@ helpviewer_keywords:
 ms.assetid: 90368606-506e-40df-be1f-8d595159203f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 44241d02051c9bd54f93a19fa6044e4973fdef9e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 6914437b9b238c1d82cf4cc8a480a15dd8dda7ad
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69950261"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73126810"
 ---
 # <a name="iceefilegen-class"></a>Класс ICeeFileGen
 Предоставляет функциональные возможности для создания машинного переносимого исполняемого файла (PE). Интерфейс, как правило, используется компиляторами для создания скомпилированного выходного исполняемого файла.  
   
 > [!NOTE]
-> `ICeeFileGen`поддерживает инфраструктуру .NET Framework и не предназначена для непосредственного использования в коде.  
+> `ICeeFileGen` поддерживает инфраструктуру .NET Framework и не предназначена для непосредственного использования в коде.  
   
  Этот интерфейс является устаревшим и будет удален в следующем выпуске.  
   
@@ -237,11 +235,11 @@ public:
 ```  
   
 ## <a name="requirements"></a>Требования  
- **Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** Ицеефилежен. h  
+ **Заголовок:** Ицеефилежен. h  
   
- **Версия .NET Framework:** 1.0  
+ **Версия .NET Framework:** 1,0  
   
 ## <a name="see-also"></a>См. также
 

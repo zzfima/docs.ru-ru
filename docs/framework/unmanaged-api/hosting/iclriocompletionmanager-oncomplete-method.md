@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 003f6974-9727-4322-bed5-e330d1224d0b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9c3d4674280bf5aa459fec2b195c3164c75c6c3d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b44a71137e39130bb0fe4c303fdff62c76d38cbd
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779632"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141009"
 ---
 # <a name="iclriocompletionmanageroncomplete-method"></a>Метод ICLRIoCompletionManager::OnComplete
-Уведомляет общеязыковой среды выполнения (CLR) о состоянии запроса ввода-вывода, которые были выполнены с помощью вызова [IHostIoCompletionManager::Bind](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-bind-method.md) метод.  
+Уведомляет среду CLR о состоянии запроса ввода-вывода, выполненного с помощью вызова метода [IHostIoCompletionManager:: BIND](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-bind-method.md) .  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,40 +37,40 @@ HRESULT OnComplete (
   
 ## <a name="parameters"></a>Параметры  
  `dwErrorCode`  
- [in] Значение HRESULT, указывающее состояние операции привязки.  
+ окне Значение HRESULT, указывающее состояние операции привязки.  
   
-- Значение S_OK указывает, что операция завершена успешно.  
+- Значение S_OK указывает, что операция выполнена успешно.  
   
 - HOST_E_INTERRUPTED указывает, что вызов прерван до завершения.  
   
-- E_FAIL означает, что произошла неизвестная, неустранимого, разрушительного сбоя.  
+- E_FAIL указывает, что произошла неизвестная, Неустранимая фатальная ошибка.  
   
  `NumberOfBytesTransferred`  
- [in] Число байтов, передаваемых во время обработки запроса ввода-вывода.  
+ окне Число байтов, передаваемых во время обработки запроса ввода-вывода.  
   
  `pvOverlapped`  
- [in] Указатель на `OVERLAPPED` структуры, который был передан в вызов `IHostIoCompletionManager::Bind` метод.  
+ окне Указатель на структуру `OVERLAPPED`, которая была передана в вызов метода `IHostIoCompletionManager::Bind`.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
   
 |HRESULT|Описание|  
 |-------------|-----------------|  
-|S_OK|`OnComplete` успешно возвращен.|  
-|ЗНАЧЕНИЕ HOST_E_CLRNOTAVAILABLE|Среда CLR не был загружен в процесс или находится в состоянии, в котором не может выполнять управляемый код или успешно обработать вызов.|  
-|HOST_E_TIMEOUT|Истекло время ожидания вызова.|  
-|HOST_E_NOT_OWNER|Вызывающий объект не является владельцем блокировки.|  
-|HOST_E_ABANDONED|Событие было отменено с сохранением заблокированный поток или ожидал волокон.|  
-|E_FAIL|Неизвестный Разрушительный сбой. После метод вернет значение E_FAIL, среда CLR больше не использовать в данном процессе. Последующие вызовы к размещению методы возвращают значение HOST_E_CLRNOTAVAILABLE.|  
+|S_OK|`OnComplete` успешно возвращено.|  
+|HOST_E_CLRNOTAVAILABLE|Среда CLR не была загружена в процесс, или среда CLR находится в состоянии, в котором она не может выполнить управляемый код или успешно обработать вызов.|  
+|HOST_E_TIMEOUT|Время ожидания вызова истекло.|  
+|HOST_E_NOT_OWNER|Вызывающий объект не владеет блокировкой.|  
+|HOST_E_ABANDONED|Событие было отменено, пока заблокированный поток или волокно ожидают его.|  
+|E_FAIL|Произошла неизвестная фатальная ошибка. После того как метод вернет значение E_FAIL, среда CLR больше не будет использоваться в процессе. Последующие вызовы методов размещения возвращают HOST_E_CLRNOTAVAILABLE.|  
   
-## <a name="remarks"></a>Примечания  
- Если узел реализует абстракцию завершения ввода-вывода, среда CLR не дает запросов ввода-вывода через узел с помощью методов класса [IHostIoCompletionManager](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-interface.md). Узел, затем вызывает метод `OnComplete` метод для уведомления среды выполнения о результатах таких запросов.  
+## <a name="remarks"></a>Заметки  
+ Если узел реализует абстракцию завершения ввода-вывода, среда CLR делает запросы ввода-вывода через узел с помощью методов [IHostIoCompletionManager](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-interface.md). Затем узел вызывает метод `OnComplete`, чтобы уведомить среду выполнения о результатах таких запросов.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** MSCorEE.h  
+ **Заголовок:** MSCorEE. h  
   
- **Библиотека:** Включена как ресурс в MSCorEE.dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

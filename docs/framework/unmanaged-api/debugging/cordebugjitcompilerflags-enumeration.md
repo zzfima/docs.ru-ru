@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: c0774f70-5bed-45e8-9922-fdad778c4c33
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 39bc1316bb7d8e2aba3390499437aadf263dac07
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 739b491d343c0eba76160c15719069ffae385f46
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739849"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73097974"
 ---
 # <a name="cordebugjitcompilerflags-enumeration"></a>Перечисление CorDebugJITCompilerFlags
 Содержит значения, которые влияют на поведение управляемого JIT-компилятора.  
@@ -38,18 +36,18 @@ typedef enum CorDebugJITCompilerFlags {
 } CorDebugJITCompilerFlags;  
 ```  
   
-## <a name="members"></a>Участники  
+## <a name="members"></a>Члены  
   
 |Член|Описание|  
 |------------|-----------------|  
-|`CORDEBUG_JIT_DEFAULT`|Указывает, что компилятор должен отслеживать данные компиляции и позволяет выполнять оптимизацию.|  
-|`CORDEBUG_JIT_DISABLE_OPTIMIZATION`|Указывает, что компилятор должен отслеживать данные компиляции, но отключает синхронизацию.|  
-|`CORDEBUG_JIT_ENABLE_ENC`|Указывает, что компилятор должен отслеживать данные компиляции, отключает синхронизацию и позволяет изменить и продолжить технологий.|  
+|`CORDEBUG_JIT_DEFAULT`|Указывает, что компилятор должен отслеживанить данные компиляции и допускает оптимизацию.|  
+|`CORDEBUG_JIT_DISABLE_OPTIMIZATION`|Указывает, что компилятор должен отслеживаниь данных компиляции, но отключает оптимизацию.|  
+|`CORDEBUG_JIT_ENABLE_ENC`|Указывает, что компилятор должен выполнять трассировку данных компиляции, отключать оптимизации и включать технологии "изменить и продолжить".|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

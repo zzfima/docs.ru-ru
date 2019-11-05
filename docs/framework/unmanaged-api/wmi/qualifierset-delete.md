@@ -14,14 +14,12 @@ helpviewer_keywords:
 - QualifierSet_Delete function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4bc26a16650a5beecc17898e0421e79536713deb
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: e7bedcb5c56f9976f8dfd2619081971075d0d809
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798333"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127302"
 ---
 # <a name="qualifierset_delete-function"></a>Функция QualifierSet_Delete
 Удаляет указанный квалификатор по имени.  
@@ -53,7 +51,7 @@ HRESULT QualifierSet_Delete (
 
 Следующие значения, возвращаемые этой функцией, определены в файле заголовка *вбемкли. h* , или их можно определить как константы в коде:
 
-|Константа  |Значение  |Описание  |
+|Константа  |значения  |Описание  |
 |---------|---------|---------|
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Недопустимый параметр `wszName`. |
 |`WBEM_E_INVALID_OPERATION` | 0x80041016 | Удаление этого квалификатора недопустимо. |
@@ -61,16 +59,16 @@ HRESULT QualifierSet_Delete (
 |`WBEM_S_NO_ERROR` | 0 | Вызов функции выполнен успешно.  |
 | `WBEM_S_RESET_TO_DEFAULT` | 0x40002 | Локальное переопределение удалено, и исходный квалификатор из родительского объекта возобновил область. |
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
 Эта функция создает оболочку для вызова метода [ивбемкуалифиерсет::D удалить](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-delete) .
 
-Из-за правил распространения квалификаторов определенный квалификатор может быть унаследован от другого объекта и просто переопределен в текущем классе или экземпляре. В этом случае `QualifierSet_Delete` метод сбрасывает квалификатор до исходного наследуемого значения. Функция в этом случае возвращает код `WBEM_S_RESET_TO_DEFAULT`состояния.
+Из-за правил распространения квалификаторов определенный квалификатор может быть унаследован от другого объекта и просто переопределен в текущем классе или экземпляре. В этом случае метод `QualifierSet_Delete` сбрасывает квалификатор до исходного наследуемого значения. Функция в этом случае возвращает код состояния `WBEM_S_RESET_TO_DEFAULT`.
 
 ## <a name="requirements"></a>Требования  
- **Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
- **Заголовок.** WMINet_Utils. idl  
+ **Заголовок:** WMINet_Utils. idl  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   

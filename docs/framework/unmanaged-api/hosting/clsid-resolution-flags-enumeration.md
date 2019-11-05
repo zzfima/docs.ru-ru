@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: cd8b9879-962a-4811-aa46-2e2b6bae0d84
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5274e70c5bead201beb158ee2895415d7ec9e53c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d52f9f0bc2ff27d7849a80a424714aa84d3688fe
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779141"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136996"
 ---
-# <a name="clsidresolutionflags-enumeration"></a>Перечисление CLSID_RESOLUTION_FLAGS
-Содержит значения, указывающие способ разрешения общеязыковой среды выполнения (CLR) `CLSID`.  
+# <a name="clsid_resolution_flags-enumeration"></a>Перечисление CLSID_RESOLUTION_FLAGS
+Содержит значения, указывающие, как общеязыковая среда выполнения (CLR) должна разрешать `CLSID`.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -35,17 +33,17 @@ typedef enum {
 } CLSID_RESOLUTION_FLAGS;  
 ```  
   
-## <a name="members"></a>Участники  
+## <a name="members"></a>Члены  
   
 |Член|Описание|  
 |------------|-----------------|  
-|`CLSID_RESOLUTION_DEFAULT`|Задает поведение по умолчанию.|  
-|`CLSID_RESOLUTION_REGISTERED`|Указывает, что среда выполнения ищет в реестре и применяет политику оболочки.|  
+|`CLSID_RESOLUTION_DEFAULT`|Указывает поведение по умолчанию.|  
+|`CLSID_RESOLUTION_REGISTERED`|Указывает, что среда выполнения выполняет поиск в реестре и применяет политику оболочки совместимости.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** MSCorEE.h  
+ **Заголовок:** MSCorEE. h  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   

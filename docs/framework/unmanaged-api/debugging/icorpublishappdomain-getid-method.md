@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 229437e3-1465-4bd8-8846-9804b2488133
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b1a557191c5649f2ed87cf4f4dfdb4167133e597
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 33a72d9aea09f808d42d1a17a7ec5640d20d7c79
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67774255"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140375"
 ---
 # <a name="icorpublishappdomaingetid-method"></a>Метод ICorPublishAppDomain::GetID
-Возвращает уникальный идентификатор для данного [ICorPublishAppDomain](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-interface.md).  
+Возвращает уникальный идентификатор для этого [ICorPublishAppDomain](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-interface.md).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,15 +35,15 @@ HRESULT GetID (
   
 ## <a name="parameters"></a>Параметры  
  `puId`  
- [out] Указатель на идентификатор домена приложения.  
+ заполняет Указатель на идентификатор домена приложения.  
   
-## <a name="remarks"></a>Примечания  
- Этот идентификатор уникален только в рамках содержащего его процесса.  
+## <a name="remarks"></a>Заметки  
+ Идентификатор уникален только в области содержащего его процесса.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorPub.idl, CorPub.h  
+ **Заголовок:** Корпуб. idl, Корпуб. h  
   
  **Библиотека:** CorGuids.lib  
   

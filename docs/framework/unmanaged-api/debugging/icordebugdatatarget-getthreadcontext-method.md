@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: c8954268-1821-4b23-b665-dbb55f2af31b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2047929c52dbb7b0d780a4ea0f180bae48a3ce79
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 278320391615eddaa8ba878ef87f802f30cddb95
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67750393"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122029"
 ---
 # <a name="icordebugdatatargetgetthreadcontext-method"></a>Метод ICorDebugDataTarget::GetThreadContext
 Возвращает текущий контекст потока для указанного потока.  
@@ -39,24 +37,24 @@ HRESULT GetThreadContext(
   
 ## <a name="parameters"></a>Параметры  
  `dwThreadID`  
- [in] Идентификатор потока, является контекст которого требуется получить. Идентификатор определяется операционной системой.  
+ окне Идентификатор потока, контекст которого должен быть получен. Идентификатор определяется операционной системой.  
   
  `contextFlags`  
- [in] Побитовое сочетание флагов зависят от платформы, которые указывают, какие части контекста следует рассматривать только.  
+ окне Побитовое сочетание флагов, зависящих от платформы, которые указывают, какие части контекста должны считываться.  
   
  `contextSize`  
  [входной] Размер `pContext`.  
   
  `pContext`  
- [out] Буфер, где будет храниться контекст потока.  
+ заполняет Буфер, в котором будет храниться контекст потока.  
   
-## <a name="remarks"></a>Примечания  
- На платформах Windows `pContext` должно быть `CONTEXT` структуры (определяется в заголовке WinNT.h), подходящий для типа компьютера, заданного параметром [ICorDebugDataTarget::GetPlatform](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md) метод. `contextFlags` должен иметь те же значения, что `ContextFlags` поле `CONTEXT` структуры. `CONTEXT` Структуры зависит от процессора; см. Дополнительные сведения см.  
+## <a name="remarks"></a>Заметки  
+ На платформах Windows `pContext` должен быть структурой `CONTEXT` (определенной в WinNT. h), подходящей для типа компьютера, указанного в методе [ICorDebugDataTarget::-Platform](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md) . `contextFlags` должны иметь те же значения, что и поле `ContextFlags` структуры `CONTEXT`. Структура `CONTEXT` зависит от процессора; Дополнительные сведения см. в файле WinNT. h.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

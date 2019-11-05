@@ -7,14 +7,12 @@ dev_langs:
 - vb
 helpviewer_keywords:
 - what's new [.NET Framework]
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 22e1ae495276b0c474ad47f695d8410288289f83
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 22d70d0ee976d9c1a6aabd57e5d13dc70cd2d081
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053727"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73454258"
 ---
 # <a name="whats-new-in-accessibility-in-the-net-framework"></a>Улучшения специальных возможностей в .NET Framework
 
@@ -24,7 +22,7 @@ ms.locfileid: "71053727"
 
 Вы можете включить в приложении функции специальных возможностей, если оно предназначено для .NET Framework 4.7 или более ранней версии, но выполняется на платформе .NET Framework 4.7.1 или более поздней версии. Вы также можете настроить в приложении использование компонентов прежних версий (и не использовать преимущества функций специальных возможностей), если оно предназначено для .NET Framework 4.7.1 или более поздней версии. У каждой версии платформы .NET Framework с функциями специальных возможностей есть специальный переключатель, который можно добавить в элемент [`<AppContextSwitchOverrides>`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) в разделе [`<runtime>`](../configure-apps/file-schema/runtime/index.md) файла конфигурации приложения. Ниже приведены поддерживаемые переключатели:
 
-|Версия|Параметр|
+|Version|Параметр|
 |---|---|
 |.NET Framework 4.7.1|"Switch.UseLegacyAccessibilityFeatures"|
 |.NET Framework 4.7.2|"Switch.UseLegacyAccessibilityFeatures.2"|
@@ -628,7 +626,7 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
 ### <a name="aspnet-web-controls"></a>Веб-элементы управления ASP.NET
 
-Начиная с .NET Framework 4.7.1 и Visual Studio 2017 15.3 в ASP.NET улучшена работа веб-элементов управления ASP.NET с технологией специальных возможностей в Visual Studio. Внесены следующие изменения:
+Начиная с .NET Framework 4.7.1 и Visual Studio 2017 версии 15.3 в ASP.NET улучшена работа веб-элементов управления ASP.NET с технологией специальных возможностей в Visual Studio. Внесены следующие изменения:
 
 - Изменения для реализации отсутствующих шаблонов специальных возможностей пользовательского интерфейса в элементах управления, например в диалоговом окне **Добавить поле** в мастере **представления сведений** или в диалоговом окне **Настройка ListView** в мастере **ListView**.
 
@@ -711,4 +709,4 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
 ## <a name="see-also"></a>См. также
 
-- [Новые возможности .NET Framework](whats-new.md)
+- [Новые возможности .NET Framework](index.md)

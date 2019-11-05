@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: e4412dc2-c338-4cfb-94d8-f682095dd2b1
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1dcbd8bb566331a6a2d4217eeec0441fbd3e6ff6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e76800316885c27c697421d454341d5f0789c611
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739867"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73097951"
 ---
 # <a name="cordebuginternalframetype-enumeration"></a>Перечисление CorDebugInternalFrameType
-Указывает тип кадра стека. Это перечисление используется с [ICorDebugInternalFrame::GetFrameType](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe-getframetype-method.md) метод.  
+Указывает тип кадра стека. Это перечисление используется методом [ICorDebugInternalFrame:: GetFrameType](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe-getframetype-method.md) .  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -45,26 +43,26 @@ typedef enum CorDebugInternalFrameType {
 } CorDebugInternalFrameType;  
 ```  
   
-## <a name="members"></a>Участники  
+## <a name="members"></a>Члены  
   
 |Член|Описание|  
 |------------|-----------------|  
-|`STUBFRAME_NONE`|Значение Null. `ICorDebugInternalFrame::GetFrameType` Метод никогда не возвращает это значение.|  
-|`STUBFRAME_M2U`|Кадр управляемого к неуправляемому заглушки.|  
-|`STUBFRAME_U2M`|Заглушки неуправляемого в управляемый фрейм.|  
+|`STUBFRAME_NONE`|Значение Null. Метод `ICorDebugInternalFrame::GetFrameType` никогда не возвращает это значение.|  
+|`STUBFRAME_M2U`|Фрейм заглушки "управляемый-к-неуправляемый".|  
+|`STUBFRAME_U2M`|Неуправляемый фрейм заглушки.|  
 |`STUBFRAME_APPDOMAIN_TRANSITION`|Переход между доменами приложений.|  
 |`STUBFRAME_LIGHTWEIGHT_FUNCTION`|Вызов упрощенного метода.|  
 |`STUBFRAME_FUNC_EVAL`|Начало вычисления функции.|  
-|`STUBFRAME_INTERNALCALL`|Внутренний вызов в среду.|  
+|`STUBFRAME_INTERNALCALL`|Внутренний вызов среды CLR.|  
 |`STUBFRAME_CLASS_INIT`|Начало инициализации класса.|  
-|`STUBFRAME_EXCEPTION`|Исключение, создается исключение.|  
-|`STUBFRAME_SECURITY`|Фрейм, используемый для управления доступом для кода.|  
-|`STUBFRAME_JIT_COMPILATION`|Среда выполнения выполняет JIT-компиляцию метода.|  
+|`STUBFRAME_EXCEPTION`|Порождается исключение.|  
+|`STUBFRAME_SECURITY`|Кадр, используемый для управления доступом для кода.|  
+|`STUBFRAME_JIT_COMPILATION`|Среда выполнения — это JIT-компиляция метода.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

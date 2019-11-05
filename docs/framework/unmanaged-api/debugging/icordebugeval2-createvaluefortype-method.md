@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: ea38ae20-7e0a-427a-be77-d78fae719d82
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9ffddb8242b6627239a99bd9223b98762910b831
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 20315dfc426b63f2d526f3481756e165b388b41e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67753240"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137610"
 ---
 # <a name="icordebugeval2createvaluefortype-method"></a>Метод ICorDebugEval2::CreateValueForType
-Возвращает указатель на новый ICorDebugValue указанного типа, с начальным значением, равным нулю или null.  
+Возвращает указатель на новый объект ICorDebugValue указанного типа с начальным значением нуль или null.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,20 +36,20 @@ HRESULT CreateValueForType (
   
 ## <a name="parameters"></a>Параметры  
  `pType`  
- [in] Указатель на объект, представляющий тип ICorDebugType.  
+ окне Указатель на объект ICorDebugType, представляющий тип.  
   
  `ppValue`  
- [out] Указатель на адрес `ICorDebugValue` объект, представляющий значение.  
+ заполняет Указатель на адрес объекта `ICorDebugValue`, представляющего значение.  
   
-## <a name="remarks"></a>Примечания  
- `CreateValueForType` обобщает [ICorDebugEval::CreateValue](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-createvalue-method.md) , позволяя указывать тип произвольный объект, включая созданный типы например `List<int>`. Этот метод предназначена исключительно для создания значения, который может быть передан на вычисление функции.  
+## <a name="remarks"></a>Заметки  
+ `CreateValueForType` обобщает [ICorDebugEval:: креатевалуе](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-createvalue-method.md) , позволяя указать произвольный тип объекта, включая сконструированные типы, такие как `List<int>`. Единственная цель этого метода — создать значение, которое может быть передано в вычисление функции.  
   
  Тип должен быть классом или типом значения. Этот метод нельзя использовать для создания значений массива или строковых значений.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

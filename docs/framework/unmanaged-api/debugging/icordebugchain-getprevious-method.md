@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 58eed4c8-d80c-4c6a-a875-967a90dd926c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 31c795c2fbbfdc45b6e1aac6684f730f55fc106a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c7598a9d93631ca93187886fd8929ba10726dad7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67746414"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124737"
 ---
 # <a name="icordebugchaingetprevious-method"></a>Метод ICorDebugChain::GetPrevious
-Получает предыдущий цепочки кадров для потока.  
+Возвращает предыдущую цепочку кадров для потока.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,12 +35,12 @@ HRESULT GetPrevious (
   
 ## <a name="parameters"></a>Параметры  
  `ppChain`  
- [out] Указатель на адрес ICorDebugChain объект, представляющий предыдущий цепочки кадров для данного потока. Если эта цепочка является первой, `ppChain` имеет значение null.  
+ заполняет Указатель на адрес объекта ICorDebugChain, представляющий предыдущую цепочку кадров для данного потока. Если цепочка является первой, `ppChain` имеет значение null.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

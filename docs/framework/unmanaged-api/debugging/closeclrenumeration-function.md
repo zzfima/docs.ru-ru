@@ -16,14 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5e3c3958-80bb-43b1-a96b-dd3e6dbd9cd7
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3a05a779d4a56eb8f881da1824d5ffaa363b5a01
-ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
+ms.openlocfilehash: 1d42292705dae03e9bf1a1555508dfb69cebde82
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274283"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132438"
 ---
 # <a name="closeclrenumeration-function"></a>Функция CloseCLREnumeration
 Закрывает все допустимые события продолжения запуска среды CLR, расположенные в массиве дескрипторов, возвращаемых [функцией EnumerateCLRs](enumerateclrs-function.md), и освобождает память для массивов дескрипторов и строковых путей.  
@@ -59,10 +57,10 @@ HRESULT CloseCLREnumeration (
  Функции не удалось освободить память для массивов `pHandleArray` и `pStringArray`.  
   
 ## <a name="requirements"></a>Требования  
- **Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
  **Заголовок:** dbgshim. h  
   
  **Библиотека:** dbgshim. dll  
   
- **.NET Framework версии:** 3.5 с пакетом обновления 1 (SP1)
+ **.NET Framework версии:** 3,5 SP1

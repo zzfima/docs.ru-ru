@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 72ea68b4-689f-4733-9416-9664b75e8892
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 46dab35c44e59a149822005575c83c13e9350455
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: cc5324683daa9a02a6a89b2a3fb57ee9fd5dbe72
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67758545"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136951"
 ---
-# <a name="corexemain2-function"></a>Функция _CorExeMain2
-Выполняет точку входа в указанном коде отображения памяти. Эта функция вызывается загрузчиком операционной системы.  
+# <a name="_corexemain2-function"></a>Функция _CorExeMain2
+Выполняет точку входа в указанном коде, сопоставленном с памятью. Эта функция вызывается загрузчиком операционной системы.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,26 +38,26 @@ __int32 STDMETHODCALLTYPE _CorExeMain2 (
   
 ## <a name="parameters"></a>Параметры  
  `pUnmappedPE`  
- [in] Указатель на код, размещенный в памяти.  
+ окне Указатель на код, сопоставленный с памятью.  
   
  `cUnmappedPE`  
- [in] Число элементов `pUnmappedPE` может содержать.  
+ окне Количество элементов, которые `pUnmappedPE` могут храниться.  
   
  `pImageNameIn`  
- [in] Указатель на имя исполняемого образа.  
+ окне Указатель на имя исполняемого образа.  
   
  `pLoadersFileName`  
- [in] Имя файла загрузчика.  
+ окне Имя файла загрузчика.  
   
  `pCmdLine`  
- [in] Параметры командной строки, если таковые имеются.  
+ окне Параметры командной строки, если они есть.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** Cor.h  
+ **Заголовок:** COR. h  
   
- **Библиотека:** Включена как ресурс в MsCorEE.dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

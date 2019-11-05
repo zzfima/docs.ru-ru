@@ -17,17 +17,17 @@ helpviewer_keywords:
 - join clause [LINQ in C#]
 - group clause [LINQ in C#]
 ms.assetid: a7ea3421-1cf4-4df7-832a-aa22fe6379e9
-ms.openlocfilehash: 013e1960e6c5721e0bd7ce6998848ddce15a4e4d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 361101258caca763502f92d897866c75bc8d7da2
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69924397"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73418722"
 ---
 # <a name="basic-linq-query-operations-c"></a>Основные операции запросов LINQ (C#)
 В этом разделе содержится краткое описание выражений запроса [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] и некоторые типичные операции, выполняемые в запросе. Более подробные сведения приводятся в следующих разделах:  
   
- [Выражения запросов LINQ](../../linq-query-expressions/index.md)  
+ [Выражения запросов LINQ](../../../linq/index.md)  
   
  [Общие сведения о стандартных операторах запроса (C#)](./standard-query-operators-overview.md)  
   
@@ -101,7 +101,7 @@ from order in Customer.Orders...
   
 ## <a name="see-also"></a>См. также
 
-- [Выражения запросов LINQ](../../linq-query-expressions/index.md)
+- [Выражения запросов LINQ](../../../linq/index.md)
 - [Пошаговое руководство: Написание запросов на C#](./walkthrough-writing-queries-linq.md)
 - [Ключевые слова запроса (LINQ)](../../../language-reference/keywords/query-keywords.md)
 - [Анонимные типы](../../classes-and-structs/anonymous-types.md)

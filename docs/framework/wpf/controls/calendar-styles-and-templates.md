@@ -9,115 +9,115 @@ helpviewer_keywords:
 - Calendar [WPF], styles and templates
 - ControlTemplate [WPF], Calendar
 ms.assetid: f4fcf046-7a8f-41b8-b5a8-534b64e0345c
-ms.openlocfilehash: 18bef548b11f1a680c1361027b86f6952bedaad0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 49d9ced42572ac06a4ff824ec41a59c14497d215
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61912448"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460926"
 ---
 # <a name="calendar-styles-and-templates"></a>Стили и шаблоны элемента Calendar
-В этом разделе описываются стили и шаблоны для <xref:System.Windows.Controls.Calendar> элемента управления. Вы можете изменить значение по умолчанию <xref:System.Windows.Controls.ControlTemplate> предоставить уникальный внешний вид элемента управления. Подробнее см. в разделе [Настройка внешнего вида существующего элемента управления путем создания объекта ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
+В этом разделе описываются стили и шаблоны для элемента управления <xref:System.Windows.Controls.Calendar>. Можно изменить <xref:System.Windows.Controls.ControlTemplate> по умолчанию, чтобы обеспечить уникальность внешнего вида элемента управления. Подробнее см. в разделе [Настройка внешнего вида существующего элемента управления путем создания объекта ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
   
 ## <a name="calendar-parts"></a>Элементы календаря  
- В следующей таблице перечислены именованные части <xref:System.Windows.Controls.Calendar> элемента управления.  
+ В следующей таблице перечислены именованные части для элемента управления <xref:System.Windows.Controls.Calendar>.  
   
-|Отделение|Тип|Описание|  
+|Отделение|Type|Описание|  
 |-|-|-|  
-|PART_CalendarItem|<xref:System.Windows.Controls.Primitives.CalendarItem>|Текущий отображаемый месяц или год в <xref:System.Windows.Controls.Calendar>.|  
-|PART_Root|<xref:System.Windows.Controls.Panel>|Панель, содержащую <xref:System.Windows.Controls.Primitives.CalendarItem>.|  
+|PART_CalendarItem|<xref:System.Windows.Controls.Primitives.CalendarItem>|Отображаемый в данный момент месяц или год на <xref:System.Windows.Controls.Calendar>.|  
+|PART_Root|<xref:System.Windows.Controls.Panel>|Панель, содержащая <xref:System.Windows.Controls.Primitives.CalendarItem>.|  
   
 ## <a name="calendar-states"></a>Состояния календаря  
- В следующей таблице перечислены визуальные состояния <xref:System.Windows.Controls.Calendar> элемента управления.  
+ В следующей таблице перечислены визуальные состояния для элемента управления <xref:System.Windows.Controls.Calendar>.  
   
 |Имя VisualState|Имя VisualStateGroup|Описание|  
 |----------------------|---------------------------|-----------------|  
-|Valid|ValidationStates|Элемент управления использует <xref:System.Windows.Controls.Validation> класс и <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> присоединенное свойство `false`.|  
-|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Присоединенное свойство `true` имеет элемент управления имеет фокус.|  
-|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Присоединенное свойство `true` имеет элемент управления не имеет фокуса.|  
+|Valid|ValidationStates|Элемент управления использует класс <xref:System.Windows.Controls.Validation>, а <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> присоединенным свойством является `false`.|  
+|InvalidFocused|ValidationStates|Присоединенное <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> свойство имеет `true` элемент управления имеет фокус.|  
+|InvalidUnfocused|ValidationStates|Присоединенное <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> свойство имеет `true` элемент управления не имеет фокуса.|  
   
-## <a name="calendaritem-parts"></a>CalendarItem частей  
- В следующей таблице перечислены именованные части <xref:System.Windows.Controls.Primitives.CalendarItem> элемента управления.  
+## <a name="calendaritem-parts"></a>Календаритем части  
+ В следующей таблице перечислены именованные части для элемента управления <xref:System.Windows.Controls.Primitives.CalendarItem>.  
   
-|Отделение|Тип|Описание|  
+|Отделение|Type|Описание|  
 |-|-|-|  
-|PART_Root|<xref:System.Windows.FrameworkElement>|Корневой элемент управления.|  
-|PART_PreviousButton|<xref:System.Windows.Controls.Button>|Кнопка, которая отображает предыдущую страницу календаря, при щелчке.|  
-|PART_NextButton|<xref:System.Windows.Controls.Button>|Кнопка, которая отображает следующую страницу календаря, при щелчке.|  
-|PART_HeaderButton|<xref:System.Windows.Controls.Button>|Кнопка, которая позволяет переключаться между режим месяц, год режим и режим десятилетия.|  
-|PART_MonthView|<xref:System.Windows.Controls.Grid>|Размещает содержимое в режиме «month».|  
-|PART_YearView|<xref:System.Windows.Controls.Grid>|Размещает содержимое в режиме год или десятилетие.|  
-|PART_DisabledVisual|<xref:System.Windows.FrameworkElement>|Перекрытие отключенном состоянии.|  
-|DayTitleTemplate|<xref:System.Windows.DataTemplate>|<xref:System.Windows.DataTemplate> , Описывает визуальную структуру.|  
+|PART_Root|<xref:System.Windows.FrameworkElement>|Корень элемента управления.|  
+|PART_PreviousButton|<xref:System.Windows.Controls.Button>|Кнопка, отображающая предыдущую страницу календаря при ее щелчке.|  
+|PART_NextButton|<xref:System.Windows.Controls.Button>|Кнопка, отображающая следующую страницу календаря при ее нажатии.|  
+|PART_HeaderButton|<xref:System.Windows.Controls.Button>|Кнопка, позволяющая переключение между режимом месяца, режимом года и режимом десятилетия.|  
+|PART_MonthView|<xref:System.Windows.Controls.Grid>|Размещает содержимое в режиме «в месяц».|  
+|PART_YearView|<xref:System.Windows.Controls.Grid>|Размещает содержимое в режиме года или десятилетия.|  
+|PART_DisabledVisual|<xref:System.Windows.FrameworkElement>|Наложение для отключенного состояния.|  
+|дайтитлетемплате|<xref:System.Windows.DataTemplate>|<xref:System.Windows.DataTemplate>, описывающий визуальную структуру.|  
   
-## <a name="calendaritem-states"></a>CalendarItem состояний  
- В следующей таблице перечислены визуальные состояния <xref:System.Windows.Controls.Primitives.CalendarItem> элемента управления.  
+## <a name="calendaritem-states"></a>Состояния Календаритем  
+ В следующей таблице перечислены визуальные состояния для элемента управления <xref:System.Windows.Controls.Primitives.CalendarItem>.  
   
 |Имя VisualState|Имя VisualStateGroup|Описание|  
 |-|-|-|  
-|Состояние норм.|CommonStates|Состояние по умолчанию.|  
-|Отключенное состояние|CommonStates|Состояние календаря при <xref:System.Windows.UIElement.IsEnabled%2A> свойство `false`.|  
-|Valid|ValidationStates|Элемент управления использует <xref:System.Windows.Controls.Validation> класс и <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> присоединенное свойство `false`.|  
-|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Присоединенное свойство `true` имеет элемент управления имеет фокус.|  
-|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Присоединенное свойство `true` имеет элемент управления не имеет фокуса.|  
-|Valid|ValidationStates|Элемент управления использует <xref:System.Windows.Controls.Validation> класс и <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> присоединенное свойство `false`.|  
-|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Присоединенное свойство `true` имеет элемент управления имеет фокус.|  
-|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Присоединенное свойство `true` имеет элемент управления не имеет фокуса.|  
+|Нормальное состояние|CommonStates|Состояние по умолчанию.|  
+|Отключенное состояние|CommonStates|Состояние календаря, когда свойство <xref:System.Windows.UIElement.IsEnabled%2A> `false`.|  
+|Valid|ValidationStates|Элемент управления использует класс <xref:System.Windows.Controls.Validation>, а <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> присоединенным свойством является `false`.|  
+|InvalidFocused|ValidationStates|Присоединенное <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> свойство имеет `true` элемент управления имеет фокус.|  
+|InvalidUnfocused|ValidationStates|Присоединенное <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> свойство имеет `true` элемент управления не имеет фокуса.|  
+|Valid|ValidationStates|Элемент управления использует класс <xref:System.Windows.Controls.Validation>, а <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> присоединенным свойством является `false`.|  
+|InvalidFocused|ValidationStates|Присоединенное <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> свойство имеет `true` элемент управления имеет фокус.|  
+|InvalidUnfocused|ValidationStates|Присоединенное <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> свойство имеет `true` элемент управления не имеет фокуса.|  
   
-## <a name="calendardaybutton-parts"></a>CalendarDayButton частей  
- <xref:System.Windows.Controls.Primitives.CalendarDayButton> Управления не имеет частей с именами.  
+## <a name="calendardaybutton-parts"></a>Календардайбуттон части  
+ Элемент управления <xref:System.Windows.Controls.Primitives.CalendarDayButton> не имеет именованных частей.  
   
-## <a name="calendardaybutton-states"></a>CalendarDayButton состояний  
- В следующей таблице перечислены визуальные состояния <xref:System.Windows.Controls.Primitives.CalendarDayButton> элемента управления.  
-  
-|Имя VisualState|Имя VisualStateGroup|Описание|  
-|-|-|-|  
-|Норм.|CommonStates|Состояние по умолчанию.|  
-|Отключено|CommonStates|<xref:System.Windows.Controls.Primitives.CalendarDayButton> Отключена.|  
-|MouseOver|CommonStates|Указатель мыши наведен на <xref:System.Windows.Controls.Primitives.CalendarDayButton>.|  
-|Нажато|CommonStates|<xref:System.Windows.Controls.Primitives.CalendarDayButton> Нажата.|  
-|Selected|SelectionStates|Кнопка нажата.|  
-|Unselected|SelectionStates|Кнопка не выбрана.|  
-|CalendarButtonFocused|CalendarButtonFocusStates|Кнопка имеет фокус.|  
-|CalendarButtonUnfocused|CalendarButtonFocusStates|Кнопка имеет фокус.|  
-|Focused|FocusStates|Кнопка имеет фокус.|  
-|Без фокуса ввода|FocusStates|Кнопка имеет фокус.|  
-|Активная|ActiveStates|Кнопка активна.|  
-|Неактивно|ActiveStates|Кнопка будет неактивна.|  
-|RegularDay|DayStates|Кнопки не представляет <xref:System.DateTime.Today%2A?displayProperty=nameWithType>.|  
-|Сегодня|DayStates|Кнопка представляет <xref:System.DateTime.Today%2A?displayProperty=nameWithType>.|  
-|NormalDay|BlackoutDayStates|Кнопка представляет день, который может быть выбран.|  
-|BlackoutDay|BlackoutDayStates|Кнопка представляет день, который не может быть выбран.|  
-|Valid|ValidationStates|Элемент управления использует <xref:System.Windows.Controls.Validation> класс и <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> присоединенное свойство `false`.|  
-|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Присоединенное свойство `true` имеет элемент управления имеет фокус.|  
-|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Присоединенное свойство `true` имеет элемент управления не имеет фокуса.|  
-  
-## <a name="calendarbutton-parts"></a>CalendarButton частей  
- <xref:System.Windows.Controls.Primitives.CalendarButton> Управления не имеет частей с именами.  
-  
-## <a name="calendarbutton-states"></a>CalendarButton состояний  
- В следующей таблице перечислены визуальные состояния <xref:System.Windows.Controls.Primitives.CalendarButton> элемента управления.  
+## <a name="calendardaybutton-states"></a>Состояния Календардайбуттон  
+ В следующей таблице перечислены визуальные состояния для элемента управления <xref:System.Windows.Controls.Primitives.CalendarDayButton>.  
   
 |Имя VisualState|Имя VisualStateGroup|Описание|  
 |-|-|-|  
 |Норм.|CommonStates|Состояние по умолчанию.|  
-|Отключено|CommonStates|<xref:System.Windows.Controls.Primitives.CalendarButton> Отключена.|  
-|MouseOver|CommonStates|Указатель мыши наведен на <xref:System.Windows.Controls.Primitives.CalendarButton>.|  
-|Нажато|CommonStates|<xref:System.Windows.Controls.Primitives.CalendarButton> Нажата.|  
-|Selected|SelectionStates|Кнопка нажата.|  
+|Отключено.|CommonStates|<xref:System.Windows.Controls.Primitives.CalendarDayButton> отключена.|  
+|MouseOver|CommonStates|Указатель мыши располагается на <xref:System.Windows.Controls.Primitives.CalendarDayButton>.|  
+|Нажато|CommonStates|Нажата <xref:System.Windows.Controls.Primitives.CalendarDayButton>.|  
+|Выбранные|SelectionStates|Кнопка выбрана.|  
 |Unselected|SelectionStates|Кнопка не выбрана.|  
-|CalendarButtonFocused|CalendarButtonFocusStates|Кнопка имеет фокус.|  
-|CalendarButtonUnfocused|CalendarButtonFocusStates|Кнопка имеет фокус.|  
+|календарбуттонфокусед|календарбуттонфокусстатес|Кнопка имеет фокус.|  
+|календарбуттонунфокусед|календарбуттонфокусстатес|Кнопка не имеет фокуса.|  
 |Focused|FocusStates|Кнопка имеет фокус.|  
-|Без фокуса ввода|FocusStates|Кнопка имеет фокус.|  
-|Активная|ActiveStates|Кнопка активна.|  
-|Неактивно|ActiveStates|Кнопка будет неактивна.|  
-|Valid|ValidationStates|Элемент управления использует <xref:System.Windows.Controls.Validation> класс и <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> присоединенное свойство `false`.|  
-|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Присоединенное свойство `true` имеет элемент управления имеет фокус.|  
-|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Присоединенное свойство `true` имеет элемент управления не имеет фокуса.|  
+|Без фокуса ввода|FocusStates|Кнопка не имеет фокуса.|  
+|Активная|активестатес|Кнопка активна.|  
+|Неактивно|активестатес|Кнопка неактивна.|  
+|регулардай|дайстатес|Кнопка не представляет <xref:System.DateTime.Today%2A?displayProperty=nameWithType>.|  
+|Сегодня|дайстатес|Кнопка представляет <xref:System.DateTime.Today%2A?displayProperty=nameWithType>.|  
+|нормалдай|блаккаутдайстатес|Кнопка представляет день, который можно выбрать.|  
+|блаккаутдай|блаккаутдайстатес|Кнопка представляет день, который не может быть выбран.|  
+|Valid|ValidationStates|Элемент управления использует класс <xref:System.Windows.Controls.Validation>, а <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> присоединенным свойством является `false`.|  
+|InvalidFocused|ValidationStates|Присоединенное <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> свойство имеет `true` элемент управления имеет фокус.|  
+|InvalidUnfocused|ValidationStates|Присоединенное <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> свойство имеет `true` элемент управления не имеет фокуса.|  
   
-## <a name="calendar-controltemplate-example"></a>Пример шаблона элемента управления Calendar  
- В следующем примере показано определение <xref:System.Windows.Controls.ControlTemplate> для <xref:System.Windows.Controls.Calendar> управления и связанных типов.  
+## <a name="calendarbutton-parts"></a>Календарбуттон части  
+ Элемент управления <xref:System.Windows.Controls.Primitives.CalendarButton> не имеет именованных частей.  
+  
+## <a name="calendarbutton-states"></a>Состояния Календарбуттон  
+ В следующей таблице перечислены визуальные состояния для элемента управления <xref:System.Windows.Controls.Primitives.CalendarButton>.  
+  
+|Имя VisualState|Имя VisualStateGroup|Описание|  
+|-|-|-|  
+|Норм.|CommonStates|Состояние по умолчанию.|  
+|Отключено.|CommonStates|<xref:System.Windows.Controls.Primitives.CalendarButton> отключена.|  
+|MouseOver|CommonStates|Указатель мыши располагается на <xref:System.Windows.Controls.Primitives.CalendarButton>.|  
+|Нажато|CommonStates|Нажата <xref:System.Windows.Controls.Primitives.CalendarButton>.|  
+|Выбранные|SelectionStates|Кнопка выбрана.|  
+|Unselected|SelectionStates|Кнопка не выбрана.|  
+|календарбуттонфокусед|календарбуттонфокусстатес|Кнопка имеет фокус.|  
+|календарбуттонунфокусед|календарбуттонфокусстатес|Кнопка не имеет фокуса.|  
+|Focused|FocusStates|Кнопка имеет фокус.|  
+|Без фокуса ввода|FocusStates|Кнопка не имеет фокуса.|  
+|Активная|активестатес|Кнопка активна.|  
+|Неактивно|активестатес|Кнопка неактивна.|  
+|Valid|ValidationStates|Элемент управления использует класс <xref:System.Windows.Controls.Validation>, а <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> присоединенным свойством является `false`.|  
+|InvalidFocused|ValidationStates|Присоединенное <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> свойство имеет `true` элемент управления имеет фокус.|  
+|InvalidUnfocused|ValidationStates|Присоединенное <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> свойство имеет `true` элемент управления не имеет фокуса.|  
+  
+## <a name="calendar-controltemplate-example"></a>Пример ControlTemplate для календаря  
+ В следующем примере показано, как определить <xref:System.Windows.Controls.ControlTemplate> для элемента управления <xref:System.Windows.Controls.Calendar> и связанных типов.  
   
  [!code-xaml[ControlTemplateExamples#Calendar](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/calendar.xaml#calendar)]  
   
@@ -133,5 +133,5 @@ ms.locfileid: "61912448"
 - <xref:System.Windows.Controls.ControlTemplate>
 - [Стили и шаблоны элемента управления](control-styles-and-templates.md)
 - [Настройка элементов управления](control-customization.md)
-- [Стилизация и использование шаблонов](styling-and-templating.md)
+- [Стилизация и использование шаблонов](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
 - [Настройка внешнего вида существующего элемента управления путем создания объекта ControlTemplate](customizing-the-appearance-of-an-existing-control.md)

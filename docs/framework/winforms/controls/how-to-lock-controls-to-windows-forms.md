@@ -1,21 +1,21 @@
 ---
-title: Практическое руководство. Прикрепление элементов управления в формах Windows Forms
+title: Практическое руководство. Блокирование элементов управления в формах Windows Forms.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms controls, locking
 - controls [Windows Forms], locking
 ms.assetid: 94efe0d2-c14e-4d14-b903-63ea9b07e290
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: f6dd079331c6c1883839efe5c6cb127044380fd2
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: d157ddc8be4b5fa0057241b562e76b566e8dad99
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69987469"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458343"
 ---
-# <a name="how-to-lock-controls-to-windows-forms"></a>Практическое руководство. Блокировка элементов управления на Windows Forms
+# <a name="how-to-lock-controls-to-windows-forms"></a>Руководство. Блокировка элементов управления в Windows Forms
 
 При проектировании пользовательского интерфейса приложения Windows можно заблокировать элементы управления после их правильного позиционирования, чтобы случайно не перемещать их или изменять их размер при настройке других свойств.
 
@@ -23,7 +23,7 @@ ms.locfileid: "69987469"
 
 ## <a name="to-lock-a-control"></a>Блокировка элемента управления
 
-В окне **Свойства** в Visual Studio выберите свойство заблокировано и выберите **значение true**. (Двойной щелчок по имени переключает параметр свойства.)
+В окне **Свойства** в Visual Studio выберите свойство **заблокировано** и выберите **значение true**. (Двойной щелчок по имени переключает параметр свойства.)
 
 Также можно щелкнуть элемент управления правой кнопкой мыши и выбрать пункт **Блокировать элементы управления**.
 
@@ -45,7 +45,7 @@ ms.locfileid: "69987469"
 
 ## <a name="to-unlock-locked-controls-individually"></a>Разблокирование заблокированных элементов управления по отдельности
 
-В окне **Свойства** выберите свойство заблокировано и нажмите кнопку **false**. (Двойной щелчок по имени переключает параметр свойства.)
+В окне **Свойства** выберите свойство **заблокировано** и нажмите кнопку **false**. (Двойной щелчок по имени переключает параметр свойства.)
 
 ## <a name="see-also"></a>См. также
 

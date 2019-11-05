@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6b791351-bcc5-4ddd-9cab-eff2f7dd5142
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b4e8b1a76bcc56424e61991d36c94c5f2dfab8aa
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3c11a0547ad5acc5613324d7e9d7439d44549dbc
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67745605"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125813"
 ---
 # <a name="icordebugchainenumnext-method"></a>Метод ICorDebugChainEnum::Next
-Получает указанное число экземпляров ICorDebugChain из перечисления, начиная с текущей позиции.  
+Возвращает указанное число экземпляров ICorDebugChain из перечисления, начиная с текущей позиции.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,18 +38,18 @@ HRESULT Next (
   
 ## <a name="parameters"></a>Параметры  
  `celt`  
- [in] Количество `ICorDebugChain` извлекаемых экземпляров.  
+ окне Число извлекаемых экземпляров `ICorDebugChain`.  
   
  `chains`  
- [out] Массив указателей, каждый из которых указывает `ICorDebugChain` , представляющий цепочку.  
+ заполняет Массив указателей, каждый из которых указывает на объект `ICorDebugChain`, представляющий цепочку.  
   
  `pceltFetched`  
- [out] Указатель на число `ICorDebugChain` фактически возвращенных экземпляров. Это значение может иметь значение null Если `celt` — один.  
+ заполняет Указатель на число фактически возвращаемых экземпляров `ICorDebugChain`. Это значение может быть равно null, если `celt` является одним.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

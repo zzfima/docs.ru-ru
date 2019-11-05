@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7137e3d1-1dad-48d8-8c37-16ac816534d3
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e18097dd380ee354e5652886544d40da074f1230
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: db24228de7e8c98fd97f890b1e408515172299b3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67747626"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125671"
 ---
 # <a name="icordebugcodegetcode-method"></a>Метод ICorDebugCode::GetCode
-Получает весь код для указанной функции, отформатированных для Дизассемблированный код. Этот метод был объявлен устаревшим в .NET Framework версии 2.0. Используйте [ICorDebugCode2::GetCodeChunks](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md) вместо этого.  
+Возвращает весь код для указанной функции, отформатированный для дизассемблирования. Этот метод не рекомендуется к использованию в .NET Framework версии 2,0. Вместо этого используйте [ICorDebugCode2:: жеткодечункс](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md) .  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -42,31 +40,31 @@ HRESULT GetCode (
   
 ## <a name="parameters"></a>Параметры  
  `startOffset`  
- [in] Смещение начала функции.  
+ окне Смещение начала функции.  
   
  `endOffset`  
- [in] Смещение конца функции.  
+ окне Смещение конца функции.  
   
  `cBufferAlloc`  
- [in] Размер `buffer` массива, в который будет возвращаться код.  
+ окне Размер массива `buffer`, в который будет возвращен код.  
   
  `buffer`  
- [out] Массив, в которую будет возвращаться код.  
+ заполняет Массив, в который будет возвращен код.  
   
  `pcBufferSize`  
- [out] Число возвращаемых байтов.  
+ заполняет Число возвращаемых байтов.  
   
-## <a name="remarks"></a>Примечания  
- Если код функции поделен на несколько блоков, они объединяются в порядке возрастания смещения машинного кода. Границы инструкций не проверяются.  
+## <a name="remarks"></a>Заметки  
+ Если код функции делится на несколько блоков, они объединяются в порядке возрастания смещения в машинном коде. Границы инструкций не проверяются.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** 1.1, 1.0  
+ **.NET Framework версии:** 1,1, 1,0  
   
 ## <a name="see-also"></a>См. также
 

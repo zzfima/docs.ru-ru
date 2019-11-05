@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - protected keyword [C#]
 ms.assetid: 05ce3794-6675-4025-bddb-eaaa0ec22892
-ms.openlocfilehash: a0420dd10d81c4ae893ab0447244a611091ed7b0
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: f54c3f36e5aeb428815d1c49cd797e559d156ea7
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69601971"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422567"
 ---
 # <a name="protected-c-reference"></a>protected (справочник по C#)
 
@@ -49,7 +49,7 @@ ms.locfileid: "69601971"
 
 ## <a name="c-language-specification"></a>Спецификация языка C#  
 
-Дополнительные сведения см. в разделе [Объявленная доступность](~/_csharplang/spec/basic-concepts.md#declared-accessibility) в [Спецификации языка C#](../language-specification/index.md). Спецификация языка является предписывающим источником информации о синтаксисе и использовании языка C#.
+Дополнительные сведения см. в разделе [Объявленная доступность](~/_csharplang/spec/basic-concepts.md#declared-accessibility) в [Спецификации языка C#](/dotnet/csharp/language-reference/language-specification/introduction). Спецификация языка является предписывающим источником информации о синтаксисе и использовании языка C#.
 
 ## <a name="see-also"></a>См. также
 
@@ -58,7 +58,7 @@ ms.locfileid: "69601971"
 - [Ключевые слова в C#](index.md)
 - [Модификаторы доступа](access-modifiers.md)
 - [Уровни доступности](accessibility-levels.md)
-- [Модификаторы](modifiers.md)
+- [Модификаторы](index.md)
 - [public](public.md)
 - [private](private.md)
 - [internal](internal.md)

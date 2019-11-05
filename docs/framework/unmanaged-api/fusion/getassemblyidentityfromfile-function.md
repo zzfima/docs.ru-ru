@@ -16,17 +16,15 @@ helpviewer_keywords:
 ms.assetid: 2c32da53-76c7-4048-84d0-d05207333004
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2657ac619bb86bc200de9ce229bf82e4339f78d6
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 50ec5a23db4d2460480bcc3e463ecd88e7470bde
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796292"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134523"
 ---
 # <a name="getassemblyidentityfromfile-function"></a>Функция GetAssemblyIdentityFromFile
-Возвращает указатель на `IUnknown` объект с указанным `IID` в сборке по указанному пути к файлу.  
+Возвращает указатель на объект `IUnknown` с указанным `IID` в сборке по указанному пути к файлу.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -43,15 +41,15 @@ HRESULT GetAssemblyIdentityFromFile (
  окне Допустимый путь к запрошенной сборке.  
   
  `riid`  
- окне `IID` Возвращаемый интерфейс.  
+ окне `IID` возвращаемого интерфейса.  
   
  `ppIdentity`  
  заполняет Возвращаемый указатель интерфейса.  
   
 ## <a name="requirements"></a>Требования  
- **Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
- **Заголовок.** Fusion. h  
+ **Заголовок:** Fusion. h  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

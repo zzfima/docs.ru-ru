@@ -1,17 +1,17 @@
 ---
 title: Учебник. Создание модели классификации изображений ML.NET на основе предварительно обученной модели TensorFlow
 description: Узнайте, как передавать знания из существующей модели TensorFlow в новую модель классификации изображений ML.NET. Модель TensorFlow была обучена для классификации изображений по тысячам категорий. Модель ML.NET использует передачу обучения, чтобы классифицировать изображения по меньшему количеству более широких категорий.
-ms.date: 09/30/2019
+ms.date: 10/30/2019
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0612
 author: natke
 ms.author: nakersha
-ms.openlocfilehash: 8ae966330ca85722c72c92e26363d99c7d9de3e7
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: bd25a24e467148c46958b6e7ce7b18e181dab5fd
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71698649"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129602"
 ---
 # <a name="tutorial-generate-an-mlnet-image-classification-model-from-a-pre-trained-tensorflow-model"></a>Учебник. Создание модели классификации изображений ML.NET на основе предварительно обученной модели TensorFlow
 
@@ -39,13 +39,13 @@ ms.locfileid: "71698649"
 
 ## <a name="prerequisites"></a>Предварительные требования
 
-* [Visual Studio 2017 15.6 или более поздней версии](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) с установленной рабочей нагрузкой "Кроссплатформенная разработка .NET Core".
+* [Visual Studio 2017 версии 15.6 или более поздней](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) с установленной рабочей нагрузкой "Кроссплатформенная разработка .NET Core".
 
 * Пакет Nuget для Microsoft.ML 1.3.1.
 * Пакет Nuget для Microsoft.ML.ImageAnalytics 1.3.1.
 * Пакет Nuget для Microsoft.ML.TensorFlow 1.3.1.
 
-* [ZIP-файл каталога ресурсов руководства.](https://download.microsoft.com/download/0/E/5/0E5E0136-21CE-4C66-AC18-9917DED8A4AD/image-classifier-assets.zip)
+* [ZIP-файл каталога ресурсов руководства.](https://github.com/dotnet/samples/blob/master/machine-learning/tutorials/TransferLearningTF/image-classifier-assets.zip)
 
 * [Модель машинного обучения Inception версии 1](https://storage.googleapis.com/download.tensorflow.org/models/inception5h.zip)
 
@@ -100,7 +100,7 @@ ms.locfileid: "71698649"
 
 Алгоритм, реализованный этим инструктором, хорошо работает в задачах с большим количеством признаков, что характерно для модели глубокого обучения, работающей с данными изображений.
 
-### <a name="data"></a>Данные
+### <a name="data"></a>Data
 
 Доступны два источника данных: файл `.tsv` и файлы образов.  Файл `tags.tsv` содержит два столбца: первый определен как `ImagePath`, а во втором указана метка `Label`, соответствующая изображению. В примере файла ниже отсутствует строка заголовка. Сам файл выглядит следующим образом:
 
@@ -137,13 +137,13 @@ toaster2.png    appliance
 
 ### <a name="download-assets"></a>Скачивание ресурсов
 
-1. Скачайте [ZIP-файл каталога с ресурсами проекта](https://download.microsoft.com/download/0/E/5/0E5E0136-21CE-4C66-AC18-9917DED8A4AD/image-classifier-assets.zip) и распакуйте его.
+1. Скачайте [ZIP-файл каталога с ресурсами проекта](https://github.com/dotnet/samples/blob/master/machine-learning/tutorials/TransferLearningTF/image-classifier-assets.zip) и распакуйте его.
 
 1. Скопируйте каталог `assets` в каталог проекта *TransferLearningTF*. Этот каталог и его подкаталоги содержат данные и файлы поддержки (за исключением модели Inception, которую вы скачаете и добавите на следующем шаге), необходимые для работы с этим руководством.
 
 1. Скачайте [модель Inception](https://storage.googleapis.com/download.tensorflow.org/models/inception5h.zip) и распакуйте ее.
 
-1. Скопируйте содержание каталога `inception5h`, который вы распаковали, в каталог `assets/inputs-train/inception` проекта *TransferLearningTF*. Этот каталог содержит модель и дополнительные файлы поддержки, необходимые для работы с этим руководством, как показано на следующем рисунке:
+1. Скопируйте содержание каталога `inception5h`, который вы распаковали, в каталог `assets/inception` проекта *TransferLearningTF*. Этот каталог содержит модель и дополнительные файлы поддержки, необходимые для работы с этим руководством, как показано на следующем рисунке:
 
    ![Содержание каталога Inception](./media/image-classification/inception-files.png)
 
@@ -246,7 +246,7 @@ toaster2.png    appliance
 
     [!code-csharp[PredictSingle](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#PredictSingle)]
 
-    Чтобы получить прогноз, используйте метод [Predict()](xref:Microsoft.ML.PredictionEngine%602.Predict%2A). Класс [PredictionEngine](xref:Microsoft.ML.PredictionEngine%602) представляет собой удобный API, позволяющий осуществить прогнозирование на основе единственного экземпляра данных. [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) не является потокобезопасным. Допустимо использовать в средах прототипов или средах с одним потоком. Для улучшенной производительности и потокобезопасности в рабочей среде используйте службу `PredictionEnginePool`, которая создает [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) объектов [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) для использования во всем приложении. Ознакомьтесь с этим руководством о том, как [использовать `PredictionEnginePool` в ASP.NET Core Web API](https://docs.microsoft.com/en-us/dotnet/machine-learning/how-to-guides/serve-model-web-api-ml-net#register-predictionenginepool-for-use-in-the-application)
+    Чтобы получить прогноз, используйте метод [Predict()](xref:Microsoft.ML.PredictionEngine%602.Predict%2A). Класс [PredictionEngine](xref:Microsoft.ML.PredictionEngine%602) представляет собой удобный API, позволяющий осуществить прогнозирование на основе единственного экземпляра данных. [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) не является потокобезопасным. Допустимо использовать в средах прототипов или средах с одним потоком. Для улучшенной производительности и потокобезопасности в рабочей среде используйте службу `PredictionEnginePool`, которая создает [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) объектов [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) для использования во всем приложении. См. руководство по [использованию `PredictionEnginePool` в веб-API ASP.NET Core](../how-to-guides/serve-model-web-api-ml-net.md#register-predictionenginepool-for-use-in-the-application).
 
     > [!NOTE]
     > Расширение службы `PredictionEnginePool` сейчас доступно в предварительной версии.
@@ -282,7 +282,7 @@ toaster2.png    appliance
 
     [!code-csharp[ScoreTensorFlowModel](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#ScoreTensorFlowModel)]
 
-    Этот этап конвейера загружает модель TensorFlow в память, а затем обрабатывает вектор значений пикселей через сеть модели TensorFlow. Применение входных данных к модели глубокого обучения и формирование выходных данных с помощью модели называется **оценкой**. При полном использовании модели оценка делает вывод или прогноз. 
+    Этот этап конвейера загружает модель TensorFlow в память, а затем обрабатывает вектор значений пикселей через сеть модели TensorFlow. Применение входных данных к модели глубокого обучения и формирование выходных данных с помощью модели называется **оценкой**. При полном использовании модели оценка делает вывод или прогноз.
 
     В этом случае используется вся модель TensorFlow, за исключением последнего слоя, который делает вывод. Выходные данные предпоследнего слоя помечаются как `softmax_2_preactivation`. Выходные данные этого слоя фактически являются вектором признаков, характеризующих исходные входные изображения.
 
@@ -323,7 +323,7 @@ toaster2.png    appliance
     [!code-csharp[LoadAndTransformTestData](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#LoadAndTransformTestData "Load and transform test data")]
 
     Есть несколько примеров изображений, которые можно использовать для оценки модели. Как и данные для обучения, их нужно загрузить в `IDataView`, чтобы модель могла их преобразовать.
-   
+
 1. Добавьте следующий код в метод `GenerateModel()` для оценки модели:
 
     [!code-csharp[Evaluate](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#Evaluate)]
@@ -362,22 +362,14 @@ toaster2.png    appliance
 
     ```console
     =============== Training classification model ===============
-    Image: broccoli.jpg predicted as: food with score: 0.976743
-    Image: pizza.jpg predicted as: food with score: 0.9751652
-    Image: pizza2.jpg predicted as: food with score: 0.9660203
-    Image: teddy2.jpg predicted as: toy with score: 0.9748783
-    Image: teddy3.jpg predicted as: toy with score: 0.9829691
-    Image: teddy4.jpg predicted as: toy with score: 0.9868168
-    Image: toaster.jpg predicted as: appliance with score: 0.9769174
-    Image: toaster2.png predicted as: appliance with score: 0.9800823
+    Image: broccoli2.jpg predicted as: food with score: 0.8955513
+    Image: pizza3.jpg predicted as: food with score: 0.9667718
+    Image: teddy6.jpg predicted as: toy with score: 0.9797683
     =============== Classification metrics ===============
-    LogLoss is: 0.0228266745633507
-    PerClassLogLoss is: 0.0277501705149937 , 0.0186303530571291 , 0.0217359128952187
+    LogLoss is: 0.0653774699265059
+    PerClassLogLoss is: 0.110315812569315 , 0.0204391272836966 , 0
     =============== Making single image classification ===============
-    Image: toaster3.jpg predicted as: appliance with score: 0.9625379
-
-    C:\Program Files\dotnet\dotnet.exe (process 4304) exited with code 0.
-    Press any key to close this window . . .
+    Image: toaster3.jpg predicted as: appliance with score: 0.9646884
     ```
 
 Поздравляем! Вы успешно создали модель машинного обучения для классификации изображений, применив передачу обучения в модель `TensorFlow` в ML.NET.

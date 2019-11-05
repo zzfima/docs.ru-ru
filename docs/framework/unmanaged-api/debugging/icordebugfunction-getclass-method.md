@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 27967230-144f-40d3-9e23-961d0241abd9
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 218818097846709ec92e20f33a0707314edd562a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 887d207aea3de9296107c041816606b2f5947406
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67754745"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124034"
 ---
 # <a name="icordebugfunctiongetclass-method"></a>Метод ICorDebugFunction::GetClass
-Возвращает объект, представляющий класс, членом которых является эта функция ICorDebugClass.  
+Возвращает объект ICorDebugClass, представляющий класс, членом которого является эта функция.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,12 +35,12 @@ HRESULT GetClass (
   
 ## <a name="parameters"></a>Параметры  
  `ppClass`  
- [out] Указатель на адрес `ICorDebugClass` , представляющий класс, или значение null, если эта функция не является членом класса.  
+ заполняет Указатель на адрес объекта `ICorDebugClass`, который представляет класс, или значение null, если эта функция не является членом класса.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

@@ -7,12 +7,12 @@ ms.date: 01/18/2019
 dev_langs:
 - csharp
 - cpp
-ms.openlocfilehash: b174a817e82f9a9f123c79581656cc8e7179b435
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
-ms.translationtype: HT
+ms.openlocfilehash: f4b8402413f4d2f558d8e61ad4f10490dece9835
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929036"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423995"
 ---
 # <a name="customizing-structure-marshaling"></a>Настройка маршалинга структур
 
@@ -26,7 +26,7 @@ ms.locfileid: "70929036"
 
 **✔️ РЕКОМЕНДУЕТСЯ** использовать `LayoutKind.Explicit` для маршалинга только в тех случаях, когда ваша собственная структура также имеет явный макет, например объединение.
 
-**❌ НЕЖЕЛАТЕЛЬНО** использовать `LayoutKind.Explicit` для маршалинга структур на платформах не на базе Windows. Среда выполнения .NET Core не поддерживает передачу явных структур по значению в собственные функции в отличных от Windows 64-разрядных системах на базе процессора Intel или AMD. Но она поддерживает передачу явных структур по ссылке на всех платформах.
+**❌ избегать** использования `LayoutKind.Explicit` при упаковке структур на платформах, отличных от Windows, если необходимо выполнять целевые среды выполнения до .net Core 3,0. Среда выполнения .NET Core до 3,0 не поддерживает передачу явных структур по значению в собственные функции в системах на основе Intel или AMD 64-разрядных систем, отличных от Windows. Но она поддерживает передачу явных структур по ссылке на всех платформах.
 
 ## <a name="customizing-boolean-field-marshaling"></a>Настройка маршалинга логических полей
 

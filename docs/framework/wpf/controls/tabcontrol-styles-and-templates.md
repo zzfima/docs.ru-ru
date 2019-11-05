@@ -9,57 +9,57 @@ helpviewer_keywords:
 - states [WPF], TabControl
 - templates [WPF], TabControl
 ms.assetid: f6b19a30-f10e-4fa1-96ce-f17a54092ab6
-ms.openlocfilehash: e38756c5f266abc16b99f2359f8a87460d5d9450
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 32ee86e2388808739a2c2ff5a02bb40fc641129b
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61790901"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460538"
 ---
 # <a name="tabcontrol-styles-and-templates"></a>Стили и шаблоны элемента TabControl
-В этом разделе описываются стили и шаблоны для <xref:System.Windows.Controls.TabControl> элемента управления. Вы можете изменить значение по умолчанию <xref:System.Windows.Controls.ControlTemplate> предоставить уникальный внешний вид элемента управления. Подробнее см. в разделе [Настройка внешнего вида существующего элемента управления путем создания объекта ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
+В этом разделе описываются стили и шаблоны для элемента управления <xref:System.Windows.Controls.TabControl>. Можно изменить <xref:System.Windows.Controls.ControlTemplate> по умолчанию, чтобы обеспечить уникальность внешнего вида элемента управления. Подробнее см. в разделе [Настройка внешнего вида существующего элемента управления путем создания объекта ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
   
-## <a name="tabcontrol-parts"></a>Части элемента управления TabControl  
- В следующей таблице перечислены именованные части <xref:System.Windows.Controls.TabControl> элемента управления.  
+## <a name="tabcontrol-parts"></a>Части TabControl  
+ В следующей таблице перечислены именованные части для элемента управления <xref:System.Windows.Controls.TabControl>.  
   
-|Отделение|Тип|Описание|  
+|Отделение|Type|Описание|  
 |-|-|-|  
-|PART_SelectedContentHost|<xref:System.Windows.Controls.ContentPresenter>|Объект, отображающий содержимое выбранного в данный момент <xref:System.Windows.Controls.TabItem>.|  
+|PART_SelectedContentHost|<xref:System.Windows.Controls.ContentPresenter>|Объект, который показывает содержимое выбранного в данный момент <xref:System.Windows.Controls.TabItem>.|  
   
- При создании <xref:System.Windows.Controls.ControlTemplate> для <xref:System.Windows.Controls.TabControl>, шаблон может содержать <xref:System.Windows.Controls.ItemsPresenter> в <xref:System.Windows.Controls.ScrollViewer>. ( <xref:System.Windows.Controls.ItemsPresenter> Отображает каждый элемент в <xref:System.Windows.Controls.TabControl>; <xref:System.Windows.Controls.ScrollViewer> дает возможность прокрутки в элементе управления).  Если <xref:System.Windows.Controls.ItemsPresenter> не является прямым потомком <xref:System.Windows.Controls.ScrollViewer>, необходимо предоставить <xref:System.Windows.Controls.ItemsPresenter> имя `ItemsPresenter`.  
+ При создании <xref:System.Windows.Controls.ControlTemplate> для <xref:System.Windows.Controls.TabControl>шаблон может содержать <xref:System.Windows.Controls.ItemsPresenter> в пределах <xref:System.Windows.Controls.ScrollViewer>. (<xref:System.Windows.Controls.ItemsPresenter> отображает каждый элемент в <xref:System.Windows.Controls.TabControl>; <xref:System.Windows.Controls.ScrollViewer> включает прокрутку в элементе управления).  Если <xref:System.Windows.Controls.ItemsPresenter> не является прямым дочерним элементом <xref:System.Windows.Controls.ScrollViewer>, необходимо присвоить <xref:System.Windows.Controls.ItemsPresenter> имя, `ItemsPresenter`.  
   
-## <a name="tabcontrol-states"></a>Состояния элемента управления TabControl  
- В следующей таблице перечислены визуальные состояния <xref:System.Windows.Controls.TabControl> элемента управления.  
+## <a name="tabcontrol-states"></a>Состояния TabControl  
+ В следующей таблице перечислены визуальные состояния для элемента управления <xref:System.Windows.Controls.TabControl>.  
   
 |Имя VisualState|Имя VisualStateGroup|Описание|  
 |----------------------|---------------------------|-----------------|  
 |Норм.|CommonStates|Состояние по умолчанию.|  
-|Отключено|CommonStates|Элемент управления отключен.|  
-|Valid|ValidationStates|Элемент управления использует <xref:System.Windows.Controls.Validation> класс и <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> присоединенное свойство `false`.|  
-|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Присоединенное свойство `true` имеет элемент управления имеет фокус.|  
-|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Присоединенное свойство `true` имеет элемент управления не имеет фокуса.|  
+|Отключено.|CommonStates|Элемент управления отключен.|  
+|Valid|ValidationStates|Элемент управления использует класс <xref:System.Windows.Controls.Validation>, а <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> присоединенным свойством является `false`.|  
+|InvalidFocused|ValidationStates|Присоединенное <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> свойство имеет `true` элемент управления имеет фокус.|  
+|InvalidUnfocused|ValidationStates|Присоединенное <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> свойство имеет `true` элемент управления не имеет фокуса.|  
   
-## <a name="tabitem-parts"></a>TabItem частей  
- <xref:System.Windows.Controls.TabItem> Управления не имеет частей с именами.  
+## <a name="tabitem-parts"></a>TabItem части  
+ Элемент управления <xref:System.Windows.Controls.TabItem> не имеет именованных частей.  
   
-## <a name="tabitem-states"></a>TabItem состояний  
- В следующей таблице перечислены визуальные состояния <xref:System.Windows.Controls.TabItem> элемента управления.  
+## <a name="tabitem-states"></a>Состояния TabItem  
+ В следующей таблице перечислены визуальные состояния для элемента управления <xref:System.Windows.Controls.TabItem>.  
   
 |Имя VisualState|Имя VisualStateGroup|Описание|  
 |----------------------|---------------------------|-----------------|  
 |Норм.|CommonStates|Состояние по умолчанию.|  
 |MouseOver|CommonStates|Указатель мыши расположен над элементом управления.|  
-|Отключено|CommonStates|Элемент управления отключен.|  
+|Отключено.|CommonStates|Элемент управления отключен.|  
 |Focused|FocusStates|Элемент управления имеет фокус.|  
 |Без фокуса ввода|FocusStates|Элемент управления не имеет фокуса.|  
-|Selected|SelectionStates|Элемент управления выбран.|  
+|Выбранные|SelectionStates|Элемент управления выбран.|  
 |Unselected|SelectionStates|Элемент управления не выбран.|  
-|Valid|ValidationStates|Элемент управления использует <xref:System.Windows.Controls.Validation> класс и <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> присоединенное свойство `false`.|  
-|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Присоединенное свойство `true` имеет элемент управления имеет фокус.|  
-|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Присоединенное свойство `true` имеет элемент управления не имеет фокуса.|  
+|Valid|ValidationStates|Элемент управления использует класс <xref:System.Windows.Controls.Validation>, а <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> присоединенным свойством является `false`.|  
+|InvalidFocused|ValidationStates|Присоединенное <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> свойство имеет `true` элемент управления имеет фокус.|  
+|InvalidUnfocused|ValidationStates|Присоединенное <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> свойство имеет `true` элемент управления не имеет фокуса.|  
   
-## <a name="tabcontrol-controltemplate-example"></a>Пример шаблона элемента управления TabControl  
- В следующем примере показано определение <xref:System.Windows.Controls.ControlTemplate> для <xref:System.Windows.Controls.TabControl> и <xref:System.Windows.Controls.TabItem> элементов управления.  
+## <a name="tabcontrol-controltemplate-example"></a>Пример ControlTemplate для элемента TabControl  
+ В следующем примере показано, как определить <xref:System.Windows.Controls.ControlTemplate> для элементов управления <xref:System.Windows.Controls.TabControl> и <xref:System.Windows.Controls.TabItem>.  
   
  [!code-xaml[ControlTemplateExamples#TabControl](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/tabcontrol.xaml#tabcontrol)]  
   
@@ -75,5 +75,5 @@ ms.locfileid: "61790901"
 - <xref:System.Windows.Controls.ControlTemplate>
 - [Стили и шаблоны элемента управления](control-styles-and-templates.md)
 - [Настройка элементов управления](control-customization.md)
-- [Стилизация и использование шаблонов](styling-and-templating.md)
+- [Стилизация и использование шаблонов](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
 - [Настройка внешнего вида существующего элемента управления путем создания объекта ControlTemplate](customizing-the-appearance-of-an-existing-control.md)

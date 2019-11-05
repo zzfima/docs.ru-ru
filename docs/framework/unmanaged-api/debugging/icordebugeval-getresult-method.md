@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 50dbb9af-58a1-41f4-b56d-3da20011884f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b12ba5ad5c85643d1f4c91585cf7abca210d22bd
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 52bfe669d3b078657916554255a11cecfc07d484
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67752936"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73085092"
 ---
 # <a name="icordebugevalgetresult-method"></a>Метод ICorDebugEval::GetResult
-Получает результаты этой оценки.  
+Возвращает результаты этой оценки.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,17 +35,17 @@ HRESULT GetResult (
   
 ## <a name="parameters"></a>Параметры  
  `ppResult`  
- [out] Указатель на адрес объекта ICorDebugValue, представляющий результаты этой оценки, если оценка.  
+ заполняет Указатель на адрес объекта ICorDebugValue, который представляет результаты этой оценки, если вычисление завершается нормально.  
   
-## <a name="remarks"></a>Примечания  
- `GetResult` Метод допустим только в том случае, после завершения оценки.  
+## <a name="remarks"></a>Заметки  
+ Метод `GetResult` действителен только после завершения оценки.  
   
- Если оценка обычно `ppResult` указывает результаты. Если он завершается с исключением, результатом является исключение. Если оценка выполнялась для нового объекта, результатом является ссылка на новый объект.  
+ Если вычисление завершается нормально, `ppResult` указывает результаты. Если оно завершается с исключением, результатом является исключение. Если вычисление выполнялось для нового объекта, результатом является ссылка на новый объект.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

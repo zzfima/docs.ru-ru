@@ -2,14 +2,12 @@
 title: 'Метод метод icordebugsymbolprovider:: GetInstanceFieldSymbols'
 ms.date: 03/30/2017
 ms.assetid: a29b9233-ee67-4b53-b8bc-c00b281e7edb
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b6bba47500b024bc1f2a2be21d461a6f5933f0ca
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0ad8ddd78d963681c0b2f69bf0f211ad464dc7b7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964613"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138877"
 ---
 # <a name="icordebugsymbolprovidergetinstancefieldsymbols-method"></a>Метод метод icordebugsymbolprovider:: GetInstanceFieldSymbols
 Получает символы поля экземпляра, которые соответствуют сигнатуре TypeSpec.  
@@ -42,17 +40,17 @@ HRESULT GetInstanceFieldSymbols(
  `pSymbols`  
  заполняет Указатель на массив [икордебугстатикфиелдсимбол](../../../../docs/framework/unmanaged-api/debugging/icordebugstaticfieldsymbol-interface.md) , содержащий запрошенные символы поля экземпляра.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
   
 > [!NOTE]
 > Этот метод доступен только в машинном коде .NET.  
   
 ## <a name="requirements"></a>Требования  
- **Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug. idl, CorDebug. h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
- **Библиотечная** Коргуидс. lib  
+ **Библиотека:** CorGuids.lib  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

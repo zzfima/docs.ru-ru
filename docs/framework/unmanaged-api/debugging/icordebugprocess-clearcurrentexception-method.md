@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9e02ee1a-e495-4578-bfb5-b946274bede7
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2ad7dd3ae0e547933fdf7d579116dccc62ae579c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 37a7d8fa4439d52db3cddfff22ac6580b19af58a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67766146"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128914"
 ---
 # <a name="icordebugprocessclearcurrentexception-method"></a>Метод ICorDebugProcess::ClearCurrentException
-Очищает текущее неуправляемое исключение в данном потоке.  
+Очищает текущее неуправляемое исключение для данного потока.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -35,17 +33,17 @@ HRESULT ClearCurrentException([in] DWORD threadID);
   
 ## <a name="parameters"></a>Параметры  
  `threadID`  
- [in] Идентификатор потока, на котором будет очищен текущее неуправляемое исключение.  
+ окне Идентификатор потока, в котором будет очищаться текущее неуправляемое исключение.  
   
-## <a name="remarks"></a>Примечания  
- Вызовите этот метод перед вызовом [ICorDebugController::Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) когда поток сообщил неуправляемые исключения, которое следует игнорировать при отладке. Это приведет к устранению диапазона (IB) и события (OOB)-каналу в данном потоке. Все точки останова OOB и одношаговые исключения автоматически очищается.  
+## <a name="remarks"></a>Заметки  
+ Вызывайте этот метод перед вызовом [ICorDebugController:: Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) , когда поток сообщил о неуправляемом исключении, которое должно игнорироваться отлаживаемым объектом. Это приведет к удалению необработанных внутренних () и нестандартных событий (OOB) для данного потока. Все точки останова OOB и одношаговые исключения автоматически очищаются.  
   
- Используйте [ICorDebugThread2::InterceptCurrentException](../../../../docs/framework/unmanaged-api/debugging/icordebugthread2-interceptcurrentexception-method.md) для перехвата текущего управляемые исключения в потоке.  
+ Используйте [ICorDebugThread2:: интерцепткуррентексцептион](../../../../docs/framework/unmanaged-api/debugging/icordebugthread2-interceptcurrentexception-method.md) для перехвата текущего управляемого исключения в потоке.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

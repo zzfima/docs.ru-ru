@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Visual Basic [WPF], event handlers
 - event handlers [WPF], Visual Basic
 ms.assetid: ad4eb9aa-3afc-4a71-8cf6-add3fbea54a1
-ms.openlocfilehash: 12ced911c6fded5dd9016ea377a3a4518c9c2ee1
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: 9a3d579019db4d2b59a0252dbe63b4a6a0468849
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920344"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458303"
 ---
 # <a name="visual-basic-and-wpf-event-handling"></a>Обработка событий в Visual Basic и WPF
 В частности, для языка Microsoft Visual Basic .NET можно использовать ключевое слово `Handles` для конкретного языка, чтобы связать обработчики событий с экземплярами, а не присоединять обработчики событий с атрибутами или использовать метод <xref:System.Windows.UIElement.AddHandler%2A>. Однако метод присоединения обработчиков к экземплярам `Handles` имеет некоторые ограничения, так как синтаксис `Handles` не поддерживает некоторые возможности перенаправленных событий системы событий [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -47,4 +47,4 @@ ms.locfileid: "72920344"
 - <xref:System.Windows.UIElement.AddHandler%2A>
 - [Маркировка перенаправленных событий как обработанных и обработка классов](marking-routed-events-as-handled-and-class-handling.md)
 - [Общие сведения о перенаправленных событиях](routed-events-overview.md)
-- [Общие сведения о языке XAML (WPF)](xaml-overview-wpf.md)
+- [Общие сведения о языке XAML (WPF)](../../../desktop-wpf/fundamentals/xaml.md)

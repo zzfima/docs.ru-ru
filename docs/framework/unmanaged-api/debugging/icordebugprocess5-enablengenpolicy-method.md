@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3b8e15ca-3c72-4685-a937-da4c739cb9e9
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 38ff08fa7e7db986006c4e0e09b1ac9cf1be801e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 583819e8e7ab16a8ac1ce72892f4353e3043ce3d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67767146"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129690"
 ---
 # <a name="icordebugprocess5enablengenpolicy-method"></a>Метод ICorDebugProcess5::EnableNGENPolicy
-Задает значение, определяющее, каким образом приложение загружает образы в машинном коде во время работы под контролем управляемого отладчика.  
+Задает значение, определяющее, как приложение загружает образы в машинном кодах при выполнении в управляемом отладчике.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,17 +35,17 @@ HRESULT EnableNGENPolicy(
   
 ## <a name="parameters"></a>Параметры  
  `ePolicy`  
- [in] Объект [CorDebugNGenPolicy](../../../../docs/framework/unmanaged-api/debugging/cordebugngenpolicy-enumeration.md) константа, определяющая, как приложение загружает образы в машинном коде во время работы под контролем управляемого отладчика.  
+ окне Константа [кордебугнженполици](../../../../docs/framework/unmanaged-api/debugging/cordebugngenpolicy-enumeration.md) , определяющая, как приложение загружает образы в машинном кодах при работе в управляемом отладчике.  
   
-## <a name="remarks"></a>Примечания  
- Если политики установлено успешно, метод возвращает `S_OK`. Если `ePolicy` находится вне диапазона значений перечисления, определенных в [CorDebugNGenPolicy](../../../../docs/framework/unmanaged-api/debugging/cordebugngenpolicy-enumeration.md), метод возвращает `E_INVALIDARG` и вызов метода не оказывает влияния. Если невозможно обновить политику генератором машинных образов (Ngen.exe), метод возвращает `E_FAIL`.  
+## <a name="remarks"></a>Заметки  
+ Если политика успешно установлена, метод возвращает `S_OK`. Если `ePolicy` находится за пределами диапазона перечисляемых значений, определенных параметром [кордебугнженполици](../../../../docs/framework/unmanaged-api/debugging/cordebugngenpolicy-enumeration.md), метод возвращает `E_INVALIDARG` и вызов метода не оказывает никакого влияния. Если не удается обновить политику генератора образов в машинном код (Ngen. exe), метод возвращает `E_FAIL`.  
   
- `ICorDebugProcess5::EnableNGenPolicy` Метод может вызываться в любое время в течение времени существования процесса. Политика действует для каких-либо модулей, которые будут загружены после набора политик.  
+ Метод `ICorDebugProcess5::EnableNGenPolicy` можно вызвать в любое время во время существования процесса. Политика действует для всех модулей, загруженных после установки политики.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

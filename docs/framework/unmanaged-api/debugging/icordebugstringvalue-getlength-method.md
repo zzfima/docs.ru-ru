@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: a1ebfc69-46a6-4225-8788-b7cfb2f15e1d
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b13fe65f892a222abb126aa9237b802507738b7f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a6f2f536d360ffe41caf2a96c8b051f9167343c2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67771607"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138960"
 ---
 # <a name="icordebugstringvaluegetlength-method"></a>Метод ICorDebugStringValue::GetLength
-Возвращает число символов в строке, который ссылается этот ICorDebugStringValue.  
+Возвращает число символов в строке, на которую ссылается этот ICorDebugStringValue.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,12 +35,12 @@ HRESULT GetLength (
   
 ## <a name="parameters"></a>Параметры  
  `pcchString`  
- [out] Указатель на значение, указывающее длину строки, упоминаемой в этом `ICorDebugStringValue` объекта.  
+ заполняет Указатель на значение, указывающее длину строки, на которую ссылается данный объект `ICorDebugStringValue`.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

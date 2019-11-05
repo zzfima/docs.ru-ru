@@ -2,12 +2,12 @@
 title: Отмена асинхронной задачи или списка задач (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: a9ee1b71-5bec-4736-a1e9-448042dd7215
-ms.openlocfilehash: 73627455b1f4460edfe165126a388e961e98921f
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 89a78e9e423ab4cce9fd3627ec433072ade238dc
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71353128"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73419871"
 ---
 # <a name="cancel-an-async-task-or-a-list-of-tasks-visual-basic"></a>Отмена асинхронной задачи или списка задач (Visual Basic)
 
@@ -24,7 +24,7 @@ ms.locfileid: "71353128"
 
 ### <a name="downloading-the-example"></a>Загрузка примера
 
-Скачать полный проект Windows Presentation Foundation (WPF) можно со страницы [Пример асинхронности. Тонкая настройка приложения](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea). Затем выполните следующие шаги.
+Вы можете скачать весь проект Windows Presentation Foundation (WPF) со страницы [Пример асинхронности. Тонкая настройка приложения](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea), а затем выполнить необходимые действия.
 
 1. Распакуйте загруженный файл, а затем запустите Visual Studio.
 
@@ -86,7 +86,7 @@ ms.locfileid: "71353128"
           Dim contentLength As Integer = Await AccessTheWebAsync(cts.Token)
 
           resultsTextBox.Text &=
-              String.Format(vbCrLf & "Length of the downloaded string: {0}." & vbCrLf, contentLength)
+              vbCrLf & $"Length of the downloaded string: {contentLength}." & vbCrLf
 
           ' *** If cancellation is requested, an OperationCanceledException results.
       Catch ex As OperationCanceledException
@@ -107,8 +107,7 @@ ms.locfileid: "71353128"
 
         Dim client As HttpClient = New HttpClient()
 
-        resultsTextBox.Text &=
-            String.Format(vbCrLf & "Ready to download." & vbCrLf)
+        resultsTextBox.Text &= vbCrLf & "Ready to download." & vbCrLf
 
         ' You might need to slow things down to have a chance to cancel.
         Await Task.Delay(250)
@@ -145,7 +144,7 @@ ms.locfileid: "71353128"
 
 ### <a name="downloading-the-example"></a>Загрузка примера
 
-Скачать полный проект Windows Presentation Foundation (WPF) можно со страницы [Пример асинхронности. Тонкая настройка приложения](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea). Затем выполните следующие шаги.
+Вы можете скачать весь проект Windows Presentation Foundation (WPF) со страницы [Пример асинхронности. Тонкая настройка приложения](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea), а затем выполнить необходимые действия.
 
 1. Распакуйте загруженный файл, а затем запустите Visual Studio.
 
@@ -206,7 +205,7 @@ ms.locfileid: "71353128"
         Dim urlContents As Byte() = Await response.Content.ReadAsByteArrayAsync()
 
         resultsTextBox.Text &=
-            String.Format(vbCrLf & "Length of the downloaded string: {0}." & vbCrLf, urlContents.Length)
+            vbCrLf & $"Length of the downloaded string: {urlContents.Length}." & vbCrLf
     Next
     ```
 
@@ -258,7 +257,7 @@ ms.locfileid: "71353128"
 
 Следующие разделы содержат код каждого из приведенных выше примеров. Обратите внимание на то, что необходимо добавить ссылку для <xref:System.Net.Http>.
 
-Вы можете скачать проект из статьи c [примером использования async. Тонкая настройка приложения](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea).
+Проекты можно загрузить со страницы [Пример асинхронности. Тонкая настройка приложения](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea).
 
 ### <a name="cancel-a-task-example"></a>Пример отмены задачи
 
@@ -287,7 +286,7 @@ Class MainWindow
             Dim contentLength As Integer = Await AccessTheWebAsync(cts.Token)
 
             resultsTextBox.Text &=
-                String.Format(vbCrLf & "Length of the downloaded string: {0}." & vbCrLf, contentLength)
+                vbCrLf & $"Length of the downloaded string: {contentLength}." & vbCrLf
 
             ' *** If cancellation is requested, an OperationCanceledException results.
         Catch ex As OperationCanceledException
@@ -315,7 +314,7 @@ Class MainWindow
         Dim client As HttpClient = New HttpClient()
 
         resultsTextBox.Text &=
-            String.Format(vbCrLf & "Ready to download." & vbCrLf)
+            vbCrLf & "Ready to download." & vbCrLf
 
         ' You might need to slow things down to have a chance to cancel.
         Await Task.Delay(250)
@@ -413,7 +412,7 @@ Class MainWindow
             Dim urlContents As Byte() = Await response.Content.ReadAsByteArrayAsync()
 
             resultsTextBox.Text &=
-                String.Format(vbCrLf & "Length of the downloaded string: {0}." & vbCrLf, urlContents.Length)
+                vbCrLf & $"Length of the downloaded string: {urlContents.Length}." & vbCrLf
         Next
     End Function
 
@@ -470,4 +469,4 @@ End Class
 - <xref:System.Threading.CancellationToken>
 - [Асинхронное программирование с использованием ключевых слов Async и Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
 - [Fine-Tuning Your Async Application (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md) (Настройка асинхронного приложения (Visual Basic))
-- [Пример использования Async. Настройка приложения](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)
+- [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Пример использования async. Тонкая настройка асинхронного приложения)

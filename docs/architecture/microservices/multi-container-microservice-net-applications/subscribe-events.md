@@ -2,12 +2,12 @@
 title: Подписка на события
 description: Архитектура микрослужб .NET для контейнерных приложений .NET | Общие сведения о публикации событий интеграции и подписке на них.
 ms.date: 10/02/2018
-ms.openlocfilehash: ac9715c7c282be845e1e47516d06945c31f70209
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 208b0f27aa1e6ceb6686e9e846b6e31d9f1c74df
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71039784"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73035636"
 ---
 # <a name="subscribing-to-events"></a>Подписка на события
 
@@ -105,7 +105,7 @@ public async Task<IActionResult> UpdateProduct([FromBody]CatalogItem product)
 
 - [Интеллектуальный анализ данных журнала транзакций](https://www.scoop.it/t/sql-server-transaction-log-mining).
 
-- Использование [шаблона Outbox](http://gistlabs.com/2014/05/the-outbox/). Это таблица транзакций, в которой хранятся события интеграции (расширяющие локальную транзакцию).
+- Использование [шаблона Outbox](https://www.kamilgrzybek.com/design/the-outbox-pattern/). Это таблица транзакций, в которой хранятся события интеграции (расширяющие локальную транзакцию).
 
 В этом сценарии одним из лучших, если не *лучшим*, подходом будет использование полного шаблона источников событий. Однако часто вы не можете реализовать полную систему источников событий. Источник событий подразумевает хранение в базе данных о транзакциях только событий в предметной области, а не данных о текущем состоянии. Хранить только события в предметной области очень удобно. Например, у вас есть история системы, и вы можете определить состояние системы в любой момент в прошлом. Однако реализация полной системы источников событий требует перестройки большей части системы и приводит к другим сложностям и требованиям. В частности, придется использовать базу данных, созданную специально для источников событий, например [хранилище событий](https://eventstore.org/), или документоориентированную базу данных, например Azure Cosmos DB, MongoDB, Cassandra, CouchDB или RavenDB. Модель источников событий может стать отличным решением этой проблемы, но не самым простым, особенно если вы еще не знакомы с этой концепцией.
 
@@ -326,7 +326,7 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
     <https://go.particular.net/eShopOnContainers>
 
 - **Обмен сообщениями на основе событий** \
-    [http://soapatterns.org/design\_patterns/event\_driven\_messaging](http://soapatterns.org/design_patterns/event_driven_messaging)
+    <https://patterns.arcitura.com/soa-patterns/design_patterns/event_driven_messaging>
 
 - **Джимми Богард (Jimmy Bogard). Рефакторинг для обеспечения отказоустойчивости: оценка взаимозависимости** \
     <https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/>

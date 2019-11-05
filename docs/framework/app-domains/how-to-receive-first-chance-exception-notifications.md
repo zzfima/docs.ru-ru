@@ -8,14 +8,12 @@ helpviewer_keywords:
 - first-chance exception notifications
 - exceptions, first chance notifications
 ms.assetid: 66f002b8-a97d-4a6e-a503-2cec01689113
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a17fae64f8cad58b09908212bae4cf62a156ed95
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: da60dfca424f7c10e810b5e083ff7fa63a688218
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69921521"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73119864"
 ---
 # <a name="how-to-receive-first-chance-exception-notifications"></a>Практическое руководство. Получение уведомлений о первом этапе обработки исключений
 Событие <xref:System.AppDomain.FirstChanceException> класса <xref:System.AppDomain> позволяет получать уведомления о порождении исключений до того, как среда CLR начнет искать обработчики исключений.

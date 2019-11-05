@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30655
 ms.assetid: 756db378-e758-48a9-88ff-496bc55bc0b6
-ms.openlocfilehash: ef1fd4fa94d2fe225077d8b7ed0e04fa29843e7d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1abb420c997afbc69a652502801d91043eb48757
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64622627"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73197253"
 ---
-# <a name="unable-to-find-required-file-filename"></a>Не удалось найти требуемый файл "\<имя_файла >"
+# <a name="unable-to-find-required-file-filename"></a>Не удается найти требуемый файл "\<filename >"
 Файл, необходимый для Visual Studio, отсутствует или поврежден.  
   
  **Идентификатор ошибки:** BC30655  
@@ -25,4 +25,4 @@ ms.locfileid: "64622627"
   
 ## <a name="see-also"></a>См. также
 
-- [Обращайтесь к нам](/visualstudio/ide/talk-to-us)
+- [Обращайтесь к нам](/visualstudio/ide/feedback-options)

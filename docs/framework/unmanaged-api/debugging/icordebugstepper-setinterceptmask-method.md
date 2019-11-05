@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6245e2ae-5cc2-43ff-8cc1-71953d12113a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 37b644227a6085352bed682f0ddd7c3455b54895
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e88fa543eca39c14962f0dbbe8053829713401c8
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67760703"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137584"
 ---
 # <a name="icordebugsteppersetinterceptmask-method"></a>Метод ICorDebugStepper::SetInterceptMask
-Задает значение, указывающее типы кода, который осуществляется пошаговое.  
+Задает значение, указывающее типы кода, в который выполняется пошаговое выполнение.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,17 +35,17 @@ HRESULT SetInterceptMask (
   
 ## <a name="parameters"></a>Параметры  
  `mask`  
- [in] Сочетание значений перечисления CorDebugIntercept, которое указывает типы кода.  
+ окне Сочетание значений перечисления CorDebugIntercept, определяющих типы кода.  
   
-## <a name="remarks"></a>Примечания  
- Если имеет значение бит для перехватчика, несопоставимого будет завершена при обнаружении данного типа перехват кода. Если бит снят, перехватывающий код будет пропущен.  
+## <a name="remarks"></a>Заметки  
+ Если задан бит для перехватчика, средство пошагового выполнения будет выполнено при обнаружении заданного типа перехвата кода. Если бит сброшен, перехват кода будет пропущен.  
   
- `SetInterceptMask` Метод может иметь непредвиденные взаимодействия с [ICorDebugStepper::SetUnmappedStopMask](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setunmappedstopmask-method.md) (с точки зрения пользователя). К примеру если только видимые (то есть не являющийся внутренним) часть кода инициализации класса не имеет сведений о сопоставлении и STOP_NO_MAPPING_INFO значение не задано (см. в разделе [ICorDebugStepper::SetUnmappedStopMask](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setunmappedstopmask-method.md) метод и Перечисление CorDebugUnmappedStop), несопоставимого будет шаг с обходом инициализации класса. По умолчанию только значение INTERCEPT_NONE `CorDebugIntercept` перечисления будет использоваться.  
+ Метод `SetInterceptMask` может иметь непредвиденные взаимодействия с [ICorDebugStepper:: сетунмаппедстопмаск](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setunmappedstopmask-method.md) (от точки зрения пользователя). Например, если только видимая (невнутренняя) часть кода инициализации класса не имеет сведений о сопоставлении и STOP_NO_MAPPING_INFO не задана (см [. метод ICorDebugStepper:: сетунмаппедстопмаск](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setunmappedstopmask-method.md) и кордебугунмаппедстоп перечисление), средство организации пошагового прохода по инициализации класса. По умолчанию будет использоваться только значение INTERCEPT_NONE перечисления `CorDebugIntercept`.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Определение, размещена ли страница в браузере
+title: Как определить, размещена ли страница в браузере
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,20 +8,20 @@ helpviewer_keywords:
 - hosted pages in browser [WPF]
 - pages [WPF], hosted in browser
 ms.assetid: 737e0f26-8371-49b4-9579-70879e51e1aa
-ms.openlocfilehash: d154de2f885101d1bd0c4613dfb1604be8acbe6a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c4cb1065807d16c1d1f5a95c8ac9c9cbe5a0fdab
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61947814"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424694"
 ---
-# <a name="how-to-determine-if-a-page-is-browser-hosted"></a>Практическое руководство. Определение, размещена ли страница в браузере
-В этом примере показано, как определить, если <xref:System.Windows.Controls.Page> размещается в браузере.  
+# <a name="how-to-determine-if-a-page-is-browser-hosted"></a>Как определить, размещена ли страница в браузере
+В этом примере показано, как определить, размещается ли <xref:System.Windows.Controls.Page> в браузере.  
   
 ## <a name="example"></a>Пример  
- Объект <xref:System.Windows.Controls.Page> может размещаться независимо и, следовательно, может быть загружена в несколько различных типов узлов, включая <xref:System.Windows.Controls.Frame>, <xref:System.Windows.Navigation.NavigationWindow>, или другой браузер. Это может произойти, если у вас есть библиотечная сборка, содержащий одну или несколько страниц, на который ссылаются несколько автономных и отображаемых в обозревателе ([!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)]) размещения приложений.  
+ <xref:System.Windows.Controls.Page> может быть независимым от узла и, следовательно, может быть загружена на несколько различных типов узлов, включая <xref:System.Windows.Controls.Frame>, <xref:System.Windows.Navigation.NavigationWindow>или браузер. Это может произойти, если имеется сборка библиотеки, содержащая одну или несколько страниц, на которые ссылается несколько автономных и отображаемых (XBAP) хост-приложений.  
   
- Следующий пример демонстрирует, как использовать <xref:System.Windows.Interop.BrowserInteropHelper.IsBrowserHosted%2A?displayProperty=nameWithType> на предмет <xref:System.Windows.Controls.Page> размещается в браузере.  
+ В следующем примере показано, как использовать <xref:System.Windows.Interop.BrowserInteropHelper.IsBrowserHosted%2A?displayProperty=nameWithType>, чтобы определить, размещается ли <xref:System.Windows.Controls.Page> в браузере.  
   
  [!code-csharp[HOWTOBrowserInteropHelperSnippets#IsBrowserHostedCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/HOWTOBrowserInteropHelperSnippets/CSharp/Page1.xaml.cs#isbrowserhostedcode)]
  [!code-vb[HOWTOBrowserInteropHelperSnippets#IsBrowserHostedCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTOBrowserInteropHelperSnippets/visualbasic/page1.xaml.vb#isbrowserhostedcode)]  

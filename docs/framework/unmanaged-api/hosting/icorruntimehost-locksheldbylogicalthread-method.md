@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c3601255-d894-4d7c-b1df-c31334551700
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3eed83cbc983d59e99b3a42e667e9e126316c263
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f6ef7e06d94cb22d266949927cb15105b1602d3a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780094"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139529"
 ---
 # <a name="icorruntimehostlocksheldbylogicalthread-method"></a>Метод ICorRuntimeHost::LocksHeldByLogicalThread
-Возвращает число блокировок, которые текущий поток владеет.  
+Возвращает число блокировок, удерживаемых текущим потоком.  
   
  Этот метод поддерживает инфраструктуру .NET Framework и не предназначен для использования непосредственно из программного кода.  
   
@@ -39,16 +37,16 @@ HRESULT LocksHeldByLogicalThread(
   
 ## <a name="parameters"></a>Параметры  
  `pCount`  
- [out] Указатель на число блокировок, которые текущий поток владеет.  
+ заполняет Указатель на число блокировок, удерживаемых текущим потоком.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** MSCorEE.h  
+ **Заголовок:** MSCorEE. h  
   
- **Библиотека:** Включена как ресурс в MSCorEE.dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MSCorEE. dll  
   
- **Версии платформы .NET framework:** 1.0, 1.1  
+ **.NET Framework версии:** 1,0, 1,1  
   
 ## <a name="see-also"></a>См. также
 

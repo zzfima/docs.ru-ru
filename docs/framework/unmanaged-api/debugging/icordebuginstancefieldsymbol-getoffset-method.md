@@ -1,17 +1,15 @@
 ---
-title: Метод ICorDebugInstanceFieldSymbol::GetOffset
+title: 'Метод ICorDebugInstanceFieldSymbol:: методом offset'
 ms.date: 03/30/2017
 ms.assetid: 7e470150-2b92-4425-989c-315f48964fd2
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 453f691f414050905f5d73e201ebeed79e2aaf50
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 3886e29a1c2fd44fbe50d1eef722f99da7abdbe5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910207"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139013"
 ---
-# <a name="icordebuginstancefieldsymbolgetoffset-method"></a>Метод ICorDebugInstanceFieldSymbol::GetOffset
+# <a name="icordebuginstancefieldsymbolgetoffset-method"></a>Метод ICorDebugInstanceFieldSymbol:: методом offset
 Возвращает смещение в байтах этого поля экземпляра в его родительском классе.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -26,17 +24,17 @@ HRESULT GetOffset(
  `pcbOffset`  
  Указатель на число байтов, на которое это поле экземпляра смещается в своем родительском классе.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
   
 > [!NOTE]
 > Этот метод доступен только в машинном коде .NET.  
   
 ## <a name="requirements"></a>Требования  
- **Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug. idl, CorDebug. h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
- **Библиотечная** Коргуидс. lib  
+ **Библиотека:** CorGuids.lib  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

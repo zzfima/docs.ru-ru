@@ -9,19 +9,19 @@ helpviewer_keywords:
 - Visual C#, programming concepts
 - C# language, concepts
 ms.assetid: ac0f23a2-6bf3-4077-be99-538ae5fd3bc5
-ms.openlocfilehash: 25b686e654c5d6bb44a56b96cbf4045d14e95b62
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 5eb9313003f767daf64a5b5c4f229c6c58a018ec
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71392427"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423248"
 ---
 # <a name="c-programming-guide"></a>Руководство по программированию на C#
 Этот раздел содержит подробные сведения о ключевых функциях языка C# и возможностях, которые платформа .NET Framework предоставляет для C#.  
   
  В текстах этого раздела обычно предполагается, что вы уже знакомы с языком C# и общими концепциями программирования. Если вы раньше никогда не программировали или не работали с языком C#, рекомендуем посмотреть руководства [Знакомство с C#](../tutorials/intro-to-csharp/index.md) или [Руководство в браузере по .NET](https://dotnet.microsoft.com/learn/dotnet/in-browser-tutorial/1), которые не требуют знаний программирования.  
   
- Сведения о ключевых словах, операторах и директивах препроцессора см. в [справочнике по C#](../language-reference/index.md). Сведения о спецификации языка C# размещены в статье [Спецификации языка C#](../language-reference/language-specification/index.md).  
+ Сведения о ключевых словах, операторах и директивах препроцессора см. в [справочнике по C#](../language-reference/index.md). Сведения о спецификации языка C# размещены в статье [Спецификации языка C#](/dotnet/csharp/language-reference/language-specification/introduction).  
   
 ## <a name="program-sections"></a>Разделы о программе
 
@@ -56,7 +56,7 @@ ms.locfileid: "71392427"
   
  [Итераторы](./concepts/iterators.md)
   
- [Выражения запросов LINQ](./linq-query-expressions/index.md)  
+ [Выражения запросов LINQ](../linq/index.md)  
   
  [Лямбда-выражения](./statements-expressions-operators/lambda-expressions.md)  
   

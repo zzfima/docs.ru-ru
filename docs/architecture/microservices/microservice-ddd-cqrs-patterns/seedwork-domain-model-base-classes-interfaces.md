@@ -2,12 +2,12 @@
 title: Seedwork (многократно используемые базовые классы и интерфейсы для модели предметной области)
 description: Архитектура микрослужб .NET для контейнерных приложений .NET | Использование концепции seedwork в качестве отправной точки для запуска реализации для модели предметной области, ориентированной на DDD.
 ms.date: 10/08/2018
-ms.openlocfilehash: a49f9e0b40ea306a846d9fb472bac388eedbfe02
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 87cbc5ce96b66a9ac3e1c2bfc8c863d1b20714db
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69660764"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73093807"
 ---
 # <a name="seedwork-reusable-base-classes-and-interfaces-for-your-domain-model"></a>Seedwork (многократно используемые базовые классы и интерфейсы для модели предметной области)
 
@@ -30,9 +30,9 @@ ms.locfileid: "69660764"
 public abstract class Entity
 {
     int? _requestedHashCode;
-    int _Id;    
+    int _Id;
     private List<INotification> _domainEvents;
-    public virtual int Id 
+    public virtual int Id
     {
         get
         {
@@ -44,7 +44,7 @@ public abstract class Entity
         }
     }
 
-    public List<INotification> DomainEvents => _domainEvents;        
+    public List<INotification> DomainEvents => _domainEvents;
     public void AddDomainEvent(INotification eventItem)
     {
         _domainEvents = _domainEvents ?? new List<INotification>();

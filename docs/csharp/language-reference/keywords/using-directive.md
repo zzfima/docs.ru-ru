@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - using directive [C#]
 ms.assetid: b42b8e61-5e7e-439c-bb71-370094b44ae8
-ms.openlocfilehash: d6e3667861c2b1ac9a84ca7b4e2cabb5784d793d
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 413d3ee6323aa601df84c0f402aaea7567a61e76
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70970048"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422284"
 ---
 # <a name="using-directive-c-reference"></a>Директива using (справочник по C#)
 
@@ -92,7 +92,7 @@ using s.RegularExpressions;
 
 ## <a name="c-language-specification"></a>Спецификация языка C#
 
-Дополнительные сведения см. в разделе [Директивы using](~/_csharplang/spec/namespaces.md#using-directives) в статье [Спецификация языка C#](../language-specification/index.md). Спецификация языка является предписывающим источником информации о синтаксисе и использовании языка C#.
+Дополнительные сведения см. в разделе [Директивы using](~/_csharplang/spec/namespaces.md#using-directives) в статье [Спецификация языка C#](/dotnet/csharp/language-reference/language-specification/introduction). Спецификация языка является предписывающим источником информации о синтаксисе и использовании языка C#.
 
 ## <a name="see-also"></a>См. также
 

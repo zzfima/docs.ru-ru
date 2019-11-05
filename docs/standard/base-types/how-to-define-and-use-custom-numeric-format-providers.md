@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Определение и использование настраиваемых поставщиков числовых форматов
+title: Практическое руководство. Определение и использование поставщиков настраиваемых числовых форматов
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -15,16 +15,14 @@ helpviewer_keywords:
 - format providers [.NET Framework]
 - custom format strings
 ms.assetid: a281bfbf-6596-45ed-a2d6-3782d535ada2
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b3898caa90c695ae681c2d9b20abbba57a2a9f61
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 151bf40cf042517b7441b89688122373259dc7dc
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65590468"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140062"
 ---
-# <a name="how-to-define-and-use-custom-numeric-format-providers"></a>Практическое руководство. Определение и использование настраиваемых поставщиков числовых форматов
+# <a name="how-to-define-and-use-custom-numeric-format-providers"></a>Практическое руководство. Определение и использование поставщиков настраиваемых числовых форматов
 .NET Framework обеспечивает расширенный контроль над строковым представлением числовых значений. Эта платформа поддерживает указанные далее возможности для настройки форматов числовых значений.  
   
 - Строки стандартных числовых форматов, которые предоставляют стандартный набор форматов для преобразования чисел в их строковое представление. Вы можете использовать их с любым методом числового форматирования, например <xref:System.Decimal.ToString%28System.String%29?displayProperty=nameWithType> с параметром `format`. Дополнительные сведения см. в статье [Строки стандартных числовых форматов](../../../docs/standard/base-types/standard-numeric-format-strings.md).  

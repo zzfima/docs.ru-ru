@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: eea570d9-2e53-4320-9ea0-eb777bf9dcf3
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a89ea76d78431ae8833602588379d5150e473710
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: fcb78dd5374ff97f23d7dfea63fe33fa96836958
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69938308"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124535"
 ---
 # <a name="iclrtaskmanagercreatetask-method"></a>Метод ICLRTaskManager::CreateTask
 Явно запрашивает создание новой задачи средой CLR.  
@@ -51,20 +49,20 @@ HRESULT CreateTask (
 |E_FAIL|Произошла неизвестная фатальная ошибка. Когда метод возвращает значение E_FAIL, среда CLR больше не может использоваться в процессе. Последующие вызовы методов размещения возвращают HOST_E_CLRNOTAVAILABLE.|  
 |E_OUTOFMEMORY|Недостаточно памяти для выделения запрошенного ресурса.|  
   
-## <a name="remarks"></a>Примечания  
- Среда CLR автоматически создает новую задачу при инициализации, когда пользовательский код создает поток с помощью типов в <xref:System.Threading> пространстве имен или увеличивается размер пула потоков. Он также создает задачи, когда неуправляемый код вызывает управляемую функцию.  
+## <a name="remarks"></a>Заметки  
+ Среда CLR автоматически создает новую задачу при инициализации, когда пользовательский код создает поток с помощью типов в пространстве имен <xref:System.Threading> или при увеличении размера пула потоков. Он также создает задачи, когда неуправляемый код вызывает управляемую функцию.  
   
- `CreateTask`позволяет узлу выполнить явный запрос о том, что среда CLR создает новую задачу. Например, узел может вызвать этот метод для прединициализации структур данных.  
+ `CreateTask` позволяет узлу выполнить явный запрос о том, что среда CLR создает новую задачу. Например, узел может вызвать этот метод для прединициализации структур данных.  
   
 > [!IMPORTANT]
 > Новая задача возвращается в приостановленном состоянии и остается приостановленной до тех пор, пока узел явно не вызывает метод [IHostTask:: Start](../../../../docs/framework/unmanaged-api/hosting/ihosttask-start-method.md).  
   
 ## <a name="requirements"></a>Требования  
- **Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** MSCorEE. h  
+ **Заголовок:** MSCorEE. h  
   
- **Библиотечная** Включается в качестве ресурса в библиотеку MSCorEE. dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6734321c-c8a9-401f-a558-cad715ec4a77
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 120d00bd329db17b98a439aa2e9c36d2d04968d3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4ae4856eca2c1441ea53df0d9ed3648700b39b24
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761295"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130656"
 ---
 # <a name="icordebugmanagedcallbackunloadassembly-method"></a>Метод ICorDebugManagedCallback::UnloadAssembly
-Уведомляет отладчик о выгрузке сборки среды CLR.  
+Уведомляет отладчик о том, что сборка среды CLR была выгружена.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,18 +36,18 @@ HRESULT UnloadAssembly (
   
 ## <a name="parameters"></a>Параметры  
  `pAppDomain`  
- [in] Указатель на объект ICorDebugAppDomain, представляющий домен приложения, который содержит сборку.  
+ окне Указатель на объект ICorDebugAppDomain, представляющий домен приложения, содержащий сборку.  
   
  `pAssembly`  
- [in] Указатель на объект ICorDebugAssembly, представляющий сборку.  
+ окне Указатель на объект ICorDebugAssembly, представляющий сборку.  
   
-## <a name="remarks"></a>Примечания  
- Сборки не следует после этого обратного вызова.  
+## <a name="remarks"></a>Заметки  
+ Сборка не должна использоваться после этого обратного вызова.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

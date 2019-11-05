@@ -9,12 +9,12 @@ helpviewer_keywords:
 - DllImport attribute
 - extern keyword [C#]
 ms.assetid: 9c3f02c4-51b8-4d80-9cb2-f2b6e1ae15c7
-ms.openlocfilehash: 387ef707166705c4df501bd6740d438683aa2d69
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 5f4a4b143578603a3285b1a3bc0b1efa11840e77
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70203018"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422816"
 ---
 # <a name="extern-c-reference"></a>extern (справочник по C#)
 
@@ -94,4 +94,4 @@ private static extern void AVIFileInit();
 - [Справочник по C#](../index.md)
 - [Руководство по программированию на C#](../../programming-guide/index.md)
 - [Ключевые слова в C#](index.md)
-- [Модификаторы](modifiers.md)
+- [Модификаторы](index.md)

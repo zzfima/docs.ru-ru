@@ -5,12 +5,12 @@ ms.date: 03/07/2017
 helpviewer_keywords:
 - contextual keywords [C#]
 ms.assetid: 7c76bc29-a754-4389-b0ab-f6b441018298
-ms.openlocfilehash: d16d8fee58f4480bc83da884caf0ff15981b09af
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: 9197ebb1fa48011c60a6d224497e57a604870fc3
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70168619"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422873"
 ---
 # <a name="contextual-keywords-c-reference"></a>Контекстные ключевые слова (Справочник по C#)
 
@@ -21,7 +21,7 @@ ms.locfileid: "70168619"
 |[add](./add.md)|Определяет метод доступа настраиваемого события, который вызывается, когда клиентский код подписывается на событие.|  
 |[async](./async.md)|Указывает на то, что измененный метод, лямбда-выражение или анонимный метод является асинхронным.|  
 |[await](../operators/await.md)|Приостанавливает асинхронный метод до тех пор, пока не будет завершена ожидаемая задача.|  
-|[dynamic](./dynamic.md)|Определяет ссылочный тип, который включает операции, в которых он применяется для обхода проверки типов во время компиляции.|  
+|[dynamic](../builtin-types/reference-types.md)|Определяет ссылочный тип, который включает операции, в которых он применяется для обхода проверки типов во время компиляции.|  
 |[get](./get.md)|Определяет метод доступа для свойства или индексатора.|  
 |[global](../operators/namespace-alias-qualifier.md)|Псевдоним глобального пространства имен, которое в противном случае не имеет имени.|  
 |[partial](./partial-type.md)|Определяет разделяемые классы, структуры и интерфейсы в одном блоке компиляции.|  

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 723482d1-d1a1-410a-a405-677eeb04e2bf
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 02ed315ccf227413e59f635b0244fb82be67c18e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 402ffa232691bc8d0c77a9fa5aeb524dd5a9409b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744939"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137740"
 ---
 # <a name="icordebugreferencevaluedereferencestrong-method"></a>Метод ICorDebugReferenceValue::DereferenceStrong
-`DereferenceStrong` Не реализован. Этот метод не вызывается.  
+`DereferenceStrong` не реализован. Не вызывайте этот метод.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -36,9 +34,9 @@ HRESULT DereferenceStrong (
 ```  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 35bb594f-af6a-4349-83fe-e98702674e03
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3031cf2d9509f94b50c386b44e6d9e5d9ee5509c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4dbc042143e68dc962eb21b2bf741cbaefc1977e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67768229"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122358"
 ---
 # <a name="icordebugtypegetfirsttypeparameter-method"></a>Метод ICorDebugType::GetFirstTypeParameter
-Получает указатель интерфейса на ICorDebugType, представляющий первый <xref:System.Type> параметр типа, представленного данным `ICorDebugType`.  
+Возвращает указатель интерфейса на объект ICorDebugType, представляющий первый параметр <xref:System.Type> типа, представленного этим `ICorDebugType`.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,15 +35,15 @@ HRESULT GetFirstTypeParameter (
   
 ## <a name="parameters"></a>Параметры  
  `value`  
- [out] Указатель на адрес `ICorDebugType` , представляющий первый параметр.  
+ заполняет Указатель на адрес объекта `ICorDebugType`, представляющего первый параметр.  
   
-## <a name="remarks"></a>Примечания  
- `GetFirstTypeParameter` может вызываться в случаях, где включает дополнительные сведения о типе, не более одного параметра типа. В частности, он может использоваться, если тип является ELEMENT_TYPE_ARRAY, ELEMENT_TYPE_SZARRAY, ELEMENT_TYPE_BYREF или ELEMENT_TYPE_PTR, обозначенный [ICorDebugType::GetType](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-gettype-method.md) метод.  
+## <a name="remarks"></a>Заметки  
+ `GetFirstTypeParameter` могут вызываться в случаях, когда дополнительные сведения о типе в большинстве случаев имеют один параметр типа. В частности, его можно использовать, если тип является ELEMENT_TYPE_ARRAY, ELEMENT_TYPE_SZARRAY, ELEMENT_TYPE_BYREF или ELEMENT_TYPE_PTR, как показано в методе [ICorDebugType:: GetType](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-gettype-method.md) .  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

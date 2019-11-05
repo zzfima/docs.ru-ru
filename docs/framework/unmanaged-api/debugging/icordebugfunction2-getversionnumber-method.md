@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: e3a1ce48-9bb9-4ed6-a5fe-5e1819a6333f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 89cf2a12b0a693bbed3e8a3c1134d0f2b2a72a30
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5826297d8151cf05e1ec08acbf5c9cd381d2452b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67754452"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137807"
 ---
 # <a name="icordebugfunction2getversionnumber-method"></a>Метод ICorDebugFunction2::GetVersionNumber
-Получает версию "Изменить и продолжить" этой функции.  
+Возвращает версию функции "изменить и продолжить".  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,21 +35,21 @@ HRESULT GetVersionNumber (
   
 ## <a name="parameters"></a>Параметры  
  `pnVersion`  
- [out] Указатель на целое число, — это номер версии, представленный этим объектом ICorDebugFunction2 функции.  
+ заполняет Указатель на целое число, представляющее номер версии функции, представленной этим объектом ICorDebugFunction2.  
   
-## <a name="remarks"></a>Примечания  
- Среда выполнения отслеживает этой информации на количестве изменений, произошедших в каждый модуль во время сеанса отладки. Номер версии функции входит более количества редактирования, которая представлена функция. Исходная версия функции — версии 1. Номер увеличивается для модуля, каждый раз [ICorDebugModule2::ApplyChanges](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-applychanges-method.md) вызывается для этого модуля. Таким образом Если тело функции был заменен в первый и третий вызов `ICorDebugModule2::ApplyChanges`, `GetVersionNumber` может возвращать версии 1, 2 или 4 для этой функции, но не в версии 3. (Эта функция будет иметь нет версии 3.)  
+## <a name="remarks"></a>Заметки  
+ Среда выполнения отслеживает количество изменений, выполненных в каждом модуле во время сеанса отладки. Номер версии функции — это значение, превышающее число изменений, введенных в функцию. Исходной версией функции является версия 1. Число увеличивается для модуля каждый раз, когда для этого модуля вызывается [ICorDebugModule2:: ApplyChanges](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-applychanges-method.md) . Таким словами, если тело функции было заменено в первом и третьем вызове `ICorDebugModule2::ApplyChanges`, `GetVersionNumber` может возвращать версию 1, 2 или 4 для этой функции, но не версию 3. (Эта функция не имеет версии 3.)  
   
- Номер версии отслеживается отдельно для каждого модуля. Таким образом при выполнении четырех изменений в 1 модуль и модуль 2 следующее изменение на модуле 1 присвоит номер версии 6 ко всем функциям, измененный в 1 модуль. Если данное изменение затрагивает 2 модуля, функции в модуле 2 Получите номер версии 2.  
+ Номер версии ведется отдельно для каждого модуля. Поэтому при выполнении четырех изменений в модуле 1 и отсутствии в модуле 2 при следующем редактировании в модуле 1 будет присвоен номер версии 6 всем измененным функциям в модуле 1. Если одно и то же изменение касается модуля 2, функции в модуле 2 будут получать номер версии 2.  
   
- Получить номер версии, `GetVersionNumber` метод может быть ниже, чем у полученных [ICorDebugFunction::GetCurrentVersionNumber](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction-getcurrentversionnumber-method.md).  
+ Номер версии, полученный методом `GetVersionNumber`, может быть меньше, чем получает метод [ICorDebugFunction:: GetCurrentVersionNumber](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction-getcurrentversionnumber-method.md).  
   
- [ICorDebugCode::GetVersionNumber](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-getversionnumber-method.md) метод выполняет те же функции, как `ICorDebugFunction2::GetVersionNumber`.  
+ Метод [ICorDebugCode:: жетверсионнумбер](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-getversionnumber-method.md) выполняет ту же операцию, что и `ICorDebugFunction2::GetVersionNumber`.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

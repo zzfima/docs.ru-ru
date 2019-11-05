@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5944edd1-0914-4efa-aba0-d5a277c38b1a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 57de11c1c40c05befcf3c99c31c2e07e1ecaec5a
-ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
+ms.openlocfilehash: 21f90e06b3b02ebc6c97610b6edc35697601f0ac
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71273974"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132286"
 ---
 # <a name="cordebugblockingobject-structure"></a>Структура CorDebugBlockingObject
 Определяет объект, который блокирует поток и конкретную причину блокировки потока.  
@@ -37,7 +35,7 @@ CorDebugBlockingReason blockingReason;
 }  CorDebugBlockingObject;  
 ```  
   
-## <a name="members"></a>Участники  
+## <a name="members"></a>Члены  
   
 |Член|Описание|  
 |------------|-----------------|  
@@ -45,14 +43,14 @@ CorDebugBlockingReason blockingReason;
 |`dwTimeout`|Время ожидания (в миллисекундах), по истечении которого операция блокирования истечет или бесконечное значение, которое указывает, что время ожидания не истечет. Значение времени ожидания указывает общий период времени для блокирующей операции, а не оставшееся время.|  
 |`blockingReason`|Причина, по которой поток блокируется для этого объекта.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
   
 ## <a name="requirements"></a>Требования  
- **Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug. idl  
+ **Заголовок:** CorDebug. idl  
   
- **Библиотечная** Коргуидс. lib  
+ **Библиотека:** CorGuids.lib  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

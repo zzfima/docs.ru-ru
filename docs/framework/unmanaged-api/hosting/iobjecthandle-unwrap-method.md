@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 794c6f8e-ed58-416b-b756-e864f2c958f7
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: dc5bed553ac54eb708beae23f5c29cbedcb2b4e0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: be488ebe663169cabc5b569335dfc784fdf30556
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67749064"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73102695"
 ---
 # <a name="iobjecthandleunwrap-method"></a>Метод IObjectHandle::Unwrap
-Распаковывает объект маршалинг по значению, косвенного обращения.  
+Распаковывает объект по значению из косвенного обращения.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,13 +35,13 @@ HRESULT Unwrap (
   
 ## <a name="parameters"></a>Параметры  
  `ppv`  
- [out] Указатель на объект, который будет без оболочки.  
+ заполняет Указатель на объект, который необходимо распаковать.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** MSCorEE.h  
+ **Заголовок:** MSCorEE. h  
   
- **Библиотека:** Включена как ресурс в MSCorEE.dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  

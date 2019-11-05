@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c4ae022c-46ac-4f19-9ddd-09b955f19412
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3e374c03ca90c904cd4ef8a4585cb35ccf43cb43
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c86786a34ff236fb57a1ea6bc4d00b9cd5c4a717
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67766528"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134887"
 ---
 # <a name="igchostgetstats-method"></a>Метод IGCHost::GetStats
-Получает статистику для текущего состояния сборщик мусора.  
+Возвращает статистику текущего состояния системы сборки мусора.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,17 +35,17 @@ HRESULT GetStats (
   
 ## <a name="parameters"></a>Параметры  
  `pStats`  
- [in, out] Указатель на [COR_GC_STATS](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md) структуру, которая содержит статистические данные для текущего состояния сборщик мусора.  
+ [вход, выход] Указатель на структуру [COR_GC_STATS](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md) , содержащую статистику по текущему состоянию системы сборки мусора.  
   
-## <a name="remarks"></a>Примечания  
- Статистику можно с помощью системы оптимального распределения помогут сборщик мусора работают. Например, система распределения может определить, просмотрев статистические данные, необходимо установить дополнительную память или принудительно коллекции.  
+## <a name="remarks"></a>Заметки  
+ Статистика может использоваться системой интеллектуального распределения, чтобы помочь системе сборки мусора. Например, система распределения может определить, что после проверки статистики потребуется добавить память или принудительно выполнить сбор.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** GCHost.idl GCHost.h  
+ **Заголовок:** Гчост. idl, Гчост. h  
   
- **Библиотека:** Включена как ресурс в MSCorEE.dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

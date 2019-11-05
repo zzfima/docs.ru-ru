@@ -2,12 +2,12 @@
 title: Привязка данных WPF с помощью LINQ to XML
 ms.date: 10/22/2019
 ms.topic: conceptual
-ms.openlocfilehash: c423ad9c8069b78b2e69a88d25d8e12bd3a3a1b7
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: 53aba3295b98ae4a476b321cb585e1bbbdd45dad
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72921026"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73197391"
 ---
 # <a name="overview-of-wpf-data-binding-with-linq-to-xml"></a>Общие сведения о привязке данных WPF к LINQ to XML
 
@@ -36,7 +36,7 @@ ms.locfileid: "72921026"
 |Источник привязки|Исходный объект для одного или нескольких значений, которые отправляются в элемент пользовательского интерфейса. WPF автоматически поддерживает следующие типы источников привязки: объекты среды CLR, объекты данных ADO.NET, XML-данные (полученные с помощью запросов XPath или LINQ to XML) и другие объекты <xref:System.Windows.DependencyObject>.|
 |Путь к источнику|Свойство источника привязки, разрешение которого приводит к получению значения или набора значений, подлежащих привязке.|
 
-Свойство зависимости является понятием WPF, которое представляет динамически вычисляемое свойство элемента пользовательского интерфейса. Например, свойства зависимостей часто имеют значение или значения по умолчанию, предоставляемые родительским элементом. Эти особые свойства поддерживаются экземплярами класса <xref:System.Windows.DependencyProperty> (но не полями, как в случае стандартных свойств). Дополнительные сведения см. в [обзоре свойств зависимостей](/dotnet/framework/wpf/advanced/dependency-properties-overview).
+Свойство зависимости является понятием WPF, которое представляет динамически вычисляемое свойство элемента пользовательского интерфейса. Например, свойства зависимостей часто имеют значение или значения по умолчанию, предоставляемые родительским элементом. Эти особые свойства поддерживаются экземплярами класса <xref:System.Windows.DependencyProperty> (но не полями, как в случае стандартных свойств). Дополнительные сведения см. в [обзоре свойств зависимостей](../advanced/dependency-properties-overview.md).
 
 ### <a name="dynamic-data-binding-in-wpf"></a>Динамическая привязка данных в WPF
 
@@ -89,6 +89,6 @@ ms.locfileid: "72921026"
 
 - [Привязка данных WPF с помощью LINQ to XML](wpf-data-binding-with-linq-to-xml-overview.md)
 - [Динамические свойства LINQ to XML](linq-to-xml-dynamic-properties.md)
-- [XAML в WPF](/dotnet/framework/wpf/advanced/xaml-in-wpf)
+- [XAML в WPF](../advanced/xaml-in-wpf.md)
 - [Привязка данных (WPF)](/dotnet/framework/wpf/data/data-binding-wpf)
-- [Использование разметки рабочего процесса](http://go.microsoft.com/fwlink/?LinkId=98685)
+- [Использование разметки рабочего процесса](https://go.microsoft.com/fwlink/?LinkId=98685)

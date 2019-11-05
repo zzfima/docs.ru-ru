@@ -15,20 +15,18 @@ helpviewer_keywords:
 ms.assetid: fffe5616-0896-4426-ab5e-21869b514883
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: de37bb34aee9b6536ff892ac30855761bcc69445
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 78838e9002cb3f5263395af9de255c54de47b6ae
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963131"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134019"
 ---
 # <a name="icordebugterminate-method"></a>Метод ICorDebug::Terminate
-`ICorDebug` Завершает объект.  
+Завершает объект `ICorDebug`.  
   
 > [!NOTE]
-> `Terminate`не следует вызывать, пока не получен обратный вызов [ICorDebugManagedCallback:: ExitProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitprocess-method.md) для всех отлаживаемых процессов.  
+> `Terminate` не следует вызывать, пока не получен обратный вызов [ICorDebugManagedCallback:: ExitProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitprocess-method.md) для всех отлаживаемых процессов.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -36,15 +34,15 @@ ms.locfileid: "69963131"
 HRESULT Terminate ();  
 ```  
   
-## <a name="remarks"></a>Примечания  
- `Terminate`должен вызываться, `ICorDebug` когда объект больше не нужен.  
+## <a name="remarks"></a>Заметки  
+ `Terminate` должны вызываться, когда объект `ICorDebug` больше не нужен.  
   
 ## <a name="requirements"></a>Требования  
- **Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug. idl, CorDebug. h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
- **Библиотечная** Коргуидс. lib  
+ **Библиотека:** CorGuids.lib  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -10,14 +10,12 @@ api_location:
 api_type:
 - COM
 ms.assetid: 1745a0b9-8332-4777-a670-b549bff3b901
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 95b463b23c230d620d746e48da49d75238ef2cb7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ae51490be96f3eb6524831c93739c3befbc30b37
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69955374"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132026"
 ---
 # <a name="icorprofilerinfo7readinmemorysymbols"></a>ICorProfilerInfo7:: Реадинмеморисимболс
 [Поддерживается в .NET Framework 4.6.1 и более поздних версиях.]  
@@ -44,7 +42,7 @@ HRESULT ReadInMemorySymbols(
  окне Смещение в потоке в памяти, с которого начинается чтение байтов.  
   
  `pSymbolBytes`  
- заполняет Указатель на буфер, в который будут копироваться данные. Буфер должен иметь `countSymbolBytes` доступное место.  
+ заполняет Указатель на буфер, в который будут копироваться данные. Буфер должен иметь `countSymbolBytes` доступного пространства.  
   
  `countSymbolBytes`  
  окне Число байтов для копирования.  
@@ -53,22 +51,22 @@ HRESULT ReadInMemorySymbols(
  заполняет При возврате из метода содержит фактическое число считанных байтов.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- `S_OK`значение, если было считано ненулевое число байтов.  
+ `S_OK`, если было считано ненулевое число байтов.  
   
  `CORPROF_E_MODULE_IS_DYNAMIC`, если модуль был создан с помощью <xref:System.Reflection.Emit>.  
   
-## <a name="remarks"></a>Примечания  
- Метод пытается выполнить чтение `countSymbolBytes` данных, начиная со смещения `symbolsReadOffset` в потоке в памяти. `ReadInMemorySymbols` Данные копируются в `pSymbolBytes`, что должно иметь `countSymbolBytes` доступное место.     `pCountSymbolsBytesRead`содержит фактическое число считанных байтов, которое может быть меньше, `countSymbolBytes` чем при достижении конца потока.  
+## <a name="remarks"></a>Заметки  
+ Метод `ReadInMemorySymbols` пытается считать `countSymbolBytes` данных, начиная со смещения `symbolsReadOffset` в потоке в памяти. Данные копируются в `pSymbolBytes`, что предполагает наличие `countSymbolBytes` свободного места.     `pCountSymbolsBytesRead` содержит фактическое число считанных байтов, которое может быть меньше `countSymbolBytes` по достижении конца потока.  
   
 > [!NOTE]
-> Текущая реализация не поддерживает отражение. Emit. Если модуль был создан с помощью отражения. Emit, метод возвращает `CORPROF_E_MODULE_IS_DYNAMIC`значение.  
+> Текущая реализация не поддерживает отражение. Emit. Если модуль был создан с помощью отражения. Emit, метод возвращает `CORPROF_E_MODULE_IS_DYNAMIC`.  
   
 ## <a name="requirements"></a>Требования  
- **Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorProf. idl, CorProf. h  
+ **Заголовок:** CorProf.idl, CorProf.h  
   
- **Библиотечная** Коргуидс. lib  
+ **Библиотека:** CorGuids.lib  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v461plus](../../../../includes/net-current-v461plus-md.md)]  
   

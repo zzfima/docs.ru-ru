@@ -2,12 +2,12 @@
 title: Объектно ориентированное программирование (C#)
 ms.date: 07/20/2015
 ms.assetid: 89574786-65ef-4335-88bc-fbacd094f183
-ms.openlocfilehash: 50b38833582ebe46836ccfab4e1ebeb98b53a96e
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 121d2e43f6896179756067e661be6d7960a1ee64
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69659868"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73418045"
 ---
 # <a name="object-oriented-programming-c"></a>Объектно ориентированное программирование (C#)
 
@@ -77,7 +77,7 @@ struct SampleStruct
 }
 ```
 
-Дополнительные сведения:
+Дополнительные сведения можно найти в разделе
 
 - [class](../../language-reference/keywords/class.md)
 
@@ -131,7 +131,7 @@ class SampleClass
 
 У большинства свойств есть методы или процедуры для задания и возврата значения свойства. Однако можно создать свойства, доступные только для чтения или только на запись, чтобы запретить изменение или чтение значений свойств. В C# можно опустить метод свойства `get` или `set`. Следует отметить, что автоматически реализуемые свойства нельзя сделать доступными только для чтения или только для записи.
 
-Дополнительные сведения:
+Дополнительные сведения можно найти в разделе
 
 - [get](../../language-reference/keywords/get.md)
 
@@ -164,7 +164,7 @@ public int sampleMethod(int sampleParam) {}
 
 Как правило, метод объявляется при определении класса. Однако C# также поддерживает *методы расширения*, которые позволяют добавлять методы в существующий класс вне определения класса.
 
-Дополнительные сведения:
+Дополнительные сведения можно найти в разделе
 
 - [Методы](../classes-and-structs/methods.md)
 
@@ -186,7 +186,7 @@ public class SampleClass
 }
 ```
 
-Дополнительные сведения:
+Дополнительные сведения можно найти в разделе
 
 [Конструкторы](../classes-and-structs/constructors.md).
 
@@ -268,7 +268,7 @@ SampleClass sampleObject = new SampleClass
     { FirstProperty = "A", SecondProperty = "B" };
 ```
 
-Дополнительные сведения:
+Дополнительные сведения можно найти в разделе
 
 - [Оператор new](../../language-reference/operators/new-operator.md)
 
@@ -309,7 +309,7 @@ var sampleObject =
     new { FirstProperty = "A", SecondProperty = "B" };
 ```
 
-Дополнительные сведения: [Анонимные типы](../classes-and-structs/anonymous-types.md).
+Дополнительные сведения можно найти в разделе  [Анонимные типы](../classes-and-structs/anonymous-types.md).
 
 ## <a name="Inheritance"></a> Наследование
 
@@ -338,7 +338,7 @@ public sealed class A { }
 public abstract class B { }
 ```
 
-Дополнительные сведения:
+Дополнительные сведения можно найти в разделе
 
 - [sealed](../../language-reference/keywords/sealed.md)
 
@@ -382,7 +382,7 @@ class SampleClass : ISampleInterface
 }
 ```
 
-Дополнительные сведения:
+Дополнительные сведения можно найти в разделе
 
 [Интерфейсы](../interfaces/index.md)
 
@@ -408,7 +408,7 @@ SampleGeneric<string> sampleObject = new SampleGeneric<string>();
 sampleObject.Field = "Sample string";
 ```
 
-Дополнительные сведения:
+Дополнительные сведения можно найти в разделе
 
 - [Универсальные шаблоны](../../../standard/generics/index.md)
 
@@ -446,11 +446,11 @@ class SampleClass
 }
 ```
 
-Дополнительные сведения:
+Дополнительные сведения можно найти в разделе
 
 - [Делегаты](../delegates/index.md)
 
-- [delegate](../../language-reference/keywords/delegate.md)
+- [delegate](../../language-reference/builtin-types/reference-types.md)
 
 ## <a name="see-also"></a>См. также
 

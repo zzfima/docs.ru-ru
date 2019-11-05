@@ -3,12 +3,12 @@ title: Справочник по C#. Комбинация ключевых сл�
 ms.custom: seodec18
 ms.date: 11/15/2017
 author: sputier
-ms.openlocfilehash: c739dd0b5a5457a66c11962ed86bcd2ffbf811ab
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: dfb2e754d81116012b9fc3f8fd4f6fe1ad0daef1
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67661678"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422625"
 ---
 # <a name="private-protected-c-reference"></a>private protected (справочник по C#)
 
@@ -76,7 +76,7 @@ class DerivedClass2 : BaseClass
 - [Ключевые слова в C#](index.md)
 - [Модификаторы доступа](access-modifiers.md)
 - [Уровни доступности](accessibility-levels.md)
-- [Модификаторы](modifiers.md)
+- [Модификаторы](index.md)
 - [public](public.md)
 - [private](private.md)
 - [internal](internal.md)

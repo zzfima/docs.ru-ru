@@ -7,24 +7,24 @@ helpviewer_keywords:
 - controls [WPF], Label
 - Label control [WPF]
 ms.assetid: 241c1ce2-60f8-4613-a0ec-9b9bb25fb6af
-ms.openlocfilehash: 131eb251493b77f13b5dc59a3a03504be8868e8a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 73f36325a2621cc834e1bef8d2060dec1a8c133d
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62052057"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423784"
 ---
 # <a name="label"></a>Метка
-<xref:System.Windows.Controls.Label> элементы управления обычно предоставляют информацию в [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)].  Исторически сложилось так, что <xref:System.Windows.Controls.Label> содержал только текст, но поскольку <xref:System.Windows.Controls.Label> , поставляемый в комплекте с [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] — <xref:System.Windows.Controls.ContentControl>, он может содержать текст или <xref:System.Windows.UIElement>.  
+<xref:System.Windows.Controls.Label> элементы управления обычно предоставляют сведения в [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)].  Исторически <xref:System.Windows.Controls.Label> содержал только текст, но поскольку <xref:System.Windows.Controls.Label>, поставляемый с [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], является <xref:System.Windows.Controls.ContentControl>, он может содержать текст или <xref:System.Windows.UIElement>.  
   
- Объект <xref:System.Windows.Controls.Label> обеспечивает функциональную и визуальную поддержку клавиш доступа. Он часто используется для включения быстрый доступ к элементам управления, такие как <xref:System.Windows.Controls.TextBox>. Чтобы назначить <xref:System.Windows.Controls.Label> для <xref:System.Windows.Controls.Control>, задайте <xref:System.Windows.Controls.Label.Target%2A?displayProperty=nameWithType> свойство к элементу управления, который должен получить фокус, когда пользователь нажимает клавишу доступа.  
+ <xref:System.Windows.Controls.Label> обеспечивает функциональную и визуальную поддержку для ключей доступа. Он часто используется для обеспечения быстрого доступа к клавиатуре для таких элементов управления, как <xref:System.Windows.Controls.TextBox>. Чтобы назначить <xref:System.Windows.Controls.Label> <xref:System.Windows.Controls.Control>, задайте для свойства <xref:System.Windows.Controls.Label.Target%2A?displayProperty=nameWithType> элемент управления, который должен получать фокус при нажатии пользователем клавиши доступа.  
   
- На следующем рисунке показана <xref:System.Windows.Controls.Label> «Темы», указывающие <xref:System.Windows.Controls.ComboBox>.  Когда пользователь нажимает, <xref:System.Windows.Controls.ComboBox> получает фокус.  Дополнительные сведения см. в разделе [Как Установка целевого свойства метки](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752101(v=vs.90)).  
+ На следующем рисунке показана <xref:System.Windows.Controls.Label> "Themes", предназначенная для <xref:System.Windows.Controls.ComboBox>.  Когда пользователь нажимает клавишу, <xref:System.Windows.Controls.ComboBox> получает фокус.  Дополнительные сведения см. [в разделе инструкции. Установка целевого свойства метки](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752101(v=vs.90)).  
   
- ![Свойства отображения помеченные по использованию](./media/labeledby.JPG "LabeledBy")  
+ ![Снимок экрана: диалоговое окно свойств отображения с пометкой "использование".](./media/label/display-properties-labeled-by.png "LabeledBy")  
   
-## <a name="in-this-section"></a>В этом разделе  
- [Практическое руководство. Создание элемента управления, имеющего клавишу доступа и поддерживающего перенос текста](how-to-create-a-control-that-has-an-access-key-and-text-wrapping.md)  
+## <a name="in-this-section"></a>Содержание  
+ [Как создать элемент управления с клавишей доступа и переносом текста](how-to-create-a-control-that-has-an-access-key-and-text-wrapping.md)  
   
-## <a name="reference"></a>Ссылка  
+## <a name="reference"></a>Справочники  
  <xref:System.Windows.Controls.Label>

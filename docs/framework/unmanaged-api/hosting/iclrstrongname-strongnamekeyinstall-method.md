@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5c15cf3b-164c-49d1-8e57-e42949d55acf
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3a2badf8f164abd1bbb8892ec5db28f7cf39f5c5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 693a5831934647256ac48c8f3a2d30325dee4349
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67775664"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73135038"
 ---
 # <a name="iclrstrongnamestrongnamekeyinstall-method"></a>Метод ICLRStrongName::StrongNameKeyInstall
 Импортирует пару открытого и закрытого ключей в контейнер.  
@@ -39,26 +37,26 @@ HRESULT StrongNameKeyInstall (
   
 ## <a name="parameters"></a>Параметры  
  `wszKeyContainer`  
- [in] Имя контейнера ключа. `wszKeyContainer` должен быть непустой строкой.  
+ окне Имя контейнера ключей. `wszKeyContainer` должен быть непустой строкой.  
   
  `pbKeyBlob`  
- [in] Двоичный пару ключей.  
+ окне Пара двоичных ключей.  
   
  `cbKeyBlob`  
- [in] Размер в байтах из `pbKeyBlob`.  
+ окне Размер `pbKeyBlob`в байтах.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- `S_OK` Если метод успешно завершена; в противном случае — значение HRESULT, указывающее на сбой (см. в разделе [часто встречающихся значений HRESULT](https://go.microsoft.com/fwlink/?LinkId=213878) список).  
+ `S_OK`, если метод успешно выполнен; в противном случае — значение HRESULT, указывающее на сбой (см. раздел [Общие значения HRESULT](https://go.microsoft.com/fwlink/?LinkId=213878) для списка).  
   
-## <a name="remarks"></a>Примечания  
- Используйте [ICLRStrongName::StrongNameKeyDelete](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeydelete-method.md) метод для удаления контейнера ключей.  
+## <a name="remarks"></a>Заметки  
+ Чтобы удалить контейнер ключей, используйте метод [метод iclrstrongname:: StrongNameKeyDelete](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeydelete-method.md) .  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** MetaHost.h  
+ **Заголовок:** Метахост. h  
   
- **Библиотека:** Включена как ресурс в MSCorEE.dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

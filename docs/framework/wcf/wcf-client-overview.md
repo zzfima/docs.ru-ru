@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - clients [WCF], architecture
 ms.assetid: f60d9bc5-8ade-4471-8ecf-5a07a936c82d
-ms.openlocfilehash: 9aba83bd3e05e3f390b3d1553bd7974c64c41037
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 180de3f571426441155a19b98ab750fcdbb3888e
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72321335"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73420663"
 ---
 # <a name="wcf-client-overview"></a>Общие сведения о клиентах WCF
 В этом разделе описывается, какие клиентские приложения выполняют, как настроить, создать и использовать клиент Windows Communication Foundation (WCF) и как защитить клиентские приложения.  
@@ -43,7 +43,7 @@ ms.locfileid: "72321335"
 ## <a name="obtain-the-service-contract-bindings-and-addresses"></a>Получение контракта службы, привязок и адресов  
  В WCF модели и клиенты моделируют контракты с помощью управляемых атрибутов, интерфейсов и методов. Чтобы подключиться к службе в клиентском приложении, необходимо получить информацию о типе для контракта службы. Как правило, это делается с помощью [средства служебной программы метаданных ServiceModel (Svcutil. exe)](servicemodel-metadata-utility-tool-svcutil-exe.md), которое скачивает метаданные из службы, преобразует их в управляемый вами язык и создает файл конфигурации клиентского приложения. , который можно использовать для настройки объекта клиента WCF. Например, если вы собираетесь создать объект клиента WCF для вызова `MyCalculatorService` и известно, что метаданные для этой службы публикуются в `http://computerName/MyCalculatorService/Service.svc?wsdl`, то в следующем примере кода показано, как использовать Svcutil. exe для получения файла `ClientCode.vb`, содержащего службу. контракт в управляемом коде.  
   
-```  
+```console  
 svcutil /language:vb /out:ClientCode.vb /config:app.config http://computerName/MyCalculatorService/Service.svc?wsdl  
 ```  
   
@@ -169,7 +169,7 @@ End Interface
  Способ вызова операций полностью зависит от разработчика клиента. Это объясняется тем, что сообщения, составляющие операцию, можно сопоставить синхронному или асинхронному методу с использованием управляемого кода. Следовательно, если необходимо создать клиент, который вызывает операции асинхронно, можно использовать Svcutil.exe для создания асинхронного кода клиента с помощью параметра `/async`. Дополнительные сведения см. [в разделе инструкции. асинхронный вызов операций службы](./feature-details/how-to-call-wcf-service-operations-asynchronously.md).  
   
 ## <a name="calling-services-using-wcf-client-channels"></a>Вызов служб с использованием клиентских каналов WCF  
- Типы клиентов WCF расширяют <xref:System.ServiceModel.ClientBase%601>, который является производным от интерфейса <xref:System.ServiceModel.IClientChannel?displayProperty=nameWithType> для предоставления базовой системы каналов. Можно вызвать службы с помощью целевого контракта службы с классом <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType>. Дополнительные сведения см. в разделе [архитектура клиента WCF](./feature-details/client-architecture.md).  
+ Типы клиентов WCF расширяют <xref:System.ServiceModel.ClientBase%601>, которые являются производными от <xref:System.ServiceModel.IClientChannel?displayProperty=nameWithType> интерфейса для предоставления базовой системы каналов. Можно вызвать службы с помощью целевого контракта службы с классом <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType>. Дополнительные сведения см. в разделе [архитектура клиента WCF](./feature-details/client-architecture.md).  
   
 ## <a name="see-also"></a>См. также
 

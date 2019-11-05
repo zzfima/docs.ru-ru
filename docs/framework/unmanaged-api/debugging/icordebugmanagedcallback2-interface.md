@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: cf7b7cfa-1c4b-4d8c-be70-4f9ed15a788b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ca33436d98edf5844a5ca27c9ac89648f10ec0c5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 97f103844c38ebd3dbff058bfe96ab953cdba960
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69909986"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131476"
 ---
 # <a name="icordebugmanagedcallback2-interface"></a>Интерфейс ICorDebugManagedCallback2
-Предоставляет методы для поддержки обработки исключений отладчика и управляемых помощников по отладке (MDA). `ICorDebugManagedCallback2`является логическим расширением интерфейса [ICorDebugManagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md) .  
+Предоставляет методы для поддержки обработки исключений отладчика и управляемых помощников по отладке (MDA). `ICorDebugManagedCallback2` является логическим расширением интерфейса [ICorDebugManagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md) .  
   
 ## <a name="methods"></a>Методы  
   
@@ -39,20 +37,20 @@ ms.locfileid: "69909986"
 |[Метод FunctionRemapOpportunity](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-functionremapopportunity-method.md)|Уведомляет отладчик о том, что выполнение кода достигло точки последовательности в более ранней версии измененной функции.|  
 |[Метод MDANotification](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-mdanotification-method.md)|Предоставляет уведомление о том, что при выполнении кода было обнаружено сообщение MDA.|  
   
-## <a name="remarks"></a>Примечания  
- `ICorDebugManagedCallback2` Интерфейс`ICorDebugManagedCallback` расширяет интерфейс для поддержки новых событий отладки, появившихся в .NET Framework версии 2,0.  
+## <a name="remarks"></a>Заметки  
+ Интерфейс `ICorDebugManagedCallback2` расширяет интерфейс `ICorDebugManagedCallback` для поддержки новых событий отладки, появившихся в .NET Framework версии 2,0.  
   
- При отладке приложений .NET Framework `ICorDebugManagedCallback2` 2,0 в отладчике должен быть реализован. Экземпляр `ICorDebugManagedCallback` или`ICorDebugManagedCallback2` передается как объект обратного вызова в [ICorDebug:: SetManagedHandler](../../../../docs/framework/unmanaged-api/debugging/icordebug-setmanagedhandler-method.md).  
+ Отладчик должен реализовывать `ICorDebugManagedCallback2`, если он Отладка .NET Framework 2,0 приложений. Экземпляр `ICorDebugManagedCallback` или `ICorDebugManagedCallback2` передается в качестве объекта обратного вызова в метод [ICorDebug:: SetManagedHandler](../../../../docs/framework/unmanaged-api/debugging/icordebug-setmanagedhandler-method.md).  
   
 > [!NOTE]
 > Этот интерфейс не поддерживает удаленные вызовы между компьютерами или между процессами.  
   
 ## <a name="requirements"></a>Требования  
- **Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug. idl, CorDebug. h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
- **Библиотечная** Коргуидс. lib  
+ **Библиотека:** CorGuids.lib  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 67a8a9f2-dee3-44b2-a1c0-f307a3bdf90f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c000aad12000a9c76fb6dd805a9b002c021be6ef
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 8b7866b92be3195b0a767a823a0d7fb1c0aa4918
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798841"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73104246"
 ---
 # <a name="strongnametokenfromassemblyex-function"></a>Функция StrongNameTokenFromAssemblyEx
 Создает маркер строгого имени из указанного файла сборки и возвращает открытый ключ, который представляет маркер.  
@@ -57,9 +55,9 @@ BOOLEAN StrongNameTokenFromAssemblyEx (
  заполняет Размер открытого ключа в байтах.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- `true`При успешном завершении; в противном случае —. `false`  
+ `true` при успешном завершении; в противном случае `false`.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
  Маркер строгого имени — это сокращенная форма открытого ключа. Маркер представляет собой 64-разрядный хэш, созданный из открытого ключа, используемого для подписания сборки. Токен является частью строгого имени сборки и может быть считан из метаданных сборки.  
   
  После извлечения ключа и создания маркера следует вызвать функцию [StrongNameFreeBuffer](strongnamefreebuffer-function.md) , чтобы освободить выделенную память.  
@@ -67,11 +65,11 @@ BOOLEAN StrongNameTokenFromAssemblyEx (
  Если функция `StrongNameTokenFromAssemblyEx` не завершается успешно, вызовите функцию [StrongNameErrorInfo](strongnameerrorinfo-function.md), чтобы получить последнюю созданную ошибку.  
   
 ## <a name="requirements"></a>Требования  
- **Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
- **Заголовок.** StrongName. h  
+ **Заголовок:** StrongName. h  
   
- **Библиотечная** Включается в качестве ресурса в библиотеку Mscoree. dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку Mscoree. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

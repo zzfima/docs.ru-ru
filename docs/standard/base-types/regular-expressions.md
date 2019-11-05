@@ -20,14 +20,12 @@ helpviewer_keywords:
 - .NET Framework regular expressions
 - strings [.NET Framework], regular expressions
 ms.assetid: 521b3f6d-f869-42e1-93e5-158c54a6895d
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 89b527d4febb677512b3cdcf7cd47344d182ae26
-ms.sourcegitcommit: 878ca7550b653114c3968ef8906da2b3e60e3c7a
+ms.openlocfilehash: ac034ff37b0b39f41d6f58381286706f9a9ac602
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71736855"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121706"
 ---
 # <a name="net-regular-expressions"></a>Регулярные выражения в .NET
 Регулярные выражения предоставляют мощный, гибкий и эффективный способ обработки текста. Комплексная нотация сопоставления шаблонов регулярных выражений позволяет быстро анализировать большие объемы текста для поиска определенных шаблонов символов, проверять текст на соответствие предопределенному шаблону (например, адресу электронной почты), извлекать, изменять, заменять и удалять текстовые подстроки, а также добавлять извлеченные строки в коллекцию для создания отчета. Для многих приложений, которые работают со строками или анализируют большие блоки текста, регулярные выражения — незаменимый инструмент.  
@@ -118,7 +116,7 @@ ms.locfileid: "71736855"
 |[Подробные сведения о поведении регулярных выражений](details-of-regular-expression-behavior.md)|Сведения о возможностях и поведении регулярных выражений платформы .NET.|  
 |[Примеры регулярных выражений](regular-expression-examples.md)|Примеры кода, демонстрирующие типичное применение регулярных выражений.|  
   
-## <a name="reference"></a>Справочник  
+## <a name="reference"></a>Ссылка  
  <xref:System.Text.RegularExpressions?displayProperty=nameWithType>  
  <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType>  
  [Краткий справочник по регулярным выражениям (скачать в формате Word)](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  

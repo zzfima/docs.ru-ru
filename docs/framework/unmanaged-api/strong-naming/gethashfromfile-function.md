@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: b3c526a4-8fb4-4ad6-b6af-42ce9c06492e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0e79c1d89d767832022d487681e0515e5e92a7f3
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: ffa25b1ec6fda80099f333c1d0a4cf57b76379e2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70799212"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140691"
 ---
 # <a name="gethashfromfile-function"></a>Функция GetHashFromFile
 Создает хэш содержимого указанного файла.  
@@ -45,7 +43,7 @@ HRESULT GetHashFromFile (
  окне Имя файла для хэширования.  
   
  `piHashAlg`  
- [вход, выход] Алгоритм, используемый при формировании хэша. Допустимыми являются алгоритмы, определяемые интерфейсом Win32 CryptoAPI. Если `piHashAlg` параметр имеет значение 0, используется алгоритм по умолчанию CALG_SHA-1.  
+ [вход, выход] Алгоритм, используемый при формировании хэша. Допустимыми являются алгоритмы, определяемые интерфейсом Win32 CryptoAPI. Если `piHashAlg` имеет значение 0, используется алгоритм по умолчанию CALG_SHA-1.  
   
  `pbHash`  
  заполняет Массив байтов, содержащий созданный хэш.  
@@ -54,17 +52,17 @@ HRESULT GetHashFromFile (
  окне Максимальный размер буфера, на который `pbHash` указывает.  
   
  `pchHash`  
- заполняет Размер возвращаемого `pbHash`объекта (в байтах).  
+ заполняет Размер возвращаемого `pbHash`в байтах.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
  Эта функция аналогична [GetHashFromFileW](gethashfromfilew-function.md), за исключением того, что спецификация имени файла является ANSI, а не Unicode.  
   
 ## <a name="requirements"></a>Требования  
- **Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
- **Заголовок.** StrongName. h  
+ **Заголовок:** StrongName. h  
   
- **Библиотечная** Включается в качестве ресурса в библиотеку MsCorEE. dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

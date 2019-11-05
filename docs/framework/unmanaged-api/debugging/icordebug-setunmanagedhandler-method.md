@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6b546be4-f86d-4536-8cfc-1d08e5066eb6
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f50a4bedfee0c402bb76265371d3b9809263ef97
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 36d314211d95dff6648753f5d550a2cfd402a918
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738133"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134050"
 ---
 # <a name="icordebugsetunmanagedhandler-method"></a>Метод ICorDebug::SetUnmanagedHandler
 Указывает объект обработчика событий для неуправляемых событий.  
@@ -37,15 +35,15 @@ HRESULT SetUnmanagedHandler (
   
 ## <a name="parameters"></a>Параметры  
  `pCallback`  
- [in] Указатель на [ICorDebugUnmanagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugunmanagedcallback-interface.md) объект, представляющий обработчик событий для неуправляемых событий.  
+ окне Указатель на объект [икордебугунманажедкаллбакк](../../../../docs/framework/unmanaged-api/debugging/icordebugunmanagedcallback-interface.md) , представляющий обработчик событий для неуправляемых событий.  
   
-## <a name="remarks"></a>Примечания  
- Обработчик событий объекта для неуправляемых событий необходимо задать после вызова [ICorDebug::Initialize](../../../../docs/framework/unmanaged-api/debugging/icordebug-initialize-method.md) и перед любыми вызовами [ICorDebug::CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebug-createprocess-method.md) или [ICorDebug::DebugActiveProcess ](../../../../docs/framework/unmanaged-api/debugging/icordebug-debugactiveprocess-method.md). Тем не менее для обратной совместимости, вы не должны задать объект обработчика событий для неуправляемых событий до первого события отладки машинного кода. В частности Если `ICorDebug::CreateProcess` установлен флаг CREATE_SUSPENDED, события, которые не удалось доставить, пока основной поток не будет возобновлена отладки машинного кода.  
+## <a name="remarks"></a>Заметки  
+ Объект обработчика событий для неуправляемых событий должен быть задан после вызова метода [ICorDebug:: Initialize](../../../../docs/framework/unmanaged-api/debugging/icordebug-initialize-method.md) и перед вызовом [ICorDebug:: CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebug-createprocess-method.md) или [ICorDebug::D ебугактивепроцесс](../../../../docs/framework/unmanaged-api/debugging/icordebug-debugactiveprocess-method.md). Однако для устаревших целей не требуется задавать объект обработчика событий для неуправляемых событий до тех пор, пока не будет вызвано первое собственное событие отладки. В частности, если `ICorDebug::CreateProcess` установлен флаг CREATE_SUSPENDED, события отладки машинного кода не могут быть отправлены, пока основной поток не возобновит работу.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

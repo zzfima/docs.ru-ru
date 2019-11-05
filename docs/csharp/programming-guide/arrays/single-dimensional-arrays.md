@@ -6,12 +6,12 @@ helpviewer_keywords:
 - single-dimensional arrays [C#]
 - arrays [C#], single-dimensional
 ms.assetid: 2cec1196-1de0-49d2-baf2-c607c33310e8
-ms.openlocfilehash: 17c384ec327d4a80ed614dce6254baa5bfb2e960
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 5559acd162b26a94b009ec21691d1501c90db290
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69597309"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73419530"
 ---
 # <a name="single-dimensional-arrays-c-programming-guide"></a>Одномерные массивы (Руководство по программированию на C#)
 
@@ -55,7 +55,7 @@ ms.locfileid: "69597309"
   
  Результат этого оператора зависит от того, является ли `SomeType` типом значения или ссылочным типом. Если это тип значения, оператор создает массив из 10 элементов, каждый из которых имеет тип `SomeType`. Если `SomeType` является ссылочным типом, этот оператор создает массив из 10 элементов, каждый из которых инициализируется с использованием ссылки NULL.  
   
- Дополнительные сведения о типах значений и ссылочных типах см. в разделе [Типы](../../language-reference/keywords/types.md).  
+ Дополнительные сведения о типах значений и ссылочных типах см. в разделе [Типы](/dotnet/csharp/language-reference/keywords).  
   
 ## <a name="see-also"></a>См. также
 

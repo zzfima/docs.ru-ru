@@ -8,21 +8,19 @@ helpviewer_keywords:
 - alwaysFlowImpersonationPolicy element
 - <alwaysFlowImpersonationPolicy> element
 ms.assetid: ee622801-9e46-470b-85ab-88c4b1dd2ee1
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 164492eb1abc7329481f158963118b47d2c4aebc
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 06e91ea6989dcdf0b2a179e7d6ce79b8d9aaff03
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252863"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73118344"
 ---
-# <a name="alwaysflowimpersonationpolicy-element"></a>\<Элемент > Алвайсфловимперсонатионполици
+# <a name="alwaysflowimpersonationpolicy-element"></a>\<Алвайсфловимперсонатионполици > элемент
 Указывает, что удостоверение Windows всегда проходит через асинхронные точки, независимо от того, как было выполнено олицетворение.  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> среды выполнения**](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<Алвайсфловимперсонатионполици >** \  
+&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
+&nbsp;&nbsp;&nbsp;&nbsp; **\<алвайсфловимперсонатионполици >** \  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -42,13 +40,13 @@ ms.locfileid: "70252863"
   
 ## <a name="enabled-attribute"></a>Атрибут enabled  
   
-|Значение|Описание|  
+|значения|Описание|  
 |-----------|-----------------|  
-|`false`|Удостоверение Windows не передается через асинхронные точки, если олицетворение не выполняется через управляемые методы, такие <xref:System.Security.Principal.WindowsIdentity.Impersonate%2A>как. Это значение по умолчанию.|  
+|`false`|Удостоверение Windows не передается через асинхронные точки, если олицетворение не выполняется с помощью управляемых методов, таких как <xref:System.Security.Principal.WindowsIdentity.Impersonate%2A>. Это значение по умолчанию.|  
 |`true`|Удостоверение Windows всегда проходит через асинхронные точки независимо от того, как было выполнено олицетворение.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
- Нет.  
+ Отсутствует.  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
@@ -57,14 +55,14 @@ ms.locfileid: "70252863"
 |`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.|  
 |`runtime`|Содержит сведения о привязке сборок и сборке мусора.|  
   
-## <a name="remarks"></a>Примечания  
- В .NET Framework версиях 1,0 и 1,1 идентификатор Windows не проходит через асинхронные точки. В .NET Framework версии 2,0 имеется <xref:System.Threading.ExecutionContext> объект, который содержит сведения о выполняемом в данный момент потоке и передает его между асинхронными точками в домене приложения. Также передается как часть информации, которая проходит через асинхронные точки, при условии, что олицетворение достигается с помощью управляемых <xref:System.Security.Principal.WindowsIdentity.Impersonate%2A> методов, таких как, а не с помощью других средств, таких как вызов неуправляемого кода в машинные методы. <xref:System.Security.Principal.WindowsIdentity> Этот элемент позволяет указать, что удостоверение Windows выполняет потоковую передачу через асинхронные точки независимо от того, как было достигнуто олицетворение.  
+## <a name="remarks"></a>Заметки  
+ В .NET Framework версиях 1,0 и 1,1 идентификатор Windows не проходит через асинхронные точки. В .NET Framework версии 2,0 имеется объект <xref:System.Threading.ExecutionContext>, содержащий сведения о выполняемом в данный момент потоке и перенаправляемый его между асинхронными точками в домене приложения. <xref:System.Security.Principal.WindowsIdentity> также передается как часть информации, которая проходит через асинхронные точки, при условии, что олицетворение достигается с помощью управляемых методов, таких как <xref:System.Security.Principal.WindowsIdentity.Impersonate%2A>, а не с помощью других средств, таких как вызов неуправляемого кода в машинные методы. Этот элемент позволяет указать, что удостоверение Windows выполняет потоковую передачу через асинхронные точки независимо от того, как было достигнуто олицетворение.  
   
  Это поведение по умолчанию можно изменить двумя способами.  
   
 1. В управляемом коде на основе каждого потока.  
   
-     Можно <xref:System.Threading.ExecutionContext> подавить поток на основе каждого потока, изменив параметры и <xref:System.Security.SecurityContext> с помощью <xref:System.Threading.ExecutionContext.SuppressFlow%2A?displayProperty=nameWithType>метода, <xref:System.Security.SecurityContext.SuppressFlowWindowsIdentity%2A?displayProperty=nameWithType>или <xref:System.Security.SecurityContext.SuppressFlow%2A?displayProperty=nameWithType> .  
+     Можно подавить поток на основе каждого потока, изменив параметры <xref:System.Threading.ExecutionContext> и <xref:System.Security.SecurityContext> с помощью метода <xref:System.Threading.ExecutionContext.SuppressFlow%2A?displayProperty=nameWithType>, <xref:System.Security.SecurityContext.SuppressFlowWindowsIdentity%2A?displayProperty=nameWithType>или <xref:System.Security.SecurityContext.SuppressFlow%2A?displayProperty=nameWithType>.  
   
 2. В вызове неуправляемого интерфейса размещения для загрузки среды CLR.  
   
@@ -73,7 +71,7 @@ ms.locfileid: "70252863"
 ## <a name="configuration-file"></a>Файл конфигурации  
  В приложении .NET Framework этот элемент можно использовать только в файле конфигурации приложения.  
   
- Для приложения ASP.NET поток олицетворения можно настроить в файле aspnet. config, который \<находится в папке Windows > \микрософт.нет\фрамеворк\вкс.КС.кскскскс.  
+ Для приложения ASP.NET поток олицетворения можно настроить в файле aspnet. config, который находится в папке \<Windows > Каталог \Микрософт.нет\фрамеворк\вкс.КС.кскскскс.  
   
  ASP.NET по умолчанию отключает поток олицетворения в файле aspnet. config, используя следующие параметры конфигурации:  
   
@@ -112,4 +110,4 @@ ms.locfileid: "70252863"
 
 - [Схема параметров среды выполнения](index.md)
 - [Схема файла конфигурации](../index.md)
-- [\<Элемент > Легациимперсонатионполици](legacyimpersonationpolicy-element.md)
+- [\<Легациимперсонатионполици > элемент](legacyimpersonationpolicy-element.md)

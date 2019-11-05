@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0bc96acb-6179-4328-a447-cda562ce9e98
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9be126e45d8428d8786e9aadf2195133d1957440
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ff74a9849b74b8a8e6b8c03f1fc4e7c7eee1ec14
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67754832"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124059"
 ---
 # <a name="icordebugframeenumnext-method"></a>Метод ICorDebugFrameEnum::Next
-Возвращает заданное число экземпляров ICorDebugFrame, начиная с текущей позиции.  
+Возвращает указанное число экземпляров ICorDebugFrame, начиная с текущей позиции.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,18 +38,18 @@ HRESULT Next (
   
 ## <a name="parameters"></a>Параметры  
  `celt`  
- [in] Количество `ICorDebugFrame` извлекаемых экземпляров.  
+ окне Число извлекаемых экземпляров `ICorDebugFrame`.  
   
  `frames`  
- [out] Массив указателей, каждый из которых указывает `ICorDebugFrame` объекта.  
+ заполняет Массив указателей, каждый из которых указывает на объект `ICorDebugFrame`.  
   
  `pceltFetched`  
- [out] Указатель на число `ICorDebugFrame` фактически возвращенных экземпляров. Это значение может иметь значение null Если `celt` — один.  
+ заполняет Указатель на число фактически возвращаемых экземпляров `ICorDebugFrame`. Это значение может быть равно null, если `celt` является одним.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

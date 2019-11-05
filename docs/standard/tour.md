@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 05/22/2017
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: a83253e37d3afde9ed8266ec1195c9726f6462cc
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: 8a2904d02b34058a87a77bbedbed3ccba4c80c58
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291590"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73421576"
 ---
 # <a name="tour-of-net"></a>Обзор .NET
 
@@ -37,7 +37,7 @@ ms.locfileid: "72291590"
 
 ## <a name="automatic-memory-management"></a>Автоматическое управление памятью
 
-Архитектура .NET использует [сборку мусора](garbagecollection/index.md), чтобы обеспечить автоматическое управление памятью для программ. Сборка мусора отражает отложенный подход к управлению памятью, когда пропускная способность приложения предпочитается немедленной сборке памяти. Чтобы узнать больше о сборке мусора в .NET, см. статью [Fundamentals of garbage collection (GC)](garbagecollection/fundamentals.md) (Базовые понятия сборки мусора).
+Архитектура .NET использует [сборку мусора](garbage-collection/index.md), чтобы обеспечить автоматическое управление памятью для программ. Сборка мусора отражает отложенный подход к управлению памятью, когда пропускная способность приложения предпочитается немедленной сборке памяти. Чтобы узнать больше о сборке мусора в .NET, см. статью [Fundamentals of garbage collection (GC)](garbage-collection/fundamentals.md) (Базовые понятия сборки мусора).
 
 Обе приведенные ниже строки выделяют память:
 

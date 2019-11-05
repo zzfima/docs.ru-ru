@@ -605,6 +605,8 @@
               href: language-reference/operators/like-operator.md
             - name: Оператор Mod
               href: language-reference/operators/mod-operator.md
+            - name: Оператор NameOf
+              href: language-reference/operators/nameof.md
             - name: Оператор New
               href: language-reference/operators/new-operator.md
             - name: Оператор Not
@@ -961,10 +963,10 @@
           href: language-reference/error-messages/bad-file-name-or-number.md
         - name: Недопустимая длина записи
           href: language-reference/error-messages/bad-record-length.md
-        - name: 'Поскольку этот вызов не ожидается, выполнение текущего метода продолжается до завершения вызова.'
-          href: language-reference/error-messages/because-this-call-is-not-awaited-the-current-method-continues-to-run.md
-        - name: 'Не удается преобразовать анонимный тип в дерево выражений, поскольку он содержит поле, которое было использовано в инициализации другого поля'
-          href: language-reference/error-messages/cannot-convert-anonymous-type-to-expression-tree.md
+        - name: 'Так как этот вызов не ожидается, выполнение существующего метода продолжается до тех пор, пока вызов не будет завершен.'
+          href: language-reference/error-messages/bc42358.md
+        - name: 'Не удается преобразовать анонимный тип к дереву выражения, так как свойство типа используется для инициализации другого свойства.'
+          href: language-reference/error-messages/bc36548.md
         - name: Не удается создать компонент ActiveX
           href: language-reference/error-messages/cannot-create-activex-component.md
         - name: 'Невозможно обратиться к полю <name>, так как оно является членом поля с типизированным значением <name> класса <classname>, базовым классом которого является System.MarshalByRefObject'
@@ -1283,7 +1285,7 @@
           href: language-reference/error-messages/xml-literals-and-xml-properties-are-not-supported-in-embedded-code-in-aspnet.md
         - name: URI-код пространства имен XML <uri> может быть связан только с префиксом xmlns
           href: language-reference/error-messages/xml-namespace-uri-uri-can-be-bound-only-to-xmlns.md
-- name: Справочник
+- name: Ссылка
   href: reference/index.md
   items:
     - name: Компилятор с интерфейсом командной строки

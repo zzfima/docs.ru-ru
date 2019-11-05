@@ -1,5 +1,5 @@
 ---
-title: Метод ICorDebugVariableHome::GetSlotIndex
+title: 'Метод ICorDebugVariableHome:: GetSlotIndex'
 ms.date: 03/30/2017
 api_name:
 - ICorDebugVariableHome.GetSlotIndex
@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 966da50d-5665-4fff-bf7b-1c72bbadd9a4
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 199c3ba5d5b9588db4c665070b4dec6266cefc2e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: dfc2e91599e7f05d90d56af07b71313e9eecaa51
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67760356"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121052"
 ---
-# <a name="icordebugvariablehomegetslotindex-method"></a>Метод ICorDebugVariableHome::GetSlotIndex
-Возвращает управляемый индекс слота локальной переменной.  
+# <a name="icordebugvariablehomegetslotindex-method"></a>Метод ICorDebugVariableHome:: GetSlotIndex
+Возвращает управляемый индекс в виде слота локальной переменной.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,23 +35,23 @@ HRESULT GetSlotIndex(
   
 ## <a name="parameters"></a>Параметры  
  `pSlotIndex`  
- [out] Указатель на индекс слота локальной переменной.  
+ заполняет Указатель на индекс в виде слота локальной переменной.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Метод возвращает следующие значения.  
   
-|Значение|Описание|  
+|значения|Описание|  
 |-----------|-----------------|  
-|`S_OK`|Этот метод вернул значение индекс слота в `pSlotIndex`.|  
-|`E_FAIL`|Текущий [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) экземпляр представляет аргумент функции.|  
+|`S_OK`|Вызов метода вернул значение индекса слота в `pSlotIndex`.|  
+|`E_FAIL`|Текущий экземпляр [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) представляет аргумент функции.|  
   
-## <a name="remarks"></a>Примечания  
- Индекс слота можно использовать для получения метаданных для данной локальной переменной.  
+## <a name="remarks"></a>Заметки  
+ Чтобы получить метаданные для этой локальной переменной, можно использовать индекс Slot.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

@@ -14,14 +14,12 @@ helpviewer_keywords:
 - SetSecurity function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 94c76213acb66116105d181e9961a33976047ee7
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 6d27779bcfc97e1c4156b8782896e83d4754491b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798248"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120217"
 ---
 # <a name="setsecurity-function"></a>Функция Сетсекурити
 
@@ -41,22 +39,22 @@ HRESULT SetSecurity (
 ## <a name="parameters"></a>Параметры
 
 `pNeedToReset`\
-заполняет При возврате функции содержит указатель на `boolean` , указывающий, следует ли сбрасывать маркер путем вызова функции [ресетсекурити](resetsecurity.md) .
+заполняет При возврате функции содержит указатель на `boolean`, указывающий, следует ли сбрасывать маркер путем вызова функции [ресетсекурити](resetsecurity.md) .
 
 `token`\
-заполняет При возврате функции содержит указатель на маркер маркера олицетворения, связанный с текущим потоком. Его значение может быть `null` , если нет токена, связанного с текущим потоком. 
+заполняет При возврате функции содержит указатель на маркер маркера олицетворения, связанный с текущим потоком. Его значение может быть `null`, если нет токена, связанного с текущим потоком. 
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Если функция выполнена, возвращаемое значение равно `S_OK` (0).
+Если функция выполнена удачно, возвращается значение `S_OK` (0).
 
 Если функция завершается ошибкой, возвращаемое значение является ненулевым кодом ошибки. Чтобы получить расширенные сведения об ошибке, вызовите функцию [жетерроринфо](geterrorinfo.md) .
 
 ## <a name="requirements"></a>Требования
 
- **Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).
+ **Платформы:** см. раздел [Требования к системе](../../get-started/system-requirements.md).
 
- **Заголовок.** WMINet_Utils. idl
+ **Заголовок:** WMINet_Utils. idl
 
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 

@@ -10,26 +10,26 @@ helpviewer_keywords:
 - change notifications [WPF]
 - properties [WPF], change notifications
 ms.assetid: 30b59d9e-8c3a-4349-aa82-4be837e841cf
-ms.openlocfilehash: d37d468acc94470be8c2afdc495b40168932ec83
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4f9ff49a443577e119b0c1079abbe23bd7ede4c4
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61931447"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459746"
 ---
 # <a name="how-to-implement-property-change-notification"></a>Практическое руководство. Реализация уведомления об изменении свойства
-Для поддержки <xref:System.Windows.Data.BindingMode.OneWay> или <xref:System.Windows.Data.BindingMode.TwoWay> привязки для включения свойства целевого объекта привязки автоматическое отражение динамических изменений источника привязки (например, область просмотра обновляется автоматически, когда пользователь редактирует форму), класс необходимо предоставлять уведомления соответствующие изменения свойства. В этом примере показано, как создать класс, реализующий <xref:System.ComponentModel.INotifyPropertyChanged>.  
+Чтобы обеспечить поддержку привязки <xref:System.Windows.Data.BindingMode.OneWay> или <xref:System.Windows.Data.BindingMode.TwoWay>, чтобы свойства целевого объекта привязки автоматически отражали динамические изменения источника привязки (например, для автоматического обновления области просмотра при редактировании пользователем формы), классу необходимо укажите правильные уведомления об изменении свойств. В этом примере показано, как создать класс, реализующий <xref:System.ComponentModel.INotifyPropertyChanged>.  
   
 ## <a name="example"></a>Пример  
- Для реализации <xref:System.ComponentModel.INotifyPropertyChanged> необходимо объявить <xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged> событий и создайте `OnPropertyChanged` метод. Затем для каждого свойства, которому потребуются уведомления об изменениях, вы вызываете `OnPropertyChanged` при каждом обновлении свойства.  
+ Для реализации <xref:System.ComponentModel.INotifyPropertyChanged> необходимо объявить событие <xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged> и создать метод `OnPropertyChanged`. Затем для каждого свойства, которому потребуются уведомления об изменениях, вы вызываете `OnPropertyChanged` при каждом обновлении свойства.  
   
  [!code-csharp[SimpleBinding#PersonClass](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleBinding/CSharp/Person.cs#personclass)]
  [!code-vb[SimpleBinding#PersonClass](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SimpleBinding/VisualBasic/Person.vb#personclass)]  
   
- Пример того, как `Person` класс может использоваться для поддержки <xref:System.Windows.Data.BindingMode.TwoWay> привязки, см. в разделе [Управление обновлением источника текст в текстовом поле](how-to-control-when-the-textbox-text-updates-the-source.md).  
+ Пример того, как можно использовать класс `Person` для поддержки привязки <xref:System.Windows.Data.BindingMode.TwoWay>, см. в разделе [Управление обновлением источника в текстовом поле](how-to-control-when-the-textbox-text-updates-the-source.md).  
   
 ## <a name="see-also"></a>См. также
 
 - [Общие сведения об источниках привязки](binding-sources-overview.md)
-- [Общие сведения о привязке данных](data-binding-overview.md)
+- [Общие сведения о привязке данных](../../../desktop-wpf/data/data-binding-overview.md)
 - [Разделы практического руководства](data-binding-how-to-topics.md)

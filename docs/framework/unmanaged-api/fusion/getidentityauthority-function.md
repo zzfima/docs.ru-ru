@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 843cd5ab-d2b7-4ff6-86bd-e68c7a91c098
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f29246bdb929c8eaf1ebce726164d5cd2269b9f1
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: acb80f3cc199d4d9f774cb3898335d26fe44b807
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796870"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127148"
 ---
 # <a name="getidentityauthority-function"></a>Функция GetIdentityAuthority
 Возвращает указатель на экземпляр [IIdentityAuthority](iidentityauthority-interface.md) , который управляет ключами для объектов кода.  
@@ -37,12 +35,12 @@ HRESULT GetIdentityAuthority (
   
 ## <a name="parameters"></a>Параметры  
  `ppIIdentityAuthority`  
- заполняет Возвращаемый `IIdentityAuthority` указатель.  
+ заполняет Возвращаемый указатель `IIdentityAuthority`.  
   
 ## <a name="requirements"></a>Требования  
- **Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
- **Заголовок.** Изоляция. h  
+ **Заголовок:** Изоляция. h  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

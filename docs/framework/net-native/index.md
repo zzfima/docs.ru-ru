@@ -8,14 +8,12 @@ helpviewer_keywords:
 - .NET Native
 - C# and native compilation
 ms.assetid: 47cd5648-9469-4b1d-804c-43cc04384045
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5993cfdb0f50d8e474a4f18280d181d9ec2fdfa4
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 1f176e81905fe68c6d740a13240fe814659a7a59
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049657"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128374"
 ---
 # <a name="compiling-apps-with-net-native"></a>Компиляция приложений с помощью машинного кода .NET
 
@@ -61,13 +59,13 @@ ms.locfileid: "71049657"
 
 Для приложений, предназначенных для Windows 10, выполняется передача двоичных файлов компиляции машинного кода .NET в пакетах приложений (файлы APPX) в Магазин Windows.
 
-## <a name="in-this-section"></a>В этом разделе
+## <a name="in-this-section"></a>Содержание
 
 Дополнительные сведения о разработке приложений при использовании компиляции машинного кода .NET см. в следующих разделах
 
-- [Начало работы компиляции кода .NET Native: Пошаговое руководство для разработчиков](getting-started-with-net-native.md)
+- [Приступая к компиляции кода с помощью машинного кода .NET: пошаговое руководство разработчика](getting-started-with-net-native.md)
 
-- [.NET Native и компиляция:](net-native-and-compilation.md) Как .NET Native компилирует проект в машинный код.
+- [Машинный код .NET и компиляция](net-native-and-compilation.md) — как проект компилируется в машинный код .NET.
 
 - [Отражение и .NET Native](reflection-and-net-native.md)
 

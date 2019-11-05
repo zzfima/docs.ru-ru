@@ -5,14 +5,12 @@ helpviewer_keywords:
 - Windows Runtime Metadata Export Tool
 - Winmdexp.exe
 ms.assetid: d2ce0683-343d-403e-bb8d-209186f7a19d
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0b3cf60d670e7fdfa624599bc0eeddc99219c202
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 061baf262342034299c47c22b2f2691f3a61b958
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71044021"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73104221"
 ---
 # <a name="winmdexpexe-windows-runtime-metadata-export-tool"></a>Winmdexp.exe (средство экспорта метаданных среды выполнения Windows)
 Программа экспорта метаданных среды выполнения Windows (Winmdexp.exe) преобразует модуль .NET Framework в файл, содержащий метаданные среды выполнения Windows. Несмотря на то что сборки .NET Framework и файлы метаданных среды выполнения Windows используют один и тот же физический формат, существуют различия в содержимом таблиц метаданных, то есть сборки .NET Framework невозможно без преобразования использовать как компоненты среды выполнения Windows. Процесс преобразования модуля .NET Framework в компонент среды выполнения Windows называется *экспортированием*. В .NET Framework 4.5 и .NET Framework 4.5.1 конечный файл метаданных Windows (WINMD) содержит и метаданные, и реализацию.  
@@ -33,7 +31,7 @@ winmdexp [options] winmdmodule
   
 |Аргумент или параметр|ОПИСАНИЕ|  
 |------------------------|-----------------|  
-|`winmdmodule`|Задает экспортируемый модуль (WINMDOBJ). Допускается только один модуль. Чтобы создать этот модуль, следует использовать параметр компилятора `/target` с целевым объектом `winmdobj`. См. статью [/target:winmdobj (параметры компилятора C#)](../../csharp/language-reference/compiler-options/target-winmdobj-compiler-option.md) или [/target (Visual Basic)](../../visual-basic/reference/command-line-compiler/target.md).|  
+|`winmdmodule`|Задает экспортируемый модуль (WINMDOBJ). Допускается только один модуль. Чтобы создать этот модуль, следует использовать параметр компилятора `/target` с целевым объектом `winmdobj`. См. раздел [-target:winmdobj (параметры компилятора C#)](../../csharp/language-reference/compiler-options/target-winmdobj-compiler-option.md) или [-target (Visual Basic)](../../visual-basic/reference/command-line-compiler/target.md).|  
 |`/docfile:` `docfile`<br /><br /> `/d:` `docfile`|Задает выходной файл документации XML, который создаст программа Winmdexp.exe. В .NET Framework 4.5 выходной файл совпадает со входным файлом XML документации.|  
 |`/moduledoc:` `docfile`<br /><br /> `/md:` `docfile`|Задает имя файла документации XML, который компилятор создает с использованием `winmdmodule`.|  
 |`/modulepdb:` `symbolfile`<br /><br /> `/mp:` `symbolfile`|Задает имя файла базы данных программы (PDB), содержащего символы для `winmdmodule`.|  

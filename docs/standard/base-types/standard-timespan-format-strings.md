@@ -17,14 +17,12 @@ helpviewer_keywords:
 - standard TimeSpan format strings
 - formatting [.NET Framework], time intervals
 ms.assetid: 9f6c95eb-63ae-4dcc-9c32-f81985c75794
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: bc2ca7a94ffb19f62f354bdfc3040490b57e2689
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 5284eb52d7b50307e51945fc0b4a9deb8818f2e2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968552"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121694"
 ---
 # <a name="standard-timespan-format-strings"></a>Строки стандартного формата TimeSpan
 <a name="Top"></a> Строка стандартного формата <xref:System.TimeSpan> использует один описатель формата для определения текстового представления значения <xref:System.TimeSpan>, получаемого после выполнения операции форматирования. Любая строка формата, содержащая более одной буквы, включая пробелы, интерпретируется как строка настраиваемого формата <xref:System.TimeSpan>. Дополнительные сведения см. в разделе [Строки настраиваемого формата TimeSpan](../../../docs/standard/base-types/custom-timespan-format-strings.md).  

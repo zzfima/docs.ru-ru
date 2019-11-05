@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 554284e7-3f6c-4d40-8da5-1c9317fbd484
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8a6db1990df2ed6b29d548c147ed40b5bc98254d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d9430c5a1f37a0507b383ea5437f7d7fed706c43
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67745689"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123861"
 ---
 # <a name="icordebugchaingetstackrange-method"></a>Метод ICorDebugChain::GetStackRange
-Получает диапазон адресов сегмента стека для этой цепочки.  
+Возвращает диапазон адресов сегмента стека для этой цепочки.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,18 +36,18 @@ HRESULT GetStackRange (
   
 ## <a name="parameters"></a>Параметры  
  `pStart`  
- [out] Указатель на `CORDB_ADDRESS` значение, равное начальный адрес сегмента стека.  
+ заполняет Указатель на `CORDB_ADDRESS` значение, которое является начальным адресом сегмента стека.  
   
  `pEnd`  
- [out] Указатель на `CORDB_ADDRESS` значение, равное конечный адрес сегмента стека.  
+ заполняет Указатель на `CORDB_ADDRESS` значение, которое является конечным адресом сегмента стека.  
   
-## <a name="remarks"></a>Примечания  
- Числовой диапазон имеет смысл только для сравнения расположений кадра стека. Нельзя делать никаких предположений о фактическое содержимое в стеке.  
+## <a name="remarks"></a>Заметки  
+ Числовой диапазон имеет смысл только для сравнения расположений в кадрах стека. Вы не можете делать предположения о том, что фактически хранится в стеке.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

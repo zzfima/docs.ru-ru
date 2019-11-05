@@ -11,14 +11,12 @@ helpviewer_keywords:
 - enumerations [.NET Framework], parsing strings
 - base types, parsing strings
 ms.assetid: e39324ee-72e5-42d4-a80d-bf3ee7fc6c59
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8903d0443594885b3b0e8cca716eda8177c60cca
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: ac44282a06b2b3710d3a9e5390c7a514c1632c3a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988793"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127600"
 ---
 # <a name="parsing-numeric-strings-in-net"></a>Синтаксический анализ числовых строк в .NET
 Все числовые типы имеют два статических метода синтаксического анализа — `Parse` и `TryParse`, которые можно использовать для преобразования строкового представления числа в числовой тип. Эти методы позволяют анализировать строки, которые были созданы с помощью строк формата, описанных в разделах [Строки стандартных числовых форматов](../../../docs/standard/base-types/standard-numeric-format-strings.md) и [Строки настраиваемых числовых форматов](../../../docs/standard/base-types/custom-numeric-format-strings.md). По умолчанию методы `Parse` и `TryParse` могут успешно преобразовывать строки, содержащие целые десятичные числа, только в целочисленные значения. Они могут успешно преобразовывать строки, содержащие целые и дробные десятичные числа, разделители групп и десятичные разделители, в значения с плавающей запятой. Если операцию выполнить не удалось, метод `Parse` создает исключение, а метод `TryParse` возвращает значение `false`.  

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Help, Visual C# documentation
 - C# language
 - Visual C#
-ms.openlocfilehash: 78a9bd2cf657376bbc324cdefd423b14a283f842
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 77db5201ab21dff1f04f76da5dd10d07aa377813
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70104732"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73191808"
 ---
 # <a name="c-guide"></a>Руководство по языку C#
 
@@ -66,6 +66,6 @@ ms.locfileid: "70104732"
 
 ## <a name="see-also"></a>См. также
 
-- [Начало работы с Visual C# и Visual Basic](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)
+- [Начало работы с Visual C#](/visualstudio/ide/quickstart-csharp-console)
 - [Руководство по .NET](../standard/index.md)
 - [Примеры C#](https://code.msdn.microsoft.com/site/search?f%5B0%5D.Type=ProgrammingLanguage&f%5B0%5D.Value=C%23&f%5B0%5D.Text=C%23)

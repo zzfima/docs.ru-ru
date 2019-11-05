@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 10093e3d-26b6-4ad7-8ef3-bbf66243fc02
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9a1c0f7deb2ef24893530797b4507e2dcc540ad2
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: adcfbf1207ad7895ab55f7e5cf9581905cb826bf
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67757048"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73096108"
 ---
 # <a name="icordebugobjectenumnext-method"></a>Метод ICorDebugObjectEnum::Next
-Получает относительные виртуальные адреса (RVA) заданного числа объектов из перечисления, начиная с текущей позиции.  
+Возвращает относительные виртуальные адреса (RVA) указанного числа объектов из перечисления, начиная с текущей позиции.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -43,15 +41,15 @@ HRESULT Next (
  [in] Количество объектов, которые должны быть получены.  
   
  `objects`  
- [out] Массив указателей, каждый из которых указывает на объект CORDB_ADDRESS.  
+ заполняет Массив указателей, каждый из которых указывает на объект CORDB_ADDRESS.  
   
  `pceltFetched`  
- [out] Указатель на количество фактически возвращенных объектов. Это значение может иметь значение null Если `celt` — один.  
+ заполняет Указатель на число фактически возвращенных объектов. Это значение может быть равно null, если `celt` является одним.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

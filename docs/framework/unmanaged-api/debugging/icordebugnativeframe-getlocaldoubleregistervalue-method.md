@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1f838215-ac8a-434f-8ce6-03021d3098d9
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ed7436ff73fa9cc19790859581930875f39e499e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a45061b6a3105565fdbb36173731b3c3dfe5aa4f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67746280"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137294"
 ---
 # <a name="icordebugnativeframegetlocaldoubleregistervalue-method"></a>Метод ICorDebugNativeFrame::GetLocalDoubleRegisterValue
-Получает значение аргумента или локальной переменной, которая хранится в двух заданных регистрах для данного кадра машинного кода.  
+Возвращает значение аргумента или локальной переменной, которая хранится в двух указанных регистрах для этого собственного кадра.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -41,27 +39,27 @@ HRESULT GetLocalDoubleRegisterValue (
   
 ## <a name="parameters"></a>Параметры  
  `highWordReg`  
- [in] Значение, указывающее регистр, содержащий старшее слово значение перечисления «CorDebugRegister».  
+ окне Значение перечисления "CorDebugRegister", указывающее регистр, содержащий старшее слово значения.  
   
  `lowWordReg`  
- [in] Значение `CorDebugRegister` перечисление, указывающее регистр, содержащий значение младшее слово.  
+ окне Значение перечисления `CorDebugRegister`, указывающее регистр, содержащий нижнее слово значения.  
   
  `cbSigBlob`  
- [in] Целое число, указывающее размер двоичную подпись метаданных которого ссылается `pvSigBlob` параметра.  
+ окне Целое число, указывающее размер подписи двоичных метаданных, на которую ссылается параметр `pvSigBlob`.  
   
  `pvSigBlob`  
- [in] Объект `PCCOR_SIGNATURE` значение, которое указывает на двоичную подпись метаданных типа значения.  
+ окне Значение `PCCOR_SIGNATURE`, которое указывает на сигнатуру двоичных метаданных для типа значения.  
   
  `ppValue`  
- [out] Указатель на адрес объекта «ICorDebugValue», представляющего извлеченное значение, которое хранится в регистрах, указанного.  
+ заполняет Указатель на адрес объекта ICorDebugValue, представляющего извлеченное значение, хранящееся в указанных регистрах.  
   
-## <a name="remarks"></a>Примечания  
- `GetLocalDoubleRegisterValue` Метод может использоваться в кадре машинного кода или just-in-time (JIT)-компиляции кадра.  
+## <a name="remarks"></a>Заметки  
+ Метод `GetLocalDoubleRegisterValue` можно использовать либо в машинном кадре, либо в кадре JIT-компиляции.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

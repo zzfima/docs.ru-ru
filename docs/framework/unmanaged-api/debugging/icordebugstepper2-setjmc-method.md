@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: f5cdc135-6db4-4b32-9dd1-260ec58b774f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5c6b53d23410dd310766dab44664c8cd865ee9ba
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6c076dd2912a22e4f9492492a2d7a9fb73db88e8
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67771683"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139041"
 ---
 # <a name="icordebugstepper2setjmc-method"></a>Метод ICorDebugStepper2::SetJMC
-Задает значение, указывающее ли ICorDebugStepper проходит только через код, который создается разработчиком приложения. Этот процесс также известен отладка, как только собственного кода (JMC).  
+Задает значение, указывающее, следует ли выполнить шаги для этого параметра ICorDebugStepper только с помощью кода, созданного разработчиком приложения. Этот процесс также известен как отладка "только мой код" (JMC).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,12 +35,12 @@ HRESULT SetJMC (
   
 ## <a name="parameters"></a>Параметры  
  `fIsJMCStepper`  
- [in] Значение `true` к шагу только через код, который является автором разработчик приложения; в противном случае — значение `false`.  
+ окне Присвойте параметру значение `true` для шага только с помощью кода, созданного разработчиком приложения; в противном случае задайте значение `false`.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

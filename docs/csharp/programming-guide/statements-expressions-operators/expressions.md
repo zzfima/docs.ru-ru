@@ -6,12 +6,12 @@ helpviewer_keywords:
 - expressions [C#]
 - C# language, expressions
 ms.assetid: c7d8feb0-0e58-4f94-8bf6-4d070550a832
-ms.openlocfilehash: 1a0e94f40a9dc861b32e6a1c12935faadda9921b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e08220362c0acec6060ade75131e34a6b3fb7390
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69921809"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73417697"
 ---
 # <a name="expressions-c-programming-guide"></a>Выражения (Руководство по программированию в C#)
 
@@ -33,7 +33,7 @@ System.Convert.ToInt32("35");
   
 ## <a name="overflows"></a>Переполнения
 
- Числовые выражения могут привести к переполнениям, если значение больше максимального значения типа значения. Дополнительные сведения см. в разделах [Checked и Unchecked](../../language-reference/keywords/checked-and-unchecked.md) и [Таблица явных числовых преобразований](../../language-reference/keywords/explicit-numeric-conversions-table.md).  
+ Числовые выражения могут привести к переполнениям, если значение больше максимального значения типа значения. Дополнительные сведения см. в разделах [Проверяемые и непроверяемые](../../language-reference/keywords/checked-and-unchecked.md) и [Явные числовые преобразования](../../language-reference/builtin-types/numeric-conversions.md#explicit-numeric-conversions) в статье [Встроенные числовые преобразования](../../language-reference/builtin-types/numeric-conversions.md).
   
 ## <a name="operator-precedence-and-associativity"></a>Приоритет и ассоциативность операторов
 
@@ -47,7 +47,7 @@ System.Convert.ToInt32("35");
   
  [!code-csharp[csProgGuideStatements#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#2)]  
   
- Дополнительные сведения о литералах см. в разделе [Типы](../../language-reference/keywords/types.md).  
+ Дополнительные сведения о литералах см. в разделе [Типы](/dotnet/csharp/language-reference/keywords).  
   
  В предыдущем примере `i` и `s` являются простыми именами, которые определяют локальные переменные. При использовании таких переменных в выражениях результатом вычисления имени переменной является значение, которое в данное время хранится в расположении переменой в памяти. Это показано в следующем примере:  
   

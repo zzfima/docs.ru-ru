@@ -5,12 +5,12 @@ ms.date: 09/11/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc,how-to
-ms.openlocfilehash: 42f8d51f2547cd6f3240a05420b2da10b7cf52e3
-ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
+ms.openlocfilehash: b85d77900c5d9227ecc6fe81b8a8d68171dd9ef5
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72179396"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774509"
 ---
 # <a name="deploy-a-model-in-an-aspnet-core-web-api"></a>Развертывание модели в веб-API ASP.NET Core
 
@@ -21,7 +21,7 @@ ms.locfileid: "72179396"
 
 ## <a name="prerequisites"></a>Предварительные требования
 
-- [Visual Studio 2017 15.6 или более поздней версии](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) с установленной рабочей нагрузкой "Кроссплатформенная разработка .NET Core".
+- [Visual Studio 2017 версии 15.6 или более поздней](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) с установленной рабочей нагрузкой "Кроссплатформенная разработка .NET Core".
 - PowerShell.
 - Предварительно обученная модель. Используйте [учебник по анализу тональности ML.NET](../tutorials/sentiment-analysis.md), чтобы создать собственную модель, или скачайте эту [предварительно обученную модель машинного обучения для анализа тональности](https://github.com/dotnet/samples/blob/master/machine-learning/models/sentimentanalysis/sentiment_model.zip)
 
@@ -62,9 +62,9 @@ ms.locfileid: "72179396"
     ```csharp
     using Microsoft.ML.Data;
     ```
-    
+
     Удалите из файла **SentimentData.cs** существующее определение класса и добавьте следующий код:
-    
+
     ```csharp
     public class SentimentData
     {
@@ -83,9 +83,9 @@ ms.locfileid: "72179396"
     ```csharp
     using Microsoft.ML.Data;
     ```
-    
+
     Удалите из файла *SentimentPrediction.cs* существующее определение класса и добавьте следующий код:
-    
+
     ```csharp
     public class SentimentPrediction : SentimentData
     {
@@ -99,7 +99,7 @@ ms.locfileid: "72179396"
     }
     ```
 
-    Тип`SentimentPrediction` наследуется от типа `SentimentData`. Это упрощает просмотр исходных данных в свойстве `SentimentText`, а также выходных данных модели. 
+    Тип`SentimentPrediction` наследуется от типа `SentimentData`. Это упрощает просмотр исходных данных в свойстве `SentimentText`, а также выходных данных модели.
 
 ## <a name="register-predictionenginepool-for-use-in-the-application"></a>Регистрация класса PredictionEnginePool для использования в приложении
 
@@ -130,22 +130,22 @@ ms.locfileid: "72179396"
     }
     ```
 
-Вкратце, этот код инициализирует объекты и службы автоматически для использования в дальнейшем по запросу приложения, вместо того чтобы вы делали это вручную. 
+Вкратце, этот код инициализирует объекты и службы автоматически для использования в дальнейшем по запросу приложения, вместо того чтобы вы делали это вручную.
 
-Модели машинного обучения не являются статическими. По мере появления новых данных для обучения модель переобучается и развертывается повторно. Одним из способов получения последней версии модели в приложении является повторное развертывание всего приложения. Однако это приводит к простою приложения. Служба `PredictionEnginePool` предоставляет механизм перезагрузки обновленной модели без отключения приложения. 
+Модели машинного обучения не являются статическими. По мере появления новых данных для обучения модель переобучается и развертывается повторно. Одним из способов получения последней версии модели в приложении является повторное развертывание всего приложения. Однако это приводит к простою приложения. Служба `PredictionEnginePool` предоставляет механизм перезагрузки обновленной модели без отключения приложения.
 
 Задайте для параметра `watchForChanges` значение `true`. В таком случае `PredictionEnginePool` запустит объект [`FileSystemWatcher`](xref:System.IO.FileSystemWatcher), который прослушивает уведомления об изменениях файловой системы и вызывает события при изменении файла. При наличии изменений `PredictionEnginePool` автоматически перезагружает модель.
 
-Модель определяется параметром `modelName`, поэтому при изменении может быть перезагружено несколько моделей на одно приложение. 
+Модель определяется параметром `modelName`, поэтому при изменении может быть перезагружено несколько моделей на одно приложение.
 
 > [!TIP]
 > Кроме того, можно использовать метод `FromUri` при работе с моделями, сохраненными удаленно. Вместо наблюдения за событиями изменения файлов `FromUri` опрашивает удаленное расположение на предмет изменений. Интервал опроса по умолчанию равен 5 минутам. Вы можете увеличить или уменьшить интервал опроса в зависимости от требований вашего приложения. В приведенном ниже примере кода `PredictionEnginePool` опрашивает модель, сохраненную по указанному универсальному коду ресурса (URI), каждую минуту.
->    
+>
 >```csharp
 >builder.Services.AddPredictionEnginePool<SentimentData, SentimentPrediction>()
 >   .FromUri(
->       modelName: "SentimentAnalysisModel", 
->       uri:"https://github.com/dotnet/samples/raw/master/machine-learning/models/sentimentanalysis/sentiment_model.zip", 
+>       modelName: "SentimentAnalysisModel",
+>       uri:"https://github.com/dotnet/samples/raw/master/machine-learning/models/sentimentanalysis/sentiment_model.zip",
 >       period: TimeSpan.FromMinutes(1));
 >```
 
@@ -165,7 +165,7 @@ ms.locfileid: "72179396"
     ```
 
     Удалите из файла *PredictController.cs* существующее определение класса и добавьте следующий код:
-    
+
     ```csharp
     public class PredictController : ControllerBase
     {
@@ -207,7 +207,7 @@ ms.locfileid: "72179396"
     ```
 
     В случае успешного выполнения результат должен выглядеть, как показано ниже:
-    
+
     ```powershell
     Negative
     ```

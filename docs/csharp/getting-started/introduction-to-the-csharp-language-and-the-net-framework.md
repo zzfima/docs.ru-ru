@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, about C# language
 - Visual C#, about
 ms.assetid: 0a2dff4e-cd84-42ff-8141-e89889b24081
-ms.openlocfilehash: 995362667ed0a203112744f03a036eabbcb784c8
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 57fd4ab59a1162145087b375cbbb71816a10e78c
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69608301"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73420339"
 ---
 # <a name="introduction-to-the-c-language-and-the-net-framework"></a>Введение в язык C# и .NET Framework
 
@@ -44,7 +44,7 @@ C# является элегантным, типобезопасным объе�
   
  Вот еще несколько ресурсов по языку C#.  
   
-- Общая вводная информация о языке хорошо представлена в Главе 1 [спецификации языка C#](../language-reference/language-specification/index.md).  
+- Общая вводная информация о языке хорошо представлена в Главе 1 [спецификации языка C#](/dotnet/csharp/language-reference/language-specification/introduction).  
   
 - Подробные сведения о конкретных аспектах языка C# вы найдете в [справочнике по C#](../language-reference/index.md).  
   
@@ -69,4 +69,4 @@ C# является элегантным, типобезопасным объе�
 ## <a name="see-also"></a>См. также
 
 - [C#](../index.md)
-- [Начало работы с Visual C# и Visual Basic](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)
+- [Начало работы с Visual C#](/visualstudio/ide/quickstart-csharp-console)

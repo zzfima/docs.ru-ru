@@ -14,14 +14,12 @@ helpviewer_keywords:
 - CreateInstanceEnumWmi function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b7709d9c50a494013ece2f91b3acc213278f0e57
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 9ffa718be0e8b67471fdf8cb277df201388d2840
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798902"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130401"
 ---
 # <a name="createinstanceenumwmi-function"></a>Функция Креатеинстанцеенумвми
 
@@ -49,12 +47,12 @@ HRESULT CreateInstanceEnumWmi (
 ## <a name="parameters"></a>Параметры
 
 `strFilter`\
-окне Имя класса, для которого нужны экземпляры. Этот параметр не может `null`быть.
+окне Имя класса, для которого нужны экземпляры. Этот параметр не может быть `null`.
 
 `lFlags`\
 окне Сочетание флагов, влияющих на поведение этой функции. Следующие значения определены в файле заголовка *вбемкли. h* , или их можно определить как константы в коде:
 
-|Константа  |Значение  |Описание  |
+|Константа  |значения  |Описание  |
 |---------|---------|---------|
 | `WBEM_FLAG_USE_AMENDED_QUALIFIERS` | 0x20000 | Если параметр задан, функция получает измененные квалификаторы, хранящиеся в локализованном пространстве имен языкового стандарта текущего соединения. <br/> Если значение не задано, функция извлекает только квалификаторы, хранящиеся в пространстве имен immediate. |
 | `WBEM_FLAG_DEEP` | 0 | Перечисление включает в себя этот и все подклассы в иерархии. |
@@ -63,10 +61,10 @@ HRESULT CreateInstanceEnumWmi (
 | `WBEM_FLAG_FORWARD_ONLY` | 0x20 | Функция возвращает перечислитель только для перенаправления. Как правило, перечислители выполняются быстрее и используют меньше памяти, чем обычные перечислители, но не допускают вызовы для [клонирования](clone.md). |
 | `WBEM_FLAG_BIDIRECTIONAL` | 0 | Инструментарий WMI удерживает указатели на объекты в перечислении до их освобождения. |
 
-Для наилучшей производительности рекомендуется использовать флаги `WBEM_FLAG_RETURN_IMMEDIATELY`. `WBEM_FLAG_FORWARD_ONLY`
+Для лучшей производительности рекомендуется использовать флаги `WBEM_FLAG_RETURN_IMMEDIATELY` и `WBEM_FLAG_FORWARD_ONLY`.
 
 `pCtx`\
-окне Как правило, это значение `null`равно. В противном случае он является указателем на экземпляр [ивбемконтекст](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext) , который может использоваться поставщиком, который предоставляет запрошенные экземпляры.
+окне Как правило, это значение `null`. В противном случае он является указателем на экземпляр [ивбемконтекст](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext) , который может использоваться поставщиком, который предоставляет запрошенные экземпляры.
 
 `ppEnum`\
 заполняет Получает указатель на перечислитель.
@@ -93,7 +91,7 @@ HRESULT CreateInstanceEnumWmi (
 
 Следующие значения, возвращаемые этой функцией, определены в файле заголовка *вбемкли. h* , или их можно определить как константы в коде:
 
-|Константа  |Значение  |Описание  |
+|Константа  |значения  |Описание  |
 |---------|---------|---------|
 | `WBEM_E_ACCESS_DENIED` | 0x80041003 | У пользователя нет разрешения на просмотр экземпляров указанного класса. |
 | `WBEM_E_FAILED` | 0x80041001 | Произошла неопределенная ошибка. |
@@ -104,7 +102,7 @@ HRESULT CreateInstanceEnumWmi (
 | `WBEM_E_TRANSPORT_FAILURE` | 0x80041015 | Не удалось создать ссылку на удаленный вызов процедур (RPC) между текущим процессом и WMI. |
 |`WBEM_S_NO_ERROR` | 0 | Вызов функции выполнен успешно.  |
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
 Эта функция заключает вызов метода [IWbemServices:: креатеклассенум](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemservices-createinstanceenum) .
 
@@ -114,9 +112,9 @@ HRESULT CreateInstanceEnumWmi (
 
 ## <a name="requirements"></a>Требования
 
-**Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).
+**Платформы:** см. раздел [Требования к системе](../../get-started/system-requirements.md).
 
-**Заголовок.** WMINet_Utils. idl
+**Заголовок:** WMINet_Utils. idl
 
 **Версии платформы .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 

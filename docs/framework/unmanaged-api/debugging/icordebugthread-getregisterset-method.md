@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3b9b6260-98ac-4cfd-88e5-5d7614f94a0c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8769293364c111754f4bfe9360a0dca93c0ba13c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3c62bd73b693322bd679b07b46e3549e1cfc8a56
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67770602"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133397"
 ---
 # <a name="icordebugthreadgetregisterset-method"></a>Метод ICorDebugThread::GetRegisterSet
-Получает указатель интерфейса на набор регистров, которая связана с активной части данного объекта ICorDebugThread.  
+Возвращает указатель интерфейса на набор регистров, связанный с активной частью этого объекта ICorDebugThread.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,12 +35,12 @@ HRESULT GetRegisterSet (
   
 ## <a name="parameters"></a>Параметры  
  `ppRegisters`  
- [out] Указатель на адрес [ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md) интерфейс, представляющий регистра набор для активной части данного потока.  
+ заполняет Указатель на адрес объекта интерфейса [ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md) , представляющий набор регистров для активной части этого потока.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

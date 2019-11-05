@@ -1,17 +1,15 @@
 ---
-title: Метод ICorDebugVariableSymbol::SetValue
+title: 'Метод ICorDebugVariableSymbol:: SetValue'
 ms.date: 03/30/2017
 ms.assetid: 4609418d-71fa-44bc-9618-4d529d25cabb
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5436f56d3dcad7de3df2296485b0a36e5b3cfd79
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: fbd3d617e3448730241ccfda7bd26b65d17b694d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69967967"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121880"
 ---
-# <a name="icordebugvariablesymbolsetvalue-method"></a>Метод ICorDebugVariableSymbol::SetValue
+# <a name="icordebugvariablesymbolsetvalue-method"></a>Метод ICorDebugVariableSymbol:: SetValue
 Присваивает переменной значение массива байтов.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -46,17 +44,17 @@ HRESULT SetValue(
  `pValue`  
  [in] Буфер, содержащий значение, которое требуется задать.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
   
 > [!NOTE]
 > Этот метод доступен только в машинном коде .NET.  
   
 ## <a name="requirements"></a>Требования  
- **Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug. idl, CorDebug. h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
- **Библиотечная** Коргуидс. lib  
+ **Библиотека:** CorGuids.lib  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

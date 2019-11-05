@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7070b6d0-f2e0-44ff-b124-0944cd807e69
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 052c467f5570119cd08b4719c768d178dd52aba2
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 78402e5e099815fe309618e692285de91b8b29f7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67752217"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124241"
 ---
 # <a name="icordebugevalabort-method"></a>Метод ICorDebugEval::Abort
-Прерывает выполняемое вычисление этого объекта ICorDebugEval выполняющему в настоящий момент.  
+Прерывает вычисление, которое данный объект ICorDebugEval сейчас выполняет.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -33,13 +31,13 @@ ms.locfileid: "67752217"
 HRESULT Abort ();  
 ```  
   
-## <a name="remarks"></a>Примечания  
- Если вычисление является вложенным, и это не самую последнюю из них, `Abort` может произойти сбой метода.  
+## <a name="remarks"></a>Заметки  
+ Если оценка является вложенной и не является самой последней, метод `Abort` может завершиться ошибкой.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

@@ -6,16 +6,16 @@ helpviewer_keywords:
 - Data Item control type
 - control types, Data Item
 ms.assetid: 181708fd-2595-4c43-9abd-75811627d64c
-ms.openlocfilehash: 63d957eaaff7503aa8ba4dde9d836aea28f419ea
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: fc41b3eb775e80ae85026b226a60ce6a1d31c761
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71041805"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123101"
 ---
 # <a name="ui-automation-support-for-the-dataitem-control-type"></a>Поддержка автоматизации пользовательского интерфейса для элемента управления типа DataItem
 > [!NOTE]
-> Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Последние сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]см. в разделе [API службы автоматизации Windows: Модель автоматизации](https://go.microsoft.com/fwlink/?LinkID=156746)пользовательского интерфейса.  
+> Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Последние сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]см. в разделе [API автоматизации Windows. Автоматизация пользовательского интерфейса](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  В этом разделе содержатся сведения о поддержке в [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] типа элемента управления DataItem. В [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] тип элемента управления — это набор условий, которым должен удовлетворять элемент управления для использования свойства <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> . Условия включают конкретные правила для древовидной структуры [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , значений свойств [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] и шаблонов элементов управления.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "71041805"
 ## <a name="required-ui-automation-properties"></a>Требуемые свойства модели автоматизации пользовательского интерфейса  
  В следующей таблице перечислены свойства, значение или определение которых в первую очередь относится к элементам управления DataItem. Дополнительные сведения о свойствах [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] см. в разделе [UI Automation Properties for Clients](ui-automation-properties-for-clients.md).  
   
-|Свойство.|Значение|Примечания|  
+|свойство;|значения|Примечания|  
 |--------------|-----------|-----------|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|См. примечания.|Значение этого свойства должно быть уникальным среди всех элементов управления в приложении.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|См. примечания.|Внешний прямоугольник, содержащий весь элемент управления.|  
@@ -66,24 +66,24 @@ ms.locfileid: "71041805"
 ## <a name="working-with-data-items-in-large-lists"></a>Работа с элементами данных в больших списках  
  Большие списки часто являются данными, виртуализированными в [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] для улучшения производительности. Из-за этого клиент автоматизации пользовательского интерфейса не может использовать функциональность запроса [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] для очистки содержимого полного дерева таким же образом, как в других контейнерах элементов. Клиент должен прокрутить элемент в представление (или развернуть элемент управления, чтобы отобразить все важные параметры) до получения доступа к полному набору сведений из элемента данных.  
   
- При вызове `SetFocus` в элементе [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] для элемента данных будет успешно возвращен вариант [!INCLUDE[TLA#tla_winexpl](../../../includes/tlasharptla-winexpl-md.md)] , и фокус будет установлен в элемент "Правка" в поддереве элемента данных.  
+ При вызове `SetFocus` в элементе [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] для элемента данных обращение к Microsoft Windows Explorer будет успешным, и фокус будет установлен на изменение в поддереве элемента данных.  
   
 ## <a name="required-ui-automation-events"></a>Необходимые события модели автоматизации пользовательского интерфейса  
  В следующей таблице перечислены события [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , которые должны поддерживаться всеми элементами управления DataItem. Дополнительные сведения о событиях см. в разделе [UI Automation Events Overview](ui-automation-events-overview.md).  
   
 |Событие[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|Поддержка|Примечания|  
 |---------------------------------------------------------------------------------|-------------|-----------|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|Обязательный|Отсутствуют|  
-|Событие изменения свойства<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|Обязательно|Отсутствуют|  
-|Событие изменения свойства<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty>|Обязательно|Отсутствуют|  
-|Событие изменения свойства<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty>|Обязательно|Отсутствуют|  
-|Событие изменения свойства<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|Обязательно|Отсутствуют|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|Обязательно|Отсутствуют|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|Обязательное значение|Отсутствуют|  
+|Событие изменения свойства<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|Обязательное значение|Отсутствуют|  
+|Событие изменения свойства<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty>|Обязательное значение|Отсутствуют|  
+|Событие изменения свойства<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty>|Обязательное значение|Отсутствуют|  
+|Событие изменения свойства<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|Обязательное значение|Отсутствуют|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|Обязательное значение|Отсутствуют|  
 |<xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent>|Зависит от обстоятельств|Отсутствуют|  
 |Событие изменения свойства<xref:System.Windows.Automation.ExpandCollapsePatternIdentifiers.ExpandCollapseStateProperty>|Зависит от обстоятельств|Отсутствуют|  
-|<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementAddedToSelectionEvent>|Обязательно|Отсутствуют|  
-|<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementRemovedFromSelectionEvent>|Обязательно|Отсутствуют|  
-|<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementSelectedEvent>|Обязательно|Отсутствуют|  
+|<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementAddedToSelectionEvent>|Обязательное значение|Отсутствуют|  
+|<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementRemovedFromSelectionEvent>|Обязательное значение|Отсутствуют|  
+|<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementSelectedEvent>|Обязательное значение|Отсутствуют|  
 |Событие изменения свойства<xref:System.Windows.Automation.TogglePatternIdentifiers.ToggleStateProperty>|Зависит от обстоятельств|Отсутствуют|  
 |Событие изменения свойства<xref:System.Windows.Automation.ValuePatternIdentifiers.ValueProperty>|Зависит от обстоятельств|Отсутствуют|  
   
@@ -96,7 +96,7 @@ ms.locfileid: "71041805"
   
 |Дерево[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] — представление элемента управления|Дерево[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] — представление содержимого|  
 |------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|  
-|— Группа Contoso (таблица, сетка)<br />-DataItem "Accounts. doc" (TableItem, GridItem, SelectionItem, Invoke)<br />-Image "Accounts. doc"<br />-Edit "имя" (TableItem, GridItem, value "Accounts. doc")<br />-Изменить "Дата изменения" (TableItem, GridItem, value "8/25/2006 3:29 PM")<br />-Edit "размер" (GridItem, TableItem, value "11,0 КБ)"<br />-DataItem "Accounts. doc" (TableItem, GridItem, SelectionItem, Invoke)<br />-   ...|— Группа Contoso (таблица, сетка)<br />-DataItem "Accounts. doc" (TableItem, GridItem, SelectionItem, Invoke)<br />-Image "Accounts. doc"<br />-Edit "имя" (TableItem, GridItem, value "Accounts. doc")<br />-Изменить "Дата изменения" (TableItem, GridItem, value "8/25/2006 3:29 PM")<br />-Edit "размер" (GridItem, TableItem, value "11,0 КБ)"<br />-DataItem "Accounts. doc" (TableItem, GridItem, SelectionItem, Invoke)<br />-   …|  
+|— Группа Contoso (таблица, сетка)<br />-DataItem "Accounts. doc" (TableItem, GridItem, SelectionItem, Invoke)<br />-Image "Accounts. doc"<br />-Edit "имя" (TableItem, GridItem, value "Accounts. doc")<br />-Изменить "Дата изменения" (TableItem, GridItem, value "8/25/2006 3:29 PM")<br />-Edit "размер" (GridItem, TableItem, value "11,0 КБ)"<br />-DataItem "Accounts. doc" (TableItem, GridItem, SelectionItem, Invoke)<br />-   ...|— Группа Contoso (таблица, сетка)<br />-DataItem "Accounts. doc" (TableItem, GridItem, SelectionItem, Invoke)<br />-Image "Accounts. doc"<br />-Edit "имя" (TableItem, GridItem, value "Accounts. doc")<br />-Изменить "Дата изменения" (TableItem, GridItem, value "8/25/2006 3:29 PM")<br />-Edit "размер" (GridItem, TableItem, value "11,0 КБ)"<br />-DataItem "Accounts. doc" (TableItem, GridItem, SelectionItem, Invoke)<br />- ...|  
   
  Если сетка представляет список выбираемых элементов, соответствующие элементы пользовательского интерфейса могут быть представлены типом элемента управления ListItem, а не DataItem. В предыдущем примере элементы DataItem (Accounts Receivable.doc и Accounts Payable.doc) в в элементе Group (Contoso) можно улучшить, представив их как элементы управления типа ListItem, поскольку этот тип уже поддерживает шаблон элемента управления SelectionItem.  
   

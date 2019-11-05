@@ -1,5 +1,5 @@
 ---
-title: Пример регулярного выражения. Изменение форматов даты
+title: 'Пример регулярных выражений: Изменение форматов даты'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,16 +13,14 @@ helpviewer_keywords:
 - regular expressions [.NET Framework], examples
 - pattern-matching with regular expressions, examples
 ms.assetid: 5fcc75a5-09d7-45ae-a4c0-9ad6085ac83d
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e8c26608115a22a5402d671c5f5e51c75442a0a5
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 358e26957747073fec9dfe9eb0d404cb438afaf9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48839528"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73084184"
 ---
-# <a name="regular-expression-example-changing-date-formats"></a>Пример регулярного выражения. Изменение форматов даты
+# <a name="regular-expression-example-changing-date-formats"></a>Пример регулярных выражений: Изменение форматов даты
 В следующем примере кода метод <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> используется для замены дат в формате *мм*/*дд*/*гг* на даты в формате *дд*-*мм*-*гг*.  
   
 ## <a name="example"></a>Пример  
@@ -37,7 +35,7 @@ ms.locfileid: "48839528"
 ## <a name="comments"></a>Комментарии  
  Возможные интерпретации шаблона регулярного выражения `\b(?<month>\d{1,2})/(?<day>\d{1,2})/(?<year>\d{2,4})\b` показаны в следующей таблице.  
   
-|Шаблон|Описание:|  
+|Шаблон|ОПИСАНИЕ|  
 |-------------|-----------------|  
 |`\b`|Совпадение должно начинаться на границе слова.|  
 |`(?<month>\d{1,2})`|Совпадение с одной или двумя десятичными цифрами. Это записанная группа `month`.|  
@@ -49,7 +47,7 @@ ms.locfileid: "48839528"
   
  Шаблон `${day}-${month}-${year}` определяет строку замены, как показано в следующей таблице.  
   
-|Шаблон|Описание:|  
+|Шаблон|ОПИСАНИЕ|  
 |-------------|-----------------|  
 |`$(day)`|Добавляет строку, которая записана захватываемой группой `day`.|  
 |`-`|Добавляет символ дефиса.|  

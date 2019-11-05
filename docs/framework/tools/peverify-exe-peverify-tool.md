@@ -10,14 +10,12 @@ helpviewer_keywords:
 - PEverify.exe
 - PE files, PEVerify
 ms.assetid: f4f46f9e-8d08-4e66-a94b-0c69c9b0bbfa
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4f0828409a8c57baecf7c81fd7a4df6e7844c7ce
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 9d5f8c80937c36e975d42d6efb0a83295cb28be9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71044325"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73104981"
 ---
 # <a name="peverifyexe-peverify-tool"></a>Peverify.exe (средство PEVerify)
 Средство PEVerify помогает разработчикам, создающим код на языке CIL — авторам компиляторов, обработчиков скриптов и т. д. — определить, соответствует ли этот код и связанные с ним метаданные требованиям безопасности типов. Некоторые компиляторы создают проверяемый типобезопасный код только в том случае, если разработчик не применяет определенные языковые конструкции. При работе с таким компилятором разработчику иногда требуется проверить, сохранена ли в коде безопасность типов. В этом случае для проверки CIL и метаданных в файлах можно использовать инструмент PEVerify.  

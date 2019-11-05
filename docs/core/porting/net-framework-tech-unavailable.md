@@ -2,18 +2,17 @@
 title: Технологии .NET Framework, недоступные в .NET Core
 description: Узнайте о технологиях .NET Framework, недоступных в .NET Core
 author: cartermp
-ms.author: mairaw
 ms.date: 04/30/2019
-ms.openlocfilehash: 87c3dd337ad44fd21b255afa7c03b528cd8a42ad
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: e5626d7b3e402848e2e84c49d4e98e109f62982d
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69660600"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72846811"
 ---
 # <a name="net-framework-technologies-unavailable-on-net-core"></a>Технологии .NET Framework, недоступные в .NET Core
 
-Некоторые технологии для библиотек .NET Framework недоступны для использования с .NET Core, например домены приложений, удаленное взаимодействие, управление доступом для кода (CAS) и прозрачность безопасности. Если в библиотеках применяются такие технологии, рассмотрите альтернативные подходы, описанные ниже. Дополнительные сведения о совместимости API см. в [списке изменений поведения и нарушений совместимости, а также нерекомендуемых и устаревших API-интерфейсов](https://github.com/dotnet/corefx/wiki/ApiCompat), представленном командой CoreFX на сайте GitHub.
+Некоторые технологии для библиотек .NET Framework недоступны для использования с .NET Core, например домены приложений, удаленное взаимодействие, управление доступом для кода (CAS) и прозрачность безопасности. Если в библиотеках применяются такие технологии, рассмотрите альтернативные подходы, описанные ниже. Дополнительные сведения о совместимости API см. в статье [Критические изменения .NET Core](../compatibility/breaking-changes.md).
 
 Тот факт, что API или технология сейчас не реализуются, не означает, что они намеренно не поддерживаются. Сначала поищите .NET Core в репозиториях GitHub, чтобы узнать, не существует ли эта проблема намеренно. Если вы не можете ее найти, сообщите о проблеме в [проблемах репозитория dotnet/corefx](https://github.com/dotnet/corefx/issues) в GitHub, чтобы запросить определенные API и технологии. К [запросам на перенос кода на этой странице](https://github.com/dotnet/corefx/labels/port-to-core) добавляется метка `port-to-core`.
 

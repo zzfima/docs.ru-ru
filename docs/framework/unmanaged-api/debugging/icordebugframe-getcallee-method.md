@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 92d8136d-0436-4c7e-a6b2-80765f892a0d
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 10a5247632f242a4b4e0d33cf7fa7233d1b1e13b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b83dec65e1dd4fc610be3190e8126e6d9d38a6e8
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67754199"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121224"
 ---
 # <a name="icordebugframegetcallee-method"></a>Метод ICorDebugFrame::GetCallee
-Получает указатель на объект ICorDebugFrame в текущей цепи, вызван этот кадр.  
+Возвращает указатель на объект ICorDebugFrame в текущей цепочке, вызвавшей этот кадр.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,12 +35,12 @@ HRESULT GetCallee (
   
 ## <a name="parameters"></a>Параметры  
  `ppFrame`  
- [out] Указатель на адрес `ICorDebugFrame` , представляющий вызываемый кадр. Это значение равно null, если вызывающий кадр внутренний кадр в текущей цепи.  
+ заполняет Указатель на адрес объекта `ICorDebugFrame`, который представляет вызываемый кадр. Это значение равно null, если вызывающий кадр является самым внутренним кадром в текущей цепочке.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

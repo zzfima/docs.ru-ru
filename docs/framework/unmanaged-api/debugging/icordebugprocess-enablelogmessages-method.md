@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 14a4e5a3-3eaf-4f53-9dd1-762726963a23
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b199d3226ec391fadc356b5efacdbf10a3e25adf
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4134062be93a2fc5e76949d465a7b5822556b408
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67766159"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128895"
 ---
 # <a name="icordebugprocessenablelogmessages-method"></a>Метод ICorDebugProcess::EnableLogMessages
-Включает и отключает передачу сообщений журнала в отладчик.  
+Включает и отключает передачу сообщений журнала отладчику.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -35,15 +33,15 @@ HRESULT EnableLogMessages([in]BOOL fOnOff);
   
 ## <a name="parameters"></a>Параметры  
  `fOnOff`  
- [in] `true` позволяет передавать сообщения журнала; `false` отключает передачу.  
+ [in] `true` включает передачу сообщений журнала; `false` отключает передачу.  
   
-## <a name="remarks"></a>Примечания  
- Этот метод допустим только после [ICorDebugManagedCallback::CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createprocess-method.md) происходит обратный вызов.  
+## <a name="remarks"></a>Заметки  
+ Этот метод допустим только после возникновения обратного вызова [ICorDebugManagedCallback:: CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createprocess-method.md) .  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

@@ -9,14 +9,12 @@ helpviewer_keywords:
 - tasks, cancellation
 - asynchronous task cancellation
 ms.assetid: 3ecf1ea9-e399-4a6a-a0d6-8475f48dcb28
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b7fefbfd33788ea84a8daf9dfbab452802ffd50d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 17cabde95644dbc1584dd85b99e26ff7c5cb686d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650742"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139968"
 ---
 # <a name="task-cancellation"></a>Отмена задач
 Классы <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> и <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> поддерживают отмену с помощью токенов отмены в .NET Framework. См. дополнительные сведения об [отмене в управляемых потоках](../../../docs/standard/threading/cancellation-in-managed-threads.md). В классах задач отмена включает взаимодействие между пользовательским делегатом, который представляет операцию отмены, и кодом, который запросил отмену.  Успешная отмена включает запрашивающий код, вызывающий метод <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> , и пользовательский делегат, своевременно завершающий операцию. Операцию можно завершить одним из следующих способов.  

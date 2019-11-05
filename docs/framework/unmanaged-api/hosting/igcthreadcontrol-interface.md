@@ -14,32 +14,30 @@ helpviewer_keywords:
 ms.assetid: 3ff04d75-85ac-4df9-886d-dbaa037c0552
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5c00f401bedc1a2810c4e9b3046a45e53a79f1ea
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3aba31f60af25144b9f01aa9ca8cc633d4c1a438
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61992775"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134802"
 ---
 # <a name="igcthreadcontrol-interface"></a>Интерфейс IGCThreadControl
-Предоставляет методы для участия в планировании потоков, которые в противном случае был бы заблокирован для сборки мусора.  
+Предоставляет методы для участия в планировании потоков, которые в противном случае были бы заблокированы для сборки мусора.  
   
 ## <a name="methods"></a>Методы  
   
 |Метод|Описание|  
 |------------|-----------------|  
-|[Метод SuspensionEnding](../../../../docs/framework/unmanaged-api/hosting/igcthreadcontrol-suspensionending-method.md)|Уведомляет основное приложение, что среда выполнения возобновляет выполнение после сбора мусора или по другим причинам.|  
-|[Метод SuspensionStarting](../../../../docs/framework/unmanaged-api/hosting/igcthreadcontrol-suspensionstarting-method.md)|Уведомляет основное приложение, то, что среда выполнения начала приостановку потока для сборки мусора или по другим причинам.|  
-|[Метод ThreadIsBlockingForSuspension](../../../../docs/framework/unmanaged-api/hosting/igcthreadcontrol-threadisblockingforsuspension-method.md)|Уведомляет ведущее приложение, вызов которого поток заблокирован, возможно, для сбора мусора или по другим причинам.|  
+|[Метод SuspensionEnding](../../../../docs/framework/unmanaged-api/hosting/igcthreadcontrol-suspensionending-method.md)|Уведомляет узел о том, что среда выполнения возобновляет потоки после сборки мусора или другой приостановки.|  
+|[Метод SuspensionStarting](../../../../docs/framework/unmanaged-api/hosting/igcthreadcontrol-suspensionstarting-method.md)|Уведомляет узел о том, что среда выполнения начинает приостановку потока для сборки мусора или другой приостановки.|  
+|[Метод ThreadIsBlockingForSuspension](../../../../docs/framework/unmanaged-api/hosting/igcthreadcontrol-threadisblockingforsuspension-method.md)|Уведомляет узел о том, что поток, выполняющий вызов, будет заблокирован, возможно, для сборки мусора или другой приостановки.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** MSCorEE.h  
+ **Заголовок:** MSCorEE. h  
   
- **Библиотека:** Включена как ресурс в MSCorEE.dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

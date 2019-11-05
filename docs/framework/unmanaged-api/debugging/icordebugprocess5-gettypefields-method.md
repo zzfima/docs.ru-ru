@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6a0ad3ee-dacb-47e9-abae-4536bcc4804b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2d413b17da0b6f241f9078bfeb3bd035d4d07a81
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0045285a3da22f468c2426bb3b9c4ae7e3e1d7c7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67767627"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132674"
 ---
 # <a name="icordebugprocess5gettypefields-method"></a>Метод ICorDebugProcess5::GetTypeFields
-Сведения о полях, которые принадлежат к типу.  
+Предоставляет сведения о полях, принадлежащих типу.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,24 +38,24 @@ HRESULT GetTypeFields(
   
 ## <a name="parameters"></a>Параметры  
  `id`  
- [in] Идентификатор типа которого извлекаются поля.  
+ окне Идентификатор типа, сведения о поле которого извлекаются.  
   
  `celt`  
- [in] Число [COR_FIELD](../../../../docs/framework/unmanaged-api/debugging/cor-field-structure.md) объектов, которой требуется извлечь сведения о которой поля.  
+ окне Число объектов [COR_FIELD](../../../../docs/framework/unmanaged-api/debugging/cor-field-structure.md) , сведения о полях которых необходимо получить.  
   
  `fields`  
- [out] Массив [COR_FIELD](../../../../docs/framework/unmanaged-api/debugging/cor-field-structure.md) объектов, которые предоставляют сведения о полях, которые принадлежат к типу.  
+ заполняет Массив объектов [COR_FIELD](../../../../docs/framework/unmanaged-api/debugging/cor-field-structure.md) , которые предоставляют сведения о полях, принадлежащих типу.  
   
  `pceltNeeded`  
- [out] Указатель на число [COR_FIELD](../../../../docs/framework/unmanaged-api/debugging/cor-field-structure.md) объекты, включенные в `fields`.  
+ заполняет Указатель на число объектов [COR_FIELD](../../../../docs/framework/unmanaged-api/debugging/cor-field-structure.md) , включаемых в `fields`.  
   
-## <a name="remarks"></a>Примечания  
- `celt` Параметр, который указывает количество полей, сведения о поле, данный метод использует для заполнения `fields`, должен соответствовать значению `COR_TYPE_LAYOUT::numFields` поля.  
+## <a name="remarks"></a>Заметки  
+ Параметр `celt`, который указывает количество полей, сведения о полях которых использует метод для заполнения `fields`, должны соответствовать значению поля `COR_TYPE_LAYOUT::numFields`.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

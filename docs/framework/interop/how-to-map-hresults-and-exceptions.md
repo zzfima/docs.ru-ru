@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Сопоставление значений HRESULT и исключений
+title: Практическое руководство. Сопоставление значений HRESULT и исключений
 ms.date: 03/30/2017
 dev_langs:
 - cpp
@@ -11,16 +11,14 @@ helpviewer_keywords:
 - COM interop, HRESULTs
 - COM interop, exceptions
 ms.assetid: 610b364b-2761-429d-9c4a-afbc3e66f1b9
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 60173739842835a705a72da4e7ab442cacfc08d2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 13dcca5f35750ad3e8bd6ea4f6dd443fe9a8ee94
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59306551"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123870"
 ---
-# <a name="how-to-map-hresults-and-exceptions"></a>Как выполнить Сопоставление значений HRESULT и исключений
+# <a name="how-to-map-hresults-and-exceptions"></a>Практическое руководство. Сопоставление значений HRESULT и исключений
 Методы COM сообщают об ошибках, возвращая значения HRESULT. Методы .NET в этом случае вызывают исключения. Среда выполнения обеспечивает сопоставление этих двух элементов. Каждый класс платформы .NET Framework сопоставляется со значением HRESULT.  
   
  Соответствующие значения HRESULT задаются определяемыми пользователем классами исключений. Эти классы исключений могут динамически изменять значение HRESULT, возвращаемое при возникновении исключения, устанавливая поле **HResult** соответствующего объекта исключения. Дополнительные сведения об исключении предоставляются клиенту посредством интерфейса **IErrorInfo**, который реализуется для объекта .NET в неуправляемом процессе.  
@@ -46,7 +44,7 @@ ms.locfileid: "59306551"
     }  
     ```  
   
- На любом языке программирования могут встречаться программы, в которых одновременно используется управляемый и неуправляемый код. Например, в настраиваемом маршалере в следующем коде используется метод **Marshal.ThrowExceptionForHR(int HResult)**, который вызывает исключение с заданным значением HRESULT. Этот метод выполняет поиск значения HRESULT и создает исключение соответствующего типа. Например, в следующем коде для заданного значения HRESULT создается **ArgumentException**.  
+ На любом языке программирования могут встречаться программы, в которых одновременно используется управляемый и неуправляемый код. Например, в настраиваемом маршалере в следующем коде используется метод **Marshal.ThrowExceptionForHR(int HResult)** , который вызывает исключение с заданным значением HRESULT. Этот метод выполняет поиск значения HRESULT и создает исключение соответствующего типа. Например, в следующем коде для заданного значения HRESULT создается **ArgumentException**.  
   
 ```cpp  
 CMyClass::MethodThatThrows  
@@ -136,7 +134,7 @@ CMyClass::MethodThatThrows
 |**HelpLink**|Если **IErrorInfo->HelpContext** не равно нулю, строка формируется путем сцепления строк **IErrorInfo->GetHelpFile**, "#" и **IErrorInfo->GetHelpContext**. В противном случае возвращается строка из **IErrorInfo->GetHelpFile**.|  
 |**InnerException**|Всегда ссылка NULL (**Nothing** в Visual Basic).|  
 |**Сообщение**|Строка, возвращаемая из **IErrorInfo->GetDescription**.|  
-|**Источник**|Строка, возвращаемая из **IErrorInfo->GetSource**.|  
+|**Source**|Строка, возвращаемая из **IErrorInfo->GetSource**.|  
 |**StackTrace**|Трассировка стека.|  
 |**TargetSite**|Имя метода, который вернул значение HRESULT со сбоем.|  
   

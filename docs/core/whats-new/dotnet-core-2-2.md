@@ -4,15 +4,13 @@ description: Дополнительные сведения о новых воз�
 dev_langs:
 - csharp
 - vb
-author: rpetrusha
-ms.author: ronpet
 ms.date: 12/04/2018
-ms.openlocfilehash: 49a65dd44159e9800f7cf50a1edaa3d9e9b82e47
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 917b51e0cf36cca45135fda4a084eb2bca62e835
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57677270"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73100695"
 ---
 # <a name="whats-new-in-net-core-22"></a>Новые возможности .NET Core 2.2
 
@@ -66,7 +64,7 @@ internal sealed class SimpleEventListener : EventListener
 
 - <xref:System.Diagnostics.Tracing.EventWrittenEventArgs.TimeStamp?displayProperty=nameWithType>
 
-## <a name="data"></a>Данные
+## <a name="data"></a>Data
 
 **Проверка подлинности Azure Active Directory в базах данных SQL Azure с помощью свойства SqlConnection.AccessToken**
 

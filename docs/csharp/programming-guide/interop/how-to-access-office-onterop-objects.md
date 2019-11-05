@@ -10,12 +10,12 @@ helpviewer_keywords:
 - named arguments [C#], Office programming
 - Office programming [C#]
 ms.assetid: 041b25c2-3512-4e0f-a4ea-ceb2999e4d5e
-ms.openlocfilehash: f0b763ad6b65c74b8c406fe006ef4036e70a99d4
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: b6e45858b64ea1bf87ca0e73001a5cf07ddfd58b
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72523564"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73417708"
 ---
 # <a name="how-to-access-office-interop-objects-by-using-visual-c-features-c-programming-guide"></a>Практическое руководство. Доступ к объектам взаимодействия Office с помощью возможностей Visual C# (Руководство по программированию на C#)
 
@@ -176,7 +176,7 @@ ms.locfileid: "72523564"
 ## <a name="see-also"></a>См. также
 
 - <xref:System.Type.Missing?displayProperty=nameWithType>
-- [dynamic](../../language-reference/keywords/dynamic.md)
+- [dynamic](../../language-reference/builtin-types/reference-types.md)
 - [Использование типа dynamic](../types/using-type-dynamic.md)
 - [Именованные и необязательные аргументы](../classes-and-structs/named-and-optional-arguments.md)
 - [Практическое руководство. Использование именованных и необязательных аргументов в программировании приложений Office](../classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)

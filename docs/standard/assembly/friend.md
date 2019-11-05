@@ -5,12 +5,12 @@ ms.assetid: b65ea7de-0801-477a-a39c-e914c2cc107c
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 6387e93bcd4efeec57ada9228dcaf015d053dbf7
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: bf1cb28a6e3096a42aae1c777f6d2d6f9cc16c49
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972705"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774331"
 ---
 # <a name="friend-assemblies"></a>Дружественные сборки
 
@@ -25,7 +25,7 @@ ms.locfileid: "70972705"
 С помощью атрибута <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> можно определить одну или несколько дружественных сборок для указанной сборки. В следующем примере используется атрибут <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> в сборке *Assembly A*, а сборка *AssemblyB* указана в качестве дружественной. В результате сборка *AssemblyB* получает доступ ко всем типам и членам в сборке *Assembly A*, помеченным как `internal` в C# или `Friend` в Visual Basic.
 
 > [!NOTE]
-> При компиляции сборки, такой как *AssemblyB*, которая будет обращаться ко внутренним типам или членам другой сборки, такой как *Assembly A*, нужно явно указать имя выходного файла (*EXE* или *DLL*), используя параметр компилятора **/out**. Это необходимо потому, что компилятор еще не создал имя сборки, формируемой во время привязки к внешним ссылкам. Дополнительные сведения см. в разделах [/out (C#)](../../csharp/language-reference/compiler-options/out-compiler-option.md) или [/out (Visual Basic)](../../visual-basic/reference/command-line-compiler/out.md).
+> При компиляции сборки, такой как *AssemblyB*, которая будет обращаться ко внутренним типам или членам другой сборки, такой как *Assembly A*, нужно явно указать имя выходного файла (*EXE* или *DLL*), используя параметр компилятора **-out**. Это необходимо потому, что компилятор еще не создал имя сборки, формируемой во время привязки к внешним ссылкам. Дополнительные сведения см. в разделе [-out (C#)](../../csharp/language-reference/compiler-options/out-compiler-option.md) или [-out (Visual Basic)](../../visual-basic/reference/command-line-compiler/out.md).
 
 ```csharp
 using System.Runtime.CompilerServices;
@@ -93,7 +93,7 @@ End Class
 
 - Если вы используете <xref:System.Security.Permissions.StrongNameIdentityPermission>, типы для общего доступа необходимо объявить как открытые. При использовании дружественной сборки общие типы объявляются как `internal` (C#) или `Friend` (Visual Basic).
 
-Сведения о том, как получить доступ к типам и методам `internal` (C#) или `Friend` (Visual Basic) сборки из файла модуля (файла с расширением *NETMODULE*), см. в разделе [/moduleassemblyname (C#)](../../csharp/language-reference/compiler-options/moduleassemblyname-compiler-option.md) или [/moduleassemblyname (Visual Basic)](../../visual-basic/reference/command-line-compiler/moduleassemblyname.md).
+Сведения о том, как получить доступ к типам и методам `internal` (C#) или `Friend` (Visual Basic) сборки из файла модуля (файла с расширением *NETMODULE*), см. в разделе [-moduleassemblyname (C#)](../../csharp/language-reference/compiler-options/moduleassemblyname-compiler-option.md) или [-moduleassemblyname (Visual Basic)](../../visual-basic/reference/command-line-compiler/moduleassemblyname.md).
 
 ## <a name="see-also"></a>См. также
 

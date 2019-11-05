@@ -6,23 +6,23 @@ f1_keywords:
 helpviewer_keywords:
 - base elements [WPF]
 ms.assetid: 55034aa5-3c1d-442a-8293-f4692d8ea6ae
-ms.openlocfilehash: a1f7105ee6590314eb2ebbfa52b511f55f83dc05
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d0d3c5198c6c4146cf92201b08781041043c4a72
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61926416"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73453596"
 ---
 # <a name="base-elements"></a>Базовые элементы
-Четыре основные классы--<xref:System.Windows.UIElement>, <xref:System.Windows.ContentElement>, <xref:System.Windows.FrameworkElement>, и <xref:System.Windows.FrameworkContentElement>--реализовать значительный процент от общих элемент функциям, доступным в программировании WPF. Эти четыре класса, называются в этом пакете SDK классах базовых элементов.  
+Четыре ключевых класса —<xref:System.Windows.UIElement>, <xref:System.Windows.ContentElement>, <xref:System.Windows.FrameworkElement>и <xref:System.Windows.FrameworkContentElement>— реализуют значительный процент функциональных возможностей общего элемента, доступных в программировании WPF. Эти четыре класса упоминаются в этом пакете SDK как классы базовых элементов.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>Содержание  
  [Общие сведения о базовых элементах](base-elements-overview.md)  
  [Общие сведения об объектах класса Freezable](freezable-objects-overview.md)  
  [Общие сведения о свойствах Alignment, Margin, Padding](alignment-margins-and-padding-overview.md)  
  [Разделы практического руководства](base-elements-how-to-topics.md)  
   
-## <a name="reference"></a>Ссылка  
+## <a name="reference"></a>Справочники  
  <xref:System.Windows.UIElement>  
   
  <xref:System.Windows.ContentElement>  
@@ -39,5 +39,5 @@ ms.locfileid: "61926416"
   [События](events-wpf.md)  
   [Ввод](input-wpf.md)  
   [Ресурсы](resources-wpf.md)  
-  [Стилизация и использование шаблонов](../controls/styling-and-templating.md)  
+  [Стилизация и использование шаблонов](../../../desktop-wpf/fundamentals/styles-templates-overview.md)  
   [Потоковая модель](threading-model.md)

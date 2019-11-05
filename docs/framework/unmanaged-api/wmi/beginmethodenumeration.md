@@ -14,14 +14,12 @@ helpviewer_keywords:
 - BeginMethodEnumeration function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8a7b93bacabdfdd0551418644a7d9a4b1643c3d9
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: a27787052757098d4edb2d8516e22d8a03b7009a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798759"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138789"
 ---
 # <a name="beginenumeration-function"></a>Функция BeginEnumeration
 Начинает перечисление методов, доступных для объекта.  
@@ -49,7 +47,7 @@ HRESULT BeginMethodEnumeration (
 `lEnumFlags`  
 окне Ноль (0) для всех методов или флаг, указывающий область перечисления. Следующие флаги определены в файле заголовка *вбемкли. h* , или их можно определить как константы в коде:
 
-Константа  |Значение  |Описание  |
+Константа  |значения  |Описание  |
 |---------|---------|---------|
 | `WBEM_FLAG_LOCAL_ONLY` | 0x10 | Ограничьте перечисление методами, определенными в самом классе. |
 | `WBEM_FLAG_PROPAGATED_ONLY` |  0x20 | Ограничьте перечисление свойствами, унаследованными от базовых классов. |
@@ -58,21 +56,21 @@ HRESULT BeginMethodEnumeration (
 
 Следующие значения, возвращаемые этой функцией, определены в файле заголовка *вбемкли. h* , или их можно определить как константы в коде:
 
-|Константа  |Значение  |Описание  |
+|Константа  |значения  |Описание  |
 |---------|---------|---------|
-|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | `lEnnumFlags`не равно нулю и не является одним из указанных флагов. |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | `lEnnumFlags` не равно нулю и не является одним из указанных флагов. |
 |`WBEM_S_NO_ERROR` | 0 | Вызов функции выполнен успешно.  |
   
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
 Эта функция заключает в оболочку вызов метода [ивбемклассобжект:: бегинмесоденумератион](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-beginmethodenumeration) .
 
 Этот вызов метода поддерживается, только если текущий объект является определением класса. Управление методами недоступно из [ивбемклассобжект](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) указателей, указывающих на экземпляры. Порядок, в котором перечисляются методы, гарантированно является инвариантным для заданного экземпляра [ивбемклассобжект](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject).
 
 ## <a name="requirements"></a>Требования  
- **Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
- **Заголовок.** WMINet_Utils. idl  
+ **Заголовок:** WMINet_Utils. idl  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   

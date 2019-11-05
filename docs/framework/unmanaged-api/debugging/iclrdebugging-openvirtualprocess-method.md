@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: e8ab7c41-d508-4ed9-8a31-ead072b5a314
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4c460bc644017f32fdb96d35e5f42981ac09f825
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: cd43dce995c2bc9a45a0c8134a91b20cb1dec26e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738382"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73111430"
 ---
 # <a name="iclrdebuggingopenvirtualprocess-method"></a>Метод ICLRDebugging::OpenVirtualProcess
-Получает интерфейс ICorDebugProcess, соответствующий общий язык среды выполнения (CLR) модуль загружается в процесс.  
+Возвращает интерфейс ICorDebugProcess, соответствующий загруженному в процесс модулю среды CLR.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -43,30 +41,30 @@ HRESULT OpenVirtualProcess(
   
 ## <a name="parameters"></a>Параметры  
  `moduleBaseAddress`  
- [in] Базовый адрес модуля в целевом процессе. COR_E_NOT_CLR возвращается, если указанный модуль не является модулем CLR.  
+ окне Базовый адрес модуля в целевом процессе. COR_E_NOT_CLR будет возвращен, если указанный модуль не является модулем CLR.  
   
  `pDataTarget`  
- [in] Целевой уровень абстракции данных, позволяющий управляемый отладчик к проверяемому состоянию процесса. Отладчик должен реализовывать [ICorDebugDataTarget](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md) интерфейс. Следует реализовать [ICLRDebuggingLibraryProvider](../../../../docs/framework/unmanaged-api/debugging/iclrdebugginglibraryprovider-interface.md) интерфейс для поддержки сценариев, где среда CLR отлаживаемом не устанавливается локально на компьютере.  
+ окне Абстракция целевого объекта данных, позволяющая управляемому отладчику проверять состояние процесса. В отладчике должен быть реализован интерфейс [ICorDebugDataTarget](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md) . Необходимо реализовать интерфейс [иклрдебуггинглибрарипровидер](../../../../docs/framework/unmanaged-api/debugging/iclrdebugginglibraryprovider-interface.md) для поддержки сценариев, в которых отлаживаемая среда CLR не установлена локально на компьютере.  
   
  `pLibraryProvider`  
- [in] Интерфейс обратного вызова поставщика библиотеки, который позволяет конкретной версии библиотеки отладки находить и загружать по требованию. Этот параметр является обязательным только в том случае, если `ppProcess` или `pFlags` не `null`.  
+ окне Интерфейс обратного вызова поставщика библиотеки, позволяющий находить и загружать библиотеки отладки для конкретных версий по запросу. Этот параметр является обязательным только в том случае, если `ppProcess` или `pFlags` не `null`.  
   
  `pMaxDebuggerSupportedVersion`  
- [in] Самую новую версию среды CLR, способное отлаживать этот отладчик. Следует указать основной и дополнительный номера и версии из последней версии среды CLR, которые поддерживает этот отладчик сборок, а также задавать номер редакции до 65 535, чтобы вместить будущих CLR на месте, обслуживающие выпуски.  
+ окне Самая высокая версия среды CLR, которую отладчик может отлаживать. Необходимо указать основной, дополнительный номер версии и версию сборки из последней версии среды CLR, которую поддерживает этот отладчик, и установить номер редакции 65535 для размещения будущих выпусков среды CLR на месте.  
   
  `riidProcess`  
- [in] Идентификатор ICorDebugProcess-интерфейс для извлечения. В настоящее время допустимы только значения являются IID_CORDEBUGPROCESS3 IID_CORDEBUGPROCESS2 и IID_CORDEBUGPROCESS.  
+ окне ИДЕНТИФИКАТОР получаемого интерфейса ICorDebugProcess. В настоящее время допустимыми значениями являются IID_CORDEBUGPROCESS3, IID_CORDEBUGPROCESS2 и IID_CORDEBUGPROCESS.  
   
  `ppProcess`  
- [out] Указатель на COM-интерфейс, который определяется параметром `riidProcess`.  
+ заполняет Указатель на COM-интерфейс, идентифицируемый `riidProcess`.  
   
  `pVersion`  
- [in, out] Версия среды CLR. Во входных данных, это значение может быть `null`. Он также может указывать [CLR_DEBUGGING_VERSION](../../../../docs/framework/unmanaged-api/debugging/clr-debugging-version-structure.md) структура, в противном случае структура `wStructVersion` поля должен быть инициализирован в 0 (ноль).  
+ [вход, выход] Версия среды CLR. На входе это значение можно `null`. Он также может указывать на структуру [CLR_DEBUGGING_VERSION](../../../../docs/framework/unmanaged-api/debugging/clr-debugging-version-structure.md) , в которой поле `wStructVersion` структуры должно быть инициализировано равным 0 (нулю).  
   
- На выходе, возвращенный `CLR_DEBUGGING_VERSION` структуры будут заполнены сведения о версии среды CLR.  
+ В выходных данных Возвращаемая структура `CLR_DEBUGGING_VERSION` будет заполнена сведениями о версии для среды CLR.  
   
  `pdwFlags`  
- [out] Информационные флаги для указанной среды выполнения. См. в разделе [CLR_DEBUGGING_PROCESS_FLAGS](../../../../docs/framework/unmanaged-api/debugging/clr-debugging-process-flags-enumeration.md) разделе Описание флагов.  
+ заполняет Информационные флаги для указанной среды выполнения. Описание флагов см. в разделе [CLR_DEBUGGING_PROCESS_FLAGS](../../../../docs/framework/unmanaged-api/debugging/clr-debugging-process-flags-enumeration.md) .  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Этот метод возвращает следующие конкретные результаты HRESULT, а также ошибки HRESULT, которые указывают на сбой метода.  
@@ -75,22 +73,22 @@ HRESULT OpenVirtualProcess(
 |-------------|-----------------|  
 |S_OK|Метод завершился успешно.|  
 |E_POINTER|Свойство `pDataTarget` имеет значение `null`.|  
-|CORDBG_E_LIBRARY_PROVIDER_ERROR|[ICLRDebuggingLibraryProvider](../../../../docs/framework/unmanaged-api/debugging/iclrdebugginglibraryprovider-interface.md) обратный вызов возвращает ошибку, или не поддерживает допустимый дескриптор.|  
+|CORDBG_E_LIBRARY_PROVIDER_ERROR|Обратный вызов [иклрдебуггинглибрарипровидер](../../../../docs/framework/unmanaged-api/debugging/iclrdebugginglibraryprovider-interface.md) возвращает ошибку или не предоставляет допустимый маркер.|  
 |CORDBG_E_MISSING_DATA_TARGET_INTERFACE|`pDataTarget` не реализует необходимые интерфейсы целевых данных для этой версии среды выполнения.|  
-|CORDBG_E_NOT_CLR|Указанный модуль не является модулем CLR. Данный HRESULT также возвращается, если не удается обнаружить модуль среды CLR, поскольку память повреждена, модуль не доступен или более поздней, чем версия оболочки версию среды CLR.|  
-|CORDBG_E_UNSUPPORTED_DEBUGGING_MODEL|Эта версия среды выполнения не поддерживает данную модель отладки. В настоящее время эта модель отладки не поддерживается версиями CLR до .NET Framework 4. `pwszVersion` Выходные данные по-прежнему установлено правильное значение после данной ошибки.|  
-|CORDBG_E_UNSUPPORTED_FORWARD_COMPAT|Версия среды CLR больше, чем версии, которую этот отладчик утверждений для поддержки. `pwszVersion` Выходные данные по-прежнему установлено правильное значение после данной ошибки.|  
-|E_NO_INTERFACE|`riidProcess` Интерфейс недоступен.|  
-|CORDBG_E_UNSUPPORTED_VERSION_STRUCT|`CLR_DEBUGGING_VERSION` Структура не является распознанным значением `wStructVersion`. В настоящее время единственным допустимым значением является 0.|  
+|CORDBG_E_NOT_CLR|Указанный модуль не является модулем CLR. Это значение HRESULT также возвращается, если модуль среды CLR не удается обнаружить из-за повреждения памяти, модуль недоступен или версия среды CLR позже версии оболочки совместимости.|  
+|CORDBG_E_UNSUPPORTED_DEBUGGING_MODEL|Эта версия среды выполнения не поддерживает эту модель отладки. В настоящее время модель отладки не поддерживается версиями CLR до .NET Framework 4. После этой ошибки по-прежнему будет задано правильное значение параметра `pwszVersion` Output.|  
+|CORDBG_E_UNSUPPORTED_FORWARD_COMPAT|Версия CLR больше версии, которую этот отладчик заявляет для поддержки. После этой ошибки по-прежнему будет задано правильное значение параметра `pwszVersion` Output.|  
+|E_NO_INTERFACE|Интерфейс `riidProcess` недоступен.|  
+|CORDBG_E_UNSUPPORTED_VERSION_STRUCT|Структура `CLR_DEBUGGING_VERSION` не имеет распознанного значения для `wStructVersion`. Единственным допустимым значением в данный момент является 0.|  
   
 ## <a name="exceptions"></a>Исключения  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

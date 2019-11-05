@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: f794dd47-a7cd-47f6-96e9-a41a4dae8e72
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e32ce10b708afa5741d83cbd05f14accb4b2014f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c2ce4b95de75bef3928e144656b565676568caa0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67754679"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137900"
 ---
 # <a name="icordebugfunctiongetilcode-method"></a>Метод ICorDebugFunction::GetILCode
-Получает экземпляр ICorDebugCode, представляющее код промежуточного языка MSIL Microsoft, связанного с данным объектом ICorDebugFunction.  
+Возвращает экземпляр ICorDebugCode, представляющий код на языке MSIL, связанный с данным объектом ICorDebugFunction.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,15 +35,15 @@ HRESULT GetILCode (
   
 ## <a name="parameters"></a>Параметры  
  `ppCode`  
- [out] Указатель на `ICorDebugCode` экземпляра, или значение null, если функция не была скомпилирована в MSIL.  
+ заполняет Указатель на экземпляр `ICorDebugCode` или значение null, если функция не была скомпилирована в MSIL.  
   
-## <a name="remarks"></a>Примечания  
- Если изменить и продолжить была разрешена в этой функции `GetILCode` метод получит код MSIL, соответствующий этой функции измененная версия кода в системе common language runtime (CLR).  
+## <a name="remarks"></a>Заметки  
+ Если для этой функции разрешено изменение и продолжение, то метод `GetILCode` получит код MSIL, соответствующий измененной версии кода этой функции в среде CLR.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

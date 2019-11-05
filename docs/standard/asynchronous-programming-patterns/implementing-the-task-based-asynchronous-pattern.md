@@ -11,14 +11,12 @@ helpviewer_keywords:
 - Task-based Asynchronous Pattern, .NET Framework support for
 - .NET Framework, asynchronous design patterns
 ms.assetid: fab6bd41-91bd-44ad-86f9-d8319988aa78
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 670cdb369920663ffa62e224bdd5aa495fc7e622
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 6218aa1a7b813601e9b718abf862e20a7cbcd313
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66377701"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124299"
 ---
 # <a name="implementing-the-task-based-asynchronous-pattern"></a>Реализация асинхронного шаблона, основанного на задачах
 Можно реализовать асинхронную модель на основе задач (TAP) тремя способами: с помощью компиляторов C# и Visual Basic в Visual Studio, вручную или путем сочетания этих методов. Каждый метод подробно обсуждается в следующих разделах. Модель TAP можно применять для создания асинхронных операций, связанных с операциями ввода-вывода и ограниченных по скорости вычислений. В разделе [Рабочие нагрузки](#workloads) рассматриваются операции каждого типа.

@@ -13,14 +13,12 @@ helpviewer_keywords:
 - ICLRDomainManager::SetPropertiesForDefaultAppDomain method [.NET Framework hosting]
 - SetPropertiesForDefaultAppDomain method [.NET Framework hosting]
 ms.assetid: 43e61c4b-c435-45ec-9ef6-c68403aa4200
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: cfd7c835cdc4b53c753d714216d1745eb0b80c2d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 37919be2d0ebd7d243615bc5845b0781ac13e574
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67772930"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129317"
 ---
 # <a name="iclrdomainmanagersetpropertiesfordefaultappdomain-method"></a>Метод ICLRDomainManager::SetPropertiesForDefaultAppDomain
 Задает свойства, которые будут использоваться для инициализации домена приложения по умолчанию.  
@@ -37,13 +35,13 @@ HRESULT SetPropertiesForDefaultAppDomain(
   
 ## <a name="parameters"></a>Параметры  
  `nProperties`  
- [in] Количество записей в `pwszPropertyNames` и `pwszPropertyValues`.  
+ окне Число записей в `pwszPropertyNames` и `pwszPropertyValues`.  
   
  `pwszPropertyNames`  
- [in] Массив имен свойств или значение null, если свойства отсутствуют. В настоящее время единственное свойство, распознаваемый этот метод называется «PARTIAL_TRUST_VISIBLE_ASSEMBLIES».  
+ окне Массив имен свойств или значение null, если свойства отсутствуют. В настоящее время единственным именем свойства, распознаваемым этим методом, является "PARTIAL_TRUST_VISIBLE_ASSEMBLIES".  
   
  `pwszPropertyValues`  
- [in] Массив значений свойств, или значение null, если свойства отсутствуют.  
+ окне Массив значений свойств или значение null, если свойства отсутствуют.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Этот метод возвращает следующие конкретные результаты HRESULT, а также ошибки HRESULT, которые указывают на сбой метода.  
@@ -51,17 +49,17 @@ HRESULT SetPropertiesForDefaultAppDomain(
 |HRESULT|Описание|  
 |-------------|-----------------|  
 |S_OK|Метод завершился успешно.|  
-|HRESULT_FROM_WIN32(ERROR_UNKNOWN_PROPERTY)|`pwszPropertyNames` включает в себя имя свойства, которое не распознается этим методом.|  
+|HRESULT_FROM_WIN32(ERROR_UNKNOWN_PROPERTY)|`pwszPropertyNames` содержит имя свойства, которое не распознается этим методом.|  
   
-## <a name="remarks"></a>Примечания  
- Значение свойства для «PARTIAL_TRUST_VISIBLE_ASSEMBLIES» приведен список сборок, имеющих условное <xref:System.Security.AllowPartiallyTrustedCallersAttribute> атрибут (APTCA) с <xref:System.Security.PartialTrustVisibilityLevel.NotVisibleByDefault?displayProperty=nameWithType> флаг, который будут сделаны видимыми для частично доверенных вызывающих объектов в приложении по умолчанию домен.  
+## <a name="remarks"></a>Заметки  
+ Значение свойства для "PARTIAL_TRUST_VISIBLE_ASSEMBLIES" — это список сборок, имеющих атрибут Conditional <xref:System.Security.AllowPartiallyTrustedCallersAttribute> (APTCA) с флагом <xref:System.Security.PartialTrustVisibilityLevel.NotVisibleByDefault?displayProperty=nameWithType>, которые должны быть видимыми для частично доверенных вызывающих объектов в домене приложения по умолчанию.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** MetaHost.h  
+ **Заголовок:** Метахост. h  
   
- **Библиотека:** Включена как ресурс в MSCorEE.dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

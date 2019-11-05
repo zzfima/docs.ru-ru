@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7d7fa796-0dc6-4ee8-9d56-40166246d91d
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 229717ba1d7f004dc1ed020eddb2929079aa9285
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e0e68dba1f4d9ac5fa618aa842b823dcc046e70e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67767574"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129680"
 ---
 # <a name="icordebugprocess5enumeratehandles-method"></a>Метод ICorDebugProcess5::EnumerateHandles
 Возвращает перечислитель для дескрипторов объектов в процессе.  
@@ -36,26 +34,26 @@ HRESULT EnumerateHandles(     [in] CorGCReferenceType types,
   
 ## <a name="parameters"></a>Параметры  
  `types`  
- [in] Побитовое сочетание [CorGCReferenceType](../../../../docs/framework/unmanaged-api/debugging/corgcreferencetype-enumeration.md) значений, определяющих тип маркеры, чтобы включить в коллекцию.  
+ окне Побитовое сочетание значений [CorGCReferenceType](../../../../docs/framework/unmanaged-api/debugging/corgcreferencetype-enumeration.md) , определяющих тип дескрипторов, включаемых в коллекцию.  
   
  `ppENum`  
- [out] Указатель на адрес [ICorDebugGCReferenceEnum](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-interface.md) то есть перечислитель для объектов мусора.  
+ заполняет Указатель на адрес [ICorDebugGCReferenceEnum](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-interface.md) , который является перечислителем для объектов, которые должны быть собраны в мусор.  
   
-## <a name="remarks"></a>Примечания  
- `EnumerateHandles` — это вспомогательная функция, которая поддерживает проверку таблицы дескрипторов. Это похоже на [ICorDebugProcess5::EnumerateGCReferences](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumerategcreferences-method.md) метода, за исключением случаев, вместо того чтобы заполнение [ICorDebugGCReferenceEnum](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-interface.md) коллекции со всеми объектами, чтобы участвовать в сборе мусора, его включает только те объекты, с дескрипторами из таблицы дескрипторов.  
+## <a name="remarks"></a>Заметки  
+ `EnumerateHandles` — это вспомогательная функция, которая поддерживает проверку таблицы Handle. Он аналогичен методу [метод ICorDebugProcess5:: енумератегкреференцес](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumerategcreferences-method.md) , за исключением того, что вместо заполнения коллекции [ICorDebugGCReferenceEnum](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-interface.md) всеми объектами для сбора мусора он включает только объекты, имеющие дескрипторы из Таблица Handle.  
   
- `types` Параметр указывает типы дескрипторов для включения в коллекции. `types` может принимать любое из следующих трех членов [CorGCReferenceType](../../../../docs/framework/unmanaged-api/debugging/corgcreferencetype-enumeration.md) перечисления:  
+ Параметр `types` указывает типы обработчиков, которые необходимо включить в коллекцию. `types` может быть любым из следующих трех членов перечисления [CorGCReferenceType](../../../../docs/framework/unmanaged-api/debugging/corgcreferencetype-enumeration.md) :  
   
-- `CorHandleStrongOnly` (маркеры только строгих ссылок.)  
+- `CorHandleStrongOnly` (обрабатываются только строгими ссылками).  
   
-- `CorHandleWeakOnly` (маркеры только слабые ссылки.)  
+- `CorHandleWeakOnly` (дескрипторы только слабых ссылок).  
   
 - `CorHandleAll` (все дескрипторы).  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

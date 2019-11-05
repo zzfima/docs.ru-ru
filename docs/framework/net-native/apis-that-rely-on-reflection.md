@@ -2,14 +2,12 @@
 title: API-интерфейсы, основанные на отражении
 ms.date: 03/30/2017
 ms.assetid: f9532629-6594-4a41-909f-d083f30a42f3
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9d120dcf49f1c9097eee04434062a0363a7e144a
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 7329ac339912042fc5d2fb335faa3bf74ed03b8d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049965"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128532"
 ---
 # <a name="apis-that-rely-on-reflection"></a>API-интерфейсы, основанные на отражении
 В некоторых случаях использование отражения в коде не очевидно, поэтому цепочка инструментов .NET Native не сохраняет метаданные, необходимые во время выполнения. В этом разделе рассматриваются некоторые общие интерфейсы API или распространенные шаблоны программирования, которые не считаются частью API-интерфейса отражения, однако используют отражение для успешного выполнения. При их использовании в исходном коде можно добавить сведения о них в файл директив среды выполнения (. rd.xml), чтобы вызовы этих интерфейсов API не создавали исключений [MissingMetadataException](missingmetadataexception-class-net-native.md) или других исключений во время выполнения.  
@@ -31,7 +29,7 @@ ms.locfileid: "71049965"
   
 Эта операция не может быть выполнена, так как метаданные для следующего типа были удалены из соображений производительности:  
   
-`App1.AppClass`1 < System. Int32 > ".  
+`App1.AppClass`1 < > System. Int32.  
   
  Можно добавить следующую директиву времени выполнения в файл директив среды выполнения, чтобы добавить метаданные `Activate` для конкретного экземпляра, созданного над `AppClass<T>` из <xref:System.Int32?displayProperty=nameWithType>:  
   

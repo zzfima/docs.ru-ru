@@ -16,14 +16,12 @@ helpviewer_keywords:
 ms.assetid: a30102ff-c52e-48c9-b3a9-aa14286a42b2
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 948e97064d12dc5b2044faf35aa374e5ba5f2592
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2d67bee3ea0e57080179b3fbb7e0b4193860c44d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67764781"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73103292"
 ---
 # <a name="initdbgtransportmanager-function"></a>Функция InitDbgTransportManager
 Инициализирует диспетчер транспорта для подключения к удаленному целевому объекту для процесса и перечисления среды выполнения.  
@@ -45,10 +43,10 @@ HRESULT InitDbgTransportManager ();
  Прочие сбои.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CoreClrRemoteDebuggingInterfaces.h  
+ **Заголовок:** Кореклрремотедебуггингинтерфацес. h  
   
- **Library:** mscordbi_macx86.dll  
+ **Библиотека:** mscordbi_macx86. dll  
   
- **Версии платформы .NET framework:** 3.5 с пакетом обновления 1 (SP1)
+ **.NET Framework версии:** 3,5 SP1

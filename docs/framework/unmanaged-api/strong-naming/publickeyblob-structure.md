@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: b9240712-829c-4c8d-9a09-a6e7aa63f63a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e66196e2bd2cb326ca3f5badc67bcf8d81e5fc3c
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 6c58a0726e0869178838999c6b000e0ad975f145
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70799161"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140607"
 ---
 # <a name="publickeyblob-structure"></a>Структура PublicKeyBlob
 Представляет в двоичном формате открытый ключ пары открытого и закрытого ключей.  
@@ -37,24 +35,24 @@ typedef struct {
 } PublicKeyBlob;   
 ```  
   
-## <a name="members"></a>Участники  
+## <a name="members"></a>Члены  
   
 |Член|Описание|  
 |------------|-----------------|  
-|`SigAlgId`|Идентификатор для алгоритма подписи (типа `ALG_ID`, как определено в винкрипт. h) открытого ключа.|  
-|`HashAlgId`|Идентификатор для хэш-алгоритма (типа `ALG_ID`, как определено в винкрипт. h) открытого ключа.|  
+|`SigAlgId`|Идентификатор алгоритма подписи (типа `ALG_ID`, как определено в Винкрипт. h) открытого ключа.|  
+|`HashAlgId`|Идентификатор хэш-алгоритма (типа `ALG_ID`, как определено в Винкрипт. h) открытого ключа.|  
 |`cbPublicKey`|Длина ключа в байтах.|  
 |`PublicKey`|Массив байтов переменной длины, который содержит значение ключа в формате, возвращенном CryptoAPI.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
  Структура `PublicKeyBlob` используется [StrongNameGetPublicKey](strongnamegetpublickey-function.md), [StrongNameSignatureGeneration](strongnamesignaturegeneration-function.md) и другими функциями строгого имени для представления открытого ключа пары открытого и закрытого ключей.  
   
 ## <a name="requirements"></a>Требования  
- **Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
- **Заголовок.** StrongName. h  
+ **Заголовок:** StrongName. h  
   
- **Библиотечная** Включается в качестве ресурса в библиотеку MsCorEE. dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

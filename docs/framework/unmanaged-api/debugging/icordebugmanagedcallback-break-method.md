@@ -15,18 +15,16 @@ helpviewer_keywords:
 ms.assetid: 7d78a301-82b3-43b2-9d65-3cda3285ae97
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 621c5b1e32a1a21c2b0b883249c3b65fadceb5f2
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: efc9de050e34867c14f8e85e091e2b959c30f213
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65632350"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122581"
 ---
 # <a name="icordebugmanagedcallbackbreak-method"></a>Метод ICorDebugManagedCallback::Break
 
-Уведомляет отладчик при <xref:System.Reflection.Emit.OpCodes.Break> выполнения инструкции в потоке кода.
+Уведомляет отладчик о выполнении инструкции <xref:System.Reflection.Emit.OpCodes.Break> в потоке кода.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -40,16 +38,16 @@ HRESULT Break (
 ## <a name="parameters"></a>Параметры
 
 `pAppDomain`\
-[in] Указатель на объект ICorDebugAppDomain, представляющий домен приложения, который содержит инструкцию break.
+окне Указатель на объект ICorDebugAppDomain, представляющий домен приложения, содержащий инструкцию Break.
 
 `thread`\
-[in] Указатель на объект ICorDebugThread, представляющий поток, который содержит инструкцию break.
+окне Указатель на объект ICorDebugThread, представляющий поток, содержащий инструкцию Break.
 
 ## <a name="requirements"></a>Требования
 
-**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).
+**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).
 
-**Заголовок.** CorDebug.idl, CorDebug.h
+**Заголовок:** CorDebug.idl, CorDebug.h
 
 **Библиотека:** CorGuids.lib
 

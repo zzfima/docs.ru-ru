@@ -12,12 +12,12 @@ helpviewer_keywords:
 - -doc compiler option [C#]
 - /doc compiler option [C#]
 ms.assetid: 849eea59-c936-4311-bad8-d07404480f2a
-ms.openlocfilehash: 21605b30867d7be0b906b431253c183e655bea82
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 01ea71f3de9e30abe25184e38a59f3707b54bd5a
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69922479"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422975"
 ---
 # <a name="-doc-c-compiler-options"></a>-doc (параметры компилятора C#)
 Параметр **-doc** позволяет поместить комментарии документации в XML-файл.  
@@ -35,13 +35,13 @@ ms.locfileid: "69922479"
 ## <a name="remarks"></a>Примечания  
  Комментарии документации могут быть обработаны и добавлены в XML-файл, если они предшествуют объектам файлов исходного кода, перечисленным ниже.  
   
-- Такие определяемые пользователем типы, как [класс](../keywords/class.md), [делегат](../keywords/delegate.md) или [интерфейс](../keywords/interface.md).  
+- Такие определяемые пользователем типы, как [класс](../keywords/class.md), [делегат](../builtin-types/reference-types.md#the-delegate-type) или [интерфейс](../keywords/interface.md).  
   
 - Такие члены, как поле, [событие](../keywords/event.md), [свойство](../../programming-guide/classes-and-structs/using-properties.md) или метод.  
   
  Файл исходного кода, содержащий метод "Main", первым выводится в XML-файл.  
   
- Чтобы использовать созданный XML-файл с помощью функции [IntelliSense](/visualstudio/ide/using-intellisense), имя XML-файла должно совпадать с именем сборки, а сам XML-файл должен находиться в одном каталоге со сборкой. Таким образом, если в проект Visual Studio добавляется ссылка на сборку, то XML-файл также будет найден. Дополнительные сведения см. в разделе [Создание XML-примечаний к коду](/visualstudio/ide/supplying-xml-code-comments).  
+ Чтобы использовать созданный XML-файл с помощью функции [IntelliSense](/visualstudio/ide/using-intellisense), имя XML-файла должно совпадать с именем сборки, а сам XML-файл должен находиться в одном каталоге со сборкой. Таким образом, если в проект Visual Studio добавляется ссылка на сборку, то XML-файл также будет найден. Дополнительные сведения см. в разделе [Создание XML-примечаний к коду](/visualstudio/ide/reference/generate-xml-documentation-comments).  
   
  Если при компиляции не используется параметр [-target:module](./target-module-compiler-option.md), `file` будет содержать теги \<assembly>\</assembly>, которые указывают имя файла, содержащего манифест сборки для выходного файла компиляции.  
   

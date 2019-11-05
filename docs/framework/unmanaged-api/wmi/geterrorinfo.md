@@ -14,14 +14,12 @@ helpviewer_keywords:
 - GetErrorInfo function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ab801ec7899403f568d953535fcd430a862a2fd8
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 062dc62dfe53af3bf5158cb1add0897eccc1df60
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798579"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73102611"
 ---
 # <a name="geterrorinfo-function"></a>Функция Жетерроринфо
 Получает сведения об ошибках из предыдущего вызова функции.  
@@ -36,16 +34,16 @@ IErrorInfo* GetErrorInfo();
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Указатель на объект [IErrorInfo](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-ierrorinfo) при успешном вызове функции или `null` в случае сбоя.
+Указатель на объект [IErrorInfo](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-ierrorinfo) , если вызов функции завершается успешно, или `null` в случае сбоя.
   
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
 Эта функция заключает в оболочку вызов метода [икомсреадингинфо:: жетерроринфо](/windows/desktop/api/objidlbase/nf-objidlbase-icomthreadinginfo-getcurrentapartmenttype) .
 
 ## <a name="requirements"></a>Требования  
- **Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
- **Заголовок.** WMINet_Utils. def  
+ **Заголовок:** WMINet_Utils. def  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   

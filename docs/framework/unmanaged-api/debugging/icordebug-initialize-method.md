@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6fae3b23-5c9f-47c0-85d8-6bb75e050786
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 80465c8d1f1f9e09c0675de1667b999b332b9f6b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a5cda98cac0bc3fc6fb101fd0404b062224cb578
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738146"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134081"
 ---
 # <a name="icordebuginitialize-method"></a>Метод ICorDebug::Initialize
-Инициализирует `ICorDebug` объекта.  
+Инициализирует объект `ICorDebug`.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -33,13 +31,13 @@ ms.locfileid: "67738146"
 HRESULT Initialize ();  
 ```  
   
-## <a name="remarks"></a>Примечания  
- Отладчик должен вызвать `Initialize` во время создания службы времени для инициализации отладки. Этот метод должен вызываться перед вызовом любого другого метода на `ICorDebug` вызывается.  
+## <a name="remarks"></a>Заметки  
+ Отладчик должен вызвать `Initialize` во время создания, чтобы инициализировать службы отладки. Этот метод должен вызываться до вызова любого другого метода `ICorDebug`.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

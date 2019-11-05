@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5eefe716-5025-4a4c-970c-c823cdc7bb87
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: db5d07d2b9a295a5cd21b4d4af954503b8bd7a8b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5774b40178ce0d7c2ef5d063a37b9011fc2630df
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67763669"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127952"
 ---
 # <a name="icordebugmoduleisdynamic-method"></a>Метод ICorDebugModule::IsDynamic
-Получает значение, указывающее, является ли этот модуль является динамическим.  
+Возвращает значение, указывающее, является ли этот модуль динамическим.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,15 +35,15 @@ HRESULT IsDynamic(
   
 ## <a name="parameters"></a>Параметры  
  `pDynamic`  
- [out] `true` Если этот модуль является динамической, в противном случае — `false`.  
+ [out] `true`, если этот модуль является динамическим; в противном случае `false`.  
   
-## <a name="remarks"></a>Примечания  
- Динамический модуль можно добавлять новые классы и удалять существующие классы, даже в том случае, после загрузки модуля. [ICorDebugManagedCallback::LoadClass](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadclass-method.md) и [ICorDebugManagedCallback::UnloadClass](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-unloadclass-method.md) обратные вызовы оповестить отладчик, когда добавляется или удаляется класс.  
+## <a name="remarks"></a>Заметки  
+ Динамический модуль может добавлять новые классы и удалять существующие классы даже после загрузки модуля. Обратные вызовы [ICorDebugManagedCallback:: loadClass](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadclass-method.md) и [ICorDebugManagedCallback:: унлоадкласс](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-unloadclass-method.md) информируют отладчик о добавлении или удалении класса.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

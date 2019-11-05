@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 003bb138-7960-4291-ac88-0d87e470ff70
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: bed3c461935c5a2bc912ed9ed16d147fddaf8a1a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d182476130e611e57df232c9652cda4bec002c31
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739651"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132778"
 ---
 # <a name="cordebugregister-enumeration"></a>Перечисление CorDebugRegister
 Указывает регистры, связанные с данной архитектурой процессора.  
@@ -114,7 +112,7 @@ typedef enum CorDebugRegister {
 } CorDebugRegister;  
 ```  
   
-## <a name="members"></a>Участники  
+## <a name="members"></a>Члены  
   
 |Член|Описание|  
 |------------|-----------------|  
@@ -191,7 +189,7 @@ typedef enum CorDebugRegister {
 |`REGISTER_ARM_R12`|Регистр R12 на процессоре ARM.|  
 |`REGISTER_ARM_LR`|Регистр связи (R14) на процессоре ARM.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
  На процессоре IA-64 имеются 128 регистров данных общего назначения и 128 регистров данных с плавающей запятой, но используются только значения `REGISTER_IA64_R0` и `REGISTER_IA64_F0`. Другие значения можно определить следующим образом.  
   
 - Добавьте номер регистра к `REGISTER_IA64_R0` для значений от `REGISTER_IA64_R1` до `REGISTER_IA64_R127`, которые соответствуют регистрам данных от #1 до #127 на процессоре IA-64.  
@@ -201,9 +199,9 @@ typedef enum CorDebugRegister {
  Например, если необходимо указать регистр данных #83 на процессоре IA-64, добавьте к `REGISTER_IA64_R0` число 83.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

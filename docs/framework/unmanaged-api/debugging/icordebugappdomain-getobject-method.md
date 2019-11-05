@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 78232e6f-ae18-4cfa-a6cd-e79471cf9d76
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1201ac0dca9cbd48c24b2621eba079ae672fd310
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f2c881603cfa0e4b3d2dc8d1e996631b51d1e850
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737855"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134705"
 ---
 # <a name="icordebugappdomaingetobject-method"></a>Метод ICorDebugAppDomain::GetObject
-Получает указатель интерфейса на домен приложения среды выполнения (CLR).  
+Возвращает указатель интерфейса на домен приложения среды CLR.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,18 +35,18 @@ HRESULT GetObject (
   
 ## <a name="parameters"></a>Параметры  
  `ppObject`  
- [out] Указатель на адрес объекта интерфейса ICorDebugValue, который представляет домен приложения среды CLR.  
+ заполняет Указатель на адрес объекта интерфейса ICorDebugValue, который представляет домен приложения среды CLR.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Если управляемый <xref:System.AppDomain?displayProperty=nameWithType> объект еще не был создан для этого домена приложения, метод возвращает `S_FALSE` и помещает `NULL` в `*ppObject`.  
+ Если управляемый объект <xref:System.AppDomain?displayProperty=nameWithType> не был создан для этого домена приложения, метод возвращает `S_FALSE` и помещает `NULL` в `*ppObject`.  
   
-## <a name="remarks"></a>Примечания  
- Каждый домен приложения в процессе может иметь управляемый <xref:System.AppDomain?displayProperty=nameWithType> объекта в среде выполнения, который ее представляет. Эта функция возвращает объект интерфейс ICorDebugValue, соответствующий этому управляемых <xref:System.AppDomain?displayProperty=nameWithType> объекта.  
+## <a name="remarks"></a>Заметки  
+ Каждый домен приложения в процессе может иметь управляемый объект <xref:System.AppDomain?displayProperty=nameWithType> в среде выполнения, которая представляет его. Эта функция получает объект интерфейса ICorDebugValue, соответствующий этому управляемому объекту <xref:System.AppDomain?displayProperty=nameWithType>.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

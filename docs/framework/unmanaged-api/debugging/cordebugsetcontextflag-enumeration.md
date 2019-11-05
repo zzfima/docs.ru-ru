@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: b30280bb-fe75-44ed-8589-bcff081fae44
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e959ce7a77ad6ceb7f2fc848193cbd9fff028279
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 251c96042e8e56112015fb869176c708322267f6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739619"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73097268"
 ---
 # <a name="cordebugsetcontextflag-enumeration"></a>Перечисление CorDebugSetContextFlag
 Указывает происхождение контекста: взят из активного (или листового) кадра в стеке или был вычислен в результате освобождения другого кадра.  
@@ -36,20 +34,20 @@ typedef enum CorDebugSetContextFlag
 }  CorDebugSetContextFlag;  
 ```  
   
-## <a name="members"></a>Участники  
+## <a name="members"></a>Члены  
   
 |Член|Описание|  
 |------------|-----------------|  
-|SET_CONTEXT_FLAG_ACTIVE_FRAME|Контекст является активный контекст потока.|  
-|SET_CONTEXT_FLAG_UNWIND_FRAME|Контекст был вычислен в результате освобождения другого кадра.|  
+|SET_CONTEXT_FLAG_ACTIVE_FRAME|Контекст является активным контекстом потока.|  
+|SET_CONTEXT_FLAG_UNWIND_FRAME|Контекст был вычислен путем очистки от другого кадра.|  
   
-## <a name="remarks"></a>Примечания  
- `CorDebugSetContextFlag` Предоставляет значения, используемые [ICorDebugStackWalk::SetContext](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-setcontext-method.md) метод.  
+## <a name="remarks"></a>Заметки  
+ `CorDebugSetContextFlag` предоставляет значения, используемые методом [икордебугстакквалк:: SetContext](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-setcontext-method.md) .  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

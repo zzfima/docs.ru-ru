@@ -1,17 +1,15 @@
 ---
-title: Метод ICorDebugMutableDataTarget::WriteVirtual
+title: 'Метод Икордебугмутабледататаржет:: WriteVirtual'
 ms.date: 03/30/2017
 ms.assetid: 80833648-58a7-491a-8dc8-9a48e9bb3adc
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d0a6a58a1a270cb67b75cf34ac5df8d45ccf307c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5947caa8dfb97574bb4b3c5634d962df153211c7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67764581"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132676"
 ---
-# <a name="icordebugmutabledatatargetwritevirtual-method"></a>Метод ICorDebugMutableDataTarget::WriteVirtual
+# <a name="icordebugmutabledatatargetwritevirtual-method"></a>Метод Икордебугмутабледататаржет:: WriteVirtual
 Записывает память в адресное пространство целевого процесса.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -36,13 +34,13 @@ HRESULT WriteVirtual(
 ## <a name="return-value"></a>Возвращаемое значение  
  Значение `S_OK` при успешном выполнении или любое другое значение `HRESULT` в случае сбоя.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
  Если не удается записать все байты, вызов метода завершается ошибкой без изменения каких-либо байтов в целевом адресном пространстве. (В противном случае целевое адресное пространство оказалось бы в несогласованном состоянии, что сделало бы ненадежной дальнейшую отладку.)  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

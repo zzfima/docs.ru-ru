@@ -2,17 +2,15 @@
 title: Интерфейс ISymUnmanagedAsyncMethodPropertiesWriter
 ms.date: 03/30/2017
 ms.assetid: caa71820-8058-4b6a-93a2-25ee757d92d3
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 82fcddd7a3f89a92cc79285930b30342333fbec2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: db065357e22ac576600a3ca61dda0882b9206a86
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61940105"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129154"
 ---
 # <a name="isymunmanagedasyncmethodpropertieswriter-interface"></a>Интерфейс ISymUnmanagedAsyncMethodPropertiesWriter
-Можно задать сведения о методе необязательно async для каждого символа метод. Всегда используйте с помощью открытого метода; то есть между вызовами [метод OpenMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openmethod-method.md) и [метод CloseMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-closemethod-method.md).  
+Позволяет определить дополнительные сведения о асинхронном методе для каждого символа метода. Всегда используйте с открытым методом. то есть между вызовами [метода опенмесод](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openmethod-method.md) и [метода клосемесод](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-closemethod-method.md).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -25,12 +23,12 @@ ms.locfileid: "61940105"
   
 |Метод|Описание|  
 |------------|-----------------|  
-|[Метод DefineAsyncStepInfo](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethodpropertieswriter-defineasyncstepinfo-method.md)|Определить группу async await операций в текущем методе.<br /><br /> Смещение каждого yield соответствует инструкции return оператором await, определение потенциальных yield. Каждый `breakpointMethod` / `breakpointOffset` пары определяет, где будет возобновлена асинхронную операцию; он может находиться в другой метод.|  
-|[Метод DefineCatchHandlerILOffset](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethodpropertieswriter-definecatchhandleriloffset-method.md)|Задает смещение для обработчика catch, созданный компилятором, который создает оболочку для асинхронного метода на промежуточном Языке.<br /><br /> Смещение на промежуточном Языке создаваемый catch используется отладчиком для обработки catch, как если бы это был не написанный пользователем код, несмотря на то, что эта проблема может возникнуть в коде пользовательского метода. В частности, он используется в ответ на **CatchHandlerFound** события исключения.|  
-|[Метод DefineKickoffMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethodpropertieswriter-definekickoffmethod-method.md)|Задает начальный метод, который инициирует асинхронную операцию.|  
+|[Метод DefineAsyncStepInfo](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethodpropertieswriter-defineasyncstepinfo-method.md)|Определите группу асинхронных операций await в текущем методе.<br /><br /> Каждое значение yield Offset соответствует инструкции Return, определяющей потенциальный доход. Каждая пара `breakpointMethod`/`breakpointOffset` определяет, где будет возобновлена асинхронная операция. Это может быть другой метод.|  
+|[Метод DefineCatchHandlerILOffset](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethodpropertieswriter-definecatchhandleriloffset-method.md)|Задает смещение IL для обработчика catch, созданного компилятором, который создает оболочку для асинхронного метода.<br /><br /> Смещение IL созданного блока catch используется отладчиком для управления перехватом, как если бы он был непользовательским кодом, несмотря на то, что он может произойти в методе пользовательского кода. В частности, он используется в ответ на событие исключения **катчхандлерфаунд** .|  
+|[Метод DefineKickoffMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethodpropertieswriter-definekickoffmethod-method.md)|Задает начальный метод, инициирующий асинхронную операцию.|  
   
 ## <a name="requirements"></a>Требования  
- **Заголовок.** CorSym.idl CorSym.h  
+ **Заголовок:** Корсим. idl, Корсим. h  
   
 ## <a name="see-also"></a>См. также
 

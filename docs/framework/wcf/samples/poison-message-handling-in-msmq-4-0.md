@@ -2,12 +2,12 @@
 title: Обработка подозрительных сообщений в MSMQ 4.0
 ms.date: 03/30/2017
 ms.assetid: ec8d59e3-9937-4391-bb8c-fdaaf2cbb73e
-ms.openlocfilehash: f20f7cec29574746edc84d45171cfa63a5682337
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 6f3ec0f097f1b18ca45333b7dc66431277816c60
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70039076"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424312"
 ---
 # <a name="poison-message-handling-in-msmq-40"></a>Обработка подозрительных сообщений в MSMQ 4.0
 В этом образце демонстрируется обработка подозрительных сообщений в службе. Этот пример основан на образце [транзакционной привязки MSMQ](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) . В этом образце используется привязка `netMsmqBinding`. Служба представляет собой резидентное консольное приложение, позволяющее наблюдать за получением службой сообщений из очереди.
@@ -27,13 +27,13 @@ ms.locfileid: "70039076"
 
  После этого сообщение обрабатывается в соответствии с параметрами, заданными в перечислении <xref:System.ServiceModel.MsmqBindingBase.ReceiveErrorHandling%2A>. Ниже еще раз перечислены возможные значения.
 
-- Ошибка (по умолчанию): Для сбоя прослушивателя, а также узла службы.
+- Fault (по умолчанию): происходит сбой прослушивателя и узла службы.
 
-- Тени , Чтобы удалить сообщение.
+- Drop: сообщение отбрасывается.
 
-- Поместить Для перемещения сообщения в подочередь подозрительных сообщений. Это значение доступно только в [!INCLUDE[wv](../../../../includes/wv-md.md)].
+- Move: сообщение перемещается во вложенную очередь подозрительных сообщений. Это значение доступно только в [!INCLUDE[wv](../../../../includes/wv-md.md)].
 
-- Партнеров Чтобы отклонить сообщение, отправьте его обратно в очередь недоставленных сообщений отправителя. Это значение доступно только в [!INCLUDE[wv](../../../../includes/wv-md.md)].
+- Reject: сообщение отклоняется и возвращается в очередь недоставленных сообщений отправителя. Это значение доступно только в [!INCLUDE[wv](../../../../includes/wv-md.md)].
 
  В этом образце демонстрируется использование команды `Move` для перемещения опасного сообщения о сбое. Команда `Move` перемещает сообщение во вложенную очередь подозрительных сообщений.
 
@@ -233,7 +233,7 @@ public class OrderProcessorService : IOrderProcessor
 
  Служба начинает работать, обрабатывать заказы и в произвольном порядке завершать обработку. Если появляется сообщение о том, что заказ обработан, можно снова запустить клиент для отправки другого сообщения, пока не будет видно, что служба действительно завершила обработку сообщения. В зависимости от заданных параметров подозрительных сообщений перед помещением сообщения в конечную очередь подозрительных сообщений предпринимается одна попытка его обработки.
 
-```
+```console
 The service is ready.
 Press <ENTER> to terminate service.
 
@@ -258,7 +258,7 @@ Aborting transaction, cannot process purchase order: 23e0b991-fbf9-4438-a0e2-20a
 
  Запустите службу подозрительных сообщений, чтобы считать подозрительное сообщение из очереди подозрительных сообщений. В этом примере служба подозрительных сообщений считывает сообщение и обрабатывает его. Можно видеть, что заказ на покупку, обработка которого была завершена и который был помечен как подозрительный, считывается службой подозрительных сообщений.
 
-```
+```console
 The service is ready.
 Press <ENTER> to terminate service.
 
@@ -291,7 +291,7 @@ Processing Purchase Order: 23e0b991-fbf9-4438-a0e2-20adf93a4f89
 
 4. Чтобы запустить пример в конфигурации с одним или несколькими компьютерами, измените имена очередей, чтобы они отражали фактическое имя узла вместо localhost, и следуйте инструкциям в разделе [Запуск примеров Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).
 
- По умолчанию с транспортом привязки `netMsmqBinding` безопасность включена. Тип безопасности транспорта определяется двумя свойствами: `MsmqAuthenticationMode` и `MsmqProtectionLevel`. По умолчанию задан режим проверки подлинности `Windows` и уровень защиты `Sign`. Чтобы служба MSMQ обеспечивала возможности проверки подлинности и подписывания, она должна входить в домен. Если запустить этот пример на компьютере, который не входит в домен, появится следующее сообщение об ошибке: "Внутренний сертификат очереди сообщений пользователя не существует".
+ По умолчанию с транспортом привязки `netMsmqBinding` безопасность включена. Тип безопасности транспорта определяется двумя свойствами: `MsmqAuthenticationMode` и `MsmqProtectionLevel`. По умолчанию задан режим проверки подлинности `Windows` и уровень защиты `Sign`. Чтобы служба MSMQ обеспечивала возможности проверки подлинности и подписывания, она должна входить в домен. При выполнении этого примера на компьютере, не входящем в домен, возникает следующая ошибка: "User's internal message queuing certificate does not exist" (не существует внутреннего сертификата очереди сообщений пользователя).
 
 #### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup"></a>Выполнение образца на компьютере, входящем в рабочую группу
 
@@ -314,13 +314,13 @@ Processing Purchase Order: 23e0b991-fbf9-4438-a0e2-20adf93a4f89
     > [!NOTE]
     > Задание для `security mode` значения `None` эквивалентно заданию для параметров безопасности `MsmqAuthenticationMode`, `MsmqProtectionLevel` и `Message` значения `None`.  
   
-3. Чтобы обеспечить обмен метаданными, необходимо зарегистрировать URL-адрес с привязкой http. Это требует выполнения службы в командном окне с повышенными привилегиями. В противном случае возникнет исключение, например `Unhandled Exception: System.ServiceModel.AddressAccessDeniedException: HTTP could not register URL http://+:8000/ServiceModelSamples/service/. Your process does not have access rights to this namespace (see https://go.microsoft.com/fwlink/?LinkId=70353 for details). ---> System.Net.HttpListenerException: Access is denied`:.  
+3. Чтобы обеспечить обмен метаданными, необходимо зарегистрировать URL-адрес с привязкой http. Это требует выполнения службы в командном окне с повышенными привилегиями. В противном случае возникнет исключение, например: `Unhandled Exception: System.ServiceModel.AddressAccessDeniedException: HTTP could not register URL http://+:8000/ServiceModelSamples/service/. Your process does not have access rights to this namespace (see https://go.microsoft.com/fwlink/?LinkId=70353 for details). ---> System.Net.HttpListenerException: Access is denied`.  
   
 > [!IMPORTANT]
 > Образцы уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).  
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Если этот каталог не существует, перейдите к [примерам Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] и примеры. Этот образец расположен в следующем каталоге.  
+> Если этот каталог не существует, перейдите к [примерам Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Samples. Этот образец расположен в следующем каталоге.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\Poison\MSMQ4`

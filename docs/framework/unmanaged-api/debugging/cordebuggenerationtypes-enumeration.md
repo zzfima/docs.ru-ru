@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9f25b64f-eedd-4ae5-8b0e-cfdfb9b6c5d8
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 193f5ffe96e89a00bed8a3c88ee346ba3ea9f2b4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 362e917e1684c91bde80a8b5c2e6a27a18a99190
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740016"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73098199"
 ---
 # <a name="cordebuggenerationtypes-enumeration"></a>Перечисление CorDebugGenerationTypes
 Указывает на создание области памяти в управляемой куче.  
@@ -37,7 +35,7 @@ typedef enum CorDebugGenerationTypes {
 } CorDebugRegionTypes;  
 ```  
   
-## <a name="members"></a>Участники  
+## <a name="members"></a>Члены  
   
 |Имя члена|Описание|  
 |-----------------|-----------------|  
@@ -46,12 +44,12 @@ typedef enum CorDebugGenerationTypes {
 |`CorDebug_Gen2`|Поколение 2.|  
 |`CorDebug_LOH`|Куча больших объектов.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

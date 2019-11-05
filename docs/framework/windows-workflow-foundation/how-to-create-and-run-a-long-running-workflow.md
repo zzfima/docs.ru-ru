@@ -1,23 +1,23 @@
 ---
-title: Практическое руководство. Создание и запуск длительного рабочего процесса
+title: 'How to: Create and Run a Long Running Workflow'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: c0043c89-2192-43c9-986d-3ecec4dd8c9c
-ms.openlocfilehash: 15ee10120f4d4c92bdc95cb48cb3cb838f526343
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: e5083b3d12cecc395500ef13405effa7b7e51633
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044381"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73420619"
 ---
-# <a name="how-to-create-and-run-a-long-running-workflow"></a>Практическое руководство. Создание и запуск длительного рабочего процесса
+# <a name="how-to-create-and-run-a-long-running-workflow"></a>How to: Create and Run a Long Running Workflow
 
-Одной из основных функций Windows Workflow Foundation (WF) является способность среды выполнения сохранять и выгружать неактивные рабочие процессы в базу данных. Инструкции [по выполнению следующих действий. Запустите рабочий процесс](how-to-run-a-workflow.md) , демонстрирующий основы размещения рабочих процессов с помощью консольного приложения. Приведены примеры запуска рабочих процессов, обработчиков жизненного цикла рабочего процесса и возобновления закладок. Для эффективной демонстрации сохранения рабочего процесса требуется более сложный узел рабочих процессов, обеспечивающий запуск и возобновление нескольких экземпляров рабочего процесса. На этом шаге учебника показано, как создать ведущее приложение форм Windows Form, которое обеспечивает запуск и возобновление нескольких экземпляров рабочих процессов, сохранение рабочего процесса и основу для таких дополнительных возможностей, как отслеживание версий, которые показаны в последующих шагах учебника, и управление ими.
+Одной из основных функций Windows Workflow Foundation (WF) является способность среды выполнения сохранять и выгружать неактивные рабочие процессы в базу данных. Инструкции по [выполнению рабочего процесса](how-to-run-a-workflow.md) демонстрируют основы размещения рабочих процессов с помощью консольного приложения. Приведены примеры запуска рабочих процессов, обработчиков жизненного цикла рабочего процесса и возобновления закладок. Для эффективной демонстрации сохранения рабочего процесса требуется более сложный узел рабочих процессов, обеспечивающий запуск и возобновление нескольких экземпляров рабочего процесса. На этом шаге учебника показано, как создать ведущее приложение форм Windows Form, которое обеспечивает запуск и возобновление нескольких экземпляров рабочих процессов, сохранение рабочего процесса и основу для таких дополнительных возможностей, как отслеживание версий, которые показаны в последующих шагах учебника, и управление ими.
 
 > [!NOTE]
-> В этом шаге руководства и последующих шагах используются все три типа [рабочих процессов: Создайте рабочий процесс](how-to-create-a-workflow.md). Если вы не выполнили все три типа, вы можете скачать завершенную версию шагов из [Windows Workflow Foundation (WF45) — Начало работы учебнике](https://go.microsoft.com/fwlink/?LinkID=248976).
+> В этом шаге руководства и последующих шагах используются все три типа рабочих процессов из [руководства: создание рабочего процесса](how-to-create-a-workflow.md). Если вы не выполнили все три типа, вы можете скачать завершенную версию шагов из [Windows Workflow Foundation (WF45) — Начало работы учебнике](https://go.microsoft.com/fwlink/?LinkID=248976).
 
 > [!NOTE]
 > Чтобы скачать готовую версию или просмотреть видео пошаговое руководство, см. Руководство по [Windows Workflow Foundation (WF45) — Начало работы](https://go.microsoft.com/fwlink/?LinkID=248976).
@@ -70,14 +70,14 @@ ms.locfileid: "70044381"
 
 1. Щелкните правой кнопкой мыши **NumberGuessWorkflowHost** в **Обозреватель решений** и выберите команду **Добавить ссылку**.
 
-2. Выберите **сборки** из списка **Добавить ссылку** и введите `DurableInstancing` в поле **Поиск сборок** . Сборки отфильтруются, и будет легче выбрать необходимые ссылки.
+2. Выберите **сборки** в списке **Добавить ссылку** и введите `DurableInstancing` в поле **Поиск сборок** . Сборки отфильтруются, и будет легче выбрать необходимые ссылки.
 
 3. Установите флажок рядом с элементом **System. activitys. DurableInstancing** и **System. Runtime. DurableInstancing** в списке **результатов поиска** и нажмите кнопку **ОК**.
 
 ### <a name="BKMK_CreateForm"></a>Создание формы узла рабочего процесса
 
 > [!NOTE]
-> В шагах этой процедуры показано, как добавить и настроить форму вручную. При необходимости можно загрузить файлы решений для учебника и добавить готовую форму в проект. Чтобы скачать файлы учебников, см. [руководство по Windows Workflow Foundation (WF45) — Начало работы](https://go.microsoft.com/fwlink/?LinkID=248976). После скачивания файлов щелкните правой кнопкой мыши **NumberGuessWorkflowHost** и выберите команду **Добавить ссылку**. Добавьте ссылку на **System. Windows. Forms** и **System. Drawing**. Эти ссылки добавляются автоматически при добавлении новой формы из меню **Добавить**, **создать элемент** , но их необходимо добавить вручную при импорте формы. После добавления ссылок щелкните правой кнопкой мыши **NumberGuessWorkflowHost** в **Обозреватель решений** и выберите **добавить**, **существующий элемент**. Перейдите `Form` к папке в файлах проекта, выберите **WorkflowHostForm.CS** (или **воркфловхостформ. vb**) и нажмите кнопку **Добавить**. Если вы решили импортировать форму, можно перейти к следующему разделу, [чтобы добавить свойства и вспомогательные методы формы](how-to-create-and-run-a-long-running-workflow.md#BKMK_AddHelperMethods).
+> В шагах этой процедуры показано, как добавить и настроить форму вручную. При необходимости можно загрузить файлы решений для учебника и добавить готовую форму в проект. Чтобы скачать файлы учебников, см. [руководство по Windows Workflow Foundation (WF45) — Начало работы](https://go.microsoft.com/fwlink/?LinkID=248976). После скачивания файлов щелкните правой кнопкой мыши **NumberGuessWorkflowHost** и выберите команду **Добавить ссылку**. Добавьте ссылку на **System. Windows. Forms** и **System. Drawing**. Эти ссылки добавляются автоматически при добавлении новой формы из меню **Добавить**, **создать элемент** , но их необходимо добавить вручную при импорте формы. После добавления ссылок щелкните правой кнопкой мыши **NumberGuessWorkflowHost** в **Обозреватель решений** и выберите **добавить**, **существующий элемент**. Перейдите в папку `Form` в файлах проекта, выберите **WorkflowHostForm.CS** (или **воркфловхостформ. vb**) и нажмите кнопку **добавить**. Если вы решили импортировать форму, можно перейти к следующему разделу, [чтобы добавить свойства и вспомогательные методы формы](how-to-create-and-run-a-long-running-workflow.md#BKMK_AddHelperMethods).
 
 1. Щелкните правой кнопкой мыши **NumberGuessWorkflowHost** в **Обозреватель решений** и выберите **добавить**, **новый элемент**.
 
@@ -85,36 +85,36 @@ ms.locfileid: "70044381"
 
 3. Задайте следующие свойства формы.
 
-    |Свойство.|Значение|
+    |свойство;|значения|
     |--------------|-----------|
     |FormBorderStyle|FixedSingle|
     |MaximizeBox|False|
-    |Size|400, 420|
+    |Размер|400, 420|
 
 4. Добавьте в форму следующие элементы управления в указанном порядке и задайте значения свойств.
 
-    |Элемент управления|Свойства Значение|
+    |Элемент управления|Свойство: значение|
     |-------------|---------------------|
-    |**Button**|Имя. NewGame<br /><br /> Расположение: 13, 13<br /><br /> Размер: 75, 23<br /><br /> Полнотекстовым Новая игра|
-    |**Label**|Расположение: 94, 18<br /><br /> Полнотекстовым Угадайте число от 1 до|
-    |**ComboBox**|Имя. NumberRange<br /><br /> DropDownStyle DropDownList<br /><br /> Элементы: 10, 100, 1000<br /><br /> Расположение: 228, 12<br /><br /> Размер: 143, 21|
-    |**Label**|Расположение: 13, 43<br /><br /> Полнотекстовым Тип рабочего процесса|
-    |**ComboBox**|Имя. WorkflowType<br /><br /> DropDownStyle DropDownList<br /><br /> Элементы: StateMachineNumberGuessWorkflow, FlowchartNumberGuessWorkflow, SequentialNumberGuessWorkflow<br /><br /> Расположение: 94, 40<br /><br /> Размер: 277, 21|
-    |**Label**|Имя. WorkflowVersion<br /><br /> Расположение: 13, 362<br /><br /> Полнотекстовым Версия рабочего процесса|
-    |**GroupBox**|Расположение: 13, 67<br /><br /> Размер: 358, 287<br /><br /> Полнотекстовым Игра|
+    |**Button**|Имя: Невгаме<br /><br /> Расположение: 13, 13<br /><br /> Размер: 75, 23<br /><br /> Текст: Новая игра|
+    |**Метка**|Расположение: 94, 18<br /><br /> Текст: догадка числа от 1 до|
+    |**ComboBox**|Имя: Нумберранже<br /><br /> DropDownStyle: DropDownList<br /><br /> Элементы: 10, 100, 1000<br /><br /> Расположение: 228, 12<br /><br /> Размер: 143, 21|
+    |**Метка**|Расположение: 13, 43<br /><br /> Текст: тип рабочего процесса|
+    |**ComboBox**|Имя: Воркфловтипе<br /><br /> DropDownStyle: DropDownList<br /><br /> Элементы: StateMachineNumberGuessWorkflow, FlowchartNumberGuessWorkflow, SequentialNumberGuessWorkflow<br /><br /> Расположение: 94, 40<br /><br /> Размер: 277, 21|
+    |**Метка**|Имя: Воркфловверсион<br /><br /> Расположение: 13, 362<br /><br /> Текст: версия рабочего процесса|
+    |**GroupBox**|Расположение: 13, 67<br /><br /> Размер: 358, 287<br /><br /> Текст: игра|
 
     > [!NOTE]
     > При добавлении следующих элементов управления помещайте их в GroupBox.
 
-    |Элемент управления|Свойства Значение|
+    |Элемент управления|Свойство: значение|
     |-------------|---------------------|
-    |**Label**|Расположение: 7, 20<br /><br /> Полнотекстовым Идентификатор экземпляра рабочего процесса|
-    |**ComboBox**|Имя. InstanceId<br /><br /> DropDownStyle DropDownList<br /><br /> Расположение: 121, 17<br /><br /> Размер: 227, 21|
-    |**Label**|Расположение: 7, 47<br /><br /> Полнотекстовым Догадка|
-    |**TextBox**|Имя. Догадка<br /><br /> Расположение: 50, 44<br /><br /> Размер: 65, 20|
-    |**Button**|Имя. EnterGuess<br /><br /> Расположение: 121, 42<br /><br /> Размер: 75, 23<br /><br /> Полнотекстовым Ввести догадку|
-    |**Button**|Имя. QuitGame<br /><br /> Расположение: 274, 42<br /><br /> Размер: 75, 23<br /><br /> Полнотекстовым Выход|
-    |**TextBox**|Имя. WorkflowStatus<br /><br /> Расположение: 10, 73<br /><br /> Нескольких True<br /><br /> Доступно True<br /><br /> Полосы прокрутки Вертикально<br /><br /> Размер: 338, 208|
+    |**Метка**|Расположение: 7, 20<br /><br /> Текст: идентификатор экземпляра рабочего процесса|
+    |**ComboBox**|Имя: InstanceId.<br /><br /> DropDownStyle: DropDownList<br /><br /> Расположение: 121, 17<br /><br /> Размер: 227, 21|
+    |**Метка**|Расположение: 7, 47<br /><br /> Текст: предположение|
+    |**TextBox**|Имя: предположение<br /><br /> Расположение: 50, 44<br /><br /> Размер: 65, 20|
+    |**Button**|Имя: Ентергуесс<br /><br /> Расположение: 121, 42<br /><br /> Размер: 75, 23<br /><br /> Текст: введите предположение|
+    |**Button**|Имя: Куитгаме<br /><br /> Расположение: 274, 42<br /><br /> Размер: 75, 23<br /><br /> Текст: Quit|
+    |**TextBox**|Имя: WorkflowStatus<br /><br /> Расположение: 10, 73<br /><br /> Многострочный: true<br /><br /> ReadOnly: true<br /><br /> Полосы прокрутки: по вертикали<br /><br /> Размер: 338, 208|
 
 5. Задайте для свойства **AcceptButton** формы значение **ентергуесс**.
 
@@ -187,7 +187,7 @@ ms.locfileid: "70044381"
     }
     ```
 
-    В `InstanceId` поле со списком отображается список сохраненных идентификаторов экземпляров рабочих процессов, `WorkflowInstanceId` а свойство возвращает текущий выбранный рабочий процесс.
+    В поле со списком `InstanceId` отображается список сохраненных идентификаторов экземпляров рабочих процессов, а свойство `WorkflowInstanceId` возвращает текущий выбранный рабочий процесс.
 
 5. Добавьте обработчик события `Load` формы. Чтобы добавить обработчик, переключитесь в **режим конструктора** для формы, щелкните значок **событий** в верхней части окна **Свойства** и дважды щелкните **Load (загрузить**).
 
@@ -234,7 +234,7 @@ ms.locfileid: "70044381"
 
     Когда форма загружена, настраивается класс `SqlWorkflowInstanceStore`, для полей со списком диапазонов и типов рабочего процесса устанавливаются значения по умолчанию, а сохраненные экземпляры рабочих процессов добавляются в поле `InstanceId`.
 
-7. Добавьте обработчик событий `SelectedIndexChanged` для `InstanceId`. Чтобы добавить обработчик, переключитесь в **режим конструктора** для формы, выберите `InstanceId` поле со списком, щелкните значок **события** в верхней части окна " **Свойства** " и дважды щелкните элемент ",".
+7. Добавьте обработчик событий `SelectedIndexChanged` для `InstanceId`. Чтобы добавить обработчик, переключитесь в **режим конструктора** для формы, выберите поле со списком `InstanceId`, щелкните значок **событий** в верхней части окна " **Свойства** " и дважды щелкните **элемент ",".**
 
     ```vb
     Private Sub InstanceId_SelectedIndexChanged(sender As Object, e As EventArgs) Handles InstanceId.SelectedIndexChanged
@@ -454,7 +454,7 @@ ms.locfileid: "70044381"
     wfApp.InstanceStore = store;
     ```
 
-3. Затем создайте экземпляр класса `StringWriter` и добавьте его в коллекцию `Extensions` приложения `WorkflowApplication`. При добавлении к расширениям он фиксирует все `WriteLine` выходные данные действия. `StringWriter` Когда рабочий процесс становится неактивным, выходные данные `WriteLine` можно извлечь из `StringWriter` и показать на форме.
+3. Затем создайте экземпляр класса `StringWriter` и добавьте его в коллекцию `Extensions` приложения `WorkflowApplication`. При добавлении `StringWriter` к расширениям он фиксирует все выходные данные действия `WriteLine`. Когда рабочий процесс становится неактивным, выходные данные `WriteLine` можно извлечь из `StringWriter` и показать на форме.
 
     ```vb
     'Add a StringWriter to the extensions. This captures the output
@@ -483,7 +483,7 @@ ms.locfileid: "70044381"
                 UpdateStatus("Workflow Canceled.")
             Else
                 Dim Turns As Integer = Convert.ToInt32(e.Outputs("Turns"))
-                UpdateStatus(String.Format("Congratulations, you guessed the number in {0} turns.", Turns))
+                UpdateStatus($"Congratulations, you guessed the number in {Turns} turns.")
             End If
             GameOver()
         End Sub
@@ -494,9 +494,7 @@ ms.locfileid: "70044381"
     {
         if (e.CompletionState == ActivityInstanceState.Faulted)
         {
-            UpdateStatus(string.Format("Workflow Terminated. Exception: {0}\r\n{1}",
-                e.TerminationException.GetType().FullName,
-                e.TerminationException.Message));
+            UpdateStatus($"Workflow Terminated. Exception: {e.TerminationException.GetType().FullName}\r\n{e.TerminationException.Message}");
         }
         else if (e.CompletionState == ActivityInstanceState.Canceled)
         {
@@ -505,7 +503,7 @@ ms.locfileid: "70044381"
         else
         {
             int Turns = Convert.ToInt32(e.Outputs["Turns"]);
-            UpdateStatus(string.Format("Congratulations, you guessed the number in {0} turns.", Turns));
+            UpdateStatus($"Congratulations, you guessed the number in {Turns} turns.");
         }
         GameOver();
     };
@@ -516,16 +514,12 @@ ms.locfileid: "70044381"
     ```vb
     wfApp.Aborted = _
         Sub(e As WorkflowApplicationAbortedEventArgs)
-            UpdateStatus(String.Format("Workflow Aborted. Exception: {0}" & vbCrLf & "{1}", _
-                e.Reason.GetType().FullName, _
-                e.Reason.Message))
+            UpdateStatus($"Workflow Aborted. Exception: {0e.Reason.GetType().FullName}" & vbCrLf & $"{e.Reason.Message}")
         End Sub
 
     wfApp.OnUnhandledException = _
         Function(e As WorkflowApplicationUnhandledExceptionEventArgs)
-            UpdateStatus(String.Format("Unhandled Exception: {0}" & vbCrLf & "{1}", _
-                e.UnhandledException.GetType().FullName, _
-                e.UnhandledException.Message))
+            UpdateStatus($"Unhandled Exception: {e.UnhandledException.GetType().FullName}" & vbCrLf & $"{e.UnhandledException.Message}")
             GameOver()
             Return UnhandledExceptionAction.Terminate
         End Function
@@ -534,16 +528,12 @@ ms.locfileid: "70044381"
     ```csharp
     wfApp.Aborted = delegate(WorkflowApplicationAbortedEventArgs e)
     {
-        UpdateStatus(string.Format("Workflow Aborted. Exception: {0}\r\n{1}",
-                e.Reason.GetType().FullName,
-                e.Reason.Message));
+        UpdateStatus($"Workflow Aborted. Exception: {e.Reason.GetType().FullName}\r\n{e.Reason.Message}");
     };
 
     wfApp.OnUnhandledException = delegate(WorkflowApplicationUnhandledExceptionEventArgs e)
     {
-        UpdateStatus(string.Format("Unhandled Exception: {0}\r\n{1}",
-                e.UnhandledException.GetType().FullName,
-                e.UnhandledException.Message));
+        UpdateStatus($"Unhandled Exception: {e.UnhandledException.GetType().FullName}\r\n{e.UnhandledException.Message}");
         GameOver();
         return UnhandledExceptionAction.Terminate;
     };
@@ -600,23 +590,19 @@ ms.locfileid: "70044381"
                     UpdateStatus("Workflow Canceled.")
                 Else
                     Dim Turns As Integer = Convert.ToInt32(e.Outputs("Turns"))
-                    UpdateStatus(String.Format("Congratulations, you guessed the number in {0} turns.", Turns))
+                    UpdateStatus($"Congratulations, you guessed the number in {Turns} turns.")
                 End If
                 GameOver()
             End Sub
 
         wfApp.Aborted = _
             Sub(e As WorkflowApplicationAbortedEventArgs)
-                UpdateStatus(String.Format("Workflow Aborted. Exception: {0}" & vbCrLf & "{1}", _
-                    e.Reason.GetType().FullName, _
-                    e.Reason.Message))
+                UpdateStatus($"Workflow Aborted. Exception: {e.Reason.GetType().FullName}" & vbCrLf & $"{e.Reason.Message}")
             End Sub
 
         wfApp.OnUnhandledException = _
             Function(e As WorkflowApplicationUnhandledExceptionEventArgs)
-                UpdateStatus(String.Format("Unhandled Exception: {0}" & vbCrLf & "{1}", _
-                    e.UnhandledException.GetType().FullName, _
-                    e.UnhandledException.Message))
+                UpdateStatus($"Unhandled Exception: {e.UnhandledException.GetType().FullName}" & vbCrLf & $"{e.UnhandledException.Message}")
                 GameOver()
                 Return UnhandledExceptionAction.Terminate
             End Function
@@ -648,9 +634,7 @@ ms.locfileid: "70044381"
         {
             if (e.CompletionState == ActivityInstanceState.Faulted)
             {
-                UpdateStatus(string.Format("Workflow Terminated. Exception: {0}\r\n{1}",
-                    e.TerminationException.GetType().FullName,
-                    e.TerminationException.Message));
+                UpdateStatus($"Workflow Terminated. Exception: {e.TerminationException.GetType().FullName}\r\n{e.TerminationException.Message}");
             }
             else if (e.CompletionState == ActivityInstanceState.Canceled)
             {
@@ -659,23 +643,19 @@ ms.locfileid: "70044381"
             else
             {
                 int Turns = Convert.ToInt32(e.Outputs["Turns"]);
-                UpdateStatus(string.Format("Congratulations, you guessed the number in {0} turns.", Turns));
+                UpdateStatus($"Congratulations, you guessed the number in {Turns} turns.");
             }
             GameOver();
         };
 
         wfApp.Aborted = delegate(WorkflowApplicationAbortedEventArgs e)
         {
-            UpdateStatus(string.Format("Workflow Aborted. Exception: {0}\r\n{1}",
-                    e.Reason.GetType().FullName,
-                    e.Reason.Message));
+            UpdateStatus($"Workflow Aborted. Exception: {e.Reason.GetType().FullName}\r\n{e.Reason.Message}");
         };
 
         wfApp.OnUnhandledException = delegate(WorkflowApplicationUnhandledExceptionEventArgs e)
         {
-            UpdateStatus(string.Format("Unhandled Exception: {0}\r\n{1}",
-                    e.UnhandledException.GetType().FullName,
-                    e.UnhandledException.Message));
+            UpdateStatus($"Unhandled Exception: {e.UnhandledException.GetType().FullName}\r\n{e.UnhandledException.Message}");
             GameOver();
             return UnhandledExceptionAction.Terminate;
         };
@@ -1310,7 +1290,7 @@ ms.locfileid: "70044381"
     using System.Windows.Forms;
     ```
 
-3. Удалите или закомментируйте существующий код размещения рабочего процесса [из руководства. Запустите рабочий процесс](how-to-run-a-workflow.md)и замените его следующим кодом.
+3. Удалите или закомментируйте существующий код размещения рабочего процесса из [руководства: запуск рабочего процесса](how-to-run-a-workflow.md)и замените его следующим кодом.
 
     ```vb
     Sub Main()
@@ -1337,4 +1317,4 @@ ms.locfileid: "70044381"
 
 8. Запустите несколько рабочих процессов, используя различные типы рабочих процессов и диапазоны номеров, введите некоторые предположения и переключайтесь между рабочими процессами, выбрав из списка **идентификатор экземпляра рабочего процесса** .
 
-    Обратите внимание, что, если перейти к новому рабочему процессу, предыдущие догадки и ход выполнения рабочего процесса не отображаются в окне состояния. Состояние недоступно, так как оно не перехвачено и не сохранено. На следующем шаге руководства [выполните следующие действия. Создайте настраиваемого участника](how-to-create-a-custom-tracking-participant.md)отслеживания, создайте настраиваемый участник отслеживания, сохраняющий эту информацию.
+    Обратите внимание, что, если перейти к новому рабочему процессу, предыдущие догадки и ход выполнения рабочего процесса не отображаются в окне состояния. Состояние недоступно, так как оно не перехвачено и не сохранено. На следующем шаге руководства [: как создать настраиваемый участник отслеживания](how-to-create-a-custom-tracking-participant.md)создайте настраиваемый участник отслеживания, сохраняющий эту информацию.

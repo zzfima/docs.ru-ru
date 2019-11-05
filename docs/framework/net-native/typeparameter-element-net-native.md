@@ -1,17 +1,15 @@
 ---
-title: <TypeParameter>Элемент (.NET Native)
+title: Элемент <TypeParameter> (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: d37bb1b7-1ddc-4c6d-8ecf-583f804a2479
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0de00b9313b60b3a527dd0380ae90d82731a8c02
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: c69b535f3a01c287d30189138130066fc10a77e2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049066"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128928"
 ---
-# <a name="typeparameter-element-net-native"></a>\<Элемент > typeparameter находится вне (.NET Native)
+# <a name="typeparameter-element-net-native"></a>Элемент \<typeparameter находится вне > (.NET Native)
 Применяет политику к типу, представленному аргументом типа , переданным методу.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -51,18 +49,18 @@ ms.locfileid: "71049066"
   
 ## <a name="name-attribute"></a>Name - атрибут  
   
-|Значение|Описание|  
+|значения|Описание|  
 |-----------|-----------------|  
 |*parameter_name*|Имя типа параметра типа <xref:System.Type>. Например, для сигнатуры метода `Type.GetInterfaceMap(Type interfaceType)`, значение атрибута `Name` — "interfaceType".|  
   
 ## <a name="all-other-attributes"></a>Все остальные атрибуты  
   
-|Значение|Описание|  
+|значения|Описание|  
 |-----------|-----------------|  
 |*policy_setting*|Параметр, применяемый для этого типа политики. Допустимые значения: `All`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` и `Required All`. Дополнительные сведения см. в разделе [Параметры политики директив среды выполнения](runtime-directive-policy-settings.md).|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
- Нет.  
+ Отсутствует.  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
@@ -70,7 +68,7 @@ ms.locfileid: "71049066"
 |-------------|-----------------|  
 |[\<Method>](method-element-net-native.md)|Применяет политику отражения среды выполнения к конструктору или методу.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
  Элемент `<TypeParameter>` аналогичен элементу [\<Parameter>](parameter-element-net-native.md), за исключением того, что он может применяться только для параметров типа <xref:System.Type>. Применяет политику, независимо от представленного типа во время выполнения по аргументу типа, указанному атрибутом `Name`.  
   
  Например, сериализатор NewtonSoft JSON включает статический метод `JsonConvert.DeserializeObject(String value, Type type)`. Следующие директивы отражения:  

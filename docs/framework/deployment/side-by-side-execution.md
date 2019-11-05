@@ -4,14 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - side-by-side execution
 ms.assetid: 649f1342-766b-49e6-a90d-5b019a751e11
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 78cbb98d4fb3887b82b2432451c47ac64d96ab91
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 5202e4c26220bc9ea08d6d941ee5a7821cbbdefd
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052021"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122240"
 ---
 # <a name="side-by-side-execution-in-the-net-framework"></a>Параллельное выполнение в .NET Framework
 
@@ -128,6 +126,6 @@ publicKeyToken=...,
 |[Сборки в .NET](../../standard/assembly/index.md)|Общие сведения о сборках.|  
 |[Домены приложений](../app-domains/application-domains.md)|Общие сведения о доменах приложений.|  
   
-## <a name="reference"></a>Справочник  
+## <a name="reference"></a>Ссылка  
 
 [\<Поддерживаемый элемент среды выполнения](../configure-apps/file-schema/startup/supportedruntime-element.md)

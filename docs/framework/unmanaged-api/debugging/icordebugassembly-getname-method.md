@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: cdeda721-b214-4503-a291-c70b68b5f36b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 38542ec28cce9687dc3ed824f9d449f3070976da
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5e3619d12b9377a8482254703d3d97d0348a013b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737298"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127175"
 ---
 # <a name="icordebugassemblygetname-method"></a>Метод ICorDebugAssembly::GetName
-Возвращает имя сборки, это `ICorDebugAssembly` представленное экземпляром.  
+Возвращает имя сборки, которую представляет данный экземпляр `ICorDebugAssembly`.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -42,18 +40,18 @@ HRESULT GetName (
  [in] Размер массива `szName`.  
   
  `pcchName`  
- [out] Указатель на целое число, которое указывает фактическую длину имени.  
+ заполняет Указатель на целое число, задающее фактическую длину имени.  
   
  `szName`  
- [out] Массив, в котором хранится имя.  
+ заполняет Массив, в котором хранится имя.  
   
-## <a name="remarks"></a>Примечания  
- `GetName` Метод возвращает полный путь и имя сборки.  
+## <a name="remarks"></a>Заметки  
+ Метод `GetName` возвращает полный путь и имя файла сборки.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

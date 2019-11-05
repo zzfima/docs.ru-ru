@@ -1,17 +1,15 @@
 ---
-title: Пример Устранение неполадок динамического программирования
+title: 'Пример: Устранение неполадок динамического программирования'
 ms.date: 03/30/2017
 ms.assetid: 42ed860a-a022-4682-8b7f-7c9870784671
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 866ec425fd66ee8b3b62263180ac7e6d776108f0
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: ff179854066d024a89cb5a84a19d0b9bb054d6e5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049803"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128443"
 ---
-# <a name="example-troubleshooting-dynamic-programming"></a>Пример Устранение неполадок динамического программирования
+# <a name="example-troubleshooting-dynamic-programming"></a>Пример: Устранение неполадок динамического программирования
 > [!NOTE]
 > В этом разделе рассматривается предварительная версия программного обеспечения для разработчиков машинного кода .NET. Предварительную версию можно скачать на [веб-сайте Microsoft Connect](https://go.microsoft.com/fwlink/?LinkId=394611) (требуется регистрация).  
   
@@ -50,7 +48,7 @@ App!$43_System::Threading::SendOrPostCallback.InvokeOpenStaticThunk
   
  В этом случае добавления директивы среды выполнения для `App.Core.ViewModels` устранило проблему. Первопричиной был вызов API для метода <xref:System.Type.GetType%28System.String%29?displayProperty=nameWithType>, который вернул значение **NULL**, а приложение молча проигнорировало проблему до возникновения сбоя.  
   
- В динамическом программировании при использовании API отражения в .NET Native рекомендуется использовать <xref:System.Type.GetType%2A?displayProperty=nameWithType> перегрузки, которые вызывают исключение при сбое.  
+ В динамическом программировании при использовании API отражения в .NET Native рекомендуется использовать перегрузки <xref:System.Type.GetType%2A?displayProperty=nameWithType>, которые вызывают исключение при сбое.  
   
 ## <a name="is-this-an-isolated-case"></a>Это изолированный случай?  
  Другие проблемы также могут возникнуть при использовании `App.Core.ViewModels`.  Необходимо решить, стоит ли определять и устранять каждое исключение отсутствующих метаданных или лучше сэкономить время и добавить директивы для большего класса типов.  Здесь, добавление метаданных `dynamic` для `App.Core.ViewModels` может быть лучше, если результирующее увеличение размера выходного двоичного файла не проблема.  

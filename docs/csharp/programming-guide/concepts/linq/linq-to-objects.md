@@ -2,12 +2,12 @@
 title: LINQ to Objects (C#)
 ms.date: 07/20/2015
 ms.assetid: c5c2c178-3529-4f6c-b3df-2d5267af7f22
-ms.openlocfilehash: 9e20b2c7278787671c7a27646b7cbaac78b57d5f
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 8c0eb71fffdd29d9599d74c789a66ec7caf1faeb
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69591864"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73418177"
 ---
 # <a name="linq-to-objects-c"></a>LINQ to Objects (C#)
 Термин "LINQ to Objects" означает использование запросов LINQ с любой коллекцией <xref:System.Collections.IEnumerable> или <xref:System.Collections.Generic.IEnumerable%601> напрямую, без привлечения промежуточного поставщика LINQ, API [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md) или [LINQ to XML](./linq-to-xml-overview.md). Вы можете выполнить запрос LINQ к любой перечислимой коллекции, такой как <xref:System.Collections.Generic.List%601>, <xref:System.Array> или <xref:System.Collections.Generic.Dictionary%602>. Коллекция может быть определена пользователем или возвращена API .NET Framework.  
@@ -30,7 +30,7 @@ ms.locfileid: "69591864"
  [LINQ и строки (C#)](./linq-and-strings.md)  
  Использование LINQ для запроса и преобразования строк и коллекций строк. Ссылки на разделы, демонстрирующие эти принципы.  
   
- [LINQ и отражение (C#)](./linq-and-reflection.md)  
+ [LINQ и отражение (C#)](how-to-query-an-assembly-s-metadata-with-reflection-linq.md)  
  Ссылки на пример, демонстрирующий, как LINQ использует отражение.  
   
  [LINQ и каталоги файлов (C#)](./linq-and-file-directories.md)  

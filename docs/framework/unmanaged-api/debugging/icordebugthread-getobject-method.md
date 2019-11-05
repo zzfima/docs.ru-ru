@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1590febe-96c2-4046-97db-d81d81d67e01
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3695f150797e6a59a2fb1d58c99f233a35d687ce
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5cb95fb7cf70dbf7616e9bc59ebf44de090de883
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67771844"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133436"
 ---
 # <a name="icordebugthreadgetobject-method"></a>Метод ICorDebugThread::GetObject
-Получает указатель интерфейса среды выполнения (CLR) потоку выполнения.  
+Возвращает указатель интерфейса на поток среды CLR.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,12 +35,12 @@ HRESULT GetObject (
   
 ## <a name="parameters"></a>Параметры  
  `ppObject`  
- [out] Указатель на адрес объекта интерфейса ICorDebugValue, представляющий потока среды CLR.  
+ заполняет Указатель на адрес объекта интерфейса ICorDebugValue, который представляет поток среды CLR.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

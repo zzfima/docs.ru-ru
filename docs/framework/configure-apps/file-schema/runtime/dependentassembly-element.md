@@ -9,22 +9,20 @@ helpviewer_keywords:
 - dependentAssembly element
 - <dependentAssembly> element
 ms.assetid: 14e95627-dd79-4b82-ac85-e682aa3a31d8
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3a0604161ed6e7c3ead4a2e518daebc8414689af
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 33309ed89b4d31580da5de3aeb38e9e1fd8ae4d0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252708"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73117586"
 ---
-# <a name="dependentassembly-element"></a>\<Элемент dependentAssembly >
-Инкапсулирует политику привязки и расположение каждой сборки. Для каждой `dependentAssembly` сборки используется один элемент.  
+# <a name="dependentassembly-element"></a>\<элемент dependentAssembly >
+Инкапсулирует политику привязки и расположение каждой сборки. Для каждой сборки используется один элемент `dependentAssembly`.  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> среды выполнения**](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<assemblyBinding >** ](assemblybinding-element-for-runtime.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<dependentAssembly>**  
+&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
+&nbsp; &nbsp; &nbsp; &nbsp;[ **\<assemblyBinding**](assemblybinding-element-for-runtime.md) > \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<dependentAssembly >**  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,13 +35,13 @@ ms.locfileid: "70252708"
  В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
   
 ### <a name="attributes"></a>Атрибуты  
- Нет.  
+ Отсутствует.  
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|`assemblyIdentity`|Содержит идентифицирующие сведения о сборке. Этот элемент должен включаться в каждый `dependentAssembly` элемент.|  
+|`assemblyIdentity`|Содержит идентифицирующие сведения о сборке. Этот элемент должен включаться в каждый элемент `dependentAssembly`.|  
 |`codeBase`|Указывает, где среда выполнения может найти общую сборку, если она не установлена на компьютере.|  
 |`bindingRedirect`|Перенаправляет одну версию сборки на другую.|  
 |`publisherPolicy`|Указывает, применяет ли среда выполнения политику издателя для этой сборки.|  

@@ -22,14 +22,12 @@ helpviewer_keywords:
 - DateTimeOffset.ToString method
 - full weekday names
 ms.assetid: 1c9bef76-5634-46cf-b91c-9b9eb72091d7
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 55bdf4cf589bd912dbfc85777542150696aaa436
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 771bd0276310eecb534fb80836faadb1a8aa10bb
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65589774"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73084200"
 ---
 # <a name="how-to-extract-the-day-of-the-week-from-a-specific-date"></a>Практическое руководство. Извлечение дня недели из конкретной даты
 Платформа .NET Framework упрощает определение дня недели и отображение локализованного дня для определенной даты. Значение перечисления, которое указывает день недели, соответствующий определенной дате, можно получить из свойства <xref:System.DateTime.DayOfWeek%2A> или <xref:System.DateTimeOffset.DayOfWeek%2A>. Напротив, получение названия дня недели — это операция форматирования, которую можно выполнить с помощью метода форматирования, например метода `ToString` значения даты и времени или метода <xref:System.String.Format%2A?displayProperty=nameWithType>. В этом разделе показано, как выполнить эти операции форматирования.  

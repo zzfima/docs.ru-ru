@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: b4367214-6dac-4280-aa11-fd487ff30bc4
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b488b6a887b0c66d8c17f8ea78f48f7d2ea31011
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 30e3a88140c8a438001e8428df4c5ee879c83376
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67758404"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136923"
 ---
-# <a name="corimageunloading-function"></a>Функция _CorImageUnloading
-Уведомляет загрузчик о выгрузке образов управляемого модуля.  
+# <a name="_corimageunloading-function"></a>Функция _CorImageUnloading
+Уведомляет загрузчик об выгрузке образов управляемого модуля.  
   
- Эта функция не реализована. При вызове, он возвращает E_NOTIMPL.  
+ Эта функция не реализована. При вызове возвращается значение E_NOTIMPL.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,14 +36,14 @@ STDAPI (VOID) _CorImageUnloading(
   
 ## <a name="parameters"></a>Параметры  
  `ImageBase`  
- [in] Указатель на начальное расположение образа для выгрузки.  
+ окне Указатель на начальное расположение изображения для выгрузки.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** Cor.h  
+ **Заголовок:** COR. h  
   
- **Библиотека:** Включена как ресурс в MsCorEE.dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

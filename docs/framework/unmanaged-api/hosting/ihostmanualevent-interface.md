@@ -14,32 +14,30 @@ helpviewer_keywords:
 ms.assetid: 300c2661-b7d1-4c39-b080-9ebdef0fd523
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ad580f7cab81323e09a24dc12db39f223be3aeb4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8eba189d6dfca3781c28631a72a9af3c037efeda
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61973073"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136784"
 ---
 # <a name="ihostmanualevent-interface"></a>Интерфейс IHostManualEvent
-Предоставляет реализацию главного приложения является представлением событие со сбросом вручную.  
+Предоставляет реализацию представления события ручного сброса в узле.  
   
 ## <a name="methods"></a>Методы  
   
 |Метод|Описание|  
 |------------|-----------------|  
-|[Метод Reset](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-reset-method.md)|Сбрасывает текущий `IHostManualEvent` экземпляра в сигнальное состояние.|  
-|[Метод Set](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-set-method.md)|Задает текущий `IHostManualEvent` экземпляр сигнальное состояние.|  
-|[Метод Wait](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-wait-method.md)|Вызывает текущий `IHostManualEvent` экземпляр ждать, пока он принадлежал или определенный промежуток времени.|  
+|[Метод Reset](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-reset-method.md)|Сбрасывает текущий экземпляр `IHostManualEvent` в несигнальное состояние.|  
+|[Метод Set](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-set-method.md)|Задает для текущего экземпляра `IHostManualEvent` сигнальное состояние.|  
+|[Метод Wait](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-wait-method.md)|Вызывает ожидание текущего экземпляра `IHostManualEvent` до его признания или истечения указанного времени.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** MSCorEE.h  
+ **Заголовок:** MSCorEE. h  
   
- **Библиотека:** Включена как ресурс в MSCorEE.dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 98320175-7c5e-4dbb-8683-86fa82e2641f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3582ebf2acee02d49aabafb03604c84249c4ce13
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9313fc58dec8099f42dbff07685ca14791fa324f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67747371"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137161"
 ---
 # <a name="icordebugprocess2setdesiredngencompilerflags-method"></a>Метод ICorDebugProcess2::SetDesiredNGENCompilerFlags
-Задает флаги, которые должны быть внедрены в компилируемый образ загрузки в текущий процесс в среде выполнения.  
+Задает флаги, которые должны быть внедрены в предкомпилированное изображение, чтобы среда выполнения загружала этот образ в текущий процесс.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,19 +35,19 @@ HRESULT SetDesiredNGENCompilerFlags (
   
 ## <a name="parameters"></a>Параметры  
  `pdwFlags`  
- [in] Значение [CorDebugJITCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflags-enumeration.md) перечисление, указывающее флаги компилятора, используемый для выбора нужного предварительно скомпилированного образа.  
+ окне Значение перечисления [CorDebugJITCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflags-enumeration.md) , указывающее флаги компилятора, используемые для выбора правильного предварительно скомпилированного изображения.  
   
-## <a name="remarks"></a>Примечания  
- `SetDesiredNGENCompilerFlags` Метод задает флаги, которые должны быть внедрены в предварительно скомпилированный образ, чтобы среда выполнения будет загружать этот образ в этот процесс. Флаги, установленные с помощью данного метода используются только для выбора нужного предварительно скомпилированного образа. Если изображение отсутствует, среда выполнения загрузит образ Microsoft промежуточного языка MSIL и компилятор just-in-time (JIT) вместо этого. В этом случае отладчик по-прежнему необходимо использовать [ICorDebugModule2::SetJITCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-setjitcompilerflags-method.md) метод, чтобы задать флаги для JIT-компиляцию полей.  
+## <a name="remarks"></a>Заметки  
+ Метод `SetDesiredNGENCompilerFlags` задает флаги, которые должны быть внедрены в предкомпилированное изображение, чтобы среда выполнения загружала этот образ в этот процесс. Флаги, заданные этим методом, используются только для выбора правильного предкомпилированного изображения. Если такого образа не существует, среда выполнения загрузит образ MSIL и JIT-компилятор, вместо этого. В этом случае отладчик должен по-прежнему использовать метод [ICorDebugModule2:: SetJITCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-setjitcompilerflags-method.md) , чтобы установить флаги для JIT-компиляции.  
   
- Если загрузить образ, но определенную JIT-компиляцию необходимо выполнить для него (который будет в случае, если изображение содержит универсальные шаблоны), определяемое флаги компилятора `SetDesiredNGENCompilerFlags` метода будут применяться к дополнительной JIT-компиляции.  
+ Если изображение загружено, но для этого образа необходимо выполнить некоторые JIT-компиляции (что будет так, если изображение содержит универсальные шаблоны), то флаги компилятора, заданные в методе `SetDesiredNGENCompilerFlags`, будут применяться к дополнительной JIT-компиляции.  
   
- `SetDesiredNGENCompilerFlags` Метод должен вызываться во время [ICorDebugManagedCallback::CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createprocess-method.md) обратного вызова. Пытается вызвать `SetDesiredNGENCompilerFlags` метод впоследствии завершится с ошибкой. Кроме того, попытки задать флаги, которые либо не определены в `CorDebugJITCompilerFlags` перечисления являются недопустим для указанного процесса, произойдет сбой.  
+ Метод `SetDesiredNGENCompilerFlags` должен вызываться во время обратного вызова [ICorDebugManagedCallback:: CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createprocess-method.md) . Попытка вызвать метод `SetDesiredNGENCompilerFlags` впоследствии завершится ошибкой. Кроме того, попытки установить флаги, которые либо не определены в перечислении `CorDebugJITCompilerFlags`, либо не являются допустимыми для данного процесса, завершатся ошибкой.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

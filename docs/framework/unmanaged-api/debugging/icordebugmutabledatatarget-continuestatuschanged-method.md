@@ -1,17 +1,15 @@
 ---
-title: Метод ICorDebugMutableDataTarget::ContinueStatusChanged
+title: 'Метод Икордебугмутабледататаржет:: Континуестатусчанжед'
 ms.date: 03/30/2017
 ms.assetid: 5a66d3f4-dd16-4d62-9dcc-0eab7041d894
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f43e98530fcd6d11b7c76295a92d42baceddcd6e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: abaf2d0542e16f526ecbe369370c31c225808f1f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67764631"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139355"
 ---
-# <a name="icordebugmutabledatatargetcontinuestatuschanged-method"></a>Метод ICorDebugMutableDataTarget::ContinueStatusChanged
+# <a name="icordebugmutabledatatargetcontinuestatuschanged-method"></a>Метод Икордебугмутабледататаржет:: Континуестатусчанжед
 Изменяет состояние продолжения для незавершенных событий отладки в указанном потоке.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -29,13 +27,13 @@ HRESULT ContinueStatusChanged(
  `continueStatus`  
  Значение [COREDB_CONTINUE_STATUS](../../../../docs/framework/unmanaged-api/common-data-types-unmanaged-api-reference.md), которое представляет новое запрошенное состояние продолжения.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
  Отладчик вызывает метод `ContinueStatusChanged` при вызове метода ICorDebug, требующего, чтобы способ обработки текущего события отладки потенциально отличался от способа, которым оно обычно обрабатывается. Например, если имеется незавершенное исключение и отладчик запрашивает операцию, которая будет отменять это исключение (например, [ICorDebugILFrame::SetIP](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-setip-method.md) или `FuncEval`), этот API используется для запроса отмены исключения.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

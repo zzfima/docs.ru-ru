@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: da278a29-dc2e-4bf7-96ce-801bdc4d7025
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2a5461cc6a78347cdbe0d0b13f8111cb24c11006
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b7a33fd6e2178e0e9188b81f516b231702fb6460
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67760055"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122715"
 ---
 # <a name="icordebuginternalframegetframetype-method"></a>Метод ICorDebugInternalFrame::GetFrameType
-Получает тип данного внутреннего фрейма.  
+Возвращает тип этого внутреннего кадра.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,15 +35,15 @@ HRESULT GetFrameType (
   
 ## <a name="parameters"></a>Параметры  
  `pType`  
- [out] Указатель на значение, указывающее тип внутреннего кадра, представленный этим перечисление CorDebugInternalFrameType `ICorDebugInternalFrame` объекта.  
+ заполняет Указатель на значение перечисления CorDebugInternalFrameType, указывающее тип внутреннего кадра, представленного данным объектом `ICorDebugInternalFrame`.  
   
-## <a name="remarks"></a>Примечания  
- Тип внутренний фрейм никогда не будет STUBFRAME_NONE. Отладчики корректно должен игнорировать Неизвестный кадр внутренних типов.  
+## <a name="remarks"></a>Заметки  
+ Тип внутреннего кадра никогда не будет STUBFRAME_NONE. Отладчики должны корректно пропускать нераспознаваемые типы внутренних кадров.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

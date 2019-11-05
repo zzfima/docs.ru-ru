@@ -1,17 +1,15 @@
 ---
-title: Метод ICorDebugSymbolProvider::GetMethodParameterSymbols
+title: 'Метод метод icordebugsymbolprovider:: Жетмесодпараметерсимболс'
 ms.date: 03/30/2017
 ms.assetid: 58b7c0b9-f6ad-4b49-b92d-0e421cfd0ec6
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 04262876db39dad93cf5904cdbb81b568fc22041
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 1f7da156e5a164dc753e2283bc7ab24d18983173
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69957334"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138840"
 ---
-# <a name="icordebugsymbolprovidergetmethodparametersymbols-method"></a>Метод ICorDebugSymbolProvider::GetMethodParameterSymbols
+# <a name="icordebugsymbolprovidergetmethodparametersymbols-method"></a>Метод метод icordebugsymbolprovider:: Жетмесодпараметерсимболс
 Получает символы параметров метода для указанного относительного виртуального адреса (RVA) этого метода.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -38,17 +36,17 @@ HRESULT GetMethodParameterSymbols(
  `pcFetchedSymbols`  
  заполняет Указатель на массив [ICorDebugVariableSymbol](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablesymbol-interface.md) , содержащий локальные символы метода.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
   
 > [!NOTE]
 > Этот метод доступен только в машинном коде .NET.  
   
 ## <a name="requirements"></a>Требования  
- **Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug. idl, CorDebug. h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
- **Библиотечная** Коргуидс. lib  
+ **Библиотека:** CorGuids.lib  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

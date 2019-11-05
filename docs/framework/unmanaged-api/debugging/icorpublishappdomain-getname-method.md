@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6ef8ac9b-9803-4b65-8b13-25f3e0b1bc6b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b518a3be939c70b207a71d79a3d362dba26fd3d0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2f91891164f1f80617cab10347eb4a7a08762c10
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67774200"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140354"
 ---
 # <a name="icorpublishappdomaingetname-method"></a>Метод ICorPublishAppDomain::GetName
 Возвращает имя домена приложения, представленного этим [ICorPublishAppDomain](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-interface.md).  
@@ -43,20 +41,20 @@ HRESULT GetName (
  [in] Размер массива `szName`.  
   
  `pcchName`  
- [out] Указатель на число расширенных символов, включая символ null, возвращаются в `szName` массива.  
+ заполняет Указатель на число расширенных символов, включая символ null, возвращенный в массиве `szName`.  
   
  `szName`  
- [out] Массив, в котором для хранения имени.  
+ заполняет Массив, в котором сохраняется имя.  
   
-## <a name="remarks"></a>Примечания  
- Если `szName` отлично от NULL, `GetName` метод копирует до `cchName` символов (включая завершающий символ null) в `szName`. Если возвращается значение `pcchName`, фактическое число символов в имени (включая завершающий символ null) хранится в `szName` массива.  
+## <a name="remarks"></a>Заметки  
+ Если `szName` не равно null, метод `GetName` копирует в `szName``cchName` символы (включая знак завершения null). Если в `pcchName`возвращается значение, отличное от NULL, фактическое число символов в имени (включая знак завершения null) сохраняется в массиве `szName`.  
   
- `GetName` Метод возвращает значение S_OK HRESULT, независимо от того, сколько символов были скопированы.  
+ Метод `GetName` возвращает значение S_OK HRESULT независимо от того, сколько символов было скопировано.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorPub.idl, CorPub.h  
+ **Заголовок:** Корпуб. idl, Корпуб. h  
   
  **Библиотека:** CorGuids.lib  
   

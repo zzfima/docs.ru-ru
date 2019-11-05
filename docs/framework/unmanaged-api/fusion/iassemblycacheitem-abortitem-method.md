@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: be9f47f1-f532-4603-a192-a73cb7a0c4b2
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: bd283c3bffedd8e61cf71d0839bff6809d7f3902
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 876b02be60041242ec26f7ea25e4a9c836f7c936
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796764"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134492"
 ---
 # <a name="iassemblycacheitemabortitem-method"></a>Метод IAssemblyCacheItem::AbortItem
 Позволяет сборке в глобальном кэше сборок выполнять операции очистки до ее освобождения.  
@@ -34,9 +32,9 @@ HRESULT AbortItem ();
 ```  
   
 ## <a name="requirements"></a>Требования  
- **Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
- **Заголовок.** Fusion. h  
+ **Заголовок:** Fusion. h  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

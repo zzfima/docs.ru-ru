@@ -13,14 +13,12 @@ helpviewer_keywords:
 - CTLs
 - certificate revocation lists
 ms.assetid: 7e953b43-1374-4bbc-814f-53ca1b6b52bb
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 716513bdcf3ac1b8a2b2b29b23a8dc25a86a0d1c
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 06fe3a78d0b19720d4f83111980b88806312205f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71044810"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129876"
 ---
 # <a name="certmgrexe-certificate-manager-tool"></a>Certmgr.exe (средство диспетчера сертификатов)
 Диспетчер сертификатов (Certmgr.exe) предназначен для управления сертификатами, списками доверия сертификатов (CTL) и списками отзыва сертификатов (CRL).  

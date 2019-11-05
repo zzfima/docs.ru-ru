@@ -6,20 +6,20 @@ helpviewer_keywords:
 - XML processing [C#]
 - XML [C#], processing
 ms.assetid: 60c71193-9dac-4cd3-98c5-100bd0edcc42
-ms.openlocfilehash: bb713fbc5ddd3737cb629c5c09c25ff2980c73dc
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: b2b19a2b2c46df5b78b6ebba48955cae55d32121
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72523378"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72846938"
 ---
 # <a name="processing-the-xml-file-c-programming-guide"></a>Обработка XML-файла (руководство по программированию на C#)
 
 Компилятор создает строку идентификатора для каждой конструкции в коде, помеченной для создания документации. Дополнительные сведения о разметке кода см. в статье [Рекомендуемые теги для комментариев документации](./recommended-tags-for-documentation-comments.md). Строка идентификатора однозначно определяет конструкцию. Программы, обрабатывающие этот XML-файл, могут с помощью строки идентификатора определить, какому элементу метаданных или отражения .NET Framework соответствует эта документация.
 
- XML-файл не содержит иерархическое представление кода, а только одноуровневый список с идентификаторами всех элементов.
+XML-файл не содержит иерархическое представление кода, а только одноуровневый список с идентификаторами всех элементов.
 
- Компилятор соблюдает следующие правила при формировании строк идентификаторов.
+Компилятор соблюдает следующие правила при формировании строк идентификаторов.
 
 - В строке нет пробелов.
 
@@ -41,7 +41,7 @@ ms.locfileid: "72523378"
 
   - Базовые типы. Регулярные типы (ELEMENT_TYPE_CLASS или ELEMENT_TYPE_VALUETYPE) представляются полным именам типа.
 
-  - Встроенные типы (например, ELEMENT_TYPE_I4, ELEMENT_TYPE_OBJECT, ELEMENT_TYPE_STRING, ELEMENT_TYPE_TYPEDBYREF и ELEMENT_TYPE_VOID) представляются полным именем соответствующего полного типа. Например, System.Int32 или System.TypedReference.
+  - Внутренние типы (например, ELEMENT_TYPE_I4, ELEMENT_TYPE_OBJECT, ELEMENT_TYPE_STRING, ELEMENT_TYPE_TYPEDBYREF и ELEMENT_TYPE_VOID) представляются полным именем соответствующего полного типа. Например, System.Int32 или System.TypedReference.
 
   - ELEMENT_TYPE_PTR представляется как "\*" после имени измененного типа.
 

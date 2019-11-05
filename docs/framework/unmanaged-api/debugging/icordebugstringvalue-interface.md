@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: bf84d0af-53e1-4c04-bc5b-7e5f81ba2cc2
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1cfaf886d09d843f4dbf61af55a9388454b050ca
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: d1d3a5eb6e0b24b40a35c13a99465dd3c7032a91
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69957431"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138946"
 ---
 # <a name="icordebugstringvalue-interface"></a>Интерфейс ICorDebugStringValue
 Подкласс ICorDebugHeapValue, который применяется к строковым значениям.  
@@ -30,20 +28,20 @@ ms.locfileid: "69957431"
   
 |Метод|Описание|  
 |------------|-----------------|  
-|[Метод GetLength](../../../../docs/framework/unmanaged-api/debugging/icordebugstringvalue-getlength-method.md)|Возвращает число символов в строке, на которую ссылается this `ICorDebugStringValue`.|  
-|[Метод GetString](../../../../docs/framework/unmanaged-api/debugging/icordebugstringvalue-getstring-method.md)|Возвращает строку, на которую ссылается `ICorDebugStringValue`this.|  
+|[Метод GetLength](../../../../docs/framework/unmanaged-api/debugging/icordebugstringvalue-getlength-method.md)|Возвращает число символов в строке, на которую ссылается этот `ICorDebugStringValue`.|  
+|[Метод GetString](../../../../docs/framework/unmanaged-api/debugging/icordebugstringvalue-getstring-method.md)|Возвращает строку, на которую ссылается этот `ICorDebugStringValue`.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
   
 > [!NOTE]
 > Этот интерфейс не поддерживает удаленные вызовы между компьютерами или между процессами.  
   
 ## <a name="requirements"></a>Требования  
- **Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug. idl, CorDebug. h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
- **Библиотечная** Коргуидс. lib  
+ **Библиотека:** CorGuids.lib  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

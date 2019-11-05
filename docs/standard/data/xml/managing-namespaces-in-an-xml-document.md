@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 682643fc-b848-4e42-8c0d-50deeaeb5f2a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 83ea398f18ab02840ea811c74a6053dba11a3baa
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
-ms.translationtype: HT
+ms.openlocfilehash: 3befdd0ec96856a62e5c3c603935303498758710
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490892"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423927"
 ---
 # <a name="managing-namespaces-in-an-xml-document"></a>Управление пространствами имен в XML-документе
 Пространства имен XML связывают имена элементов и атрибутов в XML-документе с пользовательскими и стандартными URI. Для создания этих связей определяются префиксы для URI пространства имен, с помощью которых затем квалифицируются имена элементов и атрибутов в XML-данных. Пространства имен предотвращают конфликты имен элементов и атрибутов, а также позволяют обрабатывать и проверять элементы и атрибуты с одним и тем же именем.  
@@ -63,21 +63,21 @@ ms.locfileid: "66490892"
  Диспетчер пространств имен не выполняет проверку пространств имен, так как предполагается, что префиксы и пространства имен уже проверены и соответствуют спецификации [W3C для пространств имен](https://www.w3.org/TR/REC-xml-names/).  
   
 > [!NOTE]
-> Интерфейс LINQ to XML [в C#](../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md) и [Visual Basic](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md) использует <xref:System.Xml.XmlNamespaceManager> для управления пространствами имен. Дополнительные сведения об управлении пространствами имен в случае использования LINQ to XML см. в документации по LINQ, в разделах [Работа с пространствами имен XML (C#)](../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md) и [Работа с пространствами имен XML (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).  
+> Интерфейс LINQ to XML [в C#](../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md) и [Visual Basic](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md) использует <xref:System.Xml.XmlNamespaceManager> для управления пространствами имен. Дополнительные сведения об управлении пространствами имен в случае использования LINQ to XML см. в документации по LINQ, в разделах [Работа с пространствами имен XML (C#)](../../../csharp/programming-guide/concepts/linq/namespaces-overview-linq-to-xml.md) и [Работа с пространствами имен XML (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).  
   
  Вот некоторые из задач по управлению и подстановке, которые можно выполнить с помощью класса <xref:System.Xml.XmlNamespaceManager>. Дополнительные сведения и примеры см. в разделах справочника, посвященных каждому методу или свойству.  
   
-|Кому|Использовать|  
+|Целевой тип|Использовать|  
 |--------|---------|  
 |Добавление пространства имен|Метод <xref:System.Xml.XmlNamespaceManager.AddNamespace%2A>|  
 |Удаление пространства имен|Метод <xref:System.Xml.XmlNamespaceManager.RemoveNamespace%2A>|  
-|Поиск URI для пространства имен по умолчанию|Свойство<xref:System.Xml.XmlNamespaceManager.DefaultNamespace%2A> |  
+|Поиск URI для пространства имен по умолчанию|Свойство<xref:System.Xml.XmlNamespaceManager.DefaultNamespace%2A>|  
 |Поиск URI для префикса пространства имен|Метод <xref:System.Xml.XmlNamespaceManager.LookupNamespace%2A>|  
 |Поиск префикса для URI-кодов пространства имен|Метод <xref:System.Xml.XmlNamespaceManager.LookupPrefix%2A>|  
 |Получение списка пространств имен, которые есть на текущем узле|Метод <xref:System.Xml.XmlNamespaceManager.GetNamespacesInScope%2A>|  
 |Задание области видимости пространства имен|Методы <xref:System.Xml.XmlNamespaceManager.PushScope%2A> и <xref:System.Xml.XmlNamespaceManager.PopScope%2A>|  
 |Проверка того, определен ли префикс в текущей области|Метод <xref:System.Xml.XmlNamespaceManager.HasNamespace%2A>|  
-|Получение таблицы имен используется для поиска префиксов и URI|Свойство<xref:System.Xml.XmlNamespaceManager.NameTable%2A> |  
+|Получение таблицы имен используется для поиска префиксов и URI|Свойство<xref:System.Xml.XmlNamespaceManager.NameTable%2A>|  
   
 ## <a name="see-also"></a>См. также
 

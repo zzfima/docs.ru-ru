@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: d2ca20db-df22-4528-a0dd-a09ea62c8998
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e215cf4f6d6c3cfde3fa723ecae67aa77e189917
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: aa06b7db6b7371e66853ed242f5e118fb5e5ff0c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67757056"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73096205"
 ---
 # <a name="icordebugnativeframe2ismatchingparentframe-method"></a>Метод ICorDebugNativeFrame2::IsMatchingParentFrame
-Определяет, является ли указанный кадр родительским для текущего кадра.  
+Определяет, является ли указанный кадр родительским по отношению к текущему кадру.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,29 +35,29 @@ HRESULT IsMatchingParentFrame([in] ICorDebugNativeFrame2
   
 ## <a name="parameters"></a>Параметры  
  `pPotentialParentFrame`  
- [in] Указатель на объект кадра, который необходимо оценить состояние родительского.  
+ окне Указатель на объект Frame, для которого необходимо оценить состояние родителя.  
   
  `pIsParent`  
- [out] `true` Если `pPotentialParentFrame` является родительским для текущего кадра; в противном случае `false`.  
+ [out] `true`, если `pPotentialParentFrame` является родителем текущего кадра; в противном случае `false`.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Этот метод возвращает следующие конкретные результаты HRESULT, а также ошибки HRESULT, которые указывают на сбой метода.  
   
 |HRESULT|Описание|  
 |-------------|-----------------|  
-|S_OK|Состояние родительской был успешно возвращен.|  
-|E_FAIL|Состояние родительской не могут быть возвращены.|  
+|S_OK|Состояние родительского объекта успешно возвращено.|  
+|E_FAIL|Не удалось вернуть родительское состояние.|  
 |E_INVALIDARG|`pPotentialParentFrame` или `pIsParent` равно null.|  
   
 ## <a name="exceptions"></a>Исключения  
   
-## <a name="remarks"></a>Примечания  
- `IsMatchingParentFrame` Возвращает `true` Если передается методу объект кадра является родительским для объекта кадра, для которого был вызван метод. Если вызвать метод на кадр, который не является дочерним для указанного кадра, возвращается ошибка.  
+## <a name="remarks"></a>Заметки  
+ `IsMatchingParentFrame` возвращает `true`, если объект фрейма, передаваемый в метод, является родителем объекта Frame, для которого был вызван метод. При вызове метода для фрейма, который не является дочерним по отношению к указанному кадру, возвращается ошибка.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

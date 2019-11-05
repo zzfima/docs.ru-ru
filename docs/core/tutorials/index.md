@@ -5,12 +5,12 @@ author: richlander
 ms.date: 03/16/2017
 titleSuffix: ''
 ms.custom: seodec18
-ms.openlocfilehash: 9e40de3d95738a8af394690575010339e7faad19
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 7b6265cb652e6f3db702584295fac948d06ad5fc
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70925942"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73420845"
 ---
 # <a name="learn-net-core-and-the-net-core-sdk-tools-by-exploring-these-tutorials"></a>См. дополнительные сведения о средствах пакета SDK для .NET Core и .NET Core
 
@@ -43,12 +43,12 @@ ms.locfileid: "70925942"
 - [Организация и тестирование проектов с помощью инструментов командной строки .NET Core](testing-with-cli.md)
 - [Начало работы с F#](../../fsharp/get-started/get-started-command-line.md)
 
-## <a name="other"></a>Другое
+## <a name="other"></a>Другой
 
 - [Модульное тестирование в .NET Core с помощью команды dotnet test](../testing/unit-testing-with-dotnet-test.md)
 - [Модульное тестирование с использованием MSTest и .NET Core](../testing/unit-testing-with-mstest.md)
 - [Разработка библиотек с помощью кроссплатформенных средств](libraries.md)
 - [Размещение .NET Core из машинного кода](netcore-hosting.md)
-- [Создание пользовательского шаблона для dotnet](create-custom-template.md)
+- [Создание пользовательского шаблона для dotnet](cli-templates-create-item-template.md)
 
 Руководства по разработке веб-приложений на ASP.NET Core см. в [документации по ASP.NET Core](/aspnet/core/).

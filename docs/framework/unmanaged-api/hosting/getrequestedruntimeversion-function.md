@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 82f596a4-483d-4509-b0c5-a84c53c3da1b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4083440903e6147ae645f2d6420f19160471841c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: be7d6ce29a9c9c4e3e530df40432b1a4c3b2d389
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779573"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136344"
 ---
 # <a name="getrequestedruntimeversion-function"></a>Функция GetRequestedRuntimeVersion
-Возвращает номер версии общеязыковой среды выполнения (CLR), запрашиваемой указанным приложением. Если эта версия не установлена, Получает самую последнюю версию, установленную перед запрашиваемой.  
+Возвращает номер версии общеязыковой среды выполнения (CLR), запрошенной указанным приложением. Если эта версия не установлена, возвращает последнюю версию, установленную до запрошенной версии.  
   
- Эта функция является устаревшим в .NET Framework 4.  
+ Эта функция является устаревшей в .NET Framework 4.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -42,32 +40,32 @@ HRESULT GetRequestedRuntimeVersion (
   
 ## <a name="parameters"></a>Параметры  
  `pExe`  
- [in] Имя приложения.  
+ окне Имя приложения.  
   
  `pVersion`  
- [out] Буфер, содержащий строку номера версии после успешного завершения.  
+ заполняет Буфер, содержащий строку номера версии после успешного завершения.  
   
  `cchBuffer`  
- [in] Длина буфера версии.  
+ окне Длина буфера версии.  
   
  `pdwLength`  
- [out] Указатель на длину строку номера версии.  
+ заполняет Указатель на длину строки номера версии.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Этот метод возвращает стандартные коды ошибок объектов модели компонентов (COM), как определено в файле WinError.h, помимо следующих значений.  
+ Этот метод возвращает коды стандартных ошибок модели COM, как определено в файле WinError. h, в дополнение к следующим значениям.  
   
 |Код возврата|Описание|  
 |-----------------|-----------------|  
 |S_OK|Метод завершился успешно.|  
-|ERROR_INSUFFICIENT_BUFFER|Версии буфера недостаточен для хранения строки версии.|  
+|ERROR_INSUFFICIENT_BUFFER|Буфер версии недостаточно велик для хранения строки версии.|  
 |E_POINTER|Параметр `pdwLength` имеет значение null.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** MSCorEE.h  
+ **Заголовок:** MSCorEE. h  
   
- **Библиотека:** MSCorEE.dll  
+ **Библиотека:** MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   

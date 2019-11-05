@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 37b95cce-9bfb-4ecf-a00b-33dcba782c67
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5f3e39d94996f14f1ae6593b9adaa5db3ef674c5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 7d935bff023d806cf8cfb6d87bde0f82666b51b5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67769664"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131123"
 ---
 # <a name="eclrfailure-enumeration"></a>Перечисление EClrFailure
-Описывает набор сбоев, для которых узел может задать действия политики.  
+Описывает набор сбоев, для которых узел может задавать действия политики.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,27 +38,27 @@ typedef enum {
 } EClrFailure;  
 ```  
   
-## <a name="members"></a>Участники  
+## <a name="members"></a>Члены  
   
 |Член|Описание|  
 |------------|-----------------|  
-|`FAIL_NonCriticalResource`|Произошла ошибка во время попытки выделения ресурсов (например, поток, блок памяти или блокировки) в некритические область кода.|  
-|`FAIL_CriticalResource`|Произошла ошибка при попытке выделить ресурс (например, поток, блок памяти или блокировки) в критической области кода.|  
-|`FAIL_FatalRuntime`|Среда CLR (CLR) больше не может выполнять управляемый код в процессе. Исходя из этого вызовов любого размещения функций возвращают значение HRESULT значение HOST_E_CLRNOTAVAILABLE.|  
-|`FAIL_OrphanedLock`|Поток не удалось снять блокировку возврата <xref:System.AppDomain> объекта. Узел не удается задать удалось вызвать прерывание потока.|  
+|`FAIL_NonCriticalResource`|Произошла ошибка при попытке выделения ресурса (например, потока, блока памяти или блокировки) в некритической области кода.|  
+|`FAIL_CriticalResource`|Произошла ошибка при попытке выделения ресурса (например, потока, блока памяти или блокировки) в критической области кода.|  
+|`FAIL_FatalRuntime`|Общеязыковая среда выполнения (CLR) больше не может выполнять управляемый код в процессе. Исходя этого, вызовы любых функций размещения возвращают значение HRESULT, равное HOST_E_CLRNOTAVAILABLE.|  
+|`FAIL_OrphanedLock`|Потоку не удалось снять блокировку после возврата из объекта <xref:System.AppDomain>. Узлу не удается установить этот сбой, чтобы привести к прерыванию потока.|  
 |`FAIL_StackOverflow`|Произошло переполнение стека.|  
-|`FAIL_AccessViolation`|Была предпринята попытка чтения или записи в защищенную память. Не поддерживается в .NET Framework 4.|  
-|`FAIL_CodeContract`|Сбой кода контракта. См. в разделе [Code Contracts](../../../../docs/framework/debug-trace-profile/code-contracts.md).|  
+|`FAIL_AccessViolation`|Предпринята попытка чтения или записи в защищенную память. Не поддерживается в .NET Framework 4.|  
+|`FAIL_CodeContract`|Ошибка контракта кода. См. раздел [контракты кода](../../../../docs/framework/debug-trace-profile/code-contracts.md).|  
   
-## <a name="remarks"></a>Примечания  
- См. в разделе [ICLRPolicyManager::SetActionOnFailure](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setactiononfailure-method.md) метод список [EPolicyAction](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md) значения узла можно использовать для указания действия политики условий ошибки. Дополнительные сведения о критических и некритических областях кода, см. в разделе [EClrOperation](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md).  
+## <a name="remarks"></a>Заметки  
+ Список значений [еполициактион](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md) , которые узел может использовать для указания действий политики для условий сбоя, см. в описании метода [ICLRPolicyManager:: сетактиононфаилуре](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setactiononfailure-method.md) . Дополнительные сведения о критических и некритических областях кода см. в разделе [еклроператион](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md).  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** MSCorEE.h  
+ **Заголовок:** MSCorEE. h  
   
- **Библиотека:** MSCorEE.dll  
+ **Библиотека:** MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

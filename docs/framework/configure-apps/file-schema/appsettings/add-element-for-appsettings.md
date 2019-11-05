@@ -7,22 +7,22 @@ helpviewer_keywords:
 - add Element
 - <add> Element
 ms.assetid: 8734efdc-00f6-4a65-bba6-084c5bc65246
-author: rpetrusha
+author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 594ba4f289012e775e93acba98056b60bdd94cbd
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 09864ea8f174d0c23f26db49f8cc0d43608522a0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69927752"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73119339"
 ---
-# <a name="add-element-for-appsettings"></a>\<Добавьте элемент > для \<appSettings >
+# <a name="add-element-for-appsettings"></a>\<добавить элемент > для \<appSettings >
 
 Добавляет пользовательский параметр приложения.
 
 [ **\<configuration>** ](../configuration-element.md)   
 &nbsp;&nbsp;[ **\<appSettings>** ](appsettings-element-for-configuration.md)   
-&nbsp;&nbsp;&nbsp;&nbsp; **\<Добавить >**
+&nbsp;&nbsp;&nbsp;&nbsp; **\<добавить >**
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -59,7 +59,7 @@ ms.locfileid: "69927752"
 </appSettings>
 ```
 
-В следующем примере `<add>` элемент используется для определения двух параметров совместимости в приложении ASP.NET:
+В следующем примере элемент `<add>` используется для определения двух параметров совместимости в приложении ASP.NET:
 
 ```xml
 <appSettings>

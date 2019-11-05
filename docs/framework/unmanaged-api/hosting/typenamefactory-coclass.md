@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: c853bb58-c9c5-476b-8e80-608aa53ea18d
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 14266f02dd402e81928b72d155f224e10e910592
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c0f236bf6b4d9280945270ada36545cbf0c8a5dc
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781245"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141434"
 ---
 # <a name="typenamefactory-coclass"></a>Компонентный класс TypeNameFactory
 Предоставляет интерфейс для управления деконструкцией имени типа.  
@@ -34,18 +32,18 @@ coclass TypeNameFactory {
 };  
 ```  
   
-## <a name="interfaces"></a>Интерфейсы  
+## <a name="interfaces"></a>интерфейсов,  
   
 |Интерфейс|Описание|  
 |---------------|-----------------|  
 |[Интерфейс ITypeNameFactory](../../../../docs/framework/unmanaged-api/hosting/itypenamefactory-interface.md)|Этот интерфейс поддерживает инфраструктуру .NET Framework и не предназначен для использования непосредственно из программного кода.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** MSCorEE.idl  
+ **Заголовок:** MSCorEE. idl  
   
- **Библиотека:** Включена как ресурс в MSCorEE.dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - orderby clause [C#]
 - orderby keyword [C#]
 ms.assetid: 21f87f48-d69d-4e95-9a52-6fec47b37e1f
-ms.openlocfilehash: b62634c0f61e17c046cd474670fddf437287ab7a
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 09a745fe3da3a5acb71972b9cf56391774c7016a
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634093"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422640"
 ---
 # <a name="orderby-clause-c-reference"></a>Предложение orderby (Справочник по C#)
 
@@ -42,4 +42,4 @@ ms.locfileid: "65634093"
 - [Ключевые слова запроса (LINQ)](query-keywords.md)
 - [LINQ](../../linq/index.md)
 - [предложение group](group-clause.md)
-- [Приступая к работе с LINQ в C#](../../programming-guide/concepts/linq/getting-started-with-linq.md)
+- [Приступая к работе с LINQ в C#](/dotnet/csharp/programming-guide/concepts/linq/)

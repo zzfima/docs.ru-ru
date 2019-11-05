@@ -1,13 +1,14 @@
 ---
 title: Создание типов смешения с помощью методов интерфейса по умолчанию
 description: Используя элементы интерфейса по умолчанию, можно расширить интерфейсы дополнительными реализациями по умолчанию для средств реализации.
+ms.technology: csharp-advanced-concepts
 ms.date: 10/04/2019
-ms.openlocfilehash: 4dee97226420139d9cd09ad75d7c8caf4967273d
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 798413f0071159893de39f3e190a9b2693571bb7
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72321570"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039274"
 ---
 # <a name="tutorial-mix-in-functionality-when-creating-classes-using-interfaces-with-default-interface-methods"></a>Учебник. Функциональные возможности смешения при создании классов с помощью методов интерфейса по умолчанию
 

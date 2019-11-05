@@ -6,14 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 450e350b-6a68-4634-a2a5-33f4dc33baf0
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b1808121049c6344b72b1c9d99e19c46422dfa0c
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
-ms.translationtype: HT
+ms.openlocfilehash: 2ca5f27bdea75f6c6ce8f954f553b6a58a1a9204
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44042566"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124250"
 ---
 # <a name="mapping-the-object-hierarchy-to-xml-data"></a>Сопоставление объектной иерархии с XML-данными
 Когда XML-документ находится в памяти, его концептуальным представлением является дерево. В распоряжении программиста имеется объектная иерархия для доступа к узлам этого дерева. Следующий пример показывает, как XML-содержимое становится узлами.  
@@ -32,7 +30,7 @@ ms.locfileid: "44042566"
   
  Входные данные представлены в памяти следующим деревом узлов с назначенным свойством типа узлов:  
   
- ![пример дерева узлов](../../../../docs/standard/data/xml/media/simple-xml.gif "Simple_XML")  
+ ![Пример дерева узлов](../../../../docs/standard/data/xml/media/simple-xml.gif "Simple_XML")  
 Представление дерева узлов book и title  
   
  Элемент `book` становится объектом **XmlElement`title`, следующий элемент**  также становится объектом **XmlElement**, а элемент content становится объектом **XmlText**. Методы и свойства объекта **XmlElement** отличаются от методов и свойств, доступных для объекта **XmlText**. Поэтому очень важно знать, какой тип узла получает XML, так как тип узла определяет действия, которые можно выполнить.  
@@ -178,7 +176,7 @@ public class Sample
   
  Вывод примера содержит сопоставление данных типам узлов.  
   
- **Вывод**  
+ **Выходные данные:**  
   
 ```xml  
 <?xml version='1.0'?><!--This is a sample XML document --><!DOCTYPE Items [<!ENTITY number "123">]<Items><Item>Test with an entity: 123</Item><Item>test with a child element <more> stuff</Item><Item>test with a CDATA section <![CDATA[<456>]]> def</Item><Item>Test with a char entity: A</Item><--Fourteen chars in this element.--><Item>1234567890ABCD</Item></Items>  

@@ -14,30 +14,28 @@ helpviewer_keywords:
 ms.assetid: 634ef9f9-e94b-4776-a9e1-866df9a76c8f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0338c1e3e8890f08f87c80ec922071053d591935
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: b0538a0dec6ed7659898b3a40bd5e36729c7dcb9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796669"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134422"
 ---
 # <a name="iassemblyenum-interface"></a>Интерфейс IAssemblyEnum
-Представляет перечислитель для массива `IAssemblyName` объектов.  
+Представляет перечислитель для массива объектов `IAssemblyName`.  
   
 ## <a name="methods"></a>Методы  
   
 |Метод|Описание|  
 |------------|-----------------|  
-|[Метод Clone](iassemblyenum-clone-method.md)|Создает неполную копию этого `IAssemblyEnum` объекта.|  
-|[Метод GetNextAssembly](iassemblyenum-getnextassembly-method.md)|Возвращает указатель на следующий `IAssemblyName` объект, содержащийся в этом `IAssemblyEnum` объекте.|  
-|[Метод Reset](iassemblyenum-reset-method.md)|Сбрасывает этот `IAssemblyEnum` объект до начального положения.|  
+|[Метод Clone](iassemblyenum-clone-method.md)|Создает неполную копию этого объекта `IAssemblyEnum`.|  
+|[Метод GetNextAssembly](iassemblyenum-getnextassembly-method.md)|Возвращает указатель на следующий `IAssemblyName`, содержащийся в этом `IAssemblyEnum` объекте.|  
+|[Метод Reset](iassemblyenum-reset-method.md)|Сбрасывает объект `IAssemblyEnum` в его начальную точку.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
- **Заголовок.** Fusion. h  
+ **Заголовок:** Fusion. h  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

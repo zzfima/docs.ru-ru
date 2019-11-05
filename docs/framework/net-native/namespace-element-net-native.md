@@ -1,17 +1,15 @@
 ---
-title: <Namespace>Элемент (.NET Native)
+title: Элемент <Namespace> (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: 57c614e5-18a9-4e87-bfd5-d0fe3396a192
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7be004776d2a2fd3b4c41fb21b3ac244946f2166
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: b6d7a45de14d0fb8eb2e27a02c86510f630be9e1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049420"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128263"
 ---
-# <a name="namespace-element-net-native"></a>\<Элемент Namespace > (.NET Native)
+# <a name="namespace-element-net-native"></a>Элемент > \<namespace (.NET Native)
 Применяет политику отражения среды выполнения ко всем типам в указанном пространстве имен.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -51,13 +49,13 @@ ms.locfileid: "71049420"
   
 ## <a name="name-attribute"></a>Name - атрибут  
   
-|Значение|Описание|  
+|значения|Описание|  
 |-----------|-----------------|  
 |*namespace_name*|Имя пространства имен. Если элемент \<Namespace> является дочерним элементом для элемента [\<Application>](application-element-net-native.md), [\<Library>](library-element-net-native.md) или [\<Assembly>](assembly-element-net-native.md), *namespace_name* должно быть полным именем пространства имен. Если элемент \<Namespace> является дочерним элементом другого элемента \<Namespace>, то *namespace_name* должно быть относительным именем пространства имен.|  
   
 ## <a name="all-other-attributes"></a>Все остальные атрибуты  
   
-|Значение|Описание|  
+|значения|Описание|  
 |-----------|-----------------|  
 |*policy_setting*|Значение для этого типа политики для всех типов в пространстве имен. Допустимые значения `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` и `Required All`. Дополнительные сведения см. в разделе [Параметры политики директив среды выполнения](runtime-directive-policy-settings.md).|  
   
@@ -78,7 +76,7 @@ ms.locfileid: "71049420"
 |[\<Library>](library-element-net-native.md)|Определяет сборку, содержащую типы и члены типов, метаданные которой доступны для отражения во время выполнения. Элемент [\<Library>](library-element-net-native.md) может иметь ноль или один элемент [\<Assembly>](assembly-element-net-native.md).|  
 |`<Namespace>`|Применяет политику отражения для всех типов в родительском пространстве имен.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
  Атрибуты `Activate`, `Browse`, `Dynamic` и `Serialize` необязательны. Если таковые отсутствуют, элемент `<Namespace>` используется только как контейнер для дочерних элементов. Если они присутствуют, элемент `<Namespace>` применяет политика отражения среды выполнения ко всем типам в указанном пространстве имен.  
   
  Если это дочерний элемент элемента [\<Assembly>](assembly-element-net-native.md), то элемент `<Namespace>` переопределяет политику отражения среды выполнения, определенную элементом [\<Assembly>](assembly-element-net-native.md).  

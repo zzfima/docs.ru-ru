@@ -2,12 +2,12 @@
 title: Вспомогательные маркеры
 ms.date: 03/30/2017
 ms.assetid: 65a8905d-92cc-4ab0-b6ed-1f710e40784e
-ms.openlocfilehash: 14cc7bed55d41352acd93d4443b20f8bda966263
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 9d665c82f4af969204e1c87f982c6398b55cda01
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044625"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73421376"
 ---
 # <a name="supporting-tokens"></a>Вспомогательные маркеры
 Образец вспомогательных маркеров демонстрирует, как добавить дополнительные маркеры в сообщение, использующее WS-Security. Пример добавляет двоичный маркер безопасности X.509 в дополнение к маркеру безопасности имени пользователя. Этот маркер передается в заголовке сообщения WS-Security из клиента в службу, и часть сообщения подписывается закрытым ключом, связанным с маркером безопасности X.509, чтобы подтвердить получателю наличие сертификата X.509. Это полезно в случае, когда для проверки подлинности или авторизации отправителя требуются несколько утверждений, связанных с сообщением. Служба реализует контракт, определяющий шаблон взаимодействия "запрос-ответ".
@@ -357,7 +357,7 @@ void GetCallerIdentities(ServiceSecurityContext callerSecurityContext, out strin
 
  Сертификат хранится в хранилище "My store" (Личном хранилище) в расположении `CurrentUser`.
 
-```
+```console
 echo ************
 echo making client cert
 echo ************
@@ -367,7 +367,7 @@ makecert.exe -sr CurrentUser -ss MY -a sha1 -n CN=%CLIENT_NAME% -sky exchange -p
 ### <a name="installing-the-client-certificate-into-the-servers-trusted-store"></a>Установка сертификата клиента в хранилище доверенных сертификатов сервера
  Следующая строка из файла Setup.bat копирует сертификат клиента в хранилище доверенных лиц сервера. Этот шаг является обязательным, поскольку сертификаты, созданные с помощью программы Makecert.exe, не получают неявного доверия со стороны серверной системы. Если уже имеется сертификат, имеющий доверенный корневой сертификат клиента, например сертификат, выпущенный корпорацией Майкрософт, выполнять этот шаг по добавлению сертификата сервера в хранилище сертификатов клиента не требуется.
 
-```
+```console
 echo ************
 echo copying client cert to server's CurrentUserstore
 echo ************
@@ -379,7 +379,7 @@ certmgr.exe -add -r CurrentUser -s My -c -n %CLIENT_NAME% -r LocalMachine -s Tru
 
  Сертификат хранится в хранилище «My store (Личном хранилище)» в расположении LocalMachine. Для служб, размещенных в службах IIS, сертификат хранится в хранилище LocalMachine. Для резидентных служб необходимо изменить пакетный файл, чтобы сертификат сервера хранился в местоположении хранения CurrentUser, заменив строку LocalMachine строкой CurrentUser.
 
-```
+```console
 echo ************
 echo Server cert setup starting
 echo %SERVER_NAME%
@@ -392,7 +392,7 @@ makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -
 ### <a name="installing-server-certificate-into-clients-trusted-certificate-store"></a>Установка сертификата сервера в хранилище доверенных сертификатов клиента
  Следующие строки из файла Setup.bat копируют сертификат сервера в хранилище доверенных лиц клиента. Этот шаг является обязательным, поскольку сертификаты, созданные с помощью программы Makecert.exe, не получают неявного доверия со стороны клиентской системы. Если уже имеется сертификат, имеющий доверенный корневой сертификат клиента, например сертификат, выпущенный корпорацией Майкрософт, выполнять этот шаг по добавлению сертификата сервера в хранилище сертификатов клиента не требуется.
 
-```
+```console
 echo ************
 echo copying server cert to client's TrustedPeople store
 echo ************certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople
@@ -401,7 +401,7 @@ echo ************certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r C
 ### <a name="enabling-access-to-the-certificates-private-key"></a>Обеспечение доступа к закрытому ключу сертификата
  Чтобы разрешить доступ к закрытому ключу сертификата из службы, размещенной в службах IIS, учетной записи пользователя, под которой выполняется процесс, размещенный в службах IIS, должны быть предоставлены соответствующие разрешения для закрытого ключа. Это производится в последних шагах скрипта Setup.bat.
 
-```
+```console
 echo ************
 echo setting privileges on server certificates
 echo ************
@@ -441,9 +441,9 @@ iisreset
   
 4. Скопируйте в клиентский каталог на клиентском компьютере файлы программы клиента. Кроме того, скопируйте на клиент файлы Setup.bat, Cleanup.bat и ImportServiceCert.bat.  
   
-5. На сервере запустите `setup.bat service` в Командная строка разработчика для Visual Studio, открытой с правами администратора. При запуске `setup.bat` с аргументомсоздаетсясертификатслужбысполнымдоменнымименемкомпьютераиэкспортируетсясертификатслужбывфайлсименемService.cer.`service`  
+5. На сервере запустите `setup.bat service` в Командная строка разработчика для Visual Studio, открытой с правами администратора. При запуске `setup.bat` с аргументом `service` создается сертификат службы с полным доменным именем компьютера и экспортируется сертификат службы в файл с именем Service. cer.  
   
-6. Измените файл Web. config, чтобы он отражал новое имя сертификата ( `findValue` в атрибуте [ \<в serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)), совпадающее с полным доменным именем компьютера.  
+6. Измените файл Web. config в соответствии с новым именем сертификата (в атрибуте `findValue` в [\<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)), который совпадает с полным доменным именем компьютера.  
   
 7. Скопируйте файл Service.cer из каталога службы в клиентский каталог на клиентском компьютере.  
   
@@ -464,4 +464,4 @@ iisreset
 - После завершения работы примера запустите в папке примеров файл Cleanup.bat.  
   
 > [!NOTE]
-> Этот скрипт не удаляет сертификаты службы на клиенте при выполнении примера на нескольких компьютерах. Если вы выполнили примеры WCF, использующие сертификаты на разных компьютерах, не забудьте очистить сертификаты службы, установленные в хранилище CurrentUser-TrustedPeople. Для этого используйте следующую команду: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`Например: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.
+> Этот скрипт не удаляет сертификаты службы на клиенте при выполнении примера на нескольких компьютерах. Если вы выполнили примеры WCF, использующие сертификаты на разных компьютерах, не забудьте очистить сертификаты службы, установленные в хранилище CurrentUser-TrustedPeople. Для этого воспользуйтесь следующей командой: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`. Например: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.

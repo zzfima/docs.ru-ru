@@ -1,18 +1,16 @@
 ---
 title: Создание приложения .NET Core Hello World на Visual Basic в Visual Studio 2017
 description: Узнайте, как создать простое консольное приложение .NET Core на Visual Basic с помощью Visual Studio 2017.
-author: rpetrusha
-ms.author: ronpet
 ms.date: 08/07/2017
 dev_langs:
 - vb
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: b4f3cc055f73332db1348ef35174beab614df147
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 1200afb30c6bdebf66b2a1e080c62a776a7e9826
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71039603"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73100880"
 ---
 # <a name="build-a-visual-basic-hello-world-application-with-the-net-core-sdk-in-visual-studio-2017"></a>Создание приложения Hello World на Visual Basic с помощью пакета SDK для .NET Core в Visual Studio 2017
 

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 71f0eab5-0170-46f8-9f88-1df5abdeb34a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 57ed64ad8a6ae8ef46f423471436c3fce29d6fe5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a3ae474a73f4c8e4b98c4b2bc5d04e55bcae6874
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67767818"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128670"
 ---
 # <a name="ihostmemorymanagerneedsvirtualaddressspace-method"></a>Метод IHostMemoryManager::NeedsVirtualAddressSpace
-Уведомляет основное приложение, что общеязыковая среда выполнения (CLR) будет пытаться использовать указанный объем памяти.  
+Уведомляет узел о том, что среда CLR будет пытаться использовать указанную память.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,22 +36,22 @@ HRESULT NeedsVirtualAddressSpace (
   
 ## <a name="parameters"></a>Параметры  
  `startAddress`  
- [in] Начальный адрес памяти.  
+ окне Начальный адрес памяти.  
   
  `size`  
- [in] Размер в байтах объем памяти.  
+ окне Размер памяти в байтах.  
   
-## <a name="remarks"></a>Примечания  
- `NeedsVirtualAddressSpace` Метод является методом обратного вызова и должны быть реализованы модулем записи ведущего приложения. Он вызывается средой CLR.  
+## <a name="remarks"></a>Заметки  
+ Метод `NeedsVirtualAddressSpace` является методом обратного вызова и должен быть реализован модулем записи размещающего приложения. Он вызывается средой CLR.  
   
- Если узел не должна выполнять среда CLR для использования указанного объема памяти, может вернуть значение E_OUTOFMEMORY HRESULT.  
+ Если узел не хочет, чтобы среда CLR использовала указанную память, она может вернуть значение E_OUTOFMEMORY HRESULT.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** MSCorEE.h  
+ **Заголовок:** MSCorEE. h  
   
- **Библиотека:** Включена как ресурс в MSCorEE.dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

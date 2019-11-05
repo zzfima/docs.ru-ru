@@ -17,15 +17,13 @@ helpviewer_keywords:
 - strings [.NET Framework], regular expressions
 - parsing text with regular expressions, backtracking
 ms.assetid: 34df1152-0b22-4a1c-a76c-3c28c47b70d8
-author: rpetrusha
-ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 0831a22b0c1d3333cc37f86a764006c934597390
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 06f1094d872c84f2f277c7695a8858edc285449f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968565"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140517"
 ---
 # <a name="backtracking-in-regular-expressions"></a>Поиск с возвратом в регулярных выражениях
 <a name="top"></a> Поиск с возвратом происходит, если шаблон регулярного выражения содержит переменные [квантификаторы](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md) или [конструкции изменения](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md), и обработчик регулярных выражений возвращается в предыдущее сохраненное состояние, чтобы продолжить поиск совпадения. В поиске с возвратом заключена сила регулярных выражений. Благодаря ему выражения могут быть мощными и гибкими, а также совпадать со сложными шаблонами. С другой стороны, эти возможности дорого обходятся. Часто именно поиск с возвратом существенно снижает производительность обработчика регулярных выражений. К счастью, разработчик может управлять работой обработчика регулярных выражений и тем, как он использует поиск с возвратом. В этом разделе описано, как функционирует поиск с возвратом, и как им можно управлять.  

@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: b0c6f19b-d4fd-4971-88f0-12ffb5793da3
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 269e3702c21532f377735ba6087abb1603dde4f7
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: e30b6f2d2254d2d107c4c82a2c5664850ce6ec23
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796314"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123071"
 ---
 # <a name="isframeworkassembly-function"></a>Функция IsFrameworkAssembly
 Возвращает значение, указывающее, является ли указанная сборка управляемой.  
@@ -50,15 +48,15 @@ HRESULT IsFrameworkAssembly (
  `pccSize`  
  [входной] Размер `pwzFrameworkAssemblyIdentity`.  
   
-## <a name="remarks"></a>Примечания  
- `pwzAssemblyReference` Параметр является указателем на символьную строку, содержащую имя сборки.  
+## <a name="remarks"></a>Заметки  
+ Параметр `pwzAssemblyReference` — это указатель на символьную строку, содержащую имя сборки.  
   
- Если эта сборка является частью .NET Framework, `pbIsFrameworkAssembly` параметр будет содержать логическое `true`значение.  
+ Если эта сборка является частью .NET Framework, параметр `pbIsFrameworkAssembly` будет содержать логическое значение `true`.  
   
- Если именованная сборка не является частью .NET Framework или если `pwzAssemblyReference` параметр не имеет имени сборки, `pbIsFrameworkAssembly` то будет `false`содержать логическое значение.  
+ Если именованная сборка не является частью .NET Framework или если параметр `pwzAssemblyReference` не имеет имени сборки, `pbIsFrameworkAssembly` будет содержать логическое значение `false`.  
   
 ## <a name="requirements"></a>Требования  
- **Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
 ## <a name="see-also"></a>См. также
 

@@ -2,14 +2,12 @@
 title: Метод ICorDebugLoadedModule::GetBaseAddress
 ms.date: 03/30/2017
 ms.assetid: 7c036772-d58a-47f1-a5fa-31779898ef0d
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 85748106edb34b98f975a40bcc2617401536e271
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8af814ff2eaaf3ae6dae9031c13bf37ea0c1236b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910104"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122654"
 ---
 # <a name="icordebugloadedmodulegetbaseaddress-method"></a>Метод ICorDebugLoadedModule::GetBaseAddress
 Получает базовый адрес загруженного модуля.  
@@ -26,17 +24,17 @@ HRESULT GetBaseAddress(
  `pAddress`  
  [out] Указатель на базовый адрес загруженного модуля.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
   
 > [!NOTE]
 > Этот метод доступен только в машинном коде .NET.  
   
 ## <a name="requirements"></a>Требования  
- **Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug. idl, CorDebug. h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
- **Библиотечная** Коргуидс. lib  
+ **Библиотека:** CorGuids.lib  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

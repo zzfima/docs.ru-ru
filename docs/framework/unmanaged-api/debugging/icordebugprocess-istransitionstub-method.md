@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: f7653317-7e48-4163-be03-f50f1a4b0f70
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1ec29aa748c437199434fa1394e1a00c82154447
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 852c77be0dc8ef91933bacbbd3d6b3f5a69ae8c8
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67766870"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139387"
 ---
 # <a name="icordebugprocessistransitionstub-method"></a>Метод ICorDebugProcess::IsTransitionStub
-Получает значение, указывающее, является ли адрес в заглушке, вызовет переход к управляемому коду.  
+Возвращает значение, указывающее, находится ли адрес в заглушке, что приведет к переходу в управляемый код.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,20 +35,20 @@ HRESULT IsTransitionStub(
   
 ## <a name="parameters"></a>Параметры  
  `address`  
- [in] Объект `CORDB_ADDRESS` значение, указывающее адрес в вопросе.  
+ окне Значение `CORDB_ADDRESS`, указывающее адрес в вопросе.  
   
  `pbTransitionStub`  
- [out] Указатель на логическое значение, которое является `true` Если указанный адрес находится внутри заглушку, вызовет переход к управляемому коду; в противном случае *`pbTransitionStub` является `false`.  
+ заполняет Указатель на логическое значение, `true`, если указанный адрес находится внутри заглушки, которая приведет к переходу в управляемый код. в противном случае *`pbTransitionStub` `false`.  
   
-## <a name="remarks"></a>Примечания  
- `IsTransitionStub` Метод может использоваться в неуправляемом коде пошагового выполнения для принятия решения о возвращения управления пошаговым управляемый шаг.  
+## <a name="remarks"></a>Заметки  
+ Метод `IsTransitionStub` может использоваться неуправляемым пошаговым кодом, чтобы решить, когда следует возвращать управление пошаговым выполнением в управляемое средство Организации.  
   
- Вы также можете заглушки перехода удостоверений, просмотрев сведения в переносимый исполняемый файл (PE).  
+ Вы также можете идентифицировать заглушки перехода, просмотрев информацию в переносимом исполняемом файле (PE).  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

@@ -2,12 +2,12 @@
 title: Использование баз данных NoSQL в качестве инфраструктуры сохраняемости
 description: Архитектура микрослужб .NET для контейнерных приложений .NET | Использование баз данных NoSql в целом и в Azure Cosmos DB в частности для реализации сохраняемости.
 ms.date: 10/08/2018
-ms.openlocfilehash: d96d72fe675dfa830029e4311f2cf165a305c328
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: b184586dede6331e0babfa976c6fd641933d018e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71039947"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73089871"
 ---
 # <a name="use-nosql-databases-as-a-persistence-infrastructure"></a>Использование баз данных NoSQL в качестве инфраструктуры сохраняемости
 
@@ -122,7 +122,7 @@ await client.CreateDocumentAsync(collectionUri, newOrder);
 
 Базы данных Azure Cosmos DB доступны из любого кода .NET, запущенного в контейнерах, точно так же, как из любых других приложений .NET. Например, микрослужбы Locations.API и Marketing.API в eShopOnContainers реализованы таким образом, что они могут использовать базы данных Azure Cosmos DB.
 
-Однако с точки зрения разработки для Docker, в Azure Cosmos DB есть ограничение. Даже при наличии локального [эмулятора Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/local-emulator), который можно запустить на локальном компьютере разработчика (например на ПК), на конец 2017 г. этот эмулятор поддерживает только Windows, но не Linux. 
+Однако с точки зрения разработки для Docker, в Azure Cosmos DB есть ограничение. Даже при наличии локального [эмулятора Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/local-emulator), который можно запустить на локальном компьютере разработчика (например на ПК), на конец 2017 г. этот эмулятор поддерживает только Windows, но не Linux.
 
 Этот эмулятор также можно запустить в Docker, но только в контейнерах Windows, а не в контейнерах Linux. Это начальное ограничение среды разработки в том случае, если ваше приложение развертывается в виде контейнеров Linux, так как сейчас вы не можете одновременно развернуть контейнеры Linux и Windows в Docker для Windows. Все контейнеры должны быть развернуты либо в Linux, либо в Windows.
 
@@ -150,7 +150,7 @@ await client.CreateDocumentAsync(collectionUri, newOrder);
 
 Очевидное преимущество API MongoDB — в том, что ваше решение можно запустить как в MongoDB, так и в Azure Cosmos DB, поэтому перенос в другую среду не должен представлять сложностей. Однако иногда стоит использовать собственный API (то есть собственный API Cosmos DB), чтобы получить полный набор возможностей конкретной СУБД.
 
-Дальнейшее сравнение простого использования MongoDB и Cosmos DB в облаке см. в разделе [Преимущества использования Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/mongodb-introduction) на этой странице. 
+Дальнейшее сравнение простого использования MongoDB и Cosmos DB в облаке см. в разделе [Преимущества использования Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/mongodb-introduction) на этой странице.
 
 ### <a name="analyze-your-approach-for-production-applications-mongodb-api-vs-cosmos-db-api"></a>Анализ подходов для приложений в рабочей среде: сравнение API MongoDB и API Cosmos DB
 
@@ -194,12 +194,12 @@ public class Locations
     public string Description { get; set; }
     public double Latitude { get; set; }
     public double Longitude { get; set; }
-    public GeoJsonPoint<GeoJson2DGeographicCoordinates> Location 
+    public GeoJsonPoint<GeoJson2DGeographicCoordinates> Location
                                                              { get; private set; }
-    public GeoJsonPolygon<GeoJson2DGeographicCoordinates> Polygon 
+    public GeoJsonPolygon<GeoJson2DGeographicCoordinates> Polygon
                                                              { get; private set; }
     public void SetLocation(double lon, double lat) => SetPosition(lon, lat);
-    public void SetArea(List<GeoJson2DGeographicCoordinates> coordinatesList) 
+    public void SetArea(List<GeoJson2DGeographicCoordinates> coordinatesList)
                                                     => SetPolygon(coordinatesList);
 
     private void SetPosition(double lon, double lat)
@@ -246,7 +246,7 @@ public class LocationsContext
         {
             return _database.GetCollection<Locations>("Locations");
         }
-    }       
+    }
 }
 ```
 
@@ -301,7 +301,7 @@ ESHOP_PROD_EXTERNAL_DNS_NAME_OR_IP=<YourDockerHostIP>
 
 Раскомментируйте строку ESHOP_AZURE_COSMOSDB и замените ее на строку подключения к Azure Cosmos DB, полученную на портале Azure в соответствии с инструкциями в разделе [Подключение приложения MongoDB к Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/connect-mongodb-account).
 
-Если глобальная переменная `ESHOP_AZURE_COSMOSDB` пуста, т. е. закомментирована в файле `.env`, то контейнер использует строку подключения MongoDB по умолчанию, указывающую на локальный контейнер MongoDB, развернутый в eShopOnContainers, который имеет имя `nosql.data` и определен в файле docker-compose, как показано в следующем коде YML. 
+Если глобальная переменная `ESHOP_AZURE_COSMOSDB` пуста, т. е. закомментирована в файле `.env`, то контейнер использует строку подключения MongoDB по умолчанию, указывающую на локальный контейнер MongoDB, развернутый в eShopOnContainers, который имеет имя `nosql.data` и определен в файле docker-compose, как показано в следующем коде YML.
 
 ``` yml
 # docker-compose.yml

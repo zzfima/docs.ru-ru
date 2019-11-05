@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: d69796b4-5b6d-457c-85f6-2cf42e8a8773
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 58aaf0445fe42d083c12541056cb362f9a994944
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b4f228d55c9ffd6b85ebd0b430a7f5db404320f6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67765210"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124338"
 ---
 # <a name="icordebugthread3getactiveinternalframes-method"></a>Метод ICorDebugThread3::GetActiveInternalFrames
-Возвращает массив из внутренних кадрах ([ICorDebugInternalFrame2](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-interface.md) объектов) в стеке.  
+Возвращает массив внутренних кадров (объектов[ICorDebugInternalFrame2](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-interface.md) ) в стеке.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -41,38 +39,38 @@ HRESULT GetActiveInternalFrames
   
 ## <a name="parameters"></a>Параметры  
  `cInternalFrames`  
- [in] Количество внутренних кадрах, ожидаемая в `ppInternalFrames`.  
+ окне Число внутренних кадров, ожидаемых в `ppInternalFrames`.  
   
  `pcInternalFrames`  
- [out] Указатель на `ULONG32` , содержащий количество внутренних кадров в стеке.  
+ заполняет Указатель на `ULONG32`, содержащий количество внутренних кадров в стеке.  
   
  `ppInternalFrames`  
- [in, out] Указатель на адрес массив внутренней фреймы в стеке.  
+ [вход, выход] Указатель на адрес массива внутренних кадров в стеке.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Этот метод возвращает следующие конкретные результаты HRESULT, а также ошибки HRESULT, которые указывают на сбой метода.  
   
 |HRESULT|Описание|  
 |-------------|-----------------|  
-|S_OK|[ICorDebugInternalFrame2](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-interface.md) объект был успешно создан.|  
-|E_INVALIDARG|`cInternalFrames` не равно нулю и `ppInternalFrames` — `null`, или `pcInternalFrames` является `null`.|  
-|HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)|`ppInternalFrames` меньше количество внутренних кадрах.|  
+|S_OK|Объект [ICorDebugInternalFrame2](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-interface.md) успешно создан.|  
+|E_INVALIDARG|`cInternalFrames` не равен нулю, `ppInternalFrames` `null`, либо `pcInternalFrames` является `null`.|  
+|HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)|`ppInternalFrames` меньше, чем число внутренних кадров.|  
   
 ## <a name="exceptions"></a>Исключения  
   
-## <a name="remarks"></a>Примечания  
- Внутренние кадры — это структуры данных, помещается в стек средой выполнения для хранения временных данных.  
+## <a name="remarks"></a>Заметки  
+ Внутренние кадры — это структуры данных, помещаемые в стек средой выполнения для хранения временных данных.  
   
- При первом вызове `GetActiveInternalFrames`, следует задать `cInternalFrames` параметр 0 (ноль) и `ppInternalFrames` параметр значение null. Когда `GetActiveInternalFrames` сначала возвращает `pcInternalFrames` содержит количество внутренних фреймы в стеке.  
+ При первом вызове `GetActiveInternalFrames`следует присвоить параметру `cInternalFrames` значение 0 (ноль), а параметру `ppInternalFrames` — значение null. При первом возвращении `GetActiveInternalFrames` `pcInternalFrames` содержит количество внутренних кадров в стеке.  
   
- `GetActiveInternalFrames` необходимо также вызвать второй раз. Необходимо передать правильное значение (`pcInternalFrames`) в `cInternalFrames` параметра, и задание указателя на массив подходящего размера в `ppInternalFrames`.  
+ затем `GetActiveInternalFrames` следует вызвать второй раз. Необходимо передать правильное число (`pcInternalFrames`) в параметре `cInternalFrames` и указать указатель на массив подходящего размера в `ppInternalFrames`.  
   
- Используйте [ICorDebugStackWalk::GetFrame](../../../../docs/framework/unmanaged-api/debugging/icordebugthread3-getactiveinternalframes-method.md) метод, чтобы вернуть фактические кадры стека.  
+ Используйте метод [икордебугстакквалк:: noframes](../../../../docs/framework/unmanaged-api/debugging/icordebugthread3-getactiveinternalframes-method.md) для возврата фактических кадров стека.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

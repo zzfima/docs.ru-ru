@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: a8ecd8c8-9627-4356-9c6f-bd05e24637c0
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7c9e2bb9ef97326c3d11553b6cabd0de0fd6e495
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 011da6aacbf4c40420329952f47b1fabdfc2c1a3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67747507"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125634"
 ---
 # <a name="icordebugcodegetiltonativemapping-method"></a>Метод ICorDebugCode::GetILToNativeMapping
-Возвращает массив экземпляров «COR_DEBUG_IL_TO_NATIVE_MAP», которые представляют сопоставление из смещений промежуточного языка MSIL в собственные смещения.  
+Возвращает массив экземпляров "COR_DEBUG_IL_TO_NATIVE_MAP", которые представляют сопоставления из смещений MSIL к собственным смещениям.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -43,20 +41,20 @@ HRESULT GetILToNativeMapping (
  [in] Размер массива `map`.  
   
  `pcMap`  
- [out] Указатель на фактическое число элементов, возвращаемых в `map` массива.  
+ заполняет Указатель на фактическое число элементов, возвращаемых в массиве `map`.  
   
  `map`  
- [out] Массив `COR_DEBUG_IL_TO_NATIVE_MAP` структуры, каждый из которых представляет сопоставление смещение MSIL для смещения машинного кода.  
+ заполняет Массив структур `COR_DEBUG_IL_TO_NATIVE_MAP`, каждый из которых представляет сопоставление смещения MSIL со смещением в машинном коде.  
   
- Нет, не упорядочение массива возвращаемых элементов.  
+ Порядок для массива возвращаемых элементов отсутствует.  
   
-## <a name="remarks"></a>Примечания  
- `GetILToNativeMapping` Метод возвращает значимые результаты только в том случае, если этот экземпляр «ICorDebugCode» представляет машинный код, который был just-in-time (JIT) скомпилированной на основе кода MSIL.  
+## <a name="remarks"></a>Заметки  
+ Метод `GetILToNativeMapping` возвращает значимые результаты только в том случае, если этот экземпляр "ICorDebugCode" представляет машинный код, который был JIT-скомпилирован из кода MSIL.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

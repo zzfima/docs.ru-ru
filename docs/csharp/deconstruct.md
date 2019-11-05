@@ -1,16 +1,15 @@
 ---
 title: Деконструкция кортежей и других типов
 description: Сведения о деконструкции кортежей и других типов.
-author: rpetrusha
-ms.author: ronpet
+ms.technology: csharp-fundamentals
 ms.date: 07/18/2016
 ms.assetid: 0b0c4b0f-4a47-4f66-9b8e-f5c63b195960
-ms.openlocfilehash: 5d37f9567570666c280be437aa0472a620a16c63
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 23d193faf9702628698fe558f6667aeb130e8916
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400407"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73100669"
 ---
 # <a name="deconstructing-tuples-and-other-types"></a>Деконструкция кортежей и других типов
 

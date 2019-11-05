@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: b0df5c5d-9a2e-47bf-894c-6f8a9fe24a1f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 13371d15c8b29f9ef93cc4af87acf85029404644
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 83cc4eadca7c337c06c5fbf9f0e74306c2b9cb99
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744764"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131275"
 ---
 # <a name="icordebugremotedebugactiveprocessex-method"></a>Метод ICorDebugRemote::DebugActiveProcessEx
-Запускает процесс на удаленном компьютере в режиме отладки.  
+Запускает процесс на удаленном компьютере в отладчике.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,35 +38,35 @@ HRESULT DebugActiveProcessEx (
   
 ## <a name="parameters"></a>Параметры  
  `pRemoteTarget`  
- [in] Указатель на [интерфейс ICorDebugRemoteTarget](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md). Этот параметр используется для определения компьютера, на котором выполняется процесс.  
+ окне Указатель на [интерфейс ICorDebugRemoteTarget](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md). Этот параметр используется для определения компьютера, на котором выполняется процесс.  
   
  `id`  
- [in] Идентификатор процесса, к которому отладчик должен быть связан.  
+ окне Идентификатор процесса, к которому должен быть присоединен отладчик.  
   
  `win32Attach`  
- [in] `true` Если отладчик должен вести себя как отладчик Win32 для процесса и отправки неуправляемых обратных вызовов; в противном случае `false`.  
+ [in] `true`, если отладчик должен вести себя в качестве отладчика Win32 для процесса и передать неуправляемые обратные вызовы; в противном случае `false`.  
   
  `ppProcess`  
- [out] Указатель на адрес объекта «ICorDebugProcess», представляющий процесс, к которому присоединен отладчик.  
+ заполняет Указатель на адрес объекта "ICorDebugProcess", который представляет процесс, к которому присоединен отладчик.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  S_OK  
- Успешно подключен к процессу на удаленном компьютере.  
+ Успешно присоединен к процессу на удаленном компьютере.  
   
  E_FAIL (или другие коды возврата E_)  
  Не удалось присоединиться к процессу на удаленном компьютере.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
  Отладка в смешанном режиме не поддерживается в Silverlight.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** 4.5, 4, 3.5 С ПАКЕТОМ ОБНОВЛЕНИЯ 1  
+ **.NET Framework версии:** 4,5, 4, 3,5 SP1  
   
 ## <a name="see-also"></a>См. также
 

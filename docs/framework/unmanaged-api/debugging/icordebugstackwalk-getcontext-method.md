@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 081d1c95-152b-4797-8552-18453eb7b14b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f453e950a79b0f929ec8f813cc13eb2e01ab8c87
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 700e0af05828b9fe0a50c1aac114e840adc276b5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67760940"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131850"
 ---
 # <a name="icordebugstackwalkgetcontext-method"></a>Метод ICorDebugStackWalk::GetContext
-Возвращает контекст для текущего кадра в [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) объекта.  
+Возвращает контекст для текущего кадра в объекте [икордебугстакквалк](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) .  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,16 +36,16 @@ HRESULT GetContext([in]  ULONG32 contextFlags,
   
 ## <a name="parameters"></a>Параметры  
  `contextFlags`  
- [in] Флаги, указывающие запрошенное содержимое буфера контекста (определяется в заголовке WinNT.h).  
+ окне Флаги, указывающие запрошенное содержимое буфера контекста (определенного в WinNT. h).  
   
  `contextBufSize`  
- [in] Выделенный размер буфера контекста.  
+ окне Выделенный размер буфера контекста.  
   
  `contextSize`  
- [out] Фактический размер контекста. Это значение должно быть меньше или равен размеру буфера контекста.  
+ заполняет Фактический размер контекста. Это значение должно быть меньше или равно размеру буфера контекста.  
   
  `contextBuf`  
- [out] Буфер контекста.  
+ заполняет Буфер контекста.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Этот метод возвращает следующие конкретные результаты HRESULT, а также ошибки HRESULT, которые указывают на сбой метода.  
@@ -55,19 +53,19 @@ HRESULT GetContext([in]  ULONG32 contextFlags,
 |HRESULT|Описание|  
 |-------------|-----------------|  
 |S_OK|Контекст для текущего кадра успешно возвращен.|  
-|E_FAIL|Контекст не может быть возвращено.|  
-|HRESULT_FROM_WIN32(ERROR_INSUFFICIENT BUFFER)|Буфер контекста слишком мал.|  
-|CORDBG_E_PAST_END_OF_STACK|Указатель кадра уже находится в конце стека; Таким образом может осуществляться без дополнительных кадров.|  
+|E_FAIL|Не удалось вернуть контекст.|  
+|HRESULT_FROM_WIN32 (БУФЕР ERROR_INSUFFICIENT)|Буфер контекста слишком мал.|  
+|CORDBG_E_PAST_END_OF_STACK|Указатель фрейма уже находится в конце стека; Поэтому доступ к дополнительным кадрам невозможен.|  
   
 ## <a name="exceptions"></a>Исключения  
   
-## <a name="remarks"></a>Примечания  
- Поскольку раскрутке восстанавливается только подмножество регистров, например неизменяемые регистры, контекст может не соответствовать состоянию регистра во время вызова.  
+## <a name="remarks"></a>Заметки  
+ Поскольку при очистке восстанавливаются только подмножество регистров, например непостоянные регистры, контекст может точно не соответствовать состоянию регистрации во время вызова.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

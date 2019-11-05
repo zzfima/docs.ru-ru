@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5efaee1c-a001-4c73-9525-4160f4c71567
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ffbe571ebc3d14c12e57b1f805d77e56e97d12e1
-ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
+ms.openlocfilehash: cc9a67e16635209c3bf303e97dc3e5938943a653
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274174"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73099092"
 ---
 # <a name="cor_version-structure"></a>Структура COR_VERSION
 Содержит стандартный номер версии среды CLR, состоящий из четырех частей.  
@@ -37,7 +35,7 @@ typedef struct _COR_VERSION {
 } COR_VERSION;  
 ```  
   
-## <a name="members"></a>Участники  
+## <a name="members"></a>Члены  
   
 |Член|Описание|  
 |------------|-----------------|  
@@ -46,15 +44,15 @@ typedef struct _COR_VERSION {
 |`dwBuild`|Номер сборки.|  
 |`dwSubBuild`|Номер подсборки.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
  Если номер версии — 1.0.3705.288, то 1 — основной номер версии, 0 — дополнительный номер версии, 3705 — номер сборки, а 288 — номер подсборки.  
   
 ## <a name="requirements"></a>Требования  
- **Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug. idl  
+ **Заголовок:** CorDebug. idl  
   
- **Библиотечная** Коргуидс. lib  
+ **Библиотека:** CorGuids.lib  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

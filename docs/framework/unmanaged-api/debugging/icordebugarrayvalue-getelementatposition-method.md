@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6fd5eaa4-1997-4910-82f5-3887480db764
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4cfdaeb1bc298c10cbae01c946ffb867cef21d17
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 10584442d7e0bd61e6decaf2b494dfe39f339d6d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737548"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73088420"
 ---
 # <a name="icordebugarrayvaluegetelementatposition-method"></a>Метод ICorDebugArrayValue::GetElementAtPosition
-Получает элемент в заданной позиции, обработка массива в виде — отсчитываемый от нуля одномерный массив.  
+Возвращает элемент в заданной позиции, рассматривая массив как одномерный массив с отсчетом от нуля.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,18 +36,18 @@ HRESULT GetElementAtPosition (
   
 ## <a name="parameters"></a>Параметры  
  `nPosition`  
- [in] Позиция элемента, который требуется получить.  
+ окне Расположение извлекаемого элемента.  
   
  `ppValue`  
- [out] Указатель на адрес объекта ICorDebugValue, который представляет значение элемента.  
+ заполняет Указатель на адрес объекта ICorDebugValue, который представляет значение элемента.  
   
-## <a name="remarks"></a>Примечания  
- Макет многомерного массива следует C++ стиль макета массива.  
+## <a name="remarks"></a>Заметки  
+ Макет массива с несколькими измерениями соответствует C++ стилю макета массива.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

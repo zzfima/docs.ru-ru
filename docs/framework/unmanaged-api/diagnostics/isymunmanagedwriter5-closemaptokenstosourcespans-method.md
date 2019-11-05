@@ -2,17 +2,15 @@
 title: Метод ISymUnmanagedWriter5::CloseMapTokensToSourceSpans
 ms.date: 03/30/2017
 ms.assetid: f8a0c0a2-a11d-436c-aa85-bc110215cfd6
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6b3dea6b9710f1ee5ccf8c51261f59b2de026f5e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 43c35596d31842b85bbdc96a63413a176a59a172
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61962283"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121653"
 ---
 # <a name="isymunmanagedwriter5closemaptokenstosourcespans-method"></a>Метод ISymUnmanagedWriter5::CloseMapTokensToSourceSpans
-Закройте раздел специальные пользовательские данные для маркера в исходный диапазон, сведения о сопоставлении. После его закрытия можно добавить нет Дополнительные сведения о сопоставлении.  
+Закройте Специальный раздел настраиваемых данных, чтобы получить сведения о сопоставлении диапазона "токен-источник". После закрытия не удается добавить дополнительные сведения о сопоставлении.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -24,7 +22,7 @@ HRESULT CloseMapTokensToSourceSpans();
  Возвращает `HRESULT`.  
   
 ## <a name="requirements"></a>Требования  
- **Заголовок.** CorSym.idl CorSym.h  
+ **Заголовок:** Корсим. idl, Корсим. h  
   
 ## <a name="see-also"></a>См. также
 

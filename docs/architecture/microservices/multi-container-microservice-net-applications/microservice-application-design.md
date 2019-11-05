@@ -2,12 +2,12 @@
 title: Разработка приложения на основе микрослужб
 description: Архитектура микрослужб .NET для контейнерных приложений .NET | Понимание преимуществ и недостатков приложения на основе микрослужб для принятия взвешенного решения.
 ms.date: 10/02/2018
-ms.openlocfilehash: dc3c8ccd95505cb828383f499b9bf950e7c12a30
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 1c2fe341c62111e915df35aab818b8a980004834
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71039817"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72772062"
 ---
 # <a name="designing-a-microservice-oriented-application"></a>Разработка приложения на основе микрослужб
 

@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: c02476f9-23a2-4af7-9282-aa9c42c7429b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f1c3fd9155761528b9203a5c69dee0bde16327f7
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 16f56809b4db159c71b06b3bb9d969f8a8f8fc54
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779342"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73090827"
 ---
-# <a name="malloctype-enumeration"></a>MALLOC_TYPE - перечисление
-Содержит значения, определяющие характеристики выделяемой памяти.  
+# <a name="malloc_type-enumeration"></a>MALLOC_TYPE - перечисление
+Содержит значения, указывающие характеристики выделяемой памяти.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -35,19 +33,19 @@ typedef enum {
 } MALLOC_TYPE;  
 ```  
   
-## <a name="members"></a>Участники  
+## <a name="members"></a>Члены  
   
 |Член|Описание|  
 |------------|-----------------|  
-|`MALLOC_EXECUTABLE`|Используемый объем выделенной памяти может содержать исполняемый файл.|  
-|`MALLOC_THREADSAFE`|Используемый объем выделенной памяти является поточно ориентированной. То есть память может осуществляться несколькими потоками без всякой синхронизации.<br /><br /> Если этот флаг не установлен, вызовы объекта должны быть сериализованы.|  
+|`MALLOC_EXECUTABLE`|Выделенная память может содержать исполняемый файл.|  
+|`MALLOC_THREADSAFE`|Выделенная память является потокобезопасной. То есть доступ к памяти может осуществляться несколькими потоками без синхронизации.<br /><br /> Если этот флаг не установлен, вызовы для объекта должны быть сериализованы.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** MSCorEE.h  
+ **Заголовок:** MSCorEE. h  
   
- **Библиотека:** MSCorEE.dll  
+ **Библиотека:** MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

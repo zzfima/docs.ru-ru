@@ -8,14 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8c9bdb3149834cd3dd04c7627bca440925f5273f
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: be6f6b2d2213e96bc4e695ffbf7bc77f755ed492
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040766"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73454988"
 ---
 # <a name="whats-new-in-the-net-framework"></a>Новые возможности .NET Framework
 
@@ -1266,7 +1264,7 @@ AppContext.SetSwitch(disableCngCertificates, False)
 
 - [Список изменений в .NET Framework 4.6.1](https://go.microsoft.com/fwlink/?LinkId=622964)
 
-- [Совместимость приложений в 4.6.1](../migration-guide/application-compatibility-in-the-net-framework-4-6-1.md)
+- [Совместимость приложений в 4.6.1](../migration-guide/application-compatibility.md)
 
 - [Различия между API .NET Framework](https://go.microsoft.com/fwlink/?LinkId=622989) (GitHub)
 
@@ -1693,7 +1691,7 @@ WPF включает [пакет NuGet](https://go.microsoft.com/fwlink/?LinkID=
 
   Значение по умолчанию — 60 секунд. Если `value` имеет значение 0, внеочередные запросы немедленно отклоняются с созданием ошибки с текстом, который выглядит следующим образом.
 
-  ```
+  ```console
   Operation 'Request3|{http://tempuri.org/}IService' on service instance with identifier '2b0667b6-09c8-4093-9d02-f6c67d534292' cannot be performed at this time. Please ensure that the operations are performed in the correct order and that the binding in use provides ordered delivery guarantees.
   ```
 
@@ -2130,6 +2128,6 @@ WPF включает [пакет NuGet](https://go.microsoft.com/fwlink/?LinkID=
 
 - [.NET Framework и отдельные выпуски](../get-started/the-net-framework-and-out-of-band-releases.md)
 - [Улучшения специальных возможностей в .NET Framework](whats-new-in-accessibility.md)
-- [Новые возможности Visual Studio 2017](/visualstudio/ide/whats-new-in-visual-studio)
+- [Новые возможности Visual Studio 2017](/visualstudio/ide/whats-new-visual-studio-2017)
 - [ASP.NET](/aspnet)
 - [Новые возможности Visual C++](/cpp/what-s-new-for-visual-cpp-in-visual-studio)

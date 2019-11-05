@@ -9,12 +9,12 @@ helpviewer_keywords:
 - implementing add-in pipeline segments [WPF]
 - add-in [WPF], returns a UI
 ms.assetid: 57f274b7-4c66-4b72-92eb-81939a393776
-ms.openlocfilehash: e32987355a6c7ad32b5e0e8522dc4daa63783fdd
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: d799c91b9abdf7882a0fcd3f0b656eac553b188c
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291243"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460146"
 ---
 # <a name="how-to-create-an-add-in-that-returns-a-ui"></a>Практическое руководство. Создание надстройки, возвращающей пользовательский интерфейс
 В этом примере показано, как создать надстройку, которая возвращает Windows Presentation Foundation (WPF) в изолированное приложение WPF узла.  
@@ -25,16 +25,16 @@ ms.locfileid: "72291243"
   
  В этом примере расширения WPF выделены для модели надстройки .NET Framework, которая включает этот сценарий и предполагает следующее:  
   
-- Знание модели надстроек .NET Framework, включая конвейер, надстройку и разработку на узле. Если вы не знакомы с этими понятиями, см. раздел [надстройки и расширяемость](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)). Руководство, в котором демонстрируется реализация конвейера, надстройки и ведущего приложения, см. в разделе [Walkthrough: Создание расширяемого приложения @ no__t-0.  
+- Знание модели надстроек .NET Framework, включая конвейер, надстройку и разработку на узле. Если вы не знакомы с этими понятиями, см. раздел [надстройки и расширяемость](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)). Руководство, в котором демонстрируется реализация конвейера, надстройки и ведущего приложения, см. в разделе [Пошаговое руководство. Создание расширяемого приложения](/previous-versions/dotnet/netframework-4.0/bb788290(v%3dvs.100)).  
   
-- Сведения о расширениях WPF для модели надстроек .NET Framework, которые можно найти здесь: [Общие сведения о](wpf-add-ins-overview.md)надстройках WPF.  
+- Сведения о расширениях WPF для модели надстройки .NET Framework, которую можно найти здесь: [Обзор надстроек WPF](wpf-add-ins-overview.md).  
   
 ## <a name="example"></a>Пример  
  Чтобы создать надстройку, которая возвращает пользовательский интерфейс WPF, требуется специальный код для каждого сегмента конвейера, надстройки и ведущего приложения.  
 
 <a name="Contract"></a>   
 ## <a name="implementing-the-contract-pipeline-segment"></a>Реализация сегмента конвейера контракта  
- Метод должен быть определен контрактом для возврата пользовательского интерфейса, и его возвращаемое значение должно иметь тип <xref:System.AddIn.Contract.INativeHandleContract>. Это продемонстрировано методом `GetAddInUI` контракта `IWPFAddInContract` в следующем коде.  
+ Метод должен быть определен контрактом для возврата пользовательского интерфейса, и его возвращаемое значение должно иметь тип <xref:System.AddIn.Contract.INativeHandleContract>. Это продемонстрировано в методе `GetAddInUI` контракта `IWPFAddInContract` в следующем коде.  
   
  [!code-csharp[SimpleAddInReturnsAUISample#ContractCode](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInReturnsAUISample/CSharp/Contracts/IWPFAddInContract.cs#contractcode)]
  [!code-vb[SimpleAddInReturnsAUISample#ContractCode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SimpleAddInReturnsAUISample/VisualBasic/Contracts/IWPFAddInContract.vb#contractcode)]  
@@ -62,14 +62,14 @@ ms.locfileid: "72291243"
   
 <a name="HostSideAdapter"></a>   
 ## <a name="implementing-the-host-side-adapter-pipeline-segment"></a>Реализация сегмента конвейера адаптера приложения  
- Метод контракта возвращает <xref:System.AddIn.Contract.INativeHandleContract>, но ведущее приложение принимает <xref:System.Windows.FrameworkElement> (как указано представлением главного приложения). Следовательно, <xref:System.AddIn.Contract.INativeHandleContract> необходимо преобразовать в <xref:System.Windows.FrameworkElement> после пересечения границы изоляции. Эта работа выполняется адаптером на стороне главного приложения путем вызова <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A>, как показано в следующем коде.  
+ Метод контракта возвращает <xref:System.AddIn.Contract.INativeHandleContract>, но ведущее приложение ждет <xref:System.Windows.FrameworkElement> (как указано представлением главного приложения). Следовательно, <xref:System.AddIn.Contract.INativeHandleContract> необходимо преобразовать в <xref:System.Windows.FrameworkElement> после пересечения границы изоляции. Эта работа выполняется адаптером на стороне главного приложения путем вызова <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A>, как показано в следующем коде.  
   
  [!code-csharp[SimpleAddInReturnsAUISample#HostSideAdapterCode](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInReturnsAUISample/CSharp/HostSideAdapters/WPFAddIn_ContractToViewHostSideAdapter.cs#hostsideadaptercode)]
  [!code-vb[SimpleAddInReturnsAUISample#HostSideAdapterCode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SimpleAddInReturnsAUISample/VisualBasic/HostSideAdapters/WPFAddIn_ContractToViewHostSideAdapter.vb#hostsideadaptercode)]  
   
 <a name="AddIn"></a>   
 ## <a name="implementing-the-add-in"></a>Реализация надстройки  
- После создания адаптера надстройки и представления надстроек надстройка (`WPFAddIn1.AddIn`) должна реализовать метод `IWPFAddInView.GetAddInUI`, чтобы получить объект <xref:System.Windows.FrameworkElement> (в данном примере — <xref:System.Windows.Controls.UserControl>). Реализация <xref:System.Windows.Controls.UserControl>, `AddInUI`, показана в следующем коде.  
+ После создания адаптера надстройки и представления надстроек надстройка (`WPFAddIn1.AddIn`) должна реализовать метод `IWPFAddInView.GetAddInUI` для возврата <xref:System.Windows.FrameworkElement> объекта (<xref:System.Windows.Controls.UserControl> в этом примере). Реализация <xref:System.Windows.Controls.UserControl>, `AddInUI`, показана в следующем коде.  
   
  [!code-xaml[SimpleAddInReturnsAUISample#AddInUIMarkup](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInReturnsAUISample/CSharp/WPFAddIn1/AddInUI.xaml#addinuimarkup)]  
   
@@ -83,7 +83,7 @@ ms.locfileid: "72291243"
   
 <a name="App"></a>   
 ## <a name="implementing-the-host-application"></a>Реализация ведущего приложения  
- После создания адаптера узла и представления узла ведущее приложение может использовать модель надстройки .NET Framework, чтобы открыть конвейер, получить представление надстройки и вызвать метод `IWPFAddInHostView.GetAddInUI`. Эти действия показаны в следующем коде.  
+ При создании адаптера на стороне узла и представления узла ведущее приложение может использовать модель надстройки .NET Framework, чтобы открыть конвейер, получить представление надстройки и вызвать метод `IWPFAddInHostView.GetAddInUI`. Эти действия показаны в следующем коде.  
   
  [!code-csharp[SimpleAddInReturnsAUISample#GetUICode](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInReturnsAUISample/CSharp/Host/MainWindow.xaml.cs#getuicode)]
  [!code-vb[SimpleAddInReturnsAUISample#GetUICode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SimpleAddInReturnsAUISample/VisualBasic/Host/MainWindow.xaml.vb#getuicode)]  

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5c68375d-145d-46ef-a7c8-2dc4257472de
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 46ee21a9fd7b9267672a14107c1706af5d5cdcc5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 402a0e8808b51fd4c09b254114292d4c851b2760
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67763569"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129511"
 ---
 # <a name="icordebugmodulegetsize-method"></a>Метод ICorDebugModule::GetSize
-Возвращает размер в байтах, модуля.  
+Возвращает размер модуля (в байтах).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,14 +35,14 @@ HRESULT GetSize(
   
 ## <a name="parameters"></a>Параметры  
  `pcBytes`  
- [out] Размер модуля в байтах.  
+ заполняет Размер модуля в байтах.  
   
- Если модуль был создан из генератора образов в машинном коде (NGen.exe), размер модуля будет ноль.  
+ Если модуль был создан из генератора образов в машинном кодах (NGen. exe), размер модуля будет равен нулю.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

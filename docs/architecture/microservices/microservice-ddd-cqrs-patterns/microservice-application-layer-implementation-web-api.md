@@ -2,12 +2,12 @@
 title: Реализация прикладного уровня микрослужб с помощью веб-интерфейсов API
 description: Архитектура микрослужб .NET для контейнерных приложений .NET | Сведения о внедрении зависимостей и шаблонах медиатора, а также их реализации на прикладном уровне веб-API.
 ms.date: 10/08/2018
-ms.openlocfilehash: df304ffbe2406323e3dcf42b9eb989b02a62b28b
-ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
+ms.openlocfilehash: c73823a0449fdf81ba3d886efdef540bd1aa6121
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72249736"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73454847"
 ---
 # <a name="implement-the-microservice-application-layer-using-the-web-api"></a>Реализация прикладного уровня для микрослужб с помощью веб-API
 
@@ -398,10 +398,10 @@ public class CreateOrderCommandHandler
   <https://blog.ploeh.dk/2011/05/31/AttheBoundaries,ApplicationsareNotObject-Oriented/>
 
 - **Команды и события** \
-  <http://cqrs.nu/Faq/commands-and-events>
+  <https://cqrs.nu/Faq/commands-and-events>
 
 - **Что делает обработчик команд?** \
-  <http://cqrs.nu/Faq/command-handlers>
+  <https://cqrs.nu/Faq/command-handlers>
 
 - **Джимми Богард (Jimmy Bogard). Шаблоны команд домена — обработчики** \
   <https://jimmybogard.com/domain-command-patterns-handlers/>

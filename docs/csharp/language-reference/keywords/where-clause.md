@@ -8,12 +8,12 @@ helpviewer_keywords:
 - where keyword [C#]
 - where clause [C#]
 ms.assetid: 7f9bf952-7744-4f91-b676-cddb55d107c3
-ms.openlocfilehash: aceda6cfd33a53388a5afb046359c4dcfddfd1f8
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 15df6339cec9eabadf5aa4c184d7504c4e065032
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69602025"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73421935"
 ---
 # <a name="where-clause-c-reference"></a>Предложение where (Справочник по C#)
 
@@ -51,5 +51,5 @@ ms.locfileid: "69602025"
 - [предложение from](from-clause.md)
 - [предложение select](select-clause.md)
 - [Фильтрация данных](../../programming-guide/concepts/linq/filtering-data.md)
-- [Выражения запросов LINQ](../../programming-guide/linq-query-expressions/index.md)
-- [Приступая к работе с LINQ в C#](../../programming-guide/concepts/linq/getting-started-with-linq.md)
+- [LINQ в C#](../../linq/index.md)
+- [Приступая к работе с LINQ в C#](/dotnet/csharp/programming-guide/concepts/linq/)

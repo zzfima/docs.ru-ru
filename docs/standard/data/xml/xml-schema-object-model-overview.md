@@ -3,14 +3,12 @@ title: Общие сведения об модели объектов XML-схе
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 896a1e12-5655-42c6-8cdd-89c12862b34b
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 97e2e54c534b30c3c514c9102ded0050fc154b75
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 3ebf0cd06ebea3092ef8aa42debe0afeac9be4f2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64589793"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129147"
 ---
 # <a name="xml-schema-object-model-overview"></a>Общие сведения об модели объектов XML-схемы
 Модель SOM в Microsoft .NET Framework является богатым по возможностям API, позволяющим создавать, изменять и проверять схемы программным путем. Модель SOM работает в документах схемы XML так же, как модель DOM работает в XML-документах. Документы схемы XML - это допустимые XML-файлы, которые после загрузки в память делают осмысленными утверждения о структуре и правильности других XML-документов, соответствующих этой схеме.  

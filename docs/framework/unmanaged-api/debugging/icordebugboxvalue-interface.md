@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3d3ae7e2-97d4-46de-a2c3-cb78f3490f9d
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c21e5bb70815fa54d1b458894ca33becde204758
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a40e12655106cca01add065c2f95384b0eb1a286
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69912926"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122811"
 ---
 # <a name="icordebugboxvalue-interface"></a>Интерфейс ICorDebugBoxValue
 
@@ -33,17 +31,17 @@ ms.locfileid: "69912926"
 |------------|-----------------|  
 |[Метод GetObject](../../../../docs/framework/unmanaged-api/debugging/icordebugboxvalue-getobject-method.md)|Возвращает указатель интерфейса на упакованный экземпляр "ICorDebugObjectValue".|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
   
 > [!NOTE]
 > Этот интерфейс не поддерживает удаленные вызовы между компьютерами или между процессами.  
   
 ## <a name="requirements"></a>Требования  
- **Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug. idl, CorDebug. h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
- **Библиотечная** Коргуидс. lib  
+ **Библиотека:** CorGuids.lib  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

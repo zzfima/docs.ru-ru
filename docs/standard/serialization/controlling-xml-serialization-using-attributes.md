@@ -15,19 +15,19 @@ helpviewer_keywords:
 - serialization, examples
 - serialization, attributes
 ms.assetid: 47d4c39d-30e1-4c7b-8a2e-301325390647
-ms.openlocfilehash: 54660244c1b3cca8cb75539edbe23628b370afd5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e089924900196ae369de1becfe3d0b8f0a00b79c
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61934513"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459283"
 ---
 # <a name="controlling-xml-serialization-using-attributes"></a>Управление сериализацией XML с использованием атрибутов
 
-Атрибуты можно использовать для управления сериализацией XML объекта или для создания альтернативного потока XML из того же набора классов. Дополнительные сведения о создании альтернативного потока XML см. в разделе [как: Указание имени альтернативного элемента для XML Stream](how-to-specify-an-alternate-element-name-for-an-xml-stream.md).
+Атрибуты можно использовать для управления сериализацией XML объекта или для создания альтернативного потока XML из того же набора классов. Дополнительные сведения о создании альтернативного потока XML см. в разделе [Практическое руководство. Указание имени альтернативного элемента для потока XML](how-to-specify-an-alternate-element-name-for-an-xml-stream.md).
 
 > [!NOTE]
-> Если сгенерированные XML должны удовлетворять раздела 5 документа консорциума World Wide Web (W3C) [Simple Object Access Protocol (SOAP) 1.1](https://www.w3.org/TR/2000/NOTE-SOAP-20000508/), используйте атрибуты, указанные в [атрибуты, элемент управления в кодировке SOAP Сериализация](attributes-that-control-encoded-soap-serialization.md).
+> Если создаваемый XML-код должен соответствовать разделу 5 документа консорциум W3C (W3C), озаглавленного " [простой протокол доступа к объектам (SOAP) 1,1](https://www.w3.org/TR/2000/NOTE-SOAP-20000508/)", используйте атрибуты, перечисленные в разделе [атрибуты, управляющие СЕРИАЛИЗАЦИЕЙ кодированной SOAP](attributes-that-control-encoded-soap-serialization.md).
 
 По умолчанию имя элемента XML определяется классом или именем члена. Как показано в следующем примере, в простом классе с именем `Book` полю с именем `ISBN` будет присвоен тег элемента XML \<ISBN>.
 
@@ -70,7 +70,7 @@ public class TaxRates {
 
 ## <a name="controlling-array-serialization"></a>Управление сериализацией массивов
 
-Атрибуты <xref:System.Xml.Serialization.XmlArrayAttribute> и <xref:System.Xml.Serialization.XmlArrayItemAttribute> предназначены для управления сериализацией массивов. С помощью этих атрибутов можно управлять именем элемента, пространство имен и тип данных схемы XML (XSD) (как определено в документе консорциума World Wide Web Consortium [www.w3.org] под названием «XML Schema Part 2: Типы данных»). Также можно указать типы, которые можно включить в массив.
+Атрибуты <xref:System.Xml.Serialization.XmlArrayAttribute> и <xref:System.Xml.Serialization.XmlArrayItemAttribute> предназначены для управления сериализацией массивов. С помощью этих атрибутов можно управлять именем элемента, пространством имен и типом данных схемы XML (XSD) (согласно документу "Схема XML, часть 2: типы данных" консорциума World Wide Web (www.w3.org)). Также можно указать типы, которые можно включить в массив.
 
 <xref:System.Xml.Serialization.XmlArrayAttribute> определяет свойства включающего элемента XML, который создается при сериализации массива. Например, по умолчанию при сериализации массива ниже будет создан элемент XML с именем `Employees`. Элемент `Employees` будет содержать серию элементов, названную в соответствии с типом массива `Employee`.
 
@@ -202,7 +202,7 @@ public class Manager:Employee {
     <Employee xsi:type = "Manager">
         <Name>Ann</Name>
         <Level>3</Level>
-    <Employee>
+    </Employee>
 </Employees>
 </Group>
 ```
@@ -241,7 +241,7 @@ public class Group {
 </Group>
 ```
 
-Другим способом различения двух потоков XML является использование инструмента определения схемы XML, с помощью которого создаются файлы документов схемы XML (XSD) из скомпилированного кода. (Дополнительные сведения по использованию этого средства см. в разделе [Инструмент определения схемы XML и сериализация XML](the-xml-schema-definition-tool-and-xml-serialization.md).) Если к полю не применяется никакой атрибут, схема описывает элемент следующим образом.
+Другим способом различения двух потоков XML является использование инструмента определения схемы XML, с помощью которого создаются файлы документов схемы XML (XSD) из скомпилированного кода. (Дополнительные сведения об использовании этого средства см. [в разделе средство определения схемы XML и XML-сериализация](the-xml-schema-definition-tool-and-xml-serialization.md).) Если к полю не применен атрибут, схема описывает элемент следующим образом.
 
 ```xml
 <xs:element minOccurs="0" maxOccurs ="1" name="Employees" type="ArrayOfEmployee" />
@@ -321,6 +321,6 @@ public class Group {
 - [Атрибуты управления сериализацией с кодировкой SOAP](attributes-that-control-encoded-soap-serialization.md)
 - [Введение в сериализацию XML](introducing-xml-serialization.md)
 - [Примеры сериализации XML](examples-of-xml-serialization.md)
-- [Практическое руководство. Указание имени альтернативного элемента для XML Stream](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
+- [Практическое руководство. Указание имени альтернативного элемента для потока XML](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
 - [Практическое руководство. Сериализация объекта](how-to-serialize-an-object.md)
 - [Практическое руководство. Десериализация объекта](how-to-deserialize-an-object.md)

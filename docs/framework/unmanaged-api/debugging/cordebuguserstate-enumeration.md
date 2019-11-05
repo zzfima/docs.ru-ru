@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5f6c2bcd-8102-4e3b-abc5-86ab0bd62def
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 76fbbb3f924f610b604586dca78cab344217b544
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d0394d511197c8d0aaa366ce7b791216a3d226bc
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739464"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120192"
 ---
 # <a name="cordebuguserstate-enumeration"></a>Перечисление CorDebugUserState
 Указывает состояние пользователя потока.  
@@ -42,29 +40,29 @@ typedef enum CorDebugUserState {
 } CorDebugUserState;  
 ```  
   
-## <a name="members"></a>Участники  
+## <a name="members"></a>Члены  
   
-|Значение|Описание|  
+|значения|Описание|  
 |-----------|-----------------|  
-|`USER_STOP_REQUESTED`|Запрошено завершение выполнения потока.|  
-|`USER_SUSPEND_REQUESTED`|Приостановка потока был запрошен.|  
+|`USER_STOP_REQUESTED`|Запрошено завершение потока.|  
+|`USER_SUSPEND_REQUESTED`|Запрошена приостановка потока.|  
 |`USER_BACKGROUND`|Поток выполняется в фоновом режиме.|  
-|`USER_UNSTARTED`|Поток не начали выполняться.|  
+|`USER_UNSTARTED`|Поток не начал выполнять.|  
 |`USER_STOPPED`|Поток был завершен.|  
-|`USER_WAIT_SLEEP_JOIN`|Поток ожидает другого потока для выполнения задачи.|  
+|`USER_WAIT_SLEEP_JOIN`|Поток ожидает завершения задачи другим потоком.|  
 |`USER_SUSPENDED`|Поток был приостановлен.|  
-|`USER_UNSAFE_POINT`|Поток находится в небезопасной точке. То есть поток находится в точке выполнения, в которой он может блокировать сбора мусора.<br /><br /> Отладка событий могут доставляться в небезопасных точках, но приостановка потока в такой точке вероятнее всего вызовет взаимоблокировку до возобновления потока. Безопасные и небезопасные точки определяются just-in-time (JIT) и реализации сбора мусора.|  
-|`USER_THREADPOOL`|Поток может из пула потоков.|  
+|`USER_UNSAFE_POINT`|Поток находится в ненадежной точке. Это значит, что поток находится в точке выполнения, где он может блокировать сборку мусора.<br /><br /> События отладки могут быть отправлены из ненадежных точек, но приостановка потока в незащищенной точке, скорее всего, вызовет взаимоблокировку до возобновления потока. Надежные и незащищенные точки определяются реализацией JIT и сборки мусора.|  
+|`USER_THREADPOOL`|Поток из пула потоков.|  
   
-## <a name="remarks"></a>Примечания  
- Пользовательское состояние потока — используется состояние с потока при его анализа отладчиком. Поток может иметь сочетание пользовательских состояний.  
+## <a name="remarks"></a>Заметки  
+ Пользовательское состояние потока — это состояние, которое поток имеет при его проверке отладчиком. Поток может иметь сочетание пользовательских состояний.  
   
- Используйте [ICorDebugThread::GetUserState](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-getuserstate-method.md) метод для извлечения состояния пользователя потока.  
+ Чтобы получить состояние пользователя потока, используйте метод [ICorDebugThread:: жетусерстате](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-getuserstate-method.md) .  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

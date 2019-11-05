@@ -2,23 +2,23 @@
 title: Пример WebContentTypeMapper
 ms.date: 03/30/2017
 ms.assetid: a4fe59e7-44d8-43c6-a1f8-40c45223adca
-ms.openlocfilehash: 1b15651859fd17673caf898df02c2b74a85d7612
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: a259f459606c9745fe10276d967946eb675a7f5e
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70038542"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423800"
 ---
 # <a name="webcontenttypemapper-sample"></a>Пример WebContentTypeMapper
 В этом примере показано, как сопоставлять новые типы содержимого с форматами текста сообщений Windows Communication Foundation (WCF).  
   
- <xref:System.ServiceModel.Description.WebHttpEndpoint> Элемент подключается к кодировщику веб-сообщений, который позволяет WCF принимать сообщения JSON, XML или необработанные двоичные данные в той же конечной точке. Кодировщик определяет формат тела сообщения, просмотрев тип содержимого HTTP запроса. В этом примере показан класс <xref:System.ServiceModel.Channels.WebContentTypeMapper>, который позволяет пользователю управлять сопоставлением типа содержимого и формата тела.  
+ Элемент <xref:System.ServiceModel.Description.WebHttpEndpoint> подключается к кодировщику веб-сообщений, который позволяет WCF принимать сообщения JSON, XML или необработанные двоичные данные в той же конечной точке. Кодировщик определяет формат тела сообщения, просмотрев тип содержимого HTTP запроса. В этом примере показан класс <xref:System.ServiceModel.Channels.WebContentTypeMapper>, который позволяет пользователю управлять сопоставлением типа содержимого и формата тела.  
   
  WCF предоставляет набор сопоставлений по умолчанию для типов содержимого. Например, `application/json` сопоставляется с JSON, а `text/xml` сопоставляет с XML. Любой тип содержимого, который не сопоставляется с JSON или XML, сопоставляется с необработанным двоичным форматом.  
   
  В некоторых сценариях (например, интерфейсы API внедрения) разработчик службы не управляет типом содержимого, возвращаемым клиентом. Например, клиенты могут возвращать JSON как `text/javascript`, а не `application/json`. В этом случае разработчик службы должен предоставить тип, унаследованный от <xref:System.ServiceModel.Channels.WebContentTypeMapper>, для правильной обработки данного типа содержимого, как показано в следующем образце кода.  
   
-```  
+```csharp  
 public class JsonContentTypeMapper : WebContentTypeMapper  
 {  
     public override WebContentFormat  
@@ -58,13 +58,13 @@ public class JsonContentTypeMapper : WebContentTypeMapper
   
 2. Создайте решение Вебконтенттипемапперсампле. sln, как описано в разделе [Создание примеров Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3. Перейдите к `http://localhost/ServiceModelSamples/JCTMClientPage.htm` разделу (не открывайте жктмклиентпаже. htm в браузере из каталога проекта).  
+3. Перейдите к `http://localhost/ServiceModelSamples/JCTMClientPage.htm` (не открывайте Жктмклиентпаже. htm в браузере в каталоге проекта).  
   
 > [!IMPORTANT]
 > Образцы уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).  
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Если этот каталог не существует, перейдите к [примерам Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] и примеры. Этот образец расположен в следующем каталоге.  
+> Если этот каталог не существует, перейдите к [примерам Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Samples. Этот образец расположен в следующем каталоге.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Ajax\WebContentTypeMapper`  

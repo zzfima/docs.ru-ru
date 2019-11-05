@@ -7,21 +7,21 @@ helpviewer_keywords:
 - sectionGroup Element
 - <sectionGroup> Element
 ms.assetid: 6c27f9e2-809c-4bc9-aca9-72f90360e7a3
-author: rpetrusha
+author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4e28e8ccea1090e6a5704b541e09dc11681278ed
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 9113811557ded3a580a0bbacb24f2fe7e8d05ccf
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69920653"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73114786"
 ---
-# <a name="sectiongroup-element-for-configsections"></a>\<элемент sectionGroup > для \<> configSections
+# <a name="sectiongroup-element-for-configsections"></a>элемент \<sectionGroup > для \<configSections >
 
 Определяет пространство имен для разделов конфигурации.
 
 [ **\<configuration>** ](configuration-element.md)   
-&nbsp;&nbsp;[ **\<> configSections**](configsections-element-for-configuration.md)   
+&nbsp;&nbsp;[ **\<configSections >** ](configsections-element-for-configuration.md)   
 &nbsp;&nbsp;&nbsp;&nbsp; **\<sectionGroup >**
 
 ## <a name="syntax"></a>Синтаксис
@@ -42,17 +42,17 @@ ms.locfileid: "69920653"
 
 |     | Описание |
 | --- | ----------- |
-| [элемент  **>\<configSections**](configsections-element-for-configuration.md) | Содержит раздел конфигурации и объявления пространств имен. |
+| [ **\<configSections >** Дерев](configsections-element-for-configuration.md) | Содержит раздел конфигурации и объявления пространств имен. |
 
 ## <a name="child-elements"></a>Дочерние элементы
 
 |     | Описание |
 | --- | ----------- |
-| [ **\<раздел >** ](section-element.md) | Содержит объявление раздела конфигурации. |
+| [ **\<разделе >** ](section-element.md) | Содержит объявление раздела конфигурации. |
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
-Объявление группы разделов создает тег контейнера для разделов конфигурации и гарантирует отсутствие конфликтов имен с разделами конфигурации, определенными другими пользователями. Элементы  **\<sectionGroup >** можно вкладывать друг в друга.
+Объявление группы разделов создает тег контейнера для разделов конфигурации и гарантирует отсутствие конфликтов имен с разделами конфигурации, определенными другими пользователями. Элементы **\<sectionGroup >** можно вкладывать друг в друга.
 
 ## <a name="example"></a>Пример
 

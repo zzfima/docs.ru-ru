@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5396c4c3-4ec3-4e3a-a38d-d65b21f0a2fc
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9920627ed193e9741d65fddfc54f325cb1d3758c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6e048d03e54d4f97cd45935906ea4e4744468db9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761048"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131518"
 ---
 # <a name="icordebugmanagedcallback2functionremapcomplete-method"></a>Метод ICorDebugManagedCallback2::FunctionRemapComplete
-Уведомляет отладчик, что выполнение кода переключил до новой версии редактируемой функции.  
+Уведомляет отладчик о том, что выполнение кода переключено на новую версию измененной функции.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,21 +37,21 @@ HRESULT FunctionRemapComplete (
   
 ## <a name="parameters"></a>Параметры  
  `pAppDomain`  
- [in] Указатель на объект ICorDebugAppDomain, который представляет домен приложения, содержащий измененный функцию.  
+ окне Указатель на объект ICorDebugAppDomain, представляющий домен приложения, содержащий измененную функцию.  
   
  `pThread`  
- [in] Указатель на объект ICorDebugThread, представляющий поток, на котором была обнаружена точка останова преобразования цветов.  
+ окне Указатель на объект ICorDebugThread, представляющий поток, в котором была обнаружена точка останова сопоставления.  
   
  `pFunction`  
- [in] Указатель на объект ICorDebugFunction, представляющий версию функции, в настоящее время выполняется в потоке.  
+ окне Указатель на объект ICorDebugFunction, представляющий версию функции, выполняемой в данный момент в потоке.  
   
-## <a name="remarks"></a>Примечания  
- Этот обратный вызов дает отладчику возможность создать любое средство организации пошагового режима, существовавшие ранее.  
+## <a name="remarks"></a>Заметки  
+ Этот обратный вызов дает возможность отладчику повторно создавать все ранее существовавшие пошаговые шаги.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: e28e51d3-8f73-494f-bcd4-48bac239fbe1
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 64de770676cdd02375e854acb8af7feecb28dfeb
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9677fd14f50cf93eac7eeaef784082d45e8884c7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67754107"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137691"
 ---
 # <a name="icordebugframegetchain-method"></a>Метод ICorDebugFrame::GetChain
-Возвращает указатель на этот кадр является частью цепочки.  
+Возвращает указатель на цепочку, частью которой является этот кадр.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,12 +35,12 @@ HRESULT GetChain (
   
 ## <a name="parameters"></a>Параметры  
  `ppChain`  
- [out] Указатель на адрес ICorDebugChain объект, представляющий цепочку, содержащую этого кадра.  
+ заполняет Указатель на адрес объекта ICorDebugChain, который представляет цепочку, содержащую этот кадр.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

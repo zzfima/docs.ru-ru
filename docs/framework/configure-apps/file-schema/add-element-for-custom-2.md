@@ -1,5 +1,5 @@
 ---
-title: <add>элемент для NameValueSectionHandler и DictionarySectionHandler
+title: элемент <add> для NameValueSectionHandler и DictionarySectionHandler
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/sectionName/add
@@ -7,22 +7,22 @@ helpviewer_keywords:
 - add Element
 - <add> Element
 ms.assetid: 0d4ddb53-eb2b-49c0-9c33-a8dec5c39b46
-author: rpetrusha
+author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ec6d5045580e887de5f05a05c8f39fa62c6e3f2e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a9e7d68530ae1f0666fc4940ffe7605c3bf8dfe3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69921342"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73119616"
 ---
-# <a name="add-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>\<Добавление элемента > для NameValueSectionHandler и DictionarySectionHandler
+# <a name="add-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>\<добавить элемент > для NameValueSectionHandler и DictionarySectionHandler
 
-Добавляет настраиваемые параметры приложения. Каждый тег добавления > содержит пару "ключ-значение".  **\<**
+Добавляет настраиваемые параметры приложения. Каждый **\<добавляемый тег >** содержит пару "ключ-значение".
 
 [ **\<configuration>** ](configuration-element.md)   
 &nbsp;&nbsp;[ **\<sectionName >** ](custom-element-2.md)   
-&nbsp;&nbsp;&nbsp;&nbsp; **\<Добавить >**
+&nbsp;&nbsp;&nbsp;&nbsp; **\<добавить >**
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -41,7 +41,7 @@ ms.locfileid: "69921342"
 
 | Элемент | Описание |
 | ------- | ------------|
-| [элемент  **>\<sectionName**](custom-element-2.md) | Определяет параметры для пользовательских разделов конфигурации, <xref:System.Configuration.NameValueSectionHandler> использующих <xref:System.Configuration.DictionarySectionHandler> классы и. |
+| [ **\<sectionName >** Дерев](custom-element-2.md) | Определяет параметры для пользовательских разделов конфигурации, использующих классы <xref:System.Configuration.NameValueSectionHandler> и <xref:System.Configuration.DictionarySectionHandler>. |
 
 ## <a name="child-elements"></a>Дочерние элементы
 
@@ -49,7 +49,7 @@ ms.locfileid: "69921342"
 
 ## <a name="example"></a>Пример
 
-В следующем примере показано, как определить пользовательский раздел конфигурации и использовать  **\<элемент Add >** , чтобы поместить параметры в раздел:
+В следующем примере показано, как определить пользовательский раздел конфигурации и использовать элемент **\<add >** , чтобы поместить параметры в раздел:
 
 ```xml
 <configuration>

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: b1edba68-9c36-4f69-be9f-678ce0b33480
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: cf9340977c55c54b9a4683115000293d1c98dfcf
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3ab4da3fcf43731587dae6f3a8e82ea48c5ee1ec
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67767459"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129644"
 ---
 # <a name="icordebugprocess5enumerateheapregions-method"></a>Метод ICorDebugProcess5::EnumerateHeapRegions
-Возвращает перечислитель для диапазона памяти управляемой кучи.  
+Возвращает перечислитель для диапазонов памяти управляемой кучи.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,19 +35,19 @@ HRESULT EnumerateHeapRegions(
   
 ## <a name="parameters"></a>Параметры  
  `ppRegions`  
- [out] Указатель на адрес [ICorDebugHeapSegmentEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugheapsegmentenum-interface.md) объект интерфейса, который является перечислителем для диапазонов адресов памяти, в котором находятся объекты в управляемой куче.  
+ заполняет Указатель на адрес объекта интерфейса [икордебугхеапсегментенум](../../../../docs/framework/unmanaged-api/debugging/icordebugheapsegmentenum-interface.md) , который является перечислителем для диапазонов памяти, в которых объекты находятся в управляемой куче.  
   
-## <a name="remarks"></a>Примечания  
- Перед вызовом `ICorDebugProcess5::EnumerateHeapRegions` метод следует вызывать [ICorDebugProcess5::GetGCHeapInformation](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-getgcheapinformation-method.md) метод и проверьте значение `areGCStructuresValid` поле возвращенного [COR_HEAPINFO](../../../../docs/framework/unmanaged-api/debugging/cor-heapinfo-structure.md) Объект, чтобы убедиться, что в ее текущем состоянии куче сбора мусора является перечислимым. Кроме того `ICorDebugProcess5::EnumerateHeapRegions` возвращает метод `E_FAIL` при присоединении слишком раннем этапе жизни процесса, прежде чем памяти регионах создаются.  
+## <a name="remarks"></a>Заметки  
+ Перед вызовом метода `ICorDebugProcess5::EnumerateHeapRegions` необходимо вызвать метод [метод ICorDebugProcess5:: GetGCHeapInformation](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-getgcheapinformation-method.md) и проверить значение поля `areGCStructuresValid` возвращенного объекта [COR_HEAPINFO](../../../../docs/framework/unmanaged-api/debugging/cor-heapinfo-structure.md) , чтобы убедиться, что куча сборки мусора в ее Текущее состояние является перечислимым. Кроме того, метод `ICorDebugProcess5::EnumerateHeapRegions` возвращает `E_FAIL`, если во время существования процесса присоединяется слишком рано, до создания областей памяти.  
   
- Этот метод гарантированно перечисления всех областей памяти, которые могут содержать управляемые объекты, но это не гарантирует, что управляемые объекты располагаются в этих регионах. [ICorDebugHeapSegmentEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugheapsegmentenum-interface.md) объект коллекции могут быть пустой или зарезервированный памяти регионы.  
+ Этот метод гарантирует перечисление всех областей памяти, которые могут содержать управляемые объекты, но не гарантирует, что управляемые объекты фактически находятся в этих регионах. Объект коллекции [икордебугхеапсегментенум](../../../../docs/framework/unmanaged-api/debugging/icordebugheapsegmentenum-interface.md) может включать в себя пустые или зарезервированные регионы памяти.  
   
- [ICorDebugHeapSegmentEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugheapsegmentenum-interface.md) объект интерфейс является производным от ICorDebugEnum интерфейс, который позволяет перечислять стандартный перечислитель [COR_SEGMENT](../../../../docs/framework/unmanaged-api/debugging/cor-segment-structure.md) объектов. Каждый [COR_SEGMENT](../../../../docs/framework/unmanaged-api/debugging/cor-segment-structure.md) объект предоставляет сведения о диапазоне памяти конкретного сегмента, а также поколение объектов, в этом сегменте.  
+ Объект интерфейса [икордебугхеапсегментенум](../../../../docs/framework/unmanaged-api/debugging/icordebugheapsegmentenum-interface.md) является стандартным перечислителем, производным от интерфейса ICorDebugEnum, который позволяет перечислять объекты [COR_SEGMENT](../../../../docs/framework/unmanaged-api/debugging/cor-segment-structure.md) . Каждый объект [COR_SEGMENT](../../../../docs/framework/unmanaged-api/debugging/cor-segment-structure.md) предоставляет сведения о диапазоне памяти определенного сегмента вместе с поколением объектов в этом сегменте.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

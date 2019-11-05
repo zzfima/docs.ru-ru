@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: b600b3a2-9908-42d8-8093-ab6f39e9a2c9
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9a8e5a1813a81a84eac612a53964d39b48f0c536
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: cee095003c136142052b8f946fa8227927c80ee2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67746214"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73096871"
 ---
 # <a name="icordebugnativeframegetlocalmemoryvalue-method"></a>Метод ICorDebugNativeFrame::GetLocalMemoryValue
-Получает значение аргумента или локальной переменной, которая хранится в заданном расположении памяти для данного кадра машинного кода.  
+Возвращает значение аргумента или локальной переменной, которая хранится в указанном месте в памяти для этого машинного кадра.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,21 +38,21 @@ HRESULT GetLocalMemoryValue (
   
 ## <a name="parameters"></a>Параметры  
  `address`  
- [in] Объект `CORDB_ADDRESS` значение, указывающее область памяти, содержащий значение.  
+ окне Значение `CORDB_ADDRESS`, указывающее место в памяти, содержащее значение.  
   
  `cbSigBlob`  
- [in] Целое число, указывающее размер двоичную подпись метаданных которого ссылается `pvSigBlob` параметра.  
+ окне Целое число, указывающее размер подписи двоичных метаданных, на которую ссылается параметр `pvSigBlob`.  
   
  `pvSigBlob`  
- [in] Объект `PCCOR_SIGNATURE` значение, которое указывает на двоичную подпись метаданных типа значения.  
+ окне Значение `PCCOR_SIGNATURE`, которое указывает на сигнатуру двоичных метаданных для типа значения.  
   
  `ppValue`  
- [out] Указатель на адрес объекта «ICorDebugValue», представляющего извлеченное значение, которое хранится в указанной области памяти.  
+ заполняет Указатель на адрес объекта ICorDebugValue, представляющего извлеченное значение, хранящееся в указанном расположении в памяти.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

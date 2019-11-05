@@ -8,12 +8,12 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-ms.openlocfilehash: 64f8d536212cd379337ad437c1e15ae356890ddb
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: f5630f7947125dd5eb8a5b58e79add1aec4c689b
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72581964"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774921"
 ---
 # <a name="whats-new-for-visual-basic"></a>Новые возможности Visual Basic
 
@@ -21,45 +21,45 @@ ms.locfileid: "72581964"
 
 ## <a name="current-version"></a>Текущая версия
 
-Visual Basic 16.0/Visual Studio 2019 версии 16.0  
+Visual Basic 16.0/Visual Studio 2019 версии 16.0\
 Описание новых функций см. в статье о [Visual Basic 16.0](#visual-basic-160).
 
 ## <a name="previous-versions"></a>Предыдущие версии
 
-Visual Basic 15.8/Visual Studio 2017 версии 15.8  
+Visual Basic 15.8/Visual Studio 2017 версии 15.8\
 Описание новых функций см. в статье о [Visual Basic 15.8](#visual-basic-158).
 
-Visual Basic 15.5 / Visual Studio 2017 версии 15.5  
+Visual Basic 15.5/Visual Studio 2017 версии 15.5\
 Описание новых функций см. в статье о [Visual Basic 15.5](#visual-basic-155).
 
-Visual Basic 15.3 / Visual Studio 2017 версии 15.3  
+Visual Basic 15.3/Visual Studio 2017 версии 15.3\
 Описание новых функций см. в статье о [Visual Basic 15.3](#visual-basic-153).
 
-Visual Basic 2017 / Visual Studio 2017  
+Visual Basic 2017/Visual Studio 2017\
 Описание новых функций см. в статье о [Visual Basic 2017](#visual-basic-2017).
 
-Visual Basic / Visual Studio 2015  
+Visual Basic/Visual Studio 2015\
 Описание новых функций см. в статье о [Visual Basic 14](#visual-basic-14).
 
-Visual Basic / Visual Studio 2013  
+Visual Basic/Visual Studio 2013\
 CTP-версии платформы компиляции .NET (Roslyn)
 
-Visual Basic / Visual Studio 2012  
+Visual Basic/Visual Studio 2012\
 Ключевые слова `Async` и `await`, итераторы, атрибуты сведений о вызывающем объекте
 
-Visual Basic, Visual Studio 2010  
+Visual Basic, Visual Studio 2010\
 Автоматически реализуемые свойства, инициализаторы коллекций, неявное продолжение строки, динамические типы, универсальная ковариантность и контрвариантность, доступ к глобальному пространству имен
 
-Visual Basic / Visual Studio 2008  
+Visual Basic/Visual Studio 2008\
 Интегрированные запросы языка (LINQ), XML-литералы, определение локального типа, инициализаторы объектов, анонимные типы, методы расширений, определение локального типа `var`, лямбда-выражения, оператор `if`, типы значений, допускающие значение NULL
 
-Visual Basic / Visual Studio 2005  
+Visual Basic/Visual Studio 2005\
 Тип `My` и вспомогательные типы (доступ к приложению, компьютеру, файловой системе, сети)
 
-Visual Basic/Visual Studio .NET 2003  
+Visual Basic/Visual Studio .NET 2003\
 Операторы поразрядного сдвига, объявление переменных цикла
 
-Visual Basic/Visual Studio .NET 2002  
+Visual Basic/Visual Studio .NET 2002\
 Первый выпуск Visual Basic .NET
 
 ## <a name="visual-basic-160"></a>Visual Basic 16.0
@@ -108,7 +108,6 @@ Dim b1 As Byte = CByte(Int(d))                 ' Result: 173
 Dim s1 AS Short = CShort(Math.Truncate(s))     ' Result: 173
 Dim i2 As Integer = CInt(Math.Ceiling(d))      ' Result: 174
 Dim i3 As Integer = CInt(Math.Round(s))        ' Result: 174
-
 ```
 
 Обратите внимание, что значения с плавающей запятой усекаются, а не округляются.
@@ -237,7 +236,7 @@ Dim number As Integer = &H_C305_F860
 
 **Свойства интерфейса Readonly**
 
-С помощью свойства readwrite можно реализовать свойства интерфейса readonly.  Интерфейс гарантирует минимальную функциональность и не препятствует функционированию реализующего класса, который разрешает задавать значения для свойства.
+С помощью свойства readwrite можно реализовать свойства интерфейса readonly. Интерфейс гарантирует минимальную функциональность и не препятствует функционированию реализующего класса, который разрешает задавать значения для свойства.
 
 [TypeOf \<выражение> IsNot \<тип>](../../visual-basic/language-reference/operators/typeof-operator.md)
 

@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: a9f7f824-64a1-408d-8607-91c7f19d21fe
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4015ecec38466650488a653641f5af93c4680f22
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 76c033b11f3212241827d74f4fe18ee881f20b64
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779594"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127036"
 ---
 # <a name="getversionfromprocess-function"></a>Функция GetVersionFromProcess
-Получает номер версии общей языковой среды выполнения (CLR), связанный с указанным дескриптором процесса.  
+Возвращает номер версии общеязыковой среды выполнения (CLR), связанной с указанным обработчиком процесса.  
   
- Эта функция является устаревшим в .NET Framework 4.  
+ Эта функция является устаревшей в .NET Framework 4.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -42,33 +40,33 @@ HRESULT GetVersionFromProcess (
   
 ## <a name="parameters"></a>Параметры  
  `hProcess`  
- [in] Дескриптор процесса.  
+ окне Обработчик процесса.  
   
  `pVersion`  
- [out] Буфер, содержащий строку номера версии после успешного завершения метода.  
+ заполняет Буфер, содержащий строку номера версии после успешного завершения метода.  
   
  `cchBuffer`  
- [in] Длина буфера версии.  
+ окне Длина буфера версии.  
   
  `pdwLength`  
- [out] Указатель на длину строку номера версии.  
+ заполняет Указатель на длину строки номера версии.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Этот метод возвращает стандартные коды ошибок объектов модели компонентов (COM), как определено в файле WinError.h, помимо следующих значений.  
+ Этот метод возвращает коды стандартных ошибок модели COM, как определено в файле WinError. h, в дополнение к следующим значениям.  
   
 |Код возврата|Описание|  
 |-----------------|-----------------|  
 |S_OK|Метод завершился успешно.|  
-|E_INVALIDARG|`pVersion` имеет значение null и `cchBuffer` не равно null, или наоборот.<br /><br /> -или-<br /><br /> `hProcess` не является допустимым дескриптором к процессу.<br /><br /> -или-<br /><br /> Среда CLR не загружается.|  
-|ERROR_INSUFFICIENT_BUFFER|`cchBuffer` равно null или меньше, чем длина строки версии.|  
-|E_NOTIMPL|Этот метод не доступен в операционной системе Microsoft Windows 95, Microsoft Windows 98 или Microsoft Windows Millennium Edition.|  
+|E_INVALIDARG|`pVersion` имеет значение null, а `cchBuffer` не равно null или наоборот.<br /><br /> \- или -<br /><br /> `hProcess` не является допустимым маркером для процесса.<br /><br /> \- или -<br /><br /> Среда CLR не загружена.|  
+|ERROR_INSUFFICIENT_BUFFER|`cchBuffer` имеет значение null или меньше длины строки версии.|  
+|E_NOTIMPL|Этот метод недоступен в операционной системе Microsoft Windows 95, Microsoft Windows 98 или Microsoft Windows Millennium Edition.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** MSCorEE.h  
+ **Заголовок:** MSCorEE. h  
   
- **Библиотека:** MSCorEE.dll  
+ **Библиотека:** MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

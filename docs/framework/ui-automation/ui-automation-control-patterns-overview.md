@@ -5,12 +5,12 @@ helpviewer_keywords:
 - control patterns
 - UI Automation, control patterns
 ms.assetid: cc229b33-234b-469b-ad60-f0254f32d45d
-ms.openlocfilehash: 548828f8e9948e000a15fd19a4475ef715e110d8
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: acb10df0da97954f4c2f7451d75d2f3042938e48
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039467"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458097"
 ---
 # <a name="ui-automation-control-patterns-overview"></a>Общие сведения о шаблонах элементов управления модели автоматизации пользовательского интерфейса
 > [!NOTE]
@@ -55,8 +55,8 @@ ms.locfileid: "73039467"
 |---------------------------|------------------------|-----------------|  
 |<xref:System.Windows.Automation.DockPattern>|<xref:System.Windows.Automation.Provider.IDockProvider>|Используется для элементов управления, которые могут быть закреплены в контейнере закрепления. Например, это могут быть панели инструментов или палитры инструментов.|  
 |<xref:System.Windows.Automation.ExpandCollapsePattern>|<xref:System.Windows.Automation.Provider.IExpandCollapseProvider>|Используется для элементов управления, которые можно разворачивать и сворачивать. Например, это могут быть пункты меню в приложении, такие как меню **Файл** .|  
-|<xref:System.Windows.Automation.GridPattern>|<xref:System.Windows.Automation.Provider.IGridProvider>|Используется для элементов управления, которые поддерживают функциональные возможности сетки, такие как изменение размера и перемещение в указанную ячейку. Например, это могут быть простые таблицы без заголовков в [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)]или представление с крупными значками в проводнике.|  
-|<xref:System.Windows.Automation.GridItemPattern>|<xref:System.Windows.Automation.Provider.IGridItemProvider>|Используется для элементов управления, имеющих ячейки в сетках. Отдельные ячейки должны поддерживать шаблон GridItem. Например, это может быть каждая ячейка в подробном представлении [!INCLUDE[TLA#tla_winexpl](../../../includes/tlasharptla-winexpl-md.md)] .|  
+|<xref:System.Windows.Automation.GridPattern>|<xref:System.Windows.Automation.Provider.IGridProvider>|Используется для элементов управления, которые поддерживают функциональные возможности сетки, такие как изменение размера и перемещение в указанную ячейку. Например, представление крупных значков в проводнике Windows или простых таблиц без заголовков в Microsoft Word.|  
+|<xref:System.Windows.Automation.GridItemPattern>|<xref:System.Windows.Automation.Provider.IGridItemProvider>|Используется для элементов управления, имеющих ячейки в сетках. Отдельные ячейки должны поддерживать шаблон GridItem. Например, каждая ячейка в подробном представлении проводника Microsoft Windows.|  
 |<xref:System.Windows.Automation.InvokePattern>|<xref:System.Windows.Automation.Provider.IInvokeProvider>|Используется для элементов управления, которые могут быть вызваны, таких как кнопки.|  
 |<xref:System.Windows.Automation.MultipleViewPattern>|<xref:System.Windows.Automation.Provider.IMultipleViewProvider>|Используется для элементов управления, которые могут переключаться между несколькими представлениями одного и того же набора сведений, данных или дочерних элементов. Например, это может быть элемент управления представления списка, где данные доступны в виде эскизов, плиток, значков, списка или подробных представлений.|  
 |<xref:System.Windows.Automation.RangeValuePattern>|<xref:System.Windows.Automation.Provider.IRangeValueProvider>|Используется для элементов управления, имеющих диапазон значений, которые могут быть применены к элементу управления. Например, элемент управления "Счетчик", содержащий годы, может иметь диапазон от 1900 до 2010, а другой элемент управления "Счетчик", представляющий месяцы, имеет диапазон от 1 до 12.|  
@@ -64,13 +64,13 @@ ms.locfileid: "73039467"
 |<xref:System.Windows.Automation.ScrollItemPattern>|<xref:System.Windows.Automation.Provider.IScrollItemProvider>|Используется для элементов управления, имеющих отдельные элементы в прокручиваемом списке. Например, это может быть элемент управления с отдельными элементами в прокручиваемом списке, такой как элемент управления "Поле со списком".|  
 |<xref:System.Windows.Automation.SelectionPattern>|<xref:System.Windows.Automation.Provider.ISelectionProvider>|Используется для элементов управления контейнера выделения. Например, это могут быть списки и поля со списком.|  
 |<xref:System.Windows.Automation.SelectionItemPattern>|<xref:System.Windows.Automation.Provider.ISelectionItemProvider>|Используется для отдельных элементов в элементах управления контейнера выделения, таких как списки и поля со списком.|  
-|<xref:System.Windows.Automation.TablePattern>|<xref:System.Windows.Automation.Provider.ITableProvider>|Используется для элементов управления, имеющих сетку и сведения заголовка. Например, это могут быть листы [!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)] .|  
+|<xref:System.Windows.Automation.TablePattern>|<xref:System.Windows.Automation.Provider.ITableProvider>|Используется для элементов управления, имеющих сетку и сведения заголовка. Например, листы Microsoft Excel.|  
 |<xref:System.Windows.Automation.TableItemPattern>|<xref:System.Windows.Automation.Provider.ITableItemProvider>|Используется для элементов в таблице.|  
 |<xref:System.Windows.Automation.TextPattern>|<xref:System.Windows.Automation.Provider.ITextProvider>|Используется для элементов управления "Поле ввода" и документов, которые предоставляют текстовую информацию.|  
 |<xref:System.Windows.Automation.TogglePattern>|<xref:System.Windows.Automation.Provider.IToggleProvider>|Используется для элементов управления, в которых можно переключать состояние. Например, это могут быть флажки и элементы меню с флажками.|  
 |<xref:System.Windows.Automation.TransformPattern>|<xref:System.Windows.Automation.Provider.ITransformProvider>|Используется для элементов управления с возможностью изменения размера, перемещения и вращения. Обычно шаблон элемента управления Transform используется в конструкторах, формах, графических редакторах и графических приложениях.|  
 |<xref:System.Windows.Automation.ValuePattern>|<xref:System.Windows.Automation.Provider.IValueProvider>|Позволяет клиентам получать или задавать значения для элементов управления, которые не поддерживают диапазон значений. Например, это может быть элемент управления "Выбор даты и времени".|  
-|<xref:System.Windows.Automation.WindowPattern>|<xref:System.Windows.Automation.Provider.IWindowProvider>|Предоставляет сведения, относящиеся к Windows, фундаментальную концепцию операционной системы Microsoft Windows. Примерами элементов управления, являющихся окнами, являются окна приложений верхнего уровня ([!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)], [!INCLUDE[TLA#tla_winexpl](../../../includes/tlasharptla-winexpl-md.md)]и т. д.), дочерние окна многодокументного интерфейса (MDI) и диалоговые окна.|  
+|<xref:System.Windows.Automation.WindowPattern>|<xref:System.Windows.Automation.Provider.IWindowProvider>|Предоставляет сведения, относящиеся к Windows, фундаментальную концепцию операционной системы Microsoft Windows. Примерами элементов управления, являющихся окнами, являются окна приложений верхнего уровня (Microsoft Word, Microsoft Windows Explorer и т. д.), дочерние окна многодокументного интерфейса (MDI) и диалоговые окна.|  
   
 ## <a name="see-also"></a>См. также
 

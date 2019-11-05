@@ -2,16 +2,16 @@
 title: Активация NamedPipe
 ms.date: 03/30/2017
 ms.assetid: f3c0437d-006c-442e-bfb0-6b29216e4e29
-ms.openlocfilehash: a7d940d6be56160945ca0f8697361314af96bc0b
-ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
+ms.openlocfilehash: 9d1f7c599f16b0974fb327888c080957c5cd9cee
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67487541"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73417082"
 ---
 # <a name="namedpipe-activation"></a>Активация NamedPipe
 
-Этот пример демонстрирует размещение службы, которая использует службу активации Windows (WAS), чтобы активировать службу, которая взаимодействует через именованные каналы. Этот образец основан на [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md) и требует [!INCLUDE[wv](../../../../includes/wv-md.md)] для запуска.
+Этот пример демонстрирует размещение службы, которая использует службу активации Windows (WAS), чтобы активировать службу, которая взаимодействует через именованные каналы. Этот образец основан на [Начало работы](../../../../docs/framework/wcf/samples/getting-started-sample.md) и требует [!INCLUDE[wv](../../../../includes/wv-md.md)] для запуска.
 
 > [!NOTE]
 > Процедура настройки и инструкции по построению для данного образца приведены в конце этого раздела.
@@ -21,7 +21,7 @@ ms.locfileid: "67487541"
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] примеры. Этот образец расположен в следующем каталоге.
+> Если этот каталог не существует, перейдите к [примерам Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Samples. Этот образец расположен в следующем каталоге.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Hosting\WASHost\NamedPipeActivation`
 
@@ -159,19 +159,19 @@ Press <ENTER> to terminate client.
 
 ### <a name="to-set-up-build-and-run-the-sample"></a>Настройка, сборка и выполнение образца
 
-1. Убедитесь, что установлены службы IIS 7.0. IIS 7.0 является обязательным для активации WAS.
+1. Убедитесь, что установлен сервер IIS 7,0. Для активации WAS требуется IIS 7,0.
 
-2. Убедитесь, что выполнена [выполняемая однократно процедура настройки для образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
+2. Убедитесь, что вы выполнили [однократную процедуру настройки для Windows Communication Foundation примеров](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
 
-    Кроме того необходимо установить компоненты не HTTP Активация WCF:
+    Кроме того, необходимо установить компоненты активации WCF, отличные от HTTP:
 
     1. В меню **Пуск** выберите **Панель управления**.
 
     2. Выберите **программы и компоненты**.
 
-    3. Нажмите кнопку **отключение компонентов Windows**.
+    3. Щелкните **Включение или отключение компонентов Windows**.
 
-    4. Разверните **Microsoft .NET Framework 3.0** узел и проверьте **не-HTTP активация Windows Communication Foundation** функции.
+    4. Разверните узел **Microsoft .NET Framework 3,0** и установите флажок **Windows Communication Foundation активации, отличной от HTTP** .
 
 3. Настройка службы активации Windows (WAS) для поддержки активации именованных каналов.
 
@@ -179,7 +179,7 @@ Press <ENTER> to terminate client.
 
     1. Чтобы поддерживать активацию по net.pipe, веб-узел по умолчанию должен прежде быть привязан к протоколу net.pipe. Сделать это позволяет файл Appcmd.exe, который устанавливается с помощью набора инструментов управления IIS 7.0. В командной строке с повышенными привилегиями (с правами администратора) выполните следующую команду.
 
-        ```
+        ```console
         %windir%\system32\inetsrv\appcmd.exe set site "Default Web Site"
         -+bindings.[protocol='net.pipe',bindingInformation='*']
         ```
@@ -191,14 +191,14 @@ Press <ENTER> to terminate client.
 
     2. Несмотря на то что все приложения в узле имеют общую привязку к протоколу net.pipe, включать поддержку net.pipe можно для каждого приложения отдельно. Чтобы включить протокол net.pipe для приложения /servicemodelsamples, необходимо выполнить следующую команду из командной строки с повышенными привилегиями.
 
-        ```
+        ```console
         %windir%\system32\inetsrv\appcmd.exe set app "Default Web Site/servicemodelsamples" /enabledProtocols:http,net.pipe
         ```
 
         > [!NOTE]
         > Эта команда представляет собой одну строку текста.
 
-        Эта команда позволяет приложению/servicemodelsamples, осуществлять доступ к оба `http://localhost/servicemodelsamples` и `net.tcp://localhost/servicemodelsamples`.
+        Эта команда позволяет получить доступ к приложению/сервицемоделсамплес, используя как `http://localhost/servicemodelsamples`, так `net.tcp://localhost/servicemodelsamples`.
 
 4. Чтобы создать выпуск решения на языке C# или Visual Basic .NET, следуйте инструкциям в разделе [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).
 
@@ -208,7 +208,7 @@ Press <ENTER> to terminate client.
 
     1. Удалите протокол net.tcp из списка включенных протоколов, выполнив следующую команду из командной строки с повышенными привилегиями.
 
-        ```
+        ```console
         %windir%\system32\inetsrv\appcmd.exe set app "Default Web Site/servicemodelsamples" /enabledProtocols:http
         ```
 
@@ -217,7 +217,7 @@ Press <ENTER> to terminate client.
 
     2. Удалите привязку узла к протоколу net.tcp, выполнив следующую команду из командной строки с повышенными привилегиями.
 
-        ```
+        ```console
         %windir%\system32\inetsrv\appcmd.exe set site "Default Web Site" --bindings.[protocol='net.pipe',bindingInformation='*']
         ```
 
@@ -226,4 +226,4 @@ Press <ENTER> to terminate client.
 
 ## <a name="see-also"></a>См. также
 
-- [Образцы размещения AppFabric и сохраняемости](https://docs.microsoft.com/previous-versions/appfabric/ff383418(v=azure.10))
+- [Примеры размещения и сохраняемости AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ff383418(v=azure.10))

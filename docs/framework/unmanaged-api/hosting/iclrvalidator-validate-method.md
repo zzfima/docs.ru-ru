@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0b1b432a-d234-4002-839b-81366c3a8bdc
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d5fbf83690f616556774e8f279e1077fccdb8baf
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 497a115b980bb58a3906fda68d7ff564efe78089
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779914"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127829"
 ---
 # <a name="iclrvalidatorvalidate-method"></a>Метод ICLRValidator::Validate
-Проверяет переносимого исполняемого (PE) или промежуточного языка Майкрософт (MSIL) в указанном файле.  
+Проверяет переносимый исполняемый (PE) или промежуточный язык Майкрософт (MSIL) в указанном файле.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -44,46 +42,46 @@ HRESULT Validate (
   
 ## <a name="parameters"></a>Параметры  
  `veh`  
- [in] Указатель на `IVEHandler` экземпляр, который обрабатывает ошибки проверки.  
+ окне Указатель на экземпляр `IVEHandler`, который обрабатывает ошибки проверки.  
   
  `ulAppDomainId`  
- [in] Идентификатор для текущего <xref:System.AppDomain>.  
+ окне Идентификатор текущего <xref:System.AppDomain>.  
   
  `ulFlags`  
- [in] Сочетание [ValidatorFlags](../../../../docs/framework/unmanaged-api/hosting/validatorflags-enumeration.md) значений, указывающих на вид проверки, которые должны быть выполнены.  
+ окне Сочетание значений [валидаторфлагс](../../../../docs/framework/unmanaged-api/hosting/validatorflags-enumeration.md) , указывающих тип проверки, которую следует выполнить.  
   
  `ulMaxError`  
- [in] Максимальное количество ошибок, чтобы разрешить перед выходом из проверки.  
+ окне Максимальное число ошибок, которое необходимо разрешить перед выходом из проверки.  
   
  `token`  
- [in] Не используется.  
+ окне Использующ.  
   
  `fileName`  
- [in] Имя проверяемого файла.  
+ окне Имя проверяемого файла.  
   
  `pe`  
- [in] Указатель буфера файла.  
+ окне Указатель на файловый буфер.  
   
  `ulSize`  
- [in] Размер в байтах файла для проверки.  
+ окне Размер проверяемого файла в байтах.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
   
 |HRESULT|Описание|  
 |-------------|-----------------|  
-|S_OK|`Validate` успешно возвращен.|  
-|ЗНАЧЕНИЕ HOST_E_CLRNOTAVAILABLE|Общеязыковая среда выполнения (CLR) не был загружен в процесс или находится в состоянии, в котором не может выполнять управляемый код или успешно обработать вызов.|  
-|HOST_E_TIMEOUT|Истекло время ожидания вызова.|  
-|HOST_E_NOT_OWNER|Вызывающий объект не является владельцем блокировки.|  
-|HOST_E_ABANDONED|Событие было отменено с сохранением заблокированный поток или ожидал волокон.|  
-|E_FAIL|Неизвестный Разрушительный сбой. Когда метод вернет значение E_FAIL, среда CLR больше не может использоваться в процессе. Последующие вызовы к размещению методы возвращают значение HOST_E_CLRNOTAVAILABLE.|  
+|S_OK|`Validate` успешно возвращено.|  
+|HOST_E_CLRNOTAVAILABLE|Среда CLR не была загружена в процесс, или среда CLR находится в состоянии, в котором она не может выполнить управляемый код или успешно обработать вызов.|  
+|HOST_E_TIMEOUT|Время ожидания вызова истекло.|  
+|HOST_E_NOT_OWNER|Вызывающий объект не владеет блокировкой.|  
+|HOST_E_ABANDONED|Событие было отменено, пока заблокированный поток или волокно ожидают его.|  
+|E_FAIL|Произошла неизвестная фатальная ошибка. Когда метод возвращает значение E_FAIL, среда CLR больше не может использоваться в процессе. Последующие вызовы методов размещения возвращают HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** IValidator.idl в файле IValidator.h  
+ **Заголовок:** IValidator. idl, IValidator. h  
   
- **Библиотека:** Включена как ресурс в MSCorEE.dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

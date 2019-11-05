@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 01f9a59b-7679-4d42-9ced-4a8981625c3d
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3f56ceca5269ebffb29908c63e698ce794027d8a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 37da471aaa8e9f802a8430d7b3289b375ff1b40a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67768059"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136989"
 ---
-# <a name="corgcthreadstats-structure"></a>Структура COR_GC_THREAD_STATS
-Содержит статистику по потокам, относящиеся к сборке мусора.  
+# <a name="cor_gc_thread_stats-structure"></a>Структура COR_GC_THREAD_STATS
+Содержит статистику по каждому потоку, относящуюся к сборке мусора.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -35,22 +33,22 @@ typedef struct _COR_GC_THREAD_STATS {
 } COR_GC_THREAD_STATS;  
 ```  
   
-## <a name="members"></a>Участники  
+## <a name="members"></a>Члены  
   
 |Член|Описание|  
 |------------|-----------------|  
-|`PerThreadAllocation`|Число байтов памяти, выделенный в потоке, который связан с текущим `COR_GC_THREAD_STATS` экземпляра. Это число обнуляется каждый раз, когда выполняется сборка мусора нулевого поколения.|  
-|`Flags`|Число байтов, продвигаются в поколение более высокого уровня на последний сбор мусора.|  
+|`PerThreadAllocation`|Число байтов памяти, выделенных в потоке, связанном с текущим экземпляром `COR_GC_THREAD_STATS`. Это число сбрасывается в ноль каждый раз, когда происходит сборка мусора нулевого поколения.|  
+|`Flags`|Число байтов, преобразованных в более высокое поколение при последней сборке мусора.|  
   
-## <a name="remarks"></a>Примечания  
- [ICLRTask::GetMemStats](../../../../docs/framework/unmanaged-api/hosting/iclrtask-getmemstats-method.md) принимает выходной параметр типа `COR_GC_THREAD_STATS`.  
+## <a name="remarks"></a>Заметки  
+ [ICLRTask:: жетмемстатс](../../../../docs/framework/unmanaged-api/hosting/iclrtask-getmemstats-method.md) принимает выходной параметр типа `COR_GC_THREAD_STATS`.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** GCHost.idl  
+ **Заголовок:** Гчост. idl  
   
- **Библиотека:** Включена как ресурс в MSCorEE.dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

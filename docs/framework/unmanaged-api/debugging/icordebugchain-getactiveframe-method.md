@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 36887017-670b-4f21-b406-8fab956f84a3
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c79f3b3b976b83eb99f8aa26d38a1fe316de471a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 03cb1556ee971124ed4c591f38d9f892fc7df7b0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744993"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73192147"
 ---
 # <a name="icordebugchaingetactiveframe-method"></a>Метод ICorDebugChain::GetActiveFrame
-Получает активный (то есть самой последней) кадра в цепочке.  
+Возвращает активный (то есть самый последний) кадр в цепочке.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,17 +35,17 @@ HRESULT GetActiveFrame (
   
 ## <a name="parameters"></a>Параметры  
  `ppFrame`  
- [out] Указатель на адрес ICorDebugFrame объект, представляющий активный (то есть самой последней) кадра в цепочке.  
+ заполняет Указатель на адрес объекта ICorDebugFrame, который представляет активный (то есть самый последний) кадр в цепочке.  
   
-## <a name="remarks"></a>Примечания  
- Если нет кадров управляемого стека, `ppFrame` задано значение null.  
+## <a name="remarks"></a>Заметки  
+ Если управляемый фрейм стека недоступен, `ppFrame` имеет значение null.  
   
- Если активная рамка не доступен, вызов будет успешным и `ppFrame` будет иметь значение null. Активные кадры будет недоступен для цепочек, инициирована из-за CHAIN_ENTER_UNMANAGED, а также для некоторых цепей, инициированных из-за CHAIN_CLASS_INIT. См. в разделе перечисление CorDebugChainReason.  
+ Если активный кадр недоступен, вызов будет выполнен, а `ppFrame` будет иметь значение null. Активные фреймы не будут доступны для цепочек, инициированных из-за CHAIN_ENTER_UNMANAGED, и для некоторых цепочек, инициированных из-за CHAIN_CLASS_INIT. См. раздел перечисление Кордебугчаинреасон.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

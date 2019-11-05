@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: af15e2ca-6be1-472b-bd36-03644a1e3ddd
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: fd0def06defa677ddde798106c299ed909cd4ce1
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d731b12ddf195137ff38d32ab0ca52aa90f48d4e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739785"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132787"
 ---
 # <a name="cordebugjitcompilerflagsdeprecated-enumeration"></a>Перечисление CorDebugJITCompilerFlagsDeprecated
-Это перечисление устарело. Используйте `CORDEBUG_JIT_DEFAULT` членом [CorDebugJITCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflags-enumeration.md) перечисления вместо этого.  
+Это перечисление устарело. Вместо этого используйте элемент `CORDEBUG_JIT_DEFAULT` перечисления [CorDebugJITCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflags-enumeration.md) .  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -34,20 +32,20 @@ typedef enum CorDebugJITCompilerFlagsDeprecated {
 } CorDebugJITCompilerFlagsDeprecated;  
 ```  
   
-## <a name="members"></a>Участники  
+## <a name="members"></a>Члены  
   
 |Член|Описание|  
 |------------|-----------------|  
 |`CORDEBUG_JIT_TRACK_DEBUG_INFO`|Взамен рекомендуется использовать `CORDEBUG_JIT_DEFAULT`.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** 1.0, 1.1  
+ **.NET Framework версии:** 1,0, 1,1  
   
 ## <a name="see-also"></a>См. также
 

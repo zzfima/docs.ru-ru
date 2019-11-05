@@ -4,16 +4,13 @@ description: Создайте приложение .NET Core, которое в�
 author: BillWagner
 ms.author: wiwagn
 ms.date: 06/05/2018
-dev_langs:
-- csharp
-- vb
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: 31a9183f541afa5365862b1e89704354cf7bd527
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: cfceb7ba384a28a09f172032f6edb6f5e495e9c0
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70969295"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73420901"
 ---
 # <a name="consume-a-net-standard-library-in-visual-studio-2017"></a>Использование библиотеки .NET Standard в Visual Studio 2017
 

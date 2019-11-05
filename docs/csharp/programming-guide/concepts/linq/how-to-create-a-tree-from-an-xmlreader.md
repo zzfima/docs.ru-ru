@@ -2,12 +2,12 @@
 title: Практическое руководство. Создание дерева из XmlReader (C#)
 ms.date: 07/20/2015
 ms.assetid: 60951c9c-7087-406c-b5bb-c60e58609b21
-ms.openlocfilehash: f632bbdad7d52ea37e2587516792dfd13178d702
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: a0cff596e0a6d50aefab3645a99beec3277d05ec
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69593871"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73418314"
 ---
 # <a name="how-to-create-a-tree-from-an-xmlreader-c"></a>Практическое руководство. Создание дерева из XmlReader (C#)
 В этом разделе рассказывается, как создать XML-дерево непосредственно из <xref:System.Xml.XmlReader>. Чтобы создать <xref:System.Xml.Linq.XElement> на основе <xref:System.Xml.XmlReader>, необходимо указать для модуля <xref:System.Xml.XmlReader> узел элемента. Модуль <xref:System.Xml.XmlReader> пропускает комментарии и инструкции по обработке, но если для <xref:System.Xml.XmlReader> будет указан текстовый узел, то выдается ошибка. Чтобы избежать подобных ошибок, всегда задавайте для <xref:System.Xml.XmlReader> элемент, прежде чем приступать к созданию XML-дерева на основе <xref:System.Xml.XmlReader>.  
@@ -53,4 +53,4 @@ Console.WriteLine(e);
   
 ## <a name="see-also"></a>См. также
 
-- [Анализ XML (C#)](./parsing-xml.md)
+- [Анализ XML (C#)](how-to-parse-a-string.md)

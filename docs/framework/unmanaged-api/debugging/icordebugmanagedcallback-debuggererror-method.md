@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9e983d11-eaf3-4741-b936-29ec456384a3
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e6abc4893ac99c5ce93a409a8120f090250be57c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c03be2405e1ab0287a2921b6e2e293862c67a193
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67759660"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137375"
 ---
 # <a name="icordebugmanagedcallbackdebuggererror-method"></a>Метод ICorDebugManagedCallback::DebuggerError
-Уведомляет отладчик о том, что произошла ошибка при попытке обработать события из общеязыковой среды выполнения (CLR).  
+Уведомляет отладчик о том, что произошла ошибка при попытке выполнить обработку события из среды CLR.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,23 +37,23 @@ HRESULT DebuggerError (
   
 ## <a name="parameters"></a>Параметры  
  `pProcess`  
- [in] Указатель на объект «ICorDebugProcess», представляющий процесс, в котором произошло событие.  
+ окне Указатель на объект "ICorDebugProcess", представляющий процесс, в котором произошло событие.  
   
  `errorHR`  
- [in] Значение HRESULT, который был возвращен из обработчика событий.  
+ окне Значение HRESULT, возвращенное обработчиком событий.  
   
  `errorCode`  
- [in] Целое число, задающее ошибку среды CLR.  
+ окне Целое число, указывающее ошибку CLR.  
   
-## <a name="remarks"></a>Примечания  
- Процесс может размещаться в сквозном режиме, в зависимости от типа ошибки.  
+## <a name="remarks"></a>Заметки  
+ Процесс может быть помещен в сквозной режим в зависимости от характера ошибки.  
   
- `DebugError` Обратный вызов указывает, что службы отладки были отключены из-за ошибки, поэтому отладчики должны предоставить сообщение об ошибке доступны пользователю. [ICorDebugProcess::GetID](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-getid-method.md) безопасные для вызова, но все другие методы, включая [ICorDebug::Terminate](../../../../docs/framework/unmanaged-api/debugging/icordebug-terminate-method.md), не следует вызывать. Отладчик должен воспользоваться возможностями системы для завершения процессов.  
+ Обратный вызов `DebugError` указывает, что службы отладки были отключены из-за ошибки, поэтому Отладчики должны сделать сообщение об ошибке доступным для пользователя. [ICorDebugProcess:: GetID](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-getid-method.md) будет использоваться в качестве безопасного вызова, но все остальные методы, включая [ICorDebug:: Terminate](../../../../docs/framework/unmanaged-api/debugging/icordebug-terminate-method.md), не должны вызываться. Отладчик должен использовать средства операционной системы для завершения процессов.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

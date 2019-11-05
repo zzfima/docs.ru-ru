@@ -15,20 +15,18 @@ helpviewer_keywords:
 ms.assetid: 7f470c5c-e1c0-4d8d-aad8-830f113ae751
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 65225281fe3abaa20e69e96f4cd4d2a4b03a87ce
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 4ac26ef4449dc02230f26b1247616b4587d217b7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65629942"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73085158"
 ---
 # <a name="icordebugevalcallfunction-method"></a>Метод ICorDebugEval::CallFunction
 
 Настраивает вызов указанной функции.
 
-Этот метод является устаревшим в .NET Framework версии 2.0. Используйте [ICorDebugEval2::CallParameterizedFunction](icordebugeval2-callparameterizedfunction-method.md) вместо этого.
+Этот метод является устаревшим в .NET Framework версии 2,0. Вместо этого используйте [ICorDebugEval2:: каллпараметеризедфунктион](icordebugeval2-callparameterizedfunction-method.md) .
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -43,27 +41,27 @@ HRESULT CallFunction (
 ## <a name="parameters"></a>Параметры
 
 `pFunction`\
-[in] Указатель на объект ICorDebugFunction, который указывает функция, которая вызывается.
+окне Указатель на объект ICorDebugFunction, указывающий вызываемую функцию.
 
 `nArgs`\
-[in] Число аргументов для функции.
+окне Число аргументов для функции.
 
 `ppArgs`\
-[in] Массив указателей, каждый из которых указывает на объект ICorDebugValue, который указывает аргумент, передаваемый в функцию.
+окне Массив указателей, каждый из которых указывает на объект ICorDebugValue, указывающий аргумент, передаваемый в функцию.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
-Если функция является виртуальной, `CallFunction` выполнит виртуальной диспетчеризации. Если функция находится в другом домене приложения, будет выполнен переход, до тех пор, пока все аргументы имеют также в этом домене приложения.
+Если функция является виртуальной, `CallFunction` выполняет виртуальную диспетчеризацию. Если функция находится в другом домене приложения, произойдет переход, если все аргументы также находятся в этом домене приложения.
 
 ## <a name="requirements"></a>Требования
 
-**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).
+**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).
 
-**Заголовок.** CorDebug.idl, CorDebug.h
+**Заголовок:** CorDebug.idl, CorDebug.h
 
 **Библиотека:** CorGuids.lib
 
-**Версии платформы .NET framework:** 1.1, 1.0
+**.NET Framework версии:** 1,1, 1,0
 
 ## <a name="see-also"></a>См. также
 

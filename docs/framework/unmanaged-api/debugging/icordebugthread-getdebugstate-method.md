@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9be27b0c-1d99-4722-b0d4-40cf6753ce5c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0baabbb736365b138d1754e68070207b4310bf57
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f054f8f2bd7c322e722a1e17290ba6fbad9e37b0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67762460"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133512"
 ---
 # <a name="icordebugthreadgetdebugstate-method"></a>Метод ICorDebugThread::GetDebugState
-Возвращает текущее состояние отладки объекта ICorDebugThread.  
+Возвращает текущее состояние отладки этого объекта ICorDebugThread.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,15 +35,15 @@ HRESULT GetDebugState (
   
 ## <a name="parameters"></a>Параметры  
  `pState`  
- [out] Указатель на побитовое сочетание значений перечисления CorDebugThreadState, описывающее текущее состояние отладки для данного потока.  
+ заполняет Указатель на побитовую комбинацию значений перечисления Кордебугсреадстате, описывающих текущее состояние отладки этого потока.  
   
-## <a name="remarks"></a>Примечания  
- Если в настоящее время остановки процесса, `pState` представляет состояние отладки, который будет существовать для данного потока, будто процесс будет продолжен, а не фактическое текущее состояние данного потока.  
+## <a name="remarks"></a>Заметки  
+ Если процесс в данный момент остановлен, `pState` представляет состояние отладки, которое будет существовать для этого потока, если процесс был продолжен, а не текущее состояние этого потока.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

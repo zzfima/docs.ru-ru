@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: a247c792-45e1-4538-9e1f-b46acca4a463
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5dc29663153f837b660262eae51b6f032617d027
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 906ca2540e421953b3ce39300aa7b2376f789929
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67765065"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137103"
 ---
 # <a name="icordebugvaluegetaddress-method"></a>Метод ICorDebugValue::GetAddress
-Возвращает адрес объекта «ICorDebugValue», который находится в отлаживаемом процессе.  
+Возвращает адрес этого объекта "ICorDebugValue", который находится в процессе отладки.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,15 +35,15 @@ HRESULT GetAddress (
   
 ## <a name="parameters"></a>Параметры  
  `pAddress`  
- [out] Указатель на `CORDB_ADDRESS` , указывающий адрес этого объекта значение.  
+ заполняет Указатель на объект `CORDB_ADDRESS`, указывающий адрес этого объекта значения.  
   
-## <a name="remarks"></a>Примечания  
- Если значение недоступно, возвращается 0 (ноль). Это может произойти, если значение хотя бы частично в регистрах или хранится в дескрипторе сборщика мусора (`GCHandle`).  
+## <a name="remarks"></a>Заметки  
+ Если значение недоступно, возвращается 0 (нуль). Это может произойти, если значение по крайней мере частично находится в регистрах или хранится в обработчике сборщика мусора (`GCHandle`).  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

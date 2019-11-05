@@ -2,12 +2,12 @@
 title: Рабочий процесс разработки для приложений Docker
 description: Сведения о рабочем процессе для разработки приложений Docker. Начнем по шагам, рассмотрим подробности оптимизации файлов Dockerfile и закончим на упрощенном рабочем процессе, доступном при использовании Visual Studio.
 ms.date: 01/07/2019
-ms.openlocfilehash: f7c7252edc82400e2af4b96a75ed040e11df392f
-ms.sourcegitcommit: 10db6551ea3c971470cf5d2cc21ba1cbcefe5c55
+ms.openlocfilehash: 8a4d87d84ca59304266a52b0a977f878189108f0
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/08/2019
-ms.locfileid: "72031881"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73417256"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Рабочий процесс разработки для приложений Docker
 
@@ -117,7 +117,7 @@ ENTRYPOINT ["dotnet", " MySingleContainerWebApp.dll "]
 ### <a name="additional-resources"></a>Дополнительные ресурсы
 
 - **Создание образов Docker для приложений .NET Core** \
-  [https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images](../../../core/docker/building-net-docker-images.md)
+  [https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images](/aspnet/core/host-and-deploy/docker/building-net-docker-images)
 
 - **Создание собственного образа**. В официальной документации Docker.\
   <https://docs.docker.com/engine/tutorials/dockerimages/>

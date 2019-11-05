@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: d2250b38-c76a-40ce-80c8-ba45149886e8
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ccd73963302ae99c7d5d1a7201bc77c4544363f5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: eb715e1a4f9a210a1440874a9a8cea2d85345d33
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69937900"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124579"
 ---
 # <a name="ihostassemblymanagergetnonhoststoreassemblies-method"></a>Метод IHostAssemblyManager::GetNonHostStoreAssemblies
 Возвращает указатель интерфейса на объект [ICLRAssemblyReferenceList](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md) , представляющий список сборок, которые должны загружаться хостом в среде CLR.  
@@ -37,24 +35,24 @@ HRESULT GetNonHostStoreAssemblies (
   
 ## <a name="parameters"></a>Параметры  
  `ppReferenceList`  
- заполняет Указатель на адрес `ICLRAssemblyReferenceList` объекта, содержащий список ссылок на сборки, которые узел загружает в среду CLR.  
+ заполняет Указатель на адрес `ICLRAssemblyReferenceList`, который содержит список ссылок на сборки, которые обслуживающая система должна загрузить из среды CLR.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
   
 |HRESULT|Описание|  
 |-------------|-----------------|  
-|S_OK|`GetNonHostStoreAssemblies`успешно возвращено.|  
+|S_OK|`GetNonHostStoreAssemblies` успешно возвращено.|  
 |HOST_E_CLRNOTAVAILABLE|Среда CLR не была загружена в процесс, или среда CLR находится в состоянии, в котором она не может выполнить управляемый код или успешно обработать вызов.|  
 |HOST_E_TIMEOUT|Время ожидания вызова истекло.|  
 |HOST_E_NOT_OWNER|Вызывающий объект не владеет блокировкой.|  
 |HOST_E_ABANDONED|Событие было отменено, пока заблокированный поток или волокно ожидают его.|  
 |E_FAIL|Произошла неизвестная фатальная ошибка. Когда метод возвращает значение E_FAIL, среда CLR больше не может использоваться в процессе. Последующие вызовы методов размещения возвращают HOST_E_CLRNOTAVAILABLE.|  
-|E_OUTOFMEMORY|Недостаточно свободной памяти для создания списка ссылок для запрошенного `ICLRAssemblyReferenceList`объекта.|  
+|E_OUTOFMEMORY|Недостаточно свободной памяти для создания списка ссылок для запрошенного `ICLRAssemblyReferenceList`.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
  Среда CLR разрешает ссылки с помощью следующего набора рекомендаций:  
   
-- Во первых, он обращается к списку ссылок на сборки, `GetNonHostStoreAssemblies`возвращаемых.  
+- Во первых, он обращается к списку ссылок на сборки, возвращаемых `GetNonHostStoreAssemblies`.  
   
 - Если сборка отображается в списке, среда CLR привязывает ее к обычному.  
   
@@ -62,17 +60,17 @@ HRESULT GetNonHostStoreAssemblies (
   
 - В противном случае среда CLR не сможет выполнить привязку к сборке.  
   
- Если узел `ppReferenceList` имеет значение null, среда CLR сначала проверяет глобальный кэш сборок, вызывает `ProvideAssembly`, а затем проверяет базу приложения для разрешения ссылки на сборку.  
+ Если узел задает `ppReferenceList` null, среда CLR сначала проверяет глобальный кэш сборок, вызывает `ProvideAssembly`, а затем проверяет базу приложения для разрешения ссылки на сборку.  
   
 > [!NOTE]
 > После инициализации среда CLR вызывает `GetNonHostStoreAssemblies` только один раз. Метод не вызывается снова.  
   
 ## <a name="requirements"></a>Требования  
- **Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** MSCorEE. h  
+ **Заголовок:** MSCorEE. h  
   
- **Библиотечная** Включается в качестве ресурса в библиотеку MSCorEE. dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

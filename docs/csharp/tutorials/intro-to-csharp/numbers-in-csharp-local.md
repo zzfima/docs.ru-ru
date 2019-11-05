@@ -3,12 +3,12 @@ title: Числа в C#. Вводное руководство по C#
 description: Изучите C# на примере числовых типов, их свойств и методов.
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: 731824fefcf4966a885c53be8f71e77140541383
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: b392682a245101e37a182cb92d36ccb1dd34b13e
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834096"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039694"
 ---
 # <a name="manipulate-integral-and-floating-point-numbers-in-c"></a>Управление целыми числами и числами с плавающей запятой в C\#
 
@@ -40,10 +40,16 @@ Console.WriteLine(c);
 Начните с ознакомления с различными операциями. Добавьте следующие строки после строки, с помощью которой записывается значение `c`:
 
 ```csharp
+
+// subtraction
 c = a - b;
 Console.WriteLine(c);
+
+// multiplication
 c = a * b;
 Console.WriteLine(c);
+
+// division
 c = a / b;
 Console.WriteLine(c);
 ```
@@ -69,12 +75,20 @@ namespace NumbersInCSharp
         {
             int a = 18;
             int b = 6;
+            
+            // addition
             int c = a + b;
             Console.WriteLine(c);
+            
+            // subtraction
             c = a - b;
             Console.WriteLine(c);
+            
+            // multiplication
             c = a * b;
             Console.WriteLine(c);
+            
+            // division
             c = a / b;
             Console.WriteLine(c);
         }
@@ -153,12 +167,20 @@ namespace NumbersInCSharp
         {
             int a = 18;
             int b = 6;
+            
+            // addition
             int c = a + b;
             Console.WriteLine(c);
+            
+            // subtraction
             c = a - b;
             Console.WriteLine(c);
+            
+            // multiplication
             c = a * b;
             Console.WriteLine(c);
+            
+            // division
             c = a / b;
             Console.WriteLine(c);
         }
@@ -321,7 +343,5 @@ Console.WriteLine(c / d);
 Дополнительные сведения о числах в C# см. в следующих статьях:
 
 - [Целочисленные типы](../../language-reference/builtin-types/integral-numeric-types.md)
-- [Таблица типов с плавающей запятой](../../language-reference/builtin-types/floating-point-numeric-types.md)
-- [Таблица встроенных типов](../../language-reference/keywords/built-in-types-table.md)
-- [Таблица неявных числовых преобразований](../../language-reference/keywords/implicit-numeric-conversions-table.md)
-- [Таблица явных числовых преобразований](../../language-reference/keywords/explicit-numeric-conversions-table.md)
+- [Числовые типы с плавающей запятой](../../language-reference/builtin-types/floating-point-numeric-types.md)
+- [Встроенные числовые преобразования](../../language-reference/builtin-types/numeric-conversions.md)

@@ -6,16 +6,16 @@ helpviewer_keywords:
 - interfaces [C#]
 - C# language, interfaces
 ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
-ms.openlocfilehash: a2cc7cb1b6da860a2c27bc8d2fe74e0ffde5f5e1
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 77326b37baebc3ade12336b1b3735ed1da497afc
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053268"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120154"
 ---
 # <a name="interfaces-c-programming-guide"></a>Интерфейсы (Руководство по программированию в C#)
 
-Интерфейс содержит определения для группы связанных функциональных возможностей, которые может реализовать [класс](../../language-reference/keywords/class.md) или [структура](../../language-reference/keywords/struct.md).
+Интерфейс содержит определения для группы связанных функциональных возможностей, которые может реализовать неабстрактный [класс](../../language-reference/keywords/class.md) или [структура](../../language-reference/keywords/struct.md).
   
 С помощью интерфейсов можно, например, включить в класс поведение из нескольких источников. Эта возможность очень важна в C#, поскольку этот язык не поддерживает множественное наследование классов. Кроме того, необходимо использовать интерфейс, если требуется имитировать наследование для структур, поскольку они не могут фактически наследовать от другой структуры или класса.  
   

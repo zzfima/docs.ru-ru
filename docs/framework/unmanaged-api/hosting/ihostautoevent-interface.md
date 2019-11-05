@@ -14,31 +14,29 @@ helpviewer_keywords:
 ms.assetid: 6c1d15c1-a80a-4ee9-b1e4-6e859db6575a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: fb5fea403f8210ea93d240aa3aabd4325524b987
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2b191243ea03adcfecaadbd3a5871e1773b28bb1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61599459"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124454"
 ---
 # <a name="ihostautoevent-interface"></a>Интерфейс IHostAutoEvent
-Предоставляет представление реализации события автоматического сброса.  
+Предоставляет представление реализации события автоматического сброса в узле.  
   
 ## <a name="methods"></a>Методы  
   
 |Метод|Описание|  
 |------------|-----------------|  
-|[Метод Set](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-set-method.md)|Задает текущий `IHostAutoEvent` экземпляр сигнальное состояние.|  
-|[Метод Wait](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-wait-method.md)|Вызывает текущий `IHostAutoEvent` экземпляр ожидать событие принадлежит или определенный промежуток времени.|  
+|[Метод Set](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-set-method.md)|Задает для текущего экземпляра `IHostAutoEvent` сигнальное состояние.|  
+|[Метод Wait](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-wait-method.md)|Вызывает ожидание текущего экземпляра `IHostAutoEvent` до тех пор, пока не будет присвоено событие или не истечет указанное количество времени.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** MSCorEE.h  
+ **Заголовок:** MSCorEE. h  
   
- **Библиотека:** Включена как ресурс в MSCorEE.dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 66a89acf-8c32-44c0-8787-960c99c7b3ec
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2710d14d6e73879fd17a6b58659463ea205f2384
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 80979f0424469bb1d4771ad6507bb8c9d5364ab4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70795365"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73108609"
 ---
 # <a name="createhistoryreader-function"></a>Функция CreateHistoryReader
 Создает средство чтения журнала для указанного файла.  
@@ -48,12 +46,12 @@ HRESULT CreateHistoryReader (
 |Код возврата|Описание|  
 |-----------------|-----------------|  
 |S_OK|Указывает, что метод успешно завершен.|  
-|E_INVALIDARG|Указывает, `wzFilePath` что `ppHistoryReader` или задана пустая ссылка.|  
+|E_INVALIDARG|Указывает, что для `wzFilePath` или `ppHistoryReader` задана пустая ссылка.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
- **Библиотечная** Fusion. dll  
+ **Библиотека:** Fusion. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

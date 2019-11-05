@@ -2,12 +2,12 @@
 title: Инспекторы сообщений
 ms.date: 03/30/2017
 ms.assetid: 9bd1f305-ad03-4dd7-971f-fa1014b97c9b
-ms.openlocfilehash: e7846b8710fa52a5b13de245b8b7147e217533db
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 01553084aa049688cd05fa36e46fb6f67983fb21
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70039400"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424152"
 ---
 # <a name="message-inspectors"></a>Инспекторы сообщений
 В этом образце демонстрируется, как реализовать и настроить инспекторы сообщений клиента и службы.  
@@ -19,7 +19,7 @@ ms.locfileid: "70039400"
 ## <a name="message-inspector"></a>Инспектор сообщений  
  Инспекторы сообщений клиента реализуют интерфейс <xref:System.ServiceModel.Dispatcher.IClientMessageInspector>, а инспекторы сообщений службы - интерфейс <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector>. Реализации можно объединить в один класс для создания инспектора сообщений, работающего на обеих сторонах. В данном образце реализуется такой комбинированный инспектор сообщений. Инспектор создается, передавая набор схем, на основе которых проверяются входящие и исходящие сообщения, и позволяет разработчику определить, следует ли проверять входящие или исходящие сообщения, а также использовать ли режим диспетчеризации или режим клиента, который влияет на обработку ошибок, как описано далее в этом разделе.  
   
-```  
+```csharp  
 public class SchemaValidationMessageInspector : IClientMessageInspector, IDispatchMessageInspector  
 {  
     XmlSchemaSet schemaSet;  
@@ -43,7 +43,7 @@ public class SchemaValidationMessageInspector : IClientMessageInspector, IDispat
   
  Метод <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A> вызывается диспетчером при получении сообщения, обработке сообщения стеком каналов и назначении сообщения службе, но перед его десериализацией и отправкой операции. Если входящее сообщение было зашифровано, оно поступает в инспектор сообщений в расшифрованном виде. Метод получает сообщение `request`, переданное в качестве ссылочного параметра, который позволяет проверить, изменить или заменить сообщение при необходимости. Возвращаемое значение может быть любым объектом и используется как объект состояния корреляции, передаваемый методу <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.BeforeSendReply%2A> при возврате службой ответа на текущее сообщение. В этом образце метод <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A> делегирует проверку сообщения закрытому локальному методу `ValidateMessageBody` и не возвращает объект состояния корреляции. Этот метод гарантирует, что службе не будут передаваться недопустимые сообщения.  
   
-```  
+```csharp  
 object IDispatchMessageInspector.AfterReceiveRequest(ref System.ServiceModel.Channels.Message request, System.ServiceModel.IClientChannel channel, System.ServiceModel.InstanceContext instanceContext)  
 {  
     if (validateRequest)  
@@ -60,7 +60,7 @@ object IDispatchMessageInspector.AfterReceiveRequest(ref System.ServiceModel.Cha
   
  При возникновении ошибки проверки метод `ValidateMessageBody` вызывает исключения, унаследованные от <xref:System.ServiceModel.FaultException>. В случае метода <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A> эти исключения могут размещаться в инфраструктуре модели служб, где они автоматически преобразуются в ошибки SOAP и передаются клиенту. В случае метода <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.BeforeSendReply%2A> исключения <xref:System.ServiceModel.FaultException> не следует размещать в инфраструктуре, поскольку преобразование исключений ошибок, вызванных службой, происходит перед вызовом инспектора сообщений. Поэтому следующая реализация перехватывает известное исключение `ReplyValidationFault` и заменяет ответное сообщение явным сообщением об ошибке. Этот метод гарантирует, что реализацией службы не будут возвращаться недопустимые сообщения.  
   
-```  
+```csharp  
 void IDispatchMessageInspector.BeforeSendReply(ref System.ServiceModel.Channels.Message reply, object correlationState)  
 {  
     if (validateReply)  
@@ -88,7 +88,7 @@ void IDispatchMessageInspector.BeforeSendReply(ref System.ServiceModel.Channels.
   
  Эта реализация <xref:System.ServiceModel.Dispatcher.IClientMessageInspector.BeforeSendRequest%2A> гарантирует, что службе не будут передаваться недопустимые сообщения.  
   
-```  
+```csharp  
 object IClientMessageInspector.BeforeSendRequest(ref System.ServiceModel.Channels.Message request, System.ServiceModel.IClientChannel channel)  
 {  
     if (validateRequest)  
@@ -101,7 +101,7 @@ object IClientMessageInspector.BeforeSendRequest(ref System.ServiceModel.Channel
   
  Реализация `AfterReceiveReply` гарантирует, что полученные от службы недопустимые сообщения не будут передаваться пользовательскому коду клиента.  
   
-```  
+```csharp  
 void IClientMessageInspector.AfterReceiveReply(ref System.ServiceModel.Channels.Message reply, object correlationState)  
 {  
     if (validateReply)  
@@ -115,7 +115,7 @@ void IClientMessageInspector.AfterReceiveReply(ref System.ServiceModel.Channels.
   
  При отсутствии ошибок создается новое сообщение, копирующее свойства и заголовки из исходного сообщения и использующее уже проверенный набор сведений в потоке памяти, который обернут объектом <xref:System.Xml.XmlDictionaryReader> и добавлен в заменяющее сообщение.  
   
-```  
+```csharp  
 void ValidateMessageBody(ref System.ServiceModel.Channels.Message message, bool isRequest)  
 {  
     if (!message.IsFault)  
@@ -162,7 +162,7 @@ void ValidateMessageBody(ref System.ServiceModel.Channels.Message message, bool 
   
  Как отмечалось ранее, исключения, вызываемые обработчиком на стороне клиента и на стороне службы различаются. На стороне службы исключения наследуются от <xref:System.ServiceModel.FaultException>, на стороне клиента исключения являются регулярными пользовательскими исключениями.  
   
-```  
+```csharp  
         void InspectionValidationHandler(object sender, ValidationEventArgs e)  
 {  
     if (e.Severity == XmlSeverityType.Error)  
@@ -202,11 +202,11 @@ void ValidateMessageBody(ref System.ServiceModel.Channels.Message message, bool 
 ```  
   
 ## <a name="behavior"></a>Поведение  
- Инспекторы сообщений являются расширениями среды выполнения клиента или среды выполнения распределения. Такие расширения настраиваются спомощью поведений. Поведение - это класс, изменяющий поведение среды выполнения модели служб путем изменения конфигурации по умолчанию или добавления в нее расширений (например, инспекторов сообщений).  
+ Инспекторы сообщений являются расширениями среды выполнения клиента или среды выполнения распределения. Такие расширения настраиваются с помощью *поведений*. Поведение - это класс, изменяющий поведение среды выполнения модели служб путем изменения конфигурации по умолчанию или добавления в нее расширений (например, инспекторов сообщений).  
   
  Следующий класс `SchemaValidationBehavior` является поведением, которое используется для добавления инспектора сообщений, создаваемого в данном образце, в среду выполнения клиента или среду выполнения распределения. В обоих случаях реализация достаточно проста. В случае <xref:System.ServiceModel.Description.IEndpointBehavior.ApplyClientBehavior%2A> и <xref:System.ServiceModel.Description.IEndpointBehavior.ApplyDispatchBehavior%2A> инспектор сообщений создается и добавляется в коллекцию <xref:System.ServiceModel.Dispatcher.ClientRuntime.MessageInspectors%2A> соответствующей среды выполнения.  
   
-```  
+```csharp  
 public class SchemaValidationBehavior : IEndpointBehavior  
 {  
     XmlSchemaSet schemaSet;   
@@ -299,7 +299,7 @@ public class SchemaValidationBehavior : IEndpointBehavior
   
  Переопределенный метод `CreateBehavior` преобразует данные конфигурации в объект поведения при их оценке средой выполнения во время построения клиента или конечной точки.  
   
-```  
+```csharp  
 public class SchemaValidationBehaviorExtensionElement : BehaviorExtensionElement  
 {  
     public SchemaValidationBehaviorExtensionElement()  
@@ -369,7 +369,7 @@ public bool ValidateRequest
 ## <a name="adding-message-inspectors-imperatively"></a>Императивное добавление инспекторов сообщений  
  Помимо использования атрибутов (что не поддерживается в данном образце по указанной ранее причине) и конфигурации, поведения можно довольно легко добавить в среду выполнения клиента и службы с помощью императивного кода. В данном образце это выполняется в клиентском приложении для тестирования инспектора сообщений клиента. Класс `GenericClient` наследуется от класса <xref:System.ServiceModel.ClientBase%601>, который предоставляет конфигурацию конечной точки пользовательскому коду. Перед неявным открытием клиента конфигурацию конечной точки можно изменить, например, путем добавления поведений, как показано в следующем коде. Добавление поведения на стороне службы в значительной мере аналогично показанному в данном разделе способу, относящемуся к клиенту, и должно выполняться перед открытием узла службы.  
   
-```  
+```csharp  
 try  
 {  
     Console.WriteLine("*** Call 'Hello' with generic client, with client behavior");  
@@ -409,6 +409,6 @@ catch (Exception e)
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Если этот каталог не существует, перейдите к [примерам Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] и примеры. Этот образец расположен в следующем каталоге.  
+> Если этот каталог не существует, перейдите к [примерам Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Samples. Этот образец расположен в следующем каталоге.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\MessageInspectors`  

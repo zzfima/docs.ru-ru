@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: a3ccdf18-4ec6-494d-9024-48e5c8c724f5
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ce252f5a4b5fbcdbbc7b70c8b1c829490f8f63e5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1ff36e8ef6b7c02eea5b02bc22587bc3889df093
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739527"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133692"
 ---
 # <a name="cordebugthreadstate-enumeration"></a>Перечисление CorDebugThreadState
 Указывает состояние потока для отладки.  
@@ -35,22 +33,22 @@ typedef enum CorDebugThreadState {
 } CorDebugThreadState;  
 ```  
   
-## <a name="members"></a>Участники  
+## <a name="members"></a>Члены  
   
 |Член|Описание|  
 |------------|-----------------|  
-|`THREAD_RUN`|Поток выполняется свободно, пока не произойдет событие отладки.|  
-|`THREAD_SUSPEND`|Не удается запустить поток.|  
+|`THREAD_RUN`|Поток выполняется свободно, если не происходит событие отладки.|  
+|`THREAD_SUSPEND`|Поток не может быть запущен.|  
   
-## <a name="remarks"></a>Примечания  
- Отладчик использует `CorDebugThreadState` перечисления для контроля потока выполнения. Состояние потока, можно задать с помощью [ICorDebugThread::SetDebugState](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-setdebugstate-method.md) или [ICorDebugController::SetAllThreadsDebugState](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-setallthreadsdebugstate-method.md) метод.  
+## <a name="remarks"></a>Заметки  
+ Отладчик использует перечисление `CorDebugThreadState` для управления выполнением потока. Состояние потока можно задать с помощью метода [ICorDebugThread:: SetDebugState](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-setdebugstate-method.md) или [ICorDebugController:: SetAllThreadsDebugState](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-setallthreadsdebugstate-method.md) .  
   
- Обратный вызов, предоставленный [интерфейс API размещения](../../../../docs/framework/unmanaged-api/hosting/index.md) позволяет выдачи сообщений, поэтому состояния прерванного не требуется.  
+ Обратный вызов, предоставленный [API размещения](../../../../docs/framework/unmanaged-api/hosting/index.md) , позволяет передавать сообщения, поэтому прерывание состояния не требуется.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

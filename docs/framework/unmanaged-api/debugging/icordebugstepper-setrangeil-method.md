@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: a20c95f0-6da7-4b41-b27f-584211cebb92
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 610225708bf990850fce73d6d7ff66c556e24e5d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 88270cb73515cc1a671bfb3fb5c479697ad7b359
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67760603"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137546"
 ---
 # <a name="icordebugsteppersetrangeil-method"></a>Метод ICorDebugStepper::SetRangeIL
-Задает значение, указывающее ли вызовы [ICorDebugStepper::StepRange](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-steprange-method.md) передать аргумент, код языка MSIL метода, который является в настоящее время шаг на промежуточном машинному коду или относительно Microsoft значений через.  
+Задает значение, указывающее, будут ли вызовы метода [ICorDebugStepper:: степранже](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-steprange-method.md) передавать значения аргумента, которые относятся к машинному коду или по коду языка MSIL в методе, через который выполняется пошаговое выполнение.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,12 +35,12 @@ HRESULT SetRangeIL (
   
 ## <a name="parameters"></a>Параметры  
  `bIL`  
- [in] Значение `true` для указания, что диапазоны относительны MSIL-код. Значение `false` для указания, что диапазоны относительны машинный код. Значение по умолчанию — `true`.  
+ окне Задайте значение `true`, чтобы указать, что диапазоны относительны по коду MSIL. Задайте значение `false`, чтобы указать, что диапазоны относятся к машинному коду. Значение по умолчанию — `true`.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

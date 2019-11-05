@@ -1,15 +1,13 @@
 ---
 title: Интерполяция строк. Руководство по C#
 description: В этом руководстве показано, как использовать функцию интерполяции строк в C# для включения форматированных результатов выражений в строку.
-author: rpetrusha
-ms.author: ronpet
 ms.date: 10/23/2018
-ms.openlocfilehash: 813623f4036813d7c1af440a60387f5d8e889354
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 53b9afa4c5ccdcb1f18d2947981aee6571b73134
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774049"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120116"
 ---
 # <a name="use-string-interpolation-to-construct-formatted-strings"></a>Создание форматированных строк с помощью интерполяции
 

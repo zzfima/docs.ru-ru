@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: d350f69d-9aff-4f5a-8301-daea22dee2da
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: cc179236f5453724639d47558770179a1e80f706
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d44d7c23f88f5ea93f608d06b69f69b2c3637b5e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67746196"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73096843"
 ---
 # <a name="icordebugnativeframegetlocalregistermemoryvalue-method"></a>Метод ICorDebugNativeFrame::GetLocalRegisterMemoryValue
-Получает значение аргумента или локальной переменной, из которых младшее слово и старшее слово хранятся в расположении в памяти и указанный регистр, соответственно, для данного кадра машинного кода.  
+Возвращает значение аргумента или локальной переменной, из которых младшее слово и верхнее слово хранятся в расположении в памяти и указанном регистре соответственно для этого кадра машинного кода.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -41,24 +39,24 @@ HRESULT GetLocalRegisterMemoryValue (
   
 ## <a name="parameters"></a>Параметры  
  `highWordReg`  
- [in] Значение, указывающее регистр, содержащий старшее слово значение перечисления «CorDebugRegister».  
+ окне Значение перечисления "CorDebugRegister", указывающее регистр, содержащий старшее слово значения.  
   
  `lowWordAddress`  
- [in] Объект `CORDB_ADDRESS` значение, указывающее область памяти, содержащий значение младшее слово.  
+ окне Значение `CORDB_ADDRESS`, указывающее место в памяти, содержащее нижнее слово значения.  
   
  `cbSigBlob`  
- [in] Целое число, указывающее размер двоичную подпись метаданных которого ссылается `pvSigBlob` параметра.  
+ окне Целое число, указывающее размер подписи двоичных метаданных, на которую ссылается параметр `pvSigBlob`.  
   
  `pvSigBlob`  
- [in] Объект `PCCOR_SIGNATURE` значение, которое указывает на двоичную подпись метаданных типа значения.  
+ окне Значение `PCCOR_SIGNATURE`, которое указывает на сигнатуру двоичных метаданных для типа значения.  
   
  `ppValue`  
- [out] Указатель на адрес объекта «ICorDebugValue», представляющего извлеченное значение, которое хранится в указанном расположении регистра и памяти.  
+ заполняет Указатель на адрес объекта ICorDebugValue, представляющего извлеченное значение, хранящееся в указанном регистре и расположении в памяти.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

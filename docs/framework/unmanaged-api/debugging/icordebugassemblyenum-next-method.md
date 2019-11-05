@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: b3e7d0c2-3baa-4ef8-8e3f-b865cf252940
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 00adc852a0940766cdd4188ffa5d6be2b472e51f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 86fa44b609b4b89cfaa28f0bfa7bbdce6217623f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744887"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122858"
 ---
 # <a name="icordebugassemblyenumnext-method"></a>Метод ICorDebugAssemblyEnum::Next
-Получает заданное число сборок из коллекции, начиная с текущей позиции курсора.  
+Возвращает указанное количество сборок из коллекции, начиная с текущего положения курсора.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,18 +38,18 @@ HRESULT Next (
   
 ## <a name="parameters"></a>Параметры  
  `celt`  
- [in] Количество сборок, которые требуется извлечь.  
+ окне Число извлекаемых сборок.  
   
  `values`  
- [out] Массив указателей, каждый из которых указывает ICorDebugAssembly объект, представляющий сборку.  
+ заполняет Массив указателей, каждый из которых указывает на объект ICorDebugAssembly, представляющий сборку.  
   
  `pceltFetched`  
- [out] Указатель на количество фактически возвращенных сборок. Это значение может иметь значение null Если `celt` — один.  
+ заполняет Указатель на число фактически возвращенных сборок. Это значение может быть равно null, если `celt` является одним.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

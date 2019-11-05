@@ -2,12 +2,12 @@
 title: Общие сведения об осях LINQ to XML (C#)
 ms.date: 07/20/2015
 ms.assetid: 516792fb-461d-40a8-8a50-9993a51258fc
-ms.openlocfilehash: b775a37869f0c8baa7d482475e301347cb77c538
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: b984232f03815ac78b792af2289f15eeb0578cd5
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69591921"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73418200"
 ---
 # <a name="linq-to-xml-axes-overview-c"></a>Общие сведения об осях LINQ to XML (C#)
 После создания XML-дерева или загрузки XML-документа в XML-дерево можно опросить его для поиска элементов и атрибутов и извлечения их значений. Коллекции получают с помощью *методов оси*, называемых также *осями*. Некоторые оси являются методами в классах <xref:System.Xml.Linq.XElement> и <xref:System.Xml.Linq.XDocument>, которые возвращают коллекции <xref:System.Collections.Generic.IEnumerable%601>. Некоторые оси являются методами расширений в классе <xref:System.Xml.Linq.Extensions>. Оси, которые реализованы как методы расширений, работают с коллекциями и возвращают коллекции.  
@@ -56,4 +56,4 @@ ms.locfileid: "69591921"
   
 ## <a name="see-also"></a>См. также
 
-- [Оси LINQ to XML (C#)](./linq-to-xml-axes.md)
+- [Оси LINQ to XML (C#)](linq-to-xml-axes-overview.md)

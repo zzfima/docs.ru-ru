@@ -14,31 +14,29 @@ helpviewer_keywords:
 ms.assetid: 2edd0a10-77fb-4173-91eb-f2970cc364d0
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 05287d3674e55a87cfe359fc08f74fa46000d79f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 483d647028d1a05ea20ab836730099afe3e09374
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61763314"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127845"
 ---
 # <a name="iclrvalidator-interface"></a>Интерфейс ICLRValidator
-Предоставляет методы для проверки переносимого исполняемого (PE) образа и сообщение об ошибках проверки.  
+Предоставляет методы для проверки переносимых исполняемых (PE) образов и создания отчетов об ошибках проверки.  
   
 ## <a name="methods"></a>Методы  
   
 |Метод|Описание|  
 |------------|-----------------|  
-|[Метод FormatEventInfo](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-formateventinfo-method.md)|Возвращает подробное сообщение об ошибке проверки указанной.|  
-|[Метод Validate](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-validate-method.md)|Проверяет переносимый исполняемый файл или код промежуточного языка Майкрософт (MSIL) в указанном файле.|  
+|[Метод FormatEventInfo](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-formateventinfo-method.md)|Возвращает подробное сообщение об указанной ошибке проверки.|  
+|[Метод Validate](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-validate-method.md)|Проверяет переносимый исполняемый файл или язык MSIL в указанном файле.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** IValidator.idl в файле IValidator.h  
+ **Заголовок:** IValidator. idl, IValidator. h  
   
- **Библиотека:** Включена как ресурс в MSCorEE.dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

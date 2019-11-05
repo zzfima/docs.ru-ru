@@ -8,14 +8,12 @@ helpviewer_keywords:
 - threading [.NET Framework], about threading
 - managed threading
 ms.assetid: b2944911-0e8f-427d-a8bb-077550618935
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f55057e40a251be49898b9b1b7862bd243b2a70c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: bec769043ab630b37609bed12302ceff5b90474a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69913180"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139231"
 ---
 # <a name="managed-threading-basics"></a>Основы управляемых потоков
 
@@ -46,7 +44,7 @@ ms.locfileid: "69913180"
  [Локальное хранилище потока: статические поля потока и области данных](../../../docs/standard/threading/thread-local-storage-thread-relative-static-fields-and-data-slots.md)  
  Описание механизмов хранения для отдельных потоков.  
   
-## <a name="reference"></a>Справочник
+## <a name="reference"></a>Ссылка
 
  <xref:System.Threading.Thread>  
  Справочная документация по классу **Thread**, который представляет управляемый поток вне зависимости от того, был ли он получен из неуправляемого кода или создан в управляемом приложении.  

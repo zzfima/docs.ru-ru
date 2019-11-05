@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1ee7c434-9681-4fa8-badd-652cb1a9742b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e0bcabb32d50b236d42a555c073b50ba3a234dde
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 8b7edf1cc642228c4a79c855b51727264f31741c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796487"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73107985"
 ---
 # <a name="identity_attribute-structure"></a>Структура IDENTITY_ATTRIBUTE
 Содержит сведения об атрибутах метаданных для экземпляра [идефинитионидентити](idefinitionidentity-interface.md) .  
@@ -36,7 +34,7 @@ typedef struct _IDENTITY_ATTRIBUTE {
 } IDENTITY_ATTRIBUTE;  
 ```  
   
-## <a name="members"></a>Участники  
+## <a name="members"></a>Члены  
   
 |Член|Описание|  
 |------------|-----------------|  
@@ -44,15 +42,15 @@ typedef struct _IDENTITY_ATTRIBUTE {
 |`pszName`|Указатель на строку символов, завершающуюся нулем, которая содержит имя атрибута.|  
 |`pszValue`|Указатель на строку символов, завершающуюся нулем, которая содержит значение атрибута.|  
   
-## <a name="remarks"></a>Примечания  
- `IDENTITY_ATTRIBUTE` Структура содержит три указателя на строки символов, заканчивающиеся нулем. Эти три строки описывают один атрибут.  
+## <a name="remarks"></a>Заметки  
+ Структура `IDENTITY_ATTRIBUTE` содержит три указателя на строки символов, заканчивающиеся символом NULL. Эти три строки описывают один атрибут.  
   
- Экземпляр `IDENTITY_ATTRIBUTE` структуры связан с экземпляром структуры [IDENTITY_ATTRIBUTE_BLOB](identity-attribute-blob-structure.md) . Структура содержит фактические строки, а соответствующая `IDENTITY_ATTRIBUTE_BLOB` структура перечисляет смещения для `IDENTITY_ATTRIBUTE` трех строк, перечисленных в структуре. `IDENTITY_ATTRIBUTE`  
+ Экземпляр структуры `IDENTITY_ATTRIBUTE` связан с экземпляром структуры [IDENTITY_ATTRIBUTE_BLOB](identity-attribute-blob-structure.md) . Структура `IDENTITY_ATTRIBUTE` содержит фактические строки, а соответствующая структура `IDENTITY_ATTRIBUTE_BLOB` перечисляет смещения для трех строк, перечисленных в структуре `IDENTITY_ATTRIBUTE`.  
   
 ## <a name="requirements"></a>Требования  
- **Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
- **Заголовок.** Изоляция. h  
+ **Заголовок:** Изоляция. h  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

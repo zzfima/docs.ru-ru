@@ -5,14 +5,12 @@ helpviewer_keywords:
 - assemblies [.NET Framework], programming
 - programming assemblies
 ms.assetid: 25918b15-701d-42c7-95fc-c290d08648d6
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 03babe701b46eab54a76094c4728af80e6d9911e
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 9f07d36d9e47189d53e367fd1406e5684c024aa3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972621"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73107060"
 ---
 # <a name="program-with-assemblies"></a>Программирование с использованием сборок
 Сборки являются структурными элементами .NET Framework. Они составляют основную единицу развертывания, управления версиями, повторного использования, областей действия активации и разрешений безопасности. Сборка предоставляет среде CLR сведения, необходимые для распознавания реализаций типов. Она представляет собой коллекцию типов и ресурсов, собранных для совместной работы и образующих логическую функциональную единицу. Для среды выполнения тип не существует вне контекста сборки.  
@@ -65,7 +63,7 @@ ms.locfileid: "70972621"
  [Переадресация типов в общеязыковой среде CLR](type-forwarding.md)  
  Описание использования переадресации типов для перемещения типа в другую сборку, не нарушая работу существующих приложений.  
   
-## <a name="reference"></a>Справочник  
+## <a name="reference"></a>Ссылка  
  <xref:System.Reflection.Assembly>  
  Класс .NET Framework, представляющий сборку.  
   

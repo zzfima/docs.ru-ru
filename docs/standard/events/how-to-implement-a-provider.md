@@ -10,14 +10,12 @@ helpviewer_keywords:
 - providers [.NET Framework], in observer design pattern
 - observables [.NET Framework], in observer design pattern
 ms.assetid: 790b5d8b-d546-40a6-beeb-151b574e5ee5
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 12c229b3a1436f9794258fec13905cce0fb767aa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: f5bb3cda0caa39ba3fd094b80e0b769a4bfc1f85
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59324777"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141551"
 ---
 # <a name="how-to-implement-a-provider"></a>Практическое руководство. Реализация поставщика
 Шаблон разработки наблюдателя подразумевает разделение ролей поставщика, который отслеживает данные и отправляет уведомления, и одного или нескольких наблюдателей, которые получают от поставщика уведомления (обратные вызовы). В этой статье описан процесс создания поставщика. Создание наблюдателя рассматривается в связанной статье [Практическое руководство. Реализация наблюдателя](../../../docs/standard/events/how-to-implement-an-observer.md).  

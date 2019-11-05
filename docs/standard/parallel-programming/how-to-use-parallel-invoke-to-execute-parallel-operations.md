@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Использование метода Parallel.Invoke для выполнения параллельных операций
+title: Практическое руководство. Использование Parallel.Invoke для выполнения параллельных операций
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -9,16 +9,14 @@ helpviewer_keywords:
 - task parallelism in .NET
 - parallel programming, task parallelism
 ms.assetid: 6b3ecd79-dec9-4ce1-abf4-62e5392a59c6
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c0192e12c86b21eb126293bbd220e093b334768b
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 665490601cad9ccd7881042aed576b95bbc07115
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837067"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139730"
 ---
-# <a name="how-to-use-parallelinvoke-to-execute-parallel-operations"></a>Практическое руководство. Использование метода Parallel.Invoke для выполнения параллельных операций
+# <a name="how-to-use-parallelinvoke-to-execute-parallel-operations"></a>Практическое руководство. Использование Parallel.Invoke для выполнения параллельных операций
 
 В этом примере показывается, как параллелизовать операции с помощью метода <xref:System.Threading.Tasks.Parallel.Invoke%2A> в библиотеке параллельных задач. В общем источнике данных выполняются три операции. Поскольку ни одна из этих операций не изменяет источник, они могут выполняться параллельно простым способом.
 

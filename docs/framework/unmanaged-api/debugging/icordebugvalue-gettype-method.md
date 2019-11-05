@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 41e2d503-e1f1-407b-abe0-6a29adb3e0d1
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c0dbdee35e6c73fbf2d73edd8a6c479e2f2882ea
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 284a74823b01305f8c6e025f70bb9209c8607b7b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67764314"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137079"
 ---
 # <a name="icordebugvaluegettype-method"></a>Метод ICorDebugValue::GetType
-Возвращает примитивный тип объекта «ICorDebugValue».  
+Возвращает тип примитива этого объекта "ICorDebugValue".  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,17 +35,17 @@ HRESULT GetType (
   
 ## <a name="parameters"></a>Параметры  
  `pType`  
- [out] Указатель на значение, указывающее тип значения перечисления «CorElementType».  
+ заполняет Указатель на значение перечисления "Корелементтипе", которое указывает тип значения.  
   
-## <a name="remarks"></a>Примечания  
- Если объект является сложного типа во время выполнения, этот тип можно проанализировать с помощью соответствующих подклассов `ICorDebugValue` интерфейс. Например, «ICorDebugObjectValue», который наследуется от `ICorDebugValue`, представляет сложный тип.  
+## <a name="remarks"></a>Заметки  
+ Если объект является сложным типом времени выполнения, этот тип можно исследовать с помощью соответствующих подклассов интерфейса `ICorDebugValue`. Например, "ICorDebugObjectValue", который наследует от `ICorDebugValue`, представляет сложный тип.  
   
- `GetType` И [ICorDebugObjectValue::GetClass](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectvalue-getclass-method.md) методы возвращают сведения о типе значения. Они оба заменяемые поддержкой универсальных типов [ICorDebugValue2::GetExactType](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue2-getexacttype-method.md) метод.  
+ Методы `GetType` и [ICorDebugObjectValue:: coclass](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectvalue-getclass-method.md) возвращают сведения о типе значения. Они заменяются методом [ICorDebugValue2:: GetExactType](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue2-getexacttype-method.md) , поддерживающим универсальные шаблоны.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

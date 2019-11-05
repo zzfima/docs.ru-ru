@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: f0d7e49b-2394-4ae0-8820-1b64cae0cfe8
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 07356dcf81df41a1dd419c3b68829dcbfec5a073
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: da14d159b1933112e95a9a8973b2fad62f25288f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61985391"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73126858"
 ---
 # <a name="icatalogservices-interface"></a>Интерфейс ICatalogServices
-Предоставляет методы для создания каталога служб.  
+Предоставляет методы для каталогизации служб.  
   
  Этот интерфейс поддерживает инфраструктуру .NET Framework и не предназначен для использования непосредственно из программного кода.  
   

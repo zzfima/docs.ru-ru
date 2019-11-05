@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5da07f99-6c70-46ec-b997-5ab6fb7106cd
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5542cf5895bc60c5880f2f082a9c14d722e02478
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 7a2288eb84bd51795995032954e41525c2ce605a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744921"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137728"
 ---
 # <a name="icordebugreferencevaluegetvalue-method"></a>Метод ICorDebugReferenceValue::GetValue
-Получает текущий адрес памяти объекта, на который указывает ссылка.  
+Возвращает текущий адрес памяти объекта, на который указывает ссылка.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,12 +35,12 @@ HRESULT GetValue (
   
 ## <a name="parameters"></a>Параметры  
  `pValue`  
- [out] Указатель на `CORDB_ADDRESS` значение, указывающее адрес объекта, на который указывает этот объект ICorDebugReferenceValue.  
+ заполняет Указатель на `CORDB_ADDRESS` значение, указывающее адрес объекта, на который указывает объект ICorDebugReferenceValue.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorDebug.idl, CorDebug.h  
+ **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

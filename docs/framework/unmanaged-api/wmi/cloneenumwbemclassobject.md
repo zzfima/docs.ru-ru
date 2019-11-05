@@ -14,14 +14,12 @@ helpviewer_keywords:
 - CloneEnumWbemClassObject function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1605314f94fd82d2a2cd7be105dde9e273f607bc
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 9d2442161aaa83693a33f9efc230c09b8c4426e2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798698"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128731"
 ---
 # <a name="cloneenumwbemclassobject-function"></a>Функция CloneEnumWbemClassObject
 Создает логическую копию перечислителя, сохраняя текущую позицию в перечислении.
@@ -68,7 +66,7 @@ HRESULT CloneEnumWbemClassObject (
 
 Следующие значения, возвращаемые этой функцией, определены в файле заголовка *вбемкли. h* , или их можно определить как константы в коде:
 
-|Константа  |Значение  |Описание  |
+|Константа  |значения  |Описание  |
 |---------|---------|---------|
 | `WBEM_E_FAILED` | 0x80041001 | Общий сбой. |
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | Недопустимый параметр. |
@@ -76,7 +74,7 @@ HRESULT CloneEnumWbemClassObject (
 | `WBEM_E_TRANSPORT_FAILURE` | 0x80041015 | Не удалось создать ссылку на удаленный вызов процедур (RPC) между текущим процессом и WMI. |
 | `WBEM_S_NO_ERROR` | 0 | Вызов функции выполнен успешно.  |
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
 Эта функция заключает в оболочку вызов метода [иенумвбемклассобжект:: Clone](/windows/desktop/api/wbemcli/nf-wbemcli-ienumwbemclassobject-clone) .
 
@@ -89,9 +87,9 @@ HRESULT CloneEnumWbemClassObject (
 Пример см. в описании метода [иенумвбемклассобжект:: Clone](/windows/desktop/api/wbemcli/nf-wbemcli-ienumwbemclassobject-clone) .
 
 ## <a name="requirements"></a>Требования
- **Платформ** См. раздел [Требования к системе](../../get-started/system-requirements.md).
+ **Платформы:** см. раздел [Требования к системе](../../get-started/system-requirements.md).
 
- **Заголовок.** WMINet_Utils. idl
+ **Заголовок:** WMINet_Utils. idl
 
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 

@@ -14,16 +14,14 @@ helpviewer_keywords:
 ms.assetid: 3b93bcff-62a4-47b2-babc-6bcf4216119a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c1de0b3b05d38c1fec38b9436c653973dfaa4136
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b68f24908a5b214d507da8e8a4636a7c55259604
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739009"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123019"
 ---
-# <a name="efngetmanagedobjectfieldinfo-function"></a>\_EFN\_GetManagedObjectFieldInfo-функция
+# <a name="_efn_getmanagedobjectfieldinfo-function"></a>\_ЕФН\_функция Жетманажедобжектфиелдинфо
 Возвращает смещение от начала объекта до поля и значение поля, используя предоставленный указатель объекта и имя поля.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -40,31 +38,31 @@ HRESULT _EFN_GetManagedObjectFieldInfo(
   
 ## <a name="parameters"></a>Параметры  
  `Client`  
- [in] Указатель на клиент отладки.  
+ окне Указатель на клиент отладки.  
   
  `objAddr`  
- [in] Указатель на управляемый объект.  
+ окне Указатель на управляемый объект.  
   
- szFieldName  
- [in] Управляемый объект указатель на имя поля.  
+ сзфиелднаме  
+ окне Указатель управляемого объекта на имя поля.  
   
  `pValue`  
- [out] Значение поля. Этот параметр может быть нулевым.  
+ заполняет Значение поля. Этот параметр может быть нулевым.  
   
  `pOffset`  
- [out] Смещение от `objAddr` к полю. Этот параметр может быть нулевым.  
+ заполняет Смещение от `objAddr` к полю. Этот параметр может быть нулевым.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
  Если смещение равно 0, смещение не записывается.  
   
- Если отсутствует управляемый код в потоке в данный момент в контексте, функция возвращает HRESULT SOS_E_NOMANAGEDCODE со значением сообщения 0xa0 и кодом ошибки 0x1000.  
+ Если в текущем потоке нет управляемого кода, функция возвращает HRESULT SOS_E_NOMANAGEDCODE с значением устройства 0x82 и кодом ошибки 0x1000.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** SOS_Stacktrace.h  
+ **Заголовок:** SOS_Stacktrace. h  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версия .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
 

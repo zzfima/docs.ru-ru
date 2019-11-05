@@ -24,14 +24,12 @@ helpviewer_keywords:
 - Implicit operator
 - data types [.NET Framework], converting
 ms.assetid: ba36154f-064c-47d3-9f05-72f93a7ca96d
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a8fc6f59b7a295cb73489a644da80976345cb172
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b125b3c6527da405deb600ba7334ef18220f1601
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69922692"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132872"
 ---
 # <a name="type-conversion-in-the-net-framework"></a>Преобразование типов в .NET Framework
 <a name="top"></a> У каждого значения есть соответствующий тип, который определяет такие атрибуты, как объем памяти, которая выделяется значению, диапазон возможных значений и доступные члены типа. Многие значения можно выразить несколькими типами. Например, число 4 можно выразить как целое число или как число с плавающей запятой. Преобразование типа создает значение нового типа, эквивалентное значению старого типа, но при этом не обязательно сохраняется идентичность (или точные значения) первоначального объекта.  
