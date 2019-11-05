@@ -4,12 +4,12 @@ description: Сведения о примерах и руководствах д
 author: BillWagner
 ms.author: wiwagn
 ms.date: 04/11/2017
-ms.openlocfilehash: e4906feb7cda026848c990c7dd6f1dc8146dc7aa
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 7953d178e9a24fc42f11b6bc5c866805ec381137
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70855771"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423573"
 ---
 # <a name="net-samples-and-tutorials"></a>Примеры и руководства .NET
 
@@ -49,7 +49,7 @@ ms.locfileid: "70855771"
 
 В этом примере демонстрируется синтаксис и функции для индексаторов C#. [Готовый пример](https://github.com/dotnet/samples/tree/master/csharp/indexers) доступен в репозитории dotnet/samples на сайте GitHub.
 
-**[Делегаты и события](../csharp/delegates-events.md)**
+**[Делегаты и события](../csharp/delegates-overview.md)**
 
 В этом примере демонстрируется синтаксис и функции для делегатов и событий C#. [Готовый пример](https://github.com/dotnet/samples/tree/master/csharp/delegates-and-events) доступен в репозитории dotnet/samples на сайте GitHub. [Второй пример](https://github.com/dotnet/samples/tree/master/csharp/events), посвященный событиям, находится в том же репозитории.
 
@@ -95,15 +95,11 @@ ms.locfileid: "70855771"
 
 В этом руководстве показано, как создать простое приложение в .NET Core, которое поддерживает архитектуру подключаемых модулей. [Готовый пример](https://github.com/dotnet/samples/tree/master/core/extensions/AppWithPlugin) доступен в репозитории dotnet/samples на сайте GitHub.
 
-## <a name="deploying-to-containers"></a>Развертывание в контейнеры
+## <a name="deploy-to-containers"></a>Развертывание в контейнеры
 
-**[Запуск приложений ASP.NET MVC в контейнерах Windows](../framework/docker/aspnetmvc.md)**
+**[Запуск приложений ASP.NET MVC в контейнерах Windows](/aspnet/mvc/overview/deployment/docker-aspnetmvc)**
 
 В этом руководстве показано, как развернуть существующее приложение ASP.NET MVC в контейнер Windows Docker. [Готовый пример](https://github.com/dotnet/samples/tree/master/framework/docker/MVCRandomAnswerGenerator) доступен в репозитории dotnet/samples на сайте GitHub.
-
-**[Запуск консольных приложений .NET Framework в контейнерах Windows](../framework/docker/console.md)**
-
-В этом руководстве показано, как развернуть существующее консольное приложение в контейнер Windows. [Готовый пример](https://github.com/dotnet/samples/tree/master/framework/docker/ConsoleRandomAnswerGenerator) доступен в репозитории dotnet/samples на сайте GitHub.
 
 ## <a name="viewing-and-downloading-samples"></a>Просмотр и скачивание примеров
 

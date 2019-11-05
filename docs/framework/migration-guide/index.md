@@ -6,12 +6,12 @@ helpviewer_keywords:
 - .NET Framework, migrating applications to
 - migration, .NET Framework
 ms.assetid: 02d55147-9b3a-4557-a45f-fa936fadae3b
-ms.openlocfilehash: 7401d7fed89d18aa0b05e1c95871e4a025705627
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 350d5400b4e1df7238702ce925c974eecb2a0d7a
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73126305"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73457950"
 ---
 # <a name="migration-guide-to-the-net-framework-48-47-46-and-45"></a>Руководство по переходу на .NET Framework 4.8, 4.7, 4.6 и 4.5
 
@@ -25,7 +25,7 @@ ms.locfileid: "73126305"
 
 - См. раздел [Версии и зависимости](versions-and-dependencies.md), чтобы определить версию среды CLR, лежащую в основе каждой версии .NET Framework, и ознакомиться с рекомендациями по определению целевой платформы для приложений.
 
-- Просмотрите раздел [Совместимость приложений](application-compatibility.md), чтобы узнать об изменениях в среде выполнения и изменении целевой платформы, которые могут повлиять на приложение, а также о том, что с ними делать.
+- См. сведения о [совместимости приложений](application-compatibility.md), чтобы узнать об изменениях среды выполнения и целевой платформы, которые могут повлиять на приложение, а также о том, что с ними делать.
 
 - Просмотрите раздел [Устаревшие классы библиотеки классов](../whats-new/whats-obsolete.md), чтобы определить устаревшие типы и члены в коде и рекомендуемые альтернативы.
 

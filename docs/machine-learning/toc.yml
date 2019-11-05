@@ -33,6 +33,8 @@
           href: tutorials/image-classification-api-transfer-learning.md
         - name: Классификация изображений (композиция модели)
           href: tutorials/image-classification.md
+        - name: Прогнозирование спроса на прокат велосипедов (временные ряды)
+          href: tutorials/time-series-demand-forecasting.md
         - name: Анализ продаж продукта (обнаружение аномалий)
           href: tutorials/sales-anomaly-detection.md
         - name: Обнаружение объектов на изображениях (обнаружение объектов)
