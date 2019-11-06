@@ -55,7 +55,7 @@
   href: assembly/
 - name: Сборка мусора
   href: garbage-collection/
-- name: универсальные типы;
+- name: Универсальные типы
   href: generics.md
 - name: Делегаты и лямбда-выражения
   href: delegates-lambdas.md
