@@ -2,12 +2,12 @@
 title: Оценка критических изменений (.NET Core)
 description: Узнайте, какими методами в .NET Core обеспечивается совместимость между версиями .NET. для разработчиков.
 ms.date: 06/10/2019
-ms.openlocfilehash: a4a1b5c4e81cec783248c6110b0af9844eb3f4af
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: f4e18a17f58452c9325f36390626ae690f5ed777
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73416682"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739351"
 ---
 # <a name="evaluate-breaking-changes-in-net-core"></a>Оценка критических изменений в .NET Core
 
@@ -52,7 +52,7 @@ ms.locfileid: "73416682"
 - **✔️ Изменение типа [struct](../../csharp/language-reference/keywords/struct.md) на тип `readonly struct`**
 
   Обратите внимание, что изменение типа `readonly struct` на тип `struct` запрещено.
-  
+
 - **✔️ Добавление ключевых слов [sealed](../../csharp/language-reference/keywords/sealed.md) или [abstract](../../csharp/language-reference/keywords/abstract.md) к типу, в котором нет *доступных* конструкторов (открытых или защищенных)**
 
 - **✔️ Расширение видимости типа**
@@ -138,9 +138,9 @@ ms.locfileid: "73416682"
 - **❌ Переименование параметра (в том числе изменение регистра символов)**
 
   Такое изменение считается критическим по двум причинам:
-  
+
   - Оно нарушает сценарии с поздним связыванием, например функцию поздней привязки в Visual Basic и функцию [dynamic](../../csharp/language-reference/builtin-types/reference-types.md#the-dynamic-type) в C#.
-  
+
   - Оно нарушает [совместимость на уровне кода](categories.md#source-compatibility), если разработчик использует [именованные аргументы](../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md#named-arguments).
 
 - **❌ Изменение возвращаемого значения с `ref` на `ref readonly`**
@@ -153,9 +153,9 @@ ms.locfileid: "73416682"
 
   Такое изменение часто не является критическим, так как компилятор C# обычно выдает инструкции [callvirt](<xref:System.Reflection.Emit.OpCodes.Callvirt>) на промежуточном языке (IL) для вызова невиртуальных методов (`callvirt`, в отличие об обычного кода, выполняет проверку значений null). При этом такое поведение не может считаться стабильным по следующим причинам:
   - .NET используется не только с C#, но и с другими языками.
-  
+
   - Компилятор C# продолжает попытки оптимизировать `callvirt` в обычный вызов, если целевой метод не является виртуальным и с высокой вероятностью не имеет значения null (например, метод с доступом с использованием [оператора распространения значений null ?.](../../csharp/language-reference/operators/member-access-operators.md#null-conditional-operators--and-)).
-  
+
   Преобразование метода в виртуальный означает, что код объекта-получателя будет часто вызывать его не виртуально.
 
 - **❌ Добавление ключевого слова [virtual](../../csharp/language-reference/keywords/virtual.md) к элементу**

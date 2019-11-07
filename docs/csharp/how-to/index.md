@@ -2,12 +2,12 @@
 title: Статьи с практическими руководствами (руководств по языку C#)
 description: Коллекция советов и кратких конкретных примеров кода
 ms.date: 12/20/2017
-ms.openlocfilehash: f764bd0183e3881bfb81ebda7d3c7dd49a4cbdde
-ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
+ms.openlocfilehash: 855ea90d22174c2b7c0b53a526c47a5edbe5496d
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/28/2019
-ms.locfileid: "71591608"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73736888"
 ---
 # <a name="how-to-c"></a>Практическое руководство (C#)
 
@@ -65,8 +65,8 @@ ms.locfileid: "71591608"
 - [Преобразование строки в число](../programming-guide/types/how-to-convert-a-string-to-a-number.md).
 - [Использование операторов сопоставления шаблонов `as` и `is` для безопасного приведения к другому типу](../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md).
 - [Определение пользовательского преобразования типов.](../language-reference/operators/user-defined-conversion-operators.md)
-- [Определение того, допускает ли тип значения NULL](../programming-guide/nullable-types/how-to-identify-a-nullable-type.md).
-- [Преобразование между типами значений, допускающие значения NULL, и типами, не допускающими значения NULL](../programming-guide/nullable-types/using-nullable-types.md#conversion-from-a-nullable-value-type-to-an-underlying-type).
+- [Определение того, допускает ли тип значения NULL](../language-reference/builtin-types/nullable-value-types.md#how-to-identify-a-nullable-value-type).
+- [Преобразование между типами значений, допускающие значения NULL, и типами, не допускающими значения NULL](../language-reference/builtin-types/nullable-value-types.md#conversion-from-a-nullable-value-type-to-an-underlying-type).
 
 ## <a name="equality-and-ordering-comparisons"></a>Упорядочение и сравнение на равенство
 

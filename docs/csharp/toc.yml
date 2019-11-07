@@ -1152,14 +1152,6 @@
           href: programming-guide/namespaces/using-namespaces.md
         - name: Практическое руководство. Использование пространства имен My
           href: programming-guide/namespaces/how-to-use-the-my-namespace.md
-    - name: 'Типы значений, допускающие значение NULL'
-      items:
-        - name: Обзор
-          href: programming-guide/nullable-types/index.md
-        - name: "Использование типов значений, допускающих значение\_NULL"
-          href: programming-guide/nullable-types/using-nullable-types.md
-        - name: "Практическое руководство. Идентификация типа значений, допускающего значение\_NULL"
-          href: programming-guide/nullable-types/how-to-identify-a-nullable-type.md
     - name: Небезопасный код и указатели
       items:
         - name: Обзор и ограничения
@@ -1314,6 +1306,9 @@
                   href: language-reference/keywords/enum.md
                 - name: struct
                   href: language-reference/keywords/struct.md
+                - name: 'Типы значений, допускающие значение NULL'
+                  href: language-reference/builtin-types/nullable-value-types.md
+                  displayName: '? token, ? symbol'
             - name: Ссылочные типы
               items:
                 - name: Характеристики ссылочных типов

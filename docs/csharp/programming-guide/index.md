@@ -9,14 +9,15 @@ helpviewer_keywords:
 - Visual C#, programming concepts
 - C# language, concepts
 ms.assetid: ac0f23a2-6bf3-4077-be99-538ae5fd3bc5
-ms.openlocfilehash: 5eb9313003f767daf64a5b5c4f229c6c58a018ec
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: c9d879d1760f543d5a4722977d4dee8bca856016
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423248"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739188"
 ---
 # <a name="c-programming-guide"></a>Руководство по программированию на C#
+
 Этот раздел содержит подробные сведения о ключевых функциях языка C# и возможностях, которые платформа .NET Framework предоставляет для C#.  
   
  В текстах этого раздела обычно предполагается, что вы уже знакомы с языком C# и общими концепциями программирования. Если вы раньше никогда не программировали или не работали с языком C#, рекомендуем посмотреть руководства [Знакомство с C#](../tutorials/intro-to-csharp/index.md) или [Руководство в браузере по .NET](https://dotnet.microsoft.com/learn/dotnet/in-browser-tutorial/1), которые не требуют знаний программирования.  
@@ -28,8 +29,9 @@ ms.locfileid: "73423248"
 [Структура программы C#](./inside-a-program/index.md)  
   
 [Main() и аргументы командной строки](./main-and-command-args/index.md)  
- 
-## <a name="language-sections"></a>Разделы о языке  
+
+## <a name="language-sections"></a>Разделы о языке
+
 [Инструкции, выражения и операторы](./statements-expressions-operators/index.md)  
 
  [Типы](./types/index.md)  
@@ -41,7 +43,7 @@ ms.locfileid: "73423248"
  [Типы перечисления](./enumeration-types.md)  
   
  [Делегаты](./delegates/index.md)  
- 
+
  [Массивы](./arrays/index.md)  
   
  [Строки](./strings/index.md)  
@@ -62,13 +64,12 @@ ms.locfileid: "73423248"
   
  [Пространства имен](./namespaces/index.md)  
   
- [Типы значений, допускающие значение NULL](./nullable-types/index.md)  
-  
  [Небезопасный код и указатели](./unsafe-code-pointers/index.md)  
   
  [Комментарии XML-документации](./xmldoc/index.md)  
   
-## <a name="platform-sections"></a>Разделы о платформе  
+## <a name="platform-sections"></a>Разделы о платформе
+
  [Домены приложений](../../framework/app-domains/application-domains.md)  
   
  [Сборки в .NET](../../standard/assembly/index.md)  

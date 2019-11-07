@@ -2,12 +2,12 @@
 title: Выбор вычислительных платформ Azure для контейнерных приложений
 description: Модернизировать существующих приложений .NET с помощью Azure Cloud and Windows Containers | Выбор платформ вычислений Azure для приложений на основе контейнеров
 ms.date: 05/04/2018
-ms.openlocfilehash: 2262d2cf4e69e19e8b78c07c239602dd5dccc3cd
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 079c9c5ca02b6dc75214d63cb59afdead03d3190
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72318667"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73736997"
 ---
 # <a name="choosing-azure-compute-platforms-for-container-based-applications"></a>Выбор вычислительных платформ Azure для контейнерных приложений
 
@@ -17,7 +17,7 @@ ms.locfileid: "72318667"
 
 - **Отдельное монолитное приложение:** Выберите службу приложений Azure
 - **N-уровневое приложение:** Выберите такие оркестрации, как служба Azure Kubernetes Service (AKS) или служба приложений, если у вас одна или несколько серверных служб.
-- **Микрослужб** Выбор AKS или веб-приложений Azure для контейнеров
+- **Микрослужбы:** Выбор AKS или веб-приложений Azure для контейнеров
 - **Бессерверные функции & обработчики событий:** Выбор функций Azure
 - **Пакет крупномасштабного масштабирования:** Выбор пакетной службы Azure
 
@@ -27,7 +27,7 @@ ms.locfileid: "72318667"
 
 На рис. 1 можно увидеть разделение различных видов приложений и их идеальные сценарии размещения Azure.
 
-![Рис. 1](./media/image8.5.png)
+![Таблица, в которой сценарии размещения Azure лучше подходят для различных приложений.](./media/choosing-azure-compute-options-for-container-based-applications/azure-hosting-scenarios-for-apps.png)
 
 > [!div class="step-by-step"]
 > [Назад](when-to-deploy-windows-containers-to-azure-container-service-kubernetes.md)

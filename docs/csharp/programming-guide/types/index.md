@@ -12,12 +12,12 @@ helpviewer_keywords:
 - C# language, types
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: 5c5586c2ee41b12e9b5706603b4c2f62207566ed
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 7d101e72a94ec1fecf44d4c883efb4f74e6d1d88
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73417717"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739202"
 ---
 # <a name="types-c-programming-guide"></a>Типы (Руководство по программированию на C#)
 
@@ -174,7 +174,7 @@ stringList.Add(4);
 
 В некоторых случаях нет смысла создавать именованный тип для простых наборов связанных значений, которые не будут сохранены или переданы за пределы метода. В таких случаях можно применить *анонимные типы*. Дополнительные сведения см. в статье [Анонимные типы](../classes-and-structs/anonymous-types.md).
 
-Обычные типы значений не могут иметь значение [NULL](../../language-reference/keywords/null.md). Но вы можете создать специальные типы, допускающие значения NULL, добавив символ `?` после имени типа. Например, тип `int?` является типом `int`, который может иметь значение [NULL](../../language-reference/keywords/null.md). Типы, допускающие значение NULL, представляют собой экземпляры универсального типа структуры <xref:System.Nullable%601?displayProperty=nameWithType>. Типы, допускающие значение NULL, особенно полезны при передаче данных в базы данных, где числовые значения могут иметь значение NULL, и из них. Дополнительные сведения см. в разделе [Типы, допускающие значение NULL](../nullable-types/index.md).
+Обычные типы значений не могут иметь значение [NULL](../../language-reference/keywords/null.md). Но вы можете создать специальные типы, допускающие значения NULL, добавив символ `?` после имени типа. Например, тип `int?` является типом `int`, который может иметь значение [NULL](../../language-reference/keywords/null.md). Типы, допускающие значение NULL, представляют собой экземпляры универсального типа структуры <xref:System.Nullable%601?displayProperty=nameWithType>. Типы, допускающие значение NULL, особенно полезны при передаче данных в базы данных, где числовые значения могут иметь значение NULL, и из них. Дополнительные сведения см. в разделе [Типы, допускающие значение NULL](../../language-reference/builtin-types/nullable-value-types.md).
 
 ## <a name="related-sections"></a>Связанные разделы
 
