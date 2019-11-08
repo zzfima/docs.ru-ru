@@ -1,15 +1,15 @@
 ---
-title: аспект
+title: facet
 ms.date: 03/30/2017
 ms.assetid: 91c4e6aa-3e54-4b6c-a38a-abf27808cc85
-ms.openlocfilehash: 1ac46c882b266fbb73d5c709c9fdf297e2b55b1b
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 0157105290a297eff2c1bf799a2065872082e40e
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70783980"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73735650"
 ---
-# <a name="facet"></a>аспект
+# <a name="facet"></a>facet
 *Аспект* используется для добавления сведений в определение свойства типа-примитива. Определение [Свойства](property.md) содержит сведения о типе свойства, но зачастую требуется более подробное описание. Например, тип сущности в концептуальной модели может иметь свойство типа `String`, значение которого не может быть равно NULL. Аспекты позволяют задавать такой уровень сведений.  
   
  В следующей таблице описываются аспекты, поддерживаемые в модели EDM.  
@@ -26,11 +26,11 @@ ms.locfileid: "70783980"
 |`MaxLength`|Указывает максимальную длину значения свойства.|`Binary`, `String`|  
 |`Nullable`|Задает, может ли свойство принимать значение NULL.|Все свойства примитивного типа|  
 |`Precision`|Для свойств типа `Decimal` задается число цифр, которое может иметь значение свойства. Для свойств типа `Time`, `DateTime` и `DateTimeOffset` задается число цифр для части долей секунды значения свойства.|`DateTime`, `DateTimeOffset`, `Decimal`, `Time`,|  
-|`Scale`|Задает число цифр справа от десятичной запятой в значении свойства.|Decimal|  
+|`Scale`|Задает число цифр справа от десятичной запятой в значении свойства.|Десятичное число|  
 |`Unicode`|Указывает, будет ли значение свойства храниться в Юникоде.|`String`|  
   
 ## <a name="example"></a>Пример  
- [Entity Framework ADO.NET](./ef/index.md) использует доменный язык (DSL), называемый языком определения концептуальной схемы ([CSDL](./ef/language-reference/csdl-specification.md)), для определения концептуальных моделей. Далее на языке CSDL определяется тип сущности `Book`. Обратите внимание, что аспекты реализуются как атрибуты XML. Значения аспекта указывают, что свойство не может быть задано со значением NULL и что свойства `Scale` и `Precision``Revision` имеют каждый значение 29.  
+ [Entity Framework ADO.NET](./ef/index.md) использует доменный язык (DSL), называемый языком определения концептуальной схемы ([CSDL](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec)), для определения концептуальных моделей. Далее на языке CSDL определяется тип сущности `Book`. Обратите внимание, что аспекты реализуются как атрибуты XML. Значения аспекта указывают, что свойство не может быть задано со значением NULL и что свойства `Scale` и `Precision``Revision` имеют каждый значение 29.  
   
  [!code-xml[EDM_Example_Model#EntityExample](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books.edmx#entityexample)]  
   

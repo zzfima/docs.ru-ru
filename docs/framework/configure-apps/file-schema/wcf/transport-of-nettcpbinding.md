@@ -2,23 +2,23 @@
 title: <transport> из <netTcpBinding>
 ms.date: 03/30/2017
 ms.assetid: 49462e0a-66e1-463f-b3e1-c83a441673c6
-ms.openlocfilehash: 41f11be9b4ae8f7a7535c9766965de8575cff784
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: 4ef08ad73a03dea21d27217364a7bacb46a3848e
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70399318"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73735929"
 ---
 # <a name="transport-of-nettcpbinding"></a>\<transport>  — \<netTcpBinding>
-Определяет тип требований безопасности на уровне сообщений для конечной точки, [ \<](nettcpbinding.md)настроенной с помощью > NetTcpBinding.  
+Определяет тип требований безопасности на уровне сообщений для конечной точки, настроенной с помощью [\<netTcpBinding >](nettcpbinding.md).  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<привязки >** ](bindings.md)\
+&nbsp;&nbsp;[ **\<System. serviceModel >** ](system-servicemodel.md)\
+привязки &nbsp;&nbsp;&nbsp;&nbsp;[ **\<** ](bindings.md) >
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<netTcpBinding >** ](nettcpbinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Привязка >** \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> безопасности**](security-of-nettcpbinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> транспорта**  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Binding** >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<security >** ](security-of-nettcpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**транспорта >**  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -47,14 +47,14 @@ ms.locfileid: "70399318"
   
 |Атрибут|Описание|  
 |---------------|-----------------|  
-|clientCredentialType|Необязательный параметр. Задает тип учетных данных, используемых при проверке подлинности клиента с помощью безопасности транспорта.<br /><br /> — Значение по умолчанию `Windows`—.<br />— Этот атрибут имеет тип <xref:System.ServiceModel.TcpClientCredentialType>.|  
-|protectionLevel|Необязательный параметр. Определяет безопасность на уровне транспорта TCP. Подпись сообщений уменьшает риск подделки сообщения сторонними лицами при его передаче. Шифрование обеспечивает конфиденциальность на уровне данных во время транспортировки.<br /><br /> Значение по умолчанию — `EncryptAndSign`.|  
+|clientCredentialType|Необязательный. Задает тип учетных данных, используемых при проверке подлинности клиента с помощью безопасности транспорта.<br /><br /> — Значение по умолчанию — `Windows`.<br />— Этот атрибут имеет тип <xref:System.ServiceModel.TcpClientCredentialType>.|  
+|protectionLevel|Необязательный. Определяет безопасность на уровне транспорта TCP. Подпись сообщений уменьшает риск подделки сообщения сторонними лицами при его передаче. Шифрование обеспечивает конфиденциальность на уровне данных во время транспортировки.<br /><br /> Значение по умолчанию — `EncryptAndSign`.|  
 |sslProtocols|Значение флага перечисления SslProtocols, указывающее, какие протоколы SslProtocols поддерживаются. Значение по умолчанию&#124;—&#124;TLS Tls11 Tls12.|  
-|policyEnforcement|Это перечисление указывает, когда следует применять <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy>.<br /><br /> 1.  Never - политика никогда не применяется (расширенная защита отключена).<br />2.  WhenSupported - политика применяется только тогда, когда клиент поддерживает расширенную защиту.<br />3.  Always - политика применяется всегда. Клиенты, которые не поддерживают расширенную защиту, не смогут пройти проверку подлинности.|  
+|policyEnforcement|Это перечисление указывает, когда следует применять <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy>.<br /><br /> 1. Never — политика никогда не применяется (Расширенная защита отключена).<br />2. WhenSupported — политика применяется, только если клиент поддерживает расширенную защиту.<br />3. всегда — политика всегда применяется принудительно. Клиенты, которые не поддерживают расширенную защиту, не смогут пройти проверку подлинности.|  
   
 ## <a name="clientcredentialtype-attribute"></a>Атрибут clientCredentialType  
   
-|Значение|Описание|  
+|значения|Описание|  
 |-----------|-----------------|  
 |Отсутствуют|Анонимный клиент. Это требует сертификата для службы.|  
 |Windows|Задает проверку подлинности Windows для клиента с использованием согласования SP (согласование Kerberos).|  
@@ -62,7 +62,7 @@ ms.locfileid: "70399318"
   
 ## <a name="protectionlevel-attribute"></a>Атрибут protectionLevel  
   
-|Значение|Описание|  
+|значения|Описание|  
 |-----------|-----------------|  
 |Отсутствуют|Нет защиты.|  
 |Sign|Сообщения подписываются.|  
@@ -75,9 +75,9 @@ ms.locfileid: "70399318"
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<> безопасности](security-of-nettcpbinding.md)|Указывает возможности [ \<безопасности > NetTcpBinding](nettcpbinding.md).|  
+|[\<> безопасности](security-of-nettcpbinding.md)|Указывает возможности безопасности [\<netTcpBinding >](nettcpbinding.md).|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
  Безопасность транспорта используется для обеспечения целостности и конфиденциальности сообщений SOAP и для взаимной проверки подлинности. Если этот режим безопасности выбран для какой-либо привязки, стек каналов настраивается с использованием безопасного транспорта, а сообщения SOAP защищаются с использованием безопасности транспорта, например Windows (Negotiate) или SSL по TCP.  
   
 ## <a name="see-also"></a>См. также
@@ -90,4 +90,4 @@ ms.locfileid: "70399318"
 - [Привязки](../../../wcf/bindings.md)
 - [Настройка привязок, предоставляемых системой](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [Использование привязок для настройки служб и клиентов](../../../wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<Привязка >](../../../misc/binding.md)
+- [> привязки \<](bindings.md)

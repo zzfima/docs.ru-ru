@@ -2,24 +2,24 @@
 title: <transport> из <wsHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 21e38acf-450a-4bda-82b6-de305e1f7cd8
-ms.openlocfilehash: 95cfa076f62f767af431ff5a0bcc2ca31b824e30
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: 1afeed62fcbf3b083d69a7cedb7eb80b81f5c17b
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70399239"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73732735"
 ---
-# <a name="transport-of-wshttpbinding"></a>\<Транспортная \<> WSHttpBinding >
+# <a name="transport-of-wshttpbinding"></a>\<транспортную > \<wsHttpBinding >
 
 Определяет параметры проверки подлинности для HTTP-транспорта.
 
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<привязки >** ](bindings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> wsHttpBinding**](wshttpbinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Привязка >** \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> безопасности**](security-of-wshttpbinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> транспорта**  
+&nbsp;&nbsp;[ **\<System. serviceModel >** ](system-servicemodel.md)\
+привязки &nbsp;&nbsp;&nbsp;&nbsp;[ **\<** ](bindings.md) >
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<wsHttpBinding >** ](wshttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Binding** >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<security >** ](security-of-wshttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**транспорта >**  
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -41,7 +41,7 @@ ms.locfileid: "70399239"
 </wsHttpBinding>
 ```
 
-## <a name="type"></a>Тип
+## <a name="type"></a>Type
 
 <xref:System.ServiceModel.HttpTransportSecurity>
 
@@ -55,12 +55,12 @@ ms.locfileid: "70399239"
 |---------------|-----------------|
 |`clientCredentialType`|Задает учетные данные, используемые для проверки подлинности клиента при подключении к службе. Это атрибут типа <xref:System.ServiceModel.HttpClientCredentialType>.|
 |`proxyCredentialType`|Задает учетные данные, используемые для проверки подлинности клиента при подключении к прокси-серверу домена. Это атрибут типа <xref:System.ServiceModel.HttpProxyCredentialType>.|
-|`realm`|Строка, указывающая область проверки подлинности для обычной проверки подлинности или дайджест-проверки подлинности. Значение по умолчанию — пустая строка.<br /><br /> Область проверки подлинности задает по крайней мере имя основного узла, выполняющего проверку подлинности. Она также может указывать коллекцию пользователей, которым разрешен доступ. Пользователь может запросить область проверки подлинности, чтобы выяснить, какое из нескольких возможных сочетаний имен пользователей и паролей можно использовать.|
-|`policyEnforcement`|Это перечисление указывает, когда следует применять <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy>.<br /><br /> 1.  Never - политика никогда не применяется (расширенная защита отключена).<br />2.  WhenSupported - политика применяется только тогда, когда клиент поддерживает расширенную защиту.<br />3.  Always - политика применяется всегда. Клиенты, которые не поддерживают расширенную защиту, не смогут пройти проверку подлинности.|
+|`realm`|Строка, указывающая область проверки подлинности для обычной проверки подлинности или дайджест-проверки подлинности. Значение по умолчанию - пустая строка.<br /><br /> Область проверки подлинности задает по крайней мере имя основного узла, выполняющего проверку подлинности. Она также может указывать коллекцию пользователей, которым разрешен доступ. Пользователь может запросить область проверки подлинности, чтобы выяснить, какое из нескольких возможных сочетаний имен пользователей и паролей можно использовать.|
+|`policyEnforcement`|Это перечисление указывает, когда следует применять <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy>.<br /><br /> 1. Never — политика никогда не применяется (Расширенная защита отключена).<br />2. WhenSupported — политика применяется, только если клиент поддерживает расширенную защиту.<br />3. всегда — политика всегда применяется принудительно. Клиенты, которые не поддерживают расширенную защиту, не смогут пройти проверку подлинности.|
 
 ## <a name="clientcredentialtype-attribute"></a>Атрибут clientCredentialType
 
-|Значение|Описание|
+|значения|Описание|
 |-----------|-----------------|
 |`None`|Режим безопасности отключен.|
 |`Basic`|Используется обычная проверка подлинности.|
@@ -71,7 +71,7 @@ ms.locfileid: "70399239"
 
 ## <a name="proxycredentialtype-attribute"></a>Атрибут proxyCredentialType
 
-|Значение|Описание|
+|значения|Описание|
 |-----------|-----------------|
 |`None`|Режим безопасности отключен.|
 |`Basic`|Используется обычная проверка подлинности.|
@@ -82,13 +82,13 @@ ms.locfileid: "70399239"
 
 ### <a name="child-elements"></a>Дочерние элементы
 
-Нет.
+Отсутствует.
 
 ### <a name="parent-elements"></a>Родительские элементы
 
 |Элемент|Описание|
 |-------------|-----------------|
-|[\<> безопасности](security-of-wshttpbinding.md)|Представляет возможности [ \<безопасности > WSHttpBinding](wshttpbinding.md).|
+|[\<> безопасности](security-of-wshttpbinding.md)|Представляет возможности безопасности [\<wsHttpBinding >](wshttpbinding.md).|
 
 ## <a name="see-also"></a>См. также
 
@@ -100,4 +100,4 @@ ms.locfileid: "70399239"
 - [Привязки](../../../wcf/bindings.md)
 - [Настройка привязок, предоставляемых системой](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [Использование привязок для настройки служб и клиентов](../../../wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<Привязка >](../../../misc/binding.md)
+- [> привязки \<](bindings.md)

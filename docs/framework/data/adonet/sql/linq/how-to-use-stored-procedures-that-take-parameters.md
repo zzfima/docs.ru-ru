@@ -1,21 +1,21 @@
 ---
-title: Практическое руководство. Как использовать хранимые процедуры, которые принимают параметры
+title: Практическое руководство. Использование хранимых процедур, принимающих параметры
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: b935fd84-cb9c-4205-8c48-658d5db2ec93
-ms.openlocfilehash: e9d77cd1dc82e1b103c5f0d9f3f447ed105acaec
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: faf4ea9c52b91c3fc0f2f775e7bd5dfe039c53a8
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72003242"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73738111"
 ---
-# <a name="how-to-use-stored-procedures-that-take-parameters"></a>Практическое руководство. Как использовать хранимые процедуры, которые принимают параметры
+# <a name="how-to-use-stored-procedures-that-take-parameters"></a>Практическое руководство. Использование хранимых процедур, принимающих параметры
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] сопоставляет выходные параметры с параметрами, передаваемыми по ссылке, и для типов значений объявляет, что параметры могут принимать значение NULL.  
   
- Пример использования входного параметра в запросе, возвращающем набор строк, см. в разделе [How to: Возвращает наборы строк @ no__t-0.  
+ Пример использования входного параметра в запросе, возвращающем набор строк, см. [в разделе Практические руководства. Возврат наборов строк](how-to-return-rowsets.md).  
   
 ## <a name="example"></a>Пример  
  В следующем примере передается один входной параметр (код клиента) и возвращается один выходной параметр (общий объем продаж по этому клиенту).  
@@ -43,5 +43,5 @@ where O.CUSTOMERID = @CustomerID AND O.ORDERID = OD.ORDERID
 
 - [Хранимые процедуры](stored-procedures.md)
 - [Загрузка примеров баз данных](downloading-sample-databases.md)
-- [Использование типов значений, допускающих значения NULL](../../../../../csharp/programming-guide/nullable-types/using-nullable-types.md)
-- [Типы значений, допускающие значение NULL](../../../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)
+- [Типы значений, допускающие значение null (C#)](../../../../../csharp/language-reference/builtin-types/nullable-value-types.md)
+- [Типы значения, допускающие значение NULL (Visual Basic)](../../../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)

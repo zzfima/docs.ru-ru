@@ -2,22 +2,22 @@
 title: <byteStreamMessageEncoding>
 ms.date: 03/30/2017
 ms.assetid: bbadd8dd-60a2-4007-b959-89373a8a7d60
-ms.openlocfilehash: 5d78aed78a5c3a10aecac53bda02d6c640bc71ae
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: 1d4109bde9c1668bc0832689b05e5d1dc3b198e9
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70400573"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739062"
 ---
 # <a name="bytestreammessageencoding"></a>\<Битестреаммессажеенкодинг >
 Указывает кодировку сообщения в виде потока байтов, также позволяет указать кодировку символов.  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<привязки >** ](bindings.md)\
+&nbsp;&nbsp;[ **\<System. serviceModel >** ](system-servicemodel.md)\
+привязки &nbsp;&nbsp;&nbsp;&nbsp;[ **\<** ](bindings.md) >
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<customBinding >** ](custombinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Привязка >** \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Битестреаммессажеенкодинг >**  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Binding** >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<битестреаммессажеенкодинг >**  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -44,7 +44,7 @@ ms.locfileid: "70400573"
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<Привязка >](../../../misc/binding.md)|Определяет все возможности пользовательской привязки.|  
+|[> привязки \<](bindings.md)|Определяет все возможности пользовательской привязки.|  
   
 ## <a name="see-also"></a>См. также
 

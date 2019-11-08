@@ -7,15 +7,15 @@ helpviewer_keywords:
 - RFC 3066 standard [XAML Services]
 - standards [XAML Services], RFC 3066
 ms.assetid: 7aac0078-a1c5-41f8-b8b0-975510d9dca0
-ms.openlocfilehash: 3af85f298f7581146b5ecc8a559b185f1a01e54c
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: 98bfabba96e5805b96c63eb02233b15eae233cc0
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920001"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740564"
 ---
 # <a name="xmllang-handling-in-xaml"></a>Обработка xml:lang в XAML
-Атрибут `xml:lang` — это определенный [!INCLUDE[TLA2#tla_xml](../../../includes/tla2sharptla-xml-md.md)]атрибут, который объявляет язык и региональные параметры для элемента в XML. Такое же значение атрибута сохраняется в XAML; однако действуют некоторые дополнительные факторы.  
+Атрибут `xml:lang` является XML-атрибутом, который объявляет сведения о языке и региональных параметрах для элемента в XML. Такое же значение атрибута сохраняется в XAML; однако действуют некоторые дополнительные факторы.  
   
 ## <a name="xaml-attribute-usage"></a>Использование атрибута XAML  
   
@@ -30,7 +30,7 @@ ms.locfileid: "72920001"
 |*rfc3066lang*|Строка, которая является производной от стандарта [RFC 3066](https://go.microsoft.com/fwlink/?LinkId=132454) и определяет язык или язык-регион. В последнем варианте язык и регион разделяются дефисом. Дополнительные сведения о значениях и формате см. в разделе <xref:System.Windows.Markup.XmlLanguage> .|  
   
 ## <a name="remarks"></a>Заметки  
- Определение атрибута `xml:lang` в [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] является производным от `xml:lang`, как определено с помощью консорциум W3C (W3C) для [!INCLUDE[TLA2#tla_xml](../../../includes/tla2sharptla-xml-md.md)]. Сведения о языке и региональных параметрах потенциально обрабатываются элементами по-разному, в зависимости от реализации этих элементов; однако обработка [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] атрибута `xml:lang` по умолчанию отсутствует.  
+ Определение атрибута `xml:lang` в [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] является производным от `xml:lang`, как определено с помощью консорциум W3C (W3C) for XML. Сведения о языке и региональных параметрах потенциально обрабатываются элементами по-разному, в зависимости от реализации этих элементов; однако обработка [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] атрибута `xml:lang` по умолчанию отсутствует.  
   
  Значение по умолчанию атрибута `xml:lang` представляет собой пустую строку на уровне атрибута.  
   

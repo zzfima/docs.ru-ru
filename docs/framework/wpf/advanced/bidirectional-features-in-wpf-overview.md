@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Span elements [WPF]
 - bidirectional features [WPF]
 ms.assetid: fd850e25-7dba-408c-b521-8873e51dc968
-ms.openlocfilehash: 7d648741676ba947d901d26e3ee7c1289d3d4bc3
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 385ce8d263991361512371dcacff52fcf0bbe738
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73453877"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740945"
 ---
 # <a name="bidirectional-features-in-wpf-overview"></a>Общие сведения о двусторонних возможностях в WPF
 
@@ -98,7 +98,7 @@ ms.locfileid: "73453877"
 
 Пользователи этого приложения будут разочарованы выходными данными, несмотря на то, что <xref:System.Windows.FlowDirection> верными числами не являются арабскими цифрами.
 
-Элементы XAML могут включать атрибут [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] (`xml:lang`), определяющий язык каждого элемента. XAML также поддерживает принцип [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] языка, при `xml:lang` котором значения, применяемые к родительским элементам в дереве, используются дочерними элементами. В предыдущем примере, поскольку язык не был определен для элемента <xref:System.Windows.Documents.Run> или какого-либо из его элементов верхнего уровня, использовался `xml:lang` по умолчанию, который `en-US` для XAML. Внутренний алгоритм формирования чисел [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] выбирает числа на соответствующем языке — в данном случае это английский язык. Чтобы арабские числа отображались правильно `xml:lang` необходимо установить.
+Элементы XAML могут включать атрибут XML (`xml:lang`), определяющий язык каждого элемента. XAML также поддерживает принцип языка XML, в котором `xml:lang` значения, применяемые к родительским элементам в дереве, используются дочерними элементами. В предыдущем примере, поскольку язык не был определен для элемента <xref:System.Windows.Documents.Run> или какого-либо из его элементов верхнего уровня, использовался `xml:lang` по умолчанию, который `en-US` для XAML. Внутренний алгоритм формирования чисел [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] выбирает числа на соответствующем языке — в данном случае это английский язык. Чтобы арабские числа отображались правильно `xml:lang` необходимо установить.
 
 На следующем рисунке показан пример с добавленным `xml:lang`.
 

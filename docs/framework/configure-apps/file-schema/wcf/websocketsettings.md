@@ -2,22 +2,22 @@
 title: <webSocketSettings>
 ms.date: 03/30/2017
 ms.assetid: bbf97e02-8dd1-4922-acac-3cd33397b249
-ms.openlocfilehash: 80784f40130e572ae374bd9b26e701360dbfcaa5
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: fa87a1b0961425d6a9bc84769bef6e87cbc2ce96
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70399137"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73732554"
 ---
 # <a name="websocketsettings"></a>\<Вебсоккетсеттингс >
 Элемент конфигурации, который служит для задания параметров веб-сокета.  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<привязки >** ](bindings.md)\
+&nbsp;&nbsp;[ **\<System. serviceModel >** ](system-servicemodel.md)\
+привязки &nbsp;&nbsp;&nbsp;&nbsp;[ **\<** ](bindings.md) >
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<netHttpBinding >** ](nethttpbinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Привязка >** \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Вебсоккетсеттингс >**  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Binding** >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<вебсоккетсеттингс >**  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -54,7 +54,7 @@ ms.locfileid: "70399137"
   
 ## <a name="transportusage-attribute"></a>Атрибут transportUsage  
   
-|Значение|Описание|  
+|значения|Описание|  
 |-----------|-----------------|  
 |WhenDuplex|Использовать протокол веб-сокета, если контракт является дуплексным.|  
 |Всегда|Всегда использовать протокол веб-сокетов независимо от контракта.|  
@@ -70,7 +70,7 @@ ms.locfileid: "70399137"
 |\<netHttpBinding >|Определяет привязку NetHttpBinding|  
   
 ## <a name="example"></a>Пример  
- В следующем примере показано, \<как использовать элемент > вебсоккетсеттингс.  
+ В следующем примере показано, как использовать элемент \<Вебсоккетсеттингс >.  
   
 ```xml  
 <netHttpBinding>
@@ -96,4 +96,4 @@ ms.locfileid: "70399137"
 - [Привязки](../../../wcf/bindings.md)
 - [Настройка привязок, предоставляемых системой](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [Использование привязок для настройки служб и клиентов](../../../wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<Привязка >](../../../misc/binding.md)
+- [> привязки \<](bindings.md)

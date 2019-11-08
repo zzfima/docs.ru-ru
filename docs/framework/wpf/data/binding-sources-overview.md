@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data binding [WPF], binding source
 - binding sources [WPF]
 ms.assetid: 2df2cd11-6aac-4bdf-ab7b-ea5f464cd5ca
-ms.openlocfilehash: 5d0d28213ed8b4a0d464793aeba6823db2405bbe
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: e7546021fbfde3fceea7fd4f1eba10cdc90dff8b
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459014"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740612"
 ---
 # <a name="binding-sources-overview"></a>Общие сведения об источниках привязки
 В привязке данных объект источника привязки (источник) ссылается на объект, из которого вы получаете данные. В этом разделе рассматриваются типы объектов, которые можно использовать в качестве источника привязки.
@@ -25,7 +25,7 @@ ms.locfileid: "73459014"
 |объекты среды CLR|Можно выполнить привязку к открытым свойствам, вложенным свойствам, а также индексаторам любого объекта среды CLR. Обработчик привязки использует отражение CLR для получения значений свойств. Кроме того, объекты, реализующие <xref:System.ComponentModel.ICustomTypeDescriptor> или имеющие зарегистрированный <xref:System.ComponentModel.TypeDescriptionProvider>, также работают с механизмом привязки.<br /><br /> Дополнительные сведения о том, как реализовать класс, который можно использовать в качестве источника привязки, см. в разделе [Использование класса в качестве источника привязки](#classes).|
 |динамические объекты|Можно выполнить привязку к доступным свойствам и индексаторам объекта, реализующего интерфейс <xref:System.Dynamic.IDynamicMetaObjectProvider>. Если можно обратиться к члену кода, к нему можно выполнить привязку. Например, если динамический объект позволяет получить доступ к члену в коде с помощью `someObjet.AProperty`, к нему можно выполнить привязку, задав в качестве пути привязки `AProperty`.|
 |Объекты ADO.NET|Можно выполнить привязку к объектам ADO.NET, таким как <xref:System.Data.DataTable>. <xref:System.Data.DataView> ADO.NET реализует интерфейс <xref:System.ComponentModel.IBindingList>, который предоставляет уведомления об изменениях, которые прослушивает механизм привязки.|
-|Объекты [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)].|Можно выполнить привязку и выполнить `XPath` запросы к <xref:System.Xml.XmlNode>, <xref:System.Xml.XmlDocument>или <xref:System.Xml.XmlElement>. Удобный способ доступа к данным [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)], которые являются источником привязки в разметке, — использование объекта <xref:System.Windows.Data.XmlDataProvider>. Дополнительные сведения см. в разделе [Привязка к XML-данным с помощью XMLDataProvider и запросов XPath](how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md).<br /><br /> Можно также выполнить привязку к <xref:System.Xml.Linq.XElement> или <xref:System.Xml.Linq.XDocument>или привязать результаты запросов к объектам этих типов с помощью LINQ to XML. Удобный способ использования LINQ to XML для доступа к XML-данным, который является источником привязки в разметке, — использование объекта <xref:System.Windows.Data.ObjectDataProvider>. Дополнительные сведения см. в разделе [Привязка к XDocument, XElement или LINQ для результатов запросов XML](how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md).|
+|Объекты XML|Можно выполнить привязку и выполнить `XPath` запросы к <xref:System.Xml.XmlNode>, <xref:System.Xml.XmlDocument>или <xref:System.Xml.XmlElement>. Удобный способ доступа к XML-данным, который является источником привязки в разметке, — использование объекта <xref:System.Windows.Data.XmlDataProvider>. Дополнительные сведения см. в разделе [Привязка к XML-данным с помощью XMLDataProvider и запросов XPath](how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md).<br /><br /> Можно также выполнить привязку к <xref:System.Xml.Linq.XElement> или <xref:System.Xml.Linq.XDocument>или привязать результаты запросов к объектам этих типов с помощью LINQ to XML. Удобный способ использования LINQ to XML для доступа к XML-данным, который является источником привязки в разметке, — использование объекта <xref:System.Windows.Data.ObjectDataProvider>. Дополнительные сведения см. в разделе [Привязка к XDocument, XElement или LINQ для результатов запросов XML](how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md).|
 |Объекты <xref:System.Windows.DependencyObject>.|Можно выполнить привязку к свойствам зависимостей любого <xref:System.Windows.DependencyObject>. Пример см. в разделе [Как привязать свойства двух элементов управления](how-to-bind-the-properties-of-two-controls.md).|
 
 <a name="classes"></a>
@@ -86,7 +86,7 @@ ms.locfileid: "73459014"
 
 - Всегда можно осуществить привязку к свойствам зависимостей.
 
- Требование разрешения для привязки [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] то же. В песочнице с частичным доверием <xref:System.Windows.Data.XmlDataProvider> завершается ошибкой, если у нее нет разрешений на доступ к указанным данным.
+ Требование разрешения для привязки XML аналогично. В песочнице с частичным доверием <xref:System.Windows.Data.XmlDataProvider> завершается ошибкой, если у нее нет разрешений на доступ к указанным данным.
 
  Объекты анонимных типов являются внутренними. Можно выполнить привязку к свойствам анонимных типов только при работе в режиме полного доверия. Дополнительные сведения об анонимных типах см. в разделах [Анонимные типы (руководство по программированию на C#)](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md) или [Анонимные типы (Visual Basic)](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md) (Visual Basic).
 

@@ -28,12 +28,12 @@ helpviewer_keywords:
 - modal dialog boxes [WPF]
 - displaying XAML pages [WPF]
 ms.assetid: 737d04ec-8861-46c3-8d44-fa11d3528d23
-ms.openlocfilehash: 8c650ceab57a46cb6dd396111e7a93163a62299f
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 87d5ff67a9e95c5ec5385802d09d667ee8b6e0f9
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424946"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740678"
 ---
 # <a name="wpf-windows-overview"></a>Общие сведения об окнах WPF
 Пользователи взаимодействуют с автономными приложениями Windows Presentation Foundation (WPF) через Windows. Основная цель окна — разместить содержимое, которое визуализирует данные и позволяет пользователям взаимодействовать с ними. Автономные [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] приложения предоставляют собственные окна с помощью класса <xref:System.Windows.Window>. В этом разделе представлены <xref:System.Windows.Window>, прежде чем изобретаться основы создания и управления окнами в автономных приложениях.  
@@ -88,7 +88,7 @@ ms.locfileid: "73424946"
   
  Чтобы включить [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] файл разметки и файл кода программной части для совместной работы, необходимо выполнить следующие действия.  
   
-- В разметке элемент `Window` должен включать атрибут `x:Class`. При построении приложения существование `x:Class` в файле разметки приводит к тому, что Microsoft Build Engine (MSBuild) создает класс `partial`, производный от <xref:System.Windows.Window>, и имеет имя, заданное атрибутом `x:Class`. Для этого требуется добавить [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] объявление пространства имен для схемы [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] (`xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"`). Созданный класс `partial` реализует метод `InitializeComponent`, который вызывается для регистрации событий и задания свойств, реализованных в разметке.  
+- В разметке элемент `Window` должен включать атрибут `x:Class`. При построении приложения существование `x:Class` в файле разметки приводит к тому, что Microsoft Build Engine (MSBuild) создает класс `partial`, производный от <xref:System.Windows.Window>, и имеет имя, заданное атрибутом `x:Class`. Для этого требуется добавить объявление пространства имен XML для схемы [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] (`xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"`). Созданный класс `partial` реализует метод `InitializeComponent`, который вызывается для регистрации событий и задания свойств, реализованных в разметке.  
   
 - В коде программной части класс должен быть классом `partial` с тем же именем, которое задано атрибутом `x:Class` в разметке и должен быть производным от <xref:System.Windows.Window>. Это позволяет связать файл кода программной части с классом `partial`, созданным для файла разметки при сборке приложения (см. раздел [Создание приложения WPF](building-a-wpf-application-wpf.md)).  
   

@@ -2,12 +2,12 @@
 title: Типы SqlClient для Entity Framework
 ms.date: 03/30/2017
 ms.assetid: f2a95ead-c845-4e97-9fb3-04b444f7ed81
-ms.openlocfilehash: af3a4eea08dd3f4e1a134fcb66d92bc4a3b077c7
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: d132583bba2520d37693be6c4b085cfa514003e0
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70248381"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73737850"
 ---
 # <a name="sqlclient-for-entity-frameworktypes"></a>Типы SqlClient для Entity Framework
 Файл манифеста поставщика данных .NET Framework для SQL Server (SqlClient) содержит список типов-примитивов этого поставщика, аспекты каждого типа, сопоставления типов-примитивов между концептуальной моделью и режимом хранения, а также правила повышения и преобразования типов-примитивов концептуальной модели и модели хранения.  
@@ -23,33 +23,33 @@ ms.locfileid: "70248381"
 |`bigint`|Н/Д|`Edm.Int64`|Н/Д|  
 |`float`|Н/Д|`Edm.Double`|Н/Д|  
 |`real`|Н/Д|`Edm.Double`|Н/Д|  
-|`decimal`|Н/Д|`Edm.Decimal`|Обеспечивают<br /><br /> Минимальное 1<br /><br /> Выше 38<br /><br /> Параметры 18<br /><br /> Выходит False<br /><br /> Измените<br /><br /> Минимальное 0<br /><br /> Выше 38<br /><br /> Параметры 0<br /><br /> Выходит False|  
-|`numeric`|Н/Д|`Edm.Decimal`|Обеспечивают<br /><br /> Минимальное 1<br /><br /> Выше 38<br /><br /> Параметры 18<br /><br /> Выходит False<br /><br /> Измените<br /><br /> Минимальное 0<br /><br /> Выше 38<br /><br /> Параметры 0<br /><br /> Выходит False|  
-|`smallmoney`|Н/Д|`Edm.Decimal`|Обеспечивают<br /><br /> Параметры 10<br /><br /> Выходит True<br /><br /> Измените<br /><br /> Параметры 4<br /><br /> Выходит True|  
-|`money`|Н/Д|`Edm.Decimal`|Обеспечивают<br /><br /> Параметры 19<br /><br /> Выходит True<br /><br /> Измените<br /><br /> Параметры 4<br /><br /> Выходит True|  
-|`binary`|Н/Д|`Edm.Binary`|MaxLength<br /><br /> Минимальное 1<br /><br /> Выше 8000<br /><br /> Параметры 8000<br /><br /> Выходит False<br /><br /> FixedLength<br /><br /> Параметры True<br /><br /> Выходит True|  
-|`varbinary`|Н/Д|`Edm.Binary`|MaxLength<br /><br /> Минимальное 1<br /><br /> Выше 8000<br /><br /> Параметры 8000<br /><br /> Выходит False<br /><br /> FixedLength<br /><br /> Параметры False<br /><br /> Выходит True|  
-|`varbinary(max)`<br /><br /> Примечание. Этот тип не поддерживается в SQL Server 2000.|Н/Д|`Edm.Binary`|MaxLength<br /><br /> Параметры 214748364780<br /><br /> Выходит True<br /><br /> FixedLength<br /><br /> Параметры False<br /><br /> Выходит True|  
-|`image`|Н/Д|`Edm.Binary`|MaxLength<br /><br /> Параметры 2147483647<br /><br /> Выходит True<br /><br /> FixedLength<br /><br /> Параметры False<br /><br /> Выходит True|  
-|`timestamp`|Н/Д|`Edm.Binary`|MaxLength<br /><br /> Параметры 8<br /><br /> Выходит True<br /><br /> FixedLength<br /><br /> Параметры True<br /><br /> Выходит True|  
-|`rowversion`|Н/Д|`Edm.Binary`|MaxLength<br /><br /> Параметры 8<br /><br /> Выходит True<br /><br /> FixedLength<br /><br /> Параметры True<br /><br /> Выходит True|  
-|`smalldatetime`|Н/Д|`Edm.DateTime`|Обеспечивают<br /><br /> Параметры 0<br /><br /> Выходит True|  
-|`datetime`|Н/Д|`Edm.DateTime`|Обеспечивают<br /><br /> Параметры 3<br /><br /> Выходит True|  
-|`date`<br /><br /> Примечание. Этот тип не поддерживается в SQL Server 2005 и SQL Server 2000.|Н/Д|`Edm.DateTime`|Обеспечивают<br /><br /> Параметры 0<br /><br /> Выходит False|  
-|`time`<br /><br /> Примечание. Этот тип не поддерживается в SQL Server 2005 и SQL Server 2000.|Н/Д|`Edm.Time`|Обеспечивают<br /><br /> Параметры 7<br /><br /> Выходит False|  
-|`datetime2`<br /><br /> Примечание. Этот тип не поддерживается в SQL Server 2005 и SQL Server 2000.|Н/Д|`Edm.DateTime`|Обеспечивают<br /><br /> Параметры 7<br /><br /> Выходит False|  
-|`datetimeoffset`<br /><br /> Примечание. Этот тип не поддерживается в SQL Server 2005 и SQL Server 2000.|Н/Д|`Edm.DateTimeOffset`|Обеспечивают<br /><br /> Параметры 7<br /><br /> Выходит False|  
-|`nvarchar`<br /><br /> Примечание. Этот тип не поддерживается в SQL Server 2000.|Н/Д|`Edm.String`|MaxLength<br /><br /> Минимальное 1<br /><br /> Выше 4000<br /><br /> Параметры 4000<br /><br /> Выходит False<br /><br /> Юникод:<br /><br /> Параметры True<br /><br /> Выходит True<br /><br /> FixedLength<br /><br /> Параметры False<br /><br /> Выходит True|  
-|`varchar`<br /><br /> Примечание. Этот тип не поддерживается в SQL Server 2000.|Н/Д|`Edm.String`|MaxLength<br /><br /> Минимальное 1<br /><br /> Выше 8000<br /><br /> Параметры 8000<br /><br /> Выходит False<br /><br /> Юникод:<br /><br /> Параметры False<br /><br /> Выходит True<br /><br /> FixedLength<br /><br /> Параметры False<br /><br /> Выходит True|  
-|`char`|Н/Д|`Edm.String`|MaxLength<br /><br /> Минимальное 1<br /><br /> Выше 8000<br /><br /> Параметры 8000<br /><br /> Выходит False<br /><br /> Юникод:<br /><br /> Параметры False<br /><br /> Выходит True<br /><br /> FixedLength<br /><br /> Параметры True<br /><br /> Выходит True|  
-|`nchar`|Н/Д|`Edm.String`|MaxLength<br /><br /> Минимальное 1<br /><br /> Выше 4000<br /><br /> Параметры 4000<br /><br /> Выходит False<br /><br /> Юникод:<br /><br /> Параметры True<br /><br /> Выходит True<br /><br /> FixedLength<br /><br /> Параметры True<br /><br /> Выходит True|  
-|`varchar`(`max`)|Н/Д|`Edm.String`|MaxLength<br /><br /> Параметры 2147483647<br /><br /> Выходит True<br /><br /> Юникод:<br /><br /> Параметры False<br /><br /> Выходит True<br /><br /> FixedLength<br /><br /> Параметры False<br /><br /> Выходит True|  
-|`nvarchar`(`max`)|Н/Д|`Edm.String`|MaxLength<br /><br /> Параметры 1073741823<br /><br /> Выходит True<br /><br /> Юникод:<br /><br /> Параметры True<br /><br /> Выходит True<br /><br /> FixedLength<br /><br /> Параметры False<br /><br /> Выходит True|  
-|`ntext`|Сравнимое сравнение: False<br /><br /> Сравниваемые порядок: False|`Edm.String`|MaxLength<br /><br /> Параметры 1073741823<br /><br /> Выходит True<br /><br /> Юникод:<br /><br /> Параметры False<br /><br /> Выходит True<br /><br /> FixedLength<br /><br /> Параметры False<br /><br /> Выходит True|  
-|`text`|Сравнимое сравнение: False<br /><br /> Сравниваемые порядок: False|`Edm.String`|MaxLength<br /><br /> Параметры 2147483647<br /><br /> Выходит True<br /><br /> Юникод:<br /><br /> Параметры False<br /><br /> Выходит True<br /><br /> FixedLength<br /><br /> Параметры False<br /><br /> Выходит True|  
-|`Unique`<br /><br /> `identifier`|Сравнимое сравнение: True<br /><br /> Сравниваемые порядок: True|`Edm.Guid`|Н/Д|  
-|`xml`|Сравнимое сравнение: False<br /><br /> Сравниваемые порядок: False|`Edm.String`|MaxLength<br /><br /> Параметры 1073741823<br /><br /> Выходит True<br /><br /> Юникод:<br /><br /> Параметры True<br /><br /> Выходит True<br /><br /> FixedLength<br /><br /> Параметры False<br /><br /> Выходит True|  
+|`decimal`|Н/Д|`Edm.Decimal`|Обеспечивают<br /><br /> — Минимум: 1<br /><br /> — Максимум: 38<br /><br /> -По умолчанию: 18<br /><br /> -Constant: false<br /><br /> Измените<br /><br /> — Минимум: 0<br /><br /> — Максимум: 38<br /><br /> -По умолчанию: 0<br /><br /> -Constant: false|  
+|`numeric`|Н/Д|`Edm.Decimal`|Обеспечивают<br /><br /> — Минимум: 1<br /><br /> — Максимум: 38<br /><br /> -По умолчанию: 18<br /><br /> -Constant: false<br /><br /> Измените<br /><br /> — Минимум: 0<br /><br /> — Максимум: 38<br /><br /> -По умолчанию: 0<br /><br /> -Constant: false|  
+|`smallmoney`|Н/Д|`Edm.Decimal`|Обеспечивают<br /><br /> -По умолчанию: 10<br /><br /> -Constant: true<br /><br /> Измените<br /><br /> -По умолчанию: 4<br /><br /> -Constant: true|  
+|`money`|Н/Д|`Edm.Decimal`|Обеспечивают<br /><br /> -По умолчанию: 19<br /><br /> -Constant: true<br /><br /> Измените<br /><br /> -По умолчанию: 4<br /><br /> -Constant: true|  
+|`binary`|Н/Д|`Edm.Binary`|MaxLength<br /><br /> — Минимум: 1<br /><br /> — Максимум: 8000<br /><br /> -По умолчанию: 8000<br /><br /> -Constant: false<br /><br /> FixedLength<br /><br /> -По умолчанию: true<br /><br /> -Constant: true|  
+|`varbinary`|Н/Д|`Edm.Binary`|MaxLength<br /><br /> — Минимум: 1<br /><br /> — Максимум: 8000<br /><br /> -По умолчанию: 8000<br /><br /> -Constant: false<br /><br /> FixedLength<br /><br /> -По умолчанию: false<br /><br /> -Constant: true|  
+|`varbinary(max)`<br /><br /> Примечание. Этот тип не поддерживается в SQL Server 2000.|Н/Д|`Edm.Binary`|MaxLength<br /><br /> -По умолчанию: 214748364780<br /><br /> -Constant: true<br /><br /> FixedLength<br /><br /> -По умолчанию: false<br /><br /> -Constant: true|  
+|`image`|Н/Д|`Edm.Binary`|MaxLength<br /><br /> -По умолчанию: 2147483647<br /><br /> -Constant: true<br /><br /> FixedLength<br /><br /> -По умолчанию: false<br /><br /> -Constant: true|  
+|`timestamp`|Н/Д|`Edm.Binary`|MaxLength<br /><br /> -По умолчанию: 8<br /><br /> -Constant: true<br /><br /> FixedLength<br /><br /> -По умолчанию: true<br /><br /> -Constant: true|  
+|`rowversion`|Н/Д|`Edm.Binary`|MaxLength<br /><br /> -По умолчанию: 8<br /><br /> -Constant: true<br /><br /> FixedLength<br /><br /> -По умолчанию: true<br /><br /> -Constant: true|  
+|`smalldatetime`|Н/Д|`Edm.DateTime`|Обеспечивают<br /><br /> -По умолчанию: 0<br /><br /> -Constant: true|  
+|`datetime`|Н/Д|`Edm.DateTime`|Обеспечивают<br /><br /> -По умолчанию: 3<br /><br /> -Constant: true|  
+|`date`<br /><br /> Примечание. Этот тип не поддерживается в SQL Server 2005 и SQL Server 2000.|Н/Д|`Edm.DateTime`|Обеспечивают<br /><br /> -По умолчанию: 0<br /><br /> -Constant: false|  
+|`time`<br /><br /> Примечание. Этот тип не поддерживается в SQL Server 2005 и SQL Server 2000.|Н/Д|`Edm.Time`|Обеспечивают<br /><br /> -По умолчанию: 7<br /><br /> -Constant: false|  
+|`datetime2`<br /><br /> Примечание. Этот тип не поддерживается в SQL Server 2005 и SQL Server 2000.|Н/Д|`Edm.DateTime`|Обеспечивают<br /><br /> -По умолчанию: 7<br /><br /> -Constant: false|  
+|`datetimeoffset`<br /><br /> Примечание. Этот тип не поддерживается в SQL Server 2005 и SQL Server 2000.|Н/Д|`Edm.DateTimeOffset`|Обеспечивают<br /><br /> -По умолчанию: 7<br /><br /> -Constant: false|  
+|`nvarchar`<br /><br /> Примечание. Этот тип не поддерживается в SQL Server 2000.|Н/Д|`Edm.String`|MaxLength<br /><br /> — Минимум: 1<br /><br /> — Максимум: 4000<br /><br /> -По умолчанию: 4000<br /><br /> -Constant: false<br /><br /> Юникод:<br /><br /> -По умолчанию: true<br /><br /> -Constant: true<br /><br /> FixedLength<br /><br /> -По умолчанию: false<br /><br /> -Constant: true|  
+|`varchar`<br /><br /> Примечание. Этот тип не поддерживается в SQL Server 2000.|Н/Д|`Edm.String`|MaxLength<br /><br /> — Минимум: 1<br /><br /> — Максимум: 8000<br /><br /> -По умолчанию: 8000<br /><br /> -Constant: false<br /><br /> Юникод:<br /><br /> -По умолчанию: false<br /><br /> -Constant: true<br /><br /> FixedLength<br /><br /> -По умолчанию: false<br /><br /> -Constant: true|  
+|`char`|Н/Д|`Edm.String`|MaxLength<br /><br /> — Минимум: 1<br /><br /> — Максимум: 8000<br /><br /> -По умолчанию: 8000<br /><br /> -Constant: false<br /><br /> Юникод:<br /><br /> -По умолчанию: false<br /><br /> -Constant: true<br /><br /> FixedLength<br /><br /> -По умолчанию: true<br /><br /> -Constant: true|  
+|`nchar`|Н/Д|`Edm.String`|MaxLength<br /><br /> — Минимум: 1<br /><br /> — Максимум: 4000<br /><br /> -По умолчанию: 4000<br /><br /> -Constant: false<br /><br /> Юникод:<br /><br /> -По умолчанию: true<br /><br /> -Constant: true<br /><br /> FixedLength<br /><br /> -По умолчанию: true<br /><br /> -Constant: true|  
+|`varchar`(`max`)|Н/Д|`Edm.String`|MaxLength<br /><br /> -По умолчанию: 2147483647<br /><br /> -Constant: true<br /><br /> Юникод:<br /><br /> -По умолчанию: false<br /><br /> -Constant: true<br /><br /> FixedLength<br /><br /> -По умолчанию: false<br /><br /> -Constant: true|  
+|`nvarchar`(`max`)|Н/Д|`Edm.String`|MaxLength<br /><br /> -По умолчанию: 1073741823<br /><br /> -Constant: true<br /><br /> Юникод:<br /><br /> -По умолчанию: true<br /><br /> -Constant: true<br /><br /> FixedLength<br /><br /> -По умолчанию: false<br /><br /> -Constant: true|  
+|`ntext`|Равное сравнимое: false<br /><br /> Сравниваемые порядок: false|`Edm.String`|MaxLength<br /><br /> -По умолчанию: 1073741823<br /><br /> -Constant: true<br /><br /> Юникод:<br /><br /> -По умолчанию: false<br /><br /> -Constant: true<br /><br /> FixedLength<br /><br /> -По умолчанию: false<br /><br /> -Constant: true|  
+|`text`|Равное сравнимое: false<br /><br /> Сравниваемые порядок: false|`Edm.String`|MaxLength<br /><br /> -По умолчанию: 2147483647<br /><br /> -Constant: true<br /><br /> Юникод:<br /><br /> -По умолчанию: false<br /><br /> -Constant: true<br /><br /> FixedLength<br /><br /> -По умолчанию: false<br /><br /> -Constant: true|  
+|`Unique`<br /><br /> `identifier`|Равное сравнимое: true<br /><br /> Сравниваемые порядок: true|`Edm.Guid`|Н/Д|  
+|`xml`|Равное сравнимое: false<br /><br /> Сравниваемые порядок: false|`Edm.String`|MaxLength<br /><br /> -По умолчанию: 1073741823<br /><br /> -Constant: true<br /><br /> Юникод:<br /><br /> -По умолчанию: true<br /><br /> -Constant: true<br /><br /> FixedLength<br /><br /> -По умолчанию: false<br /><br /> -Constant: true|  
   
 ## <a name="see-also"></a>См. также
 
-- [Спецификации CSDL, SSDL и MSL](./language-reference/csdl-ssdl-and-msl-specifications.md)
+- [Спецификации CSDL, SSDL и MSL](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec)

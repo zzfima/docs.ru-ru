@@ -2,22 +2,22 @@
 title: <pnrpPeerResolver>
 ms.date: 03/30/2017
 ms.assetid: c1b34f3b-68e5-4911-a367-de49fb61dbc6
-ms.openlocfilehash: d7c6c8efa971fb60f0257cc1c74ceda72e31cb84
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: d3e88d7f2dd991091d3d7abdc715e125ddc9ac56
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70400050"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73738783"
 ---
 # <a name="pnrppeerresolver"></a>\<Пнрппирресолвер >
 Задает использование распознавателя протокола PNRP (протокола однорангового разрешения имен) в качестве распознавателя. Этот элемент является необязательным, поскольку протокол PNRP является распознавателем по умолчанию.  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<привязки >** ](bindings.md)\
+&nbsp;&nbsp;[ **\<System. serviceModel >** ](system-servicemodel.md)\
+привязки &nbsp;&nbsp;&nbsp;&nbsp;[ **\<** ](bindings.md) >
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<customBinding >** ](custombinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Привязка >** \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Пнрпресолвер >**  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Binding** >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<пнрпресолвер >**  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -41,7 +41,7 @@ ms.locfileid: "70400050"
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<Привязка >](../../../misc/binding.md)|Определяет все возможности пользовательской привязки.|  
+|[> привязки \<](bindings.md)|Определяет все возможности пользовательской привязки.|  
   
 ## <a name="example"></a>Пример  
   

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - wrappers [WPF], implementing
 - dependency properties [WPF], custom
 ms.assetid: e6bfcfac-b10d-4f58-9f77-a864c2a2938f
-ms.openlocfilehash: 00596911cf603ae9615eb64d0aedefe90c2520bc
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 8e3ac7207a5ef05b94e97f005ecd17d5078669a4
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458987"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740889"
 ---
 # <a name="custom-dependency-properties"></a>Пользовательские свойства зависимостей
 
@@ -35,7 +35,7 @@ ms.locfileid: "73458987"
 
 ## <a name="what-is-a-dependency-property"></a>Что такое свойство зависимостей?
 
-Чтобы обеспечить поддержку стилей, привязки данных, наследования, анимации и значений по умолчанию, можно включить свойство среды CLR, которое в противном случае будет реализовано как свойство зависимостей. Свойства зависимостей — это свойства, регистрируемые в системе свойств [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] путем вызова метода <xref:System.Windows.DependencyProperty.Register%2A> (или <xref:System.Windows.DependencyProperty.RegisterReadOnly%2A>), которые поддерживаются полем идентификатора <xref:System.Windows.DependencyProperty>. Свойства зависимостей могут использоваться только типами <xref:System.Windows.DependencyObject>, но <xref:System.Windows.DependencyObject> довольно высоки в иерархии классов [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], поэтому большинство классов, доступных в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], могут поддерживать свойства зависимостей. Дополнительные сведения о свойствах зависимостей и некоторых терминах и соглашениях, используемых для их описания в этом [!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)], см. в разделе [Общие сведения о свойствах зависимостей](dependency-properties-overview.md).
+Чтобы обеспечить поддержку стилей, привязки данных, наследования, анимации и значений по умолчанию, можно включить свойство среды CLR, которое в противном случае будет реализовано как свойство зависимостей. Свойства зависимостей — это свойства, регистрируемые в системе свойств [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] путем вызова метода <xref:System.Windows.DependencyProperty.Register%2A> (или <xref:System.Windows.DependencyProperty.RegisterReadOnly%2A>), которые поддерживаются полем идентификатора <xref:System.Windows.DependencyProperty>. Свойства зависимостей могут использоваться только типами <xref:System.Windows.DependencyObject>, но <xref:System.Windows.DependencyObject> довольно высоки в иерархии классов [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], поэтому большинство классов, доступных в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], могут поддерживать свойства зависимостей. Дополнительные сведения о свойствах зависимостей и некоторых терминологиях и соглашениях, используемых для их описания в этом пакете SDK, см. в разделе [Общие сведения о свойствах зависимостей](dependency-properties-overview.md).
 
 <a name="example_dp"></a>
 

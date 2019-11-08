@@ -5,12 +5,12 @@ helpviewer_keywords:
 - XAML [WPF], code-behind
 - code-behind files [WPF], XAML
 ms.assetid: 9df6d3c9-aed3-471c-af36-6859b19d999f
-ms.openlocfilehash: 2e975745c2124ab2834eb82ed9b94563b44642b1
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: c18cce1898b8834c20d5e4af70c1b010e4b96e11
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73453683"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740905"
 ---
 # <a name="code-behind-and-xaml-in-wpf"></a>Код программной части и XAML в WPF
 <a name="introduction"></a>Код программной части — это термин, используемый для описания кода, который объединяется с объектами, определенными разметкой, при компиляции разметки [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]ной страницы. В этом разделе описываются требования к коду программной части, а также альтернативный механизм встроенного кода для кода в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  
@@ -50,7 +50,7 @@ ms.locfileid: "73453683"
   
 <a name="x_Code"></a>   
 ## <a name="xcode"></a>x:Code  
- [x:Code](../../xaml-services/x-code-intrinsic-xaml-type.md) — это элемент директивы, определенный в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Элемент директивы `x:Code` может содержать встроенный код программирования. Код, определенный встроенным, может взаимодействовать с [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] на той же странице. В следующем примере показан встроенный C# код. Обратите внимание, что код находится внутри элемента `x:Code` и что код должен быть заключен в `<CDATA[`...`]]>` для экранирования содержимого для [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)], чтобы процессор [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] (интерпретируемый как [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] схему, так и [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] схему) не будет Попробуйте интерпретировать содержимое буквально как [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)].  
+ [x:Code](../../xaml-services/x-code-intrinsic-xaml-type.md) — это элемент директивы, определенный в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Элемент директивы `x:Code` может содержать встроенный код программирования. Код, определенный встроенным, может взаимодействовать с [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] на той же странице. В следующем примере показан встроенный C# код. Обратите внимание, что код находится внутри элемента `x:Code` и что код должен быть заключен в `<CDATA[`...`]]>` для экранирования содержимого для XML, чтобы процессор [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] (интерпретируемый как [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] схему, так и схема [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]) не пытался интерпретировать содержимое буквально как XML.  
   
  [!code-xaml[XAMLOvwSupport#ButtonWithInlineCode](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page4.xaml#buttonwithinlinecode)]  
   

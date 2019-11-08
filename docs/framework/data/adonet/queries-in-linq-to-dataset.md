@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c1a78fa8-9f0c-40bc-a372-5575a48708fe
-ms.openlocfilehash: 5aaf33e5e2379ace4d32c59bd842889d0f9e32da
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 15a27c743f54a8ba6ea52edfde08731d8b439645
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70794535"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73735408"
 ---
 # <a name="queries-in-linq-to-dataset"></a>Запросы в LINQ to DataSet
 Запрос представляет собой выражение, извлекающее данные из источника данных. Запросы обычно выражаются на специализированном языке запросов, например SQL для реляционных баз данных и XQuery для XML. Поэтому разработчикам приходится учить новый язык запросов для каждого типа источника данных и формата данных, для которых выполняется запрос. [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] реализует более простую и согласованную модель работы с данными для различных типов источников данных и различных форматов данных. В запросе [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] работа всегда происходит с программными объектами.  
   
  Операция запроса [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] состоит из трех действий: получение одного или нескольких источников данных, создание запроса и выполнение запроса.  
   
- К источникам данных, которые реализуют универсальный интерфейс <xref:System.Collections.Generic.IEnumerable%601>, могут быть выполнены запросы с помощью [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]. Вызов <xref:System.Data.DataTableExtensions.AsEnumerable%2A> метода <xref:System.Data.DataTable> для возвращает объект, реализующий универсальный <xref:System.Collections.Generic.IEnumerable%601> интерфейс, который служит источником данных для запросов LINQ to DataSet.  
+ К источникам данных, которые реализуют универсальный интерфейс <xref:System.Collections.Generic.IEnumerable%601>, могут быть выполнены запросы с помощью [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]. Вызов <xref:System.Data.DataTableExtensions.AsEnumerable%2A> в <xref:System.Data.DataTable> возвращает объект, который реализует универсальный интерфейс <xref:System.Collections.Generic.IEnumerable%601>, который служит источником данных для запросов LINQ to DataSet.  
   
  В запросе указываются данные, которые необходимо получить из источника данных. В запросе можно также указать, как следует сортировать, группировать и формировать возвращаемую информацию. В [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] запрос хранится в переменной. Если запрос должен возвращать последовательность значений, переменная запроса должна иметь перечислимый тип данных. Эта переменная запроса не выполняет никаких действий и не возвращает данные. Она только хранит информацию о запросе. После создания запроса его необходимо выполнить, чтобы получить данные.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "70794535"
  [!code-csharp[DP LINQ to DataSet Examples#Composing](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#composing)]
  [!code-vb[DP LINQ to DataSet Examples#Composing](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#composing)]  
   
- После выполнения запроса присоединять к нему дополнительные запросы нельзя, и все последующие запросы будут использовать операторы [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] из памяти. Выполнение запроса произойдет при переборе переменной запроса в `foreach` операторе или `For Each` или при [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] вызове одного из операторов преобразования, которые приводят к немедленному выполнению. В число этих операторов входят следующие: <xref:System.Linq.Enumerable.ToList%2A>, <xref:System.Linq.Enumerable.ToArray%2A>, <xref:System.Linq.Enumerable.ToLookup%2A> и <xref:System.Linq.Enumerable.ToDictionary%2A>.  
+ После выполнения запроса присоединять к нему дополнительные запросы нельзя, и все последующие запросы будут использовать операторы [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] из памяти. Выполнение запроса произойдет при итерации переменной запроса в `foreach` или `For Each` или при вызове одного из операторов преобразования [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)], которые вызывают немедленное выполнение. В число этих операторов входят следующие: <xref:System.Linq.Enumerable.ToList%2A>, <xref:System.Linq.Enumerable.ToArray%2A>, <xref:System.Linq.Enumerable.ToLookup%2A> и <xref:System.Linq.Enumerable.ToDictionary%2A>.  
   
  В следующем примере первый запрос возвращает все продукты, отсортированные по списочной цене. Метод <xref:System.Linq.Enumerable.ToArray%2A> используется для принудительного немедленного выполнения запроса:  
   
@@ -63,5 +63,5 @@ ms.locfileid: "70794535"
 
 - [Руководство по программированию](programming-guide-linq-to-dataset.md)
 - [Запросы к DataSet](querying-datasets-linq-to-dataset.md)
-- [Приступая к работе с LINQ в C#](../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
+- [Приступая к работе с LINQ в C#](../../../csharp/programming-guide/concepts/linq/index.md)
 - [Приступая к работе с LINQ в Visual Basic](../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)

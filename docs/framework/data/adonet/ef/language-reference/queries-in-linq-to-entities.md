@@ -2,19 +2,19 @@
 title: Запросы в LINQ to Entities
 ms.date: 03/30/2017
 ms.assetid: c015a609-29eb-4e95-abb1-2ca721c6e2ad
-ms.openlocfilehash: 561fa3217a80a8437b7c4d175d5a1156096ac241
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 52f48fcacd6fbd92e4fd0531c5e1fa3577496941
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70249555"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73738477"
 ---
 # <a name="queries-in-linq-to-entities"></a>Запросы в LINQ to Entities
 Запрос представляет собой выражение, извлекающее данные из источника данных. Запросы обычно выражаются на специализированном языке запросов, например SQL для реляционных баз данных и XQuery для XML. Поэтому разработчикам приходится учить новый язык запросов для каждого типа источника данных и формата данных, для которых выполняется запрос. Интегрированный в язык запрос (LINQ) предлагает упрощенную согласованную модель работы с данными для различных типов источников данных и различных форматов данных. Запросы LINQ всегда работают с программируемыми объектами.  
   
  Операция запроса LINQ состоит из трех действий: получение одного или нескольких источников данных, создание запроса и его выполнение.  
   
- К источникам данных, реализующим общий интерфейс <xref:System.Collections.Generic.IEnumerable%601> или <xref:System.Linq.IQueryable%601>, можно выполнять запрос с помощью LINQ. Экземпляры универсального <xref:System.Data.Objects.ObjectQuery%601> класса, реализующего универсальный <xref:System.Linq.IQueryable%601> интерфейс, служат источником данных для запросов LINQ to Entities. Универсальный класс <xref:System.Data.Objects.ObjectQuery%601> представляет запрос, который возвращает коллекцию, включающую ноль или более типизированных объектов. Можно также разрешить компилятору выводить тип сущности с помощью C# ключевого слова `var` (Dim в Visual Basic).  
+ К источникам данных, реализующим общий интерфейс <xref:System.Collections.Generic.IEnumerable%601> или <xref:System.Linq.IQueryable%601>, можно выполнять запрос с помощью LINQ. Экземпляры универсального <xref:System.Data.Objects.ObjectQuery%601> класса, реализующего универсальный интерфейс <xref:System.Linq.IQueryable%601>, служат источником данных для запросов LINQ to Entities. Универсальный класс <xref:System.Data.Objects.ObjectQuery%601> представляет запрос, который возвращает коллекцию, включающую ноль или более типизированных объектов. Можно также позволить компилятору определить тип сущности с помощью C# ключевого слова `var` (Dim в Visual Basic).  
   
  В запросе указываются данные, которые необходимо получить из источника данных. В запросе можно также указать, как следует сортировать, группировать и формировать возвращаемую информацию. В LINQ запрос хранится в переменной. Если запрос возвращает последовательность значений, то переменная запроса должна иметь тип данных, который может быть запрошен. Эта переменная запроса не выполняет никаких действий и не возвращает данные. Она только хранит информацию о запросе. После создания запроса его необходимо выполнить, чтобы получить данные.  
   
@@ -24,50 +24,50 @@ ms.locfileid: "70249555"
 ### <a name="query-expression-syntax"></a>Синтаксис выражений запросов  
  Выражения запроса используют декларативный синтаксис запроса. Этот синтаксис позволяет разработчикам писать запросы на высокоуровневом языке, по формату напоминающем Transact-SQL. С помощью синтаксиса выражения запроса можно выполнять даже сложную фильтрацию, упорядочение и группирование операций в источнике данных с помощью минимального программного кода. Дополнительные сведения об [основных операциях запросов (Visual Basic)](../../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md). Примеры, показывающие применение синтаксиса выражения запросов, см. в следующих разделах.  
   
-- [Примеры синтаксиса выражений запросов: Отображения](query-expression-syntax-examples-projection.md)  
+- [Примеры синтаксиса выражений запроса. Проекция](query-expression-syntax-examples-projection.md)  
   
-- [Примеры синтаксиса выражений запросов: Записей](query-expression-syntax-examples-filtering.md)  
+- [Примеры синтаксиса выражений запроса. Фильтрация](query-expression-syntax-examples-filtering.md)  
   
-- [Примеры синтаксиса выражений запросов: Упорядочение](query-expression-syntax-examples-ordering.md)  
+- [Примеры синтаксиса выражений запроса. Упорядочение](query-expression-syntax-examples-ordering.md)  
   
-- [Примеры синтаксиса выражений запросов: Агрегатные операторы](query-expression-syntax-examples-aggregate-operators.md)  
+- [Примеры синтаксиса выражений запроса. Операторы статистических выражений](query-expression-syntax-examples-aggregate-operators.md)  
   
-- [Примеры синтаксиса выражений запросов: Секционирования](query-expression-syntax-examples-partitioning.md)  
+- [Примеры синтаксиса выражений запроса. Секционирование](query-expression-syntax-examples-partitioning.md)  
   
-- [Примеры синтаксиса выражений запросов: Операторы Join](query-expression-syntax-examples-join-operators.md)  
+- [Примеры синтаксиса выражений запроса. Операторы соединения](query-expression-syntax-examples-join-operators.md)  
   
-- [Примеры синтаксиса выражений запросов: Операторы элементов](query-expression-syntax-examples-element-operators.md)  
+- [Примеры синтаксиса выражений запроса. Операторы элементов](query-expression-syntax-examples-element-operators.md)  
   
-- [Примеры синтаксиса выражений запросов: Группа](query-expression-syntax-examples-grouping.md)  
+- [Примеры синтаксиса выражений запроса. Группировка](query-expression-syntax-examples-grouping.md)  
   
-- [Примеры синтаксиса выражений запросов: Навигация по связям](query-expression-syntax-examples-navigating-relationships.md)  
+- [Примеры синтаксиса выражений запроса. Отношения навигации](query-expression-syntax-examples-navigating-relationships.md)  
   
 ### <a name="method-based-query-syntax"></a>Синтаксис запросов, основанных на методе  
  Другим способом составления LINQ to Entities запросов является использование запросов на основе методов. Синтаксис запросов на основе методов представляет собой последовательность прямых вызовов методов операторов LINQ, передавая лямбда-выражения в качестве параметров. Дополнительные сведения см. в разделе [Лямбда-выражения](../../../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md). Примеры, показывающие применение синтаксиса на основе методов, см. в следующих разделах.  
   
-- [Примеры синтаксиса запросов на основе методов: Отображения](method-based-query-syntax-examples-projection.md)  
+- [Примеры синтаксиса запросов на основе методов. Проекция](method-based-query-syntax-examples-projection.md)  
   
-- [Примеры синтаксиса запросов на основе методов: Записей](method-based-query-syntax-examples-filtering.md)  
+- [Примеры синтаксиса запросов на основе методов. Фильтрация](method-based-query-syntax-examples-filtering.md)  
   
-- [Примеры синтаксиса запросов на основе методов: Упорядочение](method-based-query-syntax-examples-ordering.md)  
+- [Примеры синтаксиса запросов на основе методов. Упорядочение](method-based-query-syntax-examples-ordering.md)  
   
-- [Примеры синтаксиса запросов на основе методов: Агрегатные операторы](method-based-query-syntax-examples-aggregate-operators.md)  
+- [Примеры синтаксиса запросов на основе методов. Операторы статистических выражений](method-based-query-syntax-examples-aggregate-operators.md)  
   
-- [Примеры синтаксиса запросов на основе методов: Секционирования](method-based-query-syntax-examples-partitioning.md)  
+- [Примеры синтаксиса запросов на основе методов. Секционирование](method-based-query-syntax-examples-partitioning.md)  
   
-- [Примеры синтаксиса запросов на основе методов: Образовывать](method-based-query-syntax-examples-conversion.md)  
+- [Примеры синтаксиса запросов на основе методов. Преобразование](method-based-query-syntax-examples-conversion.md)  
   
-- [Примеры синтаксиса запросов на основе методов: Операторы Join](method-based-query-syntax-examples-join-operators.md)  
+- [Примеры синтаксиса запросов на основе методов. Операторы соединения](method-based-query-syntax-examples-join-operators.md)  
   
-- [Примеры синтаксиса запросов на основе методов: Операторы элементов](method-based-query-syntax-examples-element-operators.md)  
+- [Примеры синтаксиса запросов на основе методов. Операторы элементов](method-based-query-syntax-examples-element-operators.md)  
   
-- [Примеры синтаксиса запросов на основе методов: Группа](method-based-query-syntax-examples-grouping.md)  
+- [Примеры синтаксиса запросов на основе методов. Группировка](method-based-query-syntax-examples-grouping.md)  
   
-- [Примеры синтаксиса запросов на основе методов: Навигация по связям](method-based-query-syntax-examples-navigating-relationships.md)  
+- [Примеры синтаксиса запросов на основе методов. Отношения навигации](method-based-query-syntax-examples-navigating-relationships.md)  
   
 ## <a name="see-also"></a>См. также
 
 - [LINQ to Entities](linq-to-entities.md)
-- [Приступая к работе с LINQ в C#](../../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
+- [Приступая к работе с LINQ в C#](../../../../../csharp/programming-guide/concepts/linq/index.md)
 - [Приступая к работе с LINQ в Visual Basic](../../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)
 - [Entity Framework параметров слияния и скомпилированных запросов](https://go.microsoft.com/fwlink/?LinkId=199591)

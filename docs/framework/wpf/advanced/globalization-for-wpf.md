@@ -7,19 +7,19 @@ helpviewer_keywords:
 - international user interface [WPF], XAML
 - globalization [WPF]
 ms.assetid: 4571ccfe-8a60-4f06-9b37-7ac0b1c2d10f
-ms.openlocfilehash: 04001f88e0f59fd4eb3ca84d846456be7740737e
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 1d6430ba5969d8a05db47baf9521d2409e596c23
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460484"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740863"
 ---
 # <a name="globalization-for-wpf"></a>Глобализация для WPF
 В этом разделе рассматриваются проблемы, которые следует учитывать при написании [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] приложений для глобального рынка. Элементы программирования глобализации определяются в .NET в пространстве имен <xref:System.Globalization>.
 
 <a name="xaml_globalization"></a>
 ## <a name="xaml-globalization"></a>Глобализация XAML
- XAML (XAML) основан на [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] и использует преимущества поддержки глобализации, определенной в спецификации [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]. В следующих разделах описаны некоторые [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] функции, о которых следует знать.
+ XAML (XAML) основан на XML и использует преимущества поддержки глобализации, определенной в спецификации XML. В следующих разделах описаны некоторые [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] функции, о которых следует знать.
 
 <a name="char_reference"></a>
 ### <a name="character-references"></a>Ссылки символов
@@ -143,7 +143,7 @@ ms.locfileid: "73460484"
 
 <a name="mui"></a>
 ### <a name="multilingual-user-interface"></a>Многоязыковой интерфейс пользователя
- Многоязыковой интерфейс пользователя (MUI) — это поддержка Майкрософт для переключения пользовательских интерфейсов с одного языка на другой. Приложение [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] использует модель сборки для поддержки многоязыкового интерфейса пользователя. Одно приложение содержит независимые от языка сборки, а также зависимые от языка сборки вспомогательных ресурсов. Точкой входа является управляемый EXE-файл в основной сборке.  загрузчик ресурсов [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] использует преимущества диспетчера ресурсов [!INCLUDE[TLA2#tla_netframewk](../../../../includes/tla2sharptla-netframewk-md.md)]для поддержки поиска и отката ресурсов. Многоязыковые вспомогательные сборки работают с одной и той же основной сборкой. Загружаемая сборка ресурса зависит от <xref:System.Globalization.CultureInfo.CurrentUICulture%2A> текущего потока.
+ Многоязыковой интерфейс пользователя (MUI) — это поддержка Майкрософт для переключения пользовательских интерфейсов с одного языка на другой. Приложение [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] использует модель сборки для поддержки многоязыкового интерфейса пользователя. Одно приложение содержит независимые от языка сборки, а также зависимые от языка сборки вспомогательных ресурсов. Точкой входа является управляемый EXE-файл в основной сборке.  загрузчик ресурсов [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] использует преимущества диспетчера ресурсов платформы для поддержки поиска и отката ресурсов. Многоязыковые вспомогательные сборки работают с одной и той же основной сборкой. Загружаемая сборка ресурса зависит от <xref:System.Globalization.CultureInfo.CurrentUICulture%2A> текущего потока.
 
 <a name="localizable_ui"></a>
 ### <a name="localizable-user-interface"></a>Локализуемый пользовательский интерфейс
@@ -152,7 +152,7 @@ ms.locfileid: "73460484"
  С точки зрения ресурсов, файл [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], предназначенный для описания зависящего от языка [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], является элементом ресурса, поэтому его окончательный формат распространения должен быть локализован для поддержки международных языков. Поскольку [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] не может управлять событиями многих [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] приложения содержат блоки кода для выполнения этих задач. Дополнительные сведения см. в разделе [Общие сведения о XAML (WPF)](../../../desktop-wpf/fundamentals/xaml.md). Код вырезается и компилируется в разные двоичные файлы, когда [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] файл размечена в форме BAML XAML. Форма BAML файлов XAML, изображения и другие типы управляемых объектов ресурсов внедряются во вспомогательную сборку ресурсов, которая может быть локализована на другие языки, или в основную сборку, если локализация не требуется.
 
 > [!NOTE]
-> [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] приложения поддерживают все ресурсы [!INCLUDE[TLA2#tla_netframewk](../../../../includes/tla2sharptla-netframewk-md.md)]CLR, включая таблицы строк, изображения и т. д.
+> [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] приложения поддерживают все ресурсы Фрамеворкклр, включая таблицы строк, изображения и т. д.
 
 <a name="building_localizable_apps"></a>
 ### <a name="building-localizable-applications"></a>Разработка локализуемых приложений

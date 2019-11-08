@@ -2,23 +2,23 @@
 title: Элемент <message> для <wsFederationHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 9d710389-d9d8-4454-9bf2-da4ccda31cec
-ms.openlocfilehash: e26e1f94fb38e0654fd0bc9f06c6096a488bccfe
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: 8e0903dd1313e68e2de65730e129079199ebe2f2
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70400285"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73738979"
 ---
-# <a name="message-element-of-wsfederationhttpbinding"></a>\<элемент Message > элемента \<WSFederationHttpBinding >
-Определяет параметры безопасности на уровне сообщений для [ \<> WSFederationHttpBinding](wsfederationhttpbinding.md).  
+# <a name="message-element-of-wsfederationhttpbinding"></a>\<сообщение > элемента \<wsFederationHttpBinding >
+Определяет параметры безопасности на уровне сообщений для [\<wsFederationHttpBinding >](wsfederationhttpbinding.md).  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<привязки >** ](bindings.md)\
+&nbsp;&nbsp;[ **\<System. serviceModel >** ](system-servicemodel.md)\
+привязки &nbsp;&nbsp;&nbsp;&nbsp;[ **\<** ](bindings.md) >
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<wsFederationHttpBinding >** ](wsfederationhttpbinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Привязка >** \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> безопасности**](security-of-wsfederationhttpbinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> сообщения**  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Binding** >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<security >** ](security-of-wsfederationhttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**сообщение >**  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -88,13 +88,13 @@ ms.locfileid: "70400285"
 |Атрибут|Описание|  
 |---------------|-----------------|  
 |algorithmSuite|Задает алгоритмы шифрования сообщений и ключей. Допустимые значения этого атрибута см. в таблице «Атрибут algorithmSuite». Значение по умолчанию — `Basic256`.<br /><br /> Это атрибут типа <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>. Эти алгоритмы соответствуют алгоритмам, заданным в спецификации языка политики безопасности (WS-SecurityPolicy).|  
-|issuedKeyType|Задает тип выдаваемого ключа. Допустимы следующие значения:<br /><br /> -SymmetricKey<br />-PublicKey<br /><br /> Значение по умолчанию — `SymmetricKey`. Это атрибут типа <xref:System.IdentityModel.Tokens.SecurityKeyType>.|  
-|issuedTokenType|Строка, содержащая универсальный код ресурса (URI), который задает тип выдаваемых маркеров. Значение по умолчанию — `null`.|  
+|issuedKeyType|Задает тип выдаваемого ключа. Допустимы следующие значения:<br /><br /> -SymmetricKey<br />-PublicKey<br /><br /> Значение по умолчанию: `SymmetricKey`. Это атрибут типа <xref:System.IdentityModel.Tokens.SecurityKeyType>.|  
+|issuedTokenType|Строка, содержащая универсальный код ресурса (URI), который задает тип выдаваемых маркеров. Значение по умолчанию: `null`.|  
 |negotiateServiceCredential|Логическое значение, которое определяет, должен ли проводиться обмен учетными данными службы в рамках процесса согласования, или допустимо использование внештатного канала. Значением по умолчанию является `true`, означающее, что учетные данные службы согласуются.|  
   
 ## <a name="algorithmsuite-attribute"></a>Атрибут algorithmSuite  
   
-|Значение|Описание|  
+|значения|Описание|  
 |-----------|-----------------|  
 |Basic128|Используется шифрование Basic128, Sha1 для хэш-кода и Rsa-oaep-mgf1p для шифрования ключа.|  
 |Basic192|Используется шифрование Basic192, Sha1 для хэш-кода и Rsa-oaep-mgf1p для шифрования ключа.|  
@@ -138,4 +138,4 @@ ms.locfileid: "70400285"
 - [Привязки](../../../wcf/bindings.md)
 - [Настройка привязок, предоставляемых системой](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [Использование привязок для настройки служб и клиентов](../../../wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<Привязка >](../../../misc/binding.md)
+- [> привязки \<](bindings.md)

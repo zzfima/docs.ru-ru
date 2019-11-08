@@ -2,20 +2,20 @@
 title: <udpBinding>
 ms.date: 03/30/2017
 ms.assetid: fa291901-8340-45c6-9c44-5d9281c70bc3
-ms.openlocfilehash: 9ee6d4b5e623248499adc43bb176d96bfc9cd1a8
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: 95ce89aabb400c01002799fd8251383a2e5dd4c2
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70399252"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73732704"
 ---
 # <a name="udpbinding"></a>\<Удпбиндинг >
 Элемент конфигурации, который используется для настройки привязки <xref:System.ServiceModel.UdpBinding>.  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<привязки >** ](bindings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Удпбиндинг >**  
+&nbsp;&nbsp;[ **\<System. serviceModel >** ](system-servicemodel.md)\
+привязки &nbsp;&nbsp;&nbsp;&nbsp;[ **\<** ](bindings.md) >
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<удпбиндинг >**  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -63,7 +63,7 @@ ms.locfileid: "70399252"
 |`openTimeout`|Значение <xref:System.TimeSpan>, которое задает длительность времени ожидания для завершения операции открытия. Это значение должно быть больше или равно <xref:System.TimeSpan.Zero>. Значение по умолчанию - 00:01:00.|  
 |`receiveTimeout`|Значение <xref:System.TimeSpan>, которое задает длительность времени ожидания для завершения операции получения. Это значение должно быть больше или равно <xref:System.TimeSpan.Zero>. Значение по умолчанию - 00:10:00.|  
 |`sendTimeout`|Значение <xref:System.TimeSpan>, которое задает длительность времени ожидания для завершения операции отправки. Это значение должно быть больше или равно <xref:System.TimeSpan.Zero>. Значение по умолчанию - 00:01:00.|  
-|`textEncoding`|Задает кодировку, используемую при отправке сообщений через привязку. Допустимы следующие значения:<br /><br /> BigEndianUnicode Кодировка байтов Юникода.<br />Юникод 16-разрядная кодировка.<br />ОБРАТНО 8-разрядная кодировка<br /><br /> Значение по умолчанию - UTF8. Это атрибут типа <xref:System.Text.Encoding>.|  
+|`textEncoding`|Задает кодировку, используемую при отправке сообщений через привязку. Допустимы следующие значения:<br /><br /> -BigEndianUnicode: Юникод байтов Encoding.<br />-Unicode: 16-разрядная кодировка.<br />-UTF8:8-разрядная кодировка<br /><br /> Значение по умолчанию - UTF8. Это атрибут типа <xref:System.Text.Encoding>.|  
 |`timeToLive`|Значение интервала времени, указывающее срок жизни для привязки.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
@@ -76,9 +76,9 @@ ms.locfileid: "70399252"
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<привязки >](bindings.md)|Этот элемент содержит коллекцию стандартных и пользовательских привязок.|  
+|[привязки\<](bindings.md)|Этот элемент содержит коллекцию стандартных и пользовательских привязок.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
  UdpBinding позволяет службам WCF обмениваться данными через транспорт определяемой пользователем процедуры. Он позволяет выполнять обмен сообщениями «пожара и забыть», когда клиент отправляет сообщение службе и не ожидает ответа.  
   
 ## <a name="example"></a>Пример  
@@ -113,4 +113,4 @@ ms.locfileid: "70399252"
 - [Привязки](../../../wcf/bindings.md)
 - [Настройка привязок, предоставляемых системой](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [Использование привязок для настройки служб и клиентов](../../../wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<Привязка >](../../../misc/binding.md)
+- [> привязки \<](bindings.md)

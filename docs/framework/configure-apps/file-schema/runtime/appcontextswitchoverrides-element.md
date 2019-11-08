@@ -8,12 +8,12 @@ helpviewer_keywords:
 - configuration switches
 - configuration
 ms.assetid: 4ce07f47-7ddb-4d91-b067-501bd8b88752
-ms.openlocfilehash: feb84fb3d8836168035ef8eed31728c6a0d00cba
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 881b9fedfaa42ffb402e226a6b271f47feb20617
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73118286"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73736812"
 ---
 # <a name="appcontextswitchoverrides-element"></a>\<AppContextSwitchOverrides > элемент
 Определяет один или несколько коммутаторов, используемых классом <xref:System.AppContext> для предоставления механизма отказа от новых функциональных возможностей.  
@@ -92,7 +92,7 @@ ms.locfileid: "73118286"
 |`Switch.System.Runtime.Serialization.`<br/>`DoNotUseECMAScriptV6EscapeControlCharacter` |Определяет, сериализует ли [DataContractJsonSerializer](xref:System.Runtime.Serialization.Json.DataContractJsonSerializer) некоторые управляющие символы на основе стандартов ECMAScript версии 6 и V8. Дополнительные сведения см. в статье [Устранение рисков. Сериализация управляющих символов с помощью DataContractJsonSerializer](../../../migration-guide/mitigation-serialization-control-characters.md)| .NET Framework 4.7 |
 |`Switch.System.Runtime.Serialization.`<br/>`DoNotUseTimeZoneInfo`|Определяет, поддерживает ли <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> несколько корректировок или только одну корректировку для часового пояса. Если `true`, для сериализации и десериализации данных даты и времени используется тип <xref:System.TimeZoneInfo>. в противном случае используется тип <xref:System.TimeZone>, который не поддерживает несколько правил коррекции.|.NET Framework 4.6.2|
 |`Switch.System.Runtime.Serialization.UseNewMaxArraySize`|Определяет, использует ли <xref:System.Runtime.Serialization.ObjectManager?displayProperty=nameWithType> больший размер массива при сериализации и десериализации объектов. Присвойте этому параметру значение `true`, чтобы повысить производительность сериализации и десериализации больших графов объектов по типам, например <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>. |.NET Framework 4.7.2|
-|`Switch.System.Security.ClaimsIdentity.`<br/>`SetActorAsReferenceWhenCopyingClaimsIdentity`|Определяет, задает ли конструктор <xref:System.Security.Claims.ClaimsIdentity.%23ctor%28System.Security.Principal.IIdentity%29?displayProperty=nameWithType> свойство <xref:System.Security.Claims.ClaimsIdentity.Actor%2A?displayProperty=nameWithType> нового объекта с существующей ссылкой на объект. Дополнительные сведения см. в разделе [Устранение рисков. Конструктор ClaimsIdentity](../../../migration-guide/mitigation-claimsidentity-constructor.md).|.NET Framework 4.6.2|  
+|`Switch.System.Security.ClaimsIdentity.`<br/>`SetActorAsReferenceWhenCopyingClaimsIdentity`|Определяет, задает ли конструктор <xref:System.Security.Claims.ClaimsIdentity.%23ctor%28System.Security.Principal.IIdentity%29?displayProperty=nameWithType> свойство <xref:System.Security.Claims.ClaimsIdentity.Actor%2A?displayProperty=nameWithType> нового объекта с существующей ссылкой на объект. Дополнительные сведения см. в разделе [Устранение рисков. Конструктор ClaimsIdentity](../../../migration-guide/retargeting/4.6.1-4.6.2.md).|.NET Framework 4.6.2|  
 |`Switch.System.Security.Cryptography.`<br/>`AesCryptoServiceProvider.DontCorrectlyResetDecryptor`|Определяет, будет ли попытка повторного использования <xref:System.Security.Cryptography.AesCryptoServiceProvider> дешифратора выдать исключение <xref:System.Security.Cryptography.CryptographicException>. Дополнительные сведения см. [в разделе AesCryptoServiceProvider дешифратора — обеспечивает повторное использование преобразования](../../../migration-guide/retargeting/4.6.1-4.6.2.md#aescryptoserviceprovider-decryptor-provides-a-reusable-transform).|.NET Framework 4.6.2|
 |`Switch.System.Security.Cryptography.`<br/>`DoNotAddrOfCspParentWindowHandle`|Определяет, является ли значение свойства [CspParameters. ParentWindowHandle](xref:System.Security.Cryptography.CspParameters.ParentWindowHandle) [IntPtr](xref:System.IntPtr) , представляющего место в памяти дескриптора окна, или является ли он дескриптором окна (HWND). Дополнительные сведения см. в статье [Mitigation: CspParameters.ParentWindowHandle Expects an HWND](../../../migration-guide/retargeting/4.6.2-4.7.md#cspparametersparentwindowhandle-now-expects-hwnd-value) (Устранение рисков. CspParameters.ParentWindowHandle ожидает HWND). |.NET Framework 4.7|   
 |`Switch.System.Security.Cryptography.`<br/>`UseLegacyFipsThrow`|Определяет, будет ли использование управляемых криптографических классов в режиме FIPS выдать исключение <xref:System.Security.Cryptography.CryptographicException> (`true`) или полагается на реализацию системных библиотек (`false`).|.NET Framework 4.8|

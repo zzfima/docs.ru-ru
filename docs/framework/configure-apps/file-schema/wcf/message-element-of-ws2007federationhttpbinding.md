@@ -2,23 +2,23 @@
 title: Элемент <message> для <ws2007FederationHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 52cd941d-e230-4c82-8b29-333a7d20eca8
-ms.openlocfilehash: b1128bda6068a1fe3d8f5bb5ac29cc349f023b5b
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: dde763687dbc62d6fb342a21a4c614208f28d7e8
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70397851"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739001"
 ---
-# <a name="message-element-of-ws2007federationhttpbinding"></a>\<элемент Message > элемента \<ws2007FederationHttpBinding >
-Определяет параметры безопасности на уровне сообщений для [ \<элемента ws2007FederationHttpBinding >](ws2007federationhttpbinding.md) .  
+# <a name="message-element-of-ws2007federationhttpbinding"></a>\<сообщение > элемента \<ws2007FederationHttpBinding >
+Определяет параметры безопасности на уровне сообщений для элемента [\<ws2007FederationHttpBinding >](ws2007federationhttpbinding.md) .  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<привязки >** ](bindings.md)\
+&nbsp;&nbsp;[ **\<System. serviceModel >** ](system-servicemodel.md)\
+привязки &nbsp;&nbsp;&nbsp;&nbsp;[ **\<** ](bindings.md) >
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<ws2007FederationHttpBinding >** ](ws2007federationhttpbinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Привязка >** \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> безопасности**](security-element-of-ws2007federationhttpbinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> сообщения**  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Binding** >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<security >** ](security-element-of-ws2007federationhttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**сообщение >**  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -87,14 +87,14 @@ ms.locfileid: "70397851"
   
 |Атрибут|Описание|  
 |---------------|-----------------|  
-|`algorithmSuite`|Необязательный параметр. Задает алгоритмы шифрования сообщений, сигнатуры и ключей. Алгоритмы и размеры ключей определяются классом <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>. Эти алгоритмы соответствуют алгоритмам, заданным в спецификации языка политики безопасности (WS-SecurityPolicy).<br /><br /> В следующей таблице приводятся возможные значения. Значение по умолчанию - Basic256.|  
+|`algorithmSuite`|Необязательный. Задает алгоритмы шифрования сообщений, сигнатуры и ключей. Алгоритмы и размеры ключей определяются классом <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>. Эти алгоритмы соответствуют алгоритмам, заданным в спецификации языка политики безопасности (WS-SecurityPolicy).<br /><br /> В следующей таблице приводятся возможные значения. Значение по умолчанию - Basic256.|  
 |`issuedKeyType`|Задает тип выдаваемого ключа. Допустимы следующие значения:<br /><br /> -SymmetricKey<br />-PublicKey<br />-Беареркэй<br /><br /> Значение по умолчанию - SymmetricKey. Это атрибут типа <xref:System.IdentityModel.Tokens.SecurityKeyType>.|  
-|`issuedTokenType`|Универсальный код ресурса (URI), который задает тип выдаваемых маркеров. Значение по умолчанию — `null`.|  
+|`issuedTokenType`|Универсальный код ресурса (URI), который задает тип выдаваемых маркеров. Значение по умолчанию: `null`.|  
 |`negotiateServiceCredential`|Значение, которое определяет, должен ли проводиться обмен учетными данными службы в рамках процесса согласования, или эти данные доступны вне диапазона. Значением по умолчанию является `true`, означающее, что учетные данные службы согласуются.|  
   
 ## <a name="algorithmsuite-attribute"></a>Атрибут algorithmSuite  
   
-|Значение|Описание|  
+|значения|Описание|  
 |-----------|-----------------|  
 |Basic128|Используется шифрование Aes128, Sha1 для хэша и Rsa-oaep-mgf1p для шифрования ключа.|  
 |Basic192|Используется шифрование Aes192, Sha1 для хэша и Rsa-oaep-mgf1p для шифрования ключа.|  
@@ -118,7 +118,7 @@ ms.locfileid: "70397851"
 |Элемент|Описание|  
 |-------------|-----------------|  
 |[\<claimTypeRequirements >](claimtyperequirements-element.md)|Задает коллекцию типов утверждений для этой привязки. Каждый элемент имеет тип <xref:System.ServiceModel.Configuration.ClaimTypeElement>.|  
-|[\<issuer>](issuer.md)|Задает конечную точку, которая выдает маркер безопасности. Это элемент типа <xref:System.ServiceModel.Configuration.IssuedTokenParametersEndpointAddressElement>.|  
+|[\<> издателя](issuer.md)|Задает конечную точку, которая выдает маркер безопасности. Это элемент типа <xref:System.ServiceModel.Configuration.IssuedTokenParametersEndpointAddressElement>.|  
 |[\<issuerMetadata >](issuermetadata.md)|Задает адрес конечной точки издателя.|  
 |[\<Токенрекуестпараметерс >](tokenrequestparameters.md)|Коллекция параметров запроса маркера. Каждый параметр представляет собой элемент XML.|  
   
@@ -138,4 +138,4 @@ ms.locfileid: "70397851"
 - [Привязки](../../../wcf/bindings.md)
 - [Настройка привязок, предоставляемых системой](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [Использование привязок для настройки служб и клиентов](../../../wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<Привязка >](../../../misc/binding.md)
+- [> привязки \<](bindings.md)

@@ -2,22 +2,22 @@
 title: <oneWay>
 ms.date: 03/30/2017
 ms.assetid: 00e67e0e-77c0-4695-9138-c0997b0e5f3c
-ms.openlocfilehash: f12969d8b752e54916b45c3d0e64f114971b8944
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: a5c773ea91de882920775ac8dc0ecc1da68a6c9f
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70397652"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73738787"
 ---
-# <a name="oneway"></a>\<> oneWay
+# <a name="oneway"></a>\<oneWay >
 Включает поддержку маршрутизации пакетов и использования односторонних методов для пользовательской привязки.  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<привязки >** ](bindings.md)\
+&nbsp;&nbsp;[ **\<System. serviceModel >** ](system-servicemodel.md)\
+привязки &nbsp;&nbsp;&nbsp;&nbsp;[ **\<** ](bindings.md) >
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<customBinding >** ](custombinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Привязка >** \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> oneWay**  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Binding** >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<oneWay >**  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -36,7 +36,7 @@ ms.locfileid: "70397652"
   
 |Атрибут|Описание|  
 |---------------|-----------------|  
-|`packetRoutable`|Логическое значение, указывающее, включена ли поддержка маршрутизации пакетов. Значение по умолчанию — `false`.|  
+|`packetRoutable`|Логическое значение, указывающее, включена ли поддержка маршрутизации пакетов. Значение по умолчанию: `false`.|  
 |`MaxAcceptedChannels`|Целое число, указывающее максимальное количество принимаемых каналов.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
@@ -49,9 +49,9 @@ ms.locfileid: "70397652"
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<Привязка >](../../../misc/binding.md)|Определяет все возможности пользовательской привязки.|  
+|[> привязки \<](bindings.md)|Определяет все возможности пользовательской привязки.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
  Чтобы включить поддержку маршрутизации пакетов, необходим уровень одностороннего преобразования, предоставляемый данным элементом. Пользователь может создавать пользовательские привязки, которые выполняют наложение данной привязки на транспорт с поддержкой сеансов или типа «запрос-отклик», чтобы включить для него поддержку маршрутизации пакетов. Этот элемент также полезен, если необходимо предоставить односторонние методы более естественным образом. К данному уровню могут применяться дополнительные преобразования, например Composite Duplex и Reliable Messaging.  
   
 ## <a name="see-also"></a>См. также

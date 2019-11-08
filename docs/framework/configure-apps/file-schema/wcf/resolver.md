@@ -2,21 +2,21 @@
 title: <resolver>
 ms.date: 03/30/2017
 ms.assetid: 0c00200c-f135-4e5c-a024-76b72bcbc021
-ms.openlocfilehash: fb974492dee6b2a4244cedc06e3f5e40334dd02a
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: 0dc667f392595d895bd4f2773ab69777d7369446
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70399987"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73738739"
 ---
-# <a name="resolver"></a>\<сопоставитель >
+# <a name="resolver"></a>сопоставитель \<
 Указывает распознаватель одноранговых узлов, используемый для распознавания идентификатора сетки с IP-адресами в набор адресов одноранговых узлов, которые представляют несколько узлов, входящих в сетку.  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<привязки >** ](bindings.md)\
+&nbsp;&nbsp;[ **\<System. serviceModel >** ](system-servicemodel.md)\
+привязки &nbsp;&nbsp;&nbsp;&nbsp;[ **\<** ](bindings.md) >
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<netPeerTcpBinding >** ](netpeertcpbinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Привязка >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Binding** >\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<сопоставитель >**  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -41,15 +41,15 @@ ms.locfileid: "70399987"
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<заголовки >](headers.md)|Задает параметры службы пользовательского распознавателя одноранговых узлов.|  
+|[\<заголовков >](headers.md)|Задает параметры службы пользовательского распознавателя одноранговых узлов.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<Привязка >](../../../misc/binding.md)|Определяет все возможности [ \<привязки > netPeerTcpBinding](netpeertcpbinding.md).|  
+|[> привязки \<](bindings.md)|Определяет все возможности привязки [\<netPeerTcpBinding >](netpeertcpbinding.md).|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
  Распознаватель одноранговых узлов представляет собой службу обнаружения, используемую одноранговыми каналами для поиска одноранговых узлов, участвующих в сетке с IP-адресами. Он также используется для «регистрации» узла в сетке с IP-адресами; с помощью такого механизма одноранговый узел становится известным и доступным из сетки с IP-адресами. Дополнительные сведения об одноранговых решениях см. в разделе [одноранговые арбитры конфликтов](../../../wcf/feature-details/peer-resolvers.md).  
   
 ## <a name="see-also"></a>См. также

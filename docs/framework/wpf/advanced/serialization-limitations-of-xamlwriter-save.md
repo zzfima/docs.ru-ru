@@ -6,15 +6,15 @@ helpviewer_keywords:
 - limitations of XamlWriter.Save
 - serialization limitations of XamlWriter.Save
 ms.assetid: f86acc91-2b67-4039-8555-505734491d36
-ms.openlocfilehash: 0416b92a6264e6a8261355197b4ab2fa61f80ef2
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 5b9141d5df40d74c4682f418a8fb089fddcfcaa9
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582595"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740751"
 ---
 # <a name="serialization-limitations-of-xamlwritersave"></a>Сериализация ограничений XamlWriter.Save
-@No__t_0 API можно использовать для сериализации содержимого [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] приложения в виде [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] файла. Однако существуют некоторые заметные ограничения в том, что именно подлежит сериализации. В данном разделе описаны эти ограничения и некоторые общие рекомендации.  
+<xref:System.Windows.Markup.XamlWriter.Save%2A> API можно использовать для сериализации содержимого [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] приложения в виде [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] файла. Однако существуют некоторые заметные ограничения в том, что именно подлежит сериализации. В данном разделе описаны эти ограничения и некоторые общие рекомендации.  
 
 <a name="Run_Time__Not_Design_Time_Representation"></a>   
 ## <a name="run-time-not-design-time-representation"></a>Представление во время выполнения, а не во время разработки  
@@ -40,4 +40,4 @@ ms.locfileid: "72582595"
   
 - Форматированный текст и потоковые документы. Текст и все форматирование элементов и элементы внутри него сохраняются в выходных данных. Это может быть полезно для механизмов, которые аппроксимируют функциональность буфера обмена.  
   
-- Сохранение данных бизнес-объекта. При сохранении данных в пользовательских элементах, например данных [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)], при условии, что бизнес-объекты соответствуют базовым правилам [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], таким как предоставление настраиваемых конструкторов и преобразование значений свойств по ссылке, эти бизнес-объекты могут быть сохранены посредством сериализации.
+- Сохранение данных бизнес-объекта. Если данные хранятся в пользовательских элементах, таких как XML-данные, то при условии, что бизнес-объекты следуют базовым [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] правилам, таким как предоставление пользовательских конструкторов и преобразование для значений свойств по ссылке, эти бизнес-задачи объекты могут быть сохранены с помощью сериализации.

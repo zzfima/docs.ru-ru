@@ -9,15 +9,15 @@ helpviewer_keywords:
 - mc:ProcessContent attribute
 - XAML [WPF], mc:ProcessContent attribute
 ms.assetid: acd9a6ef-b7ca-4146-abb6-60f3b366e9ec
-ms.openlocfilehash: d8fdeec8784c9a44c9b272a0a5a8b9c56ace5230
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: e14ab0ebc7d44e2792307b16c7c0581ff7a71bc6
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458828"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740823"
 ---
 # <a name="mcignorable-attribute"></a>Атрибут mc: Ignorable
-Указывает, какие [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] префиксы пространства имен, обнаруженные в файле разметки, могут игнорироваться процессором [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Атрибут `mc:Ignorable` поддерживает совместимость разметки как для пользовательского сопоставления пространства имен, так и для [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] управления версиями.  
+Указывает, какие префиксы пространства имен XML, обнаруженные в файле разметки, могут игнорироваться процессором [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Атрибут `mc:Ignorable` поддерживает совместимость разметки как для пользовательского сопоставления пространства имен, так и для [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] управления версиями.  
   
 ## <a name="xaml-attribute-usage-single-prefix"></a>Использование атрибута XAML (один префикс)  
   
@@ -51,7 +51,7 @@ ms.locfileid: "73458828"
 |*сиселементканбеигноред*|Элемент, который можно игнорировать с помощью [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] реализаций процессора, если базовый тип не может быть разрешен.|  
   
 ## <a name="remarks"></a>Заметки  
- Префикс пространства имен `mc` [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] является рекомендуемым соглашением о префиксах для использования при сопоставлении `http://schemas.openxmlformats.org/markup-compatibility/2006`пространства имен [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] совместимости.  
+ Префикс пространства имен XML `mc` является рекомендуемым соглашением о префиксах для использования при сопоставлении `http://schemas.openxmlformats.org/markup-compatibility/2006`пространства имен совместимости [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  
   
  Элементы или атрибуты, в которых префиксная часть имени элемента определяется как `mc:Ignorable`, не вызывает ошибок при обработке процессором [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Если этот атрибут не может быть разрешен в базовый тип или конструкцию программирования, этот элемент игнорируется. Обратите внимание, что пропущенные элементы могут по-прежнему создавать дополнительные ошибки синтаксического анализа для дополнительных требований к элементам, которые являются побочными эффектами для этого элемента, который не обрабатывается. Например, для конкретной модели содержимого элемента может потребоваться только один дочерний элемент, но если указанный дочерний элемент находился в префиксе `mc:Ignorable`, а указанный дочерний элемент не удалось разрешить в тип, то процессор [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] может вызвать ошибку.  
   

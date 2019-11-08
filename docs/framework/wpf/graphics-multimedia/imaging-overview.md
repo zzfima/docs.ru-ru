@@ -21,12 +21,12 @@ helpviewer_keywords:
 - decoding image formats [WPF]
 - rotating images [WPF]
 ms.assetid: 72aad87a-e6f3-4937-94cd-a18b7766e990
-ms.openlocfilehash: 7c0168d5ca8b1d3bda709f934e454b2603d37b71
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: b60f2871062a12d3bee91a9c6d9883222b3034f4
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039883"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73733566"
 ---
 # <a name="imaging-overview"></a>Общие сведения об обработке изображений
 В этом разделе приводятся общие сведения о компоненте работы с образами Microsoft Windows Presentation Foundation. Создание образов WPF позволяет разработчикам отображать, преобразовывать и форматировать изображения.  
@@ -165,7 +165,7 @@ ms.locfileid: "73039883"
 ## <a name="image-metadata"></a>Метаданные изображений  
  Некоторые файлы изображений содержат метаданные, описывающие содержимое или характеристики файла. Например, большинство цифровых фотоаппаратов создают изображения, содержащие метаданные об изготовителе и модели фотоаппарата, использованного для создания изображения. Каждый формат изображения обрабатывает метаданные по-разному, но при работе с образами WPF обеспечивается единообразный способ хранения и извлечения метаданных для каждого поддерживаемого формата изображения.  
   
- Доступ к метаданным предоставляется через свойство <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A> объекта <xref:System.Windows.Media.Imaging.BitmapSource>. <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A> возвращает объект <xref:System.Windows.Media.Imaging.BitmapMetadata>, содержащий все метаданные, содержащиеся в изображении. Эти данные могут представлять собой одну схему метаданных или комбинацию различных схем. Создание образов WPF поддерживает следующие схемы метаданных изображений: файл обмена изображениями (EXIF), текст (текстовые данные PNG), каталог файлов изображений (IFD), Международный совет по Прессским коммуникациям (IPTC) и [!INCLUDE[TLA#tla_xmp](../../../../includes/tlasharptla-xmp-md.md)].  
+ Доступ к метаданным предоставляется через свойство <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A> объекта <xref:System.Windows.Media.Imaging.BitmapSource>. <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A> возвращает объект <xref:System.Windows.Media.Imaging.BitmapMetadata>, содержащий все метаданные, содержащиеся в изображении. Эти данные могут представлять собой одну схему метаданных или комбинацию различных схем. Создание образов WPF поддерживает следующие схемы метаданных изображений: файл обмена изображениями (EXIF), текст (текстовые данные PNG), каталог файлов изображений (IFD), Международный совет по пресс-коммуникациям (IPTC) и расширяемую платформу метаданных (XMP).  
   
  Чтобы упростить процесс чтения метаданных, <xref:System.Windows.Media.Imaging.BitmapMetadata> предоставляет несколько именованных свойств, к которым можно легко получить доступ, например <xref:System.Windows.Media.Imaging.BitmapMetadata.Author%2A>, <xref:System.Windows.Media.Imaging.BitmapMetadata.Title%2A>и <xref:System.Windows.Media.Imaging.BitmapMetadata.CameraModel%2A>. Многие из этих именованных свойств могут также использоваться для записи метаданных. Дополнительная поддержка чтения метаданных обеспечивается благодаря использованию считывателя запросов метаданных. Метод <xref:System.Windows.Media.Imaging.BitmapMetadata.GetQuery%2A> используется для получения считывателя запросов метаданных путем предоставления строкового запроса, например *"/APP1/EXIF/"* . В следующем примере <xref:System.Windows.Media.Imaging.BitmapMetadata.GetQuery%2A> используется для получения текста, хранящегося в расположении *"/Text/Description"* .  
   

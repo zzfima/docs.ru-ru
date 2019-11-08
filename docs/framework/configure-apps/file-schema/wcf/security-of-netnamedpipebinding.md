@@ -2,22 +2,22 @@
 title: <security> из <netNamedPipeBinding>
 ms.date: 03/30/2017
 ms.assetid: bb3cb022-637e-49fd-92e8-6766038affa7
-ms.openlocfilehash: cd3ff5d3983283f9b4783912b4b9525c5000df61
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: 31ea31ce6880a770c966350cd931e487396c4d63
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70399827"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73736433"
 ---
-# <a name="security-of-netnamedpipebinding"></a>\<> безопасности > \<NetNamedPipeBinding
+# <a name="security-of-netnamedpipebinding"></a>\<> безопасности \<netNamedPipeBinding >
 Определяет параметры безопасности для привязки.  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<привязки >** ](bindings.md)\
+&nbsp;&nbsp;[ **\<System. serviceModel >** ](system-servicemodel.md)\
+привязки &nbsp;&nbsp;&nbsp;&nbsp;[ **\<** ](bindings.md) >
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<netNamedPipeBinding >** ](netnamedpipebinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Привязка >** \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> безопасности**  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Binding** >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<security >**  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,7 +38,7 @@ ms.locfileid: "70399827"
   
 |Атрибут|Описание|  
 |---------------|-----------------|  
-|режим|Задает тип системы безопасности, применяемой к этой привязке. Допустимы следующие значения:<br /><br /> None Это отключает безопасность.<br />Перемещения Безопасность обеспечивается с помощью базовой безопасности на основе транспорта. Этот режим позволяет контролировать уровень защиты.<br />— Значение по умолчанию — Transport. Это атрибут типа <xref:System.ServiceModel.NetNamedPipeSecurityMode>.|  
+|режим|Задает тип системы безопасности, применяемой к этой привязке. Допустимы следующие значения:<br /><br /> -None: отключает безопасность.<br />-Transport. безопасность обеспечивается с помощью базовой безопасности на основе транспорта. Этот режим позволяет контролировать уровень защиты.<br />— Значение по умолчанию — Transport. Это атрибут типа <xref:System.ServiceModel.NetNamedPipeSecurityMode>.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
@@ -50,7 +50,7 @@ ms.locfileid: "70399827"
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|привязка|[ Элемент\<Binding > NetNamedPipeBinding](netnamedpipebinding.md).|  
+|привязка|Элемент Binding [\<> NetNamedPipeBinding](netnamedpipebinding.md).|  
   
 ## <a name="see-also"></a>См. также
 
@@ -63,4 +63,4 @@ ms.locfileid: "70399827"
 - [Привязки](../../../wcf/bindings.md)
 - [Настройка привязок, предоставляемых системой](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [Использование привязок для настройки служб и клиентов](../../../wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<Привязка >](../../../misc/binding.md)
+- [> привязки \<](bindings.md)

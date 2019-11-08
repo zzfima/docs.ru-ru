@@ -5,12 +5,12 @@ helpviewer_keywords:
 - PropertyPath object [WPF]
 - XAML [WPF], PropertyPath object
 ms.assetid: 0e3cdf07-abe6-460a-a9af-3764b4fd707f
-ms.openlocfilehash: b2530793bfe1a158a0df1c34b2768e0c7ca351f3
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: f9176e61915b6c5cc05f120eade69a6d19cc4e6a
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459362"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740783"
 ---
 # <a name="propertypath-xaml-syntax"></a>Синтаксис PropertyPath XAML
 
@@ -32,7 +32,7 @@ ms.locfileid: "73459362"
 
 Привязка данных является функцией [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], которую можно привязать к целевому значению любого свойства зависимостей. Однако источник такой привязки данных не обязательно должен быть свойством зависимостей. Это может быть любой тип свойства, распознаваемый применимым поставщиком данных. Пути к свойствам особенно используются для <xref:System.Windows.Data.ObjectDataProvider>, который используется для получения источников привязки из объектов среды CLR и их свойств.
 
-Обратите внимание, что привязка данных к [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] не использует <xref:System.Windows.PropertyPath>, так как не использует <xref:System.Windows.Data.Binding.Path%2A> в <xref:System.Windows.Data.Binding>. Вместо этого используйте <xref:System.Windows.Data.Binding.XPath%2A> и укажите допустимый синтаксис XPath в [!INCLUDE[TLA#tla_xmldom](../../../../includes/tlasharptla-xmldom-md.md)] данных. <xref:System.Windows.Data.Binding.XPath%2A> также указывается в виде строки, но здесь не описывается. см. статью [Привязка к XML-данным с помощью XmlDataProvider и запросов XPath](../data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md).
+Обратите внимание, что привязка данных к XML не использует <xref:System.Windows.PropertyPath>, так как не использует <xref:System.Windows.Data.Binding.Path%2A> в <xref:System.Windows.Data.Binding>. Вместо этого используйте <xref:System.Windows.Data.Binding.XPath%2A> и укажите допустимый синтаксис XPath в XML-модель DOM (DOM) данных. <xref:System.Windows.Data.Binding.XPath%2A> также указывается в виде строки, но здесь не описывается. см. статью [Привязка к XML-данным с помощью XmlDataProvider и запросов XPath](../data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md).
 
 Ключом к пониманию путей к свойствам в привязке к данным является то, что можно настроить целевой объект привязки на отдельное значение свойства либо использовать привязку к целевым свойствам, которые принимают списки или коллекции. При привязке коллекций для привязки к экземпляру <xref:System.Windows.Controls.ListBox>, который будет расширяться в зависимости от количества элементов данных в коллекции, путь к свойству должен ссылаться на объект коллекции, а не на отдельные элементы коллекции. Обработчик привязки данных будет сопоставлять коллекцию, используемую в качестве источника данных, с типом целевого объекта привязки автоматически, что приводит к поведению, например заполнению <xref:System.Windows.Controls.ListBox> массивом элементов.
 
@@ -76,7 +76,7 @@ ms.locfileid: "73459362"
 <object property="(ownerType.propertyName)" .../>
 ```
 
-Круглые скобки указывают, что это свойство в <xref:System.Windows.PropertyPath> должно быть создано с использованием частичной квалификации. Может использоваться пространство имен XML для поиска типа с соответствующим сопоставлением. `ownerType` ищет типы, к которым обработчик [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] имеет доступ, через объявления <xref:System.Windows.Markup.XmlnsDefinitionAttribute> в каждой сборке. В большинстве приложений есть пространство имен XML по умолчанию, сопоставленное пространству имен [!INCLUDE[TLA#tla_wpfxmlnsv1](../../../../includes/tlasharptla-wpfxmlnsv1-md.md)], поэтому префикс обычно требуется только для настраиваемых типов или типов вне этого пространства имен.  `propertyName` должно разрешаться как имя свойства, существующего в `ownerType`. Этот синтаксис обычно используется в одном из следующих случаев.
+Круглые скобки указывают, что это свойство в <xref:System.Windows.PropertyPath> должно быть создано с использованием частичной квалификации. Может использоваться пространство имен XML для поиска типа с соответствующим сопоставлением. `ownerType` ищет типы, к которым обработчик [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] имеет доступ, через объявления <xref:System.Windows.Markup.XmlnsDefinitionAttribute> в каждой сборке. В большинстве приложений есть пространство имен XML по умолчанию, сопоставленное пространству имен `http://schemas.microsoft.com/winfx/2006/xaml/presentation`, поэтому префикс обычно требуется только для настраиваемых типов или типов вне этого пространства имен.  `propertyName` должно разрешаться как имя свойства, существующего в `ownerType`. Этот синтаксис обычно используется в одном из следующих случаев.
 
 - Путь, указанный в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], который находится в стиле или шаблоне, не имеющем указанного целевого типа. Использование полных имен обычно недействительно для иных случаев, поскольку в отличие от стилей и шаблонов свойство существует в экземпляре, а не в типе.
 
@@ -97,7 +97,7 @@ ms.locfileid: "73459362"
 / в этом синтаксисе используется для навигации в иерархическом объекте источника данных. Поддерживается несколько шагов в иерархии с последовательными символами /. Обход источников учитывает текущую позицию указателя записи, которая определяется синхронизацией данных с пользовательским интерфейсом его представления. Дополнительные сведения о привязке к иерархическим объектам источника данных и концепции указателя текущей записи в привязке данных см. в разделе [Использование шаблона "Основной/подробности" с иерархическими данными](../data/how-to-use-the-master-detail-pattern-with-hierarchical-data.md) или [Общие сведения о привязке данных](../../../desktop-wpf/data/data-binding-overview.md).
 
 > [!NOTE]
-> Внешне этот синтаксис походит на [!INCLUDE[TLA2#tla_xpath](../../../../includes/tla2sharptla-xpath-md.md)]. Истинное [!INCLUDE[TLA2#tla_xpath](../../../../includes/tla2sharptla-xpath-md.md)] выражение для привязки к [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] источнику данных не используется как значение <xref:System.Windows.Data.Binding.Path%2A> и должно использоваться для взаимоисключающего свойства <xref:System.Windows.Data.Binding.XPath%2A>.
+> Внешне этот синтаксис напоминает XPath. Истинное выражение XPath для привязки к источнику данных XML не используется в качестве <xref:System.Windows.Data.Binding.Path%2A>ого значения и должно использоваться для взаимоисключающего <xref:System.Windows.Data.Binding.XPath%2A> свойства.
 
 ### <a name="collection-views"></a>Представления коллекций
 
@@ -204,7 +204,7 @@ ms.locfileid: "73459362"
 <animation Storyboard.TargetProperty="(ownerType.propertyName)" .../>
 ```
 
-Круглые скобки указывают, что это свойство в <xref:System.Windows.PropertyPath> должно быть создано с использованием частичной квалификации. Для поиска типа может использоваться пространство имен XML. `ownerType` ищет типы, к которым обработчик [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] имеет доступ, через объявления <xref:System.Windows.Markup.XmlnsDefinitionAttribute> в каждой сборке. В большинстве приложений есть пространство имен XML по умолчанию, сопоставленное пространству имен [!INCLUDE[TLA#tla_wpfxmlnsv1](../../../../includes/tlasharptla-wpfxmlnsv1-md.md)], поэтому префикс обычно требуется только для настраиваемых типов или типов вне этого пространства имен. `propertyName` должно разрешаться как имя свойства, существующего в `ownerType`. Свойство, указанное как `propertyName`, должно быть <xref:System.Windows.DependencyProperty>. (Все присоединенные свойства [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] реализуются как свойства взаимозависимостей, поэтому эта проблема возникает только для настраиваемых присоединенных свойств.)
+Круглые скобки указывают, что это свойство в <xref:System.Windows.PropertyPath> должно быть создано с использованием частичной квалификации. Для поиска типа может использоваться пространство имен XML. `ownerType` ищет типы, к которым обработчик [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] имеет доступ, через объявления <xref:System.Windows.Markup.XmlnsDefinitionAttribute> в каждой сборке. В большинстве приложений есть пространство имен XML по умолчанию, сопоставленное пространству имен `http://schemas.microsoft.com/winfx/2006/xaml/presentation`, поэтому префикс обычно требуется только для настраиваемых типов или типов вне этого пространства имен. `propertyName` должно разрешаться как имя свойства, существующего в `ownerType`. Свойство, указанное как `propertyName`, должно быть <xref:System.Windows.DependencyProperty>. (Все присоединенные свойства [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] реализуются как свойства взаимозависимостей, поэтому эта проблема возникает только для настраиваемых присоединенных свойств.)
 
 <a name="indexanim"></a>
 
