@@ -5,15 +5,15 @@ helpviewer_keywords:
 - binding data [WPF], performance
 - data binding [WPF], performance
 ms.assetid: 1506a35d-c009-43db-9f1e-4e230ad5be73
-ms.openlocfilehash: 31fdc3c31c8792fea5f3e71dedb7370ebd63c98e
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 9b302be3ed9f01ccd27470063f49966dc7d74708
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458549"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740794"
 ---
 # <a name="optimizing-performance-data-binding"></a>Оптимизация производительности: привязка данных
-Привязка данных [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] предоставляет приложениям простой и последовательный способ представления данных и взаимодействия с ними. Элементы могут быть привязаны к данным из различных источников данных в виде объектов CLR и [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)].  
+Привязка данных [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] предоставляет приложениям простой и последовательный способ представления данных и взаимодействия с ними. Элементы могут быть привязаны к данным из различных источников данных в виде объектов CLR и XML.  
   
  В этом разделе даются рекомендации по повышению производительности привязки данных.  
 
@@ -69,7 +69,7 @@ ms.locfileid: "73458549"
   
 <a name="Do_not_Convert_CLR_objects_to_Xml_Just_For_Data_Binding"></a>   
 ## <a name="do-not-convert-clr-objects-to-xml-just-for-data-binding"></a>Не преобразовывайте объекты среды CLR в XML только для привязки данных.  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] позволяет привязывать данные к [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] содержимому; Однако привязка данных к [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] содержимого выполняется медленнее, чем привязка данных к объектам CLR. Не преобразуйте данные объекта CLR в XML, если единственной целью является привязка данных.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] позволяет привязывать данные к XML-содержимому; Однако привязка данных к XML-содержимому выполняется медленнее, чем привязка данных к объектам CLR. Не преобразуйте данные объекта CLR в XML, если единственной целью является привязка данных.  
   
 ## <a name="see-also"></a>См. также
 

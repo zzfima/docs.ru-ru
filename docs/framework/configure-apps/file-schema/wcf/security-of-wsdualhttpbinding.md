@@ -2,22 +2,22 @@
 title: <security> из <wsDualHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 869c05e7-4ebe-467d-95ab-c8f8de4e6b9e
-ms.openlocfilehash: b6a1c952b1ae65c8fb6f17237b5c15f3a8d4844a
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: 4969c041678bbf3490975bc0ec53507b6cf762bb
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70399750"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73738607"
 ---
-# <a name="security-of-wsdualhttpbinding"></a>\<> безопасности > \<WSDualHttpBinding
-Определяет возможности [ \<безопасности > WSDualHttpBinding](wsdualhttpbinding.md).  
+# <a name="security-of-wsdualhttpbinding"></a>\<> безопасности \<wsDualHttpBinding >
+Определяет возможности безопасности [\<wsDualHttpBinding >](wsdualhttpbinding.md).  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<привязки >** ](bindings.md)\
+&nbsp;&nbsp;[ **\<System. serviceModel >** ](system-servicemodel.md)\
+привязки &nbsp;&nbsp;&nbsp;&nbsp;[ **\<** ](bindings.md) >
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<wsDualHttpBinding >** ](wsdualhttpbinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Привязка >** \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> безопасности**  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Binding** >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<security >**  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,7 +40,7 @@ ms.locfileid: "70399750"
   
 ## <a name="mode-attribute"></a>Атрибут mode  
   
-|Значение|Описание|  
+|значения|Описание|  
 |-----------|-----------------|  
 |Отсутствуют|Режим безопасности отключен.|  
 |Сообщение|Безопасность обеспечивается с помощью средств безопасности сообщений SOAP.|  
@@ -49,15 +49,15 @@ ms.locfileid: "70399750"
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<> сообщения](message-of-wsdualhttpbinding.md)|Определяет параметры безопасности уровня сообщений. Это элемент типа <xref:System.ServiceModel.MessageSecurityOverHttp>.|  
+|[сообщение \<](message-of-wsdualhttpbinding.md)|Определяет параметры безопасности уровня сообщений. Это элемент типа <xref:System.ServiceModel.MessageSecurityOverHttp>.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<Привязка >](../../../misc/binding.md)|Определяет все возможности [ \<привязки > WSDualHttpBinding](wsdualhttpbinding.md).|  
+|[> привязки \<](bindings.md)|Определяет все возможности привязки [\<wsDualHttpBinding >](wsdualhttpbinding.md).|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
  Двойная привязка предоставляет службе IP-адрес клиента. Клиенту следует использовать механизм безопасности, чтобы гарантировать, что подключение выполняется только к доверенным службам.  
   
 ## <a name="see-also"></a>См. также
@@ -68,4 +68,4 @@ ms.locfileid: "70399750"
 - [Привязки](../../../wcf/bindings.md)
 - [Настройка привязок, предоставляемых системой](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [Использование привязок для настройки служб и клиентов](../../../wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<Привязка >](../../../misc/binding.md)
+- [> привязки \<](bindings.md)

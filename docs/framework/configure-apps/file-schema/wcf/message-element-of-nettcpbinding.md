@@ -2,23 +2,23 @@
 title: Элемент <message> для <netTcpBinding>
 ms.date: 03/30/2017
 ms.assetid: 1d71edd9-c085-4c2e-b6d3-980c313366f9
-ms.openlocfilehash: 0cf4f66df43070cc90443e3a640915df46a5cccd
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: 76c4a0a30b637bc168855b091029a959b858401e
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70400295"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739006"
 ---
-# <a name="message-element-of-nettcpbinding"></a>\<элемент Message > элемента \<NetTcpBinding >
-Определяет тип требований безопасности на уровне сообщений для конечной точки, [ \<](nettcpbinding.md)настроенной с помощью > NetTcpBinding.  
+# <a name="message-element-of-nettcpbinding"></a>\<сообщение > элемента \<netTcpBinding >
+Определяет тип требований безопасности на уровне сообщений для конечной точки, настроенной с помощью [\<netTcpBinding >](nettcpbinding.md).  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<привязки >** ](bindings.md)\
+&nbsp;&nbsp;[ **\<System. serviceModel >** ](system-servicemodel.md)\
+привязки &nbsp;&nbsp;&nbsp;&nbsp;[ **\<** ](bindings.md) >
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<netTcpBinding >** ](nettcpbinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Привязка >** \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> безопасности**](security-of-nettcpbinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> сообщения**  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Binding** >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<security >** ](security-of-nettcpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**сообщение >**  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,7 +39,7 @@ ms.locfileid: "70400295"
   
 ## <a name="algorithmsuite-attribute"></a>Атрибут algorithmSuite  
   
-|Значение|Описание|  
+|значения|Описание|  
 |-----------|-----------------|  
 |Basic128|Используется шифрование Aes128, Sha1 для хэша и Rsa-oaep-mgf1p для шифрования ключа.|  
 |Basic192|Используется шифрование Aes192, Sha1 для хэша и Rsa-oaep-mgf1p для шифрования ключа.|  
@@ -60,7 +60,7 @@ ms.locfileid: "70400295"
   
 ## <a name="clientcredentialtype-attribute"></a>Атрибут clientCredentialType  
   
-|Значение|Описание|  
+|значения|Описание|  
 |-----------|-----------------|  
 |Отсутствуют|Данный атрибут позволяет службе взаимодействовать с анонимными клиентами. Для службы это означает, что она не требует учетных данных клиента. Для клиента это означает, что он не должен предоставлять никаких учетных данных.|  
 |Windows|Атрибут позволяет проводить обмен сообщениями SOAP, если выполнена проверка подлинности с помощью учетных данных Windows.|  
@@ -77,7 +77,7 @@ ms.locfileid: "70400295"
 |-------------|-----------------|  
 |[\<> безопасности](security-of-nettcpbinding.md)|Определяет возможности безопасности для элемента <xref:System.ServiceModel.Configuration.NetTcpBindingElement>.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
  При передаче сообщений используется безопасность уровня сообщений для обеспечения конфиденциальности и целостности сообщений SOAP, а также для взаимной проверки подлинности одноранговых узлов. Если данный режим безопасности выбран для привязки, стек каналов настраивается с элементами привязки безопасности сообщений и сообщения SOAP защищаются в соответствии со стандартами WS-Security*.  
   
 ## <a name="see-also"></a>См. также
@@ -90,4 +90,4 @@ ms.locfileid: "70400295"
 - [Привязки](../../../wcf/bindings.md)
 - [Настройка привязок, предоставляемых системой](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [Использование привязок для настройки служб и клиентов](../../../wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<Привязка >](../../../misc/binding.md)
+- [> привязки \<](bindings.md)

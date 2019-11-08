@@ -6,23 +6,23 @@ helpviewer_keywords:
 - data binding [WPF], binding to XML data using XmlDataProvider queries
 - binding [WPF], to XML data using XmlDataProvider queries
 ms.assetid: 7dcd018f-16aa-4870-8e47-c1b4ea31e574
-ms.openlocfilehash: 0f39c9d42abfaba1327f2c189ac6ce3d40db6e89
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: f075d646539de5d68e1c9c75d9664451125e9919
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459212"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73733560"
 ---
 # <a name="how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries"></a>Практическое руководство. Привязка к данным xml с помощью XMLDataProvider и запросов XPath
-В этом примере показано, как выполнить привязку к данным [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] с помощью <xref:System.Windows.Data.XmlDataProvider>.  
+В этом примере показано, как выполнить привязку к XML-данным с помощью <xref:System.Windows.Data.XmlDataProvider>.  
   
- С <xref:System.Windows.Data.XmlDataProvider>базовыми данными, к которым можно получить доступ через привязку данных в приложении, может быть любое дерево [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] узлов. Иными словами, <xref:System.Windows.Data.XmlDataProvider> предоставляет удобный способ использовать любое дерево [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] узлов в качестве источника привязки.  
+ С <xref:System.Windows.Data.XmlDataProvider>базовые данные, к которым можно получить доступ через привязку данных в приложении, могут быть любым деревом XML-узлов. Иными словами, <xref:System.Windows.Data.XmlDataProvider> предоставляет удобный способ использования дерева узлов XML в качестве источника привязки.  
   
 ## <a name="example"></a>Пример  
- В следующем примере данные внедряются непосредственно в качестве [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] *острова данных* в разделе <xref:System.Windows.FrameworkElement.Resources%2A>. Остров данных [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] должен быть заключен в теги `<x:XData>` и всегда иметь один корневой узел, который в этом примере является *Инвентаризацией*.  
+ В следующем примере данные внедряются непосредственно как *остров данных* XML в разделе <xref:System.Windows.FrameworkElement.Resources%2A>. Остров XML-данных должен быть заключен в теги `<x:XData>` и всегда иметь один корневой узел, который является *инвентаризацией* в этом примере.  
   
 > [!NOTE]
-> Корневой узел данных [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] имеет атрибут **xmlns**, который задает для пространства имен [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] пустую строку. Это обязательное требование для выполнения запросов XPath к островам данных, встроенным в страницу [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. В этом случае [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], и поэтому остров данных наследует <xref:System.Windows> пространство имен. Поэтому необходимо задать пустое пространство имен, чтобы запросы XPath не задаются в пространстве имен <xref:System.Windows>, что приведет к невозможности направить запросы.  
+> Корневой узел XML-данных имеет атрибут **xmlns** , который устанавливает пространство имен XML в пустую строку. Это обязательное требование для выполнения запросов XPath к островам данных, встроенным в страницу [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. В этом случае [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], и поэтому остров данных наследует <xref:System.Windows> пространство имен. Поэтому необходимо задать пустое пространство имен, чтобы запросы XPath не задаются в пространстве имен <xref:System.Windows>, что приведет к невозможности направить запросы.  
   
  [!code-xaml[XMLDataSource#1](~/samples/snippets/csharp/VS_Snippets_Wpf/XmlDataSource/CS/Window1.xaml#1)]  
   
@@ -48,11 +48,11 @@ ms.locfileid: "73459212"
   
  [!code-xaml[XmlDataSourceVariation#XmlNodePath](~/samples/snippets/csharp/VS_Snippets_Wpf/XmlDataSourceVariation/CS/Page1.xaml#xmlnodepath)]  
   
- В некоторых приложениях внедрение [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] в качестве острова данных в источник [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] страницы может быть нецелесообразным, поскольку точное содержимое данных должно быть известно во время компиляции. Поэтому также поддерживается получение данных из внешнего [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] файла, как показано в следующем примере:  
+ В некоторых приложениях внедрение XML в качестве острова данных в источнике [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] страницы может оказаться неудобным, поскольку точное содержимое данных должно быть известно во время компиляции. Поэтому также поддерживается получение данных из внешнего XML-файла, как показано в следующем примере:  
   
  [!code-xaml[XMLDataSource2#XmlFileExample](~/samples/snippets/csharp/VS_Snippets_Wpf/XmlDataSource2/CS/Window1.xaml#xmlfileexample)]  
   
- Если [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] данные находятся в удаленном файле [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)], необходимо определить доступ к данным, назначив соответствующий URL-адрес атрибуту <xref:System.Windows.Data.XmlDataProvider.Source%2A> следующим образом:  
+ Если XML-данные находятся в удаленном XML-файле, необходимо определить доступ к данным, назначив соответствующий URL-адрес атрибуту <xref:System.Windows.Data.XmlDataProvider.Source%2A> следующим образом:  
   
 ```xml  
 <XmlDataProvider x:Key="BookData" Source="http://MyUrl" XPath="Books"/>  

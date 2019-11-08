@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - WPF application [WPF], building
 ms.assetid: a58696fd-bdad-4b55-9759-136dfdf8b91c
-ms.openlocfilehash: 04183b2404d26c783e14dc6f4cb4141bab0d7621
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: bf673195f06475daf8341fd17cd701b84a970b39
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424439"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740664"
 ---
 # <a name="building-a-wpf-application-wpf"></a>Построение приложения WPF
 
@@ -46,7 +46,7 @@ ms.locfileid: "73424439"
 
 - .NET Framework.
 
-- Каталоги [!INCLUDE[TLA2#tla_wcsdk](../../../../includes/tla2sharptla-wcsdk-md.md)].
+- Каталоги Windows SDK.
 
 - Расположение ссылочных сборок [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].
 
@@ -64,7 +64,7 @@ ms.locfileid: "73424439"
 
 ### <a name="markup-compilationpass-1"></a>Компиляция разметки — шаг 1
 
-На этом шаге файлы [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] анализируются и компилируются, чтобы в среде выполнения не тратилось время на анализ [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] и проверку значений свойств. Скомпилированный файл [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] заранее размечен, так что во время выполнения его загрузка происходит гораздо быстрее, чем загрузка файла [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].
+На этом шаге [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] файлы анализируются и компилируются, чтобы среда выполнения не тратила время на анализ XML и проверку значений свойств. Скомпилированный файл [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] заранее размечен, так что во время выполнения его загрузка происходит гораздо быстрее, чем загрузка файла [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].
 
 На этом шаге для каждого файла [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], который является элементом сборки `Page`, выполняются следующие действия.
 

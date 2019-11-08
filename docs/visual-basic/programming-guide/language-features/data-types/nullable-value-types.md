@@ -10,30 +10,30 @@ helpviewer_keywords:
 - nullable types [Visual Basic]
 - data types [Visual Basic], nullable
 ms.assetid: 9ac3b602-6f96-4e6d-96f7-cd4e81c468a6
-ms.openlocfilehash: 072496a560775a8f79274f1d44dd389d6ed5b40d
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 1fb8f8d1657b8eab6b15858c2a6607cbde82e542
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71351764"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73732933"
 ---
 # <a name="nullable-value-types-visual-basic"></a>Типы значения, допускающие Null (Visual Basic)
 
 Иногда вы работаете с типом значения, который не имеет определенного значения в определенных обстоятельствах. Например, поле в базе данных может отличаться от присвоенного значения, которое является осмысленным и не имеет присвоенного значения. Типы значений могут быть расширены для получения их нормальных значений или значения NULL. Такое расширение называется *типом, допускающим значение NULL*.
 
-Каждый тип, допускающий значение null, создается из общей структуры <xref:System.Nullable%601>. Рассмотрим базу данных, которая отслеживает действия, связанные с работой. В следующем примере создается тип Nullable `Boolean` и объявляется переменная этого типа. Объявление можно написать тремя способами:
+Каждый допускающий значение NULL тип создается из универсальной структуры <xref:System.Nullable%601>. Рассмотрим базу данных, которая отслеживает действия, связанные с работой. В следующем примере создается тип `Boolean` Nullable и объявляется переменная этого типа. Объявление можно написать тремя способами:
 
 [!code-vb[VbVbalrNullableValue#1](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrNullableValue/VB/Class1.vb#1)]
 
-Переменная `ridesBusToWork` может содержать значение `True`, значение `False` или вообще не имеет значения. Его начальное значение по умолчанию — вообще не имеет значения, что в данном случае может означать, что данные еще не были получены для этого пользователя. В отличие от этого, `False` может означать, что информация получена и пользователь не передается на шину.
+Переменная `ridesBusToWork` может содержать значение `True`, значение `False`или вообще не имеет значения. Его начальное значение по умолчанию — вообще не имеет значения, что в данном случае может означать, что данные еще не были получены для этого пользователя. В отличие от этого, `False` может означать, что информация была получена, и пользователь не перейдет на шину.
 
 Можно объявить переменные и свойства с типами, допускающими значение null, и можно объявить массив с элементами типа, допускающего значение null. В качестве параметров можно объявить процедуры с типами, допускающими значение null, и можно вернуть тип, допускающий значение null, из процедуры `Function`.
 
-Нельзя создать тип, допускающий значение null, для ссылочного типа, такого как массив, `String` или класс. Базовый тип должен быть типом значения. Для получения дополнительной информации см. [Value Types and Reference Types](value-types-and-reference-types.md).
+Нельзя создать тип, допускающий значение null, для ссылочного типа, такого как массив, `String`или класс. Базовый тип должен быть типом значения. Для получения дополнительной информации см. [Value Types and Reference Types](value-types-and-reference-types.md).
 
 ## <a name="using-a-nullable-type-variable"></a>Использование переменной типа, допускающей значение null
 
-Наиболее важными членами типа, допускающего значение null, являются свойства <xref:System.Nullable%601.HasValue%2A> и <xref:System.Nullable%601.Value%2A>. Для переменной типа, допускающего значение null, <xref:System.Nullable%601.HasValue%2A> указывает, содержит ли переменная определенное значение. Если <xref:System.Nullable%601.HasValue%2A> равно `True`, можно считать значение из <xref:System.Nullable%601.Value%2A>. Обратите внимание, что <xref:System.Nullable%601.HasValue%2A> и <xref:System.Nullable%601.Value%2A> являются свойствами `ReadOnly`.
+Наиболее важными членами типа, допускающего значение null, являются свойства <xref:System.Nullable%601.HasValue%2A> и <xref:System.Nullable%601.Value%2A>. Для переменной типа, допускающего значение null, <xref:System.Nullable%601.HasValue%2A> сообщает, содержит ли переменная определенное значение. Если <xref:System.Nullable%601.HasValue%2A> `True`, можно прочитать значение из <xref:System.Nullable%601.Value%2A>. Обратите внимание, что свойства <xref:System.Nullable%601.HasValue%2A> и <xref:System.Nullable%601.Value%2A> `ReadOnly`.
 
 ### <a name="default-values"></a>Значения по умолчанию
 
@@ -41,11 +41,11 @@ ms.locfileid: "71351764"
 
 [!code-vb[VbVbalrNullableValue#2](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrNullableValue/VB/Class1.vb#2)]
 
-Значение NULL полезно для указания неопределенного или неизвестного значения. Если `numberOfChildren` было объявлено как `Integer`, то не будет значения, которое может означать, что информация в настоящее время недоступна.
+Значение NULL полезно для указания неопределенного или неизвестного значения. Если `numberOfChildren` было объявлено как `Integer`, то не будет значения, которое могло бы означать, что информация в настоящее время недоступна.
 
 ### <a name="storing-values"></a>Сохранение значений
 
-Вы сохраняете значение в переменной или свойстве типа, допускающего значение null, обычным способом. В следующем примере присваивается значение переменной `numberOfChildren`, объявленной в предыдущем примере.
+Вы сохраняете значение в переменной или свойстве типа, допускающего значение null, обычным способом. В следующем примере значение присваивается переменной, `numberOfChildren` объявленной в предыдущем примере.
 
 [!code-vb[VbVbalrNullableValue#3](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrNullableValue/VB/Class1.vb#3)]
 
@@ -54,17 +54,17 @@ ms.locfileid: "71351764"
 [!code-vb[VbVbalrNullableValue#4](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrNullableValue/VB/Class1.vb#4)]
 
 > [!NOTE]
-> Можно назначить `Nothing` переменной типа, допускающего значение null, но нельзя проверить его для `Nothing` с помощью знака равенства. При сравнении, в котором используется знак равенства, `someVar = Nothing`, всегда вычисляется значение `Nothing`. Можно проверить свойство переменной <xref:System.Nullable%601.HasValue%2A> для `False` или проверить с помощью оператора `Is` или `IsNot`.
+> Хотя можно присвоить `Nothing` переменной типа, допускающего значение null, ее нельзя протестировать для `Nothing` с помощью знака равенства. При сравнении, в котором используется знак равенства, `someVar = Nothing`, всегда вычисляется `Nothing`. Можно проверить свойство <xref:System.Nullable%601.HasValue%2A> переменной для `False`или проверить с помощью оператора `Is` или `IsNot`.
 
 ### <a name="retrieving-values"></a>Получение значений
 
-Чтобы получить значение переменной типа, допускающего значение null, сначала следует проверить его свойство <xref:System.Nullable%601.HasValue%2A>, чтобы убедиться, что оно имеет значение. Если попытаться считать значение, если <xref:System.Nullable%601.HasValue%2A> равно `False`, Visual Basic выдаст исключение <xref:System.InvalidOperationException>. В следующем примере показан рекомендуемый способ чтения переменной `numberOfChildren` из предыдущих примеров.
+Чтобы получить значение переменной типа, допускающего значение null, сначала следует проверить его свойство <xref:System.Nullable%601.HasValue%2A>, чтобы убедиться, что оно имеет значение. Если попытаться считать значение, когда <xref:System.Nullable%601.HasValue%2A> `False`, Visual Basic выдаст исключение <xref:System.InvalidOperationException>. В следующем примере показан рекомендуемый способ чтения переменной `numberOfChildren` из предыдущих примеров.
 
 [!code-vb[VbVbalrNullableValue#5](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrNullableValue/VB/Class1.vb#5)]
 
 ## <a name="comparing-nullable-types"></a>Сравнение типов, допускающих значение null
 
-Если в логических выражениях используются значения NULL `Boolean`, результат может быть `True`, `False` или `Nothing`. Ниже приведена таблица истинности для `And` и `Or`. Поскольку `b1` и `b2` теперь имеют три возможных значения, можно вычислить девять комбинаций.
+Если в логических выражениях используются значения NULL `Boolean` переменные, результат может быть `True`, `False`или `Nothing`. Ниже приведена таблица истинности для `And` и `Or`. Поскольку `b1` и `b2` теперь имеют три возможных значения, можно вычислить девять комбинаций.
 
 |B1|ячейк|B1 и B2|B1 или B2|
 |--------|--------|---------------|--------------|
@@ -78,18 +78,18 @@ ms.locfileid: "71351764"
 |`False`|`True`|`False`|`True`|
 |`False`|`False`|`False`|`False`|
 
-Если значение логической переменной или выражения равно `Nothing`, то оно не является ни `true`, ни `false`. Рассмотрим следующий пример.
+Если значение логической переменной или выражения `Nothing`, оно не является ни `true`, ни `false`. Рассмотрим следующий пример.
 
 [!code-vb[VbVbalrNullableValue#6](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrNullableValue/VB/Class1.vb#6)]
 
-В этом примере `b1 And b2` принимает значение `Nothing`. В результате предложение `Else` выполняется в каждой инструкции `If`, и выходные данные выглядят следующим образом:
+В этом примере `b1 And b2` вычисляется как `Nothing`. В результате предложение `Else` выполняется в каждой инструкции `If`, и выходные данные выглядят следующим образом:
 
 `Expression is not true`
 
 `Expression is not false`
 
 > [!NOTE]
-> `AndAlso` и `OrElse`, которые используют сокращенную оценку, должны оценивать свои вторые операнды, когда первый оценивается как `Nothing`.
+> `AndAlso` и `OrElse`, которые используют сокращенную оценку, должны оценивать свои вторые операнды, когда первый вычисляется как `Nothing`.
 
 ## <a name="propagation"></a>Распространение
 
@@ -110,11 +110,11 @@ ms.locfileid: "71351764"
 - <xref:System.InvalidOperationException>
 - <xref:System.Nullable%601.HasValue%2A>
 - [Типы данных](index.md)
-- [Value Types and Reference Types](value-types-and-reference-types.md)
+- [Типы значений и ссылочные типы](value-types-and-reference-types.md)
 - [Устранение неполадок, связанных с типами данных](troubleshooting-data-types.md)
 - [Заполнение наборов данных с помощью адаптера таблицы](/visualstudio/data-tools/fill-datasets-by-using-tableadapters)
 - [Оператор If](../../../language-reference/operators/if-operator.md)
 - [Вывод локального типа](../variables/local-type-inference.md)
 - [Оператор Is](../../../language-reference/operators/is-operator.md)
 - [Оператор IsNot](../../../language-reference/operators/isnot-operator.md)
-- [Использование типов значений, допускающих значение null (C#)](../../../../csharp/programming-guide/nullable-types/using-nullable-types.md)
+- [Типы значений, допускающие значение null (C#)](../../../../csharp/language-reference/builtin-types/nullable-value-types.md)

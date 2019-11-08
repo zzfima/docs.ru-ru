@@ -1,5 +1,5 @@
 ---
-title: Сбора рукописных данных в приложениях WPF
+title: Получение рукописного ввода в приложениях WPF
 ms.date: 08/15/2018
 dev_langs:
 - csharp
@@ -13,80 +13,80 @@ helpviewer_keywords:
 - properties [WPF], DefaultDrawingAttributes
 - DefaultDrawingAttributes property [WPF]
 ms.assetid: 66a3129d-9577-43eb-acbd-56c147282016
-ms.openlocfilehash: d2178a4cbf888baaf0ae84b03b3d463b0de658b1
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 8109e0d6a746d6ca23c25643c510014c1a1e656c
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645731"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740871"
 ---
-# <a name="collect-ink"></a>Сбора рукописных фрагментов
+# <a name="collect-ink"></a>Собирайте рукописные данные
 
-Платформа [Windows Presentation Foundation](../index.md) выполняет сбор цифровых рукописных фрагментов, что является одной из основных ее функций. В этом разделе обсуждаются методы сбора рукописных данных в Windows Presentation Foundation (WPF).
+Платформа [Windows Presentation Foundation](../index.md) выполняет сбор цифровых рукописных фрагментов, что является одной из основных ее функций. В этом разделе обсуждаются методы сбора рукописного ввода в Windows Presentation Foundation (WPF).
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>Необходимые компоненты
 
-Чтобы использовать в следующих примерах, сначала необходимо установить Visual Studio и [!INCLUDE[TLA2#tla_winfxsdk](../../../../includes/tla2sharptla-winfxsdk-md.md)]. Следует также понять, как создавать приложения для WPF. Дополнительные сведения о начале работы с WPF, см. в разделе [Пошаговое руководство: Создание первого классического приложения WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md).
+Чтобы использовать следующие примеры, необходимо сначала установить Visual Studio и Windows SDK. Следует также понимать, как писать приложения для WPF. Дополнительные сведения о начале работы с WPF см. в разделе [Пошаговое руководство. мое первое классическое приложение WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md).
 
 ## <a name="use-the-inkcanvas-element"></a>Использование элемента InkCanvas
 
-<xref:System.Windows.Controls.InkCanvas?displayProperty=fullName> Элемент предоставляет самый простой способ сбора рукописных данных в WPF. Используйте <xref:System.Windows.Controls.InkCanvas> элемент для получения и отображения рукописного ввода. Рукописный ввод, как правило, осуществляется с помощью пера, которое взаимодействует с дигитайзером для создания рукописных штрихов. Кроме того, вместо пера можно использовать мышь. Созданные штрихи представляются в виде <xref:System.Windows.Ink.Stroke> объекты и их можно управлять программно или пользователем ввода данных. <xref:System.Windows.Controls.InkCanvas> Позволяет пользователям выбор, изменение или удаление существующего <xref:System.Windows.Ink.Stroke>.
+Элемент <xref:System.Windows.Controls.InkCanvas?displayProperty=fullName> предоставляет самый простой способ собираются рукописный ввод в WPF. Используйте элемент <xref:System.Windows.Controls.InkCanvas> для получения и вывода рукописных данных. Рукописный ввод, как правило, осуществляется с помощью пера, которое взаимодействует с дигитайзером для создания рукописных штрихов. Кроме того, вместо пера можно использовать мышь. Созданные штрихи представляются как <xref:System.Windows.Ink.Stroke> объекты, и их можно манипулировать как программно, так и с помощью пользовательского ввода. <xref:System.Windows.Controls.InkCanvas> позволяет пользователям выбирать, изменять или удалять существующие <xref:System.Windows.Ink.Stroke>.
 
-С помощью XAML, вы можно настроить сбор рукописных фрагментов, просто добавив **InkCanvas** к дереву. В следующем примере добавляется <xref:System.Windows.Controls.InkCanvas> в проект WPF по умолчанию, созданные в Visual Studio:
+С помощью XAML можно настроить сбор рукописных данных так же легко, как добавить элемент **InkCanvas** в дерево. В следующем примере добавляется <xref:System.Windows.Controls.InkCanvas> в проект WPF по умолчанию, созданный в Visual Studio.
 
 [!code-xaml[DigitalInkTopics#6](~/samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml#6)]
 
-**InkCanvas** элемент также может содержать дочерние элементы, что позволяет добавлять функции рукописных заметок практически любого типа элемента XAML. Например, чтобы добавить возможности рукописного ввода в текстовый элемент, просто сделайте его дочерним элементом <xref:System.Windows.Controls.InkCanvas>:
+Элемент **InkCanvas** также может содержать дочерние элементы, что позволяет добавлять возможности рукописных заметок практически к любому типу элемента XAML. Например, чтобы добавить возможности рукописного ввода в текстовый элемент, просто сделайте его дочерним элементом <xref:System.Windows.Controls.InkCanvas>:
 
 [!code-xaml[DigitalInkTopics#5](~/samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml#5)]
 
-Добавление поддержки пометки изображений с помощью рукописного ввода выполняется так же просто:
+Добавление поддержки пометки изображения с помощью рукописного ввода — это так же просто:
 
 [!code-xaml[DigitalInkTopics#7](~/samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml#7)]
 
 ### <a name="inkcollection-modes"></a>Режимы InkCollection
 
-<xref:System.Windows.Controls.InkCanvas> Обеспечивает поддержку различных режимов ввода с помощью его <xref:System.Windows.Controls.InkCanvas.EditingMode%2A> свойство.
+<xref:System.Windows.Controls.InkCanvas> обеспечивает поддержку различных режимов ввода с помощью свойства <xref:System.Windows.Controls.InkCanvas.EditingMode%2A>.
 
-### <a name="manipulate-ink"></a>Рукописным вводом
+### <a name="manipulate-ink"></a>Работа с рукописными данными
 
-<xref:System.Windows.Controls.InkCanvas> Обеспечивает поддержку многих операций редактирования рукописных данных. Например <xref:System.Windows.Controls.InkCanvas> стереть поддерживает назад пера, и требуется дополнительный код для добавления функций к элементу.
+<xref:System.Windows.Controls.InkCanvas> обеспечивает поддержку многих операций редактирования рукописных данных. Например, <xref:System.Windows.Controls.InkCanvas> поддерживает стирание в обратном пера, а дополнительный код не требуется для добавления функциональности в элемент.
 
 #### <a name="selection"></a>Выбранное
 
-Установка режима выбора сводится параметр <xref:System.Windows.Controls.InkCanvasEditingMode> свойства **выберите**.
+Настройка режима выделения так же проста, как установка свойства <xref:System.Windows.Controls.InkCanvasEditingMode> для **выбора**.
 
-Следующий код устанавливает режим редактирования на основе значения из <xref:System.Windows.Forms.CheckBox>:
+Следующий код задает режим редактирования на основе значения <xref:System.Windows.Forms.CheckBox>:
 
 [!code-csharp[DigitalInkTopics#8](~/samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window1.xaml.cs#8)]
 [!code-vb[DigitalInkTopics#8](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DigitalInkTopics/VisualBasic/Window1.xaml.vb#8)]
 
 #### <a name="drawingattributes"></a>DrawingAttributes
 
-Используйте <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A> свойство для изменения внешнего вида рукописных штрихов. Например <xref:System.Windows.Ink.DrawingAttributes.Color%2A> членом <xref:System.Windows.Ink.DrawingAttributes> задает цвет отображаемого объекта <xref:System.Windows.Ink.Stroke>.
+Используйте свойство <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A>, чтобы изменить внешний вид рукописных штрихов. Например, элемент <xref:System.Windows.Ink.DrawingAttributes.Color%2A> <xref:System.Windows.Ink.DrawingAttributes> задает цвет отображаемого <xref:System.Windows.Ink.Stroke>.
 
-В следующем примере изменяется цвет выбранных штрихов на красный:
+В следующем примере цвет выбранных штрихов меняется на красный:
 
 [!code-csharp[DigitalInkTopics#9](~/samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window1.xaml.cs#9)]
 [!code-vb[DigitalInkTopics#9](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DigitalInkTopics/VisualBasic/Window1.xaml.vb#9)]
 
 ### <a name="defaultdrawingattributes"></a>DefaultDrawingAttributes
 
-<xref:System.Windows.Controls.InkCanvas.DefaultDrawingAttributes%2A> Свойство предоставляет доступ к свойствам, например высоту, ширину и цвет штрихов, создаваемых в <xref:System.Windows.Controls.InkCanvas>. После перевода <xref:System.Windows.Controls.InkCanvas.DefaultDrawingAttributes%2A>, все следующие штрихи, введенные в <xref:System.Windows.Controls.InkCanvas> подготавливаются к просмотру с новыми значениями свойства.
+Свойство <xref:System.Windows.Controls.InkCanvas.DefaultDrawingAttributes%2A> предоставляет доступ к свойствам, таким как высота, ширина и цвет штрихов, создаваемых в <xref:System.Windows.Controls.InkCanvas>. После изменения <xref:System.Windows.Controls.InkCanvas.DefaultDrawingAttributes%2A>все будущие штрихи, введенные в <xref:System.Windows.Controls.InkCanvas>, подготавливаются к просмотру новыми значениями свойств.
 
-А также изменения <xref:System.Windows.Controls.InkCanvas.DefaultDrawingAttributes%2A> в файле кода, можно использовать синтаксис XAML для указания <xref:System.Windows.Controls.InkCanvas.DefaultDrawingAttributes%2A> свойства.
+В дополнение к изменению <xref:System.Windows.Controls.InkCanvas.DefaultDrawingAttributes%2A> в файле кода программной части можно использовать синтаксис XAML для указания свойств <xref:System.Windows.Controls.InkCanvas.DefaultDrawingAttributes%2A>.
 
-Далее примере показано, как задать <xref:System.Windows.Ink.DrawingAttributes.Color%2A> свойства. Чтобы использовать этот код, создайте новый проект WPF с именем «HelloInkCanvas» в Visual Studio. Замените код в *MainWindow.xaml* файла следующим кодом:
+В следующем примере показано, как задать свойство <xref:System.Windows.Ink.DrawingAttributes.Color%2A>. Чтобы использовать этот код, создайте новый проект WPF с именем "Хеллоинкканвас" в Visual Studio. Замените код в файле *MainWindow. XAML* следующим кодом:
 
 [!code-xaml[HelloInkCanvas#1](~/samples/snippets/csharp/VS_Snippets_Wpf/HelloInkCanvas/CSharp/Window1.xaml#1)]
 
-Затем добавьте следующие обработчики событий для кнопки в файл кода программной части, внутри класса MainWindow:
+Затем добавьте следующие обработчики событий кнопок в файл кода программной части внутри класса MainWindow:
 
 [!code-csharp[HelloInkCanvas#2](~/samples/snippets/csharp/VS_Snippets_Wpf/HelloInkCanvas/CSharp/Window1.xaml.cs#2)]
 
-После копирования этого кода нажмите клавишу **F5** в Visual Studio для запуска программы в отладчике.
+После копирования этого кода нажмите клавишу **F5** в Visual Studio, чтобы запустить программу в отладчике.
 
-Обратите внимание, что как <xref:System.Windows.Controls.StackPanel> размещает кнопки вверху <xref:System.Windows.Controls.InkCanvas>. При попытке рукописного ввода поверх кнопок, <xref:System.Windows.Controls.InkCanvas> собирает и отображает рукописные данные позади кнопок. Это обусловлено кнопок являются одноранговыми с <xref:System.Windows.Controls.InkCanvas> в отличие от дочерних элементов. Кроме того, кнопки находятся выше в z-порядке, поэтому рукописные фрагменты отображаются позади них.
+Обратите внимание на то, как <xref:System.Windows.Controls.StackPanel> помещает кнопки поверх <xref:System.Windows.Controls.InkCanvas>. При попытке рукописного ввода в верхней части кнопок <xref:System.Windows.Controls.InkCanvas> собирает и отображает рукописные данные позади кнопок. Это связано с тем, что кнопки являются одноуровневыми элементами <xref:System.Windows.Controls.InkCanvas>, а не дочерними. Кроме того, кнопки находятся выше в z-порядке, поэтому рукописные фрагменты отображаются позади них.
 
 ## <a name="see-also"></a>См. также
 

@@ -2,23 +2,23 @@
 title: <security> из <netHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: dc41f6f7-cabc-4a64-9fa0-ceabf861b348
-ms.openlocfilehash: 890cee3271c410a921b3a88f78d0705ba8718252
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: 97c52fa4f062ed0c65d5b1a8ca47a1439ab04cf5
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70399845"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73736490"
 ---
-# <a name="security-of-nethttpbinding"></a>\<> безопасности > \<NetHttpBinding
+# <a name="security-of-nethttpbinding"></a>\<> безопасности \<netHttpBinding >
 
-Определяет возможности [ \<безопасности > NetHttpBinding](nethttpbinding.md).
+Определяет возможности безопасности [\<netHttpBinding >](nethttpbinding.md).
 
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<привязки >** ](bindings.md)\
+&nbsp;&nbsp;[ **\<System. serviceModel >** ](system-servicemodel.md)\
+привязки &nbsp;&nbsp;&nbsp;&nbsp;[ **\<** ](bindings.md) >
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<netHttpBinding >** ](nethttpbinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Привязка >** \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> безопасности**  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Binding** >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<security >**  
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -40,11 +40,11 @@ ms.locfileid: "70399845"
 
 |Атрибут|Описание|
 |---------------|-----------------|
-|режим|Необязательный параметр. Задает тип используемого механизма обеспечения безопасности. Значение по умолчанию — `None`. Это атрибут типа <xref:System.ServiceModel.BasicHttpSecurityMode>.|
+|режим|Необязательный. Задает тип используемого механизма обеспечения безопасности. Значение по умолчанию: `None`. Это атрибут типа <xref:System.ServiceModel.BasicHttpSecurityMode>.|
 
 ## <a name="mode-attribute"></a>атрибут mode
 
-|Значение|Описание|
+|значения|Описание|
 |-----------|-----------------|
 |Отсутствуют|— Сообщения не защищаются во время перемещения.|
 |Transport|Безопасность обеспечивается с помощью транспорта HTTPS. Сообщения SOAP защищаются при помощи HTTPS. Служба проходит проверку подлинности для клиента с использованием сертификата X.509. Проверка подлинности клиента осуществляется с помощью предоставленного ClientCredentialType.|
@@ -57,15 +57,15 @@ ms.locfileid: "70399845"
 |Элемент|Описание|
 |-------------|-----------------|
 |[\<> транспорта](transport-of-nethttpbinding.md)|Определяет параметры безопасности транспорта для базовой службы HTTP. Данный элемент соответствует <xref:System.ServiceModel.HttpTransportSecurity>.|
-|[\<> сообщения](message-of-nethttpbinding.md)|Определяет параметры безопасности сообщений для базовой службы HTTP. Данный элемент соответствует <xref:System.ServiceModel.BasicHttpMessageSecurity>.|
+|[сообщение \<](message-of-nethttpbinding.md)|Определяет параметры безопасности сообщений для базовой службы HTTP. Данный элемент соответствует <xref:System.ServiceModel.BasicHttpMessageSecurity>.|
 
 ### <a name="parent-elements"></a>Родительские элементы
 
 |Элемент|Описание|
 |-------------|-----------------|
-|привязка|[ Элемент\<Binding > BasicHttpBinding](basichttpbinding.md).|
+|привязка|Элемент Binding [\<basicHttpBinding >](basichttpbinding.md).|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
  По умолчанию сообщение SOAP не защищено и проверка подлинности клиента не выполняется. Данный элемент позволяет настроить дополнительные параметры безопасности для элемента `netHttpBinding`.
 
@@ -78,4 +78,4 @@ ms.locfileid: "70399845"
 - [Привязки](../../../wcf/bindings.md)
 - [Настройка привязок, предоставляемых системой](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [Использование привязок для настройки служб и клиентов](../../../wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<Привязка >](../../../misc/binding.md)
+- [> привязки \<](bindings.md)

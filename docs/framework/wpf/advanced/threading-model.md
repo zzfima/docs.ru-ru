@@ -18,12 +18,12 @@ helpviewer_keywords:
 - nested message processing [WPF]
 - reentrancy [WPF]
 ms.assetid: 02d8fd00-8d7c-4604-874c-58e40786770b
-ms.openlocfilehash: ef25123ed53ecf3e03e4f4c969bed2ef570591ad
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 22544b3bf2acf6e397f2ad5ae3de576bf491bd2b
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459028"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740737"
 ---
 # <a name="threading-model"></a>Модель потоков
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] призвана помочь разработчикам избежать трудностей при разработке потоков. В результате большинству [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] разработчикам не придется писать интерфейс, использующий более одного потока. Поскольку многопотоковые программы являются сложными и трудно отлаживаемыми, их следует избегать, если существуют однопоточные решения.  
@@ -49,7 +49,7 @@ ms.locfileid: "73459028"
   
  Если только один поток может изменить [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], как фоновые потоки взаимодействуют с пользователем? Фоновый поток может попросить [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]ного потока выполнить операцию от его имени. Это достигается путем регистрации рабочего элемента с <xref:System.Windows.Threading.Dispatcher> потока [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. Класс <xref:System.Windows.Threading.Dispatcher> предоставляет два метода для регистрации рабочих элементов: <xref:System.Windows.Threading.Dispatcher.Invoke%2A> и <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A>. Оба метода назначают делегат для выполнения. <xref:System.Windows.Threading.Dispatcher.Invoke%2A> является синхронным вызовом, то есть он не возвращает значение, пока поток [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] не завершит выполнение делегата. <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> является асинхронным и возвращается немедленно.  
   
- <xref:System.Windows.Threading.Dispatcher> упорядочивает элементы в своей очереди по приоритету. При добавлении элемента в очередь <xref:System.Windows.Threading.Dispatcher> можно указать десять уровней. Эти приоритеты поддерживаются в перечислении <xref:System.Windows.Threading.DispatcherPriority>. Подробные сведения о <xref:System.Windows.Threading.DispatcherPriority> уровнях можно найти в документации по [!INCLUDE[TLA2#tla_winfxsdk](../../../../includes/tla2sharptla-winfxsdk-md.md)].  
+ <xref:System.Windows.Threading.Dispatcher> упорядочивает элементы в своей очереди по приоритету. При добавлении элемента в очередь <xref:System.Windows.Threading.Dispatcher> можно указать десять уровней. Эти приоритеты поддерживаются в перечислении <xref:System.Windows.Threading.DispatcherPriority>. Подробные сведения о <xref:System.Windows.Threading.DispatcherPriority> уровнях можно найти в документации по Windows SDK.  
   
 <a name="samples"></a>   
 ## <a name="threads-in-action-the-samples"></a>Потоки в действии: примеры  

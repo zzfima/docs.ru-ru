@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - base elements [WPF]
 ms.assetid: 2c997092-72c6-4767-bc84-74267f4eee72
-ms.openlocfilehash: 6f8542be5a84a4b8b4cabf594c32d6fdfd3757d2
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 823c81bf6b21b88d719503387a68ce6e7d643d61
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73453766"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740910"
 ---
 # <a name="base-elements-overview"></a>Общие сведения о базовых элементах
-Большое количество классов в [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] являются производными от четырех классов, которые обычно называются в документации по [!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)] базовыми классами элементов. Этими классами являются <xref:System.Windows.UIElement>, <xref:System.Windows.FrameworkElement>, <xref:System.Windows.ContentElement>и <xref:System.Windows.FrameworkContentElement>. Класс <xref:System.Windows.DependencyObject> также связан, так как он является общим базовым классом как для <xref:System.Windows.UIElement>, так и для <xref:System.Windows.ContentElement>  
+Высокий процент классов в [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] являются производными от четырех классов, которые часто упоминаются в документации по пакету SDK как классы базовых элементов. Этими классами являются <xref:System.Windows.UIElement>, <xref:System.Windows.FrameworkElement>, <xref:System.Windows.ContentElement>и <xref:System.Windows.FrameworkContentElement>. Класс <xref:System.Windows.DependencyObject> также связан, так как он является общим базовым классом как для <xref:System.Windows.UIElement>, так и для <xref:System.Windows.ContentElement>  
 
 <a name="base_apis"></a>   
 ## <a name="base-element-apis-in-wpf-classes"></a>Интерфейсы API базовых элементов в классах WPF  

@@ -2,23 +2,23 @@
 title: <message> из <wsDualHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 75101744-eed8-4d61-91f4-5fc4473a21f2
-ms.openlocfilehash: 00bb7514c90b38d353d1bd86be83773a77357ca0
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: aef03634ed6156d3a7e052ccdbde35fdfda99cc3
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70400221"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73736727"
 ---
-# <a name="message-of-wsdualhttpbinding"></a>\<> сообщений > \<WSDualHttpBinding
-Определяет безопасность на [ \<](wsdualhttpbinding.md)уровне сообщений для > WSDualHttpBinding.  
+# <a name="message-of-wsdualhttpbinding"></a>> сообщения \<\<wsDualHttpBinding >
+Определяет безопасность на уровне сообщений для [\<> WSDualHttpBinding](wsdualhttpbinding.md).  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<привязки >** ](bindings.md)\
+&nbsp;&nbsp;[ **\<System. serviceModel >** ](system-servicemodel.md)\
+привязки &nbsp;&nbsp;&nbsp;&nbsp;[ **\<** ](bindings.md) >
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<wsDualHttpBinding >** ](wsdualhttpbinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Привязка >** \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> безопасности**](security-of-wsdualhttpbinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> сообщения**  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Binding** >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<security >** ](security-of-wsdualhttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**сообщение >**  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -29,7 +29,7 @@ ms.locfileid: "70400221"
 </message>
 ```  
   
-## <a name="type"></a>Тип  
+## <a name="type"></a>Type  
  <xref:System.ServiceModel.MessageSecurityOverHttp>  
   
 ## <a name="attributes-and-elements"></a>Атрибуты и элементы  
@@ -39,13 +39,13 @@ ms.locfileid: "70400221"
   
 |Атрибут|Описание|  
 |---------------|-----------------|  
-|algorithmSuite|Необязательный параметр. Задает алгоритмы шифрования сообщений и ключей. Алгоритмы и размеры ключей определяются классом <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>. Эти алгоритмы соответствуют алгоритмам, заданным в спецификации языка политики безопасности (WS-SecurityPolicy).<br /><br /> Возможные значения приводятся ниже. Значение по умолчанию — `Basic256`.|  
-|clientCredentialType|Необязательный параметр. Задает тип учетных данных, которые должны использоваться при проверке подлинности клиента с помощью режима безопасности `Message`. Возможные значения приводятся ниже. Значение по умолчанию — `Windows`.<br /><br /> Это атрибут типа <xref:System.ServiceModel.MessageCredentialType>.|  
-|negotiateServiceCredential|Необязательный параметр. Логическое значение, которое указывает, предоставляются ли учетные данные службы клиенту по внештатному каналу, или же клиент получает их от службы в процессе согласования. Подобное согласование происходит перед обычным обменом сообщениями.<br /><br /> Если атрибут равен None, username или Certificate, установка этого `false` атрибута подразумевает, что сертификат службы доступен на клиентском аппаратном контроллере, а клиент должен указать сертификат службы (с помощью `clientCredentialType` serviceCertificate >) в [ поведениислужбыServiceCredentials>.\<](servicecertificate-of-servicecredentials.md) [ \<](servicecredentials.md) Данный режим совместим со стеками SOAP, которые реализуют WS-Trust и WS-SecureConversation.<br /><br /> Если атрибут `ClientCredentialType` имеет значение `Windows`, то установка для данного атрибута значения `false` задает проверку подлинности на основе Kerberos. Это означает, что клиент и служба должны относиться к одному домену Kerberos. Данный режим совместим со стеками SOAP, которые реализуют профиль маркера Kerberos (в соответствии с определением в OASIS WSS TC), а также WS-Trust и WS-SecureConversation. Когда данный атрибут равен `true`, то происходит согласование .NET SOAP, при котором обмен SPNego производится при помощи сообщений SOAP.<br /><br /> Значение по умолчанию — `true`.|  
+|algorithmSuite|Необязательный. Задает алгоритмы шифрования сообщений и ключей. Алгоритмы и размеры ключей определяются классом <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>. Эти алгоритмы соответствуют алгоритмам, заданным в спецификации языка политики безопасности (WS-SecurityPolicy).<br /><br /> Возможные значения приводятся ниже. Значение по умолчанию — `Basic256`.|  
+|clientCredentialType|Необязательный. Задает тип учетных данных, которые должны использоваться при проверке подлинности клиента с помощью режима безопасности `Message`. Возможные значения приводятся ниже. Значение по умолчанию: `Windows`.<br /><br /> Это атрибут типа <xref:System.ServiceModel.MessageCredentialType>.|  
+|negotiateServiceCredential|Необязательный. Логическое значение, которое указывает, предоставляются ли учетные данные службы клиенту по внештатному каналу, или же клиент получает их от службы в процессе согласования. Подобное согласование происходит перед обычным обменом сообщениями.<br /><br /> Если атрибут `clientCredentialType` равен None, username или Certificate, установка этого атрибута равным `false` предполагает, что сертификат службы доступен на клиентском аппаратном контроллере, а клиент должен указать сертификат службы (с помощью [\<serviceCertificate >](servicecertificate-of-servicecredentials.md)) в\<поведение службы [> ServiceCredentials](servicecredentials.md) . Данный режим совместим со стеками SOAP, которые реализуют WS-Trust и WS-SecureConversation.<br /><br /> Если атрибут `ClientCredentialType` имеет значение `Windows`, то установка для данного атрибута значения `false` задает проверку подлинности на основе Kerberos. Это означает, что клиент и служба должны относиться к одному домену Kerberos. Данный режим совместим со стеками SOAP, которые реализуют профиль маркера Kerberos (в соответствии с определением в OASIS WSS TC), а также WS-Trust и WS-SecureConversation. Когда данный атрибут равен `true`, то происходит согласование .NET SOAP, при котором обмен SPNego производится при помощи сообщений SOAP.<br /><br /> Значение по умолчанию: `true`.|  
   
 ## <a name="algorithmsuite-attribute"></a>Атрибут algorithmSuite  
   
-|Значение|Описание|  
+|значения|Описание|  
 |-----------|-----------------|  
 |Basic128|Используется шифрование Aes128, Sha1 для хэша и Rsa-oaep-mgf1p для шифрования ключа.|  
 |Basic192|Используется шифрование Aes192, Sha1 для хэша и Rsa-oaep-mgf1p для шифрования ключа.|  
@@ -66,7 +66,7 @@ ms.locfileid: "70400221"
   
 ## <a name="clientcredentialtype-attribute"></a>Атрибут clientCredentialType  
   
-|Значение|Описание|  
+|значения|Описание|  
 |-----------|-----------------|  
 |Отсутствуют|Данный атрибут позволяет службе взаимодействовать с анонимными клиентами. Для службы это означает, что она не требует учетных данных клиента. Для клиента это означает, что он не должен предоставлять никаких учетных данных.|  
 |Windows|Атрибут позволяет проводить обмен сообщениями SOAP, если выполнена проверка подлинности с помощью учетных данных Windows. Если атрибут `negotiateServiceCredential` имеет значение `true`, то происходит согласование SSPI или используется Kerberos (совместимый стандарт).|  
@@ -75,13 +75,13 @@ ms.locfileid: "70400221"
 |IssuedToken|Задает пользовательский маркер, который обычно выдается службой маркеров безопасности.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
- Нет.  
+ Отсутствует.  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<> безопасности](security-of-wsdualhttpbinding.md)|Определяет возможности [ \<безопасности > WSDualHttpBinding](wsdualhttpbinding.md).|  
+|[\<> безопасности](security-of-wsdualhttpbinding.md)|Определяет возможности безопасности [\<wsDualHttpBinding >](wsdualhttpbinding.md).|  
   
 ## <a name="see-also"></a>См. также
 
@@ -93,4 +93,4 @@ ms.locfileid: "70400221"
 - [Привязки](../../../wcf/bindings.md)
 - [Настройка привязок, предоставляемых системой](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [Использование привязок для настройки служб и клиентов](../../../wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<Привязка >](../../../misc/binding.md)
+- [> привязки \<](bindings.md)

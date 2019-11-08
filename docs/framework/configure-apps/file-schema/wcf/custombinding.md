@@ -2,20 +2,20 @@
 title: <customBinding>
 ms.date: 03/30/2017
 ms.assetid: 9da4f960-f64e-4d8a-894d-2b09eba5ce4b
-ms.openlocfilehash: 1fd0a12b62c416ce71946e59e7868abc7638a274
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: 766dab35541465da15ccb1090d41b22332aafd0e
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70398127"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739054"
 ---
 # <a name="custombinding"></a>\<customBinding >
 
 Обеспечивает пользователю полный контроль над стеком обмена сообщениями.
 
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<привязки >** ](bindings.md)\
+&nbsp;&nbsp;[ **\<System. serviceModel >** ](system-servicemodel.md)\
+привязки &nbsp;&nbsp;&nbsp;&nbsp;[ **\<** ](bindings.md) >
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<customBinding >**  
 
 ## <a name="syntax"></a>Синтаксис
@@ -192,10 +192,10 @@ ms.locfileid: "70398127"
 |Элемент|Описание|
 |-------------|-----------------|
 |[\<compositeDuplex >](compositeduplex.md)|Определяет двусторонний обмен сообщениями в пользовательской привязке. Используется транспортными протоколами, которые не имеют встроенной поддержки дуплексной связи, например HTTP. Напротив, протокол TCP имеет встроенную поддержку дуплексной связи, и для него не требуется использовать этот элемент привязки для службы при отправке сообщений обратно клиенту.<br /><br /> Для осуществления контакта и установления подключения клиент должен предоставить службе адрес. Этот адрес клиента предоставляется атрибутом `ClientBaseAddress`.<br /><br /> Это элемент типа <xref:System.ServiceModel.Configuration.CompositeDuplexElement>.|
-|[\<pnrpPeerResolver>](pnrppeerresolver.md)|Определяет распознавателя имен узлов в протоколе однорангового разрешения имен (PNRP). Это элемент типа <xref:System.ServiceModel.Configuration.PnrpPeerResolverElement>.|
+|[\<Пнрппирресолвер >](pnrppeerresolver.md)|Определяет распознавателя имен узлов в протоколе однорангового разрешения имен (PNRP). Это элемент типа <xref:System.ServiceModel.Configuration.PnrpPeerResolverElement>.|
 |[\<reliableSession >](reliablesession.md)|Определяет параметры WS-Reliable Messaging. Когда этот элемент добавляется к пользовательской привязке, получаемый канал может поддерживать гарантии доставки только один раз. Это элемент типа <xref:System.ServiceModel.Configuration.ReliableSessionElement>.|
 |[\<> безопасности](security-of-custombinding.md)|Определяет параметры безопасности пользовательской привязки. Это элемент типа <xref:System.ServiceModel.Configuration.SecurityElement>.|
-|[\<sslStreamSecurity>](sslstreamsecurity.md)|Определяет параметры безопасности привязки потока SSL. Это элемент типа <xref:System.ServiceModel.Configuration.SslStreamSecurityElement>.|
+|[\<раздел sslstreamsecurity >](sslstreamsecurity.md)|Определяет параметры безопасности привязки потока SSL. Это элемент типа <xref:System.ServiceModel.Configuration.SslStreamSecurityElement>.|
 |[\<transactionFlow >](transactionflow.md)|Указывает, что привязка поддерживает поток транзакций, и задает используемый протокол в атрибуте `transactionProtocol`. Это элемент типа <xref:System.ServiceModel.Configuration.TransactionFlowElement>.|
 |[\<Windowsstreamsecurity инициирует обновление >](windowsstreamsecurity.md)|Определяет параметры для потоковой безопасности пользовательской привязки. Это элемент типа <xref:System.ServiceModel.Configuration.WindowsStreamSecurityElement>.|
 
@@ -205,7 +205,7 @@ ms.locfileid: "70398127"
 |-------------|-----------------|
 |привязки|Содержит все привязки для приложений Windows Communication Foundation.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
 Пользовательские привязки предоставляют полный контроль над стеком обмена сообщениями WCF. Путем добавления элементов конфигурации к определенным сущностям можно создавать специально настроенные привязки. Например, чтобы создать надежную и безопасную привязку на основе протокола HTTPS, пользователь может объединить разделы `httpsTransport`, `reliableSession` и `security`.
 
@@ -279,7 +279,7 @@ ms.locfileid: "70398127"
 
 В следующей таблице приведены сводные данные по параметрам каждого уровня.
 
-|Уровень|Параметры|Обязательно|
+|Уровень|Параметры|Обязательное значение|
 |-----------|-------------|--------------|
 |Поток транзакций|<xref:System.ServiceModel.Channels.TransactionFlowBindingElement>|Нет|
 |Надежность|<xref:System.ServiceModel.Channels.ReliableSessionBindingElement>|Нет|
@@ -291,7 +291,7 @@ ms.locfileid: "70398127"
 
 Кроме того, можно определить собственные элементы привязки и вставить их между любыми из приведенных выше заданных уровней.
 
-Обсуждение того, как использовать пользовательскую привязку для изменения привязки, предоставляемой системой, см. [в разделе как Настройка привязки](../../../wcf/extending/how-to-customize-a-system-provided-binding.md), предоставляемой системой.
+Обсуждение того, как использовать пользовательскую привязку для изменения привязки, предоставляемой системой, см. в разделе [как настроить привязку, предоставляемую системой](../../../wcf/extending/how-to-customize-a-system-provided-binding.md).
 
 ## <a name="see-also"></a>См. также
 
@@ -299,7 +299,7 @@ ms.locfileid: "70398127"
 - <xref:System.ServiceModel.Channels.BindingElement>
 - <xref:System.ServiceModel.Configuration.BindingsSection>
 - <xref:System.ServiceModel.Channels.CustomBinding>
-- [\<Привязка >](../../../misc/binding.md)
+- [> привязки \<](bindings.md)
 - [Привязки](../../../wcf/bindings.md)
 - [Расширение привязок](../../../wcf/extending/extending-bindings.md)
 - [Пользовательские привязки](../../../wcf/extending/custom-bindings.md)
