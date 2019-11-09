@@ -1,0 +1,37 @@
+---
+title: идентификации
+description: Создание архитектуры облачных приложений .NET для Azure | Идентифицирует
+ms.date: 09/23/2019
+ms.openlocfilehash: 4cc7c04bf323d2589777df466321f6801f511b6f
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "73840349"
+---
+# <a name="identity"></a><span data-ttu-id="229e0-103">идентификации</span><span class="sxs-lookup"><span data-stu-id="229e0-103">Identity</span></span>
+
+[!INCLUDE [book-preview](../../../includes/book-preview.md)]
+
+<span data-ttu-id="229e0-104">Большинство программных приложений должны иметь определенные знания о пользователе или процессе, которые их вызывают.</span><span class="sxs-lookup"><span data-stu-id="229e0-104">Most software applications need to have some knowledge of the user or process that is calling them.</span></span> <span data-ttu-id="229e0-105">Пользователь или процесс, взаимодействующий с приложением, называется субъектом безопасности, а процесс проверки подлинности и авторизации этих участников называется управлением удостоверениями или просто *удостоверениями*.</span><span class="sxs-lookup"><span data-stu-id="229e0-105">The user or process interacting with an application is known as a security principal, and the process of authenticating and authorizing these principals is known as identity management, or simply *identity*.</span></span> <span data-ttu-id="229e0-106">Простые приложения могут включать в себя все свое управление удостоверениями в рамках приложения, но этот подход плохо масштабируется при использовании многих приложений и многих видов субъектов безопасности.</span><span class="sxs-lookup"><span data-stu-id="229e0-106">Simple applications may include all of their identity management within the application, but this approach doesn't scale well with many applications and many kinds of security principals.</span></span> <span data-ttu-id="229e0-107">Windows поддерживает использование Active Directory для обеспечения централизованной проверки подлинности и авторизации.</span><span class="sxs-lookup"><span data-stu-id="229e0-107">Windows supports the use of Active Directory to provide centralized authentication and authorization.</span></span>
+
+<!-- (insert figure showing Windows AD auth model) -->
+
+<span data-ttu-id="229e0-108">Хотя это решение эффективно в корпоративных сетях, оно не предназначено для использования пользователями или приложениями, находящимися за пределами домена AD.</span><span class="sxs-lookup"><span data-stu-id="229e0-108">While this solution is effective within corporate networks, it isn't designed for use by users or applications that are outside of the AD domain.</span></span> <span data-ttu-id="229e0-109">Благодаря росту интернет-приложений и появлению облачных приложений модели безопасности развиваются.</span><span class="sxs-lookup"><span data-stu-id="229e0-109">With the growth of Internet-based applications and the rise of cloud-native apps, security models have evolved.</span></span>
+
+<span data-ttu-id="229e0-110">В современной облачной модели идентификации предполагается, что архитектура распределена.</span><span class="sxs-lookup"><span data-stu-id="229e0-110">In today's cloud-native identity model, architecture is assumed to be distributed.</span></span> <span data-ttu-id="229e0-111">Приложения могут быть развернуты в любом месте и могут взаимодействовать с другими приложениями где угодно.</span><span class="sxs-lookup"><span data-stu-id="229e0-111">Apps can be deployed anywhere and may communicate with other apps anywhere.</span></span> <span data-ttu-id="229e0-112">Клиенты могут обмениваться данными с этими приложениями из любого места, и на самом деле клиенты могут включать любое сочетание платформ и устройств.</span><span class="sxs-lookup"><span data-stu-id="229e0-112">Clients may communicate with these apps from anywhere, and in fact, clients may consist of any combination of platforms and devices.</span></span> <span data-ttu-id="229e0-113">Собственные решения идентификации в облаке используют открытые стандарты для обеспечения безопасного доступа к приложениям с клиентов.</span><span class="sxs-lookup"><span data-stu-id="229e0-113">Cloud-native identity solutions leverage open standards to achieve secure application access from clients.</span></span> <span data-ttu-id="229e0-114">Эти клиенты находятся в диапазоне от пользователей, работающих на ПК или на телефонах, к другим приложениям, размещенным в любом месте в сети, с помощью приставок и устройств IOT, где используется любая программная платформа в любой точке мира.</span><span class="sxs-lookup"><span data-stu-id="229e0-114">These clients range from human users on PCs or phones, to other apps hosted anywhere online, to set-top boxes and IOT devices running any software platform anywhere in the world.</span></span>
+
+<span data-ttu-id="229e0-115">Современные решения идентификации, созданные в облаке, обычно используют маркеры доступа, выданные службой маркеров безопасности или сервером (STS), после определения их удостоверения.</span><span class="sxs-lookup"><span data-stu-id="229e0-115">Modern cloud-native identity solutions typically leverage access tokens that are issued by a secure token service/server (STS) to a security principal once their identity is determined.</span></span> <span data-ttu-id="229e0-116">Маркер доступа, обычно JSON Web Token (JWT), включает *утверждения* о субъекте безопасности.</span><span class="sxs-lookup"><span data-stu-id="229e0-116">The access token, typically a JSON Web Token (JWT), includes *claims* about the security principal.</span></span> <span data-ttu-id="229e0-117">Эти утверждения будут минимально включать удостоверение пользователя, но могут также включать дополнительные утверждения, которые могут использоваться приложениями для определения уровня доступа для предоставления участнику.</span><span class="sxs-lookup"><span data-stu-id="229e0-117">These claims will minimally include the user's identity but may also include additional claims that can be used by applications to determine the level of access to grant the principal.</span></span>
+
+<!-- (insert figure showing basic handshake involving a principal, an STS, and an app) -->
+
+<span data-ttu-id="229e0-118">Как правило, STS отвечает только за проверку подлинности участника.</span><span class="sxs-lookup"><span data-stu-id="229e0-118">Typically, the STS is only responsible for authenticating the principal.</span></span> <span data-ttu-id="229e0-119">Определение уровня доступа к ресурсам остается в других частях приложения.</span><span class="sxs-lookup"><span data-stu-id="229e0-119">Determining their level of access to resources is left to other parts of the application.</span></span>
+
+## <a name="references"></a><span data-ttu-id="229e0-120">Ссылки</span><span class="sxs-lookup"><span data-stu-id="229e0-120">References</span></span>
+
+- [<span data-ttu-id="229e0-121">Платформа Microsoft Identity</span><span class="sxs-lookup"><span data-stu-id="229e0-121">Microsoft identity platform</span></span>](https://docs.microsoft.com/azure/active-directory/develop/)
+
+>[!div class="step-by-step"]
+><span data-ttu-id="229e0-122">[Назад](azure-monitor.md)
+>[Вперед](authentication-authorization.md)</span><span class="sxs-lookup"><span data-stu-id="229e0-122">[Previous](azure-monitor.md)
+[Next](authentication-authorization.md)</span></span>
