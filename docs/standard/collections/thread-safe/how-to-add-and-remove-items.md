@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Добавление элементов в коллекцию ConcurrentDictionary и их удаление из этой коллекции
+title: Практическое руководство. Добавление элементов в коллекцию ConcurrentDictionary и их удаление из этой коллекции
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -17,7 +17,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 01/23/2019
 ms.locfileid: "54543426"
 ---
-# <a name="how-to-add-and-remove-items-from-a-concurrentdictionary"></a>Как выполнить Добавление элементов в коллекцию ConcurrentDictionary и их удаление из этой коллекции
+# <a name="how-to-add-and-remove-items-from-a-concurrentdictionary"></a>Практическое руководство. Добавление элементов в коллекцию ConcurrentDictionary и их удаление из этой коллекции
 В этом примере показано, как добавлять, получать, обновлять и удалять элементы класса <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType>. Этот класс коллекций является потокобезопасной реализацией. Рекомендуется использовать его каждый раз, когда множество потоков одновременно могут пытаться получить доступ к элементам.  
   
  <xref:System.Collections.Concurrent.ConcurrentDictionary%602> предоставляет несколько удобных способов, которые позволяют обойтись без первоначальной проверки существования ключа перед добавлением или удалением данных. В таблице ниже перечислены эти удобные методы и приводится описание их использования.  

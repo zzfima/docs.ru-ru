@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Добавление и удаление отдельных элементов коллекции BlockingCollection
+title: Практическое руководство. Добавление и удаление отдельных элементов коллекции BlockingCollection
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -17,7 +17,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 01/23/2019
 ms.locfileid: "54535450"
 ---
-# <a name="how-to-add-and-take-items-individually-from-a-blockingcollection"></a>Как выполнить Добавление и удаление отдельных элементов коллекции BlockingCollection
+# <a name="how-to-add-and-take-items-individually-from-a-blockingcollection"></a>Практическое руководство. Добавление и удаление отдельных элементов коллекции BlockingCollection
 В этом примере показано, как добавлять и удалять элементы <xref:System.Collections.Concurrent.BlockingCollection%601> с блокировкой и без блокировки. Дополнительные сведения о <xref:System.Collections.Concurrent.BlockingCollection%601> см. в разделе [Общие сведения о коллекции BlockingCollection](../../../../docs/standard/collections/thread-safe/blockingcollection-overview.md).  
   
  Пример перечисления коллекции <xref:System.Collections.Concurrent.BlockingCollection%601>, пока она не станет пустой и никакие элементы не будут добавляться, см. в разделе [Практическое руководство. Использование оператора ForEach для удаления элементов в коллекции BlockingCollection](../../../../docs/standard/collections/thread-safe/how-to-use-foreach-to-remove.md).
