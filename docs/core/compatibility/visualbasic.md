@@ -2,17 +2,14 @@
 title: Критические изменения Visual Basic — .NET Core
 description: Список критических изменений в языке Visual Basic, используемом с .NET Core.
 ms.date: 09/20/2019
-ms.openlocfilehash: c4db31079098ca48dfd0ef4708a55049dde619fe
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f7cd5160631ac696d542084a71dc44e65a94cabf
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73092802"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739338"
 ---
 # <a name="visual-basic-breaking-changes"></a>Критические изменения Visual Basic
-
-> [!IMPORTANT]
-> Эта статья находится на стадии разработки. Это не полный список критических изменений .NET Core. Дополнительные сведения о критических изменениях .NET Core см. в отдельных [вопросах](https://github.com/dotnet/docs/issues?q=is%3Aissue+is%3Aopen+label%3Abreaking-change) в репозитории dotnet/docs на GitHub.
 
 Ниже приведен список критических изменений в Visual Basic по версиям .NET Core.
 

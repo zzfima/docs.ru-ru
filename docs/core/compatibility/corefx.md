@@ -2,17 +2,14 @@
 title: Критические изменения CoreFx — .NET Core
 description: Список критических изменений в библиотеке базовых классов .NET CoreFx.
 ms.date: 09/20/2019
-ms.openlocfilehash: 04ae857b5f46748ad57c742b6ccf421f57bc3138
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 028a5c1059a855d1de644dde9fd9ad5f85f47ffe
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73093429"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739785"
 ---
 # <a name="corefx-breaking-changes"></a>Критические изменения CoreFx
-
-> [!IMPORTANT]
-> Эта статья находится на стадии разработки. Это не полный список критических изменений .NET Core. Дополнительные сведения о критических изменениях .NET Core см. в отдельных [вопросах](https://github.com/dotnet/docs/issues?q=is%3Aissue+is%3Aopen+label%3Abreaking-change) в репозитории dotnet/docs на GitHub.
 
 Ниже приведен список критических изменений CoreFx по версиям .NET Core. CoreFx предоставляет примитивы и другие общие типы, используемые в .NET Core.
 

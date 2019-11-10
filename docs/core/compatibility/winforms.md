@@ -2,17 +2,14 @@
 title: Критические изменения Windows Forms — .NET Core
 description: Список критических изменений в Windows Forms для .NET Core.
 ms.date: 09/20/2019
-ms.openlocfilehash: 2aac8c81372a36f00df1b7f3ccd3432409f6c834
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7bdf17911ccefd19c5a3458f328b6ee41352acd9
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73092903"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739754"
 ---
 # <a name="breaking-changes-in-windows-forms"></a>Критические изменения в Windows Forms
-
-> [!IMPORTANT]
-> Эта статья находится на стадии разработки. Это не полный список критических изменений .NET Core. Дополнительные сведения о критических изменениях .NET Core см. в отдельных [вопросах](https://github.com/dotnet/docs/issues?q=is%3Aissue+is%3Aopen+label%3Abreaking-change) в репозитории dotnet/docs на GitHub.
 
 Ниже приведен список критических изменений в Windows Forms по версиям .NET Core.
 
