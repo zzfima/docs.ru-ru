@@ -2,12 +2,12 @@
 title: Общие сведения о контейнерах и Docker
 description: Архитектура микрослужб .NET для упакованных в контейнеры приложений .NET | Общие сведения о контейнерах и Docker
 ms.date: 08/31/2018
-ms.openlocfilehash: cb6244939f6ae89ba1dc824b55a21d1e010cef5e
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 364cbc0ba8149be1873df628a1ca243f420e7d0b
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70295147"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740068"
 ---
 # <a name="introduction-to-containers-and-docker"></a>Общие сведения о контейнерах и Docker
 
@@ -19,7 +19,7 @@ ms.locfileid: "70295147"
 
 Каждый контейнер может вмещать целое веб-приложение или службу, как показано на рис. 2-1. В этом примере узел Docker — это узел контейнеров, а App1, App2, Svc 1 и Svc 2 — контейнерные приложения или службы.
 
-![Два приложения и две службы, работающие в операционной системе на виртуальной машине или физическом сервере](./media/image1.png)
+![Схема, на которой показаны четыре контейнера, запущенные на виртуальной машине или сервере.](./media/index/multiple-containers-single-host.png)
 
 **Рис. 2-1**. Несколько контейнеров на одном узле
 

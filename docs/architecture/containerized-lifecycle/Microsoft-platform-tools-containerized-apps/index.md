@@ -2,12 +2,12 @@
 title: Общие сведения о платформе и средствах Майкрософт для контейнерных приложений
 description: Ознакомьтесь с предложениями корпорации Майкрософт для поддержки жизненного цикла приложений Docker.
 ms.date: 02/15/2019
-ms.openlocfilehash: 1829ce1051f091065f543a6cadcf5d179a284834
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9c8c0f5688bf226351abfc7bf52d4ace05f8c6d8
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73094458"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73738085"
 ---
 # <a name="introduction-to-the-microsoft-platform-andtools-for-containerized-apps"></a>Общие сведения о платформе и средствах Майкрософт для контейнерных приложений
 
@@ -15,7 +15,9 @@ ms.locfileid: "73094458"
 
 На рисунке 3-1 представлены основные части жизненного цикла приложений Docker, классифицированные по видам деятельности нескольких команд (разработка приложений, процессы инфраструктуры DevOps, управление ИТ-средой и выполнение ИТ-операций). Как правило, в организации специалисты, ответственные за каждое направление, имеют разные профили. То же самое относится и к навыкам.
 
-![Средства Майкрософт. Для рабочей нагрузки разработки и проектирования: подсистема Docker для Windows, VS и VS Code, .NET Core, служба Azure Kubernetes. Для рабочей нагрузки сборки/тестирования/поставки: Azure DevOps, Team Foundation Server, Docker CLI, служба Azure Kubernetes. Для рабочей нагрузки запуска/мониторинга/управления: Azure Monitor, портал Azure, служба Azure Kubernetes, Service Fabric и другие оркестраторы.](./media/image1.png)
+:::image type="complex" source="./media/index/microsoft-tools-contanerized-docker-app.png" alt-text="Схема, на которой показаны инструменты Майкрософт, необходимые для обслуживания приложений Docker.":::
+Средства Майкрософт. Для рабочей нагрузки разработки и проектирования: подсистема Docker для Windows, VS и VS Code, .NET Core, служба Azure Kubernetes. Для рабочей нагрузки сборки/тестирования/поставки: Azure DevOps, Team Foundation Server, Docker CLI, служба Azure Kubernetes. Для рабочей нагрузки запуска/мониторинга/управления: Azure Monitor, портал Azure, служба Azure Kubernetes, Service Fabric и другие оркестраторы.
+:::image-end:::
 
 **Рис. 3-1**. Основные части жизненного цикла контейнерных приложений Docker на базе платформы и средств Майкрософт
 

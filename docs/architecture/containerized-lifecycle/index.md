@@ -2,12 +2,12 @@
 title: Общие сведения о контейнерах и Docker
 description: Общий обзор основных преимуществ использования Docker.
 ms.date: 02/15/2019
-ms.openlocfilehash: a03c67ed4fbc55c84e69fba5b7978863c8305e00
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 9ac08a64cd2465b4b88a266c1ec0925f37680bf9
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70295051"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73738130"
 ---
 # <a name="introduction-to-containers-and-docker"></a>Общие сведения о контейнерах и Docker
 
@@ -19,7 +19,7 @@ ms.locfileid: "70295051"
 
 Каждый контейнер может вмещать целое веб-приложение или службу, как показано на рис. 1-1. В этом примере узел Docker — это узел контейнеров, а App1, App2, Svc1 и Svc2 — контейнерные приложения или службы.
 
-![Два приложения и две службы, работающие в операционной системе на виртуальной машине или физическом сервере](./media/image1.png)
+![Схема, на которой показаны четыре контейнера, запущенные на виртуальной машине или сервере.](./media/index/multiple-containers-single-host.png)
 
 **Рис. 1-1**. Несколько контейнеров на одном узле
 
