@@ -7,6 +7,8 @@
           href: system-text-json-overview.md
         - name: Практическое руководство. Сериализация и десериализация JSON
           href: system-text-json-how-to.md
+        - name: Практическое руководство. Написание настраиваемых преобразователей
+          href: system-text-json-converters-how-to.md
     - name: Двоичная сериализация
       href: binary-serialization.md
       items:

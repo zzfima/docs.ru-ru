@@ -1,68 +1,66 @@
 - name: Сборки в .NET
   href: index.md
+- name: Содержимое сборок
+  href: contents.md
+- name: манифеста
+  href: manifest.md
+- name: Замечания по безопасности
+  href: security-considerations.md
+- name: Управление версиями
+  href: versioning.md
+- name: Параллельное выполнение
+  href: side-by-side-execution.md
+- name: Формат файла сборки
+  href: file-format.md
+- name: Возможность выгрузки в .NET Core
+  href: unloadability.md
+- name: Базовые сборки
+  href: reference-assemblies.md
+- name: Разрешение загрузки сборок
+  href: resolve-loads.md
+- name: Создание сборок
+  href: create.md
+- name: Имена сборок
+  href: names.md
+- name: Поиск полного имени сборки
+  href: find-fully-qualified-name.md
+- name: Расположение сборки
+  href: location.md
+- name: Настройка атрибутов сборки
+  href: set-attributes.md
+- name: Сборки со строгими именами
   items:
-    - name: Содержимое сборок
-      href: contents.md
-    - name: Манифест сборки
-      href: manifest.md
-    - name: Сборки со строгими именами
+    - name: Обзор
       href: strong-named.md
-    - name: Вопросы безопасности сборок
-      href: security-considerations.md
-    - name: Управление версиями сборок
-      href: versioning.md
-    - name: Сборки и параллельное выполнение
-      href: side-by-side-execution.md
-    - name: Формат файла сборки
-      href: file-format.md
-    - name: Практическое руководство. Использование и отладка сборок с возможностью выгрузки в .NET Core
-      href: unloadability.md
-    - name: Базовые сборки
-      href: reference-assemblies.md
-    - name: Разрешение загрузки сборок
-      href: resolve-loads.md
-    - name: Программирование с использованием сборок
-      href: program.md
-      items:
-        - name: Создание сборок
-          href: create.md
-        - name: Имена сборок
-          href: names.md
-        - name: Практическое руководство. Поиск полного имени сборки
-          href: find-fully-qualified-name.md
-        - name: Расположение сборки
-          href: location.md
-        - name: Настройка атрибутов сборки
-          href: set-attributes.md
-        - name: Создание и использование сборок со строгими именами
-          href: create-use-strong-named.md
-          items:
-            - name: Практическое руководство. Создание пары открытого и закрытого ключей
-              href: create-public-private-key-pair.md
-            - name: Практическое руководство. Подписывание сборки строгим именем
-              href: sign-strong-name.md
-            - name: Усовершенствованное строгое именование
-              href: enhanced-strong-naming.md
-            - name: Практическое руководство. Ссылка на сборку со строгим именем
-              href: reference-strong-named.md
-            - name: Практическое руководство. Отключение функции пропуска строгих имен
-              href: disable-strong-name-bypass-feature.md
-        - name: Отложенная подпись сборки
-          href: delay-sign.md
-        - name: Практическое руководство. Просмотр содержимого сборки
-          href: view-contents.md
-        - name: Переадресация типов в общеязыковой среде CLR
-          href: type-forwarding.md
-        - name: Дружественные сборки
-          href: friend.md
-          items:
-            - name: Практическое руководство. Создание неподписанных дружественных сборок
-              href: create-unsigned-friend.md
-            - name: Практическое руководство. Создание подписанных дружественных сборок
-              href: create-signed-friend.md
-        - name: 'Практическое руководство. Определение того, является ли файл сборкой'
-          href: identify.md
-        - name: Практическое руководство. Загрузка и выгрузка сборок
-          href: load-unload.md
-        - name: Пошаговое руководство. Внедрение типов из управляемых сборок в Visual Studio
-          href: embed-types-visual-studio.md
+    - name: Создание и использование сборок со строгими именами
+      href: create-use-strong-named.md
+    - name: Создание пары открытого и закрытого ключей
+      href: create-public-private-key-pair.md
+    - name: Подписывание сборки строгим именем
+      href: sign-strong-name.md
+    - name: Усовершенствованное строгое именование
+      href: enhanced-strong-naming.md
+    - name: Ссылка на сборку со строгим именем
+      href: reference-strong-named.md
+    - name: Отключение обхода строгих имен
+      href: disable-strong-name-bypass-feature.md
+- name: Отложенная подпись сборки
+  href: delay-sign.md
+- name: Просмотр содержимого сборки
+  href: view-contents.md
+- name: Перенаправление типов в среде CLR
+  href: type-forwarding.md
+- name: Дружественные сборки
+  items:
+    - name: Обзор
+      href: friend.md
+    - name: Создание неподписанных дружественных сборок
+      href: create-unsigned-friend.md
+    - name: Создание подписанных дружественных сборок
+      href: create-signed-friend.md
+- name: 'Определение того, является ли файл сборкой'
+  href: identify.md
+- name: Загрузка и выгрузка сборок
+  href: load-unload.md
+- name: Пошаговое руководство. Внедрение типов из управляемых сборок в Visual Studio
+  href: embed-types-visual-studio.md
