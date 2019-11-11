@@ -9,12 +9,12 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: 940d21bdd90d4594a39edc20283ca6a45ccf81fe
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 8703532ff8551e8bd42128eb9e8cdcf2afd9dad8
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73422203"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739676"
 ---
 # <a name="value-types-c-reference"></a>Типы значений (справочник по C#)
 
@@ -32,7 +32,7 @@ ms.locfileid: "73422203"
 
 В отличие от ссылочных типов, создать новый производный от типа значения тип нельзя. Тем не менее, как и ссылочные типы, структуры могут реализовывать интерфейсы.
 
-Переменные типа значения не могут иметь значение `null` по умолчанию. Однако переменные соответствующих [типов, допускающих значение NULL](../../programming-guide/nullable-types/index.md), могут иметь значение `null`.
+Переменные типа значения не могут иметь значение `null` по умолчанию. Однако переменные соответствующих [типов, допускающих значение NULL](../builtin-types/nullable-value-types.md), могут иметь значение `null`.
 
 Каждый тип значения имеет неявный конструктор без параметров, который инициализирует значение по умолчанию этого типа. Дополнительные сведения о значениях по умолчанию для типов значений см. в разделе [Таблица значений по умолчанию (справочник по C#)](default-values-table.md).
 
@@ -104,9 +104,7 @@ var p = new Point(); // Invoke parameterless constructor for the struct.
 
 ## <a name="see-also"></a>См. также
 
-- [Справочник по C#](../index.md)
-- [Руководство по программированию на C#](../../programming-guide/index.md)
-- [Ключевые слова в C#](index.md)
-- [Типы](/dotnet/csharp/language-reference/keywords)
+- [справочник по C#](../index.md)
+- [Ключевые слова C#](index.md)
 - [Ссылочные типы](reference-types.md)
-- [Типы значений, допускающие значение NULL](../../programming-guide/nullable-types/index.md)
+- [Типы значений, допускающие значение NULL](../builtin-types/nullable-value-types.md)

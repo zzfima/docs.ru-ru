@@ -3,12 +3,12 @@ title: Обработка значений NULL в выражениях запр
 description: Узнайте, как обрабатывать значения NULL в выражениях запросов LINQ в C#.
 ms.date: 12/01/2016
 ms.assetid: ac63ae8b-724d-4251-9334-528f4e884ae7
-ms.openlocfilehash: 38a5c5e4a869cc44be78f70cbf0e50166baaab16
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: c9a3aaec05fa029a8db66826bdcb4a1d106176e3
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71353322"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73736853"
 ---
 # <a name="handle-null-values-in-query-expressions"></a>Обработка значений NULL в выражениях запросов
 
@@ -32,4 +32,4 @@ ms.locfileid: "71353322"
 
 - <xref:System.Nullable%601>
 - [LINQ](index.md)
-- [Типы значений, допускающие значение NULL](../programming-guide/nullable-types/index.md)
+- [Типы значений, допускающие значение NULL](../language-reference/builtin-types/nullable-value-types.md)

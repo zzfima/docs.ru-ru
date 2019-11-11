@@ -6,12 +6,12 @@ helpviewer_keywords:
 - cast operators [C#], as and is operators
 - as operator [C#]
 - is operator [C#]
-ms.openlocfilehash: d82c60374db637bb8ac879a23e2d74c39194ca18
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 8d090df1338c535b11a7fd3ec32f6d1cb00b338f
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71353724"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739684"
 ---
 # <a name="how-to-safely-cast-by-using-pattern-matching-and-the-is-and-as-operators"></a>Практическое руководство. Безопасное приведение с помощью сопоставления шаблонов и операторы is и as
 
@@ -23,7 +23,7 @@ ms.locfileid: "71353724"
 
 В предыдущем примере показано несколько возможностей синтаксиса сопоставления шаблонов. Операторы `if (a is Mammal m)` и `if (o is Mammal m)` объединяют проверку с назначением инициализации. Назначение происходит, только если проверка пройдет успешно. Переменная `m` действует только во внедренном операторе `if`, где она назначена. Вы не сможете получить доступ к `m` позже в этом же методе. Попробуйте сделать это в интерактивном окне.
 
-Вы можете использовать тот же синтаксис для проверки наличия значения у [типа значений, допускающего значение NULL](../programming-guide/nullable-types/index.md), как показано в следующем примере кода.
+Вы можете использовать тот же синтаксис для проверки наличия значения у [типа значений, допускающего значение NULL](../language-reference/builtin-types/nullable-value-types.md), как показано в следующем примере кода.
 
 [!code-csharp[Pattern matching with nullable types](../../../samples/snippets/csharp/how-to/safelycast/nullablepatternmatching/Program.cs#PatternMatchingNullable)]
 

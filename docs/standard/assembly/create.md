@@ -7,12 +7,12 @@ helpviewer_keywords:
 - assemblies [.NET Framework], creating
 - multifile assemblies
 ms.assetid: 54832ee9-dca8-4c8b-913c-c0b9d265e9a4
-ms.openlocfilehash: 8a00784e6aa2d663c738339367b4076e79ed9c95
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 81fffb2b2e1d56d6068bf6f663a13fad6968a383
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122501"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740518"
 ---
 # <a name="create-assemblies"></a>Создание сборок
 
@@ -46,7 +46,6 @@ ms.locfileid: "73122501"
 
 ## <a name="see-also"></a>См. также
 
-- [Программирование с использованием сборок](program.md)
 - [Управление версиями сборок](versioning.md)
 - [Практическое руководство. Создание однофайловой сборки](../../framework/app-domains/build-single-file-assembly.md)
 - [Практическое руководство. Создание многофайловой сборки](../../framework/app-domains/build-multifile-assembly.md)
