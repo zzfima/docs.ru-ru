@@ -3,26 +3,26 @@ title: Создание приложения .NET Core с подключаемы
 description: Узнайте, как создать приложение .NET Core, которое поддерживает подключаемые модули.
 author: jkoritzinsky
 ms.author: jekoritz
-ms.date: 01/28/2019
-ms.openlocfilehash: 54f616a7b2b20b7682963e9f5d503878bb512c90
-ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
+ms.date: 10/16/2019
+ms.openlocfilehash: 16fc9d3c721ddd0618c980c7dc406b7ad7864ff5
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72250163"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739703"
 ---
 # <a name="create-a-net-core-application-with-plugins"></a>Создание приложения .NET Core с подключаемыми модулями
 
-В этом учебнике демонстрируется выполнение следующих действий:
+В этом руководстве описывается, как создать и использовать пользовательский <xref:System.Runtime.Loader.AssemblyLoadContext> для загрузки подключаемых модулей. Он использует <xref:System.Runtime.Loader.AssemblyDependencyResolver> для разрешения зависимостей подключаемого модуля. Этот учебник правильно изолирует зависимости подключаемого модуля от ведущего приложения. Вы научитесь:
 
 - Создание структуры проекта для поддержки подключаемых модулей.
 - Создание пользовательского <xref:System.Runtime.Loader.AssemblyLoadContext> для загрузки каждого подключаемого модуля.
-- Использование типа `System.Runtime.Loader.AssemblyDependencyResolver`, чтобы разрешить зависимости для подключаемых модулей.
+- Использование типа <xref:System.Runtime.Loader.AssemblyDependencyResolver?displayProperty=fullName>, чтобы разрешить зависимости для подключаемых модулей.
 - Создание подключаемых модулей, которые можно легко развернуть путем копирования артефактов сборки.
 
 ## <a name="prerequisites"></a>Предварительные требования
 
-- Установите [.NET Core 3.0](https://dotnet.microsoft.com/download) или более позднюю версию.
+- Установите [пакет SDK для .NET Core 3.0](https://dotnet.microsoft.com/download) или более новой версии.
 
 ## <a name="create-the-application"></a>Создание приложения
 
@@ -213,7 +213,7 @@ static Assembly LoadPlugin(string relativePath)
 
 Если использовать другой экземпляр `PluginLoadContext` для каждого подключаемого модуля, подключаемые модули смогут иметь разные или даже конфликтующие зависимости без проблем.
 
-## <a name="create-a-simple-plugin-with-no-dependencies"></a>Создание простого подключаемого модуля без зависимостей
+## <a name="simple-plugin-with-no-dependencies"></a>Простой подключаемый модуль без зависимостей
 
 В корневой папке сделайте следующее:
 
@@ -260,15 +260,15 @@ static Assembly LoadPlugin(string relativePath)
 
 Теперь, когда проект `HelloPlugin` завершен, мы должны обновить проект `AppWithPlugin`, чтобы знать, где находится подключаемый модуль `HelloPlugin`. После комментария `// Paths to plugins to load` добавьте `@"HelloPlugin\bin\Debug\netcoreapp3.0\HelloPlugin.dll"` как элемент массива `pluginPaths`.
 
-## <a name="create-a-plugin-with-library-dependencies"></a>Создание подключаемого модуля с зависимостями библиотек
+## <a name="plugin-with-library-dependencies"></a>Подключаемый модуль с зависимостями библиотек
 
 Почти все подключаемые модули сложнее, чем простая программа "Hello World", и многие подключаемые модули имеют зависимости от других библиотек. Подключаемые модули `JsonPlugin` и `OldJson` в этом образце — это два примера подключаемых модулей с зависимостями пакета NuGet от `Newtonsoft.Json`. В самих файлах проекта нет особых сведений для ссылок проекта, и (после добавления пути подключаемого модуля к массиву `pluginPaths`) подключаемые модули запускаются идеально, даже при запуске в том же выполнении приложения AppWithPlugin. Но эти проекты не копируют сборки со ссылками в выходной каталог, поэтому сборки должны присутствовать на компьютере пользователя, чтобы функционировать. Существует два способа обойти эту проблему. Первый вариант — использовать команду `dotnet publish` для публикации библиотеки классов. Кроме того, если вы хотите иметь возможность использовать выходные данные `dotnet build` для подключаемого модуля, можно добавить свойство `<CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>` между тегами `<PropertyGroup>` в файле проекта подключаемого модуля. См. проект подключаемого модуля `XcopyablePlugin` в качестве примера.
 
-## <a name="other-plugin-examples-in-the-sample"></a>Другие примеры подключаемого модуля в образце
+## <a name="other-examples-in-the-sample"></a>Другие примеры в примере
 
 Полный исходный код для этого руководства можно найти в [репозитории dotnet/samples](https://github.com/dotnet/samples/tree/master/core/extensions/AppWithPlugin). Полный пример включает несколько других примеров поведения `AssemblyDependencyResolver`. Например, объект `AssemblyDependencyResolver` может разрешить собственные библиотеки, а также локализованные вспомогательные сборки, включенные в пакеты NuGet. `UVPlugin` и `FrenchPlugin` в репозитории примеров демонстрируют такие сценарии.
 
-## <a name="how-to-reference-a-plugin-interface-assembly-defined-in-a-nuget-package"></a>Способ создания ссылок на сборку интерфейса подключаемого модуля, определенную в пакете NuGet
+## <a name="reference-a-plugin-from-a-nuget-package"></a>Активация подключаемого модуля из пакета NuGet
 
 Предположим, у вас есть приложение A, и интерфейс его подключаемого модуля определен в пакете NuGet `A.PluginBase`. Как правильно сослаться на пакет в проекте подключаемого модуля? Для ссылок проекта использование метаданных `<Private>false</Private>` в элементе `ProjectReference` в файле проекта не позволило скопировать DLL-файл в выходные данные.
 
@@ -285,3 +285,7 @@ static Assembly LoadPlugin(string relativePath)
 ## <a name="plugin-target-framework-recommendations"></a>Рекомендации для целевой платформы подключаемого модуля
 
 Так как при загрузке зависимости подключаемого модуля используется файл *.deps.json*, есть один нюанс с целевой платформой подключаемого модуля. В частности, подключаемые модули должны быть нацелены на среду выполнения, такую как .NET Core 3.0, а не на версию .NET Standard. Файл *.deps.json* создается с учетом целевой платформы проекта. Так как многие пакеты, совместимые с .NET Standard, ссылаются на сборки для .NET Standard и сборки реализации для конкретных сред выполнения, файл *.deps.json* может неправильно распознавать сборки реализации или принимать версию сборки .NET Standard вместо ожидаемой версии .NET Core.
+
+## <a name="plugin-framework-references"></a>Ссылки на платформу подключаемого модуля
+
+Сейчас подключаемые модули не могут внедрять новые платформы в процесс. Например, нельзя будет загрузить подключаемый модуль, который использует платформу `Microsoft.AspNetCore.App`, в приложение, которое использует только корневую платформу `Microsoft.NETCore.App`. Ведущее приложение должно объявлять ссылки на все платформы, необходимые подключаемым модулям.

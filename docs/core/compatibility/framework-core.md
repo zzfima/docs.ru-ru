@@ -2,19 +2,16 @@
 title: Критические изменения, миграция с .NET Framework на .NET Core 3.0 — .NET Core
 description: Список критических изменений для миграции с .NET Framework на .NET Core 3.0 для Windows Forms и Windows Presentation Foundation.
 ms.date: 09/10/2019
-ms.openlocfilehash: a374e35192c7aad07e986e0e0b75039642744edc
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 80c93dd7a8715a9bcc6d81605ffe5af4b0461257
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73089571"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739435"
 ---
 # <a name="breaking-changes-for-migration-from-net-framework-to-net-core-30"></a>Критические изменения для миграции с .NET Framework на .NET Core 3.0
 
-> [!IMPORTANT]
-> Эта статья находится на стадии разработки. Это не полный список критических изменений .NET Core. Дополнительные сведения о критических изменениях .NET Core см. в отдельных [вопросах](https://github.com/dotnet/docs/issues?q=is%3Aissue+is%3Aopen+label%3Abreaking-change) в репозитории dotnet/docs на GitHub. 
-
-Если вы переносите приложение Windows Forms или Windows Presentation Foundation с .NET Framework на .NET Core 3.0, ознакомьтесь со следующими статьями о критических изменениях, которые могут повлиять на работу приложения.
+Если вы переносите приложение Windows Forms или Windows Presentation Foundation с .NET Framework на .NET Core 3.0, ознакомьтесь со следующими статьями о критических изменениях, которые могут повлиять на работу приложения:
 
 ## <a name="windows-forms"></a>Windows Forms
 
