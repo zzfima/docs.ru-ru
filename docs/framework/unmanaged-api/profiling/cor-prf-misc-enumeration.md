@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: 619bb5de-e309-48b6-a3af-32d935a0ff46
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 1dd3cf7e4badf8caa711f2a1b972d9fa14215204
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8105ba34ca400771fbc4273630f20941a4a9557d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67752141"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74432273"
 ---
-# <a name="corprfmisc-enumeration"></a><span data-ttu-id="da4a1-102">Перечисление COR_PRF_MISC</span><span class="sxs-lookup"><span data-stu-id="da4a1-102">COR_PRF_MISC Enumeration</span></span>
-<span data-ttu-id="da4a1-103">Содержит постоянные значения, которые указывают специальные идентификаторы.</span><span class="sxs-lookup"><span data-stu-id="da4a1-103">Contains constant values that specify special identifiers.</span></span>  
+# <a name="cor_prf_misc-enumeration"></a><span data-ttu-id="c0229-102">Перечисление COR_PRF_MISC</span><span class="sxs-lookup"><span data-stu-id="c0229-102">COR_PRF_MISC Enumeration</span></span>
+<span data-ttu-id="c0229-103">Содержит постоянные значения, которые указывают специальные идентификаторы.</span><span class="sxs-lookup"><span data-stu-id="c0229-103">Contains constant values that specify special identifiers.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="da4a1-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="da4a1-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c0229-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="c0229-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum {  
@@ -36,23 +34,23 @@ typedef enum {
 } COR_PRF_MISC;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="da4a1-105">Участники</span><span class="sxs-lookup"><span data-stu-id="da4a1-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="c0229-105">Члены</span><span class="sxs-lookup"><span data-stu-id="c0229-105">Members</span></span>  
   
-|<span data-ttu-id="da4a1-106">Член</span><span class="sxs-lookup"><span data-stu-id="da4a1-106">Member</span></span>|<span data-ttu-id="da4a1-107">Описание</span><span class="sxs-lookup"><span data-stu-id="da4a1-107">Description</span></span>|  
+|<span data-ttu-id="c0229-106">Член</span><span class="sxs-lookup"><span data-stu-id="c0229-106">Member</span></span>|<span data-ttu-id="c0229-107">Описание</span><span class="sxs-lookup"><span data-stu-id="c0229-107">Description</span></span>|  
 |------------|-----------------|  
-|`PROFILER_PARENT_UNKNOWN`|<span data-ttu-id="da4a1-108">Идентификатор по умолчанию, используемый [ICorProfilerInfo::GetModuleInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getmoduleinfo-method.md) для модуля, который еще не присоединена к сборке.</span><span class="sxs-lookup"><span data-stu-id="da4a1-108">The default identifier used by [ICorProfilerInfo::GetModuleInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getmoduleinfo-method.md) for a module that has not yet been attached to an assembly.</span></span>|  
-|`PROFILER_GLOBAL_CLASS`|<span data-ttu-id="da4a1-109">Идентификатор класса по умолчанию для глобальных констант, которые не принадлежат к классу.</span><span class="sxs-lookup"><span data-stu-id="da4a1-109">The default class identifier for global constants that do not belong to a class.</span></span>|  
-|`PROFILER_GLOBAL_MODULE`|<span data-ttu-id="da4a1-110">Идентификатор модуля по умолчанию для глобальных объектов, не принадлежащие к модулю.</span><span class="sxs-lookup"><span data-stu-id="da4a1-110">The default module identifier for global objects that do not belong to a module.</span></span>|  
+|`PROFILER_PARENT_UNKNOWN`|<span data-ttu-id="c0229-108">The default identifier used by [ICorProfilerInfo::GetModuleInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getmoduleinfo-method.md) for a module that has not yet been attached to an assembly.</span><span class="sxs-lookup"><span data-stu-id="c0229-108">The default identifier used by [ICorProfilerInfo::GetModuleInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getmoduleinfo-method.md) for a module that has not yet been attached to an assembly.</span></span>|  
+|`PROFILER_GLOBAL_CLASS`|<span data-ttu-id="c0229-109">The default class identifier for global constants that do not belong to a class.</span><span class="sxs-lookup"><span data-stu-id="c0229-109">The default class identifier for global constants that do not belong to a class.</span></span>|  
+|`PROFILER_GLOBAL_MODULE`|<span data-ttu-id="c0229-110">The default module identifier for global objects that do not belong to a module.</span><span class="sxs-lookup"><span data-stu-id="c0229-110">The default module identifier for global objects that do not belong to a module.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="da4a1-111">Требования</span><span class="sxs-lookup"><span data-stu-id="da4a1-111">Requirements</span></span>  
- <span data-ttu-id="da4a1-112">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="da4a1-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c0229-111">Требования</span><span class="sxs-lookup"><span data-stu-id="c0229-111">Requirements</span></span>  
+ <span data-ttu-id="c0229-112">**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c0229-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="da4a1-113">**Заголовок.** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="da4a1-113">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="c0229-113">**Заголовок:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="c0229-113">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="da4a1-114">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="da4a1-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="c0229-114">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c0229-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="da4a1-115">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="da4a1-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="c0229-115">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c0229-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="da4a1-116">См. также</span><span class="sxs-lookup"><span data-stu-id="da4a1-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c0229-116">См. также</span><span class="sxs-lookup"><span data-stu-id="c0229-116">See also</span></span>
 
-- [<span data-ttu-id="da4a1-117">Перечисления профилирования</span><span class="sxs-lookup"><span data-stu-id="da4a1-117">Profiling Enumerations</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+- [<span data-ttu-id="c0229-117">Перечисления профилирования</span><span class="sxs-lookup"><span data-stu-id="c0229-117">Profiling Enumerations</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: ea422217-988b-4acd-b2db-c55357938275
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d305aa59c1b9e9e1225b30f12e36fc689d584db1
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a3a5cadc1b5a9df7967aae271ff10296843121dd
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778883"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436955"
 ---
-# <a name="imetadataimportgetrva-method"></a><span data-ttu-id="cee9a-102">Метод IMetaDataImport::GetRVA</span><span class="sxs-lookup"><span data-stu-id="cee9a-102">IMetaDataImport::GetRVA Method</span></span>
-<span data-ttu-id="cee9a-103">Возвращает относительный виртуальный адрес (RVA) и флаги реализации метода или поля, представленного указанным токеном.</span><span class="sxs-lookup"><span data-stu-id="cee9a-103">Gets the relative virtual address (RVA) and the implementation flags of the method or field represented by the specified token.</span></span>  
+# <a name="imetadataimportgetrva-method"></a><span data-ttu-id="d20eb-102">Метод IMetaDataImport::GetRVA</span><span class="sxs-lookup"><span data-stu-id="d20eb-102">IMetaDataImport::GetRVA Method</span></span>
+<span data-ttu-id="d20eb-103">Gets the relative virtual address (RVA) and the implementation flags of the method or field represented by the specified token.</span><span class="sxs-lookup"><span data-stu-id="d20eb-103">Gets the relative virtual address (RVA) and the implementation flags of the method or field represented by the specified token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="cee9a-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="cee9a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d20eb-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="d20eb-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetRVA (  
@@ -37,26 +35,26 @@ HRESULT GetRVA (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="cee9a-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="cee9a-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="d20eb-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="d20eb-105">Parameters</span></span>  
  `tk`  
- <span data-ttu-id="cee9a-106">[in] MethodDef или FieldDef токен метаданных, представляющий возвращаемого RVA для объекта кода.</span><span class="sxs-lookup"><span data-stu-id="cee9a-106">[in] A MethodDef or FieldDef metadata token that represents the code object to return the RVA for.</span></span> <span data-ttu-id="cee9a-107">Если токен FieldDef, поле должно быть глобальной переменной.</span><span class="sxs-lookup"><span data-stu-id="cee9a-107">If the token is a FieldDef, the field must be a global variable.</span></span>  
+ <span data-ttu-id="d20eb-106">[in] A MethodDef or FieldDef metadata token that represents the code object to return the RVA for.</span><span class="sxs-lookup"><span data-stu-id="d20eb-106">[in] A MethodDef or FieldDef metadata token that represents the code object to return the RVA for.</span></span> <span data-ttu-id="d20eb-107">If the token is a FieldDef, the field must be a global variable.</span><span class="sxs-lookup"><span data-stu-id="d20eb-107">If the token is a FieldDef, the field must be a global variable.</span></span>  
   
  `pulCodeRVA`  
- <span data-ttu-id="cee9a-108">[out] Указатель на относительный виртуальный адрес объекта кода, представленного маркером.</span><span class="sxs-lookup"><span data-stu-id="cee9a-108">[out] A pointer to the relative virtual address of the code object represented by the token.</span></span>  
+ <span data-ttu-id="d20eb-108">[out] A pointer to the relative virtual address of the code object represented by the token.</span><span class="sxs-lookup"><span data-stu-id="d20eb-108">[out] A pointer to the relative virtual address of the code object represented by the token.</span></span>  
   
  `pdwImplFlags`  
- <span data-ttu-id="cee9a-109">[out] Указатель на флаги реализации метода.</span><span class="sxs-lookup"><span data-stu-id="cee9a-109">[out] A pointer to the implementation flags for the method.</span></span> <span data-ttu-id="cee9a-110">Это значение является битовой [CorMethodImpl](../../../../docs/framework/unmanaged-api/metadata/cormethodimpl-enumeration.md) перечисления.</span><span class="sxs-lookup"><span data-stu-id="cee9a-110">This value is a bitmask from the [CorMethodImpl](../../../../docs/framework/unmanaged-api/metadata/cormethodimpl-enumeration.md) enumeration.</span></span> <span data-ttu-id="cee9a-111">Значение `pdwImplFlags` действителен только если `tk` является токеном MethodDef.</span><span class="sxs-lookup"><span data-stu-id="cee9a-111">The value of `pdwImplFlags` is valid only if `tk` is a MethodDef token.</span></span>  
+ <span data-ttu-id="d20eb-109">[out] A pointer to the implementation flags for the method.</span><span class="sxs-lookup"><span data-stu-id="d20eb-109">[out] A pointer to the implementation flags for the method.</span></span> <span data-ttu-id="d20eb-110">This value is a bitmask from the [CorMethodImpl](../../../../docs/framework/unmanaged-api/metadata/cormethodimpl-enumeration.md) enumeration.</span><span class="sxs-lookup"><span data-stu-id="d20eb-110">This value is a bitmask from the [CorMethodImpl](../../../../docs/framework/unmanaged-api/metadata/cormethodimpl-enumeration.md) enumeration.</span></span> <span data-ttu-id="d20eb-111">The value of `pdwImplFlags` is valid only if `tk` is a MethodDef token.</span><span class="sxs-lookup"><span data-stu-id="d20eb-111">The value of `pdwImplFlags` is valid only if `tk` is a MethodDef token.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="cee9a-112">Требования</span><span class="sxs-lookup"><span data-stu-id="cee9a-112">Requirements</span></span>  
- <span data-ttu-id="cee9a-113">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="cee9a-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d20eb-112">Требования</span><span class="sxs-lookup"><span data-stu-id="d20eb-112">Requirements</span></span>  
+ <span data-ttu-id="d20eb-113">**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d20eb-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="cee9a-114">**Заголовок.** Cor.h</span><span class="sxs-lookup"><span data-stu-id="cee9a-114">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="d20eb-114">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="d20eb-114">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="cee9a-115">**Библиотека:** Включена как ресурс в MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="cee9a-115">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="d20eb-115">**Library:** Included as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="d20eb-115">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="cee9a-116">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="cee9a-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="d20eb-116">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d20eb-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="cee9a-117">См. также</span><span class="sxs-lookup"><span data-stu-id="cee9a-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d20eb-117">См. также</span><span class="sxs-lookup"><span data-stu-id="d20eb-117">See also</span></span>
 
-- [<span data-ttu-id="cee9a-118">Интерфейс IMetaDataImport</span><span class="sxs-lookup"><span data-stu-id="cee9a-118">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="cee9a-119">Интерфейс IMetaDataImport2</span><span class="sxs-lookup"><span data-stu-id="cee9a-119">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="d20eb-118">Интерфейс IMetaDataImport</span><span class="sxs-lookup"><span data-stu-id="d20eb-118">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="d20eb-119">Интерфейс IMetaDataImport2</span><span class="sxs-lookup"><span data-stu-id="d20eb-119">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

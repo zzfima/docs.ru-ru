@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: dd2bc956-7dbe-49fc-a646-daa0d267f2df
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c194cea21901015153626dc5aead49ed1b2c3df7
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6600ca7e70ac77ffba0c75812f27d388c354ece6
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67755110"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74438326"
 ---
-# <a name="isymunmanagedwriter2defineconstant2-method"></a><span data-ttu-id="fcb56-102">Метод ISymUnmanagedWriter2::DefineConstant2</span><span class="sxs-lookup"><span data-stu-id="fcb56-102">ISymUnmanagedWriter2::DefineConstant2 Method</span></span>
-<span data-ttu-id="fcb56-103">Определяет имя для значения константы.</span><span class="sxs-lookup"><span data-stu-id="fcb56-103">Defines a name for a constant value.</span></span>  
+# <a name="isymunmanagedwriter2defineconstant2-method"></a><span data-ttu-id="e6a2e-102">Метод ISymUnmanagedWriter2::DefineConstant2</span><span class="sxs-lookup"><span data-stu-id="e6a2e-102">ISymUnmanagedWriter2::DefineConstant2 Method</span></span>
+<span data-ttu-id="e6a2e-103">Defines a name for a constant value.</span><span class="sxs-lookup"><span data-stu-id="e6a2e-103">Defines a name for a constant value.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="fcb56-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="fcb56-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e6a2e-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="e6a2e-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT DefineConstant2(  
@@ -36,23 +34,23 @@ HRESULT DefineConstant2(
     [in] mdSignature  sigToken);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="fcb56-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="fcb56-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="e6a2e-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="e6a2e-105">Parameters</span></span>  
  `name`  
- <span data-ttu-id="fcb56-106">[in] Постоянное имя.</span><span class="sxs-lookup"><span data-stu-id="fcb56-106">[in] The constant name.</span></span>  
+ <span data-ttu-id="e6a2e-106">[in] The constant name.</span><span class="sxs-lookup"><span data-stu-id="e6a2e-106">[in] The constant name.</span></span>  
   
  `value`  
- <span data-ttu-id="fcb56-107">[in] Значение константы.</span><span class="sxs-lookup"><span data-stu-id="fcb56-107">[in] The value of the constant.</span></span>  
+ <span data-ttu-id="e6a2e-107">[in] The value of the constant.</span><span class="sxs-lookup"><span data-stu-id="e6a2e-107">[in] The value of the constant.</span></span>  
   
  `sigToken`  
- <span data-ttu-id="fcb56-108">[in] Токен метаданных константы.</span><span class="sxs-lookup"><span data-stu-id="fcb56-108">[in] The metadata token of the constant.</span></span>  
+ <span data-ttu-id="e6a2e-108">[in] The metadata token of the constant.</span><span class="sxs-lookup"><span data-stu-id="e6a2e-108">[in] The metadata token of the constant.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="fcb56-109">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="fcb56-109">Return Value</span></span>  
- <span data-ttu-id="fcb56-110">Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.</span><span class="sxs-lookup"><span data-stu-id="fcb56-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="e6a2e-109">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="e6a2e-109">Return Value</span></span>  
+ <span data-ttu-id="e6a2e-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="e6a2e-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="fcb56-111">Требования</span><span class="sxs-lookup"><span data-stu-id="fcb56-111">Requirements</span></span>  
- <span data-ttu-id="fcb56-112">**Заголовок.** CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="fcb56-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e6a2e-111">Требования</span><span class="sxs-lookup"><span data-stu-id="e6a2e-111">Requirements</span></span>  
+ <span data-ttu-id="e6a2e-112">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="e6a2e-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="fcb56-113">См. также</span><span class="sxs-lookup"><span data-stu-id="fcb56-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e6a2e-113">См. также</span><span class="sxs-lookup"><span data-stu-id="e6a2e-113">See also</span></span>
 
-- [<span data-ttu-id="fcb56-114">Интерфейс ISymUnmanagedWriter2</span><span class="sxs-lookup"><span data-stu-id="fcb56-114">ISymUnmanagedWriter2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter2-interface.md)
-- [<span data-ttu-id="fcb56-115">Метод DefineConstant</span><span class="sxs-lookup"><span data-stu-id="fcb56-115">DefineConstant Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-defineconstant-method.md)
+- [<span data-ttu-id="e6a2e-114">Интерфейс ISymUnmanagedWriter2</span><span class="sxs-lookup"><span data-stu-id="e6a2e-114">ISymUnmanagedWriter2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter2-interface.md)
+- [<span data-ttu-id="e6a2e-115">Метод DefineConstant</span><span class="sxs-lookup"><span data-stu-id="e6a2e-115">DefineConstant Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-defineconstant-method.md)

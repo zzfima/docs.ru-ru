@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: c5fee4a0-b132-4e5e-8730-e586ce314b9a
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e3868b07ff01f2d1fec79537dd478a2d005f490f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6d7884e896d6a0463639e7ef08b47dced10a27f4
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778772"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74431384"
 ---
-# <a name="imetadataimport2getgenericparamconstraintprops-method"></a><span data-ttu-id="f850c-102">Метод IMetaDataImport2::GetGenericParamConstraintProps</span><span class="sxs-lookup"><span data-stu-id="f850c-102">IMetaDataImport2::GetGenericParamConstraintProps Method</span></span>
-<span data-ttu-id="f850c-103">Получает метаданные, связанные с ограничением параметра универсального типа, представленного маркером указанное ограничение.</span><span class="sxs-lookup"><span data-stu-id="f850c-103">Gets the metadata associated with the generic parameter constraint represented by the specified constraint token.</span></span>  
+# <a name="imetadataimport2getgenericparamconstraintprops-method"></a><span data-ttu-id="9c983-102">Метод IMetaDataImport2::GetGenericParamConstraintProps</span><span class="sxs-lookup"><span data-stu-id="9c983-102">IMetaDataImport2::GetGenericParamConstraintProps Method</span></span>
+<span data-ttu-id="9c983-103">Gets the metadata associated with the generic parameter constraint represented by the specified constraint token.</span><span class="sxs-lookup"><span data-stu-id="9c983-103">Gets the metadata associated with the generic parameter constraint represented by the specified constraint token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f850c-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="f850c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9c983-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="9c983-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetGenericParamConstraintProps (  
@@ -37,26 +35,26 @@ HRESULT GetGenericParamConstraintProps (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="f850c-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="f850c-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="9c983-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="9c983-105">Parameters</span></span>  
  `gpc`  
- <span data-ttu-id="f850c-106">[in] Токен, ограничение универсального параметра, для которого необходимо вернуть метаданные.</span><span class="sxs-lookup"><span data-stu-id="f850c-106">[in] The token to the generic parameter constraint for which to return the metadata.</span></span>  
+ <span data-ttu-id="9c983-106">[in] The token to the generic parameter constraint for which to return the metadata.</span><span class="sxs-lookup"><span data-stu-id="9c983-106">[in] The token to the generic parameter constraint for which to return the metadata.</span></span>  
   
  `ptGenericParam`  
- <span data-ttu-id="f850c-107">[out] Указатель на токен, представляющий универсальный параметр, который ограничен.</span><span class="sxs-lookup"><span data-stu-id="f850c-107">[out] A pointer to the token that represents the generic parameter that is constrained.</span></span>  
+ <span data-ttu-id="9c983-107">[out] A pointer to the token that represents the generic parameter that is constrained.</span><span class="sxs-lookup"><span data-stu-id="9c983-107">[out] A pointer to the token that represents the generic parameter that is constrained.</span></span>  
   
  `ptkConstraintType`  
- <span data-ttu-id="f850c-108">[out] Указатель на токен TypeDef, TypeRef или TypeSpec, который представляет ограничение на `ptGenericParam`.</span><span class="sxs-lookup"><span data-stu-id="f850c-108">[out] A pointer to a TypeDef, TypeRef, or TypeSpec token that represents a constraint on `ptGenericParam`.</span></span>  
+ <span data-ttu-id="9c983-108">[out] A pointer to a TypeDef, TypeRef, or TypeSpec token that represents a constraint on `ptGenericParam`.</span><span class="sxs-lookup"><span data-stu-id="9c983-108">[out] A pointer to a TypeDef, TypeRef, or TypeSpec token that represents a constraint on `ptGenericParam`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f850c-109">Требования</span><span class="sxs-lookup"><span data-stu-id="f850c-109">Requirements</span></span>  
- <span data-ttu-id="f850c-110">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f850c-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9c983-109">Требования</span><span class="sxs-lookup"><span data-stu-id="9c983-109">Requirements</span></span>  
+ <span data-ttu-id="9c983-110">**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9c983-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f850c-111">**Заголовок.** Cor.h</span><span class="sxs-lookup"><span data-stu-id="f850c-111">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="9c983-111">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="9c983-111">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="f850c-112">**Библиотека:** Используется как ресурс в MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="f850c-112">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="9c983-112">**Library:** Used as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="9c983-112">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="f850c-113">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f850c-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="9c983-113">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9c983-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f850c-114">См. также</span><span class="sxs-lookup"><span data-stu-id="f850c-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9c983-114">См. также</span><span class="sxs-lookup"><span data-stu-id="9c983-114">See also</span></span>
 
-- [<span data-ttu-id="f850c-115">Интерфейс IMetaDataImport2</span><span class="sxs-lookup"><span data-stu-id="f850c-115">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
-- [<span data-ttu-id="f850c-116">Интерфейс IMetaDataImport</span><span class="sxs-lookup"><span data-stu-id="f850c-116">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="9c983-115">Интерфейс IMetaDataImport2</span><span class="sxs-lookup"><span data-stu-id="9c983-115">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="9c983-116">Интерфейс IMetaDataImport</span><span class="sxs-lookup"><span data-stu-id="9c983-116">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)

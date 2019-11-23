@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: dbea0644-3873-4329-90b8-624163e87467
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: fa6d563873045b4b5b427f06f0caa5420d31590b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 915b05d0d2ac611678fdcc94dd42bbb1962e6ceb
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777206"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74427896"
 ---
-# <a name="isymunmanagedwriteropenscope-method"></a><span data-ttu-id="ddee0-102">Метод ISymUnmanagedWriter::OpenScope</span><span class="sxs-lookup"><span data-stu-id="ddee0-102">ISymUnmanagedWriter::OpenScope Method</span></span>
-<span data-ttu-id="ddee0-103">Открывает новую лексическую область видимости в текущем методе.</span><span class="sxs-lookup"><span data-stu-id="ddee0-103">Opens a new lexical scope in the current method.</span></span> <span data-ttu-id="ddee0-104">Область становится новой текущей областью и помещается в стек области.</span><span class="sxs-lookup"><span data-stu-id="ddee0-104">The scope becomes the new current scope and is pushed onto a stack of scopes.</span></span> <span data-ttu-id="ddee0-105">Области должны образовывать иерархию.</span><span class="sxs-lookup"><span data-stu-id="ddee0-105">Scopes must form a hierarchy.</span></span> <span data-ttu-id="ddee0-106">Одноуровневые элементы, не разрешено перекрывать.</span><span class="sxs-lookup"><span data-stu-id="ddee0-106">Siblings are not allowed to overlap.</span></span>  
+# <a name="isymunmanagedwriteropenscope-method"></a><span data-ttu-id="73156-102">Метод ISymUnmanagedWriter::OpenScope</span><span class="sxs-lookup"><span data-stu-id="73156-102">ISymUnmanagedWriter::OpenScope Method</span></span>
+<span data-ttu-id="73156-103">Открывает новую лексическую область видимости в текущем методе.</span><span class="sxs-lookup"><span data-stu-id="73156-103">Opens a new lexical scope in the current method.</span></span> <span data-ttu-id="73156-104">The scope becomes the new current scope and is pushed onto a stack of scopes.</span><span class="sxs-lookup"><span data-stu-id="73156-104">The scope becomes the new current scope and is pushed onto a stack of scopes.</span></span> <span data-ttu-id="73156-105">Scopes must form a hierarchy.</span><span class="sxs-lookup"><span data-stu-id="73156-105">Scopes must form a hierarchy.</span></span> <span data-ttu-id="73156-106">Siblings are not allowed to overlap.</span><span class="sxs-lookup"><span data-stu-id="73156-106">Siblings are not allowed to overlap.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ddee0-107">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="ddee0-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="73156-107">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="73156-107">Syntax</span></span>  
   
 ```cpp  
 HRESULT OpenScope(  
@@ -35,22 +33,22 @@ HRESULT OpenScope(
     [out, retval] ULONG32* pRetVal);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="ddee0-108">Параметры</span><span class="sxs-lookup"><span data-stu-id="ddee0-108">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="73156-108">Параметры</span><span class="sxs-lookup"><span data-stu-id="73156-108">Parameters</span></span>  
  `startOffset`  
- <span data-ttu-id="ddee0-109">[in] Смещение первой инструкции в лексической области в байтах от начала метода.</span><span class="sxs-lookup"><span data-stu-id="ddee0-109">[in] The offset of the first instruction in the lexical scope, in bytes, from the beginning of the method.</span></span>  
+ <span data-ttu-id="73156-109">[in] The offset of the first instruction in the lexical scope, in bytes, from the beginning of the method.</span><span class="sxs-lookup"><span data-stu-id="73156-109">[in] The offset of the first instruction in the lexical scope, in bytes, from the beginning of the method.</span></span>  
   
  `pRetVal`  
- <span data-ttu-id="ddee0-110">[out] Указатель на `ULONG32` , получающий идентификатор области.</span><span class="sxs-lookup"><span data-stu-id="ddee0-110">[out] A pointer to a `ULONG32` that receives the scope identifier.</span></span>  
+ <span data-ttu-id="73156-110">[out] A pointer to a `ULONG32` that receives the scope identifier.</span><span class="sxs-lookup"><span data-stu-id="73156-110">[out] A pointer to a `ULONG32` that receives the scope identifier.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="ddee0-111">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="ddee0-111">Return Value</span></span>  
- <span data-ttu-id="ddee0-112">Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.</span><span class="sxs-lookup"><span data-stu-id="ddee0-112">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="73156-111">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="73156-111">Return Value</span></span>  
+ <span data-ttu-id="73156-112">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="73156-112">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="ddee0-113">Примечания</span><span class="sxs-lookup"><span data-stu-id="ddee0-113">Remarks</span></span>  
- <span data-ttu-id="ddee0-114">`ISymUnmanagedWriter::OpenScope` Возвращает непрозрачный идентификатор области, можно использовать с [ISymUnmanagedWriter::SetScopeRange](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-setscoperange-method.md) для определения области начального и конечного смещения в дальнейшем.</span><span class="sxs-lookup"><span data-stu-id="ddee0-114">`ISymUnmanagedWriter::OpenScope` returns an opaque scope identifier that can be used with [ISymUnmanagedWriter::SetScopeRange](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-setscoperange-method.md) to define a scope's starting and ending offset at a later time.</span></span> <span data-ttu-id="ddee0-115">В этом случае смещения, переданные методам `ISymUnmanagedWriter::OpenScope` и [ISymUnmanagedWriter::CloseScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-closescope-method.md) игнорируются.</span><span class="sxs-lookup"><span data-stu-id="ddee0-115">In this case, the offsets passed to `ISymUnmanagedWriter::OpenScope` and [ISymUnmanagedWriter::CloseScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-closescope-method.md) are ignored.</span></span> <span data-ttu-id="ddee0-116">Идентификаторы областей действительны только в текущем методе.</span><span class="sxs-lookup"><span data-stu-id="ddee0-116">Scope identifiers are valid only in the current method.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="73156-113">Заметки</span><span class="sxs-lookup"><span data-stu-id="73156-113">Remarks</span></span>  
+ <span data-ttu-id="73156-114">`ISymUnmanagedWriter::OpenScope` returns an opaque scope identifier that can be used with [ISymUnmanagedWriter::SetScopeRange](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-setscoperange-method.md) to define a scope's starting and ending offset at a later time.</span><span class="sxs-lookup"><span data-stu-id="73156-114">`ISymUnmanagedWriter::OpenScope` returns an opaque scope identifier that can be used with [ISymUnmanagedWriter::SetScopeRange](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-setscoperange-method.md) to define a scope's starting and ending offset at a later time.</span></span> <span data-ttu-id="73156-115">In this case, the offsets passed to `ISymUnmanagedWriter::OpenScope` and [ISymUnmanagedWriter::CloseScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-closescope-method.md) are ignored.</span><span class="sxs-lookup"><span data-stu-id="73156-115">In this case, the offsets passed to `ISymUnmanagedWriter::OpenScope` and [ISymUnmanagedWriter::CloseScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-closescope-method.md) are ignored.</span></span> <span data-ttu-id="73156-116">Scope identifiers are valid only in the current method.</span><span class="sxs-lookup"><span data-stu-id="73156-116">Scope identifiers are valid only in the current method.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ddee0-117">Требования</span><span class="sxs-lookup"><span data-stu-id="ddee0-117">Requirements</span></span>  
- <span data-ttu-id="ddee0-118">**Заголовок.** CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="ddee0-118">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="73156-117">Требования</span><span class="sxs-lookup"><span data-stu-id="73156-117">Requirements</span></span>  
+ <span data-ttu-id="73156-118">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="73156-118">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ddee0-119">См. также</span><span class="sxs-lookup"><span data-stu-id="ddee0-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="73156-119">См. также</span><span class="sxs-lookup"><span data-stu-id="73156-119">See also</span></span>
 
-- [<span data-ttu-id="ddee0-120">Интерфейс ISymUnmanagedWriter</span><span class="sxs-lookup"><span data-stu-id="ddee0-120">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+- [<span data-ttu-id="73156-120">Интерфейс ISymUnmanagedWriter</span><span class="sxs-lookup"><span data-stu-id="73156-120">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
