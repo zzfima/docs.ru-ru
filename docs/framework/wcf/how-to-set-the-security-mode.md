@@ -76,7 +76,7 @@ ms.locfileid: "72320898"
 
 ### <a name="to-set-the-mode-and-clientcredentialtype-property-in-configuration"></a>Задание режима и свойства ClientCredentialType в конфигурации
 
-1. Добавьте соответствующий элемент Binding в элемент [\<bindings >](../configure-apps/file-schema/wcf/bindings.md) файла конфигурации. В следующем примере добавляется элемент [\<wsHttpBinding >](../configure-apps/file-schema/wcf/wshttpbinding.md) .
+1. Добавьте соответствующий элемент привязки в [\<привязки >](../configure-apps/file-schema/wcf/bindings.md) элемента файла конфигурации. В следующем примере добавляется элемент [\<wsHttpBinding >](../configure-apps/file-schema/wcf/wshttpbinding.md) .
 
 2. Добавьте элемент `<binding>` и задайте для его атрибута `name` соответствующее значение.
 
@@ -116,7 +116,7 @@ ms.locfileid: "72320898"
 
 Дополнительные сведения см. [в разделе как использовать безопасность транспорта и учетные данные сообщений](./feature-details/how-to-use-transport-security-and-message-credentials.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Практическое руководство. Настройка порта с использованием SSL-сертификата](./feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)
 - [Практическое руководство. Использование средств обеспечения безопасности транспорта и учетных данных сообщения](./feature-details/how-to-use-transport-security-and-message-credentials.md)
@@ -124,6 +124,6 @@ ms.locfileid: "72320898"
 - [Безопасность сообщений](./feature-details/message-security-in-wcf.md)
 - [Общие сведения о безопасности](./feature-details/security-overview.md)
 - [Привязки, предоставляемые системой](system-provided-bindings.md)
-- [@no__t 1security >](../configure-apps/file-schema/wcf/security-of-wshttpbinding.md)
-- [@no__t 1security >](../configure-apps/file-schema/wcf/security-of-basichttpbinding.md)
-- [@no__t 1security >](../configure-apps/file-schema/wcf/security-of-nettcpbinding.md)
+- [\<> безопасности](../configure-apps/file-schema/wcf/security-of-wshttpbinding.md)
+- [\<> безопасности](../configure-apps/file-schema/wcf/security-of-basichttpbinding.md)
+- [\<> безопасности](../configure-apps/file-schema/wcf/security-of-nettcpbinding.md)

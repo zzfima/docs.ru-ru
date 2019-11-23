@@ -15,11 +15,11 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71699735"
 ---
-# <a name="mscorlib-element-for-cryptography-settings"></a>Элемент > @no__t 0mscorlib для параметров шифрования
-Содержит [элемент > @no__t 1cryptographySettings](cryptographysettings-element.md).  
+# <a name="mscorlib-element-for-cryptography-settings"></a>\<элемента > mscorlib для параметров шифрования
+Содержит [элемент\<криптографисеттингс >](cryptographysettings-element.md).  
   
 [ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1 **\<mscorlib >**  
+&nbsp;&nbsp; **\<mscorlib >**  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -29,10 +29,10 @@ ms.locfileid: "71699735"
 ```  
   
 ## <a name="attributes-and-elements"></a>Атрибуты и элементы  
- В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
+ Следующие разделы описывают атрибуты, дочерние элементы и родительские элементы.  
   
 ### <a name="attributes"></a>Атрибуты  
- Нет.  
+ Нет  
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
@@ -68,7 +68,7 @@ ms.locfileid: "71699735"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A>
 - <xref:System.Security.Cryptography>

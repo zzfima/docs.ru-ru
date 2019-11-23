@@ -29,7 +29,7 @@ ms.locfileid: "72291539"
   
  В этом случае команда HTTP-GET была специально обработана путем возврата пользовательского сообщения HTTP с тем, чтобы можно было открыть службу в браузере, чтобы удостовериться, что она правильно скомпилирована. Если действие протокола SOAP не совпадает, отправьте сообщение об ошибке, чтобы указать, что запрос не поддерживается.  
   
- Клиент этого образца является обычным клиентом WCF, который не предполагает никаких действий от службы. Таким образом, служба специально разработана для соответствия тем, что вы получаете из обычной реализации WCF @ no__t-0. В результате этого в клиенте требуется наличие только контракта службы.  
+ Клиент этого образца является обычным клиентом WCF, который не предполагает никаких действий от службы. Таким образом, служба специально разработана для соответствия тем, что вы получаете из обычной реализации WCF<xref:System.ServiceModel.ServiceHost>. В результате этого в клиенте требуется наличие только контракта службы.  
   
 ## <a name="using-the-sample"></a>Использование образца  
  При прямом запуске клиентского приложения формируется следующий результат.  
@@ -51,6 +51,6 @@ Server replied: You said: Howdy. Message id: 5
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Если этот каталог не существует, перейдите к [примерам Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Этот образец расположен в следующем каталоге.  
+> Если этот каталог не существует, перейдите к [примерам Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Samples. Этот образец расположен в следующем каталоге.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\CustomChannelDispatcher`

@@ -1,14 +1,13 @@
 ---
 title: Перенос служб дуплексной службы WCF в gRPC-gRPC для разработчиков WCF
 description: Узнайте, как перенести различные формы службы двусторонней передачи данных WCF в gRPC Streaming Services.
-author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 1702c9f7659f056af9009e81847f28c6e65b277c
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: e2248df20e5c2d8f96055d42ba684749251154bd
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "73841483"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73971871"
 ---
 # <a name="migrate-wcf-duplex-services-to-grpc"></a>Перенос дуплексных служб WCF в gRPC
 

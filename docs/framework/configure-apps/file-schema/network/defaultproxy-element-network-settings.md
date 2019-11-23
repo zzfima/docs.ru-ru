@@ -15,12 +15,12 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71698205"
 ---
-# <a name="defaultproxy-element-network-settings"></a>\<Элемент > defaultProxy (параметры сети)
+# <a name="defaultproxy-element-network-settings"></a>Элемент \<defaultProxy > (параметры сети)
 Настраивает прокси-сервер протокола передачи гипертекста (HTTP).  
   
 [ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **@no__t -4system. NET >** ](system-net-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 **\<defaultProxy >**  
+&nbsp;&nbsp;[ **\<System. NET >** ](system-net-element-network-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp; **\<defaultProxy >**  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -35,7 +35,7 @@ ms.locfileid: "71698205"
 ```  
   
 ## <a name="attributes-and-elements"></a>Атрибуты и элементы  
- В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
+ Следующие разделы описывают атрибуты, дочерние элементы и родительские элементы.  
   
 ### <a name="attributes"></a>Атрибуты  
   
@@ -61,7 +61,7 @@ ms.locfileid: "71698205"
 ## <a name="remarks"></a>Примечания  
  Если элемент defaultProxy пуст, будут использоваться параметры прокси-сервера из Internet Explorer. Это поведение отличается от поведения в .NET Framework версии 1.1.  
   
- Исключение возникает, если элемент [module](module-element-network-settings.md) задает тип, отличный от Public, тип не является производным от <xref:System.Net.IWebProxy> класса, возникло исключение из конструктора без параметров данного объекта или произошло исключение при получении заданный системой прокси-сервер по умолчанию. Свойство <xref:System.Exception.InnerException%2A> исключения должно иметь дополнительные сведения о первопричине ошибки.  
+ Исключение возникает, если элемент [module](module-element-network-settings.md) задает тип, отличный от Public, тип не является производным от класса <xref:System.Net.IWebProxy>, возникло исключение из конструктора без параметров данного объекта или произошло исключение при получении указанного системой прокси-сервера по умолчанию. Свойство <xref:System.Exception.InnerException%2A> исключения должно иметь дополнительные сведения о первопричине ошибки.  
   
 ## <a name="configuration-files"></a>Файлы конфигурации  
  Этот элемент может использоваться в файле конфигурации приложения или в файле конфигурации компьютера (Machine.config).  
@@ -86,7 +86,7 @@ ms.locfileid: "71698205"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - <xref:System.Net.WebProxy?displayProperty=nameWithType>
 - [Схема параметров сети](index.md)

@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Скрыть унаследованную переменную (Visual Basic)
+title: Практическое руководство. Сокрытие наследуемой переменной
 ms.date: 07/20/2015
 helpviewer_keywords:
 - qualification [Visual Basic], of element names
@@ -11,30 +11,30 @@ helpviewer_keywords:
 - declared elements [Visual Basic], about declared elements
 - variables [Visual Basic], hiding inherited
 ms.assetid: 765728d9-7351-4a30-999d-b5f34f024412
-ms.openlocfilehash: f575830df44076f694c1dfb2f68379594240fb80
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: c20c36b26c90c82da4e8836799f499498ccc40e4
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72004843"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345353"
 ---
-# <a name="how-to-hide-an-inherited-variable-visual-basic"></a>Практическое руководство. Скрыть унаследованную переменную (Visual Basic)
+# <a name="how-to-hide-an-inherited-variable-visual-basic"></a>Практическое руководство. Сокрытие наследуемой переменной (Visual Basic)
 
-Производный класс наследует все определения своего базового класса. Если необходимо определить переменную с тем же именем, что и у элемента базового класса, можно скрыть или *затенить*этот элемент базового класса при определении переменной в производном классе. В этом случае код в производном классе получает доступ к переменной, если только явно не обходит механизм теневого копирования.
+A derived class inherits all the definitions of its base class. If you want to define a variable using the same name as an element of the base class, you can hide, or *shadow*, that base class element when you define your variable in the derived class. If you do this, code in the derived class accesses your variable unless it explicitly bypasses the shadowing mechanism.
 
-Другой причиной, по которой может потребоваться скрыть унаследованную переменную, является защита от редакции базового класса. Базовый класс может повлиять на изменение, изменяющее элемент, который вы наследуете. В этом случае модификатор `Shadows` приводит к разрешении ссылок из производного класса в переменную, а не на элемент базового класса.
+Another reason you might want to hide an inherited variable is to protect against base class revision. The base class might undergo a change that alters the element you are inheriting. If this happens, the `Shadows` modifier forces references from the derived class to be resolved to your variable, instead of to the base class element.
 
-## <a name="to-hide-an-inherited-variable"></a>Скрытие унаследованной переменной
+## <a name="to-hide-an-inherited-variable"></a>To hide an inherited variable
 
-1. Убедитесь, что переменная, которую нужно скрыть, объявлена на уровне класса (вне любой процедуры). В противном случае скрыть ее не нужно.
+1. Be sure the variable you want to hide is declared at class level (outside any procedure). Otherwise, you do not need to hide it.
   
-2. Внутри производного класса напишите [оператор Dim](../../../language-reference/statements/dim-statement.md) , объявляющий переменную. Используйте то же имя, что и у унаследованной переменной.
+2. Inside your derived class, write a [Dim Statement](../../../language-reference/statements/dim-statement.md) declaring your variable. Use the same name as that of the inherited variable.
 
-3. Включите в объявление ключевое слово [Shadows](../../../language-reference/modifiers/shadows.md).
+3. Include the [Shadows](../../../language-reference/modifiers/shadows.md) keyword in the declaration.
 
-     Если код в производном классе ссылается на имя переменной, компилятор разрешает ссылку на переменную.
+     When code in the derived class refers to the variable name, the compiler resolves the reference to your variable.
 
-     В следующем примере показано затенение наследуемой переменной.
+     The following example illustrates shadowing of an inherited variable:
   
     ```vb  
     Public Class ShadowBaseClass  
@@ -50,19 +50,19 @@ ms.locfileid: "72004843"
     End Class  
     ```  
   
-     В предыдущем примере переменная `shadowString` в базовом классе объявляется и скрывается в производном классе. Процедура `ShowStrings` в производном классе отображает версию строки с тенью, если имя `shadowString` не является полным. Затем отображается затененная версия, если `shadowString` дополнено ключевым словом `MyBase`.  
+     The preceding example declares the variable `shadowString` in the base class and shadows it in the derived class. The procedure `ShowStrings` in the derived class displays the shadowing version of the string when the name `shadowString` is not qualified. It then displays the shadowed version when `shadowString` is qualified with the `MyBase` keyword.  
   
 ## <a name="robust-programming"></a>Отказоустойчивость
 
-При затенении введено более одной версии переменной с тем же именем. Если инструкция Code ссылается на имя переменной, версия, на которую компилятор разрешает ссылку, зависит от таких факторов, как расположение инструкции Code и наличие подходящих строк. Это может увеличить риск обращения к непреднамеренной версии затененной переменной. Можно снизить этот риск, полностью подполняя все ссылки на затененную переменную.
+Shadowing introduces more than one version of a variable with the same name. When a code statement refers to the variable name, the version to which the compiler resolves the reference depends on factors such as the location of the code statement and the presence of a qualifying string. This can increase the risk of referring to an unintended version of a shadowed variable. You can lower that risk by fully qualifying all references to a shadowed variable.
 
 ## <a name="see-also"></a>См. также
 
 - [Ссылки на объявленные элементы](references-to-declared-elements.md)
-- [Затенение в Visual Basic](shadowing.md)
+- [Shadowing in Visual Basic](shadowing.md)
 - [Различия между затемнением и переопределением](differences-between-shadowing-and-overriding.md)
-- [Практическое руководство. Скрыть переменную с тем же именем, что и у переменной @ no__t-0
-- [Практическое руководство. Доступ к переменной, скрытой производным классом @ no__t-0
+- [Практическое руководство. Сокрытие переменной с тем же именем, что и ваша переменная](how-to-hide-a-variable-with-the-same-name-as-your-variable.md)
+- [Практическое руководство. Доступ к переменной, скрытой производным классом](how-to-access-a-variable-hidden-by-a-derived-class.md)
 - [Переопределения](../../../../visual-basic/language-reference/modifiers/overrides.md)
 - [Me, My, MyBase и MyClass](../../program-structure/me-my-mybase-and-myclass.md)
 - [Основы наследования](../objects-and-classes/inheritance-basics.md)

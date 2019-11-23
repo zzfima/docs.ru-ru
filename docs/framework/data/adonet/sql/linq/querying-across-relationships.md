@@ -33,7 +33,7 @@ ms.locfileid: "72003331"
   
  Для поддержки этой иллюзии [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] реализует метод, называемый *отложенной загрузкой*. Дополнительные сведения см. в разделе [Отложенная и немедленная загрузка](deferred-versus-immediate-loading.md).  
   
- Рассмотрим следующий SQL-запрос для проецирования списка пар @no__t – 0 @ no__t-1 @ no__t-2:  
+ Рассмотрим следующий SQL-запрос для проецирования списка `CustomerID`-`OrderID` пар:  
   
 ```sql
 SELECT t0.CustomerID, t1.OrderID  
@@ -42,16 +42,16 @@ FROM   Customers AS t0 INNER JOIN
 WHERE  (t0.City = @p0)  
 ```  
   
- Чтобы получить такие же результаты с помощью [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], используйте ссылку на свойство `Orders`, уже существующую в классе `Customer`. Ссылка `Orders` предоставляет необходимые сведения для выполнения запроса и проецирования пар `CustomerID` @ no__t-2 @ no__t-3, как показано в следующем коде:  
+ Чтобы получить такие же результаты с помощью [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], используйте ссылку на свойство `Orders`, уже существующую в классе `Customer`. Ссылка на `Orders` предоставляет необходимые сведения для выполнения запроса и проецирования `CustomerID`-`OrderID` пар, как показано в следующем коде:  
   
  [!code-csharp[DLinqQueryConcepts#5](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryConcepts/cs/Program.cs#5)]
  [!code-vb[DLinqQueryConcepts#5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryConcepts/vb/Module1.vb#5)]  
   
- Также можно выполнить обратное. Это значит, что можно запросить `Orders` и использовать ссылку на связь `Customer` для получения сведений о связанном объекте `Customer`. Следующий код проецирует те же пары `CustomerID` @ no__t-1 @ no__t-2, что и раньше, но на этот раз путем запроса `Orders` вместо `Customers`.  
+ Также можно выполнить обратное. Это значит, что можно запросить `Orders` и использовать ссылку на связь `Customer` для получения сведений о связанном объекте `Customer`. Следующий код проецирует то же `CustomerID`-`OrderID`, как и раньше, но на этот раз путем запроса `Orders` вместо `Customers`.  
   
  [!code-csharp[DLinqQueryConcepts#6](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryConcepts/cs/Program.cs#6)]
  [!code-vb[DLinqQueryConcepts#6](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryConcepts/vb/Module1.vb#6)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Основные принципы запросов](query-concepts.md)

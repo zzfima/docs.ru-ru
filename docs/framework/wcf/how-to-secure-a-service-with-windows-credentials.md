@@ -53,7 +53,7 @@ ms.locfileid: "72320921"
 
 1. Вставьте код этой процедуры после кода предыдущей процедуры
 
-2. Создайте переменную <xref:System.Type> с именем `contractType` и присвойте ей тип интерфейса (`ICalculator`). При использовании Visual Basic используйте оператор `GetType`; При использовании C#используйте ключевое слово `typeof`.
+2. Создайте переменную <xref:System.Type> с именем `contractType` и присвойте ей тип интерфейса (`ICalculator`). При использовании Visual Basic используйте оператор `GetType`. При использовании C#используйте ключевое слово `typeof`.
 
 3. Создайте вторую переменную <xref:System.Type> с именем `serviceType` и присвойте ей тип реализованного контракта (`Calculator`).
 
@@ -78,7 +78,7 @@ ms.locfileid: "72320921"
 
 #### <a name="to-use-a-binding-in-a-client-with-code"></a>Использование привязки в клиенте с кодом
 
-1. Используйте средство SvcUtil.exe, чтобы создать код прокси из метаданных службы. Дополнительные сведения см. [в разделе инструкции. Создание клиента](how-to-create-a-wcf-client.md). Созданный код прокси-сервера наследует от класса <xref:System.ServiceModel.ClientBase%601>, который гарантирует, что каждый клиент имеет необходимые конструкторы, методы и свойства для взаимодействия со службой WCF. В данном примере созданный код включает класс `CalculatorClient`, который реализует интерфейс `ICalculator`, тем самым обеспечивая совместимость с кодом службы.
+1. Используйте средство SvcUtil.exe, чтобы создать код прокси из метаданных службы. Дополнительные сведения см. [в разделе инструкции. Создание клиента](how-to-create-a-wcf-client.md). Созданный код прокси-сервера наследуется от класса <xref:System.ServiceModel.ClientBase%601>, который гарантирует, что каждый клиент имеет необходимые конструкторы, методы и свойства для взаимодействия со службой WCF. В данном примере созданный код включает класс `CalculatorClient`, который реализует интерфейс `ICalculator`, тем самым обеспечивая совместимость с кодом службы.
 
 2. Код этой процедуры вставляется в начало метода `Main` программы клиента.
 
@@ -106,13 +106,13 @@ ms.locfileid: "72320921"
 
 #### <a name="to-enable-transfer-security-on-a-service-in-a-windows-domain-using-configuration"></a>Включение безопасности передачи в службе в домене Windows с использованием конфигурации
 
-1. Добавьте элемент [\<wsHttpBinding >](../configure-apps/file-schema/wcf/wshttpbinding.md) в раздел элемента [\<bindings >](../configure-apps/file-schema/wcf/bindings.md) файла конфигурации.
+1. Добавьте элемент [\<wsHttpBinding >](../configure-apps/file-schema/wcf/wshttpbinding.md) в раздел [\<привязки >](../configure-apps/file-schema/wcf/bindings.md) элемента файла конфигурации.
 
-2. Добавьте < `binding` > в элемент @no__t < >-1 и задайте для атрибута `configurationName` значение, соответствующее приложению.
+2. Добавьте элемент >`binding`< в элемент <`WSHttpBinding`> и задайте для атрибута `configurationName` значение, соответствующее приложению.
 
-3. Добавьте < `security` > и присвойте атрибуту `mode` значение Message.
+3. Добавьте элемент >`security`< и задайте для атрибута `mode` значение Message.
 
-4. Добавьте элемент > < `message` и задайте для атрибута `clientCredentialType` значение Windows.
+4. Добавьте элемент >`message`< и задайте для атрибута `clientCredentialType` значение Windows.
 
 5. В файле конфигурации службы замените раздел `<bindings>` с помощью следующего кода. Если у вас еще нет файла конфигурации службы, см. раздел [Использование привязок для настройки служб и клиентов](using-bindings-to-configure-services-and-clients.md).
 
@@ -136,7 +136,7 @@ ms.locfileid: "72320921"
 
 1. Используйте средство SvcUtil.exe, чтобы создать код прокси и файл конфигурации из метаданных службы. Дополнительные сведения см. [в разделе инструкции. Создание клиента](how-to-create-a-wcf-client.md).
 
-2. Замените раздел [\<bindings >](../configure-apps/file-schema/wcf/bindings.md) созданного файла конфигурации кодом конфигурации из предыдущего раздела.
+2. Замените [привязку\<>](../configure-apps/file-schema/wcf/bindings.md) раздел созданного файла конфигурации на код конфигурации из предыдущего раздела.
 
 3. Процедурный код вставлен в начало метода `Main` программы клиента.
 
@@ -155,7 +155,7 @@ ms.locfileid: "72320921"
 [!code-csharp[c_SecureWindowsClient#0](../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewindowsclient/cs/secureclient.cs#0)]
 [!code-vb[c_SecureWindowsClient#0](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewindowsclient/vb/secureclient.vb#0)]
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - <xref:System.ServiceModel.WSHttpBinding>
 - [Служебная программа для метаданных ServiceModel (Svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md)

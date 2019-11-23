@@ -23,7 +23,7 @@ ms.locfileid: "73118934"
 Схема разделов конфигурации содержит элементы, определяющие пользовательские параметры в файлах конфигурации. Общие сведения о файлах конфигурации и схемах см. [в разделе Схема файла конфигурации для .NET Framework](index.md).
 
 [ **\<configuration>** ](configuration-element.md)   
-[ **\<configSections**](configsections-element-for-configuration.md)   
+[ **>\<configSections**](configsections-element-for-configuration.md)   
 [ **\<очистить >** ](clear-element-for-configsections.md)   
 [ **\<удалить >** ](remove-element-for-configsections.md)   
 [ **> раздел\<** ](section-element.md)   
@@ -36,4 +36,4 @@ ms.locfileid: "73118934"
 | [ **\<configSections >** ](configsections-element-for-configuration.md) | Содержит раздел конфигурации и объявления пространств имен. |
 | [ **\<удалить >** для **\<configSections >** ](remove-element-for-configsections.md) | Удаляет предопределенный раздел или группу разделов. |
 | [ **\<разделе >** **\<configSections >** и **\<sectionGroup >** ](section-element.md) | Содержит объявление раздела конфигурации. |
-| [ **\<sectionGroup** для **\<configSections >** ](sectiongroup-element-for-configsections.md) | Определяет пространство имен для разделов конфигурации. |
+| [ **>\<sectionGroup** для **\<configSections >** ](sectiongroup-element-for-configsections.md) | Определяет пространство имен для разделов конфигурации. |

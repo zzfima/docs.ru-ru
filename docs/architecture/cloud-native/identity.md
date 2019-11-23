@@ -1,5 +1,5 @@
 ---
-title: идентификации
+title: Тождество
 description: Создание архитектуры облачных приложений .NET для Azure | Идентифицирует
 ms.date: 09/23/2019
 ms.openlocfilehash: 4cc7c04bf323d2589777df466321f6801f511b6f
@@ -9,7 +9,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 09/23/2019
 ms.locfileid: "73840349"
 ---
-# <a name="identity"></a>идентификации
+# <a name="identity"></a>Тождество
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 

@@ -1,5 +1,5 @@
 ---
-title: Предложение Skip (Visual Basic)
+title: Предложение Skip
 ms.date: 07/20/2015
 f1_keywords:
 - vb.QuerySkip
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Skip statement [Visual Basic]
 - Skip clause [Visual Basic]
 ms.assetid: f00eb172-3907-4c43-9745-d8546ab86234
-ms.openlocfilehash: e52de186e1475bfabd02821a0cd2384d8350eed3
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: c582b014bad4fa8fa3165d2b756f4bc955840cfc
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72004763"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349656"
 ---
 # <a name="skip-clause-visual-basic"></a>Предложение Skip (Visual Basic)
 Пропускает заданное число элементов в коллекции и возвращает остальные элементы.  
@@ -26,19 +26,19 @@ Skip count
   
 ## <a name="parts"></a>Части  
  `count`  
- Обязательный. Значение или выражение, результатом которого является число пропускаемых элементов последовательности.  
+ Обязательный. A value or an expression that evaluates to the number of elements of the sequence to skip.  
   
-## <a name="remarks"></a>Примечания  
- Предложение `Skip` заставляет запрос обходить элементы в начале списка результатов и возвращать оставшиеся элементы. Число пропускаемых элементов определяется параметром `count`.  
+## <a name="remarks"></a>Заметки  
+ The `Skip` clause causes a query to bypass elements at the beginning of a results list and return the remaining elements. The number of elements to skip is identified by the `count` parameter.  
   
- Предложение `Skip` можно использовать с предложением `Take` для возврата диапазона данных из любого сегмента запроса. Для этого передайте индекс первого элемента диапазона в предложение `Skip` и размер диапазона в предложение `Take`.  
+ You can use the `Skip` clause with the `Take` clause to return a range of data from any segment of a query. To do this, pass the index of the first element of the range to the `Skip` clause and the size of the range to the `Take` clause.  
   
- При использовании предложения `Skip` в запросе может также потребоваться убедиться, что результаты возвращены в порядке, который позволит использовать предложение `Skip` для обхода предполагаемых результатов. Дополнительные сведения о упорядочении результатов запроса см. в разделе [предложение ORDER BY](../../../visual-basic/language-reference/queries/order-by-clause.md).  
+ When you use the `Skip` clause in a query, you may also need to ensure that the results are returned in an order that will enable the `Skip` clause to bypass the intended results. For more information about ordering query results, see [Order By Clause](../../../visual-basic/language-reference/queries/order-by-clause.md).  
   
- Можно использовать предложение `SkipWhile`, чтобы указать, что в зависимости от указанного условия игнорируются только определенные элементы.  
+ You can use the `SkipWhile` clause to specify that only certain elements are ignored, depending on a supplied condition.  
   
 ## <a name="example"></a>Пример  
- В следующем примере кода используется предложение `Skip` вместе с предложением `Take` для возврата данных из запроса на страницах. Функция `GetCustomers` использует предложение `Skip` для обхода клиентов в списке до получения значения начального индекса и использует предложение @no__t 2 для возврата страницы клиентов, начиная с этого значения индекса.  
+ The following code example uses the `Skip` clause together with the `Take` clause to return data from a query in pages. The `GetCustomers` function uses the `Skip` clause to bypass the customers in the list until the supplied starting index value, and uses the `Take` clause to return a page of customers starting from that index value.  
   
  [!code-vb[VbSimpleQuerySamples#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#1)]  
   

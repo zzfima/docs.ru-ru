@@ -44,7 +44,7 @@ ms.locfileid: "72318697"
   
  Результатом проверки подлинности может стать безопасный сеанс, осуществляемый между взаимодействующими конечными точками. Сеанс определяется идентификатором GUID, который существует на протяжении всего времени существования сеанса безопасности. В следующей таблице указано, что и где хранится.  
   
-|Data|Хранилище|  
+|Данные|Хранилище|  
 |----------|-------------|  
 |Учетные данные представления, например имена пользователей, сертификаты X.509, маркеры Kerberos и ссылки на учетные данные.|Стандартные механизмы управления учетными данными в Windows, например хранилище сертификатов Windows.|  
 |Информация о членстве пользователя, например имена пользователей и пароли.|Поставщики членства ASP.NET.|  
@@ -127,13 +127,13 @@ ms.locfileid: "72318697"
   
  Удаляемые ключи:  
   
- \- для xmlns: WST = "http://schemas.xmlsoap.org/ws/2004/04/trust" и xmlns: WST = "http://schemas.xmlsoap.org/ws/2005/02/trust"  
+ \- Xmlns:wst ="http://schemas.xmlsoap.org/ws/2004/04/trust" и xmlns:wst ="http://schemas.xmlsoap.org/ws/2005/02/trust"  
   
  wst:BinarySecret  
   
  wst:Entropy  
   
- \- для xmlns: wsse = "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" и xmlns: wsse = "http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"  
+ \- Xmlns:wsse ="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" и xmlns:wsse ="http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"  
   
  wsse:Password  
   
@@ -141,7 +141,7 @@ ms.locfileid: "72318697"
   
  Удаляемые потенциально персональные данные:  
   
- \- для xmlns: wsse = "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" и xmlns: wsse = "http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"  
+ \- Xmlns:wsse ="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" и xmlns:wsse ="http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"  
   
  wsse:Username  
   
@@ -149,7 +149,7 @@ ms.locfileid: "72318697"
   
  \- для xmlns: SAML = "urn: Oasis: Names: TC: SAML: 1.0: assertion" элементы, выделенные жирным шрифтом (ниже), удаляются:  
   
- @no__t 0Assertion  
+ Утверждение \<  
   
  MajorVersion="1"  
   
@@ -165,39 +165,39 @@ ms.locfileid: "72318697"
   
  \<Conditions NotBefore = "[dateTime]" Нотонорафтер = "[dateTime]" >  
   
- @no__t 0AudienceRestrictionCondition >  
+ \<AudienceRestrictionCondition >  
   
- \<Audience > [URI] \</аудитория > +  
+ \<аудитория > [URI]\</Аудиенце > +  
   
- \</AudienceRestrictionCondition > *  
+ \</Аудиенцерестриктионкондитион > *  
   
  \<DoNotCacheCondition/> *  
   
- < @ no__t-1--абстрактный базовый тип  
+ <\!--абстрактный базовый тип  
   
- \<Condition/> *  
+ \<условие или > *  
   
  -->  
   
- > \</условия?  
+ \</Кондитионс >?  
   
- @no__t 0Advice >  
+ \<советы >  
   
- \<AssertionIDReference > [ID] \</Ассертионидреференце > *  
+ \<Ассертионидреференце > [ID]\</Ассертионидреференце > *  
   
- \<Assertion > [assertion] \</утверждение > *  
+ Утверждение \<> [утверждение]\</Ассертион > *  
   
  [any]*  
   
- \</Совет >?  
+ \</Адвице >?  
   
- < @ no__t-1--абстрактные базовые типы  
+ <\!--абстрактные базовые типы  
   
- \<Statement/> *  
+ \<ная инструкция/> *  
   
- @no__t 0SubjectStatement >  
+ \<Субжектстатемент >  
   
- @no__t 0Subject >  
+ \<> субъекта  
   
  `<NameIdentifier`  
   
@@ -211,23 +211,23 @@ ms.locfileid: "72318697"
   
  `</NameIdentifier>?`  
   
- @no__t 0SubjectConfirmation >  
+ \<SubjectConfirmation >  
   
- \<ConfirmationMethod > [anyUri] \</ConfirmationMethod > +  
+ \<ConfirmationMethod > [anyUri]\</Конфирматионмесод > +  
   
- \<SubjectConfirmationData > [Any] \</SubjectConfirmationData >?  
+ \<SubjectConfirmationData > [Any]\</Субжектконфирматиондата >?  
   
- \<ds: KeyInfo >... \</DS: KeyInfo >?  
+ \<DS: KeyInfo >...\</ДС: KeyInfo >?  
   
- \</SubjectConfirmation >?  
+ \</Субжектконфирматион >?  
   
- \</тема >  
+ \</Субжект >  
   
  \</Субжектстатемент > *  
   
  -->  
   
- @no__t 0AuthenticationStatement  
+ \<AuthenticationStatement  
   
  AuthenticationMethod="[uri]"  
   
@@ -255,13 +255,13 @@ ms.locfileid: "72318697"
   
  />*  
   
- \</AuthenticationStatement > *  
+ \</Аусентикатионстатемент > *  
   
- @no__t 0AttributeStatement >  
+ \<AttributeStatement >  
   
  [Subject]  
   
- @no__t 0Attribute  
+ Атрибут \<  
   
  AttributeName="[string]"  
   
@@ -271,11 +271,11 @@ ms.locfileid: "72318697"
   
  `<AttributeValue>[any]</AttributeValue>+`  
   
- \</атрибут > +  
+ \</аттрибуте > +  
   
- \</AttributeStatement > *  
+ \</Аттрибутестатемент > *  
   
- @no__t 0AuthorizationDecisionStatement  
+ \<AuthorizationDecisionStatement  
   
  Resource="[uri]"  
   
@@ -285,26 +285,26 @@ ms.locfileid: "72318697"
   
  [Subject]  
   
- \<Action Namespace = "[URI]" > [строка] \</Action > +  
+ \<Action Namespace = "[URI]" > [строка]\</Action > +  
   
- @no__t 0Evidence >  
+ \<> свидетельства  
   
- \<AssertionIDReference > [ID] \</Ассертионидреференце > +  
+ \<Ассертионидреференце > [ID]\</Ассертионидреференце > +  
   
- \<Assertion > [assertion] \</утверждение > +  
+ Утверждение \<> [assertion]\</Ассертион > +  
   
- \</> свидетельства?  
+ \</Евиденце >?  
   
- \</AuthorizationDecisionStatement > *  
+ \</АусоризатиондеЦисионстатемент > *  
   
- \</утверждение >  
+ \</Ассертион >  
   
 #### <a name="information-removed-from-message-bodies-when-logging-decryptedunencrypted-messages"></a>Информация, удаленная из тел сообщений при внесении в журнал зашифрованных/незашифрованных сообщений  
  Как было сказано выше, WCF удаляет ключи и известные потенциально персональные данные из заголовков сообщений для зарегистрированных расшифрованных и незашифрованных сообщений. Кроме того, WCF удаляет ключи и известные потенциально персональные данные из тела сообщений для элементов текста и действий в следующем списке, описывающих сообщения безопасности, связанные с обменом ключами.  
   
  Для следующих пространств имен:  
   
- xmlns: WST = "http://schemas.xmlsoap.org/ws/2004/04/trust" и xmlns: WST = "http://schemas.xmlsoap.org/ws/2005/02/trust" (например, если действие не доступно)  
+ xmlns:WST ="http://schemas.xmlsoap.org/ws/2004/04/trust" и xmlns:wst =» http://schemas.xmlsoap.org/ws/2005/02/trust" (например, если нет действия)  
   
  Информация удаляется для элементов тел, участвующих в обмене ключами:  
   
@@ -401,7 +401,7 @@ ms.locfileid: "72318697"
   
  Язык описания веб-служб (WSDL) содержит определение порта. У каждого порта имеется адрес конечной точки и привязка, представляющая службы, используемые приложением. Предоставление WSDL можно отключить в конфигурации. Информация на компьютере не сохраняется.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Windows Communication Foundation](index.md)
-- [Security](./feature-details/security.md)
+- [безопасность](./feature-details/security.md)

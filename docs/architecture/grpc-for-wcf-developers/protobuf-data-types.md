@@ -1,14 +1,13 @@
 ---
 title: Protobuf скалярные типы данных — gRPC для разработчиков WCF
 description: Сведения об основных и хорошо известных типах данных, поддерживаемых protobuf и gRPC в .NET Core.
-author: markrendle
 ms.date: 09/09/2019
-ms.openlocfilehash: cae9cc483ffb791a9b53e6a2d9d7c0924d725a67
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: ae7f5f48099000dff0eefb36e23cb9b9f2ac517c
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "73841459"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73971554"
 ---
 # <a name="protobuf-scalar-data-types"></a>Скалярные типы данных Protobuf
 
@@ -41,7 +40,7 @@ Protobuf поддерживает ряд собственных скалярны
 
 ## <a name="other-net-primitive-types"></a>Другие типы-примитивы .NET
 
-### <a name="dates-and-times"></a>Даты и время
+### <a name="dates-and-times"></a>Значения даты и времени
 
 Собственные скалярные типы не предоставляют значения даты и времени, эквиваленты C#<xref:System.DateTimeOffset>, <xref:System.DateTime>и <xref:System.TimeSpan>. Эти типы можно указать с помощью некоторых расширений Google "хорошо известных типов", которые обеспечивают создание кода и поддержку среды выполнения для более сложных типов полей на поддерживаемых платформах. В следующей таблице показаны типы даты и времени.
 
@@ -120,7 +119,7 @@ Protobuf будет использовать простое `T?` (наприме
 
 Хорошо известные типы `Timestamp` и `Duration` представлены в .NET как классы, поэтому нет необходимости в версии, допускающей значение null, но при преобразовании в `DateTimeOffset` или `TimeSpan`важно проверять наличие значения NULL в свойствах этих типов.
 
-## <a name="decimals"></a>десятичные числа
+## <a name="decimals"></a>Десятичные числа
 
 Protobuf изначально не поддерживает тип .NET `decimal`, просто `double` и `float`. В проекте protobuf есть текущее обсуждение о возможности добавления стандартного типа `Decimal` к хорошо известным типам с поддержкой платформы для языков и платформ, поддерживающих эту возможность, но пока ничего не реализовано.
 

@@ -40,7 +40,7 @@ HRESULT DynamicMethodJITCompilationFinished(
 [in] `fIsSafeToBlock`   
 `true`, чтобы указать, что блокировка может привести к ожиданию средой выполнения вызывающего потока от этого обратного вызова. `false`, чтобы указать, что блокировка не повлияет на работу среды выполнения.  
 
-## <a name="remarks"></a>Заметки  
+## <a name="remarks"></a>Примечания  
 
 Этот обратный вызов активируется каждый раз, когда JIT-компиляция динамического метода завершается. Сюда входят различные суррогаты IL и методы LCG. Его цель — предоставить средствам записи профилировщика достаточно информации для распознавания скомпилированного метода для пользователей.
 
@@ -56,7 +56,7 @@ HRESULT DynamicMethodJITCompilationFinished(
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Метод DynamicMethodJITCompilationStarted](icorprofilercallback8-dynamicmethodjitcompilationstarted-method.md)
 - [Интерфейс ICorProfilerCallback8](icorprofilercallback8-interface.md)

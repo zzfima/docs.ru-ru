@@ -1,14 +1,13 @@
 ---
 title: Перенос службы WCF "запрос — ответ" в gRPC — gRPC для разработчиков WCF
 description: Узнайте, как перенести простую службу "запрос — ответ" из WCF в gRPC.
-author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 12e042e8e7e3683cc4da1fedce2482e7199b04a7
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: f0b20e7b374438f90d83aebc6035a4e4dd94ae18
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "73841507"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73971785"
 ---
 # <a name="migrate-a-wcf-request-reply-service-to-a-grpc-unary-rpc"></a>Перенос службы WCF "запрос — ответ" в gRPC унарный RPC
 

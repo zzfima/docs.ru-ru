@@ -11,17 +11,17 @@ ms.locfileid: "72275859"
 ---
 # <a name="task-3-create-the-toolbox-and-propertygrid-panes"></a>Задача 3. Создание области элементов и сетки свойств
 
-В этой задаче вы создадите панели **элементов** и **PropertyGrid** и добавите их в переразмещенную [!INCLUDE[wfd1](../../../includes/wfd1-md.md)].
+В этой задаче предстоит создать панели **элементов** и **PropertyGrid** и добавить их в переразмещенную [!INCLUDE[wfd1](../../../includes/wfd1-md.md)].
 
 Для справки код, который должен находиться в файле MainWindow.xaml.cs после выполнения трех задач в процессе повторного [размещения Конструктор рабочих процессов](rehosting-the-workflow-designer.md) ряд разделов, приведен в конце этого раздела.
 
 ## <a name="to-create-the-toolbox-and-add-it-to-the-grid"></a>Создание области элементов и ее добавление к сетке.
 
-1. Откройте полученный проект Хостингаппликатион, выполнив процедуру, описанную в разделе [Task 2. Разместите конструктор рабочих процессов @ no__t-0.
+1. Откройте полученный проект Хостингаппликатион, выполнив процедуру, описанную в разделе [Задача 2. размещение конструктор рабочих процессов](task-2-host-the-workflow-designer.md).
 
 2. В области **Обозреватель решений** щелкните правой кнопкой мыши файл *MainWindow. XAML* и выберите **Просмотреть код**.
 
-3. Добавьте метод `GetToolboxControl` в класс `MainWindow`, который создает <xref:System.Activities.Presentation.Toolbox.ToolboxControl>, добавляет новую категорию **панели элементов** на **панель элементов**и назначает этой категории типы действий <xref:System.Activities.Statements.Assign> и <xref:System.Activities.Statements.Sequence>.
+3. Добавьте `GetToolboxControl` метод в класс `MainWindow`, который создает <xref:System.Activities.Presentation.Toolbox.ToolboxControl>, добавит новую категорию **панели элементов** в **панель элементов**и присвоит этой категории типы действий <xref:System.Activities.Statements.Assign> и <xref:System.Activities.Statements.Sequence>.
 
     ```csharp
     private ToolboxControl GetToolboxControl()
@@ -74,7 +74,7 @@ ms.locfileid: "72275859"
     }
     ```
 
-6. Нажмите клавишу <kbd>F5</kbd> , чтобы создать и запустить решение. Должна отобразиться **панель элементов** , содержащая действия <xref:System.Activities.Statements.Assign> и <xref:System.Activities.Statements.Sequence>.
+6. Нажмите клавишу <kbd>F5</kbd> , чтобы создать и запустить решение. Необходимо отобразить **панель элементов** , содержащую действия <xref:System.Activities.Statements.Assign> и <xref:System.Activities.Statements.Sequence>.
 
 ## <a name="to-create-the-propertygrid"></a>Создание области PropertyGrid
 
@@ -104,7 +104,7 @@ ms.locfileid: "72275859"
     }
     ```
 
-4. Нажмите клавишу <kbd>F5</kbd> , чтобы создать и запустить решение. Все панели **элементов**, конструктор рабочего процесса и области **PropertyGrid** должны отображаться, а при перетаскивании действия <xref:System.Activities.Statements.Assign> или <xref:System.Activities.Statements.Sequence> на холст конструктора сетка свойств должна обновляться в зависимости от выделенного действия.
+4. Нажмите клавишу <kbd>F5</kbd> , чтобы создать и запустить решение. Все области **элементов**, конструктор рабочих процессов и панели **PropertyGrid** должны отображаться, а при перетаскивании <xref:System.Activities.Statements.Assign> действия или <xref:System.Activities.Statements.Sequence> на холст конструктора сетка свойств должна обновляться в зависимости от выделенного действия.
 
 ## <a name="example"></a>Пример
 
@@ -214,8 +214,8 @@ namespace HostingApplication
 }
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Отдельное размещение конструктора рабочих процессов](rehosting-the-workflow-designer.md)
-- @no__t 0Task 1: Создание нового Windows Presentation Foundation приложения @ no__t-0
-- @no__t 0Task 2: Размещение конструктор рабочих процессов @ no__t-0
+- [Задача 1. Создание приложения Windows Presentation Foundation](task-1-create-a-new-wpf-app.md)
+- [Задача 2. Размещение конструктора рабочих процессов](task-2-host-the-workflow-designer.md)

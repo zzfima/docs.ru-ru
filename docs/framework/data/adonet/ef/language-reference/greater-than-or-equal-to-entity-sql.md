@@ -22,18 +22,18 @@ expression >= expression
  `expression`  
  Любое допустимое выражение. Оба выражения должны иметь типы данных, допускающих неявное преобразование.  
   
-## <a name="result-types"></a>Типы результата  
+## <a name="result-types"></a>Типы результатов  
  Значение`true` , если левое выражение больше или равно правому. В противном случае - значение `false`.  
   
 ## <a name="example"></a>Пример  
  Следующий запрос Entity SQL использует оператор сравнения >= для сравнения двух выражений и определяет, имеет ли левое выражение значение, большее или равное значению правого выражения. Запрос основан на модели AdventureWorks Sales. Для компиляции и запуска этого запроса выполните следующие шаги.  
   
-1. Выполните процедуру, описанную в разделе [How: Выполните запрос, возвращающий Структуралтипе Results @ no__t-0.  
+1. Выполните процедуру из статьи [How to: Execute a Query that Returns StructuralType Results](../how-to-execute-a-query-that-returns-structuraltype-results.md).  
   
 2. Передайте следующий запрос в качестве аргумента методу `ExecuteStructuralTypeQuery` :  
   
  [!code-sql[DP EntityServices Concepts#GREATER_OR_EQUALS](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#greater_or_equals)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Справочник по Entity SQL](entity-sql-reference.md)

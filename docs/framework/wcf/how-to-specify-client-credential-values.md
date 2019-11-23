@@ -22,9 +22,9 @@ ms.locfileid: "72319859"
 
 2. Откройте XML-файл конфигурации. Если используется программа Svcutil.exe, то по умолчанию файл имеет имя Output.config.
 
-3. Найдите элемент **\<security >** с атрибутом **mode** ( **@no__t — 4security mode =** `MessageOrTransport` **>** , где `MessageOrTransport` устанавливается в один из режимов безопасности.
+3. Найдите элемент **> безопасности\<** с атрибутом **mode** ( **\<режим безопасности =** `MessageOrTransport` **>** , где `MessageOrTransport` установлен в один из режимов безопасности.
 
-4. Найдите дочерний элемент, соответствующий значению режима. Например, если для режима задано значение **Message**, найдите элемент **\<message >** , содержащийся в элементе **> \<security** .
+4. Найдите дочерний элемент, соответствующий значению режима. Например, если для режима задано значение **Message**, найдите элемент **> сообщение\<** , содержащийся в элементе **\<> безопасности** .
 
 5. Запишите значение, присвоенное атрибуту **ClientCredentialType** . Фактическое значение зависит от используемого режима - транспорт или сообщение.
 
@@ -58,11 +58,11 @@ ms.locfileid: "72319859"
 
 ### <a name="to-specify-the-client-credential-value-on-the-client-in-configuration"></a>Указание значения учетных данных клиента в конфигурации клиента
 
-1. Добавьте элемент [\<behavior >](../configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) в элемент [> \<behaviors](../configure-apps/file-schema/wcf/behaviors.md) .
+1. Добавьте элемент [\<behavior >](../configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) в элемент [\<Behaviors >](../configure-apps/file-schema/wcf/behaviors.md) .
 
-2. Добавьте элемент [\<clientCredentials >](../configure-apps/file-schema/wcf/clientcredentials.md) в элемент [> \<behaviors](../configure-apps/file-schema/wcf/behaviors.md) . Необходимо присвоить обязательному атрибуту `name` соответствующее значение.
+2. Добавьте элемент [\<clientCredentials >](../configure-apps/file-schema/wcf/clientcredentials.md) в элемент [\<поведения >](../configure-apps/file-schema/wcf/behaviors.md) . Необходимо присвоить обязательному атрибуту `name` соответствующее значение.
 
-3. Добавьте элемент [\<clientCertificate >](../configure-apps/file-schema/wcf/clientcertificate-of-servicecredentials.md) в элемент [> \<clientCredentials](../configure-apps/file-schema/wcf/clientcredentials.md) .
+3. Добавьте элемент [\<clientCertificate >](../configure-apps/file-schema/wcf/clientcertificate-of-servicecredentials.md) в элемент [\<ClientCredentials >](../configure-apps/file-schema/wcf/clientcredentials.md) .
 
 4. Присвойте соответствующие значения следующим атрибутам: `storeLocation`, `storeName`, `x509FindType` и `findValue`, как показано в следующем коде. Дополнительные сведения см. в разделе [Работа с сертификатами](./feature-details/working-with-certificates.md).
 
@@ -81,7 +81,7 @@ ms.locfileid: "72319859"
     </behaviors>
     ```
 
-5. При настройке клиента укажите поведение, задав атрибут `behaviorConfiguration` элемента `<endpoint>`, как показано в следующем коде. Элемент конечной точки является дочерним по отношению к элементу [\<client >](../configure-apps/file-schema/wcf/client.md) . Также укажите имя конфигурации привязки, установив привязку для клиента в атрибуте `bindingConfiguration`. Если используется созданный файл конфигурации, имя привязки создается автоматически. В данном примере это имя `"tcpBindingWithCredential"`.
+5. При настройке клиента укажите поведение, задав атрибут `behaviorConfiguration` элемента `<endpoint>`, как показано в следующем коде. Элемент конечной точки является дочерним по отношению к элементу [\<клиентского >](../configure-apps/file-schema/wcf/client.md) . Также укажите имя конфигурации привязки, установив привязку для клиента в атрибуте `bindingConfiguration`. Если используется созданный файл конфигурации, имя привязки создается автоматически. В данном примере это имя `"tcpBindingWithCredential"`.
 
     ```xml
     <client>
@@ -93,7 +93,7 @@ ms.locfileid: "72319859"
     </client>
     ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - <xref:System.ServiceModel.NetTcpBinding>
 - <xref:System.ServiceModel.Security.X509CertificateRecipientServiceCredential.SetCertificate%2A>
@@ -106,9 +106,9 @@ ms.locfileid: "72319859"
 - [Работа с сертификатами](./feature-details/working-with-certificates.md)
 - [Практическое руководство. Создание клиента](how-to-create-a-wcf-client.md)
 - [\<netTcpBinding>](../configure-apps/file-schema/wcf/nettcpbinding.md)
-- [@no__t 1security >](../configure-apps/file-schema/wcf/security-of-nettcpbinding.md)
-- [@no__t 1message >](../configure-apps/file-schema/wcf/message-element-of-nettcpbinding.md)
-- [@no__t 1behavior >](../configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)
-- [@no__t 1behaviors >](../configure-apps/file-schema/wcf/behaviors.md)
-- [@no__t 1clientCertificate >](../configure-apps/file-schema/wcf/clientcertificate-of-servicecredentials.md)
-- [@no__t 1clientCredentials >](../configure-apps/file-schema/wcf/clientcredentials.md)
+- [\<> безопасности](../configure-apps/file-schema/wcf/security-of-nettcpbinding.md)
+- [сообщение \<>](../configure-apps/file-schema/wcf/message-element-of-nettcpbinding.md)
+- [\<поведение >](../configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)
+- [\<поведений >](../configure-apps/file-schema/wcf/behaviors.md)
+- [\<clientCertificate >](../configure-apps/file-schema/wcf/clientcertificate-of-servicecredentials.md)
+- [\<clientCredentials >](../configure-apps/file-schema/wcf/clientcredentials.md)

@@ -38,14 +38,14 @@ ms.locfileid: "72320954"
   
     2. Асинхронной операцией `BeginSampleMethod`.  
   
-    3. Асинхронная пара операций `BeginServiceAsyncMethod` @ no__t-1 @ no__t-2.  
+    3. Асинхронная `BeginServiceAsyncMethod`/`EndServiceAsyncMethod`ная пара операций.  
   
 2. Реализацией службы с использованием объекта <xref:System.IAsyncResult?displayProperty=nameWithType>.  
   
  [!code-csharp[C_SyncAsyncClient#1](../../../samples/snippets/csharp/VS_Snippets_CFX/c_syncasyncclient/cs/services.cs#1)]
  [!code-vb[C_SyncAsyncClient#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_syncasyncclient/vb/services.vb#1)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Разработка контрактов службы](designing-service-contracts.md)
 - [Синхронные и асинхронные операции](synchronous-and-asynchronous-operations.md)

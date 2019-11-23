@@ -23,17 +23,17 @@ navigate(instance-expression, [relationship-type], [to-end [, from-end] ])
 
 `instance-expression` экземпляр сущности.
 
-`relationship-type` имя типа связи, из файла языка определения концептуальной схемы (CSDL). @No__t-0 уточняется как имя типа \<namespace >. \<relationship >.
+`relationship-type` имя типа связи, из CSDL-файла. `relationship-type` определяется как \<пространства имен >. > имя типа отношения\<.
 
 `to` конец связи.
 
-`from` Начало связи.
+`from` начала связи.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
 Если количество элементов в конечной составляющей связи равно 1, то будет возвращено значение `Ref<T>`. Если же количество элементов в конечной составляющей связи равно n, то будет возвращено значение `Collection<Ref<T>>`.
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Примечания
 
 Связи — это конструкции первого класса в EDM (EDM). Связи могут устанавливаться между двумя или несколькими типами сущностей, а пользователи могут переходить по связи от одного элемента (от одной сущности) к другому. `from` и `to` являются необязательными при том условии, что нет неоднозначности в разрешении имен в пределах связи.
 
@@ -43,14 +43,14 @@ navigate(instance-expression, [relationship-type], [to-end [, from-end] ])
 
 navigate(`instance-expression`, `relationship-type`, [ `to-end` [, `from-end` ] ] )
 
-Пример:
+Например:
 
 ```sql
 Select o.Id, navigate(o, OrderCustomer, Customer, Order)
 From LOB.Orders as o
 ```
 
-Здесь OrderCustomer является значением параметра `relationship`, а Customer и Order являются элементами связи `to-end` (customer) и `from-end` (order). Если Ордеркустомер является отношением n:1, то тип результата выражения Navigate — ref @ no__t-0Customer >.
+Здесь OrderCustomer является значением параметра `relationship`, а Customer и Order являются элементами связи `to-end` (customer) и `from-end` (order). Если Ордеркустомер является отношением n:1, то тип результата выражения Navigate — ref\<> клиента.
 
 Для этого выражение существует следующая упрощенная форма.
 
@@ -59,7 +59,7 @@ Select o.Id, navigate(o, OrderCustomer)
 From LOB.Orders as o
 ```
 
-Аналогичным образом, в запросе следующей формы выражение Navigate выдает коллекцию < ref @ no__t-0Order > >.
+Аналогичным образом, в запросе следующей формы выражение Navigate будет создавать коллекцию <\<порядок ссылки > >.
 
 ```sql
 Select c.Id, navigate(c, OrderCustomer, Order, Customer)
@@ -78,7 +78,7 @@ From LOB.Customers as c
 
  [!code-sql[DP EntityServices Concepts#NAVIGATE](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#navigate)]
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Справочник по Entity SQL](entity-sql-reference.md)
 - [Руководство. Переход по связям с помощью оператора Navigate](navigate-entity-sql.md)

@@ -15,11 +15,11 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71699094"
 ---
-# <a name="systemweb-element-web-settings"></a>Элемент @no__t -0system. Web > (веб-параметры)
+# <a name="systemweb-element-web-settings"></a>Элемент \<System. Web > (веб-параметры)
 Содержит сведения о том, как уровень размещения ASP.NET управляет поведением всего процесса.  
   
 [ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1 **@no__t -3system. web >**  
+&nbsp;&nbsp; **\<System. web >**  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -30,11 +30,11 @@ ms.locfileid: "71699094"
   
 ## <a name="attributes-and-elements"></a>Атрибуты и элементы  
 
-В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
+Следующие разделы описывают атрибуты, дочерние элементы и родительские элементы.  
   
 ### <a name="attributes"></a>Атрибуты  
 
-Нет.  
+Нет  
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
@@ -76,6 +76,6 @@ ms.locfileid: "71699094"
 |Файл проверки||  
 |Может быть пустым||  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Элемент \<applicationPool> (веб-параметры)](applicationpool-element-web-settings.md)

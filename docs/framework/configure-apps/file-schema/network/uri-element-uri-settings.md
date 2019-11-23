@@ -9,11 +9,11 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71697442"
 ---
-# <a name="uri-element-uri-settings"></a>Элемент > @no__t 0uri (Параметры URI)
+# <a name="uri-element-uri-settings"></a>Элемент > \<URI (Параметры URI)
 Содержит параметры, определяющие, как .NET Framework обрабатывает веб-адреса, выраженные с помощью универсальных идентификаторов ресурсов (URI).  
   
 [ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1 **\<uri >**  
+&nbsp;&nbsp; **\<uri >**  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -23,17 +23,17 @@ ms.locfileid: "71697442"
 ```  
   
 ## <a name="attributes-and-elements"></a>Атрибуты и элементы  
- В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
+ Следующие разделы описывают атрибуты, дочерние элементы и родительские элементы.  
   
 ### <a name="attributes"></a>Атрибуты  
- Нет.  
+ Нет  
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
 |**Элемент**|**Описание**|  
 |-----------------|---------------------|  
 |[IDN](idn-element-uri-settings.md)|Определяет, применяется ли к доменным именам анализ международных доменных имен (IDN).|  
-|[Элемент iriParsing](iriparsing-element-uri-settings.md)|Указывает, применяется ли синтаксический анализ международного идентификатора ресурса (IRI) к <xref:System.Uri>, и должны применяться правила синтаксического анализа IRI.|  
+|[Элемент iriParsing](iriparsing-element-uri-settings.md)|Указывает, применяется ли синтаксический анализ международного идентификатора ресурса (IRI) к <xref:System.Uri> и должны применяться правила синтаксического анализа IRI.|  
 |[schemeSettings](schemesettings-element-uri-settings.md)|Определяет, как <xref:System.Uri> анализируется для определенных схем.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
@@ -65,6 +65,6 @@ ms.locfileid: "71697442"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Схема параметров сети](index.md)

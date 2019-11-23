@@ -17,12 +17,12 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71699181"
 ---
-# <a name="trace-element"></a>Элемент > @no__t 0trace
+# <a name="trace-element"></a>Элемент > трассировки \<
 Содержит прослушиватели, которые собирают, хранят и маршрутизируют сообщения трассировки.  
   
 [ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **\<system. Diagnostics >** ](system-diagnostics-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 **\<trace >**  
+&nbsp;&nbsp;[ **\<System. Diagnostics >** ](system-diagnostics-element.md)  
+&nbsp;&nbsp;&nbsp;&nbsp; **\<трассировки >**  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -33,7 +33,7 @@ ms.locfileid: "71699181"
 ```  
   
 ## <a name="attributes-and-elements"></a>Атрибуты и элементы  
- В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
+ Следующие разделы описывают атрибуты, дочерние элементы и родительские элементы.  
   
 ### <a name="attributes"></a>Атрибуты  
   
@@ -71,7 +71,7 @@ ms.locfileid: "71699181"
 |`system.diagnostics`|Задает прослушиватели трассировки, собирающие, хранящие и маршрутизирующие сообщения, а также уровень, на котором установлен ключ трассировки.|  
   
 ## <a name="example"></a>Пример  
- В следующем примере показано, как использовать элемент `<trace>` для добавления прослушивателя `MyListener` в коллекцию `Listeners`. `MyListener` создает файл с именем `MyListener.log` и записывает выходные данные в файл. Атрибут `useGlobalLock` имеет значение `false`, что приводит к тому, что глобальная блокировка не будет использоваться, если прослушиватель трассировки является потокобезопасным. Атрибут `autoflush` имеет значение `true`, что приводит к тому, что прослушиватель трассировки будет записывать данные в файл независимо от того, вызывается ли метод <xref:System.Diagnostics.Trace.Flush%2A?displayProperty=nameWithType>. Атрибут `indentsize` имеет значение 0 (ноль), что приводит к тому, что при вызове метода <xref:System.Diagnostics.Trace.Indent%2A?displayProperty=nameWithType> прослушиватель помещает отступы в ноль пробелов.  
+ В следующем примере показано, как использовать элемент `<trace>` для добавления `MyListener` прослушивателя в коллекцию `Listeners`. `MyListener` создает файл с именем `MyListener.log` и записывает выходные данные в файл. Атрибут `useGlobalLock` имеет значение `false`, что приводит к тому, что глобальная блокировка не будет использоваться, если прослушиватель трассировки является потокобезопасным. Атрибут `autoflush` имеет значение `true`, что приводит к тому, что прослушиватель трассировки будет записывать данные в файл независимо от того, вызван ли метод <xref:System.Diagnostics.Trace.Flush%2A?displayProperty=nameWithType>. Атрибуту `indentsize` присваивается значение 0 (ноль), что приводит к тому, что при вызове метода <xref:System.Diagnostics.Trace.Indent%2A?displayProperty=nameWithType> прослушиватель устанавливает отступы в ноль пробелов.  
   
 ```xml  
 <configuration>  
@@ -85,7 +85,7 @@ ms.locfileid: "71699181"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - <xref:System.Diagnostics.TraceListener>
 - <xref:System.Diagnostics.DefaultTraceListener>

@@ -1,21 +1,21 @@
 ---
-title: Оператор IsNot (Visual Basic)
+title: Оператор IsNot
 ms.date: 07/20/2015
 f1_keywords:
 - vb.isnot
 helpviewer_keywords:
 - IsNot operator [Visual Basic]
 ms.assetid: 8dd2bcdb-0166-48a2-9094-60dfb448f36c
-ms.openlocfilehash: 32e8f9532244679d2994b0e3d98279d75f7e77b4
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 616506f64d20e1f150b443433f1b69040136a5ba
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71701036"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74336063"
 ---
 # <a name="isnot-operator-visual-basic"></a>Оператор IsNot (Visual Basic)
 
-Сравнивает две переменные ссылки на объект.
+Compares two object reference variables.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -26,19 +26,19 @@ result = object1 IsNot object2
 ## <a name="parts"></a>Части
  `result` Обязательный. Значение `Boolean`.
 
- `object1` Обязательный. Любая переменная или выражение `Object`.
+ `object1` Обязательный. Any `Object` variable or expression.
 
- `object2` Обязательный. Любая переменная или выражение `Object`.
+ `object2` Обязательный. Any `Object` variable or expression.
 
-## <a name="remarks"></a>Примечания
- Оператор `IsNot` определяет, ссылаются ли две объектные ссылки на разные объекты. Однако сравнение значений не выполняется. Если `object1` и `object2` ссылаются на один и тот же экземпляр объекта, `result` — `False`; в противном случае `result` — `True`.
+## <a name="remarks"></a>Заметки
+ The `IsNot` operator determines if two object references refer to different objects. However, it does not perform value comparisons. If `object1` and `object2` both refer to the exact same object instance, `result` is `False`; if they do not, `result` is `True`.
 
- `IsNot` является противоположностью оператора `Is`. Преимущество `IsNot` состоит в том, что вы можете избежать неудобного синтаксиса с `Not` и `Is`, что может быть трудно читать.
+ `IsNot` is the opposite of the `Is` operator. The advantage of `IsNot` is that you can avoid awkward syntax with `Not` and `Is`, which can be difficult to read.
 
- Для тестирования объектов с ранней и поздней привязкой можно использовать операторы `Is` и `IsNot`.
+ You can use the `Is` and `IsNot` operators to test both early-bound and late-bound objects.
 
 ## <a name="example"></a>Пример
- В следующем примере кода используются как оператор `Is`, так и оператор `IsNot` для выполнения одинакового сравнения.
+ The following code example uses both the `Is` operator and the `IsNot` operator to accomplish the same comparison.
 
  [!code-vb[VbVbalrOperators#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#29)]
 
@@ -47,4 +47,4 @@ result = object1 IsNot object2
 - [Оператор Is](is-operator.md)
 - [Оператор TypeOf](typeof-operator.md)
 - [Порядок применения операторов в Visual Basic](operator-precedence.md)
-- [Практическое руководство. Проверка того, что два объекта одинаковы, @ no__t-0
+- [Практическое руководство. Проверка совпадения двух объектов](../../programming-guide/language-features/operators-and-expressions/how-to-test-whether-two-objects-are-the-same.md)

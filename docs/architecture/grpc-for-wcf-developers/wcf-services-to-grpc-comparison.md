@@ -1,14 +1,13 @@
 ---
 title: Сравнение WCF с gRPC-gRPC для разработчиков WCF
 description: Сравнение платформ WCF и gRPC для создания распределенных приложений.
-author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 5ab1380d4ded52abff08c35c430adf2f3ed7c58b
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: 312492dcce4bdef61feff0bf924c6df287b9c676
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "73841297"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966950"
 ---
 # <a name="comparing-wcf-to-grpc"></a>Сравнение WCF и gRPC
 
@@ -17,7 +16,7 @@ ms.locfileid: "73841297"
 - Операции и методы
 - Привязки и транспорты
 - Типы RPC
-- Metadata
+- Метаданные
 - Обработка ошибок
 - Протоколы WS-\*
 

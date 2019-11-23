@@ -25,7 +25,7 @@ ms.locfileid: "72004594"
   
  В этом обзоре определяется понятие команд в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], классы, входящие в модель команд, и способы использования и создания команд в приложениях.  
   
- В этом разделе содержатся следующие подразделы.  
+ В этом разделе содержатся следующие подразделы:  
   
 - [Что представляют собой команды?](#commands_at_10000_feet)  
   
@@ -90,7 +90,7 @@ ms.locfileid: "72004594"
   
 - <xref:System.Windows.Input.ICommandSource.Command%2A> — это команда, которая будет выполняться при вызове источника команды.  
   
-- <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> — это объект, для которого выполняется команда.  Следует отметить, что в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] свойство <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> для <xref:System.Windows.Input.ICommandSource> применимо, только когда <xref:System.Windows.Input.ICommand> — <xref:System.Windows.Input.RoutedCommand>.  Если для <xref:System.Windows.Input.ICommandSource> задано значение <xref:System.Windows.Input.ICommandSource.CommandTarget%2A>, и соответствующая команда — не <xref:System.Windows.Input.RoutedCommand>, целевой объект команды не учитывается. Если <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> не задан, в качестве целевого объекта будет использоваться элемент с фокусом клавиатуры.  
+- <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> — это объект, для которого выполняется команда.  Следует отметить, что в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] свойство <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> для <xref:System.Windows.Input.ICommandSource> применимо, только когда <xref:System.Windows.Input.ICommand> — <xref:System.Windows.Input.RoutedCommand>.  Если для <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> задано значение <xref:System.Windows.Input.ICommandSource>, и соответствующая команда — не <xref:System.Windows.Input.RoutedCommand>, целевой объект команды не учитывается. Если <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> не задан, в качестве целевого объекта будет использоваться элемент с фокусом клавиатуры.  
   
 - <xref:System.Windows.Input.ICommandSource.CommandParameter%2A> — это определяемый пользователем тип данных, который используется для передачи данных обработчикам, реализующим команду.  
   
@@ -152,7 +152,7 @@ ms.locfileid: "72004594"
   
 <a name="Commane_Target"></a>   
 ### <a name="command-target"></a>Цель команды  
- Целью команды является элемент, для которого выполняется команда.  По отношению к <xref:System.Windows.Input.RoutedCommand> целевой объект команды — это элемент, с которого начинается перенаправление <xref:System.Windows.Input.CommandManager.Executed> и <xref:System.Windows.Input.CommandManager.CanExecute>.  Как было отмечено ранее, в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] свойство <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> для <xref:System.Windows.Input.ICommandSource> применимо, только когда <xref:System.Windows.Input.ICommand> — <xref:System.Windows.Input.RoutedCommand>.  Если для <xref:System.Windows.Input.ICommandSource> задано значение <xref:System.Windows.Input.ICommandSource.CommandTarget%2A>, и соответствующая команда — не <xref:System.Windows.Input.RoutedCommand>, целевой объект команды не учитывается.  
+ Целью команды является элемент, для которого выполняется команда.  По отношению к <xref:System.Windows.Input.RoutedCommand> целевой объект команды — это элемент, с которого начинается перенаправление <xref:System.Windows.Input.CommandManager.Executed> и <xref:System.Windows.Input.CommandManager.CanExecute>.  Как было отмечено ранее, в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] свойство <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> для <xref:System.Windows.Input.ICommandSource> применимо, только когда <xref:System.Windows.Input.ICommand> — <xref:System.Windows.Input.RoutedCommand>.  Если для <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> задано значение <xref:System.Windows.Input.ICommandSource>, и соответствующая команда — не <xref:System.Windows.Input.RoutedCommand>, целевой объект команды не учитывается.  
   
  Источник команды может явно задавать целевой объект команды.  Если цель команды не определена, в качестве целевого объекта будет использоваться элемент с фокусом клавиатуры.  Одно из преимуществ использования элемента с фокусом клавиатуры в качестве цели команды является то, что это позволяет разработчику приложения использовать один источник команды для вызова команд для нескольких целей без необходимости отслеживания целевого объекта команды.  Например, если <xref:System.Windows.Controls.MenuItem> вызывает команду **Вставить** в приложении, которое имеет элемент управления <xref:System.Windows.Controls.TextBox> и элемент управления <xref:System.Windows.Controls.PasswordBox>, целевым объектом может быть <xref:System.Windows.Controls.TextBox> или <xref:System.Windows.Controls.PasswordBox> в зависимости от того, какой элемент управления имеет фокус клавиатуры.  
   
@@ -183,7 +183,7 @@ ms.locfileid: "72004594"
   
  Пример создания настраиваемой команды <xref:System.Windows.Input.RoutedCommand> см. в разделе [Create a Custom RoutedCommand Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Input%20and%20Commands/CustomRoutedCommand) (Создание примера настраиваемой команды RoutedCommand).  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - <xref:System.Windows.Input.RoutedCommand>
 - <xref:System.Windows.Input.CommandBinding>
@@ -192,5 +192,5 @@ ms.locfileid: "72004594"
 - [Общие сведения о входных данных](input-overview.md)
 - [Общие сведения о перенаправленных событиях](routed-events-overview.md)
 - [Реализация ICommandSource](how-to-implement-icommandsource.md)
-- [Практическое руководство. Добавление команды в MenuItem @ no__t-0
+- [Практическое руководство. Добавление команды в объект MenuItem](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms741839(v=vs.90))
 - [Создание примера настраиваемой команды RoutedCommand](https://github.com/Microsoft/WPF-Samples/tree/master/Input%20and%20Commands/CustomRoutedCommand)

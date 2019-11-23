@@ -9,7 +9,7 @@ helpviewer_keywords:
 ms.assetid: 31555704-58a3-49f1-9a0a-6421f605664f
 ms.openlocfilehash: 728f097b3c084e5292cb2d2bf5a0c1d20bdad922
 ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 10/07/2019
 ms.locfileid: "72004583"
@@ -18,7 +18,7 @@ ms.locfileid: "72004583"
 Переменная [типа данных Object](../../../../visual-basic/language-reference/data-types/object-data-type.md) может ссылаться на данные любого типа. Значение, сохраняемое в переменной `Object`, хранится в любом месте в памяти, а сама переменная содержит указатель на данные.  
   
 ## <a name="object-classifier-functions"></a>Функции-классификаторы объектов  
- Visual Basic предоставляет функции, возвращающие сведения о том, на что ссылается переменная `Object`, как показано в следующей таблице.  
+ Visual Basic предоставляет функции, возвращающие сведения о том, на что ссылается `Object`ая переменная, как показано в следующей таблице.  
   
 |Функция|Возвращает значение true, если объектная переменная ссылается на|  
 |--------------|---------------------------------------------------|  
@@ -33,9 +33,9 @@ ms.locfileid: "72004583"
  Эти функции можно использовать, чтобы избежать отправки недопустимого значения в операцию или процедуру.  
   
 ## <a name="typeof-operator"></a>Оператор TypeOf  
- [Оператор typeof](../../../../visual-basic/language-reference/operators/typeof-operator.md) также можно использовать для определения того, относится ли переменная объекта к конкретному типу данных. Выражение `TypeOf`... `Is` принимает значение `True`, если тип времени выполнения операнда является производным от или реализует указанный тип.  
+ [Оператор typeof](../../../../visual-basic/language-reference/operators/typeof-operator.md) также можно использовать для определения того, относится ли переменная объекта к конкретному типу данных. Выражение `TypeOf`...`Is` принимает значение `True`, если тип операнда во время выполнения является производным от или реализует указанный тип.  
   
- В следующем примере `TypeOf` используется для переменных объекта, ссылающихся на значения и ссылочные типы.  
+ В следующем примере используется `TypeOf` для переменных объекта, ссылающихся на значения и ссылочные типы.  
   
 ```vb  
 ' The following statement puts a value type (Integer) in an Object variable.  
@@ -61,18 +61,18 @@ If TypeOf frm Is Object Then Debug.WriteLine("frm is Object")
   
  `frm is Object`  
   
- Объектная переменная `num` ссылается на данные типа `Integer`, а `frm` — на объект класса <xref:System.Windows.Forms.Form>.  
+ Объектная переменная `num` ссылается на данные типа `Integer`, а `frm` ссылается на объект класса <xref:System.Windows.Forms.Form>.  
   
 ## <a name="object-arrays"></a>Массивы объектов  
- Можно объявить и использовать массив переменных типа `Object`. Это полезно, когда необходимо управлять множеством типов данных и классов объектов. Все элементы в массиве должны иметь один и тот же объявленный тип данных. Объявление этого типа данных как `Object` позволяет хранить объекты и экземпляры классов вместе с другими типами данных в массиве.  
+ Можно объявить и использовать массив переменных `Object`. Это полезно, когда необходимо управлять множеством типов данных и классов объектов. Все элементы в массиве должны иметь один и тот же объявленный тип данных. Объявление этого типа данных как `Object` позволяет хранить объекты и экземпляры классов вместе с другими типами данных в массиве.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Объектные переменные](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
 - [Объявление объектной переменной](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)
 - [Присваивание объектных переменных](../../../../visual-basic/programming-guide/language-features/variables/object-variable-assignment.md)
-- [Практическое руководство. Ссылка на текущий экземпляр объекта @ no__t-0
-- [Практическое руководство. Определение типа, на который ссылается объектная переменная, в значение @ no__t-0
-- [Практическое руководство. Определить, связаны ли два объекта, @ no__t-0
-- [Практическое руководство. Определить, идентичны ли два объекта @ no__t-0
+- [Практическое руководство. Ссылка на текущий экземпляр объекта](../../../../visual-basic/programming-guide/language-features/variables/how-to-refer-to-the-current-instance-of-an-object.md)
+- [Практическое руководство. Определение типа, на который указывает объектная переменная](../../../../visual-basic/programming-guide/language-features/variables/how-to-determine-what-type-an-object-variable-refers-to.md)
+- [Практическое руководство. Определение наличия связи между двумя объектами](../../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-related.md)
+- [Практическое руководство. Определение идентичности двух объектов](../../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-identical.md)
 - [Типы данных](../../../../visual-basic/programming-guide/language-features/data-types/index.md)

@@ -9,13 +9,13 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71698164"
 ---
-# <a name="idn-element-uri-settings"></a>Элемент > @no__t 0idn (Параметры URI)
+# <a name="idn-element-uri-settings"></a>Элемент > \<IDN (Параметры URI)
 
 Указывает, применяется ли синтаксический анализ международного доменного имени (IDN) к доменному имени.
   
 [ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **\<uri >** ](uri-element-uri-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 **\<idn >**  
+&nbsp;&nbsp;[ **\<URI >** ](uri-element-uri-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp; **\<idn >**  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -26,7 +26,7 @@ ms.locfileid: "71698164"
 ```  
   
 ## <a name="attributes-and-elements"></a>Атрибуты и элементы  
- В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
+ Следующие разделы описывают атрибуты, дочерние элементы и родительские элементы.  
   
 ### <a name="attributes"></a>Атрибуты  
 
@@ -36,7 +36,7 @@ ms.locfileid: "71698164"
 
 ### <a name="child-elements"></a>Дочерние элементы
 
-None
+Нет
   
 ### <a name="parent-elements"></a>Родительские элементы
 
@@ -91,7 +91,7 @@ None
 </configuration>
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - <xref:System.Configuration.IdnElement?displayProperty=nameWithType>
 - <xref:System.Configuration.UriSection?displayProperty=nameWithType>

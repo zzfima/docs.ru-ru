@@ -16,13 +16,13 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71697487"
 ---
-# <a name="requiredruntime-element"></a>Элемент > @no__t 0requiredRuntime
+# <a name="requiredruntime-element"></a>\<requiredRuntime > элемент
 
-Указывает, что приложение поддерживает только версию 1.0 среды CLR. Этот элемент является устаревшим и больше не должен использоваться. Вместо него следует использовать элемент [`supportedRuntime`](supportedruntime-element.md) .
+Указывает, что приложение поддерживает только версию 1.0 среды CLR. Этот элемент является устаревшим и больше не должен использоваться. Вместо этого следует использовать элемент [`supportedRuntime`](supportedruntime-element.md) .
 
 [ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **\<startup >** ](startup-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 **\<requiredRuntime >**  
+&nbsp;&nbsp;[ **\<запуска >** ](startup-element.md)  
+&nbsp;&nbsp;&nbsp;&nbsp; **\<requiredRuntime >**  
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -34,7 +34,7 @@ safemode="true|false"/>
 
 ## <a name="attributes-and-elements"></a>Элементы и атрибуты
 
-В следующих разделах описаны атрибуты, дочерние и родительские элементы.
+Следующие разделы описывают атрибуты, дочерние элементы и родительские элементы.
 
 ### <a name="attributes"></a>Атрибуты
 
@@ -52,14 +52,14 @@ safemode="true|false"/>
 
 ### <a name="child-elements"></a>Дочерние элементы
 
-Нет.
+Нет
 
 ### <a name="parent-elements"></a>Родительские элементы
 
 |Элемент|Описание|
 |-------------|-----------------|
 |`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.|
-|`startup`|`<requiredRuntime>` Содержит элемент.|
+|`startup`|Содержит элемент `<requiredRuntime>`.|
 
 ## <a name="remarks"></a>Примечания
  Приложения, созданные для поддержки только версии 1,0 среды выполнения, должны использовать элемент `<requiredRuntime>`. Приложения, созданные с помощью версии 1,1 или более поздней версии среды выполнения, должны использовать элемент `<supportedRuntime>`.
@@ -84,8 +84,8 @@ safemode="true|false"/>
 </configuration>
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Схема параметров запуска](index.md)
 - [Схема файла конфигурации](../index.md)
-- [Практическое руководство. Настройка приложения для включения поддержки .NET Framework версии 4 и выше](../../../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)
+- [Как настроить приложение для поддержки .NET Framework 4 или более поздних версий](../../../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)

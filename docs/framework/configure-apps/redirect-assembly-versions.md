@@ -69,7 +69,7 @@ ms.locfileid: "72319737"
 
 <a name="bypass_PP"></a>
 ### <a name="bypassing-publisher-policy"></a>Обход политики издателя
- При необходимости вы можете переопределить политику издателя в файле конфигурации приложения. Например, новые версии сборок, которые объявлены как поддерживающие обратную совместимость, могут все-таки нарушать работу приложения. Если вы хотите обойти политику издателя, добавьте элемент [\<publisherPolicy >](./file-schema/runtime/publisherpolicy-element.md) в элемент [\<dependentAssembly >](./file-schema/runtime/dependentassembly-element.md) в файле конфигурации приложения и установите для атрибута **Apply** значение **No**, переопределяющее все предыдущие параметры **Yes** .
+ При необходимости вы можете переопределить политику издателя в файле конфигурации приложения. Например, новые версии сборок, которые объявлены как поддерживающие обратную совместимость, могут все-таки нарушать работу приложения. Если вы хотите обойти политику издателя, добавьте элемент [\<publisherpolicy apply >](./file-schema/runtime/publisherpolicy-element.md) в элемент [\<dependentAssembly >](./file-schema/runtime/dependentassembly-element.md) в файле конфигурации приложения и присвойте атрибуту **Apply** значение **No**, что переопределит все предыдущие параметры **Yes** .
 
  `<publisherPolicy apply="no" />`
 
@@ -119,7 +119,7 @@ ms.locfileid: "72319737"
 ```
 
 ### <a name="limiting-assembly--bindings-to-a-specific-version"></a>Ограничения привязок сборок определенной версией
- Вы можете использовать атрибут **appliesTo** в элементе [\<assemblyBinding >](./file-schema/runtime/assemblybinding-element-for-runtime.md) в файле конфигурации приложения, чтобы перенаправить ссылки привязки сборок на определенную версию .NET Framework. Этот необязательный атрибут содержит номер версии .NET Framework, к которой применяется перенаправление. Если атрибут **appliesTo** не указан, элемент [\<assemblyBinding>](./file-schema/runtime/assemblybinding-element-for-runtime.md) применяется ко всем версиям платформы .NET Framework.
+ Атрибут **appliesTo** можно использовать в элементе [\<assemblyBinding >](./file-schema/runtime/assemblybinding-element-for-runtime.md) в файле конфигурации приложения, чтобы перенаправить ссылки привязки сборок на определенную версию .NET Framework. Этот необязательный атрибут содержит номер версии .NET Framework, к которой применяется перенаправление. Если атрибут **appliesTo** не указан, элемент [\<assemblyBinding>](./file-schema/runtime/assemblybinding-element-for-runtime.md) применяется ко всем версиям платформы .NET Framework.
 
  Например, чтобы перенаправить привязку сборки для .NET Framework версии 3.5, следует включить в файл конфигурации приложения приведенный ниже код XML.
 
@@ -152,10 +152,10 @@ ms.locfileid: "72319737"
 </assemblyBinding>
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Практическое руководство. Включение и отключение автоматического перенаправления привязки](how-to-enable-and-disable-automatic-binding-redirection.md)
-- [Элемент > @no__t 1bindingRedirect](./file-schema/runtime/bindingredirect-element.md)
+- [\<элемента > bindingRedirect](./file-schema/runtime/bindingredirect-element.md)
 - [Разрешение безопасности перенаправления привязки сборок](assembly-binding-redirection-security-permission.md)
 - [Сборки в .NET](../../standard/assembly/index.md)
 - [Программирование с использованием сборок](../../standard/assembly/program.md)

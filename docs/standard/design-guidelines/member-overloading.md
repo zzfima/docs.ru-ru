@@ -53,11 +53,11 @@ public static class Console {
   
  Аргументы по умолчанию несовместимы с CLS.  
   
- *Фрагменты: © Корпорация Майкрософт (Microsoft Corporation), 2005, 2009. Все права защищены.*  
+ *Части © 2005, 2009 Корпорация Майкрософт. Все права защищены.*  
   
- *Reprinted по разрешениям Пирсона для образовательных учреждений, Inc. из руководства по проектированию [Framework: Соглашения, идиомы и закономерности для многократно используемых библиотек .NET, 2-го выпуска @ no__t – 0 на Крзисзтоф Квалина и Михаил Abrams), опубликован 22 октября 2008 by Addison-Wesley Professional в рамках серии разработки Microsoft Windows.*  
+ *Перепечатано с разрешения Pearson Education, Inc. из книги [Инфраструктура программных проектов. Соглашения, идиомы и шаблоны для многократно используемых библиотек .NET (2-е издание)](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619), авторы: Кржиштоф Цвалина (Krzysztof Cwalina) и Брэд Абрамс (Brad Abrams). Книга опубликована 22 октября 2008 г. издательством Addison-Wesley Professional в рамках серии, посвященной разработке для Microsoft Windows.*  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Правила разработки членов](../../../docs/standard/design-guidelines/member.md)
 - [Рекомендации по проектированию на основе Framework](../../../docs/standard/design-guidelines/index.md)

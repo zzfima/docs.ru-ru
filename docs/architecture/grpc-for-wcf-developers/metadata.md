@@ -1,16 +1,15 @@
 ---
 title: Метаданные — gRPC для разработчиков WCF
 description: Использование метаданных в gRPC для передачи дополнительного контекста между клиентами и серверами
-author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 32559b3404b12f366fc1624299d04cff9faad9d6
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: 723d877bfbf0c2b0785949ff15939aedbac4d4e9
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "73841585"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73971976"
 ---
-# <a name="metadata"></a>Metadata
+# <a name="metadata"></a>Метаданные
 
 "Метаданные" относятся к дополнительным данным, которые могут быть полезны при обработке запросов и ответов, но не являются частью фактических данных приложения. Метаданные могут включать маркеры проверки подлинности, идентификаторы запросов и теги для целей мониторинга, а также сведения о данных, например число записей в наборе данных.
 

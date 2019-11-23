@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Вызов процедуры оператора (Visual Basic)
+title: Практическое руководство. Вызов процедуры оператора
 ms.date: 07/20/2015
 helpviewer_keywords:
 - operator procedures [Visual Basic], calling
@@ -11,47 +11,47 @@ helpviewer_keywords:
 - overloaded operators [Visual Basic], calling
 - operator overloading
 ms.assetid: 0dce42cc-f0b0-4c14-9f62-018b21f33497
-ms.openlocfilehash: d68781aa12ab7c1c717031ca252c5f3120649edc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a685be7cc3b346b271413e2c29faae5a839313f4
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61863939"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74340246"
 ---
 # <a name="how-to-call-an-operator-procedure-visual-basic"></a>Практическое руководство. Вызов процедуры оператора (Visual Basic)
-Вызов процедуры оператора, используя символ оператора в выражении. При наличии оператора преобразования следует вызвать [функция CType](../../../../visual-basic/language-reference/functions/ctype-function.md) для преобразования значения из одного типа в другой.  
+You call an operator procedure by using the operator symbol in an expression. In the case of a conversion operator, you call the [CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md) to convert a value from one data type to another.  
   
- Процедуры операторов не вызывается явно. Просто используйте оператор, или `CType` функции, в операторе присваивания или выражение, так же, вы обычно используется оператор. Visual Basic выполняет вызов процедуры оператора.  
+ You do not call operator procedures explicitly. You just use the operator, or the `CType` function, in an assignment statement or an expression, the same way you ordinarily use an operator. Visual Basic makes the call to the operator procedure.  
   
- Определение оператора в классе или структуре также называется *перегрузка* оператора.  
+ Defining an operator on a class or structure is also called *overloading* the operator.  
   
-### <a name="to-call-an-operator-procedure"></a>Вызов процедуры оператора  
+### <a name="to-call-an-operator-procedure"></a>To call an operator procedure  
   
-1. Используйте символ оператора в выражении обычным образом.  
+1. Use the operator symbol in an expression in the ordinary way.  
   
-2. Убедитесь, что типы данных операндов подходят для оператора и в правильном порядке.  
+2. Be sure the data types of the operands are appropriate for the operator, and in the correct order.  
   
-3. Оператор относится к значению выражения должным образом.  
+3. The operator contributes to the value of the expression as expected.  
   
-### <a name="to-call-a-conversion-operator-procedure"></a>Вызов процедуры оператора преобразования  
+### <a name="to-call-a-conversion-operator-procedure"></a>To call a conversion operator procedure  
   
-1. Используйте `CType` внутри выражения.  
+1. Use `CType` inside an expression.  
   
-2. Убедитесь, что типы данных операндов подходят для преобразования и в правильном порядке.  
+2. Be sure the data types of the operands are appropriate for the conversion, and in the correct order.  
   
-3. `CType` вызывает процедуру оператора преобразования и возвращает преобразованное значение.  
+3. `CType` calls the conversion operator procedure and returns the converted value.  
   
 ## <a name="example"></a>Пример  
- В следующем примере создается два <xref:System.TimeSpan> структуры, складывает их и сохраняет результат в третьей <xref:System.TimeSpan> структуры. <xref:System.TimeSpan> Структура определяет процедуры оператора для перегрузки нескольких стандартных операторов.  
+ The following example creates two <xref:System.TimeSpan> structures, adds them together, and stores the result in a third <xref:System.TimeSpan> structure. The <xref:System.TimeSpan> structure defines operator procedures to overload several standard operators.  
   
  [!code-vb[VbVbcnProcedures#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#29)]  
   
- Так как <xref:System.TimeSpan> перегружает стандартный `+` оператор, в предыдущем примере вызывается процедура оператора при вычислении значения `combinedSpan`.  
+ Because <xref:System.TimeSpan> overloads the standard `+` operator, the previous example calls an operator procedure when it calculates the value of `combinedSpan`.  
   
- Пример вызова процедуры оператора, см. в разделе [как: Используйте класс, в котором определяются операторы](./how-to-use-a-class-that-defines-operators.md).  
+ For an example of calling a conversation operator procedure, see [How to: Use a Class that Defines Operators](./how-to-use-a-class-that-defines-operators.md).  
   
 ## <a name="compiling-the-code"></a>Компиляция кода  
- Убедитесь, что класс или структура, которую вы используете определяет оператор, который вы хотите использовать.  
+ Be sure the class or structure you are using defines the operator you want to use.  
   
 ## <a name="see-also"></a>См. также
 

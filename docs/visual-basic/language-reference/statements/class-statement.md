@@ -1,5 +1,5 @@
 ---
-title: Оператор Class (Visual Basic)
+title: Оператор Class
 ms.date: 05/12/2018
 f1_keywords:
 - vb.Class
@@ -13,15 +13,15 @@ helpviewer_keywords:
 - classes [Visual Basic], data members
 - data members [Visual Basic], of classes
 ms.assetid: f2664f38-eb5a-4d4b-a374-1d041521fb6c
-ms.openlocfilehash: 2e4514686afcbbe0e9ff0b3326c1be212db4f9f8
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 3cb276f134e90ce3b3009234eb980d89477e0d09
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72005151"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74354149"
 ---
 # <a name="class-statement-visual-basic"></a>Оператор Class (Visual Basic)
-Объявляет имя класса и вводит определение переменных, свойств, событий и процедур, содержащихся в классе.  
+Declares the name of a class and introduces the definition of the variables, properties, events, and procedures that the class comprises.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,72 +38,72 @@ End Class
   
 |Термин|Определение|  
 |---|---|  
-|`attributelist`|Необязательный параметр. См. [список атрибутов](../../../visual-basic/language-reference/statements/attribute-list.md).|  
-|`accessmodifier`|Необязательный параметр. Ниже указаны доступные значения.<br /><br /> -   [Public](../../../visual-basic/language-reference/modifiers/public.md)<br />[защита](../../../visual-basic/language-reference/modifiers/protected.md) -   <br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [Private](../../../visual-basic/language-reference/modifiers/private.md)<br />-   [защищенный дружественный](../../language-reference/modifiers/protected-friend.md)<br />- [частный защищенный](../../language-reference/modifiers/private-protected.md)<br/><br/> См. раздел [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).|  
-|`Shadows`|Необязательный параметр. См. раздел [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).|  
-|`MustInherit`|Необязательный параметр. См. раздел [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md).|  
-|`NotInheritable`|Необязательный параметр. См. [NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md).|  
-|`Partial`|Необязательный параметр. Указывает на частичное определение класса. См. раздел [partial](../../../visual-basic/language-reference/modifiers/partial.md).|  
-|`name`|Обязательный. Имя этого класса. См. раздел [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
-|`Of`|Необязательный параметр. Указывает, что это универсальный класс.|  
-|`typelist`|Требуется, если используется ключевое слово [of](../../../visual-basic/language-reference/statements/of-clause.md) . Список параметров типа для этого класса. См. [список типов](../../../visual-basic/language-reference/statements/type-list.md).|  
-|`Inherits`|Необязательный параметр. Указывает, что этот класс наследует члены другого класса. См. раздел [оператор Inherits](../../../visual-basic/language-reference/statements/inherits-statement.md).|  
-|`classname`|Требуется, если используется оператор `Inherits`. Имя класса, от которого наследует этот класс.|  
-|`Implements`|Необязательный параметр. Указывает, что этот класс реализует члены одного или нескольких интерфейсов. См. [инструкцию Implements](../../../visual-basic/language-reference/statements/implements-statement.md).|  
-|`interfacenames`|Требуется, если используется оператор `Implements`. Имена интерфейсов, реализуемых этим классом.|  
-|`statements`|Необязательный параметр. Инструкции, которые определяют элементы этого класса.|  
-|`End Class`|Обязательный. Завершает определение `Class`.|  
+|`attributelist`|Необязательный. See [Attribute List](../../../visual-basic/language-reference/statements/attribute-list.md).|  
+|`accessmodifier`|Необязательный. Ниже указаны доступные значения.<br /><br /> -   [Public](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [Protected](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [Private](../../../visual-basic/language-reference/modifiers/private.md)<br />-   [Protected Friend](../../language-reference/modifiers/protected-friend.md)<br />- [Private Protected](../../language-reference/modifiers/private-protected.md)<br/><br/> См. раздел [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).|  
+|`Shadows`|Необязательный. See [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).|  
+|`MustInherit`|Необязательный. See [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md).|  
+|`NotInheritable`|Необязательный. See [NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md).|  
+|`Partial`|Необязательный. Indicates a partial definition of the class. See [Partial](../../../visual-basic/language-reference/modifiers/partial.md).|  
+|`name`|Обязательный. Name of this class. См. раздел [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
+|`Of`|Необязательный. Specifies that this is a generic class.|  
+|`typelist`|Required if you use the [Of](../../../visual-basic/language-reference/statements/of-clause.md) keyword. List of type parameters for this class. See [Type List](../../../visual-basic/language-reference/statements/type-list.md).|  
+|`Inherits`|Необязательный. Indicates that this class inherits the members of another class. See [Inherits Statement](../../../visual-basic/language-reference/statements/inherits-statement.md).|  
+|`classname`|Required if you use the `Inherits` statement. The name of the class from which this class derives.|  
+|`Implements`|Необязательный. Indicates that this class implements the members of one or more interfaces. See [Implements Statement](../../../visual-basic/language-reference/statements/implements-statement.md).|  
+|`interfacenames`|Required if you use the `Implements` statement. The names of the interfaces this class implements.|  
+|`statements`|Необязательный. Statements which define the members of this class.|  
+|`End Class`|Обязательный. Terminates the `Class` definition.|  
   
-## <a name="remarks"></a>Примечания  
- Оператор `Class` определяет новый тип данных. *Класс* является фундаментальным стандартным блоком объектно-ориентированного программирования (ООП). Дополнительные сведения см. в разделе [объекты и классы](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md).  
+## <a name="remarks"></a>Заметки  
+ A `Class` statement defines a new data type. A *class* is a fundamental building block of object-oriented programming (OOP). For more information, see [Objects and Classes](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md).  
   
- @No__t-0 можно использовать только на уровне пространства имен или модуля. Это означает, что *контекст объявления* для класса должен быть исходным файлом, пространством имен, классом, структурой, модулем или интерфейсом и не может быть процедурой или блоком. Дополнительные сведения см. в разделе [Контексты объявления и уровни доступа по умолчанию](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
+ You can use `Class` only at namespace or module level. This means the *declaration context* for a class must be a source file, namespace, class, structure, module, or interface, and cannot be a procedure or block. Дополнительные сведения см. в разделе [Контексты объявления и уровни доступа по умолчанию](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
   
- Каждый экземпляр класса имеет время существования, не зависящее от всех остальных экземпляров. Это время жизни начинается, когда оно создается с помощью [нового предложения оператора](../../../visual-basic/language-reference/operators/new-operator.md) или функции, например <xref:Microsoft.VisualBasic.Interaction.CreateObject%2A>. Он завершается, когда всем переменным, указывающим на экземпляр, присвоено значение [Nothing](../../../visual-basic/language-reference/nothing.md) или экземпляры других классов.  
+ Each instance of a class has a lifetime independent of all other instances. This lifetime begins when it is created by a [New Operator](../../../visual-basic/language-reference/operators/new-operator.md) clause or by a function such as <xref:Microsoft.VisualBasic.Interaction.CreateObject%2A>. It ends when all variables pointing to the instance have been set to [Nothing](../../../visual-basic/language-reference/nothing.md) or to instances of other classes.  
   
- Классы по умолчанию имеют доступ [Friend](../../../visual-basic/language-reference/modifiers/friend.md) . Уровни доступа можно изменить с помощью модификаторов доступа. Дополнительные сведения см. [в разделе уровни доступа в Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
+ Classes default to [Friend](../../../visual-basic/language-reference/modifiers/friend.md) access. You can adjust their access levels with the access modifiers. For more information, see [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
 ## <a name="rules"></a>Правила  
   
-- **Вложенности.** Можно определить один класс в другом. Внешний класс называется *содержащим классом*, а внутренний класс называется *вложенным классом*.  
+- **Nesting.** You can define one class within another. The outer class is called the *containing class*, and the inner class is called a *nested class*.  
   
-- **Наследование.** Если класс использует [инструкцию Inherits](../../../visual-basic/language-reference/statements/inherits-statement.md), можно указать только один базовый класс или интерфейс. Класс не может наследовать более чем от одного элемента.  
+- **Наследование.** If the class uses the [Inherits Statement](../../../visual-basic/language-reference/statements/inherits-statement.md), you can specify only one base class or interface. A class cannot inherit from more than one element.  
   
-     Класс не может наследовать от другого класса с более узким уровнем доступа. Например, класс `Public` не может наследовать от класса `Friend`.  
+     A class cannot inherit from another class with a more restrictive access level. For example, a `Public` class cannot inherit from a `Friend` class.  
   
-     Класс не может наследовать от класса, вложенного в него.  
+     A class cannot inherit from a class nested within it.  
   
-- **Реализации.** Если класс использует [оператор Implements](../../../visual-basic/language-reference/statements/implements-statement.md), необходимо реализовать каждый элемент, определенный каждым интерфейсом, указанным в `interfacenames`. Исключением из этого является перереализация члена базового класса. Дополнительные сведения см. в разделе "перереализация" раздела [Implements](../../../visual-basic/language-reference/statements/implements-clause.md).  
+- **Implementation.** If the class uses the [Implements Statement](../../../visual-basic/language-reference/statements/implements-statement.md), you must implement every member defined by every interface you specify in `interfacenames`. An exception to this is reimplementation of a base class member. For more information, see "Reimplementation" in [Implements](../../../visual-basic/language-reference/statements/implements-clause.md).  
   
-- **Свойство по умолчанию.** Класс может указывать не более одного свойства в качестве *свойства по умолчанию*. Дополнительные сведения см. в разделе [Default](../../../visual-basic/language-reference/modifiers/default.md).  
+- **Default Property.** A class can specify at most one property as its *default property*. For more information, see [Default](../../../visual-basic/language-reference/modifiers/default.md).  
   
 ## <a name="behavior"></a>Поведение  
   
-- **Уровень доступа.** Внутри класса можно объявить каждый элемент с собственным уровнем доступа. Члены класса по умолчанию имеют [открытый](../../../visual-basic/language-reference/modifiers/public.md) доступ, за исключением переменных и констант, которые по умолчанию имеют [частный](../../../visual-basic/language-reference/modifiers/private.md) доступ. Если класс имеет более ограниченный доступ, чем один из его членов, приоритет имеет уровень доступа к классу.  
+- **Access Level.** Within a class, you can declare each member with its own access level. Class members default to [Public](../../../visual-basic/language-reference/modifiers/public.md) access, except variables and constants, which default to [Private](../../../visual-basic/language-reference/modifiers/private.md) access. When a class has more restricted access than one of its members, the class access level takes precedence.  
   
-- **Которых.** Класс находится в области по всему его содержащимся пространству имен, классу, структуре или модулю.  
+- **Scope.** A class is in scope throughout its containing namespace, class, structure, or module.  
   
-     Областью действия каждого члена класса является весь класс.  
+     The scope of every class member is the entire class.  
   
-     **Контролиру.** Visual Basic не поддерживает статические классы. Функциональный эквивалент статического класса предоставляется модулем. Дополнительные сведения см. в разделе [оператор Module](../../../visual-basic/language-reference/statements/module-statement.md).  
+     **Lifetime.** Visual Basic does not support static classes. The functional equivalent of a static class is provided by a module. For more information, see [Module Statement](../../../visual-basic/language-reference/statements/module-statement.md).  
   
-     У членов класса есть время существования в зависимости от того, как и где они объявляются. Дополнительные сведения см. [в разделе время существования в Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md).  
+     Class members have lifetimes depending on how and where they are declared. For more information, see [Lifetime in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md).  
   
-- **Квалификацию.** Код за пределами класса должен уточнять имя члена именем этого класса.  
+- **Qualification.** Code outside a class must qualify a member's name with the name of that class.  
   
-     Если код внутри вложенного класса делает неквалифицированную ссылку на программный элемент, Visual Basic ищет элемент сначала во вложенном классе, затем в его содержащем классе и так далее в самом внешнем содержащем элементе.  
+     If code inside a nested class makes an unqualified reference to a programming element, Visual Basic searches for the element first in the nested class, then in its containing class, and so on out to the outermost containing element.  
   
-## <a name="classes-and-modules"></a>Классы и модули  
- У этих элементов много сходства, но есть и некоторые важные отличия.  
+## <a name="classes-and-modules"></a>Classes and Modules  
+ These elements have many similarities, but there are some important differences as well.  
   
-- **Терминология.** В предыдущих версиях Visual Basic распознаются два типа модулей: *модули классов* (CLS-файлы) и *стандартные модули* (файлы. BAS). Текущая версия вызывает эти *классы* и *модули*соответственно.  
+- **Terminology.** Previous versions of Visual Basic recognize two types of modules: *class modules* (.cls files) and *standard modules* (.bas files). The current version calls these *classes* and *modules*, respectively.  
   
-- **Общие члены.** Можно контролировать, является ли член класса общим или членом экземпляра.  
+- **Shared Members.** You can control whether a member of a class is a shared or instance member.  
   
-- **Объектная ориентация.** Классы являются объектно-ориентированными, но модули — нет. Можно создать один или несколько экземпляров класса. Дополнительные сведения см. в разделе [объекты и классы](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md).  
+- **Object Orientation.** Classes are object-oriented, but modules are not. You can create one or more instances of a class. For more information, see [Objects and Classes](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md).  
   
 ## <a name="example"></a>Пример  
- В следующем примере оператор `Class` используется для определения класса и нескольких элементов.  
+ The following example uses a `Class` statement to define a class and several members.  
   
  [!code-vb[VbVbalrStatements#62](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#62)]  
   
@@ -114,6 +114,6 @@ End Class
 - [Оператор Interface](../../../visual-basic/language-reference/statements/interface-statement.md)
 - [Оператор Module](../../../visual-basic/language-reference/statements/module-statement.md)
 - [Оператор Property](../../../visual-basic/language-reference/statements/property-statement.md)
-- Время существования @no__t 0Object: Как создаются и уничтожаются объекты @ no__t-0
+- [Время существования. Создание и уничтожение объектов](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)
 - [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
 - [Практическое руководство. Использование универсального класса](../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)

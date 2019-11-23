@@ -13,7 +13,7 @@ ms.lasthandoff: 10/15/2019
 ms.locfileid: "72320691"
 ---
 # <a name="configuring-client-behaviors"></a>Настройка поведений клиентов
-Windows Communication Foundation (WCF) настраивает поведение двумя способами: либо путем обращения к конфигурациям поведения, которые определены в разделе `<behavior>` файла конфигурации клиентского приложения, либо программным способом в вызывающем приложении. В этом разделе описываются оба подхода.  
+Windows Communication Foundation (WCF) настраивает поведение двумя способами: либо путем обращения к конфигурациям поведения, которые определены в разделе `<behavior>` файла конфигурации клиентского приложения, либо программными средствами в вызывающем приложении. В этом разделе описываются оба подхода.  
   
  При использовании файла конфигурации конфигурация поведения представляет собой именованную коллекцию параметров конфигурации. Имя каждой из конфигураций поведения должно быть уникальным. Эта строка используется в атрибуте `behaviorConfiguration` конфигурации конечной точки, чтобы связать конечную точку с поведением.  
   
@@ -51,6 +51,6 @@ Windows Communication Foundation (WCF) настраивает поведение
  [!code-csharp[ChannelFactoryBehaviors#10](../../../samples/snippets/csharp/VS_Snippets_CFX/channelfactorybehaviors/cs/client.cs#10)]
  [!code-vb[ChannelFactoryBehaviors#10](../../../samples/snippets/visualbasic/VS_Snippets_CFX/channelfactorybehaviors/vb/client.vb#10)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [@no__t 1behaviors >](../configure-apps/file-schema/wcf/behaviors.md)
+- [\<поведений >](../configure-apps/file-schema/wcf/behaviors.md)

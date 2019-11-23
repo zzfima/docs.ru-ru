@@ -77,7 +77,7 @@ public class Service1 : IService1
 }   
 ```  
   
- Параметры в разделе < `protocolMappings` > используются только в том случае, если конечные точки приложения не добавляются в <xref:System.ServiceModel.ServiceConfiguration> программным способом. При необходимости можно загрузить конфигурацию службы из файла конфигурации приложения по умолчанию, вызвав <xref:System.ServiceModel.ServiceConfiguration.LoadFromConfiguration%2A>, а затем изменить параметры. Класс <xref:System.ServiceModel.ServiceConfiguration.LoadFromConfiguration> также позволяет загрузить конфигурацию из централизованной конфигурации. В следующем примере кода показано, как это реализовать.  
+ Параметры в разделе <`protocolMappings`> используются только в том случае, если конечные точки приложения не добавляются в <xref:System.ServiceModel.ServiceConfiguration> программным способом. При необходимости можно загрузить конфигурацию службы из файла конфигурации приложения по умолчанию, вызвав <xref:System.ServiceModel.ServiceConfiguration.LoadFromConfiguration%2A>, а затем изменить параметры. Класс <xref:System.ServiceModel.ServiceConfiguration.LoadFromConfiguration> также позволяет загрузить конфигурацию из централизованной конфигурации. В следующем примере кода показано, как это реализовать.  
   
 ```csharp
 public class Service1 : IService1   
@@ -91,9 +91,9 @@ public class Service1 : IService1
 ```  
   
 > [!IMPORTANT]
-> Обратите внимание, что <xref:System.ServiceModel.ServiceConfiguration.LoadFromConfiguration%2A> игнорирует < `host` > в теге < `service` > <-3 @no__t. По сути < `host` > — это конфигурация узла, а не конфигурация службы, которая загружается перед выполнением метода Configure.  
+> Обратите внимание, что <xref:System.ServiceModel.ServiceConfiguration.LoadFromConfiguration%2A> игнорирует параметры <`host`> в теге <`service`>.`system.serviceModel` По сути <`host`> — это конфигурация узла, а не конфигурация службы, которая загружается перед выполнением метода Configure.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Настройка служб с использованием файлов конфигурации](configuring-services-using-configuration-files.md)
 - [Настройка поведения клиентов](configuring-client-behaviors.md)

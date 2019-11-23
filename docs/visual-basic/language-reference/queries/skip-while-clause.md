@@ -1,5 +1,5 @@
 ---
-title: Предложение Skip While (Visual Basic)
+title: Предложение Skip While
 ms.date: 07/20/2015
 f1_keywords:
 - vb.QuerySkipWhile
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Skip While clause [Visual Basic]
 - queries [Visual Basic], Skip While
 ms.assetid: 5dee8350-7520-4f1a-b00d-590cacd572d6
-ms.openlocfilehash: 7f37a6fa1c9ba7fdf7978ac6853e4c2985bf72e7
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 47703e445865435f5bf5312c3fe41833ac21aa3f
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72004708"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74333145"
 ---
 # <a name="skip-while-clause-visual-basic"></a>Предложение Skip While (Visual Basic)
 Пропускает элементы в коллекции, если заданное условие имеет значение `true`, и возвращает остальные элементы.  
@@ -28,17 +28,17 @@ Skip While expression
   
 |Термин|Определение|  
 |---|---|  
-|`expression`|Обязательный. Выражение, представляющее условие для проверки элементов. Выражение должно возвращать значение `Boolean` или функциональный эквивалент, например `Integer` для оценки как `Boolean`.|  
+|`expression`|Обязательный. An expression that represents a condition to test elements for. The expression must return a `Boolean` value or a functional equivalent, such as an `Integer` to be evaluated as a `Boolean`.|  
   
-## <a name="remarks"></a>Примечания  
- Предложение `Skip While` обходит элементы из начала результата запроса до тех пор, пока переданный `expression` возвращает `false`. После `expression` возвращает `false`, запрос возвращает все оставшиеся элементы. @No__t-0 игнорируется для оставшихся результатов.  
+## <a name="remarks"></a>Заметки  
+ The `Skip While` clause bypasses elements from the beginning of a query result until the supplied `expression` returns `false`. After `expression` returns `false`, the query returns all the remaining elements. The `expression` is ignored for the remaining results.  
   
- Предложение `Skip While` отличается от предложения `Where` тем, что предложение @no__t 2 можно использовать для исключения всех элементов из запроса, которые не соответствуют определенному условию. Предложение `Skip While` исключает элементы только до первого момента, когда условие не будет удовлетворено. Предложение `Skip While` наиболее полезно при работе с упорядоченным результатом запроса.  
+ The `Skip While` clause differs from the `Where` clause in that the `Where` clause can be used to exclude all elements from a query that do not meet a particular condition. The `Skip While` clause excludes elements only until the first time that the condition is not satisfied. The `Skip While` clause is most useful when you are working with an ordered query result.  
   
- Можно обойти определенное количество результатов с начала результата запроса с помощью предложения `Skip`.  
+ You can bypass a specific number of results from the beginning of a query result by using the `Skip` clause.  
   
 ## <a name="example"></a>Пример  
- В следующем примере кода используется предложение `Skip While` для обхода результатов до тех пор, пока не будет найден первый клиент из США.  
+ The following code example uses the `Skip While` clause to bypass results until the first customer from the United States is found.  
   
  [!code-vb[VbSimpleQuerySamples#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#3)]  
   

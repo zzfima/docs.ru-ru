@@ -15,12 +15,12 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71697465"
 ---
-# <a name="webrequestmodules-element-network-settings"></a>Элемент > @no__t 0webRequestModules (параметры сети)
+# <a name="webrequestmodules-element-network-settings"></a>Элемент \<webRequestModules > (параметры сети)
 Указывает модули, используемые для запроса сведений от сетевых узлов.  
   
 [ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **@no__t -4system. NET >** ](system-net-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4webRequestModules >  
+&nbsp;&nbsp;[ **\<System. NET >** ](system-net-element-network-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;\<webRequestModules >  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -30,10 +30,10 @@ ms.locfileid: "71697465"
 ```  
   
 ## <a name="attributes-and-elements"></a>Атрибуты и элементы  
- В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
+ Следующие разделы описывают атрибуты, дочерние элементы и родительские элементы.  
   
 ### <a name="attributes"></a>Атрибуты  
- Нет.  
+ Нет  
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
@@ -52,7 +52,7 @@ ms.locfileid: "71697465"
 ## <a name="remarks"></a>Примечания  
  Элемент `webRequestModules` регистрирует потомки класса <xref:System.Net.WebRequest>, чтобы обработать запросы информации к сетевым узлам. Модули веб-запросов должны реализовывать интерфейс <xref:System.Net.IWebRequestCreate>.  
   
- .NET Framework включает модули веб-запросов для URI, которые начинаются с `http://`, `https://` и `file://`. Модули по умолчанию можно переопределить только путем регистрации пользовательского модуля в файле конфигурации.  
+ .NET Framework включает модули веб-запросов для URI, которые начинаются с `http://`, `https://`и `file://`. Модули по умолчанию можно переопределить только путем регистрации пользовательского модуля в файле конфигурации.  
   
 ## <a name="configuration-files"></a>Файлы конфигурации  
  Этот элемент может использоваться в файле конфигурации приложения или в файле конфигурации компьютера (Machine.config).  
@@ -73,7 +73,7 @@ ms.locfileid: "71697465"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - <xref:System.Net.WebRequest>
 - <xref:System.Net.IWebRequestCreate>

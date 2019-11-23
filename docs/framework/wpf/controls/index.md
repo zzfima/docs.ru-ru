@@ -97,7 +97,7 @@ ms.locfileid: "73459445"
 
  Дополнительные сведения об этих базовых классах см. в разделе [модель содержимого WPF](wpf-content-model.md).  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Стилизация и использование шаблонов](styling-and-templating.md)
 - [Категории элементов управления](controls-by-category.md)

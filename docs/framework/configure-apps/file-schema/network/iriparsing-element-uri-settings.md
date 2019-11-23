@@ -9,12 +9,12 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71698096"
 ---
-# <a name="iriparsing-element-uri-settings"></a>Элемент > @no__t 0iriParsing (Параметры URI)
+# <a name="iriparsing-element-uri-settings"></a>Элемент \<элемент iriParsing > (Параметры URI)
 Определяет, применяется ли к <xref:System.Uri> анализ международных идентификаторов ресурсов (IRI) и применяются ли правила анализа IRI.  
   
 [ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **\<uri >** ](uri-element-uri-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 **\<iriParsing >**  
+&nbsp;&nbsp;[ **\<URI >** ](uri-element-uri-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp; **\<элемент iriparsing >**  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -25,7 +25,7 @@ ms.locfileid: "71698096"
 ```  
   
 ## <a name="attributes-and-elements"></a>Атрибуты и элементы  
- В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
+ Следующие разделы описывают атрибуты, дочерние элементы и родительские элементы.  
   
 ### <a name="attributes"></a>Атрибуты  
   
@@ -34,7 +34,7 @@ ms.locfileid: "71698096"
 |`enabled`|Указывает, включен ли синтаксический анализ IRI. Значение по умолчанию — `false`.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
- None  
+ Нет  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
@@ -55,7 +55,7 @@ ms.locfileid: "71698096"
   
 2. Укажите, следует ли применять правила синтаксического анализа IRI. Это можно сделать в файле machine.config или в файле app.config.  
   
- Включение синтаксического анализа IRI (элемент iriParsing enabled `true`=) выполняет нормализацию и проверку символов в соответствии с последними правилами IRI в RFC 3987. Значение по умолчанию — `false`, и проверка нормализации и символов выполняется в соответствии с RFC 2396 и RFC 3986 (для литералов IPv6).  
+ Включение синтаксического анализа IRI (элемент iriParsing enabled = `true`) будет выполнять нормализацию и проверку символов в соответствии с последними правилами IRI в RFC 3987. Значение по умолчанию — `false` и будет выполнять нормализацию и проверку символов в соответствии с RFC 2396 и RFC 3986 (для литералов IPv6).  
   
 ### <a name="configuration-files"></a>Файлы конфигурации  
  Этот элемент может использоваться в файле конфигурации приложения или в файле конфигурации компьютера (Machine.config).  
@@ -76,7 +76,7 @@ ms.locfileid: "71698096"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - <xref:System.Configuration.IriParsingElement?displayProperty=nameWithType>
 - <xref:System.Configuration.UriSection?displayProperty=nameWithType>

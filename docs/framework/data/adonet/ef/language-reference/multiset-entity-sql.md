@@ -25,9 +25,9 @@ MULTISET ( expression [{, expression }] )
  Любой допустимый список значений.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Коллекция типов МУЛЬТИНАБОРов @ no__t-0T >.  
+ Коллекция МУЛЬТИНАБОРов типов\<T >.  
   
-## <a name="remarks"></a>Заметки  
+## <a name="remarks"></a>Примечания  
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] предоставляет три типа конструкторов: конструкторы строк, конструкторы объектов и конструкторы мультинаборов (или коллекций). Дополнительные сведения см. в разделе [Создание типов](constructing-types-entity-sql.md).  
   
  Конструктор мультинаборов создает экземпляр мультинабора из списка значений. Все значения конструктора MULTISET должны принадлежать совместимому типу.  
@@ -50,7 +50,7 @@ MULTISET ( expression [{, expression }] )
   
  [!code-sql[DP EntityServices Concepts#MULTISET](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#multiset)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Сборка типов](constructing-types-entity-sql.md)
 - [Справочник по Entity SQL](entity-sql-reference.md)

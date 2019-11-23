@@ -145,7 +145,7 @@ public partial class Name : System.Web.UI.Page
 
 ## <a name="navigation"></a>Навигация
 
-В ASP.NET Web Forms вы запускаете навигацию на другой странице, возвращая ответ перенаправления в браузер. Пример:
+В ASP.NET Web Forms вы запускаете навигацию на другой странице, возвращая ответ перенаправления в браузер. Например:
 
 ```csharp
 protected void NavigateButton_Click(object sender, EventArgs e)

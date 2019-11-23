@@ -87,7 +87,7 @@ Public Interface IAirfareQuoteService
 End Interface  
 ```  
   
- Иногда объект `DataContractSerializer` не подходит для сериализации конкретных типов. WCF поддерживает альтернативный механизм сериализации, <xref:System.Xml.Serialization.XmlSerializer>, который также можно использовать для сериализации параметров. Сериализатор <xref:System.Xml.Serialization.XmlSerializer> позволяет более четко контролировать результирующий XML-код с помощью атрибутов, таких как `XmlAttributeAttribute`. Чтобы перейти на использование сериализатора <xref:System.Xml.Serialization.XmlSerializer> для определенной операции или для всей службы, примените к ней атрибут <xref:System.ServiceModel.XmlSerializerFormatAttribute>. Пример:  
+ Иногда объект `DataContractSerializer` не подходит для сериализации конкретных типов. WCF поддерживает альтернативный механизм сериализации, <xref:System.Xml.Serialization.XmlSerializer>, который также можно использовать для сериализации параметров. Сериализатор <xref:System.Xml.Serialization.XmlSerializer> позволяет более четко контролировать результирующий XML-код с помощью атрибутов, таких как `XmlAttributeAttribute`. Чтобы перейти на использование сериализатора <xref:System.Xml.Serialization.XmlSerializer> для определенной операции или для всей службы, примените к ней атрибут <xref:System.ServiceModel.XmlSerializerFormatAttribute>. Например:  
   
 ```csharp  
 [ServiceContract]  
@@ -432,7 +432,7 @@ End Class
 ## <a name="specifying-the-use-and-style"></a>Указание назначения и стиля  
  Для описания служб с помощью языка WSDL наиболее часто используются следующие две службы: Document и RPC (удаленный вызов процедуры). В стиле Document тело сообщения полностью описывается с помощью схемы, а в языке WSDL различные части тела сообщения описываются ссылками на элементы в этой схеме. В стиле RPC код WSDL ссылается на тип схемы для каждой части сообщения, а не элемент. В некоторых случаях необходимо выбрать один из этих типов вручную. Для этого можно применить атрибут <xref:System.ServiceModel.DataContractFormatAttribute> и задать свойство `Style` (когда используется <xref:System.Runtime.Serialization.DataContractSerializer>) или задать `Style` атрибуту <xref:System.ServiceModel.XmlSerializerFormatAttribute> (когда используется <xref:System.Xml.Serialization.XmlSerializer>).  
   
- Кроме того, <xref:System.Xml.Serialization.XmlSerializer> поддерживает две формы сериализованного XML: `Literal` и `Encoded`. `Literal` - наиболее распространенная форма, а также единственная форма, которую поддерживает <xref:System.Runtime.Serialization.DataContractSerializer>. `Encoded` - это форма из прежних версий, описанная в разделе 5 спецификации протокола SOAP. Не рекомендуется для использования в новых службах. Чтобы перейти в режим `Encoded`, задайте свойству `Use` атрибута <xref:System.ServiceModel.XmlSerializerFormatAttribute> значение `Encoded`.  
+ Кроме того, <xref:System.Xml.Serialization.XmlSerializer> поддерживает две формы сериализованного XML: `Literal` и `Encoded`. `Literal` является наиболее часто принятой формой, а является единственной формой, которую поддерживает <xref:System.Runtime.Serialization.DataContractSerializer>. `Encoded` является устаревшей формой, описанной в разделе 5 спецификации SOAP, и не рекомендуется для новых служб. Чтобы перейти в режим `Encoded`, задайте свойству `Use` атрибута <xref:System.ServiceModel.XmlSerializerFormatAttribute> значение `Encoded`.  
   
  В большинстве случаев лучше не изменять параметры по умолчанию для свойств `Style` и `Use`.  
   
@@ -574,8 +574,8 @@ Dim serviceHost As ServiceHost = New ServiceHost(GetType(IDataService))
   
  Дополнительные сведения о дополнительных понятиях сериализации см. в разделе [сериализация и десериализация](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md).  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Использование класса XmlSerializer](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md)
-- [Практическое руководство. Включить потоковую передачу](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)
-- [Практическое руководство. Создание базового контракта данных для класса или структуры @ no__t-0
+- [Практическое руководство. Включение потоковой передачи](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)
+- [Практическое руководство. Создание базового контракта данных для класса или структуры](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-data-contract-for-a-class-or-structure.md)

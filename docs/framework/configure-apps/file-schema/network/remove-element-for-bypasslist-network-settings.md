@@ -17,15 +17,15 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71697896"
 ---
-# <a name="remove-element-for-bypasslist-network-settings"></a>Элемент > @no__t 0remove для бипасслист (параметры сети)
+# <a name="remove-element-for-bypasslist-network-settings"></a>\<удалить элемент > для бипасслист (параметры сети)
 
 Удаляет IP-адрес или DNS-имя из списка обхода прокси-сервера.
 
 [ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **@no__t -4system. NET >** ](system-net-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<defaultProxy >** ](defaultproxy-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5[ **\<bypasslist >** ](bypasslist-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7 **\<remove >**  
+&nbsp;&nbsp;[ **\<System. NET >** ](system-net-element-network-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<defaultProxy >** ](defaultproxy-element-network-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<бипасслист >** ](bypasslist-element-network-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<удалить >**  
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -37,17 +37,17 @@ ms.locfileid: "71697896"
 
 ## <a name="attributes-and-elements"></a>Атрибуты и элементы
 
-В следующих разделах описаны атрибуты, дочерние и родительские элементы.
+Следующие разделы описывают атрибуты, дочерние элементы и родительские элементы.
 
 ### <a name="attributes"></a>Атрибуты
 
-|**Attribute (XElement Dynamic Property)** (Attribute (динамическое свойство XElement))|**Описание**|
+|**Атрибут**|**Описание**|
 |-------------------|---------------------|
 |`address`|Регулярное выражение, описывающее IP-адрес или DNS-имя.|
 
 ### <a name="child-elements"></a>Дочерние элементы
 
-Нет.
+Нет
 
 ### <a name="parent-elements"></a>Родительские элементы
 
@@ -84,7 +84,7 @@ ms.locfileid: "71697896"
 </configuration>
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - <xref:System.Net.WebProxy?displayProperty=nameWithType>
 - [Схема параметров сети](index.md)

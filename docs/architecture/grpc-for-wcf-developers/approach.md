@@ -1,14 +1,13 @@
 ---
 title: Как gRPC подходы к RPC-gRPC для разработчиков WCF
 description: Сравнение основных функций WCF и gRPC.
-author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 3da28968f8c8bd6c4fdba7432ffc8458d8340457
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: 1ebfd102217c9685c5ff5200386c642b2017e98f
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "73841693"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73968118"
 ---
 # <a name="how-grpc-approaches-rpc"></a>Как gRPC работает с RPC
 

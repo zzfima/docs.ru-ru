@@ -18,12 +18,12 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71699293"
 ---
-# <a name="sharedlisteners-element"></a>Элемент > @no__t 0sharedListeners
+# <a name="sharedlisteners-element"></a>\<Шаредлистенерс > элемент
 Содержит прослушиватели, на которые может ссылаться любой источник или элемент трассировки.  По умолчанию эти прослушиватели не получают никаких трассировок, поэтому невозможно получить эти прослушиватели во время выполнения. Прослушиватели, идентифицированные как общие прослушиватели, можно добавлять в источники или трассировки по имени.  
   
 [ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **\<system. Diagnostics >** ](system-diagnostics-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 **\<sharedListeners >**  
+&nbsp;&nbsp;[ **\<System. Diagnostics >** ](system-diagnostics-element.md)  
+&nbsp;&nbsp;&nbsp;&nbsp; **\<шаредлистенерс >**  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -34,10 +34,10 @@ ms.locfileid: "71699293"
 ```  
   
 ## <a name="attributes-and-elements"></a>Атрибуты и элементы  
- В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
+ Следующие разделы описывают атрибуты, дочерние элементы и родительские элементы.  
   
 ### <a name="attributes"></a>Атрибуты  
- Нет.  
+ Нет  
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
@@ -58,7 +58,7 @@ ms.locfileid: "71699293"
  Этот элемент можно использовать в файле конфигурации компьютера (Machine. config) и в файле конфигурации приложения.  
   
 ## <a name="example"></a>Пример  
- В следующем примере показано, как использовать элемент `<sharedListeners>` для добавления прослушивателя `console` в коллекцию `Listeners` для классов <xref:System.Diagnostics.TraceSource> и <xref:System.Diagnostics.Trace>. Прослушиватель трассировки консоли записывает данные трассировки в консоль с помощью вызовов либо <xref:System.Diagnostics.TraceSource>, либо <xref:System.Diagnostics.Trace>.  
+ В следующем примере показано, как использовать элемент `<sharedListeners>` для добавления `console` прослушивателя в коллекцию `Listeners` для классов <xref:System.Diagnostics.TraceSource> и <xref:System.Diagnostics.Trace>. Прослушиватель трассировки консоли записывает данные трассировки в консоль с помощью вызовов либо <xref:System.Diagnostics.TraceSource>, либо <xref:System.Diagnostics.Trace>.  
   
 ```xml  
 <configuration>  
@@ -88,7 +88,7 @@ ms.locfileid: "71699293"
 </configuration>
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - <xref:System.Diagnostics.TraceListener>
 - [Схема параметров трассировки и отладки](index.md)

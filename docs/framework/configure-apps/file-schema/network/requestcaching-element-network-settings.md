@@ -19,8 +19,8 @@ ms.locfileid: "71697824"
 Управляет механизмом кэширования для сетевых запросов.  
   
 [ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **@no__t -4system. NET >** ](system-net-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 **\<requestCaching >**  
+&nbsp;&nbsp;[ **\<System. NET >** ](system-net-element-network-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp; **\<элемент requestcaching >**  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -36,13 +36,13 @@ ms.locfileid: "71697824"
 ```  
   
 ## <a name="attributes-and-elements"></a>Атрибуты и элементы  
- В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
+ Следующие разделы описывают атрибуты, дочерние элементы и родительские элементы.  
   
 ### <a name="attributes"></a>Атрибуты  
   
 |Атрибут|Описание|  
 |---------------|-----------------|  
-|`isPrivateCache`|Указывает, обеспечивает ли кэш изоляцию между данными разных пользователей. Значение по умолчанию — `true`. Для приложений среднего уровня это значение должно быть `false`.|  
+|`isPrivateCache`|Указывает, обеспечивает ли кэш изоляцию между данными разных пользователей. Значение по умолчанию — `true`. Это значение должно быть `false` для приложений среднего уровня.|  
 |`disableAllCaching`|Указывает, что кэширование отключено для всех веб-ответов и не может быть переопределено программным способом.|  
 |`defaultPolicyLevel`|Одно из значений в перечислении <xref:System.Net.Cache.RequestCacheLevel>. Значение по умолчанию — `BypassCache`.|  
 |`unspecifiedMaximumAge`|Задает время по умолчанию, по истечении которого содержимое помечается как просроченное.|  
@@ -65,7 +65,7 @@ ms.locfileid: "71697824"
 |Элемент|Описание|  
 |-------------|-----------------|  
 |[defaultHttpCachePolicy](defaulthttpcachepolicy-element-network-settings.md)|Необязательный элемент.<br /><br /> Описывает, активно ли кэширование HTTP и описывает политику кэширования по умолчанию.|  
-|[Элемент > @no__t 1defaultFtpCachePolicy (параметры сети)](defaultftpcachepolicy-element-network-settings.md)|Необязательный элемент.<br /><br /> Описывает, активно ли кэширование FTP и описывает политику кэширования по умолчанию.|  
+|[Элемент \<Дефаултфтпкачеполици > (параметры сети)](defaultftpcachepolicy-element-network-settings.md)|Необязательный элемент.<br /><br /> Описывает, активно ли кэширование FTP и описывает политику кэширования по умолчанию.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
@@ -86,7 +86,7 @@ ms.locfileid: "71697824"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - <xref:System.Net.Cache?displayProperty=nameWithType>
 - [Схема параметров сети](index.md)

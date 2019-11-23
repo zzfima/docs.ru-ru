@@ -27,7 +27,7 @@ ms.locfileid: "72320184"
   
 5. [Моя служба и клиент работают отлично, но не могут заставить их работать, когда клиент находится на другом компьютере? Что происходит?](#BKMK_q4)  
   
-6. [Когда я выFaultException @ no__t-1Exception >, где тип является исключением, я всегда получаю в клиенте общий тип FaultException, а не универсальный тип. Что происходит?](#BKMK_q5)  
+6. [Когда я выберу исключение FaultException\<> где тип является исключением, я всегда получаю общий тип FaultException на стороне клиента, а не универсальный тип. Что происходит?](#BKMK_q5)  
   
 7. [Как и в случае, если ответ не содержит данных, то такие операции, как односторонние и запросы-ответы, возвращают примерно такую же скорость. Что происходит?](#BKMK_q6)  
   
@@ -51,7 +51,7 @@ ms.locfileid: "72320184"
   
 <a name="BKMK_q1"></a>   
 ## <a name="sometimes-i-receive-a-messagesecurityexception-on-the-second-request-if-my-client-is-idle-for-a-while-after-the-first-request-what-is-happening"></a>Иногда при втором запросе возникает исключение MessageSecurityException, если клиент бездействует некоторое время после первого запроса. В чем причина?  
- Сбой второго запроса может произойти по двум причинам: (1) истекло время ожидания сеанса или (2) перезапущен веб-сервер, на котором размещена служба. В первом случае сеанс действителен до истечения времени ожидания службы. Если служба не получает запрос от клиента в течение периода времени, указанного в привязке службы (<xref:System.ServiceModel.Channels.Binding.ReceiveTimeout%2A>), служба прерывает сеанс безопасности. Последующие сообщения клиента приводят к исключению <xref:System.ServiceModel.Security.MessageSecurityException>. Клиент должен повторно установить безопасный сеанс со службой, чтобы отправлять будущие сообщения, или использовать маркер контекста безопасности с отслеживанием состояния. Токены контекста безопасности с отслеживанием состояния также позволяют защитить сеанс во время перезапуска веб-сервера. Дополнительные сведения об использовании токенов безопасного контекста с отслеживанием состояния в безопасном сеансе см. в разделе [как создать маркер контекста безопасности для безопасного сеанса](./feature-details/how-to-create-a-security-context-token-for-a-secure-session.md). Кроме того, можно отключить безопасные сеансы. При использовании привязки [> \<wsHttpBinding](../configure-apps/file-schema/wcf/wshttpbinding.md) можно задать для свойства `establishSecurityContext` значение `false`, чтобы отключить безопасные сеансы. Чтобы отключить безопасные сеансы для других привязок, необходимо создать пользовательскую привязку. Подробные сведения о создании пользовательской привязки см. в разделе [How to: Create a Custom Binding Using the SecurityBindingElement](./feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md). Перед применением этих параметров необходимо разобраться с требованиями безопасности приложения.  
+ Сбой второго запроса может произойти по двум причинам: (1) истекло время ожидания сеанса или (2) перезапущен веб-сервер, на котором размещена служба. В первом случае сеанс действителен до истечения времени ожидания службы. Если служба не получает запрос от клиента в течение периода времени, указанного в привязке службы (<xref:System.ServiceModel.Channels.Binding.ReceiveTimeout%2A>), служба прерывает сеанс безопасности. Последующие сообщения клиента приводят к исключению <xref:System.ServiceModel.Security.MessageSecurityException>. Клиент должен повторно установить безопасный сеанс со службой, чтобы отправлять будущие сообщения, или использовать маркер контекста безопасности с отслеживанием состояния. Токены контекста безопасности с отслеживанием состояния также позволяют защитить сеанс во время перезапуска веб-сервера. Дополнительные сведения об использовании токенов безопасного контекста с отслеживанием состояния в безопасном сеансе см. в разделе [как создать маркер контекста безопасности для безопасного сеанса](./feature-details/how-to-create-a-security-context-token-for-a-secure-session.md). Кроме того, можно отключить безопасные сеансы. При использовании привязки [>\<WSHttpBinding](../configure-apps/file-schema/wcf/wshttpbinding.md) можно задать для свойства `establishSecurityContext` значение `false`, чтобы отключить безопасные сеансы. Чтобы отключить безопасные сеансы для других привязок, необходимо создать пользовательскую привязку. Подробные сведения о создании пользовательской привязки см. в разделе [How to: Create a Custom Binding Using the SecurityBindingElement](./feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md). Перед применением этих параметров необходимо разобраться с требованиями безопасности приложения.  
   
 <a name="BKMK_q2"></a>   
 ## <a name="my-service-starts-to-reject-new-clients-after-about-10-clients-are-interacting-with-it-what-is-happening"></a>Когда со службой взаимодействует около 10 клиентов, она отклоняет подключение новых клиентов. В чем причина?  
@@ -141,7 +141,7 @@ public class MyServiceHost : ServiceHost
 - [Сведения о Kerberos](https://go.microsoft.com/fwlink/?LinkId=86946)  
   
 <a name="BKMK_q5"></a>   
-## <a name="when-i-throw-a-faultexceptionexception-where-the-type-is-an-exception-i-always-receive-a-general-faultexception-type-on-the-client-and-not-the-generic-type-whats-happening"></a>Когда я выFaultException @ no__t-0Exception >, где тип является исключением, я всегда получаю в клиенте общий тип FaultException, а не универсальный тип. В чем причина?  
+## <a name="when-i-throw-a-faultexceptionexception-where-the-type-is-an-exception-i-always-receive-a-general-faultexception-type-on-the-client-and-not-the-generic-type-whats-happening"></a>Когда я выберу исключение FaultException\<> где тип является исключением, я всегда получаю общий тип FaultException на стороне клиента, а не универсальный тип. В чем причина?  
  Настоятельно рекомендуется создать свой собственный пользовательский тип данных об ошибке и объявить его в качестве типа сведений в контракте сбоя. Это необходимо, так как при использовании типов исключений, предоставляемых системой, могут возникнуть следующие проблемы.  
   
 - Создается зависимость типов, которая не дает возможности воспользоваться одним из главных преимуществ приложений, ориентированных на службы.  
@@ -170,7 +170,7 @@ public class MyServiceHost : ServiceHost
   
 <a name="BKMK_q99"></a>   
 ## <a name="im-using-one-of-my-tracing-tools-and-i-get-an-endpointnotfoundexception-whats-happening"></a>При использовании одного из средств трассировки получено исключение EndpointNotFoundException. В чем причина?  
- Если вы используете средство трассировки, не входящее в состав предоставляемого системой механизма трассировки WCF, и получаете <xref:System.ServiceModel.EndpointNotFoundException>, указывающий на несоответствие фильтра адресов, необходимо использовать класс <xref:System.ServiceModel.Description.ClientViaBehavior> для направления сообщений в программу трассировки и иметь Программа перенаправляет эти сообщения в адрес службы. Класс <xref:System.ServiceModel.Description.ClientViaBehavior> изменяет заголовок адресации `Via` , чтобы задать следующий сетевой адрес отдельно от конечного получателя, указанного заголовком адресации `To` . Однако при этом не следует изменять адрес конечной точки, используемый для установки значения `To` .  
+ Если вы используете средство трассировки, которое не является системным механизмом трассировки WCF, и получаете <xref:System.ServiceModel.EndpointNotFoundException>, указывающий на несоответствие фильтра адресов, необходимо использовать класс <xref:System.ServiceModel.Description.ClientViaBehavior>, чтобы направить сообщения в программу трассировки и предоставить программе возможность перенаправлять эти сообщения в адрес службы. Класс <xref:System.ServiceModel.Description.ClientViaBehavior> изменяет заголовок адресации `Via` , чтобы задать следующий сетевой адрес отдельно от конечного получателя, указанного заголовком адресации `To` . Однако при этом не следует изменять адрес конечной точки, используемый для установки значения `To` .  
   
  В следующем примере кода показан пример файла конфигурации клиента.  
   
@@ -224,7 +224,7 @@ public class MyServiceHost : ServiceHost
 </bindings>  
 ```  
   
- Появится сообщение об ошибке следующего вида: необработанное исключение: System. ServiceModel. AddressAlreadyInUseException: уже имеется прослушиватель в конечной точке IP 0.0.0.0:9000. эту ошибку можно обойти, указав полный URL-адрес с другим портом для Конечная точка MEX, как показано в следующем фрагменте конфигурации:  
+ Появится следующее сообщение об ошибке: Необработанное исключение: System.ServiceModel. AddressAlreadyInUseException. Уже есть прослушиватель на конечной точке IP 0.0.0.0:9000. Можно обойти эту ошибку, указав полный URL-адрес с другим портом для конечной точки MEX, как показано в следующем фрагменте конфигурации:  
   
 ```xml
 <services>  
@@ -237,7 +237,7 @@ public class MyServiceHost : ServiceHost
   
 <a name="BK_MK99"></a>   
 ## <a name="when-calling-a-wcf-web-http-application-from-a-wcf-soap-application-the-service-returns-the-following-error-405-method-not-allowed"></a>При вызове веб-приложения HTTP WCF из приложения службы протокола SOAP WCF возвращается следующая ошибка: «405 Метод запрещен»  
- Вызов HTTP-приложения WCF (служба, которая использует <xref:System.ServiceModel.WebHttpBinding> и <xref:System.ServiceModel.Description.WebHttpBehavior>) из службы WCF может создать следующее исключение: `Unhandled Exception: System.ServiceModel.FaultException`1 [System. ServiceModel. ExceptionDetail]: удаленный сервер вернул непредвиденный ответ: (405) метод не Allowed (разрешено). это исключение возникает, поскольку WCF перезаписывает исходящий <xref:System.ServiceModel.OperationContext> с входящим <xref:System.ServiceModel.OperationContext>. Чтобы решить эту проблему, создайте <xref:System.ServiceModel.OperationContextScope> в операции веб-службы HTTP WCF. Пример:  
+ Вызов HTTP-приложения WCF (служба, которая использует <xref:System.ServiceModel.WebHttpBinding> и <xref:System.ServiceModel.Description.WebHttpBehavior>) из службы WCF может создать следующее исключение: `Unhandled Exception: System.ServiceModel.FaultException`1 [System. ServiceModel. ExceptionDetail]: удаленный сервер вернул непредвиденный ответ: (405) метод не разрешен. "это исключение возникает, так как WCF перезаписывает исходящий <xref:System.ServiceModel.OperationContext> с входящим <xref:System.ServiceModel.OperationContext>. Чтобы решить эту проблему, создайте <xref:System.ServiceModel.OperationContextScope> в операции веб-службы HTTP WCF. Например:  
   
 ```csharp
 public string Echo(string input)  
@@ -249,6 +249,6 @@ public string Echo(string input)
 }  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Отладка ошибок проверки подлинности Windows](./feature-details/debugging-windows-authentication-errors.md)

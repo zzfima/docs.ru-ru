@@ -20,7 +20,7 @@ ms.locfileid: "71956431"
 
 *Глобализация* — это процесс проектирования и разработки программного продукта, который работает с несколькими языками и региональными параметрами.
 
-## <a name="in-this-section"></a>Содержание раздела
+## <a name="in-this-section"></a>В этом разделе
 
 [Международные шрифты в Windows Forms и элементах управления Windows](international-fonts-in-windows-forms-and-controls.md)  
 Объясняется, когда и как выбирать шрифты для отображения международных символов в формах Windows Forms.
@@ -35,18 +35,18 @@ ms.locfileid: "71956431"
 
 - [Глобализация и локализация приложений .NET](../../../standard/globalization-localization/index.md)
 
-- [Пошаговое руководство: Загрузка вспомогательных сборок по требованию с помощью API развертывания ClickOnce с использованием конструктора](/visualstudio/deployment/walkthrough-downloading-satellite-assemblies-on-demand-with-the-clickonce-deployment-api-using-the-designer)
+- [Пошаговое руководство. Загрузка вспомогательных сборок по требованию с помощью API развертывания ClickOnce с использованием конструктора](/visualstudio/deployment/walkthrough-downloading-satellite-assemblies-on-demand-with-the-clickonce-deployment-api-using-the-designer)
 
 - [Локализация приложений ClickOnce](/visualstudio/deployment/localizing-clickonce-applications)
 
-- [Пошаговое руководство: Загрузка вспомогательных сборок по требованию с помощью интерфейса API технологии развертывания ClickOnce](/visualstudio/deployment/walkthrough-downloading-satellite-assemblies-on-demand-with-the-clickonce-deployment-api)
+- [Пошаговое руководство. Загрузка вспомогательных сборок по требованию с помощью интерфейса API технологии развертывания ClickOnce](/visualstudio/deployment/walkthrough-downloading-satellite-assemblies-on-demand-with-the-clickonce-deployment-api)
 
-- [Практическое руководство. Задайте язык и региональные параметры пользовательского интерфейса для Windows Forms глобализации @ no__t-0
+- [Как задать культуру и язык и региональные параметры пользовательского интерфейса для Windows Forms глобализации](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/b28bx3bh(v=vs.100))
 
-- [Практическое руководство. Создание зеркально отображаемых Windows Forms и элементов управления @ no__t-0
+- [Создание зеркально отображаемых Windows Forms и элементов управления](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/xwbz5ws0(v=vs.100))
 
-- [Практическое руководство. Поддержка локализации на Windows Forms с помощью функции AutoSize и элемента управления TableLayoutPanel @ no__t-0
+- [Практическое руководство. Обеспечение поддержки локализации в Windows Forms с помощью элементов управления AutoSize и TableLayoutPanel](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/1zkt8b33(v=vs.100))
 
-- [Пошаговое руководство: Локализация Windows Forms @ no__t-0
+- [Пошаговое руководство. Локализация Windows Forms](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/y99d1cd3(v=vs.100))
 
-- [Пошаговое руководство: Создание макета, который корректирует пропорции для локализации @ no__t-0
+- [Пошаговое руководство. Создание макета, который корректирует пропорции для локализации](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/7k9fa71y(v=vs.100))

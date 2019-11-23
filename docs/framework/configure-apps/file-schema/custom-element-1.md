@@ -40,9 +40,9 @@ ms.locfileid: "73118834"
 
 ## <a name="child-elements"></a>Дочерние элементы
 
-Отсутствуют
+Нет
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Примечания
 
 Элемент **\<sectionName >** — это пользовательский элемент, определяемый тегом [ **\<раздела >** ](section-element.md) в элементе [ **\<configSections >** ](configsections-element-for-configuration.md) . Система конфигурации возвращает объект <xref:System.Collections.IDictionary> при вызове <xref:System.Configuration.Configuration.GetSection(System.String)?displayProperty=nameWithType>.
 
@@ -66,6 +66,6 @@ ms.locfileid: "73118834"
 
 Этот элемент можно использовать в файле конфигурации приложения, файле конфигурации компьютера (*Machine. config*) и файлах *Web. config* , которые не находятся на уровне каталога приложений.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Схема файла конфигурации для .NET Framework](index.md)

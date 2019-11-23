@@ -1,14 +1,13 @@
 ---
 title: Сетевые протоколы — gRPC для разработчиков WCF
 description: Общие сведения о сетевых протоколах gRPC.
-author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: cf99b2608d576765856c992679b93b6f21e796cf
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: 5e837738bd345608ca7119d04c9221acb220c276
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "73841465"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73971708"
 ---
 # <a name="network-protocols"></a>Сетевые протоколы
 

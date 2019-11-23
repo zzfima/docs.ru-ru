@@ -17,14 +17,14 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71699614"
 ---
-# <a name="add-element-for-bypasslist-network-settings"></a>Элемент > @no__t 0add для бипасслист (параметры сети)
+# <a name="add-element-for-bypasslist-network-settings"></a>\<добавить элемент > для бипасслист (параметры сети)
 Добавление в список обхода прокси IP-адреса или DNS-имени.  
   
 [ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **@no__t -4system. NET >** ](system-net-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<defaultProxy >** ](defaultproxy-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5[ **\<bypasslist >** ](bypasslist-element-network-settings.md)  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Добавить >**  
+&nbsp;&nbsp;[ **\<System. NET >** ](system-net-element-network-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<defaultProxy >** ](defaultproxy-element-network-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<бипасслист >** ](bypasslist-element-network-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<добавить >**  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -35,16 +35,16 @@ ms.locfileid: "71699614"
 ```  
   
 ## <a name="attributes-and-elements"></a>Атрибуты и элементы  
- В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
+ Следующие разделы описывают атрибуты, дочерние элементы и родительские элементы.  
   
 ### <a name="attributes"></a>Атрибуты  
   
-|**Attribute (XElement Dynamic Property)** (Attribute (динамическое свойство XElement))|**Описание**|  
+|**Атрибут**|**Описание**|  
 |-------------------|---------------------|  
 |**address**|Регулярное выражение, описывающее IP-адрес или DNS-имя.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
- Нет.  
+ Нет  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
@@ -57,7 +57,7 @@ ms.locfileid: "71699614"
   
  Значение атрибута `address` должно быть регулярным выражением, описывающим набор IP-адресов или имен узлов.  
   
- При указании регулярного выражения для этого элемента следует соблюдать осторожность. Регулярное выражение "[a-z] + @no__t -0.contoso\\.com" соответствует любому узлу в домене contoso.com, но также соответствует любому узлу в домене contoso.com.cpandl.com. Чтобы сопоставить только узел в домене contoso.com, используйте привязку ("$"): "[a-z] + @no__t -0.contoso\\.com $".  
+ При указании регулярного выражения для этого элемента следует соблюдать осторожность. Регулярное выражение "[a-z] +\\. contoso\\. com" соответствует любому узлу в домене contoso.com, но также соответствует любому узлу в домене contoso.com.cpandl.com. Чтобы сопоставить только узел в домене contoso.com, используйте привязку ("$"): "[a-z] +\\. contoso\\. com $".  
   
  Дополнительные сведения о регулярных выражениях см. в разделе. [.NET Framework регулярных выражений](../../../../standard/base-types/regular-expressions.md).  
   
@@ -80,7 +80,7 @@ ms.locfileid: "71699614"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - <xref:System.Net.WebProxy?displayProperty=nameWithType>
 - [Схема параметров сети](index.md)

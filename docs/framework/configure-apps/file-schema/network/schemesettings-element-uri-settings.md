@@ -9,12 +9,12 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71697761"
 ---
-# <a name="schemesettings-element-uri-settings"></a>Элемент > @no__t 0schemeSettings (Параметры URI)
+# <a name="schemesettings-element-uri-settings"></a>Элемент \<schemeSettings > (Параметры URI)
 Определяет, как <xref:System.Uri> анализируется для определенных схем.  
   
 [ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **\<uri >** ](uri-element-uri-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 **\<schemeSettings >**  
+&nbsp;&nbsp;[ **\<URI >** ](uri-element-uri-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp; **\<schemeSettings >**  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -24,10 +24,10 @@ ms.locfileid: "71697761"
 ```  
   
 ## <a name="attributes-and-elements"></a>Атрибуты и элементы  
- В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
+ Следующие разделы описывают атрибуты, дочерние элементы и родительские элементы.  
   
 ### <a name="attributes"></a>Атрибуты  
- None  
+ Нет  
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
@@ -44,7 +44,7 @@ ms.locfileid: "71697761"
 |[URI](uri-element-uri-settings.md)|Содержит параметры, определяющие, как .NET Framework обрабатывает веб-адреса, выраженные с помощью универсальных идентификаторов ресурсов (URI).|  
   
 ## <a name="remarks"></a>Примечания  
- По умолчанию класс <xref:System.Uri?displayProperty=nameWithType> отменяет escape-символы в процентах, закодированные разделителями, перед выполнением сжатия пути. Это было реализовано в качестве механизма безопасности для атак, подобных следующим:  
+ По умолчанию класс <xref:System.Uri?displayProperty=nameWithType> отменяет escape-символы в процентах от разделителей закодированного пути перед выполнением сжатия пути. Это было реализовано в качестве механизма безопасности для атак, подобных следующим:  
   
  `http://www.contoso.com/..%2F..%2F/Windows/System32/cmd.exe?/c+dir+c:\`  
   
@@ -52,7 +52,7 @@ ms.locfileid: "71697761"
   
  `c:\Windows\System32\cmd.exe /c dir c:\`  
   
- По этой причине класс <xref:System.Uri?displayProperty=nameWithType> сначала отменяет escape-разделители путей, а затем применяет сжатие пути. Результат передачи вредоносного URL-адреса выше в конструктор класса <xref:System.Uri?displayProperty=nameWithType> приводит к следующему URI:  
+ По этой причине <xref:System.Uri?displayProperty=nameWithType> класс сначала отменяет escape-разделители путей, а затем применяет сжатие пути. Результат передачи вредоносного URL-адреса выше в <xref:System.Uri?displayProperty=nameWithType> конструктор класса приводит к следующему URI:  
   
  `http://www.microsoft.com/Windows/System32/cmd.exe?/c+dir+c:\`  
   
@@ -78,12 +78,12 @@ ms.locfileid: "71697761"
   
 |||
 |-|-|  
-|Пространство имен|Система|  
+|Пространство имен|System|  
 |Имя схемы||  
 |Файл проверки||  
 |Может быть пустым||  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - <xref:System.Configuration.SchemeSettingElement?displayProperty=nameWithType>
 - <xref:System.Configuration.SchemeSettingElementCollection?displayProperty=nameWithType>

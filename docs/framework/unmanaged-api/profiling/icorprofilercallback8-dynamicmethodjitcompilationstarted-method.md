@@ -44,7 +44,7 @@ HRESULT DynamicMethodJITCompilationStarted(
 [in] `cbILHeader`    
 Число байтов в заголовке IL. 
 
-## <a name="remarks"></a>Заметки  
+## <a name="remarks"></a>Примечания  
 
 Этот обратный вызов активируется всякий раз, когда динамический метод компилируется JIT-компилятором. Сюда входят различные суррогаты IL и методы LCG. Его цель — предоставить средствам записи профилировщика достаточно информации для распознавания скомпилированного метода для пользователей.
 
@@ -62,7 +62,7 @@ HRESULT DynamicMethodJITCompilationStarted(
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Метод DynamicMethodJITCompilationFinished](icorprofilercallback8-dynamicmethodjitcompilationfinished-method.md)
 - [Интерфейс ICorProfilerCallback8](icorprofilercallback8-interface.md)

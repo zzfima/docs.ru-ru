@@ -20,23 +20,23 @@ dividend / divisor
   
 ## <a name="arguments"></a>Аргументы  
  `dividend`  
- Делимое числовое выражение. `dividend` - любое допустимое выражение с любым числовым типом данных.  
+ Подлежащее делению численное выражение. `dividend` - любое допустимое выражение с любым числовым типом данных.  
   
  `divisor`  
- Числовое выражение, на которое делится делимое. `divisor` - любое допустимое выражение с любым числовым типом данных.  
+ Численное выражение для деления делимого. `divisor` - любое допустимое выражение с любым числовым типом данных.  
   
-## <a name="result-types"></a>Типы результата  
+## <a name="result-types"></a>Типы результатов  
  Тип данных, который является результатом неявного повышения типов обоих аргументов. Дополнительные сведения о неявном повышении типа см. в разделе [System Type](type-system-entity-sql.md).  
   
 ## <a name="example"></a>Пример  
  Следующий Entity SQL запрос использует арифметический оператор/для деления одного числа на другое. Запрос основан на модели AdventureWorks Sales. Для компиляции и запуска этого запроса выполните следующие шаги.  
   
-1. Выполните процедуру, описанную в разделе [How: Выполните запрос, возвращающий Структуралтипе Results @ no__t-0.  
+1. Выполните процедуру из статьи [How to: Execute a Query that Returns StructuralType Results](../how-to-execute-a-query-that-returns-structuraltype-results.md).  
   
 2. Передайте следующий запрос в качестве аргумента методу `ExecuteStructuralTypeQuery` :  
   
  [!code-sql[DP EntityServices Concepts#DIVIDE](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#divide)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Справочник по Entity SQL](entity-sql-reference.md)

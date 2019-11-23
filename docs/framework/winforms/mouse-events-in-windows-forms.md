@@ -28,9 +28,9 @@ ms.locfileid: "71834598"
 
 ## <a name="mouse-information"></a>Сведения о мыши
 
-Объект <xref:System.Windows.Forms.MouseEventArgs> отправляется обработчикам событий мыши, связанных с нажатием кнопки мыши и отслеживанием ее движений. Объект <xref:System.Windows.Forms.MouseEventArgs> предоставляет сведения о текущем состоянии мыши, включая положение указателя мыши в клиентских координатах, какие кнопки мыши нажаты и произошла ли прокрутка колесика мыши. Некоторые события мыши, например те, которые просто уведомляют о том, что указатель мыши пересек границы элемента управления, отправляют обработчику событий объект <xref:System.EventArgs> без подробных сведений.
+Объект <xref:System.Windows.Forms.MouseEventArgs> отправляется обработчикам событий мыши, связанных с нажатием кнопки мыши и отслеживанием ее движений. <xref:System.Windows.Forms.MouseEventArgs> предоставляет сведения о текущем состоянии мыши, включая расположение указателя мыши в координатах клиента, нажатые кнопки мыши и то, прокручивается ли колесико мыши. Некоторые события мыши, например те, которые просто уведомляют о том, что указатель мыши пересек границы элемента управления, отправляют обработчику событий объект <xref:System.EventArgs> без подробных сведений.
 
-Если нужно знать текущее состояние кнопок мыши или положение ее указателя, но при этом избежать обработки события мыши, можно также использовать свойства <xref:System.Windows.Forms.Control.MouseButtons%2A> и <xref:System.Windows.Forms.Control.MousePosition%2A> класса <xref:System.Windows.Forms.Control>. Свойство <xref:System.Windows.Forms.Control.MouseButtons%2A> возвращает сведения о том, какие кнопки мыши в настоящее время нажаты. Свойство <xref:System.Windows.Forms.Control.MousePosition%2A> возвращает экранные координаты указателя мыши, которые эквивалентны значению, возвращаемому методом <xref:System.Windows.Forms.Cursor.Position%2A>.
+Если нужно знать текущее состояние кнопок мыши или положение ее указателя, но при этом избежать обработки события мыши, можно также использовать свойства <xref:System.Windows.Forms.Control.MouseButtons%2A> и <xref:System.Windows.Forms.Control.MousePosition%2A> класса <xref:System.Windows.Forms.Control>. <xref:System.Windows.Forms.Control.MouseButtons%2A> возвращает сведения о том, какие кнопки мыши в данный момент нажаты. Свойство <xref:System.Windows.Forms.Control.MousePosition%2A> возвращает экранные координаты указателя мыши, которые эквивалентны значению, возвращаемому методом <xref:System.Windows.Forms.Cursor.Position%2A>.
 
 ## <a name="converting-between-screen-and-client-coordinates"></a>Преобразование между экранными и клиентскими координатами
 
@@ -66,7 +66,7 @@ ms.locfileid: "71834598"
 
 8. Событие<xref:System.Windows.Forms.Control.MouseUp> .
 
-Пример кода, демонстрирующий порядок событий щелчка мыши, см. в разделе [How to: Обрабатывает события пользовательского ввода в Windows Forms элементы управления @ no__t-0.
+Пример кода, демонстрирующий порядок событий щелчка мыши, см. в разделе [как управлять событиями пользовательского ввода в Windows Forms элементах управления](how-to-handle-user-input-events-in-windows-forms-controls.md).
 
 ### <a name="individual-controls"></a>Особые элементы управления
 
@@ -82,24 +82,24 @@ ms.locfileid: "71834598"
 
   - Щелчок левой кнопкой мыши: <xref:System.Windows.Forms.Control.Click>, <xref:System.Windows.Forms.Control.MouseClick>
 
-  - Щелчок правой кнопкой мыши: События щелчка не вызваны
+  - Щелчок правой кнопкой мыши: событие щелчка не вызывается
 
   - Двойной щелчок левой кнопкой мыши: <xref:System.Windows.Forms.Control.Click>, <xref:System.Windows.Forms.Control.MouseClick>; <xref:System.Windows.Forms.Control.Click>, <xref:System.Windows.Forms.Control.MouseClick>
 
-  - Дважды щелкните правой кнопкой мыши: События щелчка не вызваны
+  - Двойной щелчок правой кнопкой мыши: событие щелчка не вызывается
 
-- Элементы управления <xref:System.Windows.Forms.TextBox>, <xref:System.Windows.Forms.RichTextBox>, <xref:System.Windows.Forms.ListBox>, <xref:System.Windows.Forms.MaskedTextBox> и <xref:System.Windows.Forms.CheckedListBox>
+- элементы управления <xref:System.Windows.Forms.TextBox>, <xref:System.Windows.Forms.RichTextBox>, <xref:System.Windows.Forms.ListBox>, <xref:System.Windows.Forms.MaskedTextBox>и <xref:System.Windows.Forms.CheckedListBox>
 
   > [!NOTE]
   > Если пользователь щелкает любое место внутри этих элементов управления, то возникают описанные ниже события.
 
   - Щелчок левой кнопкой мыши: <xref:System.Windows.Forms.Control.Click>, <xref:System.Windows.Forms.Control.MouseClick>
 
-  - Щелчок правой кнопкой мыши: События щелчка не вызваны
+  - Щелчок правой кнопкой мыши: событие щелчка не вызывается
 
   - Двойной щелчок левой кнопкой мыши: <xref:System.Windows.Forms.Control.Click>, <xref:System.Windows.Forms.Control.MouseClick>, <xref:System.Windows.Forms.Control.DoubleClick>, <xref:System.Windows.Forms.Control.MouseDoubleClick>
 
-  - Дважды щелкните правой кнопкой мыши: События щелчка не вызваны
+  - Двойной щелчок правой кнопкой мыши: событие щелчка не вызывается
 
 - Элемент управления <xref:System.Windows.Forms.ListView>
 
@@ -150,6 +150,6 @@ ms.locfileid: "71834598"
     > [!NOTE]
     > Если пользователь перемещает указатель за границы переключателя при нажатой кнопке мыши (например, перемещает указатель мыши за границы элемента управления <xref:System.Windows.Forms.Button>, когда он нажат), переключатель будет отрисовываться в состоянии "отпущено" и происходит только событие <xref:System.Windows.Forms.Control.MouseUp>. События <xref:System.Windows.Forms.Control.Click> и <xref:System.Windows.Forms.Control.MouseClick> в этой ситуации не наступают.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Ввод данных мышью в приложении Windows Forms](mouse-input-in-a-windows-forms-application.md)

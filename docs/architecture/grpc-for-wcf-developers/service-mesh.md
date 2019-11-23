@@ -1,21 +1,20 @@
 ---
 title: Сети службы — gRPC для разработчиков WCF
 description: Использование сети службы для маршрутизации и балансировки запросов к gRPC службам в кластере Kubernetes.
-author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 6bdfa57ba47ba0105092d1c140705599b7023c78
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d20275082973f30bddbb342da90454401d4f019b
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73841993"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966973"
 ---
 # <a name="service-meshes"></a>Сети службы
 
 Сетка служб — это компонент инфраструктуры, который принимает Управление запросами службы маршрутизации в сети. Сети служб могут обслуживать все виды сетевых проблем в кластере Kubernetes, в том числе:
 
 - Обнаружение службы
-- балансировка нагрузки;
+- Балансировка нагрузки
 - Отказоустойчивость
 - Шифрование
 - Мониторинг

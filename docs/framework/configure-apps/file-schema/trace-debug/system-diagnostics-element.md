@@ -15,11 +15,11 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71699197"
 ---
-# <a name="systemdiagnostics-element"></a>Элемент > @no__t 0system. Diagnostics
+# <a name="systemdiagnostics-element"></a>\<System. Diagnostics > элемент
 Задает прослушиватели трассировки, собирающие, хранящие и маршрутизирующие сообщения, а также уровень, на котором установлен ключ трассировки.  
   
 [ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1 **\<system. diagnostics >**  
+&nbsp;&nbsp; **\<System. diagnostics >**  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -29,10 +29,10 @@ ms.locfileid: "71699197"
 ```  
   
 ## <a name="attributes-and-elements"></a>Атрибуты и элементы  
- В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
+ Следующие разделы описывают атрибуты, дочерние элементы и родительские элементы.  
   
 ### <a name="attributes"></a>Атрибуты  
- Нет.  
+ Нет  
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
@@ -52,7 +52,7 @@ ms.locfileid: "71699197"
 |`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.|  
   
 ## <a name="example"></a>Пример  
- В следующем примере показано, как внедрить переключатель трассировки и прослушиватель трассировки в элемент **\<system. diagnostics >** . Для параметра трассировки `General` задан уровень <xref:System.Diagnostics.TraceLevel>. Прослушиватель трассировки `myListener` создает файл с именем `MyListener.log` и записывает выходные данные в файл.  
+ В следующем примере показано, как внедрить переключатель трассировки и прослушиватель трассировки в элемент **\<System. diagnostics >** . Для параметра трассировки `General` задан уровень <xref:System.Diagnostics.TraceLevel>. Прослушиватель трассировки `myListener` создает файл с именем `MyListener.log` и записывает выходные данные в файл.  
   
 > [!NOTE]
 > В .NET Framework версии 2.0 для указания значения переключателя можно использовать текст. Например, можно указать `true` для <xref:System.Diagnostics.BooleanSwitch> или использовать текст, представляющий значение перечисления, например `Error` для <xref:System.Diagnostics.TraceSwitch>. Строка `<add name="myTraceSwitch" value="Error" />` эквивалентна `<add name="myTraceSwitch" value="1" />`.  
@@ -72,7 +72,7 @@ ms.locfileid: "71699197"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - <xref:System.Diagnostics.Trace>
 - <xref:System.Diagnostics.Debug>

@@ -10,7 +10,7 @@ ms.lasthandoff: 10/03/2019
 ms.locfileid: "71833736"
 ---
 # <a name="having-entity-sql"></a>HAVING (Entity SQL)
-Задает условие поиска для группы или статистического выражения.  
+Указывает условие поиска для группы или агрегата.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -20,7 +20,7 @@ ms.locfileid: "71833736"
   
 ## <a name="arguments"></a>Аргументы  
  `search_condition`  
- Определяет условие поиска, которому должна соответствовать группа или статистическое выражение. Если предложение HAVING используется в сочетании с GROUP BY ALL, то оно переопределяет ALL.  
+ Указывает условие поиска для группы или агрегата, которое должно удовлетворяться. Если предложение HAVING используется в сочетании с GROUP BY ALL, то оно переопределяет ALL.  
   
 ## <a name="remarks"></a>Примечания  
  Предложение HAVING позволяет указать дополнительное условие фильтрации для результатов группирования. Если в выражении запроса не указано предложение GROUP BY, то предполагается неявным образом созданная группа, состоящая из одного набора.  
@@ -40,13 +40,13 @@ HAVING SUM(o.Quantity) > 1
 ## <a name="example"></a>Пример  
  В следующем запросе Entity SQL операторы HAVING и GROUP BY задают условие поиска для группы или статистического выражения. Запрос основан на модели AdventureWorks Sales. Для компиляции и запуска этого запроса выполните следующие шаги.  
   
-1. Выполните процедуру, описанную в разделе [How: Выполните запрос, возвращающий тип PrimitiveType Results @ no__t-0.  
+1. Выполните процедуру, описанную в разделе [инструкции. выполнение запроса, возвращающего тип PrimitiveType результаты](../how-to-execute-a-query-that-returns-primitivetype-results.md).  
   
 2. Передайте следующий запрос в качестве аргумента методу `ExecutePrimitiveTypeQuery` :  
   
  [!code-sql[DP EntityServices Concepts#HAVING](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#having)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Справочник по Entity SQL](entity-sql-reference.md)
 - [Выражения запросов](query-expressions-entity-sql.md)

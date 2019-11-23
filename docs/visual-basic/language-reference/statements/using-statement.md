@@ -1,5 +1,5 @@
 ---
-title: Оператор Using (Visual Basic)
+title: Оператор Using
 ms.date: 07/20/2015
 f1_keywords:
 - vb.using
@@ -9,16 +9,16 @@ helpviewer_keywords:
 - resources [Visual Basic], disposing
 - Using statement [Visual Basic]
 ms.assetid: 665d1580-dd54-4e96-a9a9-6be2a68948f1
-ms.openlocfilehash: 819af63acb6a1f038300bcb999dcfb904eb8a457
-ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
+ms.openlocfilehash: 6ec0e228b3898f66f27e322b5db2dd7f3bf3d7d6
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/28/2019
-ms.locfileid: "71592090"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352761"
 ---
 # <a name="using-statement-visual-basic"></a>Оператор Using (Visual Basic)
 
-Объявляет начало блока `Using` и при необходимости получает системные ресурсы, управляющие блоком.
+Declares the beginning of a `Using` block and optionally acquires the system resources that the block controls.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -32,12 +32,12 @@ End Using
 
 |Термин|Определение|  
 |---|---|  
-|`resourcelist`|Требуется, если не указан `resourceexpression`. Список из одного или нескольких системных ресурсов, которые блокируют элементы управления `Using`, разделенные запятыми.|  
-|`resourceexpression`|Требуется, если не указан `resourcelist`. Ссылка на переменную или выражение, ссылающееся на системный ресурс, управляемый этим блоком `Using`.|  
-|`statements`|Необязательный параметр. Блок инструкций, выполняемых блоком `Using`.|  
-|`End Using`|Обязательный. Завершает определение блока `Using` и уничтожает все ресурсы, которыми он управляет.|  
+|`resourcelist`|Required if you do not supply `resourceexpression`. List of one or more system resources that this `Using` block controls, separated by commas.|  
+|`resourceexpression`|Required if you do not supply `resourcelist`. Reference variable or expression referring to a system resource to be controlled by this `Using` block.|  
+|`statements`|Необязательный. Block of statements that the `Using` block runs.|  
+|`End Using`|Обязательный. Terminates the definition of the `Using` block and disposes of all the resources that it controls.|  
 
- Каждый ресурс в части `resourcelist` имеет следующий синтаксис и части:
+ Each resource in the `resourcelist` part has the following syntax and parts:
 
  `resourcename As New resourcetype [ ( [ arglist ] ) ]`
 
@@ -45,47 +45,47 @@ End Using
 
  `resourcename As resourcetype = resourceexpression`
 
-## <a name="resourcelist-parts"></a>ресаурцелист части
+## <a name="resourcelist-parts"></a>resourcelist Parts
 
 |Термин|Определение|  
 |---|---|  
-|`resourcename`|Обязательный. Ссылочная переменная, которая ссылается на системный ресурс, который управляется блоком `Using`.|  
-|`New`|Требуется, если инструкция `Using` получает ресурс. Если вы уже приобрели ресурс, используйте второй альтернативный синтаксис.|  
-|`resourcetype`|Обязательный. Класс ресурса. Класс должен реализовывать интерфейс <xref:System.IDisposable>.|  
-|`arglist`|Необязательный параметр. Список аргументов, передаваемый конструктору для создания экземпляра `resourcetype`. См. [список параметров](parameter-list.md).|  
-|`resourceexpression`|Обязательный. Переменная или выражение, ссылающиеся на системный ресурс, удовлетворяющий требованиям `resourcetype`. Если используется второй альтернативный синтаксис, необходимо получить ресурс перед передачей управления в оператор `Using`.|  
+|`resourcename`|Обязательный. Reference variable that refers to a system resource that the `Using` block controls.|  
+|`New`|Required if the `Using` statement acquires the resource. If you have already acquired the resource, use the second syntax alternative.|  
+|`resourcetype`|Обязательный. The class of the resource. The class must implement the <xref:System.IDisposable> interface.|  
+|`arglist`|Необязательный. List of arguments you are passing to the constructor to create an instance of `resourcetype`. See [Parameter List](parameter-list.md).|  
+|`resourceexpression`|Обязательный. Variable or expression referring to a system resource satisfying the requirements of `resourcetype`. If you use the second syntax alternative, you must acquire the resource before passing control to the `Using` statement.|  
   
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
- Иногда коду требуется неуправляемый ресурс, например файловый обработчик, оболочка COM или соединение SQL. Блок `Using` гарантирует удаление одного или нескольких таких ресурсов при завершении кода с ними. Это делает их доступными для использования другим кодом.
+ Sometimes your code requires an unmanaged resource, such as a file handle, a COM wrapper, or a SQL connection. A `Using` block guarantees the disposal of one or more such resources when your code is finished with them. This makes them available for other code to use.
 
- Управляемые ресурсы удаляются сборщиком мусора .NET Framework (GC) без дополнительного написания кода для вашей части. Для управляемых ресурсов не требуется блок `Using`. Однако можно по-прежнему использовать блок `Using` для принудительного удаления управляемого ресурса вместо ожидания сборщика мусора.
+ Managed resources are disposed of by the .NET Framework garbage collector (GC) without any extra coding on your part. You do not need a `Using` block for managed resources. However, you can still use a `Using` block to force the disposal of a managed resource instead of waiting for the garbage collector.
 
- Блок `Using` состоит из трех частей: приобретение, использование и утилизация.
+ A `Using` block has three parts: acquisition, usage, and disposal.
 
-- *Получение* означает создание переменной и ее инициализацию для ссылки на системный ресурс. Инструкция `Using` может получить один или несколько ресурсов или получить ровно один ресурс перед входом в блок и предоставить его оператору `Using`. При указании `resourceexpression` необходимо получить ресурс перед передачей управления в оператор `Using`.
+- *Acquisition* means creating a variable and initializing it to refer to the system resource. The `Using` statement can acquire one or more resources, or you can acquire exactly one resource before entering the block and supply it to the `Using` statement. If you supply `resourceexpression`, you must acquire the resource before passing control to the `Using` statement.
 
-- *Использование* означает доступ к ресурсам и выполнение действий с ними. Инструкции между `Using` и `End Using` представляют использование ресурсов.
+- *Usage* means accessing the resources and performing actions with them. The statements between `Using` and `End Using` represent the usage of the resources.
 
-- *Реализация* означает вызов метода <xref:System.IDisposable.Dispose%2A> для объекта в `resourcename`. Это позволяет объекту очищать свои ресурсы. Оператор `End Using` уничтожает ресурсы в элементе управления блока `Using`.
+- *Disposal* means calling the <xref:System.IDisposable.Dispose%2A> method on the object in `resourcename`. This allows the object to cleanly terminate its resources. The `End Using` statement disposes of the resources under the `Using` block's control.
 
 ## <a name="behavior"></a>Поведение
 
- Блок `Using` ведет себя как конструкция `Try`... `Finally`, в которой блок `Try` использует ресурсы, а блок `Finally` удаляет их. По этой причине блок `Using` гарантирует освобождение ресурсов, независимо от того, как вы выйдете из блока. Это справедливо даже в случае необработанного исключения, за исключением <xref:System.StackOverflowException>.
+ A `Using` block behaves like a `Try`...`Finally` construction in which the `Try` block uses the resources and the `Finally` block disposes of them. Because of this, the `Using` block guarantees disposal of the resources, no matter how you exit the block. This is true even in the case of an unhandled exception, except for a <xref:System.StackOverflowException>.
 
- Область каждой переменной ресурса, полученной с помощью оператора `Using`, ограничена блоком `Using`.
+ The scope of every resource variable acquired by the `Using` statement is limited to the `Using` block.
 
- Если в инструкции `Using` указано более одного системного ресурса, результат будет таким же, как если бы вложенный `Using` блокировал один из них.
+ If you specify more than one system resource in the `Using` statement, the effect is the same as if you nested `Using` blocks one within another.
 
- Если `resourcename` равно `Nothing`, вызов <xref:System.IDisposable.Dispose%2A> не выполняется и исключение не создается.
+ If `resourcename` is `Nothing`, no call to <xref:System.IDisposable.Dispose%2A> is made, and no exception is thrown.
 
-## <a name="structured-exception-handling-within-a-using-block"></a>Структурированная обработка исключений в блоке using
+## <a name="structured-exception-handling-within-a-using-block"></a>Structured Exception Handling Within a Using Block
 
- Если необходимо выполнить обработку исключения, которое может возникнуть в блоке `Using`, можно добавить в него полную конструкцию `Try`... `Finally`. Если необходимо выполнить обработку ситуации, когда инструкция `Using` не удается получить ресурс, можно проверить, является ли `resourcename` `Nothing`.
+ If you need to handle an exception that might occur within the `Using` block, you can add a complete `Try`...`Finally` construction to it. If you need to handle the case where the `Using` statement is not successful in acquiring a resource, you can test to see if `resourcename` is `Nothing`.
 
-## <a name="structured-exception-handling-instead-of-a-using-block"></a>Структурированная обработка исключений вместо блока using
+## <a name="structured-exception-handling-instead-of-a-using-block"></a>Structured Exception Handling Instead of a Using Block
 
- Если требуется более точный контроль за приобретением ресурсов или требуется дополнительный код в блоке `Finally`, можно переписать блок `Using` как конструкцию `Try`... `Finally`. В следующем примере показана схема конструкций `Try` и `Using`, которые эквивалентны при приобретении и утилизации `resource`.
+ If you need finer control over the acquisition of the resources, or you need additional code in the `Finally` block, you can rewrite the `Using` block as a `Try`...`Finally` construction. The following example shows skeleton `Try` and `Using` constructions that are equivalent in the acquisition and disposal of `resource`.
 
 ```vb
 Using resource As New resourceType
@@ -105,13 +105,13 @@ End Try
 ```
 
 > [!NOTE]
-> Код в блоке `Using` не должен назначать объект в `resourcename` в другую переменную. При выходе из блока `Using` ресурс удаляется, а другая переменная не может получить доступ к ресурсу, на который он указывает.
+> The code inside the `Using` block should not assign the object in `resourcename` to another variable. When you exit the `Using` block, the resource is disposed, and the other variable cannot access the resource to which it points.
 
 ## <a name="example"></a>Пример
 
- В следующем примере создается файл с именем log. txt и в него записываются две строки текста. В примере также считывается тот же файл и отображаются строки текста:
+ The following example creates a file that is named log.txt and writes two lines of text to the file. The example also reads that same file and displays the lines of text:
 
- Поскольку классы <xref:System.IO.TextWriter> и <xref:System.IO.TextReader> реализуют интерфейс <xref:System.IDisposable>, код может использовать операторы `Using`, чтобы гарантировать корректное закрытие файла после операций записи и чтения.
+ Because the <xref:System.IO.TextWriter> and <xref:System.IO.TextReader> classes implement the <xref:System.IDisposable> interface, the code can use `Using` statements to ensure that the file is correctly closed after the write and read operations.
 
  [!code-vb[VbVbalrStatements#50](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#50)]
 
@@ -119,4 +119,4 @@ End Try
 
 - <xref:System.IDisposable>
 - [Оператор Try...Catch...Finally](try-catch-finally-statement.md)
-- [Практическое руководство. Удаление системного ресурса @ no__t-0
+- [Практическое руководство. Удаление системного ресурса](../../programming-guide/language-features/control-flow/how-to-dispose-of-a-system-resource.md)

@@ -41,7 +41,7 @@ FUNCTION function-name
  `data_type`  
  Имя поддерживаемого типа.  
   
- Коллекция (< type_definition @ no__t-0)  
+ Коллекция (< type_definition`>`)  
  Выражение, возвращающее коллекцию поддерживаемых типов, строк или ссылок.  
   
  REF **(** `data_type` **)**  
@@ -61,7 +61,7 @@ FUNCTION function-name
   
  `A()`  
   
- Дополнительные сведения см. в разделе [Практическое руководство. Вызовите определяемую пользователем функцию @ no__t-0.  
+ Дополнительные сведения см. в статье [Практическое руководство. Вызов пользовательской функции](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd490951(v=vs.100)).  
   
  Функции также могут быть объявлены внутри самой модели. Функции, объявленные в модели, выполняются так же, как и функции, объявленные встроенными в команде. Дополнительные сведения см. в разделе [определяемые пользователем функции](user-defined-functions-entity-sql.md).  
   
@@ -75,7 +75,7 @@ FUNCTION function-name
   
  [!code-sql[DP EntityServices Concepts#FUNCTION2](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#function2)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Справочник по Entity SQL](entity-sql-reference.md)
 - [Язык Entity SQL](entity-sql-language.md)

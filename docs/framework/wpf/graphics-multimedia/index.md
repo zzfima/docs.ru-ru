@@ -137,11 +137,11 @@ End Class
 
 <a name="media"></a>
 
-## <a name="media"></a>Мультимедиа
+## <a name="media"></a>Медиа
 
 Изображения, видео и аудио являются мультимедийными способами передачи информации и взаимодействия с пользователями.
 
-### <a name="images"></a>образы,
+### <a name="images"></a>Изображения
 
 Изображения, которые включают значки, фоновые рисунки и даже части анимаций, являются одним из основных элементов большинства приложений. Так как с изображениями приходится работать часто, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] предоставляет возможность работать с ними различными способами. На следующем рисунке показан один из таких способов.
 
@@ -161,14 +161,14 @@ End Class
 
 Дополнительные сведения см. в разделе [Общие сведения о мультимедиа](multimedia-overview.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - <xref:System.Windows.Media>
 - <xref:System.Windows.Media.Animation>
 - <xref:System.Windows.Media.Media3D>
 - [Двумерная графика и изображения](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
 - [Обзор фигур и базовых средств рисования в приложении WPF](shapes-and-basic-drawing-in-wpf-overview.md)
-- [Общие сведения о закраске сплошным цветом и градиентом](painting-with-solid-colors-and-gradients-overview.md)
+- [Общие сведения о закрашивании сплошным цветом и градиентом](painting-with-solid-colors-and-gradients-overview.md)
 - [Заполнение с использованием изображений, рисунков и визуальных элементов](painting-with-images-drawings-and-visuals.md)
 - [Разделы руководства по анимации и времени](animation-and-timing-how-to-topics.md)
 - [Обзор трехмерной графики](3-d-graphics-overview.md)
