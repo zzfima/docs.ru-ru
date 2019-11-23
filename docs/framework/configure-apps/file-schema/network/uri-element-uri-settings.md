@@ -9,48 +9,48 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71697442"
 ---
-# <a name="uri-element-uri-settings"></a><span data-ttu-id="1d319-102">Элемент > @no__t 0uri (Параметры URI)</span><span class="sxs-lookup"><span data-stu-id="1d319-102">\<uri> Element (Uri Settings)</span></span>
-<span data-ttu-id="1d319-103">Содержит параметры, определяющие, как .NET Framework обрабатывает веб-адреса, выраженные с помощью универсальных идентификаторов ресурсов (URI).</span><span class="sxs-lookup"><span data-stu-id="1d319-103">Contains settings that specify how the .NET Framework handles web addresses expressed using uniform resource identifiers (URIs).</span></span>  
+# <a name="uri-element-uri-settings"></a><span data-ttu-id="b489b-102">Элемент > \<URI (Параметры URI)</span><span class="sxs-lookup"><span data-stu-id="b489b-102">\<uri> Element (Uri Settings)</span></span>
+<span data-ttu-id="b489b-103">Содержит параметры, определяющие, как .NET Framework обрабатывает веб-адреса, выраженные с помощью универсальных идентификаторов ресурсов (URI).</span><span class="sxs-lookup"><span data-stu-id="b489b-103">Contains settings that specify how the .NET Framework handles web addresses expressed using uniform resource identifiers (URIs).</span></span>  
   
-[<span data-ttu-id="1d319-104"> **\<configuration>** </span><span class="sxs-lookup"><span data-stu-id="1d319-104">**\<configuration>**</span></span>](../configuration-element.md)  
-<span data-ttu-id="1d319-105">&nbsp; @ no__t-1 **\<uri >**</span><span class="sxs-lookup"><span data-stu-id="1d319-105">&nbsp;&nbsp;**\<uri>**</span></span>  
+[<span data-ttu-id="b489b-104"> **\<configuration>** </span><span class="sxs-lookup"><span data-stu-id="b489b-104">**\<configuration>**</span></span>](../configuration-element.md)  
+<span data-ttu-id="b489b-105">&nbsp;&nbsp; **\<uri >**</span><span class="sxs-lookup"><span data-stu-id="b489b-105">&nbsp;&nbsp;**\<uri>**</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1d319-106">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="1d319-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b489b-106">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="b489b-106">Syntax</span></span>  
   
 ```xml  
 <uri>  
 </uri>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="1d319-107">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="1d319-107">Attributes and Elements</span></span>  
- <span data-ttu-id="1d319-108">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="1d319-108">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="b489b-107">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="b489b-107">Attributes and Elements</span></span>  
+ <span data-ttu-id="b489b-108">Следующие разделы описывают атрибуты, дочерние элементы и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="b489b-108">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="1d319-109">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="1d319-109">Attributes</span></span>  
- <span data-ttu-id="1d319-110">Нет.</span><span class="sxs-lookup"><span data-stu-id="1d319-110">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="b489b-109">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="b489b-109">Attributes</span></span>  
+ <span data-ttu-id="b489b-110">Нет</span><span class="sxs-lookup"><span data-stu-id="b489b-110">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="1d319-111">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="1d319-111">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="b489b-111">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="b489b-111">Child Elements</span></span>  
   
-|<span data-ttu-id="1d319-112">**Элемент**</span><span class="sxs-lookup"><span data-stu-id="1d319-112">**Element**</span></span>|<span data-ttu-id="1d319-113">**Описание**</span><span class="sxs-lookup"><span data-stu-id="1d319-113">**Description**</span></span>|  
+|<span data-ttu-id="b489b-112">**Элемент**</span><span class="sxs-lookup"><span data-stu-id="b489b-112">**Element**</span></span>|<span data-ttu-id="b489b-113">**Описание**</span><span class="sxs-lookup"><span data-stu-id="b489b-113">**Description**</span></span>|  
 |-----------------|---------------------|  
-|[<span data-ttu-id="1d319-114">IDN</span><span class="sxs-lookup"><span data-stu-id="1d319-114">idn</span></span>](idn-element-uri-settings.md)|<span data-ttu-id="1d319-115">Определяет, применяется ли к доменным именам анализ международных доменных имен (IDN).</span><span class="sxs-lookup"><span data-stu-id="1d319-115">Specifies if Internationalized Domain Name (IDN) parsing is applied to domain names.</span></span>|  
-|[<span data-ttu-id="1d319-116">Элемент iriParsing</span><span class="sxs-lookup"><span data-stu-id="1d319-116">iriParsing</span></span>](iriparsing-element-uri-settings.md)|<span data-ttu-id="1d319-117">Указывает, применяется ли синтаксический анализ международного идентификатора ресурса (IRI) к <xref:System.Uri>, и должны применяться правила синтаксического анализа IRI.</span><span class="sxs-lookup"><span data-stu-id="1d319-117">Specifies if International Resource Identifier (IRI) parsing is applied to <xref:System.Uri> and whether IRI parsing rules should be applied.</span></span>|  
-|[<span data-ttu-id="1d319-118">schemeSettings</span><span class="sxs-lookup"><span data-stu-id="1d319-118">schemeSettings</span></span>](schemesettings-element-uri-settings.md)|<span data-ttu-id="1d319-119">Определяет, как <xref:System.Uri> анализируется для определенных схем.</span><span class="sxs-lookup"><span data-stu-id="1d319-119">Specifies how a <xref:System.Uri> will be parsed for specific schemes.</span></span>|  
+|[<span data-ttu-id="b489b-114">IDN</span><span class="sxs-lookup"><span data-stu-id="b489b-114">idn</span></span>](idn-element-uri-settings.md)|<span data-ttu-id="b489b-115">Определяет, применяется ли к доменным именам анализ международных доменных имен (IDN).</span><span class="sxs-lookup"><span data-stu-id="b489b-115">Specifies if Internationalized Domain Name (IDN) parsing is applied to domain names.</span></span>|  
+|[<span data-ttu-id="b489b-116">Элемент iriParsing</span><span class="sxs-lookup"><span data-stu-id="b489b-116">iriParsing</span></span>](iriparsing-element-uri-settings.md)|<span data-ttu-id="b489b-117">Указывает, применяется ли синтаксический анализ международного идентификатора ресурса (IRI) к <xref:System.Uri> и должны применяться правила синтаксического анализа IRI.</span><span class="sxs-lookup"><span data-stu-id="b489b-117">Specifies if International Resource Identifier (IRI) parsing is applied to <xref:System.Uri> and whether IRI parsing rules should be applied.</span></span>|  
+|[<span data-ttu-id="b489b-118">schemeSettings</span><span class="sxs-lookup"><span data-stu-id="b489b-118">schemeSettings</span></span>](schemesettings-element-uri-settings.md)|<span data-ttu-id="b489b-119">Определяет, как <xref:System.Uri> анализируется для определенных схем.</span><span class="sxs-lookup"><span data-stu-id="b489b-119">Specifies how a <xref:System.Uri> will be parsed for specific schemes.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="1d319-120">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="1d319-120">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="b489b-120">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="b489b-120">Parent Elements</span></span>  
   
-|<span data-ttu-id="1d319-121">**Элемент**</span><span class="sxs-lookup"><span data-stu-id="1d319-121">**Element**</span></span>|<span data-ttu-id="1d319-122">**Описание**</span><span class="sxs-lookup"><span data-stu-id="1d319-122">**Description**</span></span>|  
+|<span data-ttu-id="b489b-121">**Элемент**</span><span class="sxs-lookup"><span data-stu-id="b489b-121">**Element**</span></span>|<span data-ttu-id="b489b-122">**Описание**</span><span class="sxs-lookup"><span data-stu-id="b489b-122">**Description**</span></span>|  
 |-----------------|---------------------|  
-|[<span data-ttu-id="1d319-123">Настройка</span><span class="sxs-lookup"><span data-stu-id="1d319-123">configuration</span></span>](../configuration-element.md)|<span data-ttu-id="1d319-124">Содержит параметры для всех пространств имен.</span><span class="sxs-lookup"><span data-stu-id="1d319-124">Contains settings for all namespaces.</span></span>|  
+|[<span data-ttu-id="b489b-123">Настройка</span><span class="sxs-lookup"><span data-stu-id="b489b-123">configuration</span></span>](../configuration-element.md)|<span data-ttu-id="b489b-124">Содержит параметры для всех пространств имен.</span><span class="sxs-lookup"><span data-stu-id="b489b-124">Contains settings for all namespaces.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="1d319-125">Примечания</span><span class="sxs-lookup"><span data-stu-id="1d319-125">Remarks</span></span>  
- <span data-ttu-id="1d319-126">Элемент `uri` содержит параметры для членов класса <xref:System.Uri>, используемых классами в пространстве имен <xref:System.Net>.</span><span class="sxs-lookup"><span data-stu-id="1d319-126">The `uri` element contains settings for members of the <xref:System.Uri> class used by classes in the <xref:System.Net> namespace.</span></span> <span data-ttu-id="1d319-127">Параметры настраивают поддержку для IRI и IDN.</span><span class="sxs-lookup"><span data-stu-id="1d319-127">The settings configure support for IRI and IDN.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="b489b-125">Примечания</span><span class="sxs-lookup"><span data-stu-id="b489b-125">Remarks</span></span>  
+ <span data-ttu-id="b489b-126">Элемент `uri` содержит параметры для членов класса <xref:System.Uri>, используемых классами в пространстве имен <xref:System.Net>.</span><span class="sxs-lookup"><span data-stu-id="b489b-126">The `uri` element contains settings for members of the <xref:System.Uri> class used by classes in the <xref:System.Net> namespace.</span></span> <span data-ttu-id="b489b-127">Параметры настраивают поддержку для IRI и IDN.</span><span class="sxs-lookup"><span data-stu-id="b489b-127">The settings configure support for IRI and IDN.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="1d319-128">Пример</span><span class="sxs-lookup"><span data-stu-id="1d319-128">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="b489b-128">Пример</span><span class="sxs-lookup"><span data-stu-id="b489b-128">Example</span></span>  
   
-### <a name="description"></a><span data-ttu-id="1d319-129">Описание</span><span class="sxs-lookup"><span data-stu-id="1d319-129">Description</span></span>  
- <span data-ttu-id="1d319-130">В следующем примере показана конфигурация, используемая классом <xref:System.Uri> для поддержки синтаксического анализа IRI и имен IDN.</span><span class="sxs-lookup"><span data-stu-id="1d319-130">The following example shows a configuration used by the <xref:System.Uri> class to support IRI parsing and IDN names.</span></span> <span data-ttu-id="1d319-131">В этом примере также очищаются все параметры схемы, а затем добавляется поддержка не экранирования процентов для пути, закодированного для схемы HTTP.</span><span class="sxs-lookup"><span data-stu-id="1d319-131">The example also clears all scheme settings and then adds support for not escaping percent-encoded path delimiters for the http scheme.</span></span>  
+### <a name="description"></a><span data-ttu-id="b489b-129">Описание</span><span class="sxs-lookup"><span data-stu-id="b489b-129">Description</span></span>  
+ <span data-ttu-id="b489b-130">В следующем примере показана конфигурация, используемая классом <xref:System.Uri> для поддержки синтаксического анализа IRI и имен IDN.</span><span class="sxs-lookup"><span data-stu-id="b489b-130">The following example shows a configuration used by the <xref:System.Uri> class to support IRI parsing and IDN names.</span></span> <span data-ttu-id="b489b-131">В этом примере также очищаются все параметры схемы, а затем добавляется поддержка не экранирования процентов для пути, закодированного для схемы HTTP.</span><span class="sxs-lookup"><span data-stu-id="b489b-131">The example also clears all scheme settings and then adds support for not escaping percent-encoded path delimiters for the http scheme.</span></span>  
   
-### <a name="code"></a><span data-ttu-id="1d319-132">Код</span><span class="sxs-lookup"><span data-stu-id="1d319-132">Code</span></span>  
+### <a name="code"></a><span data-ttu-id="b489b-132">Код</span><span class="sxs-lookup"><span data-stu-id="b489b-132">Code</span></span>  
   
 ```xml  
 <configuration>  
@@ -65,6 +65,6 @@ ms.locfileid: "71697442"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="1d319-133">См. также</span><span class="sxs-lookup"><span data-stu-id="1d319-133">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b489b-133">См. также:</span><span class="sxs-lookup"><span data-stu-id="b489b-133">See also</span></span>
 
-- [<span data-ttu-id="1d319-134">Схема параметров сети</span><span class="sxs-lookup"><span data-stu-id="1d319-134">Network Settings Schema</span></span>](index.md)
+- [<span data-ttu-id="b489b-134">Схема параметров сети</span><span class="sxs-lookup"><span data-stu-id="b489b-134">Network Settings Schema</span></span>](index.md)

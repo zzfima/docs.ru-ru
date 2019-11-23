@@ -11,11 +11,11 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 09/23/2019
 ms.locfileid: "73840823"
 ---
-# <a name="data-access-and-management"></a><span data-ttu-id="ba822-103">Доступ к данным и управление ими</span><span class="sxs-lookup"><span data-stu-id="ba822-103">Data access and management</span></span>
+# <a name="data-access-and-management"></a><span data-ttu-id="428c3-103">Доступ к данным и управление ими</span><span class="sxs-lookup"><span data-stu-id="428c3-103">Data access and management</span></span>
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-<span data-ttu-id="ba822-104">*Это содержимое скоро появится.*</span><span class="sxs-lookup"><span data-stu-id="ba822-104">*This content is coming soon.*</span></span>
+<span data-ttu-id="428c3-104">*Это содержимое скоро появится.*</span><span class="sxs-lookup"><span data-stu-id="428c3-104">*This content is coming soon.*</span></span>
 
 <!--
 - Entity Framework
@@ -25,6 +25,6 @@ ms.locfileid: "73840823"
 -->
 
 >[!div class="step-by-step"]
-><span data-ttu-id="ba822-105">[Назад](forms-validation.md)
->[Вперед](middleware.md)</span><span class="sxs-lookup"><span data-stu-id="ba822-105">[Previous](forms-validation.md)
+><span data-ttu-id="428c3-105">[Назад](forms-validation.md)
+>[Вперед](middleware.md)</span><span class="sxs-lookup"><span data-stu-id="428c3-105">[Previous](forms-validation.md)
 [Next](middleware.md)</span></span>
