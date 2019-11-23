@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: d1fb65e1-7e19-4513-85b1-44f87c294d3e
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a0f6b38cefa1c9b36a660559c1d97fc88f7dbddc
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e73c95d8c720ed3263d6a66c48bdb5b5582eb686
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777752"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74442178"
 ---
 # <a name="imetadatadispenserexfindassemblymodule-method"></a>Метод IMetaDataDispenserEx::FindAssemblyModule
-Этот метод не реализован. При вызове, он возвращает E_NOTIMPL.  
+Этот метод не реализован. If called, it returns E_NOTIMPL.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -44,35 +42,35 @@ HRESULT FindAssemblyModule(
   
 ## <a name="parameters"></a>Параметры  
  `szAppBase`  
- [in] Не используется.  
+ [in] Not used.  
   
  `szPrivateBin`  
- [in] Не используется.  
+ [in] Not used.  
   
  `szGlobalBin`  
- [in] Не используется.  
+ [in] Not used.  
   
  `szAssemblyName`  
- [in] Имя модуля.  
+ [in] The name of the module.  
   
  `szModuleName`  
- [in] Сборки, который требуется найти.  
+ [in] The assembly to be found.  
   
  `szName`  
- [out] Простое имя сборки.  
+ [out] The simple name of the assembly.  
   
  `cchName`  
- [in] Размер в байтах из `szName`.  
+ [in] The size, in bytes, of `szName`.  
   
  `pcName`  
- [out] Число символов, фактически возвращенных в `szName`.  
+ [out] The number of characters actually returned in `szName`.  
   
 ## <a name="requirements"></a>Требования  
- **Платформа:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** Cor.h  
+ **Header:** Cor.h  
   
- **Библиотека:** Используется как ресурс в MsCorEE.dll  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

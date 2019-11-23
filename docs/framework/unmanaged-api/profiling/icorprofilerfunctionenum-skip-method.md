@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 051465b9-e479-494a-804b-c880323b4cbe
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 755b022dde01a1d424fea58bcefe5df2bce401b3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d2a0bff0d3d93ab8542699cffd3d0ecc032246ad
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780275"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448196"
 ---
 # <a name="icorprofilerfunctionenumskip-method"></a>Метод ICorProfilerFunctionEnum::Skip
 Перемещает курсор перечислителя из текущей позиции, пропуская указанное число элементов.  
@@ -35,23 +33,23 @@ HRESULT Skip([in] ULONG celt);
   
 ## <a name="parameters"></a>Параметры  
  `celt`  
- [in] Число элементов, которые нужно пропустить.  
+ [in] The number of elements to be skipped.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Этот метод возвращает следующие конкретные результаты HRESULT, а также ошибки HRESULT, которые указывают на сбой метода.  
   
 |HRESULT|Описание|  
 |-------------|-----------------|  
-|S_OK|`celt` элементы были пропущены.|  
-|S_FALSE|Менее `celt` элементы были пропущены, который указывает, что никакие элементы.|  
+|S_OK|`celt` elements were skipped.|  
+|S_FALSE|Fewer than `celt` elements were skipped, which indicates that there are no more elements.|  
   
-## <a name="remarks"></a>Примечания  
- Новое положение курсора этот перечислитель является (текущей позиции) + `celt`.  
+## <a name="remarks"></a>Заметки  
+ The new position of this enumerator's cursor is (current position) + `celt`.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorProf.idl, CorProf.h  
+ **Заголовок:** CorProf.idl, CorProf.h  
   
  **Библиотека:** CorGuids.lib  
   

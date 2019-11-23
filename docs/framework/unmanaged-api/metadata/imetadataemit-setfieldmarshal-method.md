@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: be232314-7f69-4855-bfab-63361bd22307
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a55a8575a3f8ae04bcc4a148b588cd2361f81cf6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: cdbcdb9359d295ad9bed2050ed36499feba74d9e
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67751495"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74442276"
 ---
 # <a name="imetadataemitsetfieldmarshal-method"></a>Метод IMetaDataEmit::SetFieldMarshal
-Задает сведения о маршалинге для параметра поля, возвращаемого значения метода или метода ссылается указанный токен PInvoke.  
+Sets the PInvoke marshaling information for the field, method return, or method parameter referenced by the specified token.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,20 +37,20 @@ HRESULT SetFieldMarshal (
   
 ## <a name="parameters"></a>Параметры  
  `tk`  
- [in] Токен для целевого элемента данных. Это может быть либо `mdFieldDef` или `mdParamDef` токена.  
+ [in] The token for target data item. This is either a `mdFieldDef` or a `mdParamDef` token.  
   
  `pvNativeType`  
- [in] Сигнатура для неуправляемого типа.  
+ [in] The signature for unmanaged type.  
   
  `cbNativeType`  
- [in] Число байт в `pvNativeType`.  
+ [in] The count of bytes in `pvNativeType`.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** Cor.h  
+ **Header:** Cor.h  
   
- **Библиотека:** Используется как ресурс в MSCorEE.dll  
+ **Library:** Used as a resource in MSCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

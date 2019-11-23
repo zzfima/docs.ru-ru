@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c698b86e-ace7-4b21-9549-f52d6a034959
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6e06695f5ba348315523c7414822ce87d594bdbc
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 85e65f6a3ec13c2acc31b8f87dbe4b4476ffc2a5
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776602"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74427868"
 ---
 # <a name="isymunmanagedwritersetmethodsourcerange-method"></a>Метод ISymUnmanagedWriter::SetMethodSourceRange
-Указывает истинные начало и конец метода в исходном файле. Используйте этот метод для задания длины метода независимо от точек следования, имеющихся в методе.  
+Specifies the true start and end of a method within a source file. Use this method to specify the extent of a method independently of the sequence points that exist within the method.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -41,28 +39,28 @@ HRESULT SetMethodSourceRange(
   
 ## <a name="parameters"></a>Параметры  
  `startDoc`  
- [in] Указатель на документ, содержащий начальную позицию.  
+ [in] A pointer to the document containing the starting position.  
   
  `startLine`  
- [in] Номер начальной строки.  
+ [in] The starting line number.  
   
  `startColumn`  
- [in] Начальный столбец.  
+ [in] The starting column.  
   
  `endDoc`  
- [in] Указатель на документ, содержащий конечное положение.  
+ [in] A pointer to the document containing the ending position.  
   
  `endLine`  
- [in] Номер конечной строки.  
+ [in] The ending line number.  
   
  `endColumn`  
- [in] Номер конечного столбца.  
+ [in] The ending column number.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Требования  
- **Заголовок.** CorSym.idl CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>См. также
 

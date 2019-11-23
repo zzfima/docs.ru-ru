@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7f230961-23a6-4d56-ad2d-7a876d65705f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 5e00e7f39bc2f8c14db0676102a52089c7710bd6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 57515ac4670b9b7e25bb496851347a62e1b246df
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67772264"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74438728"
 ---
 # <a name="icorprofilerinfoisarrayclass-method"></a>Метод ICorProfilerInfo::IsArrayClass
-Определяет, является ли указанный класс класса массива.  
+Determines whether the specified class is an array class.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,24 +37,24 @@ HRESULT IsArrayClass(
   
 ## <a name="parameters"></a>Параметры  
  `classId`  
- [in] Идентификатор класса, который необходимо проверить.  
+ [in] The ID of the class to be examined.  
   
  `pBaseElemType`  
- [out] Указатель на значение CorElementType перечисления, указывающее тип элементов массива.  
+ [out] A pointer to a value of the CorElementType enumeration that indicates the type of the array elements.  
   
  `pBaseClassId`  
- [out] Указатель на идентификатор класса для элементов массива, если они доступны.  
+ [out] A pointer to the class ID of the array elements, when available.  
   
  `pcRank`  
- [out] Указатель на целое число, указывающее ранг (то есть число измерений) массива.  
+ [out] A pointer to an integer that indicates the rank (that is, number of dimensions) of the array.  
   
-## <a name="remarks"></a>Примечания  
- Если класс является классом массива, `IsArrayClass` метод возвращает значение S_OK HRESULT и значения для всех ненулевых выходных параметров. В противном случае возвращается значение S_FALSE.  
+## <a name="remarks"></a>Заметки  
+ If the specified class is an array class, the `IsArrayClass` method returns an S_OK HRESULT and values for any non-null output parameters. Otherwise, it returns S_FALSE.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorProf.idl, CorProf.h  
+ **Заголовок:** CorProf.idl, CorProf.h  
   
  **Библиотека:** CorGuids.lib  
   

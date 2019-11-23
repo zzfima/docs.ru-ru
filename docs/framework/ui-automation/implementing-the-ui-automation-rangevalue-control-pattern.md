@@ -6,16 +6,16 @@ helpviewer_keywords:
 - Range Value control pattern
 - UI Automation, Range Value control pattern
 ms.assetid: 225feaa4-918e-418b-938e-7389338d0a69
-ms.openlocfilehash: 57986fa28a7a1bb7f70409b332147ff5b9615ec0
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 04db9f97ccea10cf8c65df0f0117c272a5e868dd
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71043414"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74435104"
 ---
 # <a name="implementing-the-ui-automation-rangevalue-control-pattern"></a>Реализация шаблона элемента управления RangeValue автоматизации пользовательского интерфейса
 > [!NOTE]
-> Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Последние сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]см. в разделе [API службы автоматизации Windows: Модель автоматизации](https://go.microsoft.com/fwlink/?LinkID=156746)пользовательского интерфейса.  
+> Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Последние сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]см. в разделе [API автоматизации Windows. Автоматизация пользовательского интерфейса](/windows/win32/winauto/entry-uiauto-win32).  
   
  В этом разделе приводятся рекомендации и соглашения для реализации <xref:System.Windows.Automation.Provider.IRangeValueProvider>, включая сведения о событиях и свойствах. Ссылки на дополнительные материалы перечислены в конце раздела.  
   
@@ -29,7 +29,7 @@ ms.locfileid: "71043414"
   
 - Элементы управления, имеющие неоднозначные значения диапазона, такие как индикаторы выполнения или ползунки, должны нормализовать эти значения.  
   
- Индикатор ![выполнения.](./media/uia-rangevaluepattern-progress-bar.PNG "UIA_RangeValuePattern_Progress_Bar")  
+ ![Progress bar.](./media/uia-rangevaluepattern-progress-bar.PNG "UIA_RangeValuePattern_Progress_Bar")  
 Пример индикатора выполнения, где значение имеет тип Integer, а минимальное и максимальное значения свойства нормализованы до 0 и 100 соответственно  
   
 <a name="Required_Members_for_the_IRangeValueProvider"></a>   
@@ -37,12 +37,12 @@ ms.locfileid: "71043414"
   
 |Обязательный член|Тип члена|Примечания|  
 |---------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.RangeValuePattern.IsReadOnlyProperty>|Свойство.|Отсутствуют|  
-|<xref:System.Windows.Automation.RangeValuePattern.ValueProperty>|Свойство.|Отсутствуют|  
-|<xref:System.Windows.Automation.RangeValuePattern.LargeChangeProperty>|Свойство.|Отсутствуют|  
-|<xref:System.Windows.Automation.RangeValuePattern.SmallChangeProperty>|Свойство.|Отсутствуют|  
-|<xref:System.Windows.Automation.RangeValuePattern.MaximumProperty>|Свойство.|Отсутствуют|  
-|<xref:System.Windows.Automation.RangeValuePattern.MinimumProperty>|Свойство.|Отсутствуют|  
+|<xref:System.Windows.Automation.RangeValuePattern.IsReadOnlyProperty>|свойство;|Отсутствуют|  
+|<xref:System.Windows.Automation.RangeValuePattern.ValueProperty>|свойство;|Отсутствуют|  
+|<xref:System.Windows.Automation.RangeValuePattern.LargeChangeProperty>|свойство;|Отсутствуют|  
+|<xref:System.Windows.Automation.RangeValuePattern.SmallChangeProperty>|свойство;|Отсутствуют|  
+|<xref:System.Windows.Automation.RangeValuePattern.MaximumProperty>|свойство;|Отсутствуют|  
+|<xref:System.Windows.Automation.RangeValuePattern.MinimumProperty>|свойство;|Отсутствуют|  
 |<xref:System.Windows.Automation.RangeValuePattern.SetValue%2A>|Методы|Отсутствуют|  
   
  Этот шаблон элемента управления не имеет связанных событий.  

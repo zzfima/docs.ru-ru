@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 36997e04-f9f6-4254-a041-6767ac6c51d9
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b26f08548ac964fae2f4d64db50167add327eb2d
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: ff3103a46390c880a56ff443bfe20744f2ba0bfd
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70777372"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74430688"
 ---
 # <a name="getwin32resblob-method"></a>Метод GetWin32ResBlob
-Извлекает BLOB-объект ресурса Win32. Вызовите этот метод после установки параметров сборки.  
+Retrieves Win32 resource blob. Call this method after setting assembly options.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -41,28 +39,28 @@ HRESULT GetWin32ResBlob(
   
 ## <a name="parameters"></a>Параметры  
  `AssemblyID`  
- Идентификатор сборки.  
+ ID of the assembly.  
   
  `FileToken`  
- Токен файла, используемый для получения имени файла, используемого при создании ресурса версии Win32  
+ File token used to retrieve the filename to be used when constructing the Win32 Version resource  
   
  `fDll`  
- Значение TRUE, если файл является библиотекой DLL, и false для EXE-файла.  
+ TRUE if file is a DLL, false for an EXE.  
   
  `pszIconFile`  
- Необязательный значок для вставки в большой двоичный объект ресурса.  
+ Optional icon to insert into the resource blob.  
   
  `ppResBlob`  
- Получает большой двоичный объект ресурса.  
+ Receives the resource blob.  
   
  `pcbResBlob`  
- Получает размер большого двоичного объекта.  
+ Receives the size of the blob.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Если метод завершается с ошибкой, возвращает значение S_OK.  
+ Returns S_OK if the method succeeds.  
   
 ## <a name="requirements"></a>Требования  
- Требуется ALink. h  
+ Requires alink.h  
   
 ## <a name="see-also"></a>См. также
 
