@@ -10,39 +10,39 @@ helpviewer_keywords:
 - UI (user interface), automation
 - UI Automation
 ms.assetid: 4380cad7-e509-448f-b9a5-6de042605fd4
-ms.openlocfilehash: e0f7bd553096be0674827aa0498a53df5247940e
-ms.sourcegitcommit: 77e33b682db39955e331b8e8eda4ef1925a24e78
+ms.openlocfilehash: ceab7db1f9eeb47ec020e220ec702af8181855e2
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70133767"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74442483"
 ---
 # <a name="ui-automation-and-screen-scaling"></a>Модель автоматизации пользовательского интерфейса и масштабирование экрана
 > [!NOTE]
-> Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Последние сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]см. в разделе [API службы автоматизации Windows: Модель автоматизации](https://go.microsoft.com/fwlink/?LinkID=156746)пользовательского интерфейса.  
+> Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Последние сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]см. в разделе [API автоматизации Windows. Автоматизация пользовательского интерфейса](/windows/win32/winauto/entry-uiauto-win32).  
   
-Начиная с Windows Vista, Windows позволяет пользователям изменять параметр точек на дюйм (DPI), чтобы большинство элементов пользовательского интерфейса на экране отображались крупнее. Хотя эта функция в течение длительного времени была доступна в Windows, в предыдущих версиях масштабирование пришлось бы реализовать в приложениях. Начиная с Windows Vista, диспетчер окон рабочего стола выполняет масштабирование по умолчанию для всех приложений, которые не обрабатывали собственное масштабирование. Клиентские приложения модели автоматизации пользовательского интерфейса должны учитывать эту функцию.  
+Starting with Windows Vista, Windows enables users to change the dots per inch (dpi) setting so that most user interface (UI) elements on the screen appear larger. Although this feature has long been available in Windows, in previous versions the scaling had to be implemented by applications. Starting with Windows Vista, the Desktop Window Manager performs default scaling for all applications that do not handle their own scaling. Клиентские приложения модели автоматизации пользовательского интерфейса должны учитывать эту функцию.  
   
 <a name="Scaling_in_Windows_Vista"></a>   
 ## <a name="scaling-in-windows-vista"></a>Масштабирование в Windows Vista  
- Значение dpi по умолчанию — 96. Это означает, что 96 пикселов занимают ширину или высоту на одном определенном дюйме. Точный размер "дюйма" зависит от размера и физического разрешения монитора. Например, на мониторе шириной в 12 дюймов при горизонтальном разрешении в 1280 пикселей горизонтальная линия в 96 пикселей имеет протяженность около 9/10 дюйма.  
+ The default dpi setting is 96, which means that 96 pixels occupy a width or height of one notional inch. Точный размер "дюйма" зависит от размера и физического разрешения монитора. Например, на мониторе шириной в 12 дюймов при горизонтальном разрешении в 1280 пикселей горизонтальная линия в 96 пикселей имеет протяженность около 9/10 дюйма.  
   
- Изменение параметра dpi отличается от изменения разрешения экрана. При масштабировании dpi количество физических пикселей на экране остается неизменным. Однако масштабирование применяется к размеру и расположению элементов [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] . Это масштабирование может автоматически выполняться диспетчером окон рабочего стола для рабочего стола и для приложений, в которых не указан явный запрет на масштабирование.  
+ Changing the dpi setting is not the same as changing the screen resolution. With dpi scaling, the number of physical pixels on the screen remains the same. Однако масштабирование применяется к размеру и расположению элементов [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] . Это масштабирование может автоматически выполняться диспетчером окон рабочего стола для рабочего стола и для приложений, в которых не указан явный запрет на масштабирование.  
   
- Фактически, когда пользователь устанавливает коэффициент масштабирования 120 dpi, вертикальный или горизонтальный дюйм на экране станет больше 25%. Все измерения масштабируются согласованно. Смещение окна приложения от верхнего и левого краев экрана увеличивается на 25 процентов. Если масштабирование приложений включено и приложение не учитывает dpi, размер окна увеличивается в той же пропорции, а также смещения и размеров всех [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] элементов, которые он содержит.  
+ In effect, when the user sets the scale factor to 120 dpi, a vertical or horizontal inch on the screen becomes bigger by 25 percent. Все измерения масштабируются согласованно. Смещение окна приложения от верхнего и левого краев экрана увеличивается на 25 процентов. If application scaling is enabled and the application is not dpi-aware, the size of the window increases in the same proportion, along with the offsets and sizes of all [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] elements it contains.  
   
 > [!NOTE]
-> По умолчанию DWM не выполняет масштабирование для приложений, не поддерживающих dpi, когда пользователь устанавливает значение dpi равным 120, но выполняет его, если для dpi задано пользовательское число 144 или выше. Тем не менее пользователь может переопределить поведение по умолчанию.  
+> By default, the DWM does not perform scaling for non-dpi-aware applications when the user sets the dpi to 120, but does perform it when the dpi is set to a custom value of 144 or higher. Тем не менее пользователь может переопределить поведение по умолчанию.  
   
  Масштабирование экрана создает новые проблемы для приложений, которые каким-либо образом связаны с экранными координатами. Теперь экран содержит две системы координат: физическую и логическую. Физические координаты точки являются фактическим смещением в пикселях от верхнего левого угла начала координат. Логические координаты — это смещения, какими они были бы, если бы сами пиксели масштабировались.  
   
- Предположим, вы разрабатываете диалоговое окно с кнопкой, имеющей координаты (100, 48). Когда это диалоговое окно отображается по умолчанию 96 dpi, кнопка находится в расположениях с физическими координатами (100, 48). В 120 dpi он находится в физических координатах (125, 60). Однако логические координаты одинаковы при любом значении DPI: (100, 48).  
+ Предположим, вы разрабатываете диалоговое окно с кнопкой, имеющей координаты (100, 48). When this dialog box is displayed at the default 96 dpi, the button is located at physical coordinates of (100, 48). At 120 dpi, it is located at physical coordinates of (125, 60). But the logical coordinates are the same at any dpi setting: (100, 48).  
   
- Логические координаты важны, так как они делают поведение операционной системы и приложений совместимым, независимо от параметра dpi. Например, <xref:System.Windows.Forms.Cursor.Position%2A?displayProperty=nameWithType> обычно возвращает логические координаты. При перемещении курсора по элементу в диалоговом окне возвращаются одни и те же координаты независимо от параметра dpi. Если нарисовать элемент управления в (100, 100), он выводится на эти логические координаты и будет занимать ту же относительную точку при любом значении DPI.  
+ Logical coordinates are important, because they make the behavior of the operating system and applications consistent regardless of the dpi setting. Например, <xref:System.Windows.Forms.Cursor.Position%2A?displayProperty=nameWithType> обычно возвращает логические координаты. If you move the cursor over an element in a dialog box, the same coordinates are returned regardless of the dpi setting. If you draw a control at (100, 100), it is drawn to those logical coordinates, and will occupy the same relative position at any dpi setting.  
   
 <a name="Scaling_in_UI_Automation_Clients"></a>   
 ## <a name="scaling-in-ui-automation-clients"></a>Масштабирование в клиентах автоматизации пользовательского интерфейса  
- В [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] API не используются логические координаты. Следующие методы и свойства либо возвращают физические координаты, либо принимают их в качестве параметров.  
+ The [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] API does not use logical coordinates. Следующие методы и свойства либо возвращают физические координаты, либо принимают их в качестве параметров.  
   
 - <xref:System.Windows.Automation.AutomationElement.GetClickablePoint%2A>  
   
@@ -54,16 +54,16 @@ ms.locfileid: "70133767"
   
 - <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.BoundingRectangle%2A>  
   
- По умолчанию клиентское приложение автоматизации пользовательского интерфейса, работающее в среде без 96 dpi, не сможет получить правильные результаты из этих методов и свойств. Например, поскольку положение курсора определяется в логических координатах, клиент не может просто передать эти координаты в метод <xref:System.Windows.Automation.AutomationElement.FromPoint%2A> , чтобы получить элемент, находящийся под курсором. Кроме того, такое приложение не сможет правильно разместить окна за пределами клиентской области.  
+ By default, a UI Automation client application running in a non-96- dpi environment will not be able to obtain correct results from these methods and properties. Например, поскольку положение курсора определяется в логических координатах, клиент не может просто передать эти координаты в метод <xref:System.Windows.Automation.AutomationElement.FromPoint%2A> , чтобы получить элемент, находящийся под курсором. Кроме того, такое приложение не сможет правильно разместить окна за пределами клиентской области.  
   
  Решение состоит из двух частей.  
   
-1. Во-первых, сделайте так, чтобы клиентское приложение было ориентировано на dpi. Для этого вызовите функцию [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] `SetProcessDPIAware` во время запуска. В управляемом коде следующее объявление сделает эту функцию доступной.  
+1. First, make the client application dpi-aware. Для этого вызовите функцию [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] `SetProcessDPIAware` во время запуска. В управляемом коде следующее объявление сделает эту функцию доступной.  
   
      [!code-csharp[Highlighter#101](../../../samples/snippets/csharp/VS_Snippets_Wpf/Highlighter/CSharp/NativeMethods.cs#101)]
      [!code-vb[Highlighter#101](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Highlighter/VisualBasic/NativeMethods.vb#101)]  
   
-     Эта функция выполняет весь процесс, учитывающий dpi, что означает, что все окна, принадлежащие процессу, не масштабируются. Например, в [Highlighter Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/Highlighter) четыре окна, составляющие прямоугольник выделения, расположены в физических координатах, полученных из модели автоматизации пользовательского интерфейса, а не логических координат. Если в примере не учитывается dpi, выделение будет выводиться по логическим координатам на рабочем столе, что привело бы к неправильному размещению в среде, отличной от 96 dpi.  
+     This function makes the entire process dpi-aware, meaning that all windows that belong to the process are unscaled. In the [Highlighter Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/Highlighter), for instance, the four windows that make up the highlight rectangle are located at the physical coordinates obtained from UI Automation, not the logical coordinates. If the sample were not dpi-aware, the highlight would be drawn at the logical coordinates on the desktop, which would result in incorrect placement in a non-96- dpi environment.  
   
 2. Чтобы получить координаты курсора, вызовите функцию [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] `GetPhysicalCursorPos`. В следующем примере показано, как объявлять и использовать эту функцию.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "70133767"
 > [!CAUTION]
 > Не используйте <xref:System.Windows.Forms.Cursor.Position%2A?displayProperty=nameWithType>. Поведение этого свойства вне клиентских окон в масштабируемой среде не определено.  
   
- Если приложение выполняет прямое межпроцессное взаимодействие с приложениями, не поддерживающими dpi, возможно преобразование между логическими и физическими координатами с помощью [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] функций `PhysicalToLogicalPoint` и `LogicalToPhysicalPoint`.  
+ If your application performs direct cross-process communication with non- dpi-aware applications, you may have convert between logical and physical coordinates by using the [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] functions `PhysicalToLogicalPoint` and `LogicalToPhysicalPoint`.  
   
 ## <a name="see-also"></a>См. также
 

@@ -14,16 +14,14 @@ helpviewer_keywords:
 ms.assetid: 619bb5de-e309-48b6-a3af-32d935a0ff46
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 1dd3cf7e4badf8caa711f2a1b972d9fa14215204
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8105ba34ca400771fbc4273630f20941a4a9557d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67752141"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74432273"
 ---
-# <a name="corprfmisc-enumeration"></a>Перечисление COR_PRF_MISC
+# <a name="cor_prf_misc-enumeration"></a>Перечисление COR_PRF_MISC
 Содержит постоянные значения, которые указывают специальные идентификаторы.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -36,18 +34,18 @@ typedef enum {
 } COR_PRF_MISC;  
 ```  
   
-## <a name="members"></a>Участники  
+## <a name="members"></a>Члены  
   
 |Член|Описание|  
 |------------|-----------------|  
-|`PROFILER_PARENT_UNKNOWN`|Идентификатор по умолчанию, используемый [ICorProfilerInfo::GetModuleInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getmoduleinfo-method.md) для модуля, который еще не присоединена к сборке.|  
-|`PROFILER_GLOBAL_CLASS`|Идентификатор класса по умолчанию для глобальных констант, которые не принадлежат к классу.|  
-|`PROFILER_GLOBAL_MODULE`|Идентификатор модуля по умолчанию для глобальных объектов, не принадлежащие к модулю.|  
+|`PROFILER_PARENT_UNKNOWN`|The default identifier used by [ICorProfilerInfo::GetModuleInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getmoduleinfo-method.md) for a module that has not yet been attached to an assembly.|  
+|`PROFILER_GLOBAL_CLASS`|The default class identifier for global constants that do not belong to a class.|  
+|`PROFILER_GLOBAL_MODULE`|The default module identifier for global objects that do not belong to a module.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorProf.idl, CorProf.h  
+ **Заголовок:** CorProf.idl, CorProf.h  
   
  **Библиотека:** CorGuids.lib  
   

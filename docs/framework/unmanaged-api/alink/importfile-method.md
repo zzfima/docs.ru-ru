@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: bcbe321f-b83a-4e9a-9f10-8d913e244dc9
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f7fee7a91de99e2db69609cbc7c73e22d85d045f
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: cda6d90865f8ad2b9d565f6a6378c35b03c65bf7
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70777070"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446996"
 ---
 # <a name="importfile-method"></a>Метод ImportFile
-Импортирует сборки и непривязанные модули.  
+Imports assemblies and unbound modules.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -41,28 +39,28 @@ HRESULT ImportFile(
   
 ## <a name="parameters"></a>Параметры  
  `pszFilename`  
- Полное имя импортируемого файла.  
+ Fully qualified name of file to be imported.  
   
  `pszTargetName`  
- Необязательное имя выходного файла, которое можно использовать для переименования файла, так как он связан с сборкой.  
+ Optional output file name that can be used to rename the file as it is linked into the assembly.  
   
  `fSmartImport`  
- Если значение равно TRUE, используется ImportTypes, в противном случае импорт должен выполняться вручную.  
+ If TRUE, ImportTypes is used, otherwise importing must be performed manually.  
   
  `pImportToken`  
- Указатель на маркер, где будет храниться уникальный идентификатор файла. Файл может быть сборкой или файлом.  
+ Pointer to token where a unique file ID will be stored. The file can be an assembly or a file.  
   
  `ppAssemblyScope`  
- Получает указатель на [интерфейс IMetaDataAssemblyImport](../metadata/imetadataassemblyimport-interface.md). Может иметь значение NULL, если файл не является сборкой.  
+ Receives pointer to [IMetaDataAssemblyImport Interface](../metadata/imetadataassemblyimport-interface.md). Can be NULL if the file is not an assembly.  
   
  `pdwCountOfScopes`  
- Указатель на число импортированных файлов и (или) областей.  
+ Pointer to the count of files and/or scopes that have been imported.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Если метод завершается с ошибкой, возвращает значение S_OK.  
+ Returns S_OK if the method succeeds.  
   
 ## <a name="requirements"></a>Требования  
- Требуется ALink. h  
+ Requires alink.h  
   
 ## <a name="see-also"></a>См. также
 

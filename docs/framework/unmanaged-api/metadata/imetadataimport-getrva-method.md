@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: ea422217-988b-4acd-b2db-c55357938275
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d305aa59c1b9e9e1225b30f12e36fc689d584db1
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a3a5cadc1b5a9df7967aae271ff10296843121dd
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778883"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436955"
 ---
 # <a name="imetadataimportgetrva-method"></a>Метод IMetaDataImport::GetRVA
-Возвращает относительный виртуальный адрес (RVA) и флаги реализации метода или поля, представленного указанным токеном.  
+Gets the relative virtual address (RVA) and the implementation flags of the method or field represented by the specified token.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,20 +37,20 @@ HRESULT GetRVA (
   
 ## <a name="parameters"></a>Параметры  
  `tk`  
- [in] MethodDef или FieldDef токен метаданных, представляющий возвращаемого RVA для объекта кода. Если токен FieldDef, поле должно быть глобальной переменной.  
+ [in] A MethodDef or FieldDef metadata token that represents the code object to return the RVA for. If the token is a FieldDef, the field must be a global variable.  
   
  `pulCodeRVA`  
- [out] Указатель на относительный виртуальный адрес объекта кода, представленного маркером.  
+ [out] A pointer to the relative virtual address of the code object represented by the token.  
   
  `pdwImplFlags`  
- [out] Указатель на флаги реализации метода. Это значение является битовой [CorMethodImpl](../../../../docs/framework/unmanaged-api/metadata/cormethodimpl-enumeration.md) перечисления. Значение `pdwImplFlags` действителен только если `tk` является токеном MethodDef.  
+ [out] A pointer to the implementation flags for the method. This value is a bitmask from the [CorMethodImpl](../../../../docs/framework/unmanaged-api/metadata/cormethodimpl-enumeration.md) enumeration. The value of `pdwImplFlags` is valid only if `tk` is a MethodDef token.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** Cor.h  
+ **Header:** Cor.h  
   
- **Библиотека:** Включена как ресурс в MsCorEE.dll  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

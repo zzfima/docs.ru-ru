@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c84f4846-9bc8-44a4-9a76-e39106d6d8b2
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 50cd6d1e3666dd1f15c1e6a6b4f7dcb931b79d8d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b3674c4058dba2f6185418b55b35eefb14c312f6
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777063"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74431237"
 ---
 # <a name="isymunmanagedreadergetsymbolstorefilename-method"></a>Метод ISymUnmanagedReader::GetSymbolStoreFileName
-Предоставляет имя файла на диске в хранилище символов.  
+Provides the on-disk file name of the symbol store.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,19 +37,19 @@ HRESULT GetSymbolStoreFileName (
   
 ## <a name="parameters"></a>Параметры  
  `cchName`  
- [in] Размер `szName` буфера.  
+ [in] The size of the `szName` buffer.  
   
  `pcchName`  
- [out] Указатель на переменную, которая получает длину имени возвращаемого в `szName`, включая завершающимся нулевым значением.  
+ [out] A pointer to the variable that receives the length of the name returned in `szName`, including the null termination.  
   
  `szName`  
- [out] Указатель на переменную, которая получает имя файла в хранилище символов.  
+ [out] A pointer to the variable that receives the file name of the symbol store.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Требования  
- **Заголовок.** CorSym.idl CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>См. также
 

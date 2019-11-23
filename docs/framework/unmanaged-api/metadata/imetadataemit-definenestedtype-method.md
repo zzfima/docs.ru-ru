@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1e994de6-4628-459c-b967-b34be1e9fe4f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 7676c83e8b231606896cb6d1224633b4fa15e725
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5d985e22ba77053127610445374b8c13ca6b97f1
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777568"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74431702"
 ---
 # <a name="imetadataemitdefinenestedtype-method"></a>Метод IMetaDataEmit::DefineNestedType
-Создает подпись метаданных определения типа, возвращает `mdTypeDef` маркеров для этого типа и указывает, что определенный тип является членом типа, который ссылается `tdEncloser` параметра.  
+Creates the metadata signature of a type definition, returns an `mdTypeDef` token for that type, and specifies that the defined type is a member of the type referenced by the `tdEncloser` parameter.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -42,29 +40,29 @@ HRESULT DefineNestedType (
   
 ## <a name="parameters"></a>Параметры  
  `szTypeDef`  
- [in] Имя типа в формате Юникод.  
+ [in] The name of the type in Unicode.  
   
  `dwTypeDefFlags`  
- [in] `TypeDef` атрибуты. Это битовая маска `CorTypeAttr` значения.  
+ [in] `TypeDef` attributes. This is a bitmask of `CorTypeAttr` values.  
   
  `tkExtends`  
- [in] Токен базового класса. Это может быть либо `mdTypeDef` или `mdTypeRef` токена.  
+ [in] The token of the base class. This is either a `mdTypeDef` or a `mdTypeRef` token.  
   
  `rtkImplements`[]  
- [in] Массив токенов, которые указывают интерфейсы, реализуемые этот класс или интерфейс.  
+ [in] An array of tokens that specify the interfaces that this class or interface implements.  
   
  `tdEncloser`  
- [in] Токен данного включающего типа. Последний элемент массива должен быть `mdTokenNil`.  
+ [in] The token of the enclosing type. The last element of the array must be `mdTokenNil`.  
   
  `ptd`  
- [out] `mdTypeDef` Маркер, назначенный.  
+ [out] The `mdTypeDef` token assigned.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** Cor.h  
+ **Header:** Cor.h  
   
- **Библиотека:** Используется как ресурс в MSCorEE.dll  
+ **Library:** Used as a resource in MSCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

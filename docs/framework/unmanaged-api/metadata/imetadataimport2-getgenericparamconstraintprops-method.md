@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c5fee4a0-b132-4e5e-8730-e586ce314b9a
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e3868b07ff01f2d1fec79537dd478a2d005f490f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6d7884e896d6a0463639e7ef08b47dced10a27f4
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778772"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74431384"
 ---
 # <a name="imetadataimport2getgenericparamconstraintprops-method"></a>Метод IMetaDataImport2::GetGenericParamConstraintProps
-Получает метаданные, связанные с ограничением параметра универсального типа, представленного маркером указанное ограничение.  
+Gets the metadata associated with the generic parameter constraint represented by the specified constraint token.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,20 +37,20 @@ HRESULT GetGenericParamConstraintProps (
   
 ## <a name="parameters"></a>Параметры  
  `gpc`  
- [in] Токен, ограничение универсального параметра, для которого необходимо вернуть метаданные.  
+ [in] The token to the generic parameter constraint for which to return the metadata.  
   
  `ptGenericParam`  
- [out] Указатель на токен, представляющий универсальный параметр, который ограничен.  
+ [out] A pointer to the token that represents the generic parameter that is constrained.  
   
  `ptkConstraintType`  
- [out] Указатель на токен TypeDef, TypeRef или TypeSpec, который представляет ограничение на `ptGenericParam`.  
+ [out] A pointer to a TypeDef, TypeRef, or TypeSpec token that represents a constraint on `ptGenericParam`.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** Cor.h  
+ **Header:** Cor.h  
   
- **Библиотека:** Используется как ресурс в MsCorEE.dll  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

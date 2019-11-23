@@ -15,18 +15,16 @@ helpviewer_keywords:
 ms.assetid: 35b8f0d6-9aba-4714-adb2-62020a38fb7e
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a4eaf426bc9c933de1d4b774928f2b0a54dfb472
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 5936ca837c9ab452e992fcb09aacb476ab37316a
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636962"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74431432"
 ---
 # <a name="imetadatatablesgetuserstring-method"></a>Метод IMetaDataTables::GetUserString
 
-Получает жестко заданную строку по указанному индексу в строковый столбец в текущей области.
+Gets the hard-coded string at the specified index in the string column in the current scope.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -41,21 +39,21 @@ HRESULT GetUserString (
 ## <a name="parameters"></a>Параметры
 
 `ixUserString`\
-[in] Значение индекса, из которого извлекается строка жестко.
+[in] The index value from which the hard-coded string will be retrieved.
 
 `pcbData`\
-[out] Указатель на размер `ppData`.
+[out] A pointer to the size of `ppData`.
 
 `ppData`\
-[out] Указатель на указатель возвращаемой строки.
+[out] A pointer to a pointer to the returned string.
 
 ## <a name="requirements"></a>Требования
 
-**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).
+**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).
 
-**Заголовок.** Cor.h
+**Header:** Cor.h
 
-**Библиотека:** Используется как ресурс в MsCorEE.dll
+**Library:** Used as a resource in MsCorEE.dll
 
 **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
 

@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 83058790-160b-4703-a5eb-74b66acbdfa9
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 9206fbde13f457d4b2e2941ee744d645c6df9774
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 58d30e71929d314ee36adb9f83270858ff8a161b
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781999"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74442449"
 ---
 # <a name="corunmanagedcallingconvention-enumeration"></a>Перечисление CorUnmanagedCallingConvention
-Задает соглашения о вызовах для неуправляемого кода.  
+Specifies the calling conventions for unmanaged code.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -44,26 +42,26 @@ typedef enum CorUnmanagedCallingConvention {
 } CorUnmanagedCallingConvention;  
 ```  
   
-## <a name="members"></a>Участники  
+## <a name="members"></a>Члены  
   
 |Член|Описание|  
 |------------|-----------------|  
-|`IMAGE_CEE_UNMANAGED_CALLCONV_C`|C языка соглашение о вызове.|  
-|`IMAGE_CEE_UNMANAGED_CALLCONV_STDCALL`|Стандартный соглашение о вызовах.|  
-|`IMAGE_CEE_UNMANAGED_CALLCONV_THISCALL`|«This» соглашение о вызове.|  
-|`IMAGE_CEE_UNMANAGED_CALLCONV_FASTCALL`|«Быстрый» о вызовах.|  
+|`IMAGE_CEE_UNMANAGED_CALLCONV_C`|The C language calling convention.|  
+|`IMAGE_CEE_UNMANAGED_CALLCONV_STDCALL`|The standard calling convention.|  
+|`IMAGE_CEE_UNMANAGED_CALLCONV_THISCALL`|The "this" calling convention.|  
+|`IMAGE_CEE_UNMANAGED_CALLCONV_FASTCALL`|The "fast" calling convention.|  
 |`IMAGE_CEE_CS_CALLCONV_C`|Не используется.|  
 |`IMAGE_CEE_CS_CALLCONV_STDCALL`|Не используется.|  
 |`IMAGE_CEE_CS_CALLCONV_THISCALL`|Не используется.|  
 |`IMAGE_CEE_CS_CALLCONV_FASTCALL`|Не используется.|  
   
-## <a name="remarks"></a>Примечания  
- Среда CLR не поддерживает «быстрый» соглашение о вызове в .NET Framework версии 1.0.  
+## <a name="remarks"></a>Заметки  
+ The CLR does not support the "fast" calling convention in the .NET Framework version 1.0.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorHdr.h  
+ **Header:** CorHdr.h  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

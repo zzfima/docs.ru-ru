@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8a7d4e40-28fe-4e14-b801-4049880130e7
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 2ba9d7f8873d15a7cab2b9893feb8563dfc971b0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d1683965193801dbdee038ab06366178891fd978
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778759"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74426722"
 ---
 # <a name="imetadataimport2enumgenericparamconstraints-method"></a>Метод IMetaDataImport2::EnumGenericParamConstraints
-Получает перечислитель для массива универсальный параметр ограничения, связанные с универсального параметра, представленного указанным токеном.  
+Gets an enumerator for an array of generic parameter constraints associated with the generic parameter represented by the specified token.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -41,33 +39,33 @@ HRESULT EnumGenericParamConstraints (
   
 ## <a name="parameters"></a>Параметры  
  `phEnum`  
- [in, out] Указатель на перечислитель.  
+ [in, out] A pointer to the enumerator.  
   
  `tk`  
- [in]   Токен, который представляет универсальный параметр, ограничения должны быть перечислены.  
+ [in]   A token that represents the generic parameter whose constraints are to be enumerated.  
   
  `rGenericParamConstraints`  
- [out] Массив ограничений параметра универсального типа для перечисления.  
+ [out] The array of generic parameter constraints to enumerate.  
   
  `cMax`  
- [in]   Максимальное число маркеров для размещения в `rGenericParamConstraints`.  
+ [in]   The requested maximum number of tokens to place in `rGenericParamConstraints`.  
   
  `pcGenericParamConstraints`  
- [out] Указатель на число маркеров помещаются в `rGenericParamConstraints`.  
+ [out] A pointer to the number of tokens placed in `rGenericParamConstraints`.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
   
 |HRESULT|Описание|  
 |-------------|-----------------|  
-|`S_OK`|`EnumGenericParameterConstraints` успешно возвращен.|  
-|`S_FALSE`|`phEnum` не имеет члена элементов. В этом случае `pcGenericParameterConstraints` имеет значение 0 (ноль).|  
+|`S_OK`|`EnumGenericParameterConstraints` returned successfully.|  
+|`S_FALSE`|`phEnum` has no member elements. In this case, `pcGenericParameterConstraints` is set to 0 (zero).|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** Cor.h  
+ **Header:** Cor.h  
   
- **Библиотека:** Используется как ресурс в MsCorEE.dll  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
