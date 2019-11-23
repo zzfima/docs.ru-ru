@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9e707abb-f905-4568-9356-12aa21d1b11c
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b1406c68f1f6abff4d140b131f5f630d0fd767e1
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 4dd104805d547613315335bc9c95b5c60a9cab14
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70787690"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446681"
 ---
 # <a name="addfile-method"></a>Метод AddFile
-Добавляет файлы в сборку. Также можно использовать для создания непривязанных модулей.  
+Adds files to the assembly. Can also be used to create unbound modules.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -41,25 +39,25 @@ HRESULT AddFile(
   
 ## <a name="parameters"></a>Параметры  
  `AssemblyID`  
- Уникальный идентификатор сборки, подлежащая дополну.  
+ Unique ID of the assembly to be augmented.  
   
  `pszFilename`  
- Полное имя добавляемого файла.  
+ Fully qualified name of file to be added.  
   
  `dwFlags`  
- COM+ филедеф флаги, `ffContainsNoMetaData` такие `ffWriteable`как и. `dwFlags`передается [методу дефинефиле](../metadata/imetadataassemblyemit-definefile-method.md).  
+ COM+ FileDef flags such as `ffContainsNoMetaData` and `ffWriteable`. `dwFlags` is passed to [DefineFile Method](../metadata/imetadataassemblyemit-definefile-method.md).  
   
  `pEmitter`  
- Интерфейс [IMetaDataEmit](../metadata/imetadataemit-interface.md) , используемый для выдачи метаданных при необходимости.  
+ [IMetaDataEmit Interface](../metadata/imetadataemit-interface.md) interface to be used to emit metadata, if necessary.  
   
  `pFileToken`  
- Указатель на место, где будет храниться уникальный идентификатор добавленного файла.  
+ Pointer to where the unique ID of the added file will be stored.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Если метод завершается с ошибкой, возвращает значение S_OK.  
+ Returns S_OK if the method succeeds.  
   
 ## <a name="requirements"></a>Требования  
- Требуется ALink. h.  
+ Requires alink.h.  
   
 ## <a name="see-also"></a>См. также
 
