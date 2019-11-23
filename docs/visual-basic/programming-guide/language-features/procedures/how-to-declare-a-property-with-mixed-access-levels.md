@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Объявление свойства со смешанным уровнем доступа (Visual Basic)
+title: Практическое руководство. Объявление свойства со смешанным уровнем доступа
 ms.date: 07/20/2015
 helpviewer_keywords:
 - access levels [Visual Basic], properties
@@ -10,29 +10,29 @@ helpviewer_keywords:
 - properties [Visual Basic], access levels
 - Property statement [Visual Basic], declaring mixed access levels
 ms.assetid: fdbb2d97-279a-4956-b26c-cbdfbc34915a
-ms.openlocfilehash: e899b57e02f492b0e4909aca84c069e5b7688618
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d74e23f33fbf7d9d29ab84b9b1bd4fc08863ac48
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61863692"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349699"
 ---
 # <a name="how-to-declare-a-property-with-mixed-access-levels-visual-basic"></a>Практическое руководство. Объявление свойства со смешанным уровнем доступа (Visual Basic)
-Если вы хотите, чтобы `Get` и `Set` процедуры в свойство, чтобы иметь различные уровни доступа, можно использовать менее строгий уровень в `Property` инструкции и более строгий уровень в любом `Get` или `Set` инструкция. Вы можете использовать смешанным уровнем доступа для свойства, определенные части кода, чтобы иметь возможность получить значение свойства, а другие части кода, чтобы иметь возможность изменить значение.  
+If you want the `Get` and `Set` procedures on a property to have different access levels, you can use the more permissive level in the `Property` statement and the more restrictive level in either the `Get` or `Set` statement. You use mixed access levels on a property when you want certain parts of the code to be able to get the property's value, and certain other parts of the code to be able to change the value.  
   
- Дополнительные сведения об уровнях доступа см. в разделе [уровни в Visual Basic доступа](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
+ For more information on access levels, see [Access levels in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
-### <a name="to-declare-a-property-with-mixed-access-levels"></a>Для объявления свойства со смешанным уровнем доступа  
+### <a name="to-declare-a-property-with-mixed-access-levels"></a>To declare a property with mixed access levels  
   
-1. Объявите свойство обычным способом и укажите менее строгий уровень доступа (такие как `Public`) в `Property` инструкции.  
+1. Declare the property in the normal way, and specify the less restrictive access level (such as `Public`) in the `Property` statement.  
   
-2. Объявление любого `Get` или `Set` процедуру, указав более строгий уровень доступа (такие как `Friend`).  
+2. Declare either the `Get` or the `Set` procedure specifying the more restrictive access level (such as `Friend`).  
   
-3. Не указывайте уровень доступа на другие процедуры свойства. Предполагается уровень доступа, объявленные в `Property` инструкции. Можно ограничить доступ только к одной из процедур свойства.  
+3. Do not specify an access level on the other property procedure. It assumes the access level declared in the `Property` statement. You can restrict access on only one of the property procedures.  
   
      [!code-vb[VbVbcnProcedures#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#10)]  
   
-     В приведенном выше примере `Get` процедуры имеет те же `Protected` доступа, что и само свойство, хотя `Set` процедура имеет `Private` доступа. Класс, производный от `employee` может считывать `salary` значение, но только `employee` класс может установить его.  
+     In the preceding example, the `Get` procedure has the same `Protected` access as the property itself, while the `Set` procedure has `Private` access. A class derived from `employee` can read the `salary` value, but only the `employee` class can set it.  
   
 ## <a name="see-also"></a>См. также
 
@@ -40,9 +40,9 @@ ms.locfileid: "61863692"
 - [Процедуры свойств](./property-procedures.md)
 - [Параметры и аргументы процедуры](./procedure-parameters-and-arguments.md)
 - [Оператор Property](../../../../visual-basic/language-reference/statements/property-statement.md)
-- [Различия между свойствами и переменными в Visual Basic](./differences-between-properties-and-variables.md)
-- [Практическое руководство. Создать свойство](./how-to-create-a-property.md)
+- [Differences Between Properties and Variables in Visual Basic](./differences-between-properties-and-variables.md)
+- [Практическое руководство. Создание свойства](./how-to-create-a-property.md)
 - [Практическое руководство. Вызов процедуры свойства](./how-to-call-a-property-procedure.md)
-- [Практическое руководство. Объявление и вызов свойства по умолчанию в Visual Basic](./how-to-declare-and-call-a-default-property.md)
+- [How to: Declare and Call a Default Property in Visual Basic](./how-to-declare-and-call-a-default-property.md)
 - [Практическое руководство. Запись значения в свойство](./how-to-put-a-value-in-a-property.md)
 - [Практическое руководство. Получение значения из свойства](./how-to-get-a-value-from-a-property.md)

@@ -1,5 +1,5 @@
 ---
-title: Инструкция Imports — пространство имен XML (Visual Basic)
+title: Imports Statement - XML Namespace
 ms.date: 07/20/2015
 f1_keywords:
 - vb.ImportsXmlns
@@ -9,16 +9,16 @@ helpviewer_keywords:
 - Imports statement [Visual Basic]
 - namespaces [Visual Basic], importing
 ms.assetid: 1f4d50a6-08c7-4c2e-8206-ccae35fcd1b4
-ms.openlocfilehash: 0fca0caecfd69580510a539317856209108e5a32
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 52864e4d1c8183b6243025e72368d23627049c84
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72581769"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351053"
 ---
 # <a name="imports-statement-xml-namespace"></a>Оператор Imports (пространство имен XML)
 
-Импортирует префиксы пространства имен XML для использования в XML-литералах и свойствах осей XML.
+Imports XML namespace prefixes for use in XML literals and XML axis properties.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -29,28 +29,28 @@ Imports <xmlns:xmlNamespacePrefix = "xmlNamespaceName">
 ## <a name="parts"></a>Части
 
 `xmlNamespacePrefix`  
-Необязательный. Строка, с помощью которой XML-элементы и атрибуты могут ссылаться на `xmlNamespaceName`. Если `xmlNamespacePrefix` не указан, импортированное пространство имен XML является пространством имен XML по умолчанию. Должен быть допустимым идентификатором XML. Дополнительные сведения см. в разделе [Имена объявленных XML-элементов и атрибутов](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).
+Необязательный. The string by which XML elements and attributes can refer to `xmlNamespaceName`. If no `xmlNamespacePrefix` is supplied, the imported XML namespace is the default XML namespace. Must be a valid XML identifier. For more information, see [Names of Declared XML Elements and Attributes](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).
 
 `xmlNamespaceName`  
-Обязательный. Строка, идентифицирующая импортируемое пространство имен XML.
+Обязательный. The string identifying the XML namespace being imported.
 
 ## <a name="remarks"></a>Заметки
 
-Можно использовать инструкцию `Imports` для определения глобальных пространств имен XML, которые можно использовать с XML-литералами и свойствами осей XML, или как параметры, передаваемые оператору `GetXmlNamespace`. (Сведения об использовании оператора `Imports` для импорта псевдонима, который можно использовать при использовании имен типов в коде, см. в разделе [оператор Imports (пространство имен .NET и тип)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).) Синтаксис объявления пространства имен XML с помощью оператора `Imports` идентичен синтаксису, используемому в XML. Таким образом, можно скопировать объявление пространства имен из XML-файла и использовать его в инструкции `Imports`.
+You can use the `Imports` statement to define global XML namespaces that you can use with XML literals and XML axis properties, or as parameters passed to the `GetXmlNamespace` operator. (For information about using the `Imports` statement to import an alias that can be used where type names are used in your code, see [Imports Statement (.NET Namespace and Type)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).) The syntax for declaring an XML namespace by using the `Imports` statement is identical to the syntax used in XML. Therefore, you can copy a namespace declaration from an XML file and use it in an `Imports` statement.
 
-Префиксы пространства имен XML полезны, если требуется многократно создавать XML-элементы из одного и того же пространства имен. Префикс пространства имен XML, объявленный с помощью оператора `Imports`, является глобальным в том смысле, что он доступен для всего кода в файле. Его можно использовать при создании литералов XML-элементов и при доступе к свойствам осей XML. Дополнительные сведения см. в разделе [литерал XML-элемента](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md) и [Свойства оси XML](../../../visual-basic/language-reference/xml-axis/index.md).
+XML namespace prefixes are useful when you want to repeatedly create XML elements that are from the same namespace. The XML namespace prefix declared with the `Imports` statement is global in the sense that it is available to all code in the file. You can use it when you create XML element literals and when you access XML axis properties. For more information, see [XML Element Literal](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md) and [XML Axis Properties](../../../visual-basic/language-reference/xml-axis/index.md).
 
-Если определено глобальное пространство имен XML без префикса пространства имен (например, `Imports <xmlns="http://SomeNameSpace>"`), это пространство имен считается пространством имен XML по умолчанию. Пространство имен XML по умолчанию используется для любых литералов XML-элементов или свойств оси атрибутов XML, которые явно не задают пространство имен. Пространство имен по умолчанию также используется, если указанное пространство имен представляет собой пустое пространство имен (то есть `xmlns=""`). Пространство имен XML по умолчанию не применяется к атрибутам XML в XML-литералах или к свойствам оси атрибутов XML, не имеющим пространства имен.
+If you define a global XML namespace without a namespace prefix (for example, `Imports <xmlns="http://SomeNameSpace>"`), that namespace is considered the default XML namespace. The default XML namespace is used for any XML element literals or XML attribute axis properties that do not explicitly specify a namespace. The default namespace is also used if the specified namespace is the empty namespace (that is, `xmlns=""`). The default XML namespace does not apply to XML attributes in XML literals or to XML attribute axis properties that do not have a namespace.
 
-Пространства имен XML, определенные в XML-литерале, которые называются *локальными пространствами имен XML*, имеют приоритет над пространствами имен XML, которые определены инструкцией `Imports` как глобальные. Пространства имен XML, определенные оператором `Imports`, имеют приоритет над пространствами имен XML, импортированными для проекта Visual Basic. Если XML-литерал определяет пространство имен XML, это локальное пространство имен не применяется к внедренным выражениям.
+XML namespaces that are defined in an XML literal, which are called *local XML namespaces*, take precedence over XML namespaces that are defined by the `Imports` statement as global. XML namespaces that are defined by the `Imports` statement take precedence over XML namespaces imported for a Visual Basic project. If an XML literal defines an XML namespace, that local namespace does not apply to embedded expressions.
 
-Глобальные пространства имен XML следуют тем же правилам области и определения, что и .NET Framework пространства имен. В результате можно включить инструкцию `Imports`, чтобы определить глобальное пространство имен XML в любом месте, где можно импортировать пространство имен .NET Framework. Сюда входят файлы кода и импортированные пространства имен на уровне проекта. Сведения об импортированных пространствах имен на уровне проекта см. в разделе [Страница "ссылки" в конструкторе проектов (Visual Basic)](/visualstudio/ide/reference/references-page-project-designer-visual-basic).
+Global XML namespaces follow the same scoping and definition rules as .NET Framework namespaces. As a result, you can include an `Imports` statement to define a global XML namespace anywhere you can import a .NET Framework namespace. This includes both code files and project-level imported namespaces. For information about project-level imported namespaces, see [References Page, Project Designer (Visual Basic)](/visualstudio/ide/reference/references-page-project-designer-visual-basic).
 
-Каждый исходный файл может содержать любое количество инструкций `Imports`. Они должны следовать объявлениям параметров, таким как оператор `Option Strict`, и должны предшествовать объявлениям элементов программирования, таким как `Module` или операторы `Class`.
+Each source file can contain any number of `Imports` statements. These must follow option declarations, such as the `Option Strict` statement, and they must precede programming element declarations, such as `Module` or `Class` statements.
 
 ## <a name="example"></a>Пример
 
-В следующем примере выполняется импорт пространства имен XML по умолчанию и пространства имен XML, определенного префиксом `ns`. Затем он создает литералы XML, которые используют оба пространства имен.
+The following example imports a default XML namespace and an XML namespace identified with the prefix `ns`. It then creates XML literals that use both namespaces.
 
 [!code-vb[VbXMLSamples#45](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/Module1.vb#45)]
 
@@ -67,7 +67,7 @@ Imports <xmlns:xmlNamespacePrefix = "xmlNamespaceName">
 
 ## <a name="example"></a>Пример
 
-В следующем примере выполняется импорт префикса пространства имен XML `ns`. Затем он создает XML-литерал, использующий префикс пространства имен, и отображает окончательную форму элемента.
+The following example imports the XML namespace prefix `ns`. It then creates an XML literal that uses the namespace prefix and displays the element's final form.
 
 [!code-vb[VbXMLSamples#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples10.vb#22)]
 
@@ -82,11 +82,11 @@ Imports <xmlns:xmlNamespacePrefix = "xmlNamespaceName">
 </ns:outer>
 ```
 
-Обратите внимание, что компилятор преобразует префикс пространства имен XML из глобального префикса в локальное определение префикса.
+Notice that the compiler converted the XML namespace prefix from a global prefix to a local prefix definition.
 
 ## <a name="example"></a>Пример
 
-В следующем примере выполняется импорт префикса пространства имен XML `ns`. Затем префикс пространства имен используется для создания литерала XML и доступа к первому дочернему узлу с полным именем `ns:name`.
+The following example imports the XML namespace prefix `ns`. Затем префикс пространства имен используется для создания литерала XML и доступа к первому дочернему узлу с полным именем `ns:name`.
 
 [!code-vb[VbXMLSamples#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples8.vb#19)]
 

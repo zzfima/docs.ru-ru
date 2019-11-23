@@ -1,5 +1,5 @@
 ---
-title: Оператор Imports — пространство имен и тип .NET (Visual Basic)
+title: Imports Statement - .NET Namespace and Type
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Imports
@@ -16,16 +16,16 @@ helpviewer_keywords:
 - aliases [Visual Basic], import
 - declared elements [Visual Basic], container elements
 ms.assetid: 7062f8aa-d890-4232-9eed-92836e13fb6e
-ms.openlocfilehash: 573bb7383b292e0ad2e85a4355d89cf92fe8dd7d
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 39fa4e74f973bcb575b5751c387c0b879f4e398d
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040739"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351072"
 ---
 # <a name="imports-statement-net-namespace-and-type"></a>Оператор Imports (пространство имен .NET и тип)
 
-Позволяет ссылаться на имена типов без уточнения пространства имен.
+Enables type names to be referenced without namespace qualification.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -39,54 +39,54 @@ Imports [ aliasname = ] namespace.element
 
 |Термин|Определение|
 |---|---|
-|`aliasname`|Необязательный. Псевдоним или имя *импорта* , по которому код может ссылаться на `namespace` вместо полной уточняющей строки. См. раздел [Declared Element Names](../../programming-guide/language-features/declared-elements/declared-element-names.md).|
-|`namespace`|Обязательный. Полное имя импортируемого пространства имен. Может быть строкой пространств имен, вложенных в любой уровень.|
-|`element`|Необязательный. Имя программного элемента, объявленного в пространстве имен. Может быть любым элементом контейнера.|
+|`aliasname`|Необязательный. An *import alias* or name by which code can refer to `namespace` instead of the full qualification string. См. раздел [Declared Element Names](../../programming-guide/language-features/declared-elements/declared-element-names.md).|
+|`namespace`|Обязательный. The fully qualified name of the namespace being imported. Can be a string of namespaces nested to any level.|
+|`element`|Необязательный. The name of a programming element declared in the namespace. Can be any container element.|
 
 ## <a name="remarks"></a>Заметки
 
-Оператор `Imports` позволяет напрямую ссылаться на типы, содержащиеся в данном пространстве имен.
+The `Imports` statement enables types that are contained in a given namespace to be referenced directly.
 
-Можно указать одно имя пространства имен или строку вложенных пространств имен. Каждое вложенное пространство имен отделяется от следующего пространства имен более высокого уровня на точку (`.`), как показано в следующем примере:
+You can supply a single namespace name or a string of nested namespaces. Each nested namespace is separated from the next higher level namespace by a period (`.`), as the following example illustrates:
 
 ```vb
 Imports System.Collections.Generic
 ```
 
-Каждый исходный файл может содержать любое количество инструкций `Imports`. Они должны следовать любым объявлениям параметров, таким как оператор `Option Strict`, и должны предшествовать объявлениям элементов программирования, таким как `Module` или операторы `Class`.
+Each source file can contain any number of `Imports` statements. These must follow any option declarations, such as the `Option Strict` statement, and they must precede any programming element declarations, such as `Module` or `Class` statements.
 
-`Imports` можно использовать только на уровне файлов. Это означает, что контекст объявления для импорта должен быть исходным файлом и не может быть пространством имен, классом, структурой, модулем, интерфейсом, процедурой или блоком.
+You can use `Imports` only at file level. This means the declaration context for importation must be a source file, and cannot be a namespace, class, structure, module, interface, procedure, or block.
 
-Обратите внимание, что инструкция `Imports` не делает элементы из других проектов и сборок доступными для проекта. Импорт не является местом установки ссылки. Он только устраняет необходимость уточнять имена, которые уже доступны для проекта. Дополнительные сведения см. в разделе "Импорт содержащихся элементов" в [ссылках на объявленные элементы](../../programming-guide/language-features/declared-elements/references-to-declared-elements.md).
+Note that the `Imports` statement does not make elements from other projects and assemblies available to your project. Importing does not take the place of setting a reference. It only removes the need to qualify names that are already available to your project. For more information, see "Importing Containing Elements" in [References to Declared Elements](../../programming-guide/language-features/declared-elements/references-to-declared-elements.md).
 
 > [!NOTE]
-> Можно определить неявные `Imports` инструкции с помощью [страницы ссылки, конструктора проектов (Visual Basic)](/visualstudio/ide/reference/references-page-project-designer-visual-basic). Дополнительные сведения см. [в разделе инструкции. Добавление или удаление импортированных пространств имен (Visual Basic)](/visualstudio/ide/how-to-add-or-remove-imported-namespaces-visual-basic).
+> You can define implicit `Imports` statements by using the [References Page, Project Designer (Visual Basic)](/visualstudio/ide/reference/references-page-project-designer-visual-basic). For more information, see [How to: Add or Remove Imported Namespaces (Visual Basic)](/visualstudio/ide/how-to-add-or-remove-imported-namespaces-visual-basic).
 
 ## <a name="import-aliases"></a>Импорт псевдонимов
 
-*Псевдоним импорта* определяет псевдоним для пространства имен или типа. Псевдонимы импорта полезны, когда необходимо использовать элементы с одинаковыми именами, объявленными в одном или нескольких пространствах имен. Дополнительные сведения и пример см. в разделе "уточнение имени элемента в [ссылках на объявленные элементы](../../programming-guide/language-features/declared-elements/references-to-declared-elements.md)".
+An *import alias* defines the alias for a namespace or type. Import aliases are useful when you need to use items with the same name that are declared in one or more namespaces. For more information and an example, see "Qualifying an Element Name" in [References to Declared Elements](../../programming-guide/language-features/declared-elements/references-to-declared-elements.md).
 
-Не следует объявлять элемент на уровне модуля с тем же именем, что и `aliasname`. В этом случае компилятор Visual Basic использует `aliasname` только для объявленного элемента и больше не распознает его как псевдоним импорта.
+You should not declare a member at module level with the same name as `aliasname`. If you do, the Visual Basic compiler uses `aliasname` only for the declared member and no longer recognizes it as an import alias.
 
-Хотя синтаксис, используемый для объявления псевдонима импорта, похож на тот, который используется для импорта префикса пространства имен XML, результаты различаются. Псевдоним импорта можно использовать как выражение в коде, тогда как префикс пространства имен XML можно использовать только в литералах XML или свойствах оси XML в качестве префикса для полного имени элемента или атрибута.
+Although the syntax used for declaring an import alias is like that used for importing an XML namespace prefix, the results are different. An import alias can be used as an expression in your code, whereas an XML namespace prefix can be used only in XML literals or XML axis properties as the prefix for a qualified element or attribute name.
 
 ### <a name="element-names"></a>Имена элементов
 
-При указании `element` он должен представлять элемент- *контейнер*, то есть программный элемент, который может содержать другие элементы. Контейнерные элементы включают классы, структуры, модули, интерфейсы и перечисления.
+If you supply `element`, it must represent a *container element*, that is, a programming element that can contain other elements. Container elements include classes, structures, modules, interfaces, and enumerations.
 
-Область действия элементов, доступных для оператора `Imports`, зависит от того, задается ли `element`. Если указать только `namespace`, все члены этого пространства имен с уникальными именами и элементы контейнеров внутри этого пространства имен будут доступны без квалификации. Если указать как `namespace`, так и `element`, только члены этого элемента будут доступны без квалификации.
+The scope of the elements made available by an `Imports` statement depends on whether you specify `element`. If you specify only `namespace`, all uniquely named members of that namespace, and members of container elements within that namespace, are available without qualification. If you specify both `namespace` and `element`, only the members of that element are available without qualification.
 
 ## <a name="example"></a>Пример
 
-В следующем примере возвращаются все папки в каталоге *C:\\* с помощью класса <xref:System.IO.DirectoryInfo>:
+The following example returns all the folders in the *C:\\* directory by using the <xref:System.IO.DirectoryInfo> class:
 
-В коде нет инструкций `Imports` в верхней части файла. Таким образом, ссылки на <xref:System.IO.DirectoryInfo>, <xref:System.Text.StringBuilder>и <xref:Microsoft.VisualBasic.ControlChars.CrLf> полностью дополнены пространствами имен.
+The code has no `Imports` statements at the top of the file. Therefore, the <xref:System.IO.DirectoryInfo>, <xref:System.Text.StringBuilder>, and <xref:Microsoft.VisualBasic.ControlChars.CrLf> references are all fully qualified with the namespaces.
 
 [!code-vb[VbVbalrStatements#152](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class12.vb#152)]
 
 ## <a name="example"></a>Пример
 
-В следующем примере содержатся `Imports` операторы для пространств имен, на которые имеются ссылки. Поэтому типы не обязательно должны быть полными с помощью пространств имен.
+The following example includes `Imports` statements for the referenced namespaces. Therefore, the types do not have to be fully qualified with the namespaces.
 
 [!code-vb[VbVbalrStatements#153](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class12.vb#153)]
 
@@ -94,7 +94,7 @@ Imports System.Collections.Generic
   
 ## <a name="example"></a>Пример
 
-В следующем примере содержатся инструкции `Imports`, которые создают псевдонимы для упоминаемых пространств имен. Типы дополнены псевдонимами.
+The following example includes `Imports` statements that create aliases for the referenced namespaces. The types are qualified with the aliases.
 
 [!code-vb[VbVbalrStatements#155](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class12.vb#155)]
 
@@ -102,7 +102,7 @@ Imports System.Collections.Generic
 
 ## <a name="example"></a>Пример
 
-В следующем примере содержатся инструкции `Imports`, которые создают псевдонимы для ссылочных типов. Для указания типов используются псевдонимы.
+The following example includes `Imports` statements that create aliases for the referenced types. Aliases are used to specify the types.
 
 [!code-vb[VbVbalrStatements#157](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class12.vb#157)]
 
@@ -111,7 +111,7 @@ Imports System.Collections.Generic
 ## <a name="see-also"></a>См. также
 
 - [Оператор Namespace](namespace-statement.md)
-- [Пространства имен в Visual Basic](../../programming-guide/program-structure/namespaces.md)
+- [Namespaces in Visual Basic](../../programming-guide/program-structure/namespaces.md)
 - [Ссылки и оператор Imports](../../programming-guide/program-structure/references-and-the-imports-statement.md)
 - [Оператор Imports (пространство имен XML)](imports-statement-xml-namespace.md)
 - [Ссылки на объявленные элементы](../../programming-guide/language-features/declared-elements/references-to-declared-elements.md)

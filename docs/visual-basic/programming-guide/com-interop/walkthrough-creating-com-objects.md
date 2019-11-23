@@ -1,5 +1,5 @@
 ---
-title: Пошаговое руководство. Создание COM-объектов с помощью Visual Basic
+title: 'Walkthrough: Creating COM Objects'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - COM interop [Visual Basic], creating COM objects
@@ -8,93 +8,93 @@ helpviewer_keywords:
 - object creation [Visual Basic], COM objects
 - COM objects, walkthroughs
 ms.assetid: 7b07a463-bc72-4392-9ba0-9dfcb697a44f
-ms.openlocfilehash: 39012ebdd8946f707fe459cb09bb2bbfc8e50088
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 5d00aff07358a0c40159fde9c12c70e0842d848b
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69958270"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74338622"
 ---
-# <a name="walkthrough-creating-com-objects-with-visual-basic"></a>Пошаговое руководство. Создание COM-объектов с помощью Visual Basic
-При создании новых приложений или компонентов лучше создавать сборки .NET Framework. Однако Visual Basic также упрощает предоставление .NET Framework компонента COM. Это позволяет предоставлять новые компоненты для более ранних версий приложений, требующих COM-компонентов. В этом пошаговом руководстве показано, как использовать Visual Basic для предоставления объектов .NET Framework в виде COM-объектов как с шаблоном COM-класса, так и без него.  
+# <a name="walkthrough-creating-com-objects-with-visual-basic"></a>Пошаговое руководство. Создание объектов COM с помощью Visual Basic
+When creating new applications or components, it is best to create .NET Framework assemblies. However, Visual Basic also makes it easy to expose a .NET Framework component to COM. This enables you to provide new components for earlier application suites that require COM components. This walkthrough demonstrates how to use Visual Basic to expose .NET Framework objects as COM objects, both with and without the COM class template.  
   
- Самый простой способ предоставить COM-объекты — использовать шаблон COM-класса. Шаблон COM-класса создает новый класс, а затем настраивает проект для создания класса и уровня взаимодействия в виде COM-объекта и его регистрации в операционной системе.  
+ The easiest way to expose COM objects is by using the COM class template. The COM class template creates a new class, and then configures your project to generate the class and interoperability layer as a COM object and register it with the operating system.  
   
 > [!NOTE]
-> Хотя можно также предоставить класс, созданный в Visual Basic, как COM-объект для использования неуправляемым кодом, он не является настоящим COM-объектом и не может использоваться Visual Basic. Дополнительные сведения см. [в разделе COM-взаимодействие в .NET Framework приложениях](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md).  
+> Although you can also expose a class created in Visual Basic as a COM object for unmanaged code to use, it is not a true COM object and cannot be used by Visual Basic. For more information, see [COM Interoperability in .NET Framework Applications](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md).  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-### <a name="to-create-a-com-object-by-using-the-com-class-template"></a>Создание COM-объекта с помощью шаблона класса COM  
+### <a name="to-create-a-com-object-by-using-the-com-class-template"></a>To create a COM object by using the COM class template  
   
-1. Откройте новый проект приложения Windows из меню **файл** , щелкнув **создать проект**.  
+1. Open a new Windows Application project from the **File** menu by clicking **New Project**.  
   
-2. Убедитесь, что в диалоговом окне **Новый проект** в поле **типы проектов** выбрано значение Windows. В списке **шаблоны** выберите пункт **Библиотека классов** , а затем нажмите кнопку **ОК**. Отобразится новый проект.  
+2. In the **New Project** dialog box under the **Project Types** field, check that Windows is selected. Select **Class Library** from the **Templates** list, and then click **OK**. The new project is displayed.  
   
-3. В меню **проект** выберите команду **Добавить новый элемент** . Откроется диалоговое окно **Добавление нового элемента**.  
+3. Select **Add New Item** from the **Project** menu. Откроется диалоговое окно **Добавление нового элемента**.  
   
-4. Выберите **класс COM** в списке **шаблоны** и нажмите кнопку **добавить**. Visual Basic добавляет новый класс и настраивает новый проект для COM-взаимодействия.  
+4. Select **COM Class** from the **Templates** list, and then click **Add**. Visual Basic adds a new class and configures the new project for COM interop.  
   
-5. Добавьте в класс COM код, например свойства, методы и события.  
+5. Add code such as properties, methods, and events to the COM class.  
   
-6. Выберите **Сборка ClassLibrary1** в меню **Сборка** . Visual Basic создает сборку и регистрирует COM-объект в операционной системе.  
+6. Select **Build ClassLibrary1** from the **Build** menu. Visual Basic builds the assembly and registers the COM object with the operating system.  
   
-## <a name="creating-com-objects-without-the-com-class-template"></a>Создание COM-объектов без шаблона класса COM  
- Можно также создать COM-класс вручную вместо использования шаблона COM-класса. Эта процедура полезна при работе из командной строки или в том случае, если требуется больший контроль над определением объектов COM.  
+## <a name="creating-com-objects-without-the-com-class-template"></a>Creating COM Objects without the COM Class Template  
+ You can also create a COM class manually instead of using the COM class template. This procedure is helpful when you are working from the command line or when you want more control over how COM objects are defined.  
   
-#### <a name="to-set-up-your-project-to-generate-a-com-object"></a>Настройка проекта для создания COM-объекта  
+#### <a name="to-set-up-your-project-to-generate-a-com-object"></a>To set up your project to generate a COM object  
   
-1. Откройте новый проект приложения Windows из меню **файл** , щелкнув **NewProject**.  
+1. Open a new Windows Application project from the **File** menu by clicking **NewProject**.  
   
-2. Убедитесь, что в диалоговом окне **Новый проект** в поле **типы проектов** выбрано значение Windows. В списке **шаблоны** выберите пункт **Библиотека классов** , а затем нажмите кнопку **ОК**. Отобразится новый проект.  
+2. In the **New Project** dialog box under the **Project Types** field, check that Windows is selected. Select **Class Library** from the **Templates** list, and then click **OK**. The new project is displayed.  
   
-3. В **обозревателе решений** щелкните правой кнопкой мыши на проект и выберите пункт **Свойства**. Откроется **Конструктор проектов** .  
+3. В **обозревателе решений** щелкните правой кнопкой мыши на проект и выберите пункт **Свойства**. The **Project Designer** is displayed.  
   
 4. Откройте вкладку **Компиляция**.  
   
-5. Установите флажок **Регистрация для COM-взаимодействия** .  
+5. Select the **Register for COM Interop** check box.  
   
-#### <a name="to-set-up-the-code-in-your-class-to-create-a-com-object"></a>Настройка кода в классе для создания COM-объекта  
+#### <a name="to-set-up-the-code-in-your-class-to-create-a-com-object"></a>To set up the code in your class to create a COM object  
   
-1. В **Обозреватель решений**дважды щелкните **Class1. vb** , чтобы отобразить его код.  
+1. In **Solution Explorer**, double-click **Class1.vb** to display its code.  
   
 2. Переименуйте класс на `ComClass1`.  
   
-3. Добавьте следующие константы в `ComClass1`. Они будут хранить константы глобального уникального идентификатора (GUID), которые должны иметь объекты COM.  
+3. Add the following constants to `ComClass1`. They will store the Globally Unique Identifier (GUID) constants that the COM objects are required to have.  
   
      [!code-vb[VbVbalrInterop#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#2)]  
   
 4. В меню **Сервис** выберите пункт **Создать GUID**. В диалоговом окне **Создание GUID** нажмите кнопку **Формат реестра**, а затем **Копировать**. Нажмите кнопку **Выход**.  
   
-5. Замените пустую строку в `ClassId` идентификаторе GUID, удалив начальные и конечные фигурные скобки. Например, если идентификатор GUID, предоставленный Guidgen, `"{2C8B0AEE-02C9-486e-B809-C780A11530FE}"` будет выглядеть следующим образом.  
+5. Replace the empty string for the `ClassId` with the GUID, removing the leading and trailing braces. For example, if the GUID provided by Guidgen is `"{2C8B0AEE-02C9-486e-B809-C780A11530FE}"` then your code should appear as follows.  
   
      [!code-vb[VbVbalrInterop#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#3)]  
   
-6. Повторите предыдущие шаги для `InterfaceId` констант и `EventsId` , как показано в следующем примере.  
+6. Repeat the previous steps for the `InterfaceId` and `EventsId` constants, as in the following example.  
   
      [!code-vb[VbVbalrInterop#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#4)]  
   
     > [!NOTE]
-    > Убедитесь, что идентификаторы GUID являются новыми и уникальными. в противном случае COM-компонент может конфликтовать с другими COM-компонентами.  
+    > Make sure that the GUIDs are new and unique; otherwise, your COM component could conflict with other COM components.  
   
-7. Добавьте атрибут в `ComClass1`, указав идентификаторы GUID для идентификатора класса, идентификатора интерфейса и идентификатора события, как показано в следующем примере: `ComClass`  
+7. Add the `ComClass` attribute to `ComClass1`, specifying the GUIDs for the Class ID, Interface ID, and Events ID as in the following example:  
   
      [!code-vb[VbVbalrInterop#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#5)]  
   
-8. Классы com должны иметь `Public Sub New()` конструктор без параметров, иначе класс не будет зарегистрирован правильно. Добавьте в класс конструктор без параметров:  
+8. COM classes must have a parameterless `Public Sub New()` constructor, or the class will not register correctly. Add a parameterless constructor to the class:  
   
      [!code-vb[VbVbalrInterop#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#6)]  
   
-9. Добавьте свойства, методы и события в класс, завершая его `End Class` оператором. В меню **Сборка** выберите пункт **построить решение** . Visual Basic создает сборку и регистрирует COM-объект в операционной системе.  
+9. Add properties, methods, and events to the class, ending it with an `End Class` statement. Select **Build Solution** from the **Build** menu. Visual Basic builds the assembly and registers the COM object with the operating system.  
   
     > [!NOTE]
-    > Объекты COM, созданные с помощью Visual Basic, не могут использоваться другими приложениями Visual Basic, поскольку они не являются настоящими COM-объектами. Попытка добавить ссылки на такие COM-объекты вызовет ошибку. Дополнительные сведения см. [в разделе COM-взаимодействие в приложениях .NET Framework](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md).  
+    > The COM objects you generate with Visual Basic cannot be used by other Visual Basic applications because they are not true COM objects. Attempts to add references to such COM objects will raise an error. For details, see [COM Interoperability in .NET Framework Applications](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md).  
   
 ## <a name="see-also"></a>См. также
 
 - <xref:Microsoft.VisualBasic.ComClassAttribute>
 - [COM-взаимодействие](../../../visual-basic/programming-guide/com-interop/index.md)
-- [Пошаговое руководство: Реализация наследования с использованием COM-объектов](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)
+- [Пошаговое руководство. Реализация наследования с использованием COM-объектов](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)
 - [Директива #Region](../../../visual-basic/language-reference/directives/region-directive.md)
 - [COM-взаимодействие в приложениях .NET Framework](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)
 - [Устранение неполадок взаимодействия](../../../visual-basic/programming-guide/com-interop/troubleshooting-interoperability.md)

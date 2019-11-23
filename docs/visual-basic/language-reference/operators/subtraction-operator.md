@@ -1,5 +1,5 @@
 ---
-title: '- Оператор (Visual Basic)'
+title: '- оператора'
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Negate
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - operators [Visual Basic], negation
 - minus operator [Visual Basic]
 ms.assetid: bff2c368-662d-4c92-ac87-1d9bdfd3426a
-ms.openlocfilehash: 5f6b6b67e2999d380cfca078a43162b3e1db2206
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 9687c366c5b23693c05ab5c6b34f50c04131dfda
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71701304"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348227"
 ---
 # <a name="--operator-visual-basic"></a>Оператор - (Visual Basic)
-Возвращает разность между двумя числовыми выражениями или отрицательным значением числового выражения.  
+Returns the difference between two numeric expressions or the negative value of a numeric expression.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -33,7 +33,7 @@ ms.locfileid: "71701304"
 expression1 – expression2
 ```
   
-или
+or
 
 ```vb  
 –expression1  
@@ -44,37 +44,37 @@ expression1 – expression2
  Обязательный. Произвольное числовое выражение.  
   
  `expression2`  
- Требуется, если оператор `–` не вычисляет отрицательное значение. Произвольное числовое выражение.  
+ Required unless the `–` operator is calculating a negative value. Произвольное числовое выражение.  
   
 ## <a name="result"></a>Результат  
- Результатом является разница между `expression1` и `expression2` или отрицательным значением `expression1`.  
+ The result is the difference between `expression1` and `expression2`, or the negated value of `expression1`.  
   
- Тип данных result является числовым типом, подходящим для типов данных `expression1` и `expression2`. См. таблицу "целочисленные арифметические операции" в [типах данных результатов операторов](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md).  
+ The result data type is a numeric type appropriate for the data types of `expression1` and `expression2`. See the "Integer Arithmetic" tables in [Data Types of Operator Results](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md).  
   
 ## <a name="supported-types"></a>Поддерживаемые типы  
- все числовые типы. К ним относятся типы без знака и тип с плавающей запятой `Decimal`и.  
+ все числовые типы. This includes the unsigned and floating-point types and `Decimal`.  
   
-## <a name="remarks"></a>Примечания  
- При первом использовании, показанном в приведенном выше синтаксисе, оператор `–` является *бинарным* арифметическим оператором вычитания для разности двух числовых выражений.  
+## <a name="remarks"></a>Заметки  
+ In the first usage shown in the syntax shown previously, the `–` operator is the *binary* arithmetic subtraction operator for the difference between two numeric expressions.  
   
- Во втором описании синтаксиса, показанного ранее, оператор `–` является *унарным* оператором отрицания для отрицательного значения выражения. В этом смысле отрицание состоит из обратного знака `expression1`, чтобы результат был положительным, если `expression1` имеет отрицательное значение.  
+ In the second usage shown in the syntax shown previously, the `–` operator is the *unary* negation operator for the negative value of an expression. In this sense, the negation consists of reversing the sign of `expression1` so that the result is positive if `expression1` is negative.  
   
- Если любое из выражений имеет значение [Nothing](../../../visual-basic/language-reference/nothing.md), оператор `–` обрабатывает его как ноль.  
+ If either expression evaluates to [Nothing](../../../visual-basic/language-reference/nothing.md), the `–` operator treats it as zero.  
   
 > [!NOTE]
-> Оператор `–` можно *перегрузить*, что означает, что класс или структура может переопределить свое поведение, если операнд имеет тип этого класса или структуры. Если код использует этот оператор для такого класса или структуры, убедитесь, что вы понимаете его переопределенное поведение. Для получения дополнительной информации см. [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+> The `–` operator can be *overloaded*, which means that a class or structure can redefine its behavior when an operand has the type of that class or structure. If your code uses this operator on such a class or structure, make sure that you understand its redefined behavior. Для получения дополнительной информации см. [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Пример  
- В следующем примере оператор `–` используется для вычисления и возврата разницы между двумя числами, а затем для отрицания числа.  
+ The following example uses the `–` operator to calculate and return the difference between two numbers, and then to negate a number.  
   
  [!code-vb[VbVbalrOperators#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#10)]  
   
- После выполнения этих инструкций `binaryResult` содержит 124,45, а `unaryResult` содержит – 334,90.  
+ Following the execution of these statements, `binaryResult` contains 124.45 and `unaryResult` contains –334.90.  
   
 ## <a name="see-also"></a>См. также
 
-- [Оператор-= (Visual Basic)](../../../visual-basic/language-reference/operators/subtraction-assignment-operator.md)
+- [-= Operator (Visual Basic)](../../../visual-basic/language-reference/operators/subtraction-assignment-operator.md)
 - [Арифметические операторы](../../../visual-basic/language-reference/operators/arithmetic-operators.md)
 - [Порядок применения операторов в Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)
 - [Список операторов, сгруппированных по функциональному назначению](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
-- [Арифметические операторы в Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+- [Arithmetic Operators in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)

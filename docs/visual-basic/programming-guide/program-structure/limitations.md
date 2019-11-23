@@ -1,5 +1,5 @@
 ---
-title: Ограничения в Visual Basic
+title: Ограничения
 ms.date: 07/20/2015
 helpviewer_keywords:
 - limits
@@ -8,31 +8,31 @@ helpviewer_keywords:
 - limits, Visual Basic code
 - Visual Basic code, limitations
 ms.assetid: cf1646b7-5d24-48c6-9616-bda8a4849d91
-ms.openlocfilehash: 9fa0844f4508906ae30b936e41fb4392b74d1437
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f7e19977a011565bb4b1536af5cab195f8a01017
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648735"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347372"
 ---
 # <a name="visual-basic-limitations"></a>Ограничения в Visual Basic
-Более ранних версиях Visual Basic накладывались ограничения в коде, такое как длина имени переменной, количество переменных в модуле и размер модуля. В Visual Basic .NET эти ограничения были ослаблены, предоставляя большую свободу в написании и упорядочении кода.  
+Earlier versions of Visual Basic enforced boundaries in code, such as the length of variable names, the number of variables allowed in modules, and module size. In Visual Basic .NET, these restrictions have been relaxed, giving you greater freedom in writing and arranging your code.  
   
- Физические ограничения зависят больше памяти во время выполнения, чем на времени компиляции. Если вы используете оправданным приемов программирования и разделять большие приложения на несколько классов и модулей, то нет очень низкую вероятность возникновения внутреннее ограничение Visual Basic.  
+ Physical limits are dependent more on run-time memory than on compile-time considerations. If you use prudent programming practices, and divide large applications into multiple classes and modules, then there is very little chance of encountering an internal Visual Basic limitation.  
   
- Ниже приведены некоторые ограничения, которые могут возникнуть в исключительных случаях.  
+ The following are some limitations that you might encounter in extreme cases:  
   
-- **Длина имени.** Есть максимальное число символов в имени каждого объявленного элемента программирования. Этот максимум применяется к полной уточняющей строке в том случае, если полное имя элемента. См. раздел [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
+- **Name Length.** There is a maximum number of characters for the name of every declared programming element. This maximum applies to an entire qualification string if the element name is qualified. См. раздел [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
   
-- **Длина строки.** Можно использовать не более 65535 символов в физической строке исходного кода. Логическая строка исходного кода может быть больше времени, если вы используете символы продолжения строки. См. практическое руководство по [ Разбиение и объединение инструкций в коде](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md).  
+- **Line Length.** There is a maximum of 65535 characters in a physical line of source code. The logical source code line can be longer if you use line continuation characters. See [How to: Break and Combine Statements in Code](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md).  
   
-- **Размерность массива.** Есть максимальное число измерений, которые можно объявить для массива. Это ограничивает количество индексов, которые можно использовать для указания элемента массива. См. в разделе [Array Dimensions in Visual Basic](../../../visual-basic/programming-guide/language-features/arrays/array-dimensions.md).  
+- **Array Dimensions.** There is a maximum number of dimensions you can declare for an array. This limits how many indexes you can use to specify an array element. See [Array Dimensions in Visual Basic](../../../visual-basic/programming-guide/language-features/arrays/array-dimensions.md).  
   
-- **Длина строки.** Есть максимальное число символов Юникода, которые можно хранить в одной строке. См. в разделе [строковый тип данных](../../../visual-basic/language-reference/data-types/string-data-type.md).  
+- **String Length.** There is a maximum number of Unicode characters you can store in a single string. See [String Data Type](../../../visual-basic/language-reference/data-types/string-data-type.md).  
   
-- **Длина строки в среде.** Есть более 32 768 символов для любой строки среды, используется в качестве аргумента командной строки. Это ограничение на всех платформах.  
+- **Environment String Length.** There is a maximum of 32768 characters for any environment string used as a command-line argument. This is a limitation on all platforms.  
   
 ## <a name="see-also"></a>См. также
 
 - [Соглашения о структуре программы и коде](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)
-- [Соглашения об именах Visual Basic](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)
+- [Visual Basic Naming Conventions](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)

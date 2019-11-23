@@ -1,16 +1,16 @@
 ---
-title: Использование метода Async для доступа к файлам (Visual Basic)
+title: Использование метода Async для доступа к файлам
 ms.date: 07/20/2015
 ms.assetid: c989305f-08e3-4687-95c3-948465cda202
-ms.openlocfilehash: dac3348657310a38284d9b6680082050a07e19bb
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 803d182f5b0f3071feb7aae4945bc3c0a1fd82c3
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64642413"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349111"
 ---
 # <a name="using-async-for-file-access-visual-basic"></a>Использование метода Async для доступа к файлам (Visual Basic)
-Можно использовать функцию Async для доступа к файлам. С помощью возможности Async можно вызывать асинхронные методы, не прибегая к использованию обратных вызовов или разделению кода между несколькими методами или лямбда-выражениями. Для выполнения последовательного кода асинхронно просто вызовите асинхронный метод вместо синхронного метода и добавьте несколько ключевых слов в код.  
+You can use the Async feature to access files. С помощью возможности Async можно вызывать асинхронные методы, не прибегая к использованию обратных вызовов или разделению кода между несколькими методами или лямбда-выражениями. Для выполнения последовательного кода асинхронно просто вызовите асинхронный метод вместо синхронного метода и добавьте несколько ключевых слов в код.  
   
  Можно рассмотреть следующие причины для добавления асинхронности для вызовов для доступа к файлам.  
   
@@ -73,10 +73,10 @@ Dim theTask As Task = sourceStream.WriteAsync(encodedText, 0, encodedText.Length
 Await theTask  
 ```  
   
- Первый оператор возвращает задачу и вызывает запуск обработки файла. Вторая строка с await немедленно оставляет метод и возвращается в другую задачу. При окончании обработки файла выполнение возвращается в точку выполнения, которая следует за await. Дополнительные сведения см. в разделе [поток управления в асинхронных программах (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md).  
+ Первый оператор возвращает задачу и вызывает запуск обработки файла. Вторая строка с await немедленно оставляет метод и возвращается в другую задачу. При окончании обработки файла выполнение возвращается в точку выполнения, которая следует за await. For more information, see  [Control Flow in Async Programs (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md).  
   
 ## <a name="reading-text"></a>Чтение текста  
- Следующий пример считывает текст из файла. Текст добавляется в буфер обмена, а затем, в данном случае, помещается в <xref:System.Text.StringBuilder>. В отличие от предыдущего примера await выдаёт в результате значение. Метод <xref:System.IO.Stream.ReadAsync%2A> возвращает <xref:System.Threading.Tasks.Task>\<<xref:System.Int32>>, поэтому по завершении операции оценка await выдает значение `Int32` (`numRead`). Дополнительные сведения см. в разделе [асинхронные типы возвращаемых значений (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md).  
+ Следующий пример считывает текст из файла. Текст добавляется в буфер обмена, а затем, в данном случае, помещается в <xref:System.Text.StringBuilder>. В отличие от предыдущего примера await выдаёт в результате значение. Метод <xref:System.IO.Stream.ReadAsync%2A> возвращает <xref:System.Threading.Tasks.Task>\<<xref:System.Int32>>, поэтому по завершении операции оценка await выдает значение `Int32` (`numRead`). For more information, see [Async Return Types (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md).  
   
 ```vb  
 Public Async Sub ProcessRead()  
@@ -158,7 +158,7 @@ Public Async Sub ProcessWriteMult()
 End Sub  
 ```  
   
- При использовании методов <xref:System.IO.Stream.WriteAsync%2A> и <xref:System.IO.Stream.ReadAsync%2A> можно указать <xref:System.Threading.CancellationToken>, который позволяет отменить операцию в середине потока. Дополнительные сведения см. в разделе [точная настройка асинхронного приложения (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md) и [Отмена в управляемых потоках](../../../../standard/threading/cancellation-in-managed-threads.md).  
+ При использовании методов <xref:System.IO.Stream.WriteAsync%2A> и <xref:System.IO.Stream.ReadAsync%2A> можно указать <xref:System.Threading.CancellationToken>, который позволяет отменить операцию в середине потока. For more information, see [Fine-Tuning Your Async Application (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md) and [Cancellation in Managed Threads](../../../../standard/threading/cancellation-in-managed-threads.md).  
   
 ## <a name="see-also"></a>См. также
 

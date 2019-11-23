@@ -1,21 +1,21 @@
 ---
-title: Практическое руководство. Преобразование объекта к другому типу в Visual Basic
+title: 'How to: Convert an Object to Another Type'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - objects [Visual Basic], converting
 ms.assetid: 60cb5fc7-7ba4-4ab5-9c24-480fa12ddcdc
-ms.openlocfilehash: 39083fc55d30e24c357ec162a15466f81655f4c8
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 19708d03b0514f4572c2baa53e05781e5949766b
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582332"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350075"
 ---
 # <a name="how-to-convert-an-object-to-another-type-in-visual-basic"></a>Практическое руководство. Преобразование объекта к другому типу в Visual Basic
-Преобразование `Object` переменной в другой тип данных осуществляется с помощью ключевого слова преобразования, например [CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md).  
+You convert an `Object` variable to another data type by using a conversion keyword such as [CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md).  
   
 ## <a name="example"></a>Пример  
- В следующем примере переменная `Object` преобразуется в `Integer` и в `String`.  
+ The following example converts an `Object` variable to an `Integer` and a `String`.  
   
 ```vb  
 Public Sub objectConversion(ByVal anObject As Object)  
@@ -26,7 +26,7 @@ Public Sub objectConversion(ByVal anObject As Object)
 End Sub  
 ```  
   
- Если известно, что содержимое переменной `Object` относится к определенному типу данных, лучше преобразовать переменную в этот тип данных. Если вы продолжаете использовать переменную `Object`, вы используете *упаковку* и распаковку (для типа значения) или *позднее связывание* *(для* ссылочного типа). Все эти операции занимают некоторое время и снижают производительность.  
+ If you know that the contents of an `Object` variable are of a particular data type, it is better to convert the variable to that data type. If you continue to use the `Object` variable, you incur either *boxing* and *unboxing* (for a value type) or *late binding* (for a reference type). These operations all take extra execution time and make your performance slower.  
   
 ## <a name="compiling-the-code"></a>Компиляция кода  
  Для этого примера требуются:  
@@ -36,7 +36,7 @@ End Sub
 ## <a name="see-also"></a>См. также
 
 - <xref:System.Object>
-- [Преобразования типов в Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [Type Conversions in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
 - [Расширяющие и сужающие преобразования](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
 - [Явные и неявные преобразования](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)
 - [Преобразования значений между строковыми и другими типами](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)

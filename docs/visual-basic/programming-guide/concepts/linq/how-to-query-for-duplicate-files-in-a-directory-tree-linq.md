@@ -1,15 +1,15 @@
 ---
-title: Практическое руководство. Запрос повторяющихся файлов в дереве папок (LINQ) (Visual Basic)
+title: Практическое руководство. Запрос повторяющихся файлов в дереве каталогов (LINQ)
 ms.date: 07/20/2015
 ms.assetid: 387d7c97-95dd-4a50-9761-7e9cf8ae9e6a
-ms.openlocfilehash: 192f279a74cfbbd35e67d8f166a3d35248409459
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 9be0d1e7be70569e1fac0033414400a85071bfec
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586336"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347710"
 ---
-# <a name="how-to-query-for-duplicate-files-in-a-directory-tree-linq-visual-basic"></a>Практическое руководство. Запрос повторяющихся файлов в дереве папок (LINQ) (Visual Basic)
+# <a name="how-to-query-for-duplicate-files-in-a-directory-tree-linq-visual-basic"></a>How to: Query for Duplicate Files in a Directory Tree (LINQ) (Visual Basic)
 Иногда файлы с одинаковыми именами могут находиться в нескольких папках. Например, в папке установки Visual Studio несколько папок содержат файл readme.htm. В этом примере показано, как запросить такие повторяющиеся имена файлов в указанной корневой папке. Во втором примере показано, как запросить файлы, размер и время создания которых также совпадают.  
   
 ## <a name="example"></a>Пример  
@@ -101,7 +101,7 @@ End Module
  В первом запросе используется простой ключ для определения соответствия; при этом выполняется поиск файлов, которые имеют то же имя, однако их содержимое может быть другим. Второй запрос использует составной ключ для сравнения трех свойств объекта <xref:System.IO.FileInfo>. Этот запрос дает гораздо больше шансов найти файлы, имеющие одинаковые имена и схожее или идентичное содержимое.  
   
 ## <a name="compiling-the-code"></a>Компиляция кода  
-Создайте проект консольного приложения VB.NET, с помощью `Imports` оператор для пространства имен System.Linq.
+Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.
   
 ## <a name="see-also"></a>См. также
 

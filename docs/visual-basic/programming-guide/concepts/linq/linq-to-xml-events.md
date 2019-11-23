@@ -1,15 +1,15 @@
 ---
-title: События LINQ to XML (Visual Basic)
+title: События LINQ to XML
 ms.date: 07/20/2015
 ms.assetid: 34923928-b99c-4004-956e-38f6db25e910
-ms.openlocfilehash: d35f8063fe87ee4be3dd49a3c0221cb9c47cb22e
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 06191fb94f808d9a3ece8de000dec1c5de769dde
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834985"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351927"
 ---
-# <a name="linq-to-xml-events-visual-basic"></a>События LINQ to XML (Visual Basic)
+# <a name="linq-to-xml-events-visual-basic"></a>LINQ to XML Events (Visual Basic)
 События [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] позволяют получать уведомления, когда изменяется дерево XML.  
   
  Можно добавить события в экземпляр любого объекта <xref:System.Xml.Linq.XObject>. Обработчик события будет получать уведомления об изменениях объекта <xref:System.Xml.Linq.XObject> и всех его потомков. Например, можно добавить обработчик события в корень дерева и обрабатывать все изменения дерева в этом обработчике события.  
@@ -116,4 +116,4 @@ Total:308
   
 ## <a name="see-also"></a>См. также
 
-- [Расширенное программирование LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+- [Advanced LINQ to XML Programming (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

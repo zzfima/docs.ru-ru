@@ -1,15 +1,15 @@
 ---
-title: Отмена оставшихся асинхронных задач после завершения одной операции (Visual Basic)
+title: Отмена оставшихся асинхронных задач после завершения одной из них
 ms.date: 07/20/2015
 ms.assetid: c928b5a1-622f-4441-8baf-adca1dde197f
-ms.openlocfilehash: 329c1eb738f065ae34540e9980c80d44248da05c
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: e6747f35e665611ac7a48a87f955c8b893ee2b99
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73419804"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347928"
 ---
-# <a name="cancel-remaining-async-tasks-after-one-is-complete-visual-basic"></a>Отмена оставшихся асинхронных задач после завершения одной операции (Visual Basic)
+# <a name="cancel-remaining-async-tasks-after-one-is-complete-visual-basic"></a>Cancel Remaining Async Tasks after One Is Complete (Visual Basic)
 
 Используя метод <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> вместе с <xref:System.Threading.CancellationToken>, можно отменить все оставшиеся задачи после выполнения отдельной задачи. Метод `WhenAny` принимает аргумент, который представляет собой коллекцию задач. Метод запускает все задачи и возвращает одну задачу. Одна задача считается завершенной, когда завершена любая задача в коллекции.
 
@@ -40,11 +40,11 @@ ms.locfileid: "73419804"
 
 ## <a name="building-the-example"></a>Построение примера
 
-Пример в этом разделе добавляет в проект, разработанный при [отмене асинхронной задачи, или список задач](../../../../visual-basic/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md) для отмены списка задач. В примере используется тот же пользовательский интерфейс, хотя кнопка **Отмена** не используется явно.
+The example in this topic adds to the project that's developed in [Cancel an Async Task or a List of Tasks](../../../../visual-basic/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md) to cancel a list of tasks. В примере используется тот же пользовательский интерфейс, хотя кнопка **Отмена** не используется явно.
 
 Для самостоятельной сборки примера шаг за шагом следуйте инструкциям в разделе "Загрузка примера", но выберите в качестве **запускаемого проекта** проект **CancelAfterOneTask**. Добавьте изменения, приведенные в данном разделе, в этот проект.
 
-В файле MainWindow. XAML проекта **CancelAListOfTasks** запустите переход, переместив шаги обработки для каждого веб-сайта из цикла в `AccessTheWebAsync` к следующему асинхронному методу.
+In the MainWindow.xaml.vb file of the **CancelAListOfTasks** project, start the transition by moving the processing steps for each website from the loop in `AccessTheWebAsync` to the following async method.
 
 ```vb
 ' ***Bundle the processing steps for a website into one async method.
@@ -107,7 +107,7 @@ End Function
 
 ## <a name="complete-example"></a>Полный пример
 
-Следующий код представляет собой полный файл MainWindow. XAML. vb или MainWindow.xaml.cs для примера. Звездочками помечаются элементы, добавленные для этого примера.
+The following code is the complete MainWindow.xaml.vb or MainWindow.xaml.cs file for the example. Звездочками помечаются элементы, добавленные для этого примера.
 
 Обратите внимание на то, что необходимо добавить ссылку для <xref:System.Net.Http>.
 

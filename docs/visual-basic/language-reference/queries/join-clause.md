@@ -1,5 +1,5 @@
 ---
-title: Предложение Join (Visual Basic)
+title: Предложение Join
 ms.date: 07/20/2015
 f1_keywords:
 - vb.QueryJoinIn
@@ -10,16 +10,16 @@ helpviewer_keywords:
 - Join statement [Visual Basic]
 - Join clause [Visual Basic]
 ms.assetid: 6dd37936-b27c-4e00-98ad-154b23f4de64
-ms.openlocfilehash: b5211d0ed3f618013dc9fe764a6d7b2db8177c26
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: b0baca9f897a00b3c6c67699629477ff385d6ef7
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582297"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353268"
 ---
 # <a name="join-clause-visual-basic"></a>Предложение Join (Visual Basic)
 
-Объединяет две коллекции в одну. Операция Join основана на совпадающих ключах и использует оператор `Equals`.
+Объединяет две коллекции в одну. The join operation is based on matching keys and uses the `Equals` operator.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -32,45 +32,45 @@ On key1 Equals key2 [ And key3 Equals key4 [... ]
 
 ## <a name="parts"></a>Части
 
-`element` Обязательный. Управляющая переменная для объединяемой коллекции.
+`element` Обязательный. The control variable for the collection being joined.
 
 `collection`  
-Обязательный. Коллекция для объединения с коллекцией, указанной в левой части оператора `Join`. Предложение `Join` может быть вложено в другое предложение `Join` или в предложении `Group Join`.
+Обязательный. The collection to combine with the collection identified on the left side of the `Join` operator. A `Join` clause can be nested in another `Join` clause, or in a `Group Join` clause.
 
 `joinClause`  
-Необязательный. Одно или несколько дополнительных `Join` предложений для дальнейшего уточнения запроса.
+Необязательный. One or more additional `Join` clauses to further refine the query.
 
 `groupJoinClause`  
-Необязательный. Одно или несколько дополнительных `Group Join` предложений для дальнейшего уточнения запроса.
+Необязательный. One or more additional `Group Join` clauses to further refine the query.
 
 `key1` `Equals` `key2`  
-Обязательный. Определяет ключи для соединяемых коллекций. Для сравнения ключей из объединяемых коллекций необходимо использовать оператор `Equals`. Условия JOIN можно комбинировать с помощью оператора `And` для обнаружения нескольких ключей. `key1` должен быть из коллекции в левой части оператора `Join`. `key2` должны находиться в коллекции с правой стороны оператора `Join`.
+Обязательный. Identifies keys for the collections being joined. You must use the `Equals` operator to compare keys from the collections being joined. You can combine join conditions by using the `And` operator to identify multiple keys. `key1` must be from the collection on the left side of the `Join` operator. `key2` must be from the collection on the right side of the `Join` operator.
 
-Ключи, используемые в условии объединения, могут быть выражениями, включающими более одного элемента из коллекции. Однако каждое ключевое выражение может содержать только элементы из соответствующей коллекции.
+The keys used in the join condition can be expressions that include more than one item from the collection. However, each key expression can contain only items from its respective collection.
 
 ## <a name="remarks"></a>Заметки
 
-Предложение `Join` объединяет две коллекции на основе совпадающих значений ключей из объединяемых коллекций. Результирующая коллекция может содержать любое сочетание значений из коллекции, определенной в левой части оператора `Join`, и коллекции, указанной в предложении `Join`. Запрос возвратит только результаты, для которых выполняется условие, заданное оператором `Equals`. Это эквивалентно `INNER JOIN` в SQL.
+The `Join` clause combines two collections based on matching key values from the collections being joined. The resulting collection can contain any combination of values from the collection identified on the left side of the `Join` operator and the collection identified in the `Join` clause. The query will return only results for which the condition specified by the `Equals` operator is met. This is equivalent to an `INNER JOIN` in SQL.
 
-Можно использовать несколько предложений `Join` в запросе для объединения двух или более коллекций в одну коллекцию.
+You can use multiple `Join` clauses in a query to join two or more collections into a single collection.
 
-Можно выполнить неявное соединение для объединения коллекций без предложения `Join`. Для этого включите несколько предложений `In` в предложение `From` и укажите предложение `Where`, определяющее ключи, которые необходимо использовать для объединения.
+You can perform an implicit join to combine collections without the `Join` clause. To do this, include multiple `In` clauses in your `From` clause and specify a `Where` clause that identifies the keys that you want to use for the join.
 
-Можно использовать предложение `Group Join` для объединения коллекций в одну иерархическую коллекцию. Это похоже на `LEFT OUTER JOIN` в SQL.
+You can use the `Group Join` clause to combine collections into a single hierarchical collection. This is like a `LEFT OUTER JOIN` in SQL.
 
 ## <a name="example"></a>Пример
 
-В следующем примере кода выполняется неявное соединение для объединения списка клиентов с их заказами.
+The following code example performs an implicit join to combine a list of customers with their orders.
 
 [!code-vb[VbSimpleQuerySamples#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#13)]
 
 ## <a name="example"></a>Пример
 
-В следующем примере кода две коллекции объединяются с помощью предложения `Join`.
+The following code example joins two collections by using the `Join` clause.
 
 [!code-vb[VbSimpleQuerySamples#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples2.vb#12)]
 
-В этом примере выводятся выходные данные, аналогичные приведенным ниже.
+This example will produce output similar to the following:
 
 `winlogon (968), Windows Logon`
 
@@ -80,11 +80,11 @@ On key1 Equals key2 [ And key3 Equals key4 [... ]
 
 ## <a name="example"></a>Пример
 
-В следующем примере кода две коллекции объединяются с помощью предложения `Join` с двумя ключевыми столбцами.
+The following code example joins two collections by using the `Join` clause with two key columns.
 
 [!code-vb[VbSimpleQuerySamples#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples3.vb#17)]
 
-В примере будет выведен результат, аналогичный приведенному ниже:
+The example will produce output similar to the following:
 
 `winlogon (968), Windows Logon, Priority = 13`
 

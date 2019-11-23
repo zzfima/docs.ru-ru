@@ -1,5 +1,5 @@
 ---
-title: Out (универсальный модификатор) (Visual Basic)
+title: out (универсальный модификатор)
 ms.date: 07/20/2015
 f1_keywords:
 - vb.VarianceOut
@@ -7,18 +7,18 @@ helpviewer_keywords:
 - Out keyword [Visual Basic]
 - covariance, Out keyword [Visual Basic]
 ms.assetid: c4418369-1518-4a46-9a1e-054c61038eca
-ms.openlocfilehash: fa14e83af16cd30a72ca1c165596fa9320842fce
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0460015b44971fa638dba47183690ffcc89ca55f
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62053929"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351427"
 ---
 # <a name="out-generic-modifier-visual-basic"></a>Out (универсальный модификатор) (Visual Basic)
 
-Для параметров универсального типа `Out` ключевое слово указывает, что тип является ковариантным.
+For generic type parameters, the `Out` keyword specifies that the type is covariant.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
 Ковариация позволяет использовать производные типы со степенью наследования больше, нежели у типа, заданного универсальным параметром. Благодаря этому можно осуществлять неявное преобразование классов, реализующих вариантные интерфейсы, и неявное преобразование типов делегатов.
 
@@ -37,11 +37,11 @@ ms.locfileid: "62053929"
 
 - Параметр типа не используется в качестве универсального ограничения для методов интерфейса.
 
-В универсальный делегат параметр типа может быть объявлен ковариантным, если он используется только в качестве типа возвращаемого значения метода и не используется для аргументов метода.
+In a generic delegate, a type parameter can be declared covariant if it is used only as a method return type and not used for method arguments.
 
 Ковариация и контравариантность поддерживаются для ссылочных типов, но не для типов значений.
 
-В Visual Basic нельзя объявлять события в интерфейсах ковариантным без указания типа делегата. Кроме того ковариантный интерфейс не может включать вложенные классы, перечисления или структуры, но они могут иметь вложенные интерфейсы.
+In Visual Basic, you cannot declare events in covariant interfaces without specifying the delegate type. Also, covariant interfaces cannot have nested classes, enums, or structures, but they can have nested interfaces.
 
 ## <a name="behavior"></a>Поведение
 
@@ -57,7 +57,7 @@ ms.locfileid: "62053929"
 
 ## <a name="example"></a>Пример
 
-В следующем примере кода показано, как объявить ковариантный универсальный метод-делегат. Также показано, как можно использовать неявное преобразование для типов делегатов.
+В следующем примере кода показано, как объявить ковариантный универсальный метод-делегат. It also shows how you can use implicit conversion for delegate types.
 
 [!code-vb[vbVarianceKeywords#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvariancekeywords/vb/module1.vb#4)]
 

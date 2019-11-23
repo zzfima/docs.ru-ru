@@ -1,15 +1,15 @@
 ---
-title: Практическое руководство. Добавление настраиваемых методов для запросов LINQ (Visual Basic)
+title: Практическое руководство. Добавление настраиваемых методов для запросов LINQ
 ms.date: 07/20/2015
 ms.assetid: 099b2e2a-83cd-45c6-aa4d-01b398b5faaf
-ms.openlocfilehash: 59d08f7b7799964063514ad294567aadd11b0579
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3004a9c9c7abeffd9993b848ad765e7ae2dc8876
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61855378"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353376"
 ---
-# <a name="how-to-add-custom-methods-for-linq-queries-visual-basic"></a>Практическое руководство. Добавление настраиваемых методов для запросов LINQ (Visual Basic)
+# <a name="how-to-add-custom-methods-for-linq-queries-visual-basic"></a>How to: Add Custom Methods for LINQ Queries (Visual Basic)
 
 Вы можете расширить набор методов, которые можно использовать для запросов LINQ, путем добавления методов расширения в интерфейс <xref:System.Collections.Generic.IEnumerable%601>. Например, помимо стандартных операций вычисления среднего или максимального значения, можно создать настраиваемый метод агрегирования для вычисления одного значения на основе последовательности значений. Также можно создать метод, который работает как настраиваемый фильтр или особое преобразование данных для последовательности значений и возвращает новую последовательность. Примерами таких методов являются <xref:System.Linq.Enumerable.Distinct%2A>, <xref:System.Linq.Enumerable.Skip%2A> и <xref:System.Linq.Enumerable.Reverse%2A>.
 
@@ -53,7 +53,7 @@ End Module
 Этот метод расширения вызывается для любых перечислимых коллекций так же, как другие методы агрегирования из интерфейса <xref:System.Collections.Generic.IEnumerable%601>.
 
 > [!NOTE]
-> В Visual Basic можно использовать вызов метода или стандартный синтаксис запроса для `Aggregate` или `Group By` предложение. Дополнительные сведения см. в разделе [предложение Aggregate](../../../../visual-basic/language-reference/queries/aggregate-clause.md) и [предложение Group](../../../../visual-basic/language-reference/queries/group-by-clause.md).
+> In Visual Basic, you can either use a method call or standard query syntax for the `Aggregate` or `Group By` clause. For more information, see [Aggregate Clause](../../../../visual-basic/language-reference/queries/aggregate-clause.md) and [Group By Clause](../../../../visual-basic/language-reference/queries/group-by-clause.md).
 
 В следующем примере кода показано использование метода `Median` для массива типа `double`.
 
@@ -129,7 +129,7 @@ Function Median(Of T)(ByVal source As IEnumerable(Of T),
 End Function
 ```
 
-Теперь вы можете вызвать метод `Median` для последовательности объектов любого типа. Если тип не содержит собственную перегрузку метода, вам потребуется передать параметр делегата. В Visual Basic можно использовать лямбда-выражение для этой цели. Кроме того Если вы используете `Aggregate` или `Group By` предложение вместо вызова метода можно передать любое значение или выражение, которое находится в области этого предложения.
+Теперь вы можете вызвать метод `Median` для последовательности объектов любого типа. Если тип не содержит собственную перегрузку метода, вам потребуется передать параметр делегата. In Visual Basic, you can use a lambda expression for this purpose. Also, if you use the `Aggregate` or `Group By` clause instead of the method call, you can pass any value or expression that is in the scope this clause.
 
 В следующем примере кода показано, как вызвать метод `Median` для массива целых чисел и массива строк. Для строк вычисляется срединное значение длин строк в массиве. В примере демонстрируется передача параметра делегата <xref:System.Func%602> в метод `Median` для каждого из случаев.
 

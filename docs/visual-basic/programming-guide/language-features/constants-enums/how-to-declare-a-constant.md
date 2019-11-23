@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Объявление константы (Visual Basic)
+title: Практическое руководство. Объявление константы
 ms.date: 07/20/2015
 f1_keywords:
 - vb.constant
@@ -23,43 +23,43 @@ helpviewer_keywords:
 - module-level constants and variables
 - Object data type [Visual Basic], declaring constants
 ms.assetid: f901b4fa-481f-4621-822e-427060577ad1
-ms.openlocfilehash: 8b84ab5e8edebba3048c5cddf723198cf3f28858
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 5054d4a4fc02d8bd22efceb01770fc54167d8cb3
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72579914"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347472"
 ---
 # <a name="how-to-declare-a-constant-visual-basic"></a>Практическое руководство. Объявление константы (Visual Basic)
-Чтобы объявить константу и задать ее значение, используется оператор `Const`. Объявляя константу, можно присвоить значение понятному имени. После объявления константы ее нельзя изменить или присвоить ей новое значение.  
+You use the `Const` statement to declare a constant and set its value. By declaring a constant, you assign a meaningful name to a value. Once a constant is declared, it cannot be modified or assigned a new value.  
   
- Константа объявляется в процедуре или в разделе объявлений модуля, класса или структуры. Константы уровня класса или структуры `Private` по умолчанию, но также могут быть объявлены как `Public`, `Friend`, `Protected` или `Protected Friend` для соответствующего уровня доступа к коду.  
+ You declare a constant within a procedure or in the declarations section of a module, class, or structure. Class or structure-level constants are `Private` by default, but may also be declared as `Public`, `Friend`, `Protected`, or `Protected Friend` for the appropriate level of code access.  
   
- Константа должна иметь допустимое символьное имя (правила совпадают с правилами для создания имен переменных) и выражение, состоящее из числовых или строковых констант и операторов (но не для вызовов функций).  
+ The constant must have a valid symbolic name (the rules are the same as those for creating variable names) and an expression composed of numeric or string constants and operators (but no function calls).  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-### <a name="to-declare-a-constant"></a>Объявление константы  
+### <a name="to-declare-a-constant"></a>To declare a constant  
   
-- Напишите объявление, которое включает спецификатор доступа, ключевое слово `Const` и выражение, как показано в следующих примерах:  
+- Write a declaration that includes an access specifier, the `Const` keyword, and an expression, as in the following examples:  
   
      [!code-vb[VbEnumsTask#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#8)]  
   
-     Если [параметр Infer](../../../../visual-basic/language-reference/statements/option-infer-statement.md) имеет значение `Off` и [Option строго](../../../../visual-basic/language-reference/statements/option-strict-statement.md) `On`, необходимо явно объявить константу, указав тип данных (`Boolean`, `Byte`, `Char`, `DateTime`, `Decimal`, `Double`, 0 , 1, 2, 3 или 4).  
+     When [Option Infer](../../../../visual-basic/language-reference/statements/option-infer-statement.md) is `Off` and [Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md) is `On`, you must declare a constant explicitly by specifying a data type (`Boolean`, `Byte`, `Char`, `DateTime`, `Decimal`, `Double`, `Integer`, `Long`, `Short`, `Single`, or `String`).  
   
-     Если `Option Infer` имеет `On` или `Option Strict` `Off`, можно объявить константу без указания типа данных с помощью предложения `As`. Компилятор определяет тип константы на основе типа выражения. Дополнительные сведения см. в разделе [константные и литеральные типы данных](constant-and-literal-data-types.md).  
+     When `Option Infer` is `On` or `Option Strict` is `Off`, you can declare a constant without specifying a data type with an `As` clause. The compiler determines the type of the constant from the type of the expression. For more information, see [Constant and Literal Data Types](constant-and-literal-data-types.md).  
   
-### <a name="to-declare-a-constant-that-has-an-explicitly-stated-data-type"></a>Объявление константы с явно указанным типом данных  
+### <a name="to-declare-a-constant-that-has-an-explicitly-stated-data-type"></a>To declare a constant that has an explicitly stated data type  
   
-- Напишите объявление, которое включает ключевое слово `As` и явный тип данных, как показано в следующих примерах:  
+- Write a declaration that includes the `As` keyword and an explicit data type, as in the following examples:  
   
      [!code-vb[VbEnumsTask#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#9)]  
   
-     В одной строке можно объявить несколько констант, хотя код более удобен для чтения, если объявить только одну константу в строке. При объявлении нескольких констант в одной строке все они должны иметь одинаковый уровень доступа (`Public`, `Private`, `Friend`, `Protected` или `Protected Friend`).  
+     You can declare multiple constants on a single line, although your code is more readable if you declare only a single constant per line. If you declare multiple constants on a single line, they must all have the same access level (`Public`, `Private`, `Friend`, `Protected`, or `Protected Friend`).  
   
-### <a name="to-declare-multiple-constants-on-a-single-line"></a>Объявление нескольких констант в одной строке  
+### <a name="to-declare-multiple-constants-on-a-single-line"></a>To declare multiple constants on a single line  
   
-- Разделяйте объявления запятыми и пробелами, как показано в следующем примере:  
+- Separate the declarations with a comma and a space, as in the following example:  
   
     ```vb  
     Public Const Four As Integer = 4, Five As Integer = 5, Six As Integer = 44  
@@ -84,7 +84,7 @@ ms.locfileid: "72579914"
 
 - [Общие сведения о перечислениях](enumerations-overview.md)
 - [Общие сведения о константах](constants-overview.md)
-- [Инструкции. Объявление перечисления](how-to-declare-enumerations.md)
+- [How to: Declare an Enumeration](how-to-declare-enumerations.md)
 - [Перечисления и уточнение имен](enumerations-and-name-qualification.md)
 - [Оператор Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md)
 - [Константы и перечисления](../../../../visual-basic/language-reference/constants-and-enumerations.md)

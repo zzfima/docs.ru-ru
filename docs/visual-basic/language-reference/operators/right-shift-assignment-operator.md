@@ -1,5 +1,5 @@
 ---
-title: '>>Оператор = (Visual Basic)'
+title: '>>Оператор ='
 ms.date: 07/20/2015
 f1_keywords:
 - vb.>>=
@@ -10,15 +10,15 @@ helpviewer_keywords:
 - compound assignment statements [Visual Basic]
 - '>>= operator [Visual Basic]'
 ms.assetid: 2bcd9abb-7a8c-4229-b75d-8816ff1dc700
-ms.openlocfilehash: 08d4e251a96ca387a709319e752351db6825d9e8
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: cad021c7730782d6233c60841483df7173308dc1
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71701347"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351998"
 ---
-# <a name="-operator-visual-basic"></a>Оператор > > = (Visual Basic)
-Выполняет арифметическое смещение вправо для значения переменной или свойства и присваивает результат переменной или свойству.  
+# <a name="-operator-visual-basic"></a>>>= Operator (Visual Basic)
+Performs an arithmetic right shift on the value of a variable or property and assigns the result back to the variable or property.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -28,23 +28,23 @@ variableorproperty >>= amount
   
 ## <a name="parts"></a>Части  
  `variableorproperty`  
- Обязательный. Переменная или свойство целочисленного типа (`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long` или `ULong`).  
+ Обязательный. Variable or property of an integral type (`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, or `ULong`).  
   
  `amount`  
- Обязательный. Числовое выражение типа данных, которое расширяется до `Integer`.  
+ Обязательный. Numeric expression of a data type that widens to `Integer`.  
   
-## <a name="remarks"></a>Примечания  
- Элемент в левой части оператора `>>=` может быть простой скалярной переменной, свойством или элементом массива. Переменная или свойство не может быть [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md).  
+## <a name="remarks"></a>Заметки  
+ The element on the left side of the `>>=` operator can be a simple scalar variable, a property, or an element of an array. The variable or property cannot be [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md).  
   
- Оператор `>>=` сначала выполняет арифметический сдвиг значения переменной или свойства вправо. Затем оператор присваивает результат этой операции с переменной или свойством.  
+ The `>>=` operator first performs an arithmetic right shift on the value of the variable or property. The operator then assigns the result of that operation back to the variable or property.  
   
- Арифметические сдвиги не являются циклическими, то есть биты, сдвинутые за пределы результата, не переносятся на другой конец. При арифметическом сдвиге вправо биты, сдвинутые за пределы крайней правой позиции, отбрасываются, а крайний левый бит передается в позиции, освобожденные слева. Это означает, что если `variableorproperty` имеет отрицательное значение, освобождаемые позиции будут установлены на единицу. Если `variableorproperty` является положительным или если его тип данных не является типом без знака, освобождаемые позиции устанавливаются в ноль.  
+ Arithmetic shifts are not circular, which means the bits shifted off one end of the result are not reintroduced at the other end. In an arithmetic right shift, the bits shifted beyond the rightmost bit position are discarded, and the leftmost bit is propagated into the bit positions vacated at the left. This means that if `variableorproperty` has a negative value, the vacated positions are set to one. If `variableorproperty` is positive, or if its data type is an unsigned type, the vacated positions are set to zero.  
   
 ## <a name="overloading"></a>Перегрузка  
- [Оператор > >](../../../visual-basic/language-reference/operators/right-shift-operator.md) может быть *перегружен*, что означает, что класс или структура может переопределить свое поведение, если операнд имеет тип этого класса или структуры. Перегрузка оператора `>>` влияет на поведение оператора `>>=`. Если в коде используется `>>=` для класса или структуры, которая перегружает `>>`, убедитесь, что вы понимаете его переопределенное поведение. Для получения дополнительной информации см. [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+ The [>> Operator](../../../visual-basic/language-reference/operators/right-shift-operator.md) can be *overloaded*, which means that a class or structure can redefine its behavior when an operand has the type of that class or structure. Overloading the `>>` operator affects the behavior of the `>>=` operator. If your code uses `>>=` on a class or structure that overloads `>>`, be sure you understand its redefined behavior. Для получения дополнительной информации см. [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Пример  
- В следующем примере оператор `>>=` используется для сдвига битового шаблона переменной `Integer` вправо на указанное значение и присваивает результат переменной.  
+ The following example uses the `>>=` operator to shift the bit pattern of an `Integer` variable right by the specified amount and assign the result to the variable.  
   
  [!code-vb[VbVbalrOperators#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#15)]  
   

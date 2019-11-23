@@ -1,16 +1,16 @@
 ---
-title: Работа с глобальными пространствами имен (Visual Basic) (LINQ to XML)
+title: Работа с глобальными пространствами имен (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 0a8064d5-e02f-4315-ad48-6deaa443a2f0
-ms.openlocfilehash: 93c7c654e43b579456633dea90ba6a362ff095f7
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 80510e370e0a9c7ab27cb5177d9b547ead82715c
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582357"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350992"
 ---
 # <a name="working-with-global-namespaces-visual-basic-linq-to-xml"></a>Работа с глобальными пространствами имен (Visual Basic) (LINQ to XML)
-Одной из основных функций литералов XML в Visual Basic является возможность объявлять пространства имен XML с помощью инструкции `Imports`. Используя эту возможность, можно объявить либо пространство имен XML, использующее префикс, либо пространство имен XML по умолчанию.  
+One of the key features of XML literals in Visual Basic is the capability to declare XML namespaces by using the `Imports` statement. Используя эту возможность, можно объявить либо пространство имен XML, использующее префикс, либо пространство имен XML по умолчанию.  
   
  Данная возможность полезна в двух ситуациях. Во-первых, пространства имен, объявленные в XML-литералах, не переносятся во внедренные выражения. Применение деклараций глобальных пространств имен способствует снижению объема работы, которую необходимо выполнить в целях использования внедренных выражений с пространствами имен. Во-вторых, необходимо объявить глобальные пространства имен в целях использования пространств имен с XML-свойствами.  
   
@@ -199,4 +199,4 @@ http://www.adventure-works.com
   
 ## <a name="see-also"></a>См. также
 
-- [Общие сведения о пространствах имен (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)
+- [Namespaces Overview (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)

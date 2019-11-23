@@ -1,17 +1,17 @@
 ---
-title: -utf8output (Visual Basic)
+title: -utf8output
 ms.date: 07/20/2015
 helpviewer_keywords:
 - -utf8output compiler option [Visual Basic]
 - utf8output compiler option [Visual Basic]
 - /utf8output compiler option [Visual Basic]
 ms.assetid: 8ab36b1e-027a-49ac-85b4-f48997d9e4d6
-ms.openlocfilehash: adcb518cbe8397549c3ae3b3a8ca9f0ecf9dc38e
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 5cdc60888cd872940afc1b03febd879bb6d87c2e
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72004667"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350841"
 ---
 # <a name="-utf8output-visual-basic"></a>-utf8output (Visual Basic)
 Отображает выходные данные компилятора в кодировке UTF-8.  
@@ -24,16 +24,16 @@ ms.locfileid: "72004667"
   
 ## <a name="arguments"></a>Аргументы  
  `+` &#124; `-`  
- Необязательный параметр. Значение по умолчанию для этого параметра — `-utf8output-`, то есть выходные данные компилятора не используют кодировку UTF-8. Указание `-utf8output` дает тот же результат, что и указание `-utf8output+`.  
+ Необязательный. The default for this option is `-utf8output-`, which means compiler output does not use UTF-8 encoding. Указание `-utf8output` дает тот же результат, что и указание `-utf8output+`.  
   
-## <a name="remarks"></a>Примечания  
- В некоторых международных конфигурациях вывод компилятора не может правильно отображаться в консоли. В таких ситуациях используйте `-utf8output` и перенаправьте выходные данные компилятора в файл.  
+## <a name="remarks"></a>Заметки  
+ In some international configurations, compiler output cannot be displayed correctly in the console. In such situations, use `-utf8output` and redirect compiler output to a file.  
   
 > [!NOTE]
-> Параметр `-utf8output` недоступен в среде разработки Visual Studio; Он доступен только при компиляции из командной строки.  
+> The `-utf8output` option is not available from within the Visual Studio development environment; it is available only when compiling from the command line.  
   
 ## <a name="example"></a>Пример  
- Следующий код компилирует `In.vb` и направляет компилятор для вывода выходных данных в кодировке UTF-8.  
+ The following code compiles `In.vb` and directs the compiler to display output using UTF-8 encoding.  
   
 ```console  
 vbc -utf8output in.vb  

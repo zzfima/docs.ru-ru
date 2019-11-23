@@ -1,15 +1,15 @@
 ---
-title: Коллекции (Visual Basic)
+title: Коллекции
 ms.date: 07/20/2015
 ms.assetid: 5f7749f3-aaf2-4319-b63c-bfa72e1e2b7a
-ms.openlocfilehash: 7a4b891aa490d727a7f09bc19c11b8e505ef81f0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ba16d04e781bcf69356b1f603d92e104816a0860
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64754992"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347095"
 ---
-# <a name="collections-visual-basic"></a>Коллекции (Visual Basic)
+# <a name="collections-visual-basic"></a>Collections (Visual Basic)
 
 Во многих приложениях требуется создавать группы связанных объектов и управлять ими. Существует два способа группировки объектов: создать массив объектов и создать коллекцию.
 
@@ -22,7 +22,7 @@ ms.locfileid: "64754992"
 Если коллекция содержит элементы только одного типа данных, можно использовать один из классов в пространстве имен <xref:System.Collections.Generic?displayProperty=nameWithType>. Универсальная коллекция обеспечивает строгую типизацию, так что в нее нельзя добавить другие типы данных. При извлечении элемента из универсальной коллекции не нужно определять или преобразовывать его тип данных.
 
 > [!NOTE]
-> Примеры в этом разделе, включают [Imports](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) инструкций для `System.Collections.Generic` и `System.Linq` пространства имен.
+> For the examples in this topic, include [Imports](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) statements for the `System.Collections.Generic` and `System.Linq` namespaces.
 
 <a name="BKMK_SimpleCollection"></a>
 
@@ -30,7 +30,7 @@ ms.locfileid: "64754992"
 
 В примерах этого раздела используется универсальный класс <xref:System.Collections.Generic.List%601>, который позволяет работать со строго типизированными списками объектов.
 
-В следующем примере создается список строк и затем выполняется перебор строк с помощью [для каждого... Далее](../../../visual-basic/language-reference/statements/for-each-next-statement.md) инструкции.
+The following example creates a list of strings and then iterates through the strings by using a [For Each…Next](../../../visual-basic/language-reference/statements/for-each-next-statement.md) statement.
 
 ```vb
 ' Create a list of strings.
@@ -63,7 +63,7 @@ Next
 'Output: chinook coho pink sockeye
 ```
 
-Можно использовать [для... Далее](../../../visual-basic/language-reference/statements/for-next-statement.md) инструкции, а не `For Each` инструкции для выполнения итерации по коллекции. Для этого доступ к элементам коллекции осуществляется по позиции индекса. Индекс элементов начинается с 0 и заканчивается числом, равным количеству элементов минус 1.
+You can use a [For…Next](../../../visual-basic/language-reference/statements/for-next-statement.md) statement instead of a `For Each` statement to iterate through a collection. Для этого доступ к элементам коллекции осуществляется по позиции индекса. Индекс элементов начинается с 0 и заканчивается числом, равным количеству элементов минус 1.
 
 В приведенном ниже примере выполняется перебор элементов коллекции с помощью оператора `For…Next` вместо `For Each`.
 
@@ -95,7 +95,7 @@ Next
 'Output: chinook pink sockeye
 ```
 
-В приведенном ниже примере удаляются элементы из универсального списка. Вместо `For Each` инструкции [для... Далее](../../../visual-basic/language-reference/statements/for-next-statement.md) используется оператор, выполняющий перебор в порядке убывания. Связано это с тем, что в результате работы метода <xref:System.Collections.Generic.List%601.RemoveAt%2A> элементы, следующие за удаленным элементом, получают меньшее значение индекса.
+В приведенном ниже примере удаляются элементы из универсального списка. Instead of a `For Each` statement, a [For…Next](../../../visual-basic/language-reference/statements/for-next-statement.md) statement that iterates in descending order is used. Связано это с тем, что в результате работы метода <xref:System.Collections.Generic.List%601.RemoveAt%2A> элементы, следующие за удаленным элементом, получают меньшее значение индекса.
 
 ```vb
 Dim numbers As New List(Of Integer) From
@@ -173,7 +173,7 @@ End Class
 
 В таблице ниже перечислены некоторые из часто используемых классов пространства имен <xref:System.Collections.Generic?displayProperty=nameWithType>.
 
-|Класс|Описание|
+|Class|Описание|
 |---|---|
 |<xref:System.Collections.Generic.Dictionary%602>|Предоставляет коллекцию пар «ключ-значение», которые упорядочены по ключу.|
 |<xref:System.Collections.Generic.List%601>|Представляет список объектов, доступных по индексу. Предоставляет методы для поиска по списку, его сортировки и изменения.|
@@ -203,7 +203,7 @@ End Class
 
 В следующей таблице перечислены некоторые из часто используемых классов пространства имен `System.Collections`:
 
-|Класс|Описание|
+|Class|Описание|
 |---|---|
 |<xref:System.Collections.ArrayList>|Представляет массив объектов, размер которого динамически увеличивается по мере необходимости.|
 |<xref:System.Collections.Hashtable>|Представляет коллекцию пар «ключ-значение», которые упорядочены по хэш-коду ключа.|
@@ -224,7 +224,7 @@ End Class
 
 Везде, где это возможно, следует использовать универсальные коллекции в пространстве имен <xref:System.Collections.Generic?displayProperty=nameWithType> или пространстве имен <xref:System.Collections.Concurrent> вместо класса `Collection` в Visual Basic.
 
-Дополнительные сведения см. в разделе <xref:Microsoft.VisualBasic.Collection>.
+Для получения дополнительной информации см. <xref:Microsoft.VisualBasic.Collection>.
 
 <a name="BKMK_KeyValuePairs"></a>
 
@@ -296,7 +296,7 @@ Private Function BuildDictionary2() As Dictionary(Of String, Element)
 End Function
 ```
 
-В приведенном ниже примере используется метод <xref:System.Collections.Generic.Dictionary%602.ContainsKey%2A> и свойство <xref:System.Collections.Generic.Dictionary%602.Item%2A> `Dictionary` для быстрого поиска элемента по ключу. `Item` Свойство позволяет доступ к элементу в `elements` коллекции с помощью `elements(symbol)` кода в Visual Basic.
+В приведенном ниже примере используется метод <xref:System.Collections.Generic.Dictionary%602.ContainsKey%2A> и свойство <xref:System.Collections.Generic.Dictionary%602.Item%2A> `Dictionary` для быстрого поиска элемента по ключу. The `Item` property enables you to access an item in the `elements` collection by using the `elements(symbol)` code in Visual Basic.
 
 ```vb
 Private Sub FindInDictionary(ByVal symbol As String)
@@ -330,7 +330,7 @@ End Sub
 
 ## <a name="using-linq-to-access-a-collection"></a>Использование LINQ для доступа к коллекции
 
-Для доступа к коллекции можно использовать язык LINQ. Запросы LINQ обеспечивают возможности фильтрации, упорядочения и группировки. Дополнительные сведения см. в разделе [Приступая к работе с LINQ в Visual Basic](../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md).
+Для доступа к коллекции можно использовать язык LINQ. Запросы LINQ обеспечивают возможности фильтрации, упорядочения и группировки. For more information, see [Getting Started with LINQ in Visual Basic](../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md).
 
 В приведенном ниже примере выполняется запрос LINQ применительно к универсальной коллекции `List`. Запрос LINQ возвращает другую коллекцию, содержащую результаты.
 
@@ -458,7 +458,7 @@ End Class
 
 ## <a name="defining-a-custom-collection"></a>Определение настраиваемой коллекции
 
-Вы можете определить коллекцию, реализовав интерфейс <xref:System.Collections.Generic.IEnumerable%601> или <xref:System.Collections.IEnumerable>. Дополнительные сведения см. в разделе [перечисление коллекции](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/hwyysy67(v=vs.100)).
+Вы можете определить коллекцию, реализовав интерфейс <xref:System.Collections.Generic.IEnumerable%601> или <xref:System.Collections.IEnumerable>. For additional information, see [Enumerating a Collection](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/hwyysy67(v=vs.100)).
 
 Хотя можно определить настраиваемую коллекцию, обычно лучше использовать коллекции, входящие в .NET Framework, которые описаны в подразделе [Виды коллекций](#kinds-of-collections) ранее в этом разделе.
 
@@ -536,15 +536,15 @@ End Class
 
 <a name="BKMK_Iterators"></a>
 
-## <a name="iterators"></a>Итераторы
+## <a name="iterators"></a>Iterators
 
-*Итератор* используется для выполнения настраиваемого перебора коллекции. Итератор может быть методом или методом доступа `get`. Итератор использует [Yield](../../../visual-basic/language-reference/statements/yield-statement.md) инструкцию для возврата всех элементов коллекции по одному за раз.
+*Итератор* используется для выполнения настраиваемого перебора коллекции. Итератор может быть методом или методом доступа `get`. An iterator uses a [Yield](../../../visual-basic/language-reference/statements/yield-statement.md) statement to return each element of the collection one at a time.
 
-Итератор вызывается с помощью [для каждого... Далее](../../../visual-basic/language-reference/statements/for-each-next-statement.md) инструкции. Каждая итерация цикла `For Each` вызывает итератор. При достижении оператора `Yield` в итераторе возвращается выражение, и текущее расположение в коде сохраняется. При следующем вызове итератора выполнение возобновляется с этого места.
+You call an iterator by using a [For Each…Next](../../../visual-basic/language-reference/statements/for-each-next-statement.md) statement. Каждая итерация цикла `For Each` вызывает итератор. При достижении оператора `Yield` в итераторе возвращается выражение, и текущее расположение в коде сохраняется. При следующем вызове итератора выполнение возобновляется с этого места.
 
-Дополнительные сведения см. в разделе [итераторы (Visual Basic)](../../../visual-basic/programming-guide/concepts/iterators.md).
+For more information, see [Iterators (Visual Basic)](../../../visual-basic/programming-guide/concepts/iterators.md).
 
-В приведенном ниже примере используется метод-итератор. Метод итератора содержит `Yield` инструкцию, которая находится внутри [для... Далее](../../../visual-basic/language-reference/statements/for-next-statement.md) цикла. В методе `ListEvenNumbers` каждая итерация тела оператора `For Each` создает вызов метода-итератора, который переходит к следующему оператору `Yield`.
+В приведенном ниже примере используется метод-итератор. The iterator method has a `Yield` statement that is inside a [For…Next](../../../visual-basic/language-reference/statements/for-next-statement.md) loop. В методе `ListEvenNumbers` каждая итерация тела оператора `For Each` создает вызов метода-итератора, который переходит к следующему оператору `Yield`.
 
 ```vb
 Public Sub ListEvenNumbers()

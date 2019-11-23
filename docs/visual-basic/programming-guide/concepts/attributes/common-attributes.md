@@ -1,17 +1,17 @@
 ---
-title: Общие атрибуты (Visual Basic)
+title: Общие атрибуты
 ms.date: 07/20/2015
 ms.assetid: 11fe4894-1bf9-4525-a36b-cddcd3a5d22b
-ms.openlocfilehash: 5bc568279a6952fdc5e0a000b1208cd7f9cfd6e7
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 2889411779a275baa8c91862d4cac2f820d660d0
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524281"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353529"
 ---
-# <a name="common-attributes-visual-basic"></a>Общие атрибуты (Visual Basic)
+# <a name="common-attributes-visual-basic"></a>Common Attributes (Visual Basic)
 
-В этом разделе описываются атрибуты, наиболее часто используемые в Visual Basic программах.
+This topic describes the attributes that are most commonly used in Visual Basic programs.
 
 - [Глобальные атрибуты](#Global)
 
@@ -21,7 +21,7 @@ ms.locfileid: "72524281"
 
 - [Информационные атрибуты вызывающего объекта](#CallerInfo)
 
-- [Атрибуты Visual Basic](#VB)
+- [Visual Basic Attributes](#VB)
 
 ## <a name="Global"></a> Глобальные атрибуты
 
@@ -31,7 +31,7 @@ ms.locfileid: "72524281"
 <Assembly: AssemblyVersion("1.0.0.0")>
 ```
 
-Глобальные атрибуты появляются в исходном коде после любых операторов верхнего уровня `Imports` и перед объявлениями типа, модуля или пространства имен. Глобальные атрибуты могут содержаться в нескольких исходных файлах, однако эти файлы должны быть скомпилированы за один проход компиляции. Для проектов Visual Basic глобальные атрибуты обычно помещаются в файл AssemblyInfo. vb (файл создается автоматически при создании проекта в Visual Studio).
+Global attributes appear in the source code after any top-level `Imports` statements and before any type, module, or namespace declarations. Глобальные атрибуты могут содержаться в нескольких исходных файлах, однако эти файлы должны быть скомпилированы за один проход компиляции. For Visual Basic projects, global attributes are generally put in the AssemblyInfo.vb file (the file is created automatically when you create a project in Visual Studio).
 
 Атрибуты сборки — это значения, которые предоставляют сведения о сборке. Они делятся на следующие категории:
 
@@ -130,8 +130,8 @@ b.NewMethod()
 
 ```vb
 #Const TRACE_ON = True
-Imports System
 Imports System.Diagnostics
+
 Module TestConditionalAttribute
     Public Class Trace
         <Conditional("TRACE_ON")>
@@ -228,32 +228,32 @@ End Class
 |---|---|---|
 |<xref:System.Runtime.CompilerServices.CallerFilePathAttribute>|Полный путь исходного файла, содержащего вызывающий объект. Это путь во время компиляции.|`String`|
 |<xref:System.Runtime.CompilerServices.CallerLineNumberAttribute>|Номер строки в исходном файле, из которого вызывается метод.|`Integer`|
-|<xref:System.Runtime.CompilerServices.CallerMemberNameAttribute>|Имя свойства или метода вызывающего объекта. Дополнительные сведения см. в разделе [сведения о вызывающем объекте (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md).|`String`|
+|<xref:System.Runtime.CompilerServices.CallerMemberNameAttribute>|Имя свойства или метода вызывающего объекта. For more information, see [Caller Information (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md).|`String`|
 
-Дополнительные сведения об атрибутах сведений о вызывающем объекте см. в разделе [сведения о вызывающем объекте (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md).
+For more information about the Caller Info attributes, see [Caller Information (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md).
 
-## <a name="VB"></a>Атрибуты Visual Basic
+## <a name="VB"></a> Visual Basic Attributes
 
-В следующей таблице перечислены атрибуты, характерные для Visual Basic.
+The following table lists the attributes that are specific to Visual Basic.
 
 |Атрибут|Цель|
 |---------------|-------------|
-|<xref:Microsoft.VisualBasic.ComClassAttribute>|Указывает компилятору, что класс должен быть представлен в виде COM-объекта.|
-|<xref:Microsoft.VisualBasic.HideModuleNameAttribute>|Разрешает доступ к членам модуля с использованием только квалификации, необходимой для модуля.|
-|<xref:Microsoft.VisualBasic.VBFixedStringAttribute>|Задает размер строки фиксированной длины в структуре для использования с входными и выходными функциями файлов.|
-|<xref:Microsoft.VisualBasic.VBFixedArrayAttribute>|Задает размер фиксированного массива в структуре для использования с входными и выходными функциями файла.|
+|<xref:Microsoft.VisualBasic.ComClassAttribute>|Indicates to the compiler that the class should be exposed as a COM object.|
+|<xref:Microsoft.VisualBasic.HideModuleNameAttribute>|Allows module members to be accessed using only the qualification needed for the module.|
+|<xref:Microsoft.VisualBasic.VBFixedStringAttribute>|Specifies the size of a fixed-length string in a structure for use with file input and output functions.|
+|<xref:Microsoft.VisualBasic.VBFixedArrayAttribute>|Specifies the size of a fixed array in a structure for use with file input and output functions.|
 
 ### <a name="comclassattribute"></a>COMClassAttribute
 
-Используйте `COMClassAttribute`, чтобы упростить процесс создания COM-компонентов из Visual Basic. Объекты COM значительно отличаются от .NET Framework сборок, и без `COMClassAttribute` необходимо выполнить ряд действий по созданию COM-объекта из Visual Basic. Для классов, помеченных `COMClassAttribute`, компилятор выполняет многие из этих шагов автоматически.
+Use `COMClassAttribute` to simplify the process of creating COM components from Visual Basic. COM objects are considerably different from .NET Framework assemblies, and without `COMClassAttribute`, you need to follow a number of steps to generate a COM object from Visual Basic. For classes marked with `COMClassAttribute`, the compiler performs many of these steps automatically.
 
 ### <a name="hidemodulenameattribute"></a>HideModuleNameAttribute
 
-Используйте `HideModuleNameAttribute`, чтобы разрешить доступ к членам модуля только с помощью квалификации, необходимой для модуля.
+Use `HideModuleNameAttribute` to allow module members to be accessed by using only the qualification needed for the module.
 
 ### <a name="vbfixedstringattribute"></a>VBFixedStringAttribute
 
-Используйте `VBFixedStringAttribute`, чтобы принудительно Visual Basic создать строку фиксированной длины. По умолчанию строки имеют переменную длину, и этот атрибут полезен при хранении строк в файлах. Это показано в следующем коде:
+Use `VBFixedStringAttribute` to force Visual Basic to create a fixed-length string. Strings are of variable length by default, and this attribute is useful when storing strings to files. The following code demonstrates this:
 
 ```vb
 Structure Worker
@@ -267,7 +267,7 @@ End Structure
 
 ### <a name="vbfixedarrayattribute"></a>VBFixedArrayAttribute
 
-Используйте `VBFixedArrayAttribute`, чтобы объявить массивы с фиксированным размером. Как и в случае с Visual Basic строками, по умолчанию массивы имеют переменную длину. Этот атрибут полезен при сериализации или записи данных в файлы.
+Use `VBFixedArrayAttribute` to declare arrays that are fixed in size. Like Visual Basic strings, arrays are of variable length by default. This attribute is useful when serializing or writing data to files.
 
 ## <a name="see-also"></a>См. также
 

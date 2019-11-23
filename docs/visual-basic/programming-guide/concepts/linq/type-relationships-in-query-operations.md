@@ -1,5 +1,5 @@
 ---
-title: Отношения типов в операциях запроса (Visual Basic)
+title: Связи типов в операциях запроса
 ms.date: 07/20/2015
 helpviewer_keywords:
 - variable relationships [LINQ in Visual Basic]
@@ -11,55 +11,55 @@ helpviewer_keywords:
 - inferring type information [LINQ in Visual Basic]
 - relationships [LINQ in Visual Basic]
 ms.assetid: b5ff4da5-f3fd-4a8e-aaac-1cbf52fa16f6
-ms.openlocfilehash: 6d5d13064cceba10d27901ee95aa8b6731620dbb
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 8c201abef924766d52b1adb084970a24ebea2b50
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524114"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350565"
 ---
 # <a name="type-relationships-in-query-operations-visual-basic"></a>Отношения типов в операциях запроса (Visual Basic)
 
-Переменные, используемые в операциях запроса [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)], строго типизированы и должны быть совместимы друг с другом. Строгая типизация используется в источнике данных, в самом запросе и в выполнении запроса. На следующем рисунке показаны термины, используемые для описания запроса [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. Дополнительные сведения о частях запроса см. в разделе [основные операции запроса (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md).
+Variables used in [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] query operations are strongly typed and must be compatible with each other. Strong typing is used in the data source, in the query itself, and in the query execution. The following illustration identifies terms used to describe a [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query. For more information about the parts of a query, see [Basic Query Operations (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md).
 
-![Снимок экрана, показывающий запрос на псевдокод с выделенными элементами.](./media/type-relationships-in-query-operations/linq-query-description-terms.png)
+![Screenshot showing a pseudocode query with elements highlighted.](./media/type-relationships-in-query-operations/linq-query-description-terms.png)
 
-Тип переменной диапазона в запросе должен быть совместим с типом элементов в источнике данных. Тип переменной запроса должен быть совместим с элементом Sequence, определенным в предложении `Select`. Наконец, тип элементов последовательности также должен быть совместим с типом управляющей переменной цикла, которая используется в инструкции `For Each`, выполняющей запрос. Эта строгая типизация облегчает идентификацию ошибок типа во время компиляции.
+The type of the range variable in the query must be compatible with the type of the elements in the data source. The type of the query variable must be compatible with the sequence element defined in the `Select` clause. Finally, the type of the sequence elements also must be compatible with the type of the loop control variable that is used in the `For Each` statement that executes the query. This strong typing facilitates identification of type errors at compile time.
 
-Visual Basic обеспечивает строгую типизацию, реализуя вывод локального типа, также называемую *неявной типизацией*. Эта функция используется в предыдущем примере, и вы увидите, что она используется во всех [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] образцах и документации. В Visual Basic вывод локального типа выполняется просто с помощью инструкции `Dim` без предложения `As`. В следующем примере `city` строго типизирован как строка.
+Visual Basic makes strong typing convenient by implementing local type inference, also known as *implicit typing*. That feature is used in the previous example, and you will see it used throughout the [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] samples and documentation. In Visual Basic, local type inference is accomplished simply by using a `Dim` statement without an `As` clause. In the following example, `city` is strongly typed as a string.
 
 [!code-vb[VbLINQTypeRels#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQTypeRels/VB/Class1.vb#1)]
 
 > [!NOTE]
-> Локальное определение типа работает только в том случае, если `Option Infer` имеет значение `On`. Дополнительные сведения см. в разделе [оператор Option Infer](../../../../visual-basic/language-reference/statements/option-infer-statement.md).
+> Local type inference works only when `Option Infer` is set to `On`. For more information, see [Option Infer Statement](../../../../visual-basic/language-reference/statements/option-infer-statement.md).
 
-Однако даже если в запросе используется определение локального типа, то одни и те же связи типов существуют между переменными в источнике данных, переменной запроса и циклом выполнения запроса. При написании [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] запросов или работе с образцами и примерами кода в документации полезно иметь базовое понимание этих отношений типов.
+However, even if you use local type inference in a query, the same type relationships are present among the variables in the data source, the query variable, and the query execution loop. It is useful to have a basic understanding of these type relationships when you are writing [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] queries, or working with the samples and code examples in the documentation.
 
-Может потребоваться указать явный тип для переменной диапазона, которая не соответствует типу, возвращаемому источником данных. Тип переменной диапазона можно указать с помощью предложения `As`. Однако это приводит к ошибке, если преобразование является [узким преобразованием](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md) , а `Option Strict` имеет значение `On`. Поэтому рекомендуется выполнить преобразование для значений, полученных из источника данных. Можно преобразовать значения из источника данных в явный тип переменной диапазона с помощью метода <xref:System.Linq.Enumerable.Cast%2A>. Можно также привести значения, выбранные в предложении `Select`, к явному типу, отличному от типа переменной диапазона. Эти моменты показаны в следующем коде.
+You may need to specify an explicit type for a range variable that does not match the type returned from the data source. You can specify the type of the range variable by using an `As` clause. However, this results in an error if the conversion is a [narrowing conversion](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md) and `Option Strict` is set to `On`. Therefore, we recommend that you perform the conversion on the values retrieved from the data source. You can convert the values from the data source to the explicit range variable type by using the <xref:System.Linq.Enumerable.Cast%2A> method. You can also cast the values selected in the `Select` clause to an explicit type that is different from the type of the range variable. These points are illustrated in the following code.
 
 [!code-vb[VbLINQTypeRels#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQTypeRels/VB/Class1.vb#4)]
 
-## <a name="queries-that-return-entire-elements-of-the-source-data"></a>Запросы, возвращающие все элементы исходных данных
+## <a name="queries-that-return-entire-elements-of-the-source-data"></a>Queries That Return Entire Elements of the Source Data
 
-В следующем примере показана [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] операция запроса, возвращающая последовательность элементов, выбранных из исходных данных. Источник, `names`, содержит массив строк, а выходные данные запроса представляют собой последовательность, содержащую строки, начинающиеся с буквы M.
+The following example shows a [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query operation that returns a sequence of elements selected from the source data. The source, `names`, contains an array of strings, and the query output is a sequence containing strings that start with the letter M.
 
 [!code-vb[VbLINQTypeRels#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQTypeRels/VB/Class1.vb#2)]
 
-Это эквивалентно следующему коду, но гораздо короче и проще в написании. Использовать определение локального типа в запросах является предпочтительным стилем в Visual Basic.
+This is equivalent to the following code, but is much shorter and easier to write. Reliance on local type inference in queries is the preferred style in Visual Basic.
 
 [!code-vb[VbLINQTypeRels#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQTypeRels/VB/Class1.vb#3)]
 
-В обоих приведенных выше примерах кода существуют следующие связи, независимо от того, определены типы как неявно или явно.
+The following relationships exist in both of the previous code examples, whether the types are determined implicitly or explicitly.
 
-1. Тип элементов в источнике данных, `names`, является типом переменной диапазона, `name` в запросе.
+1. The type of the elements in the data source, `names`, is the type of the range variable, `name`, in the query.
 
-2. Тип объекта, выбранного `name`, определяет тип переменной запроса `mNames`. Здесь `name` является строкой, поэтому переменная запроса является IEnumerable (Of String) в Visual Basic.
+2. The type of the object that is selected, `name`, determines the type of the query variable, `mNames`. Here `name` is a string, so the query variable is IEnumerable(Of String) in Visual Basic.
 
-3. Запрос, определенный в `mNames`, выполняется в цикле `For Each`. Цикл выполняет итерацию результата выполнения запроса. Поскольку при выполнении `mNames` возвращается последовательность строк, переменная итерации цикла, `nm`, также является строкой.
+3. The query defined in `mNames` is executed in the `For Each` loop. The loop iterates over the result of executing the query. Because `mNames`, when it is executed, will return a sequence of strings, the loop iteration variable, `nm`, also is a string.
 
-## <a name="queries-that-return-one-field-from-selected-elements"></a>Запросы, возвращающие одно поле из выбранных элементов
+## <a name="queries-that-return-one-field-from-selected-elements"></a>Queries That Return One Field from Selected Elements
 
-В следующем примере показана [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] операция запроса, возвращающая последовательность, содержащую только одну часть каждого элемента, выбранного из источника данных. Запрос принимает коллекцию объектов `Customer` в качестве источника данных и проецирует только свойство `Name` в результате. Поскольку имя клиента является строкой, запрос создает последовательность строк в качестве выходных данных.
+The following example shows a [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] query operation that returns a sequence containing only one part of each element selected from the data source. The query takes a collection of `Customer` objects as its data source and projects only the `Name` property in the result. Because the customer name is a string, the query produces a sequence of strings as output.
 
 ```vb
 ' Method GetTable returns a table of Customer objects.
@@ -73,15 +73,15 @@ For Each custName In custNames
 Next
 ```
 
-Связи между переменными, как и в более простом примере.
+The relationships between variables are like those in the simpler example.
 
-1. Тип элементов в источнике данных, `customers`, является типом переменной диапазона, `cust` в запросе. В этом примере этот тип `Customer`.
+1. The type of the elements in the data source, `customers`, is the type of the range variable, `cust`, in the query. In this example, that type is `Customer`.
 
-2. Оператор `Select` возвращает свойство `Name` для каждого объекта `Customer`, а не весь объект. Поскольку `Name` является строкой, переменная запроса `custNames`, снова будет IEnumerable (Of String), а не `Customer`.
+2. The `Select` statement returns the `Name` property of each `Customer` object instead of the whole object. Because `Name` is a string, the query variable, `custNames`, will again be IEnumerable(Of String), not of `Customer`.
 
-3. Поскольку `custNames` представляет последовательность строк, переменная итерации цикла `For Each`, `custName`, должна быть строкой.
+3. Because `custNames` represents a sequence of strings, the `For Each` loop's iteration variable, `custName`, must be a string.
 
-Без локального определения типа предыдущий пример был бы более громоздким для написания и понимания, как показано в следующем примере.
+Without local type inference, the previous example would be more cumbersome to write and to understand, as the following example shows.
 
 ```vb
 ' Method GetTable returns a table of Customer objects.
@@ -96,9 +96,9 @@ Next
  Next
 ```
 
-## <a name="queries-that-require-anonymous-types"></a>Запросы, для которых требуются анонимные типы
+## <a name="queries-that-require-anonymous-types"></a>Queries That Require Anonymous Types
 
-В следующем примере показана более сложная ситуация. В предыдущем примере было неудобно указывать типы для всех переменных явным образом. В этом примере это невозможно. Вместо выбора целых `Customer` элементов из источника данных или одного поля из каждого элемента, предложение `Select` в этом запросе возвращает два свойства исходного объекта `Customer`: `Name` и `City`. В ответ на предложение `Select` компилятор определяет анонимный тип, содержащий эти два свойства. Результатом выполнения `nameCityQuery` в цикле `For Each` является коллекция экземпляров нового анонимного типа. Так как анонимный тип не имеет имени для использования, нельзя указать тип `nameCityQuery` или `custInfo` явным образом. То есть анонимный тип не имеет имени типа, используемого вместо `String` в `IEnumerable(Of String)`. Дополнительные сведения см. в статье [Анонимные типы](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).
+The following example shows a more complex situation. In the previous example, it was inconvenient to specify types for all the variables explicitly. In this example, it is impossible. Instead of selecting entire `Customer` elements from the data source, or a single field from each element, the `Select` clause in this query returns two properties of the original `Customer` object: `Name` and `City`. In response to the `Select` clause, the compiler defines an anonymous type that contains those two properties. The result of executing `nameCityQuery` in the `For Each` loop is a collection of instances of the new anonymous type. Because the anonymous type has no usable name, you cannot specify the type of `nameCityQuery` or `custInfo` explicitly. That is, with an anonymous type, you have no type name to use in place of `String` in `IEnumerable(Of String)`. Дополнительные сведения см. в статье [Анонимные типы](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).
 
 ```vb
 ' Method GetTable returns a table of Customer objects.
@@ -112,13 +112,13 @@ For Each custInfo In nameCityQuery
 Next
 ```
 
-Хотя невозможно указать типы для всех переменных в предыдущем примере, связи остаются неизменными.
+Although it is not possible to specify types for all the variables in the previous example, the relationships remain the same.
 
-1. Тип элементов в источнике данных опять является типом переменной диапазона в запросе. В этом примере `cust` является экземпляром `Customer`.
+1. The type of the elements in the data source is again the type of the range variable in the query. In this example, `cust` is an instance of `Customer`.
 
-2. Поскольку оператор `Select` создает анонимный тип, переменная запроса `nameCityQuery` должна быть неявно типизирована как анонимный тип. Анонимный тип не имеет имени и поэтому не может быть указан явным образом.
+2. Because the `Select` statement produces an anonymous type, the query variable, `nameCityQuery`, must be implicitly typed as an anonymous type. An anonymous type has no usable name, and therefore cannot be specified explicitly.
 
-3. Тип переменной итерации в цикле `For Each` — это анонимный тип, созданный на шаге 2. Поскольку тип не имеет пригодного для использования имени, тип переменной итерации цикла должен быть определен неявно.
+3. The type of the iteration variable in the `For Each` loop is the anonymous type created in step 2. Because the type has no usable name, the type of the loop iteration variable must be determined implicitly.
 
 ## <a name="see-also"></a>См. также
 

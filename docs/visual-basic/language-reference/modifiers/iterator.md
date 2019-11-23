@@ -1,35 +1,35 @@
 ---
-title: Итератор (Visual Basic)
+title: Итератор
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Iterator
 helpviewer_keywords:
 - Iterator keyword [Visual Basic]
 ms.assetid: 69cb0b04-ac87-49d0-bcfe-810c0d60daff
-ms.openlocfilehash: 4f42cf864e836c53cff5e7d620f4bdfa43c4c7ec
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9d7eaf186bae544031487ce027505e1e0d4ae0f3
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64661285"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351526"
 ---
 # <a name="iterator-visual-basic"></a>Итератор (Visual Basic)
-Указывает, что функция или `Get` метод доступа является итератором.  
+Specifies that a function or `Get` accessor is an iterator.  
   
-## <a name="remarks"></a>Примечания  
- *Итератор* выполняет настраиваемую итерацию по коллекции. Итератор использует [Yield](../../../visual-basic/language-reference/statements/yield-statement.md) инструкцию для возврата всех элементов в коллекции по одному за раз. Когда `Yield` к оператору, текущее расположение в коде сохраняется. При следующем вызове функции итератора выполнение возобновляется с этого места.  
+## <a name="remarks"></a>Заметки  
+ An *iterator* performs a custom iteration over a collection. An iterator uses the [Yield](../../../visual-basic/language-reference/statements/yield-statement.md) statement to return each element in the collection one at a time. When a `Yield` statement is reached, the current location in code is retained. При следующем вызове функции итератора выполнение возобновляется с этого места.  
   
- Итератор, который можно реализовать как функции или как `Get` доступа определения свойства. `Iterator` Отображается модификатор в объявлении функции итератора или `Get` метода доступа.  
+ An iterator can be implemented as a function or as a `Get` accessor of a property definition. The `Iterator` modifier appears in the declaration of the iterator function or `Get` accessor.  
   
- Итератор вызывается из клиентского кода с помощью [для каждого... Следующий оператор](../../../visual-basic/language-reference/statements/for-each-next-statement.md).  
+ You call an iterator from client code by using a [For Each...Next Statement](../../../visual-basic/language-reference/statements/for-each-next-statement.md).  
   
- Тип возвращаемого значения функции итератора или `Get` метод доступа может быть <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.IEnumerator>, или <xref:System.Collections.Generic.IEnumerator%601>.  
+ The return type of an iterator function or `Get` accessor can be <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.IEnumerator>, or <xref:System.Collections.Generic.IEnumerator%601>.  
   
- Итератор не может содержать `ByRef` параметров.  
+ An iterator cannot have any `ByRef` parameters.  
   
  Итератор не может использоваться в событии, конструкторе экземпляра, статическом конструкторе или статическом деструкторе.  
   
- Итератор, который может быть анонимной функции. Дополнительные сведения см. в разделе [Итераторы](../../programming-guide/concepts/iterators.md).  
+ An iterator can be an anonymous function. Дополнительные сведения см. в разделе [Итераторы](../../programming-guide/concepts/iterators.md).  
   
 ## <a name="usage"></a>Использование  
  Модификатор `Iterator` можно использовать в следующих контекстах:  
@@ -39,16 +39,16 @@ ms.locfileid: "64661285"
 - [Оператор Property](../../../visual-basic/language-reference/statements/property-statement.md)  
   
 ## <a name="example"></a>Пример  
- Ниже приведен пример функции итератора. Имеет функции итератора `Yield` инструкцию, которая находится внутри [для... Далее](../../../visual-basic/language-reference/statements/for-next-statement.md) цикла. Каждая итерация [для каждого](../../../visual-basic/language-reference/statements/for-each-next-statement.md) тела оператора в `Main` создает вызов `Power` функции итератора. При каждом вызове функции итератора происходит переход к следующему выполнению оператора `Yield`, которое осуществляется во время следующей итерации цикла `For…Next`.  
+ The following example demonstrates an iterator function. The iterator function has a `Yield` statement that is inside a [For…Next](../../../visual-basic/language-reference/statements/for-next-statement.md) loop. Each iteration of the [For Each](../../../visual-basic/language-reference/statements/for-each-next-statement.md) statement body in `Main` creates a call to the `Power` iterator function. При каждом вызове функции итератора происходит переход к следующему выполнению оператора `Yield`, которое осуществляется во время следующей итерации цикла `For…Next`.  
   
  [!code-vb[VbVbalrStatements#98](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class2.vb#98)]  
   
 ## <a name="example"></a>Пример  
- В следующем примере демонстрируется метод доступа `Get`, представляющий собой итератор. `Iterator` Является модификатор в объявлении свойства.  
+ В следующем примере демонстрируется метод доступа `Get`, представляющий собой итератор. The `Iterator` modifier is in the property declaration.  
   
  [!code-vb[VbVbalrStatements#99](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class2.vb#99)]  
   
- Дополнительные примеры см. в разделе [итераторы](../../programming-guide/concepts/iterators.md).  
+ For additional examples, see [Iterators](../../programming-guide/concepts/iterators.md).  
   
 ## <a name="see-also"></a>См. также
 

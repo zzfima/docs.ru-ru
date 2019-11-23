@@ -1,15 +1,15 @@
 ---
-title: Практическое руководство. Запрос для большого файла или файлов в дереве папок (LINQ) (Visual Basic)
+title: Практическое руководство. Запрос самого большого файла или файлов в дереве папок (LINQ)
 ms.date: 07/20/2015
 ms.assetid: 8c1c9f0c-95dd-4222-9be2-9ec026a13e81
-ms.openlocfilehash: 91cfba02bade5811dbc5f45a5106731ff637efcf
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 4f7dcb46670612695b5a7219b12a7f2e83746af2
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65593278"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347667"
 ---
-# <a name="how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq-visual-basic"></a>Практическое руководство. Запрос для большого файла или файлов в дереве папок (LINQ) (Visual Basic)
+# <a name="how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq-visual-basic"></a>Практическое руководство. Запрос самого большого файла или файлов в дереве папок (LINQ) (Visual Basic)
 В этом примере показано пять запросов, связанных с размером файла в байтах.  
   
 - Извлечение размера в байтах наибольшего файла.  
@@ -118,7 +118,7 @@ End Module
  Запрос вызывает отдельный метод, чтобы получить размер файла в байтах для обработки возможных исключений, которые будут вызваны при удалении файла в другом потоке за период времени с момента создания объекта <xref:System.IO.FileInfo> в вызове `GetFiles`. Даже если объект <xref:System.IO.FileInfo> уже создан, может возникнуть исключение, так как объект <xref:System.IO.FileInfo> будет пытаться обновить свойство <xref:System.IO.FileInfo.Length%2A>, используя самый последний размер в байтах при первом обращении к свойству. Поместив эту операцию в блок try-catch вне запроса, будет выполнено правило исключения использования операций в запросах, которые могут вызвать побочные эффекты. В целом, необходимо соблюдать осторожность при перехвате исключений, чтобы убедиться, что приложение не остается в неизвестном состоянии.  
   
 ## <a name="compiling-the-code"></a>Компиляция кода  
-Создайте проект консольного приложения VB.NET, с помощью `Imports` оператор для пространства имен System.Linq.
+Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.
   
 ## <a name="see-also"></a>См. также
 

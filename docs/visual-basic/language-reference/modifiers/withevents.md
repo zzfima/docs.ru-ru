@@ -1,5 +1,5 @@
 ---
-title: WithEvents (Visual Basic)
+title: WithEvents
 ms.date: 07/20/2015
 f1_keywords:
 - vb.WithEvents
@@ -7,31 +7,31 @@ f1_keywords:
 helpviewer_keywords:
 - WithEvents keyword [Visual Basic]
 ms.assetid: 19d461f5-d72f-4de9-8c1d-0a6650316990
-ms.openlocfilehash: 50d5a768393e90d28d150b451405e35e6f4c7953
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 2309c675b50a2025d73841a47fe8e30e7cecd522
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72583044"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350741"
 ---
 # <a name="withevents-visual-basic"></a>WithEvents (Visual Basic)
-Указывает, что одна или несколько объявленных переменных-членов ссылаются на экземпляр класса, который может создавать события.
+Specifies that one or more declared member variables refer to an instance of a class that can raise events.
 
 ## <a name="remarks"></a>Заметки
 
-Если переменная определена с помощью `WithEvents`, можно декларативно указать, что метод обрабатывает события переменной с помощью ключевого слова `Handles`.
+When a variable is defined using `WithEvents`, you can declaratively specify that a method handles the variable's events using the `Handles` keyword.
 
-@No__t_0 можно использовать только на уровне класса или модуля. Это означает, что контекст объявления для переменной `WithEvents` должен быть классом или модулем и не может быть исходным файлом, пространством имен, структурой или процедурой.
+You can use `WithEvents` only at class or module level. This means the declaration context for a `WithEvents` variable must be a class or module and cannot be a source file, namespace, structure, or procedure.
 
-Нельзя использовать `WithEvents` в члене структуры.
+You cannot use `WithEvents` on a structure member.
 
-С помощью `WithEvents` можно объявлять только отдельные переменные (а не массивы).
+You can declare only individual variables—not arrays—with `WithEvents`.
 
 ## <a name="rules"></a>Правила
 
-**Типы элементов.** Необходимо объявить переменные `WithEvents` как переменные объекта, чтобы они могли принимать экземпляры класса. Однако их нельзя объявить как `Object`. Их необходимо объявить в качестве конкретного класса, который может вызывать события.
+**Element Types.** You must declare `WithEvents` variables to be object variables so that they can accept class instances. However, you cannot declare them as `Object`. You must declare them as the specific class that can raise the events.
 
-Модификатор `WithEvents` можно использовать в этом контексте: [оператор Dim](../../../visual-basic/language-reference/statements/dim-statement.md)
+The `WithEvents` modifier can be used in this context: [Dim Statement](../../../visual-basic/language-reference/statements/dim-statement.md)
 
 ## <a name="example"></a>Пример
 

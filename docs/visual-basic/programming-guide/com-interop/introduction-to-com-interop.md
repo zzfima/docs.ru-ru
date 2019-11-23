@@ -1,60 +1,60 @@
 ---
-title: Знакомство с COM-взаимодействием (Visual Basic)
+title: Знакомство с COM-взаимодействием
 ms.date: 07/20/2015
 helpviewer_keywords:
 - interop assemblies
 - COM interop [Visual Basic], about COM interop
 ms.assetid: 8bd62e68-383d-407f-998b-29aa0ce0fd67
-ms.openlocfilehash: 5eb862d75f8870da40af4cd817fa32a3d2781f38
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: c7909b3b6a2c9f0b397b9621b7e5125c232be313
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592722"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353202"
 ---
 # <a name="introduction-to-com-interop-visual-basic"></a>Знакомство с COM-взаимодействием (Visual Basic)
-Модель объектов компонентов (COM) позволяет объекту предоставлять свою функциональность другим компонентам и ведущим приложениям. Хотя COM-объектов, стали основой для Windows, программирования в течение многих лет, приложений, предназначенных для общеязыковой среды выполнения (CLR) предоставляют множество преимуществ.  
+The Component Object Model (COM) lets an object expose its functionality to other components and to host applications. While COM objects have been fundamental to Windows programming for many years, applications designed for the common language runtime (CLR) offer many advantages.  
   
- .NET framework приложения будет заменят, разработанные с использованием модели COM. До этого времени может потребоваться использовать или создать COM-объектов с помощью Visual Studio. Взаимодействие с COM, или *COM-взаимодействия*, позволяет использовать существующие COM-объекты во время перехода на платформу .NET Framework в собственном темпе.  
+ .NET Framework applications will eventually replace those developed with COM. Until then, you may have to use or create COM objects by using Visual Studio. Interoperability with COM, or *COM interop*, enables you to use existing COM objects while transitioning to the .NET Framework at your own pace.  
   
- С помощью платформы .NET Framework для создания COM-компонентов, можно использовать COM-взаимодействия без регистрации. Это дает возможность контролировать, какая версия DLL включена в том случае, если более одной версии устанавливается на компьютере и позволяет конечным пользователям использовать XCOPY или FTP скопировать приложение в соответствующий каталог на своем компьютере где ее можно запустить. Дополнительные сведения см. в разделе [COM-взаимодействия без регистрации](../../../framework/interop/registration-free-com-interop.md).  
+ By using the .NET Framework to create COM components, you can use registration-free COM interop. This lets you control which DLL version is enabled when more than one version is installed on a computer, and lets end users use XCOPY or FTP to copy your application to an appropriate directory on their computer where it can be run. For more information, see [Registration-Free COM Interop](../../../framework/interop/registration-free-com-interop.md).  
   
-## <a name="managed-code-and-data"></a>Управляемый код и данные  
- Код, разработанный для .NET Framework называется *управляемого кода*и содержит метаданные, используемые средой CLR. Данные, используемые приложениями .NET Framework называются *данных управляемых* так, как среда выполнения управляет задачи, связанные с данными, такие как выделение и освобождение памяти и проверка типов. По умолчанию Visual Basic .NET использует управляемый код и данные, но можно получить доступ к неуправляемому коду, а также данные COM-объектов с помощью сборок взаимодействия (описанным ниже на этой странице).  
+## <a name="managed-code-and-data"></a>Managed Code and Data  
+ Code developed for the .NET Framework is referred to as *managed code*, and contains metadata that is used by the CLR. Data used by .NET Framework applications is called *managed data* because the runtime manages data-related tasks such as allocating and reclaiming memory and performing type checking. By default, Visual Basic .NET uses managed code and data, but you can access the unmanaged code and data of COM objects using interop assemblies (described later on this page).  
   
 ## <a name="assemblies"></a>Сборки  
- Сборка является основным стандартным блоком приложения .NET Framework. Это коллекция функций, построенный с контролем версий и развертываются как единое единую реализацию, содержащий один или несколько файлов. Каждая сборка содержит манифест сборки.  
+ An assembly is the primary building block of a .NET Framework application. It is a collection of functionality that is built, versioned, and deployed as a single implementation unit containing one or more files. Each assembly contains an assembly manifest.  
   
-## <a name="type-libraries-and-assembly-manifests"></a>Библиотеки типов и манифестов сборки  
- Библиотеки типов описывают характеристики объектов COM, таких как имена элементов и типов данных. Манифесты сборки выполняют ту же функцию для приложений .NET Framework. К ним относятся следующие сведения:  
+## <a name="type-libraries-and-assembly-manifests"></a>Type Libraries and Assembly Manifests  
+ Type libraries describe characteristics of COM objects, such as member names and data types. Assembly manifests perform the same function for .NET Framework applications. They include information about the following:  
   
-- Удостоверение сборки, версию, язык и региональные параметры и цифровой подписи.  
+- Assembly identity, version, culture, and digital signature.  
   
-- Файлы, составляющих реализацию сборки.  
+- Files that make up the assembly implementation.  
   
-- Типов и ресурсов, входящих в сборку. Сюда входят те, которые экспортируются из него.  
+- Types and resources that make up the assembly. This includes those that are exported from it.  
   
-- Во время компиляции зависимости от других сборок.  
+- Compile-time dependencies on other assemblies.  
   
-- Разрешения, необходимые для сборки для правильной работы.  
+- Permissions required for the assembly to run correctly.  
   
- Дополнительные сведения о сборках и манифестов сборки см. в разделе [сборок в .NET](../../../standard/assembly/index.md).  
+ For more information about assemblies and assembly manifests, see [Assemblies in .NET](../../../standard/assembly/index.md).  
   
-### <a name="importing-and-exporting-type-libraries"></a>Импорт и экспорт библиотеки типов  
- Visual Studio содержит программу Tlbimp, которая позволяет импортировать сведения из библиотеки типов в приложении .NET Framework. Можно создавать библиотеки типов из сборки с помощью программы Tlbexp.  
+### <a name="importing-and-exporting-type-libraries"></a>Importing and Exporting Type Libraries  
+ Visual Studio contains a utility, Tlbimp, that lets you import information from a type library into a .NET Framework application. You can generate type libraries from assemblies by using the Tlbexp utility.  
   
- Сведения о Tlbimp и Tlbexp, см. в разделе [Tlbimp.exe (программа импорта библиотек типов)](../../../framework/tools/tlbimp-exe-type-library-importer.md) и [Tlbexp.exe (программа экспорта библиотек типов)](../../../framework/tools/tlbexp-exe-type-library-exporter.md).  
+ For information about Tlbimp and Tlbexp, see [Tlbimp.exe (Type Library Importer)](../../../framework/tools/tlbimp-exe-type-library-importer.md) and [Tlbexp.exe (Type Library Exporter)](../../../framework/tools/tlbexp-exe-type-library-exporter.md).  
   
-## <a name="interop-assemblies"></a>Сборки взаимодействия  
- Сборки взаимодействия являются сборками .NET Framework, которые управляются мост между и неуправляемым кодом, отображая члены объекта COM эквивалент .NET Framework управляются членов. Сборки взаимодействия, созданные в Visual Basic .NET обрабатывать большую часть особенностей работы с объектами COM, такие как маршалинг взаимодействия.  
+## <a name="interop-assemblies"></a>Interop Assemblies  
+ Interop assemblies are .NET Framework assemblies that bridge between managed and unmanaged code, mapping COM object members to equivalent .NET Framework managed members. Interop assemblies created by Visual Basic .NET handle many of the details of working with COM objects, such as interoperability marshaling.  
   
-## <a name="interoperability-marshaling"></a>Маршалинг взаимодействия  
- Все приложения .NET Framework совместно используют набор общих типы, обеспечивающие взаимодействие объектов, независимо от языка программирования, который используется. Параметры и возвращаемые значения объектов COM иногда используют типы данных, которые отличаются от тех, которые используются в управляемом коде. *Маршалинг взаимодействия* — это процесс упаковки параметров и возвращаемых значений в эквивалентные типы данных при передаче и из COM-объектов. Дополнительные сведения см. в разделе [маршалинг взаимодействия](../../../framework/interop/interop-marshaling.md).  
+## <a name="interoperability-marshaling"></a>Interoperability Marshaling  
+ All .NET Framework applications share a set of common types that enable interoperability of objects, regardless of the programming language that is used. The parameters and return values of COM objects sometimes use data types that differ from those used in managed code. *Interoperability marshaling* is the process of packaging parameters and return values into equivalent data types as they move to and from COM objects. For more information, see [Interop Marshaling](../../../framework/interop/interop-marshaling.md).  
   
 ## <a name="see-also"></a>См. также
 
 - [COM-взаимодействие](../../../visual-basic/programming-guide/com-interop/index.md)
-- [Пошаговое руководство: Реализация наследования с использованием COM-объектов](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)
+- [Пошаговое руководство. Реализация наследования с использованием COM-объектов](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)
 - [Взаимодействие с неуправляемым кодом](../../../framework/interop/index.md)
 - [Устранение неполадок взаимодействия](../../../visual-basic/programming-guide/com-interop/troubleshooting-interoperability.md)
 - [Сборки в .NET](../../../standard/assembly/index.md)

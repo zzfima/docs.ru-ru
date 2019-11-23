@@ -1,5 +1,5 @@
 ---
-title: Арифметические операторы в Visual Basic
+title: Арифметические операторы
 ms.date: 07/20/2015
 helpviewer_keywords:
 - type safety
@@ -13,92 +13,92 @@ helpviewer_keywords:
 - Visual Basic code, operators
 - arithmetic operators [Visual Basic], about arithmetic operators
 ms.assetid: 325dac7a-ea4f-41d5-8b48-f6e904211569
-ms.openlocfilehash: a1854e35e32a31dbf531e6705a7968434dd02e44
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 8ded8d7111bd37cf8762a202b728e814aa5a082b
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65593238"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352660"
 ---
 # <a name="arithmetic-operators-in-visual-basic"></a>Арифметические операторы в Visual Basic
-Арифметические операторы используются для выполнения многих известных арифметических операций, включая вычисление числовых значений, представленных литералы, переменные, другие выражения, функции и вызовы свойства и константы. Также классифицируются с арифметическими операторами являются операторы поразрядного сдвига, которые работают на уровне отдельных битов операндов и сдвиг их битовых шаблонов влево или вправо.  
+Arithmetic operators are used to perform many of the familiar arithmetic operations that involve the calculation of numeric values represented by literals, variables, other expressions, function and property calls, and constants. Also classified with arithmetic operators are the bit-shift operators, which act at the level of the individual bits of the operands and shift their bit patterns to the left or right.  
   
-## <a name="arithmetic-operations"></a>Арифметические операции  
- Вы можете добавить два значения в выражении вместе с [оператором "+"](../../../../visual-basic/language-reference/operators/addition-operator.md), или вычесть единицу из другого и [-оператор (Visual Basic)](../../../../visual-basic/language-reference/operators/subtraction-operator.md), как показано в следующем примере.  
+## <a name="arithmetic-operations"></a>Arithmetic Operations  
+ You can add two values in an expression together with the [+ Operator](../../../../visual-basic/language-reference/operators/addition-operator.md), or subtract one from another with the [- Operator (Visual Basic)](../../../../visual-basic/language-reference/operators/subtraction-operator.md), as the following example demonstrates.  
   
  [!code-vb[VbVbalrOperators#57](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#57)]  
   
- Отрицание также использует [-оператор (Visual Basic)](../../../../visual-basic/language-reference/operators/subtraction-operator.md), но только с одним операндом, как показано следующем примере.  
+ Negation also uses the [- Operator (Visual Basic)](../../../../visual-basic/language-reference/operators/subtraction-operator.md), but with only one operand, as the following example demonstrates.  
   
  [!code-vb[VbVbalrOperators#58](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#58)]  
   
- Умножение и деление используйте [* оператор](../../../../visual-basic/language-reference/operators/multiplication-operator.md) и [/ Operator (Visual Basic)](../../../../visual-basic/language-reference/operators/floating-point-division-operator.md), соответственно, как показано в следующем примере.  
+ Multiplication and division use the [* Operator](../../../../visual-basic/language-reference/operators/multiplication-operator.md) and [/ Operator (Visual Basic)](../../../../visual-basic/language-reference/operators/floating-point-division-operator.md), respectively, as the following example demonstrates.  
   
  [!code-vb[VbVbalrOperators#59](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#59)]  
   
- Используется для возведения в степень [^ оператор](../../../../visual-basic/language-reference/operators/exponentiation-operator.md), как показано в следующем примере.  
+ Exponentiation uses the [^ Operator](../../../../visual-basic/language-reference/operators/exponentiation-operator.md), as the following example demonstrates.  
   
  [!code-vb[VbVbalrOperators#60](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#60)]  
   
- Целочисленное деление выполняется с помощью [\ оператора (Visual Basic)](../../../../visual-basic/language-reference/operators/integer-division-operator.md). Целочисленное деление возвращает частное, т. е целое число, представляющее число раз делитель можно разделить без остатка делится делимое. Как делитель, так и делимое должны быть целочисленными типами (`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, и `ULong`) для этого оператора. Все другие типы необходимо сначала преобразовать в целочисленный тип. В следующем примере показано целочисленное деление.  
+ Integer division is carried out using the [\ Operator (Visual Basic)](../../../../visual-basic/language-reference/operators/integer-division-operator.md). Integer division returns the quotient, that is, the integer that represents the number of times the divisor can divide into the dividend without consideration of any remainder. Both the divisor and the dividend must be integral types (`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, and `ULong`) for this operator. All other types must be converted to an integral type first. The following example demonstrates integer division.  
   
  [!code-vb[VbVbalrOperators#61](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#61)]  
   
- Арифметический модуль выполняется с помощью [оператор Mod](../../../../visual-basic/language-reference/operators/mod-operator.md). Этот оператор возвращает остаток после деления делимого целое количество раз. Если как делитель, так и делимое целочисленных типов, возвращаемое значение является неотъемлемой частью. Если делитель и делимое являются типами с плавающей запятой, возвращаемое значение также является с плавающей запятой. В следующем примере показано такое поведение.  
+ Modulus arithmetic is performed using the [Mod Operator](../../../../visual-basic/language-reference/operators/mod-operator.md). This operator returns the remainder after dividing the divisor into the dividend an integral number of times. If both divisor and dividend are integral types, the returned value is integral. If divisor and dividend are floating-point types, the returned value is also floating-point. The following example demonstrates this behavior.  
   
  [!code-vb[VbVbalrOperators#62](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#62)]  
   
  [!code-vb[VbVbalrOperators#63](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#63)]  
   
-### <a name="attempted-division-by-zero"></a>Попытка деления на ноль  
- Деление на ноль приводит к разным результатам в зависимости от используемых типов данных. В виде раздельных целочисленных значений (`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, `ULong`), .NET Framework выдает <xref:System.DivideByZeroException> исключение. В операции деления с `Decimal` или `Single` тип данных .NET Framework также выдает <xref:System.DivideByZeroException> исключение.  
+### <a name="attempted-division-by-zero"></a>Attempted Division by Zero  
+ Division by zero has different results depending on the data types involved. In integral divisions (`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, `ULong`), the .NET Framework throws a <xref:System.DivideByZeroException> exception. In division operations on the `Decimal` or `Single` data type, the .NET Framework also throws a <xref:System.DivideByZeroException> exception.  
   
- В с плавающей запятой виде раздельных значений с использованием `Double` тип данных, исключение не создается, и результатом является член класса, представляющий <xref:System.Double.NaN>, <xref:System.Double.PositiveInfinity>, или <xref:System.Double.NegativeInfinity>в зависимости от делимое. В следующей таблице перечислены различные результаты попытки деления `Double` значение деления на ноль.  
+ In floating-point divisions involving the `Double` data type, no exception is thrown, and the result is the class member representing <xref:System.Double.NaN>, <xref:System.Double.PositiveInfinity>, or <xref:System.Double.NegativeInfinity>, depending on the dividend. The following table summarizes the various results of attempting to divide a `Double` value by zero.  
   
-|Тип данных делимое|Тип данных делитель|Делимое значение|Результат|  
+|Dividend data type|Divisor data type|Dividend value|Результат|  
 |---|---|---|---|  
-|`Double`|`Double`|0|<xref:System.Double.NaN> (не математически число)|  
+|`Double`|`Double`|0|<xref:System.Double.NaN> (not a mathematically defined number)|  
 |`Double`|`Double`|> 0|<xref:System.Double.PositiveInfinity>|  
 |`Double`|`Double`|\< 0|<xref:System.Double.NegativeInfinity>|  
   
- После перехвата <xref:System.DivideByZeroException> исключения, можно использовать его члены для его обработки. Например <xref:System.Exception.Message%2A> свойство содержит текст сообщения для исключения. Дополнительные сведения см. в разделе [Оператор Try...Catch...Finally](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).  
+ When you catch a <xref:System.DivideByZeroException> exception, you can use its members to help you handle it. For example, the <xref:System.Exception.Message%2A> property holds the message text for the exception. Дополнительные сведения см. в разделе [Оператор Try...Catch...Finally](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).  
   
-## <a name="bit-shift-operations"></a>Операции сдвига разряда  
- Операция сдвига выполняет арифметический сдвиг битового шаблона. Шаблон содержится в операнде слева, а операнд справа указывает количество позиций для сдвига структуры. Можно сдвинуть биты вправо с [>> оператор](../../../../visual-basic/language-reference/operators/right-shift-operator.md) или влево с [<< оператор](../../../../visual-basic/language-reference/operators/left-shift-operator.md).  
+## <a name="bit-shift-operations"></a>Bit-Shift Operations  
+ A bit-shift operation performs an arithmetic shift on a bit pattern. The pattern is contained in the operand on the left, while the operand on the right specifies the number of positions to shift the pattern. You can shift the pattern to the right with the [>> Operator](../../../../visual-basic/language-reference/operators/right-shift-operator.md) or to the left with the [<< Operator](../../../../visual-basic/language-reference/operators/left-shift-operator.md).  
   
- Тип данных операнда шаблон должен быть `SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, или `ULong`. Тип данных операнда количества shift должен быть `Integer` или должны расширяться до `Integer`.  
+ The data type of the pattern operand must be `SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, or `ULong`. The data type of the shift amount operand must be `Integer` or must widen to `Integer`.  
   
- Арифметические сдвиги не являются циклическими, это означает, что биты, сдвигаемые результата, не подставляются на другом конце. Позиции битов, освобожденные сдвигом заданы следующим образом:  
+ Arithmetic shifts are not circular, which means the bits shifted off one end of the result are not reintroduced at the other end. The bit positions vacated by a shift are set as follows:  
   
-- 0 для арифметического сдвига влево  
+- 0 for an arithmetic left shift  
   
-- 0 для арифметического сдвига вправо положительного числа  
+- 0 for an arithmetic right shift of a positive number  
   
-- 0 для арифметического сдвига вправо беззнакового типа данных (`Byte`, `UShort`, `UInteger`, `ULong`)  
+- 0 for an arithmetic right shift of an unsigned data type (`Byte`, `UShort`, `UInteger`, `ULong`)  
   
-- 1 для арифметического сдвига вправо отрицательного числа (`SByte`, `Short`, `Integer`, или `Long`)  
+- 1 for an arithmetic right shift of a negative number (`SByte`, `Short`, `Integer`, or `Long`)  
   
- Следующий пример сдвигает `Integer` значение влево и вправо.  
+ The following example shifts an `Integer` value both left and right.  
   
  [!code-vb[VbVbalrOperators#64](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#64)]  
   
- Арифметические сдвиги никогда не создают исключения переполнения.  
+ Arithmetic shifts never generate overflow exceptions.  
   
-## <a name="bitwise-operations"></a>Поразрядные операции  
- Логические операторы `Not`, `Or`, `And`, и `Xor` выполнять Побитовая арифметика при использовании с числовыми значениями. Дополнительные сведения см. в разделе «Битовые операции» в [логические и побитовые операторы в Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md).  
+## <a name="bitwise-operations"></a>Bitwise Operations  
+ In addition to being logical operators, `Not`, `Or`, `And`, and `Xor` also perform bitwise arithmetic when used on numeric values. For more information, see "Bitwise Operations" in [Logical and Bitwise Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md).  
   
-## <a name="type-safety"></a>Безопасность типа  
- Операнды обычно должен быть того же типа. Например, если сложение с `Integer` переменной, добавьте ее в другой `Integer` переменной и следует присвоить результат переменной типа `Integer` также.  
+## <a name="type-safety"></a>Type Safety  
+ Operands should normally be of the same type. For example, if you are doing addition with an `Integer` variable, you should add it to another `Integer` variable, and you should assign the result to a variable of type `Integer` as well.  
   
- Один из способов обеспечить типобезопасного кода является использование [оператор Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md). Если задать `Option Strict On`, Visual Basic автоматически выполняет *типобезопасный* преобразования. Например, если попытаться добавить `Integer` переменной `Double` переменную и присвоить значение `Double` переменных, операция выполняется нормально, так как `Integer` значение можно преобразовать в `Double` без потери данных. Небезопасные преобразования, с другой стороны, вызывают ошибку компилятора с `Option Strict On`. Например, если попытаться добавить `Integer` переменной `Double` переменную и присвоить значение `Integer` переменной, компилятор выдает ошибку, так как `Double` переменной не может неявно преобразовать в тип `Integer`.  
+ One way to ensure good type-safe coding practice is to use the [Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md). If you set `Option Strict On`, Visual Basic automatically performs *type-safe* conversions. For example, if you try to add an `Integer` variable to a `Double` variable and assign the value to a `Double` variable, the operation proceeds normally, because an `Integer` value can be converted to `Double` without loss of data. Type-unsafe conversions, on the other hand, cause a compiler error with `Option Strict On`. For example, if you try to add an `Integer` variable to a `Double` variable and assign the value to an `Integer` variable, a compiler error results, because a `Double` variable cannot be implicitly converted to type `Integer`.  
   
- Если задать `Option Strict Off`, однако Visual Basic позволяет неявные сужающие преобразования вступили в силу, несмотря на то, что они могут привести к потере данных или точности. По этой причине мы рекомендуем использовать `Option Strict On` при написании кода в рабочей среде. Для получения дополнительной информации см. [Widening and Narrowing Conversions](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).  
+ If you set `Option Strict Off`, however, Visual Basic allows implicit narrowing conversions to take place, although they can result in the unexpected loss of data or precision. For this reason, we recommend that you use `Option Strict On` when writing production code. Для получения дополнительной информации см. [Widening and Narrowing Conversions](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).  
   
 ## <a name="see-also"></a>См. также
 
 - [Арифметические операторы](../../../../visual-basic/language-reference/operators/arithmetic-operators.md)
 - [Операторы сдвига битов](../../../../visual-basic/language-reference/operators/bit-shift-operators.md)
-- [Операторы сравнения в Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
-- [Операторы объединения в Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md)
-- [Логические и побитовые операторы в Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)
+- [Comparison Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
+- [Concatenation Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md)
+- [Logical and Bitwise Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)
 - [Эффективное сочетание операторов](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/efficient-combination-of-operators.md)

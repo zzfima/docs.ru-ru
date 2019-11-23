@@ -1,5 +1,5 @@
 ---
-title: Оператор SyncLock (Visual Basic)
+title: Оператор SyncLock
 ms.date: 07/20/2015
 f1_keywords:
 - vb.SyncLock
@@ -9,15 +9,15 @@ helpviewer_keywords:
 - SyncLock statement [Visual Basic]
 - locks, threads
 ms.assetid: 14501703-298f-4d43-b139-c4b6366af176
-ms.openlocfilehash: e981ee727b66ecda392014fd3ee8ca6f1526cd2e
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 0f430edce99513b0de9ef437d70648a128b336b8
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72578901"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352807"
 ---
 # <a name="synclock-statement"></a>Оператор SyncLock
-Получает монопольную блокировку для блока операторов перед выполнением блока.  
+Acquires an exclusive lock for a statement block before executing the block.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -29,62 +29,62 @@ End SyncLock
   
 ## <a name="parts"></a>Части  
  `lockobject`  
- Обязательный. Выражение, результатом которого является ссылка на объект.  
+ Обязательный. Expression that evaluates to an object reference.  
   
  `block`  
- Необязательный. Блок инструкций, которые выполняются при получении блокировки.  
+ Необязательный. Block of statements that are to execute when the lock is acquired.  
   
  `End SyncLock`  
- Завершает блок `SyncLock`.  
+ Terminates a `SyncLock` block.  
   
 ## <a name="remarks"></a>Заметки  
- Оператор `SyncLock` гарантирует, что несколько потоков не выполняют блок инструкций одновременно. `SyncLock` предотвращает вход каждого потока в блок до тех пор, пока не будет выполнен другой поток.  
+ The `SyncLock` statement ensures that multiple threads do not execute the statement block at the same time. `SyncLock` prevents each thread from entering the block until no other thread is executing it.  
   
- Чаще всего `SyncLock` используется для защиты данных от одновременного обновления более чем одним потоком. Если инструкции, управляющие данными, должны переходить к завершению без прерывания, помещайте их в блок `SyncLock`.  
+ The most common use of `SyncLock` is to protect data from being updated by more than one thread simultaneously. If the statements that manipulate the data must go to completion without interruption, put them inside a `SyncLock` block.  
   
- Блок операторов, защищенный монопольной блокировкой, иногда называют *критическим разделом*.  
+ A statement block protected by an exclusive lock is sometimes called a *critical section*.  
   
 ## <a name="rules"></a>Правила  
   
-- Ветвления. Невозможно выполнить ветвление в блок `SyncLock`, находящийся за пределами блока.  
+- Branching. You cannot branch into a `SyncLock` block from outside the block.  
   
-- Блокировка значения объекта. Значение `lockobject` не может быть `Nothing`. Объект Lock необходимо создать до его использования в инструкции `SyncLock`.  
+- Lock Object Value. The value of `lockobject` cannot be `Nothing`. You must create the lock object before you use it in a `SyncLock` statement.  
   
-     Невозможно изменить значение `lockobject` при выполнении блока `SyncLock`. Механизм требует, чтобы объект блокировки оставался без изменений.  
+     You cannot change the value of `lockobject` while executing a `SyncLock` block. The mechanism requires that the lock object remain unchanged.  
   
-- Оператор [await](../../../visual-basic/language-reference/operators/await-operator.md) нельзя использовать в блоке `SyncLock`.  
+- You can't use the [Await](../../../visual-basic/language-reference/operators/await-operator.md) operator in a `SyncLock` block.  
   
 ## <a name="behavior"></a>Поведение  
   
-- Механизм. Когда поток достигает оператора `SyncLock`, он вычисляет выражение `lockobject` и приостанавливает выполнение до тех пор, пока не получит монопольную блокировку на объект, возвращенный выражением. Когда другой поток достигает оператора `SyncLock`, он не получает блокировку до тех пор, пока первый поток не выполнит инструкцию `End SyncLock`.  
+- Mechanism. When a thread reaches the `SyncLock` statement, it evaluates the `lockobject` expression and suspends execution until it acquires an exclusive lock on the object returned by the expression. When another thread reaches the `SyncLock` statement, it does not acquire a lock until the first thread executes the `End SyncLock` statement.  
   
-- Защищенные данные. Если `lockobject` является `Shared` переменной, монопольная блокировка запрещает потоку в любом экземпляре класса выполнять блок `SyncLock`, пока он выполняется любым другим потоком. Это защищает данные, которые являются общими для всех экземпляров.  
+- Protected Data. If `lockobject` is a `Shared` variable, the exclusive lock prevents a thread in any instance of the class from executing the `SyncLock` block while any other thread is executing it. This protects data that is shared among all the instances.  
   
-     Если `lockobject` является переменной экземпляра (не `Shared`), блокировка не дает потоку, запущенному в текущем экземпляре, выполнять блок `SyncLock` в то же время, что и другой поток в том же экземпляре. Это защищает данные, обслуживаемые отдельным экземпляром.  
+     If `lockobject` is an instance variable (not `Shared`), the lock prevents a thread running in the current instance from executing the `SyncLock` block at the same time as another thread in the same instance. This protects data maintained by the individual instance.  
   
-- Приобретение и выпуск. Блок `SyncLock` ведет себя как конструкция `Try...Finally`, в которой блок `Try` получает монопольную блокировку на `lockobject`, а блок `Finally` освобождает ее. По этой причине блок `SyncLock` гарантирует освобождение блокировки, независимо от того, как вы выйдете из блока. Это справедливо даже в случае необработанного исключения.  
+- Acquisition and Release. A `SyncLock` block behaves like a `Try...Finally` construction in which the `Try` block acquires an exclusive lock on `lockobject` and the `Finally` block releases it. Because of this, the `SyncLock` block guarantees release of the lock, no matter how you exit the block. This is true even in the case of an unhandled exception.  
   
-- Платформа вызывает. Блок `SyncLock` получает и освобождает монопольную блокировку, вызывая методы `Enter` и `Exit` класса `Monitor` в пространстве имен <xref:System.Threading>.  
+- Framework Calls. The `SyncLock` block acquires and releases the exclusive lock by calling the `Enter` and `Exit` methods of the `Monitor` class in the <xref:System.Threading> namespace.  
   
-## <a name="programming-practices"></a>Рекомендации по программированию  
- @No__t_0ное выражение всегда должно оцениваться как объект, который относится исключительно к вашему классу. Следует объявить переменную объекта `Private`, чтобы защитить данные, принадлежащие текущему экземпляру, или переменную объекта `Private Shared`, чтобы защитить данные, общие для всех экземпляров.  
+## <a name="programming-practices"></a>Programming Practices  
+ The `lockobject` expression should always evaluate to an object that belongs exclusively to your class. You should declare a `Private` object variable to protect data belonging to the current instance, or a `Private Shared` object variable to protect data common to all instances.  
   
- Не следует использовать ключевое слово `Me` для предоставления объекта блокировки для данных экземпляра. Если код, внешний для класса, имеет ссылку на экземпляр класса, он может использовать эту ссылку в качестве объекта блокировки для `SyncLock` блока, совершенно отличного от вашего, защищая различные данные. Таким образом, класс и другой класс могут заблокировать друг друга от запуска несвязанных блоков `SyncLock`. Подобная блокировка строки может быть проблематичной, так как любой другой код в процессе, использующий одну и ту же строку, будет совместно использовать одну и ту же блокировку.  
+ You should not use the `Me` keyword to provide a lock object for instance data. If code external to your class has a reference to an instance of your class, it could use that reference as a lock object for a `SyncLock` block completely different from yours, protecting different data. In this way, your class and the other class could block each other from executing their unrelated `SyncLock` blocks. Similarly locking on a string can be problematic since any other code in the process using the same string will share the same lock.  
   
- Не следует также использовать метод `Me.GetType` для предоставления объекта блокировки для общих данных. Это происходит потому, что `GetType` всегда возвращает один и тот же `Type` объект для заданного имени класса. Внешний код может вызвать `GetType` для класса и получить тот же объект блокировки, который вы используете. Это приведет к тому, что два класса блокируют друг друга из блоков `SyncLock`.  
+ You should also not use the `Me.GetType` method to provide a lock object for shared data. This is because `GetType` always returns the same `Type` object for a given class name. External code could call `GetType` on your class and obtain the same lock object you are using. This would result in the two classes blocking each other from their `SyncLock` blocks.  
   
 ## <a name="examples"></a>Примеры  
   
 ### <a name="description"></a>Описание  
- В следующем примере показан класс, который поддерживает простой список сообщений. Он хранит сообщения в массиве и последнем используемом элементе этого массива в переменной. @No__t_0 процедура увеличивает последний элемент и сохраняет новое сообщение. Эти две операции защищаются инструкциями `SyncLock` и `End SyncLock`, так как после увеличения последнего элемента новое сообщение должно быть сохранено до того, как любой другой поток снова сможет снова увеличить последний элемент.  
+ The following example shows a class that maintains a simple list of messages. It holds the messages in an array and the last used element of that array in a variable. The `addAnotherMessage` procedure increments the last element and stores the new message. Those two operations are protected by the `SyncLock` and `End SyncLock` statements, because once the last element has been incremented, the new message must be stored before any other thread can increment the last element again.  
   
- Если класс `simpleMessageList` предоставил общий список сообщений между всеми экземплярами, переменные `messagesList` и `messagesLast` будут объявлены как `Shared`. В этом случае переменную `messagesLock` также следует `Shared`, чтобы в каждом экземпляре использовался один объект блокировки.  
+ If the `simpleMessageList` class shared one list of messages among all its instances, the variables `messagesList` and `messagesLast` would be declared as `Shared`. In this case, the variable `messagesLock` should also be `Shared`, so that there would be a single lock object used by every instance.  
   
 ### <a name="code"></a>Код  
  [!code-vb[VbVbalrThreading#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrThreading/VB/Class1.vb#1)]  
   
 ### <a name="description"></a>Описание  
- В следующем примере используются потоки и `SyncLock`. Пока используется оператор `SyncLock`, блок операторов является критическим разделом и `balance` никогда не становится отрицательным числом. Можно закомментировать операторы `SyncLock` и `End SyncLock`, чтобы увидеть результат выхода из ключевого слова `SyncLock`.  
+ The following example uses threads and `SyncLock`. As long as the `SyncLock` statement is present, the statement block is a critical section and `balance` never becomes a negative number. You can comment out the `SyncLock` and `End SyncLock` statements to see the effect of leaving out the `SyncLock` keyword.  
   
 ### <a name="code"></a>Код  
  [!code-vb[VbVbalrThreading#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrThreading/VB/class2.vb#21)]  

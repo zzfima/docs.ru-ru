@@ -1,5 +1,5 @@
 ---
-title: Соглашения об именах Visual Basic
+title: Соглашения об именах
 ms.date: 07/20/2015
 helpviewer_keywords:
 - names [Visual Basic], Visual Basic rules
@@ -10,35 +10,35 @@ helpviewer_keywords:
 - names [Visual Basic], naming conventions
 - naming conventions [Visual Basic], classes
 ms.assetid: 164949a4-2a7c-4736-9d82-9c3078e2e56c
-ms.openlocfilehash: ce8d4c5ede0d722d2c1768b9c2cd7929f296114e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 98fdda2934c9df1b33f41b6e0442a39246efe168
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651239"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347311"
 ---
 # <a name="visual-basic-naming-conventions"></a>Соглашения об именах Visual Basic
-При вводе имени элемента в приложении Visual Basic, первый символ имени должны быть буквы или символа подчеркивания. Обратите внимание, что имена, начинающиеся с символа подчеркивания, не совместимы с [независимость от языка и независимые от языка компоненты](../../../standard/language-independence-and-language-independent-components.md) (CLS).  
+When you name an element in your Visual Basic application, the first character of that name must be an alphabetic character or an underscore. Note, however, that names beginning with an underscore are not compliant with the [Language Independence and Language-Independent Components](../../../standard/language-independence-and-language-independent-components.md) (CLS).  
   
- Следующие советы для именования.  
+ The following suggestions apply to naming.  
   
-- Начинать каждое отдельное слово в имени с заглавной буквы, например `FindLastRecord` и `RedrawMyForm`.  
+- Begin each separate word in a name with a capital letter, as in `FindLastRecord` and `RedrawMyForm`.  
   
-- Начинать имена функций и методов с глагола, например `InitNameArray` или `CloseDialog`.  
+- Begin function and method names with a verb, as in `InitNameArray` or `CloseDialog`.  
   
-- Начинать класса, структуры, модуля и имен свойств с существительного, например `EmployeeName` или `CarAccessory`.  
+- Begin class, structure, module, and property names with a noun, as in `EmployeeName` or `CarAccessory`.  
   
-- Начать интерфейс именами с префиксом «I», следуют существительного или субстантивное словосочетание, например `IComponent`, или прилагательное, описывающее поведение интерфейса, например `IPersistable`. Не используйте символ подчеркивания и аббревиатуры, так как сокращения могут привести к путанице.  
+- Begin interface names with the prefix "I", followed by a noun or a noun phrase, like `IComponent`, or with an adjective describing the interface's behavior, like `IPersistable`. Do not use the underscore, and use abbreviations sparingly, because abbreviations can cause confusion.  
   
-- Имена обработчиков событий начинать с имени существительного, описывающего тип события, за которым следует "`EventHandler`«как в, суффикс»`MouseEventHandler`«.  
+- Begin event handler names with a noun describing the type of event followed by the "`EventHandler`" suffix, as in "`MouseEventHandler`".  
   
-- В именах классов аргументов событий, включают "`EventArgs`" суффикс.  
+- In names of event argument classes, include the "`EventArgs`" suffix.  
   
-- Если событие имеет смысл «до» или «после», используйте суффикс в настоящем или прошедшем времени, как в "`ControlAdd`«или»`ControlAdded`«.  
+- If an event has a concept of "before" or "after," use a suffix in present or past tense, as in "`ControlAdd`" or "`ControlAdded`".  
   
-- Для длинных или часто используемых терминов используйте аббревиатуры разумной длины, например, «HTML» вместо «Язык HTML». Как правило более 32 символов в именах переменных учитывается трудно читать на мониторе с разрешением с низким разрешением. Кроме того убедитесь, что ваш сокращения являются согласованными во всем приложении. Число случайных переключений в проекте между «HTML» и «Языка гипертекстовой разметки» может привести к путанице.  
+- For long or frequently used terms, use abbreviations to keep name lengths reasonable, for example, "HTML", instead of "Hypertext Markup Language". In general, variable names greater than 32 characters are difficult to read on a monitor set to a low resolution. Also, make sure your abbreviations are consistent throughout the entire application. Randomly switching in a project between "HTML" and "Hypertext Markup Language" can lead to confusion.  
   
-- Старайтесь не использовать имена во внутренней области, совпадающие с именами во внешней области. Ошибки могут привести к при обращении к неправильной переменной. Если возникает конфликт между переменной и ключевого слова с тем же именем, необходимо указать ключевое слово, перед которой стоят соответствующей библиотеки типов. Например, если у вас есть переменная с именем `Date`, можно использовать встроенный `Date` функции только путем вызова <xref:System.DateTime.Date%2A?displayProperty=nameWithType>.  
+- Avoid using names in an inner scope that are the same as names in an outer scope. Errors can result if the wrong variable is accessed. If a conflict occurs between a variable and the keyword of the same name, you must identify the keyword by preceding it with the appropriate type library. For example, if you have a variable called `Date`, you can use the intrinsic `Date` function only by calling <xref:System.DateTime.Date%2A?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>См. также
 

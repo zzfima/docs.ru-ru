@@ -1,5 +1,5 @@
 ---
-title: Автоматически реализуемые свойства (Visual Basic)
+title: Автоматически реализуемые свойства
 ms.date: 07/20/2015
 f1_keywords:
 - vb.AutoProperty
@@ -8,15 +8,15 @@ helpviewer_keywords:
 - properties [Visual Basic], auto-implemented
 - auto-implemented properties [Visual Basic]
 ms.assetid: 5c669f0b-cf95-4b4e-ae84-9cc55212ca87
-ms.openlocfilehash: f2e25c7bcd3556f93dfedee7aa8e49bb14888123
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: b322bd2215c95298be0a33ace1f3590a63878e24
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70254035"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350388"
 ---
 # <a name="auto-implemented-properties-visual-basic"></a>Автоматически реализуемые свойства (Visual Basic)
-*Автоматические реализованные свойства* позволяют быстро указывать свойство класса без необходимости написания кода для `Get` и `Set` свойства. При написании кода для автоматически реализуемого свойства компилятор Visual Basic автоматически создает закрытое поле для хранения переменной свойства, в дополнение к созданию связанных процедур `Get` и `Set`.  
+*Auto-implemented properties* enable you to quickly specify a property of a class without having to write code to `Get` and `Set` the property. При написании кода для автоматически реализуемого свойства компилятор Visual Basic автоматически создает закрытое поле для хранения переменной свойства, в дополнение к созданию связанных процедур `Get` и `Set`.  
   
  С помощью автоматически реализуемых свойств вы сможете объявлять свойства, включая значение по умолчанию, в одной строке. В следующем примере показано три объявления свойства.  
   
@@ -47,7 +47,7 @@ End Class
  Вы можете назначить свойству выражения инициализации, как показано в примере, или можно присвоить значения свойствам в конструкторе этого типа.  Резервные поля свойств только для чтения можно назначить в любое время.  
   
 ## <a name="backing-field"></a>Резервное поле  
- При объявлении автоматически реализуемого свойства Visual Basic автоматически создает скрытое закрытое поле, называемое *резервным полем* , которое содержит значение свойства. Имя резервного поля — это имя автоматически реализуемого свойства, с добавленным в начало знаком подчеркивания (_). Например, при объявлении автоматически реализуемого свойства с именем `ID` именем резервного поля будет `_ID`. Если добавить элемент класса также с именем `_ID`, возникнет конфликт имен, и Visual Basic сообщает об ошибке компилятора.  
+ When you declare an auto-implemented property, Visual Basic automatically creates a hidden private field called the *backing field* to contain the property value. Имя резервного поля — это имя автоматически реализуемого свойства, с добавленным в начало знаком подчеркивания (_). Например, при объявлении автоматически реализуемого свойства с именем `ID` именем резервного поля будет `_ID`. Если добавить элемент класса также с именем `_ID`, возникнет конфликт имен, и Visual Basic сообщает об ошибке компилятора.  
   
  Резервное поле также имеет следующие характеристики:  
   
@@ -73,7 +73,7 @@ End Class
  [!code-vb[VbVbalrAutoImplementedProperties#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrautoimplementedproperties/vb/module1.vb#4)]  
   
 ## <a name="property-definitions-that-require-standard-syntax"></a>Определения свойств, для которых требуется стандартный синтаксис  
- Автоматически реализуемые свойства удобны и поддерживают множество сценариев программирования. Однако существуют ситуации, в которых нельзя использовать автоматическое реализуемое свойство и вместо этого использовать стандартный или *Расширенный*синтаксис свойства.  
+ Автоматически реализуемые свойства удобны и поддерживают множество сценариев программирования. However, there are situations in which you cannot use an auto-implemented property and must instead use standard, or *expanded*, property syntax.  
   
  Расширенный синтаксис определения свойства необходимо использовать, если вам нужно выполнить следующие действия.  
   
@@ -90,12 +90,12 @@ End Class
 - Добавить XML-комментарии для резервного поля.  
   
 ## <a name="expanding-an-auto-implemented-property"></a>Расширение автоматически реализуемого свойства  
- Если вам требуется преобразовать автоматически реализуемое свойство в расширенное свойство, которое содержит процедуру `Get` или `Set`, редактор кода Visual Basic может автоматически создать процедуры `Get` и `Set` и оператор `End Property` для свойства. Код создается при помещении `Property` курсора на пустую строку после оператора, введите a `S` `G` (для `Get`) или (для `Set`) и нажмите клавишу ВВОД. Редактор кода Visual Basic автоматически создает процедуру `Get` или `Set` для свойств только для чтения и только для записи при нажатии клавиши ВВОД после оператора `Property`.  
+ Если вам требуется преобразовать автоматически реализуемое свойство в расширенное свойство, которое содержит процедуру `Get` или `Set`, редактор кода Visual Basic может автоматически создать процедуры `Get` и `Set` и оператор `End Property` для свойства. The code is generated if you put the cursor on a blank line following the `Property` statement, type a `G` (for `Get`) or an `S` (for `Set`) and press ENTER. Редактор кода Visual Basic автоматически создает процедуру `Get` или `Set` для свойств только для чтения и только для записи при нажатии клавиши ВВОД после оператора `Property`.  
   
 ## <a name="see-also"></a>См. также
 
-- [Практическое руководство. Объявление и вызов свойства по умолчанию в Visual Basic](./how-to-declare-and-call-a-default-property.md)
-- [Практическое руководство. Объявление свойства со смешанными уровнями доступа](./how-to-declare-a-property-with-mixed-access-levels.md)
+- [How to: Declare and Call a Default Property in Visual Basic](./how-to-declare-and-call-a-default-property.md)
+- [Практическое руководство. Объявление свойства со смешанным уровнем доступа](./how-to-declare-a-property-with-mixed-access-levels.md)
 - [Оператор Property](../../../../visual-basic/language-reference/statements/property-statement.md)
 - [ReadOnly](../../../../visual-basic/language-reference/modifiers/readonly.md)
 - [WriteOnly](../../../../visual-basic/language-reference/modifiers/writeonly.md)

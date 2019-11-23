@@ -1,5 +1,5 @@
 ---
-title: Оператор TypeOf (Visual Basic)
+title: Оператор TypeOf
 ms.date: 07/20/2015
 f1_keywords:
 - TypeOf
@@ -12,15 +12,15 @@ helpviewer_keywords:
 - TypeOf operator [Visual Basic]
 - compatible data types [Visual Basic]
 ms.assetid: 33f65296-659a-4b9a-9a29-c2a91cff68b2
-ms.openlocfilehash: c6028f524a16b836310f0c8d564205244515cdc9
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 22af5b8f8488ca44e388596530decd52e33525dc
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71701288"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350890"
 ---
 # <a name="typeof-operator-visual-basic"></a>Оператор TypeOf (Visual Basic)
-Проверяет, совместим ли тип среды выполнения результата выражения с указанным типом.
+Checks whether the runtime type of an expression's result is type-compatible with the specified type.
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -42,12 +42,12 @@ result = TypeOf objectexpression IsNot typename
  `typename`  
  Обязательный. Любое имя типа данных.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
  Оператор `TypeOf` определяет, совместим ли тип времени выполнения `objectexpression` с `typename`. Совместимость зависит от категории типа `typename`. В следующей таблице показано, как определяется совместимость.  
   
 |Категория типа `typename`|Критерий совместимости|  
 |---------------------------------|-----------------------------|  
-|Класс|`objectexpression` типа `typename` или наследует от `typename`|  
+|Class|`objectexpression` типа `typename` или наследует от `typename`|  
 |Структура|`objectexpression` типа `typename`|  
 |Интерфейс|`objectexpression` реализует `typename` или наследует от класса, реализующего `typename`|  
   
@@ -66,7 +66,7 @@ result = TypeOf objectexpression IsNot typename
 
 - [Оператор Is](../../../visual-basic/language-reference/operators/is-operator.md)
 - [Оператор IsNot](../../../visual-basic/language-reference/operators/isnot-operator.md)
-- [Операторы сравнения в Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
+- [Comparison Operators in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
 - [Порядок применения операторов в Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)
 - [Список операторов, сгруппированных по функциональному назначению](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
 - [Операторы и выражения](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)

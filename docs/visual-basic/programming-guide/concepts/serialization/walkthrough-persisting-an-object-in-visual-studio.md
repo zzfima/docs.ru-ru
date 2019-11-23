@@ -1,13 +1,13 @@
 ---
-title: Сохранение объекта в Visual Studio (Visual Basic)
+title: Сохранение объекта в Visual Studio
 ms.date: 07/20/2015
 ms.assetid: f1d0b562-e349-4dce-ab5f-c05108467030
-ms.openlocfilehash: 6f25c2a6f06b56dcbb5ba7e63165d06ff77d9ca8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: fbd342c929e8519571c0f6bb76d4091efcfe4476
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69937367"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350397"
 ---
 # <a name="walkthrough-persisting-an-object-in-visual-studio-visual-basic"></a>Пошаговое руководство. Сохранение объекта в Visual Studio (Visual Basic)
 Несмотря на то, что во время разработки свойствам объекта можно задать значения по умолчанию, любые значения, введенные во время выполнения, будут потеряны при уничтожении объекта. С помощью сериализации можно сохранить данные объекта между экземплярами, что позволит сохранять значения и извлекать их при следующем создании экземпляра объекта.  
@@ -89,7 +89,7 @@ ms.locfileid: "69937367"
   
 6. В диалоговом окне **Добавление ссылки** откройте вкладку **Проекты** и выберите проект LoanClass.  
   
-7. Нажмите кнопку **ОК**, чтобы закрыть диалоговое окно.  
+7. Нажмите кнопку **ОК** , чтобы закрыть диалоговое окно.  
   
 8. В конструкторе добавьте на форму четыре элемента управления <xref:System.Windows.Forms.TextBox>.  
   

@@ -1,5 +1,5 @@
 ---
-title: Auto (Visual Basic)
+title: Auto
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Auto
@@ -9,29 +9,29 @@ helpviewer_keywords:
 - Auto keyword [Visual Basic]
 - Auto keyword [Visual Basic], marshaling strings
 ms.assetid: bf79ba95-a62c-48a5-916f-0ac7a52c13ec
-ms.openlocfilehash: e4beb320b3aa0cadb790dd3ab92255496bc32f05
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7ea46e5f8b882bb986f23e792b240bad0c5be7a5
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61802710"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351621"
 ---
 # <a name="auto-visual-basic"></a>Auto (Visual Basic)
-Указывает, что Visual Basic должен маршалировать строки в соответствии с правилами .NET Framework, на основе внешнего имени объявляемой внешней процедуры.  
+Specifies that Visual Basic should marshal strings according to .NET Framework rules based on the external name of the external procedure being declared.  
   
- При вызове процедуры, определенные вне проекта, компилятор Visual Basic имеет доступ к сведениям, необходимым для корректного вызова процедуры. Эти сведения включают местонахождения процедуры, ее идентификатор, его последовательность вызова и тип возвращаемого значения и строки кодировку. [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md) создает ссылку на внешнюю процедуру и предоставляет необходимую информацию.  
+ When you call a procedure defined outside your project, the Visual Basic compiler does not have access to the information it must have to call the procedure correctly. This information includes where the procedure is located, how it is identified, its calling sequence and return type, and the string character set it uses. The [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md) creates a reference to an external procedure and supplies this necessary information.  
   
- `charsetmodifier` В `Declare` оператор содержит сведения для маршалинга строк во время вызова внешней процедуры. Оно также влияет, как Visual Basic выполняет внешнем файле имя внешней процедуры. `Auto` Модификатор указывает, что Visual Basic должен маршалировать строки в соответствии с правилами .NET Framework, его следует определить базовый кодировки среды выполнения платформы и, возможно, изменить имя внешней процедуры, если начальный поиск происходит сбой. Дополнительные сведения см. в разделе «Наборы символов» в [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md).  
+ The `charsetmodifier` part in the `Declare` statement supplies the character set information for marshaling strings during a call to the external procedure. It also affects how Visual Basic searches the external file for the external procedure name. The `Auto` modifier specifies that Visual Basic should marshal strings according to .NET Framework rules, and that it should determine the base character set of the run-time platform and possibly modify the external procedure name if the initial search fails. For more information, see "Character Sets" in [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md).  
   
- Если указан никакой модификатор набора символов, `Ansi` используется по умолчанию.  
+ If no character set modifier is specified, `Ansi` is the default.  
   
-## <a name="remarks"></a>Примечания  
- `Auto` Модификатор может использоваться в этом контексте:  
+## <a name="remarks"></a>Заметки  
+ The `Auto` modifier can be used in this context:  
   
  [Оператор Declare](../../../visual-basic/language-reference/statements/declare-statement.md)  
   
-## <a name="smart-device-developer-notes"></a>Примечания для разработчиков смарт-устройств  
- Это ключевое слово не поддерживается.  
+## <a name="smart-device-developer-notes"></a>Smart Device Developer Notes  
+ This keyword is not supported.  
   
 ## <a name="see-also"></a>См. также
 

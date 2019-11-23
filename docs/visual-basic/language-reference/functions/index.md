@@ -1,24 +1,24 @@
 ---
-title: Функции (Visual Basic)
+title: Функции
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic, functions
 - functions [Visual Basic]
 ms.assetid: d86fc51f-f46e-4941-8ae2-6262da3d2688
-ms.openlocfilehash: e38768e191d8b0e05e4dcc5081444737da759bf0
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 6a0c1d1df42b9db7cbc47ef32c88101115a62a4f
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69930063"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348081"
 ---
 # <a name="functions-visual-basic"></a>Функции (Visual Basic)
 В статьях этого раздела приводятся таблицы с функциями-членами времени выполнения Visual Basic.  
   
 > [!NOTE]
-> Вы можете также создавать функции и вызывать их. Дополнительные сведения см. в разделе [оператор Function](../../../visual-basic/language-reference/statements/function-statement.md) и [инструкции: Создайте процедуру, которая возвращает значение](../../../visual-basic/programming-guide/language-features/procedures/how-to-create-a-procedure-that-returns-a-value.md).  
+> Вы можете также создавать функции и вызывать их. Подробнее см. в разделах [Оператор Function](../../../visual-basic/language-reference/statements/function-statement.md) и [Практическое руководство. Создание процедуры, которая возвращает значение](../../../visual-basic/programming-guide/language-features/procedures/how-to-create-a-procedure-that-returns-a-value.md).  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>Содержание  
  [Функции преобразования](../../../visual-basic/language-reference/functions/conversion-functions.md)  
   
  [Математические функции](../../../visual-basic/language-reference/functions/math-functions.md)  

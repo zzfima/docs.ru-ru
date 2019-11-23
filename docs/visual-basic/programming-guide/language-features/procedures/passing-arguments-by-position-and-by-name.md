@@ -1,5 +1,5 @@
 ---
-title: Передача аргументов по позиции и по имени (Visual Basic)
+title: Передача аргументов по позиции и по имени
 ms.date: 02/01/2018
 helpviewer_keywords:
 - arguments [Visual Basic], passing by name
@@ -22,66 +22,66 @@ helpviewer_keywords:
 - argument passing [Visual Basic], by position
 - arguments [Visual Basic], listing by name
 ms.assetid: 1ad7358f-1da9-48da-a95b-f3c7ed41eff3
-ms.openlocfilehash: 2fa07a4ecf31b9dc0fee91593e793f3b00c5a83b
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: b6588335f7634cc87a9fc14cbfc4ba80baad1abb
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524433"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352621"
 ---
 # <a name="passing-arguments-by-position-and-by-name-visual-basic"></a>Передача аргументов по позиции и по имени (Visual Basic)
 
-При вызове процедуры `Sub` или `Function` можно передавать аргументы *по положению* , в том порядке, в котором они отображаются в определении процедуры, или передавать их *по имени*, не обращаясь к положению.
+When you call a `Sub` or `Function` procedure, you can pass arguments *by position* — in the order in which they appear in the procedure's definition — or you can pass them *by name*, without regard to position.
 
-При передаче аргумента по имени указывается объявленное имя аргумента, за которым следует двоеточие и знак равенства (`:=`), за которым следует значение аргумента. Именованные аргументы можно указывать в любом порядке.
+When you pass an argument by name, you specify the argument's declared name followed by a colon and an equal sign (`:=`), followed by the argument value. You can supply named arguments in any order.
 
-Например, следующая `Sub` процедура принимает три аргумента:
+For example, the following `Sub` procedure takes three arguments:
 
 [!code-vb[SampleProcedure](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#1)]
 
-При вызове этой процедуры аргументы можно указать по положению, по имени или с помощью сочетания обоих типов.
+When you call this procedure, you can supply the arguments by position, by name, or by using a mixture of both.
 
-## <a name="passing-arguments-by-position"></a>Передача аргументов по положению
+## <a name="passing-arguments-by-position"></a>Passing Arguments by Position
 
-Можно вызвать метод `Display` с аргументами, передаваемыми по положению и разделенным запятыми, как показано в следующем примере:
+You can call the `Display` method with its arguments passed by position and delimited by commas, as shown in the following example:
 
 [!code-vb[ByPosition](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#2)]
 
-Если необязательный аргумент не указан в списке позиционированных аргументов, необходимо держать его место с запятой. В следующем примере вызывается метод `Display` без аргумента `age`:
+If you omit an optional argument in a positional argument list, you must hold its place with a comma. The following example calls the `Display` method without the `age` argument:
 
 [!code-vb[ByPositionWithOptionalArgument](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#3)]
 
-## <a name="passing-arguments-by-name"></a>Передача аргументов по имени
+## <a name="passing-arguments-by-name"></a>Passing Arguments by Name
 
-Кроме того, можно вызвать `Display` с аргументами, передаваемыми по имени, также разделенными запятыми, как показано в следующем примере:
+Alternatively, you can call `Display` with the arguments passed by name, also delimited by commas, as shown in the following example:
 
 [!code-vb[ByName](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#4)]
 
-Передача аргументов по имени таким способом особенно полезна при вызове процедуры, имеющей более одного необязательного аргумента. Если аргументы указываются по имени, не нужно использовать последовательные запятые для обозначения пропущенных аргументов. Передача аргументов по имени также упрощает отслеживание передаваемых аргументов и тех, которые вы пропускаете.
+Passing arguments by name in this way is especially useful when you call a procedure that has more than one optional argument. If you supply arguments by name, you do not have to use consecutive commas to denote missing positional arguments. Passing arguments by name also makes it easier to keep track of which arguments you are passing and which ones you are omitting.
 
-## <a name="mixing-arguments-by-position-and-by-name"></a>Смешивание аргументов по положению и по имени
+## <a name="mixing-arguments-by-position-and-by-name"></a>Mixing Arguments by Position and by Name
 
-Аргументы можно указать как по положению, так и по имени в одном вызове процедуры, как показано в следующем примере:
+You can supply arguments both by position and by name in a single procedure call, as shown in the following example:
 
 [!code-vb[ByNameAndPosition](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#5)]
 
-В предыдущем примере не требуется дополнительная запятая для размещения пропущенного аргумента `age`, так как `birth` передается по имени.
+In the preceding example, no extra comma is necessary to hold the place of the omitted `age` argument, since `birth` is passed by name.
 
-В версиях Visual Basic до 15,5, при указании аргументов в сочетании с аргументами "расположение" и "имя" все аргументы должны быть первыми. После указания аргумента по имени все остальные аргументы должны передаваться по имени.  Например, следующий вызов метода `Display` отображает ошибку компилятора [BC30241: Ожидается именованный аргумент](../../../misc/bc30241.md).
+In versions of Visual Basic before 15.5, when you supply arguments by a mixture of position and name, the positional arguments must all come first. Once you supply an argument by name, any remaining arguments must all be passed by name.  For example, the following call to the `Display` method displays compiler error [BC30241: Named argument expected](../../../misc/bc30241.md).
 
 [!code-vb[ByNameAndPosition](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#6)]
 
-Начиная с Visual Basic 15,5, позиционированные аргументы могут следовать именованным аргументам, если конечные аргументы конца находятся в правильном положении. При компиляции в разделе Visual Basic 15,5 предыдущий вызов метода `Display` компилируется успешно и больше не создает ошибку компилятора [BC30241](../../../misc/bc30241.md).
+Starting with Visual Basic 15.5, positional arguments can follow named arguments if the ending positional arguments are in the correct position. If compiled under Visual Basic 15.5, the previous call to the `Display` method compiles successfully and no longer generates compiler error [BC30241](../../../misc/bc30241.md).
 
-Возможность смешивать и сопоставлять именованные и позиционированные аргументы в любом порядке особенно полезна, если нужно использовать именованный аргумент, чтобы сделать код более удобочитаемым. Например, следующий конструктор класса `Person` требует два аргумента типа `Person`, оба из которых могут быть `Nothing`.
+This ability to mix and match named and positional arguments in any order is particularly useful when you want to use a named argument to make your code more readable. For example, the following `Person` class constructor requires two arguments of type `Person`, both of which can be `Nothing`.
 
 [!code-vb[ByNameAndPosition](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#7)]
 
-Использование смешанных именованных и позиционированных аргументов позволяет отменять намерение кода, если аргументы `father` и `mother` `Nothing`:
+Using mixed named and positional arguments helps to make the intent of the code clear when the value of the `father` and `mother` arguments is `Nothing`:
 
 [!code-vb[ByNameAndPosition](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#8)]
 
-Чтобы следовать аргументам с именованными аргументами, необходимо добавить следующий элемент в файл проекта Visual Basic (\*. vbproj):
+To follow positional arguments with named arguments, you must add the following element to your Visual Basic project (\*.vbproj) file:
 
 ```xml
 <PropertyGroup>
@@ -89,13 +89,13 @@ ms.locfileid: "72524433"
 </PropertyGroup>
 ```
 
-Дополнительные сведения см. [в разделе Задание языковой версии Visual Basic](../../../language-reference/configure-language-version.md).
+For more information see [setting the Visual Basic language version](../../../language-reference/configure-language-version.md).
 
-## <a name="restrictions-on-supplying-arguments-by-name"></a>Ограничения на предоставление аргументов по имени
+## <a name="restrictions-on-supplying-arguments-by-name"></a>Restrictions on Supplying Arguments by Name
 
-Аргументы нельзя передавать по имени, чтобы избежать ввода обязательных аргументов. Можно опустить только необязательные аргументы.
+You cannot pass arguments by name to avoid entering required arguments. You can omit only the optional arguments.
 
-Невозможно передать массив параметров по имени. Это происходит потому, что при вызове процедуры вы предоставляете неопределенное число аргументов, разделенных запятыми, для массива параметров, и компилятор не может связать более одного аргумента с одним именем.
+You cannot pass a parameter array by name. This is because when you call the procedure, you supply an indefinite number of comma-separated arguments for the parameter array, and the compiler cannot associate more than one argument with a single name.
 
 ## <a name="see-also"></a>См. также
 

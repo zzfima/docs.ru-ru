@@ -1,5 +1,5 @@
 ---
-title: Разделяемые методы (Visual Basic)
+title: Разделяемые методы
 ms.date: 07/20/2015
 f1_keywords:
 - vb.PartialMethod
@@ -11,36 +11,36 @@ helpviewer_keywords:
 - methods [Visual Basic], partial methods
 - inserting custom logic into code
 ms.assetid: 74b3368b-b348-44a0-a326-7d7dc646f4e9
-ms.openlocfilehash: 50d7f24fd9f854d36bb2ed48c2e41a996c29dfe8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7abf0565a985f1fb44fcf2bb91b9220d57a10f20
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64638886"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352627"
 ---
 # <a name="partial-methods-visual-basic"></a>Разделяемые методы (Visual Basic)
-Разделяемые методы позволяют разработчикам использовать пользовательскую логику в код. Как правило код входит в созданном конструктором класса. Разделяемые методы определяются в разделяемый класс, созданный генератором кода, и они часто используются для предоставления уведомления, что что-то было изменено. Они позволяют разработчику указать пользовательское поведение в ответ на изменение.  
+Partial methods enable developers to insert custom logic into code. Typically, the code is part of a designer-generated class. Partial methods are defined in a partial class that is created by a code generator, and they are commonly used to provide notification that something has been changed. They enable the developer to specify custom behavior in response to the change.  
   
- Конструктор генератора кода определяет только сигнатуру метода и один или несколько вызовов метода. Разработчики могут затем предоставить реализации метода, если они хотят настроить поведение сформированного кода. При реализации не указаны, вызовы метода удаляются компилятором, что потери производительности.  
+ The designer of the code generator defines only the method signature and one or more calls to the method. Developers can then provide implementations for the method if they want to customize the behavior of the generated code. When no implementation is provided, calls to the method are removed by the compiler, resulting in no additional performance overhead.  
   
 ## <a name="declaration"></a>Объявление  
- Созданный код помечает определение разделяемого метода, поместив ключевое слово `Partial` в начале строки подписи.  
+ The generated code marks the definition of a partial method by placing the keyword `Partial` at the start of the signature line.  
   
 ```vb  
 Partial Private Sub QuantityChanged()  
 End Sub  
 ```  
   
- Определение должно удовлетворять следующим условиям:  
+ The definition must meet the following conditions:  
   
-- Этот метод должен быть `Sub`, а не `Function`.  
+- The method must be a `Sub`, not a `Function`.  
   
-- Тело метода должно быть пустым.  
+- The body of the method must be left empty.  
   
-- Модификатор доступа должен быть `Private`.  
+- The access modifier must be `Private`.  
   
 ## <a name="implementation"></a>Реализация  
- Реализация состоит заполнения тела разделяемого метода. Реализация обычно находится в отдельном разделяемом классе из определения и записывается разработчиком, который хочет расширить созданный код.  
+ The implementation consists primarily of filling in the body of the partial method. The implementation is typically in a separate partial class from the definition, and is written by a developer who wants to extend the generated code.  
   
 ```vb  
 Private Sub QuantityChanged()  
@@ -48,25 +48,25 @@ Private Sub QuantityChanged()
 End Sub  
 ```  
   
- Предыдущий пример точно дублирует подпись в объявлении, но возможны вариации. В частности, другие модификаторы могут добавляться, такие как `Overloads` или `Overrides`. Только один `Overrides` модификатор может применяться. Дополнительные сведения о модификаторах метода, см. в разделе [оператор Sub](../../../../visual-basic/language-reference/statements/sub-statement.md).  
+ The previous example duplicates the signature in the declaration exactly, but variations are possible. In particular, other modifiers can be added, such as `Overloads` or `Overrides`. Only one `Overrides` modifier is permitted. For more information about method modifiers, see [Sub Statement](../../../../visual-basic/language-reference/statements/sub-statement.md).  
   
 ## <a name="use"></a>Использовать  
- Вызовите разделяемый метод, как и любой другой `Sub` процедуры. Если метод был реализован, вычисляются аргументы и выполняется тело метода. Однако следует помните, что реализация разделяемого метода не является обязательным. Если метод не реализован, его вызов не влияет, и выражения, которые передаются как аргументы метода не вычисляются.  
+ You call a partial method as you would call any other `Sub` procedure. If the method has been implemented, the arguments are evaluated and the body of the method is executed. However, remember that implementing a partial method is optional. If the method is not implemented, a call to it has no effect, and expressions passed as arguments to the method are not evaluated.  
   
 ## <a name="example"></a>Пример  
- В файле с именем Product.Designer.vb, определить `Product` классом, имеющим `Quantity` свойство.  
+ In a file named Product.Designer.vb, define a `Product` class that has a `Quantity` property.  
   
  [!code-vb[VbVbalrPartialMeths#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrPartialMeths/VB/Class1.vb#4)]  
   
- В файле с именем Product.vb, обеспечить реализацию для `QuantityChanged`.  
+ In a file named Product.vb, provide an implementation for `QuantityChanged`.  
   
  [!code-vb[VbVbalrPartialMeths#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrPartialMeths/VB/Class1.vb#5)]  
   
- Наконец, в методе Main проекта, объявите `Product` экземпляра и укажите начальное значение для его `Quantity` свойство.  
+ Finally, in the Main method of a project, declare a `Product` instance and provide an initial value for its `Quantity` property.  
   
  [!code-vb[VbVbalrPartialMeths#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrPartialMeths/VB/Class1.vb#6)]  
   
- Откроется окно сообщения, отображается следующее сообщение:  
+ A message box should appear that displays this message:  
   
  `Quantity was changed to 100`  
   

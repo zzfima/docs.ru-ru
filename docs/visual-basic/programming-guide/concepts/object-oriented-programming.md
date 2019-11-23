@@ -1,17 +1,17 @@
 ---
-title: Объектно ориентированного программирования (Visual Basic)
+title: Object-oriented programming
 ms.date: 07/20/2015
 ms.assetid: 49794de4-64c3-473c-b8ed-fe98835df69c
-ms.openlocfilehash: 058d8b932e50f784d4a5cefa9fadfb31953687f0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3739919273f4cdd285d519c414c542f1a82a16d2
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61783517"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348161"
 ---
-# <a name="object-oriented-programming-visual-basic"></a>Объектно ориентированного программирования (Visual Basic)
+# <a name="object-oriented-programming-visual-basic"></a>Object-oriented programming (Visual Basic)
 
-Visual Basic предоставляет полную поддержку объектно ориентированного программирования, включая инкапсуляцию, наследование и полиморфизм.
+Visual Basic provides full support for object-oriented programming including encapsulation, inheritance, and polymorphism.
 
  *Инкапсуляция* означает, что группа связанных свойств, методов и других членов рассматривается как единый элемент или объект.
 
@@ -23,18 +23,18 @@ Visual Basic предоставляет полную поддержку объе
 
 - [Классы и объекты](#classes-and-objects)
   - [Члены класса](#class-members)
-    - [Свойства и поля](#properties-and-fields)
+    - [Properties and fields](#properties-and-fields)
     - [Методы](#methods)
     - [Конструкторы](#constructors)
     - [Деструкторы](#destructors)
     - [События](#events)
-    - [Вложенные классы](#nested-classes)
-  - [Модификаторы доступа и уровни доступа](#access-modifiers-and-access-levels)
-    - [Создание экземпляров классов](#instantiating-classes)
-    - [Общие классы и члены](#shared-classes-and-members)
+    - [Nested classes](#nested-classes)
+  - [Access modifiers and access levels](#access-modifiers-and-access-levels)
+    - [Instantiating classes](#instantiating-classes)
+    - [Shared classes and members](#shared-classes-and-members)
     - [Анонимные типы](#anonymous-types)
 - [Наследование](#inheritance)
-  - [Переопределение членов](#overriding-members)
+  - [Overriding members](#overriding-members)
 - [Интерфейсы](#interfaces)
 - [Универсальные шаблоны](#generics)
 - [Делегаты](#delegates)
@@ -50,7 +50,7 @@ Class SampleClass
 End Class
 ```
 
-Visual Basic также предоставляет облегченную версию классов — *структуры* , полезны, когда необходимо создать большой массив объектов и выполнять не требуется слишком много памяти.
+Visual Basic also provides a light version of classes called *structures* that are useful when you need to create large array of objects and do not want to consume too much memory for that.
 
 Определение структуры:
 
@@ -59,7 +59,7 @@ Structure SampleStructure
 End Structure
 ```
 
-Дополнительные сведения:
+Дополнительные сведения см. на странице
 
 - [Оператор Class](../../../visual-basic/language-reference/statements/class-statement.md)
 - [Оператор Structure](../../../visual-basic/language-reference/statements/structure-statement.md)
@@ -68,7 +68,7 @@ End Structure
 
 Каждый класс может состоять из различных *членов класса*, которые содержат свойства, описывающие данные класса, методы, задающие поведение класса, и события, обеспечивающие связь между различными классами и объектами.
 
-#### <a name="properties-and-fields"></a>Свойства и поля
+#### <a name="properties-and-fields"></a>Properties and fields
 
 Поля и свойства представляют сведения, содержащиеся в объекте. Поля подобны переменным в том, что их можно прочитать или изменить напрямую.
 
@@ -82,7 +82,7 @@ End Class
 
 Для работы со свойствами используются процедуры "Get" и "Set", которые расширяют возможности управления способом задания и возврата значений.
 
-Visual Basic можно создать частное поле для хранения значения свойства или использовать так называемые автоматически реализуемые свойства, которые создают это поле автоматически в фоновом и обеспечивают базовую логику для процедур свойств.
+Visual Basic allows you either to create a private field for storing the property value or use so-called auto-implemented properties that create this field automatically behind the scenes and provide the basic logic for the property procedures.
 
 Определение автоматически реализуемого свойства:
 
@@ -112,7 +112,7 @@ End Class
 
 У большинства свойств есть методы или процедуры для задания и возврата значения свойства. Однако можно создать свойства, доступные только для чтения или только на запись, чтобы запретить изменение или чтение значений свойств. Для этого в Visual Basic можно использовать ключевые слова `ReadOnly` и `WriteOnly`. Следует отметить, что автоматически реализуемые свойства нельзя сделать доступными только для чтения или только для записи.
 
-Дополнительные сведения:
+Дополнительные сведения см. на странице
 
 - [Оператор Property](../../../visual-basic/language-reference/statements/property-statement.md)
 - [Оператор Get](../../../visual-basic/language-reference/statements/get-statement.md)
@@ -150,9 +150,9 @@ Overloads Sub Display(ByVal theInteger As Integer)
 End Sub
 ```
 
-Как правило, метод объявляется при определении класса. Тем не менее, Visual Basic также поддерживает *методы расширения* , которые позволяют добавлять методы в существующий класс вне определения класса.
+Как правило, метод объявляется при определении класса. However, Visual Basic also supports *extension methods* that allow you to add methods to an existing class outside the actual definition of the class.
 
-Дополнительные сведения:
+Дополнительные сведения см. на странице
 
 - [Оператор Function](../../../visual-basic/language-reference/statements/function-statement.md)
 - [Оператор Sub](../../../visual-basic/language-reference/statements/sub-statement.md)
@@ -173,7 +173,7 @@ Class SampleClass
 End Class
 ```
 
-Дополнительные сведения: [Время существования: Как создаются и удаляются объекты](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md).
+For more information, see: [Object Lifetime: How Objects Are Created and Destroyed](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md).
 
 #### <a name="destructors"></a>Деструкторы
 
@@ -181,19 +181,19 @@ End Class
 
 Дополнительные сведения о деструкторах и сборке мусора в .NET Framework см. в разделе [Сборка мусора](../../../standard/garbage-collection/index.md).
 
-#### <a name="events"></a>События
+#### <a name="events"></a>события
 
 События позволяют классу или объекту уведомлять другие классы или объекты о возникновении каких-либо ситуаций. Класс, отправляющий (или порождающий) событие, называется *издателем*, а классы, принимающие (или обрабатывающие) событие, называются *подписчиками*. Дополнительные сведения о том, как порождаются и обрабатываются события, см. в разделе [События](../../../standard/events/index.md).
 
-- Чтобы объявлять события, используйте [оператор Event](../../../visual-basic/language-reference/statements/event-statement.md).
+- To declare events, use the [Event Statement](../../../visual-basic/language-reference/statements/event-statement.md).
 
-- Чтобы порождать события, используйте [оператор RaiseEvent](../../../visual-basic/language-reference/statements/raiseevent-statement.md).
+- To raise events, use the [RaiseEvent Statement](../../../visual-basic/language-reference/statements/raiseevent-statement.md).
 
-- Чтобы указать обработчики событий декларативным способом, используйте [WithEvents](../../../visual-basic/language-reference/modifiers/withevents.md) инструкции и [обрабатывает](../../../visual-basic/language-reference/statements/handles-clause.md) предложение.
+- To specify event handlers using a declarative way, use the [WithEvents](../../../visual-basic/language-reference/modifiers/withevents.md) statement and the [Handles](../../../visual-basic/language-reference/statements/handles-clause.md) clause.
 
-- Чтобы иметь возможность динамически добавлять, удалять и изменять обработчик событий, связанный с событием, используйте [оператор AddHandler](../../../visual-basic/language-reference/statements/addhandler-statement.md) и [оператор RemoveHandler](../../../visual-basic/language-reference/statements/removehandler-statement.md) вместе с [AddressOf Оператор](../../../visual-basic/language-reference/operators/addressof-operator.md).
+- To be able to dynamically add, remove, and change the event handler associated with an event, use the [AddHandler Statement](../../../visual-basic/language-reference/statements/addhandler-statement.md) and [RemoveHandler Statement](../../../visual-basic/language-reference/statements/removehandler-statement.md) together with the [AddressOf Operator](../../../visual-basic/language-reference/operators/addressof-operator.md).
 
-#### <a name="nested-classes"></a>Вложенные классы
+#### <a name="nested-classes"></a>Nested classes
 
 Класс, определенный внутри другого класса, называется *вложенным*. По умолчанию вложенный класс является частным.
 
@@ -211,7 +211,7 @@ End Class
 Dim nestedInstance As Container.Nested = New Container.Nested()
 ```
 
-### <a name="access-modifiers-and-access-levels"></a>Модификаторы доступа и уровни доступа
+### <a name="access-modifiers-and-access-levels"></a>Access modifiers and access levels
 
 С помощью *модификаторов доступа* все классы и члены классов могут указывать уровни доступа, предоставляемые другим классам.
 
@@ -225,9 +225,9 @@ Dim nestedInstance As Container.Nested = New Container.Nested()
 |[Friend](../../../visual-basic/language-reference/modifiers/friend.md)|Доступ к типу или члену возможен из любого кода в той же сборке, но не из другой сборки.|
 |`Protected Friend`|Доступ к типу или члену возможен из любого кода в той же сборке, или из производного класса в другой сборке.|
 
-Дополнительные сведения см. в разделе [уровни в Visual Basic доступа](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).
+For more information, see [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).
 
-### <a name="instantiating-classes"></a>Создание экземпляров классов
+### <a name="instantiating-classes"></a>Instantiating classes
 
 Чтобы создать объект, необходимо создать экземпляр класса.
 
@@ -251,16 +251,16 @@ Dim sampleObject = New SampleClass With
     {.FirstProperty = "A", .SecondProperty = "B"}
 ```
 
-Дополнительные сведения:
+Дополнительные сведения см. на странице
 
 - [Оператор New](../../../visual-basic/language-reference/operators/new-operator.md)
 - [Инициализаторы объектов. Именованные и анонимные типы](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
 
-### <a name="shared-classes-and-members"></a>Общие классы и члены
+### <a name="shared-classes-and-members"></a>Shared classes and members
 
- Общий член класса — это свойство, процедура или поле, которое совместно используется всеми экземплярами класса.
+ A shared member of the class is a property, procedure, or field that is shared by all instances of a class.
 
- Для определения общего элемента:
+ To define a shared member:
 
 ```vb
 Class SampleClass
@@ -268,15 +268,15 @@ Class SampleClass
 End Class
 ```
 
- Чтобы получить доступ к общему члену, используйте имя класса без создания объекта этого класса:
+ To access the shared member, use the name of the class without creating an object of this class:
 
 ```vb
 MsgBox(SampleClass.SampleString)
 ```
 
- Общих модулей в Visual Basic отправили только элементы и не может быть создан. Общие члены также не может получить доступ к свойства, которые не являются общими, полям или методам
+ Shared modules in Visual Basic have shared members only and cannot be instantiated. Shared members also cannot access non-shared properties, fields or methods
 
- Дополнительные сведения:
+ Дополнительные сведения см. на странице
 
 - [Общие](../../../visual-basic/language-reference/modifiers/shared.md)
 - [Оператор Module](../../../visual-basic/language-reference/statements/module-statement.md)
@@ -293,14 +293,14 @@ Dim sampleObject =
     New With {Key .FirstProperty = "A", .SecondProperty = "B"}
 ```
 
-Дополнительные сведения: [Анонимные типы](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).
+Дополнительные сведения см. в разделе [Анонимные типы](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).
 
 ## <a name="inheritance"></a>Наследование
 
-Наследование позволяет создавать новые классы, которые повторно используют, расширяют и изменяют поведение, определенное в другом классе. Класс, члены которого наследуются, называется *базовым классом*, а класс, который наследует эти члены, называется *производным классом*. Тем не менее, все классы в Visual Basic неявно наследуются от <xref:System.Object> класс, который поддерживает иерархию классов .NET и предоставляет низкоуровневые службы для всех классов.
+Наследование позволяет создавать новые классы, которые повторно используют, расширяют и изменяют поведение, определенное в другом классе. Класс, члены которого наследуются, называется *базовым классом*, а класс, который наследует эти члены, называется *производным классом*. However, all classes in Visual Basic implicitly inherit from the <xref:System.Object> class that supports .NET class hierarchy and provides low-level services to all classes.
 
 > [!NOTE]
-> Visual Basic не поддерживает множественное наследование. То есть можно указать только один базовый класс для производного класса.
+> Visual Basic doesn't support multiple inheritance. То есть можно указать только один базовый класс для производного класса.
 
 Наследование от базового класса:
 
@@ -326,13 +326,13 @@ MustInherit Class BaseClass
 End Class
 ```
 
-Дополнительные сведения:
+Дополнительные сведения см. на странице
 
 - [Оператор Inherits](../../../visual-basic/language-reference/statements/inherits-statement.md)
 - [NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md)
 - [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)
 
-### <a name="overriding-members"></a>Переопределение членов
+### <a name="overriding-members"></a>Overriding members
 
 По умолчанию производный класс наследует все члены от своего базового класса. Если необходимо изменить поведение унаследованного члена, необходимо переопределить его. Т. е. в производном классе можно определить новую реализацию метода, свойства или события.
 
@@ -369,7 +369,7 @@ Class SampleClass
 End Class
 ```
 
-Дополнительные сведения:
+Дополнительные сведения см. на странице
 
 - [Интерфейсы](../../../visual-basic/programming-guide/language-features/interfaces/index.md)
 - [Оператор Interface](../../../visual-basic/language-reference/statements/interface-statement.md)
@@ -377,7 +377,7 @@ End Class
 
 ## <a name="generics"></a>Универсальные шаблоны
 
-Классы, структуры, интерфейсы и методы в .NET можно включить *параметры типа* , которые определяют типы объектов, которые они могут хранить или использовать. Наиболее распространенным примером универсального шаблона является коллекция, в которой можно указать тип объектов, которые могут в ней храниться.
+Classes, structures, interfaces and methods in .NET can include *type parameters* that define types of objects that they can store or use. Наиболее распространенным примером универсального шаблона является коллекция, в которой можно указать тип объектов, которые могут в ней храниться.
 
 Определение универсального класса:
 
@@ -394,7 +394,7 @@ Dim sampleObject As New SampleGeneric(Of String)
 sampleObject.Field = "Sample string"
 ```
 
-Дополнительные сведения:
+Дополнительные сведения см. на странице
 
 - [Универсальные шаблоны](../../../standard/generics/index.md)
 - [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
@@ -428,7 +428,7 @@ Class SampleClass
 End Class
 ```
 
-Дополнительные сведения:
+Дополнительные сведения см. на странице
 
 - [Делегаты](../../../visual-basic/programming-guide/language-features/delegates/index.md)
 - [Оператор Delegate](../../../visual-basic/language-reference/statements/delegate-statement.md)

@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Создать свойство (Visual Basic)
+title: Практическое руководство. Создание свойства
 ms.date: 07/20/2015
 helpviewer_keywords:
 - procedures [Visual Basic], defining
@@ -7,56 +7,56 @@ helpviewer_keywords:
 - Visual Basic code, properties
 - properties [Visual Basic]
 ms.assetid: 4d229712-6be8-4c5c-bac5-06995ce9185a
-ms.openlocfilehash: 91f34de36e88724ccab21097bf54a4604f7eee37
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ee5a9f687765ce064eb3c3f84218ed36eb916d9d
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61665784"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349702"
 ---
-# <a name="how-to-create-a-property-visual-basic"></a>Практическое руководство. Создать свойство (Visual Basic)
-Заключите определение свойства между `Property` инструкции и `End Property` инструкции. В этом определении вы определяете `Get` процедуре `Set` или обе. Код свойства находится в этих процедурах.  
+# <a name="how-to-create-a-property-visual-basic"></a>Практическое руководство. Создание свойства (Visual Basic)
+You enclose a property definition between a `Property` statement and an `End Property` statement. Within this definition you define a `Get` procedure, a `Set` procedure, or both. All the property's code lies within these procedures.  
   
- `Get` Процедура получает значение свойства и `Set` процедура сохраняет значение. Если требуется, что свойство будет иметь доступ на чтение/запись, необходимо определить обе процедуры. Для свойства только для чтения, нужно определить только `Get`, и для свойства только для записи, нужно определить только `Set`.  
+ The `Get` procedure retrieves the property's value, and the `Set` procedure stores a value. If you want the property to have read/write access, you must define both procedures. For a read-only property, you define only `Get`, and for a write-only property, you define only `Set`.  
   
-### <a name="to-create-a-property"></a>Чтобы создать свойство  
+### <a name="to-create-a-property"></a>To create a property  
   
-1. Вне любого свойства или процедуры, используйте [Property Statement](../../../../visual-basic/language-reference/statements/property-statement.md), за которым следует `End Property` инструкции.  
+1. Outside any property or procedure, use a [Property Statement](../../../../visual-basic/language-reference/statements/property-statement.md), followed by an `End Property` statement.  
   
-2. Если свойство принимает параметры, выполните `Property` ключевое слово с именем процедуры, затем список параметров в круглых скобках.  
+2. If the property takes parameters, follow the `Property` keyword with the name of the procedure, then the parameter list in parentheses.  
   
-3. Круглые скобки, используя `As` предложение, чтобы указать тип данных значения свойства. Необходимо указать тип данных даже для свойства только для записи.  
+3. Follow the parentheses with an `As` clause to specify the data type of the property's value. You must specify the data type even for a write-only property.  
   
-4. Добавить `Get` и `Set` процедуры, соответствующим образом. См. приведенные ниже указания.  
+4. Add `Get` and `Set` procedures, as appropriate. See the following directions.  
   
-### <a name="to-create-a-get-procedure-that-retrieves-a-property-value"></a>Чтобы создать процедуру Get, которая извлекает значение свойства  
+### <a name="to-create-a-get-procedure-that-retrieves-a-property-value"></a>To create a Get procedure that retrieves a property value  
   
-1. Между `Property` и `End Property` операторы, записывают [оператор Get](../../../../visual-basic/language-reference/statements/get-statement.md), за которым следует `End Get` инструкции. Необходимо определить все параметры `Get` процедуры.  
+1. Between the `Property` and `End Property` statements, write a [Get Statement](../../../../visual-basic/language-reference/statements/get-statement.md), followed by an `End Get` statement. You do not need to define any parameters for the `Get` procedure.  
   
-2. Поместите операторы кода для получения значения свойства между `Get` и `End Get` инструкций. Этот код может включать другие вычисления и манипуляции с данными в дополнение к созданию и возврату значения свойства.  
+2. Place the code statements to retrieve the property's value between the `Get` and `End Get` statements. This code can include other calculations and data manipulations in addition to generating and returning the property's value.  
   
-3. Используйте `Return` инструкция возвращает значение свойства в вызывающий код.  
+3. Use a `Return` statement to return the property's value to the calling code.  
   
- Необходимо написать `Get` процедуры для свойства чтения и записи и для свойства только для чтения. Определять не нужно `Get` процедуры для свойства только для записи.  
+ You must write a `Get` procedure for a read-write property and for a read-only property. You must not define a `Get` procedure for a write-only property.  
   
-### <a name="to-create-a-set-procedure-that-writes-a-propertys-value"></a>Чтобы создать процедуру набора, который записывает значение свойства  
+### <a name="to-create-a-set-procedure-that-writes-a-propertys-value"></a>To create a Set procedure that writes a property's value  
   
-1. Между `Property` и `End Property` операторы, записывают [инструкция Set](../../../../visual-basic/language-reference/statements/set-statement.md), за которым следует `End Set` инструкции.  
+1. Between the `Property` and `End Property` statements, write a [Set Statement](../../../../visual-basic/language-reference/statements/set-statement.md), followed by an `End Set` statement.  
   
-2. В `Set` инструкции, следуйте `Set` ключевое слово со списком параметров в круглых скобках. Этот параметр список должен включать по крайней мере значение параметра для значения, переданного вызывающим кодом. Имя по умолчанию для этого параметра значение — `Value`, но при необходимости можно использовать другое имя. Значение параметра должен иметь тот же тип, как и само свойство данных.  
+2. In the `Set` statement, follow the `Set` keyword with a parameter list in parentheses. This parameter list must include at least a value parameter for the value passed by the calling code. The default name for this value parameter is `Value`, but you can use a different name if appropriate. The value parameter must have the same data type as the property itself.  
   
-3. Поместите операторы кода для хранения значения свойства между `Set` и `End Set` инструкций. Этот код может включать другие вычисления и манипуляции с данными в дополнение к проверке и сохранения значения свойства.  
+3. Place the code statements to store a value in the property between the `Set` and `End Set` statements. This code can include other calculations and data manipulations in addition to validating and storing the property's value.  
   
-4. Чтобы принять значение, указанное в вызывающем коде, используйте параметр значение. Можно хранить это значение непосредственно в операторе присваивания или использовать его в выражении для вычисления внутреннего значения для сохранения.  
+4. Use the value parameter to accept the value supplied by the calling code. You can either store this value directly in an assignment statement, or use it in an expression to calculate the internal value to be stored.  
   
- Необходимо написать `Set` процедуры для свойства чтения и записи и для свойства только для записи. Определять не нужно `Set` процедуры для свойства только для чтения.  
+ You must write a `Set` procedure for a read-write property and for a write-only property. You must not define a `Set` procedure for a read-only property.  
   
 ## <a name="example"></a>Пример  
- В следующем примере создается свойство чтения/записи, которая хранит полное имя в качестве двух составных имен, имя и фамилию. Когда вызывающий код считывает `fullName`, `Get` процедура объединяет два составных имени и возвращает полное имя. Когда вызывающий код присваивает новое полное имя, `Set` процедура пытается разделить его на два составных имени. Если не удается найти пробел, он хранит все как имя.  
+ The following example creates a read/write property that stores a full name as two constituent names, the first name and the last name. When the calling code reads `fullName`, the `Get` procedure combines the two constituent names and returns the full name. When the calling code assigns a new full name, the `Set` procedure attempts to break it into two constituent names. If it does not find a space, it stores it all as the first name.  
   
  [!code-vb[VbVbcnProcedures#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#8)]  
   
- В следующем примере показано вызовы процедур свойств из `fullName`. Первый вызов задает значение свойства, а второй вызов извлекает его.  
+ The following example shows typical calls to the property procedures of `fullName`. The first call sets the property value and the second call retrieves it.  
   
  [!code-vb[VbVbcnProcedures#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#9)]  
   
@@ -65,9 +65,9 @@ ms.locfileid: "61665784"
 - [Процедуры](./index.md)
 - [Процедуры свойств](./property-procedures.md)
 - [Параметры и аргументы процедуры](./procedure-parameters-and-arguments.md)
-- [Различия между свойствами и переменными в Visual Basic](./differences-between-properties-and-variables.md)
+- [Differences Between Properties and Variables in Visual Basic](./differences-between-properties-and-variables.md)
 - [Практическое руководство. Объявление свойства со смешанным уровнем доступа](./how-to-declare-a-property-with-mixed-access-levels.md)
 - [Практическое руководство. Вызов процедуры свойства](./how-to-call-a-property-procedure.md)
-- [Практическое руководство. Объявление и вызов свойства по умолчанию в Visual Basic](./how-to-declare-and-call-a-default-property.md)
+- [How to: Declare and Call a Default Property in Visual Basic](./how-to-declare-and-call-a-default-property.md)
 - [Практическое руководство. Запись значения в свойство](./how-to-put-a-value-in-a-property.md)
 - [Практическое руководство. Получение значения из свойства](./how-to-get-a-value-from-a-property.md)

@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Вызов функции Windows, которая принимает неподписанные типы (Visual Basic)
+title: Практическое руководство. Вызов функции Windows, принимающей значение беззнакового типа
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Windows functions [Visual Basic], calling
@@ -14,28 +14,28 @@ helpviewer_keywords:
 - data types [Visual Basic], numeric
 - unsigned types [Visual Basic], using
 ms.assetid: c2c0e712-8dc2-43b9-b4c6-345fbb02e7ce
-ms.openlocfilehash: 97075fb6149ed8c0ce06318d0e5bb6f01b841f30
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 790c680744e2100a40a7cea8b8cef80c68d586bb
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053328"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348734"
 ---
-# <a name="how-to-call-a-windows-function-that-takes-unsigned-types-visual-basic"></a>Практическое руководство. Вызов функции Windows, которая принимает неподписанные типы (Visual Basic)
+# <a name="how-to-call-a-windows-function-that-takes-unsigned-types-visual-basic"></a>Практическое руководство. Вызов функции Windows, принимающей значение беззнакового типа (Visual Basic)
 
-При использовании класса, модуля или структуры, имеющей члены целочисленных типов без знака, можно получить доступ к этим членам с помощью Visual Basic.
+If you are consuming a class, module, or structure that has members of unsigned integer types, you can access these members with Visual Basic.
 
-## <a name="to-call-a-windows-function-that-takes-an-unsigned-type"></a>Вызов функции Windows, которая принимает неподписанный тип
+## <a name="to-call-a-windows-function-that-takes-an-unsigned-type"></a>To call a Windows function that takes an unsigned type
 
-1. Используйте [инструкцию Declare](../../../visual-basic/language-reference/statements/declare-statement.md) , чтобы сообщить Visual Basic, какая библиотека содержит функцию, ее имя в этой библиотеке, последовательность вызова и способ преобразования строк при вызове.
+1. Use a [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md) to tell Visual Basic which library holds the function, what its name is in that library, what its calling sequence is, and how to convert strings when calling it.
 
-2. `UInteger`В инструкции используйте ,`ULong` ,`UShort`или в`Byte` соответствии с соответствующими параметрами для каждого параметра с типом без знака. `Declare`
+2. In the `Declare` statement, use `UInteger`, `ULong`, `UShort`, or `Byte` as appropriate for each parameter with an unsigned type.
 
-3. Обратитесь к документации по функции Windows, которую вы вызываете, чтобы найти имена и значения используемых констант. Многие из них определены в файле WinUser. h.
+3. Consult the documentation for the Windows function you are calling to find the names and values of the constants it uses. Many of these are defined in the WinUser.h file.
 
-4. Объявите необходимые константы в коде. Многие константы Windows представляют собой 32-разрядные значения без знака, и их следует `As UInteger`объявлять.
+4. Declare the necessary constants in your code. Many Windows constants are 32-bit unsigned values, and you should declare these `As UInteger`.
 
-5. Вызовите функцию обычным образом. В следующем примере вызывается функция `MessageBox`Windows, которая принимает беззнаковый целочисленный аргумент.
+5. Call the function in the normal way. The following example calls the Windows function `MessageBox`, which takes an unsigned integer argument.
 
     ```vb
     Public Class windowsMessage
@@ -60,7 +60,7 @@ ms.locfileid: "71053328"
     End Class
     ```
 
-     Функцию `messageThroughWindows` можно проверить с помощью следующего кода.
+     You can test the function `messageThroughWindows` with the following code.
 
     ```vb
     Public Sub consumeWindowsMessage()
@@ -70,13 +70,13 @@ ms.locfileid: "71053328"
     ```
 
     > [!CAUTION]
-    > `ULong`Типы данных `UInteger`, ,`UShort` и`SByte` не являются частью [независимость от языка и независимых от языка компонентов](../../../standard/language-independence-and-language-independent-components.md) (CLS), поэтому CLS-совместимый код не может использовать компонент, который их использует.
+    > The `UInteger`, `ULong`, `UShort`, and `SByte` data types are not part of the [Language Independence and Language-Independent Components](../../../standard/language-independence-and-language-independent-components.md) (CLS), so CLS-compliant code cannot consume a component that uses them.
 
     > [!IMPORTANT]
-    > Вызов неуправляемого кода, например программного интерфейса Windows (API), предоставляет ваш код потенциальным угрозам безопасности.
+    > Making a call to unmanaged code, such as the Windows application programming interface (API), exposes your code to potential security risks.
 
     > [!IMPORTANT]
-    > Для вызова API Windows требуется разрешение неуправляемого кода, которое может повлиять на его выполнение в ситуациях частичного доверия. Дополнительные сведения см. в <xref:System.Security.Permissions.SecurityPermission> разделе и [разрешения на доступ к коду](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/h846e9b3(v=vs.100)).
+    > Calling the Windows API requires unmanaged code permission, which might affect its execution in partial-trust situations. For more information, see <xref:System.Security.Permissions.SecurityPermission> and [Code Access Permissions](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/h846e9b3(v=vs.100)).
 
 ## <a name="see-also"></a>См. также
 
@@ -84,4 +84,4 @@ ms.locfileid: "71053328"
 - [Тип данных Integer](../../../visual-basic/language-reference/data-types/integer-data-type.md)
 - [Тип данных UInteger](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)
 - [Оператор Declare](../../../visual-basic/language-reference/statements/declare-statement.md)
-- [Пошаговое руководство: Вызов API Windows](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)
+- [Пошаговое руководство. Вызов API-интерфейсов Windows](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)

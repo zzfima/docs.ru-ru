@@ -1,15 +1,15 @@
 ---
-title: Отражение (Visual Basic)
+title: Отражение
 ms.date: 07/20/2015
 ms.assetid: d991bc0f-d16a-4ac5-9351-70e5c5b9891b
-ms.openlocfilehash: 6d1206d84dec4202a7dad8f03c3d88c8a97ff5ba
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 28f33c88f7aaaf51938a7d27fd2218a97b628acd
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972117"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349280"
 ---
-# <a name="reflection-visual-basic"></a>Отражение (Visual Basic)
+# <a name="reflection-visual-basic"></a>Reflection (Visual Basic)
 Механизм отражения позволяет получать объекты (типа <xref:System.Type>), которые описывают сборки, модули и типы. Отражение можно использовать для динамического создания экземпляра типа, привязки типа к существующему объекту, а также получения типа из существующего объекта и вызова его методов или доступа к его полям и свойствам. Если в коде используются атрибуты, отражение обеспечивает доступ к ним. Дополнительные сведения см. в разделе [Атрибуты](../../../standard/attributes/index.md).  
   
  Вот простой пример отражения, в котором для получения типа переменной используется статический метод `GetType`, наследуемый всеми типами от базового класса `Object`.  

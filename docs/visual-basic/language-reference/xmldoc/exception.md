@@ -1,19 +1,19 @@
 ---
-title: <exception> (Visual Basic)
+title: <exception>
 ms.date: 07/20/2015
 helpviewer_keywords:
 - <exception> XML tag
 - exception XML tag
 ms.assetid: c0517549-171e-4dae-ab88-a9c1700b6eee
-ms.openlocfilehash: 16ffb4f6b57dabb3650376c913a7d7608a00646d
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: e1e7f2d0fb06599f83ba224ed52a10429d9b11fe
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72523930"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346963"
 ---
-# <a name="exception-visual-basic"></a>> \<exception (Visual Basic)
-Указывает, какие исключения могут быть созданы.  
+# <a name="exception-visual-basic"></a>\<exception> (Visual Basic)
+Specifies which exceptions can be thrown.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -29,12 +29,12 @@ ms.locfileid: "72523930"
  Описание.  
   
 ## <a name="remarks"></a>Заметки  
- Используйте тег `<exception>`, чтобы указать, какие исключения могут быть созданы. Этот тег применяется к определению метода.  
+ Use the `<exception>` tag to specify which exceptions can be thrown. Этот тег применяется к определению метода.  
   
  Чтобы обработать комментарии документации и сохранить их в файл, выполняйте сборку с параметром [-doc](../../../visual-basic/reference/command-line-compiler/doc.md).  
   
 ## <a name="example"></a>Пример  
- В этом примере используется тег `<exception>` для описания исключения, которое может вызывать функция `IntDivide`.  
+ This example uses the `<exception>` tag to describe an exception that the `IntDivide` function can throw.  
   
  [!code-vb[VbVbcnXmlDocComments#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#3)]  
   

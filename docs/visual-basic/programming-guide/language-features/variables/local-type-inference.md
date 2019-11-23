@@ -1,5 +1,5 @@
 ---
-title: Вывод локального типа (Visual Basic)
+title: Вывод локального типа
 ms.date: 07/20/2015
 f1_keywords:
 - local type inference
@@ -12,68 +12,68 @@ helpviewer_keywords:
 - inference [Visual Basic]
 - type inference [Visual Basic]
 ms.assetid: b8307f18-2e56-4ab3-a45a-826873f400f6
-ms.openlocfilehash: 2b239e17ba7fa0b6a6b08d52f4394541eaa08b28
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: f79ac70aecb5805a3a4a4fea8f7e7ccd3f8243fc
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72775723"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351835"
 ---
 # <a name="local-type-inference-visual-basic"></a>Вывод локального типа (Visual Basic)
 
-Компилятор Visual Basic использует *Определение типа* для определения типов данных локальных переменных, объявленных без предложения `As`. Компилятор выводит тип переменной из типа выражения инициализации. Это позволяет объявлять переменные без явного указания типа, как показано в следующем примере. В результате объявления и `num1`, и `num2` строго типизированы как целые числа.
+The Visual Basic compiler uses *type inference* to determine the data types of local variables declared without an `As` clause. The compiler infers the type of the variable from the type of the initialization expression. This enables you to declare variables without explicitly stating a type, as shown in the following example. As a result of the declarations, both `num1` and `num2` are strongly typed as integers.
 
 [!code-vb[VbVbalrTypeInference#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrTypeInference/VB/Class1.vb#1)]
 
 > [!NOTE]
-> Если вы не хотите, чтобы `num2` в предыдущем примере вводились как `Integer`, можно указать другой тип с помощью объявления, например `Dim num3 As Object = 3` или `Dim num4 As Double = 3`.
+> If you do not want `num2` in the previous example to be typed as an `Integer`, you can specify another type by using a declaration like `Dim num3 As Object = 3` or `Dim num4 As Double = 3`.
 
 > [!NOTE]
-> Определение типа может использоваться только для нестатических локальных переменных. его нельзя использовать для определения типа полей, свойств или функций класса.
+> Type inference can be used only for non-static local variables; it cannot be used to determine the type of class fields, properties, or functions.
 
-Локальное определение типа применяется на уровне процедуры. Его нельзя использовать для объявления переменных на уровне модуля (внутри класса, структуры, модуля или интерфейса, но не внутри процедуры или блока). Если `num2` в предыдущем примере являлось полем класса, а не локальной переменной в процедуре, это объявление вызовет ошибку с `Option Strict` и классифицирует `num2` как `Object` с `Option Strict` Off. Аналогичным образом, локальное определение типа не применяется к переменным уровня процедуры, объявленным как `Static`.
+Local type inference applies at procedure level. It cannot be used to declare variables at module level (within a class, structure, module, or interface but not within a procedure or block). If `num2` in the previous example were a field of a class instead of a local variable in a procedure, the declaration would cause an error with `Option Strict` on, and would classify `num2` as an `Object` with `Option Strict` off. Similarly, local type inference does not apply to procedure level variables declared as `Static`.
 
-## <a name="type-inference-vs-late-binding"></a>Определение типа и позднее связывание
+## <a name="type-inference-vs-late-binding"></a>Type Inference vs. Late Binding
 
-Код, использующий вывод типа, напоминает код, основанный на позднем связывании. Однако вывод типа строго вводит переменную вместо того, чтобы покинуть ее как `Object`. Компилятор использует инициализатор переменной для определения типа переменной во время компиляции для создания кода с ранней привязкой. В предыдущем примере `num2`, как `num1`, типизирован как `Integer`.
+Code that uses type inference resembles code that relies on late binding. However, type inference strongly types the variable instead of leaving it as `Object`. The compiler uses a variable's initializer to determine the variable's type at compile time to produce early-bound code. In the previous example, `num2`, like `num1`, is typed as an `Integer`.
 
-Поведение переменных с ранней привязкой отличается от поведения переменных с поздним связыванием, для которых тип известен только во время выполнения. Знание типа на раннем этапе позволяет компилятору определить проблемы перед выполнением, выделить память точно и выполнить другие оптимизации. Раннее связывание также включает Visual Basic интегрированную среду разработки (IDE) для предоставления справки IntelliSense об элементах объекта. Раннее связывание также предпочтительно для повышения производительности. Это связано с тем, что все данные, хранящиеся в переменной с поздним связыванием, должны быть упакованы как тип `Object` и доступ к элементам типа во время выполнения замедляет выполнение программы.
+The behavior of early-bound variables differs from that of late-bound variables, for which the type is known only at run time. Knowing the type early enables the compiler to identify problems before execution, allocate memory precisely, and perform other optimizations. Early binding also enables the Visual Basic integrated development environment (IDE) to provide IntelliSense Help about the members of an object. Early binding is also preferred for performance. This is because all data stored in a late-bound variable must be wrapped as type `Object`, and accessing members of the type at run time makes the program slower.
 
 ## <a name="examples"></a>Примеры
 
-Вывод типа происходит, когда локальная переменная объявлена без предложения `As` и не инициализирована. Компилятор использует тип присвоенного начального значения в качестве типа переменной. Например, каждая из следующих строк кода объявляет переменную типа `String`.
+Type inference occurs when a local variable is declared without an `As` clause and initialized. The compiler uses the type of the assigned initial value as the type of the variable. For example, each of the following lines of code declares a variable of type `String`.
 
 [!code-vb[VbVbalrTypeInference#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrTypeInference/VB/Class1.vb#2)]
 
-В следующем коде показаны два эквивалентных способа создания массива целых чисел.
+The following code demonstrates two equivalent ways to create an array of integers.
 
 [!code-vb[VbVbalrTypeInference#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrTypeInference/VB/Class1.vb#3)]
 
-Для определения типа управляющей переменной цикла удобно использовать определение типа. В следующем коде компилятор выводит, что `number` является `Integer`, поскольку `someNumbers2` из предыдущего примера является массивом целых чисел.
+It is convenient to use type inference to determine the type of a loop control variable. In the following code, the compiler infers that `number` is an `Integer` because `someNumbers2` from the previous example is an array of integers.
 
 [!code-vb[VbVbalrTypeInference#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrTypeInference/VB/Class1.vb#4)]
 
-Определение локального типа можно использовать в инструкциях `Using` для определения типа имени ресурса, как показано в следующем примере.
+Local type inference can be used in `Using` statements to establish the type of the resource name, as the following example demonstrates.
 
 [!code-vb[VbVbalrTypeInference#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrTypeInference/VB/Class1.vb#7)]
 
-Тип переменной также может выводиться из возвращаемых значений функций, как показано в следующем примере. Как `pList1`, так `pList2` являются массивами процессов, так как `Process.GetProcesses` возвращает массив процессов.
+The type of a variable can also be inferred from the return values of functions, as the following example demonstrates. Both `pList1` and `pList2` are arrays of processes because `Process.GetProcesses` returns an array of processes.
 
 [!code-vb[VbVbalrTypeInference#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrTypeInference/VB/Class1.vb#5)]
 
-## <a name="option-infer"></a>Параметр Infer
+## <a name="option-infer"></a>Option Infer
 
-`Option Infer` позволяет указать, разрешено ли определение локального типа в конкретном файле. Чтобы включить или заблокировать параметр, введите одну из следующих инструкций в начале файла.
+`Option Infer` enables you specify whether local type inference is allowed in a particular file. To enable or to block the option, type one of the following statements at the start of the file.
 
 `Option Infer On`
 
 `Option Infer Off`
 
-Если не указать значение для `Option Infer` в коде, компилятор по умолчанию будет `Option Infer On`.
+If you do not specify a value for `Option Infer` in your code, the compiler default is `Option Infer On`.
 
 Если значение, заданное для `Option Infer` в файле, конфликтует со значением, заданным в среде разработки или в командной строке, приоритет имеет значение в файле.
 
-Дополнительные сведения см. в статьях [выборка инструкций](../../../../visual-basic/language-reference/statements/option-infer-statement.md) и [компиляции в конструкторе проектов (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic).
+For more information, see [Option Infer Statement](../../../../visual-basic/language-reference/statements/option-infer-statement.md) and [Compile Page, Project Designer (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic).
 
 ## <a name="see-also"></a>См. также
 

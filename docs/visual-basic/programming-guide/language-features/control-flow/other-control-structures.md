@@ -1,25 +1,25 @@
 ---
-title: Другие структуры управления (Visual Basic)
+title: Другие структуры управления
 ms.date: 07/20/2015
 helpviewer_keywords:
 - statements [Visual Basic], control flow
 - control structures [Visual Basic]
 ms.assetid: 24b811f7-98ba-40ec-8dd3-4d528cfa4574
-ms.openlocfilehash: c42070ce2ea866e59e1b2e190f7c05e1ee7cc922
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 758df361f421684655147ae288af3f350e53c4d7
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61907846"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348133"
 ---
 # <a name="other-control-structures-visual-basic"></a>Другие структуры управления (Visual Basic)
-Visual Basic предоставляет структур управления, которые помогут вам удаления ресурсов, или уменьшите количество раз, вам необходимо будет повторить ссылку на объект.  
+Visual Basic provides control structures that help you dispose of a resource or reduce the number of times you have to repeat an object reference.  
   
-## <a name="usingend-using-construction"></a>С помощью... С помощью конструкции  
- `Using...End Using` Конструкции устанавливает блок операторов, в котором следует использовать ресурсы, например подключение к SQL. При необходимости можно запросить ресурс с `Using` инструкции. После выхода из `Using` блока, Visual Basic автоматически удаляет ресурс, чтобы он доступен для использования другим кодом. Ресурс должен быть локальный и высвобождаемого. Дополнительные сведения см. в разделе [Оператор using](../../../../visual-basic/language-reference/statements/using-statement.md).  
+## <a name="usingend-using-construction"></a>Using...End Using Construction  
+ The `Using...End Using` construction establishes a statement block within which you make use of a resource such as a SQL connection. You can optionally acquire the resource with the `Using` statement. When you exit the `Using` block, Visual Basic automatically disposes of the resource so that it is available for other code to use. The resource must be local and disposable. Дополнительные сведения см. в разделе [Оператор using](../../../../visual-basic/language-reference/statements/using-statement.md).  
   
-## <a name="withend-with-construction"></a>С помощью... Завершить с помощью конструкции  
- `With...End With` Позволяет указать ссылку на объект один раз и затем выполнить ряд инструкций, которые обращаются к его члены. Это можно упростить код и повысить производительность, поскольку Visual Basic не восстанавливает ссылку для каждого оператора, который обращается к ней. Дополнительные сведения см. в разделе [с... Завершить с помощью инструкции](../../../../visual-basic/language-reference/statements/with-end-with-statement.md).  
+## <a name="withend-with-construction"></a>With...End With Construction  
+ The `With...End With` construction lets you specify an object reference once and then run a series of statements that access its members. This can simplify your code and improve performance because Visual Basic does not have to re-establish the reference for each statement that accesses it. For more information, see [With...End With Statement](../../../../visual-basic/language-reference/statements/with-end-with-statement.md).  
   
 ## <a name="see-also"></a>См. также
 

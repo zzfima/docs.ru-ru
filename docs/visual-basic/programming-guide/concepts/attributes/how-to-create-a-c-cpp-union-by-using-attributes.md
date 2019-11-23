@@ -1,15 +1,15 @@
 ---
-title: Инструкции. СозданиеC++ объединения C с помощью атрибутов (Visual Basic)
+title: 'How to: Create a C-C++ Union by Using Attributes'
 ms.date: 07/20/2015
 ms.assetid: 9352a7e4-c0da-4d07-aa14-55ed43736fcb
-ms.openlocfilehash: 6595d6477d9d0838745e19eb2a44d26f6e534c70
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: acb8dc781e2872ae46e5aa058a98b3dd98f3e064
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524269"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349501"
 ---
-# <a name="how-to-create-a-cc-union-by-using-attributes-visual-basic"></a>Инструкции. Создание C/C++ Union с помощью атрибутов (Visual Basic)
+# <a name="how-to-create-a-cc-union-by-using-attributes-visual-basic"></a>How to: Create a C/C++ Union by Using Attributes (Visual Basic)
 
 С помощью атрибутов можно настраивать расположение структур в памяти. Например, можно создать так называемое объединение в C/C++ с помощью атрибутов `StructLayout(LayoutKind.Explicit)` и `FieldOffset`.
 

@@ -1,15 +1,15 @@
 ---
-title: Практическое руководство. Отладка пустых наборов результатов запроса (Visual Basic)
+title: Практическое руководство. Отладка пустых наборов результатов запроса
 ms.date: 07/20/2015
 ms.assetid: b242c90a-d2b8-4309-8a1e-e4e70736c727
-ms.openlocfilehash: 6fc194432b1d44c1214da32d2c6978a4eeb316dc
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 21c161a702338c0c6943fa09212deaea7fdd72f9
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71351781"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353078"
 ---
-# <a name="how-to-debug-empty-query-results-sets-visual-basic"></a>Практическое руководство. Отладка пустых наборов результатов запроса (Visual Basic)
+# <a name="how-to-debug-empty-query-results-sets-visual-basic"></a>How to: Debug Empty Query Results Sets (Visual Basic)
 
 Одной из наиболее типичных проблем при запросах к XML-деревьям является то, что, если XML-дерево содержит пространство имен по умолчанию, разработчик иногда пишет запрос так, как если бы XML-код не располагался в пространстве имен.
 
@@ -17,7 +17,7 @@ ms.locfileid: "71351781"
 
 Второй набор примеров показывает необходимые исправления для запроса XML в пространстве имен.
 
-Дополнительные сведения см. в разделе [Общие сведения о пространствах имен (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).
+For more information, see [Namespaces Overview (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).
 
 ## <a name="example"></a>Пример
 
@@ -54,7 +54,7 @@ End of result set
 
 Этот пример показывает создание XML в пространстве имен, а также запрос, код которого написан правильно.
 
-Решением является объявление и инициализация глобального пространства имен по умолчанию. При этом все свойства XML помещаются в пространство имен по умолчанию. Для последующей правильной работы примера не требуется больше никаких изменений.
+The solution is to declare and initialize a global default namespace. При этом все свойства XML помещаются в пространство имен по умолчанию. Для последующей правильной работы примера не требуется больше никаких изменений.
 
 ```vb
 Imports <xmlns="http://www.adventure-works.com">
@@ -94,4 +94,4 @@ End of result set
 
 ## <a name="see-also"></a>См. также
 
-- [Основные запросы (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+- [Basic Queries (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

@@ -1,13 +1,13 @@
 ---
-title: Ковариация и контрвариантность (Visual Basic)
+title: Ковариация и контрвариация
 ms.date: 07/20/2015
 ms.assetid: 59224c46-9931-466b-8c6e-3648c3e609c6
-ms.openlocfilehash: 8315a272aca891820f7349d854a16375abdae900
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: a75970d98890cb1fb363d4672bd90d376bccf89c
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524254"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352144"
 ---
 # <a name="covariance-and-contravariance-visual-basic"></a>Ковариация и контрвариантность (Visual Basic)
 
@@ -79,7 +79,7 @@ Shared Sub Test()
 End Sub
 ```
 
-В .NET Framework 4 или более поздней версии Visual Basic поддерживает ковариации и контрвариация в универсальных интерфейсах и делегатах и позволяет неявное преобразование параметров универсального типа. Дополнительные сведения см. в разделах [Вариативность в универсальных интерфейсах (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md) и [Вариативность в делегатах (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md).
+In .NET Framework 4 or later, Visual Basic supports covariance and contravariance in generic interfaces and delegates and allows for implicit conversion of generic type parameters. Дополнительные сведения см. в разделах [Вариативность в универсальных интерфейсах (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md) и [Вариативность в делегатах (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md).
 
 В следующем примере кода показано неявное преобразование ссылок для универсальных интерфейсов.
 
