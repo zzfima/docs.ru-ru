@@ -15,30 +15,28 @@ helpviewer_keywords:
 ms.assetid: f6961922-46ec-4d2c-8369-85f880731f37
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: bcfa0c01dc36a68711c42a7e8318cea023b1772f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5985257a186839a297c245b23f093f0b18a798fe
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67752435"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74438264"
 ---
-# <a name="isymunmanagedwriter3commit-method"></a><span data-ttu-id="ae5e2-102">Метод ISymUnmanagedWriter3::Commit</span><span class="sxs-lookup"><span data-stu-id="ae5e2-102">ISymUnmanagedWriter3::Commit Method</span></span>
-<span data-ttu-id="ae5e2-103">Фиксирует изменения, записанных в поток.</span><span class="sxs-lookup"><span data-stu-id="ae5e2-103">Commits the changes written so far to the stream.</span></span>  
+# <a name="isymunmanagedwriter3commit-method"></a><span data-ttu-id="377d3-102">Метод ISymUnmanagedWriter3::Commit</span><span class="sxs-lookup"><span data-stu-id="377d3-102">ISymUnmanagedWriter3::Commit Method</span></span>
+<span data-ttu-id="377d3-103">Commits the changes written so far to the stream.</span><span class="sxs-lookup"><span data-stu-id="377d3-103">Commits the changes written so far to the stream.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ae5e2-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="ae5e2-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="377d3-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="377d3-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT Commit();  
 ```  
   
-## <a name="return-value"></a><span data-ttu-id="ae5e2-105">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="ae5e2-105">Return Value</span></span>  
- <span data-ttu-id="ae5e2-106">Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.</span><span class="sxs-lookup"><span data-stu-id="ae5e2-106">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="377d3-105">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="377d3-105">Return Value</span></span>  
+ <span data-ttu-id="377d3-106">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="377d3-106">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ae5e2-107">Требования</span><span class="sxs-lookup"><span data-stu-id="ae5e2-107">Requirements</span></span>  
- <span data-ttu-id="ae5e2-108">**Заголовок.** CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="ae5e2-108">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="377d3-107">Требования</span><span class="sxs-lookup"><span data-stu-id="377d3-107">Requirements</span></span>  
+ <span data-ttu-id="377d3-108">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="377d3-108">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ae5e2-109">См. также</span><span class="sxs-lookup"><span data-stu-id="ae5e2-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="377d3-109">См. также</span><span class="sxs-lookup"><span data-stu-id="377d3-109">See also</span></span>
 
-- [<span data-ttu-id="ae5e2-110">Интерфейс ISymUnmanagedWriter3</span><span class="sxs-lookup"><span data-stu-id="ae5e2-110">ISymUnmanagedWriter3 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter3-interface.md)
+- [<span data-ttu-id="377d3-110">Интерфейс ISymUnmanagedWriter3</span><span class="sxs-lookup"><span data-stu-id="377d3-110">ISymUnmanagedWriter3 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter3-interface.md)

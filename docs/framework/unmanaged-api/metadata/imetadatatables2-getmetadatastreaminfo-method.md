@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 8b280627-cc74-4789-95da-1fefc966de05
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4f559a269b48ceabfbe9c3a0cf3665458a2cf012
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 279e34689169d31ad89772e90155e7f50bdbac08
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67769283"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74426217"
 ---
-# <a name="imetadatatables2getmetadatastreaminfo-method"></a><span data-ttu-id="37918-102">Метод IMetaDataTables2::GetMetaDataStreamInfo</span><span class="sxs-lookup"><span data-stu-id="37918-102">IMetaDataTables2::GetMetaDataStreamInfo Method</span></span>
-<span data-ttu-id="37918-103">Получает имя, размер и содержимое потока метаданных по указанному индексу.</span><span class="sxs-lookup"><span data-stu-id="37918-103">Gets the name, size, and contents of the metadata stream at the specified index.</span></span>  
+# <a name="imetadatatables2getmetadatastreaminfo-method"></a><span data-ttu-id="33a59-102">Метод IMetaDataTables2::GetMetaDataStreamInfo</span><span class="sxs-lookup"><span data-stu-id="33a59-102">IMetaDataTables2::GetMetaDataStreamInfo Method</span></span>
+<span data-ttu-id="33a59-103">Gets the name, size, and contents of the metadata stream at the specified index.</span><span class="sxs-lookup"><span data-stu-id="33a59-103">Gets the name, size, and contents of the metadata stream at the specified index.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="37918-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="37918-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="33a59-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="33a59-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetMetaDataStreamInfo (  
@@ -38,29 +36,29 @@ HRESULT GetMetaDataStreamInfo (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="37918-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="37918-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="33a59-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="33a59-105">Parameters</span></span>  
  `ix`  
- <span data-ttu-id="37918-106">[in] Индекс потока запрошенных метаданных.</span><span class="sxs-lookup"><span data-stu-id="37918-106">[in] The index of the requested metadata stream.</span></span>  
+ <span data-ttu-id="33a59-106">[in] The index of the requested metadata stream.</span><span class="sxs-lookup"><span data-stu-id="33a59-106">[in] The index of the requested metadata stream.</span></span>  
   
  `ppchName`  
- <span data-ttu-id="37918-107">[out] Указатель на имя потока.</span><span class="sxs-lookup"><span data-stu-id="37918-107">[out] A pointer to the name of the stream.</span></span>  
+ <span data-ttu-id="33a59-107">[out] A pointer to the name of the stream.</span><span class="sxs-lookup"><span data-stu-id="33a59-107">[out] A pointer to the name of the stream.</span></span>  
   
  `ppv`  
- <span data-ttu-id="37918-108">[out] Указатель на поток метаданных.</span><span class="sxs-lookup"><span data-stu-id="37918-108">[out] A pointer to the metadata stream.</span></span>  
+ <span data-ttu-id="33a59-108">[out] A pointer to the metadata stream.</span><span class="sxs-lookup"><span data-stu-id="33a59-108">[out] A pointer to the metadata stream.</span></span>  
   
  `pcb`  
- <span data-ttu-id="37918-109">[out] Размер в байтах из `ppv`.</span><span class="sxs-lookup"><span data-stu-id="37918-109">[out] The size, in bytes, of `ppv`.</span></span>  
+ <span data-ttu-id="33a59-109">[out] The size, in bytes, of `ppv`.</span><span class="sxs-lookup"><span data-stu-id="33a59-109">[out] The size, in bytes, of `ppv`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="37918-110">Требования</span><span class="sxs-lookup"><span data-stu-id="37918-110">Requirements</span></span>  
- <span data-ttu-id="37918-111">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="37918-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="33a59-110">Требования</span><span class="sxs-lookup"><span data-stu-id="33a59-110">Requirements</span></span>  
+ <span data-ttu-id="33a59-111">**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="33a59-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="37918-112">**Заголовок.** Cor.h</span><span class="sxs-lookup"><span data-stu-id="37918-112">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="33a59-112">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="33a59-112">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="37918-113">**Библиотека:** Используется как ресурс в MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="37918-113">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="33a59-113">**Library:** Used as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="33a59-113">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="37918-114">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="37918-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="33a59-114">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="33a59-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="37918-115">См. также</span><span class="sxs-lookup"><span data-stu-id="37918-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="33a59-115">См. также</span><span class="sxs-lookup"><span data-stu-id="33a59-115">See also</span></span>
 
-- [<span data-ttu-id="37918-116">Интерфейс IMetaDataTables2</span><span class="sxs-lookup"><span data-stu-id="37918-116">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
-- [<span data-ttu-id="37918-117">Интерфейс IMetaDataTables</span><span class="sxs-lookup"><span data-stu-id="37918-117">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
+- [<span data-ttu-id="33a59-116">Интерфейс IMetaDataTables2</span><span class="sxs-lookup"><span data-stu-id="33a59-116">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+- [<span data-ttu-id="33a59-117">Интерфейс IMetaDataTables</span><span class="sxs-lookup"><span data-stu-id="33a59-117">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)

@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: c698b86e-ace7-4b21-9549-f52d6a034959
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6e06695f5ba348315523c7414822ce87d594bdbc
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 85e65f6a3ec13c2acc31b8f87dbe4b4476ffc2a5
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776602"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74427868"
 ---
-# <a name="isymunmanagedwritersetmethodsourcerange-method"></a><span data-ttu-id="51fad-102">Метод ISymUnmanagedWriter::SetMethodSourceRange</span><span class="sxs-lookup"><span data-stu-id="51fad-102">ISymUnmanagedWriter::SetMethodSourceRange Method</span></span>
-<span data-ttu-id="51fad-103">Указывает истинные начало и конец метода в исходном файле.</span><span class="sxs-lookup"><span data-stu-id="51fad-103">Specifies the true start and end of a method within a source file.</span></span> <span data-ttu-id="51fad-104">Используйте этот метод для задания длины метода независимо от точек следования, имеющихся в методе.</span><span class="sxs-lookup"><span data-stu-id="51fad-104">Use this method to specify the extent of a method independently of the sequence points that exist within the method.</span></span>  
+# <a name="isymunmanagedwritersetmethodsourcerange-method"></a><span data-ttu-id="d86cc-102">Метод ISymUnmanagedWriter::SetMethodSourceRange</span><span class="sxs-lookup"><span data-stu-id="d86cc-102">ISymUnmanagedWriter::SetMethodSourceRange Method</span></span>
+<span data-ttu-id="d86cc-103">Specifies the true start and end of a method within a source file.</span><span class="sxs-lookup"><span data-stu-id="d86cc-103">Specifies the true start and end of a method within a source file.</span></span> <span data-ttu-id="d86cc-104">Use this method to specify the extent of a method independently of the sequence points that exist within the method.</span><span class="sxs-lookup"><span data-stu-id="d86cc-104">Use this method to specify the extent of a method independently of the sequence points that exist within the method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="51fad-105">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="51fad-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d86cc-105">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="d86cc-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT SetMethodSourceRange(  
@@ -39,31 +37,31 @@ HRESULT SetMethodSourceRange(
     [in] ULONG32                      endColumn);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="51fad-106">Параметры</span><span class="sxs-lookup"><span data-stu-id="51fad-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="d86cc-106">Параметры</span><span class="sxs-lookup"><span data-stu-id="d86cc-106">Parameters</span></span>  
  `startDoc`  
- <span data-ttu-id="51fad-107">[in] Указатель на документ, содержащий начальную позицию.</span><span class="sxs-lookup"><span data-stu-id="51fad-107">[in] A pointer to the document containing the starting position.</span></span>  
+ <span data-ttu-id="d86cc-107">[in] A pointer to the document containing the starting position.</span><span class="sxs-lookup"><span data-stu-id="d86cc-107">[in] A pointer to the document containing the starting position.</span></span>  
   
  `startLine`  
- <span data-ttu-id="51fad-108">[in] Номер начальной строки.</span><span class="sxs-lookup"><span data-stu-id="51fad-108">[in] The starting line number.</span></span>  
+ <span data-ttu-id="d86cc-108">[in] The starting line number.</span><span class="sxs-lookup"><span data-stu-id="d86cc-108">[in] The starting line number.</span></span>  
   
  `startColumn`  
- <span data-ttu-id="51fad-109">[in] Начальный столбец.</span><span class="sxs-lookup"><span data-stu-id="51fad-109">[in] The starting column.</span></span>  
+ <span data-ttu-id="d86cc-109">[in] The starting column.</span><span class="sxs-lookup"><span data-stu-id="d86cc-109">[in] The starting column.</span></span>  
   
  `endDoc`  
- <span data-ttu-id="51fad-110">[in] Указатель на документ, содержащий конечное положение.</span><span class="sxs-lookup"><span data-stu-id="51fad-110">[in] A pointer to the document containing the ending position.</span></span>  
+ <span data-ttu-id="d86cc-110">[in] A pointer to the document containing the ending position.</span><span class="sxs-lookup"><span data-stu-id="d86cc-110">[in] A pointer to the document containing the ending position.</span></span>  
   
  `endLine`  
- <span data-ttu-id="51fad-111">[in] Номер конечной строки.</span><span class="sxs-lookup"><span data-stu-id="51fad-111">[in] The ending line number.</span></span>  
+ <span data-ttu-id="d86cc-111">[in] The ending line number.</span><span class="sxs-lookup"><span data-stu-id="d86cc-111">[in] The ending line number.</span></span>  
   
  `endColumn`  
- <span data-ttu-id="51fad-112">[in] Номер конечного столбца.</span><span class="sxs-lookup"><span data-stu-id="51fad-112">[in] The ending column number.</span></span>  
+ <span data-ttu-id="d86cc-112">[in] The ending column number.</span><span class="sxs-lookup"><span data-stu-id="d86cc-112">[in] The ending column number.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="51fad-113">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="51fad-113">Return Value</span></span>  
- <span data-ttu-id="51fad-114">Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.</span><span class="sxs-lookup"><span data-stu-id="51fad-114">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="d86cc-113">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="d86cc-113">Return Value</span></span>  
+ <span data-ttu-id="d86cc-114">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="d86cc-114">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="51fad-115">Требования</span><span class="sxs-lookup"><span data-stu-id="51fad-115">Requirements</span></span>  
- <span data-ttu-id="51fad-116">**Заголовок.** CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="51fad-116">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d86cc-115">Требования</span><span class="sxs-lookup"><span data-stu-id="d86cc-115">Requirements</span></span>  
+ <span data-ttu-id="d86cc-116">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="d86cc-116">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="51fad-117">См. также</span><span class="sxs-lookup"><span data-stu-id="51fad-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d86cc-117">См. также</span><span class="sxs-lookup"><span data-stu-id="d86cc-117">See also</span></span>
 
-- [<span data-ttu-id="51fad-118">Интерфейс ISymUnmanagedWriter</span><span class="sxs-lookup"><span data-stu-id="51fad-118">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+- [<span data-ttu-id="d86cc-118">Интерфейс ISymUnmanagedWriter</span><span class="sxs-lookup"><span data-stu-id="d86cc-118">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
