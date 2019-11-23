@@ -14,61 +14,59 @@ helpviewer_keywords:
 ms.assetid: 1e48243f-5de6-4bd6-a1d0-e1d248bca4b8
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: aec2304e00d5328fcf55adbf5521c08865c05c56
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8d7c226d26d677a8b10df29e0343b71682c46699
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67763303"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74427376"
 ---
-# <a name="functiontailcall3-function"></a><span data-ttu-id="75431-102">Функция FunctionTailcall3</span><span class="sxs-lookup"><span data-stu-id="75431-102">FunctionTailcall3 Function</span></span>
-<span data-ttu-id="75431-103">Уведомляет профилировщик о том, что текущей выполняемой функции собирается выполнить вызов с префиксом tail в другую функцию.</span><span class="sxs-lookup"><span data-stu-id="75431-103">Notifies the profiler that the currently executing function is about to perform a tail call to another function.</span></span>  
+# <a name="functiontailcall3-function"></a><span data-ttu-id="c4d00-102">Функция FunctionTailcall3</span><span class="sxs-lookup"><span data-stu-id="c4d00-102">FunctionTailcall3 Function</span></span>
+<span data-ttu-id="c4d00-103">Notifies the profiler that the currently executing function is about to perform a tail call to another function.</span><span class="sxs-lookup"><span data-stu-id="c4d00-103">Notifies the profiler that the currently executing function is about to perform a tail call to another function.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="75431-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="75431-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c4d00-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="c4d00-104">Syntax</span></span>  
   
 ```cpp  
 void __stdcall FunctionTailcall3 (FunctionOrRemappedID functionOrRemappedID);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="75431-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="75431-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="c4d00-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="c4d00-105">Parameters</span></span>  
  `functionOrRemappedID`  
- <span data-ttu-id="75431-106">[in] Идентификатор текущей выполняемой функции, который собираетесь сделать с префиксом tail.</span><span class="sxs-lookup"><span data-stu-id="75431-106">[in] The identifier of the currently executing function that is about to make a tail call.</span></span>  
+ <span data-ttu-id="c4d00-106">[in] The identifier of the currently executing function that is about to make a tail call.</span><span class="sxs-lookup"><span data-stu-id="c4d00-106">[in] The identifier of the currently executing function that is about to make a tail call.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="75431-107">Примечания</span><span class="sxs-lookup"><span data-stu-id="75431-107">Remarks</span></span>  
- <span data-ttu-id="75431-108">`FunctionTailcall3` Функцию обратного вызова Уведомляет профилировщик при вызове функций.</span><span class="sxs-lookup"><span data-stu-id="75431-108">The `FunctionTailcall3` callback function notifies the profiler as functions are being called.</span></span> <span data-ttu-id="75431-109">Используйте [метод ICorProfilerInfo3::SetEnterLeaveFunctionHooks3](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-setenterleavefunctionhooks3-method.md) для регистрации вашей реализации этой функции.</span><span class="sxs-lookup"><span data-stu-id="75431-109">Use the [ICorProfilerInfo3::SetEnterLeaveFunctionHooks3 method](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-setenterleavefunctionhooks3-method.md) to register your implementation of this function.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="c4d00-107">Заметки</span><span class="sxs-lookup"><span data-stu-id="c4d00-107">Remarks</span></span>  
+ <span data-ttu-id="c4d00-108">The `FunctionTailcall3` callback function notifies the profiler as functions are being called.</span><span class="sxs-lookup"><span data-stu-id="c4d00-108">The `FunctionTailcall3` callback function notifies the profiler as functions are being called.</span></span> <span data-ttu-id="c4d00-109">Use the [ICorProfilerInfo3::SetEnterLeaveFunctionHooks3 method](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-setenterleavefunctionhooks3-method.md) to register your implementation of this function.</span><span class="sxs-lookup"><span data-stu-id="c4d00-109">Use the [ICorProfilerInfo3::SetEnterLeaveFunctionHooks3 method](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-setenterleavefunctionhooks3-method.md) to register your implementation of this function.</span></span>  
   
- <span data-ttu-id="75431-110">`FunctionTailcall3` Функция является обратным вызовом; это необходимо реализовать.</span><span class="sxs-lookup"><span data-stu-id="75431-110">The `FunctionTailcall3` function is a callback; you must implement it.</span></span> <span data-ttu-id="75431-111">В реализации должен использоваться `__declspec(naked)` атрибут класса хранения.</span><span class="sxs-lookup"><span data-stu-id="75431-111">The implementation must use the `__declspec(naked)` storage-class attribute.</span></span>  
+ <span data-ttu-id="c4d00-110">The `FunctionTailcall3` function is a callback; you must implement it.</span><span class="sxs-lookup"><span data-stu-id="c4d00-110">The `FunctionTailcall3` function is a callback; you must implement it.</span></span> <span data-ttu-id="c4d00-111">The implementation must use the `__declspec(naked)` storage-class attribute.</span><span class="sxs-lookup"><span data-stu-id="c4d00-111">The implementation must use the `__declspec(naked)` storage-class attribute.</span></span>  
   
- <span data-ttu-id="75431-112">Ядро выполнения не сохраняет значения регистров перед вызовом этой функции.</span><span class="sxs-lookup"><span data-stu-id="75431-112">The execution engine does not save any registers before calling this function.</span></span>  
+ <span data-ttu-id="c4d00-112">The execution engine does not save any registers before calling this function.</span><span class="sxs-lookup"><span data-stu-id="c4d00-112">The execution engine does not save any registers before calling this function.</span></span>  
   
-- <span data-ttu-id="75431-113">При входе необходимо сохранить все регистры, которые вы используете, включая те, в единицах с плавающей запятой (FPU).</span><span class="sxs-lookup"><span data-stu-id="75431-113">On entry, you must save all registers that you use, including those in the floating-point unit (FPU).</span></span>  
+- <span data-ttu-id="c4d00-113">On entry, you must save all registers that you use, including those in the floating-point unit (FPU).</span><span class="sxs-lookup"><span data-stu-id="c4d00-113">On entry, you must save all registers that you use, including those in the floating-point unit (FPU).</span></span>  
   
-- <span data-ttu-id="75431-114">При выходе необходимо восстановить стек путем выталкивания из всех параметров, которые были отправлены вызывающим кодом.</span><span class="sxs-lookup"><span data-stu-id="75431-114">On exit, you must restore the stack by popping off all the parameters that were pushed by its caller.</span></span>  
+- <span data-ttu-id="c4d00-114">On exit, you must restore the stack by popping off all the parameters that were pushed by its caller.</span><span class="sxs-lookup"><span data-stu-id="c4d00-114">On exit, you must restore the stack by popping off all the parameters that were pushed by its caller.</span></span>  
   
- <span data-ttu-id="75431-115">Реализация `FunctionTailcall3` не должен блокироваться, поскольку это приведет к задержке сборки мусора.</span><span class="sxs-lookup"><span data-stu-id="75431-115">The implementation of `FunctionTailcall3` should not block, because it will delay garbage collection.</span></span> <span data-ttu-id="75431-116">Реализация не должны в сбор мусора, так как стек может находиться в состоянии коллекции с поддержкой сборки мусора.</span><span class="sxs-lookup"><span data-stu-id="75431-116">The implementation should not attempt a garbage collection, because the stack may not be in a garbage collection-friendly state.</span></span> <span data-ttu-id="75431-117">При попытке сбора мусора, среда выполнения будет блокироваться до `FunctionTailcall3` возвращает.</span><span class="sxs-lookup"><span data-stu-id="75431-117">If a garbage collection is attempted, the runtime will block until `FunctionTailcall3` returns.</span></span>  
+ <span data-ttu-id="c4d00-115">The implementation of `FunctionTailcall3` should not block, because it will delay garbage collection.</span><span class="sxs-lookup"><span data-stu-id="c4d00-115">The implementation of `FunctionTailcall3` should not block, because it will delay garbage collection.</span></span> <span data-ttu-id="c4d00-116">The implementation should not attempt a garbage collection, because the stack may not be in a garbage collection-friendly state.</span><span class="sxs-lookup"><span data-stu-id="c4d00-116">The implementation should not attempt a garbage collection, because the stack may not be in a garbage collection-friendly state.</span></span> <span data-ttu-id="c4d00-117">If a garbage collection is attempted, the runtime will block until `FunctionTailcall3` returns.</span><span class="sxs-lookup"><span data-stu-id="c4d00-117">If a garbage collection is attempted, the runtime will block until `FunctionTailcall3` returns.</span></span>  
   
- <span data-ttu-id="75431-118">`FunctionTailcall3` Функция не должна вызов управляемого кода или инициировать распределение управляемой памяти любым способом.</span><span class="sxs-lookup"><span data-stu-id="75431-118">The `FunctionTailcall3` function must not call into managed code or cause a managed memory allocation in any way.</span></span>  
+ <span data-ttu-id="c4d00-118">The `FunctionTailcall3` function must not call into managed code or cause a managed memory allocation in any way.</span><span class="sxs-lookup"><span data-stu-id="c4d00-118">The `FunctionTailcall3` function must not call into managed code or cause a managed memory allocation in any way.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="75431-119">Требования</span><span class="sxs-lookup"><span data-stu-id="75431-119">Requirements</span></span>  
- <span data-ttu-id="75431-120">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="75431-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c4d00-119">Требования</span><span class="sxs-lookup"><span data-stu-id="c4d00-119">Requirements</span></span>  
+ <span data-ttu-id="c4d00-120">**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c4d00-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="75431-121">**Заголовок.** CorProf.idl</span><span class="sxs-lookup"><span data-stu-id="75431-121">**Header:** CorProf.idl</span></span>  
+ <span data-ttu-id="c4d00-121">**Header:** CorProf.idl</span><span class="sxs-lookup"><span data-stu-id="c4d00-121">**Header:** CorProf.idl</span></span>  
   
- <span data-ttu-id="75431-122">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="75431-122">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="c4d00-122">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c4d00-122">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="75431-123">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="75431-123">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="c4d00-123">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c4d00-123">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="75431-124">См. также</span><span class="sxs-lookup"><span data-stu-id="75431-124">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c4d00-124">См. также</span><span class="sxs-lookup"><span data-stu-id="c4d00-124">See also</span></span>
 
-- [<span data-ttu-id="75431-125">FunctionEnter3</span><span class="sxs-lookup"><span data-stu-id="75431-125">FunctionEnter3</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionenter3-function.md)
-- [<span data-ttu-id="75431-126">FunctionLeave3</span><span class="sxs-lookup"><span data-stu-id="75431-126">FunctionLeave3</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionleave3-function.md)
-- [<span data-ttu-id="75431-127">FunctionEnter3WithInfo</span><span class="sxs-lookup"><span data-stu-id="75431-127">FunctionEnter3WithInfo</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md)
-- [<span data-ttu-id="75431-128">FunctionLeave3WithInfo</span><span class="sxs-lookup"><span data-stu-id="75431-128">FunctionLeave3WithInfo</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md)
-- [<span data-ttu-id="75431-129">Функция FunctionTailcall3WithInfo</span><span class="sxs-lookup"><span data-stu-id="75431-129">FunctionTailcall3WithInfo Function</span></span>](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3withinfo-function.md)
-- [<span data-ttu-id="75431-130">SetEnterLeaveFunctionHooks3</span><span class="sxs-lookup"><span data-stu-id="75431-130">SetEnterLeaveFunctionHooks3</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-setenterleavefunctionhooks3-method.md)
-- [<span data-ttu-id="75431-131">SetEnterLeaveFunctionHooks3WithInfo</span><span class="sxs-lookup"><span data-stu-id="75431-131">SetEnterLeaveFunctionHooks3WithInfo</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-setenterleavefunctionhooks3withinfo-method.md)
-- [<span data-ttu-id="75431-132">SetFunctionIDMapper</span><span class="sxs-lookup"><span data-stu-id="75431-132">SetFunctionIDMapper</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setfunctionidmapper-method.md)
-- [<span data-ttu-id="75431-133">SetFunctionIDMapper2</span><span class="sxs-lookup"><span data-stu-id="75431-133">SetFunctionIDMapper2</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-setfunctionidmapper2-method.md)
-- [<span data-ttu-id="75431-134">Глобальные статические функции профилирования</span><span class="sxs-lookup"><span data-stu-id="75431-134">Profiling Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)
+- [<span data-ttu-id="c4d00-125">FunctionEnter3</span><span class="sxs-lookup"><span data-stu-id="c4d00-125">FunctionEnter3</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionenter3-function.md)
+- [<span data-ttu-id="c4d00-126">FunctionLeave3</span><span class="sxs-lookup"><span data-stu-id="c4d00-126">FunctionLeave3</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionleave3-function.md)
+- [<span data-ttu-id="c4d00-127">FunctionEnter3WithInfo</span><span class="sxs-lookup"><span data-stu-id="c4d00-127">FunctionEnter3WithInfo</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md)
+- [<span data-ttu-id="c4d00-128">FunctionLeave3WithInfo</span><span class="sxs-lookup"><span data-stu-id="c4d00-128">FunctionLeave3WithInfo</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md)
+- [<span data-ttu-id="c4d00-129">Функция FunctionTailcall3WithInfo</span><span class="sxs-lookup"><span data-stu-id="c4d00-129">FunctionTailcall3WithInfo Function</span></span>](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3withinfo-function.md)
+- [<span data-ttu-id="c4d00-130">SetEnterLeaveFunctionHooks3</span><span class="sxs-lookup"><span data-stu-id="c4d00-130">SetEnterLeaveFunctionHooks3</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-setenterleavefunctionhooks3-method.md)
+- [<span data-ttu-id="c4d00-131">SetEnterLeaveFunctionHooks3WithInfo</span><span class="sxs-lookup"><span data-stu-id="c4d00-131">SetEnterLeaveFunctionHooks3WithInfo</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-setenterleavefunctionhooks3withinfo-method.md)
+- [<span data-ttu-id="c4d00-132">SetFunctionIDMapper</span><span class="sxs-lookup"><span data-stu-id="c4d00-132">SetFunctionIDMapper</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setfunctionidmapper-method.md)
+- [<span data-ttu-id="c4d00-133">SetFunctionIDMapper2</span><span class="sxs-lookup"><span data-stu-id="c4d00-133">SetFunctionIDMapper2</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-setfunctionidmapper2-method.md)
+- [<span data-ttu-id="c4d00-134">Глобальные статические функции профилирования</span><span class="sxs-lookup"><span data-stu-id="c4d00-134">Profiling Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)
