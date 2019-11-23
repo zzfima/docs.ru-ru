@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 46264b2c-574d-4dde-aafc-77187a104fdd
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 8a70c041bc17f58a5e17877dd2e1f2aa2944e689
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3e470250fa0e86610fcc9a6d6e2ca03569d62b54
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777932"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449450"
 ---
 # <a name="imetadataassemblyimportfindexportedtypebyname-method"></a>Метод IMetaDataAssemblyImport::FindExportedTypeByName
-Получает указатель на экспортируемый тип по его имени и включающий тип.  
+Gets a pointer to an exported type, given its name and enclosing type.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,23 +37,23 @@ HRESULT FindExportedTypeByName (
   
 ## <a name="parameters"></a>Параметры  
  `szName`  
- [in] Имя экспортируемого типа.  
+ [in] The name of the exported type.  
   
  `mdtExportedType`  
- [in] Маркер метаданных для экспортируемого типа включающего класса. Это значение равно `mdExportedTypeNil` при экспорте в запрошенный тип не является вложенным типом.  
+ [in] The metadata token for the enclosing class of the exported type. This value is `mdExportedTypeNil` if the requested exported type is not a nested type.  
   
  `ptkExportedType`  
- [out] Указатель на `mdExportedType` токен, представляющий экспортированный тип.  
+ [out] A pointer to the `mdExportedType` token that represents the exported type.  
   
-## <a name="remarks"></a>Примечания  
- `FindExportedTypeByName` Метод использует стандартные правила, чтобы позволить среда CLR для разрешения ссылок на.  
+## <a name="remarks"></a>Заметки  
+ The `FindExportedTypeByName` method uses the standard rules employed by the common language runtime for resolving references.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** Cor.h  
+ **Header:** Cor.h  
   
- **Библиотека:** Используется как ресурс в MsCorEE.dll  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

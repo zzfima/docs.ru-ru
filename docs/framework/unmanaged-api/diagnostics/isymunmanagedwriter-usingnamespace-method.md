@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8d746e0a-d158-4983-88da-db0a0856bc0b
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 0076b70c85c21f0c4b1fb140b15000f99dbff742
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: cb0af78092822875204f45ec3dca1484e5b5fc90
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67755134"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74427467"
 ---
 # <a name="isymunmanagedwriterusingnamespace-method"></a>Метод ISymUnmanagedWriter::UsingNamespace
-Указывает, что данное имя полного пространства имен используется в текущей открытой лексической области. Пространство имен будет использоваться во всех областях, которые наследуют из открытых области. Закрытие текущей области также приведет к остановке использования пространства имен.  
+Specifies that the given fully qualified namespace name is being used within the currently open lexical scope. The namespace will be used within all scopes that inherit from the currently open scope. Closing the current scope will also stop the use of the namespace.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -36,13 +34,13 @@ HRESULT UsingNamespace(
   
 ## <a name="parameters"></a>Параметры  
  `fullName`  
- [in] Указатель на полное имя пространства имен.  
+ [in] A pointer to the fully qualified name of the namespace.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Требования  
- **Заголовок.** CorSym.idl CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>См. также
 

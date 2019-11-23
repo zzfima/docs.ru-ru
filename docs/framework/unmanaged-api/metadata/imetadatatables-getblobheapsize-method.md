@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6330a9ee-8cd5-4299-86f1-b4de2c701a0d
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b9a73df0b73eb5043103479b7452fedc84b02819
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 715456317b880de89b6abdf1fa82acd040d17ced
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781558"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74442043"
 ---
 # <a name="imetadatatablesgetblobheapsize-method"></a>Метод IMetaDataTables::GetBlobHeapSize
-Возвращает размер в байтах, кучи больших двоичных объектов (BLOB).  
+Gets the size, in bytes, of the binary large object (BLOB) heap.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,14 +35,14 @@ HRESULT GetBlobHeapSize (
   
 ## <a name="parameters"></a>Параметры  
  `pcbBlobs`  
- [out] Указатель на размер в байтах в куче больших двоичных ОБЪЕКТОВ.  
+ [out] A pointer to the size, in bytes, of the BLOB heap.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** Cor.h  
+ **Header:** Cor.h  
   
- **Библиотека:** Используется как ресурс в MsCorEE.dll  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

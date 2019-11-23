@@ -15,20 +15,18 @@ helpviewer_keywords:
 ms.assetid: 8f0dd2fe-7df7-464e-91f4-5518c586bb5f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f2dceeb2f0b3aa9f3147157e77087dffbf2d5f85
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ca34d1d84d6f9960d021c35566f8412df321464d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69939015"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74429747"
 ---
 # <a name="isymunmanagedreaderinitialize-method"></a>Метод ISymUnmanagedReader::Initialize
-Инициализирует средство чтения символов с помощью интерфейса средства импорта метаданных, с которым будет связан этот модуль чтения, вместе с именем файла модуля.  
+Initializes the symbol reader with the metadata importer interface that this reader will be associated with, along with the file name of the module.  
   
 > [!NOTE]
-> Этот метод может быть вызван только один раз и должен вызываться до любых других методов чтения.  
+> This method can be called only once, and must be called before any other reader methods.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -42,25 +40,25 @@ HRESULT Initialize (
   
 ## <a name="parameters"></a>Параметры  
  `importer`  
- окне Интерфейс средства импорта метаданных, с которым будет связан этот модуль чтения.  
+ [in] The metadata importer interface with which this reader will be associated.  
   
  `filename`  
- окне Имя файла модуля. Вместо этого можно использовать `pIStream` параметр.  
+ [in] The file name of the module. You can use the `pIStream` parameter instead.  
   
  `searchPath`  
- окне Путь для поиска. Это необязательный параметр.  
+ [in] The path to search. Этот параметр является необязательным.  
   
  `pIStream`  
- окне Файловый поток, используемый в качестве альтернативы параметру filename.  
+ [in] The file stream, used as an alternative to the filename parameter.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Значение S_OK, если метод выполнен. в противном случае — E_FAIL или другой код ошибки.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
-## <a name="remarks"></a>Примечания  
- Необходимо указать только один из `filename` `pIStream` параметров или, но не оба. Параметр `searchPath` является необязательным.  
+## <a name="remarks"></a>Заметки  
+ You need to specify only one of the `filename` or the `pIStream` parameters, not both. Параметр `searchPath` является необязательным.  
   
 ## <a name="requirements"></a>Требования  
- **Заголовок.** Корсим. idl, Корсим. h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>См. также
 

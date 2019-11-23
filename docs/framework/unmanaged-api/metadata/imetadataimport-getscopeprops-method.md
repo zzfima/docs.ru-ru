@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: c8ba42d2-d9fa-43cb-bbc0-f33e1e592cb6
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 061c482a7e674fd425fe627c741a11b39864ba5c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: af1c3d599c5280e584ffb842c96c70a7c3d4ed08
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778857"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436880"
 ---
 # <a name="imetadataimportgetscopeprops-method"></a>Метод IMetaDataImport::GetScopeProps
 Возвращает имя и при необходимости идентификатор версии сборки или модуля в текущей области метаданных.  
@@ -40,26 +38,26 @@ HRESULT GetScopeProps (
   
 ## <a name="parameters"></a>Параметры  
  `szName`  
- [out] Буфер для имени сборки или модуля.  
+ [out] A buffer for the assembly or module name.  
   
  `cchName`  
- [in] Размер в расширенных символах `szName`.  
+ [in] The size in wide characters of `szName`.  
   
  `pchName`  
- [out] Число расширенных символов, возвращаемых в `szName`.  
+ [out] The number of wide characters returned in `szName`.  
   
  `pmvid`  
- [out, optional] Указатель на GUID, который уникально идентифицирует версию сборки или модуля.  
+ [out, optional] A pointer to a GUID that uniquely identifies the version of the assembly or module.  
   
-## <a name="remarks"></a>Примечания  
- [IMetaDataEmit::SetModuleProps](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setmoduleprops-method.md) метод используется для установки этих свойств.  
+## <a name="remarks"></a>Заметки  
+ The [IMetaDataEmit::SetModuleProps](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setmoduleprops-method.md) method is used to set these properties.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** Cor.h  
+ **Header:** Cor.h  
   
- **Библиотека:** Включена как ресурс в MsCorEE.dll  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

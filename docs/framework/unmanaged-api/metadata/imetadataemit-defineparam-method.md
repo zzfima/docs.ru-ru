@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: d86a3d14-4796-4909-9591-dfafe3de5ce4
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 9d64a1ef21cd4fa4224609c7cd415c1611313769
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5c81bc82e19bce658336e4860a61f2721e17423d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777545"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74431687"
 ---
 # <a name="imetadataemitdefineparam-method"></a>Метод IMetaDataEmit::DefineParam
-Создает определение параметра с указанной сигнатурой метода, который ссылается указанный токен и получает маркер для данного определения параметра.  
+Creates a parameter definition with the specified signature for the method referenced by the specified token, and gets a token for that parameter definition.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -44,38 +42,38 @@ HRESULT DefineParam (
   
 ## <a name="parameters"></a>Параметры  
  `md`  
- [in] Токен для метода, параметр которого определяется.  
+ [in] The token for the method whose parameter is being defined.  
   
  `ulParamSeq`  
- [in] Порядковый номер параметра.  
+ [in] The parameter sequence number.  
   
  `szName`  
- [in] Имя параметра в формате Юникод.  
+ [in] The name of the parameter in Unicode.  
   
  `dwParamFlags`  
- [in] Флаги для параметра. Это битовая маска `CorParamAttr` значения.  
+ [in] Flags for the parameter. This is a bitmask of `CorParamAttr` values.  
   
  `dwCPlusTypeFlag`  
- [in] `ELEMENT_TYPE_` *\** для постоянного значения.  
+ [in] `ELEMENT_TYPE_` *\** for the constant value.  
   
  `pValue`  
- [in] Постоянное значение для параметра.  
+ [in] The constant value for the parameter.  
   
  `cchValue`  
- [in] Размер в символы Юникода из `pValue`.  
+ [in] The size, in Unicode characters, of `pValue`.  
   
  `ppd`  
- [out] `mdParamDef` Маркер, назначенный.  
+ [out] The `mdParamDef` token assigned.  
   
-## <a name="remarks"></a>Примечания  
- Последовательность значений элементов в `ulParamSeq` начинаются с 1 для параметров. Возвращаемое значение имеет порядковый номер 0.  
+## <a name="remarks"></a>Заметки  
+ The sequence values in `ulParamSeq` begin with 1 for parameters. A return value has a sequence number of 0.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** Cor.h  
+ **Header:** Cor.h  
   
- **Библиотека:** Используется как ресурс в MSCorEE.dll  
+ **Library:** Used as a resource in MSCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

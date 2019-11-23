@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 137cb264-64de-46ac-bc6e-2a7db97e8abe
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c691c403155d6e10db70c05894fe6a0fd381f036
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: be08e27bd98eccdffca654972eca775e2ecd0a95
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62042457"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74442095"
 ---
 # <a name="imetadatainfo-interface"></a>Интерфейс IMetaDataInfo
 Предоставляет метод, который получает сведения о сопоставлении метаданных из файла на диске с памятью.  
@@ -30,14 +28,14 @@ ms.locfileid: "62042457"
   
 |Метод|Описание|  
 |------------|-----------------|  
-|[Метод GetFileMapping](../../../../docs/framework/unmanaged-api/metadata/imetadatainfo-getfilemapping-method.md)|Получает область памяти, сопоставленного файла и тип сопоставления.|  
+|[Метод GetFileMapping](../../../../docs/framework/unmanaged-api/metadata/imetadatainfo-getfilemapping-method.md)|Gets the memory region of the mapped file, and the kind of mapping.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** Cor.h  
+ **Header:** Cor.h  
   
- **Библиотека:** Используется как ресурс в MsCorEE.dll  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

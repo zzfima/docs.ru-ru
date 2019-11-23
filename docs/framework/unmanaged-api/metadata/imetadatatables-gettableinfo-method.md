@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 50cbe557-2322-41aa-8e0d-f967602eaa0f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4844834232e34ab5dacfa34e7aa5d204ee344612
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 662b628f3cc6d2d7138f56820beaccee9c5d9e81
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781362"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74426657"
 ---
 # <a name="imetadatatablesgettableinfo-method"></a>Метод IMetaDataTables::GetTableInfo
-Получает имя, размер строки, количество строк, число столбцов и ключевой столбец индекса указанной таблицы.  
+Gets the name, row size, number of rows, number of columns, and key column index of the specified table.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -42,29 +40,29 @@ HRESULT GetTableInfo (
   
 ## <a name="parameters"></a>Параметры  
  `ixTbl`  
- [in] Идентификатор таблицы, свойства которого следует вернуть.  
+ [in] The identifier of the table whose properties to return.  
   
  `pcbRow`  
- [out] Указатель на размер в байтах, строки в таблице.  
+ [out] A pointer to the size, in bytes, of a table row.  
   
  `pcRows`  
- [out] Указатель на число строк в таблице.  
+ [out] A pointer to the number of rows in the table.  
   
  `pcCols`  
- [out] Указатель на число столбцов в таблице.  
+ [out] A pointer to the number of columns in the table.  
   
  `piKey`  
- [out] Указатель на индекс ключевого столбца или -1, если таблица не имеет ключевого столбца.  
+ [out] A pointer to the index of the key column, or -1 if the table has no key column.  
   
  `ppName`  
- [out] Указатель на указатель на имя таблицы.  
+ [out] A pointer to a pointer to the table name.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** Cor.h  
+ **Header:** Cor.h  
   
- **Библиотека:** Используется как ресурс в MsCorEE.dll  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

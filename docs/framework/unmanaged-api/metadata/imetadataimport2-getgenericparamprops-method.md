@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: dbb21e67-712b-49e7-a27c-a1e73ffd46c5
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: cf9f6cc1e568463f2ca9afa38c10f50d0c247013
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a8c5dd263401002deaee3d21f1e41b41a29faec2
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67755350"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74427295"
 ---
 # <a name="imetadataimport2getgenericparamprops-method"></a>Метод IMetaDataImport2::GetGenericParamProps
-Получает метаданные, связанные с универсального параметра, представленного указанным токеном.  
+Gets the metadata associated with the generic parameter represented by the specified token.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -44,35 +42,35 @@ HRESULT GetGenericParamProps (
   
 ## <a name="parameters"></a>Параметры  
  `gp`  
- [in] Токен, представляющий универсальный параметр, для которого необходимо вернуть метаданные.  
+ [in] The token that represents the generic parameter for which to return metadata.  
   
  `pulParamSeq`  
- [out] Порядковый номер `Type` параметра в родительский конструктор или метод.  
+ [out] The ordinal position of the `Type` parameter in the parent constructor or method.  
   
  `pdwParamFlags`  
- [out] Значение [CorGenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md) перечисление, описывающее `Type` универсального параметра.  
+ [out] A value of the [CorGenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md) enumeration that describes the `Type` for the generic parameter.  
   
  `ptOwner`  
- [out] TypeDef или MethodDef токен, представляющий владельца параметра.  
+ [out] A TypeDef or MethodDef token that represents the owner of the parameter.  
   
  `reserved`  
- [out] Зарезервировано для будущего расширения.  
+ [out] Reserved for future extensibility.  
   
  `wzName`  
- [out] Имя универсального параметра.  
+ [out] The name of the generic parameter.  
   
  `cchName`  
- [in] Размер `wzName` буфера.  
+ [in] The size of the `wzName` buffer.  
   
  `pchName`  
- [out] Возвращаемый размер имени, в расширенных символах.  
+ [out] The returned size of the name, in wide characters.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** Cor.h  
+ **Header:** Cor.h  
   
- **Библиотека:** Используется как ресурс в MsCorEE.dll  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

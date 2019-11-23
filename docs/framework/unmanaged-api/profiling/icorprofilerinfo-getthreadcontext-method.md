@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 79446216-4b8b-484c-8fe3-e87dbf9df2fd
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 1b8afe10563d61e3ddab93e8d1b57eee4b6765c7
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: bc4643f1c90b3ea4d3b561249a4e76ff304737bd
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67766843"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74438761"
 ---
 # <a name="icorprofilerinfogetthreadcontext-method"></a>Метод ICorProfilerInfo::GetThreadContext
-Получает идентификатор контекста ассоциированы с указанным потоком.  
+Gets the context identity currently associated with the specified thread.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,15 +35,15 @@ HRESULT GetThreadContext(
   
 ## <a name="parameters"></a>Параметры  
  `threadId`  
- [in] Идентификатор потока.  
+ [in] The ID of the thread.  
   
  `pContextId`  
- [out] Указатель на идентификатор контекста ассоциированы с указанным потоком. Если поток не имеет контекста ассоциированы с ним, эта функция возвращает CORPROF_E_DATAINCOMPLETE.  
+ [out] A pointer to the context ID currently associated with the specified thread. If the thread has no context currently associated with it, this function will return CORPROF_E_DATAINCOMPLETE.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorProf.idl, CorProf.h  
+ **Заголовок:** CorProf.idl, CorProf.h  
   
  **Библиотека:** CorGuids.lib  
   

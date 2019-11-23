@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: e774eefe-858c-4362-8d2d-28ebf2ba1a24
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 8fa385805d3e2dca8fef3e1490b2c67dd0583373
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 73f536b4ab98aa596c2395810cb8b616ffd309e9
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67755065"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74438295"
 ---
 # <a name="isymunmanagedwriter2definelocalvariable2-method"></a>Метод ISymUnmanagedWriter2::DefineLocalVariable2
-Определяет одну переменную в текущей лексической области видимости. Этот метод может вызываться несколько раз для переменной с тем же именем, имеющей несколько корневых в пределах области. В данном случае, однако значения `startOffset` и `endOffset` параметров не должны перекрываться.  
+Определяет одну переменную в текущей лексической области видимости. This method can be called multiple times for a variable of the same name that has multiple homes throughout a scope. In this case, however, the values of the `startOffset` and `endOffset` parameters must not overlap.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -44,37 +42,37 @@ HRESULT DefineLocalVariable2(
   
 ## <a name="parameters"></a>Параметры  
  `name`  
- [in] Имя локальной переменной.  
+ [in] The local variable name.  
   
  `attributes`  
- [in] Атрибуты локальной переменной.  
+ [in] The local variable attributes.  
   
  `sigToken`  
- [in] Маркер метаданных для подписи.  
+ [in] The metadata token of the signature.  
   
  `addrKind`  
- [in] Тип адреса.  
+ [in] The address type.  
   
  `addr1`  
- [in] Первый адрес для спецификации параметра.  
+ [in] The first address for the parameter specification.  
   
  `addr2`  
- [in] Второй адрес для спецификации параметра.  
+ [in] The second address for the parameter specification.  
   
  `addr3`  
- [in] Третий адрес для спецификации параметра.  
+ [in] The third address for the parameter specification.  
   
  `startOffset`  
- [in] Начальное смещение для переменной. Этот параметр является необязательным. Если задано значение 0, этот параметр игнорируется, и переменная определяется для всей области. Если ненулевое значение, переменная находится в границах смещений текущей области.  
+ [in] The start offset for the variable. Этот параметр является необязательным. If it is 0, this parameter is ignored and the variable is defined throughout the entire scope. If it is a nonzero value, the variable falls within the offsets of the current scope.  
   
  `endOffset`  
- [in] Конечное смещение для переменной. Этот параметр является необязательным. Если задано значение 0, этот параметр игнорируется, и переменная определяется для всей области. Если ненулевое значение, переменная находится в границах смещений текущей области.  
+ [in] The end offset for the variable. Этот параметр является необязательным. If it is 0, this parameter is ignored and the variable is defined throughout the entire scope. If it is a nonzero value, the variable falls within the offsets of the current scope.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Требования  
- **Заголовок.** CorSym.idl  
+ **Header:** CorSym.idl  
   
 ## <a name="see-also"></a>См. также
 

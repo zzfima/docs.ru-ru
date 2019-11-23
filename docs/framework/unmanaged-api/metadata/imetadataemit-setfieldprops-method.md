@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 47132dda-fa92-4bd1-ae4b-24cd9a60665a
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 1ccafea78aa2497c52442a10ad1af1c05771df7e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: efc627619d9abf9cfa6010e1c0ca709989b9cad3
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737106"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445465"
 ---
 # <a name="imetadataemitsetfieldprops-method"></a>Метод IMetaDataEmit::SetFieldProps
-Задает или обновляет значение по умолчанию для поля, который ссылается токен указанного поля.  
+Sets or updates the default value for the field referenced by the specified field token.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -41,26 +39,26 @@ HRESULT SetFieldProps (
   
 ## <a name="parameters"></a>Параметры  
  `fd`  
- [in] Маркер целевого поля.  
+ [in] The token for the target field.  
   
  `dwFieldFlags`  
- [in] Атрибуты поля. Это битовая маска `CorFieldAttr` значения.  
+ [in] Field attributes. This is a bitmask of `CorFieldAttr` values.  
   
  `dwCPlusTypeFlag`  
- [in] `ELEMENT_TYPE_` *\** Для постоянного значения. Это `CorElementType` значение. Если не определяется константой, это значение равно `ELEMENT_TYPE_END`.  
+ [in] The `ELEMENT_TYPE_` *\** for the constant value. This is a `CorElementType` value. If a constant is not being defined, set this value to `ELEMENT_TYPE_END`.  
   
  `pValue`  
- [in] Постоянное значение для поля.  
+ [in] The constant value for the field.  
   
  `cchValue`  
- [in] Размер в символы Юникода из `pValue`.  
+ [in] The size, in Unicode characters, of `pValue`.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** Cor.h  
+ **Header:** Cor.h  
   
- **Библиотека:** Используется как ресурс в MSCorEE.dll  
+ **Library:** Used as a resource in MSCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

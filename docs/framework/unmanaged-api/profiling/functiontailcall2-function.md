@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 249f9892-b5a9-41e1-b329-28a925904df6
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 9495624f7eca57a79518036937a5fb63d01d9c4b
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: db3c3d38e0200f9849c84d7605a436816d56b813
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70851206"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74427424"
 ---
 # <a name="functiontailcall2-function"></a>Функция FunctionTailcall2
-Уведомляет профилировщик о том, что выполняемая в данный момент функция собирается выполнить вызов другой функции с префиксом tail и предоставляет сведения о кадре стека.  
+Notifies the profiler that the currently executing function is about to perform a tail call to another function and provides information about the stack frame.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,39 +36,39 @@ void __stdcall FunctionTailcall2 (
   
 ## <a name="parameters"></a>Параметры  
  `funcId`  
- окне Идентификатор выполняемой в данный момент функции, которая собирается выполнить вызов с префиксом tail.  
+ [in] The identifier of the currently executing function that is about to make a tail call.  
   
  `clientData`  
- окне Идентификатор повторно сопоставленной функции, который ранее был указан с помощью [FunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md), для выполняемой в данный момент функции, которая собирается выполнить вызов с префиксом tail.  
+ [in] The remapped function identifier, which the profiler previously specified via [FunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md), of the currently executing function that is about to make a tail call.  
   
  `func`  
- окне `COR_PRF_FRAME_INFO` Значение, указывающее на сведения о кадре стека.  
+ [in] A `COR_PRF_FRAME_INFO` value that points to information about the stack frame.  
   
- Профилировщик должен рассматривать это как непрозрачный маркер, который можно передать обратно в подсистему выполнения метода [ICorProfilerInfo2:: GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) .  
+ The profiler should treat this as an opaque handle that can be passed back to the execution engine in the [ICorProfilerInfo2::GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) method.  
   
-## <a name="remarks"></a>Примечания  
- Целевая функция вызова с префиксом tail будет использовать текущий кадр стека и будет возвращаться непосредственно вызывающему объекту функции, которая выполнила вызов с префиксом tail. Это означает, что обратный вызов [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md) не будет выдаваться для функции, которая является целевым объектом для вызова с префиксом tail.  
+## <a name="remarks"></a>Заметки  
+ The target function of the tail call will use the current stack frame, and will return directly to the caller of the function that made the tail call. This means that a [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md) callback will not be issued for a function that is the target of a tail call.  
   
- Значение `func` параметра не является допустимым после возврата функции, `FunctionTailcall2` так как оно может измениться или быть уничтожено.  
+ The value of the `func` parameter is not valid after the `FunctionTailcall2` function returns because the value may change or be destroyed.  
   
- `FunctionTailcall2` Функция является обратным вызовом. ее необходимо реализовать. Реализация должна использовать `__declspec`атрибут класса хранения`naked`().  
+ The `FunctionTailcall2` function is a callback; you must implement it. The implementation must use the `__declspec`(`naked`) storage-class attribute.  
   
- Подсистема выполнения не сохраняет никакие регистры перед вызовом этой функции.  
+ The execution engine does not save any registers before calling this function.  
   
-- Во время записи необходимо сохранить все используемые регистры, включая те, которые находятся в блоке с плавающей запятой (FPU).  
+- On entry, you must save all registers that you use, including those in the floating-point unit (FPU).  
   
-- При выходе необходимо восстановить стек, выключив все параметры, которые были переданы его вызывающим.  
+- On exit, you must restore the stack by popping off all the parameters that were pushed by its caller.  
   
- Реализация `FunctionTailcall2` не должна блокироваться, так как она приведет к задержке сборки мусора. Реализация не должна пытаться выполнить сборку мусора, так как стек может не находиться в состоянии, понятном для сборки мусора. Если выполняется сборка мусора, среда выполнения будет блокироваться до тех пор `FunctionTailcall2` , пока не вернет.  
+ The implementation of `FunctionTailcall2` should not block because it will delay garbage collection. The implementation should not attempt a garbage collection because the stack may not be in a garbage collection-friendly state. If a garbage collection is attempted, the runtime will block until `FunctionTailcall2` returns.  
   
- Кроме того, `FunctionTailcall2` функция не должна вызывать управляемый код или каким-либо образом приводит к выделению управляемой памяти.  
+ Also, the `FunctionTailcall2` function must not call into managed code or in any way cause a managed memory allocation.  
   
 ## <a name="requirements"></a>Требования  
- **Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorProf. idl  
+ **Header:** CorProf.idl  
   
- **Библиотечная** Коргуидс. lib  
+ **Библиотека:** CorGuids.lib  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

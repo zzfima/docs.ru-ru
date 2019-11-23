@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: ea7c1617-f3ce-4220-8288-f2b50eaf0f0f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 813f57377c1885b09190ada3c73f4391a3f2d931
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 98ed5556020b93fb1f31d1dde84690fc33092627
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70895049"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448377"
 ---
 # <a name="isymunmanagednamespacegetvariables-method"></a>Метод ISymUnmanagedNamespace::GetVariables
-Возвращает все переменные, определенные в глобальной области видимости в этом пространстве имен.  
+Returns all variables defined at global scope within this namespace.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,19 +37,19 @@ HRESULT GetVariables(
   
 ## <a name="parameters"></a>Параметры  
  `cVars`  
- окне Значение `ULONG32` типа, указывающее размер `pVars` массива.  
+ [in] A `ULONG32` that indicates the size of the `pVars` array.  
   
  `pcVars`  
- заполняет Указатель на объект `ULONG32` , который получает размер буфера, необходимого для хранения пространств имен.  
+ [out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the namespaces.  
   
  `pVars`  
- заполняет Указатель на буфер, содержащий пространства имен.  
+ [out] A pointer to a buffer that contains the namespaces.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Значение S_OK, если метод выполнен. в противном случае — E_FAIL или другой код ошибки.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Требования  
- **Заголовок.** Корсим. idl, Корсим. h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>См. также
 

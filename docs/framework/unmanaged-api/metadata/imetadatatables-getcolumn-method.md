@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1032055b-cabb-45c5-a50e-7e853201b175
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 853f137d91e1b3eb4f3f65a06522618f8441dcb3
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 376b9ff09ad38ca43d57fcf064458e0331da8aad
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053679"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74442001"
 ---
 # <a name="imetadatatablesgetcolumn-method"></a>Метод IMetaDataTables::GetColumn
-Возвращает указатель на значение, содержащееся в ячейке указанного столбца и строки в заданной таблице.  
+Gets a pointer to the value contained in the cell of the specified column and row in the given table.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -41,46 +39,46 @@ HRESULT GetColumn (
 ## <a name="parameters"></a>Параметры
 
  `ixTbl`  
- окне Индекс таблицы.  
+ [in] The index of the table.  
   
  `ixCol`  
- окне Индекс столбца в таблице.  
+ [in] The index of the column in the table.  
   
  `rid`  
- окне Индекс строки в таблице.  
+ [in] The index of the row in the table.  
   
  `pVal`  
- заполняет Указатель на значение в ячейке.  
+ [out] A pointer to the value in the cell.  
  
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
-Интерпретация значения, возвращаемого с помощью `pVal` , зависит от типа столбца. Тип столбца можно определить с помощью метода [IMetaDataTables. GetColumnInfo](imetadatatables-getcolumninfo-method.md).
+The interpretion of the value returned through `pVal` depends on the column's type. The column type can be determined by calling [IMetaDataTables.GetColumnInfo](imetadatatables-getcolumninfo-method.md).
 
-- Метод **DataColumn** автоматически преобразует столбцы типа **RID** или **кодедтокен** в полные 32-разрядные `mdToken` значения.
-- Он также автоматически преобразует 8-битные или 16-битные значения в полные 32-разрядные значения. 
-- Для столбцов типа *кучи* возвращенный *Pval* будет индексом в соответствующей куче.
+- The **GetColumn** method automatically converts columns of type **Rid** or **CodedToken** to full 32-bit `mdToken` values.
+- It also automatically converts 8-bit or 16-bit values to full 32-bit values. 
+- For *heap* type columns, the returned *pVal* will be an index into the corresponding heap.
 
-| Тип столбца              | pVal содержит | Комментарий                          |
+| Column type              | pVal contains | Добавление примечаний                          |
 |--------------------------|---------------|-----------------------------------|
-| `0`..`iRidMax`<br>(0.. 63)  | mdToken     | *Pval* будет содержать полный маркер. Функция автоматически преобразует RID в полный маркер. |
-| `iCodedToken`..`iCodedTokenMax`<br>(64.. 95) | mdToken | После возврата *Pval* будет содержать полный маркер. Функция автоматически распаковывает Кодедтокен в полную лексему. |
-| `iSHORT`(96)            | Int16         | Автоматический вход в 32-разрядный.  |
-| `iUSHORT`(97)           | UInt16        | Автоматический вход в 32-разрядный.  |
-| `iLONG`(98)             | Int32         |                                        | 
-| `iULONG`(99)            | UInt32        |                                        |
-| `iBYTE`(100)            | Byte          | Автоматический вход в 32-разрядный.  |
-| `iSTRING`(101)          | Индекс строковой кучи | *Pval* — это индекс в куче строк. Используйте [IMetadataTables:: GetString](imetadatatables-getstring-method.md) , чтобы получить фактическое строковое значение столбца. |
-| `iGUID`(102)            | Индекс кучи GUID | *Pval* — это индекс в куче GUID. Чтобы получить действительное значение GUID столбца, используйте [IMetadataTables::](imetadatatables-getguid-method.md) DataColumn. |
-| `iBLOB`(103)            | Индекс кучи больших двоичных объектов | *Pval* — это индекс в куче больших двоичных объектов. Для получения действительного значения большого двоичного объекта столбца используйте [IMetadataTables::-BLOB](imetadatatables-getblob-method.md) . |
+| `0`..`iRidMax`<br>(0..63)  | mdToken     | *pVal* will contain a full Token. The function automatically converts the Rid into a full token. |
+| `iCodedToken`..`iCodedTokenMax`<br>(64..95) | mdToken | Upon return, *pVal* will contain a full Token. The function automatically decompresses the CodedToken into a full token. |
+| `iSHORT` (96)            | Int16         | Automatically sign-extended to 32-bit.  |
+| `iUSHORT` (97)           | UInt16        | Automatically sign-extended to 32-bit.  |
+| `iLONG` (98)             | Int32         |                                        | 
+| `iULONG` (99)            | UInt32        |                                        |
+| `iBYTE` (100)            | Байт          | Automatically sign-extended to 32-bit.  |
+| `iSTRING` (101)          | String heap index | *pVal* is an index into the String heap. Use [IMetadataTables::GetString](imetadatatables-getstring-method.md) to get the actual column String value. |
+| `iGUID` (102)            | Guid heap index | *pVal* is an index into the Guid heap. Use [IMetadataTables::GetGuid](imetadatatables-getguid-method.md) to get the actual column Guid value. |
+| `iBLOB` (103)            | Blob heap index | *pVal* is an index into the Blob heap. Use [IMetadataTables::GetBlob](imetadatatables-getblob-method.md) to get the actual column Blob value. |
   
 ## <a name="requirements"></a>Требования  
- **Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** COR. h  
+ **Header:** Cor.h  
   
- **Библиотечная** Используется в качестве ресурса в MsCorEE. dll  
+ **Library:** Used as a resource in MsCorEE.dll  
   
- **Версии .NET Framework**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versions** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
 

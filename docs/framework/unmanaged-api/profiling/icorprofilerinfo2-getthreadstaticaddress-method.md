@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8e7dbf14-98a2-4384-a950-58a7640e59df
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 8f8c18935069e4162236f99c411312087ce73bdc
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d44eae4da70418e2d4f398b2bacee1fb53d55b60
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782218"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74443054"
 ---
 # <a name="icorprofilerinfo2getthreadstaticaddress-method"></a>Метод ICorProfilerInfo2::GetThreadStaticAddress
-Возвращает адрес указанного поля статического потока, который находится в области заданного потока.  
+Gets the address of the specified thread-static field that is in the scope of the specified thread.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,30 +37,30 @@ HRESULT GetThreadStaticAddress(
   
 ## <a name="parameters"></a>Параметры  
  `classId`  
- [in] Идентификатор класса, содержащего запрошенный статическое поле потока.  
+ [in] The ID of the class that contains the requested thread-static field.  
   
  `fieldToken`  
- [in] Маркер метаданных для запрошенного статического поля потока.  
+ [in] The metadata token for the requested thread-static field.  
   
  `threadId`  
- [in] Идентификатор потока, который является областью для запрошенного статического поля.  
+ [in] The ID of the thread that is the scope for the requested static field.  
   
  `ppAddress`  
- [out] Указатель на адрес статического поля, которое находится в пределах указанного потока.  
+ [out] A pointer to the address of the static field that is within the specified thread.  
   
-## <a name="remarks"></a>Примечания  
- `GetThreadStaticAddress` Метод может возвращать одно из следующих:  
+## <a name="remarks"></a>Заметки  
+ The `GetThreadStaticAddress` method may return one of the following:  
   
-- HRESULT CORPROF_E_DATAINCOMPLETE, если заданного статические поля не был назначен адрес в заданном контексте.  
+- A CORPROF_E_DATAINCOMPLETE HRESULT if the given static field has not been assigned an address in the specified context.  
   
-- Адреса объектов, которые могут быть в куче сбора мусора. Эти адреса могут стать недопустимыми после сборки мусора, поэтому после сборки мусора коллекции профилировщики не должны предполагать, что они являются допустимыми.  
+- The addresses of objects that may be in the garbage collection heap. These addresses may become invalid after garbage collection, so after garbage collection profilers should not assume that they are valid.  
   
- До завершения конструктора класса `GetThreadStaticAddress` возвращает CORPROF_E_DATAINCOMPLETE для всех статических полей, несмотря на то, что некоторые статические поля уже могут быть инициализированы и болея объекты сборки мусора.  
+ Before a class’s class constructor is completed, `GetThreadStaticAddress` will return CORPROF_E_DATAINCOMPLETE for all its static fields, although some of the static fields may already be initialized and rooting garbage collection objects.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorProf.idl, CorProf.h  
+ **Заголовок:** CorProf.idl, CorProf.h  
   
  **Библиотека:** CorGuids.lib  
   

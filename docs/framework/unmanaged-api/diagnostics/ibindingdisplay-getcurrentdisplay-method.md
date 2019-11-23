@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: d28eeea4-c4e0-40d4-91de-198d98cfa13c
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d075aeeb904469613999829a1444511d069b9918
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9294dbf1caddd4b607185de54efd2b4764e6ca35
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67775978"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448506"
 ---
 # <a name="ibindingdisplaygetcurrentdisplay-method"></a>Метод IBindingDisplay::GetCurrentDisplay
-Возвращает данные для отображения текущей привязки.  
+Returns the current binding display information.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,19 +35,19 @@ HRESULT GetCurrentDisplay (
   
 ## <a name="parameters"></a>Параметры  
  `display`  
- [out, retval] Указатель на массив safearray, содержащий сведения об отображении привязки.  
+ [out, retval] A pointer to a safearray containing the binding display information.  
   
-## <a name="remarks"></a>Примечания  
- [IBindingDisplay::InitializeForProcess](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-initializeforprocess-method.md) метод должен ранее успешно и программа должна быть остановлена с помощью отладчика.  
+## <a name="remarks"></a>Заметки  
+ The [IBindingDisplay::InitializeForProcess](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-initializeforprocess-method.md) method must have previously succeeded, and the program must be stopped by a debugger.  
   
- Вызывающий объект должен освободить возвращенного `SAFEARRAY` памяти с помощью [SafeArrayDestroy](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-safearraydestroy).  
+ The caller must deallocate the returned `SAFEARRAY` memory by using [SafeArrayDestroy](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-safearraydestroy).  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** BindingDisplay.h  
+ **Header:** BindingDisplay.h  
   
- **Библиотека:** BindingDisplay.idl  
+ **Library:** BindingDisplay.idl  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

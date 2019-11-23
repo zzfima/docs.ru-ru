@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 7cc22562-128c-440a-9147-55ff20f173d7
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ce015713ca7ed26c97348aa39f8170a85c8aa93c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e81ef33f4fb684cce29aa9afb756451b1e5db896
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67745918"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74426171"
 ---
 # <a name="iceegengetstring-method"></a>Метод ICeeGen::GetString
-Получает строку, хранящуюся в указанный относительный виртуальный адрес.  
+Gets the string stored at the specified relative virtual address.  
   
- Этот метод является устаревшим и не должны использоваться.  
+ This method is obsolete and should not be used.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,17 +38,17 @@ HRESULT GetString (
   
 ## <a name="parameters"></a>Параметры  
  `RVA`  
- [in] Относительный виртуальный адрес возвращаемая строка.  
+ [in] The relative virtual address of the string to return.  
   
  `lpString`  
- [out] Возвращаемая строка.  
+ [out] The returned string.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** Cor.h  
+ **Header:** Cor.h  
   
- **Библиотека:** Используется как ресурс в MsCorEE.dll  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

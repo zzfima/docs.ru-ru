@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: eedb9125-1ef1-4000-abfc-7de86e5a1f17
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: aba11ccd61b65d2a779b39db8e0e082cf4d4015b
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 4f710ef9741869a2b4fd8473ed3ecf379cfcc56d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70787215"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445586"
 ---
 # <a name="setassemblyfile2-method"></a>Метод SetAssemblyFile2
-Задает имя параметров и для новой сборки. Не вызывайте этот метод при создании несвязанных модулей.  
+Sets the name of and options for a new assembly. Do not call this method when you produce unbound modules.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,22 +37,22 @@ HRESULT SetAssemblyFile2(
   
 ## <a name="parameters"></a>Параметры  
  `pszFilename`  
- Имя файла манифеста.  
+ Name of manifest file.  
   
  `pEmitter`  
- Интерфейс интерфейса [IMetaDataEmit2](../metadata/imetadataemit2-interface.md) для этого файла.  
+ [IMetaDataEmit2 Interface](../metadata/imetadataemit2-interface.md) interface for this file.  
   
  `afFlags`  
- Параметры, представленные [перечислением AssemblyFlags](../metadata/assemblyflags-enumeration.md).  
+ Options represented by [AssemblyFlags Enumeration](../metadata/assemblyflags-enumeration.md).  
   
  `pAssemblyID`  
- Получает уникальный идентификатор для создаваемой сборки.  
+ Receives unique ID for the assembly being constructed.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Если метод завершается с ошибкой, возвращает значение S_OK.  
+ Returns S_OK if the method succeeds.  
   
 ## <a name="requirements"></a>Требования  
- Требуется ALink. h.  
+ Requires alink.h.  
   
 ## <a name="see-also"></a>См. также
 

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 54d9a5a5-3877-49c1-a503-ce7c7943bc2a
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4729a8d3ac2c6f7ec51a032a07ebfd1c2838cb9a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ae9cb089ad6c0b0422063d3db413b97eb6ff1405
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782906"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445803"
 ---
 # <a name="icorprofilercallbackremotingclientsendingmessage-method"></a>Метод ICorProfilerCallback::RemotingClientSendingMessage
-Уведомляет профилировщик о том, что клиент отправляет запрос к серверу.  
+Notifies the profiler that the client is sending a request to the server.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,23 +35,23 @@ HRESULT RemotingClientSendingMessage(
   
 ## <a name="parameters"></a>Параметры  
  `pCookie`  
- [in] Значение, которое соответствует со значением в [ICorProfilerCallback::RemotingServerReceivingMessage](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserverreceivingmessage-method.md) в этих условиях:  
+ [in] A value that corresponds with the value provided in [ICorProfilerCallback::RemotingServerReceivingMessage](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserverreceivingmessage-method.md) under these conditions:  
   
-- Файлы cookie для GUID удаленного взаимодействия активны.  
+- Remoting GUID cookies are active.  
   
-- Каналу удалось передать сообщение.  
+- The channel succeeds in transmitting the message.  
   
-- Файлы cookie GUID активны на процесс на стороне сервера.  
+- GUID cookies are active on the server-side process.  
   
- Это позволяет легко создавать пары вызовов удаленного взаимодействия и Создание логического стека вызовов.  
+ This allows easy pairing of remoting calls and the creation of a logical call stack.  
   
  `fIsAsync`  
- [in] Значение, которое является `true` Если вызов выполняется асинхронно; в противном случае — значение `false`.  
+ [in] A value that is `true` if the call is asynchronous; otherwise, `false`.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorProf.idl, CorProf.h  
+ **Заголовок:** CorProf.idl, CorProf.h  
   
  **Библиотека:** CorGuids.lib  
   

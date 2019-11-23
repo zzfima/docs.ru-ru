@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3afe7252-5f28-48d9-a74d-1927566c404c
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 85ebddf4ef96be2a583e54082e4d4405b30adf46
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2d974b7368dd01062d2d310d076dce05e102eb81
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777767"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74442293"
 ---
 # <a name="imetadatadispenserexfindassembly-method"></a>Метод IMetaDataDispenserEx::FindAssembly
-Этот метод не реализован. При вызове, он возвращает E_NOTIMPL.  
+Этот метод не реализован. If called, it returns E_NOTIMPL.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -43,32 +41,32 @@ HRESULT FindAssembly(
   
 ## <a name="parameters"></a>Параметры  
  `szAppBase`  
- [in] Не используется.  
+ [in] Not used.  
   
  `szPrivateBin`  
- [in] Не используется.  
+ [in] Not used.  
   
  `szGlobalBin`  
- [in] Не используется.  
+ [in] Not used.  
   
  `szAssemblyName`  
- [in] Сборки, который требуется найти.  
+ [in] The assembly to be found.  
   
  `szName`  
- [out] Простое имя сборки.  
+ [out] The simple name of the assembly.  
   
  `cchName`  
- [in] Размер в байтах из `szName`.  
+ [in] The size, in bytes, of `szName`.  
   
  `pcName`  
- [out] Число символов, фактически возвращенных в `szName`.  
+ [out] The number of characters actually returned in `szName`.  
   
 ## <a name="requirements"></a>Требования  
- **Платформа:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** Cor.h  
+ **Header:** Cor.h  
   
- **Библиотека:** Используется как ресурс в MsCorEE.dll  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
