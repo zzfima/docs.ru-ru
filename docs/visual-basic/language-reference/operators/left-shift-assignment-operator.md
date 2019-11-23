@@ -1,5 +1,5 @@
 ---
-title: Оператор < < = (Visual Basic)
+title: Оператор <<=
 ms.date: 07/20/2015
 f1_keywords:
 - vb.<<=
@@ -11,15 +11,15 @@ helpviewer_keywords:
 - operator<<=
 - compound assignment statements [Visual Basic]
 ms.assetid: 8ad26613-faff-4e2f-89ee-63feee33bfda
-ms.openlocfilehash: aae71069bdcb88efa5842526dd7eb47806f248d0
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
-ms.translationtype: HT
+ms.openlocfilehash: cc89e0dadc7148b21e695a53a2e746a00ed66441
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71701110"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350958"
 ---
-# <a name="-operator-visual-basic"></a>Оператор \<\<= (Visual Basic)
-Выполняет арифметическое смещение влево для значения переменной или свойства и присваивает результат переменной или свойству.  
+# <a name="-operator-visual-basic"></a>\<\<= Operator (Visual Basic)
+Performs an arithmetic left shift on the value of a variable or property and assigns the result back to the variable or property.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -29,27 +29,27 @@ variableorproperty <<= amount
   
 ## <a name="parts"></a>Части  
  `variableorproperty`  
- Обязательное. Переменная или свойство целочисленного типа (`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`или `ULong`).  
+ Обязательный. Variable or property of an integral type (`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, or `ULong`).  
   
  `amount`  
- Обязательное. Числовое выражение типа данных, которое расширяется до `Integer`.  
+ Обязательный. Numeric expression of a data type that widens to `Integer`.  
   
-## <a name="remarks"></a>Примечания  
- Элемент в левой части оператора `<<=` может быть простой скалярной переменной, свойством или элементом массива. Переменная или свойство не может быть [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md).  
+## <a name="remarks"></a>Заметки  
+ The element on the left side of the `<<=` operator can be a simple scalar variable, a property, or an element of an array. The variable or property cannot be [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md).  
   
- Оператор `<<=` сначала выполняет арифметический сдвиг влево для значения переменной или свойства. Затем оператор присваивает результат этой операции с переменной или свойством.  
+ The `<<=` operator first performs an arithmetic left shift on the value of the variable or property. The operator then assigns the result of that operation back to that variable or property.  
   
- Арифметические сдвиги не являются циклическими, то есть биты, сдвинутые за пределы результата, не переносятся на другой конец. При выполнении арифметического сдвига влево биты, сдвинутые за пределы диапазона результирующего типа данных, отбрасываются, а позиции битов, освобожденные справа, устанавливаются в ноль.  
+ Arithmetic shifts are not circular, which means the bits shifted off one end of the result are not reintroduced at the other end. In an arithmetic left shift, the bits shifted beyond the range of the result data type are discarded, and the bit positions vacated on the right are set to zero.  
   
 ## <a name="overloading"></a>Перегрузка  
- [Оператор < <](../../../visual-basic/language-reference/operators/left-shift-operator.md) может быть *перегружен*, что означает, что класс или структура может переопределить свое поведение, если операнд имеет тип этого класса или структуры. Перегрузка оператора `<<` влияет на поведение оператора `<<=`. Если в коде используется `<<=` в классе или структуре, которая перегружает `<<`, убедитесь, что вы понимаете его переопределенное поведение. Для получения дополнительной информации см. [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+ The [<< Operator](../../../visual-basic/language-reference/operators/left-shift-operator.md) can be *overloaded*, which means that a class or structure can redefine its behavior when an operand has the type of that class or structure. Overloading the `<<` operator affects the behavior of the `<<=` operator. If your code uses `<<=` on a class or structure that overloads `<<`, be sure you understand its redefined behavior. Для получения дополнительной информации см. [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Пример  
- В следующем примере оператор `<<=` используется для сдвига битового шаблона `Integer`ной переменной влево на указанное значение и присваивает результат переменной.  
+ The following example uses the `<<=` operator to shift the bit pattern of an `Integer` variable left by the specified amount and assign the result to the variable.  
   
  [!code-vb[VbVbalrOperators#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#13)]  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 - [Оператор <<](../../../visual-basic/language-reference/operators/left-shift-operator.md)
 - [Операторы присваивания](../../../visual-basic/language-reference/operators/assignment-operators.md)

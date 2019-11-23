@@ -1,5 +1,5 @@
 ---
-title: Предложение Take While (Visual Basic)
+title: Предложение Take While
 ms.date: 07/20/2015
 f1_keywords:
 - vb.QueryTakeWhile
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Take While clause [Visual Basic]
 - Take While statement [Visual Basic]
 ms.assetid: db8f9f2f-fc9f-4a6c-b0b8-1bf048147e11
-ms.openlocfilehash: fe6ee470698504bc0434930cc9aa6de712e04254
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
-ms.translationtype: HT
+ms.openlocfilehash: 23b7c84a9f896161a66059fcb1f30753d3b863d5
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72004672"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347100"
 ---
 # <a name="take-while-clause-visual-basic"></a>Предложение Take While (Visual Basic)
 Включает элементы в коллекцию, если заданное условие имеет значение `true`, и пропускает остальные элементы.  
@@ -28,19 +28,19 @@ Take While expression
   
 |Термин|Определение|  
 |---|---|  
-|`expression`|Обязательное. Выражение, представляющее условие для проверки элементов. Выражение должно возвращать `Boolean` значение или функциональный эквивалент, например `Integer`, который вычисляется как `Boolean`.|  
+|`expression`|Обязательный. An expression that represents a condition to test elements for. The expression must return a `Boolean` value or a functional equivalent, such as an `Integer` to be evaluated as a `Boolean`.|  
   
-## <a name="remarks"></a>Примечания  
- Предложение `Take While` включает элементы из начала результата запроса до тех пор, пока переданный `expression` не возвратит `false`. После того как `expression` возвращает `false`, запрос будет обходить все оставшиеся элементы. Для оставшихся результатов `expression` игнорируется.  
+## <a name="remarks"></a>Заметки  
+ The `Take While` clause includes elements from the start of a query result until the supplied `expression` returns `false`. After the `expression` returns `false`, the query will bypass all remaining elements. The `expression` is ignored for the remaining results.  
   
- Предложение `Take While` отличается от предложения `Where` в том, что предложение `Where` можно использовать для включения всех элементов из запроса, удовлетворяющего определенному условию. Предложение `Take While` включает элементы только до первого момента, когда условие не будет удовлетворено. Предложение `Take While` наиболее полезно при работе с упорядоченным результатом запроса.  
+ The `Take While` clause differs from the `Where` clause in that the `Where` clause can be used to include all elements from a query that meet a particular condition. The `Take While` clause includes elements only until the first time that the condition is not satisfied. The `Take While` clause is most useful when you are working with an ordered query result.  
   
 ## <a name="example"></a>Пример  
- В следующем примере кода предложение `Take While` используется для получения результатов до тех пор, пока не будет найден первый клиент без заказов.  
+ The following code example uses the `Take While` clause to retrieve results until the first customer without any orders is found.  
   
  [!code-vb[VbSimpleQuerySamples#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#2)]  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 - [Introduction to LINQ in Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md) (Знакомство с LINQ в Visual Basic)
 - [Запросы](../../../visual-basic/language-reference/queries/index.md)

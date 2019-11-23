@@ -1,5 +1,5 @@
 ---
-title: Сокрытие в Visual Basic
+title: Удаленное управление
 ms.date: 07/20/2015
 helpviewer_keywords:
 - inheritance [Visual Basic], shadowing
@@ -18,46 +18,46 @@ helpviewer_keywords:
 - objects [Visual Basic], names
 - names [Visual Basic], shadowing
 ms.assetid: 54bb4c25-12c4-4181-b4a0-93546053964e
-ms.openlocfilehash: 30c02cf367c461c3896a01538d03380627de294f
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
-ms.translationtype: HT
+ms.openlocfilehash: 034b5c0ecf3be6e77048fb7318e931801575f07a
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72004854"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345330"
 ---
 # <a name="shadowing-in-visual-basic"></a>Сокрытие в Visual Basic
-Если два программных элемента имеют одно и то же имя, один из них может скрыть или *затенить*другой. В такой ситуации затененный элемент недоступен для справки; Вместо этого, если в коде используется имя элемента, компилятор Visual Basic разрешает его в элемент с тенью.  
+When two programming elements share the same name, one of them can hide, or *shadow*, the other one. In such a situation, the shadowed element is not available for reference; instead, when your code uses the element name, the Visual Basic compiler resolves it to the shadowing element.  
   
 ## <a name="purpose"></a>Цель  
- Основной задачей теневого копирования является защита определения членов класса. Базовый класс может быть подвергнут изменениям, создающим элемент с тем же именем, что и у уже определенного. В этом случае модификатор `Shadows` заставляет ссылки через класс разрешаться в определенный член, а не в новый элемент базового класса.  
+ The main purpose of shadowing is to protect the definition of your class members. The base class might undergo a change that creates an element with the same name as one you have already defined. If this happens, the `Shadows` modifier forces references through your class to be resolved to the member you defined, instead of to the new base class element.  
   
-## <a name="types-of-shadowing"></a>Типы затенения  
- Элемент может скрывать другой элемент двумя разными способами. Элемент с тенью можно объявить внутри подобласти, содержащей затененный элемент. в этом случае затенение выполняется *через область*. Или производный класс может переопределить член базового класса, в этом случае теневая работа осуществляется *с помощью наследования*.  
+## <a name="types-of-shadowing"></a>Types of Shadowing  
+ An element can shadow another element in two different ways. The shadowing element can be declared inside a subregion of the region containing the shadowed element, in which case the shadowing is accomplished *through scope*. Or a deriving class can redefine a member of a base class, in which case the shadowing is done *through inheritance*.  
   
-### <a name="shadowing-through-scope"></a>Затенение через область  
- Элементы программирования в одном модуле, классе или структуре могут иметь одно и то же имя, но разные области. Когда два элемента объявляются таким образом и код ссылается на имя, к которому они относятся, элемент с более узким областью скрывает другой элемент (область видимости блока является самой узким элементом).  
+### <a name="shadowing-through-scope"></a>Shadowing Through Scope  
+ It is possible for programming elements in the same module, class, or structure to have the same name but different scope. When two elements are declared in this manner and the code refers to the name they share, the element with the narrower scope shadows the other element (block scope is the narrowest).  
   
- Например, модуль может определить `Public` переменную с именем `temp`, а процедура в модуле может объявить локальную переменную с именем `temp`. Ссылки на `temp` из процедуры обращаются к локальной переменной, а ссылки на `temp` извне процедуры обращаются к переменной `Public`. В этом случае переменная процедуры `temp` затеняет переменную модуля `temp`.  
+ For example, a module can define a `Public` variable named `temp`, and a procedure within the module can declare a local variable also named `temp`. References to `temp` from within the procedure access the local variable, while references to `temp` from outside the procedure access the `Public` variable. In this case, the procedure variable `temp` shadows the module variable `temp`.  
   
- На следующем рисунке показаны две переменные с именем `temp`. Локальная переменная `temp` затеняет переменную члена `temp` при доступе из своей собственной процедуры `p`. Однако ключевое слово `MyClass` обходит затенение и обращается к переменной члена.  
+ The following illustration shows two variables, both named `temp`. The local variable `temp` shadows the member variable `temp` when accessed from within its own procedure `p`. However, the `MyClass` keyword bypasses the shadowing and accesses the member variable.  
   
- ![Рисунок, демонстрирующий затенение через область.](./media/shadowing/shadow-scope-diagram.gif)
+ ![Graphic that shows shadowing through scope.](./media/shadowing/shadow-scope-diagram.gif)
   
- Пример затенения с помощью области см. в разделе [как скрыть переменную с тем же именем, что и у переменной](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-a-variable-with-the-same-name-as-your-variable.md).  
+ For an example of shadowing through scope, see [How to: Hide a Variable with the Same Name as Your Variable](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-a-variable-with-the-same-name-as-your-variable.md).  
   
-### <a name="shadowing-through-inheritance"></a>Затенение через наследование  
- Если производный класс переопределяет программный элемент, наследуемый от базового класса, переопределяющий элемент затеняет исходный элемент. Можно создать тень любого типа объявленного элемента или набора перегруженных элементов с любым другим типом. Например, переменная `Integer` может скрывать `Function` процедуру. При скрытии процедуры с помощью другой процедуры можно использовать другой список параметров и другой тип возвращаемого значения.  
+### <a name="shadowing-through-inheritance"></a>Shadowing Through Inheritance  
+ If a derived class redefines a programming element inherited from a base class, the redefining element shadows the original element. You can shadow any type of declared element, or set of overloaded elements, with any other type. For example, an `Integer` variable can shadow a `Function` procedure. If you shadow a procedure with another procedure, you can use a different parameter list and a different return type.  
   
- На следующем рисунке показан базовый класс `b` и производный класс `d`, наследуемый от `b`. Базовый класс определяет процедуру с именем `proc`, а производный класс скрывает его с помощью другой процедуры с тем же именем. Первая инструкция `Call` обращается к `proc`м теневого копирования в производном классе. Однако ключевое слово `MyBase` обходит затенение и обращается к затененной процедуре в базовом классе.  
+ The following illustration shows a base class `b` and a derived class `d` that inherits from `b`. The base class defines a procedure named `proc`, and the derived class shadows it with another procedure of the same name. The first `Call` statement accesses the shadowing `proc` in the derived class. However, the `MyBase` keyword bypasses the shadowing and accesses the shadowed procedure in the base class.  
   
  ![График схемы затемнения посредством наследования](./media/shadowing/shadowing-inherit-diagram.gif)  
   
- Пример затенения с помощью наследования см. в разделе [как скрыть переменную с тем же именем, что и у переменной](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-a-variable-with-the-same-name-as-your-variable.md) , и [как скрыть унаследованную переменную](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-an-inherited-variable.md).  
+ For an example of shadowing through inheritance, see [How to: Hide a Variable with the Same Name as Your Variable](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-a-variable-with-the-same-name-as-your-variable.md) and [How to: Hide an Inherited Variable](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-an-inherited-variable.md).  
   
-#### <a name="shadowing-and-access-level"></a>Затенение и уровень доступа  
- Элемент с тенью не всегда доступен из кода, использующего производный класс. Например, он может быть объявлен `Private`. В этом случае переобъявление нарушается, и компилятор разрешает любую ссылку на тот же элемент, который был бы в случае отсутствия тени. Этот элемент является доступным элементом, который является минимальным количеством порожденных шагов назад от класса теневого копирования. Если затененный элемент является процедурой, то решением является Ближайшая доступная версия с тем же именем, списком параметров и типом возвращаемого значения.  
+#### <a name="shadowing-and-access-level"></a>Shadowing and Access Level  
+ The shadowing element is not always accessible from the code using the derived class. For example, it might be declared `Private`. In such a case, shadowing is defeated and the compiler resolves any reference to the same element it would have if there had been no shadowing. This element is the accessible element the fewest derivational steps backward from the shadowing class. If the shadowed element is a procedure, the resolution is to the closest accessible version with the same name, parameter list, and return type.  
   
- В следующем примере показана иерархия наследования трех классов. Каждый класс определяет `Sub` процедуру `display`, и каждый производный класс затеняет процедуру `display` в своем базовом классе.  
+ The following example shows an inheritance hierarchy of three classes. Each class defines a `Sub` procedure `display`, and each derived class shadows the `display` procedure in its base class.  
   
 ```vb  
 Public Class firstClass  
@@ -92,23 +92,23 @@ Module callDisplay
 End Module  
 ```  
   
- В предыдущем примере производный класс `secondClass` теней `display` с помощью `Private` процедуры. Когда модуль `callDisplay` вызывает `display` в `secondClass`, вызывающий код находится за пределами `secondClass` и, следовательно, не может получить доступ к закрытой процедуре `display`. Затенение нарушается, и компилятор разрешает ссылку на базовый класс `display` процедуры.  
+ In the preceding example, the derived class `secondClass` shadows `display` with a `Private` procedure. When module `callDisplay` calls `display` in `secondClass`, the calling code is outside `secondClass` and therefore cannot access the private `display` procedure. Shadowing is defeated, and the compiler resolves the reference to the base class `display` procedure.  
   
- Однако следующий производный класс `thirdClass` объявляет `display` как `Public`, поэтому код в `callDisplay` может получить к нему доступ.  
+ However, the further derived class `thirdClass` declares `display` as `Public`, so the code in `callDisplay` can access it.  
   
-## <a name="shadowing-and-overriding"></a>Затенение и переопределение  
- Не путайте перекрытие с переопределением. Оба используются, когда производный класс наследует от базового класса, и оба переопределяют один объявленный элемент с другим. Но существуют значительные различия между ними. Сравнение см. в разделе [различия между затенением и переопределением](../../../../visual-basic/programming-guide/language-features/declared-elements/differences-between-shadowing-and-overriding.md).  
+## <a name="shadowing-and-overriding"></a>Shadowing and Overriding  
+ Do not confuse shadowing with overriding. Both are used when a derived class inherits from a base class, and both redefine one declared element with another. But there are significant differences between the two. For a comparison, see [Differences Between Shadowing and Overriding](../../../../visual-basic/programming-guide/language-features/declared-elements/differences-between-shadowing-and-overriding.md).  
   
-## <a name="shadowing-and-overloading"></a>Затенение и перегрузка  
- Если вы переобъявляете тот же элемент базового класса с более чем одним элементом в производном классе, элементы с тенью становятся перегруженными версиями этого элемента. Дополнительные сведения см. в разделе [Procedure Overloading](../../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md).  
+## <a name="shadowing-and-overloading"></a>Shadowing and Overloading  
+ If you shadow the same base class element with more than one element in your derived class, the shadowing elements become overloaded versions of that element. Дополнительные сведения см. в разделе [Procedure Overloading](../../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md).  
   
-## <a name="accessing-a-shadowed-element"></a>Доступ к затененному элементу  
- При доступе к элементу из производного класса это обычно делается через текущий экземпляр этого производного класса путем уточнения имени элемента с помощью ключевого слова `Me`. Если производный класс затеняет элемент базового класса, можно получить доступ к элементу базового класса, указав его с помощью ключевого слова `MyBase`.  
+## <a name="accessing-a-shadowed-element"></a>Accessing a Shadowed Element  
+ When you access an element from a derived class, you normally do so through the current instance of that derived class, by qualifying the element name with the `Me` keyword. If your derived class shadows the element in the base class, you can access the base class element by qualifying it with the `MyBase` keyword.  
   
- Пример доступа к затененному элементу см. в разделе [как получить доступ к переменной, скрытой производным классом](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-access-a-variable-hidden-by-a-derived-class.md).  
+ For an example of accessing a shadowed element, see [How to: Access a Variable Hidden by a Derived Class](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-access-a-variable-hidden-by-a-derived-class.md).  
   
-### <a name="declaration-of-the-object-variable"></a>Объявление объектной переменной  
- Способ создания объектной переменной также может влиять на то, имеет ли производный класс доступ к теневому элементу или к затененному элементу. В следующем примере создаются два объекта из производного класса, но один объект объявляется как базовый класс, а другой — как производный класс.  
+### <a name="declaration-of-the-object-variable"></a>Declaration of the Object Variable  
+ How you create the object variable can also affect whether the derived class accesses a shadowing element or the shadowed element. The following example creates two objects from a derived class, but one object is declared as the base class and the other as the derived class.  
   
 ```vb  
 Public Class baseCls  
@@ -135,12 +135,12 @@ Public Class useClasses
 End Class  
 ```  
   
- В предыдущем примере переменная `basObj` объявляется как базовый класс. Назначение объекта `dervCls` для него составляет расширяющее преобразование и, следовательно, является допустимым. Однако базовый класс не может получить доступ к версии теневого копирования переменной `z` в производном классе, поэтому компилятор разрешает `basObj.z` в исходное значение базового класса.  
+ In the preceding example, the variable `basObj` is declared as the base class. Assigning a `dervCls` object to it constitutes a widening conversion and is therefore valid. However, the base class cannot access the shadowing version of the variable `z` in the derived class, so the compiler resolves `basObj.z` to the original base class value.  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 - [Ссылки на объявленные элементы](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
-- [Область в Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
+- [Scope in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
 - [Расширяющие и сужающие преобразования](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
 - [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md)
 - [Переопределения](../../../../visual-basic/language-reference/modifiers/overrides.md)
