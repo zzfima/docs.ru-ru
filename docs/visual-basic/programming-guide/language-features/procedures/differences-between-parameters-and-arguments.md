@@ -1,5 +1,5 @@
 ---
-title: Различия между параметрами и аргументами (Visual Basic)
+title: Различия между параметрами и аргументами
 ms.date: 07/20/2015
 helpviewer_keywords:
 - procedures [Visual Basic], arguments
@@ -11,31 +11,31 @@ helpviewer_keywords:
 - procedure parameters
 - parameters [Visual Basic], definition
 ms.assetid: c237c056-74f4-4749-9f2c-15864f139a31
-ms.openlocfilehash: a69b956c7cffcc2a26916d6fc92f23dd4e2322d7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c4249dbf86bd1bfa7ef08e94059d2880333e9a92
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61864251"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74341379"
 ---
 # <a name="differences-between-parameters-and-arguments-visual-basic"></a>Различия между параметрами и аргументами (Visual Basic)
-В большинстве случаев процедура должна иметь некоторые сведения об условиях ее возникновения, в которых она была вызвана. Процедура, выполняющая повторяющихся или общих задач использует различные сведения для каждого вызова. Эта информация состоит из переменных, констант и выражений, которые передаются в процедуру при ее вызове.  
+In most cases, a procedure must have some information about the circumstances in which it has been called. A procedure that performs repeated or shared tasks uses different information for each call. This information consists of variables, constants, and expressions that you pass to the procedure when you call it.  
   
- Для передачи этих сведений к процедуре, определяет *параметр*, а вызывающий код передает *аргумент* в этот параметр. Можно представить параметр как парковкой пробел и аргумент как автомобиль. Так же, как различные автомобили могут парковаться в пространстве парковкой в разное время, вызывающий код может передать другой аргумент к тому же параметру, каждый раз, чтобы он вызывает процедуру.  
+ To communicate this information to the procedure, the procedure defines a *parameter*, and the calling code passes an *argument* to that parameter. You can think of the parameter as a parking space and the argument as an automobile. Just as different automobiles can park in a parking space at different times, the calling code can pass a different argument to the same parameter every time that it calls the procedure.  
   
 ## <a name="parameters"></a>Параметры  
- Объект *параметр* представляет значение, которое процедура ожидает передачи при ее вызове. Объявление процедуры определяет его параметры.  
+ A *parameter* represents a value that the procedure expects you to pass when you call it. The procedure's declaration defines its parameters.  
   
- При определении `Function` или `Sub` процедуры, указывать *список параметров* в скобках сразу после имени процедуры. Для каждого параметра укажите имя, тип данных и механизм передачи ([ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) или [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)). Можно также указать, что параметр является необязательным. Это означает, что вызывающий код не имеет значение передается для него.  
+ When you define a `Function` or `Sub` procedure, you specify a *parameter list* in parentheses immediately following the procedure name. For each parameter, you specify a name, a data type, and a passing mechanism ([ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) or [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)). You can also indicate that a parameter is optional. This means that the calling code does not have to pass a value for it.  
   
- Имя каждого параметра служит в качестве *локальной переменной* в процедуре. Имя параметра используется так же, как любая другая переменная.  
+ The name of each parameter serves as a *local variable* in the procedure. You use the parameter name the same way you use any other variable.  
   
 ## <a name="arguments"></a>Аргументы  
- *Аргумент* представляет значение, которое передается параметр процедуры при вызове процедуры. Вызывающий код предоставляет аргументы при вызове процедуры.  
+ An *argument* represents the value that you pass to a procedure parameter when you call the procedure. The calling code supplies the arguments when it calls the procedure.  
   
- При вызове `Function` или `Sub` процедуры, включают *список аргументов* в скобках сразу после имени процедуры. Каждый аргумент соответствует параметру в той же позиции в списке.  
+ When you call a `Function` or `Sub` procedure, you include an *argument list* in parentheses immediately following the procedure name. Each argument corresponds to the parameter in the same position in the list.  
   
- В отличие от определения параметров аргументы не имеют имен. Каждый аргумент является выражение, которое может содержать ноль или дополнительные переменные, константы и литералы. Тип данных вычисленного выражения должен соответствовать типу данных, определенному для соответствующего параметра, и в любом случае должно быть преобразуемым к типу параметра.  
+ In contrast to parameter definition, arguments do not have names. Each argument is an expression, which can contain zero or more variables, constants, and literals. The data type of the evaluated expression should typically match the data type defined for the corresponding parameter, and in any case it must be convertible to the parameter type.  
   
 ## <a name="see-also"></a>См. также
 
