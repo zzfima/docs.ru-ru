@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: c065aadf-c1ca-4981-bde6-597042cb29c4
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 54d5a233da2bf033d960fd02961ac89eb57151d2
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0b7ca6f9878ed2fa2d90ea93e5101f0a66ec2d5e
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776286"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74440204"
 ---
-# <a name="imetadataassemblyemitdefinefile-method"></a><span data-ttu-id="9e95c-102">Метод IMetaDataAssemblyEmit::DefineFile</span><span class="sxs-lookup"><span data-stu-id="9e95c-102">IMetaDataAssemblyEmit::DefineFile Method</span></span>
-<span data-ttu-id="9e95c-103">Создает структуру метаданных `File`, содержащую метаданные для сборки, на которую ссылается данная сборка, и возвращает связанный токен метаданных.</span><span class="sxs-lookup"><span data-stu-id="9e95c-103">Creates a `File` metadata structure containing metadata for assembly referenced by this assembly, and returns the associated metadata token.</span></span>  
+# <a name="imetadataassemblyemitdefinefile-method"></a><span data-ttu-id="cceec-102">Метод IMetaDataAssemblyEmit::DefineFile</span><span class="sxs-lookup"><span data-stu-id="cceec-102">IMetaDataAssemblyEmit::DefineFile Method</span></span>
+<span data-ttu-id="cceec-103">Создает структуру метаданных `File`, содержащую метаданные для сборки, на которую ссылается данная сборка, и возвращает связанный токен метаданных.</span><span class="sxs-lookup"><span data-stu-id="cceec-103">Creates a `File` metadata structure containing metadata for assembly referenced by this assembly, and returns the associated metadata token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9e95c-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="9e95c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="cceec-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="cceec-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT DefineFile (  
@@ -39,34 +37,34 @@ HRESULT DefineFile (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="9e95c-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="9e95c-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="cceec-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="cceec-105">Parameters</span></span>  
  `szName`  
- <span data-ttu-id="9e95c-106">[in] Имя файла для использования.</span><span class="sxs-lookup"><span data-stu-id="9e95c-106">[in] The name of the file to be consumed.</span></span>  
+ <span data-ttu-id="cceec-106">[in] The name of the file to be consumed.</span><span class="sxs-lookup"><span data-stu-id="cceec-106">[in] The name of the file to be consumed.</span></span>  
   
  `pbHashValue`  
- <span data-ttu-id="9e95c-107">[in] Указатель на данные хэша, связанные со сборкой.</span><span class="sxs-lookup"><span data-stu-id="9e95c-107">[in] A pointer to the hash data associated with the assembly.</span></span>  
+ <span data-ttu-id="cceec-107">[in] A pointer to the hash data associated with the assembly.</span><span class="sxs-lookup"><span data-stu-id="cceec-107">[in] A pointer to the hash data associated with the assembly.</span></span>  
   
  `cbHashValue`  
- <span data-ttu-id="9e95c-108">[in] Размер в байтах `pbHashValue`.</span><span class="sxs-lookup"><span data-stu-id="9e95c-108">[in] The size in bytes of `pbHashValue`.</span></span>  
+ <span data-ttu-id="cceec-108">[in] The size in bytes of `pbHashValue`.</span><span class="sxs-lookup"><span data-stu-id="cceec-108">[in] The size in bytes of `pbHashValue`.</span></span>  
   
  `dwFileFlags`  
- <span data-ttu-id="9e95c-109">[in] Побитовое сочетание `FileFlags` значения, которые определяют параметры свойств.</span><span class="sxs-lookup"><span data-stu-id="9e95c-109">[in] A bitwise combination of `FileFlags` values that specify property settings.</span></span>  
+ <span data-ttu-id="cceec-109">[in] A bitwise combination of `FileFlags` values that specify property settings.</span><span class="sxs-lookup"><span data-stu-id="cceec-109">[in] A bitwise combination of `FileFlags` values that specify property settings.</span></span>  
   
  `pmdf`  
- <span data-ttu-id="9e95c-110">[out] Указатель на возвращенный `File` токена.</span><span class="sxs-lookup"><span data-stu-id="9e95c-110">[out] A pointer to the returned `File` token.</span></span>  
+ <span data-ttu-id="cceec-110">[out] A pointer to the returned `File` token.</span><span class="sxs-lookup"><span data-stu-id="cceec-110">[out] A pointer to the returned `File` token.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="9e95c-111">Примечания</span><span class="sxs-lookup"><span data-stu-id="9e95c-111">Remarks</span></span>  
- <span data-ttu-id="9e95c-112">Один `File` структура метаданных должны быть определены для каждого файла, который был частью этой сборки во время построения, за исключением файла, содержащего метаданные.</span><span class="sxs-lookup"><span data-stu-id="9e95c-112">One `File` metadata structure must be defined for each file that was part of this assembly at the time that this assembly was built, excluding the file that contains the metadata.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="cceec-111">Заметки</span><span class="sxs-lookup"><span data-stu-id="cceec-111">Remarks</span></span>  
+ <span data-ttu-id="cceec-112">One `File` metadata structure must be defined for each file that was part of this assembly at the time that this assembly was built, excluding the file that contains the metadata.</span><span class="sxs-lookup"><span data-stu-id="cceec-112">One `File` metadata structure must be defined for each file that was part of this assembly at the time that this assembly was built, excluding the file that contains the metadata.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="9e95c-113">Требования</span><span class="sxs-lookup"><span data-stu-id="9e95c-113">Requirements</span></span>  
- <span data-ttu-id="9e95c-114">**Платформа:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9e95c-114">**Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="cceec-113">Требования</span><span class="sxs-lookup"><span data-stu-id="cceec-113">Requirements</span></span>  
+ <span data-ttu-id="cceec-114">**Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="cceec-114">**Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="9e95c-115">**Заголовок.** Cor.h</span><span class="sxs-lookup"><span data-stu-id="9e95c-115">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="cceec-115">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="cceec-115">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="9e95c-116">**Библиотека:** Используется как ресурс в MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="9e95c-116">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="cceec-116">**Library:** Used as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="cceec-116">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="9e95c-117">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9e95c-117">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="cceec-117">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="cceec-117">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9e95c-118">См. также</span><span class="sxs-lookup"><span data-stu-id="9e95c-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="cceec-118">См. также</span><span class="sxs-lookup"><span data-stu-id="cceec-118">See also</span></span>
 
-- [<span data-ttu-id="9e95c-119">Интерфейс IMetaDataAssemblyEmit</span><span class="sxs-lookup"><span data-stu-id="9e95c-119">IMetaDataAssemblyEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+- [<span data-ttu-id="cceec-119">Интерфейс IMetaDataAssemblyEmit</span><span class="sxs-lookup"><span data-stu-id="cceec-119">IMetaDataAssemblyEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

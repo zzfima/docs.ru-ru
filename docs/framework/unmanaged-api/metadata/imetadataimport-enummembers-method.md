@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 3fb8e178-342b-4c89-9bcf-f7f834e6cb77
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 50035799fcfa4c4b08404d63fe91e7dba85722fa
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: acb772a64c8f13405f2836bb5f4f308986dce414
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67758836"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447658"
 ---
-# <a name="imetadataimportenummembers-method"></a><span data-ttu-id="b9026-102">Метод IMetaDataImport::EnumMembers</span><span class="sxs-lookup"><span data-stu-id="b9026-102">IMetaDataImport::EnumMembers Method</span></span>
-<span data-ttu-id="b9026-103">Перечисляет токены MemberDef, представляющие члены указанного типа.</span><span class="sxs-lookup"><span data-stu-id="b9026-103">Enumerates MemberDef tokens representing members of the specified type.</span></span>  
+# <a name="imetadataimportenummembers-method"></a><span data-ttu-id="a99bf-102">Метод IMetaDataImport::EnumMembers</span><span class="sxs-lookup"><span data-stu-id="a99bf-102">IMetaDataImport::EnumMembers Method</span></span>
+<span data-ttu-id="a99bf-103">Перечисляет токены MemberDef, представляющие члены указанного типа.</span><span class="sxs-lookup"><span data-stu-id="a99bf-103">Enumerates MemberDef tokens representing members of the specified type.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b9026-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="b9026-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a99bf-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="a99bf-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT EnumMembers (   
@@ -39,44 +37,44 @@ HRESULT EnumMembers (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="b9026-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="b9026-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="a99bf-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="a99bf-105">Parameters</span></span>  
  `phEnum`  
- <span data-ttu-id="b9026-106">[in, out] Указатель на перечислитель.</span><span class="sxs-lookup"><span data-stu-id="b9026-106">[in, out] A pointer to the enumerator.</span></span>  
+ <span data-ttu-id="a99bf-106">[in, out] A pointer to the enumerator.</span><span class="sxs-lookup"><span data-stu-id="a99bf-106">[in, out] A pointer to the enumerator.</span></span>  
   
  `cl`  
- <span data-ttu-id="b9026-107">[in] Токен TypeDef, представляющий тип, члены которого необходимо перечислить.</span><span class="sxs-lookup"><span data-stu-id="b9026-107">[in] A TypeDef token representing the type whose members are to be enumerated.</span></span>  
+ <span data-ttu-id="a99bf-107">[in] A TypeDef token representing the type whose members are to be enumerated.</span><span class="sxs-lookup"><span data-stu-id="a99bf-107">[in] A TypeDef token representing the type whose members are to be enumerated.</span></span>  
   
  `rMembers`  
- <span data-ttu-id="b9026-108">[out] Массив, используемый для хранения токены MemberDef.</span><span class="sxs-lookup"><span data-stu-id="b9026-108">[out] The array used to hold the MemberDef tokens.</span></span>  
+ <span data-ttu-id="a99bf-108">[out] The array used to hold the MemberDef tokens.</span><span class="sxs-lookup"><span data-stu-id="a99bf-108">[out] The array used to hold the MemberDef tokens.</span></span>  
   
  `cMax`  
- <span data-ttu-id="b9026-109">[in] Максимальный размер массива `rMembers`.</span><span class="sxs-lookup"><span data-stu-id="b9026-109">[in] The maximum size of the `rMembers` array.</span></span>  
+ <span data-ttu-id="a99bf-109">[in] Максимальный размер массива `rMembers`.</span><span class="sxs-lookup"><span data-stu-id="a99bf-109">[in] The maximum size of the `rMembers` array.</span></span>  
   
  `pcTokens`  
- <span data-ttu-id="b9026-110">[out] Фактическое количество возвращаемых в токены MemberDef `rMembers`.</span><span class="sxs-lookup"><span data-stu-id="b9026-110">[out] The actual number of MemberDef tokens returned in `rMembers`.</span></span>  
+ <span data-ttu-id="a99bf-110">[out] The actual number of MemberDef tokens returned in `rMembers`.</span><span class="sxs-lookup"><span data-stu-id="a99bf-110">[out] The actual number of MemberDef tokens returned in `rMembers`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="b9026-111">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="b9026-111">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="a99bf-111">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="a99bf-111">Return Value</span></span>  
   
-|<span data-ttu-id="b9026-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="b9026-112">HRESULT</span></span>|<span data-ttu-id="b9026-113">Описание</span><span class="sxs-lookup"><span data-stu-id="b9026-113">Description</span></span>|  
+|<span data-ttu-id="a99bf-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="a99bf-112">HRESULT</span></span>|<span data-ttu-id="a99bf-113">Описание</span><span class="sxs-lookup"><span data-stu-id="a99bf-113">Description</span></span>|  
 |-------------|-----------------|  
-|`S_OK`|<span data-ttu-id="b9026-114">`EnumMembers` успешно возвращен.</span><span class="sxs-lookup"><span data-stu-id="b9026-114">`EnumMembers` returned successfully.</span></span>|  
-|`S_FALSE`|<span data-ttu-id="b9026-115">Существуют маркеры MemberDef для перечисления отсутствуют.</span><span class="sxs-lookup"><span data-stu-id="b9026-115">There are no MemberDef tokens to enumerate.</span></span> <span data-ttu-id="b9026-116">В этом случае `pcTokens` равно нулю.</span><span class="sxs-lookup"><span data-stu-id="b9026-116">In that case, `pcTokens` is zero.</span></span>|  
+|`S_OK`|<span data-ttu-id="a99bf-114">`EnumMembers` returned successfully.</span><span class="sxs-lookup"><span data-stu-id="a99bf-114">`EnumMembers` returned successfully.</span></span>|  
+|`S_FALSE`|<span data-ttu-id="a99bf-115">There are no MemberDef tokens to enumerate.</span><span class="sxs-lookup"><span data-stu-id="a99bf-115">There are no MemberDef tokens to enumerate.</span></span> <span data-ttu-id="a99bf-116">In that case, `pcTokens` is zero.</span><span class="sxs-lookup"><span data-stu-id="a99bf-116">In that case, `pcTokens` is zero.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="b9026-117">Примечания</span><span class="sxs-lookup"><span data-stu-id="b9026-117">Remarks</span></span>  
- <span data-ttu-id="b9026-118">При перечислении коллекций членов для класса, `EnumMembers` возвращает только члены (поля и методы, но **не** свойств или событий) определенные непосредственно в классе.</span><span class="sxs-lookup"><span data-stu-id="b9026-118">When enumerating collections of members for a class, `EnumMembers` returns only members (fields and methods, but **not** properties or events) defined directly on the class.</span></span> <span data-ttu-id="b9026-119">Он не возвращает элементы, класс наследуется, даже если этот класс предоставляет реализацию для этих унаследованных членов.</span><span class="sxs-lookup"><span data-stu-id="b9026-119">It does not return any members that the class inherits, even if the class provides an implementation for those inherited members.</span></span> <span data-ttu-id="b9026-120">Чтобы перечислить унаследованные члены, вызывающий объект явным образом необходимо пройти по цепочке наследования.</span><span class="sxs-lookup"><span data-stu-id="b9026-120">To enumerate inherited members, the caller must explicitly walk the inheritance chain.</span></span> <span data-ttu-id="b9026-121">Обратите внимание, что правила для цепи наследования может меняться в зависимости от языка или компилятора, выдавшего исходные метаданные.</span><span class="sxs-lookup"><span data-stu-id="b9026-121">Note that the rules for the inheritance chain may vary depending on the language or compiler that emitted the original metadata.</span></span>
+## <a name="remarks"></a><span data-ttu-id="a99bf-117">Заметки</span><span class="sxs-lookup"><span data-stu-id="a99bf-117">Remarks</span></span>  
+ <span data-ttu-id="a99bf-118">When enumerating collections of members for a class, `EnumMembers` returns only members (fields and methods, but **not** properties or events) defined directly on the class.</span><span class="sxs-lookup"><span data-stu-id="a99bf-118">When enumerating collections of members for a class, `EnumMembers` returns only members (fields and methods, but **not** properties or events) defined directly on the class.</span></span> <span data-ttu-id="a99bf-119">It does not return any members that the class inherits, even if the class provides an implementation for those inherited members.</span><span class="sxs-lookup"><span data-stu-id="a99bf-119">It does not return any members that the class inherits, even if the class provides an implementation for those inherited members.</span></span> <span data-ttu-id="a99bf-120">To enumerate inherited members, the caller must explicitly walk the inheritance chain.</span><span class="sxs-lookup"><span data-stu-id="a99bf-120">To enumerate inherited members, the caller must explicitly walk the inheritance chain.</span></span> <span data-ttu-id="a99bf-121">Note that the rules for the inheritance chain may vary depending on the language or compiler that emitted the original metadata.</span><span class="sxs-lookup"><span data-stu-id="a99bf-121">Note that the rules for the inheritance chain may vary depending on the language or compiler that emitted the original metadata.</span></span>
  
- <span data-ttu-id="b9026-122">Свойства и события не перечисляет `EnumMembers`.</span><span class="sxs-lookup"><span data-stu-id="b9026-122">Properties and events are not enumerated by `EnumMembers`.</span></span> <span data-ttu-id="b9026-123">Чтобы перечислить их, используйте [EnumProperties](imetadataimport-enumproperties-method.md) или [EnumEvents](imetadataimport-enumevents-method.md).</span><span class="sxs-lookup"><span data-stu-id="b9026-123">To enumerate those, use [EnumProperties](imetadataimport-enumproperties-method.md) or [EnumEvents](imetadataimport-enumevents-method.md).</span></span>
+ <span data-ttu-id="a99bf-122">Properties and events are not enumerated by `EnumMembers`.</span><span class="sxs-lookup"><span data-stu-id="a99bf-122">Properties and events are not enumerated by `EnumMembers`.</span></span> <span data-ttu-id="a99bf-123">To enumerate those, use [EnumProperties](imetadataimport-enumproperties-method.md) or [EnumEvents](imetadataimport-enumevents-method.md).</span><span class="sxs-lookup"><span data-stu-id="a99bf-123">To enumerate those, use [EnumProperties](imetadataimport-enumproperties-method.md) or [EnumEvents](imetadataimport-enumevents-method.md).</span></span>
   
-## <a name="requirements"></a><span data-ttu-id="b9026-124">Требования</span><span class="sxs-lookup"><span data-stu-id="b9026-124">Requirements</span></span>  
- <span data-ttu-id="b9026-125">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b9026-125">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a99bf-124">Требования</span><span class="sxs-lookup"><span data-stu-id="a99bf-124">Requirements</span></span>  
+ <span data-ttu-id="a99bf-125">**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a99bf-125">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b9026-126">**Заголовок.** Cor.h</span><span class="sxs-lookup"><span data-stu-id="b9026-126">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="a99bf-126">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="a99bf-126">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="b9026-127">**Библиотека:** Включена как ресурс в MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="b9026-127">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="a99bf-127">**Library:** Included as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="a99bf-127">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="b9026-128">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b9026-128">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="a99bf-128">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a99bf-128">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b9026-129">См. также</span><span class="sxs-lookup"><span data-stu-id="b9026-129">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a99bf-129">См. также</span><span class="sxs-lookup"><span data-stu-id="a99bf-129">See also</span></span>
 
-- [<span data-ttu-id="b9026-130">Интерфейс IMetaDataImport</span><span class="sxs-lookup"><span data-stu-id="b9026-130">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="b9026-131">Интерфейс IMetaDataImport2</span><span class="sxs-lookup"><span data-stu-id="b9026-131">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="a99bf-130">Интерфейс IMetaDataImport</span><span class="sxs-lookup"><span data-stu-id="a99bf-130">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="a99bf-131">Интерфейс IMetaDataImport2</span><span class="sxs-lookup"><span data-stu-id="a99bf-131">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: d16703fd-518f-412e-92cb-74433d11032e
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 5c6ac7dabd2dfcc7829fd42389c0a6c261fe456d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c315e2ae2753b59b4e277764d27c3fb3388b515c
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781868"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445416"
 ---
-# <a name="corfileflags-enumeration"></a><span data-ttu-id="eafa4-102">Перечисление CorFileFlags</span><span class="sxs-lookup"><span data-stu-id="eafa4-102">CorFileFlags Enumeration</span></span>
-<span data-ttu-id="eafa4-103">Содержит значения, описывающие тип файла, определенного в вызове к [IMetaDataAssemblyEmit::DefineFile](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md).</span><span class="sxs-lookup"><span data-stu-id="eafa4-103">Contains values that describe the type of file defined in a call to [IMetaDataAssemblyEmit::DefineFile](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md).</span></span>  
+# <a name="corfileflags-enumeration"></a><span data-ttu-id="cb34f-102">Перечисление CorFileFlags</span><span class="sxs-lookup"><span data-stu-id="cb34f-102">CorFileFlags Enumeration</span></span>
+<span data-ttu-id="cb34f-103">Contains values that describe the type of file defined in a call to [IMetaDataAssemblyEmit::DefineFile](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md).</span><span class="sxs-lookup"><span data-stu-id="cb34f-103">Contains values that describe the type of file defined in a call to [IMetaDataAssemblyEmit::DefineFile](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="eafa4-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="eafa4-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="cb34f-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="cb34f-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum CorFileFlags {  
@@ -37,20 +35,20 @@ typedef enum CorFileFlags {
 } CorFileFlags;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="eafa4-105">Участники</span><span class="sxs-lookup"><span data-stu-id="eafa4-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="cb34f-105">Члены</span><span class="sxs-lookup"><span data-stu-id="cb34f-105">Members</span></span>  
   
-|<span data-ttu-id="eafa4-106">Член</span><span class="sxs-lookup"><span data-stu-id="eafa4-106">Member</span></span>|<span data-ttu-id="eafa4-107">Описание</span><span class="sxs-lookup"><span data-stu-id="eafa4-107">Description</span></span>|  
+|<span data-ttu-id="cb34f-106">Член</span><span class="sxs-lookup"><span data-stu-id="cb34f-106">Member</span></span>|<span data-ttu-id="cb34f-107">Описание</span><span class="sxs-lookup"><span data-stu-id="cb34f-107">Description</span></span>|  
 |------------|-----------------|  
-|`ffContainsMetaData`|<span data-ttu-id="eafa4-108">Указывает, что файл не является файлом ресурсов.</span><span class="sxs-lookup"><span data-stu-id="eafa4-108">Indicates that the file is not a resource file.</span></span>|  
-|`ffContainsNoMetaData`|<span data-ttu-id="eafa4-109">Указывает, что файл, возможно, файл ресурсов не содержит метаданных.</span><span class="sxs-lookup"><span data-stu-id="eafa4-109">Indicates that the file, possibly a resource file, does not contain metadata.</span></span>|  
+|`ffContainsMetaData`|<span data-ttu-id="cb34f-108">Indicates that the file is not a resource file.</span><span class="sxs-lookup"><span data-stu-id="cb34f-108">Indicates that the file is not a resource file.</span></span>|  
+|`ffContainsNoMetaData`|<span data-ttu-id="cb34f-109">Indicates that the file, possibly a resource file, does not contain metadata.</span><span class="sxs-lookup"><span data-stu-id="cb34f-109">Indicates that the file, possibly a resource file, does not contain metadata.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="eafa4-110">Требования</span><span class="sxs-lookup"><span data-stu-id="eafa4-110">Requirements</span></span>  
- <span data-ttu-id="eafa4-111">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="eafa4-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="cb34f-110">Требования</span><span class="sxs-lookup"><span data-stu-id="cb34f-110">Requirements</span></span>  
+ <span data-ttu-id="cb34f-111">**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="cb34f-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="eafa4-112">**Заголовок.** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="eafa4-112">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="cb34f-112">**Header:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="cb34f-112">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="eafa4-113">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="eafa4-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="cb34f-113">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="cb34f-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="eafa4-114">См. также</span><span class="sxs-lookup"><span data-stu-id="eafa4-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="cb34f-114">См. также</span><span class="sxs-lookup"><span data-stu-id="cb34f-114">See also</span></span>
 
-- [<span data-ttu-id="eafa4-115">Перечисления метаданных</span><span class="sxs-lookup"><span data-stu-id="eafa4-115">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [<span data-ttu-id="cb34f-115">Перечисления метаданных</span><span class="sxs-lookup"><span data-stu-id="cb34f-115">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

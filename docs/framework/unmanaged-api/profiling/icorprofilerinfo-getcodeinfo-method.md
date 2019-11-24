@@ -15,21 +15,19 @@ helpviewer_keywords:
 ms.assetid: 90140b0f-a926-4a7e-b6fa-23e05f703cce
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 2cc587edf763a352501a0d9097bdab2c54658d98
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2393468f78312511d11cbe0ab422c26c710e25d8
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67762845"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74439238"
 ---
-# <a name="icorprofilerinfogetcodeinfo-method"></a><span data-ttu-id="00d97-102">Метод ICorProfilerInfo::GetCodeInfo</span><span class="sxs-lookup"><span data-stu-id="00d97-102">ICorProfilerInfo::GetCodeInfo Method</span></span>
-<span data-ttu-id="00d97-103">Получает экстент машинного кода, связанного с указанным идентификатором функции.</span><span class="sxs-lookup"><span data-stu-id="00d97-103">Gets the extent of native code associated with the specified function ID.</span></span>  
+# <a name="icorprofilerinfogetcodeinfo-method"></a><span data-ttu-id="e3709-102">Метод ICorProfilerInfo::GetCodeInfo</span><span class="sxs-lookup"><span data-stu-id="e3709-102">ICorProfilerInfo::GetCodeInfo Method</span></span>
+<span data-ttu-id="e3709-103">Получает экстент машинного кода, связанного с указанным идентификатором функции.</span><span class="sxs-lookup"><span data-stu-id="e3709-103">Gets the extent of native code associated with the specified function ID.</span></span>  
   
- <span data-ttu-id="00d97-104">Этот метод устарел.</span><span class="sxs-lookup"><span data-stu-id="00d97-104">This method is obsolete.</span></span> <span data-ttu-id="00d97-105">Используйте [ICorProfilerInfo2::GetCodeInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getcodeinfo2-method.md) метод вместо этого.</span><span class="sxs-lookup"><span data-stu-id="00d97-105">Use the [ICorProfilerInfo2::GetCodeInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getcodeinfo2-method.md) method instead.</span></span>  
+ <span data-ttu-id="e3709-104">Этот метод устарел.</span><span class="sxs-lookup"><span data-stu-id="e3709-104">This method is obsolete.</span></span> <span data-ttu-id="e3709-105">Use the [ICorProfilerInfo2::GetCodeInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getcodeinfo2-method.md) method instead.</span><span class="sxs-lookup"><span data-stu-id="e3709-105">Use the [ICorProfilerInfo2::GetCodeInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getcodeinfo2-method.md) method instead.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="00d97-106">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="00d97-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e3709-106">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="e3709-106">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetCodeInfo(  
@@ -38,32 +36,32 @@ HRESULT GetCodeInfo(
     [out] ULONG      *pcSize);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="00d97-107">Параметры</span><span class="sxs-lookup"><span data-stu-id="00d97-107">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="e3709-107">Параметры</span><span class="sxs-lookup"><span data-stu-id="e3709-107">Parameters</span></span>  
  `functionId`  
- <span data-ttu-id="00d97-108">[in] Идентификатор функции, с которым связан машинный код.</span><span class="sxs-lookup"><span data-stu-id="00d97-108">[in] The ID of the function with which the native code is associated.</span></span>  
+ <span data-ttu-id="e3709-108">[in] Идентификатор функции, с которым связан машинный код.</span><span class="sxs-lookup"><span data-stu-id="e3709-108">[in] The ID of the function with which the native code is associated.</span></span>  
   
  `pStart`  
- <span data-ttu-id="00d97-109">[out] Указатель на массив байтов, составляющих машинный код функции.</span><span class="sxs-lookup"><span data-stu-id="00d97-109">[out] A pointer to an array of bytes that compose the native code of the function.</span></span>  
+ <span data-ttu-id="e3709-109">[out] Указатель на массив байтов, составляющих машинный код функции.</span><span class="sxs-lookup"><span data-stu-id="e3709-109">[out] A pointer to an array of bytes that compose the native code of the function.</span></span>  
   
  `pcSize`  
- <span data-ttu-id="00d97-110">[out] Указатель на целое число, задающее размер машинного кода в байтах.</span><span class="sxs-lookup"><span data-stu-id="00d97-110">[out] A pointer to an integer that specifies the size, in bytes, of the native code.</span></span>  
+ <span data-ttu-id="e3709-110">[out] Указатель на целое число, задающее размер машинного кода в байтах.</span><span class="sxs-lookup"><span data-stu-id="e3709-110">[out] A pointer to an integer that specifies the size, in bytes, of the native code.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="00d97-111">Примечания</span><span class="sxs-lookup"><span data-stu-id="00d97-111">Remarks</span></span>  
- <span data-ttu-id="00d97-112">Для оптимизации производительности среда выполнения в .NET Framework версии 2.0 разделяет предварительно скомпилированный машинный код функции на несколько областей.</span><span class="sxs-lookup"><span data-stu-id="00d97-112">To optimize performance, the runtime in the .NET Framework version 2.0 splits the precompiled, native code of a function into multiple regions.</span></span> <span data-ttu-id="00d97-113">Следовательно, метод `GetCodeInfo` является устаревшим в .NET Framework 2.0, так как он не может обработать экстент машинного кода функции.</span><span class="sxs-lookup"><span data-stu-id="00d97-113">Consequently, the `GetCodeInfo` method is obsolete in the .NET Framework 2.0 because it is unable to handle the extent of a function's native code.</span></span> <span data-ttu-id="00d97-114">Профилировщики следует переключить на использование более универсального метода `ICorProfilerInfo2::GetCodeInfo2`.</span><span class="sxs-lookup"><span data-stu-id="00d97-114">Profilers should switch to using the more general `ICorProfilerInfo2::GetCodeInfo2` method instead.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="e3709-111">Заметки</span><span class="sxs-lookup"><span data-stu-id="e3709-111">Remarks</span></span>  
+ <span data-ttu-id="e3709-112">Для оптимизации производительности среда выполнения в .NET Framework версии 2.0 разделяет предварительно скомпилированный машинный код функции на несколько областей.</span><span class="sxs-lookup"><span data-stu-id="e3709-112">To optimize performance, the runtime in the .NET Framework version 2.0 splits the precompiled, native code of a function into multiple regions.</span></span> <span data-ttu-id="e3709-113">Следовательно, метод `GetCodeInfo` является устаревшим в .NET Framework 2.0, так как он не может обработать экстент машинного кода функции.</span><span class="sxs-lookup"><span data-stu-id="e3709-113">Consequently, the `GetCodeInfo` method is obsolete in the .NET Framework 2.0 because it is unable to handle the extent of a function's native code.</span></span> <span data-ttu-id="e3709-114">Профилировщики следует переключить на использование более универсального метода `ICorProfilerInfo2::GetCodeInfo2`.</span><span class="sxs-lookup"><span data-stu-id="e3709-114">Profilers should switch to using the more general `ICorProfilerInfo2::GetCodeInfo2` method instead.</span></span>  
   
- <span data-ttu-id="00d97-115">Эта функция использует буферы, выделенные вызывающим объектом.</span><span class="sxs-lookup"><span data-stu-id="00d97-115">This function uses caller-allocated buffers.</span></span>  
+ <span data-ttu-id="e3709-115">Эта функция использует буферы, выделенные вызывающим объектом.</span><span class="sxs-lookup"><span data-stu-id="e3709-115">This function uses caller-allocated buffers.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="00d97-116">Требования</span><span class="sxs-lookup"><span data-stu-id="00d97-116">Requirements</span></span>  
- <span data-ttu-id="00d97-117">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="00d97-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e3709-116">Требования</span><span class="sxs-lookup"><span data-stu-id="e3709-116">Requirements</span></span>  
+ <span data-ttu-id="e3709-117">**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e3709-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="00d97-118">**Заголовок.** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="00d97-118">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="e3709-118">**Заголовок:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="e3709-118">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="00d97-119">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="00d97-119">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="e3709-119">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e3709-119">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="00d97-120">**Версии платформы .NET framework:** 1.0</span><span class="sxs-lookup"><span data-stu-id="00d97-120">**.NET Framework Versions:** 1.0</span></span>  
+ <span data-ttu-id="e3709-120">**.NET Framework Versions:** 1.0</span><span class="sxs-lookup"><span data-stu-id="e3709-120">**.NET Framework Versions:** 1.0</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="00d97-121">См. также</span><span class="sxs-lookup"><span data-stu-id="00d97-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e3709-121">См. также</span><span class="sxs-lookup"><span data-stu-id="e3709-121">See also</span></span>
 
-- [<span data-ttu-id="00d97-122">Интерфейс ICorProfilerInfo</span><span class="sxs-lookup"><span data-stu-id="00d97-122">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
-- [<span data-ttu-id="00d97-123">Интерфейсы профилирования</span><span class="sxs-lookup"><span data-stu-id="00d97-123">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [<span data-ttu-id="00d97-124">Профилирование</span><span class="sxs-lookup"><span data-stu-id="00d97-124">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)
+- [<span data-ttu-id="e3709-122">Интерфейс ICorProfilerInfo</span><span class="sxs-lookup"><span data-stu-id="e3709-122">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [<span data-ttu-id="e3709-123">Интерфейсы профилирования</span><span class="sxs-lookup"><span data-stu-id="e3709-123">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [<span data-ttu-id="e3709-124">Профилирование</span><span class="sxs-lookup"><span data-stu-id="e3709-124">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)

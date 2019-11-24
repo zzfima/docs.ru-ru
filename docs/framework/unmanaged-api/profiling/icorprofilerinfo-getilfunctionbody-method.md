@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: e29b46bc-5fdc-4894-b0c2-619df4b65ded
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 484fb5b8398e3ebd61d1c300afec1536ee1dc0c5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a7ec50c91ce02958d0d44643d4f79da1680532aa
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780602"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74450357"
 ---
-# <a name="icorprofilerinfogetilfunctionbody-method"></a><span data-ttu-id="efd44-102">Метод ICorProfilerInfo::GetILFunctionBody</span><span class="sxs-lookup"><span data-stu-id="efd44-102">ICorProfilerInfo::GetILFunctionBody Method</span></span>
-<span data-ttu-id="efd44-103">Получает указатель в теле метода в код MSIL (MSIL), начиная с его заголовка.</span><span class="sxs-lookup"><span data-stu-id="efd44-103">Gets a pointer to the body of a method in Microsoft intermediate language (MSIL) code, starting at its header.</span></span>  
+# <a name="icorprofilerinfogetilfunctionbody-method"></a><span data-ttu-id="6b24c-102">Метод ICorProfilerInfo::GetILFunctionBody</span><span class="sxs-lookup"><span data-stu-id="6b24c-102">ICorProfilerInfo::GetILFunctionBody Method</span></span>
+<span data-ttu-id="6b24c-103">Gets a pointer to the body of a method in Microsoft intermediate language (MSIL) code, starting at its header.</span><span class="sxs-lookup"><span data-stu-id="6b24c-103">Gets a pointer to the body of a method in Microsoft intermediate language (MSIL) code, starting at its header.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="efd44-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="efd44-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6b24c-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="6b24c-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetILFunctionBody(  
@@ -37,33 +35,33 @@ HRESULT GetILFunctionBody(
     [out] ULONG       *pcbMethodSize);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="efd44-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="efd44-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="6b24c-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="6b24c-105">Parameters</span></span>  
  `moduleId`  
- <span data-ttu-id="efd44-106">[in] Идентификатор модуля, в которой находится функция.</span><span class="sxs-lookup"><span data-stu-id="efd44-106">[in] The ID of the module in which the function resides.</span></span>  
+ <span data-ttu-id="6b24c-106">[in] The ID of the module in which the function resides.</span><span class="sxs-lookup"><span data-stu-id="6b24c-106">[in] The ID of the module in which the function resides.</span></span>  
   
  `methodId`  
- <span data-ttu-id="efd44-107">[in] Токен метаданных для метода.</span><span class="sxs-lookup"><span data-stu-id="efd44-107">[in] The metadata token for the method.</span></span>  
+ <span data-ttu-id="6b24c-107">[in] The metadata token for the method.</span><span class="sxs-lookup"><span data-stu-id="6b24c-107">[in] The metadata token for the method.</span></span>  
   
  `ppMethodHeader`  
- <span data-ttu-id="efd44-108">[out] Указатель на заголовок метода.</span><span class="sxs-lookup"><span data-stu-id="efd44-108">[out] A pointer to the method's header.</span></span>  
+ <span data-ttu-id="6b24c-108">[out] A pointer to the method's header.</span><span class="sxs-lookup"><span data-stu-id="6b24c-108">[out] A pointer to the method's header.</span></span>  
   
  `pcbMethodSize`  
- <span data-ttu-id="efd44-109">[out] Целое число, указывающее размер метода.</span><span class="sxs-lookup"><span data-stu-id="efd44-109">[out] An integer that specifies the size of the method.</span></span>  
+ <span data-ttu-id="6b24c-109">[out] An integer that specifies the size of the method.</span><span class="sxs-lookup"><span data-stu-id="6b24c-109">[out] An integer that specifies the size of the method.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="efd44-110">Примечания</span><span class="sxs-lookup"><span data-stu-id="efd44-110">Remarks</span></span>  
- <span data-ttu-id="efd44-111">Метод ограничивается модуля, в котором он находится.</span><span class="sxs-lookup"><span data-stu-id="efd44-111">A method is scoped by the module in which it lives.</span></span> <span data-ttu-id="efd44-112">Так как `GetILFunctionBody` метод предназначен для предоставления доступа для кода на языке MSIL, прежде чем он был загружен с общеязыковой среды выполнения (CLR), для поиска требуемого экземпляра используется токен метаданных метода.</span><span class="sxs-lookup"><span data-stu-id="efd44-112">Because the `GetILFunctionBody` method is designed to give a tool access to the MSIL code before it has been loaded by the common language runtime (CLR), it uses the metadata token of the method to find the desired instance.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="6b24c-110">Заметки</span><span class="sxs-lookup"><span data-stu-id="6b24c-110">Remarks</span></span>  
+ <span data-ttu-id="6b24c-111">A method is scoped by the module in which it lives.</span><span class="sxs-lookup"><span data-stu-id="6b24c-111">A method is scoped by the module in which it lives.</span></span> <span data-ttu-id="6b24c-112">Because the `GetILFunctionBody` method is designed to give a tool access to the MSIL code before it has been loaded by the common language runtime (CLR), it uses the metadata token of the method to find the desired instance.</span><span class="sxs-lookup"><span data-stu-id="6b24c-112">Because the `GetILFunctionBody` method is designed to give a tool access to the MSIL code before it has been loaded by the common language runtime (CLR), it uses the metadata token of the method to find the desired instance.</span></span>  
   
- <span data-ttu-id="efd44-113">`GetILFunctionBody` может возвращать CORPROF_E_FUNCTION_NOT_IL HRESULT, если `methodId` указывает на метод без любой MSIL кода (например, абстрактный метод или платформа вызова метода (PInvoke)).</span><span class="sxs-lookup"><span data-stu-id="efd44-113">`GetILFunctionBody` can return a CORPROF_E_FUNCTION_NOT_IL HRESULT if the `methodId` points to a method without any MSIL code (such as an abstract method, or a platform invoke (PInvoke) method).</span></span>  
+ <span data-ttu-id="6b24c-113">`GetILFunctionBody` can return a CORPROF_E_FUNCTION_NOT_IL HRESULT if the `methodId` points to a method without any MSIL code (such as an abstract method, or a platform invoke (PInvoke) method).</span><span class="sxs-lookup"><span data-stu-id="6b24c-113">`GetILFunctionBody` can return a CORPROF_E_FUNCTION_NOT_IL HRESULT if the `methodId` points to a method without any MSIL code (such as an abstract method, or a platform invoke (PInvoke) method).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="efd44-114">Требования</span><span class="sxs-lookup"><span data-stu-id="efd44-114">Requirements</span></span>  
- <span data-ttu-id="efd44-115">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="efd44-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="6b24c-114">Требования</span><span class="sxs-lookup"><span data-stu-id="6b24c-114">Requirements</span></span>  
+ <span data-ttu-id="6b24c-115">**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="6b24c-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="efd44-116">**Заголовок.** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="efd44-116">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="6b24c-116">**Заголовок:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="6b24c-116">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="efd44-117">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="efd44-117">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="6b24c-117">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="6b24c-117">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="efd44-118">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="efd44-118">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="6b24c-118">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6b24c-118">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="efd44-119">См. также</span><span class="sxs-lookup"><span data-stu-id="efd44-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6b24c-119">См. также</span><span class="sxs-lookup"><span data-stu-id="6b24c-119">See also</span></span>
 
-- [<span data-ttu-id="efd44-120">Интерфейс ICorProfilerInfo</span><span class="sxs-lookup"><span data-stu-id="efd44-120">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [<span data-ttu-id="6b24c-120">Интерфейс ICorProfilerInfo</span><span class="sxs-lookup"><span data-stu-id="6b24c-120">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

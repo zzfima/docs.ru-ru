@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: a25a8f8b-5cfa-440d-9376-a1a1c3a9fc11
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: fc7b6d1a27faf7bde46305f9c98d98351e6261b6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: db768c97a2d1a0fd5ee42ecfb121fb96d3092e79
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782262"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74433021"
 ---
-# <a name="icorprofilerinfo2getrvastaticaddress-method"></a><span data-ttu-id="65e50-102">Метод ICorProfilerInfo2::GetRVAStaticAddress</span><span class="sxs-lookup"><span data-stu-id="65e50-102">ICorProfilerInfo2::GetRVAStaticAddress Method</span></span>
-<span data-ttu-id="65e50-103">Возвращает адрес указанного относительного виртуального адреса (RVA) статического поля.</span><span class="sxs-lookup"><span data-stu-id="65e50-103">Gets the address of the specified relative virtual address (RVA) static field.</span></span>  
+# <a name="icorprofilerinfo2getrvastaticaddress-method"></a><span data-ttu-id="b2ebc-102">Метод ICorProfilerInfo2::GetRVAStaticAddress</span><span class="sxs-lookup"><span data-stu-id="b2ebc-102">ICorProfilerInfo2::GetRVAStaticAddress Method</span></span>
+<span data-ttu-id="b2ebc-103">Gets the address of the specified relative virtual address (RVA) static field.</span><span class="sxs-lookup"><span data-stu-id="b2ebc-103">Gets the address of the specified relative virtual address (RVA) static field.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="65e50-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="65e50-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b2ebc-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="b2ebc-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetRVAStaticAddress(  
@@ -36,35 +34,35 @@ HRESULT GetRVAStaticAddress(
     [out] void **ppAddress);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="65e50-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="65e50-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="b2ebc-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="b2ebc-105">Parameters</span></span>  
  `classId`  
- <span data-ttu-id="65e50-106">[in] Идентификатор класса, содержащего запрошенный RVA-статического поля.</span><span class="sxs-lookup"><span data-stu-id="65e50-106">[in] The ID of the class that contains the requested RVA-static field.</span></span>  
+ <span data-ttu-id="b2ebc-106">[in] The ID of the class that contains the requested RVA-static field.</span><span class="sxs-lookup"><span data-stu-id="b2ebc-106">[in] The ID of the class that contains the requested RVA-static field.</span></span>  
   
  `fieldToken`  
- <span data-ttu-id="65e50-107">[in] Токен метаданных для запрошенного RVA статического поля.</span><span class="sxs-lookup"><span data-stu-id="65e50-107">[in] Metadata token for the requested RVA-static field.</span></span>  
+ <span data-ttu-id="b2ebc-107">[in] Metadata token for the requested RVA-static field.</span><span class="sxs-lookup"><span data-stu-id="b2ebc-107">[in] Metadata token for the requested RVA-static field.</span></span>  
   
  `ppAddress`  
- <span data-ttu-id="65e50-108">[out] Указатель на адрес RVA статического поля.</span><span class="sxs-lookup"><span data-stu-id="65e50-108">[out] A pointer to the address of the RVA-static field.</span></span>  
+ <span data-ttu-id="b2ebc-108">[out] A pointer to the address of the RVA-static field.</span><span class="sxs-lookup"><span data-stu-id="b2ebc-108">[out] A pointer to the address of the RVA-static field.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="65e50-109">Примечания</span><span class="sxs-lookup"><span data-stu-id="65e50-109">Remarks</span></span>  
- <span data-ttu-id="65e50-110">`GetRVAStaticAddress` Метод может возвращать одно из следующих:</span><span class="sxs-lookup"><span data-stu-id="65e50-110">The `GetRVAStaticAddress` method may return one of the following:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="b2ebc-109">Заметки</span><span class="sxs-lookup"><span data-stu-id="b2ebc-109">Remarks</span></span>  
+ <span data-ttu-id="b2ebc-110">The `GetRVAStaticAddress` method may return one of the following:</span><span class="sxs-lookup"><span data-stu-id="b2ebc-110">The `GetRVAStaticAddress` method may return one of the following:</span></span>  
   
-- <span data-ttu-id="65e50-111">HRESULT CORPROF_E_DATAINCOMPLETE, если заданного статические поля не был назначен адрес в заданном контексте.</span><span class="sxs-lookup"><span data-stu-id="65e50-111">A CORPROF_E_DATAINCOMPLETE HRESULT if the given static field has not been assigned an address in the specified context.</span></span>  
+- <span data-ttu-id="b2ebc-111">A CORPROF_E_DATAINCOMPLETE HRESULT if the given static field has not been assigned an address in the specified context.</span><span class="sxs-lookup"><span data-stu-id="b2ebc-111">A CORPROF_E_DATAINCOMPLETE HRESULT if the given static field has not been assigned an address in the specified context.</span></span>  
   
-- <span data-ttu-id="65e50-112">Адреса объектов, которые могут быть в куче сбора мусора.</span><span class="sxs-lookup"><span data-stu-id="65e50-112">The addresses of objects that may be in the garbage collection heap.</span></span> <span data-ttu-id="65e50-113">Эти адреса могут стать недопустимыми после сборки мусора, поэтому после сборки мусора, профилировщики не следует предполагать, что они являются допустимыми.</span><span class="sxs-lookup"><span data-stu-id="65e50-113">These addresses may become invalid after garbage collection, so after garbage collection, profilers should not assume that they are valid.</span></span>  
+- <span data-ttu-id="b2ebc-112">The addresses of objects that may be in the garbage collection heap.</span><span class="sxs-lookup"><span data-stu-id="b2ebc-112">The addresses of objects that may be in the garbage collection heap.</span></span> <span data-ttu-id="b2ebc-113">These addresses may become invalid after garbage collection, so after garbage collection, profilers should not assume that they are valid.</span><span class="sxs-lookup"><span data-stu-id="b2ebc-113">These addresses may become invalid after garbage collection, so after garbage collection, profilers should not assume that they are valid.</span></span>  
   
- <span data-ttu-id="65e50-114">До завершения конструктора класса `GetRVAStaticAddress` возвращает CORPROF_E_DATAINCOMPLETE для всех статических полей, несмотря на то, что некоторые статические поля уже могут быть инициализированы и могут маршрутизировать объекты сборки мусора.</span><span class="sxs-lookup"><span data-stu-id="65e50-114">Before a class’s class constructor is completed, `GetRVAStaticAddress` will return CORPROF_E_DATAINCOMPLETE for all its static fields, although some of the static fields may already be initialized and may be rooting garbage collection objects.</span></span>  
+ <span data-ttu-id="b2ebc-114">Before a class’s class constructor is completed, `GetRVAStaticAddress` will return CORPROF_E_DATAINCOMPLETE for all its static fields, although some of the static fields may already be initialized and may be rooting garbage collection objects.</span><span class="sxs-lookup"><span data-stu-id="b2ebc-114">Before a class’s class constructor is completed, `GetRVAStaticAddress` will return CORPROF_E_DATAINCOMPLETE for all its static fields, although some of the static fields may already be initialized and may be rooting garbage collection objects.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="65e50-115">Требования</span><span class="sxs-lookup"><span data-stu-id="65e50-115">Requirements</span></span>  
- <span data-ttu-id="65e50-116">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="65e50-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b2ebc-115">Требования</span><span class="sxs-lookup"><span data-stu-id="b2ebc-115">Requirements</span></span>  
+ <span data-ttu-id="b2ebc-116">**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b2ebc-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="65e50-117">**Заголовок.** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="65e50-117">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="b2ebc-117">**Заголовок:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="b2ebc-117">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="65e50-118">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="65e50-118">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="b2ebc-118">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b2ebc-118">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="65e50-119">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="65e50-119">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="b2ebc-119">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b2ebc-119">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="65e50-120">См. также</span><span class="sxs-lookup"><span data-stu-id="65e50-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b2ebc-120">См. также</span><span class="sxs-lookup"><span data-stu-id="b2ebc-120">See also</span></span>
 
-- [<span data-ttu-id="65e50-121">Интерфейс ICorProfilerInfo</span><span class="sxs-lookup"><span data-stu-id="65e50-121">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
-- [<span data-ttu-id="65e50-122">Интерфейс ICorProfilerInfo2</span><span class="sxs-lookup"><span data-stu-id="65e50-122">ICorProfilerInfo2 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
+- [<span data-ttu-id="b2ebc-121">Интерфейс ICorProfilerInfo</span><span class="sxs-lookup"><span data-stu-id="b2ebc-121">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [<span data-ttu-id="b2ebc-122">Интерфейс ICorProfilerInfo2</span><span class="sxs-lookup"><span data-stu-id="b2ebc-122">ICorProfilerInfo2 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)

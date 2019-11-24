@@ -15,35 +15,33 @@ helpviewer_keywords:
 ms.assetid: 3fd3a34c-d176-46e9-9996-fb1646cff9b0
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 995c7edf99c917b8bcdc1d51dcc0bf50868e4f35
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 50f41bb55b7c3dc45646a465032074ce90be0abf
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777058"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74444509"
 ---
-# <a name="isymunmanagedreadergetuserentrypoint-method"></a><span data-ttu-id="0183d-102">Метод ISymUnmanagedReader::GetUserEntryPoint</span><span class="sxs-lookup"><span data-stu-id="0183d-102">ISymUnmanagedReader::GetUserEntryPoint Method</span></span>
-<span data-ttu-id="0183d-103">Возвращает метод, который был указан в качестве точки входа пользователя для модуля, если таковые имеются.</span><span class="sxs-lookup"><span data-stu-id="0183d-103">Returns the method that was specified as the user entry point for the module, if any.</span></span> <span data-ttu-id="0183d-104">Например этот метод может быть основной метод пользователя, а не созданные компилятором заглушки перед основным методом.</span><span class="sxs-lookup"><span data-stu-id="0183d-104">For example, this method could be the user's main method rather than compiler-generated stubs before the main method.</span></span>  
+# <a name="isymunmanagedreadergetuserentrypoint-method"></a><span data-ttu-id="15f49-102">Метод ISymUnmanagedReader::GetUserEntryPoint</span><span class="sxs-lookup"><span data-stu-id="15f49-102">ISymUnmanagedReader::GetUserEntryPoint Method</span></span>
+<span data-ttu-id="15f49-103">Returns the method that was specified as the user entry point for the module, if any.</span><span class="sxs-lookup"><span data-stu-id="15f49-103">Returns the method that was specified as the user entry point for the module, if any.</span></span> <span data-ttu-id="15f49-104">For example, this method could be the user's main method rather than compiler-generated stubs before the main method.</span><span class="sxs-lookup"><span data-stu-id="15f49-104">For example, this method could be the user's main method rather than compiler-generated stubs before the main method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0183d-105">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="0183d-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="15f49-105">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="15f49-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetUserEntryPoint (  
     [out, retval]  mdMethodDef  *pToken);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="0183d-106">Параметры</span><span class="sxs-lookup"><span data-stu-id="0183d-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="15f49-106">Параметры</span><span class="sxs-lookup"><span data-stu-id="15f49-106">Parameters</span></span>  
  `pToken`  
- <span data-ttu-id="0183d-107">[out] Указатель на переменную, которая получает точку входа.</span><span class="sxs-lookup"><span data-stu-id="0183d-107">[out] A pointer to a variable that receives the entry point.</span></span>  
+ <span data-ttu-id="15f49-107">[out] A pointer to a variable that receives the entry point.</span><span class="sxs-lookup"><span data-stu-id="15f49-107">[out] A pointer to a variable that receives the entry point.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="0183d-108">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="0183d-108">Return Value</span></span>  
- <span data-ttu-id="0183d-109">Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.</span><span class="sxs-lookup"><span data-stu-id="0183d-109">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="15f49-108">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="15f49-108">Return Value</span></span>  
+ <span data-ttu-id="15f49-109">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="15f49-109">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="0183d-110">Требования</span><span class="sxs-lookup"><span data-stu-id="0183d-110">Requirements</span></span>  
- <span data-ttu-id="0183d-111">**Заголовок.** CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="0183d-111">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="15f49-110">Требования</span><span class="sxs-lookup"><span data-stu-id="15f49-110">Requirements</span></span>  
+ <span data-ttu-id="15f49-111">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="15f49-111">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0183d-112">См. также</span><span class="sxs-lookup"><span data-stu-id="0183d-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="15f49-112">См. также</span><span class="sxs-lookup"><span data-stu-id="15f49-112">See also</span></span>
 
-- [<span data-ttu-id="0183d-113">Интерфейс ISymUnmanagedReader</span><span class="sxs-lookup"><span data-stu-id="0183d-113">ISymUnmanagedReader Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+- [<span data-ttu-id="15f49-113">Интерфейс ISymUnmanagedReader</span><span class="sxs-lookup"><span data-stu-id="15f49-113">ISymUnmanagedReader Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

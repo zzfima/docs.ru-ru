@@ -14,36 +14,34 @@ helpviewer_keywords:
 ms.assetid: 989840b3-9822-4ce5-a6c5-b375d3340a7a
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: dda284fc86f0a82472c59d6bab08fd4a87364723
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b7ce76c22e7188117bddd9e4f328e323f6742685
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61904765"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436228"
 ---
-# <a name="imetadatadispenser-interface"></a><span data-ttu-id="3db36-102">Интерфейс IMetaDataDispenser</span><span class="sxs-lookup"><span data-stu-id="3db36-102">IMetaDataDispenser Interface</span></span>
-<span data-ttu-id="3db36-103">Предоставляет методы для создания новой области метаданных, или откройте существующий.</span><span class="sxs-lookup"><span data-stu-id="3db36-103">Provides methods to create a new metadata scope, or open an existing one.</span></span>  
+# <a name="imetadatadispenser-interface"></a><span data-ttu-id="70a37-102">Интерфейс IMetaDataDispenser</span><span class="sxs-lookup"><span data-stu-id="70a37-102">IMetaDataDispenser Interface</span></span>
+<span data-ttu-id="70a37-103">Provides methods to create a new metadata scope, or open an existing one.</span><span class="sxs-lookup"><span data-stu-id="70a37-103">Provides methods to create a new metadata scope, or open an existing one.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="3db36-104">Методы</span><span class="sxs-lookup"><span data-stu-id="3db36-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="70a37-104">Методы</span><span class="sxs-lookup"><span data-stu-id="70a37-104">Methods</span></span>  
   
-|<span data-ttu-id="3db36-105">Метод</span><span class="sxs-lookup"><span data-stu-id="3db36-105">Method</span></span>|<span data-ttu-id="3db36-106">Описание</span><span class="sxs-lookup"><span data-stu-id="3db36-106">Description</span></span>|  
+|<span data-ttu-id="70a37-105">Метод</span><span class="sxs-lookup"><span data-stu-id="70a37-105">Method</span></span>|<span data-ttu-id="70a37-106">Описание</span><span class="sxs-lookup"><span data-stu-id="70a37-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="3db36-107">Метод DefineScope</span><span class="sxs-lookup"><span data-stu-id="3db36-107">DefineScope Method</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-definescope-method.md)|<span data-ttu-id="3db36-108">Создает новую область в памяти, где можно создать новые метаданные.</span><span class="sxs-lookup"><span data-stu-id="3db36-108">Creates a new area in memory where you can create new metadata.</span></span>|  
-|[<span data-ttu-id="3db36-109">Метод OpenScope</span><span class="sxs-lookup"><span data-stu-id="3db36-109">OpenScope Method</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md)|<span data-ttu-id="3db36-110">Открывает существующий файл на диске и сопоставляет его метаданные в память.</span><span class="sxs-lookup"><span data-stu-id="3db36-110">Opens an existing, on-disk file and maps its metadata into memory.</span></span>|  
-|[<span data-ttu-id="3db36-111">Метод OpenScopeOnMemory</span><span class="sxs-lookup"><span data-stu-id="3db36-111">OpenScopeOnMemory Method</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscopeonmemory-method.md)|<span data-ttu-id="3db36-112">Откроется область памяти, содержащую существующие метаданные.</span><span class="sxs-lookup"><span data-stu-id="3db36-112">Opens an area of memory that contains existing metadata.</span></span> <span data-ttu-id="3db36-113">То есть этот метод открывает указанную область памяти, в которой существующие данные интерпретируются как метаданные.</span><span class="sxs-lookup"><span data-stu-id="3db36-113">That is, this method opens a specified area of memory in which the existing data is treated as metadata.</span></span>|  
+|[<span data-ttu-id="70a37-107">Метод DefineScope</span><span class="sxs-lookup"><span data-stu-id="70a37-107">DefineScope Method</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-definescope-method.md)|<span data-ttu-id="70a37-108">Creates a new area in memory where you can create new metadata.</span><span class="sxs-lookup"><span data-stu-id="70a37-108">Creates a new area in memory where you can create new metadata.</span></span>|  
+|[<span data-ttu-id="70a37-109">Метод OpenScope</span><span class="sxs-lookup"><span data-stu-id="70a37-109">OpenScope Method</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md)|<span data-ttu-id="70a37-110">Opens an existing, on-disk file and maps its metadata into memory.</span><span class="sxs-lookup"><span data-stu-id="70a37-110">Opens an existing, on-disk file and maps its metadata into memory.</span></span>|  
+|[<span data-ttu-id="70a37-111">Метод OpenScopeOnMemory</span><span class="sxs-lookup"><span data-stu-id="70a37-111">OpenScopeOnMemory Method</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscopeonmemory-method.md)|<span data-ttu-id="70a37-112">Opens an area of memory that contains existing metadata.</span><span class="sxs-lookup"><span data-stu-id="70a37-112">Opens an area of memory that contains existing metadata.</span></span> <span data-ttu-id="70a37-113">That is, this method opens a specified area of memory in which the existing data is treated as metadata.</span><span class="sxs-lookup"><span data-stu-id="70a37-113">That is, this method opens a specified area of memory in which the existing data is treated as metadata.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="3db36-114">Требования</span><span class="sxs-lookup"><span data-stu-id="3db36-114">Requirements</span></span>  
- <span data-ttu-id="3db36-115">**Платформа:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="3db36-115">**Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="70a37-114">Требования</span><span class="sxs-lookup"><span data-stu-id="70a37-114">Requirements</span></span>  
+ <span data-ttu-id="70a37-115">**Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="70a37-115">**Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="3db36-116">**Заголовок.** Cor.h</span><span class="sxs-lookup"><span data-stu-id="3db36-116">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="70a37-116">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="70a37-116">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="3db36-117">**Библиотека:** Используется как ресурс в MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="3db36-117">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="70a37-117">**Library:** Used as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="70a37-117">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="3db36-118">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3db36-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="70a37-118">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="70a37-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3db36-119">См. также</span><span class="sxs-lookup"><span data-stu-id="3db36-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="70a37-119">См. также</span><span class="sxs-lookup"><span data-stu-id="70a37-119">See also</span></span>
 
-- [<span data-ttu-id="3db36-120">Интерфейс IMetaDataDispenserEx</span><span class="sxs-lookup"><span data-stu-id="3db36-120">IMetaDataDispenserEx Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)
-- [<span data-ttu-id="3db36-121">Интерфейсы метаданных</span><span class="sxs-lookup"><span data-stu-id="3db36-121">Metadata Interfaces</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)
+- [<span data-ttu-id="70a37-120">Интерфейс IMetaDataDispenserEx</span><span class="sxs-lookup"><span data-stu-id="70a37-120">IMetaDataDispenserEx Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)
+- [<span data-ttu-id="70a37-121">Интерфейсы метаданных</span><span class="sxs-lookup"><span data-stu-id="70a37-121">Metadata Interfaces</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)

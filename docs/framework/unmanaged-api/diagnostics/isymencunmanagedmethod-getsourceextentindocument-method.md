@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 9c5566ab-4ec7-4b61-9753-839bb90ae78c
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e4948a853434b14845983addb0e6fa4012279084
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b8e72745eff09c6707afe5a5f20a1ddf38b239ae
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776868"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448616"
 ---
-# <a name="isymencunmanagedmethodgetsourceextentindocument-method"></a><span data-ttu-id="593f8-102">Метод ISymENCUnmanagedMethod::GetSourceExtentInDocument</span><span class="sxs-lookup"><span data-stu-id="593f8-102">ISymENCUnmanagedMethod::GetSourceExtentInDocument Method</span></span>
-<span data-ttu-id="593f8-103">Получает наименьшую начальную строку и наибольшую конечную строку метода в определенном документе.</span><span class="sxs-lookup"><span data-stu-id="593f8-103">Gets the smallest start line and largest end line for the method in a specific document.</span></span>  
+# <a name="isymencunmanagedmethodgetsourceextentindocument-method"></a><span data-ttu-id="05e75-102">Метод ISymENCUnmanagedMethod::GetSourceExtentInDocument</span><span class="sxs-lookup"><span data-stu-id="05e75-102">ISymENCUnmanagedMethod::GetSourceExtentInDocument Method</span></span>
+<span data-ttu-id="05e75-103">Gets the smallest start line and largest end line for the method in a specific document.</span><span class="sxs-lookup"><span data-stu-id="05e75-103">Gets the smallest start line and largest end line for the method in a specific document.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="593f8-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="593f8-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="05e75-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="05e75-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetSourceExtentInDocument(  
@@ -36,22 +34,22 @@ HRESULT GetSourceExtentInDocument(
     [out] ULONG32* pendLine);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="593f8-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="593f8-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="05e75-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="05e75-105">Parameters</span></span>  
  `document`  
- <span data-ttu-id="593f8-106">[in] Указатель на документ.</span><span class="sxs-lookup"><span data-stu-id="593f8-106">[in] A pointer to the document.</span></span>  
+ <span data-ttu-id="05e75-106">[in] A pointer to the document.</span><span class="sxs-lookup"><span data-stu-id="05e75-106">[in] A pointer to the document.</span></span>  
   
  `pstartLine`  
- <span data-ttu-id="593f8-107">[out] Указатель на `ULONG32` , получающий начальной строки.</span><span class="sxs-lookup"><span data-stu-id="593f8-107">[out] A pointer to a `ULONG32` that receives the start line.</span></span>  
+ <span data-ttu-id="05e75-107">[out] A pointer to a `ULONG32` that receives the start line.</span><span class="sxs-lookup"><span data-stu-id="05e75-107">[out] A pointer to a `ULONG32` that receives the start line.</span></span>  
   
  `pendLine`  
- <span data-ttu-id="593f8-108">[out] Указатель на `ULONG32` , получающий конечную строку.</span><span class="sxs-lookup"><span data-stu-id="593f8-108">[out] A pointer to a `ULONG32` that receives the end line.</span></span>  
+ <span data-ttu-id="05e75-108">[out] A pointer to a `ULONG32` that receives the end line.</span><span class="sxs-lookup"><span data-stu-id="05e75-108">[out] A pointer to a `ULONG32` that receives the end line.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="593f8-109">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="593f8-109">Return Value</span></span>  
- <span data-ttu-id="593f8-110">Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.</span><span class="sxs-lookup"><span data-stu-id="593f8-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="05e75-109">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="05e75-109">Return Value</span></span>  
+ <span data-ttu-id="05e75-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="05e75-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="593f8-111">Требования</span><span class="sxs-lookup"><span data-stu-id="593f8-111">Requirements</span></span>  
- <span data-ttu-id="593f8-112">**Заголовок.** CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="593f8-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="05e75-111">Требования</span><span class="sxs-lookup"><span data-stu-id="05e75-111">Requirements</span></span>  
+ <span data-ttu-id="05e75-112">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="05e75-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="593f8-113">См. также</span><span class="sxs-lookup"><span data-stu-id="593f8-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="05e75-113">См. также</span><span class="sxs-lookup"><span data-stu-id="05e75-113">See also</span></span>
 
-- [<span data-ttu-id="593f8-114">Интерфейс ISymENCUnmanagedMethod</span><span class="sxs-lookup"><span data-stu-id="593f8-114">ISymENCUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)
+- [<span data-ttu-id="05e75-114">Интерфейс ISymENCUnmanagedMethod</span><span class="sxs-lookup"><span data-stu-id="05e75-114">ISymENCUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)

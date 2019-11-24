@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: e5912ed8-e4ce-438b-8ea3-d9e4c288d109
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 62c44d0c3bd2e931b1708abb48bc9c854431419f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 45e2348b4726447548544d975e60b93e464fb402
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67751148"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74450332"
 ---
-# <a name="imetadataassemblyimportenumexportedtypes-method"></a><span data-ttu-id="2f165-102">Метод IMetaDataAssemblyImport::EnumExportedTypes</span><span class="sxs-lookup"><span data-stu-id="2f165-102">IMetaDataAssemblyImport::EnumExportedTypes Method</span></span>
-<span data-ttu-id="2f165-103">Перечисляет экспортированные типы, упоминаемые в манифесте сборки в текущей области метаданных.</span><span class="sxs-lookup"><span data-stu-id="2f165-103">Enumerates the exported types referenced in the assembly manifest in the current metadata scope.</span></span>  
+# <a name="imetadataassemblyimportenumexportedtypes-method"></a><span data-ttu-id="23b61-102">Метод IMetaDataAssemblyImport::EnumExportedTypes</span><span class="sxs-lookup"><span data-stu-id="23b61-102">IMetaDataAssemblyImport::EnumExportedTypes Method</span></span>
+<span data-ttu-id="23b61-103">Enumerates the exported types referenced in the assembly manifest in the current metadata scope.</span><span class="sxs-lookup"><span data-stu-id="23b61-103">Enumerates the exported types referenced in the assembly manifest in the current metadata scope.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2f165-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="2f165-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="23b61-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="23b61-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT EnumExportedTypes (  
@@ -38,35 +36,35 @@ HRESULT EnumExportedTypes (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="2f165-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="2f165-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="23b61-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="23b61-105">Parameters</span></span>  
  `phEnum`  
- <span data-ttu-id="2f165-106">[in, out] Указатель на перечислитель.</span><span class="sxs-lookup"><span data-stu-id="2f165-106">[in, out] A pointer to the enumerator.</span></span> <span data-ttu-id="2f165-107">Это должно быть значение null значение, если `EnumExportedTypes` метод вызывается в первый раз.</span><span class="sxs-lookup"><span data-stu-id="2f165-107">This must be a null value when the `EnumExportedTypes` method is called for the first time.</span></span>  
+ <span data-ttu-id="23b61-106">[in, out] A pointer to the enumerator.</span><span class="sxs-lookup"><span data-stu-id="23b61-106">[in, out] A pointer to the enumerator.</span></span> <span data-ttu-id="23b61-107">This must be a null value when the `EnumExportedTypes` method is called for the first time.</span><span class="sxs-lookup"><span data-stu-id="23b61-107">This must be a null value when the `EnumExportedTypes` method is called for the first time.</span></span>  
   
  `rExportedTypes`  
- <span data-ttu-id="2f165-108">[out] Перечисление `mdExportedType` токены метаданных.</span><span class="sxs-lookup"><span data-stu-id="2f165-108">[out] The enumeration of `mdExportedType` metadata tokens.</span></span>  
+ <span data-ttu-id="23b61-108">[out] The enumeration of `mdExportedType` metadata tokens.</span><span class="sxs-lookup"><span data-stu-id="23b61-108">[out] The enumeration of `mdExportedType` metadata tokens.</span></span>  
   
  `cMax`  
- <span data-ttu-id="2f165-109">[in] Максимальное число `mdExportedType` маркеры, которые могут быть помещены в `rExportedTypes` массива.</span><span class="sxs-lookup"><span data-stu-id="2f165-109">[in] The maximum number of `mdExportedType` tokens that can be placed in the `rExportedTypes` array.</span></span>  
+ <span data-ttu-id="23b61-109">[in] The maximum number of `mdExportedType` tokens that can be placed in the `rExportedTypes` array.</span><span class="sxs-lookup"><span data-stu-id="23b61-109">[in] The maximum number of `mdExportedType` tokens that can be placed in the `rExportedTypes` array.</span></span>  
   
  `pcTokens`  
- <span data-ttu-id="2f165-110">[out] Число `mdExportedType` маркеры непосредственно в `rExportedTypes`.</span><span class="sxs-lookup"><span data-stu-id="2f165-110">[out] The number of `mdExportedType` tokens actually placed in `rExportedTypes`.</span></span>  
+ <span data-ttu-id="23b61-110">[out] The number of `mdExportedType` tokens actually placed in `rExportedTypes`.</span><span class="sxs-lookup"><span data-stu-id="23b61-110">[out] The number of `mdExportedType` tokens actually placed in `rExportedTypes`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="2f165-111">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="2f165-111">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="23b61-111">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="23b61-111">Return Value</span></span>  
   
-|<span data-ttu-id="2f165-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="2f165-112">HRESULT</span></span>|<span data-ttu-id="2f165-113">Описание</span><span class="sxs-lookup"><span data-stu-id="2f165-113">Description</span></span>|  
+|<span data-ttu-id="23b61-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="23b61-112">HRESULT</span></span>|<span data-ttu-id="23b61-113">Описание</span><span class="sxs-lookup"><span data-stu-id="23b61-113">Description</span></span>|  
 |-------------|-----------------|  
-|`S_OK`|<span data-ttu-id="2f165-114">`EnumExportedTypes` успешно возвращен.</span><span class="sxs-lookup"><span data-stu-id="2f165-114">`EnumExportedTypes` returned successfully.</span></span>|  
-|`S_FALSE`|<span data-ttu-id="2f165-115">Существуют маркеры для перечисления отсутствуют.</span><span class="sxs-lookup"><span data-stu-id="2f165-115">There are no tokens to enumerate.</span></span> <span data-ttu-id="2f165-116">В этом случае `pcTokens` присваивается нулевое значение.</span><span class="sxs-lookup"><span data-stu-id="2f165-116">In this case, `pcTokens` is set to zero.</span></span>|  
+|`S_OK`|<span data-ttu-id="23b61-114">`EnumExportedTypes` returned successfully.</span><span class="sxs-lookup"><span data-stu-id="23b61-114">`EnumExportedTypes` returned successfully.</span></span>|  
+|`S_FALSE`|<span data-ttu-id="23b61-115">There are no tokens to enumerate.</span><span class="sxs-lookup"><span data-stu-id="23b61-115">There are no tokens to enumerate.</span></span> <span data-ttu-id="23b61-116">In this case, `pcTokens` is set to zero.</span><span class="sxs-lookup"><span data-stu-id="23b61-116">In this case, `pcTokens` is set to zero.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="2f165-117">Требования</span><span class="sxs-lookup"><span data-stu-id="2f165-117">Requirements</span></span>  
- <span data-ttu-id="2f165-118">**Платформа:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="2f165-118">**Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="23b61-117">Требования</span><span class="sxs-lookup"><span data-stu-id="23b61-117">Requirements</span></span>  
+ <span data-ttu-id="23b61-118">**Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="23b61-118">**Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="2f165-119">**Заголовок.** Cor.h</span><span class="sxs-lookup"><span data-stu-id="2f165-119">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="23b61-119">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="23b61-119">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="2f165-120">**Библиотека:** Используется как ресурс в MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="2f165-120">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="23b61-120">**Library:** Used as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="23b61-120">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="2f165-121">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2f165-121">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="23b61-121">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="23b61-121">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2f165-122">См. также</span><span class="sxs-lookup"><span data-stu-id="2f165-122">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="23b61-122">См. также</span><span class="sxs-lookup"><span data-stu-id="23b61-122">See also</span></span>
 
-- [<span data-ttu-id="2f165-123">Интерфейс IMetaDataAssemblyImport</span><span class="sxs-lookup"><span data-stu-id="2f165-123">IMetaDataAssemblyImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+- [<span data-ttu-id="23b61-123">Интерфейс IMetaDataAssemblyImport</span><span class="sxs-lookup"><span data-stu-id="23b61-123">IMetaDataAssemblyImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: 69156fbf-7219-43bf-b4b8-b13f1a2fcb86
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 576fb8632818a6b8ffc3e2c0acc50eaafd074de3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9d4690cb6adedc77717e577d409cb52b18b1b5ca
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67766963"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74443831"
 ---
-# <a name="corcallingconvention-enumeration"></a><span data-ttu-id="2efb1-102">Перечисление CorCallingConvention</span><span class="sxs-lookup"><span data-stu-id="2efb1-102">CorCallingConvention Enumeration</span></span>
-<span data-ttu-id="2efb1-103">Содержит значения, описывающие типы соглашений о вызовах, выполняемых в управляемом коде.</span><span class="sxs-lookup"><span data-stu-id="2efb1-103">Contains values that describe the types of calling conventions that are made in managed code.</span></span>  
+# <a name="corcallingconvention-enumeration"></a><span data-ttu-id="7301c-102">Перечисление CorCallingConvention</span><span class="sxs-lookup"><span data-stu-id="7301c-102">CorCallingConvention Enumeration</span></span>
+<span data-ttu-id="7301c-103">Содержит значения, описывающие типы соглашений о вызовах, выполняемых в управляемом коде.</span><span class="sxs-lookup"><span data-stu-id="7301c-103">Contains values that describe the types of calling conventions that are made in managed code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2efb1-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="2efb1-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7301c-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="7301c-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum CorCallingConvention  
@@ -50,31 +48,31 @@ typedef enum CorCallingConvention
 } CorCallingConvention;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="2efb1-105">Участники</span><span class="sxs-lookup"><span data-stu-id="2efb1-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="7301c-105">Члены</span><span class="sxs-lookup"><span data-stu-id="7301c-105">Members</span></span>  
   
-|<span data-ttu-id="2efb1-106">Член</span><span class="sxs-lookup"><span data-stu-id="2efb1-106">Member</span></span>|<span data-ttu-id="2efb1-107">Описание</span><span class="sxs-lookup"><span data-stu-id="2efb1-107">Description</span></span>|  
+|<span data-ttu-id="7301c-106">Член</span><span class="sxs-lookup"><span data-stu-id="7301c-106">Member</span></span>|<span data-ttu-id="7301c-107">Описание</span><span class="sxs-lookup"><span data-stu-id="7301c-107">Description</span></span>|  
 |------------|-----------------|  
-|`IMAGE_CEE_CS_CALLCONV_DEFAULT`|<span data-ttu-id="2efb1-108">Указывает соглашение о вызовах по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="2efb1-108">Indicates a default calling convention.</span></span>|  
-|`IMAGE_CEE_CS_CALLCONV_VARARG`|<span data-ttu-id="2efb1-109">Указывает, что этот метод принимает переменное количество параметров.</span><span class="sxs-lookup"><span data-stu-id="2efb1-109">Indicates that the method takes a variable number of parameters.</span></span>|  
-|`IMAGE_CEE_CS_CALLCONV_FIELD`|<span data-ttu-id="2efb1-110">Указывает, что вызов к полю.</span><span class="sxs-lookup"><span data-stu-id="2efb1-110">Indicates that the call is to a field.</span></span>|  
-|`IMAGE_CEE_CS_CALLCONV_LOCAL_SIG`|<span data-ttu-id="2efb1-111">Указывает, что вызов предназначен для локального метода.</span><span class="sxs-lookup"><span data-stu-id="2efb1-111">Indicates that the call is to a local method.</span></span>|  
-|`IMAGE_CEE_CS_CALLCONV_PROPERTY`|<span data-ttu-id="2efb1-112">Указывает, что вызов к свойству.</span><span class="sxs-lookup"><span data-stu-id="2efb1-112">Indicates that the call is to a property.</span></span>|  
-|`IMAGE_CEE_CS_CALLCONV_UNMGD`|<span data-ttu-id="2efb1-113">Указывает, что вызов является неуправляемым.</span><span class="sxs-lookup"><span data-stu-id="2efb1-113">Indicates that the call is unmanaged.</span></span>|  
-|`IMAGE_CEE_CS_CALLCONV_GENERICINST`|<span data-ttu-id="2efb1-114">Показывает создание экземпляра универсального метода.</span><span class="sxs-lookup"><span data-stu-id="2efb1-114">Indicates a generic method instantiation.</span></span>|  
-|`IMAGE_CEE_CS_CALLCONV_NATIVEVARARG`|<span data-ttu-id="2efb1-115">Указывает метод, который принимает переменное количество параметров вызова PInvoke 64-разрядной.</span><span class="sxs-lookup"><span data-stu-id="2efb1-115">Indicates a 64-bit PInvoke call to a method that takes a variable number of parameters.</span></span>|  
-|`IMAGE_CEE_CS_CALLCONV_MAX`|<span data-ttu-id="2efb1-116">Описывает недопустимое 4-разрядное значение.</span><span class="sxs-lookup"><span data-stu-id="2efb1-116">Describes an invalid 4-bit value.</span></span>|  
-|`IMAGE_CEE_CS_CALLCONV_MASK`|<span data-ttu-id="2efb1-117">Указывает, что соглашение о вызове описывается четырьмя младшими битами.</span><span class="sxs-lookup"><span data-stu-id="2efb1-117">Indicates that the calling convention is described by the bottom four bits.</span></span>|  
-|`IMAGE_CEE_CS_CALLCONV_HASTHIS`|<span data-ttu-id="2efb1-118">Указывает, что старшие биты описывают `this` параметра.</span><span class="sxs-lookup"><span data-stu-id="2efb1-118">Indicates that the top bit describes a `this` parameter.</span></span>|  
-|`IMAGE_CEE_CS_CALLCONV_EXPLICITTHIS`|<span data-ttu-id="2efb1-119">Указывает, что `this` параметра явно описан в сигнатуре.</span><span class="sxs-lookup"><span data-stu-id="2efb1-119">Indicates that a `this` parameter is explicitly described in the signature.</span></span>|  
-|`IMAGE_CEE_CS_CALLCONV_GENERIC`|<span data-ttu-id="2efb1-120">Указывает сигнатуру универсального метода с явной количество аргументов типа.</span><span class="sxs-lookup"><span data-stu-id="2efb1-120">Indicates a generic method signature with an explicit number of type arguments.</span></span> <span data-ttu-id="2efb1-121">Это предшествует обычное число параметров.</span><span class="sxs-lookup"><span data-stu-id="2efb1-121">This precedes an ordinary parameter count.</span></span>|  
+|`IMAGE_CEE_CS_CALLCONV_DEFAULT`|<span data-ttu-id="7301c-108">Indicates a default calling convention.</span><span class="sxs-lookup"><span data-stu-id="7301c-108">Indicates a default calling convention.</span></span>|  
+|`IMAGE_CEE_CS_CALLCONV_VARARG`|<span data-ttu-id="7301c-109">Indicates that the method takes a variable number of parameters.</span><span class="sxs-lookup"><span data-stu-id="7301c-109">Indicates that the method takes a variable number of parameters.</span></span>|  
+|`IMAGE_CEE_CS_CALLCONV_FIELD`|<span data-ttu-id="7301c-110">Indicates that the call is to a field.</span><span class="sxs-lookup"><span data-stu-id="7301c-110">Indicates that the call is to a field.</span></span>|  
+|`IMAGE_CEE_CS_CALLCONV_LOCAL_SIG`|<span data-ttu-id="7301c-111">Indicates that the call is to a local method.</span><span class="sxs-lookup"><span data-stu-id="7301c-111">Indicates that the call is to a local method.</span></span>|  
+|`IMAGE_CEE_CS_CALLCONV_PROPERTY`|<span data-ttu-id="7301c-112">Indicates that the call is to a property.</span><span class="sxs-lookup"><span data-stu-id="7301c-112">Indicates that the call is to a property.</span></span>|  
+|`IMAGE_CEE_CS_CALLCONV_UNMGD`|<span data-ttu-id="7301c-113">Indicates that the call is unmanaged.</span><span class="sxs-lookup"><span data-stu-id="7301c-113">Indicates that the call is unmanaged.</span></span>|  
+|`IMAGE_CEE_CS_CALLCONV_GENERICINST`|<span data-ttu-id="7301c-114">Indicates a generic method instantiation.</span><span class="sxs-lookup"><span data-stu-id="7301c-114">Indicates a generic method instantiation.</span></span>|  
+|`IMAGE_CEE_CS_CALLCONV_NATIVEVARARG`|<span data-ttu-id="7301c-115">Indicates a 64-bit PInvoke call to a method that takes a variable number of parameters.</span><span class="sxs-lookup"><span data-stu-id="7301c-115">Indicates a 64-bit PInvoke call to a method that takes a variable number of parameters.</span></span>|  
+|`IMAGE_CEE_CS_CALLCONV_MAX`|<span data-ttu-id="7301c-116">Describes an invalid 4-bit value.</span><span class="sxs-lookup"><span data-stu-id="7301c-116">Describes an invalid 4-bit value.</span></span>|  
+|`IMAGE_CEE_CS_CALLCONV_MASK`|<span data-ttu-id="7301c-117">Indicates that the calling convention is described by the bottom four bits.</span><span class="sxs-lookup"><span data-stu-id="7301c-117">Indicates that the calling convention is described by the bottom four bits.</span></span>|  
+|`IMAGE_CEE_CS_CALLCONV_HASTHIS`|<span data-ttu-id="7301c-118">Indicates that the top bit describes a `this` parameter.</span><span class="sxs-lookup"><span data-stu-id="7301c-118">Indicates that the top bit describes a `this` parameter.</span></span>|  
+|`IMAGE_CEE_CS_CALLCONV_EXPLICITTHIS`|<span data-ttu-id="7301c-119">Indicates that a `this` parameter is explicitly described in the signature.</span><span class="sxs-lookup"><span data-stu-id="7301c-119">Indicates that a `this` parameter is explicitly described in the signature.</span></span>|  
+|`IMAGE_CEE_CS_CALLCONV_GENERIC`|<span data-ttu-id="7301c-120">Indicates a generic method signature with an explicit number of type arguments.</span><span class="sxs-lookup"><span data-stu-id="7301c-120">Indicates a generic method signature with an explicit number of type arguments.</span></span> <span data-ttu-id="7301c-121">This precedes an ordinary parameter count.</span><span class="sxs-lookup"><span data-stu-id="7301c-121">This precedes an ordinary parameter count.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="2efb1-122">Требования</span><span class="sxs-lookup"><span data-stu-id="2efb1-122">Requirements</span></span>  
- <span data-ttu-id="2efb1-123">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="2efb1-123">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7301c-122">Требования</span><span class="sxs-lookup"><span data-stu-id="7301c-122">Requirements</span></span>  
+ <span data-ttu-id="7301c-123">**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7301c-123">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="2efb1-124">**Заголовок.** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="2efb1-124">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="7301c-124">**Header:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="7301c-124">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="2efb1-125">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2efb1-125">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="7301c-125">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7301c-125">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2efb1-126">См. также</span><span class="sxs-lookup"><span data-stu-id="2efb1-126">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7301c-126">См. также</span><span class="sxs-lookup"><span data-stu-id="7301c-126">See also</span></span>
 
-- [<span data-ttu-id="2efb1-127">Перечисления метаданных</span><span class="sxs-lookup"><span data-stu-id="2efb1-127">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [<span data-ttu-id="7301c-127">Перечисления метаданных</span><span class="sxs-lookup"><span data-stu-id="7301c-127">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
