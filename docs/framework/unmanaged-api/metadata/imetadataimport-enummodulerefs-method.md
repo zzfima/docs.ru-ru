@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 53441f3a-68d2-477c-906e-37c55dfcfb4d
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: afa2d35a193a11360b52bcbdc1d9e5dae16d1c90
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 66186d25e8fee0d6b25c0a2069d46ff9a104c625
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782130"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74450030"
 ---
-# <a name="imetadataimportenummodulerefs-method"></a><span data-ttu-id="79709-102">Метод IMetaDataImport::EnumModuleRefs</span><span class="sxs-lookup"><span data-stu-id="79709-102">IMetaDataImport::EnumModuleRefs Method</span></span>
-<span data-ttu-id="79709-103">Перечисляет токены ModuleRef, представляющие импортируемые модули.</span><span class="sxs-lookup"><span data-stu-id="79709-103">Enumerates ModuleRef tokens that represent imported modules.</span></span>  
+# <a name="imetadataimportenummodulerefs-method"></a><span data-ttu-id="6e041-102">Метод IMetaDataImport::EnumModuleRefs</span><span class="sxs-lookup"><span data-stu-id="6e041-102">IMetaDataImport::EnumModuleRefs Method</span></span>
+<span data-ttu-id="6e041-103">Перечисляет токены ModuleRef, представляющие импортируемые модули.</span><span class="sxs-lookup"><span data-stu-id="6e041-103">Enumerates ModuleRef tokens that represent imported modules.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="79709-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="79709-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6e041-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="6e041-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT EnumModuleRefs (  
@@ -38,36 +36,36 @@ HRESULT EnumModuleRefs (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="79709-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="79709-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="6e041-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="6e041-105">Parameters</span></span>  
  `phEnum`  
- <span data-ttu-id="79709-106">[in, out] Указатель на перечислитель.</span><span class="sxs-lookup"><span data-stu-id="79709-106">[in, out] A pointer to the enumerator.</span></span> <span data-ttu-id="79709-107">Это должно быть NULL при первом вызове этого метода.</span><span class="sxs-lookup"><span data-stu-id="79709-107">This must be NULL for the first call of this method.</span></span>  
+ <span data-ttu-id="6e041-106">[in, out] A pointer to the enumerator.</span><span class="sxs-lookup"><span data-stu-id="6e041-106">[in, out] A pointer to the enumerator.</span></span> <span data-ttu-id="6e041-107">This must be NULL for the first call of this method.</span><span class="sxs-lookup"><span data-stu-id="6e041-107">This must be NULL for the first call of this method.</span></span>  
   
  `rModuleRefs`  
- <span data-ttu-id="79709-108">[out] Массив, используемый для хранения токены ModuleRef.</span><span class="sxs-lookup"><span data-stu-id="79709-108">[out] The array used to store the ModuleRef tokens.</span></span>  
+ <span data-ttu-id="6e041-108">[out] The array used to store the ModuleRef tokens.</span><span class="sxs-lookup"><span data-stu-id="6e041-108">[out] The array used to store the ModuleRef tokens.</span></span>  
   
  `cMax`  
- <span data-ttu-id="79709-109">[in] Максимальный размер массива `rModuleRefs`.</span><span class="sxs-lookup"><span data-stu-id="79709-109">[in] The maximum size of the `rModuleRefs` array.</span></span>  
+ <span data-ttu-id="6e041-109">[in] Максимальный размер массива `rModuleRefs`.</span><span class="sxs-lookup"><span data-stu-id="6e041-109">[in] The maximum size of the `rModuleRefs` array.</span></span>  
   
  `pcModuleRefs`  
- <span data-ttu-id="79709-110">[out] Количество токены ModuleRef, возвращаемых в `rModuleRefs`.</span><span class="sxs-lookup"><span data-stu-id="79709-110">[out] The number of ModuleRef tokens returned in `rModuleRefs`.</span></span>  
+ <span data-ttu-id="6e041-110">[out] The number of ModuleRef tokens returned in `rModuleRefs`.</span><span class="sxs-lookup"><span data-stu-id="6e041-110">[out] The number of ModuleRef tokens returned in `rModuleRefs`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="79709-111">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="79709-111">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="6e041-111">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="6e041-111">Return Value</span></span>  
   
-|<span data-ttu-id="79709-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="79709-112">HRESULT</span></span>|<span data-ttu-id="79709-113">Описание</span><span class="sxs-lookup"><span data-stu-id="79709-113">Description</span></span>|  
+|<span data-ttu-id="6e041-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="6e041-112">HRESULT</span></span>|<span data-ttu-id="6e041-113">Описание</span><span class="sxs-lookup"><span data-stu-id="6e041-113">Description</span></span>|  
 |-------------|-----------------|  
-|`S_OK`|<span data-ttu-id="79709-114">`EnumModuleRefs` успешно возвращен.</span><span class="sxs-lookup"><span data-stu-id="79709-114">`EnumModuleRefs` returned successfully.</span></span>|  
-|`S_FALSE`|<span data-ttu-id="79709-115">Существуют маркеры для перечисления отсутствуют.</span><span class="sxs-lookup"><span data-stu-id="79709-115">There are no tokens to enumerate.</span></span> <span data-ttu-id="79709-116">В этом случае `pcModuleRefs` равно нулю.</span><span class="sxs-lookup"><span data-stu-id="79709-116">In that case, `pcModuleRefs` is zero.</span></span>|  
+|`S_OK`|<span data-ttu-id="6e041-114">`EnumModuleRefs` returned successfully.</span><span class="sxs-lookup"><span data-stu-id="6e041-114">`EnumModuleRefs` returned successfully.</span></span>|  
+|`S_FALSE`|<span data-ttu-id="6e041-115">There are no tokens to enumerate.</span><span class="sxs-lookup"><span data-stu-id="6e041-115">There are no tokens to enumerate.</span></span> <span data-ttu-id="6e041-116">In that case, `pcModuleRefs` is zero.</span><span class="sxs-lookup"><span data-stu-id="6e041-116">In that case, `pcModuleRefs` is zero.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="79709-117">Требования</span><span class="sxs-lookup"><span data-stu-id="79709-117">Requirements</span></span>  
- <span data-ttu-id="79709-118">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="79709-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="6e041-117">Требования</span><span class="sxs-lookup"><span data-stu-id="6e041-117">Requirements</span></span>  
+ <span data-ttu-id="6e041-118">**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="6e041-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="79709-119">**Заголовок.** Cor.h</span><span class="sxs-lookup"><span data-stu-id="79709-119">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="6e041-119">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="6e041-119">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="79709-120">**Библиотека:** Включена как ресурс в MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="79709-120">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="6e041-120">**Library:** Included as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="6e041-120">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="79709-121">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="79709-121">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="6e041-121">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6e041-121">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="79709-122">См. также</span><span class="sxs-lookup"><span data-stu-id="79709-122">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6e041-122">См. также</span><span class="sxs-lookup"><span data-stu-id="6e041-122">See also</span></span>
 
-- [<span data-ttu-id="79709-123">Интерфейс IMetaDataImport</span><span class="sxs-lookup"><span data-stu-id="79709-123">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="79709-124">Интерфейс IMetaDataImport2</span><span class="sxs-lookup"><span data-stu-id="79709-124">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="6e041-123">Интерфейс IMetaDataImport</span><span class="sxs-lookup"><span data-stu-id="6e041-123">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="6e041-124">Интерфейс IMetaDataImport2</span><span class="sxs-lookup"><span data-stu-id="6e041-124">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

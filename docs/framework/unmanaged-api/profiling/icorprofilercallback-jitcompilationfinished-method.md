@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 8dcd7537-d0c6-498c-8a56-2c060310ef65
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 64971319f592ee097e45cff10ef46b76e8b3b0a5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1bbdfa93913b9fdf8aa164c8ca6c35cd33a228df
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782841"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449919"
 ---
-# <a name="icorprofilercallbackjitcompilationfinished-method"></a><span data-ttu-id="01983-102">Метод ICorProfilerCallback::JITCompilationFinished</span><span class="sxs-lookup"><span data-stu-id="01983-102">ICorProfilerCallback::JITCompilationFinished Method</span></span>
-<span data-ttu-id="01983-103">Уведомляет профилировщик о завершении компиляции функции компилятор just-in-time (JIT).</span><span class="sxs-lookup"><span data-stu-id="01983-103">Notifies the profiler that the just-in-time (JIT) compiler has finished compiling a function.</span></span>  
+# <a name="icorprofilercallbackjitcompilationfinished-method"></a><span data-ttu-id="07051-102">Метод ICorProfilerCallback::JITCompilationFinished</span><span class="sxs-lookup"><span data-stu-id="07051-102">ICorProfilerCallback::JITCompilationFinished Method</span></span>
+<span data-ttu-id="07051-103">Notifies the profiler that the just-in-time (JIT) compiler has finished compiling a function.</span><span class="sxs-lookup"><span data-stu-id="07051-103">Notifies the profiler that the just-in-time (JIT) compiler has finished compiling a function.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="01983-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="01983-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="07051-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="07051-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT JITCompilationFinished(  
@@ -36,28 +34,28 @@ HRESULT JITCompilationFinished(
     [in] BOOL       fIsSafeToBlock);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="01983-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="01983-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="07051-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="07051-105">Parameters</span></span>  
  `functionId`  
- <span data-ttu-id="01983-106">[in] Идентификатор функции, который был скомпилирован.</span><span class="sxs-lookup"><span data-stu-id="01983-106">[in] The ID of the function that was compiled.</span></span>  
+ <span data-ttu-id="07051-106">[in] The ID of the function that was compiled.</span><span class="sxs-lookup"><span data-stu-id="07051-106">[in] The ID of the function that was compiled.</span></span>  
   
  `hrStatus`  
- <span data-ttu-id="01983-107">[in] Значение, указывающее, является ли компиляция прошла успешно.</span><span class="sxs-lookup"><span data-stu-id="01983-107">[in] A value indicating whether compilation was successful.</span></span>  
+ <span data-ttu-id="07051-107">[in] A value indicating whether compilation was successful.</span><span class="sxs-lookup"><span data-stu-id="07051-107">[in] A value indicating whether compilation was successful.</span></span>  
   
  `fIsSafeToBlock`  
- <span data-ttu-id="01983-108">[in] Значение, указывающее профилировщику ли блокировка повлияет на работу среды выполнения.</span><span class="sxs-lookup"><span data-stu-id="01983-108">[in] A value indicating to the profiler whether blocking will affect the operation of the runtime.</span></span> <span data-ttu-id="01983-109">Значение равно `true` Если блокировок может вызвать среды выполнения для вызывающего потока для возврата из этого обратного вызова; в противном случае `false`.</span><span class="sxs-lookup"><span data-stu-id="01983-109">The value is `true` if blocking may cause the runtime to wait for the calling thread to return from this callback; otherwise, `false`.</span></span>  
+ <span data-ttu-id="07051-108">[in] A value indicating to the profiler whether blocking will affect the operation of the runtime.</span><span class="sxs-lookup"><span data-stu-id="07051-108">[in] A value indicating to the profiler whether blocking will affect the operation of the runtime.</span></span> <span data-ttu-id="07051-109">The value is `true` if blocking may cause the runtime to wait for the calling thread to return from this callback; otherwise, `false`.</span><span class="sxs-lookup"><span data-stu-id="07051-109">The value is `true` if blocking may cause the runtime to wait for the calling thread to return from this callback; otherwise, `false`.</span></span>  
   
- <span data-ttu-id="01983-110">Несмотря на то что значение `true` не представляет угрозы для среды выполнения, он может исказить результаты профилирования.</span><span class="sxs-lookup"><span data-stu-id="01983-110">Although a value of `true` will not harm the runtime, it can skew the profiling results.</span></span>  
+ <span data-ttu-id="07051-110">Although a value of `true` will not harm the runtime, it can skew the profiling results.</span><span class="sxs-lookup"><span data-stu-id="07051-110">Although a value of `true` will not harm the runtime, it can skew the profiling results.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="01983-111">Требования</span><span class="sxs-lookup"><span data-stu-id="01983-111">Requirements</span></span>  
- <span data-ttu-id="01983-112">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="01983-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="07051-111">Требования</span><span class="sxs-lookup"><span data-stu-id="07051-111">Requirements</span></span>  
+ <span data-ttu-id="07051-112">**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="07051-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="01983-113">**Заголовок.** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="01983-113">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="07051-113">**Заголовок:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="07051-113">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="01983-114">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="01983-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="07051-114">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="07051-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="01983-115">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="01983-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="07051-115">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="07051-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="01983-116">См. также</span><span class="sxs-lookup"><span data-stu-id="01983-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="07051-116">См. также</span><span class="sxs-lookup"><span data-stu-id="07051-116">See also</span></span>
 
-- [<span data-ttu-id="01983-117">Интерфейс ICorProfilerCallback</span><span class="sxs-lookup"><span data-stu-id="01983-117">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [<span data-ttu-id="01983-118">Метод JITCompilationStarted</span><span class="sxs-lookup"><span data-stu-id="01983-118">JITCompilationStarted Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationstarted-method.md)
+- [<span data-ttu-id="07051-117">Интерфейс ICorProfilerCallback</span><span class="sxs-lookup"><span data-stu-id="07051-117">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="07051-118">Метод JITCompilationStarted</span><span class="sxs-lookup"><span data-stu-id="07051-118">JITCompilationStarted Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationstarted-method.md)

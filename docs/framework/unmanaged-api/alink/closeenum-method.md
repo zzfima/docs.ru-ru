@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: aa4a091e-13fe-4264-91de-e12f1c767c87
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 8d9529022eb04c81152dced5c63f255c510851a0
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 018af6929ad4023c70bfb975b9be010912415dd7
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70777470"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446559"
 ---
-# <a name="closeenum-method"></a><span data-ttu-id="d6a65-102">Метод CloseEnum</span><span class="sxs-lookup"><span data-stu-id="d6a65-102">CloseEnum Method</span></span>
-<span data-ttu-id="d6a65-103">Закрывает указанное перечисление и освобождает связанные ресурсы.</span><span class="sxs-lookup"><span data-stu-id="d6a65-103">Closes the indicated enumeration and frees associated resources.</span></span>  
+# <a name="closeenum-method"></a><span data-ttu-id="d3dc4-102">Метод CloseEnum</span><span class="sxs-lookup"><span data-stu-id="d3dc4-102">CloseEnum Method</span></span>
+<span data-ttu-id="d3dc4-103">Closes the indicated enumeration and frees associated resources.</span><span class="sxs-lookup"><span data-stu-id="d3dc4-103">Closes the indicated enumeration and frees associated resources.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d6a65-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="d6a65-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d3dc4-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="d3dc4-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT CloseEnum(  
@@ -35,18 +33,18 @@ HRESULT CloseEnum(
 ) PURE;  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="d6a65-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="d6a65-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="d3dc4-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="d3dc4-105">Parameters</span></span>  
  `hEnum`  
- <span data-ttu-id="d6a65-106">Обрабатываемый обработчик перечисления.</span><span class="sxs-lookup"><span data-stu-id="d6a65-106">Handle of enumeration to be closed.</span></span>  
+ <span data-ttu-id="d3dc4-106">Handle of enumeration to be closed.</span><span class="sxs-lookup"><span data-stu-id="d3dc4-106">Handle of enumeration to be closed.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="d6a65-107">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="d6a65-107">Return Value</span></span>  
- <span data-ttu-id="d6a65-108">Если метод завершается с ошибкой, возвращает значение S_OK.</span><span class="sxs-lookup"><span data-stu-id="d6a65-108">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="d3dc4-107">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="d3dc4-107">Return Value</span></span>  
+ <span data-ttu-id="d3dc4-108">Returns S_OK if the method succeeds.</span><span class="sxs-lookup"><span data-stu-id="d3dc4-108">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d6a65-109">Требования</span><span class="sxs-lookup"><span data-stu-id="d6a65-109">Requirements</span></span>  
- <span data-ttu-id="d6a65-110">Требуется ALink. h</span><span class="sxs-lookup"><span data-stu-id="d6a65-110">Requires alink.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d3dc4-109">Требования</span><span class="sxs-lookup"><span data-stu-id="d3dc4-109">Requirements</span></span>  
+ <span data-ttu-id="d3dc4-110">Requires alink.h</span><span class="sxs-lookup"><span data-stu-id="d3dc4-110">Requires alink.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d6a65-111">См. также</span><span class="sxs-lookup"><span data-stu-id="d6a65-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d3dc4-111">См. также</span><span class="sxs-lookup"><span data-stu-id="d3dc4-111">See also</span></span>
 
-- [<span data-ttu-id="d6a65-112">Интерфейс IALink</span><span class="sxs-lookup"><span data-stu-id="d6a65-112">IALink Interface</span></span>](ialink-interface.md)
-- [<span data-ttu-id="d6a65-113">Интерфейс IALink2</span><span class="sxs-lookup"><span data-stu-id="d6a65-113">IALink2 Interface</span></span>](ialink2-interface.md)
-- [<span data-ttu-id="d6a65-114">API ALink</span><span class="sxs-lookup"><span data-stu-id="d6a65-114">ALink API</span></span>](index.md)
+- [<span data-ttu-id="d3dc4-112">Интерфейс IALink</span><span class="sxs-lookup"><span data-stu-id="d3dc4-112">IALink Interface</span></span>](ialink-interface.md)
+- [<span data-ttu-id="d3dc4-113">Интерфейс IALink2</span><span class="sxs-lookup"><span data-stu-id="d3dc4-113">IALink2 Interface</span></span>](ialink2-interface.md)
+- [<span data-ttu-id="d3dc4-114">API ALink</span><span class="sxs-lookup"><span data-stu-id="d3dc4-114">ALink API</span></span>](index.md)

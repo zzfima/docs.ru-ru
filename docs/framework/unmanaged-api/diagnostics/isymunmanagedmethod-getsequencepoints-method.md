@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: f909ac48-3d8f-49fb-a369-e3d9959151cd
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 1d8cfde8f0eb14919c12d261c3f9f7209365829c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 75d477af7395a9b7d3328b2a5787f810733f3749
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67759459"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448874"
 ---
-# <a name="isymunmanagedmethodgetsequencepoints-method"></a><span data-ttu-id="3c917-102">Метод ISymUnmanagedMethod::GetSequencePoints</span><span class="sxs-lookup"><span data-stu-id="3c917-102">ISymUnmanagedMethod::GetSequencePoints Method</span></span>
-<span data-ttu-id="3c917-103">Возвращает все точки следования в методе.</span><span class="sxs-lookup"><span data-stu-id="3c917-103">Gets all the sequence points within this method.</span></span>  
+# <a name="isymunmanagedmethodgetsequencepoints-method"></a><span data-ttu-id="2ea7c-102">Метод ISymUnmanagedMethod::GetSequencePoints</span><span class="sxs-lookup"><span data-stu-id="2ea7c-102">ISymUnmanagedMethod::GetSequencePoints Method</span></span>
+<span data-ttu-id="2ea7c-103">Gets all the sequence points within this method.</span><span class="sxs-lookup"><span data-stu-id="2ea7c-103">Gets all the sequence points within this method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3c917-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="3c917-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2ea7c-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="2ea7c-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetSequencePoints(  
@@ -41,37 +39,37 @@ HRESULT GetSequencePoints(
     [in, size_is(cPoints)] ULONG32  endColumns[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="3c917-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="3c917-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="2ea7c-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="2ea7c-105">Parameters</span></span>  
  `cPoints`  
- <span data-ttu-id="3c917-106">[in] Объект `ULONG32` , получающий размер `offsets`, `documents`, `lines`, `columns`, `endLines`, и `endColumns` массивов.</span><span class="sxs-lookup"><span data-stu-id="3c917-106">[in] A `ULONG32` that receives the size of the `offsets`, `documents`, `lines`, `columns`, `endLines`, and `endColumns` arrays.</span></span>  
+ <span data-ttu-id="2ea7c-106">[in] A `ULONG32` that receives the size of the `offsets`, `documents`, `lines`, `columns`, `endLines`, and `endColumns` arrays.</span><span class="sxs-lookup"><span data-stu-id="2ea7c-106">[in] A `ULONG32` that receives the size of the `offsets`, `documents`, `lines`, `columns`, `endLines`, and `endColumns` arrays.</span></span>  
   
  `pcPoints`  
- <span data-ttu-id="3c917-107">[out] Указатель на `ULONG32` , получающий длину буфера, необходимый для точек следования.</span><span class="sxs-lookup"><span data-stu-id="3c917-107">[out] A pointer to a `ULONG32` that receives the length of the buffer required to contain the sequence points.</span></span>  
+ <span data-ttu-id="2ea7c-107">[out] A pointer to a `ULONG32` that receives the length of the buffer required to contain the sequence points.</span><span class="sxs-lookup"><span data-stu-id="2ea7c-107">[out] A pointer to a `ULONG32` that receives the length of the buffer required to contain the sequence points.</span></span>  
   
  `offsets`  
- <span data-ttu-id="3c917-108">[in] Массив, в которой будут храниться промежуточные Microsoft языка MSIL смещений от начала метода для точек следования.</span><span class="sxs-lookup"><span data-stu-id="3c917-108">[in] An array in which to store the Microsoft intermediate language (MSIL) offsets from the beginning of the method for the sequence points.</span></span>  
+ <span data-ttu-id="2ea7c-108">[in] An array in which to store the Microsoft intermediate language (MSIL) offsets from the beginning of the method for the sequence points.</span><span class="sxs-lookup"><span data-stu-id="2ea7c-108">[in] An array in which to store the Microsoft intermediate language (MSIL) offsets from the beginning of the method for the sequence points.</span></span>  
   
  `documents`  
- <span data-ttu-id="3c917-109">[in] Массив, в котором для хранения документов, в которых находятся точки следования.</span><span class="sxs-lookup"><span data-stu-id="3c917-109">[in] An array in which to store the documents in which the sequence points are located.</span></span>  
+ <span data-ttu-id="2ea7c-109">[in] An array in which to store the documents in which the sequence points are located.</span><span class="sxs-lookup"><span data-stu-id="2ea7c-109">[in] An array in which to store the documents in which the sequence points are located.</span></span>  
   
  `lines`  
- <span data-ttu-id="3c917-110">[in] Массив для хранения строк в документах, в которых находятся точки следования.</span><span class="sxs-lookup"><span data-stu-id="3c917-110">[in] An array in which to store the lines in the documents at which the sequence points are located.</span></span>  
+ <span data-ttu-id="2ea7c-110">[in] An array in which to store the lines in the documents at which the sequence points are located.</span><span class="sxs-lookup"><span data-stu-id="2ea7c-110">[in] An array in which to store the lines in the documents at which the sequence points are located.</span></span>  
   
  `columns`  
- <span data-ttu-id="3c917-111">[in] Массив, в котором для хранения этих столбцов в документах, в которых находятся точки следования.</span><span class="sxs-lookup"><span data-stu-id="3c917-111">[in] An array in which to store the columns in the documents at which the sequence points are located.</span></span>  
+ <span data-ttu-id="2ea7c-111">[in] An array in which to store the columns in the documents at which the sequence points are located.</span><span class="sxs-lookup"><span data-stu-id="2ea7c-111">[in] An array in which to store the columns in the documents at which the sequence points are located.</span></span>  
   
  `endLines`  
- <span data-ttu-id="3c917-112">[in] Массив строк в документах, в которых заканчиваются точки следования.</span><span class="sxs-lookup"><span data-stu-id="3c917-112">[in] The array of lines in the documents at which the sequence points end.</span></span>  
+ <span data-ttu-id="2ea7c-112">[in] The array of lines in the documents at which the sequence points end.</span><span class="sxs-lookup"><span data-stu-id="2ea7c-112">[in] The array of lines in the documents at which the sequence points end.</span></span>  
   
  `endColumns`  
- <span data-ttu-id="3c917-113">[in] Массив столбцов в документах, в которых заканчиваются точки следования.</span><span class="sxs-lookup"><span data-stu-id="3c917-113">[in] The array of columns in the documents at which the sequence points end.</span></span>  
+ <span data-ttu-id="2ea7c-113">[in] The array of columns in the documents at which the sequence points end.</span><span class="sxs-lookup"><span data-stu-id="2ea7c-113">[in] The array of columns in the documents at which the sequence points end.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="3c917-114">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="3c917-114">Return Value</span></span>  
- <span data-ttu-id="3c917-115">Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.</span><span class="sxs-lookup"><span data-stu-id="3c917-115">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="2ea7c-114">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="2ea7c-114">Return Value</span></span>  
+ <span data-ttu-id="2ea7c-115">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="2ea7c-115">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="3c917-116">Требования</span><span class="sxs-lookup"><span data-stu-id="3c917-116">Requirements</span></span>  
- <span data-ttu-id="3c917-117">**Заголовок.** CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="3c917-117">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="2ea7c-116">Требования</span><span class="sxs-lookup"><span data-stu-id="2ea7c-116">Requirements</span></span>  
+ <span data-ttu-id="2ea7c-117">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="2ea7c-117">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3c917-118">См. также</span><span class="sxs-lookup"><span data-stu-id="3c917-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2ea7c-118">См. также</span><span class="sxs-lookup"><span data-stu-id="2ea7c-118">See also</span></span>
 
-- [<span data-ttu-id="3c917-119">Интерфейс ISymUnmanagedMethod</span><span class="sxs-lookup"><span data-stu-id="3c917-119">ISymUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)
+- [<span data-ttu-id="2ea7c-119">Интерфейс ISymUnmanagedMethod</span><span class="sxs-lookup"><span data-stu-id="2ea7c-119">ISymUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)

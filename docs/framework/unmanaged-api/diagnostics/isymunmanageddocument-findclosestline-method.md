@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 628f2a04-e529-407d-841e-3b3da219a9cb
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 8d6be64137b59c84dfadbd7f0e4895eac2fb27e4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0e95255479792c7056bee7ee4f6c507e0f41eb6a
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776798"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449216"
 ---
-# <a name="isymunmanageddocumentfindclosestline-method"></a><span data-ttu-id="dd925-102">Метод ISymUnmanagedDocument::FindClosestLine</span><span class="sxs-lookup"><span data-stu-id="dd925-102">ISymUnmanagedDocument::FindClosestLine Method</span></span>
-<span data-ttu-id="dd925-103">Возвращает ближайшую строку, являющуюся точкой следования, для заданной строки в этом документе, которые могут поддерживаться или не может являться точкой следования.</span><span class="sxs-lookup"><span data-stu-id="dd925-103">Returns the closest line that is a sequence point, given a line in this document that may or may not be a sequence point.</span></span>  
+# <a name="isymunmanageddocumentfindclosestline-method"></a><span data-ttu-id="93a38-102">Метод ISymUnmanagedDocument::FindClosestLine</span><span class="sxs-lookup"><span data-stu-id="93a38-102">ISymUnmanagedDocument::FindClosestLine Method</span></span>
+<span data-ttu-id="93a38-103">Returns the closest line that is a sequence point, given a line in this document that may or may not be a sequence point.</span><span class="sxs-lookup"><span data-stu-id="93a38-103">Returns the closest line that is a sequence point, given a line in this document that may or may not be a sequence point.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="dd925-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="dd925-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="93a38-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="93a38-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT FindClosestLine(  
@@ -35,16 +33,16 @@ HRESULT FindClosestLine(
     [out, retval] ULONG32*  pRetVal);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="dd925-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="dd925-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="93a38-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="93a38-105">Parameters</span></span>  
  `line`  
- <span data-ttu-id="dd925-106">[in] Строка в этом документе.</span><span class="sxs-lookup"><span data-stu-id="dd925-106">[in] A line in this document.</span></span>  
+ <span data-ttu-id="93a38-106">[in] A line in this document.</span><span class="sxs-lookup"><span data-stu-id="93a38-106">[in] A line in this document.</span></span>  
   
  `pRetVal`  
- <span data-ttu-id="dd925-107">[out] Указатель на переменную, которая получает строки.</span><span class="sxs-lookup"><span data-stu-id="dd925-107">[out] A pointer to a variable that receives the line.</span></span>  
+ <span data-ttu-id="93a38-107">[out] A pointer to a variable that receives the line.</span><span class="sxs-lookup"><span data-stu-id="93a38-107">[out] A pointer to a variable that receives the line.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="dd925-108">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="dd925-108">Return Value</span></span>  
- <span data-ttu-id="dd925-109">Значение S_OK, если метод выполнен успешно; в противном случае — код ошибки.</span><span class="sxs-lookup"><span data-stu-id="dd925-109">S_OK if the method succeeds; otherwise, an error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="93a38-108">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="93a38-108">Return Value</span></span>  
+ <span data-ttu-id="93a38-109">S_OK if the method succeeds; otherwise, an error code.</span><span class="sxs-lookup"><span data-stu-id="93a38-109">S_OK if the method succeeds; otherwise, an error code.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="dd925-110">См. также</span><span class="sxs-lookup"><span data-stu-id="dd925-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="93a38-110">См. также</span><span class="sxs-lookup"><span data-stu-id="93a38-110">See also</span></span>
 
-- [<span data-ttu-id="dd925-111">Интерфейс ISymUnmanagedDocument</span><span class="sxs-lookup"><span data-stu-id="dd925-111">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
+- [<span data-ttu-id="93a38-111">Интерфейс ISymUnmanagedDocument</span><span class="sxs-lookup"><span data-stu-id="93a38-111">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

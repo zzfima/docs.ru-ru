@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: 864f1267-d267-4696-8df7-1f83f8444d6f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 5898f2f0900b0bbe392d4dbaa8fc1db5e0e45c9e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 98183ed02f8821b7c40852de2d040775d30f2518
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67767006"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74443743"
 ---
-# <a name="cordeclsecurity-enumeration"></a><span data-ttu-id="ea9b8-102">Перечисление CorDeclSecurity</span><span class="sxs-lookup"><span data-stu-id="ea9b8-102">CorDeclSecurity Enumeration</span></span>
-<span data-ttu-id="ea9b8-103">Указывает действия безопасности, которые можно выполнить с помощью декларативной безопасности.</span><span class="sxs-lookup"><span data-stu-id="ea9b8-103">Specifies the security actions that can be performed using declarative security.</span></span>  
+# <a name="cordeclsecurity-enumeration"></a><span data-ttu-id="050e9-102">Перечисление CorDeclSecurity</span><span class="sxs-lookup"><span data-stu-id="050e9-102">CorDeclSecurity Enumeration</span></span>
+<span data-ttu-id="050e9-103">Указывает действия безопасности, которые можно выполнить с помощью декларативной безопасности.</span><span class="sxs-lookup"><span data-stu-id="050e9-103">Specifies the security actions that can be performed using declarative security.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ea9b8-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="ea9b8-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="050e9-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="050e9-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum CorDeclSecurity {  
@@ -56,39 +54,39 @@ typedef enum CorDeclSecurity {
 } CorDeclSecurity;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="ea9b8-105">Участники</span><span class="sxs-lookup"><span data-stu-id="ea9b8-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="050e9-105">Члены</span><span class="sxs-lookup"><span data-stu-id="050e9-105">Members</span></span>  
   
-|<span data-ttu-id="ea9b8-106">Член</span><span class="sxs-lookup"><span data-stu-id="ea9b8-106">Member</span></span>|<span data-ttu-id="ea9b8-107">Описание</span><span class="sxs-lookup"><span data-stu-id="ea9b8-107">Description</span></span>|  
+|<span data-ttu-id="050e9-106">Член</span><span class="sxs-lookup"><span data-stu-id="050e9-106">Member</span></span>|<span data-ttu-id="050e9-107">Описание</span><span class="sxs-lookup"><span data-stu-id="050e9-107">Description</span></span>|  
 |------------|-----------------|  
-|`dclActionMask`|<span data-ttu-id="ea9b8-108">Зарезервировано.</span><span class="sxs-lookup"><span data-stu-id="ea9b8-108">Reserved.</span></span>|  
-|`dclActionNil`|<span data-ttu-id="ea9b8-109">Зарезервировано.</span><span class="sxs-lookup"><span data-stu-id="ea9b8-109">Reserved.</span></span>|  
-|`dclRequest`|<span data-ttu-id="ea9b8-110">Зарезервировано.</span><span class="sxs-lookup"><span data-stu-id="ea9b8-110">Reserved.</span></span>|  
-|`dclDemand`|<span data-ttu-id="ea9b8-111">Всем вызывающим объектам выше в стеке вызовов должно быть предоставлено разрешение, заданное текущим объектом разрешений.</span><span class="sxs-lookup"><span data-stu-id="ea9b8-111">All callers higher in the call stack are required to have been granted the permission specified by the current permission object.</span></span>|  
-|`dclAssert`|<span data-ttu-id="ea9b8-112">Вызывающий код может получить доступ к ресурсу, определяемому текущим объектом разрешения, даже если вызывающим объектам выше в стеке вызовов не предоставлено разрешение на доступ к ресурсу</span><span class="sxs-lookup"><span data-stu-id="ea9b8-112">The calling code can access the resource identified by the current permission object, even if callers higher in the stack have not been granted permission to access the resource</span></span>|  
-|`dclDeny`|<span data-ttu-id="ea9b8-113">Для доступа к ресурсу, указанному текущим объектом разрешения запрещен вызывающим объектам, даже если они имеют разрешения на доступ к нему.</span><span class="sxs-lookup"><span data-stu-id="ea9b8-113">The ability to access the resource specified by the current permission object is denied to callers, even if they have been granted permission to access it.</span></span>|  
-|`dclPermitOnly`|<span data-ttu-id="ea9b8-114">Доступ можно получить только к ресурсам, указанным данным объектом разрешения, даже если коду предоставлено разрешение на доступ к другим ресурсам.</span><span class="sxs-lookup"><span data-stu-id="ea9b8-114">Only the resources specified by this permission object can be accessed, even if the code has been granted permission to access other resources.</span></span>|  
-|`dclLinktimeCheck`|<span data-ttu-id="ea9b8-115">Непосредственный вызывающий оператор является обязательным, необходимо предоставить указанное разрешение для указанного периода времени.</span><span class="sxs-lookup"><span data-stu-id="ea9b8-115">The immediate caller is required to have been granted the specified permission for a given period of time.</span></span>|  
-|`dclInheritanceCheck`|<span data-ttu-id="ea9b8-116">Производного класса наследующему другой класс или переопределяющему метод, требуется получить указанное разрешение.</span><span class="sxs-lookup"><span data-stu-id="ea9b8-116">The derived class inheriting another class or overriding a method is required to have been granted the specified permission.</span></span>|  
-|`dclRequestMinimum`|<span data-ttu-id="ea9b8-117">Вызывающий объект может запросить минимальные разрешения, необходимые для выполнения кода.</span><span class="sxs-lookup"><span data-stu-id="ea9b8-117">The caller can request for the minimum permissions required for code to run.</span></span> <span data-ttu-id="ea9b8-118">Это действие может использоваться только в пределах сборки.</span><span class="sxs-lookup"><span data-stu-id="ea9b8-118">This action can only be used within the scope of the assembly.</span></span>|  
-|`dclRequestOptional`|<span data-ttu-id="ea9b8-119">Вызывающий объект может запросить дополнительные разрешения, которые не являются обязательными (не требуется для запуска).</span><span class="sxs-lookup"><span data-stu-id="ea9b8-119">The caller can request for additional permissions that are optional (not required to run).</span></span> <span data-ttu-id="ea9b8-120">Этот запрос неявно отклоняет все прочие разрешения, не запрошенные специально.</span><span class="sxs-lookup"><span data-stu-id="ea9b8-120">This request implicitly refuses all other permissions not specifically requested.</span></span> <span data-ttu-id="ea9b8-121">Это действие может использоваться только в пределах сборки.</span><span class="sxs-lookup"><span data-stu-id="ea9b8-121">This action can only be used within the scope of the assembly.</span></span>|  
-|`dclRequestRefuse`|<span data-ttu-id="ea9b8-122">Не получат запрос вызывающей стороны для разрешения, которые могут быть неправильно использованы.</span><span class="sxs-lookup"><span data-stu-id="ea9b8-122">The caller's request for permissions that might be misused will not be granted.</span></span> <span data-ttu-id="ea9b8-123">Это действие может использоваться только в пределах сборки.</span><span class="sxs-lookup"><span data-stu-id="ea9b8-123">This action can only be used within the scope of the assembly.</span></span>|  
-|`dclPrejitGrant`|<span data-ttu-id="ea9b8-124">Зарезервировано.</span><span class="sxs-lookup"><span data-stu-id="ea9b8-124">Reserved.</span></span>|  
-|`dclPrejitDenied`|<span data-ttu-id="ea9b8-125">Зарезервировано.</span><span class="sxs-lookup"><span data-stu-id="ea9b8-125">Reserved.</span></span>|  
-|`dclNonCasDemand`|<span data-ttu-id="ea9b8-126">Зарезервировано.</span><span class="sxs-lookup"><span data-stu-id="ea9b8-126">Reserved.</span></span>|  
-|`dclNonCasLinkDemand`|<span data-ttu-id="ea9b8-127">Указанное разрешение необходимо предоставить непосредственно вызывающему объекту.</span><span class="sxs-lookup"><span data-stu-id="ea9b8-127">The immediate caller is required to have been granted the specified permission.</span></span>|  
-|`dclNonCasInheritance`|<span data-ttu-id="ea9b8-128">Зарезервировано.</span><span class="sxs-lookup"><span data-stu-id="ea9b8-128">Reserved.</span></span>|  
-|`dclLinkDemandChoice`|<span data-ttu-id="ea9b8-129">Зарезервировано.</span><span class="sxs-lookup"><span data-stu-id="ea9b8-129">Reserved.</span></span>|  
-|`dclInheritanceDemandChoice`|<span data-ttu-id="ea9b8-130">Зарезервировано.</span><span class="sxs-lookup"><span data-stu-id="ea9b8-130">Reserved.</span></span>|  
-|`dclDemandChoice`|<span data-ttu-id="ea9b8-131">Зарезервировано.</span><span class="sxs-lookup"><span data-stu-id="ea9b8-131">Reserved.</span></span>|  
-|`dclMaximumValue`|<span data-ttu-id="ea9b8-132">Зарезервировано.</span><span class="sxs-lookup"><span data-stu-id="ea9b8-132">Reserved.</span></span>|  
+|`dclActionMask`|<span data-ttu-id="050e9-108">Зарезервировано.</span><span class="sxs-lookup"><span data-stu-id="050e9-108">Reserved.</span></span>|  
+|`dclActionNil`|<span data-ttu-id="050e9-109">Зарезервировано.</span><span class="sxs-lookup"><span data-stu-id="050e9-109">Reserved.</span></span>|  
+|`dclRequest`|<span data-ttu-id="050e9-110">Зарезервировано.</span><span class="sxs-lookup"><span data-stu-id="050e9-110">Reserved.</span></span>|  
+|`dclDemand`|<span data-ttu-id="050e9-111">Всем вызывающим объектам выше в стеке вызовов должно быть предоставлено разрешение, заданное текущим объектом разрешений.</span><span class="sxs-lookup"><span data-stu-id="050e9-111">All callers higher in the call stack are required to have been granted the permission specified by the current permission object.</span></span>|  
+|`dclAssert`|<span data-ttu-id="050e9-112">The calling code can access the resource identified by the current permission object, even if callers higher in the stack have not been granted permission to access the resource</span><span class="sxs-lookup"><span data-stu-id="050e9-112">The calling code can access the resource identified by the current permission object, even if callers higher in the stack have not been granted permission to access the resource</span></span>|  
+|`dclDeny`|<span data-ttu-id="050e9-113">The ability to access the resource specified by the current permission object is denied to callers, even if they have been granted permission to access it.</span><span class="sxs-lookup"><span data-stu-id="050e9-113">The ability to access the resource specified by the current permission object is denied to callers, even if they have been granted permission to access it.</span></span>|  
+|`dclPermitOnly`|<span data-ttu-id="050e9-114">Доступ можно получить только к ресурсам, указанным данным объектом разрешения, даже если коду предоставлено разрешение на доступ к другим ресурсам.</span><span class="sxs-lookup"><span data-stu-id="050e9-114">Only the resources specified by this permission object can be accessed, even if the code has been granted permission to access other resources.</span></span>|  
+|`dclLinktimeCheck`|<span data-ttu-id="050e9-115">The immediate caller is required to have been granted the specified permission for a given period of time.</span><span class="sxs-lookup"><span data-stu-id="050e9-115">The immediate caller is required to have been granted the specified permission for a given period of time.</span></span>|  
+|`dclInheritanceCheck`|<span data-ttu-id="050e9-116">The derived class inheriting another class or overriding a method is required to have been granted the specified permission.</span><span class="sxs-lookup"><span data-stu-id="050e9-116">The derived class inheriting another class or overriding a method is required to have been granted the specified permission.</span></span>|  
+|`dclRequestMinimum`|<span data-ttu-id="050e9-117">The caller can request for the minimum permissions required for code to run.</span><span class="sxs-lookup"><span data-stu-id="050e9-117">The caller can request for the minimum permissions required for code to run.</span></span> <span data-ttu-id="050e9-118">Это действие может использоваться только в пределах сборки.</span><span class="sxs-lookup"><span data-stu-id="050e9-118">This action can only be used within the scope of the assembly.</span></span>|  
+|`dclRequestOptional`|<span data-ttu-id="050e9-119">The caller can request for additional permissions that are optional (not required to run).</span><span class="sxs-lookup"><span data-stu-id="050e9-119">The caller can request for additional permissions that are optional (not required to run).</span></span> <span data-ttu-id="050e9-120">Этот запрос неявно отклоняет все прочие разрешения, не запрошенные специально.</span><span class="sxs-lookup"><span data-stu-id="050e9-120">This request implicitly refuses all other permissions not specifically requested.</span></span> <span data-ttu-id="050e9-121">Это действие может использоваться только в пределах сборки.</span><span class="sxs-lookup"><span data-stu-id="050e9-121">This action can only be used within the scope of the assembly.</span></span>|  
+|`dclRequestRefuse`|<span data-ttu-id="050e9-122">The caller's request for permissions that might be misused will not be granted.</span><span class="sxs-lookup"><span data-stu-id="050e9-122">The caller's request for permissions that might be misused will not be granted.</span></span> <span data-ttu-id="050e9-123">Это действие может использоваться только в пределах сборки.</span><span class="sxs-lookup"><span data-stu-id="050e9-123">This action can only be used within the scope of the assembly.</span></span>|  
+|`dclPrejitGrant`|<span data-ttu-id="050e9-124">Зарезервировано.</span><span class="sxs-lookup"><span data-stu-id="050e9-124">Reserved.</span></span>|  
+|`dclPrejitDenied`|<span data-ttu-id="050e9-125">Зарезервировано.</span><span class="sxs-lookup"><span data-stu-id="050e9-125">Reserved.</span></span>|  
+|`dclNonCasDemand`|<span data-ttu-id="050e9-126">Зарезервировано.</span><span class="sxs-lookup"><span data-stu-id="050e9-126">Reserved.</span></span>|  
+|`dclNonCasLinkDemand`|<span data-ttu-id="050e9-127">Указанное разрешение необходимо предоставить непосредственно вызывающему объекту.</span><span class="sxs-lookup"><span data-stu-id="050e9-127">The immediate caller is required to have been granted the specified permission.</span></span>|  
+|`dclNonCasInheritance`|<span data-ttu-id="050e9-128">Зарезервировано.</span><span class="sxs-lookup"><span data-stu-id="050e9-128">Reserved.</span></span>|  
+|`dclLinkDemandChoice`|<span data-ttu-id="050e9-129">Зарезервировано.</span><span class="sxs-lookup"><span data-stu-id="050e9-129">Reserved.</span></span>|  
+|`dclInheritanceDemandChoice`|<span data-ttu-id="050e9-130">Зарезервировано.</span><span class="sxs-lookup"><span data-stu-id="050e9-130">Reserved.</span></span>|  
+|`dclDemandChoice`|<span data-ttu-id="050e9-131">Зарезервировано.</span><span class="sxs-lookup"><span data-stu-id="050e9-131">Reserved.</span></span>|  
+|`dclMaximumValue`|<span data-ttu-id="050e9-132">Зарезервировано.</span><span class="sxs-lookup"><span data-stu-id="050e9-132">Reserved.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="ea9b8-133">Требования</span><span class="sxs-lookup"><span data-stu-id="ea9b8-133">Requirements</span></span>  
- <span data-ttu-id="ea9b8-134">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ea9b8-134">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="050e9-133">Требования</span><span class="sxs-lookup"><span data-stu-id="050e9-133">Requirements</span></span>  
+ <span data-ttu-id="050e9-134">**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="050e9-134">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ea9b8-135">**Заголовок.** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="ea9b8-135">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="050e9-135">**Header:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="050e9-135">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="ea9b8-136">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ea9b8-136">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="050e9-136">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="050e9-136">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ea9b8-137">См. также</span><span class="sxs-lookup"><span data-stu-id="ea9b8-137">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="050e9-137">См. также</span><span class="sxs-lookup"><span data-stu-id="050e9-137">See also</span></span>
 
-- [<span data-ttu-id="ea9b8-138">Перечисления метаданных</span><span class="sxs-lookup"><span data-stu-id="ea9b8-138">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [<span data-ttu-id="050e9-138">Перечисления метаданных</span><span class="sxs-lookup"><span data-stu-id="050e9-138">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

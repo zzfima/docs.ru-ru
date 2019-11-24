@@ -15,38 +15,36 @@ helpviewer_keywords:
 ms.assetid: 62ec65e3-3e9d-400b-ae61-d24b8963995b
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6403540f9641ce885edf2760370e35f48faf1f10
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5ccd90e92e83d7f9f6f19a082fb84dc1f1c35f4c
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780323"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447816"
 ---
-# <a name="icorprofilerfunctionenumgetcount-method"></a><span data-ttu-id="20a59-102">Метод ICorProfilerFunctionEnum::GetCount</span><span class="sxs-lookup"><span data-stu-id="20a59-102">ICorProfilerFunctionEnum::GetCount Method</span></span>
-<span data-ttu-id="20a59-103">Возвращает количество функций, загруженных приложением или принудительно загруженных профилировщиком.</span><span class="sxs-lookup"><span data-stu-id="20a59-103">Gets the number of functions that were loaded by the application or forcibly loaded by the profiler.</span></span>  
+# <a name="icorprofilerfunctionenumgetcount-method"></a><span data-ttu-id="8f30e-102">Метод ICorProfilerFunctionEnum::GetCount</span><span class="sxs-lookup"><span data-stu-id="8f30e-102">ICorProfilerFunctionEnum::GetCount Method</span></span>
+<span data-ttu-id="8f30e-103">Возвращает количество функций, загруженных приложением или принудительно загруженных профилировщиком.</span><span class="sxs-lookup"><span data-stu-id="8f30e-103">Gets the number of functions that were loaded by the application or forcibly loaded by the profiler.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="20a59-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="20a59-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8f30e-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="8f30e-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetCount([out] ULONG * pcelt);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="20a59-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="20a59-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="8f30e-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="8f30e-105">Parameters</span></span>  
  `celt`  
- <span data-ttu-id="20a59-106">[out] Количество функций, которые были загружены.</span><span class="sxs-lookup"><span data-stu-id="20a59-106">[out] The number of functions that were loaded.</span></span>  
+ <span data-ttu-id="8f30e-106">[out] The number of functions that were loaded.</span><span class="sxs-lookup"><span data-stu-id="8f30e-106">[out] The number of functions that were loaded.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="20a59-107">Требования</span><span class="sxs-lookup"><span data-stu-id="20a59-107">Requirements</span></span>  
- <span data-ttu-id="20a59-108">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="20a59-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8f30e-107">Требования</span><span class="sxs-lookup"><span data-stu-id="8f30e-107">Requirements</span></span>  
+ <span data-ttu-id="8f30e-108">**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8f30e-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="20a59-109">**Заголовок.** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="20a59-109">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="8f30e-109">**Заголовок:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="8f30e-109">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="20a59-110">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="20a59-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="8f30e-110">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="8f30e-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="20a59-111">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="20a59-111">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="8f30e-111">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8f30e-111">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="20a59-112">См. также</span><span class="sxs-lookup"><span data-stu-id="20a59-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8f30e-112">См. также</span><span class="sxs-lookup"><span data-stu-id="8f30e-112">See also</span></span>
 
-- [<span data-ttu-id="20a59-113">Интерфейс ICorProfilerFunctionEnum</span><span class="sxs-lookup"><span data-stu-id="20a59-113">ICorProfilerFunctionEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-interface.md)
-- [<span data-ttu-id="20a59-114">Интерфейсы профилирования</span><span class="sxs-lookup"><span data-stu-id="20a59-114">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [<span data-ttu-id="8f30e-113">Интерфейс ICorProfilerFunctionEnum</span><span class="sxs-lookup"><span data-stu-id="8f30e-113">ICorProfilerFunctionEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-interface.md)
+- [<span data-ttu-id="8f30e-114">Интерфейсы профилирования</span><span class="sxs-lookup"><span data-stu-id="8f30e-114">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)

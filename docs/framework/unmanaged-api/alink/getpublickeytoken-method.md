@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: 4a16374c-94b0-47b0-9fed-88c2b0cdccd4
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 158ecc036d56e2ad9a3fa650677c04ebcbfd7696
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 2e7ed4e1529104db30b0b06665f74342d9ca9a01
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70777227"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447240"
 ---
-# <a name="getpublickeytoken-method"></a><span data-ttu-id="0bb6c-102">Метод GetPublicKeyToken</span><span class="sxs-lookup"><span data-stu-id="0bb6c-102">GetPublicKeyToken Method</span></span>
-<span data-ttu-id="0bb6c-103">Извлекает токен открытого ключа для данного ключа или контейнера ключей.</span><span class="sxs-lookup"><span data-stu-id="0bb6c-103">Retrieves the public key token for a given keyfile or key container.</span></span>  
+# <a name="getpublickeytoken-method"></a><span data-ttu-id="569d7-102">Метод GetPublicKeyToken</span><span class="sxs-lookup"><span data-stu-id="569d7-102">GetPublicKeyToken Method</span></span>
+<span data-ttu-id="569d7-103">Retrieves the public key token for a given keyfile or key container.</span><span class="sxs-lookup"><span data-stu-id="569d7-103">Retrieves the public key token for a given keyfile or key container.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0bb6c-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="0bb6c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="569d7-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="569d7-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetPublicKeyToken(  
@@ -37,27 +35,27 @@ HRESULT GetPublicKeyToken(
 ) PURE;  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="0bb6c-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="0bb6c-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="569d7-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="569d7-105">Parameters</span></span>  
  `pszKeyFile`  
- <span data-ttu-id="0bb6c-106">Имя файла ключа.</span><span class="sxs-lookup"><span data-stu-id="0bb6c-106">Filename of the key.</span></span>  
+ <span data-ttu-id="569d7-106">Filename of the key.</span><span class="sxs-lookup"><span data-stu-id="569d7-106">Filename of the key.</span></span>  
   
  `pszKeyContainer`  
- <span data-ttu-id="0bb6c-107">Имя контейнера ключей.</span><span class="sxs-lookup"><span data-stu-id="0bb6c-107">Name of the key container.</span></span>  
+ <span data-ttu-id="569d7-107">Name of the key container.</span><span class="sxs-lookup"><span data-stu-id="569d7-107">Name of the key container.</span></span>  
   
  `pvPublicKeyToken`  
- <span data-ttu-id="0bb6c-108">Адрес, по которому должен храниться токен ключа.</span><span class="sxs-lookup"><span data-stu-id="0bb6c-108">Address where key token is to be stored.</span></span>  
+ <span data-ttu-id="569d7-108">Address where key token is to be stored.</span><span class="sxs-lookup"><span data-stu-id="569d7-108">Address where key token is to be stored.</span></span>  
   
  `pcbPublicKeyToken`  
- <span data-ttu-id="0bb6c-109">Задает размер буфера (в байтах), указанного в параметре `pvPublicKeyToken`.</span><span class="sxs-lookup"><span data-stu-id="0bb6c-109">Specifies the size, in bytes, of the buffer indicated by `pvPublicKeyToken`.</span></span> <span data-ttu-id="0bb6c-110">После возврата содержит фактическое число используемых байтов.</span><span class="sxs-lookup"><span data-stu-id="0bb6c-110">Upon return, contains actual number of bytes used.</span></span>  
+ <span data-ttu-id="569d7-109">Specifies the size, in bytes, of the buffer indicated by `pvPublicKeyToken`.</span><span class="sxs-lookup"><span data-stu-id="569d7-109">Specifies the size, in bytes, of the buffer indicated by `pvPublicKeyToken`.</span></span> <span data-ttu-id="569d7-110">Upon return, contains actual number of bytes used.</span><span class="sxs-lookup"><span data-stu-id="569d7-110">Upon return, contains actual number of bytes used.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="0bb6c-111">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="0bb6c-111">Return Value</span></span>  
- <span data-ttu-id="0bb6c-112">Если метод завершается с ошибкой, возвращает значение S_OK.</span><span class="sxs-lookup"><span data-stu-id="0bb6c-112">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="569d7-111">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="569d7-111">Return Value</span></span>  
+ <span data-ttu-id="569d7-112">Returns S_OK if the method succeeds.</span><span class="sxs-lookup"><span data-stu-id="569d7-112">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="0bb6c-113">Требования</span><span class="sxs-lookup"><span data-stu-id="0bb6c-113">Requirements</span></span>  
- <span data-ttu-id="0bb6c-114">Требуется ALink. h.</span><span class="sxs-lookup"><span data-stu-id="0bb6c-114">Requires alink.h.</span></span>  
+## <a name="requirements"></a><span data-ttu-id="569d7-113">Требования</span><span class="sxs-lookup"><span data-stu-id="569d7-113">Requirements</span></span>  
+ <span data-ttu-id="569d7-114">Requires alink.h.</span><span class="sxs-lookup"><span data-stu-id="569d7-114">Requires alink.h.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0bb6c-115">См. также</span><span class="sxs-lookup"><span data-stu-id="0bb6c-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="569d7-115">См. также</span><span class="sxs-lookup"><span data-stu-id="569d7-115">See also</span></span>
 
-- [<span data-ttu-id="0bb6c-116">Интерфейс IALink2</span><span class="sxs-lookup"><span data-stu-id="0bb6c-116">IALink2 Interface</span></span>](ialink2-interface.md)
-- [<span data-ttu-id="0bb6c-117">Интерфейс IALink</span><span class="sxs-lookup"><span data-stu-id="0bb6c-117">IALink Interface</span></span>](ialink-interface.md)
-- [<span data-ttu-id="0bb6c-118">API ALink</span><span class="sxs-lookup"><span data-stu-id="0bb6c-118">ALink API</span></span>](index.md)
+- [<span data-ttu-id="569d7-116">Интерфейс IALink2</span><span class="sxs-lookup"><span data-stu-id="569d7-116">IALink2 Interface</span></span>](ialink2-interface.md)
+- [<span data-ttu-id="569d7-117">Интерфейс IALink</span><span class="sxs-lookup"><span data-stu-id="569d7-117">IALink Interface</span></span>](ialink-interface.md)
+- [<span data-ttu-id="569d7-118">API ALink</span><span class="sxs-lookup"><span data-stu-id="569d7-118">ALink API</span></span>](index.md)
