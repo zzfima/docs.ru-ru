@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 52118dc9-fe6e-4b39-aa48-c3cc3ea4214d
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d64a39dcdb6e3b26ff38106673719e475315f5dc
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e5fa3647c86d97730e7ad6a2576dd34af75251d6
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782112"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74433957"
 ---
 # <a name="imetadataimportenumparams-method"></a>Метод IMetaDataImport::EnumParams
 Перечисляет токены ParamDef, представляющие параметры метода, на который ссылается указанный токен MethodDef.  
@@ -41,33 +39,33 @@ HRESULT EnumParams (
   
 ## <a name="parameters"></a>Параметры  
  `phEnum`  
- [in, out] Указатель на перечислитель. Это должно быть NULL при первом вызове этого метода.  
+ [in, out] A pointer to the enumerator. This must be NULL for the first call of this method.  
   
  `mb`  
- [in] Токен MethodDef, представляющий метод с параметрами для перечисления.  
+ [in] A MethodDef token representing the method with the parameters to enumerate.  
   
  `rParams`  
- [out] Массив, используемый для хранения токенов ParamDef.  
+ [out] The array used to store the ParamDef tokens.  
   
  `cMax`  
  [in] Максимальный размер массива `rParams`.  
   
  `pcTokens`  
- [out] Количество возвращаемых в токены ParamDef `rParams`.  
+ [out] The number of ParamDef tokens returned in `rParams`.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
   
 |HRESULT|Описание|  
 |-------------|-----------------|  
-|`S_OK`|`EnumParams` успешно возвращен.|  
-|`S_FALSE`|Существуют маркеры для перечисления отсутствуют. В этом случае `pcTokens` равно нулю.|  
+|`S_OK`|`EnumParams` returned successfully.|  
+|`S_FALSE`|There are no tokens to enumerate. In that case, `pcTokens` is zero.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформа:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** Cor.h  
+ **Header:** Cor.h  
   
- **Библиотека:** Используется как ресурс в MsCorEE.dll  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

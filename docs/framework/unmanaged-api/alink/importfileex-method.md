@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: ad276f3f-b303-46ac-97e0-66a377adaa4f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: bd138d0418bb9667a86419d719bf0b95a4bb1b12
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: bee7db61beb9ed8c00cf584924be690a67d92eac
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70777116"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446955"
 ---
 # <a name="importfileex-method"></a>Метод ImportFileEx
-Импортирует указанную сборку или непривязанный модуль.  
+Imports indicated assembly or unbound module.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -42,31 +40,31 @@ HRESULT ImportFileEx(
   
 ## <a name="parameters"></a>Параметры  
  `pszFilename`  
- Полное имя файла, из которого необходимо выполнить импорт.  
+ Fully qualified name of file from which to import.  
   
  `pszTargetName`  
- Необязательное имя целевого файла.  
+ Optional name of target file.  
   
  `fSmartImport`  
- Если значение равно TRUE, используется ImportTypes, в противном случае импорт должен выполняться вручную.  
+ If TRUE, ImportTypes is used, otherwise importing must be performed manually.  
   
  `dwOpenFlags`  
- Флаги, передаваемые в [метод OpenScope](../metadata/imetadatadispenser-openscope-method.md).  
+ Flags to be passed along to [OpenScope Method](../metadata/imetadatadispenser-openscope-method.md).  
   
  `pImportToken`  
- Получает идентификатор импортируемого файла.  
+ Receives ID of the file being imported.  
   
  `ppAssemblyScope`  
- Получает интерфейс [интерфейса IMetaDataAssemblyImport](../metadata/imetadataassemblyimport-interface.md) для области импорта сборки. Имеет значение NULL, если файл не является сборкой.  
+ Receives assembly import scope [IMetaDataAssemblyImport Interface](../metadata/imetadataassemblyimport-interface.md) interface. Is set to NULL if file is not an assembly.  
   
  `pdwCountOfScopes`  
- Получает число импортированных файлов и (или) областей.  
+ Receives count of imported files and/or scopes.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Если метод завершается с ошибкой, возвращает значение S_OK.  
+ Returns S_OK if the method succeeds.  
   
 ## <a name="requirements"></a>Требования  
- Требуется ALink. h.  
+ Requires alink.h.  
   
 ## <a name="see-also"></a>См. также
 

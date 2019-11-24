@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 1af98e57-9145-4d35-bb78-77d1da7c91a5
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a5039117c649943a1f05a91ecccf22eb4230e5e7
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 24ec1f7d553a59425f7eb02af8e91010d940eb07
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776375"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74444268"
 ---
 # <a name="assemblymetadata-structure"></a>Структура ASSEMBLYMETADATA
-Содержит сведения о сборке, на которую указывает ссылка, включая ее версию и уровень поддержки языковых стандартов, процессоры и операционные системы.  
+Contains information about the referenced assembly, including its version and its level of support for locales, processors, and operating systems.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -43,27 +41,27 @@ typedef struct {
 } ASSEMBLYMETADATA;  
 ```  
   
-## <a name="members"></a>Участники  
+## <a name="members"></a>Члены  
   
 |Член|Описание|  
 |------------|-----------------|  
-|`usMajorVersion`|Основной номер версии сборки, на которую указывает ссылка. Это значение не может быть нулевым. Если все биты `usMajorVersion` задаются, основной номер версии не указан.|  
-|`usMinorVersion`|Дополнительный номер версии сборки, на которую указывает ссылка. Это значение не может быть нулевым. Если все биты `usMinorVersion` задаются, дополнительный номер версии не указан.|  
-|`usBuildNumber`|Номер построения сборки, на которую указывает ссылка. Это значение не может быть нулевым. Если все биты `usBuildNumber` задаются, номер сборки не указан.|  
-|`usRevisionNumber`|Номер редакции сборки, на которую указывает ссылка. Это значение не может быть нулевым. Если все биты `usRevisionNumber` задаются, не указан номер редакции.|  
-|`szLocale`|Список имен языковых стандартов, выполняет существующую спецификацию RFC1766, разделенных точкой с запятой, указав языки, поддерживаемые сборкой, на которую указывает ссылка. Значение null указывает на независимость от языкового стандарта. **Примечание.**  В .NET Framework версии 1.0, нельзя указать более одного языкового стандарта.|  
-|`cbLocale`|Размер в расширенных символах `szLocale`.|  
-|`rdwProcessor`|Массив идентификаторов, как определено в заголовке Winnt.h, для типов процессоров, поддерживаемых сборкой, на которую указывает ссылка. Значение NULL указывает на независимость от процессора.|  
-|`ulProcessor`|Длина `rdwProcessor` массива.|  
-|`rOS`|Массив [OSINFO](../../../../docs/framework/unmanaged-api/metadata/osinfo-structure.md) экземпляров, задающих операционные системы, поддерживаемые сборкой, на которую указывает ссылка. Значение NULL указывает на независимость от операционной системы.|  
-|`ulOS`|Длина `rOS` массива.|  
+|`usMajorVersion`|The major version number of the referenced assembly. This value cannot be zero. If all the bits of `usMajorVersion` are set, the major version is not specified.|  
+|`usMinorVersion`|The minor version number of the referenced assembly. This value cannot be zero. If all the bits of `usMinorVersion` are set, the minor version is not specified.|  
+|`usBuildNumber`|The build number of the referenced assembly. This value cannot be zero. If all the bits of `usBuildNumber` are set, the build number is not specified.|  
+|`usRevisionNumber`|The revision number of the referenced assembly. This value cannot be zero. If all the bits of `usRevisionNumber` are set, the revision number is not specified.|  
+|`szLocale`|A list of locale names conforming to the RFC1766 specification, separated by semicolons, specifying the locales supported by the referenced assembly. A null value indicates locale independence. **Note:**  In the .NET Framework version 1.0 you cannot specify more than one locale.|  
+|`cbLocale`|The size in wide characters of `szLocale`.|  
+|`rdwProcessor`|An array of identifiers, as defined in Winnt.h, for the processor types that are supported by the referenced assembly. A NULL value indicates processor independence.|  
+|`ulProcessor`|The length of the `rdwProcessor` array.|  
+|`rOS`|An array of [OSINFO](../../../../docs/framework/unmanaged-api/metadata/osinfo-structure.md) instances specifying the operating systems that are supported by the referenced assembly. A NULL value indicates operating-system independence.|  
+|`ulOS`|The length of the `rOS` array.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** Cor.h  
+ **Header:** Cor.h  
   
- **Библиотека:** Используется как ресурс в MsCorEE.dll  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

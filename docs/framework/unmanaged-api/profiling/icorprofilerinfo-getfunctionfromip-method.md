@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: f069802a-198f-46dd-9f09-4f77adffc9ba
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 8a9f6e63a1f24043ac502d139f735cada599df4f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 14b152474cd71dc3ff7b59c94b6ec4fa0cd7ce0c
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780669"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74439207"
 ---
 # <a name="icorprofilerinfogetfunctionfromip-method"></a>Метод ICorProfilerInfo::GetFunctionFromIP
-Сопоставляет указатель инструкции управляемого кода на `FunctionID`.  
+Maps a managed code instruction pointer to a `FunctionID`.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,15 +35,15 @@ HRESULT GetFunctionFromIP(
   
 ## <a name="parameters"></a>Параметры  
  `ip`  
- [in] Указатель инструкций в управляемом коде.  
+ [in] The instruction pointer in managed code.  
   
  `pFunctionId`  
- [out] Идентификатор возвращаемого функцией.  
+ [out] The returned function ID.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorProf.idl, CorProf.h  
+ **Заголовок:** CorProf.idl, CorProf.h  
   
  **Библиотека:** CorGuids.lib  
   

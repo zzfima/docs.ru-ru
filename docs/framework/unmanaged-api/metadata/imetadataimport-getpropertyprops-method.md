@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: dc0ff3e6-7e7d-4f6c-948d-52b28f5cb78c
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e83afcf6c872927e614fce33ca96e93f0da4f497
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 247a2793bf3806f5ee38585d50b4535820dfcb69
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778872"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74437058"
 ---
 # <a name="imetadataimportgetpropertyprops-method"></a>Метод IMetaDataImport::GetPropertyProps
-Получает метаданные для свойства, представленного указанным токеном.  
+Gets the metadata for the property represented by the specified token.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -52,59 +50,59 @@ HRESULT GetPropertyProps (
   
 ## <a name="parameters"></a>Параметры  
  `prop`  
- [in] Токен, который представляет свойство для возврата метаданных.  
+ [in] A token that represents the property to return metadata for.  
   
  `pClass`  
- [out] Указатель на токен TypeDef, представляющий тип, реализующий свойства.  
+ [out] A pointer to the TypeDef token that represents the type that implements the property.  
   
  `szProperty`  
- [out] Буфер для хранения имени свойства.  
+ [out] A buffer to hold the property name.  
   
  `cchProperty`  
- [in] Размер в расширенных символах `szProperty`.  
+ [in] The size in wide characters of `szProperty`.  
   
  `pchProperty`  
- [out] Число расширенных символов, возвращаемых в `szProperty`.  
+ [out] The number of wide characters returned in `szProperty`.  
   
  `pdwPropFlags`  
- [out] Указатель на любой флаги атрибутов, примененным к свойству. Это значение является битовой [CorPropertyAttr](../../../../docs/framework/unmanaged-api/metadata/corpropertyattr-enumeration.md) перечисления.  
+ [out] A pointer to any attribute flags applied to the property. This value is a bitmask from the [CorPropertyAttr](../../../../docs/framework/unmanaged-api/metadata/corpropertyattr-enumeration.md) enumeration.  
   
  `ppvSig`  
- [out] Указатель на подпись метаданных свойства.  
+ [out] A pointer to the metadata signature of the property.  
   
  `pbSig`  
- [out] Число байтов, возвращаемых в `ppvSig`.  
+ [out] The number of bytes returned in `ppvSig`.  
   
  `pdwCPlusTypeFlag`  
- [out] Флаг, указывающий тип константы, которая является значением по умолчанию свойства. Это значение равно из CorElementType перечисления.  
+ [out] A flag specifying the type of the constant that is the default value of the property. This value is from the CorElementType enumeration.  
   
  `ppDefaultValue`  
- [out] Указатель на байты, которые хранят значение по умолчанию для этого свойства.  
+ [out] A pointer to the bytes that store the default value for this property.  
   
  `pcchDefaultValue`  
- [out] Размер в расширенных символах `ppDefaultValue`, если `pdwCPlusTypeFlag` является соответствующим; в противном случае это значение неприменимо. В этом случае длина `ppDefaultValue` выводится из типа, который задается параметром `pdwCPlusTypeFlag`.  
+ [out] The size in wide characters of `ppDefaultValue`, if `pdwCPlusTypeFlag` is ELEMENT_TYPE_STRING; otherwise, this value is not relevant. In that case, the length of `ppDefaultValue` is inferred from the type that is specified by `pdwCPlusTypeFlag`.  
   
  `pmdSetter`  
- [out] Указатель на токен MethodDef, представляющий метод доступа set для свойства.  
+ [out] A pointer to the MethodDef token that represents the set accessor method for the property.  
   
  `pmdGetter`  
- [out] Указатель на токен MethodDef, представляющий метод доступа get свойства.  
+ [out] A pointer to the MethodDef token that represents the get accessor method for the property.  
   
  `rmdOtherMethod`  
- [out] Массив токены MethodDef, представляющие другие методы, связанные со свойством.  
+ [out] An array of MethodDef tokens that represent other methods associated with the property.  
   
  `cMax`  
- [in] Максимальный размер массива `rmdOtherMethod`. Если вы не укажете массив недостаточно велик для хранения всех методов, они пропускаются без предупреждения.  
+ [in] Максимальный размер массива `rmdOtherMethod`. If you do not provide an array large enough to hold all the methods, they are skipped without warning.  
   
  `pcOtherMethod`  
- [out] Количество токены MethodDef, возвращаемых в `rmdOtherMethod`.  
+ [out] The number of MethodDef tokens returned in `rmdOtherMethod`.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** Cor.h  
+ **Header:** Cor.h  
   
- **Библиотека:** Включена как ресурс в MsCorEE.dll  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

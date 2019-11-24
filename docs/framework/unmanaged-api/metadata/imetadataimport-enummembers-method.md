@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3fb8e178-342b-4c89-9bcf-f7f834e6cb77
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 50035799fcfa4c4b08404d63fe91e7dba85722fa
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: acb772a64c8f13405f2836bb5f4f308986dce414
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67758836"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447658"
 ---
 # <a name="imetadataimportenummembers-method"></a>Метод IMetaDataImport::EnumMembers
 Перечисляет токены MemberDef, представляющие члены указанного типа.  
@@ -41,38 +39,38 @@ HRESULT EnumMembers (
   
 ## <a name="parameters"></a>Параметры  
  `phEnum`  
- [in, out] Указатель на перечислитель.  
+ [in, out] A pointer to the enumerator.  
   
  `cl`  
- [in] Токен TypeDef, представляющий тип, члены которого необходимо перечислить.  
+ [in] A TypeDef token representing the type whose members are to be enumerated.  
   
  `rMembers`  
- [out] Массив, используемый для хранения токены MemberDef.  
+ [out] The array used to hold the MemberDef tokens.  
   
  `cMax`  
  [in] Максимальный размер массива `rMembers`.  
   
  `pcTokens`  
- [out] Фактическое количество возвращаемых в токены MemberDef `rMembers`.  
+ [out] The actual number of MemberDef tokens returned in `rMembers`.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
   
 |HRESULT|Описание|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMembers` успешно возвращен.|  
-|`S_FALSE`|Существуют маркеры MemberDef для перечисления отсутствуют. В этом случае `pcTokens` равно нулю.|  
+|`S_OK`|`EnumMembers` returned successfully.|  
+|`S_FALSE`|There are no MemberDef tokens to enumerate. In that case, `pcTokens` is zero.|  
   
-## <a name="remarks"></a>Примечания  
- При перечислении коллекций членов для класса, `EnumMembers` возвращает только члены (поля и методы, но **не** свойств или событий) определенные непосредственно в классе. Он не возвращает элементы, класс наследуется, даже если этот класс предоставляет реализацию для этих унаследованных членов. Чтобы перечислить унаследованные члены, вызывающий объект явным образом необходимо пройти по цепочке наследования. Обратите внимание, что правила для цепи наследования может меняться в зависимости от языка или компилятора, выдавшего исходные метаданные.
+## <a name="remarks"></a>Заметки  
+ When enumerating collections of members for a class, `EnumMembers` returns only members (fields and methods, but **not** properties or events) defined directly on the class. It does not return any members that the class inherits, even if the class provides an implementation for those inherited members. To enumerate inherited members, the caller must explicitly walk the inheritance chain. Note that the rules for the inheritance chain may vary depending on the language or compiler that emitted the original metadata.
  
- Свойства и события не перечисляет `EnumMembers`. Чтобы перечислить их, используйте [EnumProperties](imetadataimport-enumproperties-method.md) или [EnumEvents](imetadataimport-enumevents-method.md).
+ Properties and events are not enumerated by `EnumMembers`. To enumerate those, use [EnumProperties](imetadataimport-enumproperties-method.md) or [EnumEvents](imetadataimport-enumevents-method.md).
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** Cor.h  
+ **Header:** Cor.h  
   
- **Библиотека:** Включена как ресурс в MsCorEE.dll  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

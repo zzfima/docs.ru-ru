@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 37fd27af-8062-4904-ace4-51bb78ec600a
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ff0660ef2b30e32af540fe7bef5936ab6d0a359f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5b4b0682b2bddff96cb3d720900ed3aa39f06f9d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777624"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74431847"
 ---
 # <a name="imetadataemitdefineimporttype-method"></a>Метод IMetaDataEmit::DefineImportType
-Создает ссылку для указанного типа, определенные вне текущей области, а также определяет маркер для этой ссылки.  
+Creates a reference to the specified type that is defined outside the current scope, and defines a token for that reference.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -43,35 +41,35 @@ HRESULT DefineImportType (
   
 ## <a name="parameters"></a>Параметры  
  `pAssemImport`  
- [in] [IMetaDataAssemblyImport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md) интерфейс, представляющий сборку, из которого импортируется в целевой тип.  
+ [in] An [IMetaDataAssemblyImport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md) interface that represents the assembly from which the target type is imported.  
   
  `pbHashValue`  
- [in] Массив, содержащий хэш-код для сборки, определяемой параметром `pAssemImport`.  
+ [in] An array that contains the hash for the assembly specified by `pAssemImport`.  
   
  `cbHashValue`  
  [in] Число байтов в массиве `pbHashValue`.  
   
  `pImport`  
- [in] [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) интерфейс, который представляет область метаданных, из которого импортируется в целевой тип.  
+ [in] An [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) interface that represents the metadata scope from which the target type is imported.  
   
  `tdImport`  
- [in] `mdTypeDef` Токен, который указывает тип целевого объекта.  
+ [in] An `mdTypeDef` token that specifies the target type.  
   
  `pAssemEmit`  
- [in] [IMetaDataAssemblyEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md) интерфейс, представляющий сборку, в который импортируется в целевой тип.  
+ [in] An [IMetaDataAssemblyEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md) interface that represents the assembly into which the target type is imported.  
   
  `ptr`  
- [out] `mdTypeRef` Маркер, который определен в текущей области для ссылки на тип.  
+ [out] The `mdTypeRef` token that is defined in the current scope for the type reference.  
   
-## <a name="remarks"></a>Примечания  
- До вызова метода [IMetaDataEmit::DefineImportMember](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineimportmember-method.md) метод, можно использовать `DefineImportType` метод, чтобы создать ссылку на тип, в текущей области, для родительского класса или интерфейса родительского элемента.  
+## <a name="remarks"></a>Заметки  
+ Prior to calling the [IMetaDataEmit::DefineImportMember](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineimportmember-method.md) method, you can use the `DefineImportType` method to create a type reference, in the current scope, for the member's parent class or parent interface.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** Cor.h  
+ **Header:** Cor.h  
   
- **Библиотека:** Используется как ресурс в MSCorEE.dll  
+ **Library:** Used as a resource in MSCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

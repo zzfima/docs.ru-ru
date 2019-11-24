@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 274e73cf-8333-47ba-ac12-70214e2b0112
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 27de34c1978818c48d5fa38caf9b52ff2a9510f5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 319ba58b5d012cbc0f9ddac0b83e5f3ae2ae062a
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778084"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446178"
 ---
 # <a name="isymunmanagedsymbolsearchinfogetsearchpathlength-method"></a>Метод ISymUnmanagedSymbolSearchInfo::GetSearchPathLength
-Получает длину пути поиска.  
+Gets the search path length.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -36,13 +34,13 @@ HRESULT GetSearchPathLength(
   
 ## <a name="parameters"></a>Параметры  
  `pcchPath`  
- [out] Указатель на `ULONG32` размер, который получает в символах, буфера, требуемого для хранения длину пути поиска.  
+ [out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the search path length.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Требования  
- **Заголовок.** CorSym.idl CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>См. также
 

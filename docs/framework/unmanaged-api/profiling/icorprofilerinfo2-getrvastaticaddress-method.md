@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: a25a8f8b-5cfa-440d-9376-a1a1c3a9fc11
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: fc7b6d1a27faf7bde46305f9c98d98351e6261b6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: db768c97a2d1a0fd5ee42ecfb121fb96d3092e79
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782262"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74433021"
 ---
 # <a name="icorprofilerinfo2getrvastaticaddress-method"></a>Метод ICorProfilerInfo2::GetRVAStaticAddress
-Возвращает адрес указанного относительного виртуального адреса (RVA) статического поля.  
+Gets the address of the specified relative virtual address (RVA) static field.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,27 +36,27 @@ HRESULT GetRVAStaticAddress(
   
 ## <a name="parameters"></a>Параметры  
  `classId`  
- [in] Идентификатор класса, содержащего запрошенный RVA-статического поля.  
+ [in] The ID of the class that contains the requested RVA-static field.  
   
  `fieldToken`  
- [in] Токен метаданных для запрошенного RVA статического поля.  
+ [in] Metadata token for the requested RVA-static field.  
   
  `ppAddress`  
- [out] Указатель на адрес RVA статического поля.  
+ [out] A pointer to the address of the RVA-static field.  
   
-## <a name="remarks"></a>Примечания  
- `GetRVAStaticAddress` Метод может возвращать одно из следующих:  
+## <a name="remarks"></a>Заметки  
+ The `GetRVAStaticAddress` method may return one of the following:  
   
-- HRESULT CORPROF_E_DATAINCOMPLETE, если заданного статические поля не был назначен адрес в заданном контексте.  
+- A CORPROF_E_DATAINCOMPLETE HRESULT if the given static field has not been assigned an address in the specified context.  
   
-- Адреса объектов, которые могут быть в куче сбора мусора. Эти адреса могут стать недопустимыми после сборки мусора, поэтому после сборки мусора, профилировщики не следует предполагать, что они являются допустимыми.  
+- The addresses of objects that may be in the garbage collection heap. These addresses may become invalid after garbage collection, so after garbage collection, profilers should not assume that they are valid.  
   
- До завершения конструктора класса `GetRVAStaticAddress` возвращает CORPROF_E_DATAINCOMPLETE для всех статических полей, несмотря на то, что некоторые статические поля уже могут быть инициализированы и могут маршрутизировать объекты сборки мусора.  
+ Before a class’s class constructor is completed, `GetRVAStaticAddress` will return CORPROF_E_DATAINCOMPLETE for all its static fields, although some of the static fields may already be initialized and may be rooting garbage collection objects.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorProf.idl, CorProf.h  
+ **Заголовок:** CorProf.idl, CorProf.h  
   
  **Библиотека:** CorGuids.lib  
   

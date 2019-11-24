@@ -6,16 +6,16 @@ helpviewer_keywords:
 - List Item control type
 - UI Automation, List Item control type
 ms.assetid: 34f533bf-fc14-4e78-8fee-fb7107345fab
-ms.openlocfilehash: c2b1406519c80368cd00a888c541ec9abfce7faa
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 4b7c3b6bbdc38227871ea020047bc21987b18ee9
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123082"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446714"
 ---
 # <a name="ui-automation-support-for-the-listitem-control-type"></a>Поддержка автоматизированного пользовательского интерфейса для типа элемента управления ListItem
 > [!NOTE]
-> Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Последние сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]см. в разделе [API автоматизации Windows. Автоматизация пользовательского интерфейса](https://go.microsoft.com/fwlink/?LinkID=156746).  
+> Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Последние сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]см. в разделе [API автоматизации Windows. Автоматизация пользовательского интерфейса](/windows/win32/winauto/entry-uiauto-win32).  
   
  В этом разделе содержатся сведения о поддержке [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] типа элемента управления <xref:System.Windows.Automation.ControlType.ListItem> . В [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]тип элемента управления — это набор условий, которым должен удовлетворять элемент управления для использования свойства <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> . Условия включают конкретные правила для древовидной структуры [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , значений свойств [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] и шаблонов элементов управления.  
   
@@ -29,13 +29,13 @@ ms.locfileid: "73123082"
   
 |Представление элемента управления|Представление содержимого|  
 |------------------|------------------|  
-|ListItem<br /><br /> -Image (0 или более)<br />— Текст (0 или более)<br />-Edit (0 или более)|ListItem|  
+|ListItem<br /><br /> -   Image (0 or more)<br />-   Text (0 or more)<br />-   Edit (0 or more)|ListItem|  
   
- Дочерний элемент элемента управления "Список" в представлении содержимого дерева [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] всегда должен быть "0". Если структура элемента управления состоит в том, что в элементе списка содержатся другие элементы, они должны удовлетворять требованиям [модели автоматизации пользовательского интерфейса для](ui-automation-support-for-the-treeitem-control-type.md) типа элемента управления типа TreeItem.  
+ Дочерний элемент элемента управления "Список" в представлении содержимого дерева [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] всегда должен быть "0". If the structure of the control is such that other items are contained underneath the list item then it should follow the requirements for the [UI Automation Support for the TreeItem Control Type](ui-automation-support-for-the-treeitem-control-type.md) control type.  
   
 <a name="Required_UI_Automation_Properties"></a>   
 ## <a name="required-ui-automation-properties"></a>Требуемые свойства модели автоматизации пользовательского интерфейса  
- В следующей таблице перечислены свойства [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , значение или определение которых в первую очередь относится к элементам управления "Список". Дополнительные сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] свойствах см. в разделе [Свойства модели автоматизации пользовательского интерфейса для клиентов](ui-automation-properties-for-clients.md).  
+ В следующей таблице перечислены свойства [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , значение или определение которых в первую очередь относится к элементам управления "Список". For more information on [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] properties, see [UI Automation Properties for Clients](ui-automation-properties-for-clients.md).  
   
 |Свойство[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|значения|Примечания|  
 |------------------------------------------------------------------------------------|-----------|-----------|  
@@ -65,7 +65,7 @@ ms.locfileid: "73123082"
 |<xref:System.Windows.Automation.Provider.IExpandCollapseProvider>|Зависит от обстоятельств|Если элемент можно изменять, чтобы показать или скрыть сведения, то этот шаблон элемента управления должен быть реализован.|  
 |<xref:System.Windows.Automation.Provider.IValueProvider>|Зависит от обстоятельств|Если элемент можно редактировать, то этот шаблон элемента управления должен быть реализован. Изменения элемента управления "Список" приведут к изменениям значений <xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>и <xref:System.Windows.Automation.Provider.IValueProvider.Value%2A>.|  
 |<xref:System.Windows.Automation.Provider.IGridItemProvider>|Зависит от обстоятельств|Если в контейнере списка поддерживается пространственная навигация от элемента к элементу и этот контейнер размещается в строках и столбцах, то должен быть реализован шаблон элемента управления Grid Item.|  
-|<xref:System.Windows.Automation.Provider.IInvokeProvider>|Зависит от обстоятельств|Если элемент содержит команду, которая может выполняться в этом элементе, то этот шаблон должен быть реализован. Обычно это действие, связанное с двойным щелчком элемента управления "Список". Примерами может быть запуск документа из проводника Microsoft Windows или воспроизведение музыкального файла в проигрывателе Microsoft Windows Media Player.|  
+|<xref:System.Windows.Automation.Provider.IInvokeProvider>|Зависит от обстоятельств|Если элемент содержит команду, которая может выполняться в этом элементе, то этот шаблон должен быть реализован. Обычно это действие, связанное с двойным щелчком элемента управления "Список". Examples would be launching a document from Microsoft Windows Explorer, or playing a music file in Microsoft Windows Media Player.|  
   
 <a name="Required_UI_Automation_Events"></a>   
 ## <a name="required-ui-automation-events"></a>Необходимые события модели автоматизации пользовательского интерфейса  

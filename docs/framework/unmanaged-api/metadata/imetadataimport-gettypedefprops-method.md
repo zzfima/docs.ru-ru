@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 00061a25-ba05-47a7-b984-fd916b06b149
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 77f72fb7eb7b0542dc9a3179811a78b189d6b3b0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c9ac624e17223def206e86fd92ee4fd2de7f6082
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778838"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436746"
 ---
 # <a name="imetadataimportgettypedefprops-method"></a>Метод IMetaDataImport::GetTypeDefProps
-Возвращает сведения о метаданных для <xref:System.Type> представленного указанным токеном TypeDef.  
+Returns metadata information for the <xref:System.Type> represented by the specified TypeDef token.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -42,29 +40,29 @@ HRESULT GetTypeDefProps (
   
 ## <a name="parameters"></a>Параметры  
  `td`  
- [in] Токен TypeDef, который представляет метаданные для возвращаемого типа.  
+ [in] The TypeDef token that represents the type to return metadata for.  
   
  `szTypeDef`  
- [out] Буфер, содержащий имя типа.  
+ [out] A buffer containing the type name.  
   
  `cchTypeDef`  
- [in] Размер в расширенных символах `szTypeDef`.  
+ [in] The size in wide characters of `szTypeDef`.  
   
  `pchTypeDef`  
- [out] Число расширенных символов, возвращаемых в `szTypeDef`.  
+ [out] The number of wide characters returned in `szTypeDef`.  
   
  `pdwTypeDefFlags`  
- [out] Указатель на всех флагов изменить определение типа. Это значение является битовой [CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md) перечисления.  
+ [out] A pointer to any flags that modify the type definition. This value is a bitmask from the [CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md) enumeration.  
   
  `ptkExtends`  
- [out] Определение типа или TypeRef токен метаданных, представляющий базовый тип запрошенного типа.  
+ [out] A TypeDef or TypeRef metadata token that represents the base type of the requested type.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** Cor.h  
+ **Header:** Cor.h  
   
- **Библиотека:** Включена как ресурс в MsCorEE.dll  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7de6447a-a751-49d8-87e2-951cee77b536
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 85b0edc81a9a861a3eed6a7bc3ffc1ed1db37403
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6e73160fb1927560ad381dbb85d03796296ba9a4
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67770733"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74434288"
 ---
 # <a name="imetadataemitgettokenfromtypespec-method"></a>Метод IMetaDataEmit::GetTokenFromTypeSpec
-Получает маркер метаданных для типа с заданной подписью метаданных.  
+Gets a metadata token for the type with the specified metadata signature.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,20 +37,20 @@ HRESULT GetTokenFromTypeSpec (
   
 ## <a name="parameters"></a>Параметры  
  `pvSig`  
- [in] Будучи определенным сигнатура.  
+ [in] The signature being defined.  
   
  `cbSig`  
- [in] Число байт в `pvSig`.  
+ [in] The count of bytes in `pvSig`.  
   
  `ptypespec`  
- [out] `mdTypeSpec` Маркер, назначенный.  
+ [out] The `mdTypeSpec` token assigned.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** Cor.h  
+ **Header:** Cor.h  
   
- **Библиотека:** Используется как ресурс в MSCorEE.dll  
+ **Library:** Used as a resource in MSCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

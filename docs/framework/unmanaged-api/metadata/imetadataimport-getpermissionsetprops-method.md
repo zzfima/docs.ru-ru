@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9855f0e4-12c0-4d3d-ab5d-d6bc52d25eae
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 48cd62f89f1112a1007a5661dc55fe2977dace2b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a020a0343eecceb4a85ebbddffe323c7f7bdca3d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778920"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74437107"
 ---
 # <a name="imetadataimportgetpermissionsetprops-method"></a>Метод IMetaDataImport::GetPermissionSetProps
-Возвращает метаданные, связанные с <xref:System.Security.PermissionSet?displayProperty=nameWithType> представленного указанным токеном Permission.  
+Gets the metadata associated with the <xref:System.Security.PermissionSet?displayProperty=nameWithType> represented by the specified Permission token.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,23 +38,23 @@ HRESULT GetPermissionSetProps (
   
 ## <a name="parameters"></a>Параметры  
  `pm`  
- [in] Токен метаданных разрешение, представляющее набор разрешений, чтобы получить метаданные свойства.  
+ [in] The Permission metadata token that represents the permission set to get the metadata properties for.  
   
  `pdwAction`  
- [out] Указатель на набор разрешений.  
+ [out] A pointer to the permission set.  
   
  `ppvPermission`  
- [out] Указатель на двоичную подпись метаданных набора разрешений.  
+ [out] A pointer to the binary metadata signature of the permission set.  
   
  `pcbPermission`  
- [out] Размер в байтах `ppvPermission`.  
+ [out] The size in bytes of `ppvPermission`.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** Cor.h  
+ **Header:** Cor.h  
   
- **Библиотека:** Включена как ресурс в MsCorEE.dll  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

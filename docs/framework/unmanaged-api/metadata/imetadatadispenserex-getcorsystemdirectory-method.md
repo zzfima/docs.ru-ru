@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: d9e0f3b6-e106-4820-bada-5bfba34ce360
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f03a2dfa60f2fbdce317d96a9e5b23c6f017dc3d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: da9a13a3dea34f6681f47e95c5b352a710d7458b
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777741"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74431215"
 ---
 # <a name="imetadatadispenserexgetcorsystemdirectory-method"></a>Метод IMetaDataDispenserEx::GetCORSystemDirectory
-Получает каталог, содержащий текущий среда CLR (CLR). Этот метод поддерживается только для использования вне процесса отладки. Если вызывается из другого компонента, он возвращает E_NOTIMPL.  
+Gets the directory that holds the current common language runtime (CLR). This method is supported only for use by out-of-process debuggers. If called from another component, it will return E_NOTIMPL.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,20 +37,20 @@ HRESULT GetCORSystemDirectory (
   
 ## <a name="parameters"></a>Параметры  
  `szBuffer`  
- [out] Буфер для получения имени каталога.  
+ [out] The buffer to receive the directory name.  
   
  `cchBuffer`  
- [in] Размер в байтах из `szBuffer`.  
+ [in] The size, in bytes, of `szBuffer`.  
   
  `pchBuffer`  
- [out] Число байтов, фактически возвращенных в `szBuffer`.  
+ [out] The number of bytes actually returned in `szBuffer`.  
   
 ## <a name="requirements"></a>Требования  
- **Платформа:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** Cor.h  
+ **Header:** Cor.h  
   
- **Библиотека:** Используется как ресурс в MsCorEE.dll  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

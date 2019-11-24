@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 64202baf-be6b-40ba-8162-8cc6c0c9b8e1
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f07685351425a4685ac4a0c8e1b8e3c198b14187
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 63ba108bc234e566450bb019afc63acb4e75ad1f
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777301"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74427981"
 ---
 # <a name="isymunmanagedwriterdefinesequencepoints-method"></a>Метод ISymUnmanagedWriter::DefineSequencePoints
-Определяет группу точек следования в текущем методе. Каждая Начальная строка и начальный столбец определяют начало оператора в методе. Каждая конечная строка и конечный столбец определяет конец оператора в методе. Массивы должны быть упорядочены по возрастанию смещений. Смещение всегда измеряется от начала метода, в байтах.  
+Определяет группу точек следования в текущем методе. Each starting line and starting column define the start of a statement within a method. Each ending line and ending column define the end of a statement within a method. The arrays should be sorted in increasing order of offsets. The offset is always measured from the start of the method, in bytes.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -42,31 +40,31 @@ HRESULT DefineSequencePoints(
   
 ## <a name="parameters"></a>Параметры  
  `document`  
- [in] Объект документа, для которого определяются точки следования.  
+ [in] The document object for which the sequence points are being defined.  
   
  `spCount`  
- [in] Объект `ULONG32` указывает размер каждого из `offsets`, `lines`, `columns`, `endLines`, и `endColumns` буферов.  
+ [in] A `ULONG32` that indicates the size of each of the `offsets`, `lines`, `columns`, `endLines`, and `endColumns` buffers.  
   
  `offsets`  
- [in] Смещение точек следования определяются от начала метода.  
+ [in] The offset of the sequence points measured from the beginning of the method.  
   
  `lines`  
- [in] Начальная строка числа точек следования.  
+ [in] The starting line numbers of the sequence points.  
   
  `columns`  
- [in] Начальный номера столбцов точек следования.  
+ [in] The starting column numbers of the sequence points.  
   
  `endLines`  
- [in] Конечный номера строк точек следования. Этот параметр является необязательным.  
+ [in] The ending line numbers of the sequence points. Этот параметр является необязательным.  
   
  `endColumns`  
- [in] Номера конечных столбцов точек следования. Этот параметр является необязательным.  
+ [in] The ending column numbers of the sequence points. Этот параметр является необязательным.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Требования  
- **Заголовок.** CorSym.idl CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>См. также
 

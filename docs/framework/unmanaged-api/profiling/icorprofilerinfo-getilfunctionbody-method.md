@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: e29b46bc-5fdc-4894-b0c2-619df4b65ded
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 484fb5b8398e3ebd61d1c300afec1536ee1dc0c5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a7ec50c91ce02958d0d44643d4f79da1680532aa
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780602"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74450357"
 ---
 # <a name="icorprofilerinfogetilfunctionbody-method"></a>Метод ICorProfilerInfo::GetILFunctionBody
-Получает указатель в теле метода в код MSIL (MSIL), начиная с его заголовка.  
+Gets a pointer to the body of a method in Microsoft intermediate language (MSIL) code, starting at its header.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,26 +37,26 @@ HRESULT GetILFunctionBody(
   
 ## <a name="parameters"></a>Параметры  
  `moduleId`  
- [in] Идентификатор модуля, в которой находится функция.  
+ [in] The ID of the module in which the function resides.  
   
  `methodId`  
- [in] Токен метаданных для метода.  
+ [in] The metadata token for the method.  
   
  `ppMethodHeader`  
- [out] Указатель на заголовок метода.  
+ [out] A pointer to the method's header.  
   
  `pcbMethodSize`  
- [out] Целое число, указывающее размер метода.  
+ [out] An integer that specifies the size of the method.  
   
-## <a name="remarks"></a>Примечания  
- Метод ограничивается модуля, в котором он находится. Так как `GetILFunctionBody` метод предназначен для предоставления доступа для кода на языке MSIL, прежде чем он был загружен с общеязыковой среды выполнения (CLR), для поиска требуемого экземпляра используется токен метаданных метода.  
+## <a name="remarks"></a>Заметки  
+ A method is scoped by the module in which it lives. Because the `GetILFunctionBody` method is designed to give a tool access to the MSIL code before it has been loaded by the common language runtime (CLR), it uses the metadata token of the method to find the desired instance.  
   
- `GetILFunctionBody` может возвращать CORPROF_E_FUNCTION_NOT_IL HRESULT, если `methodId` указывает на метод без любой MSIL кода (например, абстрактный метод или платформа вызова метода (PInvoke)).  
+ `GetILFunctionBody` can return a CORPROF_E_FUNCTION_NOT_IL HRESULT if the `methodId` points to a method without any MSIL code (such as an abstract method, or a platform invoke (PInvoke) method).  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorProf.idl, CorProf.h  
+ **Заголовок:** CorProf.idl, CorProf.h  
   
  **Библиотека:** CorGuids.lib  
   

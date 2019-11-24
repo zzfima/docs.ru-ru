@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: a2267d39-69d1-4de1-bf37-f752cafacc71
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 68dc80c657c3794a416f6e142f70cfb05bee2c77
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ba8da686d1834c81111828e9856525b96f575b93
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67745890"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74443263"
 ---
 # <a name="iceegengetstringsection-method"></a>Метод ICeeGen::GetStringSection
-Получает строковое представление раздела кода, который ссылается указанный дескриптор.  
+Gets a string representation of the code section referenced by the specified handle.  
   
- Этот метод является устаревшим и не должны использоваться.  
+ This method is obsolete and should not be used.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,14 +37,14 @@ HRESULT GetStringSection (
   
 ## <a name="parameters"></a>Параметры  
  `section`  
- [in, out] Дескриптор раздела кода.  
+ [in, out] The handle to the code section.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** Cor.h  
+ **Header:** Cor.h  
   
- **Библиотека:** Используется как ресурс в MsCorEE.dll  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

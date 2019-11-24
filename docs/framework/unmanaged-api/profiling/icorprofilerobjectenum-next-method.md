@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: b420433c-5ebe-4986-bba1-97902e6db819
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 8c938c7c51c867d8e8d8d23390a3c16a23084fbc
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5b58b7131d015353c2276b6f422e93e5d6a09109
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67775020"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428153"
 ---
 # <a name="icorprofilerobjectenumnext-method"></a>Метод ICorProfilerObjectEnum::Next
-Возвращает заданное число смежных объектов из упорядоченной коллекции объектов, начиная с текущей позиции перечислителя в последовательности.  
+Gets the specified number of contiguous objects from a sequential collection of objects, starting at the enumerator's current position in the sequence.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -43,15 +41,15 @@ HRESULT Next (
  [in] Количество объектов, которые должны быть получены.  
   
  `objects`  
- [out] Массив `ObjectID` значений, каждое из которых представляет полученный объект.  
+ [out] An array of `ObjectID` values, each of which represents a retrieved object.  
   
  `pceltFetched`  
  [out] Указатель на число элементов, фактически извлеченных в массив `objects`.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorProf.idl, CorProf.h  
+ **Заголовок:** CorProf.idl, CorProf.h  
   
  **Библиотека:** CorGuids.lib  
   

@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 466ad51b-8f0c-41d9-81f7-371aac3374cb
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a070d2e863aecf7b13eb59a118848b96d2cccc17
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 7f83469920956d73a275f510b0d3c3e94a4caa8d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781308"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74440681"
 ---
 # <a name="functionidmapper2-function"></a>Функция FunctionIDMapper2
-Уведомляет профилировщик о заданному идентификатору функции может быть альтернативный идентификатор для использования в [FunctionEnter3](../../../../docs/framework/unmanaged-api/profiling/functionenter3-function.md), [FunctionLeave3](../../../../docs/framework/unmanaged-api/profiling/functionleave3-function.md), и [FunctionTailcall3](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3-function.md), или[FunctionEnter3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md), [FunctionLeave3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md), и [FunctionTailcall3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3withinfo-function.md) обратные вызовы для этой функции. `FunctionIDMapper2` также позволяет профилировщику указать, желает ли он получать обратные вызовы для этой функции.  
+Notifies the profiler that the given identifier of a function may be remapped to an alternative ID to be used in the [FunctionEnter3](../../../../docs/framework/unmanaged-api/profiling/functionenter3-function.md), [FunctionLeave3](../../../../docs/framework/unmanaged-api/profiling/functionleave3-function.md), and [FunctionTailcall3](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3-function.md), or[FunctionEnter3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md), [FunctionLeave3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md), and [FunctionTailcall3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3withinfo-function.md) callbacks for that function. `FunctionIDMapper2` также позволяет профилировщику указать, желает ли он получать обратные вызовы для этой функции.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -49,13 +47,13 @@ UINT_PTR __stdcall FunctionIDMapper2 (
 ## <a name="return-value"></a>Возвращаемое значение  
  Профилировщик возвращает значение, которое использует подсистема выполнения в качестве альтернативного идентификатора функции. Это возвращаемое значение не может быть значением null, если указатель `pbHookFunction` возвращает значение `false`. В противном случае возвращаемое значение null приводит к непредсказуемым результатам, включая возможное прерывание процесса.  
   
-## <a name="remarks"></a>Примечания  
- Этот метод расширяет [FunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md) функция содержит дополнительный параметр, который используется для передачи данных клиента. Эти данные клиента служат для однозначного определения среды выполнения.  
+## <a name="remarks"></a>Заметки  
+ This method extends the [FunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md) function with an additional parameter that is used to pass client data. Эти данные клиента служат для однозначного определения среды выполнения.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorProf.idl  
+ **Header:** CorProf.idl  
   
  **Библиотека:** CorGuids.lib  
   

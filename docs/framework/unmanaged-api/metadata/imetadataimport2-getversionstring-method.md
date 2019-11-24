@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 308183ee-fd44-4432-9d86-ef00d181b49b
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d500584afd608f79e41e932be259d29ae51db2db
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0c9f667edf30feb23e1cdaa28950503283fce42e
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781584"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445224"
 ---
 # <a name="imetadataimport2getversionstring-method"></a>Метод IMetaDataImport2::GetVersionString
-Получает номер версии среды выполнения, которая использовалась для построения сборки.  
+Gets the version number of the runtime that was used to build the assembly.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,23 +37,23 @@ HRESULT GetVersionString (
   
 ## <a name="parameters"></a>Параметры  
  `pwzBuf`  
- [out] Массив для хранения строки, в которой указывается версия.  
+ [out] An array to store the string that specifies the version.  
   
  `ccBufSize`  
- [in] Размер в расширенные символы из `pwzBuf` массива.  
+ [in] The size, in wide characters, of the `pwzBuf` array.  
   
  `pccBufSize`  
- [out] Число расширенных символов, включая завершающий нуль-символ, возвращенных в `pwzBuf` массива.  
+ [out] The number of wide characters, including a null terminator, returned in the `pwzBuf` array.  
   
-## <a name="remarks"></a>Примечания  
- `GetVersionString` Метод получает версию построения для текущей области метаданных. Если область никогда не был сохранен, он не будет иметь версию построения и возвращается пустая строка.  
+## <a name="remarks"></a>Заметки  
+ The `GetVersionString` method gets the built-for version of the current metadata scope. If the scope has never been saved, it will not have a built-for version, and an empty string will be returned.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** Cor.h  
+ **Header:** Cor.h  
   
- **Библиотека:** Используется как ресурс в MsCorEE.dll  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

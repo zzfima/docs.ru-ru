@@ -8,16 +8,16 @@ helpviewer_keywords:
 - properties, UI Automation clients
 - UI Automation, client properties
 ms.assetid: 255905af-0b17-485c-93d4-8a2db2a6524b
-ms.openlocfilehash: 9c92ea154a078ff5a059edd82f06b8f3d5bab239
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 3ef1e7c6e21f30c5bdea096003f192c38059ab2e
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71042137"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74441359"
 ---
 # <a name="ui-automation-properties-for-clients"></a>Свойства автоматизации пользовательского интерфейса для клиентов
 > [!NOTE]
-> Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Последние сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]см. в разделе [API службы автоматизации Windows: Модель автоматизации](https://go.microsoft.com/fwlink/?LinkID=156746)пользовательского интерфейса.  
+> Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Последние сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]см. в разделе [API автоматизации Windows. Автоматизация пользовательского интерфейса](/windows/win32/winauto/entry-uiauto-win32).  
   
  В этом обзоре даются общие сведения о свойствах [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , предоставляемых клиентским приложениям модели автоматизации пользовательского интерфейса.  
   
@@ -27,15 +27,15 @@ ms.locfileid: "71042137"
   
  Свойства[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] предназначены только для чтения. Чтобы задать свойства элемента управления, вы должны использовать методы соответствующего шаблона элемента управления. Например, используйте метод <xref:System.Windows.Automation.ScrollPattern.Scroll%2A> для изменения значений позиции прокручиваемого окна.  
   
- Для повышения производительности значения свойств и шаблоны элементов управления могут кэшироваться при получении объектов <xref:System.Windows.Automation.AutomationElement> . Дополнительные сведения см. [в разделе Кэширование в клиентах автоматизации пользовательского интерфейса](caching-in-ui-automation-clients.md).  
+ Для повышения производительности значения свойств и шаблоны элементов управления могут кэшироваться при получении объектов <xref:System.Windows.Automation.AutomationElement> . For more information, see [Caching in UI Automation Clients](caching-in-ui-automation-clients.md).  
   
 ## <a name="property-ids"></a>Идентификаторы свойств  
- Идентификаторы свойств (ID) являются уникальными, постоянными значениями, инкапсулированными <xref:System.Windows.Automation.AutomationProperty> в объектах. Клиентские приложения модели автоматизации пользовательского интерфейса получают эти <xref:System.Windows.Automation.AutomationElement> идентификаторы из класса или из соответствующего класса шаблона элемента управления <xref:System.Windows.Automation.ScrollPattern>, например. Поставщики автоматизации пользовательского интерфейса получают их из <xref:System.Windows.Automation.AutomationElementIdentifiers> или из одного из классов идентификаторов шаблонов элементов управления, такого как <xref:System.Windows.Automation.ScrollPatternIdentifiers>.  
+ Property identifiers (IDs) are unique, constant values that are encapsulated in <xref:System.Windows.Automation.AutomationProperty> objects. UI Automation client applications get these IDs from the <xref:System.Windows.Automation.AutomationElement> class or from the appropriate control pattern class, such as <xref:System.Windows.Automation.ScrollPattern>. Поставщики автоматизации пользовательского интерфейса получают их из <xref:System.Windows.Automation.AutomationElementIdentifiers> или из одного из классов идентификаторов шаблонов элементов управления, такого как <xref:System.Windows.Automation.ScrollPatternIdentifiers>.  
   
  Числовой <xref:System.Windows.Automation.AutomationIdentifier.Id%2A> объекта <xref:System.Windows.Automation.AutomationProperty> используется поставщиками для идентификации свойств, которые запрашиваются в методе <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.GetPropertyValue%2A?displayProperty=nameWithType> . В общем случае клиентским приложениям не требуется проверять <xref:System.Windows.Automation.AutomationIdentifier.Id%2A>. <xref:System.Windows.Automation.AutomationIdentifier.ProgrammaticName%2A> используется только для целей отладки и диагностики.  
   
 ## <a name="property-conditions"></a>Условия свойств  
- Идентификаторы свойств используются при построении <xref:System.Windows.Automation.PropertyCondition> объектов, используемых для поиска <xref:System.Windows.Automation.AutomationElement> объектов. Например, может потребоваться найти <xref:System.Windows.Automation.AutomationElement> с определенным именем или все включенные элементы управления. Каждое <xref:System.Windows.Automation.PropertyCondition> определяет идентификатор <xref:System.Windows.Automation.AutomationProperty> и значение, которому свойство должно соответствовать.  
+ The property IDs are used in constructing <xref:System.Windows.Automation.PropertyCondition> objects used to find <xref:System.Windows.Automation.AutomationElement> objects. Например, может потребоваться найти <xref:System.Windows.Automation.AutomationElement> с определенным именем или все включенные элементы управления. Каждое <xref:System.Windows.Automation.PropertyCondition> определяет идентификатор <xref:System.Windows.Automation.AutomationProperty> и значение, которому свойство должно соответствовать.  
   
  Дополнительные сведения см. в следующих справочных разделах.  
   
@@ -90,7 +90,7 @@ ms.locfileid: "71042137"
 ## <a name="additional-automationelement-properties"></a>Дополнительные свойства AutomationElement  
  Помимо структур свойств <xref:System.Windows.Automation.AutomationElement.Current%2A> и <xref:System.Windows.Automation.AutomationElement.Cached%2A> , <xref:System.Windows.Automation.AutomationElement> имеет следующие свойства, которые можно получить с помощью простых методов доступа к свойствам.  
   
-|Идентификаторы|Описание|  
+|свойство;|Описание|  
 |--------------|-----------------|  
 |<xref:System.Windows.Automation.AutomationElement.CachedChildren%2A>|Коллекция дочерних объектов <xref:System.Windows.Automation.AutomationElement> , находящихся в кэше.|  
 |<xref:System.Windows.Automation.AutomationElement.CachedParent%2A>|Родительский объект <xref:System.Windows.Automation.AutomationElement> , находящийся в кэше.|  

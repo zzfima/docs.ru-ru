@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3b039e50-63ec-4730-99ff-2327408de477
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 271ecd7e757340becccb7bf52362487a2b277299
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 506e13ad956a01b16e36d8c71737fe0efce4c01b
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737180"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74450316"
 ---
 # <a name="imetadataemitseteventprops-method"></a>Метод IMetaDataEmit::SetEventProps
-Задает или обновляет указанный компонент события, определенного с помощью предыдущего вызова [IMetaDataEmit::DefineEvent](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineevent-method.md).  
+Sets or updates the specified feature of an event defined by a prior call to [IMetaDataEmit::DefineEvent](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineevent-method.md).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -43,32 +41,32 @@ HRESULT SetEventProps (
   
 ## <a name="parameters"></a>Параметры  
  `ev`  
- [in] Токен события.  
+ [in] The event token.  
   
  `dwEventFlags`  
- [in] Флаги событий. Это битовая маска `CorEventAttr` значения.  
+ [in] Event flags. This is a bitmask of `CorEventAttr` values.  
   
  `tkEventType`  
- [in] Токен для класса событий. Это может быть либо `mdTypeDef` или `mdTypeRef` токена.  
+ [in] The token for the event class. This is either a `mdTypeDef` or a `mdTypeRef` token.  
   
  `mdAddOn`  
- [in] Метод, используемый для подписки на событие, или значение null.  
+ [in] The method used to subscribe to the event, or null.  
   
  `mdRemoveOn`  
- [in] Метод, используемый для отказа от подписки на событие, или значение null.  
+ [in] The method used to unsubscribe to the event, or null.  
   
  `mdFire`  
- [in] Метод, используемый (с помощью производного класса) для вызова события.  
+ [in] The method used (by a derived class) to raise the event.  
   
  `rmdOtherMethods[]`  
- [in] Массив маркеров для других методов, связанный с событием. Последний элемент массива должен быть `mdMethodDefNil`.  
+ [in] An array of tokens for other methods associated with the event. The last element of the array must be `mdMethodDefNil`.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** Cor.h  
+ **Header:** Cor.h  
   
- **Библиотека:** Используется как ресурс в MSCorEE.dll  
+ **Library:** Used as a resource in MSCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9e986986-2223-4d5f-b040-85d716146924
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a04bf93a2b2809198673d15f29714f52c9435b68
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c8d0145b9dffe1c0ff6ed3281c90f3bcec082ab8
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67767841"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428061"
 ---
 # <a name="isymunmanagedwriterdefineconstant-method"></a>Метод ISymUnmanagedWriter::DefineConstant
-Определяет имя для значения константы.  
+Defines a name for a constant value.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,22 +37,22 @@ HRESULT DefineConstant(
   
 ## <a name="parameters"></a>Параметры  
  `name`  
- [in] Указатель на `WCHAR` , определяющий имя константы.  
+ [in] A pointer to a `WCHAR` that defines the constant name.  
   
  `value`  
- [in] Значение константы.  
+ [in] The value of the constant.  
   
  `cSig`  
  [in] Размер массива `signature`.  
   
  `signature`  
- [in] Сигнатура типа для константы.  
+ [in] The type signature for the constant.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Требования  
- **Заголовок.** CorSym.idl CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>См. также
 

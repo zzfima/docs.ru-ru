@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 5d798088-7992-48a0-ae55-d2a7ee31913f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 27b2241f7eb0e1ce8b0728a54028f9b4a6112e36
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 104a6c3c42c310513040cb45db7f51ffe729c19d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781255"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74427438"
 ---
 # <a name="functionleave3-function"></a>Функция FunctionLeave3
-Уведомляет профилировщик, что элемент управления возвращается из функции.  
+Notifies the profiler that control is being returned from a function.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -34,27 +32,27 @@ void __stdcall FunctionLeave3(FunctionOrRemappedID functionOrRemappedID);
   
 ## <a name="parameters"></a>Параметры  
  `functionOrRemappedID`  
- [in] Идентификатор функции, из которого возвращается.  
+ [in] The identifier of the function from which control is returned.  
   
-## <a name="remarks"></a>Примечания  
- `FunctionLeave3` Функцию обратного вызова Уведомляет профилировщик при вызове функции, но не поддерживает проверку возвращаемого значения. Используйте [метод ICorProfilerInfo3::SetEnterLeaveFunctionHooks3](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-setenterleavefunctionhooks3-method.md) для регистрации вашей реализации этой функции.  
+## <a name="remarks"></a>Заметки  
+ The `FunctionLeave3` callback function notifies the profiler as functions are being called, but does not support return value inspection. Use the [ICorProfilerInfo3::SetEnterLeaveFunctionHooks3 method](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-setenterleavefunctionhooks3-method.md) to register your implementation of this function.  
   
- `FunctionLeave3` Функция является обратным вызовом; это необходимо реализовать. В реализации должен использоваться `__declspec(naked)` атрибут класса хранения.  
+ The `FunctionLeave3` function is a callback; you must implement it. The implementation must use the `__declspec(naked)` storage-class attribute.  
   
- Ядро выполнения не сохраняет значения регистров перед вызовом этой функции.  
+ The execution engine does not save any registers before calling this function.  
   
-- При входе необходимо сохранить все регистры, которые вы используете, включая те, в единицах с плавающей запятой (FPU).  
+- On entry, you must save all registers that you use, including those in the floating-point unit (FPU).  
   
-- При выходе необходимо восстановить стек путем выталкивания из всех параметров, которые были отправлены вызывающим кодом.  
+- On exit, you must restore the stack by popping off all the parameters that were pushed by its caller.  
   
- Реализация `FunctionLeave3` не должен блокироваться, поскольку это приведет к задержке сборки мусора. Реализация не должны в сбор мусора, так как стек может находиться в состоянии коллекции с поддержкой сборки мусора. При попытке сбора мусора, среда выполнения будет блокироваться до `FunctionLeave3` возвращает.  
+ The implementation of `FunctionLeave3` should not block, because it will delay garbage collection. The implementation should not attempt a garbage collection, because the stack may not be in a garbage collection-friendly state. If a garbage collection is attempted, the runtime will block until `FunctionLeave3` returns.  
   
- `FunctionLeave3` Функция не должна вызов управляемого кода или инициировать распределение управляемой памяти любым способом.  
+ The `FunctionLeave3` function must not call into managed code or cause a managed memory allocation in any way.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorProf.idl  
+ **Header:** CorProf.idl  
   
  **Библиотека:** CorGuids.lib  
   

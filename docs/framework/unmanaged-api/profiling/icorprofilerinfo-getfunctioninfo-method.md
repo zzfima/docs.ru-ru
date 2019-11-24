@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c42b5891-019d-46b3-b551-4606295b75b8
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b4b39e53af7abaf25cc4a563bfbec8450b1e57d0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0a3ec1a317fbeba2bf792378663e2fe940a8ec10
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780656"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74439116"
 ---
 # <a name="icorprofilerinfogetfunctioninfo-method"></a>Метод ICorProfilerInfo::GetFunctionInfo
-Получает маркер родительского класса и метаданные для указанной функции.  
+Gets the parent class and metadata token for the specified function.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,7 +37,7 @@ HRESULT GetFunctionInfo(
   
 ## <a name="parameters"></a>Параметры  
  `functionId`  
- [in] Идентификатор функции, для которого нужно получить родительский класс и метаданных маркера.  
+ [in] The ID of the function for which to get the parent class and metadata token.  
   
  `pClassId`  
  [выходной] Указатель на родительский класс функции.  
@@ -50,15 +48,15 @@ HRESULT GetFunctionInfo(
  `pToken`  
  [выходной] Указатель на токен метаданных функции.  
   
-## <a name="remarks"></a>Примечания  
- Профилировщик кода может вызвать [ICorProfilerInfo::GetModuleMetaData](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getmodulemetadata-method.md) получить интерфейс метаданных для данного модуля. Токен метаданных, возвращенный в расположение, на которое ссылается `pToken`, можно впоследствии использовать для доступа к метаданным функции.  
+## <a name="remarks"></a>Заметки  
+ The profiler code can call [ICorProfilerInfo::GetModuleMetaData](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getmodulemetadata-method.md) to obtain a metadata interface for a given module. Токен метаданных, возвращенный в расположение, на которое ссылается `pToken`, можно впоследствии использовать для доступа к метаданным функции.  
   
- `ClassID` Функции к универсальному классу может быть доступная без дополнительные контекстные сведения об использовании функции. В этом случае `pClassId` будет иметь значение 0. Следует использовать код Profiler [ICorProfilerInfo2::GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) со значением COR_PRF_FRAME_INFO для предоставления дополнительного контекста.  
+ The `ClassID` of a function on a generic class might not be obtainable without more contextual information about the use of the function. In this case, `pClassId` will be 0. Profiler code should use [ICorProfilerInfo2::GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) with a COR_PRF_FRAME_INFO value to provide more context.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorProf.idl, CorProf.h  
+ **Заголовок:** CorProf.idl, CorProf.h  
   
  **Библиотека:** CorGuids.lib  
   

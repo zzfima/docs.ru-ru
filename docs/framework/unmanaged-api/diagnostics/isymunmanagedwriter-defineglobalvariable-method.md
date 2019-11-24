@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 843c904a-8176-4d8f-bd47-b4d4c29f4c5c
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 5bc14c36563badb73ac9f9d955ea0c00f5330b4a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 94d1aa5bba87e8ca11b58bdf89a697e1ccf500b1
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777360"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428019"
 ---
 # <a name="isymunmanagedwriterdefineglobalvariable-method"></a>Метод ISymUnmanagedWriter::DefineGlobalVariable
-Определяет одну глобальную переменную.  
+Defines a single global variable.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -43,34 +41,34 @@ HRESULT DefineGlobalVariable(
   
 ## <a name="parameters"></a>Параметры  
  `name`  
- [in] Указатель на `WCHAR` , определяющий имя глобальной переменной.  
+ [in] A pointer to a `WCHAR` that defines the global variable name.  
   
  `attributes`  
- [in] Атрибутов глобальной переменной.  
+ [in] The global variable attributes.  
   
  `cSig`  
- [in] Объект `ULONG32` указывает размер, в символах, из `signature` буфера.  
+ [in] A `ULONG32` that indicates the size, in characters, of the `signature` buffer.  
   
  `signature`  
- [in] Подпись глобальной переменной.  
+ [in] The global variable signature.  
   
  `addrKind`  
- [in] Тип адреса.  
+ [in] The address type.  
   
  `addr1`  
- [in] Первый адрес для спецификации параметра.  
+ [in] The first address for the parameter specification.  
   
  `addr2`  
- [in] Второй адрес для спецификации параметра.  
+ [in] The second address for the parameter specification.  
   
  `addr3`  
- [in] Третий адрес для спецификации параметра.  
+ [in] The third address for the parameter specification.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Требования  
- **Заголовок.** CorSym.idl CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>См. также
 

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 16dc49cb-2c60-4ac8-9c35-020e9afba3f8
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d1db08dfcd2adf1247dd717d6c826bce4726b8a1
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4590d2734ea89bc1bc8a30db1c7ecac5effafd7b
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777037"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74429760"
 ---
 # <a name="isymunmanagedreadergetvariables-method"></a>Метод ISymUnmanagedReader::GetVariables
-Возвращает не являющейся локальной переменной, ее родительскому объекту и имя.  
+Returns a non-local variable, given its parent and name.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,22 +38,22 @@ HRESULT GetVariables (
   
 ## <a name="parameters"></a>Параметры  
  `parent`  
- [in] Родительская переменная.  
+ [in] The parent of the variable.  
   
  `cVars`  
  [in] Размер массива `pVars`.  
   
  `pcVars`  
- [out] Указатель на переменную, которая получает количество переменных, возвращаемых в `pVars`.  
+ [out] A pointer to the variable that receives the number of variables returned in `pVars`.  
   
  `pVars`  
- [out] Указатель на переменную, которая получает переменные.  
+ [out] A pointer to the variable that receives the variables.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Требования  
- **Заголовок.** CorSym.idl CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>См. также
 

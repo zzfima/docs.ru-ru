@@ -5,16 +5,16 @@ helpviewer_keywords:
 - control patterns, for UI Automation clients
 - UI Automation, clients, control patterns for
 ms.assetid: 8b81645b-8be3-4e26-9c98-4fb0fceca06b
-ms.openlocfilehash: cfd8e5dbe34df7b947646c714a360cf56b0435a4
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 48298cb8d89958c701d7150aeb497e82d565bde1
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71043862"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74433857"
 ---
 # <a name="control-pattern-mapping-for-ui-automation-clients"></a>Сопоставление шаблона элемента управления для клиентов автоматизации пользовательского интерфейса
 > [!NOTE]
-> Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Последние сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]см. в разделе [API службы автоматизации Windows: Модель автоматизации](https://go.microsoft.com/fwlink/?LinkID=156746)пользовательского интерфейса.  
+> Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Последние сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]см. в разделе [API автоматизации Windows. Автоматизация пользовательского интерфейса](/windows/win32/winauto/entry-uiauto-win32).  
   
  В этом разделе перечислены типы элементов управления и связанные с ними шаблоны элементов управления.  
   
@@ -35,19 +35,19 @@ ms.locfileid: "71043862"
 |Тип элемента управления|Поддерживается|Условно поддерживается|Не поддерживается|  
 |------------------|---------------|-------------------------|-------------------|  
 |Кнопка|Отсутствуют|Invoke, Toggle, Expand Collapse|Отсутствуют|  
-|Календарь|Grid, Table|Selection, Scroll|Значение|  
+|Календарь|Grid, Table|Selection, Scroll|значения|  
 |Флажок|Toggle|Отсутствуют|Отсутствуют|  
 |Combo Box|Развернуть свернуть|Selection, Value|Scroll|  
 |Data Grid|Grid|Scroll, Selection, Table|Отсутствуют|  
 |Data Item|Selection Item|Expand Collapse, Grid Item, Scroll Item, Table, Toggle, Value|Отсутствуют|  
-|Document|Текст|Scroll, Value|Отсутствуют|  
+|Document|Text|Scroll, Value|Отсутствуют|  
 |Правка|Отсутствуют|Text, Range Value, Value|Отсутствуют|  
 |Группа|Отсутствуют|Развернуть свернуть|Отсутствуют|  
-|Header|Отсутствуют|Transform|Отсутствуют|  
+|Header|Отсутствуют|Обработка|Отсутствуют|  
 |элемент заголовка|Отсутствуют|Transform, Invoke|Отсутствуют|  
-|Hyperlink|Вызвать|Значение|Отсутствуют|  
+|Гиперссылка|Вызвать|значения|Отсутствуют|  
 |Изображение|Отсутствуют|Grid Item, Table Item|Invoke, Selection Item|  
-|Список|Отсутствуют|Grid, Multiple View, Scroll, Selection|Таблица|  
+|Списка|Отсутствуют|Grid, Multiple View, Scroll, Selection|Таблица|  
 |List Item|Selection Item|Expand Collapse, Grid Item, Invoke, Scroll Item, Toggle, Value|Отсутствуют|  
 |Меню|Отсутствуют|Отсутствуют|Отсутствуют|  
 |Menu Bar|Отсутствуют|Expand Collapse, Dock, Transform|Отсутствуют|  
@@ -64,8 +64,8 @@ ms.locfileid: "71043862"
 |Вкладка|Выбранное|Scroll|Отсутствуют|  
 |Tab Item|Selection Item|Отсутствуют|Вызвать|  
 |Таблица|Grid, Grid Item, Table, Table Item|Отсутствуют|Отсутствуют|  
-|Текст|Отсутствуют|Grid Item, Table Item, Text|Значение|  
-|Бегунок|Transform|Отсутствуют|Отсутствуют|  
+|Text|Отсутствуют|Grid Item, Table Item, Text|значения|  
+|Бегунок|Обработка|Отсутствуют|Отсутствуют|  
 |Title Bar|Отсутствуют|Отсутствуют|Отсутствуют|  
 |Tool Bar|Отсутствуют|Dock, Expand Collapse, Transform|Отсутствуют|  
 |Tool Tip|Отсутствуют|Text, Window|Отсутствуют|  

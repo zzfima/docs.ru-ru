@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4e2d88c6-8a3a-4fbe-900b-b4f4c06bf6bf
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 40d1817b9eb7f341899efddb469c7fa17a8f8c0e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1a4f7703536bcfdae75b0bcffae8dca0734e9e0f
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782396"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74437564"
 ---
 # <a name="imetadataimportgetfieldmarshal-method"></a>Метод IMetaDataImport::GetFieldMarshal
-Возвращает указатель на машинный неуправляемый тип поля, представленного маркер метаданных указанного поля.  
+Gets a pointer to the native, unmanaged type of the field represented by the specified field metadata token.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,20 +37,20 @@ HRESULT GetFieldMarshal (
   
 ## <a name="parameters"></a>Параметры  
  `tk`  
- [in] Токен метаданных, представляющий поле, чтобы получить взаимодействия сведения о маршалинге для.  
+ [in] The metadata token that represents the field to get interop marshaling information for.  
   
  `ppvNativeType`  
- [out] Указатель на собственный тип поля подпись метаданных.  
+ [out] A pointer to the metadata signature of the field's native type.  
   
  `pcbNativeType`  
- [out] Размер в байтах `ppvNativeType`.  
+ [out] The size in bytes of `ppvNativeType`.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** Cor.h  
+ **Header:** Cor.h  
   
- **Библиотека:** Включена как ресурс в MsCorEE.dll  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

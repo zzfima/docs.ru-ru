@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: e0667ef7-1d31-4c89-a2d3-d426f023f8d2
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 27b2867019085bf5b44f2ee364c07af66144d4b5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4a258ce9121a287929ca5bc39c480f1ca2596e78
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782328"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74437460"
 ---
 # <a name="imetadataimportgetmethodprops-method"></a>Метод IMetaDataImport::GetMethodProps
 Возвращает метаданные, связанные с методом, на который ссылается указанный токен MethodDef.  
@@ -46,41 +44,41 @@ HRESULT GetMethodProps (
   
 ## <a name="parameters"></a>Параметры  
  `mb`  
- [in] Токен MethodDef, который представляет метод для возврата метаданных для.  
+ [in] The MethodDef token that represents the method to return metadata for.  
   
  `pClass`  
- [out] Указатель на токен TypeDef, представляющий тип, реализующий метод.  
+ [out] A Pointer to a TypeDef token that represents the type that implements the method.  
   
  `szMethod`  
- [out] Указатель на буфер, который имеет имя метода.  
+ [out] A Pointer to a buffer that has the method's name.  
   
  `cchMethod`  
- [in] Запрошенный размер `szMethod`.  
+ [in] The requested size of `szMethod`.  
   
  `pchMethod`  
- [out] Указатель на размер в расширенных символах `szMethod`, или в случае усечения фактическое число расширенных символов в имени метода.  
+ [out] A Pointer to the size in wide characters of `szMethod`, or in the case of truncation, the actual number of wide characters in the method name.  
   
  `pdwAttr`  
- [out] Указатель на любой флаги, связанные с методом.  
+ [out] A pointer to any flags associated with the method.  
   
  `ppvSigBlob`  
- [out] Указатель на двоичную подпись метаданных метода.  
+ [out] A pointer to the binary metadata signature of the method.  
   
  `pcbSigBlob`  
- [out] Указатель на размер в байтах `ppvSigBlob`.  
+ [out] A Pointer to the size in bytes of `ppvSigBlob`.  
   
  `pulCodeRVA`  
- [out] Указатель на относительный виртуальный адрес метода.  
+ [out] A pointer to the relative virtual address of the method.  
   
  `pdwImplFlags`  
- [out] Указатель на любой флаги реализации метода.  
+ [out] A pointer to any implementation flags for the method.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** Cor.h  
+ **Header:** Cor.h  
   
- **Библиотека:** Включена как ресурс в MsCorEE.dll  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

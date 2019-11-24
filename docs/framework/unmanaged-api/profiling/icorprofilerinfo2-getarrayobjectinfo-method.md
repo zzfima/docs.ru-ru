@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: bda75017-739f-4ce5-9000-f3b526e8473c
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 3ebf8c736cdd1362cae1b1e0b734ce14bea49b18
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 97b127c9a6aac0a0fefe25faf294791dcd2c8e41
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67751884"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436030"
 ---
 # <a name="icorprofilerinfo2getarrayobjectinfo-method"></a>Метод ICorProfilerInfo2::GetArrayObjectInfo
-Получает подробные сведения об объекте массива.  
+Gets detailed information about an array object.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,27 +38,27 @@ HRESULT GetArrayObjectInfo(
   
 ## <a name="parameters"></a>Параметры  
  `objectId`  
- [in] Идентификатор объекта допустимым массивом.  
+ [in] The ID of a valid array object.  
   
  `cDimensions`  
- [in] Ранг (число измерений) массива.  
+ [in] The rank (number of dimensions) of the array.  
   
  `pDimensionSizes`  
- [out] Массив, содержащий целые числа, каждый из которых представляет размер измерения массива.  
+ [out] An array that contains integers, each representing the size of a dimension of the array.  
   
  `pDimensionLowerBounds`  
- [out] Массив, содержащий целые числа, каждый из которых представляет нижняя граница измерения массива.  
+ [out] An array that contains integers, each representing the lower bound of a dimension of the array.  
   
  `ppData`  
- [out] Указатель на адрес необработанного буфера для массива, в которой располагается согласно C++ соглашение.  
+ [out] A pointer to the address of the raw buffer for the array, which is laid out according to the C++ convention.  
   
-## <a name="remarks"></a>Примечания  
- `pDimensionSizes` И `pDimensionLowerBounds` являются параллельными массивами, поэтому характеристики одной сущности, элементы, расположенный в один и тот же индекс в каждом массиве.  
+## <a name="remarks"></a>Заметки  
+ The `pDimensionSizes` and `pDimensionLowerBounds` are parallel arrays, so the elements located at the same index in each array are characteristics of the same entity.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorProf.idl, CorProf.h  
+ **Заголовок:** CorProf.idl, CorProf.h  
   
  **Библиотека:** CorGuids.lib  
   

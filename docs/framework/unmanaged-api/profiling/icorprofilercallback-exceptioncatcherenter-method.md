@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 41462329-a648-46f0-ae6d-728b94c31aa9
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6a90ae67a7d264273bd0e07a42aa6195122a06ec
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9c9cd0b042dc22f35c38e349ab8881dafc602731
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776144"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445018"
 ---
 # <a name="icorprofilercallbackexceptioncatcherenter-method"></a>Метод ICorProfilerCallback::ExceptionCatcherEnter
-Уведомляет профилировщик, что управление передается соответствующему блоку `catch`.  
+Notifies the profiler that control is being passed to the appropriate `catch` block.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,22 +35,22 @@ HRESULT ExceptionCatcherEnter(
   
 ## <a name="parameters"></a>Параметры  
  `functionId`  
- [in] Функция, содержащая идентификатор `catch` блока.  
+ [in] The identifier of the function containing the `catch` block.  
   
  `objectId`  
- [in] Идентификатор обрабатываемое исключение.  
+ [in] The identifier of the exception being handled.  
   
-## <a name="remarks"></a>Примечания  
- `ExceptionCatcherEnter` Метод вызывается только в том случае, если точка catch находится в коде, скомпилированном с помощью компилятора just-in-time (JIT). Это уведомление не вызывает исключения, перехваченные в неуправляемом коде, или во внутреннем коде среды выполнения. `objectId` Значение передается снова, поскольку сбор мусора может перемещена объекта с момента `ExceptionThrown` уведомлений.  
+## <a name="remarks"></a>Заметки  
+ The `ExceptionCatcherEnter` method is called only if the catch point is in code compiled with the just-in-time (JIT) compiler. An exception that is caught in unmanaged code or in the internal code of the runtime will not call this notification. The `objectId` value is passed again since a garbage collection could have moved the object since the `ExceptionThrown` notification.  
   
- Профилировщик не должен блокироваться при реализации этого метода, поскольку стек может находиться в состоянии, допускающем сбор мусора, и поэтому не удастся включить сборку мусора. Если здесь профилировщик блокируется и предпринимается попытка сбора мусора, среда выполнения будет блокироваться до этого обратного вызова.  
+ The profiler should not block in its implementation of this method because the stack may not be in a state that allows garbage collection, and therefore preemptive garbage collection cannot be enabled. If the profiler blocks here and garbage collection is attempted, the runtime will block until this callback returns.  
   
- Реализация этого метода профилировщика не следует вызывать управляемый код или каким-либо образом вызывать распределения управляемой памяти.  
+ The profiler's implementation of this method should not call into managed code or in any way cause a managed-memory allocation.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorProf.idl, CorProf.h  
+ **Заголовок:** CorProf.idl, CorProf.h  
   
  **Библиотека:** CorGuids.lib  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: ba6e178f-128b-4e47-a13c-b4be73eb106c
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 0d0f94949cdc82cdecd52f003f3400c43014fabf
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4c819bff50e6644a733374e9863d670d3323ee68
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780466"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449533"
 ---
 # <a name="imetadataimportenuminterfaceimpls-method"></a>Метод IMetaDataImport::EnumInterfaceImpls
-Перечисляет все интерфейсы, реализованные с помощью указанного `TypeDef`. 
+Enumerates all interfaces implemented by the specified `TypeDef`. 
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -41,37 +39,37 @@ HRESULT EnumInterfaceImpls (
   
 ## <a name="parameters"></a>Параметры  
  `phEnum`  
- [in, out] Указатель на перечислитель.  
+ [in, out] A pointer to the enumerator.  
   
  `td`  
- [in] Токен TypeDef, которого токены MethodDef, представляющие реализации интерфейса, которые необходимо перечислить.  
+ [in] The token of the TypeDef whose MethodDef tokens representing interface implementations are to be enumerated.  
   
  `rImpls`  
- [out] Массив, используемый для хранения токенов MethodDef.  
+ [out] The array used to store the MethodDef tokens.  
   
  `cMax`  
  [in] Максимальный размер массива `rImpls`.  
   
  `pcImpls`  
- [out] Фактическое число маркеров, возвращаемых в `rImpls`.  
+ [out] The actual number of tokens returned in `rImpls`.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
   
 |HRESULT|Описание|  
 |-------------|-----------------|  
-|`S_OK`|`EnumInterfaceImpls` успешно возвращен.|  
-|`S_FALSE`|Существуют маркеры MethodDef для перечисления отсутствуют. В этом случае `pcImpls` присваивается нулевое значение.|  
+|`S_OK`|`EnumInterfaceImpls` returned successfully.|  
+|`S_FALSE`|There are no MethodDef tokens to enumerate. In that case, `pcImpls` is set to zero.|  
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
-Перечисление возвращает коллекцию `mdInterfaceImpl` маркеры для каждого интерфейса, реализуемый указанного `TypeDef`. Интерфейс маркеры возвращаются в порядке, указанном интерфейсы были (через `DefineTypeDef` или `SetTypeDefProps`). Свойствам возвращенного типа сущности `mdInterfaceImpl` маркеры можно запросить с помощью [GetInterfaceImplProps](imetadataimport-getinterfaceimplprops-method.md).
+The enumeration returns a collection of `mdInterfaceImpl` tokens for each interface implemented by the specified `TypeDef`. Interface tokens are returned in the order the interfaces were specified (through `DefineTypeDef` or `SetTypeDefProps`). Properties of the returned `mdInterfaceImpl` tokens can be queried using [GetInterfaceImplProps](imetadataimport-getinterfaceimplprops-method.md).
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** Cor.h  
+ **Header:** Cor.h  
   
- **Библиотека:** Включена как ресурс в MsCorEE.dll  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

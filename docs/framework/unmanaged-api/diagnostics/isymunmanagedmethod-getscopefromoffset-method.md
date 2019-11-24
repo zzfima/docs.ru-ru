@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: d14cf210-81f8-46e1-8b19-6ddec0ba8b11
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d540318dabd55e9a520aedde371e0a83d612721e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 36b1b2394907f242c0e8c5e277c0d1c5b3b02e1b
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67759488"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448902"
 ---
 # <a name="isymunmanagedmethodgetscopefromoffset-method"></a>Метод ISymUnmanagedMethod::GetScopeFromOffset
-Возвращает наиболее узкую внешнюю лексическую область, в этот метод, который окружает заданного смещения. Это может использоваться для запуска поиска локальной переменной.  
+Gets the most enclosing lexical scope within this method that encloses the given offset. This can be used to start local variable searches.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,16 +35,16 @@ HRESULT GetScopeFromOffset(
   
 ## <a name="parameters"></a>Параметры  
  `offset`  
- [in] Объект `ULONG` , содержащий смещение.  
+ [in] A `ULONG` that contains the offset.  
   
  `pRetVal`  
- [out] Указатель, который имеет значение равное возвращаемому [ISymUnmanagedScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md) интерфейс.  
+ [out] A pointer that is set to the returned [ISymUnmanagedScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md) interface.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Требования  
- **Заголовок.** CorSym.idl CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>См. также
 

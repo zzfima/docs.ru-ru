@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: eb3187d7-74cf-44b1-aeeb-7a8d2b60e3b7
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 74d0c2e9777a7bd3d49622fb326ecb6b58fbec07
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ff9827174e43fd62f3a995e9f477c6fff66b227a
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782537"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449952"
 ---
 # <a name="imetadataimportenumunresolvedmethods-method"></a>Метод IMetaDataImport::EnumUnresolvedMethods
 Перечисляет токены MemberDef, представляющие неразрешенные методы в текущей области метаданных.  
@@ -40,35 +38,35 @@ HRESULT EnumUnresolvedMethods (
   
 ## <a name="parameters"></a>Параметры  
  `phEnum`  
- [in, out] Указатель на перечислитель. Это должно быть NULL при первом вызове этого метода.  
+ [in, out] A pointer to the enumerator. This must be NULL for the first call of this method.  
   
  `rMethods`  
- [out] Массив, используемый для хранения токенов MemberDef.  
+ [out] The array used to store the MemberDef tokens.  
   
  `cMax`  
  [in] Максимальный размер массива `rMethods`.  
   
  `pcTokens`  
- [out] Число возвращенных в токены MemberDef `rMethods`.  
+ [out] The number of MemberDef tokens returned in `rMethods`.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
   
 |HRESULT|Описание|  
 |-------------|-----------------|  
-|`S_OK`|`EnumUnresolvedMethods` успешно возвращен.|  
-|`S_FALSE`|Существуют маркеры для перечисления отсутствуют. В этом случае `pcTokens` равно нулю.|  
+|`S_OK`|`EnumUnresolvedMethods` returned successfully.|  
+|`S_FALSE`|There are no tokens to enumerate. In that case, `pcTokens` is zero.|  
   
-## <a name="remarks"></a>Примечания  
- Неразрешенный метод — это приложения, был объявлен, но не реализован. Метод включается в перечисление, если метод помечен `miForwardRef` и либо `mdPinvokeImpl` или `miRuntime` присваивается нулевое значение. Другими словами, неразрешенный метод является методом класса, помеченного `miForwardRef` , но который не реализован в неуправляемом коде (посредством PInvoke) и не реализуются внутренним образом средой в самой среде выполнения  
+## <a name="remarks"></a>Заметки  
+ An unresolved method is one that has been declared but not implemented. A method is included in the enumeration if the method is marked `miForwardRef` and either `mdPinvokeImpl` or `miRuntime` is set to zero. In other words, an unresolved method is a class method that is marked `miForwardRef` but which is not implemented in unmanaged code (reached via PInvoke) nor implemented internally by the runtime itself  
   
- Перечисление исключает все методы, определенные в области модуля (глобальные) или в интерфейсы или абстрактные классы.  
+ The enumeration excludes all methods that are defined either at module scope (globals) or in interfaces or abstract classes.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** Cor.h  
+ **Header:** Cor.h  
   
- **Библиотека:** Включена как ресурс в MsCorEE.dll  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

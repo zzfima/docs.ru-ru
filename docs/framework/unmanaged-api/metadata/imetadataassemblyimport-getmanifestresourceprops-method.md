@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 00be4789-ac63-4397-b2ec-1629a5c5a585
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e47b1807e51427487d6af2f96ff5af437c4653eb
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c1792ed0f15f8cfb62567593c9694453650f0bb9
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67760947"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436315"
 ---
 # <a name="imetadataassemblyimportgetmanifestresourceprops-method"></a>Метод IMetaDataAssemblyImport::GetManifestResourceProps
-Получает набор свойств ресурса манифеста с заданной подписью метаданных.  
+Gets the set of properties of the manifest resource with the specified metadata signature.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -43,32 +41,32 @@ HRESULT GetManifestResourceProps (
   
 ## <a name="parameters"></a>Параметры  
  `mdmr`  
- [in] `mdManifestResource` Токен, представляющий ресурс, для которого нужно получить свойства.  
+ [in] An `mdManifestResource` token that represents the resource for which to get the properties.  
   
  `szName`  
- [out] Имя ресурса.  
+ [out] The name of the resource.  
   
  `cchName`  
- [in] Размер, в расширенных символах из `szName`.  
+ [in] The size, in wide chars, of `szName`.  
   
  `pchName`  
- [out] Указатель на число расширенных символов, фактически возвращенных в `szName`.  
+ [out] A pointer to the number of wide chars actually returned in `szName`.  
   
  `ptkImplementation`  
- [out] Указатель на `mdFile` маркеров или `mdAssemblyRef` токен, который представляет файл или сборку, соответственно, содержащего ресурс.  
+ [out] A pointer to an `mdFile` token or an `mdAssemblyRef` token that represents the file or assembly, respectively, that contains the resource.  
   
  `pdwOffset`  
- [out] Указатель на значение, указывающее смещение в начало ресурса в файле.  
+ [out] A pointer to a value that specifies the offset to the beginning of the resource within the file.  
   
  `pdwResourceFlags`  
- [out] Указатель на флаги, описывающие метаданные, применяемые к ресурсу. Значение флагов представляет собой сочетание одного или нескольких [CorManifestResourceFlags](../../../../docs/framework/unmanaged-api/metadata/cormanifestresourceflags-enumeration.md) значения.  
+ [out] A pointer to flags that describe the metadata applied to a resource. The flags value is a combination of one or more [CorManifestResourceFlags](../../../../docs/framework/unmanaged-api/metadata/cormanifestresourceflags-enumeration.md) values.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** Cor.h  
+ **Header:** Cor.h  
   
- **Библиотека:** Используется как ресурс в MsCorEE.dll  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: dbdf853b-d1a4-4828-8ef7-53d121d8e6ae
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a68ea07c40c966422be6ebb663e62508032c2610
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9c96cacf508ef5c056a1ff4469247393fdfb9e9e
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67750448"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74444472"
 ---
 # <a name="icorprofilercallbackrootreferences-method"></a>Метод ICorProfilerCallback::RootReferences
-Уведомляет профилировщик о корневыми ссылками после сборки мусора.  
+Notifies the profiler with information about root references after garbage collection.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,22 +35,22 @@ HRESULT RootReferences(
   
 ## <a name="parameters"></a>Параметры  
  `cRootRefs`  
- [in] Число ссылок в `rootRefIds` массива.  
+ [in] The number of references in the `rootRefIds` array.  
   
  `rootRefIds`  
- [in] Массив идентификаторов объектов, которые ссылаются на статический объект или объект в стеке.  
+ [in] An array of object IDs that reference either a static object or an object on the stack.  
   
-## <a name="remarks"></a>Примечания  
- Оба `RootReferences` и [ICorProfilerCallback2::RootReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md) вызываемые для уведомления профилировщика. Обычно профилировщик реализует одно из них, но не оба одновременно, так как данные, передаваемые `RootReferences2` является надмножеством информации, переданной в `RootReferences`.  
+## <a name="remarks"></a>Заметки  
+ Both `RootReferences` and [ICorProfilerCallback2::RootReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md) are called to notify the profiler. Profilers will normally implement one or the other, but not both, because the information passed in `RootReferences2` is a superset of that passed in `RootReferences`.  
   
- Существует возможность `rootRefIds` массив должен содержать пустой объект. Например все ссылки на объекты, объявленные в стеке, рассматриваются как корни сборщиком мусора и всегда будет считаться.  
+ It is possible for the `rootRefIds` array to contain a null object. For example, all object references declared on the stack are treated as roots by the garbage collector and will always be reported.  
   
- Идентификаторы объектов, возвращенных `RootReferences` являются недопустимыми во время обратного вызова, так как сборка мусора может находиться в процессе перемещения объектов из старого адреса в новые адреса. Таким образом, профилировщики не должны пытаться проверять объекты во время `RootReferences` вызова. Когда [ICorProfilerCallback2::GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) является именем, все объекты были перемещены в новые расположения и можно безопасно проверить.  
+ The object IDs returned by `RootReferences` are not valid during the callback itself, because the garbage collection might be in the middle of moving objects from old addresses to new addresses. Therefore, profilers must not attempt to inspect objects during a `RootReferences` call. When [ICorProfilerCallback2::GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) is called, all objects have been moved to their new locations and can be safely inspected.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorProf.idl, CorProf.h  
+ **Заголовок:** CorProf.idl, CorProf.h  
   
  **Библиотека:** CorGuids.lib  
   

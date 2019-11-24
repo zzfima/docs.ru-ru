@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 886ea6c5-6b26-4b88-8bf6-448d6d191950
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: eb8112d6d2b5c2cbb257db2f20ff4be5a84e827b
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: cc81ccd1c754e3d34c54737f4560b4f81d5cc916
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70787471"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74438414"
 ---
 # <a name="exportnestedtypeforwarder-method"></a>Метод ExportNestedTypeForwarder
-Добавляет сервер пересылки типа для вложенного типа в таблицу типов данной сборки.  
+Adds a type forwarder for a nested type to the type table of the given assembly.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -42,31 +40,31 @@ HRESULT ExportNestedTypeForwarder(
   
 ## <a name="parameters"></a>Параметры  
  `AssemblyID`  
- Идентификатор сборки, из которой необходимо выполнить экспорт.  
+ ID of the assembly to export from.  
   
  `FileToken`  
- Маркер файла или идентификатор сборки файла, который определяет тип.  
+ File token or assembly ID of file that defines the type.  
   
  `TypeToken`  
- Токен для типа.  
+ Token for the type.  
   
  `ParentType`  
- Токен родительского типа.  
+ Token of parent type.  
   
  `pszTypename`  
- Полное имя типа для экспорта.  
+ Fully qualified type name to export.  
   
  `dwFlags`  
- `ComType`Флаги, `tdPublic` такие `tdNested`как или.  
+ `ComType` flags such as `tdPublic` or `tdNested`.  
   
  `pType`  
- Получает маркер типа экспорта. Это необходимо только для выпуска вложенных типов.  
+ Receives token of export type. This is necessary only for emitting nested types.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Если метод завершается с ошибкой, возвращает значение S_OK.  
+ Returns S_OK if the method succeeds.  
   
 ## <a name="requirements"></a>Требования  
- Требуется ALink. h  
+ Requires alink.h  
   
 ## <a name="see-also"></a>См. также
 

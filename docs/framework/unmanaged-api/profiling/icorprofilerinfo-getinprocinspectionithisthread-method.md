@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: badddccd-f85c-416e-9f0f-419eab2c9d42
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 3e0f56dd6ece32b1f05418ea288da409af5cad5f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: bcc324d0f5cd14e1de9f02c8e6844a5868b70e8b
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782768"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74438908"
 ---
 # <a name="icorprofilerinfogetinprocinspectionithisthread-method"></a>Метод ICorProfilerInfo::GetInprocInspectionIThisThread
-Получает объект, который можно запросить для ICorDebugThread-интерфейс. Этот метод является устаревшим в .NET Framework версии 2.0.  
+Gets an object that can be queried for the ICorDebugThread interface. This method is obsolete in the .NET Framework version 2.0.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -36,19 +34,19 @@ HRESULT GetInprocInspectionIThisThread(
   
 ## <a name="parameters"></a>Параметры  
  `ppicd`  
- [out](/cpp/atl/iunknown) объект, который можно запросить для `ICorDebugThread` интерфейс.  
+ [out](/cpp/atl/iunknown) object that can be queried for the `ICorDebugThread` interface.  
   
-## <a name="remarks"></a>Примечания  
- Общеязыковой среды выполнения (CLR), службы отладки поддерживается только в процессе отладки в .NET Framework версии 1.0. В процессе отладки включить профилировщик для использования для проверки часть API отладки. В результате отзывов в процессе отладки удален из .NET Framework версии 2.0 и заменены набором функциональных возможностей, которые лучше соответствуют API профилирования.  
+## <a name="remarks"></a>Заметки  
+ The common language runtime (CLR) debugging services supported limited in-process debugging in the .NET Framework version 1.0. In-process debugging enabled a profiler to use the inspection portions of the debugging API. As a result of customer feedback, in-process debugging has been removed from the .NET Framework in version 2.0, and replaced with a set of functionality that is more in line with the profiling API.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorProf.idl, CorProf.h  
+ **Заголовок:** CorProf.idl, CorProf.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** 1.0  
+ **.NET Framework Version:** 1.0  
   
 ## <a name="see-also"></a>См. также
 

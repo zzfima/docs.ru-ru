@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: e47a72f1-9609-48ed-bb34-97170d7f6890
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 846c754aeb0a710fa70e906e666f694eaa77c576
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ef4788891e91608a394482319a89b8b0d258449f
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781713"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436510"
 ---
 # <a name="cornativetype-enumeration"></a>Перечисление CorNativeType
 Содержит значения, описывающие собственные неуправляемые типы.  
@@ -87,62 +85,62 @@ typedef enum CorNativeType {
 } CorNativeType;  
 ```  
   
-## <a name="members"></a>Участники  
+## <a name="members"></a>Члены  
   
 |Член|Описание|  
 |------------|-----------------|  
 |`NATIVE_TYPE_END`|Является устаревшей.|  
 |`NATIVE_TYPE_VOID`|Является устаревшей.|  
-|`NATIVE_TYPE_BOOLEAN`|4-байтовое логическое значение, где значение TRUE, ненулевое значение и значение FALSE, равно нулю.|  
-|`NATIVE_TYPE_I1`|8-разрядное целое число со знаком.|  
-|`NATIVE_TYPE_U1`|8-разрядное целочисленное значение без знака.|  
-|`NATIVE_TYPE_I2`|16-разрядное целое число со знаком.|  
-|`NATIVE_TYPE_U2`|16-разрядное целочисленное значение без знака.|  
+|`NATIVE_TYPE_BOOLEAN`|A 4-byte Boolean value, where TRUE is non-zero and FALSE is zero.|  
+|`NATIVE_TYPE_I1`|A signed 8-bit integer value.|  
+|`NATIVE_TYPE_U1`|An unsigned 8-bit integer value.|  
+|`NATIVE_TYPE_I2`|A signed 16-bit integer value.|  
+|`NATIVE_TYPE_U2`|An unsigned 16-bit integer value.|  
 |`NATIVE_TYPE_I4`|32-разрядное целое значение со знаком.|  
 |`NATIVE_TYPE_U4`|32-разрядное целое значение без знака.|  
-|`NATIVE_TYPE_I8`|Значение 64-битового знакового целого числа.|  
-|`NATIVE_TYPE_U8`|64-разрядное целочисленное значение без знака.|  
-|`NATIVE_TYPE_R4`|4-байтовое числовое значение с плавающей запятой.|  
-|`NATIVE_TYPE_R8`|8-байтное числовое значение с плавающей запятой.|  
+|`NATIVE_TYPE_I8`|A signed 64-bit integer value.|  
+|`NATIVE_TYPE_U8`|An unsigned 64-bit integer value.|  
+|`NATIVE_TYPE_R4`|A 4-byte floating-point numeric value.|  
+|`NATIVE_TYPE_R8`|An 8-byte floating-point numeric value.|  
 |`NATIVE_TYPE_SYSCHAR`|Является устаревшей.|  
 |`NATIVE_TYPE_VARIANT`|Является устаревшей.|  
-|`NATIVE_TYPE_CURRENCY`|Числовой тип COM, который соответствует управляемого <xref:System.Decimal> типа.|  
+|`NATIVE_TYPE_CURRENCY`|A numeric COM type that corresponds to the managed <xref:System.Decimal> type.|  
 |`NATIVE_TYPE_PTR`|Является устаревшей.|  
 |`NATIVE_TYPE_DECIMAL`|Является устаревшей.|  
 |`NATIVE_TYPE_DATE`|Является устаревшей.|  
-|`NATIVE_TYPE_BSTR`|COM-взаимодействия.|  
-|`NATIVE_TYPE_LPSTR`|Строковое значение LPSTR.|  
-|`NATIVE_TYPE_LPWSTR`|Строковое значение LPWSTR.|  
-|`NATIVE_TYPE_LPTSTR`|Строковое значение LPTSTR.|  
-|`NATIVE_TYPE_FIXEDSYSSTRING`|Фиксированное, системный строковое значение.|  
+|`NATIVE_TYPE_BSTR`|COM Interop.|  
+|`NATIVE_TYPE_LPSTR`|An LPSTR string value.|  
+|`NATIVE_TYPE_LPWSTR`|An LPWSTR string value.|  
+|`NATIVE_TYPE_LPTSTR`|An LPTSTR string value.|  
+|`NATIVE_TYPE_FIXEDSYSSTRING`|A fixed, system-defined string value.|  
 |`NATIVE_TYPE_OBJECTREF`|Является устаревшей.|  
-|`NATIVE_TYPE_IUNKNOWN`|COM-взаимодействия.|  
-|`NATIVE_TYPE_IDISPATCH`|COM-взаимодействия.|  
-|`NATIVE_TYPE_STRUCT`|Значение собственной структуры.|  
-|`NATIVE_TYPE_INTF`|COM-взаимодействия.|  
-|`NATIVE_TYPE_SAFEARRAY`|COM-взаимодействия.|  
-|`NATIVE_TYPE_FIXEDARRAY`|Значение массива фиксированной длины.|  
-|`NATIVE_TYPE_INT`|Собственный 16-разрядное целое число со знаком.|  
-|`NATIVE_TYPE_UINT`|Значение собственного 16-разрядное целое число без знака.|  
-|`NATIVE_TYPE_NESTEDSTRUCT`|Является устаревшей.<br /><br /> Используйте NATIVE_TYPE_STRUCT.|  
-|`NATIVE_TYPE_BYVALSTR`|COM-взаимодействия.|  
-|`NATIVE_TYPE_ANSIBSTR`|COM-взаимодействия.|  
-|`NATIVE_TYPE_TBSTR`|COM-взаимодействия.<br /><br /> Выберите BSTR или ANSIBSTR в зависимости от платформы.|  
-|`NATIVE_TYPE_VARIANTBOOL`|2-байтовое логическое значение, где значение TRUE — -1, а FALSE равно нулю.|  
+|`NATIVE_TYPE_IUNKNOWN`|COM Interop.|  
+|`NATIVE_TYPE_IDISPATCH`|COM Interop.|  
+|`NATIVE_TYPE_STRUCT`|A native structure value.|  
+|`NATIVE_TYPE_INTF`|COM Interop.|  
+|`NATIVE_TYPE_SAFEARRAY`|COM Interop.|  
+|`NATIVE_TYPE_FIXEDARRAY`|A fixed-length array value.|  
+|`NATIVE_TYPE_INT`|A native 16-bit signed integer value.|  
+|`NATIVE_TYPE_UINT`|A native 16-bit unsigned integer value.|  
+|`NATIVE_TYPE_NESTEDSTRUCT`|Является устаревшей.<br /><br /> Use NATIVE_TYPE_STRUCT.|  
+|`NATIVE_TYPE_BYVALSTR`|COM Interop.|  
+|`NATIVE_TYPE_ANSIBSTR`|COM Interop.|  
+|`NATIVE_TYPE_TBSTR`|COM Interop.<br /><br /> Select BSTR or ANSIBSTR depending on the platform.|  
+|`NATIVE_TYPE_VARIANTBOOL`|A 2-byte Boolean value, where TRUE is -1 and FALSE is zero.|  
 |`NATIVE_TYPE_FUNC`|Указатель функции.|  
-|`NATIVE_TYPE_ASANY`|Ссылка на машинный тип.|  
-|`NATIVE_TYPE_ARRAY`|Ссылка на массив с членами незаданного типа.|  
-|`NATIVE_TYPE_LPSTRUCT`|Указатель на структуру 32-разрядное целое число.|  
-|`NATIVE_TYPE_CUSTOMMARSHALER`|Собственный тип настраиваемого модуля маршалинга.<br /><br /> Это следует указать строку в следующем формате: «Имя/0Custom упаковщик собственный тип типа имя/0Optional cookie/0» или «{собственного введите GUID} / упаковщик 0Custom введите имя/0Optional файл cookie или 0 "|  
-|`NATIVE_TYPE_ERROR`|COM-взаимодействия.<br /><br /> С помощью ELEMENT_TYPE_I4 этот тип сопоставляется VT_HRESULT.|  
-|`NATIVE_TYPE_IINSPECTABLE`|Собственный `IInspectable` типа.|  
-|`NATIVE_TYPE_HSTRING`|Собственный `HString`.|  
-|`NATIVE_TYPE_MAX`|Недопустимое значение.|  
+|`NATIVE_TYPE_ASANY`|A reference to any native type.|  
+|`NATIVE_TYPE_ARRAY`|A reference to an array with members of an unspecified type.|  
+|`NATIVE_TYPE_LPSTRUCT`|A 32-bit integer pointer to a structure.|  
+|`NATIVE_TYPE_CUSTOMMARSHALER`|A custom marshaler native type.<br /><br /> This must be followed by a string of the following format: "Native type name/0Custom marshaler type name/0Optional cookie/0" or "{Native type GUID}/0Custom marshaler type name/0Optional cookie/0"|  
+|`NATIVE_TYPE_ERROR`|COM Interop.<br /><br /> With ELEMENT_TYPE_I4 this type maps to VT_HRESULT.|  
+|`NATIVE_TYPE_IINSPECTABLE`|A native `IInspectable` type.|  
+|`NATIVE_TYPE_HSTRING`|A native `HString`.|  
+|`NATIVE_TYPE_MAX`|An invalid value.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorHdr.h  
+ **Header:** CorHdr.h  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

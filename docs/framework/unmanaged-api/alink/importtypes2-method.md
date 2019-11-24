@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 32f3ba58-9695-41e9-ba58-fd19e45ed396
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ce09eca30e1edb9e1afc02216a07955a5fed4fd2
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 8dae903ab76ab83ac0818c4bc4a76e81094bdf65
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70787254"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445662"
 ---
 # <a name="importtypes2-method"></a>Метод ImportTypes2
-Инициирует импорт типов. Вызовите этот метод, чтобы начать импорт типов из каждой области, импортированной с помощью [метода ImportFile](importfile-method.md).  
+Initiates the import of types. Call this method to begin importing types from each scope imported via [ImportFile Method](importfile-method.md).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -41,28 +39,28 @@ HRESULT ImportTypes2(
   
 ## <a name="parameters"></a>Параметры  
  `AssemblyID`  
- Идентификатор сборки, в которую необходимо выполнить импорт.  
+ ID of assembly into which to import.  
   
  `FileToken`  
- Идентификатор файла для импорта.  
+ ID of file to from which to import.  
   
  `dwScope`  
- Отсчитываемая от нуля область, из которой производится импорт.  
+ Zero-based scope from which to import.  
   
  `phEnum`  
- Получает обработчик перечислителя для типов в заданной области.  
+ Receives enumerator handle for the types in the given scope.  
   
  `ppImportScope`  
- При необходимости получает интерфейс интерфейса [IMetaDataImport2](../metadata/imetadataimport2-interface.md) .  
+ Optionally receives [IMetaDataImport2 Interface](../metadata/imetadataimport2-interface.md) interface.  
   
  `pdwCountOfTypes`  
- При необходимости получает число типов в указанной области.  
+ Optionally receives count of types in the specified scope.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Если метод завершается с ошибкой, возвращает значение S_OK.  
+ Returns S_OK if the method succeeds.  
   
 ## <a name="requirements"></a>Требования  
- Требуется ALink. h  
+ Requires alink.h  
   
 ## <a name="see-also"></a>См. также
 

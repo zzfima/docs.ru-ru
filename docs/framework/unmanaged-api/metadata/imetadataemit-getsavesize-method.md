@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8aea2e2c-23a3-4cda-9a06-e19f97383830
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 7337222f7f419c68ae21d604d1673158acca85ba
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 125a63638a41707b8eed918253cb1f93abb907eb
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777394"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74434334"
 ---
 # <a name="imetadataemitgetsavesize-method"></a>Метод IMetaDataEmit::GetSaveSize
-Получает приблизительный двоичный размер сборки и ее метаданные в текущей области.  
+Gets the estimated binary size of the assembly and its metadata in the current scope.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,30 +36,30 @@ HRESULT GetSaveSize (
   
 ## <a name="parameters"></a>Параметры  
  `fSave`  
- [in] Значение [CorSaveSize](../../../../docs/framework/unmanaged-api/metadata/corsavesize-enumeration.md) перечисление, указывающее, следует ли получить точное или приблизительное размер. Допустимы только три значения: cssAccurate, cssQuick и cssDiscardTransientCAs:  
+ [in] A value of the [CorSaveSize](../../../../docs/framework/unmanaged-api/metadata/corsavesize-enumeration.md) enumeration that specifies whether to get an accurate or approximate size. Only three values are valid: cssAccurate, cssQuick, and cssDiscardTransientCAs:  
   
-- cssAccurate возвращает точный размер сохранения, но требует больше времени для вычисления.  
+- cssAccurate returns the exact save size but takes longer to calculate.  
   
-- cssQuick возвращает размер в целях безопасности, но занимает меньше времени, для которого требуется вычислить.  
+- cssQuick returns a size, padded for safety, but takes less time to calculate.  
   
-- сообщает cssDiscardTransientCAs `GetSaveSize` , может возникнуть исключение сейчас присваиваются значения настраиваемых атрибутов.  
+- cssDiscardTransientCAs tells `GetSaveSize` that it can throw away discardable custom attributes.  
   
  `pdwSaveSize`  
- [out] Указатель на размер, необходимый для сохранения файла.  
+ [out] A pointer to the size that is required to save the file.  
   
-## <a name="remarks"></a>Примечания  
- `GetSaveSize` вычисляет размер, в байтах, чтобы сохранить сборку и все метаданные в текущей области. (Вызов [IMetaDataEmit::SaveToStream](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-savetostream-method.md) метод выдаст это число байтов.)  
+## <a name="remarks"></a>Заметки  
+ `GetSaveSize` calculates the space required, in bytes, to save the assembly and all its metadata in the current scope. (A call to the [IMetaDataEmit::SaveToStream](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-savetostream-method.md) method would emit this number of bytes.)  
   
- Если вызывающий объект реализует [IMapToken](../../../../docs/framework/unmanaged-api/metadata/imaptoken-interface.md) интерфейса (через [IMetaDataEmit::SetHandler](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-sethandler-method.md) или [IMetaDataEmit::Merge](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-merge-method.md)), `GetSaveSize` выполняет два прохода по метаданным для оптимизации и сжатия. В противном случае оптимизация не выполняется.  
+ If the caller implements the [IMapToken](../../../../docs/framework/unmanaged-api/metadata/imaptoken-interface.md) interface (through [IMetaDataEmit::SetHandler](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-sethandler-method.md) or [IMetaDataEmit::Merge](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-merge-method.md)), `GetSaveSize` will perform two passes over the metadata to optimize and compress it. Otherwise, no optimizations are performed.  
   
- Если выполнить оптимизацию, первый проход просто сортирует структуры метаданных для настройки производительности поиска во время импорта. Этот шаг обычно приводит к переносу записей, с побочным эффектом, что маркеров, сохраненных с помощью средства для дальнейшего становятся недействительными. Метаданные не сообщающий вызывающему объекту этих изменениях маркера до выполнения второй передачи, тем не менее. На втором этапе выполняются различные операции, которые призваны уменьшить общий размер метаданных, как оптимизация (ранняя привязка) `mdTypeRef` и `mdMemberRef` маркеры, если ссылка указывает на тип или член, объявленный в текущей области метаданных. На этом этапе возникает другой цикл сопоставления маркеров. После этого этапа ядро метаданных уведомляет вызывающего объекта, через его `IMapToken` интерфейс любого изменения значений маркера.  
+ If optimization is performed, the first pass simply sorts the metadata structures to tune the performance of import-time searches. This step typically results in moving records around, with the side effect that tokens retained by the tool for future reference are invalidated. The metadata does not inform the caller of these token changes until after the second pass, however. In the second pass, various optimizations are performed that are intended to reduce the overall size of the metadata, such as optimizing away (early binding) `mdTypeRef` and `mdMemberRef` tokens when the reference is to a type or member that is declared in the current metadata scope. In this pass, another round of token mapping occurs. After this pass, the metadata engine notifies the caller, through its `IMapToken` interface, of any changed token values.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** Cor.h  
+ **Header:** Cor.h  
   
- **Библиотека:** Используется как ресурс в MSCorEE.dll  
+ **Library:** Used as a resource in MSCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   

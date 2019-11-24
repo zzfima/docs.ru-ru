@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9dcc8b3d-33ee-4c7c-8d6f-322c57b94a0f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b64275def01d7b62f9a461de69a286769094305e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 99f529a151a42cf4a9ee1f74bd3a76a5b6b1b35f
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777584"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445261"
 ---
 # <a name="imetadataemitdefinemethodimpl-method"></a>Метод IMetaDataEmit::DefineMethodImpl
-Создает определение реализации метода, унаследованного от интерфейса и возвращает маркер для этого определения реализации метода.  
+Creates a definition for implementation of a method inherited from an interface, and returns a token to that method-implementation definition.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,20 +37,20 @@ HRESULT DefineMethodImpl (
   
 ## <a name="parameters"></a>Параметры  
  `td`  
- [in] `mdTypedef` Маркеров реализующего класса.  
+ [in] The `mdTypedef` token of the implementing class.  
   
  `tkBody`  
- [in] `mdMethodDef` Или `mdMemberRef` маркера тела кода.  
+ [in] The `mdMethodDef` or `mdMemberRef` token of the code body.  
   
  `tkDecl`  
- [in] `mdMethodDef` Или `mdMemberRef` маркера реализации метода интерфейса.  
+ [in] The `mdMethodDef` or `mdMemberRef` token of the interface method being implemented.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** Cor.h  
+ **Header:** Cor.h  
   
- **Библиотека:** Используется как ресурс в MSCorEE.dll  
+ **Library:** Used as a resource in MSCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 512fdd00-262a-4456-a075-365ef4133c4d
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 58293929b576493d3751f9ce30ba00cec92e180c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 074b0b11a822d2b8bcb9588484557e3e5eba69dd
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67758162"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74430192"
 ---
 # <a name="icorprofilercallback4rejitcompilationstarted-method"></a>Метод ICorProfilerCallback4::ReJITCompilationStarted
-Уведомляет профилировщик о начале повторной компиляции функции компилятор just-in-time (JIT).  
+Notifies the profiler that the just-in-time (JIT) compiler has started to recompile a function.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,23 +36,23 @@ HRESULT ReJITCompilationStarted(
   
 ## <a name="parameters"></a>Параметры  
  `functionId`  
- [in] Идентификатор функции, JIT-компилятор начал перекомпилировать.  
+ [in] The ID of the function that the JIT compiler has started to recompile.  
   
  `rejitId`  
- [in] Повторная компиляция идентификатор новой версии функции.  
+ [in] The recompilation ID of the new version of the function.  
   
  `fIsSafeToBlock`  
- [in] `true` для указания, что блокировок может вызвать среды выполнения для вызывающего потока для возврата из этого обратного вызова; `false` для указания, что блокировка не повлияет на работу среды выполнения. Значение `true` не повреждает среды выполнения, но могут повлиять на результаты профилирования.  
+ [in] `true` to indicate that blocking may cause the runtime to wait for the calling thread to return from this callback; `false` to indicate that blocking will not affect the operation of the runtime. A value of `true` does not harm the runtime, but can affect the profiling results.  
   
-## <a name="remarks"></a>Примечания  
- Возможно, для получения более чем одну пару `ReJITCompilationStarted` и [ReJITCompilationFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-rejitcompilationfinished-method.md) метод вызывает для каждой функции из-за способа выполнения конструкторы класса дескрипторов. Например среда выполнения начинает перекомпилировать метод A, но конструктор класса для класса B нужно выполнить. Таким образом среда выполнения повторных компиляций конструктор для класса B и запускает его. Во время работы конструктора, он делает вызов метода А, который вызывает метод A попытку повторной компиляции. В этом случае первый перекомпиляция метод A будет прерван. Тем не менее оба пытается перекомпилировать метод являются сообщил с события перекомпиляции JIT-компилятора.  
+## <a name="remarks"></a>Заметки  
+ It is possible to receive more than one pair of `ReJITCompilationStarted` and [ReJITCompilationFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-rejitcompilationfinished-method.md) method calls for each function because of the way the runtime handles class constructors. For example, the runtime starts to recompile method A, but the class constructor for class B needs to be run. Therefore, the runtime recompiles the constructor for class B and runs it. While the constructor is running, it makes a call to method A, which causes method A to be recompiled again. In this scenario, the first recompilation of method A is halted. However, both attempts to recompile method A are reported with JIT recompilation events.  
   
- Профилировщики должны поддерживать последовательность обратных вызовов для перекомпиляции JIT в случаях, где два потока одновременно осуществляют обратных вызовов. Например, поток A вызывает `ReJITCompilationStarted`; тем не менее, прежде чем поток A вызывает [ReJITCompilationFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-rejitcompilationfinished-method.md), поток B вызывает [ICorProfilerCallback::ExceptionSearchFunctionEnter](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchfunctionenter-method.md) с ИД функции из `ReJITCompilationStarted` обратного вызова для потока A. Может показаться, что идентификатор функции должно находиться допустимым так как вызов [ReJITCompilationFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-rejitcompilationfinished-method.md) еще не получил профилировщиком. Однако в этом случае идентификатор функции недопустим.  
+ Profilers must support the sequence of JIT recompilation callbacks in cases where two threads are simultaneously making callbacks. For example, thread A calls `ReJITCompilationStarted`; however, before thread A calls [ReJITCompilationFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-rejitcompilationfinished-method.md), thread B calls [ICorProfilerCallback::ExceptionSearchFunctionEnter](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchfunctionenter-method.md) with the function ID from the `ReJITCompilationStarted` callback for thread A. It might appear that the function ID should not yet be valid because a call to [ReJITCompilationFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-rejitcompilationfinished-method.md) had not yet been received by the profiler. However, in this case, the function ID is valid.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorProf.idl, CorProf.h  
+ **Заголовок:** CorProf.idl, CorProf.h  
   
  **Библиотека:** CorGuids.lib  
   

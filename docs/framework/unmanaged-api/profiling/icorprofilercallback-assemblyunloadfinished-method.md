@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 53fca564-84b1-44d4-9e21-17a492d2aae7
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a75d31f0a2c844895363bb4693dbcb5aba4cce1f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 01404d23707be90b6b15cf741632400d49f164de
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67775508"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445148"
 ---
 # <a name="icorprofilercallbackassemblyunloadfinished-method"></a>Метод ICorProfilerCallback::AssemblyUnloadFinished
-Уведомляет профилировщик о выгрузке сборки.  
+Notifies the profiler that an assembly has been unloaded.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,20 +35,20 @@ HRESULT AssemblyUnloadFinished(
   
 ## <a name="parameters"></a>Параметры  
  `assemblyId`  
- [in] Идентифицирует сборку, которая вызывается при выгрузке.  
+ [in] Identifies the assembly that is being unloaded.  
   
  `hrStatus`  
- [in] Значение HRESULT, указывающее, была ли сборка выгружается успешно.  
+ [in] An HRESULT that indicates whether the assembly was unloaded successfully.  
   
-## <a name="remarks"></a>Примечания  
- Значение `assemblyId` не является допустимым для информационного запроса после [ICorProfilerCallback::AssemblyUnloadStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-assemblyunloadstarted-method.md) возвращает метод.  
+## <a name="remarks"></a>Заметки  
+ The value of `assemblyId` is not valid for an information request after the [ICorProfilerCallback::AssemblyUnloadStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-assemblyunloadstarted-method.md) method returns.  
   
- Некоторые части выгрузку сборки может по-прежнему после `AssemblyUnloadFinished` обратного вызова. Значение HRESULT в `hrStatus` указывает на сбой. Тем не менее значение HRESULT в `hrStatus` указывает, что в первой части выгрузку сборки выполнено успешно.  
+ Some parts of unloading the assembly might continue after the `AssemblyUnloadFinished` callback. A failure HRESULT in `hrStatus` indicates a failure. However, a success HRESULT in `hrStatus` indicates only that the first part of unloading the assembly has succeeded.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorProf.idl, CorProf.h  
+ **Заголовок:** CorProf.idl, CorProf.h  
   
  **Библиотека:** CorGuids.lib  
   

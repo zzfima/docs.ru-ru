@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0f9bde1d-e306-438d-941b-d0925b322304
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4225794740b7786c6f758c9a0953d323c31a1081
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 470b6511366cef1680eaf97f9ab376736add55c4
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782488"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74437900"
 ---
 # <a name="imetadataimportfindmethod-method"></a>Метод IMetaDataImport::FindMethod
-Возвращает указатель на MethodDef токен для метода, который заключен заданным <xref:System.Type> , с указанной сигнатурой имени и метаданных.  
+Gets a pointer to the MethodDef token for the method that is enclosed by the specified <xref:System.Type> and that has the specified name and metadata signature.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -41,33 +39,33 @@ HRESULT FindMethod (
   
 ## <a name="parameters"></a>Параметры  
  `td`  
- [in] `mdTypeDef` Маркер типа (класса или интерфейса), ограничивающий элемент для поиска. Если это значение равно `mdTokenNil`, а затем поиск выполняется для глобальной функции.  
+ [in] The `mdTypeDef` token for the type (a class or interface) that encloses the member to search for. If this value is `mdTokenNil`, then the lookup is done for a global function.  
   
  `szName`  
- [in] Имя метода для поиска.  
+ [in] The name of the method to search for.  
   
  `pvSigBlob`  
- [in] Указатель на двоичную подпись метаданных метода.  
+ [in] A pointer to the binary metadata signature of the method.  
   
  `cbSigBlob`  
- [in] Размер в байтах `pvSigBlob`.  
+ [in] The size in bytes of `pvSigBlob`.  
   
  `pmb`  
- [out] Указатель на соответствующий токен MethodDef.  
+ [out] A pointer to the matching MethodDef token.  
   
-## <a name="remarks"></a>Примечания  
- Укажите метод, с помощью его во включающий класс или интерфейс (`td`), его имя (`szName`) и при необходимости его подпись (`pvSigBlob`). Может существовать несколько методов с одинаковыми именами в классе или интерфейсе. В этом случае следует передайте сигнатуры метода, чтобы найти уникальное соответствие.  
+## <a name="remarks"></a>Заметки  
+ You specify the method using its enclosing class or interface (`td`), its name (`szName`), and optionally its signature (`pvSigBlob`). There might be multiple methods with the same name in a class or interface. In that case, pass the method's signature to find the unique match.  
   
- Подпись передается `FindMethod` необходимо создавать в текущей области, поскольку подписи привязаны к определенной области. Подписи можно внедрить токен, который определяет включающего класса или типа значения. Маркер — это индекс в локальной таблице TypeDef. Не удается построить выполнения вне контекста текущей области и использовать ее как входных данных, вводимых в `FindMethod`.  
+ The signature passed to `FindMethod` must have been generated in the current scope, because signatures are bound to a particular scope. A signature can embed a token that identifies the enclosing class or value type. The token is an index into the local TypeDef table. You cannot build a run-time signature outside the context of the current scope and use that signature as input to input to `FindMethod`.  
   
- `FindMethod` находит только те методы, которые были определены непосредственно в классе или интерфейсе; унаследованные методы не найден.  
+ `FindMethod` finds only methods that were defined directly in the class or interface; it does not find inherited methods.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** Cor.h  
+ **Header:** Cor.h  
   
- **Библиотека:** Включена как ресурс в MsCorEE.dll  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

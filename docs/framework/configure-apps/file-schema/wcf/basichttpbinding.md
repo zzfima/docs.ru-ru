@@ -4,20 +4,20 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - basicHttpBinding Element
 ms.assetid: 85cf1a4f-26c2-48c7-bda6-6c960d5d3fb3
-ms.openlocfilehash: 6b8622df5e5e475ce1c14c71d8e7ab4a99d7b9d5
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: f1be0997fc7b2b884c7ec90ea6a02ea0af96ab4c
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739112"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74431035"
 ---
-# <a name="basichttpbinding"></a>\<basicHttpBinding >
+# <a name="basichttpbinding"></a>\<basicHttpBinding>
 Представляет привязку, которую служба Windows Communication Foundation (WCF) может использовать для настройки и предоставления конечных точек, способных связываться с веб-службами на основе ASMX, а также клиентами и другими службами, соответствующими WS-I Basic Profile 1.1.  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. serviceModel >** ](system-servicemodel.md)\
-привязки &nbsp;&nbsp;&nbsp;&nbsp;[ **\<** ](bindings.md) >
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**BasicHttpBinding** >  
+&nbsp;&nbsp;[ **\<system.serviceModel>** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<bindings>** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<basicHttpBinding>**  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -26,7 +26,6 @@ ms.locfileid: "73739112"
   <binding allowCookies="Boolean"
            bypassProxyOnLocal="Boolean"
            closeTimeout="TimeSpan"
-           envelopeVersion="None/Soap11/Soap12"
            hostNameComparisonMode="StrongWildCard/Exact/WeakWildcard"
            maxBufferPoolSize="Integer"
            maxBufferSize="Integer"
@@ -64,21 +63,19 @@ ms.locfileid: "73739112"
 |Атрибут|Описание|  
 |---------------|-----------------|  
 |`allowCookies`|Логическое значение, определяющее, принимает ли клиент файлы Cookie и распространяет ли он их на будущие запросы. Значение по умолчанию: `false`.<br /><br /> Это свойство можно использовать при взаимодействии с веб-службами ASMX, которые используют файлы Cookie. В этом случае можно быть уверенным, что файлы cookie, возвращаемые с сервера, автоматически копируются во все последующие клиентские запросы к этой службе.|  
-|`bypassProxyOnLocal`|Логическое значение, определяющее, будет ли выполняться обход прокси-сервера для локальных адресов. Значение по умолчанию: `false`.<br /><br /> Интернет-ресурс является локальным, если у него локальный адрес. Локальный адрес — это тот же компьютер, локальная локальная сеть или интрасеть, который идентифицируется в синтаксических случаях за счет отсутствия точки (.), как в URI "http://webserver/" и "http://localhost/".<br /><br /> Этот атрибут определяет, будут ли конечные точки, настроенные с помощью привязки BasicHttpBinding, использовать прокси-сервер при доступе к локальным ресурсам. Если значение этого атрибута `true`, запросы к локальным интернет-ресурсам не используют прокси-сервер. Используйте имя узла (а не localhost), если необходимо, чтобы клиенты проходили через прокси-сервер при взаимодействии со службами на том же компьютере, когда для этого атрибута задано значение `true`.<br /><br /> Если атрибут имеет значение `false`, все интернет-запросы выполняются через данный прокси-сервер.|  
+|`bypassProxyOnLocal`|Логическое значение, определяющее, будет ли выполняться обход прокси-сервера для локальных адресов. Значение по умолчанию: `false`.<br /><br /> Интернет-ресурс является локальным, если у него локальный адрес. A local address is one that is on same computer, the local LAN or intranet and is identified, syntactically, by the lack of a period (.) as in the URIs "http://webserver/" and "http://localhost/".<br /><br /> Этот атрибут определяет, будут ли конечные точки, настроенные с помощью привязки BasicHttpBinding, использовать прокси-сервер при доступе к локальным ресурсам. Если значение этого атрибута `true`, запросы к локальным интернет-ресурсам не используют прокси-сервер. Используйте имя узла (а не localhost), если необходимо, чтобы клиенты проходили через прокси-сервер при взаимодействии со службами на том же компьютере, когда для этого атрибута задано значение `true`.<br /><br /> Если атрибут имеет значение `false`, все интернет-запросы выполняются через данный прокси-сервер.|  
 |`closeTimeout`|Значение <xref:System.TimeSpan>, которое задает длительность времени ожидания для завершения операции закрытия. Это значение должно быть больше или равно <xref:System.TimeSpan.Zero>. Значение по умолчанию - 00:01:00.|  
-|`envelopeVersion`|Определяет версию протокола SOAP, используемого для сообщений, обрабатываемых этой привязкой. Единственным допустимым значением является «Soap11».|  
 |`hostNameComparisonMode`|Задает режим сравнения имен узлов HTTP для анализа универсальных кодов ресурсов (URI). Это атрибут типа <xref:System.ServiceModel.HostNameComparisonMode>, который указывает, используется ли имя узла для доступа к службе при сравнении по универсальному коду ресурсов (URI). Значение по умолчанию — <xref:System.ServiceModel.HostNameComparisonMode.StrongWildcard>, при котором имя узла в найденном соответствии не используется.|  
 |`maxBufferPoolSize`|Целое значение, определяющее максимальный объем памяти, выделяемой для диспетчера буферов сообщений, получающих сообщения из канала. Значение по умолчанию - 524 288 (0x80 000) байт.<br /><br /> Диспетчер буферов сокращает затраты ресурсов на использование буферов с помощью буферного пула. Буферы требуются для обработки службой сообщений, приходящих из канала. Если в буферном пуле недостаточно памяти для обработки потока сообщений, диспетчер буферов сообщений должен выделить дополнительную память из кучи CLR, что увеличивает нагрузку по сбору мусора. Значительное выделение памяти из мусорной кучи CLR указывает на то, что размер буферного пула слишком мал и производительность можно повысить за счет выделения большего объема памяти путем увеличения значения этого атрибута.|  
 |`maxBufferSize`|Целое значение, указывающее максимальный размер (в байтах) буфера, хранящего сообщения во время их обработки для конечной точки, настроенной с использованием этой привязки. Значение по умолчанию - 65 536 байт.|  
 |`maxReceivedMessageSize`|Положительное целое число, определяющее максимальный размер сообщения (в байтах), включая заголовки, которое можно получить по каналу, настроенному с использованием этой привязки. Отправитель получает ошибку SOAP, если размер сообщения оказывается слишком большим для получателя. Получатель отклоняет сообщение и создает запись о событии в журнале трассировки. Значение по умолчанию - 65 536 байт.|  
-|`messageEncoding`|Определяет кодировщик, используемый для кодировки сообщения SOAP. Допустимы следующие значения:<br /><br /> -Text: использование кодировщика текстовых сообщений.<br />-MTOM: используйте кодировщик обмена сообщениями, механизм передачи сообщений 1,0 (MTOM).<br /><br /> Значение по умолчанию - Text. Это атрибут типа <xref:System.ServiceModel.WSMessageEncoding>.|  
-|`name`|Строка, содержащая имя конфигурации привязки. Это значение должно быть уникальным, поскольку оно используется в качестве идентификатора привязки. Каждая привязка имеет атрибуты `name` и `namespace`, которые совместно однозначно идентифицируют привязку в метаданных службы. Кроме того, это имя является уникальным среди привязок одного типа. Начиная с версии [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)] для привязок и поведений необязательно задавать имена. Дополнительные сведения о конфигурации по умолчанию и привязках и поведении, которые не имеют имен, см. в разделе [упрощенная конфигурация](../../../wcf/simplified-configuration.md) и [упрощенная конфигурация для служб WCF](../../../wcf/samples/simplified-configuration-for-wcf-services.md).|  
-|`namespace`|Задает пространство имен XML привязки. Значение по умолчанию — http://tempuri.org/Bindings. Каждая привязка имеет атрибуты `name` и `namespace`, которые совместно однозначно идентифицируют привязку в метаданных службы.|  
+|`messageEncoding`|Определяет кодировщик, используемый для кодировки сообщения SOAP. Допустимы следующие значения:<br /><br /> -   Text: Use a text message encoder.<br />-   Mtom: Use a Message Transmission Organization Mechanism 1.0 (MTOM) encoder.<br /><br /> Значение по умолчанию - Text. Это атрибут типа <xref:System.ServiceModel.WSMessageEncoding>.|  
+|`name`|Строка, содержащая имя конфигурации привязки. This value should be unique among bindings of the same type. Starting with .NET Framework 4, bindings and behaviors are not required to have a name. For more information about default configuration and nameless bindings and behaviors, see [Simplified Configuration](../../../wcf/simplified-configuration.md) and [Simplified Configuration for WCF Services](../../../wcf/samples/simplified-configuration-for-wcf-services.md).|  
 |`openTimeout`|Значение <xref:System.TimeSpan>, которое задает длительность времени ожидания для завершения операции открытия. Это значение должно быть больше или равно <xref:System.TimeSpan.Zero>. Значение по умолчанию - 00:01:00.|  
 |`proxyAddress`|Универсальный код ресурса (URI) содержит адрес прокси-сервера HTTP. Если для параметра `useSystemWebProxy` задано значение `true`, этот параметр должен иметь значение `null`. Значение по умолчанию: `null`.|  
 |`receiveTimeout`|Значение <xref:System.TimeSpan>, которое задает длительность времени ожидания для завершения операции получения. Это значение должно быть больше или равно <xref:System.TimeSpan.Zero>. Значение по умолчанию - 00:10:00.|  
 |`sendTimeout`|Значение <xref:System.TimeSpan>, которое задает длительность времени ожидания для завершения операции отправки. Это значение должно быть больше или равно <xref:System.TimeSpan.Zero>. Значение по умолчанию - 00:01:00.|  
-|`textEncoding`|Задает кодировку, используемую при отправке сообщений через привязку. Допустимы следующие значения:<br /><br /> -BigEndianUnicode: Юникод байтов Encoding.<br />-Unicode: 16-разрядная кодировка.<br />-UTF8:8-разрядная кодировка<br /><br /> Значение по умолчанию - UTF8. Это атрибут типа <xref:System.Text.Encoding>.|  
+|`textEncoding`|Задает кодировку, используемую при отправке сообщений через привязку. Допустимы следующие значения:<br /><br /> -   BigEndianUnicode: Unicode BigEndian encoding.<br />-   Unicode: 16-bit encoding.<br />-   UTF8: 8-bit encoding<br /><br /> Значение по умолчанию - UTF8. Это атрибут типа <xref:System.Text.Encoding>.|  
 |`transferMode`|Допустимое значение <xref:System.ServiceModel.TransferMode>, указывающее, следует ли буферизировать сообщения или передавать их потоком по запросу или отклику.|  
 |`useDefaultWebProxy`|Логическое значение, определяющее, должен ли использоваться автоматически настроенный системный прокси-сервер HTTP, если он доступен. Значение по умолчанию: `true`.|  
   
@@ -86,19 +83,19 @@ ms.locfileid: "73739112"
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<> безопасности](security-of-basichttpbinding.md)|Определяет параметры безопасности привязки. Это элемент типа <xref:System.ServiceModel.Configuration.BasicHttpSecurityElement>.|  
-|[\<Реадеркуотас >](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))|Определяет ограничения по сложности сообщений SOAP, которые могут обрабатываться конечными точками, настроенными с использованием этой привязки. Это элемент типа <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
+|[\<security>](security-of-basichttpbinding.md)|Определяет параметры безопасности привязки. Это элемент типа <xref:System.ServiceModel.Configuration.BasicHttpSecurityElement>.|  
+|[\<readerQuotas>](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))|Определяет ограничения по сложности сообщений SOAP, которые могут обрабатываться конечными точками, настроенными с использованием этой привязки. Это элемент типа <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[привязки\<](bindings.md)|Этот элемент содержит коллекцию стандартных и пользовательских привязок.|  
+|[\<bindings>](bindings.md)|Этот элемент содержит коллекцию стандартных и пользовательских привязок.|  
   
 ## <a name="remarks"></a>Заметки  
  Привязка BasicHttpBinding использует протокол HTTP в качестве транспорта для отправки сообщений протокола SOAP 1.1. Служба может использовать эту привязку для предоставления конечных точек, соответствующих профилю WS-I BP 1.1, например тех, что используют клиенты ASMX. Аналогично клиент может использовать привязку BasicHttpBinding для взаимодействия со службами, предоставляющими конечные точки, которые соответствуют требованиям профиля WS-I BP 1.1, например веб-службами ASMX или службами, настроенными с использованием привязки BasicHttpBinding.  
   
- По умолчанию безопасность отключена, но ее можно добавить, установив для атрибута mode элемента [\<security >](security-of-basichttpbinding.md) дочерний элемент значение, отличное от `None`. По умолчанию используется кодировка сообщений «Text» и кодировка текста «UTF-8».  
+ Security is turned off by default, but can be added setting the mode attribute of the [\<security>](security-of-basichttpbinding.md) child element to a value other than `None`. По умолчанию используется кодировка сообщений «Text» и кодировка текста «UTF-8».  
   
 ## <a name="example"></a>Пример  
  В следующем примере показано использование привязки <xref:System.ServiceModel.BasicHttpBinding>, которая обеспечивает связь по протоколу HTTP и максимальные возможности взаимодействия с веб-службами первого и второго поколений. Привязка задается в файлах конфигурации для клиента и службы. Тип привязки задан в атрибуте `binding` элемента `<endpoint>`. Если необходимо настроить основную привязку и изменить некоторые из ее параметров, необходимо определить конфигурацию привязки. Конечная точка должна ссылаться на конфигурацию привязки по имени с помощью атрибута `bindingConfiguration` элемента `<endpoint>`, как показано в следующем примере кода конфигурации службы.  
@@ -138,7 +135,7 @@ ms.locfileid: "73739112"
 ```  
   
 ## <a name="example"></a>Пример  
- Начиная с версии [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)] для привязок и поведений необязательно задавать имена. Функции из предыдущего примера можно выполнить, удалив bindingConfiguration из адреса конечной точки и имени из привязки.  
+ Starting with .NET Framework 4, bindings and behaviors are not required to have a name. The functionality from the previous example can be accomplished by removing the bindingConfiguration from the endpoint address and the name from the binding.  
   
 ```xml  
 <system.serviceModel>
@@ -172,7 +169,7 @@ ms.locfileid: "73739112"
 </system.serviceModel>
 ```  
   
- Дополнительные сведения о конфигурации по умолчанию и привязках и поведении, которые не имеют имен, см. в разделе [упрощенная конфигурация](../../../wcf/simplified-configuration.md) и [упрощенная конфигурация для служб WCF](../../../wcf/samples/simplified-configuration-for-wcf-services.md).  
+ For more information about default configuration and nameless bindings and behaviors, see [Simplified Configuration](../../../wcf/simplified-configuration.md) and [Simplified Configuration for WCF Services](../../../wcf/samples/simplified-configuration-for-wcf-services.md).  
   
 ## <a name="see-also"></a>См. также
 
@@ -183,4 +180,4 @@ ms.locfileid: "73739112"
 - [Привязки](../../../wcf/bindings.md)
 - [Настройка привязок, предоставляемых системой](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [Использование привязок для настройки служб и клиентов](../../../wcf/using-bindings-to-configure-services-and-clients.md)
-- [> привязки \<](bindings.md)
+- [\<binding>](bindings.md)

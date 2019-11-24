@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3fd3a34c-d176-46e9-9996-fb1646cff9b0
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 995c7edf99c917b8bcdc1d51dcc0bf50868e4f35
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 50f41bb55b7c3dc45646a465032074ce90be0abf
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777058"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74444509"
 ---
 # <a name="isymunmanagedreadergetuserentrypoint-method"></a>Метод ISymUnmanagedReader::GetUserEntryPoint
-Возвращает метод, который был указан в качестве точки входа пользователя для модуля, если таковые имеются. Например этот метод может быть основной метод пользователя, а не созданные компилятором заглушки перед основным методом.  
+Returns the method that was specified as the user entry point for the module, if any. For example, this method could be the user's main method rather than compiler-generated stubs before the main method.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -36,13 +34,13 @@ HRESULT GetUserEntryPoint (
   
 ## <a name="parameters"></a>Параметры  
  `pToken`  
- [out] Указатель на переменную, которая получает точку входа.  
+ [out] A pointer to a variable that receives the entry point.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Требования  
- **Заголовок.** CorSym.idl CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>См. также
 

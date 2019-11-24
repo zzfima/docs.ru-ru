@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 68f6ea4d-9112-4d6b-93d9-e34f1e2f2496
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 345c43b5a6e3c185b5e8070e9d6e1c1443673149
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 32edbb6a0eeaf636338983c5cc2e032ddf8b5854
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781466"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74443730"
 ---
 # <a name="imetadatatablesgetnextguid-method"></a>Метод IMetaDataTables::GetNextGuid
-Получает индекс следующего значения GUID в текущем столбце таблицы.  
+Gets the index of the next GUID value in the current table column.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,20 +36,20 @@ HRESULT GetNextGuid (
   
 ## <a name="parameters"></a>Параметры  
  `ixGuid`  
- [in] Значение индекса из таблицы столбец GUID.  
+ [in] The index value from a GUID table column.  
   
  `pNext`  
- [out] Указатель на индекс следующего значения идентификатора GUID.  
+ [out] A pointer to the index of the next GUID value.  
   
-## <a name="remarks"></a>Примечания  
- Не рекомендуется использование этого метода, так как он не возвращает согласованные результаты. Сведения о таблице, см. в документации Common Language Infrastructure (CLI), особенно «раздел II: Определение метаданных и семантика». Документация доступна в Интернете; см. страницы [ECMAC# и стандарты Common Language Infrastructure](https://go.microsoft.com/fwlink/?LinkID=99212) на сайте MSDN и [Стандарт ECMA-335 — общеязыковая инфраструктура (CLI)](https://go.microsoft.com/fwlink/?LinkID=65552) на международном веб-сайте организации ECMA.  
+## <a name="remarks"></a>Заметки  
+ We do not recommend the use of this method, because it does not return consistent results. For information about the GUID table, see the Common Language Infrastructure (CLI) documentation, especially "Partition II: Metadata Definition and Semantics". Документация доступна в Интернете; см. страницы [ECMAC# и стандарты Common Language Infrastructure](https://go.microsoft.com/fwlink/?LinkID=99212) на сайте MSDN и [Стандарт ECMA-335 — общеязыковая инфраструктура (CLI)](https://go.microsoft.com/fwlink/?LinkID=65552) на международном веб-сайте организации ECMA.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** Cor.h  
+ **Header:** Cor.h  
   
- **Библиотека:** Используется как ресурс в MsCorEE.dll  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

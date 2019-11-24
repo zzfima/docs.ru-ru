@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: b4896b8f-8e97-469c-8089-e72a025661b5
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f6af4c1d6eb9c305358573b06da164e2344ff46e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 778ebf1d4fad0c8703964be88fdc3ff8c033bc28
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67774619"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449979"
 ---
 # <a name="imetadataimportenumtyperefs-method"></a>Метод IMetaDataImport::EnumTypeRefs
 Перечисляет токены TypeRef, определенные в текущей области метаданных.  
@@ -40,33 +38,33 @@ HRESULT EnumTypeRefs (
   
 ## <a name="parameters"></a>Параметры  
  `phEnum`  
- [in, out] Указатель на перечислитель. Это должно быть NULL при первом вызове этого метода.  
+ [in, out] A pointer to the enumerator. This must be NULL for the first call of this method.  
   
  `rTypeRefs`  
- [out] Массив, используемый для хранения токенов TypeRef.  
+ [out] The array used to store the TypeRef tokens.  
   
  `cMax`  
  [in] Максимальный размер массива `rTypeRefs`.  
   
  `pcTypeRefs`  
- [out] Указатель на количество возвращаемых в токены TypeRef `rTypeRefs`.  
+ [out] A pointer to the number of TypeRef tokens returned in `rTypeRefs`.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
   
 |HRESULT|Описание|  
 |-------------|-----------------|  
-|`S_OK`|`EnumTypeRefs` успешно возвращен.|  
-|`S_FALSE`|Существуют маркеры для перечисления отсутствуют. В этом случае `pcTypeRefs` равно нулю.|  
+|`S_OK`|`EnumTypeRefs` returned successfully.|  
+|`S_FALSE`|There are no tokens to enumerate. In that case, `pcTypeRefs` is zero.|  
   
-## <a name="remarks"></a>Примечания  
- Лексема TypeRef представляет ссылку на тип.  
+## <a name="remarks"></a>Заметки  
+ A TypeRef token represents a reference to a type.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** Cor.h  
+ **Header:** Cor.h  
   
- **Библиотека:** Включена как ресурс в MsCorEE.dll  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

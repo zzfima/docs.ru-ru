@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 64d9b80e-b883-4539-89c7-03573185a1eb
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4450c262b75a73114cb7de7de98567f053bbf564
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 8a4d205586921b377147eeab80754e1a0d9e52b0
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894464"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74427839"
 ---
 # <a name="isymunmanagedwritersetsymattribute-method"></a>Метод ISymUnmanagedWriter::SetSymAttribute
-Определяет настраиваемый атрибут на основе его имени. Эти атрибуты хранятся в хранилище символов в отличие от пользовательских атрибутов метаданных.  
+Defines a custom attribute based upon its name. These attributes are held in the symbol store, unlike metadata custom attributes.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,22 +37,22 @@ HRESULT SetSymAttribute(
   
 ## <a name="parameters"></a>Параметры  
  `parent`  
- окне Токен метаданных, для которого определяется атрибут.  
+ [in] The metadata token for which the attribute is being defined.  
   
  `name`  
- окне Указатель на объект `WCHAR` , содержащий имя атрибута.  
+ [in] A pointer to a `WCHAR` that contains the attribute name.  
   
  `cData`  
- окне Значение `ULONG32` типа, указывающее размер `data` массива.  
+ [in] A `ULONG32` that indicates the size of the `data` array.  
   
  `data`  
- окне Значение атрибута.  
+ [in] The attribute value.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Значение S_OK, если метод выполнен. в противном случае — E_FAIL или другой код ошибки.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Требования  
- **Заголовок.** Корсим. idl, Корсим. h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>См. также
 

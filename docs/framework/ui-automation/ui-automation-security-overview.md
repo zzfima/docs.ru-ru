@@ -5,33 +5,33 @@ helpviewer_keywords:
 - UI Automation, security model
 - security model, UI Automation
 ms.assetid: 1d853695-973c-48ae-b382-4132ae702805
-ms.openlocfilehash: 8b798aef528cccdedb1fcaa53c1782632037600d
-ms.sourcegitcommit: 77e33b682db39955e331b8e8eda4ef1925a24e78
+ms.openlocfilehash: 70d24c3dcc531abcec6d4dce75b5f0b31757e0c0
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70133788"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448772"
 ---
 # <a name="ui-automation-security-overview"></a>Общие сведения о безопасности модели автоматизации пользовательского интерфейса
 
 > [!NOTE]
-> Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Последние сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]см. в разделе [API службы автоматизации Windows: Модель автоматизации](https://go.microsoft.com/fwlink/?LinkID=156746)пользовательского интерфейса.
+> Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Последние сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]см. в разделе [API автоматизации Windows. Автоматизация пользовательского интерфейса](/windows/win32/winauto/entry-uiauto-win32).
 
-В этом обзоре описывается модель безопасности для [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] в [!INCLUDE[TLA#tla_winvista](../../../includes/tlasharptla-winvista-md.md)].
+This overview describes the security model for [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] in Windows Vista.
 
 <a name="User_Account_Control"></a>
 
 ## <a name="user-account-control"></a>контроль учетных записей
 
-Безопасность является основным направлением [!INCLUDE[TLA#tla_winvista](../../../includes/tlasharptla-winvista-md.md)] , и среди нововведений можно отметить, что пользователи имеют возможность выполнять запуск от имени обычных пользователей (не администраторов) без обязательной блокировки запуска приложений и служб, которым требуются более высокие привилегии.
+Security is a major focus of Windows Vista and among the innovations is the ability for users to run as standard (non-administrator) users without necessarily being blocked from running applications and services that require higher privileges.
 
-В [!INCLUDE[TLA2#tla_winvista](../../../includes/tla2sharptla-winvista-md.md)]большинство приложений предоставляется с помощью стандартного или административного токена. Если приложение не идентифицировано как административное приложение, оно запускается в качестве стандартного приложения по умолчанию. Прежде чем приложение, идентифицированное как административное, может быть запущено, [!INCLUDE[TLA2#tla_winvista](../../../includes/tla2sharptla-winvista-md.md)] запрашивает у пользователя разрешение на запуск приложения с повышенными привилегиями. Запрос на продолжение отображается по умолчанию, даже если пользователь является членом локальной группы администраторов, так как администраторы выполняют запуск как обычные пользователи, пока приложение или системный компонент, которому требуются административные учетные данные, не запросит разрешение на запуск.
+In Windows Vista, most applications are supplied with either a standard or an administrative token. Если приложение не идентифицировано как административное приложение, оно запускается в качестве стандартного приложения по умолчанию. Before an application identified as administrative can be launched, Windows Vista prompts the user for consent to run the application as elevated. Запрос на продолжение отображается по умолчанию, даже если пользователь является членом локальной группы администраторов, так как администраторы выполняют запуск как обычные пользователи, пока приложение или системный компонент, которому требуются административные учетные данные, не запросит разрешение на запуск.
 
 <a name="Tasks_Requiring_Higher_Privileges"></a>
 
 ## <a name="tasks-requiring-higher-privileges"></a>Задачи, требующие повышенных привилегий
 
-Когда пользователь пытается выполнить задачу, для которой требуются административные привилегии, [!INCLUDE[TLA2#tla_winvista](../../../includes/tla2sharptla-winvista-md.md)] выводит диалоговое окно с запросом на продолжение. Это диалоговое окно защищено от межпроцессного взаимодействия, чтобы вредоносные программы не могли имитировать ввод данных пользователем. Аналогичным образом экран входа в систему обычно недоступен для других процессов.
+When a user attempts to perform a task that requires administrative privileges, Windows Vista presents a dialog box asking the user for consent to continue. Это диалоговое окно защищено от межпроцессного взаимодействия, чтобы вредоносные программы не могли имитировать ввод данных пользователем. Аналогичным образом экран входа в систему обычно недоступен для других процессов.
 
 Клиенты автоматизации пользовательского интерфейса должны взаимодействовать с другими процессами, а некоторые из них могут запускаться с повышенным уровнем привилегий. Клиентам также может требоваться доступ к диалоговым окнам системы, которые обычно невидимы для других процессов. Таким образом, клиенты [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] должны быть доверенными для системы и должны запускаться со специальными привилегиями.
 
@@ -41,7 +41,7 @@ ms.locfileid: "70133788"
 
 ## <a name="manifest-files"></a>Файлы манифеста
 
-Чтобы получить доступ к защищенному системному интерфейсу, приложения должны быть построены с помощью файла манифеста, который `requestedExecutionLevel` включает `uiAccess` атрибут в тег следующим образом:
+To gain access to the protected system UI, applications must be built with a manifest file that includes the `uiAccess` attribute in the `requestedExecutionLevel` tag, as follows:
 
 ```xml
 <trustInfo xmlns="urn:schemas-microsoft-com:asm.v3">
@@ -57,4 +57,4 @@ ms.locfileid: "70133788"
 
 Значение атрибута `level` в этом коде приводится только для примера.
 
-`uiAccess`по умолчанию имеет значение false; Это значит, что если атрибут не указан или для сборки нет манифеста, приложение не сможет получить доступ к защищенному пользовательскому интерфейсу.
+`uiAccess` is "false" by default; that is, if the attribute is omitted, or if there is no manifest for the assembly, the application will not be able to gain access to protected UI.

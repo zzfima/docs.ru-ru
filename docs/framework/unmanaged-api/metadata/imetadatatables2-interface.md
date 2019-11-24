@@ -14,31 +14,29 @@ helpviewer_keywords:
 ms.assetid: c788bb7c-0212-4b6d-b840-22e8c8829028
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b886bf16e5465d3faac5286457784712ac1b72e0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ff79f0268226739ec9cf6abeeda791bf45644a40
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61645153"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74432343"
 ---
 # <a name="imetadatatables2-interface"></a>Интерфейс IMetaDataTables2
-Расширяет [IMetaDataTables](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md) для включения методов работы с потоками метаданных.  
+Extends [IMetaDataTables](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md) to include methods for working with metadata streams.  
   
 ## <a name="methods"></a>Методы  
   
 |Метод|Описание|  
 |------------|-----------------|  
-|[Метод GetMetaDataStorage](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-getmetadatastorage-method.md)|Получает размер и содержимое метаданных, хранящихся в указанном разделе.|  
-|[Метод GetMetaDataStreamInfo](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-getmetadatastreaminfo-method.md)|Получает имя, размер и содержимое потока метаданных по указанному индексу.|  
+|[Метод GetMetaDataStorage](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-getmetadatastorage-method.md)|Gets the size and contents of the metadata stored in the specified section.|  
+|[Метод GetMetaDataStreamInfo](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-getmetadatastreaminfo-method.md)|Gets the name, size, and contents of the metadata stream at the specified index.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** Cor.h  
+ **Header:** Cor.h  
   
- **Библиотека:** Используется как ресурс в MsCorEE.dll  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4a3e43ed-3ee3-4395-ab14-f78b903be13e
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f72984da8f75eec35517da6ec1f8a73bc96c4609
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: fdfba34f35e40b2a50dbc4edc5b6b6c45f17194f
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780808"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74442866"
 ---
 # <a name="icorprofilerinfo4getobjectsize2-method"></a>Метод ICorProfilerInfo4::GetObjectSize2
-Возвращает размер указанного объекта. Заменяет [ICorProfilerInfo::GetObjectSize](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getobjectsize-method.md) метод, фиксируя размеры объектов, размер которых больше нельзя выразить в `ULONG`.  
+Returns the size of a specified object. Replaces the [ICorProfilerInfo::GetObjectSize](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getobjectsize-method.md) method by reporting sizes of objects that are larger than what can be expressed in a `ULONG`.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,18 +35,18 @@ HRESULT GetObjectSize2(
   
 ## <a name="parameters"></a>Параметры  
  `objectId`  
- [in] Идентификатор объекта.  
+ [in] The ID of the object.  
   
  `pcSize`  
- [out] Указатель на размер объекта в байтах.  
+ [out] A pointer to the object's size, in bytes.  
   
-## <a name="remarks"></a>Примечания  
- Разные объекты одного типа часто имеют одинаковый размер. Тем не менее некоторые типы, например массивы или строки, возможно другого размера для каждого объекта.  
+## <a name="remarks"></a>Заметки  
+ Different objects of the same types often have the same size. However, some types, such as arrays or strings, may have a different size for each object.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorProf.idl, CorProf.h  
+ **Заголовок:** CorProf.idl, CorProf.h  
   
  **Библиотека:** CorGuids.lib  
   

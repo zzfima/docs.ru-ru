@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 3ef841c2-cade-42ee-ba34-2ef91d6d0879
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ba24f5394ef8fb31d8bfa4e74ac59e7bd4af86d8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 12f31d0bf224e38418818122dad3586ec687b2ad
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67769863"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448575"
 ---
 # <a name="corsymaddrkind-enumeration"></a>Перечисление CorSymAddrKind
-Указывает тип адреса памяти.  
+Indicates the type of memory address.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -44,23 +42,23 @@ typedef enum CorSymAddrKind
 } CorSymAddrKind;  
 ```  
   
-## <a name="members"></a>Участники  
+## <a name="members"></a>Члены  
   
 |Член|Описание|  
 |------------|-----------------|  
-|`ADDR_IL_OFFSET`|Указывает Microsoft промежуточного языка MSIL индекс локальной переменной или параметра.|  
-|`ADDR_NATIVE_RVA`|Указывает относительный виртуальный адрес в модуль.|  
-|`ADDR_NATIVE_REGISTER`|Указывает регистр ЦП.|  
-|`ADDR_NATIVE_REGREL`|Указывает, что первый адрес является регистром, а второй — смещение.|  
-|`ADDR_NATIVE_OFFSET`|Указывает смещение от базового адреса.|  
-|`ADDR_NATIVE_REGREG`|Указывает, что первый адрес является нижней частью регистра, а второй — верхней.|  
-|`ADDR_NATIVE_REGSTK`|Указывает, что первый адрес является нижней частью регистра, второй — верхней и третий — это смещение.|  
-|`ADDR_NATIVE_STKREG`|Указывает, что первый адрес является регистром, второй — это смещение и третий — верхней регистра.|  
-|`ADDR_BITFIELD`|Указывает, что первый адрес является началом поля, а второй — длина поля.|  
-|`ADDR_NATIVE_ISECTOFFSET`|Указывает, что первый адрес является раздел, а второй — смещение.|  
+|`ADDR_IL_OFFSET`|Indicates a Microsoft intermediate language (MSIL) local variable or parameter index.|  
+|`ADDR_NATIVE_RVA`|Indicates a relative virtual address into a module.|  
+|`ADDR_NATIVE_REGISTER`|Indicates a CPU register.|  
+|`ADDR_NATIVE_REGREL`|Indicates that the first address is a register and the second address is an offset.|  
+|`ADDR_NATIVE_OFFSET`|Indicates an offset from a base address.|  
+|`ADDR_NATIVE_REGREG`|Indicates that the first address is the low portion of a register, and the second address is the high portion.|  
+|`ADDR_NATIVE_REGSTK`|Indicates that the first address is the low portion of a register, the second is the high portion, and the third is an offset.|  
+|`ADDR_NATIVE_STKREG`|Indicates that the first address is a register, the second is an offset, and the third is the high portion of the register.|  
+|`ADDR_BITFIELD`|Indicates that the first address is the start of a field and the second address is the field length.|  
+|`ADDR_NATIVE_ISECTOFFSET`|Indicates that the first address is the section and the second address is an offset.|  
   
 ## <a name="requirements"></a>Требования  
- **Заголовок.** CorSym.idl CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>См. также
 

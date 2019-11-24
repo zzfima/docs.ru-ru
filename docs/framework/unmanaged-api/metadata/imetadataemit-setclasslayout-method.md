@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2576c449-388d-4434-a0e1-9f53991e11b6
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c455b5196ceafef924de59e9134b89ed62455520
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5214298c6ad9594548ab45ed583cb5b14ce1f30d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737225"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74441763"
 ---
 # <a name="imetadataemitsetclasslayout-method"></a>Метод IMetaDataEmit::SetClassLayout
-Макет полей для класса, который был определен во время предыдущего вызова для завершения [метод DefineTypeDef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md).  
+Completes the layout of fields for a class that has been defined by a prior call to [DefineTypeDef Method](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,32 +38,32 @@ HRESULT SetClassLayout (
   
 ## <a name="parameters"></a>Параметры  
  `td`  
- [in] `mdTypeDef` Токен, который указывает класс располагаться.  
+ [in] An `mdTypeDef` token that specifies the class to be laid out.  
   
  `dwPackSize`  
- [in] Упаковочный размер: 1, 2, 4, 8 или 16 байт. Упаковочный размер равен число байтов между смежными полями.  
+ [in] The packing size: 1, 2, 4, 8 or 16 bytes. The packing size is the number of bytes between adjacent fields.  
   
  `rFieldOffsets`  
- [in] Массив [COR_FIELD_OFFSET](../../../../docs/framework/unmanaged-api/metadata/cor-field-offset-structure.md) структуры, каждый из которых указывает, что поля класса и смещение в пределах класса. Массива с `mdTokenNil`.  
+ [in] An array of [COR_FIELD_OFFSET](../../../../docs/framework/unmanaged-api/metadata/cor-field-offset-structure.md) structures, each of which specifies a field of the class and the field's offset within the class. Terminate the array with `mdTokenNil`.  
   
  `ulClassSize`  
- [in] Размер в байтах, класса.  
+ [in] The size, in bytes, of the class.  
   
-## <a name="remarks"></a>Примечания  
- Класс изначально определяется путем вызова [IMetaDataEmit::DefineTypeDef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md) метод и задавая один из трех структур поля класса: Авто, последовательный или явной. Как правило необходимо использование автоматической разметки и позволить среде выполнения выбрать лучший способ расположения полей.  
+## <a name="remarks"></a>Заметки  
+ The class is initially defined by calling the [IMetaDataEmit::DefineTypeDef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md) method, and specifying one of three layouts for the fields of the class: automatic, sequential, or explicit. Normally, you would use automatic layout and let the runtime choose the best way to lay out the fields.  
   
- Тем не менее может потребоваться поля, располагались в порядке их использования неуправляемым кодом. В этом случае выберите либо последовательный или явный макет и вызов `SetClassLayout` для завершения макета полей:  
+ However, you might want the fields laid out according to the arrangement that unmanaged code uses. In this case, choose either sequential or explicit layout and call `SetClassLayout` to complete the layout of the fields:  
   
-- Последовательное размещение: Укажите размер пакета. Поле выравнивается в соответствии с его естественному размеру или упаковочный размер, что приводит меньшего размера смещение поля. Задайте `rFieldOffsets` и `ulClassSize` до нуля.  
+- Sequential layout: Specify the packing size. A field is aligned according to either its natural size or the packing size, whichever results in the smaller offset of the field. Set `rFieldOffsets` and `ulClassSize` to zero.  
   
-- Явное размещение: Задайте смещение каждого поля или размер класса, а также размером уплотнения.  
+- Explicit layout: Either specify the offset of each field or specify the class size and the packing size.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** Cor.h  
+ **Header:** Cor.h  
   
- **Библиотека:** Используется как ресурс в MSCorEE.dll  
+ **Library:** Used as a resource in MSCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

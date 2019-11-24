@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: ebaad1d5-ee0a-4cb0-96bc-8ba5d371b747
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 556048be66a7c60dd82a8d51391a86655db6802a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 645c9dd9319dfdf9cb070366d2c389f879e1b1d2
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67755927"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448043"
 ---
 # <a name="icorprofilercallbackexceptionunwindfunctionleave-method"></a>Метод ICorProfilerCallback::ExceptionUnwindFunctionLeave
-Уведомляет профилировщик об окончании этапа очистки во время обработки исключений в функции.  
+Notifies the profiler that the unwind phase of exception handling has finished unwinding a function.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -33,17 +31,17 @@ ms.locfileid: "67755927"
 HRESULT ExceptionUnwindFunctionLeave();  
 ```  
   
-## <a name="remarks"></a>Примечания  
- Когда `ExceptionUnwindFunctionLeave` вызывается метод, экземпляр функции и ее данных стека удаляются из стека.  
+## <a name="remarks"></a>Заметки  
+ When the `ExceptionUnwindFunctionLeave` method is called, the function instance and its stack data are removed from the stack.  
   
- Профилировщик не должен блокироваться во время данного вызова, поскольку стек может находиться в состоянии, допускающем сбор мусора, и поэтому не удастся включить сборку мусора. Если предпринимается в блоках профилировщика и сбор мусора, среда выполнения будет блокироваться до этого обратного вызова.  
+ The profiler should not block during this call because the stack may not be in a state that allows garbage collection, and therefore preemptive garbage collection cannot be enabled. If the profiler blocks here and a garbage collection is attempted, the runtime will block until this callback returns.  
   
- Кроме того во время этого вызова профилировщик не должна вызывать управляемый код или каким-либо образом вызывать распределения управляемой памяти.  
+ Also, during this call, the profiler must not call into managed code or in any way cause a managed-memory allocation.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorProf.idl, CorProf.h  
+ **Заголовок:** CorProf.idl, CorProf.h  
   
  **Библиотека:** CorGuids.lib  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 798513a0-68b1-4d04-bc5b-782a4445ea68
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c38b7f060c34f7408195484dec2c49305db422fe
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a43c1883038e41cac1b58c78bc26f20d436ebbd1
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781325"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74440237"
 ---
 # <a name="imetadataimportenumcustomattributes-method"></a>Метод IMetaDataImport::EnumCustomAttributes
-Перечисляет токены определений настраиваемых атрибутов, связанных с указанным типом или членом.  
+Enumerates custom attribute-definition tokens associated with the specified type or member.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -42,36 +40,36 @@ HRESULT EnumCustomAttributes (
   
 ## <a name="parameters"></a>Параметры  
  `phEnum`  
- [in, out] Указатель на возвращенном перечислителе.  
+ [in, out] A pointer to the returned enumerator.  
   
  `tk`  
- [in] Маркер в рамках перечисление, или ноль для всех настраиваемых атрибутов.  
+ [in] A token for the scope of the enumeration, or zero for all custom attributes.  
   
  `tkType`  
- [in] Маркер для конструктора типа атрибутов, которые необходимо перечислить или `null` для всех типов.  
+ [in] A token for the constructor of the type of the attributes to be enumerated, or `null` for all types.  
   
  `rCustomAttributes`  
- [out] Массив настраиваемых атрибутов маркеров.  
+ [out] An array of custom attribute tokens.  
   
  `cMax`  
  [in] Максимальный размер массива `rCustomAttributes`.  
   
  `pcCustomAttributes`  
- [out, optional] Фактическое число маркеров значения, возвращаемые в `rCustomAttributes`.  
+ [out, optional] The actual number of token values returned in `rCustomAttributes`.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
   
 |HRESULT|Описание|  
 |-------------|-----------------|  
-|`S_OK`|`EnumCustomAttributes` успешно возвращен.|  
-|`S_FALSE`|Нет никаких настраиваемых атрибутов для перечисления. В этом случае `pcCustomAttributes` равно нулю.|  
+|`S_OK`|`EnumCustomAttributes` returned successfully.|  
+|`S_FALSE`|There are no custom attributes to enumerate. In that case, `pcCustomAttributes` is zero.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** Cor.h  
+ **Header:** Cor.h  
   
- **Библиотека:** Включена как ресурс в MsCorEE.dll  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

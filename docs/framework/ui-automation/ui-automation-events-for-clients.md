@@ -5,16 +5,16 @@ helpviewer_keywords:
 - UI Automation, events for clients
 - events, UI Automation clients
 ms.assetid: b909e388-3f24-4997-b6d4-bd9c35c2dc27
-ms.openlocfilehash: f4ce2d996d5a1a6ecd149118b7499650882a732f
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 4193f92223cb9c9f924c1021b2f3e58a5e8b988d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71042281"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74441508"
 ---
 # <a name="ui-automation-events-for-clients"></a>События модели автоматизации пользовательского интерфейса для клиентов
 > [!NOTE]
-> Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Последние сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]см. в разделе [API службы автоматизации Windows: Модель автоматизации](https://go.microsoft.com/fwlink/?LinkID=156746)пользовательского интерфейса.  
+> Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Последние сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]см. в разделе [API автоматизации Windows. Автоматизация пользовательского интерфейса](/windows/win32/winauto/entry-uiauto-win32).  
   
  В этом разделе описывается, как события [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] используются клиентами автоматизации пользовательского интерфейса.  
   
@@ -25,7 +25,7 @@ ms.locfileid: "71042281"
 > [!NOTE]
 > Не следует думать, что все возможные события вызываются поставщиком [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]. Например, не все изменения свойств приводят к созданию событий стандартными поставщиками прокси для элементов управления [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] и [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)].  
   
- Более широкое представление [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] событий см. в разделе [Общие сведения о событиях модели автоматизации пользовательского интерфейса](ui-automation-events-overview.md).  
+ For a broader view of [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] events, see [UI Automation Events Overview](ui-automation-events-overview.md).  
   
 <a name="Subscribing_to_Events"></a>   
 ## <a name="subscribing-to-events"></a>Подписка на события  
@@ -55,11 +55,11 @@ ms.locfileid: "71042281"
 |<xref:System.Windows.Automation.Automation.RemoveAutomationPropertyChangedEventHandler%2A>|Отменяет регистрацию обработчика событий, который был зарегистрирован с помощью <xref:System.Windows.Automation.Automation.AddAutomationPropertyChangedEventHandler%2A>.|  
 |<xref:System.Windows.Automation.Automation.RemoveAllEventHandlers%2A>|Отменяет регистрацию всех зарегистрированных обработчиков событий.|  
   
- Пример кода см. [в разделе Подписка на события модели автоматизации пользовательского интерфейса](subscribe-to-ui-automation-events.md).  
+ For example code, see [Subscribe to UI Automation Events](subscribe-to-ui-automation-events.md).  
   
 ## <a name="see-also"></a>См. также
 
 - [Подписка на события модели автоматизации пользовательского интерфейса](subscribe-to-ui-automation-events.md)
 - [Общие сведения о событиях модели автоматизации пользовательского интерфейса](ui-automation-events-overview.md)
 - [Общие сведения о свойствах модели автоматизации пользовательского интерфейса](ui-automation-properties-overview.md)
-- [Пример Траккфокус](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/FocusTracker)
+- [TrackFocus Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/FocusTracker)

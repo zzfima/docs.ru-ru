@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: dd11c485-be95-4b97-9cd8-68679a4fb432
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 0777151d10149ec7311a7761bc7f6bff5ba98e0e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 031996813718a074eebab62ff54a2de52b898c22
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777488"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74450212"
 ---
 # <a name="imetadataemitdefinetypedef-method"></a>Метод IMetaDataEmit::DefineTypeDef
-Создает определение типа для типа среды выполнения и получает маркер метаданных для этого определения типа.  
+Creates a type definition for a common language runtime type, and gets a metadata token for that type definition.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -41,33 +39,33 @@ HRESULT DefineTypeDef (
   
 ## <a name="parameters"></a>Параметры  
  `szTypeDef`  
- [in] Имя типа в формате Юникод.  
+ [in] The name of the type in Unicode.  
   
  `dwTypeDefFlags`  
- [in] `TypeDef` атрибуты. Это битовая маска `CoreTypeAttr` значения.  
+ [in] `TypeDef` attributes. This is a bitmask of `CoreTypeAttr` values.  
   
  `tkExtends`  
- [in] Токен базового класса. Он должен быть либо `mdTypeDef` или `mdTypeRef` токена.  
+ [in] The token of the base class. It must be either an `mdTypeDef` or an `mdTypeRef` token.  
   
  `rtkImplements`  
- [in] Массив токенов, указав интерфейсы, реализуемые этот класс или интерфейс.  
+ [in] An array of tokens specifying the interfaces that this class or interface implements.  
   
  `ptd`  
- [out] `mdTypeDef` Маркер, назначенный.  
+ [out] The `mdTypeDef` token assigned.  
   
-## <a name="remarks"></a>Примечания  
- Флаг в `dwTypeDefFlags` указывает, является ли тип, который создается общий тип системы ссылочным типом (класс или интерфейс) или общие системные типы значений типа.  
+## <a name="remarks"></a>Заметки  
+ A flag in `dwTypeDefFlags` specifies whether the type being created is a common type system reference type (class or interface) or a common type system value type.  
   
- В зависимости от параметров, содержащихся, этот метод в качестве побочного эффекта, может также создавать `mdInterfaceImpl` записей для каждого интерфейса, реализуемый этим типом или унаследован. Тем не менее, этот метод не возвращает любое из этих `mdInterfaceImpl` маркеры. Если клиент хочет позже добавить или изменить `mdInterfaceImpl` маркеров, он должен использовать `IMetaDataImport` интерфейс для их перебора. Если вы хотите использовать семантику COM `[default]` интерфейс, должны предоставлять интерфейс по умолчанию, как первый элемент в `rtkImplements`; задать класса настраиваемого атрибута укажет, что класс имеет интерфейс по умолчанию (который всегда предполагается, что Сначала `mdInterfaceImpl` маркер, объявленным для класса).  
+ Depending on the parameters supplied, this method, as a side effect, may also create an `mdInterfaceImpl` record for each interface that is inherited or implemented by this type. However, this method does not return any of these `mdInterfaceImpl` tokens. If a client wants to later add or modify an `mdInterfaceImpl` token, it must use the `IMetaDataImport` interface to enumerate them. If you want to use COM semantics of the `[default]` interface, you should supply the default interface as the first element in `rtkImplements`; a custom attribute set on the class will indicate that the class has a default interface (which is always assumed to be the first `mdInterfaceImpl` token declared for the class).  
   
- Каждый элемент `rtkImplements` массива содержит `mdTypeDef` или `mdTypeRef` токена. Последним элементом в массиве должен быть `mdTokenNil`.  
+ Each element of the `rtkImplements` array holds an `mdTypeDef` or `mdTypeRef` token. The last element in the array must be `mdTokenNil`.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** Cor.h  
+ **Header:** Cor.h  
   
- **Библиотека:** Используется как ресурс в MSCorEE.dll  
+ **Library:** Used as a resource in MSCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

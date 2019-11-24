@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 92d76893-683c-475d-9996-5bff03cdb10f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: dcfdb417cb43c819f21f66611129135ad0beb42b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ade0ba0517e47e9500683836b87d7a8ac1dfcfdb
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67746915"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74439858"
 ---
 # <a name="icorprofilercallback2finalizeableobjectqueued-method"></a>Метод ICorProfilerCallback2::FinalizeableObjectQueued
-Уведомляет профилировщик кода, что объект с финализатором поставлен поток метода завершения для выполнения его `Finalize` метод.  
+Notifies the code profiler that an object with a finalizer has been queued to the finalizer thread for execution of its `Finalize` method.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,15 +35,15 @@ HRESULT FinalizeableObjectQueued(
   
 ## <a name="parameters"></a>Параметры  
  `finalizerFlags`  
- [in] Значение [COR_PRF_FINALIZER_FLAGS](../../../../docs/framework/unmanaged-api/profiling/cor-prf-finalizer-flags-enumeration.md) перечисление, описывающее аспекты метода завершения.  
+ [in] A value of the [COR_PRF_FINALIZER_FLAGS](../../../../docs/framework/unmanaged-api/profiling/cor-prf-finalizer-flags-enumeration.md) enumeration that describes aspects of the finalizer.  
   
  `objectID`  
- [in] Идентификатор объекта, который находится в очереди.  
+ [in] The ID of the object that has been queued.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorProf.idl, CorProf.h  
+ **Заголовок:** CorProf.idl, CorProf.h  
   
  **Библиотека:** CorGuids.lib  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 52794819-0a59-4bb1-a265-0f158cd5cd65
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e214af178972623bad3536565aa9bc51edc97260
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8ff7d5a593388bd3a584e031aea411dfdb6c9845
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67763108"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445195"
 ---
 # <a name="icorprofilercallbackappdomainshutdownfinished-method"></a>Метод ICorProfilerCallback::AppDomainShutdownFinished
-Уведомляет профилировщик о том, что домен приложения был выгружен из процесса.  
+Notifies the profiler that an application domain has been unloaded from a process.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,20 +35,20 @@ HRESULT AppDomainShutdownFinished(
   
 ## <a name="parameters"></a>Параметры  
  `appDomainId`  
- [in] Определяет домен, в котором хранятся сборки приложения.  
+ [in] Identifies the domain in which the application's assemblies are stored.  
   
  `hrStatus`  
- [in] Значение HRESULT, указывающее, является ли домен приложения был успешно высвобожден.  
+ [in] An HRESULT that indicates whether the application domain was unloaded successfully.  
   
-## <a name="remarks"></a>Примечания  
- Значение `appDomainId` не является допустимым для информационного запроса после [ICorProfilerCallback::AppDomainShutdownStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-appdomainshutdownstarted-method.md) возвращает метод.  
+## <a name="remarks"></a>Заметки  
+ The value of `appDomainId` is not valid for an information request after the [ICorProfilerCallback::AppDomainShutdownStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-appdomainshutdownstarted-method.md) method returns.  
   
- Некоторые части выгрузки домена приложения может по-прежнему после `AppDomainCreationFinished` обратного вызова. Значение HRESULT в `hrStatus` указывает на сбой. Тем не менее значение HRESULT в `hrStatus` указывает только что в первой части выгрузки домена приложения.  
+ Some parts of unloading the application domain might continue after the `AppDomainCreationFinished` callback. A failure HRESULT in `hrStatus` indicates a failure. However, a success HRESULT in `hrStatus` indicates only that the first part of unloading the application domain has succeeded.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorProf.idl, CorProf.h  
+ **Заголовок:** CorProf.idl, CorProf.h  
   
  **Библиотека:** CorGuids.lib  
   

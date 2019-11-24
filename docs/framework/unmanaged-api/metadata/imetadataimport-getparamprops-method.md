@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4d5e5f00-bcab-4f41-b191-176511a186a7
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e9d2c74adecdfb0201f9f0c08998feba674f9e0f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: bb73ccdd9eee4b5a655a56b5d6757e0c6003fbc9
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778926"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74437127"
 ---
 # <a name="imetadataimportgetparamprops-method"></a>Метод IMetaDataImport::GetParamProps
 Возвращает значения метаданных для параметра, на который ссылается указанный токен ParamDef.  
@@ -46,45 +44,45 @@ HRESULT GetParamProps (
   
 ## <a name="parameters"></a>Параметры  
  `tk`  
- [in] Токен ParamDef, который представляет метаданные для возвращаемого параметра.  
+ [in] A ParamDef token that represents the parameter to return metadata for.  
   
  `pmd`  
- [out] Указатель на токен MethodDef, предоставляющий метод, который принимает параметр.  
+ [out] A pointer to a MethodDef token representing the method that takes the parameter.  
   
  `pulSequence`  
- [out] Порядковая позиция параметра в списке аргументов метода.  
+ [out] The ordinal position of the parameter in the method argument list.  
   
  `szName`  
- [out] Буфер для хранения имени параметра.  
+ [out] A buffer to hold the name of the parameter.  
   
  `cchName`  
- [in] Запрошенный размер в расширенных символах `szName`.  
+ [in] The requested size in wide characters of `szName`.  
   
  `pchName`  
- [out] Возвращаемый размер в расширенных символах `szName`.  
+ [out] The returned size in wide characters of `szName`.  
   
  `pdwAttr`  
- [out] Указатель на любой атрибут флаги, связанные с параметром. Это битовая маска `CorParamAttr` значения.  
+ [out] A pointer to any attribute flags associated with the parameter. This is a bitmask of `CorParamAttr` values.  
   
  `pdwCPlusTypeFlag`  
- [out] Указатель на значение типа, указывающее флаг, параметр <xref:System.ValueType>.  
+ [out] A pointer to a flag specifying that the parameter is a <xref:System.ValueType>.  
   
  `ppValue`  
- [out] Указатель на строковую константу, возвращаемых параметром.  
+ [out] A pointer to a constant string returned by the parameter.  
   
  `pcchValue`  
- [out] Размер `ppValue` в расширенные символы, или нуль, если `ppValue` не содержит строку.  
+ [out] The size of `ppValue` in wide characters, or zero if `ppValue` does not hold a string.  
   
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
-Последовательность значений элементов в `pulSequence` начинаются с 1 для параметров. Возвращаемое значение имеет порядковый номер 0.
+The sequence values in `pulSequence` begin with 1 for parameters. A return value has a sequence number of 0.
 
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** Cor.h  
+ **Header:** Cor.h  
   
- **Библиотека:** Включена как ресурс в MsCorEE.dll  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 42790918-4142-4938-b8f4-a56979a55846
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: fcf32c4b27324ccc54eabbb248e8c9906cf693b6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: bc5bbba2fa4a95955e52a2e083a2097178b5d96a
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782363"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74437518"
 ---
 # <a name="imetadataimportgetmemberprops-method"></a>Метод IMetaDataImport::GetMemberProps
-Получает сведения, хранящиеся в метаданных для определения указанного элемента, включая имя, двоичную подпись и относительный виртуальный адрес из <xref:System.Type> члена ссылается указанный токен метаданных. Это простой вспомогательный метод: Если *МБ* является MethodDef, затем **GetMethodProps** вызывается; Если *МБ* будет FieldDef **GetFieldProps** вызывается. См. в статье эти другие методы, Дополнительные сведения. 
+Gets information stored in the metadata for a specified member definition, including the name, binary signature, and relative virtual address, of the <xref:System.Type> member referenced by the specified metadata token. This is a simple helper method: if *mb* is a MethodDef, then **GetMethodProps** is called; if *mb* is a FieldDef, then **GetFieldProps** is called. See these other methods for details. 
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -49,50 +47,50 @@ HRESULT GetMemberProps (
   
 ## <a name="parameters"></a>Параметры  
  `mb`  
- [in] Токен, который ссылается на связанные метаданные для члена.  
+ [in] The token that references the member to get the associated metadata for.  
   
  `pClass`  
- [out] Указатель на токен метаданных, представляющий класс члена.  
+ [out] A pointer to the metadata token that represents the class of the member.  
   
  `szMember`  
- [out] Имя элемента.  
+ [out] The name of the member.  
   
  `cchMember`  
- [in] Размер в расширенных символах `szMember` буфера.  
+ [in] The size in wide characters of the `szMember` buffer.  
   
  `pchMember`  
- [out] Размер в расширенных символах возвращаемое имя.  
+ [out] The size in wide characters of the returned name.  
   
  `pdwAttr`  
- [out] Любые значения флага, применения к элементу.  
+ [out] Any flag values applied to the member.  
   
  `ppvSigBlob`  
- [out] Указатель на двоичную подпись метаданных элемента.  
+ [out] A pointer to the binary metadata signature of the member.  
   
  `pcbSigBlob`  
- [out] Размер в байтах `ppvSigBlob`.  
+ [out] The size in bytes of `ppvSigBlob`.  
   
  `pulCodeRVA`  
- [out] Указатель на относительный виртуальный адрес элемента.  
+ [out] A pointer to the relative virtual address of the member.  
   
  `pdwImplFlags`  
- [out] Все флаги реализации метода, связанное с элементом.  
+ [out] Any method implementation flags associated with the member.  
   
  `pdwCPlusTypeFlag`  
- [out] Флаг, который помечает <xref:System.ValueType>. Он является одним из `ELEMENT_TYPE_*` значения.
+ [out] A flag that marks a <xref:System.ValueType>. It is one of the `ELEMENT_TYPE_*` values.
   
  `ppValue`  
- [out] Постоянное строковое значение, возвращаемое этим элементом.  
+ [out] A constant string value returned by this member.  
   
  `pcchValue`  
- [out] Размер в символах `ppValue`, или нуль, если `ppValue` не содержит строку.  
+ [out] The size in characters of `ppValue`, or zero if `ppValue` does not hold a string.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** Cor.h  
+ **Header:** Cor.h  
   
- **Библиотека:** Включена как ресурс в MsCorEE.dll  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

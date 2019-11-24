@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: ce8f6aa6-4ebf-4a86-b429-4bbc8af41a8f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 31fad9e82d0b93360f92676f6357c136ae60634a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 41021a524142afe34727584265aee578e31a64b3
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67771132"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74433211"
 ---
 # <a name="icorprofilerinfo2getfunctionfromtokenandtypeargs-method"></a>Метод ICorProfilerInfo2::GetFunctionFromTokenAndTypeArgs
-Получает `FunctionID` функции с помощью заданным токеном метаданных, содержащий класс, и `ClassID` значения любого типа аргументов.  
+Gets the `FunctionID` of a function by using the specified metadata token, containing class, and `ClassID` values of any type arguments.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -41,34 +39,34 @@ HRESULT GetFunctionFromTokenAndTypeArgs(
   
 ## <a name="parameters"></a>Параметры  
  `moduleID`  
- [in] Идентификатор модуля, в которой находится функция.  
+ [in] The ID of the module in which the function resides.  
   
  `funcDef`  
- [in] `mdMethodDef` Токен метаданных, который ссылается на функцию.  
+ [in] An `mdMethodDef` metadata token that references the function.  
   
  `classId`  
- [in] Идентификатор содержащего класса функции.  
+ [in] The ID of the function's containing class.  
   
  `cTypeArgs`  
- [in] Число параметров типа для заданной функции. Это значение должно быть ноль для неуниверсальных функциях.  
+ [in] The number of type parameters for the given function. This value must be zero for non-generic functions.  
   
  `typeArgs`  
- [in] Массив `ClassID` значений, каждое из которых является аргументом функции. Значение `typeArgs` может иметь значение NULL, если `cTypeArgs` присваивается нулевое значение.  
+ [in] An array of `ClassID` values, each of which is an argument of the function. The value of `typeArgs` can be NULL if `cTypeArgs` is set to zero.  
   
  `pFunctionID`  
- [out] Указатель на `FunctionID` указанной функции.  
+ [out] A pointer to the `FunctionID` of the specified function.  
   
-## <a name="remarks"></a>Примечания  
- Вызов `GetFunctionFromTokenAndTypeArgs` метод с `mdMethodRef` метаданных, а не `mdMethodDef` токен метаданных может привести к непредсказуемым результатам. Вызывающие объекты должны устранить `mdMethodRef` для `mdMethodDef` при передаче.  
+## <a name="remarks"></a>Заметки  
+ Calling the `GetFunctionFromTokenAndTypeArgs` method with an `mdMethodRef` metadata instead of an `mdMethodDef` metadata token can have unpredictable results. Callers should resolve the `mdMethodRef` to an `mdMethodDef` when passing it.  
   
- Если функция еще не загружено, вызов метода `GetFunctionFromTokenAndTypeArgs` вызовет загрузки возникает, который является опасной операцией во многих контекстах. Например вызов этого метода во время загрузки модулей или типов может привести к бесконечный цикл, как среда выполнения пытается циклически загружать объекты.  
+ If the function is not already loaded, calling `GetFunctionFromTokenAndTypeArgs` will cause loading to occur, which is a dangerous operation in many contexts. For example, calling this method during loading of modules or types could lead to an infinite loop as the runtime attempts to circularly load things.  
   
- Как правило, использование `GetFunctionFromTokenAndTypeArgs` не рекомендуется. Если профилировщик интересуют события для определенной функции, их следует хранить `ModuleID` и `mdMethodDef` этой функции, а также использовать [ICorProfilerInfo2::GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) проверяемый ли заданный `FunctionID` — для нужной функции.  
+ In general, use of `GetFunctionFromTokenAndTypeArgs` is discouraged. If profilers are interested in events for a particular function, they should store the `ModuleID` and `mdMethodDef` of that function, and use [ICorProfilerInfo2::GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) to check whether a given `FunctionID` is that of the desired function.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorProf.idl, CorProf.h  
+ **Заголовок:** CorProf.idl, CorProf.h  
   
  **Библиотека:** CorGuids.lib  
   

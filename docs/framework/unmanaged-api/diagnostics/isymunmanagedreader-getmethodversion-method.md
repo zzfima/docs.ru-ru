@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: d6f9ac84-302a-4f5e-b990-e76f4269fceb
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 3f45423bb0ff4c755e657729c5725c8d9a22bde3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: fcaf748413321f684336543e60f735af69894b51
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67746763"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436009"
 ---
 # <a name="isymunmanagedreadergetmethodversion-method"></a>Метод ISymUnmanagedReader::GetMethodVersion
-Получает версию метода. Версия метода начинается с 1 и увеличивается каждый раз, когда метод компилируется. Перекомпиляция может происходить без изменения в метод.  
+Gets the method version. The method version starts at 1 and is incremented each time the method is recompiled. Recompilation can happen without changes to the method.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,16 +35,16 @@ HRESULT GetMethodVersion (
   
 ## <a name="parameters"></a>Параметры  
  `pMethod`  
- [in] Метод, для которого необходимо получить версию.  
+ [in] The method for which to get the version.  
   
  `version`  
- [out] Указатель на переменную, которая получает версию метода.  
+ [out] A pointer to a variable that receives the method version.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Требования  
- **Заголовок.** CorSym.idl CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>См. также
 

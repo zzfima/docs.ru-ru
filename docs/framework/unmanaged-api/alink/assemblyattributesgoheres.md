@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4e817f35-a2bc-4403-9e6f-f731e6b9fe23
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 135938c4ed91423145ca46b743620f4236f7f818
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 128268bab77c8be5dc809eaa6d2548fc34f13cbd
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742258"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446617"
 ---
 # <a name="assemblyattributesgoheres"></a>AssemblyAttributesGoHereS
 
@@ -34,13 +32,13 @@ ms.locfileid: "67742258"
 internal sealed class AssemblyAttributesGoHereS
 ```
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
 Ссылки на этот тип можно включать в модули NETMODULE, источник которых содержат пользовательские атрибуты сборки. При построении манифеста сборки из одного или нескольких файлов, содержащих ссылки на эти NETMODULE, ALink использует сведения, подключенные к этим ссылкам, для выдачи фактических пользовательских атрибутов. Таким образом, экземпляр этого типа никогда не создается, а ссылки на него используются только как часть процесса сборки и бесполезны в окончательной сборке.
 
 Ссылки на этот тип указывают пользовательские атрибуты, связанные с безопасностью, которые нельзя использовать многократно.
 
-Эти типы помечены как «внутренние» в .NET Framework и находятся в папке <xref:System.Runtime.CompilerServices> пространства имен.
+These types are marked "internal" within the .NET Framework and are located in the <xref:System.Runtime.CompilerServices> namespace.
 
 ## <a name="requirements"></a>Требования
 

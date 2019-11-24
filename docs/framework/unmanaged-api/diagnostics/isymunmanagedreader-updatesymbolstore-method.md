@@ -15,20 +15,18 @@ helpviewer_keywords:
 ms.assetid: 4a17d723-86b9-4f27-bd0d-b70c3259011c
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d84d4fccb2cb4e500f07f6bfbfb93b8c7b81f5d6
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e052d9b7b2abd57b176dfe3b00afac626d422c58
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69939006"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446456"
 ---
 # <a name="isymunmanagedreaderupdatesymbolstore-method"></a>Метод ISymUnmanagedReader::UpdateSymbolStore
-Обновляет существующее хранилище символов разностным хранилищем символов. Этот метод используется в сценариях "изменить и продолжить" для обновления хранилища символов в соответствии с разностью с исходным переносимым исполняемым файлом (PE).  
+Обновляет существующее хранилище символов разностным хранилищем символов. This method is used in edit-and-continue scenarios to update the symbol store to match deltas to the original portable executable (PE) file.  
   
 > [!NOTE]
-> Необходимо указать только один из `filename` параметров или `pIStream` , но не оба. Если `filename` указан параметр, хранилище символов будет обновлено символами из этого файла. Если `pIStream` указан параметр, хранилище будет обновляться данными <xref:System.Runtime.InteropServices.ComTypes.IStream>из.  
+> You need specify only one of the `filename` or `pIStream` parameters, not both. If `filename` is specified, the symbol store will be updated with the symbols in that file. If `pIStream` is specified, the store will be updated with the data from the <xref:System.Runtime.InteropServices.ComTypes.IStream>.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,16 +38,16 @@ HRESULT UpdateSymbolStore (
   
 ## <a name="parameters"></a>Параметры  
  `filename`  
- окне Имя файла, содержащего хранилище символов.  
+ [in] The name of the file that contains the symbol store.  
   
  `pIStream`  
- окне Файловый поток, используемый в качестве альтернативы `filename` параметру.  
+ [in] The file stream, used as an alternative to the `filename` parameter.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Значение S_OK, если метод выполнен. в противном случае — E_FAIL или другой код ошибки.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Требования  
- **Заголовок.** Корсим. idl, Корсим. h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>См. также
 

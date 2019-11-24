@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: a8e3dd32-6a44-4371-9a74-f417b11998c8
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d5b82415635980f5bd4e13e87a0a03ec5b7032bb
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: bc1b65de026a674a3dff183050a5a205fd7052c9
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777322"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74427993"
 ---
 # <a name="isymunmanagedwriterdefineparameter-method"></a>Метод ISymUnmanagedWriter::DefineParameter
-Определяет один параметр в текущем методе. Тип параметра берутся из (последовательность) позиция параметра в подписи метода.  
+Defines a single parameter in the current method. The parameter type is taken from the parameter's position (sequence) within the method's signature.  
   
- Если параметры определены в метаданных для данного метода, у вас нет определять их с помощью этого метода. Средства чтения символов необходимо проверить обычные метаданные для параметров перед проверкой в хранилище символов.  
+ If parameters are defined in the metadata for a given method, you do not have to define them again by using this method. The symbol readers must check the normal metadata for the parameters before checking the symbol store.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -44,31 +42,31 @@ HRESULT DefineParameter(
   
 ## <a name="parameters"></a>Параметры  
  `name`  
- [in] Имя параметра.  
+ [in] The parameter name.  
   
  `attributes`  
- [in] Атрибуты параметра.  
+ [in] The parameter attributes.  
   
  `sequence`  
- [in] Подпись параметра.  
+ [in] The parameter signature.  
   
  `addrKind`  
- [in] Тип адреса.  
+ [in] The address type.  
   
  `addr1`  
- [in] Первый адрес для спецификации параметра.  
+ [in] The first address for the parameter specification.  
   
  `addr2`  
- [in] Второй адрес для спецификации параметра.  
+ [in] The second address for the parameter specification.  
   
  `addr3`  
- [in] Третий адрес для спецификации параметра.  
+ [in] The third address for the parameter specification.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Требования  
- **Заголовок.** CorSym.idl CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>См. также
 

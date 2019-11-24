@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1b2bbf3f-943e-412e-b66c-e802431b055c
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 8159b5245598993a2075fb402b280f9ab4cb2cfa
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 21a69d120cc732ca6659f77abc9f8ea0c993271e
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782464"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74437789"
 ---
 # <a name="imetadataimportfindtyperef-method"></a>Метод IMetaDataImport::FindTypeRef
-Возвращает указатель на TypeRef токен для <xref:System.Type> ссылки, который находится в указанной области и с указанным именем.  
+Gets a pointer to the TypeRef token for the <xref:System.Type> reference that is in the specified scope and that has the specified name.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,20 +37,20 @@ HRESULT FindTypeRef (
   
 ## <a name="parameters"></a>Параметры  
  `tkResolutionScope`  
- [in] Токен ModuleRef, AssemblyRef или TypeRef, который указывает модуль, сборки или типа, соответственно, в котором ссылаться на тип определен.  
+ [in] A ModuleRef, AssemblyRef, or TypeRef token that specifies the module, assembly, or type, respectively, in which the type reference is defined.  
   
  `szName`  
- [in] Имя ссылки на тип для поиска.  
+ [in] The name of the type reference to search for.  
   
  `ptr`  
- [out] Указатель на соответствующий токен TypeRef.  
+ [out] A pointer to the matching TypeRef token.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** Cor.h  
+ **Header:** Cor.h  
   
- **Библиотека:** Включена как ресурс в MsCorEE.dll  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

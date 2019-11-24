@@ -5,16 +5,16 @@ helpviewer_keywords:
 - controls, UI Automation support for
 - UI Automation, support for standard controls
 ms.assetid: 3770ea8a-2655-4add-9c59-fe0610ad5084
-ms.openlocfilehash: 6cbf31c8a1cdf6e853e56445d22f4a7513bd1859
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: c59352f908c5f4a1fd2ca6dd631d26bb5d69f09a
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71041996"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74441221"
 ---
 # <a name="ui-automation-support-for-standard-controls"></a>Поддержка автоматизации пользовательского интерфейса для стандартных элементов управления
 > [!NOTE]
-> Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Последние сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]см. в разделе [API службы автоматизации Windows: Модель автоматизации](https://go.microsoft.com/fwlink/?LinkID=156746)пользовательского интерфейса.  
+> Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Последние сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]см. в разделе [API автоматизации Windows. Автоматизация пользовательского интерфейса](/windows/win32/winauto/entry-uiauto-win32).  
   
  В этом разделе содержатся сведения о поддержке [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] стандартных элементов управления в приложениях, разработанных для платформ [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)], [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)]и [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] .  
   
@@ -36,21 +36,21 @@ ms.locfileid: "71041996"
 |Кнопка|RadioButton|  
 |Кнопка|Группа|  
 |Кнопка|CheckBox|  
-|Кнопка|Hyperlink|  
+|Кнопка|Гиперссылка|  
 |Кнопка|SplitButton|  
 |Кнопка|CheckBox|  
 |ComboBoxEx32|ComboBox|  
 |ComboBox|ComboBox|  
 |Правка|Document|  
 |Правка|Правка|  
-|SysLink|Hyperlink|  
-|Статические|Текст|  
+|SysLink|Гиперссылка|  
+|Статические|Text|  
 |Статические|Изображение|  
-|SysIPAddress32|Настраиваемый|  
+|SysIPAddress32|Другой|  
 |SysHeader32|Header/HeaderItem|  
 |SysListView32|DataGrid|  
-|SysListView32|Список|  
-|ListBox|Список|  
+|SysListView32|Списка|  
+|ListBox|Списка|  
 |ListBox|ListItem|  
 |#32768|Меню|  
 |#32768|MenuItem|  
@@ -77,7 +77,7 @@ ms.locfileid: "71041996"
 |SysTreeView32|Дерево|  
 |SysTreeView32|TreeItem|  
   
- **Примечание.** Элемент управления RichEdit поддерживается только для версий, поставляемых в составе [!INCLUDE[TLA#tla_winvista](../../../includes/tlasharptla-winvista-md.md)] (в RichEd20.dll версии 3.1 и более поздних версий и MsftEdit.dll версии 4.1 и более поздних версий).  
+ **Note** The RichEdit control is supported only for versions shipped with Windows Vista (in RichEd20.dll version 3.1 and later, and MsftEdit.dll version 4.1 and later).  
   
  Следующие элементы управления не поддерживаются.  
   
@@ -85,18 +85,18 @@ ms.locfileid: "71041996"
 |----------------|------------------|  
 |SysAnimate32|Изображение|  
 |SysPager|Spinner|  
-|SysDateTimePick32|Настраиваемый|  
+|SysDateTimePick32|Другой|  
 |SysMonthCal32|Календарь|  
 |MS_WINNOTE|ToolTip|  
 |VBBubble|ToolTip|  
 |ScrollBar (при использовании в качестве отдельного элемента управления)|Slider|  
-|SuperGrid|Настраиваемый|  
+|SuperGrid|Другой|  
   
 <a name="Windows_Forms_Controls"></a>   
 ## <a name="windows-forms-controls"></a>Элементы управления Windows Forms  
- Windows Forms элементы управления предоставляются [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] через поставщики на стороне клиента в UIAutomationClientsideProviders. dll. Эта сборка автоматически регистрируется для использования с приложениями клиента автоматизации пользовательского интерфейса.  
+ Windows Forms controls are exposed to [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] through client-side providers in UIAutomationClientsideProviders.dll. Эта сборка автоматически регистрируется для использования с приложениями клиента автоматизации пользовательского интерфейса.  
   
- Как правило, элементы управления Windows Forms, являющиеся управляемыми [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] оболочками для стандартных элементов [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]управления, поддерживаются. Поддерживаются следующие элементы управления.  
+ Typically, Windows Forms controls that are managed wrappers for [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] common controls are supported by [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]. Поддерживаются следующие элементы управления.  
   
 |Имя класса|  
 |----------------|  
@@ -129,14 +129,14 @@ ms.locfileid: "71041996"
 |TabControl/TabPage|  
 |TextBox|  
 |Таймер|  
-|ToolBar|  
+|Toolbar|  
 |ToolTip|  
 |TrackBar|  
 |TreeView|  
 |VscrollBar|  
 |Веб-браузер|  
   
- Следующие элементы управления [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] доступны только через поддержку Microsoft Active Accessibility. Некоторые функциональные возможности могут оказаться недоступными.  
+ The following controls are exposed to [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] only through their support for Microsoft Active Accessibility. Некоторые функциональные возможности могут оказаться недоступными.  
   
 |Имя элемента|  
 |------------------|  

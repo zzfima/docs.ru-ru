@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: e5912ed8-e4ce-438b-8ea3-d9e4c288d109
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 62c44d0c3bd2e931b1708abb48bc9c854431419f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 45e2348b4726447548544d975e60b93e464fb402
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67751148"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74450332"
 ---
 # <a name="imetadataassemblyimportenumexportedtypes-method"></a>Метод IMetaDataAssemblyImport::EnumExportedTypes
-Перечисляет экспортированные типы, упоминаемые в манифесте сборки в текущей области метаданных.  
+Enumerates the exported types referenced in the assembly manifest in the current metadata scope.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,30 +38,30 @@ HRESULT EnumExportedTypes (
   
 ## <a name="parameters"></a>Параметры  
  `phEnum`  
- [in, out] Указатель на перечислитель. Это должно быть значение null значение, если `EnumExportedTypes` метод вызывается в первый раз.  
+ [in, out] A pointer to the enumerator. This must be a null value when the `EnumExportedTypes` method is called for the first time.  
   
  `rExportedTypes`  
- [out] Перечисление `mdExportedType` токены метаданных.  
+ [out] The enumeration of `mdExportedType` metadata tokens.  
   
  `cMax`  
- [in] Максимальное число `mdExportedType` маркеры, которые могут быть помещены в `rExportedTypes` массива.  
+ [in] The maximum number of `mdExportedType` tokens that can be placed in the `rExportedTypes` array.  
   
  `pcTokens`  
- [out] Число `mdExportedType` маркеры непосредственно в `rExportedTypes`.  
+ [out] The number of `mdExportedType` tokens actually placed in `rExportedTypes`.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
   
 |HRESULT|Описание|  
 |-------------|-----------------|  
-|`S_OK`|`EnumExportedTypes` успешно возвращен.|  
-|`S_FALSE`|Существуют маркеры для перечисления отсутствуют. В этом случае `pcTokens` присваивается нулевое значение.|  
+|`S_OK`|`EnumExportedTypes` returned successfully.|  
+|`S_FALSE`|There are no tokens to enumerate. In this case, `pcTokens` is set to zero.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформа:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** Cor.h  
+ **Header:** Cor.h  
   
- **Библиотека:** Используется как ресурс в MsCorEE.dll  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

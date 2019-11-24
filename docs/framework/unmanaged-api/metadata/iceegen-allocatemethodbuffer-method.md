@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 845ab77e-9639-47f5-99fb-f3b619e3e779
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 080c16d3a7baceaa277b3418ac2e17391090f00c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 34636f1ca8e42c452aa41f6145d439a26f01b0a7
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67750607"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436402"
 ---
 # <a name="iceegenallocatemethodbuffer-method"></a>Метод ICeeGen::AllocateMethodBuffer
-Создает буфер заданного размера для метода и возвращает относительный виртуальный адрес метода.  
+Creates a buffer of the specified size for a method, and gets the relative virtual address of the method.  
   
- Этот метод является устаревшим и не должны использоваться.  
+ This method is obsolete and should not be used.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -41,20 +39,20 @@ HRESULT AllocateMethodBuffer (
   
 ## <a name="parameters"></a>Параметры  
  `cchBuffer`  
- [in] Длина буфера.  
+ [in] The length of the buffer to create.  
   
  `lpBuffer`  
- [out] Возвращаемый буфер.  
+ [out] The returned buffer.  
   
  `RVA`  
- [out] Относительный виртуальный адрес метода.  
+ [out] The relative virtual address of the method.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** Cor.h  
+ **Header:** Cor.h  
   
- **Библиотека:** Используется как ресурс в MsCorEE.dll  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

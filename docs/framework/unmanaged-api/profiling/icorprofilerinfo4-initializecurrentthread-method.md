@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 18a3335c-8c75-476c-b6de-72c0bfedae5d
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b9bb5a2629e435d76691d48feef6689191b66373
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 39882a554f9d47040bef00ff320d15b56abea533
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69957887"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445723"
 ---
 # <a name="icorprofilerinfo4initializecurrentthread-method"></a>Метод ICorProfilerInfo4::InitializeCurrentThread
-Инициализирует текущий поток перед последовательными вызовами API профилировщика в том же потоке, что позволяет избежать взаимоблокировки.  
+Initializes the current thread in advance of subsequent profiler API calls on the same thread, so that deadlock can be avoided.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -33,18 +31,18 @@ ms.locfileid: "69957887"
 HRESULT InitializeCurrentThread ();  
 ```  
   
-## <a name="remarks"></a>Примечания  
- Рекомендуется вызывать `InitializeCurrentThread` в любом потоке, который будет вызывать API профилировщика при наличии приостановленных потоков. Этот метод обычно используется выборочными профилировщиками, которые создают собственный поток для вызова метода [ICorProfilerInfo2::D остаккснапшот](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) для выполнения проверки стека, пока целевой поток приостанавливается. Вызывая `InitializeCurrentThread` один раз, когда профилировщик сначала создает поток выборки, профилировщики могут гарантировать, что отложенная инициализация для каждого потока, которая в противном случае будет выполняться `DoStackSnapshot` средой CLR во время первого вызова, теперь может быть безопасно, если нет других потоков. режим.  
+## <a name="remarks"></a>Заметки  
+ We recommend that you call `InitializeCurrentThread` on any thread that will call a profiler API while there are suspended threads. This method is typically used by sampling profilers that create their own thread to call the [ICorProfilerInfo2::DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) method to perform stack walks while the target thread is suspended. By calling `InitializeCurrentThread` once when the profiler first creates the sampling thread, profilers can ensure that lazy per-thread initialization that the CLR would otherwise perform during the first call to `DoStackSnapshot` can now occur safely when no other threads are suspended.  
   
 > [!NOTE]
-> `InitializeCurrentThread`Выполняет инициализацию заранее для завершения задач, которые принимают блокировки и могут быть взаимоблокировками. Вызывайте `InitializeCurrentThread` , только если нет приостановленных потоков.  
+> `InitializeCurrentThread` does the initialization in advance to finish tasks that take locks, and may deadlock. Call `InitializeCurrentThread` only when there are no suspended threads.  
   
 ## <a name="requirements"></a>Требования  
- **Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorProf. idl, CorProf. h  
+ **Заголовок:** CorProf.idl, CorProf.h  
   
- **Библиотечная** Коргуидс. lib  
+ **Библиотека:** CorGuids.lib  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   

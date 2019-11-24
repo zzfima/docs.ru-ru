@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0adbbd35-5e8d-4fec-8268-dc70a07c5975
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a0f4eb244e02e13e418a55351dbc1eb1f5b5d16d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2d45a369def193b9c8d8f9a3aa954ede600a87dd
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64617743"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74434740"
 ---
 # <a name="imetadataimport-interface"></a>Интерфейс IMetaDataImport
 Предоставляет методы для импорта существующих метаданных из переносимого исполняемого (PE) файла или другого источника, такого как библиотека типов или отдельный двоичный файл метаданных среды выполнения, а также управления этим метаданными.  
@@ -93,7 +91,7 @@ ms.locfileid: "64617743"
 |[Метод ResetEnum](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-resetenum-method.md)|Возвращает заданный перечислитель в указанную позицию.|  
 |[Метод ResolveTypeRef](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-resolvetyperef-method.md)|Возвращает сведения о типе, на который ссылается указанный токен TypeRef.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
  По своей структуре интерфейс `IMetaDataImport` предназначен в первую очередь для использования средствами и службами, которые будут импортировать сведения о типах (например, средства разработки) или управлять компонентами развертывания (например, службы разрешения или активации). Методы интерфейса `IMetaDataImport` делятся по задачам на следующие категории:  
   
 - перечисление коллекций элементов в области метаданных;  
@@ -105,11 +103,11 @@ ms.locfileid: "64617743"
 - методы Get предназначены специально для возврата свойств с одним значением для элемента метаданных. Если свойство ссылается на другой элемент, возвращается токен этого элемента. Любой тип ввода указателя может иметь значение NULL, свидетельствующее о том, что определенное значение не запрашивается. Для получения свойств, которые по сути являются объектами коллекции (например, коллекции интерфейсов, реализуемых классом), используются методы перечисления.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** Cor.h  
+ **Header:** Cor.h  
   
- **Библиотека:** Используется как ресурс в MsCorEE.dll  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

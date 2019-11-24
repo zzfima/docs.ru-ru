@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 36c76266-71d8-48dc-bd89-54943fa659c1
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 981829500e499be05a8de7c1ffb4683429a903e6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e4abf876681d5b04555c9f030a94b722874e326e
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781849"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74450281"
 ---
 # <a name="corgenericparamattr-enumeration"></a>Перечисление CorGenericParamAttr
-Содержит значения, описывающие <xref:System.Type> параметров для универсальных типов, использующихся в вызовах [IMetaDataEmit2::DefineGenericParam](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-definegenericparam-method.md).  
+Contains values that describe the <xref:System.Type> parameters for generic types, as used in calls to [IMetaDataEmit2::DefineGenericParam](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-definegenericparam-method.md).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -45,24 +43,24 @@ typedef enum CorGenericParamAttr {
 } CorGenericParamAttr;  
 ```  
   
-## <a name="members"></a>Участники  
+## <a name="members"></a>Члены  
   
 |Член|Описание|  
 |------------|-----------------|  
-|`gpVarianceMask`|Параметр Вариативность применяется только к универсальным параметрам для интерфейсов и делегатов.|  
-|`gpNonVariant`|Указывает на отсутствие дисперсии.|  
-|`gpCovariant`|Указывает ковариации.|  
-|`gpContravariant`|Указывает на контравариантность.|  
-|`gpSpecialConstraintMask`|Особые ограничения могут применяться к любому <xref:System.Type> параметра.|  
-|`gpNoSpecialConstraint`|Указывает, что ограничение не применяется к <xref:System.Type> параметра.|  
-|`gpReferenceTypeConstraint`|Указывает, что <xref:System.Type> параметр должен быть ссылочным типом.|  
-|`gpNotNullableValueTypeConstraint`|Указывает, что <xref:System.Type> параметр должен иметь тип значения, который не может иметь значение null.|  
-|`gpDefaultConstructorConstraint`|Указывает, что <xref:System.Type> параметр должен иметь открытый конструктор по умолчанию, который не принимает никаких параметров.|  
+|`gpVarianceMask`|Parameter variance applies only to generic parameters for interfaces and delegates.|  
+|`gpNonVariant`|Indicates the absence of variance.|  
+|`gpCovariant`|Indicates covariance.|  
+|`gpContravariant`|Indicates contravariance.|  
+|`gpSpecialConstraintMask`|Special constraints can apply to any <xref:System.Type> parameter.|  
+|`gpNoSpecialConstraint`|Indicates that no constraint applies to the <xref:System.Type> parameter.|  
+|`gpReferenceTypeConstraint`|Indicates that the <xref:System.Type> parameter must be a reference type.|  
+|`gpNotNullableValueTypeConstraint`|Indicates that the <xref:System.Type> parameter must be a value type that cannot be a null value.|  
+|`gpDefaultConstructorConstraint`|Indicates that the <xref:System.Type> parameter must have a default public constructor that takes no parameters.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorHdr.h  
+ **Header:** CorHdr.h  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

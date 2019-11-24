@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1ccda329-d752-4d89-abe8-511af3c3f4c9
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 0d446e2b78f41d43aa70f429e23f1f4be22fd799
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 59512cc1c1b280d7fe6deb2f9d721ad53547e356
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782497"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74437953"
 ---
 # <a name="imetadataimportfindmemberref-method"></a>Метод IMetaDataImport::FindMemberRef
-Получает указатель на токен MemberRef для члена ссылки, то есть заключены в указанный <xref:System.Type> , с указанной сигнатурой имени и метаданных.  
+Gets a pointer to the MemberRef token for the member reference that is enclosed by the specified <xref:System.Type> and that has the specified name and metadata signature.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -41,33 +39,33 @@ HRESULT FindMemberRef (
   
 ## <a name="parameters"></a>Параметры  
  `td`  
- [in] Лексема TypeRef для класса или интерфейса, который содержит ссылку на элемент для поиска. Если это значение равно `mdTokenNil`, поиск выполняется для глобальной переменной или ссылка глобальной функции.  
+ [in] The TypeRef token for the class or interface that encloses the member reference to search for. If this value is `mdTokenNil`, the lookup is done for a global variable or a global-function reference.  
   
  `szName`  
- [in] Имя ссылки элемента для поиска.  
+ [in] The name of the member reference to search for.  
   
  `pvSigBlob`  
- [in] Указатель на двоичную подпись метаданных ссылки на член.  
+ [in] A pointer to the binary metadata signature of the member reference.  
   
  `cbSigBlob`  
- [in] Размер в байтах `pvSigBlob`.  
+ [in] The size in bytes of `pvSigBlob`.  
   
  `pmr`  
- [out] Указатель на токен MemberRef сопоставления.  
+ [out] A pointer to the matching MemberRef token.  
   
-## <a name="remarks"></a>Примечания  
- Для определения члена с помощью его во включающий класс или интерфейс (`td`), его имя (`szName`) и при необходимости его подпись (`pvSigBlob`).  
+## <a name="remarks"></a>Заметки  
+ You specify the member using its enclosing class or interface (`td`), its name (`szName`), and optionally its signature (`pvSigBlob`).  
   
- Подпись передается `FindMemberRef` необходимо создавать в текущей области, поскольку подписи привязаны к определенной области. Подписи можно внедрить токен, который определяет включающего класса или типа значения. Маркер — это индекс в локальной таблице TypeDef. Не удается построить выполнения вне контекста текущей области и использовать ее в качестве входных данных для `FindMemberRef`.  
+ The signature passed to `FindMemberRef` must have been generated in the current scope, because signatures are bound to a particular scope. A signature can embed a token that identifies the enclosing class or value type. The token is an index into the local TypeDef table. You cannot build a run-time signature outside the context of the current scope and use that signature as input to `FindMemberRef`.  
   
- `FindMemberRef` находит только ссылок на элементы, которые были определены непосредственно в классе или интерфейсе; не удается найти ссылки наследуемый член.  
+ `FindMemberRef` finds only member references that were defined directly in the class or interface; it does not find inherited member references.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** Cor.h  
+ **Header:** Cor.h  
   
- **Библиотека:** Включена как ресурс в MsCorEE.dll  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

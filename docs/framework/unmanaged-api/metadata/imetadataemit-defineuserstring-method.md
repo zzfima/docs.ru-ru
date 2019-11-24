@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 88fb7ef3-bbdf-429c-b678-c9c153456461
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 25e35fd9afd2ce4dc60e23ccd64e0630a008bf39
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: aa5d66d2408010d7a7b52ec68a18f667097795ae
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777437"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74450176"
 ---
 # <a name="imetadataemitdefineuserstring-method"></a>Метод IMetaDataEmit::DefineUserString
-Получает маркер метаданных для заданной строки литерала.  
+Gets a metadata token for the specified literal string.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,20 +37,20 @@ HRESULT DefineUserString (
   
 ## <a name="parameters"></a>Параметры  
  `szString`  
- [in] Строка пользователя для хранения.  
+ [in] The user string to store.  
   
  `cchString`  
- [in] Число расширенных символов в `szString`.  
+ [in] The count of wide characters in `szString`.  
   
  `pstk`  
- [out] Маркер строки, назначенный.  
+ [out] The string token assigned.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** Cor.h  
+ **Header:** Cor.h  
   
- **Библиотека:** Используется как ресурс в MSCorEE.dll  
+ **Library:** Used as a resource in MSCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -6,26 +6,26 @@ helpviewer_keywords:
 - client-side UI Automation provider, implementation
 - provider implementation, UI Automation
 ms.assetid: 3584c0a1-9cd0-4968-8b63-b06390890ef6
-ms.openlocfilehash: 28179ecd27c98f1de5662908ced3ea0e49cb87ad
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 03df282022c39673a7e160dd5d79bdadd0c7adda
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71043949"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74433994"
 ---
 # <a name="client-side-ui-automation-provider-implementation"></a>Реализация клиентского поставщика автоматизации пользовательского интерфейса
 > [!NOTE]
-> Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Последние сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]см. в разделе [API службы автоматизации Windows: Модель автоматизации](https://go.microsoft.com/fwlink/?LinkID=156746)пользовательского интерфейса.  
+> Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Последние сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]см. в разделе [API автоматизации Windows. Автоматизация пользовательского интерфейса](/windows/win32/winauto/entry-uiauto-win32).  
   
- В операционных [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] системах Майкрософт используются несколько различных платформ, включая [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)], [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]и [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]. [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] предоставляет клиентам сведения об элементах пользовательского интерфейса. Однако модель [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] сама по себе не имеет сведений о разных типах элементов управления, которые существуют в этих инфраструктурах, и методах, необходимых для извлечения из них информации. Эта задача оставляется объектам, называемым поставщиками. Поставщик извлекает информацию из определенного элемента управления и передает ее в модель [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], которая затем последовательно предоставляет эту информацию клиенту.  
+ Several different [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] frameworks are in use within Microsoft operating systems, including [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)], [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)], and [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]. [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] предоставляет клиентам сведения об элементах пользовательского интерфейса. Однако модель [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] сама по себе не имеет сведений о разных типах элементов управления, которые существуют в этих инфраструктурах, и методах, необходимых для извлечения из них информации. Эта задача оставляется объектам, называемым поставщиками. Поставщик извлекает информацию из определенного элемента управления и передает ее в модель [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], которая затем последовательно предоставляет эту информацию клиенту.  
   
  Поставщики могут существовать на стороне сервера или на стороне клиента. Поставщик на стороне сервера реализуется самим элементом управления. Элементы[!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] реализуют поставщики, как и любые сторонние элементы управления, созданные в расчете на модель [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] .  
   
  Однако старые элементы управления, например [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] и [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] , не поддерживаются [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]напрямую. Вместо этого они обслуживаются поставщиками, которые существуют в процессе клиента и получают сведения об элементах управления с помощью межпроцессного взаимодействия, например наблюдая за сообщениями, которыми обмениваются Windows и элементы управления. Такие поставщики на стороне клиента иногда называются прокси.  
   
- [!INCLUDE[TLA2#tla_winvista](../../../includes/tla2sharptla-winvista-md.md)]предоставляет поставщики для стандартных [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] и Windows Forms элементов управления. Кроме того, резервный поставщик обеспечивает частичную [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] поддержку для любого элемента управления, который не обслуживается другим поставщиком или прокси на стороне сервера, но имеет реализацию Microsoft Active Accessibility. Все эти поставщики автоматически загружаются и доступны для клиентских приложений.  
+ Windows Vista supplies providers for standard [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] and Windows Forms controls. In addition, a fallback provider gives partial [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] support to any control that is not served by another server-side provider or proxy but has a Microsoft Active Accessibility implementation. Все эти поставщики автоматически загружаются и доступны для клиентских приложений.  
   
- Дополнительные сведения о поддержке [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] элементов управления и Windows Forms см. в разделе [Поддержка модели автоматизации пользовательского интерфейса для стандартных элементов управления](ui-automation-support-for-standard-controls.md).  
+ For more information on support for [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] and Windows Forms controls, see [UI Automation Support for Standard Controls](ui-automation-support-for-standard-controls.md).  
   
  Приложения также могут регистрировать другие поставщики на стороне клиента.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "71043949"
   
 <a name="Registering_and_Configuring_Client-Side_Providers"></a>   
 ## <a name="registering-and-configuring-client-side-providers"></a>Регистрация и настройка поставщиков на стороне клиента  
- Поставщики на стороне клиента в библиотеке динамической компоновки (DLL) загружаются путем вызова <xref:System.Windows.Automation.ClientSettings.RegisterClientSideProviderAssembly%2A>. Для использования этих поставщиков дальнейших действий от клиентского приложения не требуется.  
+ Client-side providers in a dynamic-link library (DLL) are loaded by calling <xref:System.Windows.Automation.ClientSettings.RegisterClientSideProviderAssembly%2A>. Для использования этих поставщиков дальнейших действий от клиентского приложения не требуется.  
   
  Поставщики, реализованные в собственном коде клиента, регистрируются с помощью метода <xref:System.Windows.Automation.ClientSettings.RegisterClientSideProviders%2A>. Этот метод в качестве аргумента принимает массив структур <xref:System.Windows.Automation.ClientSideProviderDescription> , каждая из которых задает следующие свойства:  
   

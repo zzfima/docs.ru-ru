@@ -15,18 +15,16 @@ helpviewer_keywords:
 ms.assetid: 8653bd4c-2290-43d2-a3e1-cbbd50033f4f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 66bd56a332dc34fd35f3129256cc0e3d6c5d4508
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: af881d23ff77f05dadbbc745b973979e35ebe9f7
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636701"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447566"
 ---
 # <a name="imethodmallocalloc-method"></a>Метод IMethodMalloc::Alloc
 
-Пытается выделить указанный объем памяти для нового тела функции промежуточного языка MSIL.
+Attempts to allocate a specified amount of memory for a new Microsoft intermediate language (MSIL) function body.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -39,18 +37,18 @@ PVOID Alloc (
 ## <a name="parameters"></a>Параметры
 
 `cb`\
-[in] Число байтов, выделенных для тела метода.
+[in] The number of bytes to allocate for the method body.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
- Выделенная память начинается по адресу больше, чем базовый адрес модуля, связанного с данным распределителем. Другими словами каждый распределитель создается для определенного модуля и предпринимает попытку выделения памяти с положительным смещением от базового адреса. Если `Alloc` не удается выделить запрошенное число байт по адресу больше, чем базовый адрес модуля, он возвращает значение E_OUTOFMEMORY, независимо от фактического объема доступной памяти.
+ The allocated memory will begin at an address greater than the base address of the module that is associated with this allocator. In other words, each allocator is created for a particular module, and will attempt to allocate memory at a positive offset from its base address. If `Alloc` fails to allocate the requested number of bytes at an address greater than the base address of the module, it returns E_OUTOFMEMORY, regardless of the actual amount of memory space available.
 
- `Alloc` Метод должен использоваться в сочетании с [ICorProfilerInfo::SetILFunctionBody](icorprofilerinfo-setilfunctionbody-method.md) метод.
+ The `Alloc` method should be used in conjunction with the [ICorProfilerInfo::SetILFunctionBody](icorprofilerinfo-setilfunctionbody-method.md) method.
 
 ## <a name="requirements"></a>Требования
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).
 
- **Заголовок.** CorProf.idl, CorProf.h
+ **Заголовок:** CorProf.idl, CorProf.h
 
  **Библиотека:** CorGuids.lib
 

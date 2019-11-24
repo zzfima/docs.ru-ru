@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 36cdc9f5-7579-4cd2-aa36-fc05c741584c
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: be8f4e396171f3e56b5b93969d3960b7aaea142e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e508ccd81d25aa3d303456fa88554903ec71d633
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780639"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74439064"
 ---
 # <a name="icorprofilerinfogethandlefromthread-method"></a>Метод ICorProfilerInfo::GetHandleFromThread
-Сопоставляет идентификатор потока, поток Win32-дескриптором.  
+Maps the ID of a thread to a Win32 thread handle.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,18 +35,18 @@ HRESULT GetHandleFromThread(
   
 ## <a name="parameters"></a>Параметры  
  `threadId`  
- [in] Идентификатор потока должны быть сопоставлены.  
+ [in] The thread ID to be mapped.  
   
  `phThread`  
- [out] Указатель на дескриптор потока Win32.  
+ [out] A pointer to a Win32 thread handle.  
   
-## <a name="remarks"></a>Примечания  
- Профилировщик должен вызвать Win32 `DuplicateHandle` функции с дескриптором перед его использованием.  
+## <a name="remarks"></a>Заметки  
+ The profiler must call the Win32 `DuplicateHandle` function on the handle before using it.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorProf.idl, CorProf.h  
+ **Заголовок:** CorProf.idl, CorProf.h  
   
  **Библиотека:** CorGuids.lib  
   

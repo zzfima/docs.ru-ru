@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: e27a83b5-2698-4996-9032-1e0fed8b91ca
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 831f4665967f2cd07a7ebb4de750fbe456a82261
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ad582fc2fd1bd1d2fc9d5a0d483fdb3a51309a10
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781685"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436503"
 ---
 # <a name="coropenflags-enumeration"></a>Перечисление CorOpenFlags
 Содержит значения флага, которые управляют поведением метаданных при открытии файлов манифеста.  
@@ -48,7 +46,7 @@ typedef enum CorOpenFlags
 } CorOpenFlags;  
 ```  
   
-## <a name="members"></a>Участники  
+## <a name="members"></a>Члены  
   
 |Член|Описание|  
 |------------|-----------------|  
@@ -58,18 +56,18 @@ typedef enum CorOpenFlags
 |`ofCopyMemory`|Указывает, что файл следует считывать в память. Метаданным следует создавать свою собственную копию.|  
 |`ofCacheImage`|Является устаревшей. Этот флаг отклонен.|  
 |`ofManifestMetadata`|Является устаревшей. Этот флаг отклонен.|  
-|`ofReadOnly`|Указывает, что файл должен быть открыт для чтения, а вызов `QueryInterface` для [IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md) нельзя сделать.|  
-|`ofTakeOwnership`|Указывает, что память была выделена с помощью вызова [CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc) и будет освобождена метаданными.|  
+|`ofReadOnly`|Indicates that the file should be opened for reading, and that a call to `QueryInterface` for an [IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md) cannot be made.|  
+|`ofTakeOwnership`|Indicates that the memory was allocated using a call to [CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc) and will be freed by the metadata.|  
 |`ofNoTypeLib`|Является устаревшей. Этот флаг отклонен.|  
-|`ofNoTransform`|Указывает, что автоматические преобразования из файла .WINMD следует отключить. Другими словами, проекцию типа среды выполнения Windows на тип платформы .NET Framework следует отключить. Дополнительные сведения см. в разделе [среды выполнения Windows и среда CLR - под представление о внутренней работе с .NET и среды выполнения Windows](https://msdn.microsoft.com/magazine/jj651569.aspx).|  
+|`ofNoTransform`|Указывает, что автоматические преобразования из файла .WINMD следует отключить. Другими словами, проекцию типа среды выполнения Windows на тип платформы .NET Framework следует отключить. For more information, see [Windows Runtime and the CLR - Underneath the Hood with .NET and the Windows Runtime](https://docs.microsoft.com/archive/msdn-magazine/2012/windows-8-special-issue/windows-runtime-and-the-clr-underneath-the-hood-with-net-and-the-windows-runtime).|  
 |`ofReserved1`|Зарезервировано для внутреннего использования.|  
 |`ofReserved2`|Зарезервировано для внутреннего использования.|  
 |`ofReserved`|Зарезервировано для внутреннего использования.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorHdr.h  
+ **Header:** CorHdr.h  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

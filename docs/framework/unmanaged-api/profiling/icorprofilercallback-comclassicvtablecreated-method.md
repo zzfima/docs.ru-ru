@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6e1834ab-c359-498a-b10b-984ae23cdda4
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 062b63776264ae553039a2db0fc99d4fb7bec476
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 79be2572f52ec509d9551261074204bf62ad5388
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67745337"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445062"
 ---
 # <a name="icorprofilercallbackcomclassicvtablecreated-method"></a>Метод ICorProfilerCallback::COMClassicVTableCreated
-Уведомляет профилировщик, создания таблицы vtable взаимодействия COM для указанного идентификатора IID и класса.  
+Notifies the profiler that a COM interop vtable for the specified IID and class has been created.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,26 +37,26 @@ HRESULT COMClassicVTableCreated(
   
 ## <a name="parameters"></a>Параметры  
  `wrappedClasId`  
- [in] Идентификатор класса, для которой были созданы таблицы vtable.  
+ [in] The ID of the class for which the vtable has been created.  
   
  `implementedIID`  
- [in] Идентификатор интерфейса, реализуемого классом. Это значение может быть NULL, если интерфейс предназначен только для внутреннего.  
+ [in] The ID of the interface implemented by the class. This value may be NULL if the interface is internal only.  
   
  `pVTable`  
- [in] Указатель на начало таблицы vtable.  
+ [in] A pointer to the start of the vtable.  
   
  `cSlots`  
- [in] Число ячеек, которые находятся в таблице vtable.  
+ [in] The number of slots that are in the vtable.  
   
-## <a name="remarks"></a>Примечания  
- Профилировщик не должен блокироваться при реализации этого метода, поскольку стек может находиться в состоянии, допускающем сбор мусора, и поэтому не удастся включить сборку мусора. Если здесь профилировщик блокируется и предпринимается попытка сбора мусора, среда выполнения будет блокироваться до этого обратного вызова.  
+## <a name="remarks"></a>Заметки  
+ The profiler should not block in its implementation of this method because the stack may not be in a state that allows garbage collection, and therefore preemptive garbage collection cannot be enabled. If the profiler blocks here and garbage collection is attempted, the runtime will block until this callback returns.  
   
- Реализация этого метода профилировщика не следует вызывать управляемый код или каким-либо образом вызывать распределения управляемой памяти.  
+ The profiler's implementation of this method should not call into managed code or in any way cause a managed-memory allocation.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorProf.idl, CorProf.h  
+ **Заголовок:** CorProf.idl, CorProf.h  
   
  **Библиотека:** CorGuids.lib  
   

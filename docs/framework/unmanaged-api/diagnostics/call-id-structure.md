@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: bfd46324-afec-4782-9c18-586d81fb4740
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 2823c018ff22607052cb9a298f69dbd0c4fe2c23
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8c606f67766334800444f39b115d90f65ecca13d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67769501"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448594"
 ---
-# <a name="callid-structure"></a>Структура CALL_ID
-Сведения о функции, которая вызывается отладчиком. См. в разделе [INotifySink2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md) интерфейс Дополнительные сведения.  
+# <a name="call_id-structure"></a>Структура CALL_ID
+Provides information to a debugger about a function that is being called. See the [INotifySink2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md) interface for more information.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,19 +38,19 @@ typedef struct tagCALL_ID
 } CALL_ID;  
 ```  
   
-## <a name="members"></a>Участники  
+## <a name="members"></a>Члены  
   
 |Член|Описание|  
 |------------|-----------------|  
-|`szMachine`|Определяет, выполняет вызов машину.|  
-|`dwPid`|Определяет процессор компьютера.|  
-|`pUserThread`|Определяет поток, который выполняет вызов.|  
-|`addrStackPointer`|Указывает адрес стека вызовов.|  
-|`szEntryPoint`|Указывает адрес вызова.|  
-|`szDestinationMachine`|Определяет, будет исполнен в машину.|  
+|`szMachine`|Identifies the machine that is making the call.|  
+|`dwPid`|Identifies the machine processor.|  
+|`pUserThread`|Identifies the thread that is executing the call.|  
+|`addrStackPointer`|Specifies the address of the call stack.|  
+|`szEntryPoint`|Specifies the address of the call.|  
+|`szDestinationMachine`|Identifies the machine that will execute the call.|  
   
 ## <a name="requirements"></a>Требования  
- **Заголовок.** ProtocolNotify2.idl  
+ **Header:** ProtocolNotify2.idl  
   
 ## <a name="see-also"></a>См. также
 

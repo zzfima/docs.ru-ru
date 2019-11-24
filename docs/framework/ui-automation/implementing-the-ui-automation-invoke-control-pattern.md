@@ -6,17 +6,17 @@ helpviewer_keywords:
 - control patterns, Invoke
 - Invoke control pattern
 ms.assetid: e5b1e239-49f8-468e-bfec-1fba02ec9ac4
-ms.openlocfilehash: 616bbab4d659cf00b1f730492e73ad6b847e3926
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 30ae83aa4b73f36afce1251387598ef9b61816d8
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458000"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74435158"
 ---
 # <a name="implementing-the-ui-automation-invoke-control-pattern"></a>Реализация шаблона элемента управления модели автоматизации пользовательского интерфейса Invoke
 
 > [!NOTE]
-> Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Последние сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]см. в разделе [API автоматизации Windows. Автоматизация пользовательского интерфейса](https://go.microsoft.com/fwlink/?LinkID=156746).
+> Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Последние сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]см. в разделе [API автоматизации Windows. Автоматизация пользовательского интерфейса](/windows/win32/winauto/entry-uiauto-win32).
 
 В этом разделе приводятся рекомендации и соглашения для реализации <xref:System.Windows.Automation.Provider.IInvokeProvider>, включая сведения о событиях и свойствах. Ссылки на дополнительные материалы перечислены в конце раздела.
 
@@ -47,11 +47,11 @@ ms.locfileid: "73458000"
 > [!NOTE]
 > Эта реализация считается проблемой специальных возможностей, если элемент управления может быть вызван только в результате побочного эффекта, связанного с мышью.
 
-- Вызов элемента управления отличается от выбора элемента. Тем не менее в зависимости от элемента управления его вызов может привести к выбору элемента в качестве побочного эффекта. Например, при вызове элемента списка документов Microsoft Word в папке «Мои документы» выбирается элемент и открывается документ.
+- Вызов элемента управления отличается от выбора элемента. Тем не менее в зависимости от элемента управления его вызов может привести к выбору элемента в качестве побочного эффекта. For example, invoking a Microsoft Word document list item in the My Documents folder both selects the item and opens the document.
 
 - Элемент может исчезнуть из дерева [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] сразу после вызова. В результате запрос информации из элемента, предоставленного обратным вызовом события, может завершиться неудачно. В качестве обходного решения рекомендуется выполнять предварительное кэширование информации.
 
-- Элементы управления могут реализовывать множество шаблонов элементов управления. Например, элемент управления цвет заливки на панели инструментов Microsoft Excel реализует как <xref:System.Windows.Automation.InvokePattern>, так и шаблоны элементов управления <xref:System.Windows.Automation.ExpandCollapsePattern>. <xref:System.Windows.Automation.ExpandCollapsePattern> предоставляет меню, а <xref:System.Windows.Automation.InvokePattern> заполняет активный выделенный фрагмент выбранным цветом.
+- Элементы управления могут реализовывать множество шаблонов элементов управления. For example, the Fill Color control on the Microsoft Excel toolbar implements both the <xref:System.Windows.Automation.InvokePattern> and the <xref:System.Windows.Automation.ExpandCollapsePattern> control patterns. <xref:System.Windows.Automation.ExpandCollapsePattern> предоставляет меню, а <xref:System.Windows.Automation.InvokePattern> заполняет активный выделенный фрагмент выбранным цветом.
 
 <a name="Required_Members_for_the_IValueProvider_Interface"></a>
 

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 657bf91d-005a-4ea4-9298-04d1291c0bc3
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4323423d3958fa1ca652c55f8f75749bb6e1ee79
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 43f32ac85bebc12d0a9253205aae3f1de0dc9e5b
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67759385"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74433974"
 ---
 # <a name="isymunmanagednamespacegetname-method"></a>Метод ISymUnmanagedNamespace::GetName
-Возвращает имя этого пространства имен.  
+Gets the name of this namespace.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,19 +37,19 @@ HRESULT GetName(
   
 ## <a name="parameters"></a>Параметры  
  `cchName`  
- [in] Объект `ULONG32` указывает размер `szName` буфера.  
+ [in] A `ULONG32` that indicates the size of the `szName` buffer.  
   
  `pcchName`  
- [out] Указатель на `ULONG32` размер, который получает в символах, буфера, должны содержать имя пространства имен, включая завершающимся нулевым значением.  
+ [out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the namespace name, including the null termination.  
   
  `szName`  
- [out] Указатель на буфер, содержащий имя пространства имен.  
+ [out] A pointer to a buffer that contains the namespace name.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Требования  
- **Заголовок.** CorSym.idl CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>См. также
 

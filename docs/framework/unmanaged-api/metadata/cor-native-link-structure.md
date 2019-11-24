@@ -14,16 +14,14 @@ helpviewer_keywords:
 ms.assetid: 6ef78d3c-1c69-4141-b687-dcb065b7a74d
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ae518e5a736a78a261dc3821d53d93afee95a271
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d03c22c455f0e44ce32d4593d9eee50ceef94a22
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779995"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74443957"
 ---
-# <a name="cornativelink-structure"></a>Структура COR_NATIVE_LINK
+# <a name="cor_native_link-structure"></a>Структура COR_NATIVE_LINK
 Содержит сведения, используемые для связи с машинным кодом.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -37,20 +35,20 @@ typedef struct
 } COR_NATIVE_LINK;  
 ```  
   
-## <a name="members"></a>Участники  
+## <a name="members"></a>Члены  
   
 |Член|Описание|  
 |------------|-----------------|  
-|`m_linkType`|Тип, связанный в машинном коде. Это значение является одним из [CorNativeLinkType](../../../../docs/framework/unmanaged-api/metadata/cornativelinktype-enumeration.md) значения.|  
-|`m_flags`|Флаги, используемые компоновщиком при связывании машинного кода. Это значение является одним из [CorNativeLinkFlags](../../../../docs/framework/unmanaged-api/metadata/cornativelinkflags-enumeration.md) значения.|  
-|`m_entryPoint`|Маркер метаданных MemberRef, представляющий точку входа. Формат `lib:entrypoint`.|  
+|`m_linkType`|The type to be linked in native code. This value is one of the [CorNativeLinkType](../../../../docs/framework/unmanaged-api/metadata/cornativelinktype-enumeration.md) values.|  
+|`m_flags`|Flags used by the linker when linking native code. This value is one of the [CorNativeLinkFlags](../../../../docs/framework/unmanaged-api/metadata/cornativelinkflags-enumeration.md) values.|  
+|`m_entryPoint`|The MemberRef metadata token that represents the entry point. The format is `lib:entrypoint`.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** Cor.h  
+ **Header:** Cor.h  
   
- **Библиотека:** Используется как ресурс в MsCorEE.dll  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 14218249-bdec-48ae-b5fc-9f57f7ca8501
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 204e5660e95434f8d0c44d54f4fdbb1c2acc1e5d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 04e0fabfc0d70c9d922e0715f32bd07237ce8741
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777784"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74442308"
 ---
 # <a name="imetadatadispenseropenscopeonmemory-method"></a>Метод IMetaDataDispenser::OpenScopeOnMemory
-Откроется область памяти, содержащую существующие метаданные. То есть этот метод открывает указанную область памяти, в которой существующие данные интерпретируются как метаданные.  
+Opens an area of memory that contains existing metadata. That is, this method opens a specified area of memory in which the existing data is treated as metadata.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -41,35 +39,35 @@ HRESULT OpenScopeOnMemory (
   
 ## <a name="parameters"></a>Параметры  
  `pData`  
- [in] Указатель, который указывает начальный адрес области памяти.  
+ [in] A pointer that specifies the starting address of the memory area.  
   
  `cbData`  
- [in] Размер области памяти в байтах.  
+ [in] The size of the memory area, in bytes.  
   
  `dwOpenFlags`  
- [in] Значение [CorOpenFlags](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md) перечисление для задания режима (чтение, запись и так далее) для открытия.  
+ [in] A value of the [CorOpenFlags](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md) enumeration to specify the mode (read, write, and so on) for opening.  
   
  `riid`  
- [in] IID интерфейса новых метаданных должна быть возвращена. вызывающий объект будет использовать интерфейс для импорта (чтение) или выдачи метаданных (запись).  
+ [in] The IID of the desired metadata interface to be returned; the caller will use the interface to import (read) or emit (write) metadata.  
   
- Значение `riid` необходимо указать один из интерфейсов «import» или «выдает». Допустимые значения: IID_IMetaDataEmit, IID_IMetaDataImport, IID_IMetaDataAssemblyEmit, IID_IMetaDataAssemblyImport, IID_IMetaDataEmit2 или IID_IMetaDataImport2.  
+ The value of `riid` must specify one of the "import" or "emit" interfaces. Valid values are IID_IMetaDataEmit, IID_IMetaDataImport, IID_IMetaDataAssemblyEmit, IID_IMetaDataAssemblyImport, IID_IMetaDataEmit2, or IID_IMetaDataImport2.  
   
  `ppIUnk`  
- [out] Указатель на возвращенный интерфейс.  
+ [out] The pointer to the returned interface.  
   
-## <a name="remarks"></a>Примечания  
- Копия в памяти метаданных можно запрашивать с помощью методов одного из интерфейсов «импорт», или добавить в методы одного из интерфейсов «выдает».  
+## <a name="remarks"></a>Заметки  
+ The in-memory copy of the metadata can be queried using methods from one of the "import" interfaces, or added to using methods from the one of the "emit" interfaces.  
   
- `OpenScopeOnMemory` Метод аналогичен методу [IMetaDataDispenser::OpenScope](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md) метода, за исключением того, что метаданные интерес уже существует в памяти, а не в файле на диске.  
+ The `OpenScopeOnMemory` method is similar to the [IMetaDataDispenser::OpenScope](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md) method, except that the metadata of interest already exists in memory, rather than in a file on disk.  
   
- Если целевая область памяти не содержит метаданных среды CLR (CLR), `OpenScopeOnMemory` метод завершится с ошибкой.  
+ If the target area of memory does not contain common language runtime (CLR) metadata, the `OpenScopeOnMemory` method will fail.  
   
 ## <a name="requirements"></a>Требования  
- **Платформа:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** Cor.h  
+ **Header:** Cor.h  
   
- **Библиотека:** Используется как ресурс в MsCorEE.dll  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

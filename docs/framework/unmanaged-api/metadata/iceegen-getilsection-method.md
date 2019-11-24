@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 6f2db2ca-203f-4ac3-9530-208642ca385e
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 8bddb782e13b4e7400c7e4a8128dc333efc8141d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 7ef944fd06d07dc8c4e49061a5e72d8acc4d0465
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67746178"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436344"
 ---
 # <a name="iceegengetilsection-method"></a>Метод ICeeGen::GetIlSection
-Получает раздел базовый код на промежуточном языке ссылается заданный дескриптор.  
+Gets the section of the intermediate language code base referenced by the specified handle.  
   
- Этот метод является устаревшим и не должны использоваться.  
+ This method is obsolete and should not be used.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,14 +37,14 @@ HRESULT GetIlSection (
   
 ## <a name="parameters"></a>Параметры  
  `section`  
- [in] Дескриптор раздела, чтобы получить.  
+ [in] The handle to the section to get.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** Cor.h  
+ **Header:** Cor.h  
   
- **Библиотека:** Используется как ресурс в MsCorEE.dll  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

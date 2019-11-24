@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3c24e552-fc69-4971-b65a-a3e4b5f7f1e8
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a4185ec41fc9f7d1d919a79b57c02625210ad72a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 7547d7557169b1279125141afb5b05e22341942a
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777191"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74432740"
 ---
 # <a name="imetadataemit2definemethodspec-method"></a>Метод IMetaDataEmit2::DefineMethodSpec
-Создает экземпляр универсального метода и возвращает маркер для определения.  
+Creates a generic instance of a method, and gets a token to the definition.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,23 +38,23 @@ HRESULT DefineMethodSpec (
   
 ## <a name="parameters"></a>Параметры  
  `tkParent`  
- [in] Токен, для которого необходимо создать экземпляр универсального метода. Токен должен иметь тип `mdMethodDef` или `mdMemberRef`.  
+ [in] A token for the method of which to create the generic instance. The token must be of type `mdMethodDef` or `mdMemberRef`.  
   
  `pvSigBlob`  
- [in] Указатель на двоичную подпись COM + метода.  
+ [in] A pointer to the binary COM+ signature of the method.  
   
  `cbSibBlob`  
- [in] Размер в байтах из `pvSigBlob`.  
+ [in] The size, in bytes, of `pvSigBlob`.  
   
  `pmi`  
- [out] Маркер для определения сигнатуры метаданных метода.  
+ [out] A token to the metadata signature definition of the method.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** Cor.h  
+ **Header:** Cor.h  
   
- **Библиотека:** Используется как ресурс в MsCorEE.dll  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: a6bf5a04-e03e-44f0-917a-96f6a6d3cc96
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 70ab6a94d19f1411e1f79a9f3912158ec02059ed
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8c13ce443037d706f9eba49760ba76f47c5a6538
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780221"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448175"
 ---
 # <a name="icorprofilerinfogetappdomaininfo-method"></a>Метод ICorProfilerInfo::GetAppDomainInfo
 Принимает идентификатор домена приложения. Возвращает имя домена приложения и идентификатор процесса, который его содержит.  
@@ -55,15 +53,15 @@ HRESULT GetAppDomainInfo(
  `pProcessId`  
  [out] Указатель на идентификатор процесса, который содержит этот домен приложения.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
  После возврата этого метода необходимо убедиться, что буфер `szName` был достаточно велик, чтобы вместить в себя полное имя домена приложения. Для этого сравните значение, на которое указывает параметр `pcchName`, со значением параметра `cchName`. Если параметр `pcchName` указывает на значение, превышающее значение `cchName`, выделите буфер `szName` большего размера, обновите параметр `cchName`, задав новый, больший размер, и вызовите метод `GetAppDomainInfo` снова.  
   
  Кроме того, сначала можно вызвать метод `GetAppDomainInfo` с буфером `szName` нулевой длины для получения правильного размера буфера. Затем можно задать размер буфера равным значению, возвращенному в параметре `pcchName`, и вызвать метод `GetAppDomainInfo` снова.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorProf.idl, CorProf.h  
+ **Заголовок:** CorProf.idl, CorProf.h  
   
  **Библиотека:** CorGuids.lib  
   

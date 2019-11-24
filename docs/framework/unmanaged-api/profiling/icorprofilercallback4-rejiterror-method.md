@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: d7888aa9-dfaa-420f-9f99-e06ab35ca482
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6b01f38fbcf1cb0439b82a933b37971515b06ac4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6ea9dee6e83870d1f2e0fdccffa53f16e6f18dba
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67758159"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74430105"
 ---
 # <a name="icorprofilercallback4rejiterror-method"></a>Метод ICorProfilerCallback4::ReJITError
-Уведомляет профилировщик о том, что компилятор just-in-time (JIT) произошла ошибка в процессе повторной компиляции.  
+Notifies the profiler that the just-in-time (JIT) compiler encountered an error in the recompilation process.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,16 +37,16 @@ HRESULT ReJITError(
   
 ## <a name="parameters"></a>Параметры  
  `moduleID`  
- [in] `ModuleID` В которой была сделана попытка сбой повторной компиляции.  
+ [in] The `ModuleID` in which the failed recompilation attempt was made.  
   
  `methodId`  
- [in] `MethodDef` Метода, на котором была сделана попытка сбой повторной компиляции.  
+ [in] The `MethodDef` of the method on which the failed recompilation attempt was made.  
   
  `functionId`  
- [in] Экземпляр функции, для которого выполняется повторная сборка или помечены для повторной компиляции. Это значение может быть `NULL` Если произошел на каждого метода вместо конкретных экземпляров (например, если профилировщик указан маркер недопустимые метаданные для метода повторной компиляции).  
+ [in] The function instance that is being recompiled or marked for recompilation. This value may be `NULL` if the failure occurred on a per-method basis instead of a per-instantiation basis (for example, if the profiler specified an invalid metadata token for the method to be recompiled).  
   
  `hrStatus`  
- [in] Значение HRESULT, указывающее характер ошибки. См. в разделе значения HRESULT для состояния списка значений.  
+ [in] An HRESULT that indicates the nature of the failure. See the Status HRESULTS section for a list of values.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Значения, возвращаемые из этого обратного вызова, игнорируются.  
@@ -57,17 +55,17 @@ HRESULT ReJITError(
   
 |Массив значений HRESULT для состояния|Описание|  
 |--------------------------|-----------------|  
-|E_INVALIDARG|`moduleID` Или `methodDef` маркер является `NULL`.|  
+|E_INVALIDARG|The `moduleID` or `methodDef` token is `NULL`.|  
 |CORPROF_E_DATAINCOMPLETE|Модуль еще не полностью загружен или находится в процессе выгрузки.|  
-|CORPROF_E_MODULE_IS_DYNAMIC|Указанный модуль был создан динамически (например, с `Reflection.Emit`) и поэтому не поддерживается этим методом.|  
-|CORPROF_E_FUNCTION_IS_COLLECTIBLE|Метод создается в забираемой сборке и поэтому не может быть перекомпилирован. Обратите внимание, что типы и функции, определенные в контексте, отличных от отражения (например, `List<MyCollectibleStruct>`) могут быть созданы в забираемой сборке.|  
-|E_OUTOFMEMORY|Среда CLR не хватило памяти при попытке пометить указанный метод для перекомпиляции JIT.|  
-|Другое|Операционная система возвратила сбой за пределами среды CLR. Например если происходит сбой системного вызова изменения защиты доступа к странице памяти, отображается ошибка операционной системы.|  
+|CORPROF_E_MODULE_IS_DYNAMIC|The specified module was dynamically generated (for example, by `Reflection.Emit`), and is thus not supported by this method.|  
+|CORPROF_E_FUNCTION_IS_COLLECTIBLE|The method is instantiated into a collectible assembly, and is therefore not able to be recompiled. Note that types and functions defined in a non-reflection context (for example, `List<MyCollectibleStruct>`) can be instantiated into a collectible assembly.|  
+|E_OUTOFMEMORY|The CLR ran out of memory while trying to mark the specified method for JIT recompilation.|  
+|Другой|Операционная система возвратила сбой за пределами среды CLR. For example, if a system call to change the access protection of a page of memory fails, the operating system error is displayed.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorProf.idl, CorProf.h  
+ **Заголовок:** CorProf.idl, CorProf.h  
   
  **Библиотека:** CorGuids.lib  
   

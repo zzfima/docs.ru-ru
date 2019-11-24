@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c3bf15b0-3250-4bbe-b9b5-c5d695289b6f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b9a36e094689696b746fcf7f10c282a1b0d9c570
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 02b270677131d0960db67b0ac8db38cba2b5e2df
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777837"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428055"
 ---
 # <a name="isymunmanagedwriterdefinedocument-method"></a>Метод ISymUnmanagedWriter::DefineDocument
-Определяет исходный документ. Идентификаторы GUID предоставляются для известных языков, поставщиков и типов документов.  
+Определяет исходный документ. GUIDs are provided for known languages, vendors, and document types.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,25 +38,25 @@ HRESULT DefineDocument(
   
 ## <a name="parameters"></a>Параметры  
  `url`  
- [in] Указатель на `WCHAR` , определяющий унифицированный указатель ресурса (URL) для идентификации документа.  
+ [in] A pointer to a `WCHAR` that defines the uniform resource locator (URL) that identifies the document.  
   
  `language`  
- [in] Указатель на идентификатор GUID, который определяет язык документа.  
+ [in] A pointer to a GUID that defines the document language.  
   
  `languageVendor`  
- [in] Указатель на идентификатор GUID, который определяет удостоверение поставщика языка документа.  
+ [in] A pointer to a GUID that defines the identity of the vendor for the document language.  
   
  `documentType`  
- [in] Указатель на идентификатор GUID, который определяет тип документа.  
+ [in] A pointer to a GUID that defines the type of the document.  
   
  `pRetVal`  
- [out] Указатель на возвращенный [ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md) интерфейс.  
+ [out] A pointer to the returned [ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md) interface.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Требования  
- **Заголовок.** CorSym.idl CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>См. также
 

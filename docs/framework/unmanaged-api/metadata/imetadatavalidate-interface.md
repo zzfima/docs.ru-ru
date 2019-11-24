@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: db98608a-e85c-4f50-9d7b-5f57a426ddb6
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 804c8c9434983b12b0647395c49197bf5026239b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8bf48abda63fb3a4f8abe7c54e443d01d8faf96c
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61645127"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74426111"
 ---
 # <a name="imetadatavalidate-interface"></a>Интерфейс IMetaDataValidate
 Предоставляет методы для проверки сигнатур метаданных.  
@@ -34,11 +32,11 @@ ms.locfileid: "61645127"
 |[Метод ValidatorInit](../../../../docs/framework/unmanaged-api/metadata/imetadatavalidate-validatorinit-method.md)|Устанавливает флаг, который указывает тип модуля в текущей области метаданных, и регистрирует указанный метод обратного вызова для ошибок проверки.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** Cor.h  
+ **Header:** Cor.h  
   
- **Библиотека:** Используется как ресурс в MsCorEE.dll  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

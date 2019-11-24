@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6bbb7786-7c38-490f-9834-91aa2795c355
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 3d5ea547066663564d76008434884b6e34150efb
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 594d970dbe0a176a5ec49015e105f89ff64bdfac
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779334"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74439763"
 ---
 # <a name="icorprofilercallback2handlecreated-method"></a>Метод ICorProfilerCallback2::HandleCreated
-Уведомляет профилировщик кода о том, что был создан дескриптор сборки мусора.  
+Notifies the code profiler that a garbage collection handle has been created.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,15 +35,15 @@ HRESULT HandleCreated(
   
 ## <a name="parameters"></a>Параметры  
  `handleId`  
- [in] Идентификатор дескриптора для сборки мусора.  
+ [in] The ID of the handle for the garbage collection.  
   
  `initialObjectId`  
- [in] Идентификатор объекта, для которого был создан обработчик сборки мусора.  
+ [in] The ID of the object for which the garbage collection handle was created.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorProf.idl, CorProf.h  
+ **Заголовок:** CorProf.idl, CorProf.h  
   
  **Библиотека:** CorGuids.lib  
   

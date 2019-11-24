@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: a95a3908-9f87-4084-937e-8e01ef03ad63
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f8448de17ad974bc77021a7880b7d8576c69ae75
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 813460aa027b259866b168d426fd28502b5c4465
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67750912"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74432493"
 ---
 # <a name="imetadataemitsetparamprops-method"></a>Метод IMetaDataEmit::SetParamProps
-Задает или изменяет функции параметра метода, который определен с помощью предыдущего вызова [IMetaDataEmit::DefineParam](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineparam-method.md).  
+Sets or changes features of a method parameter that was defined by a prior call to [IMetaDataEmit::DefineParam](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineparam-method.md).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -42,29 +40,29 @@ HRESULT SetParamProps (
   
 ## <a name="parameters"></a>Параметры  
  `pd`  
- [in] Токен для параметра целевой объект.  
+ [in] The token for the target parameter.  
   
  `szName`  
- [in] Имя параметра в формате Юникод.  
+ [in] The name of the parameter in Unicode.  
   
  `dwParamFlags`  
- [in] Флаги для параметра.  
+ [in] The flags for the parameter.  
   
  `dwCPlusTypeFlag`  
- [in] ELEMENT_TYPE_ * для постоянного значения.  
+ [in] The ELEMENT_TYPE_* for the constant value.  
   
  `pValue`  
- [in] Постоянное значение для параметра.  
+ [in] The constant value for the parameter.  
   
  `cchValue`  
- [in] Размер в символах (Юникод) `pValue`.  
+ [in] The size in (Unicode) characters of `pValue`.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** Cor.h  
+ **Header:** Cor.h  
   
- **Библиотека:** Используется как ресурс в MSCorEE.dll  
+ **Library:** Used as a resource in MSCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

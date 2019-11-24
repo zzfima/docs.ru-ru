@@ -6,22 +6,22 @@ helpviewer_keywords:
 - dock control pattern
 - UI Automation, dock control pattern
 ms.assetid: ea3d2212-7c8e-4dd7-bf08-73141ca2d4fb
-ms.openlocfilehash: b72d7f9a68c2309f2bd1a73741ac621cde1f3115
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 1e2084483a34709392b9d3ceab02472c36944132
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71043470"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74435434"
 ---
 # <a name="implementing-the-ui-automation-dock-control-pattern"></a>Реализация шаблона элемента управления модели автоматизации пользовательского интерфейса Dock
 > [!NOTE]
-> Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Последние сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]см. в разделе [API службы автоматизации Windows: Модель автоматизации](https://go.microsoft.com/fwlink/?LinkID=156746)пользовательского интерфейса.  
+> Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Последние сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]см. в разделе [API автоматизации Windows. Автоматизация пользовательского интерфейса](/windows/win32/winauto/entry-uiauto-win32).  
   
  В этом разделе приводятся рекомендации и соглашения для реализации <xref:System.Windows.Automation.Provider.IDockProvider>, включая сведения о свойствах. Ссылки на дополнительные материалы перечислены в конце раздела.  
   
  Шаблон элемента управления <xref:System.Windows.Automation.DockPattern> используется для предоставления свойств закрепления элемента управления в контейнере закрепления. Контейнер закрепления — это элемент управления, который позволяет упорядочить дочерние элементы по горизонтали и по вертикали друг относительно друга. Примеры элементов управления, реализующих данный шаблон элемента управления, см. в разделе [Control Pattern Mapping for UI Automation Clients](control-pattern-mapping-for-ui-automation-clients.md).  
   
- ![Контейнер закрепления с двумя закрепленными дочерними элементами.](./media/uia-dockpattern-dockingexample.PNG "UIA_DockPattern_DockingExample")  
+ ![Docking container with two docked children.](./media/uia-dockpattern-dockingexample.PNG "UIA_DockPattern_DockingExample")  
 Пример закрепления из Visual Studio, где окно "Представление классов" — DockPosition.Right, а окно "Список ошибок" — DockPosition.Bottom  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>   
@@ -42,7 +42,7 @@ ms.locfileid: "71043470"
   
 |Обязательные члены|Тип члена|Примечания|  
 |----------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IDockProvider.DockPosition%2A>|Свойство.|Отсутствуют|  
+|<xref:System.Windows.Automation.Provider.IDockProvider.DockPosition%2A>|свойство;|Отсутствуют|  
 |<xref:System.Windows.Automation.Provider.IDockProvider.SetDockPosition%2A>|Метод|Отсутствуют|  
   
  Этот шаблон элемента управления не имеет связанных событий.  
@@ -53,7 +53,7 @@ ms.locfileid: "71043470"
   
 |Тип исключения|Условие|  
 |--------------------|---------------|  
-|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.IDockProvider.SetDockPosition%2A><br /><br /> — Когда элемент управления не может выполнить запрошенный стиль закрепления.|  
+|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.IDockProvider.SetDockPosition%2A><br /><br /> -   When a control is not able to execute the requested dock style.|  
   
 ## <a name="see-also"></a>См. также
 

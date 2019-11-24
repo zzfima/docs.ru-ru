@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: a61866ee-221a-45b9-a1b7-395825b77872
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a75fed5e3272b783a6f8fb1a4f1c02096858b409
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 348a8cebe0fd746f3ae490484ffcca2fcb77684b
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777898"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446313"
 ---
 # <a name="isymunmanagedscopegetmethod-method"></a>Метод ISymUnmanagedScope::GetMethod
-Возвращает метод, который содержит эту область.  
+Gets the method that contains this scope.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -36,13 +34,13 @@ HRESULT GetMethod(
   
 ## <a name="parameters"></a>Параметры  
  `pRetVal`  
- [out] Указатель на возвращенный [ISymUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md) интерфейс.  
+ [out] A pointer to the returned [ISymUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md) interface.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Требования  
- **Заголовок.** CorSym.idl CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>См. также
 

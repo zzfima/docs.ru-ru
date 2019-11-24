@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1f3dbdf5-db0c-4b07-bbb7-375de2a63673
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d0fef75a1d47ba0c16569d3955ee447c2e7332d4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 7d61a6db8f42398a0d6e0d818605592f4fe71cf7
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776128"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445008"
 ---
 # <a name="icorprofilercallbackexceptioncatcherleave-method"></a>Метод ICorProfilerCallback::ExceptionCatcherLeave
-Уведомляет профилировщик, что управление передается за пределы соответствующего блока `catch`.  
+Notifies the profiler that control is being passed out of the appropriate `catch` block.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -33,15 +31,15 @@ ms.locfileid: "67776128"
 HRESULT ExceptionCatcherLeave();  
 ```  
   
-## <a name="remarks"></a>Примечания  
- Профилировщик не должен блокироваться при реализации этого метода, поскольку стек может находиться в состоянии, допускающем сбор мусора, и поэтому не удастся включить сборку мусора. Если здесь профилировщик блокируется и предпринимается попытка сбора мусора, среда выполнения будет блокироваться до этого обратного вызова.  
+## <a name="remarks"></a>Заметки  
+ The profiler should not block in its implementation of this method because the stack may not be in a state that allows garbage collection, and therefore preemptive garbage collection cannot be enabled. If the profiler blocks here and garbage collection is attempted, the runtime will block until this callback returns.  
   
- Реализация этого метода профилировщика не следует вызывать управляемый код или каким-либо образом вызывать распределения управляемой памяти.  
+ The profiler's implementation of this method should not call into managed code or in any way cause a managed-memory allocation.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorProf.idl, CorProf.h  
+ **Заголовок:** CorProf.idl, CorProf.h  
   
  **Библиотека:** CorGuids.lib  
   

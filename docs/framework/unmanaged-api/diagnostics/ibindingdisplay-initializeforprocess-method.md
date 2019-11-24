@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 59417acb-4e59-46ad-acfe-d827e6ab6078
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c19b49e9e9d4e388706a96ff54d588d5aeff99b3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: bb796a12868cc3e44394ab493f7838dc48ab4dc5
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67775951"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448494"
 ---
 # <a name="ibindingdisplayinitializeforprocess-method"></a>Метод IBindingDisplay::InitializeForProcess
-Инициализирует [IBindingDisplay](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-interface.md) объекта.  
+Initializes the [IBindingDisplay](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-interface.md) object.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,17 +35,17 @@ HRESULT InitializeForProcess (
   
 ## <a name="parameters"></a>Параметры  
  `pid`  
- [in] Идентификатор процесса.  
+ [in] The process identifier.  
   
-## <a name="remarks"></a>Примечания  
- Отладчик вызывает `InitializeForProcess` метод во время создания для инициализации отображения привязки. `InitializeForProcess` должен вызываться во время создания перед вызовом любого другого метода на `IBindingDisplay` вызывается.  
+## <a name="remarks"></a>Заметки  
+ The debugger calls the `InitializeForProcess` method at creation time to initialize the binding display. `InitializeForProcess` must be called at creation time before any other method on `IBindingDisplay` is called.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** BindingDisplay.h  
+ **Header:** BindingDisplay.h  
   
- **Библиотека:** BindingDisplay.idl  
+ **Library:** BindingDisplay.idl  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: ec3bfa95-1920-4511-932e-3ff23d76fcb8
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: fdb3def9574f4442a22b370323dfdf044170542b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a70691b9c519bc59ae7df7a86d5d6697db565575
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778939"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74437162"
 ---
 # <a name="imetadataimportgetparamformethodindex-method"></a>Метод IMetaDataImport::GetParamForMethodIndex
-Возвращает токен, представляющий указанный параметр метода, представленного указанным токеном MethodDef.  
+Gets the token that represents a specified parameter of the method represented by the specified MethodDef token.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,20 +37,20 @@ HRESULT GetParamForMethodIndex (
   
 ## <a name="parameters"></a>Параметры  
  `md`  
- [in] Токен, который представляет метод для возврата токена для параметра.  
+ [in] A token that represents the method to return the parameter token for.  
   
  `ulParamSeq`  
- [in] Порядковая позиция в списке параметров, где происходит запрошенного параметра. Параметры нумеруются, начиная с 1, возвращаемое значение метода в нулевой позиции.  
+ [in] The ordinal position in the parameter list where the requested parameter occurs. Parameters are numbered starting from one, with the method's return value in position zero.  
   
  `ppd`  
- [out] Указатель на токен ParamDef, представляющий запрашиваемый параметр.  
+ [out] A pointer to a ParamDef token that represents the requested parameter.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** Cor.h  
+ **Header:** Cor.h  
   
- **Библиотека:** Включена как ресурс в MsCorEE.dll  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

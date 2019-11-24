@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 49435665-6f5a-4acd-9034-8c9244a04a63
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f08c4a97b8cbc61a735bb9c1e6a31a698e7eefc1
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: a5b080443be94d5a298cc67591914d87470e6f48
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70787344"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447188"
 ---
 # <a name="getscope2-method"></a>Метод GetScope2
-Возвращает область импорта.  
+Gets an import scope.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,22 +37,22 @@ HRESULT GetScope2(
   
 ## <a name="parameters"></a>Параметры  
  `AssemblyID`  
- Идентификатор целевой сборки.  
+ ID of target assembly.  
   
  `FileToken`  
- Идентификатор файла, из которого необходимо выполнить импорт.  
+ ID of file from which to import.  
   
  `dwScope`  
- Отсчитываемая от нуля область для импорта.  
+ Zero-based scope to import.  
   
  `ppImportScope`  
- Получает указатель на интерфейс интерфейса [IMetaDataImport2](../metadata/imetadataimport2-interface.md) для указанной области.  
+ Receives pointer to [IMetaDataImport2 Interface](../metadata/imetadataimport2-interface.md) interface for indicated scope.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Если метод завершается с ошибкой, возвращает значение S_OK.  
+ Returns S_OK if the method succeeds.  
   
 ## <a name="requirements"></a>Требования  
- Требуется ALink. h.  
+ Requires alink.h.  
   
 ## <a name="see-also"></a>См. также
 

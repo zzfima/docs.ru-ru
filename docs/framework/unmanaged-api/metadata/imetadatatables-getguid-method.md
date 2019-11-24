@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: a3546316-e24d-417f-9909-e45d42c9d471
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 1075643bbd17765bf33a26038fc6beaf32d0aebb
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1f0c52efd4b55d19cbd7b2407c4b2d7c893b1009
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781506"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436088"
 ---
 # <a name="imetadatatablesgetguid-method"></a>Метод IMetaDataTables::GetGuid
-Возвращает идентификатор GUID из строки по указанному индексу.  
+Gets a GUID from the row at the specified index.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,20 +36,20 @@ HRESULT GetGuid (
   
 ## <a name="parameters"></a>Параметры  
  `ixGuid`  
- [in] Индекс строки, из которого необходимо получить идентификатор GUID.  
+ [in] The index of the row from which to get the GUID.  
   
  `ppGuid`  
- [out] Указатель на указатель на идентификатор GUID.  
+ [out] A pointer to a pointer to the GUID.  
   
-## <a name="remarks"></a>Примечания  
- Не рекомендуется использование этого метода, так как он не возвращает согласованные результаты. Сведения о таблице, см. в документации Common Language Infrastructure (CLI), особенно «раздел II: Определение метаданных и семантика». Документация доступна в Интернете; см. страницы [ECMAC# и стандарты Common Language Infrastructure](https://go.microsoft.com/fwlink/?LinkID=99212) на сайте MSDN и [Стандарт ECMA-335 — общеязыковая инфраструктура (CLI)](https://go.microsoft.com/fwlink/?LinkID=65552) на международном веб-сайте организации ECMA.  
+## <a name="remarks"></a>Заметки  
+ We do not recommend the use of this method, because it does not return consistent results. For information about the GUID table, see the Common Language Infrastructure (CLI) documentation, especially "Partition II: Metadata Definition and Semantics". Документация доступна в Интернете; см. страницы [ECMAC# и стандарты Common Language Infrastructure](https://go.microsoft.com/fwlink/?LinkID=99212) на сайте MSDN и [Стандарт ECMA-335 — общеязыковая инфраструктура (CLI)](https://go.microsoft.com/fwlink/?LinkID=65552) на международном веб-сайте организации ECMA.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** Cor.h  
+ **Header:** Cor.h  
   
- **Библиотека:** Используется как ресурс в MsCorEE.dll  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

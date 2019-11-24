@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: dfe84a19-2e03-4be2-8b25-f02bad38e4a9
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c73889a6daaa50d1694e786c78f50d0e87644967
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1aa5a0d20ee87fe4362016ed0d7fa29ef786460e
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67750426"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74430714"
 ---
 # <a name="icorprofilercallbackremotingserversendingreply-method"></a>Метод ICorProfilerCallback::RemotingServerSendingReply
-Уведомляет профилировщик, что процесс завершил обработку запроса вызова удаленного метода и собирается передачи ответа по каналу.  
+Notifies the profiler that the process has finished processing a remote method invocation request and is about to transmit the reply through a channel.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,23 +35,23 @@ HRESULT RemotingServerSendingReply(
   
 ## <a name="parameters"></a>Параметры  
  `pCookie`  
- [in] Указатель на идентификатор GUID, которое соответствует значение, указанное в [ICorProfilerCallback::RemotingClientReceivingReply](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientreceivingreply-method.md) в этих условиях:  
+ [in] A pointer to a GUID that will correspond with the value provided in [ICorProfilerCallback::RemotingClientReceivingReply](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientreceivingreply-method.md) under these conditions:  
   
-- Файлы cookie для GUID удаленного взаимодействия активны.  
+- Remoting GUID cookies are active.  
   
-- Каналу удалось передать сообщение.  
+- The channel succeeds in transmitting the message.  
   
-- Файлы cookie GUID активны на процесс на стороне клиента.  
+- GUID cookies are active on the client-side process.  
   
- Это позволяет легко создавать пары вызовов удаленного взаимодействия и Создание логического стека вызовов.  
+ This allows easy pairing of remoting calls and the creation of a logical call stack.  
   
  `fIsAsync`  
- [in] Значение, которое является `true` Если вызов выполняется асинхронно; в противном случае — значение `false`.  
+ [in] A value that is `true` if the call is asynchronous; otherwise, `false`.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorProf.idl, CorProf.h  
+ **Заголовок:** CorProf.idl, CorProf.h  
   
  **Библиотека:** CorGuids.lib  
   

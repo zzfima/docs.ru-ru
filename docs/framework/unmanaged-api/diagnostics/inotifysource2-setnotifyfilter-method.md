@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6351fc92-b126-4af6-9bf3-0a8ce92845fc
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: abe1c8881330ebba5f7b68452cf3db0666ac20c3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 554756bdda6e7167b013e7114e647f952cd1069d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67736234"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74435955"
 ---
 # <a name="inotifysource2setnotifyfilter-method"></a>Метод INotifySource2::SetNotifyFilter
-Назначает фильтр уведомлений для использования с этим источником.  
+Assigns a notification filter for use with this source.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,16 +37,16 @@ HRESULT SetNotifyFilter
   
 ## <a name="parameters"></a>Параметры  
  `in_NotifyFilter`  
- [in] Побитовое сочетание [NOTIFY_FILTER](../../../../docs/framework/unmanaged-api/diagnostics/notify-filter-enumeration.md) значений перечисления, определяющих обратные вызовы для API отладки.  
+ [in] A bitwise combination of the [NOTIFY_FILTER](../../../../docs/framework/unmanaged-api/diagnostics/notify-filter-enumeration.md) enumeration values that identify callbacks for the debugger API.  
   
  `in_pUserThreadFilter`  
- [in] Указатель на [USER_THREAD](../../../../docs/framework/unmanaged-api/diagnostics/user-thread-structure.md) структура, определяющая потоков для API отладки.  
+ [in] A pointer to a [USER_THREAD](../../../../docs/framework/unmanaged-api/diagnostics/user-thread-structure.md) structure that identifies threads for the debugger API.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Значение S_OK, если метод выполнен успешно.  
+ S_OK if the method succeeds.  
   
 ## <a name="requirements"></a>Требования  
- **Заголовок.** ProtocolNotify2.idl  
+ **Header:** ProtocolNotify2.idl  
   
 ## <a name="see-also"></a>См. также
 

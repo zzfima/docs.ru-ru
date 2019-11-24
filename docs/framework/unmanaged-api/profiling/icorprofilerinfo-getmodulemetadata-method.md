@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7a439d92-348a-44dd-b60f-cad7cba56379
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 2e63cf698e41e70084c9b71bdf58d7ac60723d53
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c7bf8e3ebedb17a4536b604909434c3e004fc828
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782788"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74439826"
 ---
 # <a name="icorprofilerinfogetmodulemetadata-method"></a>Метод ICorProfilerInfo::GetModuleMetaData
-Получает экземпляр интерфейса метаданных, который сопоставляется указанного модуля.  
+Gets a metadata interface instance that maps to the specified module.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,26 +37,26 @@ HRESULT GetModuleMetaData(
   
 ## <a name="parameters"></a>Параметры  
  `moduleId`  
- [in] Идентификатор модуля, с которым будет сопоставлен экземпляр интерфейса.  
+ [in] The ID of the module to which the interface instance will be mapped.  
   
  `dwOpenFlags`  
- [in] Значение [CorOpenFlags](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md) перечисления, указывающее режим для открытия файлов манифеста. Только `ofRead`, `ofWrite` и `ofNoTransform` bits являются допустимыми.  
+ [in] A value of the [CorOpenFlags](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md) enumeration that specifies the mode for opening manifest files. Only the `ofRead`, `ofWrite` and `ofNoTransform` bits are valid.  
   
  `riid`  
- [in] Ссылка на идентификатор (GUID) интерфейс метаданных, экземпляр которого будут извлекаться. См. в разделе [интерфейсы метаданных](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md) список интерфейсов.  
+ [in] The reference ID (GUID) of the metadata interface whose instance will be retrieved. See [Metadata Interfaces](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md) for a list of the interfaces.  
   
  `ppOut`  
- [out] Указатель на адрес метаданных экземпляра интерфейса.  
+ [out] A pointer to the address of the metadata interface instance.  
   
-## <a name="remarks"></a>Примечания  
- Существует возможность запросить метаданные для открытия в режиме чтения/записи, но это приведет к замедлению выполнения программы, поскольку изменения метаданных не могут быть оптимизированы, как от компилятора.  
+## <a name="remarks"></a>Заметки  
+ You may ask for the metadata to be opened in read/write mode, but this will result in slower metadata execution of the program, because changes made to the metadata cannot be optimized as they were from the compiler.  
   
- Некоторые модули (например, модули ресурсов) имеют без метаданных. В таком случае `GetModuleMetaData` возвратит значение HRESULT S_FALSE, и значение null в *`ppOut`.  
+ Some modules (such as resource modules) have no metadata. In those cases, `GetModuleMetaData` will return an HRESULT value of S_FALSE, and a null in *`ppOut`.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorProf.idl, CorProf.h  
+ **Заголовок:** CorProf.idl, CorProf.h  
   
  **Библиотека:** CorGuids.lib  
   

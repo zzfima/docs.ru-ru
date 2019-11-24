@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5c4c1dc2-d40d-4173-bbe6-7058fb21c98f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 69b398fa003abc0dba00ee89a9bb911a8c2dd6df
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f11b374ed0ecbfc137c43fb641ae691237604691
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777516"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74431521"
 ---
 # <a name="imetadataemitdefineproperty-method"></a>Метод IMetaDataEmit::DefineProperty
-Создает определение свойства для указанного типа с заданным `get` и `set` метод доступа и получает маркер для этого определения свойства.  
+Creates a property definition for the specified type, with the specified `get` and `set` method accessors, and gets a token to that property definition.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -48,47 +46,47 @@ HRESULT DefineProperty (
   
 ## <a name="parameters"></a>Параметры  
  `td`  
- [in] Токен для класса или интерфейса, на котором определено свойство.  
+ [in] The token for class or interface on which the property is being defined.  
   
  `szProperty`  
- [in] Имя свойства.  
+ [in] The name of the property.  
   
  `dwPropFlags`  
- [in] Флаги свойства.  
+ [in] The property flags.  
   
  `pvSig`  
- [in] Сигнатура свойства.  
+ [in] The property signature.  
   
  `cbSig`  
- [in] Число байт в `pvSig`.  
+ [in] The count of bytes in `pvSig`.  
   
  `dwCPlusTypeFlag`  
- [in] Тип значения свойства по умолчанию.  
+ [in] The type of the property's default value.  
   
  `pValue`  
- [in] Значение по умолчанию для свойства.  
+ [in] The default value for the property.  
   
  `cchValue`  
- [in] Количество (Юникод) символы в `pValue`.  
+ [in] The count of (Unicode) characters in `pValue`.  
   
  `mdSetter`  
- [in] Метод, который задает значение свойства.  
+ [in] The method that sets the property value.  
   
  `mdGetter`  
- [in] Метод, который возвращает значение свойства.  
+ [in] The method that gets the property value.  
   
  `rmdOtherMethods[]`  
- [in] Массив, другие методы, связанные со свойством. Массива с `mdTokenNil`.  
+ [in] An array of other methods associated with the property. Terminate the array with an `mdTokenNil`.  
   
  `pmdProp`  
- [out] `mdProperty` Маркер, назначенный.  
+ [out] The `mdProperty` token assigned.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** Cor.h  
+ **Header:** Cor.h  
   
- **Библиотека:** Используется как ресурс в MSCorEE.dll  
+ **Library:** Used as a resource in MSCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

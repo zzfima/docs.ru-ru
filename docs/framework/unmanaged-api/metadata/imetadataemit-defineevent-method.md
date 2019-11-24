@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: cf064bac-9a9f-41c5-9e1d-108ff7af3afe
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ba35cd678d88389854ca2e866020ea3a9364c923
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6966d0ad2fefd8401b19d8e8dcf7776799a066b2
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777664"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74432563"
 ---
 # <a name="imetadataemitdefineevent-method"></a>Метод IMetaDataEmit::DefineEvent
-Создает определение события с заданной подписью метаданных и получает маркер для определения событий.  
+Creates a definition for an event with the specified metadata signature, and gets a token to that event definition.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -45,38 +43,38 @@ HRESULT DefineEvent (
   
 ## <a name="parameters"></a>Параметры  
  `td`  
- [in] Токен для целевого класса или интерфейса. Это может быть либо `mdTypeDef` или `mdTypeDefNil` токена.  
+ [in] The token for the target class or interface. This is either a `mdTypeDef` or `mdTypeDefNil` token.  
   
  `szEvent`  
- [in] Имя события.  
+ [in] The name of the event.  
   
  `dwEventFlags`  
- [in] Флаги событий.  
+ [in] Event flags.  
   
  `tkEventType`  
- [in] Токен для класса событий. Это `mdTypeDef`, `mdTypeRef`, или `mdTokenNil` токена.  
+ [in] The token for the event class. This is a `mdTypeDef`, a `mdTypeRef`, or a `mdTokenNil` token.  
   
  `mdAddOn`  
- [in] Метод, используемый для подписки на событие, или значение null.  
+ [in] The method used to subscribe to the event, or null.  
   
  `mdRemoveOn`  
- [in] Метод, используемый для отказа от подписки на событие, или значение null.  
+ [in] The method used to unsubscribe to the event, or null.  
   
  `mdFire`  
- [in] Метод, используемый (с помощью производного класса) для вызова события.  
+ [in] The method used (by a derived class) to raise the event.  
   
  `rmdOtherMethods[]`  
- [in] Массив маркеров для других методов, связанный с событием. Массив прерывается с выдачей `mdMethodDefNil` токена.  
+ [in] An array of tokens for other methods associated with the event. The array is terminated with a `mdMethodDefNil` token.  
   
  `pmdEvent`  
- [out] Токен метаданных, присвоенная событию.  
+ [out] The metadata token assigned to the event.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** Cor.h  
+ **Header:** Cor.h  
   
- **Библиотека:** Используется как ресурс в MSCorEE.dll  
+ **Library:** Used as a resource in MSCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

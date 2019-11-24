@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 00e2e194-12f5-436e-a997-2b9d3e844d4f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 80bfdc9d58a86bb4cf945f0c8106bcfc00f3743e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 74002ce9c76eebaa3ea5860b09cd3e7c9a884f8d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67760316"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448652"
 ---
 # <a name="isymencunmanagedmethodgetfilenamefromoffset-method"></a>Метод ISymENCUnmanagedMethod::GetFileNameFromOffset
-Получает имя файла для строки, связанной со смещением.  
+Gets the file name for the line associated with an offset.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,22 +38,22 @@ HRESULT GetFileNameFromOffset(
   
 ## <a name="parameters"></a>Параметры  
  `dwOffset`  
- [in] Объект `ULONG32` , содержащий смещение.  
+ [in] A `ULONG32` that contains the offset.  
   
  `cchName`  
- [in] Объект `ULONG32` указывает размер `szName` буфера.  
+ [in] A `ULONG32` that indicates the size of the `szName` buffer.  
   
  `pcchName`  
- [out] Указатель на `ULONG32` размер, который получает в символах, буфера, требуемого для хранения имен файлов.  
+ [out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the file names.  
   
  `szName`  
- [out] Буфер, содержащий имена файлов.  
+ [out] The buffer that contains the file names.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Требования  
- **Заголовок.** CorSym.idl CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>См. также
 

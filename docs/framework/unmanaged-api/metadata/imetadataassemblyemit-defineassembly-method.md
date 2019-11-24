@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: a0637d66-74bf-4f2d-8137-9ff838bccece
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d53409e0be43dbf5d0cf7ba0fcbc170e2117f6a1
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 20628e708261076c6e172ff30c366a0d69c2e0f2
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67745823"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74432118"
 ---
 # <a name="imetadataassemblyemitdefineassembly-method"></a>Метод IMetaDataAssemblyEmit::DefineAssembly
-Создает `Assembly` структуры содержащие метаданные для указанной сборки и возвращает связанный токен метаданных.  
+Creates an `Assembly` structure containing metadata for the specified assembly and returns the associated metadata token.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -43,35 +41,35 @@ HRESULT DefineAssembly (
   
 ## <a name="parameters"></a>Параметры  
  `pbPublicKey`  
- [in] Открытый ключ, который идентифицирует издателя сборки, или значение NULL, если сборка не имеет строгого имени.  
+ [in] The public key that identifies the publisher of the assembly, or NULL if the assembly is not strongly named.  
   
  `cbPublicKey`  
- [in] Размер в байтах `pbPublicKey`.  
+ [in] The size in bytes of `pbPublicKey`.  
   
  `uHashAlgId`  
- [in] Идентификатор алгоритма хэширования, используемый для шифрования файлов в сборке, или значение NULL для задания алгоритма SHA-1.  
+ [in] The identifier of the hashing algorithm to use to encrypt the files in the assembly, or NULL to specify the SHA-1 algorithm.  
   
  `szName`  
- [in] Понятное текстовое имя сборки. Это значение не должна превышать 1024 символа.  
+ [in] The human-readable text name of the assembly. This value must not exceed 1024 characters.  
   
  `pMetaData`  
- [in] Указатель на экземпляр ASSEMBLYMETADATA, содержащий сведения о версии, платформы и языковой стандарт для сборки.  
+ [in] A pointer to an ASSEMBLYMETADATA instance that contains the version, platform, and locale information for the assembly.  
   
  `dwAssemblyFlags`  
- [in] Сочетание [CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) значения, описывающие возможности сборки.  
+ [in] A combination of [CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) values that describe features of the assembly.  
   
  `pmda`  
- [out] Указатель на токен метаданных.  
+ [out] A pointer to the metadata token.  
   
-## <a name="remarks"></a>Примечания  
- Только один `Assembly` структуру метаданных можно определить в манифесте.  
+## <a name="remarks"></a>Заметки  
+ Only one `Assembly` metadata structure can be defined within a manifest.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** Cor.h  
+ **Header:** Cor.h  
   
- **Библиотека:** Включена как ресурс в MsCorEE.dll  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

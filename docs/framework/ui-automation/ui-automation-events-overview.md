@@ -9,16 +9,16 @@ helpviewer_keywords:
 - providers, UI Automation
 - UI Automation, clients
 ms.assetid: 69eebd8b-39ed-40e7-93cc-4457c4caf746
-ms.openlocfilehash: d342e4382cfe227e477ab87c2ca428834010768e
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 5f9362814eb671a6d7a111cadb96be6d06f5cb3d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71042164"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74441490"
 ---
 # <a name="ui-automation-events-overview"></a>Обзор событий автоматизации пользовательского интерфейса
 > [!NOTE]
-> Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Последние сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]см. в разделе [API службы автоматизации Windows: Модель автоматизации](https://go.microsoft.com/fwlink/?LinkID=156746)пользовательского интерфейса.  
+> Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Последние сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]см. в разделе [API автоматизации Windows. Автоматизация пользовательского интерфейса](/windows/win32/winauto/entry-uiauto-win32).  
   
  Уведомление о событии[!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] — это ключевая функция для вспомогательных технологий, таких как средства чтения с экрана и экранные лупы. Эти клиенты автоматизации пользовательского интерфейса отслеживают события, вызываемые поставщиками автоматизации пользовательского интерфейса, когда что-то происходит в [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] , и используют эти сведения, чтобы уведомить конечных пользователей.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "71042164"
 ## <a name="ui-automation-event-arguments"></a>Аргументы событий автоматизации пользовательского интерфейса  
  Следующие классы инкапсулируют аргументы событий.  
   
-|Класс|Описание|  
+|Class|Описание|  
 |-----------|-----------------|  
 |<xref:System.Windows.Automation.AsyncContentLoadedEventArgs>|Содержит сведения об асинхронной загрузке содержимого, включая процент завершения загрузки.|  
 |<xref:System.Windows.Automation.AutomationEventArgs>|Содержит сведения о простом событии, не требующем дополнительных данных.|  

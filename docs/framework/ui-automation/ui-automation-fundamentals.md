@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - UI automation fundamentals
 ms.assetid: d270ab45-542b-45c0-a240-e80aa4a61b95
-ms.openlocfilehash: 371d52a09445f735efb41b02780c65579207724f
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 1a3e3565917d1e2461277dbbc1524947afef5edd
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71042116"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74441380"
 ---
 # <a name="ui-automation-fundamentals"></a>Основы модели автоматизации пользовательского интерфейса
 > [!NOTE]
-> Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Последние сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]см. в разделе [API службы автоматизации Windows: Модель автоматизации](https://go.microsoft.com/fwlink/?LinkID=156746)пользовательского интерфейса.  
+> Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Последние сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]см. в разделе [API автоматизации Windows. Автоматизация пользовательского интерфейса](/windows/win32/winauto/entry-uiauto-win32).  
   
- Этот раздел содержит высокоуровневые обзоры [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] API.  
+ This section contains high-level overviews of the [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] API.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>Содержание  
  [Общие сведения о модели автоматизации пользовательского интерфейса](ui-automation-overview.md)  
  [Модель автоматизации пользовательского интерфейса и Microsoft Active Accessibility](ui-automation-and-microsoft-active-accessibility.md)  
  [Общие сведения о дереве модели автоматизации пользовательского интерфейса](ui-automation-tree-overview.md)  
@@ -29,7 +29,7 @@ ms.locfileid: "71042116"
  [Общие сведения о безопасности модели автоматизации пользовательского интерфейса](ui-automation-security-overview.md)  
  [Использование модели автоматизации пользовательского интерфейса для автоматизированного тестирования](using-ui-automation-for-automated-testing.md)  
   
-## <a name="reference"></a>Ссылка  
+## <a name="reference"></a>Справочник  
  <xref:System.Windows.Automation>  
   
  <xref:System.Windows.Automation.Provider>  

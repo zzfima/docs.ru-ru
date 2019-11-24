@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 25788ed1-0ce3-4b97-96fc-88f8997812a3
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 8a035e8dd7bd880c4ead500eede5e1b095d701f2
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a59b50009e7f0ab2fff1b8439e368234403822c1
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778071"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446134"
 ---
 # <a name="isymunmanagedvariablegetaddressfield1-method"></a>Метод ISymUnmanagedVariable::GetAddressField1
-Получает поле первый адрес для этой переменной. Его значение зависит от типа адреса.  
+Gets the first address field for this variable. Its meaning depends on the kind of address.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -36,13 +34,13 @@ HRESULT GetAddressField1(
   
 ## <a name="parameters"></a>Параметры  
  `pRetVal`  
- [out] Указатель на `ULONG32` , который получает первое поле адреса.  
+ [out] A pointer to a `ULONG32` that receives the first address field.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Требования  
- **Заголовок.** CorSym.idl CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>См. также
 

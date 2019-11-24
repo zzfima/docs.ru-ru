@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 8cdac941-8b94-4497-b874-4e571785f3fe
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 124921f2f99ca4d8da88cc3713624383e225a26f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e40687f7f843dc563801bb01b503d2ae94a094fc
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781268"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446019"
 ---
 # <a name="functionleave2-function"></a>Функция FunctionLeave2
-Уведомляет профилировщик, что функция должна возвращать вызывающей стороне и предоставляет сведения о стека кадра и функция возвращаемое значение.  
+Notifies the profiler that a function is about to return to the caller and provides information about the stack frame and function return value.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,40 +37,40 @@ void __stdcall FunctionLeave2 (
   
 ## <a name="parameters"></a>Параметры  
  `funcId`  
- [in] Идентификатор функции, которое возвращает.  
+ [in] The identifier of the function that is returning.  
   
  `clientData`  
- [in] Функция пересопоставленный идентификатора, который ранее указано профилировщик с помощью [FunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md) функции.  
+ [in] The remapped function identifier, which the profiler previously specified via the [FunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md) function.  
   
  `func`  
- [in] Объект `COR_PRF_FRAME_INFO` значение, которое указывает на сведения о кадре стека.  
+ [in] A `COR_PRF_FRAME_INFO` value that points to information about the stack frame.  
   
- Профилировщик должен интерпретировать его как непрозрачный дескриптор, который может быть передан в модуль выполнения в [ICorProfilerInfo2::GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) метод.  
+ The profiler should treat this as an opaque handle that can be passed back to the execution engine in the [ICorProfilerInfo2::GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) method.  
   
  `retvalRange`  
- [in] Указатель на [COR_PRF_FUNCTION_ARGUMENT_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-range-structure.md) структура, задающая расположение памяти возвращаемое значение функции.  
+ [in] A pointer to a [COR_PRF_FUNCTION_ARGUMENT_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-range-structure.md) structure that specifies the memory location of the function's return value.  
   
- Чтобы получить доступ к сведения о возвращаемом значении, `COR_PRF_ENABLE_FUNCTION_RETVAL` должен быть установлен флаг. Можно использовать профилировщик [ICorProfilerInfo::SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) метод, чтобы задать флаги событий.  
+ In order to access return value information, the `COR_PRF_ENABLE_FUNCTION_RETVAL` flag must be set. The profiler can use the [ICorProfilerInfo::SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) method to set the event flags.  
   
-## <a name="remarks"></a>Примечания  
- Значения `func` и `retvalRange` параметров не являются действительными после `FunctionLeave2` функция возвращает потому, что значения, могут быть изменены или удалены.  
+## <a name="remarks"></a>Заметки  
+ The values of the `func` and `retvalRange` parameters are not valid after the `FunctionLeave2` function returns because the values may change or be destroyed.  
   
- `FunctionLeave2` Функция является обратным вызовом; это необходимо реализовать. В реализации должен использоваться `__declspec`(`naked`) атрибут класса хранения.  
+ The `FunctionLeave2` function is a callback; you must implement it. The implementation must use the `__declspec`(`naked`) storage-class attribute.  
   
- Ядро выполнения не сохраняет значения регистров перед вызовом этой функции.  
+ The execution engine does not save any registers before calling this function.  
   
-- При входе необходимо сохранить все регистры, которые вы используете, включая те, в единицах с плавающей запятой (FPU).  
+- On entry, you must save all registers that you use, including those in the floating-point unit (FPU).  
   
-- При выходе необходимо восстановить стек путем выталкивания из всех параметров, которые были отправлены вызывающим кодом.  
+- On exit, you must restore the stack by popping off all the parameters that were pushed by its caller.  
   
- Реализация `FunctionLeave2` не должен блокироваться, поскольку это приведет к задержке сборки мусора. Реализация не должны сбор мусора, так как стек может находиться в состоянии коллекции с поддержкой сборки мусора. При попытке сбора мусора, среда выполнения будет блокироваться до `FunctionLeave2` возвращает.  
+ The implementation of `FunctionLeave2` should not block because it will delay garbage collection. The implementation should not attempt a garbage collection because the stack may not be in a garbage collection-friendly state. If a garbage collection is attempted, the runtime will block until `FunctionLeave2` returns.  
   
- Кроме того `FunctionLeave2` функция не должна вызывать управляемый код или каким-либо образом вызывать управляемое распределение памяти.  
+ Also, the `FunctionLeave2` function must not call into managed code or in any way cause a managed memory allocation.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorProf.idl  
+ **Header:** CorProf.idl  
   
  **Библиотека:** CorGuids.lib  
   

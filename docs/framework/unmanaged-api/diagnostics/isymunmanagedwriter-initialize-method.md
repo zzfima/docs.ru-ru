@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: e0ebd793-3764-4df0-8f12-0e95f60b9eae
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c1ea9424c000ad3ae4918181084c89038c2ec8d1
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6e9ab623d5fe9fcfda2305df078e988a561afdc5
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777288"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74427974"
 ---
 # <a name="isymunmanagedwriterinitialize-method"></a>Метод ISymUnmanagedWriter::Initialize
-Задает интерфейс включения метаданных, с которым будет связан этот модуль записи и задает имя выходного файла, в который записываются символы отладки.  
+Sets the metadata emitter interface with which this writer will be associated, and sets the output file name to which the debugging symbols will be written.  
   
- Этот метод может вызываться только один раз и должен вызываться до всех остальных методов модуля записи. Некоторые модули записи может потребоваться имя файла. Тем не менее всегда можно передать имя файла для этого метода без любого отрицательного влияния на средства записи, не используйте имя файла.  
+ This method can be called only once, and it must be called before any other writer methods. Some writers may require a file name. However, you can always pass a file name to this method without any negative effect on writers that do not use the file name.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -41,22 +39,22 @@ HRESULT Initialize(
   
 ## <a name="parameters"></a>Параметры  
  `emitter`  
- [in] Указатель на интерфейс включения метаданных.  
+ [in] A pointer to the metadata emitter interface.  
   
  `filename`  
- [in] Имя файла, в который записываются символы отладки. Если имя файла задано для модуля записи, который не использует имена файлов, этот параметр пропускается.  
+ [in] The file name to which the debugging symbols are written. Если имя файла задано для модуля записи, который не использует имена файлов, этот параметр пропускается.  
   
  `pIStream`  
- [in] Если указан, модуль записи символов будет выдавать символы в заданной <xref:System.Runtime.InteropServices.ComTypes.IStream> , а не файл, указанный в `filename` параметра. Параметр `pIStream` является необязательным.  
+ [in] If specified, the symbol writer will emit the symbols into the given <xref:System.Runtime.InteropServices.ComTypes.IStream> rather than to the file specified in the `filename` parameter. Параметр `pIStream` является необязательным.  
   
  `fFullBuild`  
- [in] `true` Если это полное перестроение; `false` Если это добавочная компиляция.  
+ [in] `true` if this is a full rebuild; `false` if this is an incremental compilation.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Требования  
- **Заголовок.** CorSym.idl CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>См. также
 

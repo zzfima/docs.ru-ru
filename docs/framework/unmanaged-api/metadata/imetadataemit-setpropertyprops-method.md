@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: e2501fc8-b2bc-4dcc-9205-e3acd5a53ffe
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 9e78c4d7319a931ca7090d6f99651bc9660e4af8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0fdec87324d6efa0f911e37573093c19b93c0349
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782042"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74440549"
 ---
 # <a name="imetadataemitsetpropertyprops-method"></a>Метод IMetaDataEmit::SetPropertyProps
-Задает хранится в метаданных для свойства, определенные с помощью предыдущего вызова функции [метод DefineProperty](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineproperty-method.md).  
+Sets the features stored in metadata for a property defined by a prior call to [DefineProperty Method](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineproperty-method.md).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -44,35 +42,35 @@ HRESULT SetPropertyProps (
   
 ## <a name="parameters"></a>Параметры  
  `pr`  
- [in] Токен для свойства, которые необходимо изменить  
+ [in] The token for the property to be changed  
   
  `dwPropFlags`  
- [in] Флаги свойства.  
+ [in] Property flags.  
   
  `dwCPlusTypeFlag`  
- [in] Тип значения свойства по умолчанию.  
+ [in] The type of the property's default value.  
   
  `pValue`  
- [in] Значение по умолчанию для свойства.  
+ [in] The default value for the property.  
   
  `cchValue`  
- [in] Количество (Юникод) символы в `pValue`.  
+ [in] The count of (Unicode) characters in `pValue`.  
   
  `mdSetter`  
- [in] Метод, который задает значение свойства.  
+ [in] The method that sets the property value.  
   
  `mdGetter`  
- [in] Метод, который возвращает значение свойства.  
+ [in] The method that gets the property value.  
   
  `rmdOtherMethods[]`  
- [in] Массив, другие методы, связанные со свойством. Этот массив `mdTokenNil` токена.  
+ [in] An array of other methods associated with the property. Terminate this array with an `mdTokenNil` token.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** Cor.h  
+ **Header:** Cor.h  
   
- **Библиотека:** Используется как ресурс в MSCorEE.dll  
+ **Library:** Used as a resource in MSCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

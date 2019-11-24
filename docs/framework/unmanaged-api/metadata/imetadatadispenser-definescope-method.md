@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: af28db02-29af-45ac-aec6-8d6c6123c2ff
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 1763f9341af2d90cf465cb554bf7f282a4d92058
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 381c38542dcde242c0a1a4e71e9b99316328159d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777809"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436247"
 ---
 # <a name="imetadatadispenserdefinescope-method"></a>Метод IMetaDataDispenser::DefineScope
-Создает новую область в памяти, в котором можно создать новые метаданные.  
+Creates a new area in memory in which you can create new metadata.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,30 +38,30 @@ HRESULT DefineScope (
   
 ## <a name="parameters"></a>Параметры  
  `rclsid`  
- [in] CLSID создаваемого версии структуры метаданных. Это значение должно быть CLSID_CorMetaDataRuntime для платформы .NET Framework версии 2.0.  
+ [in] The CLSID of the version of metadata structures to be created. This value must be CLSID_CorMetaDataRuntime for the .NET Framework version 2.0.  
   
  `dwCreateFlags`  
- [in] Флаги, определяющие параметры. Это значение должно быть ноль для .NET Framework 2.0.  
+ [in] Flags that specify options. This value must be zero for the .NET Framework 2.0.  
   
  `riid`  
- [in] IID интерфейса новых метаданных должна быть возвращена. вызывающий объект будет использовать интерфейс для создания новых метаданных.  
+ [in] The IID of the desired metadata interface to be returned; the caller will use the interface to create the new metadata.  
   
- Значение `riid` необходимо указать один из интерфейсов «выдает». Допустимые значения: IID_IMetaDataEmit, IID_IMetaDataAssemblyEmit или IID_IMetaDataEmit2.  
+ The value of `riid` must specify one of the "emit" interfaces. Valid values are IID_IMetaDataEmit, IID_IMetaDataAssemblyEmit, or IID_IMetaDataEmit2.  
   
  `ppIUnk`  
- [out] Указатель на возвращенный интерфейс.  
+ [out] The pointer to the returned interface.  
   
-## <a name="remarks"></a>Примечания  
- `DefineScope` Создает набор таблиц метаданных в памяти, уникальный идентификатор GUID (идентификатор версии модуля или MVID) для метаданных и создает запись в таблице модуля для блоком компиляции.  
+## <a name="remarks"></a>Заметки  
+ `DefineScope` creates a set of in-memory metadata tables, generates a unique GUID (module version identifier, or MVID) for the metadata, and creates an entry in the module table for the compilation unit being emitted.  
   
- Можно присоединить атрибуты в область действия метаданных в целом, используя [IMetaDataEmit::SetModuleProps](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setmoduleprops-method.md) или [IMetaDataEmit::DefineCustomAttribute](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definecustomattribute-method.md) метод соответствующим образом.  
+ You can attach attributes to the metadata scope as a whole by using the [IMetaDataEmit::SetModuleProps](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setmoduleprops-method.md) or [IMetaDataEmit::DefineCustomAttribute](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definecustomattribute-method.md) method, as appropriate.  
   
 ## <a name="requirements"></a>Требования  
- **Платформа:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** Cor.h  
+ **Header:** Cor.h  
   
- **Библиотека:** Используется как ресурс в MsCorEE.dll  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

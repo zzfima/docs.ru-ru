@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 532c7a02-a9de-4cea-bb2b-7f470da594de
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 08b35dd1744dbbb64d202718b61a9db5684d3bc3
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: ad721d28f6a7dc6ae0370ce10178990cb02fb9f9
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66380365"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74430053"
 ---
 # <a name="icorprofilercallback5conditionalweaktableelementreferences-method"></a>Метод ICorProfilerCallback5::ConditionalWeakTableElementReferences
 
@@ -48,7 +46,7 @@ HRESULT ConditionalWeakTableElementReferences(
 [в] Массив идентификаторов объектов, каждый из которых содержит `ObjectID` для основного элемента в зависимости пары дескриптора.
 
 `valueRefIds`\
-[в] Массив идентификаторов объектов, каждый из которых содержит `ObjectID` для дополнительного элемента в зависимости пары дескриптора. (`keyRefIds[i]` отслеживает `valueRefIds[i]` проверки активности.)
+[в] Массив идентификаторов объектов, каждый из которых содержит `ObjectID` для дополнительного элемента в зависимости пары дескриптора. (`keyRefIds[i]` keeps `valueRefIds[i]` alive.)
 
 `rootIds`\
 [в] Массив значений `GCHandleID`, указывающий на целое число, который содержит дополнительные сведения о корне сборки мусора.
@@ -57,7 +55,7 @@ HRESULT ConditionalWeakTableElementReferences(
 
 ## <a name="example"></a>Пример
 
-В следующем примере кода показано, как реализовать [ICorProfilerCallback5](icorprofilercallback5-interface.md) и использовать этот метод.
+The following code example demonstrates how to implement [ICorProfilerCallback5](icorprofilercallback5-interface.md) and use this method.
 
 ```cpp
 HRESULT Callback5Impl::ConditionalWeakTableElementReferences(
@@ -80,15 +78,15 @@ HRESULT Callback5Impl::ConditionalWeakTableElementReferences(
 }
 ```
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
-Профилировщик для .NET Framework 4.5 или более поздних версий реализует [ICorProfilerCallback5](icorprofilercallback5-interface.md) интерфейс и записывает зависимости, указанные по `ConditionalWeakTableElementReferences` метод. `ICorProfilerCallback5` предоставляет полный набор зависимостей между используемыми объектами, представленный `ConditionalWeakTable` записей. Эти зависимости и элемент поле ссылки, определяемое [ICorProfilerCallback::ObjectReferences](icorprofilercallback-objectreferences-method.md) позволяют управляемому профилировщику создавать полный граф используемых объектов.
+A profiler for the .NET Framework 4.5 or later versions implements the [ICorProfilerCallback5](icorprofilercallback5-interface.md) interface and records the dependencies specified by the `ConditionalWeakTableElementReferences` method. `ICorProfilerCallback5` provides the complete set of dependencies among live objects represented by `ConditionalWeakTable` entries. These dependencies and the member field references specified by the [ICorProfilerCallback::ObjectReferences](icorprofilercallback-objectreferences-method.md) method enable a managed profiler to generate the full object graph of live objects.
 
 ## <a name="requirements"></a>Требования
 
-**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).
+**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).
 
-**Заголовок.** CorProf.idl, CorProf.h
+**Заголовок:** CorProf.idl, CorProf.h
 
 **Версии платформы .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]
 

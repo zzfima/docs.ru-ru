@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: fc663e76-e23f-49a8-bdd5-52cdf1a3b2b3
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 36cb8d5865cdc4c1c8e34671010ede25d531bacf
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e74bab058adda759db1fb549022608eedfef5d80
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782255"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74432977"
 ---
 # <a name="icorprofilerinfo2getstaticfieldinfo-method"></a>Метод ICorProfilerInfo2::GetStaticFieldInfo
-Получает значение, указывающее тип статического объекта, применяемого к указанному полю.  
+Gets a value that indicates the kind of static that applies to the specified field.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,23 +36,23 @@ HRESULT GetStaticFieldInfo (
   
 ## <a name="parameters"></a>Параметры  
  `classId`  
- [in] Идентификатор класса, в котором определен статического поля.  
+ [in] The ID of the class in which the static field is defined.  
   
  `fieldToken`  
- [in] Токен метаданных для статического поля.  
+ [in] The metadata token for the static field.  
   
  `pFieldInfo`  
- [out] Указатель на значение [COR_PRF_STATIC_TYPE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-static-type-enumeration.md) перечисления, указывающее является ли указанное поле является статическим, и если таким образом, тип статического объекта, применяет к полю.  
+ [out] A pointer to a value of the [COR_PRF_STATIC_TYPE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-static-type-enumeration.md) enumeration that indicates whether the specified field is static, and if so, the kind of static that applies to the field.  
   
-## <a name="remarks"></a>Примечания  
- Эти сведения можно использовать, чтобы определить, какую функцию вызвать, чтобы получить адрес статического поля.  
+## <a name="remarks"></a>Заметки  
+ This information can be used to determine which function to call to get the address of the static field.  
   
- Профилировщик кода по-прежнему следует проверить метаданные для статического поля, чтобы убедиться, что он действительно имеет адрес. Статические литералы (то есть константы) существуют только в метаданных и не имеют адреса.  
+ The profiler code should still check the metadata for a static field to ensure that it actually has an address. Static literals (that is, constants) exist only in the metadata and do not have an address.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorProf.idl, CorProf.h  
+ **Заголовок:** CorProf.idl, CorProf.h  
   
  **Библиотека:** CorGuids.lib  
   

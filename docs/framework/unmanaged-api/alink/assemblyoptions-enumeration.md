@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 84f83921-64cb-49e3-ac8b-22a0b77b18a8
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 49e7b73559e8def890f8df8f596fbe8ad5bb5d3b
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: ed45e06297b77ea60304cdcfe1b08e97f9e4c085
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70777479"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446588"
 ---
 # <a name="assemblyoptions-enumeration"></a>Перечисление AssemblyOptions
-Перечисляет параметры сборки.  
+Enumerates the assembly options.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -58,31 +56,31 @@ typedef enum _AssemblyOptions {
   
 |Поле|Описание|  
 |-----------|-----------------|  
-|оптассемтитле|Строка — представляет заголовок сборки.|  
-|оптассемдескриптион|Строка — содержит описание сборки.|  
-|оптассемконфиг|Строка — содержит конфигурацию сборки.|  
-|оптассемос|Строка в кодировке: "Двосплатформид. Двосмажорверсион. Двосминорверсион".|  
-|оптассемпроцессор|ULONG|  
-|оптассемлокале|Строка — содержит языковой стандарт сборки.|  
-|оптассемверсион|Строка в кодировке: "Основной. дополнительный. сборка. Редакция".|  
-|оптассемкомпани|Строка — содержит компанию.|  
-|оптассемпродукт|Строка — содержит имя продукта.|  
-|оптассемпродуктверсион|Строка (также известная как Информатионалверсион).|  
-|оптассемкопиригхт|Строка — содержит сведения об авторских правах.|  
-|оптассемтрадемарк|Строка — содержит сведения о товарном знаке.|  
-|оптассемкэйфиле|Строка (имя файла).|  
-|оптассемкэйнаме|Строка (имя ключа).|  
-|оптассемалгид|ULONG|  
-|оптассемфлагс|ULONG|  
-|оптассемхалфсигн|Bool (также называется DelaySign).|  
-|оптассемфилеверсион|Строка, закодированная как "основная. Дополнительная. сборка. Редакция"--то же, что и ProductVersion.|  
-|оптассемсателлитевер|Строка, закодированная как "основная. Дополнительная. сборка. Редакция".|  
-|оптластассемоптион|Счетчик числа элементов.|  
+|optAssemTitle|String - Represents the assembly title.|  
+|optAssemDescription|String - Contains the assembly description.|  
+|optAssemConfig|String - Contains the assembly configuration.|  
+|optAssemOS|String - Encoded as: "dwOSPlatformId.dwOSMajorVersion.dwOSMinorVersion".|  
+|optAssemProcessor|ULONG|  
+|optAssemLocale|String - Contains the assembly locale.|  
+|optAssemVersion|String - Encoded as: "Major.Minor.Build.Revision".|  
+|optAssemCompany|String - Contains the company.|  
+|optAssemProduct|String - Contains the product name.|  
+|optAssemProductVersion|String (also known as InformationalVersion).|  
+|optAssemCopyright|String - Contains the copyright information.|  
+|optAssemTrademark|String - Contains the trademark information.|  
+|optAssemKeyFile|String (file name).|  
+|optAssemKeyName|String (The key name).|  
+|optAssemAlgID|ULONG|  
+|optAssemFlags|ULONG|  
+|optAssemHalfSign|Bool (Also known as DelaySign).|  
+|optAssemFileVersion|String - Encoded as "Major.Minor.Build.Revision"--same as ProductVersion.|  
+|optAssemSatelliteVer|String - Encoded as "Major.Minor.Build.Revision".|  
+|optLastAssemOption|A counter of the number of elements.|  
   
 ## <a name="requirements"></a>Требования  
- **Заголовок:** ALink. h  
+ **Header:** alink.h  
   
- **Библиотека**: ALink. dll  
+ **Library**: alink.dll  
   
 ## <a name="see-also"></a>См. также
 

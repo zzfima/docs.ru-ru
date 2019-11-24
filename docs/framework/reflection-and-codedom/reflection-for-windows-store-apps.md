@@ -10,17 +10,18 @@ helpviewer_keywords:
 ms.assetid: 0d07090c-9b47-4ecc-81d1-29d539603c9b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c9edab859900bf2001956045a5285801bb61d310
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 9aaec282fda0a038d14f3a0cd57e1a8a2855f2ad
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71045943"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448143"
 ---
 # <a name="reflection-in-the-net-framework-for-windows-store-apps"></a>Отражение в .NET Framework для приложений для Магазина Windows
-Начиная с версии .NET Framework 4.5 платформа .NET Framework включает набор типов и членов отражения для использования в приложениях [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]. Эти типы и члены доступны в полной версии платформы .NET Framework, а также в [.NET для приложений Магазина Windows](https://go.microsoft.com/fwlink/?LinkID=225700). В этом документе описаны основные отличия между ними и их аналогами в платформе .NET Framework версии 4 и более ранних версий.  
+
+Starting with the .NET Framework 4.5, the .NET Framework includes a set of reflection types and members for use in Windows 8.x Store apps. These types and members are available in the full .NET Framework as well as in the .NET for Windows Store apps. В этом документе описаны основные отличия между ними и их аналогами в платформе .NET Framework версии 4 и более ранних версий.  
   
- При разработке приложения [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] необходимо использовать типы и члены отражения в [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]. Эти типы и члены также доступны, но не обязательны, для использования в классических приложениях, поэтому можно использовать один и тот же код для обоих типов приложений.  
+ If you are creating a Windows 8.x Store app, you must use the reflection types and members in the [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]. Эти типы и члены также доступны, но не обязательны, для использования в классических приложениях, поэтому можно использовать один и тот же код для обоих типов приложений.  
   
 ## <a name="typeinfo-and-assembly-loading"></a>TypeInfo и загрузка сборок  
  В [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] класс <xref:System.Reflection.TypeInfo> содержит некоторые возможности класса <xref:System.Type> .NET Framework 4. Объект <xref:System.Type> представляет собой ссылку на определение типа, а объект <xref:System.Reflection.TypeInfo> представляет само определение типа. Это позволяет управлять объектами <xref:System.Type> без обязательной загрузки средой выполнения сборки, на которую они ссылаются. Получение связанного объекта <xref:System.Reflection.TypeInfo> принудительно загружает сборку.  
@@ -33,10 +34,10 @@ ms.locfileid: "71045943"
  Свойства отражения возвращают только методы, объявленные в указанном объекте, а не обходят дерево наследования. Кроме того, они не используют параметры <xref:System.Reflection.BindingFlags> для фильтрации. Фильтрация выполняется в коде пользователя с помощью запросов LINQ к возвращаемым коллекциям. Для объектов отражения, создаваемых средой (например, как результат `typeof(Object)`), обход дерева наследования лучше выполнять с помощью вспомогательных методов класса <xref:System.Reflection.RuntimeReflectionExtensions>. Потребители объектов из настроенных контекстов отражения не могут использовать эти методы и должны сами выполнять обход дерева наследования.  
   
 ## <a name="restrictions"></a>Ограничения  
- В приложении [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] доступ к некоторым типам и членам .NET Framework ограничен. Например, нельзя вызывать методы .NET Framework, не входящие в [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)], с помощью объекта <xref:System.Reflection.MethodInfo>. Кроме того, заблокированы некоторые типы и члены, которые не считаются безопасными в контексте приложения [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)], а также члены <xref:System.Runtime.InteropServices.Marshal> и <xref:System.Runtime.InteropServices.WindowsRuntime.WindowsRuntimeMarshal>. Это ограничение влияет только на типы и члены .NET Framework; свой код или сторонний код можно вызывать как обычно.  
+ In a Windows 8.x Store app, access to some .NET Framework types and members is restricted. Например, нельзя вызывать методы .NET Framework, не входящие в [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)], с помощью объекта <xref:System.Reflection.MethodInfo>. In addition, certain types and members that are not considered safe within the context of a Windows 8.x Store app are blocked, as are <xref:System.Runtime.InteropServices.Marshal> and <xref:System.Runtime.InteropServices.WindowsRuntime.WindowsRuntimeMarshal> members. Это ограничение влияет только на типы и члены .NET Framework; свой код или сторонний код можно вызывать как обычно.  
   
 ## <a name="example"></a>Пример  
- В этом примере с использованием типов и членов отражения в [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] извлекаются методы и свойства типа <xref:System.Globalization.Calendar>, включая унаследованные методы и свойства. Для запуска этого кода, вставьте его в файл кода для страницы [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)], которая содержит элемент управления <xref:Windows.UI.Xaml.Controls.TextBlock?displayProperty=nameWithType> с именем `textblock1` в проекте Reflection. При вставке этого кода в проект с другим именем просто убедитесь, что имя пространства имен соответствует вашему проекту.  
+ В этом примере с использованием типов и членов отражения в [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] извлекаются методы и свойства типа <xref:System.Globalization.Calendar>, включая унаследованные методы и свойства. To run this code, paste it into the code file for a Windows 8.x Store page that contains a <xref:Windows.UI.Xaml.Controls.TextBlock?displayProperty=nameWithType> control named `textblock1` in a project named Reflection. При вставке этого кода в проект с другим именем просто убедитесь, что имя пространства имен соответствует вашему проекту.  
   
  [!code-csharp[System.ReflectionWinStoreApp#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.reflectionwinstoreapp/cs/mainpage.xaml.cs#1)]
  [!code-vb[System.ReflectionWinStoreApp#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.reflectionwinstoreapp/vb/mainpage.xaml.vb#1)]  
@@ -44,4 +45,3 @@ ms.locfileid: "71045943"
 ## <a name="see-also"></a>См. также
 
 - [Отражение](reflection.md)
-- [Поддерживаемые API .NET для приложений Магазина Windows](https://go.microsoft.com/fwlink/?LinkID=225700)

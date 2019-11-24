@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c6bfd574-1da3-4ba7-82f2-46ca5efcbaba
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 5a6fd0a9ae798fa5071d9b4b9fac1f8b3c759a20
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4e2a78e2d049e952aa1be0b3a8fd640eb18d0320
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67750873"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74440572"
 ---
 # <a name="imetadataemitsetpinvokemap-method"></a>Метод IMetaDataEmit::SetPinvokeMap
-Задает или изменяет функции сигнатуры метода PInvoke, в соответствии с определением предыдущего вызова [IMetaDataEmit::DefinePinvokeMap](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definepinvokemap-method.md).  
+Sets or changes features of a method's PInvoke signature, as defined by a prior call to [IMetaDataEmit::DefinePinvokeMap](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definepinvokemap-method.md).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,23 +38,23 @@ HRESULT SetPinvokeMap (
   
 ## <a name="parameters"></a>Параметры  
  `tk`  
- [in] `mdToken` Какие сопоставление информация относится.  
+ [in] The `mdToken` to which mapping information applies.  
   
  `dwMappingFlags`  
- [in] Флаги, используемые PInvoke для сопоставления. Это битовая маска `CorPinvokeMap` значения.  
+ [in] Flags used by PInvoke to do the mapping. This is a bitmask of `CorPinvokeMap` values.  
   
  `szImportName`  
- [in] Имя целевого объекта экспорта в неуправляемой библиотеке DLL.  
+ [in] The name of the target export in the native DLL.  
   
  `mrImportDLL`  
- [in] `mdModuleRef` Маркеров для целевого объекта неуправляемые библиотеки DLL.  
+ [in] The `mdModuleRef` token for the target unmanaged DLL.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** Cor.h  
+ **Header:** Cor.h  
   
- **Библиотека:** Используется как ресурс в MSCorEE.dll  
+ **Library:** Used as a resource in MSCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

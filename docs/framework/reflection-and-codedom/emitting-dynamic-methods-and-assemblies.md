@@ -7,12 +7,12 @@ helpviewer_keywords:
 - metadata, emit interfaces
 - reflection emit, overview
 - assemblies [.NET Framework], emitting dynamic assemblies
-ms.openlocfilehash: 4578b708b10e93a7f5def5b9dc040eeb646bdc8f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 578851bed188921324e3c25e533b3466068dee3d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130237"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446782"
 ---
 # <a name="emitting-dynamic-methods-and-assemblies"></a>Предоставление динамических методов и сборок
 
@@ -34,9 +34,9 @@ ms.locfileid: "73130237"
   
 Наряду с управляемыми типами в пространстве имен <xref:System.Reflection.Emit> существуют неуправляемые интерфейсы метаданных, которые описаны в статье [Интерфейсы метаданных](../unmanaged-api/metadata/metadata-interfaces.md) справочной документации. Управляемое порождение отражения обеспечивает более строгую проверку семантических ошибок и более высокий уровень абстрагирования метаданных, чем неуправляемые интерфейсы метаданных.  
   
-Другим полезным ресурсом для работы с метаданными и кодом MSIL является документация по инфраструктуре Common Language Infrastructure (CLI), особенно раздел II, посвященный определению и семантике метаданных, и раздел III, посвященный набору инструкций CIL. Документацию можно найти на сайтах [MSDN](https://go.microsoft.com/fwlink/?LinkID=65555) и [ECMA](https://go.microsoft.com/fwlink/?LinkId=116487).  
+Другим полезным ресурсом для работы с метаданными и кодом MSIL является документация по инфраструктуре Common Language Infrastructure (CLI), особенно раздел II, посвященный определению и семантике метаданных, и раздел III, посвященный набору инструкций CIL. The documentation is available online at the [Ecma Web site](https://www.ecma-international.org/publications/standards/Ecma-335.htm).  
   
-## <a name="in-this-section"></a>в этом разделе
+## <a name="in-this-section"></a>Содержание
   
 [Вопросы безопасности в порождении отражения](security-issues-in-reflection-emit.md)  
 Описываются проблемы безопасности, связанные с созданием динамических сборок с помощью порождения отражения.  
@@ -53,7 +53,7 @@ ms.locfileid: "73130237"
 [Забираемые сборки для динамической генерации типа](collectible-assemblies.md)   
 Представляет забираемые сборки, то есть динамические сборки, которые можно выгрузить без выгрузки домена приложения, в котором они были созданы.
   
-## <a name="reference"></a>Ссылки  
+## <a name="reference"></a>Справочник  
 
 <xref:System.Reflection.Emit.OpCodes>  
 Каталог кодов инструкций MSIL, которые можно использовать для построения тел методов.  

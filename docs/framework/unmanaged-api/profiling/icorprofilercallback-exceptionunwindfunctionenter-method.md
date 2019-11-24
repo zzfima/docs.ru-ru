@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: ea3dc625-5650-4bf4-8e67-01e42be065b1
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 85f788ec61cc441e7271fb7a8aba843f37d20a57
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3f6320d6d962e40acf494acbb5c95adda62d1461
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782726"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445286"
 ---
 # <a name="icorprofilercallbackexceptionunwindfunctionenter-method"></a>Метод ICorProfilerCallback::ExceptionUnwindFunctionEnter
-Уведомляет профилировщик о начале этапа очистки во время обработки исключений для раскручивания функции.  
+Notifies the profiler that the unwind phase of exception handling has begun to unwind a function.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -36,17 +34,17 @@ HRESULT ExceptionUnwindFunctionEnter(
   
 ## <a name="parameters"></a>Параметры  
  `functionId`  
- [in] Идентификатор функции, которая развертывается.  
+ [in] The ID of the function that is being unwound.  
   
-## <a name="remarks"></a>Примечания  
- Профилировщик не должен блокироваться при реализации этого метода, поскольку стек может находиться в состоянии, допускающем сбор мусора, и поэтому не удастся включить сборку мусора. Если здесь профилировщик блокируется и предпринимается попытка сбора мусора, среда выполнения будет блокироваться до этого обратного вызова.  
+## <a name="remarks"></a>Заметки  
+ The profiler should not block in its implementation of this method because the stack may not be in a state that allows garbage collection, and therefore preemptive garbage collection cannot be enabled. If the profiler blocks here and garbage collection is attempted, the runtime will block until this callback returns.  
   
- Реализация этого метода профилировщика не следует вызывать управляемый код или каким-либо образом вызывать распределения управляемой памяти.  
+ The profiler's implementation of this method should not call into managed code or in any way cause a managed-memory allocation.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorProf.idl, CorProf.h  
+ **Заголовок:** CorProf.idl, CorProf.h  
   
  **Библиотека:** CorGuids.lib  
   

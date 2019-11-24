@@ -15,18 +15,16 @@ helpviewer_keywords:
 ms.assetid: 2d64315a-1af1-4c60-aedf-f8a781914aea
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6e512b7cd8869c6ede1472bbc5b6ec4c428b40ef
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 34ecfc2f01f22971e135358806adeea632e02f8b
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67757642"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448039"
 ---
 # <a name="imetadataemitmergeend-method"></a>Метод IMetaDataEmit::MergeEnd
 
-Выполняет слияние в текущей области все области метаданных, определяемое один или несколько предыдущих вызовов [IMetaDataEmit::Merge](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-merge-method.md).
+Merges into the current scope all the metadata scopes specified by one or more prior calls to [IMetaDataEmit::Merge](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-merge-method.md).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -36,41 +34,41 @@ HRESULT MergeEnd ();
 
 ## <a name="parameters"></a>Параметры
 
-Этот метод не принимает параметров.
+This method takes no parameters.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
-Эта процедура включает фактическое слияние метаданных, всех импорта области, указанные перед вызовы `IMetaDataEmit::Merge`, в текущей области вывода.
+This routine triggers the actual merge of metadata, of all import scopes specified by preceding calls to `IMetaDataEmit::Merge`, into the current output scope.
 
-Следующие специальные условия для слияния.
+The following special conditions apply to the merge:
 
-- Идентификатор версии модуля (MVID) никогда не импортируется, так как он уникален для метаданных в импортируемой области.
+- A module version identifier (MVID) is never imported, because it is unique to the metadata in the import scope.
 
-- Нет существующих свойств на уровне модуля, перезаписываются.
+- No existing module-wide properties are overwritten.
 
-  Если уже были заданы свойства модуля в текущей области, свойства модуля не импортируются. Тем не менее если не были настроены свойства модуля в текущей области, они импортируются только один раз, когда они встречаются впервые. Если эти свойства модуля встречаются снова, они являются дубликатами. Если сравниваются значения всех свойств модуля (за исключением MVID) и не найден, возникает ошибка.
+  If module properties were already set for the current scope, no module properties are imported. However, if module properties have not been set in the current scope, they are imported only once, when they are first encountered. If those module properties are encountered again, they are duplicates. If the values of all module properties (except MVID) are compared and no duplicates are found, an error is raised.
 
-- Для определения типов (`TypeDef`), без дубликатов, объединяются в текущей области. `TypeDef` объекты проверить наличие дублирующихся с каждым *имя полного объекта* + *GUID* + *номер версии*. Если совпадения по имени или идентификатора GUID и любых других двух элементов отличается, возникает ошибка. В противном случае, если все три элемента совпадают, `MergeEnd` проверяет проводится поверхностное для обеспечения записи действительно являются дубликатами; в противном случае возникает ошибка. Эта проверка проводится поверхностное ищет:
+- For type definitions (`TypeDef`), no duplicates are merged into the current scope. `TypeDef` objects are checked for duplicates against each *fully-qualified object name* + *GUID* + *version number*. If there is a match on either name or GUID, and any of the other two elements is different, an error is raised. Otherwise, if all three items match, `MergeEnd` does a cursory check to ensure the entries are indeed duplicates; if not, an error is raised. This cursory check looks for:
 
-  - Же объявления членов, в том же порядке. Члены, помеченные как `mdPrivateScope` (см. в разделе [CorMethodAttr](../../../../docs/framework/unmanaged-api/metadata/cormethodattr-enumeration.md) перечисления) не включаются в эту проверку; они специально объединяются.
+  - The same member declarations, occurring in the same order. Members that are flagged as `mdPrivateScope` (see the [CorMethodAttr](../../../../docs/framework/unmanaged-api/metadata/cormethodattr-enumeration.md) enumeration) are not included in this check; they are merged specially.
 
-  - Тот же макет класса.
+  - The same class layout.
 
-  Это означает, что `TypeDef` объект должен быть полностью и согласованно определена в каждой области метаданных в котором она объявлена; если его реализация члена (для класса) распределяются по несколько блоков компиляции, полное определение считается в каждой области, а не добавочное, для каждой области. Например если имена параметров относятся к контракту, они должны выдавать одинаково во всех областях; Если они не существенны, они не должны выдаваться в метаданные.
+  This means that a `TypeDef` object must always be fully and consistently defined in every metadata scope in which it is declared; if its member implementations (for a class) are spread across multiple compilation units, the full definition is assumed to be present in every scope and not incremental to each scope. For example, if parameter names are relevant to the contract, they must be emitted the same way into every scope; if they are not relevant, they should not be emitted into metadata.
 
-  Исключение, `TypeDef` объект может иметь добавочных членов, отмеченных как `mdPrivateScope`. Такие, `MergeEnd` добавляет их в текущую область, без учета того, повторяющиеся значения. Так как компилятор распознает частной области, компилятор должен быть отвечают за принудительное применение правил.
+  The exception is that a `TypeDef` object can have incremental members flagged as `mdPrivateScope`. On encountering these, `MergeEnd` incrementally adds them to the current scope without regard for duplicates. Because the compiler understands the private scope, the compiler must be responsible for enforcing rules.
 
-- Относительные виртуальные адреса (RVA) не импортируются и объединить; компилятор должен повторно создать эту информацию.
+- Relative virtual addresses (RVAs) are not imported or merged; the compiler is expected to re-emit this information.
 
-- Настраиваемые атрибуты объединяются только в том случае, если объединить элемента, к которому они подключены. Например настраиваемые атрибуты, связанные с классом объединяются при класса встретилось первым. Если настраиваемые атрибуты, связанные с `TypeDef` или `MemberDef` предназначена для блока компиляции (например, отметка времени компиляции члена), они не объединяются и само компилятор просьбой удалить или обновить эти данные.
+- Custom attributes are merged only when the item to which they are attached is merged. For example, custom attributes associated with a class are merged when the class is first encountered. If custom attributes are associated with a `TypeDef` or `MemberDef` that is specific to the compilation unit (such as the time stamp of a member compile), they are not merged and it is up to the compiler to remove or update such metadata.
 
 ## <a name="requirements"></a>Требования
 
-**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).
+**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).
 
-**Заголовок.** Cor.h
+**Header:** Cor.h
 
-**Библиотека:** Используется как ресурс в MSCorEE.dll
+**Library:** Used as a resource in MSCorEE.dll
 
 **Версии платформы .NET Framework:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]
 

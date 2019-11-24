@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 39bbdb30-6a7a-4202-8da3-67ae9a0ab3a8
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: db5ed871734205d59c602cc8b5c0cc9e8ac4682a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: fc5356f097f869403212cd234a508f1f29c5ec94
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67762872"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74450389"
 ---
 # <a name="icorprofilerinfogetcurrentthreadid-method"></a>Метод ICorProfilerInfo::GetCurrentThreadID
-Получает идентификатор текущего потока, в случае управляемого потока.  
+Gets the ID of the current thread, if it is a managed thread.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -36,15 +34,15 @@ HRESULT GetCurrentThreadID(
   
 ## <a name="parameters"></a>Параметры  
  `pThreadId`  
- [out] Указатель на возвращенный идентификатор управляемого потока.  
+ [out] A pointer to the returned ID of the managed thread.  
   
-## <a name="remarks"></a>Примечания  
- Если текущий поток находится в потоке внутренней среды выполнения или других неуправляемый поток `GetCurrentThreadID` возвращает значение HRESULT и возвращаемым значением CORPROF_E_NOT_MANAGED_THREAD `pThreadId` параметр будет иметь значение null.  
+## <a name="remarks"></a>Заметки  
+ If the current thread is an internal runtime thread or other unmanaged thread, `GetCurrentThreadID` returns CORPROF_E_NOT_MANAGED_THREAD as the HRESULT, and the returned value of the `pThreadId` parameter will be null.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorProf.idl, CorProf.h  
+ **Заголовок:** CorProf.idl, CorProf.h  
   
  **Библиотека:** CorGuids.lib  
   

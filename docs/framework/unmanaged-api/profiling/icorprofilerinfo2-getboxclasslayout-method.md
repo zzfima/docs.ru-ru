@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 624672b5-1189-488a-85d2-3e12b49617c1
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 0d00c28862036c21c44f46c23fb09e947628dcf3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5f98c35f77fdb200be2e96364c9ac06c386faa62
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67783052"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436019"
 ---
 # <a name="icorprofilerinfo2getboxclasslayout-method"></a>Метод ICorProfilerInfo2::GetBoxClassLayout
-Получает сведения о расположении заданного типа значения при его упаковке.  
+Gets information about where the specified value type is located when it is boxed.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,18 +35,18 @@ HRESULT GetBoxClassLayout(
   
 ## <a name="parameters"></a>Параметры  
  `classId`  
- [in] Идентификатор класса, который описывает тип значения, который упаковывается.  
+ [in] The ID of the class that describes the value type that is boxed.  
   
  `pBufferOffset`  
- [out] Целое число, является смещение относительно указателя на идентификатор упакованный объект типа значения.  
+ [out] An integer that is the offset, relative to the boxed object ID pointer, of the value type.  
   
-## <a name="remarks"></a>Примечания  
- `pBufferOffset` Значение — это расположение в поле типа значения. После `pBufferOffset` применяется макета класса типа значения в объект в рамке, могут использоваться для интерпретации значения объекта.  
+## <a name="remarks"></a>Заметки  
+ The `pBufferOffset` value is the location of the value type within a box. After `pBufferOffset` is applied to a boxed object, the value type's class layout can be used to interpret the object's value.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorProf.idl, CorProf.h  
+ **Заголовок:** CorProf.idl, CorProf.h  
   
  **Библиотека:** CorGuids.lib  
   

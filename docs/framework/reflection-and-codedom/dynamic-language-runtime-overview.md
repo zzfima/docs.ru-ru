@@ -7,12 +7,12 @@ helpviewer_keywords:
 - DLR
 - IronRuby
 ms.assetid: f769a271-8aff-4bea-bfab-6160217ce23d
-ms.openlocfilehash: f0bd28823c5b8efc0b773ad588f2f232f8a41502
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a38ed15769d1186ef78733d68d9d8b51b3eb262d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130278"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446908"
 ---
 # <a name="dynamic-language-runtime-overview"></a>Общие сведения о среде DLR
 
@@ -51,7 +51,7 @@ ms.locfileid: "73130278"
 
 - IronPython. Доступен в качестве программного обеспечения с открытым исходным кодом на веб-сайте [GitHub](https://github.com/IronLanguages/ironpython2).
 
-- IronRuby. Доступен в качестве программного обеспечения с открытым исходным кодом на веб-сайте [RubyForge](https://go.microsoft.com/fwlink/?LinkId=141044).
+- IronRuby. Available as open-source software from the [IronRuby](http://ironruby.net/) website.
 
 ## <a name="primary-dlr-advantages"></a>Основные преимущества среды DLR
  Среда DLR предоставляет следующие преимущества.
@@ -74,7 +74,7 @@ ms.locfileid: "73130278"
 ## <a name="dlr-architecture"></a>Архитектура среды DLR
  Ниже показана архитектура среды DLR.
 
- ![Общие сведения об архитектуре среды выполнения динамического языка](./media/dlr-archoverview.png "DLR_ArchOverview") Архитектура DLR
+ ![Dynamic Language Runtime Architecture Overview](./media/dlr-archoverview.png "DLR_ArchOverview") DLR architecture
 
  Среда DLR добавляет в среду CLR ряд служб для лучшей поддержки динамических языков. К ним относятся перечисленные ниже службы.
 

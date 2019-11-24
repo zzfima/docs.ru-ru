@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7c9e9120-3104-42f0-86ce-19a025f20dcc
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 737ccc8af41c9eca765a7ea06f29d1aec1ccfad6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ed193aab8beb0de1321aa1d52ec9f963b08b316c
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67758851"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74441664"
 ---
 # <a name="imetadataimportenummemberswithname-method"></a>Метод IMetaDataImport::EnumMembersWithName
 Перечисляет токены MemberDef, представляющие члены указанного типа с заданным именем.  
@@ -42,39 +40,39 @@ HRESULT EnumMembersWithName (
   
 ## <a name="parameters"></a>Параметры  
  `phEnum`  
- [in, out] Указатель на перечислитель.  
+ [in, out] A pointer to the enumerator.  
   
  `cl`  
- [in] Токен TypeDef, представляющий тип с члены для перечисления.  
+ [in] A TypeDef token representing the type with members to enumerate.  
   
  `szName`  
- [in] Имя члена, который ограничивает область перечислителя.  
+ [in] The member name that limits the scope of the enumerator.  
   
  `rMembers`  
- [out] Массив, используемый для хранения токенов MemberDef.  
+ [out] The array used to store the MemberDef tokens.  
   
  `cMax`  
  [in] Максимальный размер массива `rMembers`.  
   
  `pcTokens`  
- [out] Фактическое количество возвращаемых в токены MemberDef `rMembers`.  
+ [out] The actual number of MemberDef tokens returned in `rMembers`.  
   
-## <a name="remarks"></a>Примечания  
- Этот метод перечисляет поля и методы, но не свойства или события. В отличие от [IMetaDataImport::EnumMembers](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enummembers-method.md), `EnumMembersWithName` отбрасывает все поля и элемент маркеры, у которых нет указанного имени.  
+## <a name="remarks"></a>Заметки  
+ This method enumerates fields and methods, but not properties or events. Unlike [IMetaDataImport::EnumMembers](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enummembers-method.md), `EnumMembersWithName` discards all field and member tokens that do not have the specified name.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
   
 |HRESULT|Описание|  
 |-------------|-----------------|  
-|`S_OK`|`EnumTypeDefs` успешно возвращен.|  
-|`S_FALSE`|Существуют маркеры MemberDef для перечисления отсутствуют. В этом случае `pcTokens` равно нулю.|  
+|`S_OK`|`EnumTypeDefs` returned successfully.|  
+|`S_FALSE`|There are no MemberDef tokens to enumerate. In that case, `pcTokens` is zero.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** Cor.h  
+ **Header:** Cor.h  
   
- **Библиотека:** Включена как ресурс в MsCorEE.dll  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

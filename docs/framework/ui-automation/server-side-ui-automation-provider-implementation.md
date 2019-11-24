@@ -6,21 +6,21 @@ helpviewer_keywords:
 - UI Automation, server-side provider implementation
 - provider implementation, UI Automation
 ms.assetid: 6acc6d08-bd67-4e2e-915c-9c1d34eb86fe
-ms.openlocfilehash: eb7156e0e2794fb7cb18e7bfce0e8488d0b145c3
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 35754d49bf223e7afcdec32e8b24cfb749f48aa6
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71042767"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446846"
 ---
 # <a name="server-side-ui-automation-provider-implementation"></a>Реализация поставщика автоматизации пользовательского интерфейса на стороне сервера
 
 > [!NOTE]
-> Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Последние сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]см. в разделе [API службы автоматизации Windows: Модель автоматизации](https://go.microsoft.com/fwlink/?LinkID=156746)пользовательского интерфейса.
+> Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Последние сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]см. в разделе [API автоматизации Windows. Автоматизация пользовательского интерфейса](/windows/win32/winauto/entry-uiauto-win32).
 
 В этом разделе описывается реализация серверного поставщика автоматизации пользовательского интерфейса для пользовательского элемента управления.
 
-Реализация для элементов Windows Presentation Foundation (WPF) и[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] элементов, не являющихся элементами (например, разработанных для [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]), является фундаментально отличающимся. Элементы[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] обеспечивают поддержку [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] с помощью класса, производного от <xref:System.Windows.Automation.Peers.AutomationPeer>. Элементы, отличные от[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] , обеспечивает поддержку с помощью реализаций интерфейсов поставщика.
+The implementation for Windows Presentation Foundation (WPF) elements and non-[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] elements (such as those designed for [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]) is fundamentally different. Элементы[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] обеспечивают поддержку [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] с помощью класса, производного от <xref:System.Windows.Automation.Peers.AutomationPeer>. Элементы, отличные от[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] , обеспечивает поддержку с помощью реализаций интерфейсов поставщика.
 
 <a name="Security_Considerations"></a>
 

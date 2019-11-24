@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 44cf6908-f555-4ae8-b2cf-24bd974bf2fe
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 13f8a50f3fcbe9d6e7602ca3bbeb36587ecff32c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8a5dda5861343865a139f6b6b9e2794179b0727a
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778802"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74434727"
 ---
 # <a name="imetadataimportisglobal-method"></a>Метод IMetaDataImport::IsGlobal
 Возвращает значение, указывающее на наличие глобальной области у поля, метода или типа, представленного заданным токеном метаданных.  
@@ -38,17 +36,17 @@ HRESULT IsGlobal (
   
 ## <a name="parameters"></a>Параметры  
  `pd`  
- [in] Маркер метаданных, который представляет тип, полем или методом.  
+ [in] A metadata token that represents a type, field, or method.  
   
  `pbGlobal`  
- [out] 1, если объект имеет глобальную область действия; в противном случае — 0 (ноль).  
+ [out] 1 if the object has global scope; otherwise, 0 (zero).  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** Cor.h  
+ **Header:** Cor.h  
   
- **Библиотека:** Включена как ресурс в MsCorEE.dll  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

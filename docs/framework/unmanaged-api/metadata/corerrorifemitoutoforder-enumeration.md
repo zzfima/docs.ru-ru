@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6d758aad-29a7-44fe-9481-bbff5b799a32
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 16f6d7bf6fa1730d50cfe81526817e492a453dad
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 57460ba30a8ce974b5ca89f76796c4dcf49ffecf
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781986"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74443581"
 ---
 # <a name="corerrorifemitoutoforder-enumeration"></a>Перечисление CorErrorIfEmitOutOfOrder
 Содержит значения флагов, указывающие условия, при которых должно создаваться сообщение об ошибке при беспорядочном выводе метаданных.  
@@ -43,23 +41,23 @@ typedef enum CorErrorIfEmitOutOfOrder {
 } CorErrorIfEmitOutOfOrder;  
 ```  
   
-## <a name="members"></a>Участники  
+## <a name="members"></a>Члены  
   
 |Член|Описание|  
 |------------|-----------------|  
-|`MDErrorOutOfOrderDefault`|Указывает поведение по умолчанию, которое не создает сообщения об ошибках.|  
-|`MDErrorOutOfOrderNone`|Указывает, что компилятору не создавать сообщения об ошибках.|  
-|`MDErrorOutOfOrderAll`|Указывает, что компилятор должен создать сообщение об ошибке, когда поле, свойство, событие, метод или параметр выдается в неправильном порядке.|  
-|`MDMethodOutOfOrder`|Указывает, что компилятор должен создать сообщение об ошибке, когда метод выдается в неправильном порядке.|  
-|`MDFieldOutOfOrder`|Указывает, что компилятор должен создать сообщение об ошибке при извлечении поля по порядку.|  
-|`MDParamOutOfOrder`|Указывает, что компилятор должен создать сообщение об ошибке при извлечении параметра в неправильном порядке.|  
-|`MDPropertyOutOfOrder`|Указывает, что компилятор должен создать сообщение об ошибке при извлечении свойства в неправильном порядке.|  
-|`MDEventOutOfOrder`|Указывает, что компилятор должен создать сообщение об ошибке при извлечении неупорядоченных событий.|  
+|`MDErrorOutOfOrderDefault`|Indicates the default behavior, which does not generate error messages.|  
+|`MDErrorOutOfOrderNone`|Indicates that the compiler should not generate error messages.|  
+|`MDErrorOutOfOrderAll`|Indicates that the compiler should generate an error message when a field, property, event, method, or parameter is emitted out of order.|  
+|`MDMethodOutOfOrder`|Indicates that the compiler should generate an error message when a method is emitted out of order.|  
+|`MDFieldOutOfOrder`|Indicates that the compiler should generate an error message when a field is emitted out of order.|  
+|`MDParamOutOfOrder`|Indicates that the compiler should generate an error message when a parameter is emitted out of order.|  
+|`MDPropertyOutOfOrder`|Indicates that the compiler should generate an error message when a property is emitted out of order.|  
+|`MDEventOutOfOrder`|Indicates that the compiler should generate an error message when an event is emitted out of order.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorHdr.h  
+ **Header:** CorHdr.h  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

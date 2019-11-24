@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 694c0fa0-7011-41a9-9dfd-f0e16ea574b5
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 9fb1dff80fccc920540d370797441b3a019d766c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5f83cb96e39b257a1d35786130cd5ed31d071de7
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780914"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74443873"
 ---
 # <a name="corattributetargets-enumeration"></a>Перечисление CorAttributeTargets
 Задает элементы приложения, в которых допустимо применять аргумент.  
@@ -60,36 +58,36 @@ typedef enum CorAttributeTargets
 } CorAttributeTargets;  
 ```  
   
-## <a name="members"></a>Участники  
+## <a name="members"></a>Члены  
   
 |Член|Описание|  
 |------------|-----------------|  
-|`catAssembly`|Атрибут может быть применен к сборке.|  
-|`catModule`|Атрибут может применяться для переносимого исполняемого модуля (.dll или .exe).|  
-|`catClass`|Атрибут может быть применен к классу.|  
-|`catStruct`|Атрибут может быть применен к структуре; то есть значение type.|  
-|`catEnum`|Атрибут может быть применен к перечислению.|  
-|`catConstructor`|Атрибут может применяться к конструктору.|  
-|`catMethod`|Атрибут может применяться к методу.|  
-|`catProperty`|Атрибут может быть применен к свойству.|  
-|`catField`|Атрибут может быть применен к полю.|  
-|`catEvent`|Атрибут может применяться к событию.|  
-|`catInterface`|Атрибут может применяться к интерфейсу.|  
-|`catParameter`|Атрибут может быть применен к параметру.|  
-|`catDelegate`|Атрибут может быть применен к делегату.|  
-|`catGenericParameter`|Атрибут может применяться к универсальному параметру.|  
-|`catAll`|Атрибут может применяться к любому элементу приложения.|  
-|`catClassMembers`|Атрибут может быть применен к члену класса.|  
+|`catAssembly`|Attribute can be applied to an assembly.|  
+|`catModule`|Attribute can be applied to a portable executable (.dll or .exe) module.|  
+|`catClass`|Attribute can be applied to a class.|  
+|`catStruct`|Attribute can be applied to a structure; that is, a value type.|  
+|`catEnum`|Attribute can be applied to an enumeration.|  
+|`catConstructor`|Attribute can be applied to a constructor.|  
+|`catMethod`|Attribute can be applied to a method.|  
+|`catProperty`|Attribute can be applied to a property.|  
+|`catField`|Attribute can be applied to a field.|  
+|`catEvent`|Attribute can be applied to an event.|  
+|`catInterface`|Attribute can be applied to an interface.|  
+|`catParameter`|Attribute can be applied to a parameter.|  
+|`catDelegate`|Attribute can be applied to a delegate.|  
+|`catGenericParameter`|Attribute can be applied to a generic parameter.|  
+|`catAll`|Attribute can be applied to any application element.|  
+|`catClassMembers`|Attribute can be applied to a member of a class.|  
   
-## <a name="remarks"></a>Примечания  
- `CorAttributeTargets` Значения перечисления могут объединяться с помощью побитовой операции OR для получения необходимого сочетания.  
+## <a name="remarks"></a>Заметки  
+ The `CorAttributeTargets` enumeration values can be combined with a bitwise OR operation to get the preferred combination.  
   
- `CorAttributeTargets` Параллельно управляемого <xref:System.AttributeTargets?displayProperty=nameWithType> перечисления.  
+ The `CorAttributeTargets` parallels the managed <xref:System.AttributeTargets?displayProperty=nameWithType> enumeration.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorHdr.h  
+ **Header:** CorHdr.h  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

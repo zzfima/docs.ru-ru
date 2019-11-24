@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4bc82d9b-9544-4be3-ba51-a2d4d806158a
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a437ff11114ea8d577b2fc3b81cd981cebb8c8d6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b8755629cca27784609de8166dddf44ed1c82bdc
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67751065"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74432537"
 ---
 # <a name="imetadataemitsetmethodimplflags-method"></a>Метод IMetaDataEmit::SetMethodImplFlags
-Задает или обновляет подпись метаданных реализации унаследованного метода, на который ссылается указанный токен.  
+Sets or updates the metadata signature of the inherited method implementation that is referenced by the specified token.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,17 +36,17 @@ HRESULT SetMethodImplFlags (
   
 ## <a name="parameters"></a>Параметры  
  `md`  
- [in] Токен, метод должен быть изменен.  
+ [in] The token for the method to be changed.  
   
  `dwImplFlags`  
- [in] Сочетание значений [CorMethodImpl](../../../../docs/framework/unmanaged-api/metadata/cormethodimpl-enumeration.md) перечисления, которое указывает возможности реализации метода.  
+ [in] A combination of the values of the [CorMethodImpl](../../../../docs/framework/unmanaged-api/metadata/cormethodimpl-enumeration.md) enumeration that specifies the method implementation features.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** Cor.h  
+ **Header:** Cor.h  
   
- **Библиотека:** Используется как ресурс в MSCorEE.dll  
+ **Library:** Used as a resource in MSCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

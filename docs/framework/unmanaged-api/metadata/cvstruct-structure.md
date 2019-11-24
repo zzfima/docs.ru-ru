@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: e9e4e497-d5fb-464b-991c-3bdd824664fd
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b3e35cea4601c8e51eb3021dc9f598ddb881afe0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 19ee3097dfe80ba9dcbdaf316db0fd165b50abc6
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67750719"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436424"
 ---
 # <a name="cvstruct-structure"></a>Структура CVStruct
 Содержит сведения, используемые при установке модуля или составного образа.  
@@ -37,21 +35,21 @@ typedef struct {
 } CVStruct;  
 ```  
   
-## <a name="members"></a>Участники  
+## <a name="members"></a>Члены  
   
 |Член|Описание|  
 |------------|-----------------|  
-|Значительно|Номер основной версии сборки.|  
-|Дополнительный номер|Дополнительный номер версии номер построения.|  
-|Sub|Дополнительный номер сборки.|  
-|Построить|номер сборки.|  
+|Значительно|Major version build number.|  
+|Дополнительный номер|Minor version build number.|  
+|Sub|Sub-build number.|  
+|Построить|Build number.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** Cor.h  
+ **Header:** Cor.h  
   
- **Библиотека:** Используется как ресурс в MsCorEE.dll  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

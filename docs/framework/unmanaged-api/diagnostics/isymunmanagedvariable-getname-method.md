@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: eedf1ef0-9d4a-4847-a201-4e99572dfe5e
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 8298e7240052bdd859dbe414281d8e78984342e8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 77dec4332aa65f6125685db607169b3398bcab98
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778256"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446053"
 ---
 # <a name="isymunmanagedvariablegetname-method"></a>Метод ISymUnmanagedVariable::GetName
-Возвращает имя этой переменной.  
+Gets the name of this variable.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,19 +37,19 @@ HRESULT GetName(
   
 ## <a name="parameters"></a>Параметры  
  `cchName`  
- [in] Длина буфера, `pcchName` указывает параметр.  
+ [in] The length of the buffer that the `pcchName` parameter points to.  
   
  `pcchName`  
- [out] Указатель на `ULONG32` размер, который получает в символах, буфера, требуемого для хранения имени, включая завершающимся нулевым значением.  
+ [out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the name, including the null termination.  
   
  `szName`  
- [out] Буфер, в котором хранится имя.  
+ [out] The buffer that stores the name.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Требования  
- **Заголовок.** CorSym.idl CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>См. также
 

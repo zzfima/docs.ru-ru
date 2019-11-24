@@ -5,22 +5,22 @@ helpviewer_keywords:
 - UI Automation caching in clients
 - caching, UI Automation clients
 ms.assetid: 94c15031-4975-43cc-bcd5-c9439ed21c9c
-ms.openlocfilehash: bf617279b16f53164209f5ae7605830dabda4c2e
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 8de96aa3877b2ca414c87958dad480503f57ccb7
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71043928"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74433937"
 ---
 # <a name="caching-in-ui-automation-clients"></a>Кэширование в клиентах автоматизации пользовательского интерфейса
 > [!NOTE]
-> Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Последние сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]см. в разделе [API службы автоматизации Windows: Модель автоматизации](https://go.microsoft.com/fwlink/?LinkID=156746)пользовательского интерфейса.  
+> Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Последние сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]см. в разделе [API автоматизации Windows. Автоматизация пользовательского интерфейса](/windows/win32/winauto/entry-uiauto-win32).  
   
  В этом разделе рассматривается кэширование свойств и шаблонов элементов управления [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] .  
   
  В [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]кэширование означает предварительное получение данных. Затем к этим данным можно осуществлять доступ без дальнейшего взаимодействия между процессами. Кэширование обычно используется клиентскими приложениями модели автоматизации пользовательского интерфейса для массового извлечения свойств и шаблонов элементов управления. Затем по мере необходимости информация извлекается из кэша. Приложение периодически обновляет кэш, обычно в ответ на события, указывающие на изменение чего-нибудь в [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] .  
   
- Преимущества кэширования наиболее заметны при использовании элементов управления Windows Presentation Foundation (WPF) и пользовательских элементов управления с поставщиками автоматизации пользовательского интерфейса на стороне сервера. При доступе к клиентским поставщикам, таким как поставщики по умолчанию для элементов управления [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] , преимущества кэширования не столь заметны.  
+ The benefits of caching are most noticeable with Windows Presentation Foundation (WPF) controls and custom controls that have server-side UI Automation providers. При доступе к клиентским поставщикам, таким как поставщики по умолчанию для элементов управления [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] , преимущества кэширования не столь заметны.  
   
  Кэширование происходит, когда приложение активирует <xref:System.Windows.Automation.CacheRequest> , а затем использует какой-либо метод или свойство для возврата <xref:System.Windows.Automation.AutomationElement>; например <xref:System.Windows.Automation.AutomationElement.FindFirst%2A>, <xref:System.Windows.Automation.AutomationElement.FindAll%2A>. Исключением являются методы класса <xref:System.Windows.Automation.TreeWalker> ; кэширование выполняется только в том случае, если указан <xref:System.Windows.Automation.CacheRequest> как параметр (например, <xref:System.Windows.Automation.TreeWalker.GetFirstChild%28System.Windows.Automation.AutomationElement%2CSystem.Windows.Automation.CacheRequest%29?displayProperty=nameWithType>.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "71043928"
 ## <a name="activating-the-cacherequest"></a>Активация CacheRequest  
  Кэширование выполняется, только когда объекты <xref:System.Windows.Automation.AutomationElement> извлекаются при активном <xref:System.Windows.Automation.CacheRequest> для текущего потока. Существует два способа активации <xref:System.Windows.Automation.CacheRequest>.  
   
- Обычно вызывается метод <xref:System.Windows.Automation.CacheRequest.Activate%2A>. Этот метод возвращает объект, реализующий <xref:System.IDisposable>. Запрос остается активным, пока объект <xref:System.IDisposable> существует. Самый простой способ управления временем существования объекта заключается в заключении вызова в `using` блок (C#) или `Using` (Visual Basic). Это гарантирует, что запрос будет извлекаться из стека, даже если возникнет исключение.  
+ Обычно вызывается метод <xref:System.Windows.Automation.CacheRequest.Activate%2A>. Этот метод возвращает объект, реализующий <xref:System.IDisposable>. Запрос остается активным, пока объект <xref:System.IDisposable> существует. The easiest way to control the lifetime of the object is to enclose the call within a `using` (C#) or `Using` (Visual Basic) block. Это гарантирует, что запрос будет извлекаться из стека, даже если возникнет исключение.  
   
  Другим способом, который подходит, когда требуется вкладывать запросы кэширования, является вызов метода <xref:System.Windows.Automation.CacheRequest.Push%2A>. Этот вызов помещает запрос в стек и активирует его. Запрос остается активным, пока он не будет удален из стека методом <xref:System.Windows.Automation.CacheRequest.Pop%2A>. Запрос становится временно неактивным, если другой запрос помещается в стек; активен только верхний запрос в стеке.  
   
@@ -105,4 +105,4 @@ ms.locfileid: "71043928"
 
 - [События модели автоматизации пользовательского интерфейса для клиентов](ui-automation-events-for-clients.md)
 - [Использование кэширования в модели автоматизации пользовательского интерфейса](use-caching-in-ui-automation.md)
-- [Пример Фетчтимер](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771456(v=vs.90))
+- [FetchTimer Sample](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771456(v=vs.90))

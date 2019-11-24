@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c7963c87-6ec5-49b3-a5cd-e0fe0c43f9b4
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 78a0f4b1c111e7978af0259f684402bb98566272
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 512dd4055a0aad8498db6ef2241c9363aecee9c7
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777856"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446285"
 ---
 # <a name="isymunmanagedscopegetparent-method"></a>Метод ISymUnmanagedScope::GetParent
-Получает родительскую область этой области.  
+Gets the parent scope of this scope.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -36,13 +34,13 @@ HRESULT GetParent(
   
 ## <a name="parameters"></a>Параметры  
  `pRetVal`  
- [out] Указатель на возвращенный [ISymUnmanagedScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md) интерфейс.  
+ [out] A pointer to the returned [ISymUnmanagedScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md) interface.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Требования  
- **Заголовок.** CorSym.idl CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>См. также
 

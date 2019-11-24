@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: e5d777c5-d450-4c0f-999c-b3953ee22cfb
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 2ef32a963b73f2109b9747ef303e8ccd6a729838
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4ac1fc0b3567c49dfb36d2886926bee72d62a8dd
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778262"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446067"
 ---
 # <a name="isymunmanagedvariablegetendoffset-method"></a>Метод ISymUnmanagedVariable::GetEndOffset
-Возвращает конечное смещение переменной внутри родительского. Если это локальной переменной в области, конечное смещение выходит в границах смещений, определенных для данной области.  
+Gets the end offset of this variable within its parent. If this is a local variable within a scope, the end offset will fall within the offsets defined for the scope.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -36,13 +34,13 @@ HRESULT GetEndOffset(
   
 ## <a name="parameters"></a>Параметры  
  `pRetVal`  
- [out] Указатель на `ULONG32` , который получает конечное смещение.  
+ [out] A pointer to a `ULONG32` that receives the end offset.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Требования  
- **Заголовок.** CorSym.idl CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>См. также
 

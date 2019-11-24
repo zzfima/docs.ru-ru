@@ -1,5 +1,5 @@
 ---
-title: 'ICorProfilerInfo9:: Жетнативекодестартаддрессес'
+title: ICorProfilerInfo9::GetNativeCodeStartAddresses
 ms.date: 08/06/2019
 dev_langs:
 - cpp
@@ -11,16 +11,16 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 80571933bc8d91c074dbee62aad50cece6277d51
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 7593e8873c2714df85146903c0052a9909a95ccd
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69665505"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74444719"
 ---
-# <a name="icorprofilerinfo9getnativecodestartaddresses-method"></a>Метод ICorProfilerInfo9:: Жетнативекодестартаддрессес
+# <a name="icorprofilerinfo9getnativecodestartaddresses-method"></a>ICorProfilerInfo9::GetNativeCodeStartAddresses Method
 
-При наличии кода functionId и Режитид перечисляются начальные адреса всех откомпилированных версий этого кода, которые в настоящее время существуют.
+Given a functionId and rejitId, enumerates the native code start address of all jitted versions of this code that currently exist.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -35,7 +35,7 @@ HRESULT GetNativeCodeStartAddresses( [in]  FunctionID functionID,
 #### <a name="parameters"></a>Параметры
 
 `functionId` \
-окне Идентификатор функции, для которой должны возвращаться начальные адреса машинного кода.
+[in] The ID of the function whose native code start addresses should be returned.
 
 `reJitId` \
 [in] Идентификатор функции, перекомпилированной с помощью JIT-компилятора.
@@ -44,25 +44,25 @@ HRESULT GetNativeCodeStartAddresses( [in]  FunctionID functionID,
 [in] Максимальный размер массива `codeStartAddresses`.
 
 `pcCodeStartAddresses` \
-заполняет Количество доступных адресов.
+[out] The number of available addresses.
 
 `codeStartAddresses` \
-заполняет Массив `UINT_PTR`, каждый из которых является начальным адресом для заданной функции в машинном тексте.
+[out] An array of `UINT_PTR`, each one of which is the start address for a native body for the specified function.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
-Если включена многоуровневая компиляция, функция может иметь более одного тела машинного кода.
+When tiered compilation is enabled, a function may have more than one native code body.
 
 ## <a name="requirements"></a>Требования
 
-**Платформ** См. раздел [Поддерживаемые операционные системы .NET Core](../../../core/windows-prerequisites.md#net-core-supported-operating-systems).
+**Platforms:** See [.NET Core supported operating systems](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows).
 
-**Заголовок.** CorProf. idl, CorProf. h
+**Заголовок:** CorProf.idl, CorProf.h
 
-**Библиотечная** Коргуидс. lib
+**Библиотека:** CorGuids.lib
 
-**Версии .NET:** [!INCLUDE[net_core_22](../../../../includes/net-core-22-md.md)]
+**.NET Versions:** [!INCLUDE[net_core_22](../../../../includes/net-core-22-md.md)]
 
 ## <a name="see-also"></a>См. также
 
-- [Интерфейс ICorProfilerInfo9](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo9-interface.md)
+- [ICorProfilerInfo9 Interface](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo9-interface.md)

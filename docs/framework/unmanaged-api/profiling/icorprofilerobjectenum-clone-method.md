@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: b0b2facd-5991-4f4c-932d-c4937f45cef9
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 72df5a5c2d0ef4bc462eeaa43f2d55a3d2a56fe4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 99778240afb7e296b93cd87ab91feeca20d02637
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67775022"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428277"
 ---
 # <a name="icorprofilerobjectenumclone-method"></a>Метод ICorProfilerObjectEnum::Clone
-Получает указатель интерфейса на копию этого [ICorProfilerObjectEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerobjectenum-interface.md) интерфейс.  
+Gets an interface pointer to a copy of this [ICorProfilerObjectEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerobjectenum-interface.md) interface.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -36,12 +34,12 @@ HRESULT Clone (
   
 ## <a name="parameters"></a>Параметры  
  `ppEnum`  
- [out] Указатель на указатель интерфейса, в свою очередь указывает на копию данного объекта `ICorProfilerObjectEnum` интерфейс. Копия хранит собственное состояние перечисления отдельно от этого интерфейса. Тем не менее копии Начальная позиция курсора будет таким же, как этот перечислитель текущей позиции курсора.  
+ [out] A pointer to the interface pointer that in turn points to the copy of this `ICorProfilerObjectEnum` interface. The copy maintains its own enumeration state separately from this one. However, the copy's initial cursor position will be the same as this enumerator's current cursor position.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorProf.idl, CorProf.h  
+ **Заголовок:** CorProf.idl, CorProf.h  
   
  **Библиотека:** CorGuids.lib  
   

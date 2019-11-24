@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: ca2af325-eb9d-4a91-90e4-267e45b98611
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4b09ccfdb33c9853ed97005461f2288f1e7e6fd1
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: bab215a8221696a0e43e228278085fcef52a40e9
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781752"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74442822"
 ---
 # <a name="cormethodsemanticsattr-enumeration"></a>Перечисление CorMethodSemanticsAttr
 Содержит значения, описывающие связь между методом и соответствующим свойством или событием.  
@@ -41,21 +39,21 @@ typedef enum CorMethodSemanticsAttr {
 } CorMethodSemanticsAttr;  
 ```  
   
-## <a name="members"></a>Участники  
+## <a name="members"></a>Члены  
   
 |Член|Описание|  
 |------------|-----------------|  
-|`msSetter`|Указывает, что метод вызывается `set` метод доступа для свойства.|  
-|`msGetter`|Указывает, что метод вызывается `get` метод доступа для свойства.|  
-|`msOther`|Указывает, что метод имеет отношение к свойство или событие, отличные от определенных здесь.|  
-|`msAddOn`|Указывает, что этот метод добавляет методы обработчика для события.|  
-|`msRemoveOn`|Указывает, что метод удаляет методы обработчика для события.|  
-|`msFire`|Указывает, что метод вызывает событие.|  
+|`msSetter`|Specifies that the method is a `set` accessor for a property.|  
+|`msGetter`|Specifies that the method is a `get` accessor for a property.|  
+|`msOther`|Specifies that the method has a relationship to a property or an event other than those defined here.|  
+|`msAddOn`|Specifies that the method adds handler methods for an event.|  
+|`msRemoveOn`|Specifies that the method removes handler methods for an event.|  
+|`msFire`|Specifies that the method raises an event.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorHdr.h  
+ **Header:** CorHdr.h  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

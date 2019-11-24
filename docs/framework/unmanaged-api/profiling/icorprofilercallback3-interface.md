@@ -14,32 +14,30 @@ helpviewer_keywords:
 ms.assetid: be83af41-3dec-4c77-8529-9dd6b8042af6
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 66e6a67ce022365fa8c9e1005dfecbe4b23abd10
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 25d674a143019ac5d724e36f03f36c79602b1e11
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61598887"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74439512"
 ---
 # <a name="icorprofilercallback3-interface"></a>Интерфейс ICorProfilerCallback3
-Предоставляет методы обратного вызова, среда CLR (CLR), используемые для связи, присоединение и отсоединение сведения о состоянии профилировщику.  
+Provides callback methods that the common language runtime (CLR) uses to communicate attach and detach state information to the profiler.  
   
 ## <a name="methods"></a>Методы  
   
 |Метод|Описание|  
 |------------|-----------------|  
-|[Метод InitializeForAttach](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-initializeforattach-method.md)|Вызывается средой CLR, чтобы предоставить профилировщику возможность инициализировать свое состояние после операции присоединения.|  
-|[Метод ProfilerAttachComplete](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-profilerattachcomplete-method.md)|Вызывается средой CLR, чтобы указать, что теперь профилировщик может вызывать дополнительные методы.|  
+|[Метод InitializeForAttach](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-initializeforattach-method.md)|Called by the CLR to give the profiler an opportunity to initialize its state after an attach operation.|  
+|[Метод ProfilerAttachComplete](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-profilerattachcomplete-method.md)|Called by the CLR to indicate that the profiler can now call the catch-up methods.|  
 |[Метод ProfilerDetachSucceeded](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-profilerdetachsucceeded-method.md)|Уведомляет профилировщик о том, что среда CLR намерена выгрузить библиотеку DLL профилировщика.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorProf.idl, CorProf.h  
+ **Заголовок:** CorProf.idl, CorProf.h  
   
  **Библиотека:** CorGuids.lib  
   

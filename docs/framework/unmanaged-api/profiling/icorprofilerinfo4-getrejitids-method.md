@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 634ac28c-a5b7-4fc3-af84-256c24ca8177
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 805ceb60d2ac122df2382656b95b7bf5e7509bfc
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: f6d26abba649b608858fde8beaac750600493869
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70855942"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74442865"
 ---
 # <a name="icorprofilerinfo4getrejitids-method"></a>Метод ICorProfilerInfo4::GetReJITIDs
-Возвращает массив идентификаторов, которые определяют все все повторно скомпилированные версии указанной функции, которые все еще выделены. Сюда входят JIT-повторно скомпилированные версии функций, которые впоследствии были отменены, но еще не освобождены (например, если домен приложения, содержащий функцию, которая содержит возвращенные функции, все еще используется).  
+Returns an array of IDs that identify all JIT-recompiled versions of the specified function that are still allocated. This includes JIT-recompiled versions of functions that have been subsequently reverted but not yet freed (for example, when the application domain that contains the reverted function is still in use).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,26 +37,26 @@ HRESULT GetReJITIDs (
   
 ## <a name="parameters"></a>Параметры  
  `functionId`  
- окне Объект `FunctionID` экземпляра функции, для которого требуется перечислить версии.  
+ [in] The `FunctionID` of the function instance for which to enumerate versions.  
   
  `cReJitIds`  
- окне Число идентификаторов, перекомпилированных с помощью JIT-компилятора `reJitIds` , выделенных в массиве.  
+ [in] The number of JIT-recompiled IDs allocated in the `reJitIds` array.  
   
  `pcReJitIds`  
- заполняет Фактическое число повторно скомпилированных идентификаторов с JIT-рекомпиляцией.  
+ [out] The actual number of JIT-recompiled IDs.  
   
  `reJitIds`  
- заполняет Выделенный вызывающим объектом массив, который будет содержать JIT-перекомпилированные идентификаторы для указанной функции.  
+ [out] A caller-allocated array that will contain the JIT-recompiled IDs for the specified function.  
   
-## <a name="remarks"></a>Примечания  
- `GetReJITIDs`Перечисляет активные JIT-повторно скомпилированные идентификаторы для заданного экземпляра функции. Он следует той же схеме использования, что `ICorProfilerInfo` и другие функции, принимающие буферы, выделенные вызывающим объектом.  
+## <a name="remarks"></a>Заметки  
+ `GetReJITIDs` enumerates the active JIT-recompiled IDs for a given function instance. It follows the same usage pattern as other `ICorProfilerInfo` functions that accept caller-allocated buffers.  
   
 ## <a name="requirements"></a>Требования  
- **Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorProf. idl, CorProf. h  
+ **Заголовок:** CorProf.idl, CorProf.h  
   
- **Библиотечная** Коргуидс. lib  
+ **Библиотека:** CorGuids.lib  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   

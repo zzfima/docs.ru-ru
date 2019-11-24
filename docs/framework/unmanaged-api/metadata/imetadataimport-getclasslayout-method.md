@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8f35414d-f40b-4b99-8768-9adb675c622a
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6094bbedcc5386d3f5c0400960e47ac91defe2a1
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8360a74e9e18e5b68ecc9edd7be2e3a711cb61c9
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782447"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74437778"
 ---
 # <a name="imetadataimportgetclasslayout-method"></a>Метод IMetaDataImport::GetClassLayout
 Возвращает сведения о структуре для класса, на который ссылается указанный токен TypeDef.  
@@ -42,29 +40,29 @@ HRESULT GetClassLayout  (
   
 ## <a name="parameters"></a>Параметры  
  `td`  
- [in] Токен TypeDef для класса с макетом для возврата.  
+ [in] The TypeDef token for the class with the layout to return.  
   
  `pdwPackSize`  
- [out] Одно из значений, 1, 2, 4, 8 или 16, представляющее размер пакета класса.  
+ [out] One of the values 1, 2, 4, 8, or 16, representing the pack size of the class.  
   
  `rFieldOffset`  
- [out] Массив [COR_FIELD_OFFSET](../../../../docs/framework/unmanaged-api/metadata/cor-field-offset-structure.md) значения.  
+ [out] An array of [COR_FIELD_OFFSET](../../../../docs/framework/unmanaged-api/metadata/cor-field-offset-structure.md) values.  
   
  `cMax`  
  [in] Максимальный размер массива `rFieldOffset`.  
   
  `pcFieldOffset`  
- [out] Число элементов, возвращаемых в `rFieldOffset`.  
+ [out] The number of elements returned in `rFieldOffset`.  
   
  `pulClassSize`  
- [out] Размер в байтах из класса, представленного параметром `td`.  
+ [out] The size in bytes of the class represented by `td`.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** Cor.h  
+ **Header:** Cor.h  
   
- **Библиотека:** Включена как ресурс в MsCorEE.dll  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

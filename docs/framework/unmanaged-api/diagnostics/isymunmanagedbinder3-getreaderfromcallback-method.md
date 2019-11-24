@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4ef83bd2-3d8e-499e-8a12-d9d6fd6ced30
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4ed0097e072b34dd43876ddf23abbc1f513670ff
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a0cccc0adfc666cc8e373bc1f89c8f6f97068fde
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776820"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449313"
 ---
 # <a name="isymunmanagedbinder3getreaderfromcallback-method"></a>Метод ISymUnmanagedBinder3::GetReaderFromCallback
-Пользователь может реализовывать или предоставить с помощью обратного вызова, либо `IID_IDiaReadExeAtRVACallback` или `IID_IDiaReadExeAtOffsetCallback` для получения сведения о каталоге отладки из памяти.  
+Allows the user to implement or supply via callback either an `IID_IDiaReadExeAtRVACallback` or `IID_IDiaReadExeAtOffsetCallback` to obtain the debug directory information from memory.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -41,28 +39,28 @@ HRESULT GetReaderFromCallback(
   
 ## <a name="parameters"></a>Параметры  
  `importer`  
- [in] Указатель на интерфейс импорта метаданных.  
+ [in] A pointer to the metadata import interface.  
   
  `fileName`  
- [in] Указатель на имя файла.  
+ [in] A pointer to the file name.  
   
  `searchPath`  
- [in] Указатель на пути поиска.  
+ [in] A pointer to the search path.  
   
  `searchPolicy`  
- [in] Значение [CorSymSearchPolicyAttributes](../../../../docs/framework/unmanaged-api/diagnostics/corsymsearchpolicyattributes-enumeration.md) перечисления, которое указывает политику, используемую при выполнении поиска для средства чтения символов.  
+ [in] A value of the [CorSymSearchPolicyAttributes](../../../../docs/framework/unmanaged-api/diagnostics/corsymsearchpolicyattributes-enumeration.md) enumeration that specifies the policy to be used when doing a search for a symbol reader.  
   
  `callback`  
- [in] Указатель на функцию обратного вызова.  
+ [in] A pointer to the callback function.  
   
  `pRetVal`  
- [out] Указатель, который имеет значение равное возвращаемому [ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md) интерфейс.  
+ [out] A pointer that is set to the returned [ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md) interface.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Требования  
- **Заголовок.** CorSym.idl  
+ **Header:** CorSym.idl  
   
 ## <a name="see-also"></a>См. также
 
