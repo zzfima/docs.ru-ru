@@ -3,12 +3,12 @@ title: Устранение неполадок при использовании
 description: Ознакомьтесь с распространенными проблемами, возникающими при использовании средств .NET Core, и возможными решениями.
 author: kdollard
 ms.date: 09/23/2019
-ms.openlocfilehash: eb769550493e5a25d4380cd543a3bbec880b38e9
-ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
+ms.openlocfilehash: df896405a122050acba220923eee58e87e0b75b6
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71332953"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74282504"
 ---
 # <a name="troubleshoot-net-core-tool-usage-issues"></a>Устранение неполадок при использовании средства .NET Core
 
@@ -19,13 +19,13 @@ ms.locfileid: "71332953"
 Если средство .NET Core не запускается, наиболее вероятной причиной является одна из следующих.
 
 * Исполняемый файл средства не найден.
-* Не найдена правильная версия среды выполнения .NET Core. 
+* Не найдена правильная версия среды выполнения .NET Core.
 
 ### <a name="executable-file-not-found"></a>Исполняемый файл не найден
 
 Если исполняемый файл не найден, появляется примерно следующее сообщение.
 
-```
+```console
 Could not execute because the specified command or file was not found.
 Possible reasons for this include:
   * You misspelled a built-in dotnet command.
@@ -44,10 +44,10 @@ Possible reasons for this include:
 
     Глобальные средства можно установить в каталоге по умолчанию или в выбранном вами расположении. Каталоги по умолчанию:
 
-    | ОС          | Путь                          |
+    | Операционная система          | Path                          |
     |-------------|-------------------------------|
     | Linux/macOS | `$HOME/.dotnet/tools`         |
-    |  Windows     | `%USERPROFILE%\.dotnet\tools` |
+    | Windows     | `%USERPROFILE%\.dotnet\tools` |
 
     Если вы пытаетесь запустить глобальное средство, убедитесь в том, что переменная среды `PATH` на компьютере содержит путь, по которому установлено глобальное средство, и что исполняемый файл находится по этому пути.
 
@@ -58,18 +58,18 @@ Possible reasons for this include:
   * используется ОС macOS 10.14 "Mojave" или более ранней версии, и пакет SDK для .NET Core установлен с помощью файлов *.tar.gz*, а не *.pkg*;
   * установлен пакет SDK для .NET Core 3.0, и переменной среды `DOTNET_ADD_GLOBAL_TOOLS_TO_PATH` присвоено значение `false`;
   * установлен пакет SDK для пакет SDK.NET Core 2.2 или более ранней версии, и переменной среды `DOTNET_SKIP_FIRST_TIME_EXPERIENCE` присвоено значение `true`.
-  
+
   См. дополнительные сведения о [глобальных средствах .NET Core](global-tools.md).
 
 * Локальные средства
 
   Если вы пытаетесь запустить локальное средство, убедитесь в наличии файла манифеста с именем *dotnet-tools.json* в текущем каталоге или в любом из его родительских каталогов. Этот файл также может находиться в папке *.config* где угодно в иерархии папок проекта, а не в корневой папке. Если файл *dotnet-tools.json* существует, откройте его и проверьте наличие средства, которое вы пытаетесь запустить. Если в файле нет записи для `"isRoot": true`, также проверьте наличие дополнительных файлов манифестов средств выше в иерархии файлов.
 
-    Если вы пытаетесь запустить средство .NET Core, которое было установлено по указанному пути, необходимо включить этот путь при использовании средства. Пример средства, установленного по определенному пути:
+  Если вы пытаетесь запустить средство .NET Core, которое было установлено по указанному пути, необходимо включить этот путь при использовании средства. Пример средства, установленного по определенному пути:
 
-   ```console
-   ..\<toolDirectory>\dotnet-<toolName>
-    ```
+  ```console
+  ..\<toolDirectory>\dotnet-<toolName>
+  ```
 
 ### <a name="runtime-not-found"></a>Среда выполнения не найдена
 
@@ -101,7 +101,7 @@ dotnet --info
 
 Установка глобального или локального средства .NET Core может завершиться сбоем по ряду причин. Если при установке средства происходит сбой, появляется примерно следующее сообщение.
 
-```
+```console
 Tool '{0}' failed to install. This failure may have been caused by:
 
 * You are attempting to install a preview release and did not use the --version option to specify the version.
@@ -146,7 +146,7 @@ dotnet tool install -g --version 1.1.0-pre <toolName>
 
 При попытке установить пакет NuGet, который является обычным пакетом NuGet, а не средством .NET Core, вы увидите такое сообщение об ошибке.
 
-`NU1212: Invalid project-package combination for `<ToolName>`. DotnetToolReference project style can only contain references of the DotnetTool type.`
+> NU1212: недопустимое сочетание проекта и пакета для `<ToolName>`. Стиль проекта DotnetToolReference допускает только ссылки типа DotnetTool.
 
 ### <a name="nuget-feed-cant-be-accessed"></a>Веб-канал NuGet недоступен
 
@@ -161,4 +161,5 @@ dotnet tool install -g --version 1.1.0-pre <toolName>
 Распространенной причиной ошибок является неправильное имя средства. Такое может случаться из-за ошибок при вводе или из-за того, что средство было перемещено либо устарело. Если средство размещено на сайте NuGet.org, один из способов гарантировать правильность имени — выполнить поиск средства на сайте NuGet.org и скопировать команду установки.
 
 ## <a name="see-also"></a>См. также
+
 * [Обзор глобальных средств .NET Core](global-tools.md)

@@ -4,12 +4,12 @@ description: Сведения о функциях телеметрии паке�
 author: KathleenDollard
 ms.date: 08/27/2019
 ms.custom: seodec18
-ms.openlocfilehash: 253f69392f034e330a75ed387d9346e8a5ae2a08
-ms.sourcegitcommit: 77e33b682db39955e331b8e8eda4ef1925a24e78
+ms.openlocfilehash: ecb8dbed036a04726867d004dbadf6205c1fa09f
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70133699"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74281777"
 ---
 # <a name="net-core-sdk-telemetry"></a>Телеметрия пакета SDK для .NET Core
 
@@ -55,7 +55,7 @@ Read more about .NET Core CLI Tools telemetry: https://aka.ms/dotnet-cli-telemet
 
 Функция телеметрии собирает следующие данные:
 
-| Версии пакета SDK | Данные |
+| Версии пакета SDK | Data |
 |--------------|------|
 | Все          | Метка времени вызова. |
 | Все          | Вызываемая команда (например, build), хэшируется с версии 2.1. |
@@ -114,7 +114,7 @@ Read more about .NET Core CLI Tools telemetry: https://aka.ms/dotnet-cli-telemet
 
 В следующем примере показан тип собираемых данных:
 
-```
+```console
 System.IO.IOException
 at System.ConsolePal.WindowsConsoleStream.Write(Byte[] buffer, Int32 offset, Int32 count)
 at System.IO.StreamWriter.Flush(Boolean flushStream, Boolean flushEncoder)

@@ -7,12 +7,12 @@
       href: get-started/install-fsharp.md
     - name: 'Начало работы с F# в Visual Studio'
       href: get-started/get-started-visual-studio.md
-    - name: 'Начало работы с F# в Visual Studio для Mac'
-      href: get-started/get-started-with-visual-studio-for-mac.md
-    - name: 'Начало работы с F# в Visual Studio Code и Ionide'
+    - name: 'Начало работы с F# в Visual Studio Code'
       href: get-started/get-started-vscode.md
     - name: 'Начало работы с F# в .NET Core CLI'
       href: get-started/get-started-command-line.md
+    - name: 'Начало работы с F# в Visual Studio для Mac'
+      href: get-started/get-started-with-visual-studio-for-mac.md
 - name: "Что такое\_F#"
   href: what-is-fsharp.md
 - name: 'Обзор языка F#'

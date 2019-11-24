@@ -1,19 +1,21 @@
 ---
-title: Критические изменения в версии 3.0 по сравнению с версией 2.2 — .NET Core
-description: Список критических изменений в версии 3.0 по сравнению с версией 2.2 .NET Core, ASP.NET Core и EF Core.
+title: Критические изменения ASP.NET Core (.NET Core)
+description: В этой статье приведен список критических изменений в ASP.NET Core.
 ms.date: 11/20/2019
-ms.openlocfilehash: 24df4e1b59681ae003a9c8dd34ee438387358171
+author: scottaddie
+ms.author: scaddie
+ms.openlocfilehash: 26b1fc2d2abe2dd8421a8c527add6b9fd4f3f847
 ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 11/21/2019
-ms.locfileid: "74282622"
+ms.locfileid: "74282519"
 ---
-# <a name="breaking-changes-for-migration-from-version-22-to-30"></a>Критические изменения для перехода с версии 2.2 на 3.0
+# <a name="aspnet-core-breaking-changes"></a>Критические изменения ASP.NET Core
 
-Если вы выполняете миграцию с версии 2.2 на версию 3.0 .NET Core, ASP.NET Core или EF Core, ознакомьтесь со следующими разделами, чтобы узнать о критических изменениях, которые могут повлиять на работу приложения:
+Ниже приведен список критических изменений ASP.NET Core по версиям ASP.NET Core. ASP.NET Core предоставляет функции разработки веб-приложений, используемые .NET Core.
 
-## <a name="aspnet-core"></a>ASP.NET Core
+## <a name="aspnet-core-30"></a>ASP.NET Core 3.0
 
 [!INCLUDE[obsolete Antiforgery, CORS, Diagnostics, MVC, and Routing APIs removed](~/includes/core-changes/aspnetcore/3.0/obsolete-apis-removed.md)]
 
@@ -200,63 +202,3 @@ ms.locfileid: "74282622"
 ***
 
 [!INCLUDE[Target framework: .NET Framework not supported](~/includes/core-changes/aspnetcore/3.0/targetfx-netfx-tfm-support.md)]
-
-## <a name="corefx"></a>CoreFX
-
-[!INCLUDE[APIs that report version now report product and not file version](~/includes/core-changes/corefx/version-information-changes.md)]
-
-***
-
-[!INCLUDE[Custom EncoderFallbackBuffer instances cannot fall back recursively](~/includes/core-changes/corefx/custom-encoderfallbackbuffer-cannot-be-recursive.md)]
-
-***
-
-[!INCLUDE[Floating point formatting and parsing behavior changes](~/includes/core-changes/corefx/floating-point-changes.md)]
-
-***
-
-[!INCLUDE[Floating-point parsing operations no longer fail or throw an OverflowException](~/includes/core-changes/corefx/floating-point-parsing-does-not-overflow.md)]
-
-***
-
-[!INCLUDE[InvalidAsynchronousStateException moved to another assembly](~/includes/core-changes/corefx/move-invalidasynchronousstateexception.md)]
-
-***
-
-[!INCLUDE[NET Core 3.0 follows Unicode best practices when replacing ill-formed UTF-8 byte sequences](~/includes/core-changes/corefx/net-core-3-0-follows-unicode-utf8-best-practices.md)]
-
-***
-
-[!INCLUDE[TypeDescriptionProviderAttribute moved to another assembly](~/includes/core-changes/corefx/move-typedescriptionproviderattribute.md)]
-
-***
-
-[!INCLUDE[ZipArchiveEntry no longer handles archives with inconsistent entry sizes](~/includes/core-changes/corefx/ziparchiveentry-and-inconsistent-entry-sizes.md)]
-
-## <a name="cryptography"></a>Шифрование
-
-[!INCLUDE[EnvelopedCms defaults to AES-256 encryption](~/includes/core-changes/cryptography/envelopedcms-defaults-to-aes256.md)]
-
-***
-
-[!INCLUDE[Minimum size for RSAOpenSsl key generation has increased](~/includes/core-changes/cryptography/minimum-rsaopenssl-key-size-change.md)]
-
-***
-
-[!INCLUDE[.NET Core 3.0 prefers OpenSSL 1.1.x to OpenSSL 1.0.x](~/includes/core-changes/cryptography/net-core-3-0-prefers-openssl-1-1-x.md)]
-
-## <a name="entity-framework-core"></a>Entity Framework Core
-
-[Критические изменения в Entity Framework Core](/ef/core/what-is-new/ef-core-3.0/breaking-changes)
-
-## <a name="globalization"></a>Глобализация
-
-[!INCLUDE["C" locale maps to the invariant locale](~/includes/core-changes/globalization/c-locale-maps-to-invariant-locale.md)]
-
-## <a name="networking"></a>Сети
-
-[!INCLUDE[Default value of HttpRequestMessage.Version changed to 1.1](~/includes/core-changes/networking/httprequestmessage-version-change.md)]
-
-## <a name="visual-basic"></a>Visual Basic
-
-[!INCLUDE[vbNewLine is obsolete](~/includes/core-changes/visualbasic/vbnewline-is-obsolete.md)]
