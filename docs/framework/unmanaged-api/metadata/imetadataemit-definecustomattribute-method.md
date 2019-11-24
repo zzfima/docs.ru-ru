@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7dd14854-b756-4401-b167-88ca576dc8f0
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 994e007eabf8b7fdcf5446d905c06eb4ab91bb3f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e6a732b98ae02ba2b273b45921b7de61ab4fd29f
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777677"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74432638"
 ---
 # <a name="imetadataemitdefinecustomattribute-method"></a>Метод IMetaDataEmit::DefineCustomAttribute
-Создает определение настраиваемого атрибута с заданной подписью метаданных, должны быть присоединены к заданного объекта и получает маркер для этого определения настраиваемого атрибута.  
+Creates a definition for a custom attribute with the specified metadata signature, to be attached to the specified object, and gets a token to that custom attribute definition.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -41,26 +39,26 @@ HRESULT DefineCustomAttribute (
   
 ## <a name="parameters"></a>Параметры  
  `tkObj`  
- [in] Токен для владельца элемента.  
+ [in] The token for the owner item.  
   
  `tkType`  
- [in] Токен, который определяет настраиваемый атрибут.  
+ [in] The token that identifies the custom attribute.  
   
  `pCustomAttribute`  
- [in] Указатель на пользовательском атрибуте.  
+ [in] A pointer to the custom attribute.  
   
  `cbCustomAttribute`  
- [in] Число байт в `pCustomAttribute`.  
+ [in] The count of bytes in `pCustomAttribute`.  
   
  `pcv`  
- [out] `mdCustomAttribute` Маркер, назначенный.  
+ [out] The `mdCustomAttribute` token assigned.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** Cor.h  
+ **Header:** Cor.h  
   
- **Библиотека:** Используется как ресурс в MSCorEE.dll  
+ **Library:** Used as a resource in MSCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

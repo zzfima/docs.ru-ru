@@ -14,30 +14,28 @@ helpviewer_keywords:
 ms.assetid: faebf594-67d5-4abf-b9c1-547fd3a1ff87
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4474269688094ea6c81b06659727acfb9c2ad6c3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 47477bb473df8b568844d07bea704df681c9b95d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61940261"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448605"
 ---
 # <a name="isymencunmanagedmethod-interface"></a>Интерфейс ISymENCUnmanagedMethod
-Предоставляет сведения для "Изменить и продолжить".  
+Provides information for the Edit and Continue feature.  
   
 ## <a name="methods"></a>Методы  
   
 |Метод|Описание|  
 |------------|-----------------|  
-|[Метод GetDocumentsForMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-getdocumentsformethod-method.md)|Возвращает документы, которые этот метод имеет строки.|  
-|[Метод GetDocumentsForMethodCount](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-getdocumentsformethodcount-method.md)|Возвращает количество документов, этот метод имеет строки.|  
-|[Метод GetFileNameFromOffset](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-getfilenamefromoffset-method.md)|Получает имя файла для строки, связанной со смещением.|  
-|[Метод GetLineFromOffset](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-getlinefromoffset-method.md)|Получает сведения о строке, связанной со смещением.|  
-|[Метод GetSourceExtentInDocument](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-getsourceextentindocument-method.md)|Получает наименьшую начальную строку и наибольшую конечную строку метода в определенном документе.|  
+|[Метод GetDocumentsForMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-getdocumentsformethod-method.md)|Gets the documents that this method has lines in.|  
+|[Метод GetDocumentsForMethodCount](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-getdocumentsformethodcount-method.md)|Gets the number of documents that this method has lines in.|  
+|[Метод GetFileNameFromOffset](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-getfilenamefromoffset-method.md)|Gets the file name for the line associated with an offset.|  
+|[Метод GetLineFromOffset](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-getlinefromoffset-method.md)|Gets the line information associated with an offset.|  
+|[Метод GetSourceExtentInDocument](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-getsourceextentindocument-method.md)|Gets the smallest start line and largest end line for the method in a specific document.|  
   
 ## <a name="requirements"></a>Требования  
- **Заголовок.** CorSym.idl CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>См. также
 

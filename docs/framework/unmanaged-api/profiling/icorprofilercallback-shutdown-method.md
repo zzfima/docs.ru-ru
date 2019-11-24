@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1ea194f0-a331-4855-a2ce-37393b8e5f84
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 9d63dd911a5f674a3ce0b02ec78de443c7aebf84
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 63e41df8af85d94df068526ef69708687b341e78
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67747170"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446941"
 ---
 # <a name="icorprofilercallbackshutdown-method"></a>Метод ICorProfilerCallback::Shutdown
-Уведомляет профилировщик, что приложение завершает работу.  
+Notifies the profiler that the application is shutting down.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -33,17 +31,17 @@ ms.locfileid: "67747170"
 HRESULT Shutdown();  
 ```  
   
-## <a name="remarks"></a>Примечания  
- Профилировщик кода не может безопасно вызывать методы из [ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md) интерфейс после `Shutdown` вызывается метод. Все вызовы `ICorProfilerInfo` метода приводят к неопределенному поведению после `Shutdown` возвращает метод. Некоторые неизменяемые события по-прежнему возникает после завершения работы; Профилировщик должен позаботиться о возвращать немедленно в том случае, когда это происходит.  
+## <a name="remarks"></a>Заметки  
+ The profiler code cannot safely call methods of the [ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md) interface after the `Shutdown` method is called. Any calls to `ICorProfilerInfo` methods result in undefined behavior after the `Shutdown` method returns. Certain immutable events may still occur after shutdown; the profiler should take care to return immediately when this occurs.  
   
- `Shutdown` Метод будет вызываться только в том случае, если управляемое приложение, в которой производится профилирование запущен как управляемый код (то есть управляется начальный кадр в стеке процесса). Если приложение запущен как неуправляемый код, но позже осуществлен переход в управляемом коде, тем самым создавая экземпляра общеязыковой среды выполнения (CLR), затем `Shutdown` не будет вызван. В этих случаях профилировщик должен включать в собственной библиотеке `DllMain` подпрограмму, которая использует DLL_PROCESS_DETACH значение освободить все ресурсы и выполнить процесса очистки данных, например очистки трассировок на диске и т. д.  
+ The `Shutdown` method will be called only if the managed application that is being profiled started as managed code (that is, the initial frame on the process stack is managed). If the application started as unmanaged code but later jumped into managed code, thereby creating an instance of the common language runtime (CLR), then `Shutdown` will not be called. For these cases, the profiler should include in its library a `DllMain` routine that uses the DLL_PROCESS_DETACH value to free any resources and perform clean-up processing of its data, such as flushing traces to disk and so on.  
   
- Как правило профилировщик должен быть рассчитан неожиданных выключений. Например, процесс может быть приостановлена из-за Win32 `TerminateProcess` метод (объявлен в Winbase.h). В других случаях CLR будет прерывать определенные управляемые потоки (фоновые потоки) без обеспечения надлежащих сообщений об удалении для них.  
+ In general, the profiler must cope with unexpected shutdowns. For example, a process might be halted by Win32's `TerminateProcess` method (declared in Winbase.h). In other cases, the CLR will halt certain managed threads (background threads) without delivering orderly destruction messages for them.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorProf.idl, CorProf.h  
+ **Заголовок:** CorProf.idl, CorProf.h  
   
  **Библиотека:** CorGuids.lib  
   

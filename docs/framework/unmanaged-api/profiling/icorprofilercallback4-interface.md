@@ -14,35 +14,33 @@ helpviewer_keywords:
 ms.assetid: 665f3cfc-cd6f-4880-906c-ea65ad384783
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 3eb1f46900199db65be5d14c56bfc0b6f55bf269
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a3394820f673e35777e1749229d4f8319841ca58
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61598198"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74439393"
 ---
 # <a name="icorprofilercallback4-interface"></a>Интерфейс ICorProfilerCallback4
-Предоставляет методы обратного вызова, среда CLR (CLR) использует для передачи сведений профилировщику.  
+Provides callback methods that the common language runtime (CLR) uses to communicate information to the profiler.  
   
 ## <a name="methods"></a>Методы  
   
 |Метод|Описание|  
 |------------|-----------------|  
-|[Метод GetReJITParameters](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-getrejitparameters-method.md)|Позволяет задать флаги создания альтернативного кода для нового тела метода перекомпилированной профилировщику кода.|  
-|[Метод MovedReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-movedreferences2-method.md)|Сообщает о структуре объектов в куче в результате сжатия сборки мусора.|  
-|[Метод ReJITCompilationFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-rejitcompilationfinished-method.md)|Уведомляет профилировщик об окончании повторной компиляции функции компилятор just-in-time (JIT).|  
-|[Метод ReJITCompilationStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-rejitcompilationstarted-method.md)|Уведомляет профилировщик о начале повторной компиляции функции компилятор just-in-time (JIT).|  
-|[Метод ReJITError](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-rejiterror-method.md)|Сообщает об ошибке при обработке запроса recompile.|  
+|[Метод GetReJITParameters](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-getrejitparameters-method.md)|Allows the code profiler to set alternate code generation flags for a new recompiled method body.|  
+|[Метод MovedReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-movedreferences2-method.md)|Reports the new layout of objects in the heap as a result of a compacting garbage collection.|  
+|[Метод ReJITCompilationFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-rejitcompilationfinished-method.md)|Notifies the profiler that the just-in-time (JIT) compiler has finished the recompilation of a function.|  
+|[Метод ReJITCompilationStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-rejitcompilationstarted-method.md)|Notifies the profiler that the just-in-time (JIT) compiler has started to recompile a function.|  
+|[Метод ReJITError](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-rejiterror-method.md)|Reports an error encountered while processing a recompile request.|  
 |[Метод SurvivingReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-survivingreferences2-method.md)|Предоставляет информацию о структуре объектов в куче в результате сборки мусора без сжатия.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorProf.idl, CorProf.h  
+ **Заголовок:** CorProf.idl, CorProf.h  
   
  **Библиотека:** CorGuids.lib  
   

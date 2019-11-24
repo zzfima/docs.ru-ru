@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: f909ac48-3d8f-49fb-a369-e3d9959151cd
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 1d8cfde8f0eb14919c12d261c3f9f7209365829c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 75d477af7395a9b7d3328b2a5787f810733f3749
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67759459"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448874"
 ---
 # <a name="isymunmanagedmethodgetsequencepoints-method"></a>Метод ISymUnmanagedMethod::GetSequencePoints
-Возвращает все точки следования в методе.  
+Gets all the sequence points within this method.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -43,34 +41,34 @@ HRESULT GetSequencePoints(
   
 ## <a name="parameters"></a>Параметры  
  `cPoints`  
- [in] Объект `ULONG32` , получающий размер `offsets`, `documents`, `lines`, `columns`, `endLines`, и `endColumns` массивов.  
+ [in] A `ULONG32` that receives the size of the `offsets`, `documents`, `lines`, `columns`, `endLines`, and `endColumns` arrays.  
   
  `pcPoints`  
- [out] Указатель на `ULONG32` , получающий длину буфера, необходимый для точек следования.  
+ [out] A pointer to a `ULONG32` that receives the length of the buffer required to contain the sequence points.  
   
  `offsets`  
- [in] Массив, в которой будут храниться промежуточные Microsoft языка MSIL смещений от начала метода для точек следования.  
+ [in] An array in which to store the Microsoft intermediate language (MSIL) offsets from the beginning of the method for the sequence points.  
   
  `documents`  
- [in] Массив, в котором для хранения документов, в которых находятся точки следования.  
+ [in] An array in which to store the documents in which the sequence points are located.  
   
  `lines`  
- [in] Массив для хранения строк в документах, в которых находятся точки следования.  
+ [in] An array in which to store the lines in the documents at which the sequence points are located.  
   
  `columns`  
- [in] Массив, в котором для хранения этих столбцов в документах, в которых находятся точки следования.  
+ [in] An array in which to store the columns in the documents at which the sequence points are located.  
   
  `endLines`  
- [in] Массив строк в документах, в которых заканчиваются точки следования.  
+ [in] The array of lines in the documents at which the sequence points end.  
   
  `endColumns`  
- [in] Массив столбцов в документах, в которых заканчиваются точки следования.  
+ [in] The array of columns in the documents at which the sequence points end.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Требования  
- **Заголовок.** CorSym.idl CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>См. также
 

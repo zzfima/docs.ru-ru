@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 55a2f907-d216-42eb-8f2f-e5d59c2eebd6
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 563a2e19c9c254870b3e767253a276a201e631a6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: dffd4365669da61f7b321110ad663c131ce591e6
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779303"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74439681"
 ---
 # <a name="icorprofilercallback2rootreferences2-method"></a>Метод ICorProfilerCallback2::RootReferences2
-Уведомляет профилировщик о корневыми ссылками, после сборки мусора. Этот метод является расширением [ICorProfilerCallback::RootReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-rootreferences-method.md) метод.  
+Notifies the profiler about root references after a garbage collection has occurred. This method is an extension of the [ICorProfilerCallback::RootReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-rootreferences-method.md) method.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,35 +38,35 @@ HRESULT RootReferences2(
   
 ## <a name="parameters"></a>Параметры  
  `cRootRefs`  
- [in] Число элементов в `rootRefIds`, `rootKinds`, `rootFlags`, и `rootIds` массивов.  
+ [in] The number of elements in the `rootRefIds`, `rootKinds`, `rootFlags`, and `rootIds` arrays.  
   
  `rootRefIds`  
- [in] Массив идентификаторов объектов, каждый из которых ссылается на статический объект или объект в стеке. Элементы в `rootKinds` массива предоставляют сведения для классификации соответствующих элементов в `rootRefIds` массива.  
+ [in] An array of object IDs, each of which references either a static object or an object on the stack. Elements in the `rootKinds` array provide information to classify corresponding elements in the `rootRefIds` array.  
   
  `rootKinds`  
- [in] Массив [COR_PRF_GC_ROOT_KIND](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-root-kind-enumeration.md) значения, указывающие тип корня сборки мусора.  
+ [in] An array of [COR_PRF_GC_ROOT_KIND](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-root-kind-enumeration.md) values that indicate the type of the garbage collection root.  
   
  `rootFlags`  
- [in] Массив [COR_PRF_GC_ROOT_FLAGS](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-root-flags-enumeration.md) значения, описывающие свойства корня сборки мусора.  
+ [in] An array of [COR_PRF_GC_ROOT_FLAGS](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-root-flags-enumeration.md) values that describe the properties of a garbage collection root.  
   
  `rootIds`  
- [in] Массив UINT_PTR значений, которые указывают на целое число, содержащий дополнительные сведения о корне сборки мусора, в зависимости от значения `rootKinds` параметра.  
+ [in] An array of UINT_PTR values that point to an integer that contains additional information about the garbage collection root, depending on the value of the `rootKinds` parameter.  
   
- Тип корня представляет собой стек, корневой является ли идентификатор для функции, содержащую нужную переменную. Если идентификатор корня равен 0, функция является безымянной внутренней среде CLR. Если тип корневого элемента является дескриптором, идентификатор корня соответствует дескриптору сборки мусора. Для других типов корня идентификатор является непрозрачным значением и его следует игнорировать.  
+ If the type of the root is a stack, the root ID is for the function that contains the variable. If that root ID is 0, the function is an unnamed function that is internal to the CLR. If the type of the root is a handle, the root ID is for the garbage collection handle. For the other root types, the ID is an opaque value and should be ignored.  
   
-## <a name="remarks"></a>Примечания  
- `rootRefIds`, `rootKinds`, `rootFlags`, И `rootIds` массивы являются параллельными массивами. То есть `rootRefIds[i]`, `rootKinds[i]`, `rootFlags[i]`, и `rootIds[i]` относятся таким же корнем.  
+## <a name="remarks"></a>Заметки  
+ The `rootRefIds`, `rootKinds`, `rootFlags`, and `rootIds` arrays are parallel arrays. That is, `rootRefIds[i]`, `rootKinds[i]`, `rootFlags[i]`, and `rootIds[i]` all concern the same root.  
   
- Оба `RootReferences` и `RootReferences2` вызываемые для уведомления профилировщика. Обычно профилировщик реализует один метод или другой, но не оба, так как данные, передаваемые `RootReferences2` является надмножеством информации, переданной в `RootReferences`.  
+ Both `RootReferences` and `RootReferences2` are called to notify the profiler. Profilers will normally implement one method or the other, but not both, because the information passed in `RootReferences2` is a superset of that passed in `RootReferences`.  
   
- Возможно, для операций в `rootRefIds` должно быть равно нулю, что означает, что соответствующая ссылка корневой имеет значение null и не ссылается на объект в управляемой куче.  
+ It is possible for entries in `rootRefIds` to be zero, which implies that the corresponding root reference is null and does not refer to an object on the managed heap.  
   
- Идентификаторы объектов, возвращенных `RootReferences2` являются недопустимыми во время обратного вызова, так как сборка мусора может находиться в процессе перемещения объектов из старого адреса в новые адреса. В связи с этим профилировщикам не следует пытаться проверять объекты во время вызова `RootReferences2`. Когда [ICorProfilerCallback2::GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) является именем, все объекты были перемещены в новые расположения и можно безопасно проверить.  
+ The object IDs returned by `RootReferences2` are not valid during the callback itself, because the garbage collection might be in the middle of moving objects from old addresses to new addresses. В связи с этим профилировщикам не следует пытаться проверять объекты во время вызова `RootReferences2`. When [ICorProfilerCallback2::GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) is called, all objects have been moved to their new locations and can be safely inspected.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorProf.idl, CorProf.h  
+ **Заголовок:** CorProf.idl, CorProf.h  
   
  **Библиотека:** CorGuids.lib  
   

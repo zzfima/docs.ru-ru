@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 35bc1188-9767-4141-8038-60ea015b99ac
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f7365deb11bf620fcda43e7f04347cfe4685b5a3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 09b1b81bde486db67acede99e0d67ff85cb01bae
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780242"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447766"
 ---
 # <a name="icorprofilerinfoendinprocdebugging-method"></a>Метод ICorProfilerInfo::EndInprocDebugging
-Завершает сеанс отладки в процессе. Этот метод является устаревшим в .NET Framework версии 2.0.  
+Shuts down an in-process debugging session. This method is obsolete in the .NET Framework version 2.0.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -36,21 +34,21 @@ HRESULT EndInprocDebugging(
   
 ## <a name="parameters"></a>Параметры  
  `dwProfilerContext`  
- [in] Значение, которое идентифицирует сеанс отладки. Это значение должно быть такой же, как получено в [ICorProfilerInfo::BeginInprocDebugging](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-begininprocdebugging-method.md) метод.  
+ [in] A value that identifies the debugging session. This value must be the same as that received in the [ICorProfilerInfo::BeginInprocDebugging](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-begininprocdebugging-method.md) method.  
   
-## <a name="remarks"></a>Примечания  
- Необходимо вызвать [ICorProfilerInfo::BeginInprocDebugging](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-begininprocdebugging-method.md) и `EndInprocDebugging` в один и тот же метод обратного вызова.  
+## <a name="remarks"></a>Заметки  
+ You must call [ICorProfilerInfo::BeginInprocDebugging](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-begininprocdebugging-method.md) and `EndInprocDebugging` within the same callback method.  
   
- Службы отладки среды CLR поддерживается только в процессе отладки в .NET Framework версий 1.0 и 1.1. В процессе отладки включить профилировщик для использования для проверки часть API отладки. Тем не менее согласно с отзывами пользователей в процессе отладки удален из .NET Framework версии 2.0 и заменены набором функциональных возможностей, которые лучше соответствуют API профилирования.  
+ The CLR debugging services supported limited in-process debugging in the .NET Framework versions 1.0 and 1.1. In-process debugging enabled a profiler to use the inspection portions of the debugging API. However, due to customer feedback, in-process debugging has been removed from the .NET Framework in version 2.0, and replaced with a set of functionality that is more in line with the profiling API.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorProf.idl, CorProf.h  
+ **Заголовок:** CorProf.idl, CorProf.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** 1.0  
+ **.NET Framework Version:** 1.0  
   
 ## <a name="see-also"></a>См. также
 

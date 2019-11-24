@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9543b111-5705-40c9-935c-a3ffc7a581aa
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 717682bdcb2409a5f58f040a3ac2eafd73f01f7e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2748460826deb422a3851713db11343209fe449a
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777954"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449551"
 ---
 # <a name="imetadataassemblyimportenummanifestresources-method"></a>Метод IMetaDataAssemblyImport::EnumManifestResources
-Получает указатель на перечислитель для ресурсов, на которые ссылается манифест текущей сборки.  
+Gets a pointer to an enumerator for the resources referenced in the current assembly manifest.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,30 +38,30 @@ HRESULT EnumManifestResources (
   
 ## <a name="parameters"></a>Параметры  
  `phEnum`  
- [in, out] Указатель на перечислитель. Это должно быть значение null значение, если `EnumManifestResources` метод вызывается в первый раз.  
+ [in, out] A pointer to the enumerator. This must be a null value when the `EnumManifestResources` method is called for the first time.  
   
  `rManifestResources`  
- [out] Массив, используемый для хранения `mdManifestResource` токены метаданных.  
+ [out] The array used to store the `mdManifestResource` metadata tokens.  
   
  `cMax`  
- [in] Максимальное число `mdManifestResource` маркеры, которые могут быть помещены в `rManifestResources`.  
+ [in] The maximum number of `mdManifestResource` tokens that can be placed in `rManifestResources`.  
   
  `pcTokens`  
- [out] Число `mdManifestResource` маркеры непосредственно в `rManifestResources`.  
+ [out] The number of `mdManifestResource` tokens actually placed in `rManifestResources`.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
   
 |HRESULT|Описание|  
 |-------------|-----------------|  
-|`S_OK`|`EnumManifestResources` успешно возвращен.|  
-|`S_FALSE`|Существуют маркеры для перечисления отсутствуют. В этом случае `pcTokens` присваивается нулевое значение.|  
+|`S_OK`|`EnumManifestResources` returned successfully.|  
+|`S_FALSE`|There are no tokens to enumerate. In this case, `pcTokens` is set to zero.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** Cor.h  
+ **Header:** Cor.h  
   
- **Библиотека:** Используется как ресурс в MsCorEE.dll  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

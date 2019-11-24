@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5604d21f-e6b7-490e-b469-42122a7568e1
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 2bc3e48185c3bc289a4f7bfd865f69d9c06a720c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2c2eb7d0dc04d813b1ce91fb1acf4b171f244592
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67750511"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445758"
 ---
 # <a name="icorprofilercallbackremotingserverreceivingmessage-method"></a>Метод ICorProfilerCallback::RemotingServerReceivingMessage
-Уведомляет профилировщик, что процесс получил запрос или активации с помощью вызова удаленного метода.  
+Notifies the profiler that the process has received a remote method invocation or activation request.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,26 +35,26 @@ HRESULT RemotingClientSendingMessage(
   
 ## <a name="parameters"></a>Параметры  
  `pCookie`  
- [in] Значение, будет соответствовать со значением в [ICorProfilerCallback::RemotingClientSendingMessage](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientsendingmessage-method.md) в этих условиях:  
+ [in] A value that will correspond with the value provided in [ICorProfilerCallback::RemotingClientSendingMessage](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientsendingmessage-method.md) under these conditions:  
   
-- Файлы cookie для GUID удаленного взаимодействия активны.  
+- Remoting GUID cookies are active.  
   
-- Каналу удалось передать сообщение.  
+- The channel succeeds in transmitting the message.  
   
-- Файлы cookie GUID активны на процесс на стороне клиента.  
+- GUID cookies are active on the client-side process.  
   
- Это позволяет легко создавать пары вызовов удаленного взаимодействия и Создание логического стека вызовов.  
+ This allows easy pairing of remoting calls and the creation of a logical call stack.  
   
  `fIsAsync`  
- [in] Значение, которое является `true` Если вызов выполняется асинхронно; в противном случае — значение `false`.  
+ [in] A value that is `true` if the call is asynchronous; otherwise, `false`.  
   
-## <a name="remarks"></a>Примечания  
- Если запрос сообщения является асинхронным, запрос может обслуживаться произвольным потоком.  
+## <a name="remarks"></a>Заметки  
+ If the message request is asynchronous, the request can be serviced by any arbitrary thread.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorProf.idl, CorProf.h  
+ **Заголовок:** CorProf.idl, CorProf.h  
   
  **Библиотека:** CorGuids.lib  
   

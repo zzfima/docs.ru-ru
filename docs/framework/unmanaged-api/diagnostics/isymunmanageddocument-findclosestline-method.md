@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 628f2a04-e529-407d-841e-3b3da219a9cb
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 8d6be64137b59c84dfadbd7f0e4895eac2fb27e4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0e95255479792c7056bee7ee4f6c507e0f41eb6a
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776798"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449216"
 ---
 # <a name="isymunmanageddocumentfindclosestline-method"></a>Метод ISymUnmanagedDocument::FindClosestLine
-Возвращает ближайшую строку, являющуюся точкой следования, для заданной строки в этом документе, которые могут поддерживаться или не может являться точкой следования.  
+Returns the closest line that is a sequence point, given a line in this document that may or may not be a sequence point.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,13 +35,13 @@ HRESULT FindClosestLine(
   
 ## <a name="parameters"></a>Параметры  
  `line`  
- [in] Строка в этом документе.  
+ [in] A line in this document.  
   
  `pRetVal`  
- [out] Указатель на переменную, которая получает строки.  
+ [out] A pointer to a variable that receives the line.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Значение S_OK, если метод выполнен успешно; в противном случае — код ошибки.  
+ S_OK if the method succeeds; otherwise, an error code.  
   
 ## <a name="see-also"></a>См. также
 

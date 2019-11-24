@@ -7,30 +7,28 @@ helpviewer_keywords:
 - diagnostics symbol store enumerations [.NET Framework]
 - enumerations [.NET Framework debugging]
 ms.assetid: 57d68c70-aba1-4bad-a13f-6d0c55f43746
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d7675e4ade28be1f57e20e655fd7b82603b91f4c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 44ff50994f707dbd7eb9a55c05fe2b4540759aac
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61756186"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448538"
 ---
 # <a name="diagnostics-symbol-store-enumerations"></a>Перечисления хранилища символов диагностики
-В этом разделе описываются неуправляемые перечисления, которые использует API хранилища диагностических символов.  
+This topic describes the unmanaged enumerations that the diagnostics symbol store API uses.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>Содержание  
  [Перечисление CorSymAddrKind](../../../../docs/framework/unmanaged-api/diagnostics/corsymaddrkind-enumeration.md)  
- Указывает тип адреса памяти.  
+ Indicates the type of memory address.  
   
  [Перечисление CorSymSearchPolicyAttributes](../../../../docs/framework/unmanaged-api/diagnostics/corsymsearchpolicyattributes-enumeration.md)  
- Указывает политику, используемую при выполнении поиска для средства чтения символов.  
+ Specifies the policy to be used when doing a search for a symbol reader.  
   
  [Перечисление CorSymVarFlag](../../../../docs/framework/unmanaged-api/diagnostics/corsymvarflag-enumeration.md)  
- Указывает, является ли переменная, созданная компилятором.  
+ Indicates whether a variable is compiler-generated.  
   
  [Перечисление NOTIFY_FILTER](../../../../docs/framework/unmanaged-api/diagnostics/notify-filter-enumeration.md)  
- Определяет обратные вызовы для функций отладчика.  
+ Identifies callbacks for debugger functions.  
   
 ## <a name="related-sections"></a>Связанные разделы  
  [Интерфейсы хранилища символов диагностики](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)  

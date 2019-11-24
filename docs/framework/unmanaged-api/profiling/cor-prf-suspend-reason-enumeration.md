@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 75594833-bed3-47b2-a426-b75c5fe6fbcf
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e084bc957eca9474078ed5ca3aef0276361dbe1b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d2d9ca77e764fe439753f1174a42af5ef80faa59
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67745535"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447705"
 ---
-# <a name="corprfsuspendreason-enumeration"></a>Перечисление COR_PRF_SUSPEND_REASON
-Указывает причину приостановки среды выполнения.  
+# <a name="cor_prf_suspend_reason-enumeration"></a>Перечисление COR_PRF_SUSPEND_REASON
+Indicates the reason that the runtime is suspended.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,26 +38,26 @@ typedef enum {
 } COR_PRF_SUSPEND_REASON;  
 ```  
   
-## <a name="members"></a>Участники  
+## <a name="members"></a>Члены  
   
 |Член|Описание|  
 |------------|-----------------|  
-|`COR_PRF_FIELD_SUSPEND_OTHER`|Среда выполнения приостановлена по неизвестной причине.|  
-|`COR_PRF_FIELD_SUSPEND_FOR_GC`|Среда выполнения приостановлена для обслуживания запросов на сбор мусора.<br /><br /> Обратные вызовы с коллекцией мусора происходят между [ICorProfilerCallback::RuntimeSuspendFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendfinished-method.md) и [ICorProfilerCallback::RuntimeResumeStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimeresumestarted-method.md) обратные вызовы.|  
-|`COR_PRF_FIELD_SUSPEND_FOR_APPDOMAIN_SHUTDOWN`|В приостановленном состоянии, чтобы `AppDomain` можно завершить работу.<br /><br /> Приостановленная среда выполнения, среда выполнения будет определить, какие потоки находятся в `AppDomain` то есть завершите работу и установить их выполнения при возобновлении. Существуют не `AppDomain`-конкретных обратных вызовов во время этой приостановки.|  
-|`COR_PRF_FIELD_SUSPEND_FOR_CODE_PITCHING`|Среда выполнения приостановлена, таким образом, возможности пошагового выполнения.<br /><br /> Пошаговое выполнение кода гарантируется только когда компилятор just-in-time (JIT) является активным с пошагового включена. Код пошагового выполнения обратные вызовы происходят между `ICorProfilerCallback::RuntimeSuspendFinished` и `ICorProfilerCallback::RuntimeResumeStarted` обратные вызовы. **Примечание.**  JIT-Компилятор среды CLR не пошаговое выполнение функций в платформе .NET Framework версии 2.0, поэтому это значение не используется в версии 2.0.|  
-|`COR_PRF_FIELD_SUSPEND_FOR_SHUTDOWN`|Среда выполнения приостановлена, таким образом, чтобы завершить работу. Его необходимо приостановить все потоки для завершения операции.|  
-|`COR_PRF_FIELD_SUSPEND_FOR_INPROC_DEBUGGER`|Среда выполнения приостановлена в процессе отладки.|  
-|`COR_PRF_FIELD_SUSPEND_FOR_GC_PREP`|Среда выполнения приостановлена для подготовки для сборки мусора.|  
-|`COR_PRF_SUSPEND_FOR_REJIT`|Среда выполнения приостановлена для перекомпиляции JIT.|  
+|`COR_PRF_FIELD_SUSPEND_OTHER`|The runtime is suspended for an unspecified reason.|  
+|`COR_PRF_FIELD_SUSPEND_FOR_GC`|The runtime is suspended to service a garbage collection request.<br /><br /> The garbage collection-related callbacks occur between the [ICorProfilerCallback::RuntimeSuspendFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendfinished-method.md) and [ICorProfilerCallback::RuntimeResumeStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimeresumestarted-method.md) callbacks.|  
+|`COR_PRF_FIELD_SUSPEND_FOR_APPDOMAIN_SHUTDOWN`|The runtime is suspended so that an `AppDomain` can be shut down.<br /><br /> While the runtime is suspended, the runtime will determine which threads are in the `AppDomain` that is being shut down and set them to abort when they resume. There are no `AppDomain`-specific callbacks during this suspension.|  
+|`COR_PRF_FIELD_SUSPEND_FOR_CODE_PITCHING`|The runtime is suspended so that code pitching can occur.<br /><br /> Code pitching ensues only when the just-in-time (JIT) compiler is active with code pitching enabled. Code pitching callbacks occur between the `ICorProfilerCallback::RuntimeSuspendFinished` and `ICorProfilerCallback::RuntimeResumeStarted` callbacks. **Note:**  The CLR JIT does not pitch functions in the .NET Framework version 2.0, so this value is not used in 2.0.|  
+|`COR_PRF_FIELD_SUSPEND_FOR_SHUTDOWN`|The runtime is suspended so that it can shut down. It must suspend all threads to complete the operation.|  
+|`COR_PRF_FIELD_SUSPEND_FOR_INPROC_DEBUGGER`|The runtime is suspended for in-process debugging.|  
+|`COR_PRF_FIELD_SUSPEND_FOR_GC_PREP`|The runtime is suspended to prepare for a garbage collection.|  
+|`COR_PRF_SUSPEND_FOR_REJIT`|The runtime is suspended for JIT recompilation.|  
   
-## <a name="remarks"></a>Примечания  
- Все потоки среды выполнения, которые находятся в неуправляемом коде могут продолжать выполняться, пока они попытаются повторно войти в среду выполнения, после чего они также будут приостановлены среду выполнения. Это также относится к новых потоков, выполняющих вход в среду выполнения. Все потоки в среде выполнения либо приостановлен немедленно, если они находятся в такого кода, либо запрос на приостановку по достижении такого кода.  
+## <a name="remarks"></a>Заметки  
+ All runtime threads that are in unmanaged code are permitted to continue running until they try to re-enter the runtime, at which point they will also be suspended until the runtime resumes. This also applies to new threads that enter the runtime. All threads within the runtime are either suspended immediately if they are in interruptible code, or asked to suspend when they do reach interruptible code.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorProf.idl, CorProf.h  
+ **Заголовок:** CorProf.idl, CorProf.h  
   
  **Библиотека:** CorGuids.lib  
   

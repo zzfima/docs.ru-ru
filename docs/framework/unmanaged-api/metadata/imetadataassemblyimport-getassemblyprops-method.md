@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0eaa4aa9-9441-444a-920c-e4b2a2db899e
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ec04588bd1cc21e585d89c734c152a86fb835b15
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c3c57074ae53e2e1d8d41aa04cb6eb6089db58b5
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67772731"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449440"
 ---
 # <a name="imetadataassemblyimportgetassemblyprops-method"></a>Метод IMetaDataAssemblyImport::GetAssemblyProps
-Получает набор свойств для сборки с заданной подписью метаданных.  
+Gets the set of properties for the assembly with the specified metadata signature.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -45,38 +43,38 @@ HRESULT GetAssemblyProps (
   
 ## <a name="parameters"></a>Параметры  
  `mda`  
- [in]. `mdAssembly` Токен метаданных, представляющий сборку, для которого нужно получить свойства.  
+ [in]. The `mdAssembly` metadata token that represents the assembly for which to get the properties.  
   
  `ppbPublicKey`  
- [out] Указатель на открытый ключ или токен метаданных.  
+ [out] A pointer to the public key or the metadata token.  
   
  `pcbPublicKey`  
- [out] Число байтов в возвращаемый открытый ключ.  
+ [out] The number of bytes in the returned public key.  
   
  `pulHashAlgId`  
- [out] Указатель на алгоритм, используемый для хэширования файлов в сборке.  
+ [out] A pointer to the algorithm used to hash the files in the assembly.  
   
  `szName`  
- [out] Простое имя сборки.  
+ [out] The simple name of the assembly.  
   
  `cchName`  
- [in] Размер, в расширенных символах из `szName`.  
+ [in] The size, in wide chars, of `szName`.  
   
  `pchName`  
- [out] Число расширенных символов, фактически возвращенных в `szName`.  
+ [out] The number of wide chars actually returned in `szName`.  
   
  `pMetaData`  
- [out] Указатель на структуру ASSEMBLYMETADATA, которая содержит метаданные сборки.  
+ [out] A pointer to an ASSEMBLYMETADATA structure that contains the assembly metadata.  
   
  `pdwAssemblyFlags`  
- [out] Флаги, описывающие метаданные, применяемые к сборке. Это значение представляет собой сочетание одного или нескольких [CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) значения.  
+ [out] Flags that describe the metadata applied to an assembly. This value is a combination of one or more [CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) values.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** Cor.h  
+ **Header:** Cor.h  
   
- **Библиотека:** Используется как ресурс в MsCorEE.dll  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 4611ee6f-0f05-4d84-91e1-e83d5e7dd7e4
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 7f179e3b01d6c3b34dfa765565a0fc38d0ba867c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 174486a88192bd5ff11074930d5ad3375603f8a5
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67753697"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449467"
 ---
-# <a name="corprfgcrootflags-enumeration"></a>Перечисление COR_PRF_GC_ROOT_FLAGS
-Указывает свойства корня сборки мусора.  
+# <a name="cor_prf_gc_root_flags-enumeration"></a>Перечисление COR_PRF_GC_ROOT_FLAGS
+Indicates a property of a garbage collection root.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,22 +35,22 @@ typedef enum {
 } COR_PRF_GC_ROOT_FLAGS;  
 ```  
   
-## <a name="members"></a>Участники  
+## <a name="members"></a>Члены  
   
 |Член|Описание|  
 |------------|-----------------|  
-|`COR_PRF_GC_ROOT_PINNING`|Корневой предотвращает сборку мусора перемещать объект.|  
-|`COR_PRF_GC_ROOT_WEAKREF`|Корень не предотвращает сбор мусора.|  
-|`COR_PRF_GC_ROOT_INTERIOR`|Корень ссылается на поле объекта, а не сам объект.|  
-|`COR_PRF_GC_ROOT_REFCOUNTED`|Корневой предотвращает сбор мусора, если счетчик ссылок объекта, не определенное значение.|  
+|`COR_PRF_GC_ROOT_PINNING`|The root prevents a garbage collection from moving the object.|  
+|`COR_PRF_GC_ROOT_WEAKREF`|The root does not prevent garbage collection.|  
+|`COR_PRF_GC_ROOT_INTERIOR`|The root refers to a field of the object rather than the object itself.|  
+|`COR_PRF_GC_ROOT_REFCOUNTED`|The root prevents garbage collection if the reference count of the object is a certain value.|  
   
-## <a name="remarks"></a>Примечания  
- `COR_PRF_GC_ROOT_FLAGS` Это битовая маска, Дополнительные сведения о специальных корней. Однако не все корни являются особыми. Например некоторые корни не являются слабые ссылки, внутренних указателей, закрепленные или подсчетом ссылок. Для таких корней есть флаги для передачи. Таким образом, методы, использующие это перечисление, такие как [ICorProfilerCallback2::RootReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md) метода send 0 для битовой маски флагов, указывающее, что все флаги выключены.  
+## <a name="remarks"></a>Заметки  
+ `COR_PRF_GC_ROOT_FLAGS` is a bitmask that provides additional information about special roots. However, not all roots are special. For example, some roots are not weak references, interior pointers, pinned, or reference-counted. For such roots, there are no flags to convey. Therefore, methods that use this enumeration, such as the [ICorProfilerCallback2::RootReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md) method, send 0 for the flags bitmask, indicating that all flags are turned off.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorProf.idl, CorProf.h  
+ **Заголовок:** CorProf.idl, CorProf.h  
   
  **Библиотека:** CorGuids.lib  
   

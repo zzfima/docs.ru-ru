@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 67fefd89-28d6-4588-84ea-dc7a5870e014
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 89d2f9c9cfa7d4c2498710b36796f3e2605bcbf0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: bb9fcc4c6e1fd495e95caa1d2200d9fd516a7748
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67763652"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74444277"
 ---
 # <a name="coiniticor-enumeration"></a>Перечисление COINITICOR
-Задает константы, используемые [CoInitializeCor](../../../../docs/framework/unmanaged-api/hosting/coinitializecor-function.md) при инициализации среда CLR.  
+Specifies constants used by [CoInitializeCor](../../../../docs/framework/unmanaged-api/hosting/coinitializecor-function.md) when it initializes the common language runtime.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -35,18 +33,18 @@ typedef enum tagCOINITCOR
 } COINITICOR;  
 ```  
   
-## <a name="members"></a>Участники  
+## <a name="members"></a>Члены  
   
 |Член|Описание|  
 |------------|-----------------|  
-|`COINITCOR`|Указывает режим инициализации по умолчанию.|  
+|`COINITCOR`|Indicates the default initialization mode.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** Cor.h  
+ **Header:** Cor.h  
   
- **Библиотека:** Включена как ресурс в MsCorEE.dll  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

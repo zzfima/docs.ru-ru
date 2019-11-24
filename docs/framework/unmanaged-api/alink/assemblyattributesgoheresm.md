@@ -1,5 +1,5 @@
 ---
-title: Класс AssemblyAttributesGoHereSM (System.Runtime.CompilerServices)
+title: AssemblyAttributesGoHereSM Class (System.Runtime.CompilerServices)
 ms.date: 03/30/2017
 api_name:
 - System.Runtime.CompilerServices.AssemblyAttributesGoHereSM
@@ -15,16 +15,14 @@ helpviewer_keywords:
 ms.assetid: 4cf9bf39-1527-49e0-a0e9-55e7a018bf66
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 01b156ed9c318e71a408ea10f2744911a85faedc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 379ba20ebf675bec71e6e5f5bcfc0dc2fbd1f92c
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61790342"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446608"
 ---
-# <a name="assemblyattributesgoheresm-class"></a>AssemblyAttributesGoHereSM-класс
+# <a name="assemblyattributesgoheresm-class"></a>AssemblyAttributesGoHereSM Class
 
 Используется ALink как заполнитель для хранения сведений о пользовательских атрибутах.
 
@@ -34,13 +32,13 @@ ms.locfileid: "61790342"
 internal sealed class AssemblyAttributesGoHereSM
 ```
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
 Ссылки на этот тип можно включать в модули NETMODULE, источник которых содержат пользовательские атрибуты сборки. При построении манифеста сборки из одного или нескольких файлов, содержащих ссылки на эти NETMODULE, ALink использует сведения, подключенные к этим ссылкам, для выдачи фактических пользовательских атрибутов. Таким образом, экземпляр этого типа никогда не создается, а ссылки на него используются только как часть процесса сборки и бесполезны в окончательной сборке.
 
 Ссылки на этот тип указывают пользовательские атрибуты многократного использования, связанные с безопасностью.
 
-Эти типы помечены как «внутренние» в .NET Framework и находятся в папке <xref:System.Runtime.CompilerServices> пространства имен.
+These types are marked "internal" within the .NET Framework and are located in the <xref:System.Runtime.CompilerServices> namespace.
 
 ## <a name="requirements"></a>Требования
 

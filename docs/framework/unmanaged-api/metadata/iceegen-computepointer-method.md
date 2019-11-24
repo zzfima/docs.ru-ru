@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: b6b95c04-0f2c-4fcc-a8bc-3b1dcbdba731
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 5741ba1b4564a703ff57b45c728bb9efac0bb35a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 01be6c30e16e4abdd6002fc8207b33a9c76a2eef
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782010"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448753"
 ---
 # <a name="iceegencomputepointer-method"></a>Метод ICeeGen::ComputePointer
-Определяет буфер для заданного раздела кода.  
+Determines the buffer for the specified code section.  
   
- Этот метод является устаревшим и не должны использоваться.  
+ This method is obsolete and should not be used.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -41,20 +39,20 @@ HRESULT ComputePointer (
   
 ## <a name="parameters"></a>Параметры  
  `section`  
- [in] В разделе кода, для которого необходимо вернуть в буфер.  
+ [in] The code section for which to return a buffer.  
   
  `RVA`  
- [in] Относительный виртуальный адрес метода, для которого необходимо получить указатель.  
+ [in] The relative virtual address of the method for which to get a pointer.  
   
  `lpBuffer`  
- [out] Указатель на возвращаемый буфер.  
+ [out] A pointer to the returned buffer.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** Cor.h  
+ **Header:** Cor.h  
   
- **Библиотека:** Используется как ресурс в MsCorEE.dll  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

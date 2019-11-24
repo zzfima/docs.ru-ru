@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: f9a80f1a-55af-4459-b095-8441aae16119
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 2ae87dd4538a9a8e88591f498c0ce77b51bfa852
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e6c3c9b842bd823e8975661964480fd801779b2d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781620"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74450132"
 ---
 # <a name="correftodefcheck-enumeration"></a>Перечисление CorRefToDefCheck
 Задает флаги для элемента управления, на который ссылаются элементы, преобразуемые в их определения для оптимизации кода.  
@@ -38,20 +36,20 @@ typedef enum CorRefToDefCheck {
 } CorRefToDefCheck;  
 ```  
   
-## <a name="members"></a>Участники  
+## <a name="members"></a>Члены  
   
 |Член|Описание|  
 |------------|-----------------|  
-|`MDRefToDefDefault`|Указывает, что тип ссылки и ссылки на член должно быть преобразовано в определения. Это значение по умолчанию (`MDTypeRefToDef` &#124; `MDMemberRefToDef`).|  
-|`MDRefToDefAll`|Указывает, что все элементы, на которые имеются ссылки, должны преобразовываться к определениям.|  
-|`MDRefToDefNone`|Указывает, что не ссылаются элементы должны быть преобразованы в определения.|  
-|`MDTypeRefToDef`|Указывает, что только ссылки на тип должно быть преобразовано в тип определения.|  
-|`MDMemberRefToDef`|Указывает, что только ссылки на член должно быть преобразовано в определения. То есть ссылки на элементы должны преобразовываться в определения метода или определения полей.|  
+|`MDRefToDefDefault`|Specifies that type references and member references should be converted to definitions. This is the default value (`MDTypeRefToDef` &#124; `MDMemberRefToDef`).|  
+|`MDRefToDefAll`|Specifies that all referenced items should be converted to definitions.|  
+|`MDRefToDefNone`|Specifies that no referenced items should be converted to definitions.|  
+|`MDTypeRefToDef`|Specifies that only type references should be converted to type definitions.|  
+|`MDMemberRefToDef`|Specifies that only member references should be converted to definitions. That is, member references should be converted to either method definitions or field definitions.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorHdr.h  
+ **Header:** CorHdr.h  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

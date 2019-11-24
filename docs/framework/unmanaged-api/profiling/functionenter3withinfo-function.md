@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 277c3344-d0cb-431e-beae-eb1eeeba8eea
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: cf16563e6d5fef3a743e802166173004a857dd0e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 86b1c8b3f5bd88b216c59f5cc6846f83f3c094ee
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67745832"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74440749"
 ---
 # <a name="functionenter3withinfo-function"></a>Функция FunctionEnter3WithInfo
-Уведомляет профилировщик о том, что элемент управления передается в функцию и предоставляет маркер, который может быть передан [метод ICorProfilerInfo3::GetFunctionEnter3Info](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctionenter3info-method.md) для извлечения кадра стека и функция аргументов.  
+Notifies the profiler that control is being passed to a function, and provides a handle that can be passed to the [ICorProfilerInfo3::GetFunctionEnter3Info method](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctionenter3info-method.md) to retrieve the stack frame and function arguments.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -36,30 +34,30 @@ void __stdcall FunctionEnter3WithInfo(
   
 ## <a name="parameters"></a>Параметры  
  `functionIDOrClientID`  
- [in] Идентификатор функции, в которую передается элемента управления.  
+ [in] The identifier of the function to which control is passed.  
   
  `eltInfo`  
- [in] Непрозрачный дескриптор, представляющий сведения об указанном кадре стека. Этот дескриптор допустим только во время обратного вызова, к которому он передается.  
+ [in] Непрозрачный дескриптор, представляющий сведения об указанном кадре стека. This handle is valid only during the callback to which it is passed.  
   
-## <a name="remarks"></a>Примечания  
- `FunctionEnter3WithInfo` Метод обратного вызова Уведомляет профилировщик, как функции, называются, а также позволяет профилировщику использовать [метод ICorProfilerInfo3::GetFunctionEnter3Info](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctionenter3info-method.md) для проверки значения аргументов. Для доступа к информации аргумент `COR_PRF_ENABLE_FUNCTION_ARGS` флаг должно иметь значение. Можно использовать профилировщик [метод ICorProfilerInfo::SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) установить флаги событий, а затем использовать [метод ICorProfilerInfo3::SetEnterLeaveFunctionHooks3WithInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-setenterleavefunctionhooks3withinfo-method.md) для регистрации вашей Реализация этой функции.  
+## <a name="remarks"></a>Заметки  
+ The `FunctionEnter3WithInfo` callback method notifies the profiler as functions are called, and enables the profiler to use the [ICorProfilerInfo3::GetFunctionEnter3Info method](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctionenter3info-method.md) to inspect argument values. To access argument information, the `COR_PRF_ENABLE_FUNCTION_ARGS` flag has to be set. The profiler can use the [ICorProfilerInfo::SetEventMask method](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) to set the event flags, and then use the [ICorProfilerInfo3::SetEnterLeaveFunctionHooks3WithInfo method](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-setenterleavefunctionhooks3withinfo-method.md) to register your implementation of this function.  
   
- `FunctionEnter3WithInfo` Функция является обратным вызовом; это необходимо реализовать. В реализации должен использоваться `__declspec(naked)` атрибут класса хранения.  
+ The `FunctionEnter3WithInfo` function is a callback; you must implement it. The implementation must use the `__declspec(naked)` storage-class attribute.  
   
- Ядро выполнения не сохраняет значения регистров перед вызовом этой функции.  
+ The execution engine does not save any registers before calling this function.  
   
-- При входе необходимо сохранить все регистры, которые вы используете, включая те, в единицах с плавающей запятой (FPU).  
+- On entry, you must save all registers that you use, including those in the floating-point unit (FPU).  
   
-- При выходе необходимо восстановить стек путем выталкивания из всех параметров, которые были отправлены вызывающим кодом.  
+- On exit, you must restore the stack by popping off all the parameters that were pushed by its caller.  
   
- Реализация `FunctionEnter3WithInfo` не должен блокироваться, поскольку это приведет к задержке сборки мусора. Реализация не должны в сбор мусора, так как стек может находиться в состоянии коллекции с поддержкой сборки мусора. При попытке сбора мусора, среда выполнения будет блокироваться до `FunctionEnter3WithInfo` возвращает.  
+ The implementation of `FunctionEnter3WithInfo` should not block, because it will delay garbage collection. The implementation should not attempt a garbage collection, because the stack may not be in a garbage collection-friendly state. If a garbage collection is attempted, the runtime will block until `FunctionEnter3WithInfo` returns.  
   
- `FunctionEnter3WithInfo` Функция не должна вызов управляемого кода или инициировать распределение управляемой памяти любым способом.  
+ The `FunctionEnter3WithInfo` function must not call into managed code or cause a managed memory allocation in any way.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorProf.idl  
+ **Header:** CorProf.idl  
   
  **Библиотека:** CorGuids.lib  
   

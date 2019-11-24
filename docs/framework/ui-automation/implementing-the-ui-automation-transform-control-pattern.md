@@ -6,16 +6,16 @@ helpviewer_keywords:
 - Transform control pattern
 - UI Automation, Transform control pattern
 ms.assetid: 5f49d843-5845-4800-9d9c-56ce0d146844
-ms.openlocfilehash: fbcb7b274144281d88d8fb36b9cb55043658a6a9
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: c0a46580ad2673b56fefe7228f2549a2e19d2c14
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71043110"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447053"
 ---
 # <a name="implementing-the-ui-automation-transform-control-pattern"></a>Реализация шаблона элемента управления преобразованиями модели автоматизации пользовательского интерфейса
 > [!NOTE]
-> Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Последние сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]см. в разделе [API службы автоматизации Windows: Модель автоматизации](https://go.microsoft.com/fwlink/?LinkID=156746)пользовательского интерфейса.  
+> Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Последние сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]см. в разделе [API автоматизации Windows. Автоматизация пользовательского интерфейса](/windows/win32/winauto/entry-uiauto-win32).  
   
  В этом разделе приводятся рекомендации и соглашения для реализации <xref:System.Windows.Automation.Provider.ITransformProvider>, включая сведения о свойствах, методах и событиях. Ссылки на дополнительные материалы перечислены в конце раздела.  
   
@@ -39,9 +39,9 @@ ms.locfileid: "71043110"
   
 |Обязательные члены|Тип члена|Примечания|  
 |----------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.ITransformProvider.CanMove%2A>|Свойство.|Отсутствуют|  
-|<xref:System.Windows.Automation.Provider.ITransformProvider.CanResize%2A>|Свойство.|Отсутствуют|  
-|<xref:System.Windows.Automation.Provider.ITransformProvider.CanRotate%2A>|Свойство.|Отсутствуют|  
+|<xref:System.Windows.Automation.Provider.ITransformProvider.CanMove%2A>|свойство;|Отсутствуют|  
+|<xref:System.Windows.Automation.Provider.ITransformProvider.CanResize%2A>|свойство;|Отсутствуют|  
+|<xref:System.Windows.Automation.Provider.ITransformProvider.CanRotate%2A>|свойство;|Отсутствуют|  
 |<xref:System.Windows.Automation.Provider.ITransformProvider.Move%2A>|Метод|Отсутствуют|  
 |<xref:System.Windows.Automation.Provider.ITransformProvider.Resize%2A>|Метод|Отсутствуют|  
 |<xref:System.Windows.Automation.Provider.ITransformProvider.Rotate%2A>|Метод|Отсутствуют|  
@@ -54,9 +54,9 @@ ms.locfileid: "71043110"
   
 |Тип исключения|Условие|  
 |--------------------|---------------|  
-|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.ITransformProvider.Move%2A><br /><br /> — Если <xref:System.Windows.Automation.TransformPatternIdentifiers.CanMoveProperty> имеет значение false.|  
-|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.ITransformProvider.Resize%2A><br /><br /> — Если <xref:System.Windows.Automation.TransformPatternIdentifiers.CanResizeProperty> имеет значение false.|  
-|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.ITransformProvider.Rotate%2A><br /><br /> — Если <xref:System.Windows.Automation.TransformPatternIdentifiers.CanRotateProperty> имеет значение false.|  
+|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.ITransformProvider.Move%2A><br /><br /> -   If the <xref:System.Windows.Automation.TransformPatternIdentifiers.CanMoveProperty> is false.|  
+|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.ITransformProvider.Resize%2A><br /><br /> -   If the <xref:System.Windows.Automation.TransformPatternIdentifiers.CanResizeProperty> is false.|  
+|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.ITransformProvider.Rotate%2A><br /><br /> -   If the <xref:System.Windows.Automation.TransformPatternIdentifiers.CanRotateProperty> is false.|  
   
 ## <a name="see-also"></a>См. также
 

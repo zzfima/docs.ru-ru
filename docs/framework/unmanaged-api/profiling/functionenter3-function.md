@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: ef782c53-dae7-4990-b4ad-fddb1e690d4e
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 24c9077863ada4d1208f29755a70d2cf8abc1208
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: fd224279b3df6c9e8e55cd81ebfbf2e5ea2428d5
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782702"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74440777"
 ---
 # <a name="functionenter3-function"></a>Функция FunctionEnter3
-Уведомляет профилировщик, что элемент управления передается в функцию.  
+Notifies the profiler that control is being passed to a function.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -34,23 +32,23 @@ void __stdcall FunctionEnter3(FunctionOrRemappedID functionOrRemappedID);
   
 ## <a name="parameters"></a>Параметры  
  `functionOrRemappedID`  
- [in] Идентификатор функции, в которую передается элемента управления.  
+ [in] The identifier of the function to which control is passed.  
   
-## <a name="remarks"></a>Примечания  
- `FunctionEnter3` Функцию обратного вызова Уведомляет профилировщик, как функции вызываются, но не поддержки проверку аргументов. Используйте [метод ICorProfilerInfo3::SetEnterLeaveFunctionHooks3](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-setenterleavefunctionhooks3-method.md) для регистрации вашей реализации этой функции.  
+## <a name="remarks"></a>Заметки  
+ The `FunctionEnter3` callback function notifies the profiler as functions are being called, but does not support argument inspection. Use the [ICorProfilerInfo3::SetEnterLeaveFunctionHooks3 method](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-setenterleavefunctionhooks3-method.md) to register your implementation of this function.  
   
- `FunctionEnter3` Функция является обратным вызовом; это необходимо реализовать. В реализации должен использоваться `__declspec(naked)` атрибут класса хранения.  
+ The `FunctionEnter3` function is a callback; you must implement it. The implementation must use the `__declspec(naked)` storage-class attribute.  
   
- Ядро выполнения не сохраняет значения регистров перед вызовом этой функции.  
+ The execution engine does not save any registers before calling this function.  
   
-- При входе необходимо сохранить все регистры, которые вы используете, включая те, в единицах с плавающей запятой (FPU).  
+- On entry, you must save all registers that you use, including those in the floating-point unit (FPU).  
   
-- При выходе необходимо восстановить стек путем выталкивания из всех параметров, которые были отправлены вызывающим кодом.  
+- On exit, you must restore the stack by popping off all the parameters that were pushed by its caller.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorProf.idl  
+ **Header:** CorProf.idl  
   
  **Библиотека:** CorGuids.lib  
   

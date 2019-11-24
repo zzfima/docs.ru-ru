@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 31214d3a-715e-49af-92b3-0fd11e4f218a
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b89409a08ed2dff0111b3b6e552960ac78a5882e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 577a4f6bb8315cfb1cb462703dd0cb9b23b60704
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781524"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74434053"
 ---
 # <a name="imetadatatablesgetcodedtokeninfo-method"></a>Метод IMetaDataTables::GetCodedTokenInfo
-Получает указатель на массив токенов, связанных с заданного индекса строки.  
+Gets a pointer to an array of tokens associated with the specified row index.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,23 +38,23 @@ HRESULT GetCodedTokenInfo (
   
 ## <a name="parameters"></a>Параметры  
  `ixCdTkn`  
- [in] Вид закодированный токен для возврата.  
+ [in] The kind of coded token to return.  
   
  `pcTokens`  
- [out] Указатель на длину `ppTokens`.  
+ [out] A pointer to the length of `ppTokens`.  
   
  `ppTokens`  
- [out] Указатель на указатель на массив, содержащий список возвращаемые метки.  
+ [out] A pointer to a pointer to an array that contains the list of returned tokens.  
   
  `ppName`  
- [out] Указатель на указатель на имя маркера в `ixCdTkn`.  
+ [out] A pointer to a pointer to the name of the token at `ixCdTkn`.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** Cor.h  
+ **Header:** Cor.h  
   
- **Библиотека:** Используется как ресурс в MsCorEE.dll  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

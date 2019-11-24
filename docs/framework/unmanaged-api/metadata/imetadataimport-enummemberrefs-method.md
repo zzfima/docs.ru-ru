@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: e97c97a6-6e4f-41f5-9af1-9b3cf3bdbd6b
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 444c892026f9b6de12255ebdcda829db82c9bfdb
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 743b6bed1a5d62f5214b8366b1a3c6e4ebecb98b
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780445"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74441719"
 ---
 # <a name="imetadataimportenummemberrefs-method"></a>Метод IMetaDataImport::EnumMemberRefs
 Перечисляет токены MemberRef, представляющие члены указанного типа.  
@@ -41,33 +39,33 @@ HRESULT EnumMemberRefs (
   
 ## <a name="parameters"></a>Параметры  
  `phEnum`  
- [in, out] Указатель на перечислитель.  
+ [in, out] A pointer to the enumerator.  
   
  `tkParent`  
- [in] Токен TypeDef, TypeRef, MethodDef или ModuleRef, представляющий тип, члены которого необходимо перечислить.  
+ [in] A TypeDef, TypeRef, MethodDef, or ModuleRef token for the type whose members are to be enumerated.  
   
  `rMemberRefs`  
- [out] Массив, используемый для хранения токены MemberRef.  
+ [out] The array used to store MemberRef tokens.  
   
  `cMax`  
  [in] Максимальный размер массива `rMemberRefs`.  
   
  `pcTokens`  
- [out] Фактическое число токены MemberRef, возвращаемых в `rMemberRefs`.  
+ [out] The actual number of MemberRef tokens returned in `rMemberRefs`.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
   
 |HRESULT|Описание|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMemberRefs` успешно возвращен.|  
-|`S_FALSE`|Существуют маркеры MemberRef для перечисления отсутствуют. В этом случае `pcTokens` имеет значение нуль.|  
+|`S_OK`|`EnumMemberRefs` returned successfully.|  
+|`S_FALSE`|There are no MemberRef tokens to enumerate. In that case, `pcTokens` is to zero.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** Cor.h  
+ **Header:** Cor.h  
   
- **Библиотека:** Включена как ресурс в MsCorEE.dll  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

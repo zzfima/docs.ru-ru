@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9cd2fe75-408a-400f-a6b1-9979624a2fe2
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 5b847cbbdf1bfccd91ca212dadd1fcd82cc12c82
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 55927167f8b61ade4ef479b30b85ad8d82be8025
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67768196"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445923"
 ---
 # <a name="icorprofilercallbackmoduleloadstarted-method"></a>Метод ICorProfilerCallback::ModuleLoadStarted
-Уведомляет профилировщик о загрузке модуля.  
+Notifies the profiler that a module is being loaded.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -36,15 +34,15 @@ HRESULT ModuleLoadStarted(
   
 ## <a name="parameters"></a>Параметры  
  `moduleId`  
- [in] Идентификатор модуля, который загружается.  
+ [in] The ID of the module that is being loaded.  
   
-## <a name="remarks"></a>Примечания  
- Значение `moduleId` не является допустимым для информационного запроса до [ICorProfilerCallback::ModuleLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md) вызывается метод.  
+## <a name="remarks"></a>Заметки  
+ The value of `moduleId` is not valid for an information request until the [ICorProfilerCallback::ModuleLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md) method is called.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorProf.idl, CorProf.h  
+ **Заголовок:** CorProf.idl, CorProf.h  
   
  **Библиотека:** CorGuids.lib  
   

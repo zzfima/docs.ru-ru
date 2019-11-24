@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0bed524e-cc48-4bf0-b9fa-25d665e63ddb
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ffc4d5a1e6b8f1acc7603e9c2e01216e3188989e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c7e9d2fe94c33127d8b105333ad6dac9d6cc5af6
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67751304"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446375"
 ---
 # <a name="isymunmanagedscopegetchildren-method"></a>Метод ISymUnmanagedScope::GetChildren
-Возвращает дочерние элементы данной области.  
+Gets the children of this scope.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,19 +37,19 @@ HRESULT GetChildren(
   
 ## <a name="parameters"></a>Параметры  
  `cChildren`  
- [in] Объект `ULONG32` указывает размер `children` массива.  
+ [in] A `ULONG32` that indicates the size of the `children` array.  
   
  `pcChildren`  
- [out] Указатель на `ULONG32` , принимает размер буфера, требуемого для хранения дочерних элементов.  
+ [out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the children.  
   
  `children`  
- [out] Возвращаемый массив дочерних элементов.  
+ [out] The returned array of children.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Требования  
- **Заголовок.** CorSym.idl CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>См. также
 

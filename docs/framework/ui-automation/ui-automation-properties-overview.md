@@ -5,16 +5,16 @@ helpviewer_keywords:
 - UI Automation, properties
 - properties, UI Automation
 ms.assetid: a6c31d7b-b33e-49b3-b5c1-31a345f9b7c8
-ms.openlocfilehash: 59d65601a37c9aba63708748a82fd5e85261b75b
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 2f96f3c7261882af58cd10038d729c4e723d6fa0
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71042145"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447950"
 ---
 # <a name="ui-automation-properties-overview"></a>Общие сведения о свойствах автоматизированного пользовательского интерфейса
 > [!NOTE]
-> Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Последние сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]см. в разделе [API службы автоматизации Windows: Модель автоматизации](https://go.microsoft.com/fwlink/?LinkID=156746)пользовательского интерфейса.  
+> Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Последние сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]см. в разделе [API автоматизации Windows. Автоматизация пользовательского интерфейса](/windows/win32/winauto/entry-uiauto-win32).  
   
  Поставщики автоматизации пользовательского интерфейса предоставляют свойства в элементах [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] . Эти свойства позволяют клиентским приложениям модели автоматизации пользовательского интерфейса обнаруживать сведения о частях [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)], особенно элементах управления, включая статические и динамические данные.  
   
@@ -26,11 +26,11 @@ ms.locfileid: "71042145"
   
 <a name="Property_Identifiers"></a>   
 ## <a name="property-identifiers"></a>Идентификаторы свойств  
- Каждое свойство определяется номером и именем. Имена свойств используются только для отладки и диагностики. Поставщики используют числовые идентификаторы для идентификации входящих запросов свойств. Однако клиентские приложения используют для идентификации свойств, которые им требуется получить, только ссылку <xref:System.Windows.Automation.AutomationProperty>, которая включает номер и имя.  
+ Каждое свойство определяется номером и именем. Имена свойств используются только для отладки и диагностики. Providers use the numeric IDs to identify incoming property requests. Однако клиентские приложения используют для идентификации свойств, которые им требуется получить, только ссылку <xref:System.Windows.Automation.AutomationProperty>, которая включает номер и имя.  
   
  Объекты<xref:System.Windows.Automation.AutomationProperty> , представляющие конкретные свойства, доступны как поля в различных классах. По соображениям безопасности поставщики автоматизации пользовательского интерфейса получают эти объекты из отдельного набора классов, содержащихся в Uiautomationtypes.dll.  
   
- В следующей таблице перечислены свойства классов, содержащих <xref:System.Windows.Automation.AutomationProperty>идентификаторы.  
+ The following table categorizes properties by the classes that contain the <xref:System.Windows.Automation.AutomationProperty>IDs.  
   
 |Виды свойств|Клиенты получают идентификаторы из|Поставщики получают идентификаторы из|  
 |-------------------------|--------------------------|----------------------------|  
@@ -53,7 +53,7 @@ ms.locfileid: "71042145"
   
 <a name="Properties_by_Category"></a>   
 ## <a name="properties-by-category"></a>Свойства по категориям  
- В следующих таблицах указаны свойства, идентификаторы которых находятся в <xref:System.Windows.Automation.AutomationElement> и <xref:System.Windows.Automation.AutomationElementIdentifiers>. Эти свойства являются общими для всех элементов управления. Почти все из них, скорее всего, будут статическими во время существования приложения поставщика; большинство динамических свойств связано с шаблонами элементов управления.  
+ The following tables categorize the properties whose IDs are found in <xref:System.Windows.Automation.AutomationElement> and <xref:System.Windows.Automation.AutomationElementIdentifiers>. Эти свойства являются общими для всех элементов управления. Почти все из них, скорее всего, будут статическими во время существования приложения поставщика; большинство динамических свойств связано с шаблонами элементов управления.  
   
  В столбце **Доступ к свойству** перечислены другие методы доступа для каждого свойства, в дополнение к <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A> и <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>. Дополнительные сведения о получении свойств в клиентском приложении см. в разделе [UI Automation Properties for Clients](ui-automation-properties-for-clients.md).  
   

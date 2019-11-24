@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 864f1267-d267-4696-8df7-1f83f8444d6f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 5898f2f0900b0bbe392d4dbaa8fc1db5e0e45c9e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 98183ed02f8821b7c40852de2d040775d30f2518
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67767006"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74443743"
 ---
 # <a name="cordeclsecurity-enumeration"></a>Перечисление CorDeclSecurity
 Указывает действия безопасности, которые можно выполнить с помощью декларативной безопасности.  
@@ -56,7 +54,7 @@ typedef enum CorDeclSecurity {
 } CorDeclSecurity;  
 ```  
   
-## <a name="members"></a>Участники  
+## <a name="members"></a>Члены  
   
 |Член|Описание|  
 |------------|-----------------|  
@@ -64,14 +62,14 @@ typedef enum CorDeclSecurity {
 |`dclActionNil`|Зарезервировано.|  
 |`dclRequest`|Зарезервировано.|  
 |`dclDemand`|Всем вызывающим объектам выше в стеке вызовов должно быть предоставлено разрешение, заданное текущим объектом разрешений.|  
-|`dclAssert`|Вызывающий код может получить доступ к ресурсу, определяемому текущим объектом разрешения, даже если вызывающим объектам выше в стеке вызовов не предоставлено разрешение на доступ к ресурсу|  
-|`dclDeny`|Для доступа к ресурсу, указанному текущим объектом разрешения запрещен вызывающим объектам, даже если они имеют разрешения на доступ к нему.|  
+|`dclAssert`|The calling code can access the resource identified by the current permission object, even if callers higher in the stack have not been granted permission to access the resource|  
+|`dclDeny`|The ability to access the resource specified by the current permission object is denied to callers, even if they have been granted permission to access it.|  
 |`dclPermitOnly`|Доступ можно получить только к ресурсам, указанным данным объектом разрешения, даже если коду предоставлено разрешение на доступ к другим ресурсам.|  
-|`dclLinktimeCheck`|Непосредственный вызывающий оператор является обязательным, необходимо предоставить указанное разрешение для указанного периода времени.|  
-|`dclInheritanceCheck`|Производного класса наследующему другой класс или переопределяющему метод, требуется получить указанное разрешение.|  
-|`dclRequestMinimum`|Вызывающий объект может запросить минимальные разрешения, необходимые для выполнения кода. Это действие может использоваться только в пределах сборки.|  
-|`dclRequestOptional`|Вызывающий объект может запросить дополнительные разрешения, которые не являются обязательными (не требуется для запуска). Этот запрос неявно отклоняет все прочие разрешения, не запрошенные специально. Это действие может использоваться только в пределах сборки.|  
-|`dclRequestRefuse`|Не получат запрос вызывающей стороны для разрешения, которые могут быть неправильно использованы. Это действие может использоваться только в пределах сборки.|  
+|`dclLinktimeCheck`|The immediate caller is required to have been granted the specified permission for a given period of time.|  
+|`dclInheritanceCheck`|The derived class inheriting another class or overriding a method is required to have been granted the specified permission.|  
+|`dclRequestMinimum`|The caller can request for the minimum permissions required for code to run. Это действие может использоваться только в пределах сборки.|  
+|`dclRequestOptional`|The caller can request for additional permissions that are optional (not required to run). Этот запрос неявно отклоняет все прочие разрешения, не запрошенные специально. Это действие может использоваться только в пределах сборки.|  
+|`dclRequestRefuse`|The caller's request for permissions that might be misused will not be granted. Это действие может использоваться только в пределах сборки.|  
 |`dclPrejitGrant`|Зарезервировано.|  
 |`dclPrejitDenied`|Зарезервировано.|  
 |`dclNonCasDemand`|Зарезервировано.|  
@@ -83,9 +81,9 @@ typedef enum CorDeclSecurity {
 |`dclMaximumValue`|Зарезервировано.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorHdr.h  
+ **Header:** CorHdr.h  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

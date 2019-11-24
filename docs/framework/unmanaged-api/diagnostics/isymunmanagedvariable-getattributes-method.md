@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 80f168af-a6a6-4c8f-b9e6-8a82dc834ed5
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f7e71315b5ff99a550ae4a59f3b0d444093dac01
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: cfc28dfcda7bf4b3d1fc6fe3530a212ee76fadd2
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778275"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446086"
 ---
 # <a name="isymunmanagedvariablegetattributes-method"></a>Метод ISymUnmanagedVariable::GetAttributes
-Возвращает флаги атрибутов для этой переменной.  
+Gets the attribute flags for this variable.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -36,13 +34,13 @@ HRESULT GetAttributes(
   
 ## <a name="parameters"></a>Параметры  
  `pRetVal`  
- [out] Указатель на `ULONG32` , получающий атрибуты. Возвращаемое значение будет иметь одно из значений, определенных в [CorSymVarFlag](../../../../docs/framework/unmanaged-api/diagnostics/corsymvarflag-enumeration.md) перечисления.  
+ [out] A pointer to a `ULONG32` that receives the attributes. The returned value will be one of the values defined in the [CorSymVarFlag](../../../../docs/framework/unmanaged-api/diagnostics/corsymvarflag-enumeration.md) enumeration.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Требования  
- **Заголовок.** CorSym.idl CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>См. также
 

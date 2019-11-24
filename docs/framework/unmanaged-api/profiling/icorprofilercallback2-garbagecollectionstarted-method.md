@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 44eef087-f21f-4fe2-b481-f8a0ee022e7d
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f4f639f9794002748e1019821514c546e4f4429f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ed2553f2d971deefd85f731dd39f383cd096c5b0
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67746868"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74439813"
 ---
 # <a name="icorprofilercallback2garbagecollectionstarted-method"></a>Метод ICorProfilerCallback2::GarbageCollectionStarted
-Уведомляет профилировщик кода, что сборка мусора была начата.  
+Notifies the code profiler that garbage collection has started.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,25 +36,25 @@ HRESULT GarbageCollectionStarted(
   
 ## <a name="parameters"></a>Параметры  
  `cGenerations`  
- [in] Общее число записей в `generationCollected` массива.  
+ [in] The total number of entries in the `generationCollected` array.  
   
  `generationCollected`  
- [in] Массив логических значений, которые являются `true` если поколение, соответствующий индекс массива, собирая их с этой сборке мусора, в противном случае — `false`.  
+ [in] An array of Boolean values, which are `true` if the generation that corresponds to the array index is being collected by this garbage collection; otherwise, `false`.  
   
- Массив индексируется по значение [COR_PRF_GC_GENERATION](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-enumeration.md) перечисления, которое задает поколение.  
+ The array is indexed by a value of the [COR_PRF_GC_GENERATION](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-enumeration.md) enumeration, which indicates the generation.  
   
  `reason`  
- [in] Значение [COR_PRF_GC_REASON](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-reason-enumeration.md) вызывалась перечисления, указывающее причину сборки мусора.  
+ [in] A value of the [COR_PRF_GC_REASON](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-reason-enumeration.md) enumeration that indicates the reason the garbage collection was induced.  
   
-## <a name="remarks"></a>Примечания  
- Все обратные вызовы, которые относятся к этой сборке мусора происходит между `GarbageCollectionStarted` обратного вызова и соответствующий [ICorProfilerCallback2::GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) обратного вызова. Эти обратные вызовы должны осуществляться в одном потоке.  
+## <a name="remarks"></a>Заметки  
+ All callbacks that pertain to this garbage collection will occur between the `GarbageCollectionStarted` callback and the corresponding [ICorProfilerCallback2::GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) callback. These callbacks need not occur on the same thread.  
   
- Безопасно для профилировщика для проверки объектов в исходном расположении во время `GarbageCollectionStarted` обратного вызова. Сборщик мусора начнется перемещение объектов после возврата из `GarbageCollectionStarted`. После возврата из этого обратного вызова профилировщика, профилировщик следует учитывать все идентификаторы объектов к недействительности, пока не получит `ICorProfilerCallback2::GarbageCollectionFinished` обратного вызова.  
+ It is safe for the profiler to inspect objects in their original locations during the `GarbageCollectionStarted` callback. The garbage collector will begin moving objects after the return from `GarbageCollectionStarted`. After the profiler has returned from this callback, the profiler should consider all object IDs to be invalid until it receives a `ICorProfilerCallback2::GarbageCollectionFinished` callback.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorProf.idl, CorProf.h  
+ **Заголовок:** CorProf.idl, CorProf.h  
   
  **Библиотека:** CorGuids.lib  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 86051a11-ad8e-4ace-9a11-ff0f982a5e11
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 710a33583e45b27cec66278f4e20152acfae97dc
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ccb970fb2eb387f1be795f9322d5bf9650593a35
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782884"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445770"
 ---
 # <a name="icorprofilercallbackremotingserverinvocationstarted-method"></a>Метод ICorProfilerCallback::RemotingServerInvocationStarted
-Уведомляет профилировщика о том, что процесс вызывает метод в ответ на запрос вызова удаленного метода.  
+Notifies the profiler that the process is invoking a method in response to a remote method invocation request.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -34,9 +32,9 @@ HRESULT RemotingServerInvocationStarted();
 ```  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorProf.idl, CorProf.h  
+ **Заголовок:** CorProf.idl, CorProf.h  
   
  **Библиотека:** CorGuids.lib  
   

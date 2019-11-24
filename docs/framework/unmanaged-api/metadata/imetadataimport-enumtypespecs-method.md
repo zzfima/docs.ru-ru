@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 75331c7b-988b-436c-9eb9-a270d37b4f06
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 81592b6da7fa7cdf275e9fa5b4b82ef0a15061c0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 42b8360ac6a7bb62f29046475d6cc98124619770
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782570"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449967"
 ---
 # <a name="imetadataimportenumtypespecs-method"></a>Метод IMetaDataImport::EnumTypeSpecs
 Перечисляет токены TypeSpec, определенные в текущей области метаданных.  
@@ -40,33 +38,33 @@ HRESULT EnumTypeSpecs (
   
 ## <a name="parameters"></a>Параметры  
  `phEnum`  
- [in, out] Указатель на перечислитель. Это значение должно быть NULL при первом вызове этого метода.  
+ [in, out] A pointer to the enumerator. This value must be NULL for the first call of this method.  
   
  `rTypeSpecs`  
- [out] Массив, используемый для хранения токенов TypeSpec.  
+ [out] The array used to store the TypeSpec tokens.  
   
  `cMax`  
  [in] Максимальный размер массива `rTypeSpecs`.  
   
  `pcTypeSpecs`  
- [out] Количество токены TypeSpec, возвращаемых в `rTypeSpecs`.  
+ [out] The number of TypeSpec tokens returned in `rTypeSpecs`.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
   
 |HRESULT|Описание|  
 |-------------|-----------------|  
-|`S_OK`|`EnumTypeSpecs` успешно возвращен.|  
-|`S_FALSE`|Существуют маркеры для перечисления отсутствуют. В этом случае `pcTypeSpecs` равно нулю.|  
+|`S_OK`|`EnumTypeSpecs` returned successfully.|  
+|`S_FALSE`|There are no tokens to enumerate. In that case, `pcTypeSpecs` is zero.|  
   
-## <a name="remarks"></a>Примечания  
- Токены TypeSpec, создаваемые [IMetaDataEmit::GetTokenFromTypeSpec](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-gettokenfromtypespec-method.md) метод.  
+## <a name="remarks"></a>Заметки  
+ The TypeSpec tokens are created by the [IMetaDataEmit::GetTokenFromTypeSpec](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-gettokenfromtypespec-method.md) method.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** Cor.h  
+ **Header:** Cor.h  
   
- **Библиотека:** Включена как ресурс в MsCorEE.dll  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

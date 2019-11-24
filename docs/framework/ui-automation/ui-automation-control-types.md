@@ -7,21 +7,21 @@ helpviewer_keywords:
 - UI Automation, control types
 - control types, UI Automation
 ms.assetid: 261dcc59-3a62-4e40-91dd-63ff9d2241c0
-ms.openlocfilehash: b2059258445cf4dfe5ad9c2de1011e96db270e30
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: cec090fa2a49993c229585d60cd1894c2fb7f9d4
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70851257"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448822"
 ---
 # <a name="ui-automation-control-types"></a>Типы элементов управления автоматизации пользовательского интерфейса
 
 > [!NOTE]
-> Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Последние сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]см. в разделе [API службы автоматизации Windows: Модель автоматизации](https://go.microsoft.com/fwlink/?LinkID=156746)пользовательского интерфейса.
+> Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Последние сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]см. в разделе [API автоматизации Windows. Автоматизация пользовательского интерфейса](/windows/win32/winauto/entry-uiauto-win32).
 
-В этом разделе содержатся сведения о поддержке типов элементов управления [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]в.
+This section contains information about support for control types in [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)].
 
-## <a name="in-this-section"></a>В этом разделе
+## <a name="in-this-section"></a>Содержание
 
 - [Общие сведения о типах элементов управления автоматизации пользовательского интерфейса](ui-automation-control-types-overview.md)
 - [Поддержка модели автоматизации пользовательского интерфейса для типа элемента управления кнопки](ui-automation-support-for-the-button-control-type.md)
@@ -63,7 +63,7 @@ ms.locfileid: "70851257"
 - [Поддержка модели автоматизации пользовательского интерфейса для типа элемента управления TreeItem](ui-automation-support-for-the-treeitem-control-type.md)
 - [Поддержка модели автоматизации пользовательского интерфейса для типа элемента управления Window](ui-automation-support-for-the-window-control-type.md)
 
-## <a name="reference"></a>Ссылка
+## <a name="reference"></a>Справочник
 
 <xref:System.Windows.Automation.ControlType>
 

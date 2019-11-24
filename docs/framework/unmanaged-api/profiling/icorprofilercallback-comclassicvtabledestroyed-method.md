@@ -15,20 +15,18 @@ helpviewer_keywords:
 ms.assetid: 29da20ca-bf39-4356-8099-d9c3ac3423a9
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f74e06ea4cb4d7a8eace8c7852f487bbdcbcd875
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0b0683d43778c4733b476e9feef459207b9d1ee6
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964630"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445027"
 ---
 # <a name="icorprofilercallbackcomclassicvtabledestroyed-method"></a>Метод ICorProfilerCallback::COMClassicVTableDestroyed
-Уведомляет профилировщик о том, что виртуальная таблица COM-взаимодействия удалена.  
+Notifies the profiler that a COM interop vtable is being destroyed.  
   
 > [!NOTE]
-> Этот обратный вызов, скорее всего, никогда не происходит, так как уничтожение vtable происходит очень близко к завершению работы.  
+> This callback is likely never to occur, because the destruction of vtables occurs very close to shutdown.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -41,25 +39,25 @@ HRESULT COMClassicVTableDestroyed(
   
 ## <a name="parameters"></a>Параметры  
  `wrappedClassId`  
- окне Идентификатор класса, для которого была создана эта таблица vtable.  
+ [in] The ID of the class for which this vtable was created.  
   
  `implementedIID`  
- окне Идентификатор интерфейса, реализуемого классом. Это значение может быть равно NULL, если интерфейс является только внутренним.  
+ [in] The ID of the interface implemented by the class. This value may be NULL if the interface is internal only.  
   
  `pVTable`  
- окне Указатель на начало таблицы vtable.  
+ [in] A pointer to the start of the vtable.  
   
-## <a name="remarks"></a>Примечания  
- Профилировщик не должен блокировать реализацию этого метода, так как стек может не находиться в состоянии, допускающем сборку мусора, поэтому невозможно включить вытесненную сборку мусора. Если профилировщик блокируется здесь и выполняется сборка мусора, среда выполнения блокируется до тех пор, пока этот обратный вызов не вернет значение.  
+## <a name="remarks"></a>Заметки  
+ The profiler should not block in its implementation of this method because the stack may not be in a state that allows garbage collection, and therefore preemptive garbage collection cannot be enabled. If the profiler blocks here and garbage collection is attempted, the runtime will block until this callback returns.  
   
- Реализация этого метода профилировщиком не должна вызывать управляемый код или каким-либо образом приводит к выделению управляемой памяти.  
+ The profiler's implementation of this method should not call into managed code or in any way cause a managed-memory allocation.  
   
 ## <a name="requirements"></a>Требования  
- **Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorProf. idl, CorProf. h  
+ **Заголовок:** CorProf.idl, CorProf.h  
   
- **Библиотечная** Коргуидс. lib  
+ **Библиотека:** CorGuids.lib  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

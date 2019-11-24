@@ -14,29 +14,27 @@ helpviewer_keywords:
 ms.assetid: 37527a84-4b03-4f08-8135-94d898599089
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a6f514cc070a0a38eb09a5387efc8611100765b5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e4a415b21e3980e7603319d7acbb3831462fac9e
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69944094"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449300"
 ---
 # <a name="isymunmanagedbinder3-interface"></a>Интерфейс ISymUnmanagedBinder3
-Расширяет интерфейс связывателя символов. Получите этот интерфейс, вызвав метод `QueryInterface` для объекта, который `ISymUnmanagedBinder` реализует интерфейс.  
+Extends the symbol binder interface. Obtain this interface by calling `QueryInterface` on an object that implements the `ISymUnmanagedBinder` interface.  
   
 > [!IMPORTANT]
-> При открытии файла базы данных программы (PDB) из ненадежного источника возникает угроза безопасности.  
+> It is a security risk to open a program database (PDB) file from an untrusted source.  
   
 ## <a name="methods"></a>Методы  
   
 |Метод|Описание|  
 |------------|-----------------|  
-|[Метод GetReaderFromCallback](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-getreaderfromcallback-method.md)|Позволяет пользователю реализовать или предоставить через обратный вызов либо `IID_IDiaReadExeAtRVACallback` `IID_IDiaReadExeAtOffsetCallback` для получения сведений о каталоге отладки из памяти.|  
+|[Метод GetReaderFromCallback](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-getreaderfromcallback-method.md)|Allows the user to implement or supply via callback either an `IID_IDiaReadExeAtRVACallback` or `IID_IDiaReadExeAtOffsetCallback` to obtain the Debug directory information from memory|  
   
 ## <a name="requirements"></a>Требования  
- **Заголовок.** Корсим. idl, Корсим. h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>См. также
 

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: a51f1f64-e084-44c5-830c-2222da5a6bbf
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: efe4d28d207625f00634087b862d76c001518c8d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3bc578be680951a1d41c92fb2169c860882b2e31
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777035"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448311"
 ---
 # <a name="isymunmanagedreadergetdocumentversion-method"></a>Метод ISymUnmanagedReader::GetDocumentVersion
-Получает указанную версию указанного документа. Версия документа начинается с 1 и увеличивается каждый раз, необходимо обновить документ с помощью [UpdateSymbolStore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-updatesymbolstore-method.md) метод. Если `pbCurrent` параметр `true`, это последняя версия документа.  
+Gets the specified version of the specified document. The document version starts at 1 and is incremented each time the document is updated using the [UpdateSymbolStore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-updatesymbolstore-method.md) method. If the `pbCurrent` parameter is `true`, this is the latest version of the document.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,19 +36,19 @@ HRESULT GetDocumentVersion (
   
 ## <a name="parameters"></a>Параметры  
  `pDoc`  
- [in] Указанный документ.  
+ [in] The specified document.  
   
  `version`  
- [out] Указатель на переменную, которая получает версию указанного документа.  
+ [out] A pointer to a variable that receives the version of the specified document.  
   
  `pbCurrent`  
- [out] Указатель на переменную, получающую `true` Если это последняя версия документа, или `false` если она не является последней версии.  
+ [out] A pointer to a variable that receives `true` if this is the latest version of the document, or `false` if it isn't the latest version.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Требования  
- **Заголовок.** CorSym.idl CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>См. также
 

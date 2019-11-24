@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 050649e5-ffc0-4458-a0a4-d9ee128a219e
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c04b7862363b441ab35d6dd364c4dffaf7464153
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 08fbf49e6944de4934a9fe7a960405ee96a7d8e3
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67769224"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445936"
 ---
 # <a name="icorprofilercallbackmoduleloadfinished-method"></a>Метод ICorProfilerCallback::ModuleLoadFinished
-Уведомляет профилировщик об окончании загрузки модуля.  
+Notifies the profiler that a module has finished loading.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,20 +35,20 @@ HRESULT ModuleLoadFinished(
   
 ## <a name="parameters"></a>Параметры  
  `moduleId`  
- [in] Идентификатор модуля, загрузка завершена.  
+ [in] The ID of the module that has finished loading.  
   
  `hrStatus`  
- [in] Значение HRESULT, указывающее, был ли модуль загружен успешно.  
+ [in] An HRESULT that indicates whether the module was loaded successfully.  
   
-## <a name="remarks"></a>Примечания  
- Значение `moduleId` не является допустимым для информационного запроса до `ModuleLoadFinished` вызывается метод.  
+## <a name="remarks"></a>Заметки  
+ The value of `moduleId` is not valid for an information request until the `ModuleLoadFinished` method is called.  
   
- Загрузка модуля некоторых частей может по-прежнему после `ModuleLoadFinished` обратного вызова. Значение HRESULT в `hrStatus` указывает на сбой. Тем не менее значение HRESULT в `hrStatus` указывает только что первая часть загрузки модуля.  
+ Some parts of loading the module might continue after the `ModuleLoadFinished` callback. A failure HRESULT in `hrStatus` indicates a failure. However, a success HRESULT in `hrStatus` indicates only that the first part of loading the module has succeeded.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorProf.idl, CorProf.h  
+ **Заголовок:** CorProf.idl, CorProf.h  
   
  **Библиотека:** CorGuids.lib  
   

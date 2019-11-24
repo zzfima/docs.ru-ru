@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 60573ad7-8821-4721-a068-3f7a6d25926a
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 3c63797b60354b461891f44d32cf1840f7fdcf3d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4fed7dbe4ec8343a3854d1f277e3228b14c0bf21
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67756492"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74450027"
 ---
 # <a name="imetadataimportenumproperties-method"></a>Метод IMetaDataImport::EnumProperties
 Перечисляет токены PropertyDef, представляющие свойства типа, на который ссылается указанный токен TypeDef.  
@@ -41,33 +39,33 @@ HRESULT EnumProperties (
   
 ## <a name="parameters"></a>Параметры  
  `phEnum`  
- [in, out] Указатель на перечислитель. Это должно быть NULL при первом вызове этого метода.  
+ [in, out] A pointer to the enumerator. This must be NULL for the first call of this method.  
   
  `td`  
- [in] Токен TypeDef, представляющий тип со свойствами для перечисления.  
+ [in] A TypeDef token representing the type with properties to enumerate.  
   
  `rProperties`  
- [out] Массив, используемый для хранения токены PropertyDef.  
+ [out] The array used to store the PropertyDef tokens.  
   
  `cMax`  
  [in] Максимальный размер массива `rProperties`.  
   
  `pcProperties`  
- [out] Число возвращенных в токены PropertyDef `rProperties`.  
+ [out] The number of PropertyDef tokens returned in `rProperties`.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
   
 |HRESULT|Описание|  
 |-------------|-----------------|  
-|`S_OK`|`EnumProperties` успешно возвращен.|  
-|`S_FALSE`|Существуют маркеры для перечисления отсутствуют. В этом случае `pcProperties` равно нулю.|  
+|`S_OK`|`EnumProperties` returned successfully.|  
+|`S_FALSE`|There are no tokens to enumerate. In that case, `pcProperties` is zero.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** Cor.h  
+ **Header:** Cor.h  
   
- **Библиотека:** Включена как ресурс в MsCorEE.dll  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

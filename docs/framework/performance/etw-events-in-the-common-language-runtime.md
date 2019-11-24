@@ -8,21 +8,21 @@ helpviewer_keywords:
 ms.assetid: 5bb9b6a2-7b57-4aea-8809-32b28bc73e88
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 46ad58813da5b71b884ad55f796db3522b2f1920
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 83246f42275425bca48530915c7bf5c19f3b9f04
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71046616"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447664"
 ---
 # <a name="etw-events-in-the-common-language-runtime"></a>События в среде CLR (трассировка событий Windows)
 В общеязыковой среде выполнения (CLR) реализован полезный механизм трассировки событий (ETW), который позволяет получать диагностические сведения для широкого спектра событий отладки и профилирования. События трассировки событий Windows в среде CLR используют систему трассировки Windows ETW, дополняя существующие средства профилирования и отладки, реализованные в общеязыковой среде выполнения.  
   
- Дополнительные сведения о трассировке событий Windows см. в статье [Улучшение отладки и настройки производительности с помощью ETW](https://go.microsoft.com/fwlink/?LinkID=161142) библиотеки MSDN. Сведения о программе Xperf можно найти в записи [Windows Performance Toolkit — Xperf](https://go.microsoft.com/fwlink/?LinkID=161144) блога NTDebugging.  
+ More information about ETW is available in the [Improve Debugging and Performance Tuning with ETW](https://docs.microsoft.com/archive/msdn-magazine/2007/april/event-tracing-improve-debugging-and-performance-tuning-with-etw) article. Сведения о программе Xperf можно найти в записи [Windows Performance Toolkit — Xperf](https://blogs.msdn.microsoft.com/ntdebugging/2008/04/03/windows-performance-toolkit-xperf/) блога NTDebugging.  
   
- Для всех событий, описанных в разделах о событиях, требуется .NET Framework 4 или более поздней версии. Минимальный поддерживаемый клиент — операционная система Windows Vista; минимальный поддерживаемый сервер — Windows Server 2008.  
+ The .NET Framework 4 or later is required for all the events described in the event topics. Минимальный поддерживаемый клиент — операционная система Windows Vista; минимальный поддерживаемый сервер — Windows Server 2008.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>Содержание  
  [Контроль ведения журнала .NET Framework](controlling-logging.md)  
  Описывает средства и команды для захвата и просмотра событий трассировки событий Windows.  
   

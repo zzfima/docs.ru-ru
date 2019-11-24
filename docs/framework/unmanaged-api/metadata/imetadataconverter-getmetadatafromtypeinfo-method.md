@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: d44484bb-23a3-49c3-9e46-69d0d9ab4f0f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 906ab3603d9a4926642848b547a793f129f949ce
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: df7be11e8f275824fca658a9604178e7cf28e3ce
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782033"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436291"
 ---
 # <a name="imetadataconvertergetmetadatafromtypeinfo-method"></a>Метод IMetaDataConverter::GetMetaDataFromTypeInfo
-Возвращает указатель на [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) экземпляр, представляющий подпись метаданных для библиотеки типов, который ссылается заданный `ITypeInfo` экземпляра.  
+Gets a pointer to an [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) instance that represents the metadata signature of the type library referenced by the specified `ITypeInfo` instance.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,17 +36,17 @@ HRESULT GetMetaDataFromTypeInfo (
   
 ## <a name="parameters"></a>Параметры  
  `pITI`  
- [in] Указатель на `ITypeInfo` объект, который ссылается на библиотеки типов.  
+ [in] A pointer to an `ITypeInfo` object that refers to the type library.  
   
  `ppMDI`  
- [out] Указатель на расположение, которое получает адрес `IMetaDataImport` экземпляр, представляющий подпись метаданных.  
+ [out] A pointer to a location that receives the address of the `IMetaDataImport` instance that represents the metadata signature.  
   
 ## <a name="requirements"></a>Требования  
- **Платформа:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** Cor.h  
+ **Header:** Cor.h  
   
- **Библиотека:** Используется как ресурс в MsCorEE.dll  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0d144ed4-bdb0-4cac-960c-cb90f4dca173
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 06b8ebf26794baa1d957cc47d1179283611b62d5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2063856389b122b150a2d2744169a4a567592287
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67736684"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446448"
 ---
 # <a name="isymunmanagedreader2getmethodbyversionpreremap-method"></a>Метод ISymUnmanagedReader2::GetMethodByVersionPreRemap
-Получает метода средства чтения символов, получив токен метода и номеру версии, изменить и продолжить. Номера версий начинаются с 1 и увеличивается каждый раз, когда метод изменяется в результате операции изменить и продолжить.  
+Gets a symbol reader method, given a method token and an edit-and-continue version number. Version numbers start at 1 and are incremented each time the method is changed as a result of an edit-and-continue operation.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,19 +36,19 @@ HRESULT GetMethodByVersionPreRemap(
   
 ## <a name="parameters"></a>Параметры  
  `token`  
- [in] Токен метаданных метода.  
+ [in] The method metadata token.  
   
  `version`  
- [in] Версия метода.  
+ [in] The method version.  
   
  `pRetVal`  
- [out] Указатель на возвращенный [ISymUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md) интерфейс.  
+ [out] A pointer to the returned [ISymUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md) interface.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Требования  
- **Заголовок.** CorSym.idl. CorSym.h  
+ **Header:** CorSym.idl. CorSym.h  
   
 ## <a name="see-also"></a>См. также
 

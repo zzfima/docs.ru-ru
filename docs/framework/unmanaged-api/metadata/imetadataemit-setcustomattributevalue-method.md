@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: f721c863-9642-4e64-917a-65f9e55c25b9
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 2a1f248cf800e9c2bf17d7849e449287cfc493f5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: fd5e71071de9e6afebc8f1848e0af8835f22c9bf
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737215"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448125"
 ---
 # <a name="imetadataemitsetcustomattributevalue-method"></a>Метод IMetaDataEmit::SetCustomAttributeValue
-Задает или обновляет значение настраиваемого атрибута определен во время предыдущего вызова к [IMetaDataEmit::DefineCustomAttribute](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definecustomattribute-method.md).  
+Sets or updates the value of a custom attribute defined by a prior call to [IMetaDataEmit::DefineCustomAttribute](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definecustomattribute-method.md).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,20 +37,20 @@ HRESULT SetCustomAttributeValue (
   
 ## <a name="parameters"></a>Параметры  
  `pcv`  
- [in] Токен целевого пользовательского атрибута.  
+ [in] The token of the target custom attribute.  
   
  `pCustomAttribute`  
- [in] Указатель на массив, содержащий пользовательский атрибут.  
+ [in] A pointer to the array that contains the custom attribute.  
   
  `cbCustomAttribute`  
- [in] Размер в байтах, настраиваемого атрибута.  
+ [in] The size, in bytes, of the custom attribute.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** Cor.h  
+ **Header:** Cor.h  
   
- **Библиотека:** Используется как ресурс в MSCorEE.dll  
+ **Library:** Used as a resource in MSCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 60600178-c2b5-4cab-b3a5-f0f61acebaf1
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 5d8bc90cc07c2390cc83860b8009a3705f927e80
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 134a89d62a0fc455a9579de1e577103f1fe6abcf
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776667"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449122"
 ---
 # <a name="isymunmanageddocumentgeturl-method"></a>Метод ISymUnmanagedDocument::GetURL
-Возвращает универсальный код ресурса URL-адрес для этого документа.  
+Returns the uniform resource locator (URL) for this document.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,16 +36,16 @@ HRESULT GetURL(
   
 ## <a name="parameters"></a>Параметры  
  `cchUrl`  
- [in] Размер в символах, из `szURL` буфера.  
+ [in] The size, in characters, of the `szURL` buffer.  
   
  `pcchUrl`  
- [out] Указатель на переменную, которая принимает размер URL-адрес, включая завершающимся нулевым значением.  
+ [out] A pointer to a variable that receives the size of the URL, including the null termination.  
   
  `szUrl`  
- [out] Буфер, содержащий URL-адрес.  
+ [out] The buffer containing the URL.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Значение S_OK, если метод выполнен успешно; в противном случае — код ошибки.  
+ S_OK if the method succeeds; otherwise, an error code.  
   
 ## <a name="see-also"></a>См. также
 

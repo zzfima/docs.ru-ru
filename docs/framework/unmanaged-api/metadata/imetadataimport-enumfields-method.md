@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1d23247e-c58c-45db-afd8-83aa89cde18e
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 65f59d3df96f46ad65650183bdb6f631356a4d0b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2d32dc8ae59fc1a4a189d849437cc95ea3b94a4d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67775531"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449536"
 ---
 # <a name="imetadataimportenumfields-method"></a>Метод IMetaDataImport::EnumFields
 Перечисляет токены FieldDef для типа, на который ссылается указанный токен TypeDef.  
@@ -41,33 +39,33 @@ HRESULT EnumFields (
   
 ## <a name="parameters"></a>Параметры  
  `phEnum`  
- [in, out] Указатель на перечислитель.  
+ [in, out] A pointer to the enumerator.  
   
  `cl`  
- [in] Токен TypeDef, поля которого предназначены для перечисления класса.  
+ [in] The TypeDef token of the class whose fields are to be enumerated.  
   
  `rFields`  
- [out] Список токены FieldDef.  
+ [out] The list of FieldDef tokens.  
   
  `cMax`  
  [in] Максимальный размер массива `rFields`.  
   
  `pcTokens`  
- [out] Фактическое количество возвращаемых в токены FieldDef `rFields`.  
+ [out] The actual number of FieldDef tokens returned in `rFields`.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
   
 |HRESULT|Описание|  
 |-------------|-----------------|  
-|`S_OK`|`EnumFields` успешно возвращен.|  
-|`S_FALSE`|Нет полей для перечисления. В этом случае `pcTokens` равно нулю.|  
+|`S_OK`|`EnumFields` returned successfully.|  
+|`S_FALSE`|There are no fields to enumerate. In that case, `pcTokens` is zero.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** Cor.h  
+ **Header:** Cor.h  
   
- **Библиотека:** Включена как ресурс в MsCorEE.dll  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

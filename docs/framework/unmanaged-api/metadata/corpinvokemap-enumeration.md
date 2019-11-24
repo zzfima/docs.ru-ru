@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: f14f986e-f6ce-42bc-aa23-18150c46d28c
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a876ff1ba0d2342f7975bf5adfc8ec03d21578f5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 17b7af7016cf88fd3ae263dd952502d515b0c833
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781646"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74441556"
 ---
 # <a name="corpinvokemap-enumeration"></a>Перечисление CorPinvokeMap
-Указывает параметры для вызова PInvoke.  
+Specifies options for a PInvoke call.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -63,37 +61,37 @@ typedef enum  CorPinvokeMap {
 } CorPinvokeMap;  
 ```  
   
-## <a name="members"></a>Участники  
+## <a name="members"></a>Члены  
   
 |Член|Описание|  
 |------------|-----------------|  
-|`pmNoMangle`|Используйте указанные имя каждого элемента.|  
+|`pmNoMangle`|Use each member name as specified.|  
 |`pmCharSetMask`|Зарезервировано.|  
 |`pmCharSetNotSpec`|Зарезервировано.|  
-|`pmCharSetAnsi`|Маршалирует строки в виде строки многобайтовых символов.|  
-|`pmCharSetUnicode`|Маршалирует строки в виде 2-байтных символов Юникода.|  
-|`pmCharSetAuto`|Выполняет автоматический маршалинг строк способом, соответствующим целевой операционной системы. По умолчанию используется Юникод для Windows NT, Windows 2000, Windows XP и семействе Windows Server 2003; по умолчанию используется ANSI для Windows 98 и Windows Me.|  
+|`pmCharSetAnsi`|Marshal strings as multiple-byte character strings.|  
+|`pmCharSetUnicode`|Marshal strings as Unicode 2-byte characters.|  
+|`pmCharSetAuto`|Automatically marshal strings appropriately for the target operating system. The default is Unicode on Windows NT, Windows 2000, Windows XP, and the Windows Server 2003 family; the default is ANSI on Windows 98 and Windows Me.|  
 |`pmBestFitUseAssem`|Зарезервировано.|  
-|`pmBestFitEnabled`|Выполните наилучшего сопоставления символов Юникода, не хватает точного совпадения в кодировку ANSI.|  
-|`pmBestFitDisabled`|Не выполняйте наилучшего сопоставления символов Юникода. В этом случае всех неотображаемых символов будут заменены "?".|  
+|`pmBestFitEnabled`|Perform best-fit mapping of Unicode characters that lack an exact match in the ANSI character set.|  
+|`pmBestFitDisabled`|Do not perform best-fit mapping of Unicode characters. In this case, all unmappable characters will be replaced by a ‘?’.|  
 |`pmBestFitMask`|Зарезервировано.|  
 |`pmThrowOnUnmappableCharUseAssem`|Зарезервировано.|  
-|`pmThrowOnUnmappableCharEnabled`|Исключение при обнаружении маршалером взаимодействия несопоставимого символа.|  
-|`pmThrowOnUnmappableCharDisabled`|Не следует генерировать исключения при обнаружении маршалером взаимодействия несопоставимого символа.|  
+|`pmThrowOnUnmappableCharEnabled`|Throw an exception when the interop marshaler encounters an unmappable character.|  
+|`pmThrowOnUnmappableCharDisabled`|Do not throw an exception when the interop marshaler encounters an unmappable character.|  
 |`pmThrowOnUnmappableCharMask`|Зарезервированное|  
-|`pmSupportsLastError`|Разрешить вызываемый объект для вызова Win32 `SetLastError` функции перед возвратом из метода с атрибутами.|  
+|`pmSupportsLastError`|Allow the callee to call the Win32 `SetLastError` function before returning from the attributed method.|  
 |`pmCallConvMask`|Зарезервированное|  
-|`pmCallConvWinapi`|Используйте соглашение о вызове платформы по умолчанию. Например, в Windows по умолчанию используется `StdCall` и на Windows CE .NET, это `Cdecl`.|  
-|`pmCallConvCdecl`|Используйте `Cdecl` соглашение о вызовах. В этом случае вызывающий объект очищает стек. Это позволяет вызывать функции с `varargs` (то есть функции, которые принимают переменное количество параметров).|  
-|`pmCallConvStdcall`|Используйте `StdCall` соглашение о вызовах. В этом случае вызываемый объект очищает стек. Это соглашение по умолчанию для вызова неуправляемых функций с вызовом неуправляемого кода.|  
-|`pmCallConvThiscall`|Используйте `ThisCall` соглашение о вызовах. В этом случае первый параметр является `this` указатель и хранится в регистре ECX. Другие параметры помещаются в стек. `ThisCall` Соглашения о вызове используется для вызова методов в классах, экспортируемых из неуправляемой библиотеки DLL.|  
+|`pmCallConvWinapi`|Use the default platform calling convention. For example, on Windows the default is `StdCall` and on Windows CE .NET it is `Cdecl`.|  
+|`pmCallConvCdecl`|Use the `Cdecl` calling convention. In this case, the caller cleans the stack. This enables calling functions with `varargs` (that is, functions that accept a variable number of parameters).|  
+|`pmCallConvStdcall`|Use the `StdCall` calling convention. In this case, the callee cleans the stack. This is the default convention for calling unmanaged functions with platform invoke.|  
+|`pmCallConvThiscall`|Use the `ThisCall` calling convention. In this case, the first parameter is the `this` pointer and is stored in register ECX. Other parameters are pushed on the stack. The `ThisCall` calling convention is used to call methods on classes exported from an unmanaged DLL.|  
 |`pmCallConvFastcall`|Зарезервировано.|  
 |`pmMaxValue`|Зарезервировано.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorHdr.h  
+ **Header:** CorHdr.h  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

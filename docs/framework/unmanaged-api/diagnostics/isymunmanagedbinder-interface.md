@@ -14,30 +14,28 @@ helpviewer_keywords:
 ms.assetid: b22fbe19-b30f-4696-8175-e6b91da9edab
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e2160ad4174d9cdfe6e27d2ba7f4748bd473a5f9
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f23df98abc5355f0b25d7253b5f2ae808b3446a1
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69944232"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449369"
 ---
 # <a name="isymunmanagedbinder-interface"></a>Интерфейс ISymUnmanagedBinder
-Представляет связыватель символов для неуправляемого кода.  
+Represents a symbol binder for unmanaged code.  
   
 > [!IMPORTANT]
-> При открытии файла базы данных программы (PDB) из ненадежного источника возникает угроза безопасности.  
+> It is a security risk to open a program database (PDB) file from an untrusted source.  
   
 ## <a name="methods"></a>Методы  
   
 |Метод|Описание|  
 |------------|-----------------|  
-|[Метод GetReaderForFile](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-getreaderforfile-method.md)|При наличии интерфейса метаданных и имени файла возвращает правильную структуру [ISymUnmanagedReader](isymunmanagedreader-interface.md) , которая будет считывать отладочные символы, связанные с модулем.|  
-|[Метод GetReaderFromStream](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-getreaderfromstream-method.md)|При наличии интерфейса метаданных и потока, содержащего хранилище символов, возвращает правильную структуру [ISymUnmanagedReader](isymunmanagedreader-interface.md) , которая будет считывать отладочные символы из заданного хранилища символов.|  
+|[Метод GetReaderForFile](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-getreaderforfile-method.md)|Given a metadata interface and a file name, returns the correct [ISymUnmanagedReader](isymunmanagedreader-interface.md) structure that will read the debugging symbols associated with the module.|  
+|[Метод GetReaderFromStream](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-getreaderfromstream-method.md)|Given a metadata interface and a stream that contains the symbol store, returns the correct [ISymUnmanagedReader](isymunmanagedreader-interface.md) structure that will read the debugging symbols from the given symbol store.|  
   
 ## <a name="requirements"></a>Требования  
- **Заголовок.** Корсим. idl, Корсим. h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>См. также
 

@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 9a6be861-c260-4a35-acea-3372ea515a0f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a03fc24e5ef932d13c0d195f53c703cdd3ff45ff
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 17f158167d4075783d1aa594fb61cc9e28d30dd7
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70776938"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446981"
 ---
 # <a name="importfile2-method"></a>Метод ImportFile2
-Импортирует сборки и непривязанные модули. Этот метод похож на [Метод ImportFile](importfile-method.md), но работает даже в том случае, если импортируемый файл не существует на диске.  
+Imports assemblies and unbound modules. This method is like [ImportFile Method](importfile-method.md), but works even if the file being imported does not exist on disk.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -42,31 +40,31 @@ HRESULT ImportFile2(
   
 ## <a name="parameters"></a>Параметры  
  `pszFilename`  
- Имя импортируемого файла.  
+ Name of file to be imported.  
   
  `pszTargetName`  
- Необязательное имя выходного файла, которое можно использовать для переименования файла, так как он связан с сборкой.  
+ Optional output file name that can be used to rename the file as it is linked into the assembly.  
   
  `pAssemblyScopeIn`  
- Необязательный интерфейс интерфейса [IMetaDataAssemblyImport](../metadata/imetadataassemblyimport-interface.md) с областью действия.  
+ Optional scope [IMetaDataAssemblyImport Interface](../metadata/imetadataassemblyimport-interface.md) interface.  
   
  `fSmartImport`  
- Если значение равно TRUE, используется ImportTypes, в противном случае импорт должен выполняться вручную.  
+ If TRUE, ImportTypes is used, otherwise importing must be performed manually.  
   
  `pImportToken`  
- Получает идентификатор для файла или сборки.  
+ Receives the ID for the file or assembly.  
   
  `ppAssemblyScope`  
- Получает интерфейс [интерфейса IMetaDataAssemblyImport](../metadata/imetadataassemblyimport-interface.md) . Значение NULL, если файл не является сборкой.  
+ Receives the [IMetaDataAssemblyImport Interface](../metadata/imetadataassemblyimport-interface.md) interface. NULL if the file is not an assembly.  
   
  `pdwCountOfScopes`  
- Получает найденные файлы и/или импортированные области.  
+ Receives the found of files and/or scopes imported.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Если метод завершается с ошибкой, возвращает значение S_OK.  
+ Returns S_OK if the method succeeds.  
   
 ## <a name="requirements"></a>Требования  
- Требуется ALink. h.  
+ Requires alink.h.  
   
 ## <a name="see-also"></a>См. также
 

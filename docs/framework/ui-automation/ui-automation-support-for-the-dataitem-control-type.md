@@ -6,16 +6,16 @@ helpviewer_keywords:
 - Data Item control type
 - control types, Data Item
 ms.assetid: 181708fd-2595-4c43-9abd-75811627d64c
-ms.openlocfilehash: fc41b3eb775e80ae85026b226a60ce6a1d31c761
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9097fdcffb236d08264b881a171a86dcf8801133
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123101"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447941"
 ---
 # <a name="ui-automation-support-for-the-dataitem-control-type"></a>Поддержка автоматизации пользовательского интерфейса для элемента управления типа DataItem
 > [!NOTE]
-> Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Последние сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]см. в разделе [API автоматизации Windows. Автоматизация пользовательского интерфейса](https://go.microsoft.com/fwlink/?LinkID=156746).  
+> Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Последние сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]см. в разделе [API автоматизации Windows. Автоматизация пользовательского интерфейса](/windows/win32/winauto/entry-uiauto-win32).  
   
  В этом разделе содержатся сведения о поддержке в [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] типа элемента управления DataItem. В [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] тип элемента управления — это набор условий, которым должен удовлетворять элемент управления для использования свойства <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> . Условия включают конкретные правила для древовидной структуры [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , значений свойств [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] и шаблонов элементов управления.  
   
@@ -28,7 +28,7 @@ ms.locfileid: "73123101"
   
 |Дерево[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] — представление элемента управления|Дерево[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] — представление содержимого|  
 |------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|  
-|DataItem<br /><br /> — Изменяется (0 или более; может быть структурировано в иерархии)|DataItem<br /><br /> — Изменяется (0 или более; может быть структурировано в иерархии)|  
+|DataItem<br /><br /> -   Varies (0 or more; can be structured in hierarchy)|DataItem<br /><br /> -   Varies (0 or more; can be structured in hierarchy)|  
   
  Элемент данных в сетке данных может поддерживать множество объектов, в том числе еще один уровень элементов данных или определенные элементы сетки, такие как текст, изображения или элементы управления "Поле ввода". Если элемент данных имеет определенную роль объекта, этот элемент должен представляться как определенный тип элемента управления; например, тип элемента управления ListItem для элемента данных, доступного для выбора в сетке.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "73123101"
 ## <a name="working-with-data-items-in-large-lists"></a>Работа с элементами данных в больших списках  
  Большие списки часто являются данными, виртуализированными в [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] для улучшения производительности. Из-за этого клиент автоматизации пользовательского интерфейса не может использовать функциональность запроса [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] для очистки содержимого полного дерева таким же образом, как в других контейнерах элементов. Клиент должен прокрутить элемент в представление (или развернуть элемент управления, чтобы отобразить все важные параметры) до получения доступа к полному набору сведений из элемента данных.  
   
- При вызове `SetFocus` в элементе [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] для элемента данных обращение к Microsoft Windows Explorer будет успешным, и фокус будет установлен на изменение в поддереве элемента данных.  
+ When calling `SetFocus` on the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] element for the data item, the Microsoft Windows Explorer case will return successfully and cause focus to be set to the Edit within the data item subtree.  
   
 ## <a name="required-ui-automation-events"></a>Необходимые события модели автоматизации пользовательского интерфейса  
  В следующей таблице перечислены события [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , которые должны поддерживаться всеми элементами управления DataItem. Дополнительные сведения о событиях см. в разделе [UI Automation Events Overview](ui-automation-events-overview.md).  
@@ -90,13 +90,13 @@ ms.locfileid: "73123101"
 ## <a name="dataitem-control-type-example"></a>Пример элемента управления DataItem  
  На следующем рисунке показан тип элемента управления DataItem в элементе управления представления списка с поддержкой подробных сведений для столбцов.  
   
- ![Рисунок элемента управления "представление списка" с двумя элементами данных](./media/uiauto-data-grid-detailed.GIF "uiauto_data_grid_detailed")  
+ ![Graphic of a List View control with two data items](./media/uiauto-data-grid-detailed.GIF "uiauto_data_grid_detailed")  
   
  Представление элемента управления и представление содержимого дерева [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , относящиеся к элементу управления DataItem, показаны ниже. Шаблоны элементов управления для каждого элемента автоматизации отображаются в круглых скобках. Группа "Contoso" также является частью сетки элемента управления ведущего приложения Data Grid.  
   
 |Дерево[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] — представление элемента управления|Дерево[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] — представление содержимого|  
 |------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|  
-|— Группа Contoso (таблица, сетка)<br />-DataItem "Accounts. doc" (TableItem, GridItem, SelectionItem, Invoke)<br />-Image "Accounts. doc"<br />-Edit "имя" (TableItem, GridItem, value "Accounts. doc")<br />-Изменить "Дата изменения" (TableItem, GridItem, value "8/25/2006 3:29 PM")<br />-Edit "размер" (GridItem, TableItem, value "11,0 КБ)"<br />-DataItem "Accounts. doc" (TableItem, GridItem, SelectionItem, Invoke)<br />-   ...|— Группа Contoso (таблица, сетка)<br />-DataItem "Accounts. doc" (TableItem, GridItem, SelectionItem, Invoke)<br />-Image "Accounts. doc"<br />-Edit "имя" (TableItem, GridItem, value "Accounts. doc")<br />-Изменить "Дата изменения" (TableItem, GridItem, value "8/25/2006 3:29 PM")<br />-Edit "размер" (GridItem, TableItem, value "11,0 КБ)"<br />-DataItem "Accounts. doc" (TableItem, GridItem, SelectionItem, Invoke)<br />- ...|  
+|-   Group "Contoso" (Table, Grid)<br />-   DataItem "Accounts Receivable.doc" (TableItem, GridItem, SelectionItem, Invoke)<br />-   Image "Accounts Receivable.doc"<br />-   Edit "Name" (TableItem, GridItem, Value "Accounts Receivable.doc")<br />-   Edit "Date modified" (TableItem, GridItem, Value "8/25/2006 3:29 PM")<br />-   Edit "Size" (GridItem, TableItem, Value "11.0 KB)<br />-   DataItem "Accounts Payable.doc" (TableItem, GridItem, SelectionItem, Invoke)<br />-   ...|-   Group "Contoso" (Table, Grid)<br />-   DataItem "Accounts Receivable.doc" (TableItem, GridItem, SelectionItem, Invoke)<br />-   Image "Accounts Receivable.doc"<br />-   Edit "Name" (TableItem, GridItem, Value "Accounts Receivable.doc")<br />-   Edit "Date modified" (TableItem, GridItem, Value "8/25/2006 3:29 PM")<br />-   Edit "Size" (GridItem, TableItem, Value "11.0 KB)<br />-   DataItem "Accounts Payable.doc" (TableItem, GridItem, SelectionItem, Invoke)<br />-   …|  
   
  Если сетка представляет список выбираемых элементов, соответствующие элементы пользовательского интерфейса могут быть представлены типом элемента управления ListItem, а не DataItem. В предыдущем примере элементы DataItem (Accounts Receivable.doc и Accounts Payable.doc) в в элементе Group (Contoso) можно улучшить, представив их как элементы управления типа ListItem, поскольку этот тип уже поддерживает шаблон элемента управления SelectionItem.  
   

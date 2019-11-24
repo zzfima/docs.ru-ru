@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 091a18bd-e901-46f6-b999-74d71c8a7c41
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d19eebaa3aa0ebb6f9807f0cf277b7ed6183c148
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: c68f43ce2f79ee6e4ec44ce4b2f0dbfb1c1185fa
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70777196"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74433871"
 ---
 # <a name="getassemblyrefhash-method"></a>Метод GetAssemblyRefHash
-Извлекает хэш-объект хэша для данной сборки.  
+Retrieves a hash blob for a given assembly.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,19 +36,19 @@ HRESULT GetAssemblyRefHash(
   
 ## <a name="parameters"></a>Параметры  
  `FileToken`  
- Идентификатор сборки, на которую будет ссылаться хэш.  
+ ID of assembly to which the hash will refer.  
   
  `ppvHash`  
- Получает результирующий большой двоичный объект хэша.  
+ Receives the resulting hash blob.  
   
  `pcbHash`  
- Получает размер хэш-объекта хэша (в байтах).  
+ Receives size, in bytes, of hash blob.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Если метод завершается с ошибкой, возвращает значение S_OK.  
+ Returns S_OK if the method succeeds.  
   
 ## <a name="requirements"></a>Требования  
- Требуется ALink. h  
+ Requires alink.h  
   
 ## <a name="see-also"></a>См. также
 

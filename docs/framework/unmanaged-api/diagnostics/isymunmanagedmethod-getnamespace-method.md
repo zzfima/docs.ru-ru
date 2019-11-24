@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7fbbac42-b966-406d-9ae9-67bf3aea74ce
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 676c968bb48e493f9a4514235fbc3246cf395228
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b8bbedb4c60a2df6070373f2b6a104fff094869a
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67774645"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448965"
 ---
 # <a name="isymunmanagedmethodgetnamespace-method"></a>Метод ISymUnmanagedMethod::GetNamespace
-Получает пространство имен, в котором определен этот метод.  
+Gets the namespace within which this method is defined.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -36,13 +34,13 @@ HRESULT GetNamespace(
   
 ## <a name="parameters"></a>Параметры  
  `pRetVal`  
- [out] Указатель, который имеет значение равное возвращаемому [ISymUnmanagedNamespace](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-interface.md) интерфейс.  
+ [out] A pointer that is set to the returned [ISymUnmanagedNamespace](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-interface.md) interface.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Требования  
- **Заголовок.** CorSym.idl CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>См. также
 

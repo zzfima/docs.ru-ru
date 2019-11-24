@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0c3d4835-e111-4e82-af6d-53f140b8f2c9
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b6c1efe2a7d831f26556dbf501176f02588f2e0d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a212a0499b1091f1c77b52951ecef2cb2cace4df
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780326"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447833"
 ---
 # <a name="icorprofilerfunctionenumclone-method"></a>Метод ICorProfilerFunctionEnum::Clone
-Получает указатель интерфейса на копию этого [ICorProfilerFunctionEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-interface.md) интерфейс.  
+Gets an interface pointer to a copy of this [ICorProfilerFunctionEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-interface.md) interface.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -35,12 +33,12 @@ HRESULT Clone([out] ICorProfilerFunctionEnum **ppEnum);
   
 ## <a name="parameters"></a>Параметры  
  `ppEnum`  
- [out] Указатель на указатель интерфейса, который, в свою очередь, указывает на копию данного объекта [ICorProfilerFunctionEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-interface.md) интерфейс. Копия перечислителя хранит собственное состояние перечисления отдельно от этот перечислитель. Тем не менее позиция курсора начальной копии совпадает с текущей позицией курсора этот перечислитель.  
+ [out] A pointer to the interface pointer, which, in turn, points to the copy of this [ICorProfilerFunctionEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-interface.md) interface. The copy of the enumerator maintains its own enumeration state separately from this enumerator. However, the copy's initial cursor position is the same as this enumerator's current cursor position.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorProf.idl, CorProf.h  
+ **Заголовок:** CorProf.idl, CorProf.h  
   
  **Библиотека:** CorGuids.lib  
   

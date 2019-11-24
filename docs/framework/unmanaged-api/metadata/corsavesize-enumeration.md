@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: eb95ce39-5688-43c1-a34d-578794b32faa
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c1e7bbac17d9a9ae191a5ad6d69b52a806383562
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0f870d9d7d1bc292b213d690df508a6c28bac2ab
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781601"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74450098"
 ---
 # <a name="corsavesize-enumeration"></a>Перечисление CorSaveSize
 Содержит значения, указывающие уровень точности, необходимый при запросе размера операции сохранения.  
@@ -36,20 +34,20 @@ typedef enum CorSaveSize {
 } CorSaveSize;  
 ```  
   
-## <a name="members"></a>Участники  
+## <a name="members"></a>Члены  
   
 |Член|Описание|  
 |------------|-----------------|  
-|`cssAccurate`|Указывает, что возвращаемое значение должно быть точным.|  
-|`cssQuick`|Указывает, что возвращаемое значение должно быть приблизительным.|  
-|`cssDiscardTransientCAs`|Указывает, что удаляемые типы должны быть удалены.|  
+|`cssAccurate`|Specifies that the return value should be exact.|  
+|`cssQuick`|Specifies that the return value should be estimated.|  
+|`cssDiscardTransientCAs`|Specifies that discardable types should be removed.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorHdr.h  
+ **Header:** CorHdr.h  
   
- **Библиотека:** Используется как ресурс в MsCorEE.dll  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

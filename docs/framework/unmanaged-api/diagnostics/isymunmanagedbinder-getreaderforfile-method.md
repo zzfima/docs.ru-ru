@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 46c06258-831e-47c8-a50a-8650af6b637e
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6081e2dfd64625697295f2ea2d1560bc597838da
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 94cda16466ea5a3d35a478a2ae80281e9414f719
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776856"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449362"
 ---
 # <a name="isymunmanagedbindergetreaderforfile-method"></a>Метод ISymUnmanagedBinder::GetReaderForFile
-Данный интерфейс метаданных и имя файла, возвращает правильный [ISymUnmanagedReader](isymunmanagedreader-interface.md) интерфейс, который будет считывать символы отладки, связанные с модулем.  
+Given a metadata interface and a file name, returns the correct [ISymUnmanagedReader](isymunmanagedreader-interface.md) interface that will read the debugging symbols associated with the module.  
   
- Этот метод открывает файл базы данных (PDB) программы только в том случае, если оно находится рядом с исполняемым файлом. Это изменение уже внесено в целях безопасности. Если вам требуется более сложный поиск PDB-файл, используйте [ISymUnmanagedBinder2::GetReaderForFile2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md) метод.  
+ This method will open the program database (PDB) file only if it is next to the executable file. This change has been made for security purposes. If you need a more extensive search for the PDB file, use the [ISymUnmanagedBinder2::GetReaderForFile2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md) method.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -41,22 +39,22 @@ HRESULT GetReaderForFile(
   
 ## <a name="parameters"></a>Параметры  
  `importer`  
- [in] Указатель на интерфейс импорта метаданных.  
+ [in] A pointer to the metadata import interface.  
   
  `fileName`  
- [in] Указатель на имя файла.  
+ [in] A pointer to the file name.  
   
  `searchPath`  
- [in] Указатель на пути поиска.  
+ [in] A pointer to the search path.  
   
  `pRetVal`  
- [out] Указатель, который имеет значение равное возвращаемому [ISymUnmanagedReader](isymunmanagedreader-interface.md) интерфейс.  
+ [out] A pointer that is set to the returned [ISymUnmanagedReader](isymunmanagedreader-interface.md) interface.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Требования  
- **Заголовок.** CorSym.idl CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>См. также
 

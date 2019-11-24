@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: f3535279-3c63-41a2-ab0e-a129dc5a01e8
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4c307c09c4593a3e5eefcda2c834132ac57a12d5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e78285c915938c553a9b4012ba57257ac43492ad
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779957"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447609"
 ---
 # <a name="icorprofilerthreadenumnext-method"></a>Метод ICorProfilerThreadEnum::Next
 Возвращает заданное число смежных потоков из упорядоченной коллекции потоков начиная с текущей позиции перечислителя в последовательности.  
@@ -56,9 +54,9 @@ HRESULT Next (    [in]  ULONG      celt,
 |S_FALSE|Было возвращено элементов менее, чем `celt`, что указывает, что перечисление завершено.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorProf.idl, CorProf.h  
+ **Заголовок:** CorProf.idl, CorProf.h  
   
  **Библиотека:** CorGuids.lib  
   

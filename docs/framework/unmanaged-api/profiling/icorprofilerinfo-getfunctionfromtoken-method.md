@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0eed759f-cce8-405d-88dc-9ee293a38928
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 9c971df072cc7c6546e5c17278c78c7e9668ab63
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 72531dc4fa7a8afc3bd719d73389fac94e3363bb
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780636"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74439138"
 ---
 # <a name="icorprofilerinfogetfunctionfromtoken-method"></a>Метод ICorProfilerInfo::GetFunctionFromToken
-Получает идентификатор функции. Этот метод является устаревшим в .NET Framework версии 2.0. Используйте [ICorProfilerInfo2::GetFunctionFromTokenAndTypeArgs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctionfromtokenandtypeargs-method.md) метод вместо этого.  
+Gets the ID of a function. This method is obsolete in the .NET Framework version 2.0. Use the [ICorProfilerInfo2::GetFunctionFromTokenAndTypeArgs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctionfromtokenandtypeargs-method.md) method instead.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -36,17 +34,17 @@ HRESULT GetFunctionFromToken(
     [out] FunctionID *pFunctionId);  
 ```  
   
-## <a name="remarks"></a>Примечания  
- `GetFunctionFromToken` Метод не будет работать для универсальных функций или функций в универсальных типах; теперь является устаревшим. Используйте `ICorProfilerInfo2::GetFunctionFromTokenAndTypeArgs` для всех функций.  
+## <a name="remarks"></a>Заметки  
+ The `GetFunctionFromToken` method will not work for generic functions or functions in generic types; it is now obsolete. Use `ICorProfilerInfo2::GetFunctionFromTokenAndTypeArgs` for all functions.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorProf.idl, CorProf.h  
+ **Заголовок:** CorProf.idl, CorProf.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** 1.1, 1.0  
+ **.NET Framework Versions:** 1.1, 1.0  
   
 ## <a name="see-also"></a>См. также
 

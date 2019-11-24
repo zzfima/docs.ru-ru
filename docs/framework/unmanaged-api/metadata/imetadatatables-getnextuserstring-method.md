@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: b7cb40ee-67b7-4f4e-8dcc-ee7ac8bc986b
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c50740e59019edb44f6e8c2cee1b823fa047a039
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 44ae2d16563220f8f5b81b6f609dee7df715fd0e
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781439"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447396"
 ---
 # <a name="imetadatatablesgetnextuserstring-method"></a>Метод IMetaDataTables::GetNextUserString
-Получает индекс строки, содержащей Далее жестко запрограммированные строки в текущем столбце таблицы.  
+Gets the index of the row that contains the next hard-coded string in the current table column.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,20 +36,20 @@ HRESULT GetNextUserString (
   
 ## <a name="parameters"></a>Параметры  
  `ixUserString`  
- [in] Значение индекса, текущий столбец строки.  
+ [in] An index value from the current string column.  
   
  `pNext`  
- [out] Указатель на индекс строки, следующей строки в столбце.  
+ [out] A pointer to the row index of the next string in the column.  
   
-## <a name="remarks"></a>Примечания  
- Не рекомендуется использование этого метода, так как он не возвращает согласованные результаты. Сведения о таблице, см. в документации Common Language Infrastructure (CLI), особенно «раздел II: Определение метаданных и семантика». Документация доступна в Интернете; см. страницы [ECMAC# и стандарты Common Language Infrastructure](https://go.microsoft.com/fwlink/?LinkID=99212) на сайте MSDN и [Стандарт ECMA-335 — общеязыковая инфраструктура (CLI)](https://go.microsoft.com/fwlink/?LinkID=65552) на международном веб-сайте организации ECMA.  
+## <a name="remarks"></a>Заметки  
+ We do not recommend the use of this method, because it does not return consistent results. For information about the GUID table, see the Common Language Infrastructure (CLI) documentation, especially "Partition II: Metadata Definition and Semantics". Документация доступна в Интернете; см. страницы [ECMAC# и стандарты Common Language Infrastructure](https://go.microsoft.com/fwlink/?LinkID=99212) на сайте MSDN и [Стандарт ECMA-335 — общеязыковая инфраструктура (CLI)](https://go.microsoft.com/fwlink/?LinkID=65552) на международном веб-сайте организации ECMA.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** Cor.h  
+ **Header:** Cor.h  
   
- **Библиотека:** Используется как ресурс в MsCorEE.dll  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

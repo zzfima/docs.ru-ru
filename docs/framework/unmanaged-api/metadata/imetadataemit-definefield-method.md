@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6b5be4fc-2e86-499c-8b09-833160bca767
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 057bae1d702fa091ebc3d3178c9fba35d5dd3d90
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 40f24a4ea628ce92a27ab1bfe97fc87a57dfa4f0
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777652"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74432545"
 ---
 # <a name="imetadataemitdefinefield-method"></a>Метод IMetaDataEmit::DefineField
-Создает определение для поля с заданной подписью метаданных и получает маркер для этого определения поля.  
+Creates a definition for a field with the specified metadata signature, and gets a token to that field definition.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -45,38 +43,38 @@ HRESULT DefineField (
   
 ## <a name="parameters"></a>Параметры  
  `td`  
- [in] `mdTypeDef` Маркеров для включающего класса или интерфейса.  
+ [in] The `mdTypeDef` token for the enclosing class or interface.  
   
  `szName`  
- [in] Имя поля в формате Юникод.  
+ [in] The field name in Unicode.  
   
  `dwFieldFlags`  
- [in] Атрибуты поля. Это битовая маска `CorFieldAttr` значения.  
+ [in] The field attributes. This is a bitmask of `CorFieldAttr` values.  
   
  `pvSigBlob`  
- [in] Подпись поля как большой двоичный объект.  
+ [in] The field signature as a BLOB.  
   
  `cbSigBlob`  
- [in] Число байт в `pvSigBlob`.  
+ [in] The count of bytes in `pvSigBlob`.  
   
  `dwCPlusTypeFlag`  
- [in] `ELEMENT_TYPE_` *\** Для постоянного значения. Это `CorElementType` значение. Если не применяется частное определение постоянное значение для поля, используйте `ELEMENT_TYPE_END`.  
+ [in] The `ELEMENT_TYPE_` *\** for the constant value. This is a `CorElementType` value. If not defining a constant value for the field, use `ELEMENT_TYPE_END`.  
   
  `pValue`  
- [in] Постоянное значение для поля.  
+ [in] The constant value for the field.  
   
  `cchValue`  
- [in] Размер в символах (Юникод) `pValue`.  
+ [in] The size in (Unicode) characters of `pValue`.  
   
  `pmd`  
- [out] `mdFieldDef` Маркер, назначенный.  
+ [out] The `mdFieldDef` token assigned.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** Cor.h  
+ **Header:** Cor.h  
   
- **Библиотека:** Используется как ресурс в MSCorEE.dll  
+ **Library:** Used as a resource in MSCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6e47b7e5-0335-4dd3-8c42-d3c07d62b102
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: cfcf2c74a2a44bd0539bf78e237e42553696b16c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3abf944df3619256791882bf61dfc4072b642c54
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67762990"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445138"
 ---
 # <a name="icorprofilercallbackassemblyunloadstarted-method"></a>Метод ICorProfilerCallback::AssemblyUnloadStarted
-Уведомляет профилировщик о выгрузке сборки.  
+Notifies the profiler that an assembly is being unloaded.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -36,15 +34,15 @@ HRESULT AssemblyUnloadStarted(
   
 ## <a name="parameters"></a>Параметры  
  `assemblyId`  
- [in] Идентифицирует сборку, которая вызывается при выгрузке.  
+ [in] Identifies the assembly that is being unloaded.  
   
-## <a name="remarks"></a>Примечания  
- Значение `assemblyId` не является допустимым для информационного запроса после `AssemblyUnloadStarted` возвращает метод — это последняя возможность профилировщика для получения сведений об этой сборке.  
+## <a name="remarks"></a>Заметки  
+ The value of `assemblyId` is not valid for an information request after the `AssemblyUnloadStarted` method returns — this is the profiler's last chance to get information about this assembly.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorProf.idl, CorProf.h  
+ **Заголовок:** CorProf.idl, CorProf.h  
   
  **Библиотека:** CorGuids.lib  
   

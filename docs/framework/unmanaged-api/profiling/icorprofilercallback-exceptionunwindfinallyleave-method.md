@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2350351e-f253-4c0c-a191-f952bc5700e6
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 0a6b754e6ceef0c451c38055078d403c0601ce45
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b6ef54297b69892f07df1aa92a92600fb20756e9
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67755943"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445301"
 ---
 # <a name="icorprofilercallbackexceptionunwindfinallyleave-method"></a>Метод ICorProfilerCallback::ExceptionUnwindFinallyLeave
-Уведомляет профилировщик, на этапе очистки исключения, покинул обработки `finally` предложение.  
+Notifies the profiler that the unwind phase of exception handling has left a `finally` clause.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -33,15 +31,15 @@ ms.locfileid: "67755943"
 HRESULT ExceptionUnwindFinallyLeave();  
 ```  
   
-## <a name="remarks"></a>Примечания  
- Профилировщик не должен блокироваться во время данного вызова, поскольку стек может находиться в состоянии, допускающем сбор мусора, и поэтому не удастся включить сборку мусора. Если предпринимается в блоках профилировщика и сбор мусора, среда выполнения будет блокироваться до этого обратного вызова.  
+## <a name="remarks"></a>Заметки  
+ The profiler should not block during this call because the stack may not be in a state that allows garbage collection, and therefore preemptive garbage collection cannot be enabled. If the profiler blocks here and a garbage collection is attempted, the runtime will block until this callback returns.  
   
- Кроме того во время этого вызова профилировщик не должна вызывать управляемый код или каким-либо образом вызывать распределения управляемой памяти.  
+ Also, during this call, the profiler must not call into managed code or in any way cause a managed-memory allocation.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorProf.idl, CorProf.h  
+ **Заголовок:** CorProf.idl, CorProf.h  
   
  **Библиотека:** CorGuids.lib  
   

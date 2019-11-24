@@ -6,16 +6,16 @@ helpviewer_keywords:
 - control patterns, Table
 - TableControl pattern
 ms.assetid: 880cd85c-aa8c-4fb5-9369-45491d34bb78
-ms.openlocfilehash: 1fec3671f017ae6c6864537805e6c793b5f9046b
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 8e929f181255f6738261533fa3261187ebe3c6ff
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458143"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447096"
 ---
 # <a name="implementing-the-ui-automation-table-control-pattern"></a>Реализация шаблона элемента управления таблицы автоматизации пользовательского интерфейса
 > [!NOTE]
-> Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Последние сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]см. в разделе [API автоматизации Windows. Автоматизация пользовательского интерфейса](https://go.microsoft.com/fwlink/?LinkID=156746).  
+> Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Последние сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]см. в разделе [API автоматизации Windows. Автоматизация пользовательского интерфейса](/windows/win32/winauto/entry-uiauto-win32).  
   
  В этом разделе приводятся рекомендации и соглашения для реализации <xref:System.Windows.Automation.Provider.ITableProvider>, включая сведения о свойствах, методах и событиях. Ссылки на дополнительные материалы перечислены в конце раздела.  
   
@@ -32,14 +32,14 @@ ms.locfileid: "73458143"
 - Заголовки столбцов и строк могут включать и основной заголовок, и любые поддерживаемые заголовки.  
   
 > [!NOTE]
-> Эта концепция станет очевидной в электронной таблице Microsoft Excel, где пользователь определил столбец «First Name» (имя). Теперь этот столбец имеет два заголовка: заголовок "Имя", определенный пользователем, и алфавитно-цифровое обозначение этого столбца, назначенное приложением.  
+> This concept becomes evident in a Microsoft Excel spreadsheet where a user has defined a "First name" column. Теперь этот столбец имеет два заголовка: заголовок "Имя", определенный пользователем, и алфавитно-цифровое обозначение этого столбца, назначенное приложением.  
   
-- См. раздел [Реализация шаблона элемента управления сетки модели автоматизации пользовательского интерфейса](implementing-the-ui-automation-grid-control-pattern.md) для связанных функций сетки.  
+- See [Implementing the UI Automation Grid Control Pattern](implementing-the-ui-automation-grid-control-pattern.md) for related grid functionality.  
   
- ![Таблица со сложными элементами заголовка.](./media/uia-tablepattern-complex-column-headers.PNG "UIA_TablePattern_Complex_Column_Headers")  
+ ![Table with complex header items.](./media/uia-tablepattern-complex-column-headers.PNG "UIA_TablePattern_Complex_Column_Headers")  
 Пример таблицы со сложными заголовками столбцов  
   
- ![Таблица с неоднозначным свойством Роворколумнмажор.](./media/uia-tablepattern-roworcolumnmajorproperty.PNG "UIA_TablePattern_RowOrColumnMajorProperty")  
+ ![Table with ambiguous RowOrColumnMajor property.](./media/uia-tablepattern-roworcolumnmajorproperty.PNG "UIA_TablePattern_RowOrColumnMajorProperty")  
 Пример таблицы с неоднозначным свойством RowOrColumnMajor.  
   
 <a name="Required_Members_for_ITableProvider"></a>   

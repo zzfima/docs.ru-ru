@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 42145e8d-000f-4d0b-ae43-c08201190fa2
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 71a2c7a61d573c1e17d0e8fefcd34d60e05ed3c5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b240be3e5b0127de42cea43dd8e89a2cc656b28e
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780468"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449514"
 ---
 # <a name="imetadataimportenumfieldswithname-method"></a>Метод IMetaDataImport::EnumFieldsWithName
 Перечисляет токены FieldDef заданного типа с указанным именем.  
@@ -42,39 +40,39 @@ HRESULT EnumFieldsWithName (
   
 ## <a name="parameters"></a>Параметры  
  `phEnum`  
- [in, out] Указатель на перечислитель.  
+ [in, out] A pointer to the enumerator.  
   
  `cl`  
- [in] Токен типа, поля которого предназначены для перечисления.  
+ [in] The token of the type whose fields are to be enumerated.  
   
  `szName`  
- [in] Имя поля, которое ограничивает область перечисления.  
+ [in] The field name that limits the scope of the enumeration.  
   
  `rFields`  
- [out] Массив, используемый для хранения токены FieldDef.  
+ [out] Array used to store the FieldDef tokens.  
   
  `cMax`  
  [in] Максимальный размер массива `rFields`.  
   
  `pcTokens`  
- [out] Фактическое количество возвращаемых в токены FieldDef `rFields`.  
+ [out] The actual number of FieldDef tokens returned in `rFields`.  
   
-## <a name="remarks"></a>Примечания  
- В отличие от [IMetaDataImport::EnumFields](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumfields-method.md), `EnumFieldsWithName` отбрасывает все маркеры поля, у которых нет указанного имени.  
+## <a name="remarks"></a>Заметки  
+ Unlike [IMetaDataImport::EnumFields](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumfields-method.md), `EnumFieldsWithName` discards all field tokens that do not have the specified name.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
   
 |HRESULT|Описание|  
 |-------------|-----------------|  
-|`S_OK`|`EnumFieldsWithName` успешно возвращен.|  
-|`S_FALSE`|Нет полей для перечисления. В этом случае `pcTokens` равно нулю.|  
+|`S_OK`|`EnumFieldsWithName` returned successfully.|  
+|`S_FALSE`|There are no fields to enumerate. In that case, `pcTokens` is zero.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** Cor.h  
+ **Header:** Cor.h  
   
- **Библиотека:** Включена как ресурс в MsCorEE.dll  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

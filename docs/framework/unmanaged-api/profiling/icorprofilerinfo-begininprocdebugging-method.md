@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c5c82c69-99f8-4447-aee0-42cca0a5eb5c
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 618be7482616ea155798973d02a90f32d46164db
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: fffc028c7706c86e8384483cc92ebad90b292861
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780268"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447752"
 ---
 # <a name="icorprofilerinfobegininprocdebugging-method"></a>Метод ICorProfilerInfo::BeginInprocDebugging
-Инициализирует внутрипроцессную поддержку отладки. Этот метод является устаревшим в .NET Framework версии 2.0.  
+Initializes in-process debugging support. This method is obsolete in the .NET Framework version 2.0.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,22 +35,22 @@ HRESULT BeginInprocDebugging(
   
 ## <a name="parameters"></a>Параметры  
  `fThisThreadOnly`  
- [in] Это значение равно `true` инициализировать поддержку отладки для всех потоков; ему присвоено `false` инициализировать поддержку отладки для всех потоков.  
+ [in] Set this value to `true` to initialize debugging support for only the current thread; set it to `false` to initialize debugging support for all threads.  
   
  `pdwProfilerContext`  
- [out] Указатель на возвращаемое значение, идентифицирующее сеанс отладки.  
+ [out] The pointer to a returned value that identifies the debugging session.  
   
-## <a name="remarks"></a>Примечания  
- Службы отладки среды CLR поддерживается только в процессе отладки в .NET Framework версий 1.0 и 1.1. В процессе отладки включить профилировщик для использования для проверки часть API отладки. Тем не менее согласно с отзывами пользователей в процессе отладки удален из .NET Framework версии 2.0 и заменены набором функциональных возможностей, которые лучше соответствуют API профилирования.  
+## <a name="remarks"></a>Заметки  
+ The CLR debugging services supported limited in-process debugging in the .NET Framework versions 1.0 and 1.1. In-process debugging enabled a profiler to use the inspection portions of the debugging API. However, due to customer feedback, in-process debugging has been removed from the .NET Framework in version 2.0, and replaced with a set of functionality that is more in line with the profiling API.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorProf.idl, CorProf.h  
+ **Заголовок:** CorProf.idl, CorProf.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** 1.0  
+ **.NET Framework Version:** 1.0  
   
 ## <a name="see-also"></a>См. также
 

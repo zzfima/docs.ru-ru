@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8027df7c-cfad-4724-bda0-7538d9519070
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6be71878ba354ebe53b4b8b9b40db3222ec828f3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1362efbf518310240ce665badc93810d1c0b9b89
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781736"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74450192"
 ---
 # <a name="cornativelinkflags-enumeration"></a>Перечисление CorNativeLinkFlags
 Предоставляет значения флагов, используемые компоновщиком при связывании машинного кода.  
@@ -38,21 +36,21 @@ typedef enum
 } CorNativeLinkFlags;  
 ```  
   
-## <a name="members"></a>Участники  
+## <a name="members"></a>Члены  
   
 |Член|Описание|  
 |------------|-----------------|  
-|`nlfNone`|Указывает флаги отсутствуют.|  
-|`nlfLastError`|Указывает `setLastError` ключевое слово.|  
-|`nlfNoMangle`|Указывает `nomangle` ключевое слово.|  
+|`nlfNone`|Indicates no flags.|  
+|`nlfLastError`|Indicates a `setLastError` keyword.|  
+|`nlfNoMangle`|Indicates a `nomangle` keyword.|  
 |`nlfMaxValue`|Не используется.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** Cor.h  
+ **Header:** Cor.h  
   
- **Библиотека:** Включена как ресурс в MsCorEE.dll  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

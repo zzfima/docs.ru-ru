@@ -9,16 +9,16 @@ helpviewer_keywords:
 - UI Automation, invoking controls
 - controls, invoking
 ms.assetid: 5ee2de3f-256c-43ec-b64c-62ace91f9983
-ms.openlocfilehash: f17f3ad25f137bbf8d7cf88b43cc52dfdeeb3fd4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e1b489e8daaaf9f5b8c0cb46374fa54bf165d49c
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69923727"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447010"
 ---
 # <a name="invoke-a-control-using-ui-automation"></a>Вызов элемента управления с помощью модели автоматизации пользовательского интерфейса
 > [!NOTE]
-> Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Последние сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]см. в разделе [API службы автоматизации Windows: Модель автоматизации](https://go.microsoft.com/fwlink/?LinkID=156746)пользовательского интерфейса.  
+> Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Последние сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]см. в разделе [API автоматизации Windows. Автоматизация пользовательского интерфейса](/windows/win32/winauto/entry-uiauto-win32).  
   
  В этом примере показано выполнение следующих задач.  
   
@@ -40,4 +40,4 @@ ms.locfileid: "69923727"
   
 ## <a name="see-also"></a>См. также
 
-- [Пример InvokePattern, ExpandCollapsePattern и Тогглепаттерн](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/InvokePattern)
+- [InvokePattern, ExpandCollapsePattern, and TogglePattern Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/InvokePattern)

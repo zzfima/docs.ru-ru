@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: ffbb3caf-20da-4a4b-8983-77376e72b990
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 0c88c12646a13e5a24f2475bd2db04c8c831141c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a76a7a2d4ad68e367e38e175377aff40ce399346
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781757"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74450210"
 ---
 # <a name="cormethodimpl-enumeration"></a>Перечисление CorMethodImpl
 Содержит значения, описывающие возможности реализации метода.  
@@ -54,31 +52,31 @@ typedef enum CorMethodImpl {
 } CorMethodImpl;  
 ```  
   
-## <a name="members"></a>Участники  
+## <a name="members"></a>Члены  
   
 |Член|Описание|  
 |------------|-----------------|  
-|`miCodeTypeMask`|Флаги, описывающие тип кода.|  
-|`miIL`|Указывает, что метод реализуется на промежуточном языке Майкрософт (MSIL).|  
+|`miCodeTypeMask`|Flags that describe code type.|  
+|`miIL`|Specifies that the method implementation is Microsoft intermediate language (MSIL).|  
 |`miNative`|Указывает, что для метода используется стандартная реализация.|  
-|`miOPTIL`|Указывает, что метод реализуется OPTIL.|  
-|`miRuntime`|Указывает, что реализация метода предоставляется средой CLR.|  
-|`miManagedMask`|Флаги, указывающие ли управляемый или неуправляемый код.|  
-|`miUnmanaged`|Указывает, что реализация метода является неуправляемым.|  
-|`miManaged`|Указывает, что реализация метода является управляемым.|  
-|`miForwardRef`|Указывает, что этот метод определен. Этот флаг используется в основном в сценариях слияния.|  
-|`miPreserveSig`|Указывает, что сигнатура метода не может быть изменена для преобразования HRESULT.|  
-|`miInternalCall`|Зарезервировано для внутреннего использования средой CLR.|  
-|`miSynchronized`|Указывает, что метод является однопоточным выполнение основной части.|  
+|`miOPTIL`|Specifies that the method implementation is OPTIL.|  
+|`miRuntime`|Specifies that the method implementation is provided by the common language runtime.|  
+|`miManagedMask`|Flags that indicate whether the code is managed or unmanaged.|  
+|`miUnmanaged`|Specifies that the method implementation is unmanaged.|  
+|`miManaged`|Specifies that the method implementation is managed.|  
+|`miForwardRef`|Specifies that the method is defined. This flag is used primarily in merge scenarios.|  
+|`miPreserveSig`|Specifies that the method signature cannot be mangled for an HRESULT conversion.|  
+|`miInternalCall`|Reserved for internal use by the common language runtime.|  
+|`miSynchronized`|Specifies that the method is single-threaded through its body.|  
 |`miNoInlining`|Указывает, что метод нельзя выполнять как встроенный.|  
-|`miAggressiveInlining`|Указывает, что метод должен выполняться как встроенный, если это возможно.|  
-|`miNoOptimization`|Указывает, что метод не должен быть оптимизирован.|  
-|`miMaxMethodImplVal`|Максимальное допустимое значение для `CorMethodImpl`.|  
+|`miAggressiveInlining`|Specifies that the method should be inlined if possible.|  
+|`miNoOptimization`|Specifies that the method should not be optimized.|  
+|`miMaxMethodImplVal`|The maximum valid value for a `CorMethodImpl`.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorHdr.h  
+ **Header:** CorHdr.h  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

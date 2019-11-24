@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: fc994fef-65c9-432a-84cb-66c8141147e7
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 405d5ff49ba7bc2e5204f00cf50c30822354e56d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5edc4e0e2fc25ddae6ccabc1aa9c9a031292b63a
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67775581"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449891"
 ---
 # <a name="icorprofilerinfogetthreadinfo-method"></a>Метод ICorProfilerInfo::GetThreadInfo
-Возвращает удостоверение текущего потока Win32 для указанного потока.  
+Gets the current Win32 thread identity for the specified thread.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,15 +35,15 @@ HRESULT GetThreadInfo(
   
 ## <a name="parameters"></a>Параметры  
  `threadId`  
- [in] Идентификатор потока, для которого необходимо получить идентификатор текущего Win32  
+ [in] The ID of the thread for which to get the current Win32 ID.  
   
  `pdwWin32ThreadId`  
- [out] Указатель на текущий поток Win32 указанного потока.  
+ [out] A pointer to the specified thread's current Win32 thread ID.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorProf.idl, CorProf.h  
+ **Заголовок:** CorProf.idl, CorProf.h  
   
  **Библиотека:** CorGuids.lib  
   

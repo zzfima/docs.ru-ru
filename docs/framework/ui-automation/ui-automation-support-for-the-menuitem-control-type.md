@@ -6,21 +6,21 @@ helpviewer_keywords:
 - Menu Item control type
 - UI Automation, Menu Item control type
 ms.assetid: 54bce311-3d23-40b9-ba90-1bdbdaf8fbba
-ms.openlocfilehash: 5b9983dda790fbf501b055ea8e592851e61e1e89
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: c65e30ffea64a9b577cfee7535fd92e489bc7632
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039419"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446704"
 ---
 # <a name="ui-automation-support-for-the-menuitem-control-type"></a>Поддержка автоматизации пользовательского интерфейса для типа элемента управления MenuItem
 
 > [!NOTE]
-> Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Последние сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]см. в разделе [API автоматизации Windows. Автоматизация пользовательского интерфейса](https://go.microsoft.com/fwlink/?LinkID=156746).
+> Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Последние сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]см. в разделе [API автоматизации Windows. Автоматизация пользовательского интерфейса](/windows/win32/winauto/entry-uiauto-win32).
 
 В этом разделе содержатся сведения о поддержке в [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] типа элемента управления MenuItem. Здесь описана древовидная структура [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] этого элемента управления и представлены свойства и шаблоны элементов управления, которые необходимы для типа элемента управления MenuItem.
 
-Элемент управления "Меню" позволяет иерархически организовать элементы, связанные с командами и обработчиками событий. В типичном приложении Microsoft Windows строка меню содержит несколько пунктов меню (например, **файл**, **Правка**и **окно**), и каждый пункт меню отображает меню. Меню содержит набор пунктов меню (таких как **Создать**, **Открыть**и **Закрыть**), которые можно развернуть, чтобы отобразить дополнительные пункты меню или выполнить определенное действие, нажав соответствующий пункт. Пункт меню может размещаться в меню, строке меню или панели инструментов.
+Элемент управления "Меню" позволяет иерархически организовать элементы, связанные с командами и обработчиками событий. In a typical Microsoft Windows application, a menu bar contains several menu items (such as **File**, **Edit**, and **Window**), and each menu item displays a menu. Меню содержит набор пунктов меню (таких как **Создать**, **Открыть**и **Закрыть**), которые можно развернуть, чтобы отобразить дополнительные пункты меню или выполнить определенное действие, нажав соответствующий пункт. Пункт меню может размещаться в меню, строке меню или панели инструментов.
 
 В следующих разделах описывается требуемая древовидная структура [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , свойства, шаблоны элементов управления и события для типа элемента управления MenuItem. Требования [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] применяются ко всем элементам управления "Список", будь это [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)]или [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)].
 
@@ -32,9 +32,9 @@ ms.locfileid: "73039419"
 
 |Представление элемента управления|Представление содержимого|
 |------------------|------------------|
-|MenuItem "Справка"<br /><br /> <ul><li>Menu (подменю из меню "Справка")<br /><br /> <ul><li>MenuItem "Вызов справки"</li><li>MenuItem "О Блокноте"</li></ul></li></ul>|MenuItem "Справка"<br /><br /> -MenuItem "разделы справки"<br />-MenuItem "о Блокноте"|
+|MenuItem "Справка"<br /><br /> <ul><li>Menu (подменю из меню "Справка")<br /><br /> <ul><li>MenuItem "Вызов справки"</li><li>MenuItem "О Блокноте"</li></ul></li></ul>|MenuItem "Справка"<br /><br /> -   MenuItem "Help Topics"<br />-   MenuItem "About Notepad"|
 
-Представление элемента управления "Пункт меню" имеет древовидную структуру [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , как показано выше. Обратите внимание, что пункт меню " **Справка** " позволяет лучше проиллюстрировать структуру в типичном меню до иерархии подменю.
+Представление элемента управления "Пункт меню" имеет древовидную структуру [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , как показано выше. Note that the **Help** menu item is included to better illustrate the structure in a typical menu to submenu hierarchy.
 
 В представлении содержимого отсутствует элемент Menu из дерева [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , потому что он не передает полезные сведения для конечного пользователя.
 
@@ -42,7 +42,7 @@ ms.locfileid: "73039419"
 
 ## <a name="required-ui-automation-properties"></a>Требуемые свойства модели автоматизации пользовательского интерфейса
 
-В следующей таблице перечислены свойства [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , значение или определение которых в первую очередь относится к элементам управления "Пункт меню". Дополнительные сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] свойствах см. в разделе [Свойства модели автоматизации пользовательского интерфейса для клиентов](ui-automation-properties-for-clients.md).
+В следующей таблице перечислены свойства [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , значение или определение которых в первую очередь относится к элементам управления "Пункт меню". For more information on [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] properties, see [UI Automation Properties for Clients](ui-automation-properties-for-clients.md).
 
 |свойство;|значения|Описание|
 |--------------|-----------|-----------------|

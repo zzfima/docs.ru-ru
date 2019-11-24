@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5c6b7fb4-cbca-4479-b650-ab9a99732ea0
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: aa633d554652050af51065e11221f898b34d5c63
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4149db74adfa26df221eed5c590766a023bb105e
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67772671"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448225"
 ---
 # <a name="imetadataassemblyimportgetassemblyrefprops-method"></a>Метод IMetaDataAssemblyImport::GetAssemblyRefProps
-Получает набор свойств для ссылки на сборку с заданной подписью метаданных.  
+Gets the set of properties for the assembly reference with the specified metadata signature.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -46,44 +44,44 @@ HRESULT GetAssemblyRefProps (
   
 ## <a name="parameters"></a>Параметры  
  `mdar`  
- [in] `mdAssemblyRef` Маркер метаданных, представляющий ссылку на сборку, для которого нужно получить свойства.  
+ [in] The `mdAssemblyRef` metadata token that represents the assembly reference for which to get the properties.  
   
  `ppbPublicKeyOrToken`  
- [out] Указатель на открытый ключ или токен метаданных.  
+ [out] A pointer to the public key or the metadata token.  
   
  `pcbPublicKeyOrToken`  
- [out] Число байтов в возвращаемый открытый ключ или маркер.  
+ [out] The number of bytes in the returned public key or token.  
   
  `szName`  
- [out] Простое имя сборки.  
+ [out] The simple name of the assembly.  
   
  `cchName`  
- [in] Размер, в расширенных символах из `szName`.  
+ [in] The size, in wide chars, of `szName`.  
   
  `pchName`  
- [out] Указатель на число расширенных символов, фактически возвращенных в `szName`.  
+ [out] A pointer to the number of wide chars actually returned in `szName`.  
   
  `pMetaData`  
- [out] Указатель на структуру ASSEMBLYMETADATA, которая содержит метаданные сборки.  
+ [out] A pointer to an ASSEMBLYMETADATA structure that contains the assembly metadata.  
   
  `ppbHashValue`  
- [out] Указатель на хэш-значения. Это хэш, с помощью алгоритма SHA-1, из `PublicKey` свойство сборки, на которую выполняется ссылка, если флаг arfFullOriginator [AssemblyRefFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyrefflags-enumeration.md) имеет значение перечисления.  
+ [out] A pointer to the hash value. This is the hash, using the SHA-1 algorithm, of the `PublicKey` property of the assembly being referenced, unless the arfFullOriginator flag of the [AssemblyRefFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyrefflags-enumeration.md) enumeration is set.  
   
  `pcbHashValue`  
- [out] Число расширенных символов в возвращенное хэш-значение.  
+ [out] The number of wide chars in the returned hash value.  
   
  `pdwAssemblyRefFlags`  
- [out] Указатель на флаги, описывающие метаданные, применяемые к сборке. Значение флагов представляет собой сочетание одного или нескольких [CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) значения.  
+ [out] A pointer to flags that describe the metadata applied to an assembly. The flags value is a combination of one or more [CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) values.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Этот метод возвращает значение S_OK, если он выполнен успешно; в противном случае возвращается один из кодов ошибок, определенных в файле заголовка Winerror.h.  
+ This method returns S_OK if it succeeds; otherwise, it returns one of the error codes defined in the Winerror.h header file.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** Cor.h  
+ **Header:** Cor.h  
   
- **Библиотека:** Используется как ресурс в MsCorEE.dll  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

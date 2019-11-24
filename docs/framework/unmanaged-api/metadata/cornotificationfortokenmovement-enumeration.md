@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 1edd1670-976a-4fc8-bef7-7c41e60ad989
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 7a7859bd890a2ecc10b5117f697ff8b06ad569f6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 411fad0accb59431f776c5bd66e8bd3027ddd907
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781698"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74450156"
 ---
 # <a name="cornotificationfortokenmovement-enumeration"></a>Перечисление CorNotificationForTokenMovement
-Указывает уведомления, которые будут отправляться клиенту метаданных API, когда происходит новое сопоставление маркеров.  
+Specifies the notifications that will be sent to the metadata API client when a token remap occurs.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -61,41 +59,41 @@ typedef enum CorNotificationForTokenMovement {
 } CorNotificationForTokenMovement;  
 ```  
   
-## <a name="members"></a>Участники  
+## <a name="members"></a>Члены  
   
 |Член|Описание|  
 |------------|-----------------|  
-|`MDNotifyDefault`|Отправить уведомление при `mdTypeRef`, `mdMethodDef`, `mdMemberRef`, или `mdFieldDef` токенов перемещения.|  
-|`MDNotifyAll`|Уведомлять о перемещении маркера.|  
-|`MDNotifyNone`|Не уведомлять о перемещении маркера.|  
-|`MDNotifyMethodDef`|Уведомлять, если `mdMethodDef` маркер перемещения.|  
-|`MDNotifyMemberRef`|Уведомлять, если `mdMemberRef` маркер перемещения.|  
-|`MDNotifyFieldDef`|Уведомлять, если `mdFieldDef` маркер перемещения.|  
-|`MDNotifyTypeRef`|Уведомлять, если `mdTypeRef` маркер перемещения.|  
-|`MDNotifyTypeDef`|Уведомлять, если `mdTypeDef` маркер перемещения.|  
-|`MDNotifyParamDef`|Уведомлять, если `mdParamDef` маркер перемещения.|  
-|`MDNotifyInterfaceImpl`|Уведомлять, если `mdInterfaceImpl` маркер перемещения.|  
-|`MDNotifyProperty`|Уведомлять, если `mdProperty` маркер перемещения.|  
-|`MDNotifyEvent`|Уведомлять, если `mdEvent` маркер перемещения.|  
-|`MDNotifySignature`|Уведомлять, если `mdSignature` маркер перемещения.|  
-|`MDNotifyTypeSpec`|Уведомлять, если `mdTypeSpec` маркер перемещения.|  
-|`MDNotifyCustomAttribute`|Уведомлять, если `mdCustomAttribute` маркер перемещения.|  
-|`MDNotifySecurityValue`|Уведомлять, если `mdSecurityValue` маркер перемещения.|  
-|`MDNotifyPermission`|Уведомлять, если `mdPermission` маркер перемещения.|  
-|`MDNotifyModuleRef`|Уведомлять, если `mdModuleRef` маркер перемещения.|  
-|`MDNotifyNameSpace`|Уведомлять, если `mdNameSpace` маркер перемещения.|  
-|`MDNotifyAssemblyRef`|Уведомлять, если `mdAssemblyRef` маркер перемещения.|  
-|`MDNotifyFile`|Уведомлять, если `mdFile` маркер перемещения.|  
-|`MDNotifyExportedType`|Уведомлять, если `mdExportedType` маркер перемещения.|  
-|`MDNotifyResource`|Уведомлять, если `mdManifestResource` маркер перемещения.|  
+|`MDNotifyDefault`|Notify when `mdTypeRef`, `mdMethodDef`, `mdMemberRef`, or `mdFieldDef` tokens move.|  
+|`MDNotifyAll`|Notify when any token moves.|  
+|`MDNotifyNone`|Do not notify when tokens move.|  
+|`MDNotifyMethodDef`|Notify when an `mdMethodDef` token moves.|  
+|`MDNotifyMemberRef`|Notify when an `mdMemberRef` token moves.|  
+|`MDNotifyFieldDef`|Notify when an `mdFieldDef` token moves.|  
+|`MDNotifyTypeRef`|Notify when an `mdTypeRef` token moves.|  
+|`MDNotifyTypeDef`|Notify when an `mdTypeDef` token moves.|  
+|`MDNotifyParamDef`|Notify when an `mdParamDef` token moves.|  
+|`MDNotifyInterfaceImpl`|Notify when an `mdInterfaceImpl` token moves.|  
+|`MDNotifyProperty`|Notify when an `mdProperty` token moves.|  
+|`MDNotifyEvent`|Notify when an `mdEvent` token moves.|  
+|`MDNotifySignature`|Notify when an `mdSignature` token moves.|  
+|`MDNotifyTypeSpec`|Notify when an `mdTypeSpec` token moves.|  
+|`MDNotifyCustomAttribute`|Notify when an `mdCustomAttribute` token moves.|  
+|`MDNotifySecurityValue`|Notify when an `mdSecurityValue` token moves.|  
+|`MDNotifyPermission`|Notify when an `mdPermission` token moves.|  
+|`MDNotifyModuleRef`|Notify when an `mdModuleRef` token moves.|  
+|`MDNotifyNameSpace`|Notify when an `mdNameSpace` token moves.|  
+|`MDNotifyAssemblyRef`|Notify when an `mdAssemblyRef` token moves.|  
+|`MDNotifyFile`|Notify when an `mdFile` token moves.|  
+|`MDNotifyExportedType`|Notify when an `mdExportedType` token moves.|  
+|`MDNotifyResource`|Notify when an `mdManifestResource` token moves.|  
   
-## <a name="remarks"></a>Примечания  
- Маркер может быть повторно сопоставлен (которые перемещаются) во время слияния метаданных.  
+## <a name="remarks"></a>Заметки  
+ A token may be re-mapped (that is, moved) during a metadata merge.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorHdr.h  
+ **Header:** CorHdr.h  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

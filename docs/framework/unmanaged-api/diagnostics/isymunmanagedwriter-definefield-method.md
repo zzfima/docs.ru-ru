@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c6a1f797-dbf4-40f5-ab99-d9b4bfb26148
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 37794d40b4b379c5d3a05935cf1f2b7b3da11baa
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 7eea63cae27c08260177dfc7746046b975434611
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777366"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428038"
 ---
 # <a name="isymunmanagedwriterdefinefield-method"></a>Метод ISymUnmanagedWriter::DefineField
-Определяет одну переменную, не внутри метода. Этот метод является, используемых для некоторых полей в классах, битовые поля и т. д.  
+Defines a single variable that is not within a method. This method is used for certain fields in classes, bit fields, and so on.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -44,37 +42,37 @@ HRESULT DefineField(
   
 ## <a name="parameters"></a>Параметры  
  `parent`  
- [in] Метаданные типа или метода токена.  
+ [in] The metadata type or method token.  
   
  `name`  
- [in] Имя поля.  
+ [in] The field name.  
   
  `attributes`  
- [in] Атрибуты поля.  
+ [in] The field attributes.  
   
  `cSig`  
- [in] Объект `ULONG32` то есть размер в символах, буфера, требуемого для хранения подпись поля.  
+ [in] A `ULONG32` that is the size, in characters, of the buffer required to contain the field signature.  
   
  `signature`  
- [in] Массив полей подписи.  
+ [in] The array of field signatures.  
   
  `addrKind`  
- [in] Тип адреса.  
+ [in] The address type.  
   
  `addr1`  
- [in] Первый адрес для спецификации поля.  
+ [in] The first address for the field specification.  
   
  `addr2`  
- [in] Второй адрес для спецификации поля.  
+ [in] The second address for the field specification.  
   
  `addr3`  
- [in] Третий адрес для спецификации поля.  
+ [in] The third address for the field specification.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Требования  
- **Заголовок.** CorSym.idl CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>См. также
 

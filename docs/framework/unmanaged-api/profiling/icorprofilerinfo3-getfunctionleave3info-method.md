@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: df7083d2-fd43-44c7-9ce5-912c25cef0ff
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6470bd04e3661e7d27798747abc4ef0757bf4f1e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: bacb50520df9f1553226ec6bf1e878238b64bb17
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782155"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449707"
 ---
 # <a name="icorprofilerinfo3getfunctionleave3info-method"></a>Метод ICorProfilerInfo3::GetFunctionLeave3Info
-Предоставляет кадр стека и возвращаемое значение функции, которая сообщается профилировщику [функция FunctionLeave3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md) функции. Этот метод может быть вызван только во время обратного вызова `FunctionLeave3WithInfo`.  
+Provides the stack frame and return value of the function that is being reported to the profiler by the [FunctionLeave3WithInfo function](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md) function. Этот метод может быть вызван только во время обратного вызова `FunctionLeave3WithInfo`.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,23 +37,23 @@ HRESULT GetFunctionLeave3Info(
   
 ## <a name="parameters"></a>Параметры  
  `functionId`  
- [in] `FunctionID` Функции, которая возвращает.  
+ [in] The `FunctionID` of the function that is returning.  
   
  `eltInfo`  
- [in] Непрозрачный дескриптор, представляющий сведения об указанном кадре стека. Профилировщик должен предоставлять тот же `eltInfo` , которому был назначен профилировщику [FunctionLeave3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md) функции.  
+ [in] Непрозрачный дескриптор, представляющий сведения об указанном кадре стека. The profiler should provide the same `eltInfo` that was given to the profiler by the [FunctionLeave3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md) function.  
   
  `pFrameInfo`  
  [out] Непрозрачный дескриптор, представляющий универсальные сведения об указанном кадре стека. Этот дескриптор допустим только во время обратного вызова `FunctionLeave3WithInfo`, в котором профилировщик вызывал метод `GetFunctionLeave3Info`.  
   
  `pRetvalRange`  
- [out] Указатель на [COR_PRF_FUNCTION_ARGUMENT_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-range-structure.md) структуру, содержащую значение, которое возвращается из функции. Для доступа к информации возвращаемое значение `COR_PRF_ENABLE_FUNCTION_RETVAL` должен быть установлен флаг. Можно использовать профилировщик [метод ICorProfilerInfo::SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) задать флаги событий.  
+ [out] A pointer to a [COR_PRF_FUNCTION_ARGUMENT_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-range-structure.md) structure that contains the value that is returned from the function. To access return value information, the `COR_PRF_ENABLE_FUNCTION_RETVAL` flag must be set. The profiler can use the [ICorProfilerInfo::SetEventMask method](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) to set the event flags.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorProf.idl, CorProf.h  
+ **Заголовок:** CorProf.idl, CorProf.h  
   
  **Библиотека:** CorGuids.lib  
   

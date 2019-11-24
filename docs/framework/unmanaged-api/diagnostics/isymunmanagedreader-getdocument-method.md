@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: bb203853-6a6d-4027-b9e9-603a7f28b9d3
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 32b7505a9e512f3c3e3e7a9fcbff40276e98ecf4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1fcb885b6e19457065c2ca9971f068b42f97147d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67759346"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448340"
 ---
 # <a name="isymunmanagedreadergetdocument-method"></a>Метод ISymUnmanagedReader::GetDocument
-Находит документ. Документ языка, поставщика и тип являются необязательными.  
+Finds a document. The document language, vendor, and type are optional.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,25 +38,25 @@ HRESULT GetDocument (
   
 ## <a name="parameters"></a>Параметры  
  `url`  
- [in] URL-адрес для идентификации документа.  
+ [in] The URL that identifies the document.  
   
  `language`  
- [in] Язык документа. Этот параметр является необязательным.  
+ [in] The document language. Этот параметр является необязательным.  
   
  `languageVendor`  
- [in] Идентификатор поставщика языка документа. Этот параметр является необязательным.  
+ [in] The identity of the vendor for the document language. Этот параметр является необязательным.  
   
  `documentType`  
- [in] Тип документа. Этот параметр является необязательным.  
+ [in] The type of the document. Этот параметр является необязательным.  
   
  `pRetVal`  
- [out] Указатель на возвращенный интерфейс.  
+ [out] A pointer to the returned interface.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Требования  
- **Заголовок.** CorSym.idl CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>См. также
 

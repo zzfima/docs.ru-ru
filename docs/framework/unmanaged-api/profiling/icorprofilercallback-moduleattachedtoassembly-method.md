@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: b595798a-5d40-4cac-ab4f-911c61d2c5d2
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 3345e2e87ba41f750031deed2d15e13dbe4f06c8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d229b530062d759ab270612fa70b1799acbcadbe
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67769291"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448068"
 ---
 # <a name="icorprofilercallbackmoduleattachedtoassembly-method"></a>Метод ICorProfilerCallback::ModuleAttachedToAssembly
-Уведомляет профилировщик, что модуль присоединяется к ее родительской сборки.  
+Notifies the profiler that a module is being attached to its parent assembly.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,18 +35,18 @@ HRESULT ModuleAttachedToAssembly(
   
 ## <a name="parameters"></a>Параметры  
  `moduleId`  
- [in] Идентификатор модуля, который присоединяется.  
+ [in] The ID of the module that is being attached.  
   
  `AssemblyId`  
- [in] Идентификатор родительской сборки, к которой подключен модуль.  
+ [in] The ID of the parent assembly to which the module is attached.  
   
-## <a name="remarks"></a>Примечания  
- Модуль может быть загружен посредством таблицы адресов импорта (IAT), посредством вызова `LoadLibrary`, или с помощью ссылки на метаданные. Таким образом загрузчик распространенных языковой среды выполнения (CLR) имеет несколько путей кода для определения сборки, в котором находится модуль. Таким образом, возможна после того как [ICorProfilerCallback::ModuleLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md) вызывается, модуль не знает, какие сборки в и получение идентификатора родительской сборки не поддерживается. `ModuleAttachedToAssembly` При присоединении к ее родительской сборки и ее родительской сборки, можно получить идентификатор модуля, вызывается метод.  
+## <a name="remarks"></a>Заметки  
+ A module can be loaded through an import address table (IAT), through a call to `LoadLibrary`, or through a metadata reference. As a result, the common language runtime (CLR) loader has multiple code paths for determining the assembly in which a module lives. Therefore, it is possible that after [ICorProfilerCallback::ModuleLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md) is called, the module does not know what assembly it is in and getting the parent assembly ID is not possible. The `ModuleAttachedToAssembly` method is called when the module is attached to its parent assembly and its parent assembly ID can be obtained.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorProf.idl, CorProf.h  
+ **Заголовок:** CorProf.idl, CorProf.h  
   
  **Библиотека:** CorGuids.lib  
   

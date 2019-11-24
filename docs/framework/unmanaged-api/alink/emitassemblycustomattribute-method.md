@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: b72f5409-79af-4fa7-90a7-7630eec170f1
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 77d54f6c8f67dda5132518d1fbd579a91ce82071
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: ec0a86e3396ad42152bc0a244f74ad13deba16e4
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70777439"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446517"
 ---
 # <a name="emitassemblycustomattribute-method"></a>Метод EmitAssemblyCustomAttribute
-Вызовите метод, чтобы установить настраиваемые атрибуты уровня сборки.  
+Call to set assembly-level custom attributes.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -43,31 +41,31 @@ HRESULT EmitAssemblyCustomAttribute(
   
 ## <a name="parameters"></a>Параметры  
  `AssemblyID`  
- Идентификатор сборки.  
+ ID of the assembly.  
   
  `FileToken`  
- Файл, который разфайлет атрибут. Может иметь значение NULL `AssemblyID` , если не указывает на непривязанный netmodule.  
+ File that defiles the attribute. Can be NULL if `AssemblyID` does not indicate an unbound netmodule.  
   
  `tkType`  
- Тип настраиваемого атрибута.  
+ Type of the custom attribute.  
   
  `pCustomValue`  
- Пользовательские данные значения.  
+ Custom value data.  
   
  `cbCustomValue`  
- Длина данных пользовательского значения.  
+ Length of custom value data.  
   
  `bSecurity`  
- Значение TRUE, если настраиваемый атрибут связан с подписыванием сборки.  
+ TRUE if the custom attribute is related to assembly signing.  
   
  `bAllowMulti`  
- Значение TRUE, если требуется выдавать несколько атрибутов.  
+ TRUE if multiple attributes are to be emitted.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Если метод завершается с ошибкой, возвращает значение S_OK.  
+ Returns S_OK if the method succeeds.  
   
 ## <a name="requirements"></a>Требования  
- Требуется ALink. h  
+ Requires alink.h  
   
 ## <a name="see-also"></a>См. также
 

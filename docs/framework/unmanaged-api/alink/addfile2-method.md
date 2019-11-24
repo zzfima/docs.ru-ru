@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 03bc49bf-a89b-4fb6-a88d-97482e061195
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c3a6892dbed172c0be3b036014d393657dbc8593
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 8dadf9ec8f896b03e4918b21f5153c1b747010fd
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70777523"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446667"
 ---
 # <a name="addfile2-method"></a>Метод AddFile2
-Добавляет файлы в сборку. Также можно использовать для создания непривязанных модулей.  
+Adds files to the assembly. Can also be used to create unbound modules.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -41,25 +39,25 @@ HRESULT AddFile2(
   
 ## <a name="parameters"></a>Параметры  
  `AssemblyID`  
- Идентификатор сборки, в которую добавляется файл.  
+ ID for the assembly to which the file is added.  
   
  `pszFilename`  
- Имя добавляемого файла.  
+ Name of the file to be added.  
   
  `dwFlags`  
- Флаги com+ `FileDef` , такие `ffWriteable`как `ffContainsNoMetaData` и. `dwFlags`передается [методу дефинефиле](../metadata/imetadataassemblyemit-definefile-method.md).  
+ COM+ `FileDef` flags such as `ffContainsNoMetaData` and `ffWriteable`. `dwFlags` is passed to [DefineFile Method](../metadata/imetadataassemblyemit-definefile-method.md).  
   
  `pEmitter`  
- Интерфейс для интерфейса интерфейса [IMetaDataEmit2](../metadata/imetadataemit2-interface.md) .  
+ Interface to [IMetaDataEmit2 Interface](../metadata/imetadataemit2-interface.md) interface.  
   
  `pFileToken`  
- Получает идентификатор добавляемого файла.  
+ Receives ID for the file being added.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Если метод завершается с ошибкой, возвращает значение S_OK.  
+ Returns S_OK if the method succeeds.  
   
 ## <a name="requirements"></a>Требования  
- Требуется ALink. h.  
+ Requires alink.h.  
   
 ## <a name="see-also"></a>См. также
 

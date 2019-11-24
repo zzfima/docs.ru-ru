@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: dd92dcaf-403c-464d-a254-21594985dddd
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: db917820de92b2e347385afc5217c0ca190825cd
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 756ba2e71ca2e3e817a0a8b89165bb807368c1f9
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776832"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449329"
 ---
 # <a name="isymunmanagedbinder2getreaderforfile2-method"></a>Метод ISymUnmanagedBinder2::GetReaderForFile2
-Данный интерфейс метаданных и имя файла, возвращает правильный [ISymUnmanagedReader](isymunmanagedreader-interface.md) интерфейс, который будет считывать символы отладки, связанные с модулем.  
+Given a metadata interface and a file name, returns the correct [ISymUnmanagedReader](isymunmanagedreader-interface.md) interface that will read the debugging symbols associated with the module.  
   
- Этот метод предоставляет расширенный поиск файла базы данных (PDB) программы, чем [ISymUnmanagedBinder::GetReaderForFile](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-getreaderforfile-method.md) метод.  
+ This method provides a more extensive search for the program database (PDB) file than the [ISymUnmanagedBinder::GetReaderForFile](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-getreaderforfile-method.md) method.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -42,28 +40,28 @@ HRESULT GetReaderForFile2(
   
 ## <a name="parameters"></a>Параметры  
  `importer`  
- [in] Указатель на интерфейс импорта метаданных.  
+ [in] A pointer to the metadata import interface.  
   
  `fileName`  
- [in] Указатель на имя файла.  
+ [in] A pointer to the file name.  
   
  `searchPath`  
- [in] Указатель на пути поиска.  
+ [in] A pointer to the search path.  
   
  `searchPolicy`  
- [in] Значение [CorSymSearchPolicyAttributes](../../../../docs/framework/unmanaged-api/diagnostics/corsymsearchpolicyattributes-enumeration.md) перечисления, которое указывает политику, используемую при выполнении поиска для средства чтения символов.  
+ [in] A value of the [CorSymSearchPolicyAttributes](../../../../docs/framework/unmanaged-api/diagnostics/corsymsearchpolicyattributes-enumeration.md) enumeration that specifies the policy to be used when doing a search for a symbol reader.  
   
  `pRetVal`  
- [out] Указатель, который имеет значение равное возвращаемому [ISymUnmanagedReader](isymunmanagedreader-interface.md) интерфейс.  
+ [out] A pointer that is set to the returned [ISymUnmanagedReader](isymunmanagedreader-interface.md) interface.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Требования  
- **Заголовок.** CorSym.idl CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
-## <a name="remarks"></a>Примечания  
- Эта версия метода можно найти PDB-файл в областях, отличных от рядом с модуля. Поиск политики можно управлять путем объединения [CorSymSearchPolicyAttributes](../../../../docs/framework/unmanaged-api/diagnostics/corsymsearchpolicyattributes-enumeration.md). Например `AllowReferencePathAccess | AllowSymbolServerAccess` производит поиск PDB рядом с исполняемым файлом и с сервера, но не отправки запроса в реестр или использовать путь в исполняемом файле. Если `searchPath` параметр указан, всегда найдет эти каталоги.  
+## <a name="remarks"></a>Заметки  
+ This version of the method can search for the PDB file in areas other than right next to the module. The search policy can be controlled by combining [CorSymSearchPolicyAttributes](../../../../docs/framework/unmanaged-api/diagnostics/corsymsearchpolicyattributes-enumeration.md). For example, `AllowReferencePathAccess | AllowSymbolServerAccess` looks for the PDB next to the executable file and on a symbol server, but does not query the registry or use the path in the executable file. If the `searchPath` parameter is provided, those directories will always be searched.  
   
 ## <a name="see-also"></a>См. также
 

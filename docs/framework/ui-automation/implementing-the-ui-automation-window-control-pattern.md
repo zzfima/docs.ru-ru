@@ -6,20 +6,20 @@ helpviewer_keywords:
 - UI Automation, Window control pattern
 - Window control pattern
 ms.assetid: a28cb286-296e-4a62-b4cb-55ad636ebccc
-ms.openlocfilehash: ad2f84fbde512bb99b213bf3b97f2190091d8576
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: d8afaa13bd4eca9f9fcd4c8ed26c09c62ad74931
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71042994"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447030"
 ---
 # <a name="implementing-the-ui-automation-window-control-pattern"></a>Реализация шаблона элемента управления Window автоматизированного пользовательского интерфейса
 > [!NOTE]
-> Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Последние сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]см. в разделе [API службы автоматизации Windows: Модель автоматизации](https://go.microsoft.com/fwlink/?LinkID=156746)пользовательского интерфейса.  
+> Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Последние сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]см. в разделе [API автоматизации Windows. Автоматизация пользовательского интерфейса](/windows/win32/winauto/entry-uiauto-win32).  
   
  В этом разделе приводятся рекомендации и соглашения для реализации <xref:System.Windows.Automation.Provider.IWindowProvider>, включая сведения о свойствах, методах и событиях <xref:System.Windows.Automation.WindowPattern> . Ссылки на дополнительные материалы перечислены в конце раздела.  
   
- Шаблон <xref:System.Windows.Automation.WindowPattern> элемента управления используется для поддержки элементов управления, которые предоставляют фундаментальные функции на основе окна в традиционном графическом интерфейсе пользователя. Примеры элементов управления, которые должны реализовывать этот шаблон элемента управления, включают в себя окна приложений верхнего уровня, дочерние окна многодокументного интерфейса (MDI), элементы управления "область разделения" с изменяемыми размерами, модальные диалоговые окна и окна справки.  
+ The <xref:System.Windows.Automation.WindowPattern> control pattern is used to support controls that provide fundamental window-based functionality within a traditional graphical user interface (GUI). Examples of controls that must implement this control pattern include top-level application windows, multiple-document interface (MDI) child windows, resizable split pane controls, modal dialogs and balloon help windows.  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>   
 ## <a name="implementation-guidelines-and-conventions"></a>Правила и соглашения реализации  
@@ -41,12 +41,12 @@ ms.locfileid: "71042994"
   
 |Обязательный член|Тип члена|Примечания|  
 |---------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.InteractionState%2A>|Свойство.|Отсутствуют|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.IsModal%2A>|Свойство.|Отсутствуют|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.IsTopmost%2A>|Свойство.|Отсутствуют|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.Maximizable%2A>|Свойство.|Отсутствуют|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.Minimizable%2A>|Свойство.|Отсутствуют|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.VisualState%2A>|Свойство.|Отсутствуют|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.InteractionState%2A>|свойство;|Отсутствуют|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.IsModal%2A>|свойство;|Отсутствуют|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.IsTopmost%2A>|свойство;|Отсутствуют|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.Maximizable%2A>|свойство;|Отсутствуют|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.Minimizable%2A>|свойство;|Отсутствуют|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.VisualState%2A>|свойство;|Отсутствуют|  
 |<xref:System.Windows.Automation.Provider.IWindowProvider.Close%2A>|Метод|Отсутствуют|  
 |<xref:System.Windows.Automation.Provider.IWindowProvider.SetVisualState%2A>|Метод|Отсутствуют|  
 |<xref:System.Windows.Automation.Provider.IWindowProvider.WaitForInputIdle%2A>|Метод|Отсутствуют|  
@@ -60,8 +60,8 @@ ms.locfileid: "71042994"
   
 |Тип исключения|Условие|  
 |--------------------|---------------|  
-|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.IWindowProvider.SetVisualState%2A><br /><br /> — Если элемент управления не поддерживает запрошенное поведение.|  
-|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IWindowProvider.WaitForInputIdle%2A><br /><br /> — Если параметр не является допустимым числом.|  
+|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.IWindowProvider.SetVisualState%2A><br /><br /> -   When a control does not support a requested behavior.|  
+|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IWindowProvider.WaitForInputIdle%2A><br /><br /> -   When the parameter is not a valid number.|  
   
 ## <a name="see-also"></a>См. также
 

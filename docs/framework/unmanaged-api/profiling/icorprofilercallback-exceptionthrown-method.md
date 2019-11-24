@@ -15,20 +15,18 @@ helpviewer_keywords:
 ms.assetid: f1a23f3b-ac21-4905-8abf-8ea59f15af53
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 01e407b726ce4426f3b58bc29854b30bd6add257
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4ecbe0ef3c3021c5633b9380da2eb31cf22aa4b1
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69953873"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445329"
 ---
 # <a name="icorprofilercallbackexceptionthrown-method"></a>Метод ICorProfilerCallback::ExceptionThrown
-Уведомляет профилировщик о том, что было создано исключение.  
+Notifies the profiler that an exception has been thrown.  
   
 > [!NOTE]
-> Эта функция вызывается, только если исключение достигает управляемого кода.  
+> This function is called only if the exception reaches managed code.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,19 +37,19 @@ HRESULT ExceptionThrown(
   
 ## <a name="parameters"></a>Параметры  
  `thrownObjectId`  
- окне Идентификатор объекта, который вызвал исключение.  
+ [in] The ID of the object that caused the exception to be thrown.  
   
-## <a name="remarks"></a>Примечания  
- Профилировщик не должен блокировать реализацию этого метода, так как стек может не находиться в состоянии, допускающем сборку мусора, поэтому невозможно включить вытесненную сборку мусора. Если профилировщик блокируется здесь и выполняется сборка мусора, среда выполнения блокируется до тех пор, пока этот обратный вызов не вернет значение.  
+## <a name="remarks"></a>Заметки  
+ The profiler should not block in its implementation of this method because the stack may not be in a state that allows garbage collection, and therefore preemptive garbage collection cannot be enabled. If the profiler blocks here and garbage collection is attempted, the runtime will block until this callback returns.  
   
- Реализация этого метода профилировщиком не должна вызывать управляемый код или каким-либо образом приводит к выделению управляемой памяти.  
+ The profiler's implementation of this method should not call into managed code or in any way cause a managed-memory allocation.  
   
 ## <a name="requirements"></a>Требования  
- **Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorProf. idl, CorProf. h  
+ **Заголовок:** CorProf.idl, CorProf.h  
   
- **Библиотечная** Коргуидс. lib  
+ **Библиотека:** CorGuids.lib  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

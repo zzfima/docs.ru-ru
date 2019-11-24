@@ -11,16 +11,16 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 9e8e4c7e6c367970100c98dc3dc8237b25f99221
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 1a5a259e6604d906e55166b3fcb770bc37d346c5
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69665606"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74444730"
 ---
-# <a name="icorprofilerinfo9getiltonativemapping3-method"></a>Метод ICorProfilerInfo9:: GetILToNativeMapping3
+# <a name="icorprofilerinfo9getiltonativemapping3-method"></a>ICorProfilerInfo9::GetILToNativeMapping3 Method
 
-С учетом начального адреса машинного кода возвращает сведения о сопоставлении IL для этой откомпилированной версии кода.
+Given the native code start address, returns the native to IL mapping information for this jitted version of the code.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -34,31 +34,31 @@ HRESULT GetILToNativeMapping3( [in]  UINT_PTR pNativeCodeStartAddress,
 #### <a name="parameters"></a>Параметры
 
 `pNativeCodeStartAddress` \
-окне Указатель на начало собственной функции.
+[in] A pointer to the start of a native function.
 
 `cMap` \
 [in] Максимальный размер массива `map`.
 
 `pcMap` \
-заполняет Общее число доступных структур COR_DEBUG_IL_TO_NATIVE_MAP.
+[out] The total number of available COR_DEBUG_IL_TO_NATIVE_MAP structures.
 
 `map` \
-заполняет Массив структур [COR_DEBUG_IL_TO_NATIVE_MAP](../debugging/cor-debug-il-to-native-map-structure.md) , каждый из которых задает смещения. После возврата метода `GetILToNativeMapping3` параметр `map` будет содержать все или некоторые из структур `COR_DEBUG_IL_TO_NATIVE_MAP`.
+[out] An array of [COR_DEBUG_IL_TO_NATIVE_MAP](../debugging/cor-debug-il-to-native-map-structure.md) structures, each of which specifies the offsets. После возврата метода `GetILToNativeMapping3` параметр `map` будет содержать все или некоторые из структур `COR_DEBUG_IL_TO_NATIVE_MAP`.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
-Если включена многоуровневая компиляция, метод может иметь более одного тела машинного кода. [ICorProfilerInfo9:: жетнативекодестартаддрессес](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo9-getnativecodestartaddresses-method.md) будет возвращать начальные адреса для всех частей машинного кода.
+When tiered compilation is enabled, a method may have more than one native code body. [ICorProfilerInfo9::GetNativeCodeStartAddresses](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo9-getnativecodestartaddresses-method.md) will return the start addresses for all of the native code bodies.
 
 ## <a name="requirements"></a>Требования
 
-**Платформ** См. раздел [Поддерживаемые операционные системы .NET Core](../../../core/windows-prerequisites.md#net-core-supported-operating-systems).
+**Platforms:** See [.NET Core supported operating systems](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows).
 
-**Заголовок.** CorProf. idl, CorProf. h
+**Заголовок:** CorProf.idl, CorProf.h
 
-**Библиотечная** Коргуидс. lib
+**Библиотека:** CorGuids.lib
 
 **Версии платформы .NET Framework:** [!INCLUDE[net_core_22](../../../../includes/net-core-22-md.md)]
 
 ## <a name="see-also"></a>См. также
 
-- [Интерфейс ICorProfilerInfo9](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo9-interface.md)
+- [ICorProfilerInfo9 Interface](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo9-interface.md)

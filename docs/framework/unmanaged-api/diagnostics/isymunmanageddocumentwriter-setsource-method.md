@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: ea5b9d9f-ff06-4bd3-8de5-6435343aba59
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 555926e0e6a669f70bdeff484cff0eb62ae11f7b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ff18f95bd6b4cfde5aaa4d3f6f68b58fd37c04b3
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776937"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449073"
 ---
 # <a name="isymunmanageddocumentwritersetsource-method"></a>Метод ISymUnmanagedDocumentWriter::SetSource
-Устанавливает внедренный источник документа, который выполняется запись.  
+Sets embedded source for a document that is being written.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,16 +35,16 @@ HRESULT SetSource(
   
 ## <a name="parameters"></a>Параметры  
  `sourceSize`  
- [in] Объект `ULONG32` , содержащий размер `source` буфера.  
+ [in] A `ULONG32` that contains the size of the `source` buffer.  
   
  `source`  
- [in] Буфер, который хранит внедренного источника.  
+ [in] The buffer that stores the embedded source.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Требования  
- **Заголовок.** CorSym.idl CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>См. также
 

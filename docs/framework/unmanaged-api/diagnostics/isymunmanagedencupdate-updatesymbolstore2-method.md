@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 35588317-6184-485c-ab41-4b15fc1765d9
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 9d2c641f011c55ee726e319cb581705e334c840d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 393984241412f543b6ac082484cf5e23edb2d9f4
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67774678"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448980"
 ---
 # <a name="isymunmanagedencupdateupdatesymbolstore2-method"></a>Метод ISymUnmanagedENCUpdate::UpdateSymbolStore2
-Позволяет компилятору пропускать функции, которые не были изменены из потока базы данных (PDB) программы, предоставляемые данные строки соответствует требованиям. Правильные сведения строки можно определить с помощью старых сведений строки PDB и одного разностного для всех строк в функции.  
+Allows a compiler to omit functions that have not been modified from the program database (PDB) stream, provided the line information meets the requirements. The correct line information can be determined with the old PDB line information and one delta for all lines in the function.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,19 +36,19 @@ HRESULT UpdateSymbolStore2(
   
 ## <a name="parameters"></a>Параметры  
  `pIStream`  
- [in] Указатель на [IStream](/windows/desktop/api/objidl/nn-objidl-istream) , содержащий сведения о строке.  
+ [in] A pointer to an [IStream](/windows/desktop/api/objidl/nn-objidl-istream) that contains the line information.  
   
  `pDeltaLines`  
- [in] Указатель на [SYMLINEDELTA](../../../../docs/framework/unmanaged-api/diagnostics/symlinedelta-structure.md) структуру, содержащую строки, которые были изменены.  
+ [in] A pointer to a [SYMLINEDELTA](../../../../docs/framework/unmanaged-api/diagnostics/symlinedelta-structure.md) structure that contains the lines that have changed.  
   
  `cDeltaLines`  
- [in] Объект `ULONG` , представляющий количество строк, которые были изменены.  
+ [in] A `ULONG` that represents the number of lines that have changed.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Требования  
- **Заголовок.** CorSym.idl CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>См. также
 

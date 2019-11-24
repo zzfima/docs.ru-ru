@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 27064ca2-4186-4433-90a7-3b297785e891
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 0f7c5378490dce93599086819ee6fc806c707aa2
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b98fab6c6127c3f78151d3b84160d4ca0434b6cd
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777493"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428244"
 ---
 # <a name="imetadataemitdefinesecurityattributeset-method"></a>Метод IMetaDataEmit::DefineSecurityAttributeSet
-Создает набор разрешений безопасности для прикрепления к объекту, который ссылается указанный токен.  
+Creates a set of security permissions to attach to the object referenced by the specified token.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,23 +38,23 @@ HRESULT DefineSecurityAttributeSet (
   
 ## <a name="parameters"></a>Параметры  
  `tkObj`  
- [in] Токен, к которому присоединен сведения о безопасности.  
+ [in] The token to which the security information is attached.  
   
  `rSecAttrs`  
- [in] Массив `COR_SECATTR` структуры.  
+ [in] An array of `COR_SECATTR` structures.  
   
  `cSecAttrs`  
- [in] Число элементов в `rSecAttrs`.  
+ [in] The number of elements in `rSecAttrs`.  
   
  `pulErrorAttr`  
- [out] При сбое метода, указывает индекс в массиве `rSecAttrs` элемента, который вызвал проблему.  
+ [out] If the method fails, specifies the index in `rSecAttrs` of the element that caused the problem.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** Cor.h  
+ **Header:** Cor.h  
   
- **Библиотека:** Используется как ресурс в MSCorEE.dll  
+ **Library:** Used as a resource in MSCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

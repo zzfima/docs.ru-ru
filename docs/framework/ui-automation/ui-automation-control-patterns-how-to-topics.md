@@ -7,22 +7,22 @@ helpviewer_keywords:
 - control patterns, UI Automation
 - UI Automation, control patterns
 ms.assetid: 72c80262-8ca9-4624-9bd6-96984c5b7c5c
-ms.openlocfilehash: a5d75eddd5314067a364bc8e76108ee7794bcfda
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 295b52f5f6f6769017889aad9c1c9f32a619f9a1
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71042369"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445708"
 ---
 # <a name="ui-automation-control-patterns-how-to-topics"></a>Разделы руководства, посвященные шаблонам элементов управления для автоматизации пользовательского интерфейса
 > [!NOTE]
-> Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Последние сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]см. в разделе [API службы автоматизации Windows: Модель автоматизации](https://go.microsoft.com/fwlink/?LinkID=156746)пользовательского интерфейса.  
+> Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Последние сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]см. в разделе [API автоматизации Windows. Автоматизация пользовательского интерфейса](/windows/win32/winauto/entry-uiauto-win32).  
   
  В этом разделе содержатся подробные сведения о реализации шаблонов элементов управления.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>Содержание  
  [Представление содержимого таблицы с помощью модели автоматизации пользовательского интерфейса](expose-the-content-of-a-table-using-ui-automation.md)  
  [Получение шаблонов элементов управления, поддерживающих модель автоматизации пользовательского интерфейса](get-supported-ui-automation-control-patterns.md)  
  [Получение состояния флажка с использованием модели автоматизации пользовательского интерфейса](get-the-toggle-state-of-a-check-box-using-ui-automation.md)  
  [Вызов элемента управления с помощью модели автоматизации пользовательского интерфейса](invoke-a-control-using-ui-automation.md)  
- [Move a UI Automation Element](move-a-ui-automation-element.md)
+ [Перемещение элемента модели автоматизации пользовательского интерфейса](move-a-ui-automation-element.md)

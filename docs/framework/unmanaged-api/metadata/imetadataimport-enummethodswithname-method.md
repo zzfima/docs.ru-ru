@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: a8624913-2e23-46ad-a0c1-bb8eccbbf20f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e5de55d74741e9deb33be2f9adf15a970561664b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b0817288040550b5f4c3c4ec063f6a7fdb004137
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779738"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74450057"
 ---
 # <a name="imetadataimportenummethodswithname-method"></a>Метод IMetaDataImport::EnumMethodsWithName
 Перечисляет методы с заданным именем, определяемые по типу, на который ссылается указанный токен TypeDef.  
@@ -42,39 +40,39 @@ HRESULT EnumMethodsWithName (
   
 ## <a name="parameters"></a>Параметры  
  `phEnum`  
- [in, out] Указатель на перечислитель. Это должно быть NULL при первом вызове этого метода.  
+ [in, out] A pointer to the enumerator. This must be NULL for the first call of this method.  
   
  `cl`  
- [in] Токен TypeDef, представляющий тип, методы которого для перечисления.  
+ [in] A TypeDef token representing the type whose methods to enumerate.  
   
  `szName`  
- [in] Имя, которое ограничивает область перечисления.  
+ [in] The name that limits the scope of the enumeration.  
   
  `rMethods`  
- [out] Массив, используемый для хранения токенов MethodDef.  
+ [out] The array used to store the MethodDef tokens.  
   
  `cMax`  
  [in] Максимальный размер массива `rMethods`.  
   
  `pcTokens`  
- [out] Количество токены MethodDef, возвращаемых в `rMethods`.  
+ [out] The number of MethodDef tokens returned in `rMethods`.  
   
-## <a name="remarks"></a>Примечания  
- Этот метод перечисляет поля и методы, но не свойства или события. В отличие от [IMetaDataImport::EnumMethods](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enummethods-method.md), `EnumMethodsWithName` отбрасывает все маркеры метод, у которых нет указанного имени.  
+## <a name="remarks"></a>Заметки  
+ This method enumerates fields and methods, but not properties or events. Unlike [IMetaDataImport::EnumMethods](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enummethods-method.md), `EnumMethodsWithName` discards all method tokens that do not have the specified name.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
   
 |HRESULT|Описание|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMethodsWithName` успешно возвращен.|  
-|`S_FALSE`|Существуют маркеры для перечисления отсутствуют. В этом случае `pcTokens` равно нулю.|  
+|`S_OK`|`EnumMethodsWithName` returned successfully.|  
+|`S_FALSE`|There are no tokens to enumerate. In that case, `pcTokens` is zero.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** Cor.h  
+ **Header:** Cor.h  
   
- **Библиотека:** Включена как ресурс в MsCorEE.dll  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

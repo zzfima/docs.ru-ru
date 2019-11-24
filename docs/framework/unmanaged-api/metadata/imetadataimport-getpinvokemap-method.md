@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: b8685c1e-b80c-4198-8eb3-748d6f48a99e
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e1be6079ed382b8ab27d0aec16bd725f5c5b9cb5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c458fef77b49f522ca21dd5487731f4d43588cea
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778902"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74437098"
 ---
 # <a name="imetadataimportgetpinvokemap-method"></a>Метод IMetaDataImport::GetPinvokeMap
 Возвращает токен ModuleRef, представляющий целевую сборку вызова PInvoke.  
@@ -42,29 +40,29 @@ HRESULT GetPinvokeMap (
   
 ## <a name="parameters"></a>Параметры  
  `tk`  
- [in] Токен FieldDef или MethodDef, чтобы получить метаданные сопоставления PInvoke для.  
+ [in] A FieldDef or MethodDef token to get the PInvoke mapping metadata for.  
   
  `pdwMappingFlags`  
- [out] Указатель на флаги, используемые для сопоставления. Это значение является битовой [CorPinvokeMap](../../../../docs/framework/unmanaged-api/metadata/corpinvokemap-enumeration.md) перечисления.  
+ [out] A pointer to flags used for mapping. This value is a bitmask from the [CorPinvokeMap](../../../../docs/framework/unmanaged-api/metadata/corpinvokemap-enumeration.md) enumeration.  
   
  `szImportName`  
- [out] Имя целевой неуправляемой библиотеки DLL.  
+ [out] The name of the unmanaged target DLL.  
   
  `cchImportName`  
- [in] Размер в расширенных символах `szImportName`.  
+ [in] The size in wide characters of `szImportName`.  
   
  `pchImportName`  
- [out] Число расширенных символов, возвращаемых в `szImportName`.  
+ [out] The number of wide characters returned in `szImportName`.  
   
  `pmrImportDLL`  
- [out] Указатель на токен ModuleRef, представляющий неуправляемый целевой объект библиотеки.  
+ [out] A pointer to a ModuleRef token that represents the unmanaged target object library.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** Cor.h  
+ **Header:** Cor.h  
   
- **Библиотека:** Включена как ресурс в MsCorEE.dll  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

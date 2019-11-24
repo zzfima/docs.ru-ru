@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4e508711-da92-4381-aaf8-6803075cdaa2
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 621582536c07b269dd723c9014e23c50e561957a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3854cb4aa3d229c87466c0a35a72447ceb235624
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67774612"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449997"
 ---
 # <a name="imetadataimportenumtypedefs-method"></a>Метод IMetaDataImport::EnumTypeDefs
 Перечисляет токены TypeDef, представляющие все типы в текущей области.  
@@ -40,33 +38,33 @@ HRESULT EnumTypeDefs (
   
 ## <a name="parameters"></a>Параметры  
  `phEnum`  
- [out] Указатель на новый перечислитель. Это должно быть NULL при первом вызове этого метода.  
+ [out] A pointer to the new enumerator. This must be NULL for the first call of this method.  
   
  `rTypeDefs`  
- [in] Массив, используемый для хранения токенов TypeDef.  
+ [in] The array used to store the TypeDef tokens.  
   
  `cMax`  
  [in] Максимальный размер массива `rTypeDefs`.  
   
  `pcTypeDefs`  
- [out] Число маркеров TypeDef, возвращаемых в `rTypeDefs`.  
+ [out] The number of TypeDef tokens returned in `rTypeDefs`.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
   
 |HRESULT|Описание|  
 |-------------|-----------------|  
-|`S_OK`|`EnumTypeDefs` успешно возвращен.|  
-|`S_FALSE`|Существуют маркеры для перечисления отсутствуют. В этом случае `pcTypeDefs` равно нулю.|  
+|`S_OK`|`EnumTypeDefs` returned successfully.|  
+|`S_FALSE`|There are no tokens to enumerate. In that case, `pcTypeDefs` is zero.|  
   
-## <a name="remarks"></a>Примечания  
- Токен TypeDef представляет тип, например класс или интерфейс, а также любой тип, добавлены через механизм расширяемости.  
+## <a name="remarks"></a>Заметки  
+ The TypeDef token represents a type such as a class or an interface, as well as any type added via an extensibility mechanism.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** Cor.h  
+ **Header:** Cor.h  
   
- **Библиотека:** Включена как ресурс в MsCorEE.dll  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

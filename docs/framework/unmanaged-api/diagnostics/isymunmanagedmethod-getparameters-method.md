@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3a8074f1-facc-4a3f-bb9b-d6574fc2fc74
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 39ad47ae7659734191d380d8b3c29fb1a6de6afc
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9e8139a822c877e70731e18ae5a75b83e6b7578e
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67769426"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448952"
 ---
 # <a name="isymunmanagedmethodgetparameters-method"></a>Метод ISymUnmanagedMethod::GetParameters
-Получает параметры для этого метода. Параметры возвращаются в порядке, в котором они определены в подписи метода.  
+Gets the parameters for this method. The parameters are returned in the order in which they are defined within the method's signature.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -42,16 +40,16 @@ HRESULT GetParameters(
  [in] Размер массива `params`.  
   
  `pcParams`  
- [in] Указатель на `ULONG32` , получающий размер буфера, который должен содержать параметры.  
+ [in] A pointer to a `ULONG32` that receives the size of the buffer that is required to contain the parameters.  
   
  `params`  
- [out] Указатель на буфер, который принимает параметры.  
+ [out] A pointer to the buffer that receives the parameters.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Требования  
- **Заголовок.** CorSym.idl CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>См. также
 

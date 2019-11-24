@@ -14,16 +14,14 @@ helpviewer_keywords:
 ms.assetid: 07cf3bab-e193-4991-8205-3f41cf2d67b3
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 658b88349bedcbcefd0b97226c7bd1fa34f656c7
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2b01acbd617b13a64ef3dca6c8661f1e6bb067ac
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781914"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447379"
 ---
-# <a name="corprffunctionargumentinfo-structure"></a>Структура COR_PRF_FUNCTION_ARGUMENT_INFO
+# <a name="cor_prf_function_argument_info-structure"></a>Структура COR_PRF_FUNCTION_ARGUMENT_INFO
 Представляет аргументы функции слева направо.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -36,25 +34,25 @@ typedef struct _COR_PRF_FUNCTION_ARGUMENT_INFO {
 } COR_PRF_FUNCTION_ARGUMENT_INFO;  
 ```  
   
-## <a name="members"></a>Участники  
+## <a name="members"></a>Члены  
   
 |Член|Описание|  
 |------------|-----------------|  
-|`numRanges`|Число блоков аргументов. Это значение является число [COR_PRF_FUNCTION_ARGUMENT_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-range-structure.md) структур в `ranges` массива.|  
-|`totalArgumentSize`|Общий размер всех аргументов. Другими словами это значение является суммой длин аргументов.|  
-|`ranges`|Массив `COR_PRF_FUNCTION_ARGUMENT_RANGE` структуры, каждый из которых представляет один блок аргументов функции.|  
+|`numRanges`|The number of blocks of arguments. That is, this value is the number of [COR_PRF_FUNCTION_ARGUMENT_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-range-structure.md) structures in the `ranges` array.|  
+|`totalArgumentSize`|The total size of all arguments. In other words, this value is the sum of the argument lengths.|  
+|`ranges`|An array of `COR_PRF_FUNCTION_ARGUMENT_RANGE` structures, each of which represents one block of function arguments.|  
   
-## <a name="remarks"></a>Примечания  
- Функция может иметь много аргументов. Эти аргументы могут храниться в памяти не непрерывно. Возможно, блок из трех аргументов в одном месте, блок из двух аргументов в другом месте и конечный блок одного аргумента в другом месте. Эти аргументы являются все для той же функции; они просто хранятся в разных местах.  
+## <a name="remarks"></a>Заметки  
+ A function may have many arguments. Those arguments might not be stored contiguously in memory. You might have a block of three arguments in one place, a block of two arguments in another place, and a final block of one argument in a different place. These arguments are all for the same function; they're just stored in different places.  
   
- `COR_PRF_FUNCTION_ARGUMENT_INFO` Структура представляет все аргументы одной функции. Она использует массив для ссылки на все блоки аргументов функции. Таким образом, для одной функции, у вас есть один `COR_PRF_FUNCTION_ARGUMENT_INFO` структуру, которая ссылается на несколько `COR_PRF_FUNCTION_ARGUMENT_RANGE` структуры, каждый из которых указывает на один или несколько аргументов функции.  
+ The `COR_PRF_FUNCTION_ARGUMENT_INFO` structure represents all the arguments of a single function. It uses an array to reference all the blocks of function arguments. So, for a single function, you have a single `COR_PRF_FUNCTION_ARGUMENT_INFO` structure, which references multiple `COR_PRF_FUNCTION_ARGUMENT_RANGE` structures, each of which points to one or more function arguments.  
   
- Аргументы, которые хранятся в регистрах, распределяются в памяти для построения структур.  
+ Arguments that are stored in registers are spilled into memory to build the structures.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorProf.idl  
+ **Header:** CorProf.idl  
   
  **Библиотека:** CorGuids.lib  
   

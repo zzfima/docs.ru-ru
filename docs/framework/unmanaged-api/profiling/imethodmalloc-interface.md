@@ -14,36 +14,34 @@ helpviewer_keywords:
 ms.assetid: 8c8ab5dc-557c-473a-82f2-6e403eca7dac
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c67ce15175f8667139f99cec1ed17531eab473e1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 3f840154d472dbcea7dfef7ba93e38c80b836734
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69935650"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447547"
 ---
 # <a name="imethodmalloc-interface"></a>Интерфейс IMethodMalloc
-Предоставляет метод для выделения памяти для нового текста функции MSIL.  
+Provides a method to allocate memory for a new Microsoft intermediate language (MSIL) function body.  
   
 > [!NOTE]
-> `IMethodMalloc` Интерфейс — это простой механизм выделения памяти. Она позволяет выделить память, но не освобождает ее.  
+> The `IMethodMalloc` interface is a simple memory allocator. It allows you to allocate memory, but not to free it.  
   
 ## <a name="methods"></a>Методы  
   
 |Метод|Описание|  
 |------------|-----------------|  
-|[Метод Alloc](../../../../docs/framework/unmanaged-api/profiling/imethodmalloc-alloc-method.md)|Пытается выделить указанный объем памяти для нового текста функции MSIL.|  
+|[Метод Alloc](../../../../docs/framework/unmanaged-api/profiling/imethodmalloc-alloc-method.md)|Attempts to allocate a specified amount of memory for a new MSIL function body.|  
   
-## <a name="remarks"></a>Примечания  
- Каждый распределитель зависит от конкретного модуля и гарантирует, что текст функции будет иметь положительное смещение от базового модуля. Память над базовым модулем может быть ценной, поэтому распределитель должен использоваться для выделения памяти только для тела функции.  
+## <a name="remarks"></a>Заметки  
+ Each allocator is module-specific and ensures that the function body will be at a positive offset from the base of the module. Memory above the base of a module can be precious, so the allocator should be used to allocate memory only for a function body.  
   
 ## <a name="requirements"></a>Требования  
- **Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorProf. idl, CorProf. h  
+ **Заголовок:** CorProf.idl, CorProf.h  
   
- **Библиотечная** Коргуидс. lib  
+ **Библиотека:** CorGuids.lib  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

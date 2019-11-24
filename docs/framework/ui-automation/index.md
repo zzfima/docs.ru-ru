@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - UI Automation
 ms.assetid: e7ec856e-41ee-47b1-9d57-b75a3dad088c
-ms.openlocfilehash: cdcffef1699efb03258de0f29a51bebd2fc15461
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: f5185f81a4584e6cf60337f6cbd6c57829e5333d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039478"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447013"
 ---
 # <a name="accessibility"></a>Accessibility
 > [!NOTE]
-> Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Последние сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]см. в разделе [API автоматизации Windows. Автоматизация пользовательского интерфейса](https://go.microsoft.com/fwlink/?LinkID=156746).  
+> Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Последние сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]см. в разделе [API автоматизации Windows. Автоматизация пользовательского интерфейса](/windows/win32/winauto/entry-uiauto-win32).  
   
- [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] — это новая платформа специальных возможностей для Microsoft Windows. Она удовлетворяет потребности новых технологий специальных возможностей и платформ автоматического тестирования, обеспечивая программный доступ к сведениям о [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)]. Кроме того, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] позволяет разработчикам элементов управления и приложений реализовывать специальные возможности в своих продуктах.  
+ [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] is the new accessibility framework for Microsoft Windows. Она удовлетворяет потребности новых технологий специальных возможностей и платформ автоматического тестирования, обеспечивая программный доступ к сведениям о [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)]. Кроме того, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] позволяет разработчикам элементов управления и приложений реализовывать специальные возможности в своих продуктах.  
   
- В этой документации описывается [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] API для управляемого кода. Сведения о программировании для [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] на C++ см. в статье [Автоматизация пользовательского интерфейса для приложений Win32](/windows/desktop/winauto/windows-automation-api-portal).  
+ This documentation describes the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] API for managed code. Сведения о программировании для [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] на C++ см. в статье [Автоматизация пользовательского интерфейса для приложений Win32](/windows/desktop/winauto/windows-automation-api-portal).  
   
 ## <a name="in-this-section"></a>Содержание  
  [Рекомендации по специальным возможностям](accessibility-best-practices.md)  

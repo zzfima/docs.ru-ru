@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: a85283d8-379c-417a-9736-ddeeef9bcf50
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ef5a98d510eee8942a2cad0525b6902e3e4eaa52
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1f1bd9c33f24847eae4ff7d26c5b996cd34afb72
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67769387"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448924"
 ---
 # <a name="isymunmanagedmethodgetranges-method"></a>Метод ISymUnmanagedMethod::GetRanges
-Возвращает массив пар начального и конечного смещения, соответствующих диапазонам на языке MSIL, занимаемым позиция в этом методе обозначение позиции в документе. Массив представляет собой массив целых чисел и имеет формат [начало, конец, начало, конец]. Число пар "диапазон" — Длина массива, поделенную на 2.  
+Given a position in a document, returns an array of start and end offset pairs that correspond to the ranges of Microsoft intermediate language (MSIL) that the position covers within this method. The array is an array of integers and has the format [start, end, start, end]. The number of range pairs is the length of the array divided by 2.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -42,28 +40,28 @@ HRESULT GetRanges(
   
 ## <a name="parameters"></a>Параметры  
  `document`  
- [in] Документ, для которого запрашивается смещение.  
+ [in] The document for which the offset is requested.  
   
  `line`  
- [in] Строка документа, соответствующая этим диапазонам.  
+ [in] The document line corresponding to the ranges.  
   
  `column`  
- [in] Столбец документа, соответствующая этим диапазонам.  
+ [in] The document column corresponding to the ranges.  
   
  `cRanges`  
  [in] Размер массива `ranges`.  
   
  `pcRanges`  
- [out] Указатель на `ULONG32` , получающий размер буфера, необходимый для диапазонов.  
+ [out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the ranges.  
   
  `ranges`  
- [out] Указатель на буфер, получающий диапазоны.  
+ [out] A pointer to the buffer that receives the ranges.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Требования  
- **Заголовок.** CorSym.idl CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>См. также
 

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: dbab7d90-d515-4dc9-8195-294d5d04bab6
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 910f8b7f78b6348ace9036d35c0844f2a64cf433
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: eaf0ae2a1b86234495c1804cff8b74331b3e8021
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67763145"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445278"
 ---
 # <a name="icorprofilercallbackappdomaincreationfinished-method"></a>Метод ICorProfilerCallback::AppDomainCreationFinished
-Уведомляет профилировщик, что домен приложения был создан.  
+Notifies the profiler that an application domain has been created.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,20 +35,20 @@ HRESULT AppDomainCreationFinished(
   
 ## <a name="parameters"></a>Параметры  
  `appDomainId`  
- [in] Определяет домен, который был создан.  
+ [in] Identifies the domain which has been created.  
   
  `hrStatus`  
- [in] Значение HRESULT, указывающее, успешно ли завершено создание домена приложения.  
+ [in] An HRESULT that indicates whether creation of the application domain completed successfully.  
   
-## <a name="remarks"></a>Примечания  
- Идентификатор приложения не является допустимым для любого запроса информации до `AppDomainCreationFinished` вызывается метод.  
+## <a name="remarks"></a>Заметки  
+ The application ID is not valid for any information request until the `AppDomainCreationFinished` method is called.  
   
- Некоторые части загрузки домена приложения может по-прежнему после `AppDomainCreationFinished` обратного вызова. Значение HRESULT в `hrStatus` указывает на сбой. Тем не менее значение HRESULT в `hrStatus` указывает только что первая часть создания домена приложения.  
+ Some parts of loading the application domain might continue after the `AppDomainCreationFinished` callback. A failure HRESULT in `hrStatus` indicates a failure. However, a success HRESULT in `hrStatus` indicates only that the first part of creating the application domain has succeeded.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** CorProf.idl, CorProf.h  
+ **Заголовок:** CorProf.idl, CorProf.h  
   
  **Библиотека:** CorGuids.lib  
   

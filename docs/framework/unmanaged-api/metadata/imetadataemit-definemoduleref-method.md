@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: f2833594-d90b-4a71-9a53-34b12470c64a
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 19f1839aa2c4ca810e76c1745103a00c6f5ea5a3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c736eccfd5d05ec9b65e6ed26187e7c7b4387c5d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777578"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74431728"
 ---
 # <a name="imetadataemitdefinemoduleref-method"></a>Метод IMetaDataEmit::DefineModuleRef
-Создает подпись метаданных для модуля с указанным именем.  
+Creates the metadata signature for a module with the specified name.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,17 +36,17 @@ HRESULT DefineModuleRef (
   
 ## <a name="parameters"></a>Параметры  
  `szName`  
- [in] Имя файла других метаданных, обычно библиотеки DLL. Это только имя файла. Не используйте полное имя пути.  
+ [in] The name of the other metadata file, typically a DLL. This is the file name only. Do not use a full path name.  
   
  `pmur`  
- [out] Назначенные `mdModuleRef` токена.  
+ [out] The assigned `mdModuleRef` token.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** Cor.h  
+ **Header:** Cor.h  
   
- **Библиотека:** Используется как ресурс в MSCorEE.dll  
+ **Library:** Used as a resource in MSCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

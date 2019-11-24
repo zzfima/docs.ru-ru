@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 480d596a-759f-4d29-ac1a-3dbff8f3544d
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: baee8566e923f9cb31868f8aa0e379ff1dfa42fc
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3ab29fc8c983b354ad5088d26c547868940ec70a
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777225"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447718"
 ---
 # <a name="imetadataemitsettypedefprops-method"></a>Метод IMetaDataEmit::SetTypeDefProps
-Задает тип, определенный с помощью предыдущего вызова функции [IMetaDataEmit::DefineTypeDef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md).  
+Sets features of a type defined by a prior call to [IMetaDataEmit::DefineTypeDef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,23 +38,23 @@ HRESULT SetTypeDefProps (
   
 ## <a name="parameters"></a>Параметры  
  `td`  
- [in] `mdTypeDef` Токен, полученный из исходного вызова [IMetaDataEmit::DefineTypeDef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md).  
+ [in] An `mdTypeDef` token obtained from original call to [IMetaDataEmit::DefineTypeDef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md).  
   
  `dwTypeDefFlags`  
- [in] `TypeDef` атрибуты. Это битовая маска `CorTypeAttr` значения.  
+ [in] `TypeDef` attributes. This is a bitmask of `CorTypeAttr` values.  
   
  `tkExtends`  
- [in] `mdToken` Базового класса. Полученный из предыдущего вызова [IMetaDataEmit::DefineImportType](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineimporttype-method.md), или `null`.  
+ [in] The `mdToken` of the base class. Obtained from a previous call to [IMetaDataEmit::DefineImportType](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineimporttype-method.md), or `null`.  
   
  `rtkImplements[]`  
- [in] Массив токенов для интерфейсов, реализуемый данным типом. Эти `mdTypeRef` маркеры будут получать с помощью [IMetaDataEmit::DefineImportType](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineimporttype-method.md). Последний элемент массива должен быть `mdTokenNil`.  
+ [in] An array of tokens for the interfaces that this type implements. These `mdTypeRef` tokens are obtained using [IMetaDataEmit::DefineImportType](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineimporttype-method.md). The last element of the array is must be `mdTokenNil`.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** Cor.h  
+ **Header:** Cor.h  
   
- **Библиотека:** Используется как ресурс в MSCorEE.dll  
+ **Library:** Used as a resource in MSCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
