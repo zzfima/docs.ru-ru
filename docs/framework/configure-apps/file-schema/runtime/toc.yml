@@ -1,113 +1,121 @@
 - name: Схема параметров среды выполнения
   href: index.md
+- name: Конфигурация среды выполнения
   items:
     - name: Элемент <runtime>
       href: runtime-element.md
+    - name: Элемент <alwaysFlowImpersonationPolicy>
+      href: alwaysflowimpersonationpolicy-element.md
+    - name: Элемент <AppContextSwitchOverrides>
+      href: appcontextswitchoverrides-element.md
+    - name: Элемент <appDomainManagerAssembly>
+      href: appdomainmanagerassembly-element.md
+    - name: Элемент <appDomainManagerType>
+      href: appdomainmanagertype-element.md
+    - name: Элемент <appDomainResourceMonitoring>
+      href: appdomainresourcemonitoring-element.md
+    - name: Элемент <assemblyBinding>
+      href: assemblybinding-element-for-runtime.md
       items:
-        - name: Элемент <alwaysFlowImpersonationPolicy>
-          href: alwaysflowimpersonationpolicy-element.md
-        - name: Элемент <AppContextSwitchOverrides>
-          href: appcontextswitchoverrides-element.md
-        - name: Элемент <appDomainManagerAssembly>
-          href: appdomainmanagerassembly-element.md
-        - name: Элемент <appDomainManagerType>
-          href: appdomainmanagertype-element.md
-        - name: Элемент <appDomainResourceMonitoring>
-          href: appdomainresourcemonitoring-element.md
-        - name: Элемент <assemblyBinding>
-          href: assemblybinding-element-for-runtime.md
+        - name: Элемент <dependentAssembly>
+          href: dependentassembly-element.md
           items:
-            - name: Элемент <dependentAssembly>
-              href: dependentassembly-element.md
-              items:
-                - name: Элемент <assemblyIdentity>
-                  href: assemblyidentity-element-for-runtime.md
-                - name: Элемент <bindingRedirect>
-                  href: bindingredirect-element.md
-                - name: Элемент <codeBase>
-                  href: codebase-element.md
-                - name: Элемент <publisherPolicy>
-                  href: publisherpolicy-element.md
-            - name: Элемент <probing>
-              href: probing-element.md
-            - name: Элемент <qualifyAssembly>
-              href: qualifyassembly-element.md
-            - name: Элемент <supportPortability>
-              href: supportportability-element.md
-        - name: Элемент <bypassTrustedAppStrongNames>
-          href: bypasstrustedappstrongnames-element.md
-        - name: Элемент <CompatSortNLSVersion>
-          href: compatsortnlsversion-element.md
-        - name: Элемент <Crst_DisableSpinWait>
-          href: crst-disablespinwait-element.md
-        - name: Элемент <developmentMode>
-          href: developmentmode-element.md
-        - name: Элемент <disableCachingBindingFailures>
-          href: disablecachingbindingfailures-element.md
-        - name: Элемент <disableCommitThreadStack>
-          href: disablecommitthreadstack-element.md
-        - name: Элемент <disableFusionUpdatesFromADManager>
-          href: disablefusionupdatesfromadmanager-element.md
-        - name: Элемент <EnableAmPmParseAdjustment>
-          href: enableampmparseadjustment-element.md
-        - name: Элемент <enforceFIPSPolicy>
-          href: enforcefipspolicy-element.md
-        - name: Элемент <etwEnable>
-          href: etwenable-element.md
-        - name: Элемент <forcePerformanceCounterUniqueSharedMemoryReads>
-          href: forceperformancecounteruniquesharedmemoryreads-element.md
-        - name: Элемент <gcAllowVeryLargeObjects>
-          href: gcallowverylargeobjects-element.md
-        - name: Элемент <gcConcurrent>
-          href: gcconcurrent-element.md
-        - name: Элемент <GCCpuGroup>
-          href: gccpugroup-element.md
-        - name: Элемент <gcServer>
-          href: gcserver-element.md
-        - name: Элемент <generatePublisherEvidence>
-          href: generatepublisherevidence-element.md
-        - name: Элемент <legacyCorruptedStateExceptionsPolicy>
-          href: legacycorruptedstateexceptionspolicy-element.md
-        - name: Элемент <legacyImpersonationPolicy>
-          href: legacyimpersonationpolicy-element.md
-        - name: <loadFromRemoteSources>
-          href: loadfromremotesources-element.md
-        - name: Элемент <NetFx40_LegacySecurityPolicy>
-          href: netfx40-legacysecuritypolicy-element.md
-        - name: Элемент <NetFx40_PInvokeStackResilience>
-          href: netfx40-pinvokestackresilience-element.md
-        - name: Элемент <NetFx45_CultureAwareComparerGetHashCode_LongStrings>
-          href: netfx45-cultureawarecomparergethashcode-longstrings-element.md
-        - name: Элемент <PreferComInsteadOfManagedRemoting>
-          href: prefercominsteadofmanagedremoting-element.md
-        - name: Элемент <relativeBindForResources>
-          href: relativebindforresources-element.md
-        - name: Элемент <shadowCopyVerifyByTimestamp>
-          href: shadowcopyverifybytimestamp-element.md
-        - name: Элемент <Thread_UseAllCpuGroups>
-          href: thread-useallcpugroups-element.md
-        - name: Элемент <ThrowUnobservedTaskExceptions>
-          href: throwunobservedtaskexceptions-element.md
-        - name: Элемент <TimeSpan_LegacyFormatMode>
-          href: timespan-legacyformatmode-element.md
-        - name: Элемент <useLegacyJit>
-          href: uselegacyjit-element.md
-        - name: Элемент <UseRandomizedStringHashAlgorithm>
-          href: userandomizedstringhashalgorithm-element.md
-        - name: Элемент <UseSmallInternalThreadStacks>
-          href: usesmallinternalthreadstacks-element.md
-    - name: Элемент <system.runtime.caching> (параметры кэша)
+            - name: Элемент <assemblyIdentity>
+              href: assemblyidentity-element-for-runtime.md
+            - name: Элемент <bindingRedirect>
+              href: bindingredirect-element.md
+            - name: Элемент <codeBase>
+              href: codebase-element.md
+            - name: Элемент <publisherPolicy>
+              href: publisherpolicy-element.md
+        - name: Элемент <probing>
+          href: probing-element.md
+        - name: Элемент <qualifyAssembly>
+          href: qualifyassembly-element.md
+        - name: Элемент <supportPortability>
+          href: supportportability-element.md
+    - name: Элемент <bypassTrustedAppStrongNames>
+      href: bypasstrustedappstrongnames-element.md
+    - name: Элемент <CompatSortNLSVersion>
+      href: compatsortnlsversion-element.md
+    - name: Элемент <Crst_DisableSpinWait>
+      href: crst-disablespinwait-element.md
+    - name: Элемент <developmentMode>
+      href: developmentmode-element.md
+    - name: Элемент <disableCachingBindingFailures>
+      href: disablecachingbindingfailures-element.md
+    - name: Элемент <disableCommitThreadStack>
+      href: disablecommitthreadstack-element.md
+    - name: Элемент <disableFusionUpdatesFromADManager>
+      href: disablefusionupdatesfromadmanager-element.md
+    - name: Элемент <EnableAmPmParseAdjustment>
+      href: enableampmparseadjustment-element.md
+    - name: Элемент <enforceFIPSPolicy>
+      href: enforcefipspolicy-element.md
+    - name: Элемент <etwEnable>
+      href: etwenable-element.md
+    - name: Элемент <forcePerformanceCounterUniqueSharedMemoryReads>
+      href: forceperformancecounteruniquesharedmemoryreads-element.md
+    - name: Элемент <gcAllowVeryLargeObjects>
+      href: gcallowverylargeobjects-element.md
+    - name: Элемент <gcConcurrent>
+      href: gcconcurrent-element.md
+    - name: Элемент <GCCpuGroup>
+      href: gccpugroup-element.md
+    - name: Элемент <GCHeapAffinitizeMask>
+      href: gcheapaffinitizemask-element.md
+    - name: Элемент <GCHeapCount>
+      href: gcheapcount-element.md
+    - name: Элемент <GCLOHThreshold>
+      href: gclohthreshold-element.md
+    - name: Элемент <GCNoAffinitize>
+      href: gcnoaffinitize-element.md
+    - name: Элемент <gcServer>
+      href: gcserver-element.md
+    - name: Элемент <generatePublisherEvidence>
+      href: generatepublisherevidence-element.md
+    - name: Элемент <legacyCorruptedStateExceptionsPolicy>
+      href: legacycorruptedstateexceptionspolicy-element.md
+    - name: Элемент <legacyImpersonationPolicy>
+      href: legacyimpersonationpolicy-element.md
+    - name: <loadFromRemoteSources>
+      href: loadfromremotesources-element.md
+    - name: Элемент <NetFx40_LegacySecurityPolicy>
+      href: netfx40-legacysecuritypolicy-element.md
+    - name: Элемент <NetFx40_PInvokeStackResilience>
+      href: netfx40-pinvokestackresilience-element.md
+    - name: Элемент <NetFx45_CultureAwareComparerGetHashCode_LongStrings>
+      href: netfx45-cultureawarecomparergethashcode-longstrings-element.md
+    - name: Элемент <PreferComInsteadOfManagedRemoting>
+      href: prefercominsteadofmanagedremoting-element.md
+    - name: Элемент <relativeBindForResources>
+      href: relativebindforresources-element.md
+    - name: Элемент <shadowCopyVerifyByTimestamp>
+      href: shadowcopyverifybytimestamp-element.md
+    - name: Элемент <Thread_UseAllCpuGroups>
+      href: thread-useallcpugroups-element.md
+    - name: Элемент <ThrowUnobservedTaskExceptions>
+      href: throwunobservedtaskexceptions-element.md
+    - name: Элемент <TimeSpan_LegacyFormatMode>
+      href: timespan-legacyformatmode-element.md
+    - name: Элемент <useLegacyJit>
+      href: uselegacyjit-element.md
+    - name: Элемент <UseRandomizedStringHashAlgorithm>
+      href: userandomizedstringhashalgorithm-element.md
+    - name: Элемент <UseSmallInternalThreadStacks>
+      href: usesmallinternalthreadstacks-element.md
+- name: Кэширование во время выполнения
+  items:
+    - name: Элемент <system.runtime.caching>
       href: system-runtime-caching-element-cache-settings.md
+    - name: Элемент <memoryCache>
+      href: memorycache-element-cache-settings.md
+    - name: Элемент <namedCaches>
+      href: namedcaches-element-cache-settings.md
       items:
-        - name: Элемент <memoryCache> (параметры кэша)
-          href: memorycache-element-cache-settings.md
-          items:
-            - name: Элемент <namedCaches> (параметры кэша)
-              href: namedcaches-element-cache-settings.md
-              items:
-                - name: Элемент <add> для <namedCaches>
-                  href: add-element-for-namedcaches.md
-                - name: Элемент <clear> для <namedCaches>
-                  href: clear-element-for-namedcaches.md
-                - name: Элемент <remove> для <namedCaches>
-                  href: remove-element-for-namedcaches.md
+        - name: Элемент <add>
+          href: add-element-for-namedcaches.md
+        - name: Элемент <clear>
+          href: clear-element-for-namedcaches.md
+        - name: Элемент <remove>
+          href: remove-element-for-namedcaches.md

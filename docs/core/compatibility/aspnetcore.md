@@ -1,19 +1,21 @@
 ---
-title: Критические изменения в версии 3.0 по сравнению с версией 2.2 — .NET Core
-description: Список критических изменений в версии 3.0 по сравнению с версией 2.2 .NET Core, ASP.NET Core и EF Core.
+title: Критические изменения ASP.NET Core (.NET Core)
+description: В этой статье приведен список критических изменений в ASP.NET Core.
 ms.date: 11/20/2019
-ms.openlocfilehash: 24df4e1b59681ae003a9c8dd34ee438387358171
+author: scottaddie
+ms.author: scaddie
+ms.openlocfilehash: 26b1fc2d2abe2dd8421a8c527add6b9fd4f3f847
 ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 11/21/2019
-ms.locfileid: "74282622"
+ms.locfileid: "74282519"
 ---
-# <a name="breaking-changes-for-migration-from-version-22-to-30"></a><span data-ttu-id="c5bed-103">Критические изменения для перехода с версии 2.2 на 3.0</span><span class="sxs-lookup"><span data-stu-id="c5bed-103">Breaking changes for migration from Version 2.2 to 3.0</span></span>
+# <a name="aspnet-core-breaking-changes"></a><span data-ttu-id="05f4a-103">Критические изменения ASP.NET Core</span><span class="sxs-lookup"><span data-stu-id="05f4a-103">ASP.NET Core breaking changes</span></span>
 
-<span data-ttu-id="c5bed-104">Если вы выполняете миграцию с версии 2.2 на версию 3.0 .NET Core, ASP.NET Core или EF Core, ознакомьтесь со следующими разделами, чтобы узнать о критических изменениях, которые могут повлиять на работу приложения:</span><span class="sxs-lookup"><span data-stu-id="c5bed-104">If you're migrating from version 2.2 to version 3.0 of .NET Core, ASP.NET Core, or EF Core, review the following topics for breaking changes that may affect your app:</span></span>
+<span data-ttu-id="05f4a-104">Ниже приведен список критических изменений ASP.NET Core по версиям ASP.NET Core.</span><span class="sxs-lookup"><span data-stu-id="05f4a-104">The following is a list of ASP.NET Core breaking changes by ASP.NET Core version.</span></span> <span data-ttu-id="05f4a-105">ASP.NET Core предоставляет функции разработки веб-приложений, используемые .NET Core.</span><span class="sxs-lookup"><span data-stu-id="05f4a-105">ASP.NET Core provides the web app development features used by .NET Core.</span></span>
 
-## <a name="aspnet-core"></a><span data-ttu-id="c5bed-105">ASP.NET Core</span><span class="sxs-lookup"><span data-stu-id="c5bed-105">ASP.NET Core</span></span>
+## <a name="aspnet-core-30"></a><span data-ttu-id="05f4a-106">ASP.NET Core 3.0</span><span class="sxs-lookup"><span data-stu-id="05f4a-106">ASP.NET Core 3.0</span></span>
 
 [!INCLUDE[obsolete Antiforgery, CORS, Diagnostics, MVC, and Routing APIs removed](~/includes/core-changes/aspnetcore/3.0/obsolete-apis-removed.md)]
 
@@ -200,63 +202,3 @@ ms.locfileid: "74282622"
 ***
 
 [!INCLUDE[Target framework: .NET Framework not supported](~/includes/core-changes/aspnetcore/3.0/targetfx-netfx-tfm-support.md)]
-
-## <a name="corefx"></a><span data-ttu-id="c5bed-106">CoreFX</span><span class="sxs-lookup"><span data-stu-id="c5bed-106">CoreFx</span></span>
-
-[!INCLUDE[APIs that report version now report product and not file version](~/includes/core-changes/corefx/version-information-changes.md)]
-
-***
-
-[!INCLUDE[Custom EncoderFallbackBuffer instances cannot fall back recursively](~/includes/core-changes/corefx/custom-encoderfallbackbuffer-cannot-be-recursive.md)]
-
-***
-
-[!INCLUDE[Floating point formatting and parsing behavior changes](~/includes/core-changes/corefx/floating-point-changes.md)]
-
-***
-
-[!INCLUDE[Floating-point parsing operations no longer fail or throw an OverflowException](~/includes/core-changes/corefx/floating-point-parsing-does-not-overflow.md)]
-
-***
-
-[!INCLUDE[InvalidAsynchronousStateException moved to another assembly](~/includes/core-changes/corefx/move-invalidasynchronousstateexception.md)]
-
-***
-
-[!INCLUDE[NET Core 3.0 follows Unicode best practices when replacing ill-formed UTF-8 byte sequences](~/includes/core-changes/corefx/net-core-3-0-follows-unicode-utf8-best-practices.md)]
-
-***
-
-[!INCLUDE[TypeDescriptionProviderAttribute moved to another assembly](~/includes/core-changes/corefx/move-typedescriptionproviderattribute.md)]
-
-***
-
-[!INCLUDE[ZipArchiveEntry no longer handles archives with inconsistent entry sizes](~/includes/core-changes/corefx/ziparchiveentry-and-inconsistent-entry-sizes.md)]
-
-## <a name="cryptography"></a><span data-ttu-id="c5bed-107">Шифрование</span><span class="sxs-lookup"><span data-stu-id="c5bed-107">Cryptography</span></span>
-
-[!INCLUDE[EnvelopedCms defaults to AES-256 encryption](~/includes/core-changes/cryptography/envelopedcms-defaults-to-aes256.md)]
-
-***
-
-[!INCLUDE[Minimum size for RSAOpenSsl key generation has increased](~/includes/core-changes/cryptography/minimum-rsaopenssl-key-size-change.md)]
-
-***
-
-[!INCLUDE[.NET Core 3.0 prefers OpenSSL 1.1.x to OpenSSL 1.0.x](~/includes/core-changes/cryptography/net-core-3-0-prefers-openssl-1-1-x.md)]
-
-## <a name="entity-framework-core"></a><span data-ttu-id="c5bed-108">Entity Framework Core</span><span class="sxs-lookup"><span data-stu-id="c5bed-108">Entity Framework Core</span></span>
-
-[<span data-ttu-id="c5bed-109">Критические изменения в Entity Framework Core</span><span class="sxs-lookup"><span data-stu-id="c5bed-109">Entity Framework Core breaking changes</span></span>](/ef/core/what-is-new/ef-core-3.0/breaking-changes)
-
-## <a name="globalization"></a><span data-ttu-id="c5bed-110">Глобализация</span><span class="sxs-lookup"><span data-stu-id="c5bed-110">Globalization</span></span>
-
-[!INCLUDE["C" locale maps to the invariant locale](~/includes/core-changes/globalization/c-locale-maps-to-invariant-locale.md)]
-
-## <a name="networking"></a><span data-ttu-id="c5bed-111">Сети</span><span class="sxs-lookup"><span data-stu-id="c5bed-111">Networking</span></span>
-
-[!INCLUDE[Default value of HttpRequestMessage.Version changed to 1.1](~/includes/core-changes/networking/httprequestmessage-version-change.md)]
-
-## <a name="visual-basic"></a><span data-ttu-id="c5bed-112">Visual Basic</span><span class="sxs-lookup"><span data-stu-id="c5bed-112">Visual Basic</span></span>
-
-[!INCLUDE[vbNewLine is obsolete](~/includes/core-changes/visualbasic/vbnewline-is-obsolete.md)]

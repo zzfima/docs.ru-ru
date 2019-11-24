@@ -970,15 +970,15 @@
         - name: Не удается создать компонент ActiveX
           href: language-reference/error-messages/cannot-create-activex-component.md
         - name: 'Невозможно обратиться к полю <name>, так как оно является членом поля с типизированным значением <name> класса <classname>, базовым классом которого является System.MarshalByRefObject'
-          href: language-reference/error-messages/cannot-refer-to-name-because-it-is-member-of-value-typed-field-name-of-class.md
+          href: language-reference/error-messages/bc30310.md
         - name: Не удается обратиться к члену экземпляра класса из совместно используемого метода или совместно используемого инициализатора без явного указания экземпляра этого класса
-          href: language-reference/error-messages/cannot-refer-to-an-instance-member-of-a-class.md
+          href: language-reference/error-messages/bc30369.md
         - name: Не удается создать требуемый временный файл
           href: language-reference/error-messages/can-t-create-necessary-temporary-file.md
         - name: Не удается открыть <filename> для записи
-          href: language-reference/error-messages/can-t-open-filename-for-writing.md
+          href: language-reference/error-messages/bc2012.md
         - name: Класс <classname> не найден
-          href: language-reference/error-messages/class-classname-cannot-be-found.md
+          href: language-reference/error-messages/bc31098.md
         - name: Класс не поддерживает автоматизацию или не поддерживает ожидаемый интерфейс
           href: language-reference/error-messages/class-does-not-support-automation-or-does-not-support-expected-interface.md
         - name: Оператор Class должен заканчиваться соответствующим End Class
