@@ -1,5 +1,5 @@
 ---
-title: Воспроизведение звуков (Visual Basic)
+title: Воспроизведение звуков
 ms.date: 07/20/2015
 helpviewer_keywords:
 - system sounds, playing
@@ -11,17 +11,19 @@ helpviewer_keywords:
 - sounds, background
 - playing sounds
 ms.assetid: f0d9e4ab-57c7-47b6-86d3-99ff07078040
-ms.openlocfilehash: ac890a4cc6024ae43af4146d1d8f43af70ae3ff0
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 416fedd011ff35d2b32d1b64932e3908a73ed14e
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58840347"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345526"
 ---
 # <a name="playing-sounds-visual-basic"></a>Воспроизведение звуков (Visual Basic)
+
 Объект `My.Computer.Audio` предоставляет методы для воспроизведения звуков.  
   
 ## <a name="playing-sounds"></a>Воспроизведение звуков  
+
  Воспроизведение в фоновом режиме позволяет приложению выполнять другой код во время воспроизведения звуков. Метод `My.Computer.Audio.Play` позволяет приложению воспроизводить только один фоновый звук за раз; когда приложение воспроизводит новый фоновый звук, оно останавливает воспроизведение предыдущего фонового звука. Вы также можете воспроизвести звук и дождаться его окончания.  
   
  В следующем примере метод `My.Computer.Audio.Play` воспроизводит звук. Если `AudioPlayMode.WaitToComplete` указан, `My.Computer.Audio.Play` дожидается завершения звука, прежде чем выполнение вызывающего кода будет продолжено. Пользуясь этим примером, убедитесь в том, что имя файла ссылается на звуковой WAV-файл на вашем компьютере.  
@@ -33,6 +35,7 @@ ms.locfileid: "58840347"
  [!code-vb[VbVbalrMyComputer#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class1.vb#16)]  
   
 ## <a name="playing-looping-sounds"></a>Циклическое воспроизведение звука  
+
  В следующем примере метод `My.Computer.Audio.Play` воспроизводит заданный звук в фоновом режиме, если задан параметр `PlayMode.BackgroundLoop`. Пользуясь этим примером, убедитесь в том, что имя файла ссылается на звуковой WAV-файл на вашем компьютере.  
   
  [!code-vb[VbVbalrMyComputer#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class1.vb#11)]  
@@ -46,6 +49,7 @@ ms.locfileid: "58840347"
  Обычно циклическое воспроизведение звука в приложении в конечном итоге должно прекратиться.  
   
 ## <a name="stopping-the-playing-of-sounds-in-the-background"></a>Остановка воспроизведения звуков в фоновом режиме  
+
  Метод `My.Computer.Audio.Stop` позволяет остановить звук, который воспроизводится в приложении в фоновом режиме или циклически.  
   
  Обычно циклическое воспроизведение звука в приложении в какой-то момент должно быть остановлено.  
@@ -57,6 +61,7 @@ ms.locfileid: "58840347"
  Код в приведенном выше примере также доступен как фрагмент кода IntelliSense. В средстве выбора фрагмента кода он расположен в разделе **Приложения Windows Forms > Звук**. Дополнительные сведения см. в статье [Фрагменты кода](/visualstudio/ide/code-snippets).  
   
 ## <a name="playing-system-sounds"></a>Воспроизведение системных звуков  
+
  Метод `My.Computer.Audio.PlaySystemSound` позволяет воспроизвести указанный системный звук.  
   
  Метод `My.Computer.Audio.PlaySystemSound` принимает в качестве параметра один из общих членов класса <xref:System.Media.SystemSound>. Системный звук <xref:System.Media.SystemSounds.Asterisk%2A> обычно обозначает ошибку.  

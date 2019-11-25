@@ -1,5 +1,5 @@
 ---
-title: Основы файлового ввода-вывода и файловой системы в .NET Framework (Visual Basic)
+title: Основы файлового ввода-вывода и файловой системы в .NET Framework
 ms.date: 07/20/2015
 helpviewer_keywords:
 - file access, file I/O in Visual Basic
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - streams
 - streams, definition
 ms.assetid: 49d837c0-cf28-416f-8606-4d83d7b479ef
-ms.openlocfilehash: 3ff305a6b22918681561ed7262a7377dbdf7aadc
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 5d60d0089d042c0be343c741c26de0b4b7778d6d
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591514"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348935"
 ---
 # <a name="basics-of-net-framework-file-io-and-the-file-system-visual-basic"></a>Основы файлового ввода-вывода и файловой системы в .NET Framework (Visual Basic)
 
@@ -84,7 +84,7 @@ ms.locfileid: "65591514"
 
 ## <a name="file-permissions"></a>Разрешения файла
 
-Доступом к файлам и каталогам можно управлять с помощью класса <xref:System.Security.Permissions.FileIOPermission>. Это может быть особенно важно для разработчиков, работающих с веб-формами, которые по умолчанию выполняются в контексте специальной локальной учетной записи пользователя ASP.NET, создаваемой в рамках установок ASP.NET и .NET Framework. Когда такое приложение запрашивает доступ к ресурсу, учетная запись пользователя ASP.NET имеет ограниченные разрешения, что может помешать пользователю выполнять действия, такие как запись в файл из веб-приложения. Для получения дополнительной информации см. <xref:System.Security.Permissions.FileIOPermission>.
+Доступом к файлам и каталогам можно управлять с помощью класса <xref:System.Security.Permissions.FileIOPermission>. Это может быть особенно важно для разработчиков, работающих с веб-формами, которые по умолчанию выполняются в контексте специальной локальной учетной записи пользователя ASP.NET, создаваемой в рамках установок ASP.NET и .NET Framework. Когда такое приложение запрашивает доступ к ресурсу, учетная запись пользователя ASP.NET имеет ограниченные разрешения, что может помешать пользователю выполнять действия, такие как запись в файл из веб-приложения. Дополнительные сведения можно найти по адресу: <xref:System.Security.Permissions.FileIOPermission>.
 
 ## <a name="isolated-file-storage"></a>Изолированное хранилище файлов
 

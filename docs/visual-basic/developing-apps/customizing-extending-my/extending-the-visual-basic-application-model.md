@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic Application Model, extending
 ms.assetid: e91d3bed-4c27-40e3-871d-2be17467c72c
-ms.openlocfilehash: 02a964506d976cb10f3f28f83f0655fecc447e59
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 46c18ab540c90c4147514685c2acc824755b435f
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582764"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976864"
 ---
 # <a name="extending-the-visual-basic-application-model"></a>Расширение модели приложения Visual Basic
 
@@ -82,6 +82,7 @@ Visual Basic модель приложения также предоставля
  Конструктор <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnStartupNextInstance(Microsoft.VisualBasic.ApplicationServices.StartupNextInstanceEventArgs)> вызывает свойство <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A>, чтобы определить, какой обработчик отрисовки текста следует использовать для форм приложения. По умолчанию свойство <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A> возвращает `False`, что означает, что используется механизм визуализации текста GDI, который используется по умолчанию в Visual Basic 2005 и более поздних версиях. Можно переопределить свойство <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A>, чтобы оно возвращало `True`, которое указывает, что используется механизм визуализации текста GDI+, который используется по умолчанию в Visual Basic .NET 2002 и Visual Basic .NET 2003.
 
 ## <a name="configuring-the-application"></a>Настройка приложения
+
  В составе модели приложения Visual Basic класс <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> предоставляет защищенные свойства, которые настраивают приложение. Эти свойства должны быть заданы в конструкторе реализующего класса.
 
  В проекте Windows Forms по умолчанию **Конструктор проектов** создает код для задания свойств с помощью параметров конструктора. Свойства используются только при запуске приложения. их задание после запуска приложения не оказывает никакого влияния.

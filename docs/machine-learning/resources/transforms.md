@@ -4,12 +4,12 @@ description: Изучите компоненты проектирования п
 author: natke
 ms.author: nakersha
 ms.date: 04/02/2019
-ms.openlocfilehash: 25da3cceb3c9090661b34254ed240207aaf3b9d7
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: cb191b1688dce8f703bdabcd220eb39efe68fd48
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929253"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73977236"
 ---
 # <a name="data-transformations"></a>Преобразования данных
 
@@ -21,7 +21,7 @@ ms.locfileid: "70929253"
 
 В этом руководстве рассматриваются преобразования, которые возвращают классы, реализующие интерфейс [IEstimator](xref:Microsoft.ML.IEstimator%601). Преобразования данных можно соединять в цепочки. Каждое преобразование принимает и выводит данные определенных типов и форматов, которые указаны в связанной справочной документации.
 
-Некоторым преобразованиям данных требуются данные для обучения, чтобы вычислять их параметры. Например, преобразователь <xref:Microsoft.ML.NormalizationCatalog.NormalizeMeanVariance%2A> позволяет вычислить среднее значение и дисперсию данных для обучения при выполнении операции `Fit()` и использует эти параметры в операции `Transform()`. 
+Некоторым преобразованиям данных требуются данные для обучения, чтобы вычислять их параметры. Например, преобразователь <xref:Microsoft.ML.NormalizationCatalog.NormalizeMeanVariance%2A> позволяет вычислить среднее значение и дисперсию данных для обучения при выполнении операции `Fit()` и использует эти параметры в операции `Transform()`.
 
 Другим преобразованиям данных не требуются данные для обучения. Например, преобразование <xref:Microsoft.ML.ImageEstimatorsCatalog.ConvertToGrayscale*> позволяет выполнять операцию `Transform()` без изучения данных для обучения при выполнении операции `Fit()`.
 
@@ -62,7 +62,7 @@ ms.locfileid: "70929253"
 
 | Transform | Определение |
 | --- | --- |
-| <xref:Microsoft.ML.TextCatalog.FeaturizeText*> | Преобразование текстового столбца в массив float счетчиков нормализованных n-грамм и символьных n-грамм | 
+| <xref:Microsoft.ML.TextCatalog.FeaturizeText*> | Преобразование текстового столбца в массив float счетчиков нормализованных n-грамм и символьных n-грамм |
 | <xref:Microsoft.ML.TextCatalog.TokenizeIntoWords*> | Разбиение одного или нескольких текстовых столбцов на отдельные слова |
 | <xref:Microsoft.ML.TextCatalog.TokenizeIntoCharactersAsKeys*> | Разбиение одного или нескольких текстовых столбцов на отдельные массивы float в пределах набора тем |
 | <xref:Microsoft.ML.TextCatalog.NormalizeText*> | Изменение регистра, удаление диакритических знаков, знаков препинания и цифр |

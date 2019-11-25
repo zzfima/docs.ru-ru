@@ -10,21 +10,21 @@ helpviewer_keywords:
 - add element, webRequestModules
 - <add> element, webRequestModules
 ms.assetid: 47ec4adc-f39f-4bcd-8680-1ec21fd26890
-ms.openlocfilehash: 0248706ed78de160ef0131a0c7595374febf1aa9
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 76dad0c0b75d20627e9f57fd1bb467bf17c9294c
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71699586"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74088503"
 ---
-# <a name="add-element-for-webrequestmodules-network-settings"></a>Элемент > @no__t 0add для webRequestModules (параметры сети)
+# <a name="add-element-for-webrequestmodules-network-settings"></a>\<добавить элемент > для webRequestModules (параметры сети)
 Добавляет пользовательский модуль веб-запросов в приложение.  
-  
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **@no__t -4system. NET >** ](system-net-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<webRequestModules >** ](webrequestmodules-element-network-settings.md)  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Добавить >**  
-  
+
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System. net >** ](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<webRequestModules >** ](webrequestmodules-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<добавить >**
+
 ## <a name="syntax"></a>Синтаксис  
   
 ```xml  
@@ -42,10 +42,10 @@ ms.locfileid: "71699586"
 |**Attribute (XElement Dynamic Property)** (Attribute (динамическое свойство XElement))|**Описание**|  
 |-------------------|---------------------|  
 |`prefix`|Префикс URI для запросов, обрабатываемых этим модулем веб-запросов.|  
-|`type`|Полное имя типа (указанное свойством <xref:System.Type.FullName%2A>) и имя сборки (обозначенное свойством <xref:System.Reflection.Assembly.FullName%2A>), разделенные запятыми, которые реализуют этот модуль веб-запросов.|  
+|`type`|Полное имя типа (обозначенное свойством <xref:System.Type.FullName%2A>) и имя сборки (определяемое свойством <xref:System.Reflection.Assembly.FullName%2A>), разделенные запятыми, которые реализуют этот модуль веб-запросов.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
- Нет.  
+ Отсутствует.  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
@@ -53,12 +53,12 @@ ms.locfileid: "71699586"
 |-----------------|---------------------|  
 |[webRequestModules](webrequestmodules-element-network-settings.md)|Указывает модули, используемые для запроса сведений от сетевых узлов.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
  Атрибут `prefix` определяет префикс URI, который использует указанный модуль веб-запросов. Модули веб-запросов обычно регистрируются для работы с конкретным протоколом, например HTTP или FTP, но могут быть зарегистрированы, чтобы обрабатывать запросы к определенному серверу или пути на сервере.  
   
- Модуль веб-запросов создается, когда соответствующий префикс URI передается в метод <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType>.  
+ Модуль веб-запросов создается, когда в метод <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> передается соответствующий префикс URI.  
   
- Значение атрибута `prefix` должно быть начальным символом допустимого URI. Например, `http` или `http://www.contoso.com`.
+ Значение атрибута `prefix` должно быть начальными символами допустимого URI. Например, `http` или `http://www.contoso.com`.
   
  Значением атрибута `type` должно быть допустимое имя типа и соответствующее имя сборки, разделенные запятыми.
   

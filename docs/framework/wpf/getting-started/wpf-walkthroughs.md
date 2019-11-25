@@ -5,12 +5,12 @@ helpviewer_keywords:
 - walkthroughs [WPF]
 - WPF walkthroughs [WPF]
 ms.assetid: c29bde96-0389-4aff-a9fb-cd678f66b7f7
-ms.openlocfilehash: 34cd7e96442a570a3951e6303d2ac90ce5da6239
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: fbd5006611a0a8e0d90b589df7b2cb6a34101457
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920399"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73977034"
 ---
 # <a name="wpf-walkthroughs"></a>Пошаговые руководства по WPF
 Пошаговые руководства позволяют получить пошаговые инструкции для распространенных сценариев. Они представляют собой удобный источник начальных сведений о продукте или определенной функциональной области.
@@ -21,11 +21,11 @@ ms.locfileid: "72920399"
 
 |Заголовок|Описание|
 |-----------|-----------------|
-|[Пошаговое руководство. Создание простого приложения WPF с помощью конструктора WPF](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb546972(v=vs.100))|Демонстрирует создание простого приложения WPF с [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].|
+|[Пошаговое руководство. Создание простого приложения WPF с помощью конструктора WPF](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb546972(v=vs.100))|Демонстрирует создание простого приложения WPF с помощью конструктора WPF.|
 |[Пошаговое руководство. Создание динамического макета](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb514519(v=vs.100))|Демонстрирует создание динамического макета с помощью элемента управления панели <xref:System.Windows.Controls.Grid>.|
 |[Пошаговое руководство. Создание приложения с изменяемым размером с помощью конструктора WPF](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb546954(v=vs.100))|Демонстрирует создание макетов окон, изменяемых пользователем во время выполнения.|
-|[Пошаговое руководство. Создание привязки данных с помощью конструктора WPF](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/dd434207(v=vs.100))|Демонстрирует использование [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)] для создания привязок данных, соединяющих данные с элементом управления.|
-|[Пошаговое руководство. Использование методу DesignInstance для привязки к данным в конструкторе](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/dd490796(v=vs.100))|Демонстрирует использование [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)] для создания привязок данных во время разработки для контекста данных, который назначается во время выполнения.|
+|[Пошаговое руководство. Создание привязки данных с помощью конструктора WPF](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/dd434207(v=vs.100))|Демонстрирует использование конструктора WPF для создания привязок данных, связывающих данные с элементом управления.|
+|[Пошаговое руководство. Использование методу DesignInstance для привязки к данным в конструкторе](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/dd490796(v=vs.100))|Демонстрирует использование конструктора WPF для создания привязок данных во время разработки для контекста данных, который назначается во время выполнения.|
 
 ## <a name="wpf-walkthroughs"></a>Пошаговые руководства по WPF
 

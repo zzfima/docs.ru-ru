@@ -8,20 +8,20 @@ helpviewer_keywords:
 - mailSettings element
 - <mailSettings> element
 ms.assetid: 54f0f153-17e5-4f49-afdc-deadb940c9c1
-ms.openlocfilehash: fb4c8844ed3eb13af483c214d659090c0c563c33
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 4e8bf23ce39edadf80f019315c690b597b3d7361
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71698077"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74089233"
 ---
-# <a name="mailsettings-element-network-settings"></a>Элемент > @no__t 0mailSettings (параметры сети)
+# <a name="mailsettings-element-network-settings"></a>Элемент \<Маилсеттингс > (параметры сети)
 Настраивает параметры отправки почты.  
 
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **@no__t -4system. NET >** ](system-net-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 **\<mailSettings >**  
-  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System. net >** ](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<маилсеттингс >**
+
 ## <a name="syntax"></a>Синтаксис  
   
 ```xml  
@@ -34,13 +34,13 @@ ms.locfileid: "71698077"
  В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
   
 ### <a name="attributes"></a>Атрибуты  
- Нет.  
+ Отсутствует.  
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
 |Атрибут|Описание|  
 |---------------|-----------------|  
-|[Элемент > @no__t 1smtp (параметры сети)](smtp-element-network-settings.md)|Настраивает параметры протокола простого почтового транспорта.|  
+|[Элемент > SMTP \<(параметры сети)](smtp-element-network-settings.md)|Настраивает параметры протокола простого почтового транспорта.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   

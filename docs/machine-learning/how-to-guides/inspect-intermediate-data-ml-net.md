@@ -5,19 +5,19 @@ ms.date: 06/25/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to, title-hack-0625
-ms.openlocfilehash: d6ddeb523fb229eb0ebc9c2f22809312060e4266
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 11df1d5caaa7b7974360d863f85afbff18985e47
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67402390"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73977092"
 ---
 # <a name="inspect-intermediate-data-during-processing"></a>Проверка промежуточных данных при обработке
 
 Сведения о проверке промежуточных данных при загрузке, обработке и обучении модели в ML.NET. Промежуточные данные — это выходные данные после каждого этапа конвейера машинного обучения.
 
 Промежуточные данные, аналогичные представленным ниже, которые загружаются в [`IDataView`](xref:Microsoft.ML.IDataView), в ML.NET можно проверить разными способами.
- 
+
 ```csharp
 HousingData[] housingData = new HousingData[]
 {
@@ -62,7 +62,7 @@ HousingData[] housingData = new HousingData[]
 
 ## <a name="convert-idataview-to-ienumerable"></a>Преобразование IDataView в IEnumerable
 
-Одним из самых быстрых способов проверки [`IDataView`](xref:Microsoft.ML.IDataView) является преобразование в [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601). Чтобы преобразовать [`IDataView`](xref:Microsoft.ML.IDataView) в [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601), используйте метод [`CreateEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable*). 
+Одним из самых быстрых способов проверки [`IDataView`](xref:Microsoft.ML.IDataView) является преобразование в [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601). Чтобы преобразовать [`IDataView`](xref:Microsoft.ML.IDataView) в [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601), используйте метод [`CreateEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable*).
 
 Для оптимизации производительности установите для параметра `reuseRowObject` значение `true`. Это приведет к отложенному заполнению одного объекта данными из текущей строки при оценке вместо создания объекта для каждой строки в наборе данных.
 
@@ -100,7 +100,7 @@ HousingData firstRow = housingDataArray[0];
 HousingData secondRow = housingDataArray[1];
 HousingData thirdRow = housingDataArray[2];
 float averageCurrentPrice = (firstRow.CurrentPrice + secondRow.CurrentPrice + thirdRow.CurrentPrice) / 3;
-``` 
+```
 
 ## <a name="inspect-values-in-a-single-column"></a>Проверка значений в одном столбце
 
@@ -115,7 +115,7 @@ IEnumerable<float> sizeColumn = data.GetColumn<float>("Size").ToList();
 [`IDataView`](xref:Microsoft.ML.IDataView) вычисляется в отложенном режиме. Для выполнения итераций по строкам [`IDataView`](xref:Microsoft.ML.IDataView) без преобразования в [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601), как показано в предыдущих разделах этого документа, создайте [`DataViewRowCursor`](xref:Microsoft.ML.DataViewRowCursor), используя метод [`GetRowCursor`](xref:Microsoft.ML.IDataView.GetRowCursor*) и передав [DataViewSchema](xref:Microsoft.ML.DataViewSchema) интерфейса [`IDataView`](xref:Microsoft.ML.IDataView) в качестве параметра. Затем для выполнения итерации по строкам используйте метод курсора [`MoveNext`](xref:Microsoft.ML.DataViewRowCursor.MoveNext*) вместе с делегатами [`ValueGetter`](xref:Microsoft.ML.ValueGetter%601), чтобы извлечь соответствующие значения из каждого столбца.
 
 > [!IMPORTANT]
-> Для повышения производительности векторы в ML.NET используют [`VBuffer`](xref:Microsoft.ML.Data.VBuffer%601) вместо собственных типов коллекции (то есть `Vector`,`float[]`). 
+> Для повышения производительности векторы в ML.NET используют [`VBuffer`](xref:Microsoft.ML.Data.VBuffer%601) вместо собственных типов коллекции (то есть `Vector`,`float[]`).
 
 ```csharp
 // Get DataViewSchema of IDataView
@@ -133,7 +133,7 @@ using (DataViewRowCursor cursor = data.GetRowCursor(columns))
     ValueGetter<float> sizeDelegate = cursor.GetGetter<float>(columns[0]);
     ValueGetter<VBuffer<float>> historicalPriceDelegate = cursor.GetGetter<VBuffer<float>>(columns[1]);
     ValueGetter<float> currentPriceDelegate = cursor.GetGetter<float>(columns[2]);
-    
+
     // Iterate over each row
     while (cursor.MoveNext())
     {

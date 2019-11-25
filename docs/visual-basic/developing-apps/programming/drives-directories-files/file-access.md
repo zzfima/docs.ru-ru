@@ -1,5 +1,5 @@
 ---
-title: Доступ к файлам с помощью Visual Basic
+title: Доступ к файлам
 ms.date: 07/20/2015
 helpviewer_keywords:
 - file access
@@ -14,17 +14,19 @@ helpviewer_keywords:
 - I/O [Visual Basic]
 - sequential access
 ms.assetid: 231533bf-d049-4345-befa-3fb78fe6517d
-ms.openlocfilehash: f9cbb255dea8c6915951b5099f40bfd0ba66c8aa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 22bcd0f1f3acb0c0ad899b83ad2d879ead948f12
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33583309"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348899"
 ---
 # <a name="file-access-with-visual-basic"></a>Доступ к файлам с помощью Visual Basic
+
 Объект `My.Computer.FileSystem` предоставляет средства для работы с файлами и папками. Его свойства, методы и события позволяют создавать, копировать, перемещать, исследовать и удалять файлы и папки. `My.Computer.FileSystem` обеспечивает более высокую производительность, чем устаревшие функции (`FileOpen`, `FileClose`, `Input`, `InputString`, `LineInput` и т. д.), предоставляемые Visual Basic для поддержки обратной совместимости.  
   
 ## <a name="in-this-section"></a>В этом разделе  
+
  [Чтение из файлов](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)  
  Список разделов, посвященных использованию объекта `My.Computer.FileSystem` для чтения из файлов.  
   
@@ -40,8 +42,8 @@ ms.locfileid: "33583309"
  [Кодировки файлов](../../../../visual-basic/developing-apps/programming/drives-directories-files/file-encodings.md)  
  Описание кодировок файлов и их применения.  
   
- [Пошаговое руководство. Операции с файлами и каталогами в Visual Basic](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-and-directories.md)  
+ [Пошаговое руководство: Операции с файлами и каталогами в Visual Basic](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-and-directories.md)  
  Демонстрация создания служебной программы, сообщающей сведения о файлах и папках.  
   
- [Исправление неполадок, связанных с чтением из текстовых файлов и записью в такие файлы](../../../../visual-basic/developing-apps/programming/drives-directories-files/troubleshooting-reading-from-and-writing-to-text-files.md)  
+ [Устранение неполадок. Чтение из текстовых файлов и запись в такие файлы](../../../../visual-basic/developing-apps/programming/drives-directories-files/troubleshooting-reading-from-and-writing-to-text-files.md)  
  Список распространенных проблем, возникающих при чтении и записи в текстовые файлы, и предлагаемые способы их устранения.

@@ -8,21 +8,21 @@ helpviewer_keywords:
 - servicePointManager element
 - <servicePointManager> element
 ms.assetid: 6e5def51-3646-4ef6-a7bd-c69151321bec
-ms.openlocfilehash: 95ad1880cbb832a17311e7e63e9203f53257f65f
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: b7333016fea2d46285d3c98181c0ca4904c376f8
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71697712"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74089128"
 ---
-# <a name="servicepointmanager-element-network-settings"></a>Элемент > @no__t 0servicePointManager (параметры сети)
+# <a name="servicepointmanager-element-network-settings"></a>Элемент \<servicePointManager > (параметры сети)
 Настраивает подключения к сетевым ресурсам.  
-  
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **@no__t -4system. NET >** ](system-net-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<settings >** ](settings-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<servicePointManager >**  
-  
+
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System. net >** ](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<** ](settings-element-network-settings.md) >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<servicePointManager >**
+
 ## <a name="syntax"></a>Синтаксис  
   
 ```xml  
@@ -48,12 +48,12 @@ ms.locfileid: "71697712"
 |`checkCertificateRevocationList`|Указывает, должна ли система проверять, отозван ли сертификат перед использованием сертификата. Значение по умолчанию — `false`.|  
 |`dnsRefreshTimeout`|Указывает, как долго кэшируются разрешения службы доменных имен (DNS) в сочетании с параметром циклического перебора DNS в миллисекундах. По умолчанию установлено значение 120 000 миллисекунд (2 минуты).|  
 |`enableDnsRoundRobin`|Указывает, должны ли разрешения DNS имен узлов с несколькими IP-адресами возвращать все адреса или только первый из них. Значение по умолчанию — `false`.|  
-|`encryptionPolicy`|Указывает политику шифрования, применяемую к сеансу SSL/TLS на экземпляре <xref:System.Net.ServicePointManager>. Возможные значения эквивалентны значениям перечисления <xref:System.Net.Security.EncryptionPolicy>. Использование <xref:System.Security.Authentication.CipherAlgorithmType.Null> обязательно, если для политики шифрования задано значение `NoEncryption`. Значение по умолчанию — `RequireEncryption`.|  
-|`expect100Continue`|Указывает, должны ли методы POST принимать ответ `100-continue` от сервера. Значение по умолчанию — `true`.|  
+|`encryptionPolicy`|Указывает политику шифрования, применяемую к сеансу SSL/TLS на <xref:System.Net.ServicePointManager> экземпляре. Возможные значения эквивалентны значениям перечисления <xref:System.Net.Security.EncryptionPolicy>. Использование <xref:System.Security.Authentication.CipherAlgorithmType.Null> требуется, если для политики шифрования задано значение `NoEncryption`. Значение по умолчанию — `RequireEncryption`.|  
+|`expect100Continue`|Указывает, должны ли методы POST рассчитывать на получение `100-continue` ответа от сервера. Значение по умолчанию — `true`.|  
 |`useNagleAlgorithm`|Указывает, используют ли подключения, управляемые диспетчером точек обслуживания, алгоритм Nagle. Значение по умолчанию — `true`.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
- Нет.  
+ Отсутствует.  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
@@ -61,7 +61,7 @@ ms.locfileid: "71697712"
 |-----------------|---------------------|  
 |[Параметры](settings-element-network-settings.md)|Настраивает основные параметры сети для пространства имен <xref:System.Net>.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
   
 ## <a name="configuration-files"></a>Файлы конфигурации  
  Этот элемент может использоваться в файле конфигурации приложения или в файле конфигурации компьютера (Machine.config).  

@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: a2758f40-e497-4964-8d8d-1bb68af14dcd
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4a6b80a885f43facf4b3d4dd1dcb56d937d4f8de
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
-ms.translationtype: HT
+ms.openlocfilehash: 5457eab1f34eb3e7424d508509f5dd6a42ffb51f
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44188804"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976939"
 ---
 # <a name="changing-namespace-declarations-in-an-xml-document"></a>Изменение деклараций пространств имен в XML-документе
 Класс **XmlDocument** представляет декларацию пространств имен и атрибуты **xmlns** как часть модели DOM. Они хранятся в объекте **XmlDocument**, поэтому при сохранении документа он может сохранить расположение этих атрибутов. Изменение этих атрибутов не влияет на свойства **Name**, **NamespaceURI** и **Prefix** других узлов, уже находящихся в дереве. Например, при загрузке следующего документа свойство `test`NamespaceURI**элемента** будет иметь значение `123.`  
@@ -35,7 +35,7 @@ doc.documentElement.RemoveAttribute("xmlns");
  Точно так же, если добавить другой атрибут `xmlns` в элемент `doc` следующим образом, элемент `test` все равно будет содержать свойство **NamespaceURI**, которое имеет значение `123`.  
   
 ```vb  
-doc.documentElement.SetAttribute("xmlns","456");  
+doc.documentElement.SetAttribute("xmlns","456")
 ```  
   
 ```csharp  

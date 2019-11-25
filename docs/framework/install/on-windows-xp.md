@@ -5,12 +5,12 @@ ms.custom: updateeachrelease
 author: rlander
 ms.author: mairaw
 ms.date: 04/18/2019
-ms.openlocfilehash: 17354c8aaf9131bbcf5e2274eff44d9af611582c
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 7d7ad0f86ff327c3273664fc1c7395c88d38a5bf
+ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70853868"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74204717"
 ---
 # <a name="install-the-net-framework-on-windows-xp-and-windows-server-2003"></a>Установка .NET Framework в Windows XP и Windows Server 2003
 
@@ -25,15 +25,15 @@ ms.locfileid: "70853868"
 
 ## <a name="net-framework-403"></a>.NET Framework 4.0.3
 
-[.NET Framework 4.0.3](https://go.microsoft.com/fwlink/?LinkID=213834) является последней поддерживаемой версией платформы .NET Framework в Windows XP и Windows Server 2003. Чтобы установить .NET Framework 4.0.3, сначала должна быть установлена [.NET Framework 4](https://go.microsoft.com/fwlink/?LinkID=213834). Обе эти версии .NET Framework уже не поддерживаются корпорацией Майкрософт.
+[.NET Framework 4.0.3](https://www.microsoft.com/download/details.aspx?id=29053) является последней поддерживаемой версией платформы .NET Framework в Windows XP и Windows Server 2003. Чтобы установить .NET Framework 4.0.3, сначала должна быть установлена [.NET Framework 4](https://dotnet.microsoft.com/download/dotnet-framework/net40). Обе эти версии .NET Framework уже не поддерживаются корпорацией Майкрософт.
 
 ## <a name="net-framework-4"></a>.NET Framework 4
 
-На Windows XP можно установить [.NET Framework 4](https://go.microsoft.com/fwlink/?LinkID=213834&dotnetdocs). Эта версия уже не поддерживается корпорацией Майкрософт.
+На Windows XP можно установить [.NET Framework 4](https://dotnet.microsoft.com/download/dotnet-framework/net40). Эта версия уже не поддерживается корпорацией Майкрософт.
 
 ## <a name="net-framework-35"></a>.NET Framework 3,5
 
-На Windows XP можно установить [.NET Framework 3.5](https://go.microsoft.com/fwlink/?LinkID=213834&dotnetdocs).
+На Windows XP можно установить [.NET Framework 3.5](https://dotnet.microsoft.com/download/dotnet-framework/net35-sp1).
 
 .NET Framework 3.5 можно использовать для запуска приложений, созданных для .NET Framework версии от 1.0 до 3.5.
 

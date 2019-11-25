@@ -8,21 +8,21 @@ helpviewer_keywords:
 - <defaultFtpCachePolicy> element
 - defaultFtpCachePolicy element
 ms.assetid: 0eb0c5cb-dd97-484d-8614-785e88877abb
-ms.openlocfilehash: fd1649edbf7a2c8546992019df667f27df68e02c
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 9261a430642cb4d5ac4507835bd0fd3561bd8c02
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71698320"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74088427"
 ---
-# <a name="defaultftpcachepolicy-element-network-settings"></a>Элемент > @no__t 0defaultFtpCachePolicy (параметры сети)
+# <a name="defaultftpcachepolicy-element-network-settings"></a>Элемент \<Дефаултфтпкачеполици > (параметры сети)
 Описывает, активно ли кэширование FTP и описывает политику кэширования по умолчанию.  
-  
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **@no__t -4system. NET >** ](system-net-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<requestCaching >** ](requestcaching-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<defaultFtpCachePolicy >**  
-  
+
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System. net >** ](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<элемент requestcaching >** ](requestcaching-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<дефаултфтпкачеполици >**
+
 ## <a name="syntax"></a>Синтаксис  
   
 ```xml  
@@ -42,7 +42,7 @@ ms.locfileid: "71698320"
   
 ## <a name="policylevel-attribute"></a>Атрибут Полицилевел  
   
-|Значение|Описание|  
+|значения|Описание|  
 |-----------|-----------------|  
 |`Default`|Возвращает кэшированный ресурс, если ресурс является актуальным, длина содержимого является точной, а атрибуты срока действия, изменения и длины содержимого существуют.|  
 |`BypassCache`|Возвращает ресурс с сервера.|  
@@ -54,7 +54,7 @@ ms.locfileid: "71698320"
 |`Revalidate`|Удовлетворяет запросу, используя кэшированную копию ресурса, если отметка времени совпадает с меткой времени ресурса на сервере. в противном случае ресурс загружается с сервера, представленного вызывающему объекту, и сохраняется в кэше.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
- Нет.  
+ Отсутствует.  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
@@ -62,7 +62,7 @@ ms.locfileid: "71698320"
 |-------------|-----------------|  
 |[Элемент requestcaching](requestcaching-element-network-settings.md)|Управляет механизмом кэширования для сетевых запросов.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
   
 ## <a name="example"></a>Пример  
  В следующем примере показано, как указать политику кэширования FTP для `NoCacheNoStore`.  

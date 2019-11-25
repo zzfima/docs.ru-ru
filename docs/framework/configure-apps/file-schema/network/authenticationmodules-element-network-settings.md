@@ -8,20 +8,20 @@ helpviewer_keywords:
 - authenticationModules element
 - <authenticationModules> element
 ms.assetid: 10fcfaad-82ef-4692-871a-0aec9dfbe75e
-ms.openlocfilehash: 4fe44deba951e5302518ed855589ad1b0ca75343
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: bacaaf92464a355804a9ea8307f6e6f1caac1f05
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71699538"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74087611"
 ---
-# <a name="authenticationmodules-element-network-settings"></a>Элемент > @no__t 0authenticationModules (параметры сети)
+# <a name="authenticationmodules-element-network-settings"></a>Элемент \<authenticationModules > (параметры сети)
 Указывает модули, используемые для проверки подлинности сетевых запросов.  
-  
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **@no__t -4system. NET >** ](system-net-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 **\<authenticationModules >**  
-  
+
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System. net >** ](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<authenticationModules >**
+
 ## <a name="syntax"></a>Синтаксис  
   
 ```xml  
@@ -33,7 +33,7 @@ ms.locfileid: "71699538"
  В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
   
 ### <a name="attributes"></a>Атрибуты  
- Нет.  
+ Отсутствует.  
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
@@ -49,7 +49,7 @@ ms.locfileid: "71699538"
 |-----------------|---------------------|  
 |[system.net](system-net-element-network-settings.md)|Содержит параметры сети, определяющие способ подключения .NET Framework к Интернету.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
  Элемент `authenticationModule` указывает модули проверки подлинности, которые выполняют процесс проверки подлинности с сервером. Модуль проверки подлинности должен реализовывать интерфейс <xref:System.Net.IAuthenticationModule>.  
   
 ## <a name="configuration-files"></a>Файлы конфигурации  

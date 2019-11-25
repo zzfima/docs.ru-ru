@@ -1,57 +1,43 @@
 ---
 title: Справочник по C#. Таблица типов значений
 ms.custom: seodec18
-ms.date: 08/24/2018
+ms.date: 11/06/2019
 helpviewer_keywords:
 - value types [C#], table
 - types [C#], value types
-- types [C#], suffixes
 ms.assetid: 67d8f631-b6e3-4d83-9910-5ec497f8c5f3
-ms.openlocfilehash: 2e2897ff647140b58b3a1812e153a44a6fcdaef7
-ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
+ms.openlocfilehash: c470bbdff6cb08732f063afb9b325e44d9ca4d6b
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67859564"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428462"
 ---
-# <a name="value-types-table-c-reference"></a>Таблица типов значений (справочник по C#)
+# <a name="value-types-table-c-reference"></a>Таблица типов значений (cправочник по C#)
 
 В следующей таблице показаны значения для типов C#.
 
-|Тип значения|Категория|Суффикс типа|
-|----------------|--------------|-----------------|
-|[bool](bool.md)|Boolean||
-|`byte`|Без знака, числовой, [целочисленный](../builtin-types/integral-numeric-types.md)||
-|[char](char.md)|Без знака, числовой, [целочисленный](../builtin-types/integral-numeric-types.md)
-|`decimal`|Числовой, [с плавающей запятой](../builtin-types/floating-point-numeric-types.md)|M или m|
-|`double`|Числовой, [с плавающей запятой](../builtin-types/floating-point-numeric-types.md)|D или d|
-|[enum](enum.md)|Перечисление||
-|`float`|Числовой, [с плавающей запятой](../builtin-types/floating-point-numeric-types.md)|F или f|
-|`int`|Со знаком, числовой, [целочисленный](../builtin-types/integral-numeric-types.md)||
-|`long`|Со знаком, числовой, [целочисленный](../builtin-types/integral-numeric-types.md)|L или l|
-|`sbyte`|Со знаком, числовой, [целочисленный](../builtin-types/integral-numeric-types.md)||
-|`short`|Со знаком, числовой, [целочисленный](../builtin-types/integral-numeric-types.md)||
-|[struct](struct.md)|Определяемая пользователем структура||
-|`uint`|Без знака, числовой, [целочисленный](../builtin-types/integral-numeric-types.md)|U или u|
-|`ulong`|Без знака, числовой, [целочисленный](../builtin-types/integral-numeric-types.md)|UL, Ul, uL, ul, LU, Lu, lU или lu|
-|`ushort`|Без знака, числовой, [целочисленный](../builtin-types/integral-numeric-types.md)||
-
-## <a name="remarks"></a>Примечания
-
-Суффикс типа позволяет указать тип числового литерала. Например:
-
-```csharp
-decimal a = 0.1M;
-```
-
-Если [целочисленный числовой литерал](~/_csharplang/spec/lexical-structure.md#integer-literals) не имеет суффикса, его типом будет первый из следующих типов, в котором может быть представлено его значение: `int`, `uint`, `long`, `ulong`.
-
-Если [числовой литерал с плавающей запятой](~/_csharplang/spec/lexical-structure.md#real-literals) не имеет суффикса, он имеет тип `double`.
+|Тип значения|Категория|
+|----------------|--------------|
+|[bool](bool.md)|логический|
+|`byte`|Без знака, числовой, [целочисленный](../builtin-types/integral-numeric-types.md)|
+|[char](../builtin-types/char.md)|Без знака, числовой, [целочисленный](../builtin-types/integral-numeric-types.md)|
+|`decimal`|Числовой, [с плавающей запятой](../builtin-types/floating-point-numeric-types.md)|
+|`double`|Числовой, [с плавающей запятой](../builtin-types/floating-point-numeric-types.md)|
+|[enum](enum.md)|Перечисление|
+|`float`|Числовой, [с плавающей запятой](../builtin-types/floating-point-numeric-types.md)|
+|`int`|Со знаком, числовой, [целочисленный](../builtin-types/integral-numeric-types.md)|
+|`long`|Со знаком, числовой, [целочисленный](../builtin-types/integral-numeric-types.md)|
+|`sbyte`|Со знаком, числовой, [целочисленный](../builtin-types/integral-numeric-types.md)|
+|`short`|Со знаком, числовой, [целочисленный](../builtin-types/integral-numeric-types.md)|
+|[struct](struct.md)|Определяемая пользователем структура|
+|`uint`|Без знака, числовой, [целочисленный](../builtin-types/integral-numeric-types.md)|
+|`ulong`|Без знака, числовой, [целочисленный](../builtin-types/integral-numeric-types.md)|
+|`ushort`|Без знака, числовой, [целочисленный](../builtin-types/integral-numeric-types.md)|
 
 ## <a name="see-also"></a>См. также
 
-- [Справочник по C#](../index.md)
-- [Руководство по программированию на C#](../../programming-guide/index.md)
+- [справочник по C#](../index.md)
 - [Таблица значений по умолчанию](default-values-table.md)
 - [Типы значений](value-types.md)
 - [Таблица форматирования числовых результатов](formatting-numeric-results-table.md)

@@ -2,12 +2,12 @@
 title: 'Шаблоны разработки: публикация-подписка на основе списка'
 ms.date: 03/30/2017
 ms.assetid: f4257abc-12df-4736-a03b-0731becf0fd4
-ms.openlocfilehash: 3c05e66affad8e517b0b1b5001f726abeae7b100
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: cd7cc6f68362c7a69256f0488e2fa00caffdabc7
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928836"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73978213"
 ---
 # <a name="design-patterns-list-based-publish-subscribe"></a>Шаблоны разработки: публикация-подписка на основе списка
 В этом примере показан шаблон публикации-подписки на основе списка, реализованный как программа Windows Communication Foundation (WCF).  
@@ -48,7 +48,7 @@ public interface ISampleClientContract
   
  Служба использует событие среды .NET Framework в качестве механизма информирования всех подписчиков о поступлении новых сведений. Когда клиент присоединяется к службе, вызывая метод Subscribe, он предоставляет обработчик событий. Когда клиент покидает службу, он отказывается от подписки на событие для своего обработчика событий. Если источник данных вызывает службу, чтобы сообщить об изменении цены, служба создает событие. При этом вызывается каждый экземпляр службы (по одному для каждого подписавшегося клиента), и в результате выполняются их обработчики событий. Каждый обработчик событий передает информацию своему клиенту с помощью функции обратного вызова.  
   
-```csharp  
+```csharp
 public class PriceChangeEventArgs : EventArgs  
     {  
         public string Item;  
@@ -120,9 +120,9 @@ public class PriceChangeEventArgs : EventArgs
   
 1. Проверьте, что доступ к службе можно получить с помощью браузера, введя следующий адрес: `http://localhost/servicemodelsamples/service.svc`. Должна отобразиться страница подтверждения.  
   
-2. Запустите программу Client. exe из\\\client\bin\ в папке для конкретного языка. Действия клиента отображаются в окне консоли клиента. Запустите несколько клиентов.  
+2. Запустите файл Client. exe из \client\bin\\\в папке для конкретного языка. Действия клиента отображаются в окне консоли клиента. Запустите несколько клиентов.  
   
-3. Запустите файл DataSource. exe из\\\датасаурце\бин в папке для конкретного языка. Действия источника данных отображаются в окне консоли. После того, как источник данных отправляет информацию службе, она должна быть передана каждому клиенту.  
+3. Запустите файл DataSource. exe из \датасаурце\бин\\в папке для конкретного языка. Действия источника данных отображаются в окне консоли. После того, как источник данных отправляет информацию службе, она должна быть передана каждому клиенту.  
   
 4. Если клиент, источник данных и служебные программы не могут обмениваться данными, см. раздел [Советы по устранению неполадок для примеров WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
@@ -157,6 +157,6 @@ public class PriceChangeEventArgs : EventArgs
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Если этот каталог не существует, перейдите к [примерам Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] и примеры. Этот образец расположен в следующем каталоге.  
+> Если этот каталог не существует, перейдите к [примерам Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Samples. Этот образец расположен в следующем каталоге.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\DesignPatterns/ListBasedPublishSubscribe`  

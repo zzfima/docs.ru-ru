@@ -10,20 +10,20 @@ helpviewer_keywords:
 - <remove> element, webRequestModules
 - <webRequestModules>, remove element
 ms.assetid: dd84d2fe-2f4f-457a-9d3c-441d0d21cc10
-ms.openlocfilehash: f8209ea89ac8cd214389feddee8c475e10bc939a
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: ca3a78a491c61b6e23dab0f96eebceb3157706ae
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71697822"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74089137"
 ---
-# <a name="remove-element-for-webrequestmodules-network-settings"></a>Элемент > @no__t 0remove для webRequestModules (параметры сети)
+# <a name="remove-element-for-webrequestmodules-network-settings"></a>\<удалить элемент > для webRequestModules (параметры сети)
 Удаляет пользовательский модуль веб-запросов из приложения.  
   
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **@no__t -4system. NET >** ](system-net-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<webRequestModules >** ](webrequestmodules-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<remove >**  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System. net >** ](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<webRequestModules >** ](webrequestmodules-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<удалить >**
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -43,7 +43,7 @@ ms.locfileid: "71697822"
 |`prefix`|Префикс URI для запросов, обрабатываемых этим модулем веб-запросов.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
- Нет.  
+ Отсутствует.  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
@@ -51,17 +51,17 @@ ms.locfileid: "71697822"
 |-----------------|---------------------|  
 |[webRequestModules](webrequestmodules-element-network-settings.md)|Указывает модули, используемые для запроса сведений от сетевых узлов.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
  Элемент `remove` удаляет зарегистрированный модуль веб-запросов для указанного префикса URI.  
   
- Значение атрибута `prefix` должно быть начальным символом допустимого URI-типа, например "`http`" или "`http://www.contoso.com`".  
+ Значение атрибута `prefix` должно быть начальными символами допустимого URI-типа, например "`http`" или "`http://www.contoso.com`".  
   
 ## <a name="configuration-files"></a>Файлы конфигурации  
  Этот элемент может использоваться в файле конфигурации приложения или в файле конфигурации компьютера (Machine.config).  
   
 ## <a name="example"></a>Пример  
 
-В следующем примере удаляется существующий модуль веб-запросов для HTTP, а затем регистрируется новый пользовательский модуль веб-запросов для запросов HTTP к `www.contoso.com`.
+В следующем примере удаляется существующий модуль веб-запросов для HTTP, а затем регистрируется новый пользовательский модуль веб-запросов для `www.contoso.com`запросов HTTP.
   
 ```xml  
 <configuration>  

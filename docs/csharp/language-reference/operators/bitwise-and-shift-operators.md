@@ -29,16 +29,16 @@ helpviewer_keywords:
 - ^ operator [C#]
 - bitwise logical OR operator [C#]
 - '| operator [C#]'
-ms.openlocfilehash: 0a251e8d04f31a736ee6acbf4b8e913cfb8ca6df
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 27f7cf46bd3e344503f74527df34506d38ad4545
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72771724"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428446"
 ---
 # <a name="bitwise-and-shift-operators-c-reference"></a>Побитовые операторы и операторы сдвига (справочник по C#)
 
-Следующие операторы выполняют побитовые операции или операции сдвига с операндами [целочисленных типов](../builtin-types/integral-numeric-types.md):
+Следующие операторы выполняют побитовые операции или операции сдвига с операндами [целочисленных](../builtin-types/integral-numeric-types.md) или [символьных](../builtin-types/char.md) типов:
 
 - Унарный оператор [`~` (побитовое дополнение)](#bitwise-complement-operator-)
 - Бинарные операторы сдвига [`<<` (сдвиг влево)](#left-shift-operator-) и [`>>` (сдвиг вправо)](#right-shift-operator-)
@@ -46,7 +46,7 @@ ms.locfileid: "72771724"
 
 Эти операторы определены для типов `int`, `uint`, `long` и `ulong`. Если оба операнда имеют другие целочисленные типы (`sbyte`, `byte`, `short`, `ushort` или `char`), их значения преобразуются в тип `int`, который также является типом результата операции. Если операнды имеют разные целочисленные типы, их значения преобразуются в ближайший содержащий целочисленный тип. Дополнительные сведения см. в разделе [Числовые повышения уровня](~/_csharplang/spec/expressions.md#numeric-promotions) в статье [Спецификации языка C#](~/_csharplang/spec/introduction.md).
 
-Операторы `&`, `|` и `^` также определяются для операндов типа `bool`. Дополнительные сведения см. в разделе [Логические операторы](boolean-logical-operators.md).
+Операторы `&`, `|` и `^` также определены для операндов типа `bool`. Дополнительные сведения см. в разделе [Логические операторы](boolean-logical-operators.md).
 
 Побитовые операции и операции сдвига никогда не вызывают переполнение и дают одинаковые результаты в [проверенных и непроверенных](../keywords/checked-and-unchecked.md) контекстах.
 
@@ -82,11 +82,11 @@ ms.locfileid: "72771724"
 
 Позиции пустых битов высокого порядка задаются с учетом типа левого операнда следующим образом:
 
-- Если левый операнд имеет тип [int](../builtin-types/integral-numeric-types.md) или [long](../builtin-types/integral-numeric-types.md), оператор сдвига вправо выполняет *арифметический* сдвиг. Значение старшего значимого бита (знаковый бит) левого операнда применяется к пустым битовым позициям высокого разряда. То есть для пустых битовых позиций высокого порядка задается ноль, если левый операнд неотрицательный, и единица, если он отрицательный.
+- Если левый операнд имеет тип `int` или `long`, оператор сдвига вправо выполняет *арифметический* сдвиг, то есть значение наиболее значимого бита (знаковый бит) левого операнда переносится в пустые битовые позиции высокого разряда. То есть для пустых битовых позиций высокого порядка задается ноль, если левый операнд неотрицательный, и единица, если он отрицательный.
 
   [!code-csharp-interactive[arithmetic right shift](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#ArithmeticRightShift)]
 
-- Если левый операнд имеет тип [uint](../builtin-types/integral-numeric-types.md) или [ulong](../builtin-types/integral-numeric-types.md), оператор сдвига вправо выполняет *логический* сдвиг. Пустым битовым позициям высокого порядка всегда присваивается нулевое значение.
+- Если левый операнд имеет тип `uint` или `ulong`, оператор сдвига вправо выполняет *логический* сдвиг, то есть пустым битовым позициям высокого порядка всегда присваивается нулевое значение.
 
   [!code-csharp-interactive[logical right shift](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#LogicalRightShift)]
 
@@ -98,7 +98,7 @@ ms.locfileid: "72771724"
 
 [!code-csharp-interactive[bitwise AND](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#BitwiseAnd)]
 
-Для операндов типа `bool` оператор `&` вычисляет [логическое И](boolean-logical-operators.md#logical-and-operator-) своих операндов. Унарный оператор `&` является оператором [AddressOf](pointer-related-operators.md#address-of-operator-).
+Для операндов типа `bool` оператор `&` вычисляет [логическое И](boolean-logical-operators.md#logical-and-operator-) по своим операндам. Унарный оператор `&` является оператором [AddressOf](pointer-related-operators.md#address-of-operator-).
 
 ## <a name="logical-exclusive-or-operator-"></a>Оператор логического исключения ИЛИ ^
 
@@ -106,7 +106,7 @@ ms.locfileid: "72771724"
 
 [!code-csharp-interactive[bitwise XOR](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#BitwiseXor)]
 
-Для операндов типа `bool` оператор `^` вычисляет [логическое исключающее ИЛИ](boolean-logical-operators.md#logical-exclusive-or-operator-) своих операндов.
+Для операндов типа `bool` оператор `^` вычисляет [логическое исключающее ИЛИ](boolean-logical-operators.md#logical-exclusive-or-operator-) по своим операндам.
 
 ## <a name="logical-or-operator-"></a>Оператор логического ИЛИ |
 
@@ -114,7 +114,7 @@ ms.locfileid: "72771724"
 
 [!code-csharp-interactive[bitwise OR](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#BitwiseOr)]
 
-Для операндов типа `bool` оператор `|` вычисляет [логическое ИЛИ](boolean-logical-operators.md#logical-or-operator-) своих операндов.
+Для операндов типа `bool` оператор `|` вычисляет [логическое ИЛИ](boolean-logical-operators.md#logical-or-operator-) по своим операндам.
 
 ## <a name="compound-assignment"></a>Составное присваивание
 
@@ -154,17 +154,17 @@ x = x op y
 
 [!code-csharp-interactive[operator precedence](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#Precedence)]
 
-Полный список операторов C#, упорядоченных по уровню приоритета, см. в статье [Операторы C#](index.md).
+Полный список операторов C#, упорядоченный по уровню приоритета, можно найти в разделе [Приоритет операторов](index.md#operator-precedence) статьи [Операторы C#](index.md).
 
 ## <a name="shift-count-of-the-shift-operators"></a>Величина смещения операторов сдвига
 
-Для операторов сдвига `<<` и `>>` тип правого операнда должен быть [int](../builtin-types/integral-numeric-types.md) или типом, имеющим [предопределенное неявное числовое преобразование](../builtin-types/numeric-conversions.md#implicit-numeric-conversions) в `int`.
+Для операторов сдвига `<<` и `>>` тип правого операнда должен быть `int` или типом, для которого существует [предопределенное неявное числовое преобразование](../builtin-types/numeric-conversions.md#implicit-numeric-conversions) в `int`.
 
 Для выражений `x << count` и `x >> count` фактическая величина сдвига зависит от типа `x` следующим образом:
 
-- Если тип `x` — [int](../builtin-types/integral-numeric-types.md) или [uint](../builtin-types/integral-numeric-types.md), величина сдвига определяется младшими *пятью* битами правого операнда. То есть величина сдвига вычисляется на основе `count & 0x1F` (или `count & 0b_1_1111`).
+- Если `x` имеет тип `int` или `uint`, величина сдвига определяется младшими *пятью* битами правого операнда. То есть величина сдвига вычисляется на основе `count & 0x1F` (или `count & 0b_1_1111`).
 
-- Если тип `x` — [long](../builtin-types/integral-numeric-types.md) или [ulong](../builtin-types/integral-numeric-types.md), величина сдвига определяется младшими *шестью* битами правого операнда. То есть величина сдвига вычисляется на основе `count & 0x3F` (или `count & 0b_11_1111`).
+- Если `x` имеет тип `long` или `ulong`, величина сдвига определяется младшими *шестью* битами правого операнда. То есть величина сдвига вычисляется на основе `count & 0x3F` (или `count & 0b_11_1111`).
 
 В следующем примере продемонстрировано такое поведение.
 
@@ -172,7 +172,7 @@ x = x op y
 
 ## <a name="enumeration-logical-operators"></a>Логические операторы перечисления
 
-Операторы `~`, `&`, `|` и `^` также определены для любого типа [перечисления](../keywords/enum.md). Для операндов одного типа перечисления логическая операция выполняется для соответствующих значений базового целочисленного типа. Например, для любого `x` и `y` типа перечисления `T` с базовым типом `U` выражение `x & y` дает тот же результат, что и выражение `(T)((U)x & (U)y)`.
+Операторы `~`, `&`, `|` и `^` также поддерживаются для любого типа [перечисления](../keywords/enum.md). Для операндов одного типа перечисления логическая операция выполняется по соответствующим значениям базового целочисленного типа. Например, для любого `x` и `y` типа перечисления `T` с базовым типом `U` выражение `x & y` дает тот же результат, что и выражение `(T)((U)x & (U)y)`.
 
 Побитовые логические операторы обычно используются с типом перечисления, который определяется с помощью атрибута [Flags](xref:System.FlagsAttribute). Дополнительные сведения см. в разделе [Типы перечислений как битовые флаги](../../programming-guide/enumeration-types.md#enumeration-types-as-bit-flags) в статье [Типы перечислений](../../programming-guide/enumeration-types.md).
 

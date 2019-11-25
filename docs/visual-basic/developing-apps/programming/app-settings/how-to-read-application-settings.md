@@ -1,24 +1,26 @@
 ---
-title: Как выполнить Чтение параметров приложения в Visual Basic
+title: Практическое руководство. Чтение параметров приложения
 ms.date: 07/20/2015
 helpviewer_keywords:
 - reading application settings
 - My.Settings object [Visual Basic], reading application settings
 - application settings [Visual Basic], reading
 ms.assetid: eb3428ef-115e-49a8-a878-e0613183fee0
-ms.openlocfilehash: e7d909563ca7e991a51c2f921b5248aa587a83d7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 04726381f8d285ae61045d1624b3b41b7f47e491
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58823588"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74329571"
 ---
-# <a name="how-to-read-application-settings-in-visual-basic"></a>Как выполнить Чтение параметров приложения в Visual Basic
+# <a name="how-to-read-application-settings-in-visual-basic"></a>Практическое руководство. Чтение параметров приложения в Visual Basic
+
 Пользовательский параметр можно прочитать с помощью свойства объекта `My.Settings`.  
   
  Объект `My.Settings` представляет каждый параметр в виде свойства. Имя свойства совпадает с именем параметра, а тип свойства совпадает с типом параметра. **Область** параметра определяет, доступно ли свойство только для чтения. Свойство для параметра с областью **Приложение** доступно только для чтения, а свойство для параметра с областью **Пользователь** доступно для чтения или записи. Дополнительные сведения см. в разделе [Объект My.Settings](../../../../visual-basic/language-reference/objects/my-settings-object.md).  
   
 ## <a name="example"></a>Пример  
+
  В этом пример выводится значение параметра `Nickname`.  
   
  [!code-vb[VbVbalrMyResources#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyResources/VB/Form1.vb#14)]  

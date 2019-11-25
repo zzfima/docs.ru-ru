@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Implicit operator
 - data types [.NET Framework], converting
 ms.assetid: ba36154f-064c-47d3-9f05-72f93a7ca96d
-ms.openlocfilehash: b125b3c6527da405deb600ba7334ef18220f1601
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 0e88303f2bac2dae90a97f9d2de92af1d2a0f80d
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132872"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976492"
 ---
 # <a name="type-conversion-in-the-net-framework"></a>Преобразование типов в .NET Framework
-<a name="top"></a> У каждого значения есть соответствующий тип, который определяет такие атрибуты, как объем памяти, которая выделяется значению, диапазон возможных значений и доступные члены типа. Многие значения можно выразить несколькими типами. Например, число 4 можно выразить как целое число или как число с плавающей запятой. Преобразование типа создает значение нового типа, эквивалентное значению старого типа, но при этом не обязательно сохраняется идентичность (или точные значения) первоначального объекта.  
+Каждое значение имеет соответствующий тип, который определяет атрибуты, такие как объем памяти, выделяемой значению, диапазон возможных значений и доступные элементы. Многие значения можно выразить несколькими типами. Например, число 4 можно выразить как целое число или как число с плавающей запятой. Преобразование типа создает значение нового типа, эквивалентное значению старого типа, но при этом не обязательно сохраняется идентичность (или точные значения) первоначального объекта.  
   
  Платформа .NET Framework автоматически поддерживает указанные далее преобразования.  
   
@@ -46,17 +46,16 @@ ms.locfileid: "73132872"
   
  Помимо этих автоматических преобразований .NET Framework предоставляет несколько возможностей для поддержки преобразования пользовательского типа. В число этих требований входят следующие:  
   
-- Оператор `Implicit`, определяющий доступные расширяющие преобразования между типами. Дополнительные сведения см. в разделе [Неявные преобразования с помощью оператора Implicit](#implicit_conversion_with_the_implicit_operator).  
+- Оператор `Implicit`, определяющий доступные расширяющие преобразования между типами. Дополнительные сведения см. в разделе [Неявные преобразования с помощью оператора Implicit](#implicit-conversion-with-the-implicit-operator).  
   
-- Оператор `Explicit`, определяющий доступные сужающие преобразования между типами. Дополнительные сведения см. в разделе [Явные преобразования с помощью оператора Explicit](#explicit_conversion_with_the_explicit_operator).  
+- Оператор `Explicit`, определяющий доступные сужающие преобразования между типами. Дополнительные сведения см. в разделе [Явные преобразования с помощью оператора Explicit](#explicit-conversion-with-the-explicit-operator).  
   
-- Интерфейс <xref:System.IConvertible>, определяющий преобразования в каждый из базовых типов данных платформы .NET Framework. Дополнительные сведения см. в разделе [Интерфейс IConvertible](#the_iconvertible_interface).  
+- Интерфейс <xref:System.IConvertible>, определяющий преобразования в каждый из базовых типов данных платформы .NET Framework. Дополнительные сведения см. в разделе [Интерфейс IConvertible](#the-iconvertible-interface).  
   
-- Класс <xref:System.Convert>, предоставляющий набор методов, реализующих методы интерфейса <xref:System.IConvertible>. Дополнительные сведения см. в разделе [Класс Convert](#Convert).  
+- Класс <xref:System.Convert>, предоставляющий набор методов, реализующих методы интерфейса <xref:System.IConvertible>. Дополнительные сведения см. в разделе [Класс Convert](#the-convert-class).  
   
-- Класс <xref:System.ComponentModel.TypeConverter>, являющийся базовым классом, который может быть расширен для поддержки преобразования указанного типа в любой другой тип. Дополнительные сведения см. в разделе [Класс TypeConverter](#the_typeconverter_class).  
-  
-<a name="implicit_conversion_with_the_implicit_operator"></a>   
+- Класс <xref:System.ComponentModel.TypeConverter>, являющийся базовым классом, который может быть расширен для поддержки преобразования указанного типа в любой другой тип. Дополнительные сведения см. в разделе [Класс TypeConverter](#the-typeconverter-class).  
+
 ## <a name="implicit-conversion-with-the-implicit-operator"></a>Неявное преобразование с помощью оператора Implicit  
  Расширяющие преобразования предполагают создание нового значения из значения существующего типа, имеющего более ограничивающий диапазон или более ограниченный список членов, чем целевой тип. Расширяющие преобразования не могут привести к потере данных (хотя способны дать в результате меньшую точность). Поскольку потеря данных исключена, компиляторы могут обрабатывать преобразование неявно или прозрачно без необходимости использования метода явного преобразования или оператора приведения.  
   
@@ -77,10 +76,7 @@ ms.locfileid: "73132872"
   
  [!code-csharp[Conceptual.Conversion#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.conversion/cs/implicit1.cs#3)]
  [!code-vb[Conceptual.Conversion#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.conversion/vb/implicit1.vb#3)]  
-  
- [К началу](#top)  
-  
-<a name="explicit_conversion_with_the_explicit_operator"></a>   
+
 ## <a name="explicit-conversion-with-the-explicit-operator"></a>Явное преобразование с помощью оператора Explicit  
  Сужающие преобразования предполагают создание нового значения из значения существующего типа, имеющего более широкий диапазон или список членов, чем у целевого типа. Поскольку сужающее преобразование может привести к потере данных, компиляторы, как правило, требуют выполнять преобразование явно посредством вызова метода преобразования или оператора приведения. Это означает, что преобразование должно обрабатываться явно в коде разработчика.  
   
@@ -95,7 +91,7 @@ ms.locfileid: "73132872"
 |<xref:System.UInt32>|Значение <xref:System.UInt32.MaxValue?displayProperty=nameWithType> больше значения <xref:System.Int32.MaxValue?displayProperty=nameWithType>.|  
 |<xref:System.UInt64>|Значение <xref:System.UInt64.MaxValue?displayProperty=nameWithType> больше значения <xref:System.Int32.MaxValue?displayProperty=nameWithType>.|  
   
- Для обработки таких сужающих преобразований .NET Framework позволяет типам определять оператор `Explicit`. Компиляторы отдельных языков могут реализовывать этот оператор, используя свой собственный синтаксис или вызывая член класса <xref:System.Convert> для преобразования. (Дополнительные сведения о <xref:System.Convert> см. в разделе [Класс Convert](#Convert) далее в этом разделе.) Следующий пример иллюстрирует использование функций языка для обработки явного преобразования этих потенциально выходящих из диапазона целочисленных значений в значения <xref:System.Int32>.  
+ Для обработки таких сужающих преобразований .NET Framework позволяет типам определять оператор `Explicit`. Компиляторы отдельных языков могут реализовывать этот оператор, используя свой собственный синтаксис или вызывая член класса <xref:System.Convert> для преобразования. (Дополнительные сведения о <xref:System.Convert> см. в разделе [Класс Convert](#the-convert-class) далее в этом разделе.) Следующий пример иллюстрирует использование функций языка для обработки явного преобразования этих потенциально выходящих из диапазона целочисленных значений в значения <xref:System.Int32>.  
   
  [!code-csharp[Conceptual.Conversion#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.conversion/cs/explicit1.cs#4)]
  [!code-vb[Conceptual.Conversion#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.conversion/vb/explicit1.vb#4)]  
@@ -120,10 +116,7 @@ ms.locfileid: "73132872"
   
  [!code-csharp[Conceptual.Conversion#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.conversion/cs/explicit1.cs#6)]
  [!code-vb[Conceptual.Conversion#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.conversion/vb/explicit1.vb#6)]  
-  
- [К началу](#top)  
-  
-<a name="the_iconvertible_interface"></a>   
+
 ## <a name="the-iconvertible-interface"></a>Интерфейс IConvertible  
  Для поддержки преобразования любого типа в базовый тип среды CLR .NET Framework предоставляет интерфейс <xref:System.IConvertible>. Реализующий тип должен предоставить следующее:  
   
@@ -138,17 +131,14 @@ ms.locfileid: "73132872"
  [!code-csharp[Conceptual.Conversion#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.conversion/cs/iconvertible1.cs#7)]
  [!code-vb[Conceptual.Conversion#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.conversion/vb/iconvertible1.vb#7)]  
   
- Требование вызова метода преобразования для интерфейса, а не для реализующего типа, делает явные реализации интерфейса относительно требовательными к ресурсам. Вместо этого для выполнения преобразования между базовыми типами среды CLR рекомендуется вызывать соответствующий член класса <xref:System.Convert>. Дополнительные сведения см. в следующем разделе, [Класс Convert](#Convert).  
+ Требование вызова метода преобразования для интерфейса, а не для реализующего типа, делает явные реализации интерфейса относительно требовательными к ресурсам. Вместо этого для выполнения преобразования между базовыми типами среды CLR рекомендуется вызывать соответствующий член класса <xref:System.Convert>. Дополнительные сведения см. в следующем разделе, [Класс Convert](#the-convert-class).  
   
 > [!NOTE]
 > В дополнение к интерфейсу <xref:System.IConvertible> и классу <xref:System.Convert>, предоставленным в .NET Framework, отдельные языки могут также предоставлять различные способы выполнения преобразования. Например, в C# используются операторы приведения типов. В Visual Basic используются функции преобразования, реализованные в компиляторе, такие как `CType` `CInt` и `DirectCast`.  
   
- Интерфейс <xref:System.IConvertible> по большей части предназначен для поддержки преобразований между базовыми типами в .NET Framework. При этом данный интерфейс также можно реализовать и в пользовательском типе, чтобы обеспечить поддержку преобразования этого типа в другой пользовательский тип. Дополнительные сведения см. в разделе [Настраиваемые преобразования с использованием метода ChangeType](#ChangeType) ниже.  
-  
- [К началу](#top)  
-  
-<a name="Convert"></a>   
-## <a name="the-convert-class"></a>Класс Convert  
+ Интерфейс <xref:System.IConvertible> по большей части предназначен для поддержки преобразований между базовыми типами в .NET Framework. При этом данный интерфейс также можно реализовать и в пользовательском типе, чтобы обеспечить поддержку преобразования этого типа в другой пользовательский тип. Дополнительные сведения см. в разделе [Настраиваемые преобразования с использованием метода ChangeType](#custom-conversions-with-the-changetype-method) ниже.
+
+## <a name="the-convert-class"></a>Класс Convert
  Хотя каждая реализация интерфейса <xref:System.IConvertible> базового типа может быть вызвана для выполнения преобразования типа, вызов методов класса <xref:System.Convert?displayProperty=nameWithType> является рекомендуемым и не зависящим от языка способом преобразования одного базового типа в другой. Кроме этого, метод <xref:System.Convert.ChangeType%28System.Object%2CSystem.Type%2CSystem.IFormatProvider%29?displayProperty=nameWithType> может использоваться для преобразования указанного настраиваемого типа в другой тип.  
   
 ### <a name="conversions-between-base-types"></a>Преобразования между базовыми типами  
@@ -168,8 +158,7 @@ ms.locfileid: "73132872"
  [!code-vb[Conceptual.Conversion#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.conversion/vb/convert1.vb#9)]  
   
  См. дополнительные сведения о [таблице, в которой перечислены расширяющие и сужающие преобразования](../../../docs/standard/base-types/conversion-tables.md), поддерживаемые классом <xref:System.Convert>.  
-  
-<a name="ChangeType"></a>   
+
 ### <a name="custom-conversions-with-the-changetype-method"></a>Настраиваемые преобразования с использованием метода ChangeType  
  В дополнение к поддержке преобразований в каждый из базовых типов класс <xref:System.Convert> может использоваться для преобразования настраиваемых типов в один или несколько предопределенных типов. Это преобразование выполняется с помощью метода <xref:System.Convert.ChangeType%28System.Object%2CSystem.Type%2CSystem.IFormatProvider%29?displayProperty=nameWithType>, который, в свою очередь, служит оболочкой вызова метода <xref:System.IConvertible.ToType%2A?displayProperty=nameWithType> параметра `value`. Это означает, что объект, представленный параметром `value`, должен предоставить реализацию интерфейса <xref:System.IConvertible>.  
   
@@ -185,10 +174,7 @@ ms.locfileid: "73132872"
   
  [!code-csharp[Conceptual.Conversion#11](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.conversion/cs/iconvertible2.cs#11)]
  [!code-vb[Conceptual.Conversion#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.conversion/vb/iconvertible2.vb#11)]  
-  
- [К началу](#top)  
-  
-<a name="the_typeconverter_class"></a>   
+
 ## <a name="the-typeconverter-class"></a>Класс TypeConverter  
  Платформа .NET Framework также позволяет определить преобразователь типов для пользовательского типа путем расширения класса <xref:System.ComponentModel.TypeConverter?displayProperty=nameWithType> и сопоставления преобразователя с типом через атрибут <xref:System.ComponentModel.TypeConverterAttribute?displayProperty=nameWithType>. В следующей таблице выделены различия между этим подходом и реализацией интерфейса <xref:System.IConvertible> для настраиваемого типа.  
   

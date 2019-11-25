@@ -3,20 +3,20 @@ title: Руководства по ML.NET
 description: Наши руководства по ML.NET помогут вам научиться создавать специализированные решения на базе искусственного интеллекта и интегрировать их в свои .NET-приложения.
 ms.custom: seodec18
 ms.date: 07/08/2019
-ms.openlocfilehash: 6d5b622194cbaa20ed4e7283e6f1ea66f16a7b47
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: bf59efb4118d9d4fac24413d7568df412a0e9475
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71054013"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73977173"
 ---
-# <a name="mlnet-tutorials"></a>Руководства по ML.NET 
+# <a name="mlnet-tutorials"></a>Руководства по ML.NET
 
 Следующие руководства расскажут вам, как использовать [ML.NET](../index.yml) для создания специализированных решений машинного обучения и их интеграции в ваши приложения .NET.
 
 - [Анализ тональности](sentiment-analysis.md). Реализация задачи **двоичной классификации** с помощью ML.NET.
 - [Классификация проблем GitHub](github-issue-classification.md). Демонстрация применения задач **многоклассовой классификации** с использованием ML.NET.
-- [Прогнозирование цен](taxi-fare.md). Реализация задачи **регрессии** с помощью ML.NET.
+- [Прогнозирование цен](predict-prices.md). Реализация задачи **регрессии** с помощью ML.NET.
 - [Кластеризация ирисов Фишера](iris-clustering.md). Реализация задачи **кластеризации** с помощью ML.NET.
 - [Рекомендация.](movie-recommendation.md) Создание **рекомендаций** фильмов на основе предыдущих оценок пользователя.
 - [Классификация изображений.](image-classification.md) Здесь показано, как переобучить существующую модель Tensorflow для создания классификатора пользовательских изображений с помощью ML.NET.

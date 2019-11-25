@@ -10,19 +10,19 @@ helpviewer_keywords:
 - extending glass frames into applications [WPF]
 - glass frames [WPF], extending into applications
 ms.assetid: 74388a3a-4b69-4a9d-ba1f-e107636bd660
-ms.openlocfilehash: f8d50cb4d0112232f86579542650418a1906bda2
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: ae4d7f23729f5bd39558902a58d33c6c45572d85
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039834"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73977018"
 ---
 # <a name="extend-glass-frame-into-a-wpf-application"></a>Использование стеклянной рамки в приложении WPF
 
-В этом разделе показано, как расширить [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] стеклянную рамку в клиентскую область приложения Windows Presentation Foundation (WPF).
+В этом разделе показано, как расширить рамку Windows Vista Glass в клиентскую область приложения Windows Presentation Foundation (WPF).
 
 > [!NOTE]
-> Этот пример будет работать только на компьютере под управлением [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)], где работает диспетчер окон рабочего стола (DWM) с включенным эффектом прозрачного стекла. [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] Home Basic edition не поддерживает эффект прозрачного стекла. Области, которые обычно отображаются с эффектом прозрачного стекла, в других выпусках [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] отображаются непрозрачными.
+> Этот пример будет работать только на компьютере под управлением Windows Vista, на котором выполняется диспетчер окон рабочего стола (DWM) с включенным стеклом. Windows Vista Home Basic Edition не поддерживает эффект прозрачного стекла. Области, которые обычно отображаются с эффектом прозрачного стекла в других выпусках Windows Vista, отрисовывается непрозрачным.
 
 ## <a name="example"></a>Пример
 
@@ -30,7 +30,7 @@ ms.locfileid: "69039834"
 
 ![Снимок экрана: стеклянная рамка, расширенная за адресной строкой IE7.](./media/extend-glass-frame-into-a-wpf-application/internet-explorer-glass-frame-extended-address-bar.png)
 
-Для расширения стеклянного фрейма в [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] приложении требуется доступ к неуправляемому API. В следующем примере кода выполняется вызов платформы (PInvoke) для двух API, необходимых для расширения рамки в клиентскую область. Каждый из этих API объявлен в классе с именем **нонклиентрегионапи**.
+Чтобы расширить стеклянный фрейм на [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] приложении, требуется доступ к неуправляемому API. В следующем примере кода выполняется вызов платформы (PInvoke) для двух API, необходимых для расширения рамки в клиентскую область. Каждый из этих API объявлен в классе с именем **нонклиентрегионапи**.
 
 ```csharp
 [StructLayout(LayoutKind.Sequential)]
@@ -66,7 +66,7 @@ End Function
 
 ## <a name="example"></a>Пример
 
-Для использования функции [DwmExtendFrameIntoClientArea](/windows/desktop/api/dwmapi/nf-dwmapi-dwmextendframeintoclientarea) необходимо получить дескриптор окна. В [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]обработчик окна может быть получен <xref:System.Windows.Interop.HwndSource.Handle%2A> из свойства объекта <xref:System.Windows.Interop.HwndSource>. В следующем примере фрейм расширяется в клиентскую область <xref:System.Windows.FrameworkElement.Loaded> события окна.
+Для использования функции [DwmExtendFrameIntoClientArea](/windows/desktop/api/dwmapi/nf-dwmapi-dwmextendframeintoclientarea) необходимо получить дескриптор окна. В [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]маркер окна можно получить из свойства <xref:System.Windows.Interop.HwndSource.Handle%2A> <xref:System.Windows.Interop.HwndSource>. В следующем примере фрейм расширяется в клиентскую область на <xref:System.Windows.FrameworkElement.Loaded> событие окна.
 
 ```csharp
 void OnLoaded(object sender, RoutedEventArgs e)
@@ -111,7 +111,7 @@ void OnLoaded(object sender, RoutedEventArgs e)
 
 ## <a name="example"></a>Пример
 
-В следующем примере показано простое окно, в котором рамка расширяется на клиентскую область. Рамка расширяется позади верхней границы, содержащей два <xref:System.Windows.Controls.TextBox> объекта.
+В следующем примере показано простое окно, в котором рамка расширяется на клиентскую область. Рамка расширяется позади верхней границы, содержащей два объекта <xref:System.Windows.Controls.TextBox>.
 
 ```xaml
 <Window x:Class="SDKSample.Window1"
@@ -145,7 +145,7 @@ void OnLoaded(object sender, RoutedEventArgs e)
 </Window>
 ```
 
-На следующем рисунке показана стеклянная рамка, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] расширенная в приложении:
+На следующем рисунке показана стеклянная рамка, расширенная в [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] приложении:
 
 ![Снимок экрана, показывающий стеклянную рамку, расширенную в приложение WPF.](./media/extend-glass-frame-into-a-wpf-application/glass-frame-extended-wpf-application.png)
 

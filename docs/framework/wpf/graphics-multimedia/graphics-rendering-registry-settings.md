@@ -8,12 +8,12 @@ helpviewer_keywords:
 - troubleshooting graphics rendering [WPF]
 - graphics [WPF], rendering
 ms.assetid: f4b41b42-327d-407c-b398-3ed5f505df8b
-ms.openlocfilehash: f2af32315f8f955495c51f2928c2b8eed5350759
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.openlocfilehash: 0d6eda0aea9ad97063cc5362d83163443de034a6
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70016087"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976947"
 ---
 # <a name="graphics-rendering-registry-settings"></a>Настройки реестра графической отрисовки
 В этом разделе содержится обзор параметров графической отрисовки [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] в реестре, которые влияют на приложения [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -24,11 +24,11 @@ ms.locfileid: "70016087"
   
 <a name="xpdmandwddm"></a>   
 ## <a name="what-are-xpdm-and-wddm"></a>Что такое XPDM и WDDM?  
- Некоторые из параметров реестра для графической отрисовки имеют разные значения по умолчанию, в зависимости от того, использует ли видеокарта драйвер XPDM или WDDM. XPDM — модель видеодрайвера [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)], а WDDM — модель видеодрайвера Windows. Модель WDDM доступна на компьютерах под управлением [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] и [!INCLUDE[win7](../../../../includes/win7-md.md)]. Модель XPDM доступна на компьютерах под управлением [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)], [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] и [!INCLUDE[TLA#tla_winnetsvrfam](../../../../includes/tlasharptla-winnetsvrfam-md.md)]. Дополнительную информацию о WDDM см. в разделе [Руководство по проектированию для модели видеодрайвера Windows Vista](https://go.microsoft.com/fwlink/?LinkId=178394).  
+ Некоторые из параметров реестра для графической отрисовки имеют разные значения по умолчанию, в зависимости от того, использует ли видеокарта драйвер XPDM или WDDM. XPDM — модель видеодрайвера [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)], а WDDM — модель видеодрайвера Windows. Модель WDDM доступна на компьютерах под управлением Windows Vista и [!INCLUDE[win7](../../../../includes/win7-md.md)]. XPDM доступен на компьютерах под управлением Windows Vista, [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)]и [!INCLUDE[TLA#tla_winnetsvrfam](../../../../includes/tlasharptla-winnetsvrfam-md.md)]. Дополнительную информацию о WDDM см. в разделе [Руководство по проектированию для модели видеодрайвера Windows Vista](https://go.microsoft.com/fwlink/?LinkId=178394).  
   
 <a name="registry_settings"></a>   
 ## <a name="registry-settings"></a>Параметры реестра  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] включает четыре параметра реестра для управления функциями отрисовки [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]:  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] включает четыре параметра реестра для управления функциями отрисовки [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
 |Параметр|Описание|  
 |-------------|-----------------|  
@@ -57,7 +57,7 @@ ms.locfileid: "70016087"
 |------------------|----------------|  
 |`HKEY_CURRENT_USER\SOFTWARE\Microsoft\Avalon.Graphics\MaxMultisampleType`|DWORD|  
   
- **Максимальное многовыборочное значение** позволяет настроить максимальное количество сглаживания трехмерного содержимого. Используйте этот уровень, чтобы отключить трехмерное сглаживание в [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] или включить его в. [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)]  
+ **Максимальное многовыборочное значение** позволяет настроить максимальное количество сглаживания трехмерного содержимого. Используйте этот уровень, чтобы отключить трехмерное сглаживание в Windows Vista или включить его в [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)].  
   
  Параметр **максимальное значение мультисэмплинга** является значением типа DWORD в диапазоне от 0 до 16. Значение 0 указывает, что мультисэмплинговое сглаживание трехмерного содержимого должно быть отключено, а при значении 16 будет выполняться попытка использования 16-кратного мультисэмплингового сглаживания, если это поддерживается видеоадаптером. Учтите, что установка этого значения раздела реестра на компьютерах, использующих драйверы XPDM, приведет к тому, что приложения будут использовать большой объем дополнительной видеопамяти, снизить производительность трехмерной отрисовки и привести к появлению ошибок визуализации и стабильности. проблемы.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "70016087"
   
 |Раздел реестра|Тип значения|  
 |------------------|----------------|  
-|`HKEY_CURRENT_USER\SOFTWARE\Microsoft\Avalon.Graphics\RequiredVideoDriverDate`|String|  
+|`HKEY_CURRENT_USER\SOFTWARE\Microsoft\Avalon.Graphics\RequiredVideoDriverDate`|Строковое|  
   
  В ноябре 2004 Корпорация Майкрософт выпустила новую версию рекомендаций по тестированию драйверов. драйверы, написанные после этой даты, обеспечивают лучшую стабильность. По умолчанию [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] будет использовать для таких драйверов конвейер аппаратного ускорения и вернется к программной отрисовке для драйверов XPDM, опубликованных до этой даты.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "70016087"
 |------------------|----------------|  
 |`HKEY_CURRENT_USER\SOFTWARE\Microsoft\Avalon.Graphics\UseReferenceRasterizer`|DWORD|  
   
- **Параметр "использовать** средство программной прорисовки" позволяет [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] принудительно перевести в режим имитации аппаратной отрисовки для отладки: [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] переходит в режим оборудования, но использует средство программной прорисовки Microsoft Direct3D Reference, d3dref9. dll, вместо фактического аппаратного устройства.  
+ Параметр "использовать средство программной **прорисовки** " позволяет принудительно выполнить [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] в моделируемом режиме аппаратной отрисовки для отладки: [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] переходит в режим оборудования, но использует средство программной прорисовки Microsoft Direct3D Reference, d3dref9. dll, вместо фактического устройства.  
   
  Средство программной прорисовки является очень медленным, но обходит видеодрайвер во избежание проблем отрисовки, вызванных неполадками драйвера. По этой причине средство программной прорисовки можно использовать для определения, связаны ли проблемы отрисовки с видеодрайвером. Файл d3dref9.dll должен располагаться там, где приложение может получить к нему доступ, например в любом месте системного пути или в локальном каталоге приложения.  
   

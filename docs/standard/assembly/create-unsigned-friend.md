@@ -5,12 +5,12 @@ ms.assetid: 78cbc4f0-b021-4141-a4ff-eb4edbd814ca
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: d8fdc3061067d85498dc5bbed7bf324f99169a36
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: f8fec064507553b8208083578165965de2303a33
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774345"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352438"
 ---
 # <a name="how-to-create-unsigned-friend-assemblies"></a>Практическое руководство. Создание неподписанных дружественных сборок
 
@@ -55,7 +55,6 @@ ms.locfileid: "72774345"
    ' Compile with:
    ' vbc -target:library friend_unsigned_A.vb
    Imports System.Runtime.CompilerServices
-   Imports System
 
    <Assembly: InternalsVisibleTo("friend_unsigned_B")>
 

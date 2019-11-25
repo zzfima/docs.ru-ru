@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - enum keyword [C#]
 ms.assetid: bbeb9a0f-e9b3-41ab-b0a6-c41b1a08974c
-ms.openlocfilehash: 417f02ce9e8ee88edeb2a4dab88111cae39a8a4b
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 639a3a01c9c4da13e0212bd0230acbd2af170b25
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72771865"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428521"
 ---
 # <a name="enum-c-reference"></a>enum (Справочник по C#)
 
@@ -35,7 +35,7 @@ enum Day {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};
 
 В этом перечислении последовательность элементов принудительно начинается с `1` вместо `0`. Тем не менее рекомендуется включать константу, которая имеет значение "0". Дополнительные сведения см. в разделе [Типы перечислений](../../programming-guide/enumeration-types.md).
 
-Каждый тип перечисления имеет базовый тип, который может быть любым [целочисленным типом](../builtin-types/integral-numeric-types.md). Тип [char](char.md) не может быть базовым типом перечисления. Базовым типом перечисления элементов по умолчанию является [int](../builtin-types/integral-numeric-types.md). Чтобы объявить перечисление другого целого типа, например [byte](../builtin-types/integral-numeric-types.md), используется двоеточие после идентификатора, за которым следует тип, как показано в следующем примере.
+Каждый тип перечисления имеет базовый тип, который может быть любым [целочисленным типом](../builtin-types/integral-numeric-types.md). Тип [char](../builtin-types/char.md) не может быть базовым типом перечисления. Базовым типом перечисления элементов по умолчанию является [int](../builtin-types/integral-numeric-types.md). Чтобы объявить перечисление другого целого типа, например [byte](../builtin-types/integral-numeric-types.md), используется двоеточие после идентификатора, за которым следует тип, как показано в следующем примере.
 
 ```csharp
 enum Day : byte {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};

@@ -8,21 +8,21 @@ helpviewer_keywords:
 - <socket> element
 - socket element
 ms.assetid: 366c634c-7d16-478f-aedf-053eda94a1a0
-ms.openlocfilehash: ec2c8388411e24940041dc9dcb7f6a6755e89805
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 0e2b369eccfbc658a790ef61a961315a88361669
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71697584"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74089090"
 ---
-# <a name="socket-element-network-settings"></a>Элемент > @no__t 0socket (параметры сети)
+# <a name="socket-element-network-settings"></a>Элемент > \<сокета (параметры сети)
 Указывает, используют ли операции сокета порты завершения.  
-  
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **@no__t -4system. NET >** ](system-net-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<settings >** ](settings-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<socket >**  
-  
+
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System. net >** ](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<** ](settings-element-network-settings.md) >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**сокет >**
+
 ## <a name="syntax"></a>Синтаксис  
   
 ```xml  
@@ -42,10 +42,10 @@ ms.locfileid: "71697584"
 |-------------------|---------------------|  
 |`alwaysUseCompletionPortsForAccept`|Указывает, должен ли сокет всегда использовать порты завершения для вызовов метода Accept. Значение по умолчанию — `false`.|  
 |`alwaysUseCompletionPortsForConnect`|Указывает, должен ли сокет всегда использовать порты завершения для вызовов метода Connect. Значение по умолчанию — `false`.|  
-|`ipProtectionLevel`|Указывает значение по умолчанию <xref:System.Net.Sockets.IPProtectionLevel?displayProperty=nameWithType>, используемое для сокета. Значение по умолчанию зависит от версии Windows.|  
+|`ipProtectionLevel`|Указывает <xref:System.Net.Sockets.IPProtectionLevel?displayProperty=nameWithType> по умолчанию, используемый для сокета. Значение по умолчанию зависит от версии Windows.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
- Нет.  
+ Отсутствует.  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
@@ -53,16 +53,16 @@ ms.locfileid: "71697584"
 |-----------------|---------------------|  
 |[Параметры](settings-element-network-settings.md)|Настраивает основные параметры сети для пространства имен <xref:System.Net>.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
  Атрибуты `alwaysUseCompletionPortsForAccept` и `alwaysUseCompletionPortsForConnect` используются для задания поведения по умолчанию в отношении использования портов завершения классами в пространстве имен <xref:System.Net.Sockets?displayProperty=nameWithType>. Порты завершения рекомендуются для высокопроизводительных серверных приложений.  
   
  По умолчанию для атрибутов `alwaysUseCompletionPortsForAccept` и `alwaysUseCompletionPortsForConnect` задано значение **false**.  
   
- @No__t-0 можно использовать для получения текущего значения атрибута `alwaysUseCompletionPortsForAccept` из применимых файлов конфигурации. @No__t-0 можно использовать для получения текущего значения атрибута `alwaysUseCompletionPortsForConnect` из применимых файлов конфигурации.  
+ <xref:System.Net.Configuration.SocketElement.AlwaysUseCompletionPortsForAccept%2A> можно использовать для получения текущего значения атрибута `alwaysUseCompletionPortsForAccept` из применимых файлов конфигурации. <xref:System.Net.Configuration.SocketElement.AlwaysUseCompletionPortsForConnect%2A> можно использовать для получения текущего значения атрибута `alwaysUseCompletionPortsForConnect` из применимых файлов конфигурации.  
   
- Атрибут `ipProtectionLevel` задает значение по умолчанию <xref:System.Net.Sockets.IPProtectionLevel?displayProperty=nameWithType>, используемое для сокета. Свойство <xref:System.Net.Configuration.SocketElement.IPProtectionLevel%2A> позволяет настроить ограничение сокета IPv6 на указанную область, например адреса с одинаковой локальной ссылкой или локальным префиксом сайта. Этот параметр позволяет приложениям размещать ограничения доступа к сокетам IPv6. Такие ограничения позволяют приложению, работающему в частной локальной сети, просто и надежно защититься от внешних атак. Этот параметр расширяет или ограничивает область действия прослушивающего сокета, обеспечивая неограниченный доступ от общедоступных и частных пользователей при необходимости или ограничивающий доступ только для того же сайта, если это необходимо.  
+ Атрибут `ipProtectionLevel` указывает <xref:System.Net.Sockets.IPProtectionLevel?displayProperty=nameWithType> по умолчанию, используемый для сокета. Свойство <xref:System.Net.Configuration.SocketElement.IPProtectionLevel%2A> позволяет настроить ограничение сокета IPv6 на указанную область, например адреса с одинаковой локальной ссылкой или локальным префиксом сайта. Этот параметр позволяет приложениям размещать ограничения доступа к сокетам IPv6. Такие ограничения позволяют приложению, работающему в частной локальной сети, просто и надежно защититься от внешних атак. Этот параметр расширяет или ограничивает область действия прослушивающего сокета, обеспечивая неограниченный доступ от общедоступных и частных пользователей при необходимости или ограничивающий доступ только для того же сайта, если это необходимо.  
   
- Этот параметр атрибута `ipProtectionLevel` влияет только на первоначальный входящий трафик.  
+ Этот `ipProtectionLevel` атрибут влияет только на начальный входящий трафик:  
   
 - TCP-сервер, прослушивающий входящие подключения на сокете.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "71697584"
   
  Этот параметр конфигурации не влияет на уже установленные TCP-подключения (трафик в обоих направлениях не ограничен) и не влияет на приложение, отправляющее пакеты UDP.  
   
- Возможные значения для параметра атрибута `ipProtectionLevel` соответствуют определенным уровням защиты, указанным в перечислении <xref:System.Net.Sockets.IPProtectionLevel?displayProperty=nameWithType> следующим образом:  
+ Возможные значения параметра `ipProtectionLevel` атрибута соответствуют определенным уровням защиты, указанным в перечислении <xref:System.Net.Sockets.IPProtectionLevel?displayProperty=nameWithType> следующим образом:  
   
 |**Значение атрибута**|**Описание**|  
 |-|-|  
@@ -87,7 +87,7 @@ ms.locfileid: "71697584"
  Этот элемент может использоваться в файле конфигурации приложения или в файле конфигурации компьютера (Machine.config).  
   
 ## <a name="example"></a>Пример  
- В следующем примере показано, как указать, что порты завершения должны использоваться и что значение по умолчанию <xref:System.Net.Sockets.IPProtectionLevel?displayProperty=nameWithType> должно быть неограниченным.  
+ В следующем примере показано, как указать, что порты завершения должны использоваться, а <xref:System.Net.Sockets.IPProtectionLevel?displayProperty=nameWithType> по умолчанию должны быть неограниченными.  
   
 ```xml  
 <configuration>  

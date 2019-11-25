@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Запись в журнал событий приложения (Visual Basic)
+title: Практическое руководство. Запись в журнал событий приложения
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Computer.EventLog element
@@ -7,12 +7,12 @@ helpviewer_keywords:
 - My.Computer.EventLog element
 - event logs, writing to
 ms.assetid: cadbc8c1-87af-4746-934e-55b79a4f6e2b
-ms.openlocfilehash: 385a85d956a0de727e3c061ec447a3d53ad6c159
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 511bb8fb16851872c1a16ae7627ed0fc6594337c
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71054146"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352048"
 ---
 # <a name="how-to-write-to-an-application-event-log-visual-basic"></a>Практическое руководство. Запись в журнал событий приложения (Visual Basic)
 

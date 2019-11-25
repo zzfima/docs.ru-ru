@@ -4,16 +4,16 @@ description: Изучите возможности задач машинного
 ms.custom: seodec18
 ms.date: 04/23/2019
 author: natke
-ms.openlocfilehash: bcd967c11156ca9b837631560e78722b13fc7ae0
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: d0634ce8a0559ab3cdb5bf27fc5406ab02af8df6
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630051"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73977244"
 ---
 # <a name="machine-learning-tasks-in-mlnet"></a>Задачи машинного обучения в ML.NET
 
-Создавая модель машинного обучения, сначала следует определить цели, которых вы намерены достичь для имеющихся данных. Это позволит вам правильно выбрать задачу машинного обучения для конкретной ситуации. В следующем списке описываются разные задачи машинного обучения, которые вы можете выбрать, и распространенные варианты их использования.
+Создавая модель машинного обучения, сначала следует определить цели, которых вы намерены достичь для имеющихся данных. Это позволит вам правильно выбрать задачу машинного обучения для конкретной ситуации. В следующем списке описываются разные задачи машинного обучения, которые вы можете выбрать, и распространенные варианты их использования. Дополнительные сведения о выборе задачи, подходящей для вашего сценария, см. в статье об [алгоритмах](../how-to-choose-an-ml-net-algorithm.md).
 
 Определив задачу для своего сценария, выберите наилучший алгоритм для обучения модели. Далее перечислены доступные алгоритмы для каждой задачи.
 
@@ -24,7 +24,7 @@ ms.locfileid: "68630051"
 * [Распределение комментариев Twitter по тональности](../tutorials/sentiment-analysis.md) — позитивные или негативные.
 * Диагностика пациента на наличие определенной болезни.
 * Принятие решений о присвоении отметки "спам" сообщению электронной почты.
-* Определение, содержит ли фотография собаку или фрукты.
+* Определение того, содержит ли фотография определенный элемент, например изображение собаки или фрукта.
 
 Дополнительные сведения см. в [статье о двоичной классификации](https://en.wikipedia.org/wiki/Binary_classification) в Википедии.
 
@@ -34,15 +34,15 @@ ms.locfileid: "68630051"
 
 * <xref:Microsoft.ML.Trainers.AveragedPerceptronTrainer>
 * <xref:Microsoft.ML.Trainers.SdcaLogisticRegressionBinaryTrainer>
-* <xref:Microsoft.ML.Trainers.SdcaNonCalibratedBinaryTrainer> 
-* <xref:Microsoft.ML.Trainers.SymbolicSgdLogisticRegressionBinaryTrainer> 
-* <xref:Microsoft.ML.Trainers.LbfgsLogisticRegressionBinaryTrainer> 
-* <xref:Microsoft.ML.Trainers.LightGbm.LightGbmBinaryTrainer> 
-* <xref:Microsoft.ML.Trainers.FastTree.FastTreeBinaryTrainer> 
+* <xref:Microsoft.ML.Trainers.SdcaNonCalibratedBinaryTrainer>
+* <xref:Microsoft.ML.Trainers.SymbolicSgdLogisticRegressionBinaryTrainer>
+* <xref:Microsoft.ML.Trainers.LbfgsLogisticRegressionBinaryTrainer>
+* <xref:Microsoft.ML.Trainers.LightGbm.LightGbmBinaryTrainer>
+* <xref:Microsoft.ML.Trainers.FastTree.FastTreeBinaryTrainer>
 * <xref:Microsoft.ML.Trainers.FastTree.FastForestBinaryTrainer>
-* <xref:Microsoft.ML.Trainers.FastTree.GamBinaryTrainer> 
-* <xref:Microsoft.ML.Trainers.FieldAwareFactorizationMachineTrainer> 
-* <xref:Microsoft.ML.Trainers.PriorTrainer> 
+* <xref:Microsoft.ML.Trainers.FastTree.GamBinaryTrainer>
+* <xref:Microsoft.ML.Trainers.FieldAwareFactorizationMachineTrainer>
+* <xref:Microsoft.ML.Trainers.PriorTrainer>
 * <xref:Microsoft.ML.Trainers.LinearSvmTrainer>
 
 ### <a name="binary-classification-inputs-and-outputs"></a>Входные и выходные данные двоичной классификации
@@ -52,7 +52,7 @@ ms.locfileid: "68630051"
 Входные данные столбца меток должны иметь тип <xref:System.Boolean>.
 Входные данные столбца функций должны быть вектором <xref:System.Single> фиксированного размера.
 
-Эти алгоритмы обучения выводят приведенные ниже столбцы.
+С помощью этих алгоритмов обучения выводятся следующие столбцы:
 
 | Имя выходного столбца | Тип столбца | ОПИСАНИЕ|
 | -- | -- | -- |
@@ -79,10 +79,10 @@ ms.locfileid: "68630051"
 * <xref:Microsoft.ML.Trainers.LightGbm.LightGbmMulticlassTrainer>
 * <xref:Microsoft.ML.Trainers.SdcaMaximumEntropyMulticlassTrainer>
 * <xref:Microsoft.ML.Trainers.SdcaNonCalibratedMulticlassTrainer>
-* <xref:Microsoft.ML.Trainers.LbfgsMaximumEntropyMulticlassTrainer> 
-* <xref:Microsoft.ML.Trainers.NaiveBayesMulticlassTrainer> 
+* <xref:Microsoft.ML.Trainers.LbfgsMaximumEntropyMulticlassTrainer>
+* <xref:Microsoft.ML.Trainers.NaiveBayesMulticlassTrainer>
 * <xref:Microsoft.ML.Trainers.OneVersusAllTrainer>
-* <xref:Microsoft.ML.Trainers.PairwiseCouplingTrainer> 
+* <xref:Microsoft.ML.Trainers.PairwiseCouplingTrainer>
 
 ### <a name="multiclass-classification-inputs-and-outputs"></a>Входные и выходные данные многоклассовой классификации
 
@@ -112,7 +112,7 @@ ms.locfileid: "68630051"
 * <xref:Microsoft.ML.Trainers.LightGbm.LightGbmRegressionTrainer>
 * <xref:Microsoft.ML.Trainers.SdcaRegressionTrainer>
 * <xref:Microsoft.ML.Trainers.OlsTrainer>
-* <xref:Microsoft.ML.Trainers.OnlineGradientDescentTrainer> 
+* <xref:Microsoft.ML.Trainers.OnlineGradientDescentTrainer>
 * <xref:Microsoft.ML.Trainers.FastTree.FastTreeRegressionTrainer>
 * <xref:Microsoft.ML.Trainers.FastTree.FastTreeTweedieTrainer>
 * <xref:Microsoft.ML.Trainers.FastTree.FastForestRegressionTrainer>
@@ -140,7 +140,7 @@ ms.locfileid: "68630051"
 
 Вы можете обучить модель кластеризации, используя следующие алгоритмы:
 
-* <xref:Microsoft.ML.Trainers.KMeansTrainer> 
+* <xref:Microsoft.ML.Trainers.KMeansTrainer>
 
 ### <a name="clustering-inputs-and-outputs"></a>Входные и выходные данные кластеризации
 
@@ -193,7 +193,7 @@ ms.locfileid: "68630051"
 Вы можете обучить модель ранжирования, используя следующие алгоритмы:
 
 * <xref:Microsoft.ML.Trainers.LightGbm.LightGbmRankingTrainer>
-* <xref:Microsoft.ML.Trainers.FastTree.FastTreeRankingTrainer> 
+* <xref:Microsoft.ML.Trainers.FastTree.FastTreeRankingTrainer>
 
 ### <a name="ranking-input-and-outputs"></a>Входные и выходные данные ранжирования
 

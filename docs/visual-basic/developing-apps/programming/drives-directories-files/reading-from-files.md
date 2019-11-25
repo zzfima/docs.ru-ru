@@ -1,5 +1,5 @@
 ---
-title: Чтение из файлов в Visual Basic
+title: Чтение из файлов
 ms.date: 07/20/2015
 helpviewer_keywords:
 - data [Visual Basic], reading from files
@@ -8,17 +8,19 @@ helpviewer_keywords:
 - files [Visual Basic], reading
 - reading files [Visual Basic]
 ms.assetid: ad831a1b-7d01-4f07-a47b-799f3037df19
-ms.openlocfilehash: f81ee980d861ac0eb41df9c41b3966512589af12
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: afba0df89aabad7ddf8b641fbab421800718deb3
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65593368"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74333827"
 ---
 # <a name="reading-from-files-in-visual-basic"></a>Чтение из файлов в Visual Basic
+
 В этом руководстве рассказывается, как выполнять задачи, связанные с чтением из файлов.  
   
 ## <a name="in-this-section"></a>В этом разделе  
+
  [Практическое руководство. Чтение из текстовых файлов](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files.md)  
  В этом руководстве рассказывается, как выполнять чтение из текстового файла.  
   
@@ -38,6 +40,7 @@ ms.locfileid: "65593368"
  Демонстрирует, как использовать <xref:System.IO.StreamReader> для чтения из двоичных файлов.  
   
 ## <a name="reference"></a>Ссылка  
+
  <xref:Microsoft.VisualBasic.FileIO.FileSystem>  
  Описание объекта `My.Computer.FileSystem` и его членов.  
   
@@ -54,6 +57,7 @@ ms.locfileid: "65593368"
  Описывает метод `OpenTextFileReader`.  
   
 ## <a name="related-sections"></a>Связанные разделы  
+
  [Запись данных в буфер обмена и чтение их оттуда](../../../../visual-basic/developing-apps/programming/computer-resources/storing-data-to-and-reading-from-the-clipboard.md)  
  Объясняет, как выполнять задачи, связанные с `My.Computer.Clipboard`, такие как чтение данных и запись данных в буфер обмена.  
   

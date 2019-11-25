@@ -5,12 +5,12 @@ author: cartermp
 ms.author: mairaw
 ms.date: 08/23/2017
 ms.technology: dotnet-standard
-ms.openlocfilehash: f43cd61fbcb3c1c872961476449822c574f76cff
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: b55b2f9266477a0bb12c39840c9f2108a5c0f0c4
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71835284"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283917"
 ---
 # <a name="net-architectural-components"></a>Архитектурные компоненты .NET
 
@@ -94,13 +94,13 @@ UWP представляет собой реализацию .NET, котора�
 
 Следующие официальные документы Ecma доступны для [C#](http://www.ecma-international.org/publications/standards/Ecma-334.htm) и [CLI](http://www.ecma-international.org/publications/standards/Ecma-335.htm) ([TR-84](http://www.ecma-international.org/publications/techreports/E-TR-084.htm)):
 
-- **Стандарт языка C# (версия 5.0)**: [ECMA-334.pdf](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-334.pdf)
+- **Стандарт языка C# (версия 5.0)** : [ECMA-334.pdf](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-334.pdf)
 - **Common Language Infrastructure**: Доступно в форматах [pdf](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-335.pdf) и [zip](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-335.zip).
 - **Сведения, полученные из файла XML раздела IV**: Доступно в форматах [pdf](https://www.ecma-international.org/publications/files/ECMA-TR/ECMA%20TR-084.pdf) и [zip](https://www.ecma-international.org/publications/files/ECMA-TR/TR-084.zip).
  
 Официальные документы ISO/IEC доступны на странице [общедоступных стандартов](https://standards.iso.org/ittf/PubliclyAvailableStandards/) ISO/IEC. Эти ссылки указываются непосредственно на этой странице:
 
-- **Информационные технологии — языки программирования — C#**: [ISO/IEC 23270:2018](https://standards.iso.org/ittf/PubliclyAvailableStandards/c075178_ISO_IEC_23270_2018.zip)
+- **Информационные технологии — языки программирования — C#** : [ISO/IEC 23270:2018](https://standards.iso.org/ittf/PubliclyAvailableStandards/c075178_ISO_IEC_23270_2018.zip)
 - **Информационные технологии — Common Language Infrastructure (CLI), разделы I–VI**: [ISO/IEC 23271:2012](https://standards.iso.org/ittf/PubliclyAvailableStandards/c058046_ISO_IEC_23271_2012(E).zip)
 - **Информационные технологии — Common Language Infrastructure (CLI) — технический отчет о данных, полученных из файла XML раздела IV**: [ISO/IEC TR 23272:2011](https://standards.iso.org/ittf/PubliclyAvailableStandards/c057955_ISO_IEC_TR_23272_2011.zip)
 
@@ -110,6 +110,6 @@ UWP представляет собой реализацию .NET, котора�
 - [.NET Standard](net-standard.md)
 - [Руководство по .NET Core](../core/index.md)
 - [Руководство по .NET Framework](../framework/index.md)
-- [Руководство по языку C#](../csharp/index.md)
+- [Руководство по языку C#](../csharp/index.yml)
 - [Руководство по языку F#](../fsharp/index.md)
 - [Руководство по VB .NET](../visual-basic/index.md)

@@ -1,5 +1,5 @@
 ---
-title: Доступ к клавиатуре (Visual Basic)
+title: Доступ к клавиатуре
 ms.date: 07/20/2015
 helpviewer_keywords:
 - keyboards [Visual Basic], accessing [Visual Basic]
@@ -7,17 +7,19 @@ helpviewer_keywords:
 - keystrokes
 - CapsLock property
 ms.assetid: aa37d54c-5c98-4b44-b98a-c26d2a03c038
-ms.openlocfilehash: 00cdf18d057ca8a5c59cde02759b5c8c572a8bba
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 4e4a6aa3567094ca87e41367e82d5fa6c61fe100
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58823575"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74329538"
 ---
 # <a name="accessing-the-keyboard-visual-basic"></a>Доступ к клавиатуре (Visual Basic)
+
 Объект `My.Computer.Keyboard` предоставляет свойства для доступа к текущему состоянию клавиатуры, например перечню нажатых в настоящее время клавиш, и метод для отправки сообщений о нажатиях клавиш активному окну.  
   
 ## <a name="tasks"></a>Задачи  
+
  В этой таблице перечислены задачи, связанные с объектом `My.Computer.Keyboard`, и разделы, в которых демонстрируется их выполнение.  
   
 |Кому|См.|  

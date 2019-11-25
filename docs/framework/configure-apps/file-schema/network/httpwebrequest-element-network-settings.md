@@ -8,21 +8,21 @@ helpviewer_keywords:
 - <httpWebRequest> element
 - httpWebRequest element
 ms.assetid: 52acd9d2-5bdc-4dc4-9c2a-f0a476ccbb31
-ms.openlocfilehash: fa00aed2cd1e96ec788d4bc9c1c63f20561d8d1c
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: d33dadc14510feb00e05ca557b507b0cf8fa0dd0
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71698182"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74087460"
 ---
-# <a name="httpwebrequest-element-network-settings"></a>Элемент > @no__t 0httpWebRequest (параметры сети)
+# <a name="httpwebrequest-element-network-settings"></a>Элемент > \<httpWebRequest (параметры сети)
 Настраивает параметры веб-запроса.  
-  
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **@no__t -4system. NET >** ](system-net-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<settings >** ](settings-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<httpWebRequest >**  
-  
+
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System. net >** ](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<** ](settings-element-network-settings.md) >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<httpWebRequest >**
+
 ## <a name="syntax"></a>Синтаксис  
   
 ```xml  
@@ -47,7 +47,7 @@ ms.locfileid: "71698182"
 |`useUnsafeHeaderParsing`|Указывает, включен ли анализ ненадежных заголовков. Значение по умолчанию — `false`.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
- Нет.  
+ Отсутствует.  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
@@ -55,8 +55,8 @@ ms.locfileid: "71698182"
 |-----------------|---------------------|  
 |[Параметры](settings-element-network-settings.md)|Настраивает основные параметры сети для пространства имен <xref:System.Net>.|  
   
-## <a name="remarks"></a>Примечания  
- По умолчанию .NET Framework строго применяет RFC 2616 для синтаксического анализа URI. Некоторые серверные ответы могут содержать управляющие символы в запрещенных полях, что приведет к тому, что метод <xref:System.Net.HttpWebRequest.GetResponse?displayProperty=nameWithType> выдаст <xref:System.Net.WebException>. Если **усеунсафехеадерпарсинг** имеет значение **true**, то <xref:System.Net.HttpWebRequest.GetResponse?displayProperty=nameWithType> не будет вызывать исключение в этом случае; Однако приложение будет уязвимо для нескольких форм атак с синтаксическим анализом URI. Лучшим решением является изменение сервера, чтобы ответ не включал управляющие символы.  
+## <a name="remarks"></a>Заметки  
+ По умолчанию .NET Framework строго применяет RFC 2616 для синтаксического анализа URI. Некоторые серверные ответы могут включать в себя управляющие символы в запрещенных полях, что приведет к выдаче <xref:System.Net.WebException>метода <xref:System.Net.HttpWebRequest.GetResponse?displayProperty=nameWithType>. Если **усеунсафехеадерпарсинг** имеет значение **true**, <xref:System.Net.HttpWebRequest.GetResponse?displayProperty=nameWithType> не будет вызывать исключение в этом случае; Однако приложение будет уязвимо для нескольких форм атак с синтаксическим анализом URI. Лучшим решением является изменение сервера, чтобы ответ не включал управляющие символы.  
   
 ## <a name="configuration-files"></a>Файлы конфигурации  
  Этот элемент может использоваться в файле конфигурации приложения или в файле конфигурации компьютера (Machine.config).  

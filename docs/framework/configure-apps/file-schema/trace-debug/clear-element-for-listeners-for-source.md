@@ -7,23 +7,23 @@ helpviewer_keywords:
 - <clear> element for <listeners> for <source>
 - clear element for <listeners> for <source>
 ms.assetid: 76796bb2-9c0b-4526-8135-8bf18b16d8d9
-ms.openlocfilehash: 05c20040ef59f4dee6b15bbe0b0369281b532754
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 4567f236397435e89371ca4c80730ff964fddd21
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71697193"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74088936"
 ---
-# <a name="clear-element-for-listeners-for-source"></a>Элемент \<clear > для > \<listeners для \<source >
+# <a name="clear-element-for-listeners-for-source"></a>\<очистить элемент > для прослушивателей \<> для \<исходного кода >
 Очищает коллекцию `Listeners` для источника трассировки.  
-  
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **\<system. Diagnostics >** ](system-diagnostics-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<sources >** ](sources-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5[ **\<source >** ](source-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7[ **&nbsp;0listeners >** ](listeners-element-for-source.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7 @ no__t-8 @ no__t-9 **&nbsp;1clear >**  
-  
+
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System. diagnostics >** ](system-diagnostics-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<sources >** ](sources-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<[**source >** ](source-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<listeners >** ](listeners-element-for-source.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<clear >**
+
 ## <a name="syntax"></a>Синтаксис  
   
 ```xml  
@@ -34,10 +34,10 @@ ms.locfileid: "71697193"
  В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
   
 ### <a name="attributes"></a>Атрибуты  
- Нет.  
+ Отсутствует.  
   
 ### <a name="child-elements"></a>Дочерние элементы  
- Нет.  
+ Отсутствует.  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
@@ -49,8 +49,8 @@ ms.locfileid: "71697193"
 |`source`|Содержит источник трассировки, который инициирует сообщения трассировки.|  
 |`listeners`|Указывает прослушиватели, собирающие, хранящие и направляющие сообщения.|  
   
-## <a name="remarks"></a>Примечания  
- Элемент `<clear>` удаляет все прослушиватели из коллекции `Listeners` для источника трассировки, включая <xref:System.Diagnostics.DefaultTraceListener>. Можно использовать элемент `<clear>` перед использованием элемента `<add>`, чтобы убедиться в отсутствии других активных прослушивателей в коллекции.  
+## <a name="remarks"></a>Заметки  
+ Элемент `<clear>` удаляет все прослушиватели из коллекции `Listeners` для источника трассировки, включая <xref:System.Diagnostics.DefaultTraceListener>. Элемент `<clear>` можно использовать перед использованием элемента `<add>`, чтобы убедиться в отсутствии других активных прослушивателей в коллекции.  
   
 ## <a name="configuration-file"></a>Файл конфигурации  
  Этот элемент можно использовать в файле конфигурации компьютера (Machine. config) и в файле конфигурации приложения.  

@@ -5,12 +5,12 @@ author: briacht
 ms.date: 09/30/2019
 ms.custom: mvc, title-hack-0516
 ms.topic: tutorial
-ms.openlocfilehash: 51dcf5cd85913f0e69ea51dff5101426cc57390f
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 5b4541b527559ee05c9b97d84324e9e70599a014
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774469"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73977378"
 ---
 # <a name="tutorial-build-a-movie-recommender-using-matrix-factorizaton-with-mlnet"></a>Учебник. Создание приложения для рекомендации фильмов с помощью ML.NET
 
@@ -73,7 +73,7 @@ ms.locfileid: "72774469"
 
 2. В обозревателе решений щелкните правой кнопкой мыши каждый из файлов \*.csv и выберите **Свойства**. В разделе **Дополнительно** для параметра **Копировать в выходной каталог** установите значение **Копировать более позднюю версию**.
 
-   ![Значение "Копировать более позднюю версию" в Visual Studio](./media/movie-recommendation/copytoout.gif)
+   ![GIF пользователя, который выбирает в VS пункт "Копировать более новые".](./media/movie-recommendation/copy-to-output-if-newer.gif)
 
 ## <a name="load-your-data"></a>Загрузка данных
 
@@ -83,7 +83,7 @@ ms.locfileid: "72774469"
 
 Ниже приведен пример данных из ваших файлов \*.csv.
 
-![пример данных](./media/movie-recommendation/csv-dataset-preview.png)
+![Снимок экрана с окном предварительного просмотра набора данных CVS.](./media/movie-recommendation/csv-file-dataset-preview.png)
 
 В файлах \*.csv четыре столбца:
 
@@ -102,7 +102,7 @@ ms.locfileid: "72774469"
 | `movieId`      |               |
 | `timestamp`     |               |
 
-Какие признаки (`Features`) будут использоваться для прогнозирования метки (`Label`) — решать вам. Для выбора подходящих признаков (`Features`) можно также использовать такие методы, как [Feature Permutation Importance](../how-to-guides/determine-global-feature-importance-in-model.md).
+Какие признаки (`Features`) будут использоваться для прогнозирования метки (`Label`) — решать вам. Для выбора подходящих признаков (`Features`) можно также использовать такие методы, как [важность комбинаций признаков](../how-to-guides/explain-machine-learning-model-permutation-feature-importance-ml-net.md).
 
 В данном случае столбец `timestamp` следует исключить из числа признаков (`Feature`), так как метка времени не влияет на оценку фильма пользователем и поэтому не повышает точность прогноза:
 
@@ -171,11 +171,11 @@ public static (IDataView training, IDataView test) LoadData(MLContext mlContext)
 
 Алгоритмам машинного обучения требуются данные в определенном формате. Преобразователи (`Transformers`) приводят данные к совместимому формату.
 
-![схема работы преобразователя](./media/movie-recommendation/transformer.png)
+![Схема потока данных преобразователя.](./media/movie-recommendation/data-transformer-transformed.png)
 
 Преобразователи (`Transformers`) в ML.NET создаются с помощью средств оценки (`Estimators`). Средства оценки (`Estimators`) принимают данные и возвращают преобразователи (`Transformers`).
 
-![схема работы средства оценки](./media/movie-recommendation/estimator.png)
+![Схема потока данных средства оценки.](./media/movie-recommendation/data-estimator-transformer.png)
 
 Алгоритм рекомендаций, который вы будете использовать для обучения модели, — это пример средства оценки (`Estimator`).
 
@@ -373,7 +373,7 @@ public static void SaveModel(MLContext mlContext, DataViewSchema trainingDataVie
 
 ### <a name="use-your-saved-model"></a>Использование сохраненной модели
 
-После сохранения обученной модели ее можно использовать в различных средах (сведения о реализации обученной модели машинного обучения в приложениях см. в [этом практическом руководстве](../how-to-guides/consuming-model-ml-net.md)).
+После сохранения обученной модели ее можно использовать в различных средах. Дополнительные сведения об эксплуатации модели обучения обученной машины в приложениях см. в статье [Сохранение и загрузка обученных моделей](../how-to-guides/save-load-machine-learning-models-ml-net.md).
 
 ## <a name="results"></a>Результаты
 
@@ -420,7 +420,7 @@ Movie 10 is recommended for user 6
 
 Чтобы повысить качество модели рекомендаций, можно дополнить обучающие данные для каждого пользователя и фильма.
 
-[Перекрестная проверка](../how-to-guides/train-cross-validation-ml-net.md) — это способ оценки моделей, при котором данные разделяются на части случайным образом, после чего некоторые части используются для обучения, а остальные — для тестирования. В плане качества модели такой метод лучше, чем фиксированное разделение общего набора на обучающие и тестовые данные, которое применялось в этом руководстве.
+[Перекрестная проверка](../how-to-guides/train-machine-learning-model-cross-validation-ml-net.md) — это способ оценки моделей, при котором данные разделяются на части случайным образом, после чего некоторые части используются для обучения, а остальные — для тестирования. В плане качества модели такой метод лучше, чем фиксированное разделение общего набора на обучающие и тестовые данные, которое применялось в этом руководстве.
 
 ### <a name="features"></a>Функции
 
@@ -428,7 +428,7 @@ Movie 10 is recommended for user 6
 
 Хотя для начала этого достаточно, на практике может потребоваться добавить дополнительные атрибуты или признаки `Features` (например, возраст, пол, географическое местоположение и другие). Добавление релевантных признаков (`Features`) может помочь повысить эффективность модели рекомендаций.
 
-Если вы не уверены, какие признаки (`Features`) являются наиболее релевантными для конкретной задачи машинного обучения, можно использовать специальные методы, предоставляемые платформой ML.NET с целью выявления наиболее весомых признаков (`Features`): Feature Contribution Calculation (определение вклада признака) и [Feature Permutation Importance](../how-to-guides/determine-global-feature-importance-in-model.md) (важность комбинаций признаков).
+Если вы не уверены, какие признаки (`Features`) являются наиболее релевантными для конкретной задачи машинного обучения, можно использовать специальные методы, предоставляемые платформой ML.NET с целью выявления наиболее весомых признаков (`Features`): определение вклада признака и [важность комбинаций признаков](../how-to-guides/explain-machine-learning-model-permutation-feature-importance-ml-net.md).
 
 ### <a name="algorithm-hyperparameters"></a>Гиперпараметры алгоритма
 

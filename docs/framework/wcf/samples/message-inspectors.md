@@ -2,12 +2,12 @@
 title: Инспекторы сообщений
 ms.date: 03/30/2017
 ms.assetid: 9bd1f305-ad03-4dd7-971f-fa1014b97c9b
-ms.openlocfilehash: 01553084aa049688cd05fa36e46fb6f67983fb21
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 7b8cc0f8e8aa0544c531566a8fe35f54a3914896
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424152"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73977297"
 ---
 # <a name="message-inspectors"></a>Инспекторы сообщений
 В этом образце демонстрируется, как реализовать и настроить инспекторы сообщений клиента и службы.  
@@ -19,7 +19,7 @@ ms.locfileid: "73424152"
 ## <a name="message-inspector"></a>Инспектор сообщений  
  Инспекторы сообщений клиента реализуют интерфейс <xref:System.ServiceModel.Dispatcher.IClientMessageInspector>, а инспекторы сообщений службы - интерфейс <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector>. Реализации можно объединить в один класс для создания инспектора сообщений, работающего на обеих сторонах. В данном образце реализуется такой комбинированный инспектор сообщений. Инспектор создается, передавая набор схем, на основе которых проверяются входящие и исходящие сообщения, и позволяет разработчику определить, следует ли проверять входящие или исходящие сообщения, а также использовать ли режим диспетчеризации или режим клиента, который влияет на обработку ошибок, как описано далее в этом разделе.  
   
-```csharp  
+```csharp
 public class SchemaValidationMessageInspector : IClientMessageInspector, IDispatchMessageInspector  
 {  
     XmlSchemaSet schemaSet;  
@@ -206,7 +206,7 @@ void ValidateMessageBody(ref System.ServiceModel.Channels.Message message, bool 
   
  Следующий класс `SchemaValidationBehavior` является поведением, которое используется для добавления инспектора сообщений, создаваемого в данном образце, в среду выполнения клиента или среду выполнения распределения. В обоих случаях реализация достаточно проста. В случае <xref:System.ServiceModel.Description.IEndpointBehavior.ApplyClientBehavior%2A> и <xref:System.ServiceModel.Description.IEndpointBehavior.ApplyDispatchBehavior%2A> инспектор сообщений создается и добавляется в коллекцию <xref:System.ServiceModel.Dispatcher.ClientRuntime.MessageInspectors%2A> соответствующей среды выполнения.  
   
-```csharp  
+```csharp
 public class SchemaValidationBehavior : IEndpointBehavior  
 {  
     XmlSchemaSet schemaSet;   
@@ -299,7 +299,7 @@ public class SchemaValidationBehavior : IEndpointBehavior
   
  Переопределенный метод `CreateBehavior` преобразует данные конфигурации в объект поведения при их оценке средой выполнения во время построения клиента или конечной точки.  
   
-```csharp  
+```csharp
 public class SchemaValidationBehaviorExtensionElement : BehaviorExtensionElement  
 {  
     public SchemaValidationBehaviorExtensionElement()  

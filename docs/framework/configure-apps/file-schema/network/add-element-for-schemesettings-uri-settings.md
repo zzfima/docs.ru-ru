@@ -2,21 +2,21 @@
 title: Элемент <add> для schemeSettings (параметры URI)
 ms.date: 03/30/2017
 ms.assetid: 594a7b3b-af23-4cfa-b616-0b2dddb1a705
-ms.openlocfilehash: efd52557ea8b617a39e685ff8ad69bab01322a7a
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: ed40098e8d4c2d1298771e67a618b8d04f59c912
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71699598"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74087719"
 ---
-# <a name="add-element-for-schemesettings-uri-settings"></a>Элемент > @no__t 0add для schemeSettings (Параметры URI)
+# <a name="add-element-for-schemesettings-uri-settings"></a>\<добавить элемент > для schemeSettings (Параметры URI)
 Добавляет параметр схемы для имени схемы.  
-  
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **\<uri >** ](uri-element-uri-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<schemeSettings >** ](schemesettings-element-uri-settings.md)  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Добавить >**  
-  
+
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> uri**](uri-element-uri-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<schemeSettings >** ](schemesettings-element-uri-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<добавить >**
+
 ## <a name="syntax"></a>Синтаксис  
   
 ```xml  
@@ -37,12 +37,12 @@ ms.locfileid: "71699598"
   
 ## <a name="attribute-name-attribute"></a>{Имя атрибута} Версию  
   
-|Значение|Описание|  
+|значения|Описание|  
 |-----------|-----------------|  
 |женерикурипарсероптионс|Параметры средства синтаксического анализа для этой схемы. Единственное поддерживаемое значение — Женерикурипарсероптионс = "Донтунескапепасдотсандслашес".|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
- None  
+ Отсутствуют  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
@@ -50,8 +50,8 @@ ms.locfileid: "71699598"
 |-------------|-----------------|  
 |[Элемент \<schemeSettings> (параметры URI)](schemesettings-element-uri-settings.md)|Определяет, как <xref:System.Uri> анализируется для определенных схем.|  
   
-## <a name="remarks"></a>Примечания  
- По умолчанию класс <xref:System.Uri?displayProperty=nameWithType> отменяет escape-символы в процентах, закодированные разделителями, перед выполнением сжатия пути. Это было реализовано в качестве механизма безопасности для атак, подобных следующим:  
+## <a name="remarks"></a>Заметки  
+ По умолчанию класс <xref:System.Uri?displayProperty=nameWithType> отменяет escape-символы в процентах от разделителей закодированного пути перед выполнением сжатия пути. Это было реализовано в качестве механизма безопасности для атак, подобных следующим:  
   
  `http://www.contoso.com/..%2F..%2F/Windows/System32/cmd.exe?/c+dir+c:\`  
   
@@ -59,7 +59,7 @@ ms.locfileid: "71699598"
   
  `c:\Windows\System32\cmd.exe /c dir c:\`  
   
- По этой причине класс <xref:System.Uri?displayProperty=nameWithType> сначала отменяет escape-разделители путей, а затем применяет сжатие пути. Результат передачи вредоносного URL-адреса выше в конструктор класса <xref:System.Uri?displayProperty=nameWithType> приводит к следующему URI:  
+ По этой причине <xref:System.Uri?displayProperty=nameWithType> класс сначала отменяет escape-разделители путей, а затем применяет сжатие пути. Результат передачи вредоносного URL-адреса выше в <xref:System.Uri?displayProperty=nameWithType> конструктор класса приводит к следующему URI:  
   
  `http://www.microsoft.com/Windows/System32/cmd.exe?/c+dir+c:\`  
   

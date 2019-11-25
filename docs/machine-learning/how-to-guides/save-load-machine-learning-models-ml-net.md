@@ -5,16 +5,16 @@ ms.date: 05/03/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to
-ms.openlocfilehash: f1a3131126f9f3af0bab0b1592430fbf7dddf78a
-ms.sourcegitcommit: 9bd1c09128e012b6e34bdcbdf3576379f58f3137
+ms.openlocfilehash: e3cebe979b5c279ce8cb90db5510f8758c24c2b4
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72799086"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976999"
 ---
 # <a name="save-and-load-trained-models"></a>Сохранение и загрузка обученных моделей
 
-Узнайте, как сохранять и загружать в приложение обученные модели. 
+Узнайте, как сохранять и загружать в приложение обученные модели.
 
 В процессе создания модель находится в памяти и доступна на протяжении всего жизненного цикла приложения. Однако, если приложение прекращает работу, а модель не сохранена ни на локальном компьютере, ни на удаленном ресурсе, она станет недоступна. Обычно модели используются после обучения в других приложениях для вывода либо для переобучения. В связи с этим модель необходимо сохранять. Сохраняйте и загружайте модели, выполняя действия, описанные в последующих разделах этого документа, при использовании конвейеров подготовки данных и обучения модели, подобных описанному ниже. Несмотря на то что в этом примере используется модель линейной регрессии, такая же процедура подходит и для других алгоритмов ML.NET.
 
@@ -60,7 +60,7 @@ ITransformer trainedModel = pipelineEstimator.Fit(data);
 mlContext.Model.Save(trainedModel, data.Schema, "model.zip");
 ```
 
-Поскольку большинство моделей и конвейеров подготовки наследуется из одного и того же набора классов, подписи методов сохранения и загрузки для этих компонентов будут одинаковы. В зависимости от варианта использования можно либо объединить конвейер подготовки данных и модель в единый объект [`EstimatorChain`](xref:Microsoft.ML.Data.TransformerChain%601), который выдаст один [`ITransformer`](xref:Microsoft.ML.ITransformer), или разделить их и создать таким образом для каждого отдельный [`ITransformer`](xref:Microsoft.ML.ITransformer). 
+Поскольку большинство моделей и конвейеров подготовки наследуется из одного и того же набора классов, подписи методов сохранения и загрузки для этих компонентов будут одинаковы. В зависимости от варианта использования можно либо объединить конвейер подготовки данных и модель в единый объект [`EstimatorChain`](xref:Microsoft.ML.Data.TransformerChain%601), который выдаст один [`ITransformer`](xref:Microsoft.ML.ITransformer), или разделить их и создать таким образом для каждого отдельный [`ITransformer`](xref:Microsoft.ML.ITransformer).
 
 ## <a name="save-a-model-locally"></a>Сохранение модели на локальном компьютере
 
@@ -69,7 +69,7 @@ mlContext.Model.Save(trainedModel, data.Schema, "model.zip");
 1. [`ITransformer`](xref:Microsoft.ML.ITransformer) модели;
 2. [`DataViewSchema`](xref:Microsoft.ML.DataViewSchema) ожидаемых входных данных [`ITransformer`](xref:Microsoft.ML.ITransformer).
 
-После обучения модели вызовите метод [`Save`](xref:Microsoft.ML.ModelOperationsCatalog.Save*), чтобы сохранить обученную модель в файл с именем `model.zip`, используя `DataViewSchema` входных данных. 
+После обучения модели вызовите метод [`Save`](xref:Microsoft.ML.ModelOperationsCatalog.Save*), чтобы сохранить обученную модель в файл с именем `model.zip`, используя `DataViewSchema` входных данных.
 
 ```csharp
 // Save Trained Model
@@ -78,7 +78,7 @@ mlContext.Model.Save(trainedModel, data.Schema, "model.zip");
 
 ## <a name="load-a-model-stored-locally"></a>Загрузка модели, сохраненной на локальном компьютере
 
-Модели, сохраненные на локальном компьютере, можно использовать в других процессах или приложениях, таких как `ASP.NET Core` и `Serverless Web Applications`. Дополнительные сведения см. в статьях [Использование ML.NET в веб-API](./serve-model-web-api-ml-net.md) и [Развертывание бессерверного веб-приложения ML.NET](./serve-model-serverless-azure-functions-ml-net.md). 
+Модели, сохраненные на локальном компьютере, можно использовать в других процессах или приложениях, таких как `ASP.NET Core` и `Serverless Web Applications`. Дополнительные сведения см. в статьях [Использование ML.NET в веб-API](./serve-model-web-api-ml-net.md) и [Развертывание бессерверного веб-приложения ML.NET](./serve-model-serverless-azure-functions-ml-net.md).
 
 В отдельном приложении или процессе вызовите метод [`Load`](xref:Microsoft.ML.ModelOperationsCatalog.Load*) с указанием пути к файлу, чтобы загрузить в приложение обученную модель.
 
@@ -102,7 +102,7 @@ MLContext mlContext = new MLContext();
 DataViewSchema modelSchema;
 ITransformer trainedModel;
 
-// Load data prep pipeline and trained model 
+// Load data prep pipeline and trained model
 using (HttpClient client = new HttpClient())
 {
     Stream modelFile = await client.GetStreamAsync("<YOUR-REMOTE-FILE-LOCATION>");
@@ -151,7 +151,7 @@ mlContext.Model.Save(dataPrepTransformer, data.Schema, "data_preparation_pipelin
 mlContext.Model.Save(trainedModel, transformedData.Schema, "model.zip");
 ```
 
-### <a name="load-data-preparation-pipeline-and-trained-model"></a>Загрузка конвейера подготовки данных и обученной модели 
+### <a name="load-data-preparation-pipeline-and-trained-model"></a>Загрузка конвейера подготовки данных и обученной модели
 
 Для одновременной загрузки конвейера подготовки данных и обученной модели в отдельный процесс или приложение используйте следующие команды:
 

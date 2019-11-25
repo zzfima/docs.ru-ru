@@ -1,19 +1,20 @@
 ---
-title: Практическое руководство. Дозапись в текстовый файл в Visual Basic
+title: Практическое руководство. Дозапись в текстовый файл
 ms.date: 07/20/2015
 helpviewer_keywords:
 - I/O [Visual Basic], appending to files
 - I/O [Visual Basic], My.Computer.FileSystem.WriteAllText method
 - I/O [Visual Basic], WriteAllText method
 ms.assetid: bbbd7fb5-f169-41a9-b53f-520ea9613913
-ms.openlocfilehash: e855293ac3636049520a85abdf685091d437bb60
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 97bcb5c511452e418df010f12d4b63f04251d021
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64628910"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348875"
 ---
 # <a name="how-to-append-to-text-files-in-visual-basic"></a>Практическое руководство. Дозапись в текстовый файл в Visual Basic
+
 Метод <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A> можно использовать для добавления данных в текстовый файл, задав для параметра `append` значение `True`.  
   
 ### <a name="to-append-to-a-text-file"></a>Добавление данных в текстовый файл  
@@ -25,6 +26,7 @@ ms.locfileid: "64628910"
      [!code-vb[VbFileIOWrite#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIOWrite/VB/Class1.vb#6)]  
   
 ## <a name="robust-programming"></a>Отказоустойчивость  
+
  При следующих условиях возможно возникновение исключения:  
   
 - Путь является недопустимым, так как он представляет собой строку нулевой длины (пустую строку), либо содержит только пробелы, либо содержит недопустимые знаки, либо представляет собой путь к устройству (начинается с символов \\\\.\\) (<xref:System.ArgumentException>).  

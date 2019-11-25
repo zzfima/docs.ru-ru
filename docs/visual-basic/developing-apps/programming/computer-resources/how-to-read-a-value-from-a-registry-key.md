@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Чтение значения из раздела реестра в Visual Basic
+title: Практическое руководство. Чтение значения из раздела реестра
 ms.date: 07/20/2015
 helpviewer_keywords:
 - registry keys [Visual Basic], determining if a value exists in
@@ -8,14 +8,15 @@ helpviewer_keywords:
 - registry keys [Visual Basic], reading from
 - registry [Visual Basic], reading
 ms.assetid: 775d0a57-68c9-464e-8949-9a39bd29cc64
-ms.openlocfilehash: 36183290a1ffdf4216eb845625aa38d63739eff6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 73c32aefe06a68bb42fcb5f4615da0927e57e892
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662751"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345606"
 ---
 # <a name="how-to-read-a-value-from-a-registry-key-in-visual-basic"></a>Практическое руководство. Чтение значения из раздела реестра в Visual Basic
+
 Для чтения значений из реестра Windows можно использовать метод `GetValue` объекта `My.Computer.Registry`.  
   
  Если раздел (в данном случае "Software\MyApp") не существует, возникает исключение. Если `ValueName` (в данном случае "Name") не существует, возвращается `Nothing`.  
@@ -39,6 +40,7 @@ ms.locfileid: "64662751"
      [!code-vb[VbResourceTasks#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#12)]  
   
 ## <a name="robust-programming"></a>Отказоустойчивость  
+
  Реестр содержит разделы верхнего уровня или корневые разделы, которые используются для хранения данных. Например, корневой раздел HKEY_LOCAL_MACHINE используется для хранения параметров уровня компьютера, используемых всеми пользователями, тогда как HKEY_CURRENT_USER используется для хранения данных для отдельного пользователя.  
   
  При следующих условиях возможно возникновение исключения:  
@@ -50,6 +52,7 @@ ms.locfileid: "64662751"
 - Имя ключа превышает ограничение в 255 символов (<xref:System.ArgumentException>).  
   
 ## <a name="net-framework-security"></a>Безопасность платформы .NET Framework  
+
  Для запуска этого процесса сборке нужен уровень привилегий, предоставляемый классом <xref:System.Security.Permissions.RegistryPermission>. Если процесс выполняется в контексте с частичным доверием, он может сгенерировать исключение из-за недостатка привилегий. Аналогичным образом пользователь должен иметь правильные ACL для создания и записи параметров. Например, локальное приложение, имеющее разрешение на доступ к коду, может не иметь разрешения операционной системы. Дополнительные сведения см. в разделе [Основы управления доступом для кода](../../../../framework/misc/code-access-security-basics.md).  
   
 ## <a name="see-also"></a>См. также

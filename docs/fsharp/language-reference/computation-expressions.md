@@ -1,13 +1,13 @@
 ---
 title: Выражения вычисления
 description: Узнайте, как создать удобный синтаксис для написания вычислений в F# , которые могут быть упорядочены и объединены с помощью конструкций и привязок потока управления.
-ms.date: 03/15/2019
-ms.openlocfilehash: 2f0eb7686378766f6b379f0401589490f01a1963
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.date: 11/04/2019
+ms.openlocfilehash: c9ac0454221782a7ccb3d41850ca6aba4e20a72a
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424741"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976791"
 ---
 # <a name="computation-expressions"></a>Выражения вычисления
 
@@ -112,6 +112,34 @@ for sq in squares do
     printfn "%d" sq
 ```
 
+В большинстве случаев его можно опустить вызывающими методами. Наиболее распространенным способом опустить `yield` является оператор `->`:
+
+```fsharp
+let squares =
+    seq {
+        for i in 1..10 -> i * i
+    }
+
+for sq in squares do
+    printfn "%d" sq
+```
+
+Для более сложных выражений, которые могут выдавать множество различных значений, и, возможно, условный, просто Пропуск ключевого слова может выполнять следующие действия:
+
+```fsharp
+let weekdays includeWeekend =
+    seq {
+        "Monday"
+        "Tuesday"
+        "Wednesday"
+        "Thursday"
+        "Friday"
+        if includeWeekend then
+            "Saturday"
+            "Sunday"
+    }
+```
+
 Как и в случае с [ключевым C#словом yield в ](../../csharp/language-reference/keywords/yield.md), каждый элемент в вычислительном выражении получает обратную передачу по мере выполнения итерации.
 
 `yield` определяется членом `Yield(x)` в типе построителя, где `x` — это элемент, который необходимо вернуть.
@@ -143,6 +171,8 @@ printfn "%A" squaresAndCubes // Prints - 1; 4; 9; 1; 8; 27
 При вычислении вычислительное выражение, вызываемое `yield!`, будет возвращать возвращенные элементы по одному, сведеня результат.
 
 `yield!` определяется членом `YieldFrom(x)` в типе построителя, где `x` является коллекцией значений.
+
+В отличие от `yield`, необходимо явно указать `yield!`. Его поведение не является неявным в вычислительных выражениях.
 
 ### `return`
 
@@ -394,7 +424,7 @@ comp |> step |> step |> step |> step
 type Microsoft.FSharp.Linq.QueryBuilder with
 
     [<CustomOperation("existsNot")>]
-    member __.ExistsNot (source: QuerySource<'T, 'Q>, predicate) =
+    member _.ExistsNot (source: QuerySource<'T, 'Q>, predicate) =
         Enumerable.Any (source.Source, Func<_,_>(predicate)) |> not
 ```
 

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Network
 ms.assetid: 31b44dd3-b903-4a48-8419-40419a3e4038
-ms.openlocfilehash: 65b15e61acaa39c9bfc4e0bd81b26f5a211bd1f1
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: bc0604fd33d06521727c9aa0302ed313d8a2305f
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71047551"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428230"
 ---
 # <a name="networkinformation"></a>NetworkInformation
 Пространство имен <xref:System.Net.NetworkInformation> содержит классы для программного сбора информации о событиях, изменениях, статистике и свойствах сети. Можно также определить доступность удаленного узла с помощью класса <xref:System.Net.NetworkInformation.Ping?displayProperty=nameWithType>.  
@@ -26,6 +26,9 @@ ms.locfileid: "71047551"
 ## <a name="see-also"></a>См. также
 
 - [Примеры сетевого программирования](network-programming-samples.md)
-- [Пример сетевых информационных технологий](https://go.microsoft.com/fwlink/?LinkID=179564)
-- [Пример технологии средства NetStat](https://go.microsoft.com/fwlink/?LinkID=179562)
-- [Пример клиентской технологии проверки связи](https://go.microsoft.com/fwlink/?LinkID=179565)
+
+<!-- to-do: review sample links
+- [Network Information Technology Sample](https://archive.msdn.microsoft.com/nclsamples/Wiki/View.aspx?title=Network%20Information)
+- [NetStat Tool Technology Sample](https://archive.msdn.microsoft.com/nclsamples/Wiki/View.aspx?title=NetStat%20Tool)
+- [Ping Client Technology Sample](https://archive.msdn.microsoft.com/nclsamples/Wiki/View.aspx?title=Ping%20Client)
+-->

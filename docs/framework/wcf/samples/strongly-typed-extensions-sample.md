@@ -2,12 +2,12 @@
 title: Пример строго типизированных расширений
 ms.date: 03/30/2017
 ms.assetid: 02220f11-1a83-441c-9e5a-85f9a9367572
-ms.openlocfilehash: 5ee2f13df9d3c0841b3e8b62b1633ea4520d3860
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 8dc6bca87989b1ee8e1ee440b0d64e2c196cc28f
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73421516"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73978238"
 ---
 # <a name="strongly-typed-extensions-sample"></a>Пример строго типизированных расширений
 В этом примере используется класс <xref:System.ServiceModel.Syndication.SyndicationFeed>. Однако показанные в примере шаблоны можно использовать со всеми классами Syndication, которые поддерживают данные расширения.  
@@ -90,7 +90,7 @@ public class InReplyToElement : IXmlSerializable
   
  Класс `InReplyToElement` реализует интерфейс <xref:System.Xml.Serialization.IXmlSerializable>, который позволяет напрямую управлять тем, как экземпляры объектов считываются из XML и записываются в XML. Метод `ReadXml` сначала считывает значения свойств `Ref`, `HRef`, `Source` и `MediaType` из переданного ему объекта <xref:System.Xml.XmlReader>. Все неизвестные атрибуты хранятся в коллекции <xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A>. После чтения всех атрибутов вызывается метод <xref:System.Xml.XmlReader.ReadStartElement>, чтобы перевести средство чтения к следующему элементу. Поскольку у моделируемого этим классом элемента нет обязательных дочерних элементов, дочерние элементы буферизуются в экземплярах `XElement` и хранятся в коллекции <xref:System.ServiceModel.Syndication.SyndicationFeed.ElementExtensions%2A>, как показано в следующем примере кода.  
   
-```csharp  
+```csharp
 public void ReadXml(System.Xml.XmlReader reader)  
 {  
     bool isEmpty = reader.IsEmptyElement;  
@@ -146,7 +146,7 @@ public void ReadXml(System.Xml.XmlReader reader)
   
  В `WriteXml` в методе `InReplyToElement` сначала записывает значения из свойств `Ref`, `HRef`, `Source` и `MediaType` в виде атрибутов XML (`WriteXml` не отвечает за запись самого внешнего элемента, поскольку это делает сторона, вызывающая `WriteXml`). Кроме того, он записывает содержимое свойств <xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A> и <xref:System.ServiceModel.Syndication.SyndicationFeed.ElementExtensions%2A> в средство записи, как показано в следующем примере кода.  
   
-```csharp  
+```csharp
 public void WriteXml(System.Xml.XmlWriter writer)  
 {  
     if (this.Ref != null)  
@@ -189,7 +189,7 @@ public void WriteXml(System.Xml.XmlWriter writer)
   
  Класс `ThreadedFeed` наследует классу `SyndicationFeed` и переопределяет метод `OnCreateItem`, чтобы он возвращал элементы `ThreadedItem`. Кроме того, он реализует метод для доступа к коллекции `Items` в виде `ThreadedItems`, как показано в следующем примере кода.  
   
-```csharp  
+```csharp
 public class ThreadedFeed : SyndicationFeed  
 {  
     public ThreadedFeed()  
@@ -213,7 +213,7 @@ public class ThreadedFeed : SyndicationFeed
   
  Класс `ThreadedItem` наследует классу `SyndicationItem` и делает элемент `InReplyToElement` строго типизированным свойством. Это делает возможным удобный программный доступ к данным расширений `InReplyTo`. Кроме того, он реализует методы `TryParseElement` и `WriteElementExtensions` для чтения и записи данных расширений, как показано в следующем примере кода.  
   
-```csharp  
+```csharp
 public class ThreadedItem : SyndicationItem  
 {  
     private InReplyToElement inReplyTo;  

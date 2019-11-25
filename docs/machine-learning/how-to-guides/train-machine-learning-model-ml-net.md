@@ -5,12 +5,12 @@ ms.date: 08/29/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to, title-hack-0625
-ms.openlocfilehash: fc735f28bad91b9714d7e6bf2a9c7c620acacc4d
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 0e0f43225b9bf243c31b3095817bdcbdb3123012
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929349"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976759"
 ---
 # <a name="train-and-evaluate-a-model"></a>Обучение и оценка модели
 
@@ -98,9 +98,9 @@ IDataView testData = dataSplit.TestSet;
 
 ### <a name="working-with-expected-column-types"></a>Работа с ожидаемыми типами столбцов
 
-Алгоритмы машинного обучения в ML.NET в качестве входных данных ожидают вектор с плавающей запятой известного размера. Если все данные уже переведены в числовой формат и предназначены для одновременной обработки (пиксели изображения), примените к модели данных атрибут [`VectorType`](xref:Microsoft.ML.Data.VectorTypeAttribute). 
+Алгоритмы машинного обучения в ML.NET в качестве входных данных ожидают вектор с плавающей запятой известного размера. Если все данные уже переведены в числовой формат и предназначены для одновременной обработки (пиксели изображения), примените к модели данных атрибут [`VectorType`](xref:Microsoft.ML.Data.VectorTypeAttribute).
 
-Если не все данные являются числовыми, а вы хотите к каждому столбцу применить отдельное преобразование данных, используйте метод [`Concatenate`](xref:Microsoft.ML.TransformExtensionsCatalog.Concatenate*) после обработки каждого столбца — в результате все отдельные столбцы будут объединены в единый вектор компонентов, который будет выходными данными нового столбца. 
+Если не все данные являются числовыми, а вы хотите к каждому столбцу применить отдельное преобразование данных, используйте метод [`Concatenate`](xref:Microsoft.ML.TransformExtensionsCatalog.Concatenate*) после обработки каждого столбца — в результате все отдельные столбцы будут объединены в единый вектор компонентов, который будет выходными данными нового столбца.
 
 В следующем фрагменте кода столбцы `Size` и `HistoricalPrices` объединены в один вектор компонентов, который служит выходными данными для нового столбца с именем `Features`. Поскольку нет разницы в масштабах, [`NormalizeMinMax`](xref:Microsoft.ML.NormalizationCatalog.NormalizeMinMax*) применяется к столбцу `Features` для нормализации данных.
 
@@ -121,9 +121,9 @@ IDataView transformedTrainingData = dataPrepTransformer.Transform(trainData);
 
 ### <a name="working-with-default-column-names"></a>Работа с именами столбцов по умолчанию
 
-Если имена столбцов не указаны, алгоритмы ML.NET используют имена по умолчанию. Все инструкторы имеют параметр с именем `featureColumnName` для входных данных, алгоритма, а там, где это применимо, еще и параметр с именем `labelColumnName` для ожидаемого значения. По умолчанию используются значения `Features` и `Label` соответственно. 
+Если имена столбцов не указаны, алгоритмы ML.NET используют имена по умолчанию. Все инструкторы имеют параметр с именем `featureColumnName` для входных данных, алгоритма, а там, где это применимо, еще и параметр с именем `labelColumnName` для ожидаемого значения. По умолчанию используются значения `Features` и `Label` соответственно.
 
-Если во время предварительной обработки используется метод [`Concatenate`](xref:Microsoft.ML.TransformExtensionsCatalog.Concatenate*), который создает столбец с именем `Features`, имя столбца компонентов в параметрах алгоритма указывать необязательно, поскольку он уже существует в предварительно обработанных данных `IDataView`. Столбец меток — `CurrentPrice`, но в связи с тем, что атрибут [`ColumnName`](xref:Microsoft.ML.Data.ColumnNameAttribute) используется в модели данных, ML.NET переименовывает столбец `CurrentPrice` в `Label` и таким образом устраняет необходимость предоставлять параметр `labelColumnName` для средства оценки алгоритма машинного обучения. 
+Если во время предварительной обработки используется метод [`Concatenate`](xref:Microsoft.ML.TransformExtensionsCatalog.Concatenate*), который создает столбец с именем `Features`, имя столбца компонентов в параметрах алгоритма указывать необязательно, поскольку он уже существует в предварительно обработанных данных `IDataView`. Столбец меток — `CurrentPrice`, но в связи с тем, что атрибут [`ColumnName`](xref:Microsoft.ML.Data.ColumnNameAttribute) используется в модели данных, ML.NET переименовывает столбец `CurrentPrice` в `Label` и таким образом устраняет необходимость предоставлять параметр `labelColumnName` для средства оценки алгоритма машинного обучения.
 
 Если вы не хотите использовать имена столбцов по умолчанию, передайте имена столбцов компонентов и меток в виде параметров при определении средства оценки алгоритма машинного обучения, как показано в следующем фрагменте кода:
 
@@ -145,21 +145,21 @@ var trainedModel = sdcaEstimator.Fit(transformedTrainingData);
 
 ## <a name="extract-model-parameters"></a>Извлечение параметров модели
 
-После обучения модели извлеките полученные [`ModelParameters`](xref:Microsoft.ML.Trainers.ModelParametersBase%601) для проверки или повторного обучения. [`LinearRegressionModelParameters`](xref:Microsoft.ML.Trainers.LinearRegressionModelParameters) предоставляют смещение и полученные коэффициенты или вес обученной модели. 
+После обучения модели извлеките полученные [`ModelParameters`](xref:Microsoft.ML.Trainers.ModelParametersBase%601) для проверки или повторного обучения. [`LinearRegressionModelParameters`](xref:Microsoft.ML.Trainers.LinearRegressionModelParameters) предоставляют смещение и полученные коэффициенты или вес обученной модели.
 
 ```csharp
 var trainedModelParameters = trainedModel.Model as LinearRegressionModelParameters;
 ```
 
 > [!NOTE]
-> Другие модели включают параметры, характерные для их задач. Например, [алгоритм K-средних](xref:Microsoft.ML.Trainers.KMeansTrainer) помещает данные в кластер на основе центроидов, а [`KMeansModelParameters`](xref:Microsoft.ML.Trainers.KMeansModelParameters) содержит свойство, в котором хранятся полученные центроиды. Чтобы узнать больше, изучите [`Microsoft.ML.Trainers`документацию по API](xref:Microsoft.ML.Trainers) и выполните поиск классов, в именах которых есть `ModelParameters`. 
+> Другие модели включают параметры, характерные для их задач. Например, [алгоритм K-средних](xref:Microsoft.ML.Trainers.KMeansTrainer) помещает данные в кластер на основе центроидов, а [`KMeansModelParameters`](xref:Microsoft.ML.Trainers.KMeansModelParameters) содержит свойство, в котором хранятся полученные центроиды. Чтобы узнать больше, изучите [`Microsoft.ML.Trainers`документацию по API](xref:Microsoft.ML.Trainers) и выполните поиск классов, в именах которых есть `ModelParameters`.
 
 ## <a name="evaluate-model-quality"></a>Оценка качества модели
 
 Чтобы выбрать наиболее эффективную модель, необходимо оценить ее производительность на основе проверочных данных. Для измерения различных метрик обученной модели используйте метод [`Evaluate`](xref:Microsoft.ML.RegressionCatalog.Evaluate*).
 
 > [!NOTE]
-> Метод `Evaluate` создает различные метрики в зависимости от того, на каком компьютере выполнялась задача машинного обучения. Чтобы узнать больше, изучите [`Microsoft.ML.Data`документацию по API](xref:Microsoft.ML.Data) и выполните поиск классов, в именах которых есть `Metrics`. 
+> Метод `Evaluate` создает различные метрики в зависимости от того, на каком компьютере выполнялась задача машинного обучения. Чтобы узнать больше, изучите [`Microsoft.ML.Data`документацию по API](xref:Microsoft.ML.Data) и выполните поиск классов, в именах которых есть `Metrics`.
 
 ```csharp
 // Measure trained model performance
@@ -174,9 +174,9 @@ RegressionMetrics trainedModelMetrics = mlContext.Regression.Evaluate(testDataPr
 double rSquared = trainedModelMetrics.RSquared;
 ```
 
-В приведенном выше фрагменте кода:  
+В приведенном выше фрагменте кода:
 
-1. Проверочный набор данных подвергается предварительной обработке с использованием предварительно заданных преобразований для подготовки данных. 
+1. Проверочный набор данных подвергается предварительной обработке с использованием предварительно заданных преобразований для подготовки данных.
 2. В обученной модели машинного обучения формируются прогнозы на основе проверочных данных.
 3. В методе `Evaluate` значения в столбцу `CurrentPrice` проверочного набора данных сравниваются со столбцом `Score`, куда сохраняются новые полученные прогнозы, и рассчитываются метрики модели регрессии, одна из которых, R-квадрат, хранится в переменной `rSquared`.
 

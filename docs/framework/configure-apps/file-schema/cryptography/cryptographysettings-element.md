@@ -8,20 +8,20 @@ helpviewer_keywords:
 - cryptographySettings element
 - <cryptographySettings> element
 ms.assetid: 6201b7da-bcb7-49f7-b9f5-ba1fe05573b9
-ms.openlocfilehash: 96a8c9accc56274b5cc13dc2a871165857b3a2d9
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: ca0a9a4b37f28eb03f58de4fd9b120cb7e654e0c
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71699821"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74088645"
 ---
-# <a name="cryptographysettings-element"></a>Элемент > @no__t 0cryptographySettings
+# <a name="cryptographysettings-element"></a>\<Криптографисеттингс > элемент
 Содержит параметры шифрования.  
-  
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **\<mscorlib >** ](mscorlib-element-for-cryptography-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 **\<cryptographySettings >**  
-  
+
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> mscorlib**](mscorlib-element-for-cryptography-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<криптографисеттингс >**
+
 ## <a name="syntax"></a>Синтаксис  
   
 ```xml  
@@ -33,24 +33,24 @@ ms.locfileid: "71699821"
  В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
   
 ### <a name="attributes"></a>Атрибуты  
- Нет.  
+ Отсутствует.  
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[@no__t 1cryptoNameMapping >](cryptonamemapping-element.md)|Содержит сопоставления классов с понятными именами.|  
-|[@no__t 1oidMap >](oidmap-element.md)|Содержит сопоставления идентификатора объекта (OID) ASN. 1 для классов.|  
+|[\<Криптонамемаппинг >](cryptonamemapping-element.md)|Содержит сопоставления классов с понятными именами.|  
+|[\<Оидмап >](oidmap-element.md)|Содержит сопоставления идентификатора объекта (OID) ASN. 1 для классов.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
 |`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.|  
-|`mscorlib`|`cryptographySettings` Содержит элемент.|  
+|`mscorlib`|Содержит элемент `cryptographySettings`.|  
   
 ## <a name="example"></a>Пример  
- В следующем примере показано, как использовать элемент **\<cryptographySettings >** , чтобы содержать сопоставления имен криптографии и сопоставления OID. В этом примере среда выполнения настраивается таким образом, чтобы <xref:System.Security.Cryptography.HashAlgorithm.Create%2A?displayProperty=nameWithType> возвращал объект `MyHashClass`, а класс `MyCryptoClass` сопоставляется с идентификатором объекта 1.3.36.2.1.  
+ В следующем примере показано, как использовать элемент **\<криптографисеттингс >** для хранения сопоставлений имен криптографии и сопоставления OID. В этом примере среда выполнения настраивается так, чтобы <xref:System.Security.Cryptography.HashAlgorithm.Create%2A?displayProperty=nameWithType> возвращал объект `MyHashClass`, а класс `MyCryptoClass` сопоставляется с идентификатором объекта 1.3.36.2.1.  
   
 ```xml  
 <configuration>  
@@ -80,4 +80,4 @@ ms.locfileid: "71699821"
 
 - [Схема файла конфигурации](../index.md)
 - [Схема параметров шифрования](index.md)
-- [Cryptographic Services](../../../../standard/security/cryptographic-services.md)
+- [Службы криптографии](../../../../standard/security/cryptographic-services.md)

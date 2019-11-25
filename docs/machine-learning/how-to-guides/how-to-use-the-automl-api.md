@@ -1,14 +1,14 @@
 ---
 title: Использование API автоматизированного машинного обучения в ML.NET
 description: API автоматизированного машинного обучения в ML.NET автоматизирует процесс создания моделей и создает модель, готовую к развертыванию. Сведения о параметрах, которые можно использовать для настройки задач автоматизированного машинного обучения.
-ms.date: 04/24/2019
+ms.date: 11/7/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: bb1cd66e7341f2ada57d533d8b2dcbb48f08f726
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: c1c18decc48bc1499aa55210becff305cdec4a53
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774551"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73977119"
 ---
 # <a name="how-to-use-the-mlnet-automated-machine-learning-api"></a>Использование API автоматизированного машинного обучения в ML.NET
 
@@ -21,7 +21,7 @@ ms.locfileid: "72774551"
 
 Автоматизированное машинное обучение поддерживает загрузку набора данных в [IDataView](xref:Microsoft.ML.IDataView). Данные могут иметь форму файлов данных с разделением знаками табуляции (TSV) и файлов данных с разделителями-запятыми (CSV).
 
-Пример
+Пример.
 
 ```csharp
 using Microsoft.ML;
@@ -32,6 +32,7 @@ using Microsoft.ML.AutoML;
 ```
 
 ## <a name="select-the-machine-learning-task-type"></a>Выбор типа задачи машинного обучения
+
 Прежде чем создавать эксперимент, определите, какую задачу машинного обучения нужно решить. Автоматизированное машинное обучение поддерживает следующие задачи машинного обучения:
 
 * Двоичная классификация
@@ -62,7 +63,7 @@ using Microsoft.ML.AutoML;
 
 ## <a name="configure-experiment-settings"></a>Настройка параметров эксперимента
 
-Эксперименты можно гибко настраивать. Полный список параметров конфигурации см. в [документации по API AutoML](https://docs.microsoft.com/dotnet/api/?view=automl-dotnet).
+Эксперименты можно гибко настраивать. Полный список параметров конфигурации см. в [документации по API AutoML](https://docs.microsoft.com/dotnet/api/microsoft.ml.automl?view=ml-dotnet-preview).
 
 Ниже приведены некоторые примеры таких ситуаций.
 

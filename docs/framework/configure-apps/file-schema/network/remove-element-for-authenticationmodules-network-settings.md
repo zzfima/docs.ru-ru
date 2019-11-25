@@ -10,21 +10,21 @@ helpviewer_keywords:
 - <remove> element, authenticationModules
 - authenticationModules, remove element
 ms.assetid: abf79949-b05c-465a-b51c-bbeda9a74173
-ms.openlocfilehash: 9b73c0dc1fe161616c08ef0501241d55e9fea9bc
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 2113b2b81ae347b398b0f25028dc6c361aec8447
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71697931"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74089183"
 ---
-# <a name="remove-element-for-authenticationmodules-network-settings"></a>Элемент > @no__t 0remove для authenticationModules (параметры сети)
+# <a name="remove-element-for-authenticationmodules-network-settings"></a>\<удалить элемент > для authenticationModules (параметры сети)
 Удаляет модуль проверки подлинности из приложения.  
-  
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **@no__t -4system. NET >** ](system-net-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<authenticationModules >** ](authenticationmodules-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<remove >**  
-  
+
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System. net >** ](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<authenticationModules >** ](authenticationmodules-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<удалить >**
+
 ## <a name="syntax"></a>Синтаксис  
   
 ```xml  
@@ -43,7 +43,7 @@ ms.locfileid: "71697931"
 |**type**|Имя удаляемого модуля проверки подлинности.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
- Нет.  
+ Отсутствует.  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
@@ -51,7 +51,7 @@ ms.locfileid: "71697931"
 |-----------------|---------------------|  
 |[authenticationModules](authenticationmodules-element-network-settings.md)|Указывает модули, используемые для проверки подлинности сетевых запросов.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
  Элемент `remove` удаляет модули проверки подлинности, которые были определены ранее в файле конфигурации или на более высоком уровне иерархии конфигурации.  
   
  Значение атрибута `type` должно быть допустимым именем класса.  

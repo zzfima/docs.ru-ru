@@ -1,22 +1,24 @@
 ---
-title: Классы, используемые при файловом вводе-выводе в .NET Framework, и файловая система (Visual Basic)
+title: Классы, используемые при файловом вводе-выводе в .NET Framework, и файловая система
 ms.date: 07/20/2015
 helpviewer_keywords:
 - file I/O classes
 ms.assetid: 4a5ca924-eea8-4a95-a5f0-6ac10de276a3
-ms.openlocfilehash: f9d898756b6b17ae69d1af7dd747c20a26d88417
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: fe70f8fb655579049bb36fc324d04530259d25f2
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67347999"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348930"
 ---
 # <a name="classes-used-in-net-framework-file-io-and-the-file-system-visual-basic"></a>Классы, используемые при файловом вводе-выводе в .NET Framework, и файловая система (Visual Basic)
+
 В приведенных ниже таблицах перечислены классы, обычно используемые для файлового ввода-вывода в .NET Framework. Они разделены на классы файлового ввода-вывода, классы для создания потоков и классы для чтения и записи в поток.  
   
 Более полный список см. в разделе [Общие сведения о библиотеке классов](../../../../standard/class-library-overview.md).  
   
 ## <a name="basic-io-classes-for-files-drives-and-directories"></a>Основные классы ввода-вывода для файлов, каталогов и дисков  
+
  В приведенной ниже таблице перечислены и описаны основные классы, используемые для файлового ввода-вывода.  
   
 |Класс|ОПИСАНИЕ|  
@@ -34,6 +36,7 @@ ms.locfileid: "67347999"
 |<xref:System.Security.Permissions.FileIOPermission?displayProperty=nameWithType>|Управляет доступом к файлам и папкам, определяя разрешения <xref:System.Security.Permissions.FileIOPermissionAttribute.Read%2A>, <xref:System.Security.Permissions.FileIOPermissionAttribute.Write%2A>, <xref:System.Security.Permissions.FileIOPermissionAttribute.Append%2A> и <xref:System.Security.Permissions.FileIOPermissionAttribute.PathDiscovery%2A>.|  
   
 ## <a name="classes-used-to-create-streams"></a>Классы, используемые для создания потоков  
+
  В приведенной ниже таблице перечислены и описаны основные классы, используемые для создания потоков.  
   
 |Класс|ОПИСАНИЕ|  
@@ -45,6 +48,7 @@ ms.locfileid: "67347999"
 |<xref:System.Security.Cryptography.CryptoStream?displayProperty=nameWithType>|Определяет поток, который связывает потоки данных с криптографическими преобразованиями.|  
   
 ## <a name="classes-used-to-read-from-and-write-to-streams"></a>Классы, используемые для чтения из потоков и записи в них  
+
  В приведенной ниже таблице описаны некоторые классы, используемые для чтения из файлов и записи в них с помощью потоков.  
   
 |**Класс**|**Описание**|  

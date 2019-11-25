@@ -3,12 +3,12 @@ title: Установка средства ML.NET CLI
 description: Обзор и установка средства ML.NET CLI.
 ms.date: 04/16/2019
 ms.custom: ''
-ms.openlocfilehash: baced9bbcc72153458d42d4b6d8206921bf187b8
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: feeb4832b5bbd39f28ac2c6f6caa40d60b4f3aa9
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117999"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73977083"
 ---
 # <a name="how-to-install-the-mlnet-command-line-interface-cli-tool"></a>Установка средства ML.NET CLI
 
@@ -29,7 +29,7 @@ ms.locfileid: "71117999"
 
 ## <a name="install"></a>Установка
 
-Средство ML.NET CLI устанавливается так же, как и любое другое глобальное средство .NET. Для этого используйте команду `dotnet tool install` .NET Core CLI. 
+Средство ML.NET CLI устанавливается так же, как и любое другое глобальное средство .NET. Для этого используйте команду `dotnet tool install` .NET Core CLI.
 
 В примере ниже показано, как установить ML.NET CLI в расположении веб-канала NuGet по умолчанию.
 
@@ -112,7 +112,7 @@ dotnet tool update -g mlnet
 
     ```console
     echo $profile
-    ``` 
+    ```
 
 (В других оболочках [найдите](https://github.com/dotnet/System.CommandLine/issues?q=is%3Aissue+is%3Aopen+label%3A%22shell+suggestion%22) или откройте [соответствующее обращение](https://github.com/dotnet/System.CommandLine/issues).)
 
@@ -136,5 +136,5 @@ ML.NET CLI можно установить в каталоге по умолча
 
 - [Руководство по началу работы со средством ML.NET CLI](../tutorials/mlnet-cli.md)
 - [Автоматическое обучение моделей с помощью средства ML.NET CLI](../automate-training-with-cli.md)
-- [Справочное руководство по команде auto-train в ML.NET CLI](../reference/ml-net-cli-reference.md) 
+- [Справочное руководство по команде auto-train в ML.NET CLI](../reference/ml-net-cli-reference.md)
 - [Данные телеметрии в интерфейсе командной строки ML.NET](../resources/ml-net-cli-telemetry.md)

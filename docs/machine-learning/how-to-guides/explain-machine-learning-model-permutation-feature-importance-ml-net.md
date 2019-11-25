@@ -5,12 +5,12 @@ ms.date: 08/29/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc,how-to
-ms.openlocfilehash: 8090e4565a7e55aaa9cc9939e61eb728a169de8d
-ms.sourcegitcommit: 878ca7550b653114c3968ef8906da2b3e60e3c7a
+ms.openlocfilehash: 4bad8b0ed17a34ba290bf9c00d65cc3f000a2acf
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71736875"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976689"
 ---
 # <a name="explain-model-predictions-using-permutation-feature-importance"></a>Объяснение прогнозов модели с помощью функции PFI
 
@@ -18,15 +18,15 @@ ms.locfileid: "71736875"
 
 Модели машинного обучения часто представляются черными ящиками, которые принимают входные данные и создают выходные данные. Промежуточные этапы или взаимодействие между компонентами, которые влияют на выходные данные, распознаются редко. Машинное обучение проникает во все аспекты нашей повседневной жизни, такие как здравоохранение, а значит, очень важно понимать, почему модель машинного обучения принимает именно те решения, которые она принимает. Например, если диагностика осуществляется на основе модели машинного обучения, у медицинских работников должен быть способ изучить факторы, которые на нее повлияли. Правильная диагностика намного повышает шансы пациента на быстрое выздоровление. Таким образом, чем объяснение модели лучше, тем увереннее медицинские работники будут принимать или отклонять принятые моделью решения.
 
-Для объяснения моделей применяются различные приемы, одной из которых является PFI. PFI — это прием, который используется для объяснения моделей классификации и регрессии и основан на работе [Бреймана *Random Forests* (Случайные леса)](https://www.stat.berkeley.edu/~breiman/randomforest2001.pdf) (см. раздел 10). В общем смысле он случайным образом тасует весь набор данных по одному компоненту за раз и рассчитывает, на сколько снижается метрика эффективности, отражающая интерес. Чем больше изменение, тем важнее компонент. 
+Для объяснения моделей применяются различные приемы, одной из которых является PFI. PFI — это прием, который используется для объяснения моделей классификации и регрессии и основан на работе [Бреймана *Random Forests* (Случайные леса)](https://www.stat.berkeley.edu/~breiman/randomforest2001.pdf) (см. раздел 10). В общем смысле он случайным образом тасует весь набор данных по одному компоненту за раз и рассчитывает, на сколько снижается метрика эффективности, отражающая интерес. Чем больше изменение, тем важнее компонент.
 
 Выделив самые важные компоненты, сборщики модели могут сосредоточиться на работе с подмножеством более значимых компонентов и таким образом уменьшить шум и время обучения.
 
 ## <a name="load-the-data"></a>Загрузка данных
 
-Компоненты набора данных, которые используются в этом примере, перечислены в столбцах 1–12. Цель — спрогнозировать `Price`. 
+Компоненты набора данных, которые используются в этом примере, перечислены в столбцах 1–12. Цель — спрогнозировать `Price`.
 
-| Столбец | Функция | ОПИСАНИЕ 
+| Столбец | Функция | ОПИСАНИЕ
 | --- | --- | --- |
 | 1 | CrimeRate | Уровень преступности на душу населения
 | 2 | ResidentialZones | Жилые районы в городе
@@ -103,7 +103,7 @@ class HousingPriceData
 
 ```csharp
 // 1. Get the column name of input features.
-string[] featureColumnNames = 
+string[] featureColumnNames =
     data.Schema
         .Select(column => column.Name)
         .Where(columnName => columnName != "Label").ToArray();
@@ -131,7 +131,7 @@ var sdcaModel = sdcaEstimator.Fit(preprocessedTrainData);
 В ML.NET используйте метод [`PermutationFeatureImportance`](xref:Microsoft.ML.PermutationFeatureImportanceExtensions) для решения соответствующей задачи.
 
 ```csharp
-ImmutableArray<RegressionMetricsStatistics> permutationFeatureImportance = 
+ImmutableArray<RegressionMetricsStatistics> permutationFeatureImportance =
     mlContext
         .Regression
         .PermutationFeatureImportance(sdcaModel, preprocessedTrainData, permutationCount:3);
@@ -139,7 +139,7 @@ ImmutableArray<RegressionMetricsStatistics> permutationFeatureImportance =
 
 В результате применения метода [`PermutationFeatureImportance`](xref:Microsoft.ML.PermutationFeatureImportanceExtensions) в проверочном наборе данных создается [`ImmutableArray`](xref:System.Collections.Immutable.ImmutableArray) из объектов [`RegressionMetricsStatistics`](xref:Microsoft.ML.Data.RegressionMetricsStatistics). [`RegressionMetricsStatistics`](xref:Microsoft.ML.Data.RegressionMetricsStatistics) предоставляет сводные статистические данные, такие как среднее и стандартное отклонение, для нескольких значений параметра [`RegressionMetrics`](xref:Microsoft.ML.Data.RegressionMetrics), количество которых равно числу перестановок, которое определяет параметр `permutationCount`.
 
-Важность, или в данном случае среднее абсолютное снижение метрики R-квадрат, рассчитанное методом [`PermutationFeatureImportance`](xref:Microsoft.ML.PermutationFeatureImportanceExtensions), можно отсортировать по убыванию.  
+Важность, или в данном случае среднее абсолютное снижение метрики R-квадрат, рассчитанное методом [`PermutationFeatureImportance`](xref:Microsoft.ML.PermutationFeatureImportanceExtensions), можно отсортировать по убыванию.
 
 ```csharp
 // Order features by importance
@@ -156,7 +156,7 @@ foreach (var feature in featureImportanceMetrics)
 }
 ```
 
-При печати значений для каждого параметра в `featureImportanceMetrics` выдается результат представленного ниже вида. У вас результаты будут другими, поскольку эти значения зависят от предоставленных данных.  
+При печати значений для каждого параметра в `featureImportanceMetrics` выдается результат представленного ниже вида. У вас результаты будут другими, поскольку эти значения зависят от предоставленных данных.
 
 | Функция | Изменение в R-квадрат |
 |:--|:--:|

@@ -2,12 +2,12 @@
 title: Основные сведения о проблемах и исключениях WebRequest
 ms.date: 03/30/2017
 ms.assetid: 74a361a5-e912-42d3-8f2e-8e9a96880a2b
-ms.openlocfilehash: c5712467cdebb854d09cb55c29878cb8b553f271
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: af859d9ad8ac69bfe636384832f0fb62e0771b48
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71047092"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448398"
 ---
 # <a name="understanding-webrequest-problems-and-exceptions"></a>Основные сведения о проблемах и исключениях WebRequest
 Класс <xref:System.Net.WebRequest> и его производные классы (<xref:System.Net.HttpWebRequest>, <xref:System.Net.FtpWebRequest> и <xref:System.Net.FileWebRequest>) сообщают об аномальных состояниях, создавая исключения. Иногда способ решения проблемы не очевиден.  
@@ -26,7 +26,7 @@ ms.locfileid: "71047092"
 |<xref:System.Net.WebExceptionStatus.ConnectionClosed>|Приложение попыталось выполнить запись в сокет, который уже закрыт.|Клиент или сервер перегружен. Уменьшите нагрузку.<br /><br /> Увеличьте значение параметра <xref:System.Net.ServicePointManager.DefaultConnectionLimit%2A>.<br /><br /> Сведения об изменении параметров производительности веб-службы см. на странице <https://support.microsoft.com/?id=821268>.|  
 |<xref:System.Net.WebExceptionStatus.MessageLengthLimitExceeded>|Превышена установленная максимальная длина сообщения (<xref:System.Net.HttpWebRequest.MaximumResponseHeadersLength%2A>).|Увеличьте значение свойства <xref:System.Net.HttpWebRequest.MaximumResponseHeadersLength%2A>.|  
 |<xref:System.Net.WebExceptionStatus.ProxyNameResolutionFailure>|Службе доменных имен не удалось разрешить имя узла прокси-сервера.|Правильно настройте прокси-сервер. См. раздел <https://support.microsoft.com/?id=318140>.<br /><br /> Запретите <xref:System.Net.HttpWebRequest> использовать прокси-сервер, присвоив свойству <xref:System.Net.HttpWebRequest.Proxy%2A> значение `null`.|  
-|<xref:System.Net.WebExceptionStatus.ServerProtocolViolation>|Ответ от сервера не является допустимым ответом HTTP. Эта проблема возникает, если платформа .NET Framework определяет, что ответ от сервера не соответствует требованиям документа RFC HTTP 1.1. Причиной может быть то, что ответ содержит неправильные заголовки или разделители заголовков. В документе RFC 2616 определяется протокол HTTP 1.1 и допустимый формат ответа от сервера. Дополнительные сведения см. в документе [RFC 2616 — Hypertext Transfer Protocol — HTTP/1.1](https://go.microsoft.com/fwlink/?LinkID=147388) (RFC 2616 — протокол передачи гипертекста — HTTP/1.1) на веб-сайте [Internet Engineering Task Force (IETF)](https://www.ietf.org/).|Получите сетевую трассировку транзакции и изучите заголовки в ответе.<br /><br /> Если приложению требуется ответ от сервера без синтаксического разбора (это может создать угрозу безопасности), присвойте `useUnsafeHeaderParsing` значение `true` в файле конфигурации. См. раздел [Элемент \<httpWebRequest> (сетевые параметры)](../configure-apps/file-schema/network/httpwebrequest-element-network-settings.md).|  
+|<xref:System.Net.WebExceptionStatus.ServerProtocolViolation>|Ответ от сервера не является допустимым ответом HTTP. Эта проблема возникает, если платформа .NET Framework определяет, что ответ от сервера не соответствует требованиям документа RFC HTTP 1.1. Причиной может быть то, что ответ содержит неправильные заголовки или разделители заголовков. В документе RFC 2616 определяется протокол HTTP 1.1 и допустимый формат ответа от сервера. Дополнительные сведения см. в документе [RFC 2616 — Hypertext Transfer Protocol — HTTP/1.1](https://tools.ietf.org/html/rfc2616) (RFC 2616 — протокол передачи гипертекста — HTTP/1.1) на веб-сайте [Internet Engineering Task Force (IETF)](https://www.ietf.org/).|Получите сетевую трассировку транзакции и изучите заголовки в ответе.<br /><br /> Если приложению требуется ответ от сервера без синтаксического разбора (это может создать угрозу безопасности), присвойте `useUnsafeHeaderParsing` значение `true` в файле конфигурации. См. раздел [Элемент \<httpWebRequest> (сетевые параметры)](../configure-apps/file-schema/network/httpwebrequest-element-network-settings.md).|  
   
 ## <a name="see-also"></a>См. также
 

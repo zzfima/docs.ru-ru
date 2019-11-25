@@ -8,20 +8,20 @@ helpviewer_keywords:
 - settings element
 - <settings> element
 ms.assetid: 189ce989-c39b-427d-b004-6b82a668b931
-ms.openlocfilehash: ba08f630dc602c950da309bf29482d85b41af7ef
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: d510c445c585a36005ed415b14188efc4be03984
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71697682"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74089108"
 ---
-# <a name="settings-element-network-settings"></a>Элемент > @no__t 0settings (параметры сети)
+# <a name="settings-element-network-settings"></a>Элемент > параметров \<(параметры сети)
 Настраивает основные параметры сети для пространства имен <xref:System.Net?displayProperty=nameWithType>.  
-  
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **@no__t -4system. NET >** ](system-net-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 **\<settings >**  
-  
+
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System. net >** ](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**Параметры**\<
+
 ## <a name="syntax"></a>Синтаксис  
   
 ```xml  
@@ -40,7 +40,7 @@ ms.locfileid: "71697682"
  В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
   
 ### <a name="attributes"></a>Атрибуты  
- Нет.  
+ Отсутствует.  
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
@@ -49,10 +49,10 @@ ms.locfileid: "71697682"
 |[httpListener](httplistener-element-network-settings.md)|Настраивает параметры, используемые классом <xref:System.Net.HttpListener>.|  
 |[httpWebRequest](httpwebrequest-element-network-settings.md)|Настраивает параметры веб-запроса.|  
 |[Протокол](ipv6-element-network-settings.md)|Включает поддержку протокола IP версии 6 (IPv6).|  
-|[Элемент > @no__t 1performanceCounter (параметры сети)](performancecounter-element-network-settings.md)|Включает счетчики производительности сети.|  
+|[\<элемента > performanceCounter (параметры сети)](performancecounter-element-network-settings.md)|Включает счетчики производительности сети.|  
 |[servicePointManager](servicepointmanager-element-network-settings.md)|Настраивает подключения к сетевым ресурсам.|  
 |[фиксатор](socket-element-network-settings.md)|Указывает, используют ли операции сокета порты завершения.|  
-|[Элемент > @no__t 1webProxyScript (параметры сети)](webproxyscript-element-network-settings.md)|Настраивает характеристики сценария, используемого для обнаружения веб-прокси.|  
+|[Элемент \<Вебпроксискрипт > (параметры сети)](webproxyscript-element-network-settings.md)|Настраивает характеристики сценария, используемого для обнаружения веб-прокси.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
@@ -60,7 +60,7 @@ ms.locfileid: "71697682"
 |-------------|-----------------|  
 |[system.net](system-net-element-network-settings.md)|Содержит параметры сети, определяющие способ подключения .NET Framework к Интернету.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
   
 ## <a name="configuration-files"></a>Файлы конфигурации  
  Этот элемент может использоваться в файле конфигурации приложения или в файле конфигурации компьютера (Machine.config).  

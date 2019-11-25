@@ -8,21 +8,21 @@ helpviewer_keywords:
 - <ipv6> element
 - ipv6 element
 ms.assetid: 10b79aef-327b-4718-a892-e11f55e4d169
-ms.openlocfilehash: bf04b16682c2c1bc677fecbd6dc966090c77e1da
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: c16949171d082bd02abb0a02db83c2e71c2f17df
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71698132"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74088134"
 ---
 # <a name="ipv6-element-network-settings"></a>Элемент \<ipv6> (сетевые параметры)
 Включает отклики протокола IP версии 6 (IPv6) от устаревших членов класса <xref:System.Net.Dns>.  
-  
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **@no__t -4system. NET >** ](system-net-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<settings >** ](settings-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<ipv6 >**  
-  
+
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System. net >** ](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<** ](settings-element-network-settings.md) >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**ipv6 >**
+
 ## <a name="syntax"></a>Синтаксис  
   
 ```xml  
@@ -38,10 +38,10 @@ ms.locfileid: "71698132"
   
 |**Attribute (XElement Dynamic Property)** (Attribute (динамическое свойство XElement))|**Описание**|  
 |-------------------|---------------------|  
-|`enabled`|Указывает, возвращают ли члены класса <xref:System.Net.Dns> IP-адреса версии 6 (IPv6). Значение по умолчанию — `false`.|  
+|`enabled`|Указывает, возвращают ли члены класса <xref:System.Net.Dns> IPv6-адреса. Значение по умолчанию — `false`.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
- Нет.  
+ Отсутствует.  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
@@ -49,8 +49,8 @@ ms.locfileid: "71698132"
 |-----------------|---------------------|  
 |[Параметры](settings-element-network-settings.md)|Настраивает основные параметры сети для пространства имен <xref:System.Net>.|  
   
-## <a name="remarks"></a>Примечания  
- Этот параметр включает поддержку IPv6 для устаревших членов класса <xref:System.Net.Dns>: <xref:System.Net.Dns.BeginGetHostByName%2A>, <xref:System.Net.Dns.BeginResolve%2A>, <xref:System.Net.Dns.EndGetHostByName%2A>, <xref:System.Net.Dns.EndResolve%2A>, <xref:System.Net.Dns.GetHostByAddress%2A>, <xref:System.Net.Dns.GetHostByName%2A> и <xref:System.Net.Dns.Resolve%2A>. Для других членов пространства имен <xref:System.Net?displayProperty=nameWithType> адреса IPv6 могут возвращаться, если в операционной системе включен протокол IPv6.  
+## <a name="remarks"></a>Заметки  
+ Этот параметр включает поддержку IPv6 для устаревших членов класса <xref:System.Net.Dns>: <xref:System.Net.Dns.BeginGetHostByName%2A>, <xref:System.Net.Dns.BeginResolve%2A>, <xref:System.Net.Dns.EndGetHostByName%2A>, <xref:System.Net.Dns.EndResolve%2A>, <xref:System.Net.Dns.GetHostByAddress%2A>, <xref:System.Net.Dns.GetHostByName%2A>и <xref:System.Net.Dns.Resolve%2A>. Для других членов пространства имен <xref:System.Net?displayProperty=nameWithType> IPv6-адреса могут возвращаться, если в операционной системе включен протокол IPv6.  
   
 ## <a name="configuration-files"></a>Файлы конфигурации  
  Этот элемент может использоваться в файле конфигурации приложения или в файле конфигурации компьютера (Machine.config).  

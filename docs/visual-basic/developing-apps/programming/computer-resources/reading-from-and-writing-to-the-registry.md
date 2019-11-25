@@ -1,24 +1,26 @@
 ---
-title: Чтение данных из реестра и запись в реестр (Visual Basic)
+title: Чтение данных из реестра и запись в реестр
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Computer.Registry object, tasks
 - registry [Visual Basic], writing to
 - registry [Visual Basic], reading
 ms.assetid: a13da106-185b-41d7-b23c-416da65e21e4
-ms.openlocfilehash: fcc13d82a2b27221c13f9277585c21196b47003d
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 89db9ef9db4235c069d6239d32e4f8679fbabf0b
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591482"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349753"
 ---
 # <a name="reading-from-and-writing-to-the-registry-visual-basic"></a>Чтение данных из реестра и запись в реестр (Visual Basic)
+
 В этом разделе описываются задачи и приводятся основные разделы, связанные с реестром.  
   
  При программировании в Visual Basic можно получить доступ к реестру с помощью функций, предоставляемых Visual Basic, или классов платформы .NET Framework для работы с реестром. Реестр содержит данные, исходящие как от операционной системы, так и от приложений, установленных на компьютере. Работа с реестром может привести к нарушению безопасности, допуская несанкционированный доступ к системным ресурсам или защищенной информации.  
   
 ## <a name="in-this-section"></a>В этом разделе  
+
  [Практическое руководство. Создание раздела реестра и задание его значения](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-create-a-registry-key-and-set-its-value.md)  
  Описывает использование методов `CreateSubKey` и `SetValue` объекта `My.Computer.Registry` для создания раздела реестра и присвоения ему значения.  
   
@@ -35,6 +37,7 @@ ms.locfileid: "65591482"
  Описывает вопросы безопасности, связанные с реестром.  
   
 ## <a name="related-sections"></a>Связанные разделы  
+
  <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>  
  Список и описание членов объекта `My.Computer.Registry`.  
   

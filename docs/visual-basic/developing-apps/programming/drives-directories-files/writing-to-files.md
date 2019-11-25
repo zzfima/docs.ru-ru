@@ -1,5 +1,5 @@
 ---
-title: Запись в файлы в Visual Basic
+title: Запись в файлы
 ms.date: 07/20/2015
 helpviewer_keywords:
 - I/O [Visual Basic], writing to files
@@ -8,17 +8,19 @@ helpviewer_keywords:
 - writing to files [Visual Basic]
 - Visual Basic, writing to files
 ms.assetid: ac6fb453-0d6c-4ce4-93b4-1bbcd06de83e
-ms.openlocfilehash: 92e9d717eb52fa393d9215068d8fe70c84f613ae
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8511a96c7abcc28997c293a09ef10bad543dc261
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33588123"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352141"
 ---
 # <a name="writing-to-files-in-visual-basic"></a>Запись в файлы в Visual Basic
+
 В этом разделе рассказывается, как выполнять задачи, включающие запись в файлы.  
   
 ## <a name="in-this-section"></a>В этом разделе  
+
  [Практическое руководство. Запись текста в файлы](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-write-text-to-files.md)  
  Объясняет, как записывать данные в текстовые файлы.  
   
@@ -35,6 +37,7 @@ ms.locfileid: "33588123"
  Объясняет, как записывать данные в файл с помощью объекта <xref:System.IO.StreamWriter?displayProperty=nameWithType>.  
   
 ## <a name="reference"></a>Ссылка  
+
  <xref:Microsoft.VisualBasic.FileIO.FileSystem>  
  Описывает объект `My.Computer.FileSystem`, его методы и свойства.  
   
@@ -48,6 +51,7 @@ ms.locfileid: "33588123"
  Описывает метод `WriteAllText`.  
   
 ## <a name="related-sections"></a>Связанные разделы  
+
  [Чтение из файлов](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)  
  Объясняет, как выполнять задачи, включающие чтение данных из файлов.  
   

@@ -5,18 +5,18 @@ ms.date: 05/03/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to
-ms.openlocfilehash: 1628d0669d8a9e677ff39b5869d3802d89d96410
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 735782a4a0877a917b6e1885f009aa49d834170f
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67397705"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976966"
 ---
 # <a name="re-train-a-model"></a>Повторное обучение модели
 
 Узнайте, как переобучать модель машинного обучения в ML.NET.
 
-Мир и данные вокруг него меняются с постоянной скоростью. Это значит, что вместе с ними должны меняться и обновляться модели машинного обучения. ML.NET предоставляет функциональные возможности для переобучения моделей с использованием параметров обученной модели, которые служат отправной точкой для постоянного развития и позволяют не начинать каждый раз заново.  
+Мир и данные вокруг него меняются с постоянной скоростью. Это значит, что вместе с ними должны меняться и обновляться модели машинного обучения. ML.NET предоставляет функциональные возможности для переобучения моделей с использованием параметров обученной модели, которые служат отправной точкой для постоянного развития и позволяют не начинать каждый раз заново.
 
 В ML.NET можно переобучать следующие алгоритмы:
 
@@ -33,7 +33,7 @@ ms.locfileid: "67397705"
 
 ## <a name="load-pre-trained-model"></a>Загрузка предварительно обученной модели
 
-Для начала загрузите обученную ранее модель в свое приложение. Дополнительные сведения о загрузке конвейеров и моделей обучения см. в соответствующей [инструкции](./consuming-model-ml-net.md).
+Для начала загрузите обученную ранее модель в свое приложение. Дополнительные сведения о загрузке конвейеров и моделей обучения см. в статье [Сохранение и загрузка обученной модели](save-load-machine-learning-models-ml-net.md).
 
 ```csharp
 // Create MLContext
@@ -55,13 +55,13 @@ ITransformer trainedModel = mlContext.Model.Load("ogd_model.zip", out modelSchem
 
 ```csharp
 // Extract trained model parameters
-LinearRegressionModelParameters originalModelParameters = 
+LinearRegressionModelParameters originalModelParameters =
     ((ISingleFeaturePredictionTransformer<object>)trainedModel).Model as LinearRegressionModelParameters;
 ```
 
 ## <a name="re-train-model"></a>Переобучение модели
 
-Переобучение осуществляется точно так же, как обучение модели. Единственное отличие заключается в том, что метод [`Fit`](xref:Microsoft.ML.Trainers.OnlineLinearTrainer`2.Fit*), помимо данных, принимает в качестве входных данных параметры обученной модели и использует их как отправную точку в процессе переобучения.  
+Переобучение осуществляется точно так же, как обучение модели. Единственное отличие заключается в том, что метод [`Fit`](xref:Microsoft.ML.Trainers.OnlineLinearTrainer`2.Fit*), помимо данных, принимает в качестве входных данных параметры обученной модели и использует их как отправную точку в процессе переобучения.
 
 ```csharp
 // New Data
@@ -94,7 +94,7 @@ IDataView newData = mlContext.Data.LoadFromEnumerable<HousingData>(housingData);
 IDataView transformedNewData = dataPrepPipeline.Transform(newData);
 
 // Retrain model
-RegressionPredictionTransformer<LinearRegressionModelParameters> retrainedModel = 
+RegressionPredictionTransformer<LinearRegressionModelParameters> retrainedModel =
     mlContext.Regression.Trainers.OnlineGradientDescent()
         .Fit(transformedNewData, originalModelParameters);
 ```
@@ -108,7 +108,7 @@ RegressionPredictionTransformer<LinearRegressionModelParameters> retrainedModel 
 LinearRegressionModelParameters retrainedModelParameters = retrainedModel.Model as LinearRegressionModelParameters;
 
 // Inspect Change in Weights
-var weightDiffs = 
+var weightDiffs =
     originalModelParameters.Weights.Zip(
         retrainedModelParameters.Weights, (original, retrained) => original - retrained).ToArray();
 
@@ -119,7 +119,7 @@ for(int i=0;i < weightDiffs.Count();i++)
 }
 ```
 
-В следующей таблице показано, как могут выглядеть выходные данные. 
+В следующей таблице показано, как могут выглядеть выходные данные.
 
 |До преобразования | Переобученная модель | Различие |
 |---|---|---|

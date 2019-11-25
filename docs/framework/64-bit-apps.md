@@ -6,12 +6,12 @@ helpviewer_keywords:
 - 64-bit applications [C++]
 - 64-bit programming [C++]
 ms.assetid: fd4026bc-2c3d-4b27-86dc-ec5e96018181
-ms.openlocfilehash: 3ef6d02023570f5ec4013b070317c272a94b8212
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 90e022d5643dc49ccc5b78d071b3b473c92f0670
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120101"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74429662"
 ---
 # <a name="64-bit-applications"></a>64-разрядные приложения
 При компиляции приложения можно указать, должно ли оно запускаться в 64-разрядной операционной системе Windows в качестве собственного приложения или в эмуляторе WOW64 (в 32- или 64-разрядной ОС Windows). WOW64 — это среда совместимости, которая позволяет выполнять 32-разрядное приложение в 64-разрядной системе. Эмулятор WOW64 входит в состав всех 64-разрядных версий операционной системы Windows.  
@@ -41,11 +41,7 @@ ms.locfileid: "73120101"
 ## <a name="general-64-bit-programming-information"></a>Общие сведения о 64-разрядном программировании  
  Общие сведения о 64-разрядном программировании см. в перечисленных ниже материалах.  
   
-- Дополнительные сведения о 64-разрядной версии среды CLR на компьютере с 64-разрядной ОС Windows см. на странице [Центр разработчиков .NET Framework](https://go.microsoft.com/fwlink/?LinkId=37079) на веб-сайте MSDN.  
-  
-- В документации по Windows SDK см. статью [Programming Guide for 64-bit Windows](https://go.microsoft.com/fwlink/p/?LinkId=253512) (Руководство по программированию для 64-разрядных версий Windows).  
-  
-- Дополнительные сведения о загрузке 64-разрядной версии среды CLR см. на странице [Загрузки в центре разработчиков .NET Framework](https://go.microsoft.com/fwlink/?LinkId=50953) на веб-сайте MSDN.  
+- В документации по Windows SDK см. статью [Programming Guide for 64-bit Windows](/windows/win32/winprog64/programming-guide-for-64-bit-windows) (Руководство по программированию для 64-разрядных версий Windows).  
   
 - Сведения о поддержке создания 64-разрядных приложений в Visual Studio см. в разделе [Поддержка 64-разрядной среды разработки Visual Studio](/visualstudio/ide/visual-studio-ide-64-bit-support).  
   
