@@ -1,5 +1,5 @@
 ---
-title: Overridable (Visual Basic)
+title: Overridable
 ms.date: 07/20/2015
 f1_keywords:
 - Overridable
@@ -16,31 +16,31 @@ helpviewer_keywords:
 - Overridable keyword [Visual Basic]
 - properties [Visual Basic], overriding
 ms.assetid: 612581e7-8a4c-4a5d-beff-3402fffa6f35
-ms.openlocfilehash: 91a1cedc66fd66e336b6e7976ad87ad638cb43c3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9c639665fd92a56de6fb6e5147cda873ef457b45
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62053903"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351391"
 ---
 # <a name="overridable-visual-basic"></a>Overridable (Visual Basic)
-Указывает, что свойство или процедура могут быть переопределены с одинаковыми именами свойство или процедура в производном классе.  
+Specifies that a property or procedure can be overridden by an identically named property or procedure in a derived class.  
   
-## <a name="remarks"></a>Примечания  
- `Overridable` Модификатор допустимое свойство или метод в класс, который будет переопределен в производном классе. [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md) модификатор не позволяет переопределять свойства или метода в производном классе.  Дополнительные сведения см. в статье [Inheritance Basics (Visual Basic)](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md) (Основная информация о наследовании в Visual Basic).  
+## <a name="remarks"></a>Заметки  
+ The `Overridable` modifier allows a property or method in a class to be overridden in a derived class. The [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md) modifier prevents a property or method from being overridden in a derived class.  Дополнительные сведения см. в статье [Inheritance Basics (Visual Basic)](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md) (Основная информация о наследовании в Visual Basic).  
   
- Если `Overridable` или `NotOverridable` модификатора не указано, значение по умолчанию зависит от того, является ли свойство или метод переопределяет свойство базового класса или метода. Если в метод или свойство переопределяет свойство базового класса или метода, значение по умолчанию — `Overridable`; в противном случае это `NotOverridable`.  
+ If the `Overridable` or `NotOverridable` modifier is not specified, the default setting depends on whether the property or method overrides a base class property or method. If the property or method overrides a base class property or method, the default setting is `Overridable`; otherwise, it is `NotOverridable`.  
   
- Можно скрывать или переопределять переопределить наследуемый элемент, но существуют значительные различия между двумя подходами. Дополнительные сведения см. в разделе [сокрытие в Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).  
+ You can shadow or override to redefine an inherited element, but there are significant differences between the two approaches. For more information, see [Shadowing in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).  
   
- Элемент, который может быть переопределен иногда называется *виртуального* элемент. Если его можно переопределить, но не быть, она иногда называется *конкретные* элемент.  
+ An element that can be overridden is sometimes referred to as a *virtual* element. If it can be overridden, but does not have to be, it is sometimes also called a *concrete* element.  
   
- `Overridable` можно использовать только в операторе объявления свойства или процедуры.  
+ You can use `Overridable` only in a property or procedure declaration statement.  
   
-## <a name="combined-modifiers"></a>Комбинированные модификаторы  
- Нельзя указать `Overridable` или `NotOverridable` для `Private` метод.  
+## <a name="combined-modifiers"></a>Combined Modifiers  
+ You cannot specify `Overridable` or `NotOverridable` for a `Private` method.  
   
- Нельзя указать `Overridable` вместе с `MustOverride`, `NotOverridable`, или `Shared` в одном объявлении.  
+ You cannot specify `Overridable` together with `MustOverride`, `NotOverridable`, or `Shared` in the same declaration.  
   
  Так как переопределяемый элемент является неявно переопределяемым, нельзя объединять `Overridable` с `Overrides`.  
   
@@ -61,4 +61,4 @@ ms.locfileid: "62053903"
 - [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)
 - [Переопределения](../../../visual-basic/language-reference/modifiers/overrides.md)
 - [Ключевые слова](../../../visual-basic/language-reference/keywords/index.md)
-- [Сокрытие в Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
+- [Shadowing in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)

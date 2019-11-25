@@ -1,5 +1,5 @@
 ---
-title: '* Оператор (Visual Basic)'
+title: '* оператора'
 ms.date: 07/20/2015
 f1_keywords:
 - vb.*
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - multiplication operator [Visual Basic], syntax
 - math operators [Visual Basic]
 ms.assetid: 2b210382-99da-4195-89ba-b1d06f5e89ad
-ms.openlocfilehash: b5b601c7604cb7ce1afaebc98b2157634a77fda4
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 4f6a8ea2c5f4e23791afdfe98d2a08bf67219048
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71701094"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348367"
 ---
 # <a name="-operator-visual-basic"></a>Оператор * (Visual Basic)
 Выполняет умножение двух чисел.  
@@ -34,28 +34,28 @@ number1 * number2
 |`number2`|Обязательный. Произвольное числовое выражение.|  
   
 ## <a name="result"></a>Результат  
- Результатом является произведение `number1` и `number2`.  
+ The result is the product of `number1` and `number2`.  
   
 ## <a name="supported-types"></a>Поддерживаемые типы  
- Все числовые типы, включая неподписанные и типы с плавающей запятой, а также `Decimal`.  
+ All numeric types, including the unsigned and floating-point types and `Decimal`.  
   
-## <a name="remarks"></a>Примечания  
- Тип данных результата зависит от типов операндов. В следующей таблице показано, как определяется тип данных результата.  
+## <a name="remarks"></a>Заметки  
+ The data type of the result depends on the types of the operands. The following table shows how the data type of the result is determined.  
   
-|Типы данных операндов|Тип данных результата|  
+|Operand data types|Result data type|  
 |---|---|  
-|Оба выражения являются целочисленными типами данных ([SByte](../../../visual-basic/language-reference/data-types/sbyte-data-type.md), [Byte](../../../visual-basic/language-reference/data-types/byte-data-type.md), [Short](../../../visual-basic/language-reference/data-types/short-data-type.md), [UShort](../../../visual-basic/language-reference/data-types/ushort-data-type.md), [Integer](../../../visual-basic/language-reference/data-types/integer-data-type.md), [UInteger](../../../visual-basic/language-reference/data-types/uinteger-data-type.md), [Long](../../../visual-basic/language-reference/data-types/long-data-type.md), [ulong](../../../visual-basic/language-reference/data-types/ulong-data-type.md)).|Числовой тип данных, подходящий для типов данных `number1` и `number2`. См. таблицу "целочисленные арифметические операции" в [типах данных результатов операторов](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md).|  
-|Оба выражения являются [десятичными](../../../visual-basic/language-reference/data-types/decimal-data-type.md)|`Decimal`|  
-|Оба выражения являются [одиночными](../../../visual-basic/language-reference/data-types/single-data-type.md)|`Single`|  
-|Любое выражение является типом данных с плавающей запятой (`Single` или [Double](../../../visual-basic/language-reference/data-types/double-data-type.md)), но не `Single` (Обратите внимание, `Decimal` не является типом данных с плавающей запятой).|`Double`|  
+|Both expressions are integral data types ([SByte](../../../visual-basic/language-reference/data-types/sbyte-data-type.md), [Byte](../../../visual-basic/language-reference/data-types/byte-data-type.md), [Short](../../../visual-basic/language-reference/data-types/short-data-type.md), [UShort](../../../visual-basic/language-reference/data-types/ushort-data-type.md), [Integer](../../../visual-basic/language-reference/data-types/integer-data-type.md), [UInteger](../../../visual-basic/language-reference/data-types/uinteger-data-type.md), [Long](../../../visual-basic/language-reference/data-types/long-data-type.md), [ULong](../../../visual-basic/language-reference/data-types/ulong-data-type.md))|A numeric data type appropriate for the data types of `number1` and `number2`. See the "Integer Arithmetic" tables in [Data Types of Operator Results](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md).|  
+|Both expressions are [Decimal](../../../visual-basic/language-reference/data-types/decimal-data-type.md)|`Decimal`|  
+|Both expressions are [Single](../../../visual-basic/language-reference/data-types/single-data-type.md)|`Single`|  
+|Either expression is a floating-point data type (`Single` or [Double](../../../visual-basic/language-reference/data-types/double-data-type.md)) but not both `Single` (note `Decimal` is not a floating-point data type)|`Double`|  
   
- Если выражение принимает значение [Nothing](../../../visual-basic/language-reference/nothing.md), оно считается нулевым.  
+ If an expression evaluates to [Nothing](../../../visual-basic/language-reference/nothing.md), it is treated as zero.  
   
 ## <a name="overloading"></a>Перегрузка  
- Оператор `*` можно *перегрузить*, что означает, что класс или структура может переопределить свое поведение, если операнд имеет тип этого класса или структуры. Если код использует этот оператор для такого класса или структуры, убедитесь, что вы понимаете его переопределенное поведение. Для получения дополнительной информации см. [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+ The `*` operator can be *overloaded*, which means that a class or structure can redefine its behavior when an operand has the type of that class or structure. If your code uses this operator on such a class or structure, be sure you understand its redefined behavior. Для получения дополнительной информации см. [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Пример  
- В этом примере оператор `*` используется для умножения двух чисел. Результатом является произведение двух операндов.  
+ This example uses the `*` operator to multiply two numbers. The result is the product of the two operands.  
   
  [!code-vb[VbVbalrOperators#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#4)]  
   
@@ -65,4 +65,4 @@ number1 * number2
 - [Арифметические операторы](../../../visual-basic/language-reference/operators/arithmetic-operators.md)
 - [Порядок применения операторов в Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)
 - [Список операторов, сгруппированных по функциональному назначению](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
-- [Арифметические операторы в Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+- [Arithmetic Operators in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)

@@ -1,5 +1,5 @@
 ---
-title: Объектные переменные в Visual Basic
+title: Объектные переменные
 ms.date: 07/20/2015
 helpviewer_keywords:
 - object variables [Visual Basic], about object variables
@@ -7,26 +7,26 @@ helpviewer_keywords:
 - objects [Visual Basic], accessing
 - object variables [Visual Basic]
 ms.assetid: 6169a196-2b13-4ba5-a205-154bc1b87844
-ms.openlocfilehash: cc5be13293a89e73d1790e94a99d7936f1711e12
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7eb860bc732f923316b8ce1d7b94ecdb368bfec3
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61961238"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351781"
 ---
 # <a name="object-variables-in-visual-basic"></a>Объектные переменные в Visual Basic
 
-В дополнение к хранить значения, переменные могут ссылаться на объект. Объект присваивается переменной по тем же причинам, которые можно присвоить любое значение переменной:
+In addition to storing values directly, a variable can refer to an object. You assign an object to a variable for the same reasons you assign any value to a variable:
 
-- Имя переменной часто короче и легче для запоминания, чем полный путь к методы и свойства, необходимые для доступа к самому объекту.
+- A variable name is often shorter and easier to remember than the full path of methods and properties necessary to access the object itself.
 
-- Использование переменной, которая ссылается на объект является более эффективным, чем несколько раз доступ к самому объекту через необходимые методы или свойства.
+- Using a variable that refers to an object is more efficient than repeatedly accessing the object itself through the necessary methods or properties.
 
-- Можно изменить переменную для ссылки на другие объекты во время выполнения кода.
+- You can change a variable to refer to other objects while your code is running.
 
-## <a name="making-code-shorter"></a>Уменьшение размера кода
+## <a name="making-code-shorter"></a>Making Code Shorter
 
-Объектные переменные можно использовать для сокращения кода необходимо вводить. В следующем примере используется полный путь к методы и свойства для доступа к <xref:System.Windows.Forms.Control> объекта.
+You can use object variables to shorten the code you have to type. The following example uses the full path of methods and properties to access a <xref:System.Windows.Forms.Control> object.
 
 ```vb
 ' Assume Me is a valid Form, or replace Me with a valid Form.
@@ -35,7 +35,7 @@ Me.ActiveForm.ActiveControl.Location = New Point(100, 100)
 Me.ActiveForm.ActiveControl.Show()
 ```
 
-Можно сократить этот код и ускорить его выполнение при использовании переменной объекта для элемента управления. Следует объявить переменную объекта с определенный класс, который планируется назначить для него (`Control` в данном случае). После того как объект переменной, с ней можно работать точно так же, как обрабатывать объект, к которому он относится. Можно задать или получить свойства объекта или использовать любой из его методов. В следующем примере переменной объекта используется для упрощения кода в предыдущем примере.
+You can shorten this code, and speed up execution, if you use an object variable for the control. You should declare the object variable with the specific class that you intend to assign to it (`Control` in this case). Once you assign an object to the variable, you can treat it exactly the same as you treat the object to which it refers. You can set or retrieve the properties of the object or use any of its methods. The following example uses an object variable to simplify the code in the preceding example.
 
 ```vb
 Dim ctrlActv As System.Windows.Forms.Control = Me.ActiveForm.ActiveControl

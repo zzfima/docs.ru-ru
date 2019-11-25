@@ -9,15 +9,15 @@ helpviewer_keywords:
 - states [WPF], Expander
 - parts [WPF], Expander
 ms.assetid: da2e5a1c-5230-4c21-98a5-59c7895facd7
-ms.openlocfilehash: 26989474f264161be12bcc14fed614fdc7f775b6
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 39f81aacb24b0b68b550da622b1e3038eb9eac9b
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460325"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283515"
 ---
 # <a name="expander-styles-and-templates"></a>Стили и шаблоны элемента Expander
-В этом разделе описываются стили и шаблоны для элемента управления <xref:System.Windows.Controls.Expander>. Можно изменить <xref:System.Windows.Controls.ControlTemplate> по умолчанию, чтобы обеспечить уникальность внешнего вида элемента управления. Подробнее см. в разделе [Настройка внешнего вида существующего элемента управления путем создания объекта ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
+В этом разделе описываются стили и шаблоны для элемента управления <xref:System.Windows.Controls.Expander>. Можно изменить <xref:System.Windows.Controls.ControlTemplate> по умолчанию, чтобы обеспечить уникальность внешнего вида элемента управления. Дополнительные сведения см. в разделе [Создание шаблона для элемента управления](../../../desktop-wpf/themes/how-to-create-apply-template.md).  
   
 ## <a name="expander-parts"></a>Части расширителя  
  Элемент управления <xref:System.Windows.Controls.Expander> не имеет именованных частей.  
@@ -28,7 +28,7 @@ ms.locfileid: "73460325"
 |Имя VisualState|Имя VisualStateGroup|Описание|  
 |-|-|-|  
 |Норм.|CommonStates|Состояние по умолчанию.|  
-|MouseOver|CommonStates|Указатель мыши расположен над элементом управления.|  
+|MouseOver|CommonStates|Указатель мыши расположен в элементе управления.|  
 |Отключено.|CommonStates|Элемент управления отключен.|  
 |Focused|FocusStates|Элемент управления имеет фокус.|  
 |Без фокуса ввода|FocusStates|Элемент управления не имеет фокуса.|  
@@ -60,4 +60,4 @@ ms.locfileid: "73460325"
 - [Стили и шаблоны элемента управления](control-styles-and-templates.md)
 - [Настройка элементов управления](control-customization.md)
 - [Стилизация и использование шаблонов](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
-- [Настройка внешнего вида существующего элемента управления путем создания объекта ControlTemplate](customizing-the-appearance-of-an-existing-control.md)
+- [Создание шаблона для элемента управления](../../../desktop-wpf/themes/how-to-create-apply-template.md)

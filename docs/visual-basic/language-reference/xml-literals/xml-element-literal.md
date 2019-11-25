@@ -1,5 +1,5 @@
 ---
-title: Литеральное представление XML-элемента (Visual Basic)
+title: Литеральное представление XML-элемента
 ms.date: 07/20/2015
 f1_keywords:
 - vb.XmlLiteralElement
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - element literal [Visual Basic]
 - XML literals [Visual Basic], element
 ms.assetid: 95039642-7893-48b7-b23f-45a6c55d8f67
-ms.openlocfilehash: 3431ad32809e1f15eb8473d5af7660367cca04de
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d6d900ca6868cfffe6b0e5b349321a79c5716c46
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64751955"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347030"
 ---
 # <a name="xml-element-literal-visual-basic"></a>Литеральное представление XML-элемента (Visual Basic)
 
-Литералом, представляющим <xref:System.Xml.Linq.XElement> объекта.
+A literal that represents an <xref:System.Xml.Linq.XElement> object.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -31,101 +31,101 @@ ms.locfileid: "64751955"
 
 - `<`
 
-  Обязательный. Откроется начальный тег элемента.
+  Обязательный. Opens the starting element tag.
 
 - `name`
 
-  Обязательный. Имя элемента. Одно из следующих имеет следующий формат:
+  Обязательный. Имя элемента. The format is one of the following:
 
-  - Литеральный текст для имени элемента формы `[ePrefix:]eName`, где:
+  - Literal text for the element name, of the form `[ePrefix:]eName`, where:
 
     |Отделение|Описание|
     |---|---|
-    |`ePrefix`|Необязательный параметр. Префикс пространства имен XML для элемента. Должно быть глобальным пространством имен XML, который определен с помощью `Imports` инструкции в файле или на уровне проекта или локальное пространство имен XML, который определен в этом элементе или родительском элементе.|
-    |`eName`|Обязательный. Имя элемента. Одно из следующих имеет следующий формат:<br /><br /> -Литеральный текст. См. в разделе [имена объявленных элементов и атрибутов](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).<br />-Внедренные выражения вида `<%= eNameExp %>`. Тип `eNameExp` должно быть `String` или типом, который неявно преобразуется к типу <xref:System.Xml.Linq.XName>.|
+    |`ePrefix`|Необязательный. XML namespace prefix for the element. Must be a global XML namespace that is defined with an `Imports` statement in the file or at the project level, or a local XML namespace that is defined in this element or a parent element.|
+    |`eName`|Обязательный. Имя элемента. The format is one of the following:<br /><br /> - Literal text. See [Names of Declared XML Elements and Attributes](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).<br />- Embedded expression of the form `<%= eNameExp %>`. The type of `eNameExp` must be `String` or a type that is implicitly convertible to <xref:System.Xml.Linq.XName>.|
 
-  - Внедренные выражения вида `<%= nameExp %>`. Тип `nameExp` должно быть `String` или неявно преобразовываться в тип <xref:System.Xml.Linq.XName>. Внедренное выражение не допускается в закрывающий тег элемента.
+  - Embedded expression of the form `<%= nameExp %>`. The type of `nameExp` must be `String` or a type implicitly convertible to <xref:System.Xml.Linq.XName>. An embedded expression is not allowed in a closing tag of an element.
 
 - `attributeList`
 
-  Необязательный параметр. Список атрибутов, объявленных в литерале.
+  Необязательный. List of attributes declared in the literal.
 
   `attribute [ attribute ... ]`
 
-  Каждый `attribute` имеет одно из следующих вариантов синтаксиса:
+  Each `attribute` has one of the following syntaxes:
 
-  - Назначение формы атрибутов `[aPrefix:]aName=aValue`, где:
+  - Attribute assignment, of the form `[aPrefix:]aName=aValue`, where:
 
     |Отделение|Описание|
     |---|---|
-    |`aPrefix`|Необязательный параметр. Префикс пространства имен XML для атрибута. Должно быть глобальным пространством имен XML, который определен с помощью `Imports` инструкции или локальное пространство имен XML, который определен в этом элементе или родительском элементе.|
-    |`aName`|Обязательный. Имя атрибута. Одно из следующих имеет следующий формат:<br /><br /> -Литеральный текст. См. в разделе [имена объявленных элементов и атрибутов](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).<br />-Внедренные выражения вида `<%= aNameExp %>`. Тип `aNameExp` должно быть `String` или типом, который неявно преобразуется к типу <xref:System.Xml.Linq.XName>.|
-    |`aValue`|Необязательный параметр. Значение атрибута. Одно из следующих имеет следующий формат:<br /><br /> -Литеральный текст, заключенный в кавычки.<br />-Внедренные выражения вида `<%= aValueExp %>`. Допустим любой тип.|
+    |`aPrefix`|Необязательный. XML namespace prefix for the attribute. Must be a global XML namespace that is defined with an `Imports` statement, or a local XML namespace that is defined in this element or a parent element.|
+    |`aName`|Обязательный. Имя атрибута. The format is one of the following:<br /><br /> - Literal text. See [Names of Declared XML Elements and Attributes](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).<br />- Embedded expression of the form `<%= aNameExp %>`. The type of `aNameExp` must be `String` or a type that is implicitly convertible to <xref:System.Xml.Linq.XName>.|
+    |`aValue`|Необязательный. Value of the attribute. The format is one of the following:<br /><br /> - Literal text, enclosed in quotation marks.<br />- Embedded expression of the form `<%= aValueExp %>`. Any type is allowed.|
 
-  - Внедренные выражения вида `<%= aExp %>`.
+  - Embedded expression of the form `<%= aExp %>`.
 
 - `/>`
 
-  Необязательный параметр. Указывает, что элемент является пустым элементом, без содержимого.
+  Необязательный. Indicates that the element is an empty element, without content.
 
 - `>`
 
-  Обязательный. Завершает начиная или пустым тегом элемента.
+  Обязательный. Ends the beginning or empty element tag.
 
 - `elementContents`
 
-  Необязательный параметр. Содержимое элемента.
+  Необязательный. Content of the element.
 
   `content [ content ... ]`
 
-  Каждый `content` может принимать одно из следующих:
+  Each `content` can be one of the following:
 
-  - Литеральный текст. Все пробелы в `elementContents` становится значимыми, если любой текст.
+  - Literal text. All the white space in `elementContents` becomes significant if there is any literal text.
 
-  - Внедренные выражения вида `<%= contentExp %>`.
+  - Embedded expression of the form `<%= contentExp %>`.
 
-  - Литерала элемента XML.
+  - XML element literal.
 
-  - XML-литерал комментария. См. в разделе [XML-литерал комментария](../../../visual-basic/language-reference/xml-literals/xml-comment-literal.md).
+  - XML comment literal. See [XML Comment Literal](../../../visual-basic/language-reference/xml-literals/xml-comment-literal.md).
 
-  - Литерал инструкции обработки XML. См. в разделе [литерал инструкции обработки XML](../../../visual-basic/language-reference/xml-literals/xml-processing-instruction-literal.md).
+  - XML processing instruction literal. See [XML Processing Instruction Literal](../../../visual-basic/language-reference/xml-literals/xml-processing-instruction-literal.md).
 
-  - Литерал CDATA XML. См. в разделе [XML-литерале CDATA](../../../visual-basic/language-reference/xml-literals/xml-cdata-literal.md).
+  - XML CDATA literal. See [XML CDATA Literal](../../../visual-basic/language-reference/xml-literals/xml-cdata-literal.md).
 
 - `</[name]>`
 
-  Необязательный параметр. Представляет закрывающий тег для элемента. Необязательный `name` параметра не допускается, если она является результатом встроенного выражения.
+  Необязательный. Represents the closing tag for the element. The optional `name` parameter is not allowed when it is the result of an embedded expression.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
 Объект <xref:System.Xml.Linq.XElement>.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
-Синтаксис элемента XML можно использовать для создания <xref:System.Xml.Linq.XElement> объектов в коде.
+You can use the XML element literal syntax to create <xref:System.Xml.Linq.XElement> objects in your code.
 
 > [!NOTE]
-> XML-литерал может занимать несколько строк без использования символа продолжения строки. Эта функция позволяет скопировать содержимое из XML-документа и вставьте его непосредственно в программу Visual Basic.
+> An XML literal can span multiple lines without using line continuation characters. This feature enables you to copy content from an XML document and paste it directly into a Visual Basic program.
 
-Встроенные выражения формы `<%= exp %>` позволяют добавить динамические сведения в литерале XML-элемента. Дополнительные сведения см. в разделе [встроенные выражения в XML](../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md).
+Embedded expressions of the form `<%= exp %>` enable you to add dynamic information to an XML element literal. For more information, see [Embedded Expressions in XML](../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md).
 
-Компилятор Visual Basic преобразует литерала XML-элемента в вызовы <xref:System.Xml.Linq.XElement.%23ctor%2A> конструктор и, при необходимости, <xref:System.Xml.Linq.XAttribute.%23ctor%2A> конструктор.
+The Visual Basic compiler converts the XML element literal into calls to the <xref:System.Xml.Linq.XElement.%23ctor%2A> constructor and, if it is required, the <xref:System.Xml.Linq.XAttribute.%23ctor%2A> constructor.
 
 ## <a name="xml-namespaces"></a>Пространства имен XML
 
-Префиксы пространства имен XML полезны в тех случаях, когда необходимо создать XML-литералов с элементами одного пространства имен много раз в коде. Можно использовать глобальные префиксы пространства имен XML, которые определяются с помощью `Imports` инструкции или локальные префиксы, которые определяются с помощью `xmlns:xmlPrefix="xmlNamespace"` синтаксис атрибута. Дополнительные сведения см. в разделе [оператор Imports (пространство имен XML)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md).
+XML namespace prefixes are useful when you have to create XML literals with elements from the same namespace many times in code. You can use global XML namespace prefixes, which you define by using the `Imports` statement, or local prefixes, which you define by using the `xmlns:xmlPrefix="xmlNamespace"` attribute syntax. For more information, see [Imports Statement (XML Namespace)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md).
 
-В соответствии с правилами обзора данных для пространств имен XML локальные префиксы имеют приоритет над глобальные префиксы. Тем не менее, если XML-литерал определяет пространство имен XML, что пространство имен недоступно для выражения, которые встречаются во внедренном выражении. Внедренное выражение доступен только глобальным пространством имен XML.
+In accordance with the scoping rules for XML namespaces, local prefixes take precedence over global prefixes. However, if an XML literal defines an XML namespace, that namespace is not available to expressions that appear in an embedded expression. The embedded expression can access only the global XML namespace.
 
-Компилятор Visual Basic преобразует каждый глобального пространства имен XML, который используется XML-литерала в одно определение Локальное пространство имен в созданном коде. Глобальные пространства имен XML, которые не используются не отображаются в созданном коде.
+The Visual Basic compiler converts each global XML namespace that is used by an XML literal into a one local namespace definition in the generated code. Global XML namespaces that are not used do not appear in the generated code.
 
 ## <a name="example"></a>Пример
 
-Приведенный ниже показано, как создать простой XML-элемент, который имеет два вложенных пустых элементов.
+The following example shows how to create a simple XML element that has two nested empty elements.
 
 [!code-vb[VbXMLSamples#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples9.vb#20)]
 
-В примере отображается следующий текст. Обратите внимание на то, что литерал сохраняет структуру пустых элементов.
+The example displays the following text. Notice that the literal preserves the structure of the empty elements.
 
 ```xml
 <outer>
@@ -136,7 +136,7 @@ ms.locfileid: "64751955"
 
 ## <a name="example"></a>Пример
 
-В следующем примере показано, как использовать внедренные выражения для имени элемента и создать атрибуты.
+The following example shows how to use embedded expressions to name an element and create attributes.
 
 [!code-vb[VbXMLSamples#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples9.vb#21)]
 
@@ -148,7 +148,7 @@ ms.locfileid: "64751955"
 
 ## <a name="example"></a>Пример
 
-В следующем примере `ns` объявляется как префикс пространства имен XML. Затем используется префикс пространства имен для создания литерала XML и отображает окончательной форме этого элемента.
+В следующем примере `ns` объявляется как префикс пространства имен XML. It then uses the prefix of the namespace to create an XML literal and displays the element's final form.
 
 [!code-vb[VbXMLSamples#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples10.vb#22)]
 
@@ -163,7 +163,7 @@ ms.locfileid: "64751955"
 </ns:outer>
 ```
 
-Обратите внимание на то, что компилятор преобразует префикса глобального пространства имен XML в определении префикса пространства имен XML. \<Ns:middle > элемент переопределяет префикс пространства имен XML для \<ns:inner1 > элемента. Тем не менее \<ns:inner2 > элемент использует пространство имен, определенное `Imports` инструкции.
+Notice that the compiler converted the prefix of the global XML namespace into a prefix definition for the XML namespace. The \<ns:middle> element redefines the XML namespace prefix for the \<ns:inner1> element. However, the \<ns:inner2> element uses the namespace defined by the `Imports` statement.
 
 ## <a name="see-also"></a>См. также
 

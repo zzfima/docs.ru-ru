@@ -1,5 +1,5 @@
 ---
-title: Оператор Stop (Visual Basic)
+title: Оператор Stop
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Stop
@@ -12,15 +12,15 @@ helpviewer_keywords:
 - processes, interrupting
 - execution [Visual Basic], stopping
 ms.assetid: c9a9fde0-d649-4662-9bef-bd0146ebc2a7
-ms.openlocfilehash: e9382ee34842fc3a3b4b23f71848bda602c99780
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 497c5f207b2228412411cc3eb01976564f82bd6c
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72583221"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346470"
 ---
 # <a name="stop-statement-visual-basic"></a>Оператор Stop (Visual Basic)
-Приостанавливает выполнение.  
+Suspends execution.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -29,15 +29,15 @@ Stop
 ```  
   
 ## <a name="remarks"></a>Заметки  
- Инструкции `Stop` можно разместить в любом месте процедуры, чтобы приостановить выполнение. Использование оператора `Stop` аналогично установке точки останова в коде.  
+ You can place `Stop` statements anywhere in procedures to suspend execution. Using the `Stop` statement is similar to setting a breakpoint in the code.  
   
- Инструкция `Stop` приостанавливает выполнение, но в отличие от `End`, она не закрывает никакие файлы и не очищает переменные, если только она не обнаружена в скомпилированном исполняемом файле (exe).  
+ The `Stop` statement suspends execution, but unlike `End`, it does not close any files or clear any variables, unless it is encountered in a compiled executable (.exe) file.  
   
 > [!NOTE]
-> Если оператор `Stop` встречается в коде, который выполняется вне интегрированной среды разработки (IDE), вызывается отладчик. Это справедливо независимо от того, был ли код скомпилирован в режиме отладки или розничной торговли.  
+> If the `Stop` statement is encountered in code that is running outside of the integrated development environment (IDE), the debugger is invoked. This is true regardless of whether the code was compiled in debug or retail mode.  
   
 ## <a name="example"></a>Пример  
- В этом примере используется инструкция `Stop` для приостановки выполнения каждой итерации в цикле `For...Next`.  
+ This example uses the `Stop` statement to suspend execution for each iteration through the `For...Next` loop.  
   
  [!code-vb[VbVbalrStatements#56](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#56)]  
   

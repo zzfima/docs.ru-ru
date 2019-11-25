@@ -1,22 +1,22 @@
 ---
-title: Индекс вне диапазона (Visual Basic)
+title: Список индексов вне диапазона
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID9
 ms.assetid: d0344a65-ec02-4caf-8d3c-9977392ca353
-ms.openlocfilehash: 3f56c8a03c4c47d985a8b7cb33b3d31fc6cb281d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2e091fcbb9eac439b00f6c0518d6a5e875f3e97e
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64593186"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350797"
 ---
 # <a name="subscript-out-of-range-visual-basic"></a>Индекс вне диапазона (Visual Basic)
-Индекс массива является недопустимым, поскольку она находится за пределами допустимого диапазона. Нижний индекс измерения всегда равен 0, а наибольшее значение индекса возвращается `GetUpperBound` метод для этого измерения.  
+An array subscript is not valid because it falls outside the allowable range. The lowest subscript value for a dimension is always 0, and the highest subscript value is returned by the `GetUpperBound` method for that dimension.  
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  
   
-- Измените индекс, поэтому он попадает в допустимый диапазон.  
+- Change the subscript so it falls within the valid range.  
   
 ## <a name="see-also"></a>См. также
 

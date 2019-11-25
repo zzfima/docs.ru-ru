@@ -1,45 +1,45 @@
 ---
-title: Настройка проектов и расширение объекта My в Visual Basic
+title: Настройка проектов и расширение объекта My
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My namespace [Visual Basic], customizing
 - My namespace
 - My namespace [Visual Basic], extending
 ms.assetid: 06ca80b9-1192-4eb5-8537-8ef5edfb9be0
-ms.openlocfilehash: 97933a9d014a54d5b6e333090cddccace99fcc3c
-ms.sourcegitcommit: 9b2ef64c4fc10a4a10f28a223d60d17d7d249ee8
+ms.openlocfilehash: e6ed43aeff90295f71590bcee180ca1e0f88e5ff
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "72960947"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74330338"
 ---
 # <a name="customizing-projects-and-extending-my-with-visual-basic"></a>Настройка проектов и расширение объекта My в Visual Basic
 
-Можно настроить шаблоны проектов для предоставления дополнительных `My` объектов. Это облегчает другим разработчикам Поиск и использование объектов.
+You can customize project templates to provide additional `My` objects. This makes it easy for other developers to find and use your objects.
 
 ## <a name="in-this-section"></a>В данном разделе
 
 - [Расширение пространства имен My в Visual Basic](extending-the-my-namespace.md)  
- Описывает добавление пользовательских элементов и значений в пространство имен `My` в Visual Basic.
+ Describes how to add custom members and values to the `My` namespace in Visual Basic.
 - [Упаковка и развертывание пользовательских расширений пространства имен My](packaging-and-deploying-custom-my-extensions.md)  
- Описание публикации пользовательских расширений пространства имен `My` с помощью шаблонов Visual Studio.
+ Describes how to publish custom `My` namespace extensions by using Visual Studio templates.
 - [Расширение модели приложения Visual Basic](extending-the-visual-basic-application-model.md)  
- Описывает, как указать собственные расширения для модели приложения путем переопределения членов класса <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>.
+ Describes how to specify your own extensions to the application model by overriding members of the <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> class.
 - [Настройка доступа к объектам через My](customizing-which-objects-are-available-in-my.md)  
- Описывает, как управлять тем, какие `My` объекты включены, настроив константу условной компиляции \_MYTYPE для проекта.
+ Describes how to control which `My` objects are enabled by setting your project's \_MYTYPE conditional-compilation constant.
 
 ## <a name="related-sections"></a>Связанные разделы
 
 - [Разработка с использованием My](../development-with-my/index.md)  
- Описывает, какие объекты `My` доступны в разных типах проектов по умолчанию.
+ Describes which `My` objects are available in different project types by default.
 - [Обзор модели приложения в Visual Basic](../development-with-my/overview-of-the-visual-basic-application-model.md)  
- Описание модели Visual Basic для управления поведением Windows Forms приложений.
+ Describes Visual Basic's model for controlling the behavior of Windows Forms applications.
 - [Зависимость My от типа проекта](../development-with-my/how-my-depends-on-project-type.md)  
- Описывает, какие объекты `My` доступны в разных типах проектов по умолчанию.
+ Describes which `My` objects are available in different project types by default.
 - [Условная компиляция](../../programming-guide/program-structure/conditional-compilation.md)  
- Описывает, как компилятор использует условную компиляцию для выбора определенных разделов кода для компиляции и исключения других разделов.
+ Discusses how the compiler uses conditional-compilation to select particular sections of code to compile and exclude other sections.
 - <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>  
- Описывает объект `My`, предоставляющий свойства, методы и события, связанные с текущим приложением.
+ Describes the `My` object that provides properties, methods, and events related to the current application.
 
 ## <a name="see-also"></a>См. также
 

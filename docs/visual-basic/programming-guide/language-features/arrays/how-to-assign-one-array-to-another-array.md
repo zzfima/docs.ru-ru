@@ -1,27 +1,27 @@
 ---
-title: Практическое руководство. Присвоение одного массива другому (Visual Basic)
+title: Практическое руководство. Присвоение одного массива другому
 ms.date: 07/20/2015
 helpviewer_keywords:
 - covariance, arrays
 - arrays [Visual Basic], assigning
 - arrays [Visual Basic], covariance
 ms.assetid: 1ae89ea5-f292-4282-bcfc-e9b06b37fbd5
-ms.openlocfilehash: a39888f19e5033a5c6622313fb7451d6463b2f7c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: be5337e36c2cc7ad9f9b32182b8575ac66bb4a50
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64858881"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351891"
 ---
 # <a name="how-to-assign-one-array-to-another-array-visual-basic"></a>Практическое руководство. Присвоение одного массива другому (Visual Basic)
 
-Поскольку массивы являются объектами, их можно использовать в инструкциях присваивания, как и другие типы объектов. Переменную массива содержит указатель на данные, содержащие элементы массива и ранг и длина информацию и присваивания копирует только этот указатель.
+Because arrays are objects, you can use them in assignment statements like other object types. An array variable holds a pointer to the data constituting the array elements and the rank and length information, and an assignment copies only this pointer.
 
-### <a name="to-assign-one-array-to-another-array"></a>Чтобы присвоение одного массива другому
+### <a name="to-assign-one-array-to-another-array"></a>To assign one array to another array
 
-1. Убедитесь, что два массива имеют одинаковый ранг (число измерений) и совместимый тип данных элементов.
+1. Ensure that the two arrays have the same rank (number of dimensions) and compatible element data types.
 
-2. Используйте стандартный оператор присваивания для назначения исходного массива в массив назначения. Не выполняйте либо имя массива в круглые скобки.
+2. Use a standard assignment statement to assign the source array to the destination array. Do not follow either array name with parentheses.
 
     ```vb
     Dim formArray() As System.Windows.Forms.Form
@@ -29,19 +29,19 @@ ms.locfileid: "64858881"
     controlArray = formArray
     ```
 
-Когда вы назначаете один массив в другой, применяются следующие правила:
+When you assign one array to another, the following rules apply:
 
-- **Равенство ранга.** Ранг (число измерений) массива назначения должен быть таким же, как и для исходного массива.
+- **Equal Ranks.** The rank (number of dimensions) of the destination array must be the same as that of the source array.
 
-  Предоставляемые ранги два массива равны, размеры не обязательно должны совпадать. Число элементов в определенном измерении можно изменить во время назначения.
+  Provided the ranks of the two arrays are equal, the dimensions do not need to be equal. The number of elements in a given dimension can change during assignment.
 
-- **Типы элементов.** Либо обоих массивов должны быть *ссылочный тип* элементов или оба массива должны иметь *тип значения* элементов. Для получения дополнительной информации см. [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md).
+- **Element Types.** Either both arrays must have *reference type* elements or both arrays must have *value type* elements. Для получения дополнительной информации см. [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md).
 
-  - Если оба массива состоят из значений, их типы должны полностью совпадать. Единственным исключением из этого является, можно назначить массив `Enum` элементы в массив, базовый тип `Enum`.
+  - If both arrays have value type elements, the element data types must be exactly the same. The only exception to this is that you can assign an array of `Enum` elements to an array of the base type of that `Enum`.
 
-  - Если оба массива имеют ссылочный тип элементов, тип элемента источника должен быть производным от типа элемента назначения. Это делается с помощью двух массивов после той же связи наследования, как их элементов. Это называется *ковариацией*.
+  - If both arrays have reference type elements, the source element type must derive from the destination element type. When this is the case, the two arrays have the same inheritance relationship as their elements. This is called *array covariance*.
 
-Компилятор выдает ошибку, если приведенные выше правила нарушены, например если типы данных несовместимы или ранги не равны. Вы можете добавить в код, чтобы убедиться в том, что массивы совместимы, прежде чем назначение обработки ошибок. Можно также использовать [оператор TryCast](../../../../visual-basic/language-reference/operators/trycast-operator.md) ключевое слово, если вы хотите избежать возникновения исключения.
+The compiler reports an error if the above rules are violated, for example if the data types are not compatible or the ranks are unequal. You can add error handling to your code to make sure that the arrays are compatible before attempting an assignment. You can also use the [TryCast Operator](../../../../visual-basic/language-reference/operators/trycast-operator.md) keyword if you want to avoid throwing an exception.
 
 ## <a name="see-also"></a>См. также
 

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - configuration [WCF]
 ms.assetid: beac771e-f28e-4f84-9ff1-ad9251c726d3
-ms.openlocfilehash: 4fcf01c9f65f2b1bd11462a6f7d61b3551f37b86
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 332a88530010197187ca3ea787e152b0c95a5514
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320651"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141583"
 ---
 # <a name="configuring-wcf-services"></a>Настройка служб WCF
 
@@ -19,7 +19,7 @@ ms.locfileid: "72320651"
   
 ## <a name="in-this-section"></a>Содержание  
  [Упрощенная конфигурация](simplified-configuration.md)  
- Начиная с [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)], WCF поставляется с новой моделью конфигурации по умолчанию, которая упрощает требования к конфигурации WCF. Если не указать конфигурацию WCF для конкретной службы, среда выполнения автоматически настроит службу с конечными точками по умолчанию, привязками и поведением.  
+ Начиная с .NET Framework 4, WCF поставляется с новой моделью конфигурации по умолчанию, которая упрощает требования к конфигурации WCF. Если не указать конфигурацию WCF для конкретной службы, среда выполнения автоматически настроит службу с конечными точками по умолчанию, привязками и поведением.  
   
  [Настройка служб с использованием файлов конфигурации](configuring-services-using-configuration-files.md)  
  Служба Windows Communication Foundation (WCF) настраивается с помощью технологии конфигурации .NET Framework. Чаще всего XML-элементы добавляются в файл Web. config для сайта службы IIS (IIS), на котором размещается служба WCF. Эти элементы позволяют изменять данные, такие как адреса конечных точек (фактические адреса, используемые для взаимодействия со службой), по схеме компьютер-компьютер.  

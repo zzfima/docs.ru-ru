@@ -14,16 +14,16 @@ ms.prod:
 - PRODUCT VALUE
 helpviewer_keywords:
 - OFFLINE BOOK INDEX ENTRIES
-ms.openlocfilehash: 4f50d4d446896e12b5beb86fc649ea4fa7c82718
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: ed9fd55fd84606d2083e0576581391331769a1e6
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72775543"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74089279"
 ---
 # <a name="metadata-and-markdown-template"></a>Шаблон метаданных и разметки Markdown
 
-Этот шаблон dotnet/docs содержит примеры синтаксиса Markdown, а также указания по заданию метаданных. Чтобы использовать шаблон наиболее эффективно, следует просматривать как [необработанную разметку Markdown](https://raw.githubusercontent.com/dotnet/docs/master/styleguide/template.md), так и [подготовленное к просмотру представление](https://github.com/dotnet/docs/blob/master/styleguide/template.md) (например, в необработанной разметке Markdown виден блок метаданных, а в подготовленном к просмотру представлении — нет).
+Этот шаблон dotnet/docs содержит примеры синтаксиса Markdown, а также указания по заданию метаданных. Для максимально эффективного использования просмотрите [необработанный Markdown](https://raw.githubusercontent.com/dotnet/docs/master/styleguide/template.md) и [отрисованное представление](https://github.com/dotnet/docs/blob/master/styleguide/template.md).
 
 При создании файла Markdown следует скопировать этот шаблон в новый файл, заполнить метаданные, как указано ниже, задать заголовок H1 в соответствии с названием статьи и удалить содержимое.
 
@@ -38,7 +38,7 @@ ms.locfileid: "72775543"
 - **description**: содержит сводку по содержимому статьи. Обычно отображается на странице результатов поиска, но не используется для ранжирования поиска. Его длина должна составлять 115–145 символов, включая пробелы.
 - **author** и **ms.author**: поле author должно содержать **имя пользователя GitHub**, принадлежащее автору, а не его псевдоним.  Поле **ms.author**, с другой стороны, должно содержать псевдоним Майкрософт и указывает лицо, ответственное за сопровождение статьи.
 - **ms.topic**: тип раздела. Наиболее распространенное значение — `conceptual`. Оно устанавливается на глобальном уровне. Используются и другие распространенные значения: `tutorial`, `overview` и `reference`.
-- **ms.devlang** определяет языковой фильтр, отображаемый для раздела. Список поддерживаемых значений можно просмотреть в разделе [Поддерживаемые языки](#supported-languages). Необходимо устанавливать только в том случае, если в разделе содержится более одного языка программирования. Как правило, для этого значения в содержимом используются только `csharp`, `vb`, `fsharp` и `cpp`.
+- **dev_langs** определяет языковой фильтр, отображаемый для раздела. Список поддерживаемых значений можно просмотреть в разделе [Поддерживаемые языки](#supported-languages). Необходимо устанавливать только в том случае, если в разделе содержится более одного языка программирования. Как правило, для этого значения в содержимом используются только `csharp`, `vb`, `fsharp` и `cpp`.
 - **ms.prod**: идентификатор продукта, используемый для бизнес-аналитики. Обычно они устанавливаются на глобальном уровне, поэтому не отображаются в блоке метаданных каждой статьи.
 - **ms.technology**: дополнительная классификация бизнес-аналитики. Некоторые из поддерживаемых значений: `devlang-csharp` для разделов по C#, `devlang-fsharp` для разделов по F# и `devlang-visual-basic` для разделов по VB. Для других руководств значения будут различаться, поэтому обратитесь к участнику группы за рекомендациями.
 - **ms.date**: дата в формате MM/ДД/ГГГГ. Отображается на опубликованной странице, чтобы указать время последнего существенного изменения статьи или гарантировать ее актуальность (то есть статья была проверена и признана актуальной).
@@ -70,7 +70,9 @@ ms.locfileid: "72775543"
 
 ## <a name="headings"></a>Заголовки
 
-Прописные буквы следует использовать как в предложениях. Первое слово заголовка всегда должно начинаться с прописной буквы, но не начинайте с него слово, идущее после двоеточия в заголовке или названии (например, "How to: sort an array").
+Прописные буквы следует использовать как в предложениях. Используйте первую прописную букву в первом слове заголовка, именах собственных и первом слове после точки (например, "Руководство. Прогнозирование цен с помощью регрессии с ML.NET").
+
+Не добавляйте двоеточие после слов "Практическое руководство" (например, "Практическое руководство. Сортировка массива", а не "Практическое руководство: Sort an array (Практическое руководство. Сортировка массива).
 
 Заголовки следует оформлять в стиле atx, то есть использовать для указания заголовка 1–6 символов решетки (#) в начале строки, что соответствует уровням заголовков HTML с H1 по H6. Выше приведены примеры заголовков первого и второго уровней.
 
@@ -140,9 +142,9 @@ ms.locfileid: "72775543"
 
 При добавлении \* (или %2A) после уникального идентификатора ссылка представляет страницу перегрузки, а не конкретный API. Например, используйте это для ссылки на страницу [List\<T>.BinarySearch Method](https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1.binarysearch) обычным способом вместо конкретной перегрузки, например [List\<T>.BinarySearch(T, IComparer\<T>)](https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1.binarysearch#System_Collections_Generic_List_1_BinarySearch__0_). Также можно использовать \* для ссылки на страницу элемента, если элемент не перегружен. Это позволяет избежать включения списка параметров в уникальный идентификатор.
 
-Чтобы создать ссылку на определенную перегрузку метода, включите полное имя типа каждого из параметров метода. Например, \<xref:System.DateTime.ToString> ссылается на метод [DateTime.ToString](https://docs.microsoft.com/dotnet/api/system.datetime.tostring#System_DateTime_ToString) без параметров, а \<xref:System.DateTime.ToString(System.String,System.IFormatProvider)> ссылается на метод [DateTime.ToString(String,IFormatProvider)](https://docs.microsoft.com/dotnet/api/system.datetime.tostring#System_DateTime_ToString_System_String_System_IFormatProvider_). Уникальные идентификаторы определенного перегруженного элемента можно найти в `https://xref.docs.microsoft.com/autocomplete`. Строка запроса "?text= *\<type-member-name>* " определяет тип или элемент, уникальный идентификатор которого вы хотите просмотреть. Например, `https://xref.docs.microsoft.com/autocomplete?text=string.format` получает перегрузки [String.Format](https://docs.microsoft.com/dotnet/api/system.string.format).
+Чтобы создать ссылку на определенную перегрузку метода, включите полное имя типа каждого из параметров метода. Например, \<xref:System.DateTime.ToString> ссылается на метод [DateTime.ToString](https://docs.microsoft.com/dotnet/api/system.datetime.tostring#System_DateTime_ToString) без параметров, а \<xref:System.DateTime.ToString(System.String,System.IFormatProvider)> ссылается на метод [DateTime.ToString(String,IFormatProvider)](https://docs.microsoft.com/dotnet/api/system.datetime.tostring#System_DateTime_ToString_System_String_System_IFormatProvider_). Уникальные идентификаторы определенного перегруженного элемента можно найти в <https://xref.docs.microsoft.com/autocomplete>. Строка запроса "?text= *\<type-member-name>* " определяет тип или элемент, уникальный идентификатор которого вы хотите просмотреть. Например, <https://xref.docs.microsoft.com/autocomplete?text=string.format> получает перегрузки [String.Format](https://docs.microsoft.com/dotnet/api/system.string.format).
 
-Чтобы создать ссылку на универсальный тип, например [System.Collections.Generic.ListT\<T>](https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1), используйте символ (%60), за которым следует число параметров универсального типа. Например, \<xref:System.Nullable%601> ссылается на тип [System.Nullable\<T>](https://docs.microsoft.com/dotnet/api/system.nullable-1), а \<xref:System.Func%602> ссылается на делегат [System.Func\<T,TResult>](https://docs.microsoft.com/dotnet/api/system.func-2).
+Чтобы создать ссылку на универсальный тип, например [System.Collections.Generic.List\<T>](https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1), используйте символ \` (%60), за которым следует число параметров универсального типа. Например, \<xref:System.Nullable%601> ссылается на тип [System.Nullable\<T>](https://docs.microsoft.com/dotnet/api/system.nullable-1), а \<xref:System.Func%602> ссылается на делегат [System.Func\<T,TResult>](https://docs.microsoft.com/dotnet/api/system.func-2).
 
 Можно использовать один из следующих вариантов синтаксиса.
 
@@ -165,7 +167,7 @@ ms.locfileid: "72775543"
 Есть два способа найти уникальный идентификатор:
 
 - Просмотрите исходный код для страницы API, на которую вы хотите сослаться, и найдите значение ms.assetid. Обратите внимание, что отдельные значения перегрузки не показаны в исходном коде.
-- Используйте следующее средство для поиска уникальных идентификаторов: https://xref.docs.microsoft.com/autocomplete?text=tostring (замените tostring на части имени API, который вы пытаетесь найти). Средство выполняет поиск указанного параметра запроса `text` в любой части уникального идентификатора. Например, вы можете искать имя элемента (ToString), частичное имя элемента (ToStri), имя типа и элемента (Double.ToString) и т. д.
+- Используйте следующее средство для поиска уникальных идентификаторов: <https://xref.docs.microsoft.com/autocomplete?text=tostring> (замените tostring на части имени API, который вы пытаетесь найти). Средство выполняет поиск указанного параметра запроса `text` в любой части уникального идентификатора. Например, вы можете искать имя элемента (ToString), частичное имя элемента (ToStri), имя типа и элемента (Double.ToString) и т. д.
 
 Если уникальный идентификатор содержит специальные символы \`, \# или \*, они должны быть представлены в значении идентификатора в кодировке HTML как `%60`, `%23` и `%2A` соответственно. Иногда круглые скобки кодируются, но это не обязательно.
 
@@ -305,6 +307,7 @@ ms.locfileid: "72775543"
 |Objective-C|objc|
 |OData|odata|
 |PHP|php|
+|protobuf|protobuf|
 |PowerApps (десятичный разделитель — точка)|powerapps-dot|
 |PowerApps (десятичный разделитель — запятая)|powerapps-comma|
 |PowerShell|powershell|
@@ -319,12 +322,13 @@ ms.locfileid: "72775543"
 |VBScript|vbscript|
 |XAML|xaml|
 |XML|xml|
+|yml|yml|
 
 Имя `csharp-interactive` указывает язык C# и возможность запуска примеров из браузера. Эти фрагменты кода компилируются и выполняются в контейнере Docker, и результаты выполнения программы отображаются в окне браузера пользователя.
 
 Ниже приведены примеры блоков кода с использованием идентификаторов языков для C# (\`\`\`csharp), Python (\`\`\`python) и PowerShell (\`\`\`powershell).
 
-##### <a name="c9839"></a>C&#9839;
+##### <a name="c"></a>C\#
 
 ```csharp
 using System;

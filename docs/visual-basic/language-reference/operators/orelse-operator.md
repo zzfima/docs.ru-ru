@@ -1,5 +1,5 @@
 ---
-title: Оператор OrElse (Visual Basic)
+title: Оператор OrElse
 ms.date: 07/20/2015
 f1_keywords:
 - OrElse
@@ -11,15 +11,15 @@ helpviewer_keywords:
 - short-circuit evaluation
 - OrElse operator [Visual Basic]
 ms.assetid: 253803d8-05b0-47d7-b213-abd222847779
-ms.openlocfilehash: 8290e642db3ec76a931bdd2febe427309457bc86
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 361de44711c3b41411f2fa1dd81a3dd8db6b01e6
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71835243"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348236"
 ---
 # <a name="orelse-operator-visual-basic"></a>Оператор OrElse (Visual Basic)
-Выполняет сокращенное вычисление инклюзивного логического сложения двух выражений.  
+Performs short-circuiting inclusive logical disjunction on two expressions.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,41 +37,41 @@ result = expression1 OrElse expression2
  `expression2`  
  Обязательный. Произвольное выражение `Boolean` .  
   
-## <a name="remarks"></a>Примечания  
- Логическая операция называется *сокращенной* , если скомпилированный код может обходить вычисление одного выражения в зависимости от результата другого выражения. Если результат вычисления первого выражения определяет окончательный результат операции, нет необходимости оценивать второе выражение, так как оно не может изменить окончательный результат. Сокращенное вычисление может повысить производительность, если пропущенное выражение является сложным или если оно включает вызовы процедур.  
+## <a name="remarks"></a>Заметки  
+ A logical operation is said to be *short-circuiting* if the compiled code can bypass the evaluation of one expression depending on the result of another expression. If the result of the first expression evaluated determines the final result of the operation, there is no need to evaluate the second expression, because it cannot change the final result. Short-circuiting can improve performance if the bypassed expression is complex, or if it involves procedure calls.  
   
- Если одно или оба выражения имеют значение `True`, `result` — `True`. В следующей таблице показано, как определяется `result`.  
+ If either or both expressions evaluate to `True`, `result` is `True`. The following table illustrates how `result` is determined.  
   
-|Если `expression1` имеет значение|И `expression2` является|Значение `result` равно|  
+|If `expression1` is|And `expression2` is|The value of `result` is|  
 |-------------------------|--------------------------|------------------------------|  
-|`True`|(не вычислено)|`True`|  
+|`True`|(not evaluated)|`True`|  
 |`False`|`True`|`True`|  
 |`False`|`False`|`False`|  
   
 ## <a name="data-types"></a>Типы данных  
- Оператор `OrElse` определен только для [типа данных Boolean](../../../visual-basic/language-reference/data-types/boolean-data-type.md). При необходимости Visual Basic преобразует каждый операнд в `Boolean` перед вычислением выражения. Если результат присваивается числовому типу, Visual Basic преобразует его из `Boolean` в этот тип, чтобы `False` стало `0`, а `True` преобразуется в `-1`.
-Дополнительные сведения см. в разделе [преобразования логических типов](../data-types/boolean-data-type.md#type-conversions).
+ The `OrElse` operator is defined only for the [Boolean Data Type](../../../visual-basic/language-reference/data-types/boolean-data-type.md). Visual Basic converts each operand as necessary to `Boolean` before evaluating the expression. If you assign the result to a numeric type, Visual Basic converts it from `Boolean` to that type such that `False` becomes `0` and `True` becomes `-1`.
+For more information, see [Boolean Type Conversions](../data-types/boolean-data-type.md#type-conversions).
   
 ## <a name="overloading"></a>Перегрузка  
- [Оператор OR](../../../visual-basic/language-reference/operators/or-operator.md) и [оператор IsTrue](../../../visual-basic/language-reference/operators/istrue-operator.md) могут быть *перегружены*, что означает, что класс или структура может переопределить их поведение, если операнд имеет тип этого класса или структуры. Перегрузка операторов `Or` и `IsTrue` влияет на поведение оператора `OrElse`. Если в коде используется `OrElse` для класса или структуры, которая перегружает `Or` и `IsTrue`, убедитесь, что вы понимаете их переопределенное поведение. Для получения дополнительной информации см. [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+ The [Or Operator](../../../visual-basic/language-reference/operators/or-operator.md) and the [IsTrue Operator](../../../visual-basic/language-reference/operators/istrue-operator.md) can be *overloaded*, which means that a class or structure can redefine their behavior when an operand has the type of that class or structure. Overloading the `Or` and `IsTrue` operators affects the behavior of the `OrElse` operator. If your code uses `OrElse` on a class or structure that overloads `Or` and `IsTrue`, be sure you understand their redefined behavior. Для получения дополнительной информации см. [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Пример  
- В следующем примере оператор `OrElse` используется для выполнения логического сложения двух выражений. Результатом является значение `Boolean`, которое показывает, имеет ли одно из двух выражений значение true. Если первое выражение — `True`, второе значение не вычисляется.  
+ The following example uses the `OrElse` operator to perform logical disjunction on two expressions. The result is a `Boolean` value that represents whether either of the two expressions is true. If the first expression is `True`, the second is not evaluated.  
   
  [!code-vb[VbVbalrOperators#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#37)]  
   
- В предыдущем примере создаются результаты `True`, `True` и `False` соответственно. При вычислении `firstCheck` второе выражение не вычисляется, поскольку первый уже `True`. Однако второе выражение вычисляется в вычислении `secondCheck`.  
+ The preceding example produces results of `True`, `True`, and `False` respectively. In the calculation of `firstCheck`, the second expression is not evaluated because the first is already `True`. However, the second expression is evaluated in the calculation of `secondCheck`.  
   
 ## <a name="example"></a>Пример  
- В следующем примере показана инструкция `If`... `Then`, содержащая два вызова процедур. Если первый вызов возвращает `True`, вторая процедура не вызывается. Это может привести к непредвиденным результатам, если вторая процедура выполняет важные задачи, которые всегда должны выполняться при выполнении этого раздела кода.  
+ The following example shows an `If`...`Then` statement containing two procedure calls. If the first call returns `True`, the second procedure is not called. This could produce unexpected results if the second procedure performs important tasks that should always be performed when this section of the code runs.  
   
  [!code-vb[VbVbalrOperators#38](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#38)]  
   
 ## <a name="see-also"></a>См. также
 
-- [Логические и битовые операторы (Visual Basic)](../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)
+- [Logical/Bitwise Operators (Visual Basic)](../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)
 - [Порядок применения операторов в Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)
 - [Список операторов, сгруппированных по функциональному назначению](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
 - [Оператор Or](../../../visual-basic/language-reference/operators/or-operator.md)
 - [Оператор IsTrue](../../../visual-basic/language-reference/operators/istrue-operator.md)
-- [Логические и побитовые операторы в Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)
+- [Logical and Bitwise Operators in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)

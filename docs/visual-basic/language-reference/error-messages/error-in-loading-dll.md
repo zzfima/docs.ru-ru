@@ -1,36 +1,36 @@
 ---
-title: Ошибка при загрузке библиотеки DLL (Visual Basic)
+title: Ошибка при загрузке DLL
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID48
 ms.assetid: 4226cd1f-028c-477d-88a5-cb57f7e0cdc8
-ms.openlocfilehash: 5a26443a49b0b853f2f2188fb58d7ed907d671b4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 36452cc6ff03042939cd4066aef76129b5bb8f0a
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64659620"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74329558"
 ---
 # <a name="error-in-loading-dll-visual-basic"></a>Ошибка при загрузке библиотеки DLL (Visual Basic)
-Это библиотека динамической компоновки (DLL) — это библиотека, указанный в `Lib` предложении `Declare` инструкции. Среди возможных причин этой ошибки:  
+A dynamic-link library (DLL) is a library specified in the `Lib` clause of a `Declare` statement. Possible causes for this error include:  
   
-- Файл не является исполняемой программой DLL.  
+- The file is not DLL executable.  
   
-- Файл не является Библиотекой Microsoft Windows.  
+- The file is not a Microsoft Windows DLL.  
   
-- DLL ссылается на другой библиотеке DLL, не существует.  
+- The DLL references another DLL that is not present.  
   
-- DLL или DLL, на которую указывает ссылка отсутствует в каталоге, указанном в пути.  
+- The DLL or referenced DLL is not in a directory specified in the path.  
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  
   
-- Если файл источника текстовый файл и поэтому не исполняемый файл DLL, он должен будет компилироваться и собираться в форму исполняемого файла DLL.  
+- If the file is a source-text file and therefore not DLL executable, it must be compiled and linked to a DLL-executable form.  
   
-- Если файл не является Библиотекой Microsoft Windows, получите эквивалентное Microsoft Windows.  
+- If the file is not a Microsoft Windows DLL, obtain the Microsoft Windows equivalent.  
   
-- Если библиотека DLL ссылается другая библиотека DLL, которая отсутствует, получите указанной библиотеке DLL и сделать его доступным.  
+- If the DLL references another DLL that is not present, obtain the referenced DLL and make it available.  
   
-- Если DLL или DLL, на которую указывает ссылка не находится в каталоге, указанном в пути, переместите библиотеку DLL в каталог, на который указывает ссылка.  
+- If the DLL or referenced DLL is not in a directory specified by the path, move the DLL to a referenced directory.  
   
 ## <a name="see-also"></a>См. также
 

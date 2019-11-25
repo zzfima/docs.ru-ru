@@ -1,18 +1,18 @@
 ---
-title: Практическое руководство. Как создать маркер контекста безопасности с отслеживанием состояния для безопасного сеанса
+title: Как создать маркер контекста безопасности с отслеживанием состояния для безопасного сеанса
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 640676b6-c75a-4ff7-aea4-b1a1524d71b2
-ms.openlocfilehash: e6c41ed32d63932bc1fac72bc6e727eb82806617
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 804161dfe4c2b5b397505f25231b3afccb5a6476
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966086"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141703"
 ---
-# <a name="how-to-create-a-security-context-token-for-a-secure-session"></a>Практическое руководство. Как создать маркер контекста безопасности с отслеживанием состояния для безопасного сеанса
+# <a name="how-to-create-a-security-context-token-for-a-secure-session"></a>Как создать маркер контекста безопасности с отслеживанием состояния для безопасного сеанса
 При использовании в безопасном сеансе маркера контекста безопасности (SCT) с отслеживанием состояния сеанс может сохраняться и при перезапуске службы. Например, если в безопасном сеансе используется маркер SCT без учета состояния, то при сбросе служб IIS данные сеанса, связанного со службой, будут потеряны. В состав данных сеанса входит кэш маркера SCT. Поэтому в следующий раз, когда клиент отправляет в службу маркер SCT без учета состояния, возвращается ошибка, так как невозможно извлечь ключ, связанный с этим маркером SCT. Однако если используется маркер SCT с отслеживанием состояния, то ключ, связанный с маркером SCT, содержится в этом маркере SCT. Так как ключ содержится в маркере SCT и, следовательно, в сообщении, перезапуск службы не влияет на безопасный сеанс. По умолчанию Windows Communication Foundation (WCF) в безопасном сеансе использует СКТС без отслеживания состояния. В этом разделе описывается, как использовать в безопасном сеансе маркеры SCT с отслеживанием состояния.  
   
 > [!NOTE]
@@ -28,13 +28,13 @@ ms.locfileid: "69966086"
   
 - Создайте пользовательскую привязку, которая задает, что сообщения SOAP защищаются безопасным сеансом, использующим маркер SCT с отслеживанием состояния.  
   
-    1. Определите пользовательскую привязку, добавив [ \<> CustomBinding](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) в файл конфигурации для службы.  
+    1. Определите пользовательскую привязку, добавив [\<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) в файл конфигурации для службы.  
   
         ```xml  
         <customBinding>  
         ```  
   
-    2. Добавьте привязку [ >дочернийэлементв>CustomBinding.\<](../../../../docs/framework/misc/binding.md) [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
+    2. Добавьте [\<ную привязку >](../../configure-apps/file-schema/wcf/bindings.md) дочерний элемент в [\<CustomBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).  
   
          Укажите имя привязки, задав для атрибута `name` имя, уникальное в пределах этого файла конфигурации.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "69966086"
         <binding name="StatefulSCTSecureSession">  
         ```  
   
-    3. Укажите режим проверки подлинности для сообщений, отправляемых в эту службу и [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) из нее, добавив [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)дочерний элемент > безопасности в > CustomBinding.  
+    3. Укажите режим проверки подлинности для сообщений, отправляемых в эту службу и из нее, добавив дочерний элемент [\<security >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) в [\<CustomBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).  
   
          Укажите, что используется безопасный сеанс, задав для атрибута `authenticationMode` значение `SecureConversation`. Укажите, что используются маркеры SCT с отслеживанием состояния, задав для атрибута `requireSecurityContextCancellation` значение `false`.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "69966086"
                   requireSecurityContextCancellation="false">  
         ```  
   
-    4. Укажите способ проверки подлинности клиента при установке безопасного сеанса, добавив [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md) [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)дочерний элемент секуреконверсатионбутстрап > в > безопасности.  
+    4. Укажите способ проверки подлинности клиента во время установки безопасного сеанса, добавив [\<секуреконверсатионбутстрап >](../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md) дочерний элемент в [\<> безопасности](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md).  
   
          Укажите, как производится проверка подлинности клиента, задав атрибут `authenticationMode`.  
   
@@ -59,13 +59,13 @@ ms.locfileid: "69966086"
         <secureConversationBootstrap authenticationMode="UserNameForCertificate" />  
         ```  
   
-    5. Укажите кодировку сообщений, добавив элемент кодировки, например [ \<текстмессажеенкодинг >](../../../../docs/framework/configure-apps/file-schema/wcf/textmessageencoding.md).  
+    5. Укажите кодировку сообщений, добавив элемент кодировки, например [\<текстмессажеенкодинг >](../../../../docs/framework/configure-apps/file-schema/wcf/textmessageencoding.md).  
   
         ```xml  
         <textMessageEncoding />  
         ```  
   
-    6. Укажите транспорт, добавив транспортный элемент, например [ \<хттптранспорт >](../../../../docs/framework/configure-apps/file-schema/wcf/httptransport.md).  
+    6. Укажите транспорт, добавив элемент Transport, например [\<хттптранспорт >](../../../../docs/framework/configure-apps/file-schema/wcf/httptransport.md).  
   
         ```xml  
         <httpTransport />  
@@ -92,7 +92,7 @@ ms.locfileid: "69966086"
  [!code-csharp[c_CreateStatefulSCT#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_createstatefulsct/cs/secureservice.cs#2)]
  [!code-vb[c_CreateStatefulSCT#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_createstatefulsct/vb/secureservice.vb#2)]  
   
- Если проверка подлинности Windows используется в сочетании с SCT с отслеживанием состояния, WCF не заполняет <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A> свойство фактическим идентификатором вызывающего объекта, а вместо этого устанавливает свойство в значение Anonymous. Поскольку безопасность WCF должна повторно создавать содержимое контекста безопасности службы для каждого запроса от входящего SCT, сервер не отслеживает сеанс безопасности в памяти. Поскольку выполнить сериализацию экземпляра <xref:System.Security.Principal.WindowsIdentity> в маркер SCT невозможно, свойство <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A> возвращает анонимный идентификатор.  
+ Если проверка подлинности Windows используется в сочетании с SCT с отслеживанием состояния, WCF не заполняет свойство <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A> фактическим идентификатором вызывающего объекта, а вместо этого устанавливает свойство в значение Anonymous. Поскольку безопасность WCF должна повторно создавать содержимое контекста безопасности службы для каждого запроса от входящего SCT, сервер не отслеживает сеанс безопасности в памяти. Поскольку выполнить сериализацию экземпляра <xref:System.Security.Principal.WindowsIdentity> в маркер SCT невозможно, свойство <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A> возвращает анонимный идентификатор.  
   
  Следующая конфигурация демонстрирует это расширение функциональности.  
   

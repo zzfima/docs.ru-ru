@@ -1,15 +1,15 @@
 ---
-title: Как использовать аннотации для преобразования деревьев LINQ to XML в стиль XSLT (Visual Basic)
+title: Практическое руководство. Использование примечаний для преобразования деревьев LINQ to XML в стиль XSLT
 ms.date: 07/20/2015
 ms.assetid: 08e91fa2-dac2-4463-9ef1-87b1ac3fa890
-ms.openlocfilehash: b8f15c4dc6016e48619d26e7cc8717a2a3c5acd5
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: d9cb32462535f099107343bd9069b4da3508c5b0
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72581981"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348357"
 ---
-# <a name="how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style-visual-basic"></a>Как использовать аннотации для преобразования деревьев LINQ to XML в стиль XSLT (Visual Basic)
+# <a name="how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style-visual-basic"></a>How to: Use Annotations to Transform LINQ to XML Trees in an XSLT Style (Visual Basic)
 
 Заметки можно использовать для упрощения преобразований XML-дерева.
 
@@ -19,7 +19,7 @@ ms.locfileid: "72581981"
 <text>A phrase with <b>bold</b> and <i>italic</i> text.</text>
 ```
 
-У любого заданного текстового узла может быть любое количество дочерних элементов `<b>` и `<i>`. Этот подход распространяется на ряд других ситуаций, таких как страницы, которые могут содержать различные дочерние элементы, такие как обычные абзацы, маркированные абзацы и точечные рисунки. Ячейки таблицы могут содержать текст, раскрывающиеся списки или битовые карты. Одной из основных отличительных особенностей кода XML, предназначенного для представления документов, является то, что неизвестно, какие дочерние элементы будет иметь тот или иной конкретный элемент.
+У любого заданного текстового узла может быть любое количество дочерних элементов `<b>` и `<i>`. This approach extends to a number of other situations: such as, pages that can contain a variety of child elements, such as regular paragraphs, bulleted paragraphs, and bitmaps. Ячейки таблицы могут содержать текст, раскрывающиеся списки или битовые карты. Одной из основных отличительных особенностей кода XML, предназначенного для представления документов, является то, что неизвестно, какие дочерние элементы будет иметь тот или иной конкретный элемент.
 
 Если требуется преобразовать элементы в дереве, о дочерних элементах которого знать не обязательно, то данный подход, использующий заметки, становится эффективным.
 
@@ -43,7 +43,7 @@ ms.locfileid: "72581981"
 
 ## <a name="transforming-a-tree"></a>Преобразование дерева
 
-В первом примере все узлы `Paragraph` переименованы в `para`:
+This first example renames all `Paragraph` nodes to `para`:
 
 ```vb
 Imports <xmlns:xf="http://www.microsoft.com/LinqToXmlTransform/2007">
@@ -83,7 +83,7 @@ End Module
 </Root>
 ```
 
-## <a name="a-more-complicated-transform"></a>Более сложное преобразование
+## <a name="a-more-complicated-transform"></a>A more complicated transform
 
 В следующем примере выполняется запрос к дереву и вычисляются среднее арифметическое и сумма элементов `Data`, а затем происходит их добавление в дерево в виде новых элементов.
 
@@ -158,29 +158,29 @@ After Transform
 </Root>
 ```
 
-## <a name="effecting-the-transform"></a>Действие преобразования
+## <a name="effecting-the-transform"></a>Effecting the transform
 
 Небольшая функция `XForm` создает новое преобразованное дерево из исходного дерева, обозначенного заметками.
 
 Псевдокод для функции достаточно прост:
 
-> Функция принимает элемент XElement в качестве аргумента и возвращает XElement.
+> The function takes an XElement as an argument and returns an XElement.
 >
-> Если у элемента есть Аннотация XElement, то возвращается новый элемент XElement:
+> If an element has an XElement annotation, then return a new XElement:
 >
-> - Имя нового объекта XElement является именем элемента заметки.
-> - Все атрибуты копируются из заметки в новый узел.
-> - Все дочерние узлы копируются из заметки, за исключением того, что определен специальный узел XF: Апплитрансформс, и выполняется итерация дочерних узлов исходного элемента. Если исходный дочерний узел не является XElement, он копируется в новое дерево. Если исходный дочерний элемент является XElement, то он преобразуется с помощью рекурсивного вызова этой функции.
+> - The name of the new XElement is the annotation element's name.
+> - All attributes are copied from the annotation to the new node.
+> - All child nodes are copied from the annotation, with the exception that the special node xf:ApplyTransforms is recognized, and the source element's child nodes are iterated. If the source child node is not an XElement, it is copied to the new tree. If the source child is an XElement, then it is transformed by calling this function recursively.
 >
-> Если элемент не снабжен заметками:
+> If an element is not annotated:
 >
-> - Возврат нового элемента XElement
->   - Имя нового объекта XElement — это имя исходного элемента.
->   - Все атрибуты копируются из исходного элемента в элемент назначения.
->   - Все дочерние узлы копируются из исходного элемента.
->   - Если исходный дочерний узел не является XElement, он копируется в новое дерево. Если исходный дочерний элемент является XElement, то он преобразуется с помощью рекурсивного вызова этой функции.
+> - Return a new XElement
+>   - The name of the new XElement is the source element's name.
+>   - All attributes are copied from the source element to the destination's element.
+>   - All child nodes are copied from the source element.
+>   - If the source child node is not an XElement, it is copied to the new tree. If the source child is an XElement, then it is transformed by calling this function recursively.
 
-Следующий код является реализацией этой функции:
+The following code is the implementation of this function:
 
 ```vb
 ' Build a transformed XML tree per the annotations.
@@ -227,7 +227,6 @@ End Function
 Следующий код является полным примером, включающим функцию `XForm`. Он включает несколько типичных вариантов использования преобразования данного типа:
 
 ```vb
-Imports System
 Imports System.Collections.Generic
 Imports System.Linq
 Imports System.Text
@@ -377,4 +376,4 @@ After Transform
 
 ## <a name="see-also"></a>См. также
 
-- [Расширенное программирование LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+- [Advanced LINQ to XML Programming (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

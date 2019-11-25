@@ -1,5 +1,5 @@
 ---
-title: Процедуры свойств (Visual Basic)
+title: Процедуры свойств
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Set statement [Visual Basic], Property procedures
@@ -13,35 +13,35 @@ helpviewer_keywords:
 - property procedures
 - Get statement [Visual Basic], property procedures
 ms.assetid: 46a98379-e1a2-45dd-a48c-b51213f5ab07
-ms.openlocfilehash: 118c9e776813f303ed921946f4cf6f1236ac02e3
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: a4b8ac3e27348764f537ee9502ce1fbb165bb3ef
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040977"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352561"
 ---
 # <a name="property-procedures-visual-basic"></a>Процедуры свойств (Visual Basic)
 
-Процедура свойства — это серия Visual Basic инструкций, которые управляют пользовательским свойством модуля, класса или структуры. Процедуры свойств также называются свойствами *доступа к свойствам*.
+A property procedure is a series of Visual Basic statements that manipulate a custom property on a module, class, or structure. Property procedures are also known as *property accessors*.
 
-Visual Basic предоставляет следующие процедуры свойств.
+Visual Basic provides for the following property procedures:
 
-- `Get` процедура возвращает значение свойства. Он вызывается при доступе к свойству в выражении.
-- `Set` процедура задает для свойства значение, включая ссылку на объект. Он вызывается при присвоении значения свойству.
+- A `Get` procedure returns the value of a property. It is called when you access the property in an expression.
+- A `Set` procedure sets a property to a value, including an object reference. It is called when you assign a value to the property.
 
-Обычно процедуры свойств определяются парами, с помощью инструкций `Get` и `Set`, но можно определить только одну процедуру, если свойство доступно только для чтения ([Инструкция Get](../../../../visual-basic/language-reference/statements/get-statement.md)) или только для записи ([инструкция SET](../../../../visual-basic/language-reference/statements/set-statement.md)).
+You usually define property procedures in pairs, using the `Get` and `Set` statements, but you can define either procedure alone if the property is read-only ([Get Statement](../../../../visual-basic/language-reference/statements/get-statement.md)) or write-only ([Set Statement](../../../../visual-basic/language-reference/statements/set-statement.md)).
 
-При использовании автоматического реализуемого свойства можно опустить `Get` и `Set` процедуру. Дополнительные сведения см. в разделе [Автоматически реализуемые свойства](./auto-implemented-properties.md).
+You can omit the `Get` and `Set` procedure when using an auto-implemented property. Дополнительные сведения см. в разделе [Автоматически реализуемые свойства](./auto-implemented-properties.md).
 
-Свойства можно определить в классах, структурах и модулях. По умолчанию свойства являются `Public`. Это означает, что их можно вызывать из любого места в приложении, которое может получить доступ к контейнеру свойства.
+You can define properties in classes, structures, and modules. Properties are `Public` by default, which means you can call them from anywhere in your application that can access the property's container.
 
-Сравнение свойств и переменных см. [в разделе различия между свойствами и переменными в Visual Basic](differences-between-properties-and-variables.md).
+For a comparison of properties and variables, see [Differences Between Properties and Variables in Visual Basic](differences-between-properties-and-variables.md).
 
-## <a name="declaration-syntax"></a>Синтаксис объявления
+## <a name="declaration-syntax"></a>Declaration syntax
 
-Само свойство определяется блоком кода, заключенным в [Оператор Property](../../../../visual-basic/language-reference/statements/property-statement.md) , и оператор `End Property`. Внутри этого блока каждая процедура свойства отображается как внутренний блок, заключенный в оператор объявления (`Get` или `Set`) и соответствующее объявление `End`.
+A property itself is defined by a block of code enclosed within the [Property Statement](../../../../visual-basic/language-reference/statements/property-statement.md) and the `End Property` statement. Inside this block, each property procedure appears as an internal block enclosed within a declaration statement (`Get` or `Set`) and the matching `End` declaration.
 
-Синтаксис объявления свойства и его процедур выглядит следующим образом:
+The syntax for declaring a property and its procedures is as follows:
 
 ```vb
 [Default] [Modifiers] Property PropertyName[(ParameterList)] [As DataType]
@@ -60,27 +60,27 @@ End Property
 [Default] [Modifiers] Property PropertyName [(ParameterList)] [As DataType]
 ```
 
-`Modifiers` может указывать уровень доступа и сведения о перегрузке, переопределении, совместном использовании и затенении, а также о том, доступно ли свойство только для чтения или только для записи. `AccessLevel` в процедуре `Get` или `Set` может быть любым уровнем, более четким, чем уровень доступа, заданный для самого свойства. Дополнительные сведения см. в разделе [Оператор Property](../../../../visual-basic/language-reference/statements/property-statement.md).
+The `Modifiers` can specify access level and information regarding overloading, overriding, sharing, and shadowing, as well as whether the property is read-only or write-only. The `AccessLevel` on the `Get` or `Set` procedure can be any level that is more restrictive than the access level specified for the property itself. For more information, see [Property Statement](../../../../visual-basic/language-reference/statements/property-statement.md).
 
 ### <a name="data-type"></a>Тип данных
 
-Тип данных свойства и основной уровень доступа определяются в операторе `Property`, а не в процедурах свойств. Свойство может иметь только один тип данных. Например, нельзя определить свойство для хранения `Decimal` значения, но получить значение `Double`.
+A property's data type and principal access level are defined in the `Property` statement, not in the property procedures. A property can have only one data type. For example, you cannot define a property to store a `Decimal` value but retrieve a `Double` value.
 
-### <a name="access-level"></a>Уровень доступа
+### <a name="access-level"></a>Access Level
 
-Однако можно определить основной уровень доступа для свойства и дополнительно ограничить уровень доступа в одной из его процедур свойств. Например, можно определить `Public` свойство, а затем определить `Private Set` процедуру. Процедура `Get` остается `Public`. Уровень доступа можно изменить только в одной из процедур свойства, и его можно сделать более узким, чем основной уровень доступа. Дополнительные сведения см. [в разделе инструкции. объявление свойства со смешанными уровнями доступа](how-to-declare-a-property-with-mixed-access-levels.md).
+However, you can define a principal access level for a property and further restrict the access level in one of its property procedures. For example, you can define a `Public` property and then define a `Private Set` procedure. The `Get` procedure remains `Public`. You can change the access level in only one of a property's procedures, and you can only make it more restrictive than the principal access level. For more information, see [How to: Declare a Property with Mixed Access Levels](how-to-declare-a-property-with-mixed-access-levels.md).
 
-## <a name="parameter-declaration"></a>Объявление параметра
+## <a name="parameter-declaration"></a>Parameter declaration
 
-Каждый параметр объявляется так же, как и для [процедур подразделов](sub-procedures.md), за исключением того, что механизм передачи должен быть `ByVal`.
+You declare each parameter the same way you do for [Sub Procedures](sub-procedures.md), except that the passing mechanism must be `ByVal`.
 
-Для каждого параметра в списке параметров используется следующий синтаксис:
+The syntax for each parameter in the parameter list is as follows:
 
 ```vb
 [Optional] ByVal [ParamArray] parametername As datatype
 ```
 
-Если параметр является необязательным, необходимо также указать значение по умолчанию в составе объявления. Для указания значения по умолчанию используется следующий синтаксис:
+If the parameter is optional, you must also supply a default value as part of its declaration. The syntax for specifying a default value is as follows:
 
 ```vb
 Optional ByVal parametername As datatype = defaultvalue
@@ -88,34 +88,34 @@ Optional ByVal parametername As datatype = defaultvalue
 
 ## <a name="property-value"></a>Значение свойства
 
-В `Get` процедуре возвращаемое значение предоставляется вызывающему выражению как значение свойства.
+In a `Get` procedure, the return value is supplied to the calling expression as the value of the property.
 
-В `Set` процедуре новое значение свойства передается в параметр инструкции `Set`. При явном объявлении параметра необходимо объявить его с тем же типом данных, что и свойство. Если параметр не объявлен, компилятор использует неявный параметр `Value` для представления нового значения, присваиваемого свойству.
+In a `Set` procedure, the new property value is passed to the parameter of the `Set` statement. If you explicitly declare a parameter, you must declare it with the same data type as the property. If you do not declare a parameter, the compiler uses the implicit parameter `Value` to represent the new value to be assigned to the property.
 
-## <a name="calling-syntax"></a>Синтаксис вызова
+## <a name="calling-syntax"></a>Calling syntax
 
-Процедура свойства вызывается неявно путем создания ссылки на свойство. Имя свойства используется так же, как имя переменной, за исключением того, что необходимо указать значения для всех аргументов, которые не являются необязательными, а список аргументов необходимо заключить в круглые скобки. Если аргументы не указаны, можно дополнительно опустить круглые скобки.
+You invoke a property procedure implicitly by making reference to the property. You use the name of the property the same way you would use the name of a variable, except that you must provide values for all arguments that are not optional, and you must enclose the argument list in parentheses. If no arguments are supplied, you can optionally omit the parentheses.
 
-Синтаксис неявного вызова `Set` процедуры выглядит следующим образом:
+The syntax for an implicit call to a `Set` procedure is as follows:
 
 ```vb
 propertyname[(argumentlist)] = expression
 ```
 
-Синтаксис неявного вызова `Get` процедуры выглядит следующим образом:
+The syntax for an implicit call to a `Get` procedure is as follows:
 
 ```vb
 lvalue = propertyname[(argumentlist)]
 Do While (propertyname[(argumentlist)] > expression)
 ```
 
-### <a name="illustration-of-declaration-and-call"></a>Иллюстрация объявления и вызова
+### <a name="illustration-of-declaration-and-call"></a>Illustration of declaration and call
 
-Следующее свойство сохраняет полное имя как два составных имени: имя и фамилия. Когда вызывающий код считывает `fullName`, `Get` процедура объединяет два составных имени и возвращает полное имя. Когда вызывающий код присваивает новое полное имя, процедура `Set` пытается разбить ее на два составных имени. Если не удается найти пробел, он сохраняется как первое имя.
+The following property stores a full name as two constituent names, the first name and the last name. When the calling code reads `fullName`, the `Get` procedure combines the two constituent names and returns the full name. When the calling code assigns a new full name, the `Set` procedure attempts to break it into two constituent names. If it does not find a space, it stores it all as the first name.
 
 [!code-vb[VbVbcnProcedures#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#8)]
 
-В следующем примере показаны типичные вызовы процедур свойств `fullName`.
+The following example shows typical calls to the property procedures of `fullName`:
 
 [!code-vb[VbVbcnProcedures#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#9)]
 
@@ -125,9 +125,9 @@ Do While (propertyname[(argumentlist)] > expression)
 - [Процедуры функций](function-procedures.md)
 - [Процедуры операторов](operator-procedures.md)
 - [Параметры и аргументы процедуры](procedure-parameters-and-arguments.md)
-- [Различия между свойствами и переменными в Visual Basic](differences-between-properties-and-variables.md)
+- [Differences Between Properties and Variables in Visual Basic](differences-between-properties-and-variables.md)
 - [Практическое руководство. Создание свойства](how-to-create-a-property.md)
 - [Практическое руководство. Вызов процедуры свойства](how-to-call-a-property-procedure.md)
-- [Инструкции. объявление и вызов свойства по умолчанию в Visual Basic](how-to-declare-and-call-a-default-property.md)
+- [How to: Declare and Call a Default Property in Visual Basic](how-to-declare-and-call-a-default-property.md)
 - [Практическое руководство. Запись значения в свойство](how-to-put-a-value-in-a-property.md)
 - [Практическое руководство. Получение значения из свойства](how-to-get-a-value-from-a-property.md)

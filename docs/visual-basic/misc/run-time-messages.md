@@ -1,21 +1,21 @@
 ---
-title: Сообщения времени выполнения в Visual Basic
+title: Сообщения во время выполнения
 ms.date: 07/20/2015
 helpviewer_keywords:
 - errors [Visual Basic], run-time
 - run-time errors [Visual Basic], Visual Basic
 ms.assetid: 130f7c2b-8eb1-4a6e-81aa-e30e27d3d4f7
-ms.openlocfilehash: 11d35774b489d36c32e5d3f58a5bc25b005ff12d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 445704030ab3fd1581235ed3b17b7e9a0da47f48
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61595430"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353653"
 ---
 # <a name="visual-basic-run-time-messages"></a>Сообщения времени выполнения в Visual Basic
-Этот раздел содержит сообщения об ошибках Visual Basic, возникающих во время выполнения.  
+This section contains the Visual Basic error messages that occur at run time.  
   
- [\<адрес > не является недопустимым адресом удаленного файла](../../visual-basic/misc/address-is-not-a-valid-remote-file-address.md)  
+ [\<address> is not a valid remote file address](../../visual-basic/misc/address-is-not-a-valid-remote-file-address.md)  
   
  [Разделитель не может принимать значение Nothing или быть пустой строкой](../../visual-basic/misc/a-delimiter-cannot-be-nothing-or-an-empty-string.md)  
   
@@ -27,9 +27,9 @@ ms.locfileid: "61595430"
   
  [Форма запуска не указана](../../visual-basic/language-reference/error-messages/a-startup-form-has-not-been-specified.md)  
   
- [Отказано в доступе к "\<имя >"](../../visual-basic/misc/access-denied-to-name.md)  
+ [Access denied to '\<name>'](../../visual-basic/misc/access-denied-to-name.md)  
   
- [Сбой при добавлении. Указано повторяющееся значение ключа](../../visual-basic/misc/add-failed-duplicate-key-value-supplied.md)  
+ [Add failed. Duplicate key value supplied](../../visual-basic/misc/add-failed-duplicate-key-value-supplied.md)  
   
  [Все поля, за исключением последнего элемента, должны иметь ширину больше нуля](../../visual-basic/misc/all-field-widths-except-the-last-element-must-be-greater-than-zero.md)  
   
@@ -41,51 +41,51 @@ ms.locfileid: "61595430"
   
  [Определенная приложением или объектом ошибка](../../visual-basic/misc/application-defined-or-object-defined-error.md)  
   
- [Аргумент "\<аргумент1 >" должно быть меньше или равен длине аргумента "\<аргумент2 >"](../../visual-basic/misc/argument-argument1-must-be-less-than-or-equal-to-the-length-of-argument2.md)  
+ [Argument '\<argument1>' must be less than or equal to the length of argument '\<argument2>'](../../visual-basic/misc/argument-argument1-must-be-less-than-or-equal-to-the-length-of-argument2.md)  
   
- [Аргумент "\<имя_аргумента >" не может быть многомерным массивом](../../visual-basic/misc/argument-argumentname-cannot-be-a-multidimensional-array.md)  
+ [Argument '\<argumentname>' cannot be a multidimensional array](../../visual-basic/misc/argument-argumentname-cannot-be-a-multidimensional-array.md)  
   
- [Аргумент \<имя_аргумента > не может быть пустой строкой или Nothing](../../visual-basic/misc/argument-argumentname-cannot-be-an-empty-string-or-nothing.md)  
+ [Argument \<argumentname> cannot be an empty string or Nothing](../../visual-basic/misc/argument-argumentname-cannot-be-an-empty-string-or-nothing.md)  
   
- [Аргумент "\<имя_аргумента >" невозможно преобразовать в числовое значение](../../visual-basic/misc/argument-argumentname-cannot-be-converted-to-a-numeric-value.md)  
+ [Argument '\<argumentname>' cannot be converted to a numeric value](../../visual-basic/misc/argument-argumentname-cannot-be-converted-to-a-numeric-value.md)  
   
- [Аргумент "\<имя_аргумента >" не может быть преобразовано в тип "\<typename >"](../../visual-basic/misc/argument-argumentname-cannot-be-converted-to-type-typename.md)  
+ [Argument '\<argumentname>' cannot be converted to type '\<typename>'](../../visual-basic/misc/argument-argumentname-cannot-be-converted-to-type-typename.md)  
   
- [Аргумент "\<имя_аргумента >" не может быть преобразовано в тип «Date».](../../visual-basic/misc/argument-argumentname-cannot-be-converted-to-type-date.md)  
+ [Argument '\<argumentname>' cannot be converted to type 'Date'](../../visual-basic/misc/argument-argumentname-cannot-be-converted-to-type-date.md)  
   
- [Аргумент "\<имя_аргумента >" не является допустимым значением](../../visual-basic/misc/argument-argumentname-is-not-a-valid-value.md)  
+ [Argument '\<argumentname>' is not a valid value](../../visual-basic/misc/argument-argumentname-is-not-a-valid-value.md)  
   
- [Аргумент "\<имя_аргумента >" является недопустимым для массива](../../visual-basic/misc/argument-argumentname-is-not-valid-for-the-array.md)  
+ [Argument '\<argumentname>' is not valid for the array](../../visual-basic/misc/argument-argumentname-is-not-valid-for-the-array.md)  
   
- [Аргумент "\<имя_аргумента >" имеет значение Nothing](../../visual-basic/misc/argument-argumentname-is-nothing.md)  
+ [Argument '\<argumentname>' is Nothing](../../visual-basic/misc/argument-argumentname-is-nothing.md)  
   
- [Аргумент "\<имя_аргумента >" имеет значение Nothing или пуст](../../visual-basic/misc/argument-argumentname-is-nothing-or-empty.md)  
+ [Argument '\<argumentname>' is Nothing or empty](../../visual-basic/misc/argument-argumentname-is-nothing-or-empty.md)  
   
- [Аргумент "\<имя_аргумента >" должен быть больше 0 или равен-1](../../visual-basic/misc/argument-argumentname-must-be-greater-than-0-or-equal-to-1.md)  
+ [Argument '\<argumentname>' must be greater than 0 or equal to -1](../../visual-basic/misc/argument-argumentname-must-be-greater-than-0-or-equal-to-1.md)  
   
- [Аргумент "\<имя_аргумента >" должен быть больше или равно 1](../../visual-basic/misc/argument-argumentname-must-be-greater-than-or-equal-to-1.md)  
+ [Argument '\<argumentname>' must be greater than or equal to 1](../../visual-basic/misc/argument-argumentname-must-be-greater-than-or-equal-to-1.md)  
   
- [Аргумент "\<имя_аргумента >" должен быть больше или равно-1](../../visual-basic/misc/argument-argumentname-must-be-greater-than-or-equal-to-1-1.md)  
+ [Argument '\<argumentname>' must be greater than or equal to -1](../../visual-basic/misc/argument-argumentname-must-be-greater-than-or-equal-to-1-1.md)  
   
- [Аргумент \<имя_аргумента > должно быть больше или равно нулю](../../visual-basic/misc/argument-argumentname-must-be-greater-than-or-equal-to-zero-1.md)  
+ [Argument \<argumentname> must be greater than or equal to zero](../../visual-basic/misc/argument-argumentname-must-be-greater-than-or-equal-to-zero-1.md)  
   
- [Аргумент "\<имя_аргумента >" должен быть больше или равно нулю](../../visual-basic/misc/argument-argumentname-must-be-greater-than-or-equal-to-zero.md)  
+ [Argument '\<argumentname>' must be greater than or equal to zero](../../visual-basic/misc/argument-argumentname-must-be-greater-than-or-equal-to-zero.md)  
   
- [Аргумент "\<имя_аргумента >" должен быть больше нуля](../../visual-basic/misc/argument-argumentname-must-be-greater-than-zero.md)  
+ [Argument '\<argumentname>' must be greater than zero](../../visual-basic/misc/argument-argumentname-must-be-greater-than-zero.md)  
   
- [Аргумент "\<имя_аргумента >" должен быть в диапазоне от -32768 до 65535](../../visual-basic/misc/argument-argumentname-must-be-in-the-range-of-32768-to-65535.md)  
+ [Argument '\<argumentname>' must be in the range of -32768 to 65535](../../visual-basic/misc/argument-argumentname-must-be-in-the-range-of-32768-to-65535.md)  
   
- [Аргумент "\<имя_аргумента >" должно находиться в диапазоне от 0 до 99](../../visual-basic/misc/argument-argumentname-must-be-within-the-range-0-to-99.md)  
+ [Argument '\<argumentname>' must be within the range 0 to 99](../../visual-basic/misc/argument-argumentname-must-be-within-the-range-0-to-99.md)  
   
- [Аргумент "\<имя_аргумента >" должен быть в диапазоне от 1 до 255](../../visual-basic/misc/argument-argumentname-must-be-within-the-range-1-to-255.md)  
+ [Argument '\<argumentname>' must be within the range 1 to 255](../../visual-basic/misc/argument-argumentname-must-be-within-the-range-1-to-255.md)  
   
- [Аргумент "\<аргумент1 >" должно быть меньше или равен длине аргумента "\<аргумент2 >"](../../visual-basic/misc/argument-argumentname1-must-be-less-than-or-equal-the-length-of-argumentname2.md)  
+ [Argument '\<argumentname1>' must be less than or equal the length of argument '\<argumentname2>'](../../visual-basic/misc/argument-argumentname1-must-be-less-than-or-equal-the-length-of-argumentname2.md)  
   
- [Недопустимый аргумент Access. Допустимые значения для режима Append: OpenAccess.Write и OpenAccess.Default](../../visual-basic/misc/argument-access-is-not-valid-append-mode.md)  
+ [Argument 'Access' is not valid. Valid values for Append mode are 'OpenAccess.Write' and 'OpenAccess.Default'](../../visual-basic/misc/argument-access-is-not-valid-append-mode.md)  
   
- [Недопустимый аргумент Access. Допустимыми значениями для режима Input являются OpenAccess.Read и OpenAccess.Default](../../visual-basic/misc/argument-access-is-not-valid-input-mode.md)  
+ [Argument 'Access' is not valid. Valid values for Input mode are 'OpenAccess.Read' and 'OpenAccess.Default'](../../visual-basic/misc/argument-access-is-not-valid-input-mode.md)  
   
- [Недопустимый аргумент Access. Допустимые значения для режима Output: OpenAccess.Write и OpenAccess.Default](../../visual-basic/misc/argument-access-is-not-valid.md)  
+ [Argument 'Access' is not valid. Valid values for Output mode are 'OpenAccess.Write' and 'OpenAccess.Default'](../../visual-basic/misc/argument-access-is-not-valid.md)  
   
  [Аргумент BasePath должен представлять собой путь к папке](../../visual-basic/misc/argument-basepath-must-be-a-path-to-a-folder.md)  
   
@@ -99,7 +99,7 @@ ms.locfileid: "61595430"
   
  [Аргумент Life не может быть равен нулю](../../visual-basic/misc/argument-life-cannot-be-zero.md)  
   
- [Аргумент не является обязательным (Visual Basic)](../../visual-basic/language-reference/error-messages/argument-not-optional.md)  
+ [Argument not optional (Visual Basic)](../../visual-basic/language-reference/error-messages/argument-not-optional.md)  
   
  [Аргумент NPer должен быть больше нуля](../../visual-basic/misc/argument-nper-must-be-greater-than-zero.md)  
   
@@ -109,7 +109,7 @@ ms.locfileid: "61595430"
   
  [Аргумент "Period" должен быть меньше или равен аргументу "Life"](../../visual-basic/misc/argument-period-must-be-less-than-or-equal-to-argument-life.md)  
   
- [Значение аргумента "\<путь >" содержит символы, недопустимые в имени пути](../../visual-basic/misc/argument-value-pathname-contains-characters-that-are-not-valid-in-a-path-name.md)  
+ [Argument value '\<pathname>' contains characters that are not valid in a path name](../../visual-basic/misc/argument-value-pathname-contains-characters-that-are-not-valid-in-a-path-name.md)  
   
  [Недопустимые аргументы](../../visual-basic/misc/arguments-are-not-valid.md)  
   
@@ -141,11 +141,11 @@ ms.locfileid: "61595430"
   
  [Невозможно вызвать дружественную функцию для объекта, не являющегося экземпляром определяющего класса](../../visual-basic/misc/cannot-call-friend-function-on-object-which-is-not-instance-of-defining-class.md)  
   
- [Не удается преобразовать аргумент "\<имя_аргумента >" типа "\<тип1 >" к типу "\<тип2 >"](../../visual-basic/misc/cannot-convert-argument-argumentname-of-type-type1-to-type-type2.md)  
+ [Cannot convert argument '\<argumentname>' of type '\<type1>' to type '\<type2>'](../../visual-basic/misc/cannot-convert-argument-argumentname-of-type-type1-to-type-type2.md)  
   
- [Невозможно преобразовать начальное значение типа "\<тип1 >" и значение шага типа "\<тип2 >" к общему типу](../../visual-basic/misc/cannot-convert-start-value-of-type1-and-step-value-of-type2-to-a-common-type.md)  
+ [Cannot convert start value of type '\<type1>' and step value of type '\<type2>' to a common type](../../visual-basic/misc/cannot-convert-start-value-of-type1-and-step-value-of-type2-to-a-common-type.md)  
   
- [Невозможно преобразовать начальное значение типа "\<тип1 >", предельное значение типа "\<тип2 >" и значение шага "\<Тип3 >" к общему типу](../../visual-basic/misc/cannot-convert-start-value-to-a-common-type.md)  
+ [Cannot convert start value of type '\<type1>', limit value of '\<type2>' and step value of '\<type3>' to a common type](../../visual-basic/misc/cannot-convert-start-value-to-a-common-type.md)  
   
  [Не удалось создать компонент ActiveX](../../visual-basic/language-reference/error-messages/cannot-create-activex-component.md)  
   
@@ -161,11 +161,11 @@ ms.locfileid: "61595430"
   
  [Не удается выполнить запрошенную операцию (Visual Basic)](../../visual-basic/misc/cant-perform-requested-operation.md)  
   
- [Преобразование из строки "\<строка >» к типу"\<typename > "является недопустимым](../../visual-basic/misc/cast-from-string-string-to-type-typename-is-not-valid.md)  
+ [Cast from string "\<string>" to type '\<typename>' is not valid](../../visual-basic/misc/cast-from-string-string-to-type-typename-is-not-valid.md)  
   
- [Преобразование из типа "\<Имя_типа1 >" к типу "\<имя_типа2 >" является недопустимым](../../visual-basic/misc/cast-from-type-typename1-to-type-typename2-is-not-valid.md)  
+ [Cast from type '\<typename1>' to type '\<typename2>' is not valid](../../visual-basic/misc/cast-from-type-typename1-to-type-typename2-is-not-valid.md)  
   
- [Класс\<имя_класса > "не реализует интерфейс System.Collections.ICollection](../../visual-basic/misc/class-classname-does-not-implement-the-system-collections-icollection-interface.md)  
+ [Class '\<classname>' does not implement the System.Collections.ICollection interface](../../visual-basic/misc/class-classname-does-not-implement-the-system-collections-icollection-interface.md)  
   
  [Для класса не поддерживается операция автоопределения или предполагаемый интерфейс](../../visual-basic/language-reference/error-messages/class-does-not-support-automation-or-does-not-support-expected-interface.md)  
   
@@ -203,27 +203,27 @@ ms.locfileid: "61595430"
   
  [Деление на ноль (ошибка времени выполнения Visual Basic)](../../visual-basic/misc/division-by-zero-run-time-error.md)  
   
- [Диск "\<имя_диска >" не найден](../../visual-basic/misc/drive-drivename-not-found.md)  
+ [Drive '\<drivename>' not found](../../visual-basic/misc/drive-drivename-not-found.md)  
   
  [Параметру Encoding нельзя присвоить значение Nothing](../../visual-basic/misc/encoding-cannot-be-set-to-nothing.md)  
   
- [Ошибка при загрузке библиотеки DLL (Visual Basic)](../../visual-basic/language-reference/error-messages/error-in-loading-dll.md)  
+ [Error in loading DLL (Visual Basic)](../../visual-basic/language-reference/error-messages/error-in-loading-dll.md)  
   
  [Номер ошибки должен находиться в диапазоне от 0 до 65 535](../../visual-basic/misc/error-number-must-be-within-the-range-0-and-65535.md)  
   
- [Выражение "\<имя >" не является процедурой, но используется как целевой объект вызова процедуры](../../visual-basic/misc/expression-name-is-not-a-procedure-but-occurs-as-the-target-of-a-procedure-call.md)  
+ [Expression '\<name>' is not a procedure, but occurs as the target of a procedure call](../../visual-basic/misc/expression-name-is-not-a-procedure-but-occurs-as-the-target-of-a-procedure-call.md)  
   
  [Слишком сложное выражение](../../visual-basic/language-reference/error-messages/expression-too-complex.md)  
   
  [Данная функциональная возможность еще не реализована](../../visual-basic/misc/feature-not-yet-implemented.md)  
   
- [Поле "\<имя_поля >" типа "\<typename >" помечено как «ReadOnly»](../../visual-basic/misc/field-fieldname-of-type-typename-is-readonly.md)  
+ [Field '\<fieldname>' of type '\<typename>' is 'ReadOnly'](../../visual-basic/misc/field-fieldname-of-type-typename-is-readonly.md)  
   
- [Файл "\<имя_файла >" нельзя удалить, поскольку он открыт](../../visual-basic/misc/file-filename-cannot-be-deleted-because-it-is-open.md)  
+ [File '\<filename>' cannot be deleted because it is open](../../visual-basic/misc/file-filename-cannot-be-deleted-because-it-is-open.md)  
   
- [Файл "\<имя_файла >" защищен от записи](../../visual-basic/misc/file-filename-is-write-protected.md)  
+ [File '\<filename>' is write protected](../../visual-basic/misc/file-filename-is-write-protected.md)  
   
- [Файл "\<имя_файла >" не найден](../../visual-basic/misc/file-filename-not-found.md)  
+ [File '\<filename>' not found](../../visual-basic/misc/file-filename-not-found.md)  
   
  [Файл уже существует](../../visual-basic/misc/file-already-exists.md)  
   
@@ -231,9 +231,9 @@ ms.locfileid: "61595430"
   
  [Недопустимый формат файла](../../visual-basic/misc/file-format-not-valid.md)  
   
- [Файловый ввод-вывод файла структуры с полем "\<имя_поля >" типа "\<typename >" является недопустимым](../../visual-basic/misc/file-io-of-a-structure-with-field-fieldname-of-type-typename-is-not-valid.md)  
+ [File I/O of a structure with field '\<fieldname>' of type '\<typename>' is not valid](../../visual-basic/misc/file-io-of-a-structure-with-field-fieldname-of-type-typename-is-not-valid.md)  
   
- [Файловый ввод-вывод с типом "\<typename >" является недопустимым](../../visual-basic/misc/file-i-o-with-type-typename-is-not-valid.md)  
+ [File I/O with type '\<typename>' is not valid](../../visual-basic/misc/file-i-o-with-type-typename-is-not-valid.md)  
   
  [Если файл не существует, запросить данные о нем невозможно](../../visual-basic/misc/file-information-cannot-be-queried-if-the-file-does-not-exist.md)  
   
@@ -241,7 +241,7 @@ ms.locfileid: "61595430"
   
  [Файл слишком велик для чтения в массив байтов](../../visual-basic/language-reference/error-messages/file-is-too-large-to-read-into-a-byte-array.md)  
   
- [Имя файла или класса не найдено во время операции автоматизации (Visual Basic)](../../visual-basic/language-reference/error-messages/file-name-or-class-name-not-found-during-automation-operation.md)  
+ [File name or class name not found during Automation operation (Visual Basic)](../../visual-basic/language-reference/error-messages/file-name-or-class-name-not-found-during-automation-operation.md)  
   
  [Файл не найден (ошибка времени выполнения Visual Basic)](../../visual-basic/language-reference/error-messages/file-not-found-visual-basic-run-time-error.md)  
   
@@ -269,7 +269,7 @@ ms.locfileid: "61595430"
   
  [Внутренняя ошибка (Visual Basic)](../../visual-basic/misc/internal-error.md)  
   
- [Произошла внутренняя ошибка в \<расположение >](../../visual-basic/language-reference/error-messages/internal-error-happened-at-location.md)  
+ [Internal error happened at \<location>](../../visual-basic/language-reference/error-messages/internal-error-happened-at-location.md)  
   
  [Внутренняя ошибка в выполняемом модуле Microsoft Visual Basic](../../visual-basic/misc/internal-error-in-the-microsoft-visual-basic-runtime.md)  
   
@@ -277,31 +277,31 @@ ms.locfileid: "61595430"
   
  [Нельзя удалить раздел, так как он содержит подразделы](../../visual-basic/misc/key-cannot-be-deleted-because-it-has-subkeys.md)  
   
- [С поздним связыванием присвоение полю значения типа "\<typename >" является недопустимым при "\<имя >" является результатом выражения с поздним связыванием](../../visual-basic/misc/late-bound-assignment-to-a-field-of-value-type-typename-is-not-valid.md)  
+ [Late-bound assignment to a field of value type '\<typename>' is not valid when '\<name>' is the result of a late-bound expression](../../visual-basic/misc/late-bound-assignment-to-a-field-of-value-type-typename-is-not-valid.md)  
   
- [Длина аргумента "\<имя_аргумента >" должен быть больше нуля](../../visual-basic/misc/length-of-argument-argumentname-must-be-greater-than-zero.md)  
+ [Length of argument '\<argumentname>' must be greater than zero](../../visual-basic/misc/length-of-argument-argumentname-must-be-greater-than-zero.md)  
   
- [Строки \<номер > не может быть проанализирована с помощью текущих разделителей](../../visual-basic/misc/line-number-cannot-be-parsed-using-the-current-delimiters.md)  
+ [Line \<number> cannot be parsed using the current Delimiters](../../visual-basic/misc/line-number-cannot-be-parsed-using-the-current-delimiters.md)  
   
- [Строки \<номер > не может быть проанализирована с использованием текущего параметра FieldWidths](../../visual-basic/misc/line-number-cannot-be-parsed-using-the-current-fieldwidths.md)  
+ [Line \<number> cannot be parsed using the current FieldWidths](../../visual-basic/misc/line-number-cannot-be-parsed-using-the-current-fieldwidths.md)  
   
- [Строки \<номер > не удается прочитать из-за превышения максимального размера строки.](../../visual-basic/misc/line-number-cannot-be-read-because-it-exceeds-the-maximum-line-size.md)  
+ [Line \<number> cannot be read because it exceeds the maximum line size.](../../visual-basic/misc/line-number-cannot-be-read-because-it-exceeds-the-maximum-line-size.md)  
   
- [КОД языка "\<имя >" не поддерживается в этой системе](../../visual-basic/misc/locale-id-name-is-not-supported-on-this-system.md)  
+ [Locale ID '\<name>' is not supported on this system](../../visual-basic/misc/locale-id-name-is-not-supported-on-this-system.md)  
   
- [Переменная управления циклом типа "\<typename >" не реализует интерфейс «System.IComparable»](../../visual-basic/misc/loop-control-variable-of-type-typename-does-not-implement-system-icomparable.md)  
+ [Loop control variable of type '\<typename>' does not implement the 'System.IComparable' interface](../../visual-basic/misc/loop-control-variable-of-type-typename-does-not-implement-system-icomparable.md)  
   
  [Управляемые классы, производные от класса COM, не могут вызываться с отложенной привязкой.](../../visual-basic/misc/managed-classes-derived-from-a-com-class-cannot-be-called-late-bound.md)  
   
- [Метод "\<имя_метода >" не может вызываться с \<число > аргументами](../../visual-basic/misc/method-methodname-cannot-be-called-with-number-arguments.md)  
+ [Method '\<methodname>' cannot be called with \<number> arguments](../../visual-basic/misc/method-methodname-cannot-be-called-with-number-arguments.md)  
   
- [Метод "\<имя_метода >" не имеет параметра "\<имя_параметра >"](../../visual-basic/misc/method-methodname-has-no-parameter-named-parametername.md)  
+ [Method '\<methodname>' has no parameter named '\<parametername>'](../../visual-basic/misc/method-methodname-has-no-parameter-named-parametername.md)  
   
  [Метод или член данных не найден](../../visual-basic/misc/method-or-data-member-not-found.md)  
   
  [My.Application.Log](xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log)  
   
- [Именованный аргумент "\<имя_аргумента >" задан несколько раз.](../../visual-basic/misc/named-argument-argumentname-specified-multiple-times.md)  
+ [Named argument '\<argumentname>' specified multiple times](../../visual-basic/misc/named-argument-argumentname-specified-multiple-times.md)  
   
  [Именованный аргумент не найден (Visual Basic)](../../visual-basic/misc/named-argument-not-found.md)  
   
@@ -309,19 +309,19 @@ ms.locfileid: "61595430"
   
  [Требуется индекс массива свойства](../../visual-basic/language-reference/error-messages/need-property-array-index.md)  
   
- [Нет доступных перегруженных "\<имя_метода >" может вызываться с этими аргументами без преобразования с сужением](../../visual-basic/misc/no-accessible-overloaded-methodname-can-be-called-with-these-arguments.md)  
+ [No accessible overloaded '\<methodname>' can be called with these arguments without a narrowing conversion](../../visual-basic/misc/no-accessible-overloaded-methodname-can-be-called-with-these-arguments.md)  
   
- [Нет доступных перегруженных "\<имя_метода >" может вызываться с этими аргументами без преобразования с сужением: \<список >](../../visual-basic/misc/no-accessible-overloaded-methodname-can-be-called-with-these-arguments-list-2.md)  
+ [No accessible overloaded '\<methodname>' can be called with these arguments without a narrowing conversion: \<list>](../../visual-basic/misc/no-accessible-overloaded-methodname-can-be-called-with-these-arguments-list-2.md)  
   
- [Нет доступных перегруженных "\<имя_метода >" может вызываться с этими аргументами без расширяющего преобразования: \<список >](../../visual-basic/misc/no-accessible-overloaded-methodname-can-be-called-without-widening.md)  
+ [No accessible overloaded '\<methodname>' can be called with these arguments without a widening conversion: \<list>](../../visual-basic/misc/no-accessible-overloaded-methodname-can-be-called-without-widening.md)  
   
- [Нет доступных перегруженных "\<имя_метода >" может вызываться с этими аргументами: \<список >](../../visual-basic/misc/no-accessible-overloaded-methodname-can-be-called-with-these-arguments-list.md)  
+ [No accessible overloaded '\<methodname>' can be called with these arguments: \<list>](../../visual-basic/misc/no-accessible-overloaded-methodname-can-be-called-with-these-arguments-list.md)  
   
- [Найти элемент по умолчанию для типа "\<typename >"](../../visual-basic/misc/no-default-member-found-for-type-typename.md)  
+ [No default member found for type '\<typename>'](../../visual-basic/misc/no-default-member-found-for-type-typename.md)  
   
- [Не удалось найти файлы сопоставления "\<имя_файла >"](../../visual-basic/misc/no-files-found-matching-filename.md)  
+ [No files found matching '\<filename>'](../../visual-basic/misc/no-files-found-matching-filename.md)  
   
- [Отсутствует метод "\<имя_метода >" может принимать аргумент типа "\<typename >" для параметра "\<имя_параметра >"](../../visual-basic/misc/no-method-methodname-can-accept-an-argument-of-type-typename-for-parameter.md)  
+ [No method '\<methodname>' can accept an argument of type '\<typename>' for parameter '\<parametername>'](../../visual-basic/misc/no-method-methodname-can-accept-an-argument-of-type-typename-for-parameter.md)  
   
  [Не обнаружена мышь](../../visual-basic/misc/no-mouse-is-present.md)  
   
@@ -347,39 +347,39 @@ ms.locfileid: "61595430"
   
  [Учитываются только первые восемь знаков имени пользовательского журнала](../../visual-basic/misc/only-the-first-eight-characters-of-a-custom-log-name-are-significant.md)  
   
- [Оператор не является допустимым для "\<Имя1 >" и "\<имя2 >"](../../visual-basic/misc/operator-is-not-valid-for-name1-and-name2.md)  
+ [Operator is not valid for '\<name1>' and '\<name2>'](../../visual-basic/misc/operator-is-not-valid-for-name1-and-name2.md)  
   
- [Недопустимый оператор для типа "\<typename >"](../../visual-basic/misc/operator-is-not-valid-for-type-typename.md)  
+ [Operator is not valid for type '\<typename>'](../../visual-basic/misc/operator-is-not-valid-for-type-typename.md)  
   
  [Недопустимое порядковое числительное](../../visual-basic/language-reference/error-messages/ordinal-is-not-valid.md)  
   
  [Недостаточно памяти (ошибка Visual Basic времени выполнения)](../../visual-basic/misc/out-of-memory-run-time-error.md)  
   
- [Недостаточно места для стека (Visual Basic)](../../visual-basic/language-reference/error-messages/out-of-stack-space.md)  
+ [Out of stack space (Visual Basic)](../../visual-basic/language-reference/error-messages/out-of-stack-space.md)  
   
- [Недостаточно места для строки (Visual Basic)](../../visual-basic/language-reference/error-messages/out-of-string-space.md)  
+ [Out of string space (Visual Basic)](../../visual-basic/language-reference/error-messages/out-of-string-space.md)  
   
  [Переполнение (ошибка во время выполнения Visual Basic)](../../visual-basic/language-reference/error-messages/overflow-visual-basic-run-time-error.md)  
   
- [Путь "\<путь >" не найден](../../visual-basic/misc/path-pathname-not-found.md)  
+ [Path '\<pathname>' not found](../../visual-basic/misc/path-pathname-not-found.md)  
   
  [Путь не найден](../../visual-basic/language-reference/error-messages/path-not-found.md)  
   
- [Ошибка доступа к пути/файлу](../../visual-basic/language-reference/error-messages/path-file-access-error.md)  
+ [Path/File access error](../../visual-basic/language-reference/error-messages/path-file-access-error.md)  
   
- [Доступ запрещен (Visual Basic)](../../visual-basic/language-reference/error-messages/permission-denied.md)  
+ [Permission denied (Visual Basic)](../../visual-basic/language-reference/error-messages/permission-denied.md)  
   
  [Недопустимое изображение](../../visual-basic/misc/picture-is-not-valid.md)  
   
  [Ошибка принтера](../../visual-basic/misc/printer-error.md)  
   
- [Вызов процедуры или аргумент не является допустимым (Visual Basic)](../../visual-basic/language-reference/error-messages/procedure-call-or-argument-is-not-valid.md)  
+ [Procedure call or argument is not valid (Visual Basic)](../../visual-basic/language-reference/error-messages/procedure-call-or-argument-is-not-valid.md)  
   
- [Процесс\<processname > "не найден](../../visual-basic/misc/process-processname-was-not-found.md)  
+ [Process '\<processname>' was not found](../../visual-basic/misc/process-processname-was-not-found.md)  
   
- [Свойство \<имя_свойства > нельзя установить равным пустой строки или Nothing](../../visual-basic/misc/property-propertyname-cannot-be-set-to-an-empty-string-or-nothing.md)  
+ [Property \<propertyname> cannot be set to an empty string or Nothing](../../visual-basic/misc/property-propertyname-cannot-be-set-to-an-empty-string-or-nothing.md)  
   
- [Свойство \<имя_свойства > нельзя присвоить значение Nothing](../../visual-basic/misc/property-propertyname-cannot-be-set-to-nothing.md)  
+ [Property \<propertyname> cannot be set to Nothing](../../visual-basic/misc/property-propertyname-cannot-be-set-to-nothing.md)  
   
  [Недопустимый индекс массива свойства](../../visual-basic/language-reference/error-messages/property-array-index-is-not-valid.md)  
   
@@ -391,7 +391,7 @@ ms.locfileid: "61595430"
   
  [Недопустимое значение свойства](../../visual-basic/misc/property-value-is-not-valid.md)  
   
- [Открытый член "\<имя_члена >" в типе "\<typename >" не найден](../../visual-basic/misc/public-member-membername-on-type-typename-not-found.md)  
+ [Public member '\<membername>' on type '\<typename>' not found](../../visual-basic/misc/public-member-membername-on-type-typename-not-found.md)  
   
  ["ReDim" может изменять только крайнее правое измерение](../../visual-basic/misc/redim-can-only-change-the-right-most-dimension.md)  
   
@@ -399,9 +399,9 @@ ms.locfileid: "61595430"
   
  [Операнд Preserve ReDim не может быть Nothing](../../visual-basic/misc/redim-preserve-operand-cannot-be-nothing.md)  
   
- [Раздел реестра "\<keyname >" не удалось создать](../../visual-basic/misc/registry-key-keyname-could-not-be-created.md)  
+ [Registry key '\<keyname>' could not be created](../../visual-basic/misc/registry-key-keyname-could-not-be-created.md)  
   
- [Раздел реестра "\<keyname >" не найден](../../visual-basic/misc/registry-key-keyname-could-not-be-found.md)  
+ [Registry key '\<keyname>' could not be found](../../visual-basic/misc/registry-key-keyname-could-not-be-found.md)  
   
  [Недопустимая длина замены](../../visual-basic/misc/replacements-too-long.md)  
   
@@ -443,9 +443,9 @@ ms.locfileid: "61595430"
   
  [Длина строки превышает максимально допустимое для API "FileSystem" значение 32 767 символов](../../visual-basic/misc/string-length-exceeds-maximum-length-of-32767-characters-for-filesystem-apis.md)  
   
- [Sub или Function не определена (Visual Basic)](../../visual-basic/language-reference/error-messages/sub-or-function-not-defined.md)  
+ [Sub or Function not defined (Visual Basic)](../../visual-basic/language-reference/error-messages/sub-or-function-not-defined.md)  
   
- [Индекс вне допустимого диапазона (Visual Basic)](../../visual-basic/language-reference/error-messages/subscript-out-of-range.md)  
+ [Subscript out of range (Visual Basic)](../../visual-basic/language-reference/error-messages/subscript-out-of-range.md)  
   
  [Невозможно удалить журнал системных событий](../../visual-basic/misc/system-event-log-cannot-be-deleted.md)  
   
@@ -453,7 +453,7 @@ ms.locfileid: "61595430"
   
  [TargetFilePath указывает существующую папку](../../visual-basic/misc/targetfilepath-specifies-an-existing-folder.md)  
   
- [TextFieldParser не поддерживает токены комментариев, содержащие пробелы](../../visual-basic/misc/textfieldparser-does-not-support-comment-tokens-that-contain-whitespace.md)  
+ [TextFieldParser does not support comment tokens that contain white space](../../visual-basic/misc/textfieldparser-does-not-support-comment-tokens-that-contain-whitespace.md)  
   
  [TextFieldParser не поддерживает разделители, содержащие символы конца строки](../../visual-basic/misc/textfieldparser-does-not-support-delimiters-that-contain-endline-characters.md)  
   
@@ -485,11 +485,11 @@ ms.locfileid: "61595430"
   
  [Невозможно прочитать поток, переданный в TextFieldParser](../../visual-basic/misc/the-stream-passed-to-textfieldparser-cannot-be-read.md)  
   
- [Значение \<имя_аргумента > должно быть положительным числом](../../visual-basic/misc/the-value-of-argumentname-must-be-a-positive-number.md)  
+ [The value of \<argumentname> must be a positive number](../../visual-basic/misc/the-value-of-argumentname-must-be-a-positive-number.md)  
   
- [Значение \<имя_аргумента > должно быть больше или равно 1000](../../visual-basic/misc/the-value-of-argumentname-must-be-greater-than-or-equal-to-1000.md)  
+ [The value of \<argumentname> must be greater than or equal to 1000](../../visual-basic/misc/the-value-of-argumentname-must-be-greater-than-or-equal-to-1000.md)  
   
- [Массив имеет фиксированный размер или временно заблокирован (Visual Basic)](../../visual-basic/language-reference/error-messages/this-array-is-fixed-or-temporarily-locked.md)  
+ [This array is fixed or temporarily locked (Visual Basic)](../../visual-basic/language-reference/error-messages/this-array-is-fixed-or-temporarily-locked.md)  
   
  [Этот ключ уже назначен элементу данной коллекции](../../visual-basic/language-reference/error-messages/this-key-is-already-associated-with-an-element-of-this-collection.md)  
   
@@ -509,9 +509,9 @@ ms.locfileid: "61595430"
   
  [Слишком много файлов](../../visual-basic/language-reference/error-messages/too-many-files.md)  
   
- [Несоответствие типов (Visual Basic)](../../visual-basic/language-reference/error-messages/type-mismatch.md)  
+ [Type mismatch (Visual Basic)](../../visual-basic/language-reference/error-messages/type-mismatch.md)  
   
- [Тип аргумента "\<имя_аргумента >" является "\<typename >", который не является числовым](../../visual-basic/misc/type-of-argument-argumentname-is-typename-which-is-not-numeric.md)  
+ [Type of argument '\<argumentname>' is '\<typename>', which is not numeric](../../visual-basic/misc/type-of-argument-argumentname-is-typename-which-is-not-numeric.md)  
   
  [Не удалось получить имена последовательных портов из-за внутренней системной ошибки](../../visual-basic/language-reference/error-messages/unable-to-get-serial-port-names-because-of-an-internal-system-error.md)  
   

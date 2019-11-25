@@ -9,15 +9,15 @@ helpviewer_keywords:
 - ControlTemplate [WPF], ToolTip
 - templates [WPF], ToolTip
 ms.assetid: 405fe385-4de9-49ee-a448-d8f4d1f740dd
-ms.openlocfilehash: 626d0b4d49d653f820d1506f0aa09f06d26352c2
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: c7a14034d665c124d01e8a4b43c5d42968241925
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458643"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283643"
 ---
 # <a name="tooltip-styles-and-templates"></a>Стили и шаблоны элемента ToolTip
-В этом разделе описываются стили и шаблоны для элемента управления <xref:System.Windows.Controls.ToolTip>. Можно изменить <xref:System.Windows.Controls.ControlTemplate> по умолчанию, чтобы обеспечить уникальность внешнего вида элемента управления. Подробнее см. в разделе [Настройка внешнего вида существующего элемента управления путем создания объекта ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
+В этом разделе описываются стили и шаблоны для элемента управления <xref:System.Windows.Controls.ToolTip>. Можно изменить <xref:System.Windows.Controls.ControlTemplate> по умолчанию, чтобы обеспечить уникальность внешнего вида элемента управления. Дополнительные сведения см. в разделе [Создание шаблона для элемента управления](../../../desktop-wpf/themes/how-to-create-apply-template.md).  
   
 ## <a name="tooltip-parts"></a>Элементы подсказки  
  Элемент управления <xref:System.Windows.Controls.ToolTip> не имеет именованных частей.  
@@ -51,4 +51,4 @@ ms.locfileid: "73458643"
 - [Стили и шаблоны элемента управления](control-styles-and-templates.md)
 - [Настройка элементов управления](control-customization.md)
 - [Стилизация и использование шаблонов](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
-- [Настройка внешнего вида существующего элемента управления путем создания объекта ControlTemplate](customizing-the-appearance-of-an-existing-control.md)
+- [Создание шаблона для элемента управления](../../../desktop-wpf/themes/how-to-create-apply-template.md)

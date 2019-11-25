@@ -1,43 +1,43 @@
 ---
-title: Обработка XML-файла (Visual Basic)
+title: Обработка XML-файла
 ms.date: 07/20/2015
 helpviewer_keywords:
 - XML comments [Visual Basic], parsing [Visual Basic]
 ms.assetid: 78a15cd0-7708-4e79-85d1-c154b7a14a8c
-ms.openlocfilehash: 91583612940282b05ebbf38bd5f0a59d6af5bbcd
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 4230fd88b4b60c631135f5b7fb15f4b6272b5351
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524448"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347305"
 ---
 # <a name="processing-the-xml-file-visual-basic"></a>Обработка XML-файла (Visual Basic)
-Компилятор создает строку идентификатора для каждой конструкции в коде, помеченной для создания документации. (Дополнительные сведения о том, как пометить код, см. в разделе [теги XML-комментариев](../../../visual-basic/language-reference/xmldoc/index.md).) Строка идентификатора уникально идентифицирует конструкцию. Программы, обрабатывающие XML-файл, могут использовать строку идентификатора для идентификации соответствующего элемента .NET Framework метаданных или отражения.  
+Компилятор создает строку идентификатора для каждой конструкции в коде, помеченной для создания документации. (For information on how to tag your code, see [XML Comment Tags](../../../visual-basic/language-reference/xmldoc/index.md).) The ID string uniquely identifies the construct. Programs that process the XML file can use the ID string to identify the corresponding .NET Framework metadata/reflection item.  
   
- XML-файл не является иерархическим представлением кода; Это плоский список с созданным ИДЕНТИФИКАТОРом для каждого элемента.  
+ The XML file is not a hierarchical representation of your code; it is a flat list with a generated ID for each element.  
   
  Компилятор соблюдает следующие правила при формировании строк идентификаторов.  
   
 - Пробелы в строку не вставляются.  
   
-- Первая часть строки идентификатора определяет тип идентифицируемого члена. Это один символ, за которым следует двоеточие. Используются следующие типы элементов.  
+- Первая часть строки идентификатора определяет тип идентифицируемого члена. Это один символ, за которым следует двоеточие. The following member types are used.  
   
 |Знак|Описание|  
 |---|---|  
-|в|namespace<br /><br /> Нельзя добавлять комментарии к документации в пространство имен, но можно сделать CREF-ссылки на них, где это поддерживается.|  
-|T|Тип: `Class`, `Module`, `Interface`, `Structure`, `Enum`, `Delegate`|  
-|C|поле: `Dim`|  
-|С|свойство: `Property` (включая свойства по умолчанию)|  
-|M|метод: `Sub`, `Function`, `Declare`, `Operator`|  
-|E|событие: `Event`|  
-|!|текст ошибки<br /><br /> Остальная часть строки предоставляет сведения об ошибке. Компилятор Visual Basic создает сведения об ошибках для ссылок, которые не удается разрешить.|  
+|в|namespace<br /><br /> You cannot add documentation comments to a namespace, but you can make CREF references to them, where supported.|  
+|T|type: `Class`, `Module`, `Interface`, `Structure`, `Enum`, `Delegate`|  
+|C|field: `Dim`|  
+|С|property: `Property` (including default properties)|  
+|M|method: `Sub`, `Function`, `Declare`, `Operator`|  
+|E|event: `Event`|  
+|!|текст ошибки<br /><br /> Остальная часть строки предоставляет сведения об ошибке. The Visual Basic compiler generates error information for links that cannot be resolved.|  
   
-- Вторая часть `String` — полное имя элемента, начиная с корня пространства имен. Имя элемента, включающий его тип (s) и пространство имен разделяются точками. Если имя элемента содержит точки, они заменяются знаком номера (#). Предполагается, что ни один элемент не имеет знака номера непосредственно в имени. Например, полное имя конструктора `String` будет `System.String.#ctor`.  
+- The second part of the `String` is the fully qualified name of the item, starting at the root of the namespace. The name of the item, its enclosing type(s), and the namespace are separated by periods. If the name of the item itself contains periods, they are replaced by the number sign (#). It is assumed that no item has a number sign directly in its name. For example, the fully qualified name of the `String` constructor would be `System.String.#ctor`.  
   
-- Для свойств и методов, имеющих аргументы, список этих аргументов заключается в круглые скобки и указывается в конце. Если аргументы не используются, скобки отсутствуют. Аргументы разделяются запятыми. Кодировка каждого аргумента соответствует непосредственно их кодированию в сигнатуре .NET Framework.  
+- Для свойств и методов, имеющих аргументы, список этих аргументов заключается в круглые скобки и указывается в конце. Если аргументы не используются, скобки отсутствуют. Аргументы разделяются запятыми. The encoding of each argument follows directly how it is encoded in a .NET Framework signature.  
   
 ## <a name="example"></a>Пример  
- В следующем коде показано, как создаются строки идентификатора для класса и его членов.  
+ The following code shows how the ID strings for a class and its members are generated.  
   
  [!code-vb[VbVbcnXmlDocComments#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#10)]  
   

@@ -1,5 +1,5 @@
 ---
-title: Оператор ReDim (Visual Basic)
+title: Оператор ReDim
 ms.date: 07/20/2015
 f1_keywords:
 - vb.ReDim
@@ -26,12 +26,12 @@ helpviewer_keywords:
 - declaration statements [Visual Basic]
 - scalar variables [Visual Basic]
 ms.assetid: ad1c5e07-dcd7-4ae1-a79e-ad3f2dcc2083
-ms.openlocfilehash: a9384ba118df2a84fbd2581e6a8bacb58e41ddcc
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: fabfd9a45d47cc1b881b3743181a03e89158f939
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582086"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346741"
 ---
 # <a name="redim-statement-visual-basic"></a>Оператор ReDim (Visual Basic)
 Перераспределяет область хранения для переменной массива.  
@@ -59,31 +59,31 @@ ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]
   
 ## <a name="rules"></a>Правила  
   
-- **Несколько переменных.** Можно изменить размер нескольких переменных массива в одном операторе объявления и указать `name` и `boundlist` части для каждой переменной. Переменные разделяются запятыми.  
+- **Multiple Variables.** You can resize several array variables in the same declaration statement and specify the `name` and `boundlist` parts for each variable. Переменные разделяются запятыми.  
   
-- **Границы массива.** Каждая запись в `boundlist` может указывать нижнюю и верхнюю границы этого измерения. Нижняя граница всегда 0 (ноль). Верхняя граница представляет собой наибольшее возможное значение индекса для этого измерения, но не длину измерения (она равна верхней границе плюс один). Индекс для каждого измерения может варьироваться от 0 до значения верхней границы.  
+- **Array Bounds.** Each entry in `boundlist` can specify the lower and upper bounds of that dimension. Нижняя граница всегда 0 (ноль). Верхняя граница представляет собой наибольшее возможное значение индекса для этого измерения, но не длину измерения (она равна верхней границе плюс один). Индекс для каждого измерения может варьироваться от 0 до значения верхней границы.  
   
      Число измерений в `boundlist` должно совпадать с исходным числом измерений (рангом) массива.  
   
-- **Типы данных.** Оператор `ReDim` не может изменить тип данных переменной массива или ее элементов.  
+- **Data Types.** The `ReDim` statement cannot change the data type of an array variable or its elements.  
   
-- **Инициализации.** Оператор `ReDim` не может предоставить новые значения инициализации для элементов массива.  
+- **Initialization.** The `ReDim` statement cannot provide new initialization values for the array elements.  
   
-- **Рейтинг.** Оператор `ReDim` не может изменить ранг (число измерений) массива.  
+- **Rank.** The `ReDim` statement cannot change the rank (the number of dimensions) of the array.  
   
-- **Изменение размера с помощью Preserve.** При использовании `Preserve` можно изменять только последнее измерение массива. Для всех остальных измерений необходимо указывать привязку существующего массива.  
+- **Resizing with Preserve.** If you use `Preserve`, you can resize only the last dimension of the array. Для всех остальных измерений необходимо указывать привязку существующего массива.  
   
      Например, в одномерных массивах можно изменить это измерение и в то же время сохранить все содержимое массива, поскольку изменяется только одно, последнее, измерение. Если же массив имеет два или больше измерений, то с помощью оператора Preserve можно изменить только последнее измерение массива.`Preserve`  
   
-- **Свойства.** @No__t_0 можно использовать для свойства, содержащего массив значений.  
+- **Properties.** You can use `ReDim` on a property that holds an array of values.  
   
 ## <a name="behavior"></a>Поведение  
   
-- **Замена массива.** `ReDim` освобождает существующий массив и создает новый массив с тем же рангом. Новый массив заменяет освобожденный массив в переменной массива.  
+- **Array Replacement.** `ReDim` releases the existing array and creates a new array with the same rank. Новый массив заменяет освобожденный массив в переменной массива.  
   
-- **Инициализация без сохранения.** Если не указать `Preserve`, `ReDim` инициализирует элементы нового массива, используя значение по умолчанию для их типа данных.  
+- **Initialization without Preserve.** If you do not specify `Preserve`, `ReDim` initializes the elements of the new array by using the default value for their data type.  
   
-- **Инициализация с сохранением.** При указании `Preserve` Visual Basic копирует элементы из существующего массива в новый массив.  
+- **Initialization with Preserve.** If you specify `Preserve`, Visual Basic copies the elements from the existing array to the new array.  
   
 ## <a name="example"></a>Пример  
  В приведенном ниже примере производится увеличение размера последнего измерения динамического массива без потери существующих данных, а затем уменьшение размера массива с частичной потерей данных. Кроме того, размер массива уменьшается до исходного значения и все элементы массива инициализируются повторно.  
@@ -98,7 +98,7 @@ ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]
   
  Третий оператор `ReDim` создает еще один массив и удаляет еще пять столбцов в конце каждой строки каждого слоя. В данном случае он не копирует существующие элементы. Этот оператор возвращает массиву первоначальный размер. Поскольку оператор не включает модификатор `Preserve`, он приводит все элементы массива к исходным значениям по умолчанию.  
   
- Дополнительные примеры см. в разделе [массивы](../../../visual-basic/programming-guide/language-features/arrays/index.md).  
+ For additional examples, see [Arrays](../../../visual-basic/programming-guide/language-features/arrays/index.md).  
   
 ## <a name="see-also"></a>См. также
 

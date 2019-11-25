@@ -9,15 +9,15 @@ helpviewer_keywords:
 - styles [WPF], DataGrid
 - parts [WPF], DataGrid
 ms.assetid: 9cb31d63-f148-4d25-b079-816e73f988c7
-ms.openlocfilehash: d1ef962132f4c057229c8150a8d49809ce8c7430
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 066e8c9ce1112399be8128d0821498f0d56a3dc3
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460402"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283805"
 ---
 # <a name="datagrid-styles-and-templates"></a>Стили и шаблоны элемента DataGrid
-В этом разделе описываются стили и шаблоны для элемента управления <xref:System.Windows.Controls.DataGrid>. Можно изменить <xref:System.Windows.Controls.ControlTemplate> по умолчанию, чтобы обеспечить уникальность внешнего вида элемента управления. Подробнее см. в разделе [Настройка внешнего вида существующего элемента управления путем создания объекта ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
+В этом разделе описываются стили и шаблоны для элемента управления <xref:System.Windows.Controls.DataGrid>. Можно изменить <xref:System.Windows.Controls.ControlTemplate> по умолчанию, чтобы обеспечить уникальность внешнего вида элемента управления. Дополнительные сведения см. в разделе [Создание шаблона для элемента управления](../../../desktop-wpf/themes/how-to-create-apply-template.md).  
   
 ## <a name="datagrid-parts"></a>Части DataGrid  
  В следующей таблице перечислены именованные части для элемента управления <xref:System.Windows.Controls.DataGrid>.  
@@ -55,7 +55,7 @@ ms.locfileid: "73460402"
 |Без фокуса ввода|FocusStates|Ячейка не имеет фокуса|  
 |Текущие|куррентстатес|Ячейка является текущей ячейкой.|  
 |Регулярное|куррентстатес|Ячейка не является текущей ячейкой.|  
-|Показать|интерактионстатес|Ячейка находится в режиме просмотра.|  
+|Отображение|интерактионстатес|Ячейка находится в режиме просмотра.|  
 |Редактирование|интерактионстатес|Ячейка находится в режиме редактирования.|  
 |Выбранные|SelectionStates|Ячейка выделена.|  
 |Unselected|SelectionStates|Ячейка не выбрана.|  
@@ -149,7 +149,7 @@ ms.locfileid: "73460402"
 |Имя VisualState|Имя VisualStateGroup|Описание|  
 |-|-|-|  
 |Норм.|CommonStates|Состояние по умолчанию.|  
-|MouseOver|CommonStates|Указатель мыши расположен над элементом управления.|  
+|MouseOver|CommonStates|Указатель мыши расположен в элементе управления.|  
 |Нажато|CommonStates|Элемент управления нажат.|  
 |сортасцендинг|сортстатес|Столбец сортируется в возрастающем порядке.|  
 |сортдесцендинг|сортстатес|Столбец сортируется в порядке убывания.|  
@@ -176,4 +176,4 @@ ms.locfileid: "73460402"
 - [Стили и шаблоны элемента управления](control-styles-and-templates.md)
 - [Настройка элементов управления](control-customization.md)
 - [Стилизация и использование шаблонов](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
-- [Настройка внешнего вида существующего элемента управления путем создания объекта ControlTemplate](customizing-the-appearance-of-an-existing-control.md)
+- [Создание шаблона для элемента управления](../../../desktop-wpf/themes/how-to-create-apply-template.md)

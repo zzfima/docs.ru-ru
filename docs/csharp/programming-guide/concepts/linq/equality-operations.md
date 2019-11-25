@@ -2,12 +2,12 @@
 title: Операции равенства (C#)
 ms.date: 07/20/2015
 ms.assetid: 9d9a5bf2-f211-4865-bd19-c59ffa004615
-ms.openlocfilehash: afcc2715f088896fb3c669524f17bb22ef873b01
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 306129c1fe0c3f0003f8be579d987edcaeb63709
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69594379"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141496"
 ---
 # <a name="equality-operations-c"></a>Операции равенства (C#)
 Две последовательности, соответствующие элементы в которых совпадают и которые имеют одинаковое число элементов, считаются равными.  

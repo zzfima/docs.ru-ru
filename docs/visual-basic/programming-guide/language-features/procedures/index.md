@@ -1,5 +1,5 @@
 ---
-title: Процедуры в Visual Basic
+title: Процедуры
 ms.date: 04/28/2017
 helpviewer_keywords:
 - procedures [Visual Basic], structured code
@@ -8,15 +8,15 @@ helpviewer_keywords:
 - structured code [Visual Basic], procedures
 - procedures
 ms.assetid: 9effbcf0-80a0-4d1a-98f4-2c6920592766
-ms.openlocfilehash: 4b6dfe30268aef7dc61f130c2775e2cc0d1503e8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b959f4b6986bc325c97c7cbe9aeee0341832f6cc
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64635629"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345983"
 ---
 # <a name="procedures-in-visual-basic"></a>Процедуры в Visual Basic
-Объект *процедуры* представляет собой блок операторов Visual Basic, заключенным в операторе объявления (`Function`, `Sub`, `Operator`, `Get`, `Set`) и соответствующий `End` объявления. Все исполняемые операторы в Visual Basic должны находиться в пределах некоторой процедуры.  
+A *procedure* is a block of Visual Basic statements enclosed by a declaration statement (`Function`, `Sub`, `Operator`, `Get`, `Set`) and a matching `End` declaration. All executable statements in Visual Basic must be within some procedure.  
   
 ## <a name="calling-a-procedure"></a>Вызов процедуры  
  Процедура вызывается из другого места в коде. Это называется *вызовом процедуры*. После завершения процедуры она возвращает управление в код, из которого она была вызвана (*вызывающий код*). Вызывающий код — это оператор или выражение в составе оператора, в которых указывается имя процедуры и передается управление процедуре.  
@@ -34,7 +34,7 @@ ms.locfileid: "64635629"
  В большинстве случаев процедура должна работать с разными данными при каждом вызове. Эти данные можно передать в процедуру при ее вызове. В процедуре можно определить *параметры* (ноль или более), каждый из которых представляет одно из передаваемых значений. Каждому параметру в определении процедуры соответствует *аргумент* при вызове процедуры. Аргумент представляет значение, которое передается в соответствующий параметр для заданного вызова процедуры.  
   
 ## <a name="types-of-procedures"></a>Типы процедур  
- Visual Basic использует несколько типов процедур:  
+ Visual Basic uses several types of procedures:  
   
 - [Подпрограммы](./sub-procedures.md) выполняют действия, но не возвращают значение в вызывающий код.  
   

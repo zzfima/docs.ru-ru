@@ -1,5 +1,5 @@
 ---
-title: Generic Procedures in Visual Basic
+title: Универсальные процедуры
 ms.date: 07/20/2015
 helpviewer_keywords:
 - generic methods [Visual Basic], type inference
@@ -12,26 +12,26 @@ helpviewer_keywords:
 - generics [Visual Basic], procedures
 - generic procedures [Visual Basic], type inference
 ms.assetid: 95577b28-137f-4d5c-a149-919c828600e5
-ms.openlocfilehash: 4aed16ce9eb59da54156a0cd5f1594819788521b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 16a629e07cf711778b3d8d1863958ec7a6300649
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61906598"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350087"
 ---
 # <a name="generic-procedures-in-visual-basic"></a>Generic Procedures in Visual Basic
-Объект *универсальной процедуры*, называемой *универсальный метод*, — это процедура, определенная с помощью по крайней мере один тип параметра. Это позволяет настроить типы данных к его требованиям при каждом вызове процедуры вызывающему коду.  
+A *generic procedure*, also called a *generic method*, is a procedure defined with at least one type parameter. This allows the calling code to tailor the data types to its requirements each time it calls the procedure.  
   
- Процедура не является универсальным, просто в силу определенные внутри универсального класса или структурой универсального типа. Чтобы быть универсальным, процедура должна принимать хотя бы один параметр типа, в дополнение к обычным параметрам, которые может потребоваться. Универсальный класс или структура может содержать неуниверсальные процедуры и неуниверсальный класс, структуру, или модуль может содержать универсальные процедуры.  
+ A procedure is not generic simply by virtue of being defined inside a generic class or a generic structure. To be generic, the procedure must take at least one type parameter, in addition to any normal parameters it might take. A generic class or structure can contain nongeneric procedures, and a nongeneric class, structure, or module can contain generic procedures.  
   
- Универсальную процедуру можно использовать его параметров типа в обычном списке параметров, в возвращаемом типе, если он имеет один и процедуру его код.  
+ A generic procedure can use its type parameters in its normal parameter list, in its return type if it has one, and in its procedure code.  
   
 ## <a name="type-inference"></a>Вывод типа  
- Универсальную процедуру можно вызвать без аргументов типа вообще. При вызове его таким образом, компилятор пытается определить соответствующий тип данных для передачи аргументов в процедуру типа. Это называется *вывод типа*. В следующем коде показано вызов в котором компилятор выводит, что ему следует передать тип `String` параметру типа `t`.  
+ You can call a generic procedure without supplying any type arguments at all. If you call it this way, the compiler attempts to determine the appropriate data types to pass to the procedure's type arguments. This is called *type inference*. The following code shows a call in which the compiler infers that it should pass type `String` to the type parameter `t`.  
   
  [!code-vb[VbVbalrDataTypes#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#15)]  
   
- Если компилятор не может вывести аргументы типа из контекста вызова, он сообщает об ошибке. Одной из возможных причин такой ошибки является несоответствие ранга массива. Например предположим, что вы определяете обычный параметр как массив с параметром типа. При вызове универсальной процедуры предоставив массив другого ранга (число измерений), несоответствие вызывает сбой вывода типа. В следующем коде показано вызов в который двумерный массив передается в процедуру, ожидающую одномерный массив.  
+ If the compiler cannot infer the type arguments from the context of your call, it reports an error. One possible cause of such an error is an array rank mismatch. For example, suppose you define a normal parameter as an array of a type parameter. If you call the generic procedure supplying an array of a different rank (number of dimensions), the mismatch causes type inference to fail. The following code shows a call in which a two-dimensional array is passed to a procedure that expects a one-dimensional array.  
   
 ```vb  
 Public Sub demoSub(Of t)(ByVal arg() As t)
@@ -43,31 +43,31 @@ Public Sub callDemoSub()
 End Sub
 ```
   
- Вывод типа можно вызывать только опуская все аргументы типа. Если указать один аргумент типа, необходимо указать их все.  
+ You can invoke type inference only by omitting all the type arguments. If you supply one type argument, you must supply them all.  
   
- Вывод типа поддерживается только для универсальных процедур. Не удается вызвать вывод типа в универсальных классов, структур, интерфейсов или делегатов.  
+ Type inference is supported only for generic procedures. You cannot invoke type inference on generic classes, structures, interfaces, or delegates.  
   
 ## <a name="example"></a>Пример  
   
 ### <a name="description"></a>Описание  
- В следующем примере определяется универсальный `Function` процедуре, чтобы найти конкретный элемент в массиве. Он определяет один параметр типа и использует его для создания двух параметров в списке параметров.  
+ The following example defines a generic `Function` procedure to find a particular element in an array. It defines one type parameter and uses it to construct the two parameters in the parameter list.  
   
 ### <a name="code"></a>Код  
  [!code-vb[VbVbalrDataTypes#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#14)]  
   
 ### <a name="comments"></a>Комментарии  
- В предыдущем примере требуется возможность сравнения `searchValue` отношению к каждому элементу `searchArray`. Чтобы обеспечить эту возможность, он ограничивает параметр типа `T` для реализации <xref:System.IComparable%601> интерфейс. Код использует <xref:System.IComparable%601.CompareTo%2A> вместо метода `=` оператор, так как нет никакой гарантии, что аргумент типа, предоставленный для `T` поддерживает `=` оператор.  
+ The preceding example requires the ability to compare `searchValue` against each element of `searchArray`. To guarantee this ability, it constrains the type parameter `T` to implement the <xref:System.IComparable%601> interface. The code uses the <xref:System.IComparable%601.CompareTo%2A> method instead of the `=` operator, because there is no guarantee that a type argument supplied for `T` supports the `=` operator.  
   
- Вы можете протестировать `findElement` процедуры следующим кодом.  
+ You can test the `findElement` procedure with the following code.  
   
  [!code-vb[VbVbalrDataTypes#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#13)]  
   
- Предыдущие вызовы `MsgBox` отображения «0», «1» и «-1"соответственно.  
+ The preceding calls to `MsgBox` display "0", "1", and "-1" respectively.  
   
 ## <a name="see-also"></a>См. также
 
 - [Generic Types in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
-- [Практическое руководство. Определение класса, реализующего одинаковую функциональность для разных типов данных](../../../../visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md)
+- [Практическое руководство. Определение класса, реализующего одинаковую функциональность для различных типов данных](../../../../visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md)
 - [Практическое руководство. Использование универсального класса](../../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)
 - [Процедуры](../../../../visual-basic/programming-guide/language-features/procedures/index.md)
 - [Параметры и аргументы процедуры](../../../../visual-basic/programming-guide/language-features/procedures/procedure-parameters-and-arguments.md)

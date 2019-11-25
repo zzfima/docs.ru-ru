@@ -1,25 +1,25 @@
 ---
-title: Строки в Visual Basic
+title: Строки
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic code, strings
 - strings [Visual Basic], Visual Basic
 ms.assetid: 7e4c777c-ad69-46e2-8b9e-9be4033b1c96
-ms.openlocfilehash: 856927baa06019f7827bf9751352069f0fc37829
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: db79284e45161f87e447fec7ab7faf91093a3fd7
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62024590"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344340"
 ---
 # <a name="strings-in-visual-basic"></a>Строки в Visual Basic
-В этом разделе описываются основные принципы использования строк в Visual Basic.  
+This section describes the basic concepts behind using strings in Visual Basic.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>Содержание  
  [Знакомство со строками в Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)  
- Список разделов, описывающих основные принципы использования строк в Visual Basic.  
+ Lists topics that describe the basic concepts behind using strings in Visual Basic.  
   
- [Практическое руководство. Создание строк с помощью StringBuilder в Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/how-to-create-strings-using-a-stringbuilder.md)  
+ [Практическое руководство. Создание строк с помощью StringBuilder в Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/how-to-create-strings-using-a-stringbuilder.md)  
  Показывает, как эффективно создавать длинную строку из множества более коротких.  
   
  [Практическое руководство. Поиск в строке](../../../../visual-basic/programming-guide/language-features/strings/how-to-search-within-a-string.md)  
@@ -31,7 +31,7 @@ ms.locfileid: "62024590"
  [Проверка строк в Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/validating-strings.md)  
  Содержит список разделов, посвященных проверке строк.  
   
- [Пошаговое руководство: Шифрование и расшифровка строк в Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/walkthrough-encrypting-and-decrypting-strings.md)  
+ [Пошаговое руководство. Шифрование и расшифровка строк в Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/walkthrough-encrypting-and-decrypting-strings.md)  
  Показывает, как шифровать и расшифровывать строки с помощью алгоритма Triple DES в версии поставщика служб шифрования.  
   
 ## <a name="see-also"></a>См. также

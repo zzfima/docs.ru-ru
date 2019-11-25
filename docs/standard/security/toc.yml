@@ -3,14 +3,16 @@
   items:
     - name: Основные понятия безопасности
       href: key-security-concepts.md
+    - name: Соответствие требованиям FIPS для .NET Core
+      href: fips-compliance.md
     - name: Безопасность на основе ролей
       href: role-based-security.md
       items:
         - name: Объекты Principal и Identity
           href: principal-and-identity-objects.md
-        - name: Как выполнить Создание объекта WindowsPrincipal
+        - name: Практическое руководство. Создание объекта WindowsPrincipal
           href: how-to-create-a-windowsprincipal-object.md
-        - name: Как выполнить Создание объектов GenericPrincipal и GenericIdentity
+        - name: Практическое руководство. Создание объектов GenericPrincipal и GenericIdentity
           href: how-to-create-genericprincipal-and-genericidentity-objects.md
         - name: Замена объекта Principal
           href: replacing-a-principal-object.md
@@ -23,7 +25,7 @@
           href: cryptographic-services.md
         - name: Создание ключей для шифрования и расшифровки
           href: generating-keys-for-encryption-and-decryption.md
-        - name: Как выполнить Хранение асимметричных ключей в контейнере ключей
+        - name: Практическое руководство. Хранение асимметричных ключей в контейнере ключей
           href: how-to-store-asymmetric-keys-in-a-key-container.md
         - name: Шифрование данных
           href: encrypting-data.md
@@ -35,25 +37,25 @@
           href: ensuring-data-integrity-with-hash-codes.md
         - name: Создание криптографической схемы
           href: creating-a-cryptographic-scheme.md
-        - name: Как выполнить Шифрование XML-элементов с помощью симметричного ключа
+        - name: Практическое руководство. Шифрование XML-элементов с помощью симметричного ключа
           href: how-to-encrypt-xml-elements-with-symmetric-keys.md
-        - name: Как выполнить Расшифровка XML-элементов с помощью симметричных ключей
+        - name: Практическое руководство. Расшифровка XML-элементов с помощью симметричных ключей
           href: how-to-decrypt-xml-elements-with-symmetric-keys.md
-        - name: Как выполнить Шифрование XML-элементов с помощью асимметричных ключей
+        - name: Практическое руководство. Шифрование XML-элементов с помощью асимметричных ключей
           href: how-to-encrypt-xml-elements-with-asymmetric-keys.md
-        - name: Как выполнить Расшифровка XML-элементов с помощью асимметричных ключей
+        - name: Практическое руководство. Расшифровка XML-элементов с помощью асимметричных ключей
           href: how-to-decrypt-xml-elements-with-asymmetric-keys.md
-        - name: Как выполнить Шифрование XML-элементов с помощью сертификатов X.509
+        - name: Практическое руководство. Шифрование XML-элементов с помощью сертификатов X.509
           href: how-to-encrypt-xml-elements-with-x-509-certificates.md
-        - name: Как выполнить Дешифровка XML-элементов с помощью сертификатов X.509
+        - name: Практическое руководство. Дешифровка XML-элементов с помощью сертификатов X.509
           href: how-to-decrypt-xml-elements-with-x-509-certificates.md
-        - name: Как выполнить Подписание XML-документов с помощью цифровых подписей
+        - name: Практическое руководство. Подписание XML-документов с помощью цифровых подписей
           href: how-to-sign-xml-documents-with-digital-signatures.md
-        - name: Как выполнить Проверка цифровых подписей XML-документов
+        - name: Практическое руководство. Проверка цифровых подписей XML-документов
           href: how-to-verify-the-digital-signatures-of-xml-documents.md
-        - name: Как выполнить Использование защиты данных
+        - name: Практическое руководство. Использование защиты данных
           href: how-to-use-data-protection.md
-        - name: Как выполнить Доступ к устройствам аппаратного шифрования
+        - name: Практическое руководство. Доступ к устройствам аппаратного шифрования
           href: how-to-access-hardware-encryption-devices.md
         - name: Пошаговое руководство. Создание криптографического приложения
           href: walkthrough-creating-a-cryptographic-application.md

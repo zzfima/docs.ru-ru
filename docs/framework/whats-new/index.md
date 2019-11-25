@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
-ms.openlocfilehash: be6f6b2d2213e96bc4e695ffbf7bc77f755ed492
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: ffcb288995975433bdd915362fccca03f345b5f5
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73454988"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74281651"
 ---
 # <a name="whats-new-in-the-net-framework"></a>Новые возможности .NET Framework
 
@@ -626,7 +626,7 @@ End Class
 
 **Повышение производительности сборки мусора**
 
-Изменения функции сборки мусора в .NET Framework 4.7.1 повышают общую производительность, особенно для распределений кучи больших объектов. В .NET Framework 4.7.1 для распределений куч больших и малых объектов используются отдельные блокировки, что позволяет выполнять распределение кучи больших объектов, когда фоновый сборщик мусора очищает кучу малых объектов. В результате в приложениях с большим количеством операций выделения LOH сократится число конфликтов при блокировках выделений и улучшится производительность. Дополнительные сведения см. в разделе о повышении производительности сборки мусора в записи блога [.NET Framework 4.7.1 Runtime and Compiler Features](https://devblogs.microsoft.com/dotnet/net-framework-4-7-1-runtime-and-compiler-features/) (Возможности среды выполнения .NET Framework 4.7.1 и компилятора).
+Изменения функции сборки мусора (GC) в .NET Framework 4.7.1 повышают общую производительность, особенно для распределений кучи больших объектов (LOH). В .NET Framework 4.7.1 для распределений куч больших (LOH) и малых (SOH) объектов используются отдельные блокировки, что позволяет выполнять распределение кучи больших объектов, когда фоновый сборщик мусора очищает кучу малых объектов. В результате в приложениях с большим количеством операций выделения LOH сократится число конфликтов при блокировках выделений и улучшится производительность. Дополнительные сведения см. в разделе о повышении производительности сборки мусора в записи блога [.NET Framework 4.7.1 Runtime and Compiler Features](https://devblogs.microsoft.com/dotnet/net-framework-4-7-1-runtime-and-compiler-features/) (Возможности среды выполнения .NET Framework 4.7.1 и компилятора).
 
 <a name="net471"/>
 
@@ -1178,7 +1178,7 @@ AppContext.SetSwitch(disableCngCertificates, False)
 
 Для поддержки современных сред с высоким и смешанным разрешением платформа WPF в .NET Framework 4.6.2 включает для приложений WPF поддержку DPI для каждого монитора. Дополнительные сведения о включении в приложении WPF поддержки DPI для каждого монитора см. в [примерах и в руководстве разработчика](https://github.com/Microsoft/WPF-Samples/tree/master/PerMonitorDPI) на сайте GitHub.
 
-В предыдущих версиях платформы .NET Framework приложения WPF поддерживают DPI на уровне системы. Другими словами, ОС соответствующим образом масштабирует пользовательский интерфейс приложения в зависимости от разрешения экрана монитора, на котором отображается приложение. ,
+В предыдущих версиях платформы .NET Framework приложения WPF поддерживают DPI на уровне системы. Другими словами, ОС соответствующим образом масштабирует пользовательский интерфейс приложения в зависимости от разрешения экрана монитора, на котором отображается приложение.
 
 Для приложений, работающих под управлением .NET Framework 4.6.2, можно отключить изменения DPI для каждого монитора в приложениях WPF, добавив соответствующую инструкцию в раздел [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) файла конфигурации приложения, как показано ниже.
 
@@ -1894,7 +1894,7 @@ WPF включает [пакет NuGet](https://go.microsoft.com/fwlink/?LinkID=
 
 - Усовершенствованная поддержка исключений для компонентов среды выполнения Windows. В [!INCLUDE[win81](../../../includes/win81-md.md)] исключения, возникающие в приложениях для Магазина Windows, сохраняют сведения об ошибке, которая вызвала исключение, даже при переходе через границу языка. Вы можете прочесть об этой возможности в разделе "Разработка приложений для Магазина Windows" [объявления о выходе .NET Framework 4.5.1](https://devblogs.microsoft.com/dotnet/announcing-the-net-framework-4-5-1-preview/).
 
-Начиная с Visual Studio 2013 вы можете использовать [Управляемое средство профильной оптимизации (Mpgo.exe)](../tools/mpgo-exe-managed-profile-guided-optimization-tool.md) для оптимизации классических приложений и приложений [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)].
+Начиная с Visual Studio 2013 вы можете использовать [Управляемое средство профильной оптимизации (Mpgo.exe)](../tools/mpgo-exe-managed-profile-guided-optimization-tool.md) для оптимизации приложений для Магазина Windows 8.x и для настольных систем.
 
 См. новые возможности ASP.NET 4.5.1 в статье [Заметки о выпуске ASP.NET and Web Tools для Visual Studio 2013](/aspnet/visual-studio/overview/2013/release-notes).
 
@@ -1944,7 +1944,7 @@ WPF включает [пакет NuGet](https://go.microsoft.com/fwlink/?LinkID=
 
 - Множественные области действия.
 
-- Подмножество MEF, которое можно использовать при создании приложений [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]. Это подмножество доступно как [загружаемый пакет](https://go.microsoft.com/fwlink/?LinkId=256238) из коллекции NuGet. Чтобы установить пакет, откройте проект в Visual Studio, выберите **Управление пакетами NuGet** в меню **Проект** и выполните поиск пакета `Microsoft.Composition` в Интернете.
+- Подмножество MEF, которое можно использовать при создании приложений для Магазина Windows 8.x. Это подмножество доступно как [загружаемый пакет](https://go.microsoft.com/fwlink/?LinkId=256238) из коллекции NuGet. Чтобы установить пакет, откройте проект в Visual Studio, выберите **Управление пакетами NuGet** в меню **Проект** и выполните поиск пакета `Microsoft.Composition` в Интернете.
 
 Дополнительные сведения см. в разделе [Managed Extensibility Framework](../mef/index.md).
 
@@ -1956,9 +1956,9 @@ WPF включает [пакет NuGet](https://go.microsoft.com/fwlink/?LinkID=
 
 ### <a name="tools"></a>Инструменты
 
-В .NET Framework 4.5 генератор файлов ресурсов (Resgen.exe) позволяет преобразовать файл RESOURCES, внедренный в сборку .NET Framework, в файл RESW, который можно использовать в приложениях [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]. Дополнительные сведения см. в разделе [Resgen.exe (генератор файлов ресурсов)](../tools/resgen-exe-resource-file-generator.md).
+В .NET Framework 4.5 генератор файлов ресурсов (Resgen.exe) позволяет преобразовать RESOURCES-файл, внедренный в сборку .NET Framework, в RESW-файл для использования в приложениях Магазина Windows 8.x. Дополнительные сведения см. в разделе [Resgen.exe (генератор файлов ресурсов)](../tools/resgen-exe-resource-file-generator.md).
 
-Средство управляемой оптимизации с использованием профиля (Mpgo.exe) позволяет сократить время запуска приложения, улучшить использование памяти (размер рабочего множества) и пропускную способность путем оптимизации сборок машинных образов. Этот инструмент командной строки формирует данные профилирования для сборок машинного образа приложения. См. раздел [Mpgo.exe (инструмент управляемой оптимизации с использованием профиля)](../tools/mpgo-exe-managed-profile-guided-optimization-tool.md). Начиная с Visual Studio 2013 вы можете использовать Mpgo.exe для оптимизации классических приложений и приложений [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)].
+Средство управляемой оптимизации с использованием профиля (Mpgo.exe) позволяет сократить время запуска приложения, улучшить использование памяти (размер рабочего множества) и пропускную способность путем оптимизации сборок машинных образов. Этот инструмент командной строки формирует данные профилирования для сборок машинного образа приложения. См. раздел [Mpgo.exe (инструмент управляемой оптимизации с использованием профиля)](../tools/mpgo-exe-managed-profile-guided-optimization-tool.md). Начиная с Visual Studio 2013 вы можете использовать средство Mpgo.exe для оптимизации приложений для Магазина Windows 8.x и для настольных систем.
 
 <a name="parallel" />
 
@@ -2118,7 +2118,7 @@ WPF включает [пакет NuGet](https://go.microsoft.com/fwlink/?LinkID=
 
 ### [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]
 
-Приложения [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] разрабатываются для конкретных форм-факторов и в полной мере используют возможности операционной системы Windows. Предоставляется подмножество .NET Framework 4.5 или 4.5.1 для разработки приложений [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] для Windows с использованием C# или Visual Basic. Это подмножество называется [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] и рассматривается в [обзорной статье](https://go.microsoft.com/fwlink/?LinkId=228491) в Центре разработки для Windows.
+Приложения для Магазина Windows 8.x разрабатываются для конкретных форм-факторов и в полной мере используют возможности операционной системы Windows. Предоставляется подмножество .NET Framework 4.5 или 4.5.1 для разработки приложений для Магазина Windows 8.x с использованием C# или Visual Basic. Это подмножество называется [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] и рассматривается в [обзорной статье](https://go.microsoft.com/fwlink/?LinkId=228491) в Центре разработки для Windows.
 
 ### <a name="portable-class-libraries-a-nameportable-"></a>Переносимые библиотеки классов <a name="portable" />
 
@@ -2130,4 +2130,4 @@ WPF включает [пакет NuGet](https://go.microsoft.com/fwlink/?LinkID=
 - [Улучшения специальных возможностей в .NET Framework](whats-new-in-accessibility.md)
 - [Новые возможности Visual Studio 2017](/visualstudio/ide/whats-new-visual-studio-2017)
 - [ASP.NET](/aspnet)
-- [Новые возможности Visual C++](/cpp/what-s-new-for-visual-cpp-in-visual-studio)
+- [Новые возможности C++ в Visual Studio](/cpp/what-s-new-for-visual-cpp-in-visual-studio)

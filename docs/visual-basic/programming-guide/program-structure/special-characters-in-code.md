@@ -1,5 +1,5 @@
 ---
-title: Специальные символы в коде (Visual Basic)
+title: Специальные символы в коде
 ms.date: 07/20/2015
 f1_keywords:
 - vb.)
@@ -30,62 +30,62 @@ helpviewer_keywords:
 - exclamation point operator (!)
 - Visual Basic code, special characters
 ms.assetid: 310dce0c-45b5-4e0d-83e9-32df258d2a3e
-ms.openlocfilehash: 95bef937912e35cd828bf0090b4cf48ccb3290cc
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f4ab35b56d48ae86bdb024ffea27735b39decdc2
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69962464"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347257"
 ---
 # <a name="special-characters-in-code-visual-basic"></a>Специальные символы в коде (Visual Basic)
-Иногда в коде необходимо использовать специальные символы, то есть символы, не являющиеся алфавитными или числовыми. Знаки пунктуации и специальные символы в Visual Basic кодировке имеют различные варианты использования, от организации текста программы до определения задач, выполняемых компилятором или скомпилированной программой. Эти знаки не определяют операции, подлежащие выполнению.  
+Sometimes you have to use special characters in your code, that is, characters that are not alphabetical or numeric. The punctuation and special characters in the Visual Basic character set have various uses, from organizing program text to defining the tasks that the compiler or the compiled program performs. Эти знаки не определяют операции, подлежащие выполнению.  
   
-## <a name="parentheses"></a>Скобки  
- Используйте круглые скобки при определении процедуры, например `Sub` или. `Function` Все списки аргументов процедур необходимо заключать в круглые скобки. Также круглые скобки используются для помещения переменных или аргументов в логические группы, особенно для переопределения порядка приоритета операторов по умолчанию в сложном выражении. Это показано в следующем примере.  
+## <a name="parentheses"></a>Parentheses  
+ Use parentheses when you define a procedure, such as a `Sub` or `Function`. You must enclose all procedure argument lists in parentheses. You also use parentheses for putting variables or arguments into logical groups, especially to override the default order of operator precedence in a complex expression. Это показано в следующем примере.  
   
  [!code-vb[VbVbcnConventions#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#11)]  
   
- После выполнения предыдущего кода значение `d` равно 8,225, а `e` значение равно 3. Вычисление для `d` `/` использует приоритет по умолчанию `d = b + (c / a)`over `+` и эквивалентен. Круглые скобки в вычислении для `e` переопределения приоритета по умолчанию.  
+ Following execution of the previous code, the value of `d` is 8.225 and the value of `e` is 3. The calculation for `d` uses the default precedence of `/` over `+` and is equivalent to `d = b + (c / a)`. The parentheses in the calculation for `e` override the default precedence.  
   
 ## <a name="separators"></a>Разделители  
- Разделители выполняют свои имена: они разделяют разделы кода. В Visual Basic символ разделителя является двоеточием (`:`). Используйте разделители, если требуется включить несколько операторов в одну строку, а не отдельные строки. Это экономит пространство и повышает удобочитаемость кода. В следующем примере показаны три инструкции, разделенные двоеточиями.  
+ Separators do what their name suggests: they separate sections of code. In Visual Basic, the separator character is the colon (`:`). Use separators when you want to include multiple statements on a single line instead of separate lines. This saves space and improves the readability of your code. The following example shows three statements separated by colons.  
   
  [!code-vb[VbVbcnConventions#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#12)]  
   
- Дополнительные сведения см. в разделе [Практическое руководство. Разбейте и объедините операторы](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)в коде.  
+ For more information, see [How to: Break and Combine Statements in Code](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md).  
   
- Символ двоеточия`:`() также используется для обозначения метки оператора. Дополнительные сведения см. в разделе [Практическое руководство. Операторы](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md)меток.  
+ The colon (`:`) character is also used to identify a statement label. For more information, see [How to: Label Statements](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md).  
   
 ## <a name="concatenation"></a>Сцепление  
- Используйте оператор для объединения или связывания строк. `&` Не путайте его с `+` оператором, который добавляет вместе числовые значения. При использовании `+` оператора для сцепления с числовыми значениями можно получить неверные результаты. В следующем примере это показано.  
+ Use the `&` operator for *concatenation*, or linking strings together. Do not confuse it with the `+` operator, which adds together numeric values. If you use the `+` operator to concatenate when you operate on numeric values, you can obtain incorrect results. В следующем примере это показано.  
   
  [!code-vb[VbVbcnConventions#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#13)]  
   
- После выполнения предыдущего кода значение `resultA` равно 21,01, а `resultB` значение равно "10,0111".  
+ Following execution of the previous code, the value of `resultA` is 21.01 and the value of `resultB` is "10.0111".  
   
-## <a name="member-access-operators"></a>Операторы доступа к членам  
- Для доступа к члену типа используется оператор dot (`.`) или восклицательный знак (`!`) между именем типа и именем члена.  
+## <a name="member-access-operators"></a>Member Access Operators  
+ To access a member of a type, you use the dot (`.`) or exclamation point (`!`) operator between the type name and the member name.  
   
-### <a name="dot--operator"></a>Точка (.) Оператор  
- `.` Используйте оператор для класса, структуры, интерфейса или перечисления в качестве оператора доступа к членам. Элемент может быть полем, свойством, событием или методом. Это показано в следующем примере.  
+### <a name="dot--operator"></a>Dot (.) Operator  
+ Use the `.` operator on a class, structure, interface, or enumeration as a member access operator. The member can be a field, property, event, or method. Это показано в следующем примере.  
   
  [!code-vb[VbVbcnConventions#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#14)]  
   
-### <a name="exclamation-point--operator"></a>Восклицательный знак (!) Оператор  
- `!` Оператор используется только для класса или интерфейса в качестве оператора доступа в словаре. Класс или интерфейс должен иметь свойство по умолчанию, принимающее один `String` аргумент. Идентификатор, непосредственно следующий за `!` оператором, становится значением аргумента, передаваемым в свойство по умолчанию в виде строки. В следующем примере это показано.  
+### <a name="exclamation-point--operator"></a>Exclamation Point (!) Operator  
+ Use the `!` operator only on a class or interface as a dictionary access operator. The class or interface must have a default property that accepts a single `String` argument. The identifier immediately following the `!` operator becomes the argument value passed to the default property as a string. В следующем примере это показано.  
   
  [!code-vb[VbVbcnConventions#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#15)]  
   
- В трех строках `MsgBox` вывода отображается значение `32856`. В первой строке используется традиционный доступ к свойству `index`, а во втором используется тот факт, который `index` является свойством по умолчанию `hasDefault`класса, а третий использует словарный доступ к классу.  
+ The three output lines of `MsgBox` all display the value `32856`. The first line uses the traditional access to property `index`, the second makes use of the fact that `index` is the default property of class `hasDefault`, and the third uses dictionary access to the class.  
   
- Обратите внимание, что второй операнд `!` оператора должен быть допустимым Visual Basic идентификатором, не заключенным в двойные кавычки (`" "`). Иными словами, нельзя использовать строковый литерал или строковую переменную. Следующее изменение в последней строке `MsgBox` вызова приводит к ошибке, поскольку `"X"` является заключенным строковым литералом.  
+ Note that the second operand of the `!` operator must be a valid Visual Basic identifier not enclosed in double quotation marks (`" "`). In other words, you cannot use a string literal or string variable. The following change to the last line of the `MsgBox` call generates an error because `"X"` is an enclosed string literal.  
   
  `"Dictionary access returns " & hD!"X")`  
   
 > [!NOTE]
-> Ссылки на коллекции по умолчанию должны быть явными. В частности, нельзя использовать `!` оператор для переменной с поздним связыванием.  
+> References to default collections must be explicit. In particular, you cannot use the `!` operator on a late-bound variable.  
   
- Символ также используется в `Single` качестве символа типа. `!`  
+ The `!` character is also used as the `Single` type character.  
   
 ## <a name="see-also"></a>См. также
 

@@ -1,5 +1,5 @@
 ---
-title: Оператор TryCast (Visual Basic)
+title: Оператор TryCast
 ms.date: 07/20/2015
 f1_keywords:
 - vb.trycast
@@ -7,32 +7,32 @@ f1_keywords:
 helpviewer_keywords:
 - TryCast keyword [Visual Basic]
 ms.assetid: d1ef5d47-fef4-491e-b014-1d910628f65c
-ms.openlocfilehash: c0eea4565d5040bb00743fc7864ac15b0fccdea9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 53306575cfc385039be3939fd87cf993b4509af4
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62013469"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348215"
 ---
 # <a name="trycast-operator-visual-basic"></a>Оператор TryCast (Visual Basic)
-Вводит операцию преобразования типа, который выдает исключение.  
+Introduces a type conversion operation that does not throw an exception.  
   
-## <a name="remarks"></a>Примечания  
- Если попытка преобразования не, `CType` и `DirectCast` оба throw <xref:System.InvalidCastException> ошибки. Это может отрицательно повлиять на производительность приложения. `TryCast` Возвращает [ничего не](../../../visual-basic/language-reference/nothing.md), что вместо того, для обработки возможных исключений, должны только проверять возвращаемый результат с `Nothing`.  
+## <a name="remarks"></a>Заметки  
+ If an attempted conversion fails, `CType` and `DirectCast` both throw an <xref:System.InvalidCastException> error. This can adversely affect the performance of your application. `TryCast` returns [Nothing](../../../visual-basic/language-reference/nothing.md), so that instead of having to handle a possible exception, you need only test the returned result against `Nothing`.  
   
- Использовании `TryCast` так же, используется ключевое слово [функция CType](../../../visual-basic/language-reference/functions/ctype-function.md) и [оператор DirectCast](../../../visual-basic/language-reference/operators/directcast-operator.md) ключевое слово. Необходимо указать в качестве первого аргумента и тип для преобразования его в качестве второго аргумента выражение. `TryCast` работает только со ссылочными типами, такими как классы и интерфейсы. Он требует отношение наследования или реализации между двумя типами. Это означает, что один тип должен наследовать или реализовывать другой.  
+ You use the `TryCast` keyword the same way you use the [CType Function](../../../visual-basic/language-reference/functions/ctype-function.md) and the [DirectCast Operator](../../../visual-basic/language-reference/operators/directcast-operator.md) keyword. You supply an expression as the first argument and a type to convert it to as the second argument. `TryCast` operates only on reference types, such as classes and interfaces. It requires an inheritance or implementation relationship between the two types. This means that one type must inherit from or implement the other.  
   
-## <a name="errors-and-failures"></a>Ошибки и сбои  
- `TryCast` создает ошибку компилятора, если она обнаруживает, что существует отсутствует отношение наследования или реализации. Но отсутствие ошибки компилятора не гарантирует успешное преобразование. Если нужное преобразование является сужающим, во время выполнения может завершиться ошибкой. В этом случае `TryCast` возвращает [ничего не](../../../visual-basic/language-reference/nothing.md).  
+## <a name="errors-and-failures"></a>Errors and Failures  
+ `TryCast` generates a compiler error if it detects that no inheritance or implementation relationship exists. But the lack of a compiler error does not guarantee a successful conversion. If the desired conversion is narrowing, it could fail at run time. If this happens, `TryCast` returns [Nothing](../../../visual-basic/language-reference/nothing.md).  
   
 ## <a name="conversion-keywords"></a>Ключевые слова преобразований  
- Сравнение ключевых слов преобразования типов выглядит следующим образом.  
+ A comparison of the type conversion keywords is as follows.  
   
-|Ключевое слово|Типы данных|Связь аргументов|Ошибка времени выполнения|  
+|Ключевое слово|Типы данных|Argument relationship|Run-time failure|  
 |---|---|---|---|  
-|[Функция CType](../../../visual-basic/language-reference/functions/ctype-function.md)|Типы данных|Расширяющее или сужающее преобразование должен быть определен между двумя типами данных|Создает исключение <xref:System.InvalidCastException>|  
-|[Оператор DirectCast](../../../visual-basic/language-reference/operators/directcast-operator.md)|Типы данных|Один тип должен наследовать или реализации другого типа|Создает исключение <xref:System.InvalidCastException>|  
-|`TryCast`|Только ссылочные типы|Один тип должен наследовать или реализации другого типа|Возвращает [Nothing](../../../visual-basic/language-reference/nothing.md)|  
+|[Функция CType](../../../visual-basic/language-reference/functions/ctype-function.md)|Any data types|Widening or narrowing conversion must be defined between the two data types|Throws <xref:System.InvalidCastException>|  
+|[Оператор DirectCast](../../../visual-basic/language-reference/operators/directcast-operator.md)|Any data types|One type must inherit from or implement the other type|Throws <xref:System.InvalidCastException>|  
+|`TryCast`|Reference types only|One type must inherit from or implement the other type|Returns [Nothing](../../../visual-basic/language-reference/nothing.md)|  
   
 ## <a name="example"></a>Пример  
  В следующем примере показано, как использовать `TryCast`.  

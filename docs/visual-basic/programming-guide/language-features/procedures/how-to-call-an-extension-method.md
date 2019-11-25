@@ -1,22 +1,22 @@
 ---
-title: Практическое руководство. Вызов метода расширения (Visual Basic)
+title: Практическое руководство. Вызов метода расширения
 ms.date: 07/20/2015
 helpviewer_keywords:
 - calling extension methods [Visual Basic]
 - extension methods [Visual Basic]
 ms.assetid: df07750f-40f4-4c07-a79e-1113a27cfbea
-ms.openlocfilehash: f2058162ab939d2619d7255c884d88c35ee63715
-ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
+ms.openlocfilehash: a19705a8f90833d48869df26a18d19b0ad1488e0
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68512675"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74340396"
 ---
 # <a name="how-to-call-an-extension-method-visual-basic"></a>Практическое руководство. Вызов метода расширения (Visual Basic)
 
-Методы расширения позволяют добавлять методы в существующий класс. После объявления и включения в область действия метода расширения можно вызвать его как метод экземпляра типа, который он расширяет. Дополнительные сведения о написании метода расширения см. в разделе [как Напишите метод](./how-to-write-an-extension-method.md)расширения.
+Extension methods enable you to add methods to an existing class. After an extension method is declared and brought into scope, you can call it like an instance method of the type that it extends. For more information about how to write an extension method, see [How to: Write an Extension Method](./how-to-write-an-extension-method.md).
 
- Следующие инструкции относятся к методу `PrintAndPunctuate`расширения, который отображает экземпляр строки, который вызывает его, за которым следует любое значение, отправляемое для второго `punc`параметра.
+ The following instructions refer to extension method `PrintAndPunctuate`, which will display the string instance that invokes it, followed by whatever value is sent in for the second parameter, `punc`.
 
 ```vb
 Imports System.Runtime.CompilerServices
@@ -31,40 +31,40 @@ Module StringExtensions
 End Module
 ```
 
-Метод должен находиться в области видимости при его вызове.
+The method must be in scope when it is called.
 
-### <a name="to-call-an-extension-method"></a>Вызов метода расширения
+### <a name="to-call-an-extension-method"></a>To call an extension method
 
-1. Объявите переменную с типом данных первого параметра метода расширения. Для `PrintAndPunctuate` необходимо<xref:System.String> иметь переменную:
+1. Declare a variable that has the data type of the first parameter of the extension method. For `PrintAndPunctuate`, you need a <xref:System.String> variable:
 
     ```vb
     Dim example = "Ready"
     ```
 
-2. Эта переменная вызывает метод расширения, и его значение привязывается к первому параметру, `aString`. Отобразится следующая инструкция `Ready?`вызова.
+2. That variable will invoke the extension method, and its value is bound to the first parameter, `aString`. The following calling statement will display `Ready?`.
 
     ```vb
     example.PrintAndPunctuate("?")
     ```
 
-     Обратите внимание, что вызов этого метода расширения выглядит так же, как вызов любого <xref:System.String> метода экземпляра, для которого требуется один параметр:
+     Notice that the call to this extension method looks just like a call to any one of the <xref:System.String> instance methods that require one parameter:
 
     ```vb
     example.EndsWith("dy")
     example.IndexOf("R")
     ```
 
-3. Объявите другую строковую переменную и снова вызовите метод, чтобы увидеть, что он работает с любой строкой.
+3. Declare another string variable and call the method again to see that it works with any string.
 
     ```vb
     Dim example2 = " or not"
     example2.PrintAndPunctuate("!!!")
     ```
 
-     Результат в этом случае: `or not!!!`.
+     The result this time is: `or not!!!`.
 
 ## <a name="example"></a>Пример
- Следующий код является полным примером создания и использования простого метода расширения.
+ The following code is a complete example of the creation and use of a simple extension method.
 
 ```vb
 Imports System.Runtime.CompilerServices
@@ -99,4 +99,4 @@ End Module
 
 - [Практическое руководство. Написание метода расширения](./how-to-write-an-extension-method.md)
 - [Методы расширения](./extension-methods.md)
-- [Область в Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
+- [Scope in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)

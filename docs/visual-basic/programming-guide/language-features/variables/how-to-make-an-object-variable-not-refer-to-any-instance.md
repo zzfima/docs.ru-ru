@@ -1,23 +1,23 @@
 ---
-title: Практическое руководство. Сделать объектную переменную нессылающейся на какой-либо экземпляр (Visual Basic)
+title: Практическое руководство. Как сделать так, чтобы объектная переменная не указывала ни на какой экземпляр
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Nothing keyword [Visual Basic], variable assignment
 - object variables [Visual Basic], null reference
 ms.assetid: e6d30578-bdae-4142-a3ac-a10697bf696a
-ms.openlocfilehash: e647f2f891b06aa1767faac49b01df98ea31ec1c
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 320dadb61c12f3339c5328dcef31c41503892c56
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72004916"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352893"
 ---
-# <a name="how-to-make-an-object-variable-not-refer-to-any-instance-visual-basic"></a>Практическое руководство. Сделать объектную переменную нессылающейся на какой-либо экземпляр (Visual Basic)
-Можно разорвать связь объектной переменной с любым экземпляром объекта, задав для него значение [Nothing](../../../../visual-basic/language-reference/nothing.md).  
+# <a name="how-to-make-an-object-variable-not-refer-to-any-instance-visual-basic"></a>Практическое руководство. Как сделать так, чтобы объектная переменная не указывала ни на какой экземпляр (Visual Basic)
+You can disassociate an object variable from any object instance by setting it to [Nothing](../../../../visual-basic/language-reference/nothing.md).  
   
-### <a name="to-disassociate-an-object-variable-from-any-object-instance"></a>Отмена связывания объектной переменной с любым экземпляром объекта  
+### <a name="to-disassociate-an-object-variable-from-any-object-instance"></a>To disassociate an object variable from any object instance  
   
-- Присвойте переменной значение `Nothing` в операторе присваивания.  
+- Set the variable to `Nothing` in an assignment statement.  
   
     ```vb  
     ' Assume account is a defined class  
@@ -26,10 +26,10 @@ ms.locfileid: "72004916"
     ```  
   
 ## <a name="robust-programming"></a>Отказоустойчивость  
- Если код пытается получить доступ к члену объектной переменной, для которой задано значение `Nothing`, возникает <xref:System.NullReferenceException>. Если для переменной объекта присвоить значение `Nothing` часто или если переменная не инициализирована, рекомендуется заключить доступ к членам в блок `Try...Catch...Finally`.  
+ If your code tries to access a member of an object variable that has been set to `Nothing`, a <xref:System.NullReferenceException> occurs. If you set an object variable to `Nothing` frequently, or if it is possible the variable is not initialized, it is a good idea to enclose member accesses in a `Try...Catch...Finally` block.  
   
 ## <a name="net-framework-security"></a>Безопасность платформы .NET Framework  
- При использовании объектной переменной для объектов, содержащих конфиденциальные или конфиденциальные данные, можно присвоить переменной значение `Nothing`, если вы активно не работаете с одним из этих объектов. Это снижает вероятность того, что вредоносный код получает доступ к данным.  
+ If you use an object variable for objects that contain confidential or sensitive data, you can set the variable to `Nothing` when you are not actively dealing with one of those objects. This reduces the chance of malicious code gaining access to the data.  
   
 ## <a name="see-also"></a>См. также
 

@@ -1,15 +1,15 @@
 ---
-title: Создание исходного документа Office Open XML (Visual Basic)
+title: Создание исходного документа в формате Office Open XML
 ms.date: 07/20/2015
 ms.assetid: 61ccd6fb-0c47-4075-afdf-5b5021330f21
-ms.openlocfilehash: 75030f3d1c2940cc84f81b85dca921497137439f
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 5f7a9baebd2d1db73ab17924e0ff8a7408637ee8
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71352944"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346420"
 ---
-# <a name="creating-the-source-office-open-xml-document-visual-basic"></a>Создание исходного документа Office Open XML (Visual Basic)
+# <a name="creating-the-source-office-open-xml-document-visual-basic"></a>Creating the Source Office Open XML Document (Visual Basic)
 В этом разделе показано создание документа Office Open XML WordprocessingML, который используется в примерах этого учебника. Если следовать приведенным ниже инструкциям, выходные данные будут соответствовать выходным данным каждого примера.  
   
  Тем не менее примеры в этом учебнике работают с любым допустимым документом WordprocessingML.  
@@ -44,7 +44,7 @@ ms.locfileid: "71352944"
   
 3. Отформатируйте первую строку стилем «Заголовок 1».  
   
-4. Выберите строки, которые содержат код Visual Basic. Первая строка начинается с ключевого слова `Imports`. Последняя строка — "конечный класс". Отформатируйте эти строки шрифтом courier. Создайте из них новый стиль и присвойте ему имя «Code».  
+4. Select the lines that contain the Visual Basic code. Первая строка начинается с ключевого слова `Imports`. The last line is "End Class". Отформатируйте эти строки шрифтом courier. Создайте из них новый стиль и присвойте ему имя «Code».  
   
 5. Наконец, выделите всю строку, содержащую выходные данные, и отформатируйте ее стилем `Code`.  
   
@@ -55,4 +55,4 @@ ms.locfileid: "71352944"
   
 ## <a name="see-also"></a>См. также
 
-- [Учебник. Обработка содержимого в документе WordprocessingML (Visual Basic) ](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [Tutorial: Manipulating Content in a WordprocessingML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)

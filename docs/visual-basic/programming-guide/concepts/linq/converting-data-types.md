@@ -1,19 +1,19 @@
 ---
-title: Преобразование типов данных (Visual Basic)
+title: Преобразование типов данных
 ms.date: 07/20/2015
 ms.assetid: 9b0cf1ab-de48-4c6e-9f00-05b40fade46e
-ms.openlocfilehash: 744dec0093384a15470186fc09695c17e79468fa
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 25d21954f0bb7555f1f5666f83fb37f4f73e2a60
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524233"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74354256"
 ---
-# <a name="converting-data-types-visual-basic"></a>Преобразование типов данных (Visual Basic)
+# <a name="converting-data-types-visual-basic"></a>Converting Data Types (Visual Basic)
 
 Методы преобразования изменяют тип входных объектов.
 
- Операции преобразования в запросах LINQ удобны в различных ситуациях. Ниже приведены некоторые примеры.
+ Операции преобразования в запросах LINQ удобны в различных ситуациях. The following are some examples:
 
 - Метод <xref:System.Linq.Enumerable.AsEnumerable%2A?displayProperty=nameWithType> можно использовать, чтобы скрыть настраиваемую реализацию типа стандартного оператора запроса.
 
@@ -27,7 +27,7 @@ ms.locfileid: "72524233"
 
 Методы преобразования в этой таблице, имена которых начинаются с "As", изменяют статический тип исходной коллекции, но не выполняют перечисление. Методы, имена которых начинаются с "To", перечисляют исходную коллекцию и помещают элементы в соответствующий тип коллекции.
 
-|Имя метода|Описание|Синтаксис выражения запроса Visual Basic|Дополнительные сведения|
+|Имя метода|Описание|Visual Basic Query Expression Syntax|Дополнительные сведения|
 |-----------------|-----------------|------------------------------------------|----------------------|
 |AsEnumerable|Возвращает входное значение, типизированное как <xref:System.Collections.Generic.IEnumerable%601>.|Неприменимо.|<xref:System.Linq.Enumerable.AsEnumerable%2A?displayProperty=nameWithType>|
 |AsQueryable|Преобразует <xref:System.Collections.IEnumerable> (универсальный шаблон) в <xref:System.Linq.IQueryable> (универсальный шаблон).|Неприменимо.|<xref:System.Linq.Queryable.AsQueryable%2A?displayProperty=nameWithType>|
@@ -40,7 +40,7 @@ ms.locfileid: "72524233"
 
 ## <a name="query-expression-syntax-example"></a>Пример синтаксиса выражения запроса
 
-В следующем примере кода используется предложение `From As` для приведения типа к подтипу перед доступом к элементу, доступному только для подтипа.
+The following code example uses the `From As` clause to cast a type to a subtype before accessing a member that is available only on the subtype.
 
 ```vb
 Class Plant
@@ -85,4 +85,4 @@ End Sub
 - <xref:System.Linq>
 - [Общие сведения о стандартных операторах запроса (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
 - [Предложение From](../../../../visual-basic/language-reference/queries/from-clause.md)
-- [Как выполнить запрос к ArrayList с помощью LINQ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md)
+- [How to: Query an ArrayList with LINQ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md)

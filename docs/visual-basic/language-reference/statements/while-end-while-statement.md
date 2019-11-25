@@ -1,5 +1,5 @@
 ---
-title: Оператор While... End While (Visual Basic)
+title: Оператор While...End While
 ms.date: 07/20/2015
 f1_keywords:
 - vb.While
@@ -9,15 +9,15 @@ helpviewer_keywords:
 - While statement [Visual Basic]
 - While...End While statements [Visual Basic]
 ms.assetid: b931d1ce-e8ed-44d8-a13d-92a4f5458a1e
-ms.openlocfilehash: 5da05835998b2e9ef9aeefe5b00faf9e1ecb9ce2
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 87f6fbd6147b6dbfbe08c93e862d58b9868f9201
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582261"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352747"
 ---
 # <a name="whileend-while-statement-visual-basic"></a>Оператор While... End While (Visual Basic)
-Выполняет ряд инструкций, если заданное условие имеет `True`.  
+Runs a series of statements as long as a given condition is `True`.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -35,49 +35,49 @@ End While
   
 |Термин|Определение|  
 |---|---|  
-|`condition`|Обязательный. выражение `Boolean`. Если `condition` `Nothing`, Visual Basic рассматривает его как `False`.|  
-|`statements`|Необязательный. Один или несколько инструкций, следующих за `While`, которые выполняются каждый раз, когда `condition` `True`.|  
-|`Continue While`|Необязательный. Передает управление следующей итерации блока `While`.|  
-|`Exit While`|Необязательный. Передает управление за пределы блока `While`.|  
+|`condition`|Обязательный. `Boolean` expression. If `condition` is `Nothing`, Visual Basic treats it as `False`.|  
+|`statements`|Необязательный. One or more statements following `While`, which run every time `condition` is `True`.|  
+|`Continue While`|Необязательный. Transfers control to the next iteration of the `While` block.|  
+|`Exit While`|Необязательный. Transfers control out of the `While` block.|  
 |`End While`|Обязательный. Завершает определение блока `While`.|  
   
 ## <a name="remarks"></a>Заметки  
- Используйте структуру `While...End While`, если нужно повторить набор инструкций неопределенное количество раз, пока условие остается `True`. Если вы хотите обеспечить большую гибкость при тестировании условия или результата тестирования, вы можете предпочесть оператору [Do... Loop, инструкция](../../../visual-basic/language-reference/statements/do-loop-statement.md). Если нужно повторить инструкции заданное число раз, то [для... ](../../../visual-basic/language-reference/statements/for-next-statement.md)Обычно лучше подходит следующий оператор.  
+ Use a `While...End While` structure when you want to repeat a set of statements an indefinite number of times, as long as a condition remains `True`. If you want more flexibility with where you test the condition or what result you test it for, you might prefer the [Do...Loop Statement](../../../visual-basic/language-reference/statements/do-loop-statement.md). If you want to repeat the statements a set number of times, the [For...Next Statement](../../../visual-basic/language-reference/statements/for-next-statement.md) is usually a better choice.  
   
 > [!NOTE]
-> Ключевое слово `While` также используется в [инструкции Do... Оператор Loop](../../../visual-basic/language-reference/statements/do-loop-statement.md), [предложение Skip While](../../../visual-basic/language-reference/queries/skip-while-clause.md) и [предложение Take While](../../../visual-basic/language-reference/queries/take-while-clause.md).  
+> The `While` keyword is also used in the [Do...Loop Statement](../../../visual-basic/language-reference/statements/do-loop-statement.md), the [Skip While Clause](../../../visual-basic/language-reference/queries/skip-while-clause.md) and the [Take While Clause](../../../visual-basic/language-reference/queries/take-while-clause.md).  
   
- Если `condition` `True`, все `statements` выполняться до тех пор, пока не будет обнаружена инструкция `End While`. Затем управление возвращается к инструкции `While`, а `condition` снова проверяется. Если `condition` по-прежнему `True`, процесс повторяется. Если это `False`, управление передается оператору, который следует за инструкцией `End While`.  
+ If `condition` is `True`, all of the `statements` run until the `End While` statement is encountered. Control then returns to the `While` statement, and `condition` is again checked. If `condition` is still `True`, the process is repeated. If it’s `False`, control passes to the statement that follows the `End While` statement.  
   
- Оператор `While` всегда проверяет условие перед началом цикла. Цикл продолжается, пока условие остается `True`. Если `condition` `False` при первом входе в цикл, он не выполняется даже один раз.  
+ The `While` statement always checks the condition before it starts the loop. Looping continues while the condition remains `True`. If `condition` is `False` when you first enter the loop, it doesn’t run even once.  
   
- @No__t_0 обычно является результатом сравнения двух значений, но может быть любым выражением, результатом вычисления которого является [логическое значение типа данных](../../../visual-basic/language-reference/data-types/boolean-data-type.md) (`True` или `False`). Это выражение может включать значение другого типа данных, такое как числовой тип, преобразованное в `Boolean`.  
+ The `condition` usually results from a comparison of two values, but it can be any expression that evaluates to a [Boolean Data Type](../../../visual-basic/language-reference/data-types/boolean-data-type.md) value (`True` or `False`). This expression can include a value of another data type, such as a numeric type, that has been converted to `Boolean`.  
   
- Можно вкладывать `While` циклы, помещая один цикл внутрь другого. Можно также вкладывать различные виды управляющих структур друг в друга. Дополнительные сведения см. в разделе [вложенные структуры управления](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md).  
+ You can nest `While` loops by placing one loop within another. You can also nest different kinds of control structures within one another. For more information, see [Nested Control Structures](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md).  
   
-## <a name="exit-while"></a>Выйти, пока  
- Оператор [Exit While](../../../visual-basic/language-reference/statements/exit-statement.md) может предоставить другой способ выхода из цикла `While`. `Exit While` немедленно передает управление оператору, который следует за инструкцией `End While`.  
+## <a name="exit-while"></a>Exit While  
+ The [Exit While](../../../visual-basic/language-reference/statements/exit-statement.md) statement can provide another way to exit a `While` loop. `Exit While` immediately transfers control to the statement that follows the `End While` statement.  
   
- Обычно `Exit While` используется после оценки некоторого условия (например, в структуре `If...Then...Else`). Может потребоваться выйти из цикла, если обнаруживается условие, которое делает ненужным или невозможным продолжение итераций, например ошибочное значение или запрос на завершение. @No__t_0 можно использовать при проверке условия, которое может вызвать *бесконечный цикл*, то есть цикл, который может выполнять очень большое или даже бесконечное число раз. Затем можно использовать `Exit While` для экранирования цикла.  
+ You typically use `Exit While` after some condition is evaluated (for example, in an `If...Then...Else` structure). You might want to exit a loop if you detect a condition that makes it unnecessary or impossible to continue iterating, such as an erroneous value or a termination request. You can use `Exit While` when you test for a condition that could cause an *endless loop*, which is a loop that could run an extremely large or even infinite number of times. You can then use `Exit While` to escape the loop.  
   
- В цикле `While` можно поместить любое количество `Exit While` инструкций.  
+ You can place any number of `Exit While` statements anywhere in the `While` loop.  
   
- При использовании внутри вложенных циклов `While` `Exit While` передает управление из самого внутреннего цикла и в следующий более высокий уровень вложенности.  
+ When used within nested `While` loops, `Exit While` transfers control out of the innermost loop and into the next higher level of nesting.  
   
- Оператор `Continue While` немедленно передает управление следующей итерации цикла. Дополнительные сведения см. в разделе [оператор continue](../../../visual-basic/language-reference/statements/continue-statement.md).  
+ The `Continue While` statement immediately transfers control to the next iteration of the loop. For more information, see [Continue Statement](../../../visual-basic/language-reference/statements/continue-statement.md).  
   
 ## <a name="example"></a>Пример  
- В следующем примере операторы в цикле продолжают выполняться до тех пор, пока значение переменной `index` не превышает 10.  
+ In the following example, the statements in the loop continue to run until the `index` variable is greater than 10.  
   
  [!code-vb[VbVbalrStatements#171](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class14.vb#171)]  
   
 ## <a name="example"></a>Пример  
- В следующем примере показано использование инструкций `Continue While` и `Exit While`.  
+ The following example illustrates the use of the `Continue While` and `Exit While` statements.  
   
  [!code-vb[VbVbalrStatements#172](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class14.vb#172)]  
   
 ## <a name="example"></a>Пример  
- В следующем примере считываются все строки в текстовом файле. Метод <xref:System.IO.File.OpenText%2A> открывает файл и возвращает <xref:System.IO.StreamReader>, который считывает символы. В `While`ном условии <xref:System.IO.StreamReader.Peek%2A> метод `StreamReader` определяет, содержит ли файл дополнительные символы.  
+ The following example reads all lines in a text file. The <xref:System.IO.File.OpenText%2A> method opens the file and returns a <xref:System.IO.StreamReader> that reads the characters. In the `While` condition, the <xref:System.IO.StreamReader.Peek%2A> method of the `StreamReader` determines whether the file contains additional characters.  
   
  [!code-vb[VbVbalrStatements#173](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class14.vb#173)]  
   

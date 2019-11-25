@@ -8,26 +8,26 @@ helpviewer_keywords:
 - custom controls [Windows Forms], property methods
 - ShouldPersist method
 ms.assetid: 7b6c5e00-3771-46b4-9142-5a80d5864a5e
-ms.openlocfilehash: 609fe4896a2b01b8a69ff8a3d0854c85ddbd6a26
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 11181bacdb919693ffc82c48c061357463a6343b
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69969099"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74336753"
 ---
 # <a name="defining-default-values-with-the-shouldserialize-and-reset-methods"></a>Определение значений по умолчанию с помощью методов ShouldSerialize и Reset
-`ShouldSerialize`и `Reset` являются необязательными методами, которые можно указать для свойства, если свойство не имеет простого значения по умолчанию. Если свойство имеет простое значение по умолчанию, следует применить <xref:System.ComponentModel.DefaultValueAttribute> и предоставить конструктору класса атрибута значение по умолчанию. Любой из этих механизмов предоставляет следующие возможности в конструкторе:
+`ShouldSerialize` and `Reset` are optional methods that you can provide for a property, if the property does not a have simple default value. If the property has a simple default value, you should apply the <xref:System.ComponentModel.DefaultValueAttribute> and supply the default value to the attribute class constructor instead. Either of these mechanisms enables the following features in the designer:
 
-- Свойство предоставляет визуальное обозначение в браузере свойств, если оно было изменено со значения по умолчанию.
+- The property provides visual indication in the property browser if it has been modified from its default value.
 
-- Пользователь может щелкнуть свойство правой кнопкой мыши и выбрать команду **сбросить** , чтобы восстановить свойство до значения по умолчанию.
+- The user can right-click on the property and choose **Reset** to restore the property to its default value.
 
-- Конструктор создает более эффективный код.
+- The designer generates more efficient code.
 
     > [!NOTE]
-    > Либо примените <xref:System.ComponentModel.DefaultValueAttribute> , либо `Reset`укажите методы `ShouldSerialize` *PropertyName* и *PropertyName* . Не используйте оба.
+    > Either apply the <xref:System.ComponentModel.DefaultValueAttribute> or provide `Reset`*PropertyName* and `ShouldSerialize`*PropertyName* methods. Do not use both.
 
- Метод PropertyName присваивает свойству значение по умолчанию, как показано в следующем фрагменте кода. `Reset`
+ The `Reset`*PropertyName* method sets a property to its default value, as shown in the following code fragment.
 
 ```vb
 Public Sub ResetMyFont()
@@ -42,9 +42,9 @@ public void ResetMyFont() {
 ```
 
 > [!NOTE]
-> Если свойство не `Reset` имеет метода, не помечено <xref:System.ComponentModel.DefaultValueAttribute>атрибутом и не имеет значения по умолчанию `Reset` в его объявлении, параметр для этого свойства будет отключен в контекстном меню окна **свойств** в окне конструктор Windows Forms в Visual Studio.
+> If a property does not have a `Reset` method, is not marked with a <xref:System.ComponentModel.DefaultValueAttribute>, and does not have a default value supplied in its declaration, the `Reset` option for that property is disabled in the shortcut menu of the **Properties** window of the Windows Forms Designer in Visual Studio.
 
- Конструкторы, такие как Visual Studio `ShouldSerialize`, используют метод *PropertyName* , чтобы проверить, изменилось ли свойство со значения по умолчанию, и написать код в форме только в том случае, если свойство изменено, что обеспечивает более эффективное создание кода. Например:
+ Designers such as Visual Studio use the `ShouldSerialize`*PropertyName* method to check whether a property has changed from its default value and write code into the form only if a property is changed, thus allowing for more efficient code generation. Пример:
 
 ```vb
 'Returns true if the font has changed; otherwise, returns false.
@@ -62,15 +62,14 @@ public bool ShouldSerializeMyFont() {
 }
 ```
 
- Ниже приведен полный пример кода.
+ A complete code example follows.
 
 ```vb
 Option Explicit
 Option Strict
 
-Imports System
-Imports System.Windows.Forms
 Imports System.Drawing
+Imports System.Windows.Forms
 
 Public Class MyControl
    Inherits Control
@@ -109,8 +108,8 @@ End Class
 
 ```csharp
 using System;
-using System.Windows.Forms;
 using System.Drawing;
+using System.Windows.Forms;
 
 public class MyControl : Control {
    // Declare an instance of the Font class
@@ -141,7 +140,7 @@ public class MyControl : Control {
 }
 ```
 
- В этом случае, даже если значение закрытой переменной, к которой обращается `MyFont` свойство, `null`равно, браузер свойств не отображается `null`; вместо этого он отображает <xref:System.Windows.Forms.Control.Font%2A> свойство родителя, если нет `null`, значение по умолчанию <xref:System.Windows.Forms.Control.Font%2A> , определенное <xref:System.Windows.Forms.Control>в. Поэтому значение по умолчанию `MyFont` для не может быть просто задано <xref:System.ComponentModel.DefaultValueAttribute> и не может быть применено к этому свойству. Вместо этого для `Reset` свойства`MyFont` должны быть реализованы методы и.`ShouldSerialize`
+ In this case, even when the value of the private variable accessed by the `MyFont` property is `null`, the property browser does not display `null`; instead, it displays the <xref:System.Windows.Forms.Control.Font%2A> property of the parent, if it is not `null`, or the default <xref:System.Windows.Forms.Control.Font%2A> value defined in <xref:System.Windows.Forms.Control>. Thus the default value for `MyFont` cannot be simply set, and a <xref:System.ComponentModel.DefaultValueAttribute> cannot be applied to this property. Instead, the `ShouldSerialize` and `Reset` methods must be implemented for the `MyFont` property.
 
 ## <a name="see-also"></a>См. также
 

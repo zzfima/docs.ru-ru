@@ -9,16 +9,16 @@ helpviewer_keywords:
 - qualifying XML elements
 - XML namespaces, qualifying elements and names in
 ms.assetid: 44719f90-7e15-42e8-a9e2-282287e2b5bf
-ms.openlocfilehash: 04e9dd3c135c516fa5554b9b547306337fb6a668
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1f79caf6ff295d793c615b17d387cdd165e440e7
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64755398"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353098"
 ---
 # <a name="how-to-qualify-xml-element-and-xml-attribute-names"></a>Практическое руководство. Квалификация элемента XML и имен атрибутов XML
 
-Пространства имен XML, содержащиеся в экземплярах <xref:System.Xml.Serialization.XmlSerializerNamespaces> класса должно соответствовать спецификации World Wide Web Consortium (W3C), который вызывается [пространства имен в XML](https://www.w3.org/TR/REC-xml-names/).
+XML namespaces contained by instances of the <xref:System.Xml.Serialization.XmlSerializerNamespaces> class must conform to the World Wide Web Consortium (W3C) specification called [Namespaces in XML](https://www.w3.org/TR/REC-xml-names/).
 
 Пространства имен XML предоставляют метод квалификации имен элементов XML и атрибутов XML в документах XML. Полное имя состоит из префикса и локального имени, разделяемых двоеточием. Функцией префикса является только указание места заполнения, он сопоставлен URI, определяющим пространство имен. Сочетание процедур универсально управляемого пространства имен URI и локального имени позволяет создать имя, гарантированно универсально уникальное.
 
@@ -42,6 +42,7 @@ ms.locfileid: "64755398"
 
 В следующем примере создается `XmlSerializerNamespaces`, и к нему добавляются две пары префикса и пространства имен. Код создает `XmlSerializer`, который используется для сериализации экземпляра класса `Books`. Код вызывает метод `Serialize` с использованием `XmlSerializerNamespaces`, что позволяет XML содержать пространства имен с префиксами.
 
+<!-- TODO: THE FOLLOWING VB SNIPPET ISN'T CORRECT!! -->
 ```vb
 Option Explicit
 public class Price
@@ -174,8 +175,8 @@ public class Book
 - <xref:System.Xml.Serialization.XmlSerializer>
 - [Инструмент определения схемы XML и сериализация XML](the-xml-schema-definition-tool-and-xml-serialization.md)
 - [Введение в сериализацию XML](introducing-xml-serialization.md)
-- [Класс XmlSerializer](xref:System.Xml.Serialization.XmlSerializer)
+- [XmlSerializer Class](xref:System.Xml.Serialization.XmlSerializer)
 - [Атрибуты управления сериализацией XML](attributes-that-control-xml-serialization.md)
-- [Практическое руководство. Указание имени альтернативного элемента для XML Stream](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
+- [Практическое руководство. Указание имени альтернативного элемента для потока XML](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
 - [Практическое руководство. Сериализация объекта](how-to-serialize-an-object.md)
 - [Практическое руководство. Десериализация объекта](how-to-deserialize-an-object.md)

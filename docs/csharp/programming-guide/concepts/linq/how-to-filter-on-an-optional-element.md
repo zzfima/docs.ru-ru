@@ -1,15 +1,15 @@
 ---
-title: Практическое руководство. Фильтрация по необязательному элементу (C#)
+title: Практическое руководство. Фильтрация по необязательным элементам (C#)
 ms.date: 07/20/2015
 ms.assetid: f99e2f93-fca5-403f-8a0c-770761d4905a
-ms.openlocfilehash: 0f8e17d99085ad04ed76b83bce806418ca6d60cd
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: c9f844619cbb3d7a66ca66989baa900e0fd7bc2f
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253822"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141257"
 ---
-# <a name="how-to-filter-on-an-optional-element-c"></a>Практическое руководство. Фильтрация по необязательному элементу (C#)
+# <a name="how-to-filter-on-an-optional-element-c"></a>Практическое руководство. Фильтрация по необязательным элементам (C#)
 Иногда необходимо выполнить фильтрацию элемента, даже если неизвестно, существует ли он в документе XML. Поиск должен быть выполнен, чтобы, если конкретный элемент не имеет дочернего узла, при фильтрации по этому элементу не возникло исключение null reference. В следующем примере элемент `Child5` не имеет дочернего узла `Type`, тем не менее запрос выполняется правильно.  
   
 ## <a name="example"></a>Пример  

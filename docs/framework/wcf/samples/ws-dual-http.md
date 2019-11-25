@@ -2,12 +2,12 @@
 title: WS Dual Http
 ms.date: 03/30/2017
 ms.assetid: 9997eba5-29ec-48db-86f3-fa77b241fb1a
-ms.openlocfilehash: bc8958ab092f97e94a75bc366d576441c1a5bbbd
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 44fdf6f0b27e15c486afa32f67668e9fd6eeac10
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424546"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74138686"
 ---
 # <a name="ws-dual-http"></a>WS Dual Http
 
@@ -88,7 +88,7 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
 4. Чтобы запустить пример в конфигурации с одним или несколькими компьютерами, следуйте инструкциям в разделе [выполнение примеров Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).
 
     > [!IMPORTANT]
-    > При запуске клиента в конфигурации с несколькими компьютерами не забудьте заменить localhost в атрибуте `address` [конечной точки\<> \<клиентского >](../../configure-apps/file-schema/wcf/endpoint-of-client.md) и атрибут `clientBaseAddress` [привязки\<](../../../../docs/framework/misc/binding.md) элемента [\<wsDualHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md) с именем соответствующего компьютера, как показано ниже.
+    > При запуске клиента в конфигурации с несколькими компьютерами не забудьте заменить localhost в атрибуте `address` [конечной точки\<> \<клиентского >](../../configure-apps/file-schema/wcf/endpoint-of-client.md) и атрибут `clientBaseAddress` [привязки\<](../../configure-apps/file-schema/wcf/bindings.md) элемента [\<wsDualHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md) с именем соответствующего компьютера, как показано ниже.
 
     ```xml
     <client>

@@ -1,5 +1,5 @@
 ---
-title: Оператор Throw (Visual Basic)
+title: Оператор Throw
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Throw
@@ -14,16 +14,16 @@ helpviewer_keywords:
 - exception handling, unstructured
 - throw statement [Visual Basic]
 ms.assetid: a6e07406-5c8a-4498-87a2-8339f3651d62
-ms.openlocfilehash: 9680700267f17c8e316de351fead61f1dc4aded0
-ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
+ms.openlocfilehash: 147345990b625e034e651e69b322bc098d0bd8de
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68869021"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352783"
 ---
 # <a name="throw-statement-visual-basic"></a>Оператор Throw (Visual Basic)
 
-Создает исключение в процедуре.
+Throws an exception within a procedure.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -34,19 +34,19 @@ Throw [ expression ]
 ## <a name="part"></a>Отделение
 
 `expression`\
-Предоставляет сведения о вызываемом исключении. Необязательно, если размещен в `Catch` операторе, в противном случае является обязательным.
+Provides information about the exception to be thrown. Optional when residing in a `Catch` statement, otherwise required.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
-Оператор создает исключение, которое можно обработать с помощью структурированного кода обработки исключений (`Try`... `Throw` `Catch`... ) или неструктурированный код обработки исключений (`On Error GoTo`). `Finally` Можно использовать `Throw` инструкцию для перехвата ошибок в коде, так как Visual Basic перемещается вверх по стеку вызовов до тех пор, пока не найдет соответствующий код обработки исключений.
+The `Throw` statement throws an exception that you can handle with structured exception-handling code (`Try`...`Catch`...`Finally`) or unstructured exception-handling code (`On Error GoTo`). You can use the `Throw` statement to trap errors within your code because Visual Basic moves up the call stack until it finds the appropriate exception-handling code.
 
-Инструкцию без выражения можно использовать только `Catch` в операторе, в этом случае инструкция повторно создает исключение, которое `Catch` в настоящее время обрабатывается инструкцией. `Throw`
+A `Throw` statement with no expression can only be used in a `Catch` statement, in which case the statement rethrows the exception currently being handled by the `Catch` statement.
 
-Инструкция сбрасывает стек вызовов `expression` для исключения. `Throw` Если `expression` параметр не указан, стек вызовов остается без изменений. Доступ к стеку вызовов для исключения можно получить с помощью <xref:System.Exception.StackTrace%2A> свойства.
+The `Throw` statement resets the call stack for the `expression` exception. If `expression` is not provided, the call stack is left unchanged. You can access the call stack for the exception through the <xref:System.Exception.StackTrace%2A> property.
 
 ## <a name="example"></a>Пример
 
-Следующий код использует `Throw` инструкцию для создания исключения:
+The following code uses the `Throw` statement to throw an exception:
 
 [!code-vb[VbVbalrStatements#84](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#84)]
 

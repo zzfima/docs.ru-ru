@@ -1,5 +1,5 @@
 ---
-title: Оператор Or (Visual Basic)
+title: Оператор Or
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Or
@@ -15,15 +15,15 @@ helpviewer_keywords:
 - logical disjunction
 - disjunction operator [Visual Basic]
 ms.assetid: 41ed6905-bf3d-468a-9e3b-03c10d461891
-ms.openlocfilehash: 03decb4ad32e8ff2c03e3b64a272bce779282973
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 8f28026b526c29a6122725b2689e53b7f6ee7327
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71701238"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348256"
 ---
 # <a name="or-operator-visual-basic"></a>Оператор Or (Visual Basic)
-Выполняет логическое сложение двух выражений `Boolean` или побитовое сложение двух числовых выражений.  
+Performs a logical disjunction on two `Boolean` expressions, or a bitwise disjunction on two numeric expressions.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -33,18 +33,18 @@ result = expression1 Or expression2
   
 ## <a name="parts"></a>Части  
  `result`  
- Обязательный. Любое `Boolean` или числовое выражение. Для сравнения `Boolean` `result` является инклюзивным логическим соединением двух значений `Boolean`. Для побитовых операций `result` — это числовое значение, представляющее включающее побитовое сложение двух числовых битов.  
+ Обязательный. Any `Boolean` or numeric expression. For `Boolean` comparison, `result` is the inclusive logical disjunction of two `Boolean` values. For bitwise operations, `result` is a numeric value representing the inclusive bitwise disjunction of two numeric bit patterns.  
   
  `expression1`  
- Обязательный. Любое `Boolean` или числовое выражение.  
+ Обязательный. Any `Boolean` or numeric expression.  
   
  `expression2`  
- Обязательный. Любое `Boolean` или числовое выражение.  
+ Обязательный. Any `Boolean` or numeric expression.  
   
-## <a name="remarks"></a>Примечания  
- Для сравнения `Boolean` `result` — `False`, только если оба `expression1` и `expression2` равны `False`. В следующей таблице показано, как определяется `result`.  
+## <a name="remarks"></a>Заметки  
+ For `Boolean` comparison, `result` is `False` if and only if both `expression1` and `expression2` evaluate to `False`. The following table illustrates how `result` is determined.  
   
-|Если `expression1` имеет значение|И `expression2` является|Значение `result` равно|  
+|If `expression1` is|And `expression2` is|The value of `result` is|  
 |-------------------------|--------------------------|------------------------------|  
 |`True`|`True`|`True`|  
 |`True`|`False`|`True`|  
@@ -52,11 +52,11 @@ result = expression1 Or expression2
 |`False`|`False`|`False`|  
   
 > [!NOTE]
-> В сравнении `Boolean` оператор `Or` всегда вычисляет оба выражения, которые могут включать вызовы процедур. [Оператор OrElse](../../../visual-basic/language-reference/operators/orelse-operator.md) выполняет *сокращенное вычисление*, что означает, что если `expression1` имеет `True`, то `expression2` не вычисляется.  
+> In a `Boolean` comparison, the `Or` operator always evaluates both expressions, which could include making procedure calls. The [OrElse Operator](../../../visual-basic/language-reference/operators/orelse-operator.md) performs *short-circuiting*, which means that if `expression1` is `True`, then `expression2` is not evaluated.  
   
- Для побитовых операций оператор `Or` выполняет побитовое сравнение одинаково позиционированных битов в двух числовых выражениях и устанавливает соответствующий бит в `result` в соответствии со следующей таблицей.  
+ For bitwise operations, the `Or` operator performs a bitwise comparison of identically positioned bits in two numeric expressions and sets the corresponding bit in `result` according to the following table.  
   
-|Если бит в `expression1` равен|И бит в `expression2` —|Бит в `result` является|  
+|If bit in `expression1` is|And bit in `expression2` is|The bit in `result` is|  
 |--------------------------------|---------------------------------|----------------------------|  
 |1|1|1|  
 |1|0|1|  
@@ -64,34 +64,34 @@ result = expression1 Or expression2
 |0|0|0|  
   
 > [!NOTE]
-> Так как логические и побитовые операторы имеют более низкий приоритет, чем другие арифметические и реляционные операторы, все битовые операции должны быть заключены в круглые скобки, чтобы обеспечить точное выполнение.  
+> Since the logical and bitwise operators have a lower precedence than other arithmetic and relational operators, any bitwise operations should be enclosed in parentheses to ensure accurate execution.  
   
 ## <a name="data-types"></a>Типы данных  
- Если операнды состоят из одного выражения `Boolean` и одного числового выражения, Visual Basic преобразует выражение `Boolean` в числовое значение (– 1 для `True` и 0 для `False`) и выполняет побитовую операцию.  
+ If the operands consist of one `Boolean` expression and one numeric expression, Visual Basic converts the `Boolean` expression to a numeric value (–1 for `True` and 0 for `False`) and performs a bitwise operation.  
   
- Для сравнения `Boolean` тип данных результата `Boolean`. Для побитового сравнения тип данных результата является числовым типом, подходящим для типов данных `expression1` и `expression2`. См. таблицу "реляционные и побитовые сравнения" в разделе [типы данных результатов операторов](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md).  
+ For a `Boolean` comparison, the data type of the result is `Boolean`. For a bitwise comparison, the result data type is a numeric type appropriate for the data types of `expression1` and `expression2`. See the "Relational and Bitwise Comparisons" table in [Data Types of Operator Results](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md).  
   
 ## <a name="overloading"></a>Перегрузка  
- Оператор `Or` можно *перегрузить*, что означает, что класс или структура может переопределить свое поведение, если операнд имеет тип этого класса или структуры. Если код использует этот оператор для такого класса или структуры, убедитесь, что вы понимаете его переопределенное поведение. Для получения дополнительной информации см. [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+ The `Or` operator can be *overloaded*, which means that a class or structure can redefine its behavior when an operand has the type of that class or structure. If your code uses this operator on such a class or structure, be sure you understand its redefined behavior. Для получения дополнительной информации см. [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Пример  
- В следующем примере оператор `Or` используется для выполнения включающего логического сложения двух выражений. Результатом является значение `Boolean`, которое показывает, является ли одно из двух выражений `True`.  
+ The following example uses the `Or` operator to perform an inclusive logical disjunction on two expressions. The result is a `Boolean` value that represents whether either of the two expressions is `True`.  
   
  [!code-vb[VbVbalrOperators#35](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#35)]  
   
- В предыдущем примере создаются результаты `True`, `True` и `False` соответственно.  
+ The preceding example produces results of `True`, `True`, and `False`, respectively.  
   
 ## <a name="example"></a>Пример  
- В следующем примере оператор `Or` используется для выполнения инклюзивного логического сложения по отдельным битам двух числовых выражений. Бит в результирующем шаблоне задается, если один из соответствующих битов операндов имеет значение 1.  
+ The following example uses the `Or` operator to perform inclusive logical disjunction on the individual bits of two numeric expressions. The bit in the result pattern is set if either of the corresponding bits in the operands is set to 1.  
   
  [!code-vb[VbVbalrOperators#36](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#36)]  
   
- В предыдущем примере выдается результат 10, 14 и 14 соответственно.  
+ The preceding example produces results of 10, 14, and 14, respectively.  
   
 ## <a name="see-also"></a>См. также
 
-- [Логические и битовые операторы (Visual Basic)](../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)
+- [Logical/Bitwise Operators (Visual Basic)](../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)
 - [Порядок применения операторов в Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)
 - [Список операторов, сгруппированных по функциональному назначению](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
 - [Оператор OrElse](../../../visual-basic/language-reference/operators/orelse-operator.md)
-- [Логические и побитовые операторы в Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)
+- [Logical and Bitwise Operators in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)

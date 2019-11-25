@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Duplex Service Contract
 ms.assetid: bc5de6b6-1a63-42a3-919a-67d21bae24e0
-ms.openlocfilehash: b00f5dd31ba572a2c8fb5301cc7ae9ddda77f0e5
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 9b5d839bb4a678f105e128671fbda729e2c730b7
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045035"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141804"
 ---
 # <a name="duplex"></a>Дуплекс
 
@@ -171,7 +171,7 @@ client.Close();
 3. Чтобы запустить пример в конфигурации с одним или несколькими компьютерами, следуйте инструкциям в разделе [выполнение примеров Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).
 
     > [!IMPORTANT]
-    > При запуске клиента в конфигурации с несколькими компьютерами не забудьте заменить "localhost" как в `address` атрибуте [ \<конечной точки > \<элемента Client >](../../configure-apps/file-schema/wcf/endpoint-of-client.md) , так и с `clientBaseAddress` помощью атрибута элемента [ Привязка\<>](../../../../docs/framework/misc/binding.md) [ элемента>WSDualHttpBindingсименемсоответствующего\<](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md) компьютера, как показано ниже:
+    > При запуске клиента в конфигурации с несколькими компьютерами не забудьте заменить "localhost" в атрибуте `address` [\<конечной точки > \<клиентского >](../../configure-apps/file-schema/wcf/endpoint-of-client.md) и атрибут `clientBaseAddress` элемента\<[Binding](../../configure-apps/file-schema/wcf/bindings.md) > [элемента\<](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md) , указав имя соответствующего компьютера, как показано ниже:
 
     ```xml
     <client>
@@ -191,6 +191,6 @@ client.Close();
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Если этот каталог не существует, перейдите к [примерам Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] и примеры. Этот образец расположен в следующем каталоге.
+> Если этот каталог не существует, перейдите к [примерам Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Samples. Этот образец расположен в следующем каталоге.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Service\Duplex`

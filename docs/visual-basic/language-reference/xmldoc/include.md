@@ -1,19 +1,19 @@
 ---
-title: <include> (Visual Basic)
+title: <include>
 ms.date: 07/20/2015
 helpviewer_keywords:
 - include XML tag
 - <include> XML tag
 ms.assetid: ba8e9173-82cd-460b-8938-a075a2dfb36d
-ms.openlocfilehash: d9c1c1a50f0e3530c842a6058e288b8d2be15f95
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2f2bebfd06d4614f05cb66834cc5bef40524ce3b
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61940911"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348459"
 ---
-# <a name="include-visual-basic"></a>\<включить > (Visual Basic)
-Ссылается на другой файл, который описывает типы и члены в исходном коде.  
+# <a name="include-visual-basic"></a>\<include> (Visual Basic)
+Refers to another file that describes the types and members in your source code.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -23,28 +23,28 @@ ms.locfileid: "61940911"
   
 ## <a name="parameters"></a>Параметры  
  `filename`  
- Обязательный. Имя файла, содержащего документацию. Имя файла может быть дополнено с указанием пути. Заключите `filename` в двойные кавычки (» «).  
+ Обязательный. Имя файла, содержащего документацию. Имя файла может быть дополнено с указанием пути. Enclose `filename` in double quotation marks (" ").  
   
  `tagpath`  
- Обязательный. Путь тегов в `filename`, который ведет к тегу `name`. Заключите путь в двойные кавычки (» «).  
+ Обязательный. Путь тегов в `filename`, который ведет к тегу `name`. Enclose the path in double quotation marks (" ").  
   
  `name`  
- Обязательный. Спецификатор имени в теге, который предшествует комментариям. `Name` будет иметь `id`.  
+ Обязательный. The name specifier in the tag that precedes the comments. `Name` will have an `id`.  
   
  `id`  
- Обязательный. Идентификатор тега, который предшествует комментариям. Идентификатор заключается в одинарные кавычки ("").  
+ Обязательный. Идентификатор тега, который предшествует комментариям. Enclose the ID in single quotation marks (' ').  
   
-## <a name="remarks"></a>Примечания  
- Используйте `<include>` тег для ссылки на комментарии в другом файле, описывающем типы и члены в исходном коде. Этот способ является альтернативой размещению комментариев документации непосредственно в файле исходного кода.  
+## <a name="remarks"></a>Заметки  
+ Use the `<include>` tag to refer to comments in another file that describe the types and members in your source code. Этот способ является альтернативой размещению комментариев документации непосредственно в файле исходного кода.  
   
- `<include>` Тег использует в соответствии с рекомендацией W3C XML Path Language (XPath) версии 1.0. Дополнительные сведения о способах настройки вашего `<include>` использовать, см. в разделе <https://www.w3.org/TR/xpath>.  
+ The `<include>` tag uses the W3C XML Path Language (XPath) Version 1.0 Recommendation. For more information about ways to customize your `<include>` use, see <https://www.w3.org/TR/xpath>.  
   
 ## <a name="example"></a>Пример  
- В этом примере используется `<include>` тег для импорта из файла с именем члена комментарии к документации `commentFile.xml`.  
+ This example uses the `<include>` tag to import member documentation comments from a file called `commentFile.xml`.  
   
  [!code-vb[VbVbcnXmlDocComments#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#4)]  
   
- Формат `commentFile.xml` выглядит следующим образом.  
+ The format of the `commentFile.xml` is as follows.  
   
 ```xml  
 <Docs>  

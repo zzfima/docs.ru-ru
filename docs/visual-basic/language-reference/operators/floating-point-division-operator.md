@@ -1,5 +1,5 @@
 ---
-title: Оператор / (Visual Basic)
+title: Оператор /
 ms.date: 07/20/2015
 f1_keywords:
 - vb./
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - / operator [Visual Basic]
 - math operators [Visual Basic]
 ms.assetid: 335e97f2-c434-439e-9064-76973a051101
-ms.openlocfilehash: 238c062b2dd0744ba96cf9ba8591c0ef39f81bb3
-ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
+ms.openlocfilehash: 537d8b0c703b59743f1a7c531448118058707645
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/28/2019
-ms.locfileid: "71592193"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74331051"
 ---
 # <a name="-operator-visual-basic"></a>Оператор / (Visual Basic)
-Делит два числа и возвращает результат с плавающей точкой.  
+Divides two numbers and returns a floating-point result.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,52 +40,52 @@ expression1 / expression2
  Обязательный. Произвольное числовое выражение.  
   
 ## <a name="supported-types"></a>Поддерживаемые типы  
- Все числовые типы, включая неподписанные и типы с плавающей запятой, а также `Decimal`.  
+ All numeric types, including the unsigned and floating-point types and `Decimal`.  
   
 ## <a name="result"></a>Результат  
- Результатом является полное частное от `expression1`, разделенное на `expression2`, включая остаток.  
+ The result is the full quotient of `expression1` divided by `expression2`, including any remainder.  
   
- [Оператор \ (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md) возвращает целочисленное частное, которое удаляет остаток.  
+ The [\ Operator (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md) returns the integer quotient, which drops the remainder.  
   
-## <a name="remarks"></a>Примечания  
- Тип данных результата зависит от типов операндов. В следующей таблице показано, как определяется тип данных результата.  
+## <a name="remarks"></a>Заметки  
+ The data type of the result depends on the types of the operands. The following table shows how the data type of the result is determined.  
   
-|Типы данных операндов|Тип данных результата|  
+|Operand data types|Result data type|  
 |------------------------|----------------------|  
-|Оба выражения являются целочисленными типами данных ([SByte](../../../visual-basic/language-reference/data-types/sbyte-data-type.md), [Byte](../../../visual-basic/language-reference/data-types/byte-data-type.md), [Short](../../../visual-basic/language-reference/data-types/short-data-type.md), [UShort](../../../visual-basic/language-reference/data-types/ushort-data-type.md), [Integer](../../../visual-basic/language-reference/data-types/integer-data-type.md), [UInteger](../../../visual-basic/language-reference/data-types/uinteger-data-type.md), [Long](../../../visual-basic/language-reference/data-types/long-data-type.md), [ulong](../../../visual-basic/language-reference/data-types/ulong-data-type.md)).|`Double`|  
-|Одно выражение имеет [один](../../../visual-basic/language-reference/data-types/single-data-type.md) тип данных, а другой — не [Double](../../../visual-basic/language-reference/data-types/double-data-type.md) .|`Single`|  
-|Одно выражение имеет тип данных [Decimal](../../../visual-basic/language-reference/data-types/decimal-data-type.md) , а второй не является [одиночным](../../../visual-basic/language-reference/data-types/single-data-type.md) или [double](../../../visual-basic/language-reference/data-types/double-data-type.md) .|`Decimal`|  
-|Любое выражение является типом данных [Double](../../../visual-basic/language-reference/data-types/double-data-type.md)|`Double`|  
+|Both expressions are integral data types ([SByte](../../../visual-basic/language-reference/data-types/sbyte-data-type.md), [Byte](../../../visual-basic/language-reference/data-types/byte-data-type.md), [Short](../../../visual-basic/language-reference/data-types/short-data-type.md), [UShort](../../../visual-basic/language-reference/data-types/ushort-data-type.md), [Integer](../../../visual-basic/language-reference/data-types/integer-data-type.md), [UInteger](../../../visual-basic/language-reference/data-types/uinteger-data-type.md), [Long](../../../visual-basic/language-reference/data-types/long-data-type.md), [ULong](../../../visual-basic/language-reference/data-types/ulong-data-type.md))|`Double`|  
+|One expression is a [Single](../../../visual-basic/language-reference/data-types/single-data-type.md) data type and the other is not a [Double](../../../visual-basic/language-reference/data-types/double-data-type.md)|`Single`|  
+|One expression is a [Decimal](../../../visual-basic/language-reference/data-types/decimal-data-type.md) data type and the other is not a [Single](../../../visual-basic/language-reference/data-types/single-data-type.md) or a [Double](../../../visual-basic/language-reference/data-types/double-data-type.md)|`Decimal`|  
+|Either expression is a [Double](../../../visual-basic/language-reference/data-types/double-data-type.md) data type|`Double`|  
   
- Перед выполнением деления все целочисленные числовые выражения расширяются до `Double`. Если результат присваивается целочисленному типу данных, Visual Basic пытается преобразовать результат из `Double` в этот тип. Это может вызвать исключение, если результат не умещается в этом типе. В частности, см. раздел "попыток деления на ноль" на этой странице справки.  
+ Before division is performed, any integral numeric expressions are widened to `Double`. If you assign the result to an integral data type, Visual Basic attempts to convert the result from `Double` to that type. This can throw an exception if the result does not fit in that type. In particular, see "Attempted Division by Zero" on this Help page.  
   
- Если `expression1` или`expression2` имеет значение [Nothing](../../../visual-basic/language-reference/nothing.md), оно считается нулевым.  
+ If `expression1` or `expression2` evaluates to [Nothing](../../../visual-basic/language-reference/nothing.md), it is treated as zero.  
   
-## <a name="attempted-division-by-zero"></a>Попыток деления на ноль  
- Если `expression2` равняется нулю, оператор `/` ведет себя по-разному для разных типов данных операндов. В следующей таблице показаны возможные варианты поведения.  
+## <a name="attempted-division-by-zero"></a>Attempted Division by Zero  
+ If `expression2` evaluates to zero, the `/` operator behaves differently for different operand data types. The following table shows the possible behaviors.  
   
-|Типы данных операндов|Поведение, если `expression2` равно нулю|  
+|Operand data types|Behavior if `expression2` is zero|  
 |------------------------|---------------------------------------|  
-|С плавающей запятой (`Single` или `Double`)|Возвращает бесконечность (<xref:System.Double.PositiveInfinity> или <xref:System.Double.NegativeInfinity>) или <xref:System.Double.NaN> (не число), если `expression1` также равно нулю|  
-|`Decimal`|Вызывает <xref:System.DivideByZeroException>|  
-|Интеграл (со знаком или без знака)|Попытка преобразования обратно в целочисленный тип вызывает <xref:System.OverflowException>, так как целочисленные типы не могут принимать <xref:System.Double.PositiveInfinity>, <xref:System.Double.NegativeInfinity> или <xref:System.Double.NaN>|  
+|Floating-point (`Single` or `Double`)|Returns infinity (<xref:System.Double.PositiveInfinity> or <xref:System.Double.NegativeInfinity>), or <xref:System.Double.NaN> (not a number) if `expression1` is also zero|  
+|`Decimal`|Throws <xref:System.DivideByZeroException>|  
+|Integral (signed or unsigned)|Attempted conversion back to integral type throws <xref:System.OverflowException> because integral types cannot accept <xref:System.Double.PositiveInfinity>, <xref:System.Double.NegativeInfinity>, or <xref:System.Double.NaN>|  
   
 > [!NOTE]
-> Оператор `/` можно *перегрузить*, что означает, что класс или структура может переопределить свое поведение, если операнд имеет тип этого класса или структуры. Если код использует этот оператор для такого класса или структуры, убедитесь, что вы понимаете его переопределенное поведение. Для получения дополнительной информации см. [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+> The `/` operator can be *overloaded*, which means that a class or structure can redefine its behavior when an operand has the type of that class or structure. If your code uses this operator on such a class or structure, be sure you understand its redefined behavior. Для получения дополнительной информации см. [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Пример  
- В этом примере оператор `/` используется для выполнения деления с плавающей запятой. Результатом является частное двух операндов.  
+ This example uses the `/` operator to perform floating-point division. The result is the quotient of the two operands.  
   
  [!code-vb[VbVbalrOperators#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#16)]  
   
- Выражения в предыдущем примере возвращают значения 2,5 и 3,333333. Обратите внимание, что результат всегда имеет тип с плавающей запятой (`Double`), хотя оба операнда являются целочисленными константами.  
+ The expressions in the preceding example return values of 2.5 and 3.333333. Note that the result is always floating-point (`Double`), even though both operands are integer constants.  
   
 ## <a name="see-also"></a>См. также
 
-- [Оператор/= (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)
-- [Оператор \ (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md)
+- [/= Operator (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)
+- [\ Operator (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md)
 - [Типы данных результатов оператора](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md)
 - [Арифметические операторы](../../../visual-basic/language-reference/operators/arithmetic-operators.md)
 - [Порядок применения операторов в Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)
 - [Список операторов, сгруппированных по функциональному назначению](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
-- [Арифметические операторы в Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+- [Arithmetic Operators in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)

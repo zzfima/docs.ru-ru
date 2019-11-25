@@ -8,12 +8,12 @@ helpviewer_keywords:
 - security credentials, adding to SOAP messages
 - WCF, security
 ms.assetid: 10f51bee-5f92-4c1a-9126-fa5418535d8f
-ms.openlocfilehash: d62011728b6b03023ef4039480cea8dfa0ec8f02
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: df18f89ee18bfa33ecc0aced617d168c805e3515
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72321288"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74138574"
 ---
 # <a name="how-to-specify-the-client-credential-type"></a>Практическое руководство. Указание типа учетных данных клиента
 После установки режима безопасности (на уровне транспорта или сообщений) можно установить тип учетных данных клиента. Это свойство определяет тип учетных данных, которые клиент должен предоставить службе для проверки подлинности. Дополнительные сведения о настройке режима безопасности (необходимого шага перед настройкой типа учетных данных клиента) см. [в разделе как задать режим безопасности](how-to-set-the-security-mode.md).  
@@ -31,13 +31,13 @@ ms.locfileid: "72321288"
   
 ### <a name="to-set-the-client-credential-type-in-configuration"></a>Установка типа учетных данных клиента в файле конфигурации  
   
-1. Добавьте элемент [> \<system. ServiceModel](../configure-apps/file-schema/wcf/system-servicemodel.md) в файл конфигурации.  
+1. Добавьте элемент [\<System. serviceModel >](../configure-apps/file-schema/wcf/system-servicemodel.md) в файл конфигурации.  
   
-2. Добавьте в качестве дочернего элемента элемент [\<bindings >](../configure-apps/file-schema/wcf/bindings.md) .  
+2. Добавьте в качестве дочернего элемента [\<привязки >](../configure-apps/file-schema/wcf/bindings.md) элемента.  
   
-3. Добавьте соответствующую привязку. В этом примере используется элемент [> \<wsHttpBinding](../configure-apps/file-schema/wcf/wshttpbinding.md) .  
+3. Добавьте соответствующую привязку. В этом примере используется элемент [\<WSHttpBinding](../configure-apps/file-schema/wcf/wshttpbinding.md) .  
   
-4. Добавьте элемент [\<binding >](../misc/binding.md) и задайте для атрибута `name` соответствующее значение. В этом примере используется имя "SecureBinding".  
+4. Добавьте элемент [> binding\<](../configure-apps/file-schema/wcf/bindings.md) и задайте для атрибута `name` соответствующее значение. В этом примере используется имя "SecureBinding".  
   
 5. Добавьте привязку `<security>`. Присвойте атрибуту `mode` соответствующее значение. В данном примере используется значение `"Message"`.  
   

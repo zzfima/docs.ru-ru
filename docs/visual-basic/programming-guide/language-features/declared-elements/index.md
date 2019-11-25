@@ -1,13 +1,13 @@
 ---
-title: Объявленные элементы в Visual Basic
+title: Объявленные элементы
 ms.date: 07/20/2015
 ms.assetid: 0d1d1bb5-ac0b-485f-8922-cdcec5574c79
-ms.openlocfilehash: 3430517aea32eeb79aeb586d3a1eb0df1524998b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a61ba32e2235bfb6a2112a28f1de7479ca82556c
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64639176"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345333"
 ---
 # <a name="declared-elements-in-visual-basic"></a>Объявленные элементы в Visual Basic
 *Объявленный элемент* — это элемент в программировании, который задается в операторе объявления. Объявленные элементы включают переменные, константы, перечисления, классы, структуры, модули, интерфейсы, процедуры, параметры процедур, возвращаемые значения функций, ссылки на внешние процедуры, операторы, свойства, события и делегаты.  
@@ -42,7 +42,7 @@ ms.locfileid: "64639176"
   
 - [Оператор Delegate](../../../../visual-basic/language-reference/statements/delegate-statement.md)  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>Содержание  
  [Имена объявленных элементов](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)  
  Именование элементов и использование строчных и прописных букв.  
   

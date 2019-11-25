@@ -1,27 +1,27 @@
 ---
-title: Практическое руководство. Вызов метода делегата (Visual Basic)
+title: Практическое руководство. Вызов метода делегата
 ms.date: 07/20/2015
 ms.assetid: b56866ae-abf9-4a5a-a855-486359455e9c
-ms.openlocfilehash: c2bdb65c9d060e854db3319e4aa5b2e93b9681af
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 520bacfbe6103490e0459cd5af149c1d55a8fce4
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629590"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345255"
 ---
 # <a name="how-to-invoke-a-delegate-method-visual-basic"></a>Практическое руководство. Вызов метода делегата (Visual Basic)
 
-В этом примере показано, как связать метод с делегатом, а затем вызвать этот метод через делегат.
+This example shows how to associate a method with a delegate and then invoke that method through the delegate.
 
-### <a name="create-the-delegate-and-matching-procedures"></a>Создание делегата и процедур сопоставления
+### <a name="create-the-delegate-and-matching-procedures"></a>Create the delegate and matching procedures
 
-1. Создайте делегат с именем `MySubDelegate`.
+1. Create a delegate named `MySubDelegate`.
 
     ```vb
     Delegate Sub MySubDelegate(ByVal x As Integer)
     ```
 
-2. Объявите класс, содержащий метод с той же сигнатурой, что и у делегата.
+2. Declare a class that contains a method with the same signature as the delegate.
 
     ```vb
     Class class1
@@ -31,7 +31,7 @@ ms.locfileid: "68629590"
     End Class
     ```
 
-3. Определите метод, который создает экземпляр делегата и вызывает метод, связанный с делегатом, вызвав встроенный `Invoke` метод.
+3. Define a method that creates an instance of the delegate and invokes the method associated with the delegate by calling the built-in `Invoke` method.
 
     ```vb
     Protected Sub DelegateTest()

@@ -1,15 +1,15 @@
 ---
-title: Сортировка данных (Visual Basic)
+title: Сортировка данных
 ms.date: 07/20/2015
 ms.assetid: 6f81065c-0c89-4bf3-a6d8-442273f8810e
-ms.openlocfilehash: f8b1734597efa3134c95c9764bad7f79fd3cf1e4
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: f1d4d8afb9b6e176a7ac048ba3270ecafdce24c9
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524078"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350591"
 ---
-# <a name="sorting-data-visual-basic"></a>Сортировка данных (Visual Basic)
+# <a name="sorting-data-visual-basic"></a>Sorting Data (Visual Basic)
 
 Операция сортировки упорядочивает элементы последовательности на основе одного или нескольких атрибутов. Первый критерий сортировки выполняет первичную сортировку элементов. Указав второй критерий поиска, можно сортировать элементы внутри каждой группы первичной сортировки.
 
@@ -21,7 +21,7 @@ ms.locfileid: "72524078"
 
 ## <a name="methods"></a>Методы
 
-|Имя метода|Описание|Синтаксис выражения запроса Visual Basic|Дополнительные сведения|
+|Имя метода|Описание|Visual Basic Query Expression Syntax|Дополнительные сведения|
 |-----------------|-----------------|------------------------------------------|----------------------|
 |OrderBy|Сортировка значений в возрастающем порядке.|`Order By`|<xref:System.Linq.Enumerable.OrderBy%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.OrderBy%2A?displayProperty=nameWithType>|
 |OrderByDescending|Сортировка значений в убывающем порядке.|`Order By … Descending`|<xref:System.Linq.Enumerable.OrderByDescending%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.OrderByDescending%2A?displayProperty=nameWithType>|
@@ -153,4 +153,4 @@ MsgBox(sb.ToString())
 - [Общие сведения о стандартных операторах запроса (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
 - [Предложение Order By](../../../../visual-basic/language-reference/queries/order-by-clause.md)
 - [How to: Sort Query Results](../../../../visual-basic/programming-guide/language-features/linq/how-to-sort-query-results-by-using-linq.md) (Практическое руководство. Сортировка результатов запроса)
-- [Как сортировать или фильтровать текстовые данные по любому слову или полю (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)
+- [How to: Sort or Filter Text Data by Any Word or Field (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)

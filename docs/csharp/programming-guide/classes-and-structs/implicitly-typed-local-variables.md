@@ -6,12 +6,12 @@ helpviewer_keywords:
 - implicitly-typed local variables [C#]
 - var [C#]
 ms.assetid: b9218fb2-ef5d-4814-8a8e-2bc29b0bbc9b
-ms.openlocfilehash: 7010c38797ab64e5106c96c06cd814c143ca9c24
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: dab708bfbc33458bc2664c0d04757f0badcc2575
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73419379"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141601"
 ---
 # <a name="implicitly-typed-local-variables-c-programming-guide"></a>Неявно типизированные локальные переменные (руководство по программированию на C#)
 
@@ -30,13 +30,13 @@ ms.locfileid: "73419379"
 - В операторе инициализации [for](../../language-reference/keywords/for.md).
 
     ```csharp
-    for(var x = 1; x < 10; x++)
+    for (var x = 1; x < 10; x++)
     ```
 
 - В операторе инициализации [foreach](../../language-reference/keywords/foreach-in.md).
 
     ```csharp
-    foreach(var item in list){...}
+    foreach (var item in list) {...}
     ```
 
 - В операторе [using](../../language-reference/keywords/using-statement.md).
@@ -45,7 +45,7 @@ ms.locfileid: "73419379"
     using (var file = new StreamReader("C:\\myfile.txt")) {...}
     ```
 
-Дополнительные сведения см. в разделе [Практическое руководство. Руководство по программированию на C#. Использование явно введенных локальных переменных и массивов в выражении запроса](how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md).
+Дополнительные сведения см. в разделе [Практическое руководство. Использование неявно типизированных локальных переменных и массивов в выражении запроса](how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md).
 
 ## <a name="var-and-anonymous-types"></a>Переменная var и анонимные типы
 
@@ -63,7 +63,7 @@ ms.locfileid: "73419379"
 
 - `var` нельзя применять к полям в области видимости класса.
 
-- Переменные, объявленные с помощью `var`, нельзя использовать в выражении инициализации. Другими словами, это выражение является допустимым выражением `: int i = (i = 20);`, но вызывает ошибку времени компиляции: `var i = (i = 20);`
+- Переменные, объявленные с помощью `var`, нельзя использовать в выражении инициализации. Другими словами, это выражение является допустимым выражением: `int i = (i = 20);`, но вызывает ошибку времени компиляции: `var i = (i = 20);`
 
 - Инициализировать сразу несколько неявно типизированных переменных в одном и том же операторе нельзя.
 
@@ -95,7 +95,7 @@ private var bookTitles = new List<string>();
 
 - [Справочник по C#](../../language-reference/index.md)
 - [Неявно типизированные массивы](../arrays/implicitly-typed-arrays.md)
-- [Практическое руководство. Использование явно введенных локальных переменных и массивов в выражении запроса](how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md)
+- [Практическое руководство. Использование неявно типизированных локальных переменных и массивов в выражении запроса](how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md)
 - [Анонимные типы](anonymous-types.md)
 - [Инициализаторы объектов и коллекций](object-and-collection-initializers.md)
 - [var](../../language-reference/keywords/var.md)

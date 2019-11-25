@@ -1,5 +1,5 @@
 ---
-title: Структуры и классы (Visual Basic)
+title: Структуры и классы
 ms.date: 07/20/2015
 helpviewer_keywords:
 - classes [Visual Basic], vs. structures
@@ -9,88 +9,88 @@ helpviewer_keywords:
 - structures [Visual Basic], structure variables
 - structure variables [Visual Basic]
 ms.assetid: a221e74a-ffcf-4bdc-a0f6-a088a9bf26cc
-ms.openlocfilehash: b947109f99d94b0ecb1d798835c311f2374e96fc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3353935a74bb77fa4a630e706aa425063c7a610a
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64601034"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346328"
 ---
 # <a name="structures-and-classes-visual-basic"></a>Структуры и классы (Visual Basic)
-Visual Basic унифицирован синтаксис структур и классов, в результате чего обе эти сущности поддерживают большинство тех же функций. Тем не менее существуют важные различия между структуры и классы.  
+Visual Basic unifies the syntax for structures and classes, with the result that both entities support most of the same features. However, there are also important differences between structures and classes.  
   
- Классы имеют преимущество ссылочных типов — передачи ссылки является более эффективным, чем переменные структур со всеми данными. С другой стороны структуры не требуют выделения памяти в куче глобального.  
+ Classes have the advantage of being reference types — passing a reference is more efficient than passing a structure variable with all its data. On the other hand, structures do not require allocation of memory on the global heap.  
   
- Так как не может наследовать от структуры, структуры следует использовать только для объектов, которые не обязательно должны быть расширены. Используйте структуры, если объект, который вы хотите создать имеет размер мелких и принимать во внимание характеристики производительности классов и структур.  
+ Because you cannot inherit from a structure, structures should be used only for objects that do not need to be extended. Use structures when the object you wish to create has a small instance size, and take into account the performance characteristics of classes versus structures.  
   
-## <a name="similarities"></a>Сходства  
- Структуры и классы схожи в следующих аспектах:  
+## <a name="similarities"></a>Similarities  
+ Structures and classes are similar in the following respects:  
   
-- Оба являются *контейнера* типов, это означает, что они содержат другие типы в качестве членов.  
+- Both are *container* types, meaning that they contain other types as members.  
   
-- Обе имеют члены, которые могут включать конструкторы, методы, свойства, поля, константы, перечисления, события и обработчики событий. Тем не менее, не следует путать эти элементы с объявленным *элементы* структуры.  
+- Both have members, which can include constructors, methods, properties, fields, constants, enumerations, events, and event handlers. However, do not confuse these members with the declared *elements* of a structure.  
   
-- Члены могут иметь индивидуальные уровни доступа. Например, можно объявить один член `Public` и другой `Private`.  
+- Members of both can have individualized access levels. For example, one member can be declared `Public` and another `Private`.  
   
-- Они могут реализовывать интерфейсы.  
+- Both can implement interfaces.  
   
-- Они имеют общие конструкторы, с параметрами или без.  
+- Both can have shared constructors, with or without parameters.  
   
-- Они могут предоставлять *свойство по умолчанию*, если это свойство принимает хотя бы один параметр.  
+- Both can expose a *default property*, provided that property takes at least one parameter.  
   
-- Они могут объявлять и создавать события, и могут объявлять делегаты.  
+- Both can declare and raise events, and both can declare delegates.  
   
-## <a name="differences"></a>Различия  
- Структуры и классы отличаются следующими особенностями:  
+## <a name="differences"></a>Differences  
+ Structures and classes differ in the following particulars:  
   
-- Структуры являются *типы значений*; классы являются *ссылочные типы*. Переменная типа структуры содержит структуры данных, а чем содержащий ссылку на данные в виде типа класса.  
+- Structures are *value types*; classes are *reference types*. A variable of a structure type contains the structure's data, rather than containing a reference to the data as a class type does.  
   
-- Структуры используют расположение стека; классы используют выделение кучи.  
+- Structures use stack allocation; classes use heap allocation.  
   
-- Все элементы структуры являются `Public` по умолчанию; класса переменные и константы — это `Private` по умолчанию, хотя другие члены класса являются `Public` по умолчанию. Это поведение для членов класса обеспечивает совместимость с системой Visual Basic 6.0, значений по умолчанию.  
+- All structure elements are `Public` by default; class variables and constants are `Private` by default, while other class members are `Public` by default. This behavior for class members provides compatibility with the Visual Basic 6.0 system of defaults.  
   
-- Структуры должны иметь по крайней мере один не совместно переменную или без общего доступа элемента события; класс может быть полностью пустым.  
+- A structure must have at least one nonshared variable or nonshared, noncustom event element; a class can be completely empty.  
   
-- Элементы структуры не могут объявляться как `Protected`; члены класса могут.  
+- Structure elements cannot be declared as `Protected`; class members can.  
   
-- Процедура структуры может обрабатывать события только в том случае, если это [Shared](../../../../visual-basic/language-reference/modifiers/shared.md) `Sub` процедуры и только с помощью параметра [оператор AddHandler](../../../../visual-basic/language-reference/statements/addhandler-statement.md); любая процедура класса может обработать событие, используя либо [ Обрабатывает](../../../../visual-basic/language-reference/statements/handles-clause.md) ключевое слово или `AddHandler` инструкции. Дополнительные сведения см. в статье [Events (Visual Basic)](../../../../visual-basic/programming-guide/language-features/events/index.md) (События в Visual Basic).  
+- A structure procedure can handle events only if it is a [Shared](../../../../visual-basic/language-reference/modifiers/shared.md)`Sub` procedure, and only by means of the [AddHandler Statement](../../../../visual-basic/language-reference/statements/addhandler-statement.md); any class procedure can handle events, using either the [Handles](../../../../visual-basic/language-reference/statements/handles-clause.md) keyword or the `AddHandler` statement. Дополнительные сведения см. в статье [Events (Visual Basic)](../../../../visual-basic/programming-guide/language-features/events/index.md) (События в Visual Basic).  
   
-- Структура объявления переменных нельзя указать инициализаторы или исходные размеры массивов; возможность объявления переменных класса.  
+- Structure variable declarations cannot specify initializers or initial sizes for arrays; class variable declarations can.  
   
-- Структуры неявно наследуются от <xref:System.ValueType?displayProperty=nameWithType> класса и не может наследовать от любого другого типа; классы могут наследовать от любого класса или классов, отличных от <xref:System.ValueType?displayProperty=nameWithType>.  
+- Structures implicitly inherit from the <xref:System.ValueType?displayProperty=nameWithType> class and cannot inherit from any other type; classes can inherit from any class or classes other than <xref:System.ValueType?displayProperty=nameWithType>.  
   
-- Структуры не наследуются; классы являются.  
+- Structures are not inheritable; classes are.  
   
-- Структуры никогда не завершается, поэтому общеязыковой среды выполнения (CLR) никогда не вызывает <xref:System.Object.Finalize%2A> метод для структур; классы завершаются сборщиком мусора (GC), который вызывает <xref:System.Object.Finalize%2A> для класса, когда обнаруживает, что нет активных ссылок остальные.  
+- Structures are never terminated, so the common language runtime (CLR) never calls the <xref:System.Object.Finalize%2A> method on any structure; classes are terminated by the garbage collector (GC), which calls <xref:System.Object.Finalize%2A> on a class when it detects there are no active references remaining.  
   
-- Структуры не требуется конструктор. Выполняет класс.  
+- A structure does not require a constructor; a class does.  
   
-- Структуры могут иметь конструкторы экземпляров только в том случае, если они принимают параметры; классы могут иметь их с параметрами или без.  
+- Structures can have nonshared constructors only if they take parameters; classes can have them with or without parameters.  
   
- Каждая структура имеет неявный открытый конструктор без параметров. Этот конструктор инициализирует элементы структуры данных, к значениям по умолчанию. Не удалось переопределить это поведение.  
+ Every structure has an implicit public constructor without parameters. This constructor initializes all the structure's data elements to their default values. You cannot redefine this behavior.  
   
-## <a name="instances-and-variables"></a>Экземпляры и переменные  
- Поскольку структуры являются типами значений, каждая переменная структуры постоянно привязан к отдельному экземпляру структуры. Классы являются ссылочными типами, и переменная объекта может ссылаться на различные экземпляры класса в разное время. Это различие влияет на использование структуры и классы из следующих способов:  
+## <a name="instances-and-variables"></a>Instances and Variables  
+ Because structures are value types, each structure variable is permanently bound to an individual structure instance. But classes are reference types, and an object variable can refer to various class instances at different times. This distinction affects your usage of structures and classes in the following ways:  
   
-- **Инициализация.** Переменная структуры неявно включает в себя инициализацию элементов с помощью структуры конструктор без параметров. Таким образом `Dim s As struct1` эквивалентен `Dim s As struct1 = New struct1()`.  
+- **Initialization.** A structure variable implicitly includes an initialization of the elements using the structure's parameterless constructor. Therefore, `Dim s As struct1` is equivalent to `Dim s As struct1 = New struct1()`.  
   
-- **Назначение переменных.** Если присвоить одну переменную структуры в другую или экземпляр структуры передается в аргумент процедуры, текущие значения всех элементов переменной копируются в новую структуру. Когда переменная объекта присваивается другой или передается в процедуру, копируется только указатель ссылки.  
+- **Assigning Variables.** When you assign one structure variable to another, or pass a structure instance to a procedure argument, the current values of all the variable elements are copied to the new structure. When you assign one object variable to another, or pass an object variable to a procedure, only the reference pointer is copied.  
   
-- **Назначение Nothing.** Можно присвоить значение [ничего не](../../../../visual-basic/language-reference/nothing.md) к структуре переменной, но экземпляр продолжает быть связанным с переменной. Можно по-прежнему вызывать его методы и доступ к элементам данных, несмотря на то, что назначением повторно инициализируются элементы переменной.  
+- **Assigning Nothing.** You can assign the value [Nothing](../../../../visual-basic/language-reference/nothing.md) to a structure variable, but the instance continues to be associated with the variable. You can still call its methods and access its data elements, although variable elements are reinitialized by the assignment.  
   
-     Напротив, если задано значение переменной объекта `Nothing`, она не связана ни с каким экземпляром класса, и доступ к любым элементам через переменную нельзя, пока не будет присвоен другой экземпляр.  
+     In contrast, if you set an object variable to `Nothing`, you dissociate it from any class instance, and you cannot access any members through the variable until you assign another instance to it.  
   
-- **Несколько экземпляров.** Переменная объекта может иметь разные экземпляры класса назначается в разное время, и несколько переменных объекта могут ссылаться на один и тот же экземпляр класса, в то же время. Изменения, внесенные в значения членов класса влияет на эти члены при доступе через другую переменную, указывающую на тот же экземпляр.  
+- **Multiple Instances.** An object variable can have different class instances assigned to it at different times, and several object variables can refer to the same class instance at the same time. Changes you make to the values of class members affect those members when accessed through another variable pointing to the same instance.  
   
-     Элементы структуры изолированы в пределах своего экземпляра. Изменения, их значения не отражаются в другие переменные структуры, даже в других экземпляров одной и той же `Structure` объявления.  
+     Structure elements, however, are isolated within their own instance. Changes to their values are not reflected in any other structure variables, even in other instances of the same `Structure` declaration.  
   
-- **Проверки на равенство.** Равенство двух структур должны выполняться с помощью теста поэлементно. Две объектные переменные можно сравнивать с помощью <xref:System.Object.Equals%2A> метод. <xref:System.Object.Equals%2A> Определяет, указывают ли две переменные на один экземпляр.  
+- **Equality.** Equality testing of two structures must be performed with an element-by-element test. Two object variables can be compared using the <xref:System.Object.Equals%2A> method. <xref:System.Object.Equals%2A> indicates whether the two variables point to the same instance.  
   
 ## <a name="see-also"></a>См. также
 
 - [Типы данных](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
 - [Составные типы данных](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)
-- [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+- [Типы значений и ссылочные типы](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
 - [Структуры](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)
 - [Устранение неполадок, связанных с типами данных](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
 - [Структуры и другие элементы программирования](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-other-programming-elements.md)

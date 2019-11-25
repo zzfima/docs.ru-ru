@@ -1,5 +1,5 @@
 ---
-title: Справочник по языку Visual Basic
+title: Справочник по языку
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic language reference
@@ -10,19 +10,21 @@ helpviewer_keywords:
 - language reference, Visual Basic
 - Visual Basic, language reference
 ms.assetid: 5c6bd31a-9542-4f3e-bfd5-e951af58f0f2
-ms.openlocfilehash: 2c0372e0176ea54a975e787631ba2849f79e5493
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7e1838fe6c9d563358757700d74cbf27228812a9
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61803185"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349958"
 ---
 # <a name="visual-basic-language-reference"></a>Справочник по языку Visual Basic
-Этот раздел содержит справочные сведения о различных аспектах языка Visual Basic.  
+
+This section provides reference information for various aspects of the Visual Basic language.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>Содержание  
+
  [Условные обозначения и соглашения о коде](../../visual-basic/language-reference/typographic-and-code-conventions.md)  
- Описывается способ, которым форматирование ключевых слов, заполнителей и других элементов языка в документации по Visual Basic.  
+ Summarizes the way that keywords, placeholders, and other elements of the language are formatted in the Visual Basic documentation.  
   
  [Члены библиотеки времени выполнения Visual Basic](../../visual-basic/language-reference/runtime-library-members.md)  
  Содержит список классов и модулей пространства имен <xref:Microsoft.VisualBasic?displayProperty=nameWithType> со ссылками на их функции-члены, методы, свойства, константы и перечисления.  
@@ -31,46 +33,46 @@ ms.locfileid: "61803185"
  Содержит список всех ключевых слов Visual Basic и ссылки на дополнительную информацию.  
   
  [Атрибуты (Visual Basic)](../../visual-basic/language-reference/attributes.md)  
- Описывает атрибуты, доступные в Visual Basic.  
+ Documents the attributes available in Visual Basic.  
   
  [Константы и перечисления](../../visual-basic/language-reference/constants-and-enumerations.md)  
- Описывает константы и перечисления, доступные в Visual Basic.  
+ Documents the constants and enumerations available in Visual Basic.  
   
  [Типы данных](../../visual-basic/language-reference/data-types/index.md)  
- Описывает типы данных, доступные в Visual Basic.  
+ Documents the data types available in Visual Basic.  
   
  [Директивы](../../visual-basic/language-reference/directives/index.md)  
- Описывает директивы компилятора, доступные в Visual Basic.  
+ Documents the compiler directives available in Visual Basic.  
   
  [Функции](../../visual-basic/language-reference/functions/index.md)  
- Документирует функции времени выполнения, доступные в Visual Basic.  
+ Documents the run-time functions available in Visual Basic.  
   
  [Модификаторы](../../visual-basic/language-reference/modifiers/index.md)  
  Содержит список модификаторов времени выполнения Visual Basic и ссылки на дополнительную информацию.  
   
  [Модули](../../visual-basic/language-reference/modules.md)  
- Описывает модули, доступные в Visual Basic и их члены.  
+ Documents the modules available in Visual Basic and their members.  
   
  [Nothing](../../visual-basic/language-reference/nothing.md)  
  Описывает значение по умолчанию любого типа данных.  
   
  [Объекты](../../visual-basic/language-reference/objects/index.md)  
- Описывает объекты, доступные в Visual Basic и их члены.  
+ Documents the objects available in Visual Basic and their members.  
   
  [Инструкции](../../visual-basic/language-reference/operators/index.md)  
- Описывает операторы, доступных в Visual Basic.  
+ Documents the operators available in Visual Basic.  
   
  [Свойства](../../visual-basic/language-reference/properties.md)  
- Описывает свойства, доступные в Visual Basic.  
+ Documents the properties available in Visual Basic.  
   
  [Запросы](../../visual-basic/language-reference/queries/index.md)  
  Приводит справочную информацию об использовании в коде выражений [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)].  
   
  [Операторы](../../visual-basic/language-reference/statements/index.md)  
- Документирует объявления и исполняемые операторы, доступные в Visual Basic.  
+ Documents the declaration and executable statements available in Visual Basic.  
   
  [XML-теги для комментариев](../../visual-basic/language-reference/xmldoc/index.md)  
- Описывает комментарии к документации, для которых функция IntelliSense предоставляется в редакторе кода Visual Basic.  
+ Describes the documentation comments for which IntelliSense is provided in the Visual Basic Code Editor.  
   
  [Свойства оси XML](../../visual-basic/language-reference/xml-axis/index.md)  
  Приводит ссылки на сведения об использовании свойств оси XML для доступа к XML непосредственно в коде.  
@@ -79,11 +81,12 @@ ms.locfileid: "61803185"
  Приводит ссылки на сведения об использовании XML-литералов для включения XML непосредственно в код.  
   
  [Сообщения об ошибках](../../visual-basic/language-reference/error-messages/index.md)  
- Предоставляет список Visual Basic компилятор и среда выполнения сообщения об ошибках и справку о том, как их обрабатывать.  
+ Provides a listing of Visual Basic compiler and run-time error messages and help on how to handle them.  
   
 ## <a name="related-sections"></a>Связанные разделы  
+
  [Visual Basic](../../visual-basic/index.md)  
- Приводит комплексную справку по всем областям языка Visual Basic.  
+ Provides comprehensive help on all areas of the Visual Basic language.  
   
  [Компилятор Visual Basic с интерфейсом командной строки](../../visual-basic/reference/command-line-compiler/index.md)  
- В этой статье описывается использование компилятора командной строки в качестве альтернативы компиляции программ из среды разработки Visual Studio (IDE).
+ Describes how to use the command-line compiler as an alternative to compiling programs from within the Visual Studio integrated development environment (IDE).

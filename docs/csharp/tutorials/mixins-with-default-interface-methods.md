@@ -3,14 +3,14 @@ title: Создание типов смешения с помощью метод
 description: Используя элементы интерфейса по умолчанию, можно расширить интерфейсы дополнительными реализациями по умолчанию для средств реализации.
 ms.technology: csharp-advanced-concepts
 ms.date: 10/04/2019
-ms.openlocfilehash: 798413f0071159893de39f3e190a9b2693571bb7
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: fb8fc1f432bdf909bae4f54bb76d10d7619f71a3
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039274"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74140843"
 ---
-# <a name="tutorial-mix-in-functionality-when-creating-classes-using-interfaces-with-default-interface-methods"></a>Учебник. Функциональные возможности смешения при создании классов с помощью методов интерфейса по умолчанию
+# <a name="tutorial-mix-functionality-in-when-creating-classes-using-interfaces-with-default-interface-methods"></a>Учебник. Функциональные возможности смешения при создании классов с помощью методов интерфейса по умолчанию
 
 Начиная с C# 8.0 в .NET Core 3.0 можно определить реализацию при объявлении члена интерфейса. Эта функция предоставляет новые возможности, позволяющие определить реализации по умолчанию для компонентов, объявленных в интерфейсах. Классы могут выбирать, когда следует переопределять функциональность, когда следует использовать функциональную возможность по умолчанию и когда не следует объявлять поддержку отдельных функций.
 

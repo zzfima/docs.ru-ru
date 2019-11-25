@@ -1,5 +1,5 @@
 ---
-title: Уровни доступа в Visual Basic
+title: Уровни доступа
 ms.date: 05/10/2018
 helpviewer_keywords:
 - members [Visual Basic], accessing in Visual Basic
@@ -14,82 +14,82 @@ helpviewer_keywords:
 - Private access modifier
 - declared elements [Visual Basic], access level
 ms.assetid: 6e06c1ab-fd78-47f0-83a8-1152780b5e1a
-ms.openlocfilehash: d1548f7850c68bc3c5422cf9d8d3d30eaa4aa8f3
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 33a218a2acc3c876428d6c9a887280a559f84323
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73035885"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348684"
 ---
 # <a name="access-levels-in-visual-basic"></a>Уровни доступа в Visual Basic
 
-*Уровень доступа* объявленного элемента — это степень возможности доступа к нему, то есть код, имеющий разрешение на чтение или запись в него. Это определяется не только способом объявления самого элемента, но и уровнем доступа контейнера элемента. Код, который не может получить доступ к содержащему элементу, не может получить доступ к каким-либо содержащимся в нем элементам, даже объявленным как `Public` Например, к переменной `Public` в структуре `Private` можно обращаться из класса, который содержит структуру, но не за пределами этого класса.
+The *access level* of a declared element is the extent of the ability to access it, that is, what code has permission to read it or write to it. This is determined not only by how you declare the element itself, but also by the access level of the element's container. Code that cannot access a containing element cannot access any of its contained elements, even those declared as `Public`. For example, a `Public` variable in a `Private` structure can be accessed from inside the class that contains the structure, but not from outside that class.
 
 ## <a name="public"></a>Public
 
-Ключевое слово [Public](../../../language-reference/modifiers/public.md) в операторе объявления указывает, что доступ к элементу можно получить из кода в любом месте того же проекта, из других проектов, которые ссылаются на проект, и из любой сборки, построенной из проекта. В следующем коде показан пример объявления `Public`:
+The [Public](../../../language-reference/modifiers/public.md) keyword in the declaration statement specifies that the element can be accessed from code anywhere in the same project, from other projects that reference the project, and from any assembly built from the project. The following code shows a sample `Public` declaration:
 
 ```vb
 Public Class ClassForEverybody
 ```
 
-`Public` можно использовать только на уровне модуля, интерфейса или пространства имен. Это означает, что можно объявить открытый элемент на уровне исходного файла или пространства имен либо внутри интерфейса, модуля, класса или структуры, но не в процедуре.
+You can use `Public` only at module, interface, or namespace level. This means you can declare a public element at the level of a source file or namespace, or inside an interface, module, class, or structure, but not in a procedure.
   
 ## <a name="protected"></a>Protected
 
-Ключевое слово [protected](../../../language-reference/modifiers/protected.md) в операторе объявления указывает, что доступ к элементу может осуществляться только в том же классе или из класса, производного от этого класса. В следующем коде показан пример объявления `Protected`:
+The [Protected](../../../language-reference/modifiers/protected.md) keyword in the declaration statement specifies that the element can be accessed only from within the same class, or from a class derived from this class. The following code shows a sample `Protected` declaration:
 
 ```vb
 Protected Class ClassForMyHeirs
 ```
 
-`Protected` можно использовать только на уровне класса и только при объявлении члена класса. Это означает, что можно объявить защищенный элемент в классе, но не на уровне исходного файла или пространства имен или внутри интерфейса, модуля, структуры или процедуры.
+You can use `Protected` only at class level, and only when you declare a member of a class. This means you can declare a protected element in a class, but not at the level of a source file or namespace, or inside an interface, module, structure, or procedure.
 
 ## <a name="friend"></a>Friend
 
-Ключевое слово [Friend](../../../language-reference/modifiers/friend.md) в операторе объявления указывает, что к элементу можно получить доступ из той же сборки, но не за пределы сборки. В следующем коде показан пример объявления `Friend`:
+The [Friend](../../../language-reference/modifiers/friend.md) keyword in the declaration statement specifies that the element can be accessed from within the same assembly, but not from outside the assembly. The following code shows a sample `Friend` declaration:
 
 ```vb
 Friend stringForThisProject As String
 ```
 
-`Friend` можно использовать только на уровне модуля, интерфейса или пространства имен. Это означает, что можно объявить дружественный элемент на уровне исходного файла или пространства имен либо внутри интерфейса, модуля, класса или структуры, но не в процедуре.
+You can use `Friend` only at module, interface, or namespace level. This means you can declare a friend element at the level of a source file or namespace, or inside an interface, module, class, or structure, but not in a procedure.
 
 ## <a name="protected-friend"></a>Protected Friend
 
-Сочетание ключевого слова [Protected Friend](../../../language-reference/modifiers/protected-friend.md) в операторе объявления указывает, что доступ к элементу можно получить либо из производных классов, либо из той же сборки или в обоих случаях. В следующем коде показан пример объявления `Protected Friend`:
+The [Protected Friend](../../../language-reference/modifiers/protected-friend.md) keyword combination in the declaration statement specifies that the element can be accessed either from derived classes or from within the same assembly, or both. The following code shows a sample `Protected Friend` declaration:
 
 ```vb
 Protected Friend stringForProjectAndHeirs As String
 ```
 
-`Protected Friend` можно использовать только на уровне класса и только при объявлении члена класса. Это означает, что можно объявить защищенный дружественный элемент в классе, но не на уровне исходного файла или пространства имен или внутри интерфейса, модуля, структуры или процедуры.
+You can use `Protected Friend` only at class level, and only when you declare a member of a class. This means you can declare a protected friend element in a class, but not at the level of a source file or namespace, or inside an interface, module, structure, or procedure.
 
 ## <a name="private"></a>Private
 
-Ключевое слово [Private](../../../language-reference/modifiers/private.md) в операторе объявления указывает, что доступ к элементу может осуществляться только в том же модуле, классе или структуре. В следующем коде показан пример объявления `Private`:
+The [Private](../../../language-reference/modifiers/private.md) keyword in the declaration statement specifies that the element can be accessed only from within the same module, class, or structure. The following code shows a sample `Private` declaration:
 
 ```vb
 Private _numberForMeOnly As Integer
 ```
 
-`Private` можно использовать только на уровне модуля. Это означает, что можно объявить закрытый элемент внутри модуля, класса или структуры, но не на уровне исходного файла или пространства имен, внутри интерфейса или в процедуре.
+`Private` можно использовать только на уровне модуля. This means you can declare a private element inside a module, class, or structure, but not at the level of a source file or namespace, inside an interface, or in a procedure.
 
-На уровне модуля инструкция `Dim` без каких-либо ключевых слов уровня доступа эквивалентна объявлению `Private`. Однако может потребоваться использовать ключевое слово `Private`, чтобы облегчить чтение и интерпретацию кода.
+At the module level, the `Dim` statement without any access level keywords is equivalent to a `Private` declaration. However, you might want to use the `Private` keyword to make your code easier to read and interpret.
 
 ## <a name="private-protected"></a>Частный защищенный
 
-Сочетание ключевого слова [Private protected](../../../language-reference/modifiers/private-protected.md) в операторе объявления указывает, что доступ к элементу возможен только в пределах того же класса, а также из производных классов, найденных в той же сборке, что и содержащий его класс. Модификатор доступа `Private Protected` поддерживается начиная с Visual Basic 15,5.
+The [Private Protected](../../../language-reference/modifiers/private-protected.md) keyword combination in the declaration statement specifies that the element can be accessed only from within the same class, as well as from derived classes found in the same assembly as the containing class. The `Private Protected` access modifier is supported starting with Visual Basic 15.5.
 
-В следующем примере показано объявление `Private Protected`:
+The following example shows a `Private Protected` declaration:
 
 ```vb
 Private Protected internalValue As Integer
 ```
 
-Элемент `Private Protected` можно объявить только внутри класса. Его нельзя объявить в интерфейсе или структуре, а также нельзя объявлять на уровне исходного файла или пространства имен, внутри интерфейса, структуры или в процедуре.
+You can declare a `Private Protected` element only inside of a class. You cannot declare it within an interface or structure, nor can you declare it at the level of a source file or namespace, inside an interface or a structure, or in a procedure.
 
-Модификатор доступа `Private Protected` поддерживается Visual Basic 15,5 и более поздних версий. Чтобы использовать его, добавьте следующий элемент в файл проекта Visual Basic ( *\*. vbproj*). Если в системе установлен Visual Basic 15,5 или более поздней версии, он позволяет воспользоваться всеми возможностями языка, поддерживаемыми последней версией компилятора Visual Basic.
+The `Private Protected` access modifier is supported by Visual Basic 15.5 and later. To use it, you add the following element to your Visual Basic project ( *\*.vbproj*) file. As long as Visual Basic 15.5 or later is installed on your system, it lets you take advantage of all the language features supported by the latest version of the Visual Basic compiler:
 
 ```xml
 <PropertyGroup>
@@ -97,7 +97,7 @@ Private Protected internalValue As Integer
 </PropertyGroup>
 ```
 
-Чтобы использовать модификатор доступа `Private Protected`, необходимо добавить следующий элемент в файл проекта Visual Basic ( *\*. vbproj*):
+To use the `Private Protected` access modifier, you must add the following element to your Visual Basic project ( *\*.vbproj*) file:
 
 ```xml
 <PropertyGroup>
@@ -105,20 +105,20 @@ Private Protected internalValue As Integer
 </PropertyGroup>
 ```
 
-Дополнительные сведения см. [в разделе Задание языковой версии Visual Basic](../../../language-reference/configure-language-version.md).
+For more information see [setting the Visual Basic language version](../../../language-reference/configure-language-version.md).
 
 ## <a name="access-modifiers"></a>Модификаторы доступа
 
-Ключевые слова, определяющие уровень доступа, называются *модификаторами доступа*. В следующей таблице сравниваются модификаторы доступа.
+The keywords that specify access level are called *access modifiers*. The following table compares the access modifiers:
 
-|Модификатор доступа|Предоставленный уровень доступа|Элементы, которые можно объявить с этим уровнем доступа|Контекст объявления, в котором можно использовать этот модификатор|
+|Access modifier|Access level granted|Elements you can declare with this access level|Declaration context within which you can use this modifier|
 |---------------------|--------------------------|-----------------------------------------------------|----------------------------------------------------------------|
-|`Public`|Неограниченный<br /><br /> Любой код, который может видеть открытый элемент, может получить к нему доступ|интерфейсов,<br /><br /> Модули<br /><br /> Классы<br /><br /> Структуры<br /><br /> Члены структуры<br /><br /> Процедуры<br /><br /> Свойства<br /><br /> Переменные члена<br /><br /> Константы<br /><br /> Перечисления<br /><br /> события<br /><br /> Внешние объявления<br /><br /> Делегаты|Исходный файл<br /><br /> Пространство имен<br /><br /> Интерфейс<br /><br /> Модуль<br /><br /> Class<br /><br /> Структура|
-|`Protected`|Наследование:<br /><br /> Код в классе, который объявляет защищенный элемент или производный от него класс, может получить доступ к элементу|интерфейсов,<br /><br /> Классы<br /><br /> Структуры<br /><br /> Процедуры<br /><br /> Свойства<br /><br /> Переменные члена<br /><br /> Константы<br /><br /> Перечисления<br /><br /> события<br /><br /> Внешние объявления<br /><br /> Делегаты|Class|
-|`Friend`|Сборка:<br /><br /> Код в сборке, который объявляет дружественный элемент, может получить к нему доступ|интерфейсов,<br /><br /> Модули<br /><br /> Классы<br /><br /> Структуры<br /><br /> Члены структуры<br /><br /> Процедуры<br /><br /> Свойства<br /><br /> Переменные члена<br /><br /> Константы<br /><br /> Перечисления<br /><br /> события<br /><br /> Внешние объявления<br /><br /> Делегаты|Исходный файл<br /><br /> Пространство имен<br /><br /> Интерфейс<br /><br /> Модуль<br /><br /> Class<br /><br /> Структура|
-|`Protected` `Friend`|Объединение `Protected` и `Friend`:<br /><br /> Код в том же классе или в той же сборке, что и защищенный дружественный элемент, или в любом классе, производном от класса элемента, может получить к нему доступ|интерфейсов,<br /><br /> Классы<br /><br /> Структуры<br /><br /> Процедуры<br /><br /> Свойства<br /><br /> Переменные члена<br /><br /> Константы<br /><br /> Перечисления<br /><br /> события<br /><br /> Внешние объявления<br /><br /> Делегаты|Class|
-|`Private`|Контекст объявления:<br /><br /> Код в типе, который объявляет закрытый элемент, включая код внутри содержащихся типов, может получить доступ к элементу|интерфейсов,<br /><br /> Классы<br /><br /> Структуры<br /><br /> Члены структуры<br /><br /> Процедуры<br /><br /> Свойства<br /><br /> Переменные члена<br /><br /> Константы<br /><br /> Перечисления<br /><br /> события<br /><br /> Внешние объявления<br /><br /> Делегаты|Модуль<br /><br /> Class<br /><br /> Структура|
-|`Private Protected`|Код в классе, объявляющий закрытый защищенный элемент, или код в производном классе, находящийся в той же сборке, что и класс BAS.|интерфейсов,<br /><br /> Классы<br /><br /> Структуры<br /><br /> Процедуры<br /><br /> Свойства<br /><br /> Переменные члена<br /><br /> Константы<br /><br /> Перечисления<br /><br /> события<br /><br /> Внешние объявления<br /><br /> Делегаты|Class|
+|`Public`|Unrestricted:<br /><br /> Any code that can see a public element can access it|интерфейсов,<br /><br /> Модули<br /><br /> Классы<br /><br /> Структуры<br /><br /> Structure members<br /><br /> Процедуры<br /><br /> Свойства<br /><br /> Member variables<br /><br /> Константы<br /><br /> Перечисления<br /><br /> события<br /><br /> External declarations<br /><br /> Делегаты|Source file<br /><br /> Пространство имен<br /><br /> Интерфейс<br /><br /> Модуль<br /><br /> Class<br /><br /> Структура|
+|`Protected`|Derivational:<br /><br /> Code in the class that declares a protected element, or a class derived from it, can access the element|интерфейсов,<br /><br /> Классы<br /><br /> Структуры<br /><br /> Процедуры<br /><br /> Свойства<br /><br /> Member variables<br /><br /> Константы<br /><br /> Перечисления<br /><br /> события<br /><br /> External declarations<br /><br /> Делегаты|Class|
+|`Friend`|Сборка:<br /><br /> Code in the assembly that declares a friend element can access it|интерфейсов,<br /><br /> Модули<br /><br /> Классы<br /><br /> Структуры<br /><br /> Structure members<br /><br /> Процедуры<br /><br /> Свойства<br /><br /> Member variables<br /><br /> Константы<br /><br /> Перечисления<br /><br /> события<br /><br /> External declarations<br /><br /> Делегаты|Source file<br /><br /> Пространство имен<br /><br /> Интерфейс<br /><br /> Модуль<br /><br /> Class<br /><br /> Структура|
+|`Protected` `Friend`|Union of `Protected` and `Friend`:<br /><br /> Code in the same class or the same assembly as a protected friend element, or within any class derived from the element's class, can access it|интерфейсов,<br /><br /> Классы<br /><br /> Структуры<br /><br /> Процедуры<br /><br /> Свойства<br /><br /> Member variables<br /><br /> Константы<br /><br /> Перечисления<br /><br /> события<br /><br /> External declarations<br /><br /> Делегаты|Class|
+|`Private`|Declaration context:<br /><br /> Code in the type that declares a private element, including code within contained types, can access the element|интерфейсов,<br /><br /> Классы<br /><br /> Структуры<br /><br /> Structure members<br /><br /> Процедуры<br /><br /> Свойства<br /><br /> Member variables<br /><br /> Константы<br /><br /> Перечисления<br /><br /> события<br /><br /> External declarations<br /><br /> Делегаты|Модуль<br /><br /> Class<br /><br /> Структура|
+|`Private Protected`|Code in the class that declares a private protected element, or code in a derived class found in the same assembly as the bas class.|интерфейсов,<br /><br /> Классы<br /><br /> Структуры<br /><br /> Процедуры<br /><br /> Свойства<br /><br /> Member variables<br /><br /> Константы<br /><br /> Перечисления<br /><br /> события<br /><br /> External declarations<br /><br /> Делегаты|Class|
 
 ## <a name="see-also"></a>См. также
 
@@ -127,8 +127,8 @@ Private Protected internalValue As Integer
 - [Имена объявленных элементов](declared-element-names.md)
 - [Ссылки на объявленные элементы](references-to-declared-elements.md)
 - [Характеристики объявленных элементов](declared-element-characteristics.md)
-- [Время существования в Visual Basic](lifetime.md)
-- [Область в Visual Basic](scope.md)
+- [Lifetime in Visual Basic](lifetime.md)
+- [Scope in Visual Basic](scope.md)
 - [Практическое руководство. Управление доступностью переменной](how-to-control-the-availability-of-a-variable.md)
 - [Переменные](../variables/index.md)
 - [Объявление переменных](../variables/variable-declaration.md)

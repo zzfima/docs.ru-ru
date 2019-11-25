@@ -1,5 +1,5 @@
 ---
-title: Ключевые слова (Visual Basic)
+title: Ключевые слова
 ms.date: 07/20/2015
 helpviewer_keywords:
 - reserved keywords, Visual Basic
@@ -10,16 +10,16 @@ helpviewer_keywords:
 - reserved words, Visual Basic keywords
 - Visual Basic, keywords
 ms.assetid: b5a65ef0-c408-4836-afb6-e6828c0771ca
-ms.openlocfilehash: 08444d757ed4186494100e54415e504c1ef117ce
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 8fd6389db453da4352fee12e870edc3004ce8f1b
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73197517"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74338783"
 ---
 # <a name="keywords-visual-basic"></a>Ключевые слова (Visual Basic)
 
-В следующих таблицах перечислены все ключевые слова языка Visual Basic.
+The following tables list all Visual Basic language keywords.
 
 ## <a name="reserved-keywords"></a>Зарезервированные ключевые слова
 
@@ -80,7 +80,7 @@ ms.locfileid: "73197517"
 |[<\<=](../operators/left-shift-assignment-operator.md)|
 
 > [!NOTE]
-> `EndIf`, `GoSub`, `Variant`и `Wend` сохраняются как зарезервированные ключевые слова, хотя они больше не используются в Visual Basic. Значение ключевого слова `Let` было изменено. `Let` сейчас используется в запросах LINQ. Дополнительные сведения см. в разделе [Предложение Let](../queries/let-clause.md).
+> `EndIf`, `GoSub`, `Variant`, and `Wend` are retained as reserved keywords, although they are no longer used in Visual Basic. Значение ключевого слова `Let` было изменено. `Let` сейчас используется в запросах LINQ. Дополнительные сведения см. в разделе [Предложение Let](../queries/let-clause.md).
 
 ## <a name="unreserved-keywords"></a>Незарезервированные ключевые слова
 

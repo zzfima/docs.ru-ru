@@ -2,12 +2,12 @@
 title: Процедура однократной настройки образцов Windows Communication Foundation
 ms.date: 03/30/2017
 ms.assetid: a5848ffd-3eb5-432d-812e-bd948ccb6bca
-ms.openlocfilehash: 90463a83b8a10085d4df90a2832886e43c51c734
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 7dbc4a1b5235c0cb6aa154379358c7761bc4ab1d
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424932"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141851"
 ---
 # <a name="one-time-setup-procedure-for-the-windows-communication-foundation-samples"></a>Процедура однократной настройки образцов Windows Communication Foundation
 
@@ -22,7 +22,7 @@ ms.locfileid: "73424932"
 
 1. Убедитесь, что ASP.NET настроен. Дополнительные сведения о настройке ASP.NET см. в разделе [инструкции по размещению службы](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)IIS.
 
-2. Убедитесь, что установлена платформа [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)]. Выполните поиск в следующем каталоге версии 4.0 (или более поздней): **\виндовс\микрософт.нет\фрамеворк**
+2. Убедитесь, что установлен .NET Framework 4. Выполните поиск в следующем каталоге версии 4.0 (или более поздней): **\виндовс\микрософт.нет\фрамеворк**
 
 3. Если Visual Studio 2012 не установлена, а операционная система не является Windows Server 2008 с пакетом обновления 2 (SP2) или более поздней версии, установите [исправление 251798](https://go.microsoft.com/fwlink/?LinkId=184693).
 
@@ -37,15 +37,15 @@ ms.locfileid: "73424932"
     ```
 
     > [!WARNING]
-    > Выполнение команды `aspnet_regiis –i –enable` сделает пул приложений по умолчанию запущенным с помощью [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)], что может привести к несовместимости других приложений на том же компьютере.
+    > Выполнение команды `aspnet_regiis –i –enable` сделает пул приложений по умолчанию работающим с помощью .NET Framework 4, что может привести к несовместимости других приложений на том же компьютере.
 
 5. Следуйте [инструкциям брандмауэра](../../../../docs/framework/wcf/samples/firewall-instructions.md) , чтобы включить порты, используемые образцами.
 
-6. Проверьте следующий каталог по умолчанию: \<Инсталлдриве >: **\WF_WCF_Samples**. Если образцы были предварительно установлены, этот каталог будет выбран по умолчанию.
+6. Проверьте следующий каталог по умолчанию: \<Инсталлдриве >: **\ WF_WCF_Samples**. Если образцы были предварительно установлены, этот каталог будет выбран по умолчанию.
 
 7. Если образцы не установлены, установите их из расположения загрузки образцов для [C#](https://go.microsoft.com/fwlink/?LinkId=190939).
 
-8. После установки образцов перейдите по адресу: \<Инсталлдриве >: **\WF_WCF_Samples\WCF\Setup\\**
+8. После установки образцов перейдите по адресу: \<Инсталлдриве >: **\ WF_WCF_Samples \вкф\сетуп\\**
 
 9. Запустите пакетный файл **Setupvroot. bat** . Выполняются следующие действия.
 
@@ -65,7 +65,7 @@ ms.locfileid: "73424932"
 
 11. Создайте на компьютере каталог C:\logs. Некоторые образцы могут ожидать его наличия. Убедитесь, что соответствующая учетная запись имеет разрешение на запись в этот каталог. Для Windows 7, [!INCLUDE[wv](../../../../includes/wv-md.md)]и Windows Server 2008 R2 это учетная запись **Network Service**. Для [!INCLUDE[lserver](../../../../includes/lserver-md.md)] это учетная запись NT Authority\Network Service. Для [!INCLUDE[wxp](../../../../includes/wxp-md.md)] и [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] это учетная запись ASPNET.
 
-12. Запустите файл Setupcerttool.bat. Этот файл находится в папке \<InstallPath > \WF_WCF_Samples\WCF\Setup\.  Этот скрипт выполнит следующие задачи.
+12. Запустите файл Setupcerttool.bat. Этот файл находится в папке \<InstallPath > \ WF_WCF_Samples \Вкф\сетуп\.  Этот скрипт выполнит следующие задачи.
 
     - Построит средство FindPrivateKey.
 

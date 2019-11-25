@@ -1,5 +1,5 @@
 ---
-title: Предложение Take (Visual Basic)
+title: Предложение Take
 ms.date: 07/20/2015
 f1_keywords:
 - vb.QueryTake
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - queries [Visual Basic], Take
 - Take clause [Visual Basic]
 ms.assetid: 77bf87b2-1476-4456-957f-fee922fbad8c
-ms.openlocfilehash: 32a4c7fd7f1e2f6fe640f3f53f15579f014759d5
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 3082954ef84560ccb70f7a47cd3532f622829392
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72004714"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349637"
 ---
 # <a name="take-clause-visual-basic"></a>Предложение Take (Visual Basic)
 Возвращает указанное число идущих подряд элементов с начала коллекции.  
@@ -26,19 +26,19 @@ Take count
   
 ## <a name="parts"></a>Части  
  `count`  
- Обязательный. Значение или выражение, результатом которого является число возвращаемых элементов последовательности.  
+ Обязательный. A value or an expression that evaluates to the number of elements of the sequence to return.  
   
-## <a name="remarks"></a>Примечания  
- Предложение `Take` приводит к тому, что запрос включает указанное число смежных элементов из начала списка результатов. Число включаемых элементов задается параметром `count`.  
+## <a name="remarks"></a>Заметки  
+ The `Take` clause causes a query to include a specified number of contiguous elements from the start of a results list. The number of elements to include is specified by the `count` parameter.  
   
- Предложение `Take` можно использовать с предложением `Skip` для возврата диапазона данных из любого сегмента запроса. Для этого передайте индекс первого элемента диапазона в предложение `Skip` и размер диапазона в предложение `Take`. В этом случае предложение `Take` должно быть указано после предложения `Skip`.  
+ You can use the `Take` clause with the `Skip` clause to return a range of data from any segment of a query. To do this, pass the index of the first element of the range to the `Skip` clause and the size of the range to the `Take` clause. In this case, the `Take` clause must be specified after the `Skip` clause.  
   
- При использовании предложения `Take` в запросе может также потребоваться убедиться, что результаты возвращены в порядке, который позволит использовать предложение `Take` для включения предполагаемых результатов. Дополнительные сведения о упорядочении результатов запроса см. в разделе [предложение ORDER BY](../../../visual-basic/language-reference/queries/order-by-clause.md).  
+ When you use the `Take` clause in a query, you may also need to ensure that the results are returned in an order that will enable the `Take` clause to include the intended results. For more information about ordering query results, see [Order By Clause](../../../visual-basic/language-reference/queries/order-by-clause.md).  
   
- Можно использовать предложение `TakeWhile`, чтобы указать, что возвращаются только определенные элементы, в зависимости от указанного условия.  
+ You can use the `TakeWhile` clause to specify that only certain elements be returned, depending on a supplied condition.  
   
 ## <a name="example"></a>Пример  
- В следующем примере кода используется предложение `Take` вместе с предложением `Skip` для возврата данных из запроса на страницах. Функция "клиенты" использует предложение `Skip` для обхода клиентов в списке до получения значения начального индекса и использует предложение `Take` для возврата страницы клиентов, начиная с этого значения индекса.  
+ The following code example uses the `Take` clause together with the `Skip` clause to return data from a query in pages. The GetCustomers function uses the `Skip` clause to bypass the customers in the list until the supplied starting index value, and uses the `Take` clause to return a page of customers starting from that index value.  
   
  [!code-vb[VbSimpleQuerySamples#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#1)]  
   

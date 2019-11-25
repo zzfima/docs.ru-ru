@@ -1,5 +1,5 @@
 ---
-title: Комментарии в коде (Visual Basic)
+title: Комментарии в коде
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Uncomment button
@@ -14,15 +14,15 @@ helpviewer_keywords:
 - comments
 - code comments
 ms.assetid: 90136fba-22eb-49f9-ba81-63db629b4a47
-ms.openlocfilehash: 3635d52532789133a345d9a9228efae869c8c223
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 189810393db42c54cb8a0f97b22b3d1514d9a7c4
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69945620"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346173"
 ---
 # <a name="comments-in-code-visual-basic"></a>Комментарии в коде (Visual Basic)
-В примерах кодов часто встречается символ начала комментария (`'`). Этот символ указывает компилятору Visual Basic игнорировать текст, следующий за ним, или *Комментарий*. Комментарии — это краткие заметки, внесенные в код, чтобы сделать чтение кода более легким.  
+В примерах кодов часто встречается символ начала комментария (`'`). This symbol tells the Visual Basic compiler to ignore the text following it, or the *comment*. Комментарии — это краткие заметки, внесенные в код, чтобы сделать чтение кода более легким.  
   
  Хорошим стилем программирования считается начинать все процедуры с краткого комментария, описывающего функциональные характеристики процедуры (то, что она делает). Это необходимо для вашего собственного удобства и удобства того, кто читает этот код. Следует отличать детали реализации (как процедура работает) от комментариев, описывающих функциональные характеристики. Если в комментарий включены детали реализации, их следует обновлять при редактировании кода.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "69945620"
  [!code-vb[VbVbcnConventions#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#17)]  
   
 ## <a name="commenting-guidelines"></a>Правила комментирования  
- В следующей таблице приведены общие рекомендации по тому, какие типы комментариев могут предшествовать разделу кода. Это предложения; Visual Basic не применяет правила для добавления комментариев. В комментарий по желанию автора кода может быть включена любая информация.  
+ В следующей таблице приведены общие рекомендации по тому, какие типы комментариев могут предшествовать разделу кода. These are suggestions; Visual Basic does not enforce rules for adding comments. В комментарий по желанию автора кода может быть включена любая информация.  
   
 |||  
 |---|---|  
@@ -44,7 +44,7 @@ ms.locfileid: "69945620"
 |Допущения|Список всех внешних переменных, элементов управления, открытых файлов, к которым осуществляется доступ из процедуры|  
 |Произведенный эффект|Список внешних переменных, элементов управления или файлов, на которые влияет данная процедура (если это влияние не очевидно)|  
 |Inputs|Описание назначения аргументов|  
-|Возвращает|Описание значений, возвращаемых процедурой|  
+|Returns|Описание значений, возвращаемых процедурой|  
   
  Также рекомендуется принять во внимание следующие моменты.  
   
@@ -54,14 +54,14 @@ ms.locfileid: "69945620"
   
 - Комментарии не могут располагаться за последовательностью продолжения строки в той же строке.  
   
- Можно добавить или удалить символы комментария для блока кода, выбрав одну или несколько строк кода и выбрав **Комментарий** ![(кнопка комментария Visual Basic](./media/comments-in-code/visual-basic-comment-button.gif)в Visual Studio) и раскомментировать ( ![визуальный элемент Базовая кнопка раскомментировать в Visual Studio. ) на панели инструментов **изменить.** ](./media/comments-in-code/visual-basic-uncomment-button.gif)  
+ You can add or remove comment symbols for a block of code by selecting one or more lines of code and choosing the **Comment** (![The Visual Basic Comment button in Visual Studio.](./media/comments-in-code/visual-basic-comment-button.gif)) and **Uncomment** (![The Visual Basic Uncomment button in Visual Studio.](./media/comments-in-code/visual-basic-uncomment-button.gif)) buttons on the **Edit** toolbar.  
   
 > [!NOTE]
-> Кроме того, можно добавить в код комментарии, поставив в начале текста ключевое слово `REM`. Однако кнопки " `'` символ" и " **комментарий к комментарию**/" проще в использовании и занимают меньше пространства и памяти.  
+> Кроме того, можно добавить в код комментарии, поставив в начале текста ключевое слово `REM`. However, the `'` symbol and the **Comment**/**Uncomment** buttons are easier to use and require less space and memory.  
   
 ## <a name="see-also"></a>См. также
 
-- [Базовый инстинкты — документирование кода с помощью XML-комментариев](https://msdn.microsoft.com/magazine/dd722812.aspx)
+- [Basic Instincts - Documenting Your Code With XML Comments](https://docs.microsoft.com/archive/msdn-magazine/2009/may/documenting-your-code-with-xml-comments)
 - [Практическое руководство. Создание XML-документации](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)
 - [XML-теги для комментариев](../../../visual-basic/language-reference/xmldoc/index.md)
 - [Соглашения о структуре программы и коде](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)

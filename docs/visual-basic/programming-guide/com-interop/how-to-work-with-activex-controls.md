@@ -1,39 +1,39 @@
 ---
-title: Практическое руководство. Работа с элементами управления ActiveX (Visual Basic)
+title: Практическое руководство. Работа с элементами ActiveX
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Toolbox, adding controls
 - ActiveX controls, adding to Toolbox
 ms.assetid: ec675027-866f-4c05-aaf2-92fca5200f9a
-ms.openlocfilehash: f46459615430dc61ff5cb9fcbde5ae568fce31af
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c41d30582b8c2d3f7fa63c7b75046ab3e65fa390
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69969342"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353215"
 ---
-# <a name="how-to-work-with-activex-controls-visual-basic"></a>Практическое руководство. Работа с элементами управления ActiveX (Visual Basic)
-Элементы управления ActiveX — это компоненты COM или объекты, которые можно вставить в веб-страницу или другое приложение для повторного использования упакованных функциональных возможностей, которые запрограммированы для других пользователей. Элементы управления ActiveX, разработанные для Visual Basic 6,0 и более ранних версий, можно использовать для добавления компонентов в **область элементов** Visual Studio.  
+# <a name="how-to-work-with-activex-controls-visual-basic"></a>Практическое руководство. Работа с элементами ActiveX (Visual Basic)
+ActiveX controls are COM components or objects you can insert into a Web page or other application to reuse packaged functionality someone else has programmed. You can use ActiveX controls developed for Visual Basic 6.0 and earlier versions to add features to the **Toolbox** of Visual Studio.  
   
-### <a name="to-add-activex-controls-to-the-toolbox"></a>Добавление элементов управления ActiveX на панель элементов  
+### <a name="to-add-activex-controls-to-the-toolbox"></a>To add ActiveX controls to the toolbox  
   
-1. В меню **Сервис** выберите пункт **выбрать элементы панели элементов**.  
+1. On the **Tools** menu, click **Choose Toolbox Items**.  
   
-     Откроется диалоговое окно **Выбор панели элементов** .  
+     The **Choose Toolbox** dialog box appears.  
   
-2. Перейдите на вкладку **COM-компоненты** .  
+2. Click the **COM Components** tab.  
   
-3. Установите флажок рядом с элементом управления ActiveX, который необходимо использовать, и нажмите кнопку **ОК**.  
+3. Select the check box next to the ActiveX control you want to use, and then click **OK**.  
   
-     Новый элемент управления появится вместе с другими инструментами на **панели элементов**.  
+     The new control appears with the other tools in the **Toolbox**.  
   
     > [!NOTE]
-    > Служебную программу Aximp можно использовать для создания сборки взаимодействия для элементов управления ActiveX вручную. Дополнительные сведения см. в разделе [AxImp. exe (Windows Forms средства импорта элементов управления ActiveX)](../../../framework/tools/aximp-exe-windows-forms-activex-control-importer.md).  
+    > You can use the Aximp utility to manually create an interop assembly for ActiveX controls. For more information, see [Aximp.exe (Windows Forms ActiveX Control Importer)](../../../framework/tools/aximp-exe-windows-forms-activex-control-importer.md).  
   
 ## <a name="see-also"></a>См. также
 
 - [COM-взаимодействие](../../../visual-basic/programming-guide/com-interop/index.md)
-- [Практическое руководство. Добавление элементов управления ActiveX в Windows Forms](../../../framework/winforms/controls/how-to-add-activex-controls-to-windows-forms.md)
+- [Практическое руководство. Добавление элементов управления ActiveX в формы Windows Forms](../../../framework/winforms/controls/how-to-add-activex-controls-to-windows-forms.md)
 - [Aximp.exe (программа импорта элементов ActiveX форм Windows Forms)](../../../framework/tools/aximp-exe-windows-forms-activex-control-importer.md)
 - [Вопросы размещения элемента управления ActiveX в форме Windows Forms](../../../framework/winforms/controls/considerations-when-hosting-an-activex-control-on-a-windows-form.md)
 - [Устранение неполадок взаимодействия](../../../visual-basic/programming-guide/com-interop/troubleshooting-interoperability.md)

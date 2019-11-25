@@ -1,5 +1,5 @@
 ---
-title: Имена объявляемых элементов и атрибутов XML (Visual Basic)
+title: Имена объявляемых элементов и атрибутов XML
 ms.date: 07/20/2015
 helpviewer_keywords:
 - declarations [XML in Visual Basic]
@@ -8,41 +8,41 @@ helpviewer_keywords:
 - attribute names [XML in Visual Basic]
 - XML literals [Visual Basic], element names
 ms.assetid: cc110118-b6cf-4ff9-a4e4-6233c90c9fbf
-ms.openlocfilehash: dbe85b456f46c40c9cc9a703b38e11992edd24cf
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 12fbd1f4332391b1acdcf12e101d82627ebbeaff
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64598279"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74335990"
 ---
 # <a name="names-of-declared-xml-elements-and-attributes-visual-basic"></a>Имена объявляемых элементов и атрибутов XML (Visual Basic)
-В этом разделе приведены рекомендации Visual Basic по именованию XML-элементов и атрибутов в XML-литералов.  В литерале XML можно указать локальное имя или полное имя. Полное имя состоит из префикса пространства имен XML, двоеточия и локального имени. Дополнительные сведения о префиксы пространства имен XML, см. в разделе [литерала элемента XML](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md).  
+This topic provides Visual Basic guidelines for naming XML elements and attributes in XML literals.  In an XML literal, you can specify a local name or a qualified name. A qualified name consists of an XML namespace prefix, a colon, and a local name. For more information about XML namespace prefixes, see [XML Element Literal](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md).  
   
 ## <a name="rules"></a>Правила  
- Локальное имя элемента или атрибута в Visual Basic необходимо соблюдать следующие правила.  
+ A local name of an element or attribute in Visual Basic must adhere to the following rules.  
   
-- Она может начинаться с пространства имен. Он должен начинаться с алфавитного символа или символа подчеркивания (`_`).  
+- It can begin with a namespace. It must begin with an alphabetical character or an underscore (`_`).  
   
-- Он должен содержать только буквы, десятичные цифры, символы подчеркивания, точки (.) и дефисы (-).  
+- It must contain only alphabetical characters, decimal digits, underscores, periods (.), and hyphens (-).  
   
-- Оно не должно быть более 1024 символов.  
+- It must not be more than 1,024 characters long.  
   
-- Двоеточия, отображаемые в именах указывает разделение пространства имен. Таким образом можно использовать двоеточия только для указания пространства имен XML для определенного имени.  
+- Colons that appear in names indicate namespace demarcation. Therefore, you can use colons only to specify an XML namespace for a particular name.  
   
- Кроме того необходимо придерживаться следующих рекомендаций.  
+ In addition, you should adhere to the following guideline.  
   
-- Спецификации XML 1.0 оставляет за собой все имена, начинающиеся со строки «xml», любое изменение регистра символов. Таким образом не используйте эти имена для элемента и атрибутов.  
+- The XML 1.0 specification reserves all names starting with the string "xml", of any capitalization variation. Therefore, do not use those names for your element and attribute names.  
   
-### <a name="name-length-guidelines"></a>Рекомендации по длине имени  
- На практике имя должно быть как можно более короткими при по-прежнему четко определять природу элемента. Это улучшает читаемость кода и сократить размер строки длины и исходного файла.  
+### <a name="name-length-guidelines"></a>Name Length Guidelines  
+ As a practical matter, a name should be as short as possible while still clearly identifying the nature of the element. This improves the readability of your code and reduces line length and source-file size.  
   
- Однако имя не должно быть настолько коротким, что он не описывает адекватно элемент или как код использует его. Это важно для удобства чтения кода. Если кто-то пытается найти его, или если вы самостоятельно рассматривают его длительное время после их создания, подходящие имена элементов могут сэкономить время.  
+ However, your name should not be so short that it does not adequately describe the element or how your code uses it. This is important for the readability of your code. If somebody else is trying to understand it, or if you yourself are looking at it a long time after you wrote it, appropriate element names can save time.  
   
-## <a name="case-sensitivity-in-names"></a>Учет регистра в именах  
- Имена элементов XML учитывается регистр символов. Это означает, что когда компилятор Visual Basic выполняется сравнение двух имен, которые различаются только регистром алфавитный указатель, он интерпретирует их как разные имена. Например, он интерпретирует `ABC` и `abc` как ссылки на различные элементы.  
+## <a name="case-sensitivity-in-names"></a>Case Sensitivity in Names  
+ XML element names are case sensitive. This means that when the Visual Basic compiler compares two names that differ in alphabetical case only, it interprets them as different names. For example, it interprets `ABC` and `abc` as referring to separate elements.  
   
 ## <a name="xml-namespaces"></a>Пространства имен XML  
- При создании литерала элемента XML, можно указать префикс пространства имен XML для имени элемента. Дополнительные сведения см. в разделе [литерала элемента XML](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md).  
+ When creating an XML element literal, you can specify the XML namespace prefix for the element name. For more information, see [XML Element Literal](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md).  
   
 ## <a name="see-also"></a>См. также
 

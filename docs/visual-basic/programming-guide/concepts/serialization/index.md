@@ -1,13 +1,13 @@
 ---
-title: Сериализация (Visual Basic)
+title: Сериализация
 ms.date: 07/20/2015
 ms.assetid: 67379a76-5465-4af8-a781-0b0b25a62d9a
-ms.openlocfilehash: 947b38e8166ba05d871aafbaba5766aa9dab21f4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9ce97e541cb204b92663464e36d9e8f221ccc3f2
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61751117"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351918"
 ---
 # <a name="serialization-visual-basic"></a>Сериализация (Visual Basic)
 Сериализация — это процесс преобразования объекта в поток байтов для сохранения или передачи в память, в базу данных или в файл. Эта операция предназначена для того, чтобы сохранить состояния объекта для последующего воссоздания при необходимости. Обратный процесс называется десериализацией.  
@@ -59,11 +59,11 @@ ms.locfileid: "61751117"
  Сериализация конструктора — это особая форма сериализации, при которой применяется способ постоянного хранения объектов, обычно используемый в средствах разработки. Сериализация конструктора выполняет преобразование графа объекта в файл исходного кода, с помощью которого впоследствии можно восстановить граф объекта. Этот файл исходного кода может содержать программный код, разметку или даже информацию из таблицы SQL.  
   
 ## <a name="BKMK_RelatedTopics"></a> Связанные разделы и примеры  
- [Пошаговое руководство: Сохранение объекта в Visual Studio (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/walkthrough-persisting-an-object-in-visual-studio.md)  
+ [Walkthrough: Persisting an Object in Visual Studio (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/walkthrough-persisting-an-object-in-visual-studio.md) (Пошаговое руководство. Сохранение объекта в Visual Studio (Visual Basic))  
  Демонстрирует, как с помощью сериализации сохранить данные объекта между экземплярами, чтобы сохранять значения и извлекать их при следующем создании экземпляра объекта.  
   
- [Практическое руководство. Чтение данных объекта из XML-файл (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/how-to-read-object-data-from-an-xml-file.md)  
+ [How to: Read Object Data from an XML File (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/how-to-read-object-data-from-an-xml-file.md) (Практическое руководство. Чтение данных объекта из XML-файла (Visual Basic))  
  Показывает считывание данных объекта, которые ранее были записаны в XML-файл с помощью класса <xref:System.Xml.Serialization.XmlSerializer>.  
   
- [Практическое руководство. Запись данных объекта в XML-файл (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md)  
+ [How to: Write Object Data to an XML File (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md) (Практическое руководство. Запись данных объекта в XML-файл (Visual Basic))  
  Показывает, как записать объект из класса в XML-файл с помощью класса <xref:System.Xml.Serialization.XmlSerializer>.

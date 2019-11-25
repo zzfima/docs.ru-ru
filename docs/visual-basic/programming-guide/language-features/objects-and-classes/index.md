@@ -1,28 +1,28 @@
 ---
-title: Объекты и классы Visual Basic
+title: Объекты и классы
 ms.date: 07/20/2015
 helpviewer_keywords:
 - classes [Visual Basic]
 - objects [Visual Basic]
 ms.assetid: c68c5752-1006-46e1-975a-6717b62a42fc
-ms.openlocfilehash: dd2968f7ab528fa07ef0c5af85f2a7f07147a76e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d45aca8b137f56cf058b63b9286504259c0005eb
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67755162"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346704"
 ---
 # <a name="objects-and-classes-in-visual-basic"></a>Объекты и классы Visual Basic
 
 *Объект* представляет собой сочетание кода и данных, которое рассматривается как единое целое. Объект может быть частью приложения, как, например, элемент управления или форма. Также объектом может являться само приложение в целом.
 
-При создании приложения в Visual Basic, вы постоянно работаете с объектами. Можно использовать объекты, предоставляемые Visual Basic, такие как элементы управления, формы и данных доступ к объектам. Можно также использовать объекты из других приложений в приложении Visual Basic. Вы даже можете создать собственные объекты и определить для них дополнительные свойства и методы. Объекты выполняют функцию готовых блоков для создания программ — вы можете один раз написать фрагмент кода и использовать его многократно.
+When you create an application in Visual Basic, you constantly work with objects. You can use objects provided by Visual Basic, such as controls, forms, and data access objects. You can also use objects from other applications within your Visual Basic application. Вы даже можете создать собственные объекты и определить для них дополнительные свойства и методы. Объекты выполняют функцию готовых блоков для создания программ — вы можете один раз написать фрагмент кода и использовать его многократно.
 
 В этой статье мы подробно расскажем вам про объекты.
 
 ## <a name="objects-and-classes"></a>Объекты и классы
 
-Каждый объект в Visual Basic определяется *класс*. Класс описывает переменные, свойства, процедуры и события объекта. Объекты являются экземплярами классов. Определив класс, вы можете создать из него любое количество объектов.
+Each object in Visual Basic is defined by a *class*. Класс описывает переменные, свойства, процедуры и события объекта. Объекты являются экземплярами классов. Определив класс, вы можете создать из него любое количество объектов.
 
 Взаимосвязь между объектом и его классом можно проиллюстрировать на примере печенья и формочки для печенья. Форма для печенья — это класс. Она определяет характеристики каждого печенья, то есть размер и форму. Класс используется для создания объектов. Отдельные печенья — это и есть объекты.
 
@@ -121,7 +121,7 @@ safetyTimer.Start()
 
 Дополнительные сведения см. в разделе [Procedures in Visual Basic](../../../../visual-basic/programming-guide/language-features/procedures/index.md) (Процедуры в Visual Basic).
 
-### <a name="events"></a>События
+### <a name="events"></a>события
 
 Событие — это действие, распознаваемое объектом, например, щелчок мышью или нажатие клавиши. Вы можете написать код для реагирования на эти события. События могут происходить в результате действий пользователя, выполнения программного кода или изменения состояния системы. Принято говорить, что код, который объявляет о наступлении события, *создает* это событие, а код, который реагирует на него, *обрабатывает* событие.
 
@@ -176,7 +176,7 @@ safetyTimer.Start()
 
 Объекты позволяют один раз объявить переменную или процедуру, а затем использовать ее везде, где потребуется. Например, если в приложении вам нужно средство проверки орфографии, то для него потребуется определить все необходимые переменные и служебные функции. Создав специальный класс для средства проверки орфографии, вы сможете использовать его снова в других приложениях, просто добавив ссылку на скомпилированную сборку. Более того, вы можете сэкономить время и силы, взяв готовый класс проверки орфографии, созданный ранее кем-то другим.
 
-.NET Framework предоставляет многие примеры компонентов, которые доступны для использования. В следующем примере используется класс <xref:System.TimeZone> в пространстве имен <xref:System>. Члены класса <xref:System.TimeZone> позволяют получить сведения о часовом поясе, выбранном на компьютере.
+The .NET Framework provides many examples of components that are available for use. В следующем примере используется класс <xref:System.TimeZone> в пространстве имен <xref:System>. Члены класса <xref:System.TimeZone> позволяют получить сведения о часовом поясе, выбранном на компьютере.
 
 ```vb
 Public Sub examineTimeZone()
@@ -249,20 +249,20 @@ End Sub
 
 #### <a name="collections"></a>Коллекции
 
-В качестве примера объектов-контейнеров можно привести *коллекции*. Коллекции представляют собой группы однотипных перечисляемых объектов. Visual Basic поддерживает особый синтаксис [для каждого... Следующий оператор](../../../../visual-basic/language-reference/statements/for-each-next-statement.md) которого можно перебирать элементы коллекции. Кроме того, коллекции часто позволяют использовать свойство <xref:Microsoft.VisualBasic.Collection.Item%2A> для обращения к элементам по индексу или по уникальной строке. Коллекции иногда проще в использовании, чем массивы, поскольку они позволяют добавлять или удалять элементы без использования индексов. Благодаря простоте использования коллекции часто применяются для хранения форм и элементов управления.
+В качестве примера объектов-контейнеров можно привести *коллекции*. Коллекции представляют собой группы однотипных перечисляемых объектов. Visual Basic supports a specific syntax in the [For Each...Next Statement](../../../../visual-basic/language-reference/statements/for-each-next-statement.md) that allows you to iterate through the items of a collection. Кроме того, коллекции часто позволяют использовать свойство <xref:Microsoft.VisualBasic.Collection.Item%2A> для обращения к элементам по индексу или по уникальной строке. Коллекции иногда проще в использовании, чем массивы, поскольку они позволяют добавлять или удалять элементы без использования индексов. Благодаря простоте использования коллекции часто применяются для хранения форм и элементов управления.
 
 ## <a name="related-topics"></a>См. также
 
-[Пошаговое руководство: Определение классов](../../../../visual-basic/programming-guide/language-features/objects-and-classes/walkthrough-defining-classes.md)\
+[Walkthrough: Defining Classes](../../../../visual-basic/programming-guide/language-features/objects-and-classes/walkthrough-defining-classes.md)\
 Пошаговые инструкции по созданию класса.
 
-[Перегруженные свойства и методы](../../../../visual-basic/programming-guide/language-features/objects-and-classes/overloaded-properties-and-methods.md)\
+[Overloaded Properties and Methods](../../../../visual-basic/programming-guide/language-features/objects-and-classes/overloaded-properties-and-methods.md)\
 Перегруженные свойства и методы
 
 [Основы наследования](../../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)\
 Описание модификаторов наследования, переопределения методов и свойств, MyClass и MyBase.
 
-[Время существования: Способ создания и уничтожения объектов](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)\
+[Object Lifetime: How Objects Are Created and Destroyed (Visual Basic)](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)\ (Время существования, создание и уничтожение объектов (Visual Basic))
 Вопросы создания и уничтожения экземпляров классов.
 
 [Анонимные типы](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)\
@@ -271,5 +271,5 @@ End Sub
 [Инициализаторы объектов. Именованные и анонимные типы](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)\
 Описание инициализаторов объектов, которые позволяют создавать экземпляры именованных и анонимных типов с помощью одного выражения.
 
-[Практическое руководство. Выведение имен свойств и типов в объявлениях анонимных типов](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)\
+[How to: Infer Property Names and Types in Anonymous Type Declarations](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)\
 Обсуждение имен свойств и типов в контексте объявлений анонимных типов. Содержит примеры успешного и неуспешного вывода.

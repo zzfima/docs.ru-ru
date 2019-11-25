@@ -1,46 +1,46 @@
 ---
-title: Обработка XML в Visual Basic
+title: Управление XML
 ms.date: 07/20/2015
 helpviewer_keywords:
 - LINQ to XML [Visual Basic], manipulating XML
 - Visual Basic code, XML
 - XML [Visual Basic], manipulating
 ms.assetid: da32cffb-198d-41b1-9af3-260fe32e3b7d
-ms.openlocfilehash: 7ed045b79460b3f1b3178d6bc85de9358d61f116
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2565f43c1014bf0fa9fab1618fedfd1bd6bdb7ca
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61780532"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74330446"
 ---
 # <a name="manipulating-xml-in-visual-basic"></a>Обработка XML в Visual Basic
-Можно использовать *XML-литералов* загрузить XML из внешнего источника, например строки, файл или поток. Затем можно использовать [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] обработки XML и использовать [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] чтобы запросить XML.  
+You can use *XML literals* to load XML from an external source such as a string, file, or stream. You can then use [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] to manipulate the XML and use [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] to query the XML.  
   
-## <a name="in-this-section"></a>В этом разделе  
- [Практическое руководство. Загрузить XML из файла, строки или Stream](../../../../visual-basic/programming-guide/language-features/xml/how-to-load-xml-from-a-file-string-or-stream.md)  
- Демонстрируется загрузка XML-данных в <xref:System.Xml.Linq.XDocument> или <xref:System.Xml.Linq.XElement> объект из текстового файла, строки или потока.  
+## <a name="in-this-section"></a>Содержание  
+ [Практическое руководство. Загрузка XML-кода из файла, строки или потока](../../../../visual-basic/programming-guide/language-features/xml/how-to-load-xml-from-a-file-string-or-stream.md)  
+ Demonstrates how to load XML into an <xref:System.Xml.Linq.XDocument> or <xref:System.Xml.Linq.XElement> object from a text file, string, or stream.  
   
  [Практическое руководство. Преобразование XML с помощью LINQ](../../../../visual-basic/programming-guide/language-features/xml/how-to-transform-xml-by-using-linq.md)  
- Показано, как преобразовать содержимое <xref:System.Xml.Linq.XDocument> объекта в новый XML-документа.  
+ Demonstrates how to transform the contents of an <xref:System.Xml.Linq.XDocument> object into a new XML document.  
   
  [Практическое руководство. Изменение XML-литералов](../../../../visual-basic/programming-guide/language-features/xml/how-to-modify-xml-literals.md)  
- Описание способа изменения элементов, атрибутов и значений в XML-литерала.  
+ Demonstrates how to modify the elements, attributes, and values in an XML literal.  
   
 ## <a name="related-sections"></a>Связанные разделы  
  [Свойства оси XML](../../../../visual-basic/language-reference/xml-axis/index.md)  
- Ссылки на разделы, описывающие различные свойства XML доступа.  
+ Provides links to sections that describe the various XML access properties.  
   
  [Общие сведения о LINQ to XML в Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)  
- Введение в использование [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] в Visual Basic.  
+ Provides an introduction to using [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] in Visual Basic.  
   
  [Создание XML в Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)  
- Знакомство с помощью XML-литералов в Visual Basic.  
+ Provides an introduction to using XML literals in Visual Basic.  
   
  [Доступ к XML в Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/accessing-xml.md)  
- Показано, как получить доступ к частям XML-элемента или документа в Visual Basic.  
+ Demonstrates how to access parts of an XML element or document in Visual Basic.  
   
  [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)  
- Содержит ссылки на разделы, описывающие, как использовать [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] в Visual Basic.  
+ Provides links to sections that describe how to use [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] in Visual Basic.  
   
 ## <a name="see-also"></a>См. также
 

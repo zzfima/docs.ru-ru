@@ -1,5 +1,5 @@
 ---
-title: Объект My. WebService (Visual Basic)
+title: Объект My.WebServices
 ms.date: 07/20/2015
 f1_keywords:
 - My.WebServices
@@ -7,58 +7,58 @@ f1_keywords:
 helpviewer_keywords:
 - My.WebServices object
 ms.assetid: f188dc05-2c75-41b6-bb68-122d1c3110a2
-ms.openlocfilehash: c887f9b7c5a41c0aa02016354c46d5507b103d25
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 290d025985663bc45fe605a2e9904fc90fb2bc63
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69918181"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350341"
 ---
 # <a name="mywebservices-object"></a>Объект My.WebServices
-Предоставляет свойства для создания и доступа к одному экземпляру каждой веб-службы XML, на которую ссылается текущий проект.  
+Provides properties for creating and accessing a single instance of each XML Web service referenced by the current project.  
   
-## <a name="remarks"></a>Примечания  
- Объект `My.WebServices` предоставляет экземпляр каждой веб-службы, на которую ссылается текущий проект. Каждый экземпляр создается по запросу. Доступ к этим веб-службам можно получить через свойства объекта `My.WebServices`. Имя свойства совпадает с именем веб-службы, к которой обращается свойство. Любой класс, наследуемый от <xref:System.Web.Services.Protocols.SoapHttpClientProtocol>, является веб-службой. Сведения о добавлении веб-служб в проект см. в разделе [доступ к веб-службам приложений](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md).  
+## <a name="remarks"></a>Заметки  
+ Объект `My.WebServices` предоставляет экземпляр каждой веб-службы, на которую ссылается текущий проект. Каждый экземпляр создается по запросу. Доступ к этим веб-службам можно получить через свойства объекта `My.WebServices`. Имя свойства совпадает с именем веб-службы, к которой обращается свойство. Любой класс, наследуемый от <xref:System.Web.Services.Protocols.SoapHttpClientProtocol>, является веб-службой. For information about adding Web services to a project, see [Accessing Application Web Services](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md).  
   
- `My.WebServices` Объект предоставляет только веб-службы, связанные с текущим проектом. Он не предоставляет доступ к веб-службам, объявленным в упоминаемых в них библиотеках DLL. Для доступа к веб-службе, предоставляемой библиотекой DLL, необходимо использовать полное имя веб-службы в формате *dllname*. *WebServiceName*. Дополнительные сведения см. в разделе [доступ к веб-службам приложений](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md).  
+ The `My.WebServices` object exposes only the Web services associated with the current project. It does not provide access to Web services declared in referenced DLLs. To access a Web service that a DLL provides, you must use the qualified name of the Web service, in the form *DllName*.*WebServiceName*. For more information, see [Accessing Application Web Services](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md).  
   
- Объект и его свойства недоступны для веб-приложений.  
+ The object and its properties are not available for Web applications.  
   
 ## <a name="properties"></a>Свойства  
- Каждое свойство `My.WebServices` объекта предоставляет доступ к экземпляру веб-службы, на которую ссылается текущий проект. Имя свойства совпадает с именем веб-службы, к которой обращается свойство, а тип свойства совпадает с типом веб-службы.  
+ Each property of the `My.WebServices` object provides access to an instance of a Web service referenced by the current project. The name of the property is the same as the name of the Web service that the property accesses, and the property type is the same as the Web service's type.  
   
 > [!NOTE]
-> При конфликте имен имя свойства для доступа к веб-службе — *RootNamespace*_*Namespace*\_*ServiceName*. Например, рассмотрим две веб-службы с `Service1`именем. Если одна из этих служб находится в корневом пространстве `WindowsApplication1` имен и в пространстве `Namespace1`имен, доступ к этой службе будет осуществляться с помощью `My.WebServices.WindowsApplication1_Namespace1_Service1`.  
+> If there is a name collision, the property name for accessing a Web service is *RootNamespace*_*Namespace*\_*ServiceName*. For example, consider two Web services named `Service1`. If one of these services is in the root namespace `WindowsApplication1` and in the namespace `Namespace1`, you would access that service by using `My.WebServices.WindowsApplication1_Namespace1_Service1`.  
   
- При первом доступе к одному из `My.WebServices` свойств объекта он создает новый экземпляр веб-службы и сохраняет его. Последующие обращения к этому свойству возвращают этот экземпляр веб-службы.  
+ When you first access one of the `My.WebServices` object's properties, it creates a new instance of the Web service and stores it. Subsequent accesses of that property return that instance of the Web service.  
   
- Вы можете удалить веб-службу, назначив ей `Nothing` свойство для этой веб-службы. Метод задания свойства присваивает `Nothing` хранимому значению. Если присвоить значение, отличное `Nothing` от свойства, метод задания <xref:System.ArgumentException> выдаст исключение.  
+ You can dispose of a Web service by assigning `Nothing` to the property for that Web service. The property setter assigns `Nothing` to the stored value. If you assign any value other than `Nothing` to the property, the setter throws an <xref:System.ArgumentException> exception.  
   
- Можно проверить, сохраняет ли свойство `My.WebServices` объекта экземпляр веб-службы с `Is` помощью оператора или `IsNot` . С помощью этих операторов можно проверить, имеет `Nothing`ли свойство значение.  
+ You can test whether a property of the `My.WebServices` object stores an instance of the Web service by using the `Is` or `IsNot` operator. You can use those operators to check if the value of the property is `Nothing`.  
   
 > [!NOTE]
-> Как правило, `Is` оператор `IsNot` или должен считывать значение свойства для выполнения сравнения. Однако если текущее свойство хранится `Nothing`, свойство создает новый экземпляр веб-службы, а затем возвращает этот экземпляр. Однако компилятор Visual Basic обрабатывает свойства `My.WebServices` объекта особым образом и `Is` позволяет оператору или `IsNot` проверить состояние свойства без изменения его значения.  
+> Typically, the `Is` or `IsNot` operator has to read the value of the property to perform the comparison. However, if the property currently stores `Nothing`, the property creates a new instance of the Web service and then returns that instance. However, the Visual Basic compiler treats the properties of the `My.WebServices` object specially, and allows the `Is` or `IsNot` operator to check the status of the property without altering its value.  
   
 ## <a name="example"></a>Пример  
- В этом примере вызывается `FahrenheitToCelsius` метод `TemperatureConverter` веб-службы XML и возвращается результат.  
+ This example calls the `FahrenheitToCelsius` method of the `TemperatureConverter` XML Web service, and returns the result.  
   
  [!code-vb[VbVbalrMyWebService#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyWebService/VB/Form1.vb#1)]  
   
- Чтобы этот пример работал, проект должен ссылаться на веб-службу с именем `Converter`, и эта веб-служба должна `ConvertTemperature` предоставлять метод. Дополнительные сведения см. в разделе [доступ к веб-службам приложений](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md).  
+ For this example to work, your project must reference a Web service named `Converter`, and that Web service must expose the `ConvertTemperature` method. For more information, see [Accessing Application Web Services](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md).  
   
- Этот код не работает в проекте веб-приложения.  
+ This code does not work in a Web application project.  
   
 ## <a name="requirements"></a>Требования  
   
-### <a name="availability-by-project-type"></a>Доступность по типу проекта  
+### <a name="availability-by-project-type"></a>Availability by Project Type  
   
 |Тип проекта|Доступно|  
 |---|---|  
 |Приложение Windows|**Да**|  
 |Библиотека классов|**Да**|  
 |Консольное приложение|**Да**|  
-|Библиотека элементов управления Windows|**Да**|  
-|Библиотека веб-элементов управления|**Да**|  
+|Windows Control Library|**Да**|  
+|Web Control Library|**Да**|  
 |Служба Windows|**Да**|  
 |Веб-сайт|Нет|  
   

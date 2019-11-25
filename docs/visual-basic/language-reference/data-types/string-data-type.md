@@ -1,5 +1,5 @@
 ---
-title: Тип данных String (Visual Basic)
+title: Тип данных String
 ms.date: 07/20/2015
 f1_keywords:
 - vb.String
@@ -18,28 +18,32 @@ helpviewer_keywords:
 - String literals [Visual Basic]
 - identifier type characters [Visual Basic], $
 ms.assetid: 15ac03f5-cabd-42cc-a754-1df3893c25d9
-ms.openlocfilehash: 6d2fd226735622de5cd7197060c05b8ac12b69f1
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: c2c6f9632646c432abb7b6da8887253e526cc994
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71696842"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74343910"
 ---
 # <a name="string-data-type-visual-basic"></a>Тип данных String (Visual Basic)
-Содержит последовательности 16-разрядных (2-байтовых) кодовых точек без знака, которые находятся в диапазоне от 0 до 65535. Каждая кодовая *точка*, или код символа, представляет один символ Юникода. Строка может содержать от 0 до приблизительно 2 000 000 000 (2 ^ 31) символов Юникода.  
+
+Holds sequences of unsigned 16-bit (2-byte) code points that range in value from 0 through 65535. Each *code point*, or character code, represents a single Unicode character. A string can contain from 0 to approximately two billion (2 ^ 31) Unicode characters.  
   
-## <a name="remarks"></a>Примечания  
- Используйте тип данных `String` для хранения нескольких символов без дополнительных затрат на управление массивами `Char()`, массив элементов `Char`.  
+## <a name="remarks"></a>Заметки  
+
+ Use the `String` data type to hold multiple characters without the array management overhead of `Char()`, an array of `Char` elements.  
   
- Значение по умолчанию `String` равно `Nothing` (пустая ссылка). Обратите внимание, что это не то же самое, что пустая строка (значение `""`).  
+ The default value of `String` is `Nothing` (a null reference). Note that this is not the same as the empty string (value `""`).  
   
 ## <a name="unicode-characters"></a>Символы Юникода  
- Первая 128 кодовых позиций (0 – 127) Юникода соответствует буквам и символам стандартной клавиатуры США. Первые 128 кодовые точки те же, что и кодировка ASCII. Вторая 128 кодовых позиций (128 – 255) представляет специальные символы, такие как буквы латинского алфавита, диакритические знаки, символы валют и дроби. В Юникоде используются оставшиеся кодовые точки (256-65535) для широкого спектра символов. Это включает в себя международные текстовые символы, диакритические знаки, математические и технические символы.  
+
+ The first 128 code points (0–127) of Unicode correspond to the letters and symbols on a standard U.S. keyboard. These first 128 code points are the same as those the ASCII character set defines. The second 128 code points (128–255) represent special characters, such as Latin-based alphabet letters, accents, currency symbols, and fractions. Unicode uses the remaining code points (256-65535) for a wide variety of symbols. This includes worldwide textual characters, diacritics, and mathematical and technical symbols.  
   
- Для определения своей классификации Юникода можно использовать такие методы, как <xref:System.Char.IsDigit%2A> и <xref:System.Char.IsPunctuation%2A> для отдельного символа в переменной `String`.  
+ You can use methods such as <xref:System.Char.IsDigit%2A> and <xref:System.Char.IsPunctuation%2A> on an individual character in a `String` variable to determine its Unicode classification.  
   
 ## <a name="format-requirements"></a>Требования к формату  
- Литерал `String` необходимо заключить в кавычки (`" "`). Если необходимо включить кавычки в качестве одного из символов в строке, используются две смежные кавычки (`""`). Это показано в следующем примере.  
+
+ You must enclose a `String` literal within quotation marks (`" "`). If you must include a quotation mark as one of the characters in the string, you use two contiguous quotation marks (`""`). Это показано в следующем примере.  
   
 ```vb  
 Dim j As String = "Joe said ""Hello"" to me."  
@@ -51,12 +55,13 @@ MsgBox("Joe said " & """" & h & """" & " to me.")
 MsgBox("Joe said """ & h & """ to me.")  
 ```  
   
- Обратите внимание, что смежные кавычки, представляющие кавычки в строке, не зависят от кавычек, начинающихся и заканчивая литералом `String`.  
+ Note that the contiguous quotation marks that represent a quotation mark in the string are independent of the quotation marks that begin and end the `String` literal.  
   
-## <a name="string-manipulations"></a>Манипуляции со строками  
- После присвоения строки переменной `String` эта строка является *неизменяемой*, что означает, что изменить ее длину или содержимое нельзя. При изменении строки каким-либо образом Visual Basic создает новую строку и задействует предыдущую. Переменная `String` указывает на новую строку.  
+## <a name="string-manipulations"></a>String Manipulations  
+
+ Once you assign a string to a `String` variable, that string is *immutable*, which means you cannot change its length or contents. When you alter a string in any way, Visual Basic creates a new string and abandons the previous one. The `String` variable then points to the new string.  
   
- Вы можете манипулировать содержимым переменной `String` с помощью различных строковых функций. В следующем примере показана функция <xref:Microsoft.VisualBasic.Strings.Left%2A>.  
+ You can manipulate the contents of a `String` variable by using a variety of string functions. The following example illustrates the <xref:Microsoft.VisualBasic.Strings.Left%2A> function  
   
 ```vb  
 Dim S As String = "Database"  
@@ -64,19 +69,19 @@ Dim S As String = "Database"
 S = Microsoft.VisualBasic.Left(S, 4)  
 ```  
   
- Строка, созданная другим компонентом, может быть дополнена начальными или конечными пробелами. Если вы получаете такую строку, для удаления этих пробелов можно использовать функции <xref:Microsoft.VisualBasic.Strings.Trim%2A>, <xref:Microsoft.VisualBasic.Strings.LTrim%2A> и <xref:Microsoft.VisualBasic.Strings.RTrim%2A>.  
+ A string created by another component might be padded with leading or trailing spaces. If you receive such a string, you can use the <xref:Microsoft.VisualBasic.Strings.Trim%2A>, <xref:Microsoft.VisualBasic.Strings.LTrim%2A>, and <xref:Microsoft.VisualBasic.Strings.RTrim%2A> functions to remove these spaces.  
   
- Дополнительные сведения об операциях со строками см. в разделе [строки](../../../visual-basic/programming-guide/language-features/strings/index.md).  
+ For more information about string manipulations, see [Strings](../../../visual-basic/programming-guide/language-features/strings/index.md).  
   
 ## <a name="programming-tips"></a>Советы по программированию  
   
-- **Отрицательные числа.** Помните, что символы, удерживаемые `String`, не являются знаками и не могут представлять отрицательные значения. В любом случае не следует использовать `String` для хранения числовых значений.  
+- **Negative Numbers.** Remember that the characters held by `String` are unsigned and cannot represent negative values. In any case, you should not use `String` to hold numeric values.  
   
-- **Вопросы взаимодействия.** Если вы взаимодействуете с компонентами, которые не написаны для .NET Framework, например автоматизации или COM-объекты, помните, что в других средах символы строки имеют разную ширину данных (8 бит). При передаче строкового аргумента из 8-разрядных символов в такой компонент объявите его как `Byte()`, массив `Byte`, а не `String` в новом Visual Basic коде.  
+- **Interop Considerations.** If you are interfacing with components not written for the .NET Framework, for example Automation or COM objects, remember that string characters have a different data width (8 bits) in other environments. If you are passing a string argument of 8-bit characters to such a component, declare it as `Byte()`, an array of `Byte` elements, instead of `String` in your new Visual Basic code.  
   
-- **Символы типа.** При добавлении символа типа идентификатора `$` в любой идентификатор принуждает его к типу данных `String`. `String` не имеет символа типа литерала. Однако компилятор обрабатывает литералы, заключенные в кавычки (`" "`), как `String`.  
+- **Type Characters.** Appending the identifier type character `$` to any identifier forces it to the `String` data type. `String` has no literal type character. However, the compiler treats literals enclosed in quotation marks (`" "`) as `String`.  
   
-- **Тип платформы.** Соответствующий тип в .NET Framework является классом <xref:System.String?displayProperty=nameWithType>.  
+- **Framework Type.** The corresponding type in the .NET Framework is the <xref:System.String?displayProperty=nameWithType> class.  
   
 ## <a name="see-also"></a>См. также
 

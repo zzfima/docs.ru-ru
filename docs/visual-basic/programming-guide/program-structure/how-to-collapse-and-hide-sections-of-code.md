@@ -1,34 +1,34 @@
 ---
-title: Практическое руководство. Сворачивание и скрытие разделов кода (Visual Basic)
+title: Практическое руководство. Сворачивание и сокрытие частей кода
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic, code collapsing
 - Visual Basic, code hiding
 - Visual Basic code, collapsing and hiding
 ms.assetid: b770e8f5-e07d-491a-ab4b-a977980f9ba2
-ms.openlocfilehash: 4f11982cc0aa7654c1e456fb15d918a68bc4791b
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: e7aacdc3f41199127b00d276b382ec4a5f258da0
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71054121"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347411"
 ---
-# <a name="how-to-collapse-and-hide-sections-of-code-visual-basic"></a>Практическое руководство. Сворачивание и скрытие разделов кода (Visual Basic)
+# <a name="how-to-collapse-and-hide-sections-of-code-visual-basic"></a>Практическое руководство. Сворачивание и скрытие частей кода (Visual Basic)
 
-`#Region` Директива позволяет сворачивать и скрывать разделы кода в файлах Visual Basic. `#Region` Директива позволяет указать блок кода, который можно развернуть или свернуть при использовании редактора кода Visual Studio. Возможность скрывать код выборочно делает файлы более управляемыми и удобочитаемыми. Дополнительные сведения см. в разделе [Структура](/visualstudio/ide/outlining).
+The `#Region` directive enables you to collapse and hide sections of code in Visual Basic files. The `#Region` directive lets you specify a block of code that you can expand or collapse when using the Visual Studio code editor. The ability to hide code selectively makes your files more manageable and easier to read. Дополнительные сведения см. в разделе [Структура](/visualstudio/ide/outlining).
 
-`#Region`директивы поддерживают семантику блока кода, такую `#If...#End If`как. Это означает, что они не могут начинаться в одном блоке и заканчиваться другим; Начало и конец должны находиться в одном блоке. `#Region`директивы не поддерживаются в функциях.
+`#Region` directives support code block semantics such as `#If...#End If`. This means they cannot begin in one block and end in another; the start and end must be in the same block. `#Region` directives are not supported within functions.
 
-## <a name="to-collapse-and-hide-a-section-of-code"></a>Сворачивание и скрытие раздела кода
+## <a name="to-collapse-and-hide-a-section-of-code"></a>To collapse and hide a section of code
 
-Поместите раздел кода между `#Region` операторами и `#End Region` , как показано в следующем примере:
+Place the section of code between the `#Region` and `#End Region` statements, as in the following example:
 
 [!code-vb[VbVbalrConditionalComp#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConditionalComp/VB/Class1.vb#6)]
 
-Этот `#Region` блок можно использовать несколько раз в файле кода, поэтому пользователи могут определять собственные блоки процедур и классов, которые, в свою очередь, могут быть свернуты. `#Region`блоки также могут быть вложены в `#Region` другие блоки.
+The `#Region` block can be used multiple times in a code file; thus, users can define their own blocks of procedures and classes that can, in turn, be collapsed. `#Region` blocks can also be nested within other `#Region` blocks.
 
 > [!NOTE]
-> Скрытие кода не мешает его компиляции и не влияет на `#If...#End If` инструкции.
+> Hiding code does not prevent it from being compiled and does not affect `#If...#End If` statements.
 
 ## <a name="see-also"></a>См. также
 
