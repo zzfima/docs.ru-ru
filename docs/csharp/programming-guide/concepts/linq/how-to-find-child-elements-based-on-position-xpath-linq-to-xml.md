@@ -2,26 +2,26 @@
 title: Практическое руководство. Поиск дочерних элементов по положению (XPath-LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: e35bb269-ec86-4c96-8321-12491a0eb2c3
-ms.openlocfilehash: 1adbbb6dd074ffcb39269a800024e444cf8791d1
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: cc0ff5639345d36ebb0423a12b66de8f1a70ade1
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253763"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141119"
 ---
-# <a name="how-to-find-child-elements-based-on-position-xpath-linq-to-xml-c"></a><span data-ttu-id="cb121-102">Практическое руководство. Поиск дочерних элементов по положению (XPath-LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="cb121-102">How to: Find Child Elements Based on Position (XPath-LINQ to XML) (C#)</span></span>
-<span data-ttu-id="cb121-103">Иногда требуется найти элементы на основании их позиции.</span><span class="sxs-lookup"><span data-stu-id="cb121-103">Sometimes you want to find elements based on their position.</span></span> <span data-ttu-id="cb121-104">Может понадобиться найти второй элемент или найти третий элемент через пятый.</span><span class="sxs-lookup"><span data-stu-id="cb121-104">You might want to find the second element, or you might want to find the third through the fifth element.</span></span>  
+# <a name="how-to-find-child-elements-based-on-position-xpath-linq-to-xml-c"></a><span data-ttu-id="1c54f-102">Практическое руководство. Поиск дочерних элементов по положению (XPath-LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="1c54f-102">How to find child elements based on position (XPath-LINQ to XML) (C#)</span></span>
+<span data-ttu-id="1c54f-103">Иногда требуется найти элементы на основании их позиции.</span><span class="sxs-lookup"><span data-stu-id="1c54f-103">Sometimes you want to find elements based on their position.</span></span> <span data-ttu-id="1c54f-104">Может понадобиться найти второй элемент или найти третий элемент через пятый.</span><span class="sxs-lookup"><span data-stu-id="1c54f-104">You might want to find the second element, or you might want to find the third through the fifth element.</span></span>  
   
- <span data-ttu-id="cb121-105">Выражение XPath:</span><span class="sxs-lookup"><span data-stu-id="cb121-105">The XPath expression is:</span></span>  
+ <span data-ttu-id="1c54f-105">Выражение XPath:</span><span class="sxs-lookup"><span data-stu-id="1c54f-105">The XPath expression is:</span></span>  
   
  `Test[position() >= 2 and position() <= 4]`  
   
- <span data-ttu-id="cb121-106">Существует два простых подхода к написанию этого запроса [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="cb121-106">There are two approaches to writing this [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] query in a lazy way.</span></span> <span data-ttu-id="cb121-107">Можно использовать операторы <xref:System.Linq.Enumerable.Skip%2A> и <xref:System.Linq.Enumerable.Take%2A> или перегруженный оператор <xref:System.Linq.Enumerable.Where%2A>, который потребляет индекс.</span><span class="sxs-lookup"><span data-stu-id="cb121-107">You can use the <xref:System.Linq.Enumerable.Skip%2A> and <xref:System.Linq.Enumerable.Take%2A> operators, or you can use the <xref:System.Linq.Enumerable.Where%2A> overload that takes an index.</span></span> <span data-ttu-id="cb121-108">При использовании перегрузки оператора <xref:System.Linq.Enumerable.Where%2A> необходимо использовать лямбда-выражение, которое имеет два аргумента.</span><span class="sxs-lookup"><span data-stu-id="cb121-108">When you use the <xref:System.Linq.Enumerable.Where%2A> overload, you use a lambda expression that takes two arguments.</span></span> <span data-ttu-id="cb121-109">Следующий пример показывает обе возможности выбора на основе позиции.</span><span class="sxs-lookup"><span data-stu-id="cb121-109">The following example shows both methods of selecting based on position.</span></span>  
+ <span data-ttu-id="1c54f-106">Существует два простых подхода к написанию этого запроса [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="1c54f-106">There are two approaches to writing this [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] query in a lazy way.</span></span> <span data-ttu-id="1c54f-107">Можно использовать операторы <xref:System.Linq.Enumerable.Skip%2A> и <xref:System.Linq.Enumerable.Take%2A> или перегруженный оператор <xref:System.Linq.Enumerable.Where%2A>, который потребляет индекс.</span><span class="sxs-lookup"><span data-stu-id="1c54f-107">You can use the <xref:System.Linq.Enumerable.Skip%2A> and <xref:System.Linq.Enumerable.Take%2A> operators, or you can use the <xref:System.Linq.Enumerable.Where%2A> overload that takes an index.</span></span> <span data-ttu-id="1c54f-108">При использовании перегрузки оператора <xref:System.Linq.Enumerable.Where%2A> необходимо использовать лямбда-выражение, которое имеет два аргумента.</span><span class="sxs-lookup"><span data-stu-id="1c54f-108">When you use the <xref:System.Linq.Enumerable.Where%2A> overload, you use a lambda expression that takes two arguments.</span></span> <span data-ttu-id="1c54f-109">Следующий пример показывает обе возможности выбора на основе позиции.</span><span class="sxs-lookup"><span data-stu-id="1c54f-109">The following example shows both methods of selecting based on position.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="cb121-110">Пример</span><span class="sxs-lookup"><span data-stu-id="cb121-110">Example</span></span>  
- <span data-ttu-id="cb121-111">В данном примере производится поиск второго элемента через четвертый элемент `Test`.</span><span class="sxs-lookup"><span data-stu-id="cb121-111">This example finds the second through the fourth `Test` element.</span></span> <span data-ttu-id="cb121-112">Результатом является коллекция элементов.</span><span class="sxs-lookup"><span data-stu-id="cb121-112">The result is a collection of elements.</span></span>  
+## <a name="example"></a><span data-ttu-id="1c54f-110">Пример</span><span class="sxs-lookup"><span data-stu-id="1c54f-110">Example</span></span>  
+ <span data-ttu-id="1c54f-111">В данном примере производится поиск второго элемента через четвертый элемент `Test`.</span><span class="sxs-lookup"><span data-stu-id="1c54f-111">This example finds the second through the fourth `Test` element.</span></span> <span data-ttu-id="1c54f-112">Результатом является коллекция элементов.</span><span class="sxs-lookup"><span data-stu-id="1c54f-112">The result is a collection of elements.</span></span>  
   
- <span data-ttu-id="cb121-113">В этом примере используется следующий XML-документ: [Пример XML-файла. Конфигурация тестирования (LINQ to XML)](./sample-xml-file-test-configuration-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="cb121-113">This example uses the following XML document: [Sample XML File: Test Configuration (LINQ to XML)](./sample-xml-file-test-configuration-linq-to-xml.md).</span></span>  
+ <span data-ttu-id="1c54f-113">В этом примере используется следующий XML-документ: [Пример XML-файла. Конфигурация тестирования (LINQ to XML)](./sample-xml-file-test-configuration-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="1c54f-113">This example uses the following XML document: [Sample XML File: Test Configuration (LINQ to XML)](./sample-xml-file-test-configuration-linq-to-xml.md).</span></span>  
   
 ```csharp  
 XElement testCfg = XElement.Load("TestConfig.xml");  
@@ -54,7 +54,7 @@ foreach (XElement el in list1)
     Console.WriteLine(el);  
 ```  
   
- <span data-ttu-id="cb121-114">В этом примере выводятся следующие данные:</span><span class="sxs-lookup"><span data-stu-id="cb121-114">This example produces the following output:</span></span>  
+ <span data-ttu-id="1c54f-114">В этом примере выводятся следующие данные:</span><span class="sxs-lookup"><span data-stu-id="1c54f-114">This example produces the following output:</span></span>  
   
 ```output  
 Results are identical  
