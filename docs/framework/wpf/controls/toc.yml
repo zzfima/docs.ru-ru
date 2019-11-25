@@ -394,8 +394,8 @@
       items:
         - name: Стилизация и использование шаблонов
           href: styling-and-templating.md
-        - name: Настройка внешнего вида существующего элемента управления путем создания объекта ControlTemplate
-          href: customizing-the-appearance-of-an-existing-control.md
+        - name: Настройка существующего элемента управления с помощью ControlTemplate
+          href: ../../../desktop-wpf/themes/how-to-create-apply-template.md
         - name: 'Практическое руководство. Поиск элемента, созданного шаблоном ControlTemplate'
           href: how-to-find-controltemplate-generated-elements.md
     - name: Настройка элементов управления
