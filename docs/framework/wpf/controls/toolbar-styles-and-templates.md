@@ -9,15 +9,15 @@ helpviewer_keywords:
 - ToolBar [WPF], styles and templates
 - templates [WPF], ToolBar
 ms.assetid: bd875f46-4690-46f5-81e0-f11a9822484f
-ms.openlocfilehash: b782e62500edd14b40b1267c3b7f92758210a5c0
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: a984311234386cb205d5db35f18a743ca535ff05
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458208"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283659"
 ---
 # <a name="toolbar-styles-and-templates"></a>Стили и шаблоны элемента ToolBar
-В этом разделе описываются стили и шаблоны для элемента управления <xref:System.Windows.Controls.ToolBar>. Можно изменить <xref:System.Windows.Controls.ControlTemplate> по умолчанию, чтобы обеспечить уникальность внешнего вида элемента управления. Подробнее см. в разделе [Настройка внешнего вида существующего элемента управления путем создания объекта ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
+В этом разделе описываются стили и шаблоны для элемента управления <xref:System.Windows.Controls.ToolBar>. Можно изменить <xref:System.Windows.Controls.ControlTemplate> по умолчанию, чтобы обеспечить уникальность внешнего вида элемента управления. Дополнительные сведения см. в разделе [Создание шаблона для элемента управления](../../../desktop-wpf/themes/how-to-create-apply-template.md).  
   
 ## <a name="toolbar-parts"></a>Части панели инструментов  
  В следующей таблице перечислены именованные части для элемента управления <xref:System.Windows.Controls.ToolBar>.  
@@ -56,4 +56,4 @@ ms.locfileid: "73458208"
 - [Стили и шаблоны элемента управления](control-styles-and-templates.md)
 - [Настройка элементов управления](control-customization.md)
 - [Стилизация и использование шаблонов](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
-- [Настройка внешнего вида существующего элемента управления путем создания объекта ControlTemplate](customizing-the-appearance-of-an-existing-control.md)
+- [Создание шаблона для элемента управления](../../../desktop-wpf/themes/how-to-create-apply-template.md)

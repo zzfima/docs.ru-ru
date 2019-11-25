@@ -1,31 +1,31 @@
 ---
-title: Повышение прав
+title: Повышение привилегий
 ms.date: 03/30/2017
 helpviewer_keywords:
 - elevation of privilege [WCF]
 - security [WCF], elevation of privilege
 ms.assetid: 146e1c66-2a76-4ed3-98a5-fd77851a06d9
-ms.openlocfilehash: eae3c2a72e686774ee510dfc3ec9db04df7db630
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8838b139efa20bc796fc21567cc6fc9ee8691eee
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966175"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283246"
 ---
-# <a name="elevation-of-privilege"></a>Повышение прав
+# <a name="elevation-of-privilege"></a>Повышение привилегий
 *Повышение прав доступа* от предоставления злоумышленнику разрешений, относящихся к учетным данным, которые не были предоставлены изначально. Например, злоумышленник, ранее имевший разрешение «только для чтения», может каким-либо образом расширить его до уровня «чтение и запись».  
   
 ## <a name="trusted-sts-should-sign-saml-token-claims"></a>Доверенная служба маркеров безопасности должна подписывать утверждения маркеров SAML  
  Маркер языка SAML (Security Assertions Markup Language) - это универсальный маркер XML, являющийся типом по умолчанию для выдаваемых маркеров. Маркер SAML может создаваться при обмене данными службой маркеров безопасности, которой веб-служба доверяет. Маркеры SAML содержат утверждения в операторах. Злоумышленник может скопировать утверждения из действительного маркера, создать новый маркер SAML и подписать его именем другого издателя. Идея состоит в том, чтобы проверить, проверяет ли сервер издателей, и, если сервер этого не делает, создать маркеры SAML, расширяющие права по сравнению с правами, которые выдаются доверенной службой маркеров безопасности.  
   
- Класс <xref:System.IdentityModel.Tokens.SamlAssertion> проверяет цифровые подписи в токене SAML, и класс <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator> по умолчанию требует, чтобы токены SAML были подписаны сертификатом X.509, если свойство <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> класса <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> имеет значение <xref:System.ServiceModel.Security.X509CertificateValidationMode.ChainTrust>. Одного использования режима `ChainTrust` недостаточно, чтобы определить, является ли издатель токена SAML доверенным. Службы, которым требуется более детальная модель управления безопасностью, могут использовать политики авторизации и принудительного применения для проверки издателей наборов утверждений, создаваемых при проверке подлинности токенов, или использовать параметры проверки X.509 в <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> для ограничения набора разрешенных сертификатов подписи. Дополнительные сведения см. [в разделе Управление утверждениями и авторизация с помощью модели удостоверений](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md) и [Федерации и выданных маркеров](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).  
+ Класс <xref:System.IdentityModel.Tokens.SamlAssertion> проверяет цифровые подписи в токене SAML, и класс <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator> по умолчанию требует, чтобы токены SAML были подписаны сертификатом X.509, если свойство <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> класса <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> имеет значение <xref:System.ServiceModel.Security.X509CertificateValidationMode.ChainTrust>. единственный режим `ChainTrust` недостаточно, чтобы определить, является ли издатель маркера SAML доверенным. Службы, которым требуется более детальная модель управления безопасностью, могут использовать политики авторизации и принудительного применения для проверки издателей наборов утверждений, создаваемых при проверке подлинности токенов, или использовать параметры проверки X.509 в <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> для ограничения набора разрешенных сертификатов подписи. Дополнительные сведения см. [в разделе Управление утверждениями и авторизация с помощью модели удостоверений](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md) и [Федерации и выданных маркеров](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).  
   
 ## <a name="switching-identity-without-a-security-context"></a>Смена удостоверения без контекста безопасности  
  Следующее применимо только к WinFX.  
   
  При установлении соединения между клиентом и сервером удостоверение клиента не меняется, за исключением одной ситуации: после открытия клиента WCF, если выполняются все перечисленные ниже условия.  
   
-- Процедуры установки контекста безопасности (с использованием сеанса безопасности транспорта или сеанса безопасности сообщений) отключены (<xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> свойство имеет `false` значение в случае безопасности сообщений или транспорта, не способных устанавливать безопасность. сеансы используются в случае безопасности транспорта. Пример подобного транспорта - HTTPS.);  
+- Процедуры для установки контекста безопасности (с использованием сеанса безопасности транспорта или сеанса безопасности сообщений) отключены (<xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> свойство имеет значение `false` в случае безопасности сообщений или транспорт, не способный устанавливать сеансы безопасности, используется в случае безопасности транспорта. Пример подобного транспорта - HTTPS.);  
   
 - используется проверка подлинности Windows;  
   
@@ -38,7 +38,7 @@ ms.locfileid: "69966175"
  Если при использовании проверки подлинности Windows совместно с олицетворением требуется детерминированное поведение, необходимо явным образом задать учетные данные Windows или установить со службой контекст безопасности. Для этого следует использовать сеанс безопасности сообщений или сеанс безопасности транспорта. Например, сеанс безопасности транспорта можно обеспечить с помощью транспорта net.tcp. Кроме того, при вызове службы необходимо использовать только синхронную версию операций клиента. При установки контекста безопасности сообщений необходимо поддерживать подключение к службе открытым дольше, чем длится настроенный период обновления сеанса, поскольку удостоверение также может измениться в процессе обновления сеанса.  
   
 ### <a name="credentials-capture"></a>Получение учетных данных  
- Приведенные ниже сведения относятся к [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] и последующим версиям.  
+ Следующее применимо к .NET Framework 3,5 и следующим версиям.  
   
  Учетные данные, используемые клиентом или службой, основаны на текущем потоке контекста. Получение учетных данных происходит, когда вызывается метод `Open` (или `BeginOpen` для асинхронных вызовов) клиента или службы. Для классов <xref:System.ServiceModel.ServiceHost> и <xref:System.ServiceModel.ClientBase%601> методы `Open` и `BeginOpen` наследуются от методов <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> и <xref:System.ServiceModel.Channels.CommunicationObject.BeginOpen%2A> класса <xref:System.ServiceModel.Channels.CommunicationObject>.  
   
@@ -46,13 +46,13 @@ ms.locfileid: "69966175"
 > При использовании метода `BeginOpen` невозможно гарантировать, что получаемые учетные данные принадлежат процессу, вызвавшему метод.  
   
 ## <a name="token-caches-allow-replay-using-obsolete-data"></a>Кэширование делает возможным повторное использование маркеров с помощью устаревших данных  
- WCF использует функцию локального центра безопасности (LSA) `LogonUser` для проверки подлинности пользователей по имени пользователя и паролю. Поскольку функция входа в систему является дорогостоящей, WCF позволяет кэшировать маркеры, которые представляют пользователей, прошедших проверку подлинности, для повышения производительности. Механизм кэширования сохраняет результаты предыдущей функции `LogonUser` для использования в будущем. Этот механизм отключен по умолчанию. чтобы включить его, <xref:System.ServiceModel.Security.UserNamePasswordServiceCredential.CacheLogonTokens%2A> задайте для `true`свойства значение или `cacheLogonTokens` [ \<используйте атрибут > усернамеаусентикатион](../../../../docs/framework/configure-apps/file-schema/wcf/usernameauthentication.md).  
+ Для проверки подлинности пользователей по имени пользователя и паролю WCF использует локальную систему безопасности (LSA) `LogonUser` функцию. Поскольку функция входа в систему является дорогостоящей, WCF позволяет кэшировать маркеры, которые представляют пользователей, прошедших проверку подлинности, для повышения производительности. Механизм кэширования сохраняет результаты предыдущей функции `LogonUser` для использования в будущем. Этот механизм отключен по умолчанию. чтобы включить его, задайте для свойства <xref:System.ServiceModel.Security.UserNamePasswordServiceCredential.CacheLogonTokens%2A> значение `true`или используйте атрибут `cacheLogonTokens` [\<усернамеаусентикатион >](../../../../docs/framework/configure-apps/file-schema/wcf/usernameauthentication.md).  
   
  Чтобы установить срок жизни кэшированных маркеров, задайте для свойства <xref:System.ServiceModel.Security.UserNamePasswordServiceCredential.CachedLogonTokenLifetime%2A> значение <xref:System.TimeSpan> или установите значение атрибута `cachedLogonTokenLifetime` элемента `userNameAuthentication`; значение по умолчанию - 15 минут. Обратите внимание, что пока маркер находится в кэше, любой клиент, который указывает соответствующие имя пользователя и пароль, может использовать маркер, даже если учетная запись была удалена из Windows или если пароль изменился. До истечения срока жизни и удаления маркера из кэша WCF позволяет пользователю (возможно, злоумышленнику) проходить проверку подлинности.  
   
- Чтобы устранить эту проблемы: Уменьшите окно атаки, задав для `cachedLogonTokenLifetime` этого параметра самое короткое время, необходимое пользователям.  
+ Чтобы ограничить связанные с этим угрозы, уменьшите вероятность атаки, задав в качестве значения `cachedLogonTokenLifetime` минимальный промежуток времени, который может потребоваться пользователям.  
   
-## <a name="issued-token-authorization-expiration-reset-to-large-value"></a>Авторизация выданного маркера: Сброс срока действия к большому значению  
+## <a name="issued-token-authorization-expiration-reset-to-large-value"></a>Авторизация выданных маркеров: сброс времени истечения до больших значений  
  При выполнении некоторых условий для свойства <xref:System.IdentityModel.Policy.AuthorizationContext.ExpirationTime%2A> объекта <xref:System.IdentityModel.Policy.AuthorizationContext> может быть установлено неожиданно большое значение (значение поля <xref:System.DateTime.MaxValue> минус один день или 20 декабря 9999 г.).  
   
  Это происходит при использовании <xref:System.ServiceModel.WSFederationHttpBinding> и любой из предоставляемых системой привязок, которые получили в качестве типа удостоверения клиента выданный маркер.  

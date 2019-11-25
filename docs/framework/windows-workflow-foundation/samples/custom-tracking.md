@@ -2,12 +2,12 @@
 title: Настраиваемое отслеживание
 ms.date: 03/30/2017
 ms.assetid: 2d191c9f-62f4-4c63-92dd-cda917fcf254
-ms.openlocfilehash: 32abf1dc4c9607b4a86f836fa2c759af1dbf1b69
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 5b6bcee2e889a7f7e64eb83155a92e5b4c27d719
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70989400"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141968"
 ---
 # <a name="custom-tracking"></a>Настраиваемое отслеживание
 В данном образце демонстрируется создание настраиваемого участника отслеживания и запись содержимого данных отслеживания в консоль. Помимо этого, в образце демонстрируется создание <xref:System.Activities.Tracking.CustomTrackingRecord> объектов, заполненных определенными пользователем данными. Консольный участник отслеживания фильтрует <xref:System.Activities.Tracking.TrackingRecord> объекты, выпущенные рабочим процессом, используя объект профиля отслеживания, созданный в коде.
@@ -18,7 +18,7 @@ ms.locfileid: "70989400"
 |Компонент|Описание|
 |---------------|-----------------|
 |Среда выполнения отслеживания|Предоставляет инфраструктуру для передачи записей отслеживания.|
-|Участники отслеживания|Потребляет записи отслеживания. [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)] поставляется с участником отслеживания, который записывает записи отслеживания в виде событий средства трассировки событий для Windows (ETW).|
+|Участники отслеживания|Потребляет записи отслеживания. .NET Framework 4 поставляется с участником отслеживания, который записывает записи отслеживания в качестве события трассировки событий Windows (ETW).|
 |Профиль отслеживания|Механизм фильтрации, который позволяет участнику отслеживания подписаться на подмножество записей отслеживания, передаваемых из экземпляра рабочего процесса.|
 
  Следующая таблица содержит подробные сведения о записях отслеживания, создаваемых средой выполнения рабочего процесса.
@@ -47,7 +47,7 @@ public abstract class TrackingParticipant
 }
 ```
 
- Полный участник отслеживания реализуется в файле ConsoleTrackingParticipant.cs. В следующем примере кода показан <xref:System.Activities.Tracking.TrackingParticipant.Track%2A> метод для настраиваемого участника отслеживания.
+ Полный участник отслеживания реализуется в файле ConsoleTrackingParticipant.cs. В следующем примере кода показан метод <xref:System.Activities.Tracking.TrackingParticipant.Track%2A> для настраиваемого участника отслеживания.
 
 ```csharp
 protected override void Track(TrackingRecord record, TimeSpan timeout)
@@ -112,7 +112,7 @@ invoker.Extensions.Add(customTrackingParticipant);
 
 - Объекты <xref:System.Activities.Tracking.CustomTrackingRecord> создаются и заполняются определенными пользователем данными, которые, по замыслу пользователя, будут выдаваться вместе с записью.
 
-- Выдается путем вызова метода Track <xref:System.Activities.ActivityContext>объекта. <xref:System.Activities.Tracking.CustomTrackingRecord>
+- <xref:System.Activities.Tracking.CustomTrackingRecord> создается путем вызова метода Track <xref:System.Activities.ActivityContext>.
 
  В следующем примере продемонстрировано создание <xref:System.Activities.Tracking.CustomTrackingRecord> объектов в рамках пользовательской операции.
 
@@ -144,7 +144,7 @@ context.Track(customRecord);
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Если этот каталог не существует, перейдите к [примерам Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] и примеры. Этот образец расположен в следующем каталоге.  
+> Если этот каталог не существует, перейдите к [примерам Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Samples. Этот образец расположен в следующем каталоге.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Tracking\CustomTracking`  
   

@@ -1,59 +1,62 @@
 ---
-title: Зависимость My от типа проекта (Visual Basic)
+title: Зависимость My от типа проекта
 ms.date: 07/20/2015
 helpviewer_keywords:
 - _MYTYPE
 ms.assetid: c188b38e-bd9d-4121-9983-41ea6a94d28e
-ms.openlocfilehash: 989329da7dc57cd50b9ce6c88117152d0cb93d66
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 975b8feb001bcab22185be0a360b0512de099b79
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72775200"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74330272"
 ---
 # <a name="how-my-depends-on-project-type-visual-basic"></a>Зависимость My от типа проекта (Visual Basic)
-`My` предоставляет только те объекты, которые необходимы для конкретного типа проекта. Например, объект `My.Forms` доступен в Windows Forms приложении, но недоступен в консольном приложении. В этом разделе описано, какие объекты `My` доступны в различных типах проектов.  
+
+`My` exposes only those objects required by a particular project type. For example, the `My.Forms` object is available in a Windows Forms application but not available in a console application. This topic describes which `My` objects are available in different project types.  
   
-## <a name="my-in-windows-applications-and-web-sites"></a>Мои приложения и веб-сайты Windows  
- `My` предоставляет только те объекты, которые полезны в текущем типе проекта; Он подавляет неприменимые объекты. Например, на следующем рисунке показана объектная модель `My` в Windows Formsном проекте.  
+## <a name="my-in-windows-applications-and-web-sites"></a>My in Windows Applications and Web Sites  
+
+ `My` exposes only objects that are useful in the current project type; it suppresses objects that are not applicable. For example, the following image shows the `My` object model in a Windows Forms project.  
   
- ![Схема, показывающая мою объектную модель в приложении Windows Forms.](./media/how-my-depends-on-project-type/my-object-model-windows-forms.png)  
+ ![Diagram that shows the My object model in a Windows Forms application.](./media/how-my-depends-on-project-type/my-object-model-windows-forms.png)  
   
- В проекте веб-сайта `My` предоставляет объекты, относящиеся к веб-разработчику (например, объекты `My.Request` и `My.Response`), одновременно поблокируя ненужные объекты (например, объект `My.Forms`). На следующем рисунке показана объектная модель `My` в проекте веб-сайта.  
+ In a Web site project, `My` exposes objects that are relevant to a Web developer (such as the `My.Request` and `My.Response` objects) while suppressing objects that are not relevant (such as the `My.Forms` object). The following image shows the `My` object model in a Web site project:  
   
- ![Схема, показывающая мою объектную модель в веб-приложении.](./media/how-my-depends-on-project-type/my-object-model-web.png)  
+ ![Diagram that shows the My object model in a Web application.](./media/how-my-depends-on-project-type/my-object-model-web.png)  
   
-## <a name="project-details"></a>Сведения о проекте  
- В следующей таблице показано, какие `My` объекты включены по умолчанию для восьми типов проектов: приложение Windows, Библиотека классов, консольное приложение, Библиотека элементов управления Windows, Библиотека веб-элементов управления, служба Windows, пустая и веб-сайт.  
+## <a name="project-details"></a>Project Details  
+
+ The following table shows which `My` objects are enabled by default for eight project types: Windows application, class Library, console application, Windows control library, Web control library, Windows service, empty, and Web site.  
   
- Существует три версии объекта `My.Application`, две версии объекта `My.Computer` и две версии объекта `My.User`. сведения об этих версиях приведены в сносках после таблицы.  
+ There are three versions of the `My.Application` object, two versions of the `My.Computer` object, and two versions of `My.User` object; details about these versions are given in the footnotes after the table.  
   
-|Мой объект|Приложение Windows|Библиотека классов|Консольное приложение|Библиотека элементов управления Windows|Библиотека веб-элементов управления|Служба Windows|Empty|Веб-сайт|  
+|My Object|Приложение Windows|Библиотека классов|Консольное приложение|Windows Control Library|Web Control Library|Служба Windows|Empty|Веб-сайт|  
 |---|---|---|---|---|---|---|---|---|  
-|`My.Application`|**Да** <sup>1</sup>|**Да** <sup>2</sup>|**Да** <sup>3</sup>|**Да** <sup>2</sup>|Нет|**Да** <sup>3</sup>|Нет|Нет|  
-|`My.Computer`|**Да** <sup>4</sup>|**Да** <sup>4</sup>|**Да** <sup>4</sup>|**Да** <sup>4</sup>|**Да** <sup>5</sup>|**Да** <sup>4</sup>|Нет|**Да** <sup>5</sup>|  
+|`My.Application`|**Yes** <sup>1</sup>|**Yes** <sup>2</sup>|**Yes** <sup>3</sup>|**Yes** <sup>2</sup>|Нет|**Yes** <sup>3</sup>|Нет|Нет|  
+|`My.Computer`|**Yes** <sup>4</sup>|**Yes** <sup>4</sup>|**Yes** <sup>4</sup>|**Yes** <sup>4</sup>|**Yes** <sup>5</sup>|**Yes** <sup>4</sup>|Нет|**Yes** <sup>5</sup>|  
 |`My.Forms`|**Да**|Нет|Нет|**Да**|Нет|Нет|Нет|Нет|  
 |`My.Log`|Нет|Нет|Нет|Нет|Нет|Нет|Нет|**Да**|  
 |`My.Request`|Нет|Нет|Нет|Нет|Нет|Нет|Нет|**Да**|  
 |`My.Resources`|**Да**|**Да**|**Да**|**Да**|**Да**|**Да**|Нет|Нет|  
 |`My.Response`|Нет|Нет|Нет|Нет|Нет|Нет|Нет|**Да**|  
 |`My.Settings`|**Да**|**Да**|**Да**|**Да**|**Да**|**Да**|Нет|Нет|  
-|`My.User`|**Да** <sup>6</sup>|**Да** <sup>6</sup>|**Да** <sup>6</sup>|**Да** <sup>6</sup>|**Да** <sup>7</sup>|**Да** <sup>6</sup>|Нет|**Да** <sup>7</sup>|  
+|`My.User`|**Yes** <sup>6</sup>|**Yes** <sup>6</sup>|**Yes** <sup>6</sup>|**Yes** <sup>6</sup>|**Yes** <sup>7</sup>|**Yes** <sup>6</sup>|Нет|**Yes** <sup>7</sup>|  
 |`My.WebServices`|**Да**|**Да**|**Да**|**Да**|**Да**|**Да**|Нет|Нет|  
   
- <sup>1</sup> Windows Forms версии `My.Application`. Является производным от версии консоли (см. Примечание 3); добавляет поддержку взаимодействия с окнами приложения и предоставляет модель приложения Visual Basic.  
+ <sup>1</sup> Windows Forms version of `My.Application`. Derives from the console version (see Note 3); adds support for interacting with the application's windows and provides the Visual Basic Application model.  
   
- <sup>2</sup> версия библиотеки `My.Application`. Предоставляет базовые функциональные возможности, необходимые для приложения: предоставляет элементы для записи в журнал приложений и доступа к сведениям о приложении.  
+ <sup>2</sup> Library version of `My.Application`. Provides the basic functionality needed by an application: provides members for writing to the application log and accessing application information.  
   
- <sup>3</sup> консольная версия `My.Application`. Является производным от версии библиотеки (см. Примечание 2) и добавляет дополнительные члены для доступа к аргументам командной строки приложения и сведения о развертывании ClickOnce.  
+ <sup>3</sup> Console version of `My.Application`. Derives from the library version (see Note 2), and adds additional members for accessing the application's command-line arguments and ClickOnce deployment information.  
   
- <sup>4</sup> версия `My.Computer` Windows. Является производным от версии сервера (см. Примечание 5) и предоставляет доступ к полезным объектам на клиентском компьютере, таким как клавиатура, экран и мышь.  
+ <sup>4</sup> Windows version of `My.Computer`. Derives from the Server version (see Note 5), and provides access to useful objects on a client machine, such as the keyboard, screen, and mouse.  
   
- <sup>5</sup> серверная версия `My.Computer`. Предоставляет основные сведения о компьютере, такие как имя, доступ к часам и т. д.  
+ <sup>5</sup> Server version of `My.Computer`. Provides basic information about the computer, such as the name, access to the clock, and so on.  
   
- <sup>6</sup> `My.User` версии Windows. Этот объект связан с текущим удостоверением потока.  
+ <sup>6</sup> Windows version of `My.User`. This object is associated with the thread's current identity.  
   
- <sup>7</sup> . веб-версия `My.User`. Этот объект связан с удостоверением пользователя текущего HTTP-запроса приложения.  
+ <sup>7</sup> Web version of `My.User`. This object is associated with the user identity of the application's current HTTP request.  
   
 ## <a name="see-also"></a>См. также
 

@@ -1,5 +1,5 @@
 ---
-title: Структуры (Visual Basic)
+title: Структуры
 ms.date: 07/20/2015
 helpviewer_keywords:
 - structures [Visual Basic]
@@ -9,36 +9,36 @@ helpviewer_keywords:
 - user-defined data types [Visual Basic], about user-defined data types
 - types [Visual Basic], user-defined
 ms.assetid: 55e86462-5e99-4d33-8018-6d097ca491b2
-ms.openlocfilehash: ebfc82665bb18d96c83db8f29a6c206a9a71fd7f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b5f1f8d6d783c6612fdb2bd2058b61a5a46024cc
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61663366"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350775"
 ---
 # <a name="structures-visual-basic"></a>Структуры (Visual Basic)
-Объект *структура* представляет собой обобщение определяемых пользователем типов (UDT), поддерживаемых в предыдущих версиях Visual Basic. Помимо полей структуры могут предоставлять свойства, методы и события. Структура может реализовать один или несколько интерфейсов, и можно объявлять индивидуальные уровни доступа для каждого поля.  
+A *structure* is a generalization of the user-defined type (UDT) supported by previous versions of Visual Basic. In addition to fields, structures can expose properties, methods, and events. A structure can implement one or more interfaces, and you can declare individual access levels for each field.  
   
- Можно комбинировать элементы данных различных типов, чтобы создать структуру. Структуры связывают один или несколько *элементы* друг с другом и с самой структурой. При объявлении структуры, он становится *составной тип данных*, и можно объявлять переменные этого типа.  
+ You can combine data items of different types to create a structure. A structure associates one or more *elements* with each other and with the structure itself. When you declare a structure, it becomes a *composite data type*, and you can declare variables of that type.  
   
- Структуры полезны в тех случаях, когда требуется одну переменную для хранения связанных определенная информация. Например может потребоваться сохранить вместе имя, телефон и заработной платы сотрудника. Эти сведения можно использовать несколько переменных, или можно определить структуру и использовать ее для одной переменной сотрудника. Преимущество структуры становится очевидным, когда у вас есть множество сотрудников, поэтому несколько экземпляров переменной.  
+ Structures are useful when you want a single variable to hold several related pieces of information. For example, you might want to keep an employee's name, telephone extension, and salary together. You could use several variables for this information, or you could define a structure and use it for a single employee variable. The advantage of the structure becomes apparent when you have many employees and therefore many instances of the variable.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>Содержание  
  [Практическое руководство. Объявление структуры](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)  
- Показан способ объявления структуры и его элементов.  
+ Shows how to declare a structure and its elements.  
   
  [Переменные структуры](../../../../visual-basic/programming-guide/language-features/data-types/structure-variables.md)  
- Описание структуры. присваивание переменной и доступ к его элементам.  
+ Covers assigning a structure to a variable and accessing its elements.  
   
  [Структуры и другие элементы программирования](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-other-programming-elements.md)  
- Описание, способов взаимодействия структур с массивы, объекты, процедурами и друг с другом.  
+ Summarizes how structures interact with arrays, objects, procedures, and each other.  
   
  [Структуры и классы](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md)  
- Описывает сходства и различия между структурами и классами.  
+ Describes the similarities and differences between structures and classes.  
   
 ## <a name="related-sections"></a>Связанные разделы  
  [Типы данных](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
- Знакомство с типами данных Visual Basic и описывается их использование.  
+ Introduces the Visual Basic data types and describes how to use them.  
   
  [Типы данных](../../../../visual-basic/language-reference/data-types/index.md)  
- Список простых типов данных предоставляемые Visual Basic.
+ Lists the elementary data types supplied by Visual Basic.

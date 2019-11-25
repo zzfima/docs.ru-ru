@@ -6,19 +6,19 @@ helpviewer_keywords:
 - application domains, shadow copying assemblies
 - shadow copying assemblies
 ms.assetid: de8b8759-fca7-4260-896b-5a4973157672
-ms.openlocfilehash: 40a1b5062d45b7b540af7058b82b77c664070d2e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9fc8a4aeeeca40f71ed9114a9db40b9a56e5fe6b
+ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73119781"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74204562"
 ---
 # <a name="shadow-copying-assemblies"></a>Теневое копирование сборок
 
 Теневое копирование позволяет обновлять используемые в домене приложения сборки без выгрузки домена приложения. Это особенно полезно для приложений, которые должны быть доступны постоянно, таких как сайты ASP.NET.
 
 > [!IMPORTANT]
-> Теневое копирование не поддерживается в приложениях [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)].
+> Shadow copying is not supported in Windows 8.x Store apps.
 
 При загрузке сборки среда CLR блокирует ее файл, поэтому его нельзя обновить до тех пор, пока сборка не выгружена. Единственный способ выгрузить сборку из домена приложения — выгрузить сам домен. Таким образом, в обычных условиях сборку нельзя обновить на диске до тех пор, пока не выгружены все домены приложений, использующие ее.
 

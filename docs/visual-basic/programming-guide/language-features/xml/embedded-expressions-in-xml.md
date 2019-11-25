@@ -1,5 +1,5 @@
 ---
-title: Встроенные выражения в XML (Visual Basic)
+title: Встроенные выражения в XML
 ms.date: 07/20/2015
 f1_keywords:
 - vb.XmlEmbeddedExpression
@@ -8,21 +8,21 @@ helpviewer_keywords:
 - LINQ to XML [Visual Basic], embedded expressions
 - XML literals [Visual Basic], embedded expressions
 ms.assetid: bf2eb779-b751-4b7c-854f-9f2161482352
-ms.openlocfilehash: 525fa04db86a299d88e1612aac76d014f35124eb
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0cdb960160457108ddf18c554dae5f5993269833
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69922620"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74332350"
 ---
 # <a name="embedded-expressions-in-xml-visual-basic"></a>Встроенные выражения в XML (Visual Basic)
-Внедренные выражения позволяют создавать XML-литералы, содержащие выражения, вычисляемые во время выполнения. Синтаксис для внедренного выражения — `<%=` `expression` `%>`это то же, что и синтаксис, используемый в ASP.NET.  
+Embedded expressions enable you to create XML literals that contain expressions that are evaluated at run time. The syntax for an embedded expression is `<%=` `expression` `%>`, which is the same as the syntax used in ASP.NET.  
   
- Например, можно создать литерал XML-элемента, объединяющий внедренные выражения с текстовым содержимым.  
+ For example, you can create an XML element literal, combining embedded expressions with literal text content.  
   
  [!code-vb[VbXMLSamples#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#27)]  
   
- Если `isbnNumber` содержит целое число 12345 `modifiedDate` и содержит дату 3/5/2006, то при выполнении этого кода значение `book` равно:  
+ If `isbnNumber` contains the integer 12345 and `modifiedDate` contains the date 3/5/2006, when this code executes, the value of `book` is:  
   
 ```xml  
 <book category="fiction" isbn="12345">  
@@ -30,55 +30,55 @@ ms.locfileid: "69922620"
 </book>  
 ```  
   
-## <a name="embedded-expression-location-and-validation"></a>Расположение и проверка внедренных выражений  
- Встроенные выражения могут использоваться только в определенных местах в выражениях литералов XML. Расположение выражения определяет, какие типы могут быть возвращены выражением `Nothing` и как обрабатывается. В следующей таблице описаны допустимые расположения и типы внедренных выражений.  
+## <a name="embedded-expression-location-and-validation"></a>Embedded Expression Location and Validation  
+ Embedded expressions can appear only at certain locations within XML literal expressions. The expression location controls which types the expression can return and how `Nothing` is handled. The following table describes the allowed locations and types of embedded expressions.  
   
-|Расположение в литерале|Тип выражения|Обработка`Nothing`|  
+|Location in literal|Type of expression|Handling of `Nothing`|  
 |---|---|---|  
-|Имя XML-элемента|<xref:System.Xml.Linq.XName>|Error|  
-|Содержимое XML-элемента|`Object`или массив`Object`|Не учитывается|  
-|Имя атрибута XML-элемента|<xref:System.Xml.Linq.XName>|Ошибка, если значение атрибута также не равно`Nothing`|  
-|Значение атрибута XML-элемента|`Object`|Объявление атрибута пропущено|  
-|Атрибут XML-элемента|<xref:System.Xml.Linq.XAttribute>или коллекция<xref:System.Xml.Linq.XAttribute>|Не учитывается|  
-|Корневой элемент XML-документа|<xref:System.Xml.Linq.XElement>или коллекция из одного <xref:System.Xml.Linq.XElement> объекта и произвольное <xref:System.Xml.Linq.XProcessingInstruction> число объектов и <xref:System.Xml.Linq.XComment>|Не учитывается|  
+|XML element name|<xref:System.Xml.Linq.XName>|Error|  
+|XML element content|`Object` or array of `Object`|Не учитывается|  
+|XML element attribute name|<xref:System.Xml.Linq.XName>|Error, unless the attribute value is also `Nothing`|  
+|XML element attribute value|`Object`|Attribute declaration ignored|  
+|XML element attribute|<xref:System.Xml.Linq.XAttribute> or a collection of <xref:System.Xml.Linq.XAttribute>|Не учитывается|  
+|XML document root element|<xref:System.Xml.Linq.XElement> or a collection of one <xref:System.Xml.Linq.XElement> object and an arbitrary number of <xref:System.Xml.Linq.XProcessingInstruction> and <xref:System.Xml.Linq.XComment> objects|Не учитывается|  
   
-- Пример внедренного выражения в имени XML-элемента:  
+- Example of an embedded expression in an XML element name:  
   
      [!code-vb[VbXMLSamples#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#32)]  
   
-- Пример внедренного выражения в содержимом XML-элемента:  
+- Example of an embedded expression in the content of an XML element:  
   
      [!code-vb[VbXMLSamples#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#33)]  
   
-- Пример внедренного выражения в имени атрибута XML-элемента:  
+- Example of an embedded expression in an XML element attribute name:  
   
      [!code-vb[VbXMLSamples#34](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#34)]  
   
-- Пример внедренного выражения в значении атрибута XML-элемента:  
+- Example of an embedded expression in an XML element attribute value:  
   
      [!code-vb[VbXMLSamples#35](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#35)]  
   
-- Пример внедренного выражения в атрибуте XML-элемента:  
+- Example of an embedded expression in an XML element attribute:  
   
      [!code-vb[VbXMLSamples#36](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#36)]  
   
-- Пример внедренного выражения в корневом элементе XML-документа:  
+- Example of an embedded expression in an XML document root element:  
   
      [!code-vb[VbXMLSamples#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#37)]  
   
- Если включить `Option Strict`, компилятор проверяет, что тип каждого внедренного выражения расширяется до требуемого типа. Единственным исключением является корневой элемент XML-документа, который проверяется при выполнении кода. При компиляции без `Option Strict`можно внедрить выражения типа `Object` и их тип проверяется во время выполнения.  
+ If you enable `Option Strict`, the compiler checks that the type of each embedded expression widens to the required type. The only exception is for the root element of an XML document, which is verified when the code runs. If you compile without `Option Strict`, you can embed expressions of type `Object` and their type is verified at run time.  
   
- В расположениях, где содержимое является необязательным, внедренные выражения, содержащие `Nothing` , игнорируются. Это означает, что нет необходимости проверять содержимое элемента, значения атрибутов и элементы `Nothing` массива перед использованием XML-литерала. Обязательные значения, такие как имена элементов и атрибутов, не `Nothing`могут иметь значение.  
+ In locations where content is optional, embedded expressions that contain `Nothing` are ignored. This means you do not have to check that element content, attribute values, and array elements are not `Nothing` before you use an XML literal. Required values, such as element and attribute names, cannot be `Nothing`.  
   
- Дополнительные сведения об использовании внедренных выражений в определенном типе литерала см. в разделе [литерал XML-документа](../../../../visual-basic/language-reference/xml-literals/xml-document-literal.md), [литерал XML-элемента](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md).  
+ For more information about using an embedded expression in a particular type of literal, see [XML Document Literal](../../../../visual-basic/language-reference/xml-literals/xml-document-literal.md), [XML Element Literal](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md).  
   
 ## <a name="scoping-rules"></a>Правила области видимости  
- Компилятор преобразует каждый XML-литерал в вызов конструктора для соответствующего типа литерала. Литеральное содержимое и внедренные выражения в XML-литерале передаются в качестве аргументов в конструктор. Это означает, что все элементы программирования Visual Basic, доступные для XML-литерала, также доступны для внедренных выражений.  
+ The compiler converts each XML literal into a constructor call for the appropriate literal type. The literal content and embedded expressions in an XML literal are passed as arguments to the constructor. This means that all Visual Basic programming elements available to an XML literal are also available to its embedded expressions.  
   
- В XML-литерале можно получить доступ к префиксам пространства имен XML, объявленным с помощью `Imports` инструкции. Можно объявить новый префикс пространства имен XML или затенить существующий префикс пространства имен XML в элементе с помощью `xmlns` атрибута. Новое пространство имен доступно для дочерних узлов этого элемента, но не для XML-литералов во внедренных выражениях.  
+ Within an XML literal, you can access the XML namespace prefixes declared with the `Imports` statement. You can declare a new XML namespace prefix, or shadow an existing XML namespace prefix, in an element by using the `xmlns` attribute. The new namespace is available to the child nodes of that element, but not to XML literals in embedded expressions.  
   
 > [!NOTE]
-> При объявлении префикса пространства имен XML с помощью `xmlns` атрибута Namespace значение атрибута должно быть строковой константой. В этом отношении использование `xmlns` атрибута аналогично `Imports` использованию оператора для объявления пространства имен XML. Нельзя использовать внедренное выражение для указания значения пространства имен XML.  
+> When you declare an XML namespace prefix by using the `xmlns` namespace attribute, the attribute value must be a constant string. In this regard, using the `xmlns` attribute is like using the `Imports` statement to declare an XML namespace. You cannot use an embedded expression to specify the XML namespace value.  
   
 ## <a name="see-also"></a>См. также
 

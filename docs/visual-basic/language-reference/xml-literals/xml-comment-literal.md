@@ -1,5 +1,5 @@
 ---
-title: XML-литерал комментариев (Visual Basic)
+title: XML-литерал комментария
 ms.date: 07/20/2015
 f1_keywords:
 - vb.XmlLiteralComment
@@ -9,15 +9,15 @@ helpviewer_keywords:
 - XML comment literal [Visual Basic]
 - XML literals [Visual Basic], comment
 ms.assetid: 634c1cee-5e01-48d0-88d7-2dd55e4a9e52
-ms.openlocfilehash: 91369392f33f2a86a7a4cb5ffb3faa668c113348
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8d9db66aabe344bd5c8f9a92ac8618b7bc1abb43
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69965402"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349389"
 ---
 # <a name="xml-comment-literal-visual-basic"></a>XML-литерал комментариев (Visual Basic)
-Литерал, представляющий <xref:System.Xml.Linq.XComment> объект.  
+A literal representing an <xref:System.Xml.Linq.XComment> object.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -29,29 +29,29 @@ ms.locfileid: "69965402"
   
 |Термин|Определение|  
 |---|---|  
-|`<!--`|Обязательный. Обозначает начало XML-комментария.|  
-|`content`|Обязательный. Текст, отображаемый в XML-комментарии. Не может содержать последовательность из двух дефисов (--) или заканчиваться дефисом, рядом с закрывающим тегом.|  
-|`-->`|Обязательный. Обозначает конец XML-комментария.|  
+|`<!--`|Обязательный. Denotes the start of the XML comment.|  
+|`content`|Обязательный. Text to appear in the XML comment. Cannot contain a series of two hyphens (--) or end with a hyphen adjacent to the closing tag.|  
+|`-->`|Обязательный. Denotes the end of the XML comment.|  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Объект <xref:System.Xml.Linq.XComment>.  
   
-## <a name="remarks"></a>Примечания  
- Литералы XML-комментариев не содержат содержимого документа; они содержат сведения о документе. Раздел комментария XML заканчивается последовательностью "-->". Это подразумевает следующие моменты:  
+## <a name="remarks"></a>Заметки  
+ XML comment literals do not contain document content; they contain information about the document. The XML comment section ends with the sequence "-->". This implies the following points:  
   
-- Нельзя использовать внедренное выражение в литерале XML-комментария, так как разделители внедренных выражений являются допустимым содержимым XML-комментариев.  
+- You cannot use an embedded expression in an XML comment literal because the embedded expression delimiters are valid XML comment content.  
   
-- Разделы комментариев XML не могут быть вложенными `content` , поскольку не могут содержать значение "-->".  
+- XML comment sections cannot be nested, because `content` cannot contain the value "-->".  
   
- Литерал комментария XML можно назначить переменной или включить в литерал XML-элемента.  
+ You can assign an XML comment literal to a variable, or you can include it in an XML element literal.  
   
 > [!NOTE]
-> XML-литерал может охватывать несколько строк без использования символов продолжения строки. Эта функция позволяет копировать содержимое из XML-документа и вставлять его непосредственно в Visual Basic программу.  
+> An XML literal can span multiple lines without using line continuation characters. This feature enables you to copy content from an XML document and paste it directly into a Visual Basic program.  
   
- Компилятор Visual Basic преобразует литерал XML-комментария в вызов <xref:System.Xml.Linq.XComment.%23ctor%2A> конструктора.  
+ The Visual Basic compiler converts the XML comment literal to a call to the <xref:System.Xml.Linq.XComment.%23ctor%2A> constructor.  
   
 ## <a name="example"></a>Пример  
- В следующем примере создается XML-комментарий, содержащий текст "это комментарий".  
+ The following example creates an XML comment that contains the text "This is a comment".  
   
  [!code-vb[VbXMLSamples#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples4.vb#9)]  
   

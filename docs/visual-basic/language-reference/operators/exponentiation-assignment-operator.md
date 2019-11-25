@@ -1,5 +1,5 @@
 ---
-title: Оператор ^= (Visual Basic)
+title: Оператор ^=
 ms.date: 07/20/2015
 f1_keywords:
 - vb.^=
@@ -9,15 +9,15 @@ helpviewer_keywords:
 - ^= operator [Visual Basic]
 - compound assignment statements [Visual Basic]
 ms.assetid: 397da132-2d96-4a85-a7bc-f7c730a608c9
-ms.openlocfilehash: 382e0b27c2dbf27e5acccf29f1b8d2b002cb6664
-ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
+ms.openlocfilehash: fe5e8fc2b64b9e7c33483612071d338a0ee22768
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/28/2019
-ms.locfileid: "71592226"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74331297"
 ---
 # <a name="-operator-visual-basic"></a>Оператор ^= (Visual Basic)
-Возвращает значение переменной или свойства в степень выражения и присваивает результат переменной или свойству.  
+Raises the value of a variable or property to the power of an expression and assigns the result back to the variable or property.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -27,25 +27,25 @@ variableorproperty ^= expression
   
 ## <a name="parts"></a>Части  
  `variableorproperty`  
- Обязательный. Любая числовая переменная или свойство.  
+ Обязательный. Any numeric variable or property.  
   
  `expression`  
  Обязательный. Произвольное числовое выражение.  
   
-## <a name="remarks"></a>Примечания  
- Элемент в левой части оператора `^=` может быть простой скалярной переменной, свойством или элементом массива. Переменная или свойство не может быть [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md).  
+## <a name="remarks"></a>Заметки  
+ The element on the left side of the `^=` operator can be a simple scalar variable, a property, or an element of an array. The variable or property cannot be [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md).  
   
- Оператор `^=` сначала вызывает значение переменной или свойства (в левой части оператора) на степень значения выражения (в правой части оператора)...;. Затем оператор присваивает результат этой операции с переменной или свойством.  
+ The `^=` operator first raises the value of the variable or property (on the left-hand side of the operator) to the power of the value of the expression (on the right-hand side of the operator). The operator then assigns the result of that operation back to the variable or property.  
   
- Visual Basic всегда выполняет возведение в степень в [типе данных Double](../../../visual-basic/language-reference/data-types/double-data-type.md). Операнды любого другого типа преобразуются в `Double`, а результат всегда `Double`.  
+ Visual Basic always performs exponentiation in the [Double Data Type](../../../visual-basic/language-reference/data-types/double-data-type.md). Operands of any different type are converted to `Double`, and the result is always `Double`.  
   
- Значение `expression` может быть дробным, отрицательным или обоими.  
+ The value of `expression` can be fractional, negative, or both.  
   
 ## <a name="overloading"></a>Перегрузка  
- [Оператор ^](../../../visual-basic/language-reference/operators/exponentiation-operator.md) может быть *перегружен*, что означает, что класс или структура может переопределить свое поведение, если операнд имеет тип этого класса или структуры. Перегрузка оператора `^` влияет на поведение оператора `^=`. Если в коде используется `^=` для класса или структуры, которая перегружает `^`, убедитесь, что вы понимаете его переопределенное поведение. Для получения дополнительной информации см. [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+ The [^ Operator](../../../visual-basic/language-reference/operators/exponentiation-operator.md) can be *overloaded*, which means that a class or structure can redefine its behavior when an operand has the type of that class or structure. Overloading the `^` operator affects the behavior of the `^=` operator. If your code uses `^=` on a class or structure that overloads `^`, be sure you understand its redefined behavior. Для получения дополнительной информации см. [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Пример  
- В следующем примере оператор `^=` используется для возведения значения одной переменной `Integer` в степень второй переменной и присваивания результата первой переменной.  
+ The following example uses the `^=` operator to raise the value of one `Integer` variable to the power of a second variable and assign the result to the first variable.  
   
  [!code-vb[VbVbalrOperators#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#21)]  
   

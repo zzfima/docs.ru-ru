@@ -1,12 +1,12 @@
 ---
 title: Атрибуты (C#)
 ms.date: 04/26/2018
-ms.openlocfilehash: 7b78d5832c15d3d1142b80d2ccb96a72e4e20390
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: 2a07035ea97bb0ff1a8f4793fe8a30d3a42c34a7
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70374372"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141565"
 ---
 # <a name="attributes-c"></a>Атрибуты (C#)
 
@@ -25,7 +25,7 @@ ms.locfileid: "70374372"
 
 В этом примере атрибут <xref:System.SerializableAttribute> используется для применения определенной характеристики к классу:
 
-[!code-csharp[Using the serializable attribute](../../../../../samples/snippets/csharp/attributes/AttributesOverview.cs#1)]
+[!code-csharp[Using the serializable attribute](~/samples/snippets/csharp/attributes/AttributesOverview.cs#1)]
 
 Метод с атрибутом <xref:System.Runtime.InteropServices.DllImportAttribute> объявляется следующим образом:
 
@@ -33,12 +33,12 @@ ms.locfileid: "70374372"
 
 В объявлении можно разместить несколько атрибутов, как показано в следующем примере:
 
-[!code-csharp[Including the interop namespace](../../../../../samples/snippets/csharp/attributes/AttributesOverview.cs#3)]
-[!code-csharp[Declaring two way marshaling for arguments](../../../../../samples/snippets/csharp/attributes/AttributesOverview.cs#4)]
+[!code-csharp[Including the interop namespace](~/samples/snippets/csharp/attributes/AttributesOverview.cs#3)]
+[!code-csharp[Declaring two way marshaling for arguments](~/samples/snippets/csharp/attributes/AttributesOverview.cs#4)]
 
 Некоторые атрибуты можно указать для одной сущности более одного раза. Пример такого многократно используемого атрибута — <xref:System.Diagnostics.ConditionalAttribute>:
 
-[!code-csharp[Using the conditional attribute](../../../../../samples/snippets/csharp/attributes/AttributesOverview.cs#5)]
+[!code-csharp[Using the conditional attribute](~/samples/snippets/csharp/attributes/AttributesOverview.cs#5)]
 
 > [!NOTE]
 > По соглашению все имена атрибутов заканчиваются словом Attribute, чтобы отличать их от других элементов библиотек .NET. Но при использовании атрибута в коде этот суффикс можно не указывать. Например, обращение `[DllImport]` эквивалентно `[DllImportAttribute]`, хотя в библиотеке классов .NET Framework этот атрибут имеет имя `DllImportAttribute`.
@@ -115,7 +115,7 @@ using System.Reflection;
 
 ## <a name="related-sections"></a>Связанные разделы
 
-Дополнительные сведения:
+Дополнительные сведения можно найти в разделе
 
 - [Создание настраиваемых атрибутов (C#)](creating-custom-attributes.md)  
 - [Обращение к атрибутам с помощью отражения (C#)](accessing-attributes-by-using-reflection.md)  
