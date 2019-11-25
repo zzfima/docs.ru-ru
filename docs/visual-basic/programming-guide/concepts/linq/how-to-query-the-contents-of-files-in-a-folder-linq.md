@@ -1,79 +1,83 @@
 ---
-title: Практическое руководство. Запрос содержимого файлов в папке (LINQ) (Visual Basic)
+title: How to query the contents of files in a folder (LINQ)
 ms.date: 07/20/2015
 ms.assetid: edacbcd3-f3e4-4429-a8be-28a58dc0dd70
-ms.openlocfilehash: 8af6653c3cffe846082606de81d4bbefedaa30e9
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 02ffa398c495ca5af77685d62299c59cfc3b9d9c
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592122"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347615"
 ---
-# <a name="how-to-query-the-contents-of-files-in-a-folder-linq-visual-basic"></a><span data-ttu-id="671a1-102">Практическое руководство. Запрос содержимого файлов в папке (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="671a1-102">How to: Query the Contents of Files in a Folder (LINQ) (Visual Basic)</span></span>
-<span data-ttu-id="671a1-103">В этом примере показано, как запросить все файлы в указанном дереве каталогов, открыть каждый файл и проверить его содержимое.</span><span class="sxs-lookup"><span data-stu-id="671a1-103">This example shows how to query over all the files in a specified directory tree, open each file, and inspect its contents.</span></span> <span data-ttu-id="671a1-104">Этот способ позволяет создать индексы для содержимого дерева каталогов или обратить их порядок.</span><span class="sxs-lookup"><span data-stu-id="671a1-104">This type of technique could be used to create indexes or reverse indexes of the contents of a directory tree.</span></span> <span data-ttu-id="671a1-105">В этом примере выполняется простой поиск строки.</span><span class="sxs-lookup"><span data-stu-id="671a1-105">A simple string search is performed in this example.</span></span> <span data-ttu-id="671a1-106">Более сложные типы сопоставления шаблонов можно выполнять с помощью регулярных выражений.</span><span class="sxs-lookup"><span data-stu-id="671a1-106">However, more complex types of pattern matching can be performed with a regular expression.</span></span> <span data-ttu-id="671a1-107">Дополнительные сведения см. в разделе [Практическое руководство. Объединение запросов LINQ с помощью регулярных выражений (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-linq-queries-with-regular-expressions.md).</span><span class="sxs-lookup"><span data-stu-id="671a1-107">For more information, see [How to: Combine LINQ Queries with Regular Expressions (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-linq-queries-with-regular-expressions.md).</span></span>  
+# <a name="how-to-query-the-contents-of-files-in-a-folder-linq-visual-basic"></a><span data-ttu-id="e5a00-102">How to query the contents of files in a folder (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e5a00-102">How to query the contents of files in a folder (LINQ) (Visual Basic)</span></span>
+
+<span data-ttu-id="e5a00-103">В этом примере показано, как запросить все файлы в указанном дереве каталогов, открыть каждый файл и проверить его содержимое.</span><span class="sxs-lookup"><span data-stu-id="e5a00-103">This example shows how to query over all the files in a specified directory tree, open each file, and inspect its contents.</span></span> <span data-ttu-id="e5a00-104">Этот способ позволяет создать индексы для содержимого дерева каталогов или обратить их порядок.</span><span class="sxs-lookup"><span data-stu-id="e5a00-104">This type of technique could be used to create indexes or reverse indexes of the contents of a directory tree.</span></span> <span data-ttu-id="e5a00-105">В этом примере выполняется простой поиск строки.</span><span class="sxs-lookup"><span data-stu-id="e5a00-105">A simple string search is performed in this example.</span></span> <span data-ttu-id="e5a00-106">Более сложные типы сопоставления шаблонов можно выполнять с помощью регулярных выражений.</span><span class="sxs-lookup"><span data-stu-id="e5a00-106">However, more complex types of pattern matching can be performed with a regular expression.</span></span> <span data-ttu-id="e5a00-107">For more information, see [How to: Combine LINQ Queries with Regular Expressions (Visual Basic)](how-to-combine-linq-queries-with-regular-expressions.md).</span><span class="sxs-lookup"><span data-stu-id="e5a00-107">For more information, see [How to: Combine LINQ Queries with Regular Expressions (Visual Basic)](how-to-combine-linq-queries-with-regular-expressions.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="671a1-108">Пример</span><span class="sxs-lookup"><span data-stu-id="671a1-108">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="e5a00-108">Пример</span><span class="sxs-lookup"><span data-stu-id="e5a00-108">Example</span></span>  
   
-```vb  
+```vb
+Imports System.IO
+
 Module Module1  
     'QueryContents  
     Public Sub Main()  
   
         ' Modify this path as necessary.  
-        Dim startFolder = "c:\program files\Microsoft Visual Studio 9.0\VB\"  
-  
-        'Take a snapshot of the folder contents  
-        Dim dir As New System.IO.DirectoryInfo(startFolder)  
-        Dim fileList = dir.GetFiles("*.*", System.IO.SearchOption.AllDirectories)  
-  
-        Dim searchTerm = "Visual Studio"  
-  
-        ' Search the contents of each file.  
-        ' A regular expression created with the RegEx class  
-        ' could be used instead of the Contains method.  
-        Dim queryMatchingFiles = From file In fileList _  
-                                 Where file.Extension = ".htm" _  
-                                 Let fileText = GetFileText(file.FullName) _  
-                                 Where fileText.Contains(searchTerm) _  
-                                 Select file.FullName  
-  
-        Console.WriteLine("The term " & searchTerm & " was found in:")  
-  
-        ' Execute the query.  
-        For Each filename In queryMatchingFiles  
-            Console.WriteLine(filename)  
-        Next  
-  
-        ' Keep the console window open in debug mode.  
-        Console.WriteLine("Press any key to exit")  
-        Console.ReadKey()  
-  
-    End Sub  
-  
-    ' Read the contents of the file. This is done in a separate  
-    ' function in order to handle potential file system errors.  
-    Function GetFileText(ByVal name As String) As String  
-  
-        ' If the file has been deleted, the right thing  
-        ' to do in this case is return an empty string.  
-        Dim fileContents = String.Empty  
-  
-        ' If the file has been deleted since we took   
-        ' the snapshot, ignore it and return the empty string.  
-        If System.IO.File.Exists(name) Then  
-            fileContents = System.IO.File.ReadAllText(name)  
-        End If  
-  
-        Return fileContents  
-  
-    End Function  
-End Module  
-```  
-  
-## <a name="compiling-the-code"></a><span data-ttu-id="671a1-109">Компиляция кода</span><span class="sxs-lookup"><span data-stu-id="671a1-109">Compiling the Code</span></span>  
-<span data-ttu-id="671a1-110">Создайте проект консольного приложения VB.NET, с помощью `Imports` оператор для пространства имен System.Linq.</span><span class="sxs-lookup"><span data-stu-id="671a1-110">Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.</span></span>
-  
-## <a name="see-also"></a><span data-ttu-id="671a1-111">См. также</span><span class="sxs-lookup"><span data-stu-id="671a1-111">See also</span></span>
+        Dim startFolder = "C:\Program Files (x86)\Microsoft Visual Studio 14.0"  
 
-- [<span data-ttu-id="671a1-112">LINQ to Objects (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="671a1-112">LINQ to Objects (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
-- [<span data-ttu-id="671a1-113">LINQ и каталоги файлов (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="671a1-113">LINQ and File Directories (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+        ' Take a snapshot of the folder contents.
+        Dim dir As New DirectoryInfo(startFolder)
+        Dim fileList = dir.GetFiles("*.*", SearchOption.AllDirectories)
+
+        Dim searchTerm = "Welcome"
+
+        ' Search the contents of each file.
+        ' A regular expression created with the RegEx class
+        ' could be used instead of the Contains method.
+        Dim queryMatchingFiles = From file In fileList _
+                                 Where file.Extension = ".html" _
+                                 Let fileText = GetFileText(file.FullName) _
+                                 Where fileText.Contains(searchTerm) _
+                                 Select file.FullName
+
+        Console.WriteLine("The term " & searchTerm & " was found in:")
+
+        ' Execute the query.
+        For Each filename In queryMatchingFiles
+            Console.WriteLine(filename)
+        Next
+
+        ' Keep the console window open in debug mode.
+        Console.WriteLine("Press any key to exit")
+        Console.ReadKey()
+
+    End Sub
+
+    ' Read the contents of the file. This is done in a separate
+    ' function in order to handle potential file system errors.
+    Function GetFileText(name As String) As String
+
+        ' If the file has been deleted, the right thing
+        ' to do in this case is return an empty string.
+        Dim fileContents = String.Empty
+
+        ' If the file has been deleted since we took
+        ' the snapshot, ignore it and return the empty string.
+        If File.Exists(name) Then
+            fileContents = File.ReadAllText(name)
+        End If
+
+        Return fileContents
+
+    End Function
+End Module
+```
+
+## <a name="compiling-the-code"></a><span data-ttu-id="e5a00-109">Компиляция кода</span><span class="sxs-lookup"><span data-stu-id="e5a00-109">Compiling the code</span></span>
+
+<span data-ttu-id="e5a00-110">Create a VB.NET console application project, copy and paste the code sample, and adjust the Startup object value in the project properties.</span><span class="sxs-lookup"><span data-stu-id="e5a00-110">Create a VB.NET console application project, copy and paste the code sample, and adjust the Startup object value in the project properties.</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="e5a00-111">См. также</span><span class="sxs-lookup"><span data-stu-id="e5a00-111">See also</span></span>
+
+- [<span data-ttu-id="e5a00-112">LINQ to Objects (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e5a00-112">LINQ to Objects (Visual Basic)</span></span>](linq-to-objects.md)
+- [<span data-ttu-id="e5a00-113">LINQ и каталоги файлов (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e5a00-113">LINQ and File Directories (Visual Basic)</span></span>](linq-and-file-directories.md)

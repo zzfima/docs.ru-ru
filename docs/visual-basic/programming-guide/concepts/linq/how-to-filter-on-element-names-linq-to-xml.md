@@ -1,21 +1,21 @@
 ---
-title: Практическое руководство. Фильтрация по именам элементов (LINQ to XML) (Visual Basic)
+title: Практическое руководство. Фильтрация по именам элементов (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: b1437b4a-48aa-4546-834a-d6d3ab015fe1
-ms.openlocfilehash: 9af4b11d6b539b976e225df6a911e2a80429d2fb
-ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
+ms.openlocfilehash: 0c443ffa17f7bd4f7537068b97165cda97a37ced
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72250010"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353024"
 ---
-# <a name="how-to-filter-on-element-names-linq-to-xml-visual-basic"></a><span data-ttu-id="49cb5-102">Практическое руководство. Фильтрация по именам элементов (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="49cb5-102">How to: Filter on Element Names (LINQ to XML) (Visual Basic)</span></span>
-<span data-ttu-id="49cb5-103">При вызове одного из методов, возвращающих коллекцию <xref:System.Collections.Generic.IEnumerable%601> элементов <xref:System.Xml.Linq.XElement>, можно осуществить фильтрацию по именам элементов.</span><span class="sxs-lookup"><span data-stu-id="49cb5-103">When you call one of the methods that return <xref:System.Collections.Generic.IEnumerable%601> of <xref:System.Xml.Linq.XElement>, you can filter on the element name.</span></span>  
+# <a name="how-to-filter-on-element-names-linq-to-xml-visual-basic"></a><span data-ttu-id="5a290-102">How to: Filter on Element Names (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="5a290-102">How to: Filter on Element Names (LINQ to XML) (Visual Basic)</span></span>
+<span data-ttu-id="5a290-103">При вызове одного из методов, возвращающих коллекцию <xref:System.Collections.Generic.IEnumerable%601> элементов <xref:System.Xml.Linq.XElement>, можно осуществить фильтрацию по именам элементов.</span><span class="sxs-lookup"><span data-stu-id="5a290-103">When you call one of the methods that return <xref:System.Collections.Generic.IEnumerable%601> of <xref:System.Xml.Linq.XElement>, you can filter on the element name.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="49cb5-104">Пример</span><span class="sxs-lookup"><span data-stu-id="49cb5-104">Example</span></span>  
- <span data-ttu-id="49cb5-105">В этом примере показано получение отфильтрованной коллекции потомков, в которой содержатся только потомки с указанным именем.</span><span class="sxs-lookup"><span data-stu-id="49cb5-105">This example retrieves a collection of descendants that is filtered to contain only descendants with the specified name.</span></span>  
+## <a name="example"></a><span data-ttu-id="5a290-104">Пример</span><span class="sxs-lookup"><span data-stu-id="5a290-104">Example</span></span>  
+ <span data-ttu-id="5a290-105">В этом примере показано получение отфильтрованной коллекции потомков, в которой содержатся только потомки с указанным именем.</span><span class="sxs-lookup"><span data-stu-id="5a290-105">This example retrieves a collection of descendants that is filtered to contain only descendants with the specified name.</span></span>  
   
- <span data-ttu-id="49cb5-106">В этом примере используется следующий XML-документ: [Пример XML-файла. Типичный заказ на покупку (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="49cb5-106">This example uses the following XML document: [Sample XML File: Typical Purchase Order (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md).</span></span>  
+ <span data-ttu-id="5a290-106">В этом примере используется следующий XML-документ: [Пример XML-файла. Стандартный заказ на покупку (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="5a290-106">This example uses the following XML document: [Sample XML File: Typical Purchase Order (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md).</span></span>  
   
 ```vb  
 Dim po As XElement = XElement.Load("PurchaseOrder.xml")  
@@ -27,14 +27,14 @@ For Each prdName As XElement In items
 Next  
 ```  
   
- <span data-ttu-id="49cb5-107">Этот код выводит следующие результаты:</span><span class="sxs-lookup"><span data-stu-id="49cb5-107">This code produces the following output:</span></span>  
+ <span data-ttu-id="5a290-107">Этот код выводит следующие результаты:</span><span class="sxs-lookup"><span data-stu-id="5a290-107">This code produces the following output:</span></span>  
   
 ```console  
 ProductName:Lawnmower  
 ProductName:Baby Monitor  
 ```  
   
- <span data-ttu-id="49cb5-108">В других методах, возвращающих коллекции <xref:System.Collections.Generic.IEnumerable%601> элементов <xref:System.Xml.Linq.XElement>, заложен тот же принцип.</span><span class="sxs-lookup"><span data-stu-id="49cb5-108">The other methods that return <xref:System.Collections.Generic.IEnumerable%601> of <xref:System.Xml.Linq.XElement> collections follow the same pattern.</span></span> <span data-ttu-id="49cb5-109">Их сигнатуры подобны <xref:System.Xml.Linq.XContainer.Elements%2A> и <xref:System.Xml.Linq.XContainer.Descendants%2A>.</span><span class="sxs-lookup"><span data-stu-id="49cb5-109">Their signatures are similar to <xref:System.Xml.Linq.XContainer.Elements%2A> and <xref:System.Xml.Linq.XContainer.Descendants%2A>.</span></span> <span data-ttu-id="49cb5-110">Ниже следует полный список методов, имеющих аналогичные сигнатурам методов:</span><span class="sxs-lookup"><span data-stu-id="49cb5-110">The following is the complete list of methods that have similar method signatures:</span></span>  
+ <span data-ttu-id="5a290-108">В других методах, возвращающих коллекции <xref:System.Collections.Generic.IEnumerable%601> элементов <xref:System.Xml.Linq.XElement>, заложен тот же принцип.</span><span class="sxs-lookup"><span data-stu-id="5a290-108">The other methods that return <xref:System.Collections.Generic.IEnumerable%601> of <xref:System.Xml.Linq.XElement> collections follow the same pattern.</span></span> <span data-ttu-id="5a290-109">Их сигнатуры подобны <xref:System.Xml.Linq.XContainer.Elements%2A> и <xref:System.Xml.Linq.XContainer.Descendants%2A>.</span><span class="sxs-lookup"><span data-stu-id="5a290-109">Their signatures are similar to <xref:System.Xml.Linq.XContainer.Elements%2A> and <xref:System.Xml.Linq.XContainer.Descendants%2A>.</span></span> <span data-ttu-id="5a290-110">Ниже следует полный список методов, имеющих аналогичные сигнатурам методов:</span><span class="sxs-lookup"><span data-stu-id="5a290-110">The following is the complete list of methods that have similar method signatures:</span></span>  
   
 - <xref:System.Xml.Linq.XNode.Ancestors%2A>  
   
@@ -50,10 +50,10 @@ ProductName:Baby Monitor
   
 - <xref:System.Xml.Linq.XElement.DescendantsAndSelf%2A>  
   
-## <a name="example"></a><span data-ttu-id="49cb5-111">Пример</span><span class="sxs-lookup"><span data-stu-id="49cb5-111">Example</span></span>  
- <span data-ttu-id="49cb5-112">Следующий пример демонстрирует тот же запрос XML, что и в пространстве имен.</span><span class="sxs-lookup"><span data-stu-id="49cb5-112">The following example shows the same query for XML that is in a namespace.</span></span> <span data-ttu-id="49cb5-113">Дополнительные сведения см. в разделе [Общие сведения о пространствах имен (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="49cb5-113">For more information, see [Namespaces Overview (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).</span></span>  
+## <a name="example"></a><span data-ttu-id="5a290-111">Пример</span><span class="sxs-lookup"><span data-stu-id="5a290-111">Example</span></span>  
+ <span data-ttu-id="5a290-112">Следующий пример демонстрирует тот же запрос XML, что и в пространстве имен.</span><span class="sxs-lookup"><span data-stu-id="5a290-112">The following example shows the same query for XML that is in a namespace.</span></span> <span data-ttu-id="5a290-113">For more information, see [Namespaces Overview (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="5a290-113">For more information, see [Namespaces Overview (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).</span></span>  
   
- <span data-ttu-id="49cb5-114">В этом примере используется следующий XML-документ: [Пример XML-файла. Типичный заказ на покупку в пространстве имен](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-in-a-namespace.md).</span><span class="sxs-lookup"><span data-stu-id="49cb5-114">This example uses the following XML document: [Sample XML File: Typical Purchase Order in a Namespace](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-in-a-namespace.md).</span></span>  
+ <span data-ttu-id="5a290-114">В этом примере используется следующий XML-документ: [Пример XML-файла. Стандартный заказ на покупку в пространстве имен](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-in-a-namespace.md).</span><span class="sxs-lookup"><span data-stu-id="5a290-114">This example uses the following XML document: [Sample XML File: Typical Purchase Order in a Namespace](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-in-a-namespace.md).</span></span>  
   
 ```vb  
 Imports <xmlns:aw="http://www.adventure-works.com">  
@@ -71,13 +71,13 @@ Module Module1
 End Module  
 ```  
   
- <span data-ttu-id="49cb5-115">Этот код выводит следующие результаты:</span><span class="sxs-lookup"><span data-stu-id="49cb5-115">This code produces the following output:</span></span>  
+ <span data-ttu-id="5a290-115">Этот код выводит следующие результаты:</span><span class="sxs-lookup"><span data-stu-id="5a290-115">This code produces the following output:</span></span>  
   
 ```console  
 {http://www.adventure-works.com}ProductName:Lawnmower  
 {http://www.adventure-works.com}ProductName:Baby Monitor  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="49cb5-116">См. также</span><span class="sxs-lookup"><span data-stu-id="49cb5-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5a290-116">См. также</span><span class="sxs-lookup"><span data-stu-id="5a290-116">See also</span></span>
 
-- [<span data-ttu-id="49cb5-117">Оси LINQ to XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="49cb5-117">LINQ to XML Axes (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)
+- [<span data-ttu-id="5a290-117">Оси LINQ to XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="5a290-117">LINQ to XML Axes (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)

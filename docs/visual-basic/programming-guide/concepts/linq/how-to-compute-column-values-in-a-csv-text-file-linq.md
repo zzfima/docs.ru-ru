@@ -1,21 +1,21 @@
 ---
-title: Руководство. Вычисление значений столбцов в текстовом файле CSV (LINQ) (Visual Basic)
+title: Практическое руководство. Вычисление значений столбцов в текстовом CSV-файле (LINQ)
 ms.date: 07/20/2015
 ms.assetid: 88b2b9f3-c82e-41f3-b1b4-26ede5973a02
-ms.openlocfilehash: 4fa362b90ec6513136d1597461cbfd5a4023f9ec
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 9ce6ec4c8d109fa06e672e967ac36c615a8fb38e
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524172"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348397"
 ---
-# <a name="how-to-compute-column-values-in-a-csv-text-file-linq-visual-basic"></a><span data-ttu-id="b7774-102">Руководство. Вычисление значений столбцов в текстовом файле CSV (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b7774-102">How to: Compute Column Values in a CSV Text File (LINQ) (Visual Basic)</span></span>
+# <a name="how-to-compute-column-values-in-a-csv-text-file-linq-visual-basic"></a><span data-ttu-id="68c33-102">How to: Compute Column Values in a CSV Text File (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="68c33-102">How to: Compute Column Values in a CSV Text File (LINQ) (Visual Basic)</span></span>
 
-<span data-ttu-id="b7774-103">В этом примере демонстрируется выполнение статистических вычислений, таких как сумма, среднее, минимальное и максимальное для столбцов в CSV-файле.</span><span class="sxs-lookup"><span data-stu-id="b7774-103">This example shows how to perform aggregate computations such as Sum, Average, Min, and Max on the columns of a .csv file.</span></span> <span data-ttu-id="b7774-104">Приведенные в примере принципы могут применяться к другим типам структурированного текста.</span><span class="sxs-lookup"><span data-stu-id="b7774-104">The example principles that are shown here can be applied to other types of structured text.</span></span>
+<span data-ttu-id="68c33-103">В этом примере демонстрируется выполнение статистических вычислений, таких как сумма, среднее, минимальное и максимальное для столбцов в CSV-файле.</span><span class="sxs-lookup"><span data-stu-id="68c33-103">This example shows how to perform aggregate computations such as Sum, Average, Min, and Max on the columns of a .csv file.</span></span> <span data-ttu-id="68c33-104">Приведенные в примере принципы могут применяться к другим типам структурированного текста.</span><span class="sxs-lookup"><span data-stu-id="68c33-104">The example principles that are shown here can be applied to other types of structured text.</span></span>
 
-### <a name="to-create-the-source-file"></a><span data-ttu-id="b7774-105">Создание исходного файла</span><span class="sxs-lookup"><span data-stu-id="b7774-105">To create the source file</span></span>
+### <a name="to-create-the-source-file"></a><span data-ttu-id="68c33-105">Создание исходного файла</span><span class="sxs-lookup"><span data-stu-id="68c33-105">To create the source file</span></span>
 
-1. <span data-ttu-id="b7774-106">Скопируйте следующие строки в файл с именем scores.csv и сохраните его в папке проекта.</span><span class="sxs-lookup"><span data-stu-id="b7774-106">Copy the following lines into a file that is named scores.csv and save it in your project folder.</span></span> <span data-ttu-id="b7774-107">Предположим, что первый столбец представляет идентификатор учащегося, а последующие столбцы — результаты четырех экзаменов.</span><span class="sxs-lookup"><span data-stu-id="b7774-107">Assume that the first column represents a student ID, and subsequent columns represent scores from four exams.</span></span>
+1. <span data-ttu-id="68c33-106">Скопируйте следующие строки в файл с именем scores.csv и сохраните его в папке проекта.</span><span class="sxs-lookup"><span data-stu-id="68c33-106">Copy the following lines into a file that is named scores.csv and save it in your project folder.</span></span> <span data-ttu-id="68c33-107">Предположим, что первый столбец представляет идентификатор учащегося, а последующие столбцы — результаты четырех экзаменов.</span><span class="sxs-lookup"><span data-stu-id="68c33-107">Assume that the first column represents a student ID, and subsequent columns represent scores from four exams.</span></span>
 
     ```csv
     111, 97, 92, 81, 60
@@ -32,7 +32,7 @@ ms.locfileid: "72524172"
     122, 94, 92, 91, 91
     ```
 
-## <a name="example"></a><span data-ttu-id="b7774-108">Пример</span><span class="sxs-lookup"><span data-stu-id="b7774-108">Example</span></span>
+## <a name="example"></a><span data-ttu-id="68c33-108">Пример</span><span class="sxs-lookup"><span data-stu-id="68c33-108">Example</span></span>
 
 ```vb
 Class SumColumns
@@ -141,13 +141,13 @@ End Class
 ' Exam #4 Average: 76.92 High Score: 94 Low Score: 39
 ```
 
-<span data-ttu-id="b7774-109">Запрос работает с использованием метода <xref:System.String.Split%2A> для преобразования каждой строки текста в массив.</span><span class="sxs-lookup"><span data-stu-id="b7774-109">The query works by using the <xref:System.String.Split%2A> method to convert each line of text into an array.</span></span> <span data-ttu-id="b7774-110">Каждый элемент массива представляет столбец.</span><span class="sxs-lookup"><span data-stu-id="b7774-110">Each array element represents a column.</span></span> <span data-ttu-id="b7774-111">И наконец, текст в каждом столбце преобразуется в свое числовое представление.</span><span class="sxs-lookup"><span data-stu-id="b7774-111">Finally, the text in each column is converted to its numeric representation.</span></span> <span data-ttu-id="b7774-112">Если файл является файлом с разделением знаками табуляции, просто измените аргумент в методе `Split` на `\t`.</span><span class="sxs-lookup"><span data-stu-id="b7774-112">If your file is a tab-separated file, just update the argument in the `Split` method to `\t`.</span></span>
+<span data-ttu-id="68c33-109">Запрос работает с использованием метода <xref:System.String.Split%2A> для преобразования каждой строки текста в массив.</span><span class="sxs-lookup"><span data-stu-id="68c33-109">The query works by using the <xref:System.String.Split%2A> method to convert each line of text into an array.</span></span> <span data-ttu-id="68c33-110">Каждый элемент массива представляет столбец.</span><span class="sxs-lookup"><span data-stu-id="68c33-110">Each array element represents a column.</span></span> <span data-ttu-id="68c33-111">И наконец, текст в каждом столбце преобразуется в свое числовое представление.</span><span class="sxs-lookup"><span data-stu-id="68c33-111">Finally, the text in each column is converted to its numeric representation.</span></span> <span data-ttu-id="68c33-112">Если файл является файлом с разделением знаками табуляции, просто измените аргумент в методе `Split` на `\t`.</span><span class="sxs-lookup"><span data-stu-id="68c33-112">If your file is a tab-separated file, just update the argument in the `Split` method to `\t`.</span></span>
 
-## <a name="compiling-the-code"></a><span data-ttu-id="b7774-113">Компиляция кода</span><span class="sxs-lookup"><span data-stu-id="b7774-113">Compiling the Code</span></span>
+## <a name="compiling-the-code"></a><span data-ttu-id="68c33-113">Компиляция кода</span><span class="sxs-lookup"><span data-stu-id="68c33-113">Compiling the Code</span></span>
 
-<span data-ttu-id="b7774-114">Создайте проект консольного приложения VB.NET с помощью инструкции `Imports` для пространства имен System. LINQ.</span><span class="sxs-lookup"><span data-stu-id="b7774-114">Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.</span></span>
+<span data-ttu-id="68c33-114">Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.</span><span class="sxs-lookup"><span data-stu-id="68c33-114">Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="b7774-115">См. также</span><span class="sxs-lookup"><span data-stu-id="b7774-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="68c33-115">См. также</span><span class="sxs-lookup"><span data-stu-id="68c33-115">See also</span></span>
 
-- [<span data-ttu-id="b7774-116">LINQ и строки (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b7774-116">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
-- [<span data-ttu-id="b7774-117">LINQ и каталоги файлов (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b7774-117">LINQ and File Directories (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [<span data-ttu-id="68c33-116">LINQ and Strings (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="68c33-116">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [<span data-ttu-id="68c33-117">LINQ и каталоги файлов (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="68c33-117">LINQ and File Directories (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

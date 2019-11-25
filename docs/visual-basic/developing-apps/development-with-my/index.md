@@ -1,5 +1,5 @@
 ---
-title: Разработка с использованием My (Visual Basic)
+title: Разработка с использованием My
 ms.date: 07/20/2015
 f1_keywords:
 - My.MyWpfExtension.Windows
@@ -9,43 +9,45 @@ helpviewer_keywords:
 - My feature
 - Visual Basic, programming in
 ms.assetid: f1d04509-5e46-4551-9f9f-94334a121fca
-ms.openlocfilehash: 1d9dc1cd26b4bf110526fe6d136e943be730a443
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2ee9373098d4355628a43ec46302c97c26de5bf9
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62014178"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74330288"
 ---
-# <a name="development-with-my-visual-basic"></a><span data-ttu-id="44dae-102">Разработка с использованием My (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="44dae-102">Development with My (Visual Basic)</span></span>
-<span data-ttu-id="44dae-103">Visual Basic предоставляет новые функции для быстрой разработки приложений, которые повышают производительность, упрощают работу и предоставляют богатые возможности.</span><span class="sxs-lookup"><span data-stu-id="44dae-103">Visual Basic provides new features for rapid application development that improve productivity and ease of use while delivering power.</span></span> <span data-ttu-id="44dae-104">Одна из этих функций, называемая `My`, предоставляет доступ к информации и экземплярам объектов по умолчанию, относящихся к приложению и среде выполнения.</span><span class="sxs-lookup"><span data-stu-id="44dae-104">One of these features, called `My`, provides access to information and default object instances that are related to the application and its run-time environment.</span></span> <span data-ttu-id="44dae-105">Эта информация организована в формате, который обнаруживается через IntelliSense и логически разделен в соответствии с использованием.</span><span class="sxs-lookup"><span data-stu-id="44dae-105">This information is organized in a format that is discoverable through IntelliSense and logically delineated according to use.</span></span>  
+# <a name="development-with-my-visual-basic"></a><span data-ttu-id="ef165-102">Разработка с использованием My (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ef165-102">Development with My (Visual Basic)</span></span>
+
+<span data-ttu-id="ef165-103">Visual Basic предоставляет новые функции для быстрой разработки приложений, которые повышают производительность, упрощают работу и предоставляют богатые возможности.</span><span class="sxs-lookup"><span data-stu-id="ef165-103">Visual Basic provides new features for rapid application development that improve productivity and ease of use while delivering power.</span></span> <span data-ttu-id="ef165-104">Одна из этих функций, называемая `My`, предоставляет доступ к информации и экземплярам объектов по умолчанию, относящихся к приложению и среде выполнения.</span><span class="sxs-lookup"><span data-stu-id="ef165-104">One of these features, called `My`, provides access to information and default object instances that are related to the application and its run-time environment.</span></span> <span data-ttu-id="ef165-105">Эта информация организована в формате, который обнаруживается через IntelliSense и логически разделен в соответствии с использованием.</span><span class="sxs-lookup"><span data-stu-id="ef165-105">This information is organized in a format that is discoverable through IntelliSense and logically delineated according to use.</span></span>  
   
- <span data-ttu-id="44dae-106">Члены верхнего уровня `My` представляются как объекты.</span><span class="sxs-lookup"><span data-stu-id="44dae-106">Top-level members of `My` are exposed as objects.</span></span> <span data-ttu-id="44dae-107">Каждый объект ведет себя как пространство имен или класса с членами `Shared`, предоставляя набор связанных элементов.</span><span class="sxs-lookup"><span data-stu-id="44dae-107">Each object behaves similarly to a namespace or a class with `Shared` members, and it exposes a set of related members.</span></span>  
+ <span data-ttu-id="ef165-106">Члены верхнего уровня `My` представляются как объекты.</span><span class="sxs-lookup"><span data-stu-id="ef165-106">Top-level members of `My` are exposed as objects.</span></span> <span data-ttu-id="ef165-107">Каждый объект ведет себя как пространство имен или класса с членами `Shared`, предоставляя набор связанных элементов.</span><span class="sxs-lookup"><span data-stu-id="ef165-107">Each object behaves similarly to a namespace or a class with `Shared` members, and it exposes a set of related members.</span></span>  
   
- <span data-ttu-id="44dae-108">В следующей таблице перечислены объекты `My` верхнего уровня и их связь друг с другом.</span><span class="sxs-lookup"><span data-stu-id="44dae-108">This table shows the top-level `My` objects and their relationship to each other.</span></span>  
+ <span data-ttu-id="ef165-108">В следующей таблице перечислены объекты `My` верхнего уровня и их связь друг с другом.</span><span class="sxs-lookup"><span data-stu-id="ef165-108">This table shows the top-level `My` objects and their relationship to each other.</span></span>  
   
- ![Схеме показана модель объектов для My.](./media/index/my-object-model-relationships.gif)  
+ ![Diagram shows the object model for My.](./media/index/my-object-model-relationships.gif)  
   
-## <a name="in-this-section"></a><span data-ttu-id="44dae-110">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="44dae-110">In This Section</span></span>  
- [<span data-ttu-id="44dae-111">Выполнение задач с помощью My.Application, My.Computer и My.User</span><span class="sxs-lookup"><span data-stu-id="44dae-111">Performing Tasks with My.Application, My.Computer, and My.User</span></span>](../../../visual-basic/developing-apps/development-with-my/performing-tasks-with-my-application-my-computer-and-my-user.md)  
- <span data-ttu-id="44dae-112">Описывает трех центральных объекта `My`, (`My.Application`, `My.Computer` и `My.User`), которые обеспечивают доступ к информации и функциональным возможностям</span><span class="sxs-lookup"><span data-stu-id="44dae-112">Describes the three central `My` objects, `My.Application`, `My.Computer`, and `My.User`, which provide access to information and functionality</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="ef165-110">Содержание</span><span class="sxs-lookup"><span data-stu-id="ef165-110">In This Section</span></span>  
+
+ [<span data-ttu-id="ef165-111">Выполнение задач с помощью My.Application, My.Computer и My.User</span><span class="sxs-lookup"><span data-stu-id="ef165-111">Performing Tasks with My.Application, My.Computer, and My.User</span></span>](../../../visual-basic/developing-apps/development-with-my/performing-tasks-with-my-application-my-computer-and-my-user.md)  
+ <span data-ttu-id="ef165-112">Описывает трех центральных объекта `My`, (`My.Application`, `My.Computer` и `My.User`), которые обеспечивают доступ к информации и функциональным возможностям</span><span class="sxs-lookup"><span data-stu-id="ef165-112">Describes the three central `My` objects, `My.Application`, `My.Computer`, and `My.User`, which provide access to information and functionality</span></span>  
   
- [<span data-ttu-id="44dae-113">Экземпляры объектов, которые My.Forms и My.WebServices предоставляют по умолчанию</span><span class="sxs-lookup"><span data-stu-id="44dae-113">Default Object Instances Provided by My.Forms and My.WebServices</span></span>](../../../visual-basic/developing-apps/development-with-my/default-object-instances-provided-by-my-forms-and-my-webservices.md)  
- <span data-ttu-id="44dae-114">Описывает объекты `My.Forms` и `My.WebServices`, которые предоставляют доступ к формам, источникам данных и веб-службам XML, используемым приложениями.</span><span class="sxs-lookup"><span data-stu-id="44dae-114">Describes the `My.Forms` and `My.WebServices` objects, which provide access to forms, data sources, and XML Web services used by your application.</span></span>  
+ [<span data-ttu-id="ef165-113">Экземпляры объектов, которые My.Forms и My.WebServices предоставляют по умолчанию</span><span class="sxs-lookup"><span data-stu-id="ef165-113">Default Object Instances Provided by My.Forms and My.WebServices</span></span>](../../../visual-basic/developing-apps/development-with-my/default-object-instances-provided-by-my-forms-and-my-webservices.md)  
+ <span data-ttu-id="ef165-114">Описывает объекты `My.Forms` и `My.WebServices`, которые предоставляют доступ к формам, источникам данных и веб-службам XML, используемым приложениями.</span><span class="sxs-lookup"><span data-stu-id="ef165-114">Describes the `My.Forms` and `My.WebServices` objects, which provide access to forms, data sources, and XML Web services used by your application.</span></span>  
   
- [<span data-ttu-id="44dae-115">Быстрая разработка приложений с использованием My.Resources и My.Settings</span><span class="sxs-lookup"><span data-stu-id="44dae-115">Rapid Application Development with My.Resources and My.Settings</span></span>](../../../visual-basic/developing-apps/development-with-my/rapid-application-development-with-my-resources-and-my-settings.md)  
- <span data-ttu-id="44dae-116">Описывает объекты `My.Resources` и `My.Settings`, которые предоставляют доступ к ресурсам и параметрам приложения.</span><span class="sxs-lookup"><span data-stu-id="44dae-116">Describes the `My.Resources` and `My.Settings` objects, which provide access to an application's resources and settings.</span></span>  
+ [<span data-ttu-id="ef165-115">Быстрая разработка приложений с использованием My.Resources и My.Settings</span><span class="sxs-lookup"><span data-stu-id="ef165-115">Rapid Application Development with My.Resources and My.Settings</span></span>](../../../visual-basic/developing-apps/development-with-my/rapid-application-development-with-my-resources-and-my-settings.md)  
+ <span data-ttu-id="ef165-116">Описывает объекты `My.Resources` и `My.Settings`, которые предоставляют доступ к ресурсам и параметрам приложения.</span><span class="sxs-lookup"><span data-stu-id="ef165-116">Describes the `My.Resources` and `My.Settings` objects, which provide access to an application's resources and settings.</span></span>  
   
- [<span data-ttu-id="44dae-117">Обзор модели приложения в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="44dae-117">Overview of the Visual Basic Application Model</span></span>](../../../visual-basic/developing-apps/development-with-my/overview-of-the-visual-basic-application-model.md)  
- <span data-ttu-id="44dae-118">Описывает модель приложения Visual Basic запуск/завершение.</span><span class="sxs-lookup"><span data-stu-id="44dae-118">Describes the Visual Basic Application Startup/Shutdown model.</span></span>  
+ [<span data-ttu-id="ef165-117">Обзор модели приложения в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="ef165-117">Overview of the Visual Basic Application Model</span></span>](../../../visual-basic/developing-apps/development-with-my/overview-of-the-visual-basic-application-model.md)  
+ <span data-ttu-id="ef165-118">Describes the Visual Basic Application Startup/Shutdown model.</span><span class="sxs-lookup"><span data-stu-id="ef165-118">Describes the Visual Basic Application Startup/Shutdown model.</span></span>  
   
- [<span data-ttu-id="44dae-119">Зависимость My от типа проекта</span><span class="sxs-lookup"><span data-stu-id="44dae-119">How My Depends on Project Type</span></span>](../../../visual-basic/developing-apps/development-with-my/how-my-depends-on-project-type.md)  
- <span data-ttu-id="44dae-120">Предоставляет подробные сведения о том, какие функции `My` доступны в разных типах проектов.</span><span class="sxs-lookup"><span data-stu-id="44dae-120">Gives details on which `My` features are available in different project types.</span></span>  
+ [<span data-ttu-id="ef165-119">Зависимость My от типа проекта</span><span class="sxs-lookup"><span data-stu-id="ef165-119">How My Depends on Project Type</span></span>](../../../visual-basic/developing-apps/development-with-my/how-my-depends-on-project-type.md)  
+ <span data-ttu-id="ef165-120">Предоставляет подробные сведения о том, какие функции `My` доступны в разных типах проектов.</span><span class="sxs-lookup"><span data-stu-id="ef165-120">Gives details on which `My` features are available in different project types.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="44dae-121">См. также</span><span class="sxs-lookup"><span data-stu-id="44dae-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ef165-121">См. также</span><span class="sxs-lookup"><span data-stu-id="ef165-121">See also</span></span>
 
 - <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>
 - <xref:Microsoft.VisualBasic.Devices.Computer>
 - <xref:Microsoft.VisualBasic.ApplicationServices.User>
-- [<span data-ttu-id="44dae-122">Объект My.Forms</span><span class="sxs-lookup"><span data-stu-id="44dae-122">My.Forms Object</span></span>](../../../visual-basic/language-reference/objects/my-forms-object.md)
-- [<span data-ttu-id="44dae-123">Объект My.WebServices</span><span class="sxs-lookup"><span data-stu-id="44dae-123">My.WebServices Object</span></span>](../../../visual-basic/language-reference/objects/my-webservices-object.md)
-- [<span data-ttu-id="44dae-124">Зависимость My от типа проекта</span><span class="sxs-lookup"><span data-stu-id="44dae-124">How My Depends on Project Type</span></span>](../../../visual-basic/developing-apps/development-with-my/how-my-depends-on-project-type.md)
+- [<span data-ttu-id="ef165-122">Объект My.Forms</span><span class="sxs-lookup"><span data-stu-id="ef165-122">My.Forms Object</span></span>](../../../visual-basic/language-reference/objects/my-forms-object.md)
+- [<span data-ttu-id="ef165-123">Объект My.WebServices</span><span class="sxs-lookup"><span data-stu-id="ef165-123">My.WebServices Object</span></span>](../../../visual-basic/language-reference/objects/my-webservices-object.md)
+- [<span data-ttu-id="ef165-124">Зависимость My от типа проекта</span><span class="sxs-lookup"><span data-stu-id="ef165-124">How My Depends on Project Type</span></span>](../../../visual-basic/developing-apps/development-with-my/how-my-depends-on-project-type.md)

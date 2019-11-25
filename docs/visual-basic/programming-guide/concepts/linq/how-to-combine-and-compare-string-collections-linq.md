@@ -1,21 +1,21 @@
 ---
-title: Практическое руководство. Объединение и сравнение коллекций строк (LINQ) (Visual Basic)
+title: Практическое руководство. Объединение и сравнение коллекций строк (LINQ)
 ms.date: 07/20/2015
 ms.assetid: 243cfafc-9eaa-4354-a9df-d329f1d39913
-ms.openlocfilehash: d521e56f9ae311eea53028ba189416db289839cd
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: e9bc8a5f88585bd8625633c54796a1c658c7a7af
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71352879"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348428"
 ---
-# <a name="how-to-combine-and-compare-string-collections-linq-visual-basic"></a><span data-ttu-id="bf471-102">Практическое руководство. Объединение и сравнение коллекций строк (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="bf471-102">How to: Combine and Compare String Collections (LINQ) (Visual Basic)</span></span>
+# <a name="how-to-combine-and-compare-string-collections-linq-visual-basic"></a><span data-ttu-id="81c4e-102">How to: Combine and Compare String Collections (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="81c4e-102">How to: Combine and Compare String Collections (LINQ) (Visual Basic)</span></span>
 
-<span data-ttu-id="bf471-103">В этом примере показано объединение файлов, содержащих строки текста, и последующая сортировка результатов.</span><span class="sxs-lookup"><span data-stu-id="bf471-103">This example shows how to merge files that contain lines of text and then sort the results.</span></span> <span data-ttu-id="bf471-104">В частности, показано выполнение простого сцепления, объединения и пересечения в двух наборах строк текста.</span><span class="sxs-lookup"><span data-stu-id="bf471-104">Specifically, it shows how to perform a simple concatenation, a union, and an intersection on the two sets of text lines.</span></span>
+<span data-ttu-id="81c4e-103">В этом примере показано объединение файлов, содержащих строки текста, и последующая сортировка результатов.</span><span class="sxs-lookup"><span data-stu-id="81c4e-103">This example shows how to merge files that contain lines of text and then sort the results.</span></span> <span data-ttu-id="81c4e-104">В частности, показано выполнение простого сцепления, объединения и пересечения в двух наборах строк текста.</span><span class="sxs-lookup"><span data-stu-id="81c4e-104">Specifically, it shows how to perform a simple concatenation, a union, and an intersection on the two sets of text lines.</span></span>
 
-### <a name="to-set-up-the-project-and-the-text-files"></a><span data-ttu-id="bf471-105">Настройка проекта и текстовых файлов</span><span class="sxs-lookup"><span data-stu-id="bf471-105">To set up the project and the text files</span></span>
+### <a name="to-set-up-the-project-and-the-text-files"></a><span data-ttu-id="81c4e-105">Настройка проекта и текстовых файлов</span><span class="sxs-lookup"><span data-stu-id="81c4e-105">To set up the project and the text files</span></span>
 
-1. <span data-ttu-id="bf471-106">Скопируйте эти имена в текстовый файл с именем names1.txt и сохраните его в папке проекта:</span><span class="sxs-lookup"><span data-stu-id="bf471-106">Copy these names into a text file that is named names1.txt and save it in your project folder:</span></span>
+1. <span data-ttu-id="81c4e-106">Скопируйте эти имена в текстовый файл с именем names1.txt и сохраните его в папке проекта:</span><span class="sxs-lookup"><span data-stu-id="81c4e-106">Copy these names into a text file that is named names1.txt and save it in your project folder:</span></span>
 
     ```text
     Bankov, Peter
@@ -30,7 +30,7 @@ ms.locfileid: "71352879"
     Garcia, Debra
     ```
 
-2. <span data-ttu-id="bf471-107">Скопируйте эти имена в текстовый файл с именем names2.txt и сохраните его в папке проекта.</span><span class="sxs-lookup"><span data-stu-id="bf471-107">Copy these names into a text file that is named names2.txt and save it in your project folder.</span></span> <span data-ttu-id="bf471-108">Обратите внимание, что в этих двух файлах имеются общие имена.</span><span class="sxs-lookup"><span data-stu-id="bf471-108">Note that the two files have some names in common.</span></span>
+2. <span data-ttu-id="81c4e-107">Скопируйте эти имена в текстовый файл с именем names2.txt и сохраните его в папке проекта.</span><span class="sxs-lookup"><span data-stu-id="81c4e-107">Copy these names into a text file that is named names2.txt and save it in your project folder.</span></span> <span data-ttu-id="81c4e-108">Обратите внимание, что в этих двух файлах имеются общие имена.</span><span class="sxs-lookup"><span data-stu-id="81c4e-108">Note that the two files have some names in common.</span></span>
 
     ```text
     Liu, Jinghao
@@ -45,7 +45,7 @@ ms.locfileid: "71352879"
     El Yassir, Mehdi
     ```
 
-## <a name="example"></a><span data-ttu-id="bf471-109">Пример</span><span class="sxs-lookup"><span data-stu-id="bf471-109">Example</span></span>
+## <a name="example"></a><span data-ttu-id="81c4e-109">Пример</span><span class="sxs-lookup"><span data-stu-id="81c4e-109">Example</span></span>
 
 ```vb
 Class ConcatenateStrings
@@ -163,11 +163,11 @@ End Class
 ' 2 total names in list
 ```
 
-## <a name="compiling-the-code"></a><span data-ttu-id="bf471-110">Компиляция кода</span><span class="sxs-lookup"><span data-stu-id="bf471-110">Compiling the Code</span></span>
+## <a name="compiling-the-code"></a><span data-ttu-id="81c4e-110">Компиляция кода</span><span class="sxs-lookup"><span data-stu-id="81c4e-110">Compiling the Code</span></span>
 
-<span data-ttu-id="bf471-111">Создайте проект консольного приложения VB.NET с инструкцией `Imports` для пространства имен System. LINQ.</span><span class="sxs-lookup"><span data-stu-id="bf471-111">Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.</span></span>
+<span data-ttu-id="81c4e-111">Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.</span><span class="sxs-lookup"><span data-stu-id="81c4e-111">Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="bf471-112">См. также</span><span class="sxs-lookup"><span data-stu-id="bf471-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="81c4e-112">См. также</span><span class="sxs-lookup"><span data-stu-id="81c4e-112">See also</span></span>
 
-- [<span data-ttu-id="bf471-113">LINQ и строки (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="bf471-113">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
-- [<span data-ttu-id="bf471-114">LINQ и каталоги файлов (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="bf471-114">LINQ and File Directories (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [<span data-ttu-id="81c4e-113">LINQ and Strings (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="81c4e-113">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [<span data-ttu-id="81c4e-114">LINQ и каталоги файлов (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="81c4e-114">LINQ and File Directories (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
