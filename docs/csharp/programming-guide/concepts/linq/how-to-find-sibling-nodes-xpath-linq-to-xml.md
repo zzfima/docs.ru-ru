@@ -2,12 +2,12 @@
 title: Практическое руководство. Поиск одноуровневых узлов (XPath-LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: e2c73d10-a8ca-4e11-b5aa-d055de285874
-ms.openlocfilehash: 6c7509ea0667bb84d62ee804f4d232d74fa7f6e0
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 24bad37151f3d63b03ec28c0fbea95bef02ab614
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253613"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141022"
 ---
 # <a name="how-to-find-sibling-nodes-xpath-linq-to-xml-c"></a>Практическое руководство. Поиск одноуровневых узлов (XPath-LINQ to XML) (C#)
 Допустим, что требуется найти все одноуровневые элементы с указанным именем. Полученная в результате коллекция может содержать контекстный узел, если этот контекстный узел также имеет указанное имя.  

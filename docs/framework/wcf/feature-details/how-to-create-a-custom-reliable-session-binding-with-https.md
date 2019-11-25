@@ -2,18 +2,18 @@
 title: Практическое руководство. Создание пользовательской привязки надежного сеанса с использованием HTTPS
 ms.date: 03/30/2017
 ms.assetid: fa772232-da1f-4c66-8c94-e36c0584b549
-ms.openlocfilehash: 7f22eeaae39b4d9a83c77c7f3e9db1d7d3f04e8e
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 26466a97ae44e6852c189d0b72bdba1b93d86141
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70895195"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141733"
 ---
 # <a name="how-to-create-a-custom-reliable-session-binding-with-https"></a>Практическое руководство. Создание пользовательской привязки надежного сеанса с использованием HTTPS
 
-В этом разделе рассматривается использование механизма обеспечения безопасности транспорта через протокол SSL и надежные сеансы. Для использования надежных сеансов через протокол HTTPS требуется создать пользовательскую привязку, использующую надежный сеанс и транспорт HTTPS. Надежный сеанс можно включить принудительно с помощью кода или декларативно в файле конфигурации. В этой процедуре используются файлы конфигурации клиента и службы для включения надежного сеанса и [ **\<элемента > хттпстранспорт**](../../../../docs/framework/configure-apps/file-schema/wcf/httpstransport.md) .
+В этом разделе рассматривается использование механизма обеспечения безопасности транспорта через протокол SSL и надежные сеансы. Для использования надежных сеансов через протокол HTTPS требуется создать пользовательскую привязку, использующую надежный сеанс и транспорт HTTPS. Надежный сеанс можно включить принудительно с помощью кода или декларативно в файле конфигурации. В этой процедуре используются файлы конфигурации клиента и службы для включения надежного сеанса и элемента [ **\<хттпстранспорт >** ](../../../../docs/framework/configure-apps/file-schema/wcf/httpstransport.md) .
 
-Основная часть этой процедуры заключается в том, что `bindingConfiguration` `reliableSessionOverHttps`  **\<элемент конфигурации Endpoint >** содержит атрибут, который ссылается на конфигурацию пользовательской привязки с именем. Элемент конфигурации [ **>Bindingссылаетсянаэтоимя,чтобыуказать,чтоиспользуетсянадежныйсеанситранспортHTTPS,включаяReliableSession>ихттпстранспорт>\<** ](../../../../docs/framework/misc/binding.md)  **\<** **\<** элементы.
+Основная часть этой процедуры заключается в том, что элемент конфигурации **\<endpoint >** содержит атрибут `bindingConfiguration`, который ссылается на настраиваемую конфигурацию привязки с именем `reliableSessionOverHttps`. Элемент конфигурации [ **\<binding >** ](../../configure-apps/file-schema/wcf/bindings.md) ссылается на это имя, чтобы указать, что используется надежный сеанс и транспорт HTTPS, включая **\<reliableSession >** и **\<хттпстранспорт >** элементов.
 
 Исходный экземпляр этого примера см. в разделе [Пользовательская привязка надежного сеанса по протоколу HTTPS](../../../../docs/framework/wcf/samples/custom-binding-reliable-session-over-https.md).
 
@@ -27,7 +27,7 @@ ms.locfileid: "70895195"
 
    [!code-csharp[c_HowTo_CreateReliableSessionHTTPS#1122](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_createreliablesessionhttps/cs/service.cs#1122)]
 
-1. Создайте файл *Web. config* , чтобы настроить конечную точку для `CalculatorService` с пользовательской привязкой с `reliableSessionOverHttps` именем, использующей надежный сеанс и транспорт HTTPS.
+1. Создайте файл *Web. config* , чтобы настроить конечную точку для `CalculatorService` с пользовательской привязкой с именем `reliableSessionOverHttps`, которая использует надежный сеанс и транспорт HTTPS.
 
    [!code-xml[c_HowTo_CreateReliableSessionHTTPS#2111](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_createreliablesessionhttps/common/web.config#2111)]
 
@@ -45,7 +45,7 @@ ms.locfileid: "70895195"
    Svcutil.exe <Metadata Exchange (MEX) address or HTTP GET address>
    ```
 
-1. Созданный клиент содержит `ICalculator` интерфейс, определяющий контракт службы, которому должна соответствовать реализация клиента.
+1. Созданный клиент содержит интерфейс `ICalculator`, определяющий контракт службы, которому должна соответствовать реализация клиента.
 
    [!code-csharp[C_HowTo_CreateReliableSessionHTTPS#1221](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_createreliablesessionhttps/cs/client.cs#1221)]
 
@@ -53,7 +53,7 @@ ms.locfileid: "70895195"
 
    [!code-csharp[C_HowTo_CreateReliableSessionHTTPS#1222](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_createreliablesessionhttps/cs/client.cs#1222)]
 
-1. Настройте пользовательскую привязку `reliableSessionOverHttps` с именем, чтобы использовать транспорт HTTPS и надежные сеансы.
+1. Настройте пользовательскую привязку с именем `reliableSessionOverHttps`, чтобы использовать транспорт HTTPS и надежные сеансы.
 
    [!code-xml[C_HowTo_CreateReliableSessionHTTPS#2211](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_createreliablesessionhttps/common/app.config#2211)]
 
@@ -65,7 +65,7 @@ ms.locfileid: "70895195"
 
 ## <a name="net-framework-security"></a>безопасность платформы .NET Framework
 
-Так как сертификат, используемый в этом примере, является тестовым сертификатом, созданным с помощью *Makecert. exe*, при попытке доступа к HTTPS-адресу `https://localhost/servicemodelsamples/service.svc`, например, в браузере появляется предупреждение системы безопасности.
+Так как сертификат, используемый в этом примере, является тестовым сертификатом, созданным с помощью *Makecert. exe*, при попытке доступа к HTTPS-адресу, например `https://localhost/servicemodelsamples/service.svc`, в браузере появляется оповещение системы безопасности.
 
 ## <a name="see-also"></a>См. также
 

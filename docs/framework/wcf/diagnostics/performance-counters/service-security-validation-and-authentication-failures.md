@@ -1,16 +1,16 @@
 ---
-title: 'Служба: Сбои при проверке безопасности и проверке подлинности'
+title: 'Служба: количество сбоев при проверке безопасности и проверке подлинности'
 ms.date: 03/30/2017
 ms.assetid: 55c98268-b1ad-459d-851b-25ef52248187
-ms.openlocfilehash: 5843d25eb26bdd9facc324a2af50c6b02c5ad7c8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 399249926bcb1383fd33f60510c2c212c6f4261c
+ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64613585"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74204577"
 ---
-# <a name="service-security-validation-and-authentication-failures"></a>Служба: Сбои при проверке безопасности и проверке подлинности
-Имя счетчика: Сбои при проверке безопасности и проверке подлинности  
+# <a name="service-security-validation-and-authentication-failures"></a>Служба: количество сбоев при проверке безопасности и проверке подлинности
+Имя счетчика: Security Validation and Authentication Failures  
   
 ## <a name="description"></a>Описание  
  Значение этого счетчика увеличивается всякий раз, когда сообщение отклоняется из-за проблемы безопасности, не относящейся к счетчику "Security Calls Not Authorized". К таким проблемам относятся следующие.  
@@ -25,6 +25,6 @@ ms.locfileid: "64613585"
   
 - Произошел сбой при расшифровке.  
   
-- В сообщении отсутствуют некоторые обязательные элементы (например, отсутствует метка времени или зашифрованный блок данных).  
+- В сообщении отсутствуют некоторые обязательные элементы (например, отсутствует отметка времени или зашифрованный блок данных).  
   
 - Во время подтверждения TLSNEGO/SPNEGO произошли ошибки.

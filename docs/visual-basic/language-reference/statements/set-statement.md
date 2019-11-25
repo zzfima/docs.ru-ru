@@ -1,5 +1,5 @@
 ---
-title: Инструкция Set (Visual Basic)
+title: Оператор Set
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Set
@@ -10,15 +10,15 @@ helpviewer_keywords:
 - write-only properties
 - properties [Visual Basic], write-only
 ms.assetid: 9ecc27b4-df84-420d-9075-db25455fb3cd
-ms.openlocfilehash: cb0dc76d110f3e6a3ea3e74cc0bfb5a669b35396
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 75ad6d87f1785fea13a282d953f117c9c234e203
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72583239"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349558"
 ---
 # <a name="set-statement-visual-basic"></a>Инструкция Set (Visual Basic)
-Объявляет процедуру свойства `Set`, используемую для присвоения значения свойству.  
+Declares a `Set` property procedure used to assign a value to a property.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -30,10 +30,10 @@ End Set
   
 ## <a name="parts"></a>Части  
  `attributelist`  
- Необязательный. См. [список атрибутов](../../../visual-basic/language-reference/statements/attribute-list.md).  
+ Необязательный. See [Attribute List](../../../visual-basic/language-reference/statements/attribute-list.md).  
   
  `accessmodifier`  
- (Необязательно) не более одного из инструкций `Get` и `Set` в этом свойстве. Ниже указаны доступные значения.  
+ Optional on at most one of the `Get` and `Set` statements in this property. Ниже указаны доступные значения.  
   
 - [Protected](../../../visual-basic/language-reference/modifiers/protected.md)  
   
@@ -46,44 +46,44 @@ End Set
  См. раздел [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
  `value`  
- Обязательный. Параметр, содержащий новое значение свойства.  
+ Обязательный. Parameter containing the new value for the property.  
   
  `datatype`  
- Требуется, если `Option Strict` `On`. Тип данных параметра `value`. Указанный тип данных должен совпадать с типом данных свойства, в котором объявлена эта `Set`ая инструкция.  
+ Required if `Option Strict` is `On`. Data type of the `value` parameter. The data type specified must be the same as the data type of the property where this `Set` statement is declared.  
   
  `statements`  
- Необязательный. Одна или несколько инструкций, выполняемых при вызове процедуры свойства `Set`.  
+ Необязательный. One or more statements that run when the `Set` property procedure is called.  
   
  `End Set`  
- Обязательный. Завершает определение процедуры свойства `Set`.  
+ Обязательный. Terminates the definition of the `Set` property procedure.  
   
 ## <a name="remarks"></a>Заметки  
- Каждое свойство должно иметь `Set` процедуру свойства, если только свойство не помечено как `ReadOnly`. Процедура `Set` используется для задания значения свойства.  
+ Every property must have a `Set` property procedure unless the property is marked `ReadOnly`. The `Set` procedure is used to set the value of the property.  
   
- Visual Basic автоматически вызывает процедуру `Set` свойства, когда оператор присваивания предоставляет значение, которое должно храниться в свойстве.  
+ Visual Basic automatically calls a property's `Set` procedure when an assignment statement provides a value to be stored in the property.  
   
- Visual Basic передает параметр в процедуру `Set` во время назначения свойств. Если параметр для `Set` не указан, в интегрированной среде разработки (IDE) используется неявный параметр с именем `value`. Параметр содержит значение, присваиваемое свойству. Обычно это значение сохраняется в закрытой локальной переменной и возвращается при каждом вызове процедуры `Get`.  
+ Visual Basic passes a parameter to the `Set` procedure during property assignments. If you do not supply a parameter for `Set`, the integrated development environment (IDE) uses an implicit parameter named `value`. The parameter holds the value to be assigned to the property. You typically store this value in a private local variable and return it whenever the `Get` procedure is called.  
   
- Тело объявления свойства может содержать только `Get` и `Set` процедуры свойства между [оператором Property](../../../visual-basic/language-reference/statements/property-statement.md) и оператором `End Property`. Он не может хранить ничего, Кроме этих процедур. В частности, он не может хранить текущее значение свойства. Это значение необходимо хранить за пределами свойства, так как при хранении в любой из процедур свойств другая процедура свойства не может получить к ней доступ. Обычным подходом является сохранение значения в [закрытой](../../../visual-basic/language-reference/modifiers/private.md) переменной, объявленной на том же уровне, что и свойство. Необходимо определить `Set` процедуру внутри свойства, к которому она применяется.  
+ The body of the property declaration can contain only the property's `Get` and `Set` procedures between the [Property Statement](../../../visual-basic/language-reference/statements/property-statement.md) and the `End Property` statement. It cannot store anything other than those procedures. In particular, it cannot store the property's current value. You must store this value outside the property, because if you store it inside either of the property procedures, the other property procedure cannot access it. The usual approach is to store the value in a [Private](../../../visual-basic/language-reference/modifiers/private.md) variable declared at the same level as the property. You must define a `Set` procedure inside the property to which it applies.  
   
- @No__t_0 процедура по умолчанию имеет уровень доступа содержащего его свойства, если в инструкции `Set` не используется `accessmodifier`.  
+ The `Set` procedure defaults to the access level of its containing property unless you use `accessmodifier` in the `Set` statement.  
   
 ## <a name="rules"></a>Правила  
   
-- **Уровни смешанного доступа.** Если вы определяете свойство для чтения и записи, при необходимости можно указать другой уровень доступа либо для `Get`, либо для `Set` процедуры, но не для обоих. В этом случае уровень доступа процедуры должен быть более четким, чем уровень доступа свойства. Например, если свойство объявлено `Friend`, можно объявить `Set` процедуру `Private`, но не `Public`.  
+- **Mixed Access Levels.** If you are defining a read-write property, you can optionally specify a different access level for either the `Get` or the `Set` procedure, but not both. If you do this, the procedure access level must be more restrictive than the property's access level. For example, if the property is declared `Friend`, you can declare the `Set` procedure `Private`, but not `Public`.  
   
-     При определении свойства `WriteOnly` `Set` процедура представляет все свойство. Нельзя объявить другой уровень доступа для `Set`, так как для свойства будет задано два уровня доступа.  
+     If you are defining a `WriteOnly` property, the `Set` procedure represents the entire property. You cannot declare a different access level for `Set`, because that would set two access levels for the property.  
   
 ## <a name="behavior"></a>Поведение  
   
-- **Возврат из процедуры свойства.** Когда процедура `Set` возвращается в вызывающий код, выполнение продолжится после оператора, который предоставил значение для сохранения.  
+- **Returning from a Property Procedure.** When the `Set` procedure returns to the calling code, execution continues following the statement that provided the value to be stored.  
   
-     `Set` процедуры свойств могут возвращаться с помощью [оператора return](../../../visual-basic/language-reference/statements/return-statement.md) или [оператора Exit](../../../visual-basic/language-reference/statements/exit-statement.md).  
+     `Set` property procedures can return using either the [Return Statement](../../../visual-basic/language-reference/statements/return-statement.md) or the [Exit Statement](../../../visual-basic/language-reference/statements/exit-statement.md).  
   
-     Операторы `Exit Property` и `Return` вызывают немедленный выход из процедуры свойства. Любое число инструкций `Exit Property` и `Return` может использоваться в любом месте процедуры, и можно смешивать `Exit Property` и `Return` операторы.  
+     The `Exit Property` and `Return` statements cause an immediate exit from a property procedure. Any number of `Exit Property` and `Return` statements can appear anywhere in the procedure, and you can mix `Exit Property` and `Return` statements.  
   
 ## <a name="example"></a>Пример  
- В следующем примере оператор `Set` используется для задания значения свойства.  
+ The following example uses the `Set` statement to set the value of a property.  
   
  [!code-vb[VbVbalrStatements#55](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#55)]  
   

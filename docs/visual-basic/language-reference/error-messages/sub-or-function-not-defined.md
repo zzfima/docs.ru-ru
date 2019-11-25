@@ -1,34 +1,34 @@
 ---
-title: Sub или Function не определена (Visual Basic)
+title: Подпрограмма или функция не определена
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID35
 ms.assetid: 661fdb90-ee7d-40ce-b30b-5e7267bd957a
-ms.openlocfilehash: 3a56d5596c79900bb5818a6ed7f8736859b5ea15
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8b81460eccb6be8baa2ea7bc68d0f80c9d16398e
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64593202"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349580"
 ---
 # <a name="sub-or-function-not-defined-visual-basic"></a>Sub или Function не определена (Visual Basic)
-Объект `Sub` или `Function` должны быть определены для вызываться. Возможные причины этой ошибки:  
+A `Sub` or `Function` must be defined in order to be called. Возможные причины этой ошибки:  
   
-- Неправильное написание имени процедуры.  
+- Misspelling the procedure name.  
   
-- Попытка вызова процедуры из другого проекта без явного добавления ссылки на этот проект в **ссылки** диалоговое окно.  
+- Trying to call a procedure from another project without explicitly adding a reference to that project in the **References** dialog box.  
   
-- Задание процедуры, которая не отображается в вызывающую процедуру.  
+- Specifying a procedure that is not visible to the calling procedure.  
   
-- Объявление процедуры библиотеки динамической компоновки (DLL) для Windows или Macintosh ресурс кода подпрограмму, которая не находится в указанный ресурс библиотеки или кода.  
+- Declaring a Windows dynamic-link library (DLL) routine or Macintosh code-resource routine that is not in the specified library or code resource.  
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  
   
-1. Убедитесь, что имя процедуры указано правильно.  
+1. Make sure that the procedure name is spelled correctly.  
   
-2. Найдите имя проекта, содержащего процедуру, которую требуется вызывать в **ссылки** диалоговое окно. Если он не отображается, нажмите кнопку **Обзор** кнопку, чтобы найти его. Установите флажок слева от имени проекта и нажмите кнопку **ОК**.  
+2. Find the name of the project containing the procedure you want to call in the **References** dialog box. If it does not appear, click the **Browse** button to search for it. Select the check box to the left of the project name, and then click **OK**.  
   
-3. Проверьте имя процедуры.  
+3. Check the name of the routine.  
   
 ## <a name="see-also"></a>См. также
 

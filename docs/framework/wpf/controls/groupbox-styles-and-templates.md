@@ -9,15 +9,15 @@ helpviewer_keywords:
 - styles [WPF], GroupBox
 - templates [WPF], GroupBox
 ms.assetid: 33df7037-0a1b-476f-b9d0-41566a777699
-ms.openlocfilehash: 0835c106ffbda86bca8e01bc61adebfc1ab0c2cb
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: e5befffc86f26176da4accfc01239a08d4978713
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459641"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283768"
 ---
 # <a name="groupbox-styles-and-templates"></a>Стили и шаблоны элемента GroupBox
-<a name="introduction"></a>В этом разделе описываются стили и шаблоны для элемента управления <xref:System.Windows.Controls.GroupBox>. Можно изменить <xref:System.Windows.Controls.ControlTemplate> по умолчанию, чтобы обеспечить уникальность внешнего вида элемента управления. Подробнее см. в разделе [Настройка внешнего вида существующего элемента управления путем создания объекта ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
+<a name="introduction"></a>В этом разделе описываются стили и шаблоны для элемента управления <xref:System.Windows.Controls.GroupBox>. Можно изменить <xref:System.Windows.Controls.ControlTemplate> по умолчанию, чтобы обеспечить уникальность внешнего вида элемента управления. Дополнительные сведения см. в разделе [Создание шаблона для элемента управления](../../../desktop-wpf/themes/how-to-create-apply-template.md).  
   
 <a name="groupbox_parts"></a>   
 ## <a name="groupbox-parts"></a>Части GroupBox  
@@ -52,4 +52,4 @@ ms.locfileid: "73459641"
 - [Стили и шаблоны элемента управления](control-styles-and-templates.md)
 - [Настройка элементов управления](control-customization.md)
 - [Стилизация и использование шаблонов](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
-- [Настройка внешнего вида существующего элемента управления путем создания объекта ControlTemplate](customizing-the-appearance-of-an-existing-control.md)
+- [Создание шаблона для элемента управления](../../../desktop-wpf/themes/how-to-create-apply-template.md)

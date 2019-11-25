@@ -8,12 +8,12 @@ helpviewer_keywords:
 - service contracts [WCF], synchronous operations
 - service contracts [WCF], asynchronous operations
 ms.assetid: db8a51cb-67e6-411b-9035-e5821ed350c9
-ms.openlocfilehash: 61dfa257676d6c274d846300c7ccae75a219cf4c
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 39a7db3fb7dc3651f2cf6c850e7ebb5525e24963
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424902"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74281635"
 ---
 # <a name="synchronous-and-asynchronous-operations"></a>Синхронные и асинхронные операции
 В этом разделе описывается реализация и вызов асинхронных операций службы.  
@@ -174,7 +174,7 @@ svcutil http://localhost:8000/servicemodelsamples/service/mex /async /tcv:Versio
   
  В такой конфигурации служебная программа Svcutil.exe создает класс клиента WCF с инфраструктурой событий, которая позволяет вызывающему приложению реализовать и присвоить обработчик событий, который получает ответ и выполняет соответствующие действия. Полный пример такой реализации см. в статье [Практическое руководство. Асинхронный вызов операций службы](./feature-details/how-to-call-wcf-service-operations-asynchronously.md).  
   
- Однако асинхронная модель на основе событий доступна только в [!INCLUDE[netfx35_long](../../../includes/netfx35-long-md.md)]. Кроме того, она не поддерживается даже в [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)], если канал WCF создается для клиента с помощью <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType>. Для асинхронного вызова операций в объектах клиентского канала WCF необходимо использовать объекты <xref:System.IAsyncResult?displayProperty=nameWithType>. Чтобы воспользоваться этим подходом, укажите параметр командной строки **/async** в [служебном средстве ServiceModel Metadata Utility Tool (Svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md), как показано в следующем примере.  
+ Однако асинхронная модель, основанная на событиях, доступна только в .NET Framework 3,5. Кроме того, он не поддерживается даже в .NET Framework 3,5, когда канал клиента WCF создается с помощью <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType>. Для асинхронного вызова операций в объектах клиентского канала WCF необходимо использовать объекты <xref:System.IAsyncResult?displayProperty=nameWithType>. Чтобы воспользоваться этим подходом, укажите параметр командной строки **/async** в [служебном средстве ServiceModel Metadata Utility Tool (Svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md), как показано в следующем примере.  
   
 ```console  
 svcutil http://localhost:8000/servicemodelsamples/service/mex /async   

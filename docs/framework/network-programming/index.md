@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Internet, .NET Framework Internet services
 - Network Resources
 ms.assetid: 8d455610-67a0-4fa8-a62f-7747064a9256
-ms.openlocfilehash: 230825c5259807cf693179878a45aeb3fdcbf0ac
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 1e7f0123ab07fd4e83eea957b72bf79eeeecef2b
+ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71047997"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74204697"
 ---
 # <a name="network-programming-in-the-net-framework"></a>Сетевое программирование в .NET Framework
 Microsoft .NET Framework обеспечивает многоуровневую, расширяемую и управляемую реализацию служб Интернета, которую можно легко и быстро интегрировать в приложения. В сетевых приложениях можно использовать подключаемые протоколы, которые позволяют автоматически применять новые протоколы Интернета, или управляемую реализацию интерфейса сокетов Windows, дающую возможность работать с сетью на уровне сокетов.  
@@ -80,12 +80,12 @@ Microsoft .NET Framework обеспечивает многоуровневую, 
  Описание усовершенствований, добавленных в пространства имен <xref:System.Net?displayProperty=nameWithType>, <xref:System.Net.NetworkInformation?displayProperty=nameWithType>и <xref:System.Net.Sockets?displayProperty=nameWithType> для поддержки обхода преобразования сетевых адресов (NAT) с помощью IPv6 и Teredo.  
   
  [Сетевая изоляция для приложений Магазина Windows](network-isolation-for-windows-store-apps.md)  
- Описание последствий сетевой изоляции, когда классы в пространствах имен <xref:System.Net>, <xref:System.Net.Http>и <xref:System.Net.Http.Headers> используются в приложениях [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] .  
+ Описание последствий сетевой изоляции, когда классы в пространствах имен <xref:System.Net>, <xref:System.Net.Http>и <xref:System.Net.Http.Headers> используются в приложениях Microsoft Store для Windows 8.x.  
   
  [Примеры сетевого программирования](network-programming-samples.md)  
  Ссылки на загружаемые примеры программ, в которых используются классы из пространств имен <xref:System.Net>, <xref:System.Net.Cache>, <xref:System.Net.Configuration>, <xref:System.Net.Mail>, <xref:System.Net.Mime>, <xref:System.Net.NetworkInformation>, <xref:System.Net.PeerToPeer>, <xref:System.Net.Security>, <xref:System.Net.Sockets> .  
   
-## <a name="reference"></a>Справочник  
+## <a name="reference"></a>Ссылка  
  <xref:System.Net?displayProperty=nameWithType>  
  Предоставляет простой программный интерфейс для многих современных сетевых протоколов. Классы <xref:System.Net.WebRequest?displayProperty=nameWithType> и <xref:System.Net.WebResponse?displayProperty=nameWithType> в этом пространстве имен являются основой для подключаемых протоколов.  
   

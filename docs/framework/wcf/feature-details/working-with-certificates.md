@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-ms.openlocfilehash: ac69b38df3439932be7f65d871c64700585538cb
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 65990c699bafa8eec1ba7dcbce624c88316cbb72
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774290"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283281"
 ---
 # <a name="working-with-certificates"></a>Работа с сертификатами
 
@@ -72,7 +72,7 @@ ms.locfileid: "72774290"
 
 При создании новой службы пользователь может использовать сертификат, который был выдан центром сертификации, отличным от доверенного, или сертификат издателя может отсутствовать в хранилище «Доверенные корневые центры сертификации». Предусмотрена возможность временного отключения механизма, проверяющего цепочку сертификатов для заданного сертификата; эта возможность должна использоваться только в процессе разработки. Чтобы отключить данный механизм, задайте для свойства `CertificateValidationMode` значение `PeerTrust` или `PeerOrChainTrust`. Эти режимы определяют, что сертификат может быть либо самостоятельно выданным (доверие одноранговой группы), либо являться частью цепочки доверия. Указанное свойство можно задать для любого из следующих классов.
 
-|Class|свойство;|
+|Class|Свойство|
 |-----------|--------------|
 |<xref:System.ServiceModel.Security.X509ClientCertificateAuthentication>|<xref:System.ServiceModel.Security.X509ClientCertificateAuthentication.CertificateValidationMode%2A?displayProperty=nameWithType>|
 |<xref:System.ServiceModel.Security.X509PeerCertificateAuthentication>|<xref:System.ServiceModel.Security.X509PeerCertificateAuthentication.CertificateValidationMode%2A?displayProperty=nameWithType>|
@@ -184,7 +184,7 @@ ms.locfileid: "72774290"
 
 Сопоставление сертификата X.509 с маркером, представляющим учетную запись пользователя Windows, считается повышением привилегий, поскольку после сопоставления маркер Windows может использоваться для получения доступа к защищенным ресурсам. Поэтому перед сопоставлением необходимо проверить, что сертификат X.509 соответствует политике домена. Проверку этого требования обеспечивает пакет безопасности *SChannel*.
 
-При использовании [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] или более поздней версии WCF позволяет убедиться, что сертификат соответствует политике домена перед его сопоставлением с учетной записью Windows.
+При использовании .NET Framework 3,5 или более поздних версий WCF гарантирует, что сертификат соответствует политике домена, прежде чем он будет сопоставлен с учетной записью Windows.
 
 В первом выпуске WCF сопоставление выполняется без обращения к политике домена. Поэтому более старые приложения, которые работали при использовании первого выпуска, могут не работать, если включено сопоставление и сертификат X.509 не удовлетворяет требованиям политики домена.
 
