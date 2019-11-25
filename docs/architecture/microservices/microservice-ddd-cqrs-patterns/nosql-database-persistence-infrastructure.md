@@ -2,12 +2,12 @@
 title: Использование баз данных NoSQL в качестве инфраструктуры сохраняемости
 description: Архитектура микрослужб .NET для контейнерных приложений .NET | Использование баз данных NoSql в целом и в Azure Cosmos DB в частности для реализации сохраняемости.
 ms.date: 10/08/2018
-ms.openlocfilehash: b184586dede6331e0babfa976c6fd641933d018e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 44fc2fa01e2d19efed7314f421a682c0a635a9f6
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73089871"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73737449"
 ---
 # <a name="use-nosql-databases-as-a-persistence-infrastructure"></a>Использование баз данных NoSQL в качестве инфраструктуры сохраняемости
 
@@ -54,7 +54,7 @@ ms.locfileid: "73089871"
 
 [Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/introduction) — глобально распределенная служба баз данных корпорации Майкрософт для критически важных приложений. Azure Cosmos DB предоставляет [глобальное распределение](https://docs.microsoft.com/azure/cosmos-db/distribute-data-globally), [эластичное масштабирование пропускной способности и хранилища](https://docs.microsoft.com/azure/cosmos-db/partition-data) по всему миру, задержку не более десяти миллисекунд на 99-м процентиле, [пять хорошо определенных уровней согласованности](https://docs.microsoft.com/azure/cosmos-db/consistency-levels), гарантированную высокую доступность — и все это с [ведущими в отрасли соглашениями об уровне обслуживания](https://azure.microsoft.com/support/legal/sla/cosmos-db/). Azure Cosmos DB [автоматически индексирует данные](https://www.vldb.org/pvldb/vol8/p1668-shukla.pdf) без необходимости иметь дело со схемой и управлением индексами. Она является мультимодельной и поддерживает следующие модели данных: модель данных документа, модель данных "ключ-значение", модель данных графа и столбцовая модель данных.
 
-![Azure Cosmos DB — это глобально распределенная база данных с гарантированно низкой задержкой, доступ к которой можно получить с помощью четырех протоколов API. ](./media/image19.1.png)
+![Схема, на которой показано глобальное распределение Azure Cosmos DB.](./media/nosql-database-persistence-infrastructure/azure-cosmos-db-global-distribution.png)
 
 **Рис. 7–19**. Глобальное распределение Azure Cosmos DB
 
@@ -132,7 +132,7 @@ await client.CreateDocumentAsync(collectionUri, newOrder);
 
 Базы данных Cosmos DB поддерживают API MongoDB для .NET, а также собственный коммутации MongoDB. Это означает, что ваше приложение MongoDB сейчас сможет взаимодействовать с Cosmos DB и использовать базы данных Cosmos DB вместо баз данных MongoDB с использованием существующих драйверов, как показано на рис. 7-20.
 
-![Cosmos DB поддерживает API MongoDB для .NET и протокол связи MongoDB, вы можете легко переключиться с MongoDB на Cosmos DB.](./media/image19.2.png)
+![Схема, на которой показано, что Cosmos DB поддерживает .NET и сетевой протокол MongoDB.](./media/nosql-database-persistence-infrastructure/mongodb-api-wire-protocol.png)
 
 **Рис. 7-20**. Использование API и протокола MongoDB для доступа к Azure Cosmos DB
 
@@ -140,7 +140,7 @@ await client.CreateDocumentAsync(collectionUri, newOrder);
 
 Как показано на следующем рисунке, eShopOnContainers поддерживает контейнеры Windows и Linux MongoDB для локальной среды разработки с API MongoDB. Но вы можете перейти на масштабируемое облачное решение PaaS, такое как Azure Cosmos DB, просто [изменив строку подключения MongoDB, так чтобы она указывала на Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/connect-mongodb-account).
 
-![Микрослужба расположения в eShopOnContainers реализуется с помощью MongoDB, но можно переключится на Cosmos DB, просто изменив строку подключения.](./media/image20-bis.png)
+![Схема, на которой показано, что микрослужба Location в eShopOnContainers может использовать либо Cosmos DB, либо MongoDB.](./media/nosql-database-persistence-infrastructure/eshoponcontainers-mongodb-containers.png)
 
 **Рис. 7-21**. Решение eShopOnContainers, использующее контейнеры MongoDB для среды разработки и Azure Cosmos DB для рабочей среды
 
@@ -166,7 +166,7 @@ await client.CreateDocumentAsync(collectionUri, newOrder);
 
 API MongoDB для .NET основан на пакетах NuGet, которые необходимо добавить в свои проекты, например проект Locations.API, показанный на следующем рисунке.
 
-![Представление обозревателя решений, показывающее зависимости пакетов MongoDB NuGet.](./media/image21-bis.png)
+![Снимок экрана: зависимости в пакетах NuGet MongoDB.](./media/nosql-database-persistence-infrastructure/mongodb-api-nuget-packages.png)
 
 **Рис. 7-22**. Ссылки на пакеты NuGet для API MongoDB в проекте .NET Core
 

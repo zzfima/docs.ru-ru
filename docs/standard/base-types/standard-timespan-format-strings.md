@@ -17,15 +17,16 @@ helpviewer_keywords:
 - standard TimeSpan format strings
 - formatting [.NET Framework], time intervals
 ms.assetid: 9f6c95eb-63ae-4dcc-9c32-f81985c75794
-ms.openlocfilehash: 5284eb52d7b50307e51945fc0b4a9deb8818f2e2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c699ed68606293b1a49a540e00636cf7f56bdf2f
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73121694"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73972096"
 ---
 # <a name="standard-timespan-format-strings"></a>Строки стандартного формата TimeSpan
-<a name="Top"></a> Строка стандартного формата <xref:System.TimeSpan> использует один описатель формата для определения текстового представления значения <xref:System.TimeSpan>, получаемого после выполнения операции форматирования. Любая строка формата, содержащая более одной буквы, включая пробелы, интерпретируется как строка настраиваемого формата <xref:System.TimeSpan>. Дополнительные сведения см. в разделе [Строки настраиваемого формата TimeSpan](../../../docs/standard/base-types/custom-timespan-format-strings.md).  
+
+Строка стандартного формата <xref:System.TimeSpan> использует один описатель формата для определения текстового представления значения <xref:System.TimeSpan>, получаемого после выполнения операции форматирования. Любая строка формата, содержащая более одной буквы, включая пробелы, интерпретируется как строка настраиваемого формата <xref:System.TimeSpan>. Дополнительные сведения см. в разделе [Строки настраиваемого формата TimeSpan](../../../docs/standard/base-types/custom-timespan-format-strings.md).  
   
  Строковые представления значений <xref:System.TimeSpan> создаются вызовами перегрузок метода <xref:System.TimeSpan.ToString%2A?displayProperty=nameWithType>, а также методами, поддерживающими составное форматирование, такими как <xref:System.String.Format%2A?displayProperty=nameWithType>. Дополнительные сведения см. в разделах [Типы форматирования](../../../docs/standard/base-types/formatting-types.md) и [Составное форматирование](../../../docs/standard/base-types/composite-formatting.md). В следующем примере показано использование строк стандартного формата в операциях форматирования.  
   
@@ -37,15 +38,14 @@ ms.locfileid: "73121694"
  [!code-csharp[Conceptual.TimeSpan.Standard#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.standard/cs/parseexample1.cs#3)]
  [!code-vb[Conceptual.TimeSpan.Standard#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.standard/vb/parseexample1.vb#3)]  
   
-<a name="top"></a> В следующей таблице перечислены описатели стандартного формата временных интервалов.  
+В следующей таблице перечислены описатели стандартного формата временных интервалов.  
   
 |Описатель формата|name|ОПИСАНИЕ|Примеры|  
 |----------------------|----------|-----------------|--------------|  
-|"c"|Постоянный (инвариантный) формат|Этот описатель не учитывает язык и региональные параметры. Он принимает форму `[-][d'.']hh':'mm':'ss['.'fffffff]`.<br /><br /> (Строки формата "t" и "T" дают одинаковые результаты).<br /><br /> Дополнительная информация: [Описатель формата константы (c)](#Constant).|`TimeSpan.Zero` -> 00:00:00<br /><br /> `New TimeSpan(0, 0, 30, 0)` -> 00:30:00<br /><br /> `New TimeSpan(3, 17, 25, 30, 500)` -> 3.17:25:30.5000000|  
-|"g"|Общий короткий формат|Этот описатель выводит только необходимые данные. Он зависит от языка и региональных параметров и принимает форму `[-][d':']h':'mm':'ss[.FFFFFFF]`.<br /><br /> Дополнительная информация: [Описатель общего короткого формата (g)](#GeneralShort).|`New TimeSpan(1, 3, 16, 50, 500)` -> 1:3:16:50.5 (en-US)<br /><br /> `New TimeSpan(1, 3, 16, 50, 500)` -> 1:3:16:50,5 (fr-FR)<br /><br /> `New TimeSpan(1, 3, 16, 50, 599)` -> 1:3:16:50.599 (en-US)<br /><br /> `New TimeSpan(1, 3, 16, 50, 599)` -> 1:3:16:50,599 (fr-FR)|  
-|"G"|Общий длинный формат|Этот описатель всегда отображает дни и семь цифр после запятой. Он зависит от языка и региональных параметров и принимает форму `[-]d':'hh':'mm':'ss.fffffff`.<br /><br /> Дополнительная информация: [Описатель общего длинного формата (G)](#GeneralLong).|`New TimeSpan(18, 30, 0)` -> 0:18:30:00.0000000 (en-US)<br /><br /> `New TimeSpan(18, 30, 0)` -> 0:18:30:00,0000000 (fr-FR)|  
-  
-<a name="Constant"></a>   
+|"c"|Постоянный (инвариантный) формат|Этот описатель не учитывает язык и региональные параметры. Он принимает форму `[-][d'.']hh':'mm':'ss['.'fffffff]`.<br /><br /> (Строки формата "t" и "T" дают одинаковые результаты).<br /><br /> Дополнительная информация: [Описатель формата константы (c)](#the-constant-c-format-specifier).|`TimeSpan.Zero` -> 00:00:00<br /><br /> `New TimeSpan(0, 0, 30, 0)` -> 00:30:00<br /><br /> `New TimeSpan(3, 17, 25, 30, 500)` -> 3.17:25:30.5000000|  
+|"g"|Общий короткий формат|Этот описатель выводит только необходимые данные. Он зависит от языка и региональных параметров и принимает форму `[-][d':']h':'mm':'ss[.FFFFFFF]`.<br /><br /> Дополнительная информация: [Описатель общего короткого формата (g)](#the-general-short-g-format-specifier).|`New TimeSpan(1, 3, 16, 50, 500)` -> 1:3:16:50.5 (en-US)<br /><br /> `New TimeSpan(1, 3, 16, 50, 500)` -> 1:3:16:50,5 (fr-FR)<br /><br /> `New TimeSpan(1, 3, 16, 50, 599)` -> 1:3:16:50.599 (en-US)<br /><br /> `New TimeSpan(1, 3, 16, 50, 599)` -> 1:3:16:50,599 (fr-FR)|  
+|"G"|Общий длинный формат|Этот описатель всегда отображает дни и семь цифр после запятой. Он зависит от языка и региональных параметров и принимает форму `[-]d':'hh':'mm':'ss.fffffff`.<br /><br /> Дополнительная информация: [Описатель общего длинного формата (G)](#the-general-long-g-format-specifier).|`New TimeSpan(18, 30, 0)` -> 0:18:30:00.0000000 (en-US)<br /><br /> `New TimeSpan(18, 30, 0)` -> 0:18:30:00,0000000 (fr-FR)|  
+
 ## <a name="the-constant-c-format-specifier"></a>Описатель постоянного ("c") формата.  
  Описатель формата "c" возвращает строковое представление значения <xref:System.TimeSpan> в следующем виде:  
   
@@ -71,10 +71,7 @@ ms.locfileid: "73121694"
   
  [!code-csharp[Conceptual.TimeSpan.Standard#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.standard/cs/standardc1.cs#1)]
  [!code-vb[Conceptual.TimeSpan.Standard#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.standard/vb/standardc1.vb#1)]  
-  
- [К таблице](#Top)  
-  
-<a name="GeneralShort"></a>   
+
 ## <a name="the-general-short-g-format-specifier"></a>Описатель общего короткого ("g") формата  
  Описатель формата "g" <xref:System.TimeSpan> возвращает строковое представление значения <xref:System.TimeSpan> в компактной форме, включая только необходимые элементы. Представление имеет следующую форму:  
   
@@ -98,10 +95,7 @@ ms.locfileid: "73121694"
   
  [!code-csharp[Conceptual.TimeSpan.Standard#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.standard/cs/standardshort1.cs#4)]
  [!code-vb[Conceptual.TimeSpan.Standard#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.standard/vb/standardshort1.vb#4)]  
-  
- [К таблице](#Top)  
-  
-<a name="GeneralLong"></a>   
+
 ## <a name="the-general-long-g-format-specifier"></a>Описатель общего длинного ("G") формата  
  Описатель формата "G" <xref:System.TimeSpan> возвращает строковое представление значения <xref:System.TimeSpan> в длинной форме, которая всегда включает и дни, и доли секунд. Строка, которая является результатом описателя стандартного формата "G" имеет следующий вид:  
   
@@ -124,9 +118,7 @@ ms.locfileid: "73121694"
  В следующем примере создаются два объекта <xref:System.TimeSpan>, которые используются для выполнения арифметических операций, после чего выводится результат. В каждом случае используется составное форматирование для отображения значения <xref:System.TimeSpan> с помощью описателя формата "G". Кроме того, он форматирует значение <xref:System.TimeSpan> с использованием соглашений о форматировании текущего системного языка и региональных параметров (в данном случае это английский язык, США или en-US) и французского языка, Франция (fr-FR).  
   
  [!code-csharp[Conceptual.TimeSpan.Standard#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.standard/cs/standardlong1.cs#5)]
- [!code-vb[Conceptual.TimeSpan.Standard#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.standard/vb/standardlong1.vb#5)]  
-  
- [К таблице](#Top)  
+ [!code-vb[Conceptual.TimeSpan.Standard#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.standard/vb/standardlong1.vb#5)]
   
 ## <a name="see-also"></a>См. также
 

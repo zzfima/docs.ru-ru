@@ -10,14 +10,12 @@ helpviewer_keywords:
 - dataflow blocks, canceling in TPL
 - TPL dataflow library,canceling dataflow blocks
 ms.assetid: fbddda0d-da3b-4ec8-a1d6-67ab8573fcd7
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b95f0a3535716c4a01dae52abe38eb850f080cf0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: aa175d95f27fcbf28c3f3da3eaa7b8f7988681e1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59345200"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140091"
 ---
 # <a name="how-to-cancel-a-dataflow-block"></a>Практическое руководство. Отмена блока потока данных
 В этом документе показано, как включить отмену в приложении. В этом примере используется Windows Forms для отображения позиции активности рабочих элементов в конвейере потока данных, а также последствий отмены.  

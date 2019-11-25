@@ -2,21 +2,21 @@
 title: <add> из <baseAddressPrefixFilter>
 ms.date: 03/30/2017
 ms.assetid: b226bede-8459-4de9-b2ac-3d39604ce2bc
-ms.openlocfilehash: dee2cd482efc841b7320ed2114a05000255466f3
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 809e6d5504b56f86eb09a5d57931f922e1c18348
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70850517"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73973813"
 ---
-# <a name="add-of-baseaddressprefixfilter"></a>\<Добавление > \<> басеаддресспрефиксфилтер
+# <a name="add-of-baseaddressprefixfilter"></a>\<Добавить > \<Басеаддресспрефиксфилтер >
 Представляет элемент конфигурации, указывающий сквозной фильтр, который предоставляет механизм для выбора соответствующих привязок службы IIS (IIS) при размещении приложения Windows Communication Foundation (WCF) в службах IIS.  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;[ **\<System. serviceModel >** ](system-servicemodel.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;[ **\<serviceHostingEnvironment >** ](servicehostingenvironment.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<baseAddressPrefixFilters >** ](baseaddressprefixfilters.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Добавить >**  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<добавить >**  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,7 +38,7 @@ ms.locfileid: "70850517"
 |prefix|Универсальный код ресурса (URI), совпадающий с частью базового адреса.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
- Нет.  
+ Отсутствует.  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
@@ -46,16 +46,16 @@ ms.locfileid: "70850517"
 |-------------|-----------------|  
 |[\<baseAddressPrefixFilters >](baseaddressprefixfilters.md)|Коллекция элементов конфигурации, задающих сквозные фильтры, которые предоставляют механизм для выбора соответствующих привязок IIS при размещении приложения Windows Communication Foundation (WCF) в службах IIS.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
  Префиксный фильтр предоставляет способ для общих поставщиков услуг размещения задать, какие URI должны использоваться службой. Это дает возможность общим узлам размещать несколько приложений с разными базовыми адресами для одной схемы на одном узле.  
   
  Веб-узлы IIS являются контейнерами виртуальных приложений, содержащими виртуальные каталоги. Доступ к приложению на узле можно осуществлять через одну или несколько привязок IIS. Привязки IIS предоставляют два блока данных: протокол привязки и данные привязки. Протокол привязки (например, HTTP) определяет схему, посредством которой осуществляется связь, а данные привязки (например, IP-адрес, порт, заголовок узла) содержат сведения, используемые для доступа к узлу.  
   
  IIS поддерживает задание нескольких привязок IIS для каждого узла, что позволяет использовать несколько базовых адресов для каждой схемы. Так как служба WCF, размещенная на сайте, допускает привязку только к одному базовому адресу для каждой схемы, можно использовать функцию фильтрации префиксов, чтобы выбрать необходимый базовый адрес размещенной службы. Входящие базовые адреса, предоставляемые IIS, фильтруются с использованием дополнительного фильтра списка префиксов.  
   
- Например, узел может содержать следующие базовые адреса.  
+ Например, сайт может содержать следующие базовые адреса:
   
-```  
+``` 
 http://testl.fabrikam.com/Service.svc  
 http://test2.fabrikam.com/Service.svc  
 ```  

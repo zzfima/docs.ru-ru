@@ -11,12 +11,12 @@ metadata:
   interactive: csharp
   nextTutorialHref: list-collection.yml
   nextTutorialTitle: Коллекция списка
-  ms.openlocfilehash: 445017337663aea428af2f8dcd4027d716d05751
-  ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
+  ms.openlocfilehash: ab709b6b30b5a173e2faf08b577e4d7a3d9a9034
+  ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
   ms.translationtype: HT
   ms.contentlocale: ru-RU
-  ms.lasthandoff: 10/09/2019
-  ms.locfileid: "72179882"
+  ms.lasthandoff: 11/12/2019
+  ms.locfileid: "73969429"
 items:
 - durationInMinutes: 1
   content: >
@@ -24,7 +24,7 @@ items:
 - title: Принятие решений с помощью оператора if
   durationInMinutes: 4
   content: >
-    Запустите приведенный ниже код в интерактивном окне. Для этого введите следующий блок кода в интерактивном окне и нажмите кнопку **Выполнить**:
+    Запустите приведенный ниже код в интерактивном окне. Нажмите кнопку **Перейти в режим фокусировки**. Затем введите следующий блок кода в интерактивном окне и нажмите кнопку **Выполнить**:
 
 
     ```csharp

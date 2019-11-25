@@ -2,12 +2,12 @@
 title: Сведения о .NET Core
 description: Дополнительные сведения о .NET Core.
 ms.date: 09/17/2019
-ms.openlocfilehash: 1baad9d6611a4c4340012b9a467d3499ad9ab834
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: a1127a39d67b6c24994a2957298c62d87703950d
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71181914"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73416744"
 ---
 # <a name="about-net-core"></a>Сведения о .NET Core
 
@@ -16,7 +16,7 @@ ms.locfileid: "71181914"
 - **Кроссплатформенность.** Поддержка [операционных систем](https://github.com/dotnet/core/blob/master/os-lifecycle-policy.md) Windows, macOS и Linux.
 - **Согласованность между архитектурами.** Одинаковое выполнение кода в различных архитектурах, включая x64, x86 и ARM.
 - **Программы командной строки.**  Удобные инструменты для локальной разработки и сценариев непрерывной интеграции.
-- **Гибкая разработка.** Может включаться в приложение или устанавливаться параллельно (на уровне пользователя или системы). Возможность использования с [контейнерами Docker](docker/index.md).
+- **Гибкая разработка.** Может включаться в приложение или устанавливаться параллельно (на уровне пользователя или системы). Возможность использования с [контейнерами Docker](docker/introduction.md).
 - **Совместимость**. Платформа .NET Core совместима с .NET Framework, Xamarin и Mono благодаря [.NET Standard](../standard/net-standard.md).
 - **Открытый код.** Платформа .NET Core имеет открытый код и распространяется по лицензиям MIT и Apache 2. .NET Core является проектом [.NET Foundation](https://dotnetfoundation.org/).
 - **Поддержка от Майкрософт.** Корпорация Майкрософт предоставляет [поддержку .NET Core](https://dotnet.microsoft.com/platform/support/policy).
@@ -32,7 +32,7 @@ ms.locfileid: "71181914"
  
 Интеграция возможна во многом благодаря участникам проектов [OmniSharp](https://www.omnisharp.net/) и [Ionide](http://ionide.io).
 
-## <a name="apis"></a>Программные интерфейсы
+## <a name="apis"></a>API - интерфейсы
 
 .NET Core предоставляет API-интерфейсы для множества сценариев, в некоторых из которых используются:
 
@@ -44,7 +44,7 @@ ms.locfileid: "71181914"
 
 Благодаря поддержке спецификации [.NET Standard](../standard/net-standard.md) платформа .NET Core совместима с .NET Framework и API-интерфейсами Mono.
 
-## <a name="frameworks"></a>Платформы
+## <a name="frameworks"></a>Инфраструктуры
 
 На основе .NET Core было создано множество платформ:
 
@@ -52,7 +52,7 @@ ms.locfileid: "71181914"
 - [Универсальная платформа Windows (UWP) для Windows 10](https://developer.microsoft.com/windows)
 - [Tizen](https://developer.tizen.org/development/training/.net-application)
 
-## <a name="composition"></a>Создание
+## <a name="composition"></a>Композиция
 
 .NET Core состоит из перечисленных ниже компонентов.
 
@@ -67,7 +67,7 @@ ms.locfileid: "71181914"
 - [Среда выполнения ASP.NET Core](https://dotnet.microsoft.com/download) — включает среды выполнения ASP.NET Core и .NET Core, а также библиотеки платформы.
 - [Пакет SDK для .NET Core](https://dotnet.microsoft.com/download) — включает средства CLI .NET, среду выполнения ASP.NET Core, а также платформу и среду выполнения .NET Core.
 
-### <a name="open-source"></a>Открытый исходный код
+### <a name="open-source"></a>Открытый код
 
 Платформа [.NET Core](https://github.com/dotnet/core) имеет открытый исходный код ([по лицензии MIT](https://github.com/dotnet/core/blob/master/LICENSE.TXT)) и была передана корпорацией Майкрософт в фонд [.NET Foundation](https://dotnetfoundation.org) в 2014 году. Теперь это один из самых активно развивающихся проектов .NET Foundation. Частные лица и организации могут использовать платформу в личных, образовательных или коммерческих целях. Многие компании используют .NET Core в составе своих приложений, средств, новых платформ и услуг размещения. Некоторые из них вносят существенный вклад в проект .NET Core на портале GitHub и участвуют в управлении его развитием в рамках [Координационного совета .NET Foundation](https://dotnetfoundation.org/blog/tsg-welcome).
 
@@ -113,7 +113,7 @@ ms.locfileid: "71181914"
 
 ### <a name="comparison-with-mono"></a>Сравнение с Mono
 
-[Mono](https://www.mono-project.com/) — это первая кроссплатформенная реализация .NET. Изначально она создавалась как альтернатива платформе .NET Framework с [открытым кодом]([open-source](https://github.com/mono/mono)), но с ростом популярности устройств iOS и Android была переориентирована на мобильные устройства. Ее можно считать аналогом .NET Framework, предоставляемым сообществом. Команда проекта Mono использовала открытые [стандарты .NET](https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/dotnet-standards.md) (в частности, ECMA 335), опубликованные корпорацией Майкрософт, для предоставления совместимой реализации.
+[Mono](https://www.mono-project.com/) — это первая кроссплатформенная реализация .NET. Изначально она создавалась как альтернатива платформе .NET Framework с [открытым кодом](https://github.com/mono/mono), но с ростом популярности устройств iOS и Android была переориентирована на мобильные устройства. Ее можно считать аналогом .NET Framework, предоставляемым сообществом. Команда проекта Mono использовала открытые [стандарты .NET](https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/dotnet-standards.md) (в частности, ECMA 335), опубликованные корпорацией Майкрософт, для предоставления совместимой реализации.
 
 Основные различия между .NET Core и Mono
 

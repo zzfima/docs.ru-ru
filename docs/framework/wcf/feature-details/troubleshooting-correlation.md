@@ -2,12 +2,12 @@
 title: Устранение неполадок корреляции
 ms.date: 03/30/2017
 ms.assetid: 98003875-233d-4512-a688-4b2a1b0b5371
-ms.openlocfilehash: d4b7b4ecd724416256cf0b2499d7180200f4e75c
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: be48a55a87d199829de4038e7e2a7642c102acf2
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291550"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976018"
 ---
 # <a name="troubleshooting-correlation"></a>Устранение неполадок корреляции
 Корреляция позволяет сопоставлять сообщения службы рабочего процесса друг с другом и с нужным экземпляром рабочего процесса. Если же корреляция настроена неправильно, то сообщения не будут приниматься и приложения будут работать неправильно. В этом разделе даны общие сведения о нескольких методах устранения неполадок корреляции, а также перечислен ряд распространенных проблем, которые возникают при использовании корреляции.
@@ -47,9 +47,7 @@ class CustomFactory : WorkflowServiceHostFactory
 
  Затем этот настраиваемый объект <xref:System.ServiceModel.Activities.Activation.WorkflowServiceHostFactory> можно указать в файле `svc` для службы.
 
-```
-<% @ServiceHost Language="C#" Service="OrderServiceWorkflow" Factory="CustomFactory" %>
-```
+`<% @ServiceHost Language="C#" Service="OrderServiceWorkflow" Factory="CustomFactory" %>`
 
  Когда вызывается этот обработчик, сообщение можно получить через свойство <xref:System.ServiceModel.UnknownMessageReceivedEventArgs.Message%2A> объекта <xref:System.ServiceModel.UnknownMessageReceivedEventArgs>. Оно будет выглядеть следующим образом.
 
@@ -76,7 +74,7 @@ class CustomFactory : WorkflowServiceHostFactory
 host.WorkflowExtensions.Add(new ConsoleTrackingParticipant());
 ```
 
- Участник отслеживания, такой как ConsoleTrackingParticipant, удобен для резидентных служб рабочего процесса с окном консоли. Для службы, размещенной в Интернете, следует использовать участника отслеживания, который записывает данные отслеживания в долговременное хранилище, например встроенный <xref:System.Activities.Tracking.EtwTrackingParticipant>, или настраиваемый участник отслеживания, который записывает данные в файл.
+ Участник отслеживания, такой как ConsoleTrackingParticipant, удобен для резидентных служб рабочего процесса с окном консоли. Для службы, размещенной в Интернете, следует использовать участника отслеживания, который записывает данные отслеживания в долговременное хранилище, например встроенные <xref:System.Activities.Tracking.EtwTrackingParticipant>или пользовательский участник отслеживания, который записывает данные в файл.
 
  Дополнительные сведения об отслеживании и настройке отслеживания для службы рабочего процесса, размещенной в веб-среде, см. в разделе [Отслеживание и трассировка рабочих процессов](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md), [Настройка отслеживания для рабочего процесса](../../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md)и примеры [отслеживания &#91;примеров&#93; WF](../../../../docs/framework/windows-workflow-foundation/samples/tracking.md) .
 
@@ -131,9 +129,9 @@ supports the context protocol and has a valid context initialized.
  Данные контекста, используемые для корреляции контекста, можно вернуть из <xref:System.ServiceModel.Activities.SendReply> в действие <xref:System.ServiceModel.Activities.Receive>, которое инициализирует корреляцию контекста, если используется двусторонняя операция, или указать в вызывающем объекте в случае односторонней операции. Если контекст не отправляется вызывающим объектом и не возвращается службой рабочего процесса, то при вызове последующей операции будет возвращаться исключение <xref:System.ServiceModel.FaultException>, описанное ранее.
 
 ## <a name="common-request-reply-correlation-issues"></a>Распространенные проблемы корреляции по схеме «запрос-ответ»
- Корреляция "запрос-ответ" используется с парой <xref:System.ServiceModel.Activities.Receive> @ no__t-1 @ no__t-2 для реализации двусторонней операции в службе рабочего процесса и с парой <xref:System.ServiceModel.Activities.Send> @ no__t-4 @ no__t-5, которая вызывает двустороннюю операцию в другой веб-службе. При вызове двусторонней операции в службе WCF эта служба может быть традиционной процедурой службы WCF, основанной на коде, или службой рабочего процесса. Для корреляции «запрос-ответ» необходимо использовать двустороннюю привязку, такую как <xref:System.ServiceModel.BasicHttpBinding>, и операции должны быть двусторонними.
+ Корреляция "запрос-ответ" используется с парой <xref:System.ServiceModel.Activities.Receive>/<xref:System.ServiceModel.Activities.SendReply> для реализации двусторонней операции в службе рабочего процесса и с парой <xref:System.ServiceModel.Activities.Send>/<xref:System.ServiceModel.Activities.ReceiveReply>, которая вызывает двустороннюю операцию в другой веб-службе. При вызове двусторонней операции в службе WCF эта служба может быть традиционной процедурой службы WCF, основанной на коде, или службой рабочего процесса. Для корреляции «запрос-ответ» необходимо использовать двустороннюю привязку, такую как <xref:System.ServiceModel.BasicHttpBinding>, и операции должны быть двусторонними.
 
- Если служба рабочего процесса имеет параллельные операции или перекрываются <xref:System.ServiceModel.Activities.Receive> @ no__t-1 @ no__t-2 или <xref:System.ServiceModel.Activities.Send> @ no__t-4 @ no__t-5, то Управление неявными маркерами корреляции, предоставляемое <xref:System.ServiceModel.Activities.WorkflowServiceHost>, может быть недостаточно, особенно при высокой нагрузке. сценарии и сообщения могут неправильно маршрутизироваться. Чтобы предотвратить эту проблему, рекомендуется всегда явно указывать <xref:System.ServiceModel.Activities.CorrelationHandle> при использовании корреляции «запрос-ответ». При использовании шаблонов **SendAndReceiveReply** и **ReceiveAndSendReply** из раздела Обмен сообщениями **области элементов** в конструкторе рабочих процессов <xref:System.ServiceModel.Activities.CorrelationHandle> явно настроен по умолчанию. Если рабочий процесс создается из программного кода, то дескриптор <xref:System.ServiceModel.Activities.CorrelationHandle> указывается в свойстве <xref:System.ServiceModel.Activities.Receive.CorrelationInitializers%2A> первого действия из пары. В следующем примере действие <xref:System.ServiceModel.Activities.Receive> настраивается с явным дескриптором <xref:System.ServiceModel.Activities.CorrelationInitializer.CorrelationHandle%2A>, указанным в <xref:System.ServiceModel.Activities.RequestReplyCorrelationInitializer>.
+ Если служба рабочего процесса поддерживает параллельные операции или перекрываются <xref:System.ServiceModel.Activities.Receive>/<xref:System.ServiceModel.Activities.SendReply> или <xref:System.ServiceModel.Activities.Send>/<xref:System.ServiceModel.Activities.ReceiveReply>, то неявное управление маркерами корреляции, предоставляемое <xref:System.ServiceModel.Activities.WorkflowServiceHost>, может быть недостаточно, особенно в сценариях с высокой нагрузкой, и сообщения могут неправильно маршрутизироваться. Чтобы предотвратить эту проблему, рекомендуется всегда явно указывать <xref:System.ServiceModel.Activities.CorrelationHandle> при использовании корреляции «запрос-ответ». При использовании шаблонов **SendAndReceiveReply** и **ReceiveAndSendReply** из раздела Обмен сообщениями **области элементов** в конструкторе рабочих процессов по умолчанию явно настраивается <xref:System.ServiceModel.Activities.CorrelationHandle>. Если рабочий процесс создается из программного кода, то дескриптор <xref:System.ServiceModel.Activities.CorrelationHandle> указывается в свойстве <xref:System.ServiceModel.Activities.Receive.CorrelationInitializers%2A> первого действия из пары. В следующем примере действие <xref:System.ServiceModel.Activities.Receive> настраивается с явным дескриптором <xref:System.ServiceModel.Activities.CorrelationInitializer.CorrelationHandle%2A>, указанным в <xref:System.ServiceModel.Activities.RequestReplyCorrelationInitializer>.
 
 ```csharp
 Variable<CorrelationHandle> RRHandle = new Variable<CorrelationHandle>();
@@ -161,7 +159,7 @@ SendReply ReplyToStartOrder = new SendReply
 // Construct a workflow using StartOrder and ReplyToStartOrder.
 ```
 
- Использование сохраняемости между парой <xref:System.ServiceModel.Activities.Receive> @ no__t-1 @ no__t-2 или <xref:System.ServiceModel.Activities.Send> @ no__t-4 @ no__t-5 не допускается. Создается зона несохраняемости, которая существует до завершения обоих действий. Если действие, например действие Delay, находится в этой зоне несохраняемости и вызывает переход рабочего процесса в состояние бездействия, рабочий поток не будет сохранен, даже если узел настроен на сохранение рабочих потоков после их перехода в состояние бездействия. Если действие, например действие Persist, пытается выполнить явное сохранение в зоне несохраняемости, формируется неустранимое исключение, выполнение рабочего процесса прерывается, а вызывающему возвращается исключение <xref:System.ServiceModel.FaultException>. Неустранимое сообщение об исключении — System. InvalidOperationException: Сохраняемые действия не могут содержаться в блоках сохранения. ". Это исключение не возвращается вызывающему, его можно обнаружить, если включено отслеживание. Сообщение об исключении <xref:System.ServiceModel.FaultException>, возвращаемое вызывающему: «Операцию выполнить не удалось, потому что рабочий процесс '5836145b-7da2-49d0-a052-a49162adeab6' завершился».
+ Не допускается использование сохраняемости между парой <xref:System.ServiceModel.Activities.Receive>/<xref:System.ServiceModel.Activities.SendReply> или парой <xref:System.ServiceModel.Activities.Send>/<xref:System.ServiceModel.Activities.ReceiveReply>. Создается зона несохраняемости, которая существует до завершения обоих действий. Если действие, например действие Delay, находится в этой зоне несохраняемости и вызывает переход рабочего процесса в состояние бездействия, рабочий поток не будет сохранен, даже если узел настроен на сохранение рабочих потоков после их перехода в состояние бездействия. Если действие, например действие Persist, пытается выполнить явное сохранение в зоне несохраняемости, формируется неустранимое исключение, выполнение рабочего процесса прерывается, а вызывающему возвращается исключение <xref:System.ServiceModel.FaultException>. Сообщение о неустранимом исключении: «System.InvalidOperationException: действия Persist не могут содержаться в блоках несохраняемости». Это исключение не возвращается вызывающему, его можно обнаружить, если включено отслеживание. Сообщение об исключении <xref:System.ServiceModel.FaultException>, возвращаемое вызывающему: «Операцию выполнить не удалось, потому что рабочий процесс '5836145b-7da2-49d0-a052-a49162adeab6' завершился».
 
  Дополнительные сведения о корреляции запросов и ответов см. в разделе [запрос-ответ](../../../../docs/framework/wcf/feature-details/request-reply-correlation.md).
 
@@ -188,7 +186,7 @@ MessageQuerySet = new MessageQuerySet
 }
 ```
 
- Если запрос XPath настроен неправильно, так как данные корреляции не извлекаются, возвращается ошибка со следующим сообщением: "Запрос корреляции вернул пустой результирующий набор. Проверьте правильность настройки запросов корреляции для данной конечной точки». Одним из быстрых способов решения этой проблемы является замена запроса XPath на литеральное значение, как описано в предыдущем разделе. Эта проблема может возникнуть при использовании построителя запросов XPath в диалоговых окнах **Добавление инициализаторов корреляции** или **определения CorrelatesOn** , когда служба рабочего процесса использует контракты сообщений. В следующем примере определяется класс контракта сообщения.
+ Если запрос XPath настроен неправильно, в результате чего данные о корреляции не возвращаются, возвращается ошибка со следующим сообщением: «Запрос корреляции возвратил пустой результирующий набор. Проверьте правильность настройки запросов корреляции для данной конечной точки». Одним из быстрых способов решения этой проблемы является замена запроса XPath на литеральное значение, как описано в предыдущем разделе. Эта проблема может возникнуть при использовании построителя запросов XPath в диалоговых окнах **Добавление инициализаторов корреляции** или **определения CorrelatesOn** , когда служба рабочего процесса использует контракты сообщений. В следующем примере определяется класс контракта сообщения.
 
 ```csharp
 [MessageContract]

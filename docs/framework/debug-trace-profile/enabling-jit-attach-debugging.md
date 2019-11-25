@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: f91fc5f7-de5a-4f23-b6ac-f450e63c662e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f4d4e2b3806d2c4d84b59e1cd44eb03ab7b278c9
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: be619f8e84b176872361fdd43faa9c704832c8e0
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052825"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975589"
 ---
 # <a name="enabling-jit-attach-debugging"></a>Включение отладки с JIT-присоединением (трассировка событий Windows)
 Отладка с JIT-присоединением предусматривает присоединение отладчика к процессу при возникновении ошибок. Также этот процесс может запускаться посредством определенных методов или функций.  
@@ -21,7 +21,7 @@ ms.locfileid: "71052825"
   
 - Необработанные исключения (в машинном и управляемом коде).  
   
-- Метод <xref:System.Environment.FailFast%2A?displayProperty=nameWithType> или функция [RaiseFailFastException](https://go.microsoft.com/fwlink/?LinkId=182107) (семейство ОС Windows 7).  
+- Метод <xref:System.Environment.FailFast%2A?displayProperty=nameWithType> или функция [RaiseFailFastException](/windows/win32/api/errhandlingapi/nf-errhandlingapi-raisefailfastexception) (семейство ОС Windows 7).  
   
 - Неустранимые ошибки времени выполнения.  
   
@@ -31,9 +31,9 @@ ms.locfileid: "71052825"
   
 - Метод <xref:System.Diagnostics.Debugger.Break%2A?displayProperty=nameWithType>.  
   
-- Функция [DebugBreak](https://go.microsoft.com/fwlink/?LinkId=182106) (Win32).  
+- Функция [DebugBreak](/windows/win32/api/debugapi/nf-debugapi-debugbreak) (Win32).  
   
- Перед .NET Framework 4 в .NET Framework предоставлены отдельные разделы реестра для управления поведением отладчиков машинного и управляемого кода. Начиная с .NET Framework 4, управление консолидируется в одном разделе реестра: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\Current Version\AeDebug. Значения этого раздела определяют, будет ли вызываться отладчик, а также будет ли в случае его вызова отображаться диалоговое окно для взаимодействия с пользователем. Сведения об установке этого раздела реестра см. в разделе [Настройка автоматической отладки](https://go.microsoft.com/fwlink/?LinkId=181767).  
+ Перед .NET Framework 4 в .NET Framework предоставлены отдельные разделы реестра для управления поведением отладчиков машинного и управляемого кода. Начиная с .NET Framework 4, управление консолидируется в одном разделе реестра: HKEY_LOCAL_MACHINE \Софтваре\микрософт\виндовс Нт\куррент Версион\аедебуг. Значения этого раздела определяют, будет ли вызываться отладчик, а также будет ли в случае его вызова отображаться диалоговое окно для взаимодействия с пользователем. Сведения об установке этого раздела реестра см. в разделе [Настройка автоматической отладки](/windows/win32/debug/configuring-automatic-debugging).  
   
 ## <a name="see-also"></a>См. также
 

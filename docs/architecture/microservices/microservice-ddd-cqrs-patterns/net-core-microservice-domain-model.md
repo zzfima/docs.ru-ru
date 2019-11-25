@@ -2,12 +2,12 @@
 title: Реализация модели предметной области микрослужбы с помощью .NET Core
 description: Архитектура микрослужб .NET для контейнерных приложений .NET | Сведения о реализации модели предметной области, ориентированной на DDD.
 ms.date: 10/08/2018
-ms.openlocfilehash: b2ad62c2a16dd3993b9624ec14f0070e934ac2de
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: bff9cbda08e519038056268151a1721427f0ac01
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68676591"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73972043"
 ---
 # <a name="implement-a-microservice-domain-model-with-net-core"></a>Реализация модели предметной области микрослужбы с помощью .NET Core
 
@@ -17,7 +17,9 @@ ms.locfileid: "68676591"
 
 Структура папок в образце приложения eShopOnContainers демонстрирует модель DDD для приложения. В вашем случае требованиям проекта более точно может отвечать другая структура папок. Как видно на рис. 7-10, в модели предметной области размещения заказов имеются два агрегата: агрегат заказа и агрегат покупателя. Каждый агрегат представляет собой группу сущностей предметной области и объектов значений, хотя агрегат может состоять и из одной сущности предметной области (корневой сущности агрегата).
 
-![Представление обозревателя решений для проекта Ordering.Domain, в котором отображается папка AggregatesModel, содержащая папки BuyerAggregate и OrderAggregate, каждая из которых содержит классы сущности, файлы объектов значений и т. д. ](./media/image11.png)
+:::image type="complex" source="./media/net-core-microservice-domain-model/ordering-microservice-container.png" alt-text="Снимок экрана: проект Ordering.Domain в обозревателе решений.":::
+Представление обозревателя решений для проекта Ordering.Domain, в котором отображается папка AggregatesModel, содержащая папки BuyerAggregate и OrderAggregate, каждая из которых содержит классы сущности, файлы объектов значений и т. д.
+:::image-end:::
 
 **Рис. 7-10**. Структура модели предметной области для микрослужбы размещения заказов в eShopOnContainers
 
@@ -31,7 +33,9 @@ ms.locfileid: "68676591"
 
 Согласованность транзакций гарантирует согласованность и актуальность агрегата по завершении бизнес-действия. Например, агрегат заказа из модели предметной области микрослужбы размещения заказов eShopOnContainers состоит из компонентов, показанных на рис. 7-11.
 
-![Подробное представление папки OrderAggregate: Address.cs — объект значения, IOrderRepository — интерфейс репозитория, Order.cs — корень агрегации, OrderItem.cs — дочерняя сущность, а OrderStatus.cs — класс перечисления.](./media/image12.png)
+:::image type="complex" source="./media/net-core-microservice-domain-model/vs-solution-explorer-order-aggregate.png" alt-text="Снимок экрана: папка OrderAggregate и ее классы.":::
+Подробное представление папки OrderAggregate: Address.cs — объект значения, IOrderRepository — интерфейс репозитория, Order.cs — корень агрегации, OrderItem.cs — дочерняя сущность, а OrderStatus.cs — класс перечисления.
+:::image-end:::
 
 **Рис. 7-11**. Агрегат заказа в решении Visual Studio
 
@@ -170,7 +174,7 @@ myOrder.AddOrderItem(productId, productName, pictureUrl, unitPrice, discount, un
   <https://kalele.io/blog-posts/modeling-aggregates-with-ddd-and-entity-framework/>
 
 - **Julie Lerman (Джули Лерман). Точки данных — создание кода при проблемно-ориентированном проектировании: советы для разработчиков, ориентированных на данные** \
-  <https://msdn.microsoft.com/magazine/dn342868.aspx>
+  <https://docs.microsoft.com/archive/msdn-magazine/2013/august/data-points-coding-for-domain-driven-design-tips-for-data-focused-devs>
 
 - **Уди Дахан (Udi Dahan). Создание полностью инкапсулированных моделей предметной области** \
   <http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/>

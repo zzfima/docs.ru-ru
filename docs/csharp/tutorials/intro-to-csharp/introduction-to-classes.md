@@ -3,12 +3,12 @@ title: Классы и объекты. Вводное руководство п�
 description: Создайте свою первую программу на C# и ознакомьтесь с основными понятиями объектно-ориентированного программирования
 ms.date: 10/11/2017
 ms.custom: mvc
-ms.openlocfilehash: f4199f709ee0011af9f00f6909193f08345bc49e
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: e4cf7912de69946289c0594944b8ac3a8c252ac2
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834102"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73736830"
 ---
 # <a name="explore-object-oriented-programming-with-classes-and-objects"></a>Сведения об использовании классов и объектов в объектно-ориентированном программировании
 
@@ -178,7 +178,7 @@ catch (ArgumentOutOfRangeException e)
 С помощью [инструкций `try` и `catch`](../../language-reference/keywords/try-catch.md) пометьте блок кода, который может вызывать исключения, и перехватывайте ожидаемые сообщения об ошибках. Этим же способом можно проверять код, который вызывает исключение при получении отрицательного баланса:
 
 ```csharp
-// Test for a negative balance:
+// Test for a negative balance.
 try
 {
     account.MakeWithdrawal(750, DateTime.Now, "Attempt to overdraw");

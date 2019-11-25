@@ -6,12 +6,12 @@ helpviewer_keywords:
 - documents [WPF], storage
 - documents [WPF], serialization
 ms.assetid: 4839cd87-e206-4571-803f-0200098ad37b
-ms.openlocfilehash: d56968ad390d4681b3c1bb1580a864f9a9f0e10c
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: ff0555105f219db5ed891c02400b0587c825718e
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424306"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73974652"
 ---
 # <a name="document-serialization-and-storage"></a>Сериализация и хранение документов
 
@@ -43,7 +43,7 @@ Microsoft .NET Framework предоставляет мощную среду дл
 
 ### <a name="xps-print-path"></a>Способ печати XPS
 
-Путь печати Microsoft .NET Framework XPS также предоставляет расширяемый механизм для записи документов с помощью вывода на печать.  XPS выступает в качестве формата файла документа и является собственным форматом очереди печати для [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)].  Документы XPS можно отправлять непосредственно на совместимые с XPS принтеры без необходимости преобразования их в промежуточный формат.  См. дополнительные сведения о параметрах и возможностях вывода пути печати в разделе [Общие сведения о печати](printing-overview.md).
+Путь печати Microsoft .NET Framework XPS также предоставляет расширяемый механизм для записи документов с помощью вывода на печать.  XPS выступает в качестве формата файла документа и является собственным форматом очереди печати для Windows Vista.  Документы XPS можно отправлять непосредственно на совместимые с XPS принтеры без необходимости преобразования их в промежуточный формат.  См. дополнительные сведения о параметрах и возможностях вывода пути печати в разделе [Общие сведения о печати](printing-overview.md).
 
 <a name="PluginSerializers"></a>
 
@@ -55,7 +55,7 @@ Microsoft .NET Framework предоставляет мощную среду дл
 
 ### <a name="using-a-plug-in-serializer"></a>Использование подключаемого сериализатора
 
-Использовать подключаемые сериализаторы достаточно просто.  Класс <xref:System.Windows.Documents.Serialization.SerializerProvider> перечисляет объект <xref:System.Windows.Documents.Serialization.SerializerDescriptor> для каждого подключаемого модуля, установленного в системе.  Свойство <xref:System.Windows.Documents.Serialization.SerializerDescriptor.IsLoadable%2A> фильтрует установленные подключаемые модули на основе текущей конфигурации и проверяет возможность загрузки и использования сериализатора приложением.  <xref:System.Windows.Documents.Serialization.SerializerDescriptor> также предоставляет другие свойства, такие как <xref:System.Windows.Documents.Serialization.SerializerDescriptor.DisplayName%2A> и <xref:System.Windows.Documents.Serialization.SerializerDescriptor.DefaultFileExtension%2A>, которые приложение может использовать для запроса пользователя при выборе сериализатора для доступного формата вывода.  Подключаемый модуль сериализатора по умолчанию для XPS предоставляется с .NET Framework и всегда перечисляется.  После того как пользователь выберет формат вывода, метод <xref:System.Windows.Documents.Serialization.SerializerProvider.CreateSerializerWriter%2A> используется для создания <xref:System.Windows.Documents.Serialization.SerializerWriter> для конкретного формата.  Языковой элемент <xref:System.Windows.Documents.Serialization.SerializerWriter>.<xref:System.Windows.Documents.Serialization.SerializerWriter.Write%2A> Затем метод можно вызвать для вывода потока документа в хранилище данных.
+Использовать подключаемые сериализаторы достаточно просто.  Класс <xref:System.Windows.Documents.Serialization.SerializerProvider> перечисляет объект <xref:System.Windows.Documents.Serialization.SerializerDescriptor> для каждого подключаемого модуля, установленного в системе.  Свойство <xref:System.Windows.Documents.Serialization.SerializerDescriptor.IsLoadable%2A> фильтрует установленные подключаемые модули на основе текущей конфигурации и проверяет возможность загрузки и использования сериализатора приложением.  <xref:System.Windows.Documents.Serialization.SerializerDescriptor> также предоставляет другие свойства, такие как <xref:System.Windows.Documents.Serialization.SerializerDescriptor.DisplayName%2A> и <xref:System.Windows.Documents.Serialization.SerializerDescriptor.DefaultFileExtension%2A>, которые приложение может использовать для запроса пользователя при выборе сериализатора для доступного формата вывода.  Подключаемый модуль сериализатора по умолчанию для XPS предоставляется с .NET Framework и всегда перечисляется.  После того как пользователь выберет формат вывода, метод <xref:System.Windows.Documents.Serialization.SerializerProvider.CreateSerializerWriter%2A> используется для создания <xref:System.Windows.Documents.Serialization.SerializerWriter> для конкретного формата.  Затем можно вызвать метод <xref:System.Windows.Documents.Serialization.SerializerWriter.Write%2A?displayProperty=nameWithType>, чтобы вывести поток документа в хранилище данных.
 
 В следующем примере показано приложение, использующее метод <xref:System.Windows.Documents.Serialization.SerializerProvider> в свойстве "Плугинфилефилтер".  Плугинфилефилтер перечисляет установленные подключаемые модули и создает строку фильтра с доступными параметрами файла для <xref:Microsoft.Win32.SaveFileDialog>.
 

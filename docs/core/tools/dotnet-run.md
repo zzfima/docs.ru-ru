@@ -1,17 +1,21 @@
 ---
 title: Команда dotnet run
 description: Команда dotnet run — это удобное средство для запуска приложения из исходного кода.
-ms.date: 05/29/2018
-ms.openlocfilehash: ec2a24b78f435dd1905ec67b6f3f4a4ec3f7e7fa
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.date: 10/31/2019
+ms.openlocfilehash: 87e9a57e874116533951a9c5eb676be76be2c98d
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117487"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73454776"
 ---
 # <a name="dotnet-run"></a>dotnet run
 
+**Эта статья относится к ✓** SDK для .NET Core 1.x и более поздних версий
+
+<!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
+-->
 
 ## <a name="name"></a>name
 
@@ -20,6 +24,14 @@ ms.locfileid: "71117487"
 ## <a name="synopsis"></a>Краткий обзор
 
 <!-- markdownlint-disable MD025 -->
+
+# <a name="net-core-30tabnetcore30"></a>[.NET Core 3.0](#tab/netcore30)
+
+```dotnetcli
+dotnet run [-c|--configuration] [-f|--framework] [--force] [--interactive] [--launch-profile] [--no-build] [--no-dependencies]
+    [--no-launch-profile] [--no-restore] [-p|--project] [-r|--runtime] [-v|--verbosity] [[--] [application arguments]]
+dotnet run [-h|--help]
+```
 
 # <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
 
@@ -68,6 +80,64 @@ dotnet myapp.dll
 
 ## <a name="options"></a>Параметры
 
+# <a name="net-core-30tabnetcore30"></a>[.NET Core 3.0](#tab/netcore30)
+
+`--`
+
+Отделяет аргументы, предназначенные для `dotnet run`, от аргументов для выполняемого приложения. Все аргументы после разделителя передаются выполняемому приложению.
+
+`-c|--configuration {Debug|Release}`
+
+Определяет конфигурацию сборки. Значение по умолчанию для большинства проектов — `Debug`.
+
+`-f|--framework <FRAMEWORK>`
+
+Выполняет сборку и запуск приложения с использованием указанной [платформы](../../standard/frameworks.md). Эта платформа должна быть указана в файле проекта.
+
+`--force`
+
+Принудительное разрешение всех зависимостей, даже если последнее восстановление прошло успешно. Указание этого флага дает тот же результат, что удаление файла *project.assets.json*.
+
+`-h|--help`
+
+Выводит краткую справку по команде.
+
+`--interactive`
+
+Позволяет остановить команду и дождаться, пока пользователь введет данные или выполнит действие (например, завершит проверку подлинности).
+
+`--launch-profile <NAME>`
+
+Имя профиля запуска (при его наличии), который следует использовать при запуске приложения. Профили запуска обычно определяются в файле *launchSettings.json* и, как правило, называются `Development`, `Staging` и `Production`. Дополнительные сведения см. в разделе [Работа с несколькими средами](/aspnet/core/fundamentals/environments).
+
+`--no-build`
+
+Не выполняет сборку проекта перед запуском. Он также неявно задает флаг `--no-restore`.
+
+`--no-dependencies`
+
+При восстановлении проекта с перекрестными ссылками между проектами восстанавливает только корневой проект, но не ссылки.
+
+`--no-launch-profile`
+
+Не пытается использовать файл *launchSettings.json* для настройки приложения.
+
+`--no-restore`
+
+Не выполняет неявное восстановление при выполнении команды.
+
+`-p|--project <PATH>`
+
+Задает путь к запускаемому файлу проекта (имя папки или полный путь). Если значение не задано, по умолчанию используется текущий каталог.
+
+`--runtime <RUNTIME_IDENTIFIER>`
+
+Задает целевую среду выполнения для восстановления пакетов. Список идентификаторов сред выполнения (RID) см. в [каталоге RID](../rid-catalog.md).
+
+`-v|--verbosity <LEVEL>`
+
+Задает уровень детализации команды. Допустимые значения: `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` и `diag[nostic]`.
+
 # <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
 
 `--`
@@ -76,7 +146,7 @@ dotnet myapp.dll
 
 `-c|--configuration {Debug|Release}`
 
-Определяет конфигурацию сборки. Значение по умолчанию — `Debug`.
+Определяет конфигурацию сборки. Значение по умолчанию для большинства проектов — `Debug`.
 
 `-f|--framework <FRAMEWORK>`
 
@@ -130,7 +200,7 @@ dotnet myapp.dll
 
 `-c|--configuration {Debug|Release}`
 
-Определяет конфигурацию сборки. Значение по умолчанию — `Debug`.
+Определяет конфигурацию сборки. Значение по умолчанию для большинства проектов — `Debug`.
 
 `-f|--framework <FRAMEWORK>`
 
@@ -180,7 +250,7 @@ dotnet myapp.dll
 
 `-c|--configuration {Debug|Release}`
 
-Определяет конфигурацию сборки. Значение по умолчанию — `Debug`.
+Определяет конфигурацию сборки. Значение по умолчанию для большинства проектов — `Debug`.
 
 `-f|--framework <FRAMEWORK>`
 

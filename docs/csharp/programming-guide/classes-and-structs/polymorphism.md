@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, polymorphism
 - polymorphism [C#]
 ms.assetid: 086af969-29a5-4ce8-a993-0b7d53839dab
-ms.openlocfilehash: e98399ac49e70f9139281ab75947c4acaf2dee7c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: be075c358d9ca2c36b6d173fca983c16f6b0d78c
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69922073"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73970342"
 ---
 # <a name="polymorphism-c-programming-guide"></a>Полиморфизм (Руководство по программированию на C#)
 Полиморфизм часто называется третьим столпом объектно-ориентированного программирования после инкапсуляции и наследования. Полиморфизм — слово греческого происхождения, означающее "многообразие форм" и имеющее несколько аспектов.  
@@ -93,7 +93,7 @@ ms.locfileid: "69922073"
   
 - [Использование ключевых слов Override и New](./knowing-when-to-use-override-and-new-keywords.md)  
   
-- [Практическое руководство. Переопределение метода ToString](./how-to-override-the-tostring-method.md)  
+- [Практическое руководство. Переопределение метода ToString](./how-to-override-the-tostring-method.md)
   
 ## <a name="see-also"></a>См. также
 

@@ -5,22 +5,22 @@ helpviewer_keywords:
 - WCF Data Services, quick-start example
 - WCF Data Services, Entity Data Model (EDM) service
 ms.assetid: 7b18ca1e-d4d6-4c7a-afb9-ce3cebb98a8d
-ms.openlocfilehash: df6806cd77e7ff109d79f7ba61866763de4c7fc1
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: d0002182c5ae519c36348acdd2587bca499fe72e
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70790362"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975138"
 ---
 # <a name="quickstart-wcf-data-services"></a>Краткое руководство (службы данных WCF)
 
-Это краткое руководство поможет вам ознакомиться с WCF Data Services и [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] с помощью серии задач, которые поддерживают разделы в [Начало работы](getting-started-with-wcf-data-services.md).
+Это краткое руководство поможет вам ознакомиться с WCF Data Services и Open Data Protocol (OData) с помощью серии задач, которые поддерживают разделы в [Начало работы](getting-started-with-wcf-data-services.md).
 
 ## <a name="what-youll-learn"></a>Что вы узнаете
 
 В первой задаче этого краткого руководства показано, как создать службу данных для предоставления веб-канала OData из образца базы данных Northwind. В последующих разделах вы получите доступ к каналу OData с помощью веб-браузера, а также создаете клиентское приложение Windows Presentation Foundation (WPF), которое использует канал OData с помощью клиентских библиотек.
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>Необходимые компоненты
 
 Чтобы выполнить задания данного краткого руководства, установите следующие компоненты:
 

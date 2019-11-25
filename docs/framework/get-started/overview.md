@@ -7,12 +7,12 @@ helpviewer_keywords:
 - common language runtime, about
 - common language runtime, overview
 ms.assetid: 29848c96-fc36-462d-8072-ba223a40b697
-ms.openlocfilehash: b5dacad4511df0476dded6ac3784014665234077
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 397a78514dc5878e83708882ceeb4d92160d9a78
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123238"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975656"
 ---
 # <a name="overview-of-the-net-framework"></a>Общие сведения о платформе .NET Framework
 
@@ -96,4 +96,4 @@ ms.locfileid: "73123238"
 - [Руководство по разработке](../development-guide.md)
 - [Инструменты](../tools/index.md)
 - [Примеры и руководства .NET](../../samples-and-tutorials/index.md)
-- [Библиотека классов .NET Framework](https://go.microsoft.com/fwlink/?LinkID=227195)
+- [Браузер API .NET](../../../api/index.md)

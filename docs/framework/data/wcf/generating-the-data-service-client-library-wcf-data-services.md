@@ -6,20 +6,20 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - Add Service Reference dialog box
 ms.assetid: 314077c1-ac10-47e1-bed4-940b5462359d
-ms.openlocfilehash: d53f2d209d6fb0a6f3cadb96245338060ece87db
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: f73ea93fe76f31c81935dbfb29183c247e41d8cd
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70780289"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975275"
 ---
 # <a name="generating-the-data-service-client-library-wcf-data-services"></a>Создание библиотеки клиентов службы данных (службы данных WCF)
-Служба данных, реализующая интерфейс [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] , может возвращать документ метаданных службы, описывающий модель данных, предоставляемую [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] веб-каналом. Дополнительные сведения см. в [разделе OData: Документ](https://go.microsoft.com/fwlink/?LinkId=186070)метаданных службы. Для добавления ссылки на [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]службу на основе можно использовать диалоговое окно Добавление ссылки на службу в Visual Studio. При использовании этого средства для добавления ссылки на метаданные, возвращаемые [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] веб-каналом в клиентский проект, выполняются следующие действия.  
+Служба данных, которая реализует Open Data Protocol (OData), может возвращать документ метаданных службы, описывающий модель данных, предоставляемую веб-каналом OData. Дополнительные сведения см. в разделе [OData: документ метаданных службы](https://go.microsoft.com/fwlink/?LinkId=186070). Можно использовать диалоговое окно **Добавление ссылки на службу** в Visual Studio, чтобы добавить ссылку на службу на основе OData. При использовании этого средства для добавления ссылки на метаданные, возвращенные веб-каналом OData в клиентском проекте, выполняются следующие действия.  
   
 - Запрашивает документ с метаданными службы из службы данных и интерпретирует возвращенные метаданные.  
   
     > [!NOTE]
-    > Возвращенные метаданные сохраняются в клиентском проекте в виде файла EDMX. Файл EDMX нельзя открыть с помощью конструктора моделей EDM, поскольку его формат отличается от формата файла EDMX, используемого платформой Entity Framework. Открыть этот файл метаданных можно с помощью редактора XML или любого текстового редактора. Дополнительные сведения см. на [ \[странице MC-EDMX\]: Спецификация формата](https://go.microsoft.com/fwlink/?LinkID=178833) упаковки для служб данных EDM  
+    > Возвращенные метаданные сохраняются в клиентском проекте в виде файла EDMX. Файл EDMX нельзя открыть с помощью конструктора моделей EDM, поскольку его формат отличается от формата файла EDMX, используемого платформой Entity Framework. Открыть этот файл метаданных можно с помощью редактора XML или любого текстового редактора. Дополнительные сведения см. в спецификации [формата упаковки\[MC-EDMX\]: EDM для служб данных.](https://go.microsoft.com/fwlink/?LinkID=178833)  
   
 - Формирует представление службы в виде класса контейнера сущностей, порожденного от класса <xref:System.Data.Services.Client.DataServiceContext>. Этот сформированный класс контейнера сущностей аналогичен контейнеру сущностей, формируемому программами для работы с моделью EDM. Дополнительные сведения см. в разделе [Обзор служб объектов (Entity Framework)](https://docs.microsoft.com/previous-versions/bb386871(v=vs.100)).  
   
@@ -27,12 +27,12 @@ ms.locfileid: "70780289"
   
 - Добавляет в проект ссылку на сборку `System.Data.Services.Client`.  
   
- Дополнительные сведения см. в разделе [Практическое руководство. Добавьте ссылку](how-to-add-a-data-service-reference-wcf-data-services.md)на службу данных.  
+ Дополнительные сведения см. [в разделе инструкции. Добавление ссылки на службу данных](how-to-add-a-data-service-reference-wcf-data-services.md).  
   
- Классы клиентской службы данных также можно создать с помощью средства [DataSvcUtil. exe](wcf-data-service-client-utility-datasvcutil-exe.md) из командной строки. Дополнительные сведения см. в разделе [Практическое руководство. Создание классов](how-to-manually-generate-client-data-service-classes-wcf-data-services.md)клиентской службы данных вручную.  
+ Классы клиентской службы данных также можно создать с помощью средства [DataSvcUtil. exe](wcf-data-service-client-utility-datasvcutil-exe.md) из командной строки. Дополнительные сведения см. [в разделе как вручную создавать классы службы данных клиента](how-to-manually-generate-client-data-service-classes-wcf-data-services.md).  
   
 ## <a name="client-data-type-mapping"></a>Сопоставление клиентских типов данных  
- При использовании диалогового окна **Добавление ссылки на службу** в Visual Studio или `DataSvcUtil.exe` средства для создания клиентских классов данных, основанных на [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] веб-канале, типы данных .NET Framework сопоставляются с типами-примитивами из модели данных следующим образом:  
+ При использовании диалогового окна **Добавление ссылки на службу** в Visual Studio или `DataSvcUtil.exe` для создания клиентских классов данных, основанных на канале OData, типы данных .NET Framework сопоставляются с примитивными типами из модели данных следующим образом:  
   
 |Тип модели данных|Тип данных .NET Framework|  
 |---------------------|------------------------------|  
@@ -50,7 +50,7 @@ ms.locfileid: "70780289"
 |`Edm.Single`|<xref:System.Single>|  
 |`Edm.String`|<xref:System.String>|  
   
- Дополнительные сведения см. в [разделе OData: Примитивные типы](https://go.microsoft.com/fwlink/?LinkId=186072)данных.  
+ Дополнительные сведения см. в разделе [OData: примитивные типы данных](https://go.microsoft.com/fwlink/?LinkId=186072).  
   
 ## <a name="see-also"></a>См. также
 

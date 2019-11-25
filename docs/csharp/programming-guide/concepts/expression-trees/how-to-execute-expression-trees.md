@@ -2,12 +2,12 @@
 title: Практическое руководство. Выполнение деревьев выражений (C#)
 ms.date: 07/20/2015
 ms.assetid: b8c40db5-2464-4bb9-9001-8c2bc7f006c5
-ms.openlocfilehash: 4a73201d06d21964a40fbbe57fa952da35c5942c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e7d408ea154572dc8b45d2e67bca3f05837868d2
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69924362"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73969882"
 ---
 # <a name="how-to-execute-expression-trees-c"></a>Практическое руководство. Выполнение деревьев выражений (C#)
 В этом разделе показано, как выполнить дерево выражения. В результате выполнения дерева выражения может возвращаться значение или просто выполняться действие, такое как вызов метода.  
@@ -49,4 +49,4 @@ Console.WriteLine(result);
 ## <a name="see-also"></a>См. также
 
 - [Expression Trees (C#)](./index.md) (Деревья выражений (C#))
-- [Практическое руководство. Изменение деревьев выражений (C#)](./how-to-modify-expression-trees.md)
+- [Изменение деревьев выражений (C#)](./how-to-modify-expression-trees.md)

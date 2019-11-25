@@ -8,14 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - cancellation in .NET, overview
 ms.assetid: eea11fe5-d8b0-4314-bb5d-8a58166fb1c3
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3e39ee597f5142f2b3ccbd4ded49e59d6700ec8a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: d4bbf30923d65ad7aeced80efa626136ae27491b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69960147"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138139"
 ---
 # <a name="cancellation-in-managed-threads"></a>Отмена в управляемых потоках
 В .NET Framework 4 введена новая универсальная модель совместной отмены асинхронных или долго выполняющихся синхронных операций. Эта модель построена на простом объекте, называемом токеном отмены. Объект, который вызывает одну или несколько отменяемых операций, например, путем создания новых потоков или задач, передает этот токен в каждую операцию. Операция, в свою очередь, передает копии этого токена в другие операции. Некоторое время спустя объект, создавший токен, может использовать его для запроса остановки выполнения операции. Запрос на отмену может создавать только запрашивающий объект, и каждый прослушиватель должен обнаружить этот запрос, чтобы правильно и своевременно отреагировать на него.  
@@ -35,7 +33,7 @@ ms.locfileid: "69960147"
   
  На рисунке ниже показана связь между источником токена и всеми копиями токена.  
   
- ![CancellationTokenSource и маркеры отмены](../../../docs/standard/threading/media/vs-cancellationtoken.png "VS_CancellationToken")  
+ ![CancellationTokenSource и токены отмены](../../../docs/standard/threading/media/vs-cancellationtoken.png "VS_CancellationToken")  
   
  Новая модель отмены упрощает создание приложений и библиотек, поддерживающих отмену. Она также поддерживает перечисленные ниже возможности.  
   

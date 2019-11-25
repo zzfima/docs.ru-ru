@@ -3,12 +3,12 @@ title: Числа в C#. Вводное руководство по C#
 description: Изучите C# на примере числовых типов, их свойств и методов.
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: b392682a245101e37a182cb92d36ccb1dd34b13e
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: a06bc57e5c979b62e19407747cb2c8a2447ca114
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039694"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739137"
 ---
 # <a name="manipulate-integral-and-floating-point-numbers-in-c"></a>Управление целыми числами и числами с плавающей запятой в C\#
 
@@ -18,7 +18,11 @@ ms.locfileid: "73039694"
 
 ## <a name="explore-integer-math"></a>Вычисления с целыми числами
 
-Создайте каталог с именем *numbers-quickstart*. Откройте этот каталог и выполните команду `dotnet new console -n NumbersInCSharp -o .`.
+Создайте каталог с именем *numbers-quickstart*. Сделайте его текущим, выполнив следующую команду:
+
+```dotnetcli
+dotnet new console -n NumbersInCSharp -o .
+```
 
 Откройте файл *Program.cs* в любом редакторе и замените строку `Console.WriteLine("Hello World!");` следующим кодом:
 

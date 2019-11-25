@@ -5,14 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b73dd4f4-f2dc-47a2-9425-3896e92321fb
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d7f53a2e8684029c0d1329d29a88bd1788e62d43
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 99cc1eae08697909d89e5c1e46cd604c7da543bc
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70789676"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73457748"
 ---
 # <a name="mitigation-xml-schema-validation"></a>Устранение рисков. Проверка схемы XML
 В .NET Framework 4.6 в ходе проверки XSD-схемы выявляется нарушение ограничения уникальности, если используется составной ключ и один ключ является пустым.  
@@ -39,4 +37,4 @@ ms.locfileid: "70789676"
   
 ## <a name="see-also"></a>См. также
 
-- [Изменение целевой платформы](retargeting-changes-in-the-net-framework-4-6.md)
+- [Совместимость приложений](application-compatibility.md)

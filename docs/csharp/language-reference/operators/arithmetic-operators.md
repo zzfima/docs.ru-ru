@@ -27,21 +27,21 @@ helpviewer_keywords:
 - + operator [C#]
 - subtraction operator [C#]
 - '- operator [C#]'
-ms.openlocfilehash: 9760be0fcfe29d2c11cbb1f4d4d81c5a79261a0d
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: ca2513a0f865fd7da728f7d3247bdb7b50a2f48a
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72771739"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73036431"
 ---
 # <a name="arithmetic-operators-c-reference"></a>Арифметические операторы (справочник по C#)
 
-Следующие операторы выполняют арифметические операции с числовыми типами:
+Следующие операторы выполняют арифметические операции с операндами числовых типов:
 
 - унарные — [`++` (приращение)](#increment-operator-), [`--` (уменьшение)](#decrement-operator---), [`+` (плюс)](#unary-plus-and-minus-operators) и [`-` (минус)](#unary-plus-and-minus-operators);
 - бинарные — [`*` (умножение)](#multiplication-operator-), [`/` (деление)](#division-operator-), [`%` (остаток от деления)](#remainder-operator-), [`+` (сложение)](#addition-operator-) и [`-` (вычитание)](#subtraction-operator--).
 
-Эти операторы поддерживают все [целочисленные](../builtin-types/integral-numeric-types.md) типы и типы с [плавающей запятой](../builtin-types/floating-point-numeric-types.md).
+Эти операторы поддерживаются всеми [целочисленными](../builtin-types/integral-numeric-types.md) типами и типами с [плавающей запятой](../builtin-types/floating-point-numeric-types.md).
 
 ## <a name="increment-operator-"></a>Оператор инкремента ++
 
@@ -85,7 +85,7 @@ ms.locfileid: "72771739"
 
 [!code-csharp-interactive[unary plus and minus](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#UnaryPlusAndMinus)]
 
-Унарный оператор `-` не поддерживает тип [ulong](../builtin-types/integral-numeric-types.md).
+Тип [ulong](../builtin-types/integral-numeric-types.md) не поддерживает унарный оператор `-`.
 
 ## <a name="multiplication-operator-"></a>Оператор умножения *
 
@@ -122,7 +122,7 @@ ms.locfileid: "72771739"
 Оператор остатка `%` вычисляет остаток от деления левого операнда на правый.
 
 ### <a name="integer-remainder"></a>Целочисленный остаток
-  
+
 Для целочисленных операндов результатом `a % b` является значение, произведенное `a - (a / b) * b`. Знак ненулевого остатка такой же, как и у левого операнда, как показано в следующем примере:
 
 [!code-csharp-interactive[integer remainder](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#IntegerRemainder)]
@@ -137,7 +137,7 @@ ms.locfileid: "72771739"
 - абсолютное значение `z` является значением, произведенным `|x| - n * |y|`, где `n` — это наибольшее возможное целое число, которое меньше или равно `|x| / |y|`, а `|x|` и `|y|` являются абсолютными значениями `x` и `y`, соответственно.
 
 > [!NOTE]
-> Этот метод вычисления остатка аналогичен тому, который использовался для целочисленных операндов, но отличается от IEEE 754. Если вам нужна операция остатка, которая соответствует IEEE 754, используйте метод <xref:System.Math.IEEERemainder%2A?displayProperty=nameWithType>.
+> Этот метод вычисления остатка аналогичен тому, который использовался для целочисленных операндов, но отличается от спецификации IEEE 754. Если вам нужна операция вычисления остатка, которая соответствует спецификации IEEE 754, используйте метод <xref:System.Math.IEEERemainder%2A?displayProperty=nameWithType>.
 
 Сведения о поведение оператора `%` в случае неконечных операндов см. в разделе [Оператор остатка](~/_csharplang/spec/expressions.md#remainder-operator) [спецификации языка C#](~/_csharplang/spec/introduction.md).
 
@@ -161,7 +161,7 @@ ms.locfileid: "72771739"
 
 [!code-csharp-interactive[subtraction operator](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#Subtraction)]
 
-Кроме того, оператор `-` можно использовать для удаления делегатов. Дополнительные сведения см. в статье [Оператор `-`](subtraction-operator.md).
+Кроме того, оператор `-` можно использовать для удаления делегатов. Дополнительные сведения см. в статье [Операторы `-` и `-=`](subtraction-operator.md).
 
 ## <a name="compound-assignment"></a>Составное присваивание
 
@@ -187,7 +187,7 @@ x = x op y
 
 [!code-csharp-interactive[compound assignment with cast](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#CompoundAssignmentWithCast)]
 
-Вы также можете использовать операторы `+=` и `-=` для подписки и отмены подписки на [события](../keywords/event.md). Дополнительные сведения см. в разделе [Практическое руководство. Подписка и отмена подписки на события](../../programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md).
+Вы также можете использовать операторы `+=` и `-=` для подписки и отмены подписки на [события](../keywords/event.md) соответственно. Дополнительные сведения см. в разделе [Практическое руководство. Подписка и отмена подписки на события](../../programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md).
 
 ## <a name="operator-precedence-and-associativity"></a>Приоритет и ассоциативность операторов
 
@@ -204,7 +204,7 @@ x = x op y
 
 [!code-csharp-interactive[precedence and associativity](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#PrecedenceAndAssociativity)]
 
-Полный список операторов C#, упорядоченных по уровню приоритета, см. в статье [Операторы C#](index.md).
+Полный список операторов C#, упорядоченный по уровню приоритета, можно найти в разделе [Приоритет операторов](index.md#operator-precedence) статьи [Операторы C#](index.md).
 
 ## <a name="arithmetic-overflow-and-division-by-zero"></a>Арифметическое переполнение и деление на нуль
 
@@ -239,7 +239,7 @@ x = x op y
 
 [!code-csharp-interactive[round-off errors](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#RoundOffErrors)]
 
-Дополнительные сведения см. в заметках на страницах справочника [System.Double](/dotnet/api/system.double#remarks), [System.Single](/dotnet/api/system.single#remarks) или [System.Decimal](/dotnet/api/system.decimal#remarks).
+См. заметки в справочной документации по [System.Double](/dotnet/api/system.double#remarks), [System.Single](/dotnet/api/system.single#remarks) и [System.Decimal](/dotnet/api/system.decimal#remarks).
 
 ## <a name="operator-overloadability"></a>Возможность перегрузки оператора
 

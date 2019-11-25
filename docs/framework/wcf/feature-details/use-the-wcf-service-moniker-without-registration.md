@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - COM [WCF], service monikers without registration
 ms.assetid: ee3cf5c0-24f0-4ae7-81da-73a60de4a1a8
-ms.openlocfilehash: 16f428b614fe331faffabab477c6584fb682801d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c08fc362694469560eb7368eb5e536c08ec19bdf
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69955247"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975999"
 ---
 # <a name="how-to-use-the-windows-communication-foundation-service-moniker-without-registration"></a>Практическое руководство. Использование моникера службы Windows Communication Foundation без регистрации
 Чтобы подключиться к службе Windows Communication Foundation (WCF) и взаимодействовать с ней, клиентское приложение WCF должно иметь сведения об адресе службы, конфигурации привязки и контракте службы.  
@@ -24,10 +24,10 @@ ms.locfileid: "69955247"
 ## <a name="example"></a>Пример  
  В этом примере показано использование моникера службы в сочетании с контрактом MEX. Служба со следующим контрактом предоставляется посредством привязки wsHttpBinding.  
   
-```  
+```csharp
 using System.ServiceModel;  
   
-...  
+// ...
   
 [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Demo")]  
 public interface IAffiliate  
@@ -45,7 +45,7 @@ public interface IAffiliate
   
  Чтобы создать клиент WCF для удаленной службы, можно использовать следующий пример строки моникера.  
   
-```  
+```
 service4:mexAddress="http://servername/Affiliates/service.svc/mex",  
 address="http://servername/Affiliates/service.svc",  
 contract=IAffiliate, contractNamespace=http://Microsoft.ServiceModel.Demo,  

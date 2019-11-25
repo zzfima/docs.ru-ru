@@ -6,12 +6,12 @@ author: luisquintanilla
 ms.author: luquinta
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 4a97fb70caafd7b0003830259ddbb0ec72a2ca8a
-ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
+ms.openlocfilehash: 5e5b60a53db70b33ed798bcf33497b74911ba727
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72180268"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73974797"
 ---
 # <a name="tutorial-analyze-sentiment-of-website-comments-in-a-web-application-using-mlnet-model-builder"></a>Учебник. Анализ тональности комментариев на веб-сайте в веб-приложении с помощью построителя моделей ML.NET
 
@@ -160,7 +160,7 @@ ms.locfileid: "72180268"
 
         string fullPath = Path.Combine(assemblyFolderPath, relativePath);
         return fullPath;
-    }    
+    }
     ```
 
 1. Используйте метод `GetAbsolutePath` в конструкторе класса `Startup`, чтобы задать `_modelPath`.
@@ -201,7 +201,7 @@ ms.locfileid: "72180268"
     public IndexModel(PredictionEnginePool<ModelInput, ModelOutput> predictionEnginePool)
     {
         _predictionEnginePool = predictionEnginePool;
-    }    
+    }
     ```
 
 1. Создайте обработчик метода, который использует `PredictionEnginePool` для создания прогнозов на основе вводимых пользователем данных, полученных с веб-страницы.

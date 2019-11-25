@@ -6,12 +6,12 @@ helpviewer_keywords:
 - object initializers [C#]
 - collection initializers [C#]
 ms.assetid: c58f3db5-d7d4-4651-bd2d-5a3a97357f61
-ms.openlocfilehash: f6977fa6c5a8909d6108a5ccfc140b89a4fdd5a4
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 837be04208d438f15b4cc7c7124a47ef6c038cb2
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69596561"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73455439"
 ---
 # <a name="object-and-collection-initializers-c-programming-guide"></a>Инициализаторы объектов и коллекций (Руководство по программированию в C#)
 
@@ -103,7 +103,7 @@ List<int> digits2 = new List<int> { 0 + 1, 12 % 3, MakeInt() };
   
 [!code-csharp[DictionaryInitializer](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/object-collection-initializers/BasicObjectInitializers.cs#DictionaryIndexerInitializer)]  
 
-В предыдущем примере создается код, который вызывает <xref:System.Collections.Generic.Dictionary%602.Item(%600)> для задания значений. Начиная с версии C# 6 можно инициализировать словари и других ассоциативные контейнеры, используя следующий синтаксис. Обратите внимание, что вместо синтаксиса индексатора с круглыми скобками и присваиванием он использует объект с несколькими значениями:
+В предыдущем примере создается код, который вызывает <xref:System.Collections.Generic.Dictionary%602.Item(%600)> для задания значений. В версиях C# ниже 6 можно было инициализировать словари и другие ассоциативные контейнеры, используя указанный ниже синтаксис. Обратите внимание, что вместо синтаксиса индексатора с круглыми скобками и присваиванием он использует объект с несколькими значениями:
 
 [!code-csharp[DictionaryAddInitializer](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/object-collection-initializers/BasicObjectInitializers.cs#DictionaryAddInitializer)]  
 
@@ -126,5 +126,5 @@ List<int> digits2 = new List<int> { 0 + 1, 12 % 3, MakeInt() };
 ## <a name="see-also"></a>См. также
 
 - [Руководство по программированию на C#](../index.md)
-- [Выражения запросов LINQ](../linq-query-expressions/index.md)
+- [LINQ в C#](../../linq/index.md)
 - [Анонимные типы](anonymous-types.md)

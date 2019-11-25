@@ -15,15 +15,15 @@ helpviewer_keywords:
 - security [.NET Framework], assemblies
 - integrity with assemblies
 ms.assetid: 1b5439c1-f3d5-4529-bd69-01814703d067
-ms.openlocfilehash: 2cd12ea49723bdac734c6847d337d945a5cfcb5e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 77c9f9131b556e0b8fa639cd723bf1ca8cd6602e
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138623"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73972310"
 ---
 # <a name="assembly-security-considerations"></a>Вопросы безопасности сборок
-<a name="top"></a> При создании сборки можно указать набор разрешений, который требуется для ее выполнения. От свидетельства зависит, предоставляются ли сборке определенные разрешения.  
+При создании сборки можно указать набор разрешений, который требуется для ее выполнения. От свидетельства зависит, предоставляются ли сборке определенные разрешения.  
   
  Существует два различных способа использования свидетельств.  
   

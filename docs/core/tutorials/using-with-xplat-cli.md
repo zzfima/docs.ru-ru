@@ -6,12 +6,12 @@ ms.author: adegeo
 ms.date: 08/07/2019
 ms.technology: dotnet-cli
 ms.custom: seodec18
-ms.openlocfilehash: b5ef70967c8404dc5ce5b816bb9a1c3b1d7e4230
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: cf8c3ae070f4c77789dc55ba4d7888c7b15c8653
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117358"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73736990"
 ---
 # <a name="get-started-with-net-core-on-windowslinuxmacos-using-the-command-line"></a>Начало работы с .NET Core в Windows, Linux и Mac OS с помощью командной строки
 
@@ -39,22 +39,22 @@ dotnet run
 
 1. `dotnet new console`
 
-   [`dotnet new`](../tools/dotnet-new.md) создает актуальный файл проекта `Hello.csproj` с зависимостями, необходимыми для создания консольного приложения.  Эта команда также создает `Program.cs` — простой файл, содержащий точку входа для приложения.
+   С помощью [`dotnet new`](../tools/dotnet-new.md) создается актуальный файл проекта *Hello.csproj* с зависимостями, необходимыми для создания консольного приложения. Эта команда также позволяет создать *Program.cs* — простой файл, содержащий точку входа для приложения.
 
-   `Hello.csproj`:
+   *Hello.csproj*:
 
-   [!code[Hello.csproj](../../../samples/core/console-apps/HelloMsBuild/Hello.csproj)]
+   [!code-xml[Hello.csproj](~/samples/core/console-apps/HelloMsBuild/Hello.csproj)]
 
    В файле проекта указываются все данные, необходимые для восстановления зависимостей и создания программы.
 
    - Тег `OutputType` указывает, что мы создаем исполняемый файл — другими словами, консольное приложение.
    - Тег `TargetFramework` указывает, какая реализация.NET является целевой. В расширенном сценарии обработки можно указать несколько целевых платформ и выполнить сборку во всех средах за одну операцию. В этом руководстве рассматривается сборка только для платформы .NET Core 2.1.
 
-   `Program.cs`:
+   *Program.cs*:
 
-   [!code-csharp[Program.cs](../../../samples/core/console-apps/HelloMsBuild/Program.cs)]
+   [!code-csharp[Program.cs](~/samples/core/console-apps/HelloMsBuild/Program.cs)]
 
-   Программа начинается с команды `using System`, что означает "добавить все данные пространства имен `System` в область видимости для этого файла". Пространство имен `System` содержит основные конструкции, такие как `string`, или числовые типы.
+   Программа начинается с команды `using System`, что означает "добавить все данные пространства имен `System` в область видимости для этого файла". Пространство имен `System` включает класс `Console`.
 
    Затем мы определяем пространство имен с именем `Hello`. Вы можете сменить это имя на любое другое. Класс `Program` определяется в этом пространстве имен с использованием метода `Main`, который принимает массив строк в качестве аргумента. Этот массив содержит список аргументов, передаваемых при вызове скомпилированной программы. В такой форме программа не использует этот массив. Единственное ее действие — вывод надписи "Hello World!" в консоль. Позднее мы внесем в код изменения, использующие этот аргумент.
 
@@ -116,7 +116,7 @@ dotnet run
    15: 377
    ```
 
-Вот и все!  Вы можете расширять файл `Program.cs` по своему усмотрению.
+Вот и все!  Вы можете расширять файл *Program.cs* по своему усмотрению.
 
 ## <a name="working-with-multiple-files"></a>Работа с несколькими файлами
 
@@ -125,11 +125,11 @@ dotnet run
 
 1. Добавьте в каталог *Hello* новый файл *FibonacciGenerator.cs* со следующим кодом:
 
-   [!code-csharp[Fibonacci Generator](../../../samples/core/console-apps/FibonacciBetterMsBuild/FibonacciGenerator.cs)]
+   [!code-csharp[Fibonacci Generator](~/samples/core/console-apps/FibonacciBetterMsBuild/FibonacciGenerator.cs)]
 
 2. Измените метод `Main` в своем файле *Program.cs*, чтобы создать экземпляр класса new и вызвать его метод, как показано в следующем примере:
 
-   [!code-csharp[New Program.cs](../../../samples/core/console-apps/FibonacciBetterMsBuild/Program.cs)]
+   [!code-csharp[New Program.cs](~/samples/core/console-apps/FibonacciBetterMsBuild/Program.cs)]
 
 3. Выполните [`dotnet build`](../tools/dotnet-build.md) для компиляции изменений.
 

@@ -1,0 +1,51 @@
+---
+ms.openlocfilehash: 7d40324e6b0bc4afab9dd39b236f0909f360cc9b
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72394270"
+---
+### <a name="caching-compactonmemorypressure-property-removed"></a>Кэширование: свойство CompactOnMemoryPressure удалено
+
+В выпуске ASP.NET Core 3.0 недоступны [устаревшие API MemoryCacheOptions](https://github.com/aspnet/Extensions/blob/dc5c593da7b72c82e6fe85abb91d03818f9b700c/src/Caching/Memory/src/MemoryCacheOptions.cs#L17-L18).
+
+#### <a name="change-description"></a>Описание изменений
+
+Это изменение реализовано в рамках исправления [aspnet/Caching#221](https://github.com/aspnet/Caching/issues/221). Обсуждение этого вопроса см. на странице [aspnet/Extensions#1062](https://github.com/aspnet/Extensions/issues/1062).
+
+#### <a name="version-introduced"></a>Представленная версия
+
+3.0
+
+#### <a name="old-behavior"></a>Старое поведение
+
+Свойство `MemoryCacheOptions.CompactOnMemoryPressure` было доступно.
+
+#### <a name="new-behavior"></a>Новое поведение
+
+Свойство `MemoryCacheOptions.CompactOnMemoryPressure` было удалено.
+
+#### <a name="reason-for-change"></a>Причина изменения
+
+Автоматическое сжатие кэша приводило к возникновению проблем. Чтобы не допустить непредвиденное поведение, сжимайте кэш только при необходимости.
+
+#### <a name="recommended-action"></a>Рекомендуемое действие
+
+Чтобы сжать кэш, выполните приведение с понижением к `MemoryCache` и вызовите `Compact` при необходимости.
+
+#### <a name="category"></a>Категория
+
+ASP.NET Core
+
+#### <a name="affected-apis"></a>Затронутые API
+
+<xref:Microsoft.Extensions.Caching.Memory.MemoryCacheOptions.CompactOnMemoryPressure%2A?displayProperty=nameWithType>
+
+<!--
+
+#### Affected APIs
+
+`Overload:Microsoft.Extensions.Caching.Memory.MemoryCacheOptions.CompactOnMemoryPressure`
+
+-->

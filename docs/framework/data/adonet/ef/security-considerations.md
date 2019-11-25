@@ -2,12 +2,12 @@
 title: Вопросы безопасности (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 84758642-9b72-4447-86f9-f831fef46962
-ms.openlocfilehash: d9adf4ed9e340ff589117f160e370c7d1595a207
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 9a560db5dbcb7a87a1c933febfb8bf676cc8816b
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039869"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73968406"
 ---
 # <a name="security-considerations-entity-framework"></a>Вопросы безопасности (Entity Framework)
 В этом разделе описываются вопросы безопасности, связанные с разработкой, развертыванием и запуском приложений Entity Framework. Также следует следовать рекомендациям по созданию безопасных приложений .NET Framework. Дополнительные сведения см. в разделе [Общие сведения о безопасности](../security-overview.md).  
@@ -119,11 +119,11 @@ ms.locfileid: "73039869"
  Старайтесь не возвращать типы <xref:System.Linq.IQueryable%601> из методов, которые доступны потенциально ненадежным вызывающим объектам, по следующим причинам.  
   
 - Объект-получатель запроса, обеспечивающего доступ к типу <xref:System.Linq.IQueryable%601>, может вызвать метод, предоставляющий доступ к защищенным данным или увеличивающий размер результирующего набора. Например, рассмотрим следующую сигнатуру метода.  
-  
-    ```csharp  
-    public IQueryable<Customer> GetCustomer(int customerId)  
-    ```  
-  
+
+    ```csharp
+    public IQueryable<Customer> GetCustomer(int customerId)
+    ```
+
     Объект-получатель этого запроса может вызвать метод `.Include("Orders")`, возвращающий `IQueryable<Customer>`, по которому можно извлечь данные, доступ к которым через этот запрос не планировался. Этого можно избежать, если изменить тип возвращаемого значения метода на <xref:System.Collections.Generic.IEnumerable%601> и вызвать метод (например, `.ToList()`) для материализации результатов.  
   
 - Поскольку запросы <xref:System.Linq.IQueryable%601> выполняются при переборе результатов, объект-получатель запроса, обеспечивающего доступ к типу <xref:System.Linq.IQueryable%601>, может обработать возникшие исключения. Исключения могут содержать информацию, не предназначенную объекту-получателю.  

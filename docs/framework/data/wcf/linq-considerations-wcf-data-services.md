@@ -9,21 +9,21 @@ helpviewer_keywords:
 - querying the data service [WCF Data Services]
 - WCF Data Services, querying
 ms.assetid: cc4ec9e9-348f-42a6-a78e-1cd40e370656
-ms.openlocfilehash: 659e3ba02367feee4539a984b679173ee4544d17
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 4792850221da69be79b064313792dcd7ad226788
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894311"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975214"
 ---
 # <a name="linq-considerations-wcf-data-services"></a>Рекомендации по LINQ (службы WCF Data Services)
-Данный раздел содержит сведения о способе подготовки и выполнения запросов LINQ при использовании клиента [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], а также об ограничениях использования LINQ для запросов к службе данных, реализующей [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]. Дополнительные сведения о создании и выполнении запросов к [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]службе данных на основе служб см. в разделе [запросы к службе данных](querying-the-data-service-wcf-data-services.md).  
+В этом разделе содержатся сведения о способе, с помощью которого запросы LINQ формируются и выполняются при использовании клиента [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], а также об ограничениях использования LINQ для запроса службы данных, которая реализует Open Data Protocol (OData). Дополнительные сведения о создании и выполнении запросов к службе данных на основе OData см. в разделе [запросы к службе данных](querying-the-data-service-wcf-data-services.md).  
   
 ## <a name="composing-linq-queries"></a>Составление LINQ-запросов  
- LINQ позволяет составлять запросы к коллекции объектов, которая реализует <xref:System.Collections.Generic.IEnumerable%601>. Как диалоговое окно **Добавление ссылки на службу** в Visual Studio, так и средство DataSvcUtil. exe используются для создания представления [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] службы в виде класса контейнера сущностей, наследуемого от <xref:System.Data.Services.Client.DataServiceContext>, а также объектов, представляющих сущности, возвращаемые в веб-каналах. Эти средства также создают свойства для класса контейнера сущностей для коллекций, представляемых службой в виде потоков. Каждое свойство класса, инкапсулирующего службу данных, возвращает объект <xref:System.Data.Services.Client.DataServiceQuery%601>. Поскольку класс <xref:System.Data.Services.Client.DataServiceQuery%601> реализует интерфейс <xref:System.Linq.IQueryable%601>, определяемый LINQ, можно составить LINQ-запрос для потоков, предоставляемых службой данных, которые преобразуются клиентской библиотекой в URI-запрос, отправляемый службе данных при выполнении.  
+ LINQ позволяет составлять запросы к коллекции объектов, которая реализует <xref:System.Collections.Generic.IEnumerable%601>. Как диалоговое окно **Добавление ссылки на службу** в Visual Studio, так и средство DataSvcUtil. exe используются для создания представления службы OData в виде класса контейнера сущностей, который наследует от <xref:System.Data.Services.Client.DataServiceContext>, а также для объектов, представляющих сущности, возвращаемые в веб-каналах. Эти средства также создают свойства для класса контейнера сущностей для коллекций, представляемых службой в виде потоков. Каждое свойство класса, инкапсулирующего службу данных, возвращает объект <xref:System.Data.Services.Client.DataServiceQuery%601>. Поскольку класс <xref:System.Data.Services.Client.DataServiceQuery%601> реализует интерфейс <xref:System.Linq.IQueryable%601>, определяемый LINQ, можно составить LINQ-запрос для потоков, предоставляемых службой данных, которые преобразуются клиентской библиотекой в URI-запрос, отправляемый службе данных при выполнении.  
   
 > [!IMPORTANT]
-> Набор запросов, которые можно выразить в синтаксисе LINQ, шире, чем набор запросов, поддерживаемых в URI-синтаксисе на основе технологии [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)], используемой в службах данных. Исключение <xref:System.NotSupportedException> возникает, если запрос не может быть сопоставлен с URI в целевой службе данных. Дополнительные сведения см. в разделе [неподдерживаемые методы LINQ](linq-considerations-wcf-data-services.md#unsupportedMethods) этой статьи.  
+> Набор запросов, представленный в синтаксисе LINQ, более широк, чем включенный в синтаксисе URI, который используется службами данных OData. Исключение <xref:System.NotSupportedException> возникает, если запрос не может быть сопоставлен с URI в целевой службе данных. Дополнительные сведения см. в разделе [неподдерживаемые методы LINQ](linq-considerations-wcf-data-services.md#unsupportedMethods) этой статьи.  
   
  В следующем примере показан запрос LINQ, который возвращает объекты `Orders` со стоимостью транспортировки более 30 долларов и упорядочивает результаты по дате отправки, начиная с самой последней.  
   
@@ -50,10 +50,10 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
   
  Клиент выполняет LINQ-запрос в два этапа. По возможности сначала вычисляются LINQ-выражения в запросе на стороне клиента, а затем создается URI-запрос, который будет отправлен службе данных для проведения вычислений по отношению к данным в службе. Дополнительные сведения см. в разделе [клиент и выполнение сервера](querying-the-data-service-wcf-data-services.md#executingQueries) в [запросах к службе данных](querying-the-data-service-wcf-data-services.md).  
   
- Если LINQ-запрос нельзя преобразовать в URI-запрос, совместимый с [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)], при попытке выполнения возникнет исключение. Дополнительные сведения см. [в разделе запросы к службе данных](querying-the-data-service-wcf-data-services.md).  
+ Если запрос LINQ не может быть преобразован в URI запроса, совместимого с OData, при выполнении попытки выполнения возникает исключение. Дополнительные сведения см. [в разделе запросы к службе данных](querying-the-data-service-wcf-data-services.md).  
   
 ## <a name="linq-query-examples"></a>Примеры LINQ-запросов  
- Примеры в следующих разделах демонстрируют LINQ-запросы, которые могут быть выполнены для службы [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)].  
+ В примерах в следующих разделах демонстрируются типы запросов LINQ, которые могут быть выполнены со службой OData.  
   
 <a name="filtering"></a>   
 ### <a name="filtering"></a>Фильтрация  
@@ -135,8 +135,8 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
  Оба приведенных выше примера преобразуются в URI-запрос: `http://localhost:12345/northwind.svc/Orders()?$orderby=OrderDate desc&$skip=50&$top=25`.  
   
 <a name="expand"></a>   
-### <a name="expand"></a>Разверните  
- При отправке запроса службе данных [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] можно указать, что сущности, связанные с целевой сущностью, должны быть включены в возвращаемый поток. Метод <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> вызывается для <xref:System.Data.Services.Client.DataServiceQuery%601> для набора сущностей, заданного LINQ-запросом, при этом имя связанного набора сущностей предоставляется в виде параметра `path`. Дополнительные сведения см. в разделе [Загрузка отложенного содержимого](loading-deferred-content-wcf-data-services.md).  
+### <a name="expand"></a>Expand  
+ При запросе к службе данных OData можно запросить, чтобы сущности, связанные с сущностью, для которой предназначен запрос, включали возвращенный канал. Метод <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> вызывается для <xref:System.Data.Services.Client.DataServiceQuery%601> для набора сущностей, заданного LINQ-запросом, при этом имя связанного набора сущностей предоставляется в виде параметра `path`. Дополнительные сведения см. в разделе [Загрузка отложенного содержимого](loading-deferred-content-wcf-data-services.md).  
   
  В следующих примерах показаны эквивалентные способы использования метода <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> в запросе.  
   
@@ -154,7 +154,7 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
   
 <a name="unsupportedMethods"></a>   
 ## <a name="unsupported-linq-methods"></a>Неподдерживаемые LINQ-методы  
- В следующей таблице приведены классы LINQ-методов, которые не поддерживаются и не могут быть включены в запрос, выполняемый для службы [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)].  
+ В следующей таблице содержатся классы методов LINQ, которые не поддерживаются и не могут быть включены в запрос, выполняемый для службы OData:  
   
 |Тип операции|Неподдерживаемые методы|  
 |--------------------|------------------------|  
@@ -163,14 +163,14 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
 |Операторы проецирования и фильтрации|Следующие операторы проецирования и фильтрации, принимающие аргументы положения, не поддерживаются в запросе <xref:System.Data.Services.Client.DataServiceQuery%601>:<br /><br /> -   <xref:System.Linq.Enumerable.Join%60%604%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Collections.Generic.IEnumerable%7B%60%601%7D%2CSystem.Func%7B%60%600%2C%60%602%7D%2CSystem.Func%7B%60%601%2C%60%602%7D%2CSystem.Func%7B%60%600%2C%60%601%2C%60%603%7D%2CSystem.Collections.Generic.IEqualityComparer%7B%60%602%7D%29><br />-   <xref:System.Linq.Enumerable.Select%60%602%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%600%2CSystem.Int32%2C%60%601%7D%29><br />-   <xref:System.Linq.Enumerable.SelectMany%60%602%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%600%2CSystem.Collections.Generic.IEnumerable%7B%60%601%7D%7D%29><br />-   <xref:System.Linq.Enumerable.SelectMany%60%602%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%600%2CSystem.Int32%2CSystem.Collections.Generic.IEnumerable%7B%60%601%7D%7D%29><br />-   <xref:System.Linq.Enumerable.SelectMany%60%603%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%600%2CSystem.Collections.Generic.IEnumerable%7B%60%601%7D%7D%2CSystem.Func%7B%60%600%2C%60%601%2C%60%602%7D%29><br />-   <xref:System.Linq.Enumerable.SelectMany%60%603%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%600%2CSystem.Int32%2CSystem.Collections.Generic.IEnumerable%7B%60%601%7D%7D%2CSystem.Func%7B%60%600%2C%60%601%2C%60%602%7D%29><br />-   <xref:System.Linq.Enumerable.Where%60%601%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%600%2CSystem.Int32%2CSystem.Boolean%7D%29>|  
 |Операторы группирования|Все операторы группирования не поддерживаются в запросе <xref:System.Data.Services.Client.DataServiceQuery%601>, включая следующие запросы:<br /><br /> -   <xref:System.Linq.Enumerable.GroupBy%2A><br />-   <xref:System.Linq.Enumerable.GroupJoin%2A><br /><br /> Операции группирования следует выполнять на стороне клиента.|  
 |Статистические операторы|Все статистические операторы не поддерживаются в запросе <xref:System.Data.Services.Client.DataServiceQuery%601>, включая следующие запросы:<br /><br /> -   <xref:System.Linq.Enumerable.Aggregate%2A><br />-   <xref:System.Linq.Enumerable.Average%2A><br />-   <xref:System.Linq.Enumerable.Count%2A><br />-   <xref:System.Linq.Enumerable.LongCount%2A><br />-   <xref:System.Linq.Enumerable.Max%2A><br />-   <xref:System.Linq.Enumerable.Min%2A><br />-   <xref:System.Linq.Enumerable.Sum%2A><br /><br /> Статистические операции должны выполняться на стороне клиента либо инкапсулироваться операцией службы.|  
-|Операторы разбиения на страницы|Следующие операторы разбиения на страницы не поддерживаются в запросе <xref:System.Data.Services.Client.DataServiceQuery%601>:<br /><br /> -   <xref:System.Linq.Enumerable.ElementAt%2A><br />-   <xref:System.Linq.Enumerable.Last%2A><br />-   <xref:System.Linq.Enumerable.LastOrDefault%2A><br />-   <xref:System.Linq.Enumerable.SkipWhile%2A><br />-   <xref:System.Linq.Enumerable.TakeWhile%2A>**Примечание.**  Операторы разбиения на страницы, выполняемые для пустой последовательности, возвращают значение NULL.|  
-|Другие операторы|Следующие операторы не поддерживаются в запросе <xref:System.Data.Services.Client.DataServiceQuery%601>:<br /><br /> 1.  <xref:System.Linq.Enumerable.Empty%2A><br />2.  <xref:System.Linq.Enumerable.Range%2A><br />3.  <xref:System.Linq.Enumerable.Repeat%2A><br />4.  <xref:System.Linq.Enumerable.ToDictionary%2A><br />5.  <xref:System.Linq.Enumerable.ToLookup%2A>|  
+|Операторы разбиения на страницы|Следующие операторы разбиения на страницы не поддерживаются в запросе <xref:System.Data.Services.Client.DataServiceQuery%601>:<br /><br /> -   <xref:System.Linq.Enumerable.ElementAt%2A><br />-   <xref:System.Linq.Enumerable.Last%2A><br />-   <xref:System.Linq.Enumerable.LastOrDefault%2A><br />-   <xref:System.Linq.Enumerable.SkipWhile%2A><br />-   <xref:System.Linq.Enumerable.TakeWhile%2A> **Примечание.** операторы разбиения по страницам, которые выполняются в пустой последовательности, возвращают значение null.|  
+|Другие операторы|Следующие операторы не поддерживаются в запросе <xref:System.Data.Services.Client.DataServiceQuery%601>:<br /><br /> 1. <xref:System.Linq.Enumerable.Empty%2A><br />2. <xref:System.Linq.Enumerable.Range%2A><br />3. <xref:System.Linq.Enumerable.Repeat%2A><br />4. <xref:System.Linq.Enumerable.ToDictionary%2A><br />5. <xref:System.Linq.Enumerable.ToLookup%2A>|  
   
 <a name="supportedExpressions"></a>   
 ## <a name="supported-expression-functions"></a>Поддерживаемые функции выражений  
- Следующие методы среды CLR и свойства поддерживаются, поскольку они могут быть преобразованы в выражение запроса и включены в URI-запрос, отправляемый службе [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)].  
+ Поддерживаются следующие методы и свойства среды CLR, так как их можно преобразовать в выражение запроса для включения в URI запроса в службу OData:  
   
-|<xref:System.String>Участниками|Поддерживаемая функция [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]|  
+|Элемент <xref:System.String>|Поддерживаемая функция OData|  
 |-----------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------|  
 |<xref:System.String.Concat%28System.String%2CSystem.String%29>|`string concat(string p0, string p1)`|  
 |<xref:System.String.Contains%28System.String%29>|`bool substringof(string p0, string p1)`|  
@@ -184,7 +184,7 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
 |<xref:System.String.ToUpper>|`string toupper(string p0)`|  
 |<xref:System.String.Trim>|`string trim(string p0)`|  
   
-|<xref:System.DateTime>Член<sup>1</sup>|Поддерживаемая функция [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]|  
+|<xref:System.DateTime> элемент<sup>1</sup>|Поддерживаемая функция OData|  
 |-------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------|  
 |<xref:System.DateTime.Day>|`int day(DateTime p0)`|  
 |<xref:System.DateTime.Hour>|`int hour(DateTime p0)`|  
@@ -193,9 +193,9 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
 |<xref:System.DateTime.Second>|`int second(DateTime p0)`|  
 |<xref:System.DateTime.Year>|`int year(DateTime p0)`|  
   
- <sup>1</sup> Также поддерживаются эквивалентные свойства <xref:Microsoft.VisualBasic.DateAndTime?displayProperty=nameWithType>даты и времени, <xref:Microsoft.VisualBasic.DateAndTime.DatePart%2A> а также метод в Visual Basic.  
+ <sup>1</sup> Также поддерживаются эквивалентные свойства даты и времени <xref:Microsoft.VisualBasic.DateAndTime?displayProperty=nameWithType>, а также метод <xref:Microsoft.VisualBasic.DateAndTime.DatePart%2A> в Visual Basic.  
   
-|<xref:System.Math>Участниками|Поддерживаемая функция [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]|  
+|Элемент <xref:System.Math>|Поддерживаемая функция OData|  
 |---------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------|  
 |<xref:System.Math.Ceiling%28System.Decimal%29>|`decimal ceiling(decimal p0)`|  
 |<xref:System.Math.Ceiling%28System.Double%29>|`double ceiling(double p0)`|  
@@ -204,7 +204,7 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
 |<xref:System.Math.Round%28System.Decimal%29>|`decimal round(decimal p0)`|  
 |<xref:System.Math.Round%28System.Double%29>|`double round(double p0)`|  
   
-|<xref:System.Linq.Expressions.Expression>Участниками|Поддерживаемая функция [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]|  
+|Элемент <xref:System.Linq.Expressions.Expression>|Поддерживаемая функция OData|  
 |---------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------|  
 |<xref:System.Linq.Expressions.Expression.TypeIs%28System.Linq.Expressions.Expression%2CSystem.Type%29>|`bool isof(type p0)`|  
   
@@ -215,4 +215,4 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
 - [Выполнение запросов к службе данных](querying-the-data-service-wcf-data-services.md)
 - [Проекции запросов](query-projections-wcf-data-services.md)
 - [Материализация объектов](object-materialization-wcf-data-services.md)
-- [Протокола Соглашения URI](https://go.microsoft.com/fwlink/?LinkID=185564)
+- [OData: соглашения об URI](https://go.microsoft.com/fwlink/?LinkID=185564)

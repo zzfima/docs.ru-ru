@@ -2,14 +2,12 @@
 title: Устранение рисков. Проверки двоеточий в путях
 ms.date: 03/30/2017
 ms.assetid: a0bb52de-d279-419d-8f23-4b12d1a3f36e
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a74c25a9bf4dd8b9ab86bd280881fe1a7999e1d5
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: e88643fea3bd507289436f41880a2de34117884f
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70789990"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73457900"
 ---
 # <a name="mitigation-path-colon-checks"></a>Устранение рисков. Проверки двоеточий в путях
 Начиная с приложений, ориентированных на .NET Framework 4.6.2, выполнен ряд изменений для поддержки ранее не поддерживаемых путей (с точки зрения и длины, и формата). В частности, усовершенствованы проверки правильности синтаксиса разделителя диска (двоеточия).  
@@ -34,4 +32,4 @@ ms.locfileid: "70789990"
   
 ## <a name="see-also"></a>См. также
 
-- [Изменение целевой платформы](retargeting-changes-in-the-net-framework-4-6-2.md)
+- [Совместимость приложений](application-compatibility.md)

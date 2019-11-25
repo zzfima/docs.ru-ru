@@ -6,12 +6,12 @@ ms.date: 05/01/2019
 ms.topic: overview
 ms.custom: mvc
 ms.author: nakersha
-ms.openlocfilehash: da2d764e678debc78a25faeb8e48facb44fc4021
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 263004e67bf88af4182788e8c74cb410460e9201
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929425"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73971407"
 ---
 # <a name="automated-machine-learning-with-mlnet"></a>Автоматизированное машинное обучение в ML.NET
 
@@ -22,7 +22,7 @@ ms.locfileid: "70929425"
 - исходный код, используемый для выбора компонентов и обучения модели (чтобы понять модель).
 
 > [!NOTE]
-> Эта функция сейчас доступна в режиме предварительной версии. Этот материал может быть изменен. 
+> Эта функция сейчас доступна в режиме предварительной версии. Этот материал может быть изменен.
 
 В настоящее время автоматизированное машинное обучение ограничено выполнением [задач](resources/tasks.md) двоичной классификации, многоклассовой классификации и регрессии. Другие задачи машинного обучения будут поддерживаться в будущих выпусках.
 

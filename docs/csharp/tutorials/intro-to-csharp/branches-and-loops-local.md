@@ -3,12 +3,12 @@ title: Ветви и циклы. Вводное руководство по C#
 description: В рамках этого руководства, посвященного ветвям и циклам, вы создадите пример кода на C#, который демонстрирует возможности языка для организации условного ветвления и циклического выполнения операторов.
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: a0701a63d6c3aece6bac4263cbcf8a682a623cf7
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 44b634e3c2120116ee7fd66770398a6b66c8ed8c
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834122"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739123"
 ---
 # <a name="learn-conditional-logic-with-branch-and-loop-statements"></a>Изучение условной логики с операторами ветви и цикла
 
@@ -18,7 +18,13 @@ ms.locfileid: "71834122"
 
 ## <a name="make-decisions-using-the-if-statement"></a>Принятие решений с помощью оператора `if`
 
-Создайте каталог с именем *branches-tutorial*. Откройте этот каталог и выполните команду `dotnet new console -n BranchesAndLoops -o .`. Эта команда создает консольное приложение .NET Core в текущем каталоге.
+Создайте каталог с именем *branches-tutorial*. Сделайте его текущим, выполнив следующую команду:
+
+```dotnetcli
+dotnet new console -n BranchesAndLoops -o .
+```
+
+Эта команда создает консольное приложение .NET Core в текущем каталоге.
 
 Откройте файл *Program.cs* в любом редакторе и замените строку `Console.WriteLine("Hello World!");` следующим кодом:
 

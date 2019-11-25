@@ -7,26 +7,19 @@ helpviewer_keywords:
 ms.assetid: 926adde2-c123-452e-bf4f-4b977bf06ffb
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 145a53363c9d7aca622ee0b1ccb2700e5984397d
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 4daa0fc0d689815e3a2c65df09c6c046d06a25c4
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71046415"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975501"
 ---
 # <a name="jit-tracing-etw-events"></a>События трассировки JIT-компилятора (трассировка событий Windows)
-<a name="top"></a> Эти события собирают сведения, относящиеся к успешному или неудачному встраиванию кода JIT и вызовам с префиксом tail в JIT.  
-  
- Существует две категории событий трассировки JIT:  
-  
-- [События встраивания кода JIT](#jit_inlining_events)  
-  
-- [События вызовов с префиксом tail в JIT](#jit_tail_call_events)  
-  
-<a name="jit_inlining_events"></a>   
-## <a name="jit-inlining-events"></a>События встраивания кода JIT  
-  
-### <a name="methodjitinliningfailed-event"></a>Событие MethodJitInliningFailed  
+Эти события собирают сведения, относящиеся к успешному или неудачному встраиванию кода JIT и вызовам с префиксом tail в JIT.
+
+## <a name="jit-inlining-events"></a>События встраивания кода JIT
+
+### <a name="methodjitinliningfailed-event"></a>Событие MethodJitInliningFailed
  В таблице ниже показаны ключевое слово и уровень. (Дополнительные сведения см. в разделе [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md).)  
   
 |Ключевое слово для вызова события|Уровень|  
@@ -35,7 +28,7 @@ ms.locfileid: "71046415"
   
  В таблице ниже представлены сведения о событии.  
   
-|событие|Идентификатор события|Условие вызова|  
+|событие|Код события|Условие вызова|  
 |-----------|--------------|-----------------|  
 |`MethodJitInliningFailed`|186|Встраивание кода JIT не удалось.|  
   
@@ -65,7 +58,7 @@ ms.locfileid: "71046415"
   
  В таблице ниже представлены сведения о событии.  
   
-|событие|Идентификатор события|Условие вызова|  
+|событие|Код события|Условие вызова|  
 |-----------|--------------|-----------------|  
 |`MethodJitInliningSucceeded`|185|Встраивание метода выполнено успешно.|  
   
@@ -83,10 +76,7 @@ ms.locfileid: "71046415"
 |InlineeName|win:UnicodeString|Метод, который компилятор пытается встроить (а не создать для него вызов).|  
 |InlineeNameSignature|win:UnicodeString|Сигнатура для встраиваемого метода.|  
 |ClrInstanceID|win:UInt16|Уникальный идентификатор экземпляра CLR или CoreCLR.|  
-  
- [К началу](#top)  
-  
-<a name="jit_tail_call_events"></a>   
+
 ## <a name="jit-tail-call-events"></a>События вызовов с префиксом tail в JIT  
   
 ### <a name="methodjittailcallfailed-event"></a>Событие MethodJITTailCallFailed  
@@ -98,7 +88,7 @@ ms.locfileid: "71046415"
   
  В таблице ниже представлены сведения о событии.  
   
-|событие|Идентификатор события|Условие вызова|  
+|событие|Код события|Условие вызова|  
 |-----------|--------------|-----------------|  
 |`MethodJitTailCallFailed`|189|Сбой вызова метода с префиксом tail.|  
   
@@ -128,7 +118,7 @@ ms.locfileid: "71046415"
   
  В таблице ниже представлены сведения о событии.  
   
-|событие|Идентификатор события|Условие вызова|  
+|событие|Код события|Условие вызова|  
 |-----------|--------------|-----------------|  
 |`MethodJitTailCallSucceeded`|188|Успешное завершение вызова метода с префиксом tail.|  
   

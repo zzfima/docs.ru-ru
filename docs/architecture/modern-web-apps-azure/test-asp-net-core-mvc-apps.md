@@ -4,12 +4,12 @@ description: Разработка современных веб-приложен
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 9bc97efdda44ca4dfa4a583c32e9e55c9502d975
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6096bd3aa35a27c97862089d09d537bdc5b1fff0
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73089684"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73971532"
 ---
 # <a name="test-aspnet-core-mvc-apps"></a>Тестирование приложений MVC ASP.NET Core
 
@@ -285,12 +285,16 @@ namespace Microsoft.eShopWeb.FunctionalTests.WebRazorPages
 
 > ### <a name="references--test-aspnet-core-mvc-apps"></a>Справочники — тестирование приложений MVC ASP.NET Core
 >
-> - **Тестирование на платформе ASP.NET Core**  
+> - **Тестирование на платформе ASP.NET Core** \
 >   <https://docs.microsoft.com/aspnet/core/testing/>
-> - **Соглашение об именовании модульных тестов**  
+> - **Соглашение об именовании модульных тестов** \
 >   <https://ardalis.com/unit-test-naming-convention>
-> - **Тестирование EF Core**  
+> - **Тестирование EF Core** \
 >   <https://docs.microsoft.com/ef/core/miscellaneous/testing/>
+> - **Интеграционные тесты на платформе ASP.NET Core** \
+>   <https://docs.microsoft.com/aspnet/core/test/integration-tests>
+> - **Ежедневное собрание сообщества ASP.NET 15 мая 2018 г. Тестирование приложений MVC с Хавьером Нелсоном (Javier C. Nelson)** . Видео на YouTube \
+>   <https://www.youtube.com/watch?v=wtOE-xmFJkw&list=PL1rZQsJPBU2StolNg0aqvQswETPcYnNKL&index=5>
 
 >[!div class="step-by-step"]
 >[Назад](work-with-data-in-asp-net-core-apps.md)

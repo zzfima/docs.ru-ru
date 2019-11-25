@@ -5,18 +5,18 @@ helpviewer_keywords:
 - Astoria
 - WCF Data Services, getting started
 ms.assetid: 73d2bec3-7c92-4110-b905-11bb0462357a
-ms.openlocfilehash: 017fe2177cf824d461b4c51ea805f75b6ddbe064
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 1ce152b84f17a35982a75f54b5418623ba39210f
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70779986"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975222"
 ---
 # <a name="wcf-data-services-45"></a>Службы WCF Data Services 4.5
 
-WCF Data Services (прежнее название — "службы данных ADO.NET") — это компонент .NET Framework, который позволяет создавать службы, использующие [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] для предоставления и использования данных в Интернете или интрасети с помощью семантики [состояния представления. Перемещение (остальное)](https://go.microsoft.com/fwlink/?LinkId=113919). OData предоставляет доступ к данным в виде ресурсов, которые адресуются по URI. Доступ и изменение данных производится с помощью таких стандартных команд HTTP, как GET, PUT, POST и DELETE. OData использует соглашения об отношениях отношений сущностей [EDM](../adonet/entity-data-model.md) для предоставления ресурсов в виде наборов сущностей, связанных ассоциациями.
+WCF Data Services (прежнее название — "службы данных ADO.NET") — это компонент .NET Framework, который позволяет создавать службы, использующие Open Data Protocol (OData) для предоставления и использования данных в Интернете или интрасети с помощью семантики [передачи состояния представления (остальное)](https://go.microsoft.com/fwlink/?LinkId=113919). OData предоставляет доступ к данным в виде ресурсов, которые адресуются по URI. Доступ и изменение данных производится с помощью таких стандартных команд HTTP, как GET, PUT, POST и DELETE. OData использует соглашения об отношениях отношений сущностей [EDM](../adonet/entity-data-model.md) для предоставления ресурсов в виде наборов сущностей, связанных ассоциациями.
 
-WCF Data Services использует протокол OData для адресации и обновления ресурсов. Таким образом, доступ к этим службам можно получить с любого клиента, поддерживающего OData. OData позволяет запрашивать и записывать данные в ресурсы с помощью хорошо известных форматов перемещения: Atom, набор стандартов для обмена и обновления данных в формате XML и нотация объектов JavaScript (JSON), текстовый формат обмена данными, широко применяемый в приложениях AJAX.
+WCF Data Services использует протокол OData для адресации и обновления ресурсов. Таким образом, доступ к этим службам можно получить с любого клиента, поддерживающего OData. OData позволяет запрашивать и записывать данные в ресурсы с помощью хорошо известных форматов передачи: Atom, набора стандартов для обмена и обновления данных в формате XML, а также нотация объектов JavaScript (JSON), основанный на тексте формат обмена данными, широко применяемый в AJAX. приложений.
 
 WCF Data Services может предоставлять данные, происходящие из различных источников, в качестве каналов OData. Средства Visual Studio облегчают создание службы на основе OData с помощью модели данных ADO.NET Entity Framework. Можно также создавать веб-каналы OData на основе классов среды CLR и даже данных с поздним связыванием или нетипизированными данными.
 
@@ -40,19 +40,19 @@ WCF Data Services также включает набор клиентских б
 
 - [Краткое руководство](quickstart-wcf-data-services.md)
 
-- [Практическое руководство. Выполнение запросов службы данных](how-to-execute-data-service-queries-wcf-data-services.md)
+- [Практическое руководство. Выполнение запросов к службе данных](how-to-execute-data-service-queries-wcf-data-services.md)
 
-- [Практическое руководство. Привязка данных к Windows Presentation Foundation элементам](bind-data-to-wpf-elements-wcf-data-services.md)
+- [Практическое руководство. Привязка данных к элементам Windows Presentation Foundation](bind-data-to-wpf-elements-wcf-data-services.md)
 
 Я хочу узнать больше о OData...
 
-- [Технический документ Знакомство с OData](https://go.microsoft.com/fwlink/?LinkId=220867)
+- [Технический документ. Введение в OData](https://go.microsoft.com/fwlink/?LinkId=220867)
 
 - [Веб-сайт протокола Open Data Protocol](https://go.microsoft.com/fwlink/?LinkID=184554)
 
-- [Протокола TOOL](https://go.microsoft.com/fwlink/?LinkID=185248)
+- [OData SDK](https://go.microsoft.com/fwlink/?LinkID=185248)
 
-- [Протокола Вопросы и ответы](https://go.microsoft.com/fwlink/?LinkId=185867)
+- [OData: часто задаваемые вопросы](https://go.microsoft.com/fwlink/?LinkId=185867)
 
 Я хочу посмотреть некоторые видео...
 
@@ -60,7 +60,7 @@ WCF Data Services также включает набор клиентских б
 
 - [Видеофильмы о службах данных WCF для разработчиков](https://go.microsoft.com/fwlink/?LinkId=220861)
 
-- [Протокола Веб-сайт разработчиков](https://go.microsoft.com/fwlink/?LinkId=185866)
+- [OData: веб-сайт разработчиков](https://go.microsoft.com/fwlink/?LinkId=185866)
 
 Я хочу просмотреть полный пример...
 
@@ -68,7 +68,7 @@ WCF Data Services также включает набор клиентских б
 
 - [Другие образцы служб WCF Data Services в коллекции образцов MSDN](https://go.microsoft.com/fwlink/?LinkId=220866)
 
-- [Протокола TOOL](https://go.microsoft.com/fwlink/?LinkID=185248)
+- [OData SDK](https://go.microsoft.com/fwlink/?LinkID=185248)
 
 Как происходит интеграция со средствами Visual Studio
 
@@ -82,7 +82,7 @@ WCF Data Services также включает набор клиентских б
 
 - [Обзор](wcf-data-services-overview.md)
 
-- [Технический документ Знакомство с OData](https://go.microsoft.com/fwlink/?LinkId=220867)
+- [Технический документ. Введение в OData](https://go.microsoft.com/fwlink/?LinkId=220867)
 
 - [Сценарии приложения](application-scenarios-wcf-data-services.md)
 
@@ -100,7 +100,7 @@ WCF Data Services также включает набор клиентских б
 
 - [Рекомендации по LINQ](linq-considerations-wcf-data-services.md)
 
-- [Практическое руководство. Выполнение запросов службы данных](how-to-execute-data-service-queries-wcf-data-services.md)
+- [Практическое руководство. Выполнение запросов к службе данных](how-to-execute-data-service-queries-wcf-data-services.md)
 
 Мне по-прежнему нужны дополнительные сведения...
 
@@ -112,7 +112,7 @@ WCF Data Services также включает набор клиентских б
 
 - [Веб-сайт протокола Open Data Protocol](https://go.microsoft.com/fwlink/?LinkID=184554)
 
-## <a name="in-this-section"></a>В этом разделе
+## <a name="in-this-section"></a>Содержание
 
 [Обзор](wcf-data-services-overview.md)
 

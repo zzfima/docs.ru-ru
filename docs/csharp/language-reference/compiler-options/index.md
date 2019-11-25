@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Visual C# compiler
 - Visual C#, compiler options
 ms.assetid: d3403556-1816-4546-a782-e8223a772e44
-ms.openlocfilehash: dab91ddd1f2b9c91560329eeb1c51ca7f6f175bd
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 787f9c5fff79eb67e2d74043782532c1fc4034b5
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73455247"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73972752"
 ---
 # <a name="c-compiler-options"></a>Параметры компилятора C#
 
@@ -29,7 +29,7 @@ ms.locfileid: "73455247"
 
 - [Создание из командной строки с помощью csc.exe](command-line-building-with-csc-exe.md) — сведения о создании приложений Visual C# из командной строки.
 
-- [Практическое руководство. Настройка переменных среды для командной строки Visual Studio](how-to-set-environment-variables-for-the-visual-studio-command-line.md) — пошаговые инструкции по запуску файла *vsvars32.bat* для создания приложений из командной строки.
+- [Настройка переменных среды для командной строки Visual Studio](how-to-set-environment-variables-for-the-visual-studio-command-line.md) — пошаговые инструкции по запуску файла *vsvars32.bat* для сборки из командной строки.
 
 - [Параметры компилятора C#, перечисленные по категории](listed-by-category.md) — список параметров компилятора по категориям.
 

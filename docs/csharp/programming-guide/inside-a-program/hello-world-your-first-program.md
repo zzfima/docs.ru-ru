@@ -9,16 +9,16 @@ helpviewer_keywords:
 - examples [C#], Hello World
 - Hello World example [C#]
 ms.assetid: 6493182a-b0b6-4539-a719-518a168cb730
-ms.openlocfilehash: 0807e46d36a4cf031bc44ae0dc4efab79dd51d03
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: edab64bf02a2b60cce21af536d2da98193dea9a1
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991330"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73196212"
 ---
 # <a name="hello-world----your-first-program"></a>Hello World — создаем первую программу
 
-В этой статье вы будете использовать Visual Studio для создания традиционной программы "Hello World!" в C#. Visual Studio — это профессиональная интегрированная среда разработки (IDE) с множеством функций, предназначенных для разработки в среде .NET. Для создания этой программы вы будете использовать лишь некоторые функции Visual Studio. Дополнительные сведения о Visual Studio см. в разделе [Начало работы с Visual C# и Visual Basic](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic).
+В этой статье вы будете использовать Visual Studio для создания традиционной программы "Hello World!" в C#. Visual Studio — это профессиональная интегрированная среда разработки (IDE) с множеством функций, предназначенных для разработки в среде .NET. Для создания этой программы вы будете использовать лишь некоторые функции Visual Studio. См. дополнительные сведения о [начале работы с Visual C#](/visualstudio/ide/quickstart-csharp-console).
 
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]
 
@@ -128,4 +128,4 @@ Press any key to close this window . . .
 - [Руководство по программированию на C#](../index.md)
 - [Примеры и руководства](../../../samples-and-tutorials/index.md)
 - [Main() и аргументы командной строки](../main-and-command-args/index.md)
-- [Начало работы с Visual C# и Visual Basic](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)
+- [Начало работы с Visual C#](/visualstudio/ide/quickstart-csharp-console)

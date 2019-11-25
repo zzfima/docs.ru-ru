@@ -5,16 +5,16 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 41ade767-eeab-437d-9121-9797e8fb8045
-ms.openlocfilehash: 9995a509bf997298d991a1f66cfdf3cae6cd0395
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 4beaba24e42b15ebc45ece6e5319a2b14df54ab6
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70790963"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975384"
 ---
 # <a name="creating-the-net-framework-client-application-wcf-data-services-quickstart"></a>Создание клиентского приложения .NET Framework (краткое руководство по службам данных WCF)
 
-Это последняя задача краткого руководства по WCF Data Services. В этой задаче вы добавите в решение консольное приложение, добавите ссылку на [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] веб-канал в это новое клиентское приложение и получите доступ к каналу OData из клиентского приложения, используя созданные классы клиентской службы данных и клиентские библиотеки. .
+Это последняя задача краткого руководства по WCF Data Services. В этой задаче вы добавите в решение консольное приложение, добавите ссылку на веб-канал Open Data Protocol (OData) в это новое клиентское приложение и получите доступ к каналу OData из клиентского приложения с помощью созданных клиентских классов службы данных и клиента. Libraries.
 
 > [!NOTE]
 > Для доступа к каналу данных наличие клиентского приложения на основе .NET Framework необязательно. Доступ к службе данных может осуществляться любым компонентом приложения, использующим канал OData. Дополнительные сведения см. [в разделе Использование службы данных в клиентском приложении](using-a-data-service-in-a-client-application-wcf-data-services.md).
@@ -25,7 +25,7 @@ ms.locfileid: "70790963"
 
 2. В левой области выберите **установленные** > [**Visual C#**  или **Visual Basic**] > **Рабочий стол Windows**, а затем выберите шаблон **приложения WPF** .
 
-3. Введите `NorthwindClient` в качестве имени проекта и нажмите кнопку **ОК**.
+3. Введите `NorthwindClient` в поле имя проекта, а затем нажмите кнопку **ОК**.
 
 4. Откройте файл MainWindow.xaml и замените XAML-код следующим кодом.
 
@@ -33,11 +33,11 @@ ms.locfileid: "70790963"
 
 ## <a name="to-add-a-data-service-reference-to-the-project"></a>Добавление в проект ссылки на службу данных
 
-1. В **Обозреватель решений**щелкните правой кнопкой мыши проект узлом NorthwindClient, выберите команду **Добавить** > **ссылку на службу**, а затем нажмите кнопку **обнаружить**.
+1. В **Обозреватель решений**щелкните правой кнопкой мыши проект узлом NorthwindClient, выберите **Добавить** > **ссылку на службу**, а затем нажмите кнопку **обнаружить**.
 
      При этом отображается служба данных Northwind, созданная в первой задаче.
 
-2. В текстовом поле **пространство имен** введите `Northwind`, а затем нажмите кнопку **ОК**.
+2. В текстовом поле **пространство имен** введите `Northwind`и нажмите кнопку **ОК**.
 
      При этом в проект добавляется новый файл кода, содержащий классы данных, которые используются для обращения и взаимодействия с ресурсами службы данных как с объектами. Классы данных создаются в пространстве имен `NorthwindClient.Northwind`.
 
@@ -47,7 +47,7 @@ ms.locfileid: "70790963"
 
 2. В диалоговом окне **Добавление ссылки** перейдите на вкладку **.NET** , выберите сборку System. Data. Services. Client. dll и нажмите кнопку **ОК**.
 
-3. В **Обозреватель решений** в разделе **узлом NorthwindClient**откройте кодовую страницу файла MainWindow. XAML и добавьте следующую `using` инструкцию (`Imports` в Visual Basic).
+3. В **Обозреватель решений** в разделе **узлом NorthwindClient**откройте кодовую страницу файла MainWindow. XAML и добавьте следующую инструкцию `using` (`Imports` в Visual Basic).
 
     [!code-csharp[Astoria Quickstart Client#Using](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_quickstart_client/cs/window1.xaml.cs#using)]
     [!code-vb[Astoria Quickstart Client#Using](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_quickstart_client/vb/window1.xaml.vb#using)]

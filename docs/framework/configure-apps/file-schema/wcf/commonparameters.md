@@ -2,23 +2,23 @@
 title: <commonParameters>
 ms.date: 03/30/2017
 ms.assetid: ffc20832-34d6-4622-8174-81924fd53514
-ms.openlocfilehash: 6f187e9cdcabc358ee69d65e392bc59aa38e52ca
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: ab21be7b5e2738ac6a7c9bea676d8180c69d1afd
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70398169"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73968566"
 ---
 # <a name="commonparameters"></a>\<Общиепараметры >
 Представляет коллекцию параметров, используемых глобально в нескольких службах. Эта коллекция, как правило, включает строку подключения базы данных, которая может совместно использоваться постоянными службами.  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> поведения**](behaviors.md)\
+&nbsp;&nbsp;[ **\<System. serviceModel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<поведения**](behaviors.md) >\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<serviceBehaviors >** ](servicebehaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> поведения**](behavior-of-servicebehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<[**поведение**](behavior-of-servicebehaviors.md) >
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<workflowRuntime >** ](workflowruntime.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Общиепараметры >**  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<общиепараметры >**  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -35,7 +35,7 @@ ms.locfileid: "70398169"
  В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
   
 ### <a name="attributes"></a>Атрибуты  
- Нет.  
+ Отсутствует.  
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
@@ -47,19 +47,19 @@ ms.locfileid: "70398169"
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<workflowRuntime >](workflowruntime.md)|Задает параметры экземпляра <xref:System.Workflow.Runtime.WorkflowRuntime> для размещения служб Windows Communication Foundation (WCF) на основе рабочих процессов.|  
+|[\<workflowRuntime >](workflowruntime.md)|Задает параметры для экземпляра <xref:System.Workflow.Runtime.WorkflowRuntime> для размещения служб Windows Communication Foundation на основе рабочего процесса (WCF).|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
  Элемент `<commonParameters>` определяет любые параметры, которые используются глобально несколькими службами, например `ConnectionString` при использовании <xref:System.Workflow.Runtime.Hosting.SharedConnectionWorkflowCommitWorkBatchService>.  
   
 > [!NOTE]
 > Служба отслеживания SQL не использует постоянно значение `ConnectionString`, если оно задано в разделе `<commonParameters>`. В некоторых операциях, например при извлечении свойства `StateMachineWorkflowInstance.StateHistory`, может произойти ошибка. Чтобы обойти эту проблему, задайте атрибут `ConnectionString` в разделе конфигурации для поставщика отслеживания, как показано в следующем примере.  
-  
- `<add`  
-  
- `type="System.Workflow.Runtime.Tracking.SqlTrackingService, System.Workflow.Runtime, Version=3.0.00000.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"`  
-  
- `ConnectionString="Data Source=localhost;Initial Catalog=Partner20WFTP;Integrated Security=True;" />`  
+
+```xml  
+<add
+type="System.Workflow.Runtime.Tracking.SqlTrackingService, System.Workflow.Runtime, Version=3.0.00000.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" 
+ConnectionString="Data Source=localhost;Initial Catalog=Partner20WFTP;Integrated Security=True;" />
+```  
   
  Для служб, фиксирующих рабочие пакеты в постоянных хранилищах, таких как <xref:System.Workflow.Runtime.Hosting.DefaultWorkflowCommitWorkBatchService> и <xref:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService>, можно включить режим повторения попытки транзакции, используя параметр `EnableRetries`, как показано в следующем примере.  
   
@@ -80,19 +80,19 @@ ms.locfileid: "70398169"
 </workflowRuntime>
 ```  
   
- Обратите внимание `EnableRetries` , что параметр можно задать либо на глобальном уровне (как показано в разделе *общиепараметры* ), либо в отдельных службах `EnableRetries` , которые поддерживают (как показано в разделе *службы* ).  
+ Обратите внимание, что параметр `EnableRetries` может быть установлен либо на глобальном уровне (как показано в разделе *общиепараметры* ), либо в отдельных службах, поддерживающих `EnableRetries` (как показано в разделе *службы* ).  
   
- В следующем примере кода показано, как изменять общие параметры программным образом.  
+ В следующем примере кода показано, как программно изменить общие параметры:
   
-```  
-Configuration config=WebConfigurationManager.OpenWebConfiguration("/Workflow", "Default Web Site", null, "localhost");  
-WorkflowRuntimeSection wfruntime=config.GetSection("WorkflowRuntime") as WorkflowRuntimeSection;  
-NameValueConfigurationCollection commonParameters=wfruntime.CommonParameters;  
+```csharp  
+Configuration config = WebConfigurationManager.OpenWebConfiguration("/Workflow", "Default Web Site", null, "localhost");
+var wfruntime = config.GetSection("WorkflowRuntime") as WorkflowRuntimeSection;  
+NameValueConfigurationCollection commonParameters = wfruntime.CommonParameters;
 commonParameters["ConnectionString"].Value="another connection string";  
 config.Save();  
 ```  
   
- Дополнительные сведения об использовании файла конфигурации для управления поведением <xref:System.Workflow.Runtime.WorkflowRuntime> объекта Windows Workflow Foundation ведущего приложения см. в разделе [файлы конфигурации рабочего процесса](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms732240(v=vs.90)).  
+ Дополнительные сведения об использовании файла конфигурации для управления поведением объекта <xref:System.Workflow.Runtime.WorkflowRuntime> Windows Workflow Foundation хост-приложения см. в разделе [файлы конфигурации рабочего процесса](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms732240(v=vs.90)).  
   
 ## <a name="example"></a>Пример  
   

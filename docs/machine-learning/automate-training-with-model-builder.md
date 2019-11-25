@@ -4,12 +4,12 @@ description: Сведения об использовании построите
 author: natke
 ms.date: 08/07/2019
 ms.custom: overview
-ms.openlocfilehash: 77b5e75fede1a4aa93eadcf7e21591d82f565cab
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 77fe56dba3532617ad9fb0c89bfaac7c8e031ce7
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929468"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73971526"
 ---
 # <a name="what-is-model-builder-and-how-does-it-work"></a>Построитель моделей и принципы его работы
 
@@ -60,7 +60,7 @@ ms.locfileid: "70929468"
 
 #### <a name="predict-a-category-when-there-are-three-or-more-categories"></a>Прогнозирование категории (при наличии трех или более категорий)
 
-Многоклассовая классификация служит для разделения данных на три или более категорий. 
+Многоклассовая классификация служит для разделения данных на три или более категорий.
 
 ![Примеры многоклассовой классификации, включая классификацию документов и продуктов, маршрутизацию запросов в службу поддержки и определение приоритетности клиентских проблем](media/multiclass-classification-examples.png)
 
@@ -82,7 +82,7 @@ ms.locfileid: "70929468"
 
 Пользовательский сценарий позволяет выбрать тип модели вручную.
 
-## <a name="data"></a>Данные
+## <a name="data"></a>Data
 
 После выбора типа модели построитель моделей попросит вас предоставить набор данных. Данные используются для обучения, оценки и выбора оптимальной модели для сценария.
 
@@ -109,10 +109,10 @@ ms.locfileid: "70929468"
 
 Если у вас нет собственного набора данных, можно воспользоваться одним из следующих:
 
-|Сценарий|Тип модели|Данные|Метка|Функции|
+|Сценарий|Тип модели|Data|Метка|Функции|
 |-|-|-|-|-|
 |Прогнозирование цен|регрессия;|[данные по платам за такси](https://github.com/dotnet/machinelearning-samples/blob/master/datasets/taxi-fare-train.csv)|Плата|Время поездки, расстояние|
-|Обнаружение аномалий|двоичная классификация;|[данные по продажам продуктов](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/getting-started/AnomalyDetection_Sales/SpikeDetection/Data/product-sales.csv)|Продажи продукта|Месяц.|
+|Обнаружение аномалий|двоичная классификация;|[данные по продажам продуктов](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/getting-started/AnomalyDetection_Sales/SpikeDetection/Data/product-sales.csv)|Продажи продукта|Месяц|
 |Анализ мнений|двоичная классификация;|[данные по комментариям на веб-сайте](https://raw.githubusercontent.com/dotnet/machinelearning/master/test/data/wikipedia-detox-250-line-data.tsv)|Метка (0 — отрицательная тональность, 1 — положительная)|Комментарий, год|
 |Обнаружение мошенничества.|двоичная классификация;|[данные по кредитным картам](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/getting-started/BinaryClassification_CreditCardFraudDetection/CreditCardFraudDetection.Trainer/assets/input/creditcardfraud-dataset.zip)|Класс (1 — мошенничество, 0 — нет)|Сумма, V1–V28 (анонимизированные признаки)|
 |Классификация текста|классификация по нескольким классам.|[Данные по проблемам на GitHub](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/end-to-end-apps/MulticlassClassification-GitHubLabeler/GitHubLabeler/Data/corefx-issues-train.tsv)|Область|Название, описание|

@@ -6,21 +6,21 @@ helpviewer_keywords:
 - Custom Places [Windows Forms], Known Folder GUIDs
 - Windows Vista Known Folder GUIDs [Windows Forms], Custom Places
 ms.assetid: d8d8b544-8b4d-4da5-ba3a-b05e93244778
-ms.openlocfilehash: ae4b89eb45a82299b6f35827eb576968f6cc5bae
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0ae9c406e91bc947ec73bb2393bb05962ca41177
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69962589"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73974357"
 ---
 # <a name="known-folder-guids-for-file-dialog-custom-places"></a>Известные GUID папок для пользовательских размещений, отображаемых в диалоговом окне открытия или сохранения файла
-При добавлении папок <xref:System.Guid> в <xref:System.Windows.Forms.FileDialog.CustomPlaces%2A> коллекцию используется [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] для указания известной папки. Идентификаторы GUID известных папок не чувствительны к регистру и определяются в файле Кновнфолдерс. h в Windows SDK.  
+Используйте <xref:System.Guid>, чтобы указать известную папку Windows Vista при добавлении папок в коллекцию <xref:System.Windows.Forms.FileDialog.CustomPlaces%2A>. Идентификаторы GUID известных папок не чувствительны к регистру и определяются в файле Кновнфолдерс. h в Windows SDK.  
   
 > [!NOTE]
-> В некоторых случаях известная папка, добавленная в <xref:System.Windows.Forms.FileDialogCustomPlacesCollection> , не будет отображаться в области « **Избранные ссылки** ». Например, если указанная известная папка отсутствует на компьютере, на котором работает приложение, то известная папка не отображается.  
+> В некоторых случаях известная папка, добавленная в <xref:System.Windows.Forms.FileDialogCustomPlacesCollection>, не будет отображаться в области « **Избранные ссылки** ». Например, если указанная известная папка отсутствует на компьютере, на котором работает приложение, то известная папка не отображается.  
   
 ## <a name="list-of-guids"></a>Список идентификаторов GUID  
- В следующей таблице перечислены [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] известные папки и связанные <xref:System.Guid>с ними имена.  
+ В следующей таблице перечислены известные папки Windows Vista и связанные с ними <xref:System.Guid>.  
   
  аддневпрограмс  
  DE61D971-5EBC-4F02-A3A9-6C82895E5C04  
@@ -106,7 +106,7 @@ ms.locfileid: "69962589"
  интернеткаче  
  352481E8-33BE-4251-BA85-6007CAEDCF9D  
   
- Ссылки  
+ связей  
  BFB9D5E0-C6A9-404C-B2B2-AE6DB6AF4968  
   
  LocalAppData  
@@ -121,7 +121,7 @@ ms.locfileid: "69962589"
  несуд  
  C5ABBF53-E17F-4121-8900-86626FC2C973  
   
- Network  
+ Сеть  
  D20BEEC4-5CA8-4905-AE3B-BF251EA09B53  
   
  оригиналимажес  
@@ -173,7 +173,7 @@ ms.locfileid: "69962589"
  DFDF76A2-C82A-4D63-906A-5644AC457385  
   
  публикдесктоп  
- C4AA340D-F20F-4863-AFEF-F87EF2E6BA25  
+ C4AA340D-F20F-4863-АФЕФ-F87EF2E6BA25  
   
  публикдокументс  
  ED4824AF-DCE4-45A8-81E2-FC7965083634  
@@ -289,4 +289,4 @@ ms.locfileid: "69962589"
 ## <a name="see-also"></a>См. также
 
 - <xref:System.Windows.Forms.FileDialogCustomPlace>
-- [Практическое руководство. Диалоговое окно "Добавление пользовательского размещения в файл"](how-to-add-a-custom-place-to-a-file-dialog-box.md)
+- [Практическое руководство. Добавление пользовательских размещений в диалоговое окно сохранения или открытия файла](how-to-add-a-custom-place-to-a-file-dialog-box.md)

@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Задание заголовков в клиентском запросе (WCF Data Services)
+title: Как установить заголовки в клиентском запросе (службы WCF Data Services)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,17 +7,17 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, customizing requests
 ms.assetid: 3d55168d-5901-4f48-8117-6c93da3ab5ae
-ms.openlocfilehash: 42987b1a855589954d45dae13b70ffc056c35f3b
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 420b13df0cc9d3f89087e18b58a2b416ce0bab7f
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70790469"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975250"
 ---
-# <a name="how-to-set-headers-in-the-client-request-wcf-data-services"></a>Практическое руководство. Задание заголовков в клиентском запросе (WCF Data Services)
-При использовании клиентской библиотеки [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] для доступа к службе данных, которая поддерживает [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)], клиентская библиотека автоматически устанавливает необходимые заголовки HTTP в запросах, отправляемых службе данных. Однако клиентская библиотека не может определить заголовки сообщений, которые необходимы в некоторых случаях, например когда службе данных требуется проверка подлинности на основе утверждений или файлы cookies. Дополнительные сведения см. в разделе [Securing WCF Data Services](securing-wcf-data-services.md#clientAuthentication). В этих случаях необходимо вручную установить заголовки сообщений в запросе перед отправкой. В примере в этом разделе показано, как обработать событие <xref:System.Data.Services.Client.DataServiceContext.SendingRequest> и добавить новый заголовок в сообщение запроса перед его отправкой службе данных.  
+# <a name="how-to-set-headers-in-the-client-request-wcf-data-services"></a>Как установить заголовки в клиентском запросе (службы WCF Data Services)
+При использовании клиентской библиотеки [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] для доступа к службе данных, которая поддерживает Open Data Protocol (OData), клиентская библиотека автоматически задает нужные заголовки HTTP в сообщениях запроса, отправляемых службе данных. Однако клиентская библиотека не может определить заголовки сообщений, которые необходимы в некоторых случаях, например когда службе данных требуется проверка подлинности на основе утверждений или файлы cookies. Дополнительные сведения см. в разделе [Securing WCF Data Services](securing-wcf-data-services.md#clientAuthentication). В этих случаях необходимо вручную установить заголовки сообщений в запросе перед отправкой. В примере в этом разделе показано, как обработать событие <xref:System.Data.Services.Client.DataServiceContext.SendingRequest> и добавить новый заголовок в сообщение запроса перед его отправкой службе данных.  
   
- Пример в этом разделе использует образец службы данных Northwind и автоматически сформированные клиентские классы службы данных. Эта служба и классы данных клиента создаются при завершении [краткого руководства по WCF Data Services](quickstart-wcf-data-services.md). Вы также можете использовать [учебную службу данных Northwind](https://go.microsoft.com/fwlink/?LinkId=187426) , опубликованную на [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] веб-сайте. Этот образец службы данных доступен только для чтения и попытка сохранить изменения возвращает ошибку. Образец служб данных на [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] веб-сайте разрешает анонимную проверку подлинности.  
+ Пример в этом разделе использует образец службы данных Northwind и автоматически сформированные клиентские классы службы данных. Эта служба и классы данных клиента создаются при завершении [краткого руководства по WCF Data Services](quickstart-wcf-data-services.md). Вы также можете использовать [учебную службу данных Northwind](https://go.microsoft.com/fwlink/?LinkId=187426) , опубликованную на веб-сайте OData. Этот образец службы данных доступен только для чтения, и попытка сохранить изменения возвращает ошибку. Образцы служб данных на веб-сайте OData допускают анонимную проверку подлинности.  
   
 ## <a name="example"></a>Пример  
  В следующем примере регистрируется обработчик для события <xref:System.Data.Services.Client.DataServiceContext.SendingRequest>, после чего службе данных отправляется запрос.  

@@ -7,15 +7,13 @@ helpviewer_keywords:
 - strings [.NET Framework], basic string operations
 - custom strings
 ms.assetid: 8133d357-90b5-4b62-9927-43323d99b6b6
-author: rpetrusha
-ms.author: ronpet
 ms.custom: seadec18
-ms.openlocfilehash: 8621e79ad6e305f3859dc269965ecd216081f695
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 05cdf399e104fc9e528c954adb19634a5c136664
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53150684"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132914"
 ---
 # <a name="basic-string-operations-in-net"></a>Базовые операции со строками в .NET
 Многие приложения взаимодействуют с пользователями, формируя сообщения, основанные на данных, введенных пользователями. Например, веб-узлы зачастую приветствуют вошедших пользователей персональным приветствием, содержащим его имя. Ряд методов в классах <xref:System.String?displayProperty=nameWithType> и <xref:System.Text.StringBuilder?displayProperty=nameWithType> позволяют динамически создавать настраиваемые строки для отображения в пользовательском интерфейсе. С помощью этих методов также можно выполнять базовые операции со строками — например, создание новых строк из байтовых массивов, сравнение значений строк и изменение существующих строк.  

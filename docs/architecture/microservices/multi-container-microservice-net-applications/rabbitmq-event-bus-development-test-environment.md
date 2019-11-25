@@ -2,12 +2,12 @@
 title: Реализация шины событий с помощью RabbitMQ для среды разработки или тестирования
 description: Архитектура микрослужб .NET для упакованных в контейнеры приложений .NET | Использование RabbitMQ для реализации сообщений шины событий для событий интеграции для сред разработки или тестирования.
 ms.date: 10/02/2018
-ms.openlocfilehash: 7d51054d444ce1e35fabab94cc803e74dbd96f19
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 211348caec3c101435fcdd99bd96fd8e17a6456b
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73089743"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739511"
 ---
 # <a name="implementing-an-event-bus-with-rabbitmq-for-the-development-or-test-environment"></a>Реализация шины событий с помощью RabbitMQ для среды разработки или тестирования
 
@@ -17,11 +17,11 @@ ms.locfileid: "73089743"
 
 Реализация шины событий с помощью RabbitMQ позволяет микрослужбам подписываться на события, публиковать и принимать их, как показано на рисунке 6–21.
 
-![RabbitMQ выступает в роли посредника между издателем сообщения и подписчиками и обрабатывает распространение.](./media/image22.png)
+![Схема, на которой показан API RabbitMQ между отправителем и получателем сообщений.](./media/rabbitmq-event-bus-development-test-environment/rabbitmq-implementation.png)
 
 **Рис. 6–21.** Реализация шины событий на основе RabbitMQ
 
-В коде класс EventBusRabbitMQ реализует универсальный интерфейс IEventBus. Для этого применяется внедрение зависимостей, что позволяет переходить от этой версии для разработки и тестирования к рабочей версии.
+RabbitMQ выступает в роли посредника между издателем сообщения и подписчиками и обрабатывает распространение. В коде класс EventBusRabbitMQ реализует универсальный интерфейс IEventBus. Для этого применяется внедрение зависимостей, что позволяет переходить от этой версии для разработки и тестирования к рабочей версии.
 
 ```csharp
 public class EventBusRabbitMQ : IEventBus, IDisposable

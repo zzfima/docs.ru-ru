@@ -7,25 +7,19 @@ helpviewer_keywords:
 ms.assetid: eb6eac2e-45f4-4923-a32c-38f203da66df
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 787c6221b651a53dbb932a5a9d0edea123e1d97d
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 5db68cdce0db4f8f4d85e9d1dd03720bf235d865
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71046437"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73974930"
 ---
 # <a name="interop-etw-events"></a>События взаимодействия (трассировка событий Windows)
-<a name="top"></a> С помощью событий взаимодействия регистрируются сведения о создании заглушек и кэшировании MSIL.  
-  
- Эта категория состоит из следующих событий:  
-  
-- [Событие ILStubGenerated](#ilstubgenerated_event)  
-  
-- [Событие ILStubCacheHit](#ilstubcachehit_event)  
-  
-<a name="ilstubgenerated_event"></a>   
-## <a name="ilstubgenerated-event"></a>Событие ILStubGenerated  
- В таблице ниже показаны ключевое слово и уровень. (Дополнительные сведения см. в разделе [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md).)  
+С помощью событий взаимодействия регистрируются сведения о создании заглушек и кэшировании MSIL.  
+
+## <a name="ilstubgenerated-event"></a>Событие ILStubGenerated
+
+В таблице ниже показаны ключевое слово и уровень. (Дополнительные сведения см. в разделе [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md).)  
   
 |Ключевое слово для вызова события|Уровень|  
 |-----------------------------------|-----------|  
@@ -33,7 +27,7 @@ ms.locfileid: "71046437"
   
  В таблице ниже представлены сведения о событии.  
   
-|событие|Идентификатор события|Условие вызова|  
+|событие|Код события|Условие вызова|  
 |-----------|--------------|-----------------|  
 |`ILStubGenerated`|88|Была создана заглушка языка MSIL.|  
   
@@ -53,11 +47,9 @@ ms.locfileid: "71046437"
 |StubMethodILCode|win:UnicodeString|Код MSIL для метода-заглушки.|  
 |ClrInstanceID|win:UInt16|Уникальный идентификатор экземпляра CLR или CoreCLR.|  
   
- [К началу](#top)  
-  
-<a name="ilstubcachehit_event"></a>   
 ## <a name="ilstubcachehit-event"></a>Событие ILStubCacheHit  
- В таблице ниже показаны ключевое слово и уровень.  
+
+В таблице ниже показаны ключевое слово и уровень.  
   
 |Ключевое слово для вызова события|Уровень|  
 |-----------------------------------|-----------|  
@@ -65,7 +57,7 @@ ms.locfileid: "71046437"
   
  В таблице ниже представлены сведения о событии.  
   
-|событие|Идентификатор события|Условие вызова|  
+|событие|Код события|Условие вызова|  
 |-----------|--------------|-----------------|  
 |`ILStubCacheHit`|89|Обращение к кэшу MSIL.|  
   
@@ -80,8 +72,6 @@ ms.locfileid: "71046437"
 |ManagedInteropMethodName|win:UnicodeString|Имя управляемого метода взаимодействия.|  
 |ManagedInteropMethodSignature|win:UnicodeString|Сигнатура управляемого метода взаимодействия.|  
 |ClrInstanceID|win:UInt16|Уникальный идентификатор экземпляра CLR или CoreCLR.|  
-  
- [К началу](#top)  
   
 ## <a name="see-also"></a>См. также
 

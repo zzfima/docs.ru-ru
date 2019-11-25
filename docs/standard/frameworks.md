@@ -1,19 +1,19 @@
 ---
-title: Требуемые версии .NET Framework
+title: Целевые платформы в проектах в стиле SDK — .NET
 description: Сведения о целевых версиях платформы для приложений и библиотек .NET Core.
 author: mairaw
 ms.author: mairaw
-ms.date: 09/23/2019
+ms.date: 10/27/2019
 ms.custom: updateeachrelease
 ms.technology: dotnet-standard
-ms.openlocfilehash: b05923b293b1a5bb94a69ddd0154f8701b9326b0
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: d528201d1420b171e3a75919269e1c7a714f86e8
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216654"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73041001"
 ---
-# <a name="target-frameworks"></a>Требуемые версии .NET Framework
+# <a name="target-frameworks-in-sdk-style-projects"></a>Целевые платформы в проектах в стиле SDK
 
 При выборе целевой платформы для приложения или библиотеки вы указываете набор API-интерфейсов, которые вы хотите сделать доступными для приложения или библиотеки. Целевая платформа указывается в файле проекта с помощью моникеров целевой платформы (TFM).
 
@@ -108,7 +108,7 @@ public class MyClass
 }
 ```
 
-Система сборки учитывает символы препроцессора, представляющие целевые платформы, приведенные в таблице [Поддерживаемые версии целевой платформы](#supported-target-framework-versions). При использовании символа, представляющего TFM .NET Standard или .NET Core, замените точку символом подчеркивания и измените строчные буквы на прописные (например, символ для `netstandard1.4` — `NETSTANDARD1_4`).
+Система сборки учитывает символы препроцессора, представляющие целевые платформы, которые приведены в таблице [Поддерживаемые версии целевой платформы](#supported-target-framework-versions), при использовании проектов в стиле SDK. При использовании символа, представляющего TFM .NET Standard или .NET Core, замените точку символом подчеркивания и измените строчные буквы на прописные (например, символ для `netstandard1.4` — `NETSTANDARD1_4`).
 
 Полный список символов препроцессора для целевой платформы .NET Core.
 

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - ScrollBarVisibility enumeration [WPF]
 - brushes [WPF], performance
 ms.assetid: d028cc65-7e97-4a4f-9859-929734eaf40d
-ms.openlocfilehash: cf621ab5f423e2465999b26f32489af1132bece0
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 6b4a5379145ebdffde0d5b76d8c7b9ab57261007
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582449"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975792"
 ---
 # <a name="optimizing-performance-other-recommendations"></a>Оптимизация производительности. Дополнительные рекомендации
 <a name="introduction"></a> В этом разделе содержатся рекомендации по улучшению производительности в дополнение к описанным в разделах статьи [Улучшение производительности приложений WPF](optimizing-wpf-application-performance.md).  
@@ -70,7 +70,7 @@ ms.locfileid: "72582449"
   
 <a name="FontCache"></a>   
 ## <a name="configure-font-cache-service-to-reduce-start-up-time"></a>Настройка службы кэширования шрифтов для сокращения времени загрузки  
- Служба кэширования шрифтов [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] используется для совместной обработки данных шрифтов приложениями [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. Первое запускаемое приложение [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] запускает эту службу, если она еще не запущена. Если вы используете [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)], можно задать для свойства "Windows Presentation Foundation (WPF) кэша шрифтов 3.0.0.0" в ручном режиме (по умолчанию) значение "автоматически (отложенный запуск)", чтобы сократить начальное время запуска приложений [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
+ Служба кэширования шрифтов [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] используется для совместной обработки данных шрифтов приложениями [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. Первое запускаемое приложение [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] запускает эту службу, если она еще не запущена. Если вы используете Windows Vista, можно задать для свойства "Windows Presentation Foundation (WPF) кэша шрифтов 3.0.0.0" (по умолчанию) значение "автоматически (отложенный запуск)", чтобы сократить начальное время запуска [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] приложений.  
   
 ## <a name="see-also"></a>См. также
 

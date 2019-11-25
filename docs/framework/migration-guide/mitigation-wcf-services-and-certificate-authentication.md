@@ -2,14 +2,12 @@
 title: Устранение рисков. Службы WCF и проверка подлинности сертификатов
 ms.date: 03/30/2017
 ms.assetid: ef19c91a-b9df-4bf0-a28e-eb1e99c4bc95
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0fcb4de714c8a0f1f2c61f3a12815a5a0a3ddc83
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 8c8493efa2c3223809ad87e01e3faddaea859ca8
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70789821"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73457791"
 ---
 # <a name="mitigation-wcf-services-and-certificate-authentication"></a>Устранение рисков. Службы WCF и проверка подлинности сертификатов
 
@@ -47,7 +45,7 @@ ms.locfileid: "70789821"
                   </binding>
               </netTcpBinding>
           </bindings>
-      </system.ServiceModel>
+      </system.serviceModel>
   </configuration>
   ```
 
@@ -58,4 +56,4 @@ ms.locfileid: "70789821"
 
 ## <a name="see-also"></a>См. также
 
-- [Изменения среды выполнения](runtime-changes-in-the-net-framework-4-6.md)
+- [Совместимость приложений](application-compatibility.md)

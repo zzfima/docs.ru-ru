@@ -9,14 +9,12 @@ helpviewer_keywords:
 - Task-based Asynchronous Pattern, .NET Framework support for
 - .NET Framework, asynchronous design patterns
 ms.assetid: 033cf871-ae24-433d-8939-7a3793e547bf
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e89545b5fa29f6e5bf99bb9b85322d7ee14422a4
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: f80e6ae520ab03c0f5f4edc30c0b7102193ee6c5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929010"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139813"
 ---
 # <a name="consuming-the-task-based-asynchronous-pattern"></a>Использование асинхронного шаблона, основанного на задачах
 
@@ -633,7 +631,7 @@ double currentPrice = await NeedOnlyOne(
 ```
 
 ### <a name="interleaved-operations"></a>Операции с чередованием
- При использовании метода <xref:System.Threading.Tasks.Task.WhenAny%2A> для поддержки сценария чередования при работе с очень большими наборами задач существует потенциальная проблема производительности.  Каждый вызов <xref:System.Threading.Tasks.Task.WhenAny%2A> приводит к регистрации продолжения в каждой задаче. Для N задач это приводит к созданию O(N2) продолжений в течение времени существования операции чередования.  При работе с большим набором задач можно использовать комбинатор (`Interleaved` в следующем примере), чтобы решить проблему производительности.
+ При использовании метода <xref:System.Threading.Tasks.Task.WhenAny%2A> для поддержки сценария чередования при работе с очень большими наборами задач существует потенциальная проблема производительности. Каждый вызов <xref:System.Threading.Tasks.Task.WhenAny%2A> приводит к регистрации продолжения в каждой задаче. Для N задач это приводит к созданию O(N<sup>2</sup>) продолжений в течение времени существования операции чередования. При работе с большим набором задач можно использовать комбинатор (`Interleaved` в следующем примере), чтобы решить проблему производительности:
 
 ```csharp
 static IEnumerable<Task<T>> Interleaved<T>(IEnumerable<Task<T>> tasks)

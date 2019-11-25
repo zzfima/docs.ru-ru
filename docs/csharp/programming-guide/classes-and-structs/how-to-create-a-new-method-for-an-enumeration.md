@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Руководство по программированию на C#. Создание метода для перечисления
+title: Практическое руководство. Создание нового метода для перечисления (руководство по программированию на C#)
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - extension methods [C#], for enums
 - enum extensibility [C#]
 ms.assetid: 100106f9-1e54-462c-8ebe-3892fe23b6eb
-ms.openlocfilehash: 99a2005e1a64fa214776145a903341fb162f0633
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 02af55c851392ce5dde4c83fd32d18b927950a3f
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69597041"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73971028"
 ---
-# <a name="how-to-create-a-new-method-for-an-enumeration-c-programming-guide"></a>Практическое руководство. Руководство по программированию на C#. Создание метода для перечисления
+# <a name="how-to-create-a-new-method-for-an-enumeration-c-programming-guide"></a>Практическое руководство. Создание нового метода для перечисления (руководство по программированию на C#)
 Методы расширения позволяют добавить функциональные возможности, характерные для определенного типа перечисления.  
   
 ## <a name="example"></a>Пример  

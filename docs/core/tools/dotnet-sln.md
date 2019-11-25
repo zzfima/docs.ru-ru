@@ -1,17 +1,21 @@
 ---
 title: Команда dotnet sln
 description: Команда dotnet-sln предоставляет удобный способ добавлять проекты в файл решений, удалять или перечислять их.
-ms.date: 06/13/2018
-ms.openlocfilehash: 84508aaefff61b31e2965576ebc2daaae7331951
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.date: 10/29/2019
+ms.openlocfilehash: 18702c7638798117bd04d5c6a829d64cc6bf18a8
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117585"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73191820"
 ---
 # <a name="dotnet-sln"></a>dotnet sln
 
+**Эта статья относится к ✓** SDK для .NET Core 1.x и более поздних версий
+
+<!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
+-->
 
 ## <a name="name"></a>name
 
@@ -20,12 +24,7 @@ ms.locfileid: "71117585"
 ## <a name="synopsis"></a>Краткий обзор
 
 ```dotnetcli
-dotnet sln [<SOLUTION_NAME>] add <PROJECT> <PROJECT> ...
-dotnet sln [<SOLUTION_NAME>] add <GLOBBING_PATTERN>
-dotnet sln [<SOLUTION_NAME>] remove <PROJECT> <PROJECT> ...
-dotnet sln [<SOLUTION_NAME>] remove <GLOBBING_PATTERN>
-dotnet sln [<SOLUTION_NAME>] list
-dotnet sln [-h|--help]
+dotnet sln [<SOLUTION_FILE>] [command] [-h|--help]
 ```
 
 ## <a name="description"></a>ОПИСАНИЕ
@@ -38,61 +37,138 @@ dotnet sln [-h|--help]
 dotnet new sln
 ```
 
-## <a name="commands"></a>Команды
-
-`add <PROJECT> ...`
-
-`add <GLOBBING_PATTERN>`
-
-Добавляет один или несколько проектов в файл решений. [Стандартные маски](https://en.wikipedia.org/wiki/Glob_(programming)) поддерживаются в терминалах на основе Unix или Linux.
-
-`remove <PROJECT> ...`
-
-`remove <GLOBBING_PATTERN>`
-
-Удаляет один или несколько проектов из файла решений. [Стандартные маски](https://en.wikipedia.org/wiki/Glob_(programming)) поддерживаются в терминалах на основе Unix или Linux.
-
-`list`
-
-Перечисляет все проекты в файле решения.
-
 ## <a name="arguments"></a>Аргументы
 
-`SOLUTION_NAME`
+- **`SOLUTION_FILE`**
 
-Используемый файл решений. Если он не указан, команда ищет текущий каталог для него. Если файлов решений в каталоге несколько, нужно указать один.
+  Используемый файл решений. Если он не указан, команда ищет текущий каталог для него. Если файлов решений в каталоге несколько, нужно указать один.
 
 ## <a name="options"></a>Параметры
 
-`-h|--help`
+- **`-h|--help`**
 
-Выводит краткую справку по команде.
+  Выводит краткую справку по команде.
+
+## <a name="commands"></a>Команды
+
+### `add`
+
+Добавляет один или несколько проектов в файл решений.
+
+#### <a name="synopsis"></a>Краткий обзор
+
+```dotnetcli
+dotnet sln [<SOLUTION_FILE>] add [--in-root] [-s|--solution-folder] <PROJECT_PATH>
+dotnet sln add [-h|--help]
+```
+
+#### <a name="arguments"></a>Аргументы
+
+- **`SOLUTION_FILE`**
+
+  Используемый файл решений. Если он не указан, команда ищет текущий каталог для него. Если файлов решений в каталоге несколько, нужно указать один.
+
+- **`PROJECT_PATH`**
+
+  Путь к проекту, который необходимо добавить в решение. Добавьте несколько проектов с разделением пробелами. Расширения [стандартной маски](https://en.wikipedia.org/wiki/Glob_(programming)) оболочки UNIX/Linux правильно обрабатываются командой `dotnet sln`.
+
+#### <a name="options"></a>Параметры
+
+- **`-h|--help`**
+
+  Выводит краткую справку по команде.
+
+- **`--in-root`**
+
+  Поместите проекты в корень решения, и вам не нужно будет создавать папку решения. Доступно, начиная с пакета SDK для .NET Core 3.0.
+
+- **`-s|--solution-folder`**
+
+  Путь к папке назначения решения, в которую будут добавлены проекты. Доступно, начиная с пакета SDK для .NET Core 3.0.
+
+### `remove`
+
+Удаляет один или несколько проектов из файла решений.
+
+#### <a name="synopsis"></a>Краткий обзор
+
+```dotnetcli
+dotnet sln [<SOLUTION_FILE>] remove <PROJECT_PATH>
+dotnet sln [<SOLUTION_FILE>] remove [-h|--help]
+```
+
+#### <a name="arguments"></a>Аргументы
+
+- **`SOLUTION_FILE`**
+
+  Используемый файл решений. Если он не указан, команда ищет текущий каталог для него. Если файлов решений в каталоге несколько, нужно указать один.
+
+- **`PROJECT_PATH`**
+
+  Путь к проекту, который необходимо удалить из решения. Удалите несколько проектов с разделением пробелами. Расширения [стандартной маски](https://en.wikipedia.org/wiki/Glob_(programming)) оболочки Unix/Linux правильно обрабатываются командой `dotnet sln`.
+
+#### <a name="options"></a>Параметры
+
+- **`-h|--help`**
+
+  Выводит краткую справку по команде.
+
+### `list`
+
+Перечисляет все проекты в файле решения.
+
+#### <a name="synopsis"></a>Краткий обзор
+
+```dotnetcli
+dotnet sln list [-h|--help]
+```
+  
+#### <a name="arguments"></a>Аргументы
+
+- **`SOLUTION_FILE`**
+
+  Используемый файл решений. Если он не указан, команда ищет текущий каталог для него. Если файлов решений в каталоге несколько, нужно указать один.
+
+#### <a name="options"></a>Параметры
+
+- **`-h|--help`**
+
+  Выводит краткую справку по команде.
 
 ## <a name="examples"></a>Примеры
 
 Добавление проекта C# в решение:
 
-`dotnet sln todo.sln add todo-app/todo-app.csproj`
+```dotnetcli
+dotnet sln todo.sln add todo-app/todo-app.csproj
+```
 
 Удаление проекта C# из решения:
 
-`dotnet sln todo.sln remove todo-app/todo-app.csproj`
+```dotnetcli
+dotnet sln todo.sln remove todo-app/todo-app.csproj
+```
 
 Добавление нескольких проектов C# в решение:
 
-`dotnet sln todo.sln add todo-app/todo-app.csproj back-end/back-end.csproj`
+```dotnetcli
+dotnet sln todo.sln add todo-app/todo-app.csproj back-end/back-end.csproj
+```
 
 Удаление нескольких проектов C# из решения:
 
-`dotnet sln todo.sln remove todo-app/todo-app.csproj back-end/back-end.csproj`
+```dotnetcli
+dotnet sln todo.sln remove todo-app/todo-app.csproj back-end/back-end.csproj
+```
 
-Добавление нескольких проектов C# в решение с помощью шаблона глобализации:
+Добавление нескольких проектов C# в решение с помощью стандартной маски (только Unix/Linux):
 
-`dotnet sln todo.sln add **/*.csproj`
+```dotnetcli
+dotnet sln todo.sln add **/*.csproj
+```
 
-Удаление нескольких проектов C# из решения с помощью шаблона глобализации:
+Удаление нескольких проектов C# из решения с помощью стандартной маски (только Unix/Linux):
 
-`dotnet sln todo.sln remove **/*.csproj`
-
-> [!NOTE]
-> Глобализация — это скорее функция командной оболочки, а не функция CLI. Чтобы успешно развернуть файлы, нужно использовать оболочку, которая поддерживает глобализацию. Дополнительные сведения о глобализации см. в разделе [Википедии](https://en.wikipedia.org/wiki/Glob_(programming)).
+```dotnetcli
+dotnet sln todo.sln remove **/*.csproj
+```

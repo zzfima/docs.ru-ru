@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Объявление и использование свойств, доступных для чтения и записи - руководство по программированию на C#
+title: Практическое руководство. Объявление и использование свойств чтения и записи (руководство по программированию на C#)
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - read/write properties [C#]
 - accessors [C#], declaring properties with
 ms.assetid: a4962fef-af7e-4c4b-a929-4ae4d646ab8a
-ms.openlocfilehash: 010c3d4c1ae976091b5382f00a982400746f6436
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 2865feb74692e7075c92a9ee2b5cd2a7735a8e62
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69596926"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73971017"
 ---
-# <a name="how-to-declare-and-use-read-write-properties-c-programming-guide"></a>Практическое руководство. Объявление и использование свойств, доступных для чтения и записи (руководство по программированию на C#)
+# <a name="how-to-declare-and-use-read-write-properties-c-programming-guide"></a>Практическое руководство. Объявление и использование свойств чтения и записи (руководство по программированию на C#)
 Свойства имеют все преимущества открытых членов данных, но не связаны с рисками незащищенного, неконтролируемого и несанкционированного доступа к данным объекта. Это достигается благодаря применению *методов доступа*, которые представляют собой особые методы для присвоения и извлечения значений базового члена данных. Метод доступа [set](../../language-reference/keywords/set.md) присваивает значения членам данных, а метод доступа [get](../../language-reference/keywords/get.md) извлекает их.  
   
  Это можно продемонстрировать на примере класса `Person`, который содержит два свойства: `Name` (string) и `Age` (int). Для обоих свойств реализованы методы доступа `get` и `set`, благодаря чему они доступны и для чтения, и для записи.  

@@ -2,12 +2,12 @@
 title: Практическое руководство. Параллельное выполнение нескольких веб-запросов с использованием Async и Await (C#)
 ms.date: 07/20/2015
 ms.assetid: 19745899-f97a-4499-a7c7-e813d1447580
-ms.openlocfilehash: 06b70f5f3b2e1f3e7e423b16463f0b6b613f62c2
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: a6eef947e8f657cff574ffdf3afcd8943c665b8d
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70168382"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73969949"
 ---
 # <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-c"></a>Практическое руководство. Параллельное выполнение нескольких веб-запросов с использованием Async и Await (C#)
 В асинхронном методе задачи запускаются в момент создания. Оператор [Await](../../../language-reference/operators/await.md) применяется к задаче в той точке в методе, где обработка не может продолжаться до завершения задачи. Часто задачи ожидаются в момент создания, как показано в следующем примере.  
@@ -37,7 +37,7 @@ var result = await myTask;
 > [!NOTE]
 > Для выполнения этого проекта необходимо, чтобы на компьютере были установлены Visual Studio 2012 или более поздняя версия и .NET Framework 4.5 или более поздняя версия.  
   
- Другой пример, в котором одновременно запускается несколько задач, см. в разделе [Практическое руководство. Оптимизация производительности асинхронных процедур с использованием метода Task.WhenAll (C#)](./how-to-extend-the-async-walkthrough-by-using-task-whenall.md).  
+ Другой пример, в котором одновременно запускается несколько задач, см. в разделе [Практическое руководство. Расширение пошагового руководства по асинхронным процедурам с использованием метода Task.WhenAll (C#)](./how-to-extend-the-async-walkthrough-by-using-task-whenall.md).
   
  Код для этого примера можно скачать на странице [Примеры кода от разработчиков](https://code.msdn.microsoft.com/Async-Make-Multiple-Web-49adb82e).  
   
@@ -228,4 +228,4 @@ namespace AsyncExample_MultipleTasks
 
 - [Пошаговое руководство: Доступ к Интернету с помощью модификатора Async и оператора Await в C#](./walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [Асинхронное программирование с использованием ключевых слов async и await (C#)](./index.md)
-- [Практическое руководство. Оптимизация производительности асинхронных процедур с использованием метода Task.WhenAll в C#](./how-to-extend-the-async-walkthrough-by-using-task-whenall.md)
+- [Практическое руководство. Расширение пошагового руководства по асинхронным процедурам с использованием метода Task.WhenAll (C#)](./how-to-extend-the-async-walkthrough-by-using-task-whenall.md)

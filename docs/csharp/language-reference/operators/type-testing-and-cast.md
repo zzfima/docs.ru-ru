@@ -18,12 +18,12 @@ helpviewer_keywords:
 - cast expression [C#]
 - () operator [C#]
 - typeof operator [C#]
-ms.openlocfilehash: 62186409fdc1abb2275af535be3ae939a1e63323
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c3550a593eafb9b50fa7e419e2f747c3e7a0e2ea
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69922282"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73972654"
 ---
 # <a name="type-testing-and-cast-operators-c-reference"></a>Операторы приведения и тестирования типов (справочник по C#)
 
@@ -36,7 +36,7 @@ ms.locfileid: "69922282"
 
 ## <a name="is-operator"></a>Оператор is
 
-Оператор `is` проверяет, совместим ли тип среды выполнения для результата определенного выражения с указанным типом. Начиная с C# версии 7.0, оператор `is` также проверяет соответствие результата выражения указанному шаблону.
+Оператор `is` проверяет, совместим ли тип среды выполнения для результата определенного выражения с указанным типом. Начиная с версии C# 7.0, оператор `is` также проверяет соответствие результата выражения указанному шаблону.
 
 Выражение с оператором проверки типа `is` имеет следующий вид:
 
@@ -52,7 +52,7 @@ E is T
 
 [!code-csharp[is with reference conversion](~/samples/csharp/language-reference/operators/TypeTestingAndConversionOperators.cs#IsWithReferenceConversion)]
 
-В следующем примере показано, что оператор `is` учитывает упаковку-преобразование и распаковку-преобразование, но не учитывает числовые преобразования:
+В следующем примере показано, что оператор `is` учитывает упаковку-преобразование и распаковку-преобразование, но не учитывает [числовые преобразования](../builtin-types/numeric-conversions.md):
 
 [!code-csharp-interactive[is with int](~/samples/csharp/language-reference/operators/TypeTestingAndConversionOperators.cs#IsWithInt)]
 
@@ -60,7 +60,7 @@ E is T
 
 ### <a name="type-testing-with-pattern-matching"></a>Тестирование типов с сопоставлением шаблонов
 
-Начиная с C# версии 7.0, оператор `is` также проверяет соответствие результата выражения указанному шаблону. В частности он поддерживает шаблон типа в следующем формате:
+Начиная с версии C# 7.0, оператор `is` также проверяет соответствие результата выражения указанному шаблону. В частности он поддерживает шаблон типа в следующем формате:
 
 ```csharp
 E is T v
@@ -99,9 +99,9 @@ E is T ? (T)(E) : (T)null
 [!code-csharp-interactive[as operator](~/samples/csharp/language-reference/operators/TypeTestingAndConversionOperators.cs#AsOperator)]
 
 > [!NOTE]
-> Как показано в примере выше, нужно сравнить результат выражения `as` со значением `null`, чтобы проверить, успешно ли выполнено преобразование. Начиная с C# версии 7.0, вы можете использовать [оператор is](#type-testing-with-pattern-matching) как для проверки успешного выполнения преобразования, так и для сохранения результата в переменной, если преобразование выполнено успешно.
+> Как показано в примере выше, нужно сравнить результат выражения `as` со значением `null`, чтобы проверить, успешно ли выполнено преобразование. Начиная с версии C# 7.0, вы можете использовать [оператор is](#type-testing-with-pattern-matching) как для проверки успешного выполнения преобразования, так и для сохранения результата в переменной, если преобразование выполнено успешно.
 
-## <a name="cast-operator-"></a>Оператор приведения ()
+## <a name="cast-operator-"></a>Оператор приведения типа ()
 
 Выражение приведения в формате `(T)E` выполняет явное преобразование значения выражения `E` в тип `T`. Если явного преобразования из типа `E` в тип `T` не существует, возникает ошибка времени компиляции. Во время выполнения явное преобразование может завершиться сбоем, и выражение приведения может вызвать исключение.
 
@@ -117,7 +117,7 @@ E is T ? (T)(E) : (T)null
 
 Кроме того, с помощью круглых скобок можно настраивать порядок выполнения операций в выражении. Дополнительные сведения см. в разделе [Операторы C#](index.md).
 
-## <a name="typeof-operator"></a>Оператор typeof
+## <a name="typeof-operator"></a>typeof - оператор
 
 Оператор `typeof` получает экземпляр <xref:System.Type?displayProperty=nameWithType> для указанного типа. Оператор `typeof` принимает в качестве аргумента имя типа или параметр типа, как показано в следующем примере:
 
@@ -127,7 +127,7 @@ E is T ? (T)(E) : (T)null
 
 [!code-csharp-interactive[typeof unbound generic](~/samples/csharp/language-reference/operators/TypeTestingAndConversionOperators.cs#TypeOfUnboundGeneric)]
 
-Оператор `typeof` не может принимать выражения в качестве аргументов. Чтобы получить экземпляр <xref:System.Type?displayProperty=nameWithType> типа среды выполнения для результата выражения, используйте метод <xref:System.Object.GetType%2A?displayProperty=nameWithType>.
+Оператор `typeof` не может принимать выражения в качестве аргументов. Чтобы получить экземпляр <xref:System.Type?displayProperty=nameWithType> для типа среды выполнения результата выражения, используйте метод <xref:System.Object.GetType%2A?displayProperty=nameWithType>.
 
 ### <a name="type-testing-with-the-typeof-operator"></a>Тестирование типов с оператором `typeof`
 
@@ -137,7 +137,7 @@ E is T ? (T)(E) : (T)null
 
 ## <a name="operator-overloadability"></a>Возможность перегрузки оператора
 
-Операторы `is`, `as` и `typeof` не поддерживают перегрузку.
+Операторы `is`, `as` и `typeof` перегрузить нельзя.
 
 Определяемый пользователем тип нельзя использовать для перегрузки оператора `()`, но на его основе можно определить пользовательское преобразование типа и выполнить его с помощью выражения приведения. Дополнительные сведения см. в разделе [Операторы пользовательского преобразования](user-defined-conversion-operators.md).
 
@@ -154,4 +154,5 @@ E is T ? (T)(E) : (T)null
 
 - [справочник по C#](../index.md)
 - [Операторы в C#](index.md)
-- [Практическое руководство. Безопасное приведение с помощью сопоставления шаблонов и операторы is и as](../../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md)
+- [Практическое руководство. Безопасное приведение с помощью сопоставления шаблонов, а также операторов is и as](../../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md)
+- [Универсальные шаблоны в .NET](../../../standard/generics/index.md)

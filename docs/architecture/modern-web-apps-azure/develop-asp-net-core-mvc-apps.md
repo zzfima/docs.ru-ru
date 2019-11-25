@@ -4,12 +4,12 @@ description: Разработка современных веб-приложен
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 19d1d5f81b5be9b843698b6e61d8571d4edfa66f
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: b57741ed68b3481ad2c85b1c3d62717f09c7570e
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71181938"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73971587"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>Разработка приложений MVC ASP.NET Core
 
@@ -172,7 +172,7 @@ public void Configure(IApplicationBuilder app,
 
 ### <a name="feature-organization"></a>Организация компонентов
 
-По умолчанию структура папок приложения ASP.NET Core включает контроллеры, представления и зачастую модели представлений. Код на стороне клиента, обеспечивающий поддержку таких структур на стороне сервера, как правило, хранится отдельно в папке wwwroot. Тем не менее в крупных приложениях при такой организации могут возникать проблемы, поскольку для работы с конкретным компонентом может потребоваться переход между этими папками. С увеличением числа файлов и вложенных папок в каждой папке сложности только возрастают, в связи с чем приходится тратить дополнительное время на просмотр в обозревателе решений. Одним из решений этой проблемы может стать упорядочение кода приложения по _компонентам_, а не по типу файлов. Такой стиль организации обычно называется папками или [срезами компонентов](https://msdn.microsoft.com/magazine/mt763233.aspx) (см. также статью [Вертикальные срезы](https://deviq.com/vertical-slices/)).
+По умолчанию структура папок приложения ASP.NET Core включает контроллеры, представления и зачастую модели представлений. Код на стороне клиента, обеспечивающий поддержку таких структур на стороне сервера, как правило, хранится отдельно в папке wwwroot. Тем не менее в крупных приложениях при такой организации могут возникать проблемы, поскольку для работы с конкретным компонентом может потребоваться переход между этими папками. С увеличением числа файлов и вложенных папок в каждой папке сложности только возрастают, в связи с чем приходится тратить дополнительное время на просмотр в обозревателе решений. Одним из решений этой проблемы может стать упорядочение кода приложения по _компонентам_, а не по типу файлов. Такой стиль организации обычно называется папками или [срезами компонентов](https://docs.microsoft.com/archive/msdn-magazine/2016/september/asp-net-core-feature-slices-for-asp-net-core-mvc) (см. также статью [Вертикальные срезы](https://deviq.com/vertical-slices/)).
 
 Для этой цели в модели MVC ASP.NET Core поддерживаются области. С помощью областей можно создавать отдельные наборы папок контролеров и представлений (а также связанных с ними моделей) в каждой папке области. На рис. 7-1 показан пример структуры папок, в которой используются области.
 
@@ -237,7 +237,7 @@ public class FeatureConvention : IControllerModelConvention
 services.AddMvc(o => o.Conventions.Add(new FeatureConvention()));
 ```
 
-Модель MVC ASP.NET Core также использует соглашение для поиска представлений. Вы можете переопределить его с использованием настраиваемого соглашения, чтобы задать поиск представлений в папках компонентов (будет использоваться имя компонента, предоставленное ранее с помощью FeatureConvention). Узнать больше об этом подходе и скачать рабочий пример можно в статье MSDN, посвященной [срезам компонентов для модели MVC ASP.NET Core](https://msdn.microsoft.com/magazine/mt763233.aspx).
+Модель MVC ASP.NET Core также использует соглашение для поиска представлений. Вы можете переопределить его с использованием настраиваемого соглашения, чтобы задать поиск представлений в папках компонентов (будет использоваться имя компонента, предоставленное ранее с помощью FeatureConvention). Узнать больше об этом подходе и скачать рабочий пример можно в статье MSDN, посвященной [срезам компонентов для модели MVC ASP.NET Core](https://docs.microsoft.com/archive/msdn-magazine/2016/september/asp-net-core-feature-slices-for-asp-net-core-mvc).
 
 ### <a name="cross-cutting-concerns"></a>Сквозная функциональность
 
@@ -311,18 +311,18 @@ public async Task<IActionResult> Put(int id, [FromBody]Author author)
 }
 ```
 
-Узнать больше о реализации фильтров и скачать рабочий пример можно в статье MSDN, посвященной [применению фильтров MVC для ASP.NET Core в реальном мире](https://msdn.microsoft.com/magazine/mt767699.aspx).
+Узнать больше о реализации фильтров и скачать рабочий пример можно в статье MSDN, посвященной [применению фильтров MVC для ASP.NET Core в реальном мире](https://docs.microsoft.com/archive/msdn-magazine/2016/august/asp-net-core-real-world-asp-net-core-mvc-filters).
 
 > ### <a name="references--structuring-applications"></a>Ссылки — структурирование приложений
 >
 > - **Области**  
 >   <https://docs.microsoft.com/aspnet/core/mvc/controllers/areas>
 > - **MSDN Magazine — срезы функций для ASP.NET Core MVC**  
->   <https://msdn.microsoft.com/magazine/mt763233.aspx>
+>   <https://docs.microsoft.com/archive/msdn-magazine/2016/september/asp-net-core-feature-slices-for-asp-net-core-mvc>
 > - **Фильтры**  
 >   <https://docs.microsoft.com/aspnet/core/mvc/controllers/filters>
 > - **MSDN — фильтры MVC для ASP.NET Core в реальном мире**  
->   <https://msdn.microsoft.com/magazine/mt767699.aspx>
+>   <https://docs.microsoft.com/archive/msdn-magazine/2016/august/asp-net-core-real-world-asp-net-core-mvc-filters>
 
 ## <a name="security"></a>Безопасность
 

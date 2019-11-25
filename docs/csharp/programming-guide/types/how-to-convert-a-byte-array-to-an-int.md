@@ -6,12 +6,12 @@ helpviewer_keywords:
 - conversions [C#], byte array to int
 - byte arrays [C#], converting to int
 ms.assetid: d6ac20e2-448e-4aea-99b9-faf04c6f1e79
-ms.openlocfilehash: 96507f03a3d64b96ef6059a92459bfc7fa854372
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: cb6252069302a28f8a85247aa4584a9284b26c4d
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72395688"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73195467"
 ---
 # <a name="how-to-convert-a-byte-array-to-an-int-c-programming-guide"></a>Практическое руководство. Преобразование массива байтов в значение типа int (руководство по программированию на C#)
 
@@ -35,7 +35,7 @@ ms.locfileid: "72395688"
 Этот пример инициализирует массив байтов, обращает порядок расположения элементов в массиве, если в архитектуре компьютера используется прямой порядок байтов (т. е. первым сохраняется наименее значащий байт), и затем вызывает метод [ToInt32(Byte\[\], Int32)](xref:System.BitConverter.ToInt32(System.Byte[],System.Int32)) для преобразования четырех байтов массива в значение типа `int`. Второй аргумент [ToInt32(Byte\[\], Int32)](xref:System.BitConverter.ToInt32(System.Byte[],System.Int32)) указывает начальный индекс массива байтов.
 
 > [!NOTE]
-> Результат может отличаться в зависимости от порядка следования байтов в архитектуре компьютера.
+> Результат зависит от порядка следования байтов в архитектуре компьютера.
 
 [!code-csharp[csProgGuideTypes#22](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#22)]
 
@@ -44,7 +44,7 @@ ms.locfileid: "72395688"
 В этом примере вызывается метод <xref:System.BitConverter.GetBytes%28System.Int32%29> класса <xref:System.BitConverter> для преобразования значения `int` в массив байтов.
 
 > [!NOTE]
-> Результат может отличаться в зависимости от порядка следования байтов в архитектуре компьютера.
+> Результат зависит от порядка следования байтов в архитектуре компьютера.
 
 [!code-csharp[csProgGuideTypes#23](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#23)]
 

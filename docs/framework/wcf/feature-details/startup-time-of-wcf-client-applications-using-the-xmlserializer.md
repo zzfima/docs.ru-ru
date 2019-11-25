@@ -2,12 +2,12 @@
 title: Практическое руководство. Сокращение времени запуска клиентских приложений WCF с использованием XmlSerializer
 ms.date: 03/30/2017
 ms.assetid: 21093451-0bc3-4b1a-9a9d-05f7f71fa7d0
-ms.openlocfilehash: f8766a5dfa2bcfc715a0f0e21274f7c6ac04ad15
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ca15d710a30586135f0d030e155b09b63a22ee45
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69944892"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976060"
 ---
 # <a name="how-to-improve-the-startup-time-of-wcf-client-applications-using-the-xmlserializer"></a>Практическое руководство. Сокращение времени запуска клиентских приложений WCF с использованием XmlSerializer
 Службы и клиентские приложения, использующие типы данных, сериализуемые с помощью сериализатора <xref:System.Xml.Serialization.XmlSerializer>, создают и компилируют код сериализации для этих типов данных во время выполнения, что может привести к снижению производительности при запуске.  
@@ -25,7 +25,7 @@ ms.locfileid: "69944892"
   
 3. Из командной строки запустите средство Svcutil.exe, используя следующий формат.  
   
-    ```  
+    ```console  
     svcutil.exe /t:xmlSerializer  <assemblyPath>*  
     ```  
   
@@ -37,7 +37,7 @@ ms.locfileid: "69944892"
   
 4. Предоставьте приложению доступ к созданному коду сериализации одним из следующих способов.  
   
-    1. Скомпилируйте созданный код сериализации в отдельную сборку с именем [исходная*Сборка*]. XmlSerializer. dll (например, MyApp. XmlSerializers. dll). Приложение должно иметь возможность загрузить эту сборку, которая должна быть подписана с помощью того же ключа, что и исходная сборка. В случае повторной компиляции исходной сборки необходимо заново создать сборку сериализации.  
+    1. Скомпилируйте созданный код сериализации в отдельную сборку с именем [*Исходная сборка*]. XmlSerializer. dll (например, MyApp. XmlSerializers. dll). Приложение должно иметь возможность загрузить эту сборку, которая должна быть подписана с помощью того же ключа, что и исходная сборка. В случае повторной компиляции исходной сборки необходимо заново создать сборку сериализации.  
   
     2. Скомпилируйте созданный код сериализации в отдельную сборку и используйте атрибут <xref:System.Xml.Serialization.XmlSerializerAssemblyAttribute> в контракте службы, в котором используется атрибут <xref:System.ServiceModel.XmlSerializerFormatAttribute>. Задайте свойство <xref:System.Xml.Serialization.XmlSerializerAssemblyAttribute.AssemblyName%2A> или <xref:System.Xml.Serialization.XmlSerializerAssemblyAttribute.CodeBase%2A> так, чтобы оно указывало на скомпилированную сборку сериализации.  
   
@@ -47,13 +47,13 @@ ms.locfileid: "69944892"
   
 1. Создание проектов службы и клиента WCF в Visual Studio. Затем добавьте ссылку на службу в клиентский проект.  
   
-2.  -> Добавьте в контракт службы в файле reference.cs в проекте клиентского приложения в разделе укзать Reference. svcmap. <xref:System.ServiceModel.XmlSerializerFormatAttribute> Обратите внимание, что для просмотра этих файлов необходимо показать все файлы в **Обозреватель решений** .  
+2. Добавьте <xref:System.ServiceModel.XmlSerializerFormatAttribute> в контракт службы в файле *Reference.CS* в проекте клиентского приложения в разделе **укзать** -> **Reference. svcmap**. Обратите внимание, что для просмотра этих файлов необходимо показать все файлы в **Обозреватель решений** .  
   
 3. Создайте клиентское приложение.  
   
 4. Используйте [средство служебной программы для метаданных ServiceModel (Svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) , чтобы создать предварительно созданный файл сериализатора *. CS* с помощью команды:  
   
-    ```  
+    ```console  
     svcutil.exe /t:xmlSerializer  <assemblyPath>*  
     ```  
   
@@ -61,7 +61,7 @@ ms.locfileid: "69944892"
   
      Например:  
   
-    ```  
+    ```console  
     svcutil.exe /t:xmlSerializer wcfclient.exe  
     ```  
   
@@ -71,7 +71,7 @@ ms.locfileid: "69944892"
   
      В зависимости от примера, приведенного на предыдущем шаге, команда Compile будет выглядеть следующим образом:  
   
-    ```  
+    ```console  
     csc /r:wcfclient.exe /out:WCFClient.XmlSerializers.dll /t:library WCFClient.XmlSerializers.dll.cs  
     ```  
   
@@ -82,7 +82,7 @@ ms.locfileid: "69944892"
 ## <a name="example"></a>Пример  
  Следующая команда создает типы сериализации для типов `XmlSerializer`, используемых любыми контрактами служб в сборке.  
   
-```  
+```console  
 svcutil /t:xmlserializer myContractLibrary.exe  
 ```  
   

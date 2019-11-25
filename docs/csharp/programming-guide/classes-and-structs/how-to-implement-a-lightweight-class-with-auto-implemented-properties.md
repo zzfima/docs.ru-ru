@@ -1,19 +1,19 @@
 ---
-title: Практическое руководство. Реализация упрощенного класса с автоматически реализуемыми свойствами - руководство по программированию на C#
+title: Практическое руководство. Реализация облегченного класса с автоматически реализуемыми свойствами (руководство по программированию на C#)
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - auto-implemented properties [C#]
 - properties [C#], auto-implemented
 ms.assetid: 1dc5a8ad-a4f7-4f32-8506-3fc6d8c8bfed
-ms.openlocfilehash: 626a44fbaa65f48e0d9fe66d83c44abb07eba379
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: b5bf2e84ffe47cd1eaf17e877a20a700e98339ff
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926756"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73970912"
 ---
-# <a name="how-to-implement-a-lightweight-class-with-auto-implemented-properties-c-programming-guide"></a>Практическое руководство. Реализация упрощенного класса с автоматически реализуемыми свойствами (руководство по программированию на C#)
+# <a name="how-to-implement-a-lightweight-class-with-auto-implemented-properties-c-programming-guide"></a>Практическое руководство. Реализация облегченного класса с автоматически реализуемыми свойствами (руководство по программированию на C#)
 
 В этом примере показано, как создать неизменяемый упрощенный класс, служащий исключительно для инкапсуляции набора автоматически реализуемых свойств. Используйте такую конструкцию вместо структуры, когда требуется использовать семантику ссылочного типа.
 

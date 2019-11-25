@@ -9,104 +9,102 @@ helpviewer_keywords:
 - customizing time-based cache policies
 - cache [.NET Framework], time-based policies
 ms.assetid: 8d84f936-2376-4356-9264-03162e0f9279
-ms.openlocfilehash: c28c6daf9b873a19291b1636112eae6546412be2
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 1a2ba404e333eeec2a23758c834876d0df5aba81
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71048318"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040632"
 ---
 # <a name="how-to-customize-a-time-based-cache-policy"></a>Практическое руководство. Настройка политики кэша на основе времени
-При создании политики кэша на основе времени можно настроить поведение кэширования, устанавливая значения максимального возраста, минимальной актуальности или даты синхронизации кэша. Объект <xref:System.Net.Cache.HttpRequestCachePolicy> предоставляет несколько конструкторов, позволяющих определять допустимые сочетания этих значений.  
-  
-### <a name="to-create-a-time-based-cache-policy-that-uses-a-cache-synchronization-date"></a>Создание политики кэша на основе времени с использованием даты синхронизации кэша  
-  
-- Создание политики кэша на основе времени с использованием даты синхронизации кэша осуществляется за счет передачи объекта <xref:System.DateTime> в конструктор <xref:System.Net.Cache.HttpRequestCachePolicy>.  
-  
-    ```csharp  
-    public static HttpRequestCachePolicy CreateLastSyncPolicy(DateTime when)  
-    {  
-        HttpRequestCachePolicy policy =   
-            new HttpRequestCachePolicy(when);  
-        Console.WriteLine("When: {0}", when);  
-        Console.WriteLine(policy.ToString());  
-        return policy;  
-    }  
-    ```  
-  
-    ```vb  
-    Public Shared Function CreateLastSyncPolicy([when] As DateTime) As HttpRequestCachePolicy  
-        Dim policy As New HttpRequestCachePolicy([when])  
-        Console.WriteLine("When: {0}", [when])  
-        Console.WriteLine(policy.ToString())  
-        Return policy  
-    End Function  
-    ```  
-  
- Выходные данные будут иметь примерно следующий вид:  
-  
-```output
-When: 1/14/2004 8:07:30 AM  
-Level:Default CacheSyncDate:1/14/2004 8:07:30 AM  
-```  
-  
-### <a name="to-create-a-time-based-cache-policy-that-is-based-on-minimum-freshness"></a>Создание политики кэша на основе времени с использованием минимальной актуальности  
-  
-- Чтобы создать политику кэша на основе времени с использованием минимальной актуальности, укажите <xref:System.Net.Cache.HttpCacheAgeControl.MinFresh> в качестве значения параметра `cacheAgeControl` и передайте объект <xref:System.TimeSpan> в конструктор <xref:System.Net.Cache.HttpRequestCachePolicy>.  
-  
-    ```csharp  
-    public static HttpRequestCachePolicy CreateMinFreshPolicy(TimeSpan span)  
-    {  
-        HttpRequestCachePolicy policy =   
-            new HttpRequestCachePolicy(HttpCacheAgeControl.MinFresh, span);  
-        Console.WriteLine(policy.ToString());  
-        return policy;  
-    }  
-    ```  
-  
-    ```vb  
-    Public Shared Function CreateMinFreshPolicy(span As TimeSpan) As HttpRequestCachePolicy  
-        Dim policy As New HttpRequestCachePolicy(HttpCacheAgeControl.MinFresh, span)  
-        Console.WriteLine(policy.ToString())  
-        Return policy  
-    End Function  
-    ```  
-  
- Для следующего вызова:  
-  
-```csharp
-CreateMinFreshPolicy(new TimeSpan(1,0,0));  
-```  
 
- Результат.
-  
+При создании политики кэша на основе времени можно настроить поведение кэширования, устанавливая значения максимального возраста, минимальной актуальности или даты синхронизации кэша. Объект <xref:System.Net.Cache.HttpRequestCachePolicy> предоставляет несколько конструкторов, позволяющих определять допустимые сочетания этих значений.
+
+## <a name="to-create-a-time-based-cache-policy-that-uses-a-cache-synchronization-date"></a>Создание политики кэша на основе времени с использованием даты синхронизации кэша
+
+Создание политики кэша на основе времени с использованием даты синхронизации кэша осуществляется за счет передачи объекта <xref:System.DateTime> в конструктор <xref:System.Net.Cache.HttpRequestCachePolicy>:
+
+```csharp
+public static HttpRequestCachePolicy CreateLastSyncPolicy(DateTime when)
+{
+    var policy = new HttpRequestCachePolicy(when);
+    Console.WriteLine("When: {0}", when);
+    Console.WriteLine(policy.ToString());
+    return policy;
+}
+```
+
+```vb
+Public Shared Function CreateLastSyncPolicy([when] As DateTime) As HttpRequestCachePolicy
+    Dim policy As New HttpRequestCachePolicy([when])
+    Console.WriteLine("When: {0}", [when])
+    Console.WriteLine(policy.ToString())
+    Return policy
+End Function
+```
+
+Выходные данные будут иметь примерно следующий вид:
+
 ```output
-Level:Default MinFresh:3600  
-```  
-  
-### <a name="to-create-a-time-based-cache-policy-that-is-based-on-minimum-freshness-and-maximum-age"></a>Создание политики кэша на основе времени с использованием минимальной актуальности и максимального возраста  
-  
-- Чтобы создать политику кэша на основе времени с использованием минимальной актуальности и максимального возраста, укажите <xref:System.Net.Cache.HttpCacheAgeControl.MaxAgeAndMinFresh> в качестве значения параметра `cacheAgeControl` и передайте два объекта <xref:System.TimeSpan> в конструктор <xref:System.Net.Cache.HttpRequestCachePolicy>. Один из этих объектов задает максимальный возраст ресурсов, а второй — минимально допустимую актуальность объекта, возвращаемого из кэша.  
-  
-    ```csharp  
-    public static HttpRequestCachePolicy CreateFreshAndAgePolicy(TimeSpan freshMinimum, TimeSpan ageMaximum)  
-    {  
-        HttpRequestCachePolicy policy =   
-        new HttpRequestCachePolicy(HttpCacheAgeControl.MaxAgeAndMinFresh, ageMaximum, freshMinimum);  
-        Console.WriteLine(policy.ToString());  
-        return policy;  
-    }  
-    ```  
-  
-    ```vb  
-    Public Shared Function CreateFreshAndAgePolicy(freshMinimum As TimeSpan, ageMaximum As TimeSpan) As HttpRequestCachePolicy  
-        Dim policy As New HttpRequestCachePolicy(HttpCacheAgeControl.MaxAgeAndMinFresh, ageMaximum, freshMinimum)  
-        Console.WriteLine(policy.ToString())  
-        Return policy  
-    End Function  
-    ```  
-  
- Для следующего вызова:  
+When: 1/14/2004 8:07:30 AM
+Level:Default CacheSyncDate:1/14/2004 8:07:30 AM
+```
+
+## <a name="to-create-a-time-based-cache-policy-that-is-based-on-minimum-freshness"></a>Создание политики кэша на основе времени с использованием минимальной актуальности
+
+Чтобы создать политику кэша на основе времени с использованием минимальной актуальности, укажите <xref:System.Net.Cache.HttpCacheAgeControl.MinFresh> в качестве значения параметра `cacheAgeControl` и передайте объект <xref:System.TimeSpan> в конструктор <xref:System.Net.Cache.HttpRequestCachePolicy>:
+
+```csharp
+public static HttpRequestCachePolicy CreateMinFreshPolicy(TimeSpan span)
+{
+    var policy = new HttpRequestCachePolicy(HttpCacheAgeControl.MinFresh, span);
+    Console.WriteLine(policy.ToString());
+    return policy;
+}
+```
+
+```vb
+Public Shared Function CreateMinFreshPolicy(span As TimeSpan) As HttpRequestCachePolicy
+    Dim policy As New HttpRequestCachePolicy(HttpCacheAgeControl.MinFresh, span)
+    Console.WriteLine(policy.ToString())
+    Return policy
+End Function
+```
+
+Для следующего вызова:
+
+```csharp
+CreateMinFreshPolicy(new TimeSpan(1,0,0));
+```
+
+Результат.
+
+```output
+Level:Default MinFresh:3600
+```
+
+## <a name="to-create-a-time-based-cache-policy-that-is-based-on-minimum-freshness-and-maximum-age"></a>Создание политики кэша на основе времени с использованием минимальной актуальности и максимального возраста
+
+Чтобы создать политику кэша на основе времени с использованием минимальной актуальности и максимального возраста, укажите <xref:System.Net.Cache.HttpCacheAgeControl.MaxAgeAndMinFresh> в качестве значения параметра `cacheAgeControl` и передайте два объекта <xref:System.TimeSpan> в конструктор <xref:System.Net.Cache.HttpRequestCachePolicy>. Один из этих объектов задает максимальный возраст ресурсов, а второй — минимально допустимую актуальность объекта, возвращаемого из кэша:
+
+```csharp
+public static HttpRequestCachePolicy CreateFreshAndAgePolicy(TimeSpan freshMinimum, TimeSpan ageMaximum)
+{
+    var policy = new HttpRequestCachePolicy(HttpCacheAgeControl.MaxAgeAndMinFresh, ageMaximum, freshMinimum);
+    Console.WriteLine(policy.ToString());
+    return policy;
+}
+```
+
+```vb
+Public Shared Function CreateFreshAndAgePolicy(freshMinimum As TimeSpan, ageMaximum As TimeSpan) As HttpRequestCachePolicy
+    Dim policy As New HttpRequestCachePolicy(HttpCacheAgeControl.MaxAgeAndMinFresh, ageMaximum, freshMinimum)
+    Console.WriteLine(policy.ToString())
+    Return policy
+End Function
+```
+
+Для следующего вызова:
   
 ```csharp
 CreateFreshAndAgePolicy(new TimeSpan(5,0,0), new TimeSpan(10,0,0));  

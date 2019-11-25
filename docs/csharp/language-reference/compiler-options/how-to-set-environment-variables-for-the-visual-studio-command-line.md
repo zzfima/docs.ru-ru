@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Настройка переменных среды для командной строки Visual Studio
+title: Настройка переменных среды для командной строки Visual Studio
 ms.date: 09/29/2017
 f1_keywords:
 - cs.build.commandline
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - Visual C# compiler, enabling
 - compiling source code, from command line
 ms.assetid: 7ec09480-5612-4f6a-8d00-ad90ea9bca5d
-ms.openlocfilehash: 9b26f6b80488ad4043054cd23f0f351773e8d6d1
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 3b69a92d28663bbbd34245435a69aea80d20fdc9
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69602853"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73972830"
 ---
-# <a name="how-to-set-environment-variables-for-the-visual-studio-command-line"></a>Практическое руководство. Настройка переменных среды для командной строки Visual Studio
+# <a name="how-to-set-environment-variables-for-the-visual-studio-command-line"></a>Настройка переменных среды для командной строки Visual Studio
 
 Файл VsDevCmd.bat задает переменные среды для поддержки построения из командной строки.
 

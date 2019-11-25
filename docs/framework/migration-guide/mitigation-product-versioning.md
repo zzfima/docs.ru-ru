@@ -2,14 +2,12 @@
 title: Устранение рисков. Управление версиями продукта
 ms.date: 03/30/2017
 ms.assetid: 1c4de9d7-9aba-427a-8f38-0ab9bfb8f85e
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 91db9d8c6fccf75bc9025a9487517e8c55d016cc
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 64a68d2b79a0a3ccdd806949ffd6cb3760974390
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70779207"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73457825"
 ---
 # <a name="mitigation-product-versioning"></a>Устранение рисков. Управление версиями продукта
 
@@ -44,4 +42,4 @@ ms.locfileid: "70779207"
 
 ## <a name="see-also"></a>См. также
 
-- [Изменения среды выполнения](runtime-changes-in-the-net-framework-4-6.md)
+- [Совместимость приложений](application-compatibility.md)

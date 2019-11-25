@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1767f3a7-29d2-4834-a763-7d169693fa8b
-ms.openlocfilehash: 21ae73054935373607909902e0b3e82ba5146f43
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: a64a09195101cd4b1ec3c6f990dd09d54466aea0
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70791145"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975415"
 ---
 # <a name="calling-service-operations-wcf-data-services"></a>Вызов операций служб (службы данных WCF)
-[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] определяет операции службы для службы данных. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] позволяет определить такие операции, как методы на службе данных. Как и для других ресурсов службы данных, для обращения к этим операциям службы используются идентификаторы URI. Операция службы может возвращать коллекции типов сущностей, единственные экземпляры типа сущностей и примитивные типы, такие как integer и string. Операция службы также может также вернуть значение `null` (`Nothing` в Visual Basic). Клиентская библиотека [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] может использоваться для доступа к операциям службы, поддерживающим запросы HTTP GET. Такого рода операции службы определяются как методы, к которым применен атрибут <xref:System.ServiceModel.Web.WebGetAttribute>. Дополнительные сведения см. в разделе [операции службы](service-operations-wcf-data-services.md).  
+Open Data Protocol (OData) определяет операции службы для службы данных. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] позволяет определить такие операции, как методы на службе данных. Как и для других ресурсов службы данных, для обращения к этим операциям службы используются идентификаторы URI. Операция службы может возвращать коллекции типов сущностей, единственные экземпляры типа сущностей и примитивные типы, такие как integer и string. Операция службы также может также вернуть значение `null` (`Nothing` в Visual Basic). Клиентская библиотека [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] может использоваться для доступа к операциям службы, поддерживающим запросы HTTP GET. Такого рода операции службы определяются как методы, к которым применен атрибут <xref:System.ServiceModel.Web.WebGetAttribute>. Дополнительные сведения см. в разделе [операции службы](service-operations-wcf-data-services.md).  
   
- Операции службы представлены в метаданных, возвращаемых службой данных, которая реализует [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]. В метаданных операции службы представлены как элементы `FunctionImport`. При создании строго типизированного элемента <xref:System.Data.Services.Client.DataServiceContext> средства Add Service Reference и DataSvcUtil.exe его не учитывают. Вследствие этого нельзя найти метод в контексте, который может быть использован для прямого вызова операции службы. Однако для вызова операций службы можно использовать клиент [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] одним из двух следующих способов:  
+ Операции службы предоставляются в метаданных, возвращаемых службой данных, которая реализует OData. В метаданных операции службы представлены как элементы `FunctionImport`. При создании строго типизированного элемента <xref:System.Data.Services.Client.DataServiceContext> средства Add Service Reference и DataSvcUtil.exe его не учитывают. Вследствие этого нельзя найти метод в контексте, который может быть использован для прямого вызова операции службы. Однако для вызова операций службы можно использовать клиент [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] одним из двух следующих способов:  
   
 - Вызов метода <xref:System.Data.Services.Client.DataServiceContext.Execute%2A> на <xref:System.Data.Services.Client.DataServiceContext> с передачей URI операции службы вместе с любыми параметрами. Этот метод используется для вызова любой операции службы GET.  
   
@@ -24,7 +24,7 @@ ms.locfileid: "70791145"
 ## <a name="considerations-for-calling-service-operations"></a>Рассмотрение вызова операций службы  
  При использовании клиента [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] для вызова операций службы нужно учесть следующие моменты.  
   
-- При асинхронном обращении к службе данных необходимо использовать эквивалентные асинхронные <xref:System.Data.Services.Client.DataServiceContext.BeginExecute%2A> / / <xref:System.Data.Services.Client.DataServiceContext.EndExecute%2A> методы для <xref:System.Data.Services.Client.DataServiceContext> или <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> <xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A> методов в <xref:System.Data.Services.Client.DataServiceQuery%601>.  
+- При асинхронном обращении к службе данных необходимо использовать эквивалентные методы асинхронного <xref:System.Data.Services.Client.DataServiceContext.BeginExecute%2A>/<xref:System.Data.Services.Client.DataServiceContext.EndExecute%2A> в <xref:System.Data.Services.Client.DataServiceContext> или <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A>методы /<xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A> в <xref:System.Data.Services.Client.DataServiceQuery%601>.  
   
 - Клиентская библиотека [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] не может материализовать результаты операции службы, которая возвращает коллекцию примитивных типов.  
   
@@ -34,27 +34,27 @@ ms.locfileid: "70791145"
   
 - Рассмотрите возможность создания метода расширения на строго типизированном разделяемом классе <xref:System.Data.Services.Client.DataServiceContext>, который создается этими средствами и использует метод <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> или <xref:System.Data.Services.Client.DataServiceContext.Execute%2A> для вызова операции службы. Это позволяет вызывать операции службы непосредственно из контекста. Дополнительные сведения см. в записи блога, посвященной [операциям службы и клиенту WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=215668).  
   
-- При использовании <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> для вызова операции службы клиентская библиотека автоматически преобразует символы, передаваемые в <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> , с помощью процента кодирования зарезервированных символов, например амперсанд (&), и экранирование одинарных кавычек в Строка. Однако при вызове одного из методов *EXECUTE* для вызова операции службы необходимо помнить, что это экранирование любых переданных пользователем строковых значений. Одиночные кавычки в URI-адресах экранируются как пары одиночных кавычек.  
+- При использовании <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> для вызова операции службы клиентская библиотека автоматически преобразует символы, передаваемые в <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A>, с помощью процента кодирования зарезервированных символов, таких как амперсанд (&), и экранирование одинарных кавычек в строках. Однако при вызове одного из методов *EXECUTE* для вызова операции службы необходимо помнить, что это экранирование любых переданных пользователем строковых значений. Одиночные кавычки в URI-адресах экранируются как пары одиночных кавычек.  
   
 ## <a name="examples-of-calling-service-operations"></a>Примеры вызова операций службы  
  Данный раздел содержит следующие примеры вызова операций службы с использованием клиентской библиотеки [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)].  
   
-- [Вызов Execute&lt;T&gt; для возврата коллекции сущностей](calling-service-operations-wcf-data-services.md#ExecuteIQueryable)  
+- [Вызов EXECUTE&lt;T&gt; для возврата коллекции сущностей](calling-service-operations-wcf-data-services.md#ExecuteIQueryable)  
   
 - [Использование CreateQuery&lt;T&gt; для возврата коллекции сущностей](calling-service-operations-wcf-data-services.md#CreateQueryIQueryable)  
   
-- [Вызов Execute&lt;T&gt; для возврата одной сущности](calling-service-operations-wcf-data-services.md#ExecuteSingleEntity)  
+- [Вызов EXECUTE&lt;T&gt; для возврата одной сущности](calling-service-operations-wcf-data-services.md#ExecuteSingleEntity)  
   
-- [Вызов Execute&lt;T&gt; для возврата коллекции примитивных значений](calling-service-operations-wcf-data-services.md#ExecutePrimitiveCollection)  
+- [Вызов EXECUTE&lt;T&gt; для возврата коллекции примитивных значений](calling-service-operations-wcf-data-services.md#ExecutePrimitiveCollection)  
   
-- [Вызов Execute&lt;T&gt; для возврата одного примитивного значения](calling-service-operations-wcf-data-services.md#ExecutePrimitiveValue)  
+- [Вызов EXECUTE&lt;T&gt; для возврата одного примитивного значения](calling-service-operations-wcf-data-services.md#ExecutePrimitiveValue)  
   
 - [Вызов операции службы, не возвращающей данные](calling-service-operations-wcf-data-services.md#ExecuteVoid)  
   
 - [Асинхронный вызов операции службы](calling-service-operations-wcf-data-services.md#ExecuteAsync)  
   
 <a name="ExecuteIQueryable"></a>   
-### <a name="calling-executet-to-return-a-collection-of-entities"></a>Вызов Execute\<T > для возврата коллекции сущностей  
+### <a name="calling-executet-to-return-a-collection-of-entities"></a>Вызов EXECUTE\<T > для возврата коллекции сущностей  
  В следующем примере вызывается операция службы с именем GetOrdersByCity, которая принимает строковый параметр `city` и возвращает <xref:System.Linq.IQueryable%601>.  
   
  [!code-csharp[Astoria Northwind Client#CallServiceOperationIQueryable](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#callserviceoperationiqueryable)]
@@ -72,7 +72,7 @@ ms.locfileid: "70791145"
  В этом примере метод <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> используется для добавления параметра к запросу, а метод <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> — для включения в результаты связанных объектов Order_Details.  
   
 <a name="ExecuteSingleEntity"></a>   
-### <a name="calling-executet-to-return-a-single-entity"></a>Вызов Execute\<T > для возврата одной сущности  
+### <a name="calling-executet-to-return-a-single-entity"></a>Вызов EXECUTE\<T > для возврата одной сущности  
  В следующем примере вызывается операция службы с именем GetNewestOrder, которая возвращает одну сущность Order.  
   
  [!code-csharp[Astoria Northwind Client#CallServiceOperationSingleEntity](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#callserviceoperationsingleentity)]
@@ -81,13 +81,13 @@ ms.locfileid: "70791145"
  В этом примере метод <xref:System.Linq.Enumerable.FirstOrDefault%2A> используется для запроса только одной сущности Order при исполнении.  
   
 <a name="ExecutePrimitiveCollection"></a>   
-### <a name="calling-executet-to-return-a-collection-of-primitive-values"></a>Вызов Execute\<T > для возврата коллекции примитивных значений  
+### <a name="calling-executet-to-return-a-collection-of-primitive-values"></a>Вызов EXECUTE\<T > для возврата коллекции примитивных значений  
  В следующем примере вызывается операция службы, которая возвращает коллекцию строковых значений.  
   
  [!code-csharp[Astoria Northwind Client#CallServiceOperationEnumString](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#callserviceoperationenumstring)]  
   
 <a name="ExecutePrimitiveValue"></a>   
-### <a name="calling-executet-to-return-a-single-primitive-value"></a>Вызов Execute\<T > для возврата одного примитивного значения  
+### <a name="calling-executet-to-return-a-single-primitive-value"></a>Вызов EXECUTE\<T > для возврата одного примитивного значения  
  В следующем примере вызывается операция службы, которая возвращает одно строковое значение.  
   
  [!code-csharp[Astoria Northwind Client#CallServiceOperationSingleInt](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#callserviceoperationsingleint)]

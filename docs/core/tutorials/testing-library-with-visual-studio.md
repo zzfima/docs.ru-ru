@@ -8,12 +8,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet, seodoc18
-ms.openlocfilehash: d983ee09704ff69fdedfa95a31942161162f73eb
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 242234d93bc1b8f9b88749f2e3bcfb37c2bde86d
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70970654"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73037964"
 ---
 # <a name="test-a-net-standard-library-with-net-core-in-visual-studio-2017"></a>Тестирование библиотеки .NET Standard с помощью .NET Core в Visual Studio 2017
 
@@ -42,11 +42,11 @@ ms.locfileid: "70970654"
 
    Исходный код, созданный шаблоном модульного теста, выполняет следующие действия.
 
-   * Он импортирует пространство имен <xref:Microsoft.VisualStudio.TestTools.UnitTesting?displayProperty=nameWithType>, которое содержит типы, используемые для модульного тестирования.
+   - Он импортирует пространство имен <xref:Microsoft.VisualStudio.TestTools.UnitTesting?displayProperty=nameWithType>, которое содержит типы, используемые для модульного тестирования.
 
-   * Он применяет атрибут <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute> к классу `UnitTest1`. При запуске модульного теста автоматически выполняются все методы теста в тестовом классе, помеченные атрибутом \[TestMethod\].
+   - Он применяет атрибут <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute> к классу `UnitTest1`. При запуске модульного теста автоматически выполняются все методы теста в тестовом классе, помеченные атрибутом \[TestMethod\].
 
-   * Атрибут <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute> определяет `TestMethod1` как метод теста, который будет автоматически выполняться при запуске модульного теста.
+   - Атрибут <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute> определяет `TestMethod1` как метод теста, который будет автоматически выполняться при запуске модульного теста.
 
 1. В **обозревателе решений** щелкните узел **Зависимости** в проекте **StringLibraryTest** правой кнопкой мыши и выберите в контекстном меню пункт **Добавить ссылку**.
 
@@ -73,11 +73,11 @@ ms.locfileid: "70970654"
 
    Исходный код, созданный шаблоном модульного теста, выполняет следующие действия.
 
-   * Он импортирует пространство имен <xref:Microsoft.VisualStudio.TestTools.UnitTesting?displayProperty=nameWithType>, которое содержит типы, используемые для модульного тестирования.
+   - Он импортирует пространство имен <xref:Microsoft.VisualStudio.TestTools.UnitTesting?displayProperty=nameWithType>, которое содержит типы, используемые для модульного тестирования.
 
-   * Он применяет атрибут <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute>) к классу `UnitTest1`. При запуске модульного теста автоматически выполняются все методы теста в классе теста, помеченные атрибутом <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute>.
+   - Он применяет атрибут <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute> к классу `UnitTest1`. При запуске модульного теста автоматически выполняются все методы теста в классе теста, помеченные атрибутом <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute>.
 
-   * Атрибут <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute> определяет `TestMethod1` как метод теста, который будет автоматически выполняться при запуске модульного теста.
+   - Атрибут <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute> определяет `TestMethod1` как метод теста, который будет автоматически выполняться при запуске модульного теста.
 
 1. В **обозревателе решений** щелкните узел **Зависимости** в проекте **StringLibraryTest** правой кнопкой мыши и выберите в контекстном меню пункт **Добавить ссылку**.
 
@@ -93,7 +93,7 @@ ms.locfileid: "70970654"
 
 При запуске модульного теста Visual Studio выполняет каждый метод, помеченный атрибутом <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute>, из класса модульных тестов (это класс, к которому применяется атрибут <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute>). Метод теста завершается, когда происходит первый сбой или когда все тесты, содержащиеся в методе, будут успешно выполнены.
 
-В самых распространенных тестах вызываются члены класса <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert>. Многие методы утверждения (Assert) принимают по крайней мере два параметра, из которых один представляет ожидаемый результат теста, а второй — фактический результат теста. Наиболее популярные из этих методов перечислены в представленной ниже таблице.
+В самых распространенных тестах вызываются члены класса <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert>. Многие методы утверждения (Assert) принимают по крайней мере два параметра, из которых один представляет ожидаемый результат теста, а второй — фактический результат теста. Наиболее популярные из этих методов перечислены в следующей таблице:
 
 Методы утверждения | Функция
 --- | ---
@@ -116,7 +116,7 @@ ms.locfileid: "70970654"
 
 1. В окне кода *UnitTest1.cs* замените отображаемый код на следующий текст:
 
-   [!CODE-csharp[Test#1](../../../samples/snippets/csharp/getting_started/with_visual_studio_2017/testlib1.cs)]
+   [!code-csharp[Test#1](~/samples/snippets/csharp/getting_started/with_visual_studio_2017/testlib1.cs)]
 
    Обратите внимание, что наш тест на символы верхнего регистра в методе `TestStartsWithUpper` включает заглавную греческую букву "альфа" (U+0391) и заглавную кириллическую букву "М" (U+041C). Тест на символы нижнего регистра в методе `TestDoesNotStartWithUpper` включает строчную греческую букву "альфа" (U+03B1) и строчную кириллическую букву "г" (U+0433).
 
@@ -128,7 +128,7 @@ ms.locfileid: "70970654"
 
 1. В окне кода *UnitTest1.vb* замените отображаемый код на следующий текст:
 
-    [!CODE-vb[Test#1](../../../samples/snippets/core/tutorials/vb-library-with-visual-studio/testlib.vb)]
+    [!code-vb[Test#1](~/samples/snippets/core/tutorials/vb-library-with-visual-studio/testlib.vb)]
 
    Обратите внимание, что наш тест на символы верхнего регистра в методе `TestStartsWithUpper` включает заглавную греческую букву "альфа" (U+0391) и заглавную кириллическую букву "М" (U+041C). Тест на символы нижнего регистра в методе `TestDoesNotStartWithUpper` включает строчную греческую букву "альфа" (U+03B1) и строчную кириллическую букву "г" (U+0433).
 

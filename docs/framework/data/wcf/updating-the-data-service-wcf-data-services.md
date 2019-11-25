@@ -8,26 +8,26 @@ helpviewer_keywords:
 - WCF Data Services, changing data
 - WCF Data Services, client library
 ms.assetid: 00d993be-ffed-4dea-baf7-6eea982cdb54
-ms.openlocfilehash: 5cf7a6e563069e35a4ac0fe729a616dc1c56bdb5
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 02bcb8f12cd7f230d60c3b3c58174a54405ff955
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70779747"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975114"
 ---
 # <a name="updating-the-data-service-wcf-data-services"></a>Обновление службы данных (службы данных WCF)
-Если для [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] использования веб-канала используется клиентская библиотека, Библиотека преобразует записи в канале в экземпляры клиентских классов службы данных. Эти классы службы данных отслеживаются с помощью объекта <xref:System.Data.Services.Client.DataServiceContext>, которому принадлежит объект <xref:System.Data.Services.Client.DataServiceQuery%601>. Клиент отслеживает изменения сущностей, указанных с помощью методов объекта <xref:System.Data.Services.Client.DataServiceContext>. Эти методы позволяют клиенту отслеживать добавленные и удаленные сущности, а также изменения, вносимые в значения свойств или в связи между экземплярами сущностей. При вызове метода <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> отслеженные изменения отправляются назад в службу данных в виде операций, основанных на REST.  
+При использовании клиентской библиотеки [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] для использования канала Open Data Protocol (OData) библиотека преобразует записи в канале в экземпляры классов клиентских служб данных. Эти классы службы данных отслеживаются с помощью объекта <xref:System.Data.Services.Client.DataServiceContext>, которому принадлежит объект <xref:System.Data.Services.Client.DataServiceQuery%601>. Клиент отслеживает изменения сущностей, указанных с помощью методов объекта <xref:System.Data.Services.Client.DataServiceContext>. Эти методы позволяют клиенту отслеживать добавленные и удаленные сущности, а также изменения, вносимые в значения свойств или в связи между экземплярами сущностей. При вызове метода <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> отслеженные изменения отправляются назад в службу данных в виде операций, основанных на REST.  
   
 > [!NOTE]
 > При использовании экземпляра класса <xref:System.Data.Services.Client.DataServiceCollection%601> для привязки данных к элементам управления, изменения, внесенные в данные с помощью привязанного элемента управления, автоматически передаются объекту <xref:System.Data.Services.Client.DataServiceContext>. Дополнительные сведения см. [в разделе Привязка данных к элементам управления](binding-data-to-controls-wcf-data-services.md).  
   
 ## <a name="adding-modifying-and-changing-entities"></a>Добавление, модификация и изменение сущностей  
- При использовании диалогового окна **Добавление ссылки на службу** в Visual Studio для добавления ссылки на [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] веб-канал результирующие классы службы данных клиента имеют статический метод *CREATE* , который принимает один параметр для каждого свойства сущности, не допускающей значения NULL. . Этот метод можно использовать для создания экземпляров классов типа сущности, как показано в следующем примере.  
+ При использовании диалогового окна **Добавление ссылки на службу** в Visual Studio для добавления ссылки на веб-канал OData результирующие классы клиентской службы данных имеют статический метод *CREATE* , который принимает один параметр для каждого свойства сущности, не допускающей значения NULL. Этот метод можно использовать для создания экземпляров классов типа сущности, как показано в следующем примере.  
   
  [!code-csharp[Astoria Northwind Client#CreateNewProduct](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#createnewproduct)]
  [!code-vb[Astoria Northwind Client#CreateNewProduct](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#createnewproduct)]  
   
- Чтобы добавить экземпляр сущности, вызовите соответствующий метод *AddTo* для <xref:System.Data.Services.Client.DataServiceContext> класса, созданного с помощью диалогового окна **Добавление ссылки на службу** , как показано в следующем примере:  
+ Чтобы добавить экземпляр сущности, вызовите соответствующий метод *AddTo* класса <xref:System.Data.Services.Client.DataServiceContext>, созданного в диалоговом окне **Добавление ссылки на службу** , как показано в следующем примере:  
   
  [!code-csharp[Astoria Northwind Client#AddProductSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#addproductspecific)]
  [!code-vb[Astoria Northwind Client#AddProductSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#addproductspecific)]  
@@ -44,7 +44,7 @@ ms.locfileid: "70779747"
  [!code-csharp[Astoria Northwind Client#DeleteProductSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#deleteproductspecific)]
  [!code-vb[Astoria Northwind Client#DeleteProductSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#deleteproductspecific)]  
   
- Дополнительные сведения см. в разделе [Практическое руководство. Добавление, изменение и удаление сущностей](how-to-add-modify-and-delete-entities-wcf-data-services.md).  
+ Дополнительные сведения см. [в разделе инструкции. Добавление, изменение и удаление сущностей](how-to-add-modify-and-delete-entities-wcf-data-services.md).  
   
 ## <a name="attaching-entities"></a>Присоединение сущностей  
  Клиентская библиотека позволяет сохранить обновления, произведенные в сущности, без выполнения запроса для загрузки сущности в контекст <xref:System.Data.Services.Client.DataServiceContext>. Используйте метод <xref:System.Data.Services.Client.DataServiceContext.AttachTo%2A> для присоединения существующего объекта к определенному набору сущностей в контексте <xref:System.Data.Services.Client.DataServiceContext>. Затем этот объект можно изменить и сохранить изменения в службе данных. В следующем примере измененный пользовательский объект присоединяется к контексту, после чего вызывается метод <xref:System.Data.Services.Client.DataServiceContext.UpdateObject%2A> для пометки присоединенного объекта атрибутом <xref:System.Data.Services.Client.EntityStates.Modified> перед вызовом метода <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A>.  
@@ -62,12 +62,12 @@ ms.locfileid: "70779747"
   
 - При присоединении объекта сущности, полученной со значением eTag, используется перегруженный метод <xref:System.Data.Services.Client.DataServiceContext.AttachTo%28System.String%2CSystem.Object%2CSystem.String%29>, принимающий параметр `etag`. Это значение eTag используется для проверки параллелизма при сохранении изменений в присоединенном объекте.  
   
- Дополнительные сведения см. в разделе [Практическое руководство. Присоедините существующую сущность к DataServiceContext](attach-an-existing-entity-to-dc-wcf-data.md).  
+ Дополнительные сведения см. в разделе [как подключить существующую сущность к DataServiceContext](attach-an-existing-entity-to-dc-wcf-data.md).  
   
 ## <a name="creating-and-modifying-relationship-links"></a>Создание и изменение ссылок на связи  
- При добавлении <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A> новой сущности с помощью метода или соответствующего метода <xref:System.Data.Services.Client.DataServiceContext> AddTo класса, создаваемого диалоговым окном **Добавление ссылки на службу** , все связи между новой сущностью и связанными сущностями не определяется автоматически.  
+ При добавлении новой сущности с помощью метода <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A> или соответствующего метода *AddTo* класса <xref:System.Data.Services.Client.DataServiceContext>, создаваемого диалоговым окном **Добавление ссылки на службу** , любые связи между новой сущностью и связанными сущностями не определяются автоматически.  
   
- Пользователь может создать и изменить связи между экземплярами сущностей и отразить эти изменения в службе данных с помощью клиентской библиотеки. Связи между сущностями определяются как ассоциации модели, а объект <xref:System.Data.Services.Client.DataServiceContext> отслеживает каждую связь в виде объекта ссылки в контексте. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]предоставляет следующие методы <xref:System.Data.Services.Client.DataServiceContext> класса для создания, изменения и удаления следующих ссылок:  
+ Пользователь может создать и изменить связи между экземплярами сущностей и отразить эти изменения в службе данных с помощью клиентской библиотеки. Связи между сущностями определяются как ассоциации модели, а объект <xref:System.Data.Services.Client.DataServiceContext> отслеживает каждую связь в виде объекта ссылки в контексте. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] предоставляет следующие методы класса <xref:System.Data.Services.Client.DataServiceContext> для создания, изменения и удаления этих ссылок:  
   
 |Метод|Описание|  
 |------------|-----------------|  
@@ -88,7 +88,7 @@ ms.locfileid: "70779747"
  [!code-csharp[Astoria Northwind Client#SetNavProps](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#setnavprops)]
  [!code-vb[Astoria Northwind Client#SetNavProps](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#setnavprops)]  
   
- Дополнительные сведения см. в разделе [Практическое руководство. Определение связей между](how-to-define-entity-relationships-wcf-data-services.md)сущностями.  
+ Дополнительные сведения см. [в разделе инструкции. Определение связей между сущностями](how-to-define-entity-relationships-wcf-data-services.md).  
   
 ## <a name="saving-changes"></a>Сохранение изменений  
  Изменения отслеживаются в экземпляре <xref:System.Data.Services.Client.DataServiceContext>, но не отправляются на сервер немедленно. После завершения изменений для указанного действия вызовите метод <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A>, чтобы передать все изменения в службу данных. Дополнительные сведения см. [в разделе Управление контекстом службы данных](managing-the-data-service-context-wcf-data-services.md). Изменения можно сохранить и асинхронно с помощью методов <xref:System.Data.Services.Client.DataServiceContext.BeginSaveChanges%2A> и <xref:System.Data.Services.Client.DataServiceContext.EndSaveChanges%2A>. Дополнительные сведения см. в разделе [асинхронные операции](asynchronous-operations-wcf-data-services.md).  

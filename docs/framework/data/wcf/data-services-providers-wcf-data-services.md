@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, providers
 ms.assetid: a0160b1b-3d9c-4cc8-8391-cb0986a60a41
-ms.openlocfilehash: 7623c2b743d6a61362c8cf0e1228b4663c9e7d48
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: e4f887ebf467c967b8b72c19deafed2c9759e4ed
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70780391"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975345"
 ---
 # <a name="data-services-providers-wcf-data-services"></a>Поставщики служб данных (службы данных WCF)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]поддерживает несколько моделей поставщиков для предоставления данных в виде [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] веб-канала. Этот раздел содержит сведения, позволяющие выбрать поставщик служб [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], наилучшим образом подходящий для имеющегося источника данных.  
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] поддерживает несколько моделей поставщиков для предоставления данных в виде веб-канала Open Data Protocol (OData). Этот раздел содержит сведения, позволяющие выбрать поставщик служб [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], наилучшим образом подходящий для имеющегося источника данных.  
   
 ## <a name="data-source-providers"></a>Поставщики источников данных  
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]поддерживает следующие поставщики для определения модели данных службы данных.  
+ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] поддерживает следующие поставщики для определения модели данных службы данных.  
   
 |Поставщик|Описание|  
 |--------------|-----------------|  
@@ -24,7 +24,7 @@ ms.locfileid: "70780391"
 |Специализированные поставщики служб данных|В состав служб [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] также включен набор поставщиков, позволяющий динамически определить модель данных на основе типов данных с поздним связыванием. Эти интерфейсы следует реализовывать, если предоставляемые данные неизвестны на этапе разработки приложения или если использование Entity Framework или поставщиков отражения не является достаточным. Дополнительные сведения см. в разделе [пользовательские поставщики служб данных](custom-data-service-providers-wcf-data-services.md).|  
   
 ## <a name="other-data-service-providers"></a>Другие поставщики служб данных  
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]имеет следующий дополнительный поставщик служб данных, повышающий производительность источника данных, определенного с помощью одного из других поставщиков.  
+ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] имеет следующий дополнительный поставщик служб данных, повышающий производительность источника данных, определенного с помощью одного из других поставщиков.  
   
 |Поставщик|Описание|  
 |--------------|-----------------|  

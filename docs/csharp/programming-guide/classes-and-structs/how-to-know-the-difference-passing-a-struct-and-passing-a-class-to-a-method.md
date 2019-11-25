@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Определение различия между передачей структуры и ссылки на класс в метод (руководство по программированию на C#)
+title: Практическое руководство. Определение различия между передачей структуры и ссылки класса в метод (руководство по программированию на C#)
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - passing parameters [C#], structs vs. classes
 - methods [C#], passing classes vs. structs
 ms.assetid: 9c1313a6-32a8-4ea7-a59f-450f66af628b
-ms.openlocfilehash: 09b40a1ee8ab57a4b8a641acae49ab31a14d3d5b
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 9bacc7b3913a6e353e39f1e45fa99ea2dcdbe668
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70893137"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73970544"
 ---
-# <a name="how-to-know-the-difference-between-passing-a-struct-and-passing-a-class-reference-to-a-method-c-programming-guide"></a>Практическое руководство. Определение различия между передачей структуры и ссылки на класс в метод (руководство по программированию на C#)
+# <a name="how-to-know-the-difference-between-passing-a-struct-and-passing-a-class-reference-to-a-method-c-programming-guide"></a>Практическое руководство. Определение различия между передачей структуры и ссылки класса в метод (руководство по программированию на C#)
 В следующем примере демонстрируется, чем передача [структуры](../../language-reference/keywords/struct.md) в метод отличается от передачи экземпляра [класса](../../language-reference/keywords/class.md) в метод. В этом примере оба аргумента (структура и экземпляр класса) передаются по значению, и оба метода изменяют значение одного поля аргумента. Тем не менее результаты этих двух методов будут отличаться, поскольку в случае со структурой передаваемое содержимое отличается от передачи экземпляра класса.  
   
  Поскольку структура является [типом значения](../../language-reference/keywords/value-types.md), при [передаче структуры по значению](./passing-value-type-parameters.md) в метод этот метод получает и обрабатывает копию аргумента структуры. При этом метод не имеет доступа к исходной структуре в вызывающем методе и, соответственно, никак не может изменить ее. В этом случае метод может изменять только копию.  

@@ -14,32 +14,32 @@ helpviewer_keywords:
 - event subscription [C#]
 - += operator [C#]
 ms.assetid: 93e56486-bb42-43c1-bd43-60af11e64e67
-ms.openlocfilehash: 41355dbadd566648b45d825cdd6515bfc6d411aa
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: e6a190e3d6e283f2ce3b1690ec2bfd15d50dfc6e
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67610041"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73972637"
 ---
 # <a name="-and--operators-c-reference"></a>Операторы + и +=. Справочник по C#
 
-Оператор `+` поддерживается встроенными числовыми типами, типом [string](../keywords/string.md) и типами [delegate](../keywords/delegate.md).
+Операторы `+` и `+=` поддерживаются встроенными [целыми](../builtin-types/integral-numeric-types.md) числовыми типами и числовыми типами [с плавающей запятой](../builtin-types/floating-point-numeric-types.md), а также [строковым](../builtin-types/reference-types.md#the-string-type) типом и типами[делегатов](../builtin-types/reference-types.md#the-delegate-type).
 
 Сведения об арифметическом операторе `+` см. в разделе [Операторы унарного плюса и минуса](arithmetic-operators.md#unary-plus-and-minus-operators) и [Оператор сложения +](arithmetic-operators.md#addition-operator-) в статье [Арифметические операторы](arithmetic-operators.md).
 
 ## <a name="string-concatenation"></a>Объединение строк
 
-Если один или оба операнда имеют тип [string](../keywords/string.md), оператор `+` сцепляет строковые представления этих операндов.
+Если один или оба операнда имеют тип [string](../builtin-types/reference-types.md#the-string-type), оператор `+` сцепляет строковые представления этих операндов.
 
 [!code-csharp-interactive[string concatenation](~/samples/csharp/language-reference/operators/AdditionOperator.cs#AddStrings)]
 
-В C#, начиная с версии 6, реализован более удобный способ форматирования строк, который называется [интерполяция строк](../tokens/interpolated.md):
+В C#, начиная с версии 6, реализован более удобный способ форматирования строк, который называется [интерполяция строк](../tokens/interpolated.md):
 
 [!code-csharp-interactive[string interpolation](~/samples/csharp/language-reference/operators/AdditionOperator.cs#UseStringInterpolation)]
 
 ## <a name="delegate-combination"></a>Объединение делегатов
 
-Для операндов того же типа [delegate](../keywords/delegate.md) оператор `+` возвращает новый экземпляр делегата, при вызове которого вызывается сначала левый, а затем правый операнд. Если какой-либо из операндов имеет значение `null`, оператор `+` возвращает значение другого операнда (это тоже может быть `null`). Следующий пример демонстрирует объединение делегатов с помощью оператора `+`:
+Для операндов того же типа [delegate](../builtin-types/reference-types.md#the-delegate-type) оператор `+` возвращает новый экземпляр делегата, при вызове которого вызывается сначала левый, а затем правый операнд. Если какой-либо из операндов имеет значение `null`, оператор `+` возвращает значение другого операнда (это тоже может быть `null`). Следующий пример демонстрирует объединение делегатов с помощью оператора `+`:
 
 [!code-csharp-interactive[delegate combination](~/samples/csharp/language-reference/operators/AdditionOperator.cs#AddDelegates)]
 
@@ -62,7 +62,7 @@ x = x + y
 ```
 
 за исключением того, что `x` вычисляется только один раз.
-  
+
 В следующем примере иллюстрируется использование оператора `+=`.
 
 [!code-csharp-interactive[+= examples](~/samples/csharp/language-reference/operators/AdditionOperator.cs#AddAndAssign)]
@@ -81,9 +81,7 @@ x = x + y
 
 - [справочник по C#](../index.md)
 - [Операторы в C#](index.md)
-- [Интерполяция строк](../tokens/interpolated.md)
-- [Практическое руководство. Сцепка нескольких строк](../../how-to/concatenate-multiple-strings.md)
-- [Делегаты](../../programming-guide/delegates/index.md)
+- [Сцепка нескольких строк](../../how-to/concatenate-multiple-strings.md)
 - [События](../../programming-guide/events/index.md)
 - [Арифметические операторы](arithmetic-operators.md)
 - [Операторы - и -=](subtraction-operator.md)

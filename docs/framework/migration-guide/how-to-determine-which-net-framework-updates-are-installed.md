@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Определение установленных обновлений и исправлений безопасности платформы .NET Framework
+title: Какие обновления и исправления системы безопасности .NET Framework установлены
 description: Сведения об определении установленных на компьютере обновлений и исправлений безопасности платформы .NET Framework.
 ms.date: 11/27/2017
 dev_langs:
@@ -11,21 +11,21 @@ helpviewer_keywords:
 ms.assetid: 53c7b5f7-d47a-402a-b194-7244a696a88b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1c69d4bb370087dddafbfed41cbfb1fef229677c
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: aad202e7c9df01c2893e74a39744f2c32783f1f0
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72318954"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73735202"
 ---
-# <a name="how-to-determine-which-net-framework-security-updates-and-hotfixes-are-installed"></a>Практическое руководство. Определение установленных обновлений и исправлений безопасности платформы .NET Framework
+# <a name="how-to-determine-which-net-framework-security-updates-and-hotfixes-are-installed"></a>Определение установленных обновлений и исправлений системы безопасности .NET Framework
 
 В этой статье содержатся сведения об определении установленных на компьютере обновлений и исправлений безопасности платформы .NET Framework.
 
 > [!NOTE]
 > Для использования всех методов, представленных в этой статье, требуется учетная запись с правами администратора.
 
-## <a name="to-find-installed-updates-using-the-registry"></a>Поиск установленных обновлений с помощью реестра
+## <a name="use-registry-editor"></a>Использование редактора реестра
 
 Установленные обновления и исправления безопасности для каждой версии .NET Framework на компьютере перечислены в реестре Windows. Для просмотра этих сведений можно использовать редактор реестра (*regedit.exe*).
 
@@ -33,13 +33,13 @@ ms.locfileid: "72318954"
 
 2. В редакторе реестра откройте следующий подраздел:
 
-     `HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Updates`
+     **HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Updates**
 
      Установленные обновления перечислены в подразделах, соответствующих версии .NET Framework, к которой они относятся. Каждому обновлению присваивается номер базы знаний Microsoft (KB).
 
 В редакторе реестра версии .NET Framework и установленные обновления для каждой версии хранятся в разных подразделах. Сведения об определении номеров установленных версий см. в разделе [Практическое руководство. Определение установленных версий платформы .NET Framework](how-to-determine-which-versions-are-installed.md).
 
-## <a name="to-find-installed-updates-by-querying-the-registry-in-code"></a>Поиск установленных обновлений путем запроса к реестру в коде
+## <a name="query-the-registry-using-code"></a>Отправка запросов в реестр с помощью кода
 
 В следующем примере кода программным образом определяются обновления и исправления безопасности .NET Framework, установленные на компьютере:
 
@@ -67,7 +67,7 @@ Microsoft .NET Framework 4 Extended
   KB2600217
 ```
 
-## <a name="to-find-installed-updates-by-querying-the-registry-in-powershell"></a>Поиск установленных обновлений путем запроса к реестру в PowerShell
+## <a name="use-powershell-to-query-the-registry"></a>Отправка запросов в реестр с помощью PowerShell
 
 В следующем примере кода показано определение установленных на компьютере обновлений и исправлений безопасности .NET Framework с помощью PowerShell:
 

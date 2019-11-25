@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, learn more
 ms.assetid: e63a9baf-699c-42e2-b11f-fba57bcc14df
-ms.openlocfilehash: 9a354eab885de518105f9162652f2809818f63af
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 0b80461c48dc8cf619b59b0b93c0aa5edca9c4c4
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70790205"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975037"
 ---
 # <a name="wcf-data-services-resources"></a>Ресурсы служб данных WCF
 Вводные разделы по службам [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] можно найти в следующих местах. Во многих из них также есть ссылки на связанные разделы, содержащие более подробные сведения.  
@@ -21,13 +21,13 @@ ms.locfileid: "70790205"
  Описание способов проектирования и доступа к службе данных с помощью [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], как показано в [кратком руководстве](quickstart-wcf-data-services.md).  
   
  [Сценарии приложения](application-scenarios-wcf-data-services.md)  
- Предоставляет подход на основе задач для создания [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] приложений и доступа к [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] веб-каналам.  
+ Предоставляет подход на основе задач для создания [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] и приложений, обращающихся к веб-каналам Open Data Protocol (OData).  
   
  [Глоссарий .NET](../../../standard/glossary.md)  
- Содержит термины, используемые [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] в [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] и документации.  
+ Содержит термины, используемые в [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] и документации OData.  
   
 ## <a name="external-resources"></a>Внешние ресурсы  
- Следующие внешние ресурсы предоставляют дополнительные сведения и поддержку для создания [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] приложений, которые предоставляют веб-каналы и используют [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] их.  
+ Следующие внешние ресурсы предоставляют дополнительные сведения и поддержку для создания [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] приложений, предоставляющих и использующих веб-каналы OData.  
   
  [Форум WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=150512)  
  Поддержка при программировании данных для разработчиков служб [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)].  
@@ -36,27 +36,27 @@ ms.locfileid: "70790205"
  Блог, содержащий обновления и обсуждение характеристик и функций служб [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)].  
   
  [Веб-сайт OData](https://go.microsoft.com/fwlink/?LinkID=184554)  
- Первичный источник информации о службах [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)].  
+ Основной источник сведений о OData.  
   
  [Пакет SDK OData](https://go.microsoft.com/fwlink/?LinkID=185248)  
- Содержит примеры служб, примеры и программных библиотек, которые позволяют работать с [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] веб-каналами.  
+ Содержит примеры служб, примеры и программных библиотек, которые позволяют работать с каналами OData.  
   
  [Блог OData](https://go.microsoft.com/fwlink/?LinkId=185868)  
- Блог, содержащий обсуждения по [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] программированию.  
+ Блог, содержащий обсуждения по программированию OData.  
   
  [Центр разработчиков для доступа к данным и хранения данных](https://go.microsoft.com/fwlink/?LinkId=91903)  
  Центральный узел, где можно найти сведения и ресурсы для работы с данными.  
   
- [Практические руководства по платформе данных Видеоролики: Серия WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=124600)  
+ [Практические руководства по платформе данных Видео: серии WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=124600)  
  Содержит набор видеороликов, демонстрирующих сборку и обращение к службам данных.  
   
- [Средств WCF Data Services](https://go.microsoft.com/fwlink/?LinkID=131074)  
+ [Обзор: WCF Data Services](https://go.microsoft.com/fwlink/?LinkID=131074)  
  Технический документ, предоставляющий более высокоуровневые сведения о преимуществах служб [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)].  
   
  [Использование Microsoft WCF Data Services](https://go.microsoft.com/fwlink/?LinkID=131075)  
  Технический документ, предоставляющий дополнительные сведения и примеры создания служб данных и обращения к ним в клиентских приложениях.  
   
- [Модели «сущность-связь»: К единому представлению данных](https://go.microsoft.com/fwlink/?LinkId=91909) с помощью Питер-Шан Чен, Массачусетс Институт технологий  
+ [Модель отношений сущностей: к единому представлению данных](https://go.microsoft.com/fwlink/?LinkId=91909) с помощью Питер-Шан Чен, Массачусетс института технологий  
  Описывает основы модели реляционных сущностей, реализованной в службах [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]. Написанная в 1976 году, эта книга является одной из наиболее часто цитируемых в области компьютеров.  
   
 ## <a name="see-also"></a>См. также

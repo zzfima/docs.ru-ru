@@ -5,14 +5,12 @@ ms.date: 02/06/2019
 helpviewer_keywords:
 - expression-bodied members[C#]
 - C# language, expresion-bodied members
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d7c282157639a6a60270ce8dbebbc91dd0e0a3f3
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 45dcc58b252963e80798ba86ca5c4f461d493fac
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55826620"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120147"
 ---
 # <a name="expression-bodied-members-c-programming-guide"></a>Члены, воплощающие выражения (руководство по программированию на C#)
 
@@ -89,9 +87,9 @@ PropertyType PropertyName => expression;
 
 ## <a name="indexers"></a>Индексаторы
 
-Как и свойства, методы доступа set и get индексатора состоят из определений тела выражений, если метод доступа get состоит из одного оператора, который возвращает значение, или метод доступа set выполняет простое присваивание.
+Как при использовании свойств, методы доступа `get` и `set` индексатора состоят из определений тела выражений, если метод доступа `get` состоит из одного выражения, которое возвращает значение, или метод доступа `set` выполняет простое присваивание.
 
-В следующем примере определяется класс с именем `Sports`, включающий внутренний массив <xref:System.String>, который содержит названия нескольких видов спорта. Методы доступа get и set индексатора реализуются как определения тела выражений.
+В следующем примере определяется класс с именем `Sports`, включающий внутренний массив <xref:System.String>, который содержит названия нескольких видов спорта. Методы доступа `get` и `set` индексатора реализуются как определения тела выражений.
 
 [!code-csharp[expression-bodied-indexer](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-indexers.cs#1)]
 

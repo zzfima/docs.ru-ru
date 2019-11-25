@@ -1,19 +1,19 @@
 ---
-title: Практическое руководство. Безопасное приведение с помощью сопоставления шаблонов и операторы is и as
+title: Практическое руководство. Безопасное приведение с помощью сопоставления шаблонов, а также операторов is и as
 description: Узнайте, как использовать сопоставление шаблонов для безопасного приведения переменных в другой тип. Вы можете использовать сопоставление шаблонов, а также операторы as и is для безопасного преобразования типов.
 ms.date: 09/05/2018
 helpviewer_keywords:
 - cast operators [C#], as and is operators
 - as operator [C#]
 - is operator [C#]
-ms.openlocfilehash: 8d090df1338c535b11a7fd3ec32f6d1cb00b338f
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 762f8135063f7256ce7a167c65013703d9249039
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739684"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73973093"
 ---
-# <a name="how-to-safely-cast-by-using-pattern-matching-and-the-is-and-as-operators"></a>Практическое руководство. Безопасное приведение с помощью сопоставления шаблонов и операторы is и as
+# <a name="how-to-safely-cast-by-using-pattern-matching-and-the-is-and-as-operators"></a>Практическое руководство. Безопасное приведение с помощью сопоставления шаблонов, а также операторов is и as
 
 В связи с полиморфизмом объектов переменная типа базового класса может содержать производный [тип](../programming-guide/types/index.md). Для доступа к членам экземпляра производного типа необходимо [привести](../programming-guide/types/casting-and-type-conversions.md) значение обратно к производному типу. Однако приведение создает риск возникновения исключения <xref:System.InvalidCastException>. C# предоставляет операторы [сопоставления шаблонов](../pattern-matching.md), которые выполняют приведение условно только в случае успеха. C# также предоставляет операторы [is](../language-reference/operators/type-testing-and-cast.md#is-operator) и [as](../language-reference/operators/type-testing-and-cast.md#as-operator) для проверки определенного типа значения.
 

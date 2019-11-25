@@ -1,17 +1,17 @@
 ---
-title: Практическое руководство. Определение абстрактных свойств - руководство по программированию на C#
+title: Практическое руководство. Определение абстрактных свойств (руководство по программированию на C#)
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - properties [C#], abstract
 - abstract properties [C#]
 ms.assetid: 672a90eb-47b9-4ae0-9914-af53852fddcb
-ms.openlocfilehash: 57fd2ed3a26bf5986f9c8a1a6cae6b041811e84c
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 1b6dc1dfe932ffff161b0eef667bd35a75b66cf9
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70970902"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73971004"
 ---
 # <a name="how-to-define-abstract-properties-c-programming-guide"></a>Практическое руководство. Определение абстрактных свойств (руководство по программированию на C#)
 В следующем примере показано, как определять [абстрактные](../../language-reference/keywords/abstract.md) свойства. В объявлении абстрактного свойства не предоставляется реализация методов доступа к свойству. В нем объявляется, что класс поддерживает свойства, однако реализация методов доступа к ним передается в производные классы. В следующем примере показано, как реализовать абстрактные свойства, наследуемые от базового класса.  

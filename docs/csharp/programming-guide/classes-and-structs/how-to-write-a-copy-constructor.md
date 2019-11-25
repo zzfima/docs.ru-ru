@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# Language, copy constructor
 - copy constructor [C#]
 ms.assetid: fba899b5-fc41-428e-a745-3ebdbf37990a
-ms.openlocfilehash: bdc352566052f4cec1686176131e9b1e1b768794
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 4ac7ccb55775019eb86d5345797d2fd74d3b9527
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69596601"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73970391"
 ---
 # <a name="how-to-write-a-copy-constructor-c-programming-guide"></a>Практическое руководство. Создание конструктора копий (руководство по программированию на C#)
 В C# не предусмотрен конструктор копии для объектов, однако его можно написать самостоятельно.  

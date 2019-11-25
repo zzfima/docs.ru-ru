@@ -13,23 +13,23 @@ helpviewer_keywords:
 - Visual C#, creating applications
 - client/server applications, Windows applications
 ms.assetid: 2dfb50b7-5af2-4e12-9bbb-c5ade0e39a68
-ms.openlocfilehash: b9d9efb62e0c6bc0925662bc9424065922a1534c
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 5cf10a4d50aec561fea4f8537098345f8e03a26a
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71051986"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73457976"
 ---
-# <a name="developing-client-applications-with-the-net-framework"></a>Разработка клиентских приложений с использованием .NET Framework
+# <a name="develop-client-applications-with-the-net-framework"></a>Разработка клиентских приложений с использованием .NET Framework
 
-Существует несколько способов разработки приложений Windows с помощью .NET Framework. Вы можете использовать любые из этих средств и платформ. 
+Существует несколько способов разработки приложений Windows с помощью .NET Framework. Вы можете использовать любые из этих средств и платформ.
 
 - [Универсальная платформа Windows (UWP)](https://developer.microsoft.com/windows/apps)
 - [Windows Presentation Foundation (WPF)](./wpf/index.md)
 - [Windows Forms](./winforms/index.md)
 
 В темах этого раздела описаны способы создания приложений Windows с помощью Windows Presentation Foundation и Windows Forms. Но с помощью .NET Framework вы можете создавать и веб-приложения, а также клиентские приложения для компьютеров и устройств, публикуемые в Microsoft Store.
- 
+
 ## <a name="in-this-section"></a>Содержание раздела
 
 [Windows Presentation Foundation](./wpf/index.md)  
@@ -37,9 +37,6 @@ ms.locfileid: "71051986"
 
 [Windows Forms](./winforms/index.md)  
 Сведения о разработке приложений с помощью Windows Forms.
-
-[Общие клиентские технологии](./common-client-technologies/index.md)  
-Сведения о дополнительных технологиях, которые можно использовать при разработке клиентских приложений.
 
 ## <a name="related-sections"></a>Связанные разделы
 

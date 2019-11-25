@@ -2,13 +2,14 @@
 title: Индексаторы
 description: Сведения об индексаторах в C# и о том, как с их помощью реализуются индексируемые свойства, на которые можно ссылаться с использованием одного или нескольких аргументов.
 ms.date: 06/20/2016
+ms.technology: csharp-fundamentals
 ms.assetid: 0e9496da-e766-45a9-b92b-91820d4a350e
-ms.openlocfilehash: a13163cb6bd835dfdd16c83c905c134eb8a86e7d
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 86e646b341cf098d8621f095d4bfc9ea2191940d
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197604"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039121"
 ---
 # <a name="indexers"></a>Индексаторы
 

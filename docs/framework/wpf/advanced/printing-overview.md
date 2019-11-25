@@ -15,15 +15,15 @@ helpviewer_keywords:
 - XPSDrv-based printers
 - GDI print path [WPF]
 ms.assetid: 0de8ac41-9aa6-413d-a121-7aa6f41539b1
-ms.openlocfilehash: d578b9834ca39a33e284d3066eef85890c224a2f
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 5204165370459466b1258897e72c488ab7e7fadb
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740811"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975769"
 ---
 # <a name="printing-overview"></a>Общие сведения о печати
-С Microsoft .NET Framework разработчики приложений, использующие Windows Presentation Foundation (WPF), имеют богатый новый набор API-интерфейсов для управления печатью и системой печати. В [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] некоторые из усовершенствований управления печатью также доступны для разработчиков, создающих приложения [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)], и разработчиков, использующих неуправляемый код. Основой этой новой функциональности является новый формат XPS-файла и путь печати XPS.  
+С Microsoft .NET Framework разработчики приложений, использующие Windows Presentation Foundation (WPF), имеют богатый новый набор API-интерфейсов для управления печатью и системой печати. В Windows Vista некоторые из этих усовершенствований системы печати также доступны разработчикам, создающим [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] приложений и разработчиков, использующих неуправляемый код. Основой этой новой функциональности является новый формат XPS-файла и путь печати XPS.  
   
  В этом разделе содержатся следующие подразделы.  
   
@@ -31,7 +31,7 @@ ms.locfileid: "73740811"
 ## <a name="about-xps"></a>О формате XPS  
  XPS — это формат электронного документа, формат файла очереди и язык описания страницы. Это формат открытого документа, который использует XML, соглашения об упаковке и другие отраслевые стандарты для создания кросс-платформенных документов. XPS упрощает процесс создания, совместного использования, печати, просмотра и архивации цифровых документов. Дополнительные сведения о XPS см. в статье [XPS-документы](/windows/desktop/printdocs/documents).  
   
- Некоторые методы печати содержимого на основе XPS с помощью [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] демонстрируются при [программной печати XPS-файлов](how-to-programmatically-print-xps-files.md). Ссылки на эти примеры могут оказаться полезными при просмотре содержимого этого раздела. (Разработчики неуправляемого кода должны увидеть документацию по [функции MXDC_ESCAPE](/windows/desktop/printdocs/mxdc-escape). Windows Forms разработчики должны использовать API в пространстве имен <xref:System.Drawing.Printing>, который не поддерживает полный путь печати XPS, но поддерживает гибридный путь печати с помощью GDI в XPS. См. раздел **Архитектура способа печати** ниже.)  
+ Некоторые методы печати содержимого на основе XPS с помощью [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] демонстрируются при [программной печати XPS-файлов](how-to-programmatically-print-xps-files.md). Ссылки на эти примеры могут оказаться полезными при просмотре содержимого этого раздела. (Разработчикам неуправляемого кода следует ознакомиться с документацией по [функции MXDC_ESCAPE](/windows/desktop/printdocs/mxdc-escape). Windows Forms разработчики должны использовать API в пространстве имен <xref:System.Drawing.Printing>, который не поддерживает полный путь печати XPS, но поддерживает гибридный путь печати с помощью GDI в XPS. См. раздел **Архитектура способа печати** ниже.)  
   
 <a name="XPS_print_path_intro"></a>   
 ## <a name="xps-print-path"></a>Способ печати XPS  

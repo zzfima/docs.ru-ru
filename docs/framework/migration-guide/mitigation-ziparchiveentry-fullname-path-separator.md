@@ -8,14 +8,12 @@ helpviewer_keywords:
 - .NET Framework 4.6.1 retargeting changes
 - retargeting changes
 ms.assetid: 8d575722-4fb6-49a2-8a06-f72d62dc3766
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b97436ca2f81fea139689c7c2c2348718827b90f
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 021d22e90ba39a4d01cf7d64588fab2d724b6640
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70778860"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73457730"
 ---
 # <a name="mitigation-ziparchiveentryfullname-path-separator"></a>Устранение рисков. Разделитель пути ZipArchiveEntry.FullName
 Начиная с приложений, предназначенных для .NET Framework 4.6.1, изменен разделитель пути для свойства <xref:System.IO.Compression.ZipArchiveEntry.FullName%2A?displayProperty=nameWithType>: вместо обратной косой черты ("\\"), используемой в предыдущих версиях платформы .NET Framework, теперь используется прямая косая черта ("/").   Объекты <xref:System.IO.Compression.ZipArchiveEntry?displayProperty=nameWithType> создаются путем вызова одной из перегрузок метода <xref:System.IO.Compression.ZipFile.CreateFromDirectory%2A?displayProperty=nameWithType>.  
@@ -47,4 +45,4 @@ ms.locfileid: "70778860"
 ## <a name="see-also"></a>См. также
 
 - [Изменение целевой платформы](retargeting-changes-in-the-net-framework-4-6-1.md)
-- [Совместимость приложений в 4.6.1](application-compatibility-in-the-net-framework-4-6-1.md)
+- [Совместимость приложений](application-compatibility.md)

@@ -4,14 +4,15 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - breaking changes [Visual Basic]
 ms.assetid: 708fb176-35eb-4cbc-a6e7-a04c6e3bdaff
-ms.openlocfilehash: 847034503f2797cf16a944478ebf9587a6985e82
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 35f230aae85b6a971185c576b98898a45734de90
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58834014"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73973970"
 ---
 # <a name="visual-basic-breaking-changes-in-visual-studio"></a>Критические изменения Visual Basic в Visual Studio
+
 Самая актуальная документация по Visual Studio 2017: [Документация по Visual Studio 2017](https://docs.microsoft.com/visualstudio/).
 
 В Visual Basic в Visual Studio 2015 нет изменений, которые могут заблокировать компиляцию для приложения, созданного на Visual Basic в Visual Studio 2013, или могут изменить его поведение во время выполнения.  

@@ -1,15 +1,15 @@
 ---
 title: Добавление ссылки на Веб-службу WCF
 description: Обзор инструмента Microsoft WCF Web Service Reference Provider, который расширяет функциональные возможности проектов .NET Core и ASP.NET Core аналогично функции "Добавление ссылки на службу" для проектов .NET Framework.
-author: mlacouture
-ms.date: 04/19/2018
+author: dasetser
+ms.date: 10/29/2019
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 28eaae4a83d918f8a9e5376eb3c8d42843ffa027
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: feecf374e1af48f349495c13ea91b810c6b0a1c3
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72773956"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73191899"
 ---
 # <a name="use-the-wcf-web-service-reference-provider-tool"></a>Использование инструмента WCF Web Service Reference Provider
 
@@ -76,12 +76,16 @@ ms.locfileid: "72773956"
 
 После завершения этих процессов можно создать экземпляр сформированного типа клиента WCF и вызвать операции службы.
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="see-also"></a>См. также
 
-### <a name="feedback--questions"></a>Отзывы и вопросы
+- [Начало работы с приложениями Windows Communication Foundation](../../framework/wcf/getting-started-tutorial.md)
+- [Службы Windows Communication Foundation и службы данных WCF в Visual Studio](/visualstudio/data-tools/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio)
+- [Поддерживаемые функции WCF в .NET Core](https://github.com/dotnet/wcf/blob/master/release-notes/SupportedFeatures-v2.1.0.md)
 
-Если у вас появились вопросы или отзывы, [сообщите об этом на сайте GitHub](https://github.com/dotnet/wcf/issues/new). Вы также можете просмотреть имеющиеся вопросы или проблемы [в репозитории WCF на сайте GitHub](https://github.com/dotnet/wcf/issues?utf8=%E2%9C%93&q=is:issue%20label:tooling).
+## <a name="feedback--questions"></a>Отзывы и вопросы
 
-### <a name="release-notes"></a>заметки о выпуске;
+Вопросы или отзывы отправляйте в [Сообщество разработчиков](https://developercommunity.visualstudio.com/) с помощью средства [информирования о проблеме](/visualstudio/ide/how-to-report-a-problem-with-visual-studio).
+
+## <a name="release-notes"></a>заметки о выпуске;
 
 - Актуальные сведения о выпуске, включая описание известных проблем, см. в [заметках о выпуске](https://github.com/dotnet/wcf/blob/master/release-notes/WCF-Web-Service-Reference-notes.md).

@@ -1,16 +1,16 @@
 ---
-title: Практическое руководство. Изменение содержимого строки (C#)
+title: Практическое руководство. Изменение содержимого строки (руководство по C#)
 ms.date: 02/26/2018
 helpviewer_keywords:
 - strings [C#], modifying
-ms.openlocfilehash: 2cc1166d98a6cc07e0827a138cecb09c0530b899
-ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
+ms.openlocfilehash: 539e313173d46c2c92399cefe94207c8beed03b4
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67267756"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73973255"
 ---
-# <a name="how-to-modify-string-contents-in-c"></a>Практическое руководство. Изменение содержимого строки в C\#
+# <a name="how-to-modify-string-contents-in-c"></a>Практическое руководство. Изменение содержимого строки в C\#
 
 В этой статье демонстрируется несколько способов получения `string` путем изменения существующего объекта `string`. Все показанные методы возвращают результат изменений как новый объект `string`. Чтобы это было очевидно, во всех примерах результат сохраняется в новой переменной. Затем вы можете изучить исходный объект `string` и объект `string`, полученный в результате изменений при выполнении каждого примера.
 

@@ -9,17 +9,16 @@ helpviewer_keywords:
 ms.assetid: fdf5856d-516b-4042-849d-911c4518a6cb
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: dce8c58f94c66bcf2336d3708ebc64699148d556
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 56ecdc41c5b5a3f7ee272768d5c2a3745da26633
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71046708"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975515"
 ---
 # <a name="clr-etw-keywords-and-levels"></a>Ключевые слова и уровни среды CLR (трассировка событий Windows)
-<a name="top"></a> События трассировки событий Windows можно отфильтровать по категории и уровню. [Ключевые слова событий трассировки событий Windows в среде CLR](#keywords) обеспечивают фильтрацию событий по категории. Они используются в различных сочетаниях для поставщиков среды выполнения и очистки. [Уровни событий](#levels) определяются флагами.  
+События трассировки событий Windows можно отфильтровать по категории и уровню. [Ключевые слова событий трассировки событий Windows в среде CLR](#clr-etw-keywords) обеспечивают фильтрацию событий по категории. Они используются в различных сочетаниях для поставщиков среды выполнения и очистки. [Уровни событий](#etw-event-levels) определяются флагами.  
   
-<a name="keywords"></a>   
 ## <a name="clr-etw-keywords"></a>Ключевые слова трассировки событий Windows в среде CLR  
  Ключевые слова служат флагами, которые можно объединять для формирования значений. На практике при использовании программ командной строки вместо имен ключевых слов применяются их шестнадцатеричные значения.  
   
@@ -37,7 +36,7 @@ ms.locfileid: "71046708"
 ### <a name="clr-etw-runtime-keywords"></a>Ключевые слова среды выполнения трассировки событий Windows в среде CLR  
  В таблице ниже приведены ключевые слова среды выполнения трассировки событий Windows среды CLR, их значения и предназначение.  
   
-|Имя ключевого слова среды выполнения|Значение|Цель|  
+|Имя ключевого слова среды выполнения|значения|Цель|  
 |--------------------------|-----------|-------------|  
 |`GCKeyword`|0x00000001|Включает сбор [событий сборки мусора](garbage-collection-etw-events.md).|  
 |`LoaderKeyword`|0x00000008|Включает сбор [событий загрузчика](loader-etw-events.md).|  
@@ -52,17 +51,15 @@ ms.locfileid: "71046708"
 |`ContentionKeyword`|0x00004000|Включает сбор [событий состязания](contention-etw-events.md).|  
 |`ExceptionKeyword`|0x00008000|Включает сбор [событий исключений](exception-thrown-v1-etw-event.md).|  
 |`ThreadingKeyword`|0x00010000|Включает сбор [событий пула потоков](thread-pool-etw-events.md).|  
-|`OverrideAndSuppressNGenEventsKeyword`|0x00040000|(Доступно в .NET Framework 4,5 и более поздних версиях). Подавляет ключевое слово `NGenKeyword`, обладающее высокими издержками, и запрещает создание событий для методов, входящих в состав модулей NGen. Начиная с .NET Framework 4,5, средства профилирования должны использовать `OverrideAndSuppressNGenEventsKeyword` и `NGenKeyword` вместе, чтобы подавить создание событий для методов в модулях Ngen. Это позволяет средству профилирования использовать более эффективные базы данных программы NGen для получения сведений о методах модулей NGen. Среда CLR в .NET Framework 4 и более ранних версиях не поддерживает создание баз данных программы NGen. В более ранних версиях среда CLR не распознает `OverrideAndSuppressNGenEventsKeyword` и обрабатывает `NGenKeyword` , создавая события для методов модулей NGen.|  
+|`OverrideAndSuppressNGenEventsKeyword`|0x00040000|(Доступно в .NET Framework 4,5 и более поздних версиях). Подавляет ключевое слово `NGenKeyword` высокой нагрузки и предотвращает создание событий для методов, которые находятся в модулях NGen. Начиная с .NET Framework 4,5, средства профилирования должны использовать `OverrideAndSuppressNGenEventsKeyword` и `NGenKeyword` вместе, чтобы подавить создание событий для методов в модулях NGen. Это позволяет средству профилирования использовать более эффективные базы данных программы NGen для получения сведений о методах модулей NGen. Среда CLR в .NET Framework 4 и более ранних версиях не поддерживает создание баз данных программы NGen. В более ранних версиях среда CLR не распознает `OverrideAndSuppressNGenEventsKeyword` и обрабатывает `NGenKeyword` , создавая события для методов модулей NGen.|  
 |`PerfTrackKeyWord`|0x2000000|Включает сбор событий `ModuleLoad` и `ModuleRange` .|  
 |`StackKeyword`|0x40000000|Включает сбор [событий трассировки стека](stack-etw-event.md)среды CLR.|  
-  
- [К началу](#top)  
   
 <a name="rundown"></a>   
 ### <a name="clr-etw-rundown-keywords"></a>Ключевые слова среды очистки трассировки событий Windows в среде CLR  
  В таблице ниже приведены ключевые слова среды очистки трассировки событий Windows среды CLR, их значения и предназначение.  
   
-|Имя ключевого слова очистки|Значение|Цель|  
+|Имя ключевого слова очистки|значения|Цель|  
 |--------------------------|-----------|-------------|  
 |`LoaderRundownKeyword`|0x00000008|Включает сбор событий загрузчика при использовании с ключевыми словами `StartRundownKeyword` и `EndRundownKeyword`.|  
 |`JitRundownKeyword`|0x00000010|Включает сбор событий `DCStart` и `DCEnd` методов (скомпилированных JIT-компилятором) при использовании с ключевыми словами `StartRundownKeyword` и `EndRundownKeyword`.|  
@@ -71,40 +68,33 @@ ms.locfileid: "71046708"
 |`EndRundownKeyword`|0x00000100|Включает перечисление состояния системы во время очистки завершения.|  
 |`AppDomainResourceManagementRundownKeyword`|0x00000800|Включает сбор событий для отслеживания ресурсов на уровне <xref:System.AppDomain> при использовании с ключевыми словами `StartRundownKeyword` или `EndRundownKeyword`.|  
 |`ThreadingKeyword`|0x00010000|Включает сбор событий пула потоков.|  
-|`OverrideAndSuppressNGenEventsRundownKeyword`|0x00040000|(Доступно в .NET Framework 4,5 и более поздних версиях). Подавляет ключевое слово `NGenRundownKeyword`, обладающее высокими издержками, и запрещает создание событий для методов, входящих в состав модулей NGen. Начиная с .NET Framework 4,5, средства профилирования должны использовать `OverrideAndSuppressNGenEventsRundownKeyword` и `NGenRundownKeyword` вместе, чтобы подавить создание событий для методов в модулях Ngen. Это позволяет средству профилирования использовать более эффективные базы данных программы NGen для получения сведений о методах модулей NGen. Среда CLR в .NET Framework 4 и более ранних версиях не поддерживает создание баз данных программы NGen. В более ранних версиях среда CLR не распознает `OverrideAndSuppressNGenEventsRundownKeyword` и обрабатывает `NGenRundownKeyword` , создавая события для методов модулей NGen.|  
-|`PerfTrackKeyWord`|0x2000000|Включает сбор событий `ModuleDCStart`, `ModuleDCEnd`, `ModuleRangeDCStart`и `ModuleRangeDCEnd` .|  
-  
- [К началу](#top)  
+|`OverrideAndSuppressNGenEventsRundownKeyword`|0x00040000|(Доступно в .NET Framework 4,5 и более поздних версиях). Подавляет ключевое слово `NGenRundownKeyword` высокой нагрузки и предотвращает создание событий для методов, которые находятся в модулях NGen. Начиная с .NET Framework 4,5, средства профилирования должны использовать `OverrideAndSuppressNGenEventsRundownKeyword` и `NGenRundownKeyword` вместе, чтобы подавить создание событий для методов в модулях NGen. Это позволяет средству профилирования использовать более эффективные базы данных программы NGen для получения сведений о методах модулей NGen. Среда CLR в .NET Framework 4 и более ранних версиях не поддерживает создание баз данных программы NGen. В более ранних версиях среда CLR не распознает `OverrideAndSuppressNGenEventsRundownKeyword` и обрабатывает `NGenRundownKeyword` , создавая события для методов модулей NGen.|  
+|`PerfTrackKeyWord`|0x2000000|Включает сбор событий `ModuleDCStart`, `ModuleDCEnd`, `ModuleRangeDCStart`и `ModuleRangeDCEnd` .|   
   
 <a name="runtime_combo"></a>   
 ### <a name="keyword-combinations-for-symbol-resolution-for-the-runtime-provider"></a>Сочетания ключевых слов для разрешения символов для поставщика среды выполнения  
   
 |Ключевые слова и флаги|События загрузки и выгрузки доменов приложений, сборок, модулей|События загрузки и выгрузки методов (кроме динамических событий)|События загрузки и уничтожения динамических методов|  
 |------------------------|--------------------------------------------------------------|----------------------------------------------------------|-----------------------------------------|  
-|`LoaderKeyword`|События загрузки и выгрузки.|Нет.|Нет.|  
-|`JITKeyword`<br /><br /> (+ `StartEnumerationKeyword` ничего не добавляет)|Нет.|События загрузки.|События загрузки и выгрузки.|  
-|`JITKeyword` +<br /><br /> `EndEnumerationKeyword`|Нет.|События загрузки и выгрузки.|События загрузки и выгрузки.|  
-|`NGenKeyword`|Нет.|Нет.|Не применяется|  
-|`NGenKeyword` +<br /><br /> `StartEnumerationKeyword`|Нет.|События загрузки.|Не применяется|  
-|`NGenKeyword` +<br /><br /> `EndEnumerationKeyword`|Нет.|События выгрузки.|Не применяется|  
-  
- [К началу](#top)  
+|`LoaderKeyword`|События загрузки и выгрузки.|Отсутствует.|Отсутствует.|  
+|`JITKeyword`<br /><br /> (+ `StartEnumerationKeyword` ничего не добавляет)|Отсутствует.|События загрузки.|События загрузки и выгрузки.|  
+|`JITKeyword` +<br /><br /> `EndEnumerationKeyword`|Отсутствует.|События загрузки и выгрузки.|События загрузки и выгрузки.|  
+|`NGenKeyword`|Отсутствует.|Отсутствует.|Неприменимо.|  
+|`NGenKeyword` +<br /><br /> `StartEnumerationKeyword`|Отсутствует.|События загрузки.|Неприменимо.|  
+|`NGenKeyword` +<br /><br /> `EndEnumerationKeyword`|Отсутствует.|События выгрузки.|Неприменимо.|  
   
 <a name="rundown_combo"></a>   
 ### <a name="keyword-combinations-for-symbol-resolution-for-the-rundown-provider"></a>Сочетания ключевых слов для разрешения символов для поставщика очистки  
   
 |Ключевые слова и флаги|События DCStart и DCEnd для доменов приложений, сборок, модулей|События DCStart и DCEnd методов (включая события динамических методов)|  
 |------------------------|----------------------------------------------------------------|----------------------------------------------------------------------|  
-|`LoaderRundownKeyword` +<br /><br /> `StartRundownKeyword`|События`DCStart` .|Нет.|  
-|`LoaderRundownKeyword` +<br /><br /> `EndRundownKeyword`|События`DCEnd` .|Нет.|  
-|`JITKeyword` +<br /><br /> `StartRundownKeyword`|Нет.|События`DCStart` .|  
-|`JITKeyword` +<br /><br /> `EndRundownKeyword`|Нет.|События`DCEnd` .|  
-|`NGenKeyword` +<br /><br /> `StartRundownKeyword`|Нет.|События`DCStart` .|  
-|`NGenKeyword` +<br /><br /> `EndRundownKeyword`|Нет.|События`DCEnd` .|  
-  
- [К началу](#top)  
-  
-<a name="levels"></a>   
+|`LoaderRundownKeyword` +<br /><br /> `StartRundownKeyword`|События`DCStart` .|Отсутствует.|  
+|`LoaderRundownKeyword` +<br /><br /> `EndRundownKeyword`|События`DCEnd` .|Отсутствует.|  
+|`JITKeyword` +<br /><br /> `StartRundownKeyword`|Отсутствует.|События`DCStart` .|  
+|`JITKeyword` +<br /><br /> `EndRundownKeyword`|Отсутствует.|События`DCEnd` .|  
+|`NGenKeyword` +<br /><br /> `StartRundownKeyword`|Отсутствует.|События`DCStart` .|  
+|`NGenKeyword` +<br /><br /> `EndRundownKeyword`|Отсутствует.|События`DCEnd` .|  
+
 ## <a name="etw-event-levels"></a>Уровни событий трассировки событий Windows  
  События трассировки событий Windows также можно фильтровать по уровням. Если задан уровень 0x5, создаются события всех уровней, включая 0x5 и более низкие (события относятся к категориям, включенным с помощью ключевых слов). Если задан уровень 0x2, создаются только события, относящиеся к уровню 0x2 и более низким.  
   

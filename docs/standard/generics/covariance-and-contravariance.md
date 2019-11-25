@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 2678dc63-c7f9-4590-9ddc-0a4df684d42e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 08e6458f0a14b78c6d05f706afa710931d60094a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ee8cc1b677ad6f6c2718c155edbba632df38dbd3
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69948789"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73974699"
 ---
 # <a name="covariance-and-contravariance-in-generics"></a>Ковариантность и контрвариантность в универсальных шаблонах
-<a name="top"></a> Термины "ковариантность" и "контрвариантность" относятся к возможности использовать более производный (более конкретный) или менее производный (менее конкретный) тип, чем задано изначально. Параметры универсальных типов поддерживают ковариантность и контрвариантность и обеспечивают большую гибкость в назначении и использовании универсальных типов. Ниже приведены определения терминов "ковариантность", "контрвариантность" и "инвариантность" в контексте системы типов. В этих примерах предполагается наличие базового класса с именем `Base` и производного класса с именем `Derived`.  
+Термины "ковариантность" и "контрвариантность" относятся к возможности использовать более производный (более конкретный) или менее производный (менее конкретный) тип, чем задано изначально. Параметры универсальных типов поддерживают ковариантность и контрвариантность и обеспечивают большую гибкость в назначении и использовании универсальных типов. Ниже приведены определения терминов "ковариантность", "контрвариантность" и "инвариантность" в контексте системы типов. В этих примерах предполагается наличие базового класса с именем `Base` и производного класса с именем `Derived`.  
   
 - `Covariance`  
   
@@ -65,21 +65,9 @@ ms.locfileid: "69948789"
   
 - Вариативность применяется только к ссылочным типам; если указать тип значения для параметра вариантного типа, этот параметр типа является инвариантным для типа, созданного в результате.  
   
-- Вариативность не применима к объединению делегатов. Поэтому для заданных двух делегатов типов `Action<Derived>` и `Action<Base>` (`Action(Of Derived)` и `Action(Of Base)` в Visual Basic) нельзя объединять первый делегат со вторым, несмотря на то что результат будет безопасным типом. Вариативность позволяет присвоить второй делегат переменной типа `Action<Derived>`, но делегаты можно объединять, только если их типы точно совпадают.  
-  
- В следующих подразделах подробно описываются ковариантные и контрвариантные параметры типа.  
-  
-- [Универсальные интерфейсы с ковариантными параметрами типа](#InterfaceCovariantTypeParameters)  
-  
-- [Универсальные интерфейсы с контравариантными параметрами универсального типа](#InterfaceCovariantTypeParameters)  
-  
-- [Универсальные делегаты с параметрами вариантного типа](#DelegateVariantTypeParameters)  
-  
-- [Определение вариантных универсальных интерфейсов и делегатов](#DefiningVariantTypeParameters)  
-  
-- [Список вариантных универсальных интерфейсов и типов делегатов](#VariantList)  
-  
-<a name="InterfaceCovariantTypeParameters"></a>   
+- Вариативность не применима к объединению делегатов. Поэтому для заданных двух делегатов типов `Action<Derived>` и `Action<Base>` (`Action(Of Derived)` и `Action(Of Base)` в Visual Basic) нельзя объединять первый делегат со вторым, несмотря на то что результат будет безопасным типом. Вариативность позволяет присвоить второй делегат переменной типа `Action<Derived>`, но делегаты можно объединять, только если их типы точно совпадают.
+
+<a name="InterfaceCovariantTypeParameters"></a>
 ## <a name="generic-interfaces-with-covariant-type-parameters"></a>Универсальные интерфейсы с ковариантными параметрами типа  
  Начиная с .NET Framework 4 несколько универсальных интерфейсов имеют ковариантные параметры типа; например: <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.Generic.IEnumerator%601>, <xref:System.Linq.IQueryable%601> и <xref:System.Linq.IGrouping%602>. Эти интерфейсы имеют только параметры ковариантного типа. Таким образом, параметры типа используются только для возвращаемых типов в членах.  
   
@@ -88,9 +76,6 @@ ms.locfileid: "69948789"
  [!code-csharp[CoContravarianceInClrGenericI#1](../../../samples/snippets/csharp/VS_Snippets_CLR/cocontravarianceinclrgenerici/cs/example.cs#1)]
  [!code-vb[CoContravarianceInClrGenericI#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/cocontravarianceinclrgenerici/vb/example.vb#1)]  
   
- [К началу](#top)  
-  
-<a name="InterfaceContravariantTypeParameters"></a>   
 ## <a name="generic-interfaces-with-contravariant-generic-type-parameters"></a>Универсальные интерфейсы с контравариантными параметрами универсального типа  
  Начиная с .NET Framework 4 несколько универсальных интерфейсов имеют контравариантные параметры типа; например: <xref:System.Collections.Generic.IComparer%601>, <xref:System.IComparable%601> и <xref:System.Collections.Generic.IEqualityComparer%601>. Эти интерфейсы имеют только параметры контравариантного типа, таким образом, параметры типа используются только как типы параметра в членах интерфейсов.  
   
@@ -102,10 +87,7 @@ ms.locfileid: "69948789"
   
  [!code-csharp[CoContravarianceInClrGenericI2#1](../../../samples/snippets/csharp/VS_Snippets_CLR/cocontravarianceinclrgenerici2/cs/example.cs#1)]
  [!code-vb[CoContravarianceInClrGenericI2#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/cocontravarianceinclrgenerici2/vb/example.vb#1)]  
-  
- [К началу](#top)  
-  
-<a name="DelegateVariantTypeParameters"></a>   
+
 ## <a name="generic-delegates-with-variant-type-parameters"></a>Универсальные делегаты с параметрами вариантного типа  
  В .NET Framework 4 универсальные методы-делегаты `Func`, такие как <xref:System.Func%602>, имеют ковариантные типы возвращаемого значения и контравариантные типы параметров. Универсальные методы-делегаты `Action` , такие как <xref:System.Action%602>, имеют контравариантные типы параметров. Это означает, что делегаты можно присваивать переменным, имеющим более производные типы параметров и (в случае универсальных методов-делегатов `Func` ) менее производные возвращаемые типы.  
   
@@ -141,11 +123,8 @@ ms.locfileid: "69948789"
   
  [!code-csharp[CoContravarianceDelegatesGenRelaxed#1](../../../samples/snippets/csharp/VS_Snippets_CLR/cocontravariancedelegatesgenrelaxed/cs/example.cs#1)]
  [!code-vb[CoContravarianceDelegatesGenRelaxed#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/cocontravariancedelegatesgenrelaxed/vb/example.vb#1)]  
-  
- [К началу](#top)  
-  
-<a name="DefiningVariantTypeParameters"></a>   
-## <a name="defining-variant-generic-interfaces-and-delegates"></a>Определение вариантных универсальных интерфейсов и делегатов  
+
+## <a name="defining-variant-generic-interfaces-and-delegates"></a>Определение вариантных универсальных интерфейсов и делегатов
  Начиная с .NET Framework 4 языки Visual Basic и C# содержат ключевые слова, позволяющие помечать параметры универсального типа интерфейсов и делегатов как ковариантные или контравариантные.  
   
 > [!NOTE]
@@ -163,11 +142,8 @@ ms.locfileid: "69948789"
  Языки Visual Basic и C# не позволяют нарушать правила использования параметров ковариантного и контравариантного типов или добавлять заметки ковариантности или контрвариантности в параметры типа, имеющие тип, отличный от интерфейсов и делегатов. Ассемблер [MSIL Assembler](../../../docs/framework/tools/ilasm-exe-il-assembler.md) не выполняет такие проверки, но в случае загрузки типа, нарушающего эти правила, возникает исключение <xref:System.TypeLoadException> .  
   
  Дополнительные сведения и пример кода см. в разделах [Вариативность в универсальных интерфейсах (C#)](../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md) и [Вариативность в универсальных интерфейсах (Visual Basic)](../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md).  
-  
- [К началу](#top)  
-  
-<a name="VariantList"></a>   
-## <a name="list-of-variant-generic-interface-and-delegate-types"></a>Список вариантных универсальных интерфейсов и типов делегатов  
+
+## <a name="list-of-variant-generic-interface-and-delegate-types"></a>Список вариантных универсальных интерфейсов и типов делегатов
  В .NET Framework 4 следующие типы интерфейсов и делегатов имеют параметры ковариантного и (или) контравариантного типа.  
   
 |Тип|Параметры ковариантного типа|Параметры контравариантного типа|  

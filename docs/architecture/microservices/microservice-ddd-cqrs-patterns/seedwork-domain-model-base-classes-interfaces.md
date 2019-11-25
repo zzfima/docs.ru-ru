@@ -2,12 +2,12 @@
 title: Seedwork (многократно используемые базовые классы и интерфейсы для модели предметной области)
 description: Архитектура микрослужб .NET для контейнерных приложений .NET | Использование концепции seedwork в качестве отправной точки для запуска реализации для модели предметной области, ориентированной на DDD.
 ms.date: 10/08/2018
-ms.openlocfilehash: 87cbc5ce96b66a9ac3e1c2bfc8c863d1b20714db
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f53988b92a05fb54f3f05d9f463450d1a11a0843
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73093807"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73737214"
 ---
 # <a name="seedwork-reusable-base-classes-and-interfaces-for-your-domain-model"></a>Seedwork (многократно используемые базовые классы и интерфейсы для модели предметной области)
 
@@ -15,7 +15,9 @@ ms.locfileid: "73093807"
 
 На рис. 7-12 показаны классы, формирующие набор seedwork модели предметной области в микрослужбе заказов. В нем имеется несколько пользовательских базовых классов, таких как Entity, ValueObject и Enumeration, а также несколько интерфейсов. Эти интерфейсы (IRepository и IUnitOfWork) информируют уровень инфраструктуры о том, что должно быть реализовано. Эти интерфейсы также используются через внедрение зависимостей из прикладного уровня.
 
-![Подробное содержимое папки SeedWork, содержащей базовые классы и интерфейсы: Entity.cs, Enumeration.cs, IAggregateRoot.cs, IRepository.cs, IUnitOfWork.cs и ValueObject.cs](./media/image13.PNG)
+:::image type="complex" source="./media/seedwork-domain-model-base-classes-interfaces/vs-solution-seedwork-classes.png" alt-text="Снимок экрана: классы, содержащиеся в папке SeedWork.":::
+Подробное содержимое папки SeedWork, содержащей базовые классы и интерфейсы: Entity.cs, Enumeration.cs, IAggregateRoot.cs, IRepository.cs, IUnitOfWork.cs и ValueObject.cs.
+:::image-end:::
 
 **Рис. 7-12**. Пример набора базовых классов и интерфейсов "seedwork" модели предметной области
 

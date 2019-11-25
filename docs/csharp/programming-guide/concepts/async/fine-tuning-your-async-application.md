@@ -2,12 +2,12 @@
 title: Настройка асинхронного приложения (C#)
 ms.date: 07/20/2015
 ms.assetid: 97696eb9-81fc-4940-9655-84daa8eb4d5c
-ms.openlocfilehash: a7c730992a9bbb4853b6451323e1c49bd19bdf42
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: cff50e62ff62b70e97e7ea6e03714326d774e407
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69924437"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73970240"
 ---
 # <a name="fine-tuning-your-async-application-c"></a>Настройка асинхронного приложения (C#)
 Методы и свойства, доступные при использовании типа <xref:System.Threading.Tasks.Task>, позволяют сделать приложение более точным и гибким. В подразделах этого раздела приводятся примеры, в которых используются <xref:System.Threading.CancellationToken> и важные методы `Task`, такие как <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> и <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType>.  
@@ -20,7 +20,7 @@ ms.locfileid: "69924437"
   
 - `WhenAll` возвращает задачу, которая завершается после завершения всех задач в коллекции.  
   
-     Дополнительные сведения и пример кода, использующий `WhenAll`, см. в разделе [Практический пример. Оптимизация производительности асинхронных процедур с использованием метода Task.WhenAll в C#](./how-to-extend-the-async-walkthrough-by-using-task-whenall.md).  
+     Дополнительные сведения и пример, использующий метод `WhenAll`, см. в разделе [Практическое руководство. Расширение пошагового руководства по асинхронным процедурам с использованием метода Task.WhenAll (C#)](./how-to-extend-the-async-walkthrough-by-using-task-whenall.md).
   
  Этот раздел содержит следующие примеры.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "69924437"
   
  Проекты создают пользовательский интерфейс, содержащий кнопку, которая запускает процесс, и кнопку, которая его отменяет, как показано на следующем рисунке. Кнопки называются `startButton` и `cancelButton`.  
   
- ![Окно WPF с кнопкой "Отмена"](./media/fine-tuning-your-async-application/cancellation-and-start-button.png "Диалоговое окно с кнопками запуска и остановки")  
+ ![Окно WPF с кнопкой "Отмена"](./media/fine-tuning-your-async-application/cancellation-and-start-button.png "Диалоговое окно с кнопкой запуска и остановки")  
   
  Скачать полный проект Windows Presentation Foundation (WPF) можно со страницы [Пример асинхронности. Тонкая настройка приложения](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea).  
   

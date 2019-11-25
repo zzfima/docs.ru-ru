@@ -3,26 +3,49 @@ title: Что такое .NET для Apache Spark?
 description: Сведения о .NET для Apache Spark, бесплатной кроссплатформенной платформе аналитики больших данных с открытым кодом, которая позволяет пользоваться Spark везде, где вы пишете код .NET.
 author: mamccrea
 ms.topic: overview
-ms.date: 05/06/2019
-ms.openlocfilehash: e72a1fe196b4374903146fd439033d5dafb83eaf
-ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
+ms.date: 10/15/2019
+ms.openlocfilehash: 12fccd478cedaccf455043feb3afa7b12221bf0e
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "69576891"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458198"
 ---
 # <a name="what-is-net-for-apache-spark"></a>Что такое .NET для Apache Spark?
 
-[Apache Spark](https://spark.apache.org/) — это подсистема распределенной обработки общего назначения для анализа больших наборов данных, обычно терабайт или петабайт. .NET для Apache Spark предоставляет разработчикам доступ к Apache Spark, что позволяет реализовывать возможности Spark в приложениях с поддержкой уже знакомых языков.
+[Apache Spark](what-is-spark.md) — это подсистема распределенной обработки общего назначения для анализа больших наборов данных, в несколько терабайт или петабайт. .NET для Apache Spark предоставляет бесплатный, кросс-платформенный и с открытым кодом механизм поддержки .NET для популярной платформы больших данных с открытым кодом. Теперь вы можете включить возможности Apache Spark в приложения для работы с большими данными, используя привычные языки программирования.
 
-С помощью C# и F# можно получить доступ к следующим возможностям:
+## <a name="why-choose-net-for-apache-spark"></a>Преимущества .NET для Apache Spark
 
-* таблица данных и SparkSQL для работы со структурированными данными;
+.NET для Apache Spark предоставляет разработчикам возможность работы с .NET и базы кода, которые открывают дверь в мир анализа больших данных. .NET для Apache Spark предоставляет высокопроизводительные интерфейсы API для работы со Spark на C# и F#. С помощью C# и F# можно получить доступ к следующим возможностям:
+
+* DataFrame и SparkSQL для работы со структурированными данными;
 * структурированная потоковая передача Spark для работы с потоковыми данными.
+* Spark SQL для создания запросов с синтаксисом SQL;
+* интеграция машинного обучения для быстрого обучения и прогнозирования (то есть для использования .NET для Apache Spark вместе с [ML.NET](https://dot.net/ml)).
 
 Платформа .NET для Apache Spark совместима с .NET Standard, формальной спецификацией API-интерфейсов .NET, которые доступны во всех реализациях .NET. Это означает, что вы можете использовать .NET для Apache Spark в любом месте, где вы пишете код .NET, что позволяет использовать все знания, навыки, код и библиотеки, которые у вас уже есть.
 
 Платформа .NET для Apache Spark работает в Windows, Linux и macOS на основе .NET Core. Она также работает в Windows на основе .NET Framework. Приложения можно развертывать во всех основных облачных средах, включая Azure HDInsight Spark, Amazon EMR Spark, Azure Databricks и Databricks в AWS.
+
+## <a name="net-for-apache-spark-architecture"></a>Архитектура .NET для Apache Spark
+
+Языковая привязка C# и F# для Spark написана на новом языке взаимодействия Spark, который поддерживает удобный механизм расширения. При создании нового уровня взаимодействия Spark учитывались все передовые рекомендации по расширению языков и оптимизации возможностей взаимодействия и производительности. В долгосрочной перспективе эту расширяемость можно будет использовать для добавления в Spark поддержки других языков.
+
+> [!div class="mx-imgBorder"]
+> ![Архитектура .NET для Apache Spark](media/dotnet-spark-architecture.png)
+
+Дополнительные сведения о поддержке взаимодействия для расширений языка Spark можно получить в [этом предложении](https://issues.apache.org/jira/browse/SPARK-26257).
+
+## <a name="net-for-apache-spark-performance"></a>Производительность .NET для Apache Spark
+
+По данным [сравнительного тестирования TPC-H](http://www.tpc.org/tpch/), .NET для Apache Spark в большинстве случаев работает лучше, чем Python и Scala, и вдвое быстрее Python в тех случаях, когда важна производительность определяемой пользователем функции. Постоянно ведется работа по улучшению и тестированию производительности.
+
+Вы можете выполнить собственное сравнительное тестирование, используя предлагаемые тесты из репозитория [.NET для Apache Spark](https://github.com/dotnet/spark/tree/master/benchmark) на сайте GitHub.
+
+## <a name="net-for-apache-spark-roadmap"></a>Программа развития .NET для Apache Spark
+
+Узнайте о краткосрочных и долгосрочных планах, которые включены в официальную [программу развития .NET для Apache Spark](https://github.com/dotnet/spark/blob/master/ROADMAP.md).
 
 ## <a name="net-foundation"></a>.NET Foundation
 
@@ -31,3 +54,9 @@ ms.locfileid: "69576891"
 ## <a name="contributions"></a>Участие в проекте
 
 Команда .NET для Apache Spark поощряет участие пользователей как в виде открытия проблем в GitHub и работы над ними, так и в виде использования запросов на вытягивание. Начните с поиска [существующей проблемы](https://github.com/dotnet/spark/issues). Если вы ее не нашли, [откройте новую](https://github.com/dotnet/spark/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+).
+
+## <a name="next-steps"></a>Следующие шаги
+
+Попробуйте .NET для Apache Spark в работе.
+> [!div class="nextstepaction"]
+> [Учебник. Начало работы с .NET для Apache Spark](./tutorials/get-started.md)

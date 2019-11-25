@@ -20,12 +20,12 @@ helpviewer_keywords:
 - '@ string literal'
 - string literals [C#]
 - string keyword [C#]
-ms.openlocfilehash: a5a32fa0a98cda37d7f599b20ef2b507cadd730c
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: d8858acb2743b26cc3a5172edf4765976d81adf4
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69604216"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73973016"
 ---
 # <a name="built-in-reference-types-c-reference"></a>Встроенные ссылочные типы (справочник по C#)
 
@@ -178,7 +178,7 @@ obj = obj + 3;
 - [Базовые операции со строками в .NET Framework](../../../standard/base-types/basic-string-operations.md)
 - [Создание строк](../../../standard/base-types/creating-new.md)
 - [Операторы приведения и тестирования типов](../operators/type-testing-and-cast.md)
-- [Практическое руководство. Безопасное приведение с помощью сопоставления шаблонов и операторы is и as](../../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md)
+- [Практическое руководство. Безопасное приведение с помощью сопоставления шаблонов, а также операторов is и as](../../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md)
 - [Пошаговое руководство. Создание и использование динамических объектов (C# и Visual Basic)](../../programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)
 - <xref:System.Object?displayProperty=nameWithType>
 - <xref:System.String?displayProperty=nameWithType>

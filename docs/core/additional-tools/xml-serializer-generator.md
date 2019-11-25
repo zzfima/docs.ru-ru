@@ -5,12 +5,12 @@ author: mlacouture
 ms.date: 01/19/2017
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 4a9c24455136fe4ccd13379d05c16d6b7cbf85de
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 403651978667c8cf531c3f87f1156f67206fb490
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117011"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522814"
 ---
 # <a name="using-microsoft-xml-serializer-generator-on-net-core"></a>Использование генератора XML-сериализатора Майкрософт в .NET Core
 
@@ -18,11 +18,11 @@ ms.locfileid: "71117011"
 
 > [!div class="checklist"]
 >
-> * как создать приложение .NET Core;
-> * как добавить ссылку на пакет Microsoft.XmlSerializer.Generator;
-> * как изменить MyApp.csproj для добавления зависимостей;
-> * как добавить класс и XmlSerializer;
-> * как собрать и запустить приложение.
+> - как создать приложение .NET Core;
+> - как добавить ссылку на пакет Microsoft.XmlSerializer.Generator;
+> - как изменить MyApp.csproj для добавления зависимостей;
+> - как добавить класс и XmlSerializer;
+> - как собрать и запустить приложение.
 
 Являясь аналогом [генератора XML-сериализатора (sgen.exe)](../../standard/serialization/xml-serializer-generator-tool-sgen-exe.md) для .NET Framework, [пакет NuGet Microsoft.XmlSerializer.Generator](https://www.nuget.org/packages/Microsoft.XmlSerializer.Generator) предназначен для проектов .NET Core и .NET Standard. Он создает сборку сериализации XML для содержащихся в сборке типов, улучшая производительность при запуске сериализации или десериализации XML для объектов этих типов с помощью <xref:System.Xml.Serialization.XmlSerializer>.
 
@@ -30,8 +30,8 @@ ms.locfileid: "71117011"
 
 Для работы с этим руководством вам понадобится следующее:
 
-* [пакет SDK для .NET Core 2.1](https://dotnet.microsoft.com/download) или более поздней версии;
-* любой редактор кода.
+- [пакет SDK для .NET Core 2.1](https://dotnet.microsoft.com/download) или более поздней версии;
+- любой редактор кода.
 
 > [!TIP]
 > Нужно ли устанавливать редактор кода? Попробуйте использовать [Visual Studio](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs).
@@ -122,14 +122,14 @@ dotnet run
 Поздравляем! Вы только что:
 > [!div class="checklist"]
 >
-> * создали приложение .NET Core;
-> * добавили ссылку на пакет Microsoft.XmlSerializer.Generator;
-> * изменили MyApp.csproj для добавления зависимостей;
-> * добавили класс и XmlSerializer;
-> * выполнили сборку и запуск приложения.
+> - создали приложение .NET Core;
+> - добавили ссылку на пакет Microsoft.XmlSerializer.Generator;
+> - изменили MyApp.csproj для добавления зависимостей;
+> - добавили класс и XmlSerializer;
+> - выполнили сборку и запуск приложения.
 
 ## <a name="related-resources"></a>Связанные ресурсы
 
-* [Введение в сериализацию XML](../../standard/serialization/introducing-xml-serialization.md)
-* [Практическое руководство. Сериализация с использованием XmlSerializer (C#)](../../csharp/programming-guide/concepts/linq/how-to-serialize-using-xmlserializer.md)
-* [Практическое руководство. Serialize Using XmlSerializer (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/how-to-serialize-using-xmlserializer.md) (Сериализация с использованием XmlSerializer (Visual Basic))
+- [Введение в сериализацию XML](../../standard/serialization/introducing-xml-serialization.md)
+- [Практическое руководство. Сериализация с использованием XmlSerializer (C#)](../../csharp/programming-guide/concepts/linq/how-to-serialize-using-xmlserializer.md)
+- [Практическое руководство. Serialize Using XmlSerializer (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/how-to-serialize-using-xmlserializer.md) (Сериализация с использованием XmlSerializer (Visual Basic))

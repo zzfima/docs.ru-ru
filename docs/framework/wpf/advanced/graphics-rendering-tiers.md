@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics rendering tiers [WPF]
 - graphics [WPF], rendering tiers
 ms.assetid: 08dd1606-02a2-4122-9351-c0afd2ec3a70
-ms.openlocfilehash: 9da519f8d258673498f45a425c13863437cac597
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c6856002288a46e78d1e1373201cf149407a814f
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69937521"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73974012"
 ---
 # <a name="graphics-rendering-tiers"></a>Уровни графической отрисовки
 Уровень отрисовки определяет уровень возможностей графического оборудования и производительность для устройства, на котором выполняется приложение [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -40,7 +40,7 @@ ms.locfileid: "69937521"
   
 - **Уровень отрисовки 2**. Большинство графических функций используют аппаратное ускорение графики. Версия DirectX больше или равна версии 9,0.  
   
- <xref:System.Windows.Media.RenderCapability.Tier%2A?displayProperty=nameWithType> Свойство позволяет извлекать уровень отрисовки во время выполнения приложения. Уровень отрисовки используется, чтобы определить, поддерживает ли устройство те или иные функции графики аппаратного ускорения. Затем приложение может принимать разные пути кода во время выполнения в зависимости от поддерживаемого устройством уровня отрисовки.  
+ Свойство <xref:System.Windows.Media.RenderCapability.Tier%2A?displayProperty=nameWithType> позволяет извлекать уровень отрисовки во время выполнения приложения. Уровень отрисовки используется, чтобы определить, поддерживает ли устройство те или иные функции графики аппаратного ускорения. Затем приложение может принимать разные пути кода во время выполнения в зависимости от поддерживаемого устройством уровня отрисовки.  
   
 ### <a name="rendering-tier-0"></a>Уровень отрисовки 0  
  Значение 0 для уровня отрисовки означает, что аппаратное ускорение графики недоступно для приложения на устройстве. На этом уровне нужно исходить из того, что вся графика будет отрисовываться программным обеспечением без аппаратного ускорения. Функциональные возможности этого уровня соответствуют версии DirectX менее 9,0.  
@@ -54,7 +54,7 @@ ms.locfileid: "69937521"
   
  В таблице ниже приводятся различия в требованиях к графическому оборудованию для уровней отрисовки 1 и 2:  
   
-|Компонент|Уровень 1|Уровень 2|  
+|Возможность|Уровень 1|Уровень 2|  
 |-------------|------------|------------|  
 |Версия DirectX|Должно быть больше или равно 9.0.|Должно быть больше или равно 9.0.|  
 |Видеопамять|Должно быть больше или равно 60 МБ.|Должно быть больше или равно 120 МБ.|  
@@ -64,32 +64,32 @@ ms.locfileid: "69937521"
   
  Следующие функции и возможности обеспечиваются аппаратным ускорением для уровней отрисовки 1 и 2.  
   
-|Компонент|Примечания|  
+|Возможность|Примечания|  
 |-------------|-----------|  
 |Двухмерная отрисовка|Поддерживается большинство двухмерных отрисовок.|  
 |Растеризация 3D|Поддерживается большинство трехмерных растеризаций.|  
 |Трехмерная анизотропная фильтрация|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] пытается использовать анизотропную фильтрацию при отрисовке трехмерного содержимого. Анизотропная фильтрация используется для повышения качества изображения текстур на удаленных поверхностях, которые находятся под большим углом по отношению к камере.|  
 |Трехмерное MIP-сопоставление|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] пытается использовать MIP-сопоставление при отрисовке трехмерного содержимого. Сопоставление MIP улучшает качество рендеринга текстур, когда текстура занимает меньшее поле представления в <xref:System.Windows.Controls.Viewport3D>.|  
-|Радиальные градиенты|Хотя это и поддерживается, Избегайте использования <xref:System.Windows.Media.RadialGradientBrush> в больших объектах.|  
+|Радиальные градиенты|Хотя это и поддерживается, Избегайте использования <xref:System.Windows.Media.RadialGradientBrush> для больших объектов.|  
 |Вычисления трехмерного освещения|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] выполняет освещение на уровне вершин, т. е. интенсивность света вычисляется на каждой вершине для каждого материала, применяемого к сетке.|  
 |Отрисовка текста|В отрисовке шрифта на субпиксельном уровне используются доступные построители текстур на графическом оборудовании.|  
   
  Следующие функции и возможности обеспечиваются аппаратным ускорением для уровня отрисовки 2.  
   
-|Компонент|Примечания|  
+|Возможность|Примечания|  
 |-------------|-----------|  
-|Трехмерное сглаживание|Трехмерное сглаживание поддерживается только в операционных системах, поддерживающих Windows Display Driver Model (WDDM), например [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] и [!INCLUDE[win7](../../../../includes/win7-md.md)].|  
+|Трехмерное сглаживание|Трехмерное сглаживание поддерживается только в операционных системах, поддерживающих модель WDDM, например Windows Vista и [!INCLUDE[win7](../../../../includes/win7-md.md)].|  
   
  Следующие функции и возможности **не** обеспечиваются аппаратным ускорением.  
   
-|Компонент|Примечания|  
+|Возможность|Примечания|  
 |-------------|-----------|  
 |Содержимое вывода|Все содержимое вывода отображается с помощью программного конвейера [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].|  
-|Растровое содержимое, использующее<xref:System.Windows.Media.Imaging.RenderTargetBitmap>|Любое содержимое, отображаемое с <xref:System.Windows.Media.Imaging.RenderTargetBitmap.Render%2A> помощью <xref:System.Windows.Media.Imaging.RenderTargetBitmap>метода.|  
-|Мозаичное содержимое, использующее<xref:System.Windows.Media.TileBrush>|Любое мозаичное содержимое, в <xref:System.Windows.Media.TileBrush.TileMode%2A> котором свойство <xref:System.Windows.Media.TileBrush> объекта имеет значение <xref:System.Windows.Media.TileMode.Tile>.|  
+|Растровое содержимое, использующее <xref:System.Windows.Media.Imaging.RenderTargetBitmap>|Любое содержимое, отображаемое с помощью метода <xref:System.Windows.Media.Imaging.RenderTargetBitmap.Render%2A> <xref:System.Windows.Media.Imaging.RenderTargetBitmap>.|  
+|Мозаичное содержимое, использующее <xref:System.Windows.Media.TileBrush>|Любое мозаичное содержимое, в котором для свойства <xref:System.Windows.Media.TileBrush.TileMode%2A> <xref:System.Windows.Media.TileBrush> задано значение <xref:System.Windows.Media.TileMode.Tile>.|  
 |Поверхности, которые превышают максимальный размер текстуры графического оборудования|Для большинства графических устройств большие поверхности имеют размер 2048 x 2048 или 4096 x 4096 пикселей.|  
 |Любая операция, требования к видеопамяти которой превышают объем памяти графического оборудования|Можно отслеживать использование видеопамяти приложения, используя средство Perforator, включенное в [WPF Performance Suite](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa969767(v=vs.100)) в комплекте SDK Windows.|  
-|Многослойные окна|Многослойные окна позволяют приложениям [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] отображать содержимое на экране в непрямоугольных окнах. В операционных системах, поддерживающих Windows Display Driver Model (WDDM), например [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] и [!INCLUDE[win7](../../../../includes/win7-md.md)], многослойные окна реализованы с аппаратным ускорением. В других системах, таких как [!INCLUDE[winxp](../../../../includes/winxp-md.md)], многоуровневые окна отрисовываются программным обеспечением без аппаратного ускорения.<br /><br /> Можно включить многослойные окна в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] , задав следующие <xref:System.Windows.Window> свойства:<br /><br /> -   <xref:System.Windows.Window.WindowStyle%2A> = <xref:System.Windows.WindowStyle.None><br />-   <xref:System.Windows.Window.AllowsTransparency%2A> = `true`<br />-   <xref:System.Windows.Controls.Control.Background%2A> = <xref:System.Windows.Media.Brushes.Transparent%2A>|  
+|Многослойные окна|Многослойные окна позволяют приложениям [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] отображать содержимое на экране в непрямоугольных окнах. В операционных системах, поддерживающих модель WDDM, например Windows Vista и [!INCLUDE[win7](../../../../includes/win7-md.md)], многоуровневые окна работают с аппаратным ускорением. В других системах, таких как [!INCLUDE[winxp](../../../../includes/winxp-md.md)], многоуровневые окна отрисовываются программным обеспечением без аппаратного ускорения.<br /><br /> Многослойные окна можно включить в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], задав следующие свойства <xref:System.Windows.Window>.<br /><br /> -   <xref:System.Windows.Window.WindowStyle%2A> = <xref:System.Windows.WindowStyle.None><br />-   <xref:System.Windows.Window.AllowsTransparency%2A> = `true`<br />-   <xref:System.Windows.Controls.Control.Background%2A> = <xref:System.Windows.Media.Brushes.Transparent%2A>|  
   
 <a name="other_resources"></a>   
 ## <a name="other-resources"></a>Другие ресурсы  
@@ -110,7 +110,7 @@ ms.locfileid: "69937521"
 ### <a name="wpf-performance-profiling-tools"></a>Средства профилирования производительности WPF  
  В состав [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] входит пакет инструментов для профилирования производительности, с помощью которых можно проанализировать поведение приложения во время выполнения и определить, каким образом можно повысить производительность. В следующей таблице перечислены средства профилирования производительности, которые включены в средство Windows SDK, WPF Performance Suite:  
   
-|Tool|Описание|  
+|Средство|Описание|  
 |----------|-----------------|  
 |Perforator|Используется для анализа поведения отрисовки.|  
 |Visual Profiler|Служит для профилирования использования служб [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], например обработки макета и событий, по элементам в визуальном дереве.|  
@@ -124,7 +124,7 @@ ms.locfileid: "69937521"
   
  При запуске средства диагностики DirectX в главном окне содержится набор вкладок, позволяющих отображать и диагностировать сведения, относящиеся к DirectX. Например, на вкладке **система** содержатся системные сведения о компьютере и указывается версия DirectX, установленная на компьютере.  
   
- ![Скринхот: Средство]диагностики DirectX(./media/directxdiagnostictool-01.png "DirectXDiagnosticTool_01")  
+ ![Снимок экрана: инструмент диагностики DirectX](./media/directxdiagnostictool-01.png "DirectXDiagnosticTool_01")  
 Главное окно инструмента диагностики DirectX  
   
 ## <a name="see-also"></a>См. также

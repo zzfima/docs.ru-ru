@@ -6,12 +6,12 @@ helpviewer_keywords:
 - anonymous types [C#]
 - C# Language, anonymous types
 ms.assetid: 59c9d7a4-3b0e-475e-b620-0ab86c088e9b
-ms.openlocfilehash: 93f02b8a0f828be89c6a1b7bfcdc6ba2a2a93e81
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: c6eff1cae79e7b555c5a41d10712b4f3022ff793
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69597190"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73419493"
 ---
 # <a name="anonymous-types-c-programming-guide"></a>Анонимные типы (Руководство по программированию в C#)
 
@@ -29,7 +29,7 @@ var v = new { Amount = 108, Message = "Hello" };
 Console.WriteLine(v.Amount + v.Message);  
 ```  
   
- Обычно анонимные типы используются в предложении [select](../../language-reference/keywords/select-clause.md) выражения запроса для возврата поднабора свойств из каждого объекта в исходной последовательности. Дополнительные сведения о запросах см. в разделе [Выражения запросов LINQ](../linq-query-expressions/index.md).  
+ Обычно анонимные типы используются в предложении [select](../../language-reference/keywords/select-clause.md) выражения запроса для формирования подмножества свойств из каждого объекта в исходной последовательности. Дополнительные сведения о запросах см. в разделе о [LINQ в C#](../../linq/index.md).  
   
  Анонимные типы содержат один или несколько публичных свойств только для чтения. Другие члены класса, например методы или события, недопустимы. Выражение, которое используется для инициализации свойства, не может быть `null`, анонимной функцией или типом указателя.  
   
@@ -48,7 +48,7 @@ var anonArray = new[] { new { name = "apple", diam = 4 }, new { name = "grape", 
 ```  
   
 ## <a name="remarks"></a>Примечания  
- Анонимные типы являются типами [class](../../language-reference/keywords/class.md), прямыми производными от типа [object](../../language-reference/keywords/object.md), и не могут быть приведены ни к какому иному типу, кроме [object](../../language-reference/keywords/object.md). Компилятор назначает имя для каждого анонимного типа, несмотря на то что для вашего приложения он недоступен. С точки зрения среды CLR анонимный тип не отличается от других ссылочных типов.  
+ Анонимные типы являются типами [class](../../language-reference/keywords/class.md), прямыми производными от типа [object](../../language-reference/builtin-types/reference-types.md), и не могут быть приведены ни к какому иному типу, кроме [object](../../language-reference/builtin-types/reference-types.md). Компилятор назначает имя для каждого анонимного типа, несмотря на то что для вашего приложения он недоступен. С точки зрения среды CLR анонимный тип не отличается от других ссылочных типов.  
   
  Если два или несколько инициализаторов анонимных объектов в сборке указывают на последовательность свойств, идущих в том же порядке и имеющих те же типы и имена, компилятор обрабатывает объекты как экземпляры одного типа. Они используют одни и те же сведения типа, созданные компилятором.  
   
@@ -60,5 +60,5 @@ var anonArray = new[] { new { name = "apple", diam = 4 }, new { name = "grape", 
 
 - [Руководство по программированию на C#](../index.md)
 - [Инициализаторы объектов и коллекций](./object-and-collection-initializers.md)
-- [Приступая к работе с LINQ в C#](../concepts/linq/getting-started-with-linq.md)
-- [Выражения запросов LINQ](../linq-query-expressions/index.md)
+- [Приступая к работе с LINQ в C#](/dotnet/csharp/programming-guide/concepts/linq/)
+- [LINQ в C#](../../linq/index.md)

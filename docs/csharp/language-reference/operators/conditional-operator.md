@@ -10,16 +10,16 @@ helpviewer_keywords:
 - '?: operator [C#]'
 - conditional operator (?:) [C#]
 ms.assetid: e83a17f1-7500-48ba-8bee-2fbc4c847af4
-ms.openlocfilehash: 923591634599a6bbac74d43b105f4e46b492fa1a
-ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
+ms.openlocfilehash: 7397c5b2b2278f487a98b029b00924d3151913db
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68796464"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73036294"
 ---
 # <a name="-operator-c-reference"></a>Оператор ?: (справочник по C#)
 
-Условный оператор `?:`, известный как тернарный условный оператор, вычисляет логическое выражение и возвращает результат вычисления одного из двух выражений, в зависимости от того, чему равно значение логического выражения: `true` или `false`. Начиная с C# 7.2, [условное выражение REF](#conditional-ref-expression) возвращает ссылку на результат одного из двух выражений.
+Условный оператор `?:`, известный как тернарный условный оператор, вычисляет логическое выражение и возвращает результат вычисления одного из двух выражений в зависимости от того, чему равно значение логического выражения: `true` или `false`. Начиная с C# 7.2, [условное выражение REF](#conditional-ref-expression) возвращает ссылку на результат одного из двух выражений.
 
 Для условного оператора используется следующий синтаксис:
 
@@ -72,8 +72,6 @@ condition ? ref consequent : ref alternative
 
 [!code-csharp-interactive[conditional ref](~/samples/csharp/language-reference/operators/ConditionalOperator.cs#ConditionalRef)]
 
-Дополнительные сведения см. в [примечании к предлагаемой функции](~/_csharplang/proposals/csharp-7.2/conditional-ref.md).
-
 ## <a name="conditional-operator-and-an-ifelse-statement"></a>Условный оператор и оператор `if..else`
 
 Если использовать условный оператор с оператором [if-else](../keywords/if-else.md), может получиться более лаконичный код в случаях, когда необходимо условно вычислить значение. В следующем примере иллюстрируются два вида классификации целого числа как положительного или отрицательного:
@@ -82,11 +80,13 @@ condition ? ref consequent : ref alternative
 
 ## <a name="operator-overloadability"></a>Возможность перегрузки оператора
 
-Условный оператор не может быть перегружен.
+Определяемый пользователем тип не может перегружать условный оператор.
 
 ## <a name="c-language-specification"></a>Спецификация языка C#
 
 Дополнительные сведения см. в разделе [Условный оператор](~/_csharplang/spec/expressions.md#conditional-operator) статьи [Предварительная спецификация C# 6.0](~/_csharplang/spec/introduction.md).
+
+См. сведения об условном ссылочном выражении в [примечании к функциям](~/_csharplang/proposals/csharp-7.2/conditional-ref.md).
 
 ## <a name="see-also"></a>См. также
 
@@ -94,5 +94,5 @@ condition ? ref consequent : ref alternative
 - [Операторы в C#](index.md)
 - [if-else (Справочник по C#)](../keywords/if-else.md)
 - [Операторы ?. и ?[]](member-access-operators.md#null-conditional-operators--and-)
-- [Оператор ??](null-coalescing-operator.md)
+- [Операторы ?? и ??=](null-coalescing-operator.md)
 - [Ключевое слово ref](../keywords/ref.md)

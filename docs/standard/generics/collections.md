@@ -13,18 +13,19 @@ helpviewer_keywords:
 ms.assetid: 5b646751-6ab7-465c-916c-b1a76aefa9f5
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 51938dade8ebd1b84010533e04b26cf989ed5f24
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 21d8ef3abfd16e11c9251edfc4f39b02e93eaab5
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71353942"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740925"
 ---
 # <a name="generic-collections-in-net"></a>Универсальные коллекции в .NET
 
  Библиотека классов .NET предоставляет ряд универсальных классов коллекций в пространствах имен <xref:System.Collections.Generic> и <xref:System.Collections.ObjectModel>. См. дополнительные сведения о [часто используемых типах коллекций](../../../docs/standard/collections/commonly-used-collection-types.md).  
   
-### <a name="systemcollectionsgeneric"></a>System.Collections.Generic  
+## <a name="systemcollectionsgeneric"></a>System.Collections.Generic
+
  Многие универсальные типы коллекций являются прямыми аналогами неуниверсальных типов. Интерфейс <xref:System.Collections.Generic.Dictionary%602> — это универсальная версия <xref:System.Collections.Hashtable>; он использует для перечисления универсальную структуру <xref:System.Collections.Generic.KeyValuePair%602> вместо <xref:System.Collections.DictionaryEntry>.  
   
  <xref:System.Collections.Generic.List%601> — это универсальная версия <xref:System.Collections.ArrayList>. Имеются универсальные классы <xref:System.Collections.Generic.Queue%601> и <xref:System.Collections.Generic.Stack%601>, соответствующие неуниверсальным версиям.  
@@ -33,14 +34,16 @@ ms.locfileid: "71353942"
   
  Универсальный класс <xref:System.Collections.Generic.LinkedList%601> является истинным связанным списком. У него нет неуниверсального аналога.  
   
-### <a name="systemcollectionsobjectmodel"></a>System.Collections.ObjectModel  
+## <a name="systemcollectionsobjectmodel"></a>System.Collections.ObjectModel
+
  Универсальный класс <xref:System.Collections.ObjectModel.Collection%601> предоставляет базовый класс для создания собственных производных универсальных типов коллекций. Класс <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> позволяет легко создавать доступные только для чтения коллекции на основе любого типа, реализующего универсальный интерфейс <xref:System.Collections.Generic.IList%601>. Универсальный класс <xref:System.Collections.ObjectModel.KeyedCollection%602> предоставляет способ хранения объектов, содержащих свои собственные ключи.  
   
-## <a name="other-generic-types"></a>Прочие универсальные типы  
+## <a name="other-generic-types"></a>Прочие универсальные типы
+
  Универсальная структура <xref:System.Nullable%601> позволяет использовать типы значений так, как будто им могут быть присвоены значения `null`. Это может быть полезно при работе с запросами к базе данных, где поля, содержащие типы значений, могут опускаться. Параметр универсального типа может принимать значения любого типа.  
   
 > [!NOTE]
-> В C# и Visual Basic нет необходимости явно использовать <xref:System.Nullable%601>, так как язык имеет синтаксис для типов, допускающий значение null. См. статьи о [типах значений, допускающих значение NULL (руководство по программированию на C#)](../../csharp/programming-guide/nullable-types/index.md) или [типах значений, допускающих значение NULL (Visual Basic)](../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md).
+> В C# и Visual Basic нет необходимости явно использовать <xref:System.Nullable%601>, так как язык имеет синтаксис для типов, допускающий значение null. См. статьи о типах значений, допускающих значение NULL, [для C#](../../csharp/language-reference/builtin-types/nullable-value-types.md) и [Visual Basic](../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md).
   
  Универсальная структура <xref:System.ArraySegment%601> предоставляет способ выделения диапазона элементов в одномерном массиве любого типа, начинающемся с нуля. Параметр универсального типа является типом элементов массива.  
   

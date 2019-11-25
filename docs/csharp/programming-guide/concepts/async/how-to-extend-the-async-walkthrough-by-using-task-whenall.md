@@ -1,15 +1,15 @@
 ---
-title: Практическое руководство. Оптимизация производительности асинхронных процедур с использованием метода Task.WhenAll (C#)
+title: Практическое руководство. Расширение пошагового руководства по асинхронным процедурам с использованием метода Task.WhenAll (C#)
 ms.date: 07/20/2015
 ms.assetid: f6927ef2-dc6c-43f8-bc82-bbeac42de423
-ms.openlocfilehash: f44595a409113e4b7ff3ad2c6d0712e5debaad08
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: afd7dda4e876b7faa54ae4a8e62d640d2b9aaf07
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70040652"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73970023"
 ---
-# <a name="how-to-extend-the-async-walkthrough-by-using-taskwhenall-c"></a>Практическое руководство. Оптимизация производительности асинхронных процедур с использованием метода Task.WhenAll (C#)
+# <a name="how-to-extend-the-async-walkthrough-by-using-taskwhenall-c"></a>Практическое руководство. Расширение пошагового руководства по асинхронным процедурам с использованием метода Task.WhenAll (C#)
 
 Можно повысить производительность асинхронного решения, которое описывается в разделе [Пошаговое руководство. Доступ к Интернету с помощью модификатора Async и оператора Await (C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md), с помощью метода <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>. Этот метод асинхронно ожидает несколько асинхронных операций, которые представлены в виде коллекции задач.
 

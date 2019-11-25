@@ -8,14 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, introduction to
 ms.assetid: eaa720d8-8999-4eb7-8df5-3c19ca61cad0
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 39ca7ca02c2bb1050653daf1b53450533cc950dd
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 938bae09eab4e95c0ec875a8681cc276325b976b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490968"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129045"
 ---
 # <a name="introduction-to-plinq"></a>Введение в PLINQ
 
@@ -40,7 +38,7 @@ Parallel LINQ (PLINQ) является параллельной реализац
 
 Помимо стандартных операторов запроса, класс <xref:System.Linq.ParallelEnumerable> содержит набор методов для реализации функций, характерных для параллельного выполнения. Методы, характерные для PLINQ, перечислены в следующей таблице.
 
-|Класс ParallelEnumerable|Описание|
+|Класс ParallelEnumerable|ОПИСАНИЕ|
 |---------------------------------|-----------------|
 |<xref:System.Linq.ParallelEnumerable.AsParallel%2A>|Точка входа для PLINQ. Указывает, что по возможности остальная часть запроса должна быть параллелизована.|
 |<xref:System.Linq.ParallelEnumerable.AsSequential%2A>|Указывает, что остальная часть запроса должна выполняться последовательно, как непараллельный запрос LINQ.|

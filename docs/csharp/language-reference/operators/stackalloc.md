@@ -6,22 +6,22 @@ f1_keywords:
 - stackalloc_CSharpKeyword
 helpviewer_keywords:
 - stackalloc operator [C#]
-ms.openlocfilehash: 9ef5f98f2b4973c5873417ecc9a71c187e7299b9
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 82fc1649bac66c0e934db13c50390b977432c34c
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71182421"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73036145"
 ---
 # <a name="stackalloc-operator-c-reference"></a>Оператор stackalloc (Справочник по C#)
 
-Оператор `stackalloc` выделяет блок памяти в стеке. Выделенный в стеке блок памяти, который создает этот метод, автоматически удаляется по завершении выполнения метода. Вы не можете явным образом освободить память, выделенную оператором `stackalloc`. Выделенный в стеке блок памяти не подвергается [сборке мусора](../../../standard/garbage-collection/index.md), а значит, ее не нужно закреплять с помощью [инструкции `fixed`](../keywords/fixed-statement.md).
+Оператор `stackalloc` выделяет блок памяти в стеке. Выделенный в стеке блок памяти, который создает этот метод, автоматически удаляется по завершении выполнения метода. Вы не можете явным образом освободить память, выделенную оператором `stackalloc`. Выделенный в стеке блок памяти не подвергается [сборке мусора](../../../standard/garbage-collection/index.md), поэтому его не нужно закреплять с помощью [инструкции `fixed`](../keywords/fixed-statement.md).
 
 В выражении `stackalloc T[E]` элемент `T` должен быть [неуправляемым типом](../builtin-types/unmanaged-types.md), а элемент `E` — выражением типа `int`.
 
 Результат выполнения оператора `stackalloc` вы можете присвоить переменной любого из следующих типов:
 
-- Начиная с C# 7.2, <xref:System.Span%601?displayProperty=nameWithType> или <xref:System.ReadOnlySpan%601?displayProperty=nameWithType>, как показано в следующем примере:
+- Начиная с версии C# 7.2, <xref:System.Span%601?displayProperty=nameWithType> или <xref:System.ReadOnlySpan%601?displayProperty=nameWithType>, как показано в следующем примере:
 
   [!code-csharp[stackalloc span](~/samples/csharp/language-reference/operators/StackallocOperator.cs#AssignToSpan)]
 
@@ -31,7 +31,7 @@ ms.locfileid: "71182421"
 
   [!code-csharp[stackalloc expression](~/samples/csharp/language-reference/operators/StackallocOperator.cs#AsExpression)]
 
-  Начиная с C# 8.0, можно использовать выражение `stackalloc` внутри других выражений, если разрешена переменная <xref:System.Span%601> или <xref:System.ReadOnlySpan%601>, как показано в следующем примере:
+  Начиная с версии C# 8.0, можно использовать выражение `stackalloc` внутри других выражений, если разрешена переменная <xref:System.Span%601> или <xref:System.ReadOnlySpan%601>, как показано в следующем примере:
 
   [!code-csharp[stackalloc in nested expressions](~/samples/csharp/language-reference/operators/StackallocOperator.cs#Nested)]
 
@@ -46,7 +46,7 @@ ms.locfileid: "71182421"
 
   В случае типов указателей можно использовать выражение `stackalloc` только в объявлении локальной переменной для инициализации переменной.
 
-Содержимое только что выделенной памяти не определено. Начиная с C# 7.3, вы можете использовать синтаксис инициализатора массива, чтобы определить содержимое для только что выделенной памяти. В следующем примере показано несколько способов сделать это:
+Содержимое только что выделенной памяти не определено. Начиная с версии C# 7.3, вы можете использовать синтаксис инициализатора массива, чтобы определить содержимое для только что выделенной памяти. В следующем примере показано несколько способов сделать это:
 
 [!code-csharp[stackalloc initialization](~/samples/csharp/language-reference/operators/StackallocOperator.cs#StackallocInit)]
 

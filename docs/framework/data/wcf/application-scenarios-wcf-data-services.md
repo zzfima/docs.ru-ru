@@ -5,34 +5,34 @@ helpviewer_keywords:
 - WCF Data Services, learn more
 - WCF Data Services, scenarios
 ms.assetid: 7c82658f-e7c0-46b6-834d-6592f67ab5ea
-ms.openlocfilehash: 9e70e2fff0bee22bcb7d7668f33302f7e7013117
-ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
+ms.openlocfilehash: 50e481dd67a56233fcbb3714c86d71dd7e5307e8
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71273138"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975421"
 ---
 # <a name="application-scenarios-wcf-data-services"></a>Сценарии приложений (службы данных WCF)
 
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]поддерживает основной набор сценариев для предоставления и использования данных в виде [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] веб-каналов. В этом подразделе описываются разделы, относящиеся к этим сценариям.
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] поддерживает основной набор сценариев для предоставления и использования данных в качестве веб-каналов Open Data Protocol (OData). В этом подразделе описываются разделы, относящиеся к этим сценариям.
 
-Предоставление реляционных данных из базы данных в качестве [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] веб-канала.
+Предоставление реляционных данных из базы данных в качестве веб-канала OData.
 
 - [Краткое руководство](quickstart-wcf-data-services.md)
 
 - [Предоставление данных как службы](exposing-your-data-as-a-service-wcf-data-services.md)
 
-- [Практическое руководство. Создание службы данных с помощью источника данных ADO.NET Entity Framework](create-a-data-service-using-an-adonet-ef-data-wcf.md)
+- [Практическое руководство. Создание службы данных с использованием источника данных Entity Framework ADO.NET](create-a-data-service-using-an-adonet-ef-data-wcf.md)
 
-Предоставление произвольных классов данных CLR в качестве канала [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)].
+Предоставьте произвольные классы данных среды CLR в качестве веб-канала OData.
 
 - [Предоставление данных как службы](exposing-your-data-as-a-service-wcf-data-services.md)
 
-- [Практическое руководство. Создание службы данных с помощью поставщика отражения](create-a-data-service-using-rp-wcf-data-services.md)
+- [Практическое руководство. Создание службы данных с использованием поставщика отражений](create-a-data-service-using-rp-wcf-data-services.md)
 
 - [Поставщики служб данных](data-services-providers-wcf-data-services.md)
 
-Использование канала [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] в клиентском приложении .NET Framework.
+Использование веб-канала OData в клиентском приложении на основе .NET Framework.
 
 - [Краткое руководство](quickstart-wcf-data-services.md)
 
@@ -40,23 +40,23 @@ ms.locfileid: "71273138"
 
 - [Библиотека клиентов служб данных WCF](wcf-data-services-client-library.md)
 
-Использование канала [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] в клиентском приложении Silverlight.
+Использование веб-канала OData в клиентском приложении на основе Silverlight.
 
 - [Службы WCF Data Services (Silverlight)](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc838234(v=vs.95))
 
 - [Асинхронные операции](asynchronous-operations-wcf-data-services.md)
 
-- [Практическое руководство. Привязка данных службы данных к элементам управления (клиент Silverlight)](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/ee681614(v=vs.103))
+- [Как выполнить привязку данных службы данных к элементам управления (клиент Silverlight)](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/ee681614(v=vs.103))
 
-Использование канала [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] в клиентском приложении AJAX.
+Использование веб-канала OData в клиентском приложении на основе AJAX.
 
 - [Использование служб данных в клиентском приложении](using-a-data-service-in-a-client-application-wcf-data-services.md)
 
-- [Протокола Соглашения URI](https://go.microsoft.com/fwlink/?LinkId=185564)
+- [OData: соглашения об URI](https://go.microsoft.com/fwlink/?LinkId=185564)
 
-- [Протокола Формат нотация объектов JavaScript (JSON)](https://go.microsoft.com/fwlink/?LinkId=185790)
+- [OData: формат нотация объектов JavaScript (JSON)](https://go.microsoft.com/fwlink/?LinkId=185790)
 
-Создайте комплексное решение для данных, которое использует [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] для обмена данными между клиентом и сервером.
+Создайте комплексное решение для данных, использующее OData для обмена данными между клиентом и сервером.
 
 - [Краткое руководство](quickstart-wcf-data-services.md)
 
@@ -64,25 +64,25 @@ ms.locfileid: "71273138"
 
 - [Библиотека клиентов служб данных WCF](wcf-data-services-client-library.md)
 
-Создание клиентского приложения .NET Framework, обращающегося к каналу [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] асинхронно, чтобы избежать проблем с задержкой на клиенте.
+Создайте клиентское приложение на основе .NET Framework, которое асинхронно использует канал OData, чтобы избежать проблем задержки на клиенте.
 
-- [Практическое руководство. Выполнение запросов асинхронных служб данных](how-to-execute-asynchronous-data-service-queries-wcf-data-services.md)
+- [Практическое руководство. Выполнение асинхронных запросов к службе данных](how-to-execute-asynchronous-data-service-queries-wcf-data-services.md)
 
 - [Асинхронные операции](asynchronous-operations-wcf-data-services.md)
 
 - [Службы WCF Data Services (Silverlight)](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc838234(v=vs.95))
 
-Предоставление и использование [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] веб-канала с большим двоичным объектом, доступ к которому и изменение которого осуществляется в виде потока.
+Предоставление и использование канала OData с большими двоичными объектами, которые доступны и изменяются в виде потока.
 
 - [Поставщик потоковых данных](streaming-provider-wcf-data-services.md)
 
 - [Работа с двоичными данными](working-with-binary-data-wcf-data-services.md)
 
-Привязка [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] веб-каналов к элементам управления в приложении Windows Presentation Framework (WPF).
+Привязка каналов OData к элементам управления в приложении Windows Presentation Framework (WPF).
 
 - [Привязка данных к элементам управления](binding-data-to-controls-wcf-data-services.md)
 
-- [Практическое руководство. Привязка данных к Windows Presentation Foundation элементам](bind-data-to-wpf-elements-wcf-data-services.md)
+- [Практическое руководство. Привязка данных к элементам Windows Presentation Foundation](bind-data-to-wpf-elements-wcf-data-services.md)
 
 - [Практическое руководство. Привязка данных с помощью источника данных проекта](how-to-bind-data-using-a-project-data-source-wcf-data-services.md)
 

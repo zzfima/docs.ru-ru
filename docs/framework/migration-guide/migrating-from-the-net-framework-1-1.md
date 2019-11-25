@@ -5,22 +5,22 @@ helpviewer_keywords:
 - .NET Framework 4.5, migrating from 1.1
 - .NET Framework 1.1, migrating to .NET Framework 4.5
 ms.assetid: 7ead0cb3-3b19-414a-8417-a1c1fa198d9e
-ms.openlocfilehash: f74b75827770524299f9a25a5854503186139cb4
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 11fe9ba36d32a4c9fe363b48f76a8bb2b24f073b
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73126294"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73974971"
 ---
-# <a name="migrating-from-the-net-framework-11"></a>Миграция из .NET Framework 1.1
+# <a name="migrate-from-the-net-framework-11"></a>Миграция из .NET Framework 1.1
 
-[!INCLUDE[win7](../../../includes/win7-md.md)] и последующие версии операционной системы Windows не поддерживают .NET Framework 1.1. Поэтому приложения, предназначенные для .NET Framework 1.1., не будут запускаться в [!INCLUDE[win7](../../../includes/win7-md.md)] или последующих версиях операционной системы без внесения изменений. В этой статье рассматриваются действия, которые нужно выполнить для запуска приложения, предназначенного для .NET Framework 1.1., в [!INCLUDE[win7](../../../includes/win7-md.md)] или последующей версии операционной системы Windows. Дополнительные сведения о .NET Framework 1.1. и [!INCLUDE[win8](../../../includes/win8-md.md)] см. в статье [Выполнение приложений .NET Framework 1.1 в Windows 8, Windows 8.1 или Windows 10](../install/run-net-framework-1-1-apps.md).
+Windows 7 и последующие версии операционной системы Windows не поддерживают .NET Framework 1.1. Поэтому приложения, предназначенные для .NET Framework 1.1, не будут запускаться в Windows 7 или последующих версиях операционной системы без внесения изменений. В этой статье рассматриваются действия, которые нужно выполнить для запуска приложения, предназначенного для .NET Framework 1.1, в Windows 7 или более поздней версии операционной системы Windows. Дополнительные сведения о .NET Framework 1.1. и Windows 8 см. в статье [Выполнение приложений .NET Framework 1.1 в Windows 8, Windows 8.1 или Windows 10](../install/run-net-framework-1-1-apps.md).
 
-## <a name="retargeting-or-recompiling"></a>Переназначение и перекомпиляция
+## <a name="retarget-or-recompile"></a>Перенацеливание или повторная компиляция
 
-Есть два способа запустить приложение, скомпилированное с использованием .NET Framework 1.1., в [!INCLUDE[win7](../../../includes/win7-md.md)] или последующей версии операционной системы Windows:
+Есть два способа запустить приложение, скомпилированное с использованием .NET Framework 1.1, в Windows 7 или более поздней версии операционной системы Windows:
 
-- Можно перенацелить приложение для запуска в платформе .NET Framework 4 или более поздних версий. Для изменения целевой платформы необходимо добавить в файл конфигурации приложения элемент [\<supportedRuntime>](../configure-apps/file-schema/startup/supportedruntime-element.md), который позволит приложению запускаться в платформе .NET Framework 4. Такой файл конфигурации имеет следующий вид:
+- Перенацелить приложение для запуска на платформе .NET Framework 4 или более поздних версий. Для изменения целевой платформы необходимо добавить в файл конфигурации приложения элемент [\<supportedRuntime>](../configure-apps/file-schema/startup/supportedruntime-element.md), который позволит приложению запускаться в платформе .NET Framework 4. Такой файл конфигурации имеет следующий вид:
 
     ```xml
     <configuration>
@@ -30,7 +30,7 @@ ms.locfileid: "73126294"
     </configuration>
     ```
 
-- Можно перекомпилировать приложение с помощью компилятора, предназначенного для .NET Framework 4 или более поздних версий. Если для разработки и компиляции решения первоначально использовалась среда Visual Studio 2003, можно открыть решение в Visual Studio 2010 (возможно, и в более поздних версиях) и использовать диалоговое окно **Совместимость проекта** для конвертации решения и файлов проекта из форматов, используемых Visual Studio 2003, в формат Microsoft Build Engine (MSBuild).
+- Перекомпилировать приложение с помощью компилятора, предназначенного для .NET Framework 4 или более поздних версий. Если для разработки и компиляции решения первоначально использовалась среда Visual Studio 2003, можно открыть решение в Visual Studio 2010 (возможно, и в более поздних версиях) и использовать диалоговое окно **Совместимость проекта** для конвертации решения и файлов проекта из форматов, используемых Visual Studio 2003, в формат Microsoft Build Engine (MSBuild).
 
 Независимо от того, перекомпилируется ли или перенацеливается приложение, необходимо определить, затронуто ли оно какими-либо изменениями, введенными в более поздних версиях платформы .NET Framework. Эти изменения могут быть двух типов:
 
@@ -56,9 +56,9 @@ ms.locfileid: "73126294"
 
 Чтобы оценить влияние возможных критических изменений на приложение, необходимо просмотреть следующие списки изменений.
 
-- В документе с описанием [критических изменений в .NET Framework 2.0](https://go.microsoft.com/fwlink/?LinkId=125263) перечислены изменения, внесенные в .NET Framework 2.0 с пакетом обновления 1 (SP1), которые могут повлиять на приложение, предназначенное для .NET Framework 1.1.
+- В документе с описанием [критических изменений в .NET Framework 2.0](https://docs.microsoft.com/previous-versions/aa570326(v=msdn.10)) перечислены изменения, внесенные в .NET Framework 2.0 с пакетом обновления 1 (SP1), которые могут повлиять на приложение, предназначенное для .NET Framework 1.1.
 
-- В документе с описанием [изменений в .NET Framework 3.5 с пакетом обновления 1 (SP1)](https://go.microsoft.com/fwlink/?LinkID=186989) перечислены различия между .NET Framework 3.5 и NET Framework 3.5 с пакетом обновления 1 (SP1).
+- В документе с описанием [изменений в .NET Framework 3.5 с пакетом обновления 1 (SP1)](https://docs.microsoft.com/previous-versions/dotnet/articles/dd310284(v=msdn.10)) перечислены различия между .NET Framework 3.5 и NET Framework 3.5 с пакетом обновления 1 (SP1).
 
 - В документе о [проблемах при миграции на .NET Framework 4](net-framework-4-migration-issues.md) перечислены различия между NET Framework 3.5 с пакетом обновления 1 (SP1) и .NET Framework 4.
 

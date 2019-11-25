@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual C# compiler, options listed alphabetically
 - Visual C#, compiler options listed alphabetically
 ms.assetid: 43535ea0-ca47-4a15-b528-615087a86092
-ms.openlocfilehash: 450463100782f98b6ded0781b1d3c19b0db97534
-ms.sourcegitcommit: 3ac05b2c386c8cc5e73f4c7665f6c0a7ed3da1bd
+ms.openlocfilehash: d6d471cd27f35de6325a130e6c909d13cb1dcc85
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71151775"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73972743"
 ---
 # <a name="c-compiler-options-listed-alphabetically"></a>Параметры компилятора C# в алфавитном порядке
 

@@ -32,16 +32,16 @@ helpviewer_keywords:
 - hat operator [C#]
 - .. operator [C#]
 - range operator [C#]
-ms.openlocfilehash: 45af31d10d77f4c63b27b34595b97fdd11ef95a1
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: ba2a8cd4995b9baab2071d3fb3c7980e45565692
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71116131"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73038996"
 ---
 # <a name="member-access-operators-c-reference"></a>Операторы доступа к членам (справочник по C#)
 
-При доступе к члену типа можно использовать следующие операторы:
+При получении доступа к элементу типа можно использовать следующие операторы:
 
 - [`.` (доступ к члену) ](#member-access-operator-): для доступа к члену пространства имен или типа;
 - [`[]` (элемент массива или индексатор доступа) ](#indexer-operator-): для доступа к элементу массива или индексатору типа;
@@ -88,11 +88,11 @@ ms.locfileid: "71116131"
 
 ### <a name="indexer-access"></a>Доступ к индексатору
 
-В приведенном ниже примере используется тип .NET <xref:System.Collections.Generic.Dictionary%602> для демонстрации доступа к индексатору.
+В приведенном ниже примере используется тип .NET <xref:System.Collections.Generic.Dictionary%602> для получения доступа к индексатору:
 
 [!code-csharp-interactive[indexer access](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#Indexers)]
 
-Индексаторы позволяют индексировать экземпляры определяемого пользователем типа аналогично индексации массива. В отличие от индексов массива, которые должны быть целым числом, аргументы индексатора могут быть объявлены любым типом.
+Индексаторы позволяют индексировать экземпляры определяемого пользователем типа аналогично индексации массива. В отличие от индексов массива, которые должны быть целым числом, параметры индексатора могут быть объявлены любым типом.
 
 Дополнительные сведения см. в [руководстве по работе с индексаторами](../../programming-guide/indexers/index.md).
 
@@ -122,7 +122,7 @@ A?.B?[C];
 
 [!code-csharp-interactive[null-conditional operators](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#NullConditional)]
 
-В предыдущем примере также показано использование [оператора объединения с null](null-coalescing-operator.md). Можно использовать оператор объединения с null, чтобы задать альтернативное выражение для оценки на случай, если результат null-условной операции будет равен `null`.
+В предыдущем примере также используется [оператор объединения со значением NULL `??`](null-coalescing-operator.md), чтобы указать альтернативное выражение для вычисления в случае, если результат выполнения условной операции NULL — это `null`.
 
 ### <a name="thread-safe-delegate-invocation"></a>Потокобезопасный вызов делегата
 
@@ -198,6 +198,8 @@ if (handler != null)
 - [Доступ к элементам](~/_csharplang/spec/expressions.md#element-access)
 - [Null-условный оператор](~/_csharplang/spec/expressions.md#null-conditional-operator)
 - [Выражения вызова](~/_csharplang/spec/expressions.md#invocation-expressions)
+
+См. сведения о индексах и диапазонах в [примечании к функциям](~/_csharplang/proposals/csharp-8.0/ranges.md).
 
 ## <a name="see-also"></a>См. также
 

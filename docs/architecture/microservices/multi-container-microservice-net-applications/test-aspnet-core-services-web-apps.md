@@ -2,12 +2,12 @@
 title: Тестирование служб и веб-приложений ASP.NET Core
 description: Архитектура микрослужб .NET для упакованных в контейнеры приложений .NET | Архитектура тестирования служб и веб-приложений ASP.NET Core в контейнерах.
 ms.date: 10/02/2018
-ms.openlocfilehash: 278d12b8215195351673a41149db5af6fcecddfb
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 324b71d830bca43be71e8847fe2dd1b8b1593556
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72772018"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739474"
 ---
 # <a name="testing-aspnet-core-services-and-web-apps"></a>Тестирование служб и веб-приложений ASP.NET Core
 
@@ -144,7 +144,7 @@ public class PrimeWebDefaultRequestShould
 
 Модульные и интеграционные тесты микрослужб содержатся в папке tests, а тесты приложений и нагрузочные тесты содержатся в папке test в папке решения, как показано на рис. 6-25.
 
-![Структура тестов в eShopOnContainers: каждая служба имеет папку test, которая содержит модульные и функциональные тесты. В папке решения test содержатся функциональные и нагрузочные тесты уровня приложения.](./media/image42.png)
+![Снимок экрана VS, на котором стрелками показаны некоторые тестовые проекты в решении.](./media/test-aspnet-core-services-web-apps/eshoponcontainers-test-folder-structure.png)
 
 **Рис. 6-25**. Структура папок тестов в eShopOnContainers
 

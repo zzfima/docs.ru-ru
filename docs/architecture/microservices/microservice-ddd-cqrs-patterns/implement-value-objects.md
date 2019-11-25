@@ -2,12 +2,12 @@
 title: Реализация объектов значений
 description: Архитектура микрослужб .NET для упакованных в контейнеры приложений .NET | Знакомство с возможностями и параметрами для реализации объектов значений с использованием новых функций Entity Framework.
 ms.date: 10/08/2018
-ms.openlocfilehash: b2f7b0f36fea25c25edd47731d9387810bd2b44d
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 2608517c4006f5e8da1d31b2c337d8ddd3ddd542
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68674151"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739871"
 ---
 # <a name="implement-value-objects"></a>Реализация объектов значений
 
@@ -17,7 +17,7 @@ ms.locfileid: "68674151"
 
 На рисунке 7-13 изображен объект значения Address (адрес) в статистическом выражении Order (заказ).
 
-![Объект значения Address (адрес) в статистическом выражении Order (заказ).](./media/image14.png)
+![Схема, на которой показан объект значения Address (Адрес) в агрегате Order (Заказ).](./media/implement-value-objects/value-object-within-aggregate.png)
 
 **Рис. 7-13**. Объект значения Address (адрес) в статистическом выражении Order (заказ)
 

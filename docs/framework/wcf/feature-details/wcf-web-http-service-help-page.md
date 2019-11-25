@@ -2,26 +2,26 @@
 title: Страница справки веб-службы HTTP WCF
 ms.date: 03/30/2017
 ms.assetid: 63c7c695-44b6-4f31-bb9c-00f2763f525e
-ms.openlocfilehash: 60fd909d6e7d3ba0e0c0254024ef7eb40263b59e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8d798c8080bf1afee87305cd00a27db2ece7e970
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62050413"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975921"
 ---
 # <a name="wcf-web-http-service-help-page"></a>Страница справки веб-службы HTTP WCF
-[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] предоставляет автоматическую справочную страницу для службы WCF WEB HTTP. На этой странице справки приводится описание каждой операции, форматов запроса и ответа, а также схем. По умолчанию эта функциональная возможность отключена. Когда пользователь переходит к службе WCF WEB HTTP и добавляет «/ Help» в конце URL-адрес, например `http://localhost:8000/Customers/Help`, страницы справки, как отображается следующая информация.  
+[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] предоставляет автоматическую справочную страницу для службы WCF WEB HTTP. На этой странице справки приводится описание каждой операции, форматов запроса и ответа, а также схем. По умолчанию эта функциональная возможность отключена. Когда пользователь переходит к веб-службе HTTP WCF и добавляет "/Help" в конец URL-адреса, например `http://localhost:8000/Customers/Help`, отображается страница справки, подобная приведенной ниже.  
   
- ![Откройте браузер со страницей справки WCF REST.](./media/wcf-web-http-service-help-page/windows-communication-foundation-rest-help-page.gif)  
+ ![Откроется браузер с открытой страницей справки WCF.](./media/wcf-web-http-service-help-page/windows-communication-foundation-rest-help-page.gif)  
   
  Затем пользователь может щелкнуть любой метод из представленных на странице справки. Откроется страница, содержащая подробные сведения о методе, включая форматы сообщений и примеры ответов. На следующем рисунке представлен пример справочной страницы для метода.  
   
- ![Откройте браузер с подробностями страница справки WCF REST для метода GetCustomers.](./media/wcf-web-http-service-help-page/windows-communication-foundation-rest-help-page-detail.gif)  
+ ![Браузер с подробными сведениями о странице справки WCF для метода Customers Open.](./media/wcf-web-http-service-help-page/windows-communication-foundation-rest-help-page-detail.gif)  
   
 ## <a name="using-the-wcf-web-http-help-page"></a>Использование справочной страницы службы WCF Web HTTP  
  На справочной странице службы WCF WEB HTTP дано краткое описание для каждой из представленных операций при условии, что оно было определено в <xref:System.ComponentModel.DescriptionAttribute>. Этот атрибут принимает строку, которая содержит краткое описание операции, для которой он применен. Например, в следующем коде показано, как задать краткое описание с помощью <xref:System.ComponentModel.DescriptionAttribute>.  
   
-```  
+```csharp
 [OperationContract]  
 [WebGet(UriTemplate="/template1", BodyStyle = WebMessageBodyStyle.Bare)]  
 [Description("Description for GET /template1")]  
@@ -47,7 +47,7 @@ SyndicationFeedFormatter GetTemplate1();
   
  Чтобы включить справочную страницу службы WCF WEB HTTP из кода, добавьте конечную точку службы и добавьте <xref:System.ServiceModel.Description.WebHttpBehavior> к параметру конечной точки <xref:System.ServiceModel.Description.WebHttpBehavior.HelpEnabled%2A> со значением `true`. В следующем примере кода показано, как это сделать:  
   
-```  
+```csharp
 using (WebServiceHost host = new WebServiceHost(typeof(Service), new Uri("http://localhost:8000/Customers")))  
 {  
    host.AddServiceEndpoint(typeof(ICustomerCollection), new WebHttpBinding(), "");
@@ -240,4 +240,4 @@ using (WebServiceHost host = new WebServiceHost(typeof(Service), new Uri("http:/
 </xs:schema>  
 ```  
   
- Дополнительные сведения о схеме сериализации контракта данных, см. в разделе [Data Contract Schema Reference](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).
+ Дополнительные сведения о схеме сериализации контракта данных см. в разделе [Справочник по схеме контракта данных](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).

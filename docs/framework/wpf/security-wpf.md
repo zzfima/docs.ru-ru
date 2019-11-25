@@ -13,12 +13,12 @@ helpviewer_keywords:
 - XBAP security [WPF]
 - Internet Explorer security settings [WPF]
 ms.assetid: ee1baea0-3611-4e36-9ad6-fcd5205376fb
-ms.openlocfilehash: 908c3fb0baacc7fd75dae875e9a9d49a08fe5401
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: a88159085e48d69550320ffabe3035f549c78653
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459725"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975606"
 ---
 # <a name="security-wpf"></a>Безопасность (WPF)
 <a name="introduction"></a>При разработке изолированных приложений Windows Presentation Foundation (WPF) и обозревателей, размещенных в браузере, необходимо учитывать модель безопасности. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] автономные приложения выполняются с неограниченными разрешениями (набор разрешений**FULLTRUST** CAS), будь то развертывание с помощью установщик Windows (. msi), XCOPY или ClickOnce. Развертывание автономных приложений WPF с частичным доверием с помощью ClickOnce не поддерживается. Однако ведущее приложение с полным доверием может создать <xref:System.AppDomain> частичного доверия с помощью модели надстройки .NET Framework. Дополнительные сведения см. в разделе [Общие сведения о](./app-development/wpf-add-ins-overview.md)надстройках WPF.  
@@ -209,7 +209,7 @@ ms.locfileid: "73459725"
   
  При запуске приложения браузера XAML (XBAP) с частичным доверием, которое включает элемент управления WPF <xref:System.Windows.Controls.WebBrowser> в Windows Internet Explorer, WPF размещает элемент управления ActiveX WebBrowser в адресном пространстве процесса Internet Explorer. Так как элемент управления ActiveX WebBrowser размещается в процессе Internet Explorer, все элементы управления функциями для Internet Explorer также включены для элемента управления ActiveX WebBrowser.  
   
- XBAP-приложения, выполняющиеся в Internet Explorer, также получают более высокий уровень безопасности по сравнению с обычными автономными приложениями. Такая дополнительная безопасность обусловлена тем, что Internet Explorer и, следовательно, элемент управления ActiveX WebBrowser запускается в защищенном режиме по умолчанию на [!INCLUDE[TLA#tla_winvista](../../../includes/tlasharptla-winvista-md.md)] и [!INCLUDE[win7](../../../includes/win7-md.md)]. Дополнительные сведения о защищенном режиме см. [в разделе понимание и работа в защищенном режиме Internet Explorer](https://go.microsoft.com/fwlink/?LinkId=179393).  
+ XBAP-приложения, выполняющиеся в Internet Explorer, также получают более высокий уровень безопасности по сравнению с обычными автономными приложениями. Такая дополнительная безопасность заключается в том, что Internet Explorer и, следовательно, элемент управления ActiveX WebBrowser работает в защищенном режиме по умолчанию в Windows Vista и [!INCLUDE[win7](../../../includes/win7-md.md)]. Дополнительные сведения о защищенном режиме см. [в разделе понимание и работа в защищенном режиме Internet Explorer](https://go.microsoft.com/fwlink/?LinkId=179393).  
   
 > [!NOTE]
 > При попытке запустить XBAP, включающий элемент управления WPF <xref:System.Windows.Controls.WebBrowser> в браузере Firefox, в зоне Интернета будет выдано <xref:System.Security.SecurityException>. Это связано с политикой безопасности WPF.  
@@ -258,7 +258,7 @@ ms.locfileid: "73459725"
  Этот параметр позволяет загружать внешнее содержимое в процесс, который отделен от процесса, содержащего приложение. Этот процесс ограничен набором разрешений зоны Интернета по умолчанию, что эффективно изолирует его от ведущего приложения и клиентского компьютера.  
   
 > [!NOTE]
-> Хотя переход к свободным [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] файлам из <xref:System.Windows.Navigation.NavigationWindow> или <xref:System.Windows.Controls.Frame> в автономном приложении реализован на основе инфраструктуры размещения браузера WPF, включающей в себя процесс PresentationHost, уровень безопасности немного меньше, чем при содержимое загружается непосредственно в Internet Explorer на [!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)] и [!INCLUDE[win7](../../../includes/win7-md.md)] (который по-прежнему будет использоваться в PresentationHost). Это обусловлено тем, что автономное приложение WPF, использующее веб-браузер, не предоставляет дополнительную функцию безопасности "Защищенный режим" Internet Explorer.  
+> Хотя переход к свободным [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] файлам из <xref:System.Windows.Navigation.NavigationWindow> или <xref:System.Windows.Controls.Frame> в автономном приложении реализован на основе инфраструктуры размещения WPF, включающей в себя процесс PresentationHost, уровень безопасности немного меньше, чем при загрузке содержимого непосредственно в Internet Explorer в Windows Vista и [!INCLUDE[win7](../../../includes/win7-md.md)] (что по-прежнему будет выполняться через PresentationHost). Это обусловлено тем, что автономное приложение WPF, использующее веб-браузер, не предоставляет дополнительную функцию безопасности "Защищенный режим" Internet Explorer.  
   
 <a name="BestPractices"></a>   
 ## <a name="resources-for-developing-wpf-applications-that-promote-security"></a>Ресурсы для разработки приложений WPF, обеспечивающих безопасность  

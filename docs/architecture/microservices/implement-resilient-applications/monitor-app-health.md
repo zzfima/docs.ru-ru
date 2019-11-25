@@ -2,12 +2,12 @@
 title: Мониторинг работоспособности
 description: Изучите один из способов реализации мониторинга работоспособности.
 ms.date: 01/07/2019
-ms.openlocfilehash: 2d43efa7b6cfb855a033ee4d766c64c2472ceb36
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f1d63e04bbea95fcf0a9f9d3b50aef0e7d4a830e
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73094071"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73732898"
 ---
 # <a name="health-monitoring"></a>Мониторинг работоспособности
 
@@ -123,7 +123,7 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env)
 
 Например, в микрослужбе `Catalog.API` добавлены следующие пакеты NuGet:
 
-![Представление обозревателя решений проекта Catalog.API, где указаны ссылки на пакеты NuGet AspNetCore.Diagnostics.HealthChecks](./media/image6.png)
+![Снимок экрана: пакеты NuGet AspNetCore.Diagnostics.HealthChecks.](./media/monitor-app-health/aspnet-core-diagnostics-health-checks.png)
 
 **Рис. 8-7**. Пользовательские проверки работоспособности, реализованные в Catalog.API с помощью AspNetCore.Diagnostics.HealthChecks
 
@@ -191,7 +191,7 @@ app.UseHealthChecks("/hc", new HealthCheckOptions()
 
 Настроив проверки работоспособности, описанные в этой статье, вы можете непосредственно проверить работоспособность микрослужбы из браузера, если эта микрослужба запущена в Docker. Для этого необходимо опубликовать порт контейнера в узле Docker, чтобы вы могли обращаться к контейнеру по внешнему IP-адресу узла Docker или через `localhost`, как показано на рисунке 8-8.
 
-![Представление ответа в формате JSON, полученного при проверке работоспособности, в браузере](./media/image7.png)
+![Снимок экрана: ответ в формате JSON, полученный при проверке работоспособности.](./media/monitor-app-health/health-check-json-response.png)
 
 **Рис. 8-8**. Проверка состояния работоспособности для одной службы из браузера
 
@@ -205,7 +205,7 @@ app.UseHealthChecks("/hc", new HealthCheckOptions()
 
 К счастью, [AspNetCore.Diagnostics.HealthChecks](https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks) также предоставляет пакет NuGet [AspNetCore.HealthChecks.UI](https://www.nuget.org/packages/AspNetCore.HealthChecks.UI/), который можно использовать для отображения результатов проверки работоспособности на основе настроенных URI.
 
-![Представление приложения WebStatus в браузере с состоянием работоспособности всех микрослужб из eShopOnContainers](./media/image8.png)
+![Снимок экрана: состояние работоспособности eShopOnContainers в пользовательском интерфейсе проверки работоспособности.](./media/monitor-app-health/health-check-status-ui.png)
 
 **Рис. 8-9**. Пример отчета о проверке работоспособности в eShopOnContainers
 

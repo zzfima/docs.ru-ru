@@ -8,12 +8,12 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-ms.openlocfilehash: f5630f7947125dd5eb8a5b58e79add1aec4c689b
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 1efcee0ac3bdba1b7e1379a0ac072ea714add756
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774921"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423919"
 ---
 # <a name="whats-new-for-visual-basic"></a>Новые возможности Visual Basic
 
@@ -206,13 +206,13 @@ Dim number As Integer = &H_C305_F860
 
 ## <a name="visual-basic-14"></a>Visual Basic 14
 
-[Nameof](../../csharp/language-reference/operators/nameof.md)
+[NameOf](../language-reference/operators/nameof.md)
 
 Можно получить неполное имя строки типа или элемента для использования в сообщении об ошибке, не выполняя жесткого программирования строки.  Это позволяет сохранить правильный код при рефакторинге.  Эта возможность также полезна для прикрепления связей MVC контроллера model-view-controller и инициирования событий изменения свойств.
 
 [Интерполяция строк](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md)
 
-Для создания строк можно использовать выражения интерполяции строк.  Интерполированное строковое выражение выглядит как шаблонная строка, которая содержит выражения.  Интерполированную строку проще понять с точки зрения аргументов, чем [составное форматирование](../../standard/base-types/composite-format.md).
+Для создания строк можно использовать выражения интерполяции строк.  Интерполированное строковое выражение выглядит как шаблонная строка, которая содержит выражения.  Интерполированную строку проще понять с точки зрения аргументов, чем [составное форматирование](../../standard/base-types/composite-formatting.md).
 
 [Доступ к членам и индексация с проверкой на значение NULL](../language-reference/operators/null-conditional-operators.md)
 
@@ -291,4 +291,4 @@ End Interface
 
 ## <a name="see-also"></a>См. также
 
-- [Новые возможности Visual Studio 2017](/visualstudio/ide/whats-new-in-visual-studio)
+- [Новые возможности Visual Studio 2017](/visualstudio/ide/whats-new-visual-studio-2017)

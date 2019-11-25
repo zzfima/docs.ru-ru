@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 680a7382-957f-4f6e-b178-4e866004a07e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ce022e92e8b6770c42800a04a349eff751bdb708
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 3cd881044d45a276ec361d24097b59b8ce76b7e4
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052062"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975697"
 ---
 # <a name="net-framework-initialization-errors-managing-the-user-experience"></a>Ошибки инициализации платформы .NET Framework: управление пользовательской средой
 
@@ -41,7 +41,7 @@ ms.locfileid: "71052062"
 
 Если системе активации среды CLR не удается загрузить правильную версию среды выполнения, которая требуется приложению, она отображает сообщение об ошибке, чтобы уведомить пользователя, что компьютер не настроен должным образом для запуска приложения, и предоставить с возможность исправить ситуацию. Обычно в такой ситуации отображается следующее сообщение об ошибке. Пользователь может выбрать **Да**, чтобы перейти к веб-сайту Майкрософт, где он может загрузить правильную версию платформы .NET Framework для приложения.
 
-![Диалоговое окно ошибки инициализации .NET Framework](./media/initialization-errors-managing-the-user-experience/initialization-error-dialog.png "Типичное сообщение об ошибке инициализации")
+![Диалоговое окно ошибки инициализации платформы .NET Framework](./media/initialization-errors-managing-the-user-experience/initialization-error-dialog.png "Типичное сообщение об ошибке инициализации")
 
 ## <a name="resolving-the-initialization-error"></a>Устранение ошибок инициализации
 
@@ -59,7 +59,7 @@ ms.locfileid: "71052062"
 
 Метод [ICLRMetaHostPolicy::GetRequestedRuntime](../unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md) принимает в качестве входных данных элемент перечисления [METAHOST_POLICY_FLAGS](../unmanaged-api/hosting/metahost-policy-flags-enumeration.md). Можно включить флаг METAHOST_POLICY_SHOW_ERROR_DIALOG для запроса сообщения об ошибке, если запрошенная версия среды CLR не будет найдена. По умолчанию сообщение об ошибке не отображается. (Метод [ICLRMetaHost::GetRuntime](../unmanaged-api/hosting/iclrmetahost-getruntime-method.md) не поддерживает этот флаг и не предоставляет иных способов отобразить сообщение об ошибке.)
 
-Windows предоставляет функцию [SetErrorMode](https://go.microsoft.com/fwlink/p/?LinkID=255242), с помощью которой можно объявить, должны ли сообщения об ошибках отображаться как результат выполнения кода, выполняемого внутри процесса. Можно указать флаг SEM_FAILCRITICALERRORS, чтобы запретить отображение сообщения об ошибке.
+Windows предоставляет функцию [SetErrorMode](/windows/win32/api/errhandlingapi/nf-errhandlingapi-seterrormode), с помощью которой можно объявить, должны ли сообщения об ошибках отображаться как результат выполнения кода, выполняемого внутри процесса. Можно указать флаг SEM_FAILCRITICALERRORS, чтобы запретить отображение сообщения об ошибке.
 
 Но в некоторых случаях важно переопределить параметр SEM_FAILCRITICALERRORS, установленный процессом приложения. Например, если имеется собственный компонент COM, в котором находится среда CLR и расположенный в процессе, для которого установлен флаг SEM_FAILCRITICALERRORS, можно переопределить флаг в зависимости от влияния отображения сообщений об ошибках в пределах данного процесса приложения. В этом случае для переопределения SEM_FAILCRITICALERRORS можно воспользоваться одним из следующих флагов:
 
@@ -82,7 +82,7 @@ Windows предоставляет функцию [SetErrorMode](https://go.micr
 
 Система активации CLR обеспечивает такое же поведение и пользовательского интерфейса в [!INCLUDE[win8](../../../includes/win8-md.md)], как и в других версиях операционной системы Windows, за исключением случаев возникновения проблем при загрузке CLR 2.0. [!INCLUDE[win8](../../../includes/win8-md.md)] включает в себя .NET Framework 4.5, использующий среду CLR 4.5. Но [!INCLUDE[win8](../../../includes/win8-md.md)] не включает в себя .NET Framework 2.0, 3.0 или 3.5, где используется среда CLR 2.0. В результате приложения, зависящие от среды CLR 2.0, по умолчанию не будут работать в [!INCLUDE[win8](../../../includes/win8-md.md)]. Вместо этого выводится следующее диалоговое окно, позволяющее установить платформу .NET Framework 3.5. Пользователи также могут включить платформу .NET Framework 3.5 из панели управления. Обе возможности рассматриваются в статье [Установка платформы .NET Framework 3.5 в Windows 10, Windows 8.1 и Windows 8](../install/dotnet-35-windows-10.md).
 
-![Диалоговое окно для установки версии 3.5 в Windows 8](./media/initialization-errors-managing-the-user-experience/install-framework-on-demand-dialog.png "Запрос на установку .NET Framework 3.5 по запросу")
+![Диалоговое окно установки версии 3.5 в Windows 8](./media/initialization-errors-managing-the-user-experience/install-framework-on-demand-dialog.png "Приглашение для установки .NET Framework 3.5 по запросу")
 
 > [!NOTE]
 > .NET Framework 4.5 заменяет .NET Framework 4 (среда CLR 4) на компьютере пользователя. Поэтому приложения платформы .NET Framework версии 4 без проблем выполняются в [!INCLUDE[win8](../../../includes/win8-md.md)] без отображения этого диалогового окна.

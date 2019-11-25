@@ -8,14 +8,14 @@ helpviewer_keywords:
 - <TimeSpan_LegacyFormatMode> element
 - TimeSpan_LegacyFormatMode element
 ms.assetid: 865e7207-d050-4442-b574-57ea29d5e2d6
-ms.openlocfilehash: c835e1bcef7bbfdc990c8db177eafed4ec6bb30c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9d9eedf52f5d711412e4549e39e6ea23abb68ff3
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73115214"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73968909"
 ---
-# <a name="timespan_legacyformatmode-element"></a>\<TimeSpan_LegacyFormatMode > элемент
+# <a name="timespan_legacyformatmode-element"></a>\<TimeSpan_LegacyFormatMode элемент >
 
 Определяет, сохраняет ли среда выполнения устаревшее поведение в операциях форматирования с <xref:System.TimeSpan?displayProperty=nameWithType> значениями.
 
@@ -75,13 +75,13 @@ ms.locfileid: "73115214"
 
 При запуске примера на .NET Framework 3,5 или более ранней версии отображаются следующие выходные данные:
 
-```
+```console
 12:30:45
 ```
 
 При выполнении примера на .NET Framework 4 или более поздней версии это отличает его от выходных данных.
 
-```
+```console
 Invalid Format
 ```
 

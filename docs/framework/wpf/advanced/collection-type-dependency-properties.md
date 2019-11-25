@@ -10,12 +10,12 @@ helpviewer_keywords:
 - dependency properties [WPF]
 - collection-type properties [WPF]
 ms.assetid: 99f96a42-3ab7-4f64-a16b-2e10d654e97c
-ms.openlocfilehash: f7f8c25844f41dd8915c0f4404d6714b4c81233c
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 039ae0cb314eba2f1bb3e5b39f2127a5e694f334
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458478"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73974158"
 ---
 # <a name="collection-type-dependency-properties"></a>Свойства зависимостей типа коллекция
 Этот раздел содержит рекомендации и примеры шаблонов для реализации свойства зависимостей, где типом свойства является коллекция.  
@@ -28,8 +28,11 @@ ms.locfileid: "73458478"
 ## <a name="initializing-the-collection-beyond-the-default-value"></a>Инициализация коллекции за пределами значения по умолчанию  
  При создании свойства зависимостей вы не указываете значение свойства по умолчанию в качестве начального значения поля. Вместо этого значение по умолчанию указывается через метаданные свойства зависимостей. Если свойство является ссылочным типом, значение по умолчанию, заданное в метаданных свойства зависимостей, не является значением по умолчанию для каждого экземпляра. Напротив, это значение по умолчанию, которое применяется ко всем экземплярам типа. Поэтому необходимо избегать использования единственной статической коллекции, определенной метаданными свойства коллекции, в качестве рабочего значения по умолчанию для вновь создаваемых экземпляров типа. Вместо этого необходимо явно задать в качестве значения коллекции уникальную коллекцию (экземпляр) как часть логики конструктора класса. В противном случае будет создан случайный одноэлементный класс.  
   
- Рассмотрим следующий пример. В следующем разделе примера показано определение класса `Aquarium`. Класс определяет свойство зависимости типа коллекции `AquariumObjects`, которое использует универсальный тип <xref:System.Collections.Generic.List%601> с ограничением типа <xref:System.Windows.FrameworkElement>. В <xref:System.Windows.DependencyProperty.Register%28System.String%2CSystem.Type%2CSystem.Type%2CSystem.Windows.PropertyMetadata%29> вызове свойства зависимостей метаданные устанавливают значение по умолчанию как Новое универсальное <xref:System.Collections.Generic.List%601>.  
-  
+ Рассмотрим следующий пример. В следующем разделе примера показано определение класса `Aquarium`, который содержит изъян со значением по умолчанию. Класс определяет свойство зависимости типа коллекции `AquariumObjects`, которое использует универсальный тип <xref:System.Collections.Generic.List%601> с ограничением типа <xref:System.Windows.FrameworkElement>. В <xref:System.Windows.DependencyProperty.Register%28System.String%2CSystem.Type%2CSystem.Type%2CSystem.Windows.PropertyMetadata%29> вызове свойства зависимостей метаданные устанавливают значение по умолчанию как Новое универсальное <xref:System.Collections.Generic.List%601>.
+
+> [!WARNING]
+> Следующий код работает неправильно.
+
  [!code-csharp[PropertiesOvwSupport2#CollectionProblemDefinition](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport2/CSharp/page.xaml.cs#collectionproblemdefinition)]
  [!code-vb[PropertiesOvwSupport2#CollectionProblemDefinition](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport2/visualbasic/page.xaml.vb#collectionproblemdefinition)]  
   

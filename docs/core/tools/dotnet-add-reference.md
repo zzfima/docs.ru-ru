@@ -1,15 +1,15 @@
 ---
-title: Команда dotnet-add reference
+title: Команда dotnet add reference
 description: Команду dotnet add reference удобно использовать для добавления ссылок между проектами.
 ms.date: 06/26/2019
-ms.openlocfilehash: 79c8a787079e02f6cf227820c24bb4157b0292c6
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: c97975e11410cfaad18ca68832957d75a4a2fd09
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72522766"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73100817"
 ---
-# <a name="dotnet-add-reference"></a>dotnet-add reference
+# <a name="dotnet-add-reference"></a>dotnet add reference
 
 **Эта статья относится к ✓** SDK для .NET Core 1.x и более поздних версий
 

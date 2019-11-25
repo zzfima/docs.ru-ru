@@ -4,12 +4,12 @@ description: Из этого руководства вы узнаете, как 
 ms.date: 06/26/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 5e05fd2a38770ce348fbbfcfaa88267217b806bf
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: b344731c7d356f3705d9909b6901234f91ec7d6d
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71116565"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72521886"
 ---
 # <a name="tutorial-containerize-a-net-core-app"></a>Учебник. Контейнеризация приложения .NET Core
 
@@ -19,10 +19,10 @@ ms.locfileid: "71116565"
 
 > [!div class="checklist"]
 >
-> * создать и опубликовать простое приложение .NET Core;
-> * создать и настроить Dockerfile для .NET Core;
-> * Создание образа Docker
-> * создать и запустить контейнер Docker.
+> - создать и опубликовать простое приложение .NET Core;
+> - создать и настроить Dockerfile для .NET Core;
+> - Создание образа Docker
+> - создать и запустить контейнер Docker.
 
 Вы также узнаете о задачах сборки и развертывания контейнера Docker для приложения .NET Core. *Платформа Docker* использует *модуль Docker* для быстрой сборки и упаковки приложений в качестве *образов Docker*. Эти образы имеют формат *Dockerfile* и предназначены для развертывания и запуска в многоуровневом контейнере.
 
@@ -30,16 +30,16 @@ ms.locfileid: "71116565"
 
 Установите следующие необходимые компоненты:
 
-* [Пакет .NET для Core версии 2.2](https://dotnet.microsoft.com/download)\.
+- [Пакет .NET для Core версии 2.2](https://dotnet.microsoft.com/download)\.
 Если у вас установлена платформа .NET Core, воспользуйтесь командой `dotnet --info`, чтобы определить версию пакета SDK.
 
-* [Docker Community Edition](https://www.docker.com/products/docker-desktop).
+- [Docker Community Edition](https://www.docker.com/products/docker-desktop).
 
-* Временная рабочая папка для *Dockerfile* и примера приложения .NET Core. В этом руководстве имя `docker-working` используется в качестве рабочей папки.
+- Временная рабочая папка для *Dockerfile* и примера приложения .NET Core. В этом руководстве имя `docker-working` используется в качестве рабочей папки.
 
 ### <a name="use-sdk-version-22"></a>Использование пакета SDK версии 2.2
 
-Если вы работаете с пакетом SDK более новой версии (например, 3.0), убедитесь, что приложение использует версию 2.2. Создайте файл с именем `global.json` в рабочей папке и вставьте в него следующий код JSON:
+Если вы работаете с пакетом SDK более новой версии (например, 3.0), убедитесь, что приложение использует версию 2.2. Создайте файл с именем *global.json* в рабочей папке и вставьте в него следующий код JSON:
 
 ```json
 {
@@ -53,7 +53,7 @@ ms.locfileid: "71116565"
 
 ## <a name="create-net-core-app"></a>Создание приложения .NET Core
 
-Вам нужно создать приложение .NET Core для выполнения контейнера Docker. Откройте терминал, создайте рабочую папку, если вы еще этого не сделали, и войдите в нее. Выполните следующую команду в рабочей папке, чтобы создать проект в подпапке с именем app:
+Вам нужно создать приложение .NET Core для выполнения контейнера Docker. Откройте терминал, создайте рабочую папку, если вы еще этого не сделали, и войдите в нее. Выполните следующую команду в рабочей папке, чтобы создать проект во вложенной папке с именем *app*:
 
 ```dotnetcli
 dotnet new console -o app -n myapp
@@ -83,7 +83,7 @@ docker-working
 Hello World!
 ```
 
-Шаблон по умолчанию создает приложение, которое выводит текст в терминал и затем завершает работу. В этом руководстве описано, как использовать приложение с бесконечным циклом выполнения. Откройте файл **Program.cs** в текстовом редакторе. Файл должен содержать следующий код:
+Шаблон по умолчанию создает приложение, которое выводит текст в терминал и затем завершает работу. В этом руководстве описано, как использовать приложение с бесконечным циклом выполнения. Откройте файл *Program.cs* в текстовом редакторе. Файл должен содержать следующий код:
 
 ```csharp
 using System;
@@ -113,7 +113,7 @@ namespace myapp
         {
             var counter = 0;
             var max = args.Length != 0 ? Convert.ToInt32(args[0]) : -1;
-            while(max == -1 || counter < max)
+            while (max == -1 || counter < max)
             {
                 counter++;
                 Console.WriteLine($"Counter: {counter}");
@@ -124,7 +124,7 @@ namespace myapp
 }
 ```
 
-Сохраните файл и протестируйте программу еще раз с помощью команды `dotnet run`. Помните, что это приложение выполняется бесконечно. Остановите его с помощью команды отмены, нажав клавиши <kbd>CTRL+C</kbd>. Вы увидите следующие выходные данные:
+Сохраните файл и протестируйте программу еще раз с помощью команды `dotnet run`. Помните, что это приложение выполняется бесконечно. Остановите его с помощью команды отмены, нажав клавиши <kbd>CTRL</kbd>+<kbd>C</kbd>. Вы увидите следующие выходные данные:
 
 ```console
 > dotnet run
@@ -144,15 +144,15 @@ Counter: 4
 
 Прежде чем добавить приложение .NET Core в образ Docker, опубликуйте его. Убедитесь, что выполняемый контейнер запускает опубликованную версию приложения.
 
-Из рабочей папки перейдите в папку **app** с примером исходного кода и выполните следующую команду:
+Из рабочей папки перейдите в папку *app* с примером исходного кода и выполните следующую команду:
 
 ```dotnetcli
 dotnet publish -c Release
 ```
 
-Эта команда компилирует приложение и помещает результат в папку **publish**. Путь к папке **publish** из рабочей папки должен быть таким: `.\app\bin\Release\netcoreapp2.2\publish\`
+Эта команда компилирует приложение и помещает результат в папку *publish*. Путь к папке *publish* из рабочей папки должен быть таким: `.\app\bin\Release\netcoreapp2.2\publish\`
 
-Получите список файлов для папки publish, чтобы убедиться в наличии файла **myapp.dll**. Из папки **app** выполните одну из следующих команд:
+Получите список файлов для папки publish, чтобы убедиться в наличии файла *myapp.dll*. Из папки *app* выполните одну из следующих команд:
 
 ```console
 > dir bin\Release\netcoreapp2.2\publish
@@ -229,7 +229,7 @@ COPY app/bin/Release/netcoreapp2.2/publish/ app/
 ENTRYPOINT ["dotnet", "app/myapp.dll"]
 ```
 
-Команда `COPY` предписывает Docker скопировать указанную папку на вашем компьютере в папку в контейнере. В этом примере папка **publish** копируется в папку с именем **app** в контейнере.
+Команда `COPY` предписывает Docker скопировать указанную папку на вашем компьютере в папку в контейнере. В этом примере папка *publish* копируется в папку с именем *app* в контейнере.
 
 Следующая команда `ENTRYPOINT` используется, чтобы настроить с помощью Docker контейнер для запуска в качестве исполняемого файла. При запуске контейнера выполняется команда `ENTRYPOINT`. После выполнения команды контейнер автоматически остановится.
 
@@ -370,7 +370,8 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
 Команда `docker run` также позволяет изменить команду `ENTRYPOINT` из файла *Dockerfile* для запуска другой программы, но только для соответствующего контейнера. Например, воспользуйтесь указанной ниже командой, чтобы запустить `bash` или `cmd.exe`. При необходимости измените команду.
 
 #### <a name="windows"></a>Windows
-В этом примере команда `ENTRYPOINT` изменена на `cmd.exe`. Нажав клавиши <kbd>CTRL+C</kbd>, вы можете завершить процесс и остановить контейнер.
+
+В этом примере команда `ENTRYPOINT` изменена на `cmd.exe`. Нажав клавиши <kbd>CTRL</kbd>+<kbd>C</kbd>, вы можете завершить процесс и остановить контейнер.
 
 ```console
 > docker run -it --rm --entrypoint "cmd.exe" myimage
@@ -411,13 +412,13 @@ exit
 
 Docker предоставляет множество команд для операций с контейнером и образами. Для управления контейнерами в основном используются такие команды Docker:
 
-* [docker build](https://docs.docker.com/engine/reference/commandline/build/)
-* [docker run](https://docs.docker.com/engine/reference/commandline/run/)
-* [docker ps](https://docs.docker.com/engine/reference/commandline/ps/)
-* [docker stop](https://docs.docker.com/engine/reference/commandline/stop/)
-* [docker rm](https://docs.docker.com/engine/reference/commandline/rm/)
-* [docker rmi](https://docs.docker.com/engine/reference/commandline/rmi/)
-* [docker image](https://docs.docker.com/engine/reference/commandline/image/)
+- [docker build](https://docs.docker.com/engine/reference/commandline/build/)
+- [docker run](https://docs.docker.com/engine/reference/commandline/run/)
+- [docker ps](https://docs.docker.com/engine/reference/commandline/ps/)
+- [docker stop](https://docs.docker.com/engine/reference/commandline/stop/)
+- [docker rm](https://docs.docker.com/engine/reference/commandline/rm/)
+- [docker rmi](https://docs.docker.com/engine/reference/commandline/rmi/)
+- [docker image](https://docs.docker.com/engine/reference/commandline/image/)
 
 ## <a name="clean-up-resources"></a>Очистка ресурсов
 
@@ -455,7 +456,7 @@ docker rmi mcr.microsoft.com/dotnet/core/runtime:2.2
 
 ## <a name="next-steps"></a>Следующие шаги
 
-* [Изучите руководство по микрослужбам ASP.NET Core.](https://dotnet.microsoft.com/learn/web/aspnet-microservice-tutorial/intro)
-* [Узнайте больше о службах Azure, которые поддерживают контейнеры.](https://azure.microsoft.com/overview/containers/)
-* [Ознакомьтесь с командами Dockerfile.](https://docs.docker.com/engine/reference/builder/)
-* [Изучите инструменты Visual Studio для контейнеров](/visualstudio/containers/overview)
+- [Изучите руководство по микрослужбам ASP.NET Core.](https://dotnet.microsoft.com/learn/web/aspnet-microservice-tutorial/intro)
+- [Узнайте больше о службах Azure, которые поддерживают контейнеры.](https://azure.microsoft.com/overview/containers/)
+- [Ознакомьтесь с командами Dockerfile.](https://docs.docker.com/engine/reference/builder/)
+- [Изучите инструменты Visual Studio для контейнеров](/visualstudio/containers/overview)

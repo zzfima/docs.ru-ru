@@ -12,29 +12,29 @@ helpviewer_keywords:
 - inline option constructs
 - options parameter
 ms.assetid: c82dc689-7e82-4767-a18d-cd24ce5f05e9
-ms.openlocfilehash: 4cc62696cb6589151e3abc59bbea64b693e8b3a2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a53d7517485d2a0b02b6f11928f478a7da3f9503
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73121733"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73972104"
 ---
 # <a name="regular-expression-options"></a>Параметры регулярных выражений
 
-<a name="Top"></a> По умолчанию при сравнении входной строки с любыми литеральными символами в шаблоне регулярного выражения учитывается регистр, пробел в шаблоне интерпретируется как литеральный символ, а захватываемые группы в регулярном выражении именуются как явно, так и неявно. Вы можете изменить эти и некоторые другие аспекты поведения регулярного выражения по умолчанию с помощью параметров регулярного выражения. Эти параметры, которые представлены в следующей таблице, могут быть указаны как часть шаблона регулярного выражения или переданы конструктору класса <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> или статичному методу сопоставления шаблона как значение перечисления <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType>.
+По умолчанию при сравнении входной строки с любыми литералами в шаблоне регулярного выражения учитывается регистр, пробел в шаблоне интерпретируется как литерал, а захватываемые группы в регулярном выражении именуются как явно, так и неявно. Вы можете изменить эти и некоторые другие аспекты поведения регулярного выражения по умолчанию с помощью параметров регулярного выражения. Эти параметры, которые представлены в следующей таблице, могут быть указаны как часть шаблона регулярного выражения или переданы конструктору класса <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> или статичному методу сопоставления шаблона как значение перечисления <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType>.
 
 |Член RegexOptions|Встроенный символ|Действие|
 |-------------------------|----------------------|------------|
-|<xref:System.Text.RegularExpressions.RegexOptions.None>|Недоступно|Использовать поведение по умолчанию. Дополнительные сведения см. в разделе [Параметры по умолчанию](#Default).|
-|<xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase>|`i`|Использовать соответствие без учета регистра. Дополнительные сведения см. в разделе [Сопоставление без учета регистра](#Case).|
-|<xref:System.Text.RegularExpressions.RegexOptions.Multiline>|`m`|Использовать многострочный режим, где `^` и `$` соответствуют началу и концу строки текста (а не началу и концу входной строки). Дополнительные сведения см. в разделе [Многострочный режим](#Multiline).|
-|<xref:System.Text.RegularExpressions.RegexOptions.Singleline>|`s`|Использовать однострочный режим, где точка (.) соответствует любому символу (а не каждому символу, кроме `\n`). Дополнительные сведения см. в разделе [Однострочный режим](#Singleline).|
-|<xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture>|`n`|Не захватывать неименованные группы. К допустимым захватам относятся только явно именованные или нумерованные группы в формате `(?<`*name*`>` *subexpression*`)`. Дополнительные сведения см. в разделе [Только явные захваты](#Explicit).|
-|<xref:System.Text.RegularExpressions.RegexOptions.Compiled>|Недоступно|Скомпилировать регулярное выражение в сборку. Дополнительные сведения см. в разделе [Скомпилированные регулярные выражения](#Compiled).|
-|<xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace>|`x`|Исключить неэкранированные пробелы из шаблона и включить комментарии после символа решетки (`#`). Дополнительные сведения см. в статье [Пропуск пробелов](#Whitespace).|
-|<xref:System.Text.RegularExpressions.RegexOptions.RightToLeft>|Недоступно|Изменить направление поиска. Поиск идет справа налево, а не слева направо. Дополнительные сведения см. в разделе [Режим "справа налево"](#RightToLeft).|
-|<xref:System.Text.RegularExpressions.RegexOptions.ECMAScript>|Недоступно|Включить поведение, совместимое с ECMAScript, для выражения. Дополнительные сведения см. в разделе [Поведение сопоставления ECMAScript](#ECMAScript).|
-|<xref:System.Text.RegularExpressions.RegexOptions.CultureInvariant>|Недоступно|Игнорировать различия региональных параметров в языке. Дополнительные сведения см. в разделе [Сравнение с использованием инвариантных региональных параметров](#Invariant).|
+|<xref:System.Text.RegularExpressions.RegexOptions.None>|Недоступно|Использовать поведение по умолчанию. Дополнительные сведения см. в разделе [Параметры по умолчанию](#default-options).|
+|<xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase>|`i`|Использовать соответствие без учета регистра. Дополнительные сведения см. в разделе [Сопоставление без учета регистра](#case-insensitive-matching).|
+|<xref:System.Text.RegularExpressions.RegexOptions.Multiline>|`m`|Использовать многострочный режим, где `^` и `$` соответствуют началу и концу строки текста (а не началу и концу входной строки). Дополнительные сведения см. в разделе [Многострочный режим](#multiline-mode).|
+|<xref:System.Text.RegularExpressions.RegexOptions.Singleline>|`s`|Использовать однострочный режим, где точка (.) соответствует любому символу (а не каждому символу, кроме `\n`). Дополнительные сведения см. в статье [Однострочный режим](#single-line-mode).|
+|<xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture>|`n`|Не захватывать неименованные группы. К допустимым захватам относятся только явно именованные или нумерованные группы в формате `(?<`*name*`>` *subexpression*`)`. Дополнительные сведения см. в разделе [Только явные захваты](#explicit-captures-only).|
+|<xref:System.Text.RegularExpressions.RegexOptions.Compiled>|Недоступно|Скомпилировать регулярное выражение в сборку. Дополнительные сведения см. в разделе [Скомпилированные регулярные выражения](#compiled-regular-expressions).|
+|<xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace>|`x`|Исключить неэкранированные пробелы из шаблона и включить комментарии после символа решетки (`#`). Дополнительные сведения см. в статье [Пропуск пробелов](#ignore-white-space).|
+|<xref:System.Text.RegularExpressions.RegexOptions.RightToLeft>|Недоступно|Изменить направление поиска. Поиск идет справа налево, а не слева направо. Дополнительные сведения см. в разделе [Режим "справа налево"](#right-to-left-mode).|
+|<xref:System.Text.RegularExpressions.RegexOptions.ECMAScript>|Недоступно|Включить поведение, совместимое с ECMAScript, для выражения. Дополнительные сведения см. в разделе [Поведение сопоставления ECMAScript](#ecmascript-matching-behavior).|
+|<xref:System.Text.RegularExpressions.RegexOptions.CultureInvariant>|Недоступно|Игнорировать различия региональных параметров в языке. Дополнительные сведения см. в разделе [Сравнение с использованием инвариантных региональных параметров](#comparison-using-the-invariant-culture).|
 
 ## <a name="specifying-the-options"></a>Указание параметров
 
@@ -108,8 +108,6 @@ ms.locfileid: "73121733"
 
 В следующих разделах перечислены параметры, поддерживаемые регулярными выражениями .NET.
 
-<a name="Default"></a>
-
 ## <a name="default-options"></a>Параметры по умолчанию
 
 Параметр <xref:System.Text.RegularExpressions.RegexOptions.None?displayProperty=nameWithType> указывает, что ни один параметр не задан, а механизм регулярных выражений использует поведение по умолчанию. Это поведение характеризуется следующим образом.
@@ -135,10 +133,6 @@ ms.locfileid: "73121733"
 
 Так как параметр <xref:System.Text.RegularExpressions.RegexOptions.None?displayProperty=nameWithType> представляет поведение механизма регулярных выражений по умолчанию, он редко явно указывается в вызове метода. Вместо этого вызывает конструктор или статичный метод сопоставления шаблона без параметра `options`.
 
-[К началу](#Top)
-
-<a name="Case"></a>
-
 ## <a name="case-insensitive-matching"></a>Сопоставление без учета регистра
 
 Параметр <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase> или встроенный параметр `i` обеспечивает сопоставление без учета регистра. По умолчанию используются соглашения о регистре текущих региональных параметров.
@@ -152,10 +146,6 @@ ms.locfileid: "73121733"
 
 [!code-csharp[Conceptual.Regex.Language.Options#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/case2.cs#2)]
 [!code-vb[Conceptual.Regex.Language.Options#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/case2.vb#2)]
-
-[К началу](#Top)
-
-<a name="Multiline"></a>
 
 ## <a name="multiline-mode"></a>Многострочный режим
 
@@ -184,10 +174,6 @@ ms.locfileid: "73121733"
 [!code-csharp[Conceptual.Regex.Language.Options#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/multiline2.cs#4)]
 [!code-vb[Conceptual.Regex.Language.Options#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/multiline2.vb#4)]
 
-[К началу](#Top)
-
-<a name="Singleline"></a>
-
 ## <a name="single-line-mode"></a>Однострочный режим
 
 Параметр <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> или встроенный параметр `s` позволяет механизму регулярных выражений обрабатывать входную строку так, будто она состоит из одной строки. Для этого поведение языкового элемента `.` меняется так, чтобы он сопоставлял каждый символ, а не каждый символ, кроме символа новой строки `\n` или \u000A.
@@ -201,10 +187,6 @@ ms.locfileid: "73121733"
 
 [!code-csharp[Conceptual.Regex.Language.Options#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/singleline1.cs#5)]
 [!code-vb[Conceptual.Regex.Language.Options#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/singleline1.vb#5)]
-
-[К началу](#Top)
-
-<a name="Explicit"></a>
 
 ## <a name="explicit-captures-only"></a>Только явные захваты
 
@@ -244,10 +226,6 @@ ms.locfileid: "73121733"
 [!code-csharp[Conceptual.Regex.Language.Options#11](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/explicit3.cs#11)]
 [!code-vb[Conceptual.Regex.Language.Options#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/explicit3.vb#11)]
 
-[К началу](#Top)
-
-<a name="Compiled"></a>
-
 ## <a name="compiled-regular-expressions"></a>Скомпилированные регулярные выражения
 
 По умолчанию регулярные выражения в .NET интерпретируются. Когда создается экземпляр объекта <xref:System.Text.RegularExpressions.Regex> или вызывается статичный метод <xref:System.Text.RegularExpressions.Regex>, шаблон регулярного выражения преобразуется в набор настраиваемых кодов операций, а интерпретатор использует их для выполнения регулярного выражения. С этим связан компромисс: затраты на инициализацию механизма регулярных выражений уменьшаются за счет производительности во время выполнения.
@@ -269,10 +247,6 @@ ms.locfileid: "73121733"
 
 > [!NOTE]
 > Параметр <xref:System.Text.RegularExpressions.RegexOptions.Compiled?displayProperty=nameWithType> не связан с методом <xref:System.Text.RegularExpressions.Regex.CompileToAssembly%2A?displayProperty=nameWithType>, который создает специальную сборку с предварительно определенными скомпилированными регулярными выражениями.
-
-[К началу](#Top)
-
-<a name="Whitespace"></a>
 
 ## <a name="ignore-white-space"></a>Пропуск пробелов
 
@@ -302,7 +276,7 @@ ms.locfileid: "73121733"
 
 `\b \(? ( (?>\w+) ,?\s? )+  [\.!?] \)? # Matches an entire sentence.`
 
-Этот шаблон похож на тот, что был определен в разделе [Только явные захваты](#Explicit), но он использует параметр <xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace?displayProperty=nameWithType> для пропуска пробелов в шаблоне.
+Этот шаблон похож на тот, что был определен в разделе [Только явные захваты](#explicit-captures-only), но он использует параметр <xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace?displayProperty=nameWithType> для пропуска пробелов в шаблоне.
 
 [!code-csharp[Conceptual.Regex.Language.Options#12](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/whitespace1.cs#12)]
 [!code-vb[Conceptual.Regex.Language.Options#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/whitespace1.vb#12)]
@@ -311,10 +285,6 @@ ms.locfileid: "73121733"
 
 [!code-csharp[Conceptual.Regex.Language.Options#13](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/whitespace2.cs#13)]
 [!code-vb[Conceptual.Regex.Language.Options#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/whitespace2.vb#13)]
-
-[К началу](#Top)
-
-<a name="RightToLeft"></a>
 
 ## <a name="right-to-left-mode"></a>Режим "справа налево"
 
@@ -342,10 +312,6 @@ ms.locfileid: "73121733"
 |`,?`|Выделяется ноль или один символ запятой.|
 |`\s`|Соответствует пробелу.|
 |`\d{4}`|Выделяются 4 десятичные цифры.|
-
-[К началу](#Top)
-
-<a name="ECMAScript"></a>
 
 ## <a name="ecmascript-matching-behavior"></a>Поведение сопоставления ECMAScript
 
@@ -386,10 +352,6 @@ ms.locfileid: "73121733"
   |`\0` с последующими 0-2 восьмеричными цифрами|Интерпретируется как восьмеричное число. Например, `\044` всегда интерпретируется как восьмеричное значение и означает "$".|Такое же поведение.|
   |`\` с последующей цифрой от 1 до 9, за которой нет дополнительных десятичных цифр.|Интерпретируется как обратная ссылка. Например, `\9` всегда означает обратную ссылку на 9, даже если девятая захватываемая группа не существует. Если захватываемая группа не существует, анализатор регулярных выражений вызывает исключение <xref:System.ArgumentException>.|Если захватываемая группа из одной десятичной цифры существует, значение интерпретируется как обратная ссылка на эту цифру. В противном случае оно интерпретируется как литерал.|
   |`\` с последующей цифрой от 1 до 9, за которой следуют дополнительные десятичные цифры.|Цифры интерпретируются как десятичное значение. Если эта захватываемая группа существует, выражение интерпретируется как обратная ссылка.<br /><br /> В противном случае интерпретируются первые восьмеричные цифры до восьмеричного числа 377, т. е. учитываются только младшие 8 разрядов значения. Оставшиеся цифры интерпретируются как литералы. Например, выражение `\3000`, если захватываемая группа 300 существует, интерпретируется как обратная ссылка на 300. В противном случае оно интерпретируется как восьмеричное число 300, за которым следует 0.|Выражение интерпретируется как обратная ссылка, для этого как можно больше цифр преобразуется в десятичное значение, которые могут указывать на выделение. Если цифры не могут быть преобразованы, выражение интерпретируется как восьмеричное число с использованием первых восьмеричных разрядов до восьмеричного числа 377. Оставшиеся восьмеричные цифры интерпретируются как литералы.|
-
-[К началу](#Top)
-
-<a name="Invariant"></a>
 
 ## <a name="comparison-using-the-invariant-culture"></a>Сравнение с использованием инвариантных региональных параметров
 

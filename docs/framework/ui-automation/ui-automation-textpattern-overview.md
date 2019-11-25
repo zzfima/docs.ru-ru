@@ -6,19 +6,19 @@ helpviewer_keywords:
 - TextPattern class
 - classes, TextPattern
 ms.assetid: 41787927-df1f-4f4a-aba3-641662854fc4
-ms.openlocfilehash: 15638e7da99ef15be58052849bf0675cc21941c9
-ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
+ms.openlocfilehash: 2f417aaba5361bea3bf2493001bca938d9dd08cb
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72180165"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975482"
 ---
 # <a name="ui-automation-textpattern-overview"></a>Общие сведения о TextPattern модели автоматизации пользовательского интерфейса
 
 > [!NOTE]
-> Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Последние сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] см. в разделе API автоматизации [Windows: Модель автоматизации пользовательского интерфейса @ no__t-0.
+> Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Последние сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]см. в разделе [API автоматизации Windows. Автоматизация пользовательского интерфейса](https://go.microsoft.com/fwlink/?LinkID=156746).
 
-В этом обзоре описывается использование [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] для предоставления текстового содержимого, в том числе атрибутов формата и стиля, текстовых элементов управления на платформах, поддерживаемых [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]. Эти элементы управления включают, но не ограничиваются, Microsoft .NET Framework <xref:System.Windows.Controls.TextBox> и <xref:System.Windows.Controls.RichTextBox>, а также их эквиваленты [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)].
+В этом обзоре описывается использование [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] для предоставления текстового содержимого, в том числе атрибутов формата и стиля, текстовых элементов управления на платформах, поддерживаемых [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]. Эти элементы управления включают, но не ограничиваются Microsoft .NET Framework <xref:System.Windows.Controls.TextBox> и <xref:System.Windows.Controls.RichTextBox>, а также их [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] эквиваленты.
 
 Предоставление текстового содержимого элемента управления осуществляется с помощью шаблона элемента управления <xref:System.Windows.Automation.TextPattern> , который представляет содержимое текстового контейнера в качестве текстового потока. В свою очередь <xref:System.Windows.Automation.TextPattern> требует поддержки класса <xref:System.Windows.Automation.Text.TextPatternRange> для предоставления атрибутов формата и стиля. <xref:System.Windows.Automation.Text.TextPatternRange> поддерживает <xref:System.Windows.Automation.TextPattern> , предоставляя непрерывный текст или несколько раздельных фрагментов текста в текстовый контейнер с коллекцией конечных точек <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> и <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> . <xref:System.Windows.Automation.Text.TextPatternRange> поддерживает такие функциональные возможности, как выбор, сравнение, извлечение и обход.
 
@@ -33,7 +33,7 @@ ms.locfileid: "72180165"
 
 Платформа текстовых служб (TSF) — это простая и масштабируемая системная платформа, которая обеспечивает службы естественного языка и расширенный ввод текста на рабочем столе и в приложениях. Помимо обеспечения интерфейсов для приложений, чтобы предоставлять их текстовое хранилище, она также поддерживает метаданные для этого текстового хранилища.
 
-Однако TSF разработана для приложений, которым необходимо внедрять входные данные в сценарии с учетом контекста, в то время как <xref:System.Windows.Automation.TextPattern> является решением только для чтения (с ограниченным обходным способом), предназначенным для обеспечения оптимизированного доступа к хранилищу текста для средств чтения с экрана и Брайля устройствах.
+Однако TSF разработана для приложений, которым необходимо внедрять входные данные в сценарии с учетом контекста, в то время как <xref:System.Windows.Automation.TextPattern> является решением только для чтения (с ограниченным обходным способом), предназначенным для обеспечения оптимизированного доступа к хранилищу текста для средств чтения с экрана и устройств Брайля.
 
 В коротких случаях доступные технологии, для которых требуется доступ только для чтения к хранилищу текста, могут использовать <xref:System.Windows.Automation.TextPattern>, но при этом потребуется более сложная функциональность TSF для входных данных, учитывающих контекст.
 
@@ -50,7 +50,7 @@ ms.locfileid: "72180165"
 > [!NOTE]
 > Элементы управления "Текст" могут не отображаться в представлении содержимого дерева [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] (см. раздел [UI Automation Tree Overview](ui-automation-tree-overview.md)). Это объясняется тем, что элементы управления «Текст» часто отображаются посредством свойства «Имя» другого элемента управления. Например текст, который используется для метки элемента управления «Поле ввода», предоставляется посредством свойства «Имя» элемента управления «Поле ввода». Поскольку элемент управления «Поле ввода» находится в представлении содержимого дерева [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , сам текстовый элемент не обязательно должен присутствовать в этом представлении дерева [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] . Единственный текст, который отображается в представлении содержимого, это текст, не являющийся избыточными сведениями. Это позволяет любой вспомогательной технологии быстро отфильтровывать только те части сведений, которые нужны пользователям.
 
-### <a name="edit"></a>Edit
+### <a name="edit"></a>Правка
 
 Элементы управления «Поле ввода» предоставляют пользователям возможность просматривать и редактировать одну строку текста.
 
@@ -104,7 +104,7 @@ ms.locfileid: "72180165"
 
 - Разработчики поставщиков автоматизации пользовательского интерфейса должны иметь в виду, что все данные, которые они предполагают предоставлять в своих элементах управления с помощью [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] , по существу являются открытыми и полностью доступными другому коду. [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] не пытается определить надежность любого клиента автоматизации пользовательского интерфейса и, следовательно, поставщик автоматизации пользовательского интерфейса не должен предоставлять защищенное содержимое или конфиденциальные текстовые сведения (например, поля паролей).
 
-- Одно из наиболее важных изменений в системе безопасности [!INCLUDE[TLA#tla_winvista](../../../includes/tlasharptla-winvista-md.md)] широко известно как «безопасный ввод», который включает такие технологии, как учетные записи пользователей с минимальными привилегиями или ограниченные учетные записи пользователей(LUA) и изоляция уровня привилегий пользовательского интерфейса (UIPI).
+- Одно из наиболее существенных изменений в системе безопасности для Windows Vista широко называется «безопасным входом», который охватывает такие технологии, как минимальные (или ограниченные) учетные записи пользователей (LUA) и изоляция уровня прав пользовательского интерфейса (UIPI).
 
   - UIPI запрещает программам управление и наблюдение за другими более «привилегированными» программами, предотвращая межпроцессные атаки оконных сообщений, которые подделывают пользовательский ввод.
 
@@ -122,21 +122,22 @@ ms.locfileid: "72180165"
 
 ## <a name="textpattern-terminology"></a>Терминология TextPattern
 
-**Атрибут**\
+\ **атрибута**
 Характеристика форматирования текстового диапазона (например, <xref:System.Windows.Automation.TextPattern.IsItalicAttribute> или <xref:System.Windows.Automation.TextPattern.FontNameAttribute>).
 
-**Вырожденный диапазон**\
+**Вырожденный\ диапазона**
 Вырожденный диапазон — это пустой или содержащий нулевые символы текстовый диапазон. Применительно к целям шаблона элемента управления TextPattern точка вставки текста (или системного курсора) считается вырожденным диапазоном. Если никакой текст не выбран, метод <xref:System.Windows.Automation.TextPattern.GetSelection%2A> вернет вырожденный диапазон в точке вставки текста, а метод <xref:System.Windows.Automation.TextPattern.RangeFromPoint%2A> вернет вырожденный диапазон в качестве своей начальной точки. Методы<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> и <xref:System.Windows.Automation.TextPattern.GetVisibleRanges%2A> могут возвращать вырожденные диапазоны, когда поставщик текста не может найти текстовые диапазоны, соответствующие заданному условию. Этот вырожденный диапазон можно использовать в качестве начальной точки в поставщике текста. <xref:System.Windows.Automation.Text.TextPatternRange.FindText%2A> и <xref:System.Windows.Automation.Text.TextPatternRange.FindAttribute%2A> возвращают пустую ссылку (`Nothing` в Microsoft Visual Basic .NET), чтобы избежать путаницы с обнаруженным диапазоном и вырожденным диапазоном.
 
-**Внедренный объект**\
+\ **внедренного объекта**
 В текстовой модели [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] существует два типа внедренных объектов. Они состоят из элементов с текстовым содержимым, таких как гиперссылки или таблицы, и элементов управления, таких как изображения и кнопки. Дополнительные сведения см. в разделе [Access Embedded Objects Using UI Automation](access-embedded-objects-using-ui-automation.md).
 
-**Конечная точка**\
+\ **конечной точки**
 Абсолютная точка <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> или <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> текстового диапазона в текстовом контейнере.
 
-![Начало &#40;и конец&#41;текстпаттернранжеендпоинтс.](./media/uia-textpattern-endpoints.PNG "UIA_TextPattern_Endpoints") Ниже показан набор начальных и конечных точек.
+![Начало &#40;и конец&#41;текстпаттернранжеендпоинтс.](./media/uia-textpattern-endpoints.PNG "UIA_TextPattern_Endpoints")
+Ниже демонстрируется задание начальной и конечной точками.
 
-**TextRange**\
+\ **TextRange**
 Представление фрагмента текста с начальной и конечной точками в текстовом контейнере, включающее все связанные атрибуты и функциональные возможности.
 
 <xref:System.Windows.Automation.Text.TextUnit>\

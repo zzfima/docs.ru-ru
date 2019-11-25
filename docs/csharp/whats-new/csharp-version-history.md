@@ -3,12 +3,12 @@ title: История языка C# (руководство по C#)
 description: На что был похож этот язык в ранних версиях и во что он превратился сейчас?
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: bce61d7a1838753f6cc2397440208e0c02b8194a
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 83934d9c8194d5109cea0e847d287c01c32a2955
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72002690"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739103"
 ---
 # <a name="the-history-of-c"></a>История языка C\#
 
@@ -57,7 +57,7 @@ ms.locfileid: "72002690"
 - [Универсальные шаблоны](../programming-guide/generics/index.md)
 - [Разделяемые типы](../programming-guide/classes-and-structs/partial-classes-and-methods.md#partial-classes)
 - [Анонимные методы](../language-reference/operators/delegate-operator.md)
-- [Типы значений, допускающие значение NULL](../programming-guide/nullable-types/index.md)
+- [Типы значений, допускающие значение NULL](../language-reference/builtin-types/nullable-value-types.md)
 - [Итераторы](../programming-guide/concepts/iterators.md)
 - [Ковариантность и контравариантность](../programming-guide/concepts/covariance-contravariance/index.md)
 
@@ -104,7 +104,7 @@ C# версии 3.0 был выпущен в конце 2007 года вмест
 
 Следующая версия представила ряд интересных функций:
 
-- [Динамическая привязка](../language-reference/keywords/dynamic.md)
+- [Динамическая привязка](../language-reference/builtin-types/reference-types.md)
 - [Именованные/дополнительные аргументы](../programming-guide/classes-and-structs/named-and-optional-arguments.md)
 - [Универсальная ковариантность и контравариантность](../../standard/generics/covariance-and-contravariance.md)
 - [Внедренные типы взаимодействия](../../framework/interop/type-equivalence-and-embedded-interop-types.md)
@@ -132,7 +132,7 @@ C# версии 3.0 был выпущен в конце 2007 года вмест
 
 ## <a name="c-version-60"></a>C# версии 6.0
 
-Версии 3.0 и 5.0 добавили в объектно-ориентированный язык C# несколько впечатляющих возможностей. Версия 6.0, выпущенная вместе с Visual Studio 2013, отступает от проторенного пути по реализации уникальных возможностей и концентрируется на предоставлении незначительных функций, с которыми программирование на C# становится гораздо эффективнее. Вот некоторые из них:
+Версии 3.0 и 5.0 добавили в объектно-ориентированный язык C# несколько впечатляющих возможностей. Версия 6.0, выпущенная вместе с Visual Studio 2015, отступает от подхода, ориентированного на реализацию уникальных возможностей. Здесь предоставляются менее масштабные функции, с которыми программирование на C# становится гораздо эффективнее. Вот некоторые из них:
 
 - [Статические импорты](./csharp-6.md#using-static)
 - [Фильтры исключений](./csharp-6.md#exception-filters)

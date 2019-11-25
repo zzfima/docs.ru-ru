@@ -8,15 +8,15 @@ helpviewer_keywords:
 ms.assetid: 7aa8cb72-dee9-4716-ac54-b17b9ae8218f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9da78fb161a906f6ef266f98a9f13633da91b61c
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: e2b030508897f13cce1fc6439809b98bbae17813
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052041"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975675"
 ---
 # <a name="reducing-system-restarts-during-net-framework-45-installations"></a>Уменьшение числа перезагрузок при установке платформы .NET Framework 4.5
-Установщик .NET Framework 4.5 использует [Диспетчер перезагрузки](https://go.microsoft.com/fwlink/?LinkId=231425) для предотвращения перезагрузки системы во время установки, если это возможно. Если программа установки устанавливает платформу .NET Framework, она может взаимодействовать с диспетчером перезапуска, чтобы воспользоваться преимуществами этой функции. Дополнительные сведения см. в разделе [Практическое руководство. Получение хода выполнения установщика .NET Framework 4.5](how-to-get-progress-from-the-dotnet-installer.md).  
+Установщик .NET Framework 4.5 использует [Диспетчер перезагрузки](/windows/win32/rstmgr/about-restart-manager) для предотвращения перезагрузки системы во время установки, если это возможно. Если программа установки устанавливает платформу .NET Framework, она может взаимодействовать с диспетчером перезапуска, чтобы воспользоваться преимуществами этой функции. Дополнительные сведения см. в разделе [Практическое руководство. Получение хода выполнения установщика .NET Framework 4.5](how-to-get-progress-from-the-dotnet-installer.md).  
   
 ## <a name="reasons-for-a-restart"></a>Причины для перезапуска  
  Установка .NET Framework 4.5 требует перезапуска системы, если во время установки запущено приложение платформы .NET Framework 4. Это происходит потому, что .NET Framework 4.5 заменяет файлы платформы .NET Framework 4 и требует, чтобы эти файлы были доступны во время установки. Во многих случаях можно избежать перезапуска путем обнаружения и закрытия работающих приложения .NET Framework 4. Но некоторые системные приложения не могут быть закрыты. В этих случаях не удается избежать перезапуска.  

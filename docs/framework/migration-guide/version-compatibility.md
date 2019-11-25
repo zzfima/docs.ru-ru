@@ -7,14 +7,12 @@ helpviewer_keywords:
 - .NET Framework, compatibility with earlier versions
 - .NET Framework versions, compatibility
 ms.assetid: 2f25e522-456a-48c3-8a53-e5f39275649f
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8db23f8e670406faff01644e751a948096f5fc7c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e0de18b5a40875d1fec2633c16688111d8f4b9ee
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592885"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73974958"
 ---
 # <a name="version-compatibility-in-the-net-framework"></a>Совместимость версий в .NET Framework
 
@@ -51,13 +49,13 @@ ms.locfileid: "64592885"
 
 Если приложение или компонент не работает в .NET Framework 4.5 и в доработанных выпусках, .NET Framework 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7, 4.7.1, 4.7.2 или 4.8, ожидаемым образом, воспользуйтесь следующими контрольными списками:
 
-- Если приложение было разработано для выполнения в любой версии платформы .NET Framework, начиная с .NET Framework 4.0, см. раздел [Совместимость приложений в .NET Framework](application-compatibility.md) для создания списков изменения между вашей целевой версией .NET Framework и версией, на котором выполняется приложение.
+- Если приложение разработано для выполнения в любой версии платформы .NET Framework, начиная с .NET Framework 4.0, см. раздел [Совместимость приложений](application-compatibility.md), чтобы создать списки изменений между вашей целевой версией .NET Framework и версией, в которой выполняется приложение.
 
 - Если приложение предназначено для .NET Framework 3.5, см. также раздел [Проблемы при миграции на .NET Framework 4](../migration-guide/net-framework-4-migration-issues.md).
 
-- Если приложение предназначено для .NET Framework 2.0, см. также раздел [Изменения в .NET Framework 3.5 SP1](https://go.microsoft.com/fwlink/?LinkId=186989).
+- Если приложение предназначено для .NET Framework 2.0, см. также раздел [Изменения в .NET Framework 3.5 SP1](https://docs.microsoft.com/previous-versions/dotnet/articles/dd310284(v=msdn.10)).
 
-- Если приложение предназначено для .NET Framework 1.1, см. также раздел [Изменения в .NET Framework 2.0](https://go.microsoft.com/fwlink/?LinkID=125263).
+- Если приложение предназначено для .NET Framework 1.1, см. также раздел [Изменения в .NET Framework 2.0](https://docs.microsoft.com/previous-versions/aa570326(v=msdn.10)).
 
 - Если вы перекомпилируете существующий исходный код для запуска в платформе .NET Framework 4.5 (или ее доработанных выпусках) или разрабатываете новую версию приложения или компонента для запуска в .NET Framework 4.5 или ее доработанных выпусках на основе существующей базы исходного кода, просмотрите раздел [Что устарело в библиотеке классов](../whats-new/whats-obsolete.md) на предмет устаревших типов и членов и используйте описанный обходной путь. (Скомпилированный ранее код будет продолжать работать с типами и членами, которые отмечены как устаревшие.)
 
@@ -74,5 +72,5 @@ ms.locfileid: "64592885"
 - [Новые возможности](../whats-new/index.md)
 - [Устаревшие классы библиотеки классов](../whats-new/whats-obsolete.md)
 - [Совместимость приложений](../migration-guide/application-compatibility.md)
-- [Политика жизненного цикла поддержки Microsoft .NET Framework](https://go.microsoft.com/fwlink/p/?LinkId=248212)
+- [Официальная политика поддержки .NET Framework](https://dotnet.microsoft.com/platform/support/policy/dotnet-framework)
 - [Проблемы при миграции на .NET Framework 4](../migration-guide/net-framework-4-migration-issues.md)

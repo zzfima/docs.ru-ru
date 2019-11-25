@@ -3,10 +3,10 @@ title: Использование микрослужб с шаблонами DDD
 description: Архитектура микрослужб .NET для упакованных в контейнеры приложений .NET | Сведения об использовании микрослужб с шаблонами DDD и CQRS для решения сложных бизнес-задач
 ms.date: 10/08/2018
 ms.openlocfilehash: 88b105b68307c8587f877bb9ddf370e143d8539b
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 11/21/2019
 ms.locfileid: "73739828"
 ---
 # <a name="tackle-business-complexity-in-a-microservice-with-ddd-and-cqrs-patterns"></a>Использование микрослужб с шаблонами DDD и CQRS для решения сложных бизнес-задач
@@ -31,7 +31,7 @@ DDD — это обширная тема, по которой доступно 
 
 ##### <a name="ddd-domain-driven-design"></a>DDD (проблемно-ориентированное проектирование)
 
-- **Эрик Эванс (Eric Evans). Предметно-ориентированный язык ** \
+- **Эрик Эванс (Eric Evans). Предметно-ориентированный язык**  \
   <https://domainlanguage.com/>
 
 - **Мартин Фоулер (Martin Fowler). Предметно-ориентированное проектирование** \
@@ -42,7 +42,7 @@ DDD — это обширная тема, по которой доступно 
 
 ##### <a name="ddd-books"></a>Книги по DDD
 
-- **Эрик Эванс (Eric Evans). Domain-Driven Design: Tackling Complexity in the Heart of Software** \ (Предметно-ориентированное проектирование. Структуризация сложных программных систем)
+- **Эрик Эванс (Eric Evans). Domain-Driven Design: Tackling Complexity in the Heart of Software (Предметно-ориентированное проектирование. Структуризация сложных программных систем)**  \
   <https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/>
 
 - **Эрик Эванс (Eric Evans). Справочник по предметно-ориентированному проектированию: Определения и обзор шаблонов** \

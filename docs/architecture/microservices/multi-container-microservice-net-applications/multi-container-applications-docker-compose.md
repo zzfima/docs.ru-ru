@@ -2,12 +2,12 @@
 title: Определение многоконтейнерного приложения с помощью docker-compose.yml
 description: Как указать композицию микрослужб для многоконтейнерного приложения с помощью docker-compose.yml.
 ms.date: 10/02/2018
-ms.openlocfilehash: 938a9aa192f82628051bd7dc065f661f510ba544
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 02db27feb1320d8b9c6823b8f9ef51c2ddf9791c
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73416703"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73737079"
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>Определение многоконтейнерного приложения с помощью docker-compose.yml
 
@@ -177,9 +177,15 @@ docker-compose -f docker-compose.yml -f docker-compose.test.override.yml down
 
 По умолчанию Compose читает два файла, docker-compose.yml и дополнительный файл docker-compose.override.yml. Как показано на рисунке 6-11, если вы работаете в Visual Studio и включаете поддержку Docker, Visual Studio при этом создает дополнительный файл docker-compose.vs.debug.g.yml для отладки приложения, вы можете просмотреть этот файл в папке obj\\Docker\\ в главной папке решения.
 
-![Структура файла проекта docker-compose: .dockerignore — для пропуска файлов; docker-compose.yml — для создания микрослужб; docker-compose.override.yml — для настройки среды микрослужб.](./media/image12.png)
+![Снимок экрана: файлы в проекте docker-compose.](./media/multi-container-applications-docker-compose/docker-compose-file-visual-studio.png)
 
 **Рис. 6-11**. Файлы docker-compose в Visual Studio 2017
+
+Структура файлов проекта **docker-compose**:
+
+* *.dockerignore* — используется для пропуска файлов.
+* *docker-compose.yml* — используется для создания микрослужб.
+* *docker-compose.override.yml* — используется для настройки среды микрослужб.
 
 Файлы docker-compose можно изменить в любом редакторе, например в Visual Studio Code или Sublime, и запустить приложение с помощью команды docker-compose up.
 
@@ -191,11 +197,11 @@ docker-compose -f docker-compose.yml -f docker-compose.test.override.yml down
 
 Распространенный вариант использования заключается в том, что определяется несколько файлов compose, чтобы можно было планировать несколько сред, таких как рабочая среда, промежуточная среда, среда CI или среда разработки. Для поддержки этих разных сред можно разделить конфигурацию Compose на несколько файлов, как показано на рисунке 6-12.
 
-![Вы можете сочетать несколько файлов docker-compose*.fml для обработки разных сред.](./media/image13.png)
+![Схема трех файлов docker-compose, которые задаются для переопределения базового файла.](./media/multi-container-applications-docker-compose/multiple-docker-compose-files-override-base.png)
 
 **Рис. 6-12**. Несколько файлов docker-compose, переопределяющих значения в базовом файле docker-compose.yml
 
-Вы начинаете с базового файла docker-compose.yml. Этот базовый файл должен содержать базовые или статические параметры конфигурации, которые не изменяются в зависимости от среды. Например, eShopOnContainers имеет в качестве базового файла следующий файл docker-compose.yml (упрощен путем уменьшения числа служб).
+Вы можете использовать комбинацию нескольких файлов docker-compose*.yml для работы в разных средах. Вы начинаете с базового файла docker-compose.yml. Этот базовый файл должен содержать базовые или статические параметры конфигурации, которые не изменяются в зависимости от среды. Например, eShopOnContainers имеет в качестве базового файла следующий файл docker-compose.yml (упрощен путем уменьшения числа служб).
 
 ```yml
 #docker-compose.yml (Base)

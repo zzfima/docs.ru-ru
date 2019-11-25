@@ -5,12 +5,12 @@ ms.date: 06/25/2019
 helpviewer_keywords:
 - new operator keyword [C#]
 ms.assetid: a212b697-a79b-4105-9923-1f7b108036e8
-ms.openlocfilehash: 3d64c4805abe38c80301748ffa6b35fc87563b60
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: c21132a6622ce697fe3c52a461a33f548e0c8f31
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67403972"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73036393"
 ---
 # <a name="new-operator-c-reference"></a>Оператор new (справочник по C#)
 
@@ -50,7 +50,7 @@ ms.locfileid: "67403972"
 
 Уничтожать ранее созданные экземпляры типа необязательно. Экземпляры как ссылочных типов, так и типов значений уничтожаются автоматически. Экземпляры типов значений уничтожаются, как только уничтожается содержащий их контекст. Экземпляры ссылочных типов уничтожаются [сборщиком мусора](../../../standard/garbage-collection/index.md) в неуказанное время после удаления последней ссылки на них.
 
-Для типов, которые содержат неуправляемые ресурсы, например дескриптор файла, рекомендуется использовать детерминированную очистку, чтобы как можно скорее высвободить эти ресурсы. Дополнительные сведения см. в справке по API <xref:System.IDisposable?displayProperty=nameWithType> и статье об [операторе using](../keywords/using-statement.md).
+Для экземпляров типа, которые содержат неуправляемые ресурсы, например дескриптор файла, рекомендуется использовать детерминированную очистку, чтобы как можно скорее высвободить эти ресурсы. Дополнительные сведения см. в справке по API <xref:System.IDisposable?displayProperty=nameWithType> и статье об [операторе using](../keywords/using-statement.md).
 
 ## <a name="operator-overloadability"></a>Возможность перегрузки оператора
 

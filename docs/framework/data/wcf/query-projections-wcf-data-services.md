@@ -10,22 +10,22 @@ helpviewer_keywords:
 - query projection [WCF Data Services]
 - WCF Data Services, querying
 ms.assetid: a09f4985-9f0d-48c8-b183-83d67a3dfe5f
-ms.openlocfilehash: 8128fd3cab0ca20da87a1a98c2657aefab96beaf
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 17475cccf461371a909660bfe3f8db29bf1fa2fe
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70779818"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975175"
 ---
 # <a name="query-projections-wcf-data-services"></a>Проекции запросов (службы данных WCF)
 
-Проекция предоставляет механизм в, [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] чтобы уменьшить объем данных в веб-канале, возвращаемом запросом, указав, что в ответе возвращаются только определенные свойства сущности. Дополнительные сведения см. в [разделе OData: Выберите параметр "системный запрос" (](https://go.microsoft.com/fwlink/?LinkId=186076)$SELECT).
+Проекция предоставляет механизм в Open Data Protocol (OData) для уменьшения объема данных в веб-канале, возвращаемых запросом, указывая, что в ответе возвращаются только определенные свойства сущности. Дополнительные сведения см. в разделе [OData: выберите параметр системного запроса ($SELECT)](https://go.microsoft.com/fwlink/?LinkId=186076).
 
 В этом разделе описано, как определить проекции запроса, какие требования предъявляются к типам сущности и несущностным типам, как выполнить обновления спроецированных результатов, создать проецируемые типы, а также представляются некоторые вопросы проекции.
 
 ## <a name="defining-a-query-projection"></a>Определение проекции запроса
 
-Предложение проекции можно добавить в запрос либо с помощью `$select` параметра запроса в URI, либо с помощью предложения [SELECT](../../../csharp/language-reference/keywords/select-clause.md) ([выберите](../../../visual-basic/language-reference/queries/select-clause.md) в Visual Basic) в запросе LINQ. Возвращаемые данные сущности могут быть проецированы в типы сущностей или в типы, отличные от сущностей, на клиенте. В примерах этого раздела показано, как использовать предложение `select` в запросе LINQ.
+Предложение проекции можно добавить в запрос либо с помощью параметра запроса `$select` в URI, либо с помощью предложения [SELECT](../../../csharp/language-reference/keywords/select-clause.md) ([выберите](../../../visual-basic/language-reference/queries/select-clause.md) в Visual Basic) в запросе LINQ. Возвращаемые данные сущности могут быть проецированы в типы сущностей или в типы, отличные от сущностей, на клиенте. В примерах этого раздела показано, как использовать предложение `select` в запросе LINQ.
 
 > [!IMPORTANT]
 > При сохранении обновлений, выполненных в проецируемых типах, в службе данных может произойти потеря данных. Дополнительные сведения см. в разделе [рекомендации по проекции](#considerations).
@@ -38,7 +38,7 @@ ms.locfileid: "70779818"
 
 - Если тип имеет свойство, именуемое `ID`.
 
-- Если тип имеет свойство с именем *Type*`ID`, где *Type* — это имя типа.
+- Если тип имеет свойство с именем *type*`ID`, где *Type* — это имя типа.
 
 По умолчанию, если результаты запроса проецируются на тип, определенный на клиенте, свойства, запрашиваемые в проекции, должны существовать в типе клиента. Но если задается значение `true` для свойства <xref:System.Data.Services.Client.DataServiceContext.IgnoreMissingProperties%2A> для <xref:System.Data.Services.Client.DataServiceContext>, не требуется, чтобы свойства, заданные в проекции, были в типе клиента.
 
@@ -70,9 +70,9 @@ ms.locfileid: "70779818"
    [!code-csharp[Astoria Northwind Client#ProjectWithInitializer](~/samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#projectwithinitializer)]
    [!code-vb[Astoria Northwind Client#ProjectWithInitializer](~/samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#projectwithinitializer)]
 
-- Тип сущности: Поддерживается
+- Тип сущности: поддерживается
 
-- Тип, не являющийся типом сущности: Поддерживается
+- Тип, не относящийся к сущности: поддерживается
 
 **Создание нового проецируемого экземпляра с помощью конструкторов**
 
@@ -81,9 +81,9 @@ ms.locfileid: "70779818"
    [!code-csharp[Astoria Northwind Client#ProjectWithConstructor](~/samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#projectwithconstructor)]
    [!code-vb[Astoria Northwind Client#ProjectWithConstructor](~/samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#projectwithconstructor)]
 
-- Тип сущности: Вызывается исключение <xref:System.NotSupportedException>.
+- Тип сущности: создается <xref:System.NotSupportedException>.
 
-- Тип, не являющийся типом сущности: Поддерживается
+- Тип, не относящийся к сущности: поддерживается
 
 **Преобразование значения свойства с помощью проекции**
 
@@ -92,9 +92,9 @@ ms.locfileid: "70779818"
    [!code-csharp[Astoria Northwind Client#ProjectWithTransform](~/samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#projectwithtransform)]
    [!code-vb[Astoria Northwind Client#ProjectWithTransform](~/samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#projectwithtransform)]
 
-- Тип сущности: Это преобразование не поддерживается для типов сущности, поскольку оно может вести к путанице, а также к возможной переписи данных в источнике данных, который относится к другой сущности. Вызывается исключение <xref:System.NotSupportedException>.
+- Тип сущности. это преобразование не поддерживается для типов сущностей, поскольку оно может привести к путанице и возможному перезаписи данных в источнике данных, принадлежащем другой сущности. Вызывается исключение <xref:System.NotSupportedException>.
 
-- Тип, не являющийся типом сущности: Поддерживается
+- Тип, не относящийся к сущности: поддерживается
 
 <a name="considerations"></a>
 
@@ -114,7 +114,7 @@ ms.locfileid: "70779818"
 
 - Запросы проецирования запроса на клиенте преобразуются для использования параметра запроса `$select` в URI запроса. Если запрос с проекцией выполняется для предыдущей версии служб [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], которая не поддерживает параметр запроса `$select`, возвращается ошибка. Это может также произойти, если версия <xref:System.Data.Services.DataServiceBehavior.MaxProtocolVersion%2A> объекта <xref:System.Data.Services.DataServiceBehavior> для службы данных установлена в значение <xref:System.Data.Services.Common.DataServiceProtocolVersion.V1>. Дополнительные сведения см. в разделе [Управление версиями службы данных](data-service-versioning-wcf-data-services.md).
 
-Дополнительные сведения см. в разделе [Практическое руководство. Результаты](how-to-project-query-results-wcf-data-services.md)запроса проекта.
+Дополнительные сведения см. [в разделе Практические руководства. Project Results Query](how-to-project-query-results-wcf-data-services.md).
 
 ## <a name="see-also"></a>См. также
 

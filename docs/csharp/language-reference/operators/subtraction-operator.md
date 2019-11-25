@@ -13,22 +13,22 @@ helpviewer_keywords:
 - event unsubscription [C#]
 - -= operator [C#]
 ms.assetid: 4de7a4fa-c69d-48e6-aff1-3130af970b2d
-ms.openlocfilehash: 80603107beb708e76a2c7446f300d71ede411570
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: cf642fcac7233d27f2ed9052829c145038e93419
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67609859"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73038874"
 ---
 # <a name="--and---operators-c-reference"></a>Операторы - и -= (справочник по C#)
 
-Оператор `-` поддерживается встроенными числовыми типами и типами [delegate](../keywords/delegate.md).
+Операторы `-` и `-=` поддерживаются встроенными [целыми](../builtin-types/integral-numeric-types.md) числовыми типами и числовыми типами [с плавающей запятой](../builtin-types/floating-point-numeric-types.md), а также типами [делегатов](../builtin-types/reference-types.md#the-delegate-type).
 
 Сведения об арифметическом операторе `-` см. в разделе [Операторы унарного плюса и минуса](arithmetic-operators.md#unary-plus-and-minus-operators) и [Оператор вычитания -](arithmetic-operators.md#subtraction-operator--) в статье [Арифметические операторы](arithmetic-operators.md).
 
 ## <a name="delegate-removal"></a>Удаление делегатов
 
-Для операндов одного и того же типа [delegate](../keywords/delegate.md) оператор `-` возвращает экземпляр делегата, который вычисляется следующим образом:
+Для операндов одного и того же типа [delegate](../builtin-types/reference-types.md#the-delegate-type) оператор `-` возвращает экземпляр делегата, который вычисляется следующим образом:
 
 - Если оба операнда не равны NULL и список вызовов правого операнда является соответствующим подчиненным списком списка вызовов левого операнда, результатом операции является новый список вызовов, который получается путем удаления записей правого операнда из списка вызовов левого операнда. Если список правого операнда соответствует нескольким смежным подчиненным спискам в списке левого операнда, удаляется только крайний правый совпадающий подсписок. Если удаление приводит к пустому списку, возвращается `null`.
 
@@ -38,7 +38,7 @@ ms.locfileid: "67609859"
 
   [!code-csharp-interactive[delegate removal with no effect](~/samples/csharp/language-reference/operators/SubtractionOperator.cs#DelegateRemovalNoChange)]
 
-  В предыдущем примере также показано, что во время удаления делегата сравниваются его экземпляры. Например, делегаты, созданные в результате оценки идентичных [лямбда-выражений](../../programming-guide/statements-expressions-operators/lambda-expressions.md) не будут равны. Дополнительные сведения о равенстве делегатов см. в разделе об [операторах равенства делегатов](~/_csharplang/spec/expressions.md#delegate-equality-operators) в [спецификации языка C#](../language-specification/index.md).
+  В предыдущем примере также показано, что во время удаления делегата сравниваются его экземпляры. Например, делегаты, созданные в результате оценки идентичных [лямбда-выражений](../../programming-guide/statements-expressions-operators/lambda-expressions.md) не будут равны. Дополнительные сведения о равенстве делегатов см. в разделе об [операторах равенства делегатов](~/_csharplang/spec/expressions.md#delegate-equality-operators) в [спецификации языка C#](~/_csharplang/spec/introduction.md).
 
 - Если левый операнд имеет значение `null`, результатом операции является `null`. Если правый операнд имеет значение `null`, результатом операции является левый операнд.
 
@@ -63,7 +63,7 @@ x = x - y
 ```
 
 за исключением того, что `x` вычисляется только один раз.
-  
+
 В следующем примере иллюстрируется использование оператора `-=`.
 
 [!code-csharp-interactive[-= examples](~/samples/csharp/language-reference/operators/SubtractionOperator.cs#SubtractAndAssign)]
@@ -82,7 +82,6 @@ x = x - y
 
 - [справочник по C#](../index.md)
 - [Операторы в C#](index.md)
-- [Делегаты](../../programming-guide/delegates/index.md)
 - [События](../../programming-guide/events/index.md)
 - [Арифметические операторы](arithmetic-operators.md)
 - [Операторы + и +=](addition-operator.md)

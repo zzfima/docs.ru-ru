@@ -2,12 +2,12 @@
 title: Формирование классов типов данных из XML
 ms.date: 03/30/2017
 ms.assetid: e4e5e4e8-527f-44d1-92fa-8904a08784ea
-ms.openlocfilehash: bf5596211e78842153b7406273626a7fa3c3aeea
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 977b12b5c61c196a4f033361d37785e4ed0af73a
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70990286"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975855"
 ---
 # <a name="generating-data-type-classes-from-xml"></a>Формирование классов типов данных из XML
 .NET Framework 4,5 включает новую функцию для создания классов типов данных из XML. В этом разделе описывается автоматическое создание типов данных для RSS-канала блога .NET.  
@@ -28,13 +28,13 @@ ms.locfileid: "70990286"
   
 3. Выберите **Правка**, **Специальная вставка**, **Вставить XML как классы**.  
   
-4. Классы с `link`именами `rss` ,`rssChannel` ,,`rssChannelItemGuid` и создаются с необходимыми элементами для доступа к элементам RSS-канала. `rssChannelItem` `rssChannelImage`  
+4. Классы с именами `link`, `rss`, `rssChannel`, `rssChannelImage`, `rssChannelItem` и `rssChannelItemGuid` создаются с необходимыми элементами для доступа к элементам RSS-канала.  
   
 ### <a name="using-the-generated-classes"></a>Использование созданных классов  
   
 1. После создания классов их можно использовать в коде так же, как и любые другие классы. В следующем примере кода показана инициализация нового экземпляра класса `rssChannelImage`.  
   
-    ```csharp  
+    ```csharp
     var channelImage = new rssChannelImage()   
     {   
         title = "MyImage",   

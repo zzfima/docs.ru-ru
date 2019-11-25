@@ -8,16 +8,16 @@ helpviewer_keywords:
 ms.assetid: 21271167-fe7f-46ba-a81f-a6812ea649d4
 author: jkoritzinsky
 ms.author: jekoritz
-ms.openlocfilehash: 8f9624414a2b423bd43e8790d11b70ae1ca6286d
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 8d9b8eb274777a0ed019a207c6e8610cc73ec390
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216227"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73973314"
 ---
 # <a name="exposing-net-core-components-to-com"></a>Предоставление доступа к компонентам .NET Core для COM
 
-В .NET Core процесс предоставления объектов .NET для модели COM значительно упрощен по сравнению с .NET Framework. Ниже описывается, как предоставить класс для модели COM. В этом учебнике описаны следующие процедуры.
+В .NET Core процесс предоставления объектов .NET для модели COM значительно упрощен по сравнению с .NET Framework. Ниже описывается, как предоставить класс для модели COM. В этом учебнике демонстрируется выполнение следующих действий:
 
 - Предоставление класса для модели COM из .NET Core.
 - Создайте сервер COM в процессе сборки библиотеки .NET Core.
@@ -39,7 +39,7 @@ ms.locfileid: "71216227"
 
 2. Откройте `Class1.cs`.
 3. Добавьте `using System.Runtime.InteropServices;` в начало файла.
-4. Создайте интерфейс с именем `IServer`. Например: 
+4. Создайте интерфейс с именем `IServer`. Например:
 
    [!code-csharp[The IServer interface](~/samples/core/extensions/COMServerDemo/COMContract/IServer.cs)]
 
@@ -55,7 +55,7 @@ ms.locfileid: "71216227"
 ## <a name="generate-the-com-host"></a>Создание узла COM
 
 1. Откройте файл проекта `.csproj` и добавьте элемент `<EnableComHosting>true</EnableComHosting>` внутри тега `<PropertyGroup></PropertyGroup>`.
-2. Создайте проект.
+2. Выполните построение проекта.
 
 В результате будут получены файлы `ProjectName.dll`, `ProjectName.deps.json`, `ProjectName.runtimeconfig.json` и `ProjectName.comhost.dll`.
 
@@ -66,16 +66,16 @@ ms.locfileid: "71216227"
 ## <a name="enabling-regfree-com"></a>Реализация модели COM без поддержки реестра
 
 1. Откройте файл проекта `.csproj` и добавьте элемент `<EnableRegFreeCom>true</EnableRegFreeCom>` внутри тега `<PropertyGroup></PropertyGroup>`.
-2. Создайте проект.
+2. Выполните построение проекта.
 
 В результате будет также получен файл `ProjectName.X.manifest`. Это параллельный манифест для использования с моделью COM без поддержки реестра.
 
-## <a name="sample"></a>Образец
+## <a name="sample"></a>Пример
 
 В репозитории dotnet/samples на сайте GitHub есть полнофункциональный [пример сервера COM](https://github.com/dotnet/samples/tree/master/core/extensions/COMServerDemo).
 
-## <a name="additional-notes"></a>Дополнительные замечания
+## <a name="additional-notes"></a>Дополнительные сведения
 
-В отличие от .NET Framework, в .NET Core создание библиотеки типов COM (TLB) из сборки .NET Core не поддерживается. Вам придется вручную написать файл IDL или заголовок C++ для собственных объявлений интерфейсов.
+В отличие от .NET Framework, в .NET Core создание библиотеки типов COM (TLB) из сборки .NET Core не поддерживается. Нужно вручную написать файл IDL или заголовок C/C++ для собственных объявлений COM-интерфейсов.
 
-Кроме того, загрузка одновременно .NET Framework и .NET Core в один и тот же процесс не поддерживается. Поэтому загрузка сервера COM .NET Core в клиентский процесс COM .NET Framework или наоборот невозможна.
+Кроме того, загрузка как .NET Framework, так и .NET Core в один и тот же процесс имеет ограничения диагностического характера. Основное ограничение — отладка управляемых компонентов, так как невозможно одновременно выполнить отладку .NET Framework и .NET Core. Кроме того, два экземпляра среды выполнения не используют управляемые сборки совместно. Это означает, что невозможно совместно использовать фактические типы .NET в двух средах выполнения, вместо этого все взаимодействия должны быть ограничены предоставленными контрактами COM-интерфейса.

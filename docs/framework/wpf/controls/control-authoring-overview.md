@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [WPF], authoring overview
 - authoring overview for controls [WPF]
 ms.assetid: 3d864748-cff0-4e63-9b23-d8e5a635b28f
-ms.openlocfilehash: fe7704b9366bf46f0c9965f78ce441000ead6334
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 1ac8964f915206205d5c9e6ab782fcaa59bf2a99
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460792"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975716"
 ---
 # <a name="control-authoring-overview"></a>Общие сведения о разработке элементов управления
 
@@ -36,7 +36,7 @@ ms.locfileid: "73460792"
   > [!NOTE]
   > Хотя <xref:System.Windows.Controls.RadioButton> может использовать <xref:System.Windows.DataTemplate>, в этом примере недостаточно <xref:System.Windows.DataTemplate>.  <xref:System.Windows.DataTemplate> определяет внешний вид содержимого элемента управления. В случае <xref:System.Windows.Controls.RadioButton>содержимое отображается справа от окружности, которое указывает, выбран ли <xref:System.Windows.Controls.RadioButton>.  В примере светофора переключатель должен быть тем кругом, который может "загораться". Так как требование внешнего вида для светофора отличается от стандартного вида <xref:System.Windows.Controls.RadioButton>, необходимо переопределить <xref:System.Windows.Controls.ControlTemplate>.  В целом <xref:System.Windows.DataTemplate> используется для определения содержимого (или данных) элемента управления, а <xref:System.Windows.Controls.ControlTemplate> используется для определения структуры элемента управления.
 
-- **Триггеры.** <xref:System.Windows.Trigger> позволяет динамически изменять внешний вид и поведение элемента управления без создания нового элемента управления. Например, предположим, что в приложении имеется несколько элементов управления <xref:System.Windows.Controls.ListBox> и при их выборе требуется, чтобы элементы в каждой <xref:System.Windows.Controls.ListBox> были полужирным и красным. Первым порывом может быть создание класса, который наследует от <xref:System.Windows.Controls.ListBox> и переопределяет метод <xref:System.Windows.Controls.Primitives.Selector.OnSelectionChanged%2A>, чтобы изменить внешний вид выбранного элемента, но лучшим подходом является добавление триггера к стилю <xref:System.Windows.Controls.ListBoxItem>, который изменяет внешний вид выбранного элемента. . Триггер позволяет изменять значения свойств или выполнять действия в зависимости от значения свойства. <xref:System.Windows.EventTrigger> позволяет выполнять действия при возникновении события.
+- **Триггеры.** <xref:System.Windows.Trigger> позволяет динамически изменять внешний вид и поведение элемента управления без создания нового элемента управления. Например, предположим, что в приложении имеется несколько элементов управления <xref:System.Windows.Controls.ListBox> и при их выборе требуется, чтобы элементы в каждой <xref:System.Windows.Controls.ListBox> были полужирным и красным. Первым порывом может быть создание класса, который наследует от <xref:System.Windows.Controls.ListBox> и переопределяет метод <xref:System.Windows.Controls.Primitives.Selector.OnSelectionChanged%2A>, чтобы изменить внешний вид выбранного элемента, но лучшим подходом является добавление триггера к стилю <xref:System.Windows.Controls.ListBoxItem>, который изменяет внешний вид выбранного элемента. Триггер позволяет изменять значения свойств или выполнять действия в зависимости от значения свойства. <xref:System.Windows.EventTrigger> позволяет выполнять действия при возникновении события.
 
 Дополнительные сведения о стилях, шаблонах и триггерах см. в разделе [Использование стилей и шаблонов](styling-and-templating.md).
 
@@ -187,7 +187,7 @@ ms.locfileid: "73460792"
 
 ### <a name="design-for-designers"></a>Разработка для конструкторов
 
-Чтобы получить поддержку пользовательских элементов управления WPF в [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)] (например, редактирование свойства с помощью окна "Свойства"), следуйте приведенным ниже рекомендациям.  Дополнительные сведения о разработке для [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)]см. в разделе [Разработка XAML в Visual Studio](/visualstudio/xaml-tools/designing-xaml-in-visual-studio).
+Для получения поддержки пользовательских элементов управления WPF в конструкторе WPF для Visual Studio (например, при редактировании свойств с помощью окно свойств) следуйте приведенным ниже рекомендациям.  Дополнительные сведения о разработке для конструктора WPF см. в разделе [Разработка XAML в Visual Studio](/visualstudio/xaml-tools/designing-xaml-in-visual-studio).
 
 #### <a name="dependency-properties"></a>Свойства зависимостей
 

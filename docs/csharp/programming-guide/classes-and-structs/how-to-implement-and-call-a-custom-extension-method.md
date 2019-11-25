@@ -1,18 +1,18 @@
 ---
-title: Практическое руководство. Руководство по программированию на C#. Реализация и вызов пользовательского метода расширения
+title: Практическое руководство. Реализация и вызов пользовательского метода расширения (руководство по программированию на C#)
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - extension methods [C#], implementing and calling
 ms.assetid: 7dab2a56-cf8e-4a47-a444-fe610a02772a
-ms.openlocfilehash: 26ad1d2251388237e186d1ba0e885fd7def66467
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: f3d96c033380698ade37c49ecbfeed14f05d3e11
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69596878"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73970896"
 ---
-# <a name="how-to-implement-and-call-a-custom-extension-method-c-programming-guide"></a>Практическое руководство. Руководство по программированию на C#. Реализация и вызов пользовательского метода расширения
+# <a name="how-to-implement-and-call-a-custom-extension-method-c-programming-guide"></a>Практическое руководство. Реализация и вызов пользовательского метода расширения (руководство по программированию на C#)
 Этот раздел описывает, как реализовать свои методы расширения для любого типа .NET Framework. Клиентский код может использовать методы расширения путем добавления ссылки на содержащую их библиотеку DLL и добавления директивы [using](../../language-reference/keywords/using-directive.md), которая указывает пространство имен, в котором определены методы расширения.  
   
 ## <a name="to-define-and-call-the-extension-method"></a>Определение и вызов метода расширения  

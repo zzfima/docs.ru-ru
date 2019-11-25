@@ -2,13 +2,14 @@
 title: Написание безопасного и эффективного кода C#
 description: Последние улучшения языка C# позволяют создавать проверяемый безопасный код с производительностью, не уступающей небезопасному коду.
 ms.date: 10/23/2018
+ms.technology: csharp-advanced-concepts
 ms.custom: mvc
-ms.openlocfilehash: 89a0bcf28c3c398865082e120ca9c16fe2c00651
-ms.sourcegitcommit: 9b2ef64c4fc10a4a10f28a223d60d17d7d249ee8
+ms.openlocfilehash: 3dc3213cf24f4cdd8f0f1b7752263b4a609b2fa2
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "72960840"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039630"
 ---
 # <a name="write-safe-and-efficient-c-code"></a>Написание безопасного и эффективного кода C#
 
@@ -229,7 +230,7 @@ public struct Point3D
 
 Не следует передавать тип значения, допускающий значения NULL, в качестве аргумента `in`. Тип <xref:System.Nullable%601> не объявлен как структура только для чтения. Это означает, что компилятор должен создавать защитные копии для любого аргумента типа, допускающего значение NULL и передаваемого в метод с помощью модификатора `in` в объявлении параметра.
 
-Вы видите пример программы, который демонстрирует разницу в производительности с помощью [Benchmark.net](https://www.nuget.org/packages/BenchmarkDotNet/) в наших [репозиториях примеров](https://github.com/dotnet/samples/tree/master/csharp/safe-efficient-code/benchmark) на сайте GitHub. Он сравнивает передачу изменяемых структур по значению и по ссылке с передачей неизменяемых структур по значению и по ссылке. Быстрее всего использовать неизменяемую структуру и передачу по ссылке.
+Вы видите пример программы, который демонстрирует разницу в производительности с помощью [BenchmarkDotNet](https://www.nuget.org/packages/BenchmarkDotNet/) в наших [репозиториях примеров](https://github.com/dotnet/samples/tree/master/csharp/safe-efficient-code/benchmark) на сайте GitHub. Он сравнивает передачу изменяемых структур по значению и по ссылке с передачей неизменяемых структур по значению и по ссылке. Быстрее всего использовать неизменяемую структуру и передачу по ссылке.
 
 ## <a name="use-ref-struct-types-to-work-with-blocks-or-memory-on-a-single-stack-frame"></a>Используйте типы `ref struct` для работы с блоками или памятью в одном кадре стека
 
