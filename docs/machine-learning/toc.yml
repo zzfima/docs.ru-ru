@@ -7,7 +7,7 @@
       items:
         - name: API ML.NET
           href: how-does-mldotnet-work.md
-    - name: Инструменты
+    - name: Построитель моделей и интерфейс командной строки
       items:
         - name: Средство построителя моделей ML.NET
           href: automate-training-with-model-builder.md
@@ -97,7 +97,7 @@
               href: how-to-guides/serve-model-serverless-azure-functions-ml-net.md
             - name: Развертывание модели в веб-API
               href: how-to-guides/serve-model-web-api-ml-net.md
-    - name: Инструменты
+    - name: Построитель моделей и интерфейс командной строки
       items:
         - name: Загрузка данных в построитель моделей
           href: how-to-guides/load-data-model-builder.md
@@ -109,18 +109,12 @@
           href: how-to-guides/how-to-use-the-automl-api.md
 - name: Ссылка
   items:
-    - name: API
-      items:
-        - name: Справочник по API ML.NET
-          href: 'https://docs.microsoft.com/dotnet/api/?view=ml-dotnet'
-        - name: Справочник по предварительной версии API ML.NET
-          href: 'https://docs.microsoft.com/dotnet/api/?view=ml-dotnet-preview'
-    - name: Инструменты
-      items:
-        - name: Справочник по CLI
-          href: reference/ml-net-cli-reference.md
-        - name: Справочник по API ML.NET AutoML
-          href: 'https://docs.microsoft.com/dotnet/api/index?view=automl-dotnet'
+    - name: Справочник по API ML.NET
+      href: 'https://docs.microsoft.com/dotnet/api/?view=ml-dotnet'
+    - name: Справочник по предварительной версии API ML.NET
+      href: 'https://docs.microsoft.com/dotnet/api/?view=ml-dotnet-preview'
+    - name: Справочник по CLI
+      href: reference/ml-net-cli-reference.md
 - name: Ресурсы
   items:
     - name: Обзор

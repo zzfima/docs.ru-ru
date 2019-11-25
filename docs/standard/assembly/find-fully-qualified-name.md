@@ -10,24 +10,24 @@ dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: bf24db03ca1dc4fbf3041f5e83d740029d87928f
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 49ebaeabee7a346fb84f09e5a9e34590d1ea9811
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740497"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348202"
 ---
-# <a name="how-to-find-an-assemblys-fully-qualified-name"></a><span data-ttu-id="ab2e0-102">Практическое руководство. Поиск полного имени сборки</span><span class="sxs-lookup"><span data-stu-id="ab2e0-102">How to: Find an assembly's fully qualified name</span></span>
+# <a name="how-to-find-an-assemblys-fully-qualified-name"></a><span data-ttu-id="f0f56-102">Практическое руководство. Поиск полного имени сборки</span><span class="sxs-lookup"><span data-stu-id="f0f56-102">How to: Find an assembly's fully qualified name</span></span>
 
-<span data-ttu-id="ab2e0-103">Чтобы получить полное имя сборки .NET Framework в глобальном кэше сборок, используйте средство глобального кэша сборок ([Gacutil.exe](../../framework/tools/gacutil-exe-gac-tool.md)).</span><span class="sxs-lookup"><span data-stu-id="ab2e0-103">To discover the fully qualified name of a .NET Framework assembly in the global assembly cache, use the Global Assembly Cache tool ([Gacutil.exe](../../framework/tools/gacutil-exe-gac-tool.md)).</span></span> <span data-ttu-id="ab2e0-104">См. практическое руководство по [ Просмотр содержимого глобального кэша сборок](../../framework/app-domains/how-to-view-the-contents-of-the-gac.md).</span><span class="sxs-lookup"><span data-stu-id="ab2e0-104">See [How to: View the contents of the global assembly cache](../../framework/app-domains/how-to-view-the-contents-of-the-gac.md).</span></span>
+<span data-ttu-id="f0f56-103">Чтобы получить полное имя сборки .NET Framework в глобальном кэше сборок, используйте средство глобального кэша сборок ([Gacutil.exe](../../framework/tools/gacutil-exe-gac-tool.md)).</span><span class="sxs-lookup"><span data-stu-id="f0f56-103">To discover the fully qualified name of a .NET Framework assembly in the global assembly cache, use the Global Assembly Cache tool ([Gacutil.exe](../../framework/tools/gacutil-exe-gac-tool.md)).</span></span> <span data-ttu-id="f0f56-104">См. практическое руководство по [ Просмотр содержимого глобального кэша сборок](../../framework/app-domains/how-to-view-the-contents-of-the-gac.md).</span><span class="sxs-lookup"><span data-stu-id="f0f56-104">See [How to: View the contents of the global assembly cache](../../framework/app-domains/how-to-view-the-contents-of-the-gac.md).</span></span>
 
-<span data-ttu-id="ab2e0-105">Получить полное имя сборки .NET Core или .NET Framework, которая отсутствует в глобальном кэше сборок, можно несколькими способами:</span><span class="sxs-lookup"><span data-stu-id="ab2e0-105">For .NET Core assemblies, and for .NET Framework assemblies that aren't in the global assembly cache, you can get the fully qualified assembly name in a number of ways:</span></span>
+<span data-ttu-id="f0f56-105">Получить полное имя сборки .NET Core или .NET Framework, которая отсутствует в глобальном кэше сборок, можно несколькими способами:</span><span class="sxs-lookup"><span data-stu-id="f0f56-105">For .NET Core assemblies, and for .NET Framework assemblies that aren't in the global assembly cache, you can get the fully qualified assembly name in a number of ways:</span></span>
 
-- <span data-ttu-id="ab2e0-106">Вы можете использовать код для вывода данных в консоль или в переменную либо применить [дизассемблер IL Ildasm.exe](../../framework/tools/ildasm-exe-il-disassembler.md) для просмотра метаданных сборки, которые содержат полное имя.</span><span class="sxs-lookup"><span data-stu-id="ab2e0-106">You can use code to output the information to the console or to a variable, or you can use the [Ildasm.exe (IL Disassembler)](../../framework/tools/ildasm-exe-il-disassembler.md) to examine the assembly's metadata, which contains the fully qualified name.</span></span>
+- <span data-ttu-id="f0f56-106">Вы можете использовать код для вывода данных в консоль или в переменную либо применить [дизассемблер IL Ildasm.exe](../../framework/tools/ildasm-exe-il-disassembler.md) для просмотра метаданных сборки, которые содержат полное имя.</span><span class="sxs-lookup"><span data-stu-id="f0f56-106">You can use code to output the information to the console or to a variable, or you can use the [Ildasm.exe (IL Disassembler)](../../framework/tools/ildasm-exe-il-disassembler.md) to examine the assembly's metadata, which contains the fully qualified name.</span></span>
 
-- <span data-ttu-id="ab2e0-107">Если сборка уже загружена приложением, то для получения полного имени можно извлечь значение свойства <xref:System.Reflection.Assembly.FullName%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="ab2e0-107">If the assembly is already loaded by the application, you can retrieve the value of the <xref:System.Reflection.Assembly.FullName%2A?displayProperty=nameWithType> property to get the fully qualified name.</span></span> <span data-ttu-id="ab2e0-108">Для получения ссылки на объект <xref:System.Reflection.Assembly> можно использовать свойство <xref:System.Type.Assembly> объекта <xref:System.Type>, определенного в этой сборке.</span><span class="sxs-lookup"><span data-stu-id="ab2e0-108">You can use the <xref:System.Type.Assembly> property of a <xref:System.Type> defined in that assembly to retrieve a reference to the <xref:System.Reflection.Assembly> object.</span></span> <span data-ttu-id="ab2e0-109">Иллюстрация приведена в примере.</span><span class="sxs-lookup"><span data-stu-id="ab2e0-109">The example provides an illustration.</span></span>
+- <span data-ttu-id="f0f56-107">Если сборка уже загружена приложением, то для получения полного имени можно извлечь значение свойства <xref:System.Reflection.Assembly.FullName%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="f0f56-107">If the assembly is already loaded by the application, you can retrieve the value of the <xref:System.Reflection.Assembly.FullName%2A?displayProperty=nameWithType> property to get the fully qualified name.</span></span> <span data-ttu-id="f0f56-108">Для получения ссылки на объект <xref:System.Reflection.Assembly> можно использовать свойство <xref:System.Type.Assembly> объекта <xref:System.Type>, определенного в этой сборке.</span><span class="sxs-lookup"><span data-stu-id="f0f56-108">You can use the <xref:System.Type.Assembly> property of a <xref:System.Type> defined in that assembly to retrieve a reference to the <xref:System.Reflection.Assembly> object.</span></span> <span data-ttu-id="f0f56-109">Иллюстрация приведена в примере.</span><span class="sxs-lookup"><span data-stu-id="f0f56-109">The example provides an illustration.</span></span>
 
-- <span data-ttu-id="ab2e0-110">Если вы знаете путь к файлу сборки в системе, то можете вызвать метод <xref:System.Reflection.AssemblyName.GetAssemblyName%2A?displayProperty=nameWithType> `static` (C#) или `Shared` (Visual Basic), чтобы получить полное имя сборки.</span><span class="sxs-lookup"><span data-stu-id="ab2e0-110">If you know the assembly's file system path, you can call the `static` (C#) or `Shared` (Visual Basic) <xref:System.Reflection.AssemblyName.GetAssemblyName%2A?displayProperty=nameWithType> method to get the fully qualified assembly name.</span></span> <span data-ttu-id="ab2e0-111">Ниже приведен простой пример.</span><span class="sxs-lookup"><span data-stu-id="ab2e0-111">The following is a simple example.</span></span>
+- <span data-ttu-id="f0f56-110">Если вы знаете путь к файлу сборки в системе, то можете вызвать метод <xref:System.Reflection.AssemblyName.GetAssemblyName%2A?displayProperty=nameWithType> `static` (C#) или `Shared` (Visual Basic), чтобы получить полное имя сборки.</span><span class="sxs-lookup"><span data-stu-id="f0f56-110">If you know the assembly's file system path, you can call the `static` (C#) or `Shared` (Visual Basic) <xref:System.Reflection.AssemblyName.GetAssemblyName%2A?displayProperty=nameWithType> method to get the fully qualified assembly name.</span></span> <span data-ttu-id="f0f56-111">Ниже приведен простой пример.</span><span class="sxs-lookup"><span data-stu-id="f0f56-111">The following is a simple example.</span></span>
 
   ```csharp
   using System;
@@ -56,13 +56,13 @@ ms.locfileid: "73740497"
   '   UtilityLibrary, Version=1.1.0.0, Culture=neutral, PublicKeyToken=null
   ```
 
-- <span data-ttu-id="ab2e0-112">Вы можете воспользоваться [дизассемблером IL (Ildasm.exe)](../../framework/tools/ildasm-exe-il-disassembler.md), чтобы просмотреть метаданные сборки, которые содержат ее полное имя.</span><span class="sxs-lookup"><span data-stu-id="ab2e0-112">You can use the [Ildasm.exe (IL Disassembler)](../../framework/tools/ildasm-exe-il-disassembler.md) to examine the assembly's metadata, which contains the fully qualified name.</span></span>
+- <span data-ttu-id="f0f56-112">Вы можете воспользоваться [дизассемблером IL (Ildasm.exe)](../../framework/tools/ildasm-exe-il-disassembler.md), чтобы просмотреть метаданные сборки, которые содержат ее полное имя.</span><span class="sxs-lookup"><span data-stu-id="f0f56-112">You can use the [Ildasm.exe (IL Disassembler)](../../framework/tools/ildasm-exe-il-disassembler.md) to examine the assembly's metadata, which contains the fully qualified name.</span></span>
 
-<span data-ttu-id="ab2e0-113">Подробнее о задании атрибутов сборки, таких как версия, язык и региональные параметры и имя сборки, см. в разделе [Настройка атрибутов сборки](set-attributes.md).</span><span class="sxs-lookup"><span data-stu-id="ab2e0-113">For more information about setting assembly attributes such as version, culture, and assembly name, see [Set assembly attributes](set-attributes.md).</span></span> <span data-ttu-id="ab2e0-114">Подробнее о присвоении сборке строгого имени см. в разделе [Создание и использование сборок со строгими именами](create-use-strong-named.md).</span><span class="sxs-lookup"><span data-stu-id="ab2e0-114">For more information about giving an assembly a strong name, see [Create and use strong-named assemblies](create-use-strong-named.md).</span></span>
+<span data-ttu-id="f0f56-113">Подробнее о задании атрибутов сборки, таких как версия, язык и региональные параметры и имя сборки, см. в разделе [Настройка атрибутов сборки](set-attributes.md).</span><span class="sxs-lookup"><span data-stu-id="f0f56-113">For more information about setting assembly attributes such as version, culture, and assembly name, see [Set assembly attributes](set-attributes.md).</span></span> <span data-ttu-id="f0f56-114">Подробнее о присвоении сборке строгого имени см. в разделе [Создание и использование сборок со строгими именами](create-use-strong-named.md).</span><span class="sxs-lookup"><span data-stu-id="f0f56-114">For more information about giving an assembly a strong name, see [Create and use strong-named assemblies](create-use-strong-named.md).</span></span>
 
-## <a name="example"></a><span data-ttu-id="ab2e0-115">Пример</span><span class="sxs-lookup"><span data-stu-id="ab2e0-115">Example</span></span>
+## <a name="example"></a><span data-ttu-id="f0f56-115">Пример</span><span class="sxs-lookup"><span data-stu-id="f0f56-115">Example</span></span>
 
-<span data-ttu-id="ab2e0-116">В примере ниже показано, как просмотреть полное имя сборки, содержащей указанный класс, в консоли.</span><span class="sxs-lookup"><span data-stu-id="ab2e0-116">The following example shows how to display the fully qualified name of an assembly containing a specified class to the console.</span></span> <span data-ttu-id="ab2e0-117">Для получения ссылки на сборку из типа, определенного в этой сборке, используется свойство <xref:System.Type.Assembly?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="ab2e0-117">It uses the <xref:System.Type.Assembly?displayProperty=nameWithType> property to retrieve a reference to an assembly from a type that's defined in that assembly.</span></span>
+<span data-ttu-id="f0f56-116">В примере ниже показано, как просмотреть полное имя сборки, содержащей указанный класс, в консоли.</span><span class="sxs-lookup"><span data-stu-id="f0f56-116">The following example shows how to display the fully qualified name of an assembly containing a specified class to the console.</span></span> <span data-ttu-id="f0f56-117">Для получения ссылки на сборку из типа, определенного в этой сборке, используется свойство <xref:System.Type.Assembly?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="f0f56-117">It uses the <xref:System.Type.Assembly?displayProperty=nameWithType> property to retrieve a reference to an assembly from a type that's defined in that assembly.</span></span>
 
 ```cpp
 #using <System.dll>
@@ -106,7 +106,6 @@ class asmname
 ```
 
 ```vb
-Imports System
 Imports System.Reflection
 
 Class asmname
@@ -119,10 +118,10 @@ Class asmname
 End Class
 ```
 
-## <a name="see-also"></a><span data-ttu-id="ab2e0-118">См. также</span><span class="sxs-lookup"><span data-stu-id="ab2e0-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f0f56-118">См. также</span><span class="sxs-lookup"><span data-stu-id="f0f56-118">See also</span></span>
 
-- [<span data-ttu-id="ab2e0-119">Имена сборок</span><span class="sxs-lookup"><span data-stu-id="ab2e0-119">Assembly names</span></span>](names.md)
-- [<span data-ttu-id="ab2e0-120">Создание сборок</span><span class="sxs-lookup"><span data-stu-id="ab2e0-120">Create assemblies</span></span>](create.md)
-- [<span data-ttu-id="ab2e0-121">Создание и использование сборок со строгими именами</span><span class="sxs-lookup"><span data-stu-id="ab2e0-121">Create and use strong-named assemblies</span></span>](create-use-strong-named.md)
-- [<span data-ttu-id="ab2e0-122">Глобальный кэш сборок</span><span class="sxs-lookup"><span data-stu-id="ab2e0-122">Global assembly cache</span></span>](../../framework/app-domains/gac.md)
-- [<span data-ttu-id="ab2e0-123">Обнаружение сборок в среде выполнения</span><span class="sxs-lookup"><span data-stu-id="ab2e0-123">How the runtime locates assemblies</span></span>](../../framework/deployment/how-the-runtime-locates-assemblies.md)
+- [<span data-ttu-id="f0f56-119">Имена сборок</span><span class="sxs-lookup"><span data-stu-id="f0f56-119">Assembly names</span></span>](names.md)
+- [<span data-ttu-id="f0f56-120">Создание сборок</span><span class="sxs-lookup"><span data-stu-id="f0f56-120">Create assemblies</span></span>](create.md)
+- [<span data-ttu-id="f0f56-121">Создание и использование сборок со строгими именами</span><span class="sxs-lookup"><span data-stu-id="f0f56-121">Create and use strong-named assemblies</span></span>](create-use-strong-named.md)
+- [<span data-ttu-id="f0f56-122">Глобальный кэш сборок</span><span class="sxs-lookup"><span data-stu-id="f0f56-122">Global assembly cache</span></span>](../../framework/app-domains/gac.md)
+- [<span data-ttu-id="f0f56-123">Обнаружение сборок в среде выполнения</span><span class="sxs-lookup"><span data-stu-id="f0f56-123">How the runtime locates assemblies</span></span>](../../framework/deployment/how-the-runtime-locates-assemblies.md)
