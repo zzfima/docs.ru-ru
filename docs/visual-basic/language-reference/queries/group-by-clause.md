@@ -1,5 +1,5 @@
 ---
-title: Предложение Group By (Visual Basic)
+title: Предложение Group By
 ms.date: 07/20/2015
 f1_keywords:
 - vb.QueryGroupByInto
@@ -12,69 +12,69 @@ helpviewer_keywords:
 - Group By statement [Visual Basic]
 - Group By clause [Visual Basic]
 ms.assetid: b1b5dcea-6654-473b-a2db-01f7e4c265d7
-ms.openlocfilehash: 8b3a480c226debc529c268e83437d15192592bd3
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 87080254ad5d237a593f0c35e7c3fdaef3a8ad59
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72004755"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350477"
 ---
-# <a name="group-by-clause-visual-basic"></a><span data-ttu-id="b2331-102">Предложение Group By (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b2331-102">Group By Clause (Visual Basic)</span></span>
-<span data-ttu-id="b2331-103">Группирует элементы результата запроса.</span><span class="sxs-lookup"><span data-stu-id="b2331-103">Groups the elements of a query result.</span></span> <span data-ttu-id="b2331-104">Может также использоваться для применения агрегатных функций к каждой группе.</span><span class="sxs-lookup"><span data-stu-id="b2331-104">Can also be used to apply aggregate functions to each group.</span></span> <span data-ttu-id="b2331-105">Операция группирования основана на одном или нескольких ключах.</span><span class="sxs-lookup"><span data-stu-id="b2331-105">The grouping operation is based on one or more keys.</span></span>  
+# <a name="group-by-clause-visual-basic"></a><span data-ttu-id="bef44-102">Предложение Group By (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="bef44-102">Group By Clause (Visual Basic)</span></span>
+<span data-ttu-id="bef44-103">Группирует элементы результата запроса.</span><span class="sxs-lookup"><span data-stu-id="bef44-103">Groups the elements of a query result.</span></span> <span data-ttu-id="bef44-104">Может также использоваться для применения агрегатных функций к каждой группе.</span><span class="sxs-lookup"><span data-stu-id="bef44-104">Can also be used to apply aggregate functions to each group.</span></span> <span data-ttu-id="bef44-105">Операция группирования основана на одном или нескольких ключах.</span><span class="sxs-lookup"><span data-stu-id="bef44-105">The grouping operation is based on one or more keys.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b2331-106">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="b2331-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="bef44-106">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="bef44-106">Syntax</span></span>  
   
 ```vb  
 Group [ listField1 [, listField2 [...] ] By keyExp1 [, keyExp2 [...] ]  
   Into aggregateList  
 ```  
   
-## <a name="parts"></a><span data-ttu-id="b2331-107">Части</span><span class="sxs-lookup"><span data-stu-id="b2331-107">Parts</span></span>  
+## <a name="parts"></a><span data-ttu-id="bef44-107">Части</span><span class="sxs-lookup"><span data-stu-id="bef44-107">Parts</span></span>  
   
-- <span data-ttu-id="b2331-108">`listField1`, `listField2`</span><span class="sxs-lookup"><span data-stu-id="b2331-108">`listField1`, `listField2`</span></span>  
+- <span data-ttu-id="bef44-108">`listField1`, `listField2`</span><span class="sxs-lookup"><span data-stu-id="bef44-108">`listField1`, `listField2`</span></span>  
   
-     <span data-ttu-id="b2331-109">Необязательный параметр.</span><span class="sxs-lookup"><span data-stu-id="b2331-109">Optional.</span></span> <span data-ttu-id="b2331-110">Одно или несколько полей переменной или переменных запроса, которые явно определяют поля для включения в сгруппированный результат.</span><span class="sxs-lookup"><span data-stu-id="b2331-110">One or more fields of the query variable or variables that explicitly identify the fields to be included in the grouped result.</span></span> <span data-ttu-id="b2331-111">Если поля не указаны, в сгруппированный результат включаются все поля из переменной или переменных запроса.</span><span class="sxs-lookup"><span data-stu-id="b2331-111">If no fields are specified, all fields of the query variable or variables are included in the grouped result.</span></span>  
+     <span data-ttu-id="bef44-109">Необязательный.</span><span class="sxs-lookup"><span data-stu-id="bef44-109">Optional.</span></span> <span data-ttu-id="bef44-110">Одно или несколько полей переменной или переменных запроса, которые явно определяют поля для включения в сгруппированный результат.</span><span class="sxs-lookup"><span data-stu-id="bef44-110">One or more fields of the query variable or variables that explicitly identify the fields to be included in the grouped result.</span></span> <span data-ttu-id="bef44-111">Если поля не указаны, в сгруппированный результат включаются все поля из переменной или переменных запроса.</span><span class="sxs-lookup"><span data-stu-id="bef44-111">If no fields are specified, all fields of the query variable or variables are included in the grouped result.</span></span>  
   
 - `keyExp1`  
   
-     <span data-ttu-id="b2331-112">Обязательный.</span><span class="sxs-lookup"><span data-stu-id="b2331-112">Required.</span></span> <span data-ttu-id="b2331-113">Выражение, которое определяет ключ, используемый для определения групп элементов.</span><span class="sxs-lookup"><span data-stu-id="b2331-113">An expression that identifies the key to use to determine the groups of elements.</span></span> <span data-ttu-id="b2331-114">Вы можете указать несколько ключей, чтобы задать составной ключ.</span><span class="sxs-lookup"><span data-stu-id="b2331-114">You can specify more than one key to specify a composite key.</span></span>  
+     <span data-ttu-id="bef44-112">Обязательный.</span><span class="sxs-lookup"><span data-stu-id="bef44-112">Required.</span></span> <span data-ttu-id="bef44-113">Выражение, которое определяет ключ, используемый для определения групп элементов.</span><span class="sxs-lookup"><span data-stu-id="bef44-113">An expression that identifies the key to use to determine the groups of elements.</span></span> <span data-ttu-id="bef44-114">Вы можете указать несколько ключей, чтобы задать составной ключ.</span><span class="sxs-lookup"><span data-stu-id="bef44-114">You can specify more than one key to specify a composite key.</span></span>  
   
 - `keyExp2`  
   
-     <span data-ttu-id="b2331-115">Необязательный параметр.</span><span class="sxs-lookup"><span data-stu-id="b2331-115">Optional.</span></span> <span data-ttu-id="b2331-116">Один или несколько дополнительных ключей, которые объединяются с `keyExp1` для создания составного ключа.</span><span class="sxs-lookup"><span data-stu-id="b2331-116">One or more additional keys that are combined with `keyExp1` to create a composite key.</span></span>  
+     <span data-ttu-id="bef44-115">Необязательный.</span><span class="sxs-lookup"><span data-stu-id="bef44-115">Optional.</span></span> <span data-ttu-id="bef44-116">Один или несколько дополнительных ключей, которые объединяются с `keyExp1` для создания составного ключа.</span><span class="sxs-lookup"><span data-stu-id="bef44-116">One or more additional keys that are combined with `keyExp1` to create a composite key.</span></span>  
   
 - `aggregateList`  
   
-     <span data-ttu-id="b2331-117">Обязательный.</span><span class="sxs-lookup"><span data-stu-id="b2331-117">Required.</span></span> <span data-ttu-id="b2331-118">Одно или несколько выражений, определяющих способ агрегирования групп.</span><span class="sxs-lookup"><span data-stu-id="b2331-118">One or more expressions that identify how the groups are aggregated.</span></span> <span data-ttu-id="b2331-119">Чтобы определить имя элемента для результатов группирования, используйте ключевое слово `Group` , которое может быть в одной из следующих форм:</span><span class="sxs-lookup"><span data-stu-id="b2331-119">To identify a member name for the grouped results, use the `Group` keyword, which can be in either of the following forms:</span></span>  
+     <span data-ttu-id="bef44-117">Обязательный.</span><span class="sxs-lookup"><span data-stu-id="bef44-117">Required.</span></span> <span data-ttu-id="bef44-118">Одно или несколько выражений, определяющих способ агрегирования групп.</span><span class="sxs-lookup"><span data-stu-id="bef44-118">One or more expressions that identify how the groups are aggregated.</span></span> <span data-ttu-id="bef44-119">Чтобы определить имя элемента для результатов группирования, используйте ключевое слово `Group` , которое может быть в одной из следующих форм:</span><span class="sxs-lookup"><span data-stu-id="bef44-119">To identify a member name for the grouped results, use the `Group` keyword, which can be in either of the following forms:</span></span>  
   
     ```vb  
     Into Group  
     ```  
   
-     <span data-ttu-id="b2331-120">\- или -</span><span class="sxs-lookup"><span data-stu-id="b2331-120">-or-</span></span>  
+     <span data-ttu-id="bef44-120">\- или -</span><span class="sxs-lookup"><span data-stu-id="bef44-120">-or-</span></span>  
   
     ```vb  
     Into <alias> = Group  
     ```  
   
-     <span data-ttu-id="b2331-121">Вы также можете включать агрегатные функции для применения к группе.</span><span class="sxs-lookup"><span data-stu-id="b2331-121">You can also include aggregate functions to apply to the group.</span></span>  
+     <span data-ttu-id="bef44-121">Вы также можете включать агрегатные функции для применения к группе.</span><span class="sxs-lookup"><span data-stu-id="bef44-121">You can also include aggregate functions to apply to the group.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="b2331-122">Примечания</span><span class="sxs-lookup"><span data-stu-id="b2331-122">Remarks</span></span>  
- <span data-ttu-id="b2331-123">Чтобы разбить результат ы запроса на группы, можно использовать предложение `Group By` .</span><span class="sxs-lookup"><span data-stu-id="b2331-123">You can use the `Group By` clause to break the results of a query into groups.</span></span> <span data-ttu-id="b2331-124">Группирование основывается на ключе или составном ключе, состоящем из нескольких ключей.</span><span class="sxs-lookup"><span data-stu-id="b2331-124">The grouping is based on a key or a composite key consisting of multiple keys.</span></span> <span data-ttu-id="b2331-125">Элементы, связанные с соответствующими значениями ключа, включаются в одну и ту же группу.</span><span class="sxs-lookup"><span data-stu-id="b2331-125">Elements that are associated with matching key values are included in the same group.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="bef44-122">Заметки</span><span class="sxs-lookup"><span data-stu-id="bef44-122">Remarks</span></span>  
+ <span data-ttu-id="bef44-123">Чтобы разбить результат ы запроса на группы, можно использовать предложение `Group By` .</span><span class="sxs-lookup"><span data-stu-id="bef44-123">You can use the `Group By` clause to break the results of a query into groups.</span></span> <span data-ttu-id="bef44-124">Группирование основывается на ключе или составном ключе, состоящем из нескольких ключей.</span><span class="sxs-lookup"><span data-stu-id="bef44-124">The grouping is based on a key or a composite key consisting of multiple keys.</span></span> <span data-ttu-id="bef44-125">Элементы, связанные с соответствующими значениями ключа, включаются в одну и ту же группу.</span><span class="sxs-lookup"><span data-stu-id="bef44-125">Elements that are associated with matching key values are included in the same group.</span></span>  
   
- <span data-ttu-id="b2331-126">Чтобы определить имя элемента, используемое для ссылки на группу, применяется параметр `aggregateList` предложения `Into` и ключевое слово `Group` .</span><span class="sxs-lookup"><span data-stu-id="b2331-126">You use the `aggregateList` parameter of the `Into` clause and the `Group` keyword to identify the member name that is used to reference the group.</span></span> <span data-ttu-id="b2331-127">Вы также можете включать в предложение `Into` агрегатные функции, чтобы вычислять значения для сгруппированных элементов.</span><span class="sxs-lookup"><span data-stu-id="b2331-127">You can also include aggregate functions in the `Into` clause to compute values for the grouped elements.</span></span> <span data-ttu-id="b2331-128">Список стандартных агрегатных функций см. в разделе [Aggregate Clause](../../../visual-basic/language-reference/queries/aggregate-clause.md).</span><span class="sxs-lookup"><span data-stu-id="b2331-128">For a list of standard aggregate functions, see [Aggregate Clause](../../../visual-basic/language-reference/queries/aggregate-clause.md).</span></span>  
+ <span data-ttu-id="bef44-126">Чтобы определить имя элемента, используемое для ссылки на группу, применяется параметр `aggregateList` предложения `Into` и ключевое слово `Group` .</span><span class="sxs-lookup"><span data-stu-id="bef44-126">You use the `aggregateList` parameter of the `Into` clause and the `Group` keyword to identify the member name that is used to reference the group.</span></span> <span data-ttu-id="bef44-127">Вы также можете включать в предложение `Into` агрегатные функции, чтобы вычислять значения для сгруппированных элементов.</span><span class="sxs-lookup"><span data-stu-id="bef44-127">You can also include aggregate functions in the `Into` clause to compute values for the grouped elements.</span></span> <span data-ttu-id="bef44-128">Список стандартных агрегатных функций см. в разделе [Aggregate Clause](../../../visual-basic/language-reference/queries/aggregate-clause.md).</span><span class="sxs-lookup"><span data-stu-id="bef44-128">For a list of standard aggregate functions, see [Aggregate Clause](../../../visual-basic/language-reference/queries/aggregate-clause.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="b2331-129">Пример</span><span class="sxs-lookup"><span data-stu-id="b2331-129">Example</span></span>  
- <span data-ttu-id="b2331-130">Следующий пример кода группирует список клиентов по их расположению (стране или региону) и предоставляет количество клиентов в каждой группе.</span><span class="sxs-lookup"><span data-stu-id="b2331-130">The following code example groups a list of customers based on their location (country/region) and provides a count of the customers in each group.</span></span> <span data-ttu-id="b2331-131">Результаты упорядочиваются по названию страны или региона.</span><span class="sxs-lookup"><span data-stu-id="b2331-131">The results are ordered by country/region name.</span></span> <span data-ttu-id="b2331-132">Результаты группирования упорядочиваются по названию города.</span><span class="sxs-lookup"><span data-stu-id="b2331-132">The grouped results are ordered by city name.</span></span>  
+## <a name="example"></a><span data-ttu-id="bef44-129">Пример</span><span class="sxs-lookup"><span data-stu-id="bef44-129">Example</span></span>  
+ <span data-ttu-id="bef44-130">The following code example groups a list of customers based on their location (country/region) and provides a count of the customers in each group.</span><span class="sxs-lookup"><span data-stu-id="bef44-130">The following code example groups a list of customers based on their location (country/region) and provides a count of the customers in each group.</span></span> <span data-ttu-id="bef44-131">The results are ordered by country/region name.</span><span class="sxs-lookup"><span data-stu-id="bef44-131">The results are ordered by country/region name.</span></span> <span data-ttu-id="bef44-132">Результаты группирования упорядочиваются по названию города.</span><span class="sxs-lookup"><span data-stu-id="bef44-132">The grouped results are ordered by city name.</span></span>  
   
  [!code-vb[VbSimpleQuerySamples#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#11)]  
   
-## <a name="see-also"></a><span data-ttu-id="b2331-133">См. также</span><span class="sxs-lookup"><span data-stu-id="b2331-133">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="bef44-133">См. также</span><span class="sxs-lookup"><span data-stu-id="bef44-133">See also</span></span>
 
-- <span data-ttu-id="b2331-134">[Introduction to LINQ in Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md) (Знакомство с LINQ в Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b2331-134">[Introduction to LINQ in Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)</span></span>
-- [<span data-ttu-id="b2331-135">Запросы</span><span class="sxs-lookup"><span data-stu-id="b2331-135">Queries</span></span>](../../../visual-basic/language-reference/queries/index.md)
-- [<span data-ttu-id="b2331-136">Предложение Select</span><span class="sxs-lookup"><span data-stu-id="b2331-136">Select Clause</span></span>](../../../visual-basic/language-reference/queries/select-clause.md)
-- [<span data-ttu-id="b2331-137">Предложение From</span><span class="sxs-lookup"><span data-stu-id="b2331-137">From Clause</span></span>](../../../visual-basic/language-reference/queries/from-clause.md)
-- [<span data-ttu-id="b2331-138">Предложение Order By</span><span class="sxs-lookup"><span data-stu-id="b2331-138">Order By Clause</span></span>](../../../visual-basic/language-reference/queries/order-by-clause.md)
-- [<span data-ttu-id="b2331-139">Предложение Aggregate</span><span class="sxs-lookup"><span data-stu-id="b2331-139">Aggregate Clause</span></span>](../../../visual-basic/language-reference/queries/aggregate-clause.md)
-- [<span data-ttu-id="b2331-140">Предложение Group Join</span><span class="sxs-lookup"><span data-stu-id="b2331-140">Group Join Clause</span></span>](../../../visual-basic/language-reference/queries/group-join-clause.md)
+- <span data-ttu-id="bef44-134">[Introduction to LINQ in Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md) (Знакомство с LINQ в Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="bef44-134">[Introduction to LINQ in Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)</span></span>
+- [<span data-ttu-id="bef44-135">Запросы</span><span class="sxs-lookup"><span data-stu-id="bef44-135">Queries</span></span>](../../../visual-basic/language-reference/queries/index.md)
+- [<span data-ttu-id="bef44-136">Предложение Select</span><span class="sxs-lookup"><span data-stu-id="bef44-136">Select Clause</span></span>](../../../visual-basic/language-reference/queries/select-clause.md)
+- [<span data-ttu-id="bef44-137">Предложение From</span><span class="sxs-lookup"><span data-stu-id="bef44-137">From Clause</span></span>](../../../visual-basic/language-reference/queries/from-clause.md)
+- [<span data-ttu-id="bef44-138">Предложение Order By</span><span class="sxs-lookup"><span data-stu-id="bef44-138">Order By Clause</span></span>](../../../visual-basic/language-reference/queries/order-by-clause.md)
+- [<span data-ttu-id="bef44-139">Предложение Aggregate</span><span class="sxs-lookup"><span data-stu-id="bef44-139">Aggregate Clause</span></span>](../../../visual-basic/language-reference/queries/aggregate-clause.md)
+- [<span data-ttu-id="bef44-140">Предложение Group Join</span><span class="sxs-lookup"><span data-stu-id="bef44-140">Group Join Clause</span></span>](../../../visual-basic/language-reference/queries/group-join-clause.md)

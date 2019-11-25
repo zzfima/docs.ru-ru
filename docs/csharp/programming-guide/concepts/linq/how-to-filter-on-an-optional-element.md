@@ -1,19 +1,19 @@
 ---
-title: Практическое руководство. Фильтрация по необязательному элементу (C#)
+title: Практическое руководство. Фильтрация по необязательным элементам (C#)
 ms.date: 07/20/2015
 ms.assetid: f99e2f93-fca5-403f-8a0c-770761d4905a
-ms.openlocfilehash: 0f8e17d99085ad04ed76b83bce806418ca6d60cd
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: c9f844619cbb3d7a66ca66989baa900e0fd7bc2f
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253822"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141257"
 ---
-# <a name="how-to-filter-on-an-optional-element-c"></a><span data-ttu-id="07af3-102">Практическое руководство. Фильтрация по необязательному элементу (C#)</span><span class="sxs-lookup"><span data-stu-id="07af3-102">How to: Filter on an Optional Element (C#)</span></span>
-<span data-ttu-id="07af3-103">Иногда необходимо выполнить фильтрацию элемента, даже если неизвестно, существует ли он в документе XML.</span><span class="sxs-lookup"><span data-stu-id="07af3-103">Sometimes you want to filter for an element even though you are not sure it exists in your XML document.</span></span> <span data-ttu-id="07af3-104">Поиск должен быть выполнен, чтобы, если конкретный элемент не имеет дочернего узла, при фильтрации по этому элементу не возникло исключение null reference.</span><span class="sxs-lookup"><span data-stu-id="07af3-104">The search should be executed so that if the particular element does not have the child element, you do not trigger a null reference exception by filtering for it.</span></span> <span data-ttu-id="07af3-105">В следующем примере элемент `Child5` не имеет дочернего узла `Type`, тем не менее запрос выполняется правильно.</span><span class="sxs-lookup"><span data-stu-id="07af3-105">In the following example, the `Child5` element does not have a `Type` child element, but the query still executes correctly.</span></span>  
+# <a name="how-to-filter-on-an-optional-element-c"></a><span data-ttu-id="9f2db-102">Практическое руководство. Фильтрация по необязательным элементам (C#)</span><span class="sxs-lookup"><span data-stu-id="9f2db-102">How to filter on an optional element (C#)</span></span>
+<span data-ttu-id="9f2db-103">Иногда необходимо выполнить фильтрацию элемента, даже если неизвестно, существует ли он в документе XML.</span><span class="sxs-lookup"><span data-stu-id="9f2db-103">Sometimes you want to filter for an element even though you are not sure it exists in your XML document.</span></span> <span data-ttu-id="9f2db-104">Поиск должен быть выполнен, чтобы, если конкретный элемент не имеет дочернего узла, при фильтрации по этому элементу не возникло исключение null reference.</span><span class="sxs-lookup"><span data-stu-id="9f2db-104">The search should be executed so that if the particular element does not have the child element, you do not trigger a null reference exception by filtering for it.</span></span> <span data-ttu-id="9f2db-105">В следующем примере элемент `Child5` не имеет дочернего узла `Type`, тем не менее запрос выполняется правильно.</span><span class="sxs-lookup"><span data-stu-id="9f2db-105">In the following example, the `Child5` element does not have a `Type` child element, but the query still executes correctly.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="07af3-106">Пример</span><span class="sxs-lookup"><span data-stu-id="07af3-106">Example</span></span>  
- <span data-ttu-id="07af3-107">Этот пример использует метод расширений <xref:System.Xml.Linq.Extensions.Elements%2A>.</span><span class="sxs-lookup"><span data-stu-id="07af3-107">This example uses the <xref:System.Xml.Linq.Extensions.Elements%2A> extension method.</span></span>  
+## <a name="example"></a><span data-ttu-id="9f2db-106">Пример</span><span class="sxs-lookup"><span data-stu-id="9f2db-106">Example</span></span>  
+ <span data-ttu-id="9f2db-107">Этот пример использует метод расширений <xref:System.Xml.Linq.Extensions.Elements%2A>.</span><span class="sxs-lookup"><span data-stu-id="9f2db-107">This example uses the <xref:System.Xml.Linq.Extensions.Elements%2A> extension method.</span></span>  
   
 ```csharp  
 XElement root = XElement.Parse(@"<Root>  
@@ -45,7 +45,7 @@ foreach(string str in cList)
     Console.WriteLine(str);  
 ```  
   
- <span data-ttu-id="07af3-108">Этот код выводит следующие результаты:</span><span class="sxs-lookup"><span data-stu-id="07af3-108">This code produces the following output:</span></span>  
+ <span data-ttu-id="9f2db-108">Этот код выводит следующие результаты:</span><span class="sxs-lookup"><span data-stu-id="9f2db-108">This code produces the following output:</span></span>  
   
 ```output  
 Child One Text  
@@ -53,8 +53,8 @@ Child Two Text
 Child Four Text  
 ```  
   
-## <a name="example"></a><span data-ttu-id="07af3-109">Пример</span><span class="sxs-lookup"><span data-stu-id="07af3-109">Example</span></span>  
- <span data-ttu-id="07af3-110">Следующий пример демонстрирует тот же запрос XML, что и в пространстве имен.</span><span class="sxs-lookup"><span data-stu-id="07af3-110">The following example shows the same query for XML that is in a namespace.</span></span> <span data-ttu-id="07af3-111">Дополнительные сведения см. в статье [Обзор пространств имен DFS (LINQ to XML) (C#)](namespaces-overview-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="07af3-111">For more information, see [Namespaces Overview (LINQ to XML) (C#)](namespaces-overview-linq-to-xml.md).</span></span>  
+## <a name="example"></a><span data-ttu-id="9f2db-109">Пример</span><span class="sxs-lookup"><span data-stu-id="9f2db-109">Example</span></span>  
+ <span data-ttu-id="9f2db-110">Следующий пример демонстрирует тот же запрос XML, что и в пространстве имен.</span><span class="sxs-lookup"><span data-stu-id="9f2db-110">The following example shows the same query for XML that is in a namespace.</span></span> <span data-ttu-id="9f2db-111">Дополнительные сведения см. в статье [Обзор пространств имен DFS (LINQ to XML) (C#)](namespaces-overview-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="9f2db-111">For more information, see [Namespaces Overview (LINQ to XML) (C#)](namespaces-overview-linq-to-xml.md).</span></span>  
   
 ```csharp  
 XElement root = XElement.Parse(@"<Root xmlns='http://www.adatum.com'>  
@@ -87,7 +87,7 @@ foreach (string str in cList)
     Console.WriteLine(str);  
 ```  
   
- <span data-ttu-id="07af3-112">Этот код выводит следующие результаты:</span><span class="sxs-lookup"><span data-stu-id="07af3-112">This code produces the following output:</span></span>  
+ <span data-ttu-id="9f2db-112">Этот код выводит следующие результаты:</span><span class="sxs-lookup"><span data-stu-id="9f2db-112">This code produces the following output:</span></span>  
   
 ```output  
 Child One Text  
@@ -95,10 +95,10 @@ Child Two Text
 Child Four Text  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="07af3-113">См. также</span><span class="sxs-lookup"><span data-stu-id="07af3-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9f2db-113">См. также</span><span class="sxs-lookup"><span data-stu-id="9f2db-113">See also</span></span>
 
 - <xref:System.Xml.Linq.XElement.Attribute%2A?displayProperty=nameWithType>
 - <xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=nameWithType>
 - <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=nameWithType>
-- [<span data-ttu-id="07af3-114">Общие сведения о стандартных операторах запроса (C#)</span><span class="sxs-lookup"><span data-stu-id="07af3-114">Standard Query Operators Overview (C#)</span></span>](./standard-query-operators-overview.md)
-- [<span data-ttu-id="07af3-115">Операции проекции (C#)</span><span class="sxs-lookup"><span data-stu-id="07af3-115">Projection Operations (C#)</span></span>](./projection-operations.md)
+- [<span data-ttu-id="9f2db-114">Общие сведения о стандартных операторах запроса (C#)</span><span class="sxs-lookup"><span data-stu-id="9f2db-114">Standard Query Operators Overview (C#)</span></span>](./standard-query-operators-overview.md)
+- [<span data-ttu-id="9f2db-115">Операции проекции (C#)</span><span class="sxs-lookup"><span data-stu-id="9f2db-115">Projection Operations (C#)</span></span>](./projection-operations.md)

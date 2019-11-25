@@ -1,5 +1,5 @@
 ---
-title: Оператор New (Visual Basic)
+title: Оператор New
 ms.date: 07/20/2015
 f1_keywords:
 - vb.new
@@ -11,46 +11,46 @@ helpviewer_keywords:
 - New constraint
 - New keyword [Visual Basic]
 ms.assetid: d7d566d7-fe0e-4336-91f7-641a542de4d0
-ms.openlocfilehash: c0870f4b056658a22928769c369024cdda24f354
-ms.sourcegitcommit: 9bd1c09128e012b6e34bdcbdf3576379f58f3137
+ms.openlocfilehash: 27b5b4516ef729045036c36fedc24b6c576a4f61
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72799034"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348316"
 ---
-# <a name="new-operator-visual-basic"></a><span data-ttu-id="2c1e8-102">Оператор New (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2c1e8-102">New Operator (Visual Basic)</span></span>
+# <a name="new-operator-visual-basic"></a><span data-ttu-id="cc251-102">Оператор New (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="cc251-102">New Operator (Visual Basic)</span></span>
 
-<span data-ttu-id="2c1e8-103">Вводит предложение `New` для создания нового экземпляра объекта, задает ограничение конструктора для параметра типа или определяет `Sub`ую процедуру как конструктор класса.</span><span class="sxs-lookup"><span data-stu-id="2c1e8-103">Introduces a `New` clause to create a new object instance, specifies a constructor constraint on a type parameter, or identifies a `Sub` procedure as a class constructor.</span></span>
+<span data-ttu-id="cc251-103">Introduces a `New` clause to create a new object instance, specifies a constructor constraint on a type parameter, or identifies a `Sub` procedure as a class constructor.</span><span class="sxs-lookup"><span data-stu-id="cc251-103">Introduces a `New` clause to create a new object instance, specifies a constructor constraint on a type parameter, or identifies a `Sub` procedure as a class constructor.</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="2c1e8-104">Заметки</span><span class="sxs-lookup"><span data-stu-id="2c1e8-104">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="cc251-104">Заметки</span><span class="sxs-lookup"><span data-stu-id="cc251-104">Remarks</span></span>
 
-<span data-ttu-id="2c1e8-105">В объявлении или операторе присваивания в предложении `New` необходимо указать определенный класс, из которого можно создать экземпляр.</span><span class="sxs-lookup"><span data-stu-id="2c1e8-105">In a declaration or assignment statement, a `New` clause must specify a defined class from which the instance can be created.</span></span> <span data-ttu-id="2c1e8-106">Это означает, что класс должен предоставлять один или несколько конструкторов, к которым вызывающий код может получить доступ.</span><span class="sxs-lookup"><span data-stu-id="2c1e8-106">This means that the class must expose one or more constructors that the calling code can access.</span></span>
+<span data-ttu-id="cc251-105">In a declaration or assignment statement, a `New` clause must specify a defined class from which the instance can be created.</span><span class="sxs-lookup"><span data-stu-id="cc251-105">In a declaration or assignment statement, a `New` clause must specify a defined class from which the instance can be created.</span></span> <span data-ttu-id="cc251-106">This means that the class must expose one or more constructors that the calling code can access.</span><span class="sxs-lookup"><span data-stu-id="cc251-106">This means that the class must expose one or more constructors that the calling code can access.</span></span>
 
-<span data-ttu-id="2c1e8-107">Предложение `New` можно использовать в операторе объявления или в операторе присваивания.</span><span class="sxs-lookup"><span data-stu-id="2c1e8-107">You can use a `New` clause in a declaration statement or an assignment statement.</span></span> <span data-ttu-id="2c1e8-108">При выполнении инструкции вызывается соответствующий конструктор указанного класса, передавая все предоставленные аргументы.</span><span class="sxs-lookup"><span data-stu-id="2c1e8-108">When the statement runs, it calls the appropriate constructor of the specified class, passing any arguments you have supplied.</span></span> <span data-ttu-id="2c1e8-109">В следующем примере демонстрируется создание экземпляров класса `Customer`, который имеет два конструктора, один из которых не принимает параметры и один принимает строковый параметр:</span><span class="sxs-lookup"><span data-stu-id="2c1e8-109">The following example demonstrates this by creating instances of a `Customer` class that has two constructors, one that takes no parameters and one that takes a string parameter:</span></span>
+<span data-ttu-id="cc251-107">You can use a `New` clause in a declaration statement or an assignment statement.</span><span class="sxs-lookup"><span data-stu-id="cc251-107">You can use a `New` clause in a declaration statement or an assignment statement.</span></span> <span data-ttu-id="cc251-108">When the statement runs, it calls the appropriate constructor of the specified class, passing any arguments you have supplied.</span><span class="sxs-lookup"><span data-stu-id="cc251-108">When the statement runs, it calls the appropriate constructor of the specified class, passing any arguments you have supplied.</span></span> <span data-ttu-id="cc251-109">The following example demonstrates this by creating instances of a `Customer` class that has two constructors, one that takes no parameters and one that takes a string parameter:</span><span class="sxs-lookup"><span data-stu-id="cc251-109">The following example demonstrates this by creating instances of a `Customer` class that has two constructors, one that takes no parameters and one that takes a string parameter:</span></span>
 
 [!code-vb[VbVbalrKeywords#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class6.vb#11)]
 
-<span data-ttu-id="2c1e8-110">Поскольку массивы являются классами, `New` может создать новый экземпляр массива, как показано в следующем примере:</span><span class="sxs-lookup"><span data-stu-id="2c1e8-110">Since arrays are classes, `New` can create a new array instance, as shown in the following example:</span></span>
+<span data-ttu-id="cc251-110">Since arrays are classes, `New` can create a new array instance, as shown in the following example:</span><span class="sxs-lookup"><span data-stu-id="cc251-110">Since arrays are classes, `New` can create a new array instance, as shown in the following example:</span></span>
 
 [!code-vb[VbVbalrKeywords#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class6.vb#12)]
 
-<span data-ttu-id="2c1e8-111">Среда CLR вызывает ошибку <xref:System.OutOfMemoryException>, если недостаточно памяти для создания нового экземпляра.</span><span class="sxs-lookup"><span data-stu-id="2c1e8-111">The common language runtime (CLR) throws an <xref:System.OutOfMemoryException> error if there is insufficient memory to create the new instance.</span></span>
+<span data-ttu-id="cc251-111">The common language runtime (CLR) throws an <xref:System.OutOfMemoryException> error if there is insufficient memory to create the new instance.</span><span class="sxs-lookup"><span data-stu-id="cc251-111">The common language runtime (CLR) throws an <xref:System.OutOfMemoryException> error if there is insufficient memory to create the new instance.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="2c1e8-112">Ключевое слово `New` также используется в списках параметров типов, чтобы указать, что предоставленный тип должен предоставлять доступный конструктор без параметров.</span><span class="sxs-lookup"><span data-stu-id="2c1e8-112">The `New` keyword is also used in type parameter lists to specify that the supplied type must expose an accessible parameterless constructor.</span></span> <span data-ttu-id="2c1e8-113">Дополнительные сведения о параметрах типа и ограничениях см. в разделе [Type List](../statements/type-list.md).</span><span class="sxs-lookup"><span data-stu-id="2c1e8-113">For more information about type parameters and constraints, see [Type List](../statements/type-list.md).</span></span>
+> <span data-ttu-id="cc251-112">The `New` keyword is also used in type parameter lists to specify that the supplied type must expose an accessible parameterless constructor.</span><span class="sxs-lookup"><span data-stu-id="cc251-112">The `New` keyword is also used in type parameter lists to specify that the supplied type must expose an accessible parameterless constructor.</span></span> <span data-ttu-id="cc251-113">For more information about type parameters and constraints, see [Type List](../statements/type-list.md).</span><span class="sxs-lookup"><span data-stu-id="cc251-113">For more information about type parameters and constraints, see [Type List](../statements/type-list.md).</span></span>
 
-<span data-ttu-id="2c1e8-114">Чтобы создать процедуру конструктора для класса, задайте в качестве имени `Sub` процедуры ключевое слово `New`.</span><span class="sxs-lookup"><span data-stu-id="2c1e8-114">To create a constructor procedure for a class, set the name of a `Sub` procedure to the `New` keyword.</span></span> <span data-ttu-id="2c1e8-115">Дополнительные сведения см. в разделе [время существования объекта: как создаются и уничтожаются объекты](../../programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md).</span><span class="sxs-lookup"><span data-stu-id="2c1e8-115">For more information, see [Object Lifetime: How Objects Are Created and Destroyed](../../programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md).</span></span>
+<span data-ttu-id="cc251-114">To create a constructor procedure for a class, set the name of a `Sub` procedure to the `New` keyword.</span><span class="sxs-lookup"><span data-stu-id="cc251-114">To create a constructor procedure for a class, set the name of a `Sub` procedure to the `New` keyword.</span></span> <span data-ttu-id="cc251-115">For more information, see [Object Lifetime: How Objects Are Created and Destroyed](../../programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md).</span><span class="sxs-lookup"><span data-stu-id="cc251-115">For more information, see [Object Lifetime: How Objects Are Created and Destroyed](../../programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md).</span></span>
 
-<span data-ttu-id="2c1e8-116">Ключевое слово `New` можно использовать в следующих контекстах:</span><span class="sxs-lookup"><span data-stu-id="2c1e8-116">The `New` keyword can be used in these contexts:</span></span>
+<span data-ttu-id="cc251-116">Ключевое слово `New` можно использовать в следующих контекстах:</span><span class="sxs-lookup"><span data-stu-id="cc251-116">The `New` keyword can be used in these contexts:</span></span>
 
-- [<span data-ttu-id="2c1e8-117">Оператор Dim</span><span class="sxs-lookup"><span data-stu-id="2c1e8-117">Dim Statement</span></span>](../statements/dim-statement.md)
-- [<span data-ttu-id="2c1e8-118">Of</span><span class="sxs-lookup"><span data-stu-id="2c1e8-118">Of</span></span>](../statements/of-clause.md)
-- [<span data-ttu-id="2c1e8-119">Оператор Sub</span><span class="sxs-lookup"><span data-stu-id="2c1e8-119">Sub Statement</span></span>](../statements/sub-statement.md)
+- [<span data-ttu-id="cc251-117">Оператор Dim</span><span class="sxs-lookup"><span data-stu-id="cc251-117">Dim Statement</span></span>](../statements/dim-statement.md)
+- [<span data-ttu-id="cc251-118">Of</span><span class="sxs-lookup"><span data-stu-id="cc251-118">Of</span></span>](../statements/of-clause.md)
+- [<span data-ttu-id="cc251-119">Оператор Sub</span><span class="sxs-lookup"><span data-stu-id="cc251-119">Sub Statement</span></span>](../statements/sub-statement.md)
 
-## <a name="see-also"></a><span data-ttu-id="2c1e8-120">См. также</span><span class="sxs-lookup"><span data-stu-id="2c1e8-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="cc251-120">См. также</span><span class="sxs-lookup"><span data-stu-id="cc251-120">See also</span></span>
 
 - <xref:System.OutOfMemoryException>
-- [<span data-ttu-id="2c1e8-121">Ключевые слова</span><span class="sxs-lookup"><span data-stu-id="2c1e8-121">Keywords</span></span>](../keywords/index.md)
-- [<span data-ttu-id="2c1e8-122">Список типов</span><span class="sxs-lookup"><span data-stu-id="2c1e8-122">Type List</span></span>](../statements/type-list.md)
-- [<span data-ttu-id="2c1e8-123">Generic Types in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="2c1e8-123">Generic Types in Visual Basic</span></span>](../../programming-guide/language-features/data-types/generic-types.md)
-- [<span data-ttu-id="2c1e8-124">Время существования. Создание и уничтожение объектов</span><span class="sxs-lookup"><span data-stu-id="2c1e8-124">Object Lifetime: How Objects Are Created and Destroyed</span></span>](../../programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)
+- [<span data-ttu-id="cc251-121">Ключевые слова</span><span class="sxs-lookup"><span data-stu-id="cc251-121">Keywords</span></span>](../keywords/index.md)
+- [<span data-ttu-id="cc251-122">Список типов</span><span class="sxs-lookup"><span data-stu-id="cc251-122">Type List</span></span>](../statements/type-list.md)
+- [<span data-ttu-id="cc251-123">Generic Types in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="cc251-123">Generic Types in Visual Basic</span></span>](../../programming-guide/language-features/data-types/generic-types.md)
+- [<span data-ttu-id="cc251-124">Время существования. Создание и уничтожение объектов</span><span class="sxs-lookup"><span data-stu-id="cc251-124">Object Lifetime: How Objects Are Created and Destroyed</span></span>](../../programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)

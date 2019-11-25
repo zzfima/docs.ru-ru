@@ -26,6 +26,8 @@
               href: fundamentals/styles-templates-overview.md
             - name: Создание и применение стиля
               href: fundamentals/styles-templates-create-apply-style.md
+            - name: Создание и применение шаблона
+              href: themes/how-to-create-apply-template.md
     - name: Работа с данными
       items:
         - name: Общие сведения о привязке данных

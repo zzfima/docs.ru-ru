@@ -13,20 +13,20 @@ helpviewer_keywords:
 - DataSet class, serializing
 - XML Schema, serializing
 ms.assetid: eec46337-9696-435b-a375-dc5effae6992
-ms.openlocfilehash: c206faf81868d6e871327a73ef0680936b132918
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 17ad1b4b5eae38a4f1dc90e154841b1315dea1b2
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459251"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349767"
 ---
-# <a name="examples-of-xml-serialization"></a><span data-ttu-id="2b27a-102">Примеры сериализации XML</span><span class="sxs-lookup"><span data-stu-id="2b27a-102">Examples of XML Serialization</span></span>
+# <a name="examples-of-xml-serialization"></a><span data-ttu-id="4b2e8-102">Примеры сериализации XML</span><span class="sxs-lookup"><span data-stu-id="4b2e8-102">Examples of XML Serialization</span></span>
 
-<span data-ttu-id="2b27a-103">Сериализация XML может иметь несколько форм, от простой до сложной.</span><span class="sxs-lookup"><span data-stu-id="2b27a-103">XML serialization can take more than one form, from simple to complex.</span></span> <span data-ttu-id="2b27a-104">Например, можно сериализовать класс, который состоит всего лишь из открытых полей и свойств, как показано в разделе [Введение в сериализацию XML](../../../docs/standard/serialization/introducing-xml-serialization.md).</span><span class="sxs-lookup"><span data-stu-id="2b27a-104">For example, you can serialize a class that simply consists of public fields and properties, as shown in [Introducing XML Serialization](../../../docs/standard/serialization/introducing-xml-serialization.md).</span></span> <span data-ttu-id="2b27a-105">В следующих примерах кода представлены различные сложные сценарии, включая способы использования XML-сериализации для создания потока XML, соответствующего определенному документу схемы XML (XSD).</span><span class="sxs-lookup"><span data-stu-id="2b27a-105">The following code examples address various advanced scenarios, including how to use XML serialization to generate an XML stream that conforms to a specific XML Schema (XSD) document.</span></span>
+<span data-ttu-id="4b2e8-103">Сериализация XML может иметь несколько форм, от простой до сложной.</span><span class="sxs-lookup"><span data-stu-id="4b2e8-103">XML serialization can take more than one form, from simple to complex.</span></span> <span data-ttu-id="4b2e8-104">Например, можно сериализовать класс, который состоит всего лишь из открытых полей и свойств, как показано в разделе [Введение в сериализацию XML](../../../docs/standard/serialization/introducing-xml-serialization.md).</span><span class="sxs-lookup"><span data-stu-id="4b2e8-104">For example, you can serialize a class that simply consists of public fields and properties, as shown in [Introducing XML Serialization](../../../docs/standard/serialization/introducing-xml-serialization.md).</span></span> <span data-ttu-id="4b2e8-105">В следующих примерах кода представлены различные сложные сценарии, включая способы использования XML-сериализации для создания потока XML, соответствующего определенному документу схемы XML (XSD).</span><span class="sxs-lookup"><span data-stu-id="4b2e8-105">The following code examples address various advanced scenarios, including how to use XML serialization to generate an XML stream that conforms to a specific XML Schema (XSD) document.</span></span>
 
-## <a name="serializing-a-dataset"></a><span data-ttu-id="2b27a-106">Сериализация DataSet</span><span class="sxs-lookup"><span data-stu-id="2b27a-106">Serializing a DataSet</span></span>
+## <a name="serializing-a-dataset"></a><span data-ttu-id="4b2e8-106">Сериализация DataSet</span><span class="sxs-lookup"><span data-stu-id="4b2e8-106">Serializing a DataSet</span></span>
 
-<span data-ttu-id="2b27a-107">Помимо сериализации экземпляра открытого класса можно сериализовать экземпляр <xref:System.Data.DataSet>, см. следующий пример кода.</span><span class="sxs-lookup"><span data-stu-id="2b27a-107">Besides serializing an instance of a public class, an instance of a <xref:System.Data.DataSet> can also be serialized, as shown in the following code example.</span></span>
+<span data-ttu-id="4b2e8-107">Помимо сериализации экземпляра открытого класса можно сериализовать экземпляр <xref:System.Data.DataSet>, см. следующий пример кода.</span><span class="sxs-lookup"><span data-stu-id="4b2e8-107">Besides serializing an instance of a public class, an instance of a <xref:System.Data.DataSet> can also be serialized, as shown in the following code example.</span></span>
 
 ```vb
 Private Sub SerializeDataSet(filename As String)
@@ -72,9 +72,9 @@ private void SerializeDataSet(string filename){
 }
 ```
 
-## <a name="serializing-an-xmlelement-and-xmlnode"></a><span data-ttu-id="2b27a-108">Сериализация XmlElement и XmlNode</span><span class="sxs-lookup"><span data-stu-id="2b27a-108">Serializing an XmlElement and XmlNode</span></span>
+## <a name="serializing-an-xmlelement-and-xmlnode"></a><span data-ttu-id="4b2e8-108">Сериализация XmlElement и XmlNode</span><span class="sxs-lookup"><span data-stu-id="4b2e8-108">Serializing an XmlElement and XmlNode</span></span>
 
-<span data-ttu-id="2b27a-109">Кроме того, можно сериализовать экземпляры класса <xref:System.Xml.XmlElement> или <xref:System.Xml.XmlNode>, как показано в следующем примере кода.</span><span class="sxs-lookup"><span data-stu-id="2b27a-109">You can also serialize instances of an <xref:System.Xml.XmlElement> or <xref:System.Xml.XmlNode> class, as shown in the following code example.</span></span>
+<span data-ttu-id="4b2e8-109">You can also serialize instances of an <xref:System.Xml.XmlElement> or <xref:System.Xml.XmlNode> class, as shown in the following code example.</span><span class="sxs-lookup"><span data-stu-id="4b2e8-109">You can also serialize instances of an <xref:System.Xml.XmlElement> or <xref:System.Xml.XmlNode> class, as shown in the following code example.</span></span>
 
 ```vb
 private Sub SerializeElement(filename As String)
@@ -121,9 +121,9 @@ private void SerializeNode(string filename){
 }
 ```
 
-## <a name="serializing-a-class-that-contains-a-field-returning-a-complex-object"></a><span data-ttu-id="2b27a-110">Сериализация класса, который содержит поле, возвращающее сложный объект</span><span class="sxs-lookup"><span data-stu-id="2b27a-110">Serializing a Class that Contains a Field Returning a Complex Object</span></span>
+## <a name="serializing-a-class-that-contains-a-field-returning-a-complex-object"></a><span data-ttu-id="4b2e8-110">Сериализация класса, который содержит поле, возвращающее сложный объект</span><span class="sxs-lookup"><span data-stu-id="4b2e8-110">Serializing a Class that Contains a Field Returning a Complex Object</span></span>
 
-<span data-ttu-id="2b27a-111">Если свойство или поле возвращает сложный объект (например, массив или экземпляр класса), <xref:System.Xml.Serialization.XmlSerializer> преобразует его в элемент, вложенный в рамках основного документа XML.</span><span class="sxs-lookup"><span data-stu-id="2b27a-111">If a property or field returns a complex object (such as an array or a class instance), the <xref:System.Xml.Serialization.XmlSerializer> converts it to an element nested within the main XML document.</span></span> <span data-ttu-id="2b27a-112">Например, первый класс в следующем примере кода возвращает экземпляр второго класса.</span><span class="sxs-lookup"><span data-stu-id="2b27a-112">For example, the first class in the following code example returns an instance of the second class.</span></span>
+<span data-ttu-id="4b2e8-111">Если свойство или поле возвращает сложный объект (например, массив или экземпляр класса), <xref:System.Xml.Serialization.XmlSerializer> преобразует его в элемент, вложенный в рамках основного документа XML.</span><span class="sxs-lookup"><span data-stu-id="4b2e8-111">If a property or field returns a complex object (such as an array or a class instance), the <xref:System.Xml.Serialization.XmlSerializer> converts it to an element nested within the main XML document.</span></span> <span data-ttu-id="4b2e8-112">Например, первый класс в следующем примере кода возвращает экземпляр второго класса.</span><span class="sxs-lookup"><span data-stu-id="4b2e8-112">For example, the first class in the following code example returns an instance of the second class.</span></span>
 
 ```vb
 Public Class PurchaseOrder
@@ -146,7 +146,7 @@ public class Address
 }
 ```
 
-<span data-ttu-id="2b27a-113">Сериализованный выходной XML может выглядеть следующим образом.</span><span class="sxs-lookup"><span data-stu-id="2b27a-113">The serialized XML output might resemble the following.</span></span>
+<span data-ttu-id="4b2e8-113">Сериализованный выходной XML может выглядеть следующим образом.</span><span class="sxs-lookup"><span data-stu-id="4b2e8-113">The serialized XML output might resemble the following.</span></span>
 
 ```xml
 <PurchaseOrder>
@@ -156,9 +156,9 @@ public class Address
 </PurchaseOrder>
 ```
 
-## <a name="serializing-an-array-of-objects"></a><span data-ttu-id="2b27a-114">Сериализация массива объектов</span><span class="sxs-lookup"><span data-stu-id="2b27a-114">Serializing an Array of Objects</span></span>
+## <a name="serializing-an-array-of-objects"></a><span data-ttu-id="4b2e8-114">Сериализация массива объектов</span><span class="sxs-lookup"><span data-stu-id="4b2e8-114">Serializing an Array of Objects</span></span>
 
-<span data-ttu-id="2b27a-115">Также можно сериализовать поле, возвращающее массив объектов, см. пример кода ниже.</span><span class="sxs-lookup"><span data-stu-id="2b27a-115">You can also serialize a field that returns an array of objects, as shown in the following code example.</span></span>
+<span data-ttu-id="4b2e8-115">Также можно сериализовать поле, возвращающее массив объектов, см. пример кода ниже.</span><span class="sxs-lookup"><span data-stu-id="4b2e8-115">You can also serialize a field that returns an array of objects, as shown in the following code example.</span></span>
 
 ```vb
 Public Class PurchaseOrder
@@ -184,7 +184,7 @@ public class Item
 }
 ```
 
-<span data-ttu-id="2b27a-116">При упорядочивании двух элементов экземпляр сериализуемого класса может выглядеть следующим образом.</span><span class="sxs-lookup"><span data-stu-id="2b27a-116">The serialized class instance might resemble the following, if two items are ordered.</span></span>
+<span data-ttu-id="4b2e8-116">При упорядочивании двух элементов экземпляр сериализуемого класса может выглядеть следующим образом.</span><span class="sxs-lookup"><span data-stu-id="4b2e8-116">The serialized class instance might resemble the following, if two items are ordered.</span></span>
 
 ```xml
 <PurchaseOrder xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns:xsd="http://www.w3.org/2001/XMLSchema">
@@ -201,14 +201,13 @@ public class Item
 </PurchaseOrder>
 ```
 
-## <a name="serializing-a-class-that-implements-the-icollection-interface"></a><span data-ttu-id="2b27a-117">Сериализация класса, реализующего интерфейс ICollection</span><span class="sxs-lookup"><span data-stu-id="2b27a-117">Serializing a Class that Implements the ICollection Interface</span></span>
+## <a name="serializing-a-class-that-implements-the-icollection-interface"></a><span data-ttu-id="4b2e8-117">Сериализация класса, реализующего интерфейс ICollection</span><span class="sxs-lookup"><span data-stu-id="4b2e8-117">Serializing a Class that Implements the ICollection Interface</span></span>
 
-<span data-ttu-id="2b27a-118">Можно создать свои собственные классы коллекции, реализовав интерфейс <xref:System.Collections.ICollection>, и использовать <xref:System.Xml.Serialization.XmlSerializer> для сериализации экземпляров этих классов.</span><span class="sxs-lookup"><span data-stu-id="2b27a-118">You can create your own collection classes by implementing the <xref:System.Collections.ICollection> interface, and use the <xref:System.Xml.Serialization.XmlSerializer> to serialize instances of these classes.</span></span> <span data-ttu-id="2b27a-119">Обратите внимание, что когда класс реализует интерфейс <xref:System.Collections.ICollection>, можно сериализовать только коллекцию, содержащуюся в классе.</span><span class="sxs-lookup"><span data-stu-id="2b27a-119">Note that when a class implements the <xref:System.Collections.ICollection> interface, only the collection contained by the class is serialized.</span></span> <span data-ttu-id="2b27a-120">Все открытые свойства или поля, добавленные в класс, сериализоваться не будут.</span><span class="sxs-lookup"><span data-stu-id="2b27a-120">Any public properties or fields added to the class will not be serialized.</span></span> <span data-ttu-id="2b27a-121">Класс должен содержать сериализуемые метод **Add** и свойство **Item** (индексатор C#).</span><span class="sxs-lookup"><span data-stu-id="2b27a-121">The class must include an **Add** method and an **Item** property (C# indexer) to be serialized.</span></span>
+<span data-ttu-id="4b2e8-118">Можно создать свои собственные классы коллекции, реализовав интерфейс <xref:System.Collections.ICollection>, и использовать <xref:System.Xml.Serialization.XmlSerializer> для сериализации экземпляров этих классов.</span><span class="sxs-lookup"><span data-stu-id="4b2e8-118">You can create your own collection classes by implementing the <xref:System.Collections.ICollection> interface, and use the <xref:System.Xml.Serialization.XmlSerializer> to serialize instances of these classes.</span></span> <span data-ttu-id="4b2e8-119">Обратите внимание, что когда класс реализует интерфейс <xref:System.Collections.ICollection>, можно сериализовать только коллекцию, содержащуюся в классе.</span><span class="sxs-lookup"><span data-stu-id="4b2e8-119">Note that when a class implements the <xref:System.Collections.ICollection> interface, only the collection contained by the class is serialized.</span></span> <span data-ttu-id="4b2e8-120">Все открытые свойства или поля, добавленные в класс, сериализоваться не будут.</span><span class="sxs-lookup"><span data-stu-id="4b2e8-120">Any public properties or fields added to the class will not be serialized.</span></span> <span data-ttu-id="4b2e8-121">Класс должен содержать сериализуемые метод **Add** и свойство **Item** (индексатор C#).</span><span class="sxs-lookup"><span data-stu-id="4b2e8-121">The class must include an **Add** method and an **Item** property (C# indexer) to be serialized.</span></span>
 
 ```vb
-Imports System
-Imports System.IO
 Imports System.Collections
+Imports System.IO
 Imports System.Xml.Serialization
 
 Public Class Test
@@ -298,8 +297,8 @@ End Class
 
 ```csharp
 using System;
-using System.IO;
 using System.Collections;
+using System.IO;
 using System.Xml.Serialization;
 
 public class Test {
@@ -360,23 +359,22 @@ public class Employee {
 }
 ```
 
-## <a name="purchase-order-example"></a><span data-ttu-id="2b27a-122">Пример заказа на покупку</span><span class="sxs-lookup"><span data-stu-id="2b27a-122">Purchase Order Example</span></span>
+## <a name="purchase-order-example"></a><span data-ttu-id="4b2e8-122">Пример заказа на покупку</span><span class="sxs-lookup"><span data-stu-id="4b2e8-122">Purchase Order Example</span></span>
 
-<span data-ttu-id="2b27a-123">Следующий пример кода можно вырезать и вставить в текстовый файл с расширением, измененным на CS или VB.</span><span class="sxs-lookup"><span data-stu-id="2b27a-123">You can cut and paste the following example code into a text file renamed with a .cs or .vb file name extension.</span></span> <span data-ttu-id="2b27a-124">С помощью компилятора C# или Visual Basic скомпилируйте файл.</span><span class="sxs-lookup"><span data-stu-id="2b27a-124">Use the C# or Visual Basic compiler to compile the file.</span></span> <span data-ttu-id="2b27a-125">Затем запустите его с использованием имени исполняемого файла.</span><span class="sxs-lookup"><span data-stu-id="2b27a-125">Then run it using the name of the executable.</span></span>
+<span data-ttu-id="4b2e8-123">Следующий пример кода можно вырезать и вставить в текстовый файл с расширением, измененным на CS или VB.</span><span class="sxs-lookup"><span data-stu-id="4b2e8-123">You can cut and paste the following example code into a text file renamed with a .cs or .vb file name extension.</span></span> <span data-ttu-id="4b2e8-124">С помощью компилятора C# или Visual Basic скомпилируйте файл.</span><span class="sxs-lookup"><span data-stu-id="4b2e8-124">Use the C# or Visual Basic compiler to compile the file.</span></span> <span data-ttu-id="4b2e8-125">Затем запустите его с использованием имени исполняемого файла.</span><span class="sxs-lookup"><span data-stu-id="4b2e8-125">Then run it using the name of the executable.</span></span>
 
-<span data-ttu-id="2b27a-126">В этом примере используется простой сценарий с целью показать процесс создания экземпляра объекта и сериализацию в файловый поток с помощью метода <xref:System.Xml.Serialization.XmlSerializer.Serialize%2A>.</span><span class="sxs-lookup"><span data-stu-id="2b27a-126">This example uses a simple scenario to demonstrate how an instance of an object is created and serialized into a file stream using the <xref:System.Xml.Serialization.XmlSerializer.Serialize%2A> method.</span></span> <span data-ttu-id="2b27a-127">Поток XML сохраняется в файл, а затем это же имя считывается и воссоздается в копии исходного объекта с помощью метода <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A>.</span><span class="sxs-lookup"><span data-stu-id="2b27a-127">The XML stream is saved to a file, and the same file is then read back and reconstructed into a copy of the original object using the <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> method.</span></span>
+<span data-ttu-id="4b2e8-126">В этом примере используется простой сценарий с целью показать процесс создания экземпляра объекта и сериализацию в файловый поток с помощью метода <xref:System.Xml.Serialization.XmlSerializer.Serialize%2A>.</span><span class="sxs-lookup"><span data-stu-id="4b2e8-126">This example uses a simple scenario to demonstrate how an instance of an object is created and serialized into a file stream using the <xref:System.Xml.Serialization.XmlSerializer.Serialize%2A> method.</span></span> <span data-ttu-id="4b2e8-127">Поток XML сохраняется в файл, а затем это же имя считывается и воссоздается в копии исходного объекта с помощью метода <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A>.</span><span class="sxs-lookup"><span data-stu-id="4b2e8-127">The XML stream is saved to a file, and the same file is then read back and reconstructed into a copy of the original object using the <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> method.</span></span>
 
-<span data-ttu-id="2b27a-128">В этом примере класс с именем `PurchaseOrder` сериализуется, а затем десериализуется.</span><span class="sxs-lookup"><span data-stu-id="2b27a-128">In this example, a class named `PurchaseOrder` is serialized and then deserialized.</span></span> <span data-ttu-id="2b27a-129">Второй класс с именем `Address` также используется, поскольку открытое поле с именем `ShipTo` должно быть задано как `Address`.</span><span class="sxs-lookup"><span data-stu-id="2b27a-129">A second class named `Address` is also included because the public field named `ShipTo` must be set to an `Address`.</span></span> <span data-ttu-id="2b27a-130">Аналогичным образом используется класс `OrderedItem`, поскольку массив объектов `OrderedItem` должен быть задан для поля `OrderedItems`.</span><span class="sxs-lookup"><span data-stu-id="2b27a-130">Similarly, an `OrderedItem` class is included because an array of `OrderedItem` objects must be set to the `OrderedItems` field.</span></span> <span data-ttu-id="2b27a-131">Наконец, класс с именем `Test` содержит код, сериализующий и десериализующий классы.</span><span class="sxs-lookup"><span data-stu-id="2b27a-131">Finally, a class named `Test` contains the code that serializes and deserializes the classes.</span></span>
+<span data-ttu-id="4b2e8-128">В этом примере класс с именем `PurchaseOrder` сериализуется, а затем десериализуется.</span><span class="sxs-lookup"><span data-stu-id="4b2e8-128">In this example, a class named `PurchaseOrder` is serialized and then deserialized.</span></span> <span data-ttu-id="4b2e8-129">Второй класс с именем `Address` также используется, поскольку открытое поле с именем `ShipTo` должно быть задано как `Address`.</span><span class="sxs-lookup"><span data-stu-id="4b2e8-129">A second class named `Address` is also included because the public field named `ShipTo` must be set to an `Address`.</span></span> <span data-ttu-id="4b2e8-130">Аналогичным образом используется класс `OrderedItem`, поскольку массив объектов `OrderedItem` должен быть задан для поля `OrderedItems`.</span><span class="sxs-lookup"><span data-stu-id="4b2e8-130">Similarly, an `OrderedItem` class is included because an array of `OrderedItem` objects must be set to the `OrderedItems` field.</span></span> <span data-ttu-id="4b2e8-131">Наконец, класс с именем `Test` содержит код, сериализующий и десериализующий классы.</span><span class="sxs-lookup"><span data-stu-id="4b2e8-131">Finally, a class named `Test` contains the code that serializes and deserializes the classes.</span></span>
 
-<span data-ttu-id="2b27a-132">Метод `CreatePO` создает `PurchaseOrder`, `Address` и объекты класса `OrderedItem` и задает значения открытых полей.</span><span class="sxs-lookup"><span data-stu-id="2b27a-132">The `CreatePO` method creates the `PurchaseOrder`, `Address`, and `OrderedItem` class objects, and sets the public field values.</span></span> <span data-ttu-id="2b27a-133">Метод также создает экземпляр класса <xref:System.Xml.Serialization.XmlSerializer>, который используется для сериализации и десериализации `PurchaseOrder`.</span><span class="sxs-lookup"><span data-stu-id="2b27a-133">The method also constructs an instance of the <xref:System.Xml.Serialization.XmlSerializer> class that is used to serialize and deserialize the `PurchaseOrder`.</span></span> <span data-ttu-id="2b27a-134">Обратите внимание, что код передает тип класса, который будет сериализован в конструктор.</span><span class="sxs-lookup"><span data-stu-id="2b27a-134">Note that the code passes the type of the class that will be serialized to the constructor.</span></span> <span data-ttu-id="2b27a-135">Код также создает `FileStream`, который используется для записи потока XML в документ XML.</span><span class="sxs-lookup"><span data-stu-id="2b27a-135">The code also creates a `FileStream` that is used to write the XML stream to an XML document.</span></span>
+<span data-ttu-id="4b2e8-132">Метод `CreatePO` создает `PurchaseOrder`, `Address` и объекты класса `OrderedItem` и задает значения открытых полей.</span><span class="sxs-lookup"><span data-stu-id="4b2e8-132">The `CreatePO` method creates the `PurchaseOrder`, `Address`, and `OrderedItem` class objects, and sets the public field values.</span></span> <span data-ttu-id="4b2e8-133">Метод также создает экземпляр класса <xref:System.Xml.Serialization.XmlSerializer>, который используется для сериализации и десериализации `PurchaseOrder`.</span><span class="sxs-lookup"><span data-stu-id="4b2e8-133">The method also constructs an instance of the <xref:System.Xml.Serialization.XmlSerializer> class that is used to serialize and deserialize the `PurchaseOrder`.</span></span> <span data-ttu-id="4b2e8-134">Обратите внимание, что код передает тип класса, который будет сериализован в конструктор.</span><span class="sxs-lookup"><span data-stu-id="4b2e8-134">Note that the code passes the type of the class that will be serialized to the constructor.</span></span> <span data-ttu-id="4b2e8-135">Код также создает `FileStream`, который используется для записи потока XML в документ XML.</span><span class="sxs-lookup"><span data-stu-id="4b2e8-135">The code also creates a `FileStream` that is used to write the XML stream to an XML document.</span></span>
 
-<span data-ttu-id="2b27a-136">Метод `ReadPo` немного проще.</span><span class="sxs-lookup"><span data-stu-id="2b27a-136">The `ReadPo` method is a little simpler.</span></span> <span data-ttu-id="2b27a-137">Он всего лишь создает объекты для десериализации и считывает их значения.</span><span class="sxs-lookup"><span data-stu-id="2b27a-137">It just creates objects to deserialize and reads out their values.</span></span> <span data-ttu-id="2b27a-138">Как и в случае с методом `CreatePo`, необходимо сначала создать <xref:System.Xml.Serialization.XmlSerializer>, передав тип класса для десериализации в конструктор.</span><span class="sxs-lookup"><span data-stu-id="2b27a-138">As with the `CreatePo` method, you must first construct an <xref:System.Xml.Serialization.XmlSerializer>, passing the type of the class to be deserialized to the constructor.</span></span> <span data-ttu-id="2b27a-139">Кроме того, для чтения документа XML требуется <xref:System.IO.FileStream>.</span><span class="sxs-lookup"><span data-stu-id="2b27a-139">Also, a <xref:System.IO.FileStream> is required to read the XML document.</span></span> <span data-ttu-id="2b27a-140">Для десериализации объектов вызовите метод <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> с <xref:System.IO.FileStream> в качестве аргумента.</span><span class="sxs-lookup"><span data-stu-id="2b27a-140">To deserialize the objects, call the <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> method with the <xref:System.IO.FileStream> as an argument.</span></span> <span data-ttu-id="2b27a-141">Десериализуемый объект должен быть приведен к переменной объекта типа `PurchaseOrder`.</span><span class="sxs-lookup"><span data-stu-id="2b27a-141">The deserialized object must be cast to an object variable of type `PurchaseOrder`.</span></span> <span data-ttu-id="2b27a-142">Затем код считывает значения десериализуемого типа `PurchaseOrder`.</span><span class="sxs-lookup"><span data-stu-id="2b27a-142">The code then reads the values of the deserialized `PurchaseOrder`.</span></span> <span data-ttu-id="2b27a-143">Обратите внимание, что можно также прочитать файл "PO.xml", который создается с целью демонстрации фактического выходного XML.</span><span class="sxs-lookup"><span data-stu-id="2b27a-143">Note that you can also read the PO.xml file that is created to see the actual XML output.</span></span>
+<span data-ttu-id="4b2e8-136">Метод `ReadPo` немного проще.</span><span class="sxs-lookup"><span data-stu-id="4b2e8-136">The `ReadPo` method is a little simpler.</span></span> <span data-ttu-id="4b2e8-137">Он всего лишь создает объекты для десериализации и считывает их значения.</span><span class="sxs-lookup"><span data-stu-id="4b2e8-137">It just creates objects to deserialize and reads out their values.</span></span> <span data-ttu-id="4b2e8-138">As with the `CreatePo` method, you must first construct an <xref:System.Xml.Serialization.XmlSerializer>, passing the type of the class to be deserialized to the constructor.</span><span class="sxs-lookup"><span data-stu-id="4b2e8-138">As with the `CreatePo` method, you must first construct an <xref:System.Xml.Serialization.XmlSerializer>, passing the type of the class to be deserialized to the constructor.</span></span> <span data-ttu-id="4b2e8-139">Кроме того, для чтения документа XML требуется <xref:System.IO.FileStream>.</span><span class="sxs-lookup"><span data-stu-id="4b2e8-139">Also, a <xref:System.IO.FileStream> is required to read the XML document.</span></span> <span data-ttu-id="4b2e8-140">Для десериализации объектов вызовите метод <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> с <xref:System.IO.FileStream> в качестве аргумента.</span><span class="sxs-lookup"><span data-stu-id="4b2e8-140">To deserialize the objects, call the <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> method with the <xref:System.IO.FileStream> as an argument.</span></span> <span data-ttu-id="4b2e8-141">Десериализуемый объект должен быть приведен к переменной объекта типа `PurchaseOrder`.</span><span class="sxs-lookup"><span data-stu-id="4b2e8-141">The deserialized object must be cast to an object variable of type `PurchaseOrder`.</span></span> <span data-ttu-id="4b2e8-142">Затем код считывает значения десериализуемого типа `PurchaseOrder`.</span><span class="sxs-lookup"><span data-stu-id="4b2e8-142">The code then reads the values of the deserialized `PurchaseOrder`.</span></span> <span data-ttu-id="4b2e8-143">Обратите внимание, что можно также прочитать файл "PO.xml", который создается с целью демонстрации фактического выходного XML.</span><span class="sxs-lookup"><span data-stu-id="4b2e8-143">Note that you can also read the PO.xml file that is created to see the actual XML output.</span></span>
 
 ```vb
-Imports System
+Imports System.IO
 Imports System.Xml
 Imports System.Xml.Serialization
-Imports System.IO
 Imports Microsoft.VisualBasic
 
 ' The XmlRoot attribute allows you to set an alternate name
@@ -553,9 +551,9 @@ End Class 'Test
 
 ```csharp
 using System;
+using System.IO;
 using System.Xml;
 using System.Xml.Serialization;
-using System.IO;
 
 // The XmlRoot attribute allows you to set an alternate name
 // (PurchaseOrder) for the XML element and its namespace. By
@@ -742,7 +740,7 @@ public class Test
 }
 ```
 
-<span data-ttu-id="2b27a-144">Выходной XML может иметь следующий вид.</span><span class="sxs-lookup"><span data-stu-id="2b27a-144">The XML output might resemble the following.</span></span>
+<span data-ttu-id="4b2e8-144">Выходной XML может иметь следующий вид.</span><span class="sxs-lookup"><span data-stu-id="4b2e8-144">The XML output might resemble the following.</span></span>
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -769,11 +767,11 @@ public class Test
 </PurchaseOrder>
 ```
 
-## <a name="see-also"></a><span data-ttu-id="2b27a-145">См. также</span><span class="sxs-lookup"><span data-stu-id="2b27a-145">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4b2e8-145">См. также</span><span class="sxs-lookup"><span data-stu-id="4b2e8-145">See also</span></span>
 
-- [<span data-ttu-id="2b27a-146">Введение в сериализацию XML</span><span class="sxs-lookup"><span data-stu-id="2b27a-146">Introducing XML Serialization</span></span>](introducing-xml-serialization.md)
-- [<span data-ttu-id="2b27a-147">Управление сериализацией XML с использованием атрибутов</span><span class="sxs-lookup"><span data-stu-id="2b27a-147">Controlling XML Serialization Using Attributes</span></span>](controlling-xml-serialization-using-attributes.md)
-- [<span data-ttu-id="2b27a-148">Атрибуты управления сериализацией XML</span><span class="sxs-lookup"><span data-stu-id="2b27a-148">Attributes That Control XML Serialization</span></span>](attributes-that-control-xml-serialization.md)
-- [<span data-ttu-id="2b27a-149">Класс XmlSerializer</span><span class="sxs-lookup"><span data-stu-id="2b27a-149">XmlSerializer Class</span></span>](xref:System.Xml.Serialization.XmlSerializer)
-- [<span data-ttu-id="2b27a-150">Практическое руководство. Сериализация объекта</span><span class="sxs-lookup"><span data-stu-id="2b27a-150">How to: Serialize an Object</span></span>](how-to-serialize-an-object.md)
-- [<span data-ttu-id="2b27a-151">Практическое руководство. Десериализация объекта</span><span class="sxs-lookup"><span data-stu-id="2b27a-151">How to: Deserialize an Object</span></span>](how-to-deserialize-an-object.md)
+- [<span data-ttu-id="4b2e8-146">Введение в сериализацию XML</span><span class="sxs-lookup"><span data-stu-id="4b2e8-146">Introducing XML Serialization</span></span>](introducing-xml-serialization.md)
+- [<span data-ttu-id="4b2e8-147">Управление сериализацией XML с использованием атрибутов</span><span class="sxs-lookup"><span data-stu-id="4b2e8-147">Controlling XML Serialization Using Attributes</span></span>](controlling-xml-serialization-using-attributes.md)
+- [<span data-ttu-id="4b2e8-148">Атрибуты управления сериализацией XML</span><span class="sxs-lookup"><span data-stu-id="4b2e8-148">Attributes That Control XML Serialization</span></span>](attributes-that-control-xml-serialization.md)
+- [<span data-ttu-id="4b2e8-149">XmlSerializer Class</span><span class="sxs-lookup"><span data-stu-id="4b2e8-149">XmlSerializer Class</span></span>](xref:System.Xml.Serialization.XmlSerializer)
+- [<span data-ttu-id="4b2e8-150">Практическое руководство. Сериализация объекта</span><span class="sxs-lookup"><span data-stu-id="4b2e8-150">How to: Serialize an Object</span></span>](how-to-serialize-an-object.md)
+- [<span data-ttu-id="4b2e8-151">Практическое руководство. Десериализация объекта</span><span class="sxs-lookup"><span data-stu-id="4b2e8-151">How to: Deserialize an Object</span></span>](how-to-deserialize-an-object.md)

@@ -9,7 +9,7 @@
 - name: "Руководство по классическим приложениям .NET\_— WPF"
   href: desktop-wpf/
 - name: 'Руководство по языку C#'
-  href: csharp/
+  href: csharp/index.yml
 - name: 'Руководство по языку F#'
   href: fsharp/
 - name: Руководство по Visual Basic
