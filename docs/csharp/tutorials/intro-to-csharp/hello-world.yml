@@ -1,5 +1,5 @@
 ### YamlMime:Tutorial
-title: <span data-ttu-id="2f4f5-101">Hello World — интерактивный учебник по основам C#</span><span class="sxs-lookup"><span data-stu-id="2f4f5-101">Hello World - Introduction to C# interactive C# tutorial</span></span>
+title: Hello World — интерактивный учебник по основам C#
 metadata:
   title: Hello World — интерактивный учебник по основам C#
   description: В этом руководстве для интерактивного изучения C# используется браузер. Вы напишете код C# и сможете просмотреть результаты его компиляции и выполнения непосредственно в браузере.
@@ -7,24 +7,24 @@ metadata:
   level: Beginner
   ms.date: 08/24/2018
   nextTutorialHref: numbers-in-csharp.yml
-  nextTutorialTitle: <span data-ttu-id="2f4f5-105">Числа в C#</span><span class="sxs-lookup"><span data-stu-id="2f4f5-105">Numbers in C#</span></span>
+  nextTutorialTitle: Числа в C#
   displayType: two-column
   interactive: csharp
   ms.custom: mvc
-  ms.openlocfilehash: 36254062835b9ab70ba470f6286b7515003dec11
-  ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+  ms.openlocfilehash: 365cf0b2ef36dd0be624d022e3dea5e16a9eb58c
+  ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
   ms.translationtype: HT
   ms.contentlocale: ru-RU
-  ms.lasthandoff: 09/10/2019
-  ms.locfileid: "70850794"
+  ms.lasthandoff: 11/12/2019
+  ms.locfileid: "73969412"
 items:
 - durationInMinutes: 1
   content: >
-    <span data-ttu-id="2f4f5-106">Это руководство поможет в интерактивном изучении C#. С помощью браузера вы напишете код C# и сможете просмотреть результаты его компиляции и выполнения.</span><span class="sxs-lookup"><span data-stu-id="2f4f5-106">This tutorial teaches you C# interactively, using your browser to write C# and see the results of compiling and running your code.</span></span> <span data-ttu-id="2f4f5-107">Руководство содержит ряд задач, первой из которых будет написание программы Hello World.</span><span class="sxs-lookup"><span data-stu-id="2f4f5-107">It contains a series of lessons that begin with a "Hello World" program.</span></span> <span data-ttu-id="2f4f5-108">В рамках этих занятий вы ознакомитесь с основами языка C#.</span><span class="sxs-lookup"><span data-stu-id="2f4f5-108">These lessons teach you the fundamentals of the C# language.</span></span>
-- title: <span data-ttu-id="2f4f5-109">Запуск первой программы C#</span><span class="sxs-lookup"><span data-stu-id="2f4f5-109">Run your first C# program</span></span>
+    Это руководство поможет в интерактивном изучении C#. С помощью браузера вы напишете код C# и сможете просмотреть результаты его компиляции и выполнения. Руководство содержит ряд задач, первой из которых будет написание программы Hello World. В рамках этих занятий вы ознакомитесь с основами языка C#.
+- title: Запуск первой программы C#
   durationInMinutes: 2
   content: >
-    <span data-ttu-id="2f4f5-110">Запустите приведенный ниже код в интерактивном окне.</span><span class="sxs-lookup"><span data-stu-id="2f4f5-110">Run the following code in the interactive window.</span></span> <span data-ttu-id="2f4f5-111">Для этого введите следующий блок кода в интерактивном окне и нажмите кнопку **Выполнить**:</span><span class="sxs-lookup"><span data-stu-id="2f4f5-111">To do that, type the following code block in the interactive window and click the **Run** button:</span></span>
+    Запустите приведенный ниже код в интерактивном окне. Нажмите кнопку **Перейти в режим фокусировки**. Затем введите следующий блок кода в интерактивном окне и нажмите кнопку **Выполнить**:
 
 
     ```csharp
@@ -34,29 +34,29 @@ items:
     ```
 
 
-    <span data-ttu-id="2f4f5-112">Поздравляем!</span><span class="sxs-lookup"><span data-stu-id="2f4f5-112">Congratulations!</span></span> <span data-ttu-id="2f4f5-113">Вы запустили первую программу C#.</span><span class="sxs-lookup"><span data-stu-id="2f4f5-113">You've run your first C# program.</span></span> <span data-ttu-id="2f4f5-114">Это простая программа, которая выводит сообщение "Hello World!".</span><span class="sxs-lookup"><span data-stu-id="2f4f5-114">It's a simple program that prints the message "Hello World!".</span></span> <span data-ttu-id="2f4f5-115">Для вывода используется метод <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="2f4f5-115">It used the <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> method to print that message.</span></span> <span data-ttu-id="2f4f5-116">`Console` — это тип, который представляет окно консоли.</span><span class="sxs-lookup"><span data-stu-id="2f4f5-116">`Console` is a type that represents the console window.</span></span> <span data-ttu-id="2f4f5-117">`WriteLine` — это метод типа `Console`, который выводит строку текста в текстовой консоли.</span><span class="sxs-lookup"><span data-stu-id="2f4f5-117">`WriteLine` is a method of the `Console` type that prints a line of text to that text console.</span></span>
+    Поздравляем! Вы запустили первую программу C#. Это простая программа, которая выводит сообщение "Hello World!". Для вывода используется метод <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>. `Console` — это тип, который представляет окно консоли. `WriteLine` — это метод типа `Console`, который выводит строку текста в текстовой консоли.
 
 
-    <span data-ttu-id="2f4f5-118">Продолжим изучение.</span><span class="sxs-lookup"><span data-stu-id="2f4f5-118">Let's move on and explore more.</span></span> <span data-ttu-id="2f4f5-119">Далее в этом уроке рассматривается работа с типом `string`, который представляет текст на языке C#.</span><span class="sxs-lookup"><span data-stu-id="2f4f5-119">The rest of this lesson explores working with the `string` type, which represents text in C#.</span></span> <span data-ttu-id="2f4f5-120">Как и для типа `Console`, для типа `string` используются методы.</span><span class="sxs-lookup"><span data-stu-id="2f4f5-120">Like the `Console` type, the `string` type has methods.</span></span> <span data-ttu-id="2f4f5-121">Методы `string` работают с текстом.</span><span class="sxs-lookup"><span data-stu-id="2f4f5-121">The `string` methods work with text.</span></span>
+    Продолжим изучение. Далее в этом уроке рассматривается работа с типом `string`, который представляет текст на языке C#. Как и для типа `Console`, для типа `string` используются методы. Методы `string` работают с текстом.
 
 
     > [!NOTE]
 
-    > <span data-ttu-id="2f4f5-122">Этот онлайн-интерфейс для написания кода находится на этапе предварительной версии.</span><span class="sxs-lookup"><span data-stu-id="2f4f5-122">This online coding experience is in preview mode.</span></span> <span data-ttu-id="2f4f5-123">При возникновении проблем сообщите о них на странице [репозитория dotnet/try](https://github.com/dotnet/try/issues).</span><span class="sxs-lookup"><span data-stu-id="2f4f5-123">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
-- title: <span data-ttu-id="2f4f5-124">Объявление и использование переменных</span><span class="sxs-lookup"><span data-stu-id="2f4f5-124">Declare and use variables</span></span>
+    > Этот онлайн-интерфейс для написания кода находится на этапе предварительной версии. При возникновении проблем сообщите о них на странице [репозитория dotnet/try](https://github.com/dotnet/try/issues).
+- title: Объявление и использование переменных
   durationInMinutes: 3
   content: >
-    <span data-ttu-id="2f4f5-125">При помощи вашей первой программы на экран выводится `string`</span><span class="sxs-lookup"><span data-stu-id="2f4f5-125">Your first program printed the `string` "Hello World!"</span></span> <span data-ttu-id="2f4f5-126">"Hello World!".</span><span class="sxs-lookup"><span data-stu-id="2f4f5-126">on the screen.</span></span>
+    При помощи вашей первой программы на экран выводится `string` "Hello World!".
 
 
     > [!TIP]
 
-    > <span data-ttu-id="2f4f5-127">Вероятнее всего, при изучении C# (как и любого другого языка программирования) вы будете допускать ошибки в коде.</span><span class="sxs-lookup"><span data-stu-id="2f4f5-127">As you explore C# (or any programming language), you'll make mistakes when you write code.</span></span> <span data-ttu-id="2f4f5-128">**Компилятор** найдет эти ошибки и сообщит вам о них.</span><span class="sxs-lookup"><span data-stu-id="2f4f5-128">The **compiler** will find those errors and report them to you.</span></span> <span data-ttu-id="2f4f5-129">Если результат содержит сообщения об ошибках, внимательно просмотрите пример кода и код в интерактивном окне, чтобы понять, что нужно исправить.</span><span class="sxs-lookup"><span data-stu-id="2f4f5-129">When the output contains error messages, look closely at the example code, and the code in the interactive window to see what to fix.</span></span>
+    > Вероятнее всего, при изучении C# (как и любого другого языка программирования) вы будете допускать ошибки в коде. **Компилятор** найдет эти ошибки и сообщит вам о них. Если результат содержит сообщения об ошибках, внимательно просмотрите пример кода и код в интерактивном окне, чтобы понять, что нужно исправить.
 
-    > <span data-ttu-id="2f4f5-130">Это упражнение поможет вам изучить структуру кода C#.</span><span class="sxs-lookup"><span data-stu-id="2f4f5-130">That exercise will help you learn the structure of C# code.</span></span>
+    > Это упражнение поможет вам изучить структуру кода C#.
 
 
-    <span data-ttu-id="2f4f5-131">Функции первой программы ограничиваются выводом одного сообщения.</span><span class="sxs-lookup"><span data-stu-id="2f4f5-131">Your first program is limited to printing one message.</span></span> <span data-ttu-id="2f4f5-132">Вы можете создавать более полезные программы с использованием **переменных**.</span><span class="sxs-lookup"><span data-stu-id="2f4f5-132">You can write more useful programs by using **variables**.</span></span> <span data-ttu-id="2f4f5-133">**Переменная** — это символ, который вы можете использовать для выполнения одного и того же кода с разными значениями.</span><span class="sxs-lookup"><span data-stu-id="2f4f5-133">A **variable** is a symbol you can use to run the same code with different values.</span></span> <span data-ttu-id="2f4f5-134">Попробуем сделать это.</span><span class="sxs-lookup"><span data-stu-id="2f4f5-134">Let's try it!</span></span> <span data-ttu-id="2f4f5-135">Замените код, написанный в интерактивном окне, следующим:</span><span class="sxs-lookup"><span data-stu-id="2f4f5-135">Replace the code you've written in the interactive window with the following code:</span></span>
+    Функции первой программы ограничиваются выводом одного сообщения. Вы можете создавать более полезные программы с использованием **переменных**. **Переменная** — это символ, который вы можете использовать для выполнения одного и того же кода с разными значениями. Попробуем сделать это. Замените код, написанный в интерактивном окне, следующим:
 
 
     ```csharp
@@ -68,10 +68,10 @@ items:
     ```
 
 
-    <span data-ttu-id="2f4f5-136">В первой строке объявляется переменная `aFriend` и ей назначается значение Bill.</span><span class="sxs-lookup"><span data-stu-id="2f4f5-136">The first line declares a variable, `aFriend` and assigns it a value, "Bill".</span></span> <span data-ttu-id="2f4f5-137">Вторая строка выводит имя.</span><span class="sxs-lookup"><span data-stu-id="2f4f5-137">The second line prints out the name.</span></span>
+    В первой строке объявляется переменная `aFriend` и ей назначается значение Bill. Вторая строка выводит имя.
 
 
-    <span data-ttu-id="2f4f5-138">Любой объявляемой переменной можно присваивать разные значения.</span><span class="sxs-lookup"><span data-stu-id="2f4f5-138">You can assign different values to any variable you declare.</span></span> <span data-ttu-id="2f4f5-139">Можно назначить переменной имя одного из ваших друзей.</span><span class="sxs-lookup"><span data-stu-id="2f4f5-139">You can change the name to one of your friends.</span></span> <span data-ttu-id="2f4f5-140">Добавьте эти две строки в интерактивном окне после кода, который вы уже добавили:</span><span class="sxs-lookup"><span data-stu-id="2f4f5-140">Add these two lines in the interactive window following the code you've already added:</span></span>
+    Любой объявляемой переменной можно присваивать разные значения. Можно назначить переменной имя одного из ваших друзей. Добавьте эти две строки в интерактивном окне после кода, который вы уже добавили:
 
 
     ```csharp
@@ -83,10 +83,10 @@ items:
     ```
 
 
-    <span data-ttu-id="2f4f5-141">Обратите внимание, что при помощи одной и той же строки кода выводятся два разных сообщения. Они формируются на основе значения, которое хранится в переменной `aFriend`.</span><span class="sxs-lookup"><span data-stu-id="2f4f5-141">Notice that the same line of code prints two different messages, based on the value stored in the `aFriend` variable.</span></span>
+    Обратите внимание, что при помощи одной и той же строки кода выводятся два разных сообщения. Они формируются на основе значения, которое хранится в переменной `aFriend`.
 
 
-    <span data-ttu-id="2f4f5-142">Как вы могли заметить, слово Hello в двух последних сообщениях отсутствует.</span><span class="sxs-lookup"><span data-stu-id="2f4f5-142">You may have also noticed that the word "Hello" was missing in the last two messages.</span></span> <span data-ttu-id="2f4f5-143">Исправим это.</span><span class="sxs-lookup"><span data-stu-id="2f4f5-143">Let's fix that now.</span></span>  <span data-ttu-id="2f4f5-144">Измените строки, которые выводят сообщение, следующим образом:</span><span class="sxs-lookup"><span data-stu-id="2f4f5-144">Modify the lines that print the message to the following:</span></span>
+    Как вы могли заметить, слово Hello в двух последних сообщениях отсутствует. Исправим это.  Измените строки, которые выводят сообщение, следующим образом:
 
 
     ```csharp
@@ -96,18 +96,18 @@ items:
     ```
 
 
-    <span data-ttu-id="2f4f5-145">Снова нажмите кнопку **Выполнить**, чтобы просмотреть результаты.</span><span class="sxs-lookup"><span data-stu-id="2f4f5-145">Click **Run** again to see the results.</span></span>
+    Снова нажмите кнопку **Выполнить**, чтобы просмотреть результаты.
 
 
-    <span data-ttu-id="2f4f5-146">Вы уже использовали `+` для создания строк из **переменных** и **констант**.</span><span class="sxs-lookup"><span data-stu-id="2f4f5-146">You've been using `+` to build strings from **variables** and **constant** strings.</span></span> <span data-ttu-id="2f4f5-147">Но есть способ лучше.</span><span class="sxs-lookup"><span data-stu-id="2f4f5-147">There's a better way.</span></span>
+    Вы уже использовали `+` для создания строк из **переменных** и **констант**. Но есть способ лучше.
 
-    <span data-ttu-id="2f4f5-148">Вы можете поместить переменную между символами `{` и `}`, чтобы код C# заменял этот текст значением переменной.</span><span class="sxs-lookup"><span data-stu-id="2f4f5-148">You can place a variable between `{` and `}` characters to tell C# to replace that text with the value of the variable.</span></span>
-
-
-    <span data-ttu-id="2f4f5-149">Этот подход называется [интерполяцией строк](../../language-reference/tokens/interpolated.md).</span><span class="sxs-lookup"><span data-stu-id="2f4f5-149">This is called [String interpolation](../../language-reference/tokens/interpolated.md).</span></span>
+    Вы можете поместить переменную между символами `{` и `}`, чтобы код C# заменял этот текст значением переменной.
 
 
-    <span data-ttu-id="2f4f5-150">Если добавить `$` перед открывающей кавычкой строки, то внутри строки можно включать переменные в фигурных скобках, например `aFriend`.</span><span class="sxs-lookup"><span data-stu-id="2f4f5-150">If you add a `$` before the opening quote of the string, you can then include variables, like `aFriend`, inside the string between curly braces.</span></span> <span data-ttu-id="2f4f5-151">Попробуйте!</span><span class="sxs-lookup"><span data-stu-id="2f4f5-151">Give it a try:</span></span>
+    Этот подход называется [интерполяцией строк](../../language-reference/tokens/interpolated.md).
+
+
+    Если добавить `$` перед открывающей кавычкой строки, то внутри строки можно включать переменные в фигурных скобках, например `aFriend`. Попробуйте!
 
 
 
@@ -118,19 +118,19 @@ items:
     ```
 
 
-    <span data-ttu-id="2f4f5-152">Снова нажмите кнопку **Выполнить**, чтобы просмотреть результаты.</span><span class="sxs-lookup"><span data-stu-id="2f4f5-152">Click **Run** again to see the results.</span></span> <span data-ttu-id="2f4f5-153">Вместо "Hello {aFriend}" будет выведено сообщение "Hello Maira".</span><span class="sxs-lookup"><span data-stu-id="2f4f5-153">Instead of "Hello {aFriend}", the message should be "Hello Maira".</span></span>
+    Снова нажмите кнопку **Выполнить**, чтобы просмотреть результаты. Вместо "Hello {aFriend}" будет выведено сообщение "Hello Maira".
 
 
     > [!NOTE]
 
-    > <span data-ttu-id="2f4f5-154">Этот онлайн-интерфейс для написания кода находится на этапе предварительной версии.</span><span class="sxs-lookup"><span data-stu-id="2f4f5-154">This online coding experience is in preview mode.</span></span> <span data-ttu-id="2f4f5-155">При возникновении проблем сообщите о них на странице [репозитория dotnet/try](https://github.com/dotnet/try/issues).</span><span class="sxs-lookup"><span data-stu-id="2f4f5-155">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
-- title: <span data-ttu-id="2f4f5-156">Работа со строками</span><span class="sxs-lookup"><span data-stu-id="2f4f5-156">Work with strings</span></span>
+    > Этот онлайн-интерфейс для написания кода находится на этапе предварительной версии. При возникновении проблем сообщите о них на странице [репозитория dotnet/try](https://github.com/dotnet/try/issues).
+- title: Работа со строками
   durationInMinutes: 5
   content: >
-    <span data-ttu-id="2f4f5-157">Когда вы вносили последние изменения, вы ознакомились с возможностями работы со строками.</span><span class="sxs-lookup"><span data-stu-id="2f4f5-157">Your last edit was our first look at what you can do with strings.</span></span> <span data-ttu-id="2f4f5-158">Рассмотрим их подробнее.</span><span class="sxs-lookup"><span data-stu-id="2f4f5-158">Let's explore more.</span></span>
+    Когда вы вносили последние изменения, вы ознакомились с возможностями работы со строками. Рассмотрим их подробнее.
 
 
-    <span data-ttu-id="2f4f5-159">Между фигурными скобками можно указать более одной переменной.</span><span class="sxs-lookup"><span data-stu-id="2f4f5-159">You're not limited to a single variable between the curly braces.</span></span> <span data-ttu-id="2f4f5-160">Попробуйте выполнить следующий код:</span><span class="sxs-lookup"><span data-stu-id="2f4f5-160">Try this:</span></span>
+    Между фигурными скобками можно указать более одной переменной. Попробуйте выполнить следующий код:
 
 
     ```csharp
@@ -144,7 +144,7 @@ items:
     ```
 
 
-    <span data-ttu-id="2f4f5-161">Изучая работу со строками, вы быстро поймете, что это не просто наборы букв.</span><span class="sxs-lookup"><span data-stu-id="2f4f5-161">As you explore more with strings, you'll find that strings are more than a collection of letters.</span></span> <span data-ttu-id="2f4f5-162">Длину строки можно узнать с помощью `Length`.</span><span class="sxs-lookup"><span data-stu-id="2f4f5-162">You can find the length of a string using `Length`.</span></span> <span data-ttu-id="2f4f5-163">`Length` — это **свойство** строки, которое возвращает количество содержащихся в ней символов.</span><span class="sxs-lookup"><span data-stu-id="2f4f5-163">`Length` is a **property** of a string and it returns the number of characters in that string.</span></span> <span data-ttu-id="2f4f5-164">Добавьте следующий код в нижней части интерактивного окна:</span><span class="sxs-lookup"><span data-stu-id="2f4f5-164">Add the following code at the bottom of the interactive window:</span></span>
+    Изучая работу со строками, вы быстро поймете, что это не просто наборы букв. Длину строки можно узнать с помощью `Length`. `Length` — это **свойство** строки, которое возвращает количество содержащихся в ней символов. Добавьте следующий код в нижней части интерактивного окна:
 
 
     ```csharp
@@ -158,21 +158,21 @@ items:
 
     > [!TIP]
 
-    > <span data-ttu-id="2f4f5-165">Теперь вы можете попрактиковаться самостоятельно.</span><span class="sxs-lookup"><span data-stu-id="2f4f5-165">This is a good time to explore on your own.</span></span> <span data-ttu-id="2f4f5-166">Вы узнали, что `Console.WriteLine()` выводит текст на экран.</span><span class="sxs-lookup"><span data-stu-id="2f4f5-166">You've learned that `Console.WriteLine()` writes text to the screen.</span></span> <span data-ttu-id="2f4f5-167">Вы научились объявлять переменные и объединять строки.</span><span class="sxs-lookup"><span data-stu-id="2f4f5-167">You've learned how to declare variables and concatenate strings together.</span></span> <span data-ttu-id="2f4f5-168">Поэкспериментируйте с интерактивным окном.</span><span class="sxs-lookup"><span data-stu-id="2f4f5-168">Experiment in the interactive window.</span></span> <span data-ttu-id="2f4f5-169">В этом окне есть интересная функция **IntelliSense**, которая предлагает доступные варианты действий.</span><span class="sxs-lookup"><span data-stu-id="2f4f5-169">The window has a feature called **IntelliSense** that makes suggestions for what you can do.</span></span> <span data-ttu-id="2f4f5-170">Введите `.` после `d` в `firstFriend`.</span><span class="sxs-lookup"><span data-stu-id="2f4f5-170">Type a `.` after the `d` in `firstFriend`.</span></span> <span data-ttu-id="2f4f5-171">Вы увидите список рекомендаций с доступными свойствами и методами.</span><span class="sxs-lookup"><span data-stu-id="2f4f5-171">You'll see a list of suggestions for properties and methods you can use.</span></span>
+    > Теперь вы можете попрактиковаться самостоятельно. Вы узнали, что `Console.WriteLine()` выводит текст на экран. Вы научились объявлять переменные и объединять строки. Поэкспериментируйте с интерактивным окном. В этом окне есть интересная функция **IntelliSense**, которая предлагает доступные варианты действий. Введите `.` после `d` в `firstFriend`. Вы увидите список рекомендаций с доступными свойствами и методами.
 
 
     > [!NOTE]
 
-    > <span data-ttu-id="2f4f5-172">Этот онлайн-интерфейс для написания кода находится на этапе предварительной версии.</span><span class="sxs-lookup"><span data-stu-id="2f4f5-172">This online coding experience is in preview mode.</span></span> <span data-ttu-id="2f4f5-173">При возникновении проблем сообщите о них на странице [репозитория dotnet/try](https://github.com/dotnet/try/issues).</span><span class="sxs-lookup"><span data-stu-id="2f4f5-173">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
-- title: <span data-ttu-id="2f4f5-174">Другие действия со строками</span><span class="sxs-lookup"><span data-stu-id="2f4f5-174">Do more with strings</span></span>
+    > Этот онлайн-интерфейс для написания кода находится на этапе предварительной версии. При возникновении проблем сообщите о них на странице [репозитория dotnet/try](https://github.com/dotnet/try/issues).
+- title: Другие действия со строками
   durationInMinutes: 5
   content: >
-    <span data-ttu-id="2f4f5-175">Вы уже использовали **метод** (<xref:System.Console.WriteLine%2A?displayProperty=nameWithType>) для вывода сообщений.</span><span class="sxs-lookup"><span data-stu-id="2f4f5-175">You've been using a **method**, <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>, to print messages.</span></span> <span data-ttu-id="2f4f5-176">**Метод** — это блок кода, который реализует какое-либо действие.</span><span class="sxs-lookup"><span data-stu-id="2f4f5-176">A **method** is a block of code that implements some action.</span></span> <span data-ttu-id="2f4f5-177">Ему присваивается имя, чтобы вы могли получить к нему доступ.</span><span class="sxs-lookup"><span data-stu-id="2f4f5-177">It has a name, so you can access it.</span></span>
+    Вы уже использовали **метод** (<xref:System.Console.WriteLine%2A?displayProperty=nameWithType>) для вывода сообщений. **Метод** — это блок кода, который реализует какое-либо действие. Ему присваивается имя, чтобы вы могли получить к нему доступ.
 
 
-    <span data-ttu-id="2f4f5-178">Предположим, что строки содержат начальные или конечные пробелы, которые не нужно отображать.</span><span class="sxs-lookup"><span data-stu-id="2f4f5-178">Suppose your strings have leading or trailing spaces that you don't want to display.</span></span> <span data-ttu-id="2f4f5-179">Вам нужно **обрезать** эти лишние пробелы.</span><span class="sxs-lookup"><span data-stu-id="2f4f5-179">You want to **trim** the spaces from the strings.</span></span>
+    Предположим, что строки содержат начальные или конечные пробелы, которые не нужно отображать. Вам нужно **обрезать** эти лишние пробелы.
 
-    <span data-ttu-id="2f4f5-180">Эту задачу выполняют метод <xref:System.String.Trim%2A> и связанные с ним методы <xref:System.String.TrimStart%2A> и <xref:System.String.TrimEnd%2A>.</span><span class="sxs-lookup"><span data-stu-id="2f4f5-180">The <xref:System.String.Trim%2A> method and related methods <xref:System.String.TrimStart%2A> and <xref:System.String.TrimEnd%2A> do that work.</span></span> <span data-ttu-id="2f4f5-181">Они просто удаляют из строки начальные и (или) конечные пробелы.</span><span class="sxs-lookup"><span data-stu-id="2f4f5-181">You can just use those methods to remove leading and trailing spaces.</span></span> <span data-ttu-id="2f4f5-182">Попробуйте выполнить код ниже:</span><span class="sxs-lookup"><span data-stu-id="2f4f5-182">Try the following code:</span></span>
+    Эту задачу выполняют метод <xref:System.String.Trim%2A> и связанные с ним методы <xref:System.String.TrimStart%2A> и <xref:System.String.TrimEnd%2A>. Они просто удаляют из строки начальные и (или) конечные пробелы. Попробуйте выполнить код ниже:
 
 
     ```csharp
@@ -199,10 +199,10 @@ items:
     ```
 
 
-    <span data-ttu-id="2f4f5-183">В этом примере демонстрируются важные принципы работы со строками.</span><span class="sxs-lookup"><span data-stu-id="2f4f5-183">This sample reinforces a couple of important concepts for working with strings.</span></span> <span data-ttu-id="2f4f5-184">Методы управления строками возвращают новые строковые объекты, а не вносят изменения в существующие.</span><span class="sxs-lookup"><span data-stu-id="2f4f5-184">The methods that manipulate strings return new string objects rather than making modifications in place.</span></span> <span data-ttu-id="2f4f5-185">Как видите, каждый вызов любого из методов `Trim` возвращает новую строку, а не изменяет исходное сообщение.</span><span class="sxs-lookup"><span data-stu-id="2f4f5-185">You can see that each call to any of the `Trim` methods returns a new string but doesn't change the original message.</span></span>
+    В этом примере демонстрируются важные принципы работы со строками. Методы управления строками возвращают новые строковые объекты, а не вносят изменения в существующие. Как видите, каждый вызов любого из методов `Trim` возвращает новую строку, а не изменяет исходное сообщение.
 
 
-    <span data-ttu-id="2f4f5-186">Доступны и другие методы для работы со строкой.</span><span class="sxs-lookup"><span data-stu-id="2f4f5-186">There are other methods available to work with a string.</span></span> <span data-ttu-id="2f4f5-187">Вы наверняка уже пользовались командами поиска и замены в текстовых редакторах.</span><span class="sxs-lookup"><span data-stu-id="2f4f5-187">For example, you've probably used a search and replace command in an editor or word processor before.</span></span> <span data-ttu-id="2f4f5-188">Метод <xref:System.String.Replace%2A> выполняет аналогичную задачу для строк.</span><span class="sxs-lookup"><span data-stu-id="2f4f5-188">The <xref:System.String.Replace%2A> method does something similar in a string.</span></span> <span data-ttu-id="2f4f5-189">Он находит некоторую подстроку и заменяет ее другим текстом.</span><span class="sxs-lookup"><span data-stu-id="2f4f5-189">It searches for a substring and replaces it with different text.</span></span> <span data-ttu-id="2f4f5-190">Метод <xref:System.String.Replace%2A> принимает два **параметра**.</span><span class="sxs-lookup"><span data-stu-id="2f4f5-190">The <xref:System.String.Replace%2A> method takes two **parameters**.</span></span> <span data-ttu-id="2f4f5-191">Это строки в скобках.</span><span class="sxs-lookup"><span data-stu-id="2f4f5-191">These are the strings between the parentheses.</span></span> <span data-ttu-id="2f4f5-192">Первая строка — это текст для поиска.</span><span class="sxs-lookup"><span data-stu-id="2f4f5-192">The first string is the text to search for.</span></span> <span data-ttu-id="2f4f5-193">Вторая строка — это текст для замены.</span><span class="sxs-lookup"><span data-stu-id="2f4f5-193">The second string is the text to replace it with.</span></span> <span data-ttu-id="2f4f5-194">Попробуйте сами.</span><span class="sxs-lookup"><span data-stu-id="2f4f5-194">Try it for yourself.</span></span> <span data-ttu-id="2f4f5-195">Добавьте этот код:</span><span class="sxs-lookup"><span data-stu-id="2f4f5-195">Add this code.</span></span> <span data-ttu-id="2f4f5-196">Введите его и наблюдайте подсказки, которые появятся при вводе `.Re` после переменной `sayHello`:</span><span class="sxs-lookup"><span data-stu-id="2f4f5-196">Type it in to see the hints as you start typing `.Re` after the `sayHello` variable:</span></span>
+    Доступны и другие методы для работы со строкой. Вы наверняка уже пользовались командами поиска и замены в текстовых редакторах. Метод <xref:System.String.Replace%2A> выполняет аналогичную задачу для строк. Он находит некоторую подстроку и заменяет ее другим текстом. Метод <xref:System.String.Replace%2A> принимает два **параметра**. Это строки в скобках. Первая строка — это текст для поиска. Вторая строка — это текст для замены. Попробуйте сами. Добавьте этот код: Введите его и наблюдайте подсказки, которые появятся при вводе `.Re` после переменной `sayHello`:
 
 
     ```csharp
@@ -218,7 +218,7 @@ items:
     ```
 
 
-    <span data-ttu-id="2f4f5-197">Два других полезных метода преобразуют все буквы строки в прописные или строчные.</span><span class="sxs-lookup"><span data-stu-id="2f4f5-197">Two other useful methods make a string ALL CAPS or all lower case.</span></span> <span data-ttu-id="2f4f5-198">Попробуйте следующий код:</span><span class="sxs-lookup"><span data-stu-id="2f4f5-198">Try the following code.</span></span> <span data-ttu-id="2f4f5-199">Введите его и наблюдайте, как **IntelliSense** предоставит подсказки при вводе `To`:</span><span class="sxs-lookup"><span data-stu-id="2f4f5-199">Type it in to see how **IntelliSense** provides hints as you start to type `To`:</span></span>
+    Два других полезных метода преобразуют все буквы строки в прописные или строчные. Попробуйте следующий код: Введите его и наблюдайте, как **IntelliSense** предоставит подсказки при вводе `To`:
 
 
     ```csharp
@@ -232,11 +232,11 @@ items:
 
     > [!NOTE]
 
-    > <span data-ttu-id="2f4f5-200">Этот онлайн-интерфейс для написания кода находится на этапе предварительной версии.</span><span class="sxs-lookup"><span data-stu-id="2f4f5-200">This online coding experience is in preview mode.</span></span> <span data-ttu-id="2f4f5-201">При возникновении проблем сообщите о них на странице [репозитория dotnet/try](https://github.com/dotnet/try/issues).</span><span class="sxs-lookup"><span data-stu-id="2f4f5-201">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
-- title: <span data-ttu-id="2f4f5-202">Поиск по строкам</span><span class="sxs-lookup"><span data-stu-id="2f4f5-202">Search strings</span></span>
+    > Этот онлайн-интерфейс для написания кода находится на этапе предварительной версии. При возникновении проблем сообщите о них на странице [репозитория dotnet/try](https://github.com/dotnet/try/issues).
+- title: Поиск по строкам
   durationInMinutes: 10
   content: >
-    <span data-ttu-id="2f4f5-203">Другая функция операции *поиска и замены* — поиск текста в строке.</span><span class="sxs-lookup"><span data-stu-id="2f4f5-203">The other part of a *search and replace* operation is to find text in a string.</span></span> <span data-ttu-id="2f4f5-204">Для поиска вы можете использовать метод <xref:System.String.Contains%2A>.</span><span class="sxs-lookup"><span data-stu-id="2f4f5-204">You can use the  <xref:System.String.Contains%2A> method for searching.</span></span> <span data-ttu-id="2f4f5-205">Он покажет, содержит ли строка подстроку.</span><span class="sxs-lookup"><span data-stu-id="2f4f5-205">It tells you if a string contains a substring inside it.</span></span> <span data-ttu-id="2f4f5-206">Попробуйте выполнить код ниже, чтобы изучить <xref:System.String.Contains%2A>:</span><span class="sxs-lookup"><span data-stu-id="2f4f5-206">Try the following code to explore <xref:System.String.Contains%2A>:</span></span>
+    Другая функция операции *поиска и замены* — поиск текста в строке. Для поиска вы можете использовать метод <xref:System.String.Contains%2A>. Он покажет, содержит ли строка подстроку. Попробуйте выполнить код ниже, чтобы изучить <xref:System.String.Contains%2A>:
 
 
     ```csharp
@@ -250,30 +250,30 @@ items:
     ```
 
 
-    <span data-ttu-id="2f4f5-207">Метод <xref:System.String.Contains%2A> возвращает **логическое** значение, которое указывает, найдена ли искомая строка.</span><span class="sxs-lookup"><span data-stu-id="2f4f5-207">The <xref:System.String.Contains%2A> method returns a **boolean** value which tells you if the string you were searching for was found.</span></span> <span data-ttu-id="2f4f5-208">**Логическое** значение может принимать значение `true` или `false`.</span><span class="sxs-lookup"><span data-stu-id="2f4f5-208">A **boolean** stores either a `true` or a `false` value.</span></span> <span data-ttu-id="2f4f5-209">**Логические** значения будут более подробно рассмотрены на одном из следующих занятий.</span><span class="sxs-lookup"><span data-stu-id="2f4f5-209">You'll learn more about **boolean** values in a later lesson.</span></span>
+    Метод <xref:System.String.Contains%2A> возвращает **логическое** значение, которое указывает, найдена ли искомая строка. **Логическое** значение может принимать значение `true` или `false`. **Логические** значения будут более подробно рассмотрены на одном из следующих занятий.
 
 
-    <span data-ttu-id="2f4f5-210">***Задача***</span><span class="sxs-lookup"><span data-stu-id="2f4f5-210">***Challenge***</span></span>
+    ***Задача***
 
 
-    <span data-ttu-id="2f4f5-211">Существует два схожих метода (<xref:System.String.StartsWith%2A> и <xref:System.String.EndsWith%2A>) для поиска подстрок в строках.</span><span class="sxs-lookup"><span data-stu-id="2f4f5-211">There are two similar methods, <xref:System.String.StartsWith%2A> and <xref:System.String.EndsWith%2A> that also search for sub-strings in a string.</span></span> <span data-ttu-id="2f4f5-212">С их помощью выполняется поиск подстроки в начале или конце строки.</span><span class="sxs-lookup"><span data-stu-id="2f4f5-212">These find a substring at the beginning or the end of the string.</span></span> <span data-ttu-id="2f4f5-213">Попробуйте изменить пример выше таким образом, чтобы вместо <xref:System.String.Contains%2A>использовались <xref:System.String.StartsWith%2A> и <xref:System.String.EndsWith%2A>.</span><span class="sxs-lookup"><span data-stu-id="2f4f5-213">Try to modify the previous sample to use <xref:System.String.StartsWith%2A> and <xref:System.String.EndsWith%2A> instead of <xref:System.String.Contains%2A>.</span></span> <span data-ttu-id="2f4f5-214">Выполните поиск слов You или goodbye в начале строки.</span><span class="sxs-lookup"><span data-stu-id="2f4f5-214">Search for "You" or "goodbye" at the beginning of a string.</span></span> <span data-ttu-id="2f4f5-215">Выполните поиск слов hello или goodbye в конце строки.</span><span class="sxs-lookup"><span data-stu-id="2f4f5-215">Search for "hello" or "goodbye" at the end of a string.</span></span>
-
-
-    > [!NOTE]
-
-    > <span data-ttu-id="2f4f5-216">При проверке текста в конце строки учитывайте знаки пунктуации.</span><span class="sxs-lookup"><span data-stu-id="2f4f5-216">Watch your punctuation when you test for the text at the end of the string.</span></span> <span data-ttu-id="2f4f5-217">Если строка оканчивается точкой, необходимо проверить строки, которые оканчиваются точкой.</span><span class="sxs-lookup"><span data-stu-id="2f4f5-217">If the string ends with a period, you must check for a string that ends with a period.</span></span>
-
-
-    <span data-ttu-id="2f4f5-218">Вы должны получить значение `true`, поставив слово "You" в начале, а слово "hello" — в конце, и значение false, поставив в начале или конце слово "goodbye".</span><span class="sxs-lookup"><span data-stu-id="2f4f5-218">You should get `true` for starting with "You" and ending with "hello" and false for starting with or ending with "goodbye".</span></span>
+    Существует два схожих метода (<xref:System.String.StartsWith%2A> и <xref:System.String.EndsWith%2A>) для поиска подстрок в строках. С их помощью выполняется поиск подстроки в начале или конце строки. Попробуйте изменить пример выше таким образом, чтобы вместо <xref:System.String.Contains%2A>использовались <xref:System.String.StartsWith%2A> и <xref:System.String.EndsWith%2A>. Выполните поиск слов You или goodbye в начале строки. Выполните поиск слов hello или goodbye в конце строки.
 
 
     > [!NOTE]
 
-    > <span data-ttu-id="2f4f5-219">Этот онлайн-интерфейс для написания кода находится на этапе предварительной версии.</span><span class="sxs-lookup"><span data-stu-id="2f4f5-219">This online coding experience is in preview mode.</span></span> <span data-ttu-id="2f4f5-220">При возникновении проблем сообщите о них на странице [репозитория dotnet/try](https://github.com/dotnet/try/issues).</span><span class="sxs-lookup"><span data-stu-id="2f4f5-220">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
-- title: <span data-ttu-id="2f4f5-221">Выполнение задачи</span><span class="sxs-lookup"><span data-stu-id="2f4f5-221">Complete challenge</span></span>
+    > При проверке текста в конце строки учитывайте знаки пунктуации. Если строка оканчивается точкой, необходимо проверить строки, которые оканчиваются точкой.
+
+
+    Вы должны получить значение `true`, поставив слово "You" в начале, а слово "hello" — в конце, и значение false, поставив в начале или конце слово "goodbye".
+
+
+    > [!NOTE]
+
+    > Этот онлайн-интерфейс для написания кода находится на этапе предварительной версии. При возникновении проблем сообщите о них на странице [репозитория dotnet/try](https://github.com/dotnet/try/issues).
+- title: Выполнение задачи
   durationInMinutes: 3
   content: >
-    <span data-ttu-id="2f4f5-222">В результате получилось нечто подобное?</span><span class="sxs-lookup"><span data-stu-id="2f4f5-222">Did you come up with something like this?</span></span>
+    В результате получилось нечто подобное?
 
 
     ```csharp
@@ -294,13 +294,13 @@ items:
 
     > [!NOTE]
 
-    > <span data-ttu-id="2f4f5-223">Этот онлайн-интерфейс для написания кода находится на этапе предварительной версии.</span><span class="sxs-lookup"><span data-stu-id="2f4f5-223">This online coding experience is in preview mode.</span></span> <span data-ttu-id="2f4f5-224">При возникновении проблем сообщите о них на странице [репозитория dotnet/try](https://github.com/dotnet/try/issues).</span><span class="sxs-lookup"><span data-stu-id="2f4f5-224">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
+    > Этот онлайн-интерфейс для написания кода находится на этапе предварительной версии. При возникновении проблем сообщите о них на странице [репозитория dotnet/try](https://github.com/dotnet/try/issues).
 - content: >-
-    <span data-ttu-id="2f4f5-225">Вы ознакомились с учебником по основам C#.</span><span class="sxs-lookup"><span data-stu-id="2f4f5-225">You've completed the "Hello C#" introduction to C# tutorial.</span></span> <span data-ttu-id="2f4f5-226">Вы можете выбрать ссылку **Числа в C#** ниже, чтобы запустить следующий интерактивный учебник, либо посетить [сайт .NET](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro), чтобы скачать пакет SDK для .NET Core, создать проект на своем компьютере и продолжить написание кода.</span><span class="sxs-lookup"><span data-stu-id="2f4f5-226">You can click the **Numbers in C#** link below to start the next interactive tutorial, or you can visit the [.NET site](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) to download the .NET Core SDK, create a project on your machine, and keep coding.</span></span> <span data-ttu-id="2f4f5-227">В разделе "Дальнейшие действия" вы вернетесь к этим учебникам.</span><span class="sxs-lookup"><span data-stu-id="2f4f5-227">The "Next steps" section brings you back to these tutorials.</span></span>
+    Вы ознакомились с учебником по основам C#. Вы можете щелкнуть ссылку **Числа в C#** ниже, чтобы запустить следующий интерактивный учебник, либо посетить [сайт .NET](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro), чтобы скачать пакет SDK для .NET Core, создать проект на своем компьютере и продолжить написание кода. В разделе "Дальнейшие действия" вы вернетесь к этим учебникам.
 
 
-    <span data-ttu-id="2f4f5-228">Дополнительные сведения о типе `string`:</span><span class="sxs-lookup"><span data-stu-id="2f4f5-228">For further reading on the `string` type:</span></span>
+    Дополнительные сведения о типе `string`:
 
-    - <span data-ttu-id="2f4f5-229">[Руководство по программированию на C#](../../programming-guide/index.md), посвященное [строкам](../../programming-guide/strings/index.md).</span><span class="sxs-lookup"><span data-stu-id="2f4f5-229">[C# Programming Guide](../../programming-guide/index.md) topic on [strings](../../programming-guide/strings/index.md).</span></span>
+    - [Руководство по программированию на C#](../../programming-guide/index.md), посвященное [строкам](../../programming-guide/strings/index.md).
 
-    - <span data-ttu-id="2f4f5-230">[Советы по использованию строк](../../how-to/index.md#working-with-strings)</span><span class="sxs-lookup"><span data-stu-id="2f4f5-230">[How to tips on working with strings](../../how-to/index.md#working-with-strings).</span></span>
+    - [Советы по использованию строк](../../how-to/index.md#working-with-strings)

@@ -9,12 +9,12 @@ metadata:
   level: Beginner
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: c3c4927a4afbf69f2101aa2596389e6f94cea243
-  ms.sourcegitcommit: 4aeac5d588ded58246f58030919e56b70a7674e4
+  ms.openlocfilehash: bc2d600afabbac9783e8fb12e3bd47e83a3495b7
+  ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
   ms.translationtype: HT
   ms.contentlocale: ru-RU
-  ms.lasthandoff: 10/27/2019
-  ms.locfileid: "72966970"
+  ms.lasthandoff: 11/12/2019
+  ms.locfileid: "73969441"
 items:
 - durationInMinutes: 2
   content: >
@@ -22,7 +22,7 @@ items:
 - title: Создание интерполированной строки
   durationInMinutes: 2
   content: >
-    Запустите приведенный ниже код в интерактивном окне. Для этого введите следующий код в интерактивном окне (замените `<name>` своим именем) и нажмите кнопку **Выполнить**:
+    Запустите приведенный ниже код в интерактивном окне. Нажмите кнопку **Перейти в режим фокусировки**. Затем введите следующий блок кода в интерактивном окне (замените `<name>` своим именем) и нажмите кнопку **Выполнить**:
 
 
     ```csharp

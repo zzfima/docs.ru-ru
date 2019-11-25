@@ -7,72 +7,63 @@ helpviewer_keywords:
 ms.assetid: 0ed69f73-5c01-4514-bd63-979c6e38d41d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8d09b5b76c39f33848d44beb43d9b09c5e6ed13b
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: b1dad042595608a805f978673858acaa5c01130f
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71046178"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73974883"
 ---
-# <a name="security-etw-events"></a><span data-ttu-id="63aad-102">События безопасности (трассировка событий Windows)</span><span class="sxs-lookup"><span data-stu-id="63aad-102">Security ETW Events</span></span>
-<a name="top"></a> <span data-ttu-id="63aad-103">События безопасности создаются при проверке строгого имени и проверке Authenticode.</span><span class="sxs-lookup"><span data-stu-id="63aad-103">Security events are raised during strong name verification and Authenticode verification.</span></span>  
-  
- <span data-ttu-id="63aad-104">Эта категория состоит из следующих событий:</span><span class="sxs-lookup"><span data-stu-id="63aad-104">This category consists of the following events:</span></span>  
-  
-- [<span data-ttu-id="63aad-105">События StrongNameVerificationStart_V1 и StrongNameVerificationStop_V1</span><span class="sxs-lookup"><span data-stu-id="63aad-105">StrongNameVerificationStart_V1 and StrongNameVerificationStop_V1 Events</span></span>](#strongnameverificationstart_v1_and_strongnameverificationstop_v1_events)  
-  
-- [<span data-ttu-id="63aad-106">События AuthenticodeVerificationStart_V1 и AuthenticodeVerificationStop_V1</span><span class="sxs-lookup"><span data-stu-id="63aad-106">AuthenticodeVerificationStart_V1 and AuthenticodeVerificationStop_V1 Events</span></span>](#authenticodeverificationstart_v1_and_authenticodeverificationstop_v1_events)  
-  
-<a name="strongnameverificationstart_v1_and_strongnameverificationstop_v1_events"></a>   
-## <a name="strongnameverificationstart_v1-and-strongnameverificationstop_v1-events"></a><span data-ttu-id="63aad-107">События StrongNameVerificationStart_V1 и StrongNameVerificationStop_V1</span><span class="sxs-lookup"><span data-stu-id="63aad-107">StrongNameVerificationStart_V1 and StrongNameVerificationStop_V1 Events</span></span>  
- <span data-ttu-id="63aad-108">В таблице ниже показаны ключевое слово и уровень.</span><span class="sxs-lookup"><span data-stu-id="63aad-108">The following table shows the keyword and level.</span></span> <span data-ttu-id="63aad-109">(Дополнительные сведения см. в разделе [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md).)</span><span class="sxs-lookup"><span data-stu-id="63aad-109">(For more information, see [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md).)</span></span>  
-  
-|<span data-ttu-id="63aad-110">Ключевое слово для вызова события</span><span class="sxs-lookup"><span data-stu-id="63aad-110">Keyword for raising the event</span></span>|<span data-ttu-id="63aad-111">Уровень</span><span class="sxs-lookup"><span data-stu-id="63aad-111">Level</span></span>|  
-|-----------------------------------|-----------|  
-|<span data-ttu-id="63aad-112">`SecurityKeyword` (0x400)</span><span class="sxs-lookup"><span data-stu-id="63aad-112">`SecurityKeyword` (0x400)</span></span>|<span data-ttu-id="63aad-113">Информационный (4)</span><span class="sxs-lookup"><span data-stu-id="63aad-113">Informational(4)</span></span>|  
-  
- <span data-ttu-id="63aad-114">В таблице ниже представлены сведения о событии.</span><span class="sxs-lookup"><span data-stu-id="63aad-114">The following table shows the event information.</span></span>  
-  
-|<span data-ttu-id="63aad-115">событие</span><span class="sxs-lookup"><span data-stu-id="63aad-115">Event</span></span>|<span data-ttu-id="63aad-116">Идентификатор события</span><span class="sxs-lookup"><span data-stu-id="63aad-116">Event ID</span></span>|<span data-ttu-id="63aad-117">Условие вызова</span><span class="sxs-lookup"><span data-stu-id="63aad-117">Raised when</span></span>|  
-|-----------|--------------|-----------------|  
-|`StrongNameVerificationStart_V1`|<span data-ttu-id="63aad-118">181</span><span class="sxs-lookup"><span data-stu-id="63aad-118">181</span></span>|<span data-ttu-id="63aad-119">Начало проверки строгого имени.</span><span class="sxs-lookup"><span data-stu-id="63aad-119">Start of strong name verification.</span></span>|  
-|`StrongNameVerificationStop_V1`|<span data-ttu-id="63aad-120">182</span><span class="sxs-lookup"><span data-stu-id="63aad-120">182</span></span>|<span data-ttu-id="63aad-121">Окончание проверки строгого имени.</span><span class="sxs-lookup"><span data-stu-id="63aad-121">End of strong name verification.</span></span>|  
-  
- <span data-ttu-id="63aad-122">В таблице ниже представлены данные события.</span><span class="sxs-lookup"><span data-stu-id="63aad-122">The following table shows the event data.</span></span>  
-  
-|<span data-ttu-id="63aad-123">Имя поля</span><span class="sxs-lookup"><span data-stu-id="63aad-123">Field name</span></span>|<span data-ttu-id="63aad-124">Тип данных</span><span class="sxs-lookup"><span data-stu-id="63aad-124">Data type</span></span>|<span data-ttu-id="63aad-125">Описание</span><span class="sxs-lookup"><span data-stu-id="63aad-125">Description</span></span>|  
-|----------------|---------------|-----------------|  
-|<span data-ttu-id="63aad-126">VerificationFlags</span><span class="sxs-lookup"><span data-stu-id="63aad-126">VerificationFlags</span></span>|<span data-ttu-id="63aad-127">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="63aad-127">win:UInt32</span></span>|<span data-ttu-id="63aad-128">Флаги проверки.</span><span class="sxs-lookup"><span data-stu-id="63aad-128">The verification flags.</span></span>|  
-|<span data-ttu-id="63aad-129">ErrorCode</span><span class="sxs-lookup"><span data-stu-id="63aad-129">ErrorCode</span></span>|<span data-ttu-id="63aad-130">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="63aad-130">win:UInt32</span></span>|<span data-ttu-id="63aad-131">Код ошибки HResult.</span><span class="sxs-lookup"><span data-stu-id="63aad-131">The HResult error code.</span></span>|  
-|<span data-ttu-id="63aad-132">FullyQualifiedAssemblyName</span><span class="sxs-lookup"><span data-stu-id="63aad-132">FullyQualifiedAssemblyName</span></span>|<span data-ttu-id="63aad-133">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="63aad-133">win:UnicodeString</span></span>|<span data-ttu-id="63aad-134">Полное имя сборки.</span><span class="sxs-lookup"><span data-stu-id="63aad-134">The fully qualified assembly name.</span></span>|  
-|<span data-ttu-id="63aad-135">ClrInstanceID</span><span class="sxs-lookup"><span data-stu-id="63aad-135">ClrInstanceID</span></span>|<span data-ttu-id="63aad-136">win:UInt16</span><span class="sxs-lookup"><span data-stu-id="63aad-136">win:UInt16</span></span>|<span data-ttu-id="63aad-137">Уникальный идентификатор экземпляра CLR или CoreCLR.</span><span class="sxs-lookup"><span data-stu-id="63aad-137">Unique ID for the instance of CLR or CoreCLR.</span></span>|  
-  
- [<span data-ttu-id="63aad-138">К началу</span><span class="sxs-lookup"><span data-stu-id="63aad-138">Back to top</span></span>](#top)  
-  
-<a name="authenticodeverificationstart_v1_and_authenticodeverificationstop_v1_events"></a>   
-## <a name="authenticodeverificationstart_v1-and-authenticodeverificationstop_v1-events"></a><span data-ttu-id="63aad-139">События AuthenticodeVerificationStart_V1 и AuthenticodeVerificationStop_V1</span><span class="sxs-lookup"><span data-stu-id="63aad-139">AuthenticodeVerificationStart_V1 and AuthenticodeVerificationStop_V1 Events</span></span>  
- <span data-ttu-id="63aad-140">В таблице ниже показаны ключевое слово и уровень.</span><span class="sxs-lookup"><span data-stu-id="63aad-140">The following table shows the keyword and level.</span></span>  
-  
-|<span data-ttu-id="63aad-141">Ключевое слово для вызова события</span><span class="sxs-lookup"><span data-stu-id="63aad-141">Keyword for raising the event</span></span>|<span data-ttu-id="63aad-142">Уровень</span><span class="sxs-lookup"><span data-stu-id="63aad-142">Level</span></span>|  
-|-----------------------------------|-----------|  
-|<span data-ttu-id="63aad-143">`SecurityKeyword` (0x400)</span><span class="sxs-lookup"><span data-stu-id="63aad-143">`SecurityKeyword` (0x400)</span></span>|<span data-ttu-id="63aad-144">Информационный (4)</span><span class="sxs-lookup"><span data-stu-id="63aad-144">Informational(4)</span></span>|  
-  
- <span data-ttu-id="63aad-145">В таблице ниже представлены сведения о событии.</span><span class="sxs-lookup"><span data-stu-id="63aad-145">The following table shows the event information.</span></span>  
-  
-|<span data-ttu-id="63aad-146">событие</span><span class="sxs-lookup"><span data-stu-id="63aad-146">Event</span></span>|<span data-ttu-id="63aad-147">Идентификатор события</span><span class="sxs-lookup"><span data-stu-id="63aad-147">Event ID</span></span>|<span data-ttu-id="63aad-148">Условие вызова</span><span class="sxs-lookup"><span data-stu-id="63aad-148">Raised when</span></span>|  
-|-----------|--------------|-----------------|  
-|`AuthenticodeVerificationStart_V1`|<span data-ttu-id="63aad-149">183</span><span class="sxs-lookup"><span data-stu-id="63aad-149">183</span></span>|<span data-ttu-id="63aad-150">Начало проверки Authenticode.</span><span class="sxs-lookup"><span data-stu-id="63aad-150">Start of Authenticode verification.</span></span>|  
-|`AuthenticodeVerificationStop_V1`|<span data-ttu-id="63aad-151">184</span><span class="sxs-lookup"><span data-stu-id="63aad-151">184</span></span>|<span data-ttu-id="63aad-152">Окончание проверки Authenticode.</span><span class="sxs-lookup"><span data-stu-id="63aad-152">End of Authenticode verification.</span></span>|  
-  
- <span data-ttu-id="63aad-153">В таблице ниже представлены данные события.</span><span class="sxs-lookup"><span data-stu-id="63aad-153">The following table shows the event data.</span></span>  
-  
-|<span data-ttu-id="63aad-154">Имя поля</span><span class="sxs-lookup"><span data-stu-id="63aad-154">Field name</span></span>|<span data-ttu-id="63aad-155">Тип данных</span><span class="sxs-lookup"><span data-stu-id="63aad-155">Data type</span></span>|<span data-ttu-id="63aad-156">Описание</span><span class="sxs-lookup"><span data-stu-id="63aad-156">Description</span></span>|  
-|----------------|---------------|-----------------|  
-|<span data-ttu-id="63aad-157">VerificationFlags</span><span class="sxs-lookup"><span data-stu-id="63aad-157">VerificationFlags</span></span>|<span data-ttu-id="63aad-158">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="63aad-158">win:UInt32</span></span>|<span data-ttu-id="63aad-159">Флаги проверки.</span><span class="sxs-lookup"><span data-stu-id="63aad-159">The verification flags.</span></span>|  
-|<span data-ttu-id="63aad-160">ErrorCode</span><span class="sxs-lookup"><span data-stu-id="63aad-160">ErrorCode</span></span>|<span data-ttu-id="63aad-161">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="63aad-161">win:UInt32</span></span>|<span data-ttu-id="63aad-162">Код ошибки HResult.</span><span class="sxs-lookup"><span data-stu-id="63aad-162">The HResult error code.</span></span>|  
-|<span data-ttu-id="63aad-163">ModulePath</span><span class="sxs-lookup"><span data-stu-id="63aad-163">ModulePath</span></span>|<span data-ttu-id="63aad-164">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="63aad-164">win:UnicodeString</span></span>|<span data-ttu-id="63aad-165">Путь к модулю.</span><span class="sxs-lookup"><span data-stu-id="63aad-165">The module path.</span></span>|  
-|<span data-ttu-id="63aad-166">ClrInstanceID</span><span class="sxs-lookup"><span data-stu-id="63aad-166">ClrInstanceID</span></span>|<span data-ttu-id="63aad-167">win:UInt16</span><span class="sxs-lookup"><span data-stu-id="63aad-167">win:UInt16</span></span>|<span data-ttu-id="63aad-168">Уникальный идентификатор экземпляра CLR или CoreCLR.</span><span class="sxs-lookup"><span data-stu-id="63aad-168">Unique ID for the instance of CLR or CoreCLR.</span></span>|  
-  
-## <a name="see-also"></a><span data-ttu-id="63aad-169">См. также</span><span class="sxs-lookup"><span data-stu-id="63aad-169">See also</span></span>
+# <a name="security-etw-events"></a><span data-ttu-id="03c0f-102">События безопасности (трассировка событий Windows)</span><span class="sxs-lookup"><span data-stu-id="03c0f-102">Security ETW Events</span></span>
 
-- [<span data-ttu-id="63aad-170">События трассировки событий Windows в среде CLR</span><span class="sxs-lookup"><span data-stu-id="63aad-170">CLR ETW Events</span></span>](clr-etw-events.md)
+<span data-ttu-id="03c0f-103">События безопасности создаются при проверке строгого имени и проверке Authenticode.</span><span class="sxs-lookup"><span data-stu-id="03c0f-103">Security events are raised during strong name verification and Authenticode verification.</span></span>  
+
+## <a name="strongnameverificationstart_v1-and-strongnameverificationstop_v1-events"></a><span data-ttu-id="03c0f-104">События StrongNameVerificationStart_V1 и StrongNameVerificationStop_V1</span><span class="sxs-lookup"><span data-stu-id="03c0f-104">StrongNameVerificationStart_V1 and StrongNameVerificationStop_V1 Events</span></span>  
+ <span data-ttu-id="03c0f-105">В таблице ниже показаны ключевое слово и уровень.</span><span class="sxs-lookup"><span data-stu-id="03c0f-105">The following table shows the keyword and level.</span></span> <span data-ttu-id="03c0f-106">(Дополнительные сведения см. в разделе [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md).)</span><span class="sxs-lookup"><span data-stu-id="03c0f-106">(For more information, see [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md).)</span></span>  
+  
+|<span data-ttu-id="03c0f-107">Ключевое слово для вызова события</span><span class="sxs-lookup"><span data-stu-id="03c0f-107">Keyword for raising the event</span></span>|<span data-ttu-id="03c0f-108">Уровень</span><span class="sxs-lookup"><span data-stu-id="03c0f-108">Level</span></span>|  
+|-----------------------------------|-----------|  
+|<span data-ttu-id="03c0f-109">`SecurityKeyword` (0x400)</span><span class="sxs-lookup"><span data-stu-id="03c0f-109">`SecurityKeyword` (0x400)</span></span>|<span data-ttu-id="03c0f-110">Информационный (4)</span><span class="sxs-lookup"><span data-stu-id="03c0f-110">Informational(4)</span></span>|  
+  
+ <span data-ttu-id="03c0f-111">В таблице ниже представлены сведения о событии.</span><span class="sxs-lookup"><span data-stu-id="03c0f-111">The following table shows the event information.</span></span>  
+  
+|<span data-ttu-id="03c0f-112">событие</span><span class="sxs-lookup"><span data-stu-id="03c0f-112">Event</span></span>|<span data-ttu-id="03c0f-113">Код события</span><span class="sxs-lookup"><span data-stu-id="03c0f-113">Event ID</span></span>|<span data-ttu-id="03c0f-114">Условие вызова</span><span class="sxs-lookup"><span data-stu-id="03c0f-114">Raised when</span></span>|  
+|-----------|--------------|-----------------|  
+|`StrongNameVerificationStart_V1`|<span data-ttu-id="03c0f-115">181</span><span class="sxs-lookup"><span data-stu-id="03c0f-115">181</span></span>|<span data-ttu-id="03c0f-116">Начало проверки строгого имени.</span><span class="sxs-lookup"><span data-stu-id="03c0f-116">Start of strong name verification.</span></span>|  
+|`StrongNameVerificationStop_V1`|<span data-ttu-id="03c0f-117">182</span><span class="sxs-lookup"><span data-stu-id="03c0f-117">182</span></span>|<span data-ttu-id="03c0f-118">Окончание проверки строгого имени.</span><span class="sxs-lookup"><span data-stu-id="03c0f-118">End of strong name verification.</span></span>|  
+  
+ <span data-ttu-id="03c0f-119">В таблице ниже представлены данные события.</span><span class="sxs-lookup"><span data-stu-id="03c0f-119">The following table shows the event data.</span></span>  
+  
+|<span data-ttu-id="03c0f-120">Имя поля</span><span class="sxs-lookup"><span data-stu-id="03c0f-120">Field name</span></span>|<span data-ttu-id="03c0f-121">Тип данных</span><span class="sxs-lookup"><span data-stu-id="03c0f-121">Data type</span></span>|<span data-ttu-id="03c0f-122">Описание</span><span class="sxs-lookup"><span data-stu-id="03c0f-122">Description</span></span>|  
+|----------------|---------------|-----------------|  
+|<span data-ttu-id="03c0f-123">VerificationFlags</span><span class="sxs-lookup"><span data-stu-id="03c0f-123">VerificationFlags</span></span>|<span data-ttu-id="03c0f-124">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="03c0f-124">win:UInt32</span></span>|<span data-ttu-id="03c0f-125">Флаги проверки.</span><span class="sxs-lookup"><span data-stu-id="03c0f-125">The verification flags.</span></span>|  
+|<span data-ttu-id="03c0f-126">ErrorCode</span><span class="sxs-lookup"><span data-stu-id="03c0f-126">ErrorCode</span></span>|<span data-ttu-id="03c0f-127">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="03c0f-127">win:UInt32</span></span>|<span data-ttu-id="03c0f-128">Код ошибки HResult.</span><span class="sxs-lookup"><span data-stu-id="03c0f-128">The HResult error code.</span></span>|  
+|<span data-ttu-id="03c0f-129">FullyQualifiedAssemblyName</span><span class="sxs-lookup"><span data-stu-id="03c0f-129">FullyQualifiedAssemblyName</span></span>|<span data-ttu-id="03c0f-130">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="03c0f-130">win:UnicodeString</span></span>|<span data-ttu-id="03c0f-131">Полное имя сборки.</span><span class="sxs-lookup"><span data-stu-id="03c0f-131">The fully qualified assembly name.</span></span>|  
+|<span data-ttu-id="03c0f-132">ClrInstanceID</span><span class="sxs-lookup"><span data-stu-id="03c0f-132">ClrInstanceID</span></span>|<span data-ttu-id="03c0f-133">win:UInt16</span><span class="sxs-lookup"><span data-stu-id="03c0f-133">win:UInt16</span></span>|<span data-ttu-id="03c0f-134">Уникальный идентификатор экземпляра CLR или CoreCLR.</span><span class="sxs-lookup"><span data-stu-id="03c0f-134">Unique ID for the instance of CLR or CoreCLR.</span></span>|  
+
+## <a name="authenticodeverificationstart_v1-and-authenticodeverificationstop_v1-events"></a><span data-ttu-id="03c0f-135">События AuthenticodeVerificationStart_V1 и AuthenticodeVerificationStop_V1</span><span class="sxs-lookup"><span data-stu-id="03c0f-135">AuthenticodeVerificationStart_V1 and AuthenticodeVerificationStop_V1 Events</span></span>  
+ <span data-ttu-id="03c0f-136">В таблице ниже показаны ключевое слово и уровень.</span><span class="sxs-lookup"><span data-stu-id="03c0f-136">The following table shows the keyword and level.</span></span>  
+  
+|<span data-ttu-id="03c0f-137">Ключевое слово для вызова события</span><span class="sxs-lookup"><span data-stu-id="03c0f-137">Keyword for raising the event</span></span>|<span data-ttu-id="03c0f-138">Уровень</span><span class="sxs-lookup"><span data-stu-id="03c0f-138">Level</span></span>|  
+|-----------------------------------|-----------|  
+|<span data-ttu-id="03c0f-139">`SecurityKeyword` (0x400)</span><span class="sxs-lookup"><span data-stu-id="03c0f-139">`SecurityKeyword` (0x400)</span></span>|<span data-ttu-id="03c0f-140">Информационный (4)</span><span class="sxs-lookup"><span data-stu-id="03c0f-140">Informational(4)</span></span>|  
+  
+ <span data-ttu-id="03c0f-141">В таблице ниже представлены сведения о событии.</span><span class="sxs-lookup"><span data-stu-id="03c0f-141">The following table shows the event information.</span></span>  
+  
+|<span data-ttu-id="03c0f-142">событие</span><span class="sxs-lookup"><span data-stu-id="03c0f-142">Event</span></span>|<span data-ttu-id="03c0f-143">Код события</span><span class="sxs-lookup"><span data-stu-id="03c0f-143">Event ID</span></span>|<span data-ttu-id="03c0f-144">Условие вызова</span><span class="sxs-lookup"><span data-stu-id="03c0f-144">Raised when</span></span>|  
+|-----------|--------------|-----------------|  
+|`AuthenticodeVerificationStart_V1`|<span data-ttu-id="03c0f-145">183</span><span class="sxs-lookup"><span data-stu-id="03c0f-145">183</span></span>|<span data-ttu-id="03c0f-146">Начало проверки Authenticode.</span><span class="sxs-lookup"><span data-stu-id="03c0f-146">Start of Authenticode verification.</span></span>|  
+|`AuthenticodeVerificationStop_V1`|<span data-ttu-id="03c0f-147">184</span><span class="sxs-lookup"><span data-stu-id="03c0f-147">184</span></span>|<span data-ttu-id="03c0f-148">Окончание проверки Authenticode.</span><span class="sxs-lookup"><span data-stu-id="03c0f-148">End of Authenticode verification.</span></span>|  
+  
+ <span data-ttu-id="03c0f-149">В таблице ниже представлены данные события.</span><span class="sxs-lookup"><span data-stu-id="03c0f-149">The following table shows the event data.</span></span>  
+  
+|<span data-ttu-id="03c0f-150">Имя поля</span><span class="sxs-lookup"><span data-stu-id="03c0f-150">Field name</span></span>|<span data-ttu-id="03c0f-151">Тип данных</span><span class="sxs-lookup"><span data-stu-id="03c0f-151">Data type</span></span>|<span data-ttu-id="03c0f-152">Описание</span><span class="sxs-lookup"><span data-stu-id="03c0f-152">Description</span></span>|  
+|----------------|---------------|-----------------|  
+|<span data-ttu-id="03c0f-153">VerificationFlags</span><span class="sxs-lookup"><span data-stu-id="03c0f-153">VerificationFlags</span></span>|<span data-ttu-id="03c0f-154">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="03c0f-154">win:UInt32</span></span>|<span data-ttu-id="03c0f-155">Флаги проверки.</span><span class="sxs-lookup"><span data-stu-id="03c0f-155">The verification flags.</span></span>|  
+|<span data-ttu-id="03c0f-156">ErrorCode</span><span class="sxs-lookup"><span data-stu-id="03c0f-156">ErrorCode</span></span>|<span data-ttu-id="03c0f-157">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="03c0f-157">win:UInt32</span></span>|<span data-ttu-id="03c0f-158">Код ошибки HResult.</span><span class="sxs-lookup"><span data-stu-id="03c0f-158">The HResult error code.</span></span>|  
+|<span data-ttu-id="03c0f-159">ModulePath</span><span class="sxs-lookup"><span data-stu-id="03c0f-159">ModulePath</span></span>|<span data-ttu-id="03c0f-160">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="03c0f-160">win:UnicodeString</span></span>|<span data-ttu-id="03c0f-161">Путь к модулю.</span><span class="sxs-lookup"><span data-stu-id="03c0f-161">The module path.</span></span>|  
+|<span data-ttu-id="03c0f-162">ClrInstanceID</span><span class="sxs-lookup"><span data-stu-id="03c0f-162">ClrInstanceID</span></span>|<span data-ttu-id="03c0f-163">win:UInt16</span><span class="sxs-lookup"><span data-stu-id="03c0f-163">win:UInt16</span></span>|<span data-ttu-id="03c0f-164">Уникальный идентификатор экземпляра CLR или CoreCLR.</span><span class="sxs-lookup"><span data-stu-id="03c0f-164">Unique ID for the instance of CLR or CoreCLR.</span></span>|  
+  
+## <a name="see-also"></a><span data-ttu-id="03c0f-165">См. также</span><span class="sxs-lookup"><span data-stu-id="03c0f-165">See also</span></span>
+
+- [<span data-ttu-id="03c0f-166">События трассировки событий Windows в среде CLR</span><span class="sxs-lookup"><span data-stu-id="03c0f-166">CLR ETW Events</span></span>](clr-etw-events.md)

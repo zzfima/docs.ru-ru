@@ -9,13 +9,13 @@ metadata:
   ms.collection: collection
   author: natke
   ms.author: nakersha
-  ms.date: 10/02/2019
-  ms.openlocfilehash: 4d9e3f78b02e7e95567dc9f025a1123966038770
-  ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+  ms.date: 10/30/2019
+  ms.openlocfilehash: 05d357af2088321524841bfc05f94f816f1bc306
+  ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
   ms.translationtype: HT
   ms.contentlocale: ru-RU
-  ms.lasthandoff: 10/15/2019
-  ms.locfileid: "72320525"
+  ms.lasthandoff: 11/01/2019
+  ms.locfileid: "73423944"
 landingContent:
 - title: Основы ML.NET
   linkLists:
@@ -51,14 +51,20 @@ landingContent:
       url: tutorials/sentiment-analysis-model-builder.md
     - text: Прогнозирование цен с помощью построителя моделей
       url: tutorials/predict-prices-with-model-builder.md
+    - text: Категоризация нарушения санитарных норм (построитель моделей и SQL Server)
+      url: tutorials/health-violation-classification-model-builder.md
     - text: Классификация проблем поддержки (API)
       url: tutorials/github-issue-classification.md
-    - text: Классификация изображений с помощью TensorFlow (API)
+    - text: Классификация изображений с помощью API классификации изображений (API)
+      url: tutorials/image-classification-api-transfer-learning.md
+    - text: Классификация изображений с использованием композиция модели (API)
       url: tutorials/image-classification.md
     - text: Распознавание объектов на изображениях (API)
       url: tutorials/object-detection-onnx.md
     - text: Обнаружение аномалий в данных о продажах товаров (API)
       url: tutorials/sales-anomaly-detection.md
+    - text: Прогнозирование спроса на прокат велосипедов (API и SQL Server)
+      url: tutorials/time-series-demand-forecasting.md
     - text: Создание приложения для рекомендации фильмов (API)
       url: tutorials/movie-recommendation.md
 - title: Практические руководства
@@ -77,7 +83,7 @@ landingContent:
       url: how-to-guides/save-load-machine-learning-models-ml-net.md
     - text: Повторное обучение модели
       url: how-to-guides/retrain-model-ml-net.md
-- title: Справочник
+- title: Ссылка
   linkLists:
   - linkListType: reference
     links:
