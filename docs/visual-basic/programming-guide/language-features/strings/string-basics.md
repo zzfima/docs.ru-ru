@@ -1,20 +1,20 @@
 ---
-title: Основы работы со строками в Visual Basic
+title: Основы работы со строками
 ms.date: 07/20/2015
 helpviewer_keywords:
 - strings [Visual Basic], Like operator
 - strings [Visual Basic], Visual Basic
 - strings [Visual Basic], regular expressions
 ms.assetid: 5674418d-f00d-4f72-9f98-d15897793350
-ms.openlocfilehash: f1f6b98d7db510373f2729fab2a6e0ad993ea086
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 7141966e3c8a8cbce42111c56a85a00709e8fe1a
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591382"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344282"
 ---
 # <a name="string-basics-in-visual-basic"></a>Основы работы со строками в Visual Basic
-Тип данных `String` представляет последовательность символов (каждый из которых, в свою очередь, представляет экземпляр типа данных `Char`). В этом разделе представлены основные понятия строк в Visual Basic.  
+Тип данных `String` представляет последовательность символов (каждый из которых, в свою очередь, представляет экземпляр типа данных `Char`). This topic introduces the basic concepts of strings in Visual Basic.  
   
 ## <a name="string-variables"></a>Строковые переменные  
  Экземпляру строки можно назначить литеральное значение, которое представляет ряд символов. Пример:  
@@ -29,7 +29,7 @@ ms.locfileid: "65591382"
   
  [!code-vb[VbVbalrStrings#65](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#65)]  
   
- Этот код вызывает ошибку, так как компилятор завершает строку после второй пары кавычек, а остаток строки интерпретируется как код. Чтобы решить эту проблему, Visual Basic интерпретирует две кавычки в строковом литерале как один символ кавычек в строке. В следующем примере показан правильный способ указания кавычек в строке:  
+ Этот код вызывает ошибку, так как компилятор завершает строку после второй пары кавычек, а остаток строки интерпретируется как код. To solve this problem, Visual Basic interprets two quotation marks in a string literal as one quotation mark in the string. В следующем примере показан правильный способ указания кавычек в строке:  
   
  [!code-vb[VbVbalrStrings#66](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#66)]  
   
@@ -50,7 +50,7 @@ World]]></xml>.Value
 ```  
   
 ## <a name="characters-in-strings"></a>Символы в строках  
- Строку можно представить как последовательность значений `Char`. При этом тип `String` имеет встроенные функции, которые позволяют работать со строками, как с массивами. Как и все массивы в .NET Framework они являются массивами (с нуля). К определенному символу в строке можно обратиться с помощью свойства `Chars`, которое предоставляет механизм доступа к символу по позиции, в которой он отображается в строке. Пример:  
+ Строку можно представить как последовательность значений `Char`. При этом тип `String` имеет встроенные функции, которые позволяют работать со строками, как с массивами. Like all array in .NET Framework, these are zero-based arrays. К определенному символу в строке можно обратиться с помощью свойства `Chars`, которое предоставляет механизм доступа к символу по позиции, в которой он отображается в строке. Пример:  
   
  [!code-vb[VbVbalrStrings#67](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#67)]  
   
@@ -61,7 +61,7 @@ World]]></xml>.Value
  Переменная `myArray` теперь содержит массив значений `Char`, каждое из которых представляет символ из `myString`.  
   
 ## <a name="the-immutability-of-strings"></a>Неизменность строк  
- Строка, такая *неизменяемый*, значит, его значение нельзя изменить после ее создания. Однако это не мешает назначить строковой переменной более одного значения. Рассмотрим следующий пример.  
+ A string is *immutable*, which means its value cannot be changed once it has been created. Однако это не мешает назначить строковой переменной более одного значения. Рассмотрим следующий пример.  
   
  [!code-vb[VbVbalrStrings#69](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#69)]  
   

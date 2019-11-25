@@ -1,5 +1,5 @@
 ---
-title: Примеры командных строк компиляции (Visual Basic)
+title: Примеры командных строк компиляции
 ms.date: 03/13/2018
 helpviewer_keywords:
 - command line [Visual Basic], compilers
@@ -8,33 +8,33 @@ helpviewer_keywords:
 - compiling source code [Visual Basic], from command line
 - Visual Basic compiler, sample command lines
 ms.assetid: 5bfbb487-5f47-4267-969a-39dfb917beeb
-ms.openlocfilehash: b7879c23bc64269c793c21b61b84d6f0fd4bdc24
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 27a20a5a3525353ffbced729b8ac9c98b3e48fc1
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70046283"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350851"
 ---
-# <a name="sample-compilation-command-lines-visual-basic"></a>Примеры командных строк компиляции (Visual Basic)
+# <a name="sample-compilation-command-lines-visual-basic"></a>Sample compilation command lines (Visual Basic)
 
-В качестве альтернативы компиляции Visual Basic программ из Visual Studio можно выполнить компиляцию из командной строки, чтобы создать исполняемые файлы (exe) или файлы библиотеки динамической компоновки (DLL).
+As an alternative to compiling Visual Basic programs from within Visual Studio, you can compile from the command line to produce executable (.exe) files or dynamic-link library (.dll) files.
 
-Компилятор командной строки Visual Basic поддерживает полный набор параметров, управляющих входными и выходными файлами, сборками, параметрами отладки и препроцессором. Каждый параметр доступен в двух взаимозаменяемых формах: `-option` и. `/option` В `-option` этой документации показана только форма.
+The Visual Basic command-line compiler supports a complete set of options that control input and output files, assemblies, and debug and preprocessor options. Each option is available in two interchangeable forms: `-option` and `/option`. This documentation shows only the `-option` form.
 
-В следующей таблице перечислены некоторые примеры командных строк, которые можно изменить для собственного использования.
+The following table lists some sample command lines you can modify for your own use.
 
-|Кому|Использовать|
+|Целевой тип|Использовать|
 |--------|---------|
-|Скомпилируйте файл File. vb и создайте файл. exe|`vbc -reference:Microsoft.VisualBasic.dll File.vb`|
-|Скомпилируйте файл File. vb и создайте файл. dll|`vbc -target:library File.vb`|
-|Скомпилируйте файл File. vb и создайте My. exe|`vbc -out:My.exe File.vb`|
-|Скомпилируйте файл File. vb и создайте библиотеку и ссылочную сборку с именем file. dll|`vbc -target:library -ref:.\debug\bin\ref\file.dll File.vb`|
-|Компилировать все файлы Visual Basic в текущем каталоге с оптимизацией и `DEBUG` определенным символом, создавая file2. exe.|`vbc -define:DEBUG=1 -optimize -out:File2.exe *.vb`|
-|Компилировать все файлы Visual Basic в текущем каталоге, создавая отладочную версию file2. DLL без отображения логотипа или предупреждений|`vbc -target:library -out:File2.dll -nowarn -nologo -debug *.vb`|
-|Компилировать все файлы Visual Basic в текущем каталоге в файл. dll|`vbc -target:library -out:Something.dll *.vb`|
+|Compile File.vb and create File.exe|`vbc -reference:Microsoft.VisualBasic.dll File.vb`|
+|Compile File.vb and create File.dll|`vbc -target:library File.vb`|
+|Compile File.vb and create My.exe|`vbc -out:My.exe File.vb`|
+|Compile File.vb and create both a library and a reference assembly named File.dll|`vbc -target:library -ref:.\debug\bin\ref\file.dll File.vb`|
+|Compile all Visual Basic files in the current directory, with optimizations on and the `DEBUG` symbol defined, producing File2.exe|`vbc -define:DEBUG=1 -optimize -out:File2.exe *.vb`|
+|Compile all Visual Basic files in the current directory, producing a debug version of File2.dll without displaying the logo or warnings|`vbc -target:library -out:File2.dll -nowarn -nologo -debug *.vb`|
+|Compile all Visual Basic files in the current directory to Something.dll|`vbc -target:library -out:Something.dll *.vb`|
 
 > [!TIP]
-> При построении проекта с помощью интегрированной среды разработки Visual Studio можно отобразить сведения о связанной команде **vbc** с ее параметрами компилятора в окне вывода. Чтобы отобразить эти сведения, откройте [диалоговое окно Параметры, проекты и решения, сборка и запуск](/visualstudio/ide/reference/options-dialog-box-projects-and-solutions-build-and-run), а затем задайте для параметра **уровень детализации выходных данных сборки проекта MSBuild** значение **обычное** или более высокий уровень детализации.
+> When you build a project by using the Visual Studio IDE, you can display information about the associated **vbc** command with its compiler options in the output window. To display this information, open the [Options Dialog Box,  Projects and Solutions, Build and Run](/visualstudio/ide/reference/options-dialog-box-projects-and-solutions-build-and-run), and then set the **MSBuild project build output verbosity** to **Normal** or a higher level of verbosity.
 
 ## <a name="see-also"></a>См. также
 

@@ -1,25 +1,25 @@
 ---
-title: Возможности и элементы языка Visual Basic
+title: Возможности языка
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic code, elements of
 - Visual Basic code
 ms.assetid: b0b21730-298c-47e6-9a2f-cc81f628067b
-ms.openlocfilehash: 975bec73235b3b8f82088325e0d4abc50ce6b1dd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8cb0b017410e991628bad59a6986ba37426c913f
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62053786"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345069"
 ---
 # <a name="visual-basic-language-features"></a>Возможности и элементы языка Visual Basic
-В следующих разделах описываются и обсуждаются основные компоненты Visual Basic, объектно ориентированного языка программирования. После того, как вы подготовите пользовательский интерфейс для вашего приложения с помощью форм и элементов управления, необходимо написать код, определяющий поведение приложения. Как и любой современный язык программирования Visual Basic поддерживает ряд общих конструкций программирования и элементов языка.  
+The following topics introduce and discuss the essential components of Visual Basic, an object-oriented programming language. После того, как вы подготовите пользовательский интерфейс для вашего приложения с помощью форм и элементов управления, необходимо написать код, определяющий поведение приложения. As with any modern programming language, Visual Basic supports a number of common programming constructs and language elements.  
   
- Если у вас есть опыт программирования на других языках, большая часть материала этой статьи покажется вам знакомой. Хотя большинство конструкций похожи на те, на других языках, управляемые событиями характер Visual Basic диктует некоторые незначительные отличия.  
+ Если у вас есть опыт программирования на других языках, большая часть материала этой статьи покажется вам знакомой. While most of the constructs are similar to those in other languages, the event-driven nature of Visual Basic introduces some subtle differences.  
   
- Если вы пока новичок в программировании, материал этой статьи поможет вам понять основные принципы создания кода. Поняв основы, можно создать мощных приложений с использованием Visual Basic.  
+ Если вы пока новичок в программировании, материал этой статьи поможет вам понять основные принципы создания кода. Once you understand the basics, you can create powerful applications using Visual Basic.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>Содержание  
  [Массивы](../../../visual-basic/programming-guide/language-features/arrays/index.md)  
  Описывает возможность сделать код более компактным и мощным, объявляя и используя массивы с несколькими связанными значениями.  
   
@@ -83,4 +83,4 @@ ms.locfileid: "62053786"
  Описывает некоторые типы коллекций, предоставляемых платформой .NET Framework. Демонстрирует использование простых коллекций и коллекций с парами "ключ — значение".  
   
  [Справочник по языку Visual Basic](../../../visual-basic/language-reference/index.md)  
- Содержит справочные сведения о различных аспектах программирования на Visual Basic.
+ Provides reference information on various aspects of Visual Basic programming.

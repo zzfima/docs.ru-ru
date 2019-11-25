@@ -1,19 +1,19 @@
 ---
-title: <summary> (Visual Basic)
+title: <summary>
 ms.date: 07/20/2015
 helpviewer_keywords:
 - <summary> XML tag
 - summary XML tag
 ms.assetid: 861c847d-dd94-478a-aa23-bf4899cdc848
-ms.openlocfilehash: 25a0b307756401bed4d4c77d3668c2af53ba8b42
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 3bc4393d2fa14f804c6383780e238b1ac2610a94
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524627"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352201"
 ---
-# <a name="summary-visual-basic"></a>> \<summary (Visual Basic)
-Указывает сводку элемента.  
+# <a name="summary-visual-basic"></a>\<summary> (Visual Basic)
+Specifies the summary of the member.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -26,14 +26,14 @@ ms.locfileid: "72524627"
  Сводка объекта.  
   
 ## <a name="remarks"></a>Заметки  
- Используйте тег `<summary>` для описания типа или члена типа. Чтобы добавить дополнительную информацию в описание типа, используйте [\<remarks>](../../../visual-basic/language-reference/xmldoc/remarks.md).  
+ Use the `<summary>` tag to describe a type or a type member. Чтобы добавить дополнительную информацию в описание типа, используйте [\<remarks>](../../../visual-basic/language-reference/xmldoc/remarks.md).  
   
- Текст для тега `<summary>` является единственным источником сведений о типе в IntelliSense и также отображается в обозревателе объектов. Дополнительные сведения об обозревателе объектов см. [в разделе Просмотр структуры кода](/visualstudio/ide/viewing-the-structure-of-code).  
+ The text for the `<summary>` tag is the only source of information about the type in IntelliSense, and is also displayed in the Object Browser. For information about the Object Browser, see [Viewing the Structure of Code](/visualstudio/ide/viewing-the-structure-of-code).  
   
  Чтобы обработать комментарии документации и сохранить их в файл, выполняйте сборку с параметром [-doc](../../../visual-basic/reference/command-line-compiler/doc.md).  
   
 ## <a name="example"></a>Пример  
- В этом примере используется тег `<summary>` для описания метода `ResetCounter` и свойства `Counter`.  
+ This example uses the `<summary>` tag to describe the `ResetCounter` method and `Counter` property.  
   
  [!code-vb[VbVbcnXmlDocComments#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#1)]  
   

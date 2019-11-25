@@ -1,5 +1,5 @@
 ---
-title: Key (Visual Basic)
+title: Раздел
 ms.date: 07/20/2015
 f1_keywords:
 - vb.AnonymousKey
@@ -8,48 +8,48 @@ helpviewer_keywords:
 - Key [Visual Basic]
 - Key keyword [Visual Basic]
 ms.assetid: 7697a928-7d14-4430-a72a-c9e96e8d6c11
-ms.openlocfilehash: e13a773f0b585a5c8803a77c7aaad441d90dfe75
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 92c8809779d6cab524f67ee47f355b72ab152403
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62053955"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351507"
 ---
 # <a name="key-visual-basic"></a>Key (Visual Basic)
-`Key` Ключевое слово позволяет задать поведение для свойств анонимных типов. Только свойства, указанные как ключевые свойства, участвуют в проверке равенства между экземплярами анонимного типа, или вычисления значений хэш-кода. Невозможно изменить значения свойств ключа.  
+The `Key` keyword enables you to specify behavior for properties of anonymous types. Only properties you designate as key properties participate in tests of equality between anonymous type instances, or calculation of hash code values. The values of key properties cannot be changed.  
   
- Укажите свойство анонимного типа как ключевое свойство, поместив ключевое слово `Key` перед ее объявления в списке инициализации. В следующем примере `Airline` и `FlightNo` являются ключевыми, но `Gate` не является.  
+ You designate a property of an anonymous type as a key property by placing the keyword `Key` in front of its declaration in the initialization list. In the following example, `Airline` and `FlightNo` are key properties, but `Gate` is not.  
   
  [!code-vb[VbVbalrAnonymousTypes#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#26)]  
   
- При создании нового анонимного типа, он наследует непосредственно от <xref:System.Object>. Компилятор переопределяет три унаследованных членов: <xref:System.Object.Equals%2A>, <xref:System.Object.GetHashCode%2A>, и <xref:System.Object.ToString%2A>. Код переопределения, который создается за <xref:System.Object.Equals%2A> и <xref:System.Object.GetHashCode%2A> на основе ключевых свойств. Если нет ключевых свойств в типе, <xref:System.Object.GetHashCode%2A> и <xref:System.Object.Equals%2A> не переопределяются.  
+ When a new anonymous type is created, it inherits directly from <xref:System.Object>. The compiler overrides three inherited members: <xref:System.Object.Equals%2A>, <xref:System.Object.GetHashCode%2A>, and <xref:System.Object.ToString%2A>. The override code that is produced for <xref:System.Object.Equals%2A> and <xref:System.Object.GetHashCode%2A> is based on key properties. If there are no key properties in the type, <xref:System.Object.GetHashCode%2A> and <xref:System.Object.Equals%2A> are not overridden.  
   
 ## <a name="equality"></a>Равенство  
- Два экземпляра анонимного типа равны, если они являются экземплярами одного типа и значения их свойств ключа равны. В следующих примерах `flight2` равен `flight1` из предыдущего примера, так как они являются экземплярами того же анонимного типа и они имеют соответствующих значений их ключевых свойств. Тем не менее `flight3` не равно `flight1` так как он имеет другое значение для свойства ключа, `FlightNo`. Экземпляр `flight4` не совпадает с типом `flight1` так, как они назначить разные свойства в качестве свойства ключа.  
+ Two anonymous type instances are equal if they are instances of the same type and if the values of their key properties are equal. In the following examples, `flight2` is equal to `flight1` from the previous example because they are instances of the same anonymous type and they have matching values for their key properties. However, `flight3` is not equal to `flight1` because it has a different value for a key property, `FlightNo`. Instance `flight4` is not the same type as `flight1` because they designate different properties as key properties.  
   
  [!code-vb[VbVbalrAnonymousTypes#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#27)]  
   
- Если два экземпляра объявлены с только неключевыми свойствами, идентичными по имени, типа, порядок и значения, два экземпляра не равны. Экземпляр без ключевого свойства равен только самому себе.  
+ If two instances are declared with only non-key properties, identical in name, type, order, and value, the two instances are not equal. An instance without key properties is equal only to itself.  
   
- Дополнительные сведения об условиях, при которых два экземпляра анонимного типа являются экземплярами того же анонимного типа, см. в разделе [анонимные типы](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).  
+ For more information about the conditions under which two anonymous type instances are instances of the same anonymous type, see [Anonymous Types](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).  
   
-## <a name="hash-code-calculation"></a>Вычисление хэш-кода  
- Как и <xref:System.Object.Equals%2A>, хэш-функцию, которая определена в <xref:System.Object.GetHashCode%2A> для анонимного типа основана на ключевые свойства типа. Ниже приведены примеры взаимодействие между свойств ключа и хэш-код значения.  
+## <a name="hash-code-calculation"></a>Hash Code Calculation  
+ Like <xref:System.Object.Equals%2A>, the hash function that is defined in <xref:System.Object.GetHashCode%2A> for an anonymous type is based on the key properties of the type. The following examples show the interaction between key properties and hash code values.  
   
- Экземпляры анонимного типа, которые имеют одинаковые значения для всех ключевых свойств имеют же значение хэш-кода, даже если неключевые свойства не имеют совпадающих значений. Следующая инструкция возвращает `True`.  
+ Instances of an anonymous type that have the same values for all key properties have the same hash code value, even if non-key properties do not have matching values. The following statement returns `True`.  
   
  [!code-vb[VbVbalrAnonymousTypes#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#37)]  
   
- Экземпляры анонимного типа, которые имеют разные значения для одного или нескольких ключевых свойств имеют разные хэш-код значения. Следующая инструкция возвращает `False`.  
+ Instances of an anonymous type that have different values for one or more key properties have different hash code values. The following statement returns `False`.  
   
  [!code-vb[VbVbalrAnonymousTypes#38](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#38)]  
   
- Экземпляры анонимных типов, определяющие различные свойства, как ключевые свойства не являются экземплярами одного типа. Они имеют разные хэш-код значения, даже в том случае, если имена и значения всех свойств совпадают. Следующая инструкция возвращает `False`.  
+ Instances of anonymous types that designate different properties as key properties are not instances of the same type. They have different hash code values even when the names and values of all properties are the same. The following statement returns `False`.  
   
  [!code-vb[VbVbalrAnonymousTypes#39](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#39)]  
   
-## <a name="read-only-values"></a>Значения только для чтения  
- Невозможно изменить значения свойств ключа. Например, в `flight1` в предыдущих примерах, `Airline` и `FlightNo` поля доступны только для чтения, но `Gate` можно изменить.  
+## <a name="read-only-values"></a>Read-Only Values  
+ The values of key properties cannot be changed. For example, in `flight1` in the earlier examples, the `Airline` and `FlightNo` fields are read-only, but `Gate` can be changed.  
   
  [!code-vb[VbVbalrAnonymousTypes#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#28)]  
   

@@ -1,5 +1,5 @@
 ---
-title: Сообщения об ошибке (Visual Basic)
+title: Сообщения об ошибках
 ms.date: 07/20/2015
 helpviewer_keywords:
 - errors [Visual Basic]
@@ -7,12 +7,12 @@ helpviewer_keywords:
 - trappable errors
 - errors [Visual Basic], trappable
 ms.assetid: f2dda05b-baef-41f5-8bb1-598bd7cf239f
-ms.openlocfilehash: 822c0f266e7dd68f063043d98a9f4af308ae93fd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 15d12802c92e7b9ed99c83885bd38e381c8b687d
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62013820"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353711"
 ---
 # <a name="error-messages-visual-basic"></a>Сообщения об ошибке (Visual Basic)
 При записи, компиляции или выполнении приложения Visual Basic возможны ошибки следующих типов.  
@@ -26,7 +26,7 @@ ms.locfileid: "62013820"
  Сведения о способах устранения некоторых ошибок можно найти в статье [Additional Resources for Visual Basic Programmers](../../../visual-basic/getting-started/additional-resources.md) (Дополнительные ресурсы для программирования на Visual Basic).  
   
 ## <a name="run-time-errors"></a>Ошибки времени выполнения  
- Если приложение Visual Basic пытается выполнить действие, которое система не может выполнить, возникает ошибка времени выполнения, и Visual Basic создает `Exception` объекта. Visual Basic можно создавать пользовательские ошибки какие-либо данные типа, включая `Exception` объектов с помощью `Throw` инструкции. Приложение может идентифицировать ошибки, отображая номер ошибки и сообщение перехваченного исключения. Если ошибка не будет перехвачена, приложение завершается.  
+ If a Visual Basic application tries to perform an action that the system can't execute, a run-time error occurs, and Visual Basic throws an `Exception` object. Visual Basic can generate custom errors of any data type, including `Exception` objects, by using the `Throw` statement. Приложение может идентифицировать ошибки, отображая номер ошибки и сообщение перехваченного исключения. Если ошибка не будет перехвачена, приложение завершается.  
   
  Код может перехватывать и проверять ошибки времени выполнения. Если вы заключите код, создающий ошибку, в блок `Try`, вы сможете перехватить любую созданную ошибку в соответствующем блоке `Catch`. Сведения о том, как в коде отлавливать ошибки во время выполнения и реагировать на них, можно найти в статье [Try...Catch...Finally Statement](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md) (Оператор Try...Catch...Finally).  
   

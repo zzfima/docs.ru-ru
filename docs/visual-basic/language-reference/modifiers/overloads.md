@@ -1,5 +1,5 @@
 ---
-title: Overloads (Visual Basic)
+title: Overloads
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Overloads
@@ -10,28 +10,28 @@ helpviewer_keywords:
 - Shadows keyword [Visual Basic]
 - signature, hiding by
 ms.assetid: 0c6820b8-25b2-4664-bc59-5ca93c99c042
-ms.openlocfilehash: 838207fe3ac5b8f57d030617546b9b7fa25dc939
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 44823b409cfa81dc889aabacf101fac90bf851e0
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663541"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351406"
 ---
 # <a name="overloads-visual-basic"></a>Overloads (Visual Basic)
 
 Указывает, что свойство или процедура повторно определяет одно или несколько существующих свойств или процедур с таким же именем.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
-*Перегрузка* — это предоставление нескольких определений для указанного имени свойства или процедуры в той же области. Повторное объявление свойства или процедуры с другой сигнатурой иногда называют *скрытием за сигнатурой*.
+*Overloading* is the practice of supplying more than one definition for a given property or procedure name in the same scope. Redeclaring a property or procedure with a different signature is sometimes called *hiding by signature*.
 
 ## <a name="rules"></a>Правила
 
-- **Контекст объявления.** `Overloads` можно использовать только в операторе объявления свойства или процедуры.
+- **Declaration Context.** You can use `Overloads` only in a property or procedure declaration statement.
 
-- **Комбинированные модификаторы.** Нельзя указать `Overloads` вместе с [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md) в одном объявлении процедуры.
+- **Combined Modifiers.** You cannot specify `Overloads` together with [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md) in the same procedure declaration.
 
-- **Обязательные различия.** *Подпись* этого объявления должна отличаться от сигнатуры каждого свойства или процедуры, которые оно переопределяет. Сигнатура включает в себя имя свойства или процедуры, а также следующие элементы:
+- **Required Differences.** The *signature* in this declaration must be different from the signature of every property or procedure that it overloads. Сигнатура включает в себя имя свойства или процедуры, а также следующие элементы:
 
   - число параметров;
 
@@ -45,7 +45,7 @@ ms.locfileid: "67663541"
 
   Все перегрузки должны иметь одно и то же имя, но каждая должна отличаться от всех остальных по одному или нескольким из предыдущих аспектов. Это позволяет компилятору определить, какую именно версию следует использовать, когда код вызывает свойство или процедуру.
 
-- **Запрещенные различия.** Изменение одного или нескольких из следующих аспектов не является допустимым для перегрузки свойства или процедуры, поскольку они не являются частью сигнатуры:
+- **Disallowed Differences.** Изменение одного или нескольких из следующих аспектов не является допустимым для перегрузки свойства или процедуры, поскольку они не являются частью сигнатуры:
 
   - наличие возвращаемого значения (для процедуры);
 
@@ -59,9 +59,9 @@ ms.locfileid: "67663541"
 
   - ключевые слова модификаторов свойств или процедур (например, `Public` или `Shared`).
 
-- **Необязательный модификатор.** Модификатор `Overloads` можно не использовать при определении нескольких перегруженных свойств или процедур в одном классе. Однако при использовании `Overloads` в одном из объявлений его необходимо использовать в них всех.
+- **Optional Modifier.** You do not have to use the `Overloads` modifier when you are defining multiple overloaded properties or procedures in the same class. Однако при использовании `Overloads` в одном из объявлений его необходимо использовать в них всех.
 
-- **Затенение и перегрузка.** `Overloads` Можно также использовать для затенения существующего члена или набора перегруженных членов в базовом классе. При таком использовании `Overloads` свойство или метод объявляются с таким же именем и таким же списком параметров, как и у члена базового класса, а ключевое слово `Shadows` не предоставляется.
+- **Shadowing and Overloading.** `Overloads` can also be used to shadow an existing member, or set of overloaded members, in a base class. При таком использовании `Overloads` свойство или метод объявляются с таким же именем и таким же списком параметров, как и у члена базового класса, а ключевое слово `Shadows` не предоставляется.
 
 При использовании `Overrides` компилятор неявно добавляет `Overloads`, чтобы упростить работу API-интерфейсов с библиотекой C#.
 

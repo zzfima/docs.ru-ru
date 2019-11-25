@@ -1,23 +1,23 @@
 ---
-title: Параметр <keyword> Statement (Visual Basic)
+title: Оператор Option <keyword>
 ms.date: 07/20/2015
 f1_keywords:
 - vb.option
 helpviewer_keywords:
 - Option keyword [Visual Basic]
 ms.assetid: 6b2f41c4-2403-43b6-8a14-94a3775e5b47
-ms.openlocfilehash: 96ab02bf61f6b326c3f09615bf19f9e2ecae7e86
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6ac0116b56fac7a5bfdc6545c8570317376791a1
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61784024"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353779"
 ---
-# <a name="option-keyword-statement"></a>Параметр \<ключевое слово > инструкции
-Вводит оператор, который указывает параметр компилятора, который применяется для всего исходного файла.  
+# <a name="option-keyword-statement"></a>Option \<keyword> Statement
+Introduces a statement that specifies a compiler option that applies to the entire source file.  
   
-## <a name="remarks"></a>Примечания  
- Параметры компилятора можно управлять ли все переменные должны быть явно объявлены, ли сужающие преобразования типов должны быть явными или ли сравнения строк как текст или как двоичные последовательности.  
+## <a name="remarks"></a>Заметки  
+ The compiler options can control whether all variables must be explicitly declared, whether narrowing type conversions must be explicit, or whether strings should be compared as text or as binary quantities.  
   
  Ключевое слово `Option` можно использовать в следующих контекстах:  
   

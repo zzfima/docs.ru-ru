@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Изменение данных в базе данных с помощью LINQ (Visual Basic)
+title: 'How to: Modify Data in a Database by Using LINQ'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - inserting rows [LINQ to SQL]
@@ -12,60 +12,60 @@ helpviewer_keywords:
 - queries [LINQ in Visual Basic], data changes in database
 - queries [LINQ in Visual Basic], how-to topics
 ms.assetid: cf52635f-0c1b-46c3-aff1-bdf181cf19b1
-ms.openlocfilehash: ebf0ed1be8d74b60b7e626db996e7cefb1c01131
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 9a10efef5ae92dd21888594ae80a3fc07869a8c0
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524511"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344948"
 ---
 # <a name="how-to-modify-data-in-a-database-by-using-linq-visual-basic"></a>Практическое руководство. Изменение данных в базе данных с помощью LINQ (Visual Basic)
 
-Запросы LINQ позволяют легко получить доступ к сведениям о базе данных и изменить значения в базе данных.
+Language-Integrated Query (LINQ) queries make it easy to access database information and modify values in the database.
 
-В следующем примере показано, как создать новое приложение, которое извлекает и обновляет сведения в базе данных SQL Server.
+The following example shows how to create a new application that retrieves and updates information in a SQL Server database.
 
-В примерах этого раздела используется учебная база данных Northwind. Если эта база данных отсутствует на компьютере разработчика, ее можно скачать в центре загрузки Майкрософт. Инструкции см. в разделе [Загрузка образцов баз данных](../../../../framework/data/adonet/sql/linq/downloading-sample-databases.md).
+The examples in this topic use the Northwind sample database. If you do not have this database on your development computer, you can download it from the Microsoft Download Center. For instructions, see [Downloading Sample Databases](../../../../framework/data/adonet/sql/linq/downloading-sample-databases.md).
 
-### <a name="to-create-a-connection-to-a-database"></a>Создание соединения с базой данных
+### <a name="to-create-a-connection-to-a-database"></a>To create a connection to a database
 
-1. В Visual Studio откройте **обозреватель сервера** /**Обозреватель базы данных** , выбрав в меню **вид** пункт **Обозреватель сервера** /**Обозреватель базы данных**.
+1. In Visual Studio, open **Server Explorer**/**Database Explorer** by clicking the **View** menu, and then select **Server Explorer**/**Database Explorer**.
 
-2. Щелкните правой кнопкой мыши элемент **подключения к данным** в **Обозреватель сервера** /**Обозреватель базы данных**и выберите команду **Добавить подключение**.
+2. Right-click **Data Connections** in **Server Explorer**/**Database Explorer**, and click **Add Connection**.
 
-3. Укажите допустимое соединение с образцом базы данных Northwind.
+3. Specify a valid connection to the Northwind sample database.
 
-### <a name="to-add-a-project-with-a-linq-to-sql-file"></a>Добавление проекта с файлом LINQ to SQL
+### <a name="to-add-a-project-with-a-linq-to-sql-file"></a>To add a Project with a LINQ to SQL file
 
-1. В меню **Файл** окна Visual Studio наведите указатель мыши на пункт **Создать** и щелкните **Проект**. Выберите Visual Basic **Windows Forms приложение** в качестве типа проекта.
+1. В меню **Файл** окна Visual Studio наведите указатель мыши на пункт **Создать** и щелкните **Проект**. Select Visual Basic **Windows Forms Application** as the project type.
 
-2. В меню **Проект** выберите пункт **Добавить новый элемент**. Выберите шаблон элемента **LINQ to SQL классы** .
+2. В меню **Проект** выберите пункт **Добавить новый элемент**. Select the **LINQ to SQL Classes** item template.
 
-3. Назовите файл `northwind.dbml`. Нажмите кнопку **Добавить**. Для файла `northwind.dbml` открыт реляционный конструктор объектов (реляционный конструктор R).
+3. Назовите файл `northwind.dbml`. Нажмите кнопку **Добавить**. The Object Relational Designer (O/R Designer) is opened for the `northwind.dbml` file.
 
-### <a name="to-add-tables-to-query-and-modify-to-the-designer"></a>Добавление таблиц к запросам и их изменение в конструкторе
+### <a name="to-add-tables-to-query-and-modify-to-the-designer"></a>To add tables to query and modify to the designer
 
-1. В **обозреватель сервера** /**Обозреватель базы данных**разверните подключение к базе данных Northwind. Разверните папку **таблицы** .
+1. In **Server Explorer**/**Database Explorer**, expand the connection to the Northwind database. Expand the **Tables** folder.
 
-     Если вы закрыли конструктор O/R, его можно открыть повторно, дважды щелкнув файл `northwind.dbml`, который был добавлен ранее.
+     If you have closed the O/R Designer, you can reopen it by double-clicking the `northwind.dbml` file that you added earlier.
 
-2. Щелкните таблицу Customers (клиенты) и перетащите ее на левую панель конструктора.
+2. Click the Customers table and drag it to the left pane of the designer.
 
-     Конструктор создает новый объект Customer для вашего проекта.
+     The designer creates a new Customer object for your project.
 
-3. Сохраните изменения и закройте конструктор.
+3. Save your changes and close the designer.
 
 4. Сохраните проект.
 
-### <a name="to-add-code-to-modify-the-database-and-display-the-results"></a>Добавление кода для изменения базы данных и вывода результатов
+### <a name="to-add-code-to-modify-the-database-and-display-the-results"></a>To add code to modify the database and display the results
 
-1. Из **панели элементов**перетащите элемент управления <xref:System.Windows.Forms.DataGridView> в форму Windows по умолчанию для проекта, Form1.
+1. From the **Toolbox**, drag a <xref:System.Windows.Forms.DataGridView> control onto the default Windows Form for your project, Form1.
 
-2. При добавлении таблиц в реляционный конструктор объектов конструктор добавил в проект объект <xref:System.Data.Linq.DataContext>. Этот объект содержит код, который можно использовать для доступа к таблице Customers. Он также содержит код, который определяет локальный объект Customer и коллекцию Customers для таблицы. Имя объекта <xref:System.Data.Linq.DataContext> для проекта определяется на основе имени DBML-файла. Для этого проекта объект <xref:System.Data.Linq.DataContext> называется `northwindDataContext`.
+2. When you added tables to the O/R Designer, the designer added a <xref:System.Data.Linq.DataContext> object to your project. This object contains code that you can use to access the Customers table. It also contains code that defines  a local Customer object and a Customers collection for the table. The <xref:System.Data.Linq.DataContext> object for your project is named based on the name of your .dbml file. For this project, the <xref:System.Data.Linq.DataContext> object is named `northwindDataContext`.
 
-     Можно создать экземпляр объекта <xref:System.Data.Linq.DataContext> в коде и запросить и изменить коллекцию Customers, указанную в конструкторе O/R. Изменения, вносимые в коллекцию Customers, не отражаются в базе данных, пока они не будут отправлены путем вызова метода <xref:System.Data.Linq.DataContext.SubmitChanges%2A> объекта <xref:System.Data.Linq.DataContext>.
+     You can create an instance of the <xref:System.Data.Linq.DataContext> object in your code and query and modify the Customers collection specified by the O/R Designer. Changes that you make to the Customers collection are not reflected in the database until you submit them by calling the <xref:System.Data.Linq.DataContext.SubmitChanges%2A> method of the <xref:System.Data.Linq.DataContext> object.
 
-     Дважды щелкните форму Windows Forms, форму Form1, чтобы добавить код в событие <xref:System.Windows.Forms.Form.Load>, чтобы запросить таблицу Customers, доступную в качестве свойства <xref:System.Data.Linq.DataContext>. Добавьте следующий код:
+     Double-click the Windows Form, Form1, to add code to the <xref:System.Windows.Forms.Form.Load> event to query the Customers table that is exposed as a property of your <xref:System.Data.Linq.DataContext>. Добавьте следующий код:
 
     ```vb
     Private db As northwindDataContext
@@ -87,9 +87,9 @@ ms.locfileid: "72524511"
     End Sub
     ```
 
-3. Перетащите на форму три элемента управления <xref:System.Windows.Forms.Button> из **панели элементов**. Выберите первый элемент управления `Button`. В окне **Свойства** задайте для `Name` элемента управления `Button` значение `AddButton` а `Text` — `Add`. Нажмите вторую кнопку и задайте для свойства `Name` значение `UpdateButton` а свойству `Text` — значение `Update`. Нажмите третью кнопку и задайте для свойства `Name` значение `DeleteButton` а свойству `Text` — значение `Delete`.
+3. From the **Toolbox**, drag three <xref:System.Windows.Forms.Button> controls onto the form. Select the first `Button` control. In the **Properties** window, set the `Name` of the `Button` control to `AddButton` and the `Text` to `Add`. Select the second button and set the `Name` property to `UpdateButton` and the `Text` property to `Update`. Select the third button and set the `Name` property to `DeleteButton` and the `Text` property to `Delete`.
 
-4. Дважды щелкните кнопку **Добавить** , чтобы добавить код к событию `Click`. Добавьте следующий код:
+4. Double-click the **Add** button to add code to its `Click` event. Добавьте следующий код:
 
     ```vb
     Private Sub AddButton_Click(ByVal sender As System.Object,
@@ -114,7 +114,7 @@ ms.locfileid: "72524511"
     End Sub
     ```
 
-5. Дважды щелкните кнопку " **Обновить** ", чтобы добавить код к событию `Click`. Добавьте следующий код:
+5. Double-click the **Update** button to add code to its `Click` event. Добавьте следующий код:
 
     ```vb
     Private Sub UpdateButton_Click(ByVal sender As System.Object, _
@@ -138,7 +138,7 @@ ms.locfileid: "72524511"
     End Sub
     ```
 
-6. Дважды щелкните кнопку **Удалить** , чтобы добавить код к событию `Click`. Добавьте следующий код:
+6. Double-click the **Delete** button to add code to its `Click` event. Добавьте следующий код:
 
     ```vb
     Private Sub DeleteButton_Click(ByVal sender As System.Object, _
@@ -159,7 +159,7 @@ ms.locfileid: "72524511"
     End Sub
     ```
 
-7. Нажмите клавишу F5 для запуска проекта. Нажмите кнопку **Добавить** , чтобы добавить новую запись. Нажмите кнопку **Обновить** , чтобы изменить новую запись. Нажмите кнопку **Удалить** , чтобы удалить новую запись.
+7. Нажмите клавишу F5 для запуска проекта. Click **Add** to add a new record. Click **Update** to modify the new record. Click **Delete** to delete the new record.
 
 ## <a name="see-also"></a>См. также
 

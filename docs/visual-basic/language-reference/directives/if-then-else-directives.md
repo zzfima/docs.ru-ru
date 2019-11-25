@@ -1,5 +1,5 @@
 ---
-title: '#Если... Then... #Else директивы (Visual Basic)'
+title: '#Директивы If…Then…#Else'
 ms.date: 04/11/2018
 f1_keywords:
 - vb.#EndIf
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - else directive (#else)
 - '#Else directive [Visual Basic]'
 ms.assetid: 10bba104-e3fd-451b-b672-faa472530502
-ms.openlocfilehash: aaf5e7dd82cebf734da59e9feb89174705468a4b
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 40e93b718241c9819e3c0fd84595e76eb0c86472
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72580092"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74343817"
 ---
 # <a name="ifthenelse-directives"></a>Директивы #If...Then...#Else
 
-Условно компилирует выбранные блоки кода Visual Basic.
+Conditionally compiles selected blocks of Visual Basic code.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -47,26 +47,26 @@ ms.locfileid: "72580092"
 ## <a name="parts"></a>Части
 
 `expression`  
-Требуется для инструкций `#If` и `#ElseIf`, необязательно в других местах. Любое выражение, состоящее исключительно из одной или нескольких условных констант компилятора, литералов и операторов, результатом вычисления которого является `True` или `False`.
+Required for `#If` and `#ElseIf` statements, optional elsewhere. Any expression, consisting exclusively of one or more conditional compiler constants, literals, and operators, that evaluates to `True` or `False`.
 
 `statements`  
-Требуется для блока инструкций `#If`, необязательно в других местах. Visual Basic строки программы или директивы компилятора, компилируемые, если связанное выражение имеет значение `True`.
+Required for `#If` statement block, optional elsewhere. Visual Basic program lines or compiler directives that are compiled if the associated expression evaluates to `True`.
 
 `#End If`  
-Завершает блок оператора `#If`.
+Terminates the `#If` statement block.
 
 ## <a name="remarks"></a>Заметки
 
-На поверхности поведение директив `#If...Then...#Else` выглядит так же, как и инструкции `If...Then...Else`. Однако директивы `#If...Then...#Else` оценивают, что компилируется компилятором, в то время как инструкции `If...Then...Else` оценивают условия во время выполнения.
+On the surface, the behavior of the `#If...Then...#Else` directives appears the same as that of the `If...Then...Else` statements. However, the `#If...Then...#Else` directives evaluate what is compiled by the compiler, whereas the `If...Then...Else` statements evaluate conditions at run time.
 
-Условная компиляция обычно используется для компиляции одной и той же программы для разных платформ. Он также используется для предотвращения появления отладочного кода в исполняемом файле. Код, исключенный во время условной компиляции, полностью опускается из финального исполняемого файла, поэтому он не влияет на размер и производительность.
+Conditional compilation is typically used to compile the same program for different platforms. It is also used to prevent debugging code from appearing in an executable file. Code excluded during conditional compilation is completely omitted from the final executable file, so it has no effect on size or performance.
 
-Независимо от результата вычисления все выражения оцениваются с помощью `Option Compare Binary`. Инструкция `Option Compare` не влияет на выражения в инструкциях `#If` и `#ElseIf`.
+Regardless of the outcome of any evaluation, all expressions are evaluated using `Option Compare Binary`. The `Option Compare` statement does not affect expressions in `#If` and `#ElseIf` statements.
 
 > [!NOTE]
-> Не существует однострочной формы директив `#If`, `#Else`, `#ElseIf` и `#End If`. Никакой другой код не может отображаться в той же строке, что и любая из директив.
+> No single-line form of the `#If`, `#Else`, `#ElseIf`, and `#End If` directives exists. No other code can appear on the same line as any of the directives.
 
-Инструкции в блоке условной компиляции должны быть полными логическими операторами. Например, невозможно условно компилировать только атрибуты функции, но можно условно объявить функцию вместе с ее атрибутами:
+The statements within a conditional compilation block must be complete logical statements. For example, you cannot conditionally compile only the attributes of a function, but you can conditionally declare the function along with its attributes:
 
 ```vb
 #If DEBUG Then
@@ -80,7 +80,7 @@ Public Function SomeFunction() As String
 
 ## <a name="example"></a>Пример
 
-В этом примере используется конструкция `#If...Then...#Else` для определения необходимости компиляции определенных инструкций.
+This example uses the `#If...Then...#Else` construct to determine whether to compile certain statements.
 
 [!code-vb[VbVbalrConditionalComp#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConditionalComp/VB/Class1.vb#1)]
 

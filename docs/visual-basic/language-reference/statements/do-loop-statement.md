@@ -1,5 +1,5 @@
 ---
-title: Оператор Do...Loop (Visual Basic)
+title: Оператор Do...Loop
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Do
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - loops, exiting
 - Loop keyword [Visual Basic], Do...Loop statement
 ms.assetid: 892f9096-b3e2-4aee-834d-83bc4e2c379d
-ms.openlocfilehash: eff5239e07ca27f40ece5af68f46c491be91cf09
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 9384cbb355189be448fa4b8d274721b4a7ca6a20
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72583440"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351253"
 ---
 # <a name="doloop-statement-visual-basic"></a>Оператор Do...Loop (Visual Basic)
-Повторяет блок инструкций, пока `Boolean` условие `True` или пока условие не станет `True`.  
+Repeats a block of statements while a `Boolean` condition is `True` or until the condition becomes `True`.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -54,55 +54,55 @@ Loop { While | Until } condition
   
 |Термин|Определение|  
 |---|---|  
-|`Do`|Обязательный. Запускает определение цикла `Do`.|  
-|`While`|Является обязательным, если используется параметр `Until`. Повторите цикл, пока `condition` не `False`.|  
-|`Until`|Является обязательным, если используется параметр `While`. Повторите цикл, пока `condition` не `True`.|  
-|`condition`|Необязательный. выражение `Boolean`. Если `condition` `Nothing`, Visual Basic рассматривает его как `False`.|  
-|`statements`|Необязательный. Одна или несколько инструкций, которые повторяются, или до, `condition` `True`.|  
-|`Continue Do`|Необязательный. Передает управление следующей итерации цикла `Do`.|  
-|`Exit Do`|Необязательный. Передает управление за пределы цикла `Do`.|  
-|`Loop`|Обязательный. Завершает определение цикла `Do`.|  
+|`Do`|Обязательный. Starts the definition of the `Do` loop.|  
+|`While`|Является обязательным, если используется параметр `Until`. Repeat the loop until `condition` is `False`.|  
+|`Until`|Является обязательным, если используется параметр `While`. Repeat the loop until `condition` is `True`.|  
+|`condition`|Необязательный. `Boolean` expression. If `condition` is `Nothing`, Visual Basic treats it as `False`.|  
+|`statements`|Необязательный. One or more statements that are repeated while, or until, `condition` is `True`.|  
+|`Continue Do`|Необязательный. Transfers control to the next iteration of the `Do` loop.|  
+|`Exit Do`|Необязательный. Transfers control out of the `Do` loop.|  
+|`Loop`|Обязательный. Terminates the definition of the `Do` loop.|  
   
 ## <a name="remarks"></a>Заметки  
- Используйте структуру `Do...Loop`, если нужно повторить набор инструкций неопределенное число раз, пока не будет удовлетворено условие. Если нужно повторить инструкции заданное число раз, то [для... ](../../../visual-basic/language-reference/statements/for-next-statement.md)Обычно лучше подходит следующий оператор.  
+ Use a `Do...Loop` structure when you want to repeat a set of statements an indefinite number of times, until a condition is satisfied. If you want to repeat the statements a set number of times, the [For...Next Statement](../../../visual-basic/language-reference/statements/for-next-statement.md) is usually a better choice.  
   
- Можно использовать либо `While`, либо `Until`, чтобы указать `condition`, но не оба.  
+ You can use either `While` or `Until` to specify `condition`, but not both.  
   
- @No__t_0 можно тестировать только один раз, в начале или в конце цикла. Если протестировать `condition` в начале цикла (в инструкции `Do`), цикл может не выполняться даже один раз. При проверке в конце цикла (в операторе `Loop`) цикл всегда выполняется по крайней мере один раз.  
+ You can test `condition` only one time, at either the start or the end of the loop. If you test `condition` at the start of the loop (in the `Do` statement), the loop might not run even one time. If you test at the end of the loop (in the `Loop` statement), the loop always runs at least one time.  
   
- Условие обычно является результатом сравнения двух значений, но может быть любым выражением, результатом вычисления которого является [логическое значение типа данных](../../../visual-basic/language-reference/data-types/boolean-data-type.md) (`True` или `False`). Сюда относятся значения других типов данных, например числовые типы, которые были преобразованы в `Boolean`.  
+ The condition usually results from a comparison of two values, but it can be any expression that evaluates to a [Boolean Data Type](../../../visual-basic/language-reference/data-types/boolean-data-type.md) value (`True` or `False`). This includes values of other data types, such as numeric types, that have been converted to `Boolean`.  
   
- Можно вкладывать `Do` циклы, помещая один цикл внутрь другого. Можно также вкладывать различные виды управляющих структур друг в друга. Дополнительные сведения см. в разделе [вложенные структуры управления](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md).  
+ You can nest `Do` loops by putting one loop within another. You can also nest different kinds of control structures within each other. For more information, see [Nested Control Structures](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md).  
   
 > [!NOTE]
-> Структура `Do...Loop` обеспечивает большую гибкость, чем [while... Оператор End While](../../../visual-basic/language-reference/statements/while-end-while-statement.md) , так как он позволяет решить, следует ли завершать цикл, когда `condition` останавливается `True` или когда он сначала превращается в `True`. Он также позволяет тестировать `condition` как в начале, так и в конце цикла.  
+> The `Do...Loop` structure gives you more flexibility than the [While...End While Statement](../../../visual-basic/language-reference/statements/while-end-while-statement.md) because it enables you to decide whether to end the loop when `condition` stops being `True` or when it first becomes `True`. It also enables you to test `condition` at either the start or the end of the loop.  
   
-## <a name="exit-do"></a>Выйти  
- Оператор [Exit Do](../../../visual-basic/language-reference/statements/exit-statement.md) может предоставить альтернативный способ выхода из `Do…Loop`. `Exit Do` немедленно передает управление оператору, который следует за инструкцией `Loop`.  
+## <a name="exit-do"></a>Exit Do  
+ The [Exit Do](../../../visual-basic/language-reference/statements/exit-statement.md) statement can provide an alternative way to exit a `Do…Loop`. `Exit Do` transfers control immediately to the statement that follows the `Loop` statement.  
   
- `Exit Do` часто используется после оценки какого-либо условия, например в структуре `If...Then...Else`. Может потребоваться выйти из цикла, если обнаруживается условие, которое делает ненужным или невозможным продолжение итераций, например ошибочное значение или запрос на завершение. Одним из способов использования `Exit Do` является проверка условия, которое может вызвать *бесконечный цикл*, то есть цикл, который может выполнять большое или даже бесконечное число раз. Для экранирования цикла можно использовать `Exit Do`.  
+ `Exit Do` is often used after some condition is evaluated, for example in an `If...Then...Else` structure. You might want to exit a loop if you detect a condition that makes it unnecessary or impossible to continue iterating, such as an erroneous value or a termination request. One use of `Exit Do` is to test for a condition that could cause an *endless loop*, which is a loop that could run a large or even infinite number of times. You can use `Exit Do` to escape the loop.  
   
- В `Do…Loop` можно включить любое количество `Exit Do` инструкций.  
+ You can include any number of `Exit Do` statements anywhere in a `Do…Loop`.  
   
- При использовании внутри вложенных циклов `Do` `Exit Do` передает управление из самого внутреннего цикла и в следующий более высокий уровень вложенности.  
+ When used within nested `Do` loops, `Exit Do` transfers control out of the innermost loop and into the next higher level of nesting.  
   
 ## <a name="example"></a>Пример  
- В следующем примере операторы в цикле продолжают выполняться до тех пор, пока значение переменной `index` не превышает 10. Предложение `Until` находится в конце цикла.  
+ In the following example, the statements in the loop continue to run until the `index` variable is greater than 10. The `Until` clause is at the end of the loop.  
   
  [!code-vb[VbVbalrStatements#131](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class10.vb#131)]  
   
 ## <a name="example"></a>Пример  
- В следующем примере вместо предложения `Until` используется предложение `While`, а `condition` проверяется в начале цикла, а не в конце.  
+ The following example uses a `While` clause instead of an `Until` clause, and `condition` is tested at the start of the loop instead of at the end.  
   
  [!code-vb[VbVbalrStatements#132](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class10.vb#132)]  
   
 ## <a name="example"></a>Пример  
- В следующем примере `condition` останавливает цикл, если `index`ая переменная больше 100. Однако оператор `If` в цикле приводит к тому, что инструкция `Exit Do` останавливает цикл, когда переменная индекса больше 10.  
+ In the following example, `condition` stops the loop when the `index` variable is greater than 100. The `If` statement in the loop, however, causes the `Exit Do` statement to stop the loop when the index variable is greater than 10.  
   
  [!code-vb[VbVbalrStatements#133](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class10.vb#133)]  
   
 ## <a name="example"></a>Пример  
- В следующем примере считываются все строки в текстовом файле. Метод <xref:System.IO.File.OpenText%2A> открывает файл и возвращает <xref:System.IO.StreamReader>, который считывает символы. В `Do...Loop`ном условии <xref:System.IO.StreamReader.Peek%2A> метод `StreamReader` определяет, есть ли дополнительные символы.  
+ The following example reads all lines in a text file. The <xref:System.IO.File.OpenText%2A> method opens the file and returns a <xref:System.IO.StreamReader> that reads the characters. In the `Do...Loop` condition, the <xref:System.IO.StreamReader.Peek%2A> method of the `StreamReader` determines whether there are any additional characters.  
   
  [!code-vb[VbVbalrStatements#134](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class10.vb#134)]  
   

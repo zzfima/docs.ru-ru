@@ -1,5 +1,5 @@
 ---
-title: Оператор End (Visual Basic)
+title: Оператор End
 ms.date: 07/20/2015
 f1_keywords:
 - vb.End
@@ -14,15 +14,15 @@ helpviewer_keywords:
 - End statement [Visual Basic]
 - execution [Visual Basic], stopping
 ms.assetid: 0e64467c-0f34-4aab-9ddd-43f8b9d55d90
-ms.openlocfilehash: 66dba1df125a08b8ae05519a0c66edb6da15ceaa
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: cb2fb4abb21b7b9c6575cec4aca1374f63687607
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72583414"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74343726"
 ---
 # <a name="end-statement"></a>Оператор End
-Немедленно завершает выполнение.  
+Terminates execution immediately.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -31,32 +31,32 @@ End
 ```  
   
 ## <a name="remarks"></a>Заметки  
- Можно поместить оператор `End` в любую процедуру, чтобы принудительно отменить выполнение всего приложения. `End` закрывает все файлы, открытые с помощью инструкции `Open`, и очищает все переменные приложения. Приложение закрывается, как только другие программы не содержат ссылки на свои объекты, и ни один из его кода не выполняется.  
+ You can place the `End` statement anywhere in a procedure to force the entire application to stop running. `End` closes any files opened with an `Open` statement and clears all the application's variables. The application closes as soon as there are no other programs holding references to its objects and none of its code is running.  
   
 > [!NOTE]
-> Оператор `End` неожиданно останавливает выполнение кода и не вызывает метод `Dispose` или `Finalize` или любой другой код Visual Basic. Ссылки на объекты, удерживаемые другими программами, становятся недействительными. Если в блоке `Try` или `Catch` обнаруживается оператор `End`, управление не передается соответствующему блоку `Finally`.  
+> The `End` statement stops code execution abruptly, and does not invoke the `Dispose` or `Finalize` method, or any other Visual Basic code. Object references held by other programs are invalidated. If an `End` statement is encountered within a `Try` or `Catch` block, control does not pass to the corresponding `Finally` block.  
   
- Инструкция `Stop` приостанавливает выполнение, но в отличие от `End`, она не закрывает никакие файлы и не очищает переменные, если только она не обнаружена в скомпилированном исполняемом файле (exe).  
+ The `Stop` statement suspends execution, but unlike `End`, it does not close any files or clear any variables, unless it is encountered in a compiled executable (.exe) file.  
   
- Поскольку `End` прекращает работу приложения, не прибегая к каким-либо ресурсам, которые могут быть открыты, следует сначала попытаться закрыть его перед использованием. Например, если приложение имеет открытые формы, необходимо закрыть их, прежде чем управление достигнет оператора `End`.  
+ Because `End` terminates your application without attending to any resources that might be open, you should try to close down cleanly before using it. For example, if your application has any forms open, you should close them before control reaches the `End` statement.  
   
- Следует использовать `End` с осторожностью и только тогда, когда необходимо немедленно останавливаться. Обычные способы завершения процедуры ([инструкция return](../../../visual-basic/language-reference/statements/return-statement.md) и [оператор Exit](../../../visual-basic/language-reference/statements/exit-statement.md)) не только аккуратно закрывают процедуру, но и выдают вызывающему коду возможность аккуратно закрыться. Например, консольное приложение может просто `Return` из процедуры `Main`.  
+ You should use `End` sparingly, and only when you need to stop immediately. The normal ways to terminate a procedure ([Return Statement](../../../visual-basic/language-reference/statements/return-statement.md) and [Exit Statement](../../../visual-basic/language-reference/statements/exit-statement.md)) not only close down the procedure cleanly but also give the calling code the opportunity to close down cleanly. A console application, for example, can simply `Return` from the `Main` procedure.  
   
 > [!IMPORTANT]
-> Оператор `End` вызывает метод <xref:System.Environment.Exit%2A> класса <xref:System.Environment> в пространстве имен <xref:System>. <xref:System.Environment.Exit%2A> требуется разрешение `UnmanagedCode`. В противном случае возникает ошибка <xref:System.Security.SecurityException>.  
+> The `End` statement calls the <xref:System.Environment.Exit%2A> method of the <xref:System.Environment> class in the <xref:System> namespace. <xref:System.Environment.Exit%2A> requires that you have `UnmanagedCode` permission. If you do not, a <xref:System.Security.SecurityException> error occurs.  
   
- Если за ним следует дополнительное ключевое слово, [оператор end \<keyword >](../../../visual-basic/language-reference/statements/end-keyword-statement.md) выделяют конец определения соответствующей процедуры или блока. Например, `End Function` завершает определение `Function` процедуры.  
+ When followed by an additional keyword, [End \<keyword> Statement](../../../visual-basic/language-reference/statements/end-keyword-statement.md) delineates the end of the definition of the appropriate procedure or block. For example, `End Function` terminates the definition of a `Function` procedure.  
   
 ## <a name="example"></a>Пример  
- В следующем примере оператор `End` используется для завершения выполнения кода, если пользователь запрашивает его.  
+ The following example uses the `End` statement to terminate code execution if the user requests it.  
   
  [!code-vb[VbVersHelp60Controls#64](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVersHelp60Controls/VB/Form1.vb#64)]  
   
-## <a name="smart-device-developer-notes"></a>Примечания для разработчиков смарт-устройств  
- Эта инструкция не поддерживается.  
+## <a name="smart-device-developer-notes"></a>Smart Device Developer Notes  
+ This statement is not supported.  
   
 ## <a name="see-also"></a>См. также
 
 - <xref:System.Security.Permissions.SecurityPermissionFlag>
 - [Оператор Stop](../../../visual-basic/language-reference/statements/stop-statement.md)
-- [Оператор End \<keyword >](../../../visual-basic/language-reference/statements/end-keyword-statement.md)
+- [End \<keyword> Statement](../../../visual-basic/language-reference/statements/end-keyword-statement.md)

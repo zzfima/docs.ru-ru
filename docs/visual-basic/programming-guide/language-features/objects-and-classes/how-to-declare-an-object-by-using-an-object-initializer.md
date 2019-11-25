@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Объявление объекта с помощью инициализатора объектов (Visual Basic)
+title: Практическое руководство. Объявление объекта с помощью инициализатора объектов
 ms.date: 07/20/2015
 helpviewer_keywords:
 - declaring objects using object initializer
@@ -7,57 +7,57 @@ helpviewer_keywords:
 - initializers [Visual Basic]
 - Video How tos, Visual Basic
 ms.assetid: 0f53a553-efd6-466d-80bf-6b679e5cd174
-ms.openlocfilehash: 850e20fe8b5b6bfd392c80c87950a81a1a8a5c24
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ae04d338b61027c3917ad3a7f62ff40f0a95e53e
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67755200"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347127"
 ---
 # <a name="how-to-declare-an-object-by-using-an-object-initializer-visual-basic"></a>Практическое руководство. Объявление объекта с помощью инициализатора объектов (Visual Basic)
-Инициализаторы объектов позволяют объявлять и создавать экземпляр класса в одной инструкции. Кроме того в то же время можно инициализировать один или несколько членов экземпляра без вызова конструктора с параметрами.  
+Object initializers enable you to declare and instantiate an instance of a class in a single statement. In addition, you can initialize one or more members of the instance at the same time, without invoking a parameterized constructor.  
   
- При использовании инициализатора объекта для создания экземпляра именованного типа, вызывается конструктор для класса, следуют инициализации назначенных членов в указанном порядке.  
+ When you use an object initializer to create an instance of a named type, the parameterless constructor for the class is called, followed by initialization of designated members in the order you specify.  
   
- Ниже показано, как создать экземпляр `Student` класс тремя разными способами. Класс имеет имя, фамилию и свойства класса год, среди прочего. Каждый из трех объявлений создает новый экземпляр класса `Student`, со свойством `First` задается значение «Michael», свойство `Last` значение «Такер», а все остальные элементы значение к значениям по умолчанию. Результат каждого объявления в процедуре соответствует приведенному ниже, который не используют инициализатора объекта.  
+ The following procedure shows how to create an instance of a `Student` class in three different ways. The class has first name, last name, and class year properties, among others. Each of the three declarations creates a new instance of `Student`, with property `First` set to "Michael", property `Last` set to "Tucker", and all other members set to their default values. The result of each declaration in the procedure is equivalent to the following example, which does not use an object initializer.  
   
  [!code-vb[VbVbalrObjectInit#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class2.vb#20)]  
   
- Для реализации `Student` , представлена в разделе [как: Создание списка элементов](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md). Вы можете скопировать код из этого раздела, чтобы настроить класс и создать список `Student` объектов для работы с.  
+ For an implementation of the `Student` class, see [How to: Create a List of Items](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md). You can copy the code from that topic to set up the class and create a list of `Student` objects to work with.  
   
-### <a name="to-create-an-object-of-a-named-class-by-using-an-object-initializer"></a>Для создания объекта именованного класса с помощью инициализатора объектов  
+### <a name="to-create-an-object-of-a-named-class-by-using-an-object-initializer"></a>To create an object of a named class by using an object initializer  
   
-1. Объявление начинается, как если бы планировалось использовать конструктор.  
+1. Begin the declaration as if you planned to use a constructor.  
   
      `Dim student1 As New Student`  
   
-2. Введите ключевое слово `With`, а затем список инициализации в фигурных скобках.  
+2. Type the keyword `With`, followed by an initialization list in braces.  
   
      `Dim student1 As New Student With { <initialization list> }`  
   
-3. В списке инициализации включают каждое свойство, которое необходимо инициализировать и присвойте ему начальное значение. Имя свойства является стоять точка.  
+3. In the initialization list, include each property that you want to initialize and assign an initial value to it. The name of the property is preceded by a period.  
   
      [!code-vb[VbVbalrObjectInit#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class2.vb#21)]  
   
-     Можно инициализировать один или несколько членов класса.  
+     You can initialize one or more members of the class.  
   
-4. Кроме того можно объявить новый экземпляр класса и присвоить его значение. Сначала объявите экземпляр `Student`:  
+4. Alternatively, you can declare a new instance of the class and then assign a value to it. First, declare an instance of `Student`:  
   
      `Dim student2 As Student`  
   
-5. Начните создание экземпляра `Student` обычным способом.  
+5. Begin the creation of an instance of `Student` in the normal way.  
   
      `Dim student2 As Student = New Student`  
   
-6. Тип `With` и затем инициализатора объекта для инициализации одного или нескольких членов нового экземпляра.  
+6. Type `With` and then an object initializer to initialize one or more members of the new instance.  
   
      [!code-vb[VbVbalrObjectInit#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class2.vb#22)]  
   
-7. Можно упростить определение на предыдущем шаге, опустив `As Student`. После этого компилятор определяет, что `student3` является экземпляром класса `Student` , используя вывод локального типа.  
+7. You can simplify the definition in the previous step by omitting `As Student`. If you do this, the compiler determines that `student3` is an instance of `Student` by using local type inference.  
   
      [!code-vb[VbVbalrObjectInit#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class2.vb#23)]  
   
-     Дополнительные сведения см. в разделе [вывод локального типа](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).  
+     For more information, see [Local Type Inference](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).  
   
 ## <a name="see-also"></a>См. также
 

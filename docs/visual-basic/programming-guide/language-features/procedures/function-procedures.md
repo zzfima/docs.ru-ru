@@ -1,5 +1,5 @@
 ---
-title: Процедуры Function (Visual Basic)
+title: Процедуры Function
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Function procedures
@@ -9,24 +9,24 @@ helpviewer_keywords:
 - procedures [Visual Basic], Function procedures
 - syntax [Visual Basic], function procedures
 ms.assetid: 1b9f632c-553b-4cb6-920a-ded117ead8c0
-ms.openlocfilehash: 4fd24369380e5f8ccf8de939c36ba72a12dc872e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b62a730e8ade211821826afbb55fa8858ea311a3
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64649617"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74341091"
 ---
 # <a name="function-procedures-visual-basic"></a>Процедуры Function (Visual Basic)
-Объект `Function` процедура — это последовательность операторов Visual Basic, заключенным `Function` и `End Function` инструкций. `Function` Процедура выполняет задачи и возвращает управление вызывающему коду. При возвращении управления также возвращает значение вызывающему коду.  
+A `Function` procedure is a series of Visual Basic statements enclosed by the `Function` and `End Function` statements. The `Function` procedure performs a task and then returns control to the calling code. When it returns control, it also returns a value to the calling code.  
   
- Каждый раз при вызове процедуры, его операторы выполнения, начиная с первого выполняемого оператора после `Function` инструкции и заканчивая первым `End Function`, `Exit Function`, или `Return` обнаружен оператор.  
+ Each time the procedure is called, its statements run, starting with the first executable statement after the `Function` statement and ending with the first `End Function`, `Exit Function`, or `Return` statement encountered.  
   
- Вы можете определить `Function` процедуры в модуля, класса или структуры. Это `Public` по умолчанию, означающее, его можно вызвать из любого места в приложении, которое имеет доступ к модуля, класса или структуры, в котором она определена.  
+ You can define a `Function` procedure in a module, class, or structure. It is `Public` by default, which means you can call it from anywhere in your application that has access to the module, class, or structure in which you defined it.  
   
- Объект `Function` процедура может принимать аргументы, такие как константы, переменные или выражения, которые передаются в него в вызывающем коде.  
+ A `Function` procedure can take arguments, such as constants, variables, or expressions, which are passed to it by the calling code.  
   
 ## <a name="declaration-syntax"></a>Синтаксис объявления  
- Синтаксис объявления `Function` процедура выглядит следующим образом:  
+ The syntax for declaring a `Function` procedure is as follows:  
   
 ```vb  
 [Modifiers] Function FunctionName [(ParameterList)] As ReturnType  
@@ -34,12 +34,12 @@ ms.locfileid: "64649617"
 End Function  
 ```  
   
- *Модификаторы* можно указать уровень доступа и сведения о перегрузка, переопределение, совместного использования и затенении. Дополнительные сведения см. в разделе [инструкции Function](../../../../visual-basic/language-reference/statements/function-statement.md).  
+ The *modifiers* can specify access level and information regarding overloading, overriding, sharing, and shadowing. For more information, see [Function Statement](../../../../visual-basic/language-reference/statements/function-statement.md).  
   
- Каждый параметр объявляется так же, как и для [подпрограммы](./sub-procedures.md).  
+ You declare each parameter the same way you do for [Sub Procedures](./sub-procedures.md).  
   
 ### <a name="data-type"></a>Тип данных  
- Каждый `Function` процедуры имеет тип данных, так же, как любой переменной. Этот тип данных определяется `As` предложение в `Function` инструкции и определяет тип данных значения, функция возвращает в вызывающий код. Следующий пример демонстрирует объявление, иллюстрируют это.  
+ Every `Function` procedure has a data type, just as every variable does. This data type is specified by the `As` clause in the `Function` statement, and it determines the data type of the value the function returns to the calling code. The following sample declarations illustrate this.  
   
 ```vb  
 Function yesterday() As Date  
@@ -49,12 +49,12 @@ Function findSqrt(ByVal radicand As Single) As Single
 End Function  
 ```  
   
- Дополнительные сведения см. в разделе «Компоненты» в [инструкции Function](../../../../visual-basic/language-reference/statements/function-statement.md).  
+ For more information, see "Parts" in [Function Statement](../../../../visual-basic/language-reference/statements/function-statement.md).  
   
-## <a name="returning-values"></a>Получение возвращаемых значений  
- Значение `Function` процедура отправляет обратно в вызывающий код вызывается его возвращаемое значение. Процедура возвращает это значение в одном из двух способов:  
+## <a name="returning-values"></a>Returning Values  
+ The value a `Function` procedure sends back to the calling code is called its return value. The procedure returns this value in one of two ways:  
   
-- Она использует `Return` инструкцию, чтобы указать возвращаемое значение и возвращает управление вызывающей программе немедленно. Это показано в следующем примере.  
+- It uses the `Return` statement to specify the return value, and returns control immediately to the calling program. Это показано в следующем примере.  
   
 ```vb  
 Function FunctionName [(ParameterList)] As ReturnType  
@@ -64,7 +64,7 @@ Function FunctionName [(ParameterList)] As ReturnType
 End Function  
 ```  
   
-- Он присваивает значение собственное имя функции в одной или нескольких инструкций процедуры. Управление не возвращается вызывающей программе до `Exit Function` или `End Function` выполняется инструкция. Это показано в следующем примере.  
+- It assigns a value to its own function name in one or more statements of the procedure. Control does not return to the calling program until an `Exit Function` or `End Function` statement is executed. Это показано в следующем примере.  
   
 ```vb  
 Function FunctionName [(ParameterList)] As ReturnType  
@@ -74,27 +74,27 @@ Function FunctionName [(ParameterList)] As ReturnType
 End Function  
 ```  
   
- Присвоение имени функции возвращаемое значение удобен, управление не возвращается из процедуры, пока встретится `Exit Function` или `End Function` инструкции. Это позволяет назначить предварительное значение и изменить позже при необходимости.  
+ The advantage of assigning the return value to the function name is that control does not return from the procedure until it encounters an `Exit Function` or `End Function` statement. This allows you to assign a preliminary value and adjust it later if necessary.  
   
- Дополнительные сведения о возврате значения см. в разделе [инструкции Function](../../../../visual-basic/language-reference/statements/function-statement.md). Сведения о возврате массивов см. в разделе [массивы](../../../../visual-basic/programming-guide/language-features/arrays/index.md).  
+ For more information about returning values, see [Function Statement](../../../../visual-basic/language-reference/statements/function-statement.md). For information about returning arrays, see [Arrays](../../../../visual-basic/programming-guide/language-features/arrays/index.md).  
   
-## <a name="calling-syntax"></a>Синтаксис вызова  
- Вы вызываете `Function` процедуры, включая ее имя и аргументы в правой части оператора присваивания или в выражении. Необходимо указать значения для всех аргументов, которые не являются необязательными, и список аргументов необходимо заключить в круглые скобки. Если не указано никаких аргументов, скобки можно опустить.  
+## <a name="calling-syntax"></a>Calling Syntax  
+ You invoke a `Function` procedure by including its name and arguments either on the right side of an assignment statement or in an expression. You must provide values for all arguments that are not optional, and you must enclose the argument list in parentheses. If no arguments are supplied, you can optionally omit the parentheses.  
   
- Синтаксис для вызова `Function` процедура выглядит следующим образом:  
+ The syntax for a call to a `Function` procedure is as follows:  
   
- *lvalue*`=`*functionname* `[(` *argumentlist* `)]`  
+ *lvalue*  `=`  *functionname* `[(` *argumentlist* `)]`  
   
- `If ((` *FunctionName* `[(` *argumentlist* `)] / 3) <=` *выражение* `) Then`  
+ `If ((` *functionname* `[(` *argumentlist* `)] / 3) <=`  *expression* `) Then`  
   
- При вызове `Function` процедуры, не нужно использовать ее возвращаемое значение. Если этого не сделать, выполняются все действия, функции, но возвращаемое значение игнорируется. <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> часто называется таким образом.  
+ When you call a `Function` procedure, you do not have to use its return value. If you do not, all the actions of the function are performed, but the return value is ignored. <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> is often called in this manner.  
   
-### <a name="illustration-of-declaration-and-call"></a>Пример объявления и вызова  
- Следующие `Function` процедура вычисляет самая длинная сторона гипотенузы прямоугольного треугольника, значения для двух других сторон.  
+### <a name="illustration-of-declaration-and-call"></a>Illustration of Declaration and Call  
+ The following `Function` procedure calculates the longest side, or hypotenuse, of a right triangle, given the values for the other two sides.  
   
  [!code-vb[VbVbcnProcedures#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#1)]  
   
- В следующем примере показано типичный вызов `hypotenuse`.  
+ The following example shows a typical call to `hypotenuse`.  
   
  [!code-vb[VbVbcnProcedures#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#6)]  
   
@@ -107,5 +107,5 @@ End Function
 - [Параметры и аргументы процедуры](./procedure-parameters-and-arguments.md)
 - [Оператор Function](../../../../visual-basic/language-reference/statements/function-statement.md)
 - [Практическое руководство. Создание процедуры, возвращающей значение](./how-to-create-a-procedure-that-returns-a-value.md)
-- [Практическое руководство. Возвращение значения из процедуры](./how-to-return-a-value-from-a-procedure.md)
+- [Практическое руководство. Возврат значения из процедуры](./how-to-return-a-value-from-a-procedure.md)
 - [Практическое руководство. Вызов процедуры, возвращающей значение](./how-to-call-a-procedure-that-returns-a-value.md)

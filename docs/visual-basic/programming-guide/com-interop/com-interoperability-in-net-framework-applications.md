@@ -1,32 +1,32 @@
 ---
-title: COM-взаимодействие в приложениях .NET Framework (Visual Basic)
+title: COM-взаимодействие в приложениях .NET Framework
 ms.date: 07/20/2015
 helpviewer_keywords:
 - interoperability, COM and .NET framework objects
 - COM interop [Visual Basic]
 - shared components
 ms.assetid: f5a72143-c268-4dff-a019-974ad940e17d
-ms.openlocfilehash: 758f065d2e0e7f8200529ef171dc89f94950b46e
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 1c484ae948c247a97dd57539e3b0be263736aceb
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627086"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348747"
 ---
 # <a name="com-interoperability-in-net-framework-applications-visual-basic"></a>COM-взаимодействие в приложениях .NET Framework (Visual Basic)
 
-Если вы хотите использовать объекты COM и объекты .NET Framework в одном приложении, необходимо устранить различия в том, как объекты существуют в памяти. Объект .NET Framework находится в управляемой памяти — памяти, управляемой средой CLR, и может перемещаться средой выполнения по мере необходимости. COM-объект находится в неуправляемой памяти и не должен переноситься в другое место в памяти. Visual Studio и .NET Framework предоставляют средства для управления взаимодействием этих управляемых и неуправляемых компонентов. Дополнительные сведения об управляемом коде см. в разделе [Среда CLR](../../../standard/clr.md).
+When you want to use COM objects and .NET Framework objects in the same application, you need to address the differences in how the objects exist in memory. A .NET Framework object is located in managed memory—the memory controlled by the common language runtime—and may be moved by the runtime as needed. A COM object is located in unmanaged memory and is not expected to move to another memory location. Visual Studio and the .NET Framework provide tools to control the interaction of these managed and unmanaged components. For more information about managed code, see [Common Language Runtime](../../../standard/clr.md).
 
-Помимо использования объектов COM в приложениях .NET, может также потребоваться использовать Visual Basic для разработки объектов, доступных из неуправляемого кода через COM.
+In addition to using COM objects in .NET applications, you may also want to use Visual Basic to develop objects accessible from unmanaged code through COM.
 
-Ссылки на этой странице содержат сведения о взаимодействии между COM и объектами .NET Framework.
+The links on this page provide details on the interactions between COM and .NET Framework objects.
 
 ## <a name="related-sections"></a>Связанные разделы
 
 | | |
 |---------|---------|
-| [COM-взаимодействие](../../../visual-basic/programming-guide/com-interop/index.md) | Ссылки на разделы, посвященные COM-взаимодействию в Visual Basic, включая COM-объекты, элементы управления ActiveX, библиотеки DLL Win32, управляемые объекты и наследование COM-объектов. |
-| [Взаимодействие с неуправляемым кодом](../../../framework/interop/index.md) | Краткое описание некоторых проблем взаимодействия между управляемым и неуправляемым кодом, а также ссылки для дальнейшего изучения. |
-| [Oболочки COM](../../../standard/native-interop/com-wrappers.md) | Обсуждаются вызываемые оболочки среды выполнения, которые позволяют управляемому коду вызывать методы COM и вызываемые оболочки COM, позволяющие клиентам COM вызывать методы объектов .NET. |
-| [Расширенное COM-взаимодействие](../../../framework/interop/index.md) | Содержит ссылки на разделы, посвященные COM-взаимодействию в отношении оболочек, исключений, наследования, потоков, событий, преобразований и маршалирования. |
-| [Tlbimp.exe (программа экспорта библиотек типов)](../../../framework/tools/tlbimp-exe-type-library-importer.md) | Обсуждается средство, которое можно использовать для преобразования определений типов, найденных в библиотеке типов COM, в эквивалентные определения в сборке среды CLR. |
+| [COM-взаимодействие](../../../visual-basic/programming-guide/com-interop/index.md) | Provides links to topics covering COM interoperability in Visual Basic, including COM objects, ActiveX controls, Win32 DLLs, managed objects, and inheritance of COM objects. |
+| [Взаимодействие с неуправляемым кодом](../../../framework/interop/index.md) | Briefly describes some of the interaction issues between managed and unmanaged code, and provides links for further study. |
+| [Oболочки COM](../../../standard/native-interop/com-wrappers.md) | Discusses runtime callable wrappers, which allow managed code to call COM methods, and COM callable wrappers, which allow COM clients to call .NET object methods. |
+| [Расширенное COM-взаимодействие](../../../framework/interop/index.md) | Provides links to topics covering COM interoperability with respect to wrappers, exceptions, inheritance, threading, events, conversions, and marshaling. |
+| [Tlbimp.exe (программа экспорта библиотек типов)](../../../framework/tools/tlbimp-exe-type-library-importer.md) | Discusses the tool you can use to convert the type definitions found within a COM type library into equivalent definitions in a common language runtime assembly. |

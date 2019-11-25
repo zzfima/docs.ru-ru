@@ -1,27 +1,27 @@
 ---
-title: Создание вариативных универсальных интерфейсов (Visual Basic)
+title: Создание вариативных универсальных интерфейсов
 ms.date: 07/20/2015
 ms.assetid: d4037dd2-dfe9-4811-9150-93d4e8b20113
-ms.openlocfilehash: 45454f12cf49994f3d476a9ee27f72442266db65
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 74362b9d9effab028bebb9e9ecf72ac0111366d3
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61787300"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347070"
 ---
-# <a name="creating-variant-generic-interfaces-visual-basic"></a>Создание вариативных универсальных интерфейсов (Visual Basic)
+# <a name="creating-variant-generic-interfaces-visual-basic"></a>Creating Variant Generic Interfaces (Visual Basic)
 
 Параметры универсального типа можно объявить в интерфейсах как ковариантные или контравариантные. *Ковариация* позволяет методам интерфейса иметь тип возвращаемого значения, степень наследования которого больше, чем указано в параметрах универсального типа. *Контравариантность* позволяет методам интерфейса иметь типы аргументов, степень наследования которых меньше, чем указано в параметре универсального типа. Универсальный интерфейс, который имеет ковариантные или контравариантные параметры универсального типа, называется *вариантным*.
 
 > [!NOTE]
-> В платформе .NET Framework 4 появилась поддержка вариативности для нескольких существующих универсальных интерфейсов. Список вариативных интерфейсов в .NET Framework, см. в разделе [Вариативность в универсальных интерфейсах (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md).
+> В платформе .NET Framework 4 появилась поддержка вариативности для нескольких существующих универсальных интерфейсов. For the list of the variant interfaces in the .NET Framework, see [Variance in Generic Interfaces (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md).
 
 ## <a name="declaring-variant-generic-interfaces"></a>Объявление вариантных универсальных интерфейсов
 
 Вариантные универсальные интерфейсы можно объявить с помощью ключевых слов `in` и `out` для параметров универсального типа.
 
 > [!IMPORTANT]
-> `ByRef` в Visual Basic не могут быть вариантными. Типы значений также не поддерживают вариативность.
+> `ByRef` parameters in Visual Basic cannot be variant. Типы значений также не поддерживают вариативность.
 
 Для объявления ковариантного параметра универсального типа можно использовать ключевое слово `out`. Ковариантный тип должен удовлетворять следующим условиям:
 
@@ -35,7 +35,7 @@ ms.locfileid: "61787300"
     End Interface
     ```
 
-    Существует одно исключение из данного правила. Если в качестве параметра метода используется контравариантный универсальный делегат, этот тип можно использовать в качестве параметра универсального типа для этого делегата. Это продемонстрировано ниже на примере типа `R`. Дополнительные сведения см. в разделе [Вариативность в делегатах (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md) и [Использование вариативности в делегаты Func и Action универсальных методах-делегатах (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md).
+    Существует одно исключение из данного правила. Если в качестве параметра метода используется контравариантный универсальный делегат, этот тип можно использовать в качестве параметра универсального типа для этого делегата. Это продемонстрировано ниже на примере типа `R`. For more information, see [Variance in Delegates (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md) and [Using Variance for Func and Action Generic Delegates (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md).
 
     ```vb
     Interface ICovariant(Of Out R)
@@ -75,7 +75,7 @@ Interface IVariant(Of Out R, In A)
 End Interface
 ```
 
-В Visual Basic нельзя объявлять события в вариантные интерфейсы без указания типа делегата. Кроме того вариантный интерфейс нельзя использовать вложенные классы, перечисления или структуры, но она может включать вложенные интерфейсы. Это демонстрируется в следующем примере кода.
+In Visual Basic, you can't declare events in variant interfaces without specifying the delegate type. Also, a variant interface can't have nested classes, enums, or structures, but it can have nested interfaces. Это демонстрируется в следующем примере кода.
 
 ```vb
 Interface ICovariant(Of Out R)
@@ -149,7 +149,7 @@ Interface IExtCovariant(Of Out T)
 End Interface
 ```
 
-В `Invariant(Of T)` интерфейса параметра универсального типа `T` является инвариантным, тогда как в `IExtCovariant (Of Out T)`параметр типа является ковариантным, хотя оба интерфейса расширяют тот же интерфейс. То же правило применяется к контравариантным параметрам универсального типа.
+In the `Invariant(Of T)` interface, the generic type parameter `T` is invariant, whereas in `IExtCovariant (Of Out T)`the type parameter is covariant, although both interfaces extend the same interface. То же правило применяется к контравариантным параметрам универсального типа.
 
 Можно создать интерфейс, который расширяет и интерфейс, в котором параметр универсального типа `T` является ковариантным, и интерфейс, где он является контравариантным, если в расширяемом интерфейсе параметр универсального типа `T` является инвариантным. Это показано в следующем примере кода.
 
@@ -184,7 +184,7 @@ End Interface
 Например, если вы явно реализуете один вариантный универсальный интерфейс с разными параметрами универсального типа в одном классе, это может создавать неоднозначность. Компилятор не сообщает об ошибке в данном случае, но и не указывает, какая реализация интерфейса будет выбрана во время выполнения. Это может привести к возникновению неявных ошибок в коде. Рассмотрим следующий пример кода:
 
 > [!NOTE]
-> С помощью `Option Strict Off`, Visual Basic создаст предупреждение компилятора при наличии неоднозначной реализации интерфейса. С помощью `Option Strict On`, Visual Basic создает ошибку компилятора.
+> With `Option Strict Off`, Visual Basic generates a compiler warning when there is an ambiguous interface implementation. With `Option Strict On`, Visual Basic generates a compiler error.
 
 ```vb
 ' Simple class hierarchy.

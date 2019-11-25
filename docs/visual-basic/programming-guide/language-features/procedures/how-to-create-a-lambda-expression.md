@@ -1,106 +1,106 @@
 ---
-title: Практическое руководство. Создать лямбда-выражения (Visual Basic)
+title: Практическое руководство. Создание лямбда-выражения
 ms.date: 07/20/2015
 helpviewer_keywords:
 - lambda expressions [Visual Basic]
 - expressions [Visual Basic], lambda
 ms.assetid: 3279bd5c-80f7-410a-a7ba-f7085ed36aa5
-ms.openlocfilehash: fc2b7ed2004b842116d051b393f00506428def61
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bb0bdb3c10a7df2ca954fbdb9382a25bf805068d
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61665940"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349745"
 ---
-# <a name="how-to-create-a-lambda-expression-visual-basic"></a>Практическое руководство. Создать лямбда-выражения (Visual Basic)
-Объект *лямбда-выражение* функцию или подпрограмму, которая не имеет имени. Лямбда-выражение может использоваться везде, где допустим тип делегата.  
+# <a name="how-to-create-a-lambda-expression-visual-basic"></a>Практическое руководство. Создание лямбда-выражения (Visual Basic)
+A *lambda expression* is a function or subroutine that does not have a name. A lambda expression can be used wherever a delegate type is valid.  
   
-### <a name="to-create-a-single-line-lambda-expression-function"></a>Чтобы создать функцию однострочное лямбда-выражения  
+### <a name="to-create-a-single-line-lambda-expression-function"></a>To create a single-line lambda expression function  
   
-1. В любой ситуации, когда можно использовать тип делегата, введите ключевое слово `Function`, как показано в следующем примере:  
+1. In any situation where a delegate type could be used, type the keyword `Function`, as in the following example:  
   
      `Dim add1 =`   `Function`  
   
-2. В скобках сразу после `Function`, введите параметры функции. Обратите внимание на то, что не нужно указывать имя после `Function`.  
+2. In parentheses, directly after `Function`, type the parameters of the function. Notice that you do not specify a name after `Function`.  
   
      `Dim add1 = Function`   `(num As Integer)`  
   
-3. Список параметров введите одно выражение в теле функции. Выражение, результатом которого является значение является значением, возвращаемым функцией. Вы не используете `As` предложение, чтобы указать тип возвращаемого значения.  
+3. Following the parameter list, type a single expression as the body of the function. The value that the expression evaluates to is the value returned by the function. You do not use an `As` clause to specify the return type.  
   
      [!code-vb[VbVbalrLambdas#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#1)]  
   
-     Лямбда-выражение вызывается путем передачи в целочисленный аргумент.  
+     You call the lambda expression by passing in an integer argument.  
   
      [!code-vb[VbVbalrLambdas#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#2)]  
   
-4. Кроме того в следующем примере выполняется тот же результат:  
+4. Alternatively, the same result is accomplished by the following example:  
   
      [!code-vb[VbVbalrLambdas#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#3)]  
   
-### <a name="to-create-a-single-line-lambda-expression-subroutine"></a>Создание подпрограммы однострочное лямбда-выражения  
+### <a name="to-create-a-single-line-lambda-expression-subroutine"></a>To create a single-line lambda expression subroutine  
   
-1. В любой ситуации, когда можно использовать тип делегата, введите ключевое слово `Sub`, как показано в следующем примере.  
+1. In any situation where a delegate type could be used, type the keyword `Sub`, as shown in the following example.  
   
      `Dim add1 =`   `Sub`  
   
-2. В скобках сразу после `Sub`, введите параметры подпрограммы. Обратите внимание на то, что не нужно указывать имя после `Sub`.  
+2. In parentheses, directly after `Sub`, type the parameters of the subroutine. Notice that you do not specify a name after `Sub`.  
   
      `Dim add1 = Sub`   `(msg As String)`  
   
-3. Список параметров введите одной инструкции в теле подпрограммы.  
+3. Following the parameter list, type a single statement as the body of the subroutine.  
   
      [!code-vb[VbVbalrLambdas#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#17)]  
   
-     Лямбда-выражение вызывается путем передачи аргумента строки.  
+     You call the lambda expression by passing in a string argument.  
   
      [!code-vb[VbVbalrLambdas#18](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#18)]  
   
-### <a name="to-create-a-multiline-lambda-expression-function"></a>Для создания многострочных лямбда-выражение функции  
+### <a name="to-create-a-multiline-lambda-expression-function"></a>To create a multiline lambda expression function  
   
-1. В любой ситуации, когда можно использовать тип делегата, введите ключевое слово `Function`, как показано в следующем примере.  
+1. In any situation where a delegate type could be used, type the keyword `Function`, as shown in the following example.  
   
      `Dim add1 =`   `Function`  
   
-2. В скобках сразу после `Function`, введите параметры функции. Обратите внимание на то, что не нужно указывать имя после `Function`.  
+2. In parentheses, directly after `Function`, type the parameters of the function. Notice that you do not specify a name after `Function`.  
   
      `Dim add1 = Function`   `(index As Integer)`  
   
-3. Нажмите клавишу ВВОД. `End Function` Автоматически добавляется инструкция.  
+3. Нажмите клавишу ВВОД. The `End Function` statement is automatically added.  
   
-4. В теле функции добавьте следующий код, чтобы создать выражение и возвращают значение. Вы не используете `As` предложение, чтобы указать тип возвращаемого значения.  
+4. Within the body of the function, add the following code to create an expression and return the value. You do not use an `As` clause to specify the return type.  
   
      [!code-vb[VbVbalrLambdas#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#19)]  
   
-     Лямбда-выражение вызывается путем передачи в целочисленный аргумент.  
+     You call the lambda expression by passing in an integer argument.  
   
      [!code-vb[VbVbalrLambdas#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#20)]  
   
-### <a name="to-create-a-multiline-lambda-expression-subroutine"></a>Создание выражения подпрограммы многострочного лямбда-выражения  
+### <a name="to-create-a-multiline-lambda-expression-subroutine"></a>To create a multiline lambda expression subroutine  
   
-1. В любой ситуации, когда можно использовать тип делегата, введите ключевое слово `Sub`, как показано в следующем примере:  
+1. In any situation where a delegate type could be used, type the keyword `Sub`, as shown in the following example:  
   
      `Dim add1 =`   `Sub`  
   
-2. В скобках сразу после `Sub`, введите параметры подпрограммы. Обратите внимание на то, что не нужно указывать имя после `Sub`.  
+2. In parentheses, directly after `Sub`, type the parameters of the subroutine. Notice that you do not specify a name after `Sub`.  
   
      `Dim add1 = Sub`  `(msg As String)`  
   
-3. Нажмите клавишу ВВОД. `End Sub` Автоматически добавляется инструкция.  
+3. Нажмите клавишу ВВОД. The `End Sub` statement is automatically added.  
   
-4. В теле функции добавьте следующий код для выполнения при вызове подпрограммы.  
+4. Within the body of the function, add the following code to execute when the subroutine is invoked.  
   
      [!code-vb[VbVbalrLambdas#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#21)]  
   
-     Лямбда-выражение вызывается путем передачи аргумента строки.  
+     You call the lambda expression by passing in a string argument.  
   
      [!code-vb[VbVbalrLambdas#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#22)]  
   
 ## <a name="example"></a>Пример  
- Обычно лямбда-выражений используется для определения функции, который может передаваться в качестве аргумента для параметра, тип которого является `Delegate`. В следующем примере <xref:System.Diagnostics.Process.GetProcesses%2A> метод возвращает массив процессов, запущенных на локальном компьютере. <xref:System.Linq.Enumerable.Where%2A> Метода из <xref:System.Linq.Enumerable> классу `Boolean` делегат в качестве аргумента. Лямбда-выражение в примере используется для этой цели. Он возвращает `True` каждого процесса, у которой есть только один поток, а те, выбранные в `filteredList`.  
+ A common use of lambda expressions is to define a function that can be passed in as the argument for a parameter whose type is `Delegate`. In the following example, the <xref:System.Diagnostics.Process.GetProcesses%2A> method returns an array of the processes running on the local computer. The <xref:System.Linq.Enumerable.Where%2A> method from the <xref:System.Linq.Enumerable> class requires a `Boolean` delegate as its argument. The lambda expression in the example is used for that purpose. It returns `True` for each process that has only one thread, and those are selected in `filteredList`.  
   
  [!code-vb[VbVbalrLambdas#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class4.vb#10)]  
   
- Предыдущий пример эквивалентен следующий код, написанный на [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] синтаксис:  
+ The previous example is equivalent to the following code, which is written in [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] syntax:  
   
  [!code-vb[VbVbalrLambdas#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class5.vb#11)]  
   
@@ -111,6 +111,6 @@ ms.locfileid: "61665940"
 - [Оператор Function](../../../../visual-basic/language-reference/statements/function-statement.md)
 - [Оператор Sub](../../../../visual-basic/language-reference/statements/sub-statement.md)
 - [Делегаты](../../../../visual-basic/programming-guide/language-features/delegates/index.md)
-- [Практическое руководство. Передача процедур другой процедуре в Visual Basic](../../../../visual-basic/programming-guide/language-features/delegates/how-to-pass-procedures-to-another-procedure.md)
+- [How to: Pass Procedures to Another Procedure in Visual Basic](../../../../visual-basic/programming-guide/language-features/delegates/how-to-pass-procedures-to-another-procedure.md) (Практическое руководство. Передача процедур другой процедуре в Visual Basic)
 - [Оператор Delegate](../../../../visual-basic/language-reference/statements/delegate-statement.md)
 - [Introduction to LINQ in Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md) (Знакомство с LINQ в Visual Basic)

@@ -1,30 +1,30 @@
 ---
-title: Практическое руководство. Преобразование XML с помощью LINQ (Visual Basic)
+title: Практическое руководство. Преобразование XML с помощью LINQ
 ms.date: 07/20/2015
 helpviewer_keywords:
 - XML [Visual Basic], transforming
 - LINQ to XML [Visual Basic], transforming XML
 ms.assetid: 815687f4-0bc2-4c0b-adc6-d78744aa356f
-ms.openlocfilehash: 347ca45c2417c1ffb9a86f3bcb51c75f3382bfad
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: a531b189074ac7bdd1c02935368c408ff506a6f1
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524821"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353651"
 ---
 # <a name="how-to-transform-xml-by-using-linq-visual-basic"></a>Практическое руководство. Преобразование XML с помощью LINQ (Visual Basic)
 
-[XML-литералы](../../../../visual-basic/language-reference/xml-literals/index.md) позволяют легко считывать XML-код из одного источника и преобразовывать его в новый формат XML. Можно использовать запросы LINQ для получения содержимого для преобразования или изменения содержимого существующего документа в новый формат XML.
+[XML Literals](../../../../visual-basic/language-reference/xml-literals/index.md) make it easy to read XML from one source and transform it to a new XML format. You can take advantage of LINQ queries to retrieve the content to transform, or change content in an existing document to a new XML format.
 
-Пример в этом разделе преобразует содержимое из исходного документа XML в HTML для просмотра в браузере.
+The example in this topic transforms content from an XML source document to HTML to be viewed in a browser.
 
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]
 
-### <a name="to-transform-an-xml-document"></a>Преобразование XML-документа
+### <a name="to-transform-an-xml-document"></a>To transform an XML document
 
-1. В Visual Studio создайте новый проект Visual Basic в шаблоне проекта **консольное приложение** .
+1. In Visual Studio, create a new Visual Basic project in the **Console Application** project template.
 
-2. Дважды щелкните файл Module1. vb, созданный в проекте, чтобы изменить код Visual Basic. Добавьте следующий код в `Sub Main` модуля `Module1`. Этот код создает исходный XML-документ как объект <xref:System.Xml.Linq.XDocument>.
+2. Double-click the Module1.vb file created in the project to modify the Visual Basic code. Add the following code to the `Sub Main` of the `Module1` module. This code creates the source XML document as an <xref:System.Xml.Linq.XDocument> object.
 
     ```vb
     Dim catalog =
@@ -58,11 +58,11 @@ ms.locfileid: "72524821"
         </Catalog>
     ```
 
-     [Как загрузить XML из файла, строки или потока](../../../../visual-basic/programming-guide/language-features/xml/how-to-load-xml-from-a-file-string-or-stream.md).
+     [How to: Load XML from a File, String, or Stream](../../../../visual-basic/programming-guide/language-features/xml/how-to-load-xml-from-a-file-string-or-stream.md).
 
-3. После создания исходного XML-документа добавьте следующий код, чтобы получить все элементы \<Book > из объекта и преобразовать их в HTML-документ. Список элементов > \<Book создается с помощью запроса LINQ, возвращающего коллекцию объектов <xref:System.Xml.Linq.XElement>, содержащих преобразованный HTML. Внедренные выражения можно использовать для размещения значений из исходного документа в новом XML-формате.
+3. After the code to create the source XML document, add the following code to retrieve all the \<Book> elements from the object and transform them into an HTML document. The list of \<Book> elements is created by using a LINQ query that returns a collection of <xref:System.Xml.Linq.XElement> objects that contain the transformed HTML. You can use embedded expressions to put the values from the source document in the new XML format.
 
-     Полученный HTML-документ записывается в файл с помощью метода <xref:System.Xml.Linq.XElement.Save%2A>.
+     The resulting HTML document is written to a file by using the <xref:System.Xml.Linq.XElement.Save%2A> method.
 
     ```vb
     Dim htmlOutput =
@@ -83,11 +83,11 @@ ms.locfileid: "72524821"
     htmlOutput.Save("BookDescription.html")
     ```
 
-4. После `Sub Main` `Module1` добавьте новый метод (`Sub`) для преобразования узла \<Description > в указанный формат HTML. Этот метод вызывается кодом на предыдущем шаге и используется для сохранения формата элементов > \<Description.
+4. After `Sub Main` of `Module1`, add a new method (`Sub`) to transform a \<Description> node into the specified HTML format. This method is called by the code in the previous step and is used to preserve the format of the \<Description> elements.
 
-     Этот метод заменяет вложенные элементы элемента \<Description > на HTML. Метод `ReplaceWith` используется для сохранения расположения вложенных элементов. Преобразованное содержимое элемента \<Description > включается в элемент HTML-Абзац (\<p >). Свойство <xref:System.Xml.Linq.XContainer.Nodes%2A> используется для получения преобразованного содержимого элемента > \<Description. Это гарантирует, что вложенные элементы будут включены в преобразованное содержимое.
+     This method replaces sub-elements of the \<Description> element with HTML. The `ReplaceWith` method is used to preserve the location of the sub-elements. The transformed content of the \<Description> element is included in an HTML paragraph (\<p>) element. The <xref:System.Xml.Linq.XContainer.Nodes%2A> property is used to retrieve the transformed content of the \<Description> element. This ensures that sub-elements are included in the transformed content.
 
-     Добавьте следующий код после `Sub Main` `Module1`.
+     Add the following code after `Sub Main` of `Module1`.
 
     ```vb
     Public Function TransformDescription(ByVal desc As XElement) As XElement
@@ -117,7 +117,7 @@ ms.locfileid: "72524821"
 
 5. Сохраните изменения.
 
-6. Нажмите клавишу F5, чтобы выполнить код. Полученный сохраненный документ будет выглядеть следующим образом:
+6. Press F5 to run the code. The resulting saved document will resemble the following:
 
     ```html
     <?xml version="1.0"?>

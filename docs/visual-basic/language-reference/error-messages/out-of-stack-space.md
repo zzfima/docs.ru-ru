@@ -1,32 +1,32 @@
 ---
-title: Отсутствует место в стеке (Visual Basic)
+title: Недостаточно места для стека
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID28
 ms.assetid: bfcd792b-ac29-4158-81fc-ea0c13f4ffa2
-ms.openlocfilehash: 29dbdf74808fc98bb856483c3fd8e3a09a72113b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9ae604a9727413f2705d42a4b68f5a50b7dd3feb
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61925584"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349181"
 ---
 # <a name="out-of-stack-space-visual-basic"></a>Отсутствует место в стеке (Visual Basic)
-Стек — это рабочая область памяти, который увеличивается и уменьшается динамически с помощью требований выполняемой программы. Предел был превышен.  
+The stack is a working area of memory that grows and shrinks dynamically with the demands of your executing program. Its limits have been exceeded.  
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  
   
-1. Проверьте, что процедуры не вложены слишком глубоко.  
+1. Check that procedures are not nested too deeply.  
   
-2. Убедитесь, что рекурсивные процедуры завершаются должным образом.  
+2. Make sure recursive procedures terminate properly.  
   
-3. Если локальных переменных недостаточно места, чем доступно, объявите некоторые переменные на уровне модуля. Можно также объявить все переменные в процедуре статический перед `Property`, `Sub`, или `Function` ключевого слова with `Static`. Или можно использовать `Static` инструкцию для объявления в процедурах отдельных статических переменных.  
+3. If local variables require more local variable space than is available, try declaring some variables at the module level. You can also declare all variables in the procedure static by preceding the `Property`, `Sub`, or `Function` keyword with `Static`. Or you can use the `Static` statement to declare individual static variables within procedures.  
   
-4. Переопределите некоторые из строк фиксированной длины как строки переменной длины, как строки фиксированной длины используйте больше пространства стека, чем строки переменной длины. Можно также определить строку на уровне модуля, где требуются не пространство стека.  
+4. Redefine some of your fixed-length strings as variable-length strings, as fixed-length strings use more stack space than variable-length strings. You can also define the string at module level where it requires no stack space.  
   
-5. Проверьте количество вложенных `DoEvents` вызовы функций, с помощью `Calls` диалоговое окно, чтобы узнать, какие процедуры активны в стеке.  
+5. Check the number of nested `DoEvents` function calls, by using the `Calls` dialog box to view which procedures are active on the stack.  
   
-6. Убедитесь, что вы не приводит к «Каскад событий» путем активации события, вызывающего процедуру обработки события уже в стеке. Каскад событий аналогичен без признака завершения рекурсивный вызов процедуры, но это менее очевидных, так как вызов выполняется по Visual Basic, а не явным вызовом в коде. Используйте `Calls` диалоговое окно, чтобы узнать, какие процедуры активны в стеке.  
+6. Make sure you did not cause an "event cascade" by triggering an event that calls an event procedure already on the stack. An event cascade is similar to an unterminated recursive procedure call, but it is less obvious, since the call is made by Visual Basic rather than an explicit call in the code. Use the `Calls` dialog box to view which procedures are active on the stack.  
   
 ## <a name="see-also"></a>См. также
 

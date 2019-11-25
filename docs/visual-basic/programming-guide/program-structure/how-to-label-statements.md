@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Операторы меток (Visual Basic)
+title: Практическое руководство. Операторы меток
 ms.date: 07/20/2015
 helpviewer_keywords:
 - colons (:)
@@ -7,31 +7,31 @@ helpviewer_keywords:
 - ': separator character'
 - Visual Basic code, labeling statements
 ms.assetid: 38f1ff43-2054-42cb-963b-1998e60c6ed4
-ms.openlocfilehash: 9a5f2039716a18011cac3dfd9b011d5b3868c294
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: be116ac8046c43e89e44c2d9127c6131e4dfaa52
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71054055"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347381"
 ---
 # <a name="how-to-label-statements-visual-basic"></a>Практическое руководство. Операторы меток (Visual Basic)
 
-Блоки инструкций состоят из строк кода, разделенных двоеточиями. Строки кода, которым предшествует идентифицирующая строка или целое число, говорят о *метке*. Метки операторов используются для пометки строки кода, чтобы она определялась для использования с такими операторами `On Error Goto`, как.
+Statement blocks are made up of lines of code delimited by colons. Lines of code preceded by an identifying string or integer are said to be *labeled*. Statement labels are used to mark a line of code to identify it for use with statements such as `On Error Goto`.
 
-Метки могут быть либо допустимыми Visual Basic идентификаторами, например, для идентификации программных элементов, либо целочисленными литералами. Метка должна располагаться в начале строки исходного кода, после которой должно следовать двоеточие, независимо от того, за чем следует оператор в той же строке.
+Labels may be either valid Visual Basic identifiers—such as those that identify programming elements—or integer literals. A label must appear at the beginning of a line of source code and must be followed by a colon, regardless of whether it is followed by a statement on the same line.
 
-Компилятор определяет метки, проверяя, соответствует ли начало строки любому уже определенному идентификатору. Если это не так, компилятор предполагает, что это метка.
+The compiler identifies labels by checking whether the beginning of the line matches any already-defined identifier. If it does not, the compiler assumes it is a label.
 
-Метки имеют собственную область объявления и не мешают другим идентификаторам. Областью действия метки является тело метода. Объявление метки имеет приоритет при любой неоднозначной ситуации.
+Labels have their own declaration space and do not interfere with other identifiers. A label's scope is the body of the method. Label declaration takes precedence in any ambiguous situation.
 
 > [!NOTE]
-> Метки могут использоваться только в исполняемых инструкциях внутри методов.
+> Labels can be used only on executable statements inside methods.
 
-## <a name="to-label-a-line-of-code"></a>Добавление метки к строке кода
+## <a name="to-label-a-line-of-code"></a>To label a line of code
 
-Поместите идентификатор, за которым следует двоеточие, в начало строки исходного кода.
+Place an identifier, followed by a colon, at the beginning of the line of source code.
 
-Например, следующие строки кода помечены как `Jump` и `120`, соответственно:
+For example, the following lines of code are labeled with `Jump` and `120`, respectively:
 
 [!code-vb[VbVbalrStatements#708](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#708)]
 

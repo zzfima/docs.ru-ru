@@ -1,5 +1,5 @@
 ---
-title: Тип данных Object (Visual Basic)
+title: Object Data Type
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Object
@@ -10,26 +10,26 @@ helpviewer_keywords:
 - Object data type
 - Object data type [Visual Basic], reference
 ms.assetid: 61ea4a7c-3b3d-48d4-adc4-eacfa91779b2
-ms.openlocfilehash: 1ac906494c49810e3d389591b1044f412e7320bc
-ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
+ms.openlocfilehash: 2ccb9b69b865c259d078ed9642d63c7f83514756
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68513047"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74343955"
 ---
 # <a name="object-data-type"></a>Object Data Type
 
-Содержит адреса, которые ссылаются на объекты. В `Object` переменную можно назначить любой ссылочный тип (строка, массив, класс или интерфейс). Переменная также может ссылаться на данные любого типа значения ( `Char`числовой, `Boolean` `Date`,,, структура или перечисление). `Object`
+Holds addresses that refer to objects. You can assign any reference type (string, array, class, or interface) to an `Object` variable. An `Object` variable can also refer to data of any value type (numeric, `Boolean`, `Char`, `Date`, structure, or enumeration).
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
-Тип `Object` данных может указывать на данные любого типа данных, включая любой экземпляр объекта, распознаваемый приложением. Используйте `Object` , если во время компиляции неизвестно, на какой тип данных может указывать переменная.
+The `Object` data type can point to data of any data type, including any object instance your application recognizes. Use `Object` when you do not know at compile time what data type the variable might point to.
 
-Значение `Object` по умолчанию — `Nothing` (пустая ссылка).
+The default value of `Object` is `Nothing` (a null reference).
 
 ## <a name="data-types"></a>Типы данных
 
-Переменной можно присвоить переменную, константу или выражение любого типа `Object` данных. Чтобы определить тип `Object` данных, на который в настоящее время ссылается переменная, можно <xref:System.Type.GetTypeCode%2A> использовать метод <xref:System.Type?displayProperty=nameWithType> класса. Это показано в следующем примере.
+You can assign a variable, constant, or expression of any data type to an `Object` variable. To determine the data type an `Object` variable currently refers to, you can use the <xref:System.Type.GetTypeCode%2A> method of the <xref:System.Type?displayProperty=nameWithType> class. Это показано в следующем примере.
 
 ```vb
 Dim myObject As Object
@@ -38,31 +38,31 @@ Dim datTyp As Integer
 datTyp = Type.GetTypeCode(myObject.GetType())
 ```
 
-Тип `Object` данных является ссылочным типом. Однако Visual Basic обрабатывает `Object` переменную как тип значения, если она ссылается на данные типа значения.
+The `Object` data type is a reference type. However, Visual Basic treats an `Object` variable as a value type when it refers to data of a value type.
 
 ## <a name="storage"></a>Хранилище
 
-Любой тип данных, на который он ссылается `Object` , переменная не содержит само значение данных, а указатель на это значение. Он всегда использует четыре байта в памяти компьютера, но не включает хранилище для данных, представляющих значение переменной. Из-за кода, использующего указатель для нахождение данных, `Object` переменные, содержащие типы значений, немного медленнее, чем явно типизированные переменные.
+Whatever data type it refers to, an `Object` variable does not contain the data value itself, but rather a pointer to the value. It always uses four bytes in computer memory, but this does not include the storage for the data representing the value of the variable. Because of the code that uses the pointer to locate the data, `Object` variables holding value types are slightly slower to access than explicitly typed variables.
 
 ## <a name="programming-tips"></a>Советы по программированию
 
-- **Вопросы взаимодействия.** Если вы взаимодействуете с компонентами, которые не написаны для .NET Framework, например автоматизации или COM-объекты, помните, что типы указателей в других средах несовместимы с `Object` типом Visual Basic.
+- **Interop Considerations.** If you are interfacing with components not written for the .NET Framework, for example Automation or COM objects, keep in mind that pointer types in other environments are not compatible with the Visual Basic `Object` type.
 
-- **Производительность.** Переменная, объявляемая с `Object` типом, достаточно гибка, чтобы содержать ссылку на любой объект. Однако при вызове метода или свойства для такой переменной всегда вызывается *позднее связывание* (во время выполнения). Чтобы принудительно выполнить *раннее связывание* (во время компиляции) и повысить производительность, объявите переменную с конкретным именем класса или приведите ее к конкретному типу данных.
+- **Производительность.** A variable you declare with the `Object` type is flexible enough to contain a reference to any object. However, when you invoke a method or property on such a variable, you always incur *late binding* (at run time). To force *early binding* (at compile time) and better performance, declare the variable with a specific class name, or cast it to the specific data type.
 
-  При объявлении объектной переменной попробуйте использовать конкретный тип класса, например <xref:System.OperatingSystem>, вместо `Object` обобщенного типа. Также следует использовать наиболее конкретный класс, например <xref:System.Windows.Forms.TextBox> <xref:System.Windows.Forms.Control>, вместо, чтобы получить доступ к его свойствам и методам. Для поиска доступных имен классов обычно можно использовать список **классы** в **обозревателе объектов** .
+  When you declare an object variable, try to use a specific class type, for example <xref:System.OperatingSystem>, instead of the generalized `Object` type. You should also use the most specific class available, such as <xref:System.Windows.Forms.TextBox> instead of <xref:System.Windows.Forms.Control>, so that you can access its properties and methods. You can usually use the **Classes** list in the **Object Browser** to find available class names.
 
-- **Расширяющие.** Все типы данных и все ссылочные типы расширяются `Object` до типа данных. Это означает, что можно преобразовать любой тип `Object` в без возникновения <xref:System.OverflowException?displayProperty=nameWithType> ошибки.
+- **Widening.** All data types and all reference types widen to the `Object` data type. This means you can convert any type to `Object` without encountering a <xref:System.OverflowException?displayProperty=nameWithType> error.
 
-  Однако при преобразовании между типами значений и `Object`Visual Basic выполняет операции, называемые *упаковкой* и распаковкой, что делает выполнение более медленным.
+  However, if you convert between value types and `Object`, Visual Basic performs operations called *boxing* and *unboxing*, which make execution slower.
 
-- **Символы типа.** `Object`не имеет символа типа литерала или символа типа идентификатора.
+- **Type Characters.** `Object` has no literal type character or identifier type character.
 
-- **Тип платформы.** Соответствующий тип в .NET Framework — это <xref:System.Object?displayProperty=nameWithType> класс.
+- **Framework Type.** The corresponding type in the .NET Framework is the <xref:System.Object?displayProperty=nameWithType> class.
 
 ## <a name="example"></a>Пример
 
-В следующем примере показана `Object` переменная, указывающая на экземпляр объекта.
+The following example illustrates an `Object` variable pointing to an object instance.
 
 ```vb
 Dim objDb As Object
@@ -78,5 +78,5 @@ objDb = myCollection.Item(1)
 - [Функции преобразования типов](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
 - [Сводка по преобразованию](../../../visual-basic/language-reference/keywords/conversion-summary.md)
 - [Эффективное использование типов данных](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
-- [Практическое руководство. Определить, связаны ли два объекта](../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-related.md)
-- [Практическое руководство. Определить, идентичны ли два объекта](../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-identical.md)
+- [Практическое руководство. Определение наличия связи между двумя объектами](../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-related.md)
+- [Практическое руководство. Определение идентичности двух объектов](../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-identical.md)

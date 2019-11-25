@@ -1,5 +1,5 @@
 ---
-title: Nothing (Visual Basic)
+title: Nothing - ключевое слово
 ms.date: 07/20/2015
 f1_keywords:
 - Nothing
@@ -8,53 +8,55 @@ helpviewer_keywords:
 - Nothing keyword [Visual Basic]
 - Nothing keyword [Visual Basic], syntax
 ms.assetid: 06176e2d-bbf7-4a37-afaa-a86ad21ee99f
-ms.openlocfilehash: 12c88db49dc7723fc269195e7d174bfa822c64d3
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 3bd4681341a33cc8db4ecbc2b284be243db56549
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963759"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344167"
 ---
-# <a name="nothing-visual-basic"></a>Nothing (Visual Basic)
-Представляет значение по умолчанию для любого типа данных. Для ссылочных типов значением по умолчанию является `null` ссылка. Для типов значений значение по умолчанию зависит от того, допускает ли тип значения значение null.  
-  
+# <a name="nothing-keyword-visual-basic"></a>Nothing keyword (Visual Basic)
+
+Represents the default value of any data type. For reference types, the default value is the `null` reference. For value types, the default value depends on whether the value type is nullable.
+
 > [!NOTE]
-> Для типов значений, не допускающих `Nothing` значения NULL, в `null` Visual Basic C#отличается от в. В Visual Basic при задании переменной типа `Nothing`значения, не допускающего значения NULL, переменной присваивается значение по умолчанию для его объявленного типа. В C#при присвоении переменной типа `null`значения, не допускающего значения NULL, возникает ошибка времени компиляции.  
-  
-## <a name="remarks"></a>Примечания  
- `Nothing`представляет значение по умолчанию для типа данных. Значение по умолчанию зависит от того, имеет ли переменная тип значения или ссылочный тип.  
-  
- Переменная *типа значения* напрямую содержит его значение. Типы значений включают все числовые типы данных `Boolean`, `Char` `Date`,,, все структуры и все перечисления. Переменная *ссылочного типа* хранит ссылку на экземпляр объекта в памяти. Ссылочные типы включают классы, массивы, делегаты и строки. Для получения дополнительной информации см. [Value Types and Reference Types](../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md).  
-  
- Если переменная имеет тип значения, поведение `Nothing` зависит от того, имеет ли переменная тип данных, допускающий значение null. Для представления типа значения, допускающего значение NULL `?` , добавьте модификатор к имени типа. Присваивание `Nothing` переменной, допускающей значение null, `null`присваивает значение. Дополнительные сведения и примеры см. в разделе [типы значений](../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md), допускающие значения NULL.  
-  
- Если переменная имеет тип значения, не допускающий значения NULL, при присвоении `Nothing` ей присваивается значение по умолчанию для его объявленного типа. Если этот тип содержит члены переменных, все они устанавливаются в значения по умолчанию. Следующий пример иллюстрирует это для скалярных типов.  
-  
- [!code-vb[VbVbalrKeywords#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class2.vb#7)]  
-  
- Если переменная имеет ссылочный тип, присвоение `Nothing` переменной задает `null` ссылку на тип переменной. Переменная, для `null` которой задана ссылка, не связана ни с одним объектом. В следующем примере это показано.  
-  
- [!code-vb[VbVbalrKeywords#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/class3.vb#8)]  
-  
- При проверке наличия переменной `null`ссылки (или типа значения, допускающего значение null) не используйте `= Nothing` или. `<> Nothing` Всегда используйте `Is Nothing` или `IsNot Nothing`.  
-  
- Для строк в Visual Basic пустая строка равна `Nothing`. Таким образом `"" = Nothing` , имеет значение true.  
-  
- В следующем примере показаны сравнения, в `Is` которых используются операторы и. `IsNot`  
-  
- [!code-vb[VbVbalrKeywords#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class4.vb#9)]  
-  
- Если объявить переменную без использования `As` предложения и присвоить `Nothing`ей значение, `Object`переменная имеет тип. Примером этого является `Dim something = Nothing`. В этом случае возникает ошибка времени компиляции, когда `Option Strict` имеет значение on и `Option Infer` отключено.  
-  
- При назначении `Nothing` объектной переменной она больше не ссылается ни на один экземпляр объекта. Если переменная ранее ссылалась на экземпляр, задание для `Nothing` него значения не завершает сам экземпляр. Экземпляр завершается, и связанные с ним память и системные ресурсы освобождаются, только если сборщик мусора (GC) обнаружит, что активные ссылки не остались.  
-  
- `Nothing`отличается от <xref:System.DBNull> объекта, который представляет неинициализированный вариант или несуществующий столбец базы данных.  
-  
+> For non-nullable value types, `Nothing` in Visual Basic differs from `null` in C#. In Visual Basic, if you set a variable of a non-nullable value type to `Nothing`, the variable is set to the default value for its declared type. In C#, if you assign a variable of a non-nullable value type to `null`, a compile-time error occurs.
+
+## <a name="remarks"></a>Заметки
+
+`Nothing` represents the default value of a data type. The default value depends on whether the variable is of a value type or of a reference type.
+
+A variable of a *value type* directly contains its value. Value types include all numeric data types, `Boolean`, `Char`, `Date`, all structures, and all enumerations. A variable of a *reference type* stores a reference to an instance of the object in memory. Reference types include classes, arrays, delegates, and strings. Для получения дополнительной информации см. [Value Types and Reference Types](../programming-guide/language-features/data-types/value-types-and-reference-types.md).
+
+If a variable is of a value type, the behavior of `Nothing` depends on whether the variable is of a nullable data type. To represent a nullable value type, add a `?` modifier to the type name. Assigning `Nothing` to a nullable variable sets the value to `null`. For more information and examples, see [Nullable Value Types](../programming-guide/language-features/data-types/nullable-value-types.md).
+
+If a variable is of a value type that is not nullable, assigning `Nothing` to it sets it to the default value for its declared type. If that type contains variable members, they are all set to their default values. The following example illustrates this for scalar types.
+
+[!code-vb[VbVbalrKeywords#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class2.vb#7)]
+
+If a variable is of a reference type, assigning `Nothing` to the variable sets it to a `null` reference of the variable's type. A variable that is set to a `null` reference is not associated with any object. Следующий пример демонстрирует это:
+
+[!code-vb[VbVbalrKeywords#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/class3.vb#8)]
+
+When checking whether a reference (or nullable value type) variable is `null`, do not use `= Nothing` or `<> Nothing`. Always use `Is Nothing` or `IsNot Nothing`.
+
+For strings in Visual Basic, the empty string equals `Nothing`. Therefore, `"" = Nothing` is true.
+
+The following example shows comparisons that use the `Is` and `IsNot` operators:
+
+[!code-vb[VbVbalrKeywords#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class4.vb#9)]
+
+If you declare a variable without using an `As` clause and set it to `Nothing`, the variable has a type of `Object`. An example of this is `Dim something = Nothing`. A compile-time error occurs in this case when `Option Strict` is on and `Option Infer` is off.
+
+When you assign `Nothing` to an object variable, it no longer refers to any object instance. If the variable had previously referred to an instance, setting it to `Nothing` does not terminate the instance itself. The instance is terminated, and the memory and system resources associated with it are released, only after the garbage collector (GC) detects that there are no active references remaining.
+
+`Nothing` differs from the <xref:System.DBNull> object, which represents an uninitialized variant or a nonexistent database column.
+
 ## <a name="see-also"></a>См. также
 
-- [Оператор Dim](../../visual-basic/language-reference/statements/dim-statement.md)
-- [Время существования объекта: Как создаются и уничтожаются объекты](../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)
-- [Время существования в Visual Basic](../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
-- [Оператор Is](../../visual-basic/language-reference/operators/is-operator.md)
-- [Оператор IsNot](../../visual-basic/language-reference/operators/isnot-operator.md)
-- [Типы значений, допускающие значение NULL](../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)
+- [Оператор Dim](./statements/dim-statement.md)
+- [Время существования. Создание и уничтожение объектов](../programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)
+- [Lifetime in Visual Basic](../programming-guide/language-features/declared-elements/lifetime.md)
+- [Оператор Is](./operators/is-operator.md)
+- [Оператор IsNot](./operators/isnot-operator.md)
+- [Типы значений, допускающие значение NULL](../programming-guide/language-features/data-types/nullable-value-types.md)

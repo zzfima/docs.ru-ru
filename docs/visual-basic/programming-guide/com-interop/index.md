@@ -1,31 +1,31 @@
 ---
-title: COM-взаимодействие (Visual Basic)
+title: COM-взаимодействие
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic code, COM interop
 - COM interop [Visual Basic], in Visual Basic
 ms.assetid: 3ffd1bdf-1b8d-47f5-87eb-75b659f64294
-ms.openlocfilehash: 1bcfba25c86c46f986c061241a5d09f9aaa6d248
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: dcfdb5f3661292dda2e084eca22afab9bbec15d3
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627084"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348007"
 ---
 # <a name="com-interop-visual-basic"></a>COM-взаимодействие (Visual Basic)
-Объектная модель компонентов (модель COM) позволяет объекту предоставлять свою функциональность другим компонентам и ведущим приложениям. COM-объекты входят в состав большей части современного программного обеспечения. Хотя сборки .NET являются наилучшим решением для новых приложений, в некоторых случаях необходимо использование COM-объектов. В этом разделе рассматриваются некоторые проблемы, связанные с созданием и использованием COM-объектов с Visual Basic.  
+Объектная модель компонентов (модель COM) позволяет объекту предоставлять свою функциональность другим компонентам и ведущим приложениям. COM-объекты входят в состав большей части современного программного обеспечения. Хотя сборки .NET являются наилучшим решением для новых приложений, в некоторых случаях необходимо использование COM-объектов. This section covers some of the issues associated with creating and using COM objects with Visual Basic.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>Содержание  
  [Знакомство с COM-взаимодействием](../../../visual-basic/programming-guide/com-interop/introduction-to-com-interop.md)  
  Общие сведения о COM-взаимодействии.  
   
- [Практическое руководство. Ссылки на COM-объекты из Visual Basic](../../../visual-basic/programming-guide/com-interop/how-to-reference-com-objects.md)  
+ [Практическое руководство. Ссылки на COM-объекты в Visual Basic](../../../visual-basic/programming-guide/com-interop/how-to-reference-com-objects.md)  
  Описывает, как добавлять ссылки на COM-объекты, имеющие библиотеки типов.  
   
  [Практическое руководство. Работа с элементами управления ActiveX](../../../visual-basic/programming-guide/com-interop/how-to-work-with-activex-controls.md)  
- Демонстрирует использование существующих элементов управления ActiveX для добавления компонентов в панель элементов Visual Studio.  
+ Demonstrates how to use existing ActiveX controls to add features to the Visual Studio Toolbox.  
   
- [Пошаговое руководство: Вызов API Windows](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)  
+ [Пошаговое руководство. Вызов API-интерфейсов Windows](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)  
  Пошаговое описание процесса вызова API-интерфейсов, входящих в операционную систему Windows.  
   
  [Практическое руководство. Вызов API Windows](../../../visual-basic/programming-guide/com-interop/how-to-call-windows-apis.md)  
@@ -34,7 +34,7 @@ ms.locfileid: "68627084"
  [Практическое руководство. Вызов функции Windows, принимающей значение беззнакового типа](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)  
  Демонстрация вызова функции Windows, которая имеет параметр с типом без знака.  
   
- [Пошаговое руководство: Создание COM-объектов с помощью Visual Basic](../../../visual-basic/programming-guide/com-interop/walkthrough-creating-com-objects.md)  
+ [Пошаговое руководство. Создание объектов COM с помощью Visual Basic](../../../visual-basic/programming-guide/com-interop/walkthrough-creating-com-objects.md)  
  Пошаговое описание создания COM-объектов с использованием шаблона класса COM и без него.  
   
  [Устранение неполадок взаимодействия](../../../visual-basic/programming-guide/com-interop/troubleshooting-interoperability.md)  
@@ -43,7 +43,7 @@ ms.locfileid: "68627084"
  [COM-взаимодействие в приложениях .NET Framework](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)  
  Общие сведения об использовании объектов .NET Framework и COM в одном приложении.  
   
- [Пошаговое руководство: Реализация наследования с использованием COM-объектов](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)  
+ [Пошаговое руководство. Реализация наследования с использованием COM-объектов](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)  
  Описание использования существующих COM-объектов в качестве основы для новых объектов.  
   
 ## <a name="related-sections"></a>Связанные разделы  

@@ -1,5 +1,5 @@
 ---
-title: Расширяющие и сужающие преобразования (Visual Basic)
+title: Widening and Narrowing Conversions
 ms.date: 07/20/2015
 helpviewer_keywords:
 - widening conversions [Visual Basic]
@@ -19,24 +19,24 @@ helpviewer_keywords:
 - data type conversion [Visual Basic], exceptions during conversion
 - conversions [Visual Basic], widening
 ms.assetid: 058c3152-6c28-4268-af44-2209e774f0bd
-ms.openlocfilehash: d1822afc4b10a725e13c1469a068c30813d3a2d3
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 72cc1a2179db4f057c45cd2ff4de82a6437d6b58
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582734"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348692"
 ---
 # <a name="widening-and-narrowing-conversions-visual-basic"></a>Расширяющие и сужающие преобразования (Visual Basic)
-Важное замечание при преобразовании типов заключается в том, находится ли результат преобразования в диапазоне целевого типа данных.  
+An important consideration with a type conversion is whether the result of the conversion is within the range of the destination data type.  
   
- *Расширяющее преобразование* изменяет значение на тип данных, который может допускать любое возможное значение исходных данных.  Расширяющие преобразования сохраняют исходное значение, но могут изменять его представление. Это происходит при преобразовании из целочисленного типа в `Decimal` или из `Char` в `String`.  
+ A *widening conversion* changes a value to a data type that can allow for any possible value of the original data.  Widening conversions preserve the source value but can change its representation. This occurs if you convert from an integral type to `Decimal`, or from `Char` to `String`.  
   
- *Преобразование сужения* изменяет тип данных значения на тип, который не сможет содержать некоторые возможные значения. Например, дробное значение округляется при преобразовании в целочисленный тип, а числовой тип, преобразуемый в `Boolean`, сокращается до `True` или `False`.  
+ *Преобразование сужения* изменяет тип данных значения на тип, который не сможет содержать некоторые возможные значения. For example, a fractional value is rounded when it is converted to an integral type, and a numeric type being converted to `Boolean` is reduced to either `True` or `False`.  
   
 ## <a name="widening-conversions"></a>расширяющие преобразования  
- В следующей таблице показаны стандартные расширяющие преобразования.  
+ The following table shows the standard widening conversions.  
   
-|Тип данных|Расширяется до типов данных <sup>1</sup>|  
+|Тип данных|Widens to data types <sup>1</sup>|  
 |---|---|  
 |[SByte](../../../../visual-basic/language-reference/data-types/sbyte-data-type.md)|`SByte`, `Short`, `Integer`, `Long`, `Decimal`, `Single`, `Double`|  
 |[Byte](../../../../visual-basic/language-reference/data-types/byte-data-type.md)|`Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, `ULong`, `Decimal`, `Single`, `Double`|  
@@ -49,54 +49,54 @@ ms.locfileid: "72582734"
 |[Decimal](../../../../visual-basic/language-reference/data-types/decimal-data-type.md)|`Decimal`, `Single`, `Double`<sup>2</sup>|  
 |[Single](../../../../visual-basic/language-reference/data-types/single-data-type.md)|`Single`, `Double`|  
 |[Double](../../../../visual-basic/language-reference/data-types/double-data-type.md)|`Double`|  
-|Любой перечислимый тип ([enum](../../../../visual-basic/language-reference/statements/enum-statement.md))|Его базовый целочисленный тип и любой тип, к которому расширяется базовый тип.|  
+|Any enumerated type ([Enum](../../../../visual-basic/language-reference/statements/enum-statement.md))|Its underlying integral type and any type to which the underlying type widens.|  
 |[Char](../../../../visual-basic/language-reference/data-types/char-data-type.md)|`Char`, `String`|  
-|Массив `Char`|массив `Char`, `String`|  
+|Массив `Char`|`Char` array, `String`|  
 |Любой тип|[Объект](../../../../visual-basic/language-reference/data-types/object-data-type.md)|  
-|Любой производный тип|Любой базовый тип, от которого он является производным <sup>3</sup>.|  
-|Любой тип|Любой интерфейс, который он реализует.|  
-|[Nothing](../../../../visual-basic/language-reference/nothing.md)|Любой тип данных или тип объекта.|  
+|Any derived type|Any base type from which it is derived <sup>3</sup>.|  
+|Любой тип|Any interface it implements.|  
+|[Nothing](../../../../visual-basic/language-reference/nothing.md)|Any data type or object type.|  
   
- <sup>1</sup> по определению каждый тип данных расширяется до самого себя.  
+ <sup>1</sup> By definition, every data type widens to itself.  
   
- <sup>2</sup> преобразования из `Integer`, `UInteger`, `Long`, `ULong` или `Decimal` в `Single` или `Double` могут привести к утрате точности, но никогда не будут иметь потери. В этом смысле они не приводят к утрате информации.  
+ <sup>2</sup> Conversions from `Integer`, `UInteger`, `Long`, `ULong`, or `Decimal` to `Single` or `Double` might result in loss of precision, but never in loss of magnitude. In this sense they do not incur information loss.  
   
- <sup>3</sup> может показаться удивительно, что преобразование из производного типа в один из его базовых типов является расширяющим. Обоснованием является то, что производный тип содержит все члены базового типа, поэтому он является экземпляром базового типа. В обратном направлении базовый тип не содержит новых элементов, определенных производным типом.  
+ <sup>3</sup> It might seem surprising that a conversion from a derived type to one of its base types is widening. The justification is that the derived type contains all the members of the base type, so it qualifies as an instance of the base type. In the opposite direction, the base type does not contain any new members defined by the derived type.  
   
- Расширяющие преобразования всегда выполняются в период выполнения и никогда не вызывают потери данных. Их всегда можно выполнять неявно, независимо от того, устанавливает ли [оператор Option строго](../../../../visual-basic/language-reference/statements/option-strict-statement.md) значение параметра проверки типа на `On` или `Off`.  
+ Widening conversions always succeed at run time and never incur data loss. You can always perform them implicitly, whether the [Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md) sets the type checking switch to `On` or to `Off`.  
   
 ## <a name="narrowing-conversions"></a>сужающие преобразования  
- К стандартным сужающим преобразованиям относятся следующие:  
+ The standard narrowing conversions include the following:  
   
-- Обратные направления расширяющих преобразований в предыдущей таблице (за исключением того, что каждый тип расширяется до самого себя)  
+- The reverse directions of the widening conversions in the preceding table (except that every type widens to itself)  
   
-- Преобразования в любом направлении между [логическим](../../../../visual-basic/language-reference/data-types/boolean-data-type.md) и любым числовым типом  
+- Conversions in either direction between [Boolean](../../../../visual-basic/language-reference/data-types/boolean-data-type.md) and any numeric type  
   
-- Преобразования любого числового типа в любой перечислимый тип (`Enum`)  
+- Conversions from any numeric type to any enumerated type (`Enum`)  
   
-- Преобразования в любом направлении между [строкой](../../../../visual-basic/language-reference/data-types/string-data-type.md) и любым числовым типом, `Boolean` или [Date](../../../../visual-basic/language-reference/data-types/date-data-type.md) .  
+- Conversions in either direction between [String](../../../../visual-basic/language-reference/data-types/string-data-type.md) and any numeric type, `Boolean`, or [Date](../../../../visual-basic/language-reference/data-types/date-data-type.md)  
   
-- Преобразование типа данных или типа объекта в производный от него тип  
+- Conversions from a data type or object type to a type derived from it  
   
- Сужающие преобразования не всегда выполняются успешно во время выполнения и могут привести к сбою или потери данных. Если целевой тип данных не может получить преобразуемое значение, возникает ошибка. Например, числовое преобразование может привести к переполнению. Компилятор не позволяет выполнять сужающие преобразования неявно, если только [оператор Option строго](../../../../visual-basic/language-reference/statements/option-strict-statement.md) устанавливает для параметра проверки типа значение `Off`.  
+ Narrowing conversions do not always succeed at run time, and can fail or incur data loss. An error occurs if the destination data type cannot receive the value being converted. For example, a numeric conversion can result in an overflow. The compiler does not allow you to perform narrowing conversions implicitly unless the [Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md) sets the type checking switch to `Off`.  
   
 > [!NOTE]
-> Ошибка сужения преобразования подавляется для преобразований из элементов коллекции `For Each…Next` в переменную управления циклом. Дополнительные сведения и примеры см. в подразделе «сужающие преобразования» раздела [For Each... Следующий оператор](../../../../visual-basic/language-reference/statements/for-each-next-statement.md).  
+> The narrowing-conversion error is suppressed for conversions from the elements in a `For Each…Next` collection to the loop control variable. For more information and examples, see the "Narrowing Conversions" section in [For Each...Next Statement](../../../../visual-basic/language-reference/statements/for-each-next-statement.md).  
   
-### <a name="when-to-use-narrowing-conversions"></a>Когда следует использовать сужающие преобразования  
- Если известно, что исходное значение можно преобразовать в целевой тип данных без ошибок или потери данных, используется суженное преобразование. Например, если известно, что `String` содержит значение true или false, можно использовать ключевое слово `CBool`, чтобы преобразовать его в `Boolean`.  
+### <a name="when-to-use-narrowing-conversions"></a>When to Use Narrowing Conversions  
+ You use a narrowing conversion when you know the source value can be converted to the destination data type without error or data loss. For example, if you have a `String` that you know contains either "True" or "False," you can use the `CBool` keyword to convert it to `Boolean`.  
   
-## <a name="exceptions-during-conversion"></a>Исключения во время преобразования  
- Поскольку расширяющие преобразования всегда выполняются, они не создают исключения. Сужающие преобразования, когда они завершаются сбоем, чаще всего вызывают следующие исключения:  
+## <a name="exceptions-during-conversion"></a>Exceptions During Conversion  
+ Because widening conversions always succeed, they do not throw exceptions. Narrowing conversions, when they fail, most commonly throw the following exceptions:  
   
-- <xref:System.InvalidCastException> — если преобразование между двумя типами не определено  
+- <xref:System.InvalidCastException> — if no conversion is defined between the two types  
   
-- <xref:System.OverflowException> — (только целочисленные типы), если преобразованное значение слишком велико для целевого типа  
+- <xref:System.OverflowException> — (integral types only) if the converted value is too large for the target type  
   
- Если класс или структура определяет [функцию CType](../../../../visual-basic/language-reference/functions/ctype-function.md) , которая будет использоваться в качестве оператора преобразования в этом классе или структуре, `CType` может вызвать любое исключение, которое оно считает соответствующим. Кроме того, `CType` может вызывать функции Visual Basic или методы .NET Framework, которые, в свою очередь, могут вызывать различные исключения.  
+ If a class or structure defines a [CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md) to serve as a conversion operator to or from that class or structure, that `CType` can throw any exception it deems appropriate. In addition, that `CType` might call Visual Basic functions or .NET Framework methods, which in turn could throw a variety of exceptions.  
   
-## <a name="changes-during-reference-type-conversions"></a>Изменения во время преобразования ссылочного типа  
- При преобразовании из *ссылочного типа* копируется только указатель на значение. Само значение не копируется и не изменяется каким-либо образом. Единственное, что может изменить, — это тип данных переменной, содержащей указатель. В следующем примере тип данных преобразуется из производного класса в его базовый класс, но объект, на который теперь указывают обе переменные, не изменяется.  
+## <a name="changes-during-reference-type-conversions"></a>Changes During Reference Type Conversions  
+ A conversion from a *reference type* copies only the pointer to the value. The value itself is neither copied nor changed in any way. The only thing that can change is the data type of the variable holding the pointer. In the following example, the data type is converted from the derived class to its base class, but the object that both variables now point to is unchanged.  
   
 ```vb  
 ' Assume class cSquare inherits from class cShape.  
@@ -110,10 +110,10 @@ shape = square
 ## <a name="see-also"></a>См. также
 
 - [Типы данных](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
-- [Преобразования типов в Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [Type Conversions in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
 - [Явные и неявные преобразования](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)
 - [Преобразования значений между строковыми и другими типами](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)
-- [Как преобразовать объект в другой тип в Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)
+- [How to: Convert an Object to Another Type in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)
 - [Преобразования массивов](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md)
 - [Типы данных](../../../../visual-basic/language-reference/data-types/index.md)
 - [Функции преобразования типов](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)

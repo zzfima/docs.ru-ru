@@ -1,5 +1,5 @@
 ---
-title: Присваивание объектных переменных (Visual Basic)
+title: Присваивание объектных переменных
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Nothing keyword [Visual Basic], object variable assignment
@@ -13,16 +13,16 @@ helpviewer_keywords:
 - assignment statements [Visual Basic], object variable assignment
 - Me keyword [Visual Basic], as object variable
 ms.assetid: 3706811d-fd40-44fe-8727-d692e8e55d6d
-ms.openlocfilehash: 59dea45511ba8d7d10c95cf17e47981124c532e4
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 93de17490935d6d5cad01000e9ee3e2fe55bd16c
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68631053"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351822"
 ---
 # <a name="object-variable-assignment-visual-basic"></a>Присваивание объектных переменных (Visual Basic)
 
-Для назначения объекта объектной переменной используется обычная инструкция присваивания. Можно назначить выражение объекта или ключевое слово [Nothing](../../../../visual-basic/language-reference/nothing.md) , как показано в следующем примере.
+You use a normal assignment statement to assign an object to an object variable. You can assign an object expression or the [Nothing](../../../../visual-basic/language-reference/nothing.md) keyword, as the following example illustrates.
 
 ```vb
 Dim thisObject As Object
@@ -32,22 +32,22 @@ thisObject = Form1
 thisObject = Nothing
 ```
 
-`Nothing`означает, что для переменной в настоящий момент не назначен объект.
+`Nothing` means there is no object currently assigned to the variable.
 
 ## <a name="initialization"></a>Инициализация
 
-Когда код начинает выполняться, переменные объекта инициализируются значением `Nothing`. Для тех, чьи объявления включают инициализацию, повторно инициализируются значениями, заданными при выполнении инструкций объявления.
+When your code begins running, your object variables are initialized to `Nothing`. Those whose declarations include initialization are reinitialized to the values you specify when the declaration statements are executed.
 
-Вы можете включить инициализацию в объявление с помощью ключевого слова [New](../../../../visual-basic/language-reference/operators/new-operator.md) . Следующие операторы объявления объявляют переменные `testUri` объекта и `ver` присваивают им определенные объекты. Каждый из них использует один из перегруженных конструкторов соответствующего класса для инициализации объекта.
+You can include initialization in your declaration by using the [New](../../../../visual-basic/language-reference/operators/new-operator.md) keyword. The following declaration statements declare object variables `testUri` and `ver` and assign specific objects to them. Each uses one of the overloaded constructors of the appropriate class to initialize the object.
 
 ```vb
 Dim testUri As New System.Uri("https://www.microsoft.com")
 Dim ver As New System.Version(6, 1, 0)
 ```
 
-## <a name="disassociation"></a>Рассопоставления
+## <a name="disassociation"></a>Disassociation
 
-Задание переменной объекта для `Nothing` прекращения сопоставления переменной с каким бы то ни было конкретным объектом. Это предотвращает случайное изменение объекта путем изменения переменной. Он также позволяет проверить, указывает ли объектная переменная на допустимый объект, как показано в следующем примере.
+Setting an object variable to `Nothing` discontinues the association of the variable with any specific object. This prevents you from accidentally changing the object by changing the variable. It also allows you to test whether the object variable points to a valid object, as the following example shows.
 
 ```vb
 If otherObject IsNot Nothing Then
@@ -55,17 +55,17 @@ If otherObject IsNot Nothing Then
 End If
 ```
 
-Если объект, на который ссылается переменная, находится в другом приложении, этот тест не может определить, было ли приложение завершено, или просто сделает объект недействительным.
+If the object your variable refers to is in another application, this test cannot determine whether that application has terminated or just invalidated the object.
 
-Объектная переменная со значением `Nothing` также называется *пустой ссылкой*.
+An object variable with a value of `Nothing` is also called a *null reference*.
 
-## <a name="current-instance"></a>Текущий экземпляр
+## <a name="current-instance"></a>Current Instance
 
-*Текущим экземпляром* объекта является тот, в котором выполняется код в данный момент. Поскольку весь код выполняется внутри процедуры, текущим экземпляром является тот, в котором была вызвана процедура.
+The *current instance* of an object is the one in which the code is currently executing. Since all code executes inside a procedure, the current instance is the one in which the procedure was invoked.
 
-`Me` Ключевое слово выступает в качестве объектной переменной, ссылающейся на текущий экземпляр. Если процедура не является [общей](../../../../visual-basic/language-reference/modifiers/shared.md), она может использовать `Me` ключевое слово для получения указателя на текущий экземпляр. Общие процедуры не могут быть связаны с конкретным экземпляром класса.
+The `Me` keyword acts as an object variable referring to the current instance. If a procedure is not [Shared](../../../../visual-basic/language-reference/modifiers/shared.md), it can use the `Me` keyword to obtain a pointer to the current instance. Shared procedures cannot be associated with a specific instance of a class.
 
-Использование `Me` особенно полезно для передачи текущего экземпляра в процедуру в другом модуле. Например, предположим, что имеется несколько XML-документов и вы хотите добавить к ним некоторый стандартный текст. В следующем примере определяется процедура для этого.
+Using `Me` is particularly useful for passing the current instance to a procedure in another module. For example, suppose you have a number of XML documents and wish to add some standard text to all of them. The following example defines a procedure to do this.
 
 ```vb
 Sub addStandardText(XmlDoc As System.Xml.XmlDocument)
@@ -73,7 +73,7 @@ Sub addStandardText(XmlDoc As System.Xml.XmlDocument)
 End Sub
 ```
 
-Каждый объект XML-документа может затем вызвать процедуру и передать его текущий экземпляр в качестве аргумента. В следующем примере это показано.
+Every XML document object could then call the procedure and pass its current instance as an argument. В следующем примере это показано.
 
 ```vb
 addStandardText(Me)
@@ -84,6 +84,6 @@ addStandardText(Me)
 - [Объектные переменные](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
 - [Объявление объектной переменной](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)
 - [Значения объектных переменных](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)
-- [Практическое руководство. Объявите объектную переменную и присвойте ей объект в Visual Basic](../../../../visual-basic/programming-guide/language-features/variables/how-to-declare-an-object-variable-and-assign-an-object-to-it.md)
-- [Практическое руководство. Сделать объектную переменную нессылающейся на любой экземпляр](../../../../visual-basic/programming-guide/language-features/variables/how-to-make-an-object-variable-not-refer-to-any-instance.md)
+- [How to: Declare an Object Variable and Assign an Object to It in Visual Basic](../../../../visual-basic/programming-guide/language-features/variables/how-to-declare-an-object-variable-and-assign-an-object-to-it.md)
+- [Практическое руководство. Как сделать так, чтобы объектная переменная не указывала ни на какой экземпляр](../../../../visual-basic/programming-guide/language-features/variables/how-to-make-an-object-variable-not-refer-to-any-instance.md)
 - [Me, My, MyBase и MyClass](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)

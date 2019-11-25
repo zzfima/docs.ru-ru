@@ -1,17 +1,17 @@
 ---
-title: Вариативность в делегатах (Visual Basic)
+title: Вариативность в делегатах
 ms.date: 07/20/2015
 ms.assetid: 38e9353f-74f8-4211-a8f0-7a495414df4a
-ms.openlocfilehash: 0c52fd3fb36162de16a91a85088018f4f579611c
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 11146bc4a60f55fc0373f0b5dfa5d44dcf748a5b
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69664339"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349004"
 ---
-# <a name="variance-in-delegates-visual-basic"></a>Вариативность в делегатах (Visual Basic)
+# <a name="variance-in-delegates-visual-basic"></a>Variance in Delegates (Visual Basic)
 
-В .NET Framework 3,5 введена поддержка вариативности для сопоставления сигнатур методов с типами делегатов C# во всех делегатах в и Visual Basic. Это означает, что делегатам можно назначать не только методы, которые обладают соответствующими сигнатурами, но и методы, которые возвращают более производные типы (ковариация), или принимают параметры, которые имеют менее производные типы (контравариативность), чем указано в типе делегата. Это касается не только универсальных методов-делегатов, но и методов-делегатов, не являющихся универсальными.
+.NET Framework 3.5 introduced variance support for matching method signatures with delegate types in all delegates in C# and Visual Basic. Это означает, что делегатам можно назначать не только методы, которые обладают соответствующими сигнатурами, но и методы, которые возвращают более производные типы (ковариация), или принимают параметры, которые имеют менее производные типы (контравариативность), чем указано в типе делегата. Это касается не только универсальных методов-делегатов, но и методов-делегатов, не являющихся универсальными.
 
 Например, рассмотрим следующий код, который содержит два класса и два делегата: универсальный и неуниверсальный.
 
@@ -76,11 +76,11 @@ Dim dGeneric As SampleGenericDelegate(Of Second, First) = AddressOf ASecondRFirs
 Dim dGenericConversion As SampleGenericDelegate(Of Second, First) = AddressOf AFirstRSecond
 ```
 
-Дополнительные примеры см. [в разделе Использование вариативности в делегатах (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md) и [Использование вариативности для универсальных делегатов Func и Action (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md).
+For more examples, see [Using Variance in Delegates (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md) and [Using Variance for Func and Action Generic Delegates (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md).
 
 ## <a name="variance-in-generic-type-parameters"></a>Вариативность в параметрах универсального типа
 
-В .NET Framework 4 и более поздних версиях можно включить неявное преобразование между делегатами, чтобы универсальные делегаты с разными типами, заданными параметрами универсального типа, могли быть назначены друг другу, если типы наследуются друг от друга, как требуется для Вариация.
+In .NET Framework 4 and later you can enable implicit conversion between delegates, so that generic delegates that have different types specified by generic type parameters can be assigned to each other, if the types are inherited from each other as required by variance.
 
 Чтобы включить неявное преобразование, необходимо явно объявить универсальные параметры в делегате как ковариантные или контравариантные с помощью ключевого слова `in` или `out`.
 
@@ -99,7 +99,7 @@ End Sub
 
 Если поддержка вариативности используется только для сопоставления сигнатур методов с типами делегатов, а ключевые слова `in` и `out` не используются, можно создать экземпляры делегатов с одинаковыми лямбда-выражениями или методами, но нельзя назначить один делегат другому.
 
-В следующем примере `SampleGenericDelegate(Of String)` кода невозможно явно преобразовать в `SampleGenericDelegate(Of Object)`, хотя `String` наследует `Object`. Эту проблему можно устранить, пометив универсальный параметр `T` ключевым словом `out`.
+In the following code example, `SampleGenericDelegate(Of String)` can't be explicitly converted to `SampleGenericDelegate(Of Object)`, although `String` inherits `Object`. Эту проблему можно устранить, пометив универсальный параметр `T` ключевым словом `out`.
 
 ```vb
 Public Delegate Function SampleGenericDelegate(Of T)() As T
@@ -133,7 +133,7 @@ End Sub
 
 - Делегат <xref:System.Converter%602>
 
-Дополнительные сведения и примеры см. [в разделе Использование вариативности универсальных делегатов Func и Action (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md).
+For more information and examples, see [Using Variance for Func and Action Generic Delegates (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md).
 
 ### <a name="declaring-variant-type-parameters-in-generic-delegates"></a>Объявление вариативных параметров типа в универсальных методах-делегатах
 
@@ -152,7 +152,7 @@ Public Delegate Sub DContravariant(Of In A)(ByVal a As A)
 ```
 
 > [!IMPORTANT]
-> `ByRef`параметры в Visual Basic не могут быть помечены как Variant.
+> `ByRef` parameters in Visual Basic can't be marked as variant.
 
 В одном делегате можно реализовать поддержку вариативности и ковариации, но для разных параметров типа. Эти действия показаны в следующем примере.
 
@@ -171,7 +171,7 @@ dvariant("test")
 
 ### <a name="combining-variant-generic-delegates"></a>Объединение вариативных универсальных методов-делегатов
 
-Не следует объединять вариантные делегаты. Метод <xref:System.Delegate.Combine%2A> не поддерживает преобразование вариантных делегатов и ожидает делегаты того же самого типа. Это может привести к исключению времени выполнения при объединении делегатов с помощью <xref:System.Delegate.Combine%2A> метода (в C# и Visual Basic) `+` или с помощью оператора (в C#), как показано в следующем примере кода.
+Не следует объединять вариантные делегаты. Метод <xref:System.Delegate.Combine%2A> не поддерживает преобразование вариантных делегатов и ожидает делегаты того же самого типа. This can lead to a run-time exception when you combine delegates either by using the <xref:System.Delegate.Combine%2A> method (in C# and Visual Basic) or by using the `+` operator (in C#), as shown in the following code example.
 
 ```vb
 Dim actObj As Action(Of Object) = Sub(x) Console.WriteLine("object: {0}", x)
@@ -183,7 +183,7 @@ Dim actStr As Action(Of String) = Sub(x) Console.WriteLine("string: {0}", x)
 
 ## <a name="variance-in-generic-type-parameters-for-value-and-reference-types"></a>Вариативность в параметрах универсального типа для значения и ссылочных типов
 
-Вариативность для параметров универсального типа поддерживается только для ссылочных типов. Например, `DVariant(Of Int)`не может быть неявно преобразован в `DVariant(Of Object)` или `DVariant(Of Long)`, поскольку Integer является типом значения.
+Вариативность для параметров универсального типа поддерживается только для ссылочных типов. For example, `DVariant(Of Int)`can't be implicitly converted to `DVariant(Of Object)` or `DVariant(Of Long)`, because integer is a value type.
 
 В следующем примере показано, что вариативность в параметрах универсального типа не поддерживается для типов значения.
 
@@ -207,9 +207,9 @@ Sub Test()
 End Sub
 ```
 
-## <a name="relaxed-delegate-conversion-in-visual-basic"></a>Неявное преобразование делегата в Visual Basic
+## <a name="relaxed-delegate-conversion-in-visual-basic"></a>Relaxed Delegate Conversion in Visual Basic
 
-Неявное преобразование делегатов обеспечивает большую гибкость при сопоставлении сигнатур методов с типами делегатов. Например, он позволяет опускать спецификации параметров и опускать возвращаемые значения функции при назначении метода делегату. Дополнительные сведения см. в разделе неявное [преобразование делегата](../../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md).
+Relaxed delegate conversion enables more flexibility in matching method signatures with delegate types. For example, it lets you omit parameter specifications and omit function return values when you assign a method to a delegate. For more information, see [Relaxed Delegate Conversion](../../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md).
 
 ## <a name="see-also"></a>См. также
 

@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Используйте класс, в котором определяются операторы (Visual Basic)
+title: Практическое руководство. Использование класса, в котором определяются операторы
 ms.date: 07/20/2015
 helpviewer_keywords:
 - operator procedures [Visual Basic], calling
@@ -11,33 +11,33 @@ helpviewer_keywords:
 - return values [Visual Basic], Operator procedures
 - operator overloading
 ms.assetid: 7ccce94a-6ca0-47d1-9f3f-13385d34f5d5
-ms.openlocfilehash: bd512adf2f06ed0fbd3d36ed3175a0928bf1c57c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9ec4b4c07910100dd02cc86e882b44aa7dbd2ced
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61863497"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346040"
 ---
-# <a name="how-to-use-a-class-that-defines-operators-visual-basic"></a>Практическое руководство. Используйте класс, в котором определяются операторы (Visual Basic)
-Если вы используете класс или структура, определяющая свои собственные операторы, эти операторы доступен в Visual Basic.  
+# <a name="how-to-use-a-class-that-defines-operators-visual-basic"></a>Практическое руководство. Использование класса, в котором определяются операторы (Visual Basic)
+If you are using a class or structure that defines its own operators, you can access those operators from Visual Basic.  
   
- Определение оператора в классе или структуре также называется *перегрузка* оператора.  
+ Defining an operator on a class or structure is also called *overloading* the operator.  
   
 ## <a name="example"></a>Пример  
- Следующий пример обращается к структуре SQL <xref:System.Data.SqlTypes.SqlString>, который определяет операторы преобразования ([функция CType](../../../../visual-basic/language-reference/functions/ctype-function.md)) в обоих направлениях между строкой SQL и Visual Basic строка. Используйте `CType(` *строковое выражение SQL*, `String)` для преобразования строки SQL в Visual Basic строку и `CType(` *строковое выражение Visual Basic*, <xref:System.Data.SqlTypes.SqlString> `)` для преобразования в другом направлении.  
+ The following example accesses the SQL structure <xref:System.Data.SqlTypes.SqlString>, which defines the conversion operators ([CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md)) in both directions between a SQL string and a Visual Basic string. Use `CType(`*SQL string expression*, `String)` to convert a SQL string to a Visual Basic string, and `CType(`*Visual Basic string expression*, <xref:System.Data.SqlTypes.SqlString>`)` to convert in the other direction.  
   
  [!code-vb[VbVbcnProcedures#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#30)]  
   
  [!code-vb[VbVbcnProcedures#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#31)]  
   
- <xref:System.Data.SqlTypes.SqlString> Структура определяет оператор преобразования ([функция CType](../../../../visual-basic/language-reference/functions/ctype-function.md)) из `String` для <xref:System.Data.SqlTypes.SqlString> , а другой из <xref:System.Data.SqlTypes.SqlString> для `String`. Оператор, который присваивает `title` для `jobTitle` использует первый оператор и <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> вызова функции используется второй.  
+ The <xref:System.Data.SqlTypes.SqlString> structure defines a conversion operator ([CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md)) from `String` to <xref:System.Data.SqlTypes.SqlString> and another from <xref:System.Data.SqlTypes.SqlString> to `String`. The statement that assigns `title` to `jobTitle` makes use of the first operator, and the <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> function call uses the second.  
   
 ## <a name="compiling-the-code"></a>Компиляция кода  
- Убедитесь, что класс или структура, которую вы используете определяет оператор, который вы хотите использовать. Не следует предполагать, что класс или структура определена в каждый доступный для перегрузки оператора. Список доступных операторов, см. в разделе [Operator Statement](../../../../visual-basic/language-reference/statements/operator-statement.md).  
+ Be sure the class or structure you are using defines the operator you want to use. Do not assume that the class or structure has defined every operator available for overloading. For a list of available operators, see [Operator Statement](../../../../visual-basic/language-reference/statements/operator-statement.md).  
   
- Включить соответствующую `Imports` инструкции для SQL-строку в начало файла исходного кода (в данном случае <xref:System.Data.SqlTypes>).  
+ Include the appropriate `Imports` statement for the SQL string at the beginning of your source file (in this case <xref:System.Data.SqlTypes>).  
   
- Ваш проект должен содержать ссылки на System.Data и System.XML.  
+ Your project must have references to System.Data and System.XML.  
   
 ## <a name="see-also"></a>См. также
 

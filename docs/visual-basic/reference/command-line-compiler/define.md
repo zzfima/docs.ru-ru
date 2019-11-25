@@ -1,5 +1,5 @@
 ---
-title: -define (Visual Basic)
+title: -define
 ms.date: 03/10/2018
 helpviewer_keywords:
 - -d compiler option [Visual Basic]
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - /define compiler option [Visual Basic]
 - define compiler option [Visual Basic]
 ms.assetid: f735c57d-1cf9-4f2f-a26f-0de630fd4077
-ms.openlocfilehash: 5b2c0173416418f67446c5441a93e5b06e93dc12
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: fd0875f09bf3ba7211ede500aa0da45f8b7cd2c7
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72002381"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344762"
 ---
 # <a name="-define-visual-basic"></a>-define (Visual Basic)
 Задает константы условной компиляции.  
@@ -25,7 +25,7 @@ ms.locfileid: "72002381"
 -define:["]symbol[=value][,symbol[=value]]["]  
 ```
 
-или
+or
 
 ```console  
 -d:["]symbol[=value][,symbol[=value]]["]  
@@ -36,10 +36,10 @@ ms.locfileid: "72002381"
 |Термин|Определение|  
 |---|---|  
 |`symbol`|Обязательный. Определяемый символ.|  
-|`value`|Необязательный параметр. Значение, которому назначается `symbol`. Если `value` является строкой, ее необходимо заключить в кавычки или последовательности (\\ ") вместо кавычек. Если значение не задано, считается, что используется значение True.|  
+|`value`|Необязательный. Значение, которому назначается `symbol`. If `value` is a string, it must be surrounded by backslash/quotation-mark sequences (\\") instead of quotation marks. Если значение не задано, считается, что используется значение True.|  
   
-## <a name="remarks"></a>Примечания  
- Параметр `-define` действует аналогично директиве препроцессора `#Const` в исходном файле, за исключением того, что константы, определенные с помощью `-define`, являются открытыми и применяются ко всем файлам в проекте.  
+## <a name="remarks"></a>Заметки  
+ The `-define` option has an effect similar to using a `#Const` preprocessor directive in your source file, except that constants defined with `-define` are public and apply to all files in the project.  
   
  Вы можете использовать символы, созданные этим параметром с помощью директивы `#If`...`Then`...`#Else`, для условной компиляции исходных файлов.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "72002381"
   
 |Задание параметра /define в интегрированной среде разработки Visual Studio|  
 |---|  
-|1.  Выберите проект в **Обозревателе решений**. В меню **Проект** выберите пункт **Свойства**. <br />2.  Откройте вкладку **Компиляция**.<br />3.  Нажмите кнопку **Дополнительно**.<br />4.  Измените значение в поле **пользовательские константы** .|  
+|1.  Have a project selected in **Solution Explorer**. В меню **Проект** выберите пункт **Свойства**. <br />2.  Click the **Compile** tab.<br />3.  Click **Advanced**.<br />4.  Modify the value in the **Custom Constants** box.|  
   
 ## <a name="example"></a>Пример  
  В следующем примере кода определяются и используются две константы условной компиляции.  

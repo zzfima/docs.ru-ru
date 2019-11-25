@@ -1,19 +1,19 @@
 ---
-title: Отмена асинхронной задачи или списка задач (Visual Basic)
+title: Отмена асинхронной задачи или списка задач
 ms.date: 07/20/2015
 ms.assetid: a9ee1b71-5bec-4736-a1e9-448042dd7215
-ms.openlocfilehash: 89a78e9e423ab4cce9fd3627ec433072ade238dc
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 2956582cd0c8e044fcd37ffab13686489a7c854c
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73419871"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347965"
 ---
-# <a name="cancel-an-async-task-or-a-list-of-tasks-visual-basic"></a>Отмена асинхронной задачи или списка задач (Visual Basic)
+# <a name="cancel-an-async-task-or-a-list-of-tasks-visual-basic"></a>Cancel an Async Task or a List of Tasks (Visual Basic)
 
 Вы можете настроить кнопку, которая позволит отменить асинхронное приложение в случае, если вы не захотите дожидаться его завершения. Выполнив код в приведенных ниже примерах, вы сможете добавить в приложение кнопку отмены, загружающую содержимое одного веб-сайта или список веб-сайтов.
 
-В примерах используется пользовательский интерфейс для [точной настройки приложения async (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md) .
+The examples use the UI that [Fine-Tuning Your Async Application (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md) describes.
 
 > [!NOTE]
 > Для выполнения примеров необходимо, чтобы на компьютере были установлены Visual Studio 2012 или более поздняя версия и .NET Framework 4.5 или более поздняя версия.
@@ -38,7 +38,7 @@ ms.locfileid: "73419871"
 
      Нажмите сочетание клавиш CTRL+F5, чтобы запустить проект без отладки.
 
- Если вы не хотите загружать проект, можно ознакомиться с файлами MainWindow. XAML. vb в конце этого раздела.
+ If you don't want to download the project, you can review the MainWindow.xaml.vb files at the end of this topic.
 
 ### <a name="building-the-example"></a>Построение примера
 
@@ -46,7 +46,7 @@ ms.locfileid: "73419871"
 
 Для самостоятельной сборки примера шаг за шагом выполните инструкции в разделе "Загрузка примера", но в качестве **запускаемого проекта** выберите проект **StarterCode**, а не **CancelATask**.
 
-Затем добавьте следующие изменения в файл MainWindow. XAML. vb этого проекта.
+Then add the following changes to the MainWindow.xaml.vb file of that project.
 
 1. Объявите переменную `CancellationTokenSource`, `cts`, которая находится в области действия всех методов, имеющих к ней доступ.
 
@@ -124,14 +124,14 @@ ms.locfileid: "73419871"
     End Function
     ```
 
-5. Если вы не отмените работу программы, она выдаст следующие выходные данные:
+5. If you don’t cancel the program, it produces the following output:
 
     ```console
     Ready to download.
     Length of the downloaded string: 158125.
     ```
 
-    Если нажать кнопку **Отмена** до того, как программа закончит загрузку содержимого, программа выдаст следующие выходные данные:
+    If you choose the **Cancel** button before the program finishes downloading the content, the program produces the following output:
 
     ```console
     Ready to download.
@@ -158,7 +158,7 @@ ms.locfileid: "73419871"
 
      Нажмите сочетание клавиш CTRL+F5, чтобы запустить проект без отладки.
 
- Если вы не хотите загружать проект, можно ознакомиться с файлами MainWindow. XAML. vb в конце этого раздела.
+ If you don't want to download the project, you can review the MainWindow.xaml.vb files at the end of this topic.
 
 ### <a name="building-the-example"></a>Построение примера
 
@@ -221,7 +221,7 @@ ms.locfileid: "73419871"
     Await AccessTheWebAsync(cts.Token)
     ```
 
-5. Если вы не отмените работу программы, она выдаст следующие выходные данные:
+5. If you don’t cancel the program, it produces the following output:
 
     ```console
     Length of the downloaded string: 35939.
@@ -261,7 +261,7 @@ ms.locfileid: "73419871"
 
 ### <a name="cancel-a-task-example"></a>Пример отмены задачи
 
-Следующий код представляет собой полный файл MainWindow. XAML. vb для примера, который отменяет одну задачу.
+The following code is the complete MainWindow.xaml.vb file for the example that cancels a single task.
 
 ```vb
 ' Add an Imports directive and a reference for System.Net.Http.
@@ -346,7 +346,7 @@ End Class
 
 ### <a name="cancel-a-list-of-tasks-example"></a>Примеры отмены списка задач
 
-Следующий код является полным файлом MainWindow. XAML. vb для примера, который отменяет список задач.
+The following code is the complete MainWindow.xaml.vb file for the example that cancels a list of tasks.
 
 ```vb
 ' Add an Imports directive and a reference for System.Net.Http.

@@ -1,24 +1,24 @@
 ---
-title: Ссылки на объявленные элементы (Visual Basic)
+title: References to Declared Elements
 ms.date: 07/20/2015
 helpviewer_keywords:
 - declared elements [Visual Basic]
 - references [Visual Basic], declared elements
 - qualified names [Visual Basic]
 ms.assetid: d6301709-f4cc-4b7a-b8ba-80898f14ab46
-ms.openlocfilehash: de4d42803be48a87f4dfd37a92b1b22fa2d5c554
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: a6477a9f0abaf8eb9176f4f6ab2a920af6c8f500
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524551"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345299"
 ---
 # <a name="references-to-declared-elements-visual-basic"></a>Ссылки на объявленные элементы (Visual Basic)
-Когда код ссылается на объявленный элемент, компилятор Visual Basic сопоставляет имя в ссылке с соответствующим объявлением этого имени. Если с одним и тем же именем объявлено несколько элементов, можно указать, к какому из этих элементов следует обращаться с помощью *уточнения* его имени.  
+When your code refers to a declared element, the Visual Basic compiler matches the name in your reference to the appropriate declaration of that name. If more than one element is declared with the same name, you can control which of those elements is to be referenced by *qualifying* its name.  
   
- Компилятор пытается сопоставить ссылку на имя с объявлением имени с *самой короткой областью*. Это означает, что он начинается с кода, который делает ссылку и работает наружу через последовательные уровни содержащихся элементов.  
+ The compiler attempts to match a name reference to a name declaration with the *narrowest scope*. This means it starts with the code making the reference and works outward through successive levels of containing elements.  
   
- В следующем примере показаны ссылки на две переменные с одинаковым именем. В примере объявляются две переменные, каждая с именем `totalCount`, на разных уровнях области в `container` модуля. Если процедура `showCount` отображает `totalCount` без квалификации, компилятор Visual Basic разрешает ссылку на объявление с самой узкий областью, а именно локальное объявление в `showCount`. Когда он определяет `totalCount`, содержащий `container` модуля, компилятор разрешает ссылку на объявление с более широкой областью.  
+ The following example shows references to two variables with the same name. The example declares two variables, each named `totalCount`, at different levels of scope in module `container`. When the procedure `showCount` displays `totalCount` without qualification, the Visual Basic compiler resolves the reference to the declaration with the narrowest scope, namely the local declaration inside `showCount`. When it qualifies `totalCount` with the containing module `container`, the compiler resolves the reference to the declaration with the broader scope.  
   
 ```vb  
 ' Assume these two modules are both in the same assembly.  
@@ -41,16 +41,16 @@ Module callingModule
 End Module  
 ```  
   
-## <a name="qualifying-an-element-name"></a>Уточнение имени элемента  
- Если вы хотите переопределить этот процесс поиска и указать имя, объявленное в более широкой области видимости, необходимо *уточнить* имя с помощью содержащего его элемента из более широкой области. В некоторых случаях может также потребоваться квалификация содержащего его элемента.  
+## <a name="qualifying-an-element-name"></a>Qualifying an Element Name  
+ If you want to override this search process and specify a name declared in a broader scope, you must *qualify* the name with the containing element of the broader scope. In some cases, you might also have to qualify the containing element.  
   
- Уточнение имени означает, что перед ним в исходном операторе содержатся сведения, указывающие, где определен целевой элемент. Эти сведения называются *уточняющей строкой*. Он может включать одно или несколько пространств имен, а также модуль, класс или структуру.  
+ Qualifying a name means preceding it in your source statement with information that identifies where the target element is defined. This information is called a *qualification string*. It can include one or more namespaces and a module, class, or structure.  
   
- Уточняющая строка должна однозначно указывать модуль, класс или структуру, содержащую целевой элемент. Контейнер может находиться в другом содержащем его элементе, обычно в пространстве имен. Может потребоваться включить несколько элементов, содержащихся в уточняющей строке.  
+ The qualification string should unambiguously specify the module, class, or structure containing the target element. The container might in turn be located in another containing element, usually a namespace. You might need to include several containing elements in the qualification string.  
   
-#### <a name="to-access-a-declared-element-by-qualifying-its-name"></a>Получение доступа к объявленному элементу с помощью уточнения его имени  
+#### <a name="to-access-a-declared-element-by-qualifying-its-name"></a>To access a declared element by qualifying its name  
   
-1. Определите расположение, в котором был определен элемент. Это может быть пространство имен или даже иерархия пространств имен. В пространстве имен самого низкого уровня элемент должен содержаться в модуле, классе или структуре.  
+1. Determine the location in which the element has been defined. This might include a namespace, or even a hierarchy of namespaces. Within the lowest-level namespace, the element must be contained in a module, class, or structure.  
   
     ```vb  
     ' Assume the following hierarchy exists outside your code.  
@@ -66,23 +66,23 @@ End Module
     End Namespace  
     ```  
   
-2. Определите классификационный путь на основе расположения целевого элемента. Начните с пространства имен наивысшего уровня, перейдите к пространству имен самого низкого уровня и завершите работу с модулем, классом или структурой, содержащей целевой элемент. Каждый элемент в пути должен содержать элемент, следующий за ним.  
+2. Determine a qualification path based on the target element's location. Start with the highest-level namespace, proceed to the lowest-level namespace, and end with the module, class, or structure containing the target element. Each element in the path must contain the element that follows it.  
   
      `outerSpace` → `innerSpace` → `holdsTotals` → `totals`  
   
-3. Подготовьте уточняющую строку для целевого элемента. Поместите точку (`.`) после каждого элемента в пути. Приложение должно иметь доступ к каждому элементу в уточняющей строке.  
+3. Prepare the qualification string for the target element. Place a period (`.`) after every element in the path. Your application must have access to every element in your qualification string.  
   
     ```vb  
     outerSpace.innerSpace.holdsTotals.totals.  
     ```  
   
-4. Напишите выражение или оператор присваивания, ссылающийся на целевой элемент обычным способом.  
+4. Write the expression or assignment statement referring to the target element in the normal way.  
   
     ```vb  
     grandTotal = 9000  
     ```  
   
-5. Перед именем целевого элемента введите уточняющую строку. Имя должно следовать за точкой (`.`) после модуля, класса или структуры, содержащей элемент.  
+5. Precede the target element name with the qualification string. The name should immediately follow the period (`.`) that follows the module, class, or structure that contains the element.  
   
     ```vb  
     ' Assume the following module is part of your code.  
@@ -93,9 +93,9 @@ End Module
     End Module  
     ```  
   
-6. Компилятор использует строку квалификации для поиска четкого однозначного объявления, к которому он может сопоставить ссылку на целевой элемент.  
+6. The compiler uses the qualification string to find a clear, unambiguous declaration to which it can match the target element reference.  
   
- Также может потребоваться уточнение ссылки на имя, если приложение имеет доступ к более чем одному элементу программирования с тем же именем. Например, пространства имен <xref:System.Windows.Forms> и <xref:System.Web.UI.WebControls> содержат класс `Label` (<xref:System.Windows.Forms.Label?displayProperty=nameWithType> и <xref:System.Web.UI.WebControls.Label?displayProperty=nameWithType>). Если приложение использует оба объекта или определяет собственный класс `Label`, необходимо отличать разные объекты `Label`. Включите пространство имен или псевдоним импорта в объявление переменной. В следующем примере используется псевдоним Import.  
+ You might also have to qualify a name reference if your application has access to more than one programming element that has the same name. For example, the <xref:System.Windows.Forms> and <xref:System.Web.UI.WebControls> namespaces both contain a `Label` class (<xref:System.Windows.Forms.Label?displayProperty=nameWithType> and <xref:System.Web.UI.WebControls.Label?displayProperty=nameWithType>). If your application uses both, or if it defines its own `Label` class, you must distinguish the different `Label` objects. Include the namespace or import alias in the variable declaration. The following example uses the import alias.  
   
 ```vb  
 ' The following statement must precede all your declarations.  
@@ -104,21 +104,21 @@ Imports win = System.Windows.Forms, web = System.Web.UI.WebControls
 Dim winLabel As New win.Label()  
 ```  
   
-## <a name="members-of-other-containing-elements"></a>Члены других содержащих элементов  
- При использовании несовместного члена другого класса или структуры необходимо сначала уточнить имя члена с помощью переменной или выражения, указывающего на экземпляр класса или структуры. В следующем примере `demoClass` является экземпляром класса с именем `class1`.  
+## <a name="members-of-other-containing-elements"></a>Members of Other Containing Elements  
+ When you use a nonshared member of another class or structure, you must first qualify the member name with a variable or expression that points to an instance of the class or structure. In the following example, `demoClass` is an instance of a class named `class1`.  
   
 ```vb  
 Dim demoClass As class1 = New class1()  
 demoClass.someSub[(argumentlist)]  
 ```  
   
- Нельзя использовать имя класса для определения члена, который не является [общим](../../../../visual-basic/language-reference/modifiers/shared.md). Сначала необходимо создать экземпляр в объектной переменной (в данном случае `demoClass`), а затем сослаться на него по имени переменной.  
+ You cannot use the class name itself to qualify a member that is not [Shared](../../../../visual-basic/language-reference/modifiers/shared.md). You must first create an instance in an object variable (in this case `demoClass`) and then reference it by the variable name.  
   
- Если класс или структура имеет элемент `Shared`, можно указать, что этот элемент имеет имя класса или структуры либо переменную или выражение, которое указывает на экземпляр.  
+ If a class or structure has a `Shared` member, you can qualify that member either with the class or structure name or with a variable or expression that points to an instance.  
   
- Модуль не имеет отдельных экземпляров, и все его члены `Shared` по умолчанию. Таким образом, для члена модуля необходимо указать имя модуля.  
+ A module does not have any separate instances, and all its members are `Shared` by default. Therefore, you qualify a module member with the module name.  
   
- В следующем примере показаны полные ссылки на процедуры членов модуля. В примере объявляются две `Sub` процедуры, как именованные `perform`, в разных модулях проекта. Каждый из них можно указать без квалификации в своем собственном модуле, но должен быть квалифицирован при ссылке из любого места. Поскольку последняя ссылка в `module3` не имеет квалификаторов `perform`, компилятор не может разрешить эту ссылку.  
+ The following example shows qualified references to module member procedures. The example declares two `Sub` procedures, both named `perform`, in different modules in a project. Each one can be specified without qualification within its own module but must be qualified if referenced from anywhere else. Because the final reference in `module3` does not qualify `perform`, the compiler cannot resolve that reference.  
   
 ```vb  
 ' Assume these three modules are all in the same assembly.  
@@ -149,10 +149,10 @@ Module module3
 End Module  
 ```  
   
-## <a name="references-to-projects"></a>Ссылки на проекты  
- Чтобы использовать [открытые](../../../../visual-basic/language-reference/modifiers/public.md) элементы, определенные в другом проекте, необходимо сначала задать *ссылку* на сборку или библиотеку типов этого проекта. Чтобы задать ссылку, щелкните **Добавить ссылку** в меню **проект** или используйте параметр компилятора командной строки [-Reference (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/reference.md) .  
+## <a name="references-to-projects"></a>References to Projects  
+ To use [Public](../../../../visual-basic/language-reference/modifiers/public.md) elements defined in another project, you must first set a *reference* to that project's assembly or type library. To set a reference, click **Add Reference** on the **Project** menu, or use the [-reference (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/reference.md) command-line compiler option.  
   
- Например, можно использовать объектную модель XML .NET Framework. Если задать ссылку на пространство имен <xref:System.Xml>, можно объявить и использовать любой из его классов, например <xref:System.Xml.XmlDocument>. В следующем примере используется <xref:System.Xml.XmlDocument>.  
+ For example, you can use the XML object model of the .NET Framework. If you set a reference to the <xref:System.Xml> namespace, you can declare and use any of its classes, such as <xref:System.Xml.XmlDocument>. The following example uses <xref:System.Xml.XmlDocument>.  
   
 ```vb  
 ' Assume this project has a reference to System.Xml  
@@ -160,8 +160,8 @@ End Module
 Dim xDoc As System.Xml.XmlDocument  
 ```  
   
-## <a name="importing-containing-elements"></a>Импорт содержащих элементов  
- Для *импорта* пространств имен, содержащих модули или классы, которые необходимо использовать, можно использовать [оператор Imports (пространство имен .NET и тип)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) . Это позволяет ссылаться на элементы, определенные в импортированном пространстве имен, без указания полных имен. В следующем примере показана перезапись предыдущего примера для импорта пространства имен <xref:System.Xml>.  
+## <a name="importing-containing-elements"></a>Importing Containing Elements  
+ You can use the [Imports Statement (.NET Namespace and Type)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) to *import* the namespaces that contain the modules or classes that you want to use. This enables you to refer to the elements defined in an imported namespace without fully qualifying their names. The following example rewrites the previous example to import the <xref:System.Xml> namespace.  
   
 ```vb  
 ' Assume this project has a reference to System.Xml  
@@ -171,7 +171,7 @@ Imports System.Xml
 Dim xDoc As XmlDocument  
 ```  
   
- Кроме того, оператор `Imports` может определять *Псевдоним импорта* для каждого импортированного пространства имен. Это может сделать исходный код короче и проще в чтении. В следующем примере показана перезапись предыдущего примера для использования `xD` в качестве псевдонима для пространства имен <xref:System.Xml>.  
+ In addition, the `Imports` statement can define an *import alias* for each imported namespace. This can make the source code shorter and easier to read. The following example rewrites the previous example to use `xD` as an alias for the <xref:System.Xml> namespace.  
   
 ```vb  
 ' Assume this project has a reference to System.Xml  
@@ -181,17 +181,17 @@ Imports xD = System.Xml
 Dim xDoc As xD.XmlDocument  
 ```  
   
- Инструкция `Imports` не делает элементы из других проектов доступными для приложения. Это значит, что не стоит устанавливать ссылку. При импорте пространства имен просто удаляются требования для уточнения имен, определенных в этом пространстве имен.  
+ The `Imports` statement does not make elements from other projects available to your application. That is, it does not take the place of setting a reference. Importing a namespace just removes the requirement to qualify the names defined in that namespace.  
   
- Можно также использовать инструкцию `Imports` для импорта модулей, классов, структур и перечислений. Затем можно использовать члены таких импортированных элементов без уточнения. Однако необходимо всегда уточнять несовместное использование членов классов и структур переменной или выражением, результатом которого является экземпляр класса или структуры.  
+ You can also use the `Imports` statement to import modules, classes, structures, and enumerations. You can then use the members of such imported elements without qualification. However, you must always qualify nonshared members of classes and structures with a variable or expression that evaluates to an instance of the class or structure.  
   
 ## <a name="naming-guidelines"></a>Правила именования  
- При определении двух или более элементов программирования с одинаковыми именами может возникнуть *неоднозначность имени* , когда компилятор пытается разрешить ссылку на это имя. Если в области есть несколько определений или если определение не находится в области видимости, то используется ссылка неразрешимая. Пример см. на странице справки «пример с полными ссылками».  
+ When you define two or more programming elements that have the same name, a *name ambiguity* can result when the compiler attempts to resolve a reference to that name. If more than one definition is in scope, or if no definition is in scope, the reference is irresolvable. For an example, see "Qualified Reference Example" on this Help page.  
   
- Неоднозначность имен можно избежать, присваивая всем элементам уникальные имена. Затем можно сделать ссылку на любой элемент, не указывая его имя с помощью пространства имен, модуля или класса. Кроме того, уменьшается вероятность случайной ссылки на неправильный элемент.  
+ You can avoid name ambiguity by giving all your elements unique names. Then you can make reference to any element without having to qualify its name with a namespace, module, or class. You also reduce the chances of accidentally referring to the wrong element.  
   
 ## <a name="shadowing"></a>Удаленное управление  
- Если два программных элемента имеют одно и то же имя, один из них может скрыть или *затенить*другой. Затененный элемент недоступен для справки; Вместо этого, если в коде используется имя затененного элемента, компилятор Visual Basic разрешает его в элемент с тенью. Более подробное объяснение с примерами см. [в разделе теневая поддержка в Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).  
+ When two programming elements share the same name, one of them can hide, or *shadow*, the other one. A shadowed element is not available for reference; instead, when your code uses the shadowed element name, the Visual Basic compiler resolves it to the shadowing element. For a more detailed explanation with examples, see [Shadowing in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).  
   
 ## <a name="see-also"></a>См. также
 

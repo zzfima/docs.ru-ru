@@ -1,5 +1,5 @@
 ---
-title: Устранение неполадок, связанных с типами данных (Visual Basic)
+title: Устранение неполадок, связанных с типами данных
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Char data type [Visual Basic], converting
@@ -19,116 +19,116 @@ helpviewer_keywords:
 - floating-point numbers [Visual Basic], comparison
 - floating-point numbers
 ms.assetid: 90040d67-b630-4125-a6ae-37195b079042
-ms.openlocfilehash: 2bef3069c2788f435831dceab227f4ab9f422e73
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 63b2513e420320742bf7e25314743f08404f46a7
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72583095"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350517"
 ---
 # <a name="troubleshooting-data-types-visual-basic"></a>Устранение неполадок, связанных с типами данных (Visual Basic)
 
-На этой странице перечислены некоторые распространенные проблемы, которые могут возникнуть при выполнении операций с внутренними типами данных.
+This page lists some common problems that can occur when you perform operations on intrinsic data types.
 
-## <a name="floating-point-expressions-do-not-compare-as-equal"></a>Выражения с плавающей запятой не считаются равными
+## <a name="floating-point-expressions-do-not-compare-as-equal"></a>Floating-Point Expressions Do Not Compare as Equal
 
-При работе с числами с плавающей запятой ([один тип данных](../../../../visual-basic/language-reference/data-types/single-data-type.md) и [тип данных Double](../../../../visual-basic/language-reference/data-types/double-data-type.md)) помните, что они хранятся в виде двоичных дробей. Это означает, что они не могут содержать точное представление любого количества, которое не является двоичной дробью (в форме k/(2 ^ n), где k и n являются целыми числами). Например, 0,5 (= 1/2) и 0,3125 (= 5/16) могут храниться как точные значения, тогда как 0,2 (= 1/5) и 0,3 (= 3/10) могут быть только приближениями.
+When you work with floating-point numbers ([Single Data Type](../../../../visual-basic/language-reference/data-types/single-data-type.md) and [Double Data Type](../../../../visual-basic/language-reference/data-types/double-data-type.md)), remember that they are stored as binary fractions. This means they cannot hold an exact representation of any quantity that is not a binary fraction (of the form k / (2 ^ n) where k and n are integers). For example, 0.5 (= 1/2) and 0.3125 (= 5/16) can be held as precise values, whereas 0.2 (= 1/5) and 0.3 (= 3/10) can be only approximations.
 
-Из-за этого неточности нельзя полагаться на точные результаты при работе с значениями с плавающей запятой. В частности, два значения, которые теоретически равны, могут иметь несколько различных представлений.
+Because of this imprecision, you cannot rely on exact results when you operate on floating-point values. In particular, two values that are theoretically equal might have slightly different representations.
 
-| Сравнение количества с плавающей запятой |
+| To compare floating-point quantities |
 |---|
-|1. Вычислите абсолютное значение их разности с помощью метода <xref:System.Math.Abs%2A> класса <xref:System.Math> в пространстве имен <xref:System>.<br />2. Определите допустимое максимальное различие, чтобы можно было считать, что два количества равны для практических целей, если их отличие больше.<br />3. Сравните абсолютное значение разницы с приемлемой разницей.|
+|1.  Calculate the absolute value of their difference by using the <xref:System.Math.Abs%2A> method of the <xref:System.Math> class in the <xref:System> namespace.<br />2.  Determine an acceptable maximum difference, such that you can consider the two quantities to be equal for practical purposes if their difference is no larger.<br />3.  Compare the absolute value of the difference to the acceptable difference.|
 
-В следующем примере показаны неверное и правильное сравнение двух `Double` значений.
+The following example demonstrates both incorrect and correct comparison of two `Double` values.
 
 [!code-vb[VbVbalrDataTypes#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#10)]
 
-В предыдущем примере используется метод <xref:System.Double.ToString%2A> структуры <xref:System.Double>, чтобы можно было указать лучшую точность, чем ключевое слово `CStr`. По умолчанию используется 15 цифр, но формат "G17" расширяет его до 17 цифр.
+The previous example uses the <xref:System.Double.ToString%2A> method of the <xref:System.Double> structure so that it can specify better  precision than the `CStr` keyword uses. The default is 15 digits, but the "G17" format extends it to 17 digits.
 
-## <a name="mod-operator-does-not-return-accurate-result"></a>Оператор Mod не возвращает точный результат
+## <a name="mod-operator-does-not-return-accurate-result"></a>Mod Operator Does Not Return Accurate Result
 
-Из-за неправильной точности хранилища с плавающей запятой [оператор Mod](../../../../visual-basic/language-reference/operators/mod-operator.md) может вернуть непредвиденный результат, если хотя бы один из операндов является плавающей запятой.
+Because of the imprecision of floating-point storage, the [Mod Operator](../../../../visual-basic/language-reference/operators/mod-operator.md) can return an unexpected result when at least one of the operands is floating-point.
 
-[Тип данных Decimal](../../../../visual-basic/language-reference/data-types/decimal-data-type.md) не использует представление с плавающей запятой. Многие числа, неточные в `Single` и `Double`, являются точными в `Decimal` (например, 0,2 и 0,3). Несмотря на то, что арифметические операции выполняются медленнее, чем в `Decimal` с плавающей запятой, может возникнуть снижение производительности, чтобы добиться лучшей точности.
+The [Decimal Data Type](../../../../visual-basic/language-reference/data-types/decimal-data-type.md) does not use floating-point representation. Many numbers that are inexact in `Single` and `Double` are exact in `Decimal` (for example 0.2 and 0.3). Although arithmetic is slower in `Decimal` than in floating-point, it might be worth the performance decrease to achieve better precision.
 
-|Поиск целочисленного остатка количества с плавающей запятой|
+|To find the integer remainder of floating-point quantities|
 |---|
-|1. Объявите переменные как `Decimal`.<br />2. Используйте символ типа литерала `D` для принудительного `Decimal` литералов, если их значения слишком велики для `Long`ного типа данных.|
+|1.  Declare variables as `Decimal`.<br />2.  Use the literal type character `D` to force literals to `Decimal`, in case their values are too large for the `Long` data type.|
 
-В следующем примере показана потенциальная неточность операндов с плавающей запятой.
+The following example demonstrates the potential imprecision of floating-point operands.
 
 [!code-vb[VbVbalrDataTypes#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#11)]
 
-В предыдущем примере используется метод <xref:System.Double.ToString%2A> структуры <xref:System.Double>, чтобы можно было указать лучшую точность, чем ключевое слово `CStr`. По умолчанию используется 15 цифр, но формат "G17" расширяет его до 17 цифр.
+The previous example uses the <xref:System.Double.ToString%2A> method of the <xref:System.Double> structure so that it can specify better precision than the `CStr` keyword uses. The default is 15 digits, but the "G17" format extends it to 17 digits.
 
-Поскольку `zeroPointTwo` имеет `Double`, его значение для 0,2 является бесконечным повторением двоичной дроби с хранимым значением 0.20000000000000001. При делении 2,0 на это количество выдается 9.9999999999999995 с остатком от 0.19999999999999991.
+Because `zeroPointTwo` is `Double`, its value for 0.2 is an infinitely repeating binary fraction with a stored value of 0.20000000000000001. Dividing 2.0 by this quantity yields 9.9999999999999995 with a remainder of 0.19999999999999991.
 
-В выражении для `decimalRemainder` символ типа литерала `D` принудительно применяет оба операнда к `Decimal`, а 0,2 имеет точное представление. Поэтому оператор `Mod` выдает ожидаемый остаток от 0,0.
+In the expression for `decimalRemainder`, the literal type character `D` forces both operands to `Decimal`, and 0.2 has a precise representation. Therefore the `Mod` operator yields the expected remainder of 0.0.
 
-Обратите внимание, что объявление `decimalRemainder` как `Decimal` не является достаточным. Необходимо также принудительно принудить литералы `Decimal` или использовать `Double` по умолчанию и `decimalRemainder` получают то же неточное значение, что и `doubleRemainder`.
+Note that it is not sufficient to declare `decimalRemainder` as `Decimal`. You must also force the literals to `Decimal`, or they use `Double` by default and `decimalRemainder` receives the same inaccurate value as `doubleRemainder`.
 
-## <a name="boolean-type-does-not-convert-to-numeric-type-accurately"></a>Логический тип не преобразуется в числовой тип точно
+## <a name="boolean-type-does-not-convert-to-numeric-type-accurately"></a>Boolean Type Does Not Convert to Numeric Type Accurately
 
-Значения [логических типов данных](../../../../visual-basic/language-reference/data-types/boolean-data-type.md) не хранятся в виде чисел, а хранимые значения не должны быть эквивалентны числам. Для совместимости с более ранними версиями Visual Basic предоставляет ключевые слова преобразования ([Функция CType](../../../../visual-basic/language-reference/functions/ctype-function.md), `CBool`, `CInt` и т. д.) для преобразования между `Boolean` и числовыми типами. Однако другие языки иногда выполняют эти преобразования по-разному, так же как и методы .NET Framework.
+[Boolean Data Type](../../../../visual-basic/language-reference/data-types/boolean-data-type.md) values are not stored as numbers, and the stored values are not intended to be equivalent to numbers. For compatibility with earlier versions, Visual Basic provides conversion keywords ([CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md), `CBool`, `CInt`, and so on) to convert between `Boolean` and numeric types. However, other languages sometimes perform these conversions differently, as do the .NET Framework methods.
 
-Никогда не следует писать код, который использует эквивалентные числовые значения для `True` и `False`. Везде, где это возможно, следует ограничить использование переменных `Boolean` логическими значениями, для которых они предназначены. Если необходимо смешивать `Boolean` и числовые значения, убедитесь, что вы понимаете выбранный метод преобразования.
+You should never write code that relies on equivalent numeric values for `True` and `False`. Whenever possible, you should restrict usage of `Boolean` variables to the logical values for which they are designed. If you must mix `Boolean` and numeric values, make sure that you understand the conversion method that you select.
 
-### <a name="conversion-in-visual-basic"></a>Преобразование в Visual Basic
+### <a name="conversion-in-visual-basic"></a>Conversion in Visual Basic
 
-При использовании ключевых слов преобразования `CType` или `CBool` для преобразования числовых типов данных в `Boolean` 0 становится `False`, а все остальные значения становятся `True`. При преобразовании `Boolean` значений в числовые типы с помощью ключевых слов преобразования `False` преобразуется в 0, а `True` преобразуется в значение-1.
+When you use the `CType` or `CBool` conversion keywords to convert numeric data types to `Boolean`, 0 becomes `False` and all other values become `True`. When you convert `Boolean` values to numeric types by using the conversion keywords, `False` becomes 0 and `True` becomes -1.
 
-### <a name="conversion-in-the-framework"></a>Преобразование в платформе
+### <a name="conversion-in-the-framework"></a>Conversion in the Framework
 
-Метод <xref:System.Convert.ToInt32%2A> класса <xref:System.Convert> в пространстве имен <xref:System> преобразует `True` в + 1.
+The <xref:System.Convert.ToInt32%2A> method of the <xref:System.Convert> class in the <xref:System> namespace converts `True` to +1.
 
-Если необходимо преобразовать `Boolean` значение в числовой тип данных, будьте внимательны с тем, какой метод преобразования используется.
+If you must convert a `Boolean` value to a numeric data type, be careful about which conversion method you use.
 
-## <a name="character-literal-generates-compiler-error"></a>Символьный литерал создает ошибку компилятора
+## <a name="character-literal-generates-compiler-error"></a>Character Literal Generates Compiler Error
 
-В отсутствие каких бы то ни было символов типа Visual Basic предполагает наличие типов данных по умолчанию для литералов. Тип по умолчанию для символьного литерала, заключенный в кавычки (`" "`), `String`.
+In the absence of any type characters, Visual Basic assumes default data types for literals. The default type for a character literal — enclosed in quotation marks (`" "`) — is `String`.
 
-Тип данных `String` не расширяется до [типа данных char](../../../../visual-basic/language-reference/data-types/char-data-type.md). Это означает, что если необходимо присвоить литерал переменной `Char`, необходимо либо выполнить сужение преобразования, либо выполнить принудительное преобразование литерала в тип `Char`.
+The `String` data type does not widen to the [Char Data Type](../../../../visual-basic/language-reference/data-types/char-data-type.md). This means that if you want to assign a literal to a `Char` variable, you must either make a narrowing conversion or force the literal to the `Char` type.
 
-|Создание литерала Char для присвоения переменной или константе|
+|To create a Char literal to assign to a variable or constant|
 |---|
-|1. Объявите переменную или константу как `Char`.<br />2. заключите значение символа в кавычки (`" "`).<br />3. Используйте закрывающую двойную кавычку с символьным типом литерала `C`, чтобы присвоить литералу `Char`. Это необходимо, если параметр проверки типов ([оператор Option строго](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) имеет `On` и желательно в любом случае.|
+|1.  Declare the variable or constant as `Char`.<br />2.  Enclose the character value in quotation marks (`" "`).<br />3.  Follow the closing double quotation mark with the literal type character `C` to force the literal to `Char`. This is necessary if the type checking switch ([Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) is `On`, and it is desirable in any case.|
 
-В следующем примере показаны неудачные и успешные назначения литерала в переменную `Char`.
+The following example demonstrates both unsuccessful and successful assignments of a literal to a `Char` variable.
 
 [!code-vb[VbVbalrDataTypes#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#12)]
 
-При использовании сужающих преобразований всегда возникает риск, так как они могут завершиться ошибкой во время выполнения. Например, преобразование из `String` в `Char` может завершиться ошибкой, если значение `String` содержит более одного символа. Поэтому в программировании лучше использовать символ типа `C`.
+There is always a risk in using narrowing conversions, because they can fail at run time. For example, a conversion from `String` to `Char` can fail if the `String` value contains more than one character. Therefore, it is better programming to use the `C` type character.
 
-## <a name="string-conversion-fails-at-run-time"></a>Сбой преобразования строки во время выполнения
+## <a name="string-conversion-fails-at-run-time"></a>String Conversion Fails at Run Time
 
-[Строковый тип данных](../../../../visual-basic/language-reference/data-types/string-data-type.md) участвует в очень редких расширяющихся преобразованиях. `String` расширяется только на себя и `Object`, и только `Char` и `Char()` (массив `Char`) расширяются до `String`. Это обусловлено тем, что `String` переменные и константы могут содержать значения, которые не могут содержать другие типы данных.
+The [String Data Type](../../../../visual-basic/language-reference/data-types/string-data-type.md) participates in very few widening conversions. `String` widens only to itself and `Object`, and only `Char` and `Char()` (a `Char` array) widen to `String`. This is because `String` variables and constants can contain values that other data types cannot contain.
 
-Если параметр проверки типов ([оператор Option строго](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) имеет `On`, компилятор запрещает все неявные сужающие преобразования. Сюда входят те, которые включают `String`. Код по-прежнему может использовать ключевые слова преобразования, такие как `CStr` и [CType](../../../../visual-basic/language-reference/functions/ctype-function.md), которые направляют .NET Framework для попыток преобразования.
+When the type checking switch ([Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) is `On`, the compiler disallows all implicit narrowing conversions. This includes those involving `String`. Your code can still use conversion keywords such as `CStr` and [CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md), which direct the .NET Framework to attempt the conversion.
 
 > [!NOTE]
-> Ошибка сужения преобразования подавляется для преобразований из элементов коллекции `For Each…Next` в переменную управления циклом. Дополнительные сведения и примеры см. в подразделе «сужающие преобразования» раздела [For Each... Следующий оператор](../../../../visual-basic/language-reference/statements/for-each-next-statement.md).
+> The narrowing-conversion error is suppressed for conversions from the elements in a `For Each…Next` collection to the loop control variable. For more information and examples, see the "Narrowing Conversions" section in [For Each...Next Statement](../../../../visual-basic/language-reference/statements/for-each-next-statement.md).
 
-### <a name="narrowing-conversion-protection"></a>Сужение защиты от преобразования
+### <a name="narrowing-conversion-protection"></a>Narrowing Conversion Protection
 
-Недостаток сужающих преобразований заключается в том, что они могут привести к сбою во время выполнения. Например, если переменная `String` содержит любые значения, отличные от "true" или "false", ее нельзя преобразовать в `Boolean`. Если он содержит знаки препинания, преобразование в любой числовой тип завершается ошибкой. Если вы не уверены, что переменная `String` всегда содержит значения, которые тип назначения может принять, не следует пытаться выполнить преобразование.
+The disadvantage of narrowing conversions is that they can fail at run time. For example, if a `String` variable contains anything other than "True" or "False," it cannot be converted to `Boolean`. If it contains punctuation characters, conversion to any numeric type fails. Unless you know that your `String` variable always holds values that the destination type can accept, you should not try a conversion.
 
-Если необходимо выполнить преобразование из `String` в другой тип данных, наиболее надежной процедурой является заключить попытку преобразования в [try... Перехватить... Оператор finally](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md). Это позволяет справиться с ошибкой во время выполнения.
+If you must convert from `String` to another data type, the safest procedure is to enclose the attempted conversion in the [Try...Catch...Finally Statement](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md). This lets you deal with a run-time failure.
 
-### <a name="character-arrays"></a>Массивы символов
+### <a name="character-arrays"></a>Character Arrays
 
-Один `Char` и массив `Char`ных элементов расширяются до `String`. Однако `String` не расширяется для `Char()`. Чтобы преобразовать `String` значение в массив `Char`, можно использовать метод <xref:System.String.ToCharArray%2A> класса <xref:System.String?displayProperty=nameWithType>.
+A single `Char` and an array of `Char` elements both widen to `String`. However, `String` does not widen to `Char()`. To convert a `String` value to a `Char` array, you can use the <xref:System.String.ToCharArray%2A> method of the <xref:System.String?displayProperty=nameWithType> class.
 
-### <a name="meaningless-values"></a>Бессмысленные значения
+### <a name="meaningless-values"></a>Meaningless Values
 
-В общем случае `String` значения не имеют смысла в других типах данных, а преобразование является очень искусственным и опасным. Всякий раз, когда это возможно, следует ограничить использование переменных `String` в последовательности символов, для которых они предназначены. Никогда не следует писать код, основанный на эквивалентных значениях других типов.
+In general, `String` values are not meaningful in other data types, and conversion is highly artificial and dangerous. Whenever possible, you should restrict usage of `String` variables to the character sequences for which they are designed. You should never write code that relies on equivalent values in other types.
 
 ## <a name="see-also"></a>См. также
 
 - [Типы данных](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
 - [Знаки типов](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)
 - [Типы значений и ссылочные типы](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
-- [Преобразования типов в Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [Type Conversions in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
 - [Типы данных](../../../../visual-basic/language-reference/data-types/index.md)
 - [Функции преобразования типов](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)
 - [Эффективное использование типов данных](../../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

@@ -1,26 +1,26 @@
 ---
-title: Группирование данных (Visual Basic)
+title: Группировка данных
 ms.date: 07/20/2015
 ms.assetid: 8f3a0871-6958-4aef-8f6f-493e189fd57d
-ms.openlocfilehash: b5a6a3795e02e0638b81824701ad0cbacbcca91a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6e84ccfbd6a2193ac5ab368d7526da2de29a3c47
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64754459"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353388"
 ---
-# <a name="grouping-data-visual-basic"></a>Группирование данных (Visual Basic)
+# <a name="grouping-data-visual-basic"></a>Grouping Data (Visual Basic)
 Группированием называют операцию объединения данных в группы таким образом, чтобы у элементов в каждой группе был общий атрибут.  
   
  На следующем рисунке показаны результаты операции группирования последовательности символов. Ключ для каждой группы — это символ.  
   
- ![Схема, показывающая операции группирования LINQ.](./media/grouping-data/linq-group-operation.png)  
+ ![Схема, показывающая операцию группирования LINQ.](./media/grouping-data/linq-group-operation.png)  
   
  Далее перечислены методы стандартных операторов запроса, которые группируют элементы данных.  
   
 ## <a name="methods"></a>Методы  
   
-|Имя метода|Описание|Синтаксис выражений запросов Visual Basic|Дополнительные сведения|  
+|Имя метода|Описание|Visual Basic Query Expression Syntax|Дополнительные сведения|  
 |-----------------|-----------------|------------------------------------------|----------------------|  
 |GroupBy|Группирует элементы с общим атрибутом. Каждая группа представлена объектом <xref:System.Linq.IGrouping%602>.|`Group … By … Into …`|<xref:System.Linq.Enumerable.GroupBy%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.GroupBy%2A?displayProperty=nameWithType>|  
 |ToLookup|Вставляет элементы в <xref:System.Linq.Lookup%602> (словарь "один ко многим") в зависимости от функции выбора ключа.|Неприменимо.|<xref:System.Linq.Enumerable.ToLookup%2A?displayProperty=nameWithType>|  
@@ -68,5 +68,5 @@ MsgBox(sb.ToString())
 - <xref:System.Linq>
 - [Общие сведения о стандартных операторах запроса (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
 - [Предложение Group By](../../../../visual-basic/language-reference/queries/group-by-clause.md)
-- [Практическое руководство. Группировать файлы по расширению (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-group-files-by-extension-linq.md)
-- [Практическое руководство. Разделение файла на несколько файлов с помощью групп (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-split-a-file-into-many-files-by-using-groups-linq.md)
+- [How to: Group Files by Extension (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-group-files-by-extension-linq.md)
+- [How to: Split a File Into Many Files by Using Groups (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-split-a-file-into-many-files-by-using-groups-linq.md)

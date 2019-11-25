@@ -1,35 +1,35 @@
 ---
-title: Практическое руководство. Доступа к символам строк в Visual Basic
+title: Практическое руководство. Доступ к символам в строках
 ms.date: 07/20/2015
 helpviewer_keywords:
 - strings [Visual Basic], accessing characters
 - characters [Visual Basic], accessing in strings
 ms.assetid: 02c5206c-ffab-494d-b648-3b2ea358dc34
-ms.openlocfilehash: 840a769b0bb322ef7b878a312437c5ec200ab074
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 44a021ed3ce1d10613cf6ab7c959c62feec6046c
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62054033"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352463"
 ---
-# <a name="how-to-access-characters-in-strings-in-visual-basic"></a>Практическое руководство. Доступа к символам строк в Visual Basic
-В этом примере демонстрируется использование <xref:System.String.Chars%2A> свойство для доступа к знаку в указанном расположении в строке.  
+# <a name="how-to-access-characters-in-strings-in-visual-basic"></a>Практическое руководство. Доступ к символам строк в Visual Basic
+This example demonstrates how to use the <xref:System.String.Chars%2A> property to access the character at the specified location in a string.  
   
 ## <a name="example"></a>Пример  
- Иногда бывает удобно иметь данные о символов в строки и позиции этих символов. Можно считать строки массив символов (`Char` экземпляров); можно получить определенный символ, ссылаясь на индекс символа с помощью <xref:System.String.Chars%2A> свойство.  
+ Sometimes it is useful to have data about the characters in your string and the positions of those characters within your string. You can think of a string as an array of characters (`Char` instances); you can retrieve a particular character by referencing the index of that character through the <xref:System.String.Chars%2A> property.  
   
  [!code-vb[VbVbalrStrings#49](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#49)]  
   
- `index` Параметр <xref:System.String.Chars%2A> свойство отсчитывается от нуля.  
+ The `index` parameter of the <xref:System.String.Chars%2A> property is zero-based.  
   
 ## <a name="robust-programming"></a>Отказоустойчивость  
- <xref:System.String.Chars%2A> Свойство возвращает символ в указанной позиции. Тем не менее некоторые символы Юникода могут быть представлены более одного символа. Дополнительные сведения о том, как работать с символами Юникода, см. в разделе [как: Преобразует строку в массив символов](../../../../visual-basic/programming-guide/language-features/strings/how-to-convert-a-string-to-an-array-of-characters.md).  
+ The <xref:System.String.Chars%2A> property returns the character at the specified position. However, some Unicode characters can be represented by more than one character. For more information on how to work with Unicode characters, see [How to: Convert a String to an Array of Characters](../../../../visual-basic/programming-guide/language-features/strings/how-to-convert-a-string-to-an-array-of-characters.md).  
   
- <xref:System.String.Chars%2A> Свойство выдает исключение <xref:System.IndexOutOfRangeException> исключения Если `index` параметр больше или равен длине строки, или если он меньше нуля  
+ The <xref:System.String.Chars%2A> property throws an <xref:System.IndexOutOfRangeException> exception if the `index` parameter is greater than or equal to the length of the string, or if it is less than zero  
   
 ## <a name="see-also"></a>См. также
 
 - <xref:System.String.Chars%2A>
-- [Практическое руководство. Преобразует строку в массив символов](../../../../visual-basic/programming-guide/language-features/strings/how-to-convert-a-string-to-an-array-of-characters.md)
+- [Практическое руководство. Преобразование строки в массив символов](../../../../visual-basic/programming-guide/language-features/strings/how-to-convert-a-string-to-an-array-of-characters.md)
 - [Преобразование между строками и другими типами данных в Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/converting-between-strings-and-other-data-types.md)
 - [Строки](../../../../visual-basic/programming-guide/language-features/strings/index.md)

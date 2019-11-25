@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Определение оператора (Visual Basic)
+title: Практическое руководство. Определение оператора
 ms.date: 07/20/2015
 helpviewer_keywords:
 - procedures [Visual Basic], defining
@@ -13,26 +13,26 @@ helpviewer_keywords:
 - return values [Visual Basic], Operator procedures
 - operator overloading
 ms.assetid: d4b0e253-092a-4e6e-9fe2-01f562140a29
-ms.openlocfilehash: 14aa25de78eb357f8474d3828aa45e48e7a4f9c7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b99af8ff4d5428f1749bfc1a4c51a136f12405ee
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61863850"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344865"
 ---
 # <a name="how-to-define-an-operator-visual-basic"></a>Практическое руководство. Определение оператора (Visual Basic)
-Если вы определили, класса или структуры, можно определить поведение стандартного оператора (такие как `*`, `<>`, или `And`) Если один или оба операнда имеет тип класса или структуры.  
+If you have defined a class or structure, you can define the behavior of a standard operator (such as `*`, `<>`, or `And`) when one or both of the operands is of the type of your class or structure.  
   
- Определите стандартного оператора как процедура оператора в классе или структуре. Все процедуры оператора должны быть `Public` `Shared`.  
+ Define the standard operator as an operator procedure within the class or structure. All operator procedures must be `Public` `Shared`.  
   
- Определение оператора в классе или структуре также называется *перегрузка* оператора.  
+ Defining an operator on a class or structure is also called *overloading* the operator.  
   
 ## <a name="example"></a>Пример  
- В следующем примере определяется `+` вызывается оператор для структуры `height`. Структура использует высоту в футах и дюйма. Один *дюйм* — 2,54 сантиметра и одна *foot* — 12 дюймов. Чтобы обеспечить нормализованные значения (дюймы < 12.0), конструктор выполняет *остаток от деления* арифметические 12. `+` Оператор использует конструктор для создания нормализованных значений.  
+ The following example defines the `+` operator for a structure called `height`. The structure uses heights measured in feet and inches. One *inch* is 2.54 centimeters, and one *foot* is 12 inches. To ensure normalized values (inches < 12.0), the constructor performs *modulo* 12 arithmetic. The `+` operator uses the constructor to generate normalized values.  
   
  [!code-vb[VbVbcnProcedures#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#25)]  
   
- Вы можете проверить структуру `height` следующим кодом.  
+ You can test the structure `height` with the following code.  
   
  [!code-vb[VbVbcnProcedures#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#26)]  
 
@@ -41,7 +41,7 @@ ms.locfileid: "61863850"
 - [Процедуры операторов](./operator-procedures.md)
 - [Практическое руководство. Определение оператора преобразования](./how-to-define-a-conversion-operator.md)
 - [Практическое руководство. Вызов процедуры оператора](./how-to-call-an-operator-procedure.md)
-- [Практическое руководство. Используйте класс, в котором определяются операторы](./how-to-use-a-class-that-defines-operators.md)
+- [Практическое руководство. Использование класса, в котором определяются операторы](./how-to-use-a-class-that-defines-operators.md)
 - [Оператор Statement](../../../../visual-basic/language-reference/statements/operator-statement.md)
 - [Оператор Structure](../../../../visual-basic/language-reference/statements/structure-statement.md)
 - [Практическое руководство. Объявление структуры](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)

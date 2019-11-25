@@ -1,5 +1,5 @@
 ---
-title: Время существования в Visual Basic
+title: Время существования
 ms.date: 07/20/2015
 helpviewer_keywords:
 - static variables [Visual Basic], lifetime
@@ -10,66 +10,66 @@ helpviewer_keywords:
 - lifetime [Visual Basic], Visual Basic
 - lifetime [Visual Basic]
 ms.assetid: bd91e390-690a-469a-9946-8dca70bc14e7
-ms.openlocfilehash: 7a8730834c5241ddb1271d689cdda8942741f15f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 05a39388e8aa9681af60cf86a3df8346d744b69e
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61917934"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345317"
 ---
 # <a name="lifetime-in-visual-basic"></a>Время существования в Visual Basic
-*Время существования* объявленного элемента — это период времени, во время которого он доступен для использования. Переменные являются только элементы, которые имеют время существования. Для этой цели компилятор обрабатывает параметры процедуры, и функция возвращает как особые случаи переменных. Время существования переменной представляет период времени, в течение которого он может содержать значение. Его значение может меняться в течение времени существования, но он всегда содержит некоторое значение.  
+The *lifetime* of a declared element is the period of time during which it is available for use. Variables are the only elements that have lifetime. For this purpose, the compiler treats procedure parameters and function returns as special cases of variables. The lifetime of a variable represents the period of time during which it can hold a value. Its value can change over its lifetime, but it always holds some value.  
   
-## <a name="different-lifetimes"></a>Различные жизненные циклы  
- Объект *переменной-члена* (объявлен на уровне модуля, вне любых процедур) обычно имеет то же время существования, что и элемент, в котором она объявлена. Не совместно переменной, объявленной в классе или структуре существует как отдельный экземпляр для каждого экземпляра класса или структуры, в котором она объявлена. Каждая такая переменная имеет то же время существования экземпляра. Тем не менее `Shared` переменная имеет сроком существования, который продолжается в течение всего времени работы приложения.  
+## <a name="different-lifetimes"></a>Different Lifetimes  
+ A *member variable* (declared at module level, outside any procedure) typically has the same lifetime as the element in which it is declared. A nonshared variable declared in a class or structure exists as a separate copy for each instance of the class or structure in which it is declared. Each such variable has the same lifetime as its instance. However, a `Shared` variable has only a single lifetime, which lasts for the entire time your application is running.  
   
- Объект *локальной переменной* (объявлен внутри процедуры) существует только в том случае, пока выполняется процедура, в котором она объявлена. Это также относится к параметрам этой процедуры и значениям, возвращаемым функциями. Тем не менее если процедура вызывает другие процедуры, локальные переменные сохраняют свои значения во время работы вызываемых процедур.  
+ A *local variable* (declared inside a procedure) exists only while the procedure in which it is declared is running. This applies also to that procedure's parameters and to any function return. However, if that procedure calls other procedures, the local variables retain their values while the called procedures are running.  
   
-## <a name="beginning-of-lifetime"></a>Начало времени существования  
- Время существования локальной переменной начинается при передаче управления в процедуру, в котором она объявлена. Каждой локальной переменной присваивается значение по умолчанию для своего типа данных сразу же начинает процедуру под управлением. Когда в процедуре встречается `Dim` инструкцию, которая определяет начальные значения, он задает этих переменных те значения, даже если ваш код уже назначены другие значения.  
+## <a name="beginning-of-lifetime"></a>Beginning of Lifetime  
+ A local variable's lifetime begins when control enters the procedure in which it is declared. Every local variable is initialized to the default value for its data type as soon as the procedure begins running. When the procedure encounters a `Dim` statement that specifies initial values, it sets those variables to those values, even if your code had already assigned other values to them.  
   
- Каждый член структуры переменной инициализируется, как если бы он был отдельной переменной. Аналогичным образом каждый элемент массива инициализируется по отдельности.  
+ Each member of a structure variable is initialized as if it were a separate variable. Similarly, each element of an array variable is initialized individually.  
   
- Переменные, объявленные в блоке внутри процедуры (такие как `For` цикла), инициализируются при входе в процедуру. Инициализация вступили в силу независимо от того, имеется ли ваш код никогда не исполняет блока.  
+ Variables declared within a block inside a procedure (such as a `For` loop) are initialized on entry to the procedure. These initializations take effect whether or not your code ever executes the block.  
   
-## <a name="end-of-lifetime"></a>Окончание времени существования  
- По окончании выполнения процедуры значения ее локальных переменных не сохраняются, и Visual Basic возвращает их память. При следующем вызове процедуры, все ее локальные переменные создаются заново и повторно инициализированы.  
+## <a name="end-of-lifetime"></a>End of Lifetime  
+ When a procedure terminates, the values of its local variables are not preserved, and Visual Basic reclaims their memory. The next time you call the procedure, all its local variables are created afresh and reinitialized.  
   
- При завершении экземпляра класса или структуры уничтожении его переменные теряют свои памяти и их значения. Каждый новый экземпляр класса или структуры, создает и повторно инициализирует ее не совместно переменные. Тем не менее `Shared` переменные сохраняются, пока не завершится работа приложения.  
+ When an instance of a class or structure terminates, its nonshared variables lose their memory and their values. Each new instance of the class or structure creates and reinitializes its nonshared variables. However, `Shared` variables are preserved until your application stops running.  
   
-## <a name="extension-of-lifetime"></a>Продление срока жизни  
- Если объявить локальную переменную с `Static` ключевое слово, существования длиннее, чем время выполнения процедуры. В следующей таблице показано, как объявление процедуры определяет, как долго `Static` переменная существует.  
+## <a name="extension-of-lifetime"></a>Extension of Lifetime  
+ If you declare a local variable with the `Static` keyword, its lifetime is longer than the execution time of its procedure. The following table shows how the procedure declaration determines how long a `Static` variable exists.  
   
-|Расположение процедуры и совместное использование|Время существования статической переменной начинается|Заканчивается время существования статической переменной|  
+|Procedure location and sharing|Static variable lifetime begins|Static variable lifetime ends|  
 |------------------------------------|-------------------------------------|-----------------------------------|  
-|В модуле (общий по умолчанию)|При первом вызове процедуры|При остановке приложения|  
-|В классе `Shared` (процедура не является членом экземпляра)|При первом вызове процедуры в определенном экземпляре или на само имя класса или структуры|При остановке приложения|  
-|В экземпляре класса не `Shared` (процедура является членом экземпляра)|При первом вызове процедуры для определенного экземпляра|Когда экземпляр освобождается для сборки мусора (GC)|  
+|In a module (shared by default)|The first time the procedure is called|When your application stops running|  
+|In a class, `Shared` (procedure is not an instance member)|The first time the procedure is called either on a specific instance or on the class or structure name itself|When your application stops running|  
+|In an instance of a class, not `Shared` (procedure is an instance member)|The first time the procedure is called on the specific instance|When the instance is released for garbage collection (GC)|  
   
-## <a name="static-variables-of-the-same-name"></a>Статические переменные с тем же именем  
- Можно объявить статические переменные с тем же именем, в более чем одной процедуры. После этого компилятор Visual Basic считает, что каждый из таких переменных как отдельный элемент. Инициализация одной из этих переменных не влияет на значения остальных. Это же относится, если определить процедуру с набором перегрузки и объявить статическую переменную с тем же именем в каждой перегрузке.  
+## <a name="static-variables-of-the-same-name"></a>Static Variables of the Same Name  
+ You can declare static variables with the same name in more than one procedure. If you do this, the Visual Basic compiler considers each such variable to be a separate element. The initialization of one of these variables does not affect the values of the others. The same applies if you define a procedure with a set of overloads and declare a static variable with the same name in each overload.  
   
-## <a name="containing-elements-for-static-variables"></a>Содержащий элементы для статических переменных  
- Можно объявить статической локальной переменной в пределах класса, то есть внутри процедуры в этом классе. Тем не менее статической локальной переменной в структуре нельзя объявлять как член структуры или как локальную переменную процедуры в этой структуре.  
+## <a name="containing-elements-for-static-variables"></a>Containing Elements for Static Variables  
+ You can declare a static local variable within a class, that is, inside a procedure in that class. However, you cannot declare a static local variable within a structure, either as a structure member or as a local variable of a procedure within that structure.  
   
 ## <a name="example"></a>Пример  
   
 ### <a name="description"></a>Описание  
- В следующем примере объявляется переменная с [статический](../../../../visual-basic/language-reference/modifiers/static.md) ключевое слово. (Обратите внимание, что нет необходимости `Dim` ключевое слово при [оператор Dim](../../../../visual-basic/language-reference/statements/dim-statement.md) использует модификатор, такой как `Static`.)  
+ The following example declares a variable with the [Static](../../../../visual-basic/language-reference/modifiers/static.md) keyword. (Note that you do not need the `Dim` keyword when the [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md) uses a modifier such as `Static`.)  
   
 ### <a name="code"></a>Код  
  [!code-vb[VbVbalrKeywords#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/class7.vb#13)]  
   
 ### <a name="comments"></a>Комментарии  
- В приведенном выше примере переменная `applesSold` продолжает существовать после описания процедуры `runningTotal` возвращает в вызывающий код. В следующий раз `runningTotal` вызове `applesSold` сохраняет ранее вычисленное значение.  
+ In the preceding example, the variable `applesSold` continues to exist after the procedure `runningTotal` returns to the calling code. The next time `runningTotal` is called, `applesSold` retains its previously calculated value.  
   
- Если `applesSold` была объявлена без использования `Static`, предыдущие накопленные значения не будет сохранено в вызовы `runningTotal`. В следующий раз `runningTotal` был вызван `applesSold` будет заново, инициализируются значением 0, и `runningTotal` просто возвращала бы то же значение, с которым он был вызван.  
+ If `applesSold` had been declared without using `Static`, the previous accumulated values would not be preserved across calls to `runningTotal`. The next time `runningTotal` was called, `applesSold` would have been recreated and initialized to 0, and `runningTotal` would have simply returned the same value with which it was called.  
   
 ### <a name="compiling-the-code"></a>Компиляция кода  
- Вы можете инициализировать значение как часть объявления статической локальной переменной. Если объявить массив, который должен быть `Static`, можно инициализировать его ранг (размерность), длина каждого из измерений и значения отдельных элементов.  
+ You can initialize the value of a static local variable as part of its declaration. If you declare an array to be `Static`, you can initialize its rank (number of dimensions), the length of each dimension, and the values of the individual elements.  
   
 ### <a name="security"></a>Безопасность  
- В предыдущем примере, можно создать одинаковое время существования путем объявления `applesSold` на уровне модуля. При изменении области видимости переменной таким образом, тем не менее, процедура больше не будет иметь монопольный доступ к нему. Поскольку другие процедуры удалось получить доступ к `applesSold` и измените его значение, промежуточных итогов могут быть ненадежными, и код может быть более сложным в обслуживании.  
+ In the preceding example, you can produce the same lifetime by declaring `applesSold` at module level. If you changed the scope of a variable this way, however, the procedure would no longer have exclusive access to it. Because other procedures could access `applesSold` and change its value, the running total could be unreliable and the code could be more difficult to maintain.  
   
 ## <a name="see-also"></a>См. также
 
@@ -77,8 +77,8 @@ ms.locfileid: "61917934"
 - [Nothing](../../../../visual-basic/language-reference/nothing.md)
 - [Имена объявленных элементов](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
 - [Ссылки на объявленные элементы](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
-- [Область, в Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
-- [Уровни доступа в Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
+- [Scope in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
+- [Access levels in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
 - [Переменные](../../../../visual-basic/programming-guide/language-features/variables/index.md)
 - [Объявление переменных](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
 - [Устранение неполадок, связанных с типами данных](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)

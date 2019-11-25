@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Управление доступностью переменной (Visual Basic)
+title: Практическое руководство. Управление доступностью переменной
 ms.date: 07/20/2015
 helpviewer_keywords:
 - access levels, declared elements
@@ -11,69 +11,69 @@ helpviewer_keywords:
 - declared elements [Visual Basic], access level
 - Protected keyword [Visual Basic], accessing variables
 ms.assetid: eaf4f073-7922-43ce-ae1e-90ff376ae947
-ms.openlocfilehash: 84aaeecdbd3cc8ab12589c0342b982bf3f1c8529
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 886b57909cf6ba25dbaceea5c5f06eb4e3ba6f1f
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582620"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345393"
 ---
 # <a name="how-to-control-the-availability-of-a-variable-visual-basic"></a>Практическое руководство. Управление доступностью переменной (Visual Basic)
-Для управления доступностью переменной можно указать ее *уровень доступа*. Уровень доступа определяет, какой код имеет разрешение на чтение или запись в переменную.  
+You control the availability of a variable by specifying its *access level*. The access level determines what code has permission to read or write to the variable.  
   
-- *Переменные-члены* (определенные на уровне модуля и вне любой процедуры) по умолчанию имеют открытый доступ, что означает любой код, который может видеть, что они имеют доступ к ним. Это можно изменить, указав модификатор доступа.  
+- *Member variables* (defined at module level and outside any procedure) default to public access, which means any code that can see them can access them. You can change this by specifying an access modifier.  
   
-- *Локальные переменные* (определенные внутри процедуры) номинально имеют общий доступ, хотя доступ к ним могут получить только код внутри их процедуры. Нельзя изменить уровень доступа локальной переменной, но можно изменить уровень доступа процедуры, содержащей ее.  
+- *Local variables* (defined inside a procedure) nominally have public access, although only code within their procedure can access them. You cannot change the access level of a local variable, but you can change the access level of the procedure that contains it.  
   
- Дополнительные сведения см. [в разделе уровни доступа в Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
+ For more information, see [Access levels in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
-## <a name="private-and-public-access"></a>Частный и открытый доступ  
+## <a name="private-and-public-access"></a>Private and Public Access  
   
-#### <a name="to-make-a-variable-accessible-only-from-within-its-module-class-or-structure"></a>Предоставление доступа к переменной только внутри модуля, класса или структуры  
+#### <a name="to-make-a-variable-accessible-only-from-within-its-module-class-or-structure"></a>To make a variable accessible only from within its module, class, or structure  
   
-1. Поместите [оператор Dim](../../../../visual-basic/language-reference/statements/dim-statement.md) для переменной внутри модуля, класса или структуры, но вне любой процедуры.  
+1. Place the [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md) for the variable inside the module, class, or structure, but outside any procedure.  
   
-2. Включите ключевое слово [Private](../../../../visual-basic/language-reference/modifiers/private.md) в оператор `Dim`.  
+2. Include the [Private](../../../../visual-basic/language-reference/modifiers/private.md) keyword in the `Dim` statement.  
   
-     Можно выполнять чтение или запись в переменную из любого места внутри модуля, класса или структуры, но не за ее пределами.  
+     You can read or write to the variable from anywhere within the module, class, or structure, but not from outside it.  
   
-#### <a name="to-make-a-variable-accessible-from-any-code-that-can-see-it"></a>Чтобы сделать переменную доступной из любого кода, который может ее увидеть  
+#### <a name="to-make-a-variable-accessible-from-any-code-that-can-see-it"></a>To make a variable accessible from any code that can see it  
   
-1. Для переменной-члена Поместите оператор `Dim` для переменной внутри модуля, класса или структуры, но вне любой процедуры.  
+1. For a member variable, place the `Dim` statement for the variable inside a module, class, or structure, but outside any procedure.  
   
-2. Включите в оператор `Dim` ключевое слово [Public](../../../../visual-basic/language-reference/modifiers/public.md) .  
+2. Include the [Public](../../../../visual-basic/language-reference/modifiers/public.md) keyword in the `Dim` statement.  
   
-     Можно выполнять чтение или запись в переменную из любого кода, который взаимодействует со сборкой.  
+     You can read or write to the variable from any code that interoperates with your assembly.  
   
  \- или -  
   
-1. Для локальной переменной поместите оператор `Dim` для переменной внутри процедуры.  
+1. For a local variable, place the `Dim` statement for the variable inside a procedure.  
   
-2. Не включайте ключевое слово `Public` в инструкцию `Dim`.  
+2. Do not include the `Public` keyword in the `Dim` statement.  
   
-     Можно выполнять чтение или запись в переменную из любого места внутри процедуры, но не за ее пределами.  
+     You can read or write to the variable from anywhere within the procedure, but not from outside it.  
   
-## <a name="protected-and-friend-access"></a>Защищенный и дружественный доступ  
- Уровень доступа переменной можно ограничить своим классом и любыми производными классами или сборкой. Можно также указать объединение этих ограничений, которое разрешает доступ из кода в любом производном классе или в любом другом месте в одной сборке. Это объединение можно указать, объединив ключевые слова `Protected` и `Friend` в том же объявлении.  
+## <a name="protected-and-friend-access"></a>Protected and Friend Access  
+ You can limit the access level of a variable to its class and any derived classes, or to its assembly. You can also specify the union of these limitations, which allows access from code in any derived class or in any other place in the same assembly. You specify this union by combining the `Protected` and `Friend` keywords in the same declaration.  
   
-#### <a name="to-make-a-variable-accessible-only-from-within-its-class-and-any-derived-classes"></a>Предоставление доступа к переменной только внутри ее класса и любых производных классов  
+#### <a name="to-make-a-variable-accessible-only-from-within-its-class-and-any-derived-classes"></a>To make a variable accessible only from within its class and any derived classes  
   
-1. Поместите оператор `Dim` для переменной внутри класса, но вне любой процедуры.  
+1. Place the `Dim` statement for the variable inside a class, but outside any procedure.  
   
-2. Включите ключевое слово [protected](../../../../visual-basic/language-reference/modifiers/protected.md) в оператор `Dim`.  
+2. Include the [Protected](../../../../visual-basic/language-reference/modifiers/protected.md) keyword in the `Dim` statement.  
   
-     Можно выполнять чтение или запись в переменную из любого места внутри класса, а также из любого класса, производного от него, но не за пределами класса в цепочке наследования.  
+     You can read or write to the variable from anywhere within the class, as well as from within any class derived from it, but not from outside any class in the derivation chain.  
   
-#### <a name="to-make-a-variable-accessible-only-from-within-the-same-assembly"></a>Предоставление переменной доступа только из той же сборки  
+#### <a name="to-make-a-variable-accessible-only-from-within-the-same-assembly"></a>To make a variable accessible only from within the same assembly  
   
-1. Поместите оператор `Dim` для переменной внутри модуля, класса или структуры, но вне любой процедуры.  
+1. Place the `Dim` statement for the variable inside a module, class, or structure, but outside any procedure.  
   
-2. Включите в оператор `Dim` ключевое слово [Friend](../../../../visual-basic/language-reference/modifiers/friend.md) .  
+2. Include the [Friend](../../../../visual-basic/language-reference/modifiers/friend.md) keyword in the `Dim` statement.  
   
-     Можно выполнять чтение или запись в переменную из любого места внутри модуля, класса или структуры, а также из любого кода в той же сборке, но не за пределами сборки.  
+     You can read or write to the variable from anywhere within the module, class, or structure, as well as from any code in the same assembly, but not from outside the assembly.  
   
 ## <a name="example"></a>Пример  
- В следующем примере показаны объявления переменных с уровнями доступа `Public`, `Protected`, `Friend`, `Protected Friend` и `Private`. Обратите внимание, что если в инструкции `Dim` указан уровень доступа, не нужно включать ключевое слово `Dim`.  
+ The following example shows declarations of variables with `Public`, `Protected`, `Friend`, `Protected Friend`, and `Private` access levels. Note that when the `Dim` statement specifies an access level, you do not need to include the `Dim` keyword.  
   
 ```vb  
 Public Class classForEverybody  
@@ -84,11 +84,11 @@ Private numberForMeOnly As Integer
 ```  
   
 ## <a name="net-framework-security"></a>Безопасность платформы .NET Framework  
- Чем более ограниченный уровень доступа переменной, тем меньше вероятность того, что вредоносный код может неправильно использовать его.  
+ The more restrictive the access level of a variable, the smaller the chances that malicious code can make improper use of it.  
   
 ## <a name="see-also"></a>См. также
 
-- [Уровни доступа в Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
+- [Access levels in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
 - [Оператор Dim](../../../../visual-basic/language-reference/statements/dim-statement.md)
 - [Public](../../../../visual-basic/language-reference/modifiers/public.md)
 - [Protected](../../../../visual-basic/language-reference/modifiers/protected.md)

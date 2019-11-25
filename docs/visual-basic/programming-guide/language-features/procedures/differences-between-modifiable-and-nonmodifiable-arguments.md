@@ -1,5 +1,5 @@
 ---
-title: Различия между аргументами Modifiable и Nonmodifiable (Visual Basic)
+title: Различия между аргументами Modifiable и Nonmodifiable
 ms.date: 07/20/2015
 helpviewer_keywords:
 - procedures [Visual Basic], arguments
@@ -8,34 +8,34 @@ helpviewer_keywords:
 - Visual Basic code, procedures
 - arguments [Visual Basic], modifiable
 ms.assetid: 87b2df69-e1f7-4657-9caf-b3f48d693428
-ms.openlocfilehash: a880ae8c13eebd5d9d325468098e058f58d3fa71
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 989795ee2cdd3a78b71bad4d95cf9b384c2719bd
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61665953"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74341388"
 ---
 # <a name="differences-between-modifiable-and-nonmodifiable-arguments-visual-basic"></a>Различия между аргументами Modifiable и Nonmodifiable (Visual Basic)
-При вызове процедуры, обычно передается один или несколько аргументов к нему. Каждый аргумент соответствует базовому элементу программирования. Базовые элементы и сами аргументы может быть либо изменяемыми либо неизменяемыми.  
+When you call a procedure, you typically pass one or more arguments to it. Each argument corresponds to an underlying programming element. Both the underlying elements and the arguments themselves can be either modifiable or nonmodifiable.  
   
-## <a name="modifiable-and-nonmodifiable-elements"></a>Изменяемые и неизменяемые элементы  
- Программный элемент может быть либо *изменяемого элемента*, который может менять свое значение, или *неизменяемым*, который имеет фиксированное значение после его создания.  
+## <a name="modifiable-and-nonmodifiable-elements"></a>Modifiable and Nonmodifiable Elements  
+ A programming element can be either a *modifiable element*, which can have its value changed, or a *nonmodifiable element*, which has a fixed value once it has been created.  
   
- В следующей таблице перечислены изменяемые и неизменяемые элементы программирования.  
+ The following table lists modifiable and nonmodifiable programming elements.  
   
-|Изменяемые элементы|Неизменяемые элементы|  
+|Modifiable elements|Nonmodifiable elements|  
 |-------------------------|----------------------------|  
-|Локальные переменные (объявленные внутри процедур), включая объектные переменные, доступные только для чтения|Переменные только для чтения, поля и свойства|  
-|Поля (переменные-члены модулей, классов и структур), доступные только для чтения|Константы и литералы|  
-|Свойства, доступные только для чтения|Члены перечисления|  
-|Элементы массива|Выражения (даже если их элементы являются изменяемыми)|  
+|Local variables (declared inside procedures), including object variables, except for read-only|Read-only variables, fields, and properties|  
+|Fields (member variables of modules, classes, and structures), except for read-only|Constants and literals|  
+|Properties, except for read-only|Enumeration members|  
+|Array elements|Expressions (even if their elements are modifiable)|  
   
-## <a name="modifiable-and-nonmodifiable-arguments"></a>Аргументами modifiable и Nonmodifiable  
- Объект *изменяемые аргумент* — один с изменяемым базового элемента. Вызывающий код может хранить новое значение в любое время, и если передается аргумент [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), код в процедуру также можно изменить элемент в вызывающем коде.  
+## <a name="modifiable-and-nonmodifiable-arguments"></a>Modifiable and Nonmodifiable Arguments  
+ A *modifiable argument* is one with a modifiable underlying element. The calling code can store a new value at any time, and if you pass the argument [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), the code in the procedure can also modify the underlying element in the calling code.  
   
- Объект *неизменяемого аргумента* базовой неизменяемым или он передается [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md). Процедура не может изменить элемент в вызывающем коде, даже если он является изменяемым. Если он является неизменяемым, в вызывающем коде нельзя изменять.  
+ A *nonmodifiable argument* either has a nonmodifiable underlying element or is passed [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md). The procedure cannot modify the underlying element in the calling code, even if it is a modifiable element. If it is a nonmodifiable element, the calling code itself cannot modify it.  
   
- Вызванная процедура может изменить свою локальную копию неизменяемого аргумента, но это изменение не влияет на базовый элемент в вызывающем коде.  
+ The called procedure might modify its local copy of a nonmodifiable argument, but that modification does not affect the underlying element in the calling code.  
   
 ## <a name="see-also"></a>См. также
 
@@ -45,7 +45,7 @@ ms.locfileid: "61665953"
 - [Передача аргументов по значению и по ссылке](./passing-arguments-by-value-and-by-reference.md)
 - [Различия между передачей аргумента по значению и по ссылке](./differences-between-passing-an-argument-by-value-and-by-reference.md)
 - [Практическое руководство. Изменение значения аргумента процедуры](./how-to-change-the-value-of-a-procedure-argument.md)
-- [Практическое руководство. Защита аргумента процедуры от изменения значения](./how-to-protect-a-procedure-argument-against-value-changes.md)
-- [Практическое руководство. Принудительная передаваться по значению аргумента](./how-to-force-an-argument-to-be-passed-by-value.md)
+- [Практическое руководство. Защита аргумента процедуры от изменений значения](./how-to-protect-a-procedure-argument-against-value-changes.md)
+- [Практическое руководство. Принудительная передача аргумента по значению](./how-to-force-an-argument-to-be-passed-by-value.md)
 - [Передача аргументов по позиции и по имени](./passing-arguments-by-position-and-by-name.md)
-- [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+- [Типы значений и ссылочные типы](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)

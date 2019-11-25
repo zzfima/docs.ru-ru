@@ -1,26 +1,26 @@
 ---
-title: Доступ запрещен (Visual Basic)
+title: В разрешении отказано
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID70
 ms.assetid: 71f46756-f522-4814-aab4-492bf9924245
-ms.openlocfilehash: ad75c556748bf5c0f9cef55310c4ffa7b01fd458
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 410301a1e99040fc617ab1bf1e851329ab3072d2
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61920839"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347007"
 ---
 # <a name="permission-denied-visual-basic"></a>Доступ запрещен (Visual Basic)
-Предпринята попытка записи на диск защищен от записи или доступа к заблокированного файла.  
+An attempt was made to write to a write-protected disk or to access a locked file.  
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  
   
-1. Чтобы открыть файл защищен от записи, измените атрибут защиту от записи файла.  
+1. To open a write-protected file, change the write-protection attribute of the file.  
   
-2. Убедитесь, что файл не заблокирован другим процессом и ожидания для открытия файла, до ее снятия другим процессом.  
+2. Make sure that another process has not locked the file, and wait to open the file until the other process releases it.  
   
-3. Для доступа к реестру, убедитесь, что разрешения пользователя включают этот тип доступа к реестру.  
+3. To access the registry, check that your user permissions include this type of registry access.  
   
 ## <a name="see-also"></a>См. также
 

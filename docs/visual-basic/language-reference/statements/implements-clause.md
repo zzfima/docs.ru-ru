@@ -1,5 +1,5 @@
 ---
-title: Предложение Implements (Visual Basic)
+title: Предложение Implements
 ms.date: 07/20/2015
 f1_keywords:
 - vb.ImplementsClause
@@ -17,28 +17,28 @@ helpviewer_keywords:
 - members [Visual Basic], Implements keyword
 - reimplementation
 ms.assetid: 5252cdf9-964d-4fc6-af0f-0449b7126b5a
-ms.openlocfilehash: dcd20f21a989c327dcfcf27d5638d500b6e4b6da
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: f114aee75356e59eafd9d3ba6af9c64402cb374f
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929319"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345876"
 ---
 # <a name="implements-clause-visual-basic"></a>Предложение Implements (Visual Basic)
-Указывает, что член класса или структуры предоставляет реализацию для члена, определенного в интерфейсе.  
+Indicates that a class or structure member is providing the implementation for a member defined in an interface.  
   
-## <a name="remarks"></a>Примечания  
-Ключевое слово не совпадает с [оператором Implements.](../../../visual-basic/language-reference/statements/implements-statement.md) `Implements` `Implements` Инструкция используется для указания того, что класс или структура реализует один или несколько интерфейсов, а затем для каждого элемента `Implements` используется ключевое слово для указания интерфейса и члена, который он реализует.
+## <a name="remarks"></a>Заметки  
+The `Implements` keyword is not the same as the [Implements Statement](../../../visual-basic/language-reference/statements/implements-statement.md). You use the `Implements` statement to specify that a class or structure implements one or more interfaces, and then for each member you use the `Implements` keyword to specify which interface and which member it implements.
 
-Если класс или структура реализует интерфейс, он должен включать `Implements` инструкцию сразу после оператора [Class](../../../visual-basic/language-reference/statements/class-statement.md) или [Structure](../../../visual-basic/language-reference/statements/structure-statement.md), и она должна реализовывать все члены, определенные интерфейсом.
+If a class or structure implements an interface, it must include the `Implements` statement immediately after the [Class Statement](../../../visual-basic/language-reference/statements/class-statement.md) or [Structure Statement](../../../visual-basic/language-reference/statements/structure-statement.md), and it must implement all the members defined by the interface.
 
-## <a name="reimplementation"></a>Воссоздании  
-В производном классе можно повторно реализовать член интерфейса, который уже реализован в базовом классе. Это отличается от переопределения члена базового класса в следующих отношениях.
+## <a name="reimplementation"></a>Reimplementation  
+In a derived class, you can reimplement an interface member that the base class has already implemented. This is different from overriding the base class member in the following respects:
 
-- Член базового класса не обязательно должен быть [переопределяемым](../../../visual-basic/language-reference/modifiers/overridable.md) для повторной реализации.
-- Элемент можно повторно реализовать с другим именем.
+- The base class member does not need to be [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md) to be reimplemented.
+- You can reimplement the member with a different name.
 
-`Implements` Ключевое слово можно использовать в следующих контекстах:
+The `Implements` keyword can be used in the following contexts:
 
 - [Оператор Event](../../../visual-basic/language-reference/statements/event-statement.md)
 - [Оператор Function](../../../visual-basic/language-reference/statements/function-statement.md)

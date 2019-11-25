@@ -1,5 +1,5 @@
 ---
-title: Подпрограммы (Visual Basic)
+title: Подпрограммы
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Sub procedures [Visual Basic], about Sub procedures
@@ -11,64 +11,64 @@ helpviewer_keywords:
 - procedures [Visual Basic], Sub
 - syntax [Visual Basic], Sub procedures
 ms.assetid: 6a0a4958-ed0a-4d3d-8d31-0772c82bda58
-ms.openlocfilehash: b70594e002bbf08f0890586e78df901ccb26c7ce
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7848dc07d6462622685cdbea92202585f4d5d2c4
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61791825"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352527"
 ---
 # <a name="sub-procedures-visual-basic"></a>Подпрограммы (Visual Basic)
-Объект `Sub` процедура — это последовательность операторов Visual Basic, заключенным `Sub` и `End Sub` инструкций. `Sub` Процедура выполняет задачи и возвращает управление вызывающему коду, но не возвращает значение вызывающему коду.  
+A `Sub` procedure is a series of Visual Basic statements enclosed by the `Sub` and `End Sub` statements. The `Sub` procedure performs a task and then returns control to the calling code, but it does not return a value to the calling code.  
   
- Каждый раз при вызове процедуры, его операторы выполняются, начиная с первого выполняемого оператора после `Sub` инструкции и заканчивая первым `End Sub`, `Exit Sub`, или `Return` обнаружен оператор.  
+ Each time the procedure is called, its statements are executed, starting with the first executable statement after the `Sub` statement and ending with the first `End Sub`, `Exit Sub`, or `Return` statement encountered.  
   
- Вы можете определить `Sub` процедуры в модули, классы и структуры. По умолчанию это `Public`, который означает, что можно вызывать из любого места в приложении, которое имеет доступ к модуля, класса или структуры, в котором она определена. Термин, *метод*, описывает `Sub` или `Function` процедуры, к которому осуществляется из вне модуля, класса или структуры. Дополнительные сведения см. в разделе [Procedures in Visual Basic](./index.md) (Процедуры в Visual Basic).  
+ You can define a `Sub` procedure in modules, classes, and structures. By default, it is `Public`, which means you can call it from anywhere in your application that has access to the module, class, or structure in which you defined it. The term, *method*, describes a `Sub` or `Function` procedure that is accessed from outside its defining module, class, or structure. Дополнительные сведения см. в разделе [Procedures in Visual Basic](./index.md) (Процедуры в Visual Basic).  
   
- Объект `Sub` процедура может принимать аргументы, такие как константы, переменные или выражения, которые передаются в него в вызывающем коде.  
+ A `Sub` procedure can take arguments, such as constants, variables, or expressions, which are passed to it by the calling code.  
   
 ## <a name="declaration-syntax"></a>Синтаксис объявления  
- Синтаксис объявления `Sub` процедура выглядит следующим образом:  
+ The syntax for declaring a `Sub` procedure is as follows:  
   
- `[` *модификаторы* `] Sub` *subname* `[(` *список_параметров* `)]`  
+ `[` *modifiers* `] Sub`  *subname* `[(` *parameterlist* `)]`  
   
  `' Statements of the Sub procedure.`  
   
  `End Sub`  
   
- `modifiers` Можно указать уровень доступа и сведения о перегрузка, переопределение, совместного использования и затенении. Дополнительные сведения см. в разделе [оператор Sub](../../../../visual-basic/language-reference/statements/sub-statement.md).  
+ The `modifiers` can specify access level and information about overloading, overriding, sharing, and shadowing. For more information, see [Sub Statement](../../../../visual-basic/language-reference/statements/sub-statement.md).  
   
-## <a name="parameter-declaration"></a>Объявление параметра  
- Каждый параметр процедуры, как объявить переменную, указав параметр имя и тип данных точно так же объявляется. Можно также указать способ передачи и параметр является необязательным, или массив параметров.  
+## <a name="parameter-declaration"></a>Parameter Declaration  
+ You declare each procedure parameter similarly to how you declare a variable, specifying the parameter name and data type. You can also specify the passing mechanism, and whether the parameter is optional or a parameter array.  
   
- Синтаксис для каждого параметра в списке параметров выглядит следующим образом:  
+ The syntax for each parameter in the parameter list is as follows:  
   
- `[Optional] [ByVal | ByRef] [ParamArray]`  *имя_параметра*`As`*тип данных*  
+ `[Optional] [ByVal | ByRef] [ParamArray]`  *parametername*  `As`  *datatype*  
   
- Если параметр является необязательным, необходимо также указать значение по умолчанию как часть объявления. Синтаксис для указания значения по умолчанию выглядит следующим образом:  
+ If the parameter is optional, you must also supply a default value as part of its declaration. The syntax for specifying a default value is as follows:  
   
- `Optional [ByVal | ByRef]`  *имя_параметра*`As`*datatype*`=`*defaultvalue*  
+ `Optional [ByVal | ByRef]`  *parametername*  `As`  *datatype*  `=`  *defaultvalue*  
   
-### <a name="parameters-as-local-variables"></a>Параметры в качестве локальных переменных  
- Когда управление передается в процедуру, каждый параметр рассматривается как локальная переменная. Это означает, что его времени существования совпадает со значением, процедуры и ее область действия является вся процедура.  
+### <a name="parameters-as-local-variables"></a>Parameters as Local Variables  
+ When control passes to the procedure, each parameter is treated as a local variable. This means that its lifetime is the same as that of the procedure, and its scope is the whole procedure.  
   
-## <a name="calling-syntax"></a>Синтаксис вызова  
- Вы вызываете `Sub` процедуру явным образом с помощью отдельного вызывающего оператора. Его нельзя вызвать с помощью его имени в выражении. Необходимо указать значения для всех аргументов, которые не являются необязательными, и список аргументов необходимо заключить в круглые скобки. Если не указано никаких аргументов, скобки можно опустить. Использование `Call` ключевое слово является необязательным, но не рекомендуется.  
+## <a name="calling-syntax"></a>Calling Syntax  
+ You invoke a `Sub` procedure explicitly with a stand-alone calling statement. You cannot call it by using its name in an expression. You must provide values for all arguments that are not optional, and you must enclose the argument list in parentheses. If no arguments are supplied, you can optionally omit the parentheses. The use of the `Call` keyword is optional but not recommended.  
   
- Синтаксис для вызова `Sub` процедура выглядит следующим образом:  
+ The syntax for a call to a `Sub` procedure is as follows:  
   
  `[Call]`  *subname* `[(` *argumentlist* `)]`  
   
- Вы можете вызвать `Sub` метода из за пределами класса, определяющего его. Во-первых, необходимо использовать `New` ключевое слово для создания экземпляра класса, или вызвать метод, который возвращает экземпляр класса. Дополнительные сведения см. в разделе [оператор New](../../../../visual-basic/language-reference/operators/new-operator.md). Затем можно использовать следующий синтаксис для вызова `Sub` метода для экземпляра объекта:  
+ You can call a `Sub` method from outside the class that defines it. First, you have to use the `New` keyword to create an instance of the class, or call a method that returns an instance of the class. For more information, see [New Operator](../../../../visual-basic/language-reference/operators/new-operator.md). Then, you can use the following syntax to call the `Sub` method on the instance object:  
   
- *Объект*. *имя_метода*`[(`*argumentlist*`)]`  
+ *Object*.*methodname*`[(`*argumentlist*`)]`  
   
-### <a name="illustration-of-declaration-and-call"></a>Пример объявления и вызова  
- Следующие `Sub` процедура показывает оператору компьютера, какую задачу, приложение собирается выполнить, а также указана метка времени. Вместо повторения этого кода в начале каждой задачи, приложение вызывает `tellOperator` из различных расположений. Каждый вызов передает строку в `task` , указывающий, запущенную задачу.  
+### <a name="illustration-of-declaration-and-call"></a>Illustration of Declaration and Call  
+ The following `Sub` procedure tells the computer operator which task the application is about to perform, and also displays a time stamp. Instead of duplicating this code at the start of every task, the application just calls `tellOperator` from various locations. Each call passes a string in the `task` argument that identifies the task being started.  
   
  [!code-vb[VbVbcnProcedures#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#2)]  
   
- В следующем примере показано типичный вызов `tellOperator`.  
+ The following example shows a typical call to `tellOperator`.  
   
  [!code-vb[VbVbcnProcedures#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#3)]  
   
@@ -81,4 +81,4 @@ ms.locfileid: "61791825"
 - [Параметры и аргументы процедуры](./procedure-parameters-and-arguments.md)
 - [Оператор Sub](../../../../visual-basic/language-reference/statements/sub-statement.md)
 - [Практическое руководство. Вызов процедуры, которая не возвращает значение](./how-to-call-a-procedure-that-does-not-return-a-value.md)
-- [Практическое руководство. Вызов обработчика событий в Visual Basic](./how-to-call-an-event-handler.md)
+- [How to: Call an Event Handler in Visual Basic](./how-to-call-an-event-handler.md)

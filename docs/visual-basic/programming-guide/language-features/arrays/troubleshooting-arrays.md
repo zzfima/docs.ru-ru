@@ -1,5 +1,5 @@
 ---
-title: Устранение неполадок, связанных с массивами (Visual Basic)
+title: Устранение неполадок, связанных с массивами
 ms.date: 07/20/2015
 helpviewer_keywords:
 - troubleshooting arrays
@@ -9,20 +9,20 @@ helpviewer_keywords:
 - arrays [Visual Basic], declaration errors
 - arrays [Visual Basic], troubleshooting
 ms.assetid: f4e971c7-c0a4-4ed7-a77a-8d71039f266f
-ms.openlocfilehash: 69d5294eacc59718adb1b0a226594d2cf69273f5
-ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.openlocfilehash: 3c50c68c2a39aa04cff2dd43b5dfde709aec290f
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64913464"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349068"
 ---
 # <a name="troubleshooting-arrays-visual-basic"></a>Устранение неполадок, связанных с массивами (Visual Basic)
-Этой странице перечислены некоторые распространенные проблемы, которые могут возникнуть при работе с массивами.  
+This page lists some common problems that can occur when working with arrays.  
   
-## <a name="compilation-errors-declaring-and-initializing-an-array"></a>Ошибки компиляции, объявления и инициализации массива  
- Ошибки компиляции могут возникнуть с неправильным пониманием того, правила для объявления, создания и инициализации массивов. Ниже перечислены наиболее распространенные причины ошибок.  
+## <a name="compilation-errors-declaring-and-initializing-an-array"></a>Compilation Errors Declaring and Initializing an Array  
+ Compilation errors can arise from misunderstanding of the rules for declaring, creating, and initializing arrays. The most common causes of errors are the following:  
   
-- Предоставление [оператор New](../../../../visual-basic/language-reference/operators/new-operator.md) предложение после указания размерностей в объявлении переменной массива. Следующие строки кода показывают недопустимые объявления этого типа.  
+- Supplying a [New Operator](../../../../visual-basic/language-reference/operators/new-operator.md) clause after specifying dimension lengths in the array variable declaration. The following code lines show invalid declarations of this type.  
   
      `Dim INVALIDsingleDimByteArray(2) As Byte = New Byte()`  
   
@@ -30,15 +30,15 @@ ms.locfileid: "64913464"
   
      `Dim INVALIDjaggedByteArray(1)() As Byte = New Byte()()`  
   
-- Указание длины по измерениям дольше, чем массива верхнего уровня массива массивов. В следующей строке кода показано недопустимое объявление этого типа.  
+- Specifying dimension lengths for more than the top-level array of a jagged array. The following code line shows an invalid declaration of this type.  
   
      `Dim INVALIDjaggedByteArray(1)(1) As Byte`  
   
-- Пропуск `New` ключевое слово, при указании значения элементов. В следующей строке кода показано недопустимое объявление этого типа.  
+- Omitting the `New` keyword when specifying the element values. The following code line shows an invalid declaration of this type.  
   
      `Dim INVALIDoneDimShortArray() As Short = Short() {0, 1, 2, 3}`  
   
-- Предоставление `New` предложение без фигурных скобок (`{}`). Следующие строки кода показывают недопустимые объявления этого типа.  
+- Supplying a `New` clause without braces (`{}`). The following code lines show invalid declarations of this type.  
   
      `Dim INVALIDsingleDimByteArray() As Byte = New Byte()`  
   
@@ -48,16 +48,16 @@ ms.locfileid: "64913464"
   
      `Dim INVALIDtwoDimShortArray(,) As Short = New Short(1, 1)`  
   
-## <a name="accessing-an-array-out-of-bounds"></a>Доступ к массиву вне допустимых границ  
- Процесс инициализации массива назначает верхней и нижней границей каждого измерения. При каждом обращении к элемент массива необходимо указать допустимый индекс или индекс, для каждого измерения. Если любой индекс ниже его нижней границы или выше верхней границы, <xref:System.IndexOutOfRangeException> результаты исключения. Компилятор не обнаруживает такую ошибку, поэтому она возникает во время выполнения.  
+## <a name="accessing-an-array-out-of-bounds"></a>Accessing an Array Out of Bounds  
+ The process of initializing an array assigns an upper bound and a lower bound to each dimension. Every access to an element of the array must specify a valid index, or subscript, for every dimension. If any index is below its lower bound or above its upper bound, an <xref:System.IndexOutOfRangeException> exception results. The compiler cannot detect such an error, so an error occurs at run time.  
   
-### <a name="determining-bounds"></a>Определение границ  
- Если другой компонент передает массив в коде, например как аргумент процедуры, вы не знаете размер массива или длина его измерений. Всегда необходимо определить верхнюю границу для каждого измерения массива, прежде чем пытаться получить доступ к какие-либо элементы. Если массив был создан с помощью некоторых средств, отличных от Visual Basic `New` предложение, нижняя граница может быть что-то отличное от 0, и лучше всего определить, что нижняя граница.  
+### <a name="determining-bounds"></a>Determining Bounds  
+ If another component passes an array to your code, for example as a procedure argument, you do not know the size of that array or the lengths of its dimensions. You should always determine the upper bound for every dimension of an array before you attempt to access any elements. If the array has been created by some means other than a Visual Basic `New` clause, the lower bound might be something other than 0, and it is safest to determine that lower bound as well.  
   
-### <a name="specifying-the-dimension"></a>Указание измерения  
- При определении границ многомерного массива, будьте внимательны, как указать измерения. `dimension` Параметры <xref:System.Array.GetLowerBound%2A> и <xref:System.Array.GetUpperBound%2A> методов начинаются с нуля, при `Rank` параметры Visual Basic <xref:Microsoft.VisualBasic.Information.LBound%2A> и <xref:Microsoft.VisualBasic.Information.UBound%2A> функции начинаются с 1.  
+### <a name="specifying-the-dimension"></a>Specifying the Dimension  
+ When determining the bounds of a multidimensional array, take care how you specify the dimension. The `dimension` parameters of the <xref:System.Array.GetLowerBound%2A> and <xref:System.Array.GetUpperBound%2A> methods are 0-based, while the `Rank` parameters of the Visual Basic <xref:Microsoft.VisualBasic.Information.LBound%2A> and <xref:Microsoft.VisualBasic.Information.UBound%2A> functions are 1-based.  
   
 ## <a name="see-also"></a>См. также
 
 - [Массивы](../../../../visual-basic/programming-guide/language-features/arrays/index.md)
-- [Практическое руководство. Инициализация переменной массива в Visual Basic](../../../../visual-basic/programming-guide/language-features/arrays/how-to-initialize-an-array-variable.md)
+- [How to: Initialize an Array Variable in Visual Basic](../../../../visual-basic/programming-guide/language-features/arrays/how-to-initialize-an-array-variable.md) (Практическое руководство. Инициализация переменной массива в Visual Basic)

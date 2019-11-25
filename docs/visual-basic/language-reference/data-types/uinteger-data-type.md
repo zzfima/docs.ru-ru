@@ -1,5 +1,5 @@
 ---
-title: Тип данных UInteger (Visual Basic)
+title: Тип данных UInteger
 ms.date: 01/31/2018
 f1_keywords:
 - vb.uinteger
@@ -16,39 +16,39 @@ helpviewer_keywords:
 - UI literal type characters [Visual Basic]
 - data types [Visual Basic], integral
 ms.assetid: db7ddd34-4f23-46f5-84dd-8b0f83bb8729
-ms.openlocfilehash: 1ae0cbd3a518bf863a3c57f50934837a486d2901
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: ccff61608aed797734cb4f5ca0571d7ed73ba98b
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72583126"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74343889"
 ---
 # <a name="uinteger-data-type"></a>UInteger - тип данных
 
-Содержит 32-разрядные (4-байтные) целые числа без знака, имеющие значение от 0 до 4 294 967 295.
+Holds unsigned 32-bit (4-byte) integers ranging in value from 0 through 4,294,967,295.
 
 ## <a name="remarks"></a>Заметки
 
-Тип данных `UInteger` предоставляет наибольшее значение без знака в наиболее эффективной ширине данных.
+The `UInteger` data type provides the largest unsigned value in the most efficient data width.
 
 Значение по умолчанию для типа `UInteger` — 0.
 
-## <a name="literal-assignments"></a>Присваивания литералов
+## <a name="literal-assignments"></a>Literal assignments
 
-Можно объявить и инициализировать переменную `UInteger`, назначив ей десятичный литерал, шестнадцатеричный литерал, Восьмеричный литерал или (начиная с Visual Basic 2017) двоичный литерал. Если целочисленный литерал выходит за пределы диапазона `UInteger` (то есть, если он меньше <xref:System.UInt32.MinValue?displayProperty=nameWithType> или больше <xref:System.UInt32.MaxValue?displayProperty=nameWithType>), возникает ошибка компиляции.
+You can declare and initialize a `UInteger` variable by assigning it a decimal literal, a hexadecimal literal, an octal literal, or (starting with Visual Basic 2017) a binary literal. Если целочисленный литерал выходит за пределы диапазона `UInteger` (то есть, если он меньше <xref:System.UInt32.MinValue?displayProperty=nameWithType> или больше <xref:System.UInt32.MaxValue?displayProperty=nameWithType>), возникает ошибка компиляции.
 
 В следующем примере целые числа, равные 3 000 000 000 и представленные в виде десятичного, шестнадцатеричного и двоичного литерала, назначаются значениям `UInteger`.
 
 [!code-vb[UInteger](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#UInt)]
 
 > [!NOTE]
-> Префикс `&h` или `&H` можно использовать для обозначения шестнадцатеричного литерала, префикс `&b` или `&B` для обозначения двоичного литерала, а префикс `&o` или `&O` — для обозначения восьмеричного литерала. У десятичных литералов префиксов нет.
+> You use the prefix `&h` or `&H` to denote a hexadecimal literal, the prefix `&b` or `&B` to denote a binary literal, and the prefix `&o` or `&O` to denote an octal literal. У десятичных литералов префиксов нет.
 
-Начиная с Visual Basic 2017 можно также использовать символ подчеркивания `_` в качестве разделителя цифр для повышения удобочитаемости, как показано в следующем примере.
+Starting with Visual Basic 2017, you can also use the underscore character, `_`, as a digit separator to enhance readability, as the following example shows.
 
 [!code-vb[UInteger](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#UIntS)]
 
-Начиная с Visual Basic 15,5 можно также использовать символ подчеркивания (`_`) в качестве начального разделителя между префиксом и шестнадцатеричными, двоичными или восьмеричными цифрами. Пример:
+Starting with Visual Basic 15.5, you can also use the underscore character (`_`) as a leading separator between the prefix and the hexadecimal, binary, or octal digits. Пример:
 
 ```vb
 Dim number As UInteger = &H_0F8C_0326
@@ -56,7 +56,7 @@ Dim number As UInteger = &H_0F8C_0326
 
 [!INCLUDE [supporting-underscores](../../../../includes/vb-separator-langversion.md)]
 
-Числовые литералы могут также включать [символ](../../programming-guide/language-features/data-types/type-characters.md) `UI` или `ui`, чтобы обозначить тип данных `UInteger`, как показано в следующем примере.
+Numeric literals can also include the `UI` or `ui` [type character](../../programming-guide/language-features/data-types/type-characters.md) to denote the `UInteger` data type, as the following example shows.
 
 ```vb
 Dim number = &H_0FAC_14D7ui
@@ -64,19 +64,19 @@ Dim number = &H_0FAC_14D7ui
 
 ## <a name="programming-tips"></a>Советы по программированию
 
-Типы данных `UInteger` и `Integer` обеспечивают оптимальную производительность на 32-разрядном процессоре, так как типы меньшего числа (`UShort`, `Short`, `Byte` и `SByte`), даже если они используют меньшее количество бит, занимают больше времени. , хранения и выборки.
+The `UInteger` and `Integer` data types provide optimal performance on a 32-bit processor, because the smaller integer types (`UShort`, `Short`, `Byte`, and `SByte`), even though they use fewer bits, take more time to load, store, and fetch.
 
-- **Отрицательные числа.** Поскольку `UInteger` является неподписанным типом, он не может представлять отрицательное число. При использовании оператора унарного минуса (`-`) в выражении, результатом которого является тип `UInteger`, Visual Basic сначала преобразует выражение в `Long`.
+- **Negative Numbers.** Because `UInteger` is an unsigned type, it cannot represent a negative number. If you use the unary minus (`-`) operator on an expression that evaluates to type `UInteger`, Visual Basic converts the expression to `Long` first.
 
-- **Соответствие CLS.** Тип данных `UInteger` не является частью [спецификации](https://www.ecma-international.org/publications/standards/Ecma-335.htm) CLS, поэтому CLS-совместимый код не может использовать компонент, который его использует.
+- **CLS Compliance.** The `UInteger` data type is not part of the [Common Language Specification](https://www.ecma-international.org/publications/standards/Ecma-335.htm) (CLS), so CLS-compliant code cannot consume a component that uses it.
 
-- **Вопросы взаимодействия.** Если вы взаимодействуете с компонентами, которые не написаны для .NET Framework, например автоматизации или COM-объекты, помните, что такие типы, как `uint`, могут иметь разную ширину данных (16 бит) в других средах. При передаче 16-разрядного аргумента в такой компонент объявите его как `UShort` вместо `UInteger` в управляемом коде Visual Basic.
+- **Interop Considerations.** If you are interfacing with components not written for the .NET Framework, for example Automation or COM objects, keep in mind that types such as `uint` can have a different data width (16 bits) in other environments. If you are passing a 16-bit argument to such a component, declare it as `UShort` instead of `UInteger` in your managed Visual Basic code.
 
-- **Расширяющие.** Тип данных `UInteger` расширяется до `Long`, `ULong`, `Decimal`, `Single` и `Double`. Это означает, что можно преобразовать `UInteger` в любой из этих типов без возникновения ошибки <xref:System.OverflowException?displayProperty=nameWithType>.
+- **Widening.** The `UInteger` data type widens to `Long`, `ULong`, `Decimal`, `Single`, and `Double`. This means you can convert `UInteger` to any of these types without encountering a <xref:System.OverflowException?displayProperty=nameWithType> error.
 
-- **Символы типа.** Добавление символов типа литерала `UI` литерала к типу данных `UInteger`. `UInteger` не имеет символа типа идентификатора.
+- **Type Characters.** Appending the literal type characters `UI` to a literal forces it to the `UInteger` data type. `UInteger` has no identifier type character.
 
-- **Тип платформы.** В .NET Framework данный тип соответствует структуре <xref:System.UInt32?displayProperty=nameWithType>.
+- **Framework Type.** В .NET Framework данный тип соответствует структуре <xref:System.UInt32?displayProperty=nameWithType>.
 
 ## <a name="see-also"></a>См. также
 

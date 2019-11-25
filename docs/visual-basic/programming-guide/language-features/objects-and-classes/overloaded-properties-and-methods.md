@@ -1,5 +1,5 @@
 ---
-title: Перегруженные свойства и методы (Visual Basic)
+title: Overloaded properties and methods
 ms.date: 07/20/2015
 helpviewer_keywords:
 - properties [Visual Basic], overloading
@@ -12,77 +12,77 @@ helpviewer_keywords:
 - method overloading
 - Overloads keyword [Visual Basic], overloaded members
 ms.assetid: b686fb97-e7d7-4001-afaa-6650cba08f0d
-ms.openlocfilehash: 8d7341370d9770d2e57f786ac7c68277e66a9bbd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a5017d371f8a01436020443b2e3466c78fc35d21
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61864875"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346093"
 ---
-# <a name="overloaded-properties-and-methods-visual-basic"></a>Перегруженные свойства и методы (Visual Basic)
+# <a name="overloaded-properties-and-methods-visual-basic"></a>Overloaded properties and methods (Visual Basic)
 
-Перегрузка — это создание более чем одной процедуры, конструктор экземпляра или свойства в классе с тем же именем, но разные типы аргументов.
+Overloading is the creation of more than one procedure, instance constructor, or property in a class with the same name but different argument types.
 
-## <a name="overloading-usage"></a>Использование перегрузки
+## <a name="overloading-usage"></a>Overloading usage
 
-Перегрузка особенно полезна при объектную модель определяет, что нужно использовать одинаковые имена процедур, работающих на различных типов данных. Например, класс, который может отображать несколько различных типов данных может иметь `Display` процедуры, которые выглядят следующим образом:
+Overloading is especially useful when your object model dictates that you employ identical names for procedures that operate on different data types. For example, a class that can display several different data types could have `Display` procedures that look like this:
 
 [!code-vb[VbVbalrOOP#64](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#64)]
 
-Без перегрузки, вам потребовалось бы создать уникальные имена для каждой процедуры, несмотря на то, что они делают одно и то же самое, как показано далее:
+Without overloading, you would need to create distinct names for each procedure, even though they do the same thing, as shown next:
 
 [!code-vb[VbVbalrOOP#65](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#65)]
 
-Перегрузка облегчает использование свойств или методов, так как она позволяет выбрать из типов данных, которые могут использоваться. Например, перегруженных `Display` способов, описанных ранее может вызываться с любым из следующих строк кода:
+Overloading makes it easier to use properties or methods because it provides a choice of data types that can be used. For example, the overloaded `Display` method discussed previously can be called with any of the following lines of code:
 
 [!code-vb[VbVbalrOOP#66](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#66)]
 
-Во время выполнения Visual Basic вызывает правильную процедуру, на основе типов данных параметров, указанную вами.
+At run time, Visual Basic calls the correct procedure based on the data types of the parameters you specify.
 
-## <a name="overloading-rules"></a>Правила перегрузки
+## <a name="overloading-rules"></a>Overloading rules
 
- Создание перегруженного члена класса путем добавления двух или более свойств или методов с одинаковым именем. За исключением перегруженных унаследованных членов все перегруженные члены должны иметь разные списки параметров и не может использоваться как средство отличительный перечисленные ниже при перегрузке свойство или процедура:
+ You create an overloaded member for a class by adding two or more properties or methods with the same name. Except for overloaded derived members, each overloaded member must have different parameter lists, and the following items cannot be used as a differentiating feature when overloading a property or procedure:
 
-- Модификаторы, такие как `ByVal` или `ByRef`, которые применяются к элементу, или параметрам элемента.
+- Modifiers, such as `ByVal` or `ByRef`, that apply to a member, or parameters of the member.
 
-- Имена параметров
+- Names of parameters
 
-- Типы возвращаемого значения процедуры
+- Return types of procedures
 
-`Overloads` Ключевое слово является необязательным при перегрузке, но если некоторый перегруженный элемент использует `Overloads` ключевое слово, то все остальные перегруженные члены с тем же именем необходимо также указать это ключевое слово.
+The `Overloads` keyword is optional when overloading, but if any overloaded member uses the `Overloads` keyword, then all other overloaded members with the same name must also specify this keyword.
 
-Производные классы могут перегружать унаследованные члены с членами, имеющими одинаковые параметры и типы параметров, этот процесс называется *перекрытие по имени и подписи*. Если `Overloads` при перекрытие по имени и подписи, реализацию члена производного класса будет использоваться вместо реализации в базовом классе, и все другие перегрузки этого элемента будут доступны для экземпляров, используется ключевое слово производный класс.
+Derived classes can overload inherited members with members that have identical parameters and parameter types, a process known as *shadowing by name and signature*. If the `Overloads` keyword is used when shadowing by name and signature, the derived class's implementation of the member will be used instead of the implementation in the base class, and all other overloads for that member will be available to instances of the derived class.
 
-Если `Overloads` слово опущено, при перегрузке унаследованный член с членом, имеющим одинаковые параметры и типы параметров, а затем перегрузка называется *перекрытие по имени*. Перекрытие по имени заменяет унаследованной реализации члена, и делает все остальные перегрузки недоступными для экземпляров производного класса и его потомков.
+If the `Overloads` keyword is omitted when overloading an inherited member with a member that has identical parameters and parameter types, then the overloading is called *shadowing by name*. Shadowing by name replaces the inherited implementation of a member, and it makes all other overloads unavailable to instances of the derived class and its decedents.
 
-`Overloads` И `Shadows` модификаторы не могут использоваться одновременно с одним свойством или методом.
+The `Overloads` and `Shadows` modifiers cannot both be used with the same property or method.
 
 ### <a name="example"></a>Пример
 
-В следующем примере создается перегруженные методы, поддерживающие `String` или `Decimal` представление суммы в долларах и возвращающие строку, содержащую налог с продаж.
+The following example creates overloaded methods that accept either a `String` or `Decimal` representation of a dollar amount and return a string containing the sales tax.
 
-#### <a name="to-use-this-example-to-create-an-overloaded-method"></a>Чтобы использовать этот пример для создания перегруженного метода
+#### <a name="to-use-this-example-to-create-an-overloaded-method"></a>To use this example to create an overloaded method
 
-1. Откройте новый проект и добавьте класс с именем `TaxClass`.
+1. Open a new project and add a class named `TaxClass`.
 
 2. Добавьте следующий код в класс `TaxClass` .
 
     [!code-vb[VbVbalrOOP#67](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#67)]
 
-3. Добавьте следующую процедуру в форму.
+3. Add the following procedure to your form.
 
     [!code-vb[VbVbalrOOP#68](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#68)]
 
-4. Добавьте кнопку в форму и вызовите `ShowTax` процедуры из `Button1_Click` события кнопки.
+4. Add a button to your form and call the `ShowTax` procedure from the `Button1_Click` event of the button.
 
-5. Запустите проект и нажмите кнопку на форме, чтобы проверить перегруженных `ShowTax` процедуры.
+5. Run the project and click the button on the form to test the overloaded `ShowTax` procedure.
 
-Во время выполнения компилятор выбирает соответствующий перегруженной функции, который соответствует параметрам, используемым. При нажатии кнопки, перегруженный метод сначала вызывается с `Price` параметр, который является строкой и сообщение, «цена is a String. Налог — $5,12" отображается. `TaxAmount` вызывается с `Decimal` значение во второй раз и сообщение, «цена — десятичное число. Налог — $5,12" отображается.
+At run time, the compiler chooses the appropriate overloaded function that matches the parameters being used. When you click the button, the overloaded method is called first with a `Price` parameter that is a string and the message, "Price is a String. Tax is $5.12" is displayed. `TaxAmount` is called with a `Decimal` value the second time and the message, "Price is a Decimal. Tax is $5.12" is displayed.
 
 ## <a name="see-also"></a>См. также
 
 - [Объекты и классы](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
-- [Сокрытие в Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
+- [Shadowing in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
 - [Оператор Sub](../../../../visual-basic/language-reference/statements/sub-statement.md)
 - [Основы наследования](../../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)
 - [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md)

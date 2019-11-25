@@ -1,19 +1,19 @@
 ---
-title: '@ (указание файла ответа) (Visual Basic)'
+title: '@ (указание файла ответа)'
 ms.date: 03/13/2018
 helpviewer_keywords:
 - '@ (Specify Response File) compiler option [Visual Basic]'
 ms.assetid: a6847eaa-e5f9-4303-9421-45b55484b9ca
-ms.openlocfilehash: 60206b6e42d329776948e8a0ef3c2e8e7e7d58bc
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: c578495bbba0efee79f02da284c7feffb8c12fab
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72583316"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348555"
 ---
 # <a name="-specify-response-file-visual-basic"></a>@ (указание файла ответа) (Visual Basic)
 
-Указывает файл, содержащий параметры компилятора и файлы исходного кода для компиляции.
+Specifies a file that contains compiler options and source-code files to compile.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -24,30 +24,30 @@ ms.locfileid: "72583316"
 ## <a name="arguments"></a>Аргументы
 
 `response_file`  
-Обязательный. Файл, содержащий параметры компилятора или файлы исходного кода для компиляции. Заключите имя файла в кавычки (""), если оно содержит пробел.
+Обязательный. A file that lists compiler options or source-code files to compile. Enclose the file name in quotation marks (" ") if it contains a space.
 
 ## <a name="remarks"></a>Заметки
 
-Компилятор обрабатывает параметры компилятора и файлы исходного кода, указанные в файле ответов, как если бы они были указаны в командной строке.
+The compiler processes the compiler options and source-code files specified in a response file as if they had been specified on the command line.
 
-Чтобы указать в компиляции несколько файлов ответов, укажите несколько параметров файла ответов, как показано ниже.
+To specify more than one response file in a compilation, specify multiple response-file options, such as the following.
 
 ```console
 @file1.rsp @file2.rsp
 ```
 
-В файле ответов в одной строке может быть несколько параметров компилятора и файлов исходного кода. Одна спецификация параметра компилятора должна находиться в одной строке (не может охватывать несколько строк). Файлы ответов могут содержать комментарии, которые начинаются с символа `#`.
+In a response file, multiple compiler options and source-code files can appear on one line. A single compiler-option specification must appear on one line (cannot span multiple lines). Response files can have comments that begin with the `#` symbol.
 
-Параметры, указанные в командной строке, можно объединять с параметрами, указанными в одном или нескольких файлах ответов. Компилятор обрабатывает параметры команды по мере их обнаружения. Таким образом, аргументы командной строки могут переопределять параметры, перечисленные ранее в файлах ответов. И наоборот, параметры в файле ответов переопределяют параметры, перечисленные ранее в командной строке или в других файлах ответов.
+You can combine options specified on the command line with options specified in one or more response files. The compiler processes the command options as it encounters them. Therefore, command-line arguments can override previously listed options in response files. Conversely, options in a response file override options listed previously on the command line or in other response files.
 
-Visual Basic предоставляет файл Vbc. rsp, который находится в том же каталоге, что и файл Vbc. exe. Файл Vbc. rsp включается по умолчанию, если не используется параметр `-noconfig`. Дополнительные сведения см. в разделе [-config](../../../visual-basic/reference/command-line-compiler/noconfig.md).
+Visual Basic provides the Vbc.rsp file, which is located in the same directory as the Vbc.exe file. The Vbc.rsp file is included by default unless the `-noconfig` option is used. For more information, see [-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md).
 
 > [!NOTE]
-> Параметр `@` недоступен в среде разработки Visual Studio; Он доступен только при компиляции из командной строки.
+> The `@` option is not available from within the Visual Studio development environment; it is available only when compiling from the command line.
 
 ## <a name="example"></a>Пример
 
-Следующие строки относятся к примеру файла ответов.
+The following lines are from a sample response file.
 
 ```console
 # build the first output file
@@ -59,7 +59,7 @@ source2.vb
 
 ## <a name="example"></a>Пример
 
-В следующем примере показано, как использовать параметр `@` с файлом ответов с именем `File1.rsp`.
+The following example demonstrates how to use the `@` option with the response file named `File1.rsp`.
 
 ```console
 vbc @file1.rsp

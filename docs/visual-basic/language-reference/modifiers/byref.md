@@ -1,5 +1,5 @@
 ---
-title: ByRef (Visual Basic)
+title: ByRef
 ms.date: 07/20/2015
 f1_keywords:
 - vb.ByRef
@@ -8,17 +8,17 @@ helpviewer_keywords:
 - ByRef keyword [Visual Basic]
 - ByRef keyword [Visual Basic], contexts
 ms.assetid: 4692e032-46f3-4e41-b0fa-3004364d9138
-ms.openlocfilehash: e553f350ea95f04996496b65f98f277795838e25
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 12c2f7c52986d49a761167536f04e61d0904ecbb
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61800839"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351609"
 ---
 # <a name="byref-visual-basic"></a>ByRef (Visual Basic)
-Указывает, что аргумент передается таким образом, что вызываемой процедуры можно изменить значение переменной в аргументе в вызывающем коде.  
+Specifies that an argument is passed in such a way that the called procedure can change the value of a variable underlying the argument in the calling code.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
  Модификатор `ByRef` можно использовать в следующих контекстах:  
   
  [Оператор Declare](../../../visual-basic/language-reference/statements/declare-statement.md)  

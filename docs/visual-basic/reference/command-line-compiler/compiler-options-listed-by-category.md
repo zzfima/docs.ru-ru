@@ -1,22 +1,22 @@
 ---
-title: Параметры компилятора Visual Basic по категориям
+title: Параметры компилятора, упорядоченные по категориям
 ms.date: 04/12/2018
 helpviewer_keywords:
 - Visual Basic compiler, options
 ms.assetid: fbe36f7a-7cfa-4f77-a8d4-2be5958568e3
-ms.openlocfilehash: 8f09566585c06531a346b0143a6002c2854a0b01
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 8b6c142041024e672fe42c8c6f2d3ebe7b07cd65
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71182564"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344807"
 ---
-# <a name="visual-basic-compiler-options-listed-by-category"></a>Visual Basic параметров компилятора, перечисленных по категориям
-Компилятор командной строки Visual Basic предоставляется в качестве альтернативы компиляции программ из интегрированной среды разработки (IDE) Visual Studio. Ниже приведен список параметров компилятора командной строки Visual Basic, отсортированных по функциональным категориям.  
+# <a name="visual-basic-compiler-options-listed-by-category"></a>Visual Basic compiler options listed by category
+The Visual Basic command-line compiler is provided as an alternative to compiling programs from within the Visual Studio integrated development environment (IDE). The following is a list of the Visual Basic command-line compiler options sorted by functional category.  
 
 [!INCLUDE[compiler-options](~/includes/compiler-options.md)]
   
-## <a name="compiler-output"></a>Выходные данные компилятора  
+## <a name="compiler-output"></a>Compiler output  
   
 |Параметр|Цель|  
 |---|---|  
@@ -39,13 +39,13 @@ ms.locfileid: "71182564"
 |---|---|  
 |[-doc](../../../visual-basic/reference/command-line-compiler/doc.md)|Сведение документирующих комментариев в XML-файл.|  
 |[-deterministic](../../../visual-basic/reference/command-line-compiler/deterministic.md)|Указывает компилятору на необходимость вывода сборки, чье двоичное содержимое идентично в разных компиляциях, если входные данные идентичны.|
-|[-netcf](../../../visual-basic/reference/command-line-compiler/netcf.md)|Задает компилятор, предназначенный для .NET Compact Framework.|  
+|[-netcf](../../../visual-basic/reference/command-line-compiler/netcf.md)|Sets the compiler to target the .NET Compact Framework.|  
 |[-out](../../../visual-basic/reference/command-line-compiler/out.md)|Задает выходной файл.|  
-|[/refonly](refonly-compiler-option.md)|Выводит только ссылочную сборку.|
-|[/refout](refout-compiler-option.md)|Указывает выходной путь ссылочной сборки.|
+|[/refonly](refonly-compiler-option.md)|Outputs only a reference assembly.|
+|[/refout](refout-compiler-option.md)|Specifies the output path of a reference assembly.|
 |[-target](../../../visual-basic/reference/command-line-compiler/target.md)|Задает формат выходного файла.|  
   
-## <a name="net-assemblies"></a>Сборки .NET  
+## <a name="net-assemblies"></a>.NET assemblies  
   
 |Параметр|Цель|  
 |---|---|  
@@ -54,13 +54,13 @@ ms.locfileid: "71182564"
 |[-imports](../../../visual-basic/reference/command-line-compiler/imports.md)|Импортирует пространство имен из указанной сборки.|  
 |[-keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md)|Указывает имя контейнера для пары ключей, чтобы задать для сборки строгое имя.|  
 |[-keyfile](../../../visual-basic/reference/command-line-compiler/keyfile.md)|Указывает файл, содержащий ключ или пару ключей, чтобы задать для сборки строгое имя.|  
-|[-libpath](../../../visual-basic/reference/command-line-compiler/libpath.md)|Указывает расположение сборок, на которые ссылается параметр [-Reference](../../../visual-basic/reference/command-line-compiler/reference.md) .|  
+|[-libpath](../../../visual-basic/reference/command-line-compiler/libpath.md)|Specifies the location of assemblies referenced by the [-reference](../../../visual-basic/reference/command-line-compiler/reference.md) option.|  
 |[-reference](../../../visual-basic/reference/command-line-compiler/reference.md)|Импортирует метаданные из сборки.|  
 |[-moduleassemblyname](../../../visual-basic/reference/command-line-compiler/moduleassemblyname.md)|Указывает имя сборки, частью которого будет данный модуль.|  
 |`-analyzer`|Запускает анализаторы из этой сборки (краткая форма: -a)|  
 |`-additionalfile`|Имена дополнительных файлов, которые непосредственно не влияют на создание кода, но могут использоваться анализаторами для выдачи ошибок или предупреждений.|  
   
-## <a name="debuggingerror-checking"></a>Отладка/проверка ошибок  
+## <a name="debuggingerror-checking"></a>Debugging/error checking  
   
 |Параметр|Цель|  
 |---|---|  
@@ -83,7 +83,7 @@ ms.locfileid: "71182564"
   
 |Параметр|Цель|  
 |---|---|  
-|[-langversion](../../../visual-basic/reference/command-line-compiler/langversion.md)|Укажите версию языка: 9&#124;9,0&#124;10&#124;10,0&#124;11&#124;11,0.|  
+|[-langversion](../../../visual-basic/reference/command-line-compiler/langversion.md)|Specify language version: 9&#124;9.0&#124;10&#124;10.0&#124;11&#124;11.0.|  
 |[-optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)|Принудительное явное объявление переменных.|  
 |[-optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)|Принудительное применение строгой семантики.|  
 |[-optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)|Указывает, будут ли сравнения строк двоичными или следует использовать семантику языкового стандарта.|  
@@ -111,9 +111,9 @@ ms.locfileid: "71182564"
 |[@ (указание файла ответов)](../../../visual-basic/reference/command-line-compiler/specify-response-file.md)|Указывает файл ответа.|  
 |[-baseaddress](../../../visual-basic/reference/command-line-compiler/baseaddress.md)|Задает базовый адрес библиотеки DLL.|  
 |[-codepage](../../../visual-basic/reference/command-line-compiler/codepage.md)|Задает кодовую страницу, которая будет использоваться для всех файлов исходного кода при компиляции.|  
-|[-errorreport](../../../visual-basic/reference/command-line-compiler/errorreport.md)|Указывает, каким образом компилятор Visual Basic должен сообщать о внутренних ошибках компилятора.|  
+|[-errorreport](../../../visual-basic/reference/command-line-compiler/errorreport.md)|Specifies how the Visual Basic compiler should report internal compiler errors.|  
 |[-highentropyva](../../../visual-basic/reference/command-line-compiler/highentropyva.md)|Сообщает ядру Windows, поддерживает ли указанный исполняемый файл технологию Address Space Layout Randomization (ASLR) с высокой энтропией.|  
-|[-main](../../../visual-basic/reference/command-line-compiler/main.md)|Указывает класс, содержащий `Sub Main` процедуру, используемую при запуске.|  
+|[-main](../../../visual-basic/reference/command-line-compiler/main.md)|Specifies the class that contains the `Sub Main` procedure to use at startup.|  
 |[-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)|Не компилировать с Vbc.rsp.|  
 |[-nostdlib](../../../visual-basic/reference/command-line-compiler/nostdlib.md)|Указывает компилятору не ссылаться на стандартные библиотеки.|  
 |[-nowin32manifest](../../../visual-basic/reference/command-line-compiler/nowin32manifest.md)|Указывает компилятору не внедрять манифест приложения в исполняемый файл.|  
@@ -124,7 +124,7 @@ ms.locfileid: "71182564"
 |[-vbruntime](../../../visual-basic/reference/command-line-compiler/vbruntime.md)|Указывает, что компилятор должен выполнять компиляцию без ссылки на библиотеку времени выполнения Visual Basic или со ссылкой на конкретную библиотеку времени выполнения.|  
 |[-win32manifest](../../../visual-basic/reference/command-line-compiler/win32manifest.md)|Определяет пользовательский файл манифеста приложения Win32 для внедрения в переносимый исполняемый файл проекта (PE-файл).|  
 |`-parallel[+&#124;-]`|Указывает, следует ли использовать параллельную сборку (+).|  
-|`-checksumalgorithm:<alg>`|Указывает алгоритм для расчета контрольной суммы файла источника, хранящегося в PDB.  Допустимые значения: SHA1 (по умолчанию) или SHA256. <br>Из-за проблем с алгоритмом SHA1 Корпорация Майкрософт рекомендует использовать SHA256 или более высокий уровень.|  
+|`-checksumalgorithm:<alg>`|Указывает алгоритм для расчета контрольной суммы файла источника, хранящегося в PDB.  Поддерживаемые значения: SHA1 (по умолчанию) или SHA256. <br>Due to collision problems with SHA1, Microsoft recommends SHA256 or better.|  
   
 ## <a name="see-also"></a>См. также
 

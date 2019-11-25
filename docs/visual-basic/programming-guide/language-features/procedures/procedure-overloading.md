@@ -1,5 +1,5 @@
 ---
-title: Перегрузка процедур (Visual Basic)
+title: Перегрузка процедур
 ms.date: 07/20/2015
 helpviewer_keywords:
 - signatures
@@ -17,74 +17,74 @@ helpviewer_keywords:
 - procedure overloading
 - procedures [Visual Basic], parameter lists
 ms.assetid: fbc7fb18-e3b2-48b6-b554-64c00ed09d2a
-ms.openlocfilehash: 91e76e8c051b1d6f8b6fc1604018a26b23b4945b
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 41a971896fe726cbe9849fd46334910e7288afe0
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663307"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352587"
 ---
 # <a name="procedure-overloading-visual-basic"></a>Перегрузка процедур (Visual Basic)
 
-*Перегрузка* процедуры означает определение ее в нескольких версиях с помощью тем же именем, но различными списками параметров. Перегрузка предназначена для определения несколько взаимосвязанных версий процедуры без необходимости различать их по имени. Это делается путем изменения списка параметров.
+*Overloading* a procedure means defining it in multiple versions, using the same name but different parameter lists. The purpose of overloading is to define several closely related versions of a procedure without having to differentiate them by name. You do this by varying the parameter list.
 
-## <a name="overloading-rules"></a>Правила перегрузки
+## <a name="overloading-rules"></a>Overloading Rules
 
-Когда вы перегрузка процедуры, применяются следующие правила:
+When you overload a procedure, the following rules apply:
 
-- **Тем же именем**. Каждая перегруженная версия необходимо использовать то же имя процедуры.
+- **Same Name**. Each overloaded version must use the same procedure name.
 
-- **Другой сигнатурой**. Каждая перегруженная версия должна отличаться от всех других перегруженных версий, по крайней мере одним из следующих параметров:
+- **Different Signature**. Each overloaded version must differ from all other overloaded versions in at least one of the following respects:
 
-  - Число параметров
+  - Number of parameters
 
-  - Порядок параметров
+  - Order of the parameters
 
-  - Типы данных параметров
+  - Data types of the parameters
 
-  - Число параметров типа (для универсальной процедуры)
+  - Number of type parameters (for a generic procedure)
 
-  - Тип возвращаемого значения (только для оператора преобразования)
+  - Return type (only for a conversion operator)
 
-  Вместе с именем процедуры предыдущие элементы называются *подпись* процедуры. При вызове перегруженной процедуры, компилятор использует подпись для проверки вызова на соответствие определению.
+  Together with the procedure name, the preceding items are collectively called the *signature* of the procedure. When you call an overloaded procedure, the compiler uses the signature to check that the call correctly matches the definition.
 
-- **Элементы не являются частью сигнатуры**. Нельзя перегрузить процедуру без изменения подписи. В частности не могут перегружать процедуру путем изменения только один или несколько из следующих элементов:
+- **Items Not Part of Signature**. You cannot overload a procedure without varying the signature. In particular, you cannot overload a procedure by varying only one or more of the following items:
 
-  - Ключевые слова модификаторов процедур, таких как `Public`, `Shared`, и `Static`
+  - Procedure modifier keywords, such as `Public`, `Shared`, and `Static`
 
-  - Имена параметров параметра или типа
+  - Parameter or type parameter names
 
-  - Ограничения параметров типа (для универсальной процедуры)
+  - Type parameter constraints (for a generic procedure)
 
-  - Ключевые слова модификаторов параметров, таких как `ByRef` и `Optional`
+  - Parameter modifier keywords, such as `ByRef` and `Optional`
 
-  - Оно возвращает значение
+  - Whether it returns a value
 
-  - Тип данных возвращаемого значения (за исключением оператора преобразования)
+  - The data type of the return value (except for a conversion operator)
 
-  Элементы в списке выше не являются частью сигнатуры. Несмотря на то, что их нельзя использовать для различения перегруженных версий, их можно изменять для перегруженных версий, которые правильно различаются по подписям.
+  The items in the preceding list are not part of the signature. Although you cannot use them to differentiate between overloaded versions, you can vary them among overloaded versions that are properly differentiated by their signatures.
 
-- **С поздним связыванием аргументы**. Если вы собираетесь передать переменную объекта поздней привязкой перегруженную версию, необходимо объявить соответствующий аргумент как <xref:System.Object>.
+- **Late-Bound Arguments**. If you intend to pass a late bound object variable to an overloaded version, you must declare the appropriate parameter as <xref:System.Object>.
 
-## <a name="multiple-versions-of-a-procedure"></a>Несколько версий процедуры
+## <a name="multiple-versions-of-a-procedure"></a>Multiple Versions of a Procedure
 
-Предположим, что при написании `Sub` процедуры для публикации транзакций, применительно к балансу клиента, а хотите иметь возможность идентификации клиента по имени или по номеру счета. Чтобы решить эту проблему, можно определить двумя разными `Sub` процедуры, как показано в следующем примере:
+Suppose you are writing a `Sub` procedure to post a transaction against a customer's balance, and you want to be able to refer to the customer either by name or by account number. To accommodate this, you can define two different `Sub` procedures, as in the following example:
 
 [!code-vb[VbVbcnProcedures#73](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#73)]
 
-### <a name="overloaded-versions"></a>Перегруженные версии
+### <a name="overloaded-versions"></a>Overloaded Versions
 
-Альтернативой является перегрузка процедуры. Можно использовать [перегружает](../../../../visual-basic/language-reference/modifiers/overloads.md) ключевое слово, чтобы определить версию процедуры для каждого списка аргументов следующим образом:
+An alternative is to overload a single procedure name. You can use the [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md) keyword to define a version of the procedure for each parameter list, as follows:
 
 [!code-vb[VbVbcnProcedures#72](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#72)]
 
-#### <a name="additional-overloads"></a>Дополнительные перегрузки
+#### <a name="additional-overloads"></a>Additional Overloads
 
-Если вы хотите принять сумму транзакции в формате `Decimal` или `Single`, определить дополнительные перегруженные версии `post` для для этих вариантов. Если вы уже сделали это для каждой из перегрузок в предыдущем примере, имеется четыре `Sub` процедуры, с тем же именем, но с четырьмя различными сигнатурами.
+If you also wanted to accept a transaction amount in either `Decimal` or `Single`, you could further overload `post` to allow for this variation. If you did this to each of the overloads in the preceding example, you would have four `Sub` procedures, all with the same name but with four different signatures.
 
-## <a name="advantages-of-overloading"></a>Преимущества перегрузки
+## <a name="advantages-of-overloading"></a>Advantages of Overloading
 
-Преимущество перегрузки процедуры заключается в гибкости вызова. Для использования `post` объявление процедуры в предыдущем примере, вызывающий код может получить идентификатор клиента как `String` или `Integer`, а затем вызвать ту же процедуру в любом случае. Это показано в приведенном ниже примере.
+The advantage of overloading a procedure is in the flexibility of the call. To use the `post` procedure declared in the preceding example, the calling code can obtain the customer identification as either a `String` or an `Integer`, and then call the same procedure in either case. Это показано в приведенном ниже примере.
 
 [!code-vb[VbVbcnProcedures#56](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#56)]
 

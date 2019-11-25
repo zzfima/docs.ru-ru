@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Вычисление числовых значений (Visual Basic)
+title: Практическое руководство. Вычисление числовых значений
 ms.date: 07/20/2015
 helpviewer_keywords:
 - operator precedence
@@ -11,21 +11,21 @@ helpviewer_keywords:
 - Visual Basic code, expressions
 - numeric expressions
 ms.assetid: ba6bf43d-bd96-49b8-b1de-4a7797551372
-ms.openlocfilehash: 3e367a10a3e703241c7417d3ea17068018becb5a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d213f6b5a4abf8c52d8872ae36e89796183ff27c
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64649732"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348965"
 ---
 # <a name="how-to-calculate-numeric-values-visual-basic"></a>Практическое руководство. Вычисление числовых значений (Visual Basic)
-Вы можете вычислить числовые значения с помощью числовых выражений. Объект *числовое выражение* является выражение, которое содержит литералы, константы и переменные, представляющие числовых значений и операторов, работать с этими значениями.  
+You can calculate numeric values through the use of numeric expressions. A *numeric expression* is an expression that contains literals, constants, and variables representing numeric values, and operators that act on those values.  
   
-## <a name="calculating-numeric-values"></a>Вычисление числовых значений  
+## <a name="calculating-numeric-values"></a>Calculating Numeric Values  
   
-#### <a name="to-calculate-a-numeric-value"></a>Для вычисления числовое значение  
+#### <a name="to-calculate-a-numeric-value"></a>To calculate a numeric value  
   
-- Объединить один или несколько числовых литералов, констант и переменных в числовое выражение. В следующем примере некоторые допустимые числовые выражения.  
+- Combine one or more numeric literals, constants, and variables into a numeric expression. The following example shows some valid numeric expressions.  
   
      `93.217`  
   
@@ -35,32 +35,32 @@ ms.locfileid: "64649732"
   
      `4 * (67 + i)`  
   
-     Первые три строки отображения литерал, константы и переменной. Каждый из них forms допустимое числовое выражение, сам по себе. Последняя строка показывает комбинацию переменной с двумя литералами.  
+     The first three lines show a literal, a constant, and a variable. Each one forms a valid numeric expression by itself. The final line shows a combination of a variable with two literals.  
   
-     Обратите внимание, что числовое выражение не образует является законченным оператором Visual Basic сам по себе. Необходимо использовать выражение как часть является законченным оператором.  
+     Note that a numeric expression does not form a complete Visual Basic statement by itself. You must use the expression as part of a complete statement.  
   
-#### <a name="to-store-a-numeric-value"></a>Для хранения числовое значение  
+#### <a name="to-store-a-numeric-value"></a>To store a numeric value  
   
-- Чтобы назначить значение, представленное числового выражения, переменной, как показано в следующем примере, можно использовать оператор присваивания.  
+- You can use an assignment statement to assign the value represented by a numeric expression to a variable, as the following example demonstrates.  
   
      [!code-vb[VbVbalrOperators#82](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#82)]  
   
-     В предыдущем примере, значение выражения в правой части оператора равно (`=`) присваивается переменной `j` слева от оператора, поэтому `j` вычисляется как 276.  
+     In the preceding example, the value of the expression on the right side of the equal operator (`=`) is assigned to the variable `j` on the left side of the operator, so `j` evaluates to 276.  
   
      Дополнительные сведения см. в разделе [Выписки](../../../../visual-basic/language-reference/statements/index.md).  
   
-## <a name="multiple-operators"></a>Несколько операторов  
- Если числовое выражение содержит несколько операторов, порядок, в котором они вычисляются определяется правилами приоритета операторов. Для переопределения правил приоритета операторов, выражения заключать в круглые скобки, как показано в примере выше; выражения вычисляются первыми.  
+## <a name="multiple-operators"></a>Multiple Operators  
+ If the numeric expression contains more than one operator, the order in which they are evaluated is determined by the rules of operator precedence. To override the rules of operator precedence, you enclose expressions in parentheses, as in the above example; the enclosed expressions are evaluated first.  
   
-#### <a name="to-override-normal-operator-precedence"></a>Чтобы переопределить обычный приоритет операторов  
+#### <a name="to-override-normal-operator-precedence"></a>To override normal operator precedence  
   
-- Используйте круглые скобки, чтобы включить операции, которые вы хотите сначала необходимо выполнить. В следующем примере показано два разных результата с теми же операндов и операторов.  
+- Use parentheses to enclose the operations you want to be performed first. The following example shows two different results with the same operands and operators.  
   
      [!code-vb[VbVbalrOperators#83](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#83)]  
   
-     В предыдущем примере, расчет `j` выполняет оператор сложения (`+`) первый так как скобки вокруг `(67 + i)` переопределить обычный приоритет и значение, присваиваемое `j` является 276 (4 раза 69). Расчет `k` операторы выполняются в обычном порядке (`*` перед `+`) и значение, присваиваемое `k` является 270 (268 плюс 2).  
+     In the preceding example, the calculation for `j` performs the addition operator (`+`) first because the parentheses around `(67 + i)` override normal precedence, and the value assigned to `j` is 276 (4 times 69). The calculation for `k` performs the operators in their normal precedence (`*` before `+`), and the value assigned to `k` is 270 (268 plus 2).  
   
-     Дополнительные сведения см. в разделе [порядок применения операторов в Visual Basic](../../../../visual-basic/language-reference/operators/operator-precedence.md).  
+     For more information, see [Operator Precedence in Visual Basic](../../../../visual-basic/language-reference/operators/operator-precedence.md).  
   
 ## <a name="see-also"></a>См. также
 

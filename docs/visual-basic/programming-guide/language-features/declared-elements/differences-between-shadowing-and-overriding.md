@@ -1,60 +1,60 @@
 ---
-title: Различия между сокрытием и переопределением (Visual Basic)
+title: Различия между сокрытием и переопределением
 ms.date: 07/20/2015
 helpviewer_keywords:
 - shadowing, vs. overriding
 - overriding, vs. shadowing
 ms.assetid: 2d014a0b-7630-407d-8f4e-24bd87987923
-ms.openlocfilehash: 8fcf43040e9cbbcb2a59b1e1cf8c1f58951d5d87
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8d1ebdcd0a23dff69a7acca22268c03e30ec06d9
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64610477"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345418"
 ---
 # <a name="differences-between-shadowing-and-overriding-visual-basic"></a>Различия между сокрытием и переопределением (Visual Basic)
-При определении класса, который наследует от базового класса, иногда требуется переопределить один или несколько элементов базового класса в производном классе. Сокрытие и переопределение доступны для этой цели.  
+When you define a class that inherits from a base class, you sometimes want to redefine one or more of the base class elements in the derived class. Shadowing and overriding are both available for this purpose.  
   
-## <a name="comparison"></a>Сравнение  
- Сокрытие и переопределение используются при производный класс наследует от базового класса, и оба переопределить один элемент, объявленный с другим. Но существуют значительные различия между ними.  
+## <a name="comparison"></a>Оператор  
+ Shadowing and overriding are both used when a derived class inherits from a base class, and both redefine one declared element with another. But there are significant differences between the two.  
   
- В следующей таблице сравниваются, затенения и переопределения.  
+ The following table compares shadowing with overriding.  
   
 ||||  
 |---|---|---|  
-|Для сравнения|Удаленное управление|Переопределение|  
-|Цель|Обеспечивает защиту от последующего изменения базового класса, который представляет член, которые вы уже определили в производном классе|Достижение полиморфизма за счет определения другой процедуры или свойства с той же последовательностью вызова реализации<sup>1</sup>|  
-|Переопределяемый элемент|Объявленный элемент любого типа|Только процедура (`Function`, `Sub`, или `Operator`) или свойство|  
-|Переопределенный элемент|Объявленный элемент любого типа|Только процедура или свойство с такой же последовательностью вызова<sup>1</sup>|  
-|Уровень доступа для переопределения элемента|Любой уровень доступа|Невозможно изменить уровень доступа переопределенный элемент|  
-|Удобства чтения и записи переопределяющего элемента|Любые сочетания|Невозможно изменить возможность переопределенное свойство чтения и|  
-|Управление переопределением|Элемент базового класса не может применять или запрещать переобъявление|Элемент базового класса можно указать `MustOverride`, `NotOverridable`, или `Overridable`|  
-|Использование ключевых слов|`Shadows` рекомендуется в производном классе. `Shadows` предполагается, что если ни один `Shadows` , ни `Overrides` указанного<sup>2</sup>|`Overridable` или `MustOverride` требуется в базовом классе; `Overrides` обязательным в производном классе|  
-|Наследование переопределяющих элементов классами, производными от производного класса|Сокрытие элемента наследуется производными классами. затененный элемент остается скрытым<sup>3</sup>|Переопределяющий элемент наследуется производными классами. переопределяемый элемент остается переопределенным|  
+|Point of comparison|Удаленное управление|Overriding|  
+|Цель|Protects against a subsequent base-class modification that introduces a member you have already defined in your derived class|Achieves polymorphism by defining a different implementation of a procedure or property with the same calling sequence<sup>1</sup>|  
+|Redefined element|Any declared element type|Only a procedure (`Function`, `Sub`, or `Operator`) or property|  
+|Redefining element|Any declared element type|Only a procedure or property with the identical calling sequence<sup>1</sup>|  
+|Access level of redefining element|Any access level|Cannot change access level of overridden element|  
+|Readability and writability of redefining element|Any combination|Cannot change readability or writability of overridden property|  
+|Control over redefining|Base class element cannot enforce or prohibit shadowing|Base class element can specify `MustOverride`, `NotOverridable`, or `Overridable`|  
+|Keyword usage|`Shadows` recommended in derived class; `Shadows` assumed if neither `Shadows` nor `Overrides` specified<sup>2</sup>|`Overridable` or `MustOverride` required in base class; `Overrides` required in derived class|  
+|Inheritance of redefining element by classes deriving from your derived class|Shadowing element inherited by further derived classes; shadowed element still hidden<sup>3</sup>|Overriding element inherited by further derived classes; overridden element still overridden|  
   
- <sup>1</sup> *последовательность вызова* состоит из типа элемента (`Function`, `Sub`, `Operator`, или `Property`), имени, списка параметров и типом возвращаемого значения. Не может переопределить процедуру с помощью свойства, или наоборот. Вы не сможете переопределить процедуру одного типа (`Function`, `Sub`, или `Operator`) с помощью другого типа.  
+ <sup>1</sup> The *calling sequence* consists of the element type (`Function`, `Sub`, `Operator`, or `Property`), name, parameter list, and return type. You cannot override a procedure with a property, or the other way around. You cannot override one kind of procedure (`Function`, `Sub`, or `Operator`) with another kind.  
   
- <sup>2</sup> Если не указан, либо `Shadows` или `Overrides`, компилятор выдает предупреждающее сообщение, помогающие убедитесь в том, какой типа переопределения, вы хотите использовать. Если проигнорировать предупреждение, скрывающий механизм используется.  
+ <sup>2</sup> If you do not specify either `Shadows` or `Overrides`, the compiler issues a warning message to help you be sure which kind of redefinition you want to use. If you ignore the warning, the shadowing mechanism is used.  
   
- <sup>3</sup> Если скрывающий элемент недоступен в последующем производном классе, переобъявление не наследуется. Например, если объявить скрывающий элемент как `Private`, класс, наследуемый от производный класс наследует исходного элемента, а не скрывающий элемент.  
+ <sup>3</sup> If the shadowing element is inaccessible in a further derived class, shadowing is not inherited. For example, if you declare the shadowing element as `Private`, a class deriving from your derived class inherits the original element instead of the shadowing element.  
   
 ## <a name="guidelines"></a>Рекомендации  
- Переопределение обычно используется в следующих случаях:  
+ You normally use overriding in the following cases:  
   
-- При определении полиморфизма производных классов.  
+- You are defining polymorphic derived classes.  
   
-- Требуется использование компилятор принудительно идентичных типов элементов и последовательность вызова.  
+- You want the safety of having the compiler enforce the identical element type and calling sequence.  
   
- Переобъявление обычно используется в следующих случаях:  
+ You normally use shadowing in the following cases:  
   
-- Предполагается, что базовый класс может быть изменена и определить тем же именем, как ваш элемент.  
+- You anticipate that your base class might be modified and define an element using the same name as yours.  
   
-- Требуется свобода изменения типа элемента или последовательность вызова.  
+- You want the freedom of changing the element type or calling sequence.  
   
 ## <a name="see-also"></a>См. также
 
 - [Ссылки на объявленные элементы](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
-- [Сокрытие в Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
+- [Shadowing in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
 - [Практическое руководство. Сокрытие переменной с тем же именем, что и ваша переменная](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-a-variable-with-the-same-name-as-your-variable.md)
 - [Практическое руководство. Сокрытие наследуемой переменной](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-an-inherited-variable.md)
 - [Практическое руководство. Доступ к переменной, скрытой производным классом](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-access-a-variable-hidden-by-a-derived-class.md)

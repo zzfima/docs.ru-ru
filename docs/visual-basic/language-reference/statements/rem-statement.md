@@ -1,5 +1,5 @@
 ---
-title: Оператор REM (Visual Basic)
+title: Оператор REM
 ms.date: 07/20/2015
 f1_keywords:
 - vb.'
@@ -13,15 +13,15 @@ helpviewer_keywords:
 - Visual Basic code, comments
 - "' comment marker character [Visual Basic]"
 ms.assetid: 34126d7f-e0f9-476d-91e6-b31b398615dc
-ms.openlocfilehash: 729d0710d65c0cda750061e72309ced527bbcfe7
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: bdde4beae242c3175b02cd2af252babb850416f6
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582061"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346731"
 ---
 # <a name="rem-statement-visual-basic"></a>Оператор REM (Visual Basic)
-Используется для включения пояснительных примечаний в исходный код программы.  
+Used to include explanatory remarks in the source code of a program.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -32,18 +32,18 @@ REM comment
   
 ## <a name="parts"></a>Части  
  `comment`  
- Необязательный. Текст любого комментария, который требуется включить. Между ключевым словом `REM` и `comment` требуется пробел.  
+ Необязательный. The text of any comment you want to include. A space is required between the `REM` keyword and `comment`.  
   
 ## <a name="remarks"></a>Заметки  
- Инструкцию `REM` можно добавить только в строку или вставить в строку, следующую за другой инструкцией. Оператор `REM` должен быть последним оператором в строке. Если он соответствует другому оператору, `REM` должен быть отделен от этого оператора пробелами.  
+ You can put a `REM` statement alone on a line, or you can put it on a line following another statement. The `REM` statement must be the last statement on the line. If it follows another statement, the `REM` must be separated from that statement by a space.  
   
- Вместо `REM` можно использовать одиночную кавычку (`'`). Это верно, если ваш комментарий следует другому оператору в той же строке или расподержаться только в строке.  
+ You can use a single quotation mark (`'`) instead of `REM`. This is true whether your comment follows another statement on the same line or sits alone on a line.  
   
 > [!NOTE]
-> Нельзя продолжить инструкцию `REM` с помощью последовательности продолжения строки (`_`). После начала комментария компилятор не проверяет символы на предмет особого значения. Для многострочного комментария используйте другой оператор `REM` или символ комментария (`'`) в каждой строке.  
+> You cannot continue a `REM` statement by using a line-continuation sequence (`_`). Once a comment begins, the compiler does not examine the characters for special meaning. For a multiple-line comment, use another `REM` statement or a comment symbol (`'`) on each line.  
   
 ## <a name="example"></a>Пример  
- В следующем примере показана инструкция `REM`, которая используется для включения пояснительных примечаний в программу. Кроме того, в нем показано использование одинарной кавычки (`'`) вместо `REM`.  
+ The following example illustrates the `REM` statement, which is used to include explanatory remarks in a program. It also shows the alternative of using the single quotation-mark character (`'`) instead of `REM`.  
   
  [!code-vb[VbVbalrStatements#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#6)]  
   

@@ -1,15 +1,15 @@
 ---
-title: Не удается выполнить запрошенную операцию (Visual Basic)
+title: Can't perform requested operation
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID17
 ms.assetid: eeab237c-4110-4abd-b601-bbb025c5d204
-ms.openlocfilehash: af4b405ff407775c5b5e58d4915f4cfbfb23928f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: bb7b4834ede26b330ecd30c5293e4cab6654bc67
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64643979"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353321"
 ---
 # <a name="cant-perform-requested-operation-visual-basic"></a>Не удается выполнить запрошенную операцию (Visual Basic)
 Операция не может быть выполнена, так как это сделает недействительным текущее состояние проекта. Например, если предпринята попытка программного изменения кода, который выполняется.  

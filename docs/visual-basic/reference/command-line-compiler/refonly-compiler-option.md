@@ -1,5 +1,5 @@
 ---
-title: -refonly (Visual Basic)
+title: -refonly
 ms.date: 03/16/2018
 f1_keywords:
 - -refonly
@@ -7,16 +7,16 @@ helpviewer_keywords:
 - /refonly compiler option [Visual Basic]
 - -refonly compiler option [Visual Basic]
 - refonly compiler option [Visual Basic]
-ms.openlocfilehash: 8e64989ac1410b51991027ffcb33e8dae0c0284b
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: b906178abf8d159083d95e41448596d512e857de
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72775570"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348579"
 ---
 # <a name="-refonly-visual-basic"></a>-refonly (Visual Basic)
 
-Параметр **-refonly** указывает, что основные выходные данные компиляции должны быть ссылочной сборкой, а не сборкой реализации. Параметр `-refonly` автоматически отключает вывод файлов PDB, так как базовые сборки не могут выполняться.
+The **-refonly** option indicates that the primary output of the compilation should be a reference assembly instead of an implementation assembly. Параметр `-refonly` автоматически отключает вывод файлов PDB, так как базовые сборки не могут выполняться.
 
 [!INCLUDE[compiler-options](~/includes/compiler-options.md)]
 
@@ -28,9 +28,9 @@ ms.locfileid: "72775570"
 
 ## <a name="remarks"></a>Заметки
 
-Visual Basic поддерживает параметр `-refonly`, начиная с версии 15,3.
+Visual Basic supports the `-refonly` switch starting with version 15.3.
 
-Ссылочные сборки — это особый тип сборки, который содержит только минимальный объем метаданных, необходимых для представления поверхности общедоступного API библиотеки. Они включают объявления для всех элементов, которые важны при ссылке на сборку в средствах сборки, но исключают все реализации членов и объявления закрытых членов, не имеющих наблюдаемого влияния на их контракт API. Дополнительные сведения см. в разделе Справочник по [сборкам](../../../standard/assembly/reference-assemblies.md) в .NET.
+Базовые сборки являются особым типом сборки, которая содержит только минимальный объем метаданных, необходимый для представления общедоступного API-интерфейса библиотеки. Такие сборки включают в себя объявления для всех элементов, которые важны при указании ссылки на сборку в средствах сборки, но исключают все реализации элементов, а также объявления закрытых элементов, не имеющих наблюдаемого влияния на их контракт API. Дополнительные сведения см. в разделе [Базовые сборки](../../../standard/assembly/reference-assemblies.md) в руководстве по .NET.
 
 Параметры `-refonly` и [`-refout`](refout-compiler-option.md) являются взаимоисключающими.
 

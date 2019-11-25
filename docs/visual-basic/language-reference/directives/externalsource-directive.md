@@ -1,5 +1,5 @@
 ---
-title: '#Директива ExternalSource (Visual Basic)'
+title: '#Директива ExternalSource'
 ms.date: 07/20/2015
 f1_keywords:
 - '#Externalsource'
@@ -12,15 +12,16 @@ helpviewer_keywords:
 - ExternalSource directive (#ExternalSource)
 - '#ExternalSource directive'
 ms.assetid: 243bc6a2-34c3-4eeb-a776-9fd2bf988149
-ms.openlocfilehash: ac7096e998dd8d2a416dc739e1d7625e1abff7a6
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: fa0a40827c1b3865b90c7d796ea4dd364774e1c4
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71696827"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74343835"
 ---
 # <a name="externalsource-directive"></a>Директива #ExternalSource
-Указывает сопоставление между конкретными строками исходного кода и текстом, внешним по отношению к источнику.  
+
+Indicates a mapping between specific lines of source code and text external to the source.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -31,24 +32,26 @@ ms.locfileid: "71696827"
 ```  
   
 ## <a name="parts"></a>Части  
+
  `StringLiteral`  
- Путь к внешнему источнику.  
+ The path to the external source.  
   
  `IntLiteral`  
- Номер строки первой строки внешнего источника.  
+ The line number of the first line of the external source.  
   
  `LogicalLine`  
- Строка, в которой возникла ошибка во внешнем источнике.  
+ The line where the error occurs in the external source.  
   
  `#End ExternalSource`  
  Завершает блок `#ExternalSource`.  
   
-## <a name="remarks"></a>Примечания  
- Эта директива используется только компилятором и отладчиком.  
+## <a name="remarks"></a>Заметки  
+
+ This directive is used only by the compiler and the debugger.  
   
- Исходный файл может содержать директивы External Source, которые указывают на сопоставление между конкретными строками кода в исходном файле и внешним по отношению к источнику текстом, например ASPX-файлу. Если во время компиляции обнаружены ошибки в указанном исходном коде, они определяются как поступающие из внешнего источника.  
+ A source file may include external source directives, which indicate a mapping between specific lines of code in the source file and text external to the source, such as an .aspx file. If errors are encountered in the designated source code during compilation, they are identified as coming from the external source.  
   
- Директивы External Source не влияют на компиляцию и не могут быть вложенными. Они предназначены только для внутреннего использования приложением.  
+ External source directives have no effect on compilation and cannot be nested. They are intended for internal use by the application only.  
   
 ## <a name="see-also"></a>См. также
 

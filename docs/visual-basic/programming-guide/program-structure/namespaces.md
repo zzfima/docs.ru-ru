@@ -1,5 +1,5 @@
 ---
-title: Пространства имен в Visual Basic
+title: Пространства имен
 ms.date: 07/20/2015
 f1_keywords:
 - vb.global
@@ -16,34 +16,34 @@ helpviewer_keywords:
 - naming conventions [Visual Basic], naming conflicts
 - namespaces
 ms.assetid: cffac744-ab8c-4f1f-ba50-732c22ab4b88
-ms.openlocfilehash: dd7ac0487a5878122d9b1717a5e5fc8bf21a4ea7
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: ec892167f30a7ded739dc188ab4096cb3a5d154c
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972042"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347326"
 ---
 # <a name="namespaces-in-visual-basic"></a>Пространства имен в Visual Basic
 Пространства имен упорядочивают объекты, определенные в сборке. Сборки могут содержать несколько пространств имен, которые, в свою очередь, могут содержать другие пространства имен. Пространства имен предотвращают неоднозначность и упрощают ссылки при использовании больших групп объектов, таких как библиотеки классов.  
   
- Например, .NET Framework определяет <xref:System.Windows.Forms.ListBox> класс <xref:System.Windows.Forms?displayProperty=nameWithType> в пространстве имен. В следующем фрагменте кода показано, как объявить переменную, используя полное имя для этого класса:  
+ For example, the .NET Framework defines the <xref:System.Windows.Forms.ListBox> class in the <xref:System.Windows.Forms?displayProperty=nameWithType> namespace. В следующем фрагменте кода показано, как объявить переменную, используя полное имя для этого класса:  
   
  [!code-vb[VbVbalrApplication#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/Class1.vb#6)]  
   
 ## <a name="avoiding-name-collisions"></a>Предотвращение конфликтов имен  
- .NET Framework пространства имен устраняют проблему, которая иногда называется *засорением пространства имен*, при которой разработчик библиотеки классов страдает от использования аналогичных имен в другой библиотеке. Такие конфликты с существующими компонентами иногда называют *конфликтами имен*.  
+ .NET Framework namespaces address a problem sometimes called *namespace pollution*, in which the developer of a class library is hampered by the use of similar names in another library. Такие конфликты с существующими компонентами иногда называют *конфликтами имен*.  
   
- Например, если вы создаете новый класс `ListBox`, то можете использовать его внутри проекта без уточнения. Однако если вы хотите использовать класс .NET Framework <xref:System.Windows.Forms.ListBox> в том же проекте, необходимо использовать полную ссылку, чтобы сделать ссылку уникальной. Если ссылка не является уникальной, Visual Basic выдает ошибку, сообщающую, что имя неоднозначно. В примере кода ниже показано, как объявить эти объекты:  
+ Например, если вы создаете новый класс `ListBox`, то можете использовать его внутри проекта без уточнения. However, if you want to use the .NET Framework <xref:System.Windows.Forms.ListBox> class in the same project, you must use a fully qualified reference to make the reference unique. If the reference is not unique, Visual Basic produces an error stating that the name is ambiguous. В примере кода ниже показано, как объявить эти объекты:  
   
  [!code-vb[VbVbalrApplication#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/Class1.vb#7)]  
   
- На следующем рисунке показаны две иерархии пространства имен, содержащие объект с именем `ListBox`:  
+ The following illustration shows two namespace hierarchies, both containing an object named `ListBox`:  
   
- ![Снимок экрана, на котором показаны две иерархии пространств имен.](./media/namespaces/visual-basic-namespace-hierarchy.gif)  
+ ![Screenshot that shows two namespace hierarchies.](./media/namespaces/visual-basic-namespace-hierarchy.gif)  
   
- По умолчанию каждый исполняемый файл, созданный с помощью Visual Basic, содержит пространство имен с тем же именем, что и у проекта. Например, если вы определяете объект в проекте `ListBoxProject`, то исполняемый файл ListBoxProject.exe содержит пространство имен `ListBoxProject`.  
+ By default, every executable file you create with Visual Basic contains a namespace with the same name as your project. Например, если вы определяете объект в проекте `ListBoxProject`, то исполняемый файл ListBoxProject.exe содержит пространство имен `ListBoxProject`.  
   
- Несколько сборок могут использовать одно и то же пространство имен. Visual Basic обрабатывает их как единый набор имен. Например, можно определить классы для пространства имен `SomeNameSpace` в сборке `Assemb1`, а также определить дополнительные классы для того же пространства имен из сборки `Assemb2`.  
+ Несколько сборок могут использовать одно и то же пространство имен. Visual Basic treats them as a single set of names. Например, можно определить классы для пространства имен `SomeNameSpace` в сборке `Assemb1`, а также определить дополнительные классы для того же пространства имен из сборки `Assemb2`.  
   
 ## <a name="fully-qualified-names"></a>полные имена  
  Полные имена — это ссылки на объекты, имеющие префикс в виде имени пространства имен, в котором определен объект. Вы можете использовать объекты, определенные в других проектах, если создадите ссылку на класс (выбрав **Добавить ссылку** в меню **Проект** ) и затем используете полное имя объекта в коде. В следующем фрагменте кода показано, как использовать полное имя объекта из пространства имен другого проекта:  
@@ -60,7 +60,7 @@ ms.locfileid: "70972042"
   
  [!code-vb[VbVbalrApplication#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/Class1.vb#11)]  
   
- При попытке использовать `Class1` без полного указания этого имени Visual Basic выдает ошибку, сообщающую, что имя `Class1` неоднозначно.  
+ If you attempt to use `Class1` without fully qualifying it, Visual Basic produces an error stating that the name `Class1` is ambiguous.  
   
 ## <a name="namespace-level-statements"></a>Операторы уровня пространства имен  
  В пространстве имен можно определить такие элементы, как модули, интерфейсы, классы, делегаты, перечисления, структуры и другие пространства имен. Вы не можете определить такие элементы, как свойства, процедуры, переменные и события, на уровне пространства имен. Их следует объявить внутри контейнеров, таких как модули, структуры или классы.  
@@ -126,4 +126,4 @@ End Namespace
 - [Сборки в .NET](../../../standard/assembly/index.md)
 - [Ссылки и оператор Imports](references-and-the-imports-statement.md)
 - [Оператор Imports (пространство имен и тип .NET)](../../language-reference/statements/imports-statement-net-namespace-and-type.md)
-- [Writing Code in Office Solutions](/visualstudio/vsto/writing-code-in-office-solutions)
+- [Написание кода в решениях Office](/visualstudio/vsto/writing-code-in-office-solutions)

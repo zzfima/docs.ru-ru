@@ -1,5 +1,5 @@
 ---
-title: Рекурсивные процедуры (Visual Basic)
+title: Рекурсивные процедуры
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic code, procedures
@@ -10,34 +10,34 @@ helpviewer_keywords:
 - functions [Visual Basic], calling recursively
 - recursion
 ms.assetid: ba1d3962-b4c3-48d3-875e-96fdb4198327
-ms.openlocfilehash: b08a06a07f134b7c95251848862d39339e59fe61
-ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
+ms.openlocfilehash: 646d4e29ed7a0b6367d4b35a7f8641bcf659e616
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274343"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352553"
 ---
 # <a name="recursive-procedures-visual-basic"></a>Рекурсивные процедуры (Visual Basic)
 
-*Рекурсивная* процедура вызывает саму себя. Как правило, это не самый эффективный способ написания кода Visual Basic.  
+A *recursive* procedure is one that calls itself. In general, this is not the most effective way to write Visual Basic code.  
   
- В следующей процедуре используется рекурсия для вычисления факториала исходного аргумента.  
+ The following procedure uses recursion to calculate the factorial of its original argument.  
   
  [!code-vb[VbVbcnProcedures#51](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#51)]  
   
-## <a name="considerations-with-recursive-procedures"></a>Рекомендации по рекурсивным процедурам
+## <a name="considerations-with-recursive-procedures"></a>Considerations with Recursive Procedures
 
- **Ограничение условий**. Необходимо разработать рекурсивную процедуру для проверки по крайней мере одного условия, которое может завершить рекурсию, и необходимо также обработать случай, когда ни одно из таких условий не будет удовлетворено разумным числом рекурсивных вызовов. При отсутствии хотя бы одного условия, которое может быть выполнено без ошибок, ваша процедура выполняет высокий риск выполнения в бесконечном цикле.
+ **Limiting Conditions**. You must design a recursive procedure to test for at least one condition that can terminate the recursion, and you must also handle the case where no such condition is satisfied within a reasonable number of recursive calls. Without at least one condition that can be met without fail, your procedure runs a high risk of executing in an infinite loop.
 
- **Использование памяти**. Приложение имеет ограниченный объем пространства для локальных переменных. Каждый раз, когда процедура вызывает саму себя, она использует больше пространства для дополнительных копий своих локальных переменных. Если этот процесс будет продолжаться неограниченно, он приводит <xref:System.StackOverflowException> к ошибке.
+ **Использование памяти**. Your application has a limited amount of space for local variables. Each time a procedure calls itself, it uses more of that space for additional copies of its local variables. If this process continues indefinitely, it eventually causes a <xref:System.StackOverflowException> error.
 
- **Эффективность**. Почти всегда можно заменить цикл для рекурсии. Цикл не имеет дополнительной нагрузки на передачу аргументов, инициализацию дополнительного хранилища и возврат значений. Производительность может быть значительно выше без рекурсивных вызовов.
+ **Efficiency**. You can almost always substitute a loop for recursion. A loop does not have the overhead of passing arguments, initializing additional storage, and returning values. Your performance can be much better without recursive calls.
 
- **Взаимная рекурсия**. Вы можете столкнуться с очень низкой производительностью или даже с бесконечным циклом, если две процедуры вызывают друг друга. Такой проект представляет те же проблемы, что и одна Рекурсивная процедура, но может быть труднее для обнаружения и отладки.
+ **Mutual Recursion**. You might observe very poor performance, or even an infinite loop, if two procedures call each other. Such a design presents the same problems as a single recursive procedure, but can be harder to detect and debug.
 
- **Вызов с круглыми скобками**. При рекурсивном вызове процедуры необходимо следовать имени процедуры с круглыми скобками, даже если нет списка аргументов. `Function` В противном случае имя функции берется, как представляет возвращаемое значение функции.
+ **Calling with Parentheses**. When a `Function` procedure calls itself recursively, you must follow the procedure name with parentheses, even if there is no argument list. Otherwise, the function name is taken as representing the return value of the function.
 
- **Тестирование**. При написании рекурсивной процедуры следует тщательно протестировать ее, чтобы убедиться, что она всегда соответствует определенному ограничению. Также следует убедиться, что не хватает памяти из-за слишком большого количества рекурсивных вызовов.
+ **Testing**. If you write a recursive procedure, you should test it very carefully to make sure it always meets some limiting condition. You should also ensure that you cannot run out of memory due to having too many recursive calls.
 
 ## <a name="see-also"></a>См. также
 
