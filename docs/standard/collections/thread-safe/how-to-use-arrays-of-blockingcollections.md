@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Использование массивов для блокировки коллекций в конвейере
+title: Практическое руководство. Использование массивов коллекций с функцией блокировки в конвейере
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -17,7 +17,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 01/23/2019
 ms.locfileid: "54627204"
 ---
-# <a name="how-to-use-arrays-of-blocking-collections-in-a-pipeline"></a>Как выполнить Использование массивов для блокировки коллекций в конвейере
+# <a name="how-to-use-arrays-of-blocking-collections-in-a-pipeline"></a>Практическое руководство. Использование массивов коллекций с функцией блокировки в конвейере
 В приведенном ниже примере показано, как использовать массивы объектов <xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType> со статическими методами, например методами <xref:System.Collections.Concurrent.BlockingCollection%601.TryAddToAny%2A> и <xref:System.Collections.Concurrent.BlockingCollection%601.TryTakeFromAny%2A>, для реализации быстрой и гибкой передачи данных между компонентами.  
   
 ## <a name="example"></a>Пример  
