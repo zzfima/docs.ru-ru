@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C# language, reference
 - reference, C# language
 ms.assetid: 06de3167-c16c-4e1a-b3c5-c27841d4569a
-ms.openlocfilehash: 4fed33272dbed50100a37aa9fcd30befc46435f9
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 4875e53327e24c4b5983a4a3b79b5beced368725
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72771840"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428616"
 ---
 # <a name="c-reference"></a>Справочник по C#
 
@@ -61,9 +61,6 @@ ms.locfileid: "72771840"
   
 ## <a name="related-sections"></a>Связанные разделы  
 
- [Руководство по языку C#](../index.md)  
- Портал для документации по Visual C#.  
-  
  [Использование среды разработки Visual Studio для C#](/visualstudio/get-started/csharp)  
  Ссылки на концептуальные разделы и разделы задач, описывающие интегрированную среду разработки и редактор.  
   

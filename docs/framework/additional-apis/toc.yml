@@ -9,7 +9,7 @@
               href: microsoft.sqlserver.server.smiorderproperty.item.md
     - name: Система
       items:
-        - name: Класс Exception
+        - name: Exception - класс
           items:
             - name: Метод Exception.PrepForRemoting
               href: system.exception.prepforremoting.md
@@ -31,7 +31,7 @@
               href: system.data.sqltypes.sqlstreamchars.length.md
             - name: Метод Close
               href: system.data.sqltypes.sqlstreamchars.close.md
-            - name: Метод Dispose
+            - name: Dispose - метод
               href: system.data.sqltypes.sqlstreamchars.dispose.md
             - name: Метод Flush
               href: system.data.sqltypes.sqlstreamchars.flush.md
@@ -43,6 +43,12 @@
               href: system.data.sqltypes.sqlstreamchars.setlength.md
             - name: Метод Write
               href: system.data.sqltypes.sqlstreamchars.write.md
+    - name: System.IO
+      items:
+        - name: Класс MemoryStream
+          items:
+            - name: Метод InternalGetOriginAndLength
+              href: system.io.memorystream.internalgetoriginandlength.md
     - name: System.Net
       items:
         - name: Класс Connection
@@ -78,6 +84,8 @@
           items:
             - name: Свойство NetworkStream
               href: system.net.pooledstream.networkstream.md
+        - name: Класс RtcState
+          href: system.net.rtcstate.md
         - name: Класс ServicePoint
           items:
             - name: Поле m_ConnectionGroupList
@@ -92,8 +100,16 @@
       items:
         - name: Класс SslState
           items:
-            - name: Протокол SslProtocol
+            - name: Свойство SslProtocol
               href: system.net.security.sslstate.sslprotocol.md
+    - name: System.ServiceModel.Channels
+      items:
+        - name: Класс сообщений
+          items:
+            - name: Метод BodyToString
+              href: system.servicemodel.channels.message.bodytostring.md
+            - name: Метод WriteStartHeaders
+              href: system.servicemodel.channels.message.writestartheaders.md
     - name: System.Windows.Diagnostics
       items:
         - name: Класс VisualDiagnostics

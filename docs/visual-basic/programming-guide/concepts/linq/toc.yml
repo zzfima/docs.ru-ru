@@ -65,7 +65,7 @@
           href: how-to-query-for-sentences-that-contain-a-specified-set-of-words.md
         - name: Практическое руководство. Запрос символов в строке (LINQ)
           href: how-to-query-for-characters-in-a-string-linq.md
-        - name: Практическое руководство. Объединение запросов LINQ с помощью регулярных выражений
+        - name: Практическое руководство. Объединение запросов LINQ с регулярными выражениями
           href: how-to-combine-linq-queries-with-regular-expressions.md
         - name: Практическое руководство. Нахождение разности множеств между двумя списками (LINQ)
           href: how-to-find-the-set-difference-between-two-lists-linq.md
