@@ -314,7 +314,7 @@ ms.locfileid: "73120615"
 |\w+|Совпадение с одним или несколькими символами слова.|  
 |(e)?|Выделяет "e" ноль или один раз.|  
 |s|Выделяет "s".|  
-|(\s|$)|Совпадает с символом пробела или концом входной строки.|  
+|(\s&#124;$)|Совпадает с символом пробела или концом входной строки.|  
   
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/whitespace1.cs#10)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/whitespace1.vb#10)]  
