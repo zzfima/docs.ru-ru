@@ -1,26 +1,19 @@
-items:
 - name: Потокобезопасные коллекции
   href: index.md
   items:
-  - name: Общие сведения о коллекции BlockingCollection
-    href: blockingcollection-overview.md
-  - name: Преимущества использования потокобезопасных коллекций
-    href: when-to-use-a-thread-safe-collection.md
-  - name: Практическое руководство. Добавление и удаление отдельных элементов коллекции BlockingCollection
-    href: how-to-add-and-take-items.md
-  - name: Практическое руководство. Использование оператора ForEach для удаления элементов из коллекции BlockingCollection
-    href: how-to-use-foreach-to-remove.md
-  - name: Практическое руководство. Добавление элементов в коллекцию ConcurrentDictionary и их удаление из этой коллекции
-    href: how-to-add-and-remove-items.md
-  - name: Практическое руководство. Добавление функций границы и блокировки в коллекцию
-    href: how-to-add-bounding-and-blocking.md
-  - name: Практическое руководство. Использование массивов коллекций с функцией блокировки в конвейере
-    href: how-to-use-arrays-of-blockingcollections.md
-  - name: Практическое руководство. Создание пула объектов с помощью класса ConcurrentBag
-    href: how-to-create-an-object-pool.md
-ms.openlocfilehash: 6b17867548e1089eaa58d2c8a262fe4c6438948f
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58470160"
+    - name: Общие сведения о коллекции BlockingCollection
+      href: blockingcollection-overview.md
+    - name: Преимущества использования потокобезопасных коллекций
+      href: when-to-use-a-thread-safe-collection.md
+    - name: Практическое руководство. Добавление и удаление отдельных элементов коллекции BlockingCollection
+      href: how-to-add-and-take-items.md
+    - name: Практическое руководство. Использование оператора ForEach для удаления элементов из коллекции BlockingCollection
+      href: how-to-use-foreach-to-remove.md
+    - name: Практическое руководство. Добавление элементов в коллекцию ConcurrentDictionary и их удаление из этой коллекции
+      href: how-to-add-and-remove-items.md
+    - name: Практическое руководство. Добавление функций границы и блокировки в коллекцию
+      href: how-to-add-bounding-and-blocking.md
+    - name: Практическое руководство. Использование массивов коллекций с функцией блокировки в конвейере
+      href: how-to-use-arrays-of-blockingcollections.md
+    - name: Практическое руководство. Создание пула объектов с помощью класса ConcurrentBag
+      href: how-to-create-an-object-pool.md
