@@ -1,8 +1,8 @@
-- name: 'Руководство по языку C#'
-  href: index.md
+- name: 'Документация по C#'
+  href: index.yml
 - name: Приступая к работе
   items:
-    - name: Как пользоваться руководством
+    - name: Обзор
       href: getting-started/index.md
     - name: 'Введение в язык C# и платформу .NET Framework'
       href: getting-started/introduction-to-the-csharp-language-and-the-net-framework.md
@@ -320,9 +320,9 @@
               href: programming-guide/concepts/async/task-asynchronous-programming-model.md
             - name: Пошаговое руководство. Получение доступа к Интернету с помощью модификатора async и оператора await
               href: programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md
-            - name: Практическое руководство. Оптимизация производительности асинхронных процедур с использованием метода Task.WhenAll
+            - name: Расширение пошагового руководства по асинхронным процедурам с использованием метода Task.WhenAll
               href: programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md
-            - name: Практическое руководство. Параллельное выполнение нескольких веб-запросов с использованием async и await
+            - name: Параллельное выполнение нескольких веб-запросов с использованием Async и Await
               href: programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md
             - name: Асинхронные типы возвращаемых значений
               href: programming-guide/concepts/async/async-return-types.md
@@ -354,7 +354,7 @@
               href: programming-guide/concepts/attributes/attributeusage.md
             - name: Обращение к атрибутам с помощью отражения
               href: programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md
-            - name: "Практическое руководство. Создание объединения\_C/C++ с помощью атрибутов"
+            - name: Практическое руководство. Создание объединения C/C++ с помощью атрибутов
               href: programming-guide/concepts/attributes/how-to-create-a-c-cpp-union-by-using-attributes.md
             - name: Общие атрибуты
               href: programming-guide/concepts/attributes/common-attributes.md
@@ -384,11 +384,11 @@
           items:
             - name: Обзор
               href: programming-guide/concepts/expression-trees/index.md
-            - name: Практическое руководство. Выполнение деревьев выражений
+            - name: Выполнение деревьев выражений
               href: programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md
-            - name: Практическое руководство. Изменение деревьев выражений
+            - name: Изменение деревьев выражений
               href: programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md
-            - name: Практическое руководство. Использование деревьев выражений для построения динамических запросов
+            - name: Использование деревьев выражений для создания динамических запросов
               href: programming-guide/concepts/expression-trees/how-to-use-expression-trees-to-build-dynamic-queries.md
             - name: Отладка деревьев выражений в Visual Studio
               href: programming-guide/concepts/expression-trees/debugging-expression-trees-in-visual-studio.md
@@ -468,7 +468,7 @@
                       href: programming-guide/concepts/linq/how-to-query-for-sentences-that-contain-a-specified-set-of-words-linq.md
                     - name: Практическое руководство. Запрос символов в строке (LINQ)
                       href: programming-guide/concepts/linq/how-to-query-for-characters-in-a-string-linq.md
-                    - name: Практическое руководство. Объединение запросов LINQ с помощью регулярных выражений
+                    - name: Практическое руководство. Объединение запросов LINQ с регулярными выражениями
                       href: programming-guide/concepts/linq/how-to-combine-linq-queries-with-regular-expressions.md
                     - name: Практическое руководство. Нахождение разности множеств между двумя списками (LINQ)
                       href: programming-guide/concepts/linq/how-to-find-the-set-difference-between-two-lists-linq.md
@@ -534,7 +534,7 @@
                           href: programming-guide/concepts/linq/xelement-class-overview.md
                         - name: Общие сведения о классе XAttribute
                           href: programming-guide/concepts/linq/xattribute-class-overview.md
-                        - name: Общие сведения о классе XDocument
+                        - name: Общие сведения о классах XDocument
                           href: programming-guide/concepts/linq/xdocument-class-overview.md
                         - name: Практическое руководство. Сборка примеров LINQ to XML
                           href: programming-guide/concepts/linq/how-to-build-linq-to-xml-examples.md
@@ -552,7 +552,7 @@
                               href: programming-guide/concepts/linq/how-to-load-xml-from-a-file.md
                             - name: Сохранение пробелов при загрузке и анализе XML
                               href: programming-guide/concepts/linq/preserving-white-space-while-loading-or-parsing-xml1.md
-                            - name: Практическое руководство. Перехват ошибок анализа
+                            - name: Практическое руководство. Перехват ошибок разбора
                               href: programming-guide/concepts/linq/how-to-catch-parsing-errors.md
                             - name: Практическое руководство. Создание дерева из XmlReader
                               href: programming-guide/concepts/linq/how-to-create-a-tree-from-an-xmlreader.md
@@ -568,9 +568,9 @@
                       items:
                         - name: Обзор пространств имен (LINQ to XML)
                           href: programming-guide/concepts/linq/namespaces-overview-linq-to-xml.md
-                        - name: "Практическое руководство. Создание документа с пространствами имен (LINQ\_to\_XML)"
+                        - name: Практическое руководство. Создание документа с пространствами имен (LINQ to XML)
                           href: programming-guide/concepts/linq/how-to-create-a-document-with-namespaces-linq-to-xml.md
-                        - name: "Практическое руководство. Управление префиксами пространств имен (LINQ\_to\_XML)"
+                        - name: Практическое руководство. Управление префиксами пространств имен (LINQ to XML)
                           href: programming-guide/concepts/linq/how-to-control-namespace-prefixes-linq-to-xml.md
                         - name: 'Области пространств имен по умолчанию в C#'
                           href: programming-guide/concepts/linq/scope-of-default-namespaces.md
@@ -594,9 +594,9 @@
                           href: programming-guide/concepts/linq/how-to-retrieve-a-collection-of-elements-linq-to-xml.md
                         - name: "Практическое руководство. Извлечение значений элемента (LINQ\_to\_XML)"
                           href: programming-guide/concepts/linq/how-to-retrieve-the-value-of-an-element-linq-to-xml.md
-                        - name: "Практическое руководство. Фильтрация по именам элементов (LINQ\_to\_XML)"
+                        - name: Практическое руководство. Фильтрация по именам элементов (LINQ to XML)
                           href: programming-guide/concepts/linq/how-to-filter-on-element-names-linq-to-xml.md
-                        - name: "Практическое руководство. Связанные вызовы метода оси (LINQ\_to\_XML)"
+                        - name: Практическое руководство. Связанные вызовы метода оси (LINQ to XML)
                           href: programming-guide/concepts/linq/how-to-chain-axis-method-calls-linq-to-xml.md
                         - name: "Практическое руководство. Извлечение одного дочернего элемента (LINQ\_to\_XML)"
                           href: programming-guide/concepts/linq/how-to-retrieve-a-single-child-element-linq-to-xml.md
@@ -624,7 +624,7 @@
                               href: programming-guide/concepts/linq/how-to-find-a-single-descendant-using-the-descendants-method.md
                             - name: Практическое руководство. Создание запросов со сложной фильтрацией
                               href: programming-guide/concepts/linq/how-to-write-queries-with-complex-filtering.md
-                            - name: Практическое руководство. Фильтрация по необязательному элементу
+                            - name: Практическое руководство. Фильтрация по необязательным элементам
                               href: programming-guide/concepts/linq/how-to-filter-on-an-optional-element.md
                             - name: Практическое руководство. Поиск всех узлов в пространстве имен
                               href: programming-guide/concepts/linq/how-to-find-all-nodes-in-a-namespace.md
@@ -636,7 +636,7 @@
                               href: programming-guide/concepts/linq/how-to-calculate-intermediate-values.md
                             - name: 'Практическое руководство. Написание запроса, ищущего элементы на основании контекста'
                               href: programming-guide/concepts/linq/how-to-write-a-query-that-finds-elements-based-on-context.md
-                            - name: Практическое руководство. Отладка пустых наборов результатов запроса
+                            - name: Практическое руководство. Отладка пустых результирующих наборов запроса
                               href: programming-guide/concepts/linq/how-to-debug-empty-query-results-sets.md
                         - name: Проекции и преобразования (LINQ to XML)
                           items:
@@ -682,19 +682,19 @@
                               href: programming-guide/concepts/linq/comparison-of-xpath-and-linq-to-xml.md
                             - name: Практическое руководство. Поиск дочернего элемента (XPath-LINQ to XML)
                               href: programming-guide/concepts/linq/how-to-find-a-child-element-xpath-linq-to-xml.md
-                            - name: Практическое руководство. Поиск списка дочерних элементов (XPath-LINQ to XML)
+                            - name: Практическое руководство. Поиск списков дочерних элементов (XPath-LINQ to XML)
                               href: programming-guide/concepts/linq/how-to-find-a-list-of-child-elements-xpath-linq-to-xml.md
                             - name: Практическое руководство. Поиск корневого элемента (XPath-LINQ to XML)
                               href: programming-guide/concepts/linq/how-to-find-the-root-element-xpath-linq-to-xml.md
                             - name: Практическое руководство. Поиск элементов-потомков (XPath-LINQ to XML)
                               href: programming-guide/concepts/linq/how-to-find-descendant-elements-xpath-linq-to-xml.md
-                            - name: Практическое руководство. Фильтрация по атрибуту (XPath-LINQ to XML)
+                            - name: Практическое руководство. Фильтрация по атрибутам (XPath-LINQ to XML)
                               href: programming-guide/concepts/linq/how-to-filter-on-an-attribute-xpath-linq-to-xml.md
                             - name: Практическое руководство. Поиск связанных элементов (XPath-LINQ to XML)
                               href: programming-guide/concepts/linq/how-to-find-related-elements-xpath-linq-to-xml.md
                             - name: Практическое руководство. Поиск элементов в пространстве имен (XPath-LINQ to XML)
                               href: programming-guide/concepts/linq/how-to-find-elements-in-a-namespace-xpath-linq-to-xml.md
-                            - name: Практическое руководство. Поиск предшествующих элементов того же уровня (XPath-LINQ to XML)
+                            - name: Практическое руководство. Поиск предшествующих одноуровневых узлов (XPath-LINQ to XML)
                               href: programming-guide/concepts/linq/how-to-find-preceding-siblings-xpath-linq-to-xml.md
                             - name: Практическое руководство. Поиск потомков дочернего элемента (XPath-LINQ to XML)
                               href: programming-guide/concepts/linq/how-to-find-descendants-of-a-child-element-xpath-linq-to-xml.md
@@ -704,13 +704,13 @@
                               href: programming-guide/concepts/linq/how-to-find-sibling-nodes-xpath-linq-to-xml.md
                             - name: Практическое руководство. Поиск атрибута родительского элемента (XPath-LINQ to XML)
                               href: programming-guide/concepts/linq/how-to-find-an-attribute-of-the-parent-xpath-linq-to-xml.md
-                            - name: Практическое руководство. Поиск атрибутов элементов того же уровня с определенным именем (XPath-LINQ to XML)
+                            - name: Практическое руководство. Поиск атрибутов одноуровневых узлов с определенным именем (XPath-LINQ to XML)
                               href: programming-guide/concepts/linq/how-to-find-attributes-of-siblings-with-a-specific-name-xpath-linq-to-xml.md
                             - name: Практическое руководство. Поиск элементов с определенным атрибутом (XPath-LINQ to XML)
                               href: programming-guide/concepts/linq/how-to-find-elements-with-a-specific-attribute-xpath-linq-to-xml.md
                             - name: Практическое руководство. Поиск дочерних элементов по положению (XPath-LINQ to XML)
                               href: programming-guide/concepts/linq/how-to-find-child-elements-based-on-position-xpath-linq-to-xml.md
-                            - name: Практическое руководство. Поиск ближайшего предшествующего элемента того же уровня (XPath-LINQ to XML)
+                            - name: Практическое руководство. Поиск ближайшего предшествующего одноуровневого узла (XPath-LINQ to XML)
                               href: programming-guide/concepts/linq/how-to-find-the-immediate-preceding-sibling-xpath-linq-to-xml.md
                         - name: Чистые функциональные преобразования XML
                           items:
@@ -948,7 +948,7 @@
               href: programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md
             - name: Использование ключевых слов Override и New
               href: programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md
-            - name: Практическое руководство. Переопределение метода ToString
+            - name: Переопределение метода ToString
               href: programming-guide/classes-and-structs/how-to-override-the-tostring-method.md
         - name: Участники
           items:
@@ -964,9 +964,9 @@
               href: programming-guide/classes-and-structs/fields.md
             - name: Константы
               href: programming-guide/classes-and-structs/constants.md
-            - name: Практическое руководство. Определение абстрактных свойств
+            - name: Определение абстрактных свойств
               href: programming-guide/classes-and-structs/how-to-define-abstract-properties.md
-            - name: 'Практическое руководство. Определение констант в C#'
+            - name: 'Определение констант в C#'
               href: programming-guide/classes-and-structs/how-to-define-constants.md
         - name: Свойства
           items:
@@ -978,11 +978,11 @@
               href: programming-guide/classes-and-structs/interface-properties.md
             - name: Ограничение доступности методов доступа
               href: programming-guide/classes-and-structs/restricting-accessor-accessibility.md
-            - name: Практическое руководство. Объявление и использование свойств чтения и записи
+            - name: Объявление и использование свойств чтения и записи
               href: programming-guide/classes-and-structs/how-to-declare-and-use-read-write-properties.md
             - name: Автоматически реализуемые свойства
               href: programming-guide/classes-and-structs/auto-implemented-properties.md
-            - name: Практическое руководство. Реализации облегченного класса с автоматически реализуемыми свойствами
+            - name: Практическое руководство. Реализация облегченного класса с автоматически реализуемыми свойствами
               href: programming-guide/classes-and-structs/how-to-implement-a-lightweight-class-with-auto-implemented-properties.md
         - name: Методы
           items:
@@ -1000,21 +1000,21 @@
                   href: programming-guide/classes-and-structs/passing-value-type-parameters.md
                 - name: Передача параметров ссылочного типа
                   href: programming-guide/classes-and-structs/passing-reference-type-parameters.md
-                - name: Практическое руководство. Определение различия между передачей структуры и ссылки класса в метод
+                - name: Определение различия между передачей структуры и ссылки класса в метод
                   href: programming-guide/classes-and-structs/how-to-know-the-difference-passing-a-struct-and-passing-a-class-to-a-method.md
             - name: Неявно типизированные локальные переменные
               href: programming-guide/classes-and-structs/implicitly-typed-local-variables.md
-            - name: Практическое руководство. Использование явно введенных локальных переменных и массивов в выражении запроса
+            - name: Использование неявно типизированных локальных переменных и массивов в выражении запроса
               href: programming-guide/classes-and-structs/how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md
             - name: Методы расширения
               href: programming-guide/classes-and-structs/extension-methods.md
-            - name: Практическое руководство. Реализация и вызов пользовательского метода расширения
+            - name: Реализация и вызов пользовательского метода расширения
               href: programming-guide/classes-and-structs/how-to-implement-and-call-a-custom-extension-method.md
-            - name: Практическое руководство. Создание нового метода для перечисления
+            - name: Создание нового метода для перечисления
               href: programming-guide/classes-and-structs/how-to-create-a-new-method-for-an-enumeration.md
             - name: Именованные и необязательные аргументы
               href: programming-guide/classes-and-structs/named-and-optional-arguments.md
-            - name: Практическое руководство. Использование именованных и необязательных аргументов в программировании приложений Office
+            - name: Использование именованных и необязательных аргументов в программировании приложений Office
               href: programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md
         - name: Конструкторы
           items:
@@ -1028,13 +1028,13 @@
               href: programming-guide/classes-and-structs/private-constructors.md
             - name: Статические конструкторы
               href: programming-guide/classes-and-structs/static-constructors.md
-            - name: Практическое руководство. Создание конструктора копий
+            - name: Создание конструктора копий
               href: programming-guide/classes-and-structs/how-to-write-a-copy-constructor.md
         - name: Методы завершения
           href: programming-guide/classes-and-structs/destructors.md
         - name: Инициализаторы объектов и коллекций
           href: programming-guide/classes-and-structs/object-and-collection-initializers.md
-        - name: Практическое руководство. Инициализация объектов с помощью инициализатора объектов
+        - name: Инициализация объектов с помощью инициализатора объектов
           href: programming-guide/classes-and-structs/how-to-initialize-objects-by-using-an-object-initializer.md
         - name: Практическое руководство. Инициализация словаря с помощью инициализатора коллекций
           href: programming-guide/classes-and-structs/how-to-initialize-a-dictionary-with-a-collection-initializer.md
@@ -1044,7 +1044,7 @@
           href: programming-guide/classes-and-structs/partial-classes-and-methods.md
         - name: Анонимные типы
           href: programming-guide/classes-and-structs/anonymous-types.md
-        - name: Практическое руководство. Возвращение подмножества свойств элементов в запросе
+        - name: Возвращение подмножеств свойств элементов в запросе
           href: programming-guide/classes-and-structs/how-to-return-subsets-of-element-properties-in-a-query.md
     - name: Интерфейсы
       items:
@@ -1301,7 +1301,7 @@
                 - name: bool
                   href: language-reference/keywords/bool.md
                 - name: char
-                  href: language-reference/keywords/char.md
+                  href: language-reference/builtin-types/char.md
                 - name: enum
                   href: language-reference/keywords/enum.md
                 - name: struct
@@ -1675,7 +1675,7 @@
           href: language-reference/compiler-options/index.md
         - name: Построение из командной строки с помощью csc.exe
           href: language-reference/compiler-options/command-line-building-with-csc-exe.md
-        - name: Практическое руководство. Настройка переменных среды для командной строки Visual Studio
+        - name: Настройка переменных среды для командной строки Visual Studio
           href: language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md
         - name: 'Параметры компилятора C#, упорядоченные по категориям'
           href: language-reference/compiler-options/listed-by-category.md
