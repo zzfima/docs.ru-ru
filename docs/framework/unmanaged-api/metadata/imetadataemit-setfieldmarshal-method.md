@@ -22,10 +22,10 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74442276"
 ---
-# <a name="imetadataemitsetfieldmarshal-method"></a><span data-ttu-id="79d79-102">Метод IMetaDataEmit::SetFieldMarshal</span><span class="sxs-lookup"><span data-stu-id="79d79-102">IMetaDataEmit::SetFieldMarshal Method</span></span>
-<span data-ttu-id="79d79-103">Sets the PInvoke marshaling information for the field, method return, or method parameter referenced by the specified token.</span><span class="sxs-lookup"><span data-stu-id="79d79-103">Sets the PInvoke marshaling information for the field, method return, or method parameter referenced by the specified token.</span></span>  
+# <a name="imetadataemitsetfieldmarshal-method"></a><span data-ttu-id="bf266-102">Метод IMetaDataEmit::SetFieldMarshal</span><span class="sxs-lookup"><span data-stu-id="bf266-102">IMetaDataEmit::SetFieldMarshal Method</span></span>
+<span data-ttu-id="bf266-103">Задает сведения о маршалировании PInvoke для поля, возвращаемого метода или параметра метода, на который ссылается указанный токен.</span><span class="sxs-lookup"><span data-stu-id="bf266-103">Sets the PInvoke marshaling information for the field, method return, or method parameter referenced by the specified token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="79d79-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="79d79-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="bf266-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="bf266-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT SetFieldMarshal (  
@@ -35,26 +35,26 @@ HRESULT SetFieldMarshal (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="79d79-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="79d79-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="bf266-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="bf266-105">Parameters</span></span>  
  `tk`  
- <span data-ttu-id="79d79-106">[in] The token for target data item.</span><span class="sxs-lookup"><span data-stu-id="79d79-106">[in] The token for target data item.</span></span> <span data-ttu-id="79d79-107">This is either a `mdFieldDef` or a `mdParamDef` token.</span><span class="sxs-lookup"><span data-stu-id="79d79-107">This is either a `mdFieldDef` or a `mdParamDef` token.</span></span>  
+ <span data-ttu-id="bf266-106">окне Токен для целевого элемента данных.</span><span class="sxs-lookup"><span data-stu-id="bf266-106">[in] The token for target data item.</span></span> <span data-ttu-id="bf266-107">Это либо `mdFieldDef`, либо маркер `mdParamDef`.</span><span class="sxs-lookup"><span data-stu-id="bf266-107">This is either a `mdFieldDef` or a `mdParamDef` token.</span></span>  
   
  `pvNativeType`  
- <span data-ttu-id="79d79-108">[in] The signature for unmanaged type.</span><span class="sxs-lookup"><span data-stu-id="79d79-108">[in] The signature for unmanaged type.</span></span>  
+ <span data-ttu-id="bf266-108">окне Сигнатура для неуправляемого типа.</span><span class="sxs-lookup"><span data-stu-id="bf266-108">[in] The signature for unmanaged type.</span></span>  
   
  `cbNativeType`  
- <span data-ttu-id="79d79-109">[in] The count of bytes in `pvNativeType`.</span><span class="sxs-lookup"><span data-stu-id="79d79-109">[in] The count of bytes in `pvNativeType`.</span></span>  
+ <span data-ttu-id="bf266-109">окне Число байтов в `pvNativeType`.</span><span class="sxs-lookup"><span data-stu-id="bf266-109">[in] The count of bytes in `pvNativeType`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="79d79-110">Требования</span><span class="sxs-lookup"><span data-stu-id="79d79-110">Requirements</span></span>  
- <span data-ttu-id="79d79-111">**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="79d79-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="bf266-110">Требования</span><span class="sxs-lookup"><span data-stu-id="bf266-110">Requirements</span></span>  
+ <span data-ttu-id="bf266-111">**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="bf266-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="79d79-112">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="79d79-112">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="bf266-112">**Заголовок:** COR. h</span><span class="sxs-lookup"><span data-stu-id="bf266-112">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="79d79-113">**Library:** Used as a resource in MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="79d79-113">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="bf266-113">**Библиотека:** Используется в качестве ресурса в MSCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="bf266-113">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="79d79-114">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="79d79-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="bf266-114">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="bf266-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="79d79-115">См. также</span><span class="sxs-lookup"><span data-stu-id="79d79-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="bf266-115">См. также</span><span class="sxs-lookup"><span data-stu-id="bf266-115">See also</span></span>
 
-- [<span data-ttu-id="79d79-116">Интерфейс IMetaDataEmit</span><span class="sxs-lookup"><span data-stu-id="79d79-116">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [<span data-ttu-id="79d79-117">Интерфейс IMetaDataEmit2</span><span class="sxs-lookup"><span data-stu-id="79d79-117">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [<span data-ttu-id="bf266-116">Интерфейс IMetaDataEmit</span><span class="sxs-lookup"><span data-stu-id="bf266-116">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="bf266-117">Интерфейс IMetaDataEmit2</span><span class="sxs-lookup"><span data-stu-id="bf266-117">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

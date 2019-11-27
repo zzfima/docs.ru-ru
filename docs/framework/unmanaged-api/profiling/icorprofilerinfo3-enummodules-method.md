@@ -22,33 +22,33 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449751"
 ---
-# <a name="icorprofilerinfo3enummodules-method"></a><span data-ttu-id="fd4d7-102">Метод ICorProfilerInfo3::EnumModules</span><span class="sxs-lookup"><span data-stu-id="fd4d7-102">ICorProfilerInfo3::EnumModules Method</span></span>
-<span data-ttu-id="fd4d7-103">Возвращает перечислитель, предоставляющий методы для последовательного перебора коллекции управляемых модулей, загруженных в приложение.</span><span class="sxs-lookup"><span data-stu-id="fd4d7-103">Returns an enumerator that provides methods to sequentially iterate through a collection of managed modules that are loaded into the application.</span></span>  
+# <a name="icorprofilerinfo3enummodules-method"></a><span data-ttu-id="a9bb5-102">Метод ICorProfilerInfo3::EnumModules</span><span class="sxs-lookup"><span data-stu-id="a9bb5-102">ICorProfilerInfo3::EnumModules Method</span></span>
+<span data-ttu-id="a9bb5-103">Возвращает перечислитель, предоставляющий методы для последовательного перебора коллекции управляемых модулей, загруженных в приложение.</span><span class="sxs-lookup"><span data-stu-id="a9bb5-103">Returns an enumerator that provides methods to sequentially iterate through a collection of managed modules that are loaded into the application.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="fd4d7-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="fd4d7-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a9bb5-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="a9bb5-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT EnumModules([out] ICorProfilerModuleEnum** ppEnum);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="fd4d7-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="fd4d7-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="a9bb5-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="a9bb5-105">Parameters</span></span>  
  `ppEnum`  
- <span data-ttu-id="fd4d7-106">[out] A pointer to an [ICorProfilerModuleEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilermoduleenum-interface.md) interface.</span><span class="sxs-lookup"><span data-stu-id="fd4d7-106">[out] A pointer to an [ICorProfilerModuleEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilermoduleenum-interface.md) interface.</span></span>  
+ <span data-ttu-id="a9bb5-106">заполняет Указатель на интерфейс [ICorProfilerModuleEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilermoduleenum-interface.md) .</span><span class="sxs-lookup"><span data-stu-id="a9bb5-106">[out] A pointer to an [ICorProfilerModuleEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilermoduleenum-interface.md) interface.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="fd4d7-107">Заметки</span><span class="sxs-lookup"><span data-stu-id="fd4d7-107">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="a9bb5-107">Примечания</span><span class="sxs-lookup"><span data-stu-id="a9bb5-107">Remarks</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="fd4d7-108">Требования</span><span class="sxs-lookup"><span data-stu-id="fd4d7-108">Requirements</span></span>  
- <span data-ttu-id="fd4d7-109">**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="fd4d7-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a9bb5-108">Требования</span><span class="sxs-lookup"><span data-stu-id="a9bb5-108">Requirements</span></span>  
+ <span data-ttu-id="a9bb5-109">**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a9bb5-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="fd4d7-110">**Заголовок:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="fd4d7-110">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="a9bb5-110">**Заголовок:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="a9bb5-110">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="fd4d7-111">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="fd4d7-111">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="a9bb5-111">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="a9bb5-111">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="fd4d7-112">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="fd4d7-112">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="a9bb5-112">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a9bb5-112">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="fd4d7-113">См. также</span><span class="sxs-lookup"><span data-stu-id="fd4d7-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a9bb5-113">См. также:</span><span class="sxs-lookup"><span data-stu-id="a9bb5-113">See also</span></span>
 
-- [<span data-ttu-id="fd4d7-114">Интерфейс ICorProfilerFunctionEnum</span><span class="sxs-lookup"><span data-stu-id="fd4d7-114">ICorProfilerFunctionEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-interface.md)
-- [<span data-ttu-id="fd4d7-115">Интерфейс ICorProfilerInfo3</span><span class="sxs-lookup"><span data-stu-id="fd4d7-115">ICorProfilerInfo3 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)
-- [<span data-ttu-id="fd4d7-116">Интерфейсы профилирования</span><span class="sxs-lookup"><span data-stu-id="fd4d7-116">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [<span data-ttu-id="fd4d7-117">Профилирование</span><span class="sxs-lookup"><span data-stu-id="fd4d7-117">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)
+- [<span data-ttu-id="a9bb5-114">Интерфейс ICorProfilerFunctionEnum</span><span class="sxs-lookup"><span data-stu-id="a9bb5-114">ICorProfilerFunctionEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-interface.md)
+- [<span data-ttu-id="a9bb5-115">Интерфейс ICorProfilerInfo3</span><span class="sxs-lookup"><span data-stu-id="a9bb5-115">ICorProfilerInfo3 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)
+- [<span data-ttu-id="a9bb5-116">Интерфейсы профилирования</span><span class="sxs-lookup"><span data-stu-id="a9bb5-116">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [<span data-ttu-id="a9bb5-117">Профилирование</span><span class="sxs-lookup"><span data-stu-id="a9bb5-117">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)

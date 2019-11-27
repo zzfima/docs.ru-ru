@@ -22,10 +22,10 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446492"
 ---
-# <a name="emitmanifest-method"></a><span data-ttu-id="9847a-102">Метод EmitManifest</span><span class="sxs-lookup"><span data-stu-id="9847a-102">EmitManifest Method</span></span>
-<span data-ttu-id="9847a-103">Emits the final manifest.</span><span class="sxs-lookup"><span data-stu-id="9847a-103">Emits the final manifest.</span></span> <span data-ttu-id="9847a-104">Call this method after importing all other files and setting all options.</span><span class="sxs-lookup"><span data-stu-id="9847a-104">Call this method after importing all other files and setting all options.</span></span> <span data-ttu-id="9847a-105">Do not call this method for unbound modules.</span><span class="sxs-lookup"><span data-stu-id="9847a-105">Do not call this method for unbound modules.</span></span>  
+# <a name="emitmanifest-method"></a><span data-ttu-id="820b2-102">Метод EmitManifest</span><span class="sxs-lookup"><span data-stu-id="820b2-102">EmitManifest Method</span></span>
+<span data-ttu-id="820b2-103">Выдает окончательный манифест.</span><span class="sxs-lookup"><span data-stu-id="820b2-103">Emits the final manifest.</span></span> <span data-ttu-id="820b2-104">Вызовите этот метод после импорта всех остальных файлов и настройки всех параметров.</span><span class="sxs-lookup"><span data-stu-id="820b2-104">Call this method after importing all other files and setting all options.</span></span> <span data-ttu-id="820b2-105">Не вызывайте этот метод для непривязанных модулей.</span><span class="sxs-lookup"><span data-stu-id="820b2-105">Do not call this method for unbound modules.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9847a-106">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="9847a-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="820b2-106">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="820b2-106">Syntax</span></span>  
   
 ```cpp  
 HRESULT EmitManifest(  
@@ -35,24 +35,24 @@ HRESULT EmitManifest(
 ) PURE;  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="9847a-107">Параметры</span><span class="sxs-lookup"><span data-stu-id="9847a-107">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="820b2-107">Параметры</span><span class="sxs-lookup"><span data-stu-id="820b2-107">Parameters</span></span>  
  `AssemblyID`  
- <span data-ttu-id="9847a-108">ID of the assembly.</span><span class="sxs-lookup"><span data-stu-id="9847a-108">ID of the assembly.</span></span>  
+ <span data-ttu-id="820b2-108">Идентификатор сборки.</span><span class="sxs-lookup"><span data-stu-id="820b2-108">ID of the assembly.</span></span>  
   
  `pdwReserveSize`  
- <span data-ttu-id="9847a-109">Receives the size to reserve in the assembly file, retrieved from [StrongNameSignatureSize Function](../strong-naming/strongnamesignaturesize-function.md).</span><span class="sxs-lookup"><span data-stu-id="9847a-109">Receives the size to reserve in the assembly file, retrieved from [StrongNameSignatureSize Function](../strong-naming/strongnamesignaturesize-function.md).</span></span>  
+ <span data-ttu-id="820b2-109">Получает размер для резервирования в файле сборки, полученный из [функции StrongNameSignatureSize](../strong-naming/strongnamesignaturesize-function.md).</span><span class="sxs-lookup"><span data-stu-id="820b2-109">Receives the size to reserve in the assembly file, retrieved from [StrongNameSignatureSize Function](../strong-naming/strongnamesignaturesize-function.md).</span></span>  
   
  `ptkManifest`  
- <span data-ttu-id="9847a-110">Optionally receives the assembly manifest token.</span><span class="sxs-lookup"><span data-stu-id="9847a-110">Optionally receives the assembly manifest token.</span></span>  
+ <span data-ttu-id="820b2-110">При необходимости получает маркер манифеста сборки.</span><span class="sxs-lookup"><span data-stu-id="820b2-110">Optionally receives the assembly manifest token.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="9847a-111">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="9847a-111">Return Value</span></span>  
- <span data-ttu-id="9847a-112">Returns S_OK if the method succeeds.</span><span class="sxs-lookup"><span data-stu-id="9847a-112">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="820b2-111">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="820b2-111">Return Value</span></span>  
+ <span data-ttu-id="820b2-112">Возвращает S_OK, если метод завершается с ошибкой.</span><span class="sxs-lookup"><span data-stu-id="820b2-112">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="9847a-113">Требования</span><span class="sxs-lookup"><span data-stu-id="9847a-113">Requirements</span></span>  
- <span data-ttu-id="9847a-114">Requires alink.h.</span><span class="sxs-lookup"><span data-stu-id="9847a-114">Requires alink.h.</span></span>  
+## <a name="requirements"></a><span data-ttu-id="820b2-113">Требования</span><span class="sxs-lookup"><span data-stu-id="820b2-113">Requirements</span></span>  
+ <span data-ttu-id="820b2-114">Требуется ALink. h.</span><span class="sxs-lookup"><span data-stu-id="820b2-114">Requires alink.h.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9847a-115">См. также</span><span class="sxs-lookup"><span data-stu-id="9847a-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="820b2-115">См. также</span><span class="sxs-lookup"><span data-stu-id="820b2-115">See also</span></span>
 
-- [<span data-ttu-id="9847a-116">Интерфейс IALink</span><span class="sxs-lookup"><span data-stu-id="9847a-116">IALink Interface</span></span>](ialink-interface.md)
-- [<span data-ttu-id="9847a-117">Интерфейс IALink2</span><span class="sxs-lookup"><span data-stu-id="9847a-117">IALink2 Interface</span></span>](ialink2-interface.md)
-- [<span data-ttu-id="9847a-118">API ALink</span><span class="sxs-lookup"><span data-stu-id="9847a-118">ALink API</span></span>](index.md)
+- [<span data-ttu-id="820b2-116">Интерфейс IALink</span><span class="sxs-lookup"><span data-stu-id="820b2-116">IALink Interface</span></span>](ialink-interface.md)
+- [<span data-ttu-id="820b2-117">Интерфейс IALink2</span><span class="sxs-lookup"><span data-stu-id="820b2-117">IALink2 Interface</span></span>](ialink2-interface.md)
+- [<span data-ttu-id="820b2-118">API ALink</span><span class="sxs-lookup"><span data-stu-id="820b2-118">ALink API</span></span>](index.md)
