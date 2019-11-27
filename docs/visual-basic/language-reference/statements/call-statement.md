@@ -17,7 +17,7 @@ ms.locfileid: "74350159"
 ---
 # <a name="call-statement-visual-basic"></a>Оператор Call (Visual Basic)
 
-Transfers control to a `Function`, `Sub`, or dynamic-link library (DLL) procedure.  
+Передает управление `Function`, `Sub`или процедуре библиотеки динамической компоновки (DLL).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -29,21 +29,21 @@ Transfers control to a `Function`, `Sub`, or dynamic-link library (DLL) procedur
 
 |||
 |---|---|
-|`procedureName`|Обязательный. Name of the procedure to call.|
-|`argumentList`|Необязательный. List of variables or expressions representing arguments that are passed to the procedure when it is called. Multiple arguments are separated by commas. If you include `argumentList`, you must enclose it in parentheses.|
+|`procedureName`|Обязательно. Имя вызываемой процедуры.|
+|`argumentList`|Необязательный элемент. Список переменных или выражений, представляющих аргументы, которые передаются в процедуру при ее вызове. Несколько аргументов разделяются запятыми. Если включить `argumentList`, необходимо заключить его в круглые скобки.|
 |||
   
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Примечания
 
- You can use the `Call` keyword when you call a procedure. For most procedure calls, you aren’t required to use this  keyword.
+ При вызове процедуры можно использовать ключевое слово `Call`. Для большинства вызовов процедур использовать это ключевое слово не обязательно.
 
- You typically use the `Call` keyword when the called expression doesn’t start with an identifier. Use of the `Call` keyword for other uses isn't recommended.
+ Обычно используется ключевое слово `Call`, если вызванное выражение не начинается с идентификатора. Использование ключевого слова `Call` для других целей не рекомендуется.
 
- If the procedure returns a value, the `Call` statement discards it.
+ Если процедура возвращает значение, то инструкция `Call` отклоняет ее.
 
 ## <a name="example"></a>Пример
 
- The following code shows two examples where the `Call` keyword is necessary to call a procedure. In both examples, the called expression doesn't start with an identifier.
+ В следующем коде показаны два примера, где ключевое слово `Call` необходимо для вызова процедуры. В обоих примерах вызванное выражение не начинается с идентификатора.
 
  [!code-vb[VbVbalrStatements#97](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#97)]  
   

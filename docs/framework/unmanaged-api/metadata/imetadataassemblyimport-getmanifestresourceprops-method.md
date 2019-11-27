@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436315"
 ---
 # <a name="imetadataassemblyimportgetmanifestresourceprops-method"></a>Метод IMetaDataAssemblyImport::GetManifestResourceProps
-Gets the set of properties of the manifest resource with the specified metadata signature.  
+Возвращает набор свойств ресурса манифеста с указанной сигнатурой метаданных.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -41,32 +41,32 @@ HRESULT GetManifestResourceProps (
   
 ## <a name="parameters"></a>Параметры  
  `mdmr`  
- [in] An `mdManifestResource` token that represents the resource for which to get the properties.  
+ окне Токен `mdManifestResource`, представляющий ресурс, для которого необходимо получить свойства.  
   
  `szName`  
- [out] The name of the resource.  
+ заполняет Имя ресурса.  
   
  `cchName`  
- [in] The size, in wide chars, of `szName`.  
+ окне Размер `szName`в расширенных символах.  
   
  `pchName`  
- [out] A pointer to the number of wide chars actually returned in `szName`.  
+ заполняет Указатель на число расширенных символов, фактически возвращаемых в `szName`.  
   
  `ptkImplementation`  
- [out] A pointer to an `mdFile` token or an `mdAssemblyRef` token that represents the file or assembly, respectively, that contains the resource.  
+ заполняет Указатель на маркер `mdFile` или маркер `mdAssemblyRef`, представляющий файл или сборку соответственно, который содержит ресурс.  
   
  `pdwOffset`  
- [out] A pointer to a value that specifies the offset to the beginning of the resource within the file.  
+ заполняет Указатель на значение, указывающее смещение к началу ресурса в файле.  
   
  `pdwResourceFlags`  
- [out] A pointer to flags that describe the metadata applied to a resource. The flags value is a combination of one or more [CorManifestResourceFlags](../../../../docs/framework/unmanaged-api/metadata/cormanifestresourceflags-enumeration.md) values.  
+ заполняет Указатель на флаги, описывающие метаданные, применяемые к ресурсу. Значение Flags является сочетанием одного или нескольких значений [корманифестресаурцефлагс](../../../../docs/framework/unmanaged-api/metadata/cormanifestresourceflags-enumeration.md) .  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Заголовок:** COR. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Библиотека:** Используется в качестве ресурса в MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

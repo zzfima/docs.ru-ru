@@ -29,7 +29,7 @@ ms.locfileid: "74435371"
   
 - Если ячейка пуста, элемент модели автоматизации пользовательского интерфейса по-прежнему должен возвращаться для поддержки свойства <xref:System.Windows.Automation.Provider.IGridItemProvider.ContainingGrid%2A> для этой ячейки. Это возможно, когда макет дочерних элементов сетки подобен массиву с переменной длиной (см. пример ниже).  
   
- ![Windows Explorer view showing ragged layout.](./media/uia-gridpattern-ragged-array.PNG "UIA_GridPattern_Ragged_Array")  
+ ![Представление проводника Windows, в котором отображается неоднородный макет.](./media/uia-gridpattern-ragged-array.PNG "UIA_GridPattern_Ragged_Array")  
 Пример элемента управления "Сетка" с пустыми координатами  
   
 - Сетка с единственным элементом по-прежнему должна реализовывать <xref:System.Windows.Automation.Provider.IGridProvider> , если она логически считается сеткой. Количество дочерних элементов в сетке не имеет значения.  
@@ -46,11 +46,11 @@ ms.locfileid: "74435371"
 ## <a name="required-members-for-igridprovider"></a>Обязательные члены для IGridProvider  
  Следующие свойства и методы обязательны для реализации интерфейса IGridProvider.  
   
-|Обязательные члены|Type|Примечания|  
+|Обязательные члены|Введите|Примечания|  
 |----------------------|----------|-----------|  
-|<xref:System.Windows.Automation.Provider.IGridProvider.RowCount%2A>|свойство;|Отсутствуют|  
-|<xref:System.Windows.Automation.Provider.IGridProvider.ColumnCount%2A>|свойство;|Отсутствуют|  
-|<xref:System.Windows.Automation.Provider.IGridProvider.GetItem%2A>|Метод|Отсутствуют|  
+|<xref:System.Windows.Automation.Provider.IGridProvider.RowCount%2A>|Свойство|Нет|  
+|<xref:System.Windows.Automation.Provider.IGridProvider.ColumnCount%2A>|Свойство|Нет|  
+|<xref:System.Windows.Automation.Provider.IGridProvider.GetItem%2A>|Метод|Нет|  
   
  Этот шаблон элемента управления не имеет связанных событий.  
   
@@ -60,8 +60,8 @@ ms.locfileid: "74435371"
   
 |Тип исключения|Условие|  
 |--------------------|---------------|  
-|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IGridProvider.GetItem%2A><br /><br /> -   If the requested row coordinate is larger than the <xref:System.Windows.Automation.Provider.IGridProvider.RowCount%2A> or the column coordinate is larger than the <xref:System.Windows.Automation.Provider.IGridProvider.ColumnCount%2A>.|  
-|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IGridProvider.GetItem%2A><br /><br /> -   If either of the requested row or column coordinates is less than zero.|  
+|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IGridProvider.GetItem%2A><br /><br /> — Если запрошенная координата строки больше, чем <xref:System.Windows.Automation.Provider.IGridProvider.RowCount%2A> или значение координаты столбца больше <xref:System.Windows.Automation.Provider.IGridProvider.ColumnCount%2A>.|  
+|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IGridProvider.GetItem%2A><br /><br /> — Если любая из запрошенных координат строки или столбца меньше нуля.|  
   
 ## <a name="see-also"></a>См. также
 

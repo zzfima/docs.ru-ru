@@ -19,30 +19,30 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346378"
 ---
 # <a name="composite-data-types-visual-basic"></a>Составные типы данных (Visual Basic)
-In addition to the elementary data types Visual Basic supplies, you can also assemble items of different types to create *composite data types* such as structures, arrays, and classes. You can build composite data types from elementary types and from other composite types. For example, you can define an array of structure elements, or a structure with array members.  
+Помимо простейших типов данных Visual Basic предоставляет также возможность собирать элементы различных типов для создания *составных типов данных* , таких как структуры, массивы и классы. Составные типы данных можно создавать из простейших типов и из других составных типов. Например, можно определить массив элементов структуры или структуру с элементами массива.  
   
 ## <a name="data-types"></a>Типы данных  
- A composite type is different from the data type of any of its components. For example, an array of `Integer` elements is not of the `Integer` data type.  
+ Составной тип отличается от типа данных любого из его компонентов. Например, массив `Integer` элементов не относится к типу данных `Integer`.  
   
- An array data type is normally represented using the element type, parentheses, and commas as necessary. For example, a one-dimensional array of `String` elements is represented as `String()`, and a two-dimensional array of `Boolean` elements is represented as `Boolean(,)`.  
+ Тип данных массива обычно представляется при необходимости с использованием типа элемента, круглых скобок и запятых. Например, одномерный массив `String` элементов представлен как `String()`, а двумерный массив элементов `Boolean` представляется как `Boolean(,)`.  
   
-## <a name="structure-types"></a>Structure Types  
- There is no single data type comprising all structures. Instead, each definition of a structure represents a unique data type, even if two structures define identical elements in the same order. However, if you create two or more instances of the same structure, Visual Basic considers them to be of the same data type.  
+## <a name="structure-types"></a>Типы структур  
+ Не существует одного типа данных, включающего в себя все структуры. Вместо этого каждое определение структуры представляет собой уникальный тип данных, даже если две структуры определяют идентичные элементы в том же порядке. Однако при создании двух или более экземпляров одной и той же структуры Visual Basic рассматривает их как один и тот же тип данных.  
   
 ## <a name="tuples"></a>Кортежи
 
-A tuple is a lightweight structure that contains two or more fields whose types are predefined. Tuples are supported starting with Visual Basic 2017. Tuples are most commonly used to return multiple values from a single method call without having to pass arguments by reference or packaging the returned fields in a more heavy-weight class or structure. See the [Tuples](tuples.md) topic for more information on tuples.
+Кортеж — это упрощенная структура, которая содержит два или более полей, типы которых являются предопределенными. Кортежи поддерживаются начиная с Visual Basic 2017. Кортежи чаще всего используются для возвращения нескольких значений из одного вызова метода без необходимости передачи аргументов по ссылке или упаковки возвращаемых полей в более тяжелом классе или структуре. Дополнительные сведения о кортежах см. в разделе [кортежи](tuples.md) .
 
-## <a name="array-types"></a>Array Types  
- There is no single data type comprising all arrays. The data type of a particular instance of an array is determined by the following:  
+## <a name="array-types"></a>Типы массивов  
+ Не существует одного типа данных, включающего в себя все массивы. Тип данных конкретного экземпляра массива определяется следующим образом:  
   
-- The fact of being an array  
+- Факт является массивом  
   
-- The rank (number of dimensions) of the array  
+- Ранг (число измерений) массива  
   
-- The element type of the array  
+- Тип элемента массива  
   
- In particular, the length of a given dimension is not part of the instance's data type. Это показано в следующем примере.  
+ В частности, длина данного измерения не является частью типа данных экземпляра. Это показано в следующем примере.  
   
 ```vb  
 Dim arrayA( ) As Byte = New Byte(12) {}  
@@ -52,22 +52,22 @@ Dim arrayD( , ) As Short
 Dim arrayE( , ) As Short = New Short(4, 10) {}  
 ```  
   
- In the preceding example, array variables `arrayA` and `arrayB` are considered to be of the same data type — `Byte()` — even though they are initialized to different lengths. Variables `arrayB` and `arrayC` are not of the same type because their element types are different. Variables `arrayC` and `arrayD` are not of the same type because their ranks are different. Variables `arrayD` and `arrayE` have the same type — `Short(,)` — because their ranks and element types are the same, even though `arrayD` is not yet initialized.  
+ В предыдущем примере переменные массива `arrayA` и `arrayB` считаются одним и тем же типом данных — `Byte()`, несмотря на то, что они инициализируются с разной длиной. Переменные `arrayB` и `arrayC` относятся к разным типам, так как их типы элементов различаются. Переменные `arrayC` и `arrayD` имеют разные типы, так как их ранги различаются. Переменные `arrayD` и `arrayE` имеют одинаковый тип — `Short(,)` — так как их ранги и типы элементов одинаковы, даже если `arrayD` еще не инициализирован.  
   
- For more information on arrays, see [Arrays](../../../../visual-basic/programming-guide/language-features/arrays/index.md).  
+ Дополнительные сведения о массивах см. в разделе [массивы](../../../../visual-basic/programming-guide/language-features/arrays/index.md).  
   
 ## <a name="class-types"></a>Типы классов  
- There is no single data type comprising all classes. Although one class can inherit from another class, each is a separate data type. Multiple instances of the same class are of the same data type. If you assign one class instance variable to another, not only do they have the same data type, they point to the same class instance in memory.  
+ Не существует одного типа данных, включающего в себя все классы. Хотя один класс может наследовать от другого класса, каждый из них является отдельным типом данных. Несколько экземпляров одного и того же класса имеют один и тот же тип данных. Если присвоить одну переменную экземпляра класса другой, не только те, которые имеют один и тот же тип данных, они указывают на один и тот же экземпляр класса в памяти.  
   
- For more information on classes, see [Objects and Classes](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md).  
+ Дополнительные сведения о классах см. в разделе [объекты и классы](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md).  
   
 ## <a name="see-also"></a>См. также
 
 - [Типы данных](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
 - [Простые типы данных](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)
 - [Generic Types in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
-- [Типы значений и ссылочные типы](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
-- [Type Conversions in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+- [Преобразования типов в Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
 - [Структуры](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)
 - [Устранение неполадок, связанных с типами данных](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
 - [Практическое руководство. Хранение нескольких значений в переменной](../../../../visual-basic/programming-guide/language-features/data-types/how-to-hold-more-than-one-value-in-a-variable.md)

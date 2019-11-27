@@ -14,24 +14,24 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349841"
 ---
 # <a name="directories-and-files-summary-visual-basic"></a>Сводка по каталогам и файлам (Visual Basic)
-Visual Basic language keywords and run-time library members are organized by purpose and use.  
+Ключевые слова языка Visual Basic и элементы библиотеки времени выполнения упорядочены по целям и использованию.  
   
- Using the `My` feature gives you greater productivity and performance in file I/O operations than using these members. Для получения дополнительной информации см. <xref:Microsoft.VisualBasic.FileIO.FileSystem>.  
+ Использование функции `My` обеспечивает более высокую производительность и производительность операций файлового ввода-вывода, чем использование этих членов. Дополнительные сведения см. в разделе <xref:Microsoft.VisualBasic.FileIO.FileSystem>.  
   
 |**Действие**|**Элемент языка**|  
 |----------------|--------------------------|  
-|Change a directory or folder.|<xref:Microsoft.VisualBasic.FileSystem.ChDir%2A>|  
-|Change the drive.|<xref:Microsoft.VisualBasic.FileSystem.ChDrive%2A>|  
-|Copy a file.|<xref:Microsoft.VisualBasic.FileSystem.FileCopy%2A>|  
-|Make a directory or folder.|<xref:Microsoft.VisualBasic.FileSystem.MkDir%2A>|  
-|Remove a directory or folder.|<xref:Microsoft.VisualBasic.FileSystem.RmDir%2A>|  
-|Rename a file, directory, or folder.|<xref:Microsoft.VisualBasic.FileSystem.Rename%2A>|  
-|Return the current path.|<xref:Microsoft.VisualBasic.FileSystem.CurDir%2A>|  
-|Return a file's date/time stamp.|<xref:Microsoft.VisualBasic.FileSystem.FileDateTime%2A>|  
-|Return file, directory, or label attributes.|<xref:Microsoft.VisualBasic.FileSystem.GetAttr%2A>|  
-|Return a file's length.|<xref:Microsoft.VisualBasic.FileSystem.FileLen%2A>|  
-|Return a file's name or volume label.|<xref:Microsoft.VisualBasic.FileSystem.Dir%2A>|  
-|Set attribute information for a file.|<xref:Microsoft.VisualBasic.FileSystem.SetAttr%2A>|  
+|Изменение каталога или папки.|<xref:Microsoft.VisualBasic.FileSystem.ChDir%2A>|  
+|Измените диск.|<xref:Microsoft.VisualBasic.FileSystem.ChDrive%2A>|  
+|Скопируйте файл.|<xref:Microsoft.VisualBasic.FileSystem.FileCopy%2A>|  
+|Создайте каталог или папку.|<xref:Microsoft.VisualBasic.FileSystem.MkDir%2A>|  
+|Удалите каталог или папку.|<xref:Microsoft.VisualBasic.FileSystem.RmDir%2A>|  
+|Переименуйте файл, каталог или папку.|<xref:Microsoft.VisualBasic.FileSystem.Rename%2A>|  
+|Возврат текущего пути.|<xref:Microsoft.VisualBasic.FileSystem.CurDir%2A>|  
+|Возвращает метку даты и времени файла.|<xref:Microsoft.VisualBasic.FileSystem.FileDateTime%2A>|  
+|Возвращает атрибуты файла, каталога или метки.|<xref:Microsoft.VisualBasic.FileSystem.GetAttr%2A>|  
+|Возвращает длину файла.|<xref:Microsoft.VisualBasic.FileSystem.FileLen%2A>|  
+|Возврат имени файла или метки тома.|<xref:Microsoft.VisualBasic.FileSystem.Dir%2A>|  
+|Установка сведений об атрибутах для файла.|<xref:Microsoft.VisualBasic.FileSystem.SetAttr%2A>|  
   
 ## <a name="see-also"></a>См. также
 

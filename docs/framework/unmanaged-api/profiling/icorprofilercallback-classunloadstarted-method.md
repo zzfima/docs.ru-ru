@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445066"
 ---
 # <a name="icorprofilercallbackclassunloadstarted-method"></a>Метод ICorProfilerCallback::ClassUnloadStarted
-Notifies the profiler that a class is being unloaded.  
+Уведомляет профилировщик о выгрузке класса.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -34,10 +34,10 @@ HRESULT ClassUnloadStarted(
   
 ## <a name="parameters"></a>Параметры  
  `classId`  
- [in] Identifies the class that is being unloaded.  
+ окне Определяет выгружается класс.  
   
-## <a name="remarks"></a>Заметки  
- The value of `classId` is not valid for an information request after the `ClassUnloadStarted` method returns — this is the profiler's last chance to obtain information about this class.  
+## <a name="remarks"></a>Примечания  
+ Значение `classId` недопустимо для информационного запроса после возврата метода `ClassUnloadStarted` — это последний шанс профилировщика получить сведения об этом классе.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  

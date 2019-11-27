@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74444650"
 ---
 # <a name="imetadataemit2definegenericparam-method"></a>Метод IMetaDataEmit2::DefineGenericParam
-Creates a definition for a generic type parameter, and gets a token to that generic type parameter.  
+Создает определение для параметра универсального типа и получает маркер для этого параметра универсального типа.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -41,32 +41,32 @@ HRESULT DefineGenericParam (
   
 ## <a name="parameters"></a>Параметры  
  `tk`  
- [in] An `mdTypeDef` or `mdMethodDef` token that represents the method or constructor for which to define a generic parameter.  
+ окне Маркер `mdTypeDef` или `mdMethodDef`, представляющий метод или конструктор, для которого определяется универсальный параметр.  
   
  `ulParamSeq`  
- [in] The index of the generic parameter.  
+ окне Индекс универсального параметра.  
   
  `dwParamFlags`  
- [in] A value of the [CorGenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md) enumeration that describes the type for the generic parameter.  
+ окне Значение перечисления [корженерикпараматтр](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md) , описывающее тип универсального параметра.  
   
  `szname`  
- [in] The name of the parameter.  
+ окне Имя параметра.  
   
  `reserved`  
- [in] This parameter is reserved for future extensibility.  
+ окне Этот параметр зарезервирован для расширения в будущем.  
   
  `rtkConstraints`  
- [in] A zero-terminated array of type constraints. Array members must be an `mdTypeDef`, `mdTypeRef`, or `mdTypeSpec` metadata token.  
+ окне Массив ограничений типа, заканчивающийся нулем. Элементы массива должны быть `mdTypeDef`, `mdTypeRef`или маркером метаданных `mdTypeSpec`.  
   
  `pgp`  
- [out] A token that represents the generic parameter.  
+ заполняет Токен, представляющий универсальный параметр.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Заголовок:** COR. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Библиотека:** Используется в качестве ресурса в MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

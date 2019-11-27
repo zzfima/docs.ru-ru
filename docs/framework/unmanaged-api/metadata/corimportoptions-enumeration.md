@@ -46,20 +46,20 @@ typedef enum CorImportOptions {
   
 |Член|Описание|  
 |------------|-----------------|  
-|`MDImportOptionDefault`|Indicates the default behavior, which is to skip deleted records.|  
-|`MDImportOptionAll`|Indicates that all metadata should be enumerated.|  
-|`MDImportOptionAllTypeDefs`|Indicates that all TypeDefs, including deleted ones, should be enumerated.|  
-|`MDImportOptionAllMethodDefs`|Indicates that all MethodDefs, including deleted ones, should be enumerated.|  
-|`MDImportOptionAllFieldDefs`|Indicates that all FieldDefs, including deleted ones, should be enumerated.|  
-|`MDImportOptionAllProperties`|Indicates that all PropertyDefs, including deleted ones, should be enumerated.|  
-|`MDImportOptionAllEvents`|Indicates that all EventDefs, including deleted ones, should be enumerated.|  
-|`MDImportOptionAllCustomAttributes`|Indicates that all custom attributes, including deleted ones, should be enumerated.|  
-|`MDImportOptionAllExportedTypes`|Indicates that all exported types, including deleted ones, should be enumerated.|  
+|`MDImportOptionDefault`|Указывает поведение по умолчанию, которое пропускает удаленные записи.|  
+|`MDImportOptionAll`|Указывает, что необходимо перечислить все метаданные.|  
+|`MDImportOptionAllTypeDefs`|Указывает, что необходимо перечислить все определения типов, включая удаленные.|  
+|`MDImportOptionAllMethodDefs`|Указывает, что необходимо перечислить все Месоддефс, включая удаленные.|  
+|`MDImportOptionAllFieldDefs`|Указывает, что необходимо перечислить все Фиелддефс, включая удаленные.|  
+|`MDImportOptionAllProperties`|Указывает, что необходимо перечислить все Пропертидефс, включая удаленные.|  
+|`MDImportOptionAllEvents`|Указывает, что необходимо перечислить все Евентдефс, включая удаленные.|  
+|`MDImportOptionAllCustomAttributes`|Указывает, что необходимо перечислить все настраиваемые атрибуты, включая удаленные.|  
+|`MDImportOptionAllExportedTypes`|Указывает, что должны быть перечислены все экспортированные типы, включая удаленные.|  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorHdr.h  
+ **Заголовок:** Корхдр. h  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

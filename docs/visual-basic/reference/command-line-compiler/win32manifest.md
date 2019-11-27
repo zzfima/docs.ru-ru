@@ -26,31 +26,31 @@ ms.locfileid: "74349133"
   
 |Термин|Определение|  
 |---|---|  
-|`fileName`|The path of the custom manifest file.|  
+|`fileName`|Путь к файлу пользовательского манифеста.|  
   
-## <a name="remarks"></a>Заметки  
- By default, the Visual Basic compiler embeds an application manifest that specifies a requested execution level of asInvoker. It creates the manifest in the same folder in which the executable file is built, typically the bin\Debug or bin\Release folder when you use Visual Studio. If you want to supply a custom manifest, for example to specify a requested execution level of highestAvailable or requireAdministrator, use this option to specify the name of the file.  
+## <a name="remarks"></a>Примечания  
+ По умолчанию компилятор Visual Basic внедряет манифест приложения, указывающий требуемый уровень выполнения asInvoker. Он создает манифест в той же папке, в которой создается исполняемый файл, обычно в папке bin\Debug или bin\Release при использовании Visual Studio. Если вы хотите предоставить пользовательский манифест, например для указания требуемого уровня выполнения highestAvailable или requireAdministrator, используйте этот параметр, чтобы указать имя файла.  
   
 > [!NOTE]
-> This option and the [-win32resource](../../../visual-basic/reference/command-line-compiler/win32resource.md) option are mutually exclusive. If you try to use both options in the same command line, you will get a build error.  
+> Этот параметр и параметр [-win32resource](../../../visual-basic/reference/command-line-compiler/win32resource.md) являются взаимоисключающими. При попытке использовать оба параметра в одной командной строке возникнет ошибка сборки.  
   
  Приложение без манифеста, определяющего запрошенный уровень выполнения, требует виртуализации файлов или реестра с помощью функции "Контроль учетных записей" в Windows Vista. Дополнительные сведения о виртуализации см. в статье [ClickOnce Deployment on Windows Vista](/visualstudio/deployment/clickonce-deployment-on-windows-vista) (Развертывание ClickOnce в Windows Vista).  
   
- Your application will be subject to virtualization if either of the following conditions is true:  
+ Приложение будет подвергаться виртуализации, если выполняется одно из следующих условий.  
   
-1. You use the `-nowin32manifest` option and you do not provide a manifest in a later build step or as part of a Windows Resource (.res) file by using the `-win32resource` option.  
+1. Вы используете параметр `-nowin32manifest` и не предоставляете манифест на более позднем этапе сборки или в составе файла ресурсов Windows (RES) с помощью параметра `-win32resource`.  
   
 2. Вы предоставляете пользовательский манифест, не определяющий запрошенный уровень выполнения.  
   
- Visual Studio создает файл по умолчанию с расширением .manifest и сохраняет его в каталоги отладки и выпуска вместе с исполняемым файлом. You can view or edit the default app.manifest file by clicking **View UAC Settings** on the **Application** tab in the Project Designer. Дополнительные сведения см. в разделе [Application Page, Project Designer (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic).  
+ Visual Studio создает файл по умолчанию с расширением .manifest и сохраняет его в каталоги отладки и выпуска вместе с исполняемым файлом. Можно просмотреть или изменить файл App. manifest по умолчанию, щелкнув **Просмотреть параметры UAC** на вкладке **приложение** в конструкторе проектов. Дополнительные сведения см. в разделе [Application Page, Project Designer (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic).  
   
- You can provide the application manifest as a custom post-build step or as part of a Win32 resource file by using the `-nowin32manifest` option. Этот же параметр можно использовать, если вы хотите, чтобы ваше приложение требовало виртуализации файлов или реестров в Windows Vista. This will prevent the compiler from creating and embedding a default manifest in the PE file.  
+ Манифест приложения можно предоставить в качестве настраиваемого этапа, выполняемого после сборки, или как часть файла ресурсов Win32 с помощью параметра `-nowin32manifest`. Этот же параметр можно использовать, если вы хотите, чтобы ваше приложение требовало виртуализации файлов или реестров в Windows Vista. Это позволит компилятору не создавать и внедрять манифест по умолчанию в PE-файле.  
   
 ## <a name="example"></a>Пример  
- The following example shows the default manifest that the Visual Basic compiler inserts into a PE.  
+ В следующем примере показан манифест по умолчанию, который Visual Basic компилятор вставляет в PE.  
   
 > [!NOTE]
-> The compiler inserts a standard application name MyApplication.app into the manifest XML. Это позволяет приложениям работать в Windows Server 2003 с пакетом обновления 3.  
+> Компилятор вставляет имя стандартного приложения MyApplication. app в XML-файл манифеста. Это позволяет приложениям работать в Windows Server 2003 с пакетом обновления 3.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>  

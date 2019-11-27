@@ -14,7 +14,7 @@ ms.locfileid: "74353563"
 # <a name="statements-visual-basic"></a>Операторы (Visual Basic)
 В статьях этого раздела приводятся таблицы операторов объявления и исполнения Visual Basic, а также важные списки, относящиеся ко множеству операторов.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Операторы A–E](../../../visual-basic/language-reference/statements/a-e-statements.md)  
   
  [Операторы F–P](../../../visual-basic/language-reference/statements/f-p-statements.md)  

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74443101"
 ---
 # <a name="icorprofilerinfo2getthreadappdomain-method"></a>Метод ICorProfilerInfo2::GetThreadAppDomain
-Gets the ID of the application domain in which the specified thread is currently executing code.  
+Возвращает идентификатор домена приложения, в котором указанный поток в настоящий момент исполняет код.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -35,10 +35,10 @@ HRESULT GetThreadAppDomain(
   
 ## <a name="parameters"></a>Параметры  
  `threadId`  
- [in] The ID specifying the thread.  
+ окне Идентификатор, указывающий поток.  
   
  `pAppDomainId`  
- [out] A pointer to the ID of the application domain.  
+ заполняет Указатель на идентификатор домена приложения.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  

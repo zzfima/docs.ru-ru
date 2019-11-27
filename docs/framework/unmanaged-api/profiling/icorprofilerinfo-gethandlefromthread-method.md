@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74439064"
 ---
 # <a name="icorprofilerinfogethandlefromthread-method"></a>Метод ICorProfilerInfo::GetHandleFromThread
-Maps the ID of a thread to a Win32 thread handle.  
+Сопоставляет идентификатор потока с обработчиком потока Win32.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -35,13 +35,13 @@ HRESULT GetHandleFromThread(
   
 ## <a name="parameters"></a>Параметры  
  `threadId`  
- [in] The thread ID to be mapped.  
+ окне Идентификатор потока для сопоставления.  
   
  `phThread`  
- [out] A pointer to a Win32 thread handle.  
+ заполняет Указатель на обработчик потока Win32.  
   
-## <a name="remarks"></a>Заметки  
- The profiler must call the Win32 `DuplicateHandle` function on the handle before using it.  
+## <a name="remarks"></a>Примечания  
+ Профилировщик должен вызвать функцию Win32 `DuplicateHandle` для маркера перед его использованием.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  

@@ -35,17 +35,17 @@ BOOL IsValidToken (
   
 ## <a name="parameters"></a>Параметры  
  `tk`  
- [in] The token to check the reference validity for.  
+ окне Токен, для которого проверяется допустимость ссылки.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- `true` if `tk` is a valid metadata token within the current scope. В противном случае — значение `false`.  
+ `true`, если `tk` является допустимым маркером метаданных в текущей области. В противном случае — значение `false`.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Заголовок:** COR. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

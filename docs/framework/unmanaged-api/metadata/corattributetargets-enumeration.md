@@ -62,32 +62,32 @@ typedef enum CorAttributeTargets
   
 |Член|Описание|  
 |------------|-----------------|  
-|`catAssembly`|Attribute can be applied to an assembly.|  
-|`catModule`|Attribute can be applied to a portable executable (.dll or .exe) module.|  
-|`catClass`|Attribute can be applied to a class.|  
-|`catStruct`|Attribute can be applied to a structure; that is, a value type.|  
-|`catEnum`|Attribute can be applied to an enumeration.|  
-|`catConstructor`|Attribute can be applied to a constructor.|  
-|`catMethod`|Attribute can be applied to a method.|  
-|`catProperty`|Attribute can be applied to a property.|  
-|`catField`|Attribute can be applied to a field.|  
-|`catEvent`|Attribute can be applied to an event.|  
-|`catInterface`|Attribute can be applied to an interface.|  
-|`catParameter`|Attribute can be applied to a parameter.|  
-|`catDelegate`|Attribute can be applied to a delegate.|  
-|`catGenericParameter`|Attribute can be applied to a generic parameter.|  
-|`catAll`|Attribute can be applied to any application element.|  
-|`catClassMembers`|Attribute can be applied to a member of a class.|  
+|`catAssembly`|Атрибут может быть применен к сборке.|  
+|`catModule`|Атрибут может применяться к переносимому исполняемому модулю (DLL или exe).|  
+|`catClass`|Атрибут может применяться к классу.|  
+|`catStruct`|Атрибут может быть применен к структуре; то есть тип значения.|  
+|`catEnum`|Атрибут может применяться к перечислению.|  
+|`catConstructor`|Атрибут может применяться к конструктору.|  
+|`catMethod`|Атрибут может применяться к методу.|  
+|`catProperty`|Атрибут может применяться к свойству.|  
+|`catField`|Атрибут может применяться к полю.|  
+|`catEvent`|Атрибут может применяться к событию.|  
+|`catInterface`|Атрибут может применяться к интерфейсу.|  
+|`catParameter`|Атрибут может применяться к параметру.|  
+|`catDelegate`|Атрибут может применяться к делегату.|  
+|`catGenericParameter`|Атрибут может применяться к универсальному параметру.|  
+|`catAll`|Атрибут может применяться к любому элементу Application.|  
+|`catClassMembers`|Атрибут может применяться к члену класса.|  
   
-## <a name="remarks"></a>Заметки  
- The `CorAttributeTargets` enumeration values can be combined with a bitwise OR operation to get the preferred combination.  
+## <a name="remarks"></a>Примечания  
+ Значения перечисления `CorAttributeTargets` можно сочетать с битовой операцией OR для получения предпочтительного сочетания.  
   
- The `CorAttributeTargets` parallels the managed <xref:System.AttributeTargets?displayProperty=nameWithType> enumeration.  
+ `CorAttributeTargets` параллельно перечисление управляемых <xref:System.AttributeTargets?displayProperty=nameWithType>.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorHdr.h  
+ **Заголовок:** Корхдр. h  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

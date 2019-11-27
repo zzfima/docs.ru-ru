@@ -19,7 +19,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353763"
 ---
 # <a name="option-strict-statement"></a>Option Strict Statement
-Restricts implicit data type conversions to only widening conversions, disallows late binding, and disallows implicit typing that results in an `Object` type.  
+Ограничивают неявные преобразования типов данных только расширяющими преобразованиями, запрещает позднее связывание и запрещает неявную типизацию, которая приводит к типу `Object`.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -31,11 +31,11 @@ Option Strict { On | Off }
   
 |Термин|Определение|  
 |---|---|  
-|`On`|Необязательный. Enables `Option Strict` checking.|  
-|`Off`|Необязательный. Disables `Option Strict` checking.|  
+|`On`|Необязательный элемент. Включает проверку `Option Strict`.|  
+|`Off`|Необязательный элемент. Отключает проверку `Option Strict`.|  
   
-## <a name="remarks"></a>Заметки  
- When `Option Strict On` or `Option Strict` appears in a file, the following conditions cause a compile-time error:  
+## <a name="remarks"></a>Примечания  
+ При появлении `Option Strict On` или `Option Strict` в файле следующие условия приводят к ошибке времени компиляции:  
   
 - неявные сужающие преобразования;  
   
@@ -44,77 +44,77 @@ Option Strict { On | Off }
 - неявная типизация, которая приводит к типу `Object`.  
   
 > [!NOTE]
-> In the warning configurations that you can set on the [Compile Page, Project Designer (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic), there are three settings that correspond to the three conditions that cause a compile-time error. For information about how to use these settings, see [To set warning configurations in the IDE](../../../visual-basic/language-reference/statements/option-strict-statement.md#conditions) later in this topic.  
+> В конфигурациях предупреждений, которые можно установить на [странице Компиляция, конструктор проектов (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic), существует три параметра, которые соответствуют трем условиям, вызывающим ошибку во время компиляции. Сведения об использовании этих параметров см. в разделе [Настройка конфигураций предупреждений в интегрированной среде разработки](../../../visual-basic/language-reference/statements/option-strict-statement.md#conditions) далее в этой статье.  
   
- The `Option Strict Off` statement turns off error and warning checking for all three conditions, even if the associated IDE settings specify to turn on these errors or warnings. The `Option Strict On` statement turns on error and warning checking for all three conditions, even if the associated IDE settings specify to turn off these errors or warnings.  
+ Инструкция `Option Strict Off` отключает проверку ошибок и предупреждений для всех трех условий, даже если связанные параметры интегрированной среды разработки указывают на включение этих ошибок или предупреждений. Инструкция `Option Strict On` включает проверку ошибок и предупреждений для всех трех условий, даже если связанные параметры интегрированной среды разработки указывают на отключение этих ошибок или предупреждений.  
   
- If used, the `Option Strict` statement must appear before any other code statements in a file.  
+ При использовании оператор `Option Strict` должен находиться перед любыми другими инструкциями кода в файле.  
   
- When you set `Option Strict` to `On`, Visual Basic checks that data types are specified for all programming elements. Data types can be specified explicitly, or specified by using local type inference. Specifying data types for all your programming elements is recommended, for the following reasons:  
+ Если для `Option Strict` задано значение `On`, Visual Basic проверяет, указаны ли типы данных для всех элементов программирования. Типы данных могут быть заданы явно или заданы с помощью определения локального типа. Указание типов данных для всех элементов программирования рекомендуется по следующим причинам.  
   
-- It enables IntelliSense support for your variables and parameters. This enables you to see their properties and other members as you type code.  
+- Он обеспечивает поддержку IntelliSense для переменных и параметров. Это позволяет видеть их свойства и другие члены при вводе кода.  
   
-- It enables the compiler to perform type checking. Type checking helps you find statements that can fail at run time because of type conversion errors. It also identifies calls to methods on objects that do not support those methods.  
+- Он позволяет компилятору выполнять проверку типов. Проверка типов помогает найти инструкции, которые могут завершиться ошибкой во время выполнения из-за ошибок преобразования типов. Он также определяет вызовы методов для объектов, которые не поддерживают эти методы.  
   
-- It speeds up the execution of code. One reason for this is that if you do not specify a data type for a programming element, the Visual Basic compiler assigns it the `Object` type. Compiled code might have to convert back and forth between `Object` and other data types, which reduces performance.  
+- Это ускоряет выполнение кода. Одна из причин этого заключается в том, что если не указать тип данных для программного элемента, компилятор Visual Basic присваивает ему тип `Object`. Скомпилированному коду может потребоваться выполнить преобразование между `Object` и другими типами данных, что снижает производительность.  
   
-## <a name="implicit-narrowing-conversion-errors"></a>Implicit Narrowing Conversion Errors  
+## <a name="implicit-narrowing-conversion-errors"></a>Неявные узкие ошибки преобразования  
  Ошибки неявных сужающих преобразований возникают при наличии неявного преобразования типа данных, которое является сужающим преобразованием.  
   
- Visual Basic can convert many data types to other data types. Data loss can occur when the value of one data type is converted to a data type that has less precision or a smaller capacity. A run-time error occurs if such a narrowing conversion fails. `Option Strict` ensures compile-time notification of these narrowing conversions so that you can avoid them. For more information, see [Implicit and Explicit Conversions](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md) and [Widening and Narrowing Conversions](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).  
+ Visual Basic может преобразовывать многие типы данных в другие типы данных. Потери данных могут происходить, когда значение одного типа данных преобразуется в тип данных с меньшей точностью или меньшей емкостью. Ошибка времени выполнения возникает в случае сбоя такого преобразования с сужением. `Option Strict` обеспечивает уведомление во время компиляции об этих сужающих преобразованиях, чтобы их можно было избежать. Дополнительные сведения см. в разделе [явные и неявные преобразования](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md) , а [расширяющие и сужающие преобразования](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).  
   
- Conversions that can cause errors include implicit conversions that occur in expressions. Дополнительные сведения см. в следующих разделах:  
+ Преобразования, которые могут вызвать ошибки, включают неявные преобразования, происходящие в выражениях. Дополнительные сведения см. в следующих разделах:  
   
 - [Оператор +](../../../visual-basic/language-reference/operators/addition-operator.md)  
   
 - [Оператор +=](../../../visual-basic/language-reference/operators/addition-assignment-operator.md)  
   
-- [\ Operator (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md)  
+- [Оператор \ (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md)  
   
-- [/= Operator (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)  
+- [Оператор/= (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)  
   
 - [Тип данных Char](../../../visual-basic/language-reference/data-types/char-data-type.md)  
   
- When you concatenate strings by using the [& Operator](../../../visual-basic/language-reference/operators/concatenation-operator.md), all conversions to the strings are considered to be widening. So these conversions do not generate an implicit narrowing conversion error, even if `Option Strict` is on.  
+ При сцеплении строк с помощью [оператора &](../../../visual-basic/language-reference/operators/concatenation-operator.md)все преобразования в строки считаются расширяющими. Поэтому эти преобразования не создают неявные сужающие ошибки преобразования, даже если `Option Strict` имеет значение ON.  
   
- When you call a method that has an argument that has a data type different from the corresponding parameter, a narrowing conversion causes a compile-time error if `Option Strict` is on. You can avoid the compile-time error by using a widening conversion or an explicit conversion.  
+ При вызове метода с аргументом, который имеет тип данных, отличный от соответствующего параметра, понижающие преобразования вызывают ошибку времени компиляции, если `Option Strict` имеет значение ON. Ошибку времени компиляции можно избежать, используя расширяющее преобразование или явное преобразование.  
   
- Implicit narrowing conversion errors are suppressed at compile-time for conversions from the elements in a `For Each…Next` collection to the loop control variable. This occurs even if `Option Strict` is on. For more information, see the "Narrowing Conversions" section in [For Each...Next Statement](../../../visual-basic/language-reference/statements/for-each-next-statement.md).  
+ Неявные сужающие ошибки преобразования подавляются во время компиляции для преобразования из элементов коллекции `For Each…Next` в переменную управления циклом. Это происходит, даже если `Option Strict` включен. Дополнительные сведения см. в подразделе «сужающие преобразования» раздела [For Each... Следующий оператор](../../../visual-basic/language-reference/statements/for-each-next-statement.md).  
   
-## <a name="late-binding-errors"></a>Late Binding Errors  
- Позднее связывание объекта возникает при его присваивании свойству или методу переменной, объявленной с типом `Object`. For more information, see [Early and Late Binding](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md).  
+## <a name="late-binding-errors"></a>Ошибки позднего связывания  
+ Позднее связывание объекта возникает при его присваивании свойству или методу переменной, объявленной с типом `Object`. Дополнительные сведения см. в разделе [раннее и позднее связывание](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md).  
   
-## <a name="implicit-object-type-errors"></a>Implicit Object Type Errors  
- Ошибки неявных типов объектов возникают, когда для объявленной переменной невозможно вывести соответствующий тип, поэтому выводится тип `Object`. Это происходит в основном при использовании оператора `Dim` для объявления переменной без использования предложения `As`, если параметр `Option Infer` отключен. For more information, see [Option Infer Statement](../../../visual-basic/language-reference/statements/option-infer-statement.md) and the [Visual Basic Language Specification](../../../visual-basic/reference/language-specification/index.md).  
+## <a name="implicit-object-type-errors"></a>Ошибки неявного типа объекта  
+ Ошибки неявных типов объектов возникают, когда для объявленной переменной невозможно вывести соответствующий тип, поэтому выводится тип `Object`. Это происходит в основном при использовании оператора `Dim` для объявления переменной без использования предложения `As`, если параметр `Option Infer` отключен. Дополнительные сведения см. в разделе [Option Infer](../../../visual-basic/language-reference/statements/option-infer-statement.md) и [Спецификация языка Visual Basic](../../../visual-basic/reference/language-specification/index.md).  
   
- For method parameters, the `As` clause is optional if `Option Strict` is off. However, if any one parameter uses an `As` clause, they all must use it. If `Option Strict` is on, the `As` clause is required for every parameter definition.  
+ Для параметров метода предложение `As` является необязательным, если `Option Strict` имеет значение OFF. Однако если какой либо параметр использует предложение `As`, все они должны использовать его. Если `Option Strict` имеет значение ON, для каждого определения параметра требуется предложение `As`.  
   
- If you declare a variable without using an `As` clause and set it to `Nothing`, the variable has a type of `Object`. No compile-time error occurs in this case when `Option Strict` is on and `Option Infer` is on. An example of this is `Dim something = Nothing`.  
+ Если переменная объявляется без использования предложения `As` и для нее задано значение `Nothing`, переменная имеет тип `Object`. В этом случае ошибка времени компиляции не возникает, если `Option Strict` включен и `Option Infer` находится в on. Примером этого является `Dim something = Nothing`.  
   
 ### <a name="default-data-types-and-values"></a>Типы данных и значения по умолчанию  
- The following table describes the results of various combinations of specifying the data type and initializer in a [Dim Statement](../../../visual-basic/language-reference/statements/dim-statement.md).  
+ В следующей таблице описаны результаты различных сочетаний с указанием типа данных и инициализатора в [операторе Dim](../../../visual-basic/language-reference/statements/dim-statement.md).  
   
 |Указан тип данных?|Указан инициализатор?|Пример|Результат|  
 |---|---|---|---|  
 |Нет|Нет|`Dim qty`|Если `Option Strict` отключен (по умолчанию), для переменной устанавливается значение `Nothing`.<br /><br /> Если параметр `Option Strict` включен, возникает ошибка времени при компиляции.|  
-|Нет|Да|`Dim qty = 5`|Если параметр `Option Infer` включен (по умолчанию), переменная получает тип данных инициализатора. See [Local Type Inference](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).<br /><br /> Если параметры `Option Infer` и `Option Strict` отключены, переменная получает тип данных `Object`.<br /><br /> Если параметр `Option Infer` отключен, а параметр `Option Strict` включен, возникает ошибка времени компиляции.|  
-|Да|Нет|`Dim qty As Integer`|Переменная инициализируется со значением по умолчанию для типа данных. For more information, see [Dim Statement](../../../visual-basic/language-reference/statements/dim-statement.md).|  
+|Нет|Да|`Dim qty = 5`|Если параметр `Option Infer` включен (по умолчанию), переменная получает тип данных инициализатора. См. раздел [определение локального типа](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).<br /><br /> Если параметры `Option Infer` и `Option Strict` отключены, переменная получает тип данных `Object`.<br /><br /> Если параметр `Option Infer` отключен, а параметр `Option Strict` включен, возникает ошибка времени компиляции.|  
+|Да|Нет|`Dim qty As Integer`|Переменная инициализируется со значением по умолчанию для типа данных. Дополнительные сведения см. в разделе [оператор Dim](../../../visual-basic/language-reference/statements/dim-statement.md).|  
 |Да|Да|`Dim qty  As Integer = 5`|Если тип данных инициализатора нельзя преобразовать в указанный тип данных, возникает ошибка времени компиляции.|  
   
-## <a name="when-an-option-strict-statement-is-not-present"></a>When an Option Strict Statement Is Not Present  
- If the source code does not contain an `Option Strict` statement, the **Option strict** setting on the [Compile Page, Project Designer (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) is used. The **Compile Page** has settings that provide additional control over the conditions that generate an error.  
+## <a name="when-an-option-strict-statement-is-not-present"></a>Если отсутствует оператор Option Case  
+ Если исходный код не содержит инструкцию `Option Strict`, то используется **параметр Option ограничивал** на [странице Компиляция, конструктор проектов (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) . На **странице Компиляция** имеются параметры, обеспечивающие дополнительный контроль над условиями, которые вызывают ошибку.  
   
- If you are using the command-line compiler, you can use the [-optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md) compiler option to specify a setting for `Option Strict`.  
+ При использовании компилятора командной строки можно использовать параметр компилятора [-оптионстрикт](../../../visual-basic/reference/command-line-compiler/optionstrict.md) , чтобы указать параметр для `Option Strict`.  
   
-### <a name="to-set-option-strict-in-the-ide"></a>To set Option Strict in the IDE  
+### <a name="to-set-option-strict-in-the-ide"></a>Установка Option в интегрированной среде разработки  
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
 1. Выберите проект в **обозревателе решений**. В меню **Проект** выберите пункт **Свойства**.  
   
-2. On the **Compile** tab, set the value in the **Option Strict** box.  
+2. На вкладке **Компиляция** задайте значение в поле **optioned (параметр)** .  
   
-### <a name="conditions"></a> To set warning configurations in the IDE  
- When you use the [Compile Page, Project Designer (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) instead of an `Option Strict` statement, you have additional control over the conditions that generate errors. The **Warning configurations** section of the **Compile Page** has settings that correspond to the three conditions that cause a compile-time error when `Option Strict` is on. Ниже приведены эти параметры.  
+### <a name="conditions"></a>Установка конфигураций предупреждений в интегрированной среде разработки  
+ При использовании [страницы компиляции конструктор проектов (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) , а не инструкция `Option Strict`, имеет дополнительный контроль над условиями, которые создают ошибки. Раздел **конфигурации предупреждений** на **странице Компиляция** имеет параметры, соответствующие трем условиям, вызывающим ошибку во время компиляции, когда `Option Strict` находится в состоянии on. Ниже приведены эти параметры.  
   
 - **Неявное преобразование**  
   
@@ -124,28 +124,28 @@ Option Strict { On | Off }
   
  При задании для параметра **Option Strict** значения **Вкл** для всех трех параметров конфигурации предупреждений задается значение **Ошибка**. При задании для параметра **Option Strict** значения **Выкл** для всех трех параметров задается значение **Нет**.  
   
- Вы можете задать для каждого отдельного параметра конфигурации предупреждений значение **Нет**, **Предупреждение** или **Ошибка**. Если всем трем параметрам конфигурации предупреждений присвоено значение **Ошибка**, в поле `Option strict` указывается значение `On`. Если всем трем параметрам присвоено значение **Нет**, в этом поле указывается значение `Off`. Для любого другого сочетания этих параметров указывается значение **(пользовательский)** .  
+ Вы можете задать для каждого отдельного параметра конфигурации предупреждений значение **Нет**, **Предупреждение** или **Ошибка**. Если всем трем параметрам конфигурации предупреждений присвоено значение **Ошибка**, в поле `On` указывается значение `Option strict`. Если всем трем параметрам присвоено значение **Нет**, в этом поле указывается значение `Off`. Для любого другого сочетания этих параметров указывается значение **(пользовательский)** .  
   
-### <a name="to-set-the-option-strict-default-setting-for-new-projects"></a>To set the Option Strict default setting for new projects  
- When you create a project, the **Option Strict** setting on the **Compile** tab is set to the **Option Strict** setting in the **Options** dialog box.  
+### <a name="to-set-the-option-strict-default-setting-for-new-projects"></a>Задание параметра установки по умолчанию для новых проектов  
+ При создании проекта на вкладке **Компиляция** в параметре **Option** -Setting задано значение, установленное **в параметре** в диалоговом окне **Параметры** .  
   
- To set `Option Strict` in this dialog box, on the **Tools** menu, click **Options**. В диалоговом окне **Параметры** разверните узел **Проекты и решения** и выберите пункт **Параметры Visual Basic по умолчанию**. The initial default setting in **VB Defaults** is `Off`.  
+ Чтобы задать `Option Strict` в этом диалоговом окне, в меню **Сервис** выберите пункт **Параметры**. В диалоговом окне **Параметры** разверните узел **Проекты и решения** и выберите пункт **Параметры Visual Basic по умолчанию**. Начальным параметром по умолчанию в **VB по умолчанию** является `Off`.  
   
-### <a name="to-set-option-strict-on-the-command-line"></a>To set Option Strict on the command line  
- Include the [-optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md) compiler option in the **vbc** command.  
+### <a name="to-set-option-strict-on-the-command-line"></a>Установка параметра Option в командной строке  
+ Включите параметр компилятора [-оптионстрикт](../../../visual-basic/reference/command-line-compiler/optionstrict.md) в команду **vbc** .  
   
 ## <a name="example"></a>Пример  
- The following examples demonstrate compile-time errors caused by implicit type conversions that are narrowing conversions. This category of errors corresponds to the **Implicit conversion** condition on the **Compile Page**.  
+ В следующих примерах показаны ошибки времени компиляции, вызванные неявными преобразованиями типов, которые являются сужающими преобразованиями. Эта категория ошибок соответствует условию **неявного преобразования** на **странице Компиляция**.  
   
  [!code-vb[VbVbalrStatements#161](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class13.vb#161)]  
   
 ## <a name="example"></a>Пример  
- The following example demonstrates a compile-time error caused by late binding. This category of errors corresponds to the **Late binding; call could fail at run time** condition on the **Compile Page**.  
+ В следующем примере показана ошибка времени компиляции, вызванная поздним связыванием. Эта категория ошибок соответствует **поздней привязке; вызов может завершиться сбоем во время выполнения** на **странице компиляции**.  
   
  [!code-vb[VbVbalrStatements#162](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class13.vb#162)]  
   
 ## <a name="example"></a>Пример  
- The following examples demonstrate errors caused by variables that are declared with an implicit type of `Object`. This category of errors corresponds to the **Implicit type; object assumed** condition on the **Compile Page**.  
+ В следующих примерах демонстрируются ошибки, вызванные переменными, объявленными с неявным типом `Object`. Эта категория ошибок соответствует **неявному типу; предполагаемое условие объекта** на **странице компиляции**.  
   
  [!code-vb[VbVbalrStatements#163](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class13.vb#163)]  
   
@@ -157,7 +157,7 @@ Option Strict { On | Off }
 - [Явные и неявные преобразования](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)
 - [Страница "Компиляция" в конструкторе проектов (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)
 - [Оператор Option Explicit](../../../visual-basic/language-reference/statements/option-explicit-statement.md)
-- [Функции преобразования типов](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [Type Conversion Functions](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
 - [Практическое руководство. Доступ к членам объекта](../../../visual-basic/programming-guide/language-features/variables/how-to-access-members-of-an-object.md)
 - [Встроенные выражения в XML](../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)
 - [Неявное преобразование делегата](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)

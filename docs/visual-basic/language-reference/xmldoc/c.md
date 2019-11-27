@@ -12,8 +12,8 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348515"
 ---
-# <a name="c-visual-basic"></a>\<c> (Visual Basic)
-Indicates that text within a description is code.  
+# <a name="c-visual-basic"></a>> \<c (Visual Basic)
+Указывает, что текст в описании является кодом.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -27,13 +27,13 @@ Indicates that text within a description is code.
 |---|---|  
 |`text`|Текст, который нужно указать в качестве кода.|  
   
-## <a name="remarks"></a>Заметки  
- The `<c>` tag gives you a way to indicate that text within a description should be marked as code. Чтобы определить несколько строк в качестве кода, используйте тег [\<code>](../../../visual-basic/language-reference/xmldoc/code.md).  
+## <a name="remarks"></a>Примечания  
+ Тег `<c>` позволяет указать, что текст в описании должен быть помечен как код. Чтобы определить несколько строк в качестве кода, используйте тег [\<code>](../../../visual-basic/language-reference/xmldoc/code.md).  
   
  Чтобы обработать комментарии документации и сохранить их в файл, выполняйте сборку с параметром [-doc](../../../visual-basic/reference/command-line-compiler/doc.md).  
   
 ## <a name="example"></a>Пример  
- This example uses the `<c>` tag in the summary section to indicate that `Counter` is code.  
+ В этом примере используется тег `<c>` в разделе сводки, чтобы указать, что `Counter` является кодом.  
   
  [!code-vb[VbVbcnXmlDocComments#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#1)]  
   

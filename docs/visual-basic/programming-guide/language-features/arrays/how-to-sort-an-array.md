@@ -1,5 +1,5 @@
 ---
-title: 'How to: Sort An Array'
+title: Как сортировать массив
 ms.date: 07/20/2015
 f1_keywords:
 - Array.Sort
@@ -14,13 +14,13 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351855"
 ---
-# <a name="how-to-sort-an-array-in-visual-basic"></a>How to: sort an array in Visual Basic
+# <a name="how-to-sort-an-array-in-visual-basic"></a>Как сортировать массив в Visual Basic
 
-This article shows an example of how to sort an array of strings in Visual Basic.
+В этой статье показан пример сортировки массива строк в Visual Basic.
 
 ## <a name="example"></a>Пример
 
-This example declares an array of `String` objects named `zooAnimals`, populates it, and then sorts it alphabetically:
+В этом примере объявляется массив объектов `String` с именем `zooAnimals`, заполняется, а затем сортируется по алфавиту:
   
 ```vb
 Private Sub SortAnimals()
@@ -36,9 +36,9 @@ End Sub
 
 При следующих условиях возможно возникновение исключения:
 
-- Array is empty (<xref:System.ArgumentNullException> class).
-- Array is multidimensional (<xref:System.RankException> class).
-- One or more elements of the array don't implement the <xref:System.IComparable> interface (<xref:System.InvalidOperationException> class).
+- Массив пуст (<xref:System.ArgumentNullException> класс).
+- Массив является многомерным (<xref:System.RankException> классом).
+- Один или несколько элементов массива не реализуют интерфейс <xref:System.IComparable> (класс<xref:System.InvalidOperationException>).
 
 ## <a name="see-also"></a>См. также
 

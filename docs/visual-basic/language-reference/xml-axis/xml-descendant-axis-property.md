@@ -19,7 +19,7 @@ ms.locfileid: "74349451"
 ---
 # <a name="xml-descendant-axis-property-visual-basic"></a>Свойство дочерней оси XML (Visual Basic)
 
-Provides access to the descendants of the following: an <xref:System.Xml.Linq.XElement> object, an <xref:System.Xml.Linq.XDocument> object, a collection of <xref:System.Xml.Linq.XElement> objects, or a collection of <xref:System.Xml.Linq.XDocument> objects.
+Предоставляет доступ к потомкам следующего: объекта <xref:System.Xml.Linq.XElement>, <xref:System.Xml.Linq.XDocument> объекта, коллекции <xref:System.Xml.Linq.XElement> объектов или коллекции объектов <xref:System.Xml.Linq.XDocument>.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -31,34 +31,34 @@ object...<descendant>
 
 `object` Обязательный. Объект <xref:System.Xml.Linq.XElement>, объект <xref:System.Xml.Linq.XDocument>, коллекция объектов <xref:System.Xml.Linq.XElement> или коллекция объектов <xref:System.Xml.Linq.XDocument>.
 
-`...<` Обязательный. Denotes the start of a descendant axis property.
+`...<` Обязательный. Обозначает начало свойства дочерней оси.
 
-`descendant` Обязательный. Name of the descendant nodes to access, of the form [`prefix:]name`.
+`descendant` Обязательный. Имя дочернего узла, к которому осуществляется доступ, в форме [`prefix:]name`.
 
 |Отделение|Описание|
 |----------|-----------------|
-|`prefix`|Необязательный. XML namespace prefix for the descendant node. Must be a global XML namespace that is defined by using an `Imports` statement.|
-|`name`|Обязательный. Local name of the descendant node. See [Names of Declared XML Elements and Attributes](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).|
+|`prefix`|Необязательный элемент. Префикс пространства имен XML для узла-потомка. Должно быть глобальным пространством имен XML, которое определяется с помощью инструкции `Imports`.|
+|`name`|Обязательно. Локальное имя дочернего узла. См. [Имена объявленных XML-элементов и атрибутов](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).|
 
-`>` Обязательный. Denotes the end of a descendant axis property.
+`>` Обязательный. Обозначает конец свойства дочерней оси.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
 Коллекция объектов <xref:System.Xml.Linq.XElement>.
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Примечания
 
-You can use an XML descendant axis property to access descendant nodes by name from an <xref:System.Xml.Linq.XElement> or <xref:System.Xml.Linq.XDocument> object, or from a collection of <xref:System.Xml.Linq.XElement> or <xref:System.Xml.Linq.XDocument> objects. Use the XML `Value` property to access the value of the first descendant node in the returned collection. For more information, see [XML Value Property](../../../visual-basic/language-reference/xml-axis/xml-value-property.md).
+Свойство дочерней оси XML можно использовать для доступа к узлам-потомкам по имени из <xref:System.Xml.Linq.XElement> или <xref:System.Xml.Linq.XDocument> объекта или из коллекции объектов <xref:System.Xml.Linq.XElement> или <xref:System.Xml.Linq.XDocument>. Используйте свойство XML `Value` для доступа к значению первого дочернего узла в возвращаемой коллекции. Дополнительные сведения см. в разделе [свойство значения XML](../../../visual-basic/language-reference/xml-axis/xml-value-property.md).
 
-The Visual Basic compiler converts descendant axis properties into calls to the <xref:System.Xml.Linq.XContainer.Descendants%2A> method.
+Компилятор Visual Basic преобразует свойства оси потомков в вызовы метода <xref:System.Xml.Linq.XContainer.Descendants%2A>.
 
 ## <a name="xml-namespaces"></a>Пространства имен XML
 
-The name in a descendant axis property can use only XML namespaces declared globally with the `Imports` statement. It cannot use XML namespaces declared locally within XML element literals. For more information, see [Imports Statement (XML Namespace)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md).
+Имя в свойстве дочерней оси может использовать только пространства имен XML, объявленные глобально с помощью инструкции `Imports`. Нельзя использовать пространства имен XML, объявленные локально в литералах XML-элементов. Дополнительные сведения см. в разделе [оператор Imports (пространство имен XML)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md).
 
 ## <a name="example"></a>Пример
 
-The following example shows how to access the value of the first descendant node named `name` and the values of all descendant nodes named `phone` from the `contacts` object.
+В следующем примере показано, как получить доступ к значению первого узла-потомка с именем `name` и значения всех узлов-потомков с именем `phone` из объекта `contacts`.
 
 [!code-vb[VbXMLSamples#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples11.vb#25)]
 
@@ -70,7 +70,7 @@ The following example shows how to access the value of the first descendant node
 
 ## <a name="example"></a>Пример
 
-В следующем примере `ns` объявляется как префикс пространства имен XML. It then uses the prefix of the namespace to create an XML literal and access the value of the first child node with the qualified name `ns:name`.
+В следующем примере `ns` объявляется как префикс пространства имен XML. Затем он использует префикс пространства имен для создания XML-литерала и доступа к значению первого дочернего узла с полным именем `ns:name`.
 
 [!code-vb[VbXMLSamples#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples12.vb#26)]
 

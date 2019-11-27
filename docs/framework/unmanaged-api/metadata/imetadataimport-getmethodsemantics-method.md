@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74437446"
 ---
 # <a name="imetadataimportgetmethodsemantics-method"></a>Метод IMetaDataImport::GetMethodSemantics
-Gets flags indicating the relationship between the method referenced by the specified MethodDef token and the paired property and event referenced by the specified EventProp token.  
+Получает флаги, указывающие связь между методом, на который ссылается указанный токен MethodDef, и связанным свойством и событием, на которые ссылается указанный токен Евентпроп.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,23 +37,23 @@ HRESULT GetMethodSemantics (
   
 ## <a name="parameters"></a>Параметры  
  `mb`  
- [in] A MethodDef token representing the method to get the semantic role information for.  
+ окне Токен MethodDef, представляющий метод, для которого необходимо получить сведения о семантической роли.  
   
  `tkEventProp`  
- [in] A token representing the paired property and event for which to get the method's role.  
+ окне Токен, представляющий парное свойство и событие, для которого необходимо получить роль метода.  
   
  `pdwSemanticsFlags`  
- [out] A pointer to the associated semantics flags. This value is a bitmask from the [CorMethodSemanticsAttr](../../../../docs/framework/unmanaged-api/metadata/cormethodsemanticsattr-enumeration.md) enumeration.  
+ заполняет Указатель на соответствующие флаги семантики. Это значение является битовой маской из перечисления [кормесодсемантиксаттр](../../../../docs/framework/unmanaged-api/metadata/cormethodsemanticsattr-enumeration.md) .  
   
-## <a name="remarks"></a>Заметки  
- The [IMetaDataEmit::DefineProperty](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineproperty-method.md) method sets a method's semantics flags.  
+## <a name="remarks"></a>Примечания  
+ Метод [IMetaDataEmit::D ефинепроперти](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineproperty-method.md) задает флаги семантики метода.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Заголовок:** COR. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -12,8 +12,8 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352305"
 ---
-# <a name="para-visual-basic"></a>\<para> (Visual Basic)
-Specifies that the content is formatted as a paragraph.  
+# <a name="para-visual-basic"></a>\<> абзаца (Visual Basic)
+Указывает, что содержимое форматируется как абзац.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -25,13 +25,13 @@ Specifies that the content is formatted as a paragraph.
  `content`  
  Текст абзаца.  
   
-## <a name="remarks"></a>Заметки  
- The `<para>` tag is for use inside a tag, such as [\<summary>](../../../visual-basic/language-reference/xmldoc/summary.md), [\<remarks>](../../../visual-basic/language-reference/xmldoc/remarks.md), or [\<returns>](../../../visual-basic/language-reference/xmldoc/returns.md), and lets you add structure to the text.  
+## <a name="remarks"></a>Примечания  
+ Тег `<para>` предназначен для использования внутри тега, например [\<> сводки](../../../visual-basic/language-reference/xmldoc/summary.md), [\<примечания >](../../../visual-basic/language-reference/xmldoc/remarks.md)или [\<возвращает >](../../../visual-basic/language-reference/xmldoc/returns.md)и позволяет добавлять в текст структуру.  
   
  Чтобы обработать комментарии документации и сохранить их в файл, выполняйте сборку с параметром [-doc](../../../visual-basic/reference/command-line-compiler/doc.md).  
   
 ## <a name="example"></a>Пример  
- This example uses the `<para>` tag to split the remarks section for the `UpdateRecord` method into two paragraphs.  
+ В этом примере используется тег `<para>` для разбиения раздела примечаний для метода `UpdateRecord` на два абзаца.  
   
  [!code-vb[VbVbcnXmlDocComments#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#6)]  
   

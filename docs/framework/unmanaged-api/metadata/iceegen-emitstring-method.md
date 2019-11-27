@@ -23,9 +23,9 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436380"
 ---
 # <a name="iceegenemitstring-method"></a>Метод ICeeGen::EmitString
-Emits the specified string into the code base.  
+Порождает указанную строку в базу кода.  
   
- This method is obsolete and should not be used.  
+ Этот метод устарел и не должен использоваться.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,17 +38,17 @@ HRESULT EmitString (
   
 ## <a name="parameters"></a>Параметры  
  `lpString`  
- [in] The string to emit.  
+ окне Строка для выдачи.  
   
  `RVA`  
- [out] The relative virtual address of the emitted string.  
+ заполняет Относительный виртуальный адрес порожденной строки.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Заголовок:** COR. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Библиотека:** Используется в качестве ресурса в MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

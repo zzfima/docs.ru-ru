@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446103"
 ---
 # <a name="isymunmanagedvariablegetaddressfield3-method"></a>Метод ISymUnmanagedVariable::GetAddressField3
-Gets the third address field for this variable. Its meaning depends on the kind of address.  
+Возвращает третье поле адреса для этой переменной. Его значение зависит от типа адреса.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -34,13 +34,13 @@ HRESULT GetAddressField3(
   
 ## <a name="parameters"></a>Параметры  
  `pRetVal`  
- [out] A pointer to a `ULONG32` that receives the third address field.  
+ заполняет Указатель на `ULONG32`, который получает третье поле адреса.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK, если метод выполнен. в противном случае E_FAIL или другой код ошибки.  
   
 ## <a name="requirements"></a>Требования  
- **Header:** CorSym.idl, CorSym.h  
+ **Заголовок:** Корсим. idl, Корсим. h  
   
 ## <a name="see-also"></a>См. также
 

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449500"
 ---
 # <a name="imetadatatablesgetnumtables-method"></a>Метод IMetaDataTables::GetNumTables
-Gets the number of tables in the scope of the current `IMetaDataTables` instance.  
+Возвращает количество таблиц в области текущего экземпляра `IMetaDataTables`.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -35,14 +35,14 @@ HRESULT GetNumTables (
   
 ## <a name="parameters"></a>Параметры  
  `pcTables`  
- [out] A pointer to the number of tables in the current instance scope.  
+ заполняет Указатель на число таблиц в области текущего экземпляра.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Заголовок:** COR. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Библиотека:** Используется в качестве ресурса в MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

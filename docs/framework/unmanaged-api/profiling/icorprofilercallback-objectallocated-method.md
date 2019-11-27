@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445850"
 ---
 # <a name="icorprofilercallbackobjectallocated-method"></a>Метод ICorProfilerCallback::ObjectAllocated
-Notifies the profiler that memory within the heap has been allocated for an object.  
+Уведомляет профилировщик о том, что для объекта выделена память в куче.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -35,13 +35,13 @@ HRESULT ObjectAllocated(
   
 ## <a name="parameters"></a>Параметры  
  `objectId`  
- [in] The ID of the object for which memory was allocated.  
+ окне Идентификатор объекта, для которого была выделена память.  
   
  `classId`  
- [in] The ID of the class of which the object is an instance.  
+ окне Идентификатор класса, экземпляр которого является объектом.  
   
-## <a name="remarks"></a>Заметки  
- The `ObjectedAllocated` method is not called for allocations from either the stack or unmanaged memory. The `classId` parameter can refer to a class in managed code that has not been loaded yet. The profiler will receive a class load callback for that class immediately after the `ObjectAllocated` callback.  
+## <a name="remarks"></a>Примечания  
+ Метод `ObjectedAllocated` не вызывается для выделений из стека или неуправляемой памяти. Параметр `classId` может ссылаться на класс в управляемом коде, который еще не был загружен. Профилировщик получит обратный вызов загрузки класса для этого класса сразу после `ObjectAllocated` обратного вызова.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  

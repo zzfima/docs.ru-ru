@@ -18,19 +18,19 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345160"
 ---
 # <a name="error-types-visual-basic"></a>Типы ошибок (Visual Basic)
-In Visual Basic, errors fall into one of three categories: syntax errors, run-time errors, and logic errors.
+В Visual Basic ошибки относятся к одной из трех категорий: синтаксические ошибки, ошибки времени выполнения и логические ошибки.
 
 ## <a name="syntax-errors"></a>Синтаксические ошибки
- *Syntax errors* are those that appear while you write code. If you're using Visual Studio, Visual Basic checks your code as you type it in the **Code Editor** window and alerts you if you make a mistake, such as misspelling a word or using a language element improperly. If you compile from the command line, Visual Basic displays a compiler error with information about the syntax error. Syntax errors are the most common type of errors. You can fix them easily in the coding environment as soon as they occur.
+ *Синтаксические ошибки* — это те, которые появляются при написании кода. Если вы используете Visual Studio, Visual Basic проверяет код по мере его ввода в окне **редактора кода** и предупреждает об ошибке, например при неправильном написании слова или использовании элемента языка. При компиляции из командной строки Visual Basic отображает ошибку компилятора со сведениями о синтаксических ошибках. Синтаксические ошибки — наиболее распространенный тип ошибок. Вы можете легко исправить их в среде программирования, как только они появятся.
 
 > [!NOTE]
-> The `Option Explicit` statement is one means of avoiding syntax errors. It forces you to declare, in advance, all the variables to be used in the application. Therefore, when those variables are used in the code, any typographic errors are caught immediately and can be fixed.
+> Оператор `Option Explicit` является одним из способов предотвращения синтаксических ошибок. Он заставляет заранее объявить все переменные, которые будут использоваться в приложении. Таким образом, если эти переменные используются в коде, любые типографские ошибки сразу же перехватываются и могут быть исправлены.
 
-## <a name="run-time-errors"></a>Run-Time Errors
- *Run-time errors* are those that appear only after you compile and run your code. These involve code that may appear to be correct in that it has no syntax errors, but that will not execute. For example, you might correctly write a line of code to open a file. But if the file does not exist, the application cannot open the file, and it throws an exception. You can fix most run-time errors by rewriting the faulty code or by using [exception handling](../../language-reference/statements/try-catch-finally-statement.md), and then recompiling and rerunning it.
+## <a name="run-time-errors"></a>Ошибки во время выполнения
+ *Ошибки времени выполнения* — это те, которые отображаются только после компиляции и выполнения кода. В их число входит код, который может показаться правильным в том, что он не содержит синтаксических ошибок, но не будет выполняться. Например, вы можете правильно написать строку кода, чтобы открыть файл. Но если файл не существует, приложение не сможет открыть файл и выдаст исключение. Большинство ошибок во время выполнения можно устранить путем перезаписи неисправного кода или с помощью [обработки исключений](../../language-reference/statements/try-catch-finally-statement.md), а затем перекомпиляции и повторного запуска.
   
-## <a name="logic-errors"></a>Logic Errors
- *Logic errors* are those that appear once the application is in use. They are most often faulty assumptions made by the developer, or unwanted or unexpected results in response to user actions. For example, a mistyped key might provide incorrect information to a method, or you may assume that a valid value is always supplied to a method when that is not the case. Although logic errors can be handled by using [exception handling](../../language-reference/statements/try-catch-finally-statement.md) (for example, by testing whether an argument is `Nothing` and throwing an <xref:System.ArgumentNullException>), most commonly they should be addressed by correcting the error in logic and recompiling the application.
+## <a name="logic-errors"></a>Логические ошибки
+ *Логические ошибки* — это те, которые появляются после использования приложения. Чаще всего они ошибочно допущены разработчиком, или нежелательные или непредвиденные результаты в ответ на действия пользователя. Например, неверно типизированный ключ может предоставить методу неверную информацию или предположить, что в случае, если это не так, может быть предоставлено допустимое значение для метода. Несмотря на то, что логические ошибки могут обрабатываться с помощью [обработки исключений](../../language-reference/statements/try-catch-finally-statement.md) (например, путем проверки того, является ли аргумент `Nothing` и вызывается <xref:System.ArgumentNullException>), чаще всего они должны быть устранены путем исправления ошибки в логике и повторной компиляции приложения.
 
 ## <a name="see-also"></a>См. также
 

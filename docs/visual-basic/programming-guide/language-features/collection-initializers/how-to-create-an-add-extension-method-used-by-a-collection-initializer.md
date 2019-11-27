@@ -12,12 +12,12 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346711"
 ---
 # <a name="how-to-create-an-add-extension-method-used-by-a-collection-initializer-visual-basic"></a>Практическое руководство. Создание метода расширения Add, используемого инициализатором набора (Visual Basic)
-When you use a collection initializer to create a collection, the Visual Basic compiler searches for an `Add` method of the collection type for which the parameters for the `Add` method match the types of the values in the collection initializer. This `Add` method is used to populate the collection with the values from the collection initializer.  
+При использовании инициализатора коллекции для создания коллекции компилятор Visual Basic выполняет поиск метода `Add` типа коллекции, параметры которого соответствуют типам значений в инициализаторе коллекции с помощью параметров метода `Add`. Этот метод `Add` используется для заполнения коллекции значениями из инициализатора коллекции.  
   
- If no matching `Add` method exists and you cannot modify the code for the collection, you can add an extension method called `Add` that takes the parameters that are required by the collection initializer. This is typically what you need to do when you use collection initializers for generic collections.  
+ Если соответствующий метод `Add` не существует и вы не можете изменить код для коллекции, можно добавить метод расширения с именем `Add`, который принимает параметры, необходимые инициализатору коллекции. Обычно это необходимо сделать при использовании инициализаторов коллекций для универсальных коллекций.  
   
 ## <a name="example"></a>Пример  
- The following example shows how to add an extension method to the generic <xref:System.Collections.Generic.List%601> type so that a collection initializer can be used to add objects of type `Employee`. The extension method enables you to use the shortened collection initializer syntax.  
+ В следующем примере показано, как добавить метод расширения в универсальный тип <xref:System.Collections.Generic.List%601>, чтобы инициализатор коллекции можно было использовать для добавления объектов типа `Employee`. Метод расширения позволяет использовать сокращенный синтаксис инициализатора коллекции.  
   
  [!code-vb[VbVbalrCollectionInitializersHowTo1#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCollectionInitializersHowTo1/VB/Module1.vb#1)]  
   

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428019"
 ---
 # <a name="isymunmanagedwriterdefineglobalvariable-method"></a>Метод ISymUnmanagedWriter::DefineGlobalVariable
-Defines a single global variable.  
+Определяет одну глобальную переменную.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -41,34 +41,34 @@ HRESULT DefineGlobalVariable(
   
 ## <a name="parameters"></a>Параметры  
  `name`  
- [in] A pointer to a `WCHAR` that defines the global variable name.  
+ окне Указатель на `WCHAR`, который определяет имя глобальной переменной.  
   
  `attributes`  
- [in] The global variable attributes.  
+ окне Атрибуты глобальных переменных.  
   
  `cSig`  
- [in] A `ULONG32` that indicates the size, in characters, of the `signature` buffer.  
+ окне `ULONG32`, указывающий размер буфера `signature` в символах.  
   
  `signature`  
- [in] The global variable signature.  
+ окне Сигнатура глобальной переменной.  
   
  `addrKind`  
- [in] The address type.  
+ окне Тип адреса.  
   
  `addr1`  
- [in] The first address for the parameter specification.  
+ окне Первый адрес для спецификации параметра.  
   
  `addr2`  
- [in] The second address for the parameter specification.  
+ окне Второй адрес для спецификации параметра.  
   
  `addr3`  
- [in] The third address for the parameter specification.  
+ окне Третий адрес для спецификации параметра.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK, если метод выполнен. в противном случае E_FAIL или другой код ошибки.  
   
 ## <a name="requirements"></a>Требования  
- **Header:** CorSym.idl, CorSym.h  
+ **Заголовок:** Корсим. idl, Корсим. h  
   
 ## <a name="see-also"></a>См. также
 

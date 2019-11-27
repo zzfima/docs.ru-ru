@@ -12,16 +12,16 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349825"
 ---
 # <a name="errors-summary-visual-basic"></a>Сводка по ошибкам (Visual Basic)
-Visual Basic language keywords and run-time library members are organized by purpose and use.  
+Ключевые слова языка Visual Basic и элементы библиотеки времени выполнения упорядочены по целям и использованию.  
   
 |Действие|Элемент языка|  
 |------------|----------------------|  
-|Generate run-time errors.|<xref:Microsoft.VisualBasic.Collection.Clear%2A>, [Error](../../../visual-basic/language-reference/statements/error-statement.md), <xref:Microsoft.VisualBasic.ErrObject.Raise%2A>|  
-|Get exceptions.|<xref:Microsoft.VisualBasic.ErrObject.GetException%2A>|  
-|Provide error information.|<xref:Microsoft.VisualBasic.Information.Err%2A>|  
-|Trap errors during run time.|[On Error](../../../visual-basic/language-reference/statements/on-error-statement.md), [Resume](../../../visual-basic/language-reference/statements/resume-statement.md), [Try...Catch...Finally](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)|  
-|Provide line number of error.|<xref:Microsoft.VisualBasic.ErrObject.Erl%2A>|  
-|Provide system error code.|<xref:Microsoft.VisualBasic.ErrObject.LastDllError%2A>|  
+|Создает ошибки времени выполнения.|<xref:Microsoft.VisualBasic.Collection.Clear%2A>, [Ошибка](../../../visual-basic/language-reference/statements/error-statement.md), <xref:Microsoft.VisualBasic.ErrObject.Raise%2A>|  
+|Получение исключений.|<xref:Microsoft.VisualBasic.ErrObject.GetException%2A>|  
+|Предоставьте сведения об ошибке.|<xref:Microsoft.VisualBasic.Information.Err%2A>|  
+|Ошибки ловушки во время выполнения.|[В](../../../visual-basic/language-reference/statements/on-error-statement.md)случае ошибки [возобновите](../../../visual-basic/language-reference/statements/resume-statement.md), [попробуйте... Перехватить... Наконец](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)|  
+|Укажите номер строки ошибки.|<xref:Microsoft.VisualBasic.ErrObject.Erl%2A>|  
+|Укажите код системной ошибки.|<xref:Microsoft.VisualBasic.ErrObject.LastDllError%2A>|  
   
 ## <a name="see-also"></a>См. также
 

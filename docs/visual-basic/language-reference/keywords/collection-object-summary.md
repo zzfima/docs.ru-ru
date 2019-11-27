@@ -1,5 +1,5 @@
 ---
-title: Сводная информация об объекте Collection
+title: Сводка по объекту Collection
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Collection object, summary
@@ -12,15 +12,15 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349932"
 ---
 # <a name="collection-object-summary-visual-basic"></a>Сводная информация об объекте Collection (Visual Basic)
-Visual Basic language keywords and run-time library members are organized by purpose and use.  
+Ключевые слова языка Visual Basic и элементы библиотеки времени выполнения упорядочены по целям и использованию.  
   
 |Действие|Элемент языка|  
 |------------|----------------------|  
 |Создание объекта `Collection`.|<xref:Microsoft.VisualBasic.Collection>|  
-|Add an item to a collection.|<xref:Microsoft.VisualBasic.Collection.Add*>|  
-|Remove an object from a collection.|<xref:Microsoft.VisualBasic.Collection.Remove*>|  
-|Reference an item in a collection.|<xref:Microsoft.VisualBasic.Collection.Item*>|  
-|Return a reference to an <xref:System.Collections.IEnumerator> interface.|<xref:Microsoft.VisualBasic.Collection.System%23Collections%23IEnumerable%23GetEnumerator%2A>|  
+|Добавление элемента в коллекцию.|<xref:Microsoft.VisualBasic.Collection.Add*>|  
+|Удаляет объект из коллекции.|<xref:Microsoft.VisualBasic.Collection.Remove*>|  
+|Ссылка на элемент в коллекции.|<xref:Microsoft.VisualBasic.Collection.Item*>|  
+|Возврат ссылки на интерфейс <xref:System.Collections.IEnumerator>.|<xref:Microsoft.VisualBasic.Collection.System%23Collections%23IEnumerable%23GetEnumerator%2A>|  
   
 ## <a name="see-also"></a>См. также
 

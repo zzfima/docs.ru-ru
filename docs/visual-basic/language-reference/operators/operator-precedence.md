@@ -22,63 +22,63 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348281"
 ---
 # <a name="operator-precedence-in-visual-basic"></a>Порядок применения операторов в Visual Basic
-When several operations occur in an expression, each part is evaluated and resolved in a predetermined order called *operator precedence*.
+Если в выражении встречается несколько операций, каждая часть вычисляется и разрешается в заранее определенном порядке, который называется *приоритетом операторов*.
 
-## <a name="precedence-rules"></a>Precedence Rules
- When expressions contain operators from more than one category, they are evaluated according to the following rules:
+## <a name="precedence-rules"></a>Правила приоритета
+ Если выражения содержат операторы из более чем одной категории, они оцениваются в соответствии со следующими правилами.
 
-- The arithmetic and concatenation operators have the order of precedence described in the following section, and all have greater precedence than the comparison, logical, and bitwise operators.
+- Арифметические и операторы объединения имеют порядок приоритета, описанный в следующем разделе, и имеют более высокий приоритет, чем операторы сравнения, логического и побитового оператора.
 
-- All comparison operators have equal precedence, and all have greater precedence than the logical and bitwise operators, but lower precedence than the arithmetic and concatenation operators.
+- Все операторы сравнения имеют одинаковый приоритет, а все имеют более высокий приоритет, чем логические операторы and, но имеют более низкий приоритет, чем операторы арифметического и объединения.
 
-- The logical and bitwise operators have the order of precedence described in the following section, and all have lower precedence than the arithmetic, concatenation, and comparison operators.
+- Логические и побитовые операторы имеют порядок приоритета, описанный в следующем разделе, и все имеют более низкий приоритет, чем арифметические операторы, операции объединения и сравнения.
 
-- Operators with equal precedence are evaluated left to right in the order in which they appear in the expression.
+- Операторы с одинаковым приоритетом вычисляются слева направо в том порядке, в котором они отображаются в выражении.
 
-## <a name="precedence-order"></a>Precedence Order
- Operators are evaluated in the following order of precedence:
+## <a name="precedence-order"></a>Порядок очередности
+ Операторы оцениваются в следующем порядке приоритета.
 
 ### <a name="await-operator"></a>Оператор Await
- Await
+ Ожидать
 
-### <a name="arithmetic-and-concatenation-operators"></a>Arithmetic and Concatenation Operators
- Exponentiation (`^`)
+### <a name="arithmetic-and-concatenation-operators"></a>Арифметические и операторы объединения
+ Возведение в степень (`^`)
 
- Unary identity and negation (`+`, `–`)
+ Унарное удостоверение и отрицание (`+`, `–`)
 
- Multiplication and floating-point division (`*`, `/`)
+ Умножение и деление с плавающей запятой (`*`, `/`)
 
- Integer division (`\`)
+ Целочисленное деление (`\`)
 
- Modular arithmetic (`Mod`)
+ Модульная арифметика (`Mod`)
 
- Addition and subtraction (`+`, `–`)
+ Сложение и вычитание (`+`, `–`)
 
- String concatenation (`&`)
+ Объединение строк (`&`)
 
- Arithmetic bit shift (`<<`, `>>`)
+ Арифметический сдвиг битов (`<<`, `>>`)
 
 ### <a name="comparison-operators"></a>Операторы сравнения
- All comparison operators (`=`, `<>`, `<`, `<=`, `>`, `>=`, `Is`, `IsNot`, `Like`, `TypeOf`...`Is`)
+ Все операторы сравнения (`=`, `<>`, `<`, `<=`, `>`, `>=`, `Is`, `IsNot`, `Like`, `TypeOf`...`Is`)
 
 ### <a name="logical-and-bitwise-operators"></a>Логические и побитовые операторы
- Negation (`Not`)
+ Отрицание (`Not`)
 
- Conjunction (`And`, `AndAlso`)
+ Умножение (`And`, `AndAlso`)
 
- Inclusive disjunction (`Or`, `OrElse`)
+ Включающее сложение (`Or`, `OrElse`)
 
- Exclusive disjunction (`Xor`)
+ Эксклюзивное сложение (`Xor`)
 
 ### <a name="comments"></a>Комментарии
- The `=` operator is only the equality comparison operator, not the assignment operator.
+ Оператор `=` является только оператором сравнения на равенство, а не оператором присваивания.
 
- The string concatenation operator (`&`) is not an arithmetic operator, but in precedence it is grouped with the arithmetic operators.
+ Оператор объединения строк (`&`) не является арифметическим оператором, но в приоритете он сгруппирован с арифметическими операторами.
 
- The `Is` and `IsNot` operators are object reference comparison operators. They do not compare the values of two objects; they check only to determine whether two object variables refer to the same object instance.
+ Операторы `Is` и `IsNot` являются операторами сравнения ссылок на объекты. Они не сравнивают значения двух объектов; они только определяют, ссылаются ли две объектные переменные на один и тот же экземпляр объекта.
 
-## <a name="associativity"></a>Ассоциативность
- When operators of equal precedence appear together in an expression, for example multiplication and division, the compiler evaluates each operation as it encounters it from left to right. Это показано в следующем примере.
+## <a name="associativity"></a>ассоциативностью
+ Если операторы с одинаковым приоритетом отображаются вместе в выражении, например умножение и деление, компилятор вычисляет каждую операцию в том виде, в котором она встретилась слева направо. Это показано в следующем примере.
 
 ```vb
 Dim n1 As Integer = 96 / 8 / 4
@@ -86,12 +86,12 @@ Dim n2 As Integer = (96 / 8) / 4
 Dim n3 As Integer = 96 / (8 / 4)
 ```
 
- The first expression evaluates the division 96 / 8 (which results in 12) and then the division 12 / 4, which results in three. Because the compiler evaluates the operations for `n1` from left to right, the evaluation is the same when that order is explicitly indicated for `n2`. Both `n1` and `n2` have a result of three. By contrast, `n3` has a result of 48, because the parentheses force the compiler to evaluate 8 / 4 first.
+ Первое выражение вычисляет деление 96/8 (что приводит к 12), а затем деление на 12/4, что приводит к трем. Поскольку компилятор вычисляет операции для `n1` слева направо, вычисление будет таким же, когда порядок явно указывается для `n2`. И `n1`, и `n2` имеют результат 3. Напротив, `n3` имеет результат 48, поскольку круглые скобки заставляют компилятор сначала вычислить 8/4.
 
- Because of this behavior, operators are said to be *left associative* in Visual Basic.
+ Из-за такого поведения операторы говорят о том, что в Visual Basic не используется *ассоциативность* .
 
-## <a name="overriding-precedence-and-associativity"></a>Overriding Precedence and Associativity
- You can use parentheses to force some parts of an expression to be evaluated before others. This can override both the order of precedence and the left associativity. Visual Basic always performs operations that are enclosed in parentheses before those outside. However, within parentheses, it maintains ordinary precedence and associativity, unless you use parentheses within the parentheses. Это показано в следующем примере.
+## <a name="overriding-precedence-and-associativity"></a>Переопределение приоритета и ассоциативности
+ Можно использовать круглые скобки, чтобы принудительно вычислить некоторые части выражения перед другими. Это может переопределять порядок приоритета и левую ассоциативность. Visual Basic всегда выполняет операции, заключенные в круглые скобки, прежде чем они выходят за пределы. Однако в круглых скобках он поддерживает обычный приоритет и ассоциативность, если в круглых скобках не используются скобки. Это показано в следующем примере.
 
 ```vb
 Dim a, b, c, d, e, f, g As Double

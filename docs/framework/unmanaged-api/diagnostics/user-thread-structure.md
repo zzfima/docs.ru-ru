@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74437971"
 ---
 # <a name="user_thread-structure"></a>Структура USER_THREAD
-Provides information to a debugger about a thread. For more information, see the [INotifySource2::SetNotifyFilter](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-setnotifyfilter-method.md) method.  
+Предоставляет сведения отладчику о потоке. Дополнительные сведения см. в описании метода [INotifySource2:: сетнотифифилтер](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-setnotifyfilter-method.md) .  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,12 +39,12 @@ typedef struct tagUSER_THREAD
   
 |Член|Описание|  
 |------------|-----------------|  
-|`pSidBuffer`|Address of thread buffer.|  
-|`dwSidLen`|Length of thread buffer, in bytes.|  
-|`dwTid`|Thread ID.|  
+|`pSidBuffer`|Адрес буфера потока.|  
+|`dwSidLen`|Длина буфера потока в байтах.|  
+|`dwTid`|Идентификатор потока.|  
   
 ## <a name="requirements"></a>Требования  
- **Header:** ProtocolNotify2.idl  
+ **Заголовок:** ProtocolNotify2. idl  
   
 ## <a name="see-also"></a>См. также
 

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74434553"
 ---
 # <a name="icorprofilercallbackinitialize-method"></a>Метод ICorProfilerCallback::Initialize
-Called to initialize the code profiler whenever a new common language runtime (CLR) application is started.  
+Вызывается для инициализации профилировщика кода при запуске нового приложения среды CLR.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -34,10 +34,10 @@ HRESULT Initialize(
   
 ## <a name="parameters"></a>Параметры  
  `pICorProfilerInfoUnk`  
- [in](/cpp/atl/iunknown) interface that the profiler must query for an [ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md) interface pointer.  
+ [в](/cpp/atl/iunknown) интерфейсе, который профилировщик должен запрашивать для указателя интерфейса [ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md) .  
   
-## <a name="remarks"></a>Заметки  
- The `Initialize` call is the only opportunity to enable (or disable) callbacks that are immutable. Once a callback is enabled by the `Initialize` call, it cannot be disabled later using [ICorProfilerInfo::SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md). The COR_PRF_MONITOR_IMMUTABLE value of the [COR_PRF_MONITOR](../../../../docs/framework/unmanaged-api/profiling/cor-prf-monitor-enumeration.md) enumeration indicates which events are immutable.  
+## <a name="remarks"></a>Примечания  
+ Вызов `Initialize` является единственной возможностью включать (или отключать) обратные вызовы, которые являются неизменяемыми. После включения обратного вызова в `Initialize` вызове его нельзя отключить позже с помощью команды [ICorProfilerInfo:: SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md). Значение COR_PRF_MONITOR_IMMUTABLE перечисления [COR_PRF_MONITOR](../../../../docs/framework/unmanaged-api/profiling/cor-prf-monitor-enumeration.md) указывает, какие события являются неизменяемыми.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  

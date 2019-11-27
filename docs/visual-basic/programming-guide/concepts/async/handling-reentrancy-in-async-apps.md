@@ -9,7 +9,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74354270"
 ---
-# <a name="handling-reentrancy-in-async-apps-visual-basic"></a>Handling Reentrancy in Async Apps (Visual Basic)
+# <a name="handling-reentrancy-in-async-apps-visual-basic"></a>Обработка повторного входа в асинхронных приложениях (Visual Basic)
 
 При включении асинхронного кода в приложение следует учесть и по возможности избежать повторного входа, под которым подразумевается повторный ввод асинхронной операции до ее завершения. Если не определить и не обработать возможности повторного входа, это может привести к непредвиденным результатам.
 
@@ -95,7 +95,7 @@ TOTAL bytes returned:  890591
 
 ### <a name="BKMK_DisableTheStartButton"></a> Отключение кнопки запуска
 
-Можно заблокировать кнопку **Start`StartButton_Click` во время операции, отключив кнопку в верхней части обработчика событий** . Затем можно повторно включить кнопку из блока `Finally` по завершении операции, чтобы пользователь мог запустить приложение повторно.
+Можно заблокировать кнопку **Start** во время операции, отключив кнопку в верхней части обработчика событий `StartButton_Click`. Затем можно повторно включить кнопку из блока `Finally` по завершении операции, чтобы пользователь мог запустить приложение повторно.
 
 В следующем коде показаны эти изменения, которые помечены звездочками. Вы можете добавить изменения в код в конце этого раздела или скачать готовое приложение в разделе [Async Samples: Reentrancy in .NET Desktop Apps](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06). Имя проекта — DisableStartButton.
 
@@ -126,7 +126,7 @@ End Sub
 
 Вместо отключения кнопки **Start** можно оставить кнопку активной, но при этом, если пользователь нажмет эту кнопку еще раз, нужно отменить операцию, которая уже выполняется, и задать продолжение выполнения последней запущенной операции.
 
-For more information about cancellation, see [Fine-Tuning Your Async Application (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md).
+Дополнительные сведения об отмене см. [в разделе тонкая настройка асинхронного приложения (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md).
 
 Чтобы настроить этот сценарий, внесите следующие изменения в основной код, который содержится в разделе [Проверка и выполнение примера приложения](#BKMD_SettingUpTheExample). Также можно загрузить готовое приложение в разделе [Async Samples: Reentrancy in .NET Desktop Apps](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06). Этот проект называется CancelAndRestart.
 
@@ -139,7 +139,7 @@ For more information about cancellation, see [Fine-Tuning Your Async Application
         Dim cts As CancellationTokenSource
     ```
 
-2. В `StartButton_Click` определите, выполняется ли операция на данный момент. If the value of `cts` is `Nothing`, no operation is already active. If the value isn't `Nothing`, the operation that is already running is canceled.
+2. В `StartButton_Click` определите, выполняется ли операция на данный момент. Если значение `cts` равно `Nothing`, операция уже не активна. Если значение не `Nothing`, операция, которая уже выполняется, отменяется.
 
     ```vb
     ' *** If a download process is already underway, cancel it.
@@ -156,7 +156,7 @@ For more information about cancellation, see [Fine-Tuning Your Async Application
     cts = newCTS
     ```
 
-4. At the end of `StartButton_Click`, the current process is complete, so set the value of `cts` back to `Nothing`.
+4. В конце `StartButton_Click`текущий процесс завершен, поэтому установите для параметра `cts` обратно значение `Nothing`.
 
     ```vb
     ' *** When the process completes, signal that another process can proceed.
@@ -248,7 +248,7 @@ Private Async Function AccessTheWebAsync(ct As CancellationToken) As Task
 End Function
 ```
 
-If you choose the **Start** button several times while this app is running, it should produce results that resemble the following output:
+Если вы наберете кнопку **запустить** несколько раз во время выполнения этого приложения, оно должно вывести результаты, аналогичные приведенным ниже.
 
 ```console
 1. msdn.microsoft.com/library/hh191443.aspx                83732
@@ -516,7 +516,7 @@ End Function
   TOTAL bytes returned:  915908
   ```
 
-- The `pendingWork` task is `Nothing` at the start of `FinishOneGroupAsync` only for group A, which started first. Группа A еще не завершила выражение await, когда она достигает метода `FinishOneGroupAsync`. Таким образом, управление не возвращается `AccessTheWebAsync`, а первое присваивание задаче `pendingWork` не возникает.
+- Задача `pendingWork` `Nothing` в начале `FinishOneGroupAsync` только для группы A, которая была запущена первой. Группа A еще не завершила выражение await, когда она достигает метода `FinishOneGroupAsync`. Таким образом, управление не возвращается `AccessTheWebAsync`, а первое присваивание задаче `pendingWork` не возникает.
 
 - Следующие две строки всегда отображаются в выходных данных вместе. Код не прерывается нигде между запуском операции группы в обработчике `StartButton_Click` и назначением задачи для группы в `pendingWork`.
 
@@ -560,7 +560,7 @@ End Function
 
      Откроется диалоговое окно **Новый проект** .
 
-3. In the **Installed Templates** pane, expand **Visual Basic**, and then expand **Windows**.
+3. В области **Установленные шаблоны** разверните узел **Visual Basic**, а затем узел **Windows**.
 
 4. В списке типов проектов выберите **Приложение WPF**.
 
@@ -596,9 +596,9 @@ End Function
 
      Добавьте ссылку на <xref:System.Net.Http>, если она еще не выбрана.
 
-9. In **Solution Explorer**, open the shortcut menu for MainWindow.xaml.vb, and then choose **View Code**.
+9. В **Обозреватель решений**откройте контекстное меню файла MainWindow. XAML. vb и выберите пункт **Просмотреть код**.
 
-10. In MainWindow.xaml.vb , replace the code with the following code.
+10. В файле MainWindow. XAML. vb замените код следующим кодом.
 
     ```vb
     ' Add the following Imports statements, and add a reference for System.Net.Http.

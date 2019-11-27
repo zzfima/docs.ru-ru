@@ -14,65 +14,65 @@ ms.locfileid: "74348672"
 ---
 # <a name="how-to-access-members-of-an-object-visual-basic"></a>Практическое руководство. Доступ к членам объекта (Visual Basic)
 
-When you have an object variable that refers to an object, you often want to work with the members of that object, such as its methods, properties, fields, and events. For example, once you have created a new <xref:System.Windows.Forms.Form> object, you might want to set its <xref:System.Windows.Forms.Control.Text%2A> property or call its <xref:System.Windows.Forms.Control.Focus%2A> method.
+При наличии переменной объекта, ссылающейся на объект, часто требуется работать с элементами этого объекта, такими как его методы, свойства, поля и события. Например, после создания нового объекта <xref:System.Windows.Forms.Form> может потребоваться задать его свойство <xref:System.Windows.Forms.Control.Text%2A> или вызвать его метод <xref:System.Windows.Forms.Control.Focus%2A>.
 
-## <a name="accessing-members"></a>Accessing Members
+## <a name="accessing-members"></a>Доступ к членам
 
-You access an object's members through the variable that refers to it.
+Доступ к членам объекта осуществляется через переменную, ссылающуюся на него.
 
-#### <a name="to-access-members-of-an-object"></a>To access members of an object
+#### <a name="to-access-members-of-an-object"></a>Получение доступа к членам объекта
 
-- Use the member-access operator (`.`) between the object variable name and the member name.
+- Используйте оператор доступа к членам (`.`) между именем объектной переменной и именем члена.
 
     ```vb
     currentText = newForm.Text
     ```
 
-    If the member is [Shared](../../../../visual-basic/language-reference/modifiers/shared.md), you do not need a variable to access it.
+    Если член является [общим](../../../../visual-basic/language-reference/modifiers/shared.md), для доступа к нему не требуется переменная.
 
-## <a name="accessing-members-of-an-object-of-known-type"></a>Accessing Members of an Object of Known Type
+## <a name="accessing-members-of-an-object-of-known-type"></a>Доступ к членам объекта известного типа
 
-If you know the type of an object at compile time, you can use *early binding* for a variable that refers to it.
+Если тип объекта известно во время компиляции, можно использовать *раннее связывание* для переменной, ссылающейся на нее.
 
-#### <a name="to-access-members-of-an-object-for-which-you-know-the-type-at-compile-time"></a>To access members of an object for which you know the type at compile time
+#### <a name="to-access-members-of-an-object-for-which-you-know-the-type-at-compile-time"></a>Доступ к членам объекта, тип которых вы узнаете во время компиляции
 
-1. Declare the object variable to be of the type of the object you intend to assign to the variable.
+1. Объявите переменную объекта для типа объекта, который необходимо назначить переменной.
 
     ```vb
     Dim extraForm As System.Windows.Forms.Form
     ```
 
-    With `Option Strict On`, you can assign only <xref:System.Windows.Forms.Form> objects (or objects of a type derived from <xref:System.Windows.Forms.Form>) to `extraForm`. If you have defined a class or structure with a widening `CType` conversion to <xref:System.Windows.Forms.Form>, you can also assign that class or structure to `extraForm`.
+    С помощью `Option Strict On`можно назначать `extraForm`только <xref:System.Windows.Forms.Form> объектов (или объектов типа, производного от <xref:System.Windows.Forms.Form>). Если вы определили класс или структуру с расширенным преобразованием `CType` в <xref:System.Windows.Forms.Form>, можно также назначить этот класс или структуру для `extraForm`.
 
-2. Use the member-access operator (`.`) between the object variable name and the member name.
+2. Используйте оператор доступа к членам (`.`) между именем объектной переменной и именем члена.
 
     ```vb
     extraForm.Show()
     ```
 
-    You can access all of the methods and properties specific to the <xref:System.Windows.Forms.Form> class, no matter what the `Option Strict` setting is.
+    Можно получить доступ ко всем методам и свойствам, относящимся к классу <xref:System.Windows.Forms.Form>, независимо от значения параметра `Option Strict`.
 
-## <a name="accessing-members-of-an-object-of-unknown-type"></a>Accessing Members of an Object of Unknown Type
+## <a name="accessing-members-of-an-object-of-unknown-type"></a>Доступ к членам объекта неизвестного типа
 
-If you do not know the type of an object at compile time, you must use *late binding* for any variable that refers to it.
+Если тип объекта не знается во время компиляции, необходимо использовать *позднее связывание* для любой переменной, ссылающейся на нее.
 
-#### <a name="to-access-members-of-an-object-for-which-you-do-not-know-the-type-at-compile-time"></a>To access members of an object for which you do not know the type at compile time
+#### <a name="to-access-members-of-an-object-for-which-you-do-not-know-the-type-at-compile-time"></a>Доступ к членам объекта, тип которых не знается во время компиляции
 
-1. Declare the object variable to be of the [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md). (Declaring a variable as `Object` is the same as declaring it as <xref:System.Object?displayProperty=nameWithType>.)
+1. Объявите переменную объекта для [типа данных Object](../../../../visual-basic/language-reference/data-types/object-data-type.md). (Объявление переменной как `Object` аналогично объявлению ее как <xref:System.Object?displayProperty=nameWithType>.)
 
     ```vb
     Dim someControl As Object
     ```
 
-    With `Option Strict On`, you can access only the members that are defined on the <xref:System.Object> class.
+    С `Option Strict On`можно получить доступ только к тем элементам, которые определены в классе <xref:System.Object>.
 
-2. Use the member-access operator (`.`) between the object variable name and the member name.
+2. Используйте оператор доступа к членам (`.`) между именем объектной переменной и именем члена.
 
     ```vb
     someControl.GetType()
     ```
 
-    To be able to access the members of any object you assign to the object variable, you must set `Option Strict Off`. When you do this, the compiler cannot guarantee that a given member is exposed by the object you assign to the variable. If the object does not expose a member you attempt to access, a <xref:System.MemberAccessException> exception occurs.
+    Чтобы иметь возможность доступа к членам любого объекта, назначаемого переменной объекта, необходимо задать `Option Strict Off`. При этом компилятор не может гарантировать, что данный элемент предоставляется объектом, назначаемым переменной. Если объект не предоставляет член, к которому вы пытаетесь получить доступ, возникает исключение <xref:System.MemberAccessException>.
 
 ## <a name="see-also"></a>См. также
 

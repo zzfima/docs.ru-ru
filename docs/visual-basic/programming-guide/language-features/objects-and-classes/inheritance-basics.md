@@ -29,89 +29,89 @@ ms.locfileid: "74350823"
 ---
 # <a name="inheritance-basics-visual-basic"></a>Основы наследования (Visual Basic)
 
-The `Inherits` statement is used to declare a new class, called a *derived class*, based on an existing class, known as a *base class*. Derived classes inherit, and can extend, the properties, methods, events, fields, and constants defined in the base class. The following section describes some of the rules for inheritance, and the modifiers you can use to change the way classes inherit or are inherited:
+Оператор `Inherits` используется для объявления нового класса, называемого *производным классом*, на основе существующего класса, называемого *базовым классом*. Производные классы наследуют и могут расширять, свойства, методы, события, поля и константы, определенные в базовом классе. В следующем разделе описаны некоторые правила наследования, а также модификаторы, которые можно использовать для изменения способа наследования или наследования классов.
 
-- By default, all classes are inheritable unless marked with the `NotInheritable` keyword. Classes can inherit from other classes in your project or from classes in other assemblies that your project references.
+- По умолчанию все классы наследуются, если не отмечено ключевым словом `NotInheritable`. Классы могут наследовать от других классов в проекте или из классов в других сборках, на которые ссылается проект.
 
-- Unlike languages that allow multiple inheritance, Visual Basic allows only single inheritance in classes; that is, derived classes can have only one base class. Although multiple inheritance is not allowed in classes, classes can implement multiple interfaces, which can effectively accomplish the same ends.
+- В отличие от языков, допускающих множественное наследование, Visual Basic допускает только одно наследование в классах; то есть производные классы могут иметь только один базовый класс. Хотя множественное наследование не разрешено в классах, классы могут реализовывать несколько интерфейсов, что может эффективно выполнять те же самые концы.
 
-- To prevent exposing restricted items in a base class, the access type of a derived class must be equal to or more restrictive than its base class. For example, a `Public` class cannot inherit a `Friend` or a `Private` class, and a `Friend` class cannot inherit a `Private` class.
+- Чтобы предотвратить предоставление ограниченных элементов в базовом классе, тип доступа производного класса должен быть равным или более ограничивающим, чем его базовый класс. Например, класс `Public` не может наследовать `Friend` или класс `Private`, а класс `Friend` не может наследовать класс `Private`.
 
-## <a name="inheritance-modifiers"></a>Inheritance Modifiers
+## <a name="inheritance-modifiers"></a>Модификаторы наследования
 
-Visual Basic introduces the following class-level statements and modifiers to support inheritance:
+Visual Basic вводит следующие операторы и модификаторы уровня класса для поддержки наследования:
 
-- `Inherits` statement — Specifies the base class.
+- Оператор `Inherits` — указывает базовый класс.
 
-- `NotInheritable` modifier — Prevents programmers from using the class as a base class.
+- Модификатор `NotInheritable` — не позволяет программистам использовать класс в качестве базового класса.
 
-- `MustInherit` modifier — Specifies that the class is intended for use as a base class only. Instances of `MustInherit` classes cannot be created directly; they can only be created as base class instances of a derived class. (Other programming languages, such as C++ and C#, use the term *abstract class* to describe such a class.)
+- Модификатор `MustInherit` — указывает, что класс предназначен для использования только в качестве базового класса. Экземпляры классов `MustInherit` не могут быть созданы напрямую; они могут быть созданы только как экземпляры базового класса производного класса. (Другие языки программирования, такие как C++ и C#, используют термин *абстрактный класс* для описания такого класса.)
 
-## <a name="overriding-properties-and-methods-in-derived-classes"></a>Overriding Properties and Methods in Derived Classes
+## <a name="overriding-properties-and-methods-in-derived-classes"></a>Переопределение свойств и методов в производных классах
 
-By default, a derived class inherits properties and methods from its base class. If an inherited property or method has to behave differently in the derived class it can be *overridden*. That is, you can define a new implementation of the method in the derived class. Следующие модификаторы используются для управления переопределением свойств и методов.
+По умолчанию производный класс наследует свойства и методы от своего базового класса. Если унаследованное свойство или метод должны вести себя по-разному в производном классе, его можно *переопределить*. То есть можно определить новую реализацию метода в производном классе. Следующие модификаторы используются для управления переопределением свойств и методов.
 
-- `Overridable` — Allows a property or method in a class to be overridden in a derived class.
+- `Overridable` — позволяет переопределять свойство или метод в классе в производном классе.
 
-- `Overrides` — Overrides an `Overridable` property or method defined in the base class.
+- `Overrides` — переопределяет свойство `Overridable` или метод, определенный в базовом классе.
 
-- `NotOverridable` — Prevents a property or method from being overridden in an inheriting class. By default, `Public` methods are `NotOverridable`.
+- `NotOverridable` — предотвращает переопределение свойства или метода в наследующем классе. По умолчанию `Public` методы `NotOverridable`.
 
-- `MustOverride` — Requires that a derived class override the property or method. When the `MustOverride` keyword is used, the method definition consists of just the `Sub`, `Function`, or `Property` statement. No other statements are allowed, and specifically there is no `End Sub` or `End Function` statement. `MustOverride` methods must be declared in `MustInherit` classes.
+- `MustOverride` — требует, чтобы производный класс переопределял свойство или метод. При использовании ключевого слова `MustOverride` определение метода состоит только из `Sub`, `Function`или `Property` оператора. Никакие другие инструкции не допускаются, а в частности нет `End Sub` или `End Function` инструкции. `MustOverride` методы должны быть объявлены в классах `MustInherit`.
 
-Suppose you want to define classes to handle payroll. You could define a generic `Payroll` class that contains a `RunPayroll` method that calculates payroll for a typical week. You could then use `Payroll` as a base class for a more specialized `BonusPayroll` class, which could be used when distributing employee bonuses.
+Предположим, необходимо определить классы для работы с Payroll. Можно определить универсальный `Payroll` класс, содержащий метод `RunPayroll`, который вычисляет зарплату для типичной недели. Затем можно использовать `Payroll` в качестве базового класса для более специализированного `BonusPayroll` класса, который можно использовать при распределении премий сотрудников.
 
-The `BonusPayroll` class can inherit, and override, the `PayEmployee` method defined in the base `Payroll` class.
+Класс `BonusPayroll` может наследовать и переопределять метод `PayEmployee`, определенный в базовом классе `Payroll`.
 
-The following example defines a base class, `Payroll,` and a derived class, `BonusPayroll`, which overrides an inherited method, `PayEmployee`. A procedure, `RunPayroll`, creates and then passes a `Payroll` object and a `BonusPayroll` object to a function, `Pay`, that executes the `PayEmployee` method of both objects.
+В следующем примере определяется базовый класс, `Payroll,` и производный класс `BonusPayroll`, который переопределяет унаследованный метод `PayEmployee`. Процедура, `RunPayroll`, создает и передает `Payroll` объект и объект `BonusPayroll` в функцию, `Pay`, которая выполняет метод `PayEmployee` обоих объектов.
 
 [!code-vb[VbVbalrOOP#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#28)]
 
-## <a name="the-mybase-keyword"></a>The MyBase Keyword
+## <a name="the-mybase-keyword"></a>Ключевое слово MyBase
 
-The `MyBase` keyword behaves like an object variable that refers to the base class of the current instance of a class. `MyBase` is frequently used to access base class members that are overridden or shadowed in a derived class. In particular, `MyBase.New` is used to explicitly call a base class constructor from a derived class constructor.
+Ключевое слово `MyBase` ведет себя как объектная переменная, которая ссылается на базовый класс текущего экземпляра класса. `MyBase` часто используется для доступа к членам базового класса, которые переопределяются или переобъявляются в производном классе. В частности, `MyBase.New` используется для явного вызова конструктора базового класса из конструктора производного класса.
 
-For example, suppose you are designing a derived class that overrides a method inherited from the base class. The overridden method can call the method in the base class and modify the return value as shown in the following code fragment:
+Например, предположим, что вы разрабатываете производный класс, переопределяющий метод, унаследованный от базового класса. Переопределенный метод может вызвать метод в базовом классе и изменить возвращаемое значение, как показано в следующем фрагменте кода:
 
 [!code-vb[VbVbalrOOP#109](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#109)]
 
-The following list describes restrictions on using `MyBase`:
+В следующем списке описаны ограничения на использование `MyBase`.
 
-- `MyBase` refers to the immediate base class and its inherited members. It cannot be used to access `Private` members in the class.
+- `MyBase` ссылается на непосредственный базовый класс и его унаследованные члены. Его нельзя использовать для доступа к членам `Private` в классе.
 
-- `MyBase` is a keyword, not a real object. `MyBase` cannot be assigned to a variable, passed to procedures, or used in an `Is` comparison.
+- `MyBase` является ключевым словом, а не реальным объектом. `MyBase` нельзя присвоить переменной, передать ее процедурам или использовать в сравнении `Is`.
 
-- The method that `MyBase` qualifies does not have to be defined in the immediate base class; it may instead be defined in an indirectly inherited base class. In order for a reference qualified by `MyBase` to compile correctly, some base class must contain a method matching the name and types of parameters that appear in the call.
+- Метод, `MyBase`ные квалификаторы, не должен определяться в непосредственном базовом классе. Вместо этого его можно определить в косвенно наследуемом базовом классе. Чтобы обеспечить правильную компиляцию ссылки с `MyBase`, некоторые базовые классы должны содержать метод, соответствующий имени и типам параметров, которые отображаются в вызове.
 
-- You cannot use `MyBase` to call `MustOverride` base class methods.
+- Нельзя использовать `MyBase` для вызова методов `MustOverride` базового класса.
 
-- `MyBase` cannot be used to qualify itself. Therefore, the following code is not valid:
+- `MyBase` нельзя использовать для квалификации самого себя. Поэтому следующий код является недопустимым:
 
   `MyBase.MyBase.BtnOK_Click()`
 
-- `MyBase` cannot be used in modules.
+- `MyBase` нельзя использовать в модулях.
 
-- `MyBase` cannot be used to access base class members that are marked as `Friend` if the base class is in a different assembly.
+- `MyBase` нельзя использовать для доступа к членам базового класса, помеченным как `Friend`, если базовый класс находится в другой сборке.
 
-For more information and another example, see [How to: Access a Variable Hidden by a Derived Class](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-access-a-variable-hidden-by-a-derived-class.md).
+Дополнительные сведения и другой пример см. в разделе [как получить доступ к переменной, скрытой производным классом](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-access-a-variable-hidden-by-a-derived-class.md).
 
-## <a name="the-myclass-keyword"></a>The MyClass Keyword
+## <a name="the-myclass-keyword"></a>Ключевое слово MyClass
 
-The `MyClass` keyword behaves like an object variable that refers to the current instance of a class as originally implemented. `MyClass` resembles `Me`, but every method and property call on `MyClass` is treated as if the method or property were [NotOverridable](../../../../visual-basic/language-reference/modifiers/notoverridable.md). Therefore, the method or property is not affected by overriding in a derived class.
+Ключевое слово `MyClass` ведет себя как объектная переменная, которая ссылается на текущий экземпляр класса как изначально реализованный. `MyClass` напоминает `Me`, но каждый вызов метода и свойства в `MyClass` обрабатывается так, как если бы метод или свойство были [NotOverridable](../../../../visual-basic/language-reference/modifiers/notoverridable.md). Таким образом, переопределение в производном классе не влияет на метод или свойство.
 
-- `MyClass` is a keyword, not a real object. `MyClass` cannot be assigned to a variable, passed to procedures, or used in an `Is` comparison.
+- `MyClass` является ключевым словом, а не реальным объектом. `MyClass` нельзя присвоить переменной, передать ее процедурам или использовать в сравнении `Is`.
 
-- `MyClass` refers to the containing class and its inherited members.
+- `MyClass` ссылается на содержащий класс и его унаследованные члены.
 
-- `MyClass` can be used as a qualifier for `Shared` members.
+- `MyClass` можно использовать в качестве квалификатора для членов `Shared`.
 
-- `MyClass` cannot be used inside a `Shared` method, but can be used inside an instance method to access a shared member of a class.
+- `MyClass` не может использоваться в методе `Shared`, но может использоваться внутри метода экземпляра для доступа к общему члену класса.
 
-- `MyClass` cannot be used in standard modules.
+- `MyClass` нельзя использовать в стандартных модулях.
 
-- `MyClass` can be used to qualify a method that is defined in a base class and that has no implementation of the method provided in that class. Such a reference has the same meaning as `MyBase.`*Method*.
+- `MyClass` можно использовать для определения метода, который определен в базовом классе и не имеет реализации метода, предоставленного в этом классе. Такая ссылка имеет то же значение, что и *метод*`MyBase.`.
 
-The following example compares `Me` and `MyClass`.
+В следующем примере сравниваются `Me` и `MyClass`.
 
 ```vb
 Class baseClass
@@ -145,7 +145,7 @@ Class testClasses
 End Class
 ```
 
-Even though `derivedClass` overrides `testMethod`, the `MyClass` keyword in `useMyClass` nullifies the effects of overriding, and the compiler resolves the call to the base class version of `testMethod`.
+Хотя `derivedClass` переопределяет `testMethod`, ключевое слово `MyClass` в `useMyClass` сводят последствия переопределения, и компилятор разрешает вызов версии базового класса `testMethod`.
 
 ## <a name="see-also"></a>См. также
 

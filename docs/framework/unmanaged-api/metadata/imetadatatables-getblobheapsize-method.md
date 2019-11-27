@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74442043"
 ---
 # <a name="imetadatatablesgetblobheapsize-method"></a>Метод IMetaDataTables::GetBlobHeapSize
-Gets the size, in bytes, of the binary large object (BLOB) heap.  
+Возвращает размер кучи большого двоичного объекта (в байтах).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -35,14 +35,14 @@ HRESULT GetBlobHeapSize (
   
 ## <a name="parameters"></a>Параметры  
  `pcbBlobs`  
- [out] A pointer to the size, in bytes, of the BLOB heap.  
+ заполняет Указатель на размер кучи больших двоичных объектов (в байтах).  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Заголовок:** COR. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Библиотека:** Используется в качестве ресурса в MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

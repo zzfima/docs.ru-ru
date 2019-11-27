@@ -26,65 +26,65 @@ ms.locfileid: "74352587"
 ---
 # <a name="procedure-overloading-visual-basic"></a>Перегрузка процедур (Visual Basic)
 
-*Overloading* a procedure means defining it in multiple versions, using the same name but different parameter lists. The purpose of overloading is to define several closely related versions of a procedure without having to differentiate them by name. You do this by varying the parameter list.
+*Перегрузка* процедуры означает определение ее в нескольких версиях с использованием того же имени, но с разными списками параметров. Целью перегрузки является определение нескольких тесно связанных версий процедуры без необходимости отличать их по имени. Это можно сделать, изменив список параметров.
 
-## <a name="overloading-rules"></a>Overloading Rules
+## <a name="overloading-rules"></a>Перегрузка правил
 
-When you overload a procedure, the following rules apply:
+При перегрузке процедуры применяются следующие правила.
 
-- **Same Name**. Each overloaded version must use the same procedure name.
+- **То же имя**. Каждая перегруженная версия должна использовать одно и то же имя процедуры.
 
-- **Different Signature**. Each overloaded version must differ from all other overloaded versions in at least one of the following respects:
+- **Другая сигнатура**. Каждая перегруженная версия должна отличаться от всех остальных перегруженных версий хотя бы в одном из следующих соблюда:
 
-  - Number of parameters
+  - Число параметров
 
-  - Order of the parameters
+  - Порядок параметров
 
-  - Data types of the parameters
+  - Типы данных параметров
 
-  - Number of type parameters (for a generic procedure)
+  - Число параметров типа (для универсальной процедуры)
 
-  - Return type (only for a conversion operator)
+  - Тип возвращаемого значения (только для оператора преобразования)
 
-  Together with the procedure name, the preceding items are collectively called the *signature* of the procedure. When you call an overloaded procedure, the compiler uses the signature to check that the call correctly matches the definition.
+  Вместе с именем процедуры предыдущие элементы называются *сигнатурой* процедуры. При вызове перегруженной процедуры компилятор использует сигнатуру для проверки того, что вызов правильно соответствует определению.
 
-- **Items Not Part of Signature**. You cannot overload a procedure without varying the signature. In particular, you cannot overload a procedure by varying only one or more of the following items:
+- **Элементы не являются частью сигнатуры**. Нельзя перегружать процедуру без изменения сигнатуры. В частности, невозможно перегрузить процедуру, изменив только один или несколько из следующих элементов:
 
-  - Procedure modifier keywords, such as `Public`, `Shared`, and `Static`
+  - Ключевые слова модификаторов процедур, такие как `Public`, `Shared`и `Static`
 
-  - Parameter or type parameter names
+  - Имя параметра или параметра типа
 
-  - Type parameter constraints (for a generic procedure)
+  - Ограничения параметров типа (для универсальной процедуры)
 
-  - Parameter modifier keywords, such as `ByRef` and `Optional`
+  - Ключевые слова модификаторов параметров, такие как `ByRef` и `Optional`
 
-  - Whether it returns a value
+  - Возвращает ли оно значение
 
-  - The data type of the return value (except for a conversion operator)
+  - Тип данных возвращаемого значения (за исключением оператора преобразования)
 
-  The items in the preceding list are not part of the signature. Although you cannot use them to differentiate between overloaded versions, you can vary them among overloaded versions that are properly differentiated by their signatures.
+  Элементы в приведенном выше списке не являются частью сигнатуры. Хотя их нельзя использовать для различения перегруженных версий, их можно изменять в разных перегруженных версиях, которые должны различаться в соответствии с сигнатурами.
 
-- **Late-Bound Arguments**. If you intend to pass a late bound object variable to an overloaded version, you must declare the appropriate parameter as <xref:System.Object>.
+- **Аргументы с поздним**связыванием. Если предполагается передать переменную объекта с поздней привязкой в перегруженную версию, необходимо объявить соответствующий параметр как <xref:System.Object>.
 
-## <a name="multiple-versions-of-a-procedure"></a>Multiple Versions of a Procedure
+## <a name="multiple-versions-of-a-procedure"></a>Несколько версий процедуры
 
-Suppose you are writing a `Sub` procedure to post a transaction against a customer's balance, and you want to be able to refer to the customer either by name or by account number. To accommodate this, you can define two different `Sub` procedures, as in the following example:
+Предположим, вы пишете `Sub` процедуру для публикации транзакции по балансу клиента и хотите иметь возможность ссылаться на клиента по имени или номеру счета. Для этого можно определить две различные процедуры `Sub`, как показано в следующем примере:
 
 [!code-vb[VbVbcnProcedures#73](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#73)]
 
-### <a name="overloaded-versions"></a>Overloaded Versions
+### <a name="overloaded-versions"></a>Перегруженные версии
 
-An alternative is to overload a single procedure name. You can use the [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md) keyword to define a version of the procedure for each parameter list, as follows:
+Альтернативой является перегрузка имени одной процедуры. Для определения версии процедуры для каждого списка параметров можно использовать ключевое слово [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md) , как показано ниже.
 
 [!code-vb[VbVbcnProcedures#72](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#72)]
 
-#### <a name="additional-overloads"></a>Additional Overloads
+#### <a name="additional-overloads"></a>Дополнительные перегрузки
 
-If you also wanted to accept a transaction amount in either `Decimal` or `Single`, you could further overload `post` to allow for this variation. If you did this to each of the overloads in the preceding example, you would have four `Sub` procedures, all with the same name but with four different signatures.
+Если вы также хотите принять сумму транзакции в `Decimal` или `Single`, можно дополнительно перегрузить `post`, чтобы разрешить этот вариант. Если вы сделали это для каждой перегрузки в предыдущем примере, у вас будут четыре `Sub`ные процедуры с одним и тем же именем, но с четырьмя разными сигнатурами.
 
-## <a name="advantages-of-overloading"></a>Advantages of Overloading
+## <a name="advantages-of-overloading"></a>Преимущества перегрузки
 
-The advantage of overloading a procedure is in the flexibility of the call. To use the `post` procedure declared in the preceding example, the calling code can obtain the customer identification as either a `String` or an `Integer`, and then call the same procedure in either case. Это показано в приведенном ниже примере.
+Преимущество перегрузки процедуры заключается в гибкости вызова. Чтобы использовать процедуру `post`, объявленную в предыдущем примере, вызывающий код может получить идентификатор клиента как `String` или `Integer`, а затем вызвать ту же процедуру в любом случае. Это показано в приведенном ниже примере.
 
 [!code-vb[VbVbcnProcedures#56](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#56)]
 
@@ -99,5 +99,5 @@ The advantage of overloading a procedure is in the flexibility of the call. To u
 - [Практическое руководство. Перегрузка процедуры, принимающей неопределенное число параметров](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)
 - [Вопросы, связанные с перегрузкой процедур](./considerations-in-overloading-procedures.md)
 - [Разрешение перегрузки](./overload-resolution.md)
-- [Перегрузки](../../../../visual-basic/language-reference/modifiers/overloads.md)
+- [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md)
 - [Generic Types in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)

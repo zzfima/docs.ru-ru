@@ -16,26 +16,26 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347348"
 ---
 # <a name="main-procedure-in-visual-basic"></a>Процедура Main в Visual Basic
-Every Visual Basic application must contain a procedure called `Main`. This procedure serves as the starting point and overall control for your application. The .NET Framework calls your `Main` procedure when it has loaded your application and is ready to pass control to it. Unless you are creating a Windows Forms application, you must write the `Main` procedure for applications that run on their own.
+Каждое приложение Visual Basic должно содержать процедуру с именем `Main`. Эта процедура выступает в качестве начальной точки и общего управления для приложения. .NET Framework вызывает процедуру `Main`, когда она загрузила приложение и готова передать ему управление. Если вы не создаете Windows Forms приложение, необходимо написать `Main` процедуру для приложений, которые выполняются самостоятельно.
 
- `Main` contains the code that runs first. In `Main`, you can determine which form is to be loaded first when the program starts, find out if a copy of your application is already running on the system, establish a set of variables for your application, or open a database that the application requires.
+ `Main` содержит код, который выполняется в первую очередь. В `Main`можно определить, какая форма должна загружаться первым при запуске программы, определить, выполняется ли в системе копия приложения, установить набор переменных для приложения или открыть базу данных, требуемую для приложения.
 
-## <a name="requirements-for-the-main-procedure"></a>Requirements for the Main Procedure
- A file that runs on its own (usually with extension .exe) must contain a `Main` procedure. A library (for example with extension .dll) does not run on its own and does not require a `Main` procedure. The requirements for the different types of projects you can create are as follows:
+## <a name="requirements-for-the-main-procedure"></a>Требования для основной процедуры
+ Файл, который выполняется самостоятельно (обычно с расширением exe), должен содержать процедуру `Main`. Библиотека (например, с расширением DLL) не запускается самостоятельно и не требует `Main` процедуры. Ниже приведены требования к различным типам проектов, которые можно создать.
 
-- Console applications run on their own, and you must supply at least one `Main` procedure.
+- Консольные приложения выполняются самостоятельно, и необходимо указать хотя бы одну `Main` процедуру.
 
-- Windows Forms applications run on their own. However, the Visual Basic compiler automatically generates a `Main` procedure in such an application, and you do not need to write one.
+- Windows Forms приложения выполняются самостоятельно. Однако компилятор Visual Basic автоматически создает в таком приложении `Main` процедуру, и вам не нужно писать его.
 
-- Class libraries do not require a `Main` procedure. These include Windows Control Libraries and Web Control Libraries. Web applications are deployed as class libraries.
+- Библиотеки классов не нуждаются в `Main` процедуре. К ним относятся библиотеки элементов управления Windows и библиотеки веб-элементов управления. Веб-приложения развертываются в виде библиотек классов.
 
-## <a name="declaring-the-main-procedure"></a>Declaring the Main Procedure
- There are four ways to declare the `Main` procedure. It can take arguments or not, and it can return a value or not.
+## <a name="declaring-the-main-procedure"></a>Объявление основной процедуры
+ Существует четыре способа объявления процедуры `Main`. Он может принимать аргументы, а также не может возвращать значение.
 
 > [!NOTE]
-> If you declare `Main` in a class, you must use the `Shared` keyword. In a module, `Main` does not need to be `Shared`.
+> При объявлении `Main` в классе необходимо использовать ключевое слово `Shared`. В модуле `Main` не нужно `Shared`.
 
-- The simplest way is to declare a `Sub` procedure that does not take arguments or return a value.
+- Самый простой способ — объявить `Sub`ную процедуру, которая не принимает аргументы или возвращает значение.
 
     ```vb
     Module mainModule
@@ -47,7 +47,7 @@ Every Visual Basic application must contain a procedure called `Main`. This proc
     End Module
     ```
 
-- `Main` can also return an `Integer` value, which the operating system uses as the exit code for your program. Other programs can test this code by examining the Windows ERRORLEVEL value. To return an exit code, you must declare `Main` as a `Function` procedure instead of a `Sub` procedure.
+- `Main` также может возвращать значение `Integer`, используемое операционной системой в качестве кода выхода для программы. Другие программы могут протестировать этот код, изучая значение ERRORLEVEL Windows. Чтобы получить код выхода, необходимо объявить `Main` в качестве `Function` процедуры, а не `Sub` процедуры.
 
     ```vb
     Module mainModule
@@ -64,7 +64,7 @@ Every Visual Basic application must contain a procedure called `Main`. This proc
     End Module
     ```
 
-- `Main` can also take a `String` array as an argument. Each string in the array contains one of the command-line arguments used to invoke your program. You can take different actions depending on their values.
+- `Main` также может принимать `String` массив в качестве аргумента. Каждая строка в массиве содержит один из аргументов командной строки, используемых для вызова программы. В зависимости от их значений можно выполнять различные действия.
 
     ```vb
     Module mainModule
@@ -88,7 +88,7 @@ Every Visual Basic application must contain a procedure called `Main`. This proc
     End Module
     ```
 
-- You can declare `Main` to examine the command-line arguments but not return an exit code, as follows.
+- Можно объявить `Main`, чтобы проверить аргументы командной строки, но не вернуть код выхода, как показано ниже.
 
     ```vb
     Module mainModule
@@ -113,7 +113,7 @@ Every Visual Basic application must contain a procedure called `Main`. This proc
 - <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A>
 - <xref:System.Array.Length%2A>
 - <xref:Microsoft.VisualBasic.Information.UBound%2A>
-- [Structure of a Visual Basic Program](../../../visual-basic/programming-guide/program-structure/structure-of-a-visual-basic-program.md)
+- [Структура программы Visual Basic](../../../visual-basic/programming-guide/program-structure/structure-of-a-visual-basic-program.md)
 - [-main](../../../visual-basic/reference/command-line-compiler/main.md)
 - [Общие](../../../visual-basic/language-reference/modifiers/shared.md)
 - [Оператор Sub](../../../visual-basic/language-reference/statements/sub-statement.md)

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74432977"
 ---
 # <a name="icorprofilerinfo2getstaticfieldinfo-method"></a>Метод ICorProfilerInfo2::GetStaticFieldInfo
-Gets a value that indicates the kind of static that applies to the specified field.  
+Возвращает значение, указывающее тип статического объекта, который применяется к указанному полю.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -36,18 +36,18 @@ HRESULT GetStaticFieldInfo (
   
 ## <a name="parameters"></a>Параметры  
  `classId`  
- [in] The ID of the class in which the static field is defined.  
+ окне Идентификатор класса, в котором определено статическое поле.  
   
  `fieldToken`  
- [in] The metadata token for the static field.  
+ окне Маркер метаданных для статического поля.  
   
  `pFieldInfo`  
- [out] A pointer to a value of the [COR_PRF_STATIC_TYPE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-static-type-enumeration.md) enumeration that indicates whether the specified field is static, and if so, the kind of static that applies to the field.  
+ заполняет Указатель на значение перечисления [COR_PRF_STATIC_TYPE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-static-type-enumeration.md) , указывающее, является ли указанное поле статическим, и, если это так, тип статического, применяемого к полю.  
   
-## <a name="remarks"></a>Заметки  
- This information can be used to determine which function to call to get the address of the static field.  
+## <a name="remarks"></a>Примечания  
+ Эти сведения можно использовать для определения функции, вызываемой для получения адреса статического поля.  
   
- The profiler code should still check the metadata for a static field to ensure that it actually has an address. Static literals (that is, constants) exist only in the metadata and do not have an address.  
+ Код профилировщика должен по-прежнему проверять метаданные для статического поля, чтобы убедиться, что он действительно имеет адрес. Статические литералы (константы) существуют только в метаданных и не имеют адреса.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
