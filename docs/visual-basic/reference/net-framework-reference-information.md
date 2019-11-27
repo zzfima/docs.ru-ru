@@ -14,20 +14,20 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352854"
 ---
 # <a name="net-framework-reference-information-visual-basic"></a>Справочные сведения о платформе .NET Framework (Visual Basic)
-This topic provides links to information about how to work with the .NET Framework class library.  
+В этом разделе содержатся ссылки на сведения о работе с библиотекой классов .NET Framework.  
   
 ## <a name="related-sections"></a>Связанные разделы  
  [Начало работы](../../framework/get-started/index.md)  
  Здесь содержится комплексный обзор платформы .NET Framework и ссылки на дополнительные ресурсы.  
   
  [Общие сведения о библиотеке классов](../../standard/class-library-overview.md)  
- Introduces the classes, interfaces, and value types that help expedite and optimize the development process and provide access to system functionality.  
+ Представляет классы, интерфейсы и типы значений, которые помогают ускорить и оптимизировать процесс разработки и предоставить доступ к функциональным возможностям системы.  
   
  [Руководство по разработке](../../framework/development-guide.md)  
- Provides a guide to all key technology areas and tasks for application development, including creating, configuring, debugging, securing, and deploying your application. This topic also provides information about dynamic programming, interoperability, extensibility, memory management, and threading.  
+ Содержит рекомендации по всем ключевым технологическим областям и задачам для разработки приложений, включая создание, настройку, отладку, защиту и развертывание приложения. В этом разделе также приводятся сведения о динамическом программировании, взаимодействии, расширяемости, управлении памятью и многопоточности.  
   
  [Инструменты](../../framework/tools/index.md)  
- Describes the tools that you can use to develop, configure, and deploy applications by using .NET Framework technologies.  
+ Описание средств, которые можно использовать для разработки, настройки и развертывания приложений с помощью технологий .NET Framework.  
   
  [Браузер API .NET](../../../api/index.md)  
- Provides syntax, code examples, and related information for each class in the .NET Framework namespaces.
+ Содержит синтаксис, примеры кода и связанные сведения для каждого класса в пространствах имен .NET Framework.

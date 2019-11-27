@@ -15,42 +15,42 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350355"
 ---
 # <a name="mysettings-object"></a>Объект My.Settings
-Provides properties and methods for accessing the application's settings.  
+Предоставляет свойства и методы для доступа к параметрам приложения.  
   
-## <a name="remarks"></a>Заметки  
- The `My.Settings` object provides access to the application's settings and allows you to dynamically store and retrieve property settings and other information for your application. Дополнительные сведения см. в разделе [Управление параметрами приложения (.NET)](/visualstudio/ide/managing-application-settings-dotnet).  
+## <a name="remarks"></a>Примечания  
+ Объект `My.Settings` предоставляет доступ к параметрам приложения и позволяет динамически сохранять и извлекать параметры свойств и другие сведения для приложения. Дополнительные сведения см. в разделе [Управление параметрами приложения (.NET)](/visualstudio/ide/managing-application-settings-dotnet).  
   
 ## <a name="properties"></a>Свойства  
- Свойства объекта `My.Settings` обеспечивают доступ к параметрам приложения. To add or remove settings, use the **Settings Designer**.  
+ Свойства объекта `My.Settings` обеспечивают доступ к параметрам приложения. Чтобы добавить или удалить параметры, используйте **Конструктор параметров**.  
   
- Each setting has a **Name**, **Type**, **Scope**, and **Value**, and these settings determine how the property to access each setting appears in the `My.Settings` object:  
+ Каждый параметр имеет **имя**, **Тип**, **область**и **значение**, и эти параметры определяют, как свойство для доступа к каждому параметру отображается в объекте `My.Settings`:  
   
-- **Name** determines the name of the property.  
+- **Имя** определяет имя свойства.  
   
-- **Type** determines the type of the property.  
+- **Тип** определяет тип свойства.  
   
-- **Scope** indicates if the property is read-only. If the value is **Application**, the property is read-only; if the value is **User**, the property is read-write.  
+- **Область** указывает, доступно ли свойство только для чтения. Если значение — **Application**, свойство доступно только для чтения; Если значение — **User**, свойство доступно для чтения и записи.  
   
-- **Value** is the default value of the property.  
+- **Значение** является значением свойства по умолчанию.  
   
 ## <a name="methods"></a>Методы  
   
 |Метод|Описание|  
 |---|---|  
-|`Reload`|Reloads the user settings from the last saved values.|  
-|`Save`|Saves the current user settings.|  
+|`Reload`|Перезагружает пользовательские параметры из последних сохраненных значений.|  
+|`Save`|Сохраняет текущие параметры пользователя.|  
   
- The `My.Settings` object also provides advanced properties and methods, inherited from the <xref:System.Configuration.ApplicationSettingsBase> class.  
+ Объект `My.Settings` также предоставляет дополнительные свойства и методы, унаследованные от класса <xref:System.Configuration.ApplicationSettingsBase>.  
   
 ## <a name="tasks"></a>Задачи  
- The following table lists examples of tasks involving the `My.Settings` object.  
+ В следующей таблице приведены примеры задач, в которых используется объект `My.Settings`.  
   
-|Целевой тип|См.|  
+|Чтобы|См. раздел|  
 |---|---|  
-|Read an application setting|[Практическое руководство. Чтение параметров приложения в Visual Basic](../../../visual-basic/developing-apps/programming/app-settings/how-to-read-application-settings.md)|  
-|Change a user setting|[Практическое руководство. Изменение пользовательских параметров в Visual Basic](../../../visual-basic/developing-apps/programming/app-settings/how-to-change-user-settings.md)|  
-|Persist user settings|[Практическое руководство. Сохранение пользовательских параметров в Visual Basic](../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md)|  
-|Create a property grid for user settings|[Практическое руководство. Создание таблицы свойств для пользовательских параметров в Visual Basic](../../../visual-basic/developing-apps/programming/app-settings/how-to-create-property-grids-for-user-settings.md)|  
+|Чтение параметра приложения|[Практическое руководство. Чтение параметров приложения в Visual Basic](../../../visual-basic/developing-apps/programming/app-settings/how-to-read-application-settings.md)|  
+|Изменение параметров пользователя|[Практическое руководство. Изменение пользовательских параметров в Visual Basic](../../../visual-basic/developing-apps/programming/app-settings/how-to-change-user-settings.md)|  
+|Сохранить параметры пользователя|[Практическое руководство. Сохранение пользовательских параметров в Visual Basic](../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md)|  
+|Создание сетки свойств для параметров пользователя|[Практическое руководство. Создание таблицы свойств для пользовательских параметров в Visual Basic](../../../visual-basic/developing-apps/programming/app-settings/how-to-create-property-grids-for-user-settings.md)|  
   
 ## <a name="example"></a>Пример  
  В этом пример выводится значение параметра `Nickname`.  
@@ -59,7 +59,7 @@ Provides properties and methods for accessing the application's settings.
   
  Для надлежащего выполнения этого примера приложение должно иметь параметр `Nickname` типа `String`.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - <xref:System.Configuration.ApplicationSettingsBase>
 - [Практическое руководство. Чтение параметров приложения в Visual Basic](../../../visual-basic/developing-apps/programming/app-settings/how-to-read-application-settings.md)

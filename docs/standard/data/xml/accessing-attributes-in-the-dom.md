@@ -117,7 +117,7 @@ public class Sample
 
 Этот пример выводит следующие данные:
 
-**Выходные данные:**
+**Output**
 
 Отображает все атрибуты из коллекции.
 
@@ -260,6 +260,6 @@ using System.Xml;
 XmlAttribute attr = doc.DocumentElement.Attributes[0];
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Модель объектов документов XML (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

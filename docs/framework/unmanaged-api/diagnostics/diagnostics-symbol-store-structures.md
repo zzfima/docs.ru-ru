@@ -15,17 +15,17 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448519"
 ---
 # <a name="diagnostics-symbol-store-structures"></a>Структуры хранения символов диагностики
-This topic describes the unmanaged structures that the diagnostics symbol store API uses.  
+В этом разделе описываются неуправляемые структуры, используемые API хранилища диагностических символов.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Структура CALL_ID](../../../../docs/framework/unmanaged-api/diagnostics/call-id-structure.md)  
- Provides information to a debugger about a function that is being called.  
+ Предоставляет сведения отладчику о вызываемой функции.  
   
  [Структура SYMLINEDELTA](../../../../docs/framework/unmanaged-api/diagnostics/symlinedelta-structure.md)  
- Provides information to the symbol handler about methods that were moved as a result of edits.  
+ Предоставляет сведения обработчику символов о методах, которые были перемещены в результате изменений.  
   
  [Структура USER_THREAD](../../../../docs/framework/unmanaged-api/diagnostics/user-thread-structure.md)  
- Provides information to a debugger about a thread.  
+ Предоставляет сведения отладчику о потоке.  
   
 ## <a name="related-sections"></a>Связанные разделы  
  [Интерфейсы хранилища символов диагностики](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)  

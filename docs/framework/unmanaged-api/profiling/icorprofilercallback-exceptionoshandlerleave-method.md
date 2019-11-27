@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445406"
 ---
 # <a name="icorprofilercallbackexceptionoshandlerleave-method"></a>Метод ICorProfilerCallback::ExceptionOSHandlerLeave
-Не реализовано. A profiler that needs unmanaged exception information must obtain this information through other means.  
+Не реализовано. Профилировщик, которому требуются сведения о неуправляемом исключении, должен получить эти сведения с помощью других средств.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -41,6 +41,6 @@ HRESULT ExceptionOSHandlerLeave(
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

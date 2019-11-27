@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445867"
 ---
 # <a name="icorprofilercallbackobjectsallocatedbyclass-method"></a>Метод ICorProfilerCallback::ObjectsAllocatedByClass
-Notifies the profiler about the number of instances of each specified class that have been created since the most recent garbage collection.  
+Уведомляет профилировщик о количестве экземпляров каждого указанного класса, созданных с момента последнего сбора мусора.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -36,20 +36,20 @@ HRESULT ObjectsAllocatedByClass(
   
 ## <a name="parameters"></a>Параметры  
  `cClassCount`  
- [in] The size of the `classIds` and `cObjects` arrays.  
+ окне Размер массивов `classIds` и `cObjects`.  
   
  `classIds`  
- [in] An array of class IDs, where each ID specifies a class with one or more instances.  
+ окне Массив идентификаторов классов, где каждый идентификатор указывает класс с одним или несколькими экземплярами.  
   
  `cObjects`  
- [in] An array of integers, where each integer specifies the number of instances for the corresponding class in the `classIds` array.  
+ окне Массив целых чисел, где каждое целое число указывает количество экземпляров для соответствующего класса в массиве `classIds`.  
   
-## <a name="remarks"></a>Заметки  
- The `classIds` and `cObjects` arrays are parallel arrays. For example, `classIds[i]` and `cObjects[i]` reference the same class. If no instance of a class has been created since the previous garbage collection, the class is omitted. The `ObjectsAllocatedByClass` callback will not report objects allocated in the large object heap.  
+## <a name="remarks"></a>Примечания  
+ Массивы `classIds` и `cObjects` являются параллельными массивами. Например, `classIds[i]` и `cObjects[i]` ссылаются на один и тот же класс. Если с момента предыдущего сбора мусора экземпляр класса не был создан, класс опускается. Обратный вызов `ObjectsAllocatedByClass` не будет сообщать объекты, выделенные в куче больших объектов.  
   
- The numbers reported by `ObjectsAllocatedByClass` are only estimates. For exact counts, use [ICorProfilerCallback::ObjectAllocated](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectallocated-method.md).  
+ Числа, сообщаемые `ObjectsAllocatedByClass`, являются только оценками. Для точного числа счетчиков используйте параметр [ICorProfilerCallback:: ObjectAllocated](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectallocated-method.md).  
   
- The `classIds` array may contain one or more null entries if the corresponding `cObjects` array has types that are unloading.  
+ Массив `classIds` может содержать одну или несколько записей null, если в соответствующем массиве `cObjects` имеются типы, выгрузка которых выполняется.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
@@ -60,6 +60,6 @@ HRESULT ObjectsAllocatedByClass(
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

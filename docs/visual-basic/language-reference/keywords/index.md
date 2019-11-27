@@ -19,7 +19,7 @@ ms.locfileid: "74338783"
 ---
 # <a name="keywords-visual-basic"></a>Ключевые слова (Visual Basic)
 
-The following tables list all Visual Basic language keywords.
+В следующих таблицах перечислены все ключевые слова языка Visual Basic.
 
 ## <a name="reserved-keywords"></a>Зарезервированные ключевые слова
 
@@ -54,11 +54,11 @@ The following tables list all Visual Basic language keywords.
 |[Long](../data-types/long-data-type.md)|[Loop](../statements/do-loop-statement.md)|[Me](../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)|[Mod](../operators/mod-operator.md)|  
 |[Модуль](../modifiers/module-keyword.md)|[Оператор Module](../statements/module-statement.md)|[MustInherit](../modifiers/mustinherit.md)|[MustOverride](../modifiers/mustoverride.md)|  
 |[MyBase](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)|[MyClass](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)|[NameOf](../operators/nameof.md)|[Namespace](../statements/namespace-statement.md)|
-|[Narrowing](../modifiers/narrowing.md)|[Ограничение New](../statements/type-list.md)|[Оператор New](../operators/new-operator.md)|[Вперед](../statements/for-next-statement.md)|
+|[Narrowing](../modifiers/narrowing.md)|[Ограничение New](../statements/type-list.md)|[Оператор New](../operators/new-operator.md)|[Далее](../statements/for-next-statement.md)|
 |[Next (в Resume)](../statements/resume-statement.md)|[Not](../operators/not-operator.md)|[Nothing](../nothing.md)|[NotInheritable](../modifiers/notinheritable.md)|
 |[NotOverridable](../modifiers/notoverridable.md)|[Объект](../data-types/object-data-type.md)|[Of](../statements/of-clause.md)|[On](../../../visual-basic/misc/on.md)|
-|[Operator](../statements/operator-statement.md)|[Параметр](../statements/option-keyword-statement.md)|[Необязательный](../modifiers/optional.md)|[Or](../operators/or-operator.md)|
-|[OrElse](../operators/orelse-operator.md)|[Out (универсальный модификатор)](../modifiers/out-generic-modifier.md)|[Перегрузки](../modifiers/overloads.md)|[Переопределяемые](../modifiers/overridable.md)|
+|[Operator](../statements/operator-statement.md)|[Параметр](../statements/option-keyword-statement.md)|[Optional](../modifiers/optional.md)|[Or](../operators/or-operator.md)|
+|[OrElse](../operators/orelse-operator.md)|[Out (универсальный модификатор)](../modifiers/out-generic-modifier.md)|[Overloads](../modifiers/overloads.md)|[Overridable](../modifiers/overridable.md)|
 |[Переопределения](../modifiers/overrides.md)|[ParamArray](../modifiers/paramarray.md)|[Partial](../modifiers/partial.md)|[Закрытые](../modifiers/private.md)|
 |[Property](../statements/property-statement.md)|[Protected](../modifiers/protected.md)|[Public](../modifiers/public.md)|[RaiseEvent](../statements/raiseevent-statement.md)|
 |[ReadOnly](../modifiers/readonly.md)|[ReDim](../statements/redim-statement.md)|[REM](../statements/rem-statement.md)|[RemoveHandler](../statements/removehandler-statement.md)|
@@ -80,7 +80,7 @@ The following tables list all Visual Basic language keywords.
 |[<\<=](../operators/left-shift-assignment-operator.md)|
 
 > [!NOTE]
-> `EndIf`, `GoSub`, `Variant`, and `Wend` are retained as reserved keywords, although they are no longer used in Visual Basic. Значение ключевого слова `Let` было изменено. `Let` сейчас используется в запросах LINQ. Дополнительные сведения см. в разделе [Предложение Let](../queries/let-clause.md).
+> `EndIf`, `GoSub`, `Variant`и `Wend` сохраняются как зарезервированные ключевые слова, хотя они больше не используются в Visual Basic. Значение ключевого слова `Let` было изменено. `Let` сейчас используется в запросах LINQ. Дополнительные сведения см. в разделе [Предложение Let](../queries/let-clause.md).
 
 ## <a name="unreserved-keywords"></a>Незарезервированные ключевые слова
 
@@ -88,18 +88,18 @@ The following tables list all Visual Basic language keywords.
 
 |||||  
 |---|---|---|---|  
-|[Aggregate](../queries/aggregate-clause.md)|[ANSI](../modifiers/ansi.md)|[Assembly](../modifiers/assembly.md)|[Async](../modifiers/async.md)|  
+|[Aggregate](../queries/aggregate-clause.md)|[ANSI](../modifiers/ansi.md)|[Сборка](../modifiers/assembly.md)|[Async](../modifiers/async.md)|  
 |[Auto](../modifiers/auto.md)|[Await](../operators/await-operator.md)|[Binary](../statements/option-compare-statement.md)|[Compare](../statements/option-compare-statement.md)|  
 |[Пользовательский](../statements/event-statement.md)|[Distinct](../queries/distinct-clause.md)|[Equals](../queries/equals-clause.md)|[Explicit](../statements/option-explicit-statement.md)|  
 |[From](../queries/from-clause.md)|[Group By](../queries/group-by-clause.md)|[Group Join](../queries/group-join-clause.md)|[Into](../statements/into-clause.md)|  
 |[IsFalse](../operators/isfalse-operator.md)|[IsTrue](../operators/istrue-operator.md)|[Iterator](../modifiers/iterator.md)|[Join](../queries/join-clause.md)|  
 |[Key](../modifiers/key.md)|[Mid](../statements/mid-statement.md)|[Off](../../../visual-basic/misc/off.md)|[Order By](../queries/order-by-clause.md)|  
 |[Preserve](../statements/redim-statement.md)|[Skip](../queries/skip-clause.md)|[Skip While](../queries/skip-while-clause.md)|[Strict](../statements/option-strict-statement.md)|  
-|[Take](../queries/take-clause.md)|[Take While](../queries/take-while-clause.md)|[Текст](../statements/option-compare-statement.md)|[Юникод](../modifiers/unicode.md)|  
+|[Take](../queries/take-clause.md)|[Take While](../queries/take-while-clause.md)|[Text](../statements/option-compare-statement.md)|[Юникод](../modifiers/unicode.md)|  
 |[Until](../statements/do-loop-statement.md)|[Where](../queries/where-clause.md)|[Yield](../statements/yield-statement.md)|[#ExternalSource](../directives/externalsource-directive.md)|  
 |[#Region](../directives/region-directive.md)||||  
   
-## <a name="related-topics"></a>См. также  
+## <a name="related-topics"></a>Связанные разделы  
   
 |Заголовок|Описание|  
 |-----------|-----------------|  
@@ -121,6 +121,6 @@ The following tables list all Visual Basic language keywords.
 |[Сводка по реестру](registry-summary.md)|Содержит список функций, используемых для чтения, сохранения и удаления параметров программы.|  
 |[Сводка по работе со строками](string-manipulation-summary.md)|Содержит список функций, используемых для работы со строками.|  
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Члены библиотеки времени выполнения Visual Basic](../runtime-library-members.md)

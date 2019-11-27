@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450156"
 ---
 # <a name="cornotificationfortokenmovement-enumeration"></a>Перечисление CorNotificationForTokenMovement
-Specifies the notifications that will be sent to the metadata API client when a token remap occurs.  
+Указывает уведомления, которые будут отправляться клиенту API метаданных при выполнении сопоставления маркеров.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -63,40 +63,40 @@ typedef enum CorNotificationForTokenMovement {
   
 |Член|Описание|  
 |------------|-----------------|  
-|`MDNotifyDefault`|Notify when `mdTypeRef`, `mdMethodDef`, `mdMemberRef`, or `mdFieldDef` tokens move.|  
-|`MDNotifyAll`|Notify when any token moves.|  
-|`MDNotifyNone`|Do not notify when tokens move.|  
-|`MDNotifyMethodDef`|Notify when an `mdMethodDef` token moves.|  
-|`MDNotifyMemberRef`|Notify when an `mdMemberRef` token moves.|  
-|`MDNotifyFieldDef`|Notify when an `mdFieldDef` token moves.|  
-|`MDNotifyTypeRef`|Notify when an `mdTypeRef` token moves.|  
-|`MDNotifyTypeDef`|Notify when an `mdTypeDef` token moves.|  
-|`MDNotifyParamDef`|Notify when an `mdParamDef` token moves.|  
-|`MDNotifyInterfaceImpl`|Notify when an `mdInterfaceImpl` token moves.|  
-|`MDNotifyProperty`|Notify when an `mdProperty` token moves.|  
-|`MDNotifyEvent`|Notify when an `mdEvent` token moves.|  
-|`MDNotifySignature`|Notify when an `mdSignature` token moves.|  
-|`MDNotifyTypeSpec`|Notify when an `mdTypeSpec` token moves.|  
-|`MDNotifyCustomAttribute`|Notify when an `mdCustomAttribute` token moves.|  
-|`MDNotifySecurityValue`|Notify when an `mdSecurityValue` token moves.|  
-|`MDNotifyPermission`|Notify when an `mdPermission` token moves.|  
-|`MDNotifyModuleRef`|Notify when an `mdModuleRef` token moves.|  
-|`MDNotifyNameSpace`|Notify when an `mdNameSpace` token moves.|  
-|`MDNotifyAssemblyRef`|Notify when an `mdAssemblyRef` token moves.|  
-|`MDNotifyFile`|Notify when an `mdFile` token moves.|  
-|`MDNotifyExportedType`|Notify when an `mdExportedType` token moves.|  
-|`MDNotifyResource`|Notify when an `mdManifestResource` token moves.|  
+|`MDNotifyDefault`|Уведомлять при перемещении маркеров `mdTypeRef`, `mdMethodDef`, `mdMemberRef`или `mdFieldDef`.|  
+|`MDNotifyAll`|Уведомлять при перемещении токена.|  
+|`MDNotifyNone`|Не уведомлять при перемещении токенов.|  
+|`MDNotifyMethodDef`|Уведомлять при перемещении маркера `mdMethodDef`.|  
+|`MDNotifyMemberRef`|Уведомлять при перемещении маркера `mdMemberRef`.|  
+|`MDNotifyFieldDef`|Уведомлять при перемещении маркера `mdFieldDef`.|  
+|`MDNotifyTypeRef`|Уведомлять при перемещении маркера `mdTypeRef`.|  
+|`MDNotifyTypeDef`|Уведомлять при перемещении маркера `mdTypeDef`.|  
+|`MDNotifyParamDef`|Уведомлять при перемещении маркера `mdParamDef`.|  
+|`MDNotifyInterfaceImpl`|Уведомлять при перемещении маркера `mdInterfaceImpl`.|  
+|`MDNotifyProperty`|Уведомлять при перемещении маркера `mdProperty`.|  
+|`MDNotifyEvent`|Уведомлять при перемещении маркера `mdEvent`.|  
+|`MDNotifySignature`|Уведомлять при перемещении маркера `mdSignature`.|  
+|`MDNotifyTypeSpec`|Уведомлять при перемещении маркера `mdTypeSpec`.|  
+|`MDNotifyCustomAttribute`|Уведомлять при перемещении маркера `mdCustomAttribute`.|  
+|`MDNotifySecurityValue`|Уведомлять при перемещении маркера `mdSecurityValue`.|  
+|`MDNotifyPermission`|Уведомлять при перемещении маркера `mdPermission`.|  
+|`MDNotifyModuleRef`|Уведомлять при перемещении маркера `mdModuleRef`.|  
+|`MDNotifyNameSpace`|Уведомлять при перемещении маркера `mdNameSpace`.|  
+|`MDNotifyAssemblyRef`|Уведомлять при перемещении маркера `mdAssemblyRef`.|  
+|`MDNotifyFile`|Уведомлять при перемещении маркера `mdFile`.|  
+|`MDNotifyExportedType`|Уведомлять при перемещении маркера `mdExportedType`.|  
+|`MDNotifyResource`|Уведомлять при перемещении маркера `mdManifestResource`.|  
   
-## <a name="remarks"></a>Заметки  
- A token may be re-mapped (that is, moved) during a metadata merge.  
+## <a name="remarks"></a>Примечания  
+ Маркер может быть повторно сопоставлен (т. е. перемещен) во время слияния метаданных.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorHdr.h  
+ **Заголовок:** Корхдр. h  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Перечисления метаданных](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
