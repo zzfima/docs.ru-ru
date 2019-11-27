@@ -21,18 +21,18 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445507"
 ---
-# <a name="idebugautoattach-interface"></a><span data-ttu-id="c5bbb-102">Интерфейс IDebugAutoAttach</span><span class="sxs-lookup"><span data-stu-id="c5bbb-102">IDebugAutoAttach Interface</span></span>
-<span data-ttu-id="c5bbb-103">Defines the interface for server-invoked debugger auto attach.</span><span class="sxs-lookup"><span data-stu-id="c5bbb-103">Defines the interface for server-invoked debugger auto attach.</span></span>  
+# <a name="idebugautoattach-interface"></a><span data-ttu-id="43931-102">Интерфейс IDebugAutoAttach</span><span class="sxs-lookup"><span data-stu-id="43931-102">IDebugAutoAttach Interface</span></span>
+<span data-ttu-id="43931-103">Определяет интерфейс для автоматического присоединения отладчика, вызываемого сервером.</span><span class="sxs-lookup"><span data-stu-id="43931-103">Defines the interface for server-invoked debugger auto attach.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="c5bbb-104">Методы</span><span class="sxs-lookup"><span data-stu-id="c5bbb-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="43931-104">Методы</span><span class="sxs-lookup"><span data-stu-id="43931-104">Methods</span></span>  
   
-|<span data-ttu-id="c5bbb-105">Метод</span><span class="sxs-lookup"><span data-stu-id="c5bbb-105">Method</span></span>|<span data-ttu-id="c5bbb-106">Описание</span><span class="sxs-lookup"><span data-stu-id="c5bbb-106">Description</span></span>|  
+|<span data-ttu-id="43931-105">Метод</span><span class="sxs-lookup"><span data-stu-id="43931-105">Method</span></span>|<span data-ttu-id="43931-106">Описание</span><span class="sxs-lookup"><span data-stu-id="43931-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="c5bbb-107">Метод AutoAttach</span><span class="sxs-lookup"><span data-stu-id="c5bbb-107">AutoAttach Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/idebugautoattach-autoattach-method.md)|<span data-ttu-id="c5bbb-108">Performs server-invoked debugger auto attach.</span><span class="sxs-lookup"><span data-stu-id="c5bbb-108">Performs server-invoked debugger auto attach.</span></span>|  
+|[<span data-ttu-id="43931-107">Метод AutoAttach</span><span class="sxs-lookup"><span data-stu-id="43931-107">AutoAttach Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/idebugautoattach-autoattach-method.md)|<span data-ttu-id="43931-108">Выполняет вызванное сервером автоматическое присоединение отладчика.</span><span class="sxs-lookup"><span data-stu-id="43931-108">Performs server-invoked debugger auto attach.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="c5bbb-109">Требования</span><span class="sxs-lookup"><span data-stu-id="c5bbb-109">Requirements</span></span>  
- <span data-ttu-id="c5bbb-110">**Header:** DbgAutoAttach.idl</span><span class="sxs-lookup"><span data-stu-id="c5bbb-110">**Header:** DbgAutoAttach.idl</span></span>  
+## <a name="requirements"></a><span data-ttu-id="43931-109">Требования</span><span class="sxs-lookup"><span data-stu-id="43931-109">Requirements</span></span>  
+ <span data-ttu-id="43931-110">**Заголовок:** Дбгаутоаттач. idl</span><span class="sxs-lookup"><span data-stu-id="43931-110">**Header:** DbgAutoAttach.idl</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c5bbb-111">См. также</span><span class="sxs-lookup"><span data-stu-id="c5bbb-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="43931-111">См. также:</span><span class="sxs-lookup"><span data-stu-id="43931-111">See also</span></span>
 
-- [<span data-ttu-id="c5bbb-112">Интерфейсы хранилища символов диагностики</span><span class="sxs-lookup"><span data-stu-id="c5bbb-112">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+- [<span data-ttu-id="43931-112">Интерфейсы хранилища символов диагностики</span><span class="sxs-lookup"><span data-stu-id="43931-112">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
