@@ -22,19 +22,19 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449259"
 ---
 # <a name="isymunmanagedconstant-interface"></a>Интерфейс ISymUnmanagedConstant
-Provides access to unmanaged constants.  
+Предоставляет доступ к неуправляемым константам.  
   
 ## <a name="methods"></a>Методы  
   
 |Метод|Описание|  
 |------------|-----------------|  
-|[Метод GetName](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-getname-method.md)|Gets the name of the constant.|  
-|[Метод GetSignature](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-getsignature-method.md)|Gets the signature of the constant.|  
-|[Метод GetValue](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-getvalue-method.md)|Gets the value of the constant.|  
+|[Метод GetName](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-getname-method.md)|Возвращает имя константы.|  
+|[Метод GetSignature](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-getsignature-method.md)|Возвращает сигнатуру константы.|  
+|[Метод GetValue](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-getvalue-method.md)|Возвращает значение константы.|  
   
 ## <a name="requirements"></a>Требования  
- **Header:** CorSym.idl, CorSym.h  
+ **Заголовок:** Корсим. idl, Корсим. h  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейсы хранилища символов диагностики](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)

@@ -18,9 +18,9 @@ ms.locfileid: "74441455"
 > [!NOTE]
 > Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Последние сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]см. в разделе [API автоматизации Windows. Автоматизация пользовательского интерфейса](/windows/win32/winauto/entry-uiauto-win32).  
   
- This section provides detailed information about how to use [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] control patterns.  
+ В этом разделе содержатся подробные сведения об использовании шаблонов элементов управления [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)].  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Реализация шаблона элемента управления Dock модели автоматизации пользовательского интерфейса](implementing-the-ui-automation-dock-control-pattern.md)  
  [Реализация шаблона элемента управления ExpandCollapse модели автоматизации пользовательского интерфейса](implementing-the-ui-automation-expandcollapse-control-pattern.md)  
  [Реализация шаблона элемента управления Grid модели автоматизации пользовательского интерфейса](implementing-the-ui-automation-grid-control-pattern.md)  

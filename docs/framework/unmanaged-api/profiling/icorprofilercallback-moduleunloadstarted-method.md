@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445907"
 ---
 # <a name="icorprofilercallbackmoduleunloadstarted-method"></a>Метод ICorProfilerCallback::ModuleUnloadStarted
-Notifies the profiler that a module is being unloaded.  
+Уведомляет профилировщик о выгрузке модуля.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -34,10 +34,10 @@ HRESULT ModuleUnloadStarted(
   
 ## <a name="parameters"></a>Параметры  
  `moduleId`  
- [in] The ID of the module that is being unloaded.  
+ окне Идентификатор выгружается модуля.  
   
-## <a name="remarks"></a>Заметки  
- The value of `moduleId` is not valid for an information request after the `ModuleUnloadStarted` method returns — this is the profiler's last chance to get information about this module.  
+## <a name="remarks"></a>Примечания  
+ Значение `moduleId` недопустимо для информационного запроса после возврата метода `ModuleUnloadStarted` — это последний шанс профилировщика получить сведения об этом модуле.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
@@ -48,7 +48,7 @@ HRESULT ModuleUnloadStarted(
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
 - [Метод ModuleUnloadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleunloadfinished-method.md)

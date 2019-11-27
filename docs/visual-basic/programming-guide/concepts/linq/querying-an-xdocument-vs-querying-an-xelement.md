@@ -9,7 +9,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346554"
 ---
-# <a name="querying-an-xdocument-vs-querying-an-xelement-visual-basic"></a>Querying an XDocument vs. Querying an XElement (Visual Basic)
+# <a name="querying-an-xdocument-vs-querying-an-xelement-visual-basic"></a>Запрос к XDocument и запросу XElement (Visual Basic)
 При загрузке документа через <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType> обратите внимание на то, что запросы придется составлять не так, как при загрузке через <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType>.  
   
 ## <a name="comparison-of-xdocumentload-and-xelementload"></a>Сравнение XDocument.Load и XElement.Load  
@@ -112,6 +112,6 @@ Querying tree loaded with XDocument.Load
 <Child3>3</Child3>  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Basic Queries (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+- [Основные запросы (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

@@ -20,7 +20,7 @@ for identifier = start [ to | downto ] finish do
     body-expression
 ```
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Примечания
 
 Тип идентификатора выводится из типа выражений *начала* и *окончания* . Типы для этих выражений должны быть 32-разрядными целыми числами.
 
@@ -36,7 +36,7 @@ for identifier = start [ to | downto ] finish do
 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Справочник по языку F#](index.md)
 - [Циклы: выражение `for...in`](loops-for-in-expression.md)

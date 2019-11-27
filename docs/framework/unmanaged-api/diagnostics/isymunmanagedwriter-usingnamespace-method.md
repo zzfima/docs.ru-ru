@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74427467"
 ---
 # <a name="isymunmanagedwriterusingnamespace-method"></a>Метод ISymUnmanagedWriter::UsingNamespace
-Specifies that the given fully qualified namespace name is being used within the currently open lexical scope. The namespace will be used within all scopes that inherit from the currently open scope. Closing the current scope will also stop the use of the namespace.  
+Указывает, что данное полное имя пространства имен используется в открытой лексической области. Пространство имен будет использоваться во всех областях, наследующих от текущей открытой области. Закрытие текущей области также приведет к отмене использования пространства имен.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -34,14 +34,14 @@ HRESULT UsingNamespace(
   
 ## <a name="parameters"></a>Параметры  
  `fullName`  
- [in] A pointer to the fully qualified name of the namespace.  
+ окне Указатель на полное имя пространства имен.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK, если метод выполнен. в противном случае E_FAIL или другой код ошибки.  
   
 ## <a name="requirements"></a>Требования  
- **Header:** CorSym.idl, CorSym.h  
+ **Заголовок:** Корсим. idl, Корсим. h  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

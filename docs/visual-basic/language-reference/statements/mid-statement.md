@@ -18,7 +18,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348028"
 ---
 # <a name="mid-statement"></a>Оператор Mid
-Replaces a specified number of characters in a `String` variable with characters from another string.  
+Заменяет указанное число символов в переменной `String` символами из другой строки.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -32,44 +32,44 @@ Mid( _
   
 ## <a name="parts"></a>Части  
  `Target`  
- Обязательный. Name of the `String` variable to modify.  
+ Обязательное. Имя изменяемой переменной `String`.  
   
  `Start`  
- Обязательный. `Integer` expression. Character position in `Target` where the replacement of text begins. `Start` uses a one-based index.  
+ Обязательное. выражение `Integer`. Позицию символа в `Target`, где начинается замена текста. `Start` использует индекс, отсчитываемый от единицы.  
   
  `Length`  
- Необязательный. `Integer` expression. Number of characters to replace. If omitted, all of `String` is used.  
+ Необязательно. выражение `Integer`. Число символов для замены. Если этот параметр опущен, используется все `String`.  
   
  `StringExpression`  
- Обязательный. `String` expression that replaces part of `Target`.  
+ Обязательное. `String` выражение, которое заменяет часть `Target`.  
   
 ## <a name="exceptions"></a>Исключения  
   
 |Тип исключения|Условие|  
 |--------------------|---------------|  
-|<xref:System.ArgumentException>|`Start` <= 0 or `Length` < 0.|  
+|<xref:System.ArgumentException>|`Start` < = 0 или `Length` < 0.|  
   
-## <a name="remarks"></a>Заметки  
- The number of characters replaced is always less than or equal to the number of characters in `Target`.  
+## <a name="remarks"></a>Примечания  
+ Число заменяемых символов всегда меньше или равно числу символов в `Target`.  
   
- Visual Basic has a <xref:Microsoft.VisualBasic.Strings.Mid%2A> function and a `Mid` statement. These elements both operate on a specified number of characters in a string, but the `Mid` function returns the characters while the `Mid` statement replaces the characters. Для получения дополнительной информации см. <xref:Microsoft.VisualBasic.Strings.Mid%2A>.  
+ Visual Basic содержит функцию <xref:Microsoft.VisualBasic.Strings.Mid%2A> и инструкцию `Mid`. Эти элементы работают с указанным числом символов в строке, но функция `Mid` возвращает символы, пока оператор `Mid` заменяет символы. Дополнительные сведения см. в разделе <xref:Microsoft.VisualBasic.Strings.Mid%2A>.  
   
 > [!NOTE]
-> The `MidB` statement of earlier versions of Visual Basic replaces a substring in bytes, rather than characters. It is used primarily for converting strings in double-byte character set (DBCS) applications. All Visual Basic strings are in Unicode, and `MidB` is no longer supported.  
+> `MidB`ная инструкция более ранних версий Visual Basic заменяет подстроку в байтах, а не на символы. Он используется в основном для преобразования строк в приложениях с двухбайтовой кодировкой (DBCS). Все строки Visual Basic в Юникоде, а `MidB` больше не поддерживаются.  
   
 ## <a name="example"></a>Пример  
- This example uses the `Mid` statement to replace a specified number of characters in a string variable with characters from another string.  
+ В этом примере используется оператор `Mid` для замены указанного числа символов в строковой переменной символами из другой строки.  
   
  [!code-vb[VbVbalrStrings#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#5)]  
   
 ## <a name="requirements"></a>Требования  
- **Namespace:** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
+ **Пространство имен:** [Microsoft. VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
   
- **Module:** `Strings`  
+ **Модуль:** `Strings`  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **Сборка:** Библиотека времени выполнения Visual Basic (в Microsoft. VisualBasic. dll)  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - <xref:Microsoft.VisualBasic.Strings.Mid%2A>
 - [Строки](../../../visual-basic/programming-guide/language-features/strings/index.md)

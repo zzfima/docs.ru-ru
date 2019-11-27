@@ -24,7 +24,7 @@ ms.locfileid: "74448039"
 ---
 # <a name="imetadataemitmergeend-method"></a>Метод IMetaDataEmit::MergeEnd
 
-Merges into the current scope all the metadata scopes specified by one or more prior calls to [IMetaDataEmit::Merge](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-merge-method.md).
+Выполняет слияние в текущую область всех областей метаданных, указанных одним или несколькими ранними вызовами метода [IMetaDataEmit:: Merge](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-merge-method.md).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -34,45 +34,45 @@ HRESULT MergeEnd ();
 
 ## <a name="parameters"></a>Параметры
 
-This method takes no parameters.
+Этот метод не принимает параметров.
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Примечания
 
-This routine triggers the actual merge of metadata, of all import scopes specified by preceding calls to `IMetaDataEmit::Merge`, into the current output scope.
+Эта подпрограммы запускает фактическое слияние метаданных всех областей импорта, заданных предыдущими вызовами `IMetaDataEmit::Merge`, в текущую область вывода.
 
-The following special conditions apply to the merge:
+К объединению применяются следующие особые условия.
 
-- A module version identifier (MVID) is never imported, because it is unique to the metadata in the import scope.
+- Идентификатор версии модуля (MVID) никогда не импортируется, так как он уникален для метаданных в области импорта.
 
-- No existing module-wide properties are overwritten.
+- Существующие свойства модуля не перезаписываются.
 
-  If module properties were already set for the current scope, no module properties are imported. However, if module properties have not been set in the current scope, they are imported only once, when they are first encountered. If those module properties are encountered again, they are duplicates. If the values of all module properties (except MVID) are compared and no duplicates are found, an error is raised.
+  Если свойства модуля уже заданы для текущей области, свойства модуля не импортируются. Однако если свойства модуля не были заданы в текущей области, они импортируются только один раз при первом обнаружении. Если эти свойства модуля встречаются снова, они являются повторяющимися. Если сравниваются значения всех свойств модуля (кроме MVID) и не найдены дубликаты, возникает ошибка.
 
-- For type definitions (`TypeDef`), no duplicates are merged into the current scope. `TypeDef` objects are checked for duplicates against each *fully-qualified object name* + *GUID* + *version number*. If there is a match on either name or GUID, and any of the other two elements is different, an error is raised. Otherwise, if all three items match, `MergeEnd` does a cursory check to ensure the entries are indeed duplicates; if not, an error is raised. This cursory check looks for:
+- Для определений типов (`TypeDef`) в текущую область не объединяются дубликаты. `TypeDef` объекты проверяются на наличие дубликатов для каждого *полного имени объекта* + *GUID* + *номер версии*. Если существует совпадение с именем или идентификатором GUID, а любой из двух других элементов отличается, возникает ошибка. В противном случае, если все три элемента совпадают, `MergeEnd` выполняет проверку курсора, чтобы убедиться, что записи действительно являются повторяющимися. в противном случае возникает ошибка. Эта проверка курсора ищет:
 
-  - The same member declarations, occurring in the same order. Members that are flagged as `mdPrivateScope` (see the [CorMethodAttr](../../../../docs/framework/unmanaged-api/metadata/cormethodattr-enumeration.md) enumeration) are not included in this check; they are merged specially.
+  - Одни и те же объявления членов, происходящие в том же порядке. Элементы, помеченные как `mdPrivateScope` (см. Перечисление [кормесодаттр](../../../../docs/framework/unmanaged-api/metadata/cormethodattr-enumeration.md) ), не включаются в эту проверку. они объединяются специально.
 
-  - The same class layout.
+  - Тот же макет класса.
 
-  This means that a `TypeDef` object must always be fully and consistently defined in every metadata scope in which it is declared; if its member implementations (for a class) are spread across multiple compilation units, the full definition is assumed to be present in every scope and not incremental to each scope. For example, if parameter names are relevant to the contract, they must be emitted the same way into every scope; if they are not relevant, they should not be emitted into metadata.
+  Это означает, что объект `TypeDef` должен всегда быть полностью и согласованным в каждой области метаданных, в которой он объявлен. Если его реализации (для класса) распределяются между несколькими единицами компиляции, предполагается, что полное определение находится в каждой области и не помещается в каждую область. Например, если имена параметров имеют отношение к контракту, они должны выдаваться одинаковым образом в каждую область видимости. Если они не важны, они не должны выдаваться в метаданные.
 
-  The exception is that a `TypeDef` object can have incremental members flagged as `mdPrivateScope`. On encountering these, `MergeEnd` incrementally adds them to the current scope without regard for duplicates. Because the compiler understands the private scope, the compiler must be responsible for enforcing rules.
+  Исключением является то, что объект `TypeDef` может иметь инкрементные элементы, помеченные как `mdPrivateScope`. При возникновении этих проблем `MergeEnd` постепенно добавляет их в текущую область без учета дубликатов. Поскольку компилятор понимает частную область, компилятор должен отвечать за применение правил.
 
-- Relative virtual addresses (RVAs) are not imported or merged; the compiler is expected to re-emit this information.
+- Относительные виртуальные адреса (RVA) не импортируются и не объединяются; Предполагается, что компилятор повторно выдает эти сведения.
 
-- Custom attributes are merged only when the item to which they are attached is merged. For example, custom attributes associated with a class are merged when the class is first encountered. If custom attributes are associated with a `TypeDef` or `MemberDef` that is specific to the compilation unit (such as the time stamp of a member compile), they are not merged and it is up to the compiler to remove or update such metadata.
+- Пользовательские атрибуты объединяются только при слиянии элемента, к которому они присоединены. Например, пользовательские атрибуты, связанные с классом, объединяются при первом обнаружении класса. Если настраиваемые атрибуты связаны с `TypeDef` или `MemberDef`, которые относятся к единице компиляции (например, отметка времени для компиляции элемента), они не объединяются и компилятор удаляет или обновляет такие метаданные.
 
 ## <a name="requirements"></a>Требования
 
 **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).
 
-**Header:** Cor.h
+**Заголовок:** COR. h
 
-**Library:** Used as a resource in MSCorEE.dll
+**Библиотека:** Используется в качестве ресурса в MSCorEE. dll
 
 **Версии платформы .NET Framework:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [Интерфейс IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

@@ -12,12 +12,12 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346984"
 ---
 # <a name="procedure-call-or-argument-is-not-valid-visual-basic"></a>Вызов процедуры или аргумент не является допустимым (Visual Basic)
-Some part of the call cannot be completed.  
+Часть вызова не может быть завершена.  
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  
   
-- Check the permitted ranges for arguments to make sure no arrangement exceeds the permitted values.  
+- Проверьте допустимые диапазоны аргументов, чтобы убедиться, что расположение не превышает допустимые значения.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Типы ошибок](../../../visual-basic/programming-guide/language-features/error-types.md)

@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448575"
 ---
 # <a name="corsymaddrkind-enumeration"></a>Перечисление CorSymAddrKind
-Indicates the type of memory address.  
+Указывает тип адреса памяти.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -46,20 +46,20 @@ typedef enum CorSymAddrKind
   
 |Член|Описание|  
 |------------|-----------------|  
-|`ADDR_IL_OFFSET`|Indicates a Microsoft intermediate language (MSIL) local variable or parameter index.|  
-|`ADDR_NATIVE_RVA`|Indicates a relative virtual address into a module.|  
-|`ADDR_NATIVE_REGISTER`|Indicates a CPU register.|  
-|`ADDR_NATIVE_REGREL`|Indicates that the first address is a register and the second address is an offset.|  
-|`ADDR_NATIVE_OFFSET`|Indicates an offset from a base address.|  
-|`ADDR_NATIVE_REGREG`|Indicates that the first address is the low portion of a register, and the second address is the high portion.|  
-|`ADDR_NATIVE_REGSTK`|Indicates that the first address is the low portion of a register, the second is the high portion, and the third is an offset.|  
-|`ADDR_NATIVE_STKREG`|Indicates that the first address is a register, the second is an offset, and the third is the high portion of the register.|  
-|`ADDR_BITFIELD`|Indicates that the first address is the start of a field and the second address is the field length.|  
-|`ADDR_NATIVE_ISECTOFFSET`|Indicates that the first address is the section and the second address is an offset.|  
+|`ADDR_IL_OFFSET`|Указывает локальную переменную или индекс параметра промежуточного языка MSIL.|  
+|`ADDR_NATIVE_RVA`|Указывает относительный виртуальный адрес в модуле.|  
+|`ADDR_NATIVE_REGISTER`|Указывает регистр ЦП.|  
+|`ADDR_NATIVE_REGREL`|Указывает, что первый адрес является регистром, а второй — смещением.|  
+|`ADDR_NATIVE_OFFSET`|Указывает смещение от базового адреса.|  
+|`ADDR_NATIVE_REGREG`|Указывает, что первый адрес является нижней частью регистра, а второй адрес — верхней частью.|  
+|`ADDR_NATIVE_REGSTK`|Указывает, что первый адрес является нижней частью регистра, второй — верхней частью, а третья — смещением.|  
+|`ADDR_NATIVE_STKREG`|Указывает, что первый адрес является регистром, второй — смещением, а третье — старшая часть регистра.|  
+|`ADDR_BITFIELD`|Указывает, что первым адресом является начало поля, а вторым адресом является длина поля.|  
+|`ADDR_NATIVE_ISECTOFFSET`|Указывает, что первый адрес является разделом, а второй — смещением.|  
   
 ## <a name="requirements"></a>Требования  
- **Header:** CorSym.idl, CorSym.h  
+ **Заголовок:** Корсим. idl, Корсим. h  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Перечисления хранилища символов диагностики](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)

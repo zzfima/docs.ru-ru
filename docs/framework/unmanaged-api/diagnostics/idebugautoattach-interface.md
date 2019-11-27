@@ -22,17 +22,17 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445507"
 ---
 # <a name="idebugautoattach-interface"></a>Интерфейс IDebugAutoAttach
-Defines the interface for server-invoked debugger auto attach.  
+Определяет интерфейс для автоматического присоединения отладчика, вызываемого сервером.  
   
 ## <a name="methods"></a>Методы  
   
 |Метод|Описание|  
 |------------|-----------------|  
-|[Метод AutoAttach](../../../../docs/framework/unmanaged-api/diagnostics/idebugautoattach-autoattach-method.md)|Performs server-invoked debugger auto attach.|  
+|[Метод AutoAttach](../../../../docs/framework/unmanaged-api/diagnostics/idebugautoattach-autoattach-method.md)|Выполняет вызванное сервером автоматическое присоединение отладчика.|  
   
 ## <a name="requirements"></a>Требования  
- **Header:** DbgAutoAttach.idl  
+ **Заголовок:** Дбгаутоаттач. idl  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейсы хранилища символов диагностики](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)

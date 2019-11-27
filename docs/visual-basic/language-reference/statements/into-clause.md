@@ -12,10 +12,10 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348043"
 ---
 # <a name="into-clause-visual-basic"></a>Предложение Into (Visual Basic)
-Identifies aggregate functions or groupings to apply to a collection.  
+Определяет агрегатные функции или группирования, применяемые к коллекции.  
   
-## <a name="remarks"></a>Заметки  
- The `Each` keyword is used in the following contexts:  
+## <a name="remarks"></a>Примечания  
+ Ключевое слово `Each` используется в следующих контекстах:  
   
  [Предложение Aggregate](../../../visual-basic/language-reference/queries/aggregate-clause.md)  
   
@@ -23,6 +23,6 @@ Identifies aggregate functions or groupings to apply to a collection.
   
  [Предложение Group Join](../../../visual-basic/language-reference/queries/group-join-clause.md)  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Ключевые слова](../../../visual-basic/language-reference/keywords/index.md)

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448220"
 ---
 # <a name="imetadataassemblyimportgetexportedtypeprops-method"></a>Метод IMetaDataAssemblyImport::GetExportedTypeProps
-Gets the set of properties of the exported type with the specified metadata signature.  
+Возвращает набор свойств экспортированного типа с указанной сигнатурой метаданных.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -41,35 +41,35 @@ HRESULT GetExportedTypeProps (
   
 ## <a name="parameters"></a>Параметры  
  `mdct`  
- [in] An `mdExportedType` metadata token that represents the exported type.  
+ окне Токен метаданных `mdExportedType`, представляющий экспортированный тип.  
   
  `szName`  
- [out] The name of the exported type.  
+ заполняет Имя экспортированного типа.  
   
  `cchName`  
- [in] The size, in wide characters, of `szName`.  
+ окне Размер в расширенных символах `szName`.  
   
  `pchName`  
- [out] The number of wide characters actually returned in `szName`  
+ заполняет Число расширенных символов, фактически возвращаемых в `szName`  
   
  `ptkImplementation`  
- [out] An `mdFile`, `mdAssemblyRef`, or `mdExportedType` metadata token that contains or allows access to the properties of the exported type.  
+ заполняет `mdFile`, `mdAssemblyRef`или `mdExportedType` маркер метаданных, который содержит или разрешает доступ к свойствам экспортируемого типа.  
   
  `ptkTypeDef`  
- [out] A pointer to an `mdTypeDef` token that represents a type in the file.  
+ заполняет Указатель на маркер `mdTypeDef`, представляющий тип в файле.  
   
  `pdwExportedTypeFlags`  
- [out] A pointer to the flags that describe the metadata applied to the exported type. The flags value can be one or more [CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md) values.  
+ заполняет Указатель на флаги, описывающие метаданные, применяемые к экспортируемому типу. Значение Flags может быть одним или несколькими [кортипеаттр](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md) значениями.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Заголовок:** COR. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Библиотека:** Используется в качестве ресурса в MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс IMetaDataAssemblyImport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

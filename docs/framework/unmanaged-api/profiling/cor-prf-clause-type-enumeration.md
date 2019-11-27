@@ -39,10 +39,10 @@ typedef enum {
   
 |Член|Описание|  
 |------------|-----------------|  
-|`COR_PRF_CLAUSE_NONE`|The exception clause is not valid.|  
-|`COR_PRF_CLAUSE_FILTER`|The exception clause is a filter expression.|  
-|`COR_PRF_CLAUSE_CATCH`|The exception clause is a `catch` statement.|  
-|`COR_PRF_CLAUSE_FINALLY`|The exception clause is a `finally` statement.|  
+|`COR_PRF_CLAUSE_NONE`|Недопустимое предложение исключения.|  
+|`COR_PRF_CLAUSE_FILTER`|Предложение Exception является критерием фильтра.|  
+|`COR_PRF_CLAUSE_CATCH`|Предложение Exception является оператором `catch`.|  
+|`COR_PRF_CLAUSE_FINALLY`|Предложение Exception является оператором `finally`.|  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
@@ -53,6 +53,6 @@ typedef enum {
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Перечисления профилирования](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

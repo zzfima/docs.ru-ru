@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74427839"
 ---
 # <a name="isymunmanagedwritersetsymattribute-method"></a>Метод ISymUnmanagedWriter::SetSymAttribute
-Defines a custom attribute based upon its name. These attributes are held in the symbol store, unlike metadata custom attributes.  
+Определяет настраиваемый атрибут на основе его имени. Эти атрибуты хранятся в хранилище символов в отличие от пользовательских атрибутов метаданных.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,23 +37,23 @@ HRESULT SetSymAttribute(
   
 ## <a name="parameters"></a>Параметры  
  `parent`  
- [in] The metadata token for which the attribute is being defined.  
+ окне Токен метаданных, для которого определяется атрибут.  
   
  `name`  
- [in] A pointer to a `WCHAR` that contains the attribute name.  
+ окне Указатель на `WCHAR`, содержащий имя атрибута.  
   
  `cData`  
- [in] A `ULONG32` that indicates the size of the `data` array.  
+ окне `ULONG32`, указывающий размер массива `data`.  
   
  `data`  
- [in] The attribute value.  
+ окне Значение атрибута.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK, если метод выполнен. в противном случае E_FAIL или другой код ошибки.  
   
 ## <a name="requirements"></a>Требования  
- **Header:** CorSym.idl, CorSym.h  
+ **Заголовок:** Корсим. idl, Корсим. h  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

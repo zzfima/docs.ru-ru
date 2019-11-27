@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428126"
 ---
 # <a name="icorprofilerobjectenumskip-method"></a>Метод ICorProfilerObjectEnum::Skip
-Advances the cursor of this enumerator from its current position so that the specified number of elements are skipped.  
+Перемещает курсор этого перечислителя из текущей позиции, чтобы было пропущено указанное число элементов.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -35,10 +35,10 @@ HRESULT Skip (
   
 ## <a name="parameters"></a>Параметры  
  `celt`  
- [in] The number of elements to be skipped.  
+ окне Число пропущенных элементов.  
   
-## <a name="remarks"></a>Заметки  
- The new position of this enumerator's cursor is: (current position) + `celt` .  
+## <a name="remarks"></a>Примечания  
+ Новая позиции курсора перечислителя: (Текущая позиции) + `celt`.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
@@ -49,6 +49,6 @@ HRESULT Skip (
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс ICorProfilerObjectEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerobjectenum-interface.md)

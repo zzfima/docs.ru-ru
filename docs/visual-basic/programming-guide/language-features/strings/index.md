@@ -13,11 +13,11 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344340"
 ---
 # <a name="strings-in-visual-basic"></a>Строки в Visual Basic
-This section describes the basic concepts behind using strings in Visual Basic.  
+В этом разделе описаны основные принципы использования строк в Visual Basic.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Знакомство со строками в Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)  
- Lists topics that describe the basic concepts behind using strings in Visual Basic.  
+ Содержит список разделов, описывающих основные принципы использования строк в Visual Basic.  
   
  [Практическое руководство. Создание строк с помощью StringBuilder в Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/how-to-create-strings-using-a-stringbuilder.md)  
  Показывает, как эффективно создавать длинную строку из множества более коротких.  
@@ -34,6 +34,6 @@ This section describes the basic concepts behind using strings in Visual Basic.
  [Пошаговое руководство. Шифрование и расшифровка строк в Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/walkthrough-encrypting-and-decrypting-strings.md)  
  Показывает, как шифровать и расшифровывать строки с помощью алгоритма Triple DES в версии поставщика служб шифрования.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Возможности и элементы языка Visual Basic](../../../../visual-basic/programming-guide/language-features/index.md)

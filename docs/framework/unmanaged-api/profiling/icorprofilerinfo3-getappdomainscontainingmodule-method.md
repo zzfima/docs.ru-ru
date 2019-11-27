@@ -49,7 +49,7 @@ HRESULT GetAppDomainsContainingModule(
  `appDomainIds`  
  [out] Массив значений идентификаторов доменов приложений.  
   
-## <a name="remarks"></a>Заметки  
+## <a name="remarks"></a>Примечания  
  Этот метод использует буферы, выделенные вызывающим объектом.  
   
 ## <a name="requirements"></a>Требования  
@@ -61,7 +61,7 @@ HRESULT GetAppDomainsContainingModule(
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс ICorProfilerFunctionEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-interface.md)
 - [Интерфейс ICorProfilerInfo3](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)

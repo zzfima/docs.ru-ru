@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445350"
 ---
 # <a name="icorprofilercallbackexceptionsearchfilterleave-method"></a>Метод ICorProfilerCallback::ExceptionSearchFilterLeave
-Notifies the profiler that a user filter has just finished executing.  
+Уведомляет профилировщик о завершении выполнения пользовательского фильтра.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,7 +40,7 @@ HRESULT ExceptionSearchFilterLeave();
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
 - [Метод ExceptionSearchFilterEnter](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchfilterenter-method.md)

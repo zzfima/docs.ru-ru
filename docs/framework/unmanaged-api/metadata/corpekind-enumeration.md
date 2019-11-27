@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436470"
 ---
 # <a name="corpekind-enumeration"></a>Перечисление CorPEKind
-Contains values that describe a portable executable (PE) file, as returned from a call to [IMetaDataImport2::GetPEKind](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-getpekind-method.md).  
+Содержит значения, описывающие переносимый исполняемый файл (PE), возвращенный при вызове [IMetaDataImport2:: GetPEKind](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-getpekind-method.md).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -43,23 +43,23 @@ typedef enum CorPEKind {
   
 |Член|Описание|  
 |------------|-----------------|  
-|`peNot`|Indicates that this is not a PE file.|  
-|`peILOnly`|Indicates that this PE file contains only managed code.|  
-|`pe32BitRequired`|Indicates that this PE file makes Win32 calls.|  
-|`pe32Plus`|Indicates that this PE file runs on a 64-bit platform.|  
-|`pe32Unmanaged`|Indicates that this PE file is native code.|  
-|pe32BitPreferred|Indicates that this PE file is platform-neutral and prefers to be loaded in a 32-bit environment.|  
+|`peNot`|Указывает, что этот файл не является PE-файлом.|  
+|`peILOnly`|Указывает, что этот PE файл содержит только управляемый код.|  
+|`pe32BitRequired`|Указывает, что этот PE файл выполняет вызовы Win32.|  
+|`pe32Plus`|Указывает, что этот PE-файл выполняется на 64-разрядной платформе.|  
+|`pe32Unmanaged`|Указывает, что этот PE-файл является машинным кодом.|  
+|pe32BitPreferred|Указывает, что этот PE-файл является нейтральным к платформе и предпочитает загрузку в 32-разрядной среде.|  
   
-## <a name="remarks"></a>Заметки  
- These values can be used in bitwise combinations.  
+## <a name="remarks"></a>Примечания  
+ Эти значения можно использовать в побитовых сочетаниях.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorHdr.h  
+ **Заголовок:** Корхдр. h  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Перечисления метаданных](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

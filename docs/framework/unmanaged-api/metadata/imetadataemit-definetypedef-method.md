@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450212"
 ---
 # <a name="imetadataemitdefinetypedef-method"></a>Метод IMetaDataEmit::DefineTypeDef
-Creates a type definition for a common language runtime type, and gets a metadata token for that type definition.  
+Создает определение типа для типа среды CLR и получает маркер метаданных для этого определения типа.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,37 +39,37 @@ HRESULT DefineTypeDef (
   
 ## <a name="parameters"></a>Параметры  
  `szTypeDef`  
- [in] The name of the type in Unicode.  
+ окне Имя типа в Юникоде.  
   
  `dwTypeDefFlags`  
- [in] `TypeDef` attributes. This is a bitmask of `CoreTypeAttr` values.  
+ [in] `TypeDef` атрибуты. Это битовая маска `CoreTypeAttr` значений.  
   
  `tkExtends`  
- [in] The token of the base class. It must be either an `mdTypeDef` or an `mdTypeRef` token.  
+ окне Маркер базового класса. Это должен быть либо `mdTypeDef`, либо маркер `mdTypeRef`.  
   
  `rtkImplements`  
- [in] An array of tokens specifying the interfaces that this class or interface implements.  
+ окне Массив токенов, указывающий интерфейсы, реализуемые этим классом или интерфейсом.  
   
  `ptd`  
- [out] The `mdTypeDef` token assigned.  
+ заполняет Назначенный маркер `mdTypeDef`.  
   
-## <a name="remarks"></a>Заметки  
- A flag in `dwTypeDefFlags` specifies whether the type being created is a common type system reference type (class or interface) or a common type system value type.  
+## <a name="remarks"></a>Примечания  
+ Флаг в `dwTypeDefFlags` указывает, является ли создаваемый тип ссылочным типом системы общих типов (класс или интерфейс) или типом значения системы общего типа.  
   
- Depending on the parameters supplied, this method, as a side effect, may also create an `mdInterfaceImpl` record for each interface that is inherited or implemented by this type. However, this method does not return any of these `mdInterfaceImpl` tokens. If a client wants to later add or modify an `mdInterfaceImpl` token, it must use the `IMetaDataImport` interface to enumerate them. If you want to use COM semantics of the `[default]` interface, you should supply the default interface as the first element in `rtkImplements`; a custom attribute set on the class will indicate that the class has a default interface (which is always assumed to be the first `mdInterfaceImpl` token declared for the class).  
+ В зависимости от предоставленных параметров этот метод, как побочный результат, может также создавать запись `mdInterfaceImpl` для каждого интерфейса, унаследованного или реализуемого этим типом. Однако этот метод не возвращает ни одного из этих маркеров `mdInterfaceImpl`. Если клиент хочет позже добавить или изменить маркер `mdInterfaceImpl`, он должен использовать интерфейс `IMetaDataImport`, чтобы перечислить их. Если вы хотите использовать семантику COM интерфейса `[default]`, необходимо указать интерфейс по умолчанию в качестве первого элемента в `rtkImplements`; настраиваемый атрибут, заданный для класса, указывает, что класс имеет интерфейс по умолчанию (который всегда считается первым маркером `mdInterfaceImpl`, объявленным для класса).  
   
- Each element of the `rtkImplements` array holds an `mdTypeDef` or `mdTypeRef` token. The last element in the array must be `mdTokenNil`.  
+ Каждый элемент массива `rtkImplements` содержит маркер `mdTypeDef` или `mdTypeRef`. Последний элемент в массиве должен быть `mdTokenNil`.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Заголовок:** COR. h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **Библиотека:** Используется в качестве ресурса в MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [Интерфейс IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

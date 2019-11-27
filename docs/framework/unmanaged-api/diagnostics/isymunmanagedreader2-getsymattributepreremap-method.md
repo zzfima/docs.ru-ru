@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446418"
 ---
 # <a name="isymunmanagedreader2getsymattributepreremap-method"></a>Метод ISymUnmanagedReader2::GetSymAttributePreRemap
-Gets a custom attribute based upon its name. Unlike metadata custom attributes, these attributes are held in the symbol store.  
+Возвращает настраиваемый атрибут на основе его имени. В отличие от пользовательских атрибутов метаданных эти атрибуты хранятся в хранилище символов.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,26 +39,26 @@ HRESULT GetSymAttributePreRemap(
   
 ## <a name="parameters"></a>Параметры  
  `parent`  
- [in] The metadata token of the parent.  
+ окне Маркер метаданных родителя.  
   
  `name`  
- [in] A pointer to a `WCHAR` that contains the name.  
+ окне Указатель на `WCHAR`, содержащий имя.  
   
  `cBuffer`  
- [in] A `ULONG32` that indicates the size of the `buffer` array.  
+ окне `ULONG32`, указывающий размер массива `buffer`.  
   
  `pcBuffer`  
- [out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the attribute bytes.  
+ заполняет Указатель на `ULONG32`, который получает размер буфера, необходимый для хранения байтов атрибута.  
   
  `buffer`  
- [out] A pointer to the buffer that receives the attribute bytes.  
+ заполняет Указатель на буфер, который получает байты атрибута.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK, если метод выполнен. в противном случае E_FAIL или другой код ошибки.  
   
 ## <a name="requirements"></a>Требования  
- **Header:** CorSym.idl, CorSym.h  
+ **Заголовок:** Корсим. idl, Корсим. h  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс ISymUnmanagedReader2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader2-interface.md)

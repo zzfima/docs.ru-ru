@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446972"
 ---
 # <a name="icorprofilercallbackruntimesuspendfinished-method"></a>Метод ICorProfilerCallback::RuntimeSuspendFinished
-Notifies the profiler that the runtime has completed suspension of all runtime threads.  
+Уведомляет профилировщик о том, что среда выполнения завершила приостановку всех потоков среды выполнения.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -31,10 +31,10 @@ Notifies the profiler that the runtime has completed suspension of all runtime t
 HRESULT RuntimeSuspendFinished();  
 ```  
   
-## <a name="remarks"></a>Заметки  
- All runtime threads that are in unmanaged code are allowed to continue running until they try to re-enter the runtime. At that point they will also be suspended until the runtime resumes. This also applies to new threads that enter the runtime. All threads in the runtime are either suspended immediately if they are already in interruptible code, or they are asked to suspend when they reach interruptible code.  
+## <a name="remarks"></a>Примечания  
+ Все потоки среды выполнения, наявляющиеся в неуправляемом коде, могут продолжать выполняться до тех пор, пока они не попытаются повторно войти в среду выполнения. На этом этапе они также будут приостановлены до тех пор, пока среда выполнения не возобновит работу. Это также относится к новым потокам, которые вводят среду выполнения. Все потоки в среде выполнения либо приостанавливаются немедленно, если они уже находятся в коде для преобразования, либо если они запросят приостановить работу в случае, если они достигают кода источника.  
   
- The `RuntimeSuspendFinished` callback is guaranteed to occur on the same thread as the [ICorProfilerCallback::RuntimeSuspendStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendstarted-method.md) callback.  
+ Обратный вызов `RuntimeSuspendFinished` будет гарантированно выполняться в том же потоке, что и обратный вызов [ICorProfilerCallback:: рунтимесуспендстартед](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendstarted-method.md) .  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
@@ -45,7 +45,7 @@ HRESULT RuntimeSuspendFinished();
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
 - [Метод RuntimeSuspendAborted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendaborted-method.md)

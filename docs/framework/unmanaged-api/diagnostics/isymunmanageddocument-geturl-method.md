@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449122"
 ---
 # <a name="isymunmanageddocumentgeturl-method"></a>Метод ISymUnmanagedDocument::GetURL
-Returns the uniform resource locator (URL) for this document.  
+Возвращает универсальный указатель ресурса (URL) для этого документа.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -36,17 +36,17 @@ HRESULT GetURL(
   
 ## <a name="parameters"></a>Параметры  
  `cchUrl`  
- [in] The size, in characters, of the `szURL` buffer.  
+ окне Размер `szURL`ного буфера в символах.  
   
  `pcchUrl`  
- [out] A pointer to a variable that receives the size of the URL, including the null termination.  
+ заполняет Указатель на переменную, которая получает размер URL-адреса, включая завершение, равное NULL.  
   
  `szUrl`  
- [out] The buffer containing the URL.  
+ заполняет Буфер, содержащий URL-адрес.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- S_OK if the method succeeds; otherwise, an error code.  
+ S_OK, если метод выполнен. в противном случае — код ошибки.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс ISymUnmanagedDocument](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

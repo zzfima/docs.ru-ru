@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449904"
 ---
 # <a name="icorprofilercallbackjitinlining-method"></a>Метод ICorProfilerCallback::JITInlining
-Notifies the profiler that the just-in-time (JIT) compiler is about to insert a function in line with another function.  
+Уведомляет профилировщик о том, что JIT-компилятор собирается вставить функцию в строку с другой функцией.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -36,18 +36,18 @@ HRESULT JITInlining(
   
 ## <a name="parameters"></a>Параметры  
  `callerId`  
- [in] The ID of the function into which the `calleeId` function will be inserted.  
+ окне Идентификатор функции, в которую будет вставлена функция `calleeId`.  
   
  `calleeId`  
- [in] The ID of the function to be inserted.  
+ окне Идентификатор вставляемой функции.  
   
  `pfShouldInline`  
- [out] `true` to allow the insertion to occur; otherwise, `false`.  
+ [out] `true`, чтобы разрешить вставку; в противном случае `false`.  
   
-## <a name="remarks"></a>Заметки  
- The profiler can set `pfShouldInline` to `false` to prevent the `calleeId` function from being inserted into the `callerId` function. Also, the profiler can globally disable inline insertion by using the COR_PRF_DISABLE_INLINING value of the [COR_PRF_MONITOR](../../../../docs/framework/unmanaged-api/profiling/cor-prf-monitor-enumeration.md) enumeration.  
+## <a name="remarks"></a>Примечания  
+ Профилировщик может установить `pfShouldInline` `false`, чтобы функция `calleeId` не была вставлена в функцию `callerId`. Кроме того, профилировщик может глобально отключить встроенную вставку, используя значение COR_PRF_DISABLE_INLINING перечисления [COR_PRF_MONITOR](../../../../docs/framework/unmanaged-api/profiling/cor-prf-monitor-enumeration.md) .  
   
- Functions inserted inline do not raise events for entering or leaving. Therefore, the profiler must set `pfShouldInline` to `false` in order to produce an accurate callgraph. Setting `pfShouldInline` to `false` will affect performance, because inline insertion typically increases speed and reduces the number of separate JIT compilation events for the inserted method.  
+ Встроенные функции не вызывают события для входа или вставки. Таким образом, профилировщик должен задать `pfShouldInline` для `false`, чтобы получить точную граф вызовов. Установка `pfShouldInline` `false` влияет на производительность, так как встроенная вставка обычно увеличивает скорость и сокращает число отдельных событий JIT-компиляции для метода inserted.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
@@ -58,6 +58,6 @@ HRESULT JITInlining(
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

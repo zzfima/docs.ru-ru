@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450370"
 ---
 # <a name="cor_prf_runtime_type-enumeration"></a>Перечисление COR_PRF_RUNTIME_TYPE
-Contains values that indicate the version of the common language runtime (CLR): desktop or CoreCLR, which is used in Silverlight.  
+Содержит значения, указывающие версию среды CLR: Desktop или CoreCLR, которая используется в Silverlight.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,10 +38,10 @@ typedef enum
   
 |Член|Описание|  
 |------------|-----------------|  
-|`COR_PRF_DESKTOP_CLR`|The desktop version of the CLR.|  
-|`COR_PRF_CORE_CLR`|The core version of the CLR, used in Silverlight.|  
+|`COR_PRF_DESKTOP_CLR`|Версия среды CLR для настольных систем.|  
+|`COR_PRF_CORE_CLR`|Основная версия среды CLR, используемая в Silverlight.|  
   
-## <a name="remarks"></a>Заметки  
+## <a name="remarks"></a>Примечания  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
@@ -52,6 +52,6 @@ typedef enum
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Перечисления профилирования](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

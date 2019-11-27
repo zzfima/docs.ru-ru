@@ -18,18 +18,18 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349878"
 ---
 # <a name="dates-and-times-summary-visual-basic"></a>Сводка элементов для работы со значениями даты и времени (Visual Basic)
-Visual Basic language keywords and run-time library members are organized by purpose and use.  
+Ключевые слова языка Visual Basic и элементы библиотеки времени выполнения упорядочены по целям и использованию.  
   
-|Действие|Элемент языка|  
+|Действие|Language, элемент|  
 |------------|----------------------|  
-|Get the current date or time.|<xref:Microsoft.VisualBasic.DateAndTime.Now%2A>значение <xref:Microsoft.VisualBasic.DateAndTime.Today%2A>значение <xref:Microsoft.VisualBasic.DateAndTime.TimeOfDay%2A>|  
-|Perform date calculations.|<xref:Microsoft.VisualBasic.DateAndTime.DateAdd%2A>значение <xref:Microsoft.VisualBasic.DateAndTime.DateDiff%2A>значение <xref:Microsoft.VisualBasic.DateAndTime.DatePart%2A>|  
-|Return a date.|<xref:Microsoft.VisualBasic.DateAndTime.DateSerial%2A>, <xref:Microsoft.VisualBasic.DateAndTime.DateValue%2A>, <xref:Microsoft.VisualBasic.DateAndTime.MonthName%2A>, <xref:Microsoft.VisualBasic.DateAndTime.WeekdayName%2A>|  
-|Return a time.|<xref:Microsoft.VisualBasic.DateAndTime.TimeSerial%2A>, <xref:Microsoft.VisualBasic.DateAndTime.TimeValue%2A>|  
-|Set the date or time.|<xref:Microsoft.VisualBasic.DateAndTime.DateString%2A>, <xref:Microsoft.VisualBasic.DateAndTime.TimeOfDay%2A>, <xref:Microsoft.VisualBasic.DateAndTime.TimeString%2A>, <xref:Microsoft.VisualBasic.DateAndTime.Today%2A>|  
-|Time a process.|<xref:Microsoft.VisualBasic.DateAndTime.Timer%2A>|  
+|Получение текущей даты или времени.|<xref:Microsoft.VisualBasic.DateAndTime.Now%2A>, <xref:Microsoft.VisualBasic.DateAndTime.Today%2A>, <xref:Microsoft.VisualBasic.DateAndTime.TimeOfDay%2A>|  
+|Выполнение вычислений дат.|<xref:Microsoft.VisualBasic.DateAndTime.DateAdd%2A>, <xref:Microsoft.VisualBasic.DateAndTime.DateDiff%2A>, <xref:Microsoft.VisualBasic.DateAndTime.DatePart%2A>|  
+|Возврат даты.|<xref:Microsoft.VisualBasic.DateAndTime.DateSerial%2A>, <xref:Microsoft.VisualBasic.DateAndTime.DateValue%2A>, <xref:Microsoft.VisualBasic.DateAndTime.MonthName%2A>, <xref:Microsoft.VisualBasic.DateAndTime.WeekdayName%2A>|  
+|Возврат времени.|<xref:Microsoft.VisualBasic.DateAndTime.TimeSerial%2A>, <xref:Microsoft.VisualBasic.DateAndTime.TimeValue%2A>|  
+|Задайте дату или время.|<xref:Microsoft.VisualBasic.DateAndTime.DateString%2A>, <xref:Microsoft.VisualBasic.DateAndTime.TimeOfDay%2A>, <xref:Microsoft.VisualBasic.DateAndTime.TimeString%2A>, <xref:Microsoft.VisualBasic.DateAndTime.Today%2A>|  
+|Время процесса.|<xref:Microsoft.VisualBasic.DateAndTime.Timer%2A>|  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Ключевые слова](../../../visual-basic/language-reference/keywords/index.md)
 - [Члены библиотеки времени выполнения Visual Basic](../../../visual-basic/language-reference/runtime-library-members.md)
