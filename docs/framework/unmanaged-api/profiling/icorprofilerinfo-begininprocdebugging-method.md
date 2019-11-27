@@ -22,10 +22,10 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74447752"
 ---
-# <a name="icorprofilerinfobegininprocdebugging-method"></a><span data-ttu-id="7e862-102">Метод ICorProfilerInfo::BeginInprocDebugging</span><span class="sxs-lookup"><span data-stu-id="7e862-102">ICorProfilerInfo::BeginInprocDebugging Method</span></span>
-<span data-ttu-id="7e862-103">Initializes in-process debugging support.</span><span class="sxs-lookup"><span data-stu-id="7e862-103">Initializes in-process debugging support.</span></span> <span data-ttu-id="7e862-104">This method is obsolete in the .NET Framework version 2.0.</span><span class="sxs-lookup"><span data-stu-id="7e862-104">This method is obsolete in the .NET Framework version 2.0.</span></span>  
+# <a name="icorprofilerinfobegininprocdebugging-method"></a><span data-ttu-id="54cd1-102">Метод ICorProfilerInfo::BeginInprocDebugging</span><span class="sxs-lookup"><span data-stu-id="54cd1-102">ICorProfilerInfo::BeginInprocDebugging Method</span></span>
+<span data-ttu-id="54cd1-103">Инициализирует поддержку внутрипроцессного отладки.</span><span class="sxs-lookup"><span data-stu-id="54cd1-103">Initializes in-process debugging support.</span></span> <span data-ttu-id="54cd1-104">Этот метод является устаревшим в .NET Framework версии 2,0.</span><span class="sxs-lookup"><span data-stu-id="54cd1-104">This method is obsolete in the .NET Framework version 2.0.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="7e862-105">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="7e862-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="54cd1-105">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="54cd1-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT BeginInprocDebugging(  
@@ -33,25 +33,25 @@ HRESULT BeginInprocDebugging(
     [out] DWORD *pdwProfilerContext);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="7e862-106">Параметры</span><span class="sxs-lookup"><span data-stu-id="7e862-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="54cd1-106">Параметры</span><span class="sxs-lookup"><span data-stu-id="54cd1-106">Parameters</span></span>  
  `fThisThreadOnly`  
- <span data-ttu-id="7e862-107">[in] Set this value to `true` to initialize debugging support for only the current thread; set it to `false` to initialize debugging support for all threads.</span><span class="sxs-lookup"><span data-stu-id="7e862-107">[in] Set this value to `true` to initialize debugging support for only the current thread; set it to `false` to initialize debugging support for all threads.</span></span>  
+ <span data-ttu-id="54cd1-107">окне Присвойте этому параметру значение `true`, чтобы инициализировать поддержку отладки только для текущего потока; Задайте для него значение `false`, чтобы инициализировать поддержку отладки для всех потоков.</span><span class="sxs-lookup"><span data-stu-id="54cd1-107">[in] Set this value to `true` to initialize debugging support for only the current thread; set it to `false` to initialize debugging support for all threads.</span></span>  
   
  `pdwProfilerContext`  
- <span data-ttu-id="7e862-108">[out] The pointer to a returned value that identifies the debugging session.</span><span class="sxs-lookup"><span data-stu-id="7e862-108">[out] The pointer to a returned value that identifies the debugging session.</span></span>  
+ <span data-ttu-id="54cd1-108">заполняет Указатель на возвращаемое значение, идентифицирующее сеанс отладки.</span><span class="sxs-lookup"><span data-stu-id="54cd1-108">[out] The pointer to a returned value that identifies the debugging session.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="7e862-109">Заметки</span><span class="sxs-lookup"><span data-stu-id="7e862-109">Remarks</span></span>  
- <span data-ttu-id="7e862-110">The CLR debugging services supported limited in-process debugging in the .NET Framework versions 1.0 and 1.1.</span><span class="sxs-lookup"><span data-stu-id="7e862-110">The CLR debugging services supported limited in-process debugging in the .NET Framework versions 1.0 and 1.1.</span></span> <span data-ttu-id="7e862-111">In-process debugging enabled a profiler to use the inspection portions of the debugging API.</span><span class="sxs-lookup"><span data-stu-id="7e862-111">In-process debugging enabled a profiler to use the inspection portions of the debugging API.</span></span> <span data-ttu-id="7e862-112">However, due to customer feedback, in-process debugging has been removed from the .NET Framework in version 2.0, and replaced with a set of functionality that is more in line with the profiling API.</span><span class="sxs-lookup"><span data-stu-id="7e862-112">However, due to customer feedback, in-process debugging has been removed from the .NET Framework in version 2.0, and replaced with a set of functionality that is more in line with the profiling API.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="54cd1-109">Примечания</span><span class="sxs-lookup"><span data-stu-id="54cd1-109">Remarks</span></span>  
+ <span data-ttu-id="54cd1-110">Службы отладки CLR поддерживали ограниченную внутрипроцессную отладку в .NET Framework версиях 1,0 и 1,1.</span><span class="sxs-lookup"><span data-stu-id="54cd1-110">The CLR debugging services supported limited in-process debugging in the .NET Framework versions 1.0 and 1.1.</span></span> <span data-ttu-id="54cd1-111">В процессе отладки с помощью профилировщика можно использовать части проверки для API отладки.</span><span class="sxs-lookup"><span data-stu-id="54cd1-111">In-process debugging enabled a profiler to use the inspection portions of the debugging API.</span></span> <span data-ttu-id="54cd1-112">Однако из-за отзывов клиентов внутрипроцессный процесс отладки был удален из .NET Framework в версии 2,0 и заменен набором функциональных возможностей, которые более подробно описаны в API профилирования.</span><span class="sxs-lookup"><span data-stu-id="54cd1-112">However, due to customer feedback, in-process debugging has been removed from the .NET Framework in version 2.0, and replaced with a set of functionality that is more in line with the profiling API.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="7e862-113">Требования</span><span class="sxs-lookup"><span data-stu-id="7e862-113">Requirements</span></span>  
- <span data-ttu-id="7e862-114">**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7e862-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="54cd1-113">Требования</span><span class="sxs-lookup"><span data-stu-id="54cd1-113">Requirements</span></span>  
+ <span data-ttu-id="54cd1-114">**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="54cd1-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="7e862-115">**Заголовок:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="7e862-115">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="54cd1-115">**Заголовок:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="54cd1-115">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="7e862-116">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="7e862-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="54cd1-116">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="54cd1-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="7e862-117">**.NET Framework Version:** 1.0</span><span class="sxs-lookup"><span data-stu-id="7e862-117">**.NET Framework Version:** 1.0</span></span>  
+ <span data-ttu-id="54cd1-117">**Версия .NET Framework:** 1,0</span><span class="sxs-lookup"><span data-stu-id="54cd1-117">**.NET Framework Version:** 1.0</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7e862-118">См. также</span><span class="sxs-lookup"><span data-stu-id="7e862-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="54cd1-118">См. также</span><span class="sxs-lookup"><span data-stu-id="54cd1-118">See also</span></span>
 
-- [<span data-ttu-id="7e862-119">Интерфейс ICorProfilerInfo</span><span class="sxs-lookup"><span data-stu-id="7e862-119">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [<span data-ttu-id="54cd1-119">Интерфейс ICorProfilerInfo</span><span class="sxs-lookup"><span data-stu-id="54cd1-119">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

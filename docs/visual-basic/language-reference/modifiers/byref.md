@@ -15,19 +15,19 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351609"
 ---
-# <a name="byref-visual-basic"></a><span data-ttu-id="35353-102">ByRef (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="35353-102">ByRef (Visual Basic)</span></span>
-<span data-ttu-id="35353-103">Specifies that an argument is passed in such a way that the called procedure can change the value of a variable underlying the argument in the calling code.</span><span class="sxs-lookup"><span data-stu-id="35353-103">Specifies that an argument is passed in such a way that the called procedure can change the value of a variable underlying the argument in the calling code.</span></span>  
+# <a name="byref-visual-basic"></a><span data-ttu-id="78780-102">ByRef (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="78780-102">ByRef (Visual Basic)</span></span>
+<span data-ttu-id="78780-103">Указывает, что аргумент передается таким образом, что вызываемая процедура может изменить значение переменной, которая является базовым аргументом в вызывающем коде.</span><span class="sxs-lookup"><span data-stu-id="78780-103">Specifies that an argument is passed in such a way that the called procedure can change the value of a variable underlying the argument in the calling code.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="35353-104">Заметки</span><span class="sxs-lookup"><span data-stu-id="35353-104">Remarks</span></span>  
- <span data-ttu-id="35353-105">Модификатор `ByRef` можно использовать в следующих контекстах:</span><span class="sxs-lookup"><span data-stu-id="35353-105">The `ByRef` modifier can be used in these contexts:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="78780-104">Примечания</span><span class="sxs-lookup"><span data-stu-id="78780-104">Remarks</span></span>  
+ <span data-ttu-id="78780-105">Модификатор `ByRef` можно использовать в следующих контекстах:</span><span class="sxs-lookup"><span data-stu-id="78780-105">The `ByRef` modifier can be used in these contexts:</span></span>  
   
- [<span data-ttu-id="35353-106">Оператор Declare</span><span class="sxs-lookup"><span data-stu-id="35353-106">Declare Statement</span></span>](../../../visual-basic/language-reference/statements/declare-statement.md)  
+ [<span data-ttu-id="78780-106">Оператор Declare</span><span class="sxs-lookup"><span data-stu-id="78780-106">Declare Statement</span></span>](../../../visual-basic/language-reference/statements/declare-statement.md)  
   
- [<span data-ttu-id="35353-107">Оператор Function</span><span class="sxs-lookup"><span data-stu-id="35353-107">Function Statement</span></span>](../../../visual-basic/language-reference/statements/function-statement.md)  
+ [<span data-ttu-id="78780-107">Оператор Function</span><span class="sxs-lookup"><span data-stu-id="78780-107">Function Statement</span></span>](../../../visual-basic/language-reference/statements/function-statement.md)  
   
- [<span data-ttu-id="35353-108">Оператор Sub</span><span class="sxs-lookup"><span data-stu-id="35353-108">Sub Statement</span></span>](../../../visual-basic/language-reference/statements/sub-statement.md)  
+ [<span data-ttu-id="78780-108">Оператор Sub</span><span class="sxs-lookup"><span data-stu-id="78780-108">Sub Statement</span></span>](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-## <a name="see-also"></a><span data-ttu-id="35353-109">См. также</span><span class="sxs-lookup"><span data-stu-id="35353-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="78780-109">См. также</span><span class="sxs-lookup"><span data-stu-id="78780-109">See also</span></span>
 
-- [<span data-ttu-id="35353-110">Ключевые слова</span><span class="sxs-lookup"><span data-stu-id="35353-110">Keywords</span></span>](../../../visual-basic/language-reference/keywords/index.md)
-- [<span data-ttu-id="35353-111">Передача аргументов по значению и по ссылке</span><span class="sxs-lookup"><span data-stu-id="35353-111">Passing Arguments by Value and by Reference</span></span>](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)
+- [<span data-ttu-id="78780-110">Ключевые слова</span><span class="sxs-lookup"><span data-stu-id="78780-110">Keywords</span></span>](../../../visual-basic/language-reference/keywords/index.md)
+- [<span data-ttu-id="78780-111">Передача аргументов по значению и по ссылке</span><span class="sxs-lookup"><span data-stu-id="78780-111">Passing Arguments by Value and by Reference</span></span>](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)

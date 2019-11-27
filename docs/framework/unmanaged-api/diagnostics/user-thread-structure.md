@@ -21,10 +21,10 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74437971"
 ---
-# <a name="user_thread-structure"></a><span data-ttu-id="b2d76-102">Структура USER_THREAD</span><span class="sxs-lookup"><span data-stu-id="b2d76-102">USER_THREAD Structure</span></span>
-<span data-ttu-id="b2d76-103">Provides information to a debugger about a thread.</span><span class="sxs-lookup"><span data-stu-id="b2d76-103">Provides information to a debugger about a thread.</span></span> <span data-ttu-id="b2d76-104">For more information, see the [INotifySource2::SetNotifyFilter](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-setnotifyfilter-method.md) method.</span><span class="sxs-lookup"><span data-stu-id="b2d76-104">For more information, see the [INotifySource2::SetNotifyFilter](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-setnotifyfilter-method.md) method.</span></span>  
+# <a name="user_thread-structure"></a><span data-ttu-id="c1883-102">Структура USER_THREAD</span><span class="sxs-lookup"><span data-stu-id="c1883-102">USER_THREAD Structure</span></span>
+<span data-ttu-id="c1883-103">Предоставляет сведения отладчику о потоке.</span><span class="sxs-lookup"><span data-stu-id="c1883-103">Provides information to a debugger about a thread.</span></span> <span data-ttu-id="c1883-104">Дополнительные сведения см. в описании метода [INotifySource2:: сетнотифифилтер](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-setnotifyfilter-method.md) .</span><span class="sxs-lookup"><span data-stu-id="c1883-104">For more information, see the [INotifySource2::SetNotifyFilter](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-setnotifyfilter-method.md) method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b2d76-105">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="b2d76-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c1883-105">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="c1883-105">Syntax</span></span>  
   
 ```cpp  
 typedef struct tagUSER_THREAD  
@@ -35,18 +35,18 @@ typedef struct tagUSER_THREAD
 } USER_THREAD;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="b2d76-106">Члены</span><span class="sxs-lookup"><span data-stu-id="b2d76-106">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="c1883-106">Члены</span><span class="sxs-lookup"><span data-stu-id="c1883-106">Members</span></span>  
   
-|<span data-ttu-id="b2d76-107">Член</span><span class="sxs-lookup"><span data-stu-id="b2d76-107">Member</span></span>|<span data-ttu-id="b2d76-108">Описание</span><span class="sxs-lookup"><span data-stu-id="b2d76-108">Description</span></span>|  
+|<span data-ttu-id="c1883-107">Член</span><span class="sxs-lookup"><span data-stu-id="c1883-107">Member</span></span>|<span data-ttu-id="c1883-108">Описание</span><span class="sxs-lookup"><span data-stu-id="c1883-108">Description</span></span>|  
 |------------|-----------------|  
-|`pSidBuffer`|<span data-ttu-id="b2d76-109">Address of thread buffer.</span><span class="sxs-lookup"><span data-stu-id="b2d76-109">Address of thread buffer.</span></span>|  
-|`dwSidLen`|<span data-ttu-id="b2d76-110">Length of thread buffer, in bytes.</span><span class="sxs-lookup"><span data-stu-id="b2d76-110">Length of thread buffer, in bytes.</span></span>|  
-|`dwTid`|<span data-ttu-id="b2d76-111">Thread ID.</span><span class="sxs-lookup"><span data-stu-id="b2d76-111">Thread ID.</span></span>|  
+|`pSidBuffer`|<span data-ttu-id="c1883-109">Адрес буфера потока.</span><span class="sxs-lookup"><span data-stu-id="c1883-109">Address of thread buffer.</span></span>|  
+|`dwSidLen`|<span data-ttu-id="c1883-110">Длина буфера потока в байтах.</span><span class="sxs-lookup"><span data-stu-id="c1883-110">Length of thread buffer, in bytes.</span></span>|  
+|`dwTid`|<span data-ttu-id="c1883-111">Идентификатор потока.</span><span class="sxs-lookup"><span data-stu-id="c1883-111">Thread ID.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="b2d76-112">Требования</span><span class="sxs-lookup"><span data-stu-id="b2d76-112">Requirements</span></span>  
- <span data-ttu-id="b2d76-113">**Header:** ProtocolNotify2.idl</span><span class="sxs-lookup"><span data-stu-id="b2d76-113">**Header:** ProtocolNotify2.idl</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c1883-112">Требования</span><span class="sxs-lookup"><span data-stu-id="c1883-112">Requirements</span></span>  
+ <span data-ttu-id="c1883-113">**Заголовок:** ProtocolNotify2. idl</span><span class="sxs-lookup"><span data-stu-id="c1883-113">**Header:** ProtocolNotify2.idl</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b2d76-114">См. также</span><span class="sxs-lookup"><span data-stu-id="b2d76-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c1883-114">См. также</span><span class="sxs-lookup"><span data-stu-id="c1883-114">See also</span></span>
 
-- [<span data-ttu-id="b2d76-115">Метод SetNotifyFilter</span><span class="sxs-lookup"><span data-stu-id="b2d76-115">SetNotifyFilter Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-setnotifyfilter-method.md)
-- [<span data-ttu-id="b2d76-116">Структуры хранилища символов диагностики</span><span class="sxs-lookup"><span data-stu-id="b2d76-116">Diagnostics Symbol Store Structures</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-structures.md)
+- [<span data-ttu-id="c1883-115">Метод SetNotifyFilter</span><span class="sxs-lookup"><span data-stu-id="c1883-115">SetNotifyFilter Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-setnotifyfilter-method.md)
+- [<span data-ttu-id="c1883-116">Структуры хранилища символов диагностики</span><span class="sxs-lookup"><span data-stu-id="c1883-116">Diagnostics Symbol Store Structures</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-structures.md)

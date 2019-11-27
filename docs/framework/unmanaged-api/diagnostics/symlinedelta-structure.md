@@ -21,10 +21,10 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74438010"
 ---
-# <a name="symlinedelta-structure"></a><span data-ttu-id="d3a03-102">Структура SYMLINEDELTA</span><span class="sxs-lookup"><span data-stu-id="d3a03-102">SYMLINEDELTA Structure</span></span>
-<span data-ttu-id="d3a03-103">Provides information to the symbol handler about methods that were moved as a result of edits.</span><span class="sxs-lookup"><span data-stu-id="d3a03-103">Provides information to the symbol handler about methods that were moved as a result of edits.</span></span>  
+# <a name="symlinedelta-structure"></a><span data-ttu-id="fa07e-102">Структура SYMLINEDELTA</span><span class="sxs-lookup"><span data-stu-id="fa07e-102">SYMLINEDELTA Structure</span></span>
+<span data-ttu-id="fa07e-103">Предоставляет сведения обработчику символов о методах, которые были перемещены в результате изменений.</span><span class="sxs-lookup"><span data-stu-id="fa07e-103">Provides information to the symbol handler about methods that were moved as a result of edits.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d3a03-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="d3a03-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="fa07e-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="fa07e-104">Syntax</span></span>  
   
 ```cpp  
 typedef struct _SYMLINEDELTA  
@@ -34,16 +34,16 @@ typedef struct _SYMLINEDELTA
     } SYMLINEDELTA;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="d3a03-105">Члены</span><span class="sxs-lookup"><span data-stu-id="d3a03-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="fa07e-105">Члены</span><span class="sxs-lookup"><span data-stu-id="fa07e-105">Members</span></span>  
   
-|<span data-ttu-id="d3a03-106">Член</span><span class="sxs-lookup"><span data-stu-id="d3a03-106">Member</span></span>|<span data-ttu-id="d3a03-107">Описание</span><span class="sxs-lookup"><span data-stu-id="d3a03-107">Description</span></span>|  
+|<span data-ttu-id="fa07e-106">Член</span><span class="sxs-lookup"><span data-stu-id="fa07e-106">Member</span></span>|<span data-ttu-id="fa07e-107">Описание</span><span class="sxs-lookup"><span data-stu-id="fa07e-107">Description</span></span>|  
 |------------|-----------------|  
-|`mdMethod`|<span data-ttu-id="d3a03-108">The method's metadata token.</span><span class="sxs-lookup"><span data-stu-id="d3a03-108">The method's metadata token.</span></span>|  
-|`delta`|<span data-ttu-id="d3a03-109">The number of lines the method was moved.</span><span class="sxs-lookup"><span data-stu-id="d3a03-109">The number of lines the method was moved.</span></span>|  
+|`mdMethod`|<span data-ttu-id="fa07e-108">Токен метаданных метода.</span><span class="sxs-lookup"><span data-stu-id="fa07e-108">The method's metadata token.</span></span>|  
+|`delta`|<span data-ttu-id="fa07e-109">Число строк, в которые был перемещен метод.</span><span class="sxs-lookup"><span data-stu-id="fa07e-109">The number of lines the method was moved.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="d3a03-110">Требования</span><span class="sxs-lookup"><span data-stu-id="d3a03-110">Requirements</span></span>  
- <span data-ttu-id="d3a03-111">**Header:** CorSym.idl</span><span class="sxs-lookup"><span data-stu-id="d3a03-111">**Header:** CorSym.idl</span></span>  
+## <a name="requirements"></a><span data-ttu-id="fa07e-110">Требования</span><span class="sxs-lookup"><span data-stu-id="fa07e-110">Requirements</span></span>  
+ <span data-ttu-id="fa07e-111">**Заголовок:** Корсим. idl</span><span class="sxs-lookup"><span data-stu-id="fa07e-111">**Header:** CorSym.idl</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d3a03-112">См. также</span><span class="sxs-lookup"><span data-stu-id="d3a03-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="fa07e-112">См. также</span><span class="sxs-lookup"><span data-stu-id="fa07e-112">See also</span></span>
 
-- [<span data-ttu-id="d3a03-113">Структуры хранилища символов диагностики</span><span class="sxs-lookup"><span data-stu-id="d3a03-113">Diagnostics Symbol Store Structures</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-structures.md)
+- [<span data-ttu-id="fa07e-113">Структуры хранилища символов диагностики</span><span class="sxs-lookup"><span data-stu-id="fa07e-113">Diagnostics Symbol Store Structures</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-structures.md)

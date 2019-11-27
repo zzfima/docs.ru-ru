@@ -22,10 +22,10 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74444650"
 ---
-# <a name="imetadataemit2definegenericparam-method"></a><span data-ttu-id="77b88-102">Метод IMetaDataEmit2::DefineGenericParam</span><span class="sxs-lookup"><span data-stu-id="77b88-102">IMetaDataEmit2::DefineGenericParam Method</span></span>
-<span data-ttu-id="77b88-103">Creates a definition for a generic type parameter, and gets a token to that generic type parameter.</span><span class="sxs-lookup"><span data-stu-id="77b88-103">Creates a definition for a generic type parameter, and gets a token to that generic type parameter.</span></span>  
+# <a name="imetadataemit2definegenericparam-method"></a><span data-ttu-id="68106-102">Метод IMetaDataEmit2::DefineGenericParam</span><span class="sxs-lookup"><span data-stu-id="68106-102">IMetaDataEmit2::DefineGenericParam Method</span></span>
+<span data-ttu-id="68106-103">Создает определение для параметра универсального типа и получает маркер для этого параметра универсального типа.</span><span class="sxs-lookup"><span data-stu-id="68106-103">Creates a definition for a generic type parameter, and gets a token to that generic type parameter.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="77b88-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="77b88-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="68106-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="68106-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT DefineGenericParam (   
@@ -39,38 +39,38 @@ HRESULT DefineGenericParam (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="77b88-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="77b88-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="68106-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="68106-105">Parameters</span></span>  
  `tk`  
- <span data-ttu-id="77b88-106">[in] An `mdTypeDef` or `mdMethodDef` token that represents the method or constructor for which to define a generic parameter.</span><span class="sxs-lookup"><span data-stu-id="77b88-106">[in] An `mdTypeDef` or `mdMethodDef` token that represents the method or constructor for which to define a generic parameter.</span></span>  
+ <span data-ttu-id="68106-106">окне Маркер `mdTypeDef` или `mdMethodDef`, представляющий метод или конструктор, для которого определяется универсальный параметр.</span><span class="sxs-lookup"><span data-stu-id="68106-106">[in] An `mdTypeDef` or `mdMethodDef` token that represents the method or constructor for which to define a generic parameter.</span></span>  
   
  `ulParamSeq`  
- <span data-ttu-id="77b88-107">[in] The index of the generic parameter.</span><span class="sxs-lookup"><span data-stu-id="77b88-107">[in] The index of the generic parameter.</span></span>  
+ <span data-ttu-id="68106-107">окне Индекс универсального параметра.</span><span class="sxs-lookup"><span data-stu-id="68106-107">[in] The index of the generic parameter.</span></span>  
   
  `dwParamFlags`  
- <span data-ttu-id="77b88-108">[in] A value of the [CorGenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md) enumeration that describes the type for the generic parameter.</span><span class="sxs-lookup"><span data-stu-id="77b88-108">[in] A value of the [CorGenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md) enumeration that describes the type for the generic parameter.</span></span>  
+ <span data-ttu-id="68106-108">окне Значение перечисления [корженерикпараматтр](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md) , описывающее тип универсального параметра.</span><span class="sxs-lookup"><span data-stu-id="68106-108">[in] A value of the [CorGenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md) enumeration that describes the type for the generic parameter.</span></span>  
   
  `szname`  
- <span data-ttu-id="77b88-109">[in] The name of the parameter.</span><span class="sxs-lookup"><span data-stu-id="77b88-109">[in] The name of the parameter.</span></span>  
+ <span data-ttu-id="68106-109">окне Имя параметра.</span><span class="sxs-lookup"><span data-stu-id="68106-109">[in] The name of the parameter.</span></span>  
   
  `reserved`  
- <span data-ttu-id="77b88-110">[in] This parameter is reserved for future extensibility.</span><span class="sxs-lookup"><span data-stu-id="77b88-110">[in] This parameter is reserved for future extensibility.</span></span>  
+ <span data-ttu-id="68106-110">окне Этот параметр зарезервирован для расширения в будущем.</span><span class="sxs-lookup"><span data-stu-id="68106-110">[in] This parameter is reserved for future extensibility.</span></span>  
   
  `rtkConstraints`  
- <span data-ttu-id="77b88-111">[in] A zero-terminated array of type constraints.</span><span class="sxs-lookup"><span data-stu-id="77b88-111">[in] A zero-terminated array of type constraints.</span></span> <span data-ttu-id="77b88-112">Array members must be an `mdTypeDef`, `mdTypeRef`, or `mdTypeSpec` metadata token.</span><span class="sxs-lookup"><span data-stu-id="77b88-112">Array members must be an `mdTypeDef`, `mdTypeRef`, or `mdTypeSpec` metadata token.</span></span>  
+ <span data-ttu-id="68106-111">окне Массив ограничений типа, заканчивающийся нулем.</span><span class="sxs-lookup"><span data-stu-id="68106-111">[in] A zero-terminated array of type constraints.</span></span> <span data-ttu-id="68106-112">Элементы массива должны быть `mdTypeDef`, `mdTypeRef`или маркером метаданных `mdTypeSpec`.</span><span class="sxs-lookup"><span data-stu-id="68106-112">Array members must be an `mdTypeDef`, `mdTypeRef`, or `mdTypeSpec` metadata token.</span></span>  
   
  `pgp`  
- <span data-ttu-id="77b88-113">[out] A token that represents the generic parameter.</span><span class="sxs-lookup"><span data-stu-id="77b88-113">[out] A token that represents the generic parameter.</span></span>  
+ <span data-ttu-id="68106-113">заполняет Токен, представляющий универсальный параметр.</span><span class="sxs-lookup"><span data-stu-id="68106-113">[out] A token that represents the generic parameter.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="77b88-114">Требования</span><span class="sxs-lookup"><span data-stu-id="77b88-114">Requirements</span></span>  
- <span data-ttu-id="77b88-115">**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="77b88-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="68106-114">Требования</span><span class="sxs-lookup"><span data-stu-id="68106-114">Requirements</span></span>  
+ <span data-ttu-id="68106-115">**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="68106-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="77b88-116">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="77b88-116">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="68106-116">**Заголовок:** COR. h</span><span class="sxs-lookup"><span data-stu-id="68106-116">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="77b88-117">**Library:** Used as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="77b88-117">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="68106-117">**Библиотека:** Используется в качестве ресурса в MsCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="68106-117">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="77b88-118">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="77b88-118">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="68106-118">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="68106-118">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="77b88-119">См. также</span><span class="sxs-lookup"><span data-stu-id="77b88-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="68106-119">См. также</span><span class="sxs-lookup"><span data-stu-id="68106-119">See also</span></span>
 
-- [<span data-ttu-id="77b88-120">Интерфейс IMetaDataEmit2</span><span class="sxs-lookup"><span data-stu-id="77b88-120">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
-- [<span data-ttu-id="77b88-121">Интерфейс IMetaDataEmit</span><span class="sxs-lookup"><span data-stu-id="77b88-121">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="68106-120">Интерфейс IMetaDataEmit2</span><span class="sxs-lookup"><span data-stu-id="68106-120">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [<span data-ttu-id="68106-121">Интерфейс IMetaDataEmit</span><span class="sxs-lookup"><span data-stu-id="68106-121">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)

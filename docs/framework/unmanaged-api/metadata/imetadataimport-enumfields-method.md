@@ -22,10 +22,10 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449536"
 ---
-# <a name="imetadataimportenumfields-method"></a><span data-ttu-id="a4116-102">Метод IMetaDataImport::EnumFields</span><span class="sxs-lookup"><span data-stu-id="a4116-102">IMetaDataImport::EnumFields Method</span></span>
-<span data-ttu-id="a4116-103">Перечисляет токены FieldDef для типа, на который ссылается указанный токен TypeDef.</span><span class="sxs-lookup"><span data-stu-id="a4116-103">Enumerates FieldDef tokens for the type referenced by the specified TypeDef token.</span></span>  
+# <a name="imetadataimportenumfields-method"></a><span data-ttu-id="9d711-102">Метод IMetaDataImport::EnumFields</span><span class="sxs-lookup"><span data-stu-id="9d711-102">IMetaDataImport::EnumFields Method</span></span>
+<span data-ttu-id="9d711-103">Перечисляет токены FieldDef для типа, на который ссылается указанный токен TypeDef.</span><span class="sxs-lookup"><span data-stu-id="9d711-103">Enumerates FieldDef tokens for the type referenced by the specified TypeDef token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a4116-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="a4116-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9d711-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="9d711-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT EnumFields (   
@@ -37,39 +37,39 @@ HRESULT EnumFields (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="a4116-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="a4116-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="9d711-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="9d711-105">Parameters</span></span>  
  `phEnum`  
- <span data-ttu-id="a4116-106">[in, out] A pointer to the enumerator.</span><span class="sxs-lookup"><span data-stu-id="a4116-106">[in, out] A pointer to the enumerator.</span></span>  
+ <span data-ttu-id="9d711-106">[вход, выход] Указатель на перечислитель.</span><span class="sxs-lookup"><span data-stu-id="9d711-106">[in, out] A pointer to the enumerator.</span></span>  
   
  `cl`  
- <span data-ttu-id="a4116-107">[in] The TypeDef token of the class whose fields are to be enumerated.</span><span class="sxs-lookup"><span data-stu-id="a4116-107">[in] The TypeDef token of the class whose fields are to be enumerated.</span></span>  
+ <span data-ttu-id="9d711-107">окне Токен TypeDef класса, поля которого необходимо перечислить.</span><span class="sxs-lookup"><span data-stu-id="9d711-107">[in] The TypeDef token of the class whose fields are to be enumerated.</span></span>  
   
  `rFields`  
- <span data-ttu-id="a4116-108">[out] The list of FieldDef tokens.</span><span class="sxs-lookup"><span data-stu-id="a4116-108">[out] The list of FieldDef tokens.</span></span>  
+ <span data-ttu-id="9d711-108">заполняет Список токенов FieldDef.</span><span class="sxs-lookup"><span data-stu-id="9d711-108">[out] The list of FieldDef tokens.</span></span>  
   
  `cMax`  
- <span data-ttu-id="a4116-109">[in] Максимальный размер массива `rFields`.</span><span class="sxs-lookup"><span data-stu-id="a4116-109">[in] The maximum size of the `rFields` array.</span></span>  
+ <span data-ttu-id="9d711-109">[in] Максимальный размер массива `rFields`.</span><span class="sxs-lookup"><span data-stu-id="9d711-109">[in] The maximum size of the `rFields` array.</span></span>  
   
  `pcTokens`  
- <span data-ttu-id="a4116-110">[out] The actual number of FieldDef tokens returned in `rFields`.</span><span class="sxs-lookup"><span data-stu-id="a4116-110">[out] The actual number of FieldDef tokens returned in `rFields`.</span></span>  
+ <span data-ttu-id="9d711-110">заполняет Фактическое число маркеров FieldDef, возвращаемых в `rFields`.</span><span class="sxs-lookup"><span data-stu-id="9d711-110">[out] The actual number of FieldDef tokens returned in `rFields`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="a4116-111">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="a4116-111">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="9d711-111">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="9d711-111">Return Value</span></span>  
   
-|<span data-ttu-id="a4116-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="a4116-112">HRESULT</span></span>|<span data-ttu-id="a4116-113">Описание</span><span class="sxs-lookup"><span data-stu-id="a4116-113">Description</span></span>|  
+|<span data-ttu-id="9d711-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="9d711-112">HRESULT</span></span>|<span data-ttu-id="9d711-113">Описание</span><span class="sxs-lookup"><span data-stu-id="9d711-113">Description</span></span>|  
 |-------------|-----------------|  
-|`S_OK`|<span data-ttu-id="a4116-114">`EnumFields` returned successfully.</span><span class="sxs-lookup"><span data-stu-id="a4116-114">`EnumFields` returned successfully.</span></span>|  
-|`S_FALSE`|<span data-ttu-id="a4116-115">There are no fields to enumerate.</span><span class="sxs-lookup"><span data-stu-id="a4116-115">There are no fields to enumerate.</span></span> <span data-ttu-id="a4116-116">In that case, `pcTokens` is zero.</span><span class="sxs-lookup"><span data-stu-id="a4116-116">In that case, `pcTokens` is zero.</span></span>|  
+|`S_OK`|<span data-ttu-id="9d711-114">`EnumFields` успешно возвращено.</span><span class="sxs-lookup"><span data-stu-id="9d711-114">`EnumFields` returned successfully.</span></span>|  
+|`S_FALSE`|<span data-ttu-id="9d711-115">Нет полей для перечисления.</span><span class="sxs-lookup"><span data-stu-id="9d711-115">There are no fields to enumerate.</span></span> <span data-ttu-id="9d711-116">В этом случае `pcTokens` равно нулю.</span><span class="sxs-lookup"><span data-stu-id="9d711-116">In that case, `pcTokens` is zero.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="a4116-117">Требования</span><span class="sxs-lookup"><span data-stu-id="a4116-117">Requirements</span></span>  
- <span data-ttu-id="a4116-118">**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a4116-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9d711-117">Требования</span><span class="sxs-lookup"><span data-stu-id="9d711-117">Requirements</span></span>  
+ <span data-ttu-id="9d711-118">**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9d711-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="a4116-119">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="a4116-119">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="9d711-119">**Заголовок:** COR. h</span><span class="sxs-lookup"><span data-stu-id="9d711-119">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="a4116-120">**Library:** Included as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="a4116-120">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="9d711-120">**Библиотека:** Включается в качестве ресурса в библиотеку MsCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="9d711-120">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="a4116-121">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a4116-121">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="9d711-121">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9d711-121">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a4116-122">См. также</span><span class="sxs-lookup"><span data-stu-id="a4116-122">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9d711-122">См. также</span><span class="sxs-lookup"><span data-stu-id="9d711-122">See also</span></span>
 
-- [<span data-ttu-id="a4116-123">Интерфейс IMetaDataImport</span><span class="sxs-lookup"><span data-stu-id="a4116-123">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="a4116-124">Интерфейс IMetaDataImport2</span><span class="sxs-lookup"><span data-stu-id="a4116-124">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="9d711-123">Интерфейс IMetaDataImport</span><span class="sxs-lookup"><span data-stu-id="9d711-123">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="9d711-124">Интерфейс IMetaDataImport2</span><span class="sxs-lookup"><span data-stu-id="9d711-124">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

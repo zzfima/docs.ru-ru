@@ -22,10 +22,10 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74442043"
 ---
-# <a name="imetadatatablesgetblobheapsize-method"></a><span data-ttu-id="4ee39-102">Метод IMetaDataTables::GetBlobHeapSize</span><span class="sxs-lookup"><span data-stu-id="4ee39-102">IMetaDataTables::GetBlobHeapSize Method</span></span>
-<span data-ttu-id="4ee39-103">Gets the size, in bytes, of the binary large object (BLOB) heap.</span><span class="sxs-lookup"><span data-stu-id="4ee39-103">Gets the size, in bytes, of the binary large object (BLOB) heap.</span></span>  
+# <a name="imetadatatablesgetblobheapsize-method"></a><span data-ttu-id="5c04b-102">Метод IMetaDataTables::GetBlobHeapSize</span><span class="sxs-lookup"><span data-stu-id="5c04b-102">IMetaDataTables::GetBlobHeapSize Method</span></span>
+<span data-ttu-id="5c04b-103">Возвращает размер кучи большого двоичного объекта (в байтах).</span><span class="sxs-lookup"><span data-stu-id="5c04b-103">Gets the size, in bytes, of the binary large object (BLOB) heap.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4ee39-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="4ee39-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5c04b-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="5c04b-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetBlobHeapSize (  
@@ -33,20 +33,20 @@ HRESULT GetBlobHeapSize (
 );   
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="4ee39-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="4ee39-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="5c04b-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="5c04b-105">Parameters</span></span>  
  `pcbBlobs`  
- <span data-ttu-id="4ee39-106">[out] A pointer to the size, in bytes, of the BLOB heap.</span><span class="sxs-lookup"><span data-stu-id="4ee39-106">[out] A pointer to the size, in bytes, of the BLOB heap.</span></span>  
+ <span data-ttu-id="5c04b-106">заполняет Указатель на размер кучи больших двоичных объектов (в байтах).</span><span class="sxs-lookup"><span data-stu-id="5c04b-106">[out] A pointer to the size, in bytes, of the BLOB heap.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="4ee39-107">Требования</span><span class="sxs-lookup"><span data-stu-id="4ee39-107">Requirements</span></span>  
- <span data-ttu-id="4ee39-108">**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="4ee39-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5c04b-107">Требования</span><span class="sxs-lookup"><span data-stu-id="5c04b-107">Requirements</span></span>  
+ <span data-ttu-id="5c04b-108">**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5c04b-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="4ee39-109">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="4ee39-109">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="5c04b-109">**Заголовок:** COR. h</span><span class="sxs-lookup"><span data-stu-id="5c04b-109">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="4ee39-110">**Library:** Used as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="4ee39-110">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="5c04b-110">**Библиотека:** Используется в качестве ресурса в MsCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="5c04b-110">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="4ee39-111">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4ee39-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="5c04b-111">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5c04b-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4ee39-112">См. также</span><span class="sxs-lookup"><span data-stu-id="4ee39-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5c04b-112">См. также</span><span class="sxs-lookup"><span data-stu-id="5c04b-112">See also</span></span>
 
-- [<span data-ttu-id="4ee39-113">Интерфейс IMetaDataTables</span><span class="sxs-lookup"><span data-stu-id="4ee39-113">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
-- [<span data-ttu-id="4ee39-114">Интерфейс IMetaDataTables2</span><span class="sxs-lookup"><span data-stu-id="4ee39-114">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+- [<span data-ttu-id="5c04b-113">Интерфейс IMetaDataTables</span><span class="sxs-lookup"><span data-stu-id="5c04b-113">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
+- [<span data-ttu-id="5c04b-114">Интерфейс IMetaDataTables2</span><span class="sxs-lookup"><span data-stu-id="5c04b-114">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
