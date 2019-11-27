@@ -1,5 +1,5 @@
 ---
-title: Overload Resolution
+title: Разрешение перегрузки
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic code, procedures
@@ -18,45 +18,45 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352649"
 ---
 # <a name="overload-resolution-visual-basic"></a>Разрешение перегрузки (Visual Basic)
-When the Visual Basic compiler encounters a call to a procedure that is defined in several overloaded versions, the compiler must decide which of the overloads to call. It does this by performing the following steps:  
+Когда компилятор Visual Basic встречает вызов процедуры, определенной в нескольких перегруженных версиях, компилятор должен решить, какую из перегруженных версий вызывать. Это достигается путем выполнения следующих действий.  
   
-1. **Специальные возможности.** It eliminates any overload with an access level that prevents the calling code from calling it.  
+1. **Специальные возможности.** Он устраняет все перегрузки с уровнем доступа, который не позволяет вызывающему коду вызывать его.  
   
-2. **Number of Parameters.** It eliminates any overload that defines a different number of parameters than are supplied in the call.  
+2. **Число параметров.** Он исключает все перегрузки, которые определяют разное количество параметров, чем указано в вызове.  
   
-3. **Parameter Data Types.** The compiler gives instance methods preference over extension methods. If any instance method is found that requires only widening conversions to match the procedure call, all extension methods are dropped and the compiler continues with only the instance method candidates. If no such instance method is found, it continues with both instance and extension methods.  
+3. **Типы данных параметров.** Компилятор передает предпочтение методам экземпляра по методам расширения. Если найден любой метод экземпляра, требующий только расширяющего преобразования для сопоставления с вызовом процедуры, все методы расширения удаляются, а компилятор переходит только к методам экземпляра. Если такой метод экземпляра не найден, он продолжится как для экземпляра, так и для методов расширения.  
   
-     In this step, it eliminates any overload for which the data types of the calling arguments cannot be converted to the parameter types defined in the overload.  
+     На этом шаге удаляется любая перегрузка, для которой типы данных вызывающих аргументов не могут быть преобразованы в типы параметров, определенные в перегрузке.  
   
-4. **Narrowing Conversions.** It eliminates any overload that requires a narrowing conversion from the calling argument types to the defined parameter types. This is true whether the type checking switch ([Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) is `On` or `Off`.  
+4. **Сужающие преобразования.** Он устраняет все перегрузки, требующие сужения преобразования из типов вызывающих аргументов в определенные типы параметров. Это верно, независимо от того, является ли параметр проверки типов ([оператор Option строго](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) `On` или `Off`.  
   
-5. **Least Widening.** The compiler considers the remaining overloads in pairs. For each pair, it compares the data types of the defined parameters. If the types in one of the overloads all widen to the corresponding types in the other, the compiler eliminates the latter. That is, it retains the overload that requires the least amount of widening.  
+5. **Минимальное расширение.** Компилятор рассматривает оставшиеся перегрузки парами. Для каждой пары он сравнивает типы данных определенных параметров. Если типы в одной из перегрузок расширены до соответствующих типов в другом, компилятор исключает второй. То есть он удерживает перегрузку, для которой требуется наименьший размер расширения.  
   
-6. **Single Candidate.** It continues considering overloads in pairs until only one overload remains, and it resolves the call to that overload. If the compiler cannot reduce the overloads to a single candidate, it generates an error.  
+6. **Один кандидат.** Он продолжает рассматривать перегрузки парами до тех пор, пока не останется только одна перегрузка и разрешается вызов этой перегрузки. Если компилятор не может уменьшить перегрузки для одного кандидата, возникает ошибка.  
   
- The following illustration shows the process that determines which of a set of overloaded versions to call.  
+ На следующем рисунке показан процесс, который определяет, какой из наборов перегруженных версий необходимо вызвать.  
   
- ![Flow diagram of overload resolution process](./media/overload-resolution/determine-overloaded-version.gif "Resolving among overloaded versions")    
+ ![Схема потока процесса разрешения перегрузки](./media/overload-resolution/determine-overloaded-version.gif "Разрешение между перегруженными версиями")    
   
- The following example illustrates this overload resolution process.  
+ В следующем примере показан этот процесс разрешения перегрузки.  
   
  [!code-vb[VbVbcnProcedures#62](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#62)]  
   
  [!code-vb[VbVbcnProcedures#63](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#63)]  
   
- In the first call, the compiler eliminates the first overload because the type of the first argument (`Short`) narrows to the type of the corresponding parameter (`Byte`). It then eliminates the third overload because each argument type in the second overload (`Short` and `Single`) widens to the corresponding type in the third overload (`Integer` and `Single`). The second overload requires less widening, so the compiler uses it for the call.  
+ При первом вызове компилятор удаляет первую перегрузку, поскольку тип первого аргумента (`Short`) ограничивается типом соответствующего параметра (`Byte`). Затем он исключает третью перегрузку, поскольку каждый тип аргумента во второй перегрузке (`Short` и `Single`) расширяется до соответствующего типа в третьей перегрузке (`Integer` и `Single`). Вторая перегрузка требует меньшего расширения, поэтому компилятор использует его для вызова.  
   
- In the second call, the compiler cannot eliminate any of the overloads on the basis of narrowing. It eliminates the third overload for the same reason as in the first call, because it can call the second overload with less widening of the argument types. However, the compiler cannot resolve between the first and second overloads. Each has one defined parameter type that widens to the corresponding type in the other (`Byte` to `Short`, but `Single` to `Double`). The compiler therefore generates an overload resolution error.  
+ Во втором вызове компилятор не может исключить ни одну из перегрузок на основе понижающие. Он исключает третью перегрузку по той же причине, что и при первом вызове, так как она может вызвать вторую перегрузку с меньшим расширением типов аргументов. Однако компилятор не может выполнить разрешение между первой и второй перегрузками. Каждый из них имеет один определенный тип параметра, который расширяется до соответствующего типа в другом (`Byte` для `Short`, но `Single` в `Double`). Поэтому компилятор создает ошибку разрешения перегрузки.  
   
-## <a name="overloaded-optional-and-paramarray-arguments"></a>Overloaded Optional and ParamArray Arguments  
- If two overloads of a procedure have identical signatures except that the last parameter is declared [Optional](../../../../visual-basic/language-reference/modifiers/optional.md) in one and [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) in the other, the compiler resolves a call to that procedure as follows:  
+## <a name="overloaded-optional-and-paramarray-arguments"></a>Перегруженные аргументы необязательных аргументов и ParamArray  
+ Если две перегрузки процедуры имеют идентичные сигнатуры, за исключением того, что последний параметр объявлен как [Optional](../../../../visual-basic/language-reference/modifiers/optional.md) в одном и [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) в другой, компилятор разрешает вызов этой процедуры следующим образом:  
   
-|If the call supplies the last argument as|The compiler resolves the call to the overload declaring the last argument as|  
+|Если вызов предоставляет последний аргумент как|Компилятор разрешает вызов перегрузки, объявляя последний аргумент как|  
 |---|---|  
-|No value (argument omitted)|`Optional`|  
-|A single value|`Optional`|  
-|Two or more values in a comma-separated list|`ParamArray`|  
-|An array of any length (including an empty array)|`ParamArray`|  
+|Значение отсутствует (аргумент опущен)|`Optional`|  
+|Одно значение|`Optional`|  
+|Два или более значений в списке с разделителями-запятыми|`ParamArray`|  
+|Массив любой длины (включая пустой массив)|`ParamArray`|  
   
 ## <a name="see-also"></a>См. также
 
@@ -69,5 +69,5 @@ When the Visual Basic compiler encounters a call to a procedure that is defined 
 - [Практическое руководство. Перегрузка процедуры, которая принимает один необязательный параметр](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
 - [Практическое руководство. Перегрузка процедуры, принимающей неопределенное число параметров](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)
 - [Вопросы, связанные с перегрузкой процедур](./considerations-in-overloading-procedures.md)
-- [Перегрузки](../../../../visual-basic/language-reference/modifiers/overloads.md)
+- [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md)
 - [Методы расширения](./extension-methods.md)

@@ -18,17 +18,17 @@ ms.locfileid: "74344108"
 ## <a name="remarks"></a>Заметки  
  Сведения о методах и свойствах объекта `My.Computer.Clipboard` см. в разделе <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy>.  
   
- For more information, see [Storing Data to and Reading from the Clipboard](../../../visual-basic/developing-apps/programming/computer-resources/storing-data-to-and-reading-from-the-clipboard.md).  
+ Дополнительные сведения см. в разделе [Сохранение данных в буфер обмена и чтение из него](../../../visual-basic/developing-apps/programming/computer-resources/storing-data-to-and-reading-from-the-clipboard.md).  
   
 > [!NOTE]
-> You can also use methods of the <xref:System.Windows.Forms.Clipboard?displayProperty=nameWithType> class to manipulate the Clipboard.  
+> Для работы с буфером обмена можно также использовать методы класса <xref:System.Windows.Forms.Clipboard?displayProperty=nameWithType>.  
   
 ## <a name="requirements"></a>Требования  
  **Пространство имен:** <xref:Microsoft.VisualBasic.MyServices>  
   
- **Class:** <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy> (provides access to <xref:System.Windows.Forms.Clipboard>)  
+ **Класс:** <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy> (предоставляет доступ к <xref:System.Windows.Forms.Clipboard>)  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **Сборка:** Библиотека времени выполнения Visual Basic (в Microsoft. VisualBasic. dll)  
   
 ## <a name="see-also"></a>См. также
 

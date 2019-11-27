@@ -21,7 +21,7 @@ ms.locfileid: "74346462"
 ---
 # <a name="structure-statement"></a>Оператор Structure
 
-Declares the name of a structure and introduces the definition of the variables, properties, events, and procedures that the structure comprises.
+Объявляет имя структуры и вводит определение переменных, свойств, событий и процедур, из которых состоит структура.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -38,76 +38,76 @@ End Structure
 
 |Термин|Определение|
 |---|---|
-|`attributelist`|Необязательный. See [Attribute List](attribute-list.md).|
-|`accessmodifier`|Необязательный. Ниже указаны доступные значения.<br /><br /> -   [Public](../modifiers/public.md)<br />-   [Protected](../modifiers/protected.md)<br />-   [Friend](../modifiers/friend.md)<br />-   [Private](../modifiers/private.md)<br />- [Protected Friend](../modifiers/protected-friend.md)<br/>- [Private Protected](../modifiers/private-protected.md) <br /><br /> См. раздел [Access levels in Visual Basic](../../programming-guide/language-features/declared-elements/access-levels.md).|
-|`Shadows`|Необязательный. See [Shadows](../modifiers/shadows.md).|
-|`Partial`|Необязательный. Indicates a partial definition of the structure. See [Partial](../modifiers/partial.md).|
-|`name`|Обязательный. Name of this structure. См. раздел [Declared Element Names](../../programming-guide/language-features/declared-elements/declared-element-names.md).|
-|`Of`|Необязательный. Specifies that this is a generic structure.|
-|`typelist`|Required if you use the [Of](of-clause.md) keyword. List of type parameters for this structure. See [Type List](type-list.md).|
-|`Implements`|Необязательный. Indicates that this structure implements the members of one or more interfaces. See [Implements Statement](implements-statement.md).|
-|`interfacenames`|Required if you use the `Implements` statement. The names of the interfaces this structure implements.|
-|`datamemberdeclarations`|Обязательный. Zero or more `Const`, `Dim`, `Enum`, or `Event` statements declaring *data members* of the structure.|
-|`methodmemberdeclarations`|Необязательный. Zero or more declarations of `Function`, `Operator`, `Property`, or `Sub` procedures, which serve as *method members* of the structure.|
-|`End Structure`|Обязательный. Terminates the `Structure` definition.|
+|`attributelist`|Необязательно. См. [список атрибутов](attribute-list.md).|
+|`accessmodifier`|Необязательно. Ниже указаны доступные значения.<br /><br /> -   [Public](../modifiers/public.md)<br />[защищенный](../modifiers/protected.md) -   <br />-   [Friend](../modifiers/friend.md)<br />-   [закрытый](../modifiers/private.md)<br />- [защищенный дружественный](../modifiers/protected-friend.md)<br/>- [частный защищенный](../modifiers/private-protected.md) <br /><br /> См. раздел [Access levels in Visual Basic](../../programming-guide/language-features/declared-elements/access-levels.md).|
+|`Shadows`|Необязательно. См. раздел [Shadows](../modifiers/shadows.md).|
+|`Partial`|Необязательно. Указывает на частичное определение структуры. См. раздел [partial](../modifiers/partial.md).|
+|`name`|Обязательно. Имя этой структуры. См. раздел [Declared Element Names](../../programming-guide/language-features/declared-elements/declared-element-names.md).|
+|`Of`|Необязательно. Указывает, что это универсальная структура.|
+|`typelist`|Требуется, если используется ключевое слово [of](of-clause.md) . Список параметров типа для этой структуры. См. [список типов](type-list.md).|
+|`Implements`|Необязательно. Указывает, что эта структура реализует члены одного или нескольких интерфейсов. См. [инструкцию Implements](implements-statement.md).|
+|`interfacenames`|Требуется, если используется оператор `Implements`. Имена интерфейсов, реализуемых этой структурой.|
+|`datamemberdeclarations`|Обязательно. Ноль или более `Const`, `Dim`, `Enum`или `Event` операторы, объявляющие *элементы данных* структуры.|
+|`methodmemberdeclarations`|Необязательно. Ноль или более объявлений `Function`, `Operator`, `Property`или `Sub` процедур, которые служат *членами метода* структуры.|
+|`End Structure`|Обязательно. Завершает определение `Structure`.|
 
 ## <a name="remarks"></a>Заметки
 
-The `Structure` statement defines a composite value type that you can customize. A *structure* is a generalization of the user-defined type (UDT) of previous versions of Visual Basic. For more information, see [Structures](../../programming-guide/language-features/data-types/structures.md).
+Оператор `Structure` определяет составной тип значения, который можно настроить. *Структура* представляет собой обобщение определяемого пользователем типа (UDT) предыдущих версий Visual Basic. Дополнительные сведения см. в разделе [структуры](../../programming-guide/language-features/data-types/structures.md).
 
-Structures support many of the same features as classes. For example, structures can have properties and procedures, they can implement interfaces, and they can have parameterized constructors. However, there are significant differences between structures and classes in areas such as inheritance, declarations, and usage. Also, classes are reference types and structures are value types. For more information, see [Structures and Classes](../../programming-guide/language-features/data-types/structures-and-classes.md).
+Структуры поддерживают многие из тех же функций, что и классы. Например, структуры могут иметь свойства и процедуры, они могут реализовывать интерфейсы и могут иметь параметризованные конструкторы. Однако существуют значительные различия между структурами и классами в таких областях, как наследование, объявления и использование. Кроме того, классы являются ссылочными типами, а структуры — типами значений. Дополнительные сведения см. в разделе [структуры и классы](../../programming-guide/language-features/data-types/structures-and-classes.md).
 
-You can use `Structure` only at namespace or module level. This means the *declaration context* for a structure must be a source file, namespace, class, structure, module, or interface, and cannot be a procedure or block. Дополнительные сведения см. в разделе [Контексты объявления и уровни доступа по умолчанию](declaration-contexts-and-default-access-levels.md).
+`Structure` можно использовать только на уровне пространства имен или модуля. Это означает, что *контекст объявления* для структуры должен быть исходным файлом, пространством имен, классом, структурой, модулем или интерфейсом и не может быть процедурой или блоком. Дополнительные сведения см. в разделе [Контексты объявления и уровни доступа по умолчанию](declaration-contexts-and-default-access-levels.md).
 
-Structures default to [Friend](../modifiers/friend.md) access. You can adjust their access levels with the access modifiers. For more information, see [Access levels in Visual Basic](../../programming-guide/language-features/declared-elements/access-levels.md).
+Структуры по умолчанию имеют доступ [Friend](../modifiers/friend.md) . Уровни доступа можно изменить с помощью модификаторов доступа. Дополнительные сведения см. [в разделе уровни доступа в Visual Basic](../../programming-guide/language-features/declared-elements/access-levels.md).
 
 ## <a name="rules"></a>Правила
 
-- **Nesting.** You can define one structure within another. The outer structure is called the *containing structure*, and the inner structure is called a *nested structure*. However, you cannot access a nested structure's members through the containing structure. Instead, you must declare a variable of the nested structure's data type.
+- **Вложенности.** Можно определить одну структуру в другой. Внешняя структура называется *содержащей структурой*, а внутренняя структура называется *вложенной структурой*. Однако нельзя получить доступ к членам вложенной структуры через содержащую их структуру. Вместо этого необходимо объявить переменную типа данных вложенной структуры.
 
-- **Member Declaration.** You must declare every member of a structure. A structure member cannot be [Protected](../modifiers/protected.md) or `Protected Friend` because nothing can inherit from a structure. The structure itself, however, can be `Protected` or `Protected Friend`.
+- **Объявление члена.** Необходимо объявить каждый член структуры. Член структуры не может быть [защищен](../modifiers/protected.md) или `Protected Friend`, так как ничего не может наследовать от структуры. Однако сама структура может быть `Protected` или `Protected Friend`.
   
-     You can declare zero or more nonshared variables or nonshared, noncustom events in a structure. You cannot have only constants, properties, and procedures, even if some of them are nonshared.
+     В структуре можно объявить ноль или несколько необщих переменных или нестандартных событий. Нельзя использовать только константы, свойства и процедуры, даже если некоторые из них не являются общими.
 
-- **Initialization.** You cannot initialize the value of any nonshared data member of a structure as part of its declaration. You must either initialize such a data member by means of a parameterized constructor on the structure, or assign a value to the member after you have created an instance of the structure.
+- **Инициализации.** Нельзя инициализировать значение несовместного элемента данных структуры как часть его объявления. Необходимо либо инициализировать такой элемент данных с помощью параметризованного конструктора структуры, либо присвоить значение элементу после создания экземпляра структуры.
 
-- **Наследование.** A structure cannot inherit from any type other than <xref:System.ValueType>, from which all structures inherit. In particular, one structure cannot inherit from another.
+- **Наследование.** Структура не может наследовать от любого типа, кроме <xref:System.ValueType>, от которого наследуются все структуры. В частности, одна структура не может наследовать от другой.
 
-     You cannot use the [Inherits Statement](inherits-statement.md) in a structure definition, even to specify <xref:System.ValueType>.
+     Нельзя использовать [инструкцию Inherits](inherits-statement.md) в определении структуры даже для указания <xref:System.ValueType>.
 
-- **Implementation.** If the structure uses the [Implements Statement](implements-statement.md), you must implement every member defined by every interface you specify in `interfacenames`.
+- **Реализации.** Если в структуре используется [оператор Implements](implements-statement.md), необходимо реализовать каждый элемент, определенный каждым интерфейсом, указанным в `interfacenames`.
 
-- **Default Property.** A structure can specify at most one property as its *default property*, using the [Default](../modifiers/default.md) modifier. For more information, see [Default](../modifiers/default.md).
+- **Свойство по умолчанию.** В структуре можно указать не более одного свойства в качестве *свойства по умолчанию*с помощью модификатора [по умолчанию](../modifiers/default.md) . Дополнительные сведения см. в разделе [Default](../modifiers/default.md).
 
 ## <a name="behavior"></a>Поведение
 
-- **Access Level.** Within a structure, you can declare each member with its own access level. All structure members default to [Public](../modifiers/public.md) access. Note that if the structure itself has a more restricted access level, this automatically restricts access to its members, even if you adjust their access levels with the access modifiers.
+- **Уровень доступа.** В структуре можно объявить каждый элемент с собственным уровнем доступа. Все члены структуры по умолчанию имеют [Общий](../modifiers/public.md) доступ. Обратите внимание, что если структура имеет более ограниченный уровень доступа, это автоматически ограничивает доступ к его членам, даже если изменить уровни доступа с помощью модификаторов доступа.
 
-- **Scope.** A structure is in scope throughout its containing namespace, class, structure, or module.
+- **Которых.** Структура находится в области, содержащей пространство имен, класс, структуру или модуль.
 
-     The scope of every structure member is the entire structure.
+     Областью видимости каждого члена структуры является вся структура.
 
-- **Lifetime.** A structure does not itself have a lifetime. Rather, each instance of that structure has a lifetime independent of all other instances.
+- **Контролиру.** Структура сама по себе не имеет времени существования. Вместо этого каждый экземпляр этой структуры имеет время существования, не зависящее от всех других экземпляров.
 
-     The lifetime of an instance begins when it is created by a [New Operator](../operators/new-operator.md) clause. It ends when the lifetime of the variable that holds it ends.
+     Время существования экземпляра начинается, когда оно создается новым предложением [оператора](../operators/new-operator.md) . Он завершается, когда заканчивается время существования переменной, содержащей ее.
 
-     You cannot extend the lifetime of a structure instance. An approximation to static structure functionality is provided by a module. For more information, see [Module Statement](module-statement.md).
+     Нельзя продлить время существования экземпляра структуры. Приближение к функциональности статической структуры обеспечивается модулем. Дополнительные сведения см. в разделе [оператор Module](module-statement.md).
 
-     Structure members have lifetimes depending on how and where they are declared. For more information, see "Lifetime" in [Class Statement](class-statement.md).
+     Элементы структуры имеют время существования в зависимости от того, как и где они объявляются. Дополнительные сведения см. в разделе "время существования" в [операторе Class](class-statement.md).
 
-- **Qualification.** Code outside a structure must qualify a member's name with the name of that structure.
+- **Квалификацию.** Код за пределами структуры должен квалифицировать имя члена с именем этой структуры.
 
-     If code inside a nested structure makes an unqualified reference to a programming element, Visual Basic searches for the element first in the nested structure, then in its containing structure, and so on out to the outermost containing element. Для получения дополнительной информации см. [References to Declared Elements](../../programming-guide/language-features/declared-elements/references-to-declared-elements.md).
+     Если код внутри вложенной структуры делает неквалифицированную ссылку на программный элемент, Visual Basic ищет элемент сначала во вложенной структуре, затем в его содержащей его структуре и так далее в самом внешнем содержащем элементе. Для получения дополнительной информации см. [References to Declared Elements](../../programming-guide/language-features/declared-elements/references-to-declared-elements.md).
 
-- **Memory Consumption.** As with all composite data types, you cannot safely calculate the total memory consumption of a structure by adding together the nominal storage allocations of its members. Furthermore, you cannot safely assume that the order of storage in memory is the same as your order of declaration. If you need to control the storage layout of a structure, you can apply the <xref:System.Runtime.InteropServices.StructLayoutAttribute> attribute to the `Structure` statement.
+- **Потребление памяти.** Как и для всех составных типов данных, вы не можете безопасно вычислить общее потребление памяти для структуры, добавив в них номинальные объемы выделяемого пространства для его членов. Кроме того, нельзя безопасно предположить, что порядок хранения в памяти совпадает с порядком объявления. Если необходимо управлять структурой хранилища структуры, можно применить атрибут <xref:System.Runtime.InteropServices.StructLayoutAttribute> к инструкции `Structure`.
 
 ## <a name="example"></a>Пример
 
-The following example uses the `Structure` statement to define a set of related data for an employee. It shows the use of `Public`, `Friend`, and `Private` members to reflect the sensitivity of the data items. It also shows procedure, property, and event members.
+В следующем примере оператор `Structure` используется для определения набора связанных данных для сотрудника. В нем показано использование `Public`, `Friend`и `Private` элементов для отражения чувствительности элементов данных. В нем также показаны члены процедуры, свойства и события.
 
 [!code-vb[VbVbalrStatements#57](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#57)]
 
-For more information on how to use `Structure`s, see [Structure Variable](../../programming-guide/language-features/data-types/structure-variables.md).
+Дополнительные сведения об использовании `Structure`s см. в разделе [переменная структуры](../../programming-guide/language-features/data-types/structure-variables.md).
 
 ## <a name="see-also"></a>См. также
 

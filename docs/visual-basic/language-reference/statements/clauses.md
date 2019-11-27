@@ -12,9 +12,9 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74354142"
 ---
 # <a name="clauses-visual-basic"></a>Предложения (Visual Basic)
-The topics in this section document Visual Basic run-time clauses.  
+Темы в этом разделе задокументированы Visual Basic предложений времени выполнения.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Alias](../../../visual-basic/language-reference/statements/alias-clause.md)  
   
  [As](../../../visual-basic/language-reference/statements/as-clause.md)  

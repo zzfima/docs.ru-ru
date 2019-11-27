@@ -37,18 +37,18 @@ typedef struct _COR_PRF_FUNCTION_ARGUMENT_RANGE {
   
 |Члены|Описание|  
 |-------------|-----------------|  
-|`startAddress`|The starting address of the block.|  
-|`length`|The length of the contiguous block.|  
+|`startAddress`|Начальный адрес блока.|  
+|`length`|Длина непрерывного блока.|  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl  
+ **Заголовок:** CorProf. idl  
   
  **Библиотека:** CorGuids.lib  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Структуры профилирования](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)

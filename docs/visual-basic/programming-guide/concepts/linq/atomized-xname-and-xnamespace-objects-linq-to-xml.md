@@ -9,7 +9,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345731"
 ---
-# <a name="atomized-xname-and-xnamespace-objects-linq-to-xml-visual-basic"></a>Atomized XName and XNamespace Objects (LINQ to XML) (Visual Basic)
+# <a name="atomized-xname-and-xnamespace-objects-linq-to-xml-visual-basic"></a>Атомарные объекты XName и XNamespace (LINQ to XML) (Visual Basic)
 
 Объекты <xref:System.Xml.Linq.XName> и <xref:System.Xml.Linq.XNamespace> являются *атомарными*; иными словами, если они имеют идентичное полное имя, они ссылаются на один и тот же объект. Это способствует повышению производительности при выполнении запросов: при сравнении двух атомарных имен для проверки их равенства соответствующий промежуточный язык должен определить, ссылаются ли они на один и тот же объект. Эта операция используется в промежуточном коде вместо более длительной операции сравнения строк.
 
@@ -19,7 +19,7 @@ ms.locfileid: "74345731"
 
 Чтобы разрешить создание атомарных объектов класса, необходимо, чтобы конструктор класса был закрытым, а не открытым. Это требование основано на том, что если бы конструктор был открытым, можно было бы создавать неатомарные объекты. Классы <xref:System.Xml.Linq.XName> и <xref:System.Xml.Linq.XNamespace> реализуют неявный оператор преобразования строки в объект <xref:System.Xml.Linq.XName> или <xref:System.Xml.Linq.XNamespace>. Экземпляры этих объектов могут быть получены только таким способом. Создание экземпляров с помощью конструктора невозможно, так как конструктор недоступен.
 
-Классы <xref:System.Xml.Linq.XName> и<xref:System.Xml.Linq.XNamespace> также реализуют операторы для проверки равенства и неравенства, определяющие, ссылаются ли два сравниваемых объекта на один и тот же экземпляр.
+<xref:System.Xml.Linq.XName> и <xref:System.Xml.Linq.XNamespace> также реализуют операторы равенства и неравенства, чтобы определить, являются ли два сравниваемых объекта ссылками на один и тот же экземпляр.
 
 ## <a name="example"></a>Пример
 
@@ -74,4 +74,4 @@ Next
 
 ## <a name="see-also"></a>См. также
 
-- [Performance (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/performance-linq-to-xml.md)
+- [Производительность (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/performance-linq-to-xml.md)

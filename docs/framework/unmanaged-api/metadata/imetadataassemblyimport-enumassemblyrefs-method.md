@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450342"
 ---
 # <a name="imetadataassemblyimportenumassemblyrefs-method"></a>Метод IMetaDataAssemblyImport::EnumAssemblyRefs
-Enumerates the `mdAssemblyRef` instances that are defined in the assembly manifest.  
+Перечисляет экземпляры `mdAssemblyRef`, определенные в манифесте сборки.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,33 +38,33 @@ HRESULT EnumAssemblyRefs (
   
 ## <a name="parameters"></a>Параметры  
  `phEnum`  
- [in, out] A pointer to the enumerator. This must be a null value when the `EnumAssemblyRefs` method is called for the first time.  
+ [вход, выход] Указатель на перечислитель. Это значение должно быть null, если метод `EnumAssemblyRefs` вызывается в первый раз.  
   
  `rAssemblyRefs`  
- [out] The enumeration of `mdAssemblyRef` metadata tokens.  
+ заполняет Перечисление `mdAssemblyRef` маркеров метаданных.  
   
  `cMax`  
- [in] The maximum number of tokens that can be placed in the `rAssemblyRefs` array.  
+ окне Максимальное число токенов, которые могут быть помещены в массив `rAssemblyRefs`.  
   
  `pcTokens`  
- [out] The number of tokens actually placed in `rAssemblyRefs`.  
+ заполняет Количество маркеров, которые фактически помещаются в `rAssemblyRefs`.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
   
 |HRESULT|Описание|  
 |-------------|-----------------|  
-|`S_OK`|`EnumAssemblyRefs` returned successfully.|  
-|`S_FALSE`|There are no tokens to enumerate. In this case, `pcTokens` is set to zero.|  
+|`S_OK`|`EnumAssemblyRefs` успешно возвращено.|  
+|`S_FALSE`|Нет токенов для перечисления. В этом случае `pcTokens` имеет значение 0.|  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Заголовок:** COR. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Библиотека:** Используется в качестве ресурса в MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс IMetaDataAssemblyImport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

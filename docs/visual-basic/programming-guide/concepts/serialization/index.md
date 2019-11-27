@@ -25,7 +25,7 @@ ms.locfileid: "74351918"
 ### <a name="making-an-object-serializable"></a>Превращение объекта в сериализуемый  
  Чтобы сериализовать объект, вам нужен сам этот объект, поток, который будет содержать объект, и класс <xref:System.Runtime.Serialization.Formatter>. Классы для сериализации и десериализации объектов содержатся в <xref:System.Runtime.Serialization>.  
   
- Примените к типу атрибут <xref:System.SerializableAttribute>, чтобы указать возможность сериализации экземпляров этого типа. Если в типе нет атрибута <xref:System.SerializableAttribute> при попытке сериализации, выдается исключение <xref:System.Runtime.Serialization.SerializationException>.  
+ Примените к типу атрибут <xref:System.SerializableAttribute>, чтобы указать возможность сериализации экземпляров этого типа. Если в типе нет атрибута <xref:System.Runtime.Serialization.SerializationException> при попытке сериализации, выдается исключение <xref:System.SerializableAttribute>.  
   
  Если вы не хотите, чтобы поле в классе было сериализуемым, примените атрибут <xref:System.NonSerializedAttribute>. Если поле сериализуемого типа содержит указатель, дескриптор или специальные структуры данных для определенной среды, и содержимое этого поле невозможно разумно воссоздать в другой среде, такое поле лучше сделать несериализуемым.  
   

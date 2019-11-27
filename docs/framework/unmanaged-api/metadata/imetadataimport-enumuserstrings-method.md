@@ -38,33 +38,33 @@ HRESULT EnumUserStrings (
   
 ## <a name="parameters"></a>Параметры  
  `phEnum`  
- [in, out] A pointer to the enumerator. This must be NULL for the first call of this method.  
+ [вход, выход] Указатель на перечислитель. При первом вызове этого метода это значение должно быть равно NULL.  
   
  `rStrings`  
- [out] The array used to store the String tokens.  
+ заполняет Массив, используемый для хранения токенов строк.  
   
  `cMax`  
  [in] Максимальный размер массива `rStrings`.  
   
  `pcStrings`  
- [out] The number of String tokens returned in `rStrings`.  
+ заполняет Число токенов строк, возвращаемых в `rStrings`.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
   
 |HRESULT|Описание|  
 |-------------|-----------------|  
-|`S_OK`|`EnumUserStrings` returned successfully.|  
-|`S_FALSE`|There are no tokens to enumerate. In that case, `pcStrings` is zero.|  
+|`S_OK`|`EnumUserStrings` успешно возвращено.|  
+|`S_FALSE`|Нет токенов для перечисления. В этом случае `pcStrings` равно нулю.|  
   
 ## <a name="remarks"></a>Заметки  
- The String tokens are created by the [IMetaDataEmit::DefineUserString](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineuserstring-method.md) method. This method is designed to be used by a metadata browser rather than by a compiler.  
+ Строковые токены создаются методом [IMetaDataEmit::D ефинеусерстринг](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineuserstring-method.md) . Этот метод предназначен для использования обозревателем метаданных, а не компилятором.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Заголовок:** COR. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
