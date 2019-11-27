@@ -23,10 +23,10 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445737"
 ---
 # <a name="isymunmanagedreaderreplacesymbolstore-method"></a>Метод ISymUnmanagedReader::ReplaceSymbolStore
-Заменяет имеющееся хранилище символов разностным хранилищем символов. This method is similar to the [UpdateSymbolStore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-updatesymbolstore-method.md) method, except that the given delta acts as a complete replacement rather than an update.  
+Заменяет имеющееся хранилище символов разностным хранилищем символов. Этот метод аналогичен методу [UpdateSymbolStore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-updatesymbolstore-method.md) , за исключением того, что данная Дельта действует как полная замена, а не как обновление.  
   
 > [!NOTE]
-> You need specify only one of the `filename` or `pIStream` parameters, not both. If `filename` is specified, the symbol store will be updated with the symbols in that file. If `pIStream` is specified, the store will be updated with the data from the <xref:System.Runtime.InteropServices.ComTypes.IStream>.  
+> Необходимо указать только один из параметров `filename` или `pIStream`, но не оба. Если указан `filename`, хранилище символов будет обновлено символами из этого файла. Если указано `pIStream`, хранилище будет обновлено данными из <xref:System.Runtime.InteropServices.ComTypes.IStream>.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,17 +38,17 @@ HRESULT ReplaceSymbolStore (
   
 ## <a name="parameters"></a>Параметры  
  `filename`  
- [in] The name of the file containing the symbol store.  
+ окне Имя файла, содержащего хранилище символов.  
   
  `pIStream`  
- [in] The file stream, used as an alternative to the `filename` parameter.  
+ окне Файловый поток, используемый в качестве альтернативы параметру `filename`.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK, если метод выполнен. в противном случае E_FAIL или другой код ошибки.  
   
 ## <a name="requirements"></a>Требования  
- **Header:** CorSym.idl, CorSym.h  
+ **Заголовок:** Корсим. idl, Корсим. h  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

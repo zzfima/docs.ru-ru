@@ -45,19 +45,19 @@ typedef enum CorErrorIfEmitOutOfOrder {
   
 |Член|Описание|  
 |------------|-----------------|  
-|`MDErrorOutOfOrderDefault`|Indicates the default behavior, which does not generate error messages.|  
-|`MDErrorOutOfOrderNone`|Indicates that the compiler should not generate error messages.|  
-|`MDErrorOutOfOrderAll`|Indicates that the compiler should generate an error message when a field, property, event, method, or parameter is emitted out of order.|  
-|`MDMethodOutOfOrder`|Indicates that the compiler should generate an error message when a method is emitted out of order.|  
-|`MDFieldOutOfOrder`|Indicates that the compiler should generate an error message when a field is emitted out of order.|  
-|`MDParamOutOfOrder`|Indicates that the compiler should generate an error message when a parameter is emitted out of order.|  
-|`MDPropertyOutOfOrder`|Indicates that the compiler should generate an error message when a property is emitted out of order.|  
-|`MDEventOutOfOrder`|Indicates that the compiler should generate an error message when an event is emitted out of order.|  
+|`MDErrorOutOfOrderDefault`|Указывает поведение по умолчанию, при котором не создаются сообщения об ошибках.|  
+|`MDErrorOutOfOrderNone`|Указывает, что компилятор не должен создавать сообщения об ошибках.|  
+|`MDErrorOutOfOrderAll`|Указывает, что компилятор должен создать сообщение об ошибке, когда поле, свойство, событие, метод или параметр выдаются в неопределенном порядке.|  
+|`MDMethodOutOfOrder`|Указывает, что компилятор должен создать сообщение об ошибке, если метод выдается не по порядку.|  
+|`MDFieldOutOfOrder`|Указывает, что компилятор должен создать сообщение об ошибке, если поле выдается не по порядку.|  
+|`MDParamOutOfOrder`|Указывает, что компилятор должен создать сообщение об ошибке, если параметр выдается не по порядку.|  
+|`MDPropertyOutOfOrder`|Указывает, что компилятор должен создать сообщение об ошибке, если свойство выдается не по порядку.|  
+|`MDEventOutOfOrder`|Указывает, что компилятор должен создать сообщение об ошибке, если событие выдается не по порядку.|  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorHdr.h  
+ **Заголовок:** Корхдр. h  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

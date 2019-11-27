@@ -18,30 +18,30 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348723"
 ---
 # <a name="type-conversions-in-visual-basic"></a>Преобразование типов в Visual Basic
-The process of changing a value from one data type to another type is called *conversion*. Conversions are either *widening* or *narrowing*, depending on the data capacities of the types involved. They are also *implicit* or *explicit*, depending on the syntax in the source code.  
+Процесс изменения значения из одного типа данных на другой тип называется *преобразованием*. Преобразования могут *расширяться* или *уменьшаться*в зависимости от объема данных используемых типов. Они также являются *неявно* илиявными в зависимости от синтаксиса в исходном коде.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Расширяющие и сужающие преобразования](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)  
- Explains conversions classified by whether the destination type can hold the data.  
+ Описывает преобразования, классифицированные, если целевой тип может содержать данные.  
   
  [Явные и неявные преобразования](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)  
- Discusses conversions classified by whether Visual Basic performs them automatically.  
+ Описывает преобразования, которые классифицируются, независимо от того, выполняет ли Visual Basic их автоматически.  
   
  [Преобразования значений между строковыми и другими типами](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)  
- Illustrates converting between strings and numeric, `Boolean`, or date/time values.  
+ Демонстрирует преобразование между строками и числовыми, `Boolean`или значениями даты и времени.  
   
- [How to: Convert an Object to Another Type in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)  
- Shows how to convert an `Object` variable to any other data type.  
+ [Как преобразовать объект в другой тип в Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)  
+ Показывает, как преобразовать переменную `Object` в любой другой тип данных.  
   
  [Преобразования массивов](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md)  
- Steps you through the process of converting between arrays of different data types.  
+ Пошаговый процесс преобразования между массивами различных типов данных.  
   
 ## <a name="related-sections"></a>Связанные разделы  
  [Типы данных](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
- Introduces the Visual Basic data types and describes how to use them.  
+ Вводит Visual Basic типы данных и описывает, как их использовать.  
   
  [Типы данных](../../../../visual-basic/language-reference/data-types/index.md)  
- Lists the elementary data types supplied by Visual Basic.  
+ Содержит список простейших типов данных, предоставляемых Visual Basic.  
   
  [Устранение неполадок, связанных с типами данных](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
- Discusses some common problems that can arise when working with data types.
+ Обсуждаются некоторые распространенные проблемы, которые могут возникнуть при работе с типами данных.

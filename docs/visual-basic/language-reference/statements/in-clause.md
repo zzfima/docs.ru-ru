@@ -14,10 +14,10 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353580"
 ---
 # <a name="in-clause-visual-basic"></a>Предложение In (Visual Basic)
-Specifies the group that the loop variable is to traverse in a `For Each` loop, or specifies the collection to query in a `From`, `Join`, or `Group Join` clause.  
+Указывает группу, которую будет перебирать переменная цикла в цикле `For Each` или определяет коллекцию для запроса в предложении `From`, `Join`или `Group Join`.  
   
 ## <a name="remarks"></a>Заметки  
- The `In` keyword can be used in the following contexts:  
+ Ключевое слово `In` можно использовать в следующих контекстах:  
   
  [Оператор For Each...Next](../../../visual-basic/language-reference/statements/for-each-next-statement.md)  
   

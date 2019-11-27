@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445556"
 ---
 # <a name="setnonassemblyflags-method"></a>Метод SetNonAssemblyFlags
-Sets flags that are not assembly-specific.  
+Устанавливает флаги, не зависящие от сборки.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -34,13 +34,13 @@ HRESULT SetNonAssemblyFlags(
   
 ## <a name="parameters"></a>Параметры  
  `afFlags`  
- ALink flags.  
+ Флаги ALink.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Returns S_OK if the method succeeds.  
+ Возвращает S_OK, если метод завершается с ошибкой.  
   
 ## <a name="requirements"></a>Требования  
- Requires alink.h  
+ Требуется ALink. h  
   
 ## <a name="see-also"></a>См. также
 

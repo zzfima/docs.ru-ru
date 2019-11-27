@@ -22,7 +22,7 @@ ms.locfileid: "74283732"
 ## <a name="frame-parts"></a>Элементы рамки  
  В следующей таблице перечислены именованные части для элемента управления <xref:System.Windows.Controls.Frame>.  
   
-|Отделение|Type|Описание|  
+|Отделение|Тип|Описание|  
 |-|-|-|  
 |PART_FrameCP|<xref:System.Windows.Controls.ContentPresenter>|Область содержимого.|  
   

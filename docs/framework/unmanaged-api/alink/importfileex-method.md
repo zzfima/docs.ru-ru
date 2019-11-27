@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446955"
 ---
 # <a name="importfileex-method"></a>Метод ImportFileEx
-Imports indicated assembly or unbound module.  
+Импортирует указанную сборку или непривязанный модуль.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,33 +40,33 @@ HRESULT ImportFileEx(
   
 ## <a name="parameters"></a>Параметры  
  `pszFilename`  
- Fully qualified name of file from which to import.  
+ Полное имя файла, из которого необходимо выполнить импорт.  
   
  `pszTargetName`  
- Optional name of target file.  
+ Необязательное имя целевого файла.  
   
  `fSmartImport`  
- If TRUE, ImportTypes is used, otherwise importing must be performed manually.  
+ Если значение равно TRUE, используется ImportTypes, в противном случае импорт должен выполняться вручную.  
   
  `dwOpenFlags`  
- Flags to be passed along to [OpenScope Method](../metadata/imetadatadispenser-openscope-method.md).  
+ Флаги, передаваемые в [метод OpenScope](../metadata/imetadatadispenser-openscope-method.md).  
   
  `pImportToken`  
- Receives ID of the file being imported.  
+ Получает идентификатор импортируемого файла.  
   
  `ppAssemblyScope`  
- Receives assembly import scope [IMetaDataAssemblyImport Interface](../metadata/imetadataassemblyimport-interface.md) interface. Is set to NULL if file is not an assembly.  
+ Получает интерфейс [интерфейса IMetaDataAssemblyImport](../metadata/imetadataassemblyimport-interface.md) для области импорта сборки. Имеет значение NULL, если файл не является сборкой.  
   
  `pdwCountOfScopes`  
- Receives count of imported files and/or scopes.  
+ Получает число импортированных файлов и (или) областей.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Returns S_OK if the method succeeds.  
+ Возвращает S_OK, если метод завершается с ошибкой.  
   
 ## <a name="requirements"></a>Требования  
- Requires alink.h.  
+ Требуется ALink. h.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс IALink2](ialink2-interface.md)
 - [Интерфейс IALink](ialink-interface.md)

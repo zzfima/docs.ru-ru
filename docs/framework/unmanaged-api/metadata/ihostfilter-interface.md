@@ -22,26 +22,26 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74426132"
 ---
 # <a name="ihostfilter-interface"></a>Интерфейс IHostFilter
-Provides a method to indicate that a specified token will be processed.  
+Предоставляет метод, указывающий, что заданный маркер будет обработан.  
   
 > [!NOTE]
-> The `IHostFilter` interface must be implemented by the client.  
+> Клиент должен реализовать интерфейс `IHostFilter`.  
   
 ## <a name="methods"></a>Методы  
   
 |Метод|Описание|  
 |------------|-----------------|  
-|[Метод MarkToken](../../../../docs/framework/unmanaged-api/metadata/ihostfilter-marktoken-method.md)|Indicates that the specified metadata token will be processed.|  
+|[Метод MarkToken](../../../../docs/framework/unmanaged-api/metadata/ihostfilter-marktoken-method.md)|Указывает, что заданный маркер метаданных будет обработан.|  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Заголовок:** COR. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Библиотека:** Используется в качестве ресурса в MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейсы метаданных](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)

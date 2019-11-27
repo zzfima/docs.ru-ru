@@ -23,9 +23,9 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74427993"
 ---
 # <a name="isymunmanagedwriterdefineparameter-method"></a>Метод ISymUnmanagedWriter::DefineParameter
-Defines a single parameter in the current method. The parameter type is taken from the parameter's position (sequence) within the method's signature.  
+Определяет один параметр в текущем методе. Тип параметра берется из расположения параметра (Sequence) в сигнатуре метода.  
   
- If parameters are defined in the metadata for a given method, you do not have to define them again by using this method. The symbol readers must check the normal metadata for the parameters before checking the symbol store.  
+ Если в метаданных для данного метода определены параметры, их не нужно определять повторно с помощью этого метода. Прежде чем проверять хранилище символов, средства чтения символов должны проверить обычные метаданные для параметров.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -42,32 +42,32 @@ HRESULT DefineParameter(
   
 ## <a name="parameters"></a>Параметры  
  `name`  
- [in] The parameter name.  
+ окне Имя параметра.  
   
  `attributes`  
- [in] The parameter attributes.  
+ окне Атрибуты параметра.  
   
  `sequence`  
- [in] The parameter signature.  
+ окне Сигнатура параметра.  
   
  `addrKind`  
- [in] The address type.  
+ окне Тип адреса.  
   
  `addr1`  
- [in] The first address for the parameter specification.  
+ окне Первый адрес для спецификации параметра.  
   
  `addr2`  
- [in] The second address for the parameter specification.  
+ окне Второй адрес для спецификации параметра.  
   
  `addr3`  
- [in] The third address for the parameter specification.  
+ окне Третий адрес для спецификации параметра.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK, если метод выполнен. в противном случае E_FAIL или другой код ошибки.  
   
 ## <a name="requirements"></a>Требования  
- **Header:** CorSym.idl, CorSym.h  
+ **Заголовок:** Корсим. idl, Корсим. h  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

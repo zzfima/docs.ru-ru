@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436030"
 ---
 # <a name="icorprofilerinfo2getarrayobjectinfo-method"></a>Метод ICorProfilerInfo2::GetArrayObjectInfo
-Gets detailed information about an array object.  
+Возвращает подробные сведения об объекте массива.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,22 +38,22 @@ HRESULT GetArrayObjectInfo(
   
 ## <a name="parameters"></a>Параметры  
  `objectId`  
- [in] The ID of a valid array object.  
+ окне Идентификатор допустимого объекта массива.  
   
  `cDimensions`  
- [in] The rank (number of dimensions) of the array.  
+ окне Ранг (число измерений) массива.  
   
  `pDimensionSizes`  
- [out] An array that contains integers, each representing the size of a dimension of the array.  
+ заполняет Массив, содержащий целые числа, каждый из которых представляет размер измерения массива.  
   
  `pDimensionLowerBounds`  
- [out] An array that contains integers, each representing the lower bound of a dimension of the array.  
+ заполняет Массив, содержащий целые числа, каждый из которых представляет нижнюю границу измерения массива.  
   
  `ppData`  
- [out] A pointer to the address of the raw buffer for the array, which is laid out according to the C++ convention.  
+ заполняет Указатель на адрес необработанного буфера для массива, который располагается в соответствии с C++ соглашением.  
   
 ## <a name="remarks"></a>Заметки  
- The `pDimensionSizes` and `pDimensionLowerBounds` are parallel arrays, so the elements located at the same index in each array are characteristics of the same entity.  
+ `pDimensionSizes` и `pDimensionLowerBounds` являются параллельными массивами, поэтому элементы, расположенные по одному индексу в каждом массиве, являются характеристиками одной и той же сущности.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  

@@ -13,11 +13,11 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352893"
 ---
 # <a name="how-to-make-an-object-variable-not-refer-to-any-instance-visual-basic"></a>Практическое руководство. Как сделать так, чтобы объектная переменная не указывала ни на какой экземпляр (Visual Basic)
-You can disassociate an object variable from any object instance by setting it to [Nothing](../../../../visual-basic/language-reference/nothing.md).  
+Можно разорвать связь объектной переменной с любым экземпляром объекта, задав для него значение [Nothing](../../../../visual-basic/language-reference/nothing.md).  
   
-### <a name="to-disassociate-an-object-variable-from-any-object-instance"></a>To disassociate an object variable from any object instance  
+### <a name="to-disassociate-an-object-variable-from-any-object-instance"></a>Отмена связывания объектной переменной с любым экземпляром объекта  
   
-- Set the variable to `Nothing` in an assignment statement.  
+- Задайте для переменной значение `Nothing` в операторе присваивания.  
   
     ```vb  
     ' Assume account is a defined class  
@@ -26,10 +26,10 @@ You can disassociate an object variable from any object instance by setting it t
     ```  
   
 ## <a name="robust-programming"></a>Отказоустойчивость  
- If your code tries to access a member of an object variable that has been set to `Nothing`, a <xref:System.NullReferenceException> occurs. If you set an object variable to `Nothing` frequently, or if it is possible the variable is not initialized, it is a good idea to enclose member accesses in a `Try...Catch...Finally` block.  
+ Если код пытается получить доступ к члену объектной переменной, для которой задано значение `Nothing`, происходит <xref:System.NullReferenceException>. Если переменная объекта присвоена `Nothing` часто или если переменная не инициализирована, рекомендуется заключить доступ к членам в блок `Try...Catch...Finally`.  
   
 ## <a name="net-framework-security"></a>Безопасность платформы .NET Framework  
- If you use an object variable for objects that contain confidential or sensitive data, you can set the variable to `Nothing` when you are not actively dealing with one of those objects. This reduces the chance of malicious code gaining access to the data.  
+ При использовании объектной переменной для объектов, содержащих конфиденциальные или конфиденциальные данные, можно присвоить переменной значение `Nothing`, если вы не работаете с одним из этих объектов. Это снижает вероятность того, что вредоносный код получает доступ к данным.  
   
 ## <a name="see-also"></a>См. также
 

@@ -17,18 +17,18 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74343623"
 ---
 # <a name="how-to-test-whether-two-objects-are-the-same-visual-basic"></a>Практическое руководство. Проверка совпадения двух объектов (Visual Basic)
-If you have two variables that refer to objects, you can use either the `Is` or `IsNot` operator, or both, to determine whether they refer to the same instance.  
+При наличии двух переменных, ссылающихся на объекты, можно использовать либо оператор `Is` или `IsNot`, либо и то, и другое, чтобы определить, ссылаются ли они на один и тот же экземпляр.  
   
-### <a name="to-test-whether-two-objects-are-the-same"></a>To test whether two objects are the same  
+### <a name="to-test-whether-two-objects-are-the-same"></a>Проверка того, совпадают ли два объекта  
   
-- Use the [Is Operator](../../../../visual-basic/language-reference/operators/is-operator.md) or the [IsNot Operator](../../../../visual-basic/language-reference/operators/isnot-operator.md) with the two variables as operands.  
+- Используйте [оператор is](../../../../visual-basic/language-reference/operators/is-operator.md) или [IsNot](../../../../visual-basic/language-reference/operators/isnot-operator.md) с двумя переменными в качестве операндов.  
   
      [!code-vb[VbVbalrOperators#69](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#69)]  
   
- You might want to take a certain action depending on whether two objects refer to the same instance. The preceding example compares control `c` against the active control on form `f`. If there is no active control, or if there is one but it is not the same control instance as `c`, then the `If` statement fails and the procedure returns without further processing.  
+ Может потребоваться выполнить определенное действие в зависимости от того, ссылаются ли два объекта на один и тот же экземпляр. Предыдущий пример сравнивает `c` элемента управления с активным элементом управления в `f`формы. Если нет активного элемента управления или если он существует, но он не является тем же экземпляром элемента управления, что и `c`, то инструкция `If` завершается ошибкой и процедура возвращается без дальнейшей обработки.  
   
- Whether you use `Is` or `IsNot` is a matter of personal convenience to you. One might be easier to read than the other in a given expression.  
+ Независимо от того, используется ли `Is` или `IsNot`. Один из них может быть проще читать, чем другой в данном выражении.  
   
 ## <a name="see-also"></a>См. также
 
-- [Comparison Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
+- [Операторы сравнения в Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)

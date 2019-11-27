@@ -19,7 +19,7 @@ ms.locfileid: "74428200"
  Платформа .NET Framework предоставляет возможность кэширования, которую можно использовать для улучшения производительности и масштабируемости как серверных, так и клиентских приложений Windows, включая ASP.NET.  
   
 > [!NOTE]
-> In the .NET Framework 3.5 and earlier versions, ASP.NET provided an in-memory cache implementation in the <xref:System.Web.Caching> namespace. In previous versions of the .NET Framework, caching was available only in the <xref:System.Web> namespace and therefore required a dependency on ASP.NET classes. В платформе .NET Framework 4 пространство имен <xref:System.Runtime.Caching> содержит интерфейсы API, предназначенные как для веб-приложений, так и для приложений, не связанных с Интернетом.  
+> В .NET Framework 3,5 и более ранних версиях ASP.NET предоставил реализацию кэша в памяти в пространстве имен <xref:System.Web.Caching>. В предыдущих версиях .NET Framework кэширование было доступно только в пространстве имен <xref:System.Web> и, следовательно, требовало зависимости от классов ASP.NET. В платформе .NET Framework 4 пространство имен <xref:System.Runtime.Caching> содержит интерфейсы API, предназначенные как для веб-приложений, так и для приложений, не связанных с Интернетом.  
   
 ## <a name="caching-data"></a>Кэширование данных  
  Информацию можно кэшировать с помощью классов в пространстве имен <xref:System.Runtime.Caching>. Классы кэширования в нем предоставляют перечисленные ниже возможности.  
@@ -47,12 +47,12 @@ ms.locfileid: "74428200"
  Классы кэширования в пространстве имен <xref:System.Runtime.Caching> предоставляют функциональные возможности кэширования данных в ASP.NET.  
   
 > [!NOTE]
-> If your application targets the .NET Framework 3.5 or earlier, you must use the caching classes that are defined in the <xref:System.Web.Caching> namespace. Дополнительные сведения см. в разделе [Общие сведения о кэшировании в ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/ms178597(v=vs.100)).  
+> Если приложение предназначено для .NET Framework 3,5 или более ранней версии, необходимо использовать классы кэширования, определенные в пространстве имен <xref:System.Web.Caching>. Дополнительные сведения см. в разделе [Общие сведения о кэшировании в ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/ms178597(v=vs.100)).  
   
 > [!NOTE]
 > При разработке новых приложений рекомендуется использовать класс <xref:System.Runtime.Caching.MemoryCache>. Интерфейс API, предоставленный в пространстве имен <xref:System.Runtime.Caching>, подобен API, предоставленному в пространстве имен <xref:System.Web.Caching.Cache>. Следовательно, этот API будет знаком вам, если вы использовали кэширование в более ранних версиях ASP.NET. Пример использования кэширования в приложениях ASP.NET см. в разделе [Пошаговое руководство. Кэширование данных приложения в ASP.NET](https://docs.microsoft.com/previous-versions/ff477235(v=vs.100)).  
   
-### <a name="output-caching"></a>Кэширование выходных данных  
+### <a name="output-caching"></a>Кэширование выводимых данных  
  Для ручного кэширования данных приложения можно использовать класс <xref:System.Runtime.Caching.MemoryCache> в ASP.NET. ASP.NET также поддерживает кэширование выходных данных, при котором в памяти сохраняются созданные выходные данные страниц, элементов управления и HTTP-ответов. Кэширование выходных данных можно настроить декларативно на веб-странице ASP.NET или с помощью параметров в файле Web.config. Дополнительные сведения см. в разделе [Элемент outputCache для элемента caching (схема параметров ASP.NET)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms228124(v=vs.100)).  
   
  ASP.NET позволяет расширить кэширование выходных данных путем создания пользовательских поставщиков кэша выходных данных. С помощью пользовательских поставщиков можно хранить кэшированное содержимое на других запоминающих устройствах, таких как диски, облачные хранилища и распределенные модули кэширования. Для создания пользовательского поставщика кэша выходных данных необходимо создать класс, производный от класса <xref:System.Web.Caching.OutputCacheProvider>, и настроить для приложения использование пользовательского поставщика кэша выходных данных.  
@@ -75,7 +75,7 @@ ms.locfileid: "74428200"
   
  Дополнительные сведения см. в записи [Расширенное кэширование выходных данных в ASP.NET 4 (серия, посвященная VS 2010 и .NET 4.0)](https://weblogs.asp.net/scottgu/extensible-output-caching-with-asp-net-4-vs-2010-and-net-4-0-series) блога Скотта Гатри (Scott Guthrie).  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - <xref:System.Runtime.Caching.ObjectCache>
 - <xref:System.Runtime.Caching.MemoryCache>

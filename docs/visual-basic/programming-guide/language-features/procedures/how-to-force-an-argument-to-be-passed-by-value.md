@@ -22,35 +22,35 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344513"
 ---
 # <a name="how-to-force-an-argument-to-be-passed-by-value-visual-basic"></a>Практическое руководство. Принудительная передача аргумента по значению (Visual Basic)
-The procedure declaration determines the passing mechanism. If a parameter is declared [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), Visual Basic expects to pass the corresponding argument by reference. This allows the procedure to change the value of the programming element underlying the argument in the calling code. If you wish to protect the underlying element against such change, you can override the `ByRef` passing mechanism in the procedure call by enclosing the argument name in parentheses. These parentheses are in addition to the parentheses enclosing the argument list in the call.  
+Объявление процедуры определяет механизм передачи. Если параметр объявлен как [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), Visual Basic предполагался передать соответствующий аргумент по ссылке. Это позволяет процедуре изменять значение программного элемента, лежащего в основе аргумента в вызывающем коде. Если вы хотите защитить базовый элемент от таких изменений, можно переопределить механизм передачи `ByRef` в вызове процедуры, заключив имя аргумента в круглые скобки. Эти скобки являются дополнением к круглым скобкам, включающим список аргументов в вызове.  
   
- The calling code cannot override a [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) mechanism.  
+ Вызывающий код не может переопределить механизм [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) .  
   
-### <a name="to-force-an-argument-to-be-passed-by-value"></a>To force an argument to be passed by value  
+### <a name="to-force-an-argument-to-be-passed-by-value"></a>Принудительная передача аргумента по значению  
   
-- If the corresponding parameter is declared `ByVal` in the procedure, you do not need to take any additional steps. Visual Basic already expects to pass the argument by value.  
+- Если соответствующий параметр объявлен `ByVal` в процедуре, вам не нужно предпринимать никаких дополнительных действий. Visual Basic уже ждет передачи аргумента по значению.  
   
-- If the corresponding parameter is declared `ByRef` in the procedure, enclose the argument in parentheses in the procedure call.  
+- Если соответствующий параметр объявлен `ByRef` в процедуре, заключите аргумент в круглые скобки в вызове процедуры.  
   
 ## <a name="example"></a>Пример  
- The following example overrides a `ByRef` parameter declaration. In the call that forces `ByVal`, note the two levels of parentheses.  
+ В следующем примере переопределяется объявление параметра `ByRef`. В вызове, который принудительно `ByVal`, обратите внимание на два уровня круглых скобок.  
   
  [!code-vb[VbVbcnProcedures#39](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#39)]  
   
  [!code-vb[VbVbcnProcedures#40](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#40)]  
   
- When `str` is enclosed in extra parentheses within the argument list, the `setNewString` procedure cannot change its value in the calling code, and `MsgBox` displays "Cannot be replaced if passed ByVal". When `str` is not enclosed in extra parentheses, the procedure can change it, and `MsgBox` displays "This is a new value for the inString argument."  
+ Если `str` заключаются в скобки в списке аргументов, процедура `setNewString` не может изменить ее значение в вызывающем коде, а `MsgBox` отображает "не может быть заменено, если передано ByVal". Если `str` не заключены в круглые скобки, процедура может изменить ее, а `MsgBox` выводит "это новое значение для аргумента строки".  
   
 ## <a name="compiling-the-code"></a>Компиляция кода  
- When you pass a variable by reference, you must use the `ByRef` keyword to specify this mechanism.  
+ При передаче переменной по ссылке необходимо использовать ключевое слово `ByRef` для указания этого механизма.  
   
- The default in Visual Basic is to pass arguments by value. However, it is good programming practice to include either the [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) or [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) keyword with every declared parameter. This makes your code easier to read.  
+ По умолчанию в Visual Basic передаются аргументы по значению. Однако рекомендуется включать ключевое слово [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) или [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) с каждым объявленным параметром. Это упрощает чтение кода.  
   
 ## <a name="robust-programming"></a>Отказоустойчивость  
- If a procedure declares a parameter [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), the correct execution of the code might depend on being able to change the underlying element in the calling code. If the calling code overrides this calling mechanism by enclosing the argument in parentheses, or if it passes a nonmodifiable argument, the procedure cannot change the underlying element. This might produce unexpected results in the calling code.  
+ Если процедура объявляет параметр [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), правильное выполнение кода может зависеть от возможности изменения базового элемента в вызывающем коде. Если вызывающий код переопределяет этот механизм вызова, заключив аргумент в круглые скобки или передавая неизменяемый аргумент, процедура не может изменить базовый элемент. Это может привести к непредвиденным результатам в вызывающем коде.  
   
 ## <a name="net-framework-security"></a>Безопасность платформы .NET Framework  
- There is always a potential risk in allowing a procedure to change the value underlying an argument in the calling code. Make sure you expect this value to be changed, and be prepared to check it for validity before using it.  
+ Всегда существует потенциальный риск, позволяющий процедуре изменять значение, которое является базовым для аргумента в вызывающем коде. Убедитесь, что это значение было изменено, и будьте готовы проверить его на допустимость перед его использованием.  
   
 ## <a name="see-also"></a>См. также
 
@@ -63,4 +63,4 @@ The procedure declaration determines the passing mechanism. If a parameter is de
 - [Практическое руководство. Изменение значения аргумента процедуры](./how-to-change-the-value-of-a-procedure-argument.md)
 - [Практическое руководство. Защита аргумента процедуры от изменений значения](./how-to-protect-a-procedure-argument-against-value-changes.md)
 - [Передача аргументов по позиции и по имени](./passing-arguments-by-position-and-by-name.md)
-- [Типы значений и ссылочные типы](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+- [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)

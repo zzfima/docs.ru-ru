@@ -25,17 +25,17 @@ ms.locfileid: "74347237"
 ## <a name="remarks"></a>Заметки  
  Сведения о методах и свойствах объекта `My.Computer.FileSystem` см. в разделе <xref:Microsoft.VisualBasic.FileIO.FileSystem>.  
   
- For more information, see [File Access with Visual Basic](../../../visual-basic/developing-apps/programming/drives-directories-files/file-access.md).  
+ Дополнительные сведения см. [в разделе доступ к файлам с помощью Visual Basic](../../../visual-basic/developing-apps/programming/drives-directories-files/file-access.md).  
   
 > [!NOTE]
-> You can also use classes in the <xref:System.IO?displayProperty=nameWithType> namespace to work with drives, files, and directories.  
+> Классы в пространстве имен <xref:System.IO?displayProperty=nameWithType> также можно использовать для работы с дисками, файлами и каталогами.  
   
 ## <a name="requirements"></a>Требования  
  **Пространство имен:** <xref:Microsoft.VisualBasic.MyServices>  
   
- **Class:** <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy> (provides access to <xref:Microsoft.VisualBasic.FileIO.FileSystem>)  
+ **Класс:** <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy> (предоставляет доступ к <xref:Microsoft.VisualBasic.FileIO.FileSystem>)  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **Сборка:** Библиотека времени выполнения Visual Basic (в Microsoft. VisualBasic. dll)  
   
 ## <a name="see-also"></a>См. также
 

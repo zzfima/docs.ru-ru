@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74437537"
 ---
 # <a name="imetadataimportgetinterfaceimplprops-method"></a>Метод IMetaDataImport::GetInterfaceImplProps
-Gets a pointer to the metadata tokens for the <xref:System.Type> that implements the specified method, and for the interface that declares that method.
+Возвращает указатель на маркеры метаданных для <xref:System.Type>, реализующей указанный метод, а также для интерфейса, объявляющего этот метод.
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,27 +37,27 @@ HRESULT GetInterfaceImplProps (
   
 ## <a name="parameters"></a>Параметры  
  `iiImpl`  
- [in] The metadata token representing the method to return the class and interface tokens for.  
+ окне Токен метаданных, представляющий метод, для которого необходимо вернуть маркеры класса и интерфейса.  
   
  `pClass`  
- [out] The metadata token representing the class that implements the method.  
+ заполняет Маркер метаданных, представляющий класс, реализующий метод.  
   
  `ptkIface`  
- [out] The metadata token representing the interface that defines the implemented method.  
+ заполняет Токен метаданных, представляющий интерфейс, определяющий реализованный метод.  
 
 ## <a name="remarks"></a>Заметки
 
- You obtain the value for `iImpl` by calling the [EnumInterfaceImpls](imetadataimport-enuminterfaceimpls-method.md) method.
+ Чтобы получить значение для `iImpl`, вызовите метод [енуминтерфацеимплс](imetadataimport-enuminterfaceimpls-method.md) .
  
- For example, suppose that a class has an `mdTypeDef` token value of 0x02000007 and that it implements three interfaces whose types have tokens: 
+ Например, предположим, что класс имеет `mdTypeDef` значение токена 0x02000007 и реализует три интерфейса, типы которых имеют токены: 
 
 - 0x02000003 (TypeDef)
 - 0x0100000A (TypeRef)
 - 0x0200001C (TypeDef)
 
-Conceptually, this information is stored into an interface implementation table as:
+По сути, эта информация хранится в таблице реализации интерфейса следующим образом:
 
-| Row number | Class token | Interface token |
+| Номер строки | Токен класса | Токен интерфейса |
 |------------|-------------|-----------------|
 | 4          |             |                 |
 | 5          | 02000007    | 02000003        |
@@ -65,19 +65,19 @@ Conceptually, this information is stored into an interface implementation table 
 | 7          |             |                 |
 | 8          | 02000007    | 0200001C        |
 
-Recall, the token is a 4-byte value:
+Помните, что маркер является 4-байтовым значением:
 
-- The lower 3 bytes hold the row number, or RID.
-- The upper byte holds the token type – 0x09 for `mdtInterfaceImpl`.
+- 3 младших байта содержат номер строки или RID.
+- Верхний байт содержит тип токена — 0x09 для `mdtInterfaceImpl`.
 
-`GetInterfaceImplProps` returns the information held in the row whose token you provide in the `iImpl` argument. 
+`GetInterfaceImplProps` возвращает информацию, удерживаемую в строке, токен которой вы задаете в аргументе `iImpl`. 
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Заголовок:** COR. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

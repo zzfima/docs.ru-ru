@@ -19,9 +19,9 @@ ms.locfileid: "74441270"
 > [!NOTE]
 > Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Последние сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]см. в разделе [API автоматизации Windows. Автоматизация пользовательского интерфейса](/windows/win32/winauto/entry-uiauto-win32).  
   
- This section contains code examples that demonstrate tasks in writing [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] providers for [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] elements.  
+ В этом разделе содержатся примеры кода, демонстрирующие задачи в написании поставщиков [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] для [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] элементов.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Предоставление серверного поставщика автоматизации пользовательского интерфейса](expose-a-server-side-ui-automation-provider.md)  
  [Возврат свойств от поставщика автоматизации пользовательского интерфейса](return-properties-from-a-ui-automation-provider.md)  
  [Вызов событий из поставщика автоматизации пользовательского интерфейса](raise-events-from-a-ui-automation-provider.md)  

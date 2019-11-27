@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74447170"
 ---
 # <a name="icorprofilerinfo2getclassfromtokenandtypeargs-method"></a>Метод ICorProfilerInfo2::GetClassFromTokenAndTypeArgs
-Gets the `ClassID` of a type by using the specified metadata token and the `ClassID` values of any type arguments.  
+Возвращает `ClassID` типа, используя указанный токен метаданных и `ClassID` значения любых аргументов типа.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,26 +38,26 @@ HRESULT GetClassFromTokenAndTypeArgs(
   
 ## <a name="parameters"></a>Параметры  
  `moduleID`  
- [in] The ID of the module in which the type resides.  
+ окне Идентификатор модуля, в котором находится тип.  
   
  `typeDef`  
- [in] An `mdTypeDef` metadata token that references the type.  
+ окне Токен метаданных `mdTypeDef`, ссылающийся на тип.  
   
  `cTypeArgs`  
- [in] The number of type parameters for the given type. This value must be zero for non-generic types.  
+ окне Число параметров типа для данного типа. Для типов, не являющихся универсальными, это значение должно быть равно нулю.  
   
  `typeArgs`  
- [in] An array of `ClassID` values, each of which is an argument of the type. The value of `typeArgs` can be NULL if `cTypeArgs` is set to zero.  
+ окне Массив значений `ClassID`, каждый из которых является аргументом типа. Значение `typeArgs` может быть равно NULL, если `cTypeArgs` имеет значение 0.  
   
  `pClassID`  
- [out] A pointer to the `ClassID` of the specified type.  
+ заполняет Указатель на `ClassID` указанного типа.  
   
 ## <a name="remarks"></a>Заметки  
- Calling the `GetClassFromTokenAndTypeArgs` method with an `mdTypeRef` instead of an `mdTypeDef` metadata token can have unpredictable results; callers should resolve the `mdTypeRef` to an `mdTypeDef` when passing it.  
+ Вызов метода `GetClassFromTokenAndTypeArgs` с `mdTypeRef`, а не `mdTypeDef` маркером метаданных, может иметь непредсказуемые результаты. вызывающие объекты должны разрешить `mdTypeRef` в `mdTypeDef` при передаче.  
   
- If the type is not already loaded, calling `GetClassFromTokenAndTypeArgs` will trigger loading, which is a dangerous operation in many contexts. For example, calling this method during loading of modules or other types could lead to an infinite loop as the runtime attempts to circularly load things.  
+ Если тип еще не загружен, вызов `GetClassFromTokenAndTypeArgs` запустит загрузку, что является опасной операцией во многих контекстах. Например, вызов этого метода во время загрузки модулей или других типов может привести к бесконечному циклу, так как среда выполнения пытается циклически загружать вещи.  
   
- In general, use of `GetClassFromTokenAndTypeArgs` is discouraged. If profilers are interested in events for a particular type, they should store the `ModuleID` and `mdTypeDef` of that type, and use [ICorProfilerInfo2::GetClassIDInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getclassidinfo2-method.md) to check whether a given `ClassID` is that of the desired type.  
+ В общем случае использование `GetClassFromTokenAndTypeArgs` не рекомендуется. Если профилировщики заинтересованы в событиях для определенного типа, они должны хранить `ModuleID` и `mdTypeDef` этого типа, а также использовать [ICorProfilerInfo2:: GetClassIDInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getclassidinfo2-method.md) для проверки того, является ли данный `ClassID` требуемым типом.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  

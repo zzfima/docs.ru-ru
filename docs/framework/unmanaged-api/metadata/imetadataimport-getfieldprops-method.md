@@ -45,44 +45,44 @@ HRESULT GetFieldProps (
   
 ## <a name="parameters"></a>Параметры  
  `mb`  
- [in] A FieldDef token that represents the field to get associated metadata for.  
+ окне Токен FieldDef, представляющий поле, для которого нужно получить связанные метаданные.  
   
  `pClass`  
- [out] A pointer to a TypeDef token that represents the type of the class that the field belongs to.  
+ заполняет Указатель на маркер TypeDef, представляющий тип класса, которому принадлежит поле.  
   
  `szField`  
- [out] The name of the field.  
+ заполняет Имя поля.  
   
  `cchField`  
- [in] The size in wide characters of the buffer for *szField*.  
+ окне Размер в расширенных символах буфера для *сзфиелд*.  
   
  `pchField`  
- [out] The actual size of the returned buffer.  
+ заполняет Фактический размер возвращаемого буфера.  
   
  `pdwAttr`  
- [out] Flags associated with the field's metadata.  
+ заполняет Флаги, связанные с метаданными поля.  
   
  `ppvSigBlob`  
- [in] A pointer to the binary metadata value that describes the field.  
+ окне Указатель на двоичное значение метаданных, описывающее поле.  
   
  `pcbSigBlob`  
- [out] The size in bytes of `ppvSigBlob`.  
+ заполняет Размер в байтах `ppvSigBlob`.  
   
  `pdwCPlusTypeFlag`  
- [out] A flag that specifies the value type of the field.  
+ заполняет Флаг, указывающий тип значения поля.  
   
  `ppValue`  
- [out] A constant value for the field.  
+ заполняет Постоянное значение для поля.  
   
  `pcchValue`  
- [out] The size in chars of `ppValue`, or zero if no string exists.  
+ заполняет Размер в символах `ppValue`или нуль, если строка не существует.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Заголовок:** COR. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -9,7 +9,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347143"
 ---
-# <a name="projecting-xml-in-a-different-shape-visual-basic"></a>Projecting XML in a Different Shape (Visual Basic)
+# <a name="projecting-xml-in-a-different-shape-visual-basic"></a>Проецирование XML в другую форму (Visual Basic)
 В этом разделе показан пример проецированного XML, который находится в форме, отличной от исходного XML.  
   
  Множество типичных преобразований XML состоят из цепочек запросов, как в примере. Принято начинать с XML в некой форме, проецировать промежуточные результаты как коллекции анонимных типов или именованных типов, затем опять проецировать результаты в XML, который совсем отличен от исходного XML.  
@@ -17,7 +17,7 @@ ms.locfileid: "74347143"
 ## <a name="example"></a>Пример  
  В данном примере обрабатывается документ WordprocessingML, из которого извлекаются узлы абзацев. Также идентифицируется стиль и текст каждого абзаца. Наконец, в примере проецируется XML с другой формой. Этот пример основан на предыдущих примерах данного учебника. Новая инструкция, которая выполняет проекцию, выявляется в комментариях в нижеприведенном коде.  
   
- For instructions for creating the source document for this example, see [Creating the Source Office Open XML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
+ Инструкции по созданию исходного документа для этого примера см. в разделе [Создание исходного документа Office Open XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
   
  В этом примере используются классы из сборки WindowsBase. Используются типы из пространства имен <xref:System.IO.Packaging?displayProperty=nameWithType>.  
   
@@ -227,11 +227,11 @@ End Module
 </Root>  
 ```  
   
-## <a name="next-steps"></a>Следующие шаги  
+## <a name="next-steps"></a>Дальнейшие шаги  
  В следующем примере составлен запрос на выявление всего текста в документе Word:  
   
-- [Finding Text in Word Documents (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/finding-text-in-word-documents.md)  
+- [Поиск текста в документах Word (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/finding-text-in-word-documents.md)  
   
 ## <a name="see-also"></a>См. также
 
-- [Tutorial: Manipulating Content in a WordprocessingML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [Руководство. Управление содержимым в документе WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)

@@ -22,7 +22,7 @@ ms.locfileid: "74283777"
 ## <a name="datepicker-parts"></a>Части DatePicker  
  В следующей таблице перечислены именованные части для элемента управления <xref:System.Windows.Controls.DatePicker>.  
   
-|Отделение|Type|Описание|  
+|Отделение|Тип|Описание|  
 |-|-|-|  
 |PART_Root|<xref:System.Windows.Controls.Grid>|Корень элемента управления.|  
 |PART_Button|<xref:System.Windows.Controls.Button>|Кнопка, которая открывает и закрывает <xref:System.Windows.Controls.Calendar>.|  
@@ -43,7 +43,7 @@ ms.locfileid: "74283777"
 ## <a name="datepickertextbox-parts"></a>Датепиккертекстбокс части  
  В следующей таблице перечислены именованные части для элемента управления <xref:System.Windows.Controls.Primitives.DatePickerTextBox>.  
   
-|Отделение|Type|Описание|  
+|Отделение|Тип|Описание|  
 |-|-|-|  
 |PART_Watermark|<xref:System.Windows.Controls.ContentControl>|Элемент, содержащий начальный текст в <xref:System.Windows.Controls.DatePicker>.|  
 |PART_ContentElement|<xref:System.Windows.FrameworkElement>|Визуальный элемент, который может содержать <xref:System.Windows.FrameworkElement>. Текст <xref:System.Windows.Controls.TextBox> отображается в этом элементе.|  

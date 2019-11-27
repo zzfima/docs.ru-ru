@@ -13,7 +13,7 @@ ms.locfileid: "74283316"
 
 Начиная с .NET Framework 3,5, частично доверенные вызывающие объекты могут обращаться к открытым типам и методам, реализованным в <xref:System.ServiceModel>, <xref:System.Runtime.Serialization>и <xref:System.ServiceModel.Web>. В этом разделе описываются поддерживаемые сценарии использования Windows Communication Foundation (WCF) в приложении с частичным доверием, а также ограниченное подмножество функций WCF, доступных для приложений, работающих с ограниченной защитой доступа к коду (CAS). чтение.  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
  [Поддерживаемые сценарии развертывания](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md)  
  Описывает основные сценарии частичного доверия для запуска WCF.  
   

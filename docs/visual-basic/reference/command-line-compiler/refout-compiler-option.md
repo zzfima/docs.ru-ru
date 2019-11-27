@@ -14,7 +14,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348657"
 ---
-# <a name="-refout-visual-basic"></a>-refout (Visual Basic)
+# <a name="-refout-visual-basic"></a>-RefOut (Visual Basic)
 
 Параметр **-refout** указывает путь к файлу, в который нужно выводить базовую сборку.
 
@@ -29,11 +29,11 @@ ms.locfileid: "74348657"
 ## <a name="arguments"></a>Аргументы
 
 `filepath`  
-The path and filename of the reference assembly. It should generally be in a sub-folder of the primary assembly. Согласно рекомендуемому соглашению (используемому в MSBuild), базовую сборку следует помещать во вложенную папку ref/ относительно основной сборки. All folders in `filepath` must exist; the compiler does not create them.
+Путь и имя файла ссылочной сборки. Обычно он находится во вложенной папке основной сборки. Согласно рекомендуемому соглашению (используемому в MSBuild), базовую сборку следует помещать во вложенную папку ref/ относительно основной сборки. Все папки в `filepath` должны существовать; компилятор не создает их.
 
 ## <a name="remarks"></a>Заметки
 
-Visual Basic supports the `-refout` switch starting with version 15.3.
+Visual Basic поддерживает параметр `-refout`, начиная с версии 15,3.
 
 Базовые сборки являются особым типом сборки, которая содержит только минимальный объем метаданных, необходимый для представления общедоступного API-интерфейса библиотеки. Такие сборки включают в себя объявления для всех элементов, которые важны при указании ссылки на сборку в средствах сборки, но исключают все реализации элементов, а также объявления закрытых элементов, не имеющих наблюдаемого влияния на их контракт API. Дополнительные сведения см. в разделе [Базовые сборки](../../../standard/assembly/reference-assemblies.md) в руководстве по .NET.
 

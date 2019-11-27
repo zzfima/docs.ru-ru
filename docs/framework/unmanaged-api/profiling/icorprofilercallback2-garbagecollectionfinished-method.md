@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74439840"
 ---
 # <a name="icorprofilercallback2garbagecollectionfinished-method"></a>Метод ICorProfilerCallback2::GarbageCollectionFinished
-Notifies the profiler that garbage collection has completed and all garbage collection callbacks have been issued for it.  
+Уведомляет профилировщик о завершении сборки мусора и выдает для него все обратные вызовы сборки мусора.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -31,8 +31,8 @@ Notifies the profiler that garbage collection has completed and all garbage coll
 HRESULT GarbageCollectionFinished();  
 ```  
   
-## <a name="remarks"></a>Заметки  
- It is safe for the profiler to inspect objects in their final locations when the `GarbageCollectionFinished` method is called.  
+## <a name="remarks"></a>Примечания  
+ Профилировщик может быть защищен для проверки объектов в их конечном расположении при вызове метода `GarbageCollectionFinished`.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
@@ -43,7 +43,7 @@ HRESULT GarbageCollectionFinished();
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
 - [Интерфейс ICorProfilerCallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)

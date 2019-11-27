@@ -14,10 +14,10 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74335382"
 ---
 # <a name="equals-clause-visual-basic"></a>Предложение Equals (Visual Basic)
-Compares keys from collections being joined.  
+Сравнивает ключи из объединяемых коллекций.  
   
 ## <a name="remarks"></a>Заметки  
- The `Equals` keyword is used in the following contexts:  
+ Ключевое слово `Equals` используется в следующих контекстах:  
   
  [Предложение Group Join](../../../visual-basic/language-reference/queries/group-join-clause.md)  
   

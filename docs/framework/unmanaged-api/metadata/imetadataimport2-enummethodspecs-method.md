@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428295"
 ---
 # <a name="imetadataimport2enummethodspecs-method"></a>Метод IMetaDataImport2::EnumMethodSpecs
-Gets an enumerator for an array of MethodSpec tokens associated with the specified MethodDef or MemberRef token.  
+Возвращает перечислитель для массива токенов MethodSpec, связанных с указанным токеном MethodDef или MemberRef.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,33 +39,33 @@ HRESULT EnumMethodSpecs (
   
 ## <a name="parameters"></a>Параметры  
  `phEnum`  
- [in, out] A pointer to the enumerator for `rMethodSpecs`.  
+ [вход, выход] Указатель на перечислитель для `rMethodSpecs`.  
   
  `tk`  
- [in] The MemberRef or MethodDef token that represents the method whose MethodSpec tokens are to be enumerated. If the value of `tk` is 0 (zero), all MethodSpec tokens in the scope will be enumerated.  
+ окне Токен MemberRef или MethodDef, представляющий метод, для которого необходимо перечислить маркеры MethodSpec. Если значение `tk` равно 0 (нулю), будут перечислены все токены MethodSpec в области.  
   
  `rMethodSpecs`  
- [out] The array of MethodSpec tokens to enumerate.  
+ заполняет Массив токенов MethodSpec для перечисления.  
   
  `cMax`  
- [in] The requested maximum number of tokens to place in `rMethodSpecs`.  
+ окне Запрошенное максимальное число токенов, помещаемых в `rMethodSpecs`.  
   
  `pcMethodSpecs`  
- [out] The returned number of tokens placed in `rMethodSpecs`.  
+ заполняет Возвращенное число токенов, помещенных в `rMethodSpecs`.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
   
 |HRESULT|Описание|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMethodSpecs` returned successfully.|  
-|`S_FALSE`|`phEnum` has no member elements. In this case, `pcMethodSpecs` is set to 0 (zero).|  
+|`S_OK`|`EnumMethodSpecs` успешно возвращено.|  
+|`S_FALSE`|у `phEnum` нет элементов Member. В этом случае `pcMethodSpecs` имеет значение 0 (ноль).|  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Заголовок:** COR. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Библиотека:** Используется в качестве ресурса в MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

@@ -18,17 +18,17 @@ ms.locfileid: "74345409"
 ---
 # <a name="how-to-access-a-variable-hidden-by-a-derived-class-visual-basic"></a>Практическое руководство. Доступ к переменной, скрытой производным классом (Visual Basic)
 
-When code in a derived class accesses a variable, the compiler normally resolves the reference to the closest accessible version, that is, the accessible version the fewest derivational steps backward from the accessing class. If the variable is defined in the derived class, the code normally accesses that definition.
+Когда код в производном классе получает доступ к переменной, компилятор обычно разрешает ссылку на ближайшую доступную версию, то есть доступную версию с минимальными производными шагами назад от класса доступа. Если переменная определена в производном классе, код обычно получает доступ к определению.
 
-If the derived class variable shadows a variable in the base class, it hides the base class version. However, you can access the base class variable by qualifying it with the `MyBase` keyword.
+Если переменная производного класса затеняет переменную в базовом классе, она скрывает версию базового класса. Однако можно получить доступ к переменной базового класса, указав ее с помощью ключевого слова `MyBase`.
 
-### <a name="to-access-a-base-class-variable-hidden-by-a-derived-class"></a>To access a base class variable hidden by a derived class
+### <a name="to-access-a-base-class-variable-hidden-by-a-derived-class"></a>Доступ к переменной базового класса, скрытой производным классом
 
-- In an expression or assignment statement, precede the variable name with the `MyBase` keyword and a period (`.`).
+- В выражении или операторе присваивания перед именем переменной введите `MyBase` ключевое слово и точку (`.`).
 
-    The compiler resolves the reference to the base class version of the variable.
+    Компилятор разрешает ссылку на версию базового класса переменной.
 
-    The following example illustrates shadowing through inheritance. It makes two references, one that accesses the shadowing variable and one that bypasses the shadowing.
+    В следующем примере показано затенение с помощью наследования. Он делает две ссылки — одну, которая обращается к переменной с тенью, и одну, которая обходит затенение.
 
     ```vb
     Public Class shadowBaseClass
@@ -45,16 +45,16 @@ If the derived class variable shadows a variable in the base class, it hides the
     End Class
     ```
 
-    The preceding example declares the variable `shadowString` in the base class and shadows it in the derived class. The procedure `showStrings` in the derived class displays the shadowing version of the string when the name `shadowString` is not qualified. It then displays the shadowed version when `shadowString` is qualified with the `MyBase`  keyword.
+    В предыдущем примере переменная объявляется `shadowString` в базовом классе и скрывается в производном классе. Процедура, `showStrings` в производном классе, отображает версию строки с тенью, если имя `shadowString` не является полным. Затем отображается затененная версия, если `shadowString` дополнено ключевым словом `MyBase`.
 
 ## <a name="robust-programming"></a>Отказоустойчивость
 
-To lower the risk of referring to an unintended version of a shadowed variable, you can fully qualify all references to a shadowed variable. Shadowing introduces more than one version of a variable with the same name. When a code statement refers to the variable name, the version to which the compiler resolves the reference depends on factors such as the location of the code statement and the presence of a qualifying string. This can increase the risk of referring to the wrong version of the variable.
+Чтобы снизить риск обращения к непреднамеренной версии затененной переменной, можно полностью определить все ссылки на затененную переменную. При затенении введено более одной версии переменной с тем же именем. Если инструкция Code ссылается на имя переменной, версия, на которую компилятор разрешает ссылку, зависит от таких факторов, как расположение инструкции Code и наличие подходящих строк. Это может увеличить риск обращения к неверной версии переменной.
 
 ## <a name="see-also"></a>См. также
 
 - [Ссылки на объявленные элементы](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
-- [Shadowing in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
+- [Затенение в Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
 - [Различия между затемнением и переопределением](../../../../visual-basic/programming-guide/language-features/declared-elements/differences-between-shadowing-and-overriding.md)
 - [Практическое руководство. Сокрытие переменной с тем же именем, что и ваша переменная](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-a-variable-with-the-same-name-as-your-variable.md)
 - [Практическое руководство. Сокрытие наследуемой переменной](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-an-inherited-variable.md)

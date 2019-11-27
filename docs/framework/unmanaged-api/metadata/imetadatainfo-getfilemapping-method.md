@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436172"
 ---
 # <a name="imetadatainfogetfilemapping-method"></a>Метод IMetaDataInfo::GetFileMapping
-Gets the memory region of the mapped file, and the type of mapping.  
+Возвращает область памяти сопоставленного файла и тип сопоставления.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,37 +37,37 @@ HRESULT GetFileMapping (
   
 ## <a name="parameters"></a>Параметры  
  `ppvData`  
- [out] A pointer to the start of the mapped file.  
+ заполняет Указатель на начало сопоставленного файла.  
   
  `pcbData`  
- [out] The size of the mapped region. If `pdwMappingType` is `fmFlat`, this is the size of the file.  
+ заполняет Размер сопоставленной области. Если `pdwMappingType` `fmFlat`, то это размер файла.  
   
  `pdwMappingType`  
- [out] A [CorFileMapping](../../../../docs/framework/unmanaged-api/metadata/corfilemapping-enumeration.md) value that indicates the type of mapping. The current implementation of the common language runtime (CLR) always returns `fmFlat`. Other values are reserved for future use. However, you should always verify the returned value, because other values may be enabled in future versions or service releases.  
+ заполняет Значение [CorFileMapping](../../../../docs/framework/unmanaged-api/metadata/corfilemapping-enumeration.md) , указывающее тип сопоставления. Текущая реализация среды CLR всегда возвращает `fmFlat`. Другие значения зарезервированы для использования в будущем. Однако всегда следует проверять возвращаемое значение, так как в будущих версиях или выпусках служб могут быть включены другие значения.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
   
 |HRESULT|Описание|  
 |-------------|-----------------|  
-|`S_OK`|All outputs are filled.|  
-|`E_INVALIDARG`|NULL was passed as an argument value.|  
-|`COR_E_NOTSUPPORTED`|The CLR implementation cannot provide information about the memory region. This can happen for the following reasons:<br /><br /> -   The metadata scope was opened with the `ofWrite` or `ofCopyMemory` flag.<br />-   The metadata scope was opened without the `ofReadOnly` flag.<br />-   The [IMetaDataDispenser::OpenScopeOnMemory](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscopeonmemory-method.md) method was used to open only the metadata portion of the file.<br />-   The file is not a portable executable (PE) file. **Note:**  These conditions depend on the CLR implementation, and are likely to be weakened in future versions of the CLR.|  
+|`S_OK`|Все выходные данные заполнены.|  
+|`E_INVALIDARG`|Значение NULL передано в качестве значения аргумента.|  
+|`COR_E_NOTSUPPORTED`|Реализация CLR не может предоставить сведения о области памяти. Это может происходить по следующим причинам:<br /><br /> — Область метаданных была открыта с флагом `ofWrite` или `ofCopyMemory`.<br />— Область метаданных была открыта без флага `ofReadOnly`.<br />— Метод [IMetaDataDispenser:: OpenScopeOnMemory](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscopeonmemory-method.md) использовался для открытия только части файла с метаданными.<br />— Файл не является переносимым исполняемым файлом (PE). **Примечание.**  Эти условия зависят от реализации CLR и, скорее всего, будут ослаблены в будущих версиях среды CLR.|  
   
 ## <a name="remarks"></a>Заметки  
- The memory that `ppvData` points to is valid only as long as the underlying metadata scope is open.  
+ Память, на которую `ppvData` указывает, действительна только при условии, что базовая область метаданных открыта.  
   
- In order for this method to work, when you map the metadata of an on-disk file into memory by calling the [IMetaDataDispenser::OpenScope](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md) method, you must specify the `ofReadOnly` flag and you must not specify the `ofWrite` or `ofCopyMemory` flag.  
+ Чтобы этот метод работал, при сопоставлении метаданных файла на диске с памятью путем вызова метода [IMetaDataDispenser:: OpenScope](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md) необходимо указать флаг `ofReadOnly` и не указывать `ofWrite` или флаг `ofCopyMemory`.  
   
- The choice of file mapping type for each scope is specific to a given implementation of the CLR. It cannot be set by the user. The current implementation of the CLR always returns `fmFlat` in `pdwMappingType`, but this can change in future versions of the CLR or in future service releases of a given version. You should always check the returned value in `pdwMappingType`, because different types will have different layouts and offsets.  
+ Выбранный тип сопоставления файлов для каждой области зависит от конкретной реализации среды CLR. Он не может быть задан пользователем. Текущая реализация CLR всегда возвращает `fmFlat` в `pdwMappingType`, но это может измениться в будущих версиях CLR или в будущих выпусках данной версии службы. Всегда следует проверять возвращаемое значение в `pdwMappingType`, поскольку разные типы будут иметь разные макеты и смещения.  
   
- Passing NULL for any of the three parameters is not supported. The method returns `E_INVALIDARG`, and none of the outputs are filled. Ignoring the mapping type or the size of the region can result in abnormal program termination.  
+ Передача значения NULL для любого из трех параметров не поддерживается. Метод возвращает `E_INVALIDARG`, и ни один из выходных данных не заполнен. Пропуск типа сопоставления или размера региона может привести к аварийному завершению программы.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Заголовок:** COR. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Библиотека:** Используется в качестве ресурса в MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

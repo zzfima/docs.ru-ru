@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436432"
 ---
 # <a name="couninitiee-enumeration"></a>Перечисление COUNINITIEE
-Specifies constants used by [CoUninitializeEE](../../../../docs/framework/unmanaged-api/hosting/couninitializeee-function.md) when initializing the common language runtime.  
+Указывает константы, используемые [CoUninitializeEE](../../../../docs/framework/unmanaged-api/hosting/couninitializeee-function.md) при инициализации среды CLR.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,18 +38,18 @@ typedef enum tagCOUNINITEE
   
 |Член|Описание|  
 |------------|-----------------|  
-|`COUNINITEE_DEFAULT`|Indicates default uninitialization mode.|  
-|`COUNINITEE_DLL`|Indicates uninitialization mode for unloading an assembly.|  
+|`COUNINITEE_DEFAULT`|Указывает режим деинициализации по умолчанию.|  
+|`COUNINITEE_DLL`|Указывает режим отмены инициализации для выгрузки сборки.|  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Заголовок:** COR. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Перечисления метаданных](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

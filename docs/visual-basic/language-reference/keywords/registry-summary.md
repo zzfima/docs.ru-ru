@@ -12,15 +12,15 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351688"
 ---
 # <a name="registry-summary-visual-basic"></a>Сводка по реестру (Visual Basic)
-Visual Studio language keywords and run-time library members are organized by purpose and use.  
+Ключевые слова языка Visual Studio и элементы библиотеки времени выполнения упорядочены по целям и использованию.  
   
- Using the `My` feature provides you with greater productivity and performance in registry operations than these elements. Для получения дополнительной информации см. <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>.  
+ Использование функции `My` обеспечивает более высокую производительность и производительность операций с реестром, чем эти элементы. Дополнительные сведения см. в разделе <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>.  
   
 |**Действие**|**Элемент языка**|  
 |----------------|--------------------------|  
-|Delete program settings.|<xref:Microsoft.VisualBasic.Interaction.DeleteSetting%2A>|  
-|Read program settings.|<xref:Microsoft.VisualBasic.Interaction.GetSetting%2A>, <xref:Microsoft.VisualBasic.Interaction.GetAllSettings%2A>|  
-|Save program settings.|<xref:Microsoft.VisualBasic.Interaction.SaveSetting%2A>|  
+|Удаление параметров программы.|<xref:Microsoft.VisualBasic.Interaction.DeleteSetting%2A>|  
+|Чтение параметров программы.|<xref:Microsoft.VisualBasic.Interaction.GetSetting%2A>, <xref:Microsoft.VisualBasic.Interaction.GetAllSettings%2A>|  
+|Сохранить параметры программы.|<xref:Microsoft.VisualBasic.Interaction.SaveSetting%2A>|  
   
 ## <a name="see-also"></a>См. также
 

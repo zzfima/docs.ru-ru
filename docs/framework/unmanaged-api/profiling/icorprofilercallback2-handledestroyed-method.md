@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74439757"
 ---
 # <a name="icorprofilercallback2handledestroyed-method"></a>Метод ICorProfilerCallback2::HandleDestroyed
-Notifies the code profiler that a garbage collection handle has been destroyed.  
+Уведомляет профилировщик кода о том, что был уничтожен обработчик сборки мусора.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -34,7 +34,7 @@ HRESULT HandleDestroyed(
   
 ## <a name="parameters"></a>Параметры  
  `handleId`  
- [in] The ID of the handle for the garbage collection.  
+ окне Идентификатор обработчика для сборки мусора.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  

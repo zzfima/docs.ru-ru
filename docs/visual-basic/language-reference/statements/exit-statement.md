@@ -21,7 +21,7 @@ ms.locfileid: "74345940"
 ---
 # <a name="exit-statement-visual-basic"></a>Оператор Exit (Visual Basic)
 
-Exits a procedure or block and transfers control immediately to the statement following the procedure call or the block definition.
+Выходит из процедуры или блока и немедленно передает управление оператору после вызова процедуры или определения блока.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -32,56 +32,56 @@ Exit { Do | For | Function | Property | Select | Sub | Try | While }
 ## <a name="statements"></a>Операторы
 
  `Exit Do`  
- Immediately exits the `Do` loop in which it appears. Execution continues with the statement following the `Loop` statement. `Exit Do` can be used only inside a `Do` loop. When used within nested `Do` loops, `Exit Do` exits the innermost loop and transfers control to the next higher level of nesting.
+ Немедленно выходит из цикла `Do`, в котором он отображается. Выполнение продолжится с оператора, следующего за оператором `Loop`. `Exit Do` можно использовать только в цикле `Do`. При использовании внутри вложенных циклов `Do` `Exit Do` выходит из внутреннего цикла и передает управление следующему более высокому уровню вложенности.
 
  `Exit For`  
- Immediately exits the `For` loop in which it appears. Execution continues with the statement following the `Next` statement. `Exit For` can be used only inside a `For`...`Next` or `For Each`...`Next` loop. When used within nested `For` loops, `Exit For` exits the innermost loop and transfers control to the next higher level of nesting.
+ Немедленно выходит из цикла `For`, в котором он отображается. Выполнение продолжится с оператора, следующего за оператором `Next`. `Exit For` можно использовать только в цикле `For`...`Next` или `For Each`...`Next`. При использовании внутри вложенных циклов `For` `Exit For` выходит из внутреннего цикла и передает управление следующему более высокому уровню вложенности.
 
  `Exit Function`  
- Immediately exits the `Function` procedure in which it appears. Execution continues with the statement following the statement that called the `Function` procedure. `Exit Function` can be used only inside a `Function` procedure.
+ Немедленно завершает работу `Function` процедуры, в которой она отображается. Выполнение продолжится с оператора, следующего за инструкцией, вызвавшей `Function` процедуру. `Exit Function` можно использовать только внутри процедуры `Function`.
 
- To specify a return value, you can assign the value to the function name on a line before the `Exit Function` statement. To assign the return value and exit the function in one statement, you can instead use the [Return Statement](return-statement.md).
+ Чтобы указать возвращаемое значение, можно присвоить значение имени функции в строке перед оператором `Exit Function`. Чтобы присвоить возвращаемое значение и выйти из функции в одной инструкции, можно использовать [оператор return](return-statement.md).
 
  `Exit Property`  
- Immediately exits the `Property` procedure in which it appears. Execution continues with the statement that called the `Property` procedure, that is, with the statement requesting or setting the property's value. `Exit Property` can be used only inside a property's `Get` or `Set` procedure.
+ Немедленно завершает работу `Property` процедуры, в которой она отображается. Выполнение продолжится с оператора, вызвавшего `Property` процедуру, то есть с инструкцией, запрашивающей или задавая значение свойства. `Exit Property` можно использовать только внутри `Get` или `Set` процедуры свойства.
 
- To specify a return value in a `Get` procedure, you can assign the value to the function name on a line before the `Exit Property` statement. To assign the return value and exit the `Get` procedure in one statement, you can instead use the `Return` statement.
+ Чтобы указать возвращаемое значение в `Get` процедуре, можно присвоить значение имени функции в строке перед инструкцией `Exit Property`. Чтобы присвоить возвращаемое значение и выйти из процедуры `Get` в одном операторе, можно использовать инструкцию `Return`.
 
- In a `Set` procedure, the `Exit Property` statement is equivalent to the `Return` statement.
+ В `Set`ной процедуре инструкция `Exit Property` эквивалентна инструкции `Return`.
 
  `Exit Select`  
- Immediately exits the `Select Case` block in which it appears. Execution continues with the statement following the `End Select` statement. `Exit Select` can be used only inside a `Select Case` statement.
+ Немедленно завершает работу блока `Select Case`, в котором он отображается. Выполнение продолжится с оператора, следующего за оператором `End Select`. `Exit Select` можно использовать только внутри инструкции `Select Case`.
 
  `Exit Sub`  
- Immediately exits the `Sub` procedure in which it appears. Execution continues with the statement following the statement that called the `Sub` procedure. `Exit Sub` can be used only inside a `Sub` procedure.
+ Немедленно завершает работу `Sub` процедуры, в которой она отображается. Выполнение продолжится с оператора, следующего за инструкцией, вызвавшей `Sub` процедуру. `Exit Sub` можно использовать только внутри процедуры `Sub`.
 
- In a `Sub` procedure, the `Exit Sub` statement is equivalent to the `Return` statement.
+ В `Sub`ной процедуре инструкция `Exit Sub` эквивалентна инструкции `Return`.
 
  `Exit Try`  
- Immediately exits the `Try` or `Catch` block in which it appears. Execution continues with the `Finally` block if there is one, or with the statement following the `End Try` statement otherwise. `Exit Try` can be used only inside a `Try` or `Catch` block, and not inside a `Finally` block.
+ Немедленно завершает работу `Try` или `Catch` блока, в котором он отображается. Выполнение продолжится в блоке `Finally`, если таковой имеется, или с оператором, который следует в противном случае с оператором `End Try`. `Exit Try` можно использовать только в блоке `Try` или `Catch`, а не в блоке `Finally`.
 
  `Exit While`  
- Immediately exits the `While` loop in which it appears. Execution continues with the statement following the `End While` statement. `Exit While` can be used only inside a `While` loop. When used within nested `While` loops, `Exit While` transfers control to the loop that is one nested level above the loop where `Exit While` occurs.
+ Немедленно выходит из цикла `While`, в котором он отображается. Выполнение продолжится с оператора, следующего за оператором `End While`. `Exit While` можно использовать только в цикле `While`. При использовании внутри вложенных циклов `While` `Exit While` передает управление циклу, который является одним вложенным уровнем над циклом, где происходит `Exit While`.
 
 ## <a name="remarks"></a>Заметки
 
-Do not confuse `Exit` statements with `End` statements. `Exit` does not define the end of a statement.
+Не путайте `Exit` инструкции с операторами `End`. `Exit` не определяет конец инструкции.
 
 ## <a name="example"></a>Пример
 
-In the following example, the loop condition stops the loop when the `index` variable is greater than 100. The `If` statement in the loop, however, causes the `Exit Do` statement to stop the loop when the index variable is greater than 10.
+В следующем примере условие цикла останавливает цикл, если `index`ая переменная больше 100. Однако оператор `If` в цикле приводит к тому, что инструкция `Exit Do` останавливает цикл, когда переменная индекса больше 10.
 
 [!code-vb[VbVbalrStatements#133](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class10.vb#133)]
 
 ## <a name="example"></a>Пример
 
-The following example assigns the return value to the function name `myFunction`, and then uses `Exit Function` to return from the function:
+В следующем примере возвращаемое значение присваивается имени функции `myFunction`, а затем для возврата из функции используется `Exit Function`.
 
 [!code-vb[VbVbalrStatements#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#23)]
 
 ## <a name="example"></a>Пример
 
-The following example uses the [Return Statement](return-statement.md) to assign the return value and exit the function:
+В следующем примере [оператор return](return-statement.md) используется для назначения возвращаемого значения и выхода из функции:
 
 [!code-vb[VbVbalrStatements#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#24)]
 

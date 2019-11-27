@@ -38,7 +38,7 @@ internal sealed class AssemblyAttributesGoHereS
 
 Ссылки на этот тип указывают пользовательские атрибуты, связанные с безопасностью, которые нельзя использовать многократно.
 
-These types are marked "internal" within the .NET Framework and are located in the <xref:System.Runtime.CompilerServices> namespace.
+Эти типы помечены как "внутренние" в .NET Framework и находятся в пространстве имен <xref:System.Runtime.CompilerServices>.
 
 ## <a name="requirements"></a>Требования
 

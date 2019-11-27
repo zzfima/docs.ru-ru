@@ -12,17 +12,17 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344315"
 ---
 # <a name="introduction-to-strings-in-visual-basic"></a>Знакомство со строками в Visual Basic
-This section describes the basic concepts behind using strings in Visual Basic.  
+В этом разделе описаны основные принципы использования строк в Visual Basic.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Основы работы со строками](../../../../visual-basic/programming-guide/language-features/strings/string-basics.md)  
- Introduces the basic concepts behind using strings and string variables.  
+ Основные понятия, лежащие в основе строк и строковых переменных.  
   
- [Types of String Manipulation Methods in Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/types-of-string-manipulation-methods.md)  
- Introduces several different ways to analyze and manipulate strings.  
+ [Типы методов обработки строк в Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/types-of-string-manipulation-methods.md)  
+ Предоставляет несколько различных способов анализа строк и управления ими.  
   
- [How Culture Affects Strings in Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/how-culture-affects-strings.md)  
- Discusses how Visual Basic uses culture information to perform string conversions and comparisons.  
+ [Влияние языка и региональных параметров на строки в Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/how-culture-affects-strings.md)  
+ Описывает, как Visual Basic использует сведения о языке и региональных параметрах для преобразования строк и сравнения.  
   
 ## <a name="see-also"></a>См. также
 

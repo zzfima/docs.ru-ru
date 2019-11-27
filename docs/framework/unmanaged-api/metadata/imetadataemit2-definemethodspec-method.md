@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74432740"
 ---
 # <a name="imetadataemit2definemethodspec-method"></a>Метод IMetaDataEmit2::DefineMethodSpec
-Creates a generic instance of a method, and gets a token to the definition.  
+Создает универсальный экземпляр метода и получает маркер для определения.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,27 +38,27 @@ HRESULT DefineMethodSpec (
   
 ## <a name="parameters"></a>Параметры  
  `tkParent`  
- [in] A token for the method of which to create the generic instance. The token must be of type `mdMethodDef` or `mdMemberRef`.  
+ окне Токен для метода, для которого создается универсальный экземпляр. Токен должен иметь тип `mdMethodDef` или `mdMemberRef`.  
   
  `pvSigBlob`  
- [in] A pointer to the binary COM+ signature of the method.  
+ окне Указатель на двоичную сигнатуру COM+ метода.  
   
  `cbSibBlob`  
- [in] The size, in bytes, of `pvSigBlob`.  
+ окне Размер `pvSigBlob`в байтах.  
   
  `pmi`  
- [out] A token to the metadata signature definition of the method.  
+ заполняет Токен для определения сигнатуры метаданных метода.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Заголовок:** COR. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Библиотека:** Используется в качестве ресурса в MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
 - [Интерфейс IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)

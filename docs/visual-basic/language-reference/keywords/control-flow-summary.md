@@ -12,15 +12,15 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349913"
 ---
 # <a name="control-flow-summary-visual-basic"></a>Сводка по потоку управления (Visual Basic)
-Visual Basic language keywords and run-time library members are organized by purpose and use.  
+Ключевые слова языка Visual Basic и элементы библиотеки времени выполнения упорядочены по целям и использованию.  
   
 |Действие|Элемент языка|  
 |------------|----------------------|  
-|Branch.|[GoTo](../../../visual-basic/language-reference/statements/goto-statement.md), [On Error](../../../visual-basic/language-reference/statements/on-error-statement.md)|  
-|Exit or pause the program.|[End](../../../visual-basic/language-reference/statements/end-statement.md), [Exit](../../../visual-basic/language-reference/statements/exit-statement.md), [Stop](../../../visual-basic/language-reference/statements/stop-statement.md)|  
-|Loop.|[Do...Loop](../../../visual-basic/language-reference/statements/do-loop-statement.md), [For...Next](../../../visual-basic/language-reference/statements/for-next-statement.md), [For Each...Next](../../../visual-basic/language-reference/statements/for-each-next-statement.md), [While...End While](../../../visual-basic/language-reference/statements/while-end-while-statement.md), [With](../../../visual-basic/language-reference/statements/with-end-with-statement.md)|  
-|Make decisions.|<xref:Microsoft.VisualBasic.Interaction.Choose%2A>, [If...Then...Else](../../../visual-basic/language-reference/statements/if-then-else-statement.md), [Select Case](../../../visual-basic/language-reference/statements/select-case-statement.md), <xref:Microsoft.VisualBasic.Interaction.Switch%2A>|  
-|Use procedures.|[Call](../../../visual-basic/language-reference/statements/call-statement.md), [Function](../../../visual-basic/language-reference/statements/function-statement.md), [Property](../../../visual-basic/language-reference/statements/property-statement.md), [Sub](../../../visual-basic/language-reference/statements/sub-statement.md)|  
+|Ветви.|[Goto](../../../visual-basic/language-reference/statements/goto-statement.md), [при ошибке](../../../visual-basic/language-reference/statements/on-error-statement.md)|  
+|Выйдите из программы или приостановите ее.|[Завершение](../../../visual-basic/language-reference/statements/end-statement.md), [выход](../../../visual-basic/language-reference/statements/exit-statement.md), [Завершение](../../../visual-basic/language-reference/statements/stop-statement.md)|  
+|Повторить.|[Do... Цикл](../../../visual-basic/language-reference/statements/do-loop-statement.md), [для... Затем](../../../visual-basic/language-reference/statements/for-next-statement.md) [для каждого... Далее](../../../visual-basic/language-reference/statements/for-each-next-statement.md), [while... Заканчивается](../../../visual-basic/language-reference/statements/while-end-while-statement.md), [с](../../../visual-basic/language-reference/statements/with-end-with-statement.md)|  
+|Принятие решений.|<xref:Microsoft.VisualBasic.Interaction.Choose%2A>, [Если... Затем... В противном](../../../visual-basic/language-reference/statements/if-then-else-statement.md)случае [выберите вариант](../../../visual-basic/language-reference/statements/select-case-statement.md), <xref:Microsoft.VisualBasic.Interaction.Switch%2A>|  
+|Используйте процедуры.|[Вызов](../../../visual-basic/language-reference/statements/call-statement.md), [функция](../../../visual-basic/language-reference/statements/function-statement.md), [свойство](../../../visual-basic/language-reference/statements/property-statement.md), [подкласс](../../../visual-basic/language-reference/statements/sub-statement.md)|  
   
 ## <a name="see-also"></a>См. также
 

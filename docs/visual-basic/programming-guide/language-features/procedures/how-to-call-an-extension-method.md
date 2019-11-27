@@ -14,9 +14,9 @@ ms.locfileid: "74340396"
 ---
 # <a name="how-to-call-an-extension-method-visual-basic"></a>Практическое руководство. Вызов метода расширения (Visual Basic)
 
-Extension methods enable you to add methods to an existing class. After an extension method is declared and brought into scope, you can call it like an instance method of the type that it extends. For more information about how to write an extension method, see [How to: Write an Extension Method](./how-to-write-an-extension-method.md).
+Методы расширения позволяют добавлять методы в существующий класс. После объявления и включения в область действия метода расширения можно вызвать его как метод экземпляра типа, который он расширяет. Дополнительные сведения о написании метода расширения см. [в разделе как написать метод расширения](./how-to-write-an-extension-method.md).
 
- The following instructions refer to extension method `PrintAndPunctuate`, which will display the string instance that invokes it, followed by whatever value is sent in for the second parameter, `punc`.
+ Следующие инструкции относятся к методу расширения `PrintAndPunctuate`, в котором будет отображаться экземпляр строки, вызывающий его, а затем значение, переданное в качестве второго параметра, `punc`.
 
 ```vb
 Imports System.Runtime.CompilerServices
@@ -31,40 +31,40 @@ Module StringExtensions
 End Module
 ```
 
-The method must be in scope when it is called.
+Метод должен находиться в области видимости при его вызове.
 
-### <a name="to-call-an-extension-method"></a>To call an extension method
+### <a name="to-call-an-extension-method"></a>Вызов метода расширения
 
-1. Declare a variable that has the data type of the first parameter of the extension method. For `PrintAndPunctuate`, you need a <xref:System.String> variable:
+1. Объявите переменную с типом данных первого параметра метода расширения. Для `PrintAndPunctuate`требуется <xref:System.String>ая переменная:
 
     ```vb
     Dim example = "Ready"
     ```
 
-2. That variable will invoke the extension method, and its value is bound to the first parameter, `aString`. The following calling statement will display `Ready?`.
+2. Эта переменная вызывает метод расширения, и его значение привязывается к первому параметру, `aString`. В следующем вызывающем операторе будет отображаться `Ready?`.
 
     ```vb
     example.PrintAndPunctuate("?")
     ```
 
-     Notice that the call to this extension method looks just like a call to any one of the <xref:System.String> instance methods that require one parameter:
+     Обратите внимание, что вызов этого метода расширения выглядит так же, как вызов любого метода экземпляра <xref:System.String>, для которого требуется один параметр:
 
     ```vb
     example.EndsWith("dy")
     example.IndexOf("R")
     ```
 
-3. Declare another string variable and call the method again to see that it works with any string.
+3. Объявите другую строковую переменную и снова вызовите метод, чтобы увидеть, что он работает с любой строкой.
 
     ```vb
     Dim example2 = " or not"
     example2.PrintAndPunctuate("!!!")
     ```
 
-     The result this time is: `or not!!!`.
+     Результат в это время: `or not!!!`.
 
 ## <a name="example"></a>Пример
- The following code is a complete example of the creation and use of a simple extension method.
+ Следующий код является полным примером создания и использования простого метода расширения.
 
 ```vb
 Imports System.Runtime.CompilerServices
@@ -99,4 +99,4 @@ End Module
 
 - [Практическое руководство. Написание метода расширения](./how-to-write-an-extension-method.md)
 - [Методы расширения](./extension-methods.md)
-- [Scope in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
+- [Область в Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)

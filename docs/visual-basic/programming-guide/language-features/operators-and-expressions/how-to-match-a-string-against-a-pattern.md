@@ -22,61 +22,61 @@ ms.locfileid: "74343636"
 ---
 # <a name="how-to-match-a-string-against-a-pattern-visual-basic"></a>Практическое руководство. Сравнение строки на соответствие с шаблоном (Visual Basic)
 
-If you want to find out if an expression of the [String Data Type](../../../../visual-basic/language-reference/data-types/string-data-type.md) satisfies a pattern, then you can use the [Like Operator](../../../../visual-basic/language-reference/operators/like-operator.md).
+Если нужно выяснить, удовлетворяет ли выражение [строкового типа данных](../../../../visual-basic/language-reference/data-types/string-data-type.md) шаблону, можно использовать [оператор Like](../../../../visual-basic/language-reference/operators/like-operator.md).
 
-`Like` takes two operands. The left operand is a string expression, and the right operand is a string containing the pattern to be used for matching. `Like` returns a `Boolean` value indicating whether the string expression satisfies the pattern.
+`Like` принимает два операнда. Левый операнд является строковым выражением, а правый — строкой, содержащей шаблон, используемый для сопоставления. `Like` возвращает значение типа `Boolean`, указывающее, удовлетворяет ли строковое выражение шаблону.
 
-You can match each character in the string expression against a specific character, a wildcard character, a character list, or a character range. The positions of the specifications in the pattern string correspond to the positions of the characters to be matched in the string expression.
+Каждый символ в строковом выражении можно сопоставить с конкретным символом, символом-шаблоном, списком символов или диапазоном символов. Положения спецификаций в строке шаблона соответствуют позициям символов, которые должны быть сопоставлены в строковом выражении.
 
-## <a name="to-match-a-character-in-the-string-expression-against-a-specific-character"></a>To match a character in the string expression against a specific character
+## <a name="to-match-a-character-in-the-string-expression-against-a-specific-character"></a>Сопоставление символа в строковом выражении с конкретным символом
 
-Put the specific character directly in the pattern string. Certain special characters must be enclosed in brackets (`[ ]`). For more information, see [Like Operator](../../../../visual-basic/language-reference/operators/like-operator.md).
+Помещает конкретный символ непосредственно в строку шаблона. Некоторые специальные символы должны быть заключены в квадратные скобки (`[ ]`). Дополнительные сведения см. [в разделе Оператор Like](../../../../visual-basic/language-reference/operators/like-operator.md).
 
-The following example tests whether `myString` consists exactly of the single character `H`.
+В следующем примере проверяется, содержит ли `myString` ровно один символ `H`.
 
 [!code-vb[VbVbalrOperators#70](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#70)]
 
-## <a name="to-match-a-character-in-the-string-expression-against-a-wildcard-character"></a>To match a character in the string expression against a wildcard character
+## <a name="to-match-a-character-in-the-string-expression-against-a-wildcard-character"></a>Сопоставление символа в строковом выражении с подстановочным знаком
 
-Put a question mark (`?`) in the pattern string. Any valid character in this position makes a successful match.
+Добавьте вопросительный знак (`?`) в строку шаблона. Любой допустимый символ в этой позиции делает успешное совпадение.
 
-The following example tests whether `myString` consists of the single character `W` followed by exactly two characters of any values.
+В следующем примере проверяется, состоит ли `myString` из одного символа `W` за которым следует ровно два символа любого значения.
 
 [!code-vb[VbVbalrOperators#71](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#71)]
 
-## <a name="to-match-a-character-in-the-string-expression-against-a-list-of-characters"></a>To match a character in the string expression against a list of characters
+## <a name="to-match-a-character-in-the-string-expression-against-a-list-of-characters"></a>Сопоставление символа в строковом выражении со списком символов
 
-Put brackets (`[ ]`) in the pattern string, and inside the brackets put the list of characters. Do not separate the characters with commas or any other separator. Any single character in the list makes a successful match.
+Вставьте квадратные скобки (`[ ]`) в строку шаблона, а внутри квадратных скобок вставьте список символов. Не разделяйте символы запятыми или любым другим разделителем. Любой отдельный символ в списке успешно выполняет сопоставление.
 
-The following example tests whether `myString` consists of any valid character followed by exactly one of the characters `A`, `C`, or `E`.
+В следующем примере проверяется, состоит ли `myString` из любого допустимого символа, за которым следует только один из символов `A`, `C`или `E`.
 
 [!code-vb[VbVbalrOperators#72](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#72)]
 
-Note that this match is case-sensitive.
+Обратите внимание, что в этом совпадении учитывается регистр.
 
-## <a name="to-match-a-character-in-the-string-expression-against-a-range-of-characters"></a>To match a character in the string expression against a range of characters
+## <a name="to-match-a-character-in-the-string-expression-against-a-range-of-characters"></a>Сопоставление символа в строковом выражении с диапазоном символов
 
-Put brackets (`[ ]`) in the pattern string, and inside the brackets put the lowest and highest characters in the range, separated by a hyphen (`–`). Any single character within the range makes a successful match.
+Вставьте квадратные скобки (`[ ]`) в строку шаблона, а внутри квадратных скобок — наименьшие и максимальные символы в диапазоне, разделенные дефисом (`–`). Любой отдельный символ в диапазоне выполняет успешное совпадение.
 
-The following example tests whether `myString` consists of the characters `num` followed by exactly one of the characters `i`, `j`, `k`, `l`, `m`, or `n`.
+В следующем примере проверяется, состоит ли `myString` символов `num`, за которыми следует только один из символов `i`, `j`, `k`, `l`, `m`или `n`.
 
 [!code-vb[VbVbalrOperators#73](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#73)]
 
-Note that this match is case-sensitive.
+Обратите внимание, что в этом совпадении учитывается регистр.
 
-## <a name="matching-empty-strings"></a>Matching Empty Strings
+## <a name="matching-empty-strings"></a>Совпадающие пустые строки
 
-`Like` treats the sequence `[]` as a zero-length string (`""`). You can use `[]` to test whether the entire string expression is empty, but you cannot use it to test if a particular position in the string expression is empty. If an empty position is one of the options you need to test for, you can use `Like` more than once.
+`Like` считает `[]` последовательности строкой нулевой длины (`""`). Можно использовать `[]`, чтобы проверить, пусто ли строковое выражение, но нельзя использовать его для проверки того, что определенная позицией в строковом выражении пуста. Если пустое расположение является одним из параметров, которые необходимо проверить, можно использовать `Like` несколько раз.
 
-### <a name="to-match-a-character-in-the-string-expression-against-a-list-of-characters-or-no-character"></a>To match a character in the string expression against a list of characters or no character
+### <a name="to-match-a-character-in-the-string-expression-against-a-list-of-characters-or-no-character"></a>Сопоставление символа в строковом выражении со списком символов или без символа
 
-1. Call the `Like` operator twice on the same string expression, and connect the two calls with either the [Or Operator](../../../../visual-basic/language-reference/operators/or-operator.md) or the [OrElse Operator](../../../../visual-basic/language-reference/operators/orelse-operator.md).
+1. Дважды вызовите оператор `Like` в одном и том же строковом выражении и соедините два вызова с помощью [оператора либо](../../../../visual-basic/language-reference/operators/or-operator.md) либо [оператора OrElse](../../../../visual-basic/language-reference/operators/orelse-operator.md).
 
-2. In the pattern string for the first `Like` clause, include the character list, enclosed in brackets (`[ ]`).
+2. В строке шаблона для первого предложения `Like` включите список символов, заключенный в квадратные скобки (`[ ]`).
 
-3. In the pattern string for the second `Like` clause, do not put any character at the position in question.
+3. В строке шаблона для второго предложения `Like` не помещайте какой бы то ни было символа в рассматриваемой позиции.
 
-    The following example tests the seven-digit telephone number `phoneNum` for exactly three numeric digits, followed by a space, a hyphen (`–`), a period (`.`), or no character at all, followed by exactly four numeric digits.
+    В следующем примере проверяется номер телефона, состоящий из семи цифр, `phoneNum` только для трех цифр, за которыми следует пробел, дефис (`–`), точка (`.`) или символ, за которым следует только четыре цифры.
 
     [!code-vb[VbVbalrOperators#74](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#74)]
 

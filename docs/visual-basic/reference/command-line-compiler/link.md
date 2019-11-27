@@ -18,7 +18,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74335850"
 ---
-# <a name="-link-visual-basic"></a>-link (Visual Basic)
+# <a name="-link-visual-basic"></a>-Link (Visual Basic)
 Дает компилятору указание сделать всю информацию о типах COM из указанных сборок доступной компилируемому проекту.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -27,7 +27,7 @@ ms.locfileid: "74335850"
 -link:fileList  
 ```
 
-or  
+или диспетчер конфигурации служб  
 
 ```console
 -l:fileList  
@@ -37,7 +37,7 @@ or
   
 |Термин|Определение|  
 |---|---|  
-|`fileList`|Обязательный. Список всех имен файлов сборки, разделенных запятыми. Если имя файла содержит пробел, заключите его в кавычки.|  
+|`fileList`|Обязательно. Список всех имен файлов сборки, разделенных запятыми. Если имя файла содержит пробел, заключите его в кавычки.|  
   
 ## <a name="remarks"></a>Заметки  
  Параметр `-link` позволяет развернуть приложение, содержащее внедренные сведения о типе. После этого приложение может использовать типы из сборки среды выполнения, реализующей информацию о внедренных типах, без ссылки на эту сборку. Если опубликовано несколько версий сборки среды выполнения, приложение, содержащее сведения о внедренных типах, может работать с различными версиями без перекомпиляции. Пример см. в разделе [Пошаговое руководство. Внедрение данных о типах из управляемых сборок](../../../standard/assembly/embed-types-visual-studio.md).  
@@ -57,9 +57,9 @@ or
   
 - Вызывается поле, свойство, событие или метод, имеющий тип возвращаемого значения или тип параметра из сборки Б.  
   
- Use [-libpath](libpath.md) to specify the directory in which one or more of your assembly references is located.  
+ Используйте параметр [-libpath](libpath.md) , чтобы указать каталог, в котором находится одна или несколько ссылок на сборки.  
   
- Like the [-reference](reference.md) compiler option, the `-link` compiler option uses the Vbc.rsp response file, which references frequently used .NET Framework assemblies. Use the [-noconfig](noconfig.md) compiler option if you do not want the compiler to use the Vbc.rsp file.  
+ Как и параметр компилятора [-Reference](reference.md) , параметр компилятора `-link` использует файл ответов Vbc. rsp, который ссылается на часто используемые .NET Framework сборки. Если вы не хотите, чтобы компилятор использовал файл Vbc. rsp, используйте параметр компилятора [-config](noconfig.md) .  
   
  Краткой формой `-link` является `-l`.  
   
@@ -83,7 +83,7 @@ or
  [!code-vb[VbLinkCompiler#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vblinkcompiler/vb/module1.vb#5)]  
   
 ## <a name="example"></a>Пример  
- The following command line compiles source file `OfficeApp.vb` and reference assemblies from `COMData1.dll` and `COMData2.dll` to produce `OfficeApp.exe`.  
+ Следующая командная строка компилирует исходный файл `OfficeApp.vb` и ссылочные сборки из `COMData1.dll` и `COMData2.dll` для создания `OfficeApp.exe`.  
   
 ```console  
 vbc -link:COMData1.dll,COMData2.dll /out:OfficeApp.exe OfficeApp.vb  
@@ -93,7 +93,7 @@ vbc -link:COMData1.dll,COMData2.dll /out:OfficeApp.exe OfficeApp.vb
 
 - [Компилятор Visual Basic с интерфейсом командной строки](index.md)
 - [Пошаговое руководство. Внедрение данных о типах из управляемых сборок](../../../standard/assembly/embed-types-visual-studio.md)
-- [-reference (Visual Basic)](reference.md)
+- [-Reference (Visual Basic)](reference.md)
 - [-noconfig](noconfig.md)
 - [-libpath](libpath.md)
 - [Примеры командных строк компиляции](sample-compilation-command-lines.md)

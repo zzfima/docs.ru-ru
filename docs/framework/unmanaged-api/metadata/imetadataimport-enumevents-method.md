@@ -39,33 +39,33 @@ HRESULT EnumEvents (
   
 ## <a name="parameters"></a>Параметры  
  `phEnum`  
- [in, out] A pointer to the enumerator.  
+ [вход, выход] Указатель на перечислитель.  
   
  `td`  
- [in] The TypeDef token whose event definitions are to be enumerated.  
+ окне Токен TypeDef, определения событий которого должны быть перечислены.  
   
  `rEvents`  
- [out] The array of returned events.  
+ заполняет Массив возвращаемых событий.  
   
  `cMax`  
  [in] Максимальный размер массива `rEvents`.  
   
  `pcEvents`  
- [out] The actual number of events returned in `rEvents`.  
+ заполняет Фактическое число событий, возвращаемых в `rEvents`.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
   
 |HRESULT|Описание|  
 |-------------|-----------------|  
-|`S_OK`|`EnumEvents` returned successfully.|  
-|`S_FALSE`|There are no events to enumerate. In that case, `pcEvents` is zero.|  
+|`S_OK`|`EnumEvents` успешно возвращено.|  
+|`S_FALSE`|Нет событий для перечисления. В этом случае `pcEvents` равно нулю.|  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Заголовок:** COR. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

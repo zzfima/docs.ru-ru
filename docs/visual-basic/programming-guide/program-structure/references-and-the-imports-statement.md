@@ -17,41 +17,41 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347280"
 ---
 # <a name="references-and-the-imports-statement-visual-basic"></a>Ссылки и оператор Imports (Visual Basic)
-You can make external objects available to your project by choosing the **Add Reference** command on the **Project** menu. References in Visual Basic can point to assemblies, which are like type libraries but contain more information.  
+Можно сделать внешние объекты доступными для проекта, выбрав команду **Добавить ссылку** в меню **проект** . Ссылки в Visual Basic могут указывать на сборки, которые подобны библиотекам типов, но содержат дополнительные сведения.  
   
-## <a name="the-imports-statement"></a>The Imports Statement  
- Assemblies include one or more namespaces. When you add a reference to an assembly, you can also add an `Imports` statement to a module that controls the visibility of that assembly's namespaces within the module. The `Imports` statement provides a scoping context that lets you use only the portion of the namespace necessary to supply a unique reference.  
+## <a name="the-imports-statement"></a>Оператор Imports  
+ Сборки включают одно или несколько пространств имен. При добавлении ссылки на сборку можно также добавить в модуль инструкцию `Imports`, которая управляет видимостью пространств имен этой сборки в модуле. Оператор `Imports` предоставляет контекст области, который позволяет использовать только часть пространства имен, необходимую для предоставления уникальной ссылки.  
   
- The `Imports` statement has the following syntax:  
+ Оператор `Imports` имеет следующий синтаксис:  
   
  `Imports [Aliasname =] Namespace`  
   
- `Aliasname` refers to a short name you can use within code to refer to an imported namespace. `Namespace` is a namespace available through either a project reference, through a definition within the project, or through a previous `Imports` statement.  
+ `Aliasname` ссылается на короткое имя, которое можно использовать в коде для ссылки на импортированное пространство имен. `Namespace` — это пространство имен, доступное через ссылку на проект, через определение в проекте или с помощью предыдущей инструкции `Imports`.  
   
- A module may contain any number of `Imports` statements. They must appear after any `Option` statements, if present, but before any other code.  
+ Модуль может содержать любое количество инструкций `Imports`. Они должны располагаться после любых операторов `Option`, если они есть, но перед любым другим кодом.  
   
 > [!NOTE]
-> Do not confuse project references with the `Imports` statement or the `Declare` statement. Project references make external objects, such as objects in assemblies, available to Visual Basic projects. The `Imports` statement is used to simplify access to project references, but does not provide access to these objects. The `Declare` statement is used to declare a reference to an external procedure in a dynamic-link library (DLL).  
+> Не путайте ссылки на проект с оператором `Imports` или `Declare`. Ссылки проекта делают внешние объекты, такие как объекты в сборках, доступными для Visual Basic проектов. Оператор `Imports` используется для упрощения доступа к ссылкам на проекты, но не предоставляет доступ к этим объектам. Оператор `Declare` используется для объявления ссылки на внешнюю процедуру в библиотеке динамической компоновки (DLL).  
   
-## <a name="using-aliases-with-the-imports-statement"></a>Using Aliases with the Imports Statement  
- The `Imports` statement makes it easier to access methods of classes by eliminating the need to explicitly type the fully qualified names of references. Aliases let you assign a friendlier name to just one part of a namespace. For example, the carriage return/line feed sequence that causes a single piece of text to be displayed on multiple lines is part of the <xref:Microsoft.VisualBasic.ControlChars> module in the <xref:Microsoft.VisualBasic?displayProperty=nameWithType> namespace. To use this constant in a program without an alias, you would need to type the following code:  
+## <a name="using-aliases-with-the-imports-statement"></a>Использование псевдонимов с оператором Imports  
+ Оператор `Imports` упрощает доступ к методам классов, устраняя необходимость явно вводить полные имена ссылок. Псевдонимы позволяют назначить более дружественное имя только одной части пространства имен. Например, последовательность возврата каретки/перевода строки, которая приводит к отображению одного фрагмента текста на нескольких строках, является частью модуля <xref:Microsoft.VisualBasic.ControlChars> в пространстве имен <xref:Microsoft.VisualBasic?displayProperty=nameWithType>. Чтобы использовать эту константу в программе без псевдонима, необходимо ввести следующий код:  
   
  [!code-vb[VbVbalrApplication#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/Class1.vb#3)]  
   
- `Imports` statements must always be the first lines immediately following any `Option` statements in a module. The following code fragment shows how to import and assign an alias to the <xref:Microsoft.VisualBasic.ControlChars?displayProperty=nameWithType> module:  
+ `Imports` операторы всегда должны быть первыми строками, непосредственно следующими за инструкциями `Option` в модуле. В следующем фрагменте кода показано, как импортировать и назначить псевдоним модулю <xref:Microsoft.VisualBasic.ControlChars?displayProperty=nameWithType>:  
   
  [!code-vb[VbVbalrApplication#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/Class1.vb#4)]  
   
- Future references to this namespace can be considerably shorter:  
+ Дальнейшие ссылки на это пространство имен могут быть значительно короче:  
   
  [!code-vb[VbVbalrApplication#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/Class1.vb#5)]  
   
- If an `Imports` statement does not include an alias name, elements defined within the imported namespace can be used in the module without qualification. If the alias name is specified, it must be used as a qualifier for names contained within that namespace.  
+ Если инструкция `Imports` не включает имя псевдонима, элементы, определенные в импортированном пространстве имен, могут использоваться в модуле без уточнения. Если имя псевдонима указано, оно должно использоваться в качестве квалификатора для имен, содержащихся в этом пространстве имен.  
   
 ## <a name="see-also"></a>См. также
 
 - <xref:Microsoft.VisualBasic.ControlChars>
 - <xref:Microsoft.VisualBasic>
-- [Namespaces in Visual Basic](namespaces.md)
+- [Пространства имен в Visual Basic](namespaces.md)
 - [Сборки в .NET](../../../standard/assembly/index.md)
 - [Оператор Imports (пространство имен и тип .NET)](../../language-reference/statements/imports-statement-net-namespace-and-type.md)

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74437900"
 ---
 # <a name="imetadataimportfindmethod-method"></a>Метод IMetaDataImport::FindMethod
-Gets a pointer to the MethodDef token for the method that is enclosed by the specified <xref:System.Type> and that has the specified name and metadata signature.  
+Возвращает указатель на токен MethodDef для метода, заключенного в указанном <xref:System.Type> и имеющего указанное имя и подпись метаданных.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,33 +39,33 @@ HRESULT FindMethod (
   
 ## <a name="parameters"></a>Параметры  
  `td`  
- [in] The `mdTypeDef` token for the type (a class or interface) that encloses the member to search for. If this value is `mdTokenNil`, then the lookup is done for a global function.  
+ окне Токен `mdTypeDef` для типа (класса или интерфейса), который включает член для поиска. Если это значение равно `mdTokenNil`, поиск выполняется для глобальной функции.  
   
  `szName`  
- [in] The name of the method to search for.  
+ окне Имя искомого метода.  
   
  `pvSigBlob`  
- [in] A pointer to the binary metadata signature of the method.  
+ окне Указатель на сигнатуру двоичных метаданных метода.  
   
  `cbSigBlob`  
- [in] The size in bytes of `pvSigBlob`.  
+ окне Размер в байтах `pvSigBlob`.  
   
  `pmb`  
- [out] A pointer to the matching MethodDef token.  
+ заполняет Указатель на соответствующий токен MethodDef.  
   
 ## <a name="remarks"></a>Заметки  
- You specify the method using its enclosing class or interface (`td`), its name (`szName`), and optionally its signature (`pvSigBlob`). There might be multiple methods with the same name in a class or interface. In that case, pass the method's signature to find the unique match.  
+ Метод указывается с помощью включающего класса или интерфейса (`td`), его имени (`szName`) и, при необходимости, его сигнатуры (`pvSigBlob`). В классе или интерфейсе может быть несколько методов с одинаковым именем. В этом случае передайте сигнатуру метода, чтобы найти уникальное совпадение.  
   
- The signature passed to `FindMethod` must have been generated in the current scope, because signatures are bound to a particular scope. A signature can embed a token that identifies the enclosing class or value type. The token is an index into the local TypeDef table. You cannot build a run-time signature outside the context of the current scope and use that signature as input to input to `FindMethod`.  
+ Подпись, передаваемая `FindMethod`, должна быть создана в текущей области, так как сигнатуры привязаны к определенной области. Сигнатура может внедрять маркер, идентифицирующий включающий класс или тип значения. Токен является индексом локальной таблицы TypeDef. Нельзя построить подпись времени выполнения вне контекста текущей области и использовать эту сигнатуру в качестве входных данных для `FindMethod`.  
   
- `FindMethod` finds only methods that were defined directly in the class or interface; it does not find inherited methods.  
+ `FindMethod` находит только методы, которые были определены непосредственно в классе или интерфейсе; Он не находит унаследованные методы.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Заголовок:** COR. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

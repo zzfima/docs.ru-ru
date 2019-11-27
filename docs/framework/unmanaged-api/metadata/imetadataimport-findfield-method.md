@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74437950"
 ---
 # <a name="imetadataimportfindfield-method"></a>Метод IMetaDataImport::FindField
-Gets a pointer to the FieldDef token for the field that is enclosed by the specified <xref:System.Type> and that has the specified name and metadata signature.  
+Возвращает указатель на токен FieldDef для поля, заключенного в заданный <xref:System.Type> и имеющего указанное имя и подпись метаданных.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,37 +39,37 @@ HRESULT FindField (
   
 ## <a name="parameters"></a>Параметры  
  `td`  
- [in] The TypeDef token for the class or interface that encloses the field to search for. If this value is `mdTokenNil`, the lookup is done for a global variable.  
+ окне Маркер TypeDef для класса или интерфейса, который заключает поле для поиска. Если это значение равно `mdTokenNil`, поиск выполняется для глобальной переменной.  
   
  `szName`  
- [in] The name of the field to search for.  
+ окне Имя искомого поля.  
   
  `pvSigBlob`  
- [in] A pointer to the binary metadata signature of the field.  
+ окне Указатель на сигнатуру двоичных метаданных поля.  
   
  `cbSigBlob`  
- [in] The size in bytes of `pvSigBlob`.  
+ окне Размер в байтах `pvSigBlob`.  
   
  `pmb`  
- [out] A pointer to the matching FieldDef token.  
+ заполняет Указатель на соответствующий токен FieldDef.  
   
-## <a name="remarks"></a>Заметки  
- You specify the field using its enclosing class or interface (`td`), its name (`szName`), and optionally its signature (`pvSigBlob`).  
+## <a name="remarks"></a>Примечания  
+ Поле задается с помощью включающего класса или интерфейса (`td`), его имени (`szName`) и, при необходимости, его сигнатуры (`pvSigBlob`).  
   
- The signature passed to `FindField` must have been generated in the current scope, because signatures are bound to a particular scope. A signature can embed a token that identifies the enclosing class or value type. (The token is an index into the local TypeDef table). You cannot build a run-time signature outside the context of the current scope and use that signature as input to `FindField`.  
+ Подпись, передаваемая `FindField`, должна быть создана в текущей области, так как сигнатуры привязаны к определенной области. Сигнатура может внедрять маркер, идентифицирующий включающий класс или тип значения. (Токен является индексом локальной таблицы TypeDef). Нельзя построить подпись времени выполнения вне контекста текущей области и использовать эту сигнатуру в качестве входных данных для `FindField`.  
   
- `FindField` finds only fields that were defined directly in the class or interface; it does not find inherited fields.  
+ `FindField` находит только поля, которые были определены непосредственно в классе или интерфейсе; наследуемые поля не находятся.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Заголовок:** COR. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [Интерфейс IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

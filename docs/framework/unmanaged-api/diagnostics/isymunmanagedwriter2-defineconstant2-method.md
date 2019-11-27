@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74438326"
 ---
 # <a name="isymunmanagedwriter2defineconstant2-method"></a>Метод ISymUnmanagedWriter2::DefineConstant2
-Defines a name for a constant value.  
+Определяет имя для постоянного значения.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -36,21 +36,21 @@ HRESULT DefineConstant2(
   
 ## <a name="parameters"></a>Параметры  
  `name`  
- [in] The constant name.  
+ окне Имя константы.  
   
  `value`  
- [in] The value of the constant.  
+ окне Значение константы.  
   
  `sigToken`  
- [in] The metadata token of the constant.  
+ окне Маркер метаданных константы.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK, если метод выполнен. в противном случае E_FAIL или другой код ошибки.  
   
 ## <a name="requirements"></a>Требования  
- **Header:** CorSym.idl, CorSym.h  
+ **Заголовок:** Корсим. idl, Корсим. h  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс ISymUnmanagedWriter2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter2-interface.md)
 - [Метод DefineConstant](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-defineconstant-method.md)

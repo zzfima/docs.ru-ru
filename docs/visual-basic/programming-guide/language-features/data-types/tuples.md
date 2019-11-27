@@ -11,46 +11,46 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350502"
 ---
-# <a name="tuples-visual-basic"></a>Tuples (Visual Basic)
+# <a name="tuples-visual-basic"></a>Кортежи (Visual Basic)
 
-Starting with Visual Basic 2017, the Visual Basic language offers built-in support for tuples that makes creating tuples and accessing the elements of tuples easier. A tuple is a lightweight data structure that has a specific number and sequence of values. When you instantiate the tuple, you define the number and the data type of each value (or element). For example, a 2-tuple (or pair) has two elements. The first might be a `Boolean` value, while the second is a `String`. Because tuples make it easy to store multiple values in a single object, they are often used as a lightweight way to return multiple values from a method.
+Начиная с Visual Basic 2017, язык Visual Basic предлагает встроенную поддержку кортежей, которые упрощают создание кортежей и доступ к элементам кортежей. Кортеж — это упрощенная структура данных, которая имеет определенное число и последовательность значений. При создании экземпляра кортежа вы определяете число и тип данных каждого значения (или элемента). Например, 2 кортежа (или пара) имеет два элемента. Первый может быть `Boolean` значением, а второй — `String`. Поскольку кортежи упрощают хранение нескольких значений в одном объекте, они часто используются в качестве упрощенного способа возврата нескольких значений из метода.
 
 > [!IMPORTANT]
-> Tuple support requires the <xref:System.ValueTuple> type. If the .NET Framework 4.7 is not installed, you must add the NuGet package `System.ValueTuple`, which is available on the NuGet Gallery. Without this package, you may get a compilation error similar to, "Predefined type 'ValueTuple(Of,,,)' is not defined or imported."
+> Для поддержки кортежей требуется тип <xref:System.ValueTuple>. Если .NET Framework 4,7 не установлен, необходимо добавить пакет NuGet `System.ValueTuple`, который доступен в коллекции NuGet. Без этого пакета может возникнуть ошибка компиляции, аналогичная "предопределенный тип ValueTuple (Of,,,)" не определен или не импортирован ".
 
-## <a name="instantiating-and-using-a-tuple"></a>Instantiating and using a tuple
+## <a name="instantiating-and-using-a-tuple"></a>Создание экземпляров и использование кортежа
 
-You instantiate a tuple by enclosing its comma-delimited values im parentheses. Each of those values then becomes a field of the tuple. For example, the following code defines a triple (or 3-tuple) with a `Date` as its first value, a `String` as its second, and a `Boolean` as its third.
+Вы создаете экземпляр кортежа, заключая в круглые скобки значения, разделенные запятыми. Каждое из этих значений затем превращается в поле кортежа. Например, следующий код определяет тройной (или 3-кортежный) элемент с `Date` в качестве первого значения, `String` в качестве второго, а `Boolean` в качестве третьего.
 
 [!code-vb[Instantiate](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/tuple1.vb#1)]
 
-By default, the name of each field in a tuple consists of the string `Item` along with the field's one-based position in the tuple. For this 3-tuple, the `Date` field is `Item1`, the `String` field is `Item2`, and the `Boolean` field is `Item3`. The following example displays the values of fields of the tuple instantiated in the previous line of code
+По умолчанию имя каждого поля в кортеже состоит из строки `Item` вместе с позицией поля, основанной на единице в кортеже. В этом трехмерном кортеже поле `Date` `Item1`, поле `String` `Item2`, а `Boolean` поле — `Item3`. В следующем примере выводятся значения полей кортежа, созданного в предыдущей строке кода.
 
 [!code-vb[Instantiate](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/tuple1.vb#2)]
 
-The fields of a Visual Basic tuple are read-write; after you've instantiated a tuple, you can modify its values. The following example modifies two of the three fields of the tuple created in the previous example and displays the result.
+Поля Visual Basic кортежа доступны для чтения и записи; После создания экземпляра кортежа можно изменить его значения. В следующем примере изменяются два из трех полей кортежа, созданного в предыдущем примере, и отображается результат.
 
 [!code-vb[Instantiate](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/tuple1.vb#3)]
 
-## <a name="instantiating-and-using-a-named-tuple"></a>Instantiating and using a named tuple
+## <a name="instantiating-and-using-a-named-tuple"></a>Создание экземпляров и использование именованного кортежа
 
-Rather than using default names for a tuple's fields, you can instantiate a *named tuple* by assigning your own names to the tuple's elements. The tuple's fields can then be accessed by their assigned names *or* by their default names. The following example instantiates the same 3-tuple as previously, except that it explicitly names the first field `EventDate`, the second `Name`, and the third `IsHoliday`. It then displays the field values, modifies them, and displays the field values again.
+Вместо использования имен по умолчанию для полей кортежа можно создать экземпляр *именованного кортежа* , назначив собственные имена элементам кортежа. Затем к полям кортежа можно получить доступ по их назначенным именам *или* по именам по умолчанию. В следующем примере создается экземпляр того же трех кортежей, как и ранее, за исключением того, что он явно именует первое поле `EventDate`, второй `Name`и третий `IsHoliday`. Затем он отображает значения полей, изменяет их и снова отображает значения полей.
 
 [!code-vb[Instantiate](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/tuple1.vb#4)]
 
 ## <a name="inferred-tuple-element-names"></a>Выводимые имена элементов кортежа
 
-Starting with Visual Basic 15.3, Visual Basic can infer the names of tuple elements; you do not have to assign them explicitly. Inferred tuple names are useful when you initialize a tuple from a set of variables, and you want the tuple element name to be the same as the variable name.
+Начиная с Visual Basic 15,3, Visual Basic может определять имена элементов кортежа. их не нужно назначать явным образом. Выводимые имена кортежей полезны при инициализации кортежа из набора переменных и если имя элемента кортежа должно совпадать с именем переменной.
 
-The following example creates a `stateInfo` tuple that contains three explicitly named elements, `state`, `stateName`, and `capital`. Note that, in naming the elements, the tuple initialization statement simply assigns the named elements the values of the identically named variables.
+В следующем примере создается `stateInfo` кортеж, содержащий три явно именованных элемента, `state`, `stateName`и `capital`. Обратите внимание, что при именовании элементов оператор инициализации кортежа просто присваивает именованным элементам значения переменных с одинаковыми именами.
 
 [!code-vb[ExplicitlyNamed](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/named-tuples/program.vb#1)]
 
-Because elements and variables have the same name, the Visual Basic compiler can infer the names of the fields, as the following example shows.
+Поскольку элементы и переменные имеют одинаковое имя, компилятор Visual Basic может вывести имена полей, как показано в следующем примере.
 
 [!code-vb[ExplicitlyNamed](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/named-tuples/program.vb#2)]
 
-To enable inferred tuple element names, you must define the version of the Visual Basic compiler to use in your Visual Basic project (\*.vbproj) file:
+Чтобы включить выводимые имена элементов кортежа, необходимо определить версию компилятора Visual Basic для использования в файле проекта Visual Basic (\*. vbproj):
 
 ```xml
 <PropertyGroup>
@@ -58,50 +58,50 @@ To enable inferred tuple element names, you must define the version of the Visua
 </PropertyGroup>
 ```
 
-The version number can be any version of the Visual Basic compiler starting with 15.3. Rather than hard-coding a specific compiler version, you can also specify "Latest" as the value of `LangVersion` to compile with the most recent version of the Visual Basic compiler installed on your system.
+Номер версии может быть любой версией компилятора Visual Basic, начиная с 15,3. Вместо того чтобы жестко программировать конкретную версию компилятора, можно также указать "latest" в качестве значения `LangVersion` для компиляции с последней версией компилятора Visual Basic, установленного в системе.
 
-For more information, see [setting the Visual Basic language version](../../../language-reference/configure-language-version.md).
+Дополнительные сведения см. [в разделе Задание версии языка Visual Basic](../../../language-reference/configure-language-version.md).
 
-In some cases, the Visual Basic compiler cannot infer the tuple element name from the candidate name, and the tuple field can only be referenced using its default name, such as `Item1`, `Item2`, etc. These include:
+В некоторых случаях компилятор Visual Basic не может определить имя элемента кортежа из имени кандидата, а на поле кортежа можно ссылаться только по имени по умолчанию, например `Item1`, `Item2`и т. д. К ним относятся:
 
-- The candidate name is the same as the name of a tuple member, such as `Item3`, `Rest`, or `ToString`.
+- Имя кандидата совпадает с именем элемента кортежа, например `Item3`, `Rest`или `ToString`.
 
-- The candidate name is duplicated in the tuple.
+- Имя кандидата дублируется в кортеже.
 
-When field name inference fails, Visual Basic does not generate a compiler error, nor is an exception thrown at runtime. Instead, tuple fields must be referenced by their predefined names, such as `Item1` and `Item2`.
+При сбое определения имени поля Visual Basic не создает ошибку компилятора, а во время выполнения не создается исключение. Вместо этого на поля кортежа должны ссылаться их предопределенные имена, такие как `Item1` и `Item2`.
 
-## <a name="tuples-versus-structures"></a>Tuples versus structures
+## <a name="tuples-versus-structures"></a>Кортежи и структуры
 
-A Visual Basic tuple is a value type that is an instance of one of the a **System.ValueTuple** generic types. For example, the `holiday` tuple defined in the previous example is an instance of the <xref:System.ValueTuple%603> structure. It is designed to be a lightweight container for data. Since the tuple aims to make it easy to create an object with multiple data items, it lacks some of the features that a custom structure might have. Сюда входит следующее.
+Visual Basic кортеж — это тип значения, который является экземпляром одного из универсальных типов **System. ValueTuple** . Например, `holiday` кортеж, определенный в предыдущем примере, является экземпляром структуры <xref:System.ValueTuple%603>. Она разработана как облегченный контейнер для данных. Поскольку кортеж предназначен для упрощения создания объекта с несколькими элементами данных, в нем отсутствуют некоторые функции, которые могут иметься в пользовательской структуре. К ним относятся следующие методы.
 
-- Custom members. You cannot define your own properties, methods, or events for a tuple.
+- Пользовательские элементы. Нельзя определить собственные свойства, методы или события для кортежа.
 
-- Validation. You cannot validate the data assigned to fields.
+- Проверка. Невозможно проверить данные, назначенные полям.
 
-- Immutability. Visual Basic tuples are mutable. In contrast, a custom structure allows you to control whether an instance is mutable or immutable.
+- Неизменяемости. Visual Basic кортежи являются изменяемыми. В отличие от этого, пользовательская структура позволяет контролировать, является ли экземпляр изменяемым или неизменяемым.
 
-If custom members, property and field validation, or immutability are important, you should use the Visual Basic [Structure](../../../language-reference/statements/structure-statement.md) statement to define a custom value type.
+Если важны пользовательские члены, проверка свойств и полей или неизменность, следует использовать инструкцию Visual Basic [Structure](../../../language-reference/statements/structure-statement.md) для определения пользовательского типа значения.
 
-A Visual Basic tuple does inherit the members of its **ValueTuple** type. In addition to its fields, these include the following methods:
+Visual Basicный кортеж наследует члены его типа **ValueTuple** . Помимо полей, в их число входят следующие методы.
 
 | Член | Описание |
 | ---|---|
-| CompareTo | Compares the current tuple to another tuple with the same number of elements. |
-| Равно | Determines whether the current tuple is equal to another tuple or object. |
-| GetHashCode | Calculates the hash code for the current instance. |
-| ToString | Returns the string representation of this tuple, which takes the form `(Item1, Item2...)`, where `Item1` and `Item2` represent the values of the tuple's fields. |
+| CompareTo | Сравнивает текущий кортеж с другим кортежем с тем же количеством элементов. |
+| Равно | Определяет, равен ли текущий кортеж другому кортежу или объекту. |
+| GetHashCode | Вычисляет хэш-код для текущего экземпляра. |
+| ToString | Возвращает строковое представление этого кортежа, которое принимает форму `(Item1, Item2...)`, где `Item1` и `Item2` представляют значения полей кортежа. |
 
-In addition, the **ValueTuple** types implement <xref:System.Collections.IStructuralComparable> and <xref:System.Collections.IStructuralEquatable> interfaces, which allow you to define customer comparers.
+Кроме того, типы **ValueTuple** реализуют интерфейсы <xref:System.Collections.IStructuralComparable> и <xref:System.Collections.IStructuralEquatable>, которые позволяют определять компараторы клиентов.
 
 ## <a name="assignment-and-tuples"></a>Назначение и кортежи
 
-Visual Basic supports assignment between tuple types that have the same number of fields. The field types can be converted if one of the following is true:
+Visual Basic поддерживает присваивание между типами кортежей, которые имеют одинаковое число полей. Типы полей можно преобразовать, если выполняется одно из следующих условий.
 
-- The source and target field are of the same type.
+- Исходное и целевое поля имеют один и тот же тип.
 
-- A widening (or implicit) conversion of the source type to the target type is defined.
+- Определено расширяющее (или неявное) преобразование исходного типа в целевой тип.
 
-- `Option Strict` is `On`, and a narrowing (or explicit) conversion of the source type to the target type is defined. This conversion can throw an exception if the source value is outside the range of the target type.
+- `Option Strict` `On`и определено суженное (или явное) преобразование исходного типа в целевой тип. Это преобразование может вызвать исключение, если исходное значение находится за пределами диапазона целевого типа.
 
 Другие преобразования в контексте назначений не учитываются. Рассмотрим возможные виды назначений между типами кортежей.
 
@@ -109,19 +109,19 @@ Visual Basic supports assignment between tuple types that have the same number o
 
 [!code-vb[Assign](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/tuple3.vb#1)]
 
-The first two variables, `unnamed` and `anonymous`, do not have semantic names provided for the fields. Their field names are the default `Item1` and `Item2`. The last two variables, `named` and `differentName` have semantic field names. Обратите внимание на то, что поля в этих двух кортежах называются по-разному.
+Первые две переменные, `unnamed` и `anonymous`, не имеют семантических имен, предоставленных для полей. Их имена полей являются `Item1` по умолчанию и `Item2`. Последние две переменные, `named` и `differentName` имеют семантические имена полей. Обратите внимание на то, что поля в этих двух кортежах называются по-разному.
 
-All four of these tuples have the same number of fields (referred to as 'arity'), and the types of those fields are identical. Таким образом, все эти назначения работают:
+Все четыре из этих кортежей имеют одинаковое число полей (называемое арностью), а типы этих полей идентичны. Таким образом, все эти назначения работают:
 
 [!code-vb[Assign](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/tuple3.vb#2)]
 
 Обратите внимание на то, что имена кортежей не назначаются. Значения полей назначаются в соответствии с порядком полей в кортеже.
 
-Finally, notice that we can assign the `named` tuple to the `conversion` tuple, even though the first field of `named` is an `Integer`, and the first field of `conversion` is a `Long`. This assignment succeeds because converting an `Integer` to a `Long` is a widening conversion.
+Наконец, обратите внимание, что можно присвоить `named` кортежу `conversion`ному кортежу, несмотря на то, что первое поле `named` — это `Integer`, а первое поле `conversion` — `Long`. Это назначение выполнено, так как преобразование `Integer` в `Long` является расширяющим преобразованием.
 
 [!code-vb[Assign](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/tuple3.vb#3)]
 
-Tuples with different numbers of fields are not assignable:
+Кортежи с разными числами полей не могут быть назначены:
 
 ```vb
 ' Does not compile.
@@ -133,41 +133,41 @@ named = differentShape
 
 ## <a name="tuples-as-method-return-values"></a>Кортежи как возвращаемые значения методов
 
-A method can return only a single value. Frequently, though, you'd like a method call to return multiple values. There are several ways to work around this limitation:
+Метод может возвращать только одно значение. Однако часто требуется, чтобы вызов метода возвращал несколько значений. Существует несколько способов обойти это ограничение:
 
-- You can create a custom class or structure whose properties or fields represent values returned by the method. Thus is a heavyweight solution; it requires that you define a custom type whose only purpose is to retrieve values from a method call.
+- Можно создать пользовательский класс или структуру, свойства или поля которой представляют значения, возвращаемые методом. Таким решением является высокоплотное решение; для этого необходимо определить пользовательский тип, предназначенный только для извлечения значений из вызова метода.
 
-- You can return a single value from the method, and return the remaining values by passing them by reference to the method. This involves the overhead of instantiating a variable and risks inadvertently overwriting the value of the variable that you pass by reference.
+- Можно вернуть одно значение из метода и вернуть оставшиеся значения, передав их по ссылке к методу. Это включает дополнительные издержки при создании экземпляра переменной и риск непреднамеренной перезаписи значения переменной, которую вы передаете по ссылке.
 
-- You can use a tuple, which provides a lightweight solution to retrieving multiple return values.
+- Можно использовать кортеж, который предоставляет упрощенное решение для извлечения нескольких возвращаемых значений.
 
-For example, the **TryParse** methods in .NET return a `Boolean` value that indicates whether the parsing operation succeeded. The result of the parsing operation is returned in a variable passed by reference to the method. Normally, a call to the a parsing method such as <xref:System.Int32.TryParse%2A?displayProperty=nameWithType> looks like the following:
+Например, методы **TryParse** в .NET возвращают `Boolean` значение, указывающее, была ли операция анализа успешной. Результат операции синтаксического анализа возвращается в переменную, передаваемой по ссылке на метод. Как правило, вызов метода синтаксического анализа, например <xref:System.Int32.TryParse%2A?displayProperty=nameWithType>, выглядит следующим образом:
 
 [!code-vb[Return](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/tuple-returns.vb#1)]
 
-We can return a tuple from the parsing operation if we wrap the call to the <xref:System.Int32.TryParse%2A?displayProperty=nameWithType> method in our own method. In the following example, `NumericLibrary.ParseInteger` calls the <xref:System.Int32.TryParse%2A?displayProperty=nameWithType> method and returns a named tuple with two elements.
+Мы можем вернуть кортеж из операции синтаксического анализа, если заключить вызов метода <xref:System.Int32.TryParse%2A?displayProperty=nameWithType> в собственный метод. В следующем примере `NumericLibrary.ParseInteger` вызывает метод <xref:System.Int32.TryParse%2A?displayProperty=nameWithType> и возвращает именованный кортеж с двумя элементами.
 
 [!code-vb[Return](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/tuple-returns.vb#2)]
 
-You can then call the method with code like the following:
+Затем можно вызвать метод с помощью следующего кода:
 
 [!code-vb[Return](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/tuple-returns.vb#3)]
 
-## <a name="visual-basic-tuples-and-tuples-in-the-net-framework"></a>Visual Basic tuples and tuples in the .NET Framework
+## <a name="visual-basic-tuples-and-tuples-in-the-net-framework"></a>Visual Basic кортежи и кортежи в .NET Framework
 
-A Visual Basic tuple is an instance of one of the **System.ValueTuple** generic types, which were introduced in the .NET Framework 4.7. The .NET Framework also includes a set of generic **System.Tuple** classes. These classes, however, differ from Visual Basic tuples and the **System.ValueTuple** generic types in a number of ways:
+Visual Basic кортеж — это экземпляр одного из универсальных типов **System. ValueTuple** , которые появились в .NET Framework 4,7. .NET Framework также включает набор универсальных классов **System. Tuple** . Однако эти классы отличаются от Visual Basic кортежей и универсальных типов **System. ValueTuple** несколькими способами:
 
-- The elements of the **Tuple** classes are properties named `Item1`, `Item2`, and so on. In Visual Basic tuples and the **ValueTuple** types, tuple elements are fields.
+- Элементы классов **кортежей** — это свойства с именами `Item1`, `Item2`и т. д. В Visual Basic кортежах и типах **ValueTuple** элементы кортежа являются полями.
 
-- You cannot assign meaningful names to the elements of a **Tuple** instance or of a **ValueTuple** instance. Visual Basic allows you to assign names that communicate the meaning of the fields.
+- Нельзя присваивать осмысленные имена элементам экземпляра **кортежа** или экземпляра **ValueTuple** . Visual Basic позволяет назначать имена, которые сообщают значение полей.
 
-- The properties of a **Tuple** instance are read-only; the tuples are immutable. In Visual Basic tuples and the **ValueTuple** types, tuple fields are read-write; the tuples are mutable.
+- Свойства экземпляра **кортежа** доступны только для чтения; кортежи являются неизменяемыми. В Visual Basic кортежах и типах **ValueTuple** поля кортежей доступны для чтения и записи. кортежи являются изменяемыми.
 
-- The generic **Tuple** types are reference types. Using these **Tuple** types means allocating objects. В критических путях это может заметно влиять на производительность приложения. Visual Basic tuples and the **ValueTuple** types are value types.
+- Универсальные типы **кортежей** являются ссылочными типами. Использование этих типов **кортежей** означает выделение объектов. В критических путях это может заметно влиять на производительность приложения. Visual Basic кортежи и типы **ValueTuple** являются типами значений.
 
-Extension methods in the <xref:System.TupleExtensions> class make it easy to convert between Visual Basic tuples and .NET **Tuple** objects. The **ToTuple** method converts a Visual Basic tuple to a .NET **Tuple** object, and the **ToValueTuple** method converts a .NET **Tuple** object to a Visual Basic tuple.
+Методы расширения в классе <xref:System.TupleExtensions> упрощают преобразование между Visual Basicными кортежами и объектами **кортежей** .NET. Метод **тотупле** преобразует кортеж Visual Basic в объект **кортежа** .NET, а метод **товалуетупле** преобразует объект **кортежа** .NET в кортеж Visual Basic.
 
-The following example creates a tuple, converts it to a .NET **Tuple** object, and converts it back to a Visual Basic tuple. The example then compares this tuple with the original one to ensure that they are equal.
+В следующем примере создается кортеж, преобразуется в объект **кортежа** .NET и преобразуется обратно в Visual Basic кортеж. Затем в примере сравнивается этот кортеж с исходным, чтобы убедиться, что он равен.
 
 [!code-vb[Convert](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/tuple2.vb#1)]
 

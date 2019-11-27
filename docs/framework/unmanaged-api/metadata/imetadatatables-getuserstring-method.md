@@ -24,7 +24,7 @@ ms.locfileid: "74431432"
 ---
 # <a name="imetadatatablesgetuserstring-method"></a>Метод IMetaDataTables::GetUserString
 
-Gets the hard-coded string at the specified index in the string column in the current scope.
+Получает жестко заданную строку по указанному индексу в строковом столбце текущей области.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -39,21 +39,21 @@ HRESULT GetUserString (
 ## <a name="parameters"></a>Параметры
 
 `ixUserString`\
-[in] The index value from which the hard-coded string will be retrieved.
+окне Значение индекса, из которого будет извлечена жестко заданная строка.
 
 `pcbData`\
-[out] A pointer to the size of `ppData`.
+заполняет Указатель на размер `ppData`.
 
 `ppData`\
-[out] A pointer to a pointer to the returned string.
+заполняет Указатель на указатель на возвращаемую строку.
 
 ## <a name="requirements"></a>Требования
 
 **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).
 
-**Header:** Cor.h
+**Заголовок:** COR. h
 
-**Library:** Used as a resource in MsCorEE.dll
+**Библиотека:** Используется в качестве ресурса в MsCorEE. dll
 
 **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
 

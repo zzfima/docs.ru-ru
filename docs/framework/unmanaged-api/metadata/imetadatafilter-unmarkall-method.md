@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74440130"
 ---
 # <a name="imetadatafilterunmarkall-method"></a>Метод IMetaDataFilter::UnmarkAll
-Removes the processing marks from all the tokens in the current metadata scope.  
+Удаляет метки обработки из всех токенов в текущей области метаданных.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -32,17 +32,17 @@ HRESULT UnmarkAll ();
 ```  
   
 ## <a name="parameters"></a>Параметры  
- `UnmarkAll` takes no parameters.  
+ `UnmarkAll` не принимает параметров.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Заголовок:** COR. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Библиотека:** Используется в качестве ресурса в MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс IMetaDataFilter](../../../../docs/framework/unmanaged-api/metadata/imetadatafilter-interface.md)

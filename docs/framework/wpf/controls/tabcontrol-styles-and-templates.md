@@ -22,7 +22,7 @@ ms.locfileid: "74283706"
 ## <a name="tabcontrol-parts"></a>Части TabControl  
  В следующей таблице перечислены именованные части для элемента управления <xref:System.Windows.Controls.TabControl>.  
   
-|Отделение|Type|Описание|  
+|Отделение|Тип|Описание|  
 |-|-|-|  
 |PART_SelectedContentHost|<xref:System.Windows.Controls.ContentPresenter>|Объект, который показывает содержимое выбранного в данный момент <xref:System.Windows.Controls.TabItem>.|  
   

@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74441556"
 ---
 # <a name="corpinvokemap-enumeration"></a>Перечисление CorPinvokeMap
-Specifies options for a PInvoke call.  
+Задает параметры для вызова PInvoke.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -65,36 +65,36 @@ typedef enum  CorPinvokeMap {
   
 |Член|Описание|  
 |------------|-----------------|  
-|`pmNoMangle`|Use each member name as specified.|  
+|`pmNoMangle`|Используйте каждое имя элемента, как указано.|  
 |`pmCharSetMask`|Зарезервировано.|  
 |`pmCharSetNotSpec`|Зарезервировано.|  
-|`pmCharSetAnsi`|Marshal strings as multiple-byte character strings.|  
-|`pmCharSetUnicode`|Marshal strings as Unicode 2-byte characters.|  
-|`pmCharSetAuto`|Automatically marshal strings appropriately for the target operating system. The default is Unicode on Windows NT, Windows 2000, Windows XP, and the Windows Server 2003 family; the default is ANSI on Windows 98 and Windows Me.|  
+|`pmCharSetAnsi`|Маршалирует строки как многобайтовые символьные строки.|  
+|`pmCharSetUnicode`|Маршалирует строки в виде 2-байтовых символов Юникода.|  
+|`pmCharSetAuto`|Автоматически маршалировать строки в соответствии с целевой операционной системой. По умолчанию используется Юникод в Windows NT, Windows 2000, Windows XP и семействе Windows Server 2003. значение по умолчанию — ANSI в Windows 98 и Windows Me.|  
 |`pmBestFitUseAssem`|Зарезервировано.|  
-|`pmBestFitEnabled`|Perform best-fit mapping of Unicode characters that lack an exact match in the ANSI character set.|  
-|`pmBestFitDisabled`|Do not perform best-fit mapping of Unicode characters. In this case, all unmappable characters will be replaced by a ‘?’.|  
+|`pmBestFitEnabled`|Выполните наилучшее сопоставление символов Юникода, не имея точного соответствия в кодировке ANSI.|  
+|`pmBestFitDisabled`|Не выполняйте наилучшее соответствие символов Юникода. В этом случае все несопоставимые символы будут заменены символом "?".|  
 |`pmBestFitMask`|Зарезервировано.|  
 |`pmThrowOnUnmappableCharUseAssem`|Зарезервировано.|  
-|`pmThrowOnUnmappableCharEnabled`|Throw an exception when the interop marshaler encounters an unmappable character.|  
-|`pmThrowOnUnmappableCharDisabled`|Do not throw an exception when the interop marshaler encounters an unmappable character.|  
+|`pmThrowOnUnmappableCharEnabled`|Создавать исключение, когда модуль маршалинга взаимодействия встречает несопоставимый символ.|  
+|`pmThrowOnUnmappableCharDisabled`|Не вызывайте исключение, если модуль маршалинга взаимодействия встречает несопоставимый символ.|  
 |`pmThrowOnUnmappableCharMask`|Зарезервированное|  
-|`pmSupportsLastError`|Allow the callee to call the Win32 `SetLastError` function before returning from the attributed method.|  
+|`pmSupportsLastError`|Разрешить вызываемому методу вызывать функцию Win32 `SetLastError` перед возвратом из метода с атрибутом.|  
 |`pmCallConvMask`|Зарезервированное|  
-|`pmCallConvWinapi`|Use the default platform calling convention. For example, on Windows the default is `StdCall` and on Windows CE .NET it is `Cdecl`.|  
-|`pmCallConvCdecl`|Use the `Cdecl` calling convention. In this case, the caller cleans the stack. This enables calling functions with `varargs` (that is, functions that accept a variable number of parameters).|  
-|`pmCallConvStdcall`|Use the `StdCall` calling convention. In this case, the callee cleans the stack. This is the default convention for calling unmanaged functions with platform invoke.|  
-|`pmCallConvThiscall`|Use the `ThisCall` calling convention. In this case, the first parameter is the `this` pointer and is stored in register ECX. Other parameters are pushed on the stack. The `ThisCall` calling convention is used to call methods on classes exported from an unmanaged DLL.|  
+|`pmCallConvWinapi`|Используйте соглашение о вызовах платформы по умолчанию. Например, в Windows значение по умолчанию — `StdCall`, а Windows CE .NET — `Cdecl`.|  
+|`pmCallConvCdecl`|Используйте соглашение о вызовах `Cdecl`. В этом случае вызывающий объект очищает стек. Это позволяет вызывать функции с `varargs` (то есть с функциями, принимающими переменное количество параметров).|  
+|`pmCallConvStdcall`|Используйте соглашение о вызовах `StdCall`. В этом случае вызываемый объект очищает стек. Это соглашение по умолчанию для вызова неуправляемых функций с помощью вызова неуправляемого кода.|  
+|`pmCallConvThiscall`|Используйте соглашение о вызовах `ThisCall`. В этом случае первый параметр является указателем `this` и хранится в регистре ECX. Другие параметры помещаются в стек. Соглашение о вызовах `ThisCall` используется для вызова методов для классов, экспортируемых из неуправляемой библиотеки DLL.|  
 |`pmCallConvFastcall`|Зарезервировано.|  
 |`pmMaxValue`|Зарезервировано.|  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorHdr.h  
+ **Заголовок:** Корхдр. h  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Перечисления метаданных](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

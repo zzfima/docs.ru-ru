@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74432694"
 ---
 # <a name="imetadataemitapplyeditandcontinue-method"></a>Метод IMetaDataEmit::ApplyEditAndContinue
-Updates the current assembly scope with the changes made in the specified metadata.  
+Обновляет текущую область сборки изменениями, внесенными в указанные метаданные.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -35,16 +35,16 @@ HRESULT ApplyEditAndContinue (
   
 ## <a name="parameters"></a>Параметры  
  `pImport`  
- \[in\] Pointer to an [IUnknown](/cpp/atl/iunknown) object that represents the delta metadata from the portable executable (PE) file.
+ \[в\] указатель на объект [IUnknown](/cpp/atl/iunknown) , представляющий разностные метаданные из переносимого исполняемого файла (PE).
   
- The delta metadata is the block of metadata that includes the changes that were made to the copy of the module's actual metadata.  
+ Разностные метаданные — это блок метаданных, включающий изменения, внесенные в копию фактических метаданных модуля.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Заголовок:** COR. h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **Библиотека:** Используется в качестве ресурса в MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

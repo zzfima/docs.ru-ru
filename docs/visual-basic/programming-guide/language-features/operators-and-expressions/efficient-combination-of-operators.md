@@ -21,36 +21,36 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348992"
 ---
 # <a name="efficient-combination-of-operators-visual-basic"></a>Эффективное сочетание операторов (Visual Basic)
-Complex expressions can contain many different operators. Это показано в следующем примере.  
+Сложные выражения могут содержать множество различных операторов. Это показано в следующем примере.  
   
  `x = (45 * (y + z)) ^ (2 / 85) * 5 + z`  
   
- Creating complex expressions such as the one in the preceding example requires a thorough understanding of the rules of operator precedence. For more information, see [Operator Precedence in Visual Basic](../../../../visual-basic/language-reference/operators/operator-precedence.md).  
+ Создание сложных выражений, например, в предыдущем примере, требует тщательного понимания правил приоритета операторов. Дополнительные сведения см. [в разделе приоритет операторов в Visual Basic](../../../../visual-basic/language-reference/operators/operator-precedence.md).  
   
-## <a name="parenthetical-expressions"></a>Parenthetical Expressions  
- Often you want operations to proceed in a different order from that determined by operator precedence. Рассмотрим следующий пример.  
+## <a name="parenthetical-expressions"></a>Выражения в скобках  
+ Часто требуется, чтобы операции продвигается в порядке, отличном от того, который определяется приоритетом операторов. Рассмотрим следующий пример.  
   
  `x = z * y + 4`  
   
- The preceding example multiplies `z` by `y`, then adds the result to `4`. But if you want to add `y` and `4` before multiplying the result by `z`, you can override normal operator precedence by using parentheses. By enclosing an expression in parentheses, you force that expression to be evaluated first, regardless of operator precedence. To force the preceding example to do the addition first, you could rewrite it as in the following example.  
+ Предыдущий пример умножает `z` на `y`, а затем добавляет результат в `4`. Но если вы хотите добавить `y` и `4` до умножения результата `z`, можно переопределить приоритет обычного оператора с помощью круглых скобок. Заключив выражение в круглые скобки, вы принудительно выдаете выражение первым, независимо от приоритета операторов. Чтобы выполнить предыдущий пример для первого добавления, можно переписать его, как показано в следующем примере.  
   
  `x = z * (y + 4)`  
   
- The preceding example adds `y` and `4`, then multiplies that sum by `z`.  
+ В предыдущем примере добавляется `y` и `4`, затем сумма умножается на `z`.  
   
-### <a name="nested-parenthetical-expressions"></a>Nested Parenthetical Expressions  
- You can nest expressions in multiple levels of parentheses to override precedence even further. The expressions most deeply nested in parentheses are evaluated first, followed by the next most deeply nested, and so on to the least deeply nested, and finally the expressions outside parentheses. Это показано в следующем примере.  
+### <a name="nested-parenthetical-expressions"></a>Вложенные выражения в скобках  
+ Можно вкладывать выражения на нескольких уровнях круглых скобок для более детального переопределения приоритета. Выражения, наиболее глубоко вложенные в круглые скобки, сначала оцениваются, за которыми следуют более глубокий уровень вложенности, и так далее, и, наконец, выражения за пределами круглых скобок. Это показано в следующем примере.  
   
  `x = (z * 4) ^ (y * (z + 2))`  
   
- In the preceding example, `z + 2` is evaluated first, then the other parenthetical expressions. Exponentiation, which normally has higher precedence than addition or multiplication, is evaluated last in this example because the other expressions are enclosed in parentheses.  
+ В предыдущем примере `z + 2` вычисляется первым, а затем другими выражениями в скобках. Возведение в степень, которое обычно имеет более высокий приоритет, чем сложение или умножение, в этом примере вычисляется последним, так как другие выражения заключаются в круглые скобки.  
   
 ## <a name="see-also"></a>См. также
 
-- [Arithmetic Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
-- [Comparison Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
-- [Logical and Bitwise Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)
-- [Logical/Bitwise Operators (Visual Basic)](../../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)
+- [Арифметические операторы в Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+- [Операторы сравнения в Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
+- [Логические и побитовые операторы в Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)
+- [Логические и битовые операторы (Visual Basic)](../../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)
 - [Логические выражения](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/boolean-expressions.md)
 - [Сравнения значений](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/value-comparisons.md)
 - [Практическое руководство. Вычисление числовых значений](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/how-to-calculate-numeric-values.md)

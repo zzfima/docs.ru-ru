@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74434334"
 ---
 # <a name="imetadataemitgetsavesize-method"></a>Метод IMetaDataEmit::GetSaveSize
-Gets the estimated binary size of the assembly and its metadata in the current scope.  
+Возвращает приблизительный двоичный размер сборки и ее метаданных в текущей области.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -36,34 +36,34 @@ HRESULT GetSaveSize (
   
 ## <a name="parameters"></a>Параметры  
  `fSave`  
- [in] A value of the [CorSaveSize](../../../../docs/framework/unmanaged-api/metadata/corsavesize-enumeration.md) enumeration that specifies whether to get an accurate or approximate size. Only three values are valid: cssAccurate, cssQuick, and cssDiscardTransientCAs:  
+ окне Значение перечисления [корсавесизе](../../../../docs/framework/unmanaged-api/metadata/corsavesize-enumeration.md) , указывающее, следует ли получить точный или приблизительный размер. Допустимы только три значения: Кссаккурате, Ксскуикк и Кссдискардтрансиенткас:  
   
-- cssAccurate returns the exact save size but takes longer to calculate.  
+- Кссаккурате возвращает точный размер сохранения, но для его вычисления требуется больше времени.  
   
-- cssQuick returns a size, padded for safety, but takes less time to calculate.  
+- Ксскуикк возвращает размер, дополненный для безопасности, но требует меньше времени для вычисления.  
   
-- cssDiscardTransientCAs tells `GetSaveSize` that it can throw away discardable custom attributes.  
+- Кссдискардтрансиенткас сообщает `GetSaveSize`, что он может создавать неразрешенные настраиваемые атрибуты.  
   
  `pdwSaveSize`  
- [out] A pointer to the size that is required to save the file.  
+ заполняет Указатель на размер, необходимый для сохранения файла.  
   
-## <a name="remarks"></a>Заметки  
- `GetSaveSize` calculates the space required, in bytes, to save the assembly and all its metadata in the current scope. (A call to the [IMetaDataEmit::SaveToStream](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-savetostream-method.md) method would emit this number of bytes.)  
+## <a name="remarks"></a>Примечания  
+ `GetSaveSize` вычисляет пространство, необходимое в байтах, для сохранения сборки и всех ее метаданных в текущей области. (Вызов метода [IMetaDataEmit:: саветостреам](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-savetostream-method.md) приведет к порождению этого числа байтов.)  
   
- If the caller implements the [IMapToken](../../../../docs/framework/unmanaged-api/metadata/imaptoken-interface.md) interface (through [IMetaDataEmit::SetHandler](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-sethandler-method.md) or [IMetaDataEmit::Merge](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-merge-method.md)), `GetSaveSize` will perform two passes over the metadata to optimize and compress it. Otherwise, no optimizations are performed.  
+ Если вызывающий объект реализует интерфейс [IMapToken](../../../../docs/framework/unmanaged-api/metadata/imaptoken-interface.md) (через [IMetaDataEmit:: сесандлер](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-sethandler-method.md) или [IMetaDataEmit:: Merge](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-merge-method.md)), `GetSaveSize` выполняет два прохода по метаданным для оптимизации и сжатия. В противном случае оптимизация не выполняется.  
   
- If optimization is performed, the first pass simply sorts the metadata structures to tune the performance of import-time searches. This step typically results in moving records around, with the side effect that tokens retained by the tool for future reference are invalidated. The metadata does not inform the caller of these token changes until after the second pass, however. In the second pass, various optimizations are performed that are intended to reduce the overall size of the metadata, such as optimizing away (early binding) `mdTypeRef` and `mdMemberRef` tokens when the reference is to a type or member that is declared in the current metadata scope. In this pass, another round of token mapping occurs. After this pass, the metadata engine notifies the caller, through its `IMapToken` interface, of any changed token values.  
+ Если выполняется оптимизация, первый проход просто сортирует структуры метаданных для настройки производительности поисков во время поиска. Этот шаг обычно приводит к перемещению записей, с побочным действием, что токены, сохраняемые средством для будущего использования, становятся недействительными. Однако метаданные не сообщают вызывающему объекту об изменениях токена до второго прохода. Во втором прохождении выполняются различные оптимизации, предназначенные для уменьшения общего размера метаданных, например для оптимизации (раннее связывание) `mdTypeRef` и `mdMemberRef` токены, если ссылка относится к типу или члену, объявленному в текущей области метаданных. На этом этапе выполняется еще один цикл сопоставления маркеров. После этого обработчик метаданных уведомляет вызывающий объект, используя его интерфейс `IMapToken`, для любых измененных значений токенов.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Заголовок:** COR. h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **Библиотека:** Используется в качестве ресурса в MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [Интерфейс IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

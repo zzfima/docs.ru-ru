@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445062"
 ---
 # <a name="icorprofilercallbackcomclassicvtablecreated-method"></a>Метод ICorProfilerCallback::COMClassicVTableCreated
-Notifies the profiler that a COM interop vtable for the specified IID and class has been created.  
+Уведомляет профилировщик о том, что для указанного IID и класса был создан объект vtable COM-взаимодействия.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,21 +37,21 @@ HRESULT COMClassicVTableCreated(
   
 ## <a name="parameters"></a>Параметры  
  `wrappedClasId`  
- [in] The ID of the class for which the vtable has been created.  
+ окне Идентификатор класса, для которого была создана таблица vtable.  
   
  `implementedIID`  
- [in] The ID of the interface implemented by the class. This value may be NULL if the interface is internal only.  
+ окне Идентификатор интерфейса, реализуемого классом. Это значение может быть равно NULL, если интерфейс является только внутренним.  
   
  `pVTable`  
- [in] A pointer to the start of the vtable.  
+ окне Указатель на начало таблицы vtable.  
   
  `cSlots`  
- [in] The number of slots that are in the vtable.  
+ окне Число слотов в таблице vtable.  
   
 ## <a name="remarks"></a>Заметки  
- The profiler should not block in its implementation of this method because the stack may not be in a state that allows garbage collection, and therefore preemptive garbage collection cannot be enabled. If the profiler blocks here and garbage collection is attempted, the runtime will block until this callback returns.  
+ Профилировщик не должен блокировать реализацию этого метода, так как стек может не находиться в состоянии, допускающем сборку мусора, поэтому невозможно включить вытесненную сборку мусора. Если профилировщик блокируется здесь и выполняется сборка мусора, среда выполнения блокируется до тех пор, пока этот обратный вызов не вернет значение.  
   
- The profiler's implementation of this method should not call into managed code or in any way cause a managed-memory allocation.  
+ Реализация этого метода профилировщиком не должна вызывать управляемый код или каким-либо образом приводит к выделению управляемой памяти.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  

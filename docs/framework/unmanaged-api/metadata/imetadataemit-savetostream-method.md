@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74435926"
 ---
 # <a name="imetadataemitsavetostream-method"></a>Метод IMetaDataEmit::SaveToStream
-Saves all metadata in the current scope to the specified `IStream`.  
+Сохраняет все метаданные в текущей области в указанном `IStream`.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -36,7 +36,7 @@ HRESULT SaveToStream (
   
 ## <a name="parameters"></a>Параметры  
  `pIStream`  
- [in] The writable stream to save to.  
+ окне Доступный для записи поток для сохранения.  
   
  `dwSaveFlags`  
  [in] Зарезервировано. Должен равняться нулю.  
@@ -44,13 +44,13 @@ HRESULT SaveToStream (
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Заголовок:** COR. h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **Библиотека:** Используется в качестве ресурса в MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [Интерфейс IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

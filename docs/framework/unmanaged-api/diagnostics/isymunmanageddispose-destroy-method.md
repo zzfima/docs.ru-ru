@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74430705"
 ---
 # <a name="isymunmanageddisposedestroy-method"></a>Метод ISymUnmanagedDispose::Destroy
-Causes the underlying object to release all internal references and return failure on any subsequent method calls.  
+Заставляет базовый объект освобождать все внутренние ссылки и возвращать ошибку при любом последующем вызове метода.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -32,10 +32,10 @@ HRESULT Destroy();
 ```  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK, если метод выполнен. в противном случае E_FAIL или другой код ошибки.  
   
 ## <a name="requirements"></a>Требования  
- **Header:** CorSym.idl, CorSym.h  
+ **Заголовок:** Корсим. idl, Корсим. h  
   
 ## <a name="see-also"></a>См. также
 

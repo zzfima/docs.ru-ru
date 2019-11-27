@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74432327"
 ---
 # <a name="imetadataemitsetpermissionsetprops-method"></a>Метод IMetaDataEmit::SetPermissionSetProps
-Sets or updates features of the metadata signature of a permission set defined by a prior call to [IMetaDataEmit::DefinePermissionSet](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definepermissionset-method.md).  
+Задает или обновляет функции сигнатуры метаданных набора разрешений, определенного при предыдущем вызове метода [IMetaDataEmit::D ефинепермиссионсет](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definepermissionset-method.md).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,26 +39,26 @@ HRESULT SetPermissionSetProps (
   
 ## <a name="parameters"></a>Параметры  
  `tk`  
- [in] A metadata token that represents the object to be decorated.  
+ окне Токен метаданных, представляющий объект для декорирования.  
   
  `dwAction`  
- [in] A [CorDeclSecurity](../../../../docs/framework/unmanaged-api/metadata/cordeclsecurity-enumeration.md) value that specifies the type of declarative security to be used.  
+ окне Значение [кордеклсекурити](../../../../docs/framework/unmanaged-api/metadata/cordeclsecurity-enumeration.md) , указывающее тип используемой декларативной безопасности.  
   
  `pvPermission`  
- [in] The permission BLOB.  
+ окне Большой двоичный объект разрешений.  
   
  `cbPermission`  
- [in] The size, in bytes, of `pvPermission`.  
+ окне Размер `pvPermission`в байтах.  
   
  `ppm`  
- [out] An `mdPermission` metadata token that represents the updated permissions.  
+ заполняет Маркер метаданных `mdPermission`, представляющий обновленные разрешения.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Заголовок:** COR. h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **Библиотека:** Используется в качестве ресурса в MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

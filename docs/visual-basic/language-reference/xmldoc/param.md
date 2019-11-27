@@ -12,8 +12,8 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352289"
 ---
-# <a name="param-visual-basic"></a>\<param> (Visual Basic)
-Defines a parameter name and description.  
+# <a name="param-visual-basic"></a>> параметров \<(Visual Basic)
+Определяет имя и описание параметра.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -29,18 +29,18 @@ Defines a parameter name and description.
  Описание параметра.  
   
 ## <a name="remarks"></a>Заметки  
- The `<param>` tag should be used in the comment for a method declaration to describe one of the parameters for the method.  
+ Тег `<param>` должен использоваться в комментариях для объявления метода, чтобы описать один из параметров для метода.  
   
- The text for the `<param>` tag will appear in the following locations:  
+ Текст тега `<param>` будет отображаться в следующих расположениях:  
   
-- Parameter Info of IntelliSense. Дополнительные сведения см. в статье [Using IntelliSense](/visualstudio/ide/using-intellisense) (Использование IntelliSense).  
+- Сведения о параметрах IntelliSense. Дополнительные сведения см. в разделе [Using IntelliSense](/visualstudio/ide/using-intellisense).  
   
-- Object Browser. Дополнительные сведения см. в разделе [Просмотр структуры кода](/visualstudio/ide/viewing-the-structure-of-code).  
+- Обозреватель объектов. Дополнительные сведения см. в разделе [Просмотр структуры кода](/visualstudio/ide/viewing-the-structure-of-code).  
   
  Чтобы обработать комментарии документации и сохранить их в файл, выполняйте сборку с параметром [-doc](../../../visual-basic/reference/command-line-compiler/doc.md).  
   
 ## <a name="example"></a>Пример  
- This example uses the `<param>` tag to describe the `id` parameter.  
+ В этом примере используется тег `<param>` для описания параметра `id`.  
   
  [!code-vb[VbVbcnXmlDocComments#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#6)]  
   

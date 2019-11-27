@@ -14,7 +14,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350208"
 ---
 # <a name="arithmetic-operators-visual-basic"></a>Арифметические операторы (Visual Basic)
-The following are the arithmetic operators defined in Visual Basic.  
+Ниже приведены арифметические операторы, определенные в Visual Basic.  
   
  [Оператор ^](../../../visual-basic/language-reference/operators/exponentiation-operator.md)  
   
@@ -26,11 +26,11 @@ The following are the arithmetic operators defined in Visual Basic.
   
  [Оператор Mod](../../../visual-basic/language-reference/operators/mod-operator.md)  
   
- [+ Operator](../../../visual-basic/language-reference/operators/addition-operator.md) (unary and binary)  
+ [Оператор +](../../../visual-basic/language-reference/operators/addition-operator.md) (унарный и двоичный)  
   
- [- Operator](../../../visual-basic/language-reference/operators/subtraction-operator.md) (unary and binary)  
+ [-Operator](../../../visual-basic/language-reference/operators/subtraction-operator.md) (унарный и двоичный)  
   
 ## <a name="see-also"></a>См. также
 
 - [Порядок применения операторов в Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)
-- [Arithmetic Operators in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+- [Арифметические операторы в Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)

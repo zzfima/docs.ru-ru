@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74440488"
 ---
 # <a name="imetadataemit2getdeltasavesize-method"></a>Метод IMetaDataEmit2::GetDeltaSaveSize
-Gets a value indicating any change in metadata size that results from the current edit-and-continue session.  
+Возвращает значение, указывающее на изменение размера метаданных, полученное в результате текущего сеанса "изменить и продолжить".  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -36,17 +36,17 @@ HRESULT GetDeltaSaveSize (
   
 ## <a name="parameters"></a>Параметры  
  `fSave`  
- [in] One of the [CorSaveSize](../../../../docs/framework/unmanaged-api/metadata/corsavesize-enumeration.md) values, indicating the level of precision desired. For the .NET Framework version 2.0, this parameter is ignored.  
+ окне Одно из значений [корсавесизе](../../../../docs/framework/unmanaged-api/metadata/corsavesize-enumeration.md) , указывающее требуемый уровень точности. Для .NET Framework версии 2,0 этот параметр игнорируется.  
   
  `pdwSaveSize`  
- [out] The change in the size of the metadata.  
+ заполняет Изменение размера метаданных.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Заголовок:** COR. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Библиотека:** Используется в качестве ресурса в MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

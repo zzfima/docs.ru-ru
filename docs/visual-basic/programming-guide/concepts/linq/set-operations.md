@@ -9,7 +9,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350619"
 ---
-# <a name="set-operations-visual-basic"></a>Set Operations (Visual Basic)
+# <a name="set-operations-visual-basic"></a>Операции с наборами (Visual Basic)
 
 Операции над множествами в LINQ — это операции запросов, результирующие наборы которых основываются на наличии или отсутствии эквивалентных элементов в одной или другой коллекции (или наборе).
 
@@ -17,7 +17,7 @@ ms.locfileid: "74350619"
 
 ## <a name="methods"></a>Методы
 
-|Имя метода|Описание|Visual Basic Query Expression Syntax|Дополнительные сведения|
+|Имя метода|Описание|Синтаксис выражения запроса Visual Basic|Дополнительные сведения|
 |-----------------|-----------------|------------------------------------------|----------------------|
 |Distinct|Удаляет повторяющиеся значения из коллекции.|`Distinct`|<xref:System.Linq.Enumerable.Distinct%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Distinct%2A?displayProperty=nameWithType>|
 |Исключения|Возвращает разность множеств, т. е. элементы одной коллекции, которые отсутствуют во второй.|Неприменимо.|<xref:System.Linq.Enumerable.Except%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Except%2A?displayProperty=nameWithType>|
@@ -36,7 +36,7 @@ ms.locfileid: "74350619"
 
 На следующем рисунке показано поведение <xref:System.Linq.Enumerable.Except%2A?displayProperty=nameWithType>. Возвращаемая последовательность содержит только те элементы из первой входной последовательности, которых нет во второй.
 
-![Graphic showing the action of Except&#40;&#41;.](./media/set-operations/except-behavior-graphic.png "Shows the behavior of Except.")
+![График, отображающий действие Except&#40;&#41;.](./media/set-operations/except-behavior-graphic.png "Демонстрирует поведение Except.")
 
 ### <a name="intersect"></a>Пересечение
 
@@ -48,11 +48,11 @@ ms.locfileid: "74350619"
 
 На следующем рисунке показана операция объединения двух последовательностей символов. Возвращаемая последовательность содержит уникальные элементы из обеих входных последовательностей.
 
-![График, показывающий объединение двух пакетов.](./media/set-operations/union-operation-two-sequences.png)
+![График, показывающий объединение двух последовательностей.](./media/set-operations/union-operation-two-sequences.png)
 
 ## <a name="query-expression-syntax-example"></a>Пример синтаксиса выражения запроса
 
-The following example uses the `Distinct` clause in a LINQ query to return the unique numbers from a list of integers.
+В следующем примере предложение `Distinct` в запросе LINQ используется для возврата уникальных чисел из списка целых чисел.
 
 [!code-vb[CsLINQSetOps#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/CsLINQSetOps/VB/setops.vb#1)]
 
@@ -61,5 +61,5 @@ The following example uses the `Distinct` clause in a LINQ query to return the u
 - <xref:System.Linq>
 - [Общие сведения о стандартных операторах запроса (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
 - [Предложение Distinct](../../../../visual-basic/language-reference/queries/distinct-clause.md)
-- [How to: Combine and Compare String Collections (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md)
-- [How to: Find the Set Difference Between Two Lists (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-the-set-difference-between-two-lists-linq.md)
+- [Практические руководства. объединение и сравнение коллекций строк (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md)
+- [Как найти разность множеств между двумя списками (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-the-set-difference-between-two-lists-linq.md)

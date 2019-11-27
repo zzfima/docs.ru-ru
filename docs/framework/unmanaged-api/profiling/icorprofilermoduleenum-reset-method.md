@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428280"
 ---
 # <a name="icorprofilermoduleenumreset-method"></a>Метод ICorProfilerModuleEnum::Reset
-Moves this enumerator's cursor to the starting position of the sequence.  
+Перемещает курсор перечислителя в начальную позицию последовательности.  
   
 ## <a name="syntax"></a>Синтаксис  
   

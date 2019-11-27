@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74431406"
 ---
 # <a name="icorprofilerinfo2getstringlayout-method"></a>Метод ICorProfilerInfo2::GetStringLayout
-Получает сведения о структуре строкового объекта. This method is deprecated in the .NET Framework 4, and is superseded by the [ICorProfilerInfo3::GetStringLayout2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getstringlayout2-method.md) method.  
+Получает сведения о структуре строкового объекта. Этот метод является устаревшим в .NET Framework 4 и заменяется методом [ICorProfilerInfo3:: GetStringLayout2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getstringlayout2-method.md) .  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -36,27 +36,27 @@ HRESULT GetStringLayout(
   
 ## <a name="parameters"></a>Параметры  
  `pBufferLengthOffset`  
- [out] A pointer to the offset of the location, relative to the `ObjectID` pointer, that stores the length of the string. The length is stored as a `DWORD`.  
+ заполняет Указатель на смещение расположения относительно указателя `ObjectID`, в котором хранится длина строки. Длина хранится в виде `DWORD`.  
   
 > [!NOTE]
-> This parameter returns the length of the string itself, not the length of the buffer. The length of the buffer is no longer available.  
+> Этот параметр возвращает длину самой строки, а не длину буфера. Длина буфера больше недоступна.  
   
  `PStringLengthOffset`  
- [out] A pointer to the offset of the location, relative to the `ObjectID` pointer, that stores the length of the string itself. The length is stored as a `DWORD`.  
+ заполняет Указатель на смещение расположения относительно указателя `ObjectID`, в котором хранится длина строки. Длина хранится в виде `DWORD`.  
   
  `pBufferOffset`  
- [out] A pointer to the offset of the buffer, relative to the `ObjectID` pointer, that stores the string of wide characters.  
+ заполняет Указатель на смещение буфера относительно указателя на `ObjectID`, в котором хранится строка расширенных символов.  
   
 ## <a name="remarks"></a>Заметки  
- The `GetStringLayout` method gets the offsets, relative to the `ObjectID` pointer, of the locations in which the following are stored:  
+ Метод `GetStringLayout` получает смещения относительно указателя `ObjectID` в расположениях, в которых хранятся следующие значения:  
   
-- The length of the string's buffer.  
+- Длина буфера строки.  
   
-- The length of the string itself.  
+- Длина самой строки.  
   
-- The buffer that contains the actual string of wide characters.  
+- Буфер, содержащий фактическую строку расширенных символов.  
   
- Strings may be null-terminated.  
+ Строки могут завершаться нулем.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  

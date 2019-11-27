@@ -22,10 +22,10 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74427346"
 ---
 # <a name="functiontailcall-function"></a>Функция FunctionTailcall
-Notifies the profiler that the currently executing function is about to perform a tail call to another function.  
+Уведомляет профилировщик о том, что выполняемая в данный момент функция собирается выполнить вызов другой функции с префиксом tail.  
   
 > [!NOTE]
-> The `FunctionTailcall` function is deprecated in the .NET Framework version 2.0. It will continue to work, but will incur a performance penalty. Use the [FunctionTailcall2](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md) function instead.  
+> Функция `FunctionTailcall` устарела в .NET Framework версии 2,0. Он будет продолжать работать, но будет приводить к снижению производительности. Вместо этого используйте функцию [FunctionTailcall2](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md) .  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,31 +37,31 @@ void __stdcall FunctionTailcall (
   
 ## <a name="parameters"></a>Параметры  
  `funcID`  
- [in] The identifier of the currently executing function that is about to make a tail call.  
+ окне Идентификатор выполняемой в данный момент функции, которая собирается выполнить вызов с префиксом tail.  
   
 ## <a name="remarks"></a>Заметки  
- The target function of the tail call will use the current stack frame, and will return directly to the caller of the function that made the tail call. This means that a [FunctionLeave](../../../../docs/framework/unmanaged-api/profiling/functionleave-function.md) callback will not be issued for a function that is the target of a tail call.  
+ Целевая функция вызова с префиксом tail будет использовать текущий кадр стека и будет возвращаться непосредственно вызывающему объекту функции, которая выполнила вызов с префиксом tail. Это означает, что обратный вызов [FunctionLeave](../../../../docs/framework/unmanaged-api/profiling/functionleave-function.md) не будет выдаваться для функции, которая является целевым объектом для вызова с префиксом tail.  
   
- The `FunctionTailcall` function is a callback; you must implement it. The implementation must use the `__declspec`(`naked`) storage-class attribute.  
+ Функция `FunctionTailcall` является обратным вызовом. его необходимо реализовать. Реализация должна использовать атрибут класса хранения `__declspec`(`naked`).  
   
- The execution engine does not save any registers before calling this function.  
+ Подсистема выполнения не сохраняет никакие регистры перед вызовом этой функции.  
   
-- On entry, you must save all registers that you use, including those in the floating-point unit (FPU).  
+- Во время записи необходимо сохранить все используемые регистры, включая те, которые находятся в блоке с плавающей запятой (FPU).  
   
-- On exit, you must restore the stack by popping off all the parameters that were pushed by its caller.  
+- При выходе необходимо восстановить стек, выключив все параметры, которые были переданы его вызывающим.  
   
- The implementation of `FunctionTailcall` should not block because it will delay garbage collection. The implementation should not attempt a garbage collection because the stack may not be in a garbage collection-friendly state. If a garbage collection is attempted, the runtime will block until `FunctionTailcall` returns.  
+ Реализация `FunctionTailcall` не должна блокироваться, так как она приведет к задержке сборки мусора. Реализация не должна пытаться выполнить сборку мусора, так как стек может не находиться в состоянии, понятном для сборки мусора. Если выполняется сборка мусора, среда выполнения блокируется до тех пор, пока не будет возвращено `FunctionTailcall`.  
   
- Also, the `FunctionTailcall` function must not call into managed code or in any way cause a managed memory allocation.  
+ Кроме того, функция `FunctionTailcall` не должна вызывать управляемый код или каким-либо образом приводит к выделению управляемой памяти.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl  
+ **Заголовок:** CorProf. idl  
   
  **Библиотека:** CorGuids.lib  
   
- **.NET Framework Versions:** 1.1, 1.0  
+ **.NET Framework версии:** 1,1, 1,0  
   
 ## <a name="see-also"></a>См. также
 

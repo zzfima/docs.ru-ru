@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428055"
 ---
 # <a name="isymunmanagedwriterdefinedocument-method"></a>Метод ISymUnmanagedWriter::DefineDocument
-Определяет исходный документ. GUIDs are provided for known languages, vendors, and document types.  
+Определяет исходный документ. Идентификаторы GUID предоставляются для известных языков, поставщиков и типов документов.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,25 +38,25 @@ HRESULT DefineDocument(
   
 ## <a name="parameters"></a>Параметры  
  `url`  
- [in] A pointer to a `WCHAR` that defines the uniform resource locator (URL) that identifies the document.  
+ окне Указатель на `WCHAR`, который определяет универсальный указатель ресурсов (URL-адрес), определяющий документ.  
   
  `language`  
- [in] A pointer to a GUID that defines the document language.  
+ окне Указатель на идентификатор GUID, определяющий язык документа.  
   
  `languageVendor`  
- [in] A pointer to a GUID that defines the identity of the vendor for the document language.  
+ окне Указатель на идентификатор GUID, определяющий удостоверение поставщика для языка документа.  
   
  `documentType`  
- [in] A pointer to a GUID that defines the type of the document.  
+ окне Указатель на идентификатор GUID, определяющий тип документа.  
   
  `pRetVal`  
- [out] A pointer to the returned [ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md) interface.  
+ заполняет Указатель на возвращаемый интерфейс [ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md) .  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK, если метод выполнен. в противном случае E_FAIL или другой код ошибки.  
   
 ## <a name="requirements"></a>Требования  
- **Header:** CorSym.idl, CorSym.h  
+ **Заголовок:** Корсим. idl, Корсим. h  
   
 ## <a name="see-also"></a>См. также
 

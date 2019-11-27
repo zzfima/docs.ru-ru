@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74433544"
 ---
 # <a name="icorprofilercallbackruntimeresumestarted-method"></a>Метод ICorProfilerCallback::RuntimeResumeStarted
-Notifies the profiler that the runtime is resuming all run-time threads.  
+Уведомляет профилировщик о том, что среда выполнения возобновляет все потоки времени выполнения.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,7 +40,7 @@ HRESULT RuntimeResumeStarted();
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
 - [Метод RuntimeResumeFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimeresumefinished-method.md)

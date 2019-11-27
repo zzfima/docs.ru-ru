@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74433211"
 ---
 # <a name="icorprofilerinfo2getfunctionfromtokenandtypeargs-method"></a>Метод ICorProfilerInfo2::GetFunctionFromTokenAndTypeArgs
-Gets the `FunctionID` of a function by using the specified metadata token, containing class, and `ClassID` values of any type arguments.  
+Возвращает `FunctionID` функции с помощью указанного маркера метаданных, содержащего класс, и `ClassID` значений любых аргументов типа.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,29 +39,29 @@ HRESULT GetFunctionFromTokenAndTypeArgs(
   
 ## <a name="parameters"></a>Параметры  
  `moduleID`  
- [in] The ID of the module in which the function resides.  
+ окне Идентификатор модуля, в котором находится функция.  
   
  `funcDef`  
- [in] An `mdMethodDef` metadata token that references the function.  
+ окне Токен метаданных `mdMethodDef`, ссылающийся на функцию.  
   
  `classId`  
- [in] The ID of the function's containing class.  
+ окне Идентификатор содержащего класса функции.  
   
  `cTypeArgs`  
- [in] The number of type parameters for the given function. This value must be zero for non-generic functions.  
+ окне Число параметров типа для данной функции. Для неуниверсальных функций это значение должно быть равно нулю.  
   
  `typeArgs`  
- [in] An array of `ClassID` values, each of which is an argument of the function. The value of `typeArgs` can be NULL if `cTypeArgs` is set to zero.  
+ окне Массив значений `ClassID`, каждый из которых является аргументом функции. Значение `typeArgs` может быть равно NULL, если `cTypeArgs` имеет значение 0.  
   
  `pFunctionID`  
- [out] A pointer to the `FunctionID` of the specified function.  
+ заполняет Указатель на `FunctionID` указанной функции.  
   
 ## <a name="remarks"></a>Заметки  
- Calling the `GetFunctionFromTokenAndTypeArgs` method with an `mdMethodRef` metadata instead of an `mdMethodDef` metadata token can have unpredictable results. Callers should resolve the `mdMethodRef` to an `mdMethodDef` when passing it.  
+ Вызов метода `GetFunctionFromTokenAndTypeArgs` с метаданными `mdMethodRef`, а не `mdMethodDef` маркером метаданных, может иметь непредсказуемые результаты. Вызывающие объекты должны разрешить `mdMethodRef` в `mdMethodDef` при передаче.  
   
- If the function is not already loaded, calling `GetFunctionFromTokenAndTypeArgs` will cause loading to occur, which is a dangerous operation in many contexts. For example, calling this method during loading of modules or types could lead to an infinite loop as the runtime attempts to circularly load things.  
+ Если функция еще не загружена, вызов `GetFunctionFromTokenAndTypeArgs` приведет к возникновению загрузки, что является опасной операцией во многих контекстах. Например, вызов этого метода во время загрузки модулей или типов может привести к бесконечному циклу, так как среда выполнения пытается циклически загружать вещи.  
   
- In general, use of `GetFunctionFromTokenAndTypeArgs` is discouraged. If profilers are interested in events for a particular function, they should store the `ModuleID` and `mdMethodDef` of that function, and use [ICorProfilerInfo2::GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) to check whether a given `FunctionID` is that of the desired function.  
+ В общем случае использование `GetFunctionFromTokenAndTypeArgs` не рекомендуется. Если профилировщики заинтересованы в событиях для определенной функции, они должны хранить `ModuleID` и `mdMethodDef` этой функции, а также использовать [ICorProfilerInfo2:: GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) для проверки того, является ли данный `FunctionID` требуемой функцией.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  

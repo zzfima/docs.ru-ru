@@ -18,10 +18,10 @@ ms.locfileid: "74350641"
 ## <a name="remarks"></a>Заметки  
  Сведения о методах и свойствах объекта `My.User` см. в разделе <xref:Microsoft.VisualBasic.ApplicationServices.User?displayProperty=nameWithType>.  
   
- For more information, see [Accessing User Data](../../../visual-basic/developing-apps/programming/accessing-user-data.md).  
+ Дополнительные сведения см. в разделе [доступ к данным пользователя](../../../visual-basic/developing-apps/programming/accessing-user-data.md).  
   
 ## <a name="requirements"></a>Требования  
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **Сборка:** Библиотека времени выполнения Visual Basic (в Microsoft. VisualBasic. dll)  
   
 ## <a name="see-also"></a>См. также
 

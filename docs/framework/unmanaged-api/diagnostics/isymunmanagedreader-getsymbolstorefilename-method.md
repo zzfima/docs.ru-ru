@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74431237"
 ---
 # <a name="isymunmanagedreadergetsymbolstorefilename-method"></a>Метод ISymUnmanagedReader::GetSymbolStoreFileName
-Provides the on-disk file name of the symbol store.  
+Предоставляет имя файла на диске для хранилища символов.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,20 +37,20 @@ HRESULT GetSymbolStoreFileName (
   
 ## <a name="parameters"></a>Параметры  
  `cchName`  
- [in] The size of the `szName` buffer.  
+ окне Размер буфера `szName`.  
   
  `pcchName`  
- [out] A pointer to the variable that receives the length of the name returned in `szName`, including the null termination.  
+ заполняет Указатель на переменную, которая получает длину имени, возвращаемого в `szName`, включая завершение значения NULL.  
   
  `szName`  
- [out] A pointer to the variable that receives the file name of the symbol store.  
+ заполняет Указатель на переменную, которая получает имя файла хранилища символов.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK, если метод выполнен. в противном случае E_FAIL или другой код ошибки.  
   
 ## <a name="requirements"></a>Требования  
- **Header:** CorSym.idl, CorSym.h  
+ **Заголовок:** Корсим. idl, Корсим. h  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

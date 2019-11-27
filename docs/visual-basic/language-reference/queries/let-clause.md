@@ -16,7 +16,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350437"
 ---
 # <a name="let-clause-visual-basic"></a>Предложение Let (Visual Basic)
-Computes a value and assigns it to a new variable within the query.  
+Выполняет вычисление значения и присваивает его новой переменной в запросе.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -28,16 +28,16 @@ Let variable = expression [, ...]
   
 |Термин|Определение|  
 |---|---|  
-|`variable`|Обязательный. An alias that can be used to reference the results of the supplied expression.|  
-|`expression`|Обязательный. An expression that will be evaluated and assigned to the specified variable.|  
+|`variable`|Обязательно. Псевдоним, который может использоваться для ссылки на результаты предоставляемого выражения.|  
+|`expression`|Обязательно. Выражение, которое будет вычислено и назначено указанной переменной.|  
   
 ## <a name="remarks"></a>Заметки  
- The `Let` clause enables you to compute values for each query result and reference them by using an alias. The alias can be used in other clauses, such as the `Where` clause. The `Let` clause enables you to create a query statement that is easier to read because you can specify an alias for an expression clause included in the query and substitute the alias each time the expression clause is used.  
+ Предложение `Let` позволяет вычислять значения для каждого результата запроса и ссылаться на них с помощью псевдонима. Псевдоним можно использовать в других предложениях, например в предложении `Where`. Предложение `Let` позволяет создать инструкцию запроса, которая будет удобна для чтения, поскольку можно указать псевдоним для предложения выражения, включенного в запрос, и заменить его при каждом использовании предложения Expression.  
   
- You can include any number of `variable` and `expression` assignments in the `Let` clause. Separate each assignment with a comma (,).  
+ В предложение `Let` можно включить любое количество `variable` и `expression` назначений. Разделяйте каждое назначение запятой (,).  
   
 ## <a name="example"></a>Пример  
- The following code example uses the `Let` clause to compute a 10 percent discount on products.  
+ В следующем примере кода предложение `Let` используется для расчета скидки на 10% для продуктов.  
   
  [!code-vb[VbSimpleQuerySamples#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#16)]  
   

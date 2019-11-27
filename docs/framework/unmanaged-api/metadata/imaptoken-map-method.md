@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74432148"
 ---
 # <a name="imaptokenmap-method"></a>Метод IMapToken::Map
-Maps a relationship between the assemblies using metadata signatures.  
+Сопоставляет связь между сборками, используя подписи метаданных.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -36,23 +36,23 @@ HRESULT Map (
   
 ## <a name="parameters"></a>Параметры  
  `tkImp`  
- [in] The metadata token that represents the imported code object.  
+ окне Токен метаданных, представляющий импортированный объект кода.  
   
  `tkEmit`  
- [in] The metadata token that represents the emitted code object.  
+ окне Токен метаданных, представляющий созданный объект кода.  
   
-## <a name="remarks"></a>Заметки  
- When the token re-map occurs during a merge, the original token is scoped in the imported (source) metadata scope and the new token is scoped in the emitted (target) metadata scope.  
+## <a name="remarks"></a>Примечания  
+ Когда повторное отображение токена происходит во время слияния, исходный маркер ограничивается в импортированной (исходной) области метаданных, а новый маркер — в области исрожденных (целевых) метаданных.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Заголовок:** COR. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Библиотека:** Используется в качестве ресурса в MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс IMapToken](../../../../docs/framework/unmanaged-api/metadata/imaptoken-interface.md)

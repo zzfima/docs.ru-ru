@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428109"
 ---
 # <a name="isymunmanagedwriterclosemethod-method"></a>Метод ISymUnmanagedWriter::CloseMethod
-Закрывает текущий метод. Once a method is closed, no more symbols can be defined within it.  
+Закрывает текущий метод. После закрытия метода в нем нельзя определять символы.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -32,12 +32,12 @@ HRESULT CloseMethod();
 ```  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK, если метод выполнен. в противном случае E_FAIL или другой код ошибки.  
   
 ## <a name="requirements"></a>Требования  
- **Header:** CorSym.idl, CorSym.h  
+ **Заголовок:** Корсим. idl, Корсим. h  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
 - [Метод OpenMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openmethod-method.md)

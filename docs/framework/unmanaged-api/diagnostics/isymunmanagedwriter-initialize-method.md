@@ -23,9 +23,9 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74427974"
 ---
 # <a name="isymunmanagedwriterinitialize-method"></a>Метод ISymUnmanagedWriter::Initialize
-Sets the metadata emitter interface with which this writer will be associated, and sets the output file name to which the debugging symbols will be written.  
+Задает интерфейс передатчика метаданных, с которым будет связан этот модуль записи, и задает имя выходного файла, в который будут записываться отладочные символы.  
   
- This method can be called only once, and it must be called before any other writer methods. Some writers may require a file name. However, you can always pass a file name to this method without any negative effect on writers that do not use the file name.  
+ Этот метод может быть вызван только один раз и должен вызываться перед любым другим методом записи. Некоторым модулям записи может потребоваться имя файла. Однако всегда можно передать имя файла этому методу без какого-либо негативного воздействия на модули записи, которые не используют имя файла.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,24 +39,24 @@ HRESULT Initialize(
   
 ## <a name="parameters"></a>Параметры  
  `emitter`  
- [in] A pointer to the metadata emitter interface.  
+ окне Указатель на интерфейс передатчика метаданных.  
   
  `filename`  
- [in] The file name to which the debugging symbols are written. Если имя файла задано для модуля записи, который не использует имена файлов, этот параметр пропускается.  
+ окне Имя файла, в который записываются отладочные символы. Если имя файла задано для модуля записи, который не использует имена файлов, этот параметр пропускается.  
   
  `pIStream`  
- [in] If specified, the symbol writer will emit the symbols into the given <xref:System.Runtime.InteropServices.ComTypes.IStream> rather than to the file specified in the `filename` parameter. Параметр `pIStream` является необязательным.  
+ окне Если этот параметр указан, модуль записи символов выдает символы в заданный <xref:System.Runtime.InteropServices.ComTypes.IStream>, а не в файл, указанный в `filename`. Параметр `pIStream` является необязательным.  
   
  `fFullBuild`  
- [in] `true` if this is a full rebuild; `false` if this is an incremental compilation.  
+ [in] `true`, если это полная перестроение; `false`, если это инкрементная компиляция.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK, если метод выполнен. в противном случае E_FAIL или другой код ошибки.  
   
 ## <a name="requirements"></a>Требования  
- **Header:** CorSym.idl, CorSym.h  
+ **Заголовок:** Корсим. idl, Корсим. h  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
 - [Метод Initialize2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-initialize2-method.md)

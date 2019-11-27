@@ -17,43 +17,43 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74354004"
 ---
 # <a name="user-defined-constants-visual-basic"></a>Константы, определенные пользователем (Visual Basic)
-A constant is a meaningful name that takes the place of a number or string that does not change. Как можно понять из их названия, константы хранят значения, которые остаются постоянными в ходе выполнения приложения. You can use constants that are defined by the controls or components you work with, or you can create your own. Constants you create yourself are described as *user-defined*.  
+Константа — это понятное имя, которое принимает позицию числа или строки, которые не меняются. Как можно понять из их названия, константы хранят значения, которые остаются постоянными в ходе выполнения приложения. Вы можете использовать константы, определенные элементами управления или компонентами, с которыми вы работаете, или создать собственный. Константы, созданные самостоятельно, описаны как *определяемые пользователем*.  
   
- You declare a constant with the `Const` statement, using the same guidelines you would for creating a variable name. If `Option Strict` is `On`, you must explicitly declare the constant type.  
+ Вы объявляете константу с помощью инструкции `Const`, используя те же рекомендации, что и при создании имени переменной. Если `Option Strict` `On`, необходимо явно объявить константный тип.  
   
-## <a name="const-statement-usage"></a>Const Statement Usage  
- A `Const` statement can represent a mathematical or date/time quantity:  
+## <a name="const-statement-usage"></a>Использование инструкции const  
+ Оператор `Const` может представлять математическое или значение даты и времени:  
   
  [!code-vb[VbEnumsTask#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#10)]  
   
- It also can define `String` constants:  
+ Он также может определять `String` константы:  
   
  [!code-vb[VbEnumsTask#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#13)]  
   
- The expression on the right side of the equal sign ( `=` ) is often a number or literal string, but it also can be an expression that results in a number or string (although that expression cannot contain calls to functions). You can even define constants in terms of previously defined constants:  
+ Выражение в правой части знака равенства (`=`) часто является строкой или строковым литералом, но оно также может быть выражением, результатом которого является число или строка (хотя это выражение не может содержать вызовы функций). Константы можно даже определять с точки зрения ранее определенных констант:  
   
  [!code-vb[VbEnumsTask#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#15)]  
   
-## <a name="scope-of-user-defined-constants"></a>Scope of User-Defined Constants  
- A `Const` statement's scope is the same as that of a variable declared in the same location. You can specify scope in any of the following ways:  
+## <a name="scope-of-user-defined-constants"></a>Область определяемых пользователем констант  
+ Область действия инструкции `Const` та же, что и у переменной, объявленной в том же расположении. Указать область можно одним из следующих способов.  
   
-- To create a constant that exists only within a procedure, declare it within that procedure.  
+- Чтобы создать константу, которая существует только в пределах процедуры, объявите ее внутри этой процедуры.  
   
-- To create a constant available to all procedures within a class, but not to any code outside that module, declare it in the declarations section of the class.  
+- Чтобы создать константу, доступную для всех процедур в классе, но не для кода за пределами этого модуля, объявите ее в разделе Declarations класса.  
   
-- To create a constant that is available to all members of an assembly, but not to outside clients of the assembly, declare it using the `Friend` keyword in the declarations section of the class.  
+- Чтобы создать константу, доступную для всех членов сборки, но не для клиентов сборки, объявите ее с помощью ключевого слова `Friend` в разделе Declarations класса.  
   
-- To create a constant available throughout the application, declare it using the `Public` keyword in the declarations section the class.  
+- Чтобы создать константу, доступную во всем приложении, объявите ее с помощью ключевого слова `Public` в разделе объявлений класс.  
   
- For more information, see [How to: Declare A Constant](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-a-constant.md).  
+ Дополнительные сведения см. [в разделе инструкции. Объявление константы](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-a-constant.md).  
   
-### <a name="avoiding-circular-references"></a>Avoiding Circular References  
- Because constants can be defined in terms of other constants, it is possible to inadvertently create a *cycle*, or circular reference, between two or more constants. A cycle occurs when you have two or more public constants, each of which is defined in terms of the other, as in the following example:  
+### <a name="avoiding-circular-references"></a>Предотвращение циклических ссылок  
+ Поскольку константы могут быть определены с точки зрения других констант, можно случайно создать *цикл*или циклическую ссылку между двумя или более константами. Цикл происходит при наличии двух или более открытых констант, каждая из которых определена в терминах другого, как показано в следующем примере:  
   
  [!code-vb[VbEnumsTask#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#16)]  
 [!code-vb[VbEnumsTask#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#17)]  
   
- If a cycle occurs, Visual Basic generates a compiler error.  
+ При возникновении цикла Visual Basic выдает ошибку компилятора.  
   
 ## <a name="see-also"></a>См. также
 
@@ -63,6 +63,6 @@ A constant is a meaningful name that takes the place of a number or string that 
 - [Константы и перечисления](../../../../visual-basic/language-reference/constants-and-enumerations.md)
 - [Общие сведения о перечислениях](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)
 - [Общие сведения о константах](../../../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)
-- [How to: Declare an Enumeration](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)
+- [Инструкции. Объявление перечисления](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)
 - [Перечисления и уточнение имен](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)
 - [Оператор Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md)

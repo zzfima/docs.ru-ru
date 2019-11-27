@@ -23,20 +23,20 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351482"
 ---
 # <a name="mustoverride-visual-basic"></a>MustOverride (Visual Basic)
-Specifies that a property or procedure is not implemented in this class and must be overridden in a derived class before it can be used.  
+Указывает, что свойство или процедура не реализованы в этом классе и должны быть переопределены в производном классе, прежде чем его можно будет использовать.  
   
 ## <a name="remarks"></a>Заметки  
- You can use `MustOverride` only in a property or procedure declaration statement. The property or procedure that specifies `MustOverride` must be a member of a class, and the class must be marked [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md).  
+ `MustOverride` можно использовать только в операторе объявления свойства или процедуры. Свойство или процедура, указывающая `MustOverride` должен быть членом класса, а класс должен быть помечен как [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md).  
   
 ## <a name="rules"></a>Правила  
   
-- **Incomplete Declaration.** When you specify `MustOverride`, you do not supply any additional lines of code for the property or procedure, not even the `End Function`, `End Property`, or `End Sub` statement.  
+- **Неполное объявление.** При указании `MustOverride`не предоставляются дополнительные строки кода для свойства или процедуры, а не инструкции `End Function`, `End Property`или `End Sub`.  
   
-- **Combined Modifiers.** You cannot specify `MustOverride` together with `NotOverridable`, `Overridable`, or `Shared` in the same declaration.  
+- **Комбинированные модификаторы.** В одном объявлении нельзя указать `MustOverride` вместе с `NotOverridable`, `Overridable`или `Shared`.  
   
-- **Shadowing and Overriding.** Сокрытие и переопределение заменяют наследуемый элемент, но между этими подходами существуют значительные различия. For more information, see [Shadowing in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).  
+- **Затенение и переопределение.** Сокрытие и переопределение заменяют наследуемый элемент, но между этими подходами существуют значительные различия. Дополнительные сведения см. [в разделе теневая поддержка в Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).  
   
-- **Alternate Terms.** An element that cannot be used except in an override is sometimes called a *pure virtual* element.  
+- **Альтернативные условия.** Элемент, который нельзя использовать, за исключением переопределения, иногда называют *чисто виртуальным* элементом.  
   
  Модификатор `MustOverride` можно использовать в следующих контекстах:  
   
@@ -49,8 +49,8 @@ Specifies that a property or procedure is not implemented in this class and must
 ## <a name="see-also"></a>См. также
 
 - [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)
-- [Переопределяемые](../../../visual-basic/language-reference/modifiers/overridable.md)
+- [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)
 - [Переопределения](../../../visual-basic/language-reference/modifiers/overrides.md)
 - [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)
 - [Ключевые слова](../../../visual-basic/language-reference/keywords/index.md)
-- [Shadowing in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
+- [Затенение в Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)

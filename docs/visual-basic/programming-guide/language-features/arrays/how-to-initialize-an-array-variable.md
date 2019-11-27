@@ -1,5 +1,5 @@
 ---
-title: 'How to: Initialize an Array Variable'
+title: Как инициализировать переменную массива
 ms.date: 07/20/2015
 helpviewer_keywords:
 - variables [Visual Basic], initializing
@@ -15,41 +15,41 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351880"
 ---
 # <a name="how-to-initialize-an-array-variable-in-visual-basic"></a>Практическое руководство. Инициализация переменной массива в Visual Basic
-You initialize an array variable by including an array literal in a `New` clause and specifying the initial values of the array. You can either specify the type or allow it to be inferred from the values in the array literal. For more information about how the type is inferred, see "Populating an Array with Initial Values" in [Arrays](../../../../visual-basic/programming-guide/language-features/arrays/index.md).  
+Инициализируйте переменную массива, включив литерал массива в предложение `New` и указав начальные значения массива. Можно либо указать тип, либо разрешить вывод его из значений в литерале массива. Дополнительные сведения о выводимом типе см. в разделе «Заполнение массива начальными значениями» в [массивах](../../../../visual-basic/programming-guide/language-features/arrays/index.md).  
   
-### <a name="to-initialize-an-array-variable-by-using-an-array-literal"></a>To initialize an array variable by using an array literal  
+### <a name="to-initialize-an-array-variable-by-using-an-array-literal"></a>Инициализация переменной массива с помощью литерала массива  
   
-- Either in the `New` clause, or when you assign the array value, supply the element values inside braces (`{}`). The following example shows several ways to declare, create, and initialize a variable to contain an array that has elements of type `Char`.  
+- Либо в предложении `New`, либо при присваивании значения массива, укажите значения элементов в фигурных скобках (`{}`). В следующем примере показано несколько способов объявления, создания и инициализации переменной, содержащей массив с элементами типа `Char`.  
   
      [!code-vb[VbVbalrArrays#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrArrays/VB/Class1.vb#16)]  
   
-     After each statement executes, the array that's created has a length of 3, with elements at index 0 through index 2 containing the initial values. If you supply both the upper bound and the values, you must include a value for every element from index 0 through the upper bound.  
+     После выполнения каждой инструкции создаваемый массив имеет длину 3 и элементы с индексом 0 по индексу 2, содержащие начальные значения. При указании и верхней границы, и значений необходимо включить значение для каждого элемента из индекса 0 через верхнюю границу.  
   
-     Notice that you do not have to specify the index upper bound if you supply element values in an array literal. If no upper bound is specified, the size of the array is inferred based on the number of values in the array literal.  
+     Обратите внимание, что при указании значений элементов в литерале массива не нужно указывать верхнюю границу индекса. Если верхняя граница не указана, размер массива определяется исходя из числа значений в литерале массива.  
   
-### <a name="to-initialize-a-multidimensional-array-variable-by-using-array-literals"></a>To initialize a multidimensional array variable by using array literals  
+### <a name="to-initialize-a-multidimensional-array-variable-by-using-array-literals"></a>Инициализация переменной многомерного массива с помощью литералов массива  
   
-- Nest values inside braces (`{}`) within braces. Ensure that the nested array literals all infer as arrays of the same type and length. The following code example shows several examples of multidimensional array initialization.  
+- Вложенные значения в фигурные скобки (`{}`). Убедитесь, что все вложенные литералы массива выводятся как массивы одинакового типа и длины. В следующем примере кода показаны несколько примеров инициализации многомерных массивов.  
   
      [!code-vb[VbVbalrArrays#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrArrays/VB/Class1.vb#17)]  
   
-- You can explicitly specify the array bounds, or leave them out and have the compiler infer the array bounds based on the values in the array literal. If you supply both the upper bounds and the values, you must include a value for every element from index 0 through the upper bound in every dimension. The following example shows several ways to declare, create, and initialize a variable to contain a two-dimensional array that has elements of type `Short`  
+- Можно явно указать границы массива или оставить их, чтобы компилятор мог вычислять границы массива на основе значений в литерале массива. При указании обеих верхних границ и значений необходимо включить значение для каждого элемента из индекса 0 через верхнюю границу в каждом измерении. В следующем примере показано несколько способов объявления, создания и инициализации переменной, которая содержит двумерный массив с элементами типа `Short`  
   
      [!code-vb[VbVbalrArrays#18](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrArrays/VB/Class1.vb#18)]  
   
-     After each statement executes, the created array contains six initialized elements that have indexes `(0,0)`, `(0,1)`, `(0,2)`, `(1,0)`, `(1,1)`, and `(1,2)`. Each array location contains the value `10`.  
+     После выполнения каждой инструкции созданный массив содержит шесть инициализированных элементов, имеющих индексы `(0,0)`, `(0,1)`, `(0,2)`, `(1,0)`, `(1,1)`и `(1,2)`. Каждое расположение массива содержит значение `10`.  
   
-- The following example iterates through a multidimensional array. In a Windows console application that is written in Visual Basic, paste the code inside the `Sub Main()` method. The last comments show the output.  
+- В следующем примере выполняется итерация по многомерному массиву. В консольном приложении Windows, написанном на Visual Basic, вставьте код в метод `Sub Main()`. Последние комментарии показывают выходные данные.  
   
      [!code-vb[VbVbalrArrays#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrArrays/VB/Class1.vb#31)]  
   
-### <a name="to-initialize-a-jagged-array-variable-by-using-array-literals"></a>To initialize a jagged array variable by using array literals  
+### <a name="to-initialize-a-jagged-array-variable-by-using-array-literals"></a>Инициализация переменной массива массивов с помощью литералов массива  
   
-- Nest object values inside braces (`{}`). Although you can also nest array literals that specify arrays of different lengths, in the case of a jagged array, make sure that the nested array literals are enclosed in parentheses (`()`). The parentheses force the evaluation of the nested array literals, and the resulting arrays are used as the initial values of the jagged array. The following code example shows two examples of jagged array initialization.  
+- Вложенные значения объектов в фигурные скобки (`{}`). Хотя можно также вложить литералы массива, задающих массивы разной длины, в случае массива массивов убедитесь, что литералы вложенных массивов заключены в круглые скобки (`()`). Круглые скобки принудительно выводят вычисление литералов вложенных массивов, а результирующие массивы используются в качестве начальных значений массива массивов. В следующем примере кода показаны два примера инициализации массива массивов.  
   
      [!code-vb[VbVbalrArrays#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrArrays/VB/Class1.vb#19)]  
   
-- The following example iterates through a jagged array. In a Windows console application that is written in Visual Basic, paste the code inside the `Sub Main()` method.  The last comments in the code show the output.  
+- В следующем примере выполняется перебор массива массивов. В консольном приложении Windows, написанном на Visual Basic, вставьте код в метод `Sub Main()`.  Последние комментарии в коде показывают выходные данные.  
   
      [!code-vb[VbVbalrArrays#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrArrays/VB/Class1.vb#32)]  
   

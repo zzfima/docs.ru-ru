@@ -1,5 +1,5 @@
 ---
-title: Overrides
+title: Переопределения
 ms.date: 07/20/2015
 f1_keywords:
 - Overrides
@@ -26,11 +26,11 @@ ms.locfileid: "74351389"
 
 ## <a name="rules"></a>Правила
 
-- **Declaration Context.** You can use `Overrides` only in a property or procedure declaration statement.
+- **Контекст объявления.** `Overrides` можно использовать только в операторе объявления свойства или процедуры.
 
-- **Combined Modifiers.** You cannot specify `Overrides` together with `Shadows` or `Shared` in the same declaration. Так как переопределяемый элемент является неявно переопределяемым, нельзя объединять `Overridable` с `Overrides`.
+- **Комбинированные модификаторы.** Нельзя указать `Overrides` вместе с `Shadows` или `Shared` в одном объявлении. Так как переопределяемый элемент является неявно переопределяемым, нельзя объединять `Overridable` с `Overrides`.
 
-- **Matching Signatures.** The signature of this declaration must exactly match the *signature* of the property or procedure that it overrides. Это означает, что списки параметров должны содержать одинаковое число параметров, в том же порядке и с теми же типами данных.
+- **Сопоставление сигнатур.** Сигнатура этого объявления должна точно совпадать с *сигнатурой* свойства или процедуры, которую он переопределяет. Это означает, что списки параметров должны содержать одинаковое число параметров, в том же порядке и с теми же типами данных.
 
   Помимо сигнатуры, для объявления переопределения должны также совпадать следующие элементы:
 
@@ -38,17 +38,17 @@ ms.locfileid: "74351389"
 
   - тип возвращаемого значения (если применимо).
 
-- **Generic Signatures.** Для универсальной процедуры сигнатура содержит число параметров типа. Поэтому объявление переопределения должно соответствовать версии базового класса и в этом аспекте.
+- **Универсальные подписи.** Для универсальной процедуры сигнатура содержит число параметров типа. Поэтому объявление переопределения должно соответствовать версии базового класса и в этом аспекте.
 
-- **Additional Matching.** Помимо соответствия сигнатуры версии базового класса, это объявление должно также соответствовать ему в следующих аспектах:
+- **Дополнительное сопоставление.** Помимо соответствия сигнатуры версии базового класса, это объявление должно также соответствовать ему в следующих аспектах:
 
-  - Access-level modifier (such as [Public](../../../visual-basic/language-reference/modifiers/public.md))
+  - Модификатор уровня доступа (например, [Public](../../../visual-basic/language-reference/modifiers/public.md))
 
-  - Passing mechanism of each parameter ([ByVal](../../../visual-basic/language-reference/modifiers/byval.md) or [ByRef](../../../visual-basic/language-reference/modifiers/byref.md))
+  - Механизм передачи каждого параметра ([ByVal](../../../visual-basic/language-reference/modifiers/byval.md) или [ByRef](../../../visual-basic/language-reference/modifiers/byref.md))
 
   - списки ограничений для каждого типа параметра универсальной процедуры.
 
-- **Shadowing and Overriding.** Сокрытие и переопределение заменяют наследуемый элемент, но между этими подходами существуют значительные различия. For more information, see [Shadowing in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).
+- **Затенение и переопределение.** Сокрытие и переопределение заменяют наследуемый элемент, но между этими подходами существуют значительные различия. Дополнительные сведения см. [в разделе теневая поддержка в Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).
 
 При использовании `Overrides` компилятор неявно добавляет `Overloads`, чтобы упростить работу API-интерфейсов с библиотекой C#.
 
@@ -64,8 +64,8 @@ ms.locfileid: "74351389"
 
 - [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md)
 - [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)
-- [Переопределяемые](../../../visual-basic/language-reference/modifiers/overridable.md)
+- [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)
 - [Ключевые слова](../../../visual-basic/language-reference/keywords/index.md)
-- [Shadowing in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
+- [Затенение в Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
 - [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
 - [Список типов](../../../visual-basic/language-reference/statements/type-list.md)

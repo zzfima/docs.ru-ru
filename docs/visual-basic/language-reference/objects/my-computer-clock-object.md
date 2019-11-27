@@ -22,7 +22,7 @@ ms.locfileid: "74344086"
   
  **Класс:** <xref:Microsoft.VisualBasic.Devices.Clock>  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **Сборка:** Библиотека времени выполнения Visual Basic (в Microsoft. VisualBasic. dll)  
   
 ## <a name="see-also"></a>См. также
 

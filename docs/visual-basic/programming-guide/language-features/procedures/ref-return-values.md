@@ -1,5 +1,5 @@
 ---
-title: Ref Return Values
+title: Возвращаемые ссылочные значения
 ms.date: 04/28/2017
 helpviewer_keywords:
 - variables [Visual Basic]
@@ -13,39 +13,39 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352541"
 ---
-# <a name="support-for-reference-return-values-visual-basic"></a>Support for reference return values (Visual Basic)
+# <a name="support-for-reference-return-values-visual-basic"></a>Поддержка возвращаемых ссылочных значений (Visual Basic)
 
-Starting with C# 7.0, the C# language supports *reference return values*. One way to understand reference return values is that they are the opposite of arguments that are passed by reference to a method. When an argument passed by reference is modified, the changes are reflected in value of the variable on the caller. When an method provides a reference return value to a caller, modifications made to the reference return value by the caller are reflected in the called method's data.
+Начиная с C# 7,0, C# язык поддерживает *возвращаемые ссылочные значения*. Один из способов понять возвращаемые ссылочные значения заключается в том, что они являются противоположными аргументами, передаваемыми по ссылке к методу. При изменении аргумента, передаваемого по ссылке, изменения отражаются в значении переменной в вызывающем объекте. Если метод предоставляет вызывающему значению ссылочное значение, изменения, внесенные в возвращаемое значение ссылочного объекта, отражаются в данных вызываемого метода.
 
-Visual Basic does not allow you to author methods with reference return values, but it does allow you to consume reference return values. In other words, you can call a method with a reference return value and modify that return value, and changes to the reference return value are reflected in the called method's data.
+Visual Basic не позволяет создавать методы со возвращаемыми ссылочными значениями, но это позволяет использовать возвращаемые ссылочные значения. Иными словами, можно вызвать метод с возвращаемым ссылочным значением и изменить это возвращаемое значение, а изменения ссылочного возвращаемого значения отражаются в данных вызываемого метода.
 
-## <a name="modifying-the-ref-return-value-directly"></a>Modifying the ref return value directly
+## <a name="modifying-the-ref-return-value-directly"></a>Изменение возвращаемого значения ref напрямую
 
-For methods that always succeed and have no `ByRef` parameters, you can modify the reference return value directly. You do this by assigning the new value to the expressions that returns the reference return value.
+Для методов, которые всегда завершаются успешно и не имеют `ByRef` параметров, можно изменить возвращаемое ссылочное значение напрямую. Это делается путем присвоения нового значения выражениям, возвращающим возвращаемое ссылочное значение.
 
-The following C# example defines a `NumericValue.IncrementValue` method that increments an internal value and returns it as a reference return value.
+В следующем C# примере определяется метод `NumericValue.IncrementValue`, который увеличивает внутреннее значение и возвращает его как возвращаемое ссылочное значение.
 
 [!code-csharp[Ref-Return](../../../../../samples/snippets/visualbasic/programming-guide/language-features/procedures/ref-returns1.cs)]
 
-The reference return value is then modified by the caller in the following Visual Basic example. Note that the line with the `NumericValue.IncrementValue` method call does not assign a value to the method. Instead, it assigns a value to the reference return value returned by the method.
+Возвращаемое ссылочное значение затем изменяется вызывающим объектом в следующем Visual Basic примере. Обратите внимание, что строка с вызовом метода `NumericValue.IncrementValue` не присваивает значение методу. Вместо этого он присваивает значение ссылочному возвращаемому значению, возвращаемому методом.
 
 [!code-vb[Ref-Return](../../../../../samples/snippets/visualbasic/programming-guide/language-features/procedures/use-ref-returns1.vb)]
 
-## <a name="using-a-helper-method"></a>Using a helper method
+## <a name="using-a-helper-method"></a>Использование вспомогательного метода
 
-In other cases, modifying the reference return value of a method call directly may not always be desirable. For example, a search method that returns a string may not always find a match. In that case, you want to modify the reference return value only if the search is successful.
+В других случаях изменение возвращаемого ссылочного значения для вызова метода напрямую может быть не всегда желательным. Например, метод поиска, возвращающий строку, не всегда может найти совпадение. В этом случае необходимо изменить возвращаемое ссылочное значение только в том случае, если поиск прошел успешно.
 
-The following C# example illustrates this scenario. It defines a `Sentence` class written in C# includes a `FindNext` method that finds the next word in a sentence that begins with a specified substring. Строка возвращается как значение, возвращаемое по ссылке, а переменная `Boolean`, переданная в метод по ссылке, показывает, дал ли поиск какие-то результаты. The reference return value indicates that the caller can not only read the returned value; he or she can also modify it, and that modification is reflected in the data contained internally in the `Sentence` class.
+Этот сценарий C# показан в следующем примере. Он определяет класс `Sentence`, написанный C# в, включает метод `FindNext`, который находит следующее слово в предложении, которое начинается с указанной подстроки. Строка возвращается как значение, возвращаемое по ссылке, а переменная `Boolean`, переданная в метод по ссылке, показывает, дал ли поиск какие-то результаты. Возвращаемое ссылочное значение указывает, что вызывающий объект может не только считывать возвращаемое значение; Он также может изменить его, и это изменение будет отражено в данных, содержащихся внутри класса `Sentence`.
 
 [!code-csharp[Ref-Return](../../../../../samples/snippets/visualbasic/getting-started/ref-returns.cs)]
 
-Directly modifying the reference return value in this case is not reliable, since the method call may fail to find a match and return the first word in the sentence. In that case, the caller will inadvertently modify the first word of the sentence. This could be prevented by the caller returning a `null` (or `Nothing` in Visual Basic). But in that case, attempting to modify a string whose value is `Nothing` throws a <xref:System.NullReferenceException>. If could also be prevented by the caller returning <xref:System.String.Empty?displayProperty=nameWithType>, but this requires that the caller define a string variable whose value is <xref:System.String.Empty?displayProperty=nameWithType>. While the caller can modify that string, the modification itself serves no purpose, since the modified string has no relationship to the words in the sentence stored by the `Sentence` class.
+Непосредственное изменение возвращаемого ссылочного значения в этом случае не является надежным, так как вызов метода может не найти совпадения и вернуть первое слово в предложении. В этом случае вызывающий объект случайно изменит первое слово предложения. Это может быть предотвращено вызывающим объектом, возвращающим `null` (или `Nothing` в Visual Basic). Но в этом случае попытка изменить строку, значение которой `Nothing`, вызывает <xref:System.NullReferenceException>. Значение, если вызывающий объект также может быть предотвращен возвратом <xref:System.String.Empty?displayProperty=nameWithType>, но это требует, чтобы вызывающий объект определял строковую переменную со значением <xref:System.String.Empty?displayProperty=nameWithType>. Хотя вызывающий объект может изменить эту строку, само изменение не будет работать, так как измененная строка не имеет отношения к словам в предложении, которое хранится в классе `Sentence`.
 
-The best way to handle this scenario is to pass the reference return value by reference to a helper method. The helper method then contains the logic to determine whether the method call succeeded and, if it did, to modify the reference return value. The following example provides a possible implementation.
+Лучший способ решить эту проблему — передать возвращаемое ссылочное значение по ссылке на вспомогательный метод. Затем вспомогательный метод содержит логику для определения успешности вызова метода и изменения возвращаемого ссылочного значения. В следующем примере показана возможная реализация.
 
 [!code-vb[Ref-Return](../../../../../samples/snippets/visualbasic/getting-started/ref-return-helper.vb#1)]
 
 ## <a name="see-also"></a>См. также
 
-- [Passing arguments by value and by reference](passing-arguments-by-value-and-by-reference.md)
+- [Передача аргументов по значению и по ссылке](passing-arguments-by-value-and-by-reference.md)
 - [Процедуры в Visual Basic](index.md)

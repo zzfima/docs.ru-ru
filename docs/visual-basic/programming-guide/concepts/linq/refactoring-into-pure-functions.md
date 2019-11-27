@@ -9,7 +9,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346523"
 ---
-# <a name="refactoring-into-pure-functions-visual-basic"></a>Refactoring Into Pure Functions (Visual Basic)
+# <a name="refactoring-into-pure-functions-visual-basic"></a>Рефакторинг в чистые функции (Visual Basic)
 
 Важным аспектом чисто функциональных преобразований является освоение способов оптимизации существующего кода для получения чистых функций.
 
@@ -21,7 +21,7 @@ ms.locfileid: "74346523"
 
  Одним из способов перехода к функциональному программированию является оптимизация существующего кода с целью устранения ненужных побочных эффектов и внешних зависимостей. Таким образом, из существующего кода создаются чистые функции.
 
-В этом разделе объясняется, что представляет собой чистая функция и чем она не является. The [Tutorial: Manipulating Content in a WordprocessingML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md) tutorial shows how to manipulate a WordprocessingML document, and includes two examples of how to refactor using a pure function.
+В этом разделе объясняется, что представляет собой чистая функция и чем она не является. Руководство по [управлению содержимым в документе WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md) показывает, как управлять документом WordprocessingML и содержит два примера того, как выполнить рефакторинг с помощью чистой функции.
 
 ## <a name="eliminating-side-effects-and-external-dependencies"></a>Устранение побочных эффектов и внешних зависимостей
 
@@ -52,7 +52,7 @@ End Module
 StringOne-StringTwo
 ```
 
-Note that it is irrelevant whether the data being modified has `public` or `private` access, or is a  `shared` member or an instance member. Чистая функция не изменяет не относящиеся к ней данные.
+Обратите внимание, что не имеет значения, имеет ли изменяемые данные `public` или `private` доступ либо является `shared`ным элементом или членом экземпляра. Чистая функция не изменяет не относящиеся к ней данные.
 
 ### <a name="non-pure-function-that-changes-an-argument"></a>Обычная функция, изменяющая аргумент
 
@@ -103,9 +103,9 @@ End Module
 
 Важной характеристикой стандартных операторов запросов является то, что они реализуются как чистые функции.
 
-For more information, see [Standard Query Operators Overview (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md).
+Дополнительные сведения см. в статье [Общие сведения о стандартных операторах запросов (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md).
 
 ## <a name="see-also"></a>См. также
 
-- [Introduction to Pure Functional Transformations (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
-- [Functional Programming vs. Imperative Programming (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)
+- [Введение в чистые функциональные преобразования (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
+- [Сравнение функционального и императивного программирования (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)

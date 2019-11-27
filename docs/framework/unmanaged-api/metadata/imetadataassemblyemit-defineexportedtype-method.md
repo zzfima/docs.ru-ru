@@ -39,37 +39,37 @@ HRESULT DefineExportedType (
   
 ## <a name="parameters"></a>Параметры  
  `szName`  
- [in] The name of type to be exported. For version 1.1 of the common language runtime, the name of the exported type must exactly match the name given in the `TypeDef` for the type.  
+ окне Имя экспортируемого типа. Для версии 1,1 среды CLR имя экспортируемого типа должно точно совпадать с именем, заданным в `TypeDef` для типа.  
   
  `tkImplementation`  
- [in] A token specifying where the exported type is implemented. The valid values and their associated meanings are:  
+ окне Токен, указывающий, где реализуется экспортируемый тип. Допустимые значения и их связанное с ними значение:  
   
-- `mdFile` The type is implemented in a different file within this assembly.  
+- `mdFile` тип реализуется в другом файле в этой сборке.  
   
-- `mdAssemblyRef` The type is implemented in a different assembly.  
+- `mdAssemblyRef` тип реализован в другой сборке.  
   
-- `mdExportedTYpe` The type is nested within some other type.  
+- `mdExportedTYpe` тип вложен в другой тип.  
   
-- `mdFileNil` The type is in the same file as the manifest and is not a nested type.  
+- `mdFileNil` тип находится в том же файле, что и манифест, и не является вложенным типом.  
   
  `tkTypeDef`  
- [in] A token to the metadata that specifies the type to be exported. This value is entered in the `TypeDef` table in the file that implements the type and is relevant only if that file is in this assembly.  
+ окне Токен метаданных, указывающий тип для экспорта. Это значение вводится в таблицу `TypeDef` в файле, который реализует тип, и имеет смысл только в том случае, если этот файл находится в этой сборке.  
   
  `dwExportedTypeFlags`  
- [in] A bitwise combination of [CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md) enumeration values that define the property settings for the exported type.  
+ окне Побитовое сочетание значений перечисления [кортипеаттр](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md) , определяющих настройки свойств для экспортируемого типа.  
   
  `pmdct`  
- [out] A pointer to the returned metadata token that indicates the exported type.  
+ заполняет Указатель на возвращаемый маркер метаданных, указывающий на экспортируемый тип.  
   
 ## <a name="remarks"></a>Заметки  
- An `ExportedType` metadata structure must be defined for each type that is exposed by this assembly and that is implemented in a module other than the one containing the manifest.  
+ Структура метаданных `ExportedType` должна быть определена для каждого типа, предоставляемого этой сборкой и реализованного в модуле, отличном от того, который содержит манифест.  
   
 ## <a name="requirements"></a>Требования  
- **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформа:** См. раздел [требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Заголовок:** COR. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Библиотека:** Используется в качестве ресурса в MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

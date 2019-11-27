@@ -1,5 +1,5 @@
 ---
-title: 'How to: Call a Stored Procedure by Using LINQ'
+title: Инструкции. вызов хранимой процедуры с помощью LINQ
 ms.date: 07/20/2015
 helpviewer_keywords:
 - queries [LINQ in Visual Basic], stored procedure calls
@@ -15,58 +15,58 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345025"
 ---
 # <a name="how-to-call-a-stored-procedure-by-using-linq-visual-basic"></a>Практическое руководство. Вызов хранимой процедуры с помощью LINQ (Visual Basic)
-Language-Integrated Query (LINQ) makes it easy to access database information, including database objects such as stored procedures.  
+LINQ позволяет легко получить доступ к информации базы данных, включая объекты базы данных, такие как хранимые процедуры.  
   
- The following example shows how to create an application that calls a stored procedure in a SQL Server database. The sample shows how to call two different stored procedures in the database. Each procedure returns the results of a query. One procedure takes input parameters, and the other procedure does not take parameters.  
+ В следующем примере показано, как создать приложение, вызывающее хранимую процедуру в SQL Server базе данных. В этом примере показано, как вызвать две различные хранимые процедуры в базе данных. Каждая процедура возвращает результаты запроса. Одна процедура принимает входные параметры, а другая процедура не принимает параметры.  
   
- The examples in this topic use the Northwind sample database. If you do not have this database on your development computer, you can download it from the Microsoft Download Center. For instructions, see [Downloading Sample Databases](../../../../framework/data/adonet/sql/linq/downloading-sample-databases.md).  
+ В примерах этого раздела используется учебная база данных Northwind. Если база данных не установлена на компьютере разработчика, загрузите ее с веб-узла Центра загрузки Майкрософт. Инструкции см. в разделе [Загрузка образцов баз данных](../../../../framework/data/adonet/sql/linq/downloading-sample-databases.md).  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-### <a name="to-create-a-connection-to-a-database"></a>To create a connection to a database  
+### <a name="to-create-a-connection-to-a-database"></a>Создание соединения с базой данных  
   
-1. In Visual Studio, open **Server Explorer**/**Database Explorer** by clicking **Server Explorer**/**Database Explorer** on the **View** menu.  
+1. В Visual Studio откройте **обозреватель сервера**/**обозреватель базы данных** , выбрав **Обозреватель сервера**/**Обозреватель базы данных** в меню **вид** .  
   
-2. Right-click **Data Connections** in **Server Explorer**/**Database Explorer** and then click **Add Connection**.  
+2. Щелкните правой кнопкой мыши элемент **подключения к данным** в **Обозреватель сервера**/**Обозреватель базы данных** а затем нажмите кнопку **Добавить подключение**.  
   
-3. Specify a valid connection to the Northwind sample database.  
+3. Укажите допустимое соединение с образцом базы данных Northwind.  
   
-### <a name="to-add-a-project-that-contains-a-linq-to-sql-file"></a>To add a project that contains a LINQ to SQL file  
+### <a name="to-add-a-project-that-contains-a-linq-to-sql-file"></a>Добавление проекта, содержащего файл LINQ to SQL  
   
-1. В меню **Файл** окна Visual Studio наведите указатель мыши на пункт **Создать** и щелкните **Проект**. Select Visual Basic **Windows Forms Application** as the project type.  
+1. В меню **Файл** окна Visual Studio наведите указатель мыши на пункт **Создать** и щелкните **Проект**. Выберите Visual Basic **Windows Forms приложение** в качестве типа проекта.  
   
-2. В меню **Проект** выберите пункт **Добавить новый элемент**. Select the **LINQ to SQL Classes** item template.  
+2. В меню **Проект** выберите пункт **Добавить новый элемент**. Выберите шаблон элемента **LINQ to SQL классы** .  
   
-3. Назовите файл `northwind.dbml`. Нажмите кнопку **Добавить**. The Object Relational Designer (O/R Designer) is opened for the northwind.dbml file.  
+3. Назовите файл `northwind.dbml`. Нажмите кнопку **Добавить**. Для файла Northwind. dbml открыт реляционный конструктор объектов (реляционный конструктор R).  
   
-### <a name="to-add-stored-procedures-to-the-or-designer"></a>To add stored procedures to the O/R Designer  
+### <a name="to-add-stored-procedures-to-the-or-designer"></a>Добавление хранимых процедур в реляционный конструктор O/R  
   
-1. In **Server Explorer**/**Database Explorer**, expand the connection to the Northwind database. Expand the **Stored Procedures** folder.  
+1. В **обозреватель сервера**/**Обозреватель базы данных**разверните подключение к базе данных Northwind. Разверните папку **хранимые процедуры** .  
   
-     If you have closed the O/R Designer, you can reopen it by double-clicking the northwind.dbml file that you added earlier.  
+     Если вы закрыли конструктор O/R, его можно открыть повторно, дважды щелкнув файл Northwind. dbml, который вы добавили ранее.  
   
-2. Click the **Sales by Year** stored procedure and drag it to the right pane of the designer. Click the **Ten Most Expensive Products** stored procedure drag it to the right pane of the designer.  
+2. Щелкните хранимую процедуру **продажи по году** и перетащите ее на правую панель конструктора. Щелкните **десять самых дорогих** хранимых процедур продуктов, перетащите ее на правую панель конструктора.  
   
-3. Save your changes and close the designer.  
+3. Сохраните изменения и закройте конструктор.  
   
 4. Сохраните проект.  
   
-### <a name="to-add-code-to-display-the-results-of-the-stored-procedures"></a>To add code to display the results of the stored procedures  
+### <a name="to-add-code-to-display-the-results-of-the-stored-procedures"></a>Добавление кода для вывода результатов хранимых процедур  
   
-1. From the **Toolbox**, drag a <xref:System.Windows.Forms.DataGridView> control onto the default Windows Form for your project, Form1.  
+1. Из **панели элементов**перетащите элемент управления <xref:System.Windows.Forms.DataGridView> в форму Windows по умолчанию для проекта, Form1.  
   
-2. Double-click Form1 to add code to its `Load` event.  
+2. Дважды щелкните Form1, чтобы добавить код к событию `Load`.  
   
-3. When you added stored procedures to the O/R Designer, the designer added a <xref:System.Data.Linq.DataContext> object for your project. This object contains the code that you must have to access those procedures. The <xref:System.Data.Linq.DataContext> object for the project is named based on the name of the .dbml file. For this project, the <xref:System.Data.Linq.DataContext> object is named `northwindDataContext`.  
+3. При добавлении хранимых процедур в реляционный конструктор объектов конструктор добавил объект <xref:System.Data.Linq.DataContext> для проекта. Этот объект содержит код, который необходим для доступа к этим процедурам. Имя объекта <xref:System.Data.Linq.DataContext> для проекта определяется по имени DBML-файла. Для этого проекта объект <xref:System.Data.Linq.DataContext> называется `northwindDataContext`.  
   
-     You can create an instance of the <xref:System.Data.Linq.DataContext> in your code and call the stored procedure methods specified by the O/R Designer. To bind to the <xref:System.Windows.Forms.DataGridView> object, you may have to force the query to execute immediately by calling the <xref:System.Linq.Enumerable.ToList%2A> method on the results of the stored procedure.  
+     Можно создать экземпляр <xref:System.Data.Linq.DataContext> в коде и вызвать методы хранимых процедур, заданные в конструкторе O/R. Чтобы выполнить привязку к объекту <xref:System.Windows.Forms.DataGridView>, может потребоваться принудительно выполнить запрос, вызвав метод <xref:System.Linq.Enumerable.ToList%2A> в результатах хранимой процедуры.  
   
-     Add the following code to the `Load` event to call either of the stored procedures exposed as methods for your data context.  
+     Добавьте следующий код в событие `Load` для вызова любой из хранимых процедур, предоставляемых в качестве методов для контекста данных.  
   
      [!code-vb[VbLINQtoSQLHowTos#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQtoSQLHowTos/VB/Form3.vb#1)]  
     [!code-vb[VbLINQtoSQLHowTos#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQtoSQLHowTos/VB/Form3.vb#2)]  
   
-4. Press F5 to run your project and view the results.  
+4. Нажмите клавишу F5, чтобы запустить проект и просмотреть результаты.  
   
 ## <a name="see-also"></a>См. также
 

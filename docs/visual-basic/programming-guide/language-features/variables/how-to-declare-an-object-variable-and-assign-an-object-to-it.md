@@ -1,5 +1,5 @@
 ---
-title: 'How to: Declare an Object Variable and Assign an Object to It'
+title: Инструкции. Объявление объектной переменной и назначение ей объекта
 ms.date: 07/20/2015
 helpviewer_keywords:
 - object variables [Visual Basic], declaring
@@ -14,18 +14,18 @@ ms.locfileid: "74352908"
 ---
 # <a name="how-to-declare-an-object-variable-and-assign-an-object-to-it-in-visual-basic"></a>Практическое руководство. Объявление объектной переменной в Visual Basic и присвоение ей объекта
 
-You declare a variable of the [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md) by specifying `As Object` in a [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md). You assign an object to such a variable by placing the object after the equal sign (`=`) in an assignment statement or initialization clause.
+Переменная [типа данных Object](../../../../visual-basic/language-reference/data-types/object-data-type.md) объявляется путем указания `As Object` в [операторе Dim](../../../../visual-basic/language-reference/statements/dim-statement.md). Вы назначаете объект такой переменной, помещая объект после знака равенства (`=`) в операторе присваивания или в предложении инициализации.
 
 ## <a name="example"></a>Пример
 
-The following example declares an `Object` variable and assigns the current instance to it.
+В следующем примере объявляется переменная `Object` и ей присваивается текущий экземпляр.
 
 ```vb
 Dim thisObject As Object
 thisObject = "This is an Object"
 ```
 
-You can combine the declaration and assignment by initializing the variable as part of its declaration. The following example is equivalent to the preceding example.
+Объявление и присваивание можно объединить, инициализируя переменную как часть ее объявления. Следующий пример эквивалентен предыдущему примеру.
 
 ```vb
 Dim thisObject As Object= "This is an Object"
@@ -37,9 +37,9 @@ Dim thisObject As Object= "This is an Object"
 
 - ссылка на пространство имен <xref:System>.
 
-- A class, structure, or module in which to put the `Dim` statement.
+- Класс, структура или модуль, в котором будет размещена инструкция `Dim`.
 
-- A procedure in which to put the assignment statement.
+- Процедура, в которой следует разместить оператор присваивания.
 
 ## <a name="see-also"></a>См. также
 

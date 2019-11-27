@@ -123,4 +123,4 @@ ms.locfileid: "74283261"
 
 - <xref:System.IdentityModel.Selectors.UserNamePasswordValidator>
 - [Практическое руководство. Использование поставщика членства ASP.NET](how-to-use-the-aspnet-membership-provider.md)
-- [Аутентификация](authentication-in-wcf.md)
+- [Проверка подлинности](authentication-in-wcf.md)

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74431384"
 ---
 # <a name="imetadataimport2getgenericparamconstraintprops-method"></a>Метод IMetaDataImport2::GetGenericParamConstraintProps
-Gets the metadata associated with the generic parameter constraint represented by the specified constraint token.  
+Возвращает метаданные, связанные с ограничением универсального параметра, представленного указанным маркером ограничения.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,24 +37,24 @@ HRESULT GetGenericParamConstraintProps (
   
 ## <a name="parameters"></a>Параметры  
  `gpc`  
- [in] The token to the generic parameter constraint for which to return the metadata.  
+ окне Токен для ограничения универсального параметра, для которого возвращаются метаданные.  
   
  `ptGenericParam`  
- [out] A pointer to the token that represents the generic parameter that is constrained.  
+ заполняет Указатель на маркер, представляющий ограниченный универсальный параметр.  
   
  `ptkConstraintType`  
- [out] A pointer to a TypeDef, TypeRef, or TypeSpec token that represents a constraint on `ptGenericParam`.  
+ заполняет Указатель на маркер TypeDef, TypeRef или TypeSpec, представляющий ограничение на `ptGenericParam`.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Заголовок:** COR. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Библиотека:** Используется в качестве ресурса в MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
 - [Интерфейс IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)

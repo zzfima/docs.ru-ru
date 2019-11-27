@@ -1,5 +1,5 @@
 ---
-title: Использование вариативности в интерфейсах для универсальных коллекций
+title: Использование расхождения в интерфейсах для универсальных коллекций
 ms.date: 07/20/2015
 ms.assetid: c867fcea-7462-4995-b9c5-542feec74036
 ms.openlocfilehash: 6ee133dfd61d7d7a88243ca592642ff21e0c2223
@@ -9,13 +9,13 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349012"
 ---
-# <a name="using-variance-in-interfaces-for-generic-collections-visual-basic"></a>Using Variance in Interfaces for Generic Collections (Visual Basic)
+# <a name="using-variance-in-interfaces-for-generic-collections-visual-basic"></a>Использование вариативности в интерфейсах для универсальных коллекций (Visual Basic)
 
 Ковариантный интерфейс позволяет его методам возвращать более производные типы, чем указанные в интерфейсе. Контравариантный интерфейс позволяет его методам принимать параметры менее производных типов, чем указанные в интерфейсе.
 
 В .NET Framework 4 несколько имеющихся интерфейсов стали ковариантными и контравариантными. В их числе <xref:System.Collections.Generic.IEnumerable%601> и <xref:System.IComparable%601>. Это позволяет повторно использовать методы, оперирующие универсальными коллекциями базовых типов, для коллекций производных типов.
 
-For a list of variant interfaces in the .NET Framework, see [Variance in Generic Interfaces (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md).
+Список вариативных интерфейсов в .NET Framework см. в разделе [вариативность в универсальных интерфейсах (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md).
 
 ## <a name="converting-generic-collections"></a>Преобразование универсальных коллекций
 

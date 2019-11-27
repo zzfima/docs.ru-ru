@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450357"
 ---
 # <a name="icorprofilerinfogetilfunctionbody-method"></a>Метод ICorProfilerInfo::GetILFunctionBody
-Gets a pointer to the body of a method in Microsoft intermediate language (MSIL) code, starting at its header.  
+Возвращает указатель на тело метода в коде на языке MSIL, начиная с его заголовка.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,21 +37,21 @@ HRESULT GetILFunctionBody(
   
 ## <a name="parameters"></a>Параметры  
  `moduleId`  
- [in] The ID of the module in which the function resides.  
+ окне Идентификатор модуля, в котором находится функция.  
   
  `methodId`  
- [in] The metadata token for the method.  
+ окне Токен метаданных для метода.  
   
  `ppMethodHeader`  
- [out] A pointer to the method's header.  
+ заполняет Указатель на заголовок метода.  
   
  `pcbMethodSize`  
- [out] An integer that specifies the size of the method.  
+ заполняет Целое число, указывающее размер метода.  
   
-## <a name="remarks"></a>Заметки  
- A method is scoped by the module in which it lives. Because the `GetILFunctionBody` method is designed to give a tool access to the MSIL code before it has been loaded by the common language runtime (CLR), it uses the metadata token of the method to find the desired instance.  
+## <a name="remarks"></a>Примечания  
+ Метод ограничивается модулем, в котором он находится. Поскольку метод `GetILFunctionBody` предназначен для предоставления средству доступа к коду MSIL до того, как он будет загружен средой CLR, он использует маркер метаданных метода для поиска нужного экземпляра.  
   
- `GetILFunctionBody` can return a CORPROF_E_FUNCTION_NOT_IL HRESULT if the `methodId` points to a method without any MSIL code (such as an abstract method, or a platform invoke (PInvoke) method).  
+ `GetILFunctionBody` может возвращать CORPROF_E_FUNCTION_NOT_IL HRESULT, если `methodId` указывает на метод без какого-либо кода MSIL (например, абстрактный метод или метод вызова платформы).  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
@@ -62,6 +62,6 @@ HRESULT GetILFunctionBody(
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

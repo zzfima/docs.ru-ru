@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74435967"
 ---
 # <a name="inotifysink2onsynccallreturn-method"></a>Метод INotifySink2::OnSyncCallReturn
-Gets invoked when a call returns.  
+Вызывается при возвращении вызова.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,19 +38,19 @@ HRESULT OnSyncCallReturn
   
 ## <a name="parameters"></a>Параметры  
  `in_CallID`  
- [in] ID of the call being returned from. See [CALL_ID Structure](../../../../docs/framework/unmanaged-api/diagnostics/call-id-structure.md).  
+ окне Идентификатор возвращаемого вызова. См. раздел [структура CALL_ID](../../../../docs/framework/unmanaged-api/diagnostics/call-id-structure.md).  
   
  `in_pBuffer`  
- [in] Call buffer.  
+ окне Буфер вызова.  
   
  `in_BufferSize`  
- [in] Size of the call buffer, in bytes.  
+ окне Размер буфера вызова в байтах.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- S_OK if the method succeeds.  
+ S_OK, если метод выполнен.  
   
 ## <a name="requirements"></a>Требования  
- **Header:** ProtocolNotify2.idl  
+ **Заголовок:** ProtocolNotify2. idl  
   
 ## <a name="see-also"></a>См. также
 

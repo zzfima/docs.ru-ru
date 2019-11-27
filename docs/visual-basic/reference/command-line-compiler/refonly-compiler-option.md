@@ -16,7 +16,7 @@ ms.locfileid: "74348579"
 ---
 # <a name="-refonly-visual-basic"></a>-refonly (Visual Basic)
 
-The **-refonly** option indicates that the primary output of the compilation should be a reference assembly instead of an implementation assembly. Параметр `-refonly` автоматически отключает вывод файлов PDB, так как базовые сборки не могут выполняться.
+Параметр **-refonly** указывает, что основные выходные данные компиляции должны быть ссылочной сборкой, а не сборкой реализации. Параметр `-refonly` автоматически отключает вывод файлов PDB, так как базовые сборки не могут выполняться.
 
 [!INCLUDE[compiler-options](~/includes/compiler-options.md)]
 
@@ -28,7 +28,7 @@ The **-refonly** option indicates that the primary output of the compilation sho
 
 ## <a name="remarks"></a>Заметки
 
-Visual Basic supports the `-refonly` switch starting with version 15.3.
+Visual Basic поддерживает параметр `-refonly`, начиная с версии 15,3.
 
 Базовые сборки являются особым типом сборки, которая содержит только минимальный объем метаданных, необходимый для представления общедоступного API-интерфейса библиотеки. Такие сборки включают в себя объявления для всех элементов, которые важны при указании ссылки на сборку в средствах сборки, но исключают все реализации элементов, а также объявления закрытых элементов, не имеющих наблюдаемого влияния на их контракт API. Дополнительные сведения см. в разделе [Базовые сборки](../../../standard/assembly/reference-assemblies.md) в руководстве по .NET.
 

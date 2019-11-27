@@ -12,19 +12,19 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74332288"
 ---
 # <a name="mycomputernetwork-object"></a>Объект My.Computer.Network
-Provides a property, event, and methods for interacting with the network to which the computer is connected.  
+Предоставляет свойства, события и методы для взаимодействия с сетью, к которой подключен компьютер.  
   
 ## <a name="remarks"></a>Заметки  
  Сведения о методах и свойствах объекта `My.Computer.Network` см. в разделе <xref:Microsoft.VisualBasic.Devices.Network>.  
   
- For more information, see [Performing Network Operations](../../../visual-basic/developing-apps/programming/computer-resources/performing-network-operations.md).  
+ Дополнительные сведения см. в разделе [Выполнение сетевых операций](../../../visual-basic/developing-apps/programming/computer-resources/performing-network-operations.md).  
   
 ## <a name="requirements"></a>Требования  
  **Пространство имен:** <xref:Microsoft.VisualBasic.Devices?displayProperty=nameWithType>  
   
  **Класс:** <xref:Microsoft.VisualBasic.Devices.Network>  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **Сборка:** Библиотека времени выполнения Visual Basic (в Microsoft. VisualBasic. dll)  
   
 ## <a name="see-also"></a>См. также
 

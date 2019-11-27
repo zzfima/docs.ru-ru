@@ -17,7 +17,7 @@ ms.locfileid: "74344124"
 ## <a name="remarks"></a>Заметки  
  Сведения о методах и свойствах объекта `My.Application.Log` см. в разделе <xref:Microsoft.VisualBasic.Logging.Log>.  
   
- For more information, see [Logging Information from the Application](../../../visual-basic/developing-apps/programming/log-info/index.md).  
+ Дополнительные сведения см. в разделе [ведение журнала данных из приложения](../../../visual-basic/developing-apps/programming/log-info/index.md).  
   
 > [!NOTE]
 > Для записи сведений в журнал из приложения можно также использовать классы платформы .NET Framework. Дополнительные сведения см. в разделе [Tracing and Instrumenting Applications](../../../framework/debug-trace-profile/tracing-and-instrumenting-applications.md).  
@@ -27,7 +27,7 @@ ms.locfileid: "74344124"
   
  **Класс:** <xref:Microsoft.VisualBasic.Logging.Log>  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **Сборка:** Библиотека времени выполнения Visual Basic (в Microsoft. VisualBasic. dll)  
   
 ## <a name="see-also"></a>См. также
 

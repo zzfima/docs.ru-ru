@@ -13,10 +13,10 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352413"
 ---
 # <a name="variables-in-visual-basic"></a>Переменные в Visual Basic
-You often have to store values when you perform calculations with Visual Basic. Например, может потребоваться вычислить несколько значений, сравнить их и (в зависимости от результата сравнения) выполнить с ними различные операции. Чтобы сравнить значения, их необходимо сохранить.  
+При выполнении вычислений с Visual Basic часто приходится сохранять значения. Например, может потребоваться вычислить несколько значений, сравнить их и (в зависимости от результата сравнения) выполнить с ними различные операции. Чтобы сравнить значения, их необходимо сохранить.  
   
 ## <a name="usage"></a>Использование  
- Visual Basic, just like most programming languages, uses variables for storing values. *Переменная* имеет имя (слово, которое используется для ссылки на содержащееся в переменной значение). Переменная также имеет тип данных (который определяет, какие данные можно хранить в переменной). Переменная может представлять массив, если она должна хранить индексированный набор близко связанных элементов данных.  
+ Visual Basic, как и большинство языков программирования, использует переменные для хранения значений. *Переменная* имеет имя (слово, которое используется для ссылки на содержащееся в переменной значение). Переменная также имеет тип данных (который определяет, какие данные можно хранить в переменной). Переменная может представлять массив, если она должна хранить индексированный набор близко связанных элементов данных.  
   
  Вывод локального типа позволяет объявлять переменные без явного указания типа данных. Вместо этого компилятор выводит тип переменной из типа инициализирующего выражения. Дополнительные сведения см. в разделах [Вывод локального типа](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md) и [Оператор Option Infer](../../../../visual-basic/language-reference/statements/option-infer-statement.md).  
   
@@ -39,5 +39,5 @@ You often have to store values when you perform calculations with Visual Basic. 
 - [Объектные переменные](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
 - [Устранение неполадок, связанных с переменными](../../../../visual-basic/programming-guide/language-features/variables/troubleshooting-variables.md)
 - [Практическое руководство. Запись данных в переменную и их извлечение из переменной](../../../../visual-basic/programming-guide/language-features/variables/how-to-move-data-into-and-out-of-a-variable.md)
-- [Differences Between Properties and Variables in Visual Basic](../../../../visual-basic/programming-guide/language-features/procedures/differences-between-properties-and-variables.md)
+- [Различия между свойствами и переменными в Visual Basic](../../../../visual-basic/programming-guide/language-features/procedures/differences-between-properties-and-variables.md)
 - [Вывод локального типа](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)

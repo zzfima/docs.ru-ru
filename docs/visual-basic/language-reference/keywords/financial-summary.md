@@ -13,17 +13,17 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349810"
 ---
 # <a name="financial-summary-visual-basic"></a>Сводка по финансовым функциям (Visual Basic)
-Visual Basic language keywords and run-time library members are organized by purpose and use.  
+Ключевые слова языка Visual Basic и элементы библиотеки времени выполнения упорядочены по целям и использованию.  
   
 |Действие|Элемент языка|  
 |------------|----------------------|  
-|Calculate depreciation.|<xref:Microsoft.VisualBasic.Financial.DDB%2A>значение <xref:Microsoft.VisualBasic.Financial.SLN%2A>значение <xref:Microsoft.VisualBasic.Financial.SYD%2A>|  
-|Calculate future value.|<xref:Microsoft.VisualBasic.Financial.FV%2A>|  
-|Calculate interest rate.|<xref:Microsoft.VisualBasic.Financial.Rate%2A>|  
-|Calculate internal rate of return.|<xref:Microsoft.VisualBasic.Financial.IRR%2A>, <xref:Microsoft.VisualBasic.Financial.MIRR%2A>|  
-|Calculate number of periods.|<xref:Microsoft.VisualBasic.Financial.NPer%2A>|  
-|Calculate payments.|<xref:Microsoft.VisualBasic.Financial.IPmt%2A>значение <xref:Microsoft.VisualBasic.Financial.Pmt%2A>значение <xref:Microsoft.VisualBasic.Financial.PPmt%2A>|  
-|Calculate present value.|<xref:Microsoft.VisualBasic.Financial.NPV%2A>, <xref:Microsoft.VisualBasic.Financial.PV%2A>|  
+|Вычислить амортизацию.|<xref:Microsoft.VisualBasic.Financial.DDB%2A>, <xref:Microsoft.VisualBasic.Financial.SLN%2A>, <xref:Microsoft.VisualBasic.Financial.SYD%2A>|  
+|Вычислить будущее значение.|<xref:Microsoft.VisualBasic.Financial.FV%2A>|  
+|Расчет процентной ставки.|<xref:Microsoft.VisualBasic.Financial.Rate%2A>|  
+|Вычислить внутреннюю скорость возврата.|<xref:Microsoft.VisualBasic.Financial.IRR%2A>, <xref:Microsoft.VisualBasic.Financial.MIRR%2A>|  
+|Вычислить количество периодов.|<xref:Microsoft.VisualBasic.Financial.NPer%2A>|  
+|Вычислить платежи.|<xref:Microsoft.VisualBasic.Financial.IPmt%2A>, <xref:Microsoft.VisualBasic.Financial.Pmt%2A>, <xref:Microsoft.VisualBasic.Financial.PPmt%2A>|  
+|Вычислить текущее значение.|<xref:Microsoft.VisualBasic.Financial.NPV%2A>, <xref:Microsoft.VisualBasic.Financial.PV%2A>|  
   
 ## <a name="see-also"></a>См. также
 

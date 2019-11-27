@@ -28,34 +28,34 @@ ms.locfileid: "74344014"
 ---
 # <a name="double-data-type-visual-basic"></a>Тип данных Double (Visual Basic)
 
-Holds signed IEEE 64-bit (8-byte) double-precision floating-point numbers that range in value from -1.79769313486231570E+308 through -4.94065645841246544E-324 for negative values and from 4.94065645841246544E-324 through 1.79769313486231570E+308 for positive values. Double-precision numbers store an approximation of a real number.
+Содержит подписанные 64-разрядные (8-байтные) числа с плавающей запятой двойной точности, которые находятся в диапазоне от-1.79769313486231570 E + 308 до-4.94065645841246544 E-324 для отрицательных значений и от 4.94065645841246544 E-324 до 1.79769313486231570 E + 308 для положительные значения. Числа двойной точности хранят приближение вещественного числа.
 
 ## <a name="remarks"></a>Заметки
 
-The `Double` data type provides the largest and smallest possible magnitudes for a number.
+Тип данных `Double` предоставляет самые большие и наименьшие возможные величины числа.
 
 Значение по умолчанию для типа `Double` — 0.
 
 ## <a name="programming-tips"></a>Советы по программированию
 
-- **Precision.** When you work with floating-point numbers, remember that they do not always have a precise representation in memory. This could lead to unexpected results from certain operations, such as value comparison and the `Mod` operator. For more information, see [Troubleshooting Data Types](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).
+- **Обеспечивают.** При работе с числами с плавающей запятой Помните, что они не всегда имеют точное представление в памяти. Это может привести к непредвиденным результатам некоторых операций, таких как сравнение значений и оператор `Mod`. Дополнительные сведения см. в разделе [Устранение неполадок типов данных](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).
 
-- **Trailing Zeros.** The floating-point data types do not have any internal representation of trailing zero characters. For example, they do not distinguish between 4.2000 and 4.2. Consequently, trailing zero characters do not appear when you display or print floating-point values.
+- **Нули в конце.** Типы данных с плавающей запятой не имеют внутреннего представления конечных нулей. Например, они не различаются между 4,2000 и 4,2. Следовательно, конечные нули не отображаются при отображении или печати значений с плавающей запятой.
 
-- **Type Characters.** При добавлении к литералу символа типа литерала `R` производится принудительное приведение литерала к типу данных `Double`. For example, if an integer value is followed by `R`, the value is changed to a `Double`.
+- **Символы типа.** При добавлении к литералу символа типа литерала `R` производится принудительное приведение литерала к типу данных `Double`. Например, если за целочисленным значением следует `R`, значение изменяется на `Double`.
 
   ```vb
   ' Visual Basic expands the 4 in the statement Dim dub As Double = 4R to 4.0:
   Dim dub As Double = 4.0R
   ```
 
-  При добавлении символа идентификатора типа `#` к любому идентификатору производится принудительное приведение этого идентификатора к типу `Double`. In the following example, the variable `num` is typed as a `Double`:
+  При добавлении символа идентификатора типа `#` к любому идентификатору производится принудительное приведение этого идентификатора к типу `Double`. В следующем примере переменная `num` типизирована как `Double`:
 
   ```vb
   Dim num# = 3
   ```
 
-- **Framework Type.** В .NET Framework данный тип соответствует структуре <xref:System.Double?displayProperty=nameWithType>.
+- **Тип платформы.** В .NET Framework данный тип соответствует структуре <xref:System.Double?displayProperty=nameWithType>.
 
 ## <a name="see-also"></a>См. также
 
@@ -63,7 +63,7 @@ The `Double` data type provides the largest and smallest possible magnitudes for
 - [Типы данных](../../../visual-basic/language-reference/data-types/index.md)
 - [Тип данных Decimal](../../../visual-basic/language-reference/data-types/decimal-data-type.md)
 - [Тип данных Single](../../../visual-basic/language-reference/data-types/single-data-type.md)
-- [Функции преобразования типов](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [Type Conversion Functions](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
 - [Сводка по преобразованию](../../../visual-basic/language-reference/keywords/conversion-summary.md)
 - [Эффективное использование типов данных](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
 - [Устранение неполадок, связанных с типами данных](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)

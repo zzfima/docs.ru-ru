@@ -12,8 +12,8 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352244"
 ---
-# <a name="returns-visual-basic"></a>\<returns> (Visual Basic)
-Specifies the return value of the property or function.  
+# <a name="returns-visual-basic"></a>\<возвращает > (Visual Basic)
+Задает возвращаемое значение свойства или функции.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -26,12 +26,12 @@ Specifies the return value of the property or function.
  Описание возвращаемого значения.  
   
 ## <a name="remarks"></a>Заметки  
- Use the `<returns>` tag in the comment for a method declaration to describe the return value.  
+ Используйте тег `<returns>` в комментарии для объявления метода, чтобы описать возвращаемое значение.  
   
  Чтобы обработать комментарии документации и сохранить их в файл, выполняйте сборку с параметром [-doc](../../../visual-basic/reference/command-line-compiler/doc.md).  
   
 ## <a name="example"></a>Пример  
- This example uses the `<returns>` tag to explain what the `DoesRecordExist` function returns.  
+ В этом примере используется тег `<returns>` для объяснения того, что возвращает функция `DoesRecordExist`.  
   
  [!code-vb[VbVbcnXmlDocComments#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#6)]  
   

@@ -9,7 +9,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347588"
 ---
-# <a name="how-to-retrieve-a-collection-of-elements-linq-to-xml-visual-basic"></a>How to: Retrieve a Collection of Elements (LINQ to XML) (Visual Basic)
+# <a name="how-to-retrieve-a-collection-of-elements-linq-to-xml-visual-basic"></a>Как получить коллекцию элементов (LINQ to XML) (Visual Basic)
 В этом разделе показан метод <xref:System.Xml.Linq.XContainer.Elements%2A>. Этот метод получает коллекцию дочерних элементов того или иного элемента.  
   
 ## <a name="example"></a>Пример  

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74435948"
 ---
 # <a name="imetadataemitsave-method"></a>Метод IMetaDataEmit::Save
-Saves all metadata in the current scope to the file at the specified address.  
+Сохраняет все метаданные в текущей области в файле по указанному адресу.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -36,7 +36,7 @@ HRESULT Save (
   
 ## <a name="parameters"></a>Параметры  
  `wzFile`  
- [in] The name of the file to save to. If this value is null, the in-memory copy will be saved to the last location that was used.  
+ окне Имя файла, в который необходимо выполнить сохранение. Если это значение равно null, копия в памяти будет сохранена в последнем используемом расположении.  
   
  `dwSaveFlags`  
  [in] Зарезервировано. Должен равняться нулю.  
@@ -44,9 +44,9 @@ HRESULT Save (
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Заголовок:** COR. h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **Библиотека:** Используется в качестве ресурса в MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

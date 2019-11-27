@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428316"
 ---
 # <a name="imetadataimport2enumgenericparams-method"></a>Метод IMetaDataImport2::EnumGenericParams
-Gets an enumerator for an array of generic parameter tokens associated with the specified TypeDef or MethodDef token.  
+Возвращает перечислитель для массива маркеров универсальных параметров, связанных с указанным маркером TypeDef или MethodDef.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,37 +39,37 @@ HRESULT EnumGenericParams (
   
 ## <a name="parameters"></a>Параметры  
  `phEnum`  
- [in, out] A pointer to the enumerator.  
+ [вход, выход] Указатель на перечислитель.  
   
  `tk`  
- [in] The TypeDef or MethodDef token whose generic parameters are to be enumerated.  
+ окне Маркер TypeDef или MethodDef, универсальные параметры которого необходимо перечислить.  
   
  `rGenericParams`  
- [out] The array of generic parameters to enumerate.  
+ заполняет Массив универсальных параметров для перечисления.  
   
  `cMax`  
- [in] The requested maximum number of tokens to place in `rGenericParams`.  
+ окне Запрошенное максимальное число токенов, помещаемых в `rGenericParams`.  
   
  `pcGenericParams`  
- [out] The returned number of tokens placed in `rGenericParams`.  
+ заполняет Возвращенное число токенов, помещенных в `rGenericParams`.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
   
 |HRESULT|Описание|  
 |-------------|-----------------|  
-|`S_OK`|`EnumGenericParams` returned successfully.|  
-|`S_FALSE`|`phEnum` has no member elements. In this case, `pcGenericParams` is set to 0 (zero).|  
+|`S_OK`|`EnumGenericParams` успешно возвращено.|  
+|`S_FALSE`|у `phEnum` нет элементов Member. В этом случае `pcGenericParams` имеет значение 0 (ноль).|  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Заголовок:** COR. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Библиотека:** Используется в качестве ресурса в MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
 - [Интерфейс IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)

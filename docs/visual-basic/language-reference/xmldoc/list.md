@@ -20,8 +20,8 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352325"
 ---
-# <a name="list-visual-basic"></a>\<list> (Visual Basic)
-Defines a list or table.  
+# <a name="list-visual-basic"></a>> списка \<(Visual Basic)
+Определяет список или таблицу.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,25 +40,25 @@ Defines a list or table.
   
 ## <a name="parameters"></a>Параметры  
  `type`  
- The type of the list. Must be a "bullet" for a bulleted list, "number" for a numbered list, or "table" for a two-column table.  
+ Тип списка. Должен быть "маркированным" для маркированного списка, "число" для нумерованного списка или "Таблица" для таблицы из двух столбцов.  
   
  `term`  
- Only used when `type` is "table." A term to define, which is defined in the description tag.  
+ Используется, только если `type` имеет значение "Table". Термин для определения, который определен в теге description.  
   
  `description`  
- When `type` is "bullet" or "number," `description` is an item in the list When `type` is "table," `description` is the definition of `term`.  
+ Если `type` имеет значение "маркированный" или "число", `description` является элементом списка, если `type` "Таблица", `description` является определением `term`.  
   
 ## <a name="remarks"></a>Заметки  
- The `<listheader>` block defines the heading of either a table or definition list. When defining a table, you only have to supply an entry for `term` in the heading.  
+ Блок `<listheader>` определяет заголовок таблицы или списка определений. При определении таблицы необходимо указать в заголовке только запись для `term`.  
   
- Each item in the list is specified with an `<item>` block. When creating a definition list, you must specify both `term` and `description`. However, for a table, bulleted list, or numbered list, you only have to supply an entry for `description`.  
+ Каждый элемент в списке задается блоком `<item>`. При создании списка определений необходимо указать и `term`, и `description`. Однако для таблицы, маркированного списка или нумерованного списка необходимо указать только запись для `description`.  
   
- A list or table can have as many `<item>` blocks as needed.  
+ Список или таблица может содержать столько `<item>` блоков, сколько необходимо.  
   
  Чтобы обработать комментарии документации и сохранить их в файл, выполняйте сборку с параметром [-doc](../../../visual-basic/reference/command-line-compiler/doc.md).  
   
 ## <a name="example"></a>Пример  
- This example uses the `<list>` tag to define a bulleted list in the remarks section.  
+ В этом примере тег `<list>` используется для определения маркированного списка в разделе "Примечания".  
   
  [!code-vb[VbVbcnXmlDocComments#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#5)]  
   

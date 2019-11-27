@@ -16,24 +16,24 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351298"
 ---
 # <a name="public-visual-basic"></a>Public (Visual Basic)
-Specifies that one or more declared programming elements have no access restrictions.  
+Указывает, что один или несколько объявленных программных элементов не имеют ограничений доступа.  
   
 ## <a name="remarks"></a>Заметки  
- If you are publishing a component or set of components, such as a class library, you usually want the programming elements to be accessible by any code that interoperates with your assembly. To confer such unlimited access on an element, you can declare it with `Public`.  
+ При публикации компонента или набора компонентов, таких как библиотека классов, обычно требуется, чтобы элементы программирования были доступны любому коду, взаимодействующему со сборкой. Чтобы обеспечить такой неограниченный доступ к элементу, его можно объявить с помощью `Public`.  
   
- Public access is the normal level for a programming element when you do not need to limit access to it. Note that the access level of an element declared within an interface, module, class, or structure defaults to `Public` if you do not declare it otherwise.  
+ Открытый доступ является обычным уровнем для программного элемента, если нет необходимости ограничивать доступ к нему. Обратите внимание, что уровень доступа элемента, объявленного в интерфейсе, модуле, классе или структуре, по умолчанию имеет значение `Public`, если не объявлять его в противном случае.  
   
 ## <a name="rules"></a>Правила  
   
-- **Declaration Context.** You can use `Public` only at module, interface, or namespace level. This means the declaration context for a `Public` element must be a source file, namespace, interface, module, class, or structure, and cannot be a procedure.  
+- **Контекст объявления.** `Public` можно использовать только на уровне модуля, интерфейса или пространства имен. Это означает, что контекст объявления для элемента `Public` должен быть исходным файлом, пространством имен, интерфейсом, модулем, классом или структурой и не может быть процедурой.  
   
 ## <a name="behavior"></a>Поведение  
   
-- **Access Level.** All code that can access a module, class, or structure can access its `Public` elements.  
+- **Уровень доступа.** Весь код, который может получить доступ к модулю, классу или структуре, может получить доступ к его `Public` элементам.  
   
-- **Default Access.** Local variables inside a procedure default to public access, and you cannot use any access modifiers on them.  
+- **Доступ по умолчанию.** Локальные переменные в процедуре по умолчанию имеют открытый доступ, и в них нельзя использовать какие-либо модификаторы доступа.  
   
-- **Access Modifiers.** The keywords that specify access level are called *access modifiers*. For a comparison of the access modifiers, see [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
+- **Модификаторы доступа.** Ключевые слова, определяющие уровень доступа, называются *модификаторами доступа*. Сравнение модификаторов доступа см. [в разделе уровни доступа в Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
  Модификатор `Public` можно использовать в следующих контекстах:  
   
@@ -72,7 +72,7 @@ Specifies that one or more declared programming elements have no access restrict
 - [Закрытые](../../../visual-basic/language-reference/modifiers/private.md)
 - [Private Protected](private-protected.md)
 - [Protected Friend](protected-friend.md)
-- [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
+- [Уровни доступа в Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
 - [Процедуры](../../../visual-basic/programming-guide/language-features/procedures/index.md)
 - [Структуры](../../../visual-basic/programming-guide/language-features/data-types/structures.md)
 - [Объекты и классы](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74431220"
 ---
 # <a name="imetadataerroronerror-method"></a>Метод IMetaDataError::OnError
-Provides notification of errors that occur during the metadata merge.  
+Предоставляет уведомление об ошибках, возникающих во время слияния метаданных.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -36,20 +36,20 @@ HRESULT OnError (
   
 ## <a name="parameters"></a>Параметры  
  `hrError`  
- [in] The HRESULT error value returned to the calling method.  
+ окне Значение ошибки HRESULT, возвращаемое вызывающему методу.  
   
  `token`  
- [in] The metadata token of the code object that was being merged when the error occurred.  
+ окне Токен метаданных объекта кода, который был объединен при возникновении ошибки.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Заголовок:** COR. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Библиотека:** Используется в качестве ресурса в MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс IMetaDataError](../../../../docs/framework/unmanaged-api/metadata/imetadataerror-interface.md)

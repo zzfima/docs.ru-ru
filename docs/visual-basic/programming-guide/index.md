@@ -14,11 +14,11 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345444"
 ---
 # <a name="visual-basic-programming-guide"></a>Руководство по программированию на Visual Basic
-As with any modern programming language, Visual Basic supports many common programming constructs and language elements. This guide describes all the major elements of programming with Visual Basic.  
+Как и любой современный язык программирования, Visual Basic поддерживает множество общих программных конструкций и языковых элементов. В этом руководством описываются все основные элементы программирования с Visual Basic.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Соглашения о структуре программы и коде](../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)  
- Contains documentation on the basic structure and code conventions of Visual Basic, such as naming conventions, comments in code, and limitations within Visual Basic.  
+ Содержит документацию по базовой структуре и соглашениям о коде Visual Basic, таких как соглашения об именовании, комментарии в коде и ограничения в Visual Basic.  
   
  [Возможности и элементы языка Visual Basic](../../visual-basic/programming-guide/language-features/index.md)  
  Содержит ссылки на разделы с описанием важных элементов Visual Basic, включая LINQ и XML-литералы.  
@@ -28,7 +28,7 @@ As with any modern programming language, Visual Basic supports many common progr
   
 ## <a name="related-sections"></a>Связанные разделы  
  [Справочник по языку Visual Basic](../../visual-basic/language-reference/index.md)  
- Provides reference information about various aspects of Visual Basic programming.  
+ Справочные сведения о различных аспектах программирования Visual Basic.  
   
  [Компилятор Visual Basic с интерфейсом командной строки](../../visual-basic/reference/command-line-compiler/index.md)  
- Offers information on using the Visual Basic command-line compiler, the compiler options, and the Keyword Upgrade tool.
+ Содержит сведения об использовании компилятора командной строки Visual Basic, параметрах компилятора и средстве обновления ключевых слов.

@@ -11,13 +11,13 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351346"
 ---
-# <a name="private-protected-visual-basic"></a>Private Protected (Visual Basic)
+# <a name="private-protected-visual-basic"></a>Частный защищенный (Visual Basic)
 
-Комбинация ключевых слов `Private Protected` является модификатором доступа к члену. A `Private Protected` member is accessible by all members in its containing class, as well as by types derived from the containing class, but only if they are found in its containing assembly.
+Комбинация ключевых слов `Private Protected` является модификатором доступа к члену. Элемент `Private Protected` доступен для всех элементов в содержащем его классе, а также по типам, производным от содержащего класса, но только в том случае, если они находятся в содержащей его сборке.
 
-You can specify `Private Protected` only on members of classes; you cannot apply `Private Protected` to members of a structure because structures cannot be inherited.
+Можно указать `Private Protected` только для членов классов; к членам структуры нельзя применять `Private Protected`, поскольку структуры не могут наследоваться.
 
-The `Private Protected` access modifier is supported by Visual Basic 15.5 and later. To use it, you can add the following element to your Visual Basic project (\*.vbproj) file. As long as Visual Basic 15.5 or later is installed on your system, it lets you take advantage of all the language features supported by the latest version of the Visual Basic compiler:
+Модификатор доступа `Private Protected` поддерживается Visual Basic 15,5 и более поздних версий. Чтобы использовать его, можно добавить следующий элемент в файл проекта Visual Basic (\*. vbproj). Если в системе установлен Visual Basic 15,5 или более поздней версии, он позволяет воспользоваться всеми возможностями языка, поддерживаемыми последней версией компилятора Visual Basic.
 
 ```xml
 <PropertyGroup>
@@ -25,44 +25,44 @@ The `Private Protected` access modifier is supported by Visual Basic 15.5 and la
 </PropertyGroup>
 ```
 
-For more information see [setting the Visual Basic language version](../../language-reference/configure-language-version.md).
+Дополнительные сведения см. [в разделе Задание языковой версии Visual Basic](../../language-reference/configure-language-version.md).
 
 > [!NOTE]
-> In Visual Studio, selecting F1 help on `private protected` provides help for either [private](private.md) or [protected](protected.md). The IDE picks the single token under the cursor rather than the compound word.
+> В Visual Studio выбор справки F1 в `private protected` предоставляет справку как для [частных](private.md) , так и для [защищенных](protected.md). Интегрированная среда разработки выбирает один маркер под курсором, а не составное слово.
 
 ## <a name="rules"></a>Правила
 
-- **Declaration Context.** You can use `Private Protected` only at the class level. This means the declaration context for a `Protected` element must be a class, and cannot be a source file, namespace, interface, module, structure, or procedure.
+- **Контекст объявления.** `Private Protected` можно использовать только на уровне класса. Это означает, что контекст объявления для элемента `Protected` должен быть классом и не может быть исходным файлом, пространством имен, интерфейсом, модулем, структурой или процедурой.
 
 ## <a name="behavior"></a>Поведение
 
-- **Access Level.** All code in a class can access its elements. Code in any class that derives from a base class and is contained in the same assembly can access all the `Private Protected` elements of the base class. However, code in any class that derives from a base class and is contained in a different assembly can't access the base class `Private Protected` elements.
+- **Уровень доступа.** Весь код в классе может обращаться к его элементам. Код в любом классе, производном от базового класса и содержащийся в той же сборке, имеет доступ ко всем `Private Protected`ным элементам базового класса. Однако код в любом классе, производном от базового класса и содержащийся в другой сборке, не может получить доступ к базовому классу `Private Protected` элементов.
 
-- **Access Modifiers.** The keywords that specify access level are called *access modifiers*. For a comparison of the access modifiers, see [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).
+- **Модификаторы доступа.** Ключевые слова, определяющие уровень доступа, называются *модификаторами доступа*. Сравнение модификаторов доступа см. [в разделе уровни доступа в Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).
 
 Модификатор `Private Protected` можно использовать в следующих контекстах:
 
-- [Class Statement](../../../visual-basic/language-reference/statements/class-statement.md) of a nested class
+- [Оператор Class](../../../visual-basic/language-reference/statements/class-statement.md) вложенного класса
 
 - [Оператор Const](../../../visual-basic/language-reference/statements/const-statement.md)
 
 - [Оператор Declare](../../../visual-basic/language-reference/statements/declare-statement.md)
 
-- [Delegate Statement](../../../visual-basic/language-reference/statements/delegate-statement.md) of a delegate nested in a class
+- [Оператор Delegate](../../../visual-basic/language-reference/statements/delegate-statement.md) делегата, вложенного в класс
 
 - [Оператор Dim](../../../visual-basic/language-reference/statements/dim-statement.md)
 
-- [Enum Statement](../../../visual-basic/language-reference/statements/enum-statement.md) of an enumeration nested in a class
+- [Оператор Enum](../../../visual-basic/language-reference/statements/enum-statement.md) перечисления, вложенного в класс
 
 - [Оператор Event](../../../visual-basic/language-reference/statements/event-statement.md)
 
 - [Оператор Function](../../../visual-basic/language-reference/statements/function-statement.md)
 
-- [Interface Statement](../../../visual-basic/language-reference/statements/interface-statement.md) of an interface nested in a class
+- [Оператор Interface](../../../visual-basic/language-reference/statements/interface-statement.md) интерфейса, вложенного в класс
 
 - [Оператор Property](../../../visual-basic/language-reference/statements/property-statement.md)
 
-- [Structure Statement](../../../visual-basic/language-reference/statements/structure-statement.md) of a structure nested in a class
+- [Оператор Structure](../../../visual-basic/language-reference/statements/structure-statement.md) структуры, вложенной в класс
 
 - [Оператор Sub](../../../visual-basic/language-reference/statements/sub-statement.md)
 
@@ -73,7 +73,7 @@ For more information see [setting the Visual Basic language version](../../langu
 - [Friend](friend.md)
 - [Закрытые](../../../visual-basic/language-reference/modifiers/private.md)
 - [Protected Friend](./protected-friend.md)
-- [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
+- [Уровни доступа в Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
 - [Процедуры](../../../visual-basic/programming-guide/language-features/procedures/index.md)
 - [Структуры](../../../visual-basic/programming-guide/language-features/data-types/structures.md)
 - [Объекты и классы](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

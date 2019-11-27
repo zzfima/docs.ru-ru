@@ -12,8 +12,8 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352176"
 ---
-# <a name="value-visual-basic"></a>\<value> (Visual Basic)
-Specifies the description of a property.  
+# <a name="value-visual-basic"></a>> значение \<(Visual Basic)
+Задает описание свойства.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -26,12 +26,12 @@ Specifies the description of a property.
  Описание свойства.  
   
 ## <a name="remarks"></a>Заметки  
- Use the `<value>` tag to describe a property. Note that when you add a property using the code wizard in the Visual Studio development environment, it will add a [\<summary>](../../../visual-basic/language-reference/xmldoc/summary.md) tag for the new property. You should then manually add a `<value>` tag to describe the value that the property represents.  
+ Для описания свойства используйте тег `<value>`. Обратите внимание, что при добавлении свойства с помощью мастера кода в среде разработки Visual Studio добавляется [\<сводка >](../../../visual-basic/language-reference/xmldoc/summary.md) тега для нового свойства. Затем следует вручную добавить тег `<value>` для описания значения, которое представляет свойство.  
   
  Чтобы обработать комментарии документации и сохранить их в файл, выполняйте сборку с параметром [-doc](../../../visual-basic/reference/command-line-compiler/doc.md).  
   
 ## <a name="example"></a>Пример  
- This example uses the `<value>` tag to describe what value the `Counter` property holds.  
+ В этом примере используется тег `<value>` для описания значения, которое содержит свойство `Counter`.  
   
  [!code-vb[VbVbcnXmlDocComments#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#1)]  
   

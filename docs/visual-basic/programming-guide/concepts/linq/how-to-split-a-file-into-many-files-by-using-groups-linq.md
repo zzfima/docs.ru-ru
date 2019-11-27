@@ -9,7 +9,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74341357"
 ---
-# <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-visual-basic"></a>How to: Split a File Into Many Files by Using Groups (LINQ) (Visual Basic)
+# <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-visual-basic"></a>Инструкции. Разбиение файла на несколько файлов с помощью групп (LINQ) (Visual Basic)
 
 В этом примере показан один из способов объединения содержимого двух файлов и последующего создания набора новых файлов, данные в котором будут организованы иначе.
 
@@ -118,9 +118,9 @@ End Class
 
 ## <a name="compiling-the-code"></a>Компиляция кода
 
-Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.
+Создайте проект консольного приложения VB.NET с помощью инструкции `Imports` для пространства имен System. LINQ.
 
 ## <a name="see-also"></a>См. также
 
-- [LINQ and Strings (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [LINQ и строки (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
 - [LINQ и каталоги файлов (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

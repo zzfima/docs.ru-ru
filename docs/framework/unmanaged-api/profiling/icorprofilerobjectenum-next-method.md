@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428153"
 ---
 # <a name="icorprofilerobjectenumnext-method"></a>Метод ICorProfilerObjectEnum::Next
-Gets the specified number of contiguous objects from a sequential collection of objects, starting at the enumerator's current position in the sequence.  
+Возвращает указанное количество смежных объектов из последовательной коллекции объектов, начиная с текущей позиции перечислителя в последовательности.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -41,7 +41,7 @@ HRESULT Next (
  [in] Количество объектов, которые должны быть получены.  
   
  `objects`  
- [out] An array of `ObjectID` values, each of which represents a retrieved object.  
+ заполняет Массив значений `ObjectID`, каждый из которых представляет извлеченный объект.  
   
  `pceltFetched`  
  [out] Указатель на число элементов, фактически извлеченных в массив `objects`.  
@@ -55,6 +55,6 @@ HRESULT Next (
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс ICorProfilerObjectEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerobjectenum-interface.md)

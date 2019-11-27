@@ -46,22 +46,22 @@ typedef enum CorSetENC {
   
 |Член|Описание|  
 |------------|-----------------|  
-|`MDSetENCOn`|Является устаревшей.|  
-|`MDSetENCOff`|Является устаревшей.|  
-|`MDUpdateENC`|Indicates that whereas metadata can be updated, tokens cannot be moved.|  
-|`MDUpdateFull`|Indicates that tokens can be moved during updates.|  
-|`MDUpdateExtension`|Indicates that updates can consist only of additions. Tokens cannot be moved.|  
-|`MDUpdateIncremental`|Indicates that compilation is incremental.|  
-|`MDUpdateDelta`|Indicates that only changed metadata should be saved.|  
-|`MDUpdateMask`|Includes `MDUpdateENC`, `MDUpdateFull` and `MDUpdateIncremental`.|  
+|`MDSetENCOn`|Устарело.|  
+|`MDSetENCOff`|Устарело.|  
+|`MDUpdateENC`|Указывает, что в то время как метаданные могут быть обновлены, токены перемещаться нельзя.|  
+|`MDUpdateFull`|Указывает, что токены можно перемещать во время обновлений.|  
+|`MDUpdateExtension`|Указывает, что обновления могут состоять только из добавлений. Маркеры не могут быть перемещены.|  
+|`MDUpdateIncremental`|Указывает, что компиляция является добавочной.|  
+|`MDUpdateDelta`|Указывает, что должны быть сохранены только измененные метаданные.|  
+|`MDUpdateMask`|Включает `MDUpdateENC`, `MDUpdateFull` и `MDUpdateIncremental`.|  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorHdr.h  
+ **Заголовок:** Корхдр. h  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Перечисления метаданных](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

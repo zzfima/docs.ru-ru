@@ -9,13 +9,13 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344488"
 ---
-# <a name="how-to-parse-a-string-visual-basic"></a>How to: Parse a String (Visual Basic)
-This topic shows how to create an XML tree in C#.  
+# <a name="how-to-parse-a-string-visual-basic"></a>Руководство. анализ строки (Visual Basic)
+В этом разделе показано, как создать XML-дерево C#в.  
   
 ## <a name="example"></a>Пример  
- You can parse a string in Visual Basic by using the `XElement.Parse` method. Однако более эффективно используются XML-литералы, как показано в следующем коде, поскольку применение XML-литералов не приводит к снижению производительности, в отличие от синтаксического анализа кода XML, полученного из строки.  
+ Можно выполнить синтаксический анализ строки в Visual Basic с помощью метода `XElement.Parse`. Однако более эффективно используются XML-литералы, как показано в следующем коде, поскольку применение XML-литералов не приводит к снижению производительности, в отличие от синтаксического анализа кода XML, полученного из строки.  
   
- By using XML literals, you can just copy and paste your XML into your Visual Basic program.  
+ Используя литералы XML, можно просто скопировать и вставить XML-код в программу Visual Basic.  
   
 > [!NOTE]
 > Синтаксический анализ текста или загрузка XML-документа из текстового файла менее эффективны, чем функциональное построение. При инициализации XML-дерева из кода для осуществления функционального построения требуется меньше процессорного времени, чем для синтаксического анализа текста.  
@@ -51,4 +51,4 @@ Dim contacts as XElement = _
   
 ## <a name="see-also"></a>См. также
 
-- [Parsing XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)
+- [Синтаксический анализ XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)

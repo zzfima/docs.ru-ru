@@ -12,8 +12,8 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352249"
 ---
-# <a name="remarks-visual-basic"></a>\<remarks> (Visual Basic)
-Specifies a remarks section for the member.  
+# <a name="remarks-visual-basic"></a>\<Примечания > (Visual Basic)
+Задает раздел примечаний для элемента.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -26,14 +26,14 @@ Specifies a remarks section for the member.
  Описание элемента.  
   
 ## <a name="remarks"></a>Заметки  
- Use the `<remarks>` tag to add information about a type, supplementing the information specified with [\<summary>](../../../visual-basic/language-reference/xmldoc/summary.md).  
+ Используйте тег `<remarks>`, чтобы добавить сведения о типе, добавив сведения, указанные в [> сводки\<](../../../visual-basic/language-reference/xmldoc/summary.md).  
   
- This information appears in the Object Browser. For information about the Object Browser, see [Viewing the Structure of Code](/visualstudio/ide/viewing-the-structure-of-code).  
+ Эти сведения отображаются в обозревателе объектов. Дополнительные сведения об обозревателе объектов см. [в разделе Просмотр структуры кода](/visualstudio/ide/viewing-the-structure-of-code).  
   
  Чтобы обработать комментарии документации и сохранить их в файл, выполняйте сборку с параметром [-doc](../../../visual-basic/reference/command-line-compiler/doc.md).  
   
 ## <a name="example"></a>Пример  
- This example uses the `<remarks>` tag to explain what the `UpdateRecord` method does.  
+ В этом примере используется тег `<remarks>` для объяснения того, что делает метод `UpdateRecord`.  
   
  [!code-vb[VbVbcnXmlDocComments#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#6)]  
   

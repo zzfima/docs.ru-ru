@@ -14,7 +14,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347909"
 ---
 # <a name="-nostdlib-visual-basic"></a>-nostdlib (Visual Basic)
-Causes the compiler not to automatically reference the standard libraries.  
+Приводит к тому, что компилятор не будет автоматически ссылаться на стандартные библиотеки.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -23,16 +23,16 @@ Causes the compiler not to automatically reference the standard libraries.
 ```  
   
 ## <a name="remarks"></a>Заметки  
- The `-nostdlib` option removes the automatic reference to the System.dll assembly and prevents the compiler from reading the Vbc.rsp file. The Vbc.rsp file, which is located in the same directory as the Vbc.exe file, references the commonly used .NET Framework assemblies and imports the `System` and `Microsoft.VisualBasic` namespaces.  
+ Параметр `-nostdlib` удаляет автоматическую ссылку на сборку System. dll и запрещает компилятору считывать файл Vbc. rsp. Файл Vbc. rsp, расположенный в том же каталоге, что и файл Vbc. exe, ссылается на часто используемые .NET Framework сборки и импортирует `System` и `Microsoft.VisualBasic` пространства имен.  
   
 > [!NOTE]
-> The Mscorlib.dll and Microsoft.VisualBasic.dll assemblies are always referenced.  
+> Ссылки на сборки mscorlib. dll и Microsoft. VisualBasic. dll всегда существуют.  
   
 > [!NOTE]
-> The `-nostdlib` option is not available from within the Visual Studio development environment; it is available only when compiling from the command line.  
+> Параметр `-nostdlib` недоступен в среде разработки Visual Studio; Он доступен только при компиляции из командной строки.  
   
 ## <a name="example"></a>Пример  
- The following code compiles `T2.vb` without referencing the standard libraries. You must set the `_MYTYPE` conditional-compilation constant to the string "Empty" to remove the `My` object.  
+ Следующий код компилирует `T2.vb` без ссылок на стандартные библиотеки. Необходимо присвоить константе условной компиляции `_MYTYPE` строку "Empty", чтобы удалить объект `My`.  
   
 ```console
 vbc -nostdlib -define:_MYTYPE=\"Empty\" T2.vb  

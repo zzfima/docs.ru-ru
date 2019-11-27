@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436260"
 ---
 # <a name="imetadataconvertergettypelibfrommetadata-method"></a>Метод IMetaDataConverter::GetTypeLibFromMetaData
-Gets a pointer to an `ITypeLib` instance that represents the type library that has the specified library and module names.  
+Возвращает указатель на экземпляр `ITypeLib`, представляющий библиотеку типов с указанными именами библиотеки и модуля.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,20 +37,20 @@ HRESULT GetTypeLibFromMetaData (
   
 ## <a name="parameters"></a>Параметры  
  `strModule`  
- [in] The name of the type library's module.  
+ окне Имя модуля библиотеки типов.  
   
  `strTlbName`  
- [in] The name of the type library.  
+ окне Имя библиотеки типов.  
   
  `ppITL`  
- [out] A pointer to a location that receives the address of the `ITypeLib` instance that represents the type library.  
+ заполняет Указатель на расположение, которое получает адрес экземпляра `ITypeLib`, представляющего библиотеку типов.  
   
 ## <a name="requirements"></a>Требования  
- **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформа:** См. раздел [требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Заголовок:** COR. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Библиотека:** Используется в качестве ресурса в MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

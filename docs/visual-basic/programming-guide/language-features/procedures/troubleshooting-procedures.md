@@ -1,5 +1,5 @@
 ---
-title: Troubleshooting procedures
+title: Процедуры устранения неполадок
 ms.date: 07/20/2015
 helpviewer_keywords:
 - troubleshooting Visual Basic, procedures
@@ -15,13 +15,13 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352517"
 ---
-# <a name="troubleshooting-procedures-visual-basic"></a>Troubleshooting procedures (Visual Basic)
+# <a name="troubleshooting-procedures-visual-basic"></a>Процедуры устранения неполадок (Visual Basic)
 
-This page lists some common problems that can occur when working with procedures.  
+На этой странице перечислены некоторые распространенные проблемы, которые могут возникнуть при работе с процедурами.  
   
-## <a name="returning-an-array-type-from-a-function-procedure"></a>Returning an array type from a function procedure
+## <a name="returning-an-array-type-from-a-function-procedure"></a>Возвращение типа массива из процедуры функции
 
-If a `Function` procedure returns an array data type, you cannot use the `Function` name to store values in the elements of the array. If you attempt to do this, the compiler interprets it as a call to the `Function`. The following example generates compiler errors:
+Если `Function` процедура возвращает тип данных массива, то нельзя использовать имя `Function` для хранения значений в элементах массива. Если вы попытаетесь сделать это, компилятор интерпретирует его как вызов `Function`. Следующий пример приводит к возникновению ошибок компилятора:
   
 ```vb
 Function AllOnes(n As Integer) As Integer()
@@ -35,92 +35,92 @@ Function AllOnes(n As Integer) As Integer()
 End Function
 ```
 
-The statement `AllOnes(i) = 1` generates a compiler error because it appears to call `AllOnes` with an argument of the wrong data type (a scalar `Integer` instead of an `Integer` array). The statement `Return AllOnes()` generates a compiler error because it appears to call `AllOnes` with no argument.  
+Инструкция `AllOnes(i) = 1` создает ошибку компилятора, так как она вызывает `AllOnes` с аргументом неверного типа данных (скалярный `Integer` вместо массива `Integer`). Инструкция `Return AllOnes()` создает ошибку компилятора, так как она вызывает `AllOnes` без аргументов.  
   
- **Correct approach:** To be able to modify the elements of an array that is to be returned, define an internal array as a local variable. The following example compiles without error:
+ **Правильный подход:** Чтобы иметь возможность изменять элементы возвращаемого массива, определите внутренний массив как локальную переменную. Следующий пример компилирует без ошибок:
 
  [!code-vb[VbVbcnProcedures#66](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#66)]
 
-## <a name="argument-not-modified-by-procedure-call"></a>Argument not modified by procedure call
+## <a name="argument-not-modified-by-procedure-call"></a>Аргумент не изменен вызовом процедуры
 
-If you intend to allow a procedure to change a programming element underlying an argument in the calling code, you must pass it by reference. But a procedure can access the elements of a reference type argument even if you pass it by value.
+Если вы хотите разрешить процедуре изменять программный элемент, лежащий в основе аргумента в вызывающем коде, необходимо передать его по ссылке. Но процедура может обращаться к элементам аргумента ссылочного типа, даже если она передается по значению.
 
-- **Underlying variable**. To allow the procedure to replace the value of the underlying variable element itself, the procedure must declare the parameter [ByRef](../../../language-reference/modifiers/byref.md). Also, the calling code must not enclose the argument in parentheses, because that would override the `ByRef` passing mechanism.
+- **Базовая переменная**. Чтобы разрешить процедуре заменить значение самого базового элемента переменной, процедура должна объявить параметр [ByRef](../../../language-reference/modifiers/byref.md). Кроме того, вызывающий код не должен заключать аргумент в круглые скобки, так как это переопределит механизм передачи `ByRef`.
 
-- **Reference type elements**. If you declare a parameter [ByVal](../../../language-reference/modifiers/byval.md), the procedure cannot modify the underlying variable element itself. However, if the argument is a reference type, the procedure can modify the members of the object to which it points, even though it cannot replace the variable's value. For example, if the argument is an array variable, the procedure cannot assign a new array to it, but it can change one or more of its elements. The changed elements are reflected in the underlying array variable in the calling code.
+- **Элементы ссылочного типа**. При объявлении параметра [ByVal](../../../language-reference/modifiers/byval.md)процедура не может изменить сам базовый элемент переменной. Однако если аргумент является ссылочным типом, процедура может изменить члены объекта, на который он указывает, даже если она не может заменить значение переменной. Например, если аргумент является переменной массива, процедура не может присвоить ей новый массив, но может изменить один или несколько его элементов. Измененные элементы отражаются в базовой переменной массива вызывающего кода.
 
-The following example defines two procedures that take an array variable by value and operate on its elements. Procedure `increase` simply adds one to each element. Procedure `replace` assigns a new array to the parameter `a()` and then adds one to each element. However, the reassignment does not affect the underlying array variable in the calling code because `a()` is declared `ByVal`.
+В следующем примере определяются две процедуры, которые принимают переменную массива по значению и работают с ее элементами. Процедура `increase` просто добавляет по одному для каждого элемента. Процедура `replace` присваивает новый массив параметру `a()` а затем добавляет его к каждому элементу. Однако переназначение не влияет на базовую переменную массива в вызывающем коде, так как `a()` объявлена как `ByVal`.
 
 [!code-vb[VbVbcnProcedures#35](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#35)]
 
 [!code-vb[VbVbcnProcedures#38](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#38)]
 
-The following example makes calls to `increase` and `replace`:
+В следующем примере выполняется вызов `increase` и `replace`.
 
 [!code-vb[VbVbcnProcedures#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#37)]
   
-The first `MsgBox` call displays "After increase(n): 11, 21, 31, 41". Because `n` is a reference type, `increase` can change its members, even though it is passed `ByVal`.
+Первый вызов `MsgBox` выводит "после увеличения (n): 11, 21, 31, 41". Поскольку `n` является ссылочным типом, `increase` может изменять его члены, даже если он передается `ByVal`.
 
-The second `MsgBox` call displays "After replace(n): 11, 21, 31, 41". Because `n` is passed `ByVal`, `replace` cannot modify the variable `n` by assigning a new array to it. When `replace` creates the new array instance `k` and assigns it to the local variable `a`, it loses the reference to `n` passed in by the calling code. When it increments the members of `a`, only the local array `k` is affected.
+Во втором вызове `MsgBox` отображается "After Replace (n): 11, 21, 31, 41". Поскольку `n` передается `ByVal`, `replace` не может изменить переменную `n`, назначив ей новый массив. Когда `replace` создает новый экземпляр массива `k` и присваивает его локальной переменной `a`, он теряет ссылку на `n`, переданный вызывающим кодом. При увеличении числа членов `a`затрагивается только локальный `k` массива.
 
-**Correct approach:** To be able to modify an underlying variable element itself, pass it by reference. The following example shows the change in the declaration of `replace` that allows it to replace one array with another in the calling code:
+**Правильный подход:** Чтобы иметь возможность изменять сам базовый элемент переменной, передайте его по ссылке. В следующем примере показано изменение в объявлении `replace`, которое позволяет заменить один массив другим в вызывающем коде:
 
 [!code-vb[VbVbcnProcedures#64](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#64)]
 
-## <a name="unable-to-define-an-overload"></a>Unable to define an overload
+## <a name="unable-to-define-an-overload"></a>Не удалось определить перегрузку
 
-If you want to define an overloaded version of a procedure, you must use the same name but a different signature. If the compiler cannot differentiate your declaration from an overload with the same signature, it generates an error.
+Если необходимо определить перегруженную версию процедуры, необходимо использовать то же имя, но другую сигнатуру. Если компилятор не может отличить объявление от перегрузки с той же сигнатурой, выдается ошибка.
 
-The *signature* of a procedure is determined by the procedure name and the parameter list. Each overload must have the same name as all the other overloads but must differ from all of them in at least one of the other components of the signature. Дополнительные сведения см. в разделе [Procedure Overloading](./procedure-overloading.md).
+*Сигнатура* процедуры определяется именем процедуры и списком параметров. Каждая перегрузка должна иметь то же имя, что и все остальные перегрузки, но должна отличаться от всех, хотя бы в одном из других компонентов сигнатуры. Дополнительные сведения см. в разделе [Procedure Overloading](./procedure-overloading.md).
 
-The following items, even though they pertain to the parameter list, are not components of a procedure's signature:
+Следующие элементы, даже если они относятся к списку параметров, не являются компонентами сигнатуры процедуры:
 
-- Procedure modifier keywords, such as `Public`, `Shared`, and `Static`.
-- Parameter names.
-- Parameter modifier keywords, such as `ByRef` and `Optional`.
-- The data type of the return value (except for a conversion operator).
+- Ключевые слова модификаторов процедур, такие как `Public`, `Shared`и `Static`.
+- Имена параметров.
+- Ключевые слова модификаторов параметров, такие как `ByRef` и `Optional`.
+- Тип данных возвращаемого значения (за исключением оператора преобразования).
 
-You cannot overload a procedure by varying only one or more of the preceding items.
+Невозможно перегрузить процедуру, изменив только один или несколько предыдущих элементов.
 
-**Correct approach:** To be able to define a procedure overload, you must vary the signature. Because you must use the same name, you must vary the number, order, or data types of the parameters. In a generic procedure, you can vary the number of type parameters. In a conversion operator ([CType Function](../../../language-reference/functions/ctype-function.md)), you can vary the return type.
+**Правильный подход:** Чтобы иметь возможность определить перегрузку процедуры, необходимо изменить сигнатуру. Поскольку необходимо использовать одно и то же имя, необходимо изменить число, порядок или типы данных параметров. В универсальной процедуре можно изменить количество параметров типа. В операторе преобразования ([Функция CType](../../../language-reference/functions/ctype-function.md)) можно изменить тип возвращаемого значения.
 
-### <a name="overload-resolution-with-optional-and-paramarray-arguments"></a>Overload resolution with Optional and ParamArray arguments
+### <a name="overload-resolution-with-optional-and-paramarray-arguments"></a>Разрешение перегрузки с необязательными и аргументами ParamArray
 
-If you are overloading a procedure with one or more [Optional](../../../language-reference/modifiers/optional.md) parameters or a [ParamArray](../../../language-reference/modifiers/paramarray.md) parameter, you must avoid duplicating any of the *implicit overloads*. For information, see [Considerations in Overloading Procedures](./considerations-in-overloading-procedures.md).
+При перегрузке процедуры с одним или несколькими [необязательными](../../../language-reference/modifiers/optional.md) параметрами или параметром [ParamArray](../../../language-reference/modifiers/paramarray.md) необходимо избегать дублирования каких-либо *неявных перегрузок*. Дополнительные сведения см. [в разделе рекомендации по перегрузке процедур](./considerations-in-overloading-procedures.md).
 
-## <a name="calling-the-wrong-version-of-an-overloaded-procedure"></a>Calling the wrong version of an overloaded procedure
+## <a name="calling-the-wrong-version-of-an-overloaded-procedure"></a>Вызов неверной версии перегруженной процедуры
 
-If a procedure has several overloaded versions, you should be familiar with all their parameter lists and understand how Visual Basic resolves calls among the overloads. Otherwise you could call an overload other than the intended one.
+Если процедура имеет несколько перегруженных версий, необходимо ознакомиться со всеми их списками параметров и понять, как Visual Basic разрешает вызовы между перегрузками. В противном случае можно вызвать перегрузку, отличную от предполагаемой.
 
-When you have determined which overload you want to call, be careful to observe the following rules:
+Если вы определили, какую перегрузку нужно вызвать, обратите внимание на следующие правила.
 
-- Supply the correct number of arguments, and in the correct order.  
-- Ideally, your arguments should have the exact same data types as the corresponding parameters. In any case, the data type of each argument must widen to that of its corresponding parameter. This is true even with the [Option Strict Statement](../../../language-reference/statements/option-strict-statement.md) set to `Off`. If an overload requires any narrowing conversion from your argument list, that overload is not eligible to be called.
-- If you supply arguments that require widening, make their data types as close as possible to the corresponding parameter data types. If two or more overloads accept your argument data types, the compiler resolves your call to the overload that calls for the least amount of widening.
+- Укажите правильное число аргументов и в правильном порядке.  
+- В идеале аргументы должны иметь те же типы данных, что и соответствующие параметры. В любом случае тип данных каждого аргумента должен быть расширен до соответствующего параметра. Это справедливо даже в том случае, если для [Option-Statement](../../../language-reference/statements/option-strict-statement.md) задано значение `Off`. Если перегрузка требует какого-либо суженного преобразования из списка аргументов, то эта перегрузка не может вызываться.
+- Если указать аргументы, требующие расширения, сделайте их типы данных максимально близкими к соответствующим типам данных параметров. Если две или более перегрузки принимают типы данных аргумента, компилятор разрешает вызов перегрузки, которая вызывает для наименьшего объема расширяющего значения.
 
-You can reduce the chance of data type mismatches by using the [CType Function](../../../language-reference/functions/ctype-function.md) conversion keyword when preparing your arguments.
+Можно уменьшить вероятность несоответствия типов данных с помощью ключевого слова преобразования [функции CType](../../../language-reference/functions/ctype-function.md) при подготовке аргументов.
 
-### <a name="overload-resolution-failure"></a>Overload resolution failure
+### <a name="overload-resolution-failure"></a>Сбой разрешения перегрузки
 
-When you call an overloaded procedure, the compiler attempts to eliminate all but one of the overloads. If it succeeds, it resolves the call to that overload. If it eliminates all the overloads, or if it cannot reduce the eligible overloads to a single candidate, it generates an error.
+При вызове перегруженной процедуры компилятор пытается устранить все перегрузки, кроме одной. Если он будет выполнен, он разрешает вызов этой перегрузки. Если он исключает все перегрузки или не может уменьшить подходящие перегрузки для одного кандидата, выдается ошибка.
 
-The following example illustrates the overload resolution process:
+В следующем примере показан процесс разрешения перегрузки.
 
 [!code-vb[VbVbcnProcedures#62](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#62)]
 
 [!code-vb[VbVbcnProcedures#63](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#63)]
   
-In the first call, the compiler eliminates the first overload because the type of the first argument (`Short`) narrows to the type of the corresponding parameter (`Byte`). It then eliminates the third overload because each argument type in the second overload (`Short` and `Single`) widens to the corresponding type in the third overload (`Integer` and `Single`). The second overload requires less widening, so the compiler uses it for the call.
+При первом вызове компилятор удаляет первую перегрузку, поскольку тип первого аргумента (`Short`) ограничивается типом соответствующего параметра (`Byte`). Затем он исключает третью перегрузку, поскольку каждый тип аргумента во второй перегрузке (`Short` и `Single`) расширяется до соответствующего типа в третьей перегрузке (`Integer` и `Single`). Вторая перегрузка требует меньшего расширения, поэтому компилятор использует его для вызова.
 
-In the second call, the compiler cannot eliminate any of the overloads on the basis of narrowing. It eliminates the third overload for the same reason as in the first call, because it can call the second overload with less widening of the argument types. However, the compiler cannot resolve between the first and second overloads. Each has one defined parameter type that widens to the corresponding type in the other (`Byte` to `Short`, but `Single` to `Double`). The compiler therefore generates an overload resolution error.
+Во втором вызове компилятор не может исключить ни одну из перегрузок на основе понижающие. Он исключает третью перегрузку по той же причине, что и при первом вызове, так как она может вызвать вторую перегрузку с меньшим расширением типов аргументов. Однако компилятор не может выполнить разрешение между первой и второй перегрузками. Каждый из них имеет один определенный тип параметра, который расширяется до соответствующего типа в другом (`Byte` для `Short`, но `Single` в `Double`). Поэтому компилятор создает ошибку разрешения перегрузки.
 
-**Correct approach:** To be able to call an overloaded procedure without ambiguity, use [CType Function](../../../language-reference/functions/ctype-function.md) to match the argument data types to the parameter types. The following example shows a call to `z` that forces resolution to the second overload.
+**Правильный подход:** Чтобы иметь возможность вызывать перегруженную процедуру без неоднозначности, используйте [функцию CType](../../../language-reference/functions/ctype-function.md) для сопоставления типов данных аргумента с типами параметров. В следующем примере показан вызов `z`, который вызывает принудительное разрешение для второй перегрузки.
 
 [!code-vb[VbVbcnProcedures#65](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#65)]
 
-### <a name="overload-resolution-with-optional-and-paramarray-arguments"></a>Overload resolution with Optional and ParamArray arguments
+### <a name="overload-resolution-with-optional-and-paramarray-arguments"></a>Разрешение перегрузки с необязательными и аргументами ParamArray
 
-If two overloads of a procedure have identical signatures except that the last parameter is declared [Optional](../../../language-reference/modifiers/optional.md) in one and [ParamArray](../../../language-reference/modifiers/paramarray.md) in the other, the compiler resolves a call to that procedure according to the closest match. Для получения дополнительной информации см. [Overload Resolution](./overload-resolution.md).
+Если две перегрузки процедуры имеют идентичные сигнатуры, за исключением того, что последний параметр объявлен как [Optional](../../../language-reference/modifiers/optional.md) в одном и [ParamArray](../../../language-reference/modifiers/paramarray.md) в другой, компилятор разрешает вызов этой процедуры в соответствии с ближайшим соответствием. Дополнительные сведения см. в разделе [Overload Resolution](./overload-resolution.md).
 
 ## <a name="see-also"></a>См. также
 

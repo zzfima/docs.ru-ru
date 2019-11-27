@@ -9,7 +9,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347691"
 ---
-# <a name="how-to-query-for-files-with-a-specified-attribute-or-name-visual-basic"></a>How to: Query for Files with a Specified Attribute or Name (Visual Basic)
+# <a name="how-to-query-for-files-with-a-specified-attribute-or-name-visual-basic"></a>Как запросить файлы с указанным атрибутом или именем (Visual Basic)
 В этом примере показано, как обнаружить все файлы с указанным расширением (например, TXT) в заданном дереве каталогов. Кроме того, он показывает, как обнаружить самый новый или самый старый файл в дереве, используя время создания.  
   
 ## <a name="example"></a>Пример  
@@ -61,7 +61,7 @@ End Module
 ```  
   
 ## <a name="compiling-the-code"></a>Компиляция кода  
-Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.
+Создайте проект консольного приложения VB.NET с помощью инструкции `Imports` для пространства имен System. LINQ.
   
 ## <a name="see-also"></a>См. также
 

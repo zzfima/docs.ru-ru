@@ -16,7 +16,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353194"
 ---
 # <a name="getxmlnamespace-operator-visual-basic"></a>Оператор GetXmlNamespace (Visual Basic)
-Gets the <xref:System.Xml.Linq.XNamespace> object that corresponds to the specified XML namespace prefix.  
+Возвращает объект <xref:System.Xml.Linq.XNamespace>, соответствующий указанному префиксу пространства имен XML.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -26,22 +26,22 @@ GetXmlNamespace(xmlNamespacePrefix)
   
 ## <a name="parts"></a>Части  
  `xmlNamespacePrefix`  
- Необязательный. The string that identifies the XML namespace prefix. If supplied, this string must be a valid XML identifier. For more information, see [Names of Declared XML Elements and Attributes](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md). If no prefix is specified, the default namespace is returned. If no default namespace is specified, the empty namespace is returned.  
+ Необязательно. Строка, определяющая префикс пространства имен XML. Если указано, эта строка должна быть допустимым идентификатором XML. Дополнительные сведения см. в разделе [Имена объявленных XML-элементов и атрибутов](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md). Если префикс не указан, возвращается пространство имен по умолчанию. Если пространство имен по умолчанию не указано, возвращается пустое пространство имен.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- The <xref:System.Xml.Linq.XNamespace> object that corresponds to the XML namespace prefix.  
+ Объект <xref:System.Xml.Linq.XNamespace>, соответствующий префиксу пространства имен XML.  
   
 ## <a name="remarks"></a>Заметки  
- The `GetXmlNamespace` operator gets the <xref:System.Xml.Linq.XNamespace> object that corresponds to the XML namespace prefix `xmlNamespacePrefix`.  
+ Оператор `GetXmlNamespace` получает объект <xref:System.Xml.Linq.XNamespace>, соответствующий префиксу пространства имен XML `xmlNamespacePrefix`.  
   
- You can use XML namespace prefixes directly in XML literals and XML axis properties. However, you must use the `GetXmlNamespace` operator to convert a namespace prefix to an <xref:System.Xml.Linq.XNamespace> object before you can use it in your code. You can append an unqualified element name to an <xref:System.Xml.Linq.XNamespace> object to get a fully qualified <xref:System.Xml.Linq.XName> object, which many [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] methods require.  
+ Префиксы пространства имен XML можно использовать непосредственно в XML-литералах и свойствах осей XML. Однако необходимо использовать оператор `GetXmlNamespace` для преобразования префикса пространства имен в объект <xref:System.Xml.Linq.XNamespace>, прежде чем его можно будет использовать в коде. Можно добавить неполное имя элемента в <xref:System.Xml.Linq.XNamespace> объект, чтобы получить полный <xref:System.Xml.Linq.XName> объект, который требуется многим [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] методам.  
   
 ## <a name="example"></a>Пример  
- The following example imports `ns` as an XML namespace prefix. It then uses the prefix of the namespace to create an XML literal and access the first child node that has the qualified name `ns:phone`. It then passes that child node to the `ShowName` subroutine, which constructs a qualified name by using the `GetXmlNamespace` operator. The `ShowName` subroutine then passes the qualified name to the <xref:System.Xml.Linq.XNode.Ancestors%2A> method to get the parent `ns:contact` node.  
+ В следующем примере выполняется импорт `ns` как префикса пространства имен XML. Затем он использует префикс пространства имен для создания XML-литерала и доступа к первому дочернему узлу с полным именем `ns:phone`. Затем этот дочерний узел передается в подпрограммы `ShowName`, которая формирует полное имя с помощью оператора `GetXmlNamespace`. Затем `ShowName` подпрограммы передает полное имя методу <xref:System.Xml.Linq.XNode.Ancestors%2A>, чтобы получить родительский узел `ns:contact`.  
   
  [!code-vb[VbXMLSamples#38](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/GetXmlNamespace.vb#38)]  
   
- When you call `TestGetXmlNamespace.RunSample()`, it displays a message box that contains the following text:  
+ При вызове `TestGetXmlNamespace.RunSample()`отображается окно сообщения, содержащее следующий текст:  
   
  `Name: Patrick Hines`  
   

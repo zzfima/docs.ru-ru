@@ -12,8 +12,8 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74354327"
 ---
-# <a name="code-visual-basic"></a>\<code> (Visual Basic)
-Indicates that the text is multiple lines of code.  
+# <a name="code-visual-basic"></a>> кода \<(Visual Basic)
+Указывает, что текст представляет собой несколько строк кода.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -23,15 +23,15 @@ Indicates that the text is multiple lines of code.
   
 ## <a name="parameters"></a>Параметры  
  `content`  
- The text to mark as code.  
+ Текст, помечающий как код.  
   
 ## <a name="remarks"></a>Заметки  
- Use the `<code>` tag to indicate multiple lines as code. С помощью тега [\<c>](../../../visual-basic/language-reference/xmldoc/c.md) можно указать, что текст в описании необходимо пометить как код.  
+ Используйте тег `<code>`, чтобы указать несколько строк в виде кода. С помощью тега [\<c>](../../../visual-basic/language-reference/xmldoc/c.md) можно указать, что текст в описании необходимо пометить как код.  
   
  Чтобы обработать комментарии документации и сохранить их в файл, выполняйте сборку с параметром [-doc](../../../visual-basic/reference/command-line-compiler/doc.md).  
   
 ## <a name="example"></a>Пример  
- This example uses the \<code> tag to include example code for using the `ID` field.  
+ В этом примере используется тег \<Code >, чтобы добавить пример кода для использования поля `ID`.  
   
  [!code-vb[VbVbcnXmlDocComments#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#2)]  
   

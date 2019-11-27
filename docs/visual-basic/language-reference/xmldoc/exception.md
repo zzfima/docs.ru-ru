@@ -12,8 +12,8 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346963"
 ---
-# <a name="exception-visual-basic"></a>\<exception> (Visual Basic)
-Specifies which exceptions can be thrown.  
+# <a name="exception-visual-basic"></a>> \<исключений (Visual Basic)
+Указывает, какие исключения могут быть созданы.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -29,12 +29,12 @@ Specifies which exceptions can be thrown.
  Описание.  
   
 ## <a name="remarks"></a>Заметки  
- Use the `<exception>` tag to specify which exceptions can be thrown. Этот тег применяется к определению метода.  
+ Используйте тег `<exception>`, чтобы указать, какие исключения могут быть созданы. Этот тег применяется к определению метода.  
   
  Чтобы обработать комментарии документации и сохранить их в файл, выполняйте сборку с параметром [-doc](../../../visual-basic/reference/command-line-compiler/doc.md).  
   
 ## <a name="example"></a>Пример  
- This example uses the `<exception>` tag to describe an exception that the `IntDivide` function can throw.  
+ В этом примере используется тег `<exception>` для описания исключения, которое может вызывать функция `IntDivide`.  
   
  [!code-vb[VbVbcnXmlDocComments#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#3)]  
   

@@ -16,20 +16,20 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346885"
 ---
 # <a name="how-to-refer-to-the-current-instance-of-an-object-visual-basic"></a>Практическое руководство. Ссылка на текущий экземпляр объекта (Visual Basic)
-The *current instance* of an object is the instance in which the code is currently executing.  
+*Текущим экземпляром* объекта является экземпляр, в котором в данный момент выполняется код.  
   
- You use the `Me` keyword to refer to the current instance.  
+ Для ссылки на текущий экземпляр используется ключевое слово `Me`.  
   
-### <a name="to-refer-to-the-current-instance"></a>To refer to the current instance  
+### <a name="to-refer-to-the-current-instance"></a>Ссылка на текущий экземпляр  
   
-- Use the `Me` keyword where you would normally use the name of an object variable.  
+- Используйте ключевое слово `Me`, в котором обычно используется имя объектной переменной.  
   
     ```vb  
     Me.ForeColor = System.Drawing.Color.Crimson  
     Me.Close()  
     ```  
   
-     Although `Me` behaves like an object variable, you cannot declare it or assign anything to it. `Me` always refers to the current instance.  
+     Хотя `Me` ведет себя как объектная переменная, вы не можете объявить ее или присвоить ей что-либо. `Me` всегда ссылается на текущий экземпляр.  
   
 ## <a name="see-also"></a>См. также
 

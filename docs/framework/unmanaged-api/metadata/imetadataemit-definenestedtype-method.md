@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74431702"
 ---
 # <a name="imetadataemitdefinenestedtype-method"></a>Метод IMetaDataEmit::DefineNestedType
-Creates the metadata signature of a type definition, returns an `mdTypeDef` token for that type, and specifies that the defined type is a member of the type referenced by the `tdEncloser` parameter.  
+Создает сигнатуру метаданных определения типа, возвращает маркер `mdTypeDef` для этого типа и указывает, что определенный тип является членом типа, на который ссылается параметр `tdEncloser`.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,29 +40,29 @@ HRESULT DefineNestedType (
   
 ## <a name="parameters"></a>Параметры  
  `szTypeDef`  
- [in] The name of the type in Unicode.  
+ окне Имя типа в Юникоде.  
   
  `dwTypeDefFlags`  
- [in] `TypeDef` attributes. This is a bitmask of `CorTypeAttr` values.  
+ [in] `TypeDef` атрибуты. Это битовая маска `CorTypeAttr` значений.  
   
  `tkExtends`  
- [in] The token of the base class. This is either a `mdTypeDef` or a `mdTypeRef` token.  
+ окне Маркер базового класса. Это либо `mdTypeDef`, либо маркер `mdTypeRef`.  
   
  `rtkImplements`[]  
- [in] An array of tokens that specify the interfaces that this class or interface implements.  
+ окне Массив токенов, задающих интерфейсы, реализуемые этим классом или интерфейсом.  
   
  `tdEncloser`  
- [in] The token of the enclosing type. The last element of the array must be `mdTokenNil`.  
+ окне Токен включающего типа. Последний элемент массива должен быть `mdTokenNil`.  
   
  `ptd`  
- [out] The `mdTypeDef` token assigned.  
+ заполняет Назначенный маркер `mdTypeDef`.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Заголовок:** COR. h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **Библиотека:** Используется в качестве ресурса в MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

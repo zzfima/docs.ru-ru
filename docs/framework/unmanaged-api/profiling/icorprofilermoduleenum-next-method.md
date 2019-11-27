@@ -49,7 +49,7 @@ HRESULT Next([in]  ULONG      celt,
   
 |HRESULT|Описание|  
 |-------------|-----------------|  
-|S_OK|Возвращенные элементы `celt`.|  
+|S_OK|возвращены элементы `celt`.|  
 |S_FALSE|Было возвращено элементов менее, чем `celt`, что указывает, что перечисление завершено.|  
   
 ## <a name="requirements"></a>Требования  
@@ -61,7 +61,7 @@ HRESULT Next([in]  ULONG      celt,
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс ICorProfilerModuleEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilermoduleenum-interface.md)
 - [Интерфейсы профилирования](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)

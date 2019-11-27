@@ -18,7 +18,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349785"
 ---
 # <a name="-operator-visual-basic"></a>Оператор *= (Visual Basic)
-Multiplies the value of a variable or property by the value of an expression and assigns the result to the variable or property.  
+Умножает значение переменной или свойства на значение выражения и присваивает результат переменной или свойству.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -28,21 +28,21 @@ variableorproperty *= expression
   
 ## <a name="parts"></a>Части  
  `variableorproperty`  
- Обязательный. Any numeric variable or property.  
+ Обязательно. Любая числовая переменная или свойство.  
   
  `expression`  
- Обязательный. Произвольное числовое выражение.  
+ Обязательно. Произвольное числовое выражение.  
   
 ## <a name="remarks"></a>Заметки  
- The element on the left side of the `*=` operator can be a simple scalar variable, a property, or an element of an array. The variable or property cannot be [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md).  
+ Элемент в левой части оператора `*=` может быть простой скалярной переменной, свойством или элементом массива. Переменная или свойство не может быть [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md).  
   
- The `*=` operator first multiplies the value of the expression (on the right-hand side of the operator) by the value of the variable or property (on the left-hand side of the operator). The operator then assigns the result of that operation to the variable or property.  
+ Оператор `*=` сначала умножает значение выражения (в правой части оператора) на значение переменной или свойства (в левой части оператора). в противном случае. Затем оператор присваивает результат этой операции переменной или свойству.  
   
 ## <a name="overloading"></a>Перегрузка  
- The [* Operator](../../../visual-basic/language-reference/operators/multiplication-operator.md) can be *overloaded*, which means that a class or structure can redefine its behavior when an operand has the type of that class or structure. Overloading the `*` operator affects the behavior of the `*=` operator. If your code uses `*=` on a class or structure that overloads `*`, be sure you understand its redefined behavior. Для получения дополнительной информации см. [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+ [Оператор *](../../../visual-basic/language-reference/operators/multiplication-operator.md) может быть *перегружен*, что означает, что класс или структура может переопределить свое поведение, если операнд имеет тип этого класса или структуры. Перегрузка оператора `*` влияет на поведение оператора `*=`. Если в коде используется `*=` в классе или структуре, которая перегружает `*`, убедитесь, что вы понимаете его переопределенное поведение. Для получения дополнительной информации см. [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Пример  
- The following example uses the `*=` operator to multiply one `Integer` variable by a second and assign the result to the first variable.  
+ В следующем примере оператор `*=` используется для умножения одной `Integer` переменной на вторую и присваивания результата первой переменной.  
   
  [!code-vb[VbVbalrOperators#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#5)]  
   

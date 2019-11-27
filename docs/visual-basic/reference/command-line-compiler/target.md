@@ -13,9 +13,9 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351719"
 ---
-# <a name="-target-visual-basic"></a>-target (Visual Basic)
+# <a name="-target-visual-basic"></a>-Target (Visual Basic)
 
-Specifies the format of compiler output.
+Задает формат выходных данных компилятора.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -25,34 +25,34 @@ Specifies the format of compiler output.
 
 ## <a name="remarks"></a>Заметки
 
-The following table summarizes the effect of the `-target` option.
+В следующей таблице приводится сводка по применению параметра `-target`.
 
 |**Параметр**|**Реакция на событие**|
 |----------------|------------------|
-|`-target:exe`|Causes the compiler to create an executable console application.<br /><br /> This is the default option when no `-target` option is specified. The executable file is created with an .exe extension.<br /><br /> Unless otherwise specified with the `/out` option, the output file name takes the name of the input file that contains the `Sub Main` procedure.<br /><br /> Only one `Sub Main` procedure is required in the source-code files that are compiled into an .exe file. Use the `-main` compiler option to specify which class contains the `Sub Main` procedure.|
-|`-target:library`|Causes the compiler to create a dynamic-link library (DLL).<br /><br /> The dynamic-link library file is created with a .dll extension.<br /><br /> Unless otherwise specified with the `-out` option, the output file name takes the name of the first input file.<br /><br /> When building a DLL, a `Sub Main` procedure is not required.|
-|`-target:module`|Causes the compiler to generate a module that can be added to an assembly.<br /><br /> The output file is created with an extension of .netmodule.<br /><br /> The .NET common language runtime cannot load a file that does not have an assembly. However, you can incorporate such a file into the assembly manifest of an assembly by using `-reference`.<br /><br /> When code in one module references internal types in another module, both modules must be incorporated into an assembly manifest by using `-reference`.<br /><br /> The [-addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md) option imports metadata from a module.|
-|`-target:winexe`|Causes the compiler to create an executable Windows-based application.<br /><br /> The executable file is created with an .exe extension. A Windows-based application is one that provides a user interface from either the .NET Framework class library or with the Windows APIs.<br /><br /> Unless otherwise specified with the `-out` option, the output file name takes the name of the input file that contains the `Sub Main` procedure.<br /><br /> Only one `Sub Main` procedure is required in the source-code files that are compiled into an .exe file. In cases where your code has more than one class that has a `Sub Main` procedure, use the `-main` compiler option to specify which class contains the `Sub Main` procedure|
-|`-target:appcontainerexe`|Causes the compiler to create an executable Windows-based application that must be run in an app container. This setting is designed to be used for Windows 8.x Store applications.<br /><br /> The **appcontainerexe** setting sets a bit in the Characteristics field of the [Portable Executable](/windows/desktop/Debug/pe-format) file. This bit indicates that the app must be run in an app container. When this bit is set, an error occurs if the `CreateProcess` method tries to launch the application outside of an app container. Aside from this bit setting, **-target:appcontainerexe** is equivalent to **-target:winexe**.<br /><br /> The executable file is created with an .exe extension.<br /><br /> Unless you specify otherwise by using the `-out` option, the output file name takes the name of the input file that contains the `Sub Main` procedure.<br /><br /> Only one `Sub Main` procedure is required in the source-code files that are compiled into an .exe file. If your code contains more than one class that has a `Sub Main` procedure, use the `-main` compiler option to specify which class contains the `Sub Main` procedure|
-|`-target:winmdobj`|Causes the compiler to create an intermediate file that you can convert to a Windows Runtime binary (.winmd) file. The .winmd file can be consumed by JavaScript and C++ programs, in addition to managed language programs.<br /><br /> The intermediate file is created with a .winmdobj extension.<br /><br /> Unless you specify otherwise by using the `-out` option, the output file name takes the name of the first input file. A `Sub Main` procedure isn’t required.<br /><br /> The .winmdobj file is designed to be used as input for the <xref:Microsoft.Build.Tasks.WinMDExp> export tool to produce a Windows metadata (WinMD) file. The WinMD file has a .winmd extension and contains both the code from the original library and the WinMD definitions that JavaScript, C++, and  the Windows Runtime use.|
+|`-target:exe`|Заставляет компилятор создать исполняемое консольное приложение.<br /><br /> Этот параметр используется по умолчанию, если не указан параметр `-target`. Исполняемый файл создается с расширением. exe.<br /><br /> Если не указано иное с параметром `/out`, имя выходного файла принимает имя входного файла, содержащего процедуру `Sub Main`.<br /><br /> В файлах исходного кода, компилируемых в exe-файл, требуется только одна `Sub Main` процедура. Используйте параметр компилятора `-main`, чтобы указать класс, содержащий процедуру `Sub Main`.|
+|`-target:library`|Заставляет компилятор создать библиотеку динамической компоновки (DLL).<br /><br /> Файл библиотеки динамической компоновки создается с расширением DLL.<br /><br /> Если не указано иное с параметром `-out`, имя выходного файла принимает имя первого входного файла.<br /><br /> При построении библиотеки DLL `Sub Main` процедура не требуется.|
+|`-target:module`|Заставляет компилятор создать модуль, который можно добавить в сборку.<br /><br /> Выходной файл создается с расширением NETMODULE.<br /><br /> Общеязыковая среда выполнения .NET не может загрузить файл, у которого нет сборки. Однако можно включить такой файл в манифест сборки сборки с помощью `-reference`.<br /><br /> Когда код в одном модуле ссылается на внутренние типы в другом модуле, оба модуля должны быть включены в манифест сборки с помощью `-reference`.<br /><br /> Параметр [-addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md) импортирует метаданные из модуля.|
+|`-target:winexe`|Заставляет компилятор создать исполняемое приложение на основе Windows.<br /><br /> Исполняемый файл создается с расширением. exe. Приложение на основе Windows предоставляет пользовательский интерфейс из библиотеки классов .NET Framework или с помощью API-интерфейсов Windows.<br /><br /> Если не указано иное с параметром `-out`, имя выходного файла принимает имя входного файла, содержащего процедуру `Sub Main`.<br /><br /> В файлах исходного кода, компилируемых в exe-файл, требуется только одна `Sub Main` процедура. В случаях, когда в коде имеется несколько классов с `Sub Main`ной процедурой, используйте параметр компилятора `-main`, чтобы указать, какой класс содержит процедуру `Sub Main`|
+|`-target:appcontainerexe`|Заставляет компилятор создать исполняемое приложение на основе Windows, которое должно выполняться в контейнере приложения. Этот параметр предназначен для использования в приложениях Магазина Windows 8. x.<br /><br /> Параметр **appcontainerexe** задает бит в поле "характеристики" [переносимого исполняемого](/windows/desktop/Debug/pe-format) файла. Этот бит указывает, что приложение должно запускаться в контейнере приложения. Если этот бит задан, возникает ошибка, если метод `CreateProcess` пытается запустить приложение вне контейнера приложения. Помимо этого параметра **-target: appcontainerexe** эквивалентно **-target: winexe**.<br /><br /> Исполняемый файл создается с расширением. exe.<br /><br /> Если не указано иное с помощью параметра `-out`, имя выходного файла принимает имя входного файла, содержащего процедуру `Sub Main`.<br /><br /> В файлах исходного кода, компилируемых в exe-файл, требуется только одна `Sub Main` процедура. Если код содержит более одного класса, который содержит `Sub Main` процедуру, используйте параметр компилятора `-main`, чтобы указать, какой класс содержит процедуру `Sub Main`|
+|`-target:winmdobj`|Заставляет компилятор создать промежуточный файл, который можно преобразовать в среда выполнения Windows двоичный файл (WinMD). Файл WinMD может использоваться в коде JavaScript и C++ Programs в дополнение к программам, управляемым на языке программирования.<br /><br /> Промежуточный файл создается с расширением winmdobj.<br /><br /> Если не указано иное с помощью параметра `-out`, имя выходного файла принимает имя первого входного файла. `Sub Main` процедура не требуется.<br /><br /> Winmdobj-файл предназначен для использования в качестве входных данных для средства экспорта <xref:Microsoft.Build.Tasks.WinMDExp> для создания файла метаданных Windows (WinMD). Файл WinMD имеет расширение WinMD и содержит как код из исходной библиотеки, так и определения WinMD, используемые JavaScript, C++и среда выполнения Windows.|
 
-Unless you specify `-target:module`, `-target` causes a .NET Framework assembly manifest to be added to an output file.
+Если не указано `-target:module`, `-target` приводит к добавлению манифеста .NET Framework сборки в выходной файл.
 
-Each instance of Vbc.exe produces, at most, one output file. If you specify a compiler option such as `-out` or `-target` more than one time, the last one the compiler processes is put into effect. Information about all files in a compilation is added to the manifest. All output files except those created with `-target:module` contain assembly metadata in the manifest. Use [Ildasm.exe (IL Disassembler)](../../../framework/tools/ildasm-exe-il-disassembler.md) to view the metadata in an output file.
+Каждый экземпляр vbc. exe создает (не более одного) выходного файла. Если указать параметр компилятора, например `-out` или `-target` более одного раза, будет применен последний процесс компилятора. Сведения о всех файлах в компиляции добавляются в манифест. Все выходные файлы, за исключением созданных с `-target:module`, содержат метаданные сборки в манифесте. Для просмотра метаданных в выходном файле используйте [Ildasm. exe (ДИЗАССЕМБЛЕР IL)](../../../framework/tools/ildasm-exe-il-disassembler.md) .
 
 Краткой формой `-target` является `-t`.
 
-### <a name="to-set--target-in-the-visual-studio-ide"></a>To set -target in the Visual Studio IDE
+### <a name="to-set--target-in-the-visual-studio-ide"></a>Установка параметра-Target в интегрированной среде разработки Visual Studio
 
 1. Выберите проект в **Обозревателе решений**. В меню **Проект** выберите пункт **Свойства**.
 
 2. Перейдите на вкладку **Приложение** .
 
-3. Modify the value in the **Application Type** box.
+3. Измените значение в поле **Тип приложения** .
 
 ## <a name="example"></a>Пример
 
-The following code compiles `in.vb`, creating `in.dll`:
+Следующий код компилирует `in.vb`, создавая `in.dll`:
 
 ```console
 vbc -target:library in.vb
@@ -63,7 +63,7 @@ vbc -target:library in.vb
 - [Компилятор Visual Basic с интерфейсом командной строки](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-main](../../../visual-basic/reference/command-line-compiler/main.md)
 - [-out (Visual Basic)](../../../visual-basic/reference/command-line-compiler/out.md)
-- [-reference (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)
+- [-Reference (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)
 - [-addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)
 - [-moduleassemblyname](../../../visual-basic/reference/command-line-compiler/moduleassemblyname.md)
 - [Сборки в .NET](../../../standard/assembly/index.md)

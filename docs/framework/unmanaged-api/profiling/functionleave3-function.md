@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74427438"
 ---
 # <a name="functionleave3-function"></a>Функция FunctionLeave3
-Notifies the profiler that control is being returned from a function.  
+Уведомляет профилировщик о том, что управление возвращается из функции.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -32,33 +32,33 @@ void __stdcall FunctionLeave3(FunctionOrRemappedID functionOrRemappedID);
   
 ## <a name="parameters"></a>Параметры  
  `functionOrRemappedID`  
- [in] The identifier of the function from which control is returned.  
+ окне Идентификатор функции, из которой возвращается элемент управления.  
   
-## <a name="remarks"></a>Заметки  
- The `FunctionLeave3` callback function notifies the profiler as functions are being called, but does not support return value inspection. Use the [ICorProfilerInfo3::SetEnterLeaveFunctionHooks3 method](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-setenterleavefunctionhooks3-method.md) to register your implementation of this function.  
+## <a name="remarks"></a>Примечания  
+ Функция обратного вызова `FunctionLeave3` уведомляет профилировщик о вызове функций, но не поддерживает проверку возвращаемого значения. Чтобы зарегистрировать реализацию этой функции, используйте [метод ICorProfilerInfo3:: SetEnterLeaveFunctionHooks3](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-setenterleavefunctionhooks3-method.md) .  
   
- The `FunctionLeave3` function is a callback; you must implement it. The implementation must use the `__declspec(naked)` storage-class attribute.  
+ Функция `FunctionLeave3` является обратным вызовом. его необходимо реализовать. Реализация должна использовать атрибут класса хранения `__declspec(naked)`.  
   
- The execution engine does not save any registers before calling this function.  
+ Подсистема выполнения не сохраняет никакие регистры перед вызовом этой функции.  
   
-- On entry, you must save all registers that you use, including those in the floating-point unit (FPU).  
+- Во время записи необходимо сохранить все используемые регистры, включая те, которые находятся в блоке с плавающей запятой (FPU).  
   
-- On exit, you must restore the stack by popping off all the parameters that were pushed by its caller.  
+- При выходе необходимо восстановить стек, выключив все параметры, которые были переданы его вызывающим.  
   
- The implementation of `FunctionLeave3` should not block, because it will delay garbage collection. The implementation should not attempt a garbage collection, because the stack may not be in a garbage collection-friendly state. If a garbage collection is attempted, the runtime will block until `FunctionLeave3` returns.  
+ Реализация `FunctionLeave3` не должна блокироваться, так как она приведет к задержке сборки мусора. Реализация не должна пытаться выполнить сборку мусора, так как стек может не находиться в состоянии, удобном для сборки мусора. Если выполняется сборка мусора, среда выполнения блокируется до тех пор, пока не будет возвращено `FunctionLeave3`.  
   
- The `FunctionLeave3` function must not call into managed code or cause a managed memory allocation in any way.  
+ Функция `FunctionLeave3` не должна вызывать управляемый код или вызывать управляемое выделение памяти каким-либо образом.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl  
+ **Заголовок:** CorProf. idl  
   
  **Библиотека:** CorGuids.lib  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [FunctionEnter3](../../../../docs/framework/unmanaged-api/profiling/functionenter3-function.md)
 - [FunctionTailcall3](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3-function.md)

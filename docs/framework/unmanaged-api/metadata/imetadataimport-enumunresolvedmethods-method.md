@@ -38,35 +38,35 @@ HRESULT EnumUnresolvedMethods (
   
 ## <a name="parameters"></a>Параметры  
  `phEnum`  
- [in, out] A pointer to the enumerator. This must be NULL for the first call of this method.  
+ [вход, выход] Указатель на перечислитель. При первом вызове этого метода это значение должно быть равно NULL.  
   
  `rMethods`  
- [out] The array used to store the MemberDef tokens.  
+ заполняет Массив, используемый для хранения маркеров Мембердеф.  
   
  `cMax`  
  [in] Максимальный размер массива `rMethods`.  
   
  `pcTokens`  
- [out] The number of MemberDef tokens returned in `rMethods`.  
+ заполняет Число маркеров Мембердеф, возвращаемых в `rMethods`.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
   
 |HRESULT|Описание|  
 |-------------|-----------------|  
-|`S_OK`|`EnumUnresolvedMethods` returned successfully.|  
-|`S_FALSE`|There are no tokens to enumerate. In that case, `pcTokens` is zero.|  
+|`S_OK`|`EnumUnresolvedMethods` успешно возвращено.|  
+|`S_FALSE`|Нет токенов для перечисления. В этом случае `pcTokens` равно нулю.|  
   
 ## <a name="remarks"></a>Заметки  
- An unresolved method is one that has been declared but not implemented. A method is included in the enumeration if the method is marked `miForwardRef` and either `mdPinvokeImpl` or `miRuntime` is set to zero. In other words, an unresolved method is a class method that is marked `miForwardRef` but which is not implemented in unmanaged code (reached via PInvoke) nor implemented internally by the runtime itself  
+ Неразрешенный метод — это тот, который был объявлен, но не реализован. Метод включается в перечисление, если метод помечается как `miForwardRef` и `mdPinvokeImpl` или `miRuntime` имеет нулевое значение. Иными словами, неразрешенный метод — это метод класса, который помечается как `miForwardRef`, но не реализован в неуправляемом коде (достигается через PInvoke) и не реализуется внутри самой среды выполнения.  
   
- The enumeration excludes all methods that are defined either at module scope (globals) or in interfaces or abstract classes.  
+ Перечисление исключает все методы, определенные либо в области видимости модуля (Globals), либо в интерфейсах или в абстрактных классах.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Заголовок:** COR. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

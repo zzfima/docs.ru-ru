@@ -37,20 +37,20 @@ HRESULT GetSigFromToken (
   
 ## <a name="parameters"></a>Параметры  
  `mdSig`  
- [in] The token to return the binary metadata signature for.  
+ окне Токен, для которого возвращается сигнатура двоичных метаданных.  
   
  `ppvSig`  
- [out] A pointer to the returned metadata signature.  
+ заполняет Указатель на возвращаемую сигнатуру метаданных.  
   
  `pcbSig`  
- [out] The size in bytes of the binary metadata signature.  
+ заполняет Размер в байтах двоичной подписи метаданных.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Заголовок:** COR. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

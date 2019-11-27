@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428008"
 ---
 # <a name="isymunmanagedwriterdefinelocalvariable-method"></a>Метод ISymUnmanagedWriter::DefineLocalVariable
-Определяет одну переменную в текущей лексической области видимости. This method can be called multiple times for a variable of the same name that has multiple homes throughout a scope. In this case, however, the values of the `startOffset` and `endOffset` parameters must not overlap.  
+Определяет одну переменную в текущей лексической области видимости. Этот метод может вызываться несколько раз для переменной с тем же именем, которая имеет несколько домов в пределах области. Однако в этом случае значения параметров `startOffset` и `endOffset` не должны перекрываться.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -43,40 +43,40 @@ HRESULT DefineLocalVariable(
   
 ## <a name="parameters"></a>Параметры  
  `name`  
- [in] A pointer to a `WCHAR` that defines the local variable name.  
+ окне Указатель на `WCHAR`, который определяет имя локальной переменной.  
   
  `attributes`  
- [in] The local variable attributes.  
+ окне Атрибуты локальной переменной.  
   
  `cSig`  
- [in] A `ULONG32` that indicates the size, in bytes, of the `signature` buffer.  
+ окне `ULONG32`, указывающий размер буфера `signature` в байтах.  
   
  `signature`  
- [in] The local variable signature.  
+ окне Сигнатура локальной переменной.  
   
  `addrKind`  
- [in] The address type.  
+ окне Тип адреса.  
   
  `addr1`  
- [in] The first address for the parameter specification.  
+ окне Первый адрес для спецификации параметра.  
   
  `addr2`  
- [in] The second address for the parameter specification.  
+ окне Второй адрес для спецификации параметра.  
   
  `addr3`  
- [in] The third address for the parameter specification.  
+ окне Третий адрес для спецификации параметра.  
   
  `startOffset`  
- [in] The start offset for the variable. Этот параметр является необязательным. If it is 0, this parameter is ignored and the variable is defined throughout the entire scope. If it is a nonzero value, the variable falls within the offsets of the current scope.  
+ окне Начальное смещение для переменной. Этот параметр является необязательным. Если значение равно 0, этот параметр не учитывается, и переменная определяется всей областью. Если это ненулевое значение, переменная попадает в диапазон смещений текущей области.  
   
  `endOffset`  
- [in] The end offset for the variable. Этот параметр является необязательным. If it is 0, this parameter is ignored and the variable is defined throughout the entire scope. If it is a nonzero value, the variable falls within the offsets of the current scope.  
+ окне Конечное смещение для переменной. Этот параметр является необязательным. Если значение равно 0, этот параметр не учитывается, и переменная определяется всей областью. Если это ненулевое значение, переменная попадает в диапазон смещений текущей области.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK, если метод выполнен. в противном случае E_FAIL или другой код ошибки.  
   
 ## <a name="requirements"></a>Требования  
- **Header:** CorSym.idl, CorSym.h  
+ **Заголовок:** Корсим. idl, Корсим. h  
   
 ## <a name="see-also"></a>См. также
 

@@ -1,5 +1,5 @@
 ---
-title: 'How to: Control Namespace Prefixes (LINQ to XML)'
+title: Руководство. Управление префиксами пространств имен (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 2fcf28a5-31b6-409d-84ea-27c22f71fc9f
 ms.openlocfilehash: 5ba415452a8671466c3a4c71a88731e5bd3cda60
@@ -15,7 +15,7 @@ ms.locfileid: "74348376"
 ## <a name="example"></a>Пример  
   
 ### <a name="description"></a>Описание  
- В этом примере объявляются два пространства имен. It specifies that the `http://www.adventure-works.com` namespace has the prefix `aw`, and that the `www.fourthcoffee.com` namespace has the prefix of `fc`.  
+ В этом примере объявляются два пространства имен. Он указывает, что `http://www.adventure-works.com` пространство имен содержит префикс `aw`, а пространство имен `www.fourthcoffee.com` имеет префикс `fc`.  
   
 ### <a name="code"></a>Код  
   
@@ -55,4 +55,4 @@ End Module
   
 ## <a name="see-also"></a>См. также
 
-- [Namespaces Overview (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)
+- [Общие сведения о пространствах имен (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)

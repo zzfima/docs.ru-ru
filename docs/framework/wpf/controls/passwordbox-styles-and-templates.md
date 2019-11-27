@@ -24,7 +24,7 @@ ms.locfileid: "74283463"
 
 В следующей таблице перечислены именованные части для элемента управления <xref:System.Windows.Controls.PasswordBox>.
 
-|Отделение|Type|Описание|
+|Отделение|Тип|Описание|
 |-|-|-|
 |PART_ContentHost|<xref:System.Windows.FrameworkElement>|Визуальный элемент, который может содержать <xref:System.Windows.FrameworkElement>. Текст <xref:System.Windows.Controls.PasswordBox> отображается в этом элементе.|
 

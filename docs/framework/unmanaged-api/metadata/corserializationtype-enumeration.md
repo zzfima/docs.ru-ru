@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74432870"
 ---
 # <a name="corserializationtype-enumeration"></a>Перечисление CorSerializationType
-Specifies how an object is serialized by the common language runtime.  
+Указывает способ сериализации объекта средой CLR.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -57,34 +57,34 @@ typedef enum CorSerializationType {
   
 |Член|Описание|  
 |------------|-----------------|  
-|`SERIALIZATION_TYPE_UNDEFINED`|Serialization of the object is undefined.|  
-|`SERIALIZATION_TYPE_BOOLEAN`|Object is serialized as a Boolean type|  
-|`SERIALIZATION_TYPE_CHAR`|Object is serialized as a character type.|  
-|`SERIALIZATION_TYPE_I1`|Object is serialized as a signed 1-byte integer.|  
-|`SERIALIZATION_TYPE_U1`|Object is serialized as an unsigned 1-byte integer.|  
-|`SERIALIZATION_TYPE_I2`|Object is serialized as a signed 2-byte integer.|  
-|`SERIALIZATION_TYPE_U2`|Object is serialized as an unsigned 2-byte integer.|  
-|`SERIALIZATION_TYPE_I4`|Object is serialized as a signed 4-byte integer.|  
-|`SERIALIZATION_TYPE_U4`|Object is serialized as an unsigned 4-byte integer.|  
-|`SERIALIZATION_TYPE_I8`|Object is serialized as a signed 8-byte integer.|  
-|`SERIALIZATION_TYPE_U8`|Object is serialized as an unsigned 8-byte integer.|  
-|`SERIALIZATION_TYPE_R4`|Object is serialized as a 4-byte floating point.|  
-|`SERIALIZATION_TYPE_R8`|Object is serialized as an 8-byte floating point.|  
-|`SERIALIZATION_TYPE_STRING`|Object is serialized as a System.String type.|  
-|`SERIALIZATION_TYPE_SZARRAY`|Object is serialized as a single-dimensional, zero lower-bound array.|  
-|`SERIALIZATION_TYPE_TYPE`|Object is serialized as a generic type.|  
-|`SERIALIZATION_TYPE_TAGGED_OBJECT`|Object is serialized as a tagged object.|  
-|`SERIALIZATION_TYPE_FIELD`|Object is serialized as a field.|  
-|`SERIALIZATION_TYPE_PROPERTY`|Object is serialized as a property.|  
-|`SERIALIZATION_TYPE_ENUM`|Object is serialized as an enumeration.|  
+|`SERIALIZATION_TYPE_UNDEFINED`|Сериализация объекта не определена.|  
+|`SERIALIZATION_TYPE_BOOLEAN`|Объект сериализуется как логический тип|  
+|`SERIALIZATION_TYPE_CHAR`|Объект сериализуется как символьный тип.|  
+|`SERIALIZATION_TYPE_I1`|Объект сериализуется как целое число со знаком длиной 1 байт.|  
+|`SERIALIZATION_TYPE_U1`|Объект сериализуется как 1-байтовое целое число без знака.|  
+|`SERIALIZATION_TYPE_I2`|Объект сериализуется как 2-байтовое целое число со знаком.|  
+|`SERIALIZATION_TYPE_U2`|Объект сериализуется как целое число без знака (2 байта).|  
+|`SERIALIZATION_TYPE_I4`|Объект сериализуется как 4-байтовое целое число со знаком.|  
+|`SERIALIZATION_TYPE_U4`|Объект сериализуется как 4-байтовое целое число без знака.|  
+|`SERIALIZATION_TYPE_I8`|Объект сериализуется как 8-байтовое целое число со знаком.|  
+|`SERIALIZATION_TYPE_U8`|Объект сериализуется как 8-байтное целое число без знака.|  
+|`SERIALIZATION_TYPE_R4`|Объект сериализуется как 4-байтовое значение с плавающей запятой.|  
+|`SERIALIZATION_TYPE_R8`|Объект сериализуется как 8-байтовое число с плавающей запятой.|  
+|`SERIALIZATION_TYPE_STRING`|Объект сериализуется как тип System. String.|  
+|`SERIALIZATION_TYPE_SZARRAY`|Объект сериализуется как одномерный массив с нулевой нижней границей.|  
+|`SERIALIZATION_TYPE_TYPE`|Объект сериализуется как универсальный тип.|  
+|`SERIALIZATION_TYPE_TAGGED_OBJECT`|Объект сериализуется как объект с тегами.|  
+|`SERIALIZATION_TYPE_FIELD`|Объект сериализуется как поле.|  
+|`SERIALIZATION_TYPE_PROPERTY`|Объект сериализуется как свойство.|  
+|`SERIALIZATION_TYPE_ENUM`|Объект сериализуется как перечисление.|  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorHdr.h  
+ **Заголовок:** Корхдр. h  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Перечисления метаданных](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

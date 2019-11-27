@@ -14,96 +14,96 @@ ms.locfileid: "74349165"
 ---
 # <a name="windows-forms-application-basics-visual-basic"></a>Основы разработки приложений Windows Forms (Visual Basic)
 
-An important part of Visual Basic is the ability to create Windows Forms applications that run locally on users' computers. You can use Visual Studio to create the application and user interface using Windows Forms. A Windows Forms application is built on classes from the <xref:System.Windows.Forms> namespace.
+Важной частью Visual Basic является возможность создания Windows Forms приложений, которые выполняются локально на компьютерах пользователей. Visual Studio можно использовать для создания приложения и пользовательского интерфейса с помощью Windows Forms. Приложение Windows Forms построено на основе классов из пространства имен <xref:System.Windows.Forms>.
 
-## <a name="designing-windows-forms-applications"></a>Designing Windows Forms Applications
+## <a name="designing-windows-forms-applications"></a>Разработка Windows Forms приложений
 
-You can create Windows Forms and Windows service applications with Visual Studio. Дополнительные сведения см. в следующих разделах:
+С помощью Visual Studio можно создавать Windows Forms и приложения служб Windows. Дополнительные сведения см. в следующих разделах:
 
-- [Getting Started with Windows Forms](../../../framework/winforms/getting-started-with-windows-forms.md). Provides information on how to create and program Windows Forms.
+- [Начало работы с Windows Forms](../../../framework/winforms/getting-started-with-windows-forms.md). Содержит сведения о том, как создавать и программировать Windows Forms.
 
-- [Windows Forms Controls](../../../framework/winforms/controls/index.md). Collection of topics detailing the use of Windows Forms controls.
+- [Windows Forms элементы управления](../../../framework/winforms/controls/index.md). Набор разделов с подробными сведениями об использовании элементов управления Windows Forms.
 
-- [Windows Service Applications](../../../framework/windows-services/index.md). Lists topics that explain how to create Windows services.
+- [Приложения службы Windows](../../../framework/windows-services/index.md). Содержит список разделов, в которых объясняется, как создавать службы Windows.
 
 ## <a name="building-rich-interactive-user-interfaces"></a>Построение многофункциональных интерактивных пользовательских интерфейсов
 
-Windows Forms is the smart-client component of the .NET Framework, a set of managed libraries that enable common application tasks such as reading and writing to the file system. Using a development environment like Visual Studio, you can create Windows Forms applications that display information, request input from users, and communicate with remote computers over a network.
+Windows Forms является компонентом интеллектуального клиента .NET Framework, набором управляемых библиотек, которые позволяют выполнять стандартные задачи приложения, такие как чтение и запись в файловой системе. С помощью среды разработки, такой как Visual Studio, можно создавать Windows Forms приложения, которые отображают информацию, запрашивают ввод от пользователей и обмениваются данными с удаленными компьютерами по сети.
 
-In Windows Forms, a form is a visual surface on which you display information to the user. You commonly build Windows Forms applications by placing controls on forms and developing responses to user actions, such as mouse clicks or key presses. *Элемент управления* — это отдельный элемент пользовательского интерфейса, предназначенный для отображения или ввода данных.
+В Windows Forms форма — это видимая поверхность, на которой выводится информация для пользователя. Обычно Windows Forms приложения создаются путем размещения элементов управления в формах и разработки ответов на действия пользователей, таких как щелчок мыши или нажатие клавиш. *Элемент управления* — это отдельный элемент пользовательского интерфейса, предназначенный для отображения или ввода данных.
 
-### <a name="events"></a>события
+### <a name="events"></a>События
 
-When a user does something to your form or one of its controls, it generates an event. Приложение реагирует на эти события с помощью кода и обрабатывает события при их возникновении. Подробнее см. в разделе [Создание обработчиков событий в Windows Forms](../../../framework/winforms/creating-event-handlers-in-windows-forms.md).
+Когда пользователь делает что-либо в форме или одном из ее элементов управления, он создает событие. Приложение реагирует на эти события с помощью кода и обрабатывает события при их возникновении. Подробнее см. в разделе [Создание обработчиков событий в Windows Forms](../../../framework/winforms/creating-event-handlers-in-windows-forms.md).
 
 ### <a name="controls"></a>Элементы управления
 
-Windows Forms contains a variety of controls that you can place on forms: controls that display text boxes, buttons, drop-down boxes, radio buttons, and even Web pages. Список всех элементов управления, которые можно использовать в форме, представлены в разделе [Элементы управления для использования в формах Windows Forms](../../../framework/winforms/controls/controls-to-use-on-windows-forms.md). Если существующий элемент управления не удовлетворяет потребностям, в Windows Forms можно создать пользовательские элементы управления с помощью класса <xref:System.Windows.Forms.UserControl>.
+Windows Forms содержит разнообразные элементы управления, которые можно разместить в формах: элементы управления, которые отображают текстовые поля, кнопки, раскрывающиеся списки, переключатели и даже веб-страницы. Список всех элементов управления, которые можно использовать в форме, представлены в разделе [Элементы управления для использования в формах Windows Forms](../../../framework/winforms/controls/controls-to-use-on-windows-forms.md). Если существующий элемент управления не удовлетворяет потребностям, в Windows Forms можно создать пользовательские элементы управления с помощью класса <xref:System.Windows.Forms.UserControl>.
 
-В состав Windows Forms входят многофункциональные элементы пользовательского интерфейса, позволяющие воссоздавать возможности таких сложных приложений, как Microsoft Office. Using the <xref:System.Windows.Forms.ToolStrip> and <xref:System.Windows.Forms.MenuStrip> control, you can create toolbars and menus that contain text and images, display submenus, and host other controls such as text boxes and combo boxes.
+В состав Windows Forms входят многофункциональные элементы пользовательского интерфейса, позволяющие воссоздавать возможности таких сложных приложений, как Microsoft Office. С помощью элемента управления <xref:System.Windows.Forms.ToolStrip> и <xref:System.Windows.Forms.MenuStrip> можно создавать панели инструментов и меню, содержащие текст и изображения, отображать подменю и размещать другие элементы управления, такие как текстовые поля и поля со списком.
 
-With the Visual Studio drag-and-drop forms designer, you can easily create Windows Forms applications: just select the controls with your cursor and place them where you want on the form. The designer provides tools such as grid lines and "snap lines" to take the hassle out of aligning controls. And whether you use Visual Studio or compile at the command line, you can use the <xref:System.Windows.Forms.FlowLayoutPanel>, <xref:System.Windows.Forms.TableLayoutPanel> and <xref:System.Windows.Forms.SplitContainer> controls to create advanced form layouts with minimal time and effort.
+С помощью конструктора форм перетаскивания Visual Studio можно легко создавать Windows Forms приложения: просто выберите элементы управления с курсором и поместите их в нужное место в форме. Конструктор предоставляет такие средства, как линии сетки и «линии привязки», которые позволяют избежать выравнивания элементов управления. А также при использовании Visual Studio или компиляции из командной строки можно использовать элементы управления <xref:System.Windows.Forms.FlowLayoutPanel>, <xref:System.Windows.Forms.TableLayoutPanel> и <xref:System.Windows.Forms.SplitContainer> для создания расширенных макетов форм с минимальными затратами времени и усилий.
 
-### <a name="custom-ui-elements"></a>Custom UI Elements
+### <a name="custom-ui-elements"></a>Пользовательские элементы пользовательского интерфейса
 
-Finally, if you must create your own custom UI elements, the <xref:System.Drawing> namespace contains all of the classes you need to render lines, circles, and other shapes directly on a form.
+Наконец, если необходимо создать собственные настраиваемые элементы пользовательского интерфейса, то пространство имен <xref:System.Drawing> содержит все классы, необходимые для отрисовки линий, кругов и других фигур непосредственно в форме.
 
-For step-by-step information about using these features, see the following Help topics.
+Пошаговые инструкции по использованию этих функций см. в следующих разделах справки.
 
-|Целевой тип|См.|
+|Чтобы|См. разделы|
 |--------|---------|
-|Create a new Windows Forms application with Visual Studio|[Tutorial 1: Create a picture viewer](/visualstudio/ide/tutorial-1-create-a-picture-viewer)|
-|Use controls on forms|[Практическое руководство. Добавление элементов управления в формы Windows Forms](../../../framework/winforms/controls/how-to-add-controls-to-windows-forms.md)|
-|Create graphics with <xref:System.Drawing>|[Приступая к программированию графики](../../../framework/winforms/advanced/getting-started-with-graphics-programming.md)|
-|Create custom controls|[Практическое руководство. Наследование класса UserControl](../../../framework/winforms/controls/how-to-inherit-from-the-usercontrol-class.md)|
+|Создание нового Windows Forms приложения с помощью Visual Studio|[Учебник 1. Создание средства просмотра изображений](/visualstudio/ide/tutorial-1-create-a-picture-viewer)|
+|Использование элементов управления в формах|[Практическое руководство. Добавление элементов управления в формы Windows Forms](../../../framework/winforms/controls/how-to-add-controls-to-windows-forms.md)|
+|Создание графики с помощью <xref:System.Drawing>|[Приступая к программированию графики](../../../framework/winforms/advanced/getting-started-with-graphics-programming.md)|
+|Создание настраиваемых элементов управления|[Практическое руководство. Наследование класса UserControl](../../../framework/winforms/controls/how-to-inherit-from-the-usercontrol-class.md)|
 
 ## <a name="displaying-and-manipulating-data"></a>Отображение и обработка данных
 
-Во многих приложениях нужно отображать данные из базы данных, XML-файла, веб-службы XML или другого источника данных. Windows Forms provides a flexible control called the <xref:System.Windows.Forms.DataGridView> control for rendering such tabular data in a traditional row and column format, so that every piece of data occupies its own cell. Using <xref:System.Windows.Forms.DataGridView> you can customize the appearance of individual cells, lock arbitrary rows and columns in place, and display complex controls inside cells, among other features.
+Во многих приложениях нужно отображать данные из базы данных, XML-файла, веб-службы XML или другого источника данных. Windows Forms предоставляет гибкий элемент управления, называемый <xref:System.Windows.Forms.DataGridView>ным элементом управления для отрисовки таких табличных данных в традиционном формате строк и столбцов, чтобы каждый фрагмент данных занимал свою собственную ячейку. С помощью <xref:System.Windows.Forms.DataGridView> можно настраивать внешний вид отдельных ячеек, блокировать произвольные строки и столбцы на месте и отображать сложные элементы управления внутри ячеек, помимо других функций.
 
-При использовании интеллектуальных клиентов Windows Forms можно легко подключаться к источникам данных по сети. The <xref:System.Windows.Forms.BindingSource> component, new with Windows Forms in Visual Studio 2005 and the .NET Framework 2.0, represents a connection to a data source, and exposes methods for binding data to controls, navigating to the previous and next records, editing records, and saving changes back to the original source. Элемент управления <xref:System.Windows.Forms.BindingNavigator> предоставляет простой интерфейс на основе компонента <xref:System.Windows.Forms.BindingSource> для перехода между записями.
+При использовании интеллектуальных клиентов Windows Forms можно легко подключаться к источникам данных по сети. Компонент <xref:System.Windows.Forms.BindingSource>, новый с Windows Forms в Visual Studio 2005 и .NET Framework 2,0, представляет соединение с источником данных и предоставляет методы для привязки данных к элементам управления, перехода к предыдущей и следующей записям, изменения записей и сохранения изменений в исходном источнике. Элемент управления <xref:System.Windows.Forms.BindingNavigator> предоставляет простой интерфейс на основе компонента <xref:System.Windows.Forms.BindingSource> для перехода между записями.
 
-### <a name="data-bound-controls"></a>Data-Bound Controls
+### <a name="data-bound-controls"></a>Элементы управления с привязкой к данным
 
-You can create data-bound controls easily using the Data Sources window, which displays data sources such as databases, Web services, and objects in your project. Создавать элементы управления с привязкой к данным можно путем перетаскивания объектов из этого окна в формы проекта. Также можно связывать существующие элементы управления с данными, перетаскивая объекты из окна "Источники данных" в существующие элементы управления.
+Можно легко создавать элементы управления с привязкой к данным с помощью окна Источники данных, в котором отображаются такие источники данных, как базы данных, веб-службы и объекты в проекте. Создавать элементы управления с привязкой к данным можно путем перетаскивания объектов из этого окна в формы проекта. Также можно связывать существующие элементы управления с данными, перетаскивая объекты из окна "Источники данных" в существующие элементы управления.
 
-### <a name="settings"></a>Параметры
+### <a name="settings"></a>Настройки
 
-Another type of data binding you can manage in Windows Forms is settings. Most smart-client applications must retain some information about their run-time state, such as the last-known size of forms, and retain user-preference data, such as default locations for saved files. The application-settings feature addresses these requirements by providing an easy way to store both types of settings on the client computer. Once defined using either Visual Studio or a code editor, these settings are persisted as XML and automatically read back into memory at run time.
+Другой тип привязки к данным в формах Windows Forms — это параметры. Большинство интеллектуальных клиентских приложений должны сохранять некоторые сведения о состоянии времени выполнения, такие как последний известный размер форм, и сохранять данные предпочтений пользователя, такие как расположение по умолчанию для сохраненных файлов. Функция параметров приложения решает эти требования, предоставляя простой способ хранения параметров обоих типов на клиентском компьютере. После определения с помощью Visual Studio или редактора кода эти параметры сохраняются в формате XML и автоматически считываются в память во время выполнения.
 
-For step-by-step information about using these features, see the following Help topics.
+Пошаговые инструкции по использованию этих функций см. в следующих разделах справки.
 
-|Целевой тип|См.|
+|Чтобы|См. разделы|
 |--------|---------|
-|Use the <xref:System.Windows.Forms.BindingSource> component|[Практическое руководство. Связывание элементов управления Windows Forms с компонентом BindingSource с помощью конструктора](../../../framework/winforms/controls/bind-wf-controls-with-the-bindingsource.md)|
-|Work with ADO.NET data sources|[Практическое руководство. Сортировка и фильтрация данных ADO.NET с помощью компонента BindingSource в Windows Forms](../../../framework/winforms/controls/sort-and-filter-ado-net-data-with-wf-bindingsource-component.md)|
-|Use the Data Sources window|[Пошаговое руководство. Отображение данных на форме в приложении Windows](/visualstudio/data-tools/accessing-data-in-visual-studio)|
+|Использование компонента <xref:System.Windows.Forms.BindingSource>|[Практическое руководство. Связывание элементов управления Windows Forms с компонентом BindingSource с помощью конструктора](../../../framework/winforms/controls/bind-wf-controls-with-the-bindingsource.md)|
+|Работа с источниками данных ADO.NET|[Практическое руководство. Сортировка и фильтрация данных ADO.NET с помощью компонента BindingSource в Windows Forms](../../../framework/winforms/controls/sort-and-filter-ado-net-data-with-wf-bindingsource-component.md)|
+|Использование окна "источники данных"|[Пошаговое руководство. Отображение данных на форме в приложении Windows](/visualstudio/data-tools/accessing-data-in-visual-studio)|
 
 ## <a name="deploying-applications-to-client-computers"></a>Развертывание приложений на клиентских компьютерах
 
-Once you have written your application, you must send it to your users so that they can install and run it on their own client computers. Using the ClickOnce technology, you can deploy your applications from within Visual Studio by using just a few clicks and provide users with a URL pointing to your application on the Web. ClickOnce manages all of the elements and dependencies in your application and ensures that the application is properly installed on the client computer.
+После написания приложения необходимо отправить его пользователям, чтобы они могли установить и запустить его на своих клиентских компьютерах. С помощью технологии ClickOnce можно развертывать приложения в Visual Studio, используя всего несколько щелчков мышью и предоставляющих пользователям URL-адрес, указывающий на ваше приложение в Интернете. Технология ClickOnce управляет всеми элементами и зависимостями в приложении и обеспечивает правильную установку приложения на клиентском компьютере.
 
-ClickOnce applications can be configured to run only when the user is connected to the network, or to run both online and offline. When you specify that an application should support offline operation, ClickOnce adds a link to your application in the user's **Start** menu, so that the user can open it without using the URL.
+Приложения ClickOnce можно настроить для запуска только в том случае, если пользователь подключен к сети или работает как в сети, так и в автономном режиме. При указании того, что приложение должно поддерживать автономную работу, ClickOnce добавляет ссылку на приложение в меню " **Пуск** " пользователя, чтобы пользователь мог открыть его без использования URL-адреса.
 
-Когда вы обновляете приложение, на веб-сервере публикуется новый манифест развертывания и новая копия приложения. ClickOnce detects that there is an update available and upgrades the user's installation; no custom programming is required to update old assemblies.
+Когда вы обновляете приложение, на веб-сервере публикуется новый манифест развертывания и новая копия приложения. Технология ClickOnce обнаруживает, что доступно обновление, и обновляет установку пользователя; для обновления старых сборок не требуется пользовательское программирование.
 
-For a full introduction to ClickOnce, see [ClickOnce Security and Deployment](/visualstudio/deployment/clickonce-security-and-deployment). For step-by-step information about using these features, see the following Help topics:
+Полное введение в ClickOnce см. в статье [безопасность и развертывание ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment). Пошаговые инструкции по использованию этих функций см. в следующих разделах справки:
 
-|Целевой тип|См.|
+|Чтобы|См. разделы|
 |--------|---------|
-|Deploy an application with ClickOnce|[Практическое руководство. Публикация приложения ClickOnce с помощью мастера публикации](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)<br /><br /> [Разбор примера: развертывание вручную приложения ClickOnce](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)|
-|Update a ClickOnce deployment|[Практическое руководство. Управление обновлениями для ClickOnce-приложения](/visualstudio/deployment/how-to-manage-updates-for-a-clickonce-application)|
-|Manage security with ClickOnce|[Практическое руководство. Включение параметров безопасности ClickOnce-приложений](/visualstudio/deployment/how-to-enable-clickonce-security-settings)|
+|Развертывание приложения с помощью ClickOnce|[Практическое руководство. Публикация приложения ClickOnce с помощью мастера публикации](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)<br /><br /> [Разбор примера: развертывание вручную приложения ClickOnce](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)|
+|Обновление развертывания ClickOnce|[Практическое руководство. Управление обновлениями для ClickOnce-приложения](/visualstudio/deployment/how-to-manage-updates-for-a-clickonce-application)|
+|Управление безопасностью с помощью ClickOnce|[Практическое руководство. Включение параметров безопасности ClickOnce-приложений](/visualstudio/deployment/how-to-enable-clickonce-security-settings)|
 
 ## <a name="other-controls-and-features"></a>Другие элементы управления и возможности
 
-В Windows Forms имеется множество других возможностей, которые упрощают и ускоряют реализацию общих задач, таких как создание диалоговых окон, печать, добавление справки и документации, а также локализация приложений на различных языках. In addition, Windows Forms relies on the robust security system of the .NET Framework, enabling you to release more secure applications to your customers.
+В Windows Forms имеется множество других возможностей, которые упрощают и ускоряют реализацию общих задач, таких как создание диалоговых окон, печать, добавление справки и документации, а также локализация приложений на различных языках. Кроме того, Windows Forms полагается на надежную систему безопасности .NET Framework, что позволяет выпустить более безопасные приложения для клиентов.
 
-For step-by-step information about using these features, see the following Help topics:
+Пошаговые инструкции по использованию этих функций см. в следующих разделах справки:
 
-|Целевой тип|См.|
+|Чтобы|См. разделы|
 |--------|---------|
-|Print the contents of a form|[Практическое руководство. Печать графических изображений в Windows Forms](../../../framework/winforms/advanced/how-to-print-graphics-in-windows-forms.md)<br /><br /> [Практическое руководство. Печать многостраничных текстовых файлов в Windows Forms](../../../framework/winforms/advanced/how-to-print-a-multi-page-text-file-in-windows-forms.md)|
+|Печать содержимого формы|[Практическое руководство. Печать графических изображений в Windows Forms](../../../framework/winforms/advanced/how-to-print-graphics-in-windows-forms.md)<br /><br /> [Практическое руководство. Печать многостраничных текстовых файлов в Windows Forms](../../../framework/winforms/advanced/how-to-print-a-multi-page-text-file-in-windows-forms.md)|
 |Дополнительные сведения о безопасности форм Windows Forms|[Общие сведения о безопасности в Windows Forms](../../../framework/winforms/security-in-windows-forms-overview.md)|
 
 ## <a name="see-also"></a>См. также

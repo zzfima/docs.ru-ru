@@ -23,7 +23,7 @@ ms.locfileid: "74343614"
  *Выражение* представляет собой набор элементов значений в сочетании с операторами, результатом которого является новое значение. Операторы работают с элементами значений, выполняя вычисления, сравнения и другие операции.  
   
 ## <a name="types-of-operators"></a>Типы операторов  
- Visual Basic provides the following types of operators:  
+ Visual Basic предоставляет следующие типы операторов:  
   
 - [Арифметические операторы](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md) выполняют обычные вычисления с числовыми значениями, включая сдвиг их битовых шаблонов.  
   
@@ -60,10 +60,10 @@ ms.locfileid: "74343614"
   
  [!code-vb[VbVbalrOperators#56](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#56)]  
   
- In the preceding example, Visual Basic performs the operations in the expression on the right side of the assignment operator (`=`), then assigns the resulting value to the variable `x` on the left. С практической точки зрения в выражение можно объединять сколько угодно операторов, но следует учитывать [приоритет операторов в Visual Basic](../../../../visual-basic/language-reference/operators/operator-precedence.md) для получения желаемых результатов.  
+ В предыдущем примере Visual Basic выполняет операции в выражении с правой стороны оператора присваивания (`=`), затем присваивает результирующее значение переменной `x` слева. С практической точки зрения в выражение можно объединять сколько угодно операторов, но следует учитывать [приоритет операторов в Visual Basic](../../../../visual-basic/language-reference/operators/operator-precedence.md) для получения желаемых результатов.  
 
 ## <a name="see-also"></a>См. также
 
-- [Инструкции](../../../../visual-basic/language-reference/operators/index.md)
+- [Операторы](../../../../visual-basic/language-reference/operators/index.md)
 - [Эффективное сочетание операторов](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/efficient-combination-of-operators.md)
 - [Операторы](../../../../visual-basic/language-reference/statements/index.md)

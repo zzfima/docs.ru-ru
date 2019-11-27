@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74442326"
 ---
 # <a name="imetadatadispenseropenscope-method"></a>Метод IMetaDataDispenser::OpenScope
-Opens an existing, on-disk file and maps its metadata into memory.  
+Открывает существующий файл на диске и сопоставляет его метаданные с памятью.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,34 +38,34 @@ HRESULT OpenScope (
   
 ## <a name="parameters"></a>Параметры  
  `szScope`  
- [in] The name of the file to be opened. The file must contain common language runtime (CLR) metadata.  
+ окне Имя открываемого файла. Файл должен содержать метаданные среды CLR.  
   
  `dwOpenFlags`  
- [in] A value of the [CorOpenFlags](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md) enumeration to specify the mode (read, write, and so on) for opening.  
+ окне Значение перечисления [коропенфлагс](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md) , определяющее режим (чтение, запись и т. д.) для открытия.  
   
  `riid`  
- [in] The IID of the desired metadata interface to be returned; the caller will use the interface to import (read) or emit (write) metadata.  
+ окне Идентификатор IID требуемого интерфейса метаданных, который должен быть возвращен; вызывающий объект будет использовать интерфейс для импорта (чтения) или выдачи (записи) метаданных.  
   
- The value of `riid` must specify one of the "import" or "emit" interfaces. Valid values are IID_IMetaDataEmit, IID_IMetaDataImport, IID_IMetaDataAssemblyEmit, IID_IMetaDataAssemblyImport, IID_IMetaDataEmit2, or IID_IMetaDataImport2.  
+ Значение `riid` должно указывать один из интерфейсов "import" или "Emit". Допустимые значения: IID_IMetaDataEmit, IID_IMetaDataImport, IID_IMetaDataAssemblyEmit, IID_IMetaDataAssemblyImport, IID_IMetaDataEmit2 или IID_IMetaDataImport2.  
   
  `ppIUnk`  
- [out] The pointer to the returned interface.  
+ заполняет Указатель на возвращаемый интерфейс.  
   
 ## <a name="remarks"></a>Заметки  
- The in-memory copy of the metadata can be queried using methods from one of the "import" interfaces, or added to using methods from the one of the "emit" interfaces.  
+ Копию метаданных в памяти можно запросить с помощью методов из одного из интерфейсов "Импорт" или добавить к методам из одного из интерфейсов "выдачи".  
   
- If the target file does not contain CLR metadata, the `OpenScope` method will fail.  
+ Если целевой файл не содержит метаданные CLR, метод `OpenScope` завершится ошибкой.  
   
- In the .NET Framework version 1.0 and version 1.1, if a scope is opened with `dwOpenFlags` set to ofRead, it is eligible for sharing. That is, if subsequent calls to `OpenScope` pass in the name of a file that was previously opened, the existing scope is reused and a new set of data structures is not created. However, problems can arise due to this sharing.  
+ В .NET Framework версии 1,0 и 1,1, если область открыта с `dwOpenFlags` установлен в значение Офреад, она может предоставлять общий доступ. То есть, если последующие вызовы `OpenScope` передают имя ранее открытого файла, существующая область используется повторно, а новый набор структур данных не создается. Тем не менее проблемы могут возникать из-за этого общего доступа.  
   
- In the .NET Framework version 2.0, scopes opened with `dwOpenFlags` set to ofRead are no longer shared. Use the ofReadOnly value to allow the scope to be shared. When a scope is shared, queries that use "read/write" metadata interfaces will fail.  
+ В .NET Framework версии 2,0 области, открытые с `dwOpenFlags` установленным в Офреад, больше не являются общими. Используйте значение Офреадонли, чтобы разрешить общий доступ к области. При совместном использовании области запросы, использующие интерфейсы метаданных для чтения и записи, завершатся ошибкой.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Заголовок:** COR. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Библиотека:** Используется в качестве ресурса в MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -18,14 +18,14 @@ ms.locfileid: "74344120"
 ## <a name="remarks"></a>Заметки  
  Сведения о методах и свойствах объекта `My.Computer.Audio` см. в разделе <xref:Microsoft.VisualBasic.Devices.Audio>.  
   
- For more information, see [Playing Sounds](../../../visual-basic/developing-apps/programming/computer-resources/playing-sounds.md).  
+ Дополнительные сведения см. в разделе [Воспроизведение звуков](../../../visual-basic/developing-apps/programming/computer-resources/playing-sounds.md).  
   
 ## <a name="requirements"></a>Требования  
  **Пространство имен:** <xref:Microsoft.VisualBasic.Devices>  
   
  **Класс:** <xref:Microsoft.VisualBasic.Devices.Audio>  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **Сборка:** Библиотека времени выполнения Visual Basic (в Microsoft. VisualBasic. dll)  
   
 ## <a name="see-also"></a>См. также
 

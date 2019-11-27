@@ -17,17 +17,17 @@ ms.locfileid: "74343807"
 
 В подразделах этого раздела описаны директивы компилятора исходного кода Visual Basic.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
 
- [#Const Directive](../../../visual-basic/language-reference/directives/const-directive.md) -- Define a compiler constant  
+ [Директива #Const](../../../visual-basic/language-reference/directives/const-directive.md) — Определение константы компилятора  
   
- [#ExternalSource Directive](../../../visual-basic/language-reference/directives/externalsource-directive.md) -- Indicate a mapping between source lines and text external to the source  
+ [Директива #ExternalSource](../../../visual-basic/language-reference/directives/externalsource-directive.md) — указывает сопоставление между исходными строками и текстом, внешним по отношению к источнику  
   
- [#If...Then...#Else Directives](../../../visual-basic/language-reference/directives/if-then-else-directives.md) -- Compile selected blocks of code  
+ [#If... Then... #Else директивы](../../../visual-basic/language-reference/directives/if-then-else-directives.md) --компилировать выбранные блоки кода  
   
- [#Region Directive](../../../visual-basic/language-reference/directives/region-directive.md) -- Collapse and hide sections of code in the Visual Studio editor  
+ [Директива #Region](../../../visual-basic/language-reference/directives/region-directive.md) — сворачивание и скрытие разделов кода в редакторе Visual Studio  
   
- **#Disable, #Enable** -- Disable and enable specific warnings for regions of code.  
+ **#Disable, #Enable** — отключение и включение конкретных предупреждений для регионов кода.  
   
 ```vb  
 #Disable Warning BC42356 ' suppress warning about no awaits in this method  

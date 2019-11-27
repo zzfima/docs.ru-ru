@@ -9,7 +9,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353078"
 ---
-# <a name="how-to-debug-empty-query-results-sets-visual-basic"></a>How to: Debug Empty Query Results Sets (Visual Basic)
+# <a name="how-to-debug-empty-query-results-sets-visual-basic"></a>Как отладить пустые наборы результатов запроса (Visual Basic)
 
 Одной из наиболее типичных проблем при запросах к XML-деревьям является то, что, если XML-дерево содержит пространство имен по умолчанию, разработчик иногда пишет запрос так, как если бы XML-код не располагался в пространстве имен.
 
@@ -17,7 +17,7 @@ ms.locfileid: "74353078"
 
 Второй набор примеров показывает необходимые исправления для запроса XML в пространстве имен.
 
-For more information, see [Namespaces Overview (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).
+Дополнительные сведения см. в разделе [Общие сведения о пространствах имен (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).
 
 ## <a name="example"></a>Пример
 
@@ -54,7 +54,7 @@ End of result set
 
 Этот пример показывает создание XML в пространстве имен, а также запрос, код которого написан правильно.
 
-The solution is to declare and initialize a global default namespace. При этом все свойства XML помещаются в пространство имен по умолчанию. Для последующей правильной работы примера не требуется больше никаких изменений.
+Решением является объявление и инициализация глобального пространства имен по умолчанию. При этом все свойства XML помещаются в пространство имен по умолчанию. Для последующей правильной работы примера не требуется больше никаких изменений.
 
 ```vb
 Imports <xmlns="http://www.adventure-works.com">
@@ -94,4 +94,4 @@ End of result set
 
 ## <a name="see-also"></a>См. также
 
-- [Basic Queries (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+- [Основные запросы (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

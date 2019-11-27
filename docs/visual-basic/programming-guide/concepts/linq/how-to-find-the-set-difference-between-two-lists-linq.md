@@ -9,12 +9,12 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344589"
 ---
-# <a name="how-to-find-the-set-difference-between-two-lists-linq-visual-basic"></a>How to: Find the Set Difference Between Two Lists (LINQ) (Visual Basic)
+# <a name="how-to-find-the-set-difference-between-two-lists-linq-visual-basic"></a>Как найти разность множеств между двумя списками (LINQ) (Visual Basic)
 В этом примере показано, как использовать LINQ для сравнения двух списков строк и вывода тех строк, которые содержатся в файле names1.txt, но не в файле names2.txt.  
   
 ### <a name="to-create-the-data-files"></a>Создание файлов данных  
   
-1. Copy names1.txt and names2.txt to your solution folder as shown in [How to: Combine and Compare String Collections (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md).  
+1. Скопируйте names1. txt и names2. txt в папку решения, как показано в этой статьи [. объединение и сравнение коллекций строк (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md).  
   
 ## <a name="example"></a>Пример  
   
@@ -51,11 +51,11 @@ End Class
 ' Garcia, Debra  
 ```  
   
- Some types of query operations in Visual Basic, such as <xref:System.Linq.Enumerable.Except%2A>, <xref:System.Linq.Enumerable.Distinct%2A>, <xref:System.Linq.Enumerable.Union%2A>, and <xref:System.Linq.Enumerable.Concat%2A>, can only be expressed in method-based syntax.  
+ Некоторые типы операций запросов в Visual Basic, такие как <xref:System.Linq.Enumerable.Except%2A>, <xref:System.Linq.Enumerable.Distinct%2A>, <xref:System.Linq.Enumerable.Union%2A>и <xref:System.Linq.Enumerable.Concat%2A>, могут выражаться только в синтаксисе на основе методов.  
   
 ## <a name="compiling-the-code"></a>Компиляция кода  
-Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.
+Создайте проект консольного приложения VB.NET с помощью инструкции `Imports` для пространства имен System. LINQ.
   
 ## <a name="see-also"></a>См. также
 
-- [LINQ and Strings (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [LINQ и строки (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)

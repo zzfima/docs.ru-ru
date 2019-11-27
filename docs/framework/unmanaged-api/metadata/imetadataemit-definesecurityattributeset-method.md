@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428244"
 ---
 # <a name="imetadataemitdefinesecurityattributeset-method"></a>Метод IMetaDataEmit::DefineSecurityAttributeSet
-Creates a set of security permissions to attach to the object referenced by the specified token.  
+Создает набор разрешений безопасности для присоединения к объекту, на который ссылается указанный токен.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,27 +38,27 @@ HRESULT DefineSecurityAttributeSet (
   
 ## <a name="parameters"></a>Параметры  
  `tkObj`  
- [in] The token to which the security information is attached.  
+ окне Токен, к которому присоединены сведения о безопасности.  
   
  `rSecAttrs`  
- [in] An array of `COR_SECATTR` structures.  
+ окне Массив структур `COR_SECATTR`.  
   
  `cSecAttrs`  
- [in] The number of elements in `rSecAttrs`.  
+ окне Число элементов в `rSecAttrs`.  
   
  `pulErrorAttr`  
- [out] If the method fails, specifies the index in `rSecAttrs` of the element that caused the problem.  
+ заполняет В случае сбоя метода указывает индекс в `rSecAttrs` элемента, вызвавшего проблему.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Заголовок:** COR. h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **Библиотека:** Используется в качестве ресурса в MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [Интерфейс IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

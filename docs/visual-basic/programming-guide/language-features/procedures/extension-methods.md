@@ -16,35 +16,35 @@ ms.locfileid: "74341173"
 ---
 # <a name="extension-methods-visual-basic"></a>Методы расширения (Visual Basic)
 
-Extension methods enable developers to add custom functionality to data types that are already defined without creating a new derived type. Extension methods make it possible to write a method that can be called as if it were an instance method of the existing type.
+Методы расширения позволяют разработчикам добавлять пользовательские функции к типам данных, которые уже определены без создания нового производного типа. Методы расширения позволяют написать метод, который может вызываться, как если бы он был методом экземпляра существующего типа.
 
 ## <a name="remarks"></a>Заметки
 
-An extension method can be only a `Sub` procedure or a `Function` procedure. You cannot define an extension property, field, or event. All extension methods must be marked with the extension attribute `<Extension>` from the <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> namespace and must be defined in a [Module](../../../language-reference/statements/module-statement.md). If an extension method is defined outside a module, the Visual Basic compiler generates error [BC36551](../../../misc/bc36551.md), "Extension methods can be defined only in modules".
+Метод расширения может быть только `Sub` процедурой или `Function`ой процедурой. Невозможно определить свойство, поле или событие расширения. Все методы расширения должны быть помечены атрибутом расширения `<Extension>` из пространства имен <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> и должны быть определены в [модуле](../../../language-reference/statements/module-statement.md). Если метод расширения определен за пределами модуля, Visual Basic компилятор создает ошибку [BC36551](../../../misc/bc36551.md), "методы расширения могут быть определены только в модулях".
 
-The first parameter in an extension method definition specifies which data type the method extends. When the method is run, the first parameter is bound to the instance of the data type that invokes the method.
+Первый параметр в определении метода расширения указывает тип данных, который расширяет метод. При выполнении метода первый параметр привязывается к экземпляру типа данных, который вызывает метод.
 
-The `Extension` attribute can only be applied to a Visual Basic [`Module`](../../../language-reference/statements/module-statement.md), [`Sub`](../../../language-reference/statements/sub-statement.md), or [`Function`](../../../language-reference/statements/function-statement.md). If you apply it to a `Class` or a `Structure`, the Visual Basic compiler generates error [BC36550](../../../language-reference/error-messages/extension-attribute-can-be-applied-only-to-module-sub-or-function-declarations.md), "'Extension' attribute can be applied only to 'Module', 'Sub', or 'Function' declarations".
+Атрибут `Extension` можно применить только к Visual Basic [`Module`](../../../language-reference/statements/module-statement.md), [`Sub`](../../../language-reference/statements/sub-statement.md)или [`Function`](../../../language-reference/statements/function-statement.md). Если применить его к `Class` или `Structure`, компилятор Visual Basic создает ошибку [BC36550](../../../language-reference/error-messages/extension-attribute-can-be-applied-only-to-module-sub-or-function-declarations.md), атрибут "Extension" может применяться только к объявлениям "Module", "" или "Function".
 
 ## <a name="example"></a>Пример
 
-The following example defines a `Print` extension to the <xref:System.String> data type. The method uses `Console.WriteLine` to display a string. The parameter of the `Print` method, `aString`, establishes that the method extends the <xref:System.String> class.
+В следующем примере определяется расширение `Print` для <xref:System.String>ного типа данных. Метод использует `Console.WriteLine` для вывода строки. Параметр метода `Print`, `aString`, устанавливает, что метод расширяет класс <xref:System.String>.
 
 [!code-vb[VbVbalrExtensionMethods#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrExtensionMethods/VB/StringExtensions.vb#1)]
 
-Notice that the extension method definition is marked with the extension attribute `<Extension()>`. Marking the module in which the method is defined is optional, but each extension method must be marked. <xref:System.Runtime.CompilerServices> must be imported in order to access the extension attribute.
+Обратите внимание, что определение метода расширения помечено атрибутом расширения `<Extension()>`. Маркировка модуля, в котором определен метод, является необязательной, но каждый метод расширения должен быть помечен. чтобы получить доступ к атрибуту расширения, необходимо импортировать <xref:System.Runtime.CompilerServices>.
 
-Extension methods can be declared only within modules. Typically, the module in which an extension method is defined is not the same module as the one in which it is called. Instead, the module that contains the extension method is imported, if it needs to be, to bring it into scope. After the module that contains `Print` is in scope, the method can be called as if it were an ordinary instance method that takes no arguments, such as `ToUpper`:
+Методы расширения могут объявляться только внутри модулей. Как правило, модуль, в котором определен метод расширения, не совпадает с модулем, в котором он вызывается. Вместо этого модуль, содержащий метод расширения, импортируется, если требуется, чтобы перевести его в область. После того как модуль, содержащий `Print`, находится в области, метод можно вызвать так, как если бы он был обычным методом экземпляра, не принимающим аргументов, например `ToUpper`:
 
 [!code-vb[VbVbalrExtensionMethods#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrExtensionMethods/VB/Class1.vb#2)]
 
-The next example, `PrintAndPunctuate`, is also an extension to <xref:System.String>, this time defined with two parameters. The first parameter, `aString`, establishes that the extension method extends <xref:System.String>. The second parameter, `punc`, is intended to be a string of punctuation marks that is passed in as an argument when the method is called. The method displays the string followed by the punctuation marks.
+Следующий пример, `PrintAndPunctuate`, также является расширением для <xref:System.String>, на этот раз определенное с двумя параметрами. Первый параметр, `aString`, устанавливает, что метод расширения расширяет <xref:System.String>. Второй параметр, `punc`, должен быть строкой знаков препинания, которая передается в качестве аргумента при вызове метода. Метод отображает строку, за которой следуют знаки пунктуации.
 
 [!code-vb[VbVbalrExtensionMethods#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrExtensionMethods/VB/Class2.vb#3)]
 
-The method is called by sending in a string argument for `punc`: `example.PrintAndPunctuate(".")`
+Метод вызывается путем отправки строкового аргумента для `punc`: `example.PrintAndPunctuate(".")`
 
-The following example shows `Print` and `PrintAndPunctuate` defined and called. <xref:System.Runtime.CompilerServices> is imported in the definition module in order to enable access to the extension attribute.
+В следующем примере показаны `Print` и `PrintAndPunctuate` определен и вызывается. <xref:System.Runtime.CompilerServices> импортируется в модуль определения, чтобы обеспечить доступ к атрибуту расширения.
 
 ```vb
 Imports System.Runtime.CompilerServices
@@ -63,7 +63,7 @@ Module StringExtensions
 End Module
 ```
 
-Next, the extension methods are brought into scope and called:
+Далее методы расширения переносятся в область и называются:
 
 ```vb
 Imports ConsoleApplication2.StringExtensions
@@ -81,94 +81,94 @@ Module Module1
 End Module
 ```
 
-All that is required to be able to run these or similar extension methods is that they be in scope. If the module that contains an extension method is in scope, it is visible in IntelliSense and can be called as if it were an ordinary instance method.
+Все, что необходимо для выполнения этих или аналогичных методов расширения, заключается в том, что они находятся в области. Если модуль, содержащий метод расширения, находится в области видимости, он отображается в IntelliSense и может быть вызван как обычный метод экземпляра.
 
-Notice that when the methods are invoked, no argument is sent in for the first parameter. Parameter `aString` in the previous method definitions is bound to `example`, the instance of `String` that calls them. The compiler will use `example` as the argument sent to the first parameter.
+Обратите внимание, что при вызове методов для первого параметра не отправляется ни один аргумент. Параметр `aString` в предыдущих определениях метода привязан к `example`, экземпляр `String`, который вызывает их. Компилятор будет использовать `example` в качестве аргумента, отправляемого в первый параметр.
 
-If an extension method is called for an object that is set to `Nothing`, the extension method executes. This does not apply to ordinary instance methods. You can explicitly check for `Nothing` in the extension method.
+Если метод расширения вызывается для объекта, для которого задано значение `Nothing`, метод расширения выполняется. Это не относится к обычным методам экземпляра. Можно явно проверить наличие `Nothing` в методе расширения.
 
-## <a name="types-that-can-be-extended"></a>Types that can be extended
+## <a name="types-that-can-be-extended"></a>Типы, которые могут быть расширены
 
-You can define an extension method on most types that can be represented in a Visual Basic parameter list, including the following:
+Можно определить метод расширения для большинства типов, которые могут быть представлены в списке параметров Visual Basic, включая следующие:
 
-- Classes (reference types)
-- Structures (value types)
-- интерфейсов,
+- Классы (ссылочные типы)
+- Структуры (типы значений)
+- Интерфейсы
 - Делегаты
-- ByRef and ByVal arguments
-- Generic method parameters
+- Аргументы ByRef и ByVal
+- Параметры универсального метода
 - Массивы
 
-Because the first parameter specifies the data type that the extension method extends, it is required and cannot be optional. For that reason, `Optional` parameters and `ParamArray` parameters cannot be the first parameter in the parameter list.
+Поскольку первый параметр указывает тип данных, который расширяет метод расширения, он является обязательным и не может быть необязательным. По этой причине `Optional` параметры и параметры `ParamArray` не могут быть первым параметром в списке параметров.
 
-Extension methods are not considered in late binding. In the following example, the statement `anObject.PrintMe()` raises a <xref:System.MissingMemberException> exception, the same exception you would see if the second `PrintMe` extension method definition were deleted.
+Методы расширения не рассматриваются в позднем связывании. В следующем примере инструкция `anObject.PrintMe()` вызывает исключение <xref:System.MissingMemberException>, то же самое исключение отображается, если было удалено второе определение метода расширения `PrintMe`.
 
 [!code-vb[VbVbalrExtensionMethods#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrExtensionMethods/VB/Class6.vb#9)]
 
 ## <a name="best-practices"></a>Рекомендации
 
-Extension methods provide a convenient and powerful way to extend an existing type. However, to use them successfully, there are some points to consider. These considerations apply mainly to authors of class libraries, but they might affect any application that uses extension methods.
+Методы расширения предоставляют удобный и мощный способ расширения существующего типа. Тем не менее, чтобы использовать их успешно, необходимо учитывать некоторые моменты. Эти рекомендации относятся главным образом к авторам библиотек классов, но они могут повлиять на любое приложение, использующее методы расширения.
 
-Most generally, extension methods that you add to types that you do not own are more vulnerable than extension methods added to types that you control. A number of things can occur in classes you do not own that can interfere with your extension methods.
+Чаще всего методы расширения, добавляемые к несобственным типам, более уязвимы, чем методы расширения, добавляемые к управляемым типам. В несобственных классах могут возникать некоторые вещи, которые могут повлиять на методы расширения.
 
-- If any accessible instance member exists that has a signature that is compatible with the arguments in the calling statement, with no narrowing conversions required from argument to parameter, the instance method will be used in preference to any extension method. Therefore, if an appropriate instance method is added to a class at some point, an existing extension member that you rely on may become inaccessible.
+- Если существует любой доступный член экземпляра, имеющий сигнатуру, совместимую с аргументами в вызывающей инструкции, без сужающих преобразований из аргумента в параметр, метод экземпляра будет использоваться в качестве предпочтений любому методу расширения. Таким образом, если в какой-то момент в классе добавляется соответствующий метод экземпляра, существующий член расширения, который вы используете, может стать недоступным.
 
-- The author of an extension method cannot prevent other programmers from writing conflicting extension methods that may have precedence over the original extension.
+- Автор метода расширения не может препятствовать написанию другими программистами конфликтующих методов расширения, которые могут иметь приоритет над исходным расширением.
 
-- You can improve robustness by putting extension methods in their own namespace. Consumers of your library can then include a namespace or exclude it, or select among namespaces, separately from the rest of the library.
+- Надежность можно повысить, поместив методы расширения в собственное пространство имен. Потребители библиотеки могут добавить пространство имен или исключить ее, или выбрать пространства имен отдельно от остальной части библиотеки.
 
-- It may be safer to extend interfaces than it is to extend classes, especially if you do not own the interface or class. A change in an interface affects every class that implements it. Therefore, the author may be less likely to add or change methods in an interface. However, if a class implements two interfaces that have extension methods with the same signature, neither extension method is visible.
+- Расширение интерфейсов может быть более безопасным, чем расширение классов, особенно если вы не владеете интерфейсом или классом. Изменение интерфейса влияет на каждый класс, реализующий его. Таким образом, автор может снизить вероятность добавления или изменения методов в интерфейсе. Однако если класс реализует два интерфейса, у которых есть методы расширения с одинаковой сигнатурой, то ни один из методов расширения не виден.
 
-- Extend the most specific type you can. In a hierarchy of types, if you select a type from which many other types are derived, there are layers of possibilities for the introduction of instance methods or other extension methods that might interfere with yours.
+- Расширьте наиболее конкретный тип, который можно. В иерархии типов при выборе типа, от которого наследуются многие другие типы, существуют уровни возможностей для введения методов экземпляра или других методов расширения, которые могут мешать работе.
 
-## <a name="extension-methods-instance-methods-and-properties"></a>Extension methods, instance methods, and properties
+## <a name="extension-methods-instance-methods-and-properties"></a>Методы расширения, методы экземпляров и свойства
 
-When an in-scope instance method has a signature that is compatible with the arguments of a calling statement, the instance method is chosen in preference to any extension method. The instance method has precedence even if the extension method is a better match. In the following example, `ExampleClass` contains an instance method named `ExampleMethod` that has one parameter of type `Integer`. Extension method `ExampleMethod` extends `ExampleClass`, and has one parameter of type `Long`.
+Если метод экземпляра в области имеет сигнатуру, совместимую с аргументами вызывающей инструкции, метод экземпляра выбирается в качестве предпочтений любому методу расширения. Метод экземпляра имеет приоритет, даже если метод расширения лучше соответствует. В следующем примере `ExampleClass` содержит метод экземпляра с именем `ExampleMethod` с одним параметром типа `Integer`. Метод расширения `ExampleMethod` расширяет `ExampleClass`и имеет один параметр типа `Long`.
 
 [!code-vb[VbVbalrExtensionMethods#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrExtensionMethods/VB/Class4.vb#4)]
 
-The first call to `ExampleMethod` in the following code calls the extension method, because `arg1` is `Long` and is compatible only with the `Long` parameter in the extension method. The second call to `ExampleMethod` has an `Integer` argument, `arg2`, and it calls the instance method.
+Первый вызов `ExampleMethod` в следующем коде вызывает метод расширения, так как `arg1` `Long` и совместим только с параметром `Long` в методе расширения. Второй вызов `ExampleMethod` имеет `Integer`ный аргумент `arg2`и вызывает метод экземпляра.
 
 [!code-vb[VbVbalrExtensionMethods#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrExtensionMethods/VB/Class4.vb#5)]
 
-Now reverse the data types of the parameters in the two methods:
+Теперь измените типы данных параметров в двух методах:
 
 [!code-vb[VbVbalrExtensionMethods#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrExtensionMethods/VB/Class5.vb#6)]
 
-This time the code in `Main` calls the instance method both times. This is because both `arg1` and `arg2` have a widening conversion to `Long`, and the instance method takes precedence over the extension method in both cases.
+На этот раз код в `Main` вызывает метод экземпляра в обоих случаях. Это происходит потому, что как `arg1`, так и `arg2` имеют расширяющее преобразование для `Long`, а метод экземпляра имеет приоритет над методом расширения в обоих случаях.
 
 [!code-vb[VbVbalrExtensionMethods#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrExtensionMethods/VB/Class5.vb#7)]
 
-Therefore, an extension method cannot replace an existing instance method. However, when an extension method has the same name as an instance method but the signatures do not conflict, both methods can be accessed. For example, if class `ExampleClass` contains a method named `ExampleMethod` that takes no arguments, extension methods with the same name but different signatures are permitted, as shown in the following code.
+Поэтому метод расширения не может заменить существующий метод экземпляра. Однако, если метод расширения имеет то же имя, что и метод экземпляра, но подписи не конфликтуют, доступ к обоим методам возможен. Например, если класс `ExampleClass` содержит метод с именем `ExampleMethod`, который не принимает аргументы, методы расширения с тем же именем, но с разными сигнатурами разрешены, как показано в следующем коде.
 
 [!code-vb[VbVbalrExtensionMethods#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrExtensionMethods/VB/Module3.vb#8)]
 
-The output from this code is as follows:
+Результат выполнения этого кода выглядит следующим образом:
 
 ```console
 Extension method
 Instance method
 ```
 
-The situation is simpler with properties: if an extension method has the same name as a property of the class it extends, the extension method is not visible and cannot be accessed.
+Ситуация упрощается с помощью свойств: Если метод расширения имеет то же имя, что и свойство класса, который он расширяет, метод расширения не будет виден и к нему нельзя получить доступ.
 
-## <a name="extension-method-precedence"></a>Extension method precedence
+## <a name="extension-method-precedence"></a>Приоритет метода расширения
 
-When two extension methods that have identical signatures are in scope and accessible, the one with higher precedence will be invoked. An extension method's precedence is based on the mechanism used to bring the method into scope. The following list shows the precedence hierarchy, from highest to lowest.
+Если два метода расширения, имеющие идентичные сигнатуры, находятся в области видимости и доступны, будет вызван один из них с более высоким приоритетом. Приоритет метода расширения основан на механизме, который используется для приведения метода в область. В следующем списке показана иерархия очередностью, от самого высокого до самого низкого.
 
-1. Extension methods defined inside the current module.
+1. Методы расширения, определенные в текущем модуле.
 
-2. Extension methods defined inside data types in the current namespace or any one of its parents, with child namespaces having higher precedence than parent namespaces.
+2. Методы расширения, определенные внутри типов данных в текущем пространстве имен или на любом из его родителей, с дочерними пространствами имен с более высоким приоритетом, чем у родительских пространств имен.
 
-3. Extension methods defined inside any type imports in the current file.
+3. Методы расширения, определенные внутри любых импортов типов в текущем файле.
 
-4. Extension methods defined inside any namespace imports in the current file.
+4. Методы расширения, определенные в любом импорте пространства имен в текущем файле.
 
-5. Extension methods defined inside any project-level type imports.
+5. Методы расширения, определенные внутри любых импортов типа на уровне проекта.
 
-6. Extension methods defined inside any project-level namespace imports.
+6. Методы расширения, определенные внутри любых импортов пространства имен на уровне проекта.
 
-If precedence does not resolve the ambiguity, you can use the fully qualified name to specify the method that you are calling. If the `Print` method in the earlier example is defined in a module named `StringExtensions`, the fully qualified name is `StringExtensions.Print(example)` instead of `example.Print()`.
+Если приоритет не позволяет устранить неоднозначность, можно использовать полное имя, чтобы указать вызываемый метод. Если метод `Print` в предыдущем примере определен в модуле с именем `StringExtensions`, полное имя будет `StringExtensions.Print(example)` вместо `example.Print()`.
 
 ## <a name="see-also"></a>См. также
 
@@ -180,4 +180,4 @@ If precedence does not resolve the ambiguity, you can use the fully qualified na
 - [Необязательные параметры](optional-parameters.md)
 - [Массивы параметров](parameter-arrays.md)
 - [Обзор атрибутов](../../concepts/attributes/index.md)
-- [Scope in Visual Basic](../declared-elements/scope.md)
+- [Область в Visual Basic](../declared-elements/scope.md)

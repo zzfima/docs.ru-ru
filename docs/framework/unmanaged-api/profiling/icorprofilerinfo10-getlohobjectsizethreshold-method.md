@@ -1,5 +1,5 @@
 ---
-title: ICorProfilerInfo10::GetLOHObjectSizeThreshold
+title: 'ICorProfilerInfo10:: Жетлохобжектсизесрешолд'
 ms.date: 08/06/2019
 dev_langs:
 - cpp
@@ -18,9 +18,9 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74427024"
 ---
-# <a name="icorprofilerinfo10getlohobjectsizethreshold-method"></a>ICorProfilerInfo10::GetLOHObjectSizeThreshold Method
+# <a name="icorprofilerinfo10getlohobjectsizethreshold-method"></a>Метод ICorProfilerInfo10:: Жетлохобжектсизесрешолд
 
-Gets the value of the configured large object heap (LOH) threshold.
+Возвращает значение заданного порога кучи больших объектов (LOH).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -31,22 +31,22 @@ HRESULT GetLOHObjectSizeThreshold( [out] DWORD *pThreshold );
 #### <a name="parameters"></a>Параметры
 
 `pThreshold` \
-[out] The large object heap threshold in bytes.
+заполняет Пороговое значение кучи больших объектов в байтах.
 
 ## <a name="remarks"></a>Заметки
 
-Objects larger than the large object heap threshold will be allocated on the large object heap. Starting with .NET Core 3.0 the large object heap threshold is configurable, `pThreshold` will contain the active large object heap threshold size in bytes.
+Объекты, превышающие пороговое значение кучи больших объектов, будут выделены в куче больших объектов. Начиная с .NET Core 3,0, порог кучи больших объектов можно настроить, `pThreshold` будет содержать пороговое значение активной кучи больших объектов в байтах.
 
 ## <a name="requirements"></a>Требования
 
-**Platforms:** See [.NET Core supported operating systems](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows).
+**Платформы:** См. раздел [Поддерживаемые операционные системы .NET Core](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows).
 
 **Заголовок:** CorProf.idl, CorProf.h
 
 **Библиотека:** CorGuids.lib
 
-**.NET Versions:** [!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]
+**Версии .NET:** [!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]
 
 ## <a name="see-also"></a>См. также
 
-- [ICorProfilerInfo10 Interface](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo10-interface.md)
+- [Интерфейс ICorProfilerInfo10](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo10-interface.md)

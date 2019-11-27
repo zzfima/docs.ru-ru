@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74442866"
 ---
 # <a name="icorprofilerinfo4getobjectsize2-method"></a>Метод ICorProfilerInfo4::GetObjectSize2
-Returns the size of a specified object. Replaces the [ICorProfilerInfo::GetObjectSize](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getobjectsize-method.md) method by reporting sizes of objects that are larger than what can be expressed in a `ULONG`.  
+Возвращает размер указанного объекта. Заменяет метод [ICorProfilerInfo:: жетобжектсизе](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getobjectsize-method.md) , сообщая размеры объектов, размер которых больше, чем может быть выражено в `ULONG`.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -35,13 +35,13 @@ HRESULT GetObjectSize2(
   
 ## <a name="parameters"></a>Параметры  
  `objectId`  
- [in] The ID of the object.  
+ окне Идентификатор объекта.  
   
  `pcSize`  
- [out] A pointer to the object's size, in bytes.  
+ заполняет Указатель на размер объекта в байтах.  
   
-## <a name="remarks"></a>Заметки  
- Different objects of the same types often have the same size. However, some types, such as arrays or strings, may have a different size for each object.  
+## <a name="remarks"></a>Примечания  
+ Различные объекты одних и тех же типов часто имеют одинаковый размер. Однако некоторые типы, такие как массивы или строки, могут иметь разные размеры для каждого объекта.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
@@ -52,6 +52,6 @@ HRESULT GetObjectSize2(
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс ICorProfilerInfo4](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-interface.md)

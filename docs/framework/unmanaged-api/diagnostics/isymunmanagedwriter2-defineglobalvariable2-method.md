@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74438283"
 ---
 # <a name="isymunmanagedwriter2defineglobalvariable2-method"></a>Метод ISymUnmanagedWriter2::DefineGlobalVariable2
-Defines a single global variable.  
+Определяет одну глобальную переменную.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,31 +40,31 @@ HRESULT DefineGlobalVariable2(
   
 ## <a name="parameters"></a>Параметры  
  `name`  
- [in] The global variable name.  
+ окне Имя глобальной переменной.  
   
  `attributes`  
- [in] The global variable attributes.  
+ окне Атрибуты глобальных переменных.  
   
  `sigToken`  
- [in] The metadata token of the signature.  
+ окне Маркер метаданных сигнатуры.  
   
  `addrKind`  
- [in] The address type.  
+ окне Тип адреса.  
   
  `addr1`  
- [in] The first address for the parameter specification.  
+ окне Первый адрес для спецификации параметра.  
   
  `addr2`  
- [in] The second address for the parameter specification.  
+ окне Второй адрес для спецификации параметра.  
   
  `addr3`  
- [in] The third address for the parameter specification.  
+ окне Третий адрес для спецификации параметра.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK, если метод выполнен. в противном случае E_FAIL или другой код ошибки.  
   
 ## <a name="requirements"></a>Требования  
- **Header:** CorSym.idl  
+ **Заголовок:** Корсим. idl  
   
 ## <a name="see-also"></a>См. также
 

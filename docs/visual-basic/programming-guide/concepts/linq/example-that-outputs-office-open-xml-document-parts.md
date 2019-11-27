@@ -9,7 +9,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353503"
 ---
-# <a name="example-that-outputs-office-open-xml-document-parts-visual-basic"></a>Example that Outputs Office Open XML Document Parts (Visual Basic)
+# <a name="example-that-outputs-office-open-xml-document-parts-visual-basic"></a>Пример вывода частей документа Office Open XML (Visual Basic)
 В этом разделе разъясняется, как открывать документ Office Open XML и как обращаться к частям этого документа.  
   
 ## <a name="example"></a>Пример  
@@ -66,4 +66,4 @@ End Using
   
 ## <a name="see-also"></a>См. также
 
-- [Details of Office Open XML WordprocessingML Documents (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)
+- [Сведения о документах WordprocessingML в формате Office Open XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)

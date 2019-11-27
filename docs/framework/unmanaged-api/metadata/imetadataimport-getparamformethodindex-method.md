@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74437162"
 ---
 # <a name="imetadataimportgetparamformethodindex-method"></a>Метод IMetaDataImport::GetParamForMethodIndex
-Gets the token that represents a specified parameter of the method represented by the specified MethodDef token.  
+Возвращает токен, представляющий указанный параметр метода, представленного указанным токеном MethodDef.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,24 +37,24 @@ HRESULT GetParamForMethodIndex (
   
 ## <a name="parameters"></a>Параметры  
  `md`  
- [in] A token that represents the method to return the parameter token for.  
+ окне Токен, представляющий метод, для которого возвращается токен параметра.  
   
  `ulParamSeq`  
- [in] The ordinal position in the parameter list where the requested parameter occurs. Parameters are numbered starting from one, with the method's return value in position zero.  
+ окне Порядковый номер в списке параметров, в котором выполняется запрошенный параметр. Параметры нумеруются начиная с единицы, а возвращаемое значение метода в нулевом положении.  
   
  `ppd`  
- [out] A pointer to a ParamDef token that represents the requested parameter.  
+ заполняет Указатель на токен Парамдеф, представляющий запрошенный параметр.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Заголовок:** COR. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [Интерфейс IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

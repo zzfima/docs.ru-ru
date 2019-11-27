@@ -33,57 +33,57 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351011"
 ---
 # <a name="considerations-in-overloading-procedures-visual-basic"></a>Вопросы, связанные с перегрузкой процедур (Visual Basic)
-When you overload a procedure, you must use a different *signature* for each overloaded version. This usually means each version must specify a different parameter list. For more information, see "Different Signature" in [Procedure Overloading](./procedure-overloading.md).  
+При перегрузке процедуры необходимо использовать другую *сигнатуру* для каждой перегруженной версии. Обычно это означает, что каждая версия должна указывать другой список параметров. Дополнительные сведения см. в разделе "другая сигнатура" в [перегрузке процедур](./procedure-overloading.md).  
   
- You can overload a `Function` procedure with a `Sub` procedure, and vice versa, provided they have different signatures. Two overloads cannot differ only in that one has a return value and the other does not.  
+ Можно перегружать `Function` процедуру с помощью `Sub` процедуры, и наоборот, если они имеют разные сигнатуры. Две перегрузки не могут различаться только в том случае, если одна из них имеет возвращаемое значение, а другая — нет.  
   
- You can overload a property the same way you overload a procedure, and with the same restrictions. However, you cannot overload a procedure with a property, or vice versa.  
+ Свойство можно перегружать так же, как и при перегрузке процедуры, с теми же ограничениями. Однако нельзя перегружать процедуру со свойством или наоборот.  
   
-## <a name="alternatives-to-overloaded-versions"></a>Alternatives to Overloaded Versions  
- You sometimes have alternatives to overloaded versions, particularly when the presence of arguments is optional or their number is variable.  
+## <a name="alternatives-to-overloaded-versions"></a>Альтернативы перегруженным версиям  
+ Иногда у вас есть альтернативы перегруженным версиям, особенно если присутствие аргументов является необязательным или их число является переменной.  
   
- Keep in mind that optional arguments are not necessarily supported by all languages, and parameter arrays are limited to Visual Basic. If you are writing a procedure that is likely to be called from code written in any of several different languages, overloaded versions offer the greatest flexibility.  
+ Помните, что необязательные аргументы не всегда поддерживаются всеми языками, а массивы параметров ограничены Visual Basic. При написании процедуры, которая, скорее всего, будет вызываться из кода, написанного на любом из нескольких разных языков, перегруженные версии обеспечивают максимальную гибкость.  
   
-### <a name="overloads-and-optional-arguments"></a>Overloads and Optional Arguments  
- When the calling code can optionally supply or omit one or more arguments, you can define multiple overloaded versions or use optional parameters.  
+### <a name="overloads-and-optional-arguments"></a>Перегрузки и необязательные аргументы  
+ Если вызывающий код может дополнительно указать или опустить один или несколько аргументов, можно определить несколько перегруженных версий или использовать необязательные параметры.  
   
-#### <a name="when-to-use-overloaded-versions"></a>When to Use Overloaded Versions  
- You can consider defining a series of overloaded versions in the following cases:  
+#### <a name="when-to-use-overloaded-versions"></a>Когда следует использовать перегруженные версии  
+ Можно определить ряд перегруженных версий в следующих случаях.  
   
-- The logic in the procedure code is significantly different depending on whether the calling code supplies an optional argument or not.  
+- Логика в коде процедуры существенно различается в зависимости от того, предоставляет ли вызывающий код необязательный аргумент.  
   
-- The procedure code cannot reliably test whether the calling code has supplied an optional argument. This is the case, for example, if there is no possible candidate for a default value that the calling code could not be expected to supply.  
+- Код процедуры не может надежно проверить, предоставил ли вызывающий код необязательный аргумент. Это происходит, например, если нет возможных кандидатов для значения по умолчанию, которое вызывающий код не может ожидать.  
   
-#### <a name="when-to-use-optional-parameters"></a>When to Use Optional Parameters  
- You might prefer one or more optional parameters in the following cases:  
+#### <a name="when-to-use-optional-parameters"></a>Когда следует использовать необязательные параметры  
+ В следующих случаях можно предпочесть один или несколько необязательных параметров:  
   
-- The only required action when the calling code does not supply an optional argument is to set the parameter to a default value. In such a case, the procedure code can be less complicated if you define a single version with one or more `Optional` parameters.  
+- Единственное необходимое действие, если вызывающий код не предоставляет необязательный аргумент, — установка для параметра значения по умолчанию. В этом случае код процедуры может быть менее сложным, если определить одну версию с одним или несколькими параметрами `Optional`.  
   
- For more information, see [Optional Parameters](./optional-parameters.md).  
+ Дополнительные сведения см. в разделе [необязательные параметры](./optional-parameters.md).  
   
-### <a name="overloads-and-paramarrays"></a>Overloads and ParamArrays  
- When the calling code can pass a variable number of arguments, you can define multiple overloaded versions or use a parameter array.  
+### <a name="overloads-and-paramarrays"></a>Перегрузки и Парамаррайс  
+ Когда вызывающий код может передать переменное число аргументов, можно определить несколько перегруженных версий или использовать массив параметров.  
   
-#### <a name="when-to-use-overloaded-versions"></a>When to Use Overloaded Versions  
- You can consider defining a series of overloaded versions in the following cases:  
+#### <a name="when-to-use-overloaded-versions"></a>Когда следует использовать перегруженные версии  
+ Можно определить ряд перегруженных версий в следующих случаях.  
   
-- You know that the calling code never passes more than a small number of values to the parameter array.  
+- Известно, что вызывающий код никогда не передает больше чем небольшое число значений в массив параметров.  
   
-- The logic in the procedure code is significantly different depending on how many values the calling code passes.  
+- Логика в коде процедуры существенно различается в зависимости от количества значений, пройденных вызывающим кодом.  
   
-- The calling code can pass values of different data types.  
+- Вызывающий код может передавать значения различных типов данных.  
   
-#### <a name="when-to-use-a-parameter-array"></a>When to Use a Parameter Array  
- You are better served by a `ParamArray` parameter in the following cases:  
+#### <a name="when-to-use-a-parameter-array"></a>Когда следует использовать массив параметров  
+ Параметр `ParamArray` лучше обслуживать в следующих случаях:  
   
-- You are not able to predict how many values the calling code can pass to the parameter array, and it could be a large number.  
+- Невозможно предсказать, сколько значений вызывающего кода можно передать в массив параметров, и это может быть большое число.  
   
-- The procedure logic lends itself to iterating through all the values the calling code passes, performing essentially the same operations on every value.  
+- Логика процедуры позволяет выполнять итерацию всех значений, пройденных вызывающим кодом, выполняя фактически те же операции с каждым значением.  
   
- For more information, see [Parameter Arrays](./parameter-arrays.md).  
+ Дополнительные сведения см. в разделе [массивы параметров](./parameter-arrays.md).  
   
-## <a name="implicit-overloads-for-optional-parameters"></a>Implicit Overloads for Optional Parameters  
- A procedure with an [Optional](../../../../visual-basic/language-reference/modifiers/optional.md) parameter is equivalent to two overloaded procedures, one with the optional parameter and one without it. You cannot overload such a procedure with a parameter list corresponding to either of these. The following declarations illustrate this.  
+## <a name="implicit-overloads-for-optional-parameters"></a>Неявные перегрузки для необязательных параметров  
+ Процедура с [необязательным](../../../../visual-basic/language-reference/modifiers/optional.md) параметром эквивалентна двум перегруженным процедурам, одна с необязательным параметром, а другая — без нее. Невозможно перегрузить такую процедуру со списком параметров, соответствующим одному из них. Это показано в следующих объявлениях.  
   
  [!code-vb[VbVbcnProcedures#58](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#58)]  
   
@@ -91,35 +91,35 @@ When you overload a procedure, you must use a different *signature* for each ove
   
  [!code-vb[VbVbcnProcedures#61](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#61)]  
   
- For a procedure with more than one optional parameter, there is a set of implicit overloads, arrived at by logic similar to that in the preceding example.  
+ Для процедуры с более чем одним необязательным параметром существует набор неявных перегрузок, которые прибывают логикой, аналогичной той, которая описана в предыдущем примере.  
   
-## <a name="implicit-overloads-for-a-paramarray-parameter"></a>Implicit Overloads for a ParamArray Parameter  
- The compiler considers a procedure with a [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) parameter to have an infinite number of overloads, differing from each other in what the calling code passes to the parameter array, as follows:  
+## <a name="implicit-overloads-for-a-paramarray-parameter"></a>Неявные перегрузки для параметра ParamArray  
+ Компилятор считает, что процедура с параметром [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) имеет бесконечное количество перегрузок, отличающихся друг от друга тем, что вызывающий код передает в массив параметров, следующим образом:  
   
-- One overload for when the calling code does not supply an argument to the `ParamArray`  
+- Одна перегрузка для, когда вызывающий код не предоставляет аргумент в `ParamArray`  
   
-- One overload for when the calling code supplies a one-dimensional array of the `ParamArray` element type  
+- Одна перегрузка для, когда вызывающий код предоставляет одномерный массив `ParamArray`ного типа элемента  
   
-- For every positive integer, one overload for when the calling code supplies that number of arguments, each of the `ParamArray` element type  
+- Для каждого положительного целого числа одна перегрузка для, когда вызывающий код предоставляет количество аргументов, каждый тип элемента `ParamArray`  
   
- The following declarations illustrate these implicit overloads.  
+ Следующие объявления иллюстрируют эти Неявные перегрузки.  
   
  [!code-vb[VbVbcnProcedures#68](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#68)]  
   
  [!code-vb[VbVbcnProcedures#70](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#70)]  
   
- You cannot overload such a procedure with a parameter list that takes a one-dimensional array for the parameter array. However, you can use the signatures of the other implicit overloads. The following declarations illustrate this.  
+ Невозможно перегрузить такую процедуру со списком параметров, принимающим одномерный массив для массива параметров. Однако можно использовать сигнатуры других неявных перегрузок. Это показано в следующих объявлениях.  
   
  [!code-vb[VbVbcnProcedures#71](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#71)]  
   
-## <a name="typeless-programming-as-an-alternative-to-overloading"></a>Typeless Programming as an Alternative to Overloading  
- If you want to allow the calling code to pass different data types to a parameter, an alternative approach is typeless programming. You can set the type checking switch to `Off` with either the [Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md) or the [-optionstrict](../../../../visual-basic/reference/command-line-compiler/optionstrict.md) compiler option. Then you do not have to declare the parameter's data type. However, this approach has the following disadvantages compared to overloading:  
+## <a name="typeless-programming-as-an-alternative-to-overloading"></a>Нетипизированное программирование в качестве альтернативы перегрузке  
+ Если вы хотите разрешить вызывающему коду передавать в параметр различные типы данных, альтернативным подходом является программирование без типа. Параметр проверки типа можно установить в `Off` с помощью [оператора Option строго](../../../../visual-basic/language-reference/statements/option-strict-statement.md) или [-оптионстрикт](../../../../visual-basic/reference/command-line-compiler/optionstrict.md) компилятора. После этого не нужно объявлять тип данных параметра. Однако этот подход имеет следующие недостатки по сравнению с перегрузкой:  
   
-- Typeless programming produces less efficient execution code.  
+- Программирование без типов дает менее эффективный код выполнения.  
   
-- The procedure must test for every data type it anticipates being passed.  
+- Процедура должна тестироваться для каждого типа данных, который он ожидает передачи.  
   
-- The compiler cannot signal an error if the calling code passes a data type that the procedure does not support.  
+- Компилятор не может сообщить об ошибке, если вызывающий код передает тип данных, который не поддерживает процедура.  
   
 ## <a name="see-also"></a>См. также
 
@@ -131,4 +131,4 @@ When you overload a procedure, you must use a different *signature* for each ove
 - [Практическое руководство. Перегрузка процедуры, которая принимает один необязательный параметр](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
 - [Практическое руководство. Перегрузка процедуры, принимающей неопределенное число параметров](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)
 - [Разрешение перегрузки](./overload-resolution.md)
-- [Перегрузки](../../../../visual-basic/language-reference/modifiers/overloads.md)
+- [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md)

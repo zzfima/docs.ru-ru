@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74443141"
 ---
 # <a name="icorprofilerinfo4getfunctionfromip2-method"></a>Метод ICorProfilerInfo4::GetFunctionFromIP2
-Maps a managed code instruction pointer to the JIT-recompiled version of a function.  
+Сопоставляет указатель инструкции управляемого кода с JIT-повторно скомпилированной версией функции.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -36,19 +36,19 @@ HRESULT GetFunctionFromIP2(
   
 ## <a name="parameters"></a>Параметры  
  `ip`  
- [in] The instruction pointer in managed code.  
+ окне Указатель инструкции в управляемом коде.  
   
  `pFunctionId`  
- [out] The function ID.  
+ заполняет Идентификатор функции.  
   
  `pReJitId`  
- [out] The identity of the JIT-recompiled version of the function.  
+ заполняет Удостоверение JIT-повторно скомпилированной версии функции.  
   
-## <a name="remarks"></a>Заметки  
- `GetFunctionFromIP2` is similar to `GetFunctionFromIP`, except that it gets the JIT-recompiled ID instead of the function ID of the function that contains the specified IP address.  
+## <a name="remarks"></a>Примечания  
+ `GetFunctionFromIP2` похож на `GetFunctionFromIP`, за исключением того, что он получает JIT-перекомпилированный идентификатор вместо идентификатора функции функции, которая содержит указанный IP-адрес.  
   
 > [!NOTE]
-> `GetFunctionFromIP2` can trigger a garbage collection, whereas `GetFunctionFromIP` will not.  For more information, see [CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT](../../../../docs/framework/unmanaged-api/profiling/corprof-e-unsupported-call-sequence-hresult.md).  
+> `GetFunctionFromIP2` может запустить сборку мусора, в то время как `GetFunctionFromIP` не будет.  Дополнительные сведения см. в разделе [CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT](../../../../docs/framework/unmanaged-api/profiling/corprof-e-unsupported-call-sequence-hresult.md).  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
@@ -59,6 +59,6 @@ HRESULT GetFunctionFromIP2(
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

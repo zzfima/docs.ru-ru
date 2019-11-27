@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74432545"
 ---
 # <a name="imetadataemitdefinefield-method"></a>Метод IMetaDataEmit::DefineField
-Creates a definition for a field with the specified metadata signature, and gets a token to that field definition.  
+Создает определение для поля с указанной сигнатурой метаданных и получает маркер для этого определения поля.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -43,38 +43,38 @@ HRESULT DefineField (
   
 ## <a name="parameters"></a>Параметры  
  `td`  
- [in] The `mdTypeDef` token for the enclosing class or interface.  
+ окне Токен `mdTypeDef` для включающего класса или интерфейса.  
   
  `szName`  
- [in] The field name in Unicode.  
+ окне Имя поля в Юникоде.  
   
  `dwFieldFlags`  
- [in] The field attributes. This is a bitmask of `CorFieldAttr` values.  
+ окне Атрибуты поля. Это битовая маска `CorFieldAttr` значений.  
   
  `pvSigBlob`  
- [in] The field signature as a BLOB.  
+ окне Подпись поля в виде большого двоичного объекта.  
   
  `cbSigBlob`  
- [in] The count of bytes in `pvSigBlob`.  
+ окне Число байтов в `pvSigBlob`.  
   
  `dwCPlusTypeFlag`  
- [in] The `ELEMENT_TYPE_` *\** for the constant value. This is a `CorElementType` value. If not defining a constant value for the field, use `ELEMENT_TYPE_END`.  
+ окне *\** `ELEMENT_TYPE_`для постоянного значения. Это `CorElementType` значение. Если для поля не определено постоянное значение, используйте `ELEMENT_TYPE_END`.  
   
  `pValue`  
- [in] The constant value for the field.  
+ окне Постоянное значение для поля.  
   
  `cchValue`  
- [in] The size in (Unicode) characters of `pValue`.  
+ окне Размер (в Юникоде) символов `pValue`.  
   
  `pmd`  
- [out] The `mdFieldDef` token assigned.  
+ заполняет Назначенный маркер `mdFieldDef`.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Заголовок:** COR. h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **Библиотека:** Используется в качестве ресурса в MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

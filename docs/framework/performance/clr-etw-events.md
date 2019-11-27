@@ -24,7 +24,7 @@ ms.locfileid: "74428163"
   
  Дополнительные сведения см. в разделе [Поставщики трассировки событий Windows в среде CLR](clr-etw-providers.md).  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [События сведений времени выполнения](runtime-information-etw-events.md)  
  Захватывают информацию о среде выполнения, включая SKU, номер версии, способ активизации среды выполнения, параметры командной строки при ее запуске, GUID (если применимо) и другие релевантные данные.  
   
@@ -61,10 +61,10 @@ ms.locfileid: "74428163"
  [События стека](stack-etw-event.md)  
  Захватывают информацию, которая используется совместно с другими событиями для генерации трассировок стека после возникновения какого-либо события.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Improve Debugging And Performance Tuning With ETW](https://docs.microsoft.com/archive/msdn-magazine/2007/april/event-tracing-improve-debugging-and-performance-tuning-with-etw)
-- [Windows Performance Blog](https://blogs.msdn.microsoft.com/pigscanfly/tag/xperf/)
+- [Улучшение отладки и настройки производительности с помощью ETW](https://docs.microsoft.com/archive/msdn-magazine/2007/april/event-tracing-improve-debugging-and-performance-tuning-with-etw)
+- [Блог о производительности Windows](https://blogs.msdn.microsoft.com/pigscanfly/tag/xperf/)
 - [Контроль ведения журнала .NET Framework](controlling-logging.md)
 - [Поставщики трассировки событий Windows в среде CLR](clr-etw-providers.md)
 - [Ключевые слова и уровни среды CLR (трассировка событий Windows)](clr-etw-keywords-and-levels.md)

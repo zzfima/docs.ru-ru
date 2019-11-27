@@ -22,7 +22,7 @@ ms.locfileid: "74283453"
 ## <a name="progressbar-parts"></a>Части ProgressBar  
  В следующей таблице перечислены именованные части для элемента управления <xref:System.Windows.Controls.ProgressBar>.  
   
-|Отделение|Type|Описание|  
+|Отделение|Тип|Описание|  
 |-|-|-|  
 |PART_Indicator|<xref:System.Windows.FrameworkElement>|Объект, указывающий ход выполнения.|  
 |PART_Track|<xref:System.Windows.FrameworkElement>|Объект, определяющий путь индикатора хода выполнения.|  

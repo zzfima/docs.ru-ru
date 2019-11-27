@@ -21,18 +21,18 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344865"
 ---
 # <a name="how-to-define-an-operator-visual-basic"></a>Практическое руководство. Определение оператора (Visual Basic)
-If you have defined a class or structure, you can define the behavior of a standard operator (such as `*`, `<>`, or `And`) when one or both of the operands is of the type of your class or structure.  
+Если вы определили класс или структуру, то можете определить поведение стандартного оператора (например, `*`, `<>`или `And`), если один или оба операнда имеют тип класса или структуры.  
   
- Define the standard operator as an operator procedure within the class or structure. All operator procedures must be `Public` `Shared`.  
+ Определите стандартный оператор в качестве процедуры оператора внутри класса или структуры. Все процедуры оператора должны быть `Public` `Shared`.  
   
- Defining an operator on a class or structure is also called *overloading* the operator.  
+ Определение оператора для класса или структуры также называется *перегрузкой* оператора.  
   
 ## <a name="example"></a>Пример  
- The following example defines the `+` operator for a structure called `height`. The structure uses heights measured in feet and inches. One *inch* is 2.54 centimeters, and one *foot* is 12 inches. To ensure normalized values (inches < 12.0), the constructor performs *modulo* 12 arithmetic. The `+` operator uses the constructor to generate normalized values.  
+ В следующем примере определяется оператор `+` для структуры с именем `height`. Структура использует высоту, измеряемую в футах и дюймах. Один *дюйм* — 2,54 сантиметра, а *одна —* 12 дюймов. Чтобы обеспечить нормализованные значения (дюймы < 12,0), конструктор выполняет арифметический расчет по *модулю* 12. Оператор `+` использует конструктор для создания нормализованных значений.  
   
  [!code-vb[VbVbcnProcedures#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#25)]  
   
- You can test the structure `height` with the following code.  
+ Вы можете проверить структуру `height` с помощью следующего кода.  
   
  [!code-vb[VbVbcnProcedures#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#26)]  
 

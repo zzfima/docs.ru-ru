@@ -23,7 +23,7 @@ ms.locfileid: "74350681"
  Объект `My.Request` доступен только для приложений ASP.NET.  
   
 ## <a name="example"></a>Пример  
- The following example gets the header collection from the `My.Request` object and uses the `My.Response` object to write it to the ASP.NET page.  
+ Следующий пример получает коллекцию заголовков из объекта `My.Request` и использует объект `My.Response` для записи на страницу ASP.NET.  
   
  [!code-aspx-vb[VbVbalrMyWeb#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyWeb/VB/Default.aspx#1)]  
   
