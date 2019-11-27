@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448912"
 ---
 # <a name="isymunmanagedmethodgetrootscope-method"></a>Метод ISymUnmanagedMethod::GetRootScope
-Gets the root lexical scope within this method. Эта область включает весь метод.  
+Возвращает корневую лексическую область внутри этого метода. Эта область включает весь метод.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -34,14 +34,14 @@ HRESULT GetRootScope(
   
 ## <a name="parameters"></a>Параметры  
  `pRetVal`  
- [out] A pointer that is set to the returned [ISymUnmanagedScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md) interface.  
+ заполняет Указатель, которому присваивается возвращаемый интерфейс [исимунманажедскопе](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md) .  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK, если метод выполнен. в противном случае E_FAIL или другой код ошибки.  
   
 ## <a name="requirements"></a>Требования  
- **Header:** CorSym.idl, CorSym.h  
+ **Заголовок:** Корсим. idl, Корсим. h  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс ISymUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)

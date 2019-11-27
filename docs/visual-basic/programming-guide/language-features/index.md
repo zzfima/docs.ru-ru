@@ -13,13 +13,13 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345069"
 ---
 # <a name="visual-basic-language-features"></a>Возможности и элементы языка Visual Basic
-The following topics introduce and discuss the essential components of Visual Basic, an object-oriented programming language. После того, как вы подготовите пользовательский интерфейс для вашего приложения с помощью форм и элементов управления, необходимо написать код, определяющий поведение приложения. As with any modern programming language, Visual Basic supports a number of common programming constructs and language elements.  
+В следующих разделах описываются и обсуждаются основные компоненты Visual Basic, объектно-ориентированного языка программирования. После того, как вы подготовите пользовательский интерфейс для вашего приложения с помощью форм и элементов управления, необходимо написать код, определяющий поведение приложения. Как и любой современный язык программирования, Visual Basic поддерживает ряд общих программных конструкций и языковых элементов.  
   
- Если у вас есть опыт программирования на других языках, большая часть материала этой статьи покажется вам знакомой. While most of the constructs are similar to those in other languages, the event-driven nature of Visual Basic introduces some subtle differences.  
+ Если у вас есть опыт программирования на других языках, большая часть материала этой статьи покажется вам знакомой. Хотя большинство конструкций похожи на те, которые относятся к другим языкам, на основе событий Visual Basic представлены некоторые незначительные различия.  
   
- Если вы пока новичок в программировании, материал этой статьи поможет вам понять основные принципы создания кода. Once you understand the basics, you can create powerful applications using Visual Basic.  
+ Если вы пока новичок в программировании, материал этой статьи поможет вам понять основные принципы создания кода. Поняв основные принципы, можно создавать мощные приложения с помощью Visual Basic.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Массивы](../../../visual-basic/programming-guide/language-features/arrays/index.md)  
  Описывает возможность сделать код более компактным и мощным, объявляя и используя массивы с несколькими связанными значениями.  
   
@@ -83,4 +83,4 @@ The following topics introduce and discuss the essential components of Visual Ba
  Описывает некоторые типы коллекций, предоставляемых платформой .NET Framework. Демонстрирует использование простых коллекций и коллекций с парами "ключ — значение".  
   
  [Справочник по языку Visual Basic](../../../visual-basic/language-reference/index.md)  
- Provides reference information on various aspects of Visual Basic programming.
+ Справочные сведения о различных аспектах программирования Visual Basic.

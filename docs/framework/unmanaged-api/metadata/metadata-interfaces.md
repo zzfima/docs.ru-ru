@@ -16,7 +16,7 @@ ms.locfileid: "74431586"
 # <a name="metadata-interfaces"></a>Интерфейсы метаданных
 В этом разделе описываются неуправляемые интерфейсы, обеспечивающие доступ к метаданным, предоставляемым типами, методами, полями и прочими объектами .NET Framework.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Интерфейс ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)  
  Предоставляет методы для динамической компиляции кода.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "74431586"
  Предоставляет методы для сопоставления библиотек типов с их сигнатурами метаданных и для преобразования из одних в другие.  
   
  [Интерфейс IMetaDataDispenser](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)  
- `IMetaDataDispenser` устарел. Взамен рекомендуется использовать `IMetaDataDispenserEx`.  
+ `IMetaDataDispenser` устарел. Взамен рекомендуется использовать `IMetaDataDispenserEx` .  
   
  [Интерфейс IMetaDataDispenserEx](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)  
  Предоставляет методы, назначающие области памяти для создания или изменения метаданных.  

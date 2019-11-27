@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74438997"
 ---
 # <a name="icorprofilerinfogetinprocinspectioninterface-method"></a>Метод ICorProfilerInfo::GetInprocInspectionInterface
-Gets an object that can be queried for an "ICorDebugProcess" interface. This method is obsolete in the .NET Framework version 2.0.  
+Возвращает объект, к которому можно выполнить запрос для интерфейса "ICorDebugProcess". Этот метод является устаревшим в .NET Framework версии 2,0.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -34,10 +34,10 @@ HRESULT GetInprocInspectionInterface(
   
 ## <a name="parameters"></a>Параметры  
  `ppicd`  
- [out](/cpp/atl/iunknown) object that can be queried for an `ICorDebugProcess` interface.  
+ [выходной](/cpp/atl/iunknown) объект, к которому можно запросить интерфейс `ICorDebugProcess`.  
   
-## <a name="remarks"></a>Заметки  
- The common language runtime (CLR) debugging API supported limited in-process debugging in the .NET Framework version 1.0. In-process debugging enabled a profiler to use the inspection portions of the debugging API. As a result of customer feedback, in-process debugging has been removed from the .NET Framework in version 2.0, and replaced with a set of functionality that is more in line with the profiling API.  
+## <a name="remarks"></a>Примечания  
+ API отладки среды CLR поддерживал ограниченную внутрипроцессную отладку в .NET Framework версии 1,0. В процессе отладки с помощью профилировщика можно использовать части проверки для API отладки. В результате отзывов клиентов внутрипроцессный процесс отладки был удален из .NET Framework в версии 2,0 и заменен набором функциональных возможностей, которые более подробно описаны в API профилирования.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
@@ -46,8 +46,8 @@ HRESULT GetInprocInspectionInterface(
   
  **Библиотека:** CorGuids.lib  
   
- **.NET Framework Version:** 1.0  
+ **Версия .NET Framework:** 1,0  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

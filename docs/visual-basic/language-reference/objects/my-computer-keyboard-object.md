@@ -14,7 +14,7 @@ ms.locfileid: "74347195"
 # <a name="mycomputerkeyboard-object"></a>Объект My.Computer.Keyboard
 Предлагает свойства для доступа к текущему состоянию клавиатуры, в частности к сведениям о нажатых в настоящий момент клавишах, а также метод для отправки сообщений о нажатиях клавиш активному окну.  
   
-## <a name="remarks"></a>Заметки  
+## <a name="remarks"></a>Примечания  
  Сведения о методах и свойствах объекта `My.Computer.Keyword` см. в разделе <xref:Microsoft.VisualBasic.Devices.Keyboard>.  
   
  Дополнительные сведения см. в разделе [Доступ к клавиатуре](../../../visual-basic/developing-apps/programming/computer-resources/accessing-the-keyboard.md).  
@@ -24,8 +24,8 @@ ms.locfileid: "74347195"
   
  **Класс:** <xref:Microsoft.VisualBasic.Devices.Keyboard>  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **Сборка:** Библиотека времени выполнения Visual Basic (в Microsoft. VisualBasic. dll)  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Объект My.Computer](../../../visual-basic/language-reference/objects/my-computer-object.md)

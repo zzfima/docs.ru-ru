@@ -12,15 +12,15 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352801"
 ---
 # <a name="then-statement"></a>Оператор Then
-Introduces a statement block to be compiled or executed if a tested condition is true.  
+Вводит блок операторов для компиляции или выполнения, если проверяемое условие имеет значение true.  
   
-## <a name="remarks"></a>Заметки  
+## <a name="remarks"></a>Примечания  
  Ключевое слово `Then` можно использовать в следующих контекстах:  
   
- [#If...Then...#Else Directive](../../../visual-basic/language-reference/directives/if-then-else-directives.md)  
+ [#If... Then... #Else директиву](../../../visual-basic/language-reference/directives/if-then-else-directives.md)  
   
  [Оператор If...Then...Else](../../../visual-basic/language-reference/statements/if-then-else-statement.md)  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Ключевые слова](../../../visual-basic/language-reference/keywords/index.md)

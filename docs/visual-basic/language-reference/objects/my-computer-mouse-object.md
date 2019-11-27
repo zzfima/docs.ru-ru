@@ -12,20 +12,20 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347178"
 ---
 # <a name="mycomputermouse-object"></a>Объект My.Computer.Mouse
-Provides properties for getting information about the format and configuration of the mouse installed on the local computer.  
+Предоставляет свойства для получения сведений о формате и конфигурации мыши, установленной на локальном компьютере.  
   
-## <a name="remarks"></a>Заметки  
+## <a name="remarks"></a>Примечания  
  Сведения о методах и свойствах объекта `My.Computer.Mouse` см. в разделе <xref:Microsoft.VisualBasic.Devices.Mouse>.  
   
- For more information, see [Accessing the Mouse](../../../visual-basic/developing-apps/programming/computer-resources/accessing-the-mouse.md).  
+ Дополнительные сведения см. [в разделе доступ к мыши](../../../visual-basic/developing-apps/programming/computer-resources/accessing-the-mouse.md).  
   
 ## <a name="requirements"></a>Требования  
  **Пространство имен:** <xref:Microsoft.VisualBasic.Devices>  
   
  **Класс:** <xref:Microsoft.VisualBasic.Devices.Mouse>  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **Сборка:** Библиотека времени выполнения Visual Basic (в Microsoft. VisualBasic. dll)  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Объект My.Computer](../../../visual-basic/language-reference/objects/my-computer-object.md)

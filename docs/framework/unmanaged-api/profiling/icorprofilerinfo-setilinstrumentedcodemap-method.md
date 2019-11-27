@@ -24,10 +24,10 @@ ms.locfileid: "74449862"
 ---
 # <a name="icorprofilerinfosetilinstrumentedcodemap-method"></a>Метод ICorProfilerInfo::SetILInstrumentedCodeMap
 
-Sets a code map for the specified function using the specified Microsoft intermediate language (MSIL) map entries.
+Задает карту кода для указанной функции, используя указанные записи о сопоставлении языка MSIL.
 
 > [!NOTE]
-> In the .NET Framework version 2.0, calling `SetILInstrumentedCodeMap` on a `FunctionID` that represents a generic function in a particular application domain will affect all instances of that function in the application domain.
+> В .NET Framework версии 2,0 вызов `SetILInstrumentedCodeMap` на `FunctionID`, который представляет универсальную функцию в определенном домене приложения, повлияет на все экземпляры этой функции в домене приложения.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -42,48 +42,48 @@ HRESULT SetILInstrumentedCodeMap(
 ## <a name="parameters"></a>Параметры
 
 `functionId`\
-[in] The ID of the function for which to set the code map.
+окне Идентификатор функции, для которой необходимо задать карту кода.
 
 `fStartJit`\
-[in] A Boolean value that indicates whether the call to the `SetILInstrumentedCodeMap` method is the first for a particular `FunctionID`. Set `fStartJit` to `true` in the first call to `SetILInstrumentedCodeMap` for a given `FunctionID`, and to `false` thereafter.
+окне Логическое значение, указывающее, является ли вызов метода `SetILInstrumentedCodeMap` первым для конкретного `FunctionID`. Задайте для `fStartJit` значение `true` в первом вызове `SetILInstrumentedCodeMap` для заданного `FunctionID`, а затем — `false`.
 
 `cILMapEntries`\
-[in] The number of elements in the `cILMapEntries` array.
+окне Число элементов в массиве `cILMapEntries`.
 
 `rgILMapEntries`\
-[in] An array of COR_IL_MAP structures, each of which specifies an MSIL offset.
+окне Массив структур COR_IL_MAP, каждый из которых задает смещение MSIL.
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Примечания
 
-A profiler often inserts statements within the source code of a method in order to instrument that method (for example, to notify when a given source line is reached). `SetILInstrumentedCodeMap` enables a profiler to map the original MSIL instructions to their new locations. A profiler can use the [ICorProfilerInfo::GetILToNativeMapping](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getiltonativemapping-method.md) method to get the original MSIL offset for a given native offset.
+Профилировщик часто вставляет инструкции в исходном коде метода, чтобы инструментировать этот метод (например, уведомлять о достижении данной строки исходного кода). `SetILInstrumentedCodeMap` позволяет профилировщику сопоставлять исходные инструкции MSIL с их новыми расположениями. Профилировщик может использовать метод [ICorProfilerInfo:: GetILToNativeMapping](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getiltonativemapping-method.md) , чтобы получить исходное смещение MSIL для заданного смещения в машинном коде.
 
-The debugger will assume that each old offset refers to an MSIL offset within the original, unmodified MSIL code, and that each new offset refers to the MSIL offset within the new, instrumented code. The map should be sorted in increasing order. For stepping to work properly, follow these guidelines:
+Отладчик предполагает, что каждое старое смещение ссылается на смещение MSIL в исходном, неизмененном коде MSIL и что каждое новое смещение ссылается на смещение MSIL в новом, инструментированном коде. Карту следует сортировать в порядке возрастания. Чтобы пошаговое выполнение работало правильно, следуйте приведенным ниже рекомендациям.
 
-- Do not reorder instrumented MSIL code.
+- Не Переупорядочивайте инструментированный код MSIL.
 
-- Do not remove the original MSIL code.
+- Не удаляйте исходный код MSIL.
 
-- Include entries for all the sequence points from the program database (PDB) file in the map. The map does not interpolate missing entries. So, given the following map:
+- Включить записи для всех точек следования из файла базы данных программы (PDB) на карте. На карте не выполняется интерполяция отсутствующих записей. Итак, учитывая следующую карту:
 
-  (0 old, 0 new)
+  (0 старых, 0 новых)
 
-  (5 old, 10 new)
+  (5 старых, 10 новых)
 
-  (9 old, 20 new)
+  (9 старых, 20 новых)
 
-  - An old offset of 0, 1, 2, 3, or 4 will be mapped to new offset 0.
+  - Старое смещение 0, 1, 2, 3 или 4 будет сопоставлено с новым смещением 0.
 
-  - An old offset of 5, 6, 7, or 8 will be mapped to new offset 10.
+  - Старое смещение 5, 6, 7 или 8 будет сопоставлено с новым смещением 10.
 
-  - An old offset of 9 or higher will be mapped to new offset 20.
+  - Старое смещение 9 или выше будет сопоставлено с новым смещением 20.
 
-  - A new offset of 0, 1, 2, 3, 4, 5, 6, 7, 8, or 9 will be mapped to old offset 0.
+  - Новое смещение 0, 1, 2, 3, 4, 5, 6, 7, 8 или 9 будет сопоставлено со старым смещением 0.
 
-  - A new offset of 10, 11, 12, 13, 14, 15, 16, 17, 18, or 19 will be mapped to old offset 5.
+  - Новое смещение, равное 10, 11, 12, 13, 14, 15, 16, 17, 18 или 19, будет сопоставлено со старым смещением 5.
 
-  - A new offset of 20 or higher will be mapped to old offset 9.
+  - Новое смещение, равное 20 или выше, будет сопоставлено старому смещению 9.
 
-In the .NET Framework 3.5 and previous versions, you allocate the `rgILMapEntries` array by calling the [CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc) method. Because the runtime takes ownership of this memory, the profiler should not attempt to free it.
+В .NET Framework 3,5 и предыдущих версиях вы выделяете массив `rgILMapEntries`, вызывая метод [CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc) . Поскольку среда выполнения получает владение этой памятью, профилировщик не должен пытаться освободить его.
 
 ## <a name="requirements"></a>Требования
 
@@ -95,6 +95,6 @@ In the .NET Framework 3.5 and previous versions, you allocate the `rgILMapEntrie
 
 **Версии платформы .NET Framework:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

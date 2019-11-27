@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448428"
 ---
 # <a name="icorprofilercallbackjitfunctionpitched-method"></a>Метод ICorProfilerCallback::JITFunctionPitched
-Notifies the profiler that a function that has been just-in-time (JIT)-compiled has been removed from memory.  
+Оповещает профилировщик о том, что JIT-скомпилированная функция была удалена из памяти.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -34,12 +34,12 @@ HRESULT JITFunctionPitched(
   
 ## <a name="parameters"></a>Параметры  
  `functionId`  
- [in] The ID of the function that was removed.  
+ окне Идентификатор удаленной функции.  
   
-## <a name="remarks"></a>Заметки  
- If the removed function is called, the profiler will receive new JIT-compilation events when the function is recompiled. Currently, the common language runtime (CLR) JIT compiler does not remove functions from memory, so this callback is currently not used and will not be received by the profiler.  
+## <a name="remarks"></a>Примечания  
+ Если вызывается Удаленная функция, профилировщик получит новые события JIT-компиляции при повторной компиляции функции. В настоящее время JIT-компилятор среды CLR не удаляет функции из памяти, поэтому этот обратный вызов сейчас не используется и не будет получен профилировщиком.  
   
- The value of `functionId` is not valid until the function is recompiled. When the function is recompiled, the same `functionId` value will be used.  
+ Значение `functionId` недопустимо, пока функция не будет перекомпилирована. При повторной компиляции функции будет использоваться то же значение `functionId`.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
@@ -50,6 +50,6 @@ HRESULT JITFunctionPitched(
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

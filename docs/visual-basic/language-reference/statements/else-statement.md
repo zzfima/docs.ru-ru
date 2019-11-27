@@ -14,17 +14,17 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74343756"
 ---
 # <a name="else-statement-visual-basic"></a>Оператор Else (Visual Basic)
-Introduces a group of statements to be run or compiled if no other conditional group of statements has been run or compiled.  
+Вводит группу операторов для выполнения или компиляции, если ни одна другая условная группа инструкций не была выполнена или скомпилирована.  
   
-## <a name="remarks"></a>Заметки  
+## <a name="remarks"></a>Примечания  
  Ключевое слово `Else` можно использовать в следующих контекстах:  
   
  [Оператор If...Then...Else](../../../visual-basic/language-reference/statements/if-then-else-statement.md)  
   
  [Оператор Select...Case](../../../visual-basic/language-reference/statements/select-case-statement.md)  
   
- [#If...Then...#Else Directive](../../../visual-basic/language-reference/directives/if-then-else-directives.md)  
+ [#If... Then... #Else директиву](../../../visual-basic/language-reference/directives/if-then-else-directives.md)  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Ключевые слова](../../../visual-basic/language-reference/keywords/index.md)

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445184"
 ---
 # <a name="icorprofilercallbackappdomainshutdownstarted-method"></a>Метод ICorProfilerCallback::AppDomainShutdownStarted
-Notifies the profiler that an application domain is being unloaded from a process.  
+Уведомляет профилировщик о том, что домен приложения выгружается из процесса.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -34,10 +34,10 @@ HRESULT AppDomainShutdownStarted(
   
 ## <a name="parameters"></a>Параметры  
  `appDomainId`  
- [in] Identifies the domain in which the application's assemblies are stored.  
+ окне Определяет домен, в котором хранятся сборки приложения.  
   
-## <a name="remarks"></a>Заметки  
- The value of `appDomainId` is not valid for any information request after the `AppDomainShutdownStarted` method returns — this is the profiler's last chance to get information about this application domain.  
+## <a name="remarks"></a>Примечания  
+ Значение `appDomainId` недопустимо для запроса информации после возврата метода `AppDomainShutdownStarted` — это последний шанс профилировщика получить сведения об этом домене приложения.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
@@ -48,6 +48,6 @@ HRESULT AppDomainShutdownStarted(
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

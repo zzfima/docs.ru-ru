@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445803"
 ---
 # <a name="icorprofilercallbackremotingclientsendingmessage-method"></a>Метод ICorProfilerCallback::RemotingClientSendingMessage
-Notifies the profiler that the client is sending a request to the server.  
+Уведомляет профилировщик о том, что клиент отправляет запрос на сервер.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -35,18 +35,18 @@ HRESULT RemotingClientSendingMessage(
   
 ## <a name="parameters"></a>Параметры  
  `pCookie`  
- [in] A value that corresponds with the value provided in [ICorProfilerCallback::RemotingServerReceivingMessage](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserverreceivingmessage-method.md) under these conditions:  
+ окне Значение, которое соответствует значению, указанному в параметре [ICorProfilerCallback:: RemotingServerReceivingMessage](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserverreceivingmessage-method.md) в следующих условиях:  
   
-- Remoting GUID cookies are active.  
+- Файлы Cookie GUID удаленного взаимодействия активны.  
   
-- The channel succeeds in transmitting the message.  
+- Канал проходит успешную передачу сообщения.  
   
-- GUID cookies are active on the server-side process.  
+- Файлы Cookie GUID активны в процессе на стороне сервера.  
   
- This allows easy pairing of remoting calls and the creation of a logical call stack.  
+ Это позволяет легко связывать вызовы удаленного взаимодействия и создавать логические стеки вызовов.  
   
  `fIsAsync`  
- [in] A value that is `true` if the call is asynchronous; otherwise, `false`.  
+ окне Значение, которое `true`, если вызов является асинхронным; в противном случае `false`.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
@@ -57,6 +57,6 @@ HRESULT RemotingClientSendingMessage(
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

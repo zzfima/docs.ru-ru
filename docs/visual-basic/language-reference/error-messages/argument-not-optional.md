@@ -13,14 +13,14 @@ ms.locfileid: "74353900"
 ---
 # <a name="argument-not-optional-visual-basic"></a>Аргумент не является обязательным (Visual Basic)
 
-The number and types of arguments must match those expected. Either there is an incorrect number of arguments, or an omitted argument is not optional. An argument can only be omitted from a call to a user-defined procedure if it was declared `Optional` in the procedure definition.  
+Число и типы аргументов должны соответствовать ожидаемым. Либо указано неверное число аргументов, либо пропущенный аргумент не является обязательным. Аргумент может быть опущен только в вызове пользовательской процедуры, если он был объявлен `Optional` в определении процедуры.  
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  
   
-1. Supply all necessary arguments.  
+1. Укажите все необходимые аргументы.  
   
-2. Make sure omitted arguments are optional. If they are not, either supply the argument in the call, or declare the parameter `Optional` in the definition.  
+2. Убедитесь, что пропущенные аргументы являются необязательными. Если это не так, укажите аргумент в вызове или объявите параметр `Optional` в определении.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Типы ошибок](../../../visual-basic/programming-guide/language-features/error-types.md)

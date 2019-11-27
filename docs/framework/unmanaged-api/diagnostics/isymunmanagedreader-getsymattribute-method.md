@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74440137"
 ---
 # <a name="isymunmanagedreadergetsymattribute-method"></a>Метод ISymUnmanagedReader::GetSymAttribute
-Gets a custom attribute based upon its name. Unlike metadata custom attributes, these custom attributes are held in the symbol store.  
+Возвращает настраиваемый атрибут на основе его имени. В отличие от пользовательских атрибутов метаданных эти пользовательские атрибуты хранятся в хранилище символов.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,26 +39,26 @@ HRESULT GetSymAttribute (
   
 ## <a name="parameters"></a>Параметры  
  `parent`  
- [in] The metadata token for the object for which the attribute is requested.  
+ окне Токен метаданных для объекта, для которого запрашивается атрибут.  
   
  `name`  
- [in] A pointer to the variable that indicates the attribute to retrieve.  
+ окне Указатель на переменную, которая указывает извлекаемый атрибут.  
   
  `cBuffer`  
  [in] Размер массива `buffer`.  
   
  `pcBuffer`  
- [out] A pointer to the variable that receives the length of the attribute data.  
+ заполняет Указатель на переменную, которая получает длину данных атрибута.  
   
  `buffer`  
- [out] A pointer to the variable that receives the attribute data.  
+ заполняет Указатель на переменную, которая получает данные атрибута.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK, если метод выполнен. в противном случае E_FAIL или другой код ошибки.  
   
 ## <a name="requirements"></a>Требования  
- **Header:** CorSym.idl, CorSym.h  
+ **Заголовок:** Корсим. idl, Корсим. h  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

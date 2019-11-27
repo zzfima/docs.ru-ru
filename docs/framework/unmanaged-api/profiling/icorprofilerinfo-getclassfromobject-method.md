@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448146"
 ---
 # <a name="icorprofilerinfogetclassfromobject-method"></a>Метод ICorProfilerInfo::GetClassFromObject
-Gets the `ClassID` of an object, given its `ObjectID`.  
+Возвращает `ClassID` объекта, учитывая его `ObjectID`.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -35,13 +35,13 @@ HRESULT GetClassFromObject(
   
 ## <a name="parameters"></a>Параметры  
  `objectId`  
- [in] The ID of the object for which to get the `ClassID`.  
+ окне Идентификатор объекта, для которого необходимо получить `ClassID`.  
   
  `pClassId`  
- [out] A pointer to the returned `ClassID`.  
+ заполняет Указатель на возвращаемый `ClassID`.  
   
-## <a name="remarks"></a>Заметки  
- A null `pClassId` indicates that `objectId` has a type that is unloading.  
+## <a name="remarks"></a>Примечания  
+ Значение NULL `pClassId` указывает, что `objectId` имеет тип, выгружаемый.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
@@ -52,6 +52,6 @@ HRESULT GetClassFromObject(
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

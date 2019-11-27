@@ -12,8 +12,8 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348485"
 ---
-# <a name="example-visual-basic"></a>\<example> (Visual Basic)
-Specifies an example for the member.  
+# <a name="example-visual-basic"></a>Пример > \<(Visual Basic)
+Указывает пример для элемента.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -25,16 +25,16 @@ Specifies an example for the member.
  `description`  
  Описание примера кода.  
   
-## <a name="remarks"></a>Заметки  
- The `<example>` tag lets you specify an example of how to use a method or other library member. Вместе с ним часто применяется тег [\<code>](../../../visual-basic/language-reference/xmldoc/code.md).  
+## <a name="remarks"></a>Примечания  
+ Тег `<example>` позволяет указать пример использования метода или другого элемента библиотеки. Вместе с ним часто применяется тег [\<code>](../../../visual-basic/language-reference/xmldoc/code.md).  
   
  Чтобы обработать комментарии документации и сохранить их в файл, выполняйте сборку с параметром [-doc](../../../visual-basic/reference/command-line-compiler/doc.md).  
   
 ## <a name="example"></a>Пример  
- This example uses the `<example>` tag to include an example for using the `ID` field.  
+ В этом примере тег `<example>` используется для включения примера использования поля `ID`.  
   
  [!code-vb[VbVbcnXmlDocComments#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#2)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [XML-теги для комментариев](../../../visual-basic/language-reference/xmldoc/index.md)

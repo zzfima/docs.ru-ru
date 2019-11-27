@@ -18,16 +18,16 @@ ms.locfileid: "74348081"
 > [!NOTE]
 > Вы можете также создавать функции и вызывать их. Подробнее см. в разделах [Оператор Function](../../../visual-basic/language-reference/statements/function-statement.md) и [Практическое руководство. Создание процедуры, которая возвращает значение](../../../visual-basic/programming-guide/language-features/procedures/how-to-create-a-procedure-that-returns-a-value.md).  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Функции преобразования](../../../visual-basic/language-reference/functions/conversion-functions.md)  
   
  [Математические функции](../../../visual-basic/language-reference/functions/math-functions.md)  
   
  [Строковые функции](../../../visual-basic/language-reference/functions/string-functions.md)  
   
- [Функции преобразования типов](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
+ [Type Conversion Functions](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
   
- [Функция CType](../../../visual-basic/language-reference/functions/ctype-function.md)  
+ [CType Function](../../../visual-basic/language-reference/functions/ctype-function.md)  
   
 ## <a name="related-sections"></a>Связанные разделы  
  [Справочник по языку Visual Basic](../../../visual-basic/language-reference/index.md)  

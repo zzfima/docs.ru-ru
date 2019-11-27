@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74431486"
 ---
 # <a name="imetadataemitdefinepinvokemap-method"></a>Метод IMetaDataEmit::DefinePinvokeMap
-Sets features of the PInvoke signature of the method referenced by the specified token.  
+Задает функции сигнатуры PInvoke метода, на который ссылается указанный токен.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,27 +38,27 @@ HRESULT DefinePinvokeMap (
   
 ## <a name="parameters"></a>Параметры  
  `tk`  
- [in] The token for the target method.  
+ окне Токен для целевого метода.  
   
  `dwMappingFlags`  
- [in] Flags used by PInvoke to do the mapping.  
+ окне Флаги, используемые PInvoke для сопоставления.  
   
  `szImportName`  
- [in] The name of the target export method in an unmanaged DLL.  
+ окне Имя целевого метода экспорта в неуправляемой библиотеке DLL.  
   
  `mrImportDLL`  
- [in] The token for the target native DLL.  
+ окне Токен для собственной DLL-библиотеки целевого объекта.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Заголовок:** COR. h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **Библиотека:** Используется в качестве ресурса в MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [Интерфейс IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74427882"
 ---
 # <a name="isymunmanagedwriterremaptoken-method"></a>Метод ISymUnmanagedWriter::RemapToken
-Notifies the symbol writer that a metadata token has been remapped as the metadata was emitted. If the symbol writer has stored the old token within the symbol store, it must either update the stored token with the new value, or it must save the map for the corresponding symbol reader to remap during the read phase.  
+Уведомляет средство записи символов о том, что маркер метаданных был повторно сопоставлен при выдаче метаданных. Если средство записи символов сохранило Старый токен в хранилище символов, оно должно либо обновить сохраненный токен новым значением, либо сохранить карту для соответствующего средства чтения символов для сопоставления на этапе чтения.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -35,17 +35,17 @@ HRESULT RemapToken(
   
 ## <a name="parameters"></a>Параметры  
  `oldToken`  
- [in] The metadata token that was remapped.  
+ окне Токен метаданных, который был повторно сопоставлен.  
   
  `newToken`  
- [in] The new metadata token to which `oldToken` was remapped.  
+ окне Новый маркер метаданных, в который пересопоставлен `oldToken`.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK, если метод выполнен. в противном случае E_FAIL или другой код ошибки.  
   
 ## <a name="requirements"></a>Требования  
- **Header:** CorSym.idl, CorSym.h  
+ **Заголовок:** Корсим. idl, Корсим. h  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

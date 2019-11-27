@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445610"
 ---
 # <a name="precloseassembly-method"></a>Метод PreCloseAssembly
-Closes the assembly file. Call this method after closing all other files, but before closing the assembly file. Do not call this method for unbound modules.  
+Закрывает файл сборки. Вызовите этот метод после закрытия всех остальных файлов, но перед закрытием файла сборки. Не вызывайте этот метод для непривязанных модулей.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -34,15 +34,15 @@ HRESULT PreCloseAssembly(
   
 ## <a name="parameters"></a>Параметры  
  `AssemblyID`  
- ID of the assembly.  
+ Идентификатор сборки.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Returns S_OK if the method succeeds.  
+ Возвращает S_OK, если метод завершается с ошибкой.  
   
 ## <a name="requirements"></a>Требования  
- Requires alink.h.  
+ Требуется ALink. h.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс IALink](ialink-interface.md)
 - [Интерфейс IALink2](ialink2-interface.md)

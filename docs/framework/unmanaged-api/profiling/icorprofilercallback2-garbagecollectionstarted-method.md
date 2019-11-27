@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74439813"
 ---
 # <a name="icorprofilercallback2garbagecollectionstarted-method"></a>Метод ICorProfilerCallback2::GarbageCollectionStarted
-Notifies the code profiler that garbage collection has started.  
+Уведомляет профилировщик кода о начале сборки мусора.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -36,20 +36,20 @@ HRESULT GarbageCollectionStarted(
   
 ## <a name="parameters"></a>Параметры  
  `cGenerations`  
- [in] The total number of entries in the `generationCollected` array.  
+ окне Общее число записей в массиве `generationCollected`.  
   
  `generationCollected`  
- [in] An array of Boolean values, which are `true` if the generation that corresponds to the array index is being collected by this garbage collection; otherwise, `false`.  
+ окне Массив логических значений, которые `true`, если в ходе этой сборки мусора будет собираться поколение, соответствующее индексу массива; в противном случае `false`.  
   
- The array is indexed by a value of the [COR_PRF_GC_GENERATION](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-enumeration.md) enumeration, which indicates the generation.  
+ Массив индексируется по значению перечисления [COR_PRF_GC_GENERATION](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-enumeration.md) , которое указывает на поколение.  
   
  `reason`  
- [in] A value of the [COR_PRF_GC_REASON](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-reason-enumeration.md) enumeration that indicates the reason the garbage collection was induced.  
+ окне Значение перечисления [COR_PRF_GC_REASON](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-reason-enumeration.md) , указывающее причину принудительной сборки мусора.  
   
-## <a name="remarks"></a>Заметки  
- All callbacks that pertain to this garbage collection will occur between the `GarbageCollectionStarted` callback and the corresponding [ICorProfilerCallback2::GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) callback. These callbacks need not occur on the same thread.  
+## <a name="remarks"></a>Примечания  
+ Все обратные вызовы, относящиеся к этой сборке мусора, будут происходить между обратным вызовом `GarbageCollectionStarted` и соответствующим обратным вызовом [ICorProfilerCallback2:: GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) . Эти обратные вызовы не должны выполняться в одном потоке.  
   
- It is safe for the profiler to inspect objects in their original locations during the `GarbageCollectionStarted` callback. The garbage collector will begin moving objects after the return from `GarbageCollectionStarted`. After the profiler has returned from this callback, the profiler should consider all object IDs to be invalid until it receives a `ICorProfilerCallback2::GarbageCollectionFinished` callback.  
+ Профилировщик может быть в безопасности проверять объекты в их исходных расположениях во время обратного вызова `GarbageCollectionStarted`. Сборщик мусора начнет перемещать объекты после возврата из `GarbageCollectionStarted`. После возвращения профилировщика из этого обратного вызова профилировщик должен считать, что все идентификаторы объектов являются недопустимыми, пока не получит ответный вызов `ICorProfilerCallback2::GarbageCollectionFinished`.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
@@ -60,7 +60,7 @@ HRESULT GarbageCollectionStarted(
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
 - [Интерфейс ICorProfilerCallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)

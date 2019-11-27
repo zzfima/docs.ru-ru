@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428038"
 ---
 # <a name="isymunmanagedwriterdefinefield-method"></a>Метод ISymUnmanagedWriter::DefineField
-Defines a single variable that is not within a method. This method is used for certain fields in classes, bit fields, and so on.  
+Определяет одну переменную, не находящиеся в методе. Этот метод используется для определенных полей в классах, битовых полях и т. д.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -42,38 +42,38 @@ HRESULT DefineField(
   
 ## <a name="parameters"></a>Параметры  
  `parent`  
- [in] The metadata type or method token.  
+ окне Тип метаданных или токен метода.  
   
  `name`  
- [in] The field name.  
+ окне Имя поля.  
   
  `attributes`  
- [in] The field attributes.  
+ окне Атрибуты поля.  
   
  `cSig`  
- [in] A `ULONG32` that is the size, in characters, of the buffer required to contain the field signature.  
+ окне `ULONG32`, которая представляет собой размер (в символах) буфера, необходимого для хранения подписи поля.  
   
  `signature`  
- [in] The array of field signatures.  
+ окне Массив подписей полей.  
   
  `addrKind`  
- [in] The address type.  
+ окне Тип адреса.  
   
  `addr1`  
- [in] The first address for the field specification.  
+ окне Первый адрес для спецификации поля.  
   
  `addr2`  
- [in] The second address for the field specification.  
+ окне Второй адрес для спецификации поля.  
   
  `addr3`  
- [in] The third address for the field specification.  
+ окне Третий адрес для спецификации поля.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK, если метод выполнен. в противном случае E_FAIL или другой код ошибки.  
   
 ## <a name="requirements"></a>Требования  
- **Header:** CorSym.idl, CorSym.h  
+ **Заголовок:** Корсим. idl, Корсим. h  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

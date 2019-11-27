@@ -53,12 +53,12 @@ ms.locfileid: "74447146"
 
 Следующие свойства и методы обязательны для реализации <xref:System.Windows.Automation.Provider.IExpandCollapseProvider>.
 
-|Обязательные члены|Тип члена|Примечания|
+|Обязательные члены|Тип элемента|Примечания|
 |----------------------|-----------------|-----------|
-|<xref:System.Windows.Automation.Provider.IExpandCollapseProvider.ExpandCollapseState%2A>|свойство;|Отсутствуют|
-|<xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A>|Метод|Отсутствуют|
-|<xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A>|Метод|Отсутствуют|
-|<xref:System.Windows.Automation.AutomationPropertyChangedEventHandler>|событие|Этот элемент управления не имеет связанных событий; используйте этот универсальный делегат.|
+|<xref:System.Windows.Automation.Provider.IExpandCollapseProvider.ExpandCollapseState%2A>|Свойство|Нет|
+|<xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A>|Метод|Нет|
+|<xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A>|Метод|Нет|
+|<xref:System.Windows.Automation.AutomationPropertyChangedEventHandler>|Событие|Этот элемент управления не имеет связанных событий; используйте этот универсальный делегат.|
 
 <a name="Exceptions"></a>
 
@@ -70,7 +70,7 @@ ms.locfileid: "74447146"
 |--------------------|---------------|
 |<xref:System.InvalidOperationException>|Вызывается <xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A> или <xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A> , когда <xref:System.Windows.Automation.ExpandCollapseState> = <xref:System.Windows.Automation.ExpandCollapseState.LeafNode>.|
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Общие сведения о шаблонах элементов управления модели автоматизации пользовательского интерфейса](ui-automation-control-patterns-overview.md)
 - [Поддержка шаблонов элементов управления в поставщике автоматизации пользовательского интерфейса](support-control-patterns-in-a-ui-automation-provider.md)

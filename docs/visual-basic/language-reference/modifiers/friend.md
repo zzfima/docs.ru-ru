@@ -18,32 +18,32 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351564"
 ---
 # <a name="friend-visual-basic"></a>Friend (Visual Basic)
-Specifies that one or more declared programming elements are accessible only from within the assembly that contains their declaration.  
+Указывает, что один или несколько объявленных программных элементов доступны только в пределах сборки, содержащей их объявление.  
   
-## <a name="remarks"></a>Заметки  
- In many cases, you want programming elements such as classes and structures to be used by the entire assembly, not only by the component that declares them. However, you might not want them to be accessible by code outside the assembly (for example, if the application is proprietary). If you want to limit access to an element in this way, you can declare it by using the `Friend` modifier.  
+## <a name="remarks"></a>Примечания  
+ Во многих случаях требуется, чтобы элементы программирования, такие как классы и структуры, использовались целой сборкой, а не только компонентом, который их объявляет. Однако может быть нежелательно, чтобы они были доступны коду за пределами сборки (например, если приложение является собственным). Если требуется ограничить доступ к элементу таким образом, его можно объявить с помощью модификатора `Friend`.  
   
- Code in other classes, structures, and modules that are compiled to the same assembly can access all the `Friend` elements in that assembly.  
+ Код в других классах, структурах и модулях, компилируемых в одну и ту же сборку, имеет доступ ко всем элементам `Friend` в этой сборке.  
   
- `Friend` access is often the preferred level for an application's programming elements, and `Friend` is the default access level of an interface, a module, a class, or a structure.  
+ `Friend` доступом часто является предпочтительным уровнем для программных элементов приложения, а `Friend` является уровнем доступа по умолчанию для интерфейса, модуля, класса или структуры.  
   
- You can use `Friend` only at the module, interface, or namespace level. Therefore, the declaration context for a `Friend` element must be a source file, a namespace, an interface, a module, a class, or a structure; it can't be a procedure.  
+ `Friend` можно использовать только на уровне модуля, интерфейса или пространства имен. Таким образом, контекст объявления для элемента `Friend` должен быть исходным файлом, пространством имен, интерфейсом, модулем, классом или структурой. она не может быть процедурой.  
 
 > [!NOTE]
-> You can also use the [Protected Friend](protected-friend.md) access modifier, which makes a class member accessible from within that class, from derived classes, and from the same assembly in which the class is defined. To restrict access to a member from within its class and from derived classes in the same assembly, you use the [Private Protected](private-protected.md) access modifier.
+> Можно также использовать модификатор доступа [Protected Friend](protected-friend.md) , который делает член класса доступным из этого класса, из производных классов и из той же сборки, в которой определен класс. Для ограничения доступа к члену из его класса и из производных классов в той же сборке используется модификатор [закрытого](private-protected.md) доступа.
 
- For a comparison of `Friend` and the other access modifiers, see [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
+ Сравнение `Friend` и других модификаторов доступа см. [в разделе уровни доступа в Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
 > [!NOTE]
-> You can specify that another assembly is a friend assembly, which allows it to access all types and members that are marked as `Friend`. Дополнительные сведения см. в разделе [Дружественные сборки](../../../standard/assembly/friend.md).
+> Можно указать, что другая сборка является дружественной, что позволяет ей получить доступ ко всем типам и членам, помеченным как `Friend`. Дополнительные сведения см. в разделе [Дружественные сборки](../../../standard/assembly/friend.md).
 
 ## <a name="example"></a>Пример  
- The following class uses the `Friend` modifier to allow other programming elements within the same assembly to access certain members.  
+ Следующий класс использует модификатор `Friend`, чтобы разрешить другим программным элементам в той же сборке доступ к определенным элементам.  
   
  [!code-vb[VbVbalrAccessModifiers#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalraccessmodifiers/vb/class1.vb#1)]  
   
 ## <a name="usage"></a>Использование  
- You can use the `Friend` modifier in these contexts:  
+ Модификатор `Friend` можно использовать в следующих контекстах:  
   
  [Оператор Class](../../../visual-basic/language-reference/statements/class-statement.md)  
   
@@ -71,7 +71,7 @@ Specifies that one or more declared programming elements are accessible only fro
   
  [Оператор Sub](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>
 - [Public](../../../visual-basic/language-reference/modifiers/public.md)
@@ -79,7 +79,7 @@ Specifies that one or more declared programming elements are accessible only fro
 - [Закрытые](../../../visual-basic/language-reference/modifiers/private.md)
 - [Private Protected](./private-protected.md)
 - [Protected Friend](./protected-friend.md)
-- [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
+- [Уровни доступа в Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
 - [Процедуры](../../../visual-basic/programming-guide/language-features/procedures/index.md)
 - [Структуры](../../../visual-basic/programming-guide/language-features/data-types/structures.md)
 - [Объекты и классы](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

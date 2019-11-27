@@ -23,9 +23,9 @@ ms.locfileid: "74444531"
  Не рекомендуется использовать типы значений в тех случаях, где они многократно упаковываются, например в классах неуниверсальных коллекций, таких как <xref:System.Collections.ArrayList?displayProperty=nameWithType>. Чтобы избежать упаковки типов значений, используйте универсальные коллекции, такие как <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>. Операции упаковки и распаковки являются весьма затратными процессами с точки зрения вычислений. При упаковке типа значений создается полностью новый объект. Это может занимать почти в 20 раз больше времени, чем простое присваивание ссылки. Процесс приведения при распаковке также занимает в 4 раза больше времени, чем присваивание. Дополнительные сведения см. в разделе [Упаковка-преобразование и распаковка-преобразование](../../csharp/programming-guide/types/boxing-and-unboxing.md).  
   
 ## <a name="strings"></a>Строки  
- При сцеплении большого числа строковых переменных, например в непрерывном цикле, используйте <xref:System.Text.StringBuilder?displayProperty=nameWithType> вместо [оператора + (C#)](../../csharp/language-reference/operators/addition-operator.md) или [операторов сцепления (Visual Basic)](../../visual-basic/language-reference/operators/concatenation-operators.md). For more information, see [How to concatenate multiple strings](../../csharp/how-to/concatenate-multiple-strings.md) and [Concatenation Operators in Visual Basic](../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md).  
+ При сцеплении большого числа строковых переменных, например в непрерывном цикле, используйте <xref:System.Text.StringBuilder?displayProperty=nameWithType> вместо [оператора + (C#)](../../csharp/language-reference/operators/addition-operator.md) или [операторов сцепления (Visual Basic)](../../visual-basic/language-reference/operators/concatenation-operators.md). Дополнительные сведения см. в разделе [сцепление нескольких строк](../../csharp/how-to/concatenate-multiple-strings.md) и [операторов объединения в Visual Basic](../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md).  
   
-## <a name="destructors"></a>Деструкторы  
+## <a name="destructors"></a>Деструкторы.  
  Пустые деструкторы использовать не следует. Если класс содержит деструктор, то в очереди метода Finalize создается запись. При вызове деструктора вызывается сборщик мусора, выполняющий обработку очереди. Если деструктор пустой, это приводит только к ненужному снижению производительности. Дополнительные сведения см. в разделах [Деструкторы](../../csharp/programming-guide/classes-and-structs/destructors.md) и [Время существования: создание и уничтожение объектов](../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md).  
   
 ## <a name="other-resources"></a>Другие ресурсы  
@@ -40,9 +40,9 @@ ms.locfileid: "74444531"
 
 - [Советы по повышению производительности от Рико Мариани](https://blogs.msdn.microsoft.com/ricom/)  
 
-- [Vance Morrison's Blog](https://blogs.msdn.microsoft.com/vancem/)
+- [Блог Вэнс Моррисон](https://blogs.msdn.microsoft.com/vancem/)
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Производительность](index.md)
 - [Руководство по программированию на Visual Basic](../../visual-basic/programming-guide/index.md)

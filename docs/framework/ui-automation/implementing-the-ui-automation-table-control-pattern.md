@@ -32,25 +32,25 @@ ms.locfileid: "74447096"
 - Заголовки столбцов и строк могут включать и основной заголовок, и любые поддерживаемые заголовки.  
   
 > [!NOTE]
-> This concept becomes evident in a Microsoft Excel spreadsheet where a user has defined a "First name" column. Теперь этот столбец имеет два заголовка: заголовок "Имя", определенный пользователем, и алфавитно-цифровое обозначение этого столбца, назначенное приложением.  
+> Эта концепция станет очевидной в электронной таблице Microsoft Excel, где пользователь определил столбец «First Name» (имя). Теперь этот столбец имеет два заголовка: заголовок "Имя", определенный пользователем, и алфавитно-цифровое обозначение этого столбца, назначенное приложением.  
   
-- See [Implementing the UI Automation Grid Control Pattern](implementing-the-ui-automation-grid-control-pattern.md) for related grid functionality.  
+- См. раздел [Реализация шаблона элемента управления сетки модели автоматизации пользовательского интерфейса](implementing-the-ui-automation-grid-control-pattern.md) для связанных функций сетки.  
   
- ![Table with complex header items.](./media/uia-tablepattern-complex-column-headers.PNG "UIA_TablePattern_Complex_Column_Headers")  
+ ![Таблица со сложными элементами заголовка.](./media/uia-tablepattern-complex-column-headers.PNG "UIA_TablePattern_Complex_Column_Headers")  
 Пример таблицы со сложными заголовками столбцов  
   
- ![Table with ambiguous RowOrColumnMajor property.](./media/uia-tablepattern-roworcolumnmajorproperty.PNG "UIA_TablePattern_RowOrColumnMajorProperty")  
+ ![Таблица с неоднозначным свойством Роворколумнмажор.](./media/uia-tablepattern-roworcolumnmajorproperty.PNG "UIA_TablePattern_RowOrColumnMajorProperty")  
 Пример таблицы с неоднозначным свойством RowOrColumnMajor.  
   
 <a name="Required_Members_for_ITableProvider"></a>   
 ## <a name="required-members-for-itableprovider"></a>Обязательные члены для ITableProvider  
  Следующие свойства и методы обязательны для реализации интерфейса ITableProvider.  
   
-|Обязательные члены|Тип члена|Примечания|  
+|Обязательные члены|Тип элемента|Примечания|  
 |----------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.ITableProvider.RowOrColumnMajor%2A>|свойство;|Отсутствуют|  
-|<xref:System.Windows.Automation.Provider.ITableProvider.GetColumnHeaders%2A>|Метод|Отсутствуют|  
-|<xref:System.Windows.Automation.Provider.ITableProvider.GetRowHeaders%2A>|Метод|Отсутствуют|  
+|<xref:System.Windows.Automation.Provider.ITableProvider.RowOrColumnMajor%2A>|Свойство|Нет|  
+|<xref:System.Windows.Automation.Provider.ITableProvider.GetColumnHeaders%2A>|Метод|Нет|  
+|<xref:System.Windows.Automation.Provider.ITableProvider.GetRowHeaders%2A>|Метод|Нет|  
   
  Этот шаблон элемента управления не имеет связанных событий.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "74447096"
 ## <a name="exceptions"></a>Исключения  
  Этот шаблон элемента управления не имеет связанных исключений.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Общие сведения о шаблонах элементов управления модели автоматизации пользовательского интерфейса](ui-automation-control-patterns-overview.md)
 - [Поддержка шаблонов элементов управления в поставщике автоматизации пользовательского интерфейса](support-control-patterns-in-a-ui-automation-provider.md)

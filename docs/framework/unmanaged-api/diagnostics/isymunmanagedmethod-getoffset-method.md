@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448948"
 ---
 # <a name="isymunmanagedmethodgetoffset-method"></a>Метод ISymUnmanagedMethod::GetOffset
-Returns the offset within this method that corresponds to a given position within a document.  
+Возвращает смещение в этом методе, соответствующее заданной позиции в документе.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,23 +37,23 @@ HRESULT GetOffset(
   
 ## <a name="parameters"></a>Параметры  
  `document`  
- [in] A pointer to the document for which the offset is requested.  
+ окне Указатель на документ, для которого запрашивается смещение.  
   
  `line`  
- [in] The document line for which the offset is requested.  
+ окне Строка документа, для которой запрашивается смещение.  
   
  `column`  
- [in] The document column for which the offset is requested.  
+ окне Столбец документа, для которого запрашивается смещение.  
   
  `pRetVal`  
- [out] A pointer to a `ULONG32` that receives the offsets.  
+ заполняет Указатель на `ULONG32`, который получает смещения.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK, если метод выполнен. в противном случае E_FAIL или другой код ошибки.  
   
 ## <a name="requirements"></a>Требования  
- **Header:** CorSym.idl, CorSym.h  
+ **Заголовок:** Корсим. idl, Корсим. h  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс ISymUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)

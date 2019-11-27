@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448184"
 ---
 # <a name="icorprofilerinfoforcegc-method"></a>Метод ICorProfilerInfo::ForceGC
-Forces garbage collection to occur within the common language runtime (CLR).  
+Принудительное выполнение сборки мусора в среде CLR.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -31,8 +31,8 @@ Forces garbage collection to occur within the common language runtime (CLR).
 HRESULT ForceGC();  
 ```  
   
-## <a name="remarks"></a>Заметки  
- The `ForceGC` method must be called only from a thread that has never run managed code and does not have any profiler callbacks on its stack. The most convenient implementation is to create a separate thread within the profiler that calls `ForceGC` when signaled.  
+## <a name="remarks"></a>Примечания  
+ Метод `ForceGC` должен вызываться только из потока, который никогда не выполнял управляемый код и не имеет обратных вызовов профилировщика в стеке. Наиболее удобной реализацией является создание отдельного потока в профилировщике, который вызывает `ForceGC` при получении сигнала.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
@@ -43,6 +43,6 @@ HRESULT ForceGC();
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
