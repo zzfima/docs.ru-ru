@@ -29,23 +29,23 @@ ms.locfileid: "74344035"
 ---
 # <a name="decimal-data-type-visual-basic"></a>Тип данных Decimal (Visual Basic)
 
-Holds signed 128-bit (16-byte) values representing 96-bit (12-byte) integer numbers scaled by a variable power of 10. The scaling factor specifies the number of digits to the right of the decimal point; it ranges from 0 through 28. With a scale of 0 (no decimal places), the largest possible value is +/-79,228,162,514,264,337,593,543,950,335 (+/-7.9228162514264337593543950335E+28). With 28 decimal places, the largest value is +/-7.9228162514264337593543950335, and the smallest nonzero value is +/-0.0000000000000000000000000001 (+/-1E-28).
+Содержит 128-разрядные (16-байтные) значения со знаком, представляющие 96-разрядные (12-байтные) целые числа с переменной степенью, кратной 10. Коэффициент масштабирования определяет количество цифр справа от десятичной запятой. Он находится в диапазоне от 0 до 28. С масштабом 0 (без десятичных знаков) максимально возможное значение — +/-79,228,162,514,264,337,593,543,950,335 (+/-7.9228162514264337593543950335E + 28). С 28 десятичными разрядами максимальное значение — +/-7.9228162514264337593543950335, а наименьшее ненулевое значение — +/-0,0000000000000000000000000001 (+/-1E-28).
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Примечания
 
-The `Decimal` data type provides the greatest number of significant digits for a number. It supports up to 29 significant digits and can represent values in excess of 7.9228 x 10^28. It is particularly suitable for calculations, such as financial, that require a large number of digits but cannot tolerate rounding errors.
+Тип данных `Decimal` предоставляет наибольшее количество значащих цифр для числа. Он поддерживает до 29 значащих цифр и может представлять значения, превышающие 7,9228 x 10 ^ 28. Он особенно подходит для вычислений, например финансовых, которые нуждаются в большом количестве цифр, но не могут допускать ошибки округления.
 
 Значение по умолчанию для типа `Decimal` — 0.
 
 ## <a name="programming-tips"></a>Советы по программированию
 
-- **Precision.** `Decimal` is not a floating-point data type. The `Decimal` structure holds a binary integer value, together with a sign bit and an integer scaling factor that specifies what portion of the value is a decimal fraction. Because of this, `Decimal` numbers have a more precise representation in memory than floating-point types (`Single` and `Double`).
+- **Обеспечивают.** `Decimal` не является типом данных с плавающей запятой. Структура `Decimal` содержит двоичное целочисленное значение, а также бит знака и целочисленный коэффициент масштабирования, указывающий, какая часть значения является десятичной дробью. По этой причине `Decimal` числа имеют более точное представление в памяти, чем типы с плавающей запятой (`Single` и `Double`).
 
-- **Производительность.** The `Decimal` data type is the slowest of all the numeric types. You should weigh the importance of precision against performance before choosing a data type.
+- **Производительность.** Тип данных `Decimal` является самым медленным из всех числовых типов. Перед выбором типа данных следует оценить важность точности в соответствии с производительностью.
 
-- **Widening.** The `Decimal` data type widens to `Single` or `Double`. This means you can convert `Decimal` to either of these types without encountering a <xref:System.OverflowException?displayProperty=nameWithType> error.
+- **Расширяющие.** Тип данных `Decimal` расширяется до `Single` или `Double`. Это означает, что можно преобразовать `Decimal` в любой из этих типов без возникновения ошибки <xref:System.OverflowException?displayProperty=nameWithType>.
 
-- **Trailing Zeros.** Visual Basic does not store trailing zeros in a `Decimal` literal. However, a `Decimal` variable preserves any trailing zeros acquired computationally. Это показано в следующем примере.
+- **Нули в конце.** Visual Basic не сохраняет конечные нули в литерале `Decimal`. Однако `Decimal` переменная сохраняет все конечные нули, полученные при вычислении. Это показано в следующем примере.
 
   ```vb
   Dim d1, d2, d3, d4 As Decimal
@@ -57,19 +57,19 @@ The `Decimal` data type provides the greatest number of significant digits for a
         ", d3 = " & CStr(d3) & ", d4 = " & CStr(d4))
   ```
 
-  The output of `MsgBox` in the preceding example is as follows:
+  Выходные данные `MsgBox` в предыдущем примере имеют следующий вид:
 
   ```console
   d1 = 2.375, d2 = 1.625, d3 = 4.000, d4 = 4
   ```
 
-- **Type Characters.** При добавлении к литералу символа типа литерала `D` производится принудительное приведение литерала к типу данных `Decimal`. При добавлении символа идентификатора типа `@` к любому идентификатору производится принудительное приведение этого идентификатора к типу `Decimal`.
+- **Символы типа.** При добавлении к литералу символа типа литерала `D` производится принудительное приведение литерала к типу данных `Decimal`. При добавлении символа идентификатора типа `@` к любому идентификатору производится принудительное приведение этого идентификатора к типу `Decimal`.
 
-- **Framework Type.** В .NET Framework данный тип соответствует структуре <xref:System.Decimal?displayProperty=nameWithType>.
+- **Тип платформы.** В .NET Framework данный тип соответствует структуре <xref:System.Decimal?displayProperty=nameWithType>.
 
 ## <a name="range"></a>Диапазон
 
- You might need to use the `D` type character to assign a large value to a `Decimal` variable or constant. This requirement is because the compiler interprets a literal as `Long` unless a literal type character follows the literal, as the following example shows.
+ Может потребоваться использовать символ типа `D`, чтобы присвоить большое значение переменной `Decimal` или константе. Это требование обусловлено тем, что компилятор интерпретирует литерал как `Long`, если только символ типа литерала не соответствует литералу, как показано в следующем примере.
 
 ```vb
 Dim bigDec1 As Decimal = 9223372036854775807   ' No overflow.
@@ -77,11 +77,11 @@ Dim bigDec2 As Decimal = 9223372036854775808   ' Overflow.
 Dim bigDec3 As Decimal = 9223372036854775808D  ' No overflow.
 ```
 
-The declaration for `bigDec1` doesn't produce an overflow because the value that's assigned to it falls within the range for `Long`. The `Long` value can be assigned to the `Decimal` variable.
+Объявление `bigDec1` не создает переполнение, так как присваиваемое ему значение попадает в диапазон для `Long`. Значение `Long` можно присвоить переменной `Decimal`.
 
-The declaration for `bigDec2` generates an overflow error because the value that's assigned to it is too large for `Long`. Because the numeric literal can't first be interpreted as a `Long`, it can't be assigned to the `Decimal` variable.
+Объявление `bigDec2` создает ошибку переполнения, так как присвоенное ей значение слишком велико для `Long`. Поскольку числовой литерал не может быть интерпретирован в качестве `Long`, его нельзя присвоить переменной `Decimal`.
 
-For `bigDec3`, the literal type character `D` solves the problem by forcing the compiler to interpret the literal as a `Decimal` instead of as a `Long`.
+Для `bigDec3`символьный тип литерала `D` решает проблему, заставляя компилятор интерпретировать литерал как `Decimal`, а не как `Long`.
 
 ## <a name="see-also"></a>См. также
 
@@ -91,6 +91,6 @@ For `bigDec3`, the literal type character `D` solves the problem by forcing the 
 - [Типы данных](../../../visual-basic/language-reference/data-types/index.md)
 - [Тип данных Single](../../../visual-basic/language-reference/data-types/single-data-type.md)
 - [Тип данных Double](../../../visual-basic/language-reference/data-types/double-data-type.md)
-- [Функции преобразования типов](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [Type Conversion Functions](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
 - [Сводка по преобразованию](../../../visual-basic/language-reference/keywords/conversion-summary.md)
 - [Эффективное использование типов данных](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

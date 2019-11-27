@@ -20,20 +20,20 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345863"
 ---
 # <a name="array-conversions-visual-basic"></a>Преобразование массивов (Visual Basic)
-You can convert an array type to a different array type provided you meet the following conditions:  
+Тип массива можно преобразовать в другой тип массива при условии соблюдения следующих условий.  
   
-- **Equal Rank.** The ranks of the two arrays must be the same, that is, they must have the same number of dimensions. However, the lengths of the respective dimensions do not need to be the same.  
+- **Равный ранг.** Ранги двух массивов должны быть одинаковыми, то есть они должны иметь одинаковое количество измерений. Однако длины соответствующих измерений не обязательно должны совпадать.  
   
-- **Element Data Type.** The data types of the elements of both arrays must be reference types. You cannot convert an `Integer` array to a `Long` array, or even to an `Object` array, because at least one value type is involved. Для получения дополнительной информации см. [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md).  
+- **Тип данных элемента.** Типы данных элементов обоих массивов должны быть ссылочными типами. Невозможно преобразовать массив `Integer` в массив `Long` или даже в массив `Object`, так как задействован хотя бы один тип значений. Для получения дополнительной информации см. [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md).  
   
-- **Convertibility.** A conversion, either widening or narrowing, must be possible between the element types of the two arrays. An example that fails this requirement is an attempted conversion between a `String` array and an array of a class derived from <xref:System.Attribute?displayProperty=nameWithType>. These two types have nothing in common, and no conversion of any kind exists between them.  
+- **Вариантное.** Преобразование (расширяющее или сужение) должно быть возможным между типами элементов двух массивов. Пример, в котором не выполняется это требование — попытка преобразования между `String` массивом и массивом класса, производного от <xref:System.Attribute?displayProperty=nameWithType>. Эти два типа не имеют ничего общего, и между ними не существует каких либо преобразований.  
   
- A conversion of one array type to another is widening or narrowing depending on whether the conversion of the respective elements is widening or narrowing. Для получения дополнительной информации см. [Widening and Narrowing Conversions](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).  
+ Преобразование одного типа массива в другой может расширяться или уменьшаться в зависимости от того, является ли преобразование соответствующих элементов расширяющим или узким. Для получения дополнительной информации см. [Widening and Narrowing Conversions](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).  
   
-## <a name="conversion-to-an-object-array"></a>Conversion to an Object Array  
- When you declare an `Object` array without initializing it, its element type is `Object` as long as it remains uninitialized. When you set it to an array of a specific class, it takes on the type of that class. However, its underlying type is still `Object`, and you can subsequently set it to another array of an unrelated class. Since all classes derive from `Object`, you can change the array's element type from any class to any other class.  
+## <a name="conversion-to-an-object-array"></a>Преобразование в массив объектов  
+ При объявлении массива `Object` без инициализации его тип элемента `Object`, пока он остается неинициализированным. При присвоении значения массиву определенного класса он принимает тип этого класса. Однако его базовый тип по-прежнему `Object`, и впоследствии его можно установить в другой массив несвязанного класса. Поскольку все классы являются производными от `Object`, можно изменить тип элемента массива с любого класса на любой другой класс.  
   
- In the following example, no conversion exists between types `student` and `String`, but both derive from `Object`, so all assignments are valid.  
+ В следующем примере преобразование между типами `student` и `String`не существует, но оба типа являются производными от `Object`, поэтому все назначения являются допустимыми.  
   
 ```vb  
 ' Assume student has already been defined as a class.  
@@ -46,10 +46,10 @@ testArray = names
 ' testArray is now a String array.  
 ```  
   
-### <a name="underlying-type-of-an-array"></a>Underlying Type of an Array  
- If you originally declare an array with a specific class, its underlying element type is that class. If you subsequently set it to an array of another class, there must be a conversion between the two classes.  
+### <a name="underlying-type-of-an-array"></a>Базовый тип массива  
+ Если изначально был объявлен массив с конкретным классом, его базовым типом элемента является этот класс. Если впоследствии задать для него массив другого класса, необходимо выполнить преобразование между двумя классами.  
   
- In the following example, `students` is a `student` array. Since no conversion exists between `String` and `student`, the last statement fails.  
+ В следующем примере `students` является массивом `student`. Поскольку преобразование между `String` и `student`не существует, последняя инструкция завершается ошибкой.  
   
 ```vb  
 Dim students() As student  
@@ -62,10 +62,10 @@ students = names
 ## <a name="see-also"></a>См. также
 
 - [Типы данных](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
-- [Type Conversions in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [Преобразования типов в Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
 - [Явные и неявные преобразования](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)
 - [Преобразования значений между строковыми и другими типами](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)
-- [How to: Convert an Object to Another Type in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)
+- [Как преобразовать объект в другой тип в Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)
 - [Типы данных](../../../../visual-basic/language-reference/data-types/index.md)
-- [Функции преобразования типов](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [Type Conversion Functions](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)
 - [Массивы](../../../../visual-basic/programming-guide/language-features/arrays/index.md)

@@ -1,5 +1,5 @@
 ---
-title: 'How to: Call an Event Handler'
+title: Как вызвать обработчик событий
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic code, procedures
@@ -17,41 +17,41 @@ ms.locfileid: "74340429"
 ---
 # <a name="how-to-call-an-event-handler-in-visual-basic"></a>Практическое руководство. Вызов обработчика событий в Visual Basic
 
-An *event* is an action or occurrence — such as a mouse click or a credit limit exceeded — that is recognized by some program component, and for which you can write code to respond. An *event handler* is the code you write to respond to an event.
+*Событие* — это действие или ситуация (например, превышение щелчка мыши или предела кредита), которые распознаются некоторым компонентом программы и для которых можно написать код для ответа. *Обработчик событий* — это код, который вы пишете для реагирования на событие.
 
- An event handler in Visual Basic is a `Sub` procedure. However, you do not normally call it the same way as other `Sub` procedures. Instead, you identify the procedure as a handler for the event. You can do this either with a [Handles](../../../language-reference/statements/handles-clause.md) clause and a [WithEvents](../../../language-reference/modifiers/withevents.md) variable, or with an [AddHandler Statement](../../../language-reference/statements/addhandler-statement.md). Using a `Handles` clause is the default way to declare an event handler in Visual Basic. This is the way the event handlers are written by the designers when you program in the integrated development environment (IDE). The `AddHandler` statement is suitable for raising events dynamically at run time.
+ Обработчик событий в Visual Basic является процедурой `Sub`. Однако обычно он не вызывается так же, как другие `Sub` процедуры. Вместо этого вы определяете процедуру как обработчик для события. Это можно сделать с помощью предложения [Handles](../../../language-reference/statements/handles-clause.md) и переменной [WithEvents](../../../language-reference/modifiers/withevents.md) или с помощью [оператора AddHandler](../../../language-reference/statements/addhandler-statement.md). Использовать предложение `Handles` по умолчанию — это способ объявления обработчика событий в Visual Basic. Это способ, которым обработчики событий пишутся конструкторами при программировании в интегрированной среде разработки (IDE). Оператор `AddHandler` подходит для динамического вызова событий во время выполнения.
 
- When the event occurs, Visual Basic automatically calls the event handler procedure. Any code that has access to the event can cause it to occur by executing a [RaiseEvent Statement](../../../language-reference/statements/raiseevent-statement.md).
+ Когда происходит событие, Visual Basic автоматически вызывает процедуру обработчика событий. Любой код, имеющий доступ к событию, может привести к его возникновению, выполнив [оператор RaiseEvent](../../../language-reference/statements/raiseevent-statement.md).
 
- You can associate more than one event handler with the same event. In some cases you can dissociate a handler from an event. Дополнительные сведения см. в статье [Events (Visual Basic)](../events/index.md) (События в Visual Basic).
+ Можно связать более одного обработчика событий с одним и тем же событием. В некоторых случаях можно отменить связь обработчика с событием. Дополнительные сведения см. в статье [Events (Visual Basic)](../events/index.md) (События в Visual Basic).
 
-### <a name="to-call-an-event-handler-using-handles-and-withevents"></a>To call an event handler using Handles and WithEvents
+### <a name="to-call-an-event-handler-using-handles-and-withevents"></a>Вызов обработчика событий с помощью дескрипторов и WithEvents
 
-1. Make sure the event is declared with an [Event Statement](../../../language-reference/statements/event-statement.md).
+1. Убедитесь, что событие объявлено с помощью [оператора Event](../../../language-reference/statements/event-statement.md).
 
-2. Declare an object variable at module or class level, using the [WithEvents](../../../language-reference/modifiers/withevents.md) keyword. The `As` clause for this variable must specify the class that raises the event.
+2. Объявите переменную объекта на уровне модуля или класса с помощью ключевого слова [WithEvents](../../../language-reference/modifiers/withevents.md) . В предложении `As` для этой переменной должен быть указан класс, инициирующий событие.
 
-3. In the declaration of the event-handling `Sub` procedure, add a [Handles](../../../language-reference/statements/handles-clause.md) clause that specifies the `WithEvents` variable and the event name.
+3. В объявлении процедуры обработки событий `Sub` добавьте предложение [Handles](../../../language-reference/statements/handles-clause.md) , которое задает `WithEvents` переменную и имя события.
 
-4. When the event occurs, Visual Basic automatically calls the `Sub` procedure. Your code can use a `RaiseEvent` statement to make the event occur.
+4. Когда происходит событие, Visual Basic автоматически вызывает процедуру `Sub`. В коде можно использовать инструкцию `RaiseEvent` для выполнения события.
 
-     The following example defines an event and a `WithEvents` variable that refers to the class that raises the event. The event-handling `Sub` procedure uses a `Handles` clause to specify the class and event it handles.
+     В следующем примере определяется событие и переменная `WithEvents`, которая ссылается на класс, который вызывает событие. Процедура `Sub` обработки событий использует предложение `Handles` для указания класса и события, которые он обрабатывает.
 
      [!code-vb[VbVbcnProcedures#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#4)]
 
-### <a name="to-call-an-event-handler-using-addhandler"></a>To call an event handler using AddHandler
+### <a name="to-call-an-event-handler-using-addhandler"></a>Вызов обработчика событий с помощью AddHandler
 
-1. Make sure the event is declared with an `Event` statement.
+1. Убедитесь, что событие объявлено с помощью оператора `Event`.
 
-2. Execute an [AddHandler Statement](../../../language-reference/statements/addhandler-statement.md) to dynamically connect the event-handling `Sub` procedure with the event.
+2. Выполните [оператор AddHandler](../../../language-reference/statements/addhandler-statement.md) для динамического подключения процедуры обработки событий `Sub` с событием.
 
-3. When the event occurs, Visual Basic automatically calls the `Sub` procedure. Your code can use a `RaiseEvent` statement to make the event occur.
+3. Когда происходит событие, Visual Basic автоматически вызывает процедуру `Sub`. В коде можно использовать инструкцию `RaiseEvent` для выполнения события.
 
-     The following example defines a `Sub` procedure to handle the <xref:System.Windows.Forms.Form.Closing> event of a form. It then uses the [AddHandler Statement](../../../language-reference/statements/addhandler-statement.md) to associate the `catchClose` procedure as an event handler for <xref:System.Windows.Forms.Form.Closing>.
+     В следующем примере определяется процедура `Sub` для обработки события <xref:System.Windows.Forms.Form.Closing> формы. Затем в нем используется [оператор AddHandler](../../../language-reference/statements/addhandler-statement.md) , чтобы связать процедуру `catchClose` как обработчик событий для <xref:System.Windows.Forms.Form.Closing>.
 
      [!code-vb[VbVbcnProcedures#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#5)]
 
-     You can dissociate an event handler from an event by executing the [RemoveHandler Statement](../../../language-reference/statements/removehandler-statement.md).
+     Можно отменить связь между обработчиком событий и событием, выполнив [оператор RemoveHandler](../../../language-reference/statements/removehandler-statement.md).
 
 ## <a name="see-also"></a>См. также
 

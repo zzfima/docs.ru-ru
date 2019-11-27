@@ -18,20 +18,20 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347833"
 ---
 # <a name="widening-visual-basic"></a>Widening (Visual Basic)
-Indicates that a conversion operator (`CType`) converts a class or structure to a type that can hold all possible values of the original class or structure.  
+Указывает, что оператор преобразования (`CType`) преобразует класс или структуру в тип, который может содержать все возможные значения исходного класса или структуры.  
   
-## <a name="converting-with-the-widening-keyword"></a>Converting with the Widening Keyword  
- The conversion procedure must specify `Public Shared` in addition to `Widening`.  
+## <a name="converting-with-the-widening-keyword"></a>Преобразование с помощью ключевого слова Widening  
+ В дополнение к `Widening`у в процедуре преобразования необходимо указать `Public Shared`.  
   
- Widening conversions always succeed at run time and never incur data loss. Examples are `Single` to `Double`, `Char` to `String`, and a derived type to its base type. This last conversion is widening because the derived type contains all the members of the base type and thus is an instance of the base type.  
+ Расширяющие преобразования всегда выполняются в период выполнения и никогда не вызывают потери данных. Примеры `Single` для `Double`, `Char` `String`и производного типа к его базовому типу. Последнее преобразование является расширяющим, так как производный тип содержит все члены базового типа и, таким же, является экземпляром базового типа.  
   
- The consuming code does not have to use `CType` for widening conversions, even if `Option Strict` is `On`.  
+ В таком коде не обязательно использовать `CType` для расширяющего преобразования, даже если `Option Strict` `On`.  
   
- The `Widening` keyword can be used in this context:  
+ В этом контексте можно использовать ключевое слово `Widening`:  
   
  [Оператор Statement](../../../visual-basic/language-reference/statements/operator-statement.md)  
   
- For example definitions of widening and narrowing conversion operators, see [How to: Define a Conversion Operator](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md).  
+ Примеры определений расширяющих и суженных операторов преобразования см. в разделе [руководство. Определение оператора преобразования](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md).  
   
 ## <a name="see-also"></a>См. также
 
@@ -39,6 +39,6 @@ Indicates that a conversion operator (`CType`) converts a class or structure to 
 - [Narrowing](../../../visual-basic/language-reference/modifiers/narrowing.md)
 - [Расширяющие и сужающие преобразования](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
 - [Практическое руководство. Определение оператора](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-an-operator.md)
-- [Функция CType](../../../visual-basic/language-reference/functions/ctype-function.md)
+- [CType Function](../../../visual-basic/language-reference/functions/ctype-function.md)
 - [Оператор Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md)
 - [Практическое руководство. Определение оператора преобразования](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)

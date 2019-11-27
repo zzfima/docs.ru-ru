@@ -25,20 +25,20 @@ ms.locfileid: "74344271"
 -help  
 ```
 
-or  
+или  
 
 ```console
 -?  
 ```  
   
-## <a name="remarks"></a>Заметки  
- If you include this option in a compilation, no output file is created and no compilation takes place.  
+## <a name="remarks"></a>Примечания  
+ Если включить этот параметр в компиляцию, выходной файл не создается и компиляция не происходит.  
   
 > [!NOTE]
-> The `-help` option is not available from within the Visual Studio development environment; it is available only when compiling from the command line.  
+> Параметр `-help` недоступен в среде разработки Visual Studio; Он доступен только при компиляции из командной строки.  
   
 ## <a name="example"></a>Пример  
- The following code displays help from the command line.  
+ Следующий код выводит справку из командной строки.  
   
 ```console  
 vbc -help  

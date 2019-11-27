@@ -44,45 +44,45 @@ HRESULT GetParamProps (
   
 ## <a name="parameters"></a>Параметры  
  `tk`  
- [in] A ParamDef token that represents the parameter to return metadata for.  
+ окне Токен Парамдеф, представляющий параметр, для которого возвращаются метаданные.  
   
  `pmd`  
- [out] A pointer to a MethodDef token representing the method that takes the parameter.  
+ заполняет Указатель на токен MethodDef, представляющий метод, который принимает параметр.  
   
  `pulSequence`  
- [out] The ordinal position of the parameter in the method argument list.  
+ заполняет Порядковый номер параметра в списке аргументов метода.  
   
  `szName`  
- [out] A buffer to hold the name of the parameter.  
+ заполняет Буфер для хранения имени параметра.  
   
  `cchName`  
- [in] The requested size in wide characters of `szName`.  
+ окне Запрошенный размер в расширенных символах `szName`.  
   
  `pchName`  
- [out] The returned size in wide characters of `szName`.  
+ заполняет Возвращаемый размер в расширенных символах `szName`.  
   
  `pdwAttr`  
- [out] A pointer to any attribute flags associated with the parameter. This is a bitmask of `CorParamAttr` values.  
+ заполняет Указатель на любые флаги атрибутов, связанные с параметром. Это битовая маска `CorParamAttr` значений.  
   
  `pdwCPlusTypeFlag`  
- [out] A pointer to a flag specifying that the parameter is a <xref:System.ValueType>.  
+ заполняет Указатель на флаг, указывающий, что параметр является <xref:System.ValueType>.  
   
  `ppValue`  
- [out] A pointer to a constant string returned by the parameter.  
+ заполняет Указатель на константную строку, возвращенную параметром.  
   
  `pcchValue`  
- [out] The size of `ppValue` in wide characters, or zero if `ppValue` does not hold a string.  
+ заполняет Размер `ppValue` в расширенных символах или нуль, если `ppValue` не содержит строку.  
   
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Примечания
 
-The sequence values in `pulSequence` begin with 1 for parameters. A return value has a sequence number of 0.
+Значения последовательности в `pulSequence` начинаются с 1 для параметров. Возвращаемое значение имеет порядковый номер 0.
 
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Заголовок:** COR. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

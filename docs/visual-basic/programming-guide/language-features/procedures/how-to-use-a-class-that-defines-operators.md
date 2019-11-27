@@ -19,25 +19,25 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346040"
 ---
 # <a name="how-to-use-a-class-that-defines-operators-visual-basic"></a>Практическое руководство. Использование класса, в котором определяются операторы (Visual Basic)
-If you are using a class or structure that defines its own operators, you can access those operators from Visual Basic.  
+При использовании класса или структуры, определяющей собственные операторы, можно получить доступ к этим операторам из Visual Basic.  
   
- Defining an operator on a class or structure is also called *overloading* the operator.  
+ Определение оператора для класса или структуры также называется *перегрузкой* оператора.  
   
 ## <a name="example"></a>Пример  
- The following example accesses the SQL structure <xref:System.Data.SqlTypes.SqlString>, which defines the conversion operators ([CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md)) in both directions between a SQL string and a Visual Basic string. Use `CType(`*SQL string expression*, `String)` to convert a SQL string to a Visual Basic string, and `CType(`*Visual Basic string expression*, <xref:System.Data.SqlTypes.SqlString>`)` to convert in the other direction.  
+ В следующем примере осуществляется доступ к структуре SQL <xref:System.Data.SqlTypes.SqlString>, которая определяет операторы преобразования ([Функция CType](../../../../visual-basic/language-reference/functions/ctype-function.md)) в обоих направлениях между строкой SQL и строкой Visual Basic. Используйте `CType(`*строковое выражение SQL*, `String)` для преобразования строки sql в Visual Basic строку и `CType(`*Visual Basic строкового выражения*<xref:System.Data.SqlTypes.SqlString>`)` для преобразования в другом направлении.  
   
  [!code-vb[VbVbcnProcedures#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#30)]  
   
  [!code-vb[VbVbcnProcedures#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#31)]  
   
- The <xref:System.Data.SqlTypes.SqlString> structure defines a conversion operator ([CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md)) from `String` to <xref:System.Data.SqlTypes.SqlString> and another from <xref:System.Data.SqlTypes.SqlString> to `String`. The statement that assigns `title` to `jobTitle` makes use of the first operator, and the <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> function call uses the second.  
+ Структура <xref:System.Data.SqlTypes.SqlString> определяет оператор преобразования ([функцию CType](../../../../visual-basic/language-reference/functions/ctype-function.md)) от `String` до <xref:System.Data.SqlTypes.SqlString>, а другой — от <xref:System.Data.SqlTypes.SqlString> до `String`. Инструкция, которая присваивает `title` `jobTitle` использует первый оператор, а <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> вызов функции использует второй метод.  
   
 ## <a name="compiling-the-code"></a>Компиляция кода  
- Be sure the class or structure you are using defines the operator you want to use. Do not assume that the class or structure has defined every operator available for overloading. For a list of available operators, see [Operator Statement](../../../../visual-basic/language-reference/statements/operator-statement.md).  
+ Убедитесь, что используемый класс или структура определяет оператор, который вы хотите использовать. Не следует считать, что класс или структура определили все операторы, доступные для перегрузки. Список доступных операторов см. в разделе Оператор [operator](../../../../visual-basic/language-reference/statements/operator-statement.md).  
   
- Include the appropriate `Imports` statement for the SQL string at the beginning of your source file (in this case <xref:System.Data.SqlTypes>).  
+ Включите соответствующую инструкцию `Imports` для строки SQL в начало исходного файла (в данном случае <xref:System.Data.SqlTypes>).  
   
- Your project must have references to System.Data and System.XML.  
+ Проект должен иметь ссылки на System. Data и System. XML.  
   
 ## <a name="see-also"></a>См. также
 

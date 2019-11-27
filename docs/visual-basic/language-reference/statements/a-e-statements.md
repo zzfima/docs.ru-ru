@@ -10,13 +10,13 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350230"
 ---
 # <a name="a-e-statements"></a>Операторы A-E
-The following table contains a listing of Visual Basic language statements.  
+В следующей таблице содержится список инструкций языка Visual Basic.  
   
 |||||  
 |---|---|---|---|  
 |[AddHandler](addhandler-statement.md)|[Call](call-statement.md)|[Класс](class-statement.md)|[Const](const-statement.md)|  
 |[Continue](continue-statement.md)|[Declare](declare-statement.md)|[Delegate](delegate-statement.md)|[Dim](dim-statement.md)|  
-|[Do...Loop](do-loop-statement.md)|[Else](else-statement.md)|[END](end-statement.md)|[End \<ключевое слово>](end-keyword-statement.md)|  
+|[Do... Повторить](do-loop-statement.md)|[Else](else-statement.md)|[END](end-statement.md)|[End \<ключевое слово>](end-keyword-statement.md)|  
 |[Enum](enum-statement.md)|[Erase](erase-statement.md)|[Ошибка](error-statement.md)|[Event](event-statement.md)|  
 |[Выход](exit-statement.md)||||  
   

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74435955"
 ---
 # <a name="inotifysource2setnotifyfilter-method"></a>Метод INotifySource2::SetNotifyFilter
-Assigns a notification filter for use with this source.  
+Назначает фильтр уведомлений для использования с этим источником.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,16 +37,16 @@ HRESULT SetNotifyFilter
   
 ## <a name="parameters"></a>Параметры  
  `in_NotifyFilter`  
- [in] A bitwise combination of the [NOTIFY_FILTER](../../../../docs/framework/unmanaged-api/diagnostics/notify-filter-enumeration.md) enumeration values that identify callbacks for the debugger API.  
+ окне Побитовое сочетание значений перечисления [NOTIFY_FILTER](../../../../docs/framework/unmanaged-api/diagnostics/notify-filter-enumeration.md) , которые указывают обратные вызовы для API отладчика.  
   
  `in_pUserThreadFilter`  
- [in] A pointer to a [USER_THREAD](../../../../docs/framework/unmanaged-api/diagnostics/user-thread-structure.md) structure that identifies threads for the debugger API.  
+ окне Указатель на структуру [USER_THREAD](../../../../docs/framework/unmanaged-api/diagnostics/user-thread-structure.md) , которая идентифицирует потоки для API отладчика.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- S_OK if the method succeeds.  
+ S_OK, если метод выполнен.  
   
 ## <a name="requirements"></a>Требования  
- **Header:** ProtocolNotify2.idl  
+ **Заголовок:** ProtocolNotify2. idl  
   
 ## <a name="see-also"></a>См. также
 

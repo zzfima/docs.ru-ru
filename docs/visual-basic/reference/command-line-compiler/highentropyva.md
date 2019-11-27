@@ -13,7 +13,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344241"
 ---
 # <a name="-highentropyva-visual-basic"></a>-highentropyva (Visual Basic)
-Indicates whether a 64-bit executable or an executable that's marked by the [-platform:anycpu](../../../visual-basic/reference/command-line-compiler/platform.md) compiler option supports high entropy Address Space Layout Randomization (ASLR).  
+Указывает, является ли 64-разрядный исполняемый файл или исполняемый файл, помеченный параметром компилятора [-Platform: anycpu](../../../visual-basic/reference/command-line-compiler/platform.md) , поддержкой случайного расположения макета адресного пространства (ASLR) с высокой энтропией.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -23,12 +23,12 @@ Indicates whether a 64-bit executable or an executable that's marked by the [-pl
   
 ## <a name="arguments"></a>Аргументы  
  `+` &#124; `-`  
- Необязательный. The option is off by default or if you specify `-highentropyva-`. The option is on if you specify `-highentropyva` or `-highentropyva+`.  
+ Необязательный элемент. Параметр отключен по умолчанию или при указании `-highentropyva-`. Параметр включен, если вы указываете `-highentropyva` или `-highentropyva+`.  
   
-## <a name="remarks"></a>Заметки  
- If you specify this option, compatible versions of the Windows kernel can use higher degrees of entropy when the kernel randomizes the address space layout of a process as part of ASLR. If the kernel uses higher degrees of entropy, a larger number of addresses can be allocated to memory regions such as stacks and heaps. Из-за этого сложнее подобрать расположение определенной области памяти.  
+## <a name="remarks"></a>Примечания  
+ Если указан этот параметр, совместимые версии ядра Windows могут использовать более высокие уровни энтропии, когда ядро случайным образом разметка адресного пространства процесса в рамках ASLR. Если ядро использует более высокие степени энтропии, то для областей памяти, таких как стеки и кучи, можно выделить большее количество адресов. Из-за этого сложнее подобрать расположение определенной области памяти.  
   
- When the option is on, the target executable and any modules on which it depends must be able to handle pointer values that are larger than 4 gigabytes (GB) when those modules are running as 64-bit processes.  
+ Если параметр включен, целевой исполняемый файл и все модули, от которых он зависит, должны иметь возможность обрабатывать значения указателя, превышающие 4 гигабайта (ГБ), если эти модули работают как 64-разрядные процессы.  
   
 ## <a name="see-also"></a>См. также
 

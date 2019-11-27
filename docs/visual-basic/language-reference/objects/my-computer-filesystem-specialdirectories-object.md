@@ -15,17 +15,17 @@ ms.locfileid: "74347224"
 # <a name="mycomputerfilesystemspecialdirectories-object"></a>Объект My.Computer.FileSystem.SpecialDirectories
 Включает свойства для доступа к часто используемым каталогам.  
   
-## <a name="remarks"></a>Заметки  
+## <a name="remarks"></a>Примечания  
  Сведения о методах и свойствах объекта `My.Computer.FileSystem.SpecialDirectories` см. в разделе <xref:Microsoft.VisualBasic.FileIO.SpecialDirectories>.  
   
- For more information, see [How to: Retrieve the Contents of the My Documents Directory](../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-retrieve-the-contents-of-the-my-documents-directory.md).  
+ Дополнительные сведения см. в разделе [как получить содержимое каталога "Мои документы](../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-retrieve-the-contents-of-the-my-documents-directory.md)".  
   
 ## <a name="requirements"></a>Требования  
  **Пространство имен:** <xref:Microsoft.VisualBasic.MyServices>  
   
- **Class:** <xref:Microsoft.VisualBasic.MyServices.SpecialDirectoriesProxy> (provides access to <xref:Microsoft.VisualBasic.FileIO.SpecialDirectories>)  
+ **Класс:** <xref:Microsoft.VisualBasic.MyServices.SpecialDirectoriesProxy> (предоставляет доступ к <xref:Microsoft.VisualBasic.FileIO.SpecialDirectories>)  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **Сборка:** Библиотека времени выполнения Visual Basic (в Microsoft. VisualBasic. dll)  
   
 ## <a name="see-also"></a>См. также
 

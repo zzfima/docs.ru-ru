@@ -14,37 +14,37 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348601"
 ---
 # <a name="how-to-determine-whether-two-objects-are-identical-visual-basic"></a>Практическое руководство. Определение идентичности двух объектов (Visual Basic)
-In Visual Basic, two variable references are considered identical if their pointers are the same, that is, if both variables point to the same class instance in memory. For example, in a Windows Forms application, you might want to make a comparison to determine whether the current instance (`Me`) is the same as a particular instance, such as `Form2`.  
+В Visual Basic две ссылки на переменные считаются идентичными, если их указатели одинаковы, то есть если обе переменные указывают на один и тот же экземпляр класса в памяти. Например, в Windows Forms приложении может потребоваться выполнить сравнение, чтобы определить, совпадает ли текущий экземпляр (`Me`) с определенным экземпляром, например `Form2`.  
   
- Visual Basic provides two operators to compare pointers. The [Is Operator](../../../../visual-basic/language-reference/operators/is-operator.md) returns `True` if the objects are identical, and the [IsNot Operator](../../../../visual-basic/language-reference/operators/isnot-operator.md) returns `True` if they are not.  
+ Visual Basic предоставляет два оператора для сравнения указателей. [Оператор is](../../../../visual-basic/language-reference/operators/is-operator.md) возвращает `True`, если объекты идентичны, а [оператор IsNot](../../../../visual-basic/language-reference/operators/isnot-operator.md) возвращает `True`, если это не так.  
   
-## <a name="determining-if-two-objects-are-identical"></a>Determining if Two Objects Are Identical  
+## <a name="determining-if-two-objects-are-identical"></a>Определение идентичности двух объектов  
   
-#### <a name="to-determine-if-two-objects-are-identical"></a>To determine if two objects are identical  
+#### <a name="to-determine-if-two-objects-are-identical"></a>Определение идентичности двух объектов  
   
-1. Set up a `Boolean` expression to test the two objects.  
+1. Настройте `Boolean` выражение для проверки двух объектов.  
   
-2. In your testing expression, use the `Is` operator with the two objects as operands.  
+2. В тестовом выражении используйте оператор `Is` с двумя объектами в качестве операндов.  
   
-     `Is` returns `True` if the objects point to the same class instance.  
+     `Is` возвращает `True`, если объекты указывают на один и тот же экземпляр класса.  
   
-## <a name="determining-if-two-objects-are-not-identical"></a>Determining if Two Objects Are Not Identical  
- Sometimes you want to perform an action if the two objects are not identical, and it can be awkward to combine `Not` and `Is`, for example `If Not obj1 Is obj2`. In such a case you can use the `IsNot` operator.  
+## <a name="determining-if-two-objects-are-not-identical"></a>Определение того, что два объекта не идентичны  
+ Иногда требуется выполнить действие, если два объекта не идентичны, и может быть неудобно объединять `Not` и `Is`, например `If Not obj1 Is obj2`. В этом случае можно использовать оператор `IsNot`.  
   
-#### <a name="to-determine-if-two-objects-are-not-identical"></a>To determine if two objects are not identical  
+#### <a name="to-determine-if-two-objects-are-not-identical"></a>Определение того, что два объекта не идентичны  
   
-1. Set up a `Boolean` expression to test the two objects.  
+1. Настройте `Boolean` выражение для проверки двух объектов.  
   
-2. In your testing expression, use the `IsNot` operator with the two objects as operands.  
+2. В тестовом выражении используйте оператор `IsNot` с двумя объектами в качестве операндов.  
   
-     `IsNot` returns `True` if the objects do not point to the same class instance.  
+     `IsNot` возвращает `True`, если объекты не указывают на один и тот же экземпляр класса.  
   
 ## <a name="example"></a>Пример  
- The following example tests pairs of `Object` variables to see if they point to the same class instance.  
+ В следующем примере проверяются пары `Object` переменных, чтобы определить, указывают ли они на один и тот же экземпляр класса.  
   
  [!code-vb[VbVbalrKeywords#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/class7.vb#14)]  
   
- The preceding example displays the following output.  
+ В предыдущем примере отображаются следующие выходные данные.  
   
  `objA different from objB? True`  
   

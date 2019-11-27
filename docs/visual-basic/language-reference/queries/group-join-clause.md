@@ -19,7 +19,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346840"
 ---
 # <a name="group-join-clause-visual-basic"></a>Предложение Group Join (Visual Basic)
-Объединяет две коллекции в одну иерархическую коллекцию. The join operation is based on matching keys.  
+Объединяет две коллекции в одну иерархическую коллекцию. Операция Join основана на совпадающих ключах.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -33,25 +33,25 @@ Group Join element [As type] In collection _
   
 |Термин|Определение|  
 |---|---|  
-|`element`|Обязательный. The control variable for the collection being joined.|  
-|`type`|Необязательный. Тип параметра `element`. If no `type` is specified, the type of `element` is inferred from `collection`.|  
-|`collection`|Обязательный. The collection to combine with the collection that is on the left side of the `Group Join` operator. A `Group Join` clause can be nested in a `Join` clause or in another `Group Join` clause.|  
-|`key1` `Equals` `key2`|Обязательный. Identifies keys for the collections being joined. You must use the `Equals` operator to compare keys from the collections being joined. You can combine join conditions by using the `And` operator to identify multiple keys. The `key1` parameter must be from the collection on the left side of the `Join` operator. The `key2` parameter must be from the collection on the right side of the `Join` operator.<br /><br /> The keys used in the join condition can be expressions that include more than one item from the collection. However, each key expression can contain only items from its respective collection.|  
-|`expressionList`|Обязательный. One or more expressions that identify how the groups of elements from the collection are aggregated. To identify a member name for the grouped results, use the `Group` keyword (`<alias> = Group`). Вы также можете включать агрегатные функции для применения к группе.|  
+|`element`|Обязательно. Управляющая переменная для объединяемой коллекции.|  
+|`type`|Необязательный элемент. Тип параметра `element`. Если `type` не указано, тип `element` выводится из `collection`.|  
+|`collection`|Обязательно. Коллекция для объединения с коллекцией, находящейся в левой части оператора `Group Join`. Предложение `Group Join` может быть вложено в предложение `Join` или в другое предложение `Group Join`.|  
+|`key1` `Equals` `key2`|Обязательно. Определяет ключи для соединяемых коллекций. Для сравнения ключей из объединяемых коллекций необходимо использовать оператор `Equals`. Условия JOIN можно комбинировать с помощью оператора `And` для обнаружения нескольких ключей. Параметр `key1` должен быть из коллекции в левой части оператора `Join`. Параметр `key2` должен быть из коллекции в правой части оператора `Join`.<br /><br /> Ключи, используемые в условии объединения, могут быть выражениями, включающими более одного элемента из коллекции. Однако каждое ключевое выражение может содержать только элементы из соответствующей коллекции.|  
+|`expressionList`|Обязательно. Одно или несколько выражений, которые определяют, как объединяются группы элементов из коллекции. Чтобы указать имя члена для сгруппированных результатов, используйте ключевое слово `Group` (`<alias> = Group`). Вы также можете включать агрегатные функции для применения к группе.|  
   
-## <a name="remarks"></a>Заметки  
- The `Group Join` clause combines two collections based on matching key values from the collections being joined. The resulting collection can contain a member that references a collection of elements from the second collection that match the key value from the first collection. You can also specify aggregate functions to apply to the grouped elements from the second collection. For information about aggregate functions, see [Aggregate Clause](../../../visual-basic/language-reference/queries/aggregate-clause.md).  
+## <a name="remarks"></a>Примечания  
+ Предложение `Group Join` объединяет две коллекции на основе совпадающих значений ключей из объединяемых коллекций. Результирующая коллекция может содержать член, который ссылается на коллекцию элементов из второй коллекции, которая соответствует значению ключа из первой коллекции. Можно также указать агрегатные функции для применения к сгруппированным элементам из второй коллекции. Дополнительные сведения о агрегатных функциях см. в разделе [предложение Aggregate](../../../visual-basic/language-reference/queries/aggregate-clause.md).  
   
- Consider, for example, a collection of managers and a collection of employees. Elements from both collections have a ManagerID property that identifies the employees that report to a particular manager. The results from a join operation would contain a result for each manager and employee with a matching ManagerID value. The results from a `Group Join` operation would contain the complete list of managers. Each manager result would have a member that referenced the list of employees that were a match for the specific manager.  
+ Рассмотрим, например, коллекцию руководителей и коллекцию сотрудников. Элементы обеих коллекций имеют свойство ManagerID, определяющее сотрудников, которые отправляют отчеты определенному менеджеру. Результаты операции объединения будут содержать результат для каждого менеджера и сотрудника с соответствующим значением ManagerID. Результаты операции `Group Join` будут содержать полный список руководителей. Каждый результат менеджера будет иметь член, который ссылался на список сотрудников, которые были соответствующими руководителю.  
   
- The collection resulting from a `Group Join` operation can contain any combination of values from the collection identified in the `From` clause and the expressions identified in the `Into` clause of the `Group Join` clause. For more information about valid expressions for the `Into` clause, see [Aggregate Clause](../../../visual-basic/language-reference/queries/aggregate-clause.md).  
+ Коллекция, полученная в результате операции `Group Join`, может содержать любое сочетание значений из коллекции, определенной в предложении `From`, и выражения, определенные в предложении `Into` предложения `Group Join`. Дополнительные сведения о допустимых выражениях для предложения `Into` см. в разделе [предложение Aggregate](../../../visual-basic/language-reference/queries/aggregate-clause.md).  
   
- A `Group Join` operation will return all results from the collection identified on the left side of the `Group Join` operator. This is true even if there are no matches in the collection being joined. This is like a `LEFT OUTER JOIN` in SQL.  
+ `Group Join` операция возвратит все результаты из коллекции, указанной в левой части оператора `Group Join`. Это справедливо, даже если в объединяемой коллекции нет совпадений. Это похоже на `LEFT OUTER JOIN` в SQL.  
   
- You can use the `Join` clause to combine collections into a single collection. This is equivalent to an `INNER JOIN` in SQL.  
+ Для объединения коллекций в одну коллекцию можно использовать предложение `Join`. Это эквивалентно `INNER JOIN` в SQL.  
   
 ## <a name="example"></a>Пример  
- The following code example joins two collections by using the `Group Join` clause.  
+ В следующем примере кода две коллекции объединяются с помощью предложения `Group Join`.  
   
  [!code-vb[VbSimpleQuerySamples#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#14)]  
   

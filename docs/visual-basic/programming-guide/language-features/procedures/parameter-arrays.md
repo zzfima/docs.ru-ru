@@ -18,39 +18,39 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351127"
 ---
 # <a name="parameter-arrays-visual-basic"></a>Массивы параметров (Visual Basic)
-Usually, you cannot call a procedure with more arguments than the procedure declaration specifies. When you need an indefinite number of arguments, you can declare a *parameter array*, which allows a procedure to accept an array of values for a parameter. You do not have to know the number of elements in the parameter array when you define the procedure. The array size is determined individually by each call to the procedure.  
+Как правило, процедуру нельзя вызывать с дополнительными аргументами, чем указано в объявлении процедуры. Если требуется неопределенное число аргументов, можно объявить *массив параметров*, который позволяет процедуре принимать массив значений для параметра. При определении процедуры вам не нужно было узнать число элементов в массиве параметров. Размер массива определяется отдельно при каждом вызове процедуры.  
   
-## <a name="declaring-a-paramarray"></a>Declaring a ParamArray  
- You use the [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) keyword to denote a parameter array in the parameter list. Действуют следующие правила.  
+## <a name="declaring-a-paramarray"></a>Объявление ParamArray  
+ Используйте ключевое слово [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) для обозначения массива параметров в списке параметров. Действуют следующие правила.  
   
-- A procedure can define only one parameter array, and it must be the last parameter in the procedure definition.  
+- Процедура может определять только один массив параметров и должен быть последним параметром в определении процедуры.  
   
-- The parameter array must be passed by value. It is good programming practice to explicitly include the [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) keyword in the procedure definition.  
+- Массив параметров должен передаваться по значению. Рекомендуется явно включать в определение процедуры ключевое слово [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) .  
   
-- The parameter array is automatically optional. Its default value is an empty one-dimensional array of the parameter array's element type.  
+- Массив параметров является автоматически необязательным. Его значением по умолчанию является пустой одномерный массив типа элемента массива параметров.  
   
-- All parameters preceding the parameter array must be required. The parameter array must be the only optional parameter.  
+- Должны быть необходимы все параметры, предшествующие массиву параметров. Массив параметров должен быть единственным необязательным параметром.  
   
-## <a name="calling-a-paramarray"></a>Calling a ParamArray  
- When you call a procedure that defines a parameter array, you can supply the argument in any one of the following ways:  
+## <a name="calling-a-paramarray"></a>Вызов метода ParamArray  
+ При вызове процедуры, определяющей массив параметров, можно указать аргумент одним из следующих способов:  
   
-- Nothing — that is, you can omit the [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) argument. In this case, an empty array is passed to the procedure. If you explicitly pass the [Nothing](../../../../visual-basic/language-reference/nothing.md) keyword, a null array is passed to the procedure and may result in a NullReferenceException if the called procedure does not check for this condition.
+- Нет, то есть можно опустить аргумент [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) . В этом случае в процедуру передается пустой массив. При явном передаче ключевого слова [Nothing](../../../../visual-basic/language-reference/nothing.md) в процедуру передается пустой массив, который может привести к NullReferenceException, если вызываемая процедура не проверяет это условие.
   
-- A list of an arbitrary number of arguments, separated by commas. The data type of each argument must be implicitly convertible to the `ParamArray` element type.  
+- Список произвольного числа аргументов, разделенных запятыми. Тип данных каждого аргумента должен быть неявно преобразован в тип элемента `ParamArray`.  
   
-- An array with the same element type as the parameter array's element type.  
+- Массив с тем же типом элемента, что и у типа элемента массива параметров.  
   
- In all cases, the code within the procedure treats the parameter array as a one-dimensional array with elements of the same data type as the `ParamArray` data type.  
+ Во всех случаях код в процедуре обрабатывает массив параметров как одномерный массив с элементами того же типа данных, что и тип данных `ParamArray`.  
   
 > [!IMPORTANT]
-> Whenever you deal with an array which can be indefinitely large, there is a risk of overrunning some internal capacity of your application. If you accept a parameter array, you should test for the size of the array that the calling code passed to it. Take appropriate steps if it is too large for your application. Дополнительные сведения см. в статье [Arrays (C++/CLI and C++/CX)](../../../../visual-basic/programming-guide/language-features/arrays/index.md) (Массивы (C++/CLI и C++/CX)).  
+> Всякий раз при работе с массивом, который может быть неограниченным большим, существует риск перегрузки внутренней емкости приложения. Если вы принимаете массив параметров, следует проверить размер массива, которому был передан вызывающий код. Выполните соответствующие действия, если оно слишком велико для вашего приложения. Дополнительные сведения см. в статье [Arrays (C++/CLI and C++/CX)](../../../../visual-basic/programming-guide/language-features/arrays/index.md) (Массивы (C++/CLI и C++/CX)).  
   
 ## <a name="example"></a>Пример  
- The following example defines and calls the function `calcSum`. The `ParamArray` modifier for the parameter `args` enables the function to accept a variable number of arguments.  
+ В следующем примере определяется и вызывается функция, `calcSum`. Модификатор `ParamArray` для параметра `args` позволяет функции принимать переменное число аргументов.  
   
  [!code-vb[VbVbalrStatements#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#26)]  
   
- The following example defines a procedure with a parameter array, and outputs the values of all the array elements passed to the parameter array.  
+ В следующем примере определяется процедура с массивом параметров и выводятся значения всех элементов массива, переданных в массив параметров.  
   
  [!code-vb[VbVbcnProcedures#48](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#48)]  
   
@@ -66,4 +66,4 @@ Usually, you cannot call a procedure with more arguments than the procedure decl
 - [Необязательные параметры](./optional-parameters.md)
 - [Перегрузка процедур](./procedure-overloading.md)
 - [Массивы](../../../../visual-basic/programming-guide/language-features/arrays/index.md)
-- [Необязательный](../../../../visual-basic/language-reference/modifiers/optional.md)
+- [Optional](../../../../visual-basic/language-reference/modifiers/optional.md)

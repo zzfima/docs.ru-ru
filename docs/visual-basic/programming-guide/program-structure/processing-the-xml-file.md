@@ -12,32 +12,32 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347305"
 ---
 # <a name="processing-the-xml-file-visual-basic"></a>Обработка XML-файла (Visual Basic)
-Компилятор создает строку идентификатора для каждой конструкции в коде, помеченной для создания документации. (For information on how to tag your code, see [XML Comment Tags](../../../visual-basic/language-reference/xmldoc/index.md).) The ID string uniquely identifies the construct. Programs that process the XML file can use the ID string to identify the corresponding .NET Framework metadata/reflection item.  
+Компилятор создает строку идентификатора для каждой конструкции в коде, помеченной для создания документации. (Дополнительные сведения о том, как пометить код, см. в разделе [теги XML-комментариев](../../../visual-basic/language-reference/xmldoc/index.md).) Строка идентификатора уникально идентифицирует конструкцию. Программы, обрабатывающие XML-файл, могут использовать строку идентификатора для идентификации соответствующего элемента .NET Framework метаданных или отражения.  
   
- The XML file is not a hierarchical representation of your code; it is a flat list with a generated ID for each element.  
+ XML-файл не является иерархическим представлением кода; Это плоский список с созданным ИДЕНТИФИКАТОРом для каждого элемента.  
   
  Компилятор соблюдает следующие правила при формировании строк идентификаторов.  
   
 - Пробелы в строку не вставляются.  
   
-- Первая часть строки идентификатора определяет тип идентифицируемого члена. Это один символ, за которым следует двоеточие. The following member types are used.  
+- Первая часть строки идентификатора определяет тип идентифицируемого члена. Это один символ, за которым следует двоеточие. Используются следующие типы элементов.  
   
-|Знак|Описание|  
+|Символ|Описание|  
 |---|---|  
-|в|namespace<br /><br /> You cannot add documentation comments to a namespace, but you can make CREF references to them, where supported.|  
-|T|type: `Class`, `Module`, `Interface`, `Structure`, `Enum`, `Delegate`|  
-|C|field: `Dim`|  
-|С|property: `Property` (including default properties)|  
-|M|method: `Sub`, `Function`, `Declare`, `Operator`|  
-|E|event: `Event`|  
-|!|текст ошибки<br /><br /> Остальная часть строки предоставляет сведения об ошибке. The Visual Basic compiler generates error information for links that cannot be resolved.|  
+|в|namespace<br /><br /> Нельзя добавлять комментарии к документации в пространство имен, но можно сделать CREF-ссылки на них, где это поддерживается.|  
+|T|Тип: `Class`, `Module`, `Interface`, `Structure`, `Enum`, `Delegate`|  
+|F|поле: `Dim`|  
+|P|свойство: `Property` (включая свойства по умолчанию)|  
+|M|метод: `Sub`, `Function`, `Declare`, `Operator`|  
+|E|событие: `Event`|  
+|!|текст ошибки<br /><br /> Остальная часть строки предоставляет сведения об ошибке. Компилятор Visual Basic создает сведения об ошибках для ссылок, которые не удается разрешить.|  
   
-- The second part of the `String` is the fully qualified name of the item, starting at the root of the namespace. The name of the item, its enclosing type(s), and the namespace are separated by periods. If the name of the item itself contains periods, they are replaced by the number sign (#). It is assumed that no item has a number sign directly in its name. For example, the fully qualified name of the `String` constructor would be `System.String.#ctor`.  
+- Вторая часть `String` — полное имя элемента, начиная с корня пространства имен. Имя элемента, включающий его тип (s) и пространство имен разделяются точками. Если имя элемента содержит точки, они заменяются знаком номера (#). Предполагается, что ни один элемент не имеет знака номера непосредственно в имени. Например, полное имя конструктора `String` будет `System.String.#ctor`.  
   
-- Для свойств и методов, имеющих аргументы, список этих аргументов заключается в круглые скобки и указывается в конце. Если аргументы не используются, скобки отсутствуют. Аргументы разделяются запятыми. The encoding of each argument follows directly how it is encoded in a .NET Framework signature.  
+- Для свойств и методов, имеющих аргументы, список этих аргументов заключается в круглые скобки и указывается в конце. Если аргументы не используются, скобки отсутствуют. Аргументы разделяются запятыми. Кодировка каждого аргумента соответствует непосредственно их кодированию в сигнатуре .NET Framework.  
   
 ## <a name="example"></a>Пример  
- The following code shows how the ID strings for a class and its members are generated.  
+ В следующем коде показано, как создаются строки идентификатора для класса и его членов.  
   
  [!code-vb[VbVbcnXmlDocComments#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#10)]  
   

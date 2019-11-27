@@ -15,27 +15,27 @@ ms.locfileid: "74346019"
 ---
 # <a name="how-to-write-an-extension-method-visual-basic"></a>Практическое руководство. Написание метода расширения (Visual Basic)
 
-Extension methods enable you to add methods to an existing class. The extension method can be called as if it were an instance of that class.
+Методы расширения позволяют добавлять методы в существующий класс. Метод расширения можно вызвать так, как если бы он был экземпляром этого класса.
 
-### <a name="to-define-an-extension-method"></a>To define an extension method
+### <a name="to-define-an-extension-method"></a>Определение метода расширения
 
-1. Open a new or existing Visual Basic application in Visual Studio.
+1. Откройте новое или существующее приложение Visual Basic в Visual Studio.
 
-2. At the top of the file in which you want to define an extension method, include the following import statement:
+2. В верхней части файла, в котором нужно определить метод расширения, включите следующую инструкцию импорта:
 
     ```vb
     Imports System.Runtime.CompilerServices
     ```
 
-3. Within a module in your new or existing application, begin the method definition with the [`<Extension>`](xref:System.Runtime.CompilerServices.ExtensionAttribute) attribute:
+3. В модуле в новом или существующем приложении приступите к определению метода с помощью атрибута [`<Extension>`](xref:System.Runtime.CompilerServices.ExtensionAttribute) :
 
     ```vb
     <Extension()>
     ```
 
-    Note that the `Extension` attribute can only be applied to a method (a `Sub` or `Function` procedure) in a Visual Basic [Module](../../../language-reference/statements/module-statement.md). If you apply it to a method in a `Class` or a `Structure`, the Visual Basic compiler generates error [BC36551](../../../misc/bc36551.md), "Extension methods can be defined only in modules."
+    Обратите внимание, что атрибут `Extension` можно применить только к методу (`Sub` или процедуре `Function`) в [модуле](../../../language-reference/statements/module-statement.md)Visual Basic. Если применить его к методу в `Class` или `Structure`, компилятор Visual Basic создает ошибку [BC36551](../../../misc/bc36551.md), "методы расширения могут быть определены только в модулях".
 
-4. Declare your method in the ordinary way, except that the type of the first parameter must be the data type you want to extend.
+4. Объявите метод обычным способом, за исключением того, что тип первого параметра должен быть типом данных, который требуется расширить.
 
     ```vb
     <Extension()>
@@ -46,7 +46,7 @@ Extension methods enable you to add methods to an existing class. The extension 
 
 ## <a name="example"></a>Пример
 
-The following example declares an extension method in module `StringExtensions`. A second module, `Module1`, imports `StringExtensions` and calls the method. The extension method must be in scope when it is called. Extension method `PrintAndPunctuate` extends the <xref:System.String> class with a method that displays the string instance followed by a string of punctuation symbols sent in as a parameter.
+В следующем примере объявляется метод расширения в модуле `StringExtensions`. Второй модуль, `Module1`, импортирует `StringExtensions` и вызывает метод. Метод расширения должен находиться в области видимости при его вызове. Метод расширения `PrintAndPunctuate` расширяет класс <xref:System.String> с помощью метода, который отображает экземпляр строки, за которым следует строка символов пунктуации, отправленная в качестве параметра.
 
 ```vb
 ' Declarations will typically be in a separate module.
@@ -78,7 +78,7 @@ Module Module1
 End Module
 ```
 
-Notice that the method is defined with two parameters and called with only one. The first parameter, `aString`, in the method definition is bound to `example`, the instance of `String` that calls the method. Выходные данные примера могут быть следующими:
+Обратите внимание, что метод определен с двумя параметрами и вызывается только с одним. Первый параметр, `aString`, в определении метода привязан к `example`, экземпляр `String`, который вызывает метод. Выходные данные примера могут быть следующими:
 
 ```console
 Hello?
@@ -91,4 +91,4 @@ Hello!!!!
 - [Методы расширения](extension-methods.md)
 - [Оператор Module](../../../language-reference/statements/module-statement.md)
 - [Параметры и аргументы процедуры](procedure-parameters-and-arguments.md)
-- [Scope in Visual Basic](../declared-elements/scope.md)
+- [Область в Visual Basic](../declared-elements/scope.md)

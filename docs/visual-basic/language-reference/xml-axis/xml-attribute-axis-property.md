@@ -18,7 +18,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352673"
 ---
 # <a name="xml-attribute-axis-property-visual-basic"></a>Свойство оси атрибута XML (Visual Basic)
-Provides access to the value of an attribute for an <xref:System.Xml.Linq.XElement> object or to the first element in a collection of <xref:System.Xml.Linq.XElement> objects.  
+Предоставляет доступ к значению атрибута для <xref:System.Xml.Linq.XElement> объекта или к первому элементу в коллекции объектов <xref:System.Xml.Linq.XElement>.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -30,40 +30,40 @@ object.@<attribute>
   
 ## <a name="parts"></a>Части  
  `object`  
- Обязательный. An <xref:System.Xml.Linq.XElement> object or a collection of <xref:System.Xml.Linq.XElement> objects.  
+ Обязательно. Объект <xref:System.Xml.Linq.XElement> или коллекция объектов <xref:System.Xml.Linq.XElement>.  
   
  .@  
- Обязательный. Denotes the start of an attribute axis property.  
+ Обязательно. Обозначает начало свойства оси атрибута.  
   
  <  
- Необязательный. Denotes the beginning of the name of the attribute when `attribute` is not a valid identifier in Visual Basic.  
+ Необязательный элемент. Обозначает начало имени атрибута, если `attribute` не является допустимым идентификатором в Visual Basic.  
   
  `attribute`  
- Обязательный. Name of the attribute to access, of the form [`prefix`:]`name`.  
+ Обязательно. Имя атрибута, к которому осуществляется доступ, в форме [`prefix`:]`name`.  
   
 |Отделение|Описание|  
 |----------|-----------------|  
-|`prefix`|Необязательный. XML namespace prefix for the attribute. Должно быть глобальным пространством имен XML, определенным с помощью оператора `Imports`.|  
-|`name`|Обязательный. Local attribute name. See [Names of Declared XML Elements and Attributes](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).|  
+|`prefix`|Необязательный элемент. Префикс пространства имен XML для атрибута. Должно быть глобальным пространством имен XML, определенным с помощью оператора `Imports`.|  
+|`name`|Обязательно. Имя локального атрибута. См. [Имена объявленных XML-элементов и атрибутов](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).|  
   
  \>  
- Необязательный. Denotes the end of the name of the attribute when `attribute` is not a valid identifier in Visual Basic.  
+ Необязательный элемент. Обозначает конец имени атрибута, если `attribute` не является допустимым идентификатором в Visual Basic.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- A string that contains the value of `attribute`. If the attribute name does not exist, `Nothing` is returned.  
+ Строка, содержащая значение `attribute`. Если имя атрибута не существует, возвращается `Nothing`.  
   
-## <a name="remarks"></a>Заметки  
- You can use an XML attribute axis property to access the value of an attribute by name from an <xref:System.Xml.Linq.XElement> object or from the first element in a collection of <xref:System.Xml.Linq.XElement> objects. You can retrieve an attribute value by name, or add a new attribute to an element by specifying a new name preceded by the @ identifier.  
+## <a name="remarks"></a>Примечания  
+ Свойство оси атрибутов XML можно использовать для доступа к значению атрибута по имени из <xref:System.Xml.Linq.XElement> объекта или из первого элемента в коллекции объектов <xref:System.Xml.Linq.XElement>. Можно получить значение атрибута по имени или добавить новый атрибут к элементу, указав новое имя перед идентификатором @.  
   
- When you refer to an XML attribute using the @ identifier, the attribute value is returned as a string and you do not need to explicitly specify the <xref:System.Xml.Linq.XAttribute.Value%2A> property.  
+ При ссылке на XML-атрибут, используя идентификатор @, значение атрибута возвращается в виде строки и не требуется явно указывать свойство <xref:System.Xml.Linq.XAttribute.Value%2A>.  
   
- The naming rules for XML attributes differ from the naming rules for Visual Basic identifiers. To access an XML attribute that has a name that is not a valid Visual Basic identifier, enclose the name in angle brackets (\< and >).  
+ Правила именования для XML-атрибутов отличаются от правил именования для Visual Basic идентификаторов. Чтобы получить доступ к XML-атрибуту, имя которого не является допустимым Visual Basic идентификатором, заключите имя в угловые скобки (\< и >).  
   
 ## <a name="xml-namespaces"></a>Пространства имен XML  
- The name in an attribute axis property can use only XML namespace prefixes declared globally by using the `Imports` statement. В нем нельзя использовать префиксы пространства имен XML, объявленные локально с помощью литералов XML-элемента. For more information, see [Imports Statement (XML Namespace)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md).  
+ Имя в свойстве оси атрибута может использовать только префиксы пространства имен XML, объявленные глобально с помощью инструкции `Imports`. В нем нельзя использовать префиксы пространства имен XML, объявленные локально с помощью литералов XML-элемента. Дополнительные сведения см. в разделе [оператор Imports (пространство имен XML)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md).  
   
 ## <a name="example"></a>Пример  
- The following example shows how to get the values of the XML attributes named `type` from a collection of XML elements that are named `phone`.  
+ В следующем примере показано, как получить значения XML-атрибутов с именем `type` из коллекции XML-элементов с именами `phone`.  
   
  [!code-vb[VbXMLSamples#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples5.vb#12)]  
   
@@ -78,7 +78,7 @@ object.@<attribute>
  `</phoneTypes>`  
   
 ## <a name="example"></a>Пример  
- The following example shows how to create attributes for an XML element both declaratively, as part of the XML, and dynamically by adding an attribute to an instance of an <xref:System.Xml.Linq.XElement> object. The `type` attribute is created declaratively and the `owner` attribute is created dynamically.  
+ В следующем примере показано, как создать атрибуты для XML-элемента декларативно, как часть XML, и динамически, добавив атрибут к экземпляру объекта <xref:System.Xml.Linq.XElement>. Атрибут `type` создается декларативно, а атрибут `owner` создается динамически.  
   
  [!code-vb[VbXMLSamples#44](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples5.vb#44)]  
   
@@ -89,7 +89,7 @@ object.@<attribute>
 ```  
   
 ## <a name="example"></a>Пример  
- The following example uses the angle bracket syntax to get the value of the XML attribute named `number-type`, which is not a valid identifier in Visual Basic.  
+ В следующем примере используется синтаксис угловой скобки для получения значения XML-атрибута с именем `number-type`, который не является допустимым идентификатором в Visual Basic.  
   
  [!code-vb[VbXMLSamples#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples5.vb#13)]  
   
@@ -98,7 +98,7 @@ object.@<attribute>
  `Phone type: work`  
   
 ## <a name="example"></a>Пример  
- В следующем примере `ns` объявляется как префикс пространства имен XML. It then uses the prefix of the namespace to create an XML literal and access the first child node with the qualified name "`ns:name`".  
+ В следующем примере `ns` объявляется как префикс пространства имен XML. Затем он использует префикс пространства имен для создания XML-литерала и доступа к первому дочернему узлу с полным именем "`ns:name`".  
   
  [!code-vb[VbXMLSamples#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples6.vb#14)]  
   

@@ -17,7 +17,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74331297"
 ---
 # <a name="-operator-visual-basic"></a>Оператор ^= (Visual Basic)
-Raises the value of a variable or property to the power of an expression and assigns the result back to the variable or property.  
+Возвращает значение переменной или свойства в степень выражения и присваивает результат переменной или свойству.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -27,25 +27,25 @@ variableorproperty ^= expression
   
 ## <a name="parts"></a>Части  
  `variableorproperty`  
- Обязательный. Any numeric variable or property.  
+ Обязательно. Любая числовая переменная или свойство.  
   
  `expression`  
- Обязательный. Произвольное числовое выражение.  
+ Обязательно. Произвольное числовое выражение.  
   
-## <a name="remarks"></a>Заметки  
- The element on the left side of the `^=` operator can be a simple scalar variable, a property, or an element of an array. The variable or property cannot be [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md).  
+## <a name="remarks"></a>Примечания  
+ Элемент в левой части оператора `^=` может быть простой скалярной переменной, свойством или элементом массива. Переменная или свойство не может быть [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md).  
   
- The `^=` operator first raises the value of the variable or property (on the left-hand side of the operator) to the power of the value of the expression (on the right-hand side of the operator). The operator then assigns the result of that operation back to the variable or property.  
+ Оператор `^=` сначала вызывает значение переменной или свойства (в левой части оператора) на степень значения выражения (в правой части оператора)...). Затем оператор присваивает результат этой операции с переменной или свойством.  
   
- Visual Basic always performs exponentiation in the [Double Data Type](../../../visual-basic/language-reference/data-types/double-data-type.md). Operands of any different type are converted to `Double`, and the result is always `Double`.  
+ Visual Basic всегда выполняет возведение в степень в [типе данных Double](../../../visual-basic/language-reference/data-types/double-data-type.md). Операнды любого другого типа преобразуются в `Double`, и результат всегда `Double`.  
   
- The value of `expression` can be fractional, negative, or both.  
+ Значение `expression` может быть дробным, отрицательным или обоими.  
   
 ## <a name="overloading"></a>Перегрузка  
- The [^ Operator](../../../visual-basic/language-reference/operators/exponentiation-operator.md) can be *overloaded*, which means that a class or structure can redefine its behavior when an operand has the type of that class or structure. Overloading the `^` operator affects the behavior of the `^=` operator. If your code uses `^=` on a class or structure that overloads `^`, be sure you understand its redefined behavior. Для получения дополнительной информации см. [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+ [Оператор ^](../../../visual-basic/language-reference/operators/exponentiation-operator.md) может быть *перегружен*, что означает, что класс или структура может переопределить свое поведение, если операнд имеет тип этого класса или структуры. Перегрузка оператора `^` влияет на поведение оператора `^=`. Если в коде используется `^=` в классе или структуре, которая перегружает `^`, убедитесь, что вы понимаете его переопределенное поведение. Для получения дополнительной информации см. [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Пример  
- The following example uses the `^=` operator to raise the value of one `Integer` variable to the power of a second variable and assign the result to the first variable.  
+ В следующем примере оператор `^=` используется для возведения значения одной `Integer` переменной в степень второй переменной и присваивания результата первой переменной.  
   
  [!code-vb[VbVbalrOperators#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#21)]  
   

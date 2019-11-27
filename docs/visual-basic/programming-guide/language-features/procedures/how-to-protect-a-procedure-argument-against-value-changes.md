@@ -22,12 +22,12 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344861"
 ---
 # <a name="how-to-protect-a-procedure-argument-against-value-changes-visual-basic"></a>Практическое руководство. Защита аргумента процедуры от изменения значения (Visual Basic)
-If a procedure declares a parameter as [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), Visual Basic gives the procedure code a direct reference to the programming element underlying the argument in the calling code. This permits the procedure to change the value underlying the argument in the calling code. In some cases the calling code might want to protect against such a change.  
+Если процедура объявляет параметр как [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), Visual Basic предоставляет коду процедуры прямую ссылку на программный элемент, лежащий в основе аргумента в вызывающем коде. Это позволяет процедуре изменять значение, которое является базовым для аргумента в вызывающем коде. В некоторых случаях вызывающему коду может потребоваться защититься от такого изменения.  
   
- You can always protect an argument from change by declaring the corresponding parameter [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) in the procedure. If you want to be able to change a given argument in some cases but not others, you can declare it `ByRef` and let the calling code determine the passing mechanism in each call. It does this by enclosing the corresponding argument in parentheses to pass it by value, or not enclosing it in parentheses to pass it by reference. For more information, see [How to: Force an Argument to Be Passed by Value](./how-to-force-an-argument-to-be-passed-by-value.md).  
+ Вы всегда можете защитить аргумент от изменения, объявив соответствующий параметр [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) в процедуре. Если вы хотите иметь возможность изменять заданный аргумент в некоторых случаях, но не в других, можно объявить его `ByRef` и позволить вызывающему коду определить механизм передачи в каждом вызове. Это достигается путем заключения соответствующего аргумента в круглые скобки для передачи его по значению или его заключения в круглые скобки для передачи его по ссылке. Дополнительные сведения см. [в разделе инструкции. Принудительная передача аргумента по значению](./how-to-force-an-argument-to-be-passed-by-value.md).  
   
 ## <a name="example"></a>Пример  
- The following example shows two procedures that take an array variable and operate on its elements. The `increase` procedure simply adds one to each element. The `replace` procedure assigns a new array to the parameter `a()` and then adds one to each element. However, the reassignment does not affect the underlying array variable in the calling code.  
+ В следующем примере показаны две процедуры, которые принимают переменную массива и работают с ее элементами. `increase` процедура просто добавляет по одной к каждому элементу. `replace` процедура присваивает новый массив параметру `a()` а затем добавляет его к каждому элементу. Однако переназначение не влияет на базовую переменную массива в вызывающем коде.  
   
  [!code-vb[VbVbcnProcedures#35](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#35)]  
   
@@ -35,12 +35,12 @@ If a procedure declares a parameter as [ByRef](../../../../visual-basic/language
   
  [!code-vb[VbVbcnProcedures#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#37)]  
   
- The first `MsgBox` call displays "After increase(n): 11, 21, 31, 41". Because the array `n` is a reference type, `increase` can change its members, even though the passing mechanism is `ByVal`.  
+ Первый вызов `MsgBox` выводит "после увеличения (n): 11, 21, 31, 41". Поскольку массив `n` является ссылочным типом, `increase` может изменять его члены, даже если механизм передачи `ByVal`.  
   
- The second `MsgBox` call displays "After replace(n): 11, 21, 31, 41". Because `n` is passed `ByVal`, `replace` cannot modify the variable `n` in the calling code by assigning a new array to it. When `replace` creates the new array instance `k` and assigns it to the local variable `a`, it loses the reference to `n` passed in by the calling code. When it changes the members of `a`, only the local array `k` is affected. Therefore, `replace` does not increment the values of array `n` in the calling code.  
+ Во втором вызове `MsgBox` отображается "After Replace (n): 11, 21, 31, 41". Поскольку `n` передается `ByVal`, `replace` не может изменить переменную `n` в вызывающем коде, назначив ей новый массив. Когда `replace` создает новый экземпляр массива `k` и присваивает его локальной переменной `a`, он теряет ссылку на `n`, переданный вызывающим кодом. При изменении членов `a`затрагивается только локальный `k` массива. Таким образом, `replace` не увеличивает значения массива `n` в вызывающем коде.  
   
 ## <a name="compiling-the-code"></a>Компиляция кода  
- The default in Visual Basic is to pass arguments by value. However, it is good programming practice to include either the [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) or [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) keyword with every declared parameter. This makes your code easier to read.  
+ По умолчанию в Visual Basic передаются аргументы по значению. Однако рекомендуется включать ключевое слово [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) или [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) с каждым объявленным параметром. Это упрощает чтение кода.  
   
 ## <a name="see-also"></a>См. также
 
@@ -53,4 +53,4 @@ If a procedure declares a parameter as [ByRef](../../../../visual-basic/language
 - [Практическое руководство. Изменение значения аргумента процедуры](./how-to-change-the-value-of-a-procedure-argument.md)
 - [Практическое руководство. Принудительная передача аргумента по значению](./how-to-force-an-argument-to-be-passed-by-value.md)
 - [Передача аргументов по позиции и по имени](./passing-arguments-by-position-and-by-name.md)
-- [Типы значений и ссылочные типы](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+- [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)

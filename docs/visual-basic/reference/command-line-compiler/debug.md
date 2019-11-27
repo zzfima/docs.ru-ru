@@ -14,9 +14,9 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344777"
 ---
-# <a name="-debug-visual-basic"></a>-debug (Visual Basic)
+# <a name="-debug-visual-basic"></a>-Debug (Visual Basic)
 
-Causes the compiler to generate debugging information and place it in the output file(s).
+Приводит к тому, что компилятор создает отладочную информацию и помещает ее в выходные файлы.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -24,7 +24,7 @@ Causes the compiler to generate debugging information and place it in the output
 -debug[+ | -]
 ```
 
-or
+или
 
 ```console
 -debug:[full | pdbonly]
@@ -34,24 +34,24 @@ or
 
 |Термин|Определение|
 |---|---|
-|`+` &#124; `-`|Необязательный. Specifying `+` or `/debug` causes the compiler to generate debugging information and place it in a .pdb file. Specifying `-` has the same effect as not specifying `/debug`.|
-|`full` &#124; `pdbonly`|Необязательный. Определяет тип отладочной информации, создаваемой компилятором. If you do not specify `/debug:pdbonly`, the default is `full`, which enables you to attach a debugger to the running program. The `pdbonly` argument allows source-code debugging when the program is started in the debugger, but it displays assembly-language code only when the running program is attached to the debugger.|
+|`+` &#124; `-`|Необязательный элемент. Указание `+` или `/debug` приводит к тому, что компилятор создает отладочную информацию и помещает ее в PDB-файл. Указание `-` имеет тот же результат, что и не указывает `/debug`.|
+|`full` &#124; `pdbonly`|Необязательный элемент. Определяет тип отладочной информации, создаваемой компилятором. Если не указать `/debug:pdbonly`, по умолчанию будет `full`, что позволит подключить отладчик к выполняющейся программе. Аргумент `pdbonly` позволяет выполнять отладку исходного кода при запуске программы в отладчике, но отображает код на языке ассемблера, только если выполняющаяся программа подключена к отладчику.|
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Примечания
 
-Используйте этот параметр для создания отладочных сборок. If you do not specify `/debug`, `/debug+`, or `/debug:full`, you will be unable to debug the output file of your program.
+Используйте этот параметр для создания отладочных сборок. Если не указать `/debug`, `/debug+`или `/debug:full`, вы не сможете выполнить отладку выходного файла программы.
 
-By default, debugging information is not emitted (`/debug-`). To emit debugging information, specify `/debug` or `/debug+`.
+По умолчанию отладочная информация не создается (`/debug-`). Чтобы выдать отладочную информацию, укажите `/debug` или `/debug+`.
 
 Сведения о настройке производительности отладки для приложения см. в разделе [Упрощение отладки образов](../../../framework/debug-trace-profile/making-an-image-easier-to-debug.md).
 
-|To set -debug in the Visual Studio integrated development environment|
+|Установка-Debug в интегрированной среде разработки Visual Studio|
 |---|
-|1.  With a project selected in **Solution Explorer**, on the **Project** menu, click **Properties**. <br />2.  Click the **Compile** tab.<br />3.  Click **Advanced Compile Options**.<br />4.  Modify the value in the **Generate Debug Info** box.|
+|1. выбрав проект в **Обозреватель решений**, в меню **проект** выберите пункт **Свойства**. <br />2. Перейдите на вкладку **Компиляция** .<br />3. Нажмите кнопку **Дополнительные параметры компиляции**.<br />4. Измените значение в поле **создать сведения об отладке** .|
 
 ## <a name="example"></a>Пример
 
-The following example puts debugging information in output file `App.exe`.
+В следующем примере отладочная информация помещается в выходной файл `App.exe`.
 
 ```console
 vbc -debug -out:app.exe test.vb

@@ -1,5 +1,5 @@
 ---
-title: Validating Passwords Complexity
+title: Сложность проверки паролей
 ms.date: 07/20/2015
 helpviewer_keywords:
 - String data type [Visual Basic], validation
@@ -12,11 +12,11 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348327"
 ---
 # <a name="walkthrough-validating-that-passwords-are-complex-visual-basic"></a>Пошаговое руководство. Проверка паролей на сложность (Visual Basic)
-This method checks for some strong-password characteristics and updates a string parameter with information about which checks the password fails.  
+Этот метод проверяет некоторые характеристики строгого пароля и обновляет строковый параметр, используя сведения о том, какие проверки пароля завершился ошибкой.  
   
- Passwords can be used in a secure system to authorize a user. However, the passwords must be difficult for unauthorized users to guess. Attackers can use a *dictionary attack* program, which iterates through all of the words in a dictionary (or multiple dictionaries in different languages) and tests whether any of the words work as a user's password. Weak passwords such as "Yankees" or "Mustang" can be guessed quickly. Stronger passwords, such as "?You'L1N3vaFiNdMeyeP@sSWerd!", are much less likely to be guessed. A password-protected system should ensure that users choose strong passwords.  
+ Пароли можно использовать в защищенной системе для авторизации пользователя. Тем не менее пароли должны быть сложными для взлома неавторизованными пользователями. Злоумышленники могут использовать *словарную* программу для атаки, которая перебирает все слова в словаре (или несколько словарей на разных языках) и проверяет, работает ли какое-либо из слов в качестве пароля пользователя. Ненадежные пароли, например "Янкиз" или "Мустанг", можно быстро угадать. Более надежные пароли, например "? "L1N3vaFiNdMeyeP@sSWerd!", скорее всего, будут догадаться. Система, защищенная паролем, должна гарантировать, что пользователи будут выбирать надежные пароли.  
   
- A strong password is complex (containing a mixture of uppercase, lowercase, numeric, and special characters) and is not a word. This example demonstrates how to verify complexity.  
+ Надежный пароль является сложным (он содержит сочетание прописных и строчных букв, цифр и специальных символов) и не является словом. В этом примере показано, как проверить сложность.  
   
 ## <a name="example"></a>Пример  
   
@@ -24,24 +24,24 @@ This method checks for some strong-password characteristics and updates a string
  [!code-vb[VbVbcnRegEx#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnRegEx/VB/Class1.vb#1)]  
   
 ## <a name="compiling-the-code"></a>Компиляция кода  
- Call this method by passing the string that contains that password.  
+ Вызовите этот метод, передав строку, содержащую этот пароль.  
   
  Для этого примера требуются:  
   
 - Доступ к членам пространства имен <xref:System.Text.RegularExpressions>. Добавьте оператор `Imports`, если в коде не используются полные имена членов. Дополнительные сведения см. в статье [Оператор Imports (пространство имен .NET и тип)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).  
   
 ## <a name="security"></a>Безопасность  
- If you're moving the password across a network, you need to use a secure method for transferring data. For more information, see [ASP.NET Web Application Security](https://docs.microsoft.com/previous-versions/aspnet/330a99hc(v=vs.100)).
+ При перемещении пароля по сети необходимо использовать безопасный метод передачи данных. Дополнительные сведения см. в разделе [ASP.NET Web Application Security](https://docs.microsoft.com/previous-versions/aspnet/330a99hc(v=vs.100)).
   
- You can improve the accuracy of the `ValidatePassword` function by adding additional complexity checks:  
+ Точность функции `ValidatePassword` можно повысить, добавив дополнительные проверки сложности:  
   
-- Compare the password and its substrings against the user's name, user identifier, and an application-defined dictionary. In addition, treat visually similar characters as equivalent when performing the comparisons. For example, treat the letters "l" and "e" as equivalent to the numerals "1" and "3".  
+- Сравните пароль и его подстроки с именем пользователя, идентификатором пользователя и словарем, определяемым приложением. Кроме того, при выполнении сравнений следует рассматривать визуально схожие символы как эквивалентные. Например, буквы "l" и "e" считаются эквивалентными цифрам "1" и "3".  
   
-- If there is only one uppercase character, make sure it is not the password's first character.  
+- Если имеется только один символ в верхнем регистре, убедитесь, что он не является первым символом пароля.  
   
-- Make sure that the last two characters of the password are letter characters.  
+- Убедитесь, что последние два символа пароля являются буквенными символами.  
   
-- Do not allow passwords in which all the symbols are entered from the keyboard's top row.  
+- Не разрешайте пароли, в которых все символы введены из верхней строки клавиатуры.  
   
 ## <a name="see-also"></a>См. также
 

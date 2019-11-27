@@ -15,7 +15,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348701"
 ---
 # <a name="how-to-call-windows-apis-visual-basic"></a>Практическое руководство. Вызов Windows API (Visual Basic)
-This example defines and calls the `MessageBox` function in user32.dll and then passes a string to it.  
+В этом примере определяется и вызывается функция `MessageBox` в user32. dll, а затем в нее передается строка.  
   
 ## <a name="example"></a>Пример  
  [!code-vb[VbVbalrInterop#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#1)]  
@@ -28,9 +28,9 @@ This example defines and calls the `MessageBox` function in user32.dll and then 
 ## <a name="robust-programming"></a>Отказоустойчивость  
  При следующих условиях возможно возникновение исключения:  
   
-- The method is not static, is abstract, or has been previously defined. The parent type is an interface, or the length of *name* or *dllName* is zero. (<xref:System.ArgumentException>)  
+- Метод не является статическим, является абстрактным или был определен ранее. Родительский тип является интерфейсом, или длина *имени* или *dllname* равна нулю. (<xref:System.ArgumentException>)  
   
-- The *name* or *dllName* is `Nothing`. (<xref:System.ArgumentNullException>)  
+- *Имя* или *dllname* имеет `Nothing`. (<xref:System.ArgumentNullException>)  
   
 - Содержащий тип был создан ранее с помощью `CreateType`. (<xref:System.InvalidOperationException>)  
   
@@ -39,6 +39,6 @@ This example defines and calls the `MessageBox` function in user32.dll and then 
 - [Подробный обзор вызова неуправляемого кода](../../../framework/interop/consuming-unmanaged-dll-functions.md#a-closer-look-at-platform-invoke)
 - [Примеры вызовов неуправляемого кода](../../../framework/interop/platform-invoke-examples.md)
 - [Использование неуправляемых функций DLL](../../../framework/interop/consuming-unmanaged-dll-functions.md)
-- [Defining a Method with Reflection Emit](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/w63y4d4f(v=vs.100))
+- [Определение метода с порождением отражения](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/w63y4d4f(v=vs.100))
 - [Пошаговое руководство. Вызов API-интерфейсов Windows](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)
 - [COM-взаимодействие](../../../visual-basic/programming-guide/com-interop/index.md)

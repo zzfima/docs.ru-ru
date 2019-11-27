@@ -19,31 +19,31 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344846"
 ---
 # <a name="how-to-pass-arguments-to-a-procedure-visual-basic"></a>Практическое руководство. Передача аргументов в процедуру (Visual Basic)
-When you call a procedure, you follow the procedure name with an argument list in parentheses. You supply an argument corresponding to every required parameter the procedure defines, and you can optionally supply arguments to the `Optional` parameters. If you do not supply an `Optional` parameter in the call, you must include a comma to mark its place in the argument list if you are supplying any subsequent arguments.  
+При вызове процедуры необходимо следовать имени процедуры со списком аргументов в круглых скобках. Укажите аргумент, соответствующий каждому обязательному параметру, определяемому процедурой, и при необходимости можно указать аргументы для параметров `Optional`. Если в вызове не указан параметр `Optional`, необходимо включить запятую, чтобы пометить ее место в списке аргументов, если вы предоставляете последующие аргументы.  
   
- If you intend to pass an argument of a data type different from that of its corresponding parameter, such as `Byte` to `String`, you can set the type-checking switch ([Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) to `Off`. If `Option Strict` is `On`, you must use either widening conversions or explicit conversion keywords. For more information, see [Widening and Narrowing Conversions](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md) and [Type Conversion Functions](../../../../visual-basic/language-reference/functions/type-conversion-functions.md).  
+ Если предполагается передать аргумент типа данных, отличный от того, который соответствует его параметру, например `Byte` для `String`, можно установить для параметра проверки типов ([оператор Option строго](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) значение `Off`. Если `Option Strict` `On`, необходимо использовать либо расширяющие преобразования, либо ключевые слова явного преобразования. Дополнительные сведения см. в разделе [расширяющие и сужающие преобразования](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md) и [функции преобразования типов](../../../../visual-basic/language-reference/functions/type-conversion-functions.md).  
   
- For more information, see [Procedure Parameters and Arguments](./procedure-parameters-and-arguments.md).  
+ Дополнительные сведения см. в разделе [Параметры и аргументы процедуры](./procedure-parameters-and-arguments.md).  
   
-### <a name="to-pass-one-or-more-arguments-to-a-procedure"></a>To pass one or more arguments to a procedure  
+### <a name="to-pass-one-or-more-arguments-to-a-procedure"></a>Передача одного или нескольких аргументов в процедуру  
   
-1. In the calling statement, follow the procedure name with parentheses.  
+1. В операторе вызова используйте имя процедуры с круглыми скобками.  
   
-2. Inside the parentheses, put an argument list. Include an argument for each required parameter the procedure defines, and separate the arguments with commas.  
+2. Внутри круглых скобок вставьте список аргументов. Включите аргумент для каждого обязательного параметра, определяемого процедурой, и разделите аргументы запятыми.  
   
-3. Make sure each argument is a valid expression that evaluates to a data type convertible to the type the procedure defines for the corresponding parameter.  
+3. Убедитесь, что каждый аргумент является допустимым выражением, результатом которого является тип данных, преобразуемый в тип, определяемый процедурой для соответствующего параметра.  
   
-4. If a parameter is defined as [Optional](../../../../visual-basic/language-reference/modifiers/optional.md), you can either include it in the argument list or omit it. If you omit it, the procedure uses the default value defined for that parameter.  
+4. Если параметр определен как [необязательный](../../../../visual-basic/language-reference/modifiers/optional.md), его можно включить в список аргументов или опустить. Если опустить его, процедура использует значение по умолчанию, определенное для этого параметра.  
   
-5. If you omit an argument for an `Optional` parameter and there is another parameter after it in the parameter list, you can mark the place of the omitted argument by an extra comma in the argument list.  
+5. Если опустить аргумент для параметра `Optional` и после него в списке параметров есть другой параметр, можно пометить место пропущенного аргумента на дополнительную запятую в списке аргументов.  
   
-     The following example calls the Visual Basic <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> function.  
+     В следующем примере вызывается функция Visual Basic <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A>.  
   
      [!code-vb[VbVbcnProcedures#34](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#34)]  
   
-     The preceding example supplies the required first argument, which is the message string to be displayed. It omits an argument for the optional second parameter, which specifies the buttons to be displayed on the message box. Because the call does not supply a value, `MsgBox` uses the default value, `MsgBoxStyle.OKOnly`, which displays only an **OK** button.  
+     В предыдущем примере предоставляется обязательный первый аргумент, который представляет собой отображаемую строку сообщения. Он опускает аргумент для необязательного второго параметра, который указывает кнопки, отображаемые в окне сообщения. Поскольку вызов не предоставляет значение, `MsgBox` использует значение по умолчанию `MsgBoxStyle.OKOnly`, которое отображает только кнопку **ОК** .  
   
-     The second comma in the argument list marks the place of the omitted second argument, and the last string is passed to the optional third parameter of `MsgBox`, which is the text to be displayed in the title bar.  
+     Вторая запятая в списке аргументов отмечает место пропущенного второго аргумента, а последняя строка передается необязательному третьему параметру `MsgBox`, который является текстом, отображаемым в заголовке окна.  
   
 ## <a name="see-also"></a>См. также
 

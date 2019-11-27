@@ -18,7 +18,7 @@ ms.locfileid: "74353098"
 ---
 # <a name="how-to-qualify-xml-element-and-xml-attribute-names"></a>Практическое руководство. Квалификация элемента XML и имен атрибутов XML
 
-XML namespaces contained by instances of the <xref:System.Xml.Serialization.XmlSerializerNamespaces> class must conform to the World Wide Web Consortium (W3C) specification called [Namespaces in XML](https://www.w3.org/TR/REC-xml-names/).
+Пространства имен XML, содержащиеся в экземплярах класса <xref:System.Xml.Serialization.XmlSerializerNamespaces>, должны соответствовать спецификации консорциум W3C (W3C), именуемой [пространствами имен в XML](https://www.w3.org/TR/REC-xml-names/).
 
 Пространства имен XML предоставляют метод квалификации имен элементов XML и атрибутов XML в документах XML. Полное имя состоит из префикса и локального имени, разделяемых двоеточием. Функцией префикса является только указание места заполнения, он сопоставлен URI, определяющим пространство имен. Сочетание процедур универсально управляемого пространства имен URI и локального имени позволяет создать имя, гарантированно универсально уникальное.
 
@@ -175,7 +175,7 @@ public class Book
 - <xref:System.Xml.Serialization.XmlSerializer>
 - [Инструмент определения схемы XML и сериализация XML](the-xml-schema-definition-tool-and-xml-serialization.md)
 - [Введение в сериализацию XML](introducing-xml-serialization.md)
-- [XmlSerializer Class](xref:System.Xml.Serialization.XmlSerializer)
+- [Класс XmlSerializer](xref:System.Xml.Serialization.XmlSerializer)
 - [Атрибуты управления сериализацией XML](attributes-that-control-xml-serialization.md)
 - [Практическое руководство. Указание имени альтернативного элемента для потока XML](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
 - [Практическое руководство. Сериализация объекта](how-to-serialize-an-object.md)

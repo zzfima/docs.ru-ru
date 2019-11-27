@@ -12,15 +12,15 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346661"
 ---
 # <a name="type-mismatch-visual-basic"></a>Несоответствие типа (Visual Basic)
-You attempted to convert a value to another type in a way that is not valid.  
+Предпринята попытка преобразовать значение в другой тип способом, который является недопустимым.  
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  
   
-1. Check the assignment to make sure it is valid.  
+1. Проверьте назначение, чтобы убедиться, что оно является допустимым.  
   
-2. Make sure you did not pass an object to a procedure that expects a single property or value.  
+2. Убедитесь, что объект не передан процедуре, ожидающей одно свойство или значение.  
   
-3. Make sure you did not use a module or project name where an expression was expected.  
+3. Убедитесь, что вы не использовали имя модуля или проекта, где ожидалось выражение.  
   
 ## <a name="see-also"></a>См. также
 

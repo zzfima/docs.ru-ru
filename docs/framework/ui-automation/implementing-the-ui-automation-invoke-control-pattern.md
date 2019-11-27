@@ -47,11 +47,11 @@ ms.locfileid: "74435158"
 > [!NOTE]
 > Эта реализация считается проблемой специальных возможностей, если элемент управления может быть вызван только в результате побочного эффекта, связанного с мышью.
 
-- Вызов элемента управления отличается от выбора элемента. Тем не менее в зависимости от элемента управления его вызов может привести к выбору элемента в качестве побочного эффекта. For example, invoking a Microsoft Word document list item in the My Documents folder both selects the item and opens the document.
+- Вызов элемента управления отличается от выбора элемента. Тем не менее в зависимости от элемента управления его вызов может привести к выбору элемента в качестве побочного эффекта. Например, при вызове элемента списка документов Microsoft Word в папке «Мои документы» выбирается элемент и открывается документ.
 
 - Элемент может исчезнуть из дерева [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] сразу после вызова. В результате запрос информации из элемента, предоставленного обратным вызовом события, может завершиться неудачно. В качестве обходного решения рекомендуется выполнять предварительное кэширование информации.
 
-- Элементы управления могут реализовывать множество шаблонов элементов управления. For example, the Fill Color control on the Microsoft Excel toolbar implements both the <xref:System.Windows.Automation.InvokePattern> and the <xref:System.Windows.Automation.ExpandCollapsePattern> control patterns. <xref:System.Windows.Automation.ExpandCollapsePattern> предоставляет меню, а <xref:System.Windows.Automation.InvokePattern> заполняет активный выделенный фрагмент выбранным цветом.
+- Элементы управления могут реализовывать множество шаблонов элементов управления. Например, элемент управления цвет заливки на панели инструментов Microsoft Excel реализует как <xref:System.Windows.Automation.InvokePattern>, так и шаблоны элементов управления <xref:System.Windows.Automation.ExpandCollapsePattern>. <xref:System.Windows.Automation.ExpandCollapsePattern> предоставляет меню, а <xref:System.Windows.Automation.InvokePattern> заполняет активный выделенный фрагмент выбранным цветом.
 
 <a name="Required_Members_for_the_IValueProvider_Interface"></a>
 
@@ -61,7 +61,7 @@ ms.locfileid: "74435158"
 
 |Обязательные члены|Тип члена|Примечания|
 |----------------------|-----------------|-----------|
-|<xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A>|method|<xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A> является асинхронным вызовом и должен возвращаться немедленно без блокировки.<br /><br /> Это особенно важно для элементов управления, которые при вызове прямо или косвенно запускают модальное диалоговое окно. Любой клиент автоматизации пользовательского интерфейса, инициировавший это событие, будет оставаться заблокированным до закрытия модального диалогового окна.|
+|<xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A>|метод|<xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A> является асинхронным вызовом и должен возвращаться немедленно без блокировки.<br /><br /> Это особенно важно для элементов управления, которые при вызове прямо или косвенно запускают модальное диалоговое окно. Любой клиент автоматизации пользовательского интерфейса, инициировавший это событие, будет оставаться заблокированным до закрытия модального диалогового окна.|
 
 <a name="Exceptions"></a>
 

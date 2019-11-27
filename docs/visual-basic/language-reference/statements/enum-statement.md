@@ -20,7 +20,7 @@ ms.locfileid: "74343715"
 ---
 # <a name="enum-statement-visual-basic"></a>Оператор Enum (Visual Basic)
 
-Declares an enumeration and defines the values of its members.
+Объявляет перечисление и определяет значения его элементов.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -35,13 +35,13 @@ End Enum
 
 - `attributelist`
 
-  Необязательный. List of attributes that apply to this enumeration. You must enclose the [attribute list](../../../visual-basic/language-reference/statements/attribute-list.md) in angle brackets ("`<`" and "`>`").
+  Необязательный элемент. Список атрибутов, которые применяются к этому перечислению. [Список атрибутов](../../../visual-basic/language-reference/statements/attribute-list.md) необходимо заключить в угловые скобки ("`<`" и "`>`").
 
-  The <xref:System.FlagsAttribute> attribute indicates that the value of an instance of the enumeration can include multiple enumeration members, and that each member represents a bit field in the enumeration value.
+  Атрибут <xref:System.FlagsAttribute> указывает, что значение экземпляра перечисления может включать несколько членов перечисления и что каждый элемент представляет битовое поле в значении перечисления.
 
 - `accessmodifier`
 
-  Необязательный. Specifies what code can access this enumeration. Ниже указаны доступные значения.
+  Необязательный элемент. Указывает, какой код может получить доступ к этому перечислению. Ниже указаны доступные значения.
 
   - [Public](../../../visual-basic/language-reference/modifiers/public.md)
 
@@ -57,130 +57,130 @@ End Enum
 
 - `Shadows`
 
-  Необязательный. Specifies that this enumeration redeclares and hides an identically named programming element, or set of overloaded elements, in a base class. You can specify [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md) only on the enumeration itself, not on any of its members.
+  Необязательный элемент. Указывает, что это перечисление повторно объявляет и скрывает идентично именованный элемент программирования или набор перегруженных элементов в базовом классе. [Тени](../../../visual-basic/language-reference/modifiers/shadows.md) можно указывать только в самом перечислении, а не на любом из его членов.
 
 - `enumerationname`
 
-  Обязательный. Name of the enumeration. For information on valid names, see [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).
+  Обязательно. Имя перечисления. Сведения о допустимых именах см. в разделе [Имена объявленных элементов](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).
 
 - `datatype`
 
-  Необязательный. Data type of the enumeration and all its members.
+  Необязательный элемент. Тип данных перечисления и всех его элементов.
 
 - `memberlist`
 
-  Обязательный. List of member constants being declared in this statement. Multiple members appear on individual source code lines.
+  Обязательно. Список констант членов, объявляемых в этой инструкции. В отдельных строках исходного кода отображаются несколько элементов.
 
-  Each `member` has the following syntax and parts: `[<attribute list>] member name [ = initializer ]`
+  Каждый `member` имеет следующий синтаксис и фрагменты: `[<attribute list>] member name [ = initializer ]`
 
   |Отделение|Описание|
   |---|---|
-  |`membername`|Обязательный. Name of this member.|
-  |`initializer`|Необязательный. Expression that is evaluated at compile time and assigned to this member.|
+  |`membername`|Обязательно. Имя этого элемента.|
+  |`initializer`|Необязательный элемент. Выражение, которое вычисляется во время компиляции и присваивается этому элементу.|
 
 - `End` `Enum`
 
   Завершает блок `Enum`.
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Примечания
 
-If you have a set of unchanging values that are logically related to each other, you can define them together in an enumeration. This provides meaningful names for the enumeration and its members, which are easier to remember than their values. You can then use the enumeration members in many places in your code.
+Если имеется набор неизменяемых значений, логически связанных друг с другом, их можно определить вместе в перечислении. Это дает осмысленные имена для перечисления и его членов, которые проще запомнить, чем их значения. Затем можно использовать элементы перечисления во многих местах кода.
 
-The benefits of using enumerations include the following:
+Ниже перечислены преимущества использования перечислений.
 
-- Reduces errors caused by transposing or mistyping numbers.
+- Сокращает количество ошибок, вызванных перечислением или неотрицательным вводом чисел.
 
-- Makes it easy to change values in the future.
+- Упрощает изменение значений в будущем.
 
-- Makes code easier to read, which means it is less likely that errors will be introduced.
+- Упрощает чтение кода, что означает меньшее количество ошибок, которые могут возникать.
 
-- Ensures forward compatibility. If you use enumerations, your code is less likely to fail if in the future someone changes the values corresponding to the member names.
+- Обеспечивает прямую совместимость. При использовании перечислений код менее вероятен, если в будущем кто-то изменит значения, соответствующие именам элементов.
 
-An enumeration has a name, an underlying data type, and a set of members. Each member represents a constant.
+Перечисление имеет имя, базовый тип данных и набор элементов. Каждый элемент представляет константу.
 
-An enumeration declared at class, structure, module, or interface level, outside any procedure, is a *member enumeration*. It is a member of the class, structure, module, or interface that declares it.
+Перечисление, объявленное на уровне класса, структуры, модуля или интерфейса, за пределами любой процедуры, является *перечислителем элементов*. Он является членом класса, структуры, модуля или интерфейса, объявляющего его.
 
-Member enumerations can be accessed from anywhere within their class, structure, module, or interface. Code outside a class, structure, or module must qualify a member enumeration's name with the name of that class, structure, or module. You can avoid the need to use fully qualified names by adding an [Imports](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) statement to the source file.
+К перечислениям членов можно обращаться из любого места в своем классе, структуре, модуле или интерфейсе. Код за пределами класса, структуры или модуля должен уточнять имя перечисления членов именем этого класса, структуры или модуля. Можно избежать необходимости использовать полные имена, добавив оператор [Imports](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) в исходный файл.
 
-An enumeration declared at namespace level, outside any class, structure, module, or interface, is a member of the namespace in which it appears.
+Перечисление, объявленное на уровне пространства имен вне любого класса, структуры, модуля или интерфейса, является членом пространства имен, в котором оно отображается.
 
-The *declaration context* for an enumeration must be a source file, namespace, class, structure, module, or interface, and cannot be a procedure. Дополнительные сведения см. в разделе [Контексты объявления и уровни доступа по умолчанию](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).
+*Контекст объявления* для перечисления должен быть исходным файлом, пространством имен, классом, структурой, модулем или интерфейсом и не может быть процедурой. Дополнительные сведения см. в разделе [Контексты объявления и уровни доступа по умолчанию](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).
 
-You can apply attributes to an enumeration as a whole, but not to its members individually. An attribute contributes information to the assembly's metadata.
+К перечислению можно применять атрибуты в целом, но не в отдельные элементы. Атрибут вносит сведения в метаданные сборки.
 
 ## <a name="data-type"></a>Тип данных
 
-The `Enum` statement can declare the data type of an enumeration. Each member takes the enumeration's data type. You can specify `Byte`, `Integer`, `Long`, `SByte`, `Short`, `UInteger`, `ULong`, or `UShort`.
+Оператор `Enum` может объявлять тип данных перечисления. Каждый член принимает тип данных перечисления. Можно указать `Byte`, `Integer`, `Long`, `SByte`, `Short`, `UInteger`, `ULong`или `UShort`.
 
-If you do not specify `datatype` for the enumeration, each member takes the data type of its `initializer`. If you specify both `datatype` and `initializer`, the data type of `initializer` must be convertible to `datatype`. If neither `datatype` nor `initializer` is present, the data type defaults to `Integer`.
+Если не указать `datatype` для перечисления, каждый элемент принимает тип данных его `initializer`. Если заданы и `datatype`, и `initializer`, тип данных `initializer` должен быть преобразован в `datatype`. Если ни `datatype`, ни `initializer` не указаны, по умолчанию используется тип данных `Integer`.
 
-## <a name="initializing-members"></a>Initializing Members
+## <a name="initializing-members"></a>Инициализация членов
 
-The `Enum` statement can initialize the contents of selected members in `memberlist`. You use `initializer` to supply an expression to be assigned to the member.
+Оператор `Enum` может инициализировать содержимое выбранных элементов в `memberlist`. Для указания выражения, присваиваемого элементу, используется `initializer`.
 
-If you do not specify `initializer` for a member, Visual Basic initializes it either to zero (if it is the first `member` in `memberlist`), or to a value greater by one than that of the immediately preceding `member`.
+Если не указать `initializer` для члена, Visual Basic инициализирует его как ноль (если он является первым `member` в `memberlist`) или значение, большее значения, равное значению, отличному от предыдущего `member`.
 
-The expression supplied in each `initializer` can be any combination of literals, other constants that are already defined, and enumeration members that are already defined, including a previous member of this enumeration. You can use arithmetic and logical operators to combine such elements.
+Выражение, передаваемое в каждой `initializer`, может быть любым сочетанием литералов, других уже определенных констант и уже определенных членов перечисления, включая предыдущий элемент этого перечисления. Для объединения таких элементов можно использовать арифметические и логические операторы.
 
-You cannot use variables or functions in `initializer`. However, you can use conversion keywords such as `CByte` and `CShort`. You can also use `AscW` if you call it with a constant `String` or `Char` argument, since that can be evaluated at compile time.
+В `initializer`нельзя использовать переменные или функции. Однако можно использовать ключевые слова преобразования, такие как `CByte` и `CShort`. Можно также использовать `AscW`, если он вызывается с константой `String` или аргументом `Char`, так как это может быть вычислено во время компиляции.
 
-Enumerations cannot have floating-point values. If a member is assigned a floating-point value and `Option Strict` is set to on, a compiler error occurs. If `Option Strict` is off, the value is automatically converted to the `Enum` type.
+Перечисления не могут иметь значения с плавающей запятой. Если члену присваивается значение с плавающей запятой, а `Option Strict` устанавливается в on, возникает ошибка компилятора. Если `Option Strict` находится в состоянии OFF, значение автоматически преобразуется в тип `Enum`.
 
-If the value of a member exceeds the allowable range for the underlying data type, or if you initialize any member to the maximum value allowed by the underlying data type, the compiler reports an error.
+Если значение элемента превышает допустимый диапазон для базового типа данных или если любой элемент инициализируется максимальным значением, разрешенным базовым типом данных, то компилятор сообщает об ошибке.
 
 ## <a name="modifiers"></a>Модификаторы
 
-Class, structure, module, and interface member enumerations default to public access. You can adjust their access levels with the access modifiers. Namespace member enumerations default to friend access. You can adjust their access levels to public, but not to private or protected. For more information, see [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).
+Перечисления членов класса, структуры, модуля и интерфейса по умолчанию имеют открытый доступ. Уровни доступа можно изменить с помощью модификаторов доступа. Перечисления членов пространств имен по умолчанию имеют дружественный доступ. Уровни доступа можно изменить на "общий", но не на "частный" или "защищенный". Дополнительные сведения см. [в разделе уровни доступа в Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).
 
-All enumeration members have public access, and you cannot use any access modifiers on them. However, if the enumeration itself has a more restricted access level, the specified enumeration access level takes precedence.
+Все члены перечисления имеют общий доступ, и в них нельзя использовать никакие модификаторы доступа. Однако если перечисление имеет более ограниченный уровень доступа, приоритет имеет указанный уровень доступа к перечислению.
 
-By default, all enumerations are types and their fields are constants. Therefore the `Shared`, `Static`, and `ReadOnly` keywords cannot be used when declaring an enumeration or its members.
+По умолчанию все перечисления являются типами, а их поля — константами. Поэтому ключевые слова `Shared`, `Static`и `ReadOnly` нельзя использовать при объявлении перечисления или его членов.
 
-## <a name="assigning-multiple-values"></a>Assigning Multiple Values
+## <a name="assigning-multiple-values"></a>Присваивание нескольких значений
 
-Enumerations typically represent mutually exclusive values. By including the <xref:System.FlagsAttribute> attribute in the `Enum` declaration, you can instead assign multiple values to an instance of the enumeration. The <xref:System.FlagsAttribute> attribute specifies that the enumeration be treated as a bit field, that is, a set of flags. These are called *bitwise* enumerations.
+Перечисления обычно представляют взаимоисключающие значения. Включив атрибут <xref:System.FlagsAttribute> в объявление `Enum`, можно присвоить экземпляру перечисления несколько значений. Атрибут <xref:System.FlagsAttribute> указывает, что перечисление будет рассматриваться как битовое поле, то есть набор флагов. Они называются *побитовыми* перечислениями.
 
-When you declare an enumeration by using the <xref:System.FlagsAttribute> attribute, we recommend that you use powers of 2, that is, 1, 2, 4, 8, 16, and so on, for the values. We also recommend that "None" be the name of a member whose value is 0. For additional guidelines, see <xref:System.FlagsAttribute> and <xref:System.Enum>.
+При объявлении перечисления с помощью атрибута <xref:System.FlagsAttribute> для значений рекомендуется использовать степени 2, то есть 1, 2, 4, 8, 16 и т. д. Также рекомендуется, чтобы "None" было именем члена, значение которого равно 0. Дополнительные рекомендации см. в разделе <xref:System.FlagsAttribute> и <xref:System.Enum>.
 
 ## <a name="example"></a>Пример
 
-В следующем примере показано использование оператора `Enum`. Note that the member is referred to as `EggSizeEnum.Medium`, and not as `Medium`.
+В следующем примере показано использование оператора `Enum`. Обратите внимание, что элемент называется `EggSizeEnum.Medium`, а не `Medium`.
 
 [!code-vb[VbEnumsTask#41](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class1.vb#41)]
 
 ## <a name="example"></a>Пример
 
-The method in the following example is outside the `Egg` class. Therefore, `EggSizeEnum` is fully qualified as `Egg.EggSizeEnum`.
+Метод в следующем примере находится за пределами `Egg` класса. Таким образом, `EggSizeEnum` полностью уточняется как `Egg.EggSizeEnum`.
 
 [!code-vb[VbEnumsTask#42](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class1.vb#42)]
 
 ## <a name="example"></a>Пример
 
-The following example uses the `Enum` statement to define a related set of named constant values. In this case, the values are colors you might choose to design data entry forms for a database.
+В следующем примере оператор `Enum` используется для определения связанного набора именованных постоянных значений. В этом случае значения представляют собой цвета, которые можно выбрать для создания форм ввода данных для базы данных.
 
 [!code-vb[VbEnumsTask#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#30)]
 
 ## <a name="example"></a>Пример
 
-The following example shows values that include both positive and negative numbers.
+В следующем примере показаны значения, включающие положительные и отрицательные числа.
 
 [!code-vb[VbEnumsTask#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#31)]
 
 ## <a name="example"></a>Пример
 
-In the following example, an `As` clause is used to specify the `datatype` of an enumeration.
+В следующем примере для указания `datatype` перечисления используется предложение `As`.
 
 [!code-vb[VbEnumsTask#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#6)]
 
 ## <a name="example"></a>Пример
 
-The following example shows how to use a bitwise enumeration. Multiple values can be assigned to an instance of a bitwise enumeration. The `Enum` declaration includes the <xref:System.FlagsAttribute> attribute, which indicates that the enumeration can be treated as a set of flags.
+В следующем примере показано, как использовать побитовое перечисление. Экземпляру побитового перечисления можно назначить несколько значений. Объявление `Enum` включает атрибут <xref:System.FlagsAttribute>, указывающий, что перечисление может рассматриваться как набор флагов.
 
 [!code-vb[VbEnumsTask#61](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class1.vb#61)]
 
 ## <a name="example"></a>Пример
 
-The following example iterates through an enumeration. It uses the <xref:System.Enum.GetNames%2A> method to retrieve an array of member names from the enumeration, and <xref:System.Enum.GetValues%2A> to retrieve an array of member values.
+В следующем примере выполняется итерация по перечислению. Он использует метод <xref:System.Enum.GetNames%2A> для получения массива имен членов из перечисления и <xref:System.Enum.GetValues%2A> для получения массива значений элементов.
 
 [!code-vb[VbEnumsTask#51](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class1.vb#51)]
 
@@ -191,5 +191,5 @@ The following example iterates through an enumeration. It uses the <xref:System.
 - [Оператор Const](../../../visual-basic/language-reference/statements/const-statement.md)
 - [Оператор Dim](../../../visual-basic/language-reference/statements/dim-statement.md)
 - [Явные и неявные преобразования](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)
-- [Функции преобразования типов](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [Type Conversion Functions](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
 - [Константы и перечисления](../../../visual-basic/language-reference/constants-and-enumerations.md)

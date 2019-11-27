@@ -15,20 +15,20 @@ ms.locfileid: "74348626"
 ---
 # <a name="how-to-determine-whether-two-objects-are-related-visual-basic"></a>Практическое руководство. Определение наличия связи между двумя объектами (Visual Basic)
 
-You can compare two objects to determine the relationship, if any, between the classes from which they are created. The <xref:System.Type.IsInstanceOfType%2A> method of the <xref:System.Type?displayProperty=nameWithType> class returns `True` if the specified class inherits from the current class, or if the current type is an interface supported by the specified class.
+Можно сравнить два объекта, чтобы определить связь между классами, из которых они были созданы. Метод <xref:System.Type.IsInstanceOfType%2A> класса <xref:System.Type?displayProperty=nameWithType> возвращает `True`, если указанный класс наследуется от текущего класса, или если текущий тип является интерфейсом, поддерживаемым указанным классом.
 
-### <a name="to-determine-if-one-object-inherits-from-another-objects-class-or-interface"></a>To determine if one object inherits from another object's class or interface
+### <a name="to-determine-if-one-object-inherits-from-another-objects-class-or-interface"></a>Определение того, наследуется ли один объект от класса или интерфейса другого объекта
 
-1. On the object you think might be of the base type, invoke the <xref:System.Object.GetType%2A> method.
+1. В объекте, который вы считаете, может быть базовым типом, вызовите метод <xref:System.Object.GetType%2A>.
 
-2. On the <xref:System.Type?displayProperty=nameWithType> object returned by <xref:System.Object.GetType%2A>, invoke the <xref:System.Type.IsInstanceOfType%2A> method.
+2. В объекте <xref:System.Type?displayProperty=nameWithType>, возвращенном <xref:System.Object.GetType%2A>, вызовите метод <xref:System.Type.IsInstanceOfType%2A>.
 
-3. In the argument list for <xref:System.Type.IsInstanceOfType%2A>, specify the object you think might be of the derived type.
+3. В списке аргументов для <xref:System.Type.IsInstanceOfType%2A>укажите объект, который может быть производным типом.
 
-    <xref:System.Type.IsInstanceOfType%2A> returns `True` if its argument type inherits from the <xref:System.Type?displayProperty=nameWithType> object type.
+    <xref:System.Type.IsInstanceOfType%2A> возвращает `True`, если его тип аргумента наследуется от типа объекта <xref:System.Type?displayProperty=nameWithType>.
 
 ## <a name="example"></a>Пример
- The following example determines whether one object represents a class derived from another object's class.
+ В следующем примере определяется, представляет ли один объект класс, производный от класса другого объекта.
 
 ```vb
 Public Class baseClass
@@ -46,7 +46,7 @@ Public Class testTheseClasses
 End Class
 ```
 
-Note the unexpected placement of the two object variables in the call to <xref:System.Type.IsInstanceOfType%2A>. The supposed base type is used to generate the <xref:System.Type?displayProperty=nameWithType> class, and the supposed derived type is passed as an argument to the <xref:System.Type.IsInstanceOfType%2A> method.
+Обратите внимание на неожиданное размещение двух переменных объекта в вызове метода <xref:System.Type.IsInstanceOfType%2A>. Предполагаемый базовый тип используется для создания класса <xref:System.Type?displayProperty=nameWithType>, а предполагаемый производный тип передается в качестве аргумента методу <xref:System.Type.IsInstanceOfType%2A>.
 
 ## <a name="see-also"></a>См. также
 

@@ -1,5 +1,5 @@
 ---
-title: Литерал инструкции обработки XML
+title: XML-литерал инструкции обработки
 ms.date: 07/20/2015
 f1_keywords:
 - vb.XmlLiteralProcessingInstruction
@@ -16,7 +16,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347037"
 ---
 # <a name="xml-processing-instruction-literal-visual-basic"></a>Литерал инструкции обработки XML (Visual Basic)
-A literal representing an <xref:System.Xml.Linq.XProcessingInstruction> object.  
+Литерал, представляющий объект <xref:System.Xml.Linq.XProcessingInstruction>.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -26,37 +26,37 @@ A literal representing an <xref:System.Xml.Linq.XProcessingInstruction> object.
   
 ## <a name="parts"></a>Части  
  `<?`  
- Обязательный. Denotes the start of the XML processing instruction literal.  
+ Обязательно. Обозначает начало литерала инструкции обработки XML.  
   
  `piName`  
- Обязательный. Name indicating which application the processing instruction targets. Cannot begin with "xml" or "XML".  
+ Обязательно. Имя, указывающее, какое приложение предназначено для инструкции по обработке. Не может начинаться с "XML" или "XML".  
   
  `piData`  
- Необязательный. String indicating how the application targeted by `piName` should process the XML document.  
+ Необязательный элемент. Строка, указывающая, как приложение, на которое нацелена `piName`, должно обрабатывать XML-документ.  
   
  `?>`  
- Обязательный. Denotes the end of the processing instruction.  
+ Обязательно. Обозначает конец инструкции по обработке.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Объект <xref:System.Xml.Linq.XProcessingInstruction>.  
   
-## <a name="remarks"></a>Заметки  
- XML processing instruction literals indicate how applications should process an XML document. When an application loads an XML document, the application can check the XML processing instructions to determine how to process the document. The application interprets the meaning of `piName` and `piData`.  
+## <a name="remarks"></a>Примечания  
+ Литералы инструкций обработки XML указывают, как приложения должны обрабатывать XML-документ. Когда приложение загружает XML-документ, приложение может проверить инструкции по обработке XML, чтобы определить способ обработки документа. Приложение интерпретирует значение `piName` и `piData`.  
   
- The XML document literal uses syntax that is similar to that of the XML processing instruction. For more information, see [XML Document Literal](../../../visual-basic/language-reference/xml-literals/xml-document-literal.md).  
-  
-> [!NOTE]
-> The `piName` element cannot begin with the strings "xml" or "XML", because the XML 1.0 specification reserves those identifiers.  
-  
- You can assign an XML processing instruction literal to a variable or include it in an XML document literal.  
+ В литерале XML-документа используется синтаксис, схожий с инструкцией по обработке XML. Дополнительные сведения см. в разделе [XML-литерал документа](../../../visual-basic/language-reference/xml-literals/xml-document-literal.md).  
   
 > [!NOTE]
-> An XML literal can span multiple lines without needing line continuation characters. This enables you to copy content from an XML document and paste it directly into a Visual Basic program.  
+> Элемент `piName` не может начинаться со строк "XML" или "XML", поскольку спецификация XML 1,0 резервирует эти идентификаторы.  
   
- The Visual Basic compiler converts the XML processing instruction literal to a call to the <xref:System.Xml.Linq.XProcessingInstruction.%23ctor%2A> constructor.  
+ Литерал инструкции обработки XML можно назначить переменной или включить в литерал XML-документа.  
+  
+> [!NOTE]
+> XML-литерал может охватывать несколько строк без символов продолжения строки. Это позволяет копировать содержимое из XML-документа и вставлять его непосредственно в Visual Basic программу.  
+  
+ Компилятор Visual Basic преобразует литерал инструкции обработки XML в вызов конструктора <xref:System.Xml.Linq.XProcessingInstruction.%23ctor%2A>.  
   
 ## <a name="example"></a>Пример  
- The following example creates a processing instruction identifying a style-sheet for an XML document.  
+ В следующем примере создается инструкция по обработке, определяющая таблицу стилей для XML-документа.  
   
  [!code-vb[VbXMLSamples#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#28)]  
   

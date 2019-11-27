@@ -41,7 +41,7 @@ ms.locfileid: "74283718"
   
 |Имя VisualState|Имя VisualStateGroup|Описание|  
 |-|-|-|  
-|Норм.|CommonStates|Состояние по умолчанию.|  
+|Нормальный|CommonStates|Состояние по умолчанию.|  
 |Отключено.|CommonStates|Элемент управления отключен.|  
 |MouseOver|CommonStates|Указатель мыши находится над элементом управления <xref:System.Windows.Controls.ComboBox>.|  
 |Focused|FocusStates|Элемент управления имеет фокус.|  

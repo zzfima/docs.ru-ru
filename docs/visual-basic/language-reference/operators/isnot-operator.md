@@ -15,7 +15,7 @@ ms.locfileid: "74336063"
 ---
 # <a name="isnot-operator-visual-basic"></a>Оператор IsNot (Visual Basic)
 
-Compares two object reference variables.
+Сравнивает две переменные ссылки на объект.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -26,19 +26,19 @@ result = object1 IsNot object2
 ## <a name="parts"></a>Части
  `result` Обязательный. Значение `Boolean`.
 
- `object1` Обязательный. Any `Object` variable or expression.
+ `object1` Обязательный. Любая `Object` переменная или выражение.
 
- `object2` Обязательный. Any `Object` variable or expression.
+ `object2` Обязательный. Любая `Object` переменная или выражение.
 
-## <a name="remarks"></a>Заметки
- The `IsNot` operator determines if two object references refer to different objects. However, it does not perform value comparisons. If `object1` and `object2` both refer to the exact same object instance, `result` is `False`; if they do not, `result` is `True`.
+## <a name="remarks"></a>Примечания
+ Оператор `IsNot` определяет, ссылаются ли две объектные ссылки на разные объекты. Однако сравнение значений не выполняется. Если `object1` и `object2` оба ссылаются на один и тот же экземпляр объекта, `result` `False`. в противном случае `result` `True`.
 
- `IsNot` is the opposite of the `Is` operator. The advantage of `IsNot` is that you can avoid awkward syntax with `Not` and `Is`, which can be difficult to read.
+ `IsNot` является противоположностью оператора `Is`. Преимущество `IsNot` состоит в том, что можно избежать неудобного синтаксиса с `Not` и `Is`, который трудно читать.
 
- You can use the `Is` and `IsNot` operators to test both early-bound and late-bound objects.
+ Операторы `Is` и `IsNot` можно использовать для тестирования объектов с ранней и поздней привязкой.
 
 ## <a name="example"></a>Пример
- The following code example uses both the `Is` operator and the `IsNot` operator to accomplish the same comparison.
+ В следующем примере кода используются как оператор `Is`, так и оператор `IsNot` для выполнения одинакового сравнения.
 
  [!code-vb[VbVbalrOperators#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#29)]
 

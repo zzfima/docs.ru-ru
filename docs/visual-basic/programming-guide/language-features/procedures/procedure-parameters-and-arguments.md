@@ -26,37 +26,37 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352582"
 ---
 # <a name="procedure-parameters-and-arguments-visual-basic"></a>Параметры и аргументы процедуры (Visual Basic)
-In most cases, a procedure needs some information about the circumstances in which it has been called. A procedure that performs repeated or shared tasks uses different information for each call. This information consists of variables, constants, and expressions that you pass to the procedure when you call it.  
+В большинстве случаев для процедуры требуются некоторые сведения о обстоятельствах, в которых она была вызвана. Процедура, выполняющая повторяющиеся или общие задачи, использует разные сведения для каждого вызова. Эти сведения состоят из переменных, констант и выражений, которые передаются в процедуру при ее вызове.  
   
- A *parameter* represents a value that the procedure expects you to supply when you call it. The procedure's declaration defines its parameters.  
+ *Параметр* представляет значение, которое процедура предполагает указать при ее вызове. В объявлении процедуры определяются ее параметры.  
   
- You can define a procedure with no parameters, one parameter, or more than one. The part of the procedure definition that specifies the parameters is called the *parameter list*.  
+ Можно определить процедуру без параметров, один параметр или несколько. Часть определения процедуры, указывающая параметры, называется *списком параметров*.  
   
- An *argument* represents the value you supply to a procedure parameter when you call the procedure. The calling code supplies the arguments when it calls the procedure. The part of the procedure call that specifies the arguments is called the *argument list*.  
+ *Аргумент* представляет значение, указываемое в параметре процедуры при вызове процедуры. Вызывающий код предоставляет аргументы при вызове процедуры. Часть вызова процедуры, указывающая аргументы, называется *списком аргументов*.  
   
- The following illustration shows code calling the procedure `safeSquareRoot` from two different places. The first call passes the value of the variable `x` (4.0) to the parameter `number`, and the return value in `root` (2.0) is assigned to the variable `y`. The second call passes the literal value 9.0 to `number`, and assigns the return value (3.0) to variable `z`.  
+ На следующем рисунке показан код, вызывающий процедуру, `safeSquareRoot` из двух различных мест. Первый вызов передает значение переменной `x` (4,0) в параметр `number`, а возвращаемое значение в `root` (2,0) присваивается переменной `y`. Второй вызов передает литеральное значение 9,0 в `number`и присваивает возвращаемое значение (3,0) переменной `z`.  
   
- ![Diagram that shows passing an argument to a parameter](./media/procedure-parameters-and-arguments/pass-argument-parameter.gif)  
+ ![Схема, показывающая передачу аргумента в параметр](./media/procedure-parameters-and-arguments/pass-argument-parameter.gif)  
   
- For more information, see [Differences Between Parameters and Arguments](./differences-between-parameters-and-arguments.md).  
+ Дополнительные сведения см. в разделе [различия между параметрами и аргументами](./differences-between-parameters-and-arguments.md).  
   
-## <a name="parameter-data-type"></a>Parameter Data Type  
- You define a data type for a parameter by using the `As` clause in its declaration. For example, the following function accepts a string and an integer.  
+## <a name="parameter-data-type"></a>Тип данных параметра  
+ Тип данных для параметра определяется с помощью предложения `As` в его объявлении. Например, следующая функция принимает строку и целое число.  
   
  [!code-vb[VbVbcnProcedures#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#32)]  
   
- If the type checking switch ([Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) is `Off,` the `As` clause is optional, except that if any one parameter uses it, all parameters must use it. If type checking is `On`, the `As` clause is required for all procedure parameters.  
+ Если параметр проверки типов ([оператор Option строго](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) является `Off,` предложение `As` является необязательным, за исключением того, что если какой-либо параметр использует его, все параметры должны использовать его. Если проверка типа `On`, то для всех параметров процедуры требуется предложение `As`.  
   
- If the calling code expects to supply an argument with a data type different from that of its corresponding parameter, such as `Byte` to a `String` parameter, it must do one of the following:  
+ Если вызывающий код должен предоставить аргумент с типом данных, отличным от того, который соответствует его параметру, например `Byte` параметру `String`, необходимо выполнить одно из следующих действий.  
   
-- Supply only arguments with data types that widen to the parameter data type;  
+- Указывайте только аргументы с типами данных, которые расширяются до типа данных параметра;  
   
-- Set `Option Strict Off` to allow implicit narrowing conversions; or  
+- Задайте `Option Strict Off`, чтобы разрешить неявные сужающие преобразования; ни  
   
-- Use a conversion keyword to explicitly convert the data type.  
+- Используйте ключевое слово преобразования для явного преобразования типа данных.  
   
 ### <a name="type-parameters"></a>Параметры типа  
- A *generic procedure* also defines one or more *type parameters* in addition to its normal parameters. A generic procedure allows the calling code to pass different data types each time it calls the procedure, so it can tailor the data types to the requirements of each individual call. См. раздел [Generic Procedures in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md).  
+ *Универсальная процедура* также определяет один или несколько *параметров типа* в дополнение к обычным параметрам. Универсальная процедура позволяет вызывающему коду передавать различные типы данных при каждом вызове процедуры, чтобы можно было адаптировать типы данных к требованиям каждого отдельного вызова. См. раздел [Generic Procedures in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md).  
   
 ## <a name="see-also"></a>См. также
 
@@ -69,4 +69,4 @@ In most cases, a procedure needs some information about the circumstances in whi
 - [Практическое руководство. Передача аргументов в процедуру](./how-to-pass-arguments-to-a-procedure.md)
 - [Передача аргументов по значению и по ссылке](./passing-arguments-by-value-and-by-reference.md)
 - [Перегрузка процедур](./procedure-overloading.md)
-- [Type Conversions in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [Преобразования типов в Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)

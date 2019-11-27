@@ -12,17 +12,17 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74333006"
 ---
 # <a name="how-to-create-xml-literals-visual-basic"></a>Практическое руководство. Создание XML-литералов (Visual Basic)
-You can create an XML document, fragment, or element directly in code by using an XML literal. The examples in this topic demonstrate how to create an XML element that has three child elements, and how to create an XML document.  
+XML-документ, фрагмент или элемент можно создать непосредственно в коде с помощью XML-литерала. В примерах этого раздела показано, как создать XML-элемент с тремя дочерними элементами и как создать XML-документ.  
   
- You can also use the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] APIs to create [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] objects. Для получения дополнительной информации см. <xref:System.Xml.Linq.XElement>.  
+ Для создания [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] объектов также можно использовать [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] интерфейсы API. Дополнительные сведения см. в разделе <xref:System.Xml.Linq.XElement>.  
   
-### <a name="to-create-an-xml-element"></a>To create an XML element  
+### <a name="to-create-an-xml-element"></a>Создание XML-элемента  
   
-- Create the XML inline by using the XML literal syntax, which is the same as the actual XML syntax.  
+- Создайте встроенный XML-файл с помощью синтаксиса XML-литерала, который совпадает с фактическим синтаксисом XML.  
   
      [!code-vb[VbXMLSamples#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples2.vb#5)]  
   
-     Выполните код. The output of this code is:  
+     Выполните код. Выходные данные этого кода:  
   
      `<contact>`  
   
@@ -34,13 +34,13 @@ You can create an XML document, fragment, or element directly in code by using a
   
      `</contact>`  
   
-### <a name="to-create-an-xml-document"></a>To create an XML document  
+### <a name="to-create-an-xml-document"></a>Создание XML-документа  
   
-- Create the XML document inline. The following code creates an XML document that has literal syntax, an XML declaration, a processing instruction, a comment, and an element that contains another element.  
+- Создайте встроенный XML-документ. Следующий код создает XML-документ с литеральным синтаксисом, объявлением XML, инструкцией по обработке, комментарием и элементом, содержащим другой элемент.  
   
      [!code-vb[VbXMLSamples#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#30)]  
   
-     Выполните код. The output of this code is:  
+     Выполните код. Выходные данные этого кода:  
   
      `<?xml-stylesheet type="text/xsl" href="show_book.xsl"?>`  
   

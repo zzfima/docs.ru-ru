@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74439245"
 ---
 # <a name="icorprofilerinfogetclassidinfo-method"></a>Метод ICorProfilerInfo::GetClassIDInfo
-Gets the parent module and the metadata token for the specified class.  
+Возвращает родительский модуль и маркер метаданных для указанного класса.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -36,18 +36,18 @@ HRESULT GetClassIDInfo(
   
 ## <a name="parameters"></a>Параметры  
  `classId`  
- [in] The ID of the class for which to get the information.  
+ окне Идентификатор класса, для которого необходимо получить сведения.  
   
  `pModuleId`  
- [out] A pointer to the ID of the parent module of the class.  
+ заполняет Указатель на идентификатор родительского модуля класса.  
   
  `pTypeDefToken`  
- [out] A pointer to the metadata token for the class.  
+ заполняет Указатель на маркер метаданных для класса.  
   
-## <a name="remarks"></a>Заметки  
- The profiler code can call [ICorProfilerInfo::GetModuleMetaData](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getmodulemetadata-method.md) to obtain a metadata interface for a given module. Токен метаданных, возвращенный в расположение, на которое ссылается `pTypeDefToken`, можно впоследствии использовать для доступа к метаданным класса.  
+## <a name="remarks"></a>Примечания  
+ Чтобы получить интерфейс метаданных для заданного модуля, код профилировщика может вызвать метод [ICorProfilerInfo:: жетмодулеметадата](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getmodulemetadata-method.md) . Токен метаданных, возвращенный в расположение, на которое ссылается `pTypeDefToken`, можно впоследствии использовать для доступа к метаданным класса.  
   
- To get more information for generic types, use [ICorProfilerInfo2::GetClassIDInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getclassidinfo2-method.md).  
+ Чтобы получить дополнительные сведения для универсальных типов, используйте [ICorProfilerInfo2:: GetClassIDInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getclassidinfo2-method.md).  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  

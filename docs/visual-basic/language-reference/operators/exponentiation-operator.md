@@ -23,7 +23,7 @@ ms.locfileid: "74331111"
 ---
 # <a name="-operator-visual-basic"></a>Оператор ^ (Visual Basic)
 
-Raises a number to the power of another number.
+Порождает число в степень другого числа.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -34,55 +34,55 @@ number ^ exponent
 ## <a name="parts"></a>Части
 
 `number`\
-Обязательный. Произвольное числовое выражение.
+Обязательно. Произвольное числовое выражение.
 
 `exponent`\
-Обязательный. Произвольное числовое выражение.
+Обязательно. Произвольное числовое выражение.
 
 ## <a name="result"></a>Результат
 
-The result is `number` raised to the power of `exponent`, always as a `Double` value.
+Результат `number` возводится в степень `exponent`, всегда как значение `Double`.
 
 ## <a name="supported-types"></a>Поддерживаемые типы
 
-`Double` Operands of any different type are converted to `Double`.
+`Double`. Операнды любого другого типа преобразуются в `Double`.
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Примечания
 
-Visual Basic always performs exponentiation in the [Double Data Type](../../../visual-basic/language-reference/data-types/double-data-type.md).
+Visual Basic всегда выполняет возведение в степень в [типе данных Double](../../../visual-basic/language-reference/data-types/double-data-type.md).
 
-The value of `exponent` can be fractional, negative, or both.
+Значение `exponent` может быть дробным, отрицательным или обоими.
 
-When more than one exponentiation is performed in a single expression, the `^` operator is evaluated as it is encountered from left to right.
+Если в одном выражении выполняется несколько возможного возведения в степень, то оператор `^` вычисляется так, как он встретился слева направо.
 
 > [!NOTE]
-> The `^` operator can be *overloaded*, which means that a class or structure can redefine its behavior when an operand has the type of that class or structure. If your code uses this operator on such a class or structure, be sure you understand its redefined behavior. Для получения дополнительной информации см. [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).
+> Оператор `^` может быть *перегружен*, что означает, что класс или структура может переопределить свое поведение, если операнд имеет тип этого класса или структуры. Если код использует этот оператор для такого класса или структуры, убедитесь, что вы понимаете его переопределенное поведение. Для получения дополнительной информации см. [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).
 
 ## <a name="example"></a>Пример
 
-The following example uses the `^` operator to raise a number to the power of an exponent. The result is the first operand raised to the power of the second.
+В следующем примере оператор `^` используется для возведения числа в степень экспоненты. Результатом является первый операнд, возведенный в степень второго.
 
 [!code-vb[VbVbalrOperators#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#20)]
 
-The preceding example produces the following results:
+В предыдущем примере получены следующие результаты.
 
-`exp1` is set to 4 (2 squared).
+для `exp1` задано значение 4 (2 в квадрате).
 
-`exp2` is set to 19683 (3 cubed, then that value cubed).
+для `exp2` задано значение 19683 (3 куб, затем значение Cube).
 
-`exp3` is set to -125 (-5 cubed).
+для `exp3` задано значение-125 (-5 кубd).
 
-`exp4` is set to 625 (-5 to the fourth power).
+для параметра `exp4` задано значение 625 (от-5 до четвертой мощности).
 
-`exp5` is set to 2 (cube root of 8).
+для `exp5` задано значение 2 (кубический корень из 8).
 
-`exp6` is set to 0.5 (1.0 divided by the cube root of 8).
+для `exp6` установлено значение 0,5 (1,0, деленное на кубический корень из 8).
 
-Note the importance of the parentheses in the expressions in the preceding example. Because of *operator precedence*, Visual Basic normally performs the `^` operator before any others, even the unary `–` operator. If `exp4` and `exp6` had been calculated without parentheses, they would have produced the following results:
+Обратите внимание на важность круглых скобок в выражениях из предыдущего примера. Из-за *приоритета операторов*Visual Basic обычно выполняет оператор `^` перед любыми другими, даже унарным оператором `–`. Если `exp4` и `exp6` были вычислены без скобок, они могли бы получить следующие результаты:
 
-`exp4 = -5 ^ 4` would be calculated as –(5 to the fourth power), which would result in -625.
+`exp4 = -5 ^ 4` будет вычисляться как – (от 5 до четвертой мощности), что приведет к 625.
 
-`exp6 = 8 ^ -1.0 / 3.0` would be calculated as (8 to the –1 power, or 0.125) divided by 3.0, which would result in 0.041666666666666666666666666666667.
+`exp6 = 8 ^ -1.0 / 3.0` вычисляется как (от 8 до – 1 или 0,125), разделенного на 3,0, что приведет к 0.041666666666666666666666666666667.
 
 ## <a name="see-also"></a>См. также
 
@@ -90,4 +90,4 @@ Note the importance of the parentheses in the expressions in the preceding examp
 - [Арифметические операторы](../../../visual-basic/language-reference/operators/arithmetic-operators.md)
 - [Порядок применения операторов в Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)
 - [Список операторов, сгруппированных по функциональному назначению](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
-- [Arithmetic Operators in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+- [Арифметические операторы в Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)

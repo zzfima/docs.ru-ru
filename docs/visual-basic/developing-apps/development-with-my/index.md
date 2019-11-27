@@ -24,9 +24,9 @@ Visual Basic предоставляет новые функции для быс�
   
  В следующей таблице перечислены объекты `My` верхнего уровня и их связь друг с другом.  
   
- ![Diagram shows the object model for My.](./media/index/my-object-model-relationships.gif)  
+ ![На схеме показана объектная модель для My.](./media/index/my-object-model-relationships.gif)  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
 
  [Выполнение задач с помощью My.Application, My.Computer и My.User](../../../visual-basic/developing-apps/development-with-my/performing-tasks-with-my-application-my-computer-and-my-user.md)  
  Описывает трех центральных объекта `My`, (`My.Application`, `My.Computer` и `My.User`), которые обеспечивают доступ к информации и функциональным возможностям  
@@ -38,7 +38,7 @@ Visual Basic предоставляет новые функции для быс�
  Описывает объекты `My.Resources` и `My.Settings`, которые предоставляют доступ к ресурсам и параметрам приложения.  
   
  [Обзор модели приложения в Visual Basic](../../../visual-basic/developing-apps/development-with-my/overview-of-the-visual-basic-application-model.md)  
- Describes the Visual Basic Application Startup/Shutdown model.  
+ Описывает модель запуска или завершения работы приложения Visual Basic.  
   
  [Зависимость My от типа проекта](../../../visual-basic/developing-apps/development-with-my/how-my-depends-on-project-type.md)  
  Предоставляет подробные сведения о том, какие функции `My` доступны в разных типах проектов.  

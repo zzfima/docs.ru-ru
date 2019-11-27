@@ -9,7 +9,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348357"
 ---
-# <a name="how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style-visual-basic"></a>How to: Use Annotations to Transform LINQ to XML Trees in an XSLT Style (Visual Basic)
+# <a name="how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style-visual-basic"></a>Как использовать аннотации для преобразования деревьев LINQ to XML в стиль XSLT (Visual Basic)
 
 Заметки можно использовать для упрощения преобразований XML-дерева.
 
@@ -19,7 +19,7 @@ ms.locfileid: "74348357"
 <text>A phrase with <b>bold</b> and <i>italic</i> text.</text>
 ```
 
-У любого заданного текстового узла может быть любое количество дочерних элементов `<b>` и `<i>`. This approach extends to a number of other situations: such as, pages that can contain a variety of child elements, such as regular paragraphs, bulleted paragraphs, and bitmaps. Ячейки таблицы могут содержать текст, раскрывающиеся списки или битовые карты. Одной из основных отличительных особенностей кода XML, предназначенного для представления документов, является то, что неизвестно, какие дочерние элементы будет иметь тот или иной конкретный элемент.
+У любого заданного текстового узла может быть любое количество дочерних элементов `<b>` и `<i>`. Этот подход распространяется на ряд других ситуаций, таких как страницы, которые могут содержать различные дочерние элементы, такие как обычные абзацы, маркированные абзацы и точечные рисунки. Ячейки таблицы могут содержать текст, раскрывающиеся списки или битовые карты. Одной из основных отличительных особенностей кода XML, предназначенного для представления документов, является то, что неизвестно, какие дочерние элементы будет иметь тот или иной конкретный элемент.
 
 Если требуется преобразовать элементы в дереве, о дочерних элементах которого знать не обязательно, то данный подход, использующий заметки, становится эффективным.
 
@@ -43,7 +43,7 @@ ms.locfileid: "74348357"
 
 ## <a name="transforming-a-tree"></a>Преобразование дерева
 
-This first example renames all `Paragraph` nodes to `para`:
+В первом примере все узлы `Paragraph` переименованы в `para`:
 
 ```vb
 Imports <xmlns:xf="http://www.microsoft.com/LinqToXmlTransform/2007">
@@ -83,7 +83,7 @@ End Module
 </Root>
 ```
 
-## <a name="a-more-complicated-transform"></a>A more complicated transform
+## <a name="a-more-complicated-transform"></a>Более сложное преобразование
 
 В следующем примере выполняется запрос к дереву и вычисляются среднее арифметическое и сумма элементов `Data`, а затем происходит их добавление в дерево в виде новых элементов.
 
@@ -158,29 +158,29 @@ After Transform
 </Root>
 ```
 
-## <a name="effecting-the-transform"></a>Effecting the transform
+## <a name="effecting-the-transform"></a>Действие преобразования
 
 Небольшая функция `XForm` создает новое преобразованное дерево из исходного дерева, обозначенного заметками.
 
 Псевдокод для функции достаточно прост:
 
-> The function takes an XElement as an argument and returns an XElement.
+> Функция принимает элемент XElement в качестве аргумента и возвращает XElement.
 >
-> If an element has an XElement annotation, then return a new XElement:
+> Если у элемента есть Аннотация XElement, то возвращается новый элемент XElement:
 >
-> - The name of the new XElement is the annotation element's name.
-> - All attributes are copied from the annotation to the new node.
-> - All child nodes are copied from the annotation, with the exception that the special node xf:ApplyTransforms is recognized, and the source element's child nodes are iterated. If the source child node is not an XElement, it is copied to the new tree. If the source child is an XElement, then it is transformed by calling this function recursively.
+> - Имя нового объекта XElement является именем элемента заметки.
+> - Все атрибуты копируются из заметки в новый узел.
+> - Все дочерние узлы копируются из заметки, за исключением того, что определен специальный узел XF: Апплитрансформс, и выполняется итерация дочерних узлов исходного элемента. Если исходный дочерний узел не является XElement, он копируется в новое дерево. Если исходный дочерний элемент является XElement, то он преобразуется с помощью рекурсивного вызова этой функции.
 >
-> If an element is not annotated:
+> Если элемент не снабжен заметками:
 >
-> - Return a new XElement
->   - The name of the new XElement is the source element's name.
->   - All attributes are copied from the source element to the destination's element.
->   - All child nodes are copied from the source element.
->   - If the source child node is not an XElement, it is copied to the new tree. If the source child is an XElement, then it is transformed by calling this function recursively.
+> - Возврат нового элемента XElement
+>   - Имя нового объекта XElement — это имя исходного элемента.
+>   - Все атрибуты копируются из исходного элемента в элемент назначения.
+>   - Все дочерние узлы копируются из исходного элемента.
+>   - Если исходный дочерний узел не является XElement, он копируется в новое дерево. Если исходный дочерний элемент является XElement, то он преобразуется с помощью рекурсивного вызова этой функции.
 
-The following code is the implementation of this function:
+Следующий код является реализацией этой функции:
 
 ```vb
 ' Build a transformed XML tree per the annotations.
@@ -376,4 +376,4 @@ After Transform
 
 ## <a name="see-also"></a>См. также
 
-- [Advanced LINQ to XML Programming (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+- [Расширенное программирование LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

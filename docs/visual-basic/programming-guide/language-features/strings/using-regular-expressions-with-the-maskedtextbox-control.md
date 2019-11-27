@@ -13,47 +13,47 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346266"
 ---
 # <a name="using-regular-expressions-with-the-maskedtextbox-control-in-visual-basic"></a>Использование регулярных выражений в элементе управления MaskedTextBox в Visual Basic
-This example demonstrates how to convert simple regular expressions to work with the <xref:System.Windows.Forms.MaskedTextBox> control.  
+В этом примере показано, как преобразовать простые регулярные выражения для работы с элементом управления <xref:System.Windows.Forms.MaskedTextBox>.  
   
-## <a name="description-of-the-masking-language"></a>Description of the Masking Language  
- The standard <xref:System.Windows.Forms.MaskedTextBox> masking language is based on the one used by the `Masked Edit` control in Visual Basic 6.0 and should be familiar to users migrating from that platform.  
+## <a name="description-of-the-masking-language"></a>Описание языка маскирования  
+ Стандартный язык маскирования <xref:System.Windows.Forms.MaskedTextBox> основан на том, который используется элементом управления `Masked Edit` в Visual Basic 6,0 и должен быть знаком пользователям, переносящим эту платформу.  
   
- The <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> property of the <xref:System.Windows.Forms.MaskedTextBox> control specifies what input mask to use. The mask must be a string composed of one or more of the masking elements from the following table.  
+ Свойство <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> элемента управления <xref:System.Windows.Forms.MaskedTextBox> указывает, какую маску ввода использовать. Маска должна быть строкой, состоящей из одного или нескольких элементов маскирования из следующей таблицы.  
   
-|Masking element|Описание|Regular expression element|  
+|Маскирование элемента|Описание|Элемент регулярного выражения|  
 |---------------------|-----------------|--------------------------------|  
-|0|Any single digit between 0 and 9. Entry required.|\\d|  
-|9|Digit or space. Entry optional.|[ \d]?|  
-|#|Digit or space. Entry optional. If this position is left blank in the mask, it will be rendered as a space. Plus (+) and minus (-) signs are allowed.|[ \d+-]?|  
-|L|ASCII letter. Entry required.|[a-zA-Z]|  
-|?|ASCII letter. Entry optional.|[a-zA-Z]?|  
-|&|Символ. Entry required.|[\p{Ll}\p{Lu}\p{Lt}\p{Lm}\p{Lo}]|  
-|В|Символ. Entry optional.|[\p{Ll}\p{Lu}\p{Lt}\p{Lm}\p{Lo}]?|  
-|А|Alphanumeric. Entry optional.|\W|  
-|.|Culture-appropriate decimal placeholder.|Недоступно.|  
-|, символы|Culture-appropriate thousands placeholder.|Недоступно.|  
-|:|Culture-appropriate time separator.|Недоступно.|  
-|/|Culture-appropriate date separator.|Недоступно.|  
-|$|Culture-appropriate currency symbol.|Недоступно.|  
-|\<|Converts all characters that follow to lowercase.|Недоступно.|  
-|>|Converts all characters that follow to uppercase.|Недоступно.|  
-|&#124;|Undoes a previous shift up or shift down.|Недоступно.|  
-|&#92;|Escapes a mask character, turning it into a literal. "\\\\" is the escape sequence for a backslash.|&#92;|  
-|All other characters.|Literals. All non-mask elements will appear as themselves within <xref:System.Windows.Forms.MaskedTextBox>.|All other characters.|  
+|0|Любая отдельная цифра от 0 до 9. Требуется запись.|\\d|  
+|9|Цифра или пробел. Запись необязательна.|[\d]?|  
+|#|Цифра или пробел. Запись необязательна. Если эта ячейка в маске остается пустой, она будет отображена в виде пробела. Разрешены знаки плюс (+) и минус (-).|[\d +-]?|  
+|L|Буква ASCII. Требуется запись.|[a-zA-Z]|  
+|?|Буква ASCII. Запись необязательна.|[a-zA-Z]|  
+|&|Символ. Требуется запись.|[\П{лл}\п{Лу}\п{Лт}\п{лм}\п{Ло}]|  
+|C|Символ. Запись необязательна.|[\П{лл}\п{Лу}\п{Лт}\п{лм}\п{Ло}]|  
+|А|Знаков. Запись необязательна.|\W|  
+|.|Соответствующий языку и региональным параметрам Десятичный заполнитель.|Недоступно.|  
+|, символы|Язык и региональные параметры — соответствующий заполнитель тысяч.|Недоступно.|  
+|:|Разделитель времени, соответствующий языку и региональным параметрам.|Недоступно.|  
+|/|Разделитель дат, соответствующий языку и региональным параметрам.|Недоступно.|  
+|$|Символ валюты, соответствующий языку и региональным параметрам.|Недоступно.|  
+|\<|Преобразует все символы, указанные после, в нижний регистр.|Недоступно.|  
+|>|Преобразует все символы, следующие за прописной буквой.|Недоступно.|  
+|&#124;|Отменяет предыдущую смену вверх или сдвиг вниз.|Недоступно.|  
+|&#92;|Обходит символ маски, преобразуя его в литерал. "\\\\" — escape-последовательность для обратной косой черты.|&#92;|  
+|Все остальные символы.|Литералы. Все элементы, не являющиеся маской, отображаются в <xref:System.Windows.Forms.MaskedTextBox>.|Все остальные символы.|  
   
- The decimal (.), thousandths (,), time (:), date (/), and currency ($) symbols default to displaying those symbols as defined by the application's culture. You can force them to display symbols for another culture by using the <xref:System.Windows.Forms.MaskedTextBox.FormatProvider%2A> property.  
+ Символы Decimal (.), доли (,), Time (:), Date (/) и Currency ($) по умолчанию отображают эти символы в соответствии с языком и региональными параметрами приложения. Можно принудительно отображать символы для другого языка и региональных параметров с помощью свойства <xref:System.Windows.Forms.MaskedTextBox.FormatProvider%2A>.  
   
-## <a name="regular-expressions-and-masks"></a>Regular Expressions and Masks  
- Although you can use regular expressions and masks to validate user input, they are not completely equivalent. Regular expressions can express more complex patterns than masks, but masks can express the same information more succinctly and in a culturally relevant format.  
+## <a name="regular-expressions-and-masks"></a>Регулярные выражения и маски  
+ Хотя для проверки вводимых пользователем данных можно использовать регулярные выражения и маски, они не полностью эквивалентны. Регулярные выражения могут выражать более сложные закономерности, чем маски, но маски могут выражать одни и те же сведения более кратко и в формате, соответствующем культуре.  
   
- The following table compares four regular expressions and the equivalent mask for each.  
+ В следующей таблице сравниваются четыре регулярных выражения и эквивалентная маска для каждого из них.  
   
 |Регулярное выражение|Маска|Примечания|  
 |------------------------|----------|-----------|  
-|`\d{2}/\d{2}/\d{4}`|`00/00/0000`|The `/` character in the mask is a logical date separator, and it will appear to the user as the date separator appropriate to the application's current culture.|  
-|`\d{2}-[A-Z][a-z]{2}-\d{4}`|`00->L<LL-0000`|A date (day, month abbreviation, and year) in United States format in which the three-letter month abbreviation is displayed with an initial uppercase letter followed by two lowercase letters.|  
-|`(\(\d{3}\)-)?\d{3}-d{4}`|`(999)-000-0000`|United States phone number, area code optional. If the user does not wish to enter the optional characters, she can either enter spaces or place the mouse pointer directly at the position in the mask represented by the first 0.|  
-|`$\d{6}.00`|`$999,999.00`|A currency value in the range of 0 to 999999. The currency, thousandth, and decimal characters will be replaced at run-time with their culture-specific equivalents.|  
+|`\d{2}/\d{2}/\d{4}`|`00/00/0000`|`/` символ в маске является логическим разделителем дат, и он будет отображаться для пользователя в качестве разделителя даты, соответствующего текущему языку и региональным параметрам приложения.|  
+|`\d{2}-[A-Z][a-z]{2}-\d{4}`|`00->L<LL-0000`|Дата (день, сокращение месяца и год) в США формате, в котором аббревиатура из трех букв отображается в виде первой прописной буквы, за которой следуют две строчные буквы.|  
+|`(\(\d{3}\)-)?\d{3}-d{4}`|`(999)-000-0000`|США номер телефона, код города (необязательно). Если пользователь не хочет вводить необязательные символы, он может ввести пробелы или поместить указатель мыши непосредственно в позицию маски, представленной первым 0.|  
+|`$\d{6}.00`|`$999,999.00`|Значение валюты в диапазоне от 0 до 999999. Во время выполнения символы валюты, доли тысячы и десятичные знаки будут заменены на их эквиваленты, зависящие от языка и региональных параметров.|  
   
 ## <a name="see-also"></a>См. также
 

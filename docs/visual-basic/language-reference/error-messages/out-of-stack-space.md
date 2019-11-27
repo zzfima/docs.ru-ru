@@ -12,21 +12,21 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349181"
 ---
 # <a name="out-of-stack-space-visual-basic"></a>Отсутствует место в стеке (Visual Basic)
-The stack is a working area of memory that grows and shrinks dynamically with the demands of your executing program. Its limits have been exceeded.  
+Стек — это Рабочая область памяти, которая динамически растет и сжимается с учетом требований к выполненной программе. Превышены его ограничения.  
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  
   
-1. Check that procedures are not nested too deeply.  
+1. Убедитесь, что процедуры не вложены слишком глубоко.  
   
-2. Make sure recursive procedures terminate properly.  
+2. Убедитесь, что рекурсивные процедуры завершаются должным образом.  
   
-3. If local variables require more local variable space than is available, try declaring some variables at the module level. You can also declare all variables in the procedure static by preceding the `Property`, `Sub`, or `Function` keyword with `Static`. Or you can use the `Static` statement to declare individual static variables within procedures.  
+3. Если локальным переменным требуется больше пространства локальных переменных, чем доступно, попробуйте объявить некоторые переменные на уровне модуля. Кроме того, можно объявить все переменные в процедуре статически, выполнив ключевое слово `Property`, `Sub`или `Function` с `Static`. Или можно использовать инструкцию `Static` для объявления отдельных статических переменных в процедурах.  
   
-4. Redefine some of your fixed-length strings as variable-length strings, as fixed-length strings use more stack space than variable-length strings. You can also define the string at module level where it requires no stack space.  
+4. Переопределите некоторые строки фиксированной длины как строки переменной длины, так как строки фиксированной длины используют больше пространства стека, чем строки переменной длины. Можно также определить строку на уровне модуля, где не требуется пространство стека.  
   
-5. Check the number of nested `DoEvents` function calls, by using the `Calls` dialog box to view which procedures are active on the stack.  
+5. Проверьте число вложенных вызовов функций `DoEvents`, используя диалоговое окно `Calls` для просмотра активных процедур в стеке.  
   
-6. Make sure you did not cause an "event cascade" by triggering an event that calls an event procedure already on the stack. An event cascade is similar to an unterminated recursive procedure call, but it is less obvious, since the call is made by Visual Basic rather than an explicit call in the code. Use the `Calls` dialog box to view which procedures are active on the stack.  
+6. Убедитесь, что вы не вызвали "каскадное событие", активируя событие, которое вызывает процедуру события, уже называемую в стеке. Каскад событий аналогичен вызову незавершенной рекурсивной процедуры, но он менее очевидн, так как вызов выполняется Visual Basic а не явным вызовом в коде. Используйте диалоговое окно `Calls` для просмотра активных процедур в стеке.  
   
 ## <a name="see-also"></a>См. также
 

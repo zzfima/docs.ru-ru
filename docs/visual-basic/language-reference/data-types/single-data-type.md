@@ -29,25 +29,25 @@ ms.locfileid: "74343920"
 ---
 # <a name="single-data-type-visual-basic"></a>Тип данных Single (Visual Basic)
 
-Holds signed IEEE 32-bit (4-byte) single-precision floating-point numbers ranging in value from -3.4028235E+38 through -1.401298E-45 for negative values and from 1.401298E-45 through 3.4028235E+38 for positive values. Single-precision numbers store an approximation of a real number.  
+Содержит подписанные 32-разрядные (4-байтовые) числа с плавающей запятой с одиночной точностью в диапазоне от-4028235E E + 38 до-1.401298 E-45 для отрицательных значений и от 1.401298 E-45 до 4028235E E + 38 для положительных значений. Числа с одиночной точностью хранят приближение вещественного числа.  
   
-## <a name="remarks"></a>Заметки  
+## <a name="remarks"></a>Примечания  
 
- Use the `Single` data type to contain floating-point values that do not require the full data width of `Double`. In some cases the common language runtime might be able to pack your `Single` variables closely together and save memory consumption.  
+ Используйте `Single` тип данных, чтобы содержать значения с плавающей запятой, не требующие полной ширины данных `Double`. В некоторых случаях среда CLR может объединять переменные `Single` и экономить потребление памяти.  
   
  Значение по умолчанию для типа `Single` — 0.  
   
 ## <a name="programming-tips"></a>Советы по программированию  
   
-- **Precision.** When you work with floating-point numbers, keep in mind that they do not always have a precise representation in memory. This could lead to unexpected results from certain operations, such as value comparison and the `Mod` operator. For more information, see [Troubleshooting Data Types](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).  
+- **Обеспечивают.** При работе с числами с плавающей запятой следует помнить, что они не всегда имеют точное представление в памяти. Это может привести к непредвиденным результатам некоторых операций, таких как сравнение значений и оператор `Mod`. Дополнительные сведения см. в разделе [Устранение неполадок типов данных](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).  
   
-- **Widening.** The `Single` data type widens to `Double`. This means you can convert `Single` to `Double` without encountering a <xref:System.OverflowException?displayProperty=nameWithType> error.  
+- **Расширяющие.** Тип данных `Single` расширяется до `Double`. Это означает, что можно преобразовать `Single` в `Double` без возникновения ошибки <xref:System.OverflowException?displayProperty=nameWithType>.  
   
-- **Trailing Zeros.** The floating-point data types do not have any internal representation of trailing 0 characters. For example, they do not distinguish between 4.2000 and 4.2. Consequently, trailing 0 characters do not appear when you display or print floating-point values.  
+- **Нули в конце.** Типы данных с плавающей запятой не имеют внутреннего представления конечных знаков 0. Например, они не различаются между 4,2000 и 4,2. Следовательно, замыкающие символы (0) не отображаются при отображении или печати значений с плавающей запятой.  
   
-- **Type Characters.** При добавлении к литералу символа типа литерала `F` производится принудительное приведение литерала к типу данных `Single`. При добавлении символа идентификатора типа `!` к любому идентификатору производится принудительное приведение этого идентификатора к типу `Single`.  
+- **Символы типа.** При добавлении к литералу символа типа литерала `F` производится принудительное приведение литерала к типу данных `Single`. При добавлении символа идентификатора типа `!` к любому идентификатору производится принудительное приведение этого идентификатора к типу `Single`.  
   
-- **Framework Type.** В .NET Framework данный тип соответствует структуре <xref:System.Single?displayProperty=nameWithType>.  
+- **Тип платформы.** В .NET Framework данный тип соответствует структуре <xref:System.Single?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>См. также
 
@@ -55,7 +55,7 @@ Holds signed IEEE 32-bit (4-byte) single-precision floating-point numbers rangin
 - [Типы данных](../../../visual-basic/language-reference/data-types/index.md)
 - [Тип данных Decimal](../../../visual-basic/language-reference/data-types/decimal-data-type.md)
 - [Тип данных Double](../../../visual-basic/language-reference/data-types/double-data-type.md)
-- [Функции преобразования типов](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [Type Conversion Functions](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
 - [Сводка по преобразованию](../../../visual-basic/language-reference/keywords/conversion-summary.md)
 - [Эффективное использование типов данных](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
 - [Устранение неполадок, связанных с типами данных](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)

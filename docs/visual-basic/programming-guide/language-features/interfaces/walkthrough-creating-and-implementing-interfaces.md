@@ -16,96 +16,96 @@ ms.locfileid: "74345042"
 ---
 # <a name="walkthrough-creating-and-implementing-interfaces-visual-basic"></a>Пошаговое руководство. Создание и реализация интерфейсов (Visual Basic)
 
-Interfaces describe the characteristics of properties, methods, and events, but leave the implementation details up to structures or classes.  
+Интерфейсы описывают характеристики свойств, методов и событий, но не содержат сведений о реализации до структур или классов.  
   
- This walkthrough demonstrates how to declare and implement an interface.  
+ В этом пошаговом руководстве показано, как объявить и реализовать интерфейс.  
   
 > [!NOTE]
-> This walkthrough doesn't provide information about how to create a user interface.  
+> В этом пошаговом руководстве не содержатся сведения о создании пользовательского интерфейса.  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-## <a name="to-define-an-interface"></a>To define an interface
+## <a name="to-define-an-interface"></a>Определение интерфейса
   
 1. Откройте новый проект приложения Windows на Visual Basic.  
   
-2. Add a new module to the project by clicking **Add Module** on the **Project** menu.  
+2. Добавьте в проект новый модуль, выбрав в меню **проект** пункт **Добавить модуль** .  
   
-3. Name the new module `Module1.vb` and click **Add**. The code for the new module is displayed.  
+3. Присвойте новому модулю имя `Module1.vb` и нажмите кнопку **Добавить**. Отобразится код для нового модуля.  
   
-4. Define an interface named `TestInterface` within `Module1` by typing `Interface TestInterface` between the `Module` and `End Module` statements, and then pressing ENTER. The **Code Editor** indents the `Interface` keyword and adds an `End Interface` statement to form a code block.  
+4. Определите интерфейс с именем `TestInterface` в `Module1`, введя `Interface TestInterface` между инструкциями `Module` и `End Module` и нажав клавишу ВВОД. **Редактор кода** делает отступ для ключевого слова `Interface` и добавляет оператор `End Interface` для формирования блока кода.  
   
-5. Define a property, method, and event for the interface by placing the following code between the `Interface` and `End Interface` statements:  
+5. Определите свойство, метод и событие для интерфейса, поместив следующий код между операторами `Interface` и `End Interface`:  
   
      [!code-vb[VbVbalrOOP#98](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#98)]
   
 ## <a name="implementation"></a>Реализация
 
- You may notice that the syntax used to declare interface members is different from the syntax used to declare class members. This difference reflects the fact that interfaces cannot contain implementation code.  
+ Вы можете заметить, что синтаксис, используемый для объявления членов интерфейса, отличается от синтаксиса, используемого для объявления членов класса. Это различие отражает тот факт, что интерфейсы не могут содержать код реализации.  
   
-### <a name="to-implement-the-interface"></a>To implement the interface
+### <a name="to-implement-the-interface"></a>Реализация интерфейса
   
-1. Add a class named `ImplementationClass` by adding the following statement to `Module1`, after the `End Interface` statement but before the `End Module` statement, and then pressing ENTER:  
+1. Добавьте класс с именем `ImplementationClass`, добавив следующую инструкцию в `Module1`, после инструкции `End Interface`, но перед инструкцией `End Module` и нажав клавишу ВВОД:  
   
      [!code-vb[VbVbalrOOP#99](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#99)]
   
-     If you are working within the integrated development environment, the **Code Editor** supplies a matching `End Class` statement when you press ENTER.  
+     При работе в интегрированной среде разработки **Редактор кода** предоставляет соответствующую инструкцию `End Class` при нажатии клавиши ВВОД.  
   
-2. Add the following `Implements` statement to `ImplementationClass`, which names the interface the class implements:  
+2. Добавьте следующую инструкцию `Implements` в `ImplementationClass`, которая именует интерфейс, реализуемый классом:  
   
      [!code-vb[VbVbalrOOP#100](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#100)]
   
-     When listed separately from other items at the top of a class or structure, the `Implements` statement indicates that the class or structure implements an interface.  
+     При указании отдельно от других элементов в верхней части класса или структуры оператор `Implements` указывает, что класс или структура реализуют интерфейс.  
   
-     If you are working within the integrated development environment, the **Code Editor** implements the class members required by `TestInterface` when you press ENTER, and you can skip the next step.  
+     При работе в интегрированной среде разработки **Редактор кода** реализует члены класса, необходимые для `TestInterface` при нажатии клавиши ВВОД, и можно пропустить следующий шаг.  
   
-3. If you are not working within the integrated development environment, you must implement all the members of the interface `MyInterface`. Add the following code to `ImplementationClass` to implement `Event1`, `Method1`, and `Prop1`:  
+3. Если вы не работаете в интегрированной среде разработки, необходимо реализовать все члены интерфейса `MyInterface`. Добавьте следующий код `ImplementationClass` для реализации `Event1`, `Method1`и `Prop1`:  
   
      [!code-vb[VbVbalrOOP#101](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#101)]
   
-     The `Implements` statement names the interface and interface member being implemented.  
+     `Implements` оператор именует интерфейс и член интерфейса, который реализуется.  
   
-4. Complete the definition of `Prop1` by adding a private field to the class that stored the property value:  
+4. Завершите определение `Prop1`, добавив закрытое поле в класс, который сохранил значение свойства:  
   
      [!code-vb[VbVbalrOOP#102](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#102)]
   
-     Return the value of the `pval` from the property get accessor.  
+     Возврат значения `pval` из метода доступа get свойства.  
   
      [!code-vb[VbVbalrOOP#103](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#103)]
   
-     Set the value of `pval` in the property set accessor.  
+     Задайте значение `pval` в методе доступа к набору свойств.  
   
      [!code-vb[VbVbalrOOP#104](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#104)]
   
-5. Complete the definition of `Method1` by adding the following code.  
+5. Завершите определение `Method1`, добавив следующий код.  
   
      [!code-vb[VbVbalrOOP#105](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#105)]
   
-### <a name="to-test-the-implementation-of-the-interface"></a>To test the implementation of the interface
+### <a name="to-test-the-implementation-of-the-interface"></a>Тестирование реализации интерфейса
   
-1. Right-click the startup form for your project in the **Solution Explorer**, and click **View Code**. The editor displays the class for your startup form. By default, the startup form is called `Form1`.  
+1. Щелкните правой кнопкой мыши форму запуска проекта в **Обозреватель решений**и выберите пункт **Просмотреть код**. Редактор отображает класс для начальной формы. По умолчанию форма запуска называется `Form1`.  
   
-2. Add the following `testInstance` field to the `Form1` class:  
+2. Добавьте следующее поле `testInstance` в класс `Form1`:  
   
      [!code-vb[VbVbalrOOP#120](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#120)]
   
-     By declaring `testInstance` as `WithEvents`, the `Form1` class can handle its events.  
+     Объявляя `testInstance` как `WithEvents`, класс `Form1` может управлять его событиями.  
   
-3. Add the following event handler to the `Form1` class to handle events raised by `testInstance`:  
+3. Добавьте следующий обработчик событий в класс `Form1` для обработки событий, вызванных `testInstance`:  
   
      [!code-vb[VbVbalrOOP#106](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#106)]
   
-4. Add a subroutine named `Test` to the `Form1` class to test the implementation class:  
+4. Добавьте подпрограммы с именем `Test` в класс `Form1`, чтобы протестировать класс реализации:  
   
      [!code-vb[VbVbalrOOP#107](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#107)]
   
-     The `Test` procedure creates an instance of the class that implements `MyInterface`, assigns that instance to the `testInstance` field, sets a property, and runs a method through the interface.  
+     `Test` процедура создает экземпляр класса, который реализует `MyInterface`, присваивает этот экземпляр полю `testInstance`, устанавливает свойство и запускает метод через интерфейс.  
   
-5. Add code to call the `Test` procedure from the `Form1 Load` procedure of your startup form:  
+5. Добавьте код для вызова процедуры `Test` из `Form1 Load` процедуры формы запуска:  
   
      [!code-vb[VbVbalrOOP#108](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#108)]
   
-6. Run the `Test` procedure by pressing F5. The message "Prop1 was set to 9" is displayed. After you click OK, the message "The X parameter for Method1 is 5" is displayed. Click OK, and the message "The event handler caught the event" is displayed.  
+6. Выполните `Test` процедуру, нажав клавишу F5. Отображается сообщение «Prop1 имело значение 9». После нажатия кнопки ОК отображается сообщение "параметр X для Method1 равен 5". Нажмите кнопку ОК, после чего появится сообщение "обработчик событий захватил событие".  
   
 ## <a name="see-also"></a>См. также
 

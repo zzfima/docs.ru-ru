@@ -16,51 +16,51 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74340556"
 ---
 # <a name="how-to-call-a-property-procedure-visual-basic"></a>Практическое руководство. Вызов процедуры свойства (Visual Basic)
-You call a property procedure by storing a value in the property or retrieving its value. You access a property the same way you access a variable.  
+Процедура свойства вызывается путем сохранения значения в свойстве или извлечения его значения. Доступ к свойству осуществляется так же, как и к переменной.  
   
- The property's `Set` procedure stores a value, and its `Get` procedure retrieves the value. However, you do not explicitly call these procedures by name. You use the property in an assignment statement or an expression, just as you would store or retrieve the value of a variable. Visual Basic makes the calls to the property's procedures.  
+ Процедура `Set` свойства сохраняет значение, и его `Get` процедура получает значение. Однако эти процедуры не вызываются явным образом по имени. Свойство используется в операторе присваивания или в выражении так же, как и при хранении или извлечении значения переменной. Visual Basic выполняет вызовы процедур свойств.  
   
-### <a name="to-call-a-propertys-get-procedure"></a>To call a property's Get procedure  
+### <a name="to-call-a-propertys-get-procedure"></a>Вызов процедуры Get свойства  
   
-1. Use the property name in an expression the same way you would use a variable name. You can use a property anywhere you can use a variable or a constant.  
+1. Используйте имя свойства в выражении так же, как при использовании имени переменной. Свойство можно использовать в любом месте, где можно использовать переменную или константу.  
   
      \- или -  
   
-     Use the property name following the equal (`=`) sign in an assignment statement.  
+     Используйте имя свойства после знака равенства (`=`) в операторе присваивания.  
   
-     The following example reads the value of the <xref:Microsoft.VisualBasic.DateAndTime.Now%2A> property, implicitly calling its `Get` procedure.  
+     В следующем примере считывается значение свойства <xref:Microsoft.VisualBasic.DateAndTime.Now%2A>, неявно вызывающего его `Get` процедуру.  
   
      [!code-vb[VbVbalrDateProperties#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDateProperties/VB/Module1.vb#4)]  
   
-2. If the property takes arguments, follow the property name with parentheses to enclose the argument list. If there are no arguments, you can optionally omit the parentheses.  
+2. Если свойство принимает аргументы, следует следовать имени свойства с круглыми скобками, чтобы заключить список аргументов. Если аргументы отсутствуют, можно дополнительно опустить круглые скобки.  
   
-3. Place the arguments in the argument list within the parentheses, separated by commas. Be sure you supply the arguments in the same order that the property defines the corresponding parameters.  
+3. Поместите аргументы в список аргументов в круглых скобках, разделяя их запятыми. Убедитесь, что аргументы указываются в том же порядке, в котором свойство определяет соответствующие параметры.  
   
- The value of the property participates in the expression just as a variable or constant would, or it is stored in the variable or property on the left side of the assignment statement.  
+ Значение свойства участвует в выражении точно так же, как переменная или константа, либо хранится в переменной или свойстве в левой части оператора присваивания.  
   
-### <a name="to-call-a-propertys-set-procedure"></a>To call a property's Set procedure  
+### <a name="to-call-a-propertys-set-procedure"></a>Вызов процедуры Set свойства  
   
-1. Use the property name on the left side of an assignment statement.  
+1. Используйте имя свойства в левой части оператора присваивания.  
   
-     The following example sets the value of the <xref:Microsoft.VisualBasic.DateAndTime.TimeOfDay%2A> property, implicitly calling the `Set` procedure.  
+     В следующем примере задается значение свойства <xref:Microsoft.VisualBasic.DateAndTime.TimeOfDay%2A>, неявно вызывается процедура `Set`.  
   
      [!code-vb[VbVbcnProcedures#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#11)]  
   
-2. If the property takes arguments, follow the property name with parentheses to enclose the argument list. If there are no arguments, you can optionally omit the parentheses.  
+2. Если свойство принимает аргументы, следует следовать имени свойства с круглыми скобками, чтобы заключить список аргументов. Если аргументы отсутствуют, можно дополнительно опустить круглые скобки.  
   
-3. Place the arguments in the argument list within the parentheses, separated by commas. Be sure you supply the arguments in the same order that the property defines the corresponding parameters.  
+3. Поместите аргументы в список аргументов в круглых скобках, разделяя их запятыми. Убедитесь, что аргументы указываются в том же порядке, в котором свойство определяет соответствующие параметры.  
   
- The value generated on the right side of the assignment statement is stored in the property.  
+ Значение, созданное в правой части оператора присваивания, хранится в свойстве.  
   
 ## <a name="see-also"></a>См. также
 
 - [Процедуры свойств](./property-procedures.md)
 - [Параметры и аргументы процедуры](./procedure-parameters-and-arguments.md)
 - [Оператор Property](../../../../visual-basic/language-reference/statements/property-statement.md)
-- [Differences Between Properties and Variables in Visual Basic](./differences-between-properties-and-variables.md)
+- [Различия между свойствами и переменными в Visual Basic](./differences-between-properties-and-variables.md)
 - [Практическое руководство. Создание свойства](./how-to-create-a-property.md)
 - [Практическое руководство. Объявление свойства со смешанным уровнем доступа](./how-to-declare-a-property-with-mixed-access-levels.md)
-- [How to: Declare and Call a Default Property in Visual Basic](./how-to-declare-and-call-a-default-property.md)
+- [Инструкции. объявление и вызов свойства по умолчанию в Visual Basic](./how-to-declare-and-call-a-default-property.md)
 - [Практическое руководство. Запись значения в свойство](./how-to-put-a-value-in-a-property.md)
 - [Практическое руководство. Получение значения из свойства](./how-to-get-a-value-from-a-property.md)
 - [Оператор Get](../../../../visual-basic/language-reference/statements/get-statement.md)

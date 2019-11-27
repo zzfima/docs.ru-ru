@@ -13,22 +13,22 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346334"
 ---
 # <a name="miscellaneous-data-types-visual-basic"></a>Прочие типы данных (Visual Basic)
-Visual Basic supplies several data types that are not oriented toward numbers or characters. Instead, they deal with specialized data such as yes/no values, date/time values, and object addresses.  
+Visual Basic предоставляет несколько типов данных, не ориентированных на числа или символы. Вместо этого они работают со специализированными данными, такими как значения Да/нет, значения даты и времени и адреса объектов.  
   
- For a table showing a side-by-side comparison of the Visual Basic data types, see [Data Types](../../../../visual-basic/language-reference/data-types/index.md).  
+ Для таблицы, показывающей параллельное сравнение типов данных Visual Basic, см. в разделе [типы данных](../../../../visual-basic/language-reference/data-types/index.md).  
   
-## <a name="boolean-type"></a>Boolean Type  
- The [Boolean Data Type](../../../../visual-basic/language-reference/data-types/boolean-data-type.md) is an unsigned value that is interpreted as either `True` or `False`. Its data width depends on the implementing platform. If a variable can contain only two-state values such as true/false, yes/no, or on/off, declare it as `Boolean`.  
+## <a name="boolean-type"></a>Логический тип  
+ [Логический тип данных](../../../../visual-basic/language-reference/data-types/boolean-data-type.md) — это значение без знака, которое интерпретируется как `True` или `False`. Ширина данных зависит от платформы, реализующей реализацию. Если переменная может содержать только два значения, например true/false, да/нет или ON/OFF, объявите ее как `Boolean`.  
   
-## <a name="date-type"></a>Date Type  
- The [Date Data Type](../../../../visual-basic/language-reference/data-types/date-data-type.md) is a 64-bit value that holds both date and time information. Each increment represents 100 nanoseconds of elapsed time since the beginning (12:00 AM) of January 1 of the year 1 in the Gregorian calendar. If a variable can contain a date value, a time value, or both, declare it as `Date`.  
+## <a name="date-type"></a>Тип даты  
+ [Тип данных Date](../../../../visual-basic/language-reference/data-types/date-data-type.md) — это 64-разрядное значение, содержащее сведения о дате и времени. Каждое приращение представляет 100 наносекунд времени, прошедшее с начала (12:00 AM) 1 января 1 года по григорианскому календарю. Если переменная может содержать значение даты, значение времени или и то, и другое, объявите ее как `Date`.  
   
 ## <a name="object-type"></a>Тип объекта  
- The [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md) is a 32-bit address that points to an object instance within your application or in some other application. An `Object` variable can refer to any object your application recognizes, or to data of any data type. This includes both *value types*, such as `Integer`, `Boolean`, and structure instances, and *reference types*, which are instances of objects created from classes such as `String` and <xref:System.Windows.Forms.Form>, and array instances.  
+ [Тип данных Object](../../../../visual-basic/language-reference/data-types/object-data-type.md) — это 32-разрядный адрес, указывающий на экземпляр объекта в приложении или в другом приложении. Переменная `Object` может ссылаться на любой объект, распознаваемый приложением, или на данные любого типа данных. К ним относятся оба *типа значений*, такие как `Integer`, `Boolean`и экземпляры структуры, а также *Ссылочные типы*, которые являются экземплярами объектов, созданных из таких классов, как `String` и <xref:System.Windows.Forms.Form>, и экземпляров массивов.  
   
- If a variable stores a pointer to an instance of a class that you do not know at compile time, or if it can point to data of various data types, declare it as `Object`.  
+ Если переменная хранит указатель на экземпляр класса, который не знает во время компиляции, или если он может указывать на данные различных типов данных, объявите его как `Object`.  
   
- The advantage of the `Object` data type is that you can use it to store data of any data type. The disadvantage is that you incur extra operations that take more execution time and make your application perform slower. If you use an `Object` variable for value types, you incur *boxing* and *unboxing*. If you use it for reference types, you incur *late binding*.  
+ Преимуществом `Object` типа данных является то, что его можно использовать для хранения данных любого типа данных. Недостаток заключается в том, что вы получаете дополнительные операции, которые требуют больше времени на выполнение и делают приложение более медленным. При использовании переменной `Object` для типов значений необходимо выполнить *упаковку* и распаковку. При использовании его для ссылочных типов требуется *позднее связывание*.  
   
 ## <a name="see-also"></a>См. также
 

@@ -9,7 +9,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348400"
 ---
-# <a name="how-to-compare-the-contents-of-two-folders-linq-visual-basic"></a>How to: Compare the Contents of Two Folders (LINQ) (Visual Basic)
+# <a name="how-to-compare-the-contents-of-two-folders-linq-visual-basic"></a>Практические руководства. Сравнение содержимого двух папок (LINQ) (Visual Basic)
 
 В этом примере демонстрируются три способа сравнения двух списков файлов:
 
@@ -116,7 +116,7 @@ End Module
 
 ## <a name="compiling-the-code"></a>Компиляция кода
 
-Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.
+Создайте проект консольного приложения VB.NET с помощью инструкции `Imports` для пространства имен System. LINQ.
 
 ## <a name="see-also"></a>См. также
 

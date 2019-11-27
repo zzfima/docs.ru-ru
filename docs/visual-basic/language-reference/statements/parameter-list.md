@@ -19,7 +19,7 @@ ms.locfileid: "74346482"
 ---
 # <a name="parameter-list-visual-basic"></a>Список параметров (Visual Basic)
 
-Specifies the parameters a procedure expects when it is called. Multiple parameters are separated by commas. The following is the syntax for one parameter.
+Указывает параметры, которые должны быть вызваны процедурой при ее вызове. Несколько параметров разделяются запятыми. Ниже приведен синтаксис для одного параметра.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -31,62 +31,62 @@ parametername[( )] [ As parametertype ] [ = defaultvalue ]
 ## <a name="parts"></a>Части
 
 `attributelist`  
-Необязательный. List of attributes that apply to this parameter. You must enclose the [Attribute List](../../../visual-basic/language-reference/statements/attribute-list.md) in angle brackets ("`<`" and "`>`").
+Необязательный элемент. Список атрибутов, применяемых к этому параметру. [Список атрибутов](../../../visual-basic/language-reference/statements/attribute-list.md) необходимо заключить в угловые скобки ("`<`" и "`>`").
 
 `Optional`  
-Необязательный. Specifies that this parameter is not required when the procedure is called.
+Необязательный элемент. Указывает, что этот параметр не является обязательным при вызове процедуры.
 
 `ByVal`  
-Необязательный. Specifies that the procedure cannot replace or reassign the variable element underlying the corresponding argument in the calling code.
+Необязательный элемент. Указывает, что процедура не может заменить или переназначить элемент переменной, лежащий в основе соответствующего аргумента в вызывающем коде.
 
 `ByRef`  
-Необязательный. Specifies that the procedure can modify the underlying variable element in the calling code the same way the calling code itself can.
+Необязательный элемент. Указывает, что процедура может изменить базовый элемент Variable в вызывающем коде так же, как и сам вызывающий код.
 
 `ParamArray`  
-Необязательный. Specifies that the last parameter in the parameter list is an optional array of elements of the specified data type. This lets the calling code pass an arbitrary number of arguments to the procedure.
+Необязательный элемент. Указывает, что последний параметр в списке параметров является необязательным массивом элементов указанного типа данных. Это позволяет вызывающему коду передавать процедуре произвольное число аргументов.
 
 `parametername`  
-Обязательный. Name of the local variable representing the parameter.
+Обязательно. Имя локальной переменной, представляющей параметр.
 
 `parametertype`  
-Required if `Option Strict` is `On`. Data type of the local variable representing the parameter.
+Требуется, если `Option Strict` `On`. Тип данных локальной переменной, представляющей параметр.
 
 `defaultvalue`  
-Required for `Optional` parameters. Any constant or constant expression that evaluates to the data type of the parameter. If the type is `Object`, or a class, interface, array, or structure, the default value can only be `Nothing`.
+Требуется для `Optional` параметров. Любое константное или константное выражение, результатом которого является тип данных параметра. Если тип `Object`или класс, интерфейс, массив или структура, значение по умолчанию можно только `Nothing`.
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Примечания
 
-Parameters are surrounded by parentheses and separated by commas. A parameter can be declared with any data type. If you do not specify `parametertype`, it defaults to `Object`.
+Параметры заключаются в круглые скобки и разделяются запятыми. Параметр может быть объявлен с любым типом данных. Если не указать `parametertype`, по умолчанию используется `Object`.
 
-When the calling code calls the procedure, it passes an *argument* to each required parameter. For more information, see [Differences Between Parameters and Arguments](../../../visual-basic/programming-guide/language-features/procedures/differences-between-parameters-and-arguments.md).
+Когда вызывающий код вызывает процедуру, он передает *аргумент* в каждый обязательный параметр. Дополнительные сведения см. в разделе [различия между параметрами и аргументами](../../../visual-basic/programming-guide/language-features/procedures/differences-between-parameters-and-arguments.md).
 
-The argument the calling code passes to each parameter is a pointer to an underlying element in the calling code. If this element is *nonvariable* (a constant, literal, enumeration, or expression), it is impossible for any code to change it. If it is a *variable* element (a declared variable, field, property, array element, or structure element), the calling code can change it. For more information, see [Differences Between Modifiable and Nonmodifiable Arguments](../../../visual-basic/programming-guide/language-features/procedures/differences-between-modifiable-and-nonmodifiable-arguments.md).
+Аргумент, который вызывающий код передает каждому параметру, является указателем на базовый элемент в вызывающем коде. Если этот элемент является *неизменяемым* (константой, литералом, перечислением или выражением), любой код изменить его невозможно. Если это элемент *переменной* (объявленная переменная, поле, свойство, элемент массива или элемент структуры), вызывающий код может изменить его. Дополнительные сведения см. в разделе [различия между изменяемыми и неизменяемыми аргументами](../../../visual-basic/programming-guide/language-features/procedures/differences-between-modifiable-and-nonmodifiable-arguments.md).
 
-If a variable element is passed `ByRef`, the procedure can change it as well. For more information, see [Differences Between Passing an Argument By Value and By Reference](../../../visual-basic/programming-guide/language-features/procedures/differences-between-passing-an-argument-by-value-and-by-reference.md).
+Если элемент переменной передается `ByRef`, процедура также может изменить ее. Дополнительные сведения см. в разделе [различия между передачей аргумента по значению и по ссылке](../../../visual-basic/programming-guide/language-features/procedures/differences-between-passing-an-argument-by-value-and-by-reference.md).
 
 ## <a name="rules"></a>Правила
 
-- **Parentheses.** If you specify a parameter list, you must enclose it in parentheses. If there are no parameters, you can still use parentheses enclosing an empty list. This improves the readability of your code by clarifying that the element is a procedure.
+- **Скобки.** Если указан список параметров, его необходимо заключить в круглые скобки. Если параметры отсутствуют, можно по-прежнему использовать круглые скобки, включающие пустой список. Это повышает удобочитаемость кода путем уточнения того, что элемент является процедурой.
 
-- **Optional Parameters.** If you use the `Optional` modifier on a parameter, all subsequent parameters in the list must also be optional and be declared by using the `Optional` modifier.
+- **Необязательные параметры.** При использовании модификатора `Optional` для параметра все последующие параметры в списке также должны быть необязательными и объявлены с помощью модификатора `Optional`.
 
-     Every optional parameter declaration must supply the `defaultvalue` clause.
+     Каждое объявление необязательного параметра должно предоставлять предложение `defaultvalue`.
 
-     For more information, see [Optional Parameters](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md).
+     Дополнительные сведения см. в разделе [необязательные параметры](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md).
 
-- **Parameter Arrays.** You must specify `ByVal` for a `ParamArray` parameter.
+- **Массивы параметров.** Для параметра `ParamArray` необходимо указать `ByVal`.
 
-     You cannot use both `Optional` and `ParamArray` in the same parameter list.
+     В одном списке параметров нельзя использовать как `Optional`, так и `ParamArray`.
 
-     For more information, see [Parameter Arrays](../../../visual-basic/programming-guide/language-features/procedures/parameter-arrays.md).
+     Дополнительные сведения см. в разделе [массивы параметров](../../../visual-basic/programming-guide/language-features/procedures/parameter-arrays.md).
 
-- **Passing Mechanism.** The default mechanism for every argument is `ByVal`, which means the procedure cannot change the underlying variable element. However, if the element is a reference type, the procedure can modify the contents or members of the underlying object, even though it cannot replace or reassign the object itself.
+- **Механизм передачи.** Механизмом по умолчанию для каждого аргумента является `ByVal`, что означает, что процедура не может изменить базовый элемент Variable. Однако если элемент является ссылочным типом, процедура может изменить содержимое или члены базового объекта, даже если он не может заменить или переназначить сам объект.
 
-- **Parameter Names.** If the parameter's data type is an array, follow `parametername` immediately by parentheses. For more information on parameter names, see [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).
+- **Имена параметров.** Если тип данных параметра является массивом, следуйте указаниям, `parametername`, сразу после круглых скобок. Дополнительные сведения об именах параметров см. в разделе [Имена объявленных элементов](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).
 
 ## <a name="example"></a>Пример
 
-The following example shows a `Function` procedure that defines two parameters.
+В следующем примере показана `Function` процедура, определяющая два параметра.
 
 [!code-vb[VbVbalrStatements#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#2)]
 

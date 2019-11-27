@@ -20,7 +20,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74329645"
 ---
 # <a name="namespace-statement"></a>Оператор Namespace
-Declares the name of a namespace and causes the source code that follows the declaration to be compiled within that namespace.  
+Объявляет имя пространства имен и вызывает компиляцию исходного кода, следующего за объявлением, в пределах этого пространства имен.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -32,66 +32,66 @@ End Namespace
   
 ## <a name="parts"></a>Части  
  Global  
- Необязательный. Allows you to define a namespace out of the root namespace of your project. See [Namespaces in Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md).  
+ Необязательный элемент. Позволяет определить пространство имен из корневого пространства имен проекта. См. раздел [пространства имен в Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md).  
   
  `name`  
- Обязательный. A unique name that identifies the namespace. Must be a valid Visual Basic identifier. For more information, see [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
+ Обязательно. Уникальное имя, идентифицирующее пространство имен. Должен быть допустимым идентификатором Visual Basic. Дополнительные сведения см. в разделе [Имена объявленных элементов](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
   
  `componenttypes`  
- Необязательный. Elements that make up the namespace. These include, but are not limited to, enumerations, structures, interfaces, classes, modules, delegates, and other namespaces.  
+ Необязательный элемент. Элементы, составляющие пространство имен. К ним относятся, но не ограничиваются, перечисления, структуры, интерфейсы, классы, модули, делегаты и другие пространства имен.  
   
  `End Namespace`  
- Terminates a `Namespace` block.  
+ Завершает блок `Namespace`.  
   
-## <a name="remarks"></a>Заметки  
- Namespaces are used as an organizational system. They provide a way to classify and present programming elements that are exposed to other programs and applications. Note that a namespace is not a *type* in the sense that a class or structure is—you cannot declare a programming element to have the data type of a namespace.  
+## <a name="remarks"></a>Примечания  
+ Пространства имен используются в качестве организационной системы. Они предоставляют способ классификации и представления программных элементов, предоставляемых другим программам и приложениям. Обратите внимание, что пространство имен не является *типом* в том смысле, что класс или структура — нельзя объявить элемент программирования для типа данных пространства имен.  
   
- All programming elements declared after a `Namespace` statement belong to that namespace. Visual Basic continues to compile elements into the last declared namespace until it encounters either an `End Namespace` statement or another `Namespace` statement.  
+ Все программные элементы, объявленные после оператора `Namespace`, относятся к этому пространству имен. Visual Basic продолжит компилировать элементы в последнее объявленное пространство имен до тех пор, пока не встретится оператор `End Namespace` или другая инструкция `Namespace`.  
   
- If a namespace is already defined, even outside your project, you can add programming elements to it. To do this, you use a `Namespace` statement to direct Visual Basic to compile elements into that namespace.  
+ Если пространство имен уже определено, даже за пределами проекта, в него можно добавить программные элементы. Для этого используйте оператор `Namespace`, чтобы направить Visual Basic для компиляции элементов в это пространство имен.  
   
- You can use a `Namespace` statement only at the file or namespace level. This means the *declaration context* for a namespace must be a source file or another namespace, and cannot be a class, structure, module, interface, or procedure. Дополнительные сведения см. в разделе [Контексты объявления и уровни доступа по умолчанию](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
+ Инструкцию `Namespace` можно использовать только на уровне файла или пространства имен. Это означает, что *контекст объявления* для пространства имен должен быть исходным файлом или другим пространством имен и не может быть классом, структурой, модулем, интерфейсом или процедурой. Дополнительные сведения см. в разделе [Контексты объявления и уровни доступа по умолчанию](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
   
- You can declare one namespace within another. There is no strict limit to the levels of nesting you can declare, but remember that when other code accesses the elements declared in the innermost namespace, it must use a qualification string that contains all the namespace names in the nesting hierarchy.  
+ Одно пространство имен можно объявить в другом. Нет ограниченного ограничения уровней вложенности, которые можно объявить, но помните, что если другой код обращается к элементам, объявленным во внутреннем пространстве имен, он должен использовать уточняющую строку, содержащую все имена пространств имен в иерархии вложений.  
   
-## <a name="access-level"></a>Access Level  
- Namespaces are treated as if they have a `Public` access level. A namespace can be accessed from code anywhere in the same project, from other projects that reference the project, and from any assembly built from the project.  
+## <a name="access-level"></a>Уровень доступа  
+ Пространства имен обрабатываются так, как если бы они имели `Public` уровень доступа. К пространству имен можно обращаться из кода в любом месте в том же проекте, из других проектов, которые ссылаются на проект, и из любой сборки, построенной из проекта.  
   
- Programming elements declared at namespace level, meaning in a namespace but not inside any other element, can have `Public` or `Friend` access. If unspecified, the access level of such an element uses `Friend` by default. Elements you can declare at namespace level include classes, structures, modules, interfaces, enumerations, and delegates. Дополнительные сведения см. в разделе [Контексты объявления и уровни доступа по умолчанию](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
+ Элементы программирования, объявленные на уровне пространства имен, то есть в пространстве имен, но не внутри какого-либо другого элемента, могут иметь доступ к `Public` или `Friend`. Если значение не указано, уровень доступа такого элемента по умолчанию использует `Friend`. Элементы, которые можно объявить на уровне пространства имен, включают классы, структуры, модули, интерфейсы, перечисления и делегаты. Дополнительные сведения см. в разделе [Контексты объявления и уровни доступа по умолчанию](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
   
-## <a name="root-namespace"></a>Root Namespace  
- All namespace names in your project are based on a *root namespace*. Visual Studio назначает имя проекта в качестве корневого пространства имен по умолчанию для всего кода в проекте. Например, если проект называется `Payroll`, его программные элементы относятся к пространству имен `Payroll`. If you declare `Namespace funding`, the full name of that namespace is `Payroll.funding`.  
+## <a name="root-namespace"></a>Корневое пространство имен  
+ Все имена пространств имен в проекте основаны на *корневом пространстве имен*. Visual Studio назначает имя проекта в качестве корневого пространства имен по умолчанию для всего кода в проекте. Например, если проект называется `Payroll`, его программные элементы относятся к пространству имен `Payroll`. При объявлении `Namespace funding`полное имя этого пространства имен `Payroll.funding`.  
   
- If you want to specify an existing namespace in a `Namespace` statement, such as in the generic list class example, you can set your root namespace to a null value. To do this, click **Project Properties** from the **Project** menu and then clear the **Root namespace** entry so that the box is empty. If you did not do this in the generic list class example, the Visual Basic compiler would take `System.Collections.Generic` as a new namespace within project `Payroll`, with the full name of `Payroll.System.Collections.Generic`.  
+ Если вы хотите указать существующее пространство имен в операторе `Namespace`, например в примере класса Generic List, можно задать для корневого пространства имен значение null. Для этого в меню **проект** выберите пункт **Свойства проекта** , а затем очистите запись **корневого пространства имен** , чтобы поле было пустым. Если это не сделано в примере класса Generic List, Visual Basic компилятор принимает `System.Collections.Generic` в качестве нового пространства имен в `Payroll`проекта с полным именем `Payroll.System.Collections.Generic`.  
   
- Alternatively, you can use the `Global` keyword to refer to elements of namespaces defined outside your project. Doing so lets you retain your project name as the root namespace. This reduces the chance of unintentionally merging your programming elements together with those of existing namespaces. For more information, see the "Global Keyword in Fully Qualified Names" section in [Namespaces in Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md).  
+ Кроме того, можно использовать ключевое слово `Global` для ссылки на элементы пространств имен, определенные за пределами проекта. Это позволит хранить имя проекта в качестве корневого пространства имен. Это снижает вероятность непреднамеренного слияния программных элементов вместе с существующими пространствами имен. Дополнительные сведения см. в разделе "глобальное ключевое слово в полных именах" раздела [пространства имен в Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md).  
   
- The `Global` keyword can also be used in a Namespace statement. Это позволяет определить пространство имен из корневых пространств имен проекта. For more information, see the "Global Keyword in Namespace Statements" section in [Namespaces in Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md).  
+ Ключевое слово `Global` также можно использовать в операторе Namespace. Это позволяет определить пространство имен из корневых пространств имен проекта. Дополнительные сведения см. в подразделе «глобальное ключевое слово в операторах пространства имен» раздела [пространства имен в Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md).  
   
- **Troubleshooting.** The root namespace can lead to unexpected concatenations of namespace names. If you make reference to namespaces defined outside your project, the Visual Basic compiler can construe them as nested namespaces in the root namespace. In such a case, the compiler does not recognize any types that have been already defined in the external namespaces. To avoid this, either set your root namespace to a null value as described in "Root Namespace," or use the `Global` keyword to access elements of external namespaces.  
+ **Выявлен.** Корневое пространство имен может привести к непредвиденному объединению имен пространств имен. Если вы задаете ссылку на пространства имен, определенные за пределами проекта, Visual Basic компилятор может конструе их как вложенные пространства имен в корневом пространстве имен. В этом случае компилятор не распознает типы, которые уже были определены во внешних пространствах имен. Чтобы избежать этого, следует либо присвоить корневому пространству имен значение null, как описано в разделе "корневое пространство имен", либо использовать ключевое слово `Global` для доступа к элементам внешних пространств имен.  
   
-## <a name="attributes-and-modifiers"></a>Attributes and Modifiers  
- You cannot apply attributes to a namespace. An attribute contributes information to the assembly's metadata, which is not meaningful for source classifiers such as namespaces.  
+## <a name="attributes-and-modifiers"></a>Атрибуты и модификаторы  
+ К пространству имен нельзя применять атрибуты. Атрибут вносит сведения в метаданные сборки, которые не имеют смысла для исходных классификаторов, таких как пространства имен.  
   
- You cannot apply any access or procedure modifiers, or any other modifiers, to a namespace. Because it is not a type, these modifiers are not meaningful.  
+ К пространству имен нельзя применять модификаторы доступа и процедур, а также любые другие модификаторы. Поскольку это не тип, эти модификаторы не имеют смысла.  
   
 ## <a name="example"></a>Пример  
- The following example declares two namespaces, one nested in the other.  
+ В следующем примере объявляются два пространства имен, одно из которых вложено в другое.  
   
  [!code-vb[VbVbalrStatements#43](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#43)]  
   
 ## <a name="example"></a>Пример  
- The following example declares multiple nested namespaces on a single line, and it is equivalent to the previous example.  
+ В следующем примере несколько вложенных пространств имен объявляются в одной строке и эквивалентны предыдущему примеру.  
   
  [!code-vb[VbVbalrStatements#41](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#41)]  
   
 ## <a name="example"></a>Пример  
- The following example accesses the class defined in the previous examples.  
+ В следующем примере осуществляется доступ к классу, определенному в предыдущих примерах.  
   
  [!code-vb[VbVbalrStatements#42](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#42)]  
   
 ## <a name="example"></a>Пример  
- The following example defines the skeleton of a new generic list class and adds it to the <xref:System.Collections.Generic?displayProperty=nameWithType> namespace.  
+ В следующем примере определяется скелет нового класса универсального списка и добавляется в пространство имен <xref:System.Collections.Generic?displayProperty=nameWithType>.  
   
 ```vb  
 Namespace System.Collections.Generic  
@@ -106,4 +106,4 @@ End Namespace
 
 - [Оператор Imports (пространство имен и тип .NET)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
 - [Имена объявленных элементов](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
-- [Namespaces in Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md)
+- [Пространства имен в Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md)

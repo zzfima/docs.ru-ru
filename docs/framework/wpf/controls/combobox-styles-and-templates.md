@@ -22,7 +22,7 @@ ms.locfileid: "74283791"
 ## <a name="combobox-parts"></a>Части поля со списком  
  В следующей таблице перечислены именованные части для элемента управления <xref:System.Windows.Controls.ComboBox>.  
   
-|Отделение|Type|Описание|  
+|Отделение|Введите|Описание|  
 |-|-|-|  
 |PART_EditableTextBox|<xref:System.Windows.Controls.TextBox>|Содержит текст <xref:System.Windows.Controls.ComboBox>.|  
 |PART_Popup|<xref:System.Windows.Controls.Primitives.Popup>|Раскрывающийся список, содержащий элементы в поле со списком.|  
@@ -34,7 +34,7 @@ ms.locfileid: "74283791"
   
 |Имя VisualState|Имя VisualStateGroup|Описание|  
 |-|-|-|  
-|Норм.|CommonStates|Состояние по умолчанию.|  
+|Нормальный|CommonStates|Состояние по умолчанию.|  
 |Отключено.|CommonStates|Элемент управления отключен.|  
 |MouseOver|CommonStates|Указатель мыши находится над элементом управления <xref:System.Windows.Controls.ComboBox>.|  
 |Focused|FocusStates|Элемент управления имеет фокус.|  
@@ -43,7 +43,7 @@ ms.locfileid: "74283791"
 |Valid|ValidationStates|Элемент управления использует класс <xref:System.Windows.Controls.Validation>, а <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> присоединенным свойством является `false`.|  
 |InvalidFocused|ValidationStates|Присоединенное <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> свойство имеет `true` элемент управления имеет фокус.|  
 |InvalidUnfocused|ValidationStates|Присоединенное <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> свойство имеет `true` элемент управления не имеет фокуса.|  
-|Редактирования|едитстатес|Значение свойства <xref:System.Windows.Controls.ComboBox.IsEditable%2A> — `true`.|  
+|Editable|едитстатес|Значение свойства <xref:System.Windows.Controls.ComboBox.IsEditable%2A> — `true`.|  
 |Недоступными|едитстатес|Значение свойства <xref:System.Windows.Controls.ComboBox.IsEditable%2A> — `false`.|  
   
 ## <a name="comboboxitem-parts"></a>Комбобокситем части  
@@ -54,7 +54,7 @@ ms.locfileid: "74283791"
   
 |Имя VisualState|Имя VisualStateGroup|Описание|  
 |-|-|-|  
-|Норм.|CommonStates|Состояние по умолчанию.|  
+|Нормальный|CommonStates|Состояние по умолчанию.|  
 |Отключено.|CommonStates|Элемент управления отключен.|  
 |MouseOver|CommonStates|Указатель мыши находится над элементом управления <xref:System.Windows.Controls.ComboBox>.|  
 |Focused|FocusStates|Элемент управления имеет фокус.|  

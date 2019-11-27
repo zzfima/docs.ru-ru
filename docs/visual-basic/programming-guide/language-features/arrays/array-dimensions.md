@@ -18,80 +18,80 @@ ms.locfileid: "74351899"
 ---
 # <a name="array-dimensions-in-visual-basic"></a>Array Dimensions in Visual Basic
 
-A *dimension* is a direction in which you can vary the specification of an array's elements. An array that holds the sales total for each day of the month has one dimension (the day of the month). An array that holds the sales total by department for each day of the month has two dimensions (the department number and the day of the month). The number of dimensions an array has is called its *rank*.
+*Измерение* — это направление, в котором можно изменять спецификацию элементов массива. В массиве, содержащем общую сумму продаж за каждый день месяца, должно быть одно измерение (день месяца). Массив, содержащий сумму продаж по Отделу для каждого дня месяца, имеет два измерения (номер отдела и день месяца). Количество измерений массива называется его *рангом*.
 
 > [!NOTE]
-> You can use the <xref:System.Array.Rank%2A> property to determine the how many dimensions an array has.
+> Чтобы определить, сколько измерений имеет массив, можно использовать свойство <xref:System.Array.Rank%2A>.
 
-## <a name="working-with-dimensions"></a>Working with Dimensions
+## <a name="working-with-dimensions"></a>Работа с измерениями
 
-You specify an element of an array by supplying an *index* or *subscript* for each of its dimensions. The elements are contiguous along each dimension from index 0 through the highest index for that dimension.
+Элемент массива указывается путем предоставления *индекса* или *подстрочного скрипта* для каждого из его измерений. Элементы являются непрерывными по отношению к каждому измерению от индекса 0 до самого высокого индекса для этого измерения.
 
-The following illustrations show the conceptual structure of arrays with different ranks. Each element in the illustrations shows the index values that access it. For example, you can access the first element of the second row of the two-dimensional array by specifying indexes `(1, 0)`.
+На следующих иллюстрациях показана концептуальная структура массивов с разными рангами. Каждый элемент на иллюстрациях показывает значения индекса, к которым он обращается. Например, можно получить доступ к первому элементу второй строки двумерного массива, указав индексы `(1, 0)`.
 
-![Diagram that shows a one-dimensional array.](./media/array-dimensions/one-dimensional-array.gif)
+![Схема, на которой показан одномерный массив.](./media/array-dimensions/one-dimensional-array.gif)
 
-![Diagram that shows a two-dimensional array.](./media/array-dimensions/two-dimensional-array.gif)
+![Схема, на которой показан двухмерный массив.](./media/array-dimensions/two-dimensional-array.gif)
 
-![Diagram that shows a three-dimensional array.](./media/array-dimensions/three-dimensional-array.gif)
+![Схема, на которой показан трехмерный массив.](./media/array-dimensions/three-dimensional-array.gif)
 
-### <a name="one-dimension"></a>One Dimension
+### <a name="one-dimension"></a>Одно измерение
 
-Many arrays have only one dimension, such as the number of people of each age. The only requirement to specify an element is the age for which that element holds the count. Therefore, such an array uses only one index. The following example declares a variable to hold a *one-dimensional array* of age counts for ages 0 through 120.
+Многие массивы имеют только одно измерение, например число людей каждого возраста. Единственным требованием для указания элемента является возраст, для которого этот элемент содержит число. Таким образом, такой массив использует только один индекс. В следующем примере объявляется переменная для хранения *одномерного массива* счетчиков возраста в возрасте от 0 до 120.
 
 ```vb
 Dim ageCounts(120) As UInteger
 ```
 
-### <a name="two-dimensions"></a>Two Dimensions
+### <a name="two-dimensions"></a>Два измерения
 
-Some arrays have two dimensions, such as the number of offices on each floor of each building on a campus. The specification of an element requires both the building number and the floor, and each element holds the count for that combination of building and floor. Therefore, such an array uses two indexes. The following example declares a variable to hold a *two-dimensional array* of office counts, for buildings 0 through 40 and floors 0 through 5.
+Некоторые массивы имеют два измерения, такие как количество офисов на каждом этаже каждого здания на кампусе. Спецификация элемента требует как номер здания, так и этаж, и каждый элемент содержит количество для этого сочетания здания и этажа. Таким образом, такой массив использует два индекса. В следующем примере объявляется переменная для хранения *двумерного массива* счетчиков Office, для зданий от 0 до 40 и этажей от 0 до 5.
 
 ```vb
 Dim officeCounts(40, 5) As Byte
 ```
 
-A two-dimensional array is also called a *rectangular array*.
+Двумерный массив также называется *прямоугольным массивом*.
 
-### <a name="three-dimensions"></a>Three Dimensions
+### <a name="three-dimensions"></a>Три измерения
 
-A few arrays have three dimensions, such as values in three-dimensional space. Such an array uses three indexes, which in this case represent the x, y, and z coordinates of physical space. The following example declares a variable to hold a *three-dimensional array* of air temperatures at various points in a three-dimensional volume.
+Несколько массивов имеют три измерения, такие как значения в трехмерном пространстве. Такой массив использует три индекса, которые в данном случае представляют координаты x, y и z физического пространства. В следующем примере объявляется переменная для хранения *трехмерного массива* температур воздуха в различных точках трехмерного тома.
 
 ```vb
 Dim airTemperatures(99, 99, 24) As Single
 ```
 
-### <a name="more-than-three-dimensions"></a>More than Three Dimensions
+### <a name="more-than-three-dimensions"></a>Более трех измерений
 
-Although an array can have as many as 32 dimensions, it is rare to have more than three.
+Несмотря на то, что массив может иметь столько же измерений, как 32, редко бывает больше трех.
 
 > [!NOTE]
-> When you add dimensions to an array, the total storage needed by the array increases considerably, so use multidimensional arrays with care.
+> При добавлении измерений в массив значительно возрастает объем необходимого для массива хранилища, поэтому используйте многомерные массивы с осторожностью.
 
-## <a name="using-different-dimensions"></a>Using Different Dimensions
+## <a name="using-different-dimensions"></a>Использование различных измерений
 
-Suppose you want to track sales amounts for every day of the present month. You might declare a one-dimensional array with 31 elements, one for each day of the month, as the following example shows.
+Предположим, что требуется отслеживание объемов продаж за каждый день текущего месяца. Вы можете объявить одномерный массив с 31 элементами, по одному на каждый день месяца, как показано в следующем примере.
 
 ```vb
 Dim salesAmounts(30) As Double
 ```
 
-Now suppose you want to track the same information not only for every day of a month but also for every month of the year. You might declare a two-dimensional array with 12 rows (for the months) and 31 columns (for the days), as the following example shows.
+Теперь предположим, что необходимо отвести одну и ту же информацию не только для каждого дня месяца, но и для каждого месяца года. Можно объявить двумерный массив с 12 строками (для месяцев) и 31 столбцами (в днях), как показано в следующем примере.
 
 ```vb
 Dim salesAmounts(11, 30) As Double
 ```
 
-Now suppose you decide to have your array hold information for more than one year. If you want to track sales amounts for 5 years, you could declare a three-dimensional array with 5 layers, 12 rows, and 31 columns, as the following example shows.
+Теперь предположим, что вы решили, чтобы ваш массив содержал данные в течение более чем одного года. Если вы хотите отследить объем продаж в течение 5 лет, можно объявить трехмерный массив с 5 слоями, 12 строками и 31 столбцами, как показано в следующем примере.
 
 ```vb
 Dim salesAmounts(4, 11, 30) As Double
 ```
 
-Note that, because each index varies from 0 to its maximum, each dimension of `salesAmounts` is declared as one less than the required length for that dimension. Note also that the size of the array increases with each new dimension. The three sizes in the preceding examples are 31, 372, and 1,860 elements respectively.
+Обратите внимание, что, поскольку каждый индекс принимает значение от 0 до максимального значения, каждое измерение `salesAmounts` объявляется как меньше, чем требуемая длина для этого измерения. Обратите внимание, что размер массива увеличивается с каждым новым измерением. Три размера в предыдущих примерах — 31, 372 и 1 860 соответственно.
 
 > [!NOTE]
-> You can create an array without using the `Dim` statement or the `New` clause. For example, you can call the <xref:System.Array.CreateInstance%2A> method, or another component can pass your code an array created in this manner. Such an array can have a lower bound other than 0. You can always test for the lower bound of a dimension by using the <xref:System.Array.GetLowerBound%2A> method or the `LBound` function.
+> Массив можно создать без использования оператора `Dim` или предложения `New`. Например, можно вызвать метод <xref:System.Array.CreateInstance%2A>, или другой компонент может передать ваш код массиву, созданному таким образом. Такой массив может иметь нижнюю границу, отличную от 0. Вы всегда можете проверить нижнюю границу измерения с помощью метода <xref:System.Array.GetLowerBound%2A> или функции `LBound`.
 
 ## <a name="see-also"></a>См. также
 

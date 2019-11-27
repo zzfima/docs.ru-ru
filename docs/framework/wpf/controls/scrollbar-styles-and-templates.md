@@ -22,7 +22,7 @@ ms.locfileid: "74283415"
 ## <a name="scrollbar-parts"></a>Элементы полосы прокрутки  
  В следующей таблице перечислены именованные части для элемента управления <xref:System.Windows.Controls.Primitives.ScrollBar>.  
   
-|Отделение|Type|Описание|  
+|Отделение|Введите|Описание|  
 |-|-|-|  
 |PART_Track|<xref:System.Windows.Controls.Primitives.Track>|Контейнер для элемента, указывающий расположение <xref:System.Windows.Controls.Primitives.ScrollBar>.|  
   
@@ -31,7 +31,7 @@ ms.locfileid: "74283415"
   
 |Имя VisualState|Имя VisualStateGroup|Описание|  
 |----------------------|---------------------------|-----------------|  
-|Норм.|CommonStates|Состояние по умолчанию.|  
+|Нормальный|CommonStates|Состояние по умолчанию.|  
 |MouseOver|CommonStates|Указатель мыши расположен в элементе управления.|  
 |Отключено.|CommonStates|Элемент управления отключен.|  
 |Valid|ValidationStates|Элемент управления использует класс <xref:System.Windows.Controls.Validation>, а <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> присоединенным свойством является `false`.|  

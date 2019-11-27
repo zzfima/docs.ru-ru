@@ -16,47 +16,47 @@ ms.locfileid: "74344260"
 ---
 # <a name="how-to-invoke-the-command-line-compiler-visual-basic"></a>Практическое руководство. Вызов компилятора командной строки (Visual Basic)
 
-You can invoke the command-line compiler by typing the name of its executable file into the command line, also known as the MS-DOS prompt. If you compile from the default Windows Command Prompt, you must type the fully qualified path to the executable file. To override this default behavior, you can either use the Developer Command Prompt for Visual Studio, or modify the PATH environment variable. Both allow you to compile from any directory by simply typing the compiler name.
+Можно вызвать компилятор командной строки, введя имя исполняемого файла в командную строку, которая также называется командной строкой MS-DOS. При компиляции из командной строки Windows по умолчанию необходимо ввести полный путь к исполняемому файлу. Чтобы переопределить это поведение по умолчанию, можно либо использовать Командная строка разработчика для Visual Studio, либо изменить переменную среды PATH. Оба варианта позволяют компилировать из любого каталога, просто вводя имя компилятора.
 
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]
 
-## <a name="to-invoke-the-compiler-using-the-developer-command-prompt-for-visual-studio"></a>To invoke the compiler using the Developer Command Prompt for Visual Studio
+## <a name="to-invoke-the-compiler-using-the-developer-command-prompt-for-visual-studio"></a>Вызов компилятора с помощью Командная строка разработчика для Visual Studio
 
-1. Open the Visual Studio Tools program folder within the Microsoft Visual Studio program group.
+1. Откройте папку Инструменты Visual Studio Program в Microsoft Visual Studio группе программ.
 
-2. You can use the Developer Command Prompt for Visual Studio to access the compiler from any directory on your machine, if Visual Studio is installed.
+2. Вы можете использовать Командная строка разработчика для Visual Studio, чтобы получить доступ к компилятору из любого каталога на компьютере, если установлен Visual Studio.
 
-3. Invoke the Developer Command Prompt for Visual Studio.
+3. Вызов Командная строка разработчика для Visual Studio.
 
-4. At the command line, type `vbc.exe` *sourceFileName* and then press ENTER.
+4. В командной строке введите `vbc.exe` *саурцефиленаме* и нажмите клавишу ВВОД.
 
-    For example, if you stored your source code in a directory called `SourceFiles`, you would open the Command Prompt and type `cd SourceFiles` to change to that directory. If the directory contained a source file named `Source.vb`, you could compile it by typing `vbc.exe Source.vb`.
+    Например, если вы сохранили исходный код в каталоге с именем `SourceFiles`, откройте командную строку и введите `cd SourceFiles`, чтобы перейти к этому каталогу. Если каталог содержит исходный файл с именем `Source.vb`, его можно скомпилировать, введя `vbc.exe Source.vb`.
 
-## <a name="to-set-the-path-environment-variable-to-the-compiler-for-the-windows-command-prompt"></a>To set the PATH environment variable to the compiler for the Windows Command Prompt
+## <a name="to-set-the-path-environment-variable-to-the-compiler-for-the-windows-command-prompt"></a>Задание переменной среды PATH компилятору для командной строки Windows
 
-1. Use the Windows Search feature to find Vbc.exe on your local disk.
+1. С помощью функции поиска Windows найдите файл Vbc. exe на локальном диске.
 
-    The exact name of the directory where the compiler is located depends on the location of the Windows directory and the version of the ".NET Framework" installed. If you have more than one version of the ".NET Framework" installed, you must determine which version to use (typically the latest version).
+    Точное имя каталога, в котором находится компилятор, зависит от расположения каталога Windows и версии установленного ".NET Framework". Если установлена более одна версия ".NET Framework", необходимо определить, какую версию следует использовать (как правило, это последняя версия).
 
-2. From your **Start** Menu, right-click **My Computer**, and then click **Properties** from the shortcut menu.
+2. В меню " **Пуск** " щелкните правой кнопкой мыши **Мой компьютер**, а затем в контекстном меню выберите пункт **Свойства** .
 
-3. Click the **Advanced** tab, and then click **Environment Variables**.
+3. Откройте вкладку **Дополнительно**, затем нажмите кнопку **Переменные среды**.
 
-4. In the **System** variables pane, select **Path** from the list and click **Edit**.
+4. В области **системные** переменные выберите **путь** из списка и нажмите кнопку **изменить**.
 
-5. In the **Edit System** Variable dialog box, move the insertion point to the end of the string in the **Variable Value** field and type a semicolon (;) followed by the full directory name found in Step 1.
+5. В диалоговом окне **Изменение системной** переменной переместите курсор в конец строки в поле **значение переменной** и введите точку с запятой (;) , за которым следует полное имя каталога, найденное на шаге 1.
 
-6. Click **OK** to confirm your edits and close the dialog boxes.
+6. Нажмите кнопку **ОК** , чтобы подтвердить изменения и закрыть диалоговые окна.
 
-     After you change the PATH environment variable, you can run the Visual Basic compiler at the Windows Command Prompt from any directory on the computer.
+     После изменения переменной среды PATH можно запустить компилятор Visual Basic в командной строке Windows из любого каталога на компьютере.
 
-## <a name="to-invoke-the-compiler-using-the-windows-command-prompt"></a>To invoke the compiler using the Windows Command Prompt
+## <a name="to-invoke-the-compiler-using-the-windows-command-prompt"></a>Вызов компилятора с помощью командной строки Windows
 
-1. From the **Start** menu, click on the **Accessories** folder, and then open the **Windows Command Prompt**.
+1. В меню **Пуск** выберите папку **стандартные** , а затем откройте **командную строку Windows**.
 
-2. At the command line, type `vbc.exe`*sourceFileName* and then press ENTER.
+2. В командной строке введите `vbc.exe`*саурцефиленаме* и нажмите клавишу ВВОД.
 
-     For example, if you stored your source code in a directory called `SourceFiles`, you would open the Command Prompt and type `cd SourceFiles` to change to that directory. If the directory contained a source file named `Source.vb`, you could compile it by typing `vbc.exe Source.vb`.
+     Например, если вы сохранили исходный код в каталоге с именем `SourceFiles`, откройте командную строку и введите `cd SourceFiles`, чтобы перейти к этому каталогу. Если каталог содержит исходный файл с именем `Source.vb`, его можно скомпилировать, введя `vbc.exe Source.vb`.
 
 ## <a name="see-also"></a>См. также
 

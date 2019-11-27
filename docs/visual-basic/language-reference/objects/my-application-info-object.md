@@ -13,20 +13,20 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344148"
 ---
 # <a name="myapplicationinfo-object"></a>Объект My.Application.Info
-Provides properties for getting the information about the application, such as the version number, description, loaded assemblies, and so on.  
+Предоставляет свойства для получения сведений о приложении, таких как номер версии, описание, загруженные сборки и т. д.  
   
-## <a name="remarks"></a>Заметки  
+## <a name="remarks"></a>Примечания  
  Сведения о методах и свойствах объекта `My.Application.Info` см. в разделе <xref:Microsoft.VisualBasic.ApplicationServices.AssemblyInfo>.  
   
 > [!NOTE]
-> You can use properties of the <xref:System.Diagnostics.FileVersionInfo?displayProperty=nameWithType> class to obtain information about a file on disk.  
+> Для получения сведений о файле на диске можно использовать свойства класса <xref:System.Diagnostics.FileVersionInfo?displayProperty=nameWithType>.  
   
 ## <a name="requirements"></a>Требования  
  **Пространство имен:** <xref:Microsoft.VisualBasic.ApplicationServices>  
   
  **Класс:** <xref:Microsoft.VisualBasic.ApplicationServices.AssemblyInfo>  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **Сборка:** Библиотека времени выполнения Visual Basic (в Microsoft. VisualBasic. dll)  
   
 ## <a name="see-also"></a>См. также
 

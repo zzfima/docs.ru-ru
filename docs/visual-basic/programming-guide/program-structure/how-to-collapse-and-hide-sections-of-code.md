@@ -15,20 +15,20 @@ ms.locfileid: "74347411"
 ---
 # <a name="how-to-collapse-and-hide-sections-of-code-visual-basic"></a>Практическое руководство. Сворачивание и скрытие частей кода (Visual Basic)
 
-The `#Region` directive enables you to collapse and hide sections of code in Visual Basic files. The `#Region` directive lets you specify a block of code that you can expand or collapse when using the Visual Studio code editor. The ability to hide code selectively makes your files more manageable and easier to read. Дополнительные сведения см. в разделе [Структура](/visualstudio/ide/outlining).
+Директива `#Region` позволяет сворачивать и скрывать разделы кода в файлах Visual Basic. Директива `#Region` позволяет указать блок кода, который можно развернуть или свернуть при использовании редактора кода Visual Studio. Возможность скрывать код выборочно делает файлы более управляемыми и удобочитаемыми. Дополнительные сведения см. в разделе [Структура](/visualstudio/ide/outlining).
 
-`#Region` directives support code block semantics such as `#If...#End If`. This means they cannot begin in one block and end in another; the start and end must be in the same block. `#Region` directives are not supported within functions.
+директивы `#Region` поддерживают семантику блока кода, например `#If...#End If`. Это означает, что они не могут начинаться в одном блоке и заканчиваться другим; Начало и конец должны находиться в одном блоке. директивы `#Region` не поддерживаются в функциях.
 
-## <a name="to-collapse-and-hide-a-section-of-code"></a>To collapse and hide a section of code
+## <a name="to-collapse-and-hide-a-section-of-code"></a>Сворачивание и скрытие раздела кода
 
-Place the section of code between the `#Region` and `#End Region` statements, as in the following example:
+Разместите раздел кода между инструкциями `#Region` и `#End Region`, как показано в следующем примере:
 
 [!code-vb[VbVbalrConditionalComp#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConditionalComp/VB/Class1.vb#6)]
 
-The `#Region` block can be used multiple times in a code file; thus, users can define their own blocks of procedures and classes that can, in turn, be collapsed. `#Region` blocks can also be nested within other `#Region` blocks.
+Блок `#Region` можно использовать несколько раз в файле кода. Таким же пользователь может определить собственные блоки процедур и классов, которые, в свою очередь, можно свернуть. блоки `#Region` также могут быть вложены в другие блоки `#Region`.
 
 > [!NOTE]
-> Hiding code does not prevent it from being compiled and does not affect `#If...#End If` statements.
+> Скрытие кода не мешает его компиляции и не влияет на `#If...#End If` инструкции.
 
 ## <a name="see-also"></a>См. также
 

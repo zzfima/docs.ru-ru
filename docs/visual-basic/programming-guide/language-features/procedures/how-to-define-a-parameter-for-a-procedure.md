@@ -16,41 +16,41 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344888"
 ---
 # <a name="how-to-define-a-parameter-for-a-procedure-visual-basic"></a>Практическое руководство. Объявление параметра для процедуры (Visual Basic)
-A *parameter* allows the calling code to pass a value to the procedure when it calls it. You declare each parameter for a procedure the same way you declare a variable, specifying its name and data type. You also specify the passing mechanism, and whether the parameter is optional.  
+*Параметр* позволяет вызывающему коду передавать значение в процедуру при ее вызове. Каждый параметр для процедуры объявляется точно так же, как и переменная, указывая ее имя и тип данных. Вы также указываете механизм передачи и указывает, является ли параметр необязательным.  
   
- For more information, see [Procedure Parameters and Arguments](./procedure-parameters-and-arguments.md).  
+ Дополнительные сведения см. в разделе [Параметры и аргументы процедуры](./procedure-parameters-and-arguments.md).  
   
-### <a name="to-define-a-procedure-parameter"></a>To define a procedure parameter  
+### <a name="to-define-a-procedure-parameter"></a>Определение параметра процедуры  
   
-1. In the procedure declaration, add the parameter name to the procedure's parameter list, separating it from other parameters by commas.  
+1. В объявлении процедуры добавьте имя параметра в список параметров процедуры, отделив его от других параметров запятыми.  
   
-2. Decide the data type of the parameter.  
+2. Определите тип данных параметра.  
   
-3. Follow the parameter name with an `As` clause to specify the data type.  
+3. Чтобы указать тип данных, используйте имя параметра с предложением `As`.  
   
-4. Decide the passing mechanism you want for the parameter. Normally you pass a parameter by value, unless you want the procedure to be able to change its value in the calling code.  
+4. Определите механизм передачи для параметра. Обычно параметр передается по значению, если не требуется, чтобы процедура могла изменять ее значение в вызывающем коде.  
   
-5. Precede the parameter name with [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) or [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) to specify the passing mechanism. For more information, see [Differences Between Passing an Argument By Value and By Reference](./differences-between-passing-an-argument-by-value-and-by-reference.md).  
+5. Перед именем параметра следует использовать [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) или [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) , чтобы указать механизм передачи. Дополнительные сведения см. в разделе [различия между передачей аргумента по значению и по ссылке](./differences-between-passing-an-argument-by-value-and-by-reference.md).  
   
-6. If the parameter is optional, precede the passing mechanism with [Optional](../../../../visual-basic/language-reference/modifiers/optional.md) and follow the parameter data type with an equal sign (`=`) and a default value.  
+6. Если параметр является необязательным, следует указать перед механизмом передачи с [необязательным](../../../../visual-basic/language-reference/modifiers/optional.md) и следовать типу данных параметра со знаком равенства (`=`) и значением по умолчанию.  
   
-     The following example defines the outline of a `Sub` procedure with three parameters. The first two are required and the third is optional. The parameter declarations are separated in the parameter list by commas.  
+     В следующем примере определяется структура `Sub` процедуры с тремя параметрами. Первые два являются обязательными, а третья — необязательно. Объявления параметров разделяются в списке параметров запятыми.  
   
      [!code-vb[VbVbcnProcedures#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#33)]  
   
-     The first parameter accepts a `customer` object, and `updateCustomer` can directly update the variable passed to `c` because the argument is passed [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md). The procedure cannot change the values of the last two arguments because they are passed [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md).  
+     Первый параметр принимает объект `customer`, и `updateCustomer` может напрямую обновить переменную, переданную в `c`, так как аргумент передается по [ссылке ByRef](../../../../visual-basic/language-reference/modifiers/byref.md). Процедура не может изменить значения двух последних аргументов, так как они передаются по [значению ByVal](../../../../visual-basic/language-reference/modifiers/byval.md).  
   
-     If the calling code does not supply a value for the `level` parameter, Visual Basic sets it to the default value of 0.  
+     Если вызывающий код не предоставляет значение для параметра `level`, Visual Basic присваивает ему значение по умолчанию 0.  
   
-     If the type checking switch ([Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) is `Off`, the `As` clause is optional when you define a parameter. However, if any one parameter uses an `As` clause, all of them must use it. If the type checking switch is `On`, the `As` clause is required for every parameter definition.  
+     Если параметр проверки типов ([оператор Option строго](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) имеет значение `Off`, предложение `As` является необязательным при определении параметра. Однако если какой либо параметр использует предложение `As`, все они должны использовать его. Если параметр проверки типа `On`, то для каждого определения параметра требуется предложение `As`.  
   
-     Specifying data types for all your programming elements is known as *strong typing*. When you set `Option Strict On`, Visual Basic enforces strong typing. This is strongly recommended, for the following reasons:  
+     Указание типов данных для всех элементов программирования называется *строгой типизацией*. При установке `Option Strict On`Visual Basic обеспечивает строгую типизацию. Это настоятельно рекомендуется по следующим причинам:  
   
-    - It enables IntelliSense support for your variables and parameters. This allows you to see their properties and other members as you type in your code.  
+    - Он обеспечивает поддержку IntelliSense для переменных и параметров. Это позволяет просматривать их свойства и другие члены по мере ввода кода.  
   
-    - It allows the compiler to perform type checking. This helps catch statements that can fail at run time due to errors such as overflow. It also catches calls to methods on objects that do not support them.  
+    - Он позволяет компилятору выполнять проверку типов. Это помогает отслеживать операторы, которые могут завершаться сбоем во время выполнения из-за таких ошибок, как переполнение. Он также перехватывает вызовы методов для объектов, которые их не поддерживают.  
   
-    - It results in faster execution of your code. One reason for this is that if you do not specify a data type for a programming element, the Visual Basic compiler assigns it the `Object` type. Your compiled code might have to convert back and forth between `Object` and other data types, which reduces performance.  
+    - Это приводит к ускорению выполнения кода. Одна из причин этого заключается в том, что если не указать тип данных для программного элемента, компилятор Visual Basic присваивает ему тип `Object`. Скомпилированному коду может потребоваться выполнить преобразование между `Object` и другими типами данных, что снижает производительность.  
   
 ## <a name="see-also"></a>См. также
 

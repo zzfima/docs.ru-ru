@@ -15,32 +15,32 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74340731"
 ---
 # <a name="how-to-call-a-procedure-that-returns-a-value-visual-basic"></a>Практическое руководство. Вызов процедуры, возвращающей значение (Visual Basic)
-A `Function` procedure returns a value to the calling code. You call it by including its name and arguments either on the right side of an assignment statement or in an expression.  
+`Function` процедура возвращает значение в вызывающий код. Его можно вызвать, указав его имя и аргументы в правой части оператора присваивания или в выражении.  
   
-### <a name="to-call-a-function-procedure-within-an-expression"></a>To call a Function procedure within an expression  
+### <a name="to-call-a-function-procedure-within-an-expression"></a>Вызов процедуры Function в выражении  
   
-1. Use the `Function` procedure name the same way you would use a variable. You can use a `Function` procedure call anywhere you can use a variable or constant in an expression.  
+1. Используйте `Function` имя процедуры так же, как и переменную. Можно использовать вызов процедуры `Function` в любом месте, где можно использовать переменную или константу в выражении.  
   
-2. Follow the procedure name with parentheses to enclose the argument list. If there are no arguments, you can optionally omit the parentheses. However, using the parentheses makes your code easier to read.  
+2. Чтобы заключить список аргументов, выполните имя процедуры с круглыми скобками. Если аргументы отсутствуют, можно дополнительно опустить круглые скобки. Однако использование круглых скобок упрощает чтение кода.  
   
-3. Place the arguments in the argument list within the parentheses, separated by commas. Be sure you supply the arguments in the same order that the `Function` procedure defines the corresponding parameters.  
+3. Поместите аргументы в список аргументов в круглых скобках, разделяя их запятыми. Убедитесь, что аргументы указываются в том же порядке, в котором процедура `Function` определяет соответствующие параметры.  
   
-     Alternatively, you can pass one or more arguments by name. For more information, see [Passing Arguments by Position and by Name](./passing-arguments-by-position-and-by-name.md).  
+     Кроме того, можно передать один или несколько аргументов по имени. Дополнительные сведения см. в разделе [Передача аргументов по положению и по имени](./passing-arguments-by-position-and-by-name.md).  
   
-4. The value returned from the procedure participates in the expression just as the value of a variable or constant would.  
+4. Значение, возвращаемое процедурой, участвует в выражении точно так же, как значение переменной или константы.  
   
-### <a name="to-call-a-function-procedure-in-an-assignment-statement"></a>To call a Function procedure in an assignment statement  
+### <a name="to-call-a-function-procedure-in-an-assignment-statement"></a>Вызов процедуры Function в операторе присваивания  
   
-1. Use the `Function` procedure name following the equal (`=`) sign in the assignment statement.  
+1. Используйте `Function` имя процедуры после знака равенства (`=`) в операторе присваивания.  
   
-2. Follow the procedure name with parentheses to enclose the argument list. If there are no arguments, you can optionally omit the parentheses. However, using the parentheses makes your code easier to read.  
+2. Чтобы заключить список аргументов, выполните имя процедуры с круглыми скобками. Если аргументы отсутствуют, можно дополнительно опустить круглые скобки. Однако использование круглых скобок упрощает чтение кода.  
   
-3. Place the arguments in the argument list within the parentheses, separated by commas. Be sure you supply the arguments in the same order that the `Function` procedure defines the corresponding parameters, unless you are passing them by name.  
+3. Поместите аргументы в список аргументов в круглых скобках, разделяя их запятыми. Убедитесь, что аргументы указываются в том же порядке, в котором `Function` процедура определяет соответствующие параметры, если не передать их по имени.  
   
-4. The value returned from the procedure is stored in the variable or property on the left side of the assignment statement.  
+4. Значение, возвращаемое процедурой, хранится в переменной или свойстве в левой части оператора присваивания.  
   
 ## <a name="example"></a>Пример  
- The following example calls the Visual Basic <xref:Microsoft.VisualBasic.Interaction.Environ%2A> to retrieve the value of an operating system environment variable. The first line calls `Environ` within an expression, and the second line calls it in an assignment statement. `Environ` takes the variable name as its sole argument. It returns the variable's value to the calling code.  
+ В следующем примере вызывается Visual Basic <xref:Microsoft.VisualBasic.Interaction.Environ%2A> для получения значения переменной среды операционной системы. Первая строка вызывает `Environ` в выражении, а вторая строка вызывает его в операторе присваивания. `Environ` принимает имя переменной в качестве единственного аргумента. Он возвращает значение переменной в вызывающий код.  
   
  [!code-vb[VbVbcnProcedures#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#7)]  
   

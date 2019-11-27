@@ -18,7 +18,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74331038"
 ---
 # <a name="-operator-visual-basic"></a>Оператор /= (Visual Basic)
-Divides the value of a variable or property by the value of an expression and assigns the floating-point result to the variable or property.  
+Делит значение переменной или свойства на значение выражения и присваивает результат с плавающей запятой переменной или свойству.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -28,30 +28,30 @@ variableorproperty /= expression
   
 ## <a name="parts"></a>Части  
  `variableorproperty`  
- Обязательный. Any numeric variable or property.  
+ Обязательно. Любая числовая переменная или свойство.  
   
  `expression`  
- Обязательный. Произвольное числовое выражение.  
+ Обязательно. Произвольное числовое выражение.  
   
-## <a name="remarks"></a>Заметки  
- The element on the left side of the `/=` operator can be a simple scalar variable, a property, or an element of an array. The variable or property cannot be [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md).  
+## <a name="remarks"></a>Примечания  
+ Элемент в левой части оператора `/=` может быть простой скалярной переменной, свойством или элементом массива. Переменная или свойство не может быть [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md).  
   
- The `/=` operator first divides the value of the variable or property (on the left-hand side of the operator) by the value of the expression (on the right-hand side of the operator). The operator then assigns the floating-point result of that operation to the variable or property.  
+ Оператор `/=` сначала делит значение переменной или свойства (в левой части оператора) на значение выражения (в правой части оператора). в противном случае. Затем оператор присваивает результат операции с плавающей запятой переменной или свойству.  
   
- This statement assigns a `Double` value to the variable or property on the left. If `Option Strict` is `On`, `variableorproperty` must be a `Double`. If `Option Strict` is `Off`, Visual Basic performs an implicit conversion and assigns the resulting value to `variableorproperty`, with a possible error at run time. For more information, see [Widening and Narrowing Conversions](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md) and [Option Strict Statement](../../../visual-basic/language-reference/statements/option-strict-statement.md).  
+ Эта инструкция присваивает значение `Double` переменной или свойству слева. Если `Option Strict` `On`, `variableorproperty` должен быть `Double`. Если `Option Strict` имеет `Off`, Visual Basic выполняет неявное преобразование и присваивает результирующее значение `variableorproperty`, возкак возможную ошибку во время выполнения. Дополнительные сведения см. в разделе [расширяющие и сужающие преобразования](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md) и [Option](../../../visual-basic/language-reference/statements/option-strict-statement.md)parallelism.  
   
 ## <a name="overloading"></a>Перегрузка  
- The [/ Operator (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-operator.md) can be *overloaded*, which means that a class or structure can redefine its behavior when an operand has the type of that class or structure. Overloading the `/` operator affects the behavior of the `/=` operator. If your code uses `/=` on a class or structure that overloads `/`, be sure you understand its redefined behavior. Для получения дополнительной информации см. [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+ [Оператор/(Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-operator.md) может быть *перегружен*, что означает, что класс или структура может переопределить свое поведение, когда операнд имеет тип этого класса или структуры. Перегрузка оператора `/` влияет на поведение оператора `/=`. Если в коде используется `/=` в классе или структуре, которая перегружает `/`, убедитесь, что вы понимаете его переопределенное поведение. Для получения дополнительной информации см. [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Пример  
- The following example uses the `/=` operator to divide one `Integer` variable by a second and assign the quotient to the first variable.  
+ В следующем примере оператор `/=` используется для деления одной `Integer` переменной на вторую и присваивания значения частного для первой переменной.  
   
  [!code-vb[VbVbalrOperators#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#17)]  
   
 ## <a name="see-also"></a>См. также
 
-- [/ Operator (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-operator.md)
-- [\\= Operator](../../../visual-basic/language-reference/operators/integer-division-assignment-operator.md)
+- [Оператор/(Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-operator.md)
+- [Оператор \\=](../../../visual-basic/language-reference/operators/integer-division-assignment-operator.md)
 - [Операторы присваивания](../../../visual-basic/language-reference/operators/assignment-operators.md)
 - [Арифметические операторы](../../../visual-basic/language-reference/operators/arithmetic-operators.md)
 - [Порядок применения операторов в Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)

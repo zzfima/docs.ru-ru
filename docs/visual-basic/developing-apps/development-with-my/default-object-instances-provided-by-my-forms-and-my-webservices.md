@@ -16,17 +16,17 @@ ms.locfileid: "74330204"
 ---
 # <a name="default-object-instances-provided-by-myforms-and-mywebservices-visual-basic"></a>Экземпляры объектов, которые My.Forms и My.WebServices предоставляют по умолчанию (Visual Basic)
 
-The [My.Forms](../../../visual-basic/language-reference/objects/my-forms-object.md) and [My.WebServices](../../../visual-basic/language-reference/objects/my-webservices-object.md) objects provide access to forms, data sources, and XML Web services used by your application. They do this by providing collections of *default instances* of each of these objects.  
+Объекты [My. Forms](../../../visual-basic/language-reference/objects/my-forms-object.md) и [My. WebService](../../../visual-basic/language-reference/objects/my-webservices-object.md) предоставляют доступ к формам, источникам данных и веб-службам XML, используемым приложением. Это делается путем предоставления коллекций *экземпляров по умолчанию* для каждого из этих объектов.  
   
-## <a name="default-instances"></a>Default Instances  
+## <a name="default-instances"></a>Экземпляры по умолчанию  
 
- A default instance is an instance of the class that is provided by the runtime and does not need to be declared and instantiated using the `Dim` and `New` statements. The following example demonstrates how you might have declared and instantiated an instance of a <xref:System.Windows.Forms.Form> class called `Form1`, and how you are now able to get a default instance of this <xref:System.Windows.Forms.Form> class through `My.Forms`.  
+ Экземпляр по умолчанию — это экземпляр класса, который предоставляется средой выполнения и не требует объявления и создания экземпляра с помощью инструкций `Dim` и `New`. В следующем примере показано, как можно было объявить и создать экземпляр <xref:System.Windows.Forms.Form> класса с именем `Form1`, и как теперь можно получить экземпляр по умолчанию этого класса <xref:System.Windows.Forms.Form> через `My.Forms`.  
   
  [!code-vb[VbVbcnMy#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMy/VB/Class1.vb#5)]  
   
  [!code-vb[VbVbcnMy#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMy/VB/Class1.vb#6)]  
   
- The `My.Forms` object returns a collection of default instances for every `Form` class that exists in your project. Similarly, `My.WebServices` provides a default instance of the proxy class for every Web service that you have created a reference to in your application.  
+ Объект `My.Forms` Возвращает коллекцию экземпляров по умолчанию для каждого класса `Form`, существующего в проекте. Аналогичным образом `My.WebServices` предоставляет экземпляр класса-посредника по умолчанию для каждой веб-службы, на которую вы создали ссылку в приложении.  
   
 ## <a name="see-also"></a>См. также
 

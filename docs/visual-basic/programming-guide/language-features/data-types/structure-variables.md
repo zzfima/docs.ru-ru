@@ -16,7 +16,7 @@ ms.locfileid: "74346294"
 ---
 # <a name="structure-variables-visual-basic"></a>Переменные структуры (Visual Basic)
 
-Once you have created a structure, you can declare procedure-level and module-level variables as that type. For example, you can create a structure that records information about a computer system. В следующем примере это показано.
+После создания структуры можно объявить переменные уровня процедуры и модуля в качестве этого типа. Например, можно создать структуру, которая записывает сведения о компьютерной системе. В следующем примере это показано.
 
 ```vb
 Public Structure systemInfo
@@ -26,18 +26,18 @@ Public Structure systemInfo
 End Structure
 ```
 
-You can now declare variables of that type. The following declaration illustrates this.
+Теперь можно объявлять переменные этого типа. Это показано в следующем объявлении.
 
 ```vb
 Dim mySystem, yourSystem As systemInfo
 ```
 
 > [!NOTE]
-> In classes and modules, structures declared using the [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md) default to public access. If you intend a structure to be private, make sure you declare it using the [Private](../../../../visual-basic/language-reference/modifiers/private.md) keyword.
+> В классах и модулях структуры, объявленные с помощью [инструкции Dim](../../../../visual-basic/language-reference/statements/dim-statement.md) , по умолчанию имеют открытый доступ. Если структура должна быть закрытой, убедитесь, что она объявлена с помощью ключевого слова [Private](../../../../visual-basic/language-reference/modifiers/private.md) .
 
-## <a name="access-to-structure-values"></a>Access to Structure Values
+## <a name="access-to-structure-values"></a>Доступ к значениям структуры
 
-To assign and retrieve values from the elements of a structure variable, you use the same syntax as you use to set and get properties on an object. You place the member access operator (`.`) between the structure variable name and the element name. The following example accesses elements of the variables previously declared as type `systemInfo`.
+Для присвоения и извлечения значений из элементов переменной структуры используется тот же синтаксис, что и при использовании для задания и получения свойств объекта. Оператор доступа к членам (`.`) размещается между именем переменной структуры и именем элемента. В следующем примере осуществляется доступ к элементам переменных, ранее объявленных как тип `systemInfo`.
 
 ```vb
 mySystem.cPU = "486"
@@ -45,22 +45,22 @@ Dim tooOld As Boolean
 If yourSystem.purchaseDate < #1/1/1992# Then tooOld = True
 ```
 
-## <a name="assigning-structure-variables"></a>Assigning Structure Variables
+## <a name="assigning-structure-variables"></a>Присваивание переменных структуры
 
-You can also assign one variable to another if both are of the same structure type. This copies all the elements of one structure to the corresponding elements in the other. The following declaration illustrates this.
+Можно также присвоить одну переменную другой, если оба имеют один и тот же тип структуры. Все элементы одной структуры копируются в соответствующие элементы в другом. Это показано в следующем объявлении.
 
 ```vb
 yourSystem = mySystem
 ```
 
-If a structure element is a reference type, such as a `String`, `Object`, or array, the pointer to the data is copied. In the previous example, if `systemInfo` had included an object variable, then the preceding example would have copied the pointer from `mySystem` to `yourSystem`, and a change to the object's data through one structure would be in effect when accessed through the other structure.
+Если элемент структуры является ссылочным типом, например `String`, `Object`или массивом, то копируется указатель на данные. В предыдущем примере, если `systemInfo` включала объектная переменная, то в предыдущем примере был скопирован указатель из `mySystem` в `yourSystem`, а изменение данных объекта через одну структуру вступит в действие при доступе через другую структуру.
 
 ## <a name="see-also"></a>См. также
 
 - [Типы данных](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
 - [Простые типы данных](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)
 - [Составные типы данных](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)
-- [Типы значений и ссылочные типы](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+- [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
 - [Структуры](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)
 - [Устранение неполадок, связанных с типами данных](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
 - [Практическое руководство. Объявление структуры](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)

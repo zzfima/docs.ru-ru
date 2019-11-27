@@ -12,13 +12,13 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349179"
 ---
 # <a name="out-of-string-space-visual-basic"></a>Отсутствует место в строке (Visual Basic)
-With Visual Basic, you can use very large strings. However, the requirements of other programs and the way you work with your strings can still cause this error.  
+С помощью Visual Basic можно использовать очень большие строки. Однако требования других программ и способ работы со строками по-прежнему могут вызвать эту ошибку.  
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  
   
-1. Make sure that an expression requiring temporary string creation during evaluation is not causing the error.  
+1. Убедитесь, что в выражении, которое требует создания временной строки во время вычисления, не приводит к возникновению ошибки.  
   
-2. Remove any unnecessary applications from memory to create more space.  
+2. Удалите из памяти все ненужные приложения, чтобы освободить пространство.  
   
 ## <a name="see-also"></a>См. также
 

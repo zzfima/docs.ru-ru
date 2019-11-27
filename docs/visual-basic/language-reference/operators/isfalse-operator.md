@@ -15,17 +15,17 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349518"
 ---
 # <a name="isfalse-operator-visual-basic"></a>Оператор IsFalse (Visual Basic)
-Determines whether an expression is `False`.  
+Определяет, является ли выражение `False`.  
   
- You cannot call `IsFalse` explicitly in your code, but the Visual Basic compiler can use it to generate code from `AndAlso` clauses. If you define a class or structure and then use a variable of that type in an `AndAlso` clause, you must define `IsFalse` on that class or structure.  
+ Нельзя явно вызывать `IsFalse` в коде, но компилятор Visual Basic может использовать его для создания кода на основе `AndAlso`ных предложений. Если вы определяете класс или структуру, а затем используете переменную этого типа в предложении `AndAlso`, необходимо определить `IsFalse` для этого класса или структуры.  
   
- The compiler considers the `IsFalse` and `IsTrue` operators as a *matched pair*. This means that if you define one of them, you must also define the other one.  
+ Компилятор рассматривает операторы `IsFalse` и `IsTrue` как *парную пару*. Это означает, что при определении одного из них необходимо также определить другой.  
   
 > [!NOTE]
-> The `IsFalse` operator can be *overloaded*, which means that a class or structure can redefine its behavior when its operand has the type of that class or structure. If your code uses this operator on such a class or structure, be sure you understand its redefined behavior. Для получения дополнительной информации см. [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+> Оператор `IsFalse` может быть *перегружен*, а это означает, что класс или структура могут переопределять свое поведение, когда его операнд имеет тип этого класса или структуры. Если код использует этот оператор для такого класса или структуры, убедитесь, что вы понимаете его переопределенное поведение. Для получения дополнительной информации см. [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Пример  
- The following code example defines the outline of a structure that includes definitions for the `IsFalse` and `IsTrue` operators.  
+ В следующем примере кода определяется структура структуры, включающей определения для операторов `IsFalse` и `IsTrue`.  
   
  [!code-vb[VbVbalrOperators#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#28)]  
   

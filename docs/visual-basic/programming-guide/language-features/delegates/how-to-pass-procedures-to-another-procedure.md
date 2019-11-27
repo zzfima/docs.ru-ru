@@ -1,5 +1,5 @@
 ---
-title: 'How to: Pass Procedures to Another Procedure'
+title: Инструкции. Передача процедур в другую процедуру
 ms.date: 07/20/2015
 helpviewer_keywords:
 - AddressOf operator [Visual Basic]
@@ -13,37 +13,37 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345248"
 ---
 # <a name="how-to-pass-procedures-to-another-procedure-in-visual-basic"></a>Практическое руководство. Передача процедур другой процедуре в Visual Basic
-This example shows how to use delegates to pass a procedure to another procedure.  
+В этом примере показано, как использовать делегаты для передачи процедуры в другую процедуру.  
   
- A delegate is a type that you can use like any other type in Visual Basic. The `AddressOf` operator returns a delegate object when applied to a procedure name.  
+ Делегат — это тип, который можно использовать как любой другой тип в Visual Basic. Оператор `AddressOf` возвращает объект делегата при применении к имени процедуры.  
   
- This example has a procedure with a delegate parameter that can take a reference to another procedure, obtained with the `AddressOf` operator.  
+ Этот пример содержит процедуру с параметром делегата, который может принимать ссылку на другую процедуру, полученную с помощью оператора `AddressOf`.  
   
-### <a name="create-the-delegate-and-matching-procedures"></a>Create the delegate and matching procedures  
+### <a name="create-the-delegate-and-matching-procedures"></a>Создание делегата и процедур сопоставления  
   
-1. Create a delegate named `MathOperator`.  
+1. Создайте делегат с именем `MathOperator`.  
   
      [!code-vb[VbVbalrDelegates#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#1)]  
   
-2. Create a procedure named `AddNumbers` with parameters and return value that match those of `MathOperator`, so that the signatures match.  
+2. Создайте процедуру с именем `AddNumbers` с параметрами и возвращаемым значением, которые соответствуют значениям `MathOperator`, чтобы сигнатуры совпадали.  
   
      [!code-vb[VbVbalrDelegates#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#2)]  
   
-3. Create a procedure named `SubtractNumbers` with a signature that matches `MathOperator`.  
+3. Создайте процедуру с именем `SubtractNumbers` с сигнатурой, которая соответствует `MathOperator`.  
   
      [!code-vb[VbVbalrDelegates#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#3)]  
   
-4. Create a procedure named `DelegateTest` that takes a delegate as a parameter.  
+4. Создайте процедуру с именем `DelegateTest`, которая принимает делегат в качестве параметра.  
   
-     This procedure can accept a reference to `AddNumbers` or `SubtractNumbers`, because their signatures match the `MathOperator` signature.  
+     Эта процедура может принять ссылку на `AddNumbers` или `SubtractNumbers`, так как их сигнатуры соответствуют подписи `MathOperator`.  
   
      [!code-vb[VbVbalrDelegates#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#4)]  
   
-5. Create a procedure named `Test` that calls `DelegateTest` once with the delegate for `AddNumbers` as a parameter, and again with the delegate for `SubtractNumbers` as a parameter.  
+5. Создайте процедуру с именем `Test`, которая вызывает `DelegateTest` один раз с делегатом для `AddNumbers` в качестве параметра и снова с делегатом для `SubtractNumbers` в качестве параметра.  
   
      [!code-vb[VbVbalrDelegates#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#5)]  
   
-     When `Test` is called, it first displays the result of `AddNumbers` acting on `5` and `3`, which is 8. Then the result of `SubtractNumbers` acting on `9` and `3` is displayed, which is 6.  
+     При вызове `Test` сначала отображается результат `AddNumbers`, действующего на `5` и `3`, что равно 8. Затем отображается результат `SubtractNumbers`, действующего в `9` и `3`, что равно 6.  
   
 ## <a name="see-also"></a>См. также
 

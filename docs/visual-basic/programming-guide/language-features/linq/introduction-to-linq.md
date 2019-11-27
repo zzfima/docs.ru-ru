@@ -20,39 +20,39 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344941"
 ---
 # <a name="introduction-to-linq-in-visual-basic"></a>Знакомство с LINQ в Visual Basic
-Language-Integrated Query (LINQ) adds query capabilities to Visual Basic and provides simple and powerful capabilities when you work with all kinds of data. Rather than sending a query to a database to be processed, or working with different query syntax for each type of data that you are searching, LINQ introduces queries as part of the Visual Basic language. Синтаксис запросов не зависит от типа данных.  
+Языковой интегрированный запрос (LINQ) добавляет возможности запросов в Visual Basic и предоставляет простые и эффективные возможности при работе со всеми типами данных. Вместо отправки запроса в базу данных для обработки или работы с другим синтаксисом запросов для каждого типа искомых данных LINQ вводит запросы в составе языка Visual Basic. Синтаксис запросов не зависит от типа данных.  
   
- LINQ enables you to query data from a SQL Server database, XML, in-memory arrays and collections, ADO.NET datasets, or any other remote or local data source that supports LINQ. You can do all this with common Visual Basic language elements. Because your queries are written in the Visual Basic language, your query results are returned as strongly-typed objects. Эти объекты поддерживают технологию IntelliSense, что позволяет писать код быстрее и перехватывать ошибки в запросах при компиляции, а не при выполнении. Запросы LINQ можно использовать как источник дополнительных запросов для уточнения результатов, а также связывать с элементами управления, позволяя пользователям легко просматривать и изменять результаты запросов.  
+ LINQ позволяет запрашивать данные из SQL Server базы данных, XML, массивов в памяти и коллекций, ADO.NET DataSets или любого другого удаленного или локального источника данных, поддерживающего LINQ. Все это можно сделать с помощью стандартных элементов языка Visual Basic. Так как запросы написаны на языке Visual Basic, результаты запроса возвращаются в виде строго типизированных объектов. Эти объекты поддерживают технологию IntelliSense, что позволяет писать код быстрее и перехватывать ошибки в запросах при компиляции, а не при выполнении. Запросы LINQ можно использовать как источник дополнительных запросов для уточнения результатов, а также связывать с элементами управления, позволяя пользователям легко просматривать и изменять результаты запросов.  
   
  Например в следующем примере кода показан запрос LINQ, возвращающий список заказчиков из коллекции и группирующий их по расположению.  
   
  [!code-vb[VbVbalrIntroToLINQ#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/class2.vb#1)]  
   
 ## <a name="running-the-examples"></a>Выполнение примеров  
- To run the examples in the introduction and in the [Structure of a LINQ Query](#structure-of-a-linq-query) section, include the following code, which returns lists of customers and orders.  
+ Чтобы выполнить примеры во введении и в структуре раздела [запроса LINQ](#structure-of-a-linq-query) , включите следующий код, который возвращает списки клиентов и заказов.  
   
  [!code-vb[VbVbalrIntroToLINQ#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/class2.vb#31)]  
   
-## <a name="linq-providers"></a>LINQ providers  
- A *LINQ provider* maps your Visual Basic LINQ queries to the data source being queried. При написании запроса LINQ поставщик принимает запрос и переводит его в команды, которые источник данных будет способен выполнить. Затем поставщик преобразует данные из источника в объекты, составляющие результат запроса. И, наконец, при отправке обновлений на источник данных он преобразует объекты в данные.  
+## <a name="linq-providers"></a>Поставщики LINQ  
+ *Поставщик LINQ* сопоставляет Visual Basic запросы LINQ с запрашиваемым источником данных. При написании запроса LINQ поставщик принимает запрос и переводит его в команды, которые источник данных будет способен выполнить. Затем поставщик преобразует данные из источника в объекты, составляющие результат запроса. И, наконец, при отправке обновлений на источник данных он преобразует объекты в данные.  
   
- Visual Basic includes the following LINQ providers.  
+ Visual Basic включает следующие поставщики LINQ.  
   
 |Поставщик|Описание|  
 |---|---|  
-|LINQ to Objects|Поставщик LINQ to Objects позволяет направлять запросы к коллекциям и массивам, которые находятся в памяти. Если объект поддерживает интерфейс <xref:System.Collections.IEnumerable> или <xref:System.Collections.Generic.IEnumerable%601>, поставщик LINQ to Objects позволяет направлять к нему запросы.<br /><br /> You can enable the LINQ to Objects provider by importing the <xref:System.Linq> namespace, which is imported by default for all Visual Basic projects.<br /><br /> For more information about the LINQ to Objects provider, see [LINQ to Objects](../../concepts/linq/linq-to-objects.md).|  
-|LINQ to SQL|Поставщик LINQ to SQL позволяет запрашивать и изменять данные в базе данных SQL Server. Это упрощает сопоставление объектной модели приложения с таблицами и объектами в базе данных.<br /><br /> Visual Basic makes it easier to work with LINQ to SQL by including the Object Relational Designer (O/R Designer). Он используется для создания в приложении модели объекта, которая сопоставляется с объектами в базе данных. The O/R Designer also provides functionality to map stored procedures and functions to the <xref:System.Data.Linq.DataContext> object, which manages communication with the database and stores state for optimistic concurrency checks.<br /><br /> For more information about the LINQ to SQL provider, see [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md). For more information about the Object Relational Designer, see [LINQ to SQL Tools in Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).|  
-|LINQ to XML|Поставщик LINQ to XML позволяет запрашивать и изменять XML. XML можно изменить в памяти, загрузить из файла и сохранить в файл.<br /><br /> Additionally, the LINQ to XML provider enables XML literals and XML axis properties that enable you to write XML directly in your Visual Basic code. For more information, see [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md).|  
-|LINQ to DataSet|The LINQ to DataSet provider enables you to query and update data in an ADO.NET dataset. Функции LINQ можно добавить в приложения, использующие наборы данных — это позволит упростить и расширить возможности составления запросов, статистической обработки и обновления данных в наборе данных.<br /><br /> Дополнительные сведения см. в разделе [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md).|  
+|LINQ to Objects|Поставщик LINQ to Objects позволяет направлять запросы к коллекциям и массивам, которые находятся в памяти. Если объект поддерживает интерфейс <xref:System.Collections.IEnumerable> или <xref:System.Collections.Generic.IEnumerable%601>, поставщик LINQ to Objects позволяет направлять к нему запросы.<br /><br /> Поставщик LINQ to Objects можно включить, импортировав <xref:System.Linq> пространство имен, которое по умолчанию импортируется для всех проектов Visual Basic.<br /><br /> Дополнительные сведения о поставщике LINQ to Objects см. в разделе [LINQ to Objects](../../concepts/linq/linq-to-objects.md).|  
+|LINQ to SQL|Поставщик LINQ to SQL позволяет запрашивать и изменять данные в базе данных SQL Server. Это упрощает сопоставление объектной модели приложения с таблицами и объектами в базе данных.<br /><br /> Visual Basic упрощает работу с LINQ to SQL, включая реляционный конструктор объектов (реляционный конструктор R). Он используется для создания в приложении модели объекта, которая сопоставляется с объектами в базе данных. Реляционный конструктор объектов также предоставляет функции для соотнесения хранимых процедур и функций к объекту <xref:System.Data.Linq.DataContext>, который управляет связью с базой данных и сохраняет состояние для проверок оптимистического параллелизма.<br /><br /> Дополнительные сведения о поставщике LINQ to SQL см. в разделе [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md). Дополнительные сведения о реляционный конструктор объектов см. в разделе [средства LINQ to SQL в Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).|  
+|LINQ to XML|Поставщик LINQ to XML позволяет запрашивать и изменять XML. XML можно изменить в памяти, загрузить из файла и сохранить в файл.<br /><br /> Кроме того, поставщик LINQ to XML включает XML-литералы и свойства осей XML, позволяющие писать XML-код непосредственно в коде Visual Basic. Дополнительные сведения см. в разделе [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md).|  
+|LINQ to DataSet|Поставщик LINQ to DataSet позволяет запрашивать и обновлять данные в наборе данных ADO.NET. Функции LINQ можно добавить в приложения, использующие наборы данных — это позволит упростить и расширить возможности составления запросов, статистической обработки и обновления данных в наборе данных.<br /><br /> Дополнительные сведения см. в разделе [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md).|  
   
-## <a name="structure-of-a-linq-query"></a>Structure of a LINQ query  
- A LINQ query, often referred to as a *query expression*, consists of a combination of query clauses that identify the data sources and iteration variables for the query. Выражение запроса может также включать инструкции для сортировки, фильтрации, группировки и присоединения либо формулы для применения к исходным данным. Синтаксис выражения запроса напоминает синтаксис SQL, поэтому многие его элементы могут показаться вам знакомыми.  
+## <a name="structure-of-a-linq-query"></a>Структура запроса LINQ  
+ Запрос LINQ, часто называемый *выражением запроса*, состоит из сочетания предложений запроса, которые указывают источники данных и переменные итерации для запроса. Выражение запроса может также включать инструкции для сортировки, фильтрации, группировки и присоединения либо формулы для применения к исходным данным. Синтаксис выражения запроса напоминает синтаксис SQL, поэтому многие его элементы могут показаться вам знакомыми.  
   
- Выражение запроса начинается с предложения `From`. Это предложение определяет исходные данные для запроса и переменные, которые используются для обращения к каждому элементу источника данных по отдельности. These variables are named *range variables* or *iteration variables*. Предложение `From` является обязательным для запросов, кроме запросов `Aggregate`, где предложение `From` использовать необязательно. После определения области и источника запроса в предложении `From` или `Aggregate` можно добавить любую комбинацию предложений для уточнения запроса. For details about query clauses, see Visual Basic LINQ Query Operators later in this topic. Например, следующий запрос определяет исходную коллекцию данных клиента как переменную `customers` и как итерационную переменную `cust`.  
+ Выражение запроса начинается с предложения `From`. Это предложение определяет исходные данные для запроса и переменные, которые используются для обращения к каждому элементу источника данных по отдельности. Эти переменные являются именованными *переменными диапазона* или *переменными итераций*. Предложение `From` является обязательным для запросов, кроме запросов `Aggregate`, где предложение `From` использовать необязательно. После определения области и источника запроса в предложении `From` или `Aggregate` можно добавить любую комбинацию предложений для уточнения запроса. Дополнительные сведения о предложениях запросов см. в разделе Visual Basic операторы запросов LINQ далее в этой статье. Например, следующий запрос определяет исходную коллекцию данных клиента как переменную `customers` и как итерационную переменную `cust`.  
   
  [!code-vb[VbVbalrIntroToLINQ#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/class2.vb#2)]  
   
- Данный пример составляет допустимый запрос сам по себе, однако особенно эффективным запрос становится при добавлении нескольких предложений, уточняющих его результат. Например, предложение `Where` позволяет отфильтровать результат по одному или нескольким значениям. Каждое выражение запроса — это одна строка кода, так что предложения можно просто добавлять в конец запроса. You can break up a query across multiple lines of text to improve readability by using the underscore (\_) line-continuation character. В приведенном ниже примере кода показан пример запроса с предложением `Where`.  
+ Данный пример составляет допустимый запрос сам по себе, однако особенно эффективным запрос становится при добавлении нескольких предложений, уточняющих его результат. Например, предложение `Where` позволяет отфильтровать результат по одному или нескольким значениям. Каждое выражение запроса — это одна строка кода, так что предложения можно просто добавлять в конец запроса. Можно разбить запрос на несколько строк текста, чтобы улучшить удобочитаемость с помощью символа продолжения строки подчеркивания (\_). В приведенном ниже примере кода показан пример запроса с предложением `Where`.  
   
  [!code-vb[VbVbalrIntroToLINQ#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/class2.vb#3)]  
   
@@ -68,21 +68,21 @@ Language-Integrated Query (LINQ) adds query capabilities to Visual Basic and pro
   
  [!code-vb[VbVbalrIntroToLINQ#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/class2.vb#6)]  
   
- Имеется несколько дополнительных операторов запросов LINQ, которые можно использовать для создания эффективных выражений запросов. В следующем разделе описываются различные предложения запросов, которые можно использовать в выражениях запросов. For details about Visual Basic query clauses, see [Queries](../../../../visual-basic/language-reference/queries/index.md).  
+ Имеется несколько дополнительных операторов запросов LINQ, которые можно использовать для создания эффективных выражений запросов. В следующем разделе описываются различные предложения запросов, которые можно использовать в выражениях запросов. Дополнительные сведения о Visual Basic предложениях запросов см. в разделе [запросы](../../../../visual-basic/language-reference/queries/index.md).  
   
-## <a name="visual-basic-linq-query-operators"></a>Visual Basic LINQ query operators  
+## <a name="visual-basic-linq-query-operators"></a>Visual Basic операторы запросов LINQ  
 
-Классы в пространствах имен <xref:System.Linq> и других пространствах имен, поддерживающих запросы LINQ (в частности, System.Linq), содержат методы создания и уточнения запросов с учетом нужд приложения. Visual Basic includes keywords for the following common query clauses. For details about Visual Basic query clauses, see [Queries](../../../language-reference/queries/index.md).
+Классы в пространствах имен <xref:System.Linq> и других пространствах имен, поддерживающих запросы LINQ (в частности, System.Linq), содержат методы создания и уточнения запросов с учетом нужд приложения. Visual Basic содержит ключевые слова для следующих общих предложений запросов. Дополнительные сведения о Visual Basic предложениях запросов см. в разделе [запросы](../../../language-reference/queries/index.md).
 
 ### <a name="from-clause"></a>Предложение From
 
-Either a [`From` clause](../../../../visual-basic/language-reference/queries/from-clause.md) or an `Aggregate` clause is required to begin a query. Предложение `From` определяет коллекцию источника и переменную итерации для запроса. Пример:
+Для начала запроса требуется либо [предложение`From`](../../../../visual-basic/language-reference/queries/from-clause.md) , либо предложение `Aggregate`. Предложение `From` определяет коллекцию источника и переменную итерации для запроса. Пример.
 
  [!code-vb[VbVbalrIntroToLINQ#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#7)]
 
 ### <a name="select-clause"></a>Select - предложение
 
-Необязательный. A [`Select` clause](../../../../visual-basic/language-reference/queries/select-clause.md) declares a set of iteration variables for a query. Пример:
+Необязательный элемент. [Предложение`Select`](../../../../visual-basic/language-reference/queries/select-clause.md) объявляет набор переменных итерации для запроса. Пример.
 
  [!code-vb[VbVbalrIntroToLINQ#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#8)]
 
@@ -90,140 +90,140 @@ Either a [`From` clause](../../../../visual-basic/language-reference/queries/fro
 
 ### <a name="where-clause"></a>Предложение Where
 
-Необязательный. A [`Where` clause](../../../../visual-basic/language-reference/queries/where-clause.md) specifies a filtering condition for a query. Пример:
+Необязательный элемент. [Предложение`Where`](../../../../visual-basic/language-reference/queries/where-clause.md) задает условие фильтрации для запроса. Пример.
 
  [!code-vb[VbVbalrIntroToLINQ#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#9)]
 
-### <a name="order-by-clause"></a>Order By clause]
+### <a name="order-by-clause"></a>ORDER BY, предложение]
 
-|Optional. An [`Order By` clause](../../../../visual-basic/language-reference/queries/order-by-clause.md) specifies the sort order for columns in a query. Пример:
+| Используемых. [Предложение`Order By`](../../../../visual-basic/language-reference/queries/order-by-clause.md) задает порядок сортировки для столбцов в запросе. Пример.
 
  [!code-vb[VbVbalrIntroToLINQ#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#10)]
 
 ### <a name="join-clause"></a>Join - предложение
 
-Необязательный. A [`Join` clause](../../../../visual-basic/language-reference/queries/join-clause.md) combines two collections into a single collection. Пример:
+Необязательный элемент. [Предложение`Join`](../../../../visual-basic/language-reference/queries/join-clause.md) объединяет две коллекции в одну. Пример.
 
  [!code-vb[VbVbalrIntroToLINQ#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#11)]
 
 ### <a name="group-by-clause"></a>Group By - предложение
 
-Необязательный. A [`Group By` clause](../../../../visual-basic/language-reference/queries/group-by-clause.md) groups the elements of a query result. It can be used to apply aggregate functions to each group. Пример:
+Необязательный элемент. [Предложение`Group By`](../../../../visual-basic/language-reference/queries/group-by-clause.md) группирует элементы результата запроса. Его можно использовать для применения агрегатных функций к каждой группе. Пример.
 
  [!code-vb[VbVbalrIntroToLINQ#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#12)]
 
 ### <a name="group-join-clause"></a>Group Join - предложение
 
-Необязательный. A [`Group Join` clause](../../../../visual-basic/language-reference/queries/group-join-clause.md) combines two collections into a single hierarchical collection. Пример:
+Необязательный элемент. [Предложение`Group Join`](../../../../visual-basic/language-reference/queries/group-join-clause.md) объединяет две коллекции в одну иерархическую коллекцию. Пример.
 
  [!code-vb[VbVbalrIntroToLINQ#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#13)]
 
 ### <a name="aggregate-clause"></a>Aggregate - предложение
 
-Either an [`Aggregate` clause](../../../../visual-basic/language-reference/queries/aggregate-clause.md) or a `From` clause is required to begin a query. Предложение `Aggregate` применяет к коллекции одну или несколько агрегатных функций. For example, you can use the `Aggregate` clause to calculate a sum for all the elements returned by a query, as the following example does.
+Для начала запроса требуется либо [предложение`Aggregate`](../../../../visual-basic/language-reference/queries/aggregate-clause.md) , либо предложение `From`. Предложение `Aggregate` применяет к коллекции одну или несколько агрегатных функций. Например, можно использовать предложение `Aggregate` для вычисления суммы всех элементов, возвращаемых запросом, как показано в следующем примере.
 
  [!code-vb[VbVbalrIntroToLINQ#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#14)]
 
-Предложение `Aggregate` можно также использовать для изменения запроса. Например, с помощью предложения `Aggregate` можно произвести вычисление с соответствующей коллекцией запросов. Пример:
+Предложение `Aggregate` можно также использовать для изменения запроса. Например, с помощью предложения `Aggregate` можно произвести вычисление с соответствующей коллекцией запросов. Пример.
 
  [!code-vb[VbVbalrIntroToLINQ#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#15)]
 
 ### <a name="let-clause"></a>Let - предложение
 
-Необязательный. A [`Let` clause](../../../../visual-basic/language-reference/queries/let-clause.md) computes a value and assigns it to a new variable in the query. Пример:
+Необязательный элемент. [Предложение`Let`](../../../../visual-basic/language-reference/queries/let-clause.md) выполняет вычисление значения и присваивает его новой переменной в запросе. Пример.
 
  [!code-vb[VbVbalrIntroToLINQ#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#16)]
 
 ### <a name="distinct-clause"></a>Distinct - предложение
 
-Необязательный. A `Distinct` clause restricts the values of the current iteration variable to eliminate duplicate values in query results. Пример:
+Необязательный элемент. Предложение `Distinct` позволяет ограничивать значения текущей переменной итерации, чтобы исключить дублирующиеся значения в результатах запроса. Пример.
 
  [!code-vb[VbVbalrIntroToLINQ#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#17)]
 
 ### <a name="skip-clause"></a>Skip - предложение
 
-Необязательный. A [`Skip` clause](../../../../visual-basic/language-reference/queries/skip-clause.md) bypasses a specified number of elements in a collection and then returns the remaining elements. Пример:
+Необязательный элемент. [Предложение`Skip`](../../../../visual-basic/language-reference/queries/skip-clause.md) обходит указанное число элементов в коллекции, а затем возвращает остальные элементы. Пример.
 
  [!code-vb[VbVbalrIntroToLINQ#18](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#18)]
 
 ### <a name="skip-while-clause"></a>Skip While - предложение
 
-Необязательный. A [`Skip While` clause](../../../../visual-basic/language-reference/queries/skip-while-clause.md) bypasses elements in a collection as long as a specified condition is `true` and then returns the remaining elements. Пример:
+Необязательный элемент. [Предложение`Skip While`](../../../../visual-basic/language-reference/queries/skip-while-clause.md) обходит элементы в коллекции, пока заданное условие `true`, а затем возвращает оставшиеся элементы. Пример.
 
  [!code-vb[VbVbalrIntroToLINQ#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#19)]
 
 ### <a name="take-clause"></a>Take - предложение
 
-Необязательный. A [`Take` clause](../../../../visual-basic/language-reference/queries/take-clause.md) returns a specified number of contiguous elements from the start of a collection. Пример:
+Необязательный элемент. [Предложение`Take`](../../../../visual-basic/language-reference/queries/take-clause.md) возвращает указанное число смежных элементов от начала коллекции. Пример.
 
  [!code-vb[VbVbalrIntroToLINQ#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#20)]
 
 ### <a name="take-while-clause"></a>Take While - предложение
 
-Необязательный. A [`Take While` clause](../../../../visual-basic/language-reference/queries/take-while-clause.md) includes elements in a collection as long as a specified condition is `true` and bypasses the remaining elements. Пример:
+Необязательный элемент. [`Take While` предложение](../../../../visual-basic/language-reference/queries/take-while-clause.md) включает элементы в коллекцию, пока заданное условие `true` и обходит оставшиеся элементы. Пример.
 
  [!code-vb[VbVbalrIntroToLINQ#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#21)]
   
-## <a name="use-additional-linq-query-features"></a>Use additional LINQ query features  
+## <a name="use-additional-linq-query-features"></a>Использование дополнительных функций запросов LINQ  
   
-Обращаясь к членам перечислимых и доступных для запроса типов, предоставляемых технологией LINQ, можно использовать дополнительные возможности запросов LINQ. Для этого на результат выражения запроса необходимо вызвать определенный оператор запроса. For example, the following example uses the <xref:System.Linq.Enumerable.Union%2A?displayProperty=nameWithType> method to combine the results of two queries into one query result. Для возвращения результата запроса в виде универсального списка используется метод <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType>.
+Обращаясь к членам перечислимых и доступных для запроса типов, предоставляемых технологией LINQ, можно использовать дополнительные возможности запросов LINQ. Для этого на результат выражения запроса необходимо вызвать определенный оператор запроса. Например, в следующем примере используется метод <xref:System.Linq.Enumerable.Union%2A?displayProperty=nameWithType> для объединения результатов двух запросов в один результат запроса. Для возвращения результата запроса в виде универсального списка используется метод <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType>.
   
  [!code-vb[VbVbalrIntroToLINQ#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#22)]  
   
- For details about additional LINQ capabilities, see [Standard Query Operators Overview](../../concepts/linq/standard-query-operators-overview.md).  
+ Дополнительные сведения о дополнительных возможностях LINQ см. в статье [Общие сведения о стандартных операторах запросов](../../concepts/linq/standard-query-operators-overview.md).  
   
-## <a name="connect-to-a-database-by-using-linq-to-sql"></a>Connect to a database by using LINQ to SQL  
- In Visual Basic, you identify the SQL Server database objects, such as tables, views, and stored procedures, that you want to access by using a LINQ to SQL file. Файл LINQ to SQL имеет расширение DBML.  
+## <a name="connect-to-a-database-by-using-linq-to-sql"></a>Подключение к базе данных с помощью LINQ to SQL  
+ В Visual Basic вы определяете объекты базы данных SQL Server, такие как таблицы, представления и хранимые процедуры, к которым необходимо получить доступ с помощью файла LINQ to SQL. Файл LINQ to SQL имеет расширение DBML.  
   
- When you have a valid connection to a SQL Server database, you can add a **LINQ to SQL Classes** item template to your project. Это позволит отобразить реляционный конструктор объектов (O/R-конструктор). The O/R Designer enables you to drag the items that you want to access in your code from the **Server Explorer**/**Database Explorer** onto the designer surface. Файл LINQ to SQL добавляет в проект объект <xref:System.Data.Linq.DataContext>. Этот объект включает свойства и коллекции для таблиц и представлений, к которым нужно получить доступ, а также необходимые методы для хранимых процедур. После сохранения изменений в файле LINQ to SQL (DBML) можно получить доступ к этим объектам в коде, обратившись к определенному O/R-конструктором объекту <xref:System.Data.Linq.DataContext>. Объекту <xref:System.Data.Linq.DataContext> для проекта присваивается имя, которое определяется именем файла LINQ to SQL. Например, файл LINQ to SQL с именем Northwind.dbml создаст объект <xref:System.Data.Linq.DataContext> с именем `NorthwindDataContext`.  
+ При наличии допустимого соединения с SQL Server базой данных можно добавить в проект шаблон элемента **LINQ to SQL классов** . Это позволит отобразить реляционный конструктор объектов (O/R-конструктор). Реляционный конструктор объектов позволяет перетаскивать элементы, к которым требуется доступ в коде, из **обозреватель сервера**/**Обозреватель базы данных** на поверхность конструктора. Файл LINQ to SQL добавляет в проект объект <xref:System.Data.Linq.DataContext>. Этот объект включает свойства и коллекции для таблиц и представлений, к которым нужно получить доступ, а также необходимые методы для хранимых процедур. После сохранения изменений в файле LINQ to SQL (DBML) можно получить доступ к этим объектам в коде, обратившись к определенному O/R-конструктором объекту <xref:System.Data.Linq.DataContext>. Объекту <xref:System.Data.Linq.DataContext> для проекта присваивается имя, которое определяется именем файла LINQ to SQL. Например, файл LINQ to SQL с именем Northwind.dbml создаст объект <xref:System.Data.Linq.DataContext> с именем `NorthwindDataContext`.  
   
- For examples with step-by-step instructions, see [How to: Query a Database](how-to-query-a-database-by-using-linq.md) and [How to: Call a Stored Procedure](how-to-call-a-stored-procedure-by-using-linq.md).  
+ Примеры с пошаговыми инструкциями см. в разделе [как выполнить запрос к базе данных](how-to-query-a-database-by-using-linq.md) и [как вызвать хранимую процедуру](how-to-call-a-stored-procedure-by-using-linq.md).  
   
-## <a name="visual-basic-features-that-support-linq"></a>Visual Basic features that support LINQ  
- Visual Basic includes other notable features that make the use of LINQ simple and reduce the amount of code that you must write to perform LINQ queries. В число этих требований входят следующие:  
+## <a name="visual-basic-features-that-support-linq"></a>Visual Basic функции, поддерживающие LINQ  
+ Visual Basic включает другие важные функции, которые делают использование LINQ простым и сокращают объем кода, который необходимо написать для выполнения запросов LINQ. К ним относятся следующие:  
   
-- **Anonymous types**, which enable you to create a new type based on a query result.  
+- **Анонимные типы**, которые позволяют создать новый тип на основе результата запроса.  
   
-- **Implicitly typed variables**, which enable you to defer specifying a type and let the compiler infer the type based on the query result.  
+- **Неявно типизированные переменные**, которые позволяют отложить указание типа и позволить компилятору определить тип на основе результата запроса.  
   
-- **Extension methods**, which enable you to extend an existing type with your own methods without modifying the type itself.  
+- **Методы расширения**, позволяющие расширить существующий тип собственными методами, не изменяя сам тип.  
   
- For details, see [Visual Basic Features That Support LINQ](../../concepts/linq/features-that-support-linq.md).  
+ Дополнительные сведения см. в разделе [Visual Basic функции, поддерживающие LINQ](../../concepts/linq/features-that-support-linq.md).  
   
-## <a name="deferred-and-immediate-query-execution"></a>Deferred and immediate query execution
+## <a name="deferred-and-immediate-query-execution"></a>Отложенное и немедленное выполнение запроса
 
- Процессы выполнения и создания запросов разделены. После создания запроса его выполнение инициируется отдельным механизмом. A query can be executed as soon as it is defined (*immediate execution*), or the definition can be stored and the query can be executed later (*deferred execution*).  
+ Процессы выполнения и создания запросов разделены. После создания запроса его выполнение инициируется отдельным механизмом. Запрос может быть выполнен, как только он определен (*немедленное выполнение*), либо можно сохранить определение, и запрос можно будет выполнить позже (*Отложенное выполнение*).  
   
- По умолчанию вновь созданный запрос автоматически не выполняется. Вместо этого определение запроса сохраняется в переменной, которая используется для ссылки на результат этого запроса. Если впоследствии код обращается к переменной результата запроса, например в рамках цикла `For…Next`, запрос выполняется. This process is referred to as *deferred execution*.  
+ По умолчанию вновь созданный запрос автоматически не выполняется. Вместо этого определение запроса сохраняется в переменной, которая используется для ссылки на результат этого запроса. Если впоследствии код обращается к переменной результата запроса, например в рамках цикла `For…Next`, запрос выполняется. Этот процесс называется *отложенным выполнением*.  
   
- Queries can also be executed when they are defined, which is referred to as *immediate execution*. Немедленное выполнение можно инициировать с помощью метода, который требует доступа к отдельным элементам результата запроса. Это может быть результатом использования агрегатных функций, таких как `Count`, `Sum`, `Average`, `Min` или `Max`. For more information about aggregate functions, see [Aggregate Clause](../../../language-reference/queries/aggregate-clause.md).  
+ Запросы также можно выполнять, когда они определены, что называется *немедленной выполнением*. Немедленное выполнение можно инициировать с помощью метода, который требует доступа к отдельным элементам результата запроса. Это может быть результатом использования агрегатных функций, таких как `Count`, `Sum`, `Average`, `Min` или `Max`. Дополнительные сведения о агрегатных функциях см. в разделе [предложение Aggregate](../../../language-reference/queries/aggregate-clause.md).  
   
- Принудительно вызвать немедленное выполнение запросов позволяют также методы `ToList` и `ToArray`. Это пригодится в том случае, если требуется выполнить запрос немедленно и кэшировать результаты. For more information about these methods, see [Converting Data Types](../../concepts/linq/converting-data-types.md).  
+ Принудительно вызвать немедленное выполнение запросов позволяют также методы `ToList` и `ToArray`. Это пригодится в том случае, если требуется выполнить запрос немедленно и кэшировать результаты. Дополнительные сведения об этих методах см. в разделе [Преобразование типов данных](../../concepts/linq/converting-data-types.md).  
   
- For more information about query execution, see [Writing Your First LINQ Query](../../concepts/linq/writing-your-first-linq-query.md).  
+ Дополнительные сведения о выполнении запросов см. [в разделе Написание первого запроса LINQ](../../concepts/linq/writing-your-first-linq-query.md).  
   
 ## <a name="xml-in-visual-basic"></a>XML в Visual Basic  
- The XML features in Visual Basic include XML literals and XML axis properties, which enable you easily to create, access, query, and modify XML in your code. Литералы XML позволяют записывать XML непосредственно в код. Компилятор Visual Basic обрабатывает XML как объект данных первого класса.  
+ Функции XML в Visual Basic включают XML-литералы и свойства осей XML, которые позволяют легко создавать, получать доступ к XML и изменять их в коде. Литералы XML позволяют записывать XML непосредственно в код. Компилятор Visual Basic обрабатывает XML как объект данных первого класса.  
   
  В приведенном ниже примере кода показано, как создать элемент XML, получить доступ к его дочерним элементам и атрибутам и сделать запросы к содержимому элемента с помощью LINQ.  
   
  [!code-vb[VbXmlSamples#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples3.vb#8)]  
   
- For more information, see [XML](../xml/index.md).  
+ Дополнительные сведения см. в разделе [XML](../xml/index.md).  
   
 ## <a name="related-resources"></a>Связанные ресурсы  
   
 |Раздел|Описание|  
 |---|---|  
-|[XML](../../language-features/xml/index.md)|Describes the XML features in Visual Basic that can be queried and that enable you to include XML as first-class data objects in your Visual Basic code.|  
-|[Запросы](../../../language-reference/queries/index.md)|Provides reference information about the query clauses that are available in Visual Basic.|  
+|[XML](../../language-features/xml/index.md)|Описывает возможности XML в Visual Basic, которые можно запрашивать и которые позволяют включать XML как объекты данных первого класса в код Visual Basic.|  
+|[Запросы](../../../language-reference/queries/index.md)|Содержит справочные сведения о предложениях запросов, доступных в Visual Basic.|  
 |[Встроенный язык запросов LINQ](../../concepts/linq/index.md)|Содержит общие сведения, рекомендации по программированию и примеры для LINQ.|  
 |[LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)|Содержит общие сведения, рекомендации по программированию и примеры для LINQ to SQL.|  
 |[LINQ to Objects](../../concepts/linq/linq-to-objects.md)|Содержит общие сведения, рекомендации по программированию и примеры для LINQ to Objects.|  
-|[LINQ to ADO.NET (Страница портала)](../../concepts/linq/linq-to-adonet-portal-page.md)|Includes links to general information, programming guidance, and samples for LINQ to ADO.NET.|  
+|[LINQ to ADO.NET (Страница портала)](../../concepts/linq/linq-to-adonet-portal-page.md)|Содержит ссылки на общие сведения, руководства по программированию и примеры для LINQ to ADO.NET.|  
 |[LINQ to XML](../../concepts/linq/linq-to-xml.md)|Содержит общие сведения, рекомендации по программированию и примеры для LINQ to XML.|  
   
-## <a name="how-to-and-walkthrough-topics"></a>How to and walkthrough topics
+## <a name="how-to-and-walkthrough-topics"></a>Практические руководства и пошаговые инструкции
  [How to: Query a Database](how-to-query-a-database-by-using-linq.md) (Практическое руководство. Выполнение запросов к базе данных)  
   
  [How to: Call a Stored Procedure](how-to-call-a-stored-procedure-by-using-linq.md) (Практическое руководство. Вызов хранимой процедуры)  
@@ -242,8 +242,8 @@ Either an [`Aggregate` clause](../../../../visual-basic/language-reference/queri
   
  [Практическое руководство. Назначение хранимых процедур для выполнения обновления, вставки и удаления (реляционный конструктор объектов)](/visualstudio/data-tools/how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-o-r-designer)  
   
-## <a name="featured-book-chapters"></a>Featured book chapters  
- [Chapter 17: LINQ](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652502(v=orm.10)) in [Programming Visual Basic 2008](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652504(v=orm.10))  
+## <a name="featured-book-chapters"></a>Рекомендуемые главы книги  
+ [Глава 17. LINQ](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652502(v=orm.10)) в [программировании Visual Basic 2008](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652504(v=orm.10))  
   
 ## <a name="see-also"></a>См. также
 

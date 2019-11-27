@@ -30,32 +30,32 @@ ms.locfileid: "74347426"
 ---
 # <a name="how-to-break-and-combine-statements-in-code-visual-basic"></a>Практическое руководство. Разбиение и объединение инструкций в коде (Visual Basic)
 
-When writing your code, you might at times create lengthy statements that necessitate horizontal scrolling in the Code Editor. Although this doesn't affect the way your code runs, it makes it difficult for you or anyone else to read the code as it appears on the monitor. In such cases, you should consider breaking the single long statement into several lines.
+При написании кода иногда можно создавать длинные операторы, требующие горизонтальной прокрутки в редакторе кода. Хотя это не влияет на способ выполнения кода, он затрудняет чтение кода в том виде, в котором он отображается на мониторе. В таких случаях следует рассмотреть возможность разбиения одного длинного оператора на несколько строк.
 
-## <a name="to-break-a-single-statement-into-multiple-lines"></a>To break a single statement into multiple lines
+## <a name="to-break-a-single-statement-into-multiple-lines"></a>Разбиение одного оператора на несколько строк
 
-Use the line-continuation character, which is an underscore (`_`), at the point at which you want the line to break. The underscore must be immediately preceded by a space and immediately followed by a line terminator (carriage return) or (starting with version 16.0) a comment followed by a carriage return.
+Используйте символ продолжения строки, который является символом подчеркивания (`_`), в точке, в которой должна прерываться линия. Символу подчеркивания должен предшествовать пробел и сразу за ним следует символ конца строки (возврат каретки) или (начиная с версии 16,0) комментарий, за которым следует символ возврата каретки.
 
   > [!NOTE]
-  > In some cases, if you omit the line-continuation character, the Visual Basic compiler will implicitly continue the statement on the next line of code. For a list of syntax elements for which you can omit the line-continuation character, see "Implicit Line Continuation" in [Statements](../../../visual-basic/programming-guide/language-features/statements.md).
+  > В некоторых случаях, если опустить символ продолжения строки, компилятор Visual Basic неявно продолжит инструкцию на следующей строке кода. Список элементов синтаксиса, для которых можно опустить символ продолжения строки, см. в разделе «неявные продолжения строки» в [инструкциях](../../../visual-basic/programming-guide/language-features/statements.md).
 
-  In the following example, the statement is broken into four lines with line-continuation characters terminating all but the last line.
+  В следующем примере инструкция разбивается на четыре строки с символами продолжения строки, завершающими все, кроме последней строки.
 
   [!code-vb[VbVbcnConventions#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#20)]
 
-  Using this sequence makes your code easier to read, both online and when printed.
+  Использование этой последовательности упрощает чтение кода в сети и при печати.
 
-  The line-continuation character must be the last character on a line. You can't follow it with anything else on the same line.
+  Символ продолжения строки должен быть последним символом в строке. Вы не можете подписаться на него другим в той же строке.
 
-  Some limitations exist as to where you can use the line-continuation character; for example, you can't use it in the middle of an argument name. You can break an argument list with the line-continuation character, but the individual names of the arguments must remain intact.
+  Существуют некоторые ограничения, в которых можно использовать символ продолжения строки. Например, нельзя использовать его в середине имени аргумента. Можно прервать список аргументов с помощью символа продолжения строки, но отдельные имена аргументов должны оставаться неизменными.
 
-  You can't continue a comment by using a line-continuation character. The compiler doesn't examine the characters in a comment for special meaning. For a multiple-line comment, repeat the comment symbol (`'`) on each line.
+  Комментарий нельзя продолжить с помощью символа продолжения строки. Компилятор не проверяет символы в комментарии на наличие специального значения. Для многострочного комментария повторите символ комментария (`'`) в каждой строке.
 
- Although placing each statement on a separate line is the recommended method, Visual Basic also allows you to place multiple statements on the same line.
+ Хотя размещение каждой инструкции в отдельной строке является рекомендуемым методом, Visual Basic также позволяет размещать несколько инструкций в одной строке.
 
-## <a name="to-place-multiple-statements-on-the-same-line"></a>To place multiple statements on the same line
+## <a name="to-place-multiple-statements-on-the-same-line"></a>Размещение нескольких инструкций на одной строке
 
-Separate the statements with a colon (`:`), as in the following example:
+Разделяйте операторы двоеточием (`:`), как показано в следующем примере:
 
   [!code-vb[VbVbcnConventions#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#10)]
 

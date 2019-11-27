@@ -36,7 +36,7 @@ ms.locfileid: "74283636"
 ## <a name="treeviewitem-parts"></a>TreeViewItem части  
  В следующей таблице перечислены именованные части для элемента управления <xref:System.Windows.Controls.TreeViewItem>.  
   
-|Отделение|Type|Описание|  
+|Отделение|Введите|Описание|  
 |----------|----------|-----------------|  
 |PART_Header|<xref:System.Windows.FrameworkElement>|Визуальный элемент, содержащий содержимое заголовка элемента управления <xref:System.Windows.Controls.TreeView>.|  
   
@@ -45,7 +45,7 @@ ms.locfileid: "74283636"
   
 |Имя VisualState|Имя VisualStateGroup|Описание|  
 |----------------------|---------------------------|-----------------|  
-|Норм.|CommonStates|Состояние по умолчанию.|  
+|Нормальный|CommonStates|Состояние по умолчанию.|  
 |MouseOver|CommonStates|Указатель мыши располагается на <xref:System.Windows.Controls.TreeViewItem>.|  
 |Отключено.|CommonStates|<xref:System.Windows.Controls.TreeViewItem> отключена.|  
 |Focused|FocusStates|<xref:System.Windows.Controls.TreeViewItem> имеет фокус.|  

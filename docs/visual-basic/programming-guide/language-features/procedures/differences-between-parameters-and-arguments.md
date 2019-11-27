@@ -19,23 +19,23 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74341379"
 ---
 # <a name="differences-between-parameters-and-arguments-visual-basic"></a>Различия между параметрами и аргументами (Visual Basic)
-In most cases, a procedure must have some information about the circumstances in which it has been called. A procedure that performs repeated or shared tasks uses different information for each call. This information consists of variables, constants, and expressions that you pass to the procedure when you call it.  
+В большинстве случаев процедура должна иметь некоторую информацию о обстоятельствах, в которых она была вызвана. Процедура, выполняющая повторяющиеся или общие задачи, использует разные сведения для каждого вызова. Эти сведения состоят из переменных, констант и выражений, которые передаются в процедуру при ее вызове.  
   
- To communicate this information to the procedure, the procedure defines a *parameter*, and the calling code passes an *argument* to that parameter. You can think of the parameter as a parking space and the argument as an automobile. Just as different automobiles can park in a parking space at different times, the calling code can pass a different argument to the same parameter every time that it calls the procedure.  
+ Чтобы передать эти сведения в процедуру, процедура определяет *параметр*, а вызывающий код передает *аргумент* в этот параметр. Параметр можно представить как место парковки, а аргумент — как автомобиль. Так же, как различные функции автомобильной связи могут приостановиться в пространстве стоянки в разное время, вызывающий код может передать другой аргумент одному параметру при каждом вызове процедуры.  
   
 ## <a name="parameters"></a>Параметры  
- A *parameter* represents a value that the procedure expects you to pass when you call it. The procedure's declaration defines its parameters.  
+ *Параметр* представляет значение, которое процедура предполагает передать при ее вызове. В объявлении процедуры определяются ее параметры.  
   
- When you define a `Function` or `Sub` procedure, you specify a *parameter list* in parentheses immediately following the procedure name. For each parameter, you specify a name, a data type, and a passing mechanism ([ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) or [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)). You can also indicate that a parameter is optional. This means that the calling code does not have to pass a value for it.  
+ При определении `Function` или `Sub` процедуры необходимо указать *список параметров* в круглых скобках сразу после имени процедуры. Для каждого параметра указывается имя, тип данных и механизм передачи ([ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) или [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)). Можно также указать, что параметр является необязательным. Это означает, что вызывающему коду не обязательно передавать значение для него.  
   
- The name of each parameter serves as a *local variable* in the procedure. You use the parameter name the same way you use any other variable.  
+ Имя каждого параметра служит в качестве *локальной переменной* в процедуре. Имя параметра можно использовать так же, как и любую другую переменную.  
   
 ## <a name="arguments"></a>Аргументы  
- An *argument* represents the value that you pass to a procedure parameter when you call the procedure. The calling code supplies the arguments when it calls the procedure.  
+ *Аргумент* представляет значение, которое передается в параметр процедуры при вызове процедуры. Вызывающий код предоставляет аргументы при вызове процедуры.  
   
- When you call a `Function` or `Sub` procedure, you include an *argument list* in parentheses immediately following the procedure name. Each argument corresponds to the parameter in the same position in the list.  
+ При вызове `Function` или `Sub` процедуры вы включаете *список аргументов* в круглые скобки сразу после имени процедуры. Каждый аргумент соответствует параметру в том же положении в списке.  
   
- In contrast to parameter definition, arguments do not have names. Each argument is an expression, which can contain zero or more variables, constants, and literals. The data type of the evaluated expression should typically match the data type defined for the corresponding parameter, and in any case it must be convertible to the parameter type.  
+ В отличие от определения параметра, аргументы не имеют имен. Каждый аргумент является выражением, которое может содержать ноль или более переменных, констант и литералов. Тип данных вычисляемого выражения обычно должен соответствовать типу данных, определенному для соответствующего параметра, и в любом случае он должен быть преобразован в тип параметра.  
   
 ## <a name="see-also"></a>См. также
 

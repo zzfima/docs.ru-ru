@@ -1,5 +1,5 @@
 ---
-title: How to combine LINQ queries with regular expressions
+title: Практическое руководство. Объединение запросов LINQ с регулярными выражениями
 ms.date: 07/20/2015
 ms.assetid: 3da1bd10-b0d8-4d5b-a637-966891c13592
 ms.openlocfilehash: 27fc46056ad78567339ca0c5818aef38d0fbb9a6
@@ -9,7 +9,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348422"
 ---
-# <a name="how-to-combine-linq-queries-with-regular-expressions-visual-basic"></a>How to combine LINQ queries with regular expressions (Visual Basic)
+# <a name="how-to-combine-linq-queries-with-regular-expressions-visual-basic"></a>Как сочетать запросы LINQ с помощью регулярных выражений (Visual Basic)
 
 В этом примере показано, как использовать класс <xref:System.Text.RegularExpressions.Regex> при создании регулярного выражения для более сложных сопоставлений в текстовых строках. Запрос LINQ упрощает фильтрацию именно тех файлов, которые требуется найти с помощью регулярного выражения, и формирование результатов.
 
@@ -86,9 +86,9 @@ End Class
 
 ## <a name="compiling-the-code"></a>Компиляция кода
 
-Create a VB.NET console application project, copy and paste the code sample, and adjust the Startup object value in the project properties.
+Создайте проект консольного приложения VB.NET, скопируйте и вставьте пример кода и измените значение объекта Startup в свойствах проекта.
 
 ## <a name="see-also"></a>См. также
 
-- [LINQ and Strings (Visual Basic)](linq-and-strings.md)
+- [LINQ и строки (Visual Basic)](linq-and-strings.md)
 - [LINQ и каталоги файлов (Visual Basic)](linq-and-file-directories.md)

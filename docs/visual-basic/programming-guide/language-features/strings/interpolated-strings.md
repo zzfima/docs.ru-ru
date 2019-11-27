@@ -8,9 +8,9 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344328"
 ---
-# <a name="interpolated-strings-visual-basic-reference"></a>Interpolated Strings (Visual Basic Reference)
+# <a name="interpolated-strings-visual-basic-reference"></a>Строки с интерполяцией (Visual Basic ссылка)
 
-Используется для создания строк.  Интерполированное строковое выражение выглядит как строка шаблона, которая содержит *интерполированные выражения*.  Интерполированная строка возвращает строку, которая заменяет содержащиеся в ней интерполированные выражения строковыми представлениями. This feature is available in Visual Basic 14 and later versions.
+Используется для создания строк.  Интерполированное строковое выражение выглядит как строка шаблона, которая содержит *интерполированные выражения*.  Интерполированная строка возвращает строку, которая заменяет содержащиеся в ней интерполированные выражения строковыми представлениями. Эта функция доступна в Visual Basic 14 и более поздних версий.
 
 Аргументы интерполированной строки понять проще, чем [строку составного формата](../../../../standard/base-types/composite-formatting.md#composite-format-string).  Например, интерполированная строка
 
@@ -34,10 +34,10 @@ $"<text> {<interpolated-expression> [,<field-width>] [:<format-string>] } <text>
 
 - *field-width* — это целое число со знаком, указывающее количество символов в поле. Если оно является положительным, поле выравнивается по правому краю, если оно отрицательное — по левому краю.
 
-- *format-string* — это строка формата, соответствующая типу форматируемого объекта. For example, for a <xref:System.DateTime> value, it could be a [standard date and time format string](../../../../standard/base-types/standard-date-and-time-format-strings.md) such as "D" or "d".
+- *format-string* — это строка формата, соответствующая типу форматируемого объекта. Например, для <xref:System.DateTime> значения это может быть [строка стандартного формата даты и времени](../../../../standard/base-types/standard-date-and-time-format-strings.md) , например "d" или "d".
 
 > [!IMPORTANT]
-> Между `$` и `"` в начале строки не может быть пробела. Doing so causes a compiler error.
+> Между `$` и `"` в начале строки не может быть пробела. Это приводит к ошибке компилятора.
 
 Интерполированную строку можно использовать везде, где допустимо применять строковый литерал.  Интерполированная строка вычисляется каждый раз, когда выполняется код с интерполированной строкой. Это позволяет разделить определение и вычисление интерполированной строки.
 
@@ -51,13 +51,13 @@ $"<text> {<interpolated-expression> [,<field-width>] [:<format-string>] } <text>
 
 Существует три преобразования неявных типов из интерполированных строк.
 
-1. Преобразование интерполированной строки в <xref:System.String>. В следующем примере возвращается строка, интерполированные строковые выражения которой были заменены их строковыми представлениями. Пример:
+1. Преобразование интерполированной строки в <xref:System.String>. В следующем примере возвращается строка, интерполированные строковые выражения которой были заменены их строковыми представлениями. Пример.
 
    [!code-vb[interpolated-strings1](../../../../../samples/snippets/visualbasic/programming-guide/language-features/strings/interpolated-strings1.vb)]
 
    Это окончательный результат интерпретации строк. Все вхождения двойных фигурных скобок ("{{" и "}}") преобразуются в одиночную фигурную скобку.
 
-2. Преобразование интерполированной строки в переменную <xref:System.IFormattable>, которая позволяет создавать несколько результирующих строк с содержимым для конкретного языка из одного экземпляра <xref:System.IFormattable>. Это полезно для включения правильных форматов чисел и дат для отдельных языков.  Все вхождения двойных фигурных скобок ("{{" и "}}") остаются двойными фигурными скобками до тех пор, пока строка не будет отформатирована путем явного или неявного вызова метода <xref:System.Object.ToString>.  All contained interpolation expressions are converted to {0}, {1}, and so on.
+2. Преобразование интерполированной строки в переменную <xref:System.IFormattable>, которая позволяет создавать несколько результирующих строк с содержимым для конкретного языка из одного экземпляра <xref:System.IFormattable>. Это полезно для включения правильных форматов чисел и дат для отдельных языков.  Все вхождения двойных фигурных скобок ("{{" и "}}") остаются двойными фигурными скобками до тех пор, пока строка не будет отформатирована путем явного или неявного вызова метода <xref:System.Object.ToString>.  Все содержащиеся в выражении интерполяции выражения преобразуются в {0}, {1}и т. д.
 
    В следующем примере используется отражение для отображения членов, а также значений поля и свойства переменной <xref:System.IFormattable>, созданной из интерполированной строки. Кроме того, переменная <xref:System.IFormattable> передается в метод <xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType>.
 
@@ -65,15 +65,15 @@ $"<text> {<interpolated-expression> [,<field-width>] [:<format-string>] } <text>
 
    Обратите внимание, что интерполированную строку можно проверить только с помощью отражения. Если она передается методу форматирования строк, например <xref:System.Console.WriteLine(System.String)>, элементы формата разрешаются и возвращается результирующая строка.
 
-3. Conversion of an interpolated string to a <xref:System.FormattableString> variable that represents a composite format string. Проверка строки составного формата и способа ее отрисовки в виде результирующей строки может, например, обеспечивать защиту от атак путем внедрения кода, если выполнялось построение запроса. A <xref:System.FormattableString> also includes:
+3. Преобразование строки с интерполяцией в переменную <xref:System.FormattableString>, представляющую строку составного формата. Проверка строки составного формата и способа ее отрисовки в виде результирующей строки может, например, обеспечивать защиту от атак путем внедрения кода, если выполнялось построение запроса. <xref:System.FormattableString> также включает:
 
       - Перегрузка <xref:System.FormattableString.ToString>, которая формирует результирующую строку для <xref:System.Globalization.CultureInfo.CurrentCulture>.
 
-      - A <xref:System.FormattableString.Invariant%2A> method that produces a string for the <xref:System.Globalization.CultureInfo.InvariantCulture>.
+      - Метод <xref:System.FormattableString.Invariant%2A>, создающий строку для <xref:System.Globalization.CultureInfo.InvariantCulture>.
 
       - Метод <xref:System.FormattableString.ToString(System.IFormatProvider)>, который формирует результирующую строку для указанного языка и региональных параметров.
 
-    All occurrences of double curly braces ("{{" and "}}") remain as double curly braces until you format.  All contained interpolation expressions are converted to {0}, {1}, and so on.
+    Все вхождения двойных фигурных скобок ("{{" и "}}") остаются в виде двойных фигурных скобок до тех пор, пока не будет выполнено форматирование.  Все содержащиеся в выражении интерполяции выражения преобразуются в {0}, {1}и т. д.
 
    [!code-vb[interpolated-strings3](../../../../../samples/snippets/visualbasic/programming-guide/language-features/strings/interpolated-strings3.vb)]
 

@@ -22,7 +22,7 @@ ms.locfileid: "74283494"
 ## <a name="navigationwindow-parts"></a>NavigationWindow части  
  В следующей таблице перечислены именованные части для элемента управления <xref:System.Windows.Navigation.NavigationWindow>.  
   
-|Отделение|Type|Описание|  
+|Отделение|Введите|Описание|  
 |-|-|-|  
 |PART_NavWinCP|<xref:System.Windows.Controls.ContentPresenter>|Область для содержимого.|  
   

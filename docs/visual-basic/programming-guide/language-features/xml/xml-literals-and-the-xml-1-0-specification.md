@@ -12,21 +12,21 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346187"
 ---
 # <a name="xml-literals-and-the-xml-10-specification-visual-basic"></a>XML-литералы и спецификация XML 1.0 (Visual Basic)
-The XML literal syntax in Visual Basic supports most of the Extensible Markup Language (XML) 1.0 specification. For details about the XML 1.0 specification, see [Extensible Markup Language (XML) 1.0](https://www.w3.org/TR/xml) on the W3C Web site.  
+Синтаксис XML-литерала в Visual Basic поддерживает большинство спецификаций язык XML (XML) 1,0. Дополнительные сведения о спецификации XML 1,0 см. на веб-сайте W3C [язык XML (XML) 1,0](https://www.w3.org/TR/xml) .  
   
-## <a name="what-visual-basic-does-not-support"></a>What Visual Basic Does Not Support  
+## <a name="what-visual-basic-does-not-support"></a>Что Visual Basic не поддерживает  
   
-- An XML literal cannot contain a document type definition (DTD).  
+- XML-литерал не может содержать определение типа документа (DTD).  
   
-- An XML document literal must start with an XML document declaration.  
+- Литерал XML-документа должен начинаться с объявления XML-документа.  
   
-- An XML literal cannot contain more than 65,535 characters on one line.  
+- XML-литерал не может содержать более 65 535 символов в одной строке.  
   
-- XML namespace prefixes, element names, and attribute names cannot contain more than 1,024 characters.  
+- Префиксы пространства имен XML, имена элементов и имена атрибутов не могут содержать более 1 024 символов.  
   
-## <a name="extra-features-that-visual-basic-supports"></a>Extra Features That Visual Basic Supports  
+## <a name="extra-features-that-visual-basic-supports"></a>Дополнительные возможности, поддерживаемые Visual Basic  
   
-- The embedded expression syntax allowed in document and element literals is not valid XML.  
+- Синтаксис встроенных выражений, допустимый в документе и литералах элементов, не является допустимым XML.  
   
 ## <a name="see-also"></a>См. также
 

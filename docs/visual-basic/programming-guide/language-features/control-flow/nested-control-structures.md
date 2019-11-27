@@ -18,12 +18,12 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348142"
 ---
 # <a name="nested-control-structures-visual-basic"></a>Вложенные структуры управления (Visual Basic)
-You can place control statements inside other control statements, for example an `If...Then...Else` block within a `For...Next` loop. A control statement placed inside another control statement is said to be *nested*.  
+Можно разместить управляющие операторы внутри других операторов управления, например блок `If...Then...Else` в цикле `For...Next`. Оператор управления, помещенный внутрь другой управляющей инструкции, называется *вложенным*.  
   
-## <a name="nesting-levels"></a>Nesting Levels  
- Control structures in Visual Basic can be nested to as many levels as you want. It is common practice to make nested structures more readable by indenting the body of each one. The integrated development environment (IDE) editor automatically does this.  
+## <a name="nesting-levels"></a>Уровни вложенности  
+ Структуры управления в Visual Basic могут быть вложены на столько уровней, сколько нужно. Распространенной практикой является более удобочитаемость вложенных структур путем создания отступов для текста каждой из них. Редактор интегрированной среды разработки (IDE) автоматически делает это.  
   
- In the following example, the procedure `sumRows` adds together the positive elements of each row of the matrix.  
+ В следующем примере процедура `sumRows` складывает положительные элементы каждой строки матрицы.  
   
 ```vb
 Public Sub sumRows(ByVal a(,) As Double, ByRef r() As Double)  
@@ -39,15 +39,15 @@ Public Sub sumRows(ByVal a(,) As Double, ByRef r() As Double)
 End Sub  
 ```  
   
- In the preceding example, the first `Next` statement closes the inner `For` loop and the last `Next` statement closes the outer `For` loop.  
+ В предыдущем примере первая инструкция `Next` закрывает внутренний цикл `For`, а последняя инструкция `Next` закрывает внешний цикл `For`.  
   
- Likewise, in nested `If` statements, the `End If` statements automatically apply to the nearest prior `If` statement. Nested `Do` loops work in a similar fashion, with the innermost `Loop` statement matching the innermost `Do` statement.  
+ Аналогично, в вложенных инструкциях `If` `End If` операторы автоматически применяются к ближайшей предыдущей инструкции `If`. Вложенные циклы `Do` работают аналогичным образом, при этом самая внутренняя `Loop` инструкция, соответствующая самой внутренней инструкции `Do`.  
   
 > [!NOTE]
-> For many control structures, when you click a keyword, all of the keywords in the structure are highlighted. For instance, when you click `If` in an `If...Then...Else` construction, all instances of `If`, `Then`, `ElseIf`, `Else`, and `End If` in the construction are highlighted. To move to the next or previous highlighted keyword, press CTRL+SHIFT+DOWN ARROW or CTRL+SHIFT+UP ARROW.  
+> Для многих структур управления при щелчке ключевого слова все ключевые слова в структуре выделяются. Например, если щелкнуть `If` в конструкции `If...Then...Else`, будут выделены все экземпляры `If`, `Then`, `ElseIf`, `Else`и `End If` в конструкции. Чтобы перейти к следующему или предыдущему выделенному ключевому слову, нажмите клавиши CTRL + SHIFT + стрелка вниз или CTRL + SHIFT + стрелка вверх.  
   
-## <a name="nesting-different-kinds-of-control-structures"></a>Nesting Different Kinds of Control Structures  
- You can nest one kind of control structure within another kind. The following example uses a `With` block inside a `For Each` loop and nested `If` blocks inside the `With` block.  
+## <a name="nesting-different-kinds-of-control-structures"></a>Вложение различных видов структур управления  
+ Один тип структуры управления можно вложить в другой тип. В следующем примере используется блок `With` внутри цикла `For Each` и вложенных блоков `If` внутри блока `With`.  
   
 ```vb
 For Each ctl As System.Windows.Forms.Control In Me.Controls  
@@ -64,12 +64,12 @@ For Each ctl As System.Windows.Forms.Control In Me.Controls
 Next ctl  
 ```  
   
-## <a name="overlapping-control-structures"></a>Overlapping Control Structures  
- You cannot overlap control structures. This means that any nested structure must be completely contained within the next innermost structure. For example, the following arrangement is invalid because the `For` loop terminates before the inner `With` block terminates.  
+## <a name="overlapping-control-structures"></a>Перекрывающиеся структуры элементов управления  
+ Нельзя перекрывать структуры управления. Это означает, что любая вложенная структура должна полностью содержаться в следующей самой внутренней структуре. Например, следующее расположение недопустимо, так как цикл `For` завершается до завершения внутреннего блока `With`.  
   
- ![Diagram that shows an example of invalid nesting.](./media/nested-control-structures/example-invalid-nesting.gif) 
+ ![Схема, на которой показан пример недопустимого вложения.](./media/nested-control-structures/example-invalid-nesting.gif) 
   
- The Visual Basic compiler detects such overlapping control structures and signals a compile-time error.  
+ Компилятор Visual Basic обнаруживает такие перекрывающиеся структуры элементов управления и сигнализирует об ошибке во время компиляции.  
   
 ## <a name="see-also"></a>См. также
 

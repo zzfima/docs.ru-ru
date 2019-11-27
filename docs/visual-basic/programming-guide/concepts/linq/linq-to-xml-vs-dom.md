@@ -9,7 +9,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74331706"
 ---
-# <a name="linq-to-xml-vs-dom-visual-basic"></a>LINQ to XML vs. DOM (Visual Basic)
+# <a name="linq-to-xml-vs-dom-visual-basic"></a>LINQ to XML и DOM (Visual Basic)
 В этом разделе описываются некоторые основные различия между [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] и текущим преобладающим программным интерфейсом API XML, а именно моделью DOM консорциума W3C.  
   
 ## <a name="new-ways-to-construct-xml-trees"></a>Новые способы построения XML-деревьев  
@@ -51,7 +51,7 @@ doc.AppendChild(contacts)
 Console.WriteLine(doc.OuterXml)  
 ```  
   
- Такой стиль программирования не дает визуального представления о деталях структуры XML-дерева. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] поддерживает такой подход к построению XML-дерева, но также предлагает и альтернативный способ, *функциональное построение*. In Visual Basic, functional construction uses XML literals to build an XML tree.  
+ Такой стиль программирования не дает визуального представления о деталях структуры XML-дерева. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] поддерживает такой подход к построению XML-дерева, но также предлагает и альтернативный способ, *функциональное построение*. В Visual Basic функциональное построение использует XML-литералы для построения XML-дерева.  
   
  Вот как можно построить такое же XML-дерево с помощью функционального построения [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
   
@@ -74,7 +74,7 @@ Dim contacts = _
   
  Обратите внимание, что отступы в коде, который строит XML-дерево, показывают структуру базового документа XML.  
   
- For more information, see [Creating XML Trees (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md).  
+ Дополнительные сведения см. в разделе [Создание деревьев XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md).  
   
 ## <a name="working-directly-with-xml-elements"></a>Работа непосредственно с XML-элементами  
  При программировании на XML основное внимание обычно уделяется XML-элементам и, возможно, атрибутам. В [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] можно работать с XML-элементами и атрибутами напрямую. Например, можно выполнять следующие действия.  
@@ -99,12 +99,12 @@ doc.AppendChild(name)
  При использовании LINQ to XML класс <xref:System.Xml.Linq.XDocument> применяется только, если требуется добавить комментарий или инструкцию по обработке на корневом уровне документа.  
   
 ## <a name="simplified-handling-of-names-and-namespaces"></a>Упрощенная обработка имен и пространств имен  
- В общем случае обработка имен, пространств имен и префиксов пространств имен является сложной частью в программировании на XML. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] упрощает работу с ними, исключая необходимость использования полных префиксов пространств имен. Их можно использовать, если требуется управлять префиксами пространств имен. Однако, если принято решение явно не управлять префиксами пространств имен, то при сериализации [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] назначит префиксы пространств имен, если они необходимы, или, в противном случае, произведет сериализацию при помощи пространств имен по умолчанию. Если используются пространства имен по умолчанию, то в итоговом документе префиксов пространств имен не будет. For more information, see [Namespaces Overview (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).  
+ В общем случае обработка имен, пространств имен и префиксов пространств имен является сложной частью в программировании на XML. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] упрощает работу с ними, исключая необходимость использования полных префиксов пространств имен. Их можно использовать, если требуется управлять префиксами пространств имен. Однако, если принято решение явно не управлять префиксами пространств имен, то при сериализации [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] назначит префиксы пространств имен, если они необходимы, или, в противном случае, произведет сериализацию при помощи пространств имен по умолчанию. Если используются пространства имен по умолчанию, то в итоговом документе префиксов пространств имен не будет. Дополнительные сведения см. в разделе [Общие сведения о пространствах имен (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).  
   
  Еще одним недостатком DOM является то, что отсутствует возможность изменять имена узлов. Вместо этого необходимо создать новый узел и скопировать в него все дочерние узлы, но при этом идентификатор первоначального узла будет потерян. В [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] эта проблема решена за счет возможности установки свойства <xref:System.Xml.Linq.XName> узла.  
   
 ## <a name="static-method-support-for-loading-xml"></a>Поддержка статических методов для загрузки XML  
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] позволяет загружать XML при помощи статических методов, а не методов экземпляра. Это упрощает загрузку и синтаксический анализ. For more information, see [How to: Load XML from a File (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-load-xml-from-a-file.md).  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] позволяет загружать XML при помощи статических методов, а не методов экземпляра. Это упрощает загрузку и синтаксический анализ. Дополнительные сведения см. [в разделе инструкции. Загрузка XML из файла (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-load-xml-from-a-file.md).  
   
 ## <a name="removal-of-support-for-dtd-constructs"></a>Удаление поддержки конструкций DTD  
  За счет удаления поддержки сущностей и ссылок на сущности [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] еще более упрощает программирование на XML. Управление сущностями является весьма сложным процессом и поэтому редко используется. Удаление поддержки сущностей позволяет повысить производительность и упростить интерфейс программирования. При заполнении дерева [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] все сущности DTD раскрываются.  
@@ -113,7 +113,7 @@ doc.AppendChild(name)
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] не предоставляет эквивалент класса `XmlDocumentFragment`. Однако во многих случаях понятие `XmlDocumentFragment` можно обрабатывать с помощью результата запроса, который типизируется как объект <xref:System.Collections.Generic.IEnumerable%601> объекта <xref:System.Xml.Linq.XNode> или объект <xref:System.Collections.Generic.IEnumerable%601> объекта <xref:System.Xml.Linq.XElement>.  
   
 ## <a name="support-for-xpathnavigator"></a>Поддержка XPathNavigator  
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] обеспечивает поддержку <xref:System.Xml.XPath.XPathNavigator> через методы расширения в пространстве имен <xref:System.Xml.XPath?displayProperty=nameWithType>. Для получения дополнительной информации см. <xref:System.Xml.XPath.Extensions?displayProperty=nameWithType>.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] обеспечивает поддержку <xref:System.Xml.XPath.XPathNavigator> через методы расширения в пространстве имен <xref:System.Xml.XPath?displayProperty=nameWithType>. Дополнительные сведения см. в разделе <xref:System.Xml.XPath.Extensions?displayProperty=nameWithType>.  
   
 ## <a name="support-for-white-space-and-indentation"></a>Поддержка пробелов и отступов  
  Обработка пробелов в [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] проще, чем в DOM.  

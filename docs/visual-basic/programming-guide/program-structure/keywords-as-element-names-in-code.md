@@ -15,23 +15,23 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347391"
 ---
 # <a name="keywords-as-element-names-in-code-visual-basic"></a>Ключевые слова как имена элементов в коде (Visual Basic)
-Any program element — such as a variable, class, or member — can have the same name as a restricted keyword. For example, you can create a variable named `Loop`. However, to refer to your version of it — which has the same name as the restricted `Loop` keyword — you must either precede it with a full qualification string or enclose it in square brackets (`[ ]`), as the following example shows.  
+Любой элемент программы (например, переменная, класс или член) может иметь то же имя, что и ключевое слово Restricted. Например, можно создать переменную с именем `Loop`. Однако для ссылки на вашу версию, которая имеет то же имя, что и ключевое слово Restricted `Loop`, необходимо либо указать перед ней полную уточняющую строку, либо заключить ее в квадратные скобки (`[ ]`), как показано в следующем примере.  
   
  [!code-vb[VbVbcnConventions#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#8)]  
   
- If you do not do either of these, then Visual Basic assumes use of the intrinsic `Loop` keyword and produces an error, as in the following example:  
+ Если не выполнить ни одно из этих действий, Visual Basic предполагает использование встроенного `Loop` ключевого слова и выдает ошибку, как показано в следующем примере:  
   
  `' The following statement causes a compiler error.`  
   
  `Loop.Visible = True`  
   
- You can use square brackets when referring to forms and controls, and when declaring a variable or defining a procedure with the same name as a restricted keyword. It can be easy to forget to qualify names or include square brackets, and thus introduce errors into your code and make it harder to read. For this reason, we recommend that you not use restricted keywords as the names of program elements. However, if a future version of Visual Basic defines a new keyword that conflicts with an existing form or control name, then you can use this technique when updating your code to work with the new version.  
+ При обращении к формам и элементам управления можно использовать квадратные скобки, а также при объявлении переменной или при определении процедуры с тем же именем, что и ключевое слово Restricted. Можно легко забыть определить имена или включить в них квадратные скобки, что приводит к ошибкам в коде и затрудняет чтение. По этой причине не рекомендуется использовать в качестве имен программных элементов ограниченные ключевые слова. Однако если в будущей версии Visual Basic определено новое ключевое слово, которое вступает в противоречие с существующей формой или именем элемента управления, можно использовать этот метод при обновлении кода для работы с новой версией.  
   
 > [!NOTE]
-> Your program also might include element names provided by other referenced assemblies. If these names conflict with restricted keywords, then placing square brackets around them causes Visual Basic to interpret them as your defined elements.  
+> Программа также может включать имена элементов, предоставляемых другими ссылочными сборками. Если эти имена конфликтуют с ограниченными ключевыми словами, то при заключении в квадратные скобки они приводят к тому, что Visual Basic интерпретирует их как определенные элементы.  
   
 ## <a name="see-also"></a>См. также
 
-- [Visual Basic Naming Conventions](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)
+- [Соглашения об именовании Visual Basic](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)
 - [Соглашения о структуре программы и коде](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)
 - [Ключевые слова](../../../visual-basic/language-reference/keywords/index.md)

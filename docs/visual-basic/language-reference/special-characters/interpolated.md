@@ -8,7 +8,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349590"
 ---
-# <a name="-visual-basic-reference"></a>$ (Visual Basic Reference)
+# <a name="-visual-basic-reference"></a>$ (Справочник по Visual Basic)
 
 Идентифицирует строковый литерал как [интерполированную строку](../../programming-guide/language-features/strings/interpolated-strings.md). Интерполированная строка — это шаблонная строка, содержащая текст вместе с *интерполированным выражением*. При разрешении интерполированной строки, например в операторе присваивания или вызове метода, ее интерполированные выражения заменяются строковыми представлениями в результирующей строке. Интерполированные строки являются заменами [строк составного формата](../../../standard/base-types/composite-formatting.md), поддерживаемыми платформой .NET Framework.
 
@@ -21,4 +21,4 @@ ms.locfileid: "74349590"
 ## <a name="see-also"></a>См. также
 
 - [Справочник по Visual Basic](../index.md)
-- [Visual Basic Special Characters](index.md)
+- [Visual Basic специальные символы](index.md)

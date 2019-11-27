@@ -16,17 +16,17 @@ ms.locfileid: "74351781"
 ---
 # <a name="object-variables-in-visual-basic"></a>Объектные переменные в Visual Basic
 
-In addition to storing values directly, a variable can refer to an object. You assign an object to a variable for the same reasons you assign any value to a variable:
+Помимо непосредственного хранения значений, переменная может ссылаться на объект. Объект присваивается переменной по тем же причинам, что вы присваиваете переменной значение.
 
-- A variable name is often shorter and easier to remember than the full path of methods and properties necessary to access the object itself.
+- Имя переменной часто короче и проще в запоминании, чем полный путь к методам и свойствам, необходимым для доступа к самому объекту.
 
-- Using a variable that refers to an object is more efficient than repeatedly accessing the object itself through the necessary methods or properties.
+- Использование переменной, ссылающейся на объект, является более эффективным, чем многократный доступ к самому объекту через необходимые методы или свойства.
 
-- You can change a variable to refer to other objects while your code is running.
+- Вы можете изменить переменную, чтобы она ссылалась на другие объекты во время выполнения кода.
 
-## <a name="making-code-shorter"></a>Making Code Shorter
+## <a name="making-code-shorter"></a>Сокращение кода
 
-You can use object variables to shorten the code you have to type. The following example uses the full path of methods and properties to access a <xref:System.Windows.Forms.Control> object.
+Переменные объекта можно использовать для сокращения кода, который необходимо ввести. В следующем примере используется полный путь к методам и свойствам для доступа к объекту <xref:System.Windows.Forms.Control>.
 
 ```vb
 ' Assume Me is a valid Form, or replace Me with a valid Form.
@@ -35,7 +35,7 @@ Me.ActiveForm.ActiveControl.Location = New Point(100, 100)
 Me.ActiveForm.ActiveControl.Show()
 ```
 
-You can shorten this code, and speed up execution, if you use an object variable for the control. You should declare the object variable with the specific class that you intend to assign to it (`Control` in this case). Once you assign an object to the variable, you can treat it exactly the same as you treat the object to which it refers. You can set or retrieve the properties of the object or use any of its methods. The following example uses an object variable to simplify the code in the preceding example.
+Этот код можно сократить и ускорить выполнение, если для элемента управления используется объектная переменная. Необходимо объявить объектную переменную с конкретным классом, который вы хотите присвоить ему (в данном случае`Control`). После присвоения объекта переменной ее можно обрабатывать точно так же, как и объект, к которому он относится. Можно задать или получить свойства объекта или использовать любой из его методов. В следующем примере используется объектная переменная для упрощения кода в предыдущем примере.
 
 ```vb
 Dim ctrlActv As System.Windows.Forms.Control = Me.ActiveForm.ActiveControl

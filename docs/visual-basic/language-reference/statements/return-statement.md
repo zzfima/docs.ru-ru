@@ -17,7 +17,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74333016"
 ---
 # <a name="return-statement-visual-basic"></a>Оператор Return (Visual Basic)
-Returns control to the code that called a `Function`, `Sub`, `Get`, `Set`, or `Operator` procedure.  
+Возвращает управление коду, который вызвал процедуру `Function`, `Sub`, `Get`, `Set`или `Operator`.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -29,20 +29,20 @@ Return expression
   
 ## <a name="part"></a>Отделение  
  `expression`  
- Required in a `Function`, `Get`, or `Operator` procedure. Expression that represents the value to be returned to the calling code.  
+ Требуется в `Function`, `Get`или процедуре `Operator`. Выражение, представляющее значение, возвращаемое вызывающему коду.  
   
-## <a name="remarks"></a>Заметки  
- In a `Sub` or `Set` procedure, the `Return` statement is equivalent to an `Exit Sub` or `Exit Property` statement, and `expression` must not be supplied.  
+## <a name="remarks"></a>Примечания  
+ В `Sub` или `Set` инструкция `Return` эквивалентна инструкции `Exit Sub` или `Exit Property`, а `expression` не должен быть указан.  
   
- In a `Function`, `Get`, or `Operator` procedure, the `Return` statement must include `expression`, and `expression` must evaluate to a data type that is convertible to the return type of the procedure. In a `Function` or `Get` procedure, you also have the alternative of assigning an expression to the procedure name to serve as the return value, and then executing an `Exit Function` or `Exit Property` statement. In an `Operator` procedure, you must use `Return expression`.  
+ В `Function`, `Get`или `Operator` инструкция `Return` должна включать `expression`, а `expression` должен иметь тип данных, преобразуемый в возвращаемый тип процедуры. В `Function` или `Get` можно также назначить выражение для имени процедуры, которое будет использоваться в качестве возвращаемого значения, а затем выполнить инструкцию `Exit Function` или `Exit Property`. В `Operator` процедуре необходимо использовать `Return expression`.  
   
- You can include as many `Return` statements as appropriate in the same procedure.  
+ В той же процедуре можно включить столько `Return` инструкций, сколько необходимо.  
   
 > [!NOTE]
-> The code in a `Finally` block runs after a `Return` statement in a `Try` or `Catch` block is encountered, but before that `Return` statement executes. A `Return` statement cannot be included in a `Finally` block.  
+> Код в блоке `Finally` выполняется после того, как обнаруживается инструкция `Return` в блоке `Try` или `Catch`, но перед выполнением этой инструкции `Return`. Инструкция `Return` не может быть включена в блок `Finally`.  
   
 ## <a name="example"></a>Пример  
- The following example uses the `Return` statement several times to return to the calling code when the procedure does not have to do anything else.  
+ В следующем примере оператор `Return` используется несколько раз для возврата к вызывающему коду, если процедура не должна выполнять никаких других действий.  
   
  [!code-vb[VbVbalrStatements#53](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#53)]  
   

@@ -18,16 +18,16 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351480"
 ---
 # <a name="narrowing-visual-basic"></a>Narrowing (Visual Basic)
-Indicates that a conversion operator (`CType`) converts a class or structure to a type that might not be able to hold some of the possible values of the original class or structure.  
+Указывает, что оператор преобразования (`CType`) преобразует класс или структуру в тип, который не может содержать некоторые из возможных значений исходного класса или структуры.  
   
-## <a name="converting-with-the-narrowing-keyword"></a>Converting with the Narrowing Keyword  
- The conversion procedure must specify `Public Shared` in addition to `Narrowing`.  
+## <a name="converting-with-the-narrowing-keyword"></a>Преобразование с помощью ключевого слова "Narrow"  
+ В дополнение к `Narrowing`у в процедуре преобразования необходимо указать `Public Shared`.  
   
- Narrowing conversions do not always succeed at run time, and can fail or incur data loss. Examples are `Long` to `Integer`, `String` to `Date`, and a base type to a derived type. This last conversion is narrowing because the base type might not contain all the members of the derived type and thus is not an instance of the derived type.  
+ Сужающие преобразования не всегда выполняются успешно во время выполнения и могут привести к сбою или потери данных. Примеры `Long` для `Integer`, `String` `Date`и базового типа в производный тип. Последнее преобразование является сужением, так как базовый тип может не содержать все члены производного типа и поэтому не является экземпляром производного типа.  
   
- If `Option Strict` is `On`, the consuming code must use `CType` for all narrowing conversions.  
+ Если `Option Strict` `On`, то для всех сужающих преобразований код должен использовать `CType`.  
   
- The `Narrowing` keyword can be used in this context:  
+ В этом контексте можно использовать ключевое слово `Narrowing`:  
   
  [Оператор Statement](../../../visual-basic/language-reference/statements/operator-statement.md)  
   
@@ -37,5 +37,5 @@ Indicates that a conversion operator (`CType`) converts a class or structure to 
 - [Расширение](../../../visual-basic/language-reference/modifiers/widening.md)
 - [Расширяющие и сужающие преобразования](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
 - [Практическое руководство. Определение оператора](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-an-operator.md)
-- [Функция CType](../../../visual-basic/language-reference/functions/ctype-function.md)
+- [CType Function](../../../visual-basic/language-reference/functions/ctype-function.md)
 - [Оператор Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md)

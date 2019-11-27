@@ -16,8 +16,8 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348587"
 ---
-# <a name="-reference-visual-basic"></a>-reference (Visual Basic)
-Causes the compiler to make type information in the specified assemblies available to the project you are currently compiling.  
+# <a name="-reference-visual-basic"></a>-Reference (Visual Basic)
+Заставляет компилятор предоставлять сведения о типах в указанных сборках, доступных для компилируемого в данный момент проекта.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -25,7 +25,7 @@ Causes the compiler to make type information in the specified assemblies availab
 -reference:fileList  
 ```
 
-or
+или
 
 ```console
 -r:fileList  
@@ -35,27 +35,27 @@ or
   
 |Термин|Определение|  
 |---|---|  
-|`fileList`|Обязательный. Список всех имен файлов сборки, разделенных запятыми. Если имя файла содержит пробел, заключите его в кавычки.|  
+|`fileList`|Обязательно. Список всех имен файлов сборки, разделенных запятыми. Если имя файла содержит пробел, заключите его в кавычки.|  
   
-## <a name="remarks"></a>Заметки  
- The file(s) you import must contain assembly metadata. Only public types are visible outside the assembly. The [-addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md) option imports metadata from a module.  
+## <a name="remarks"></a>Примечания  
+ Импортируемые файлы должны содержать метаданные сборки. За пределами сборки видны только открытые типы. Параметр [-addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md) импортирует метаданные из модуля.  
   
- If you reference an assembly (Assembly A) which itself references another assembly (Assembly B), you need to reference Assembly B if:  
+ При ссылке на сборку (сборку A), которая сама ссылается на другую сборку (сборка B), необходимо ссылаться на сборку б, если:  
   
 - Тип из сборки A наследуется из типа или реализует интерфейс сборки Б.  
   
 - Вызывается поле, свойство, событие или метод, имеющий тип возвращаемого значения или тип параметра из сборки Б.  
   
- Use [-libpath](../../../visual-basic/reference/command-line-compiler/libpath.md) to specify the directory in which one or more of your assembly references is located.  
+ Используйте параметр [-libpath](../../../visual-basic/reference/command-line-compiler/libpath.md) , чтобы указать каталог, в котором находится одна или несколько ссылок на сборки.  
   
- For the compiler to recognize a type in an assembly (not a module), it must be forced to resolve the type. One example of how you can do this is to define an instance of the type. Other ways are available to resolve type names in an assembly for the compiler. For example, if you inherit from a type in an assembly, the type name then becomes known to the compiler.  
+ Чтобы компилятор распознал тип в сборке (а не в модуле), необходимо принудительно разрешить тип. Одним из примеров того, как это можно сделать, является определение экземпляра типа. Существуют другие способы разрешения имен типов в сборке для компилятора. Например, при наследовании от типа в сборке имя типа будет называться компилятором.  
   
- The Vbc.rsp response file, which references commonly used .NET Framework assemblies, is used by default. Use `-noconfig` if you do not want the compiler to use Vbc.rsp.  
+ Файл ответов Vbc. rsp, который ссылается на часто используемые .NET Framework сборки, используется по умолчанию. Используйте `-noconfig`, если не нужно, чтобы компилятор использовал Vbc. rsp.  
   
  Краткой формой `-reference` является `/r`.  
   
 ## <a name="example"></a>Пример  
- The following command compiles source file `Input.vb` and reference assemblies from `Metad1.dll` and `Metad2.dll` to produce `Out.exe`.  
+ Следующая команда компилирует исходный файл `Input.vb` и ссылочные сборки из `Metad1.dll` и `Metad2.dll` для создания `Out.exe`.  
   
 ```console
 vbc -reference:metad1.dll,metad2.dll -out:out.exe input.vb  
@@ -65,6 +65,6 @@ vbc -reference:metad1.dll,metad2.dll -out:out.exe input.vb
 
 - [Компилятор Visual Basic с интерфейсом командной строки](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)
-- [-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)
+- [-Target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)
 - [Public](../../../visual-basic/language-reference/modifiers/public.md)
 - [Примеры командных строк компиляции](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

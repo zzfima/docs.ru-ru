@@ -14,15 +14,15 @@ ms.locfileid: "74347215"
 # <a name="mycomputerinfo-object"></a>Объект My.Computer.Info
 Предлагает свойства для получения сведений о памяти, загруженных сборках, имени и операционной системе компьютера.  
   
-## <a name="remarks"></a>Заметки  
- For information about the properties of the `My.Computer.Info` object, see <xref:Microsoft.VisualBasic.Devices.ComputerInfo>.  
+## <a name="remarks"></a>Примечания  
+ Дополнительные сведения о свойствах объекта `My.Computer.Info` см. в разделе <xref:Microsoft.VisualBasic.Devices.ComputerInfo>.  
   
 ## <a name="requirements"></a>Требования  
  **Пространство имен:** <xref:Microsoft.VisualBasic.Devices>  
   
  **Класс:** <xref:Microsoft.VisualBasic.Devices.ComputerInfo>  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **Сборка:** Библиотека времени выполнения Visual Basic (в Microsoft. VisualBasic. dll)  
   
 ## <a name="see-also"></a>См. также
 

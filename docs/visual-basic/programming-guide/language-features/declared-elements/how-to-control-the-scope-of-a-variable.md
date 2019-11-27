@@ -20,45 +20,45 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345379"
 ---
 # <a name="how-to-control-the-scope-of-a-variable-visual-basic"></a>Практическое руководство. Управление областью действия переменной (Visual Basic)
-Normally, a variable is in *scope*, or visible for reference, throughout the region in which you declare it. In some cases, the variable's *access level* can influence its scope.  
+Как правило, переменная находится в *области видимости*или видима для справки по всему региону, в котором она объявлена. В некоторых случаях *уровень доступа* переменной может повлиять на ее область.  
   
  Для получения дополнительной информации см. [Scope in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md).  
   
-## <a name="scope-at-block-or-procedure-level"></a>Scope at Block or Procedure Level  
+## <a name="scope-at-block-or-procedure-level"></a>Область на уровне блока или процедуры  
   
-#### <a name="to-make-a-variable-visible-only-within-a-block"></a>To make a variable visible only within a block  
+#### <a name="to-make-a-variable-visible-only-within-a-block"></a>Предоставление переменной видимой только внутри блока  
   
-- Place the [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md) for the variable between the initiating and terminating declaration statements of that block, for example between the `For` and `Next` statements of a `For` loop.  
+- Поместите [оператор Dim](../../../../visual-basic/language-reference/statements/dim-statement.md) для переменной между операторами объявления начала и завершения этого блока, например между операторами `For` и `Next` цикла `For`.  
   
-     You can refer to the variable only from within the block.  
+     Ссылаться на переменную можно только внутри блока.  
   
-#### <a name="to-make-a-variable-visible-only-within-a-procedure"></a>To make a variable visible only within a procedure  
+#### <a name="to-make-a-variable-visible-only-within-a-procedure"></a>Предоставление переменной видимой только внутри процедуры  
   
-- Place the `Dim` statement for the variable inside the procedure but outside any block (such as a `With`...`End With` block).  
+- Поместите оператор `Dim` для переменной внутри процедуры, но вне любого блока (например, `With`...`End With` блок).  
   
-     You can refer to the variable only from within the procedure, including inside any block contained in the procedure.  
+     Ссылаться на переменную можно только внутри процедуры, включая внутри любого блока, содержащегося в процедуре.  
   
-## <a name="scope-at-module-or-namespace-level"></a>Scope at Module or Namespace Level  
- For convenience, the single term *module level* applies equally to modules, classes, and structures. The access level of a module level variable determines its scope. The namespace that contains the module, class, or structure also influences the scope.  
+## <a name="scope-at-module-or-namespace-level"></a>Область на уровне модуля или пространства имен  
+ Для удобства *уровень модуля* единого термина применяется в равной степени к модулям, классам и структурам. Уровень доступа переменной уровня модуля определяет ее область. Пространство имен, содержащее модуль, класс или структуру, также влияет на область.  
   
-#### <a name="to-make-a-variable-visible-throughout-a-module-class-or-structure"></a>To make a variable visible throughout a module, class, or structure  
+#### <a name="to-make-a-variable-visible-throughout-a-module-class-or-structure"></a>Чтобы сделать переменную видимой в пределах модуля, класса или структуры  
   
-1. Place the `Dim` statement for the variable inside the module, class, or structure, but outside any procedure.  
+1. Поместите оператор `Dim` для переменной внутри модуля, класса или структуры, но вне любой процедуры.  
   
-2. Include the [Private](../../../../visual-basic/language-reference/modifiers/private.md) keyword in the `Dim` statement.  
+2. Включите ключевое слово [Private](../../../../visual-basic/language-reference/modifiers/private.md) в оператор `Dim`.  
   
-3. You can refer to the variable from anywhere within the module, class, or structure, but not from outside it.  
+3. Можно ссылаться на переменную из любого места в модуле, классе или структуре, но не за ее пределами.  
   
-#### <a name="to-make-a-variable-visible-throughout-a-namespace"></a>To make a variable visible throughout a namespace  
+#### <a name="to-make-a-variable-visible-throughout-a-namespace"></a>Как сделать переменную видимой во всем пространстве имен  
   
-1. Place the `Dim` statement for the variable inside the module, class, or structure, but outside any procedure.  
+1. Поместите оператор `Dim` для переменной внутри модуля, класса или структуры, но вне любой процедуры.  
   
-2. Include the [Friend](../../../../visual-basic/language-reference/modifiers/friend.md) or [Public](../../../../visual-basic/language-reference/modifiers/public.md) keyword in the `Dim` statement.  
+2. Включите в оператор `Dim` ключевое слово [Friend](../../../../visual-basic/language-reference/modifiers/friend.md) или [Public](../../../../visual-basic/language-reference/modifiers/public.md) .  
   
-3. You can refer to the variable from anywhere within the namespace containing the module, class, or structure.  
+3. Можно ссылаться на переменную из любого места в пространстве имен, содержащем модуль, класс или структуру.  
   
 ## <a name="example"></a>Пример  
- The following example declares a variable at module level and limits its visibility to code within the module.  
+ В следующем примере объявляется переменная на уровне модуля и ограничивается ее видимость кодом внутри модуля.  
   
 ```vb  
 Module demonstrateScope  
@@ -72,25 +72,25 @@ Module demonstrateScope
 End Module  
 ```  
   
- In the preceding example, all the procedures defined in module `demonstrateScope` can refer to the `String` variable `strMsg`. When the `usePrivateVariable` procedure is called, it displays the contents of the string variable `strMsg` in a dialog box.  
+ В предыдущем примере все процедуры, определенные в `demonstrateScope` модуля, могут ссылаться на `String` переменную `strMsg`. При вызове процедуры `usePrivateVariable` она отображает содержимое строковой переменной, `strMsg` в диалоговом окне.  
   
- With the following alteration to the preceding example, the string variable `strMsg` can be referred to by code anywhere in the namespace of its declaration.  
+ После приведения к предыдущему примеру изменений, строковая переменная `strMsg` может называться кодом в любом месте пространства имен его объявления.  
   
 ```vb  
 Public strMsg As String  
 ```  
   
 ## <a name="robust-programming"></a>Отказоустойчивость  
- The narrower the scope of a variable, the fewer opportunities you have for accidentally referring to it in place of another variable with the same name. You can also minimize problems of reference matching.  
+ Чем более узкие области переменной, тем меньше возможностей вы случайно ссылаетесь на нее вместо другой переменной с тем же именем. Можно также избежать проблем, связанных с сопоставлением ссылок.  
   
 ## <a name="net-framework-security"></a>Безопасность платформы .NET Framework  
- The narrower the scope of a variable, the smaller the chances that malicious code can make improper use of it.  
+ Чем короче область переменной, тем меньше вероятность того, что вредоносный код может неправильно использовать его.  
   
 ## <a name="see-also"></a>См. также
 
-- [Scope in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
-- [Lifetime in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
-- [Access levels in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
+- [Область в Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
+- [Время существования в Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
+- [Уровни доступа в Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
 - [Переменные](../../../../visual-basic/programming-guide/language-features/variables/index.md)
 - [Объявление переменных](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
 - [Оператор Dim](../../../../visual-basic/language-reference/statements/dim-statement.md)

@@ -21,32 +21,32 @@ ms.locfileid: "74345360"
 ---
 # <a name="how-to-hide-a-variable-with-the-same-name-as-your-variable-visual-basic"></a>Практическое руководство. Сокрытие переменной с тем же именем, что и ваша переменная (Visual Basic)
 
-You can hide a variable by *shadowing* it, that is, by redefining it with a variable of the same name. You can shadow the variable you want to hide in two ways:
+Переменную можно скрыть, то есть Переопределяя *ее переменной* с тем же именем. Переменную, которую нужно скрыть, можно затенить двумя способами:
 
-- **Shadowing Through Scope.** You can shadow it through scope by redeclaring it inside a subregion of the region containing the variable you want to hide.
+- **Затенение через область.** Это можно сделать с помощью области, переобъявляя ее в подобласти области, содержащей переменную, которую необходимо скрыть.
 
-- **Shadowing Through Inheritance.** If the variable you want to hide is defined at class level, you can shadow it through inheritance by redeclaring it with the [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md) keyword in a derived class.
+- **Затенение посредством наследования.** Если переменная, которую нужно скрыть, определена на уровне класса, ее можно затенить с помощью наследования, повторно объявляя ее с помощью ключевого слова [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md) в производном классе.
 
-## <a name="two-ways-to-hide-a-variable"></a>Two Ways to Hide a Variable
+## <a name="two-ways-to-hide-a-variable"></a>Два способа скрыть переменную
 
-#### <a name="to-hide-a-variable-by-shadowing-it-through-scope"></a>To hide a variable by shadowing it through scope
+#### <a name="to-hide-a-variable-by-shadowing-it-through-scope"></a>Скрытие переменной путем ее скрытия с помощью Scope
 
-1. Determine the region defining the variable you want to hide, and determine a subregion in which to redefine it with your variable.
+1. Определите регион, определяющий переменную, которую необходимо скрыть, и определите подобласть, в которой нужно переопределить переменную.
 
-    |Variable's region|Allowable subregion for redefining it|
+    |Регион переменной|Допустимая подобласть для переопределения|
     |-----------------------|-------------------------------------------|
-    |Модуль|A class within the module|
-    |Class|A subclass within the class<br /><br /> A procedure within the class|
+    |Модуль|Класс внутри модуля|
+    |Class|Подкласс в классе<br /><br /> Процедура в классе|
 
-    You cannot redefine a procedure variable in a block within that procedure, for example in an `If`...`End If` construction or a `For` loop.
+    Нельзя переопределить переменную процедуры в блоке внутри этой процедуры, например в конструкции `If`...`End If` или в цикле `For`.
 
-2. Create the subregion if it does not already exist.
+2. Создайте подобласть, если она еще не существует.
 
-3. Within the subregion, write a [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md) declaring the shadowing variable.
+3. В пределах подобласти напишите [оператор Dim](../../../../visual-basic/language-reference/statements/dim-statement.md) , объявляющий переменную с тенью.
 
-    When code inside the subregion refers to the variable name, the compiler resolves the reference to the shadowing variable.
+    Если код внутри подобласти ссылается на имя переменной, компилятор разрешает ссылку на переменную с тенью.
 
-    The following example illustrates shadowing through scope, as well as a reference that bypasses the shadowing.
+    В следующем примере демонстрируется затенение через область, а также ссылка, которая обходит затенение.
 
     ```vb
     Module shadowByScope
@@ -68,21 +68,21 @@ You can hide a variable by *shadowing* it, that is, by redefining it with a vari
     End Module
     ```
 
-    The preceding example declares the variable `num` both at module level and at procedure level (in the procedure `show`). The local variable `num` shadows the module-level variable `num` within `show`, so the local variable is set to 2. However, there is no local variable to shadow `num` in the `useModuleLevelNum` procedure. Therefore, `useModuleLevelNum` sets the value of the module-level variable to 1.
+    В предыдущем примере переменная объявляется `num` как на уровне модуля, так и на уровне процедуры (в процедуре `show`). Локальная переменная `num` затеняет переменную уровня модуля `num` в пределах `show`, поэтому локальной переменной присваивается значение 2. Однако в процедуре `useModuleLevelNum` нет локальной переменной для теневого `num`. Таким образом, `useModuleLevelNum` устанавливает значение переменной уровня модуля равным 1.
 
-    The `MsgBox` call inside `show` bypasses the shadowing mechanism by qualifying `num` with the module name. Therefore, it displays the module-level variable instead of the local variable.
+    `MsgBox` вызов в `show` обходит механизм теневого копирования путем уточнения `num` именем модуля. Таким образом, вместо локальной переменной отображается переменная уровня модуля.
 
-#### <a name="to-hide-a-variable-by-shadowing-it-through-inheritance"></a>To hide a variable by shadowing it through inheritance
+#### <a name="to-hide-a-variable-by-shadowing-it-through-inheritance"></a>Скрытие переменной путем ее скрытия с помощью наследования
 
-1. Be sure the variable you want to hide is declared in a class, and at class level (outside any procedure). Otherwise you cannot shadow it through inheritance.
+1. Убедитесь, что переменная, которую нужно скрыть, объявлена в классе и на уровне класса (вне любой процедуры). В противном случае ее нельзя будет скрыть с помощью наследования.
 
-2. Define a class derived from the variable's class if one does not already exist.
+2. Определите класс, производный от класса переменной, если он еще не существует.
 
-3. Inside the derived class, write a `Dim` statement declaring your variable. Include the [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md) keyword in the declaration.
+3. Внутри производного класса напишите оператор `Dim`, объявляющий переменную. Включите в объявление ключевое слово [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md) .
 
-    When code in the derived class refers to the variable name, the compiler resolves the reference to your variable.
+    Если код в производном классе ссылается на имя переменной, компилятор разрешает ссылку на переменную.
 
-    The following example illustrates shadowing through inheritance. It makes two references, one that accesses the shadowing variable and one that bypasses the shadowing.
+    В следующем примере показано затенение с помощью наследования. Он делает две ссылки — одну, которая обращается к переменной с тенью, и одну, которая обходит затенение.
 
     ```vb
     Public Class shadowBaseClass
@@ -99,16 +99,16 @@ You can hide a variable by *shadowing* it, that is, by redefining it with a vari
     End Class
     ```
 
-    The preceding example declares the variable `shadowString` in the base class and shadows it in the derived class. The procedure `showStrings` in the derived class displays the shadowing version of the string when the name `shadowString` is not qualified. It then displays the shadowed version when `shadowString` is qualified with the `MyBase` keyword.
+    В предыдущем примере переменная объявляется `shadowString` в базовом классе и скрывается в производном классе. Процедура, `showStrings` в производном классе, отображает версию строки с тенью, если имя `shadowString` не является полным. Затем отображается затененная версия, если `shadowString` дополнено ключевым словом `MyBase`.
 
 ## <a name="robust-programming"></a>Отказоустойчивость
 
-Shadowing introduces more than one version of a variable with the same name. When a code statement refers to the variable name, the version to which the compiler resolves the reference depends on factors such as the location of the code statement and the presence of a qualifying string. This can increase the risk of referring to an unintended version of a shadowed variable. You can lower that risk by fully qualifying all references to a shadowed variable.
+При затенении введено более одной версии переменной с тем же именем. Если инструкция Code ссылается на имя переменной, версия, на которую компилятор разрешает ссылку, зависит от таких факторов, как расположение инструкции Code и наличие подходящих строк. Это может увеличить риск обращения к непреднамеренной версии затененной переменной. Можно снизить этот риск, полностью подполняя все ссылки на затененную переменную.
 
 ## <a name="see-also"></a>См. также
 
 - [Ссылки на объявленные элементы](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
-- [Shadowing in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
+- [Затенение в Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
 - [Различия между затемнением и переопределением](../../../../visual-basic/programming-guide/language-features/declared-elements/differences-between-shadowing-and-overriding.md)
 - [Практическое руководство. Сокрытие наследуемой переменной](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-an-inherited-variable.md)
 - [Практическое руководство. Доступ к переменной, скрытой производным классом](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-access-a-variable-hidden-by-a-derived-class.md)

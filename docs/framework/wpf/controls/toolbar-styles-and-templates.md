@@ -22,7 +22,7 @@ ms.locfileid: "74283659"
 ## <a name="toolbar-parts"></a>Части панели инструментов  
  В следующей таблице перечислены именованные части для элемента управления <xref:System.Windows.Controls.ToolBar>.  
   
-|Отделение|Type|Описание|  
+|Отделение|Введите|Описание|  
 |-|-|-|  
 |PART_ToolBarPanel|<xref:System.Windows.Controls.Primitives.ToolBarPanel>|Объект, содержащий элементы управления в <xref:System.Windows.Controls.ToolBar>.|  
 |PART_ToolBarOverflowPanel|<xref:System.Windows.Controls.Primitives.ToolBarOverflowPanel>|Объект, содержащий элементы управления, которые находятся в области переполнения <xref:System.Windows.Controls.ToolBar>.|  

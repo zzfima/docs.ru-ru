@@ -17,30 +17,30 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345200"
 ---
 # <a name="determining-object-type-visual-basic"></a>Определение типа объекта (Visual Basic)
-Generic object variables (that is, variables you declare as `Object`) can hold objects from any class. When using variables of type `Object`, you may need to take different actions based on the class of the object; for example, some objects might not support a particular property or method. Visual Basic provides two means of determining which type of object is stored in an object variable: the `TypeName` function and the `TypeOf...Is` operator.  
+Универсальные объектные переменные (т. е. переменные, объявляемые как `Object`) могут содержать объекты из любого класса. При использовании переменных типа `Object`может потребоваться выполнить различные действия в зависимости от класса объекта. Например, некоторые объекты могут не поддерживать определенное свойство или метод. Visual Basic предоставляет два способа определения типа объекта, хранящегося в объектной переменной: функция `TypeName` и оператор `TypeOf...Is`.  
   
-## <a name="typename-and-typeofis"></a>TypeName and TypeOf…Is  
- The `TypeName` function returns a string and is the best choice when you need to store or display the class name of an object, as shown in the following code fragment:  
+## <a name="typename-and-typeofis"></a>TypeName и TypeOf... Рекомендуется  
+ Функция `TypeName` возвращает строку и является лучшим выбором, если необходимо сохранить или отобразить имя класса объекта, как показано в следующем фрагменте кода:  
   
  [!code-vb[VbVbalrOOP#92](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#92)]  
   
- The `TypeOf...Is` operator is the best choice for testing an object's type, because it is much faster than an equivalent string comparison using `TypeName`. The following code fragment uses `TypeOf...Is` within an `If...Then...Else` statement:  
+ Оператор `TypeOf...Is` является лучшим выбором для тестирования типа объекта, так как он гораздо быстрее, чем эквивалентное сравнение строк с помощью `TypeName`. В следующем фрагменте кода используется `TypeOf...Is` в инструкции `If...Then...Else`:  
   
  [!code-vb[VbVbalrOOP#93](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#93)]  
   
- A word of caution is due here. The `TypeOf...Is` operator returns `True` if an object is of a specific type, or is derived from a specific type. Almost everything you do with Visual Basic involves objects, which include some elements not normally thought of as objects, such as strings and integers. These objects are derived from and inherit methods from <xref:System.Object>. When passed an `Integer` and evaluated with `Object`, the `TypeOf...Is` operator returns `True`. The following example reports that the parameter `InParam` is both an `Object` and an `Integer`:  
+ В этом случае следует соблюдать осторожность. Оператор `TypeOf...Is` возвращает `True`, если объект относится к конкретному типу или является производным от определенного типа. Почти все, что выполняется с Visual Basic, включает объекты, которые включают в себя некоторые элементы, которые обычно не считаются объектами, например строками и целыми числами. Эти объекты являются производными от <xref:System.Object>и наследуют от них методы. При передаче `Integer` и вычислении с `Object`оператор `TypeOf...Is` возвращает `True`. В следующем примере сообщается, что параметр `InParam` является как `Object`, так и `Integer`:  
   
  [!code-vb[VbVbalrOOP#94](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#94)]  
   
- The following example uses both `TypeOf...Is` and `TypeName` to determine the type of object passed to it in the `Ctrl` argument. The `TestObject` procedure calls `ShowType` with three different kinds of controls.  
+ В следующем примере используются как `TypeOf...Is`, так и `TypeName` для определения типа объекта, переданного в него в аргументе `Ctrl`. `TestObject` процедура вызывает `ShowType` с тремя различными видами элементов управления.  
   
 #### <a name="to-run-the-example"></a>Запуск примера  
   
-1. Create a new Windows Application project and add a <xref:System.Windows.Forms.Button> control, a <xref:System.Windows.Forms.CheckBox> control, and a <xref:System.Windows.Forms.RadioButton> control to the form.  
+1. Создайте новый проект приложения Windows и добавьте в форму элемент управления <xref:System.Windows.Forms.Button>, <xref:System.Windows.Forms.CheckBox> и элемент управления <xref:System.Windows.Forms.RadioButton>.  
   
-2. From the button on your form, call the `TestObject` procedure.  
+2. С помощью кнопки в форме вызовите процедуру `TestObject`.  
   
-3. Add the following code to your form:  
+3. Добавьте в форму следующий код:  
   
      [!code-vb[VbVbalrOOP#95](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#95)]  
   

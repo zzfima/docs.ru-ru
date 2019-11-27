@@ -9,7 +9,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347763"
 ---
-# <a name="how-to-project-an-object-graph-visual-basic"></a>How to: Project an Object Graph (Visual Basic)
+# <a name="how-to-project-an-object-graph-visual-basic"></a>Руководство. Проецирование графа объектов (Visual Basic)
 Данный раздел иллюстрирует способ проецирования, или наполнения, из XML графа объектов.  
   
 ## <a name="example"></a>Пример  
@@ -341,4 +341,4 @@ ShipDate: 5/21/1999
 
 - <xref:System.Linq.Enumerable.Select%2A>
 - <xref:System.Linq.Enumerable.ToList%2A>
-- [Projections and Transformations (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+- [Проекции и преобразования (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)

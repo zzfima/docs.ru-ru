@@ -17,9 +17,9 @@ ms.locfileid: "74283168"
 
 |Имя проекта|Описание|Основные файлы|
 |-|-|-|
-|ExternalizedPolicy4|Содержит действие PolicyExternalizedPolicy4 и его конструктор WF 4.5.|**ExternalizedPolicy4.CS**: определение действия.<br /><br /> **ExternalizedPolicy4Designer.xaml**: пользовательский конструктор действия ExternalizedPolicy4. Он использует редактор правил (<xref:System.Workflow.Activities.Rules.Design.RuleSetDialog>), определенный в конструкторе правил WF 3.5.|
-|ImperativeCodeClientSample|Образец клиентского приложения, осуществляющего конфигурирование и запуск рабочего процесса с использованием приложения PolicyExternalizedPolicy4, использующего императивный код C# (конструктор не используется).|**ApplyDiscount.rules**: Файл с определениями правил [!INCLUDE[wf1](../../../../includes/wf1-md.md)].<br /><br /> **Order.CS**: тип, представляющий заказ клиента. Правила применяются к объектам этого типа.<br /><br /> **Program.cs**: Настраивает и запускает рабочий процесс с действием Policy4 для применения правил, определенных в ApplyDiscount.rules, к экземплярам объектов Order.<br /><br /> App.config: файл конфигурации, содержащий путь к файлу правил.|
-|DesignerClientSample|Образец клиентского приложения, осуществляющего конфигурирование и запуск рабочего процесса с использованием приложения ExternalPolicy4 в конструкторе [!INCLUDE[wf1](../../../../includes/wf1-md.md)].|**Sequence1.xaml**: Последовательный рабочий процесс, использующий действие Policy4 для проверки правил.<br /><br /> **Program.cs**: Выполняет экземпляр рабочего процесса, определенного в Sequence1.xaml.|
+|ExternalizedPolicy4|Содержит действие PolicyExternalizedPolicy4 и его конструктор WF 4.5.|**ExternalizedPolicy4.CS**: определение действия.<br /><br /> **ExternalizedPolicy4Designer. XAML**: Пользовательский конструктор для действия ExternalizedPolicy4. Он использует редактор правил (<xref:System.Workflow.Activities.Rules.Design.RuleSetDialog>), определенный в конструкторе правил WF 3.5.|
+|ImperativeCodeClientSample|Образец клиентского приложения, осуществляющего конфигурирование и запуск рабочего процесса с использованием приложения PolicyExternalizedPolicy4, использующего императивный код C# (конструктор не используется).|**ApplyDiscount. rules**: файл с определениями правил [!INCLUDE[wf1](../../../../includes/wf1-md.md)].<br /><br /> **Order.CS**: тип, представляющий заказ клиента. Правила применяются к объектам этого типа.<br /><br /> **Program.CS**: настраивает и запускает рабочий процесс с действием Policy4 для применения правил, определенных в ApplyDiscount. rules к экземплярам объектов Order.<br /><br /> App.config: файл конфигурации, содержащий путь к файлу правил.|
+|DesignerClientSample|Образец клиентского приложения, осуществляющего конфигурирование и запуск рабочего процесса с использованием приложения ExternalPolicy4 в конструкторе [!INCLUDE[wf1](../../../../includes/wf1-md.md)].|**Sequence1. XAML**: последовательный рабочий процесс, использующий действие Policy4 для выполнения оценки правил.<br /><br /> **Program.CS**: запускает экземпляр рабочего процесса, определенный в Sequence1. XAML.|
 
 ## <a name="the-externalizedpolicy4-activity"></a>Действие ExternalizedPolicy4
 
@@ -52,7 +52,7 @@ public class ExternalizedPolicy4Activity<TResult>: CodeActivity
 
 ## <a name="externalizedpolicy4-activity-designer"></a>Конструктор действия ExternalizedPolicy4
 
-Конструктор действия ExternalizedPolicy4 позволяет конфигурировать активность таким образом, чтобы использовать существующий набор правил без необходимости написания кода. Достаточно просто задать путь к файлу с расширением RULES и указать желаемое имя <xref:System.Workflow.Activities.Rules.RuleSet>. Конструктор также позволяет вносить изменения в <xref:System.Workflow.Activities.Rules.RuleSet>. После построения решения действие будет занесено в область элементов в раздел Microsoft.Samples.Activities.Rules. Конструктор позволяет выбирать файл с расширением RULES и <xref:System.Workflow.Activities.Rules.RuleSet>. При нажатии кнопки **Изменить набор правил** на экран будет выведено диалоговое окно WF 3.5 <xref:System.Workflow.Activities.Rules.Design.RuleSetDialog>. Это диалоговое окно представляет собой повторно размещенный редактор правил WF 3.5, используемый для просмотра и изменения правил, выполняемых действием ExternalizedPolicy4.
+Конструктор действия ExternalizedPolicy4 позволяет конфигурировать активность таким образом, чтобы использовать существующий набор правил без необходимости написания кода. Достаточно просто задать путь к файлу с расширением RULES и указать желаемое имя <xref:System.Workflow.Activities.Rules.RuleSet>. Конструктор также позволяет вносить изменения в <xref:System.Workflow.Activities.Rules.RuleSet>. После построения решения действие будет занесено в область элементов в раздел Microsoft.Samples.Activities.Rules. Конструктор позволяет выбирать файл с расширением RULES и <xref:System.Workflow.Activities.Rules.RuleSet>. При нажатии кнопки **изменить набор правил** отображается <xref:System.Workflow.Activities.Rules.Design.RuleSetDialog> WF 3,5. Это диалоговое окно представляет собой повторно размещенный редактор правил WF 3.5, используемый для просмотра и изменения правил, выполняемых действием ExternalizedPolicy4.
 
 ## <a name="policy4-and-externalpolicy4"></a>Policy4 и ExternalPolicy4
 
@@ -68,7 +68,7 @@ public class ExternalizedPolicy4Activity<TResult>: CodeActivity
 
 1. С помощью Visual Studio откройте файл решения *Policy4sample. sln* .
 
-2. В окне **Обозреватель решений** щелкните правой кнопкой мыши проект **ImperativeCodeClientSample** и выберите команду **Назначить запускаемым проектом**.
+2. В **Обозреватель решений**щелкните правой кнопкой мыши проект **Императивекодеклиентсампле** и выберите **Назначить запускаемым проектом**.
 
 3. Чтобы запустить проект, нажмите клавиши **Ctrl**+**F5**.
 
@@ -76,7 +76,7 @@ public class ExternalizedPolicy4Activity<TResult>: CodeActivity
 
 1. С помощью Visual Studio откройте файл решения *Policy4sample. sln* .
 
-2. В окне **Обозреватель решений** щелкните правой кнопкой мыши проект **DesignerClientSample** и выберите команду **Назначить запускаемым проектом**.
+2. В **Обозреватель решений**щелкните правой кнопкой мыши проект **Десигнерклиентсампле** и выберите **Назначить запускаемым проектом**.
 
 3. Нажмите клавиши **Ctrl**+**SHIFT**+**B** , чтобы скомпилировать проект.
 

@@ -17,18 +17,18 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344897"
 ---
 # <a name="how-to-define-a-conversion-operator-visual-basic"></a>Практическое руководство. Определение оператора преобразования (Visual Basic)
-If you have defined a class or structure, you can define a type conversion operator between the type of your class or structure and another data type (such as `Integer`, `Double`, or `String`).  
+Если вы определили класс или структуру, можно определить оператор преобразования типа между типом класса или структуры и другим типом данных (например, `Integer`, `Double`или `String`).  
   
- Define the type conversion as a [CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md) procedure within the class or structure. All conversion procedures must be `Public Shared`, and each one must specify either [Widening](../../../../visual-basic/language-reference/modifiers/widening.md) or [Narrowing](../../../../visual-basic/language-reference/modifiers/narrowing.md).  
+ Определите преобразование типа как процедуру [функции CType](../../../../visual-basic/language-reference/functions/ctype-function.md) в классе или структуре. Все процедуры преобразования должны быть `Public Shared`, и каждая из них должна указывать либо [расширение](../../../../visual-basic/language-reference/modifiers/widening.md) , либо [сужение](../../../../visual-basic/language-reference/modifiers/narrowing.md).  
   
- Defining an operator on a class or structure is also called *overloading* the operator.  
+ Определение оператора для класса или структуры также называется *перегрузкой* оператора.  
   
 ## <a name="example"></a>Пример  
- The following example defines conversion operators between a structure called `digit` and a `Byte`.  
+ В следующем примере определяются операторы преобразования между структурой, именуемой `digit`, и `Byte`.  
   
  [!code-vb[VbVbcnProcedures#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#27)]  
   
- You can test the structure `digit` with the following code.  
+ Вы можете проверить структуру `digit` с помощью следующего кода.  
   
  [!code-vb[VbVbcnProcedures#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#28)]  
   

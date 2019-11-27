@@ -14,28 +14,28 @@ ms.locfileid: "74347420"
 ---
 # <a name="how-to-create-xml-documentation-in-visual-basic"></a>Практическое руководство. Создание XML-документации в Visual Basic
 
-This example shows how to add XML documentation comments to your code.
+В этом примере показано, как добавить комментарии XML-документации в код.
 
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]
 
-## <a name="to-create-xml-documentation-for-a-type-or-member"></a>To create XML documentation for a type or member
+## <a name="to-create-xml-documentation-for-a-type-or-member"></a>Создание XML-документации для типа или члена
 
-1. In the **Code Editor**, position your cursor on the line above the type or member for which you want to create documentation.
+1. В **редакторе кода**поместите курсор в строку над типом или членом, для которого требуется создать документацию.
 
-2. Type `'''` (three single-quotation marks).
+2. Введите `'''` (три одинарные кавычки).
 
-    An XML skeleton for the type or member is added in the **Code Editor**.
+    В **редакторе кода**ДОБАВЛЯЕТСЯ XML-схема для типа или члена.
 
-3. Add descriptive information between the appropriate tags.
+3. Добавьте описательные сведения между соответствующими тегами.
 
     > [!NOTE]
-    > If you add additional lines within the XML documentation block, each line must begin with `'''`.
+    > При добавлении дополнительных строк в блок XML-документации каждая строка должна начинаться с `'''`.
 
-4. Add additional code that uses the type or member with the new XML documentation comments.
+4. Добавьте дополнительный код, который использует тип или член с новыми комментариями XML-документации.
 
-    IntelliSense displays the text from the \<summary> tag for the type or member.
+    IntelliSense отображает текст из \<сводки > тега для типа или члена.
 
-5. Compile the code to generate an XML file containing the documentation comments. Дополнительные сведения см. в разделе [-doc](../../../visual-basic/reference/command-line-compiler/doc.md).
+5. Скомпилируйте код, чтобы создать XML-файл, содержащий комментарии к документации. Дополнительные сведения см. в разделе [-doc](../../../visual-basic/reference/command-line-compiler/doc.md).
 
 ## <a name="see-also"></a>См. также
 

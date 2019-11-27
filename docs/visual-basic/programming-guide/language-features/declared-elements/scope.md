@@ -1,5 +1,5 @@
 ---
-title: Область
+title: '`Scope`'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - module scope [Visual Basic]
@@ -24,54 +24,54 @@ ms.locfileid: "74345292"
 ---
 # <a name="scope-in-visual-basic"></a>Область видимости в Visual Basic
 
-The *scope* of a declared element is the set of all code that can refer to it without qualifying its name or making it available through an [Imports Statement (.NET Namespace and Type)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md). An element can have scope at one of the following levels:
+*Областью видимости* объявленного элемента является набор всего кода, который может ссылаться на него без уточнения его имени или предоставления доступа с помощью [оператора Imports (пространство имен .NET и тип)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md). Элемент может иметь область действия на одном из следующих уровней:
 
 |Уровень|Описание|
 |-----------|-----------------|
-|Область действия блока|Available only within the code block in which it is declared|
-|Procedure scope|Available to all code within the procedure in which it is declared|
-|Module scope|Available to all code within the module, class, or structure in which it is declared|
-|Namespace scope|Available to all code in the namespace in which it is declared|
+|Область действия блока|Доступно только в блоке кода, в котором он объявлен|
+|Область действия процедуры|Доступен для всего кода в процедуре, в которой он объявлен|
+|Область модуля|Доступен для всего кода в модуле, классе или структуре, в которой он объявлен|
+|Область пространства имен|Доступен для всего кода в пространстве имен, в котором оно объявлено|
 
-These levels of scope progress from the narrowest (block) to the widest (namespace), where *narrowest scope* means the smallest set of code that can refer to the element without qualification. For more information, see "Levels of Scope" on this page.
+Эти уровни области выполняются от самого узкого (блока) до самого широкого (пространства имен), где *самая узкие области* означает наименьший набор кода, который может ссылаться на элемент без квалификации. Дополнительные сведения см. в разделе уровни области на этой странице.
 
-## <a name="specifying-scope-and-defining-variables"></a>Specifying Scope and Defining Variables
+## <a name="specifying-scope-and-defining-variables"></a>Указание области и определение переменных
 
-You specify the scope of an element when you declare it. The scope can depend on the following factors:
+Вы указываете область элемента при его объявлении. Область может зависеть от следующих факторов:
 
-- The region (block, procedure, module, class, or structure) in which you declare the element
+- Область (блок, процедура, модуль, класс или структура), в которой объявляется элемент
 
-- The namespace containing the element's declaration
+- Пространство имен, содержащее объявление элемента
 
-- The access level you declare for the element
+- Уровень доступа, объявленный для элемента
 
-Use care when you define variables with the same name but different scope, because doing so can lead to unexpected results. Для получения дополнительной информации см. [References to Declared Elements](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).
+Используйте осторожность при определении переменных с одинаковым именем, но с разными областями, так как это может привести к непредвиденным результатам. Для получения дополнительной информации см. [References to Declared Elements](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).
 
-## <a name="levels-of-scope"></a>Levels of Scope
+## <a name="levels-of-scope"></a>Уровни области
 
-A programming element is available throughout the region in which you declare it. All code in the same region can refer to the element without qualifying its name.
+Программный элемент доступен по всему региону, в котором он объявлен. Весь код в одном регионе может ссылаться на элемент без уточнения его имени.
 
-### <a name="block-scope"></a>Block Scope
+### <a name="block-scope"></a>Область блока
 
-A block is a set of statements enclosed within initiating and terminating declaration statements, such as the following:
+Блок — это набор инструкций, заключенных в операторы инициирования и завершения объявления, как показано ниже:
 
-- `Do` и `Loop`.
+- `Do` и `Loop`
 
-- `For` [`Each`] and `Next`
+- `For` [`Each`] и `Next`
 
-- `If` и `End If`.
+- `If` и `End If`
 
-- `Select` и `End Select`.
+- `Select` и `End Select`
 
-- `SyncLock` и `End SyncLock`.
+- `SyncLock` и `End SyncLock`
 
-- `Try` и `End Try`.
+- `Try` и `End Try`
 
-- `While` и `End While`.
+- `While` и `End While`
 
-- `With` и `End With`.
+- `With` и `End With`
 
-If you declare a variable within a block, you can use it only within that block. In the following example, the scope of the integer variable `cube` is the block between `If` and `End If`, and you can no longer refer to `cube` when execution passes out of the block.
+Если переменная объявлена в блоке, ее можно использовать только в пределах этого блока. В следующем примере областью целочисленной переменной `cube` является блок между `If` и `End If`, и вы больше не можете ссылаться на `cube`, когда выполнение передается из блока.
 
 ```vb
 If n < 1291 Then
@@ -81,26 +81,26 @@ End If
 ```
 
 > [!NOTE]
-> Even if the scope of a variable is limited to a block, its lifetime is still that of the entire procedure. If you enter the block more than once during the procedure, each block variable retains its previous value. To avoid unexpected results in such a case, it is wise to initialize block variables at the beginning of the block.
+> Даже если область действия переменной ограничена блоком, ее время существования все равно будет содержаться во всей процедуре. Если вы вводите блок несколько раз во время процедуры, каждая переменная блока удерживает свое предыдущее значение. Чтобы избежать непредвиденных результатов в таком случае, разумно инициализировать блочные переменные в начале блока.
 
-### <a name="procedure-scope"></a>Procedure Scope
+### <a name="procedure-scope"></a>Область действия процедуры
 
-An element declared within a procedure is not available outside that procedure. Only the procedure that contains the declaration can use it. Variables at this level are also known as *local variables*. You declare them with the [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md), with or without the [Static](../../../../visual-basic/language-reference/modifiers/static.md) keyword.
+Элемент, объявленный внутри процедуры, недоступен за пределами этой процедуры. Только процедура, содержащая объявление, может использовать его. Переменные на этом уровне также называются *локальными переменными*. Они объявляются с помощью [оператора Dim](../../../../visual-basic/language-reference/statements/dim-statement.md)с ключевым словом [static](../../../../visual-basic/language-reference/modifiers/static.md) или без него.
 
-Procedure and block scope are closely related. If you declare a variable inside a procedure but outside any block within that procedure, you can think of the variable as having block scope, where the block is the entire procedure.
+Область действия процедуры и блока тесно связана. При объявлении переменной внутри процедуры, но вне любого блока внутри этой процедуры можно считать, что переменная имеет область видимости блока, где блоком является вся процедура.
 
 > [!NOTE]
-> All local elements, even if they are `Static` variables, are private to the procedure in which they appear. You cannot declare any element using the [Public](../../../../visual-basic/language-reference/modifiers/public.md) keyword within a procedure.
+> Все локальные элементы, даже если они являются `Static` переменными, являются частными для процедуры, в которой они отображаются. Нельзя объявить какой-либо элемент с помощью ключевого слова [Public](../../../../visual-basic/language-reference/modifiers/public.md) в процедуре.
 
-### <a name="module-scope"></a>Module Scope
+### <a name="module-scope"></a>Область модуля
 
-For convenience, the single term *module level* applies equally to modules, classes, and structures. You can declare elements at this level by placing the declaration statement outside of any procedure or block but within the module, class, or structure.
+Для удобства *уровень модуля* единого термина применяется в равной степени к модулям, классам и структурам. Вы можете объявить элементы на этом уровне, поместив оператор объявления за пределы любой процедуры или блока, но внутри модуля, класса или структуры.
 
-When you make a declaration at the module level, the access level you choose determines the scope. The namespace that contains the module, class, or structure also affects the scope.
+При создании объявления на уровне модуля этот уровень доступа определяет область. Пространство имен, содержащее модуль, класс или структуру, также влияет на область.
 
-Elements for which you declare [Private](../../../../visual-basic/language-reference/modifiers/private.md) access level are available to every procedure in that module, but not to any code in a different module. The `Dim` statement at module level defaults to `Private` if you do not use any access level keywords. However, you can make the scope and access level more obvious by using the `Private` keyword in the `Dim` statement.
+Элементы, для которых объявлен [частный](../../../../visual-basic/language-reference/modifiers/private.md) уровень доступа, доступны для каждой процедуры в этом модуле, но не для кода в другом модуле. Инструкция `Dim` на уровне модуля по умолчанию имеет значение `Private`, если не используются ключевые слова уровня доступа. Тем не менее можно сделать область и уровень доступа более очевидными с помощью ключевого слова `Private` в инструкции `Dim`.
 
-In the following example, all procedures defined in the module can refer to the string variable `strMsg`. When the second procedure is called, it displays the contents of the string variable `strMsg` in a dialog box.
+В следующем примере все процедуры, определенные в модуле, могут ссылаться на строковую переменную `strMsg`. При вызове второй процедуры она отображает содержимое строковой переменной, `strMsg` в диалоговом окне.
 
 ```vb
 ' Put the following declaration at module level (not in any procedure).
@@ -115,40 +115,40 @@ Sub usePrivateVariable()
 End Sub
 ```
 
-### <a name="namespace-scope"></a>Namespace Scope
+### <a name="namespace-scope"></a>Область пространства имен
 
-If you declare an element at module level using the [Friend](../../../../visual-basic/language-reference/modifiers/friend.md) or [Public](../../../../visual-basic/language-reference/modifiers/public.md) keyword, it becomes available to all procedures throughout the namespace in which the element is declared. With the following alteration to the preceding example, the string variable `strMsg` can be referred to by code anywhere in the namespace of its declaration.
+Если элемент объявляется на уровне модуля с помощью ключевого слова [Friend](../../../../visual-basic/language-reference/modifiers/friend.md) или [Public](../../../../visual-basic/language-reference/modifiers/public.md) , он становится доступным для всех процедур в пространстве имен, в котором объявлен элемент. После приведения к предыдущему примеру изменений, строковая переменная `strMsg` может называться кодом в любом месте пространства имен его объявления.
 
 ```vb
 ' Include this declaration at module level (not inside any procedure).
 Public strMsg As String
 ```
 
-Namespace scope includes nested namespaces. An element available from within a namespace is also available from within any namespace nested inside that namespace.
+Область пространства имен включает вложенные пространства имен. Элемент, доступный из пространства имен, также доступен из любого пространства имен, вложенного в это пространство имен.
 
-If your project does not contain any [Namespace Statement](../../../../visual-basic/language-reference/statements/namespace-statement.md)s, everything in the project is in the same namespace. In this case, namespace scope can be thought of as project scope. `Public` elements in a module, class, or structure are also available to any project that references their project.
+Если проект не содержит [операторов пространства имен](../../../../visual-basic/language-reference/statements/namespace-statement.md), все в проекте находится в том же пространстве имен. В этом случае область пространства имен может рассматриваться как область проекта. `Public` элементы в модуле, классе или структуре также доступны для любого проекта, который ссылается на свой проект.
 
-## <a name="choice-of-scope"></a>Choice of Scope
+## <a name="choice-of-scope"></a>Выбора области
 
-When you declare a variable, you should keep in mind the following points when choosing its scope.
+При определении переменной следует учитывать следующие моменты при выборе ее области действия.
 
-### <a name="advantages-of-local-variables"></a>Advantages of Local Variables
+### <a name="advantages-of-local-variables"></a>Преимущества локальных переменных
 
-Local variables are a good choice for any kind of temporary calculation, for the following reasons:
+Локальные переменные являются хорошим выбором для любого временного вычисления по следующим причинам.
 
-- **Name Conflict Avoidance.** Local variable names are not susceptible to conflict. For example, you can create several different procedures containing a variable called `intTemp`. As long as each `intTemp` is declared as a local variable, each procedure recognizes only its own version of `intTemp`. Any one procedure can alter the value in its local `intTemp` without affecting `intTemp` variables in other procedures.
+- **Конфликт имен — избежать.** Имена локальных переменных не подвержены конфликтам. Например, можно создать несколько различных процедур, содержащих переменную с именем `intTemp`. При условии, что каждая `intTemp` объявлена как локальная переменная, каждая процедура распознает только собственную версию `intTemp`. Любая процедура может изменить значение в локальной `intTemp`, не влияя на `intTemp` переменные в других процедурах.
 
-- **Memory Consumption.** Local variables consume memory only while their procedure is running. Their memory is released when the procedure returns to the calling code. By contrast, [Shared](../../../../visual-basic/language-reference/modifiers/shared.md) and [Static](../../../../visual-basic/language-reference/modifiers/static.md) variables consume memory resources until your application stops running, so use them only when necessary. *Instance variables* consume memory while their instance continues to exist, which makes them less efficient than local variables, but potentially more efficient than `Shared` or `Static` variables.
+- **Потребление памяти.** Локальные переменные потребляют память только во время выполнения процедуры. Их память освобождается, когда процедура возвращается в вызывающий код. В отличие от этого, [Общие](../../../../visual-basic/language-reference/modifiers/shared.md) и [статические](../../../../visual-basic/language-reference/modifiers/static.md) переменные потребляют ресурсы памяти до тех пор, пока приложение не прекратит работу, поэтому используйте их только при необходимости. *Переменные экземпляра* потребляют память, пока их экземпляры продолжают существовать, что делает их менее эффективными, чем локальные переменные, но потенциально эффективнее, чем `Shared` или `Static` переменных.
 
-### <a name="minimizing-scope"></a>Minimizing Scope
+### <a name="minimizing-scope"></a>Минимизация области
 
-In general, when declaring any variable or constant, it is good programming practice to make the scope as narrow as possible (block scope is the narrowest). This helps conserve memory and minimizes the chances of your code erroneously referring to the wrong variable. Similarly, you should declare a variable to be [Static](../../../../visual-basic/language-reference/modifiers/static.md) only when it is necessary to preserve its value between procedure calls.
+Как правило, при объявлении любой переменной или константы рекомендуется сделать область как можно более узким (область блока является самой узким). Это помогает экономить память и минимизирует вероятность того, что код ошибочно ссылался на неверную переменную. Аналогично, следует объявить переменную как [статическую](../../../../visual-basic/language-reference/modifiers/static.md) , только если необходимо сохранить ее значение между вызовами процедур.
 
 ## <a name="see-also"></a>См. также
 
 - [Характеристики объявленных элементов](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)
 - [Практическое руководство. Управление областью действия переменной](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-scope-of-a-variable.md)
-- [Lifetime in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
-- [Access levels in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
+- [Время существования в Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
+- [Уровни доступа в Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
 - [Ссылки на объявленные элементы](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
 - [Объявление переменных](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)

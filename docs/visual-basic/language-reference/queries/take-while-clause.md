@@ -28,15 +28,15 @@ Take While expression
   
 |Термин|Определение|  
 |---|---|  
-|`expression`|Обязательный. An expression that represents a condition to test elements for. The expression must return a `Boolean` value or a functional equivalent, such as an `Integer` to be evaluated as a `Boolean`.|  
+|`expression`|Обязательно. Выражение, представляющее условие для проверки элементов. Выражение должно возвращать `Boolean` значение или функциональный эквивалент, например `Integer`, который вычисляется как `Boolean`.|  
   
-## <a name="remarks"></a>Заметки  
- The `Take While` clause includes elements from the start of a query result until the supplied `expression` returns `false`. After the `expression` returns `false`, the query will bypass all remaining elements. The `expression` is ignored for the remaining results.  
+## <a name="remarks"></a>Примечания  
+ Предложение `Take While` включает элементы из начала результата запроса до тех пор, пока переданный `expression` не возвратит `false`. После того как `expression` возвращает `false`, запрос будет обходить все оставшиеся элементы. Для оставшихся результатов `expression` игнорируется.  
   
- The `Take While` clause differs from the `Where` clause in that the `Where` clause can be used to include all elements from a query that meet a particular condition. The `Take While` clause includes elements only until the first time that the condition is not satisfied. The `Take While` clause is most useful when you are working with an ordered query result.  
+ Предложение `Take While` отличается от предложения `Where` в том, что предложение `Where` можно использовать для включения всех элементов из запроса, удовлетворяющего определенному условию. Предложение `Take While` включает элементы только до первого момента, когда условие не будет удовлетворено. Предложение `Take While` наиболее полезно при работе с упорядоченным результатом запроса.  
   
 ## <a name="example"></a>Пример  
- The following code example uses the `Take While` clause to retrieve results until the first customer without any orders is found.  
+ В следующем примере кода предложение `Take While` используется для получения результатов до тех пор, пока не будет найден первый клиент без заказов.  
   
  [!code-vb[VbSimpleQuerySamples#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#2)]  
   

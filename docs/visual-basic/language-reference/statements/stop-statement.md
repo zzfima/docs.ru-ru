@@ -20,7 +20,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346470"
 ---
 # <a name="stop-statement-visual-basic"></a>Оператор Stop (Visual Basic)
-Suspends execution.  
+Приостанавливает выполнение.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -28,16 +28,16 @@ Suspends execution.
 Stop  
 ```  
   
-## <a name="remarks"></a>Заметки  
- You can place `Stop` statements anywhere in procedures to suspend execution. Using the `Stop` statement is similar to setting a breakpoint in the code.  
+## <a name="remarks"></a>Примечания  
+ Инструкции `Stop` можно разместить в любом месте процедуры, чтобы приостановить выполнение. Использование оператора `Stop` аналогично установке точки останова в коде.  
   
- The `Stop` statement suspends execution, but unlike `End`, it does not close any files or clear any variables, unless it is encountered in a compiled executable (.exe) file.  
+ Инструкция `Stop` приостанавливает выполнение, но в отличие от `End`, она не закрывает никакие файлы и не очищает переменные, если только она не обнаружена в скомпилированном исполняемом файле (exe).  
   
 > [!NOTE]
-> If the `Stop` statement is encountered in code that is running outside of the integrated development environment (IDE), the debugger is invoked. This is true regardless of whether the code was compiled in debug or retail mode.  
+> Если оператор `Stop` встречается в коде, который выполняется вне интегрированной среды разработки (IDE), вызывается отладчик. Это справедливо независимо от того, был ли код скомпилирован в режиме отладки или розничной торговли.  
   
 ## <a name="example"></a>Пример  
- This example uses the `Stop` statement to suspend execution for each iteration through the `For...Next` loop.  
+ В этом примере используется инструкция `Stop` для приостановки выполнения каждой итерации в цикле `For...Next`.  
   
  [!code-vb[VbVbalrStatements#56](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#56)]  
   

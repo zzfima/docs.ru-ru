@@ -27,7 +27,7 @@ ms.locfileid: "74283579"
   
 |Имя VisualState|Имя VisualStateGroup|Описание|  
 |-|-|-|  
-|Норм.|CommonStates|Состояние по умолчанию.|  
+|Нормальный|CommonStates|Состояние по умолчанию.|  
 |MouseOver|CommonStates|Указатель мыши расположен в элементе управления.|  
 |Нажато|CommonStates|Элемент управления нажат.|  
 |Отключено.|CommonStates|Элемент управления отключен.|  

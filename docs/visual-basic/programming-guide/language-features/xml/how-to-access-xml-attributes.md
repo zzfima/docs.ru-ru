@@ -15,7 +15,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74332329"
 ---
 # <a name="how-to-access-xml-attributes-visual-basic"></a>Практическое руководство. Доступ к XML-атрибутам (Visual Basic)
-This example shows how to use an attribute axis property to access XML attributes in an XML element by name. In particular, it uses the `type` attribute axis property to access the attribute named `type` in the `phone` object.  
+В этом примере показано, как использовать свойство оси атрибута для доступа к XML-атрибутам в XML-элементе по имени. В частности, используется свойство оси атрибута `type` для доступа к атрибуту с именем `type` в объекте `phone`.  
   
 ## <a name="example"></a>Пример  
  [!code-vb[VbXMLSamples#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples5.vb#11)]  

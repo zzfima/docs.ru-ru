@@ -15,7 +15,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74332341"
 ---
 # <a name="how-to-access-xml-child-elements-visual-basic"></a>Практическое руководство. Доступ к дочерним XML-элементам (Visual Basic)
-This example shows how to use a child axis property to access all XML child elements that have a specified name in an XML element. In particular, it uses the <xref:System.Xml.Linq.XElement.Value%2A> property to get the value of the first element in the collection that the `name` child axis property returns. The `name` child axis property gets all child elements named `phone` in the `contact` object. This example also uses the `phone` child axis property to access all child elements named `phone` that are contained in the `contact` object.  
+В этом примере показано, как использовать свойство дочерней оси для доступа ко всем дочерним элементам XML с указанным именем в элементе XML. В частности, для получения значения первого элемента в коллекции, возвращаемого свойством дочерней оси `name`, используется свойство <xref:System.Xml.Linq.XElement.Value%2A>. Свойство дочерней оси `name` получает все дочерние элементы с именами `phone` в объекте `contact`. В этом примере также используется свойство дочерней оси `phone` для доступа ко всем дочерним элементам с именем `phone`, содержащимся в объекте `contact`.  
   
 ## <a name="example"></a>Пример  
  [!code-vb[VbXMLSamples#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples4.vb#10)]  

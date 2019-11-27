@@ -17,12 +17,12 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349068"
 ---
 # <a name="troubleshooting-arrays-visual-basic"></a>Устранение неполадок, связанных с массивами (Visual Basic)
-This page lists some common problems that can occur when working with arrays.  
+На этой странице перечислены некоторые распространенные проблемы, которые могут возникнуть при работе с массивами.  
   
-## <a name="compilation-errors-declaring-and-initializing-an-array"></a>Compilation Errors Declaring and Initializing an Array  
- Compilation errors can arise from misunderstanding of the rules for declaring, creating, and initializing arrays. The most common causes of errors are the following:  
+## <a name="compilation-errors-declaring-and-initializing-an-array"></a>Ошибки компиляции при объявлении и инициализации массива  
+ Ошибки компиляции могут возникать из нечеткого понимания правил объявления, создания и инициализации массивов. Ниже перечислены наиболее распространенные причины возникновения ошибок.  
   
-- Supplying a [New Operator](../../../../visual-basic/language-reference/operators/new-operator.md) clause after specifying dimension lengths in the array variable declaration. The following code lines show invalid declarations of this type.  
+- Перед указанием длины измерения в объявлении переменной массива следует указать [новое предложение оператора](../../../../visual-basic/language-reference/operators/new-operator.md) . В следующих строках кода показаны недопустимые объявления этого типа.  
   
      `Dim INVALIDsingleDimByteArray(2) As Byte = New Byte()`  
   
@@ -30,15 +30,15 @@ This page lists some common problems that can occur when working with arrays.
   
      `Dim INVALIDjaggedByteArray(1)() As Byte = New Byte()()`  
   
-- Specifying dimension lengths for more than the top-level array of a jagged array. The following code line shows an invalid declaration of this type.  
+- Задание длины измерений для большего массива массивов массивов. В следующей строке кода показано недопустимое объявление этого типа.  
   
      `Dim INVALIDjaggedByteArray(1)(1) As Byte`  
   
-- Omitting the `New` keyword when specifying the element values. The following code line shows an invalid declaration of this type.  
+- Пропуск ключевого слова `New` при указании значений элементов. В следующей строке кода показано недопустимое объявление этого типа.  
   
      `Dim INVALIDoneDimShortArray() As Short = Short() {0, 1, 2, 3}`  
   
-- Supplying a `New` clause without braces (`{}`). The following code lines show invalid declarations of this type.  
+- Указание `New` предложения без фигурных скобок (`{}`). В следующих строках кода показаны недопустимые объявления этого типа.  
   
      `Dim INVALIDsingleDimByteArray() As Byte = New Byte()`  
   
@@ -48,14 +48,14 @@ This page lists some common problems that can occur when working with arrays.
   
      `Dim INVALIDtwoDimShortArray(,) As Short = New Short(1, 1)`  
   
-## <a name="accessing-an-array-out-of-bounds"></a>Accessing an Array Out of Bounds  
- The process of initializing an array assigns an upper bound and a lower bound to each dimension. Every access to an element of the array must specify a valid index, or subscript, for every dimension. If any index is below its lower bound or above its upper bound, an <xref:System.IndexOutOfRangeException> exception results. The compiler cannot detect such an error, so an error occurs at run time.  
+## <a name="accessing-an-array-out-of-bounds"></a>Доступ к массиву вне границ  
+ Процесс инициализации массива назначает верхнюю границу и нижнюю границу для каждого измерения. Каждый доступ к элементу массива должен указывать допустимый индекс (или подстрочный) для каждого измерения. Если какой-либо индекс находится ниже нижней границы или выше его верхней границы, <xref:System.IndexOutOfRangeException> результаты исключения. Компилятор не может обнаружить такую ошибку, поэтому во время выполнения возникает ошибка.  
   
-### <a name="determining-bounds"></a>Determining Bounds  
- If another component passes an array to your code, for example as a procedure argument, you do not know the size of that array or the lengths of its dimensions. You should always determine the upper bound for every dimension of an array before you attempt to access any elements. If the array has been created by some means other than a Visual Basic `New` clause, the lower bound might be something other than 0, and it is safest to determine that lower bound as well.  
+### <a name="determining-bounds"></a>Определение границ  
+ Если другой компонент передает массив в код, например в качестве аргумента процедуры, размер этого массива или длины его измерений неизвестн. Прежде чем пытаться получить доступ к любому элементу, необходимо всегда определять верхнюю границу для каждого измерения массива. Если массив был создан другими способами, отличными от предложения Visual Basic `New`, то нижняя граница может быть не равна 0, а также наиболее надежно определить нижнюю границу.  
   
-### <a name="specifying-the-dimension"></a>Specifying the Dimension  
- When determining the bounds of a multidimensional array, take care how you specify the dimension. The `dimension` parameters of the <xref:System.Array.GetLowerBound%2A> and <xref:System.Array.GetUpperBound%2A> methods are 0-based, while the `Rank` parameters of the Visual Basic <xref:Microsoft.VisualBasic.Information.LBound%2A> and <xref:Microsoft.VisualBasic.Information.UBound%2A> functions are 1-based.  
+### <a name="specifying-the-dimension"></a>Указание измерения  
+ При определении границ многомерного массива следует соблюдать осторожность при указании измерения. Параметры `dimension` методов <xref:System.Array.GetLowerBound%2A> и <xref:System.Array.GetUpperBound%2A> равны 0, а параметры `Rank` Visual Basic <xref:Microsoft.VisualBasic.Information.LBound%2A> и <xref:Microsoft.VisualBasic.Information.UBound%2A> — от 1.  
   
 ## <a name="see-also"></a>См. также
 

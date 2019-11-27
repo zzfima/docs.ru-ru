@@ -1,5 +1,5 @@
 ---
-title: 'How to: create strings using a StringBuilder'
+title: Инструкции. Создание строк с помощью StringBuilder
 ms.date: 07/20/2015
 helpviewer_keywords:
 - StringBuilder class
@@ -12,13 +12,13 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344372"
 ---
-# <a name="how-to-create-strings-using-a-stringbuilder-in-visual-basic"></a>How to: create strings using a StringBuilder in Visual Basic
+# <a name="how-to-create-strings-using-a-stringbuilder-in-visual-basic"></a>Инструкции. Создание строк с помощью StringBuilder в Visual Basic
 
-This example constructs a long string from many smaller strings using the <xref:System.Text.StringBuilder> class. The <xref:System.Text.StringBuilder> class is more efficient than the `&=` operator for concatenating many strings.
+В этом примере создается длинная строка из множества меньших строк с помощью класса <xref:System.Text.StringBuilder>. Класс <xref:System.Text.StringBuilder> более эффективен, чем оператор `&=` для сцепления многих строк.
 
 ## <a name="example"></a>Пример
 
-The following example creates an instance of the <xref:System.Text.StringBuilder> class, appends 1,000 strings to that instance, and then returns its string representation:
+В следующем примере создается экземпляр класса <xref:System.Text.StringBuilder>, добавляются строки 1 000 в этот экземпляр, а затем возвращается строковое представление:
 
  [!code-vb[VbVbalrStrings#70](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#70)]
 

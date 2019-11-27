@@ -74,7 +74,7 @@ private void SerializeDataSet(string filename){
 
 ## <a name="serializing-an-xmlelement-and-xmlnode"></a>Сериализация XmlElement и XmlNode
 
-You can also serialize instances of an <xref:System.Xml.XmlElement> or <xref:System.Xml.XmlNode> class, as shown in the following code example.
+Кроме того, можно сериализовать экземпляры класса <xref:System.Xml.XmlElement> или <xref:System.Xml.XmlNode>, как показано в следующем примере кода.
 
 ```vb
 private Sub SerializeElement(filename As String)
@@ -369,7 +369,7 @@ public class Employee {
 
 Метод `CreatePO` создает `PurchaseOrder`, `Address` и объекты класса `OrderedItem` и задает значения открытых полей. Метод также создает экземпляр класса <xref:System.Xml.Serialization.XmlSerializer>, который используется для сериализации и десериализации `PurchaseOrder`. Обратите внимание, что код передает тип класса, который будет сериализован в конструктор. Код также создает `FileStream`, который используется для записи потока XML в документ XML.
 
-Метод `ReadPo` немного проще. Он всего лишь создает объекты для десериализации и считывает их значения. As with the `CreatePo` method, you must first construct an <xref:System.Xml.Serialization.XmlSerializer>, passing the type of the class to be deserialized to the constructor. Кроме того, для чтения документа XML требуется <xref:System.IO.FileStream>. Для десериализации объектов вызовите метод <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> с <xref:System.IO.FileStream> в качестве аргумента. Десериализуемый объект должен быть приведен к переменной объекта типа `PurchaseOrder`. Затем код считывает значения десериализуемого типа `PurchaseOrder`. Обратите внимание, что можно также прочитать файл "PO.xml", который создается с целью демонстрации фактического выходного XML.
+Метод `ReadPo` немного проще. Он всего лишь создает объекты для десериализации и считывает их значения. Как и в случае с методом `CreatePo`, необходимо сначала создать <xref:System.Xml.Serialization.XmlSerializer>, передав тип класса для десериализации в конструктор. Кроме того, для чтения документа XML требуется <xref:System.IO.FileStream>. Для десериализации объектов вызовите метод <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> с <xref:System.IO.FileStream> в качестве аргумента. Десериализуемый объект должен быть приведен к переменной объекта типа `PurchaseOrder`. Затем код считывает значения десериализуемого типа `PurchaseOrder`. Обратите внимание, что можно также прочитать файл "PO.xml", который создается с целью демонстрации фактического выходного XML.
 
 ```vb
 Imports System.IO
@@ -772,6 +772,6 @@ public class Test
 - [Введение в сериализацию XML](introducing-xml-serialization.md)
 - [Управление сериализацией XML с использованием атрибутов](controlling-xml-serialization-using-attributes.md)
 - [Атрибуты управления сериализацией XML](attributes-that-control-xml-serialization.md)
-- [XmlSerializer Class](xref:System.Xml.Serialization.XmlSerializer)
+- [Класс XmlSerializer](xref:System.Xml.Serialization.XmlSerializer)
 - [Практическое руководство. Сериализация объекта](how-to-serialize-an-object.md)
 - [Практическое руководство. Десериализация объекта](how-to-deserialize-an-object.md)

@@ -22,7 +22,7 @@ ms.locfileid: "74283556"
 ## <a name="calendar-parts"></a>Элементы календаря  
  В следующей таблице перечислены именованные части для элемента управления <xref:System.Windows.Controls.Calendar>.  
   
-|Отделение|Type|Описание|  
+|Отделение|Введите|Описание|  
 |-|-|-|  
 |PART_CalendarItem|<xref:System.Windows.Controls.Primitives.CalendarItem>|Отображаемый в данный момент месяц или год на <xref:System.Windows.Controls.Calendar>.|  
 |PART_Root|<xref:System.Windows.Controls.Panel>|Панель, содержащая <xref:System.Windows.Controls.Primitives.CalendarItem>.|  
@@ -39,7 +39,7 @@ ms.locfileid: "74283556"
 ## <a name="calendaritem-parts"></a>Календаритем части  
  В следующей таблице перечислены именованные части для элемента управления <xref:System.Windows.Controls.Primitives.CalendarItem>.  
   
-|Отделение|Type|Описание|  
+|Отделение|Введите|Описание|  
 |-|-|-|  
 |PART_Root|<xref:System.Windows.FrameworkElement>|Корень элемента управления.|  
 |PART_PreviousButton|<xref:System.Windows.Controls.Button>|Кнопка, отображающая предыдущую страницу календаря при ее щелчке.|  
@@ -72,7 +72,7 @@ ms.locfileid: "74283556"
   
 |Имя VisualState|Имя VisualStateGroup|Описание|  
 |-|-|-|  
-|Норм.|CommonStates|Состояние по умолчанию.|  
+|Нормальный|CommonStates|Состояние по умолчанию.|  
 |Отключено.|CommonStates|<xref:System.Windows.Controls.Primitives.CalendarDayButton> отключена.|  
 |MouseOver|CommonStates|Указатель мыши располагается на <xref:System.Windows.Controls.Primitives.CalendarDayButton>.|  
 |Нажато|CommonStates|Нажата <xref:System.Windows.Controls.Primitives.CalendarDayButton>.|  
@@ -82,7 +82,7 @@ ms.locfileid: "74283556"
 |календарбуттонунфокусед|календарбуттонфокусстатес|Кнопка не имеет фокуса.|  
 |Focused|FocusStates|Кнопка имеет фокус.|  
 |Без фокуса ввода|FocusStates|Кнопка не имеет фокуса.|  
-|Активная|активестатес|Кнопка активна.|  
+|Активно|активестатес|Кнопка активна.|  
 |Неактивно|активестатес|Кнопка неактивна.|  
 |регулардай|дайстатес|Кнопка не представляет <xref:System.DateTime.Today%2A?displayProperty=nameWithType>.|  
 |Сегодня|дайстатес|Кнопка представляет <xref:System.DateTime.Today%2A?displayProperty=nameWithType>.|  
@@ -100,7 +100,7 @@ ms.locfileid: "74283556"
   
 |Имя VisualState|Имя VisualStateGroup|Описание|  
 |-|-|-|  
-|Норм.|CommonStates|Состояние по умолчанию.|  
+|Нормальный|CommonStates|Состояние по умолчанию.|  
 |Отключено.|CommonStates|<xref:System.Windows.Controls.Primitives.CalendarButton> отключена.|  
 |MouseOver|CommonStates|Указатель мыши располагается на <xref:System.Windows.Controls.Primitives.CalendarButton>.|  
 |Нажато|CommonStates|Нажата <xref:System.Windows.Controls.Primitives.CalendarButton>.|  
@@ -110,7 +110,7 @@ ms.locfileid: "74283556"
 |календарбуттонунфокусед|календарбуттонфокусстатес|Кнопка не имеет фокуса.|  
 |Focused|FocusStates|Кнопка имеет фокус.|  
 |Без фокуса ввода|FocusStates|Кнопка не имеет фокуса.|  
-|Активная|активестатес|Кнопка активна.|  
+|Активно|активестатес|Кнопка активна.|  
 |Неактивно|активестатес|Кнопка неактивна.|  
 |Valid|ValidationStates|Элемент управления использует класс <xref:System.Windows.Controls.Validation>, а <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> присоединенным свойством является `false`.|  
 |InvalidFocused|ValidationStates|Присоединенное <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> свойство имеет `true` элемент управления имеет фокус.|  

@@ -38,7 +38,7 @@ ms.locfileid: "74283563"
 
 В этом разделе содержатся следующие подразделы:
 
-- [Предварительные требования](#prerequisites)
+- [Необходимые компоненты](#prerequisites)
 
 - [Модель частей и состояний](#parts_and_states_model)
 
@@ -52,7 +52,7 @@ ms.locfileid: "74283563"
 
 <a name="prerequisites"></a>
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>Prerequisites
 
 В этом разделе предполагается, что вы знаете, как создать новый <xref:System.Windows.Controls.ControlTemplate> для существующего элемента управления, знакомы с элементами в контракте элемента управления и понимаете концепции, обсуждаемые в разделе [Создание шаблона для элемента управления](../../../desktop-wpf/themes/how-to-create-apply-template.md).
 

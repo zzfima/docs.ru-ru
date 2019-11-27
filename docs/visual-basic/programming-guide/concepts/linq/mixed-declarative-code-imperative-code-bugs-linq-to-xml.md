@@ -9,15 +9,15 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74331647"
 ---
-# <a name="mixed-declarative-codeimperative-code-bugs-linq-to-xml-visual-basic"></a>Mixed Declarative Code/Imperative Code Bugs (LINQ to XML) (Visual Basic)
-[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] содержит различные методы, которые позволяют прямо модифицировать XML-дерево. Можно добавить элементы, удалить элементы, изменить содержимое элемента, добавить атрибуты и т. п. This programming interface is described in [Modifying XML Trees (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md). Если выполняется переход в пределах одной оси, например <xref:System.Xml.Linq.XContainer.Elements%2A>, и при этом выполняется изменение XML-дерева, можно в итоге обнаружить некоторые неожиданные ошибки.  
+# <a name="mixed-declarative-codeimperative-code-bugs-linq-to-xml-visual-basic"></a>Ошибки смешанного декларативного кода или императивного кода (LINQ to XML) (Visual Basic)
+[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] содержит различные методы, которые позволяют прямо модифицировать XML-дерево. Можно добавить элементы, удалить элементы, изменить содержимое элемента, добавить атрибуты и т. п. Этот программный интерфейс описан в разделе [изменение деревьев XML (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md). Если выполняется переход в пределах одной оси, например <xref:System.Xml.Linq.XContainer.Elements%2A>, и при этом выполняется изменение XML-дерева, можно в итоге обнаружить некоторые неожиданные ошибки.  
   
  Этот вид ошибки иногда называется Halloween Problem.  
   
 ## <a name="definition-of-the-problem"></a>Определение этой ошибки  
  При создании некоего кода с использованием LINQ, при котором выполняется последовательное прохождение по элементам коллекции, код пишется в декларативном стиле. Это больше похоже на описание того, *что* именно требуется получить, а не *как* именно требуется выполнить задачу. Если написать код, при котором 1) извлекается первый элемент, 2) выполняется его проверка согласно определенному условию, 3) выполняется его изменение и 4) выполняется его помещение назад в список элементов, то это означает, что это был бы императивный код. При этом вы описываете, *как именно* следует выполнить задачу.  
   
- Смешение этих стилей кода в одной операции является источником неполадок. Рассмотрим следующий пример.  
+ Смешение этих стилей кода в одной операции является источником неполадок. Рекомендуется учесть следующие моменты.  
   
  Предположим, дан список из трех элементов (a, b и c):  
   
@@ -178,4 +178,4 @@ Console.WriteLine(newRoot)
   
 ## <a name="see-also"></a>См. также
 
-- [Advanced LINQ to XML Programming (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+- [Расширенное программирование LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

@@ -13,9 +13,9 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74343738"
 ---
-# <a name="end-keyword-statement-visual-basic"></a>End \<keyword> Statement (Visual Basic)
+# <a name="end-keyword-statement-visual-basic"></a>End \<ключевое слово > (Visual Basic)
 
-When followed by an additional keyword, terminates the definition of the statement block introduced by that keyword.
+Если за ним следует дополнительное ключевое слово, завершает определение блока операторов, представленного этим ключевым словом.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -48,34 +48,34 @@ End With
 
 |Отделение|Описание|
 |---|---|
-|`End`|Обязательный. Terminates the definition of the programming element.|
-|`AddHandler`|Required to terminate an `AddHandler` accessor begun by a matching `AddHandler` statement in a custom [Event Statement](event-statement.md).|
-|`Class`|Required to terminate a class definition begun by a matching [Class Statement](class-statement.md).|
-|`Enum`|Required to terminate an enumeration definition begun by a matching [Enum Statement](enum-statement.md).|
-|`Event`|Required to terminate a `Custom` event definition begun by a matching [Event Statement](event-statement.md).|  
-|`Function`|Required to terminate a `Function` procedure definition begun by a matching [Function Statement](function-statement.md). If execution encounters an `End Function` statement, control returns to the calling code.|
-|`Get`|Required to terminate a `Property` procedure definition begun by a matching [Get Statement](get-statement.md). If execution encounters an `End Get` statement, control returns to the statement requesting the property's value.|
-|`If`|Required to terminate an `If`...`Then`...`Else` block definition begun by a matching `If` statement. See [If...Then...Else Statement](if-then-else-statement.md).|
-|`Interface`|Required to terminate an interface definition begun by a matching [Interface Statement](interface-statement.md).|
-|`Module`|Required to terminate a module definition begun by a matching [Module Statement](module-statement.md).|
-|`Namespace`|Required to terminate a namespace definition begun by a matching [Namespace Statement](namespace-statement.md).|
-|`Operator`|Required to terminate an operator definition begun by a matching [Operator Statement](operator-statement.md).|
-|`Property`|Required to terminate a property definition begun by a matching [Property Statement](property-statement.md).|
-|`RaiseEvent`|Required to terminate a `RaiseEvent` accessor begun by a matching `RaiseEvent` statement in a custom [Event Statement](event-statement.md).|
-|`RemoveHandler`|Required to terminate a `RemoveHandler` accessor begun by a matching `RemoveHandler` statement in a custom [Event Statement](event-statement.md).|
-|`Select`|Required to terminate a `Select`...`Case` block definition begun by a matching `Select` statement. See [Select...Case Statement](select-case-statement.md).  
-|`Set`|Required to terminate a `Property` procedure definition begun by a matching [Set Statement](set-statement.md). If execution encounters an `End Set` statement, control returns to the statement setting the property's value.  
-|`Structure`|Required to terminate a structure definition begun by a matching [Structure Statement](structure-statement.md).  
-|`Sub`|Required to terminate a `Sub` procedure definition begun by a matching [Sub Statement](sub-statement.md). If execution encounters an `End Sub` statement, control returns to the calling code.  
-|`SyncLock`|Required to terminate a `SyncLock` block definition begun by a matching `SyncLock` statement. See [SyncLock Statement](synclock-statement.md).  
-|`Try`|Required to terminate a `Try`...`Catch`...`Finally` block definition begun by a matching `Try` statement. See [Try...Catch...Finally Statement](try-catch-finally-statement.md).  
-|`While`|Required to terminate a `While` loop definition begun by a matching `While` statement. See [While...End While Statement](while-end-while-statement.md).  
-|`With`| Required to terminate a `With` block definition begun by a matching `With` statement. See [With...End With Statement](with-end-with-statement.md).  
+|`End`|Обязательно. Завершает определение программного элемента.|
+|`AddHandler`|Требуется для завершения `AddHandler` метода доступа, начатого соответствующей инструкцией `AddHandler` в пользовательской [инструкции Event](event-statement.md).|
+|`Class`|Требуется для завершения определения класса, начатого соответствующим [оператором класса](class-statement.md).|
+|`Enum`|Требуется для завершения определения перечисления, начатого соответствующей [инструкцией enum](enum-statement.md).|
+|`Event`|Требуется для завершения `Custom` определения события, начатого соответствующей [инструкцией Event](event-statement.md).|  
+|`Function`|Требуется для завершения `Function` определения процедуры, начатой соответствующей [инструкцией Function](function-statement.md). Если при выполнении обнаруживается оператор `End Function`, управление возвращается в вызывающий код.|
+|`Get`|Требуется для завершения `Property` определения процедуры, начатой соответствующей [инструкцией GET](get-statement.md). Если при выполнении обнаруживается оператор `End Get`, управление возвращается инструкции, запрашивающей значение свойства.|
+|`If`|Требуется для завершения `If`...`Then`...`Else` определения блока, начатого соответствующей инструкцией `If`. См. раздел [If... Затем... Else, инструкция](if-then-else-statement.md).|
+|`Interface`|Требуется для завершения определения интерфейса, начатого соответствующей [инструкцией интерфейса](interface-statement.md).|
+|`Module`|Требуется для завершения определения модуля, начатого соответствующим [оператором модуля](module-statement.md).|
+|`Namespace`|Требуется для завершения определения пространства имен, начатого соответствующей [инструкцией Namespace](namespace-statement.md).|
+|`Operator`|Требуется для завершения определения оператора, начатого соответствующим [оператором оператора](operator-statement.md).|
+|`Property`|Требуется для завершения определения свойства, начатого соответствующим [оператором Property](property-statement.md).|
+|`RaiseEvent`|Требуется для завершения `RaiseEvent` метода доступа, начатого соответствующей инструкцией `RaiseEvent` в пользовательской [инструкции Event](event-statement.md).|
+|`RemoveHandler`|Требуется для завершения `RemoveHandler` метода доступа, начатого соответствующей инструкцией `RemoveHandler` в пользовательской [инструкции Event](event-statement.md).|
+|`Select`|Требуется для завершения `Select`...`Case` определения блока, начатого соответствующей инструкцией `Select`. См. раздел [SELECT... Case, инструкция](select-case-statement.md).  
+|`Set`|Требуется для завершения `Property` определения процедуры, начатой соответствующей [инструкцией SET](set-statement.md). Если при выполнении обнаруживается оператор `End Set`, управление возвращается в инструкцию, устанавливая значение свойства.  
+|`Structure`|Требуется для завершения определения структуры, начатой соответствующей [инструкцией Structure](structure-statement.md).  
+|`Sub`|Требуется для завершения `Sub` определения процедуры, начатой соответствующим [оператором подвыражения](sub-statement.md). Если при выполнении обнаруживается оператор `End Sub`, управление возвращается в вызывающий код.  
+|`SyncLock`|Требуется для завершения определения блока `SyncLock`, начатого соответствующей инструкцией `SyncLock`. См. раздел [оператор SyncLock](synclock-statement.md).  
+|`Try`|Требуется для завершения `Try`...`Catch`...`Finally` определения блока, начатого соответствующей инструкцией `Try`. См [. раздел try... Перехватить... Оператор finally](try-catch-finally-statement.md).  
+|`While`|Требуется для завершения определения цикла `While`, начатого соответствующей инструкцией `While`. См [. раздел while... Конец оператора while](while-end-while-statement.md).  
+|`With`| Требуется для завершения определения блока `With`, начатого соответствующей инструкцией `With`. См [. раздел with... Конец оператора](with-end-with-statement.md).  
 |||
   
 ## <a name="directives"></a>Директивы
 
-When preceded by a number sign (`#`), the `End` keyword terminates a preprocessing block introduced by the corresponding directive.  
+Если перед ним стоит знак решетки (`#`), ключевое слово `End` завершает блок предварительной обработки, представленный соответствующей директивой.  
 
 ```vb
 #End ExternalSource
@@ -85,19 +85,19 @@ When preceded by a number sign (`#`), the `End` keyword terminates a preprocessi
 
 |Отделение|Описание|
 |---|---|
-|`#End`|Обязательный. Terminates the definition of the preprocessing block.|
-|`ExternalSource`|Required to terminate an external source block begun by a matching [#ExternalSource Directive](../directives/externalsource-directive.md).|
-|`If`|Required to terminate a conditional compilation block begun by a matching `#If` directive. See [#If...Then...#Else Directives](../directives/if-then-else-directives.md).|
-|`Region`|Required to terminate a source region block begun by a matching [#Region Directive](../directives/region-directive.md).|
+|`#End`|Обязательно. Завершает определение блока предварительной обработки.|
+|`ExternalSource`|Требуется для завершения внешнего блока источника, начатого соответствующей [директивой #ExternalSource](../directives/externalsource-directive.md).|
+|`If`|Требуется для завершения блока условной компиляции, начатого соответствующей директивой `#If`. См [. #If... Then... #Else директивы](../directives/if-then-else-directives.md).|
+|`Region`|Требуется для завершения блока исходного региона, начатого соответствующей [директивой #Region](../directives/region-directive.md).|
 |||
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Примечания
 
-The [End Statement](end-statement.md), without an additional keyword, terminates execution immediately.
+[Оператор End](end-statement.md)без дополнительного ключевого слова завершает выполнение немедленно.
 
-## <a name="smart-device-developer-notes"></a>Smart Device Developer Notes  
+## <a name="smart-device-developer-notes"></a>Примечания для разработчиков смарт-устройств  
 
-The `End` statement, without an additional keyword, is not supported.  
+Инструкция `End` без дополнительного ключевого слова не поддерживается.  
   
 ## <a name="see-also"></a>См. также
 

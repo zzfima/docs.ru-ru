@@ -17,48 +17,48 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74333731"
 ---
 # <a name="constant-and-literal-data-types-visual-basic"></a>Типы данных констант и литералов (Visual Basic)
-A literal is a value that is expressed as itself rather than as a variable's value or the result of an expression, such as the number 3 or the string "Hello". A constant is a meaningful name that takes the place of a literal and retains this same value throughout the program, as opposed to a variable, whose value may change.  
+Литерал — это значение, которое выражено как само по себе, а не как значение переменной или результат выражения, например число 3 или строка "Hello". Константа — это понятное имя, которое принимает место литерала и сохраняется в программе в отличие от переменной, значение которой может измениться.  
   
- When [Option Infer](../../../../visual-basic/language-reference/statements/option-infer-statement.md) is `Off` and [Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md) is `On`, you must declare all constants explicitly with a data type. In the following example, the data type of `MyByte` is explicitly declared as data type `Byte`:  
+ Если [параметр Infer](../../../../visual-basic/language-reference/statements/option-infer-statement.md) имеет значение `Off` и [Option строго](../../../../visual-basic/language-reference/statements/option-strict-statement.md) `On`, необходимо явно объявить все константы с типом данных. В следующем примере тип данных `MyByte` явно объявлен как тип данных `Byte`:  
   
  [!code-vb[VbVbalrConstants#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConstants/VB/Class1.vb#1)]  
   
- When `Option Infer` is `On` or `Option Strict` is `Off`, you can declare a constant without specifying a data type with an `As` clause. The compiler determines the type of the constant from the type of the expression. A numeric integer literal is cast by default to the `Integer` data type. The default data type for floating-point numbers is `Double`, and the keywords `True` and `False` specify a `Boolean` constant.  
+ Если `Option Infer` имеет `On` или `Option Strict` `Off`, можно объявить константу без указания типа данных с помощью предложения `As`. Компилятор определяет тип константы на основе типа выражения. Числовой целочисленный литерал по умолчанию приводится к типу данных `Integer`. Типом данных по умолчанию для чисел с плавающей запятой является `Double`, а ключевые слова `True` и `False` указать константу `Boolean`.  
   
-## <a name="literals-and-type-coercion"></a>Literals and Type Coercion  
- In some cases, you might want to force a literal to a particular data type; for example, when assigning a particularly large integral literal value to a variable of type `Decimal`. The following example produces an error:  
+## <a name="literals-and-type-coercion"></a>Литералы и приведение типов  
+ В некоторых случаях может потребоваться принудительно применить литерал к конкретному типу данных. Например, при присваивании особо большого целочисленного значения литерала переменной типа `Decimal`. Следующий пример приводит к ошибке:  
   
 ```vb  
 Dim myDecimal as Decimal  
 myDecimal = 100000000000000000000   ' This causes a compiler error.  
 ```  
   
- The error results from the representation of the literal. The `Decimal` data type can hold a value this large, but the literal is implicitly represented as a `Long`, which cannot.  
+ Эта ошибка возникает из представления литерала. Тип данных `Decimal` может содержать это большое значение, но литерал неявно представляется как `Long`, что не может.  
   
- You can coerce a literal to a particular data type in two ways: by appending a type character to it, or by placing it within enclosing characters. A type character or enclosing characters must immediately precede and/or follow the literal, with no intervening space or characters of any kind.  
+ Можно привести литерал к определенному типу данных двумя способами: путем добавления к нему символа типа или путем помещения его в окружающие символы. Символ типа или заключенные в него символы должны находиться непосредственно перед и/или следовать за литералом без промежуточного пробела или символов какого-либо типа.  
   
- To make the previous example work, you can append the `D` type character to the literal, which causes it to be represented as a `Decimal`:  
+ Чтобы предыдущий пример работал, можно добавить к литералу символ типа `D`, что приводит к его представлению в виде `Decimal`:  
   
  [!code-vb[VbVbalrConstants#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConstants/VB/Class1.vb#2)]  
   
- The following example demonstrates correct usage of type characters and enclosing characters:  
+ В следующем примере показано правильное использование символов типа и окружающих символов:  
   
  [!code-vb[VbVbalrConstants#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConstants/VB/Class1.vb#3)]  
   
- The following table shows the enclosing characters and type characters available in Visual Basic.  
+ В следующей таблице показаны окружающие символы и символы типа, доступные в Visual Basic.  
   
-|Тип данных|Enclosing character|Appended type character|  
+|Тип данных|Вложенный символ|Символ добавленного типа|  
 |---|---|---|  
 |`Boolean`|(нет)|(нет)|  
 |`Byte`|(нет)|(нет)|  
-|`Char`|"|В|  
+|`Char`|"|C|  
 |`Date`|#|(нет)|  
-|`Decimal`|(нет)|D or @|  
-|`Double`|(нет)|R or #|  
-|`Integer`|(нет)|I or %|  
-|`Long`|(нет)|L or &|  
+|`Decimal`|(нет)|D или @|  
+|`Double`|(нет)|R или #|  
+|`Integer`|(нет)|I или%|  
+|`Long`|(нет)|L или &|  
 |`Short`|(нет)|S|  
-|`Single`|(нет)|F or !|  
+|`Single`|(нет)|F или!|  
 |`String`|"|(нет)|  
   
 ## <a name="see-also"></a>См. также
@@ -69,7 +69,7 @@ myDecimal = 100000000000000000000   ' This causes a compiler error.
 - [Оператор Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md)
 - [Оператор Option Explicit](../../../../visual-basic/language-reference/statements/option-explicit-statement.md)
 - [Общие сведения о перечислениях](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)
-- [How to: Declare an Enumeration](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)
+- [Инструкции. Объявление перечисления](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)
 - [Перечисления и уточнение имен](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)
 - [Типы данных](../../../../visual-basic/language-reference/data-types/index.md)
 - [Константы и перечисления](../../../../visual-basic/language-reference/constants-and-enumerations.md)

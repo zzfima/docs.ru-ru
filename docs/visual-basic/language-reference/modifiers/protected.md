@@ -19,29 +19,29 @@ ms.locfileid: "74351301"
 ---
 # <a name="protected-visual-basic"></a>Protected (Visual Basic)
 
-A member access modifier that specifies that one or more declared programming elements are accessible only from within their own class or from a derived class.
+Модификатор доступа к члену, указывающий, что один или несколько объявленных программных элементов доступны только в своем собственном классе или производном классе.
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Примечания
 
-Sometimes a programming element declared in a class contains sensitive data or restricted code, and you want to limit access to the element. However, if the class is inheritable and you expect a hierarchy of derived classes, it might be necessary for these derived classes to access the data or code. In such a case, you want the element to be accessible both from the base class and from all derived classes. To limit access to an element in this manner, you can declare it with `Protected`.
+Иногда программный элемент, объявленный в классе, содержит конфиденциальные данные или ограниченный код и требуется ограничить доступ к элементу. Однако если класс является наследуемым и предполагается иерархия производных классов, то эти производные классы могут быть необходимы для доступа к данным или коду в этих производных классах. В этом случае необходимо, чтобы элемент был доступен как из базового класса, так и из всех производных классов. Чтобы ограничить доступ к элементу таким образом, его можно объявить с помощью `Protected`.
 
 > [!NOTE]
-> The `Protected` access modifier can be combined with two other modifiers:
+> Модификатор доступа `Protected` можно сочетать с двумя другими модификаторами:
 >
-> - The [Protected Friend](protected-friend.md) modifier makes a class member accessible from within that class, from derived classes, and from the same assembly in which the class is defined.
-> - The [Private Protected](private-protected.md) modifier makes a class member accessible by derived types, but only within its containing assembly.
+> - Модификатор [Protected Friend](protected-friend.md) делает член класса доступным из этого класса, из производных классов и из той же сборки, в которой определен класс.
+> - Модификатор [Private protected](private-protected.md) делает член класса доступным для производных типов, но только внутри его содержащей сборки.
 
 ## <a name="rules"></a>Правила
 
-**Declaration Context.** You can use `Protected` only at the class level. This means the declaration context for a `Protected` element must be a class, and cannot be a source file, namespace, interface, module, structure, or procedure.
+**Контекст объявления.** `Protected` можно использовать только на уровне класса. Это означает, что контекст объявления для элемента `Protected` должен быть классом и не может быть исходным файлом, пространством имен, интерфейсом, модулем, структурой или процедурой.
 
 ## <a name="behavior"></a>Поведение
 
-- **Access Level.** All code in a class can access its elements. Code in any class that derives from a base class can access all the `Protected` elements of the base class. This is true for all generations of derivation. This means that a class can access `Protected` elements of the base class of the base class, and so on.
+- **Уровень доступа.** Весь код в классе может обращаться к его элементам. Код в любом классе, производном от базового класса, имеет доступ ко всем `Protected`ным элементам базового класса. Это справедливо для всех поколений наследования. Это означает, что класс может получить доступ к `Protected` элементам базового класса базового класса и т. д.
 
-     Protected access is not a superset or subset of friend access.
+     Защищенный доступ не является надмножеством или подмножеством дружественного доступа.
 
-- **Access Modifiers.** The keywords that specify access level are called *access modifiers*. For a comparison of the access modifiers, see [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).
+- **Модификаторы доступа.** Ключевые слова, определяющие уровень доступа, называются *модификаторами доступа*. Сравнение модификаторов доступа см. [в разделе уровни доступа в Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).
 
 Модификатор `Protected` можно использовать в следующих контекстах:
 
@@ -76,7 +76,7 @@ Sometimes a programming element declared in a class contains sensitive data or r
 - [Закрытые](../../../visual-basic/language-reference/modifiers/private.md)
 - [Private Protected](private-protected.md)
 - [Protected Friend](protected-friend.md)
-- [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
+- [Уровни доступа в Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
 - [Процедуры](../../../visual-basic/programming-guide/language-features/procedures/index.md)
 - [Структуры](../../../visual-basic/programming-guide/language-features/data-types/structures.md)
 - [Объекты и классы](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

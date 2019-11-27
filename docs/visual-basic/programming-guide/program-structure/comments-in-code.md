@@ -22,7 +22,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346173"
 ---
 # <a name="comments-in-code-visual-basic"></a>Комментарии в коде (Visual Basic)
-В примерах кодов часто встречается символ начала комментария (`'`). This symbol tells the Visual Basic compiler to ignore the text following it, or the *comment*. Комментарии — это краткие заметки, внесенные в код, чтобы сделать чтение кода более легким.  
+В примерах кодов часто встречается символ начала комментария (`'`). Этот символ указывает компилятору Visual Basic игнорировать текст, следующий за ним, или *Комментарий*. Комментарии — это краткие заметки, внесенные в код, чтобы сделать чтение кода более легким.  
   
  Хорошим стилем программирования считается начинать все процедуры с краткого комментария, описывающего функциональные характеристики процедуры (то, что она делает). Это необходимо для вашего собственного удобства и удобства того, кто читает этот код. Следует отличать детали реализации (как процедура работает) от комментариев, описывающих функциональные характеристики. Если в комментарий включены детали реализации, их следует обновлять при редактировании кода.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "74346173"
  [!code-vb[VbVbcnConventions#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#17)]  
   
 ## <a name="commenting-guidelines"></a>Правила комментирования  
- В следующей таблице приведены общие рекомендации по тому, какие типы комментариев могут предшествовать разделу кода. These are suggestions; Visual Basic does not enforce rules for adding comments. В комментарий по желанию автора кода может быть включена любая информация.  
+ В следующей таблице приведены общие рекомендации по тому, какие типы комментариев могут предшествовать разделу кода. Это предложения; Visual Basic не применяет правила для добавления комментариев. В комментарий по желанию автора кода может быть включена любая информация.  
   
 |||  
 |---|---|  
@@ -54,14 +54,14 @@ ms.locfileid: "74346173"
   
 - Комментарии не могут располагаться за последовательностью продолжения строки в той же строке.  
   
- You can add or remove comment symbols for a block of code by selecting one or more lines of code and choosing the **Comment** (![The Visual Basic Comment button in Visual Studio.](./media/comments-in-code/visual-basic-comment-button.gif)) and **Uncomment** (![The Visual Basic Uncomment button in Visual Studio.](./media/comments-in-code/visual-basic-uncomment-button.gif)) buttons on the **Edit** toolbar.  
+ Можно добавить или удалить символы комментария для блока кода, выбрав одну или несколько строк кода и выбрав **Комментарий** (![кнопку Visual Basic комментарий в Visual studio.](./media/comments-in-code/visual-basic-comment-button.gif)) и **раскомментировать** (![Visual Basic кнопка раскомментировать в Visual Studio.](./media/comments-in-code/visual-basic-uncomment-button.gif)) на панели инструментов **изменить** .  
   
 > [!NOTE]
-> Кроме того, можно добавить в код комментарии, поставив в начале текста ключевое слово `REM`. However, the `'` symbol and the **Comment**/**Uncomment** buttons are easier to use and require less space and memory.  
+> Кроме того, можно добавить в код комментарии, поставив в начале текста ключевое слово `REM`. Тем не менее, символ `'` и **комментарий**/кнопках **раскомментировать** проще в использовании и занимают меньше пространства и памяти.  
   
 ## <a name="see-also"></a>См. также
 
-- [Basic Instincts - Documenting Your Code With XML Comments](https://docs.microsoft.com/archive/msdn-magazine/2009/may/documenting-your-code-with-xml-comments)
+- [Базовый инстинкты — документирование кода с помощью XML-комментариев](https://docs.microsoft.com/archive/msdn-magazine/2009/may/documenting-your-code-with-xml-comments)
 - [Практическое руководство. Создание XML-документации](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)
 - [XML-теги для комментариев](../../../visual-basic/language-reference/xmldoc/index.md)
 - [Соглашения о структуре программы и коде](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)

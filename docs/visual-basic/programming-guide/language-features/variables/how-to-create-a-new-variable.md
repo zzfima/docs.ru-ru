@@ -14,43 +14,43 @@ ms.locfileid: "74353636"
 ---
 # <a name="how-to-create-a-new-variable-visual-basic"></a>Практическое руководство. Создание новой переменной (Visual Basic)
 
-You create a variable with a [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md).
+Переменная создается с помощью [оператора Dim](../../../../visual-basic/language-reference/statements/dim-statement.md).
 
 ### <a name="to-create-a-new-variable"></a>Создание новой переменной
 
-1. Declare the variable in a `Dim` statement.
+1. Объявите переменную в операторе `Dim`.
 
     ```vb
     Dim newCustomer
     ```
 
-2. Include specifications for the variable's characteristics, such as [Private](../../../../visual-basic/language-reference/modifiers/private.md), [Static](../../../../visual-basic/language-reference/modifiers/static.md), [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md), or [WithEvents](../../../../visual-basic/language-reference/modifiers/withevents.md). For more information, see [Declared Element Characteristics](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md).
+2. Включите спецификации для характеристик переменной, например [Private](../../../../visual-basic/language-reference/modifiers/private.md), [static](../../../../visual-basic/language-reference/modifiers/static.md), [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md)или [WithEvents](../../../../visual-basic/language-reference/modifiers/withevents.md). Дополнительные сведения см. в разделе [Характеристики объявленных элементов](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md).
 
     ```vb
     Public Static newCustomer
     ```
 
-    You do not need the `Dim` keyword if you use other keywords in the declaration.
+    Ключевое слово `Dim` не требуется, если в объявлении используются другие ключевые слова.
 
-3. Follow the specifications with the variable's name, which must follow Visual Basic rules and conventions. For more information, see [Declared Element Names](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).
+3. Используйте спецификации с именем переменной, которое должно соответствовать правилам и соглашениям Visual Basic. Дополнительные сведения см. в разделе [Имена объявленных элементов](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).
 
     ```vb
     Public Static newCustomer
     ```
 
-4. Follow the name with the [As](../../../../visual-basic/language-reference/statements/as-clause.md) clause to specify the variable's data type.
+4. Чтобы указать тип данных переменной, используйте имя с предложением [as](../../../../visual-basic/language-reference/statements/as-clause.md) .
 
     ```vb
     Public Static newCustomer As Customer
     ```
 
-    If you do not specify the data type, it uses the default: `Object`.
+    Если тип данных не указан, используется значение по умолчанию: `Object`.
 
-5. Follow the `As` clause with an equal sign (`=`) and follow the equal sign with the variable's initial value.
+5. Следуйте предложению `As` со знаком равенства (`=`) и выполните знак равенства с начальным значением переменной.
 
-    Visual Basic assigns the specified value to the variable every time it runs the `Dim` statement. If you do not specify an initial value, Visual Basic assigns the default initial value for the variable's data type when it first enters the code that contains the `Dim` statement.
+    Visual Basic назначает указанное значение переменной при каждом выполнении инструкции `Dim`. Если не указать начальное значение, Visual Basic присваивает начальное значение по умолчанию для типа данных переменной при первом входе в код, содержащий инструкцию `Dim`.
 
-    If the variable is a reference type, you can create an instance of its class by including the [New Operator](../../../../visual-basic/language-reference/operators/new-operator.md) keyword in the `As` clause. If you do not use `New`, the initial value of the variable is [Nothing](../../../../visual-basic/language-reference/nothing.md).
+    Если переменная является ссылочным типом, можно создать экземпляр его класса, включив в предложение `As` новое ключевое слово [operator](../../../../visual-basic/language-reference/operators/new-operator.md) . Если `New`не используется, начальным значением переменной будет [Nothing](../../../../visual-basic/language-reference/nothing.md).
 
     ```vb
     Public Static newCustomer As New Customer
@@ -62,7 +62,7 @@ You create a variable with a [Dim Statement](../../../../visual-basic/language-r
 - [Объявление переменных](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
 - [Имена объявленных элементов](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
 - [Характеристики объявленных элементов](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)
-- [Типы значений и ссылочные типы](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+- [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
 - [Операторы](../../../../visual-basic/language-reference/statements/index.md)
 - [Вывод локального типа](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
 - [Оператор Option Infer](../../../../visual-basic/language-reference/statements/option-infer-statement.md)

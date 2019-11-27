@@ -17,41 +17,41 @@ ms.locfileid: "74344913"
 ---
 # <a name="how-to-create-a-procedure-visual-basic"></a>Практическое руководство. Создание процедуры (Visual Basic)
 
-You enclose a procedure between a starting declaration statement (`Sub` or `Function`) and an ending declaration statement (`End Sub` or `End Function`). All the procedure's code lies between these statements.
+Вы заключаете процедуру между оператором начального объявления (`Sub` или `Function`) и завершающим оператором объявления (`End Sub` или `End Function`). Весь код процедуры находится между этими операторами.
 
- A procedure cannot contain another procedure, so its starting and ending statements must be outside any other procedure.
+ Процедура не может содержать другую процедуру, поэтому ее начальные и конечные операторы должны находиться за пределами любой другой процедуры.
 
- If you have code that performs the same task in different places, you can write the task once as a procedure and then call it from different places in your code.
+ Если у вас есть код, выполняющий одну и ту же задачу в разных местах, можно написать задачу один раз как процедуру, а затем вызвать ее из различных мест в коде.
 
-### <a name="to-create-a-procedure-that-does-not-return-a-value"></a>To create a procedure that does not return a value
+### <a name="to-create-a-procedure-that-does-not-return-a-value"></a>Создание процедуры, которая не возвращает значение
 
-1. Outside any other procedure, use a `Sub` statement, followed by an `End Sub` statement.
+1. За пределами любой другой процедуры используйте оператор `Sub`, за которым следует инструкция `End Sub`.
 
-2. In the `Sub` statement, follow the `Sub` keyword with the name of the procedure, then the parameter list in parentheses.
+2. В операторе `Sub` используйте ключевое слово `Sub` с именем процедуры, а затем список параметров в круглых скобках.
 
-3. Place the procedure's code statements between the `Sub` and `End Sub` statements.
+3. Поместите операторы кода процедуры между операторами `Sub` и `End Sub`.
 
-### <a name="to-create-a-procedure-that-returns-a-value"></a>To create a procedure that returns a value
+### <a name="to-create-a-procedure-that-returns-a-value"></a>Создание процедуры, возвращающей значение
 
-1. Outside any other procedure, use a `Function` statement, followed by an `End Function` statement.
+1. За пределами любой другой процедуры используйте оператор `Function`, за которым следует инструкция `End Function`.
 
-2. In the `Function` statement, follow the `Function` keyword with the name of the procedure, then the parameter list in parentheses, and then an `As` clause specifying the data type of the return value.
+2. В операторе `Function` используйте ключевое слово `Function` с именем процедуры, затем список параметров в круглых скобках, а затем предложение `As`, указывающее тип данных возвращаемого значения.
 
-3. Place the procedure's code statements between the `Function` and `End Function` statements.
+3. Поместите операторы кода процедуры между операторами `Function` и `End Function`.
 
-4. Use a `Return` statement to return the value to the calling code.
+4. Используйте оператор `Return`, чтобы вернуть значение в вызывающий код.
 
-### <a name="to-connect-your-new-procedure-with-the-old-repetitive-blocks-of-code"></a>To connect your new procedure with the old, repetitive blocks of code
+### <a name="to-connect-your-new-procedure-with-the-old-repetitive-blocks-of-code"></a>Подключение новой процедуры к старым и повторяющимся блокам кода
 
-1. Make sure you define the new procedure in a place where the old code has access to it.
+1. Убедитесь, что вы определили новую процедуру в том месте, где старый код имеет к ней доступ.
 
-2. In your old, repetitive code block, replace the statements that perform the repetitive task with a single statement that calls the `Sub` or `Function` procedure.
+2. В старом и повторяющемся блоке кода замените инструкции, выполняющие повторяющуюся задачу, одной инструкцией, которая вызывает `Sub` или `Function` процедуру.
 
-3. If your procedure is a `Function` that returns a value, ensure that your calling statement performs an action with the returned value, such as storing it in a variable, or else the value will be lost.
+3. Если процедура является `Function`, возвращающей значение, убедитесь, что вызывающая инструкция выполняет действие с возвращаемым значением, например, сохранив его в переменной, или в противном случае значение будет потеряно.
 
 ## <a name="example"></a>Пример
 
- The following `Function` procedure calculates the longest side, or hypotenuse, of a right triangle, given the values for the other two sides:
+ Следующая `Function` процедура вычисляет самую длинную сторону (гипотенузу) правого треугольника, учитывая значения двух других сторон:
 
  [!code-vb[VbVbcnProcedures#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#1)]
 

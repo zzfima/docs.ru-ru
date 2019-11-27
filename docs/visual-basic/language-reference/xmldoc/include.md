@@ -12,8 +12,8 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348459"
 ---
-# <a name="include-visual-basic"></a>\<include> (Visual Basic)
-Refers to another file that describes the types and members in your source code.  
+# <a name="include-visual-basic"></a>\<включить > (Visual Basic)
+Ссылается на другой файл, описывающий типы и члены в исходном коде.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -23,28 +23,28 @@ Refers to another file that describes the types and members in your source code.
   
 ## <a name="parameters"></a>Параметры  
  `filename`  
- Обязательный. Имя файла, содержащего документацию. Имя файла может быть дополнено с указанием пути. Enclose `filename` in double quotation marks (" ").  
+ Обязательно. Имя файла, содержащего документацию. Имя файла может быть дополнено с указанием пути. Заключите `filename` в двойные кавычки ("").  
   
  `tagpath`  
- Обязательный. Путь тегов в `filename`, который ведет к тегу `name`. Enclose the path in double quotation marks (" ").  
+ Обязательно. Путь тегов в `filename`, который ведет к тегу `name`. Заключите путь в двойные кавычки ("").  
   
  `name`  
- Обязательный. The name specifier in the tag that precedes the comments. `Name` will have an `id`.  
+ Обязательно. Описатель имени в теге, который предшествует комментариям. `Name` будет иметь `id`.  
   
  `id`  
- Обязательный. Идентификатор тега, который предшествует комментариям. Enclose the ID in single quotation marks (' ').  
+ Обязательно. Идентификатор тега, который предшествует комментариям. Заключите идентификатор в одинарные кавычки (' ').  
   
-## <a name="remarks"></a>Заметки  
- Use the `<include>` tag to refer to comments in another file that describe the types and members in your source code. Этот способ является альтернативой размещению комментариев документации непосредственно в файле исходного кода.  
+## <a name="remarks"></a>Примечания  
+ Используйте тег `<include>` для ссылки на комментарии в другом файле, описывающем типы и члены в исходном коде. Этот способ является альтернативой размещению комментариев документации непосредственно в файле исходного кода.  
   
- The `<include>` tag uses the W3C XML Path Language (XPath) Version 1.0 Recommendation. For more information about ways to customize your `<include>` use, see <https://www.w3.org/TR/xpath>.  
+ Тег `<include>` использует рекомендацию консорциума W3C по языку XML-пути (XPath) версии 1,0. Дополнительные сведения о способах настройки `<include>` использования см. в разделе <https://www.w3.org/TR/xpath>.  
   
 ## <a name="example"></a>Пример  
- This example uses the `<include>` tag to import member documentation comments from a file called `commentFile.xml`.  
+ В этом примере тег `<include>` используется для импорта комментариев документации элемента из файла с именем `commentFile.xml`.  
   
  [!code-vb[VbVbcnXmlDocComments#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#4)]  
   
- The format of the `commentFile.xml` is as follows.  
+ Формат `commentFile.xml` выглядит следующим образом.  
   
 ```xml  
 <Docs>  

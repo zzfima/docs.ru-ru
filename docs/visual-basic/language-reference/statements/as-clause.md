@@ -16,9 +16,9 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350173"
 ---
 # <a name="as-clause-visual-basic"></a>Предложение As (Visual Basic)
-Introduces an `As` clause, which identifies a data type in a declaration statement or a constraint list on a generic type parameter.  
+Вводит предложение `As`, которое определяет тип данных в операторе объявления или список ограничений для параметра универсального типа.  
   
-## <a name="remarks"></a>Заметки  
+## <a name="remarks"></a>Примечания  
  Ключевое слово `As` можно использовать в следующих контекстах:  
   
  [Предложение Aggregate](../../../visual-basic/language-reference/queries/aggregate-clause.md)  
@@ -37,9 +37,9 @@ Introduces an `As` clause, which identifies a data type in a declaration stateme
   
  [Оператор Event](../../../visual-basic/language-reference/statements/event-statement.md)  
   
- [For...Next Statements](../../../visual-basic/language-reference/statements/for-next-statement.md)  
+ [Для... Следующие операторы](../../../visual-basic/language-reference/statements/for-next-statement.md)  
   
- [For Each...Next Statements](../../../visual-basic/language-reference/statements/for-each-next-statement.md)  
+ [Для каждого... Следующие операторы](../../../visual-basic/language-reference/statements/for-each-next-statement.md)  
   
  [Предложение From](../../../visual-basic/language-reference/queries/from-clause.md)  
   
@@ -57,7 +57,7 @@ Introduces an `As` clause, which identifies a data type in a declaration stateme
   
  [Оператор Sub](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
- [Try...Catch...Finally Statements](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)  
+ [Попробуйте... Перехватить... Операторы finally](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)  
   
 ## <a name="see-also"></a>См. также
 

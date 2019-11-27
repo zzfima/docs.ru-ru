@@ -22,7 +22,7 @@ ms.locfileid: "74283805"
 ## <a name="datagrid-parts"></a>Части DataGrid  
  В следующей таблице перечислены именованные части для элемента управления <xref:System.Windows.Controls.DataGrid>.  
   
-|Отделение|Type|Описание|  
+|Отделение|Введите|Описание|  
 |-|-|-|  
 |PART_ColumnHeadersPresenter|<xref:System.Windows.Controls.Primitives.DataGridColumnHeadersPresenter>|Строка, содержащая заголовки столбцов.|  
   
@@ -35,7 +35,7 @@ ms.locfileid: "74283805"
   
 |Имя VisualState|Имя VisualStateGroup|Описание|  
 |-|-|-|  
-|Норм.|CommonStates|Состояние по умолчанию.|  
+|Нормальный|CommonStates|Состояние по умолчанию.|  
 |Отключено.|CommonStates|Элемент управления отключен.|  
 |InvalidFocused|ValidationStates|Элемент управления не является допустимым и имеет фокус.|  
 |InvalidUnfocused|ValidationStates|Элемент управления не является допустимым и не имеет фокуса.|  
@@ -49,7 +49,7 @@ ms.locfileid: "74283805"
   
 |Имя VisualState|Имя VisualStateGroup|Описание|  
 |-|-|-|  
-|Норм.|CommonStates|Состояние по умолчанию.|  
+|Нормальный|CommonStates|Состояние по умолчанию.|  
 |MouseOver|CommonStates|Указатель мыши располагается над ячейкой.|  
 |Focused|FocusStates|Ячейка имеет фокус.|  
 |Без фокуса ввода|FocusStates|Ячейка не имеет фокуса|  
@@ -71,7 +71,7 @@ ms.locfileid: "74283805"
   
 |Имя VisualState|Имя VisualStateGroup|Описание|  
 |-|-|-|  
-|Норм.|CommonStates|Состояние по умолчанию.|  
+|Нормальный|CommonStates|Состояние по умолчанию.|  
 |MouseOver|CommonStates|Указатель мыши располагается над строкой.|  
 |MouseOver_Editing|CommonStates|Указатель мыши располагается над строкой, а строка находится в режиме редактирования.|  
 |MouseOver_Selected|CommonStates|Указатель мыши располагается над строкой и выбирается строка.|  
@@ -89,7 +89,7 @@ ms.locfileid: "74283805"
 ## <a name="datagridrowheader-parts"></a>Датагридровхеадер части  
  В следующей таблице перечислены именованные части элемента <xref:System.Windows.Controls.Primitives.DataGridRowHeader>.  
   
-|Отделение|Type|Описание|  
+|Отделение|Введите|Описание|  
 |-|-|-|  
 |PART_TopHeaderGripper|<xref:System.Windows.Controls.Primitives.Thumb>|Элемент, используемый для изменения размера заголовка строки сверху.|  
 |PART_BottomHeaderGripper|<xref:System.Windows.Controls.Primitives.Thumb>|Элемент, используемый для изменения размера заголовка строки снизу.|  
@@ -99,7 +99,7 @@ ms.locfileid: "74283805"
   
 |Имя VisualState|Имя VisualStateGroup|Описание|  
 |-|-|-|  
-|Норм.|CommonStates|Состояние по умолчанию.|  
+|Нормальный|CommonStates|Состояние по умолчанию.|  
 |MouseOver|CommonStates|Указатель мыши располагается над строкой.|  
 |MouseOver_CurrentRow|CommonStates|Указатель мыши располагается над строкой, а строка — текущей строкой.|  
 |MouseOver_CurrentRow_Selected|CommonStates|Указатель мыши располагается над строкой, а строка является текущей и выбранной.|  
@@ -122,7 +122,7 @@ ms.locfileid: "74283805"
 ## <a name="datagridcolumnheaderspresenter-parts"></a>Датагридколумнхеадерспресентер части  
  В следующей таблице перечислены именованные части элемента <xref:System.Windows.Controls.Primitives.DataGridColumnHeadersPresenter>.  
   
-|Отделение|Type|Описание|  
+|Отделение|Введите|Описание|  
 |-|-|-|  
 |PART_FillerColumnHeader|<xref:System.Windows.Controls.Primitives.DataGridColumnHeader>|Заполнитель для заголовков столбцов.|  
   
@@ -138,7 +138,7 @@ ms.locfileid: "74283805"
 ## <a name="datagridcolumnheader-parts"></a>DataGridColumnHeader части  
  В следующей таблице перечислены именованные части элемента <xref:System.Windows.Controls.Primitives.DataGridColumnHeader>.  
   
-|Отделение|Type|Описание|  
+|Отделение|Введите|Описание|  
 |-|-|-|  
 |PART_LeftHeaderGripper|<xref:System.Windows.Controls.Primitives.Thumb>|Элемент, используемый для изменения размера заголовка столбца слева.|  
 |PART_RightHeaderGripper|<xref:System.Windows.Controls.Primitives.Thumb>|Элемент, используемый для изменения размера заголовка столбца справа.|  
@@ -148,7 +148,7 @@ ms.locfileid: "74283805"
   
 |Имя VisualState|Имя VisualStateGroup|Описание|  
 |-|-|-|  
-|Норм.|CommonStates|Состояние по умолчанию.|  
+|Нормальный|CommonStates|Состояние по умолчанию.|  
 |MouseOver|CommonStates|Указатель мыши расположен в элементе управления.|  
 |Нажато|CommonStates|Элемент управления нажат.|  
 |сортасцендинг|сортстатес|Столбец сортируется в возрастающем порядке.|  

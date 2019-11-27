@@ -18,7 +18,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74333047"
 ---
 # <a name="raiseevent-statement"></a>Оператор RaiseEvent
-Triggers an event declared at module level within a class, form, or document.  
+Запускает событие, объявленное на уровне модуля в классе, форме или документе.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -28,30 +28,30 @@ RaiseEvent eventname[( argumentlist )]
   
 ## <a name="parts"></a>Части  
  `eventname`  
- Обязательный. Name of the event to trigger.  
+ Обязательно. Имя события для активации.  
   
  `argumentlist`  
- Необязательный. Comma-delimited list of variables, arrays, or expressions. The `argumentlist` argument must be enclosed by parentheses. If there are no arguments, the parentheses must be omitted.  
+ Необязательный элемент. Разделенный запятыми список переменных, массивов или выражений. Аргумент `argumentlist` должен быть заключен в круглые скобки. Если аргументы отсутствуют, скобки должны быть опущены.  
   
-## <a name="remarks"></a>Заметки  
- The required `eventname` is the name of an event declared within the module. It follows Visual Basic variable naming conventions.  
+## <a name="remarks"></a>Примечания  
+ Обязательный `eventname` — это имя события, объявленного в модуле. Оно соответствует Visual Basic соглашениям об именовании переменных.  
   
- If the event has not been declared within the module in which it is raised, an error occurs. The following code fragment illustrates an event declaration and a procedure in which the event is raised.  
+ Если событие не было объявлено в модуле, в котором оно вызывается, возникает ошибка. В следующем фрагменте кода показано объявление события и процедура, в которой возникает событие.  
   
  [!code-vb[VbVbalrEvents#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#37)]  
   
- You cannot use `RaiseEvent` to raise events that are not explicitly declared in the module. For example, all forms inherit a <xref:System.Windows.Forms.Control.Click> event from <xref:System.Windows.Forms.Form?displayProperty=nameWithType>, it cannot be raised using `RaiseEvent` in a derived form. If you declare a `Click` event in the form module, it shadows the form's own <xref:System.Windows.Forms.Control.Click> event. You can still invoke the form's <xref:System.Windows.Forms.Control.Click> event by calling the <xref:System.Windows.Forms.Control.OnClick%2A> method.  
+ Нельзя использовать `RaiseEvent` для создания событий, которые не объявляются явным образом в модуле. Например, все формы наследуют событие <xref:System.Windows.Forms.Control.Click> от <xref:System.Windows.Forms.Form?displayProperty=nameWithType>, оно не может быть создано с помощью `RaiseEvent` в производной форме. При объявлении события `Click` в модуле формы он скрывает собственное событие <xref:System.Windows.Forms.Control.Click> формы. Вы по-прежнему можете вызвать событие <xref:System.Windows.Forms.Control.Click> формы, вызвав метод <xref:System.Windows.Forms.Control.OnClick%2A>.  
   
- By default, an event defined in Visual Basic raises its event handlers in the order that the connections are established. Because events can have `ByRef` parameters, a process that connects late may receive parameters that have been changed by an earlier event handler. After the event handlers execute, control is returned to the subroutine that raised the event.  
-  
-> [!NOTE]
-> Non-shared events should not be raised within the constructor of the class in which they are declared. Although such events do not cause run-time errors, they may fail to be caught by associated event handlers. Use the `Shared` modifier to create a shared event if you need to raise an event from a constructor.  
+ По умолчанию событие, определенное в Visual Basic, вызывает обработчики событий в том порядке, в котором установлены соединения. Так как события могут иметь `ByRef` параметры, процесс, который подключается позднее, может получить параметры, которые были изменены более ранним обработчиком событий. После выполнения обработчиков событий управление возвращается подподпрограмме, вызвавшей событие.  
   
 > [!NOTE]
-> You can change the default behavior of events by defining a custom event. For custom events, the `RaiseEvent` statement invokes the event's `RaiseEvent` accessor. For more information on custom events, see [Event Statement](../../../visual-basic/language-reference/statements/event-statement.md).  
+> Не являющиеся общими события не должны вызываться в конструкторе класса, в котором они объявляются. Хотя такие события не вызывают ошибок во время выполнения, они могут не перехватываться связанными обработчиками событий. Используйте модификатор `Shared` для создания общего события, если необходимо вызвать событие из конструктора.  
+  
+> [!NOTE]
+> Поведение по умолчанию событий можно изменить, определив пользовательское событие. Для пользовательских событий оператор `RaiseEvent` вызывает метод доступа `RaiseEvent` события. Дополнительные сведения о пользовательских событиях см. в разделе [оператор Event](../../../visual-basic/language-reference/statements/event-statement.md).  
   
 ## <a name="example"></a>Пример  
- В следующем примере события используются для выполнения обратного отсчета от 10 до 0 секунд. The code illustrates several of the event-related methods, properties, and statements, including the `RaiseEvent` statement.  
+ В следующем примере события используются для выполнения обратного отсчета от 10 до 0 секунд. Код иллюстрирует несколько методов, свойств и инструкций, связанных с событиями, включая оператор `RaiseEvent`.  
   
  Класс, который вызывает событие, является источником события, а методы, обрабатывающие события, — обработчиками событий. Источник события может иметь несколько обработчиков для создаваемых им событий. Когда класс создает событие, это событие создается во всех классах, выбранных для обработки событий данного экземпляра объекта.  
   
@@ -59,21 +59,21 @@ RaiseEvent eventname[( argumentlist )]
   
  Код для `Form1` указывает начальное и конечное состояния формы. Он также содержит код, выполняемый при создании событий.  
   
- To use this example, open a new Windows Application project, add a button named `Button1` and a text box named `TextBox1` to the main form, named `Form1`. Then right-click the form and click **View Code** to open the Code Editor.  
+ Чтобы использовать этот пример, откройте новый проект приложения Windows, добавьте кнопку с именем `Button1` и текстовое поле с именем `TextBox1` в главную форму с именем `Form1`. Затем щелкните форму правой кнопкой мыши и выберите команду **Просмотреть код** , чтобы открыть редактор кода.  
   
- Add a `WithEvents` variable to the declarations section of the `Form1` class.  
+ Добавьте `WithEvents` переменную в раздел Declarations класса `Form1`.  
   
  [!code-vb[VbVbalrEvents#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#14)]  
   
 ## <a name="example"></a>Пример  
- Добавьте следующий код в код для `Form1`. Replace any duplicate procedures that may exist, such as `Form_Load`, or `Button_Click`.  
+ Добавьте следующий код в код для `Form1`. Замените любые дубликаты процедур, которые могут существовать, например `Form_Load`или `Button_Click`.  
   
  [!code-vb[VbVbalrEvents#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#15)]  
   
- Press F5 to run the preceding example, and click the button labeled **Start**. Первое текстовое поле начинает обратный отсчет. По истечении всего времени (10 секунд) в первом текстовом поле отображается надпись Done.  
+ Нажмите клавишу F5, чтобы запустить предыдущий пример, и нажмите кнопку с надписью **Запуск**. Первое текстовое поле начинает обратный отсчет. По истечении всего времени (10 секунд) в первом текстовом поле отображается надпись Done.  
   
 > [!NOTE]
-> The `My.Application.DoEvents` method does not process events in exactly the same way as the form does. To allow the form to handle the events directly, you can use multithreading. For more information, see [Managed Threading](../../../standard/threading/index.md).  
+> Метод `My.Application.DoEvents` не обрабатывает события точно так же, как и форма. Чтобы форма могла напрямую управлять событиями, можно использовать многопоточность. Дополнительные сведения см. в разделе [управляемые потоки](../../../standard/threading/index.md).  
   
 ## <a name="see-also"></a>См. также
 

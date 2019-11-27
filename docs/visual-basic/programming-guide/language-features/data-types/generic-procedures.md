@@ -20,18 +20,18 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350087"
 ---
 # <a name="generic-procedures-in-visual-basic"></a>Generic Procedures in Visual Basic
-A *generic procedure*, also called a *generic method*, is a procedure defined with at least one type parameter. This allows the calling code to tailor the data types to its requirements each time it calls the procedure.  
+*Универсальная процедура*, также называемая *универсальным методом*, представляет собой процедуру, определенную по крайней мере с одним параметром типа. Это позволяет вызывающему коду адаптировать типы данных к их требованиям при каждом вызове процедуры.  
   
- A procedure is not generic simply by virtue of being defined inside a generic class or a generic structure. To be generic, the procedure must take at least one type parameter, in addition to any normal parameters it might take. A generic class or structure can contain nongeneric procedures, and a nongeneric class, structure, or module can contain generic procedures.  
+ Процедура не является универсальной просто путем определения внутри универсального класса или универсальной структуры. Как универсальное, процедура должна принимать по крайней мере один параметр типа в дополнение к обычным параметрам, которые он может принимать. Универсальный класс или структура может содержать неуниверсальные процедуры, а неуниверсальный класс, структура или модуль могут содержать универсальные процедуры.  
   
- A generic procedure can use its type parameters in its normal parameter list, in its return type if it has one, and in its procedure code.  
+ Универсальная процедура может использовать свои параметры-типы в его стандартном списке параметров, в его возвращаемом типе, если он есть, и в коде процедуры.  
   
 ## <a name="type-inference"></a>Вывод типа  
- You can call a generic procedure without supplying any type arguments at all. If you call it this way, the compiler attempts to determine the appropriate data types to pass to the procedure's type arguments. This is called *type inference*. The following code shows a call in which the compiler infers that it should pass type `String` to the type parameter `t`.  
+ Можно вызвать универсальную процедуру без указания каких-либо аргументов типа. При таком вызове компилятор пытается определить подходящие типы данных для передачи аргументам типа процедуры. Это называется *выводом типа*. В следующем коде показан вызов, в котором компилятор определяет, что ему следует передать тип `String` в параметр типа `t`.  
   
  [!code-vb[VbVbalrDataTypes#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#15)]  
   
- If the compiler cannot infer the type arguments from the context of your call, it reports an error. One possible cause of such an error is an array rank mismatch. For example, suppose you define a normal parameter as an array of a type parameter. If you call the generic procedure supplying an array of a different rank (number of dimensions), the mismatch causes type inference to fail. The following code shows a call in which a two-dimensional array is passed to a procedure that expects a one-dimensional array.  
+ Если компилятор не может вывести аргументы типа из контекста вызова, он сообщает об ошибке. Одной из возможных причин такой ошибки является несоответствие ранга массива. Например, предположим, что вы определили нормальный параметр в качестве массива параметра типа. При вызове универсальной процедуры, предоставляющей массив другого ранга (число измерений), несоответствие приводит к сбою определения типа. В следующем коде показан вызов, в котором двумерный массив передается в процедуру, которая принимает одномерный массив.  
   
 ```vb  
 Public Sub demoSub(Of t)(ByVal arg() As t)
@@ -43,26 +43,26 @@ Public Sub callDemoSub()
 End Sub
 ```
   
- You can invoke type inference only by omitting all the type arguments. If you supply one type argument, you must supply them all.  
+ Вывод типа можно вызвать только путем пропуска всех аргументов типа. При указании одного аргумента типа необходимо указать все эти аргументы.  
   
- Type inference is supported only for generic procedures. You cannot invoke type inference on generic classes, structures, interfaces, or delegates.  
+ Вывод типа поддерживается только для универсальных процедур. Невозможно вызвать определение типа в универсальных классах, структурах, интерфейсах или делегатах.  
   
 ## <a name="example"></a>Пример  
   
 ### <a name="description"></a>Описание  
- The following example defines a generic `Function` procedure to find a particular element in an array. It defines one type parameter and uses it to construct the two parameters in the parameter list.  
+ В следующем примере определяется универсальная процедура `Function` для поиска определенного элемента в массиве. Он определяет один параметр типа и использует его для создания двух параметров в списке параметров.  
   
 ### <a name="code"></a>Код  
  [!code-vb[VbVbalrDataTypes#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#14)]  
   
 ### <a name="comments"></a>Комментарии  
- The preceding example requires the ability to compare `searchValue` against each element of `searchArray`. To guarantee this ability, it constrains the type parameter `T` to implement the <xref:System.IComparable%601> interface. The code uses the <xref:System.IComparable%601.CompareTo%2A> method instead of the `=` operator, because there is no guarantee that a type argument supplied for `T` supports the `=` operator.  
+ В предыдущем примере требуется возможность сравнения `searchValue` с каждым элементом `searchArray`. Чтобы гарантировать эту возможность, он ограничивает параметр типа `T` для реализации интерфейса <xref:System.IComparable%601>. В коде используется метод <xref:System.IComparable%601.CompareTo%2A> вместо оператора `=`, поскольку нет гарантии, что аргумент типа, предоставляемый для `T`, поддерживает оператор `=`.  
   
- You can test the `findElement` procedure with the following code.  
+ Процедуру `findElement` можно проверить с помощью следующего кода.  
   
  [!code-vb[VbVbalrDataTypes#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#13)]  
   
- The preceding calls to `MsgBox` display "0", "1", and "-1" respectively.  
+ Предыдущие вызовы `MsgBox` отображают "0", "1" и "-1" соответственно.  
   
 ## <a name="see-also"></a>См. также
 

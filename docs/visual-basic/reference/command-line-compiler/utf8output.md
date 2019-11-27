@@ -24,16 +24,16 @@ ms.locfileid: "74350841"
   
 ## <a name="arguments"></a>Аргументы  
  `+` &#124; `-`  
- Необязательный. The default for this option is `-utf8output-`, which means compiler output does not use UTF-8 encoding. Указание `-utf8output` дает тот же результат, что и указание `-utf8output+`.  
+ Необязательный элемент. Значение по умолчанию для этого параметра — `-utf8output-`, то есть выходные данные компилятора не используют кодировку UTF-8. Указание `-utf8output` дает тот же результат, что и указание `-utf8output+`.  
   
-## <a name="remarks"></a>Заметки  
- In some international configurations, compiler output cannot be displayed correctly in the console. In such situations, use `-utf8output` and redirect compiler output to a file.  
+## <a name="remarks"></a>Примечания  
+ В некоторых международных конфигурациях вывод компилятора не может правильно отображаться в консоли. В таких ситуациях используйте `-utf8output` и перенаправьте выходные данные компилятора в файл.  
   
 > [!NOTE]
-> The `-utf8output` option is not available from within the Visual Studio development environment; it is available only when compiling from the command line.  
+> Параметр `-utf8output` недоступен в среде разработки Visual Studio; Он доступен только при компиляции из командной строки.  
   
 ## <a name="example"></a>Пример  
- The following code compiles `In.vb` and directs the compiler to display output using UTF-8 encoding.  
+ Следующий код компилирует `In.vb` и направляет компилятор для вывода выходных данных в кодировке UTF-8.  
   
 ```console  
 vbc -utf8output in.vb  

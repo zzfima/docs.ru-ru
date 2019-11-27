@@ -16,9 +16,9 @@ ms.locfileid: "74430673"
 # <a name="metadata-unions"></a>Объединения метаданных
 В этом разделе описываются неуправляемые объединения, которые использует API метаданных.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Объединение CeeSectionRelocExtra](../../../../docs/framework/unmanaged-api/metadata/ceesectionrelocextra-union.md)  
- Represents an address offset that is used by the [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) interface to relocate a section  
+ Представляет смещение адреса, используемое интерфейсом [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) для перемещения раздела  
   
 ## <a name="related-sections"></a>Связанные разделы  
  [Интерфейсы метаданных](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)  

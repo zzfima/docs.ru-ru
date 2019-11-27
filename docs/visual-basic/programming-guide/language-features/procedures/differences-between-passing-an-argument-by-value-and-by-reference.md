@@ -16,28 +16,28 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74341236"
 ---
 # <a name="differences-between-passing-an-argument-by-value-and-by-reference-visual-basic"></a>Различия между передачей аргумента по значению и по ссылке (Visual Basic)
-When you pass one or more arguments to a procedure, each argument corresponds to an underlying programming element in the calling code. You can pass either the value of this underlying element, or a reference to it. This is known as the *passing mechanism*.  
+При передаче одного или нескольких аргументов в процедуру каждый аргумент соответствует базовому элементу программирования в вызывающем коде. Можно передать либо значение этого базового элемента, либо ссылку на него. Это называется *механизмом передачи*.  
   
 ## <a name="passing-by-value"></a>передача по значению  
- You pass an argument *by value* by specifying the [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) keyword for the corresponding parameter in the procedure definition. When you use this passing mechanism, Visual Basic copies the value of the underlying programming element into a local variable in the procedure. The procedure code does not have any access to the underlying element in the calling code.  
+ Аргумент передается *по значению* путем указания ключевого слова [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) для соответствующего параметра в определении процедуры. При использовании этого механизма передачи Visual Basic копирует значение базового программируемого элемента в локальную переменную в процедуре. Код процедуры не имеет доступа к базовому элементу в вызывающем коде.  
   
-## <a name="passing-by-reference"></a>Passing by Reference  
- You pass an argument *by reference* by specifying the [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) keyword for the corresponding parameter in the procedure definition. When you use this passing mechanism, Visual Basic gives the procedure a direct reference to the underlying programming element in the calling code.  
+## <a name="passing-by-reference"></a>Передача по ссылке  
+ Аргумент передается *по ссылке* путем указания ключевого слова [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) для соответствующего параметра в определении процедуры. При использовании этого механизма передачи Visual Basic предоставляет процедуре прямую ссылку на базовый программный элемент в вызывающем коде.  
   
-## <a name="passing-mechanism-and-element-type"></a>Passing Mechanism and Element Type  
- The choice of passing mechanism is not the same as the classification of the underlying element type. Passing by value or by reference refers to what Visual Basic supplies to the procedure code. A value type or reference type refers to how a programming element is stored in memory.  
+## <a name="passing-mechanism-and-element-type"></a>Передача механизма и типа элемента  
+ Выбранный механизм передачи не совпадает с классификацией базового типа элемента. Передача по значению или по ссылке означает, какие Visual Basic предоставлены коду процедуры. Тип значения или ссылочный тип указывает, как программный элемент хранится в памяти.  
   
- However, the passing mechanism and element type are interrelated. The value of a reference type is a pointer to the data elsewhere in memory. This means that when you pass a reference type by value, the procedure code has a pointer to the underlying element's data, even though it cannot access the underlying element itself. For example, if the element is an array variable, the procedure code does not have access to the variable itself, but it can access the array members.  
+ Однако механизм передачи и тип элемента взаимосвязаны. Значение ссылочного типа — это указатель на данные в любом расположении в памяти. Это означает, что при передаче ссылочного типа по значению код процедуры имеет указатель на данные базового элемента, даже если он не может получить доступ к базовому элементу. Например, если элемент является переменной массива, код процедуры не имеет доступа к самой переменной, но может получить доступ к членам массива.  
   
-## <a name="ability-to-modify"></a>Ability to Modify  
- When you pass a nonmodifiable element as an argument, the procedure can never modify it in the calling code, whether it is passed `ByVal` or `ByRef`.  
+## <a name="ability-to-modify"></a>Возможность изменения  
+ При передаче неизменяемого элемента в качестве аргумента процедура не может изменить ее в вызывающем коде независимо от того, передается `ByVal` или `ByRef`.  
   
- For a modifiable element, the following table summarizes the interaction between the element type and the passing mechanism.  
+ Для изменяемого элемента в следующей таблице обобщены сведения о взаимодействии между типом элемента и механизмом передачи.  
   
-|Тип элемента|Passed `ByVal`|Passed `ByRef`|  
+|Тип элемента|Пройдено `ByVal`|Пройдено `ByRef`|  
 |------------------|--------------------|--------------------|  
-|Value type (contains only a value)|The procedure cannot change the variable or any of its members.|The procedure can change the variable and its members.|  
-|Reference type (contains a pointer to a class or structure instance)|The procedure cannot change the variable but can change members of the instance to which it points.|The procedure can change the variable and members of the instance to which it points.|  
+|Тип значения (содержит только значение)|Процедура не может изменить переменную или любой ее член.|Процедура может изменить переменную и ее члены.|  
+|Ссылочный тип (содержит указатель на экземпляр класса или структуры)|Процедура не может изменить переменную, но может изменить члены экземпляра, на которую она указывает.|Процедура может изменить переменную и члены экземпляра, на который она указывает.|  
   
 ## <a name="see-also"></a>См. также
 
@@ -50,4 +50,4 @@ When you pass one or more arguments to a procedure, each argument corresponds to
 - [Практическое руководство. Защита аргумента процедуры от изменений значения](./how-to-protect-a-procedure-argument-against-value-changes.md)
 - [Практическое руководство. Принудительная передача аргумента по значению](./how-to-force-an-argument-to-be-passed-by-value.md)
 - [Передача аргументов по позиции и по имени](./passing-arguments-by-position-and-by-name.md)
-- [Типы значений и ссылочные типы](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+- [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)

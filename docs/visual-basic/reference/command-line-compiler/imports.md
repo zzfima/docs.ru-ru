@@ -13,8 +13,8 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74332957"
 ---
-# <a name="-imports-visual-basic"></a>-imports (Visual Basic)
-Imports namespaces from a specified assembly.  
+# <a name="-imports-visual-basic"></a>-Imports (Visual Basic)
+Импортирует пространства имен из указанной сборки.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -26,19 +26,19 @@ Imports namespaces from a specified assembly.
   
 |Термин|Определение|  
 |---|---|  
-|`namespaceList`|Обязательный. Comma-delimited list of namespaces to be imported.|  
+|`namespaceList`|Обязательно. Разделенный запятыми список пространств имен для импорта.|  
   
-## <a name="remarks"></a>Заметки  
- The `-imports` option imports any namespace defined within the current set of source files or from any referenced assembly.  
+## <a name="remarks"></a>Примечания  
+ Параметр `-imports` импортирует любое пространство имен, определенное в текущем наборе исходных файлов или в любой связанной сборке.  
   
- The members in a namespace specified with `-imports` are available to all source-code files in the compilation. Use the [Imports Statement (.NET Namespace and Type)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) to use a namespace in a single source-code file.  
+ Элементы в пространстве имен, заданном с помощью `-imports`, доступны для всех файлов исходного кода в компиляции. Используйте [оператор Imports (пространство имен .NET и тип)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) , чтобы использовать пространство имен в одном файле исходного кода.  
   
-|To set /imports in the Visual Studio integrated development environment|  
+|Установка/Imports в интегрированной среде разработки Visual Studio|  
 |---|  
-|1.  Have a project selected in **Solution Explorer**. В меню **Проект** выберите пункт **Свойства**. <br />2.  Click the **References** tab.<br />3.  Enter the namespace name in the box beside the **Add User Import** button.<br />4.  Click the **Add User Import** button.|  
+|1. Выберите проект в **Обозреватель решений**. В меню **Проект** выберите пункт **Свойства**. <br />2. Перейдите на вкладку **ссылки** .<br />3. Введите имя пространства имен в поле рядом с кнопкой **Добавить пользовательский импорт** .<br />4. Нажмите кнопку **Добавить пользовательский импорт** .|  
   
 ## <a name="example"></a>Пример  
- The following code compiles when `/imports:system.globalization` is specified. Without it, successful compilation requires either that an `Imports System.Globalization` statement be included at the beginning of the source code file, or that the property be fully qualified as `System.Globalization.CultureInfo.CurrentCulture.Name`.
+ Следующий код компилируется при указании `/imports:system.globalization`. В противном случае для успешной компиляции требуется, чтобы инструкция `Imports System.Globalization` была включена в начало файла исходного кода или что свойство полностью определено как `System.Globalization.CultureInfo.CurrentCulture.Name`.
 
 ```vb
 Module Example

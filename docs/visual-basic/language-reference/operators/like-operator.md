@@ -30,10 +30,10 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350937"
 ---
 # <a name="like-operator-visual-basic"></a>Оператор Like (Visual Basic)
-Compares a string against a pattern.  
+Сравнивает строку с шаблоном.  
 
 > [!IMPORTANT]
-> The `Like` operator is currently not supported in .NET Core and .NET Standard projects.
+> В настоящее время оператор `Like` не поддерживается в проектах .NET Core и .NET Standard.
 
 ## <a name="syntax"></a>Синтаксис  
   
@@ -43,65 +43,65 @@ result = string Like pattern
   
 ## <a name="parts"></a>Части  
  `result`  
- Обязательный. Any `Boolean` variable. The result is a `Boolean` value indicating whether or not the `string` satisfies the `pattern`.  
+ Обязательно. Любая переменная `Boolean`. Результатом является `Boolean` значение, указывающее, удовлетворяет ли `string` `pattern`.  
   
  `string`  
- Обязательный. Произвольное выражение `String` .  
+ Обязательно. Произвольное выражение `String` .  
   
  `pattern`  
- Обязательный. Any `String` expression conforming to the pattern-matching conventions described in "Remarks."  
+ Обязательно. Любое `String` выражение, удовлетворяющее соглашениям о соответствии шаблону, описанным в разделе «Примечания».  
   
-## <a name="remarks"></a>Заметки  
- If the value in `string` satisfies the pattern contained in `pattern`, `result` is `True`. If the string does not satisfy the pattern, `result` is `False`. If both `string` and `pattern` are empty strings, the result is `True`.  
+## <a name="remarks"></a>Примечания  
+ Если значение в `string` соответствует шаблону, содержащемуся в `pattern`, `result` `True`. Если строка не соответствует шаблону, `result` `False`. Если оба `string` и `pattern` являются пустыми строками, результат будет `True`.  
   
-## <a name="comparison-method"></a>Comparison Method  
- The behavior of the `Like` operator depends on the [Option Compare Statement](../../../visual-basic/language-reference/statements/option-compare-statement.md). The default string comparison method for each source file is `Option Compare Binary`.  
+## <a name="comparison-method"></a>Метод сравнения  
+ Поведение оператора `Like` зависит от [оператора Option Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md). Для каждого исходного файла используется метод сравнения строк по умолчанию `Option Compare Binary`.  
   
-## <a name="pattern-options"></a>Pattern Options  
- Built-in pattern matching provides a versatile tool for string comparisons. The pattern-matching features allow you to match each character in `string` against a specific character, a wildcard character, a character list, or a character range. The following table shows the characters allowed in `pattern` and what they match.  
+## <a name="pattern-options"></a>Параметры шаблона  
+ Встроенное сопоставление шаблонов предоставляет универсальное средство для сравнения строк. Функции сопоставления шаблонов позволяют сопоставить каждый символ в `string` с конкретным символом, символом-шаблоном, списком символов или диапазоном символов. В следующей таблице приведены символы, разрешенные в `pattern` и их соответствие.  
   
-|Characters in `pattern`|Matches in `string`|  
+|Символы в `pattern`|Соответствия в `string`|  
 |-----------------------------|-------------------------|  
 |`?`|Любой отдельный знак|  
-|`*`|Zero or more characters|  
-|`#`|Any single digit (0–9)|  
-|`[charlist]`|Any single character in `charlist`|  
-|`[!charlist]`|Any single character not in `charlist`|  
+|`*`|Ноль или более символов|  
+|`#`|Любая отдельная цифра (0 – 9)|  
+|`[charlist]`|Любой отдельный символ в `charlist`|  
+|`[!charlist]`|Любой отдельный символ, не являющийся `charlist`|  
   
-## <a name="character-lists"></a>Character Lists  
- A group of one or more characters (`charlist`) enclosed in brackets (`[ ]`) can be used to match any single character in `string` and can include almost any character code, including digits.  
+## <a name="character-lists"></a>Списки символов  
+ Группа из одного или нескольких символов (`charlist`), заключенных в квадратные скобки (`[ ]`), может использоваться для сопоставления любого отдельного символа в `string` и может включать практически любой код символа, включая цифры.  
   
- An exclamation point (`!`) at the beginning of `charlist` means that a match is made if any character except the characters in `charlist` is found in `string`. When used outside brackets, the exclamation point matches itself.  
+ Восклицательный знак (`!`) в начале `charlist` означает, что сопоставление выполняется, если в `string`найден любой символ, кроме символов в `charlist`. При использовании вне квадратных скобок восклицательный знак соответствует самому себе.  
   
 ## <a name="special-characters"></a>Специальные символы  
- To match the special characters left bracket (`[`), question mark (`?`), number sign (`#`), and asterisk (`*`), enclose them in brackets. The right bracket (`]`) cannot be used within a group to match itself, but it can be used outside a group as an individual character.  
+ Чтобы сопоставить специальные символы с левой скобкой (`[`), вопросительный знак (`?`), знак решетки (`#`) и звездочка (`*`), заключите их в квадратные скобки. Правая квадратная скобка (`]`) не может использоваться в группе для сопоставления самой себе, но ее можно использовать за пределами группы в качестве отдельного символа.  
   
- The character sequence `[]` is considered a zero-length string (`""`). However, it cannot be part of a character list enclosed in brackets. If you want to check whether a position in `string` contains one of a group of characters or no character at all, you can use `Like` twice. For an example, see [How to: Match a String against a Pattern](../../../visual-basic/programming-guide/language-features/operators-and-expressions/how-to-match-a-string-against-a-pattern.md).  
+ `[]` последовательности символов считается строкой нулевой длины (`""`). Однако она не может входить в список символов, заключенный в квадратные скобки. Если вы хотите проверить, содержит ли расположение в `string` одну из групп символов или вообще не использовать ни одного символа, можно воспользоваться `Like` дважды. Пример см. в разделе [как сопоставить строку с шаблоном](../../../visual-basic/programming-guide/language-features/operators-and-expressions/how-to-match-a-string-against-a-pattern.md).  
   
-## <a name="character-ranges"></a>Character Ranges  
- By using a hyphen (`–`) to separate the lower and upper bounds of the range, `charlist` can specify a range of characters. For example, `[A–Z]` results in a match if the corresponding character position in `string` contains any character within the range `A`–`Z`, and `[!H–L]` results in a match if the corresponding character position contains any character outside the range `H`–`L`.  
+## <a name="character-ranges"></a>Диапазоны символов  
+ Используя дефис (`–`) для разделения нижней и верхней границ диапазона, `charlist` может указать диапазон символов. Например, `[A–Z]` приводит к совпадению, если соответствующая символьная позиции в `string` содержит любой символ в диапазоне `A`–`Z`, а `[!H–L]` приводит к совпадению, если соответствующая символьная позиции содержит любой символ за пределами диапазона `H`–`L`.  
   
- When you specify a range of characters, they must appear in ascending sort order, that is, from lowest to highest. Thus, `[A–Z]` is a valid pattern, but `[Z–A]` is not.  
+ При указании диапазона символов они должны отображаться в порядке сортировки по возрастанию, то есть от самого низкого до самого высокого. Таким образом, `[A–Z]` является допустимым шаблоном, но `[Z–A]` не является.  
   
-### <a name="multiple-character-ranges"></a>Multiple Character Ranges  
- To specify multiple ranges for the same character position, put them within the same brackets without delimiters. For example, `[A–CX–Z]` results in a match if the corresponding character position in `string` contains any character within either the range `A`–`C` or the range `X`–`Z`.  
+### <a name="multiple-character-ranges"></a>Несколько диапазонов символов  
+ Чтобы указать несколько диапазонов для одной позиции символа, поместите их в одни и те же квадратные скобки без разделителей. Например, `[A–CX–Z]` приводит к совпадению, если соответствующая символьная позиции в `string` содержит любой символ в диапазоне `A`–`C` или диапазон `X`–`Z`.  
   
-### <a name="usage-of-the-hyphen"></a>Usage of the Hyphen  
- A hyphen (`–`) can appear either at the beginning (after an exclamation point, if any) or at the end of `charlist` to match itself. In any other location, the hyphen identifies a range of characters delimited by the characters on either side of the hyphen.  
+### <a name="usage-of-the-hyphen"></a>Использование дефиса  
+ Дефис (`–`) может располагаться в начале (после восклицательного знака, если есть) или в конце `charlist` для сопоставления с самим собой. В любом другом расположении дефис определяет диапазон символов, разделенных символами с любой стороны дефиса.  
   
-## <a name="collating-sequence"></a>Collating Sequence  
- The meaning of a specified range depends on the character ordering at run time, as determined by `Option Compare` and the locale setting of the system the code is running on. With `Option Compare Binary`, the range `[A–E]` matches `A`, `B`, `C`, `D`, and `E`. With `Option Compare Text`, `[A–E]` matches `A`, `a`, `À`, `à`, `B`, `b`, `C`, `c`, `D`, `d`, `E`, and `e`. The range does not match `Ê` or `ê` because accented characters collate after unaccented characters in the sort order.  
+## <a name="collating-sequence"></a>Порядок сортировки  
+ Значение указанного диапазона зависит от порядка символов во время выполнения, как определено `Option Compare` и параметром языкового стандарта системы, в которой выполняется код. При использовании `Option Compare Binary`диапазон `[A–E]` соответствует `A`, `B`, `C`, `D`и `E`. С помощью `Option Compare Text``[A–E]` соответствует `A`, `a`, `À`, `à`, `B`, `b`, `C`, `c`, `D`, `d`, `E`и `e`. Диапазон не соответствует `Ê` или `ê`, так как диакритические знаки сортируются после символов без диакритических знаков в порядке сортировки.  
   
-## <a name="digraph-characters"></a>Digraph Characters  
- In some languages, there are alphabetic characters that represent two separate characters. For example, several languages use the character `æ` to represent the characters `a` and `e` when they appear together. The `Like` operator recognizes that the single digraph character and the two individual characters are equivalent.  
+## <a name="digraph-characters"></a>Символы раскрутки  
+ В некоторых языках есть алфавитные символы, представляющие два отдельных символа. Например, несколько языков используют символ `æ` для представления символов `a` и `e`, когда они появляются вместе. Оператор `Like` распознает, что один символ раскрутки и два отдельных символа эквивалентны.  
   
- When a language that uses a digraph character is specified in the system locale settings, an occurrence of the single digraph character in either `pattern` or `string` matches the equivalent two-character sequence in the other string. Similarly, a digraph character in `pattern` enclosed in brackets (by itself, in a list, or in a range) matches the equivalent two-character sequence in `string`.  
+ Если в параметрах национальной настройки системы указан язык, использующий символ относительных значений, то вхождение одного символа относительных значений в `pattern` или `string` совпадает с эквивалентной последовательностью двух символов в другой строке. Аналогично, символ-граф в `pattern`, заключенный в квадратные скобки (сам по себе, в списке или в диапазоне), совпадает с эквивалентной последовательностью двух символов в `string`.  
   
 ## <a name="overloading"></a>Перегрузка  
- The `Like` operator can be *overloaded*, which means that a class or structure can redefine its behavior when an operand has the type of that class or structure. If your code uses this operator on such a class or structure, be sure you understand its redefined behavior. Для получения дополнительной информации см. [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+ Оператор `Like` может быть *перегружен*, что означает, что класс или структура может переопределить свое поведение, если операнд имеет тип этого класса или структуры. Если код использует этот оператор для такого класса или структуры, убедитесь, что вы понимаете его переопределенное поведение. Для получения дополнительной информации см. [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Пример  
- This example uses the `Like` operator to compare strings to various patterns. The results go into a `Boolean` variable indicating whether each string satisfies the pattern.  
+ В этом примере оператор `Like` используется для сравнения строк с различными шаблонами. Результаты попадают в переменную `Boolean`, указывающую, соответствует ли каждая строка шаблону.  
   
  [!code-vb[VbVbalrOperators#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#30)]  
   
