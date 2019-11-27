@@ -22,10 +22,10 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74440345"
 ---
-# <a name="imetadatafiltermarktoken-method"></a><span data-ttu-id="73f30-102">Метод IMetaDataFilter::MarkToken</span><span class="sxs-lookup"><span data-stu-id="73f30-102">IMetaDataFilter::MarkToken Method</span></span>
-<span data-ttu-id="73f30-103">Sets a value indicating that the specified metadata token has been processed.</span><span class="sxs-lookup"><span data-stu-id="73f30-103">Sets a value indicating that the specified metadata token has been processed.</span></span>  
+# <a name="imetadatafiltermarktoken-method"></a><span data-ttu-id="ba828-102">Метод IMetaDataFilter::MarkToken</span><span class="sxs-lookup"><span data-stu-id="ba828-102">IMetaDataFilter::MarkToken Method</span></span>
+<span data-ttu-id="ba828-103">Задает значение, указывающее, что указанный токен метаданных был обработан.</span><span class="sxs-lookup"><span data-stu-id="ba828-103">Sets a value indicating that the specified metadata token has been processed.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="73f30-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="73f30-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ba828-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="ba828-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT MarkToken (  
@@ -33,19 +33,19 @@ HRESULT MarkToken (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="73f30-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="73f30-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="ba828-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="ba828-105">Parameters</span></span>  
  `tk`  
- <span data-ttu-id="73f30-106">[in] The token to mark as processed.</span><span class="sxs-lookup"><span data-stu-id="73f30-106">[in] The token to mark as processed.</span></span>  
+ <span data-ttu-id="ba828-106">окне Маркер, помечающий как обработанный.</span><span class="sxs-lookup"><span data-stu-id="ba828-106">[in] The token to mark as processed.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="73f30-107">Требования</span><span class="sxs-lookup"><span data-stu-id="73f30-107">Requirements</span></span>  
- <span data-ttu-id="73f30-108">**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="73f30-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ba828-107">Требования</span><span class="sxs-lookup"><span data-stu-id="ba828-107">Requirements</span></span>  
+ <span data-ttu-id="ba828-108">**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ba828-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="73f30-109">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="73f30-109">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="ba828-109">**Заголовок:** COR. h</span><span class="sxs-lookup"><span data-stu-id="ba828-109">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="73f30-110">**Library:** Used as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="73f30-110">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="ba828-110">**Библиотека:** Используется в качестве ресурса в MsCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="ba828-110">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="73f30-111">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="73f30-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="ba828-111">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ba828-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="73f30-112">См. также</span><span class="sxs-lookup"><span data-stu-id="73f30-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ba828-112">См. также:</span><span class="sxs-lookup"><span data-stu-id="ba828-112">See also</span></span>
 
-- [<span data-ttu-id="73f30-113">Интерфейс IMetaDataFilter</span><span class="sxs-lookup"><span data-stu-id="73f30-113">IMetaDataFilter Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatafilter-interface.md)
+- [<span data-ttu-id="ba828-113">Интерфейс IMetaDataFilter</span><span class="sxs-lookup"><span data-stu-id="ba828-113">IMetaDataFilter Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatafilter-interface.md)

@@ -22,10 +22,10 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428260"
 ---
-# <a name="icorprofilerobjectenumgetcount-method"></a><span data-ttu-id="d4082-102">Метод ICorProfilerObjectEnum::GetCount</span><span class="sxs-lookup"><span data-stu-id="d4082-102">ICorProfilerObjectEnum::GetCount Method</span></span>
-<span data-ttu-id="d4082-103">Gets the total number of frozen objects in the collection.</span><span class="sxs-lookup"><span data-stu-id="d4082-103">Gets the total number of frozen objects in the collection.</span></span>  
+# <a name="icorprofilerobjectenumgetcount-method"></a><span data-ttu-id="aaff2-102">Метод ICorProfilerObjectEnum::GetCount</span><span class="sxs-lookup"><span data-stu-id="aaff2-102">ICorProfilerObjectEnum::GetCount Method</span></span>
+<span data-ttu-id="aaff2-103">Возвращает общее число замороженных объектов в коллекции.</span><span class="sxs-lookup"><span data-stu-id="aaff2-103">Gets the total number of frozen objects in the collection.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d4082-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="d4082-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="aaff2-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="aaff2-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetCount (  
@@ -33,21 +33,21 @@ HRESULT GetCount (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="d4082-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="d4082-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="aaff2-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="aaff2-105">Parameters</span></span>  
  `pcelt`  
- <span data-ttu-id="d4082-106">[out] A pointer to the number of frozen objects in the collection.</span><span class="sxs-lookup"><span data-stu-id="d4082-106">[out] A pointer to the number of frozen objects in the collection.</span></span>  
+ <span data-ttu-id="aaff2-106">заполняет Указатель на число замороженных объектов в коллекции.</span><span class="sxs-lookup"><span data-stu-id="aaff2-106">[out] A pointer to the number of frozen objects in the collection.</span></span>  
   
- <span data-ttu-id="d4082-107">This method will always return zero in the .NET Framework version 3.5 Service Pack 1 (SP1) and later versions.</span><span class="sxs-lookup"><span data-stu-id="d4082-107">This method will always return zero in the .NET Framework version 3.5 Service Pack 1 (SP1) and later versions.</span></span>  
+ <span data-ttu-id="aaff2-107">Этот метод всегда будет возвращать ноль в .NET Framework версии 3,5 с пакетом обновления 1 (SP1) и более поздних версиях.</span><span class="sxs-lookup"><span data-stu-id="aaff2-107">This method will always return zero in the .NET Framework version 3.5 Service Pack 1 (SP1) and later versions.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d4082-108">Требования</span><span class="sxs-lookup"><span data-stu-id="d4082-108">Requirements</span></span>  
- <span data-ttu-id="d4082-109">**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d4082-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="aaff2-108">Требования</span><span class="sxs-lookup"><span data-stu-id="aaff2-108">Requirements</span></span>  
+ <span data-ttu-id="aaff2-109">**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="aaff2-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d4082-110">**Заголовок:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="d4082-110">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="aaff2-110">**Заголовок:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="aaff2-110">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="d4082-111">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d4082-111">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="aaff2-111">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="aaff2-111">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="d4082-112">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d4082-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="aaff2-112">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="aaff2-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d4082-113">См. также</span><span class="sxs-lookup"><span data-stu-id="d4082-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="aaff2-113">См. также:</span><span class="sxs-lookup"><span data-stu-id="aaff2-113">See also</span></span>
 
-- [<span data-ttu-id="d4082-114">Интерфейс ICorProfilerObjectEnum</span><span class="sxs-lookup"><span data-stu-id="d4082-114">ICorProfilerObjectEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerobjectenum-interface.md)
+- [<span data-ttu-id="aaff2-114">Интерфейс ICorProfilerObjectEnum</span><span class="sxs-lookup"><span data-stu-id="aaff2-114">ICorProfilerObjectEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerobjectenum-interface.md)

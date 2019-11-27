@@ -22,10 +22,10 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436048"
 ---
-# <a name="icorprofilerinfo2enummodulefrozenobjects-method"></a><span data-ttu-id="a59eb-102">Метод ICorProfilerInfo2::EnumModuleFrozenObjects</span><span class="sxs-lookup"><span data-stu-id="a59eb-102">ICorProfilerInfo2::EnumModuleFrozenObjects Method</span></span>
-<span data-ttu-id="a59eb-103">Gets an enumerator that allows iteration over the frozen objects in the specified module.This method is obsolete.</span><span class="sxs-lookup"><span data-stu-id="a59eb-103">Gets an enumerator that allows iteration over the frozen objects in the specified module.This method is obsolete.</span></span>  
+# <a name="icorprofilerinfo2enummodulefrozenobjects-method"></a><span data-ttu-id="39deb-102">Метод ICorProfilerInfo2::EnumModuleFrozenObjects</span><span class="sxs-lookup"><span data-stu-id="39deb-102">ICorProfilerInfo2::EnumModuleFrozenObjects Method</span></span>
+<span data-ttu-id="39deb-103">Возвращает перечислитель, позволяющий выполнять итерацию зафиксированных объектов в указанном модуле. Этот метод устарел.</span><span class="sxs-lookup"><span data-stu-id="39deb-103">Gets an enumerator that allows iteration over the frozen objects in the specified module.This method is obsolete.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a59eb-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="a59eb-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="39deb-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="39deb-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT EnumModuleFrozenObjects(  
@@ -33,23 +33,23 @@ HRESULT EnumModuleFrozenObjects(
     [out] ICorProfilerObjectEnum** ppEnum);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="a59eb-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="a59eb-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="39deb-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="39deb-105">Parameters</span></span>  
  `moduleID`  
- <span data-ttu-id="a59eb-106">[in] The ID of the module that contains the frozen objects to be enumerated.</span><span class="sxs-lookup"><span data-stu-id="a59eb-106">[in] The ID of the module that contains the frozen objects to be enumerated.</span></span>  
+ <span data-ttu-id="39deb-106">окне Идентификатор модуля, содержащего зафиксированные объекты для перечисления.</span><span class="sxs-lookup"><span data-stu-id="39deb-106">[in] The ID of the module that contains the frozen objects to be enumerated.</span></span>  
   
  `ppEnum`  
- <span data-ttu-id="a59eb-107">[out] A pointer to the address of an [ICorProfilerObjectEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerobjectenum-interface.md) interface, which enumerates the frozen objects.</span><span class="sxs-lookup"><span data-stu-id="a59eb-107">[out] A pointer to the address of an [ICorProfilerObjectEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerobjectenum-interface.md) interface, which enumerates the frozen objects.</span></span>  
+ <span data-ttu-id="39deb-107">заполняет Указатель на адрес интерфейса [ICorProfilerObjectEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerobjectenum-interface.md) , который перечисляет зафиксированные объекты.</span><span class="sxs-lookup"><span data-stu-id="39deb-107">[out] A pointer to the address of an [ICorProfilerObjectEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerobjectenum-interface.md) interface, which enumerates the frozen objects.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a59eb-108">Требования</span><span class="sxs-lookup"><span data-stu-id="a59eb-108">Requirements</span></span>  
- <span data-ttu-id="a59eb-109">**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a59eb-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="39deb-108">Требования</span><span class="sxs-lookup"><span data-stu-id="39deb-108">Requirements</span></span>  
+ <span data-ttu-id="39deb-109">**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="39deb-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="a59eb-110">**Заголовок:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="a59eb-110">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="39deb-110">**Заголовок:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="39deb-110">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="a59eb-111">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="a59eb-111">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="39deb-111">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="39deb-111">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="a59eb-112">**.NET Framework Versions:** 3.5, 3.0 SP1, 3.0, 2.0 SP1, 2.0</span><span class="sxs-lookup"><span data-stu-id="a59eb-112">**.NET Framework Versions:** 3.5, 3.0 SP1, 3.0, 2.0 SP1, 2.0</span></span>  
+ <span data-ttu-id="39deb-112">**.NET Framework версии:** 3,5, 3,0 sp1, 3,0, 2,0 SP1, 2,0</span><span class="sxs-lookup"><span data-stu-id="39deb-112">**.NET Framework Versions:** 3.5, 3.0 SP1, 3.0, 2.0 SP1, 2.0</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a59eb-113">См. также</span><span class="sxs-lookup"><span data-stu-id="a59eb-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="39deb-113">См. также:</span><span class="sxs-lookup"><span data-stu-id="39deb-113">See also</span></span>
 
-- [<span data-ttu-id="a59eb-114">Интерфейс ICorProfilerInfo</span><span class="sxs-lookup"><span data-stu-id="a59eb-114">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
-- [<span data-ttu-id="a59eb-115">Интерфейс ICorProfilerInfo2</span><span class="sxs-lookup"><span data-stu-id="a59eb-115">ICorProfilerInfo2 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
+- [<span data-ttu-id="39deb-114">Интерфейс ICorProfilerInfo</span><span class="sxs-lookup"><span data-stu-id="39deb-114">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [<span data-ttu-id="39deb-115">Интерфейс ICorProfilerInfo2</span><span class="sxs-lookup"><span data-stu-id="39deb-115">ICorProfilerInfo2 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)

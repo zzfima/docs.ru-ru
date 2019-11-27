@@ -22,27 +22,27 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448184"
 ---
-# <a name="icorprofilerinfoforcegc-method"></a><span data-ttu-id="2866a-102">Метод ICorProfilerInfo::ForceGC</span><span class="sxs-lookup"><span data-stu-id="2866a-102">ICorProfilerInfo::ForceGC Method</span></span>
-<span data-ttu-id="2866a-103">Forces garbage collection to occur within the common language runtime (CLR).</span><span class="sxs-lookup"><span data-stu-id="2866a-103">Forces garbage collection to occur within the common language runtime (CLR).</span></span>  
+# <a name="icorprofilerinfoforcegc-method"></a><span data-ttu-id="faaab-102">Метод ICorProfilerInfo::ForceGC</span><span class="sxs-lookup"><span data-stu-id="faaab-102">ICorProfilerInfo::ForceGC Method</span></span>
+<span data-ttu-id="faaab-103">Принудительное выполнение сборки мусора в среде CLR.</span><span class="sxs-lookup"><span data-stu-id="faaab-103">Forces garbage collection to occur within the common language runtime (CLR).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2866a-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="2866a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="faaab-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="faaab-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT ForceGC();  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="2866a-105">Заметки</span><span class="sxs-lookup"><span data-stu-id="2866a-105">Remarks</span></span>  
- <span data-ttu-id="2866a-106">The `ForceGC` method must be called only from a thread that has never run managed code and does not have any profiler callbacks on its stack.</span><span class="sxs-lookup"><span data-stu-id="2866a-106">The `ForceGC` method must be called only from a thread that has never run managed code and does not have any profiler callbacks on its stack.</span></span> <span data-ttu-id="2866a-107">The most convenient implementation is to create a separate thread within the profiler that calls `ForceGC` when signaled.</span><span class="sxs-lookup"><span data-stu-id="2866a-107">The most convenient implementation is to create a separate thread within the profiler that calls `ForceGC` when signaled.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="faaab-105">Примечания</span><span class="sxs-lookup"><span data-stu-id="faaab-105">Remarks</span></span>  
+ <span data-ttu-id="faaab-106">Метод `ForceGC` должен вызываться только из потока, который никогда не выполнял управляемый код и не имеет обратных вызовов профилировщика в стеке.</span><span class="sxs-lookup"><span data-stu-id="faaab-106">The `ForceGC` method must be called only from a thread that has never run managed code and does not have any profiler callbacks on its stack.</span></span> <span data-ttu-id="faaab-107">Наиболее удобной реализацией является создание отдельного потока в профилировщике, который вызывает `ForceGC` при получении сигнала.</span><span class="sxs-lookup"><span data-stu-id="faaab-107">The most convenient implementation is to create a separate thread within the profiler that calls `ForceGC` when signaled.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="2866a-108">Требования</span><span class="sxs-lookup"><span data-stu-id="2866a-108">Requirements</span></span>  
- <span data-ttu-id="2866a-109">**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="2866a-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="faaab-108">Требования</span><span class="sxs-lookup"><span data-stu-id="faaab-108">Requirements</span></span>  
+ <span data-ttu-id="faaab-109">**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="faaab-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="2866a-110">**Заголовок:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="2866a-110">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="faaab-110">**Заголовок:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="faaab-110">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="2866a-111">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="2866a-111">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="faaab-111">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="faaab-111">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="2866a-112">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2866a-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="faaab-112">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="faaab-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2866a-113">См. также</span><span class="sxs-lookup"><span data-stu-id="2866a-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="faaab-113">См. также:</span><span class="sxs-lookup"><span data-stu-id="faaab-113">See also</span></span>
 
-- [<span data-ttu-id="2866a-114">Интерфейс ICorProfilerInfo</span><span class="sxs-lookup"><span data-stu-id="2866a-114">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [<span data-ttu-id="faaab-114">Интерфейс ICorProfilerInfo</span><span class="sxs-lookup"><span data-stu-id="faaab-114">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

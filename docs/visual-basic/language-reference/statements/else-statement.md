@@ -13,18 +13,18 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74343756"
 ---
-# <a name="else-statement-visual-basic"></a><span data-ttu-id="ef9d9-102">Оператор Else (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ef9d9-102">Else Statement (Visual Basic)</span></span>
-<span data-ttu-id="ef9d9-103">Introduces a group of statements to be run or compiled if no other conditional group of statements has been run or compiled.</span><span class="sxs-lookup"><span data-stu-id="ef9d9-103">Introduces a group of statements to be run or compiled if no other conditional group of statements has been run or compiled.</span></span>  
+# <a name="else-statement-visual-basic"></a><span data-ttu-id="3214e-102">Оператор Else (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="3214e-102">Else Statement (Visual Basic)</span></span>
+<span data-ttu-id="3214e-103">Вводит группу операторов для выполнения или компиляции, если ни одна другая условная группа инструкций не была выполнена или скомпилирована.</span><span class="sxs-lookup"><span data-stu-id="3214e-103">Introduces a group of statements to be run or compiled if no other conditional group of statements has been run or compiled.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="ef9d9-104">Заметки</span><span class="sxs-lookup"><span data-stu-id="ef9d9-104">Remarks</span></span>  
- <span data-ttu-id="ef9d9-105">Ключевое слово `Else` можно использовать в следующих контекстах:</span><span class="sxs-lookup"><span data-stu-id="ef9d9-105">The `Else` keyword can be used in these contexts:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="3214e-104">Примечания</span><span class="sxs-lookup"><span data-stu-id="3214e-104">Remarks</span></span>  
+ <span data-ttu-id="3214e-105">Ключевое слово `Else` можно использовать в следующих контекстах:</span><span class="sxs-lookup"><span data-stu-id="3214e-105">The `Else` keyword can be used in these contexts:</span></span>  
   
- [<span data-ttu-id="ef9d9-106">Оператор If...Then...Else</span><span class="sxs-lookup"><span data-stu-id="ef9d9-106">If...Then...Else Statement</span></span>](../../../visual-basic/language-reference/statements/if-then-else-statement.md)  
+ [<span data-ttu-id="3214e-106">Оператор If...Then...Else</span><span class="sxs-lookup"><span data-stu-id="3214e-106">If...Then...Else Statement</span></span>](../../../visual-basic/language-reference/statements/if-then-else-statement.md)  
   
- [<span data-ttu-id="ef9d9-107">Оператор Select...Case</span><span class="sxs-lookup"><span data-stu-id="ef9d9-107">Select...Case Statement</span></span>](../../../visual-basic/language-reference/statements/select-case-statement.md)  
+ [<span data-ttu-id="3214e-107">Оператор Select...Case</span><span class="sxs-lookup"><span data-stu-id="3214e-107">Select...Case Statement</span></span>](../../../visual-basic/language-reference/statements/select-case-statement.md)  
   
- [<span data-ttu-id="ef9d9-108">#If...Then...#Else Directive</span><span class="sxs-lookup"><span data-stu-id="ef9d9-108">#If...Then...#Else Directive</span></span>](../../../visual-basic/language-reference/directives/if-then-else-directives.md)  
+ [<span data-ttu-id="3214e-108">#If... Then... #Else директиву</span><span class="sxs-lookup"><span data-stu-id="3214e-108">#If...Then...#Else Directive</span></span>](../../../visual-basic/language-reference/directives/if-then-else-directives.md)  
   
-## <a name="see-also"></a><span data-ttu-id="ef9d9-109">См. также</span><span class="sxs-lookup"><span data-stu-id="ef9d9-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3214e-109">См. также:</span><span class="sxs-lookup"><span data-stu-id="3214e-109">See also</span></span>
 
-- [<span data-ttu-id="ef9d9-110">Ключевые слова</span><span class="sxs-lookup"><span data-stu-id="ef9d9-110">Keywords</span></span>](../../../visual-basic/language-reference/keywords/index.md)
+- [<span data-ttu-id="3214e-110">Ключевые слова</span><span class="sxs-lookup"><span data-stu-id="3214e-110">Keywords</span></span>](../../../visual-basic/language-reference/keywords/index.md)
