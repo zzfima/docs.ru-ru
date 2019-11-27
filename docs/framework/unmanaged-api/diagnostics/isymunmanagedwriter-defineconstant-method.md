@@ -22,10 +22,10 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428061"
 ---
-# <a name="isymunmanagedwriterdefineconstant-method"></a><span data-ttu-id="de09d-102">Метод ISymUnmanagedWriter::DefineConstant</span><span class="sxs-lookup"><span data-stu-id="de09d-102">ISymUnmanagedWriter::DefineConstant Method</span></span>
-<span data-ttu-id="de09d-103">Defines a name for a constant value.</span><span class="sxs-lookup"><span data-stu-id="de09d-103">Defines a name for a constant value.</span></span>  
+# <a name="isymunmanagedwriterdefineconstant-method"></a><span data-ttu-id="c215c-102">Метод ISymUnmanagedWriter::DefineConstant</span><span class="sxs-lookup"><span data-stu-id="c215c-102">ISymUnmanagedWriter::DefineConstant Method</span></span>
+<span data-ttu-id="c215c-103">Определяет имя для постоянного значения.</span><span class="sxs-lookup"><span data-stu-id="c215c-103">Defines a name for a constant value.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="de09d-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="de09d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c215c-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="c215c-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT DefineConstant(  
@@ -35,26 +35,26 @@ HRESULT DefineConstant(
     [in, size_is(cSig)] unsigned char signature[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="de09d-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="de09d-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="c215c-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="c215c-105">Parameters</span></span>  
  `name`  
- <span data-ttu-id="de09d-106">[in] A pointer to a `WCHAR` that defines the constant name.</span><span class="sxs-lookup"><span data-stu-id="de09d-106">[in] A pointer to a `WCHAR` that defines the constant name.</span></span>  
+ <span data-ttu-id="c215c-106">окне Указатель на `WCHAR`, который определяет имя константы.</span><span class="sxs-lookup"><span data-stu-id="c215c-106">[in] A pointer to a `WCHAR` that defines the constant name.</span></span>  
   
  `value`  
- <span data-ttu-id="de09d-107">[in] The value of the constant.</span><span class="sxs-lookup"><span data-stu-id="de09d-107">[in] The value of the constant.</span></span>  
+ <span data-ttu-id="c215c-107">окне Значение константы.</span><span class="sxs-lookup"><span data-stu-id="c215c-107">[in] The value of the constant.</span></span>  
   
  `cSig`  
- <span data-ttu-id="de09d-108">[in] Размер массива `signature`.</span><span class="sxs-lookup"><span data-stu-id="de09d-108">[in] The size of the `signature` array.</span></span>  
+ <span data-ttu-id="c215c-108">[in] Размер массива `signature`.</span><span class="sxs-lookup"><span data-stu-id="c215c-108">[in] The size of the `signature` array.</span></span>  
   
  `signature`  
- <span data-ttu-id="de09d-109">[in] The type signature for the constant.</span><span class="sxs-lookup"><span data-stu-id="de09d-109">[in] The type signature for the constant.</span></span>  
+ <span data-ttu-id="c215c-109">окне Сигнатура типа для константы.</span><span class="sxs-lookup"><span data-stu-id="c215c-109">[in] The type signature for the constant.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="de09d-110">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="de09d-110">Return Value</span></span>  
- <span data-ttu-id="de09d-111">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="de09d-111">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="c215c-110">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="c215c-110">Return Value</span></span>  
+ <span data-ttu-id="c215c-111">S_OK, если метод выполнен. в противном случае E_FAIL или другой код ошибки.</span><span class="sxs-lookup"><span data-stu-id="c215c-111">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="de09d-112">Требования</span><span class="sxs-lookup"><span data-stu-id="de09d-112">Requirements</span></span>  
- <span data-ttu-id="de09d-113">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="de09d-113">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c215c-112">Требования</span><span class="sxs-lookup"><span data-stu-id="c215c-112">Requirements</span></span>  
+ <span data-ttu-id="c215c-113">**Заголовок:** Корсим. idl, Корсим. h</span><span class="sxs-lookup"><span data-stu-id="c215c-113">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="de09d-114">См. также</span><span class="sxs-lookup"><span data-stu-id="de09d-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c215c-114">См. также</span><span class="sxs-lookup"><span data-stu-id="c215c-114">See also</span></span>
 
-- [<span data-ttu-id="de09d-115">Интерфейс ISymUnmanagedWriter</span><span class="sxs-lookup"><span data-stu-id="de09d-115">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
-- [<span data-ttu-id="de09d-116">Метод DefineConstant2</span><span class="sxs-lookup"><span data-stu-id="de09d-116">DefineConstant2 Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter2-defineconstant2-method.md)
+- [<span data-ttu-id="c215c-115">Интерфейс ISymUnmanagedWriter</span><span class="sxs-lookup"><span data-stu-id="c215c-115">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+- [<span data-ttu-id="c215c-116">Метод DefineConstant2</span><span class="sxs-lookup"><span data-stu-id="c215c-116">DefineConstant2 Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter2-defineconstant2-method.md)

@@ -22,26 +22,26 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448858"
 ---
-# <a name="isymunmanagedmethodgettoken-method"></a><span data-ttu-id="39447-102">Метод ISymUnmanagedMethod::GetToken</span><span class="sxs-lookup"><span data-stu-id="39447-102">ISymUnmanagedMethod::GetToken Method</span></span>
-<span data-ttu-id="39447-103">Returns the metadata token for this method.</span><span class="sxs-lookup"><span data-stu-id="39447-103">Returns the metadata token for this method.</span></span>  
+# <a name="isymunmanagedmethodgettoken-method"></a><span data-ttu-id="8a5f4-102">Метод ISymUnmanagedMethod::GetToken</span><span class="sxs-lookup"><span data-stu-id="8a5f4-102">ISymUnmanagedMethod::GetToken Method</span></span>
+<span data-ttu-id="8a5f4-103">Возвращает маркер метаданных для этого метода.</span><span class="sxs-lookup"><span data-stu-id="8a5f4-103">Returns the metadata token for this method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="39447-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="39447-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8a5f4-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="8a5f4-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetToken(  
    [out, retval]  mdMethodDef  *pToken);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="39447-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="39447-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="8a5f4-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="8a5f4-105">Parameters</span></span>  
  `pToken`  
- <span data-ttu-id="39447-106">[out] A pointer to a `mdMethodDef` that receives the size, in characters, of the buffer required to contain the metadata.</span><span class="sxs-lookup"><span data-stu-id="39447-106">[out] A pointer to a `mdMethodDef` that receives the size, in characters, of the buffer required to contain the metadata.</span></span>  
+ <span data-ttu-id="8a5f4-106">заполняет Указатель на `mdMethodDef`, который получает размер буфера (в символах), необходимого для хранения метаданных.</span><span class="sxs-lookup"><span data-stu-id="8a5f4-106">[out] A pointer to a `mdMethodDef` that receives the size, in characters, of the buffer required to contain the metadata.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="39447-107">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="39447-107">Return Value</span></span>  
- <span data-ttu-id="39447-108">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="39447-108">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="8a5f4-107">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="8a5f4-107">Return Value</span></span>  
+ <span data-ttu-id="8a5f4-108">S_OK, если метод выполнен. в противном случае E_FAIL или другой код ошибки.</span><span class="sxs-lookup"><span data-stu-id="8a5f4-108">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="39447-109">Требования</span><span class="sxs-lookup"><span data-stu-id="39447-109">Requirements</span></span>  
- <span data-ttu-id="39447-110">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="39447-110">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8a5f4-109">Требования</span><span class="sxs-lookup"><span data-stu-id="8a5f4-109">Requirements</span></span>  
+ <span data-ttu-id="8a5f4-110">**Заголовок:** Корсим. idl, Корсим. h</span><span class="sxs-lookup"><span data-stu-id="8a5f4-110">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="39447-111">См. также</span><span class="sxs-lookup"><span data-stu-id="39447-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8a5f4-111">См. также</span><span class="sxs-lookup"><span data-stu-id="8a5f4-111">See also</span></span>
 
-- [<span data-ttu-id="39447-112">Интерфейс ISymUnmanagedMethod</span><span class="sxs-lookup"><span data-stu-id="39447-112">ISymUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)
+- [<span data-ttu-id="8a5f4-112">Интерфейс ISymUnmanagedMethod</span><span class="sxs-lookup"><span data-stu-id="8a5f4-112">ISymUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)

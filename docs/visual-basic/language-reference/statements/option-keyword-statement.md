@@ -1,5 +1,5 @@
 ---
-title: Оператор Option <keyword>
+title: Оператор <keyword> Statement
 ms.date: 07/20/2015
 f1_keywords:
 - vb.option
@@ -13,22 +13,22 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353779"
 ---
-# <a name="option-keyword-statement"></a><span data-ttu-id="4ce25-102">Option \<keyword> Statement</span><span class="sxs-lookup"><span data-stu-id="4ce25-102">Option \<keyword> Statement</span></span>
-<span data-ttu-id="4ce25-103">Introduces a statement that specifies a compiler option that applies to the entire source file.</span><span class="sxs-lookup"><span data-stu-id="4ce25-103">Introduces a statement that specifies a compiler option that applies to the entire source file.</span></span>  
+# <a name="option-keyword-statement"></a><span data-ttu-id="24f28-102">Option \<ключевое слово > оператор</span><span class="sxs-lookup"><span data-stu-id="24f28-102">Option \<keyword> Statement</span></span>
+<span data-ttu-id="24f28-103">Вводит инструкцию, которая указывает параметр компилятора, который применяется ко всему исходному файлу.</span><span class="sxs-lookup"><span data-stu-id="24f28-103">Introduces a statement that specifies a compiler option that applies to the entire source file.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="4ce25-104">Заметки</span><span class="sxs-lookup"><span data-stu-id="4ce25-104">Remarks</span></span>  
- <span data-ttu-id="4ce25-105">The compiler options can control whether all variables must be explicitly declared, whether narrowing type conversions must be explicit, or whether strings should be compared as text or as binary quantities.</span><span class="sxs-lookup"><span data-stu-id="4ce25-105">The compiler options can control whether all variables must be explicitly declared, whether narrowing type conversions must be explicit, or whether strings should be compared as text or as binary quantities.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="24f28-104">Примечания</span><span class="sxs-lookup"><span data-stu-id="24f28-104">Remarks</span></span>  
+ <span data-ttu-id="24f28-105">Параметры компилятора могут определять, должны ли быть явно объявлены все переменные, должны ли сужающие преобразования типов быть явными или должны сравниваться в виде текста или в виде двоичных значений.</span><span class="sxs-lookup"><span data-stu-id="24f28-105">The compiler options can control whether all variables must be explicitly declared, whether narrowing type conversions must be explicit, or whether strings should be compared as text or as binary quantities.</span></span>  
   
- <span data-ttu-id="4ce25-106">Ключевое слово `Option` можно использовать в следующих контекстах:</span><span class="sxs-lookup"><span data-stu-id="4ce25-106">The `Option` keyword can be used in these contexts:</span></span>  
+ <span data-ttu-id="24f28-106">Ключевое слово `Option` можно использовать в следующих контекстах:</span><span class="sxs-lookup"><span data-stu-id="24f28-106">The `Option` keyword can be used in these contexts:</span></span>  
   
- [<span data-ttu-id="4ce25-107">Оператор Option Compare</span><span class="sxs-lookup"><span data-stu-id="4ce25-107">Option Compare Statement</span></span>](../../../visual-basic/language-reference/statements/option-compare-statement.md)  
+ [<span data-ttu-id="24f28-107">Оператор Option Compare</span><span class="sxs-lookup"><span data-stu-id="24f28-107">Option Compare Statement</span></span>](../../../visual-basic/language-reference/statements/option-compare-statement.md)  
   
- [<span data-ttu-id="4ce25-108">Оператор Option Explicit</span><span class="sxs-lookup"><span data-stu-id="4ce25-108">Option Explicit Statement</span></span>](../../../visual-basic/language-reference/statements/option-explicit-statement.md)  
+ [<span data-ttu-id="24f28-108">Оператор Option Explicit</span><span class="sxs-lookup"><span data-stu-id="24f28-108">Option Explicit Statement</span></span>](../../../visual-basic/language-reference/statements/option-explicit-statement.md)  
   
- [<span data-ttu-id="4ce25-109">Оператор Option Infer</span><span class="sxs-lookup"><span data-stu-id="4ce25-109">Option Infer Statement</span></span>](../../../visual-basic/language-reference/statements/option-infer-statement.md)  
+ [<span data-ttu-id="24f28-109">Оператор Option Infer</span><span class="sxs-lookup"><span data-stu-id="24f28-109">Option Infer Statement</span></span>](../../../visual-basic/language-reference/statements/option-infer-statement.md)  
   
- [<span data-ttu-id="4ce25-110">Оператор Option Strict</span><span class="sxs-lookup"><span data-stu-id="4ce25-110">Option Strict Statement</span></span>](../../../visual-basic/language-reference/statements/option-strict-statement.md)  
+ [<span data-ttu-id="24f28-110">Оператор Option Strict</span><span class="sxs-lookup"><span data-stu-id="24f28-110">Option Strict Statement</span></span>](../../../visual-basic/language-reference/statements/option-strict-statement.md)  
   
-## <a name="see-also"></a><span data-ttu-id="4ce25-111">См. также</span><span class="sxs-lookup"><span data-stu-id="4ce25-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="24f28-111">См. также</span><span class="sxs-lookup"><span data-stu-id="24f28-111">See also</span></span>
 
-- [<span data-ttu-id="4ce25-112">Ключевые слова</span><span class="sxs-lookup"><span data-stu-id="4ce25-112">Keywords</span></span>](../../../visual-basic/language-reference/keywords/index.md)
+- [<span data-ttu-id="24f28-112">Ключевые слова</span><span class="sxs-lookup"><span data-stu-id="24f28-112">Keywords</span></span>](../../../visual-basic/language-reference/keywords/index.md)

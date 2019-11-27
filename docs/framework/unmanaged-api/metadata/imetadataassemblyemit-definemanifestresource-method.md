@@ -22,10 +22,10 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74432055"
 ---
-# <a name="imetadataassemblyemitdefinemanifestresource-method"></a><span data-ttu-id="a90f0-102">Метод IMetaDataAssemblyEmit::DefineManifestResource</span><span class="sxs-lookup"><span data-stu-id="a90f0-102">IMetaDataAssemblyEmit::DefineManifestResource Method</span></span>
-<span data-ttu-id="a90f0-103">Создает структуру `ManifestResource`, содержащую метаданные для указанного ресурса манифеста, и возвращает связанный токен метаданных.</span><span class="sxs-lookup"><span data-stu-id="a90f0-103">Creates a `ManifestResource` structure containing metadata for the specified manifest resource, and returns the associated metadata token.</span></span>  
+# <a name="imetadataassemblyemitdefinemanifestresource-method"></a><span data-ttu-id="ed507-102">Метод IMetaDataAssemblyEmit::DefineManifestResource</span><span class="sxs-lookup"><span data-stu-id="ed507-102">IMetaDataAssemblyEmit::DefineManifestResource Method</span></span>
+<span data-ttu-id="ed507-103">Создает структуру `ManifestResource`, содержащую метаданные для указанного ресурса манифеста, и возвращает связанный токен метаданных.</span><span class="sxs-lookup"><span data-stu-id="ed507-103">Creates a `ManifestResource` structure containing metadata for the specified manifest resource, and returns the associated metadata token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a90f0-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="a90f0-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ed507-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="ed507-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT DefineManifestResource (  
@@ -37,34 +37,34 @@ HRESULT DefineManifestResource (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="a90f0-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="a90f0-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="ed507-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="ed507-105">Parameters</span></span>  
  `szName`  
- <span data-ttu-id="a90f0-106">[in] The name of the resource.</span><span class="sxs-lookup"><span data-stu-id="a90f0-106">[in] The name of the resource.</span></span>  
+ <span data-ttu-id="ed507-106">окне Имя ресурса.</span><span class="sxs-lookup"><span data-stu-id="ed507-106">[in] The name of the resource.</span></span>  
   
  `tkImplementation`  
- <span data-ttu-id="a90f0-107">[in] A metadata token of type `mdtFile` or `mdtAssemblyRef` that maps to the resource provider.</span><span class="sxs-lookup"><span data-stu-id="a90f0-107">[in] A metadata token of type `mdtFile` or `mdtAssemblyRef` that maps to the resource provider.</span></span> <span data-ttu-id="a90f0-108">A NULL value indicates that the file in which the metadata is embedded is the resource provider.</span><span class="sxs-lookup"><span data-stu-id="a90f0-108">A NULL value indicates that the file in which the metadata is embedded is the resource provider.</span></span>  
+ <span data-ttu-id="ed507-107">окне Токен метаданных типа `mdtFile` или `mdtAssemblyRef`, который сопоставляется с поставщиком ресурсов.</span><span class="sxs-lookup"><span data-stu-id="ed507-107">[in] A metadata token of type `mdtFile` or `mdtAssemblyRef` that maps to the resource provider.</span></span> <span data-ttu-id="ed507-108">Значение NULL указывает, что файл, в котором внедрены метаданные, является поставщиком ресурсов.</span><span class="sxs-lookup"><span data-stu-id="ed507-108">A NULL value indicates that the file in which the metadata is embedded is the resource provider.</span></span>  
   
  `dwOffset`  
- <span data-ttu-id="a90f0-109">[in] The offset to the beginning of the resource within the file.</span><span class="sxs-lookup"><span data-stu-id="a90f0-109">[in] The offset to the beginning of the resource within the file.</span></span> <span data-ttu-id="a90f0-110">For resources in standalone files, this will always be zero.</span><span class="sxs-lookup"><span data-stu-id="a90f0-110">For resources in standalone files, this will always be zero.</span></span> <span data-ttu-id="a90f0-111">If the resource is embedded in a PE (portable executable) file, this is an offset of the resource BLOB, which starts at the location specified in the cor.h header file.</span><span class="sxs-lookup"><span data-stu-id="a90f0-111">If the resource is embedded in a PE (portable executable) file, this is an offset of the resource BLOB, which starts at the location specified in the cor.h header file.</span></span>  
+ <span data-ttu-id="ed507-109">окне Смещение в начале ресурса в файле.</span><span class="sxs-lookup"><span data-stu-id="ed507-109">[in] The offset to the beginning of the resource within the file.</span></span> <span data-ttu-id="ed507-110">Для ресурсов в отдельных файлах это значение всегда будет равно нулю.</span><span class="sxs-lookup"><span data-stu-id="ed507-110">For resources in standalone files, this will always be zero.</span></span> <span data-ttu-id="ed507-111">Если ресурс внедряется в PE-файл, это смещение большого двоичного объекта ресурса, которое начинается в расположении, указанном в файле заголовка COR. h.</span><span class="sxs-lookup"><span data-stu-id="ed507-111">If the resource is embedded in a PE (portable executable) file, this is an offset of the resource BLOB, which starts at the location specified in the cor.h header file.</span></span>  
   
  `dwResourceFlags`  
- <span data-ttu-id="a90f0-112">[in] A bitwise combination of flag values that specify property settings for the resource definition.</span><span class="sxs-lookup"><span data-stu-id="a90f0-112">[in] A bitwise combination of flag values that specify property settings for the resource definition.</span></span>  
+ <span data-ttu-id="ed507-112">окне Побитовое сочетание значений флагов, задающих настройки свойств для определения ресурса.</span><span class="sxs-lookup"><span data-stu-id="ed507-112">[in] A bitwise combination of flag values that specify property settings for the resource definition.</span></span>  
   
  `pmdmr`  
- <span data-ttu-id="a90f0-113">[out] A pointer to the returned metadata token.</span><span class="sxs-lookup"><span data-stu-id="a90f0-113">[out] A pointer to the returned metadata token.</span></span>  
+ <span data-ttu-id="ed507-113">заполняет Указатель на возвращаемый маркер метаданных.</span><span class="sxs-lookup"><span data-stu-id="ed507-113">[out] A pointer to the returned metadata token.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="a90f0-114">Заметки</span><span class="sxs-lookup"><span data-stu-id="a90f0-114">Remarks</span></span>  
- <span data-ttu-id="a90f0-115">One `ManifestResource` metadata structure must be defined for each resource that is implemented in each of the assembly's files.</span><span class="sxs-lookup"><span data-stu-id="a90f0-115">One `ManifestResource` metadata structure must be defined for each resource that is implemented in each of the assembly's files.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="ed507-114">Примечания</span><span class="sxs-lookup"><span data-stu-id="ed507-114">Remarks</span></span>  
+ <span data-ttu-id="ed507-115">Для каждого ресурса, реализованного в каждом файле сборки, необходимо определить одну `ManifestResource` структуру метаданных.</span><span class="sxs-lookup"><span data-stu-id="ed507-115">One `ManifestResource` metadata structure must be defined for each resource that is implemented in each of the assembly's files.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a90f0-116">Требования</span><span class="sxs-lookup"><span data-stu-id="a90f0-116">Requirements</span></span>  
- <span data-ttu-id="a90f0-117">**Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a90f0-117">**Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ed507-116">Требования</span><span class="sxs-lookup"><span data-stu-id="ed507-116">Requirements</span></span>  
+ <span data-ttu-id="ed507-117">**Платформа:** См. раздел [требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ed507-117">**Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="a90f0-118">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="a90f0-118">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="ed507-118">**Заголовок:** COR. h</span><span class="sxs-lookup"><span data-stu-id="ed507-118">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="a90f0-119">**Library:** Used as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="a90f0-119">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="ed507-119">**Библиотека:** Используется в качестве ресурса в MsCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="ed507-119">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="a90f0-120">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a90f0-120">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="ed507-120">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ed507-120">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a90f0-121">См. также</span><span class="sxs-lookup"><span data-stu-id="a90f0-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ed507-121">См. также</span><span class="sxs-lookup"><span data-stu-id="ed507-121">See also</span></span>
 
-- [<span data-ttu-id="a90f0-122">Интерфейс IMetaDataAssemblyEmit</span><span class="sxs-lookup"><span data-stu-id="a90f0-122">IMetaDataAssemblyEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+- [<span data-ttu-id="ed507-122">Интерфейс IMetaDataAssemblyEmit</span><span class="sxs-lookup"><span data-stu-id="ed507-122">IMetaDataAssemblyEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

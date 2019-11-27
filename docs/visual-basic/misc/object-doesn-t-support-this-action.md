@@ -1,5 +1,5 @@
 ---
-title: Object doesn't support this action
+title: Объект не поддерживает это действие
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID445
@@ -11,15 +11,15 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353884"
 ---
-# <a name="object-doesnt-support-this-action-visual-basic"></a><span data-ttu-id="b28f4-102">Объект не поддерживает это действие (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b28f4-102">Object doesn't support this action (Visual Basic)</span></span>
-<span data-ttu-id="b28f4-103">Ссылка на метод или свойство, которое не поддерживается данным объектом.</span><span class="sxs-lookup"><span data-stu-id="b28f4-103">You referenced a method or property that is not supported by this object.</span></span>  
+# <a name="object-doesnt-support-this-action-visual-basic"></a><span data-ttu-id="4ed13-102">Объект не поддерживает это действие (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="4ed13-102">Object doesn't support this action (Visual Basic)</span></span>
+<span data-ttu-id="4ed13-103">Ссылка на метод или свойство, которое не поддерживается данным объектом.</span><span class="sxs-lookup"><span data-stu-id="4ed13-103">You referenced a method or property that is not supported by this object.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="b28f4-104">Исправление ошибки</span><span class="sxs-lookup"><span data-stu-id="b28f4-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="4ed13-104">Исправление ошибки</span><span class="sxs-lookup"><span data-stu-id="4ed13-104">To correct this error</span></span>  
   
-1. <span data-ttu-id="b28f4-105">Дополнительные сведения см. в документации по объекту.</span><span class="sxs-lookup"><span data-stu-id="b28f4-105">Read the object's documentation for more information on the object.</span></span>  
+1. <span data-ttu-id="4ed13-105">Дополнительные сведения см. в документации по объекту.</span><span class="sxs-lookup"><span data-stu-id="4ed13-105">Read the object's documentation for more information on the object.</span></span>  
   
-2. <span data-ttu-id="b28f4-106">Убедитесь, что имена свойств и методов написаны правильно.</span><span class="sxs-lookup"><span data-stu-id="b28f4-106">Ensure that the names of properties and methods are spelled correctly.</span></span>  
+2. <span data-ttu-id="4ed13-106">Убедитесь, что имена свойств и методов написаны правильно.</span><span class="sxs-lookup"><span data-stu-id="4ed13-106">Ensure that the names of properties and methods are spelled correctly.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b28f4-107">См. также</span><span class="sxs-lookup"><span data-stu-id="b28f4-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4ed13-107">См. также</span><span class="sxs-lookup"><span data-stu-id="4ed13-107">See also</span></span>
 
-- [<span data-ttu-id="b28f4-108">Типы ошибок</span><span class="sxs-lookup"><span data-stu-id="b28f4-108">Error Types</span></span>](../../visual-basic/programming-guide/language-features/error-types.md)
+- [<span data-ttu-id="4ed13-108">Типы ошибок</span><span class="sxs-lookup"><span data-stu-id="4ed13-108">Error Types</span></span>](../../visual-basic/programming-guide/language-features/error-types.md)
