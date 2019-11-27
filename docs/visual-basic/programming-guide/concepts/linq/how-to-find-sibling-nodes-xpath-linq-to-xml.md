@@ -9,19 +9,19 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344630"
 ---
-# <a name="how-to-find-sibling-nodes-xpath-linq-to-xml-visual-basic"></a><span data-ttu-id="9e868-102">How to: Find Sibling Nodes (XPath-LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9e868-102">How to: Find Sibling Nodes (XPath-LINQ to XML) (Visual Basic)</span></span>
+# <a name="how-to-find-sibling-nodes-xpath-linq-to-xml-visual-basic"></a><span data-ttu-id="31f1f-102">Руководство. Поиск узлов того же уровня (XPath-LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="31f1f-102">How to: Find Sibling Nodes (XPath-LINQ to XML) (Visual Basic)</span></span>
 
-<span data-ttu-id="9e868-103">Допустим, что требуется найти все одноуровневые элементы с указанным именем.</span><span class="sxs-lookup"><span data-stu-id="9e868-103">You might want to find all siblings of a node that have a specific name.</span></span> <span data-ttu-id="9e868-104">Полученная в результате коллекция может содержать контекстный узел, если этот контекстный узел также имеет указанное имя.</span><span class="sxs-lookup"><span data-stu-id="9e868-104">The resulting collection might include the context node if the context node also has the specific name.</span></span>
+<span data-ttu-id="31f1f-103">Допустим, что требуется найти все одноуровневые элементы с указанным именем.</span><span class="sxs-lookup"><span data-stu-id="31f1f-103">You might want to find all siblings of a node that have a specific name.</span></span> <span data-ttu-id="31f1f-104">Полученная в результате коллекция может содержать контекстный узел, если этот контекстный узел также имеет указанное имя.</span><span class="sxs-lookup"><span data-stu-id="31f1f-104">The resulting collection might include the context node if the context node also has the specific name.</span></span>
 
-<span data-ttu-id="9e868-105">Выражение XPath:</span><span class="sxs-lookup"><span data-stu-id="9e868-105">The XPath expression is:</span></span>
+<span data-ttu-id="31f1f-105">Выражение XPath:</span><span class="sxs-lookup"><span data-stu-id="31f1f-105">The XPath expression is:</span></span>
 
 `../Book`
 
-## <a name="example"></a><span data-ttu-id="9e868-106">Пример</span><span class="sxs-lookup"><span data-stu-id="9e868-106">Example</span></span>
+## <a name="example"></a><span data-ttu-id="31f1f-106">Пример</span><span class="sxs-lookup"><span data-stu-id="31f1f-106">Example</span></span>
 
-<span data-ttu-id="9e868-107">В этом примере вначале осуществляется поиск элемента `Book`, а затем всех одноуровневых элементов с именем `Book`.</span><span class="sxs-lookup"><span data-stu-id="9e868-107">This example first finds a `Book` element, and then finds all sibling elements named `Book`.</span></span> <span data-ttu-id="9e868-108">Полученная в результате коллекция содержит контекстный узел.</span><span class="sxs-lookup"><span data-stu-id="9e868-108">The resulting collection includes the context node.</span></span>
+<span data-ttu-id="31f1f-107">В этом примере вначале осуществляется поиск элемента `Book`, а затем всех одноуровневых элементов с именем `Book`.</span><span class="sxs-lookup"><span data-stu-id="31f1f-107">This example first finds a `Book` element, and then finds all sibling elements named `Book`.</span></span> <span data-ttu-id="31f1f-108">Полученная в результате коллекция содержит контекстный узел.</span><span class="sxs-lookup"><span data-stu-id="31f1f-108">The resulting collection includes the context node.</span></span>
 
-<span data-ttu-id="9e868-109">В этом примере используется следующий XML-документ: [Пример XML-файла. Книги (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="9e868-109">This example uses the following XML document: [Sample XML File: Books (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).</span></span>
+<span data-ttu-id="31f1f-109">В этом примере используется следующий XML-документ: [Пример XML-файла. Книги (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="31f1f-109">This example uses the following XML document: [Sample XML File: Books (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).</span></span>
 
 ```vb
 Dim books As XDocument = XDocument.Load("Books.xml")
@@ -44,7 +44,7 @@ For Each el As XElement In list1
 Next
 ```
 
-<span data-ttu-id="9e868-110">В этом примере выводятся следующие данные:</span><span class="sxs-lookup"><span data-stu-id="9e868-110">This example produces the following output:</span></span>
+<span data-ttu-id="31f1f-110">В этом примере выводятся следующие данные:</span><span class="sxs-lookup"><span data-stu-id="31f1f-110">This example produces the following output:</span></span>
 
 ```console
 Results are identical
@@ -69,6 +69,6 @@ Results are identical
 </Book>
 ```
 
-## <a name="see-also"></a><span data-ttu-id="9e868-111">См. также</span><span class="sxs-lookup"><span data-stu-id="9e868-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="31f1f-111">См. также</span><span class="sxs-lookup"><span data-stu-id="31f1f-111">See also</span></span>
 
-- [<span data-ttu-id="9e868-112">LINQ to XML for XPath Users (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9e868-112">LINQ to XML for XPath Users (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [<span data-ttu-id="31f1f-112">LINQ to XML для пользователей XPath (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="31f1f-112">LINQ to XML for XPath Users (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

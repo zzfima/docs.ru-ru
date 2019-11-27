@@ -1,5 +1,5 @@
 ---
-title: How to combine LINQ queries with regular expressions
+title: Практическое руководство. Объединение запросов LINQ с регулярными выражениями
 ms.date: 07/20/2015
 ms.assetid: 3da1bd10-b0d8-4d5b-a637-966891c13592
 ms.openlocfilehash: 27fc46056ad78567339ca0c5818aef38d0fbb9a6
@@ -9,11 +9,11 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348422"
 ---
-# <a name="how-to-combine-linq-queries-with-regular-expressions-visual-basic"></a><span data-ttu-id="d0c9f-102">How to combine LINQ queries with regular expressions (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d0c9f-102">How to combine LINQ queries with regular expressions (Visual Basic)</span></span>
+# <a name="how-to-combine-linq-queries-with-regular-expressions-visual-basic"></a><span data-ttu-id="96783-102">Как сочетать запросы LINQ с помощью регулярных выражений (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="96783-102">How to combine LINQ queries with regular expressions (Visual Basic)</span></span>
 
-<span data-ttu-id="d0c9f-103">В этом примере показано, как использовать класс <xref:System.Text.RegularExpressions.Regex> при создании регулярного выражения для более сложных сопоставлений в текстовых строках.</span><span class="sxs-lookup"><span data-stu-id="d0c9f-103">This example shows how to use the <xref:System.Text.RegularExpressions.Regex> class to create a regular expression for more complex matching in text strings.</span></span> <span data-ttu-id="d0c9f-104">Запрос LINQ упрощает фильтрацию именно тех файлов, которые требуется найти с помощью регулярного выражения, и формирование результатов.</span><span class="sxs-lookup"><span data-stu-id="d0c9f-104">The LINQ query makes it easy to filter on exactly the files that you want to search with the regular expression, and to shape the results.</span></span>
+<span data-ttu-id="96783-103">В этом примере показано, как использовать класс <xref:System.Text.RegularExpressions.Regex> при создании регулярного выражения для более сложных сопоставлений в текстовых строках.</span><span class="sxs-lookup"><span data-stu-id="96783-103">This example shows how to use the <xref:System.Text.RegularExpressions.Regex> class to create a regular expression for more complex matching in text strings.</span></span> <span data-ttu-id="96783-104">Запрос LINQ упрощает фильтрацию именно тех файлов, которые требуется найти с помощью регулярного выражения, и формирование результатов.</span><span class="sxs-lookup"><span data-stu-id="96783-104">The LINQ query makes it easy to filter on exactly the files that you want to search with the regular expression, and to shape the results.</span></span>
 
-## <a name="example"></a><span data-ttu-id="d0c9f-105">Пример</span><span class="sxs-lookup"><span data-stu-id="d0c9f-105">Example</span></span>
+## <a name="example"></a><span data-ttu-id="96783-105">Пример</span><span class="sxs-lookup"><span data-stu-id="96783-105">Example</span></span>
 
 ```vb
 Imports System.IO
@@ -82,13 +82,13 @@ Class LinqRegExVB
 End Class
 ```
 
-<span data-ttu-id="d0c9f-106">Обратите внимание, что можно также запросить объект <xref:System.Text.RegularExpressions.MatchCollection>, возвращаемый поиском `RegEx`.</span><span class="sxs-lookup"><span data-stu-id="d0c9f-106">Note that you can also query the <xref:System.Text.RegularExpressions.MatchCollection> object that is returned by a `RegEx` search.</span></span> <span data-ttu-id="d0c9f-107">В этом примере в результатах создается только значение каждого совпадения.</span><span class="sxs-lookup"><span data-stu-id="d0c9f-107">In this example only the value of each match is produced in the results.</span></span> <span data-ttu-id="d0c9f-108">Тем не менее вы можете использовать LINQ для выполнения всех видов фильтрации, сортировки и группировки в этой коллекции.</span><span class="sxs-lookup"><span data-stu-id="d0c9f-108">However, it is also possible to use LINQ to perform all kinds of filtering, sorting, and grouping on that collection.</span></span> <span data-ttu-id="d0c9f-109">Так как <xref:System.Text.RegularExpressions.MatchCollection> является неуниверсальной коллекцией <xref:System.Collections.IEnumerable>, необходимо явно указать тип переменной диапазона в запросе.</span><span class="sxs-lookup"><span data-stu-id="d0c9f-109">Because <xref:System.Text.RegularExpressions.MatchCollection> is a non-generic <xref:System.Collections.IEnumerable> collection, you have to explicitly state the type of the range variable in the query.</span></span>
+<span data-ttu-id="96783-106">Обратите внимание, что можно также запросить объект <xref:System.Text.RegularExpressions.MatchCollection>, возвращаемый поиском `RegEx`.</span><span class="sxs-lookup"><span data-stu-id="96783-106">Note that you can also query the <xref:System.Text.RegularExpressions.MatchCollection> object that is returned by a `RegEx` search.</span></span> <span data-ttu-id="96783-107">В этом примере в результатах создается только значение каждого совпадения.</span><span class="sxs-lookup"><span data-stu-id="96783-107">In this example only the value of each match is produced in the results.</span></span> <span data-ttu-id="96783-108">Тем не менее вы можете использовать LINQ для выполнения всех видов фильтрации, сортировки и группировки в этой коллекции.</span><span class="sxs-lookup"><span data-stu-id="96783-108">However, it is also possible to use LINQ to perform all kinds of filtering, sorting, and grouping on that collection.</span></span> <span data-ttu-id="96783-109">Так как <xref:System.Text.RegularExpressions.MatchCollection> является неуниверсальной коллекцией <xref:System.Collections.IEnumerable>, необходимо явно указать тип переменной диапазона в запросе.</span><span class="sxs-lookup"><span data-stu-id="96783-109">Because <xref:System.Text.RegularExpressions.MatchCollection> is a non-generic <xref:System.Collections.IEnumerable> collection, you have to explicitly state the type of the range variable in the query.</span></span>
 
-## <a name="compiling-the-code"></a><span data-ttu-id="d0c9f-110">Компиляция кода</span><span class="sxs-lookup"><span data-stu-id="d0c9f-110">Compiling the code</span></span>
+## <a name="compiling-the-code"></a><span data-ttu-id="96783-110">Компиляция кода</span><span class="sxs-lookup"><span data-stu-id="96783-110">Compiling the code</span></span>
 
-<span data-ttu-id="d0c9f-111">Create a VB.NET console application project, copy and paste the code sample, and adjust the Startup object value in the project properties.</span><span class="sxs-lookup"><span data-stu-id="d0c9f-111">Create a VB.NET console application project, copy and paste the code sample, and adjust the Startup object value in the project properties.</span></span>
+<span data-ttu-id="96783-111">Создайте проект консольного приложения VB.NET, скопируйте и вставьте пример кода и измените значение объекта Startup в свойствах проекта.</span><span class="sxs-lookup"><span data-stu-id="96783-111">Create a VB.NET console application project, copy and paste the code sample, and adjust the Startup object value in the project properties.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="d0c9f-112">См. также</span><span class="sxs-lookup"><span data-stu-id="d0c9f-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="96783-112">См. также</span><span class="sxs-lookup"><span data-stu-id="96783-112">See also</span></span>
 
-- [<span data-ttu-id="d0c9f-113">LINQ and Strings (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d0c9f-113">LINQ and Strings (Visual Basic)</span></span>](linq-and-strings.md)
-- [<span data-ttu-id="d0c9f-114">LINQ и каталоги файлов (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d0c9f-114">LINQ and File Directories (Visual Basic)</span></span>](linq-and-file-directories.md)
+- [<span data-ttu-id="96783-113">LINQ и строки (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="96783-113">LINQ and Strings (Visual Basic)</span></span>](linq-and-strings.md)
+- [<span data-ttu-id="96783-114">LINQ и каталоги файлов (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="96783-114">LINQ and File Directories (Visual Basic)</span></span>](linq-and-file-directories.md)

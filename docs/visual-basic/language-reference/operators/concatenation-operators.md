@@ -12,16 +12,16 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74331496"
 ---
-# <a name="concatenation-operators-visual-basic"></a><span data-ttu-id="478cf-102">Операторы объединения (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="478cf-102">Concatenation Operators (Visual Basic)</span></span>
-<span data-ttu-id="478cf-103">The following are the concatenation operators defined in Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="478cf-103">The following are the concatenation operators defined in Visual Basic.</span></span>  
+# <a name="concatenation-operators-visual-basic"></a><span data-ttu-id="3b318-102">Операторы объединения (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="3b318-102">Concatenation Operators (Visual Basic)</span></span>
+<span data-ttu-id="3b318-103">Ниже приведены операторы объединения, определенные в Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="3b318-103">The following are the concatenation operators defined in Visual Basic.</span></span>  
   
- [<span data-ttu-id="478cf-104">Оператор &</span><span class="sxs-lookup"><span data-stu-id="478cf-104">& Operator</span></span>](../../../visual-basic/language-reference/operators/concatenation-operator.md)  
+ [<span data-ttu-id="3b318-104">Оператор &</span><span class="sxs-lookup"><span data-stu-id="3b318-104">& Operator</span></span>](../../../visual-basic/language-reference/operators/concatenation-operator.md)  
   
- [<span data-ttu-id="478cf-105">Оператор +</span><span class="sxs-lookup"><span data-stu-id="478cf-105">+ Operator</span></span>](../../../visual-basic/language-reference/operators/addition-operator.md)  
+ [<span data-ttu-id="3b318-105">Оператор +</span><span class="sxs-lookup"><span data-stu-id="3b318-105">+ Operator</span></span>](../../../visual-basic/language-reference/operators/addition-operator.md)  
   
-## <a name="see-also"></a><span data-ttu-id="478cf-106">См. также</span><span class="sxs-lookup"><span data-stu-id="478cf-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3b318-106">См. также</span><span class="sxs-lookup"><span data-stu-id="3b318-106">See also</span></span>
 
 - <xref:System.Text>
 - <xref:System.Text.StringBuilder>
-- [<span data-ttu-id="478cf-107">Порядок применения операторов в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="478cf-107">Operator Precedence in Visual Basic</span></span>](../../../visual-basic/language-reference/operators/operator-precedence.md)
-- [<span data-ttu-id="478cf-108">Concatenation Operators in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="478cf-108">Concatenation Operators in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md)
+- [<span data-ttu-id="3b318-107">Порядок применения операторов в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="3b318-107">Operator Precedence in Visual Basic</span></span>](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [<span data-ttu-id="3b318-108">Операторы объединения в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="3b318-108">Concatenation Operators in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md)
