@@ -21,10 +21,10 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74433871"
 ---
-# <a name="getassemblyrefhash-method"></a><span data-ttu-id="0dd9d-102">Метод GetAssemblyRefHash</span><span class="sxs-lookup"><span data-stu-id="0dd9d-102">GetAssemblyRefHash Method</span></span>
-<span data-ttu-id="0dd9d-103">Retrieves a hash blob for a given assembly.</span><span class="sxs-lookup"><span data-stu-id="0dd9d-103">Retrieves a hash blob for a given assembly.</span></span>  
+# <a name="getassemblyrefhash-method"></a><span data-ttu-id="23ecb-102">Метод GetAssemblyRefHash</span><span class="sxs-lookup"><span data-stu-id="23ecb-102">GetAssemblyRefHash Method</span></span>
+<span data-ttu-id="23ecb-103">Извлекает хэш-объект хэша для данной сборки.</span><span class="sxs-lookup"><span data-stu-id="23ecb-103">Retrieves a hash blob for a given assembly.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0dd9d-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="0dd9d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="23ecb-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="23ecb-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetAssemblyRefHash(  
@@ -34,24 +34,24 @@ HRESULT GetAssemblyRefHash(
 ) PURE;  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="0dd9d-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="0dd9d-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="23ecb-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="23ecb-105">Parameters</span></span>  
  `FileToken`  
- <span data-ttu-id="0dd9d-106">ID of assembly to which the hash will refer.</span><span class="sxs-lookup"><span data-stu-id="0dd9d-106">ID of assembly to which the hash will refer.</span></span>  
+ <span data-ttu-id="23ecb-106">Идентификатор сборки, на которую будет ссылаться хэш.</span><span class="sxs-lookup"><span data-stu-id="23ecb-106">ID of assembly to which the hash will refer.</span></span>  
   
  `ppvHash`  
- <span data-ttu-id="0dd9d-107">Receives the resulting hash blob.</span><span class="sxs-lookup"><span data-stu-id="0dd9d-107">Receives the resulting hash blob.</span></span>  
+ <span data-ttu-id="23ecb-107">Получает результирующий большой двоичный объект хэша.</span><span class="sxs-lookup"><span data-stu-id="23ecb-107">Receives the resulting hash blob.</span></span>  
   
  `pcbHash`  
- <span data-ttu-id="0dd9d-108">Receives size, in bytes, of hash blob.</span><span class="sxs-lookup"><span data-stu-id="0dd9d-108">Receives size, in bytes, of hash blob.</span></span>  
+ <span data-ttu-id="23ecb-108">Получает размер хэш-объекта хэша (в байтах).</span><span class="sxs-lookup"><span data-stu-id="23ecb-108">Receives size, in bytes, of hash blob.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="0dd9d-109">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="0dd9d-109">Return Value</span></span>  
- <span data-ttu-id="0dd9d-110">Returns S_OK if the method succeeds.</span><span class="sxs-lookup"><span data-stu-id="0dd9d-110">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="23ecb-109">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="23ecb-109">Return Value</span></span>  
+ <span data-ttu-id="23ecb-110">Возвращает S_OK, если метод завершается с ошибкой.</span><span class="sxs-lookup"><span data-stu-id="23ecb-110">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="0dd9d-111">Требования</span><span class="sxs-lookup"><span data-stu-id="0dd9d-111">Requirements</span></span>  
- <span data-ttu-id="0dd9d-112">Requires alink.h</span><span class="sxs-lookup"><span data-stu-id="0dd9d-112">Requires alink.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="23ecb-111">Требования</span><span class="sxs-lookup"><span data-stu-id="23ecb-111">Requirements</span></span>  
+ <span data-ttu-id="23ecb-112">Требуется ALink. h</span><span class="sxs-lookup"><span data-stu-id="23ecb-112">Requires alink.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0dd9d-113">См. также</span><span class="sxs-lookup"><span data-stu-id="0dd9d-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="23ecb-113">См. также</span><span class="sxs-lookup"><span data-stu-id="23ecb-113">See also</span></span>
 
-- [<span data-ttu-id="0dd9d-114">Интерфейс IALink</span><span class="sxs-lookup"><span data-stu-id="0dd9d-114">IALink Interface</span></span>](ialink-interface.md)
-- [<span data-ttu-id="0dd9d-115">Интерфейс IALink2</span><span class="sxs-lookup"><span data-stu-id="0dd9d-115">IALink2 Interface</span></span>](ialink2-interface.md)
-- [<span data-ttu-id="0dd9d-116">API ALink</span><span class="sxs-lookup"><span data-stu-id="0dd9d-116">ALink API</span></span>](index.md)
+- [<span data-ttu-id="23ecb-114">Интерфейс IALink</span><span class="sxs-lookup"><span data-stu-id="23ecb-114">IALink Interface</span></span>](ialink-interface.md)
+- [<span data-ttu-id="23ecb-115">Интерфейс IALink2</span><span class="sxs-lookup"><span data-stu-id="23ecb-115">IALink2 Interface</span></span>](ialink2-interface.md)
+- [<span data-ttu-id="23ecb-116">API ALink</span><span class="sxs-lookup"><span data-stu-id="23ecb-116">ALink API</span></span>](index.md)
