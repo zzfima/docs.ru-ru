@@ -22,26 +22,26 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448965"
 ---
-# <a name="isymunmanagedmethodgetnamespace-method"></a><span data-ttu-id="e4532-102">Метод ISymUnmanagedMethod::GetNamespace</span><span class="sxs-lookup"><span data-stu-id="e4532-102">ISymUnmanagedMethod::GetNamespace Method</span></span>
-<span data-ttu-id="e4532-103">Gets the namespace within which this method is defined.</span><span class="sxs-lookup"><span data-stu-id="e4532-103">Gets the namespace within which this method is defined.</span></span>  
+# <a name="isymunmanagedmethodgetnamespace-method"></a><span data-ttu-id="e54ca-102">Метод ISymUnmanagedMethod::GetNamespace</span><span class="sxs-lookup"><span data-stu-id="e54ca-102">ISymUnmanagedMethod::GetNamespace Method</span></span>
+<span data-ttu-id="e54ca-103">Возвращает пространство имен, в котором определен этот метод.</span><span class="sxs-lookup"><span data-stu-id="e54ca-103">Gets the namespace within which this method is defined.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e4532-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="e4532-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e54ca-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="e54ca-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetNamespace(  
    [out] ISymUnmanagedNamespace  **pRetVal);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="e4532-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="e4532-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="e54ca-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="e54ca-105">Parameters</span></span>  
  `pRetVal`  
- <span data-ttu-id="e4532-106">[out] A pointer that is set to the returned [ISymUnmanagedNamespace](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-interface.md) interface.</span><span class="sxs-lookup"><span data-stu-id="e4532-106">[out] A pointer that is set to the returned [ISymUnmanagedNamespace](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-interface.md) interface.</span></span>  
+ <span data-ttu-id="e54ca-106">заполняет Указатель, которому присваивается возвращаемый интерфейс [ISymUnmanagedNamespace](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-interface.md) .</span><span class="sxs-lookup"><span data-stu-id="e54ca-106">[out] A pointer that is set to the returned [ISymUnmanagedNamespace](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-interface.md) interface.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="e4532-107">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="e4532-107">Return Value</span></span>  
- <span data-ttu-id="e4532-108">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="e4532-108">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="e54ca-107">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="e54ca-107">Return Value</span></span>  
+ <span data-ttu-id="e54ca-108">S_OK, если метод выполнен. в противном случае E_FAIL или другой код ошибки.</span><span class="sxs-lookup"><span data-stu-id="e54ca-108">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e4532-109">Требования</span><span class="sxs-lookup"><span data-stu-id="e4532-109">Requirements</span></span>  
- <span data-ttu-id="e4532-110">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="e4532-110">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e54ca-109">Требования</span><span class="sxs-lookup"><span data-stu-id="e54ca-109">Requirements</span></span>  
+ <span data-ttu-id="e54ca-110">**Заголовок:** Корсим. idl, Корсим. h</span><span class="sxs-lookup"><span data-stu-id="e54ca-110">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e4532-111">См. также</span><span class="sxs-lookup"><span data-stu-id="e4532-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e54ca-111">См. также:</span><span class="sxs-lookup"><span data-stu-id="e54ca-111">See also</span></span>
 
-- [<span data-ttu-id="e4532-112">Интерфейс ISymUnmanagedMethod</span><span class="sxs-lookup"><span data-stu-id="e4532-112">ISymUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)
+- [<span data-ttu-id="e54ca-112">Интерфейс ISymUnmanagedMethod</span><span class="sxs-lookup"><span data-stu-id="e54ca-112">ISymUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)

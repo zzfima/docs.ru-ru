@@ -22,10 +22,10 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448924"
 ---
-# <a name="isymunmanagedmethodgetranges-method"></a><span data-ttu-id="57297-102">Метод ISymUnmanagedMethod::GetRanges</span><span class="sxs-lookup"><span data-stu-id="57297-102">ISymUnmanagedMethod::GetRanges Method</span></span>
-<span data-ttu-id="57297-103">Given a position in a document, returns an array of start and end offset pairs that correspond to the ranges of Microsoft intermediate language (MSIL) that the position covers within this method.</span><span class="sxs-lookup"><span data-stu-id="57297-103">Given a position in a document, returns an array of start and end offset pairs that correspond to the ranges of Microsoft intermediate language (MSIL) that the position covers within this method.</span></span> <span data-ttu-id="57297-104">The array is an array of integers and has the format [start, end, start, end].</span><span class="sxs-lookup"><span data-stu-id="57297-104">The array is an array of integers and has the format [start, end, start, end].</span></span> <span data-ttu-id="57297-105">The number of range pairs is the length of the array divided by 2.</span><span class="sxs-lookup"><span data-stu-id="57297-105">The number of range pairs is the length of the array divided by 2.</span></span>  
+# <a name="isymunmanagedmethodgetranges-method"></a><span data-ttu-id="d7c56-102">Метод ISymUnmanagedMethod::GetRanges</span><span class="sxs-lookup"><span data-stu-id="d7c56-102">ISymUnmanagedMethod::GetRanges Method</span></span>
+<span data-ttu-id="d7c56-103">При наличии позиции в документе возвращает массив пар начального и конечного смещения, соответствующих диапазонам промежуточного языка MSIL, которые находятся в этом методе.</span><span class="sxs-lookup"><span data-stu-id="d7c56-103">Given a position in a document, returns an array of start and end offset pairs that correspond to the ranges of Microsoft intermediate language (MSIL) that the position covers within this method.</span></span> <span data-ttu-id="d7c56-104">Массив является массивом целых чисел и имеет формат [начало, конец, начало, конец].</span><span class="sxs-lookup"><span data-stu-id="d7c56-104">The array is an array of integers and has the format [start, end, start, end].</span></span> <span data-ttu-id="d7c56-105">Число пар диапазонов — это длина массива, деленная на 2.</span><span class="sxs-lookup"><span data-stu-id="d7c56-105">The number of range pairs is the length of the array divided by 2.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="57297-106">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="57297-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d7c56-106">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="d7c56-106">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetRanges(  
@@ -38,31 +38,31 @@ HRESULT GetRanges(
         length_is(*pcRanges)] ULONG32 ranges[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="57297-107">Параметры</span><span class="sxs-lookup"><span data-stu-id="57297-107">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="d7c56-107">Параметры</span><span class="sxs-lookup"><span data-stu-id="d7c56-107">Parameters</span></span>  
  `document`  
- <span data-ttu-id="57297-108">[in] The document for which the offset is requested.</span><span class="sxs-lookup"><span data-stu-id="57297-108">[in] The document for which the offset is requested.</span></span>  
+ <span data-ttu-id="d7c56-108">окне Документ, для которого запрашивается смещение.</span><span class="sxs-lookup"><span data-stu-id="d7c56-108">[in] The document for which the offset is requested.</span></span>  
   
  `line`  
- <span data-ttu-id="57297-109">[in] The document line corresponding to the ranges.</span><span class="sxs-lookup"><span data-stu-id="57297-109">[in] The document line corresponding to the ranges.</span></span>  
+ <span data-ttu-id="d7c56-109">окне Строка документа, соответствующая диапазонам.</span><span class="sxs-lookup"><span data-stu-id="d7c56-109">[in] The document line corresponding to the ranges.</span></span>  
   
  `column`  
- <span data-ttu-id="57297-110">[in] The document column corresponding to the ranges.</span><span class="sxs-lookup"><span data-stu-id="57297-110">[in] The document column corresponding to the ranges.</span></span>  
+ <span data-ttu-id="d7c56-110">окне Столбец документа, соответствующий диапазонам.</span><span class="sxs-lookup"><span data-stu-id="d7c56-110">[in] The document column corresponding to the ranges.</span></span>  
   
  `cRanges`  
- <span data-ttu-id="57297-111">[in] Размер массива `ranges`.</span><span class="sxs-lookup"><span data-stu-id="57297-111">[in] The size of the `ranges` array.</span></span>  
+ <span data-ttu-id="d7c56-111">[in] Размер массива `ranges`.</span><span class="sxs-lookup"><span data-stu-id="d7c56-111">[in] The size of the `ranges` array.</span></span>  
   
  `pcRanges`  
- <span data-ttu-id="57297-112">[out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the ranges.</span><span class="sxs-lookup"><span data-stu-id="57297-112">[out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the ranges.</span></span>  
+ <span data-ttu-id="d7c56-112">заполняет Указатель на `ULONG32`, который получает размер буфера, необходимый для хранения диапазонов.</span><span class="sxs-lookup"><span data-stu-id="d7c56-112">[out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the ranges.</span></span>  
   
  `ranges`  
- <span data-ttu-id="57297-113">[out] A pointer to the buffer that receives the ranges.</span><span class="sxs-lookup"><span data-stu-id="57297-113">[out] A pointer to the buffer that receives the ranges.</span></span>  
+ <span data-ttu-id="d7c56-113">заполняет Указатель на буфер, который получает диапазоны.</span><span class="sxs-lookup"><span data-stu-id="d7c56-113">[out] A pointer to the buffer that receives the ranges.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="57297-114">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="57297-114">Return Value</span></span>  
- <span data-ttu-id="57297-115">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="57297-115">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="d7c56-114">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="d7c56-114">Return Value</span></span>  
+ <span data-ttu-id="d7c56-115">S_OK, если метод выполнен. в противном случае E_FAIL или другой код ошибки.</span><span class="sxs-lookup"><span data-stu-id="d7c56-115">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="57297-116">Требования</span><span class="sxs-lookup"><span data-stu-id="57297-116">Requirements</span></span>  
- <span data-ttu-id="57297-117">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="57297-117">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d7c56-116">Требования</span><span class="sxs-lookup"><span data-stu-id="d7c56-116">Requirements</span></span>  
+ <span data-ttu-id="d7c56-117">**Заголовок:** Корсим. idl, Корсим. h</span><span class="sxs-lookup"><span data-stu-id="d7c56-117">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="57297-118">См. также</span><span class="sxs-lookup"><span data-stu-id="57297-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d7c56-118">См. также:</span><span class="sxs-lookup"><span data-stu-id="d7c56-118">See also</span></span>
 
-- [<span data-ttu-id="57297-119">Интерфейс ISymUnmanagedMethod</span><span class="sxs-lookup"><span data-stu-id="57297-119">ISymUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)
+- [<span data-ttu-id="d7c56-119">Интерфейс ISymUnmanagedMethod</span><span class="sxs-lookup"><span data-stu-id="d7c56-119">ISymUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)

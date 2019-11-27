@@ -22,10 +22,10 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449028"
 ---
-# <a name="isymunmanagedencupdategetlocalvariables-method"></a><span data-ttu-id="acd8a-102">Метод ISymUnmanagedENCUpdate::GetLocalVariables</span><span class="sxs-lookup"><span data-stu-id="acd8a-102">ISymUnmanagedENCUpdate::GetLocalVariables Method</span></span>
-<span data-ttu-id="acd8a-103">Gets the local variables.</span><span class="sxs-lookup"><span data-stu-id="acd8a-103">Gets the local variables.</span></span>  
+# <a name="isymunmanagedencupdategetlocalvariables-method"></a><span data-ttu-id="29c76-102">Метод ISymUnmanagedENCUpdate::GetLocalVariables</span><span class="sxs-lookup"><span data-stu-id="29c76-102">ISymUnmanagedENCUpdate::GetLocalVariables Method</span></span>
+<span data-ttu-id="29c76-103">Возвращает локальные переменные.</span><span class="sxs-lookup"><span data-stu-id="29c76-103">Gets the local variables.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="acd8a-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="acd8a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="29c76-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="29c76-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetLocalVariables(  
@@ -36,25 +36,25 @@ HRESULT GetLocalVariables(
     [out] ULONG        *pceltFetched);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="acd8a-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="acd8a-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="29c76-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="29c76-105">Parameters</span></span>  
  `mdMethodToken`  
- <span data-ttu-id="acd8a-106">[in] The metadata token of the method.</span><span class="sxs-lookup"><span data-stu-id="acd8a-106">[in] The metadata token of the method.</span></span>  
+ <span data-ttu-id="29c76-106">окне Маркер метаданных метода.</span><span class="sxs-lookup"><span data-stu-id="29c76-106">[in] The metadata token of the method.</span></span>  
   
  `cLocals`  
- <span data-ttu-id="acd8a-107">[in] A `ULONG` that indicates the size of the `rgLocals` parameter.</span><span class="sxs-lookup"><span data-stu-id="acd8a-107">[in] A `ULONG` that indicates the size of the `rgLocals` parameter.</span></span>  
+ <span data-ttu-id="29c76-107">окне `ULONG`, указывающий размер параметра `rgLocals`.</span><span class="sxs-lookup"><span data-stu-id="29c76-107">[in] A `ULONG` that indicates the size of the `rgLocals` parameter.</span></span>  
   
  `rgLocals`  
- <span data-ttu-id="acd8a-108">[out] The returned array of [ISymUnmanagedVariable](isymunmanagedvariable-interface.md) instances.</span><span class="sxs-lookup"><span data-stu-id="acd8a-108">[out] The returned array of [ISymUnmanagedVariable](isymunmanagedvariable-interface.md) instances.</span></span>  
+ <span data-ttu-id="29c76-108">заполняет Возвращаемый массив экземпляров [ISymUnmanagedVariable](isymunmanagedvariable-interface.md) .</span><span class="sxs-lookup"><span data-stu-id="29c76-108">[out] The returned array of [ISymUnmanagedVariable](isymunmanagedvariable-interface.md) instances.</span></span>  
   
  `pceltFetched`  
- <span data-ttu-id="acd8a-109">[out] A pointer to a `ULONG` that receives the size of the `rgLocals` buffer required to contain the locals.</span><span class="sxs-lookup"><span data-stu-id="acd8a-109">[out] A pointer to a `ULONG` that receives the size of the `rgLocals` buffer required to contain the locals.</span></span>  
+ <span data-ttu-id="29c76-109">заполняет Указатель на `ULONG`, который получает размер буфера `rgLocals`, необходимого для хранения локальных переменных.</span><span class="sxs-lookup"><span data-stu-id="29c76-109">[out] A pointer to a `ULONG` that receives the size of the `rgLocals` buffer required to contain the locals.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="acd8a-110">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="acd8a-110">Return Value</span></span>  
- <span data-ttu-id="acd8a-111">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="acd8a-111">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="29c76-110">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="29c76-110">Return Value</span></span>  
+ <span data-ttu-id="29c76-111">S_OK, если метод выполнен. в противном случае E_FAIL или другой код ошибки.</span><span class="sxs-lookup"><span data-stu-id="29c76-111">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="acd8a-112">Требования</span><span class="sxs-lookup"><span data-stu-id="acd8a-112">Requirements</span></span>  
- <span data-ttu-id="acd8a-113">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="acd8a-113">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="29c76-112">Требования</span><span class="sxs-lookup"><span data-stu-id="29c76-112">Requirements</span></span>  
+ <span data-ttu-id="29c76-113">**Заголовок:** Корсим. idl, Корсим. h</span><span class="sxs-lookup"><span data-stu-id="29c76-113">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="acd8a-114">См. также</span><span class="sxs-lookup"><span data-stu-id="acd8a-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="29c76-114">См. также:</span><span class="sxs-lookup"><span data-stu-id="29c76-114">See also</span></span>
 
-- [<span data-ttu-id="acd8a-115">Интерфейс ISymUnmanagedENCUpdate</span><span class="sxs-lookup"><span data-stu-id="acd8a-115">ISymUnmanagedENCUpdate Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedencupdate-interface.md)
+- [<span data-ttu-id="29c76-115">Интерфейс ISymUnmanagedENCUpdate</span><span class="sxs-lookup"><span data-stu-id="29c76-115">ISymUnmanagedENCUpdate Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedencupdate-interface.md)

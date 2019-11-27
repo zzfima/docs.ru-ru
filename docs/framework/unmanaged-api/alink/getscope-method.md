@@ -21,10 +21,10 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74447205"
 ---
-# <a name="getscope-method"></a><span data-ttu-id="0250b-102">Метод GetScope</span><span class="sxs-lookup"><span data-stu-id="0250b-102">GetScope Method</span></span>
-<span data-ttu-id="0250b-103">Gets an import scope.</span><span class="sxs-lookup"><span data-stu-id="0250b-103">Gets an import scope.</span></span>  
+# <a name="getscope-method"></a><span data-ttu-id="88720-102">Метод GetScope</span><span class="sxs-lookup"><span data-stu-id="88720-102">GetScope Method</span></span>
+<span data-ttu-id="88720-103">Возвращает область импорта.</span><span class="sxs-lookup"><span data-stu-id="88720-103">Gets an import scope.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0250b-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="0250b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="88720-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="88720-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetScope(  
@@ -35,27 +35,27 @@ HRESULT GetScope(
 ) PURE;  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="0250b-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="0250b-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="88720-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="88720-105">Parameters</span></span>  
  `AssemblyID`  
- <span data-ttu-id="0250b-106">Unique ID of assembly to import to.</span><span class="sxs-lookup"><span data-stu-id="0250b-106">Unique ID of assembly to import to.</span></span>  
+ <span data-ttu-id="88720-106">Уникальный идентификатор сборки для импорта.</span><span class="sxs-lookup"><span data-stu-id="88720-106">Unique ID of assembly to import to.</span></span>  
   
  `FileToken`  
- <span data-ttu-id="0250b-107">Unique ID of the file to import from.</span><span class="sxs-lookup"><span data-stu-id="0250b-107">Unique ID of the file to import from.</span></span>  
+ <span data-ttu-id="88720-107">Уникальный идентификатор файла для импорта.</span><span class="sxs-lookup"><span data-stu-id="88720-107">Unique ID of the file to import from.</span></span>  
   
  `dwScope`  
- <span data-ttu-id="0250b-108">Zero-based scope to import.</span><span class="sxs-lookup"><span data-stu-id="0250b-108">Zero-based scope to import.</span></span>  
+ <span data-ttu-id="88720-108">Отсчитываемая от нуля область для импорта.</span><span class="sxs-lookup"><span data-stu-id="88720-108">Zero-based scope to import.</span></span>  
   
  `ppImportScope`  
- <span data-ttu-id="0250b-109">Receives [IMetaDataImport Interface](../metadata/imetadataimport-interface.md) interface for the scope.</span><span class="sxs-lookup"><span data-stu-id="0250b-109">Receives [IMetaDataImport Interface](../metadata/imetadataimport-interface.md) interface for the scope.</span></span>  
+ <span data-ttu-id="88720-109">Получает интерфейс [интерфейса IMetaDataImport](../metadata/imetadataimport-interface.md) для области.</span><span class="sxs-lookup"><span data-stu-id="88720-109">Receives [IMetaDataImport Interface](../metadata/imetadataimport-interface.md) interface for the scope.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="0250b-110">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="0250b-110">Return Value</span></span>  
- <span data-ttu-id="0250b-111">Returns S_OK if the method succeeds.</span><span class="sxs-lookup"><span data-stu-id="0250b-111">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="88720-110">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="88720-110">Return Value</span></span>  
+ <span data-ttu-id="88720-111">Возвращает S_OK, если метод завершается с ошибкой.</span><span class="sxs-lookup"><span data-stu-id="88720-111">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="0250b-112">Требования</span><span class="sxs-lookup"><span data-stu-id="0250b-112">Requirements</span></span>  
- <span data-ttu-id="0250b-113">Requires alink.h</span><span class="sxs-lookup"><span data-stu-id="0250b-113">Requires alink.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="88720-112">Требования</span><span class="sxs-lookup"><span data-stu-id="88720-112">Requirements</span></span>  
+ <span data-ttu-id="88720-113">Требуется ALink. h</span><span class="sxs-lookup"><span data-stu-id="88720-113">Requires alink.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0250b-114">См. также</span><span class="sxs-lookup"><span data-stu-id="0250b-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="88720-114">См. также</span><span class="sxs-lookup"><span data-stu-id="88720-114">See also</span></span>
 
-- [<span data-ttu-id="0250b-115">Интерфейс IALink</span><span class="sxs-lookup"><span data-stu-id="0250b-115">IALink Interface</span></span>](ialink-interface.md)
-- [<span data-ttu-id="0250b-116">Интерфейс IALink2</span><span class="sxs-lookup"><span data-stu-id="0250b-116">IALink2 Interface</span></span>](ialink2-interface.md)
-- [<span data-ttu-id="0250b-117">API ALink</span><span class="sxs-lookup"><span data-stu-id="0250b-117">ALink API</span></span>](index.md)
+- [<span data-ttu-id="88720-115">Интерфейс IALink</span><span class="sxs-lookup"><span data-stu-id="88720-115">IALink Interface</span></span>](ialink-interface.md)
+- [<span data-ttu-id="88720-116">Интерфейс IALink2</span><span class="sxs-lookup"><span data-stu-id="88720-116">IALink2 Interface</span></span>](ialink2-interface.md)
+- [<span data-ttu-id="88720-117">API ALink</span><span class="sxs-lookup"><span data-stu-id="88720-117">ALink API</span></span>](index.md)

@@ -22,10 +22,10 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446235"
 ---
-# <a name="isymunmanagedscope2getconstants-method"></a><span data-ttu-id="f9e32-102">Метод ISymUnmanagedScope2::GetConstants</span><span class="sxs-lookup"><span data-stu-id="f9e32-102">ISymUnmanagedScope2::GetConstants Method</span></span>
-<span data-ttu-id="f9e32-103">Gets the local constants defined within this scope.</span><span class="sxs-lookup"><span data-stu-id="f9e32-103">Gets the local constants defined within this scope.</span></span>  
+# <a name="isymunmanagedscope2getconstants-method"></a><span data-ttu-id="cb606-102">Метод ISymUnmanagedScope2::GetConstants</span><span class="sxs-lookup"><span data-stu-id="cb606-102">ISymUnmanagedScope2::GetConstants Method</span></span>
+<span data-ttu-id="cb606-103">Возвращает локальные константы, определенные в этой области.</span><span class="sxs-lookup"><span data-stu-id="cb606-103">Gets the local constants defined within this scope.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f9e32-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="f9e32-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="cb606-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="cb606-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetConstants(  
@@ -36,22 +36,22 @@ HRESULT GetConstants(
              constants[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="f9e32-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="f9e32-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="cb606-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="cb606-105">Parameters</span></span>  
  `cConstants`  
- <span data-ttu-id="f9e32-106">[in] The length of the buffer that the `pcConstants` parameter points to.</span><span class="sxs-lookup"><span data-stu-id="f9e32-106">[in] The length of the buffer that the `pcConstants` parameter points to.</span></span>  
+ <span data-ttu-id="cb606-106">окне Длина буфера, на который указывает параметр `pcConstants`.</span><span class="sxs-lookup"><span data-stu-id="cb606-106">[in] The length of the buffer that the `pcConstants` parameter points to.</span></span>  
   
  `pcConstants`  
- <span data-ttu-id="f9e32-107">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the constants.</span><span class="sxs-lookup"><span data-stu-id="f9e32-107">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the constants.</span></span>  
+ <span data-ttu-id="cb606-107">заполняет Указатель на `ULONG32`, который получает размер буфера (в символах), необходимого для хранения констант.</span><span class="sxs-lookup"><span data-stu-id="cb606-107">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the constants.</span></span>  
   
  `constants`  
- <span data-ttu-id="f9e32-108">[out] The buffer that stores the constants.</span><span class="sxs-lookup"><span data-stu-id="f9e32-108">[out] The buffer that stores the constants.</span></span>  
+ <span data-ttu-id="cb606-108">заполняет Буфер, в котором хранятся константы.</span><span class="sxs-lookup"><span data-stu-id="cb606-108">[out] The buffer that stores the constants.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="f9e32-109">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="f9e32-109">Return Value</span></span>  
- <span data-ttu-id="f9e32-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="f9e32-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="cb606-109">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="cb606-109">Return Value</span></span>  
+ <span data-ttu-id="cb606-110">S_OK, если метод выполнен. в противном случае E_FAIL или другой код ошибки.</span><span class="sxs-lookup"><span data-stu-id="cb606-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f9e32-111">Требования</span><span class="sxs-lookup"><span data-stu-id="f9e32-111">Requirements</span></span>  
- <span data-ttu-id="f9e32-112">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="f9e32-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="cb606-111">Требования</span><span class="sxs-lookup"><span data-stu-id="cb606-111">Requirements</span></span>  
+ <span data-ttu-id="cb606-112">**Заголовок:** Корсим. idl, Корсим. h</span><span class="sxs-lookup"><span data-stu-id="cb606-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f9e32-113">См. также</span><span class="sxs-lookup"><span data-stu-id="f9e32-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="cb606-113">См. также</span><span class="sxs-lookup"><span data-stu-id="cb606-113">See also</span></span>
 
-- [<span data-ttu-id="f9e32-114">Интерфейс ISymUnmanagedScope2</span><span class="sxs-lookup"><span data-stu-id="f9e32-114">ISymUnmanagedScope2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope2-interface.md)
+- [<span data-ttu-id="cb606-114">Интерфейс ISymUnmanagedScope2</span><span class="sxs-lookup"><span data-stu-id="cb606-114">ISymUnmanagedScope2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope2-interface.md)

@@ -22,21 +22,21 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445994"
 ---
-# <a name="isymunmanagedwriterabort-method"></a><span data-ttu-id="9ffab-102">Метод ISymUnmanagedWriter::Abort</span><span class="sxs-lookup"><span data-stu-id="9ffab-102">ISymUnmanagedWriter::Abort Method</span></span>
-<span data-ttu-id="9ffab-103">Closes the symbol writer without committing the symbols to the symbol store.</span><span class="sxs-lookup"><span data-stu-id="9ffab-103">Closes the symbol writer without committing the symbols to the symbol store.</span></span> <span data-ttu-id="9ffab-104">After this call, the symbol writer becomes invalid for further updates.</span><span class="sxs-lookup"><span data-stu-id="9ffab-104">After this call, the symbol writer becomes invalid for further updates.</span></span> <span data-ttu-id="9ffab-105">To commit the symbols and close the symbol writer, use the [ISymUnmanagedWriter::Close](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-close-method.md) method instead.</span><span class="sxs-lookup"><span data-stu-id="9ffab-105">To commit the symbols and close the symbol writer, use the [ISymUnmanagedWriter::Close](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-close-method.md) method instead.</span></span>  
+# <a name="isymunmanagedwriterabort-method"></a><span data-ttu-id="0d6b5-102">Метод ISymUnmanagedWriter::Abort</span><span class="sxs-lookup"><span data-stu-id="0d6b5-102">ISymUnmanagedWriter::Abort Method</span></span>
+<span data-ttu-id="0d6b5-103">Закрывает модуль записи символов без фиксации символов в хранилище символов.</span><span class="sxs-lookup"><span data-stu-id="0d6b5-103">Closes the symbol writer without committing the symbols to the symbol store.</span></span> <span data-ttu-id="0d6b5-104">После этого вызова средство записи символов станет недействительным для последующих обновлений.</span><span class="sxs-lookup"><span data-stu-id="0d6b5-104">After this call, the symbol writer becomes invalid for further updates.</span></span> <span data-ttu-id="0d6b5-105">Чтобы зафиксировать символы и закрыть средство записи символов, используйте вместо этого метод [ISymUnmanagedWriter:: Close](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-close-method.md) .</span><span class="sxs-lookup"><span data-stu-id="0d6b5-105">To commit the symbols and close the symbol writer, use the [ISymUnmanagedWriter::Close](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-close-method.md) method instead.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9ffab-106">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="9ffab-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0d6b5-106">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="0d6b5-106">Syntax</span></span>  
   
 ```cpp  
 HRESULT Abort();  
 ```  
   
-## <a name="return-value"></a><span data-ttu-id="9ffab-107">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="9ffab-107">Return Value</span></span>  
- <span data-ttu-id="9ffab-108">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="9ffab-108">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="0d6b5-107">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="0d6b5-107">Return Value</span></span>  
+ <span data-ttu-id="0d6b5-108">S_OK, если метод выполнен. в противном случае E_FAIL или другой код ошибки.</span><span class="sxs-lookup"><span data-stu-id="0d6b5-108">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="9ffab-109">Требования</span><span class="sxs-lookup"><span data-stu-id="9ffab-109">Requirements</span></span>  
- <span data-ttu-id="9ffab-110">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="9ffab-110">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0d6b5-109">Требования</span><span class="sxs-lookup"><span data-stu-id="0d6b5-109">Requirements</span></span>  
+ <span data-ttu-id="0d6b5-110">**Заголовок:** Корсим. idl, Корсим. h</span><span class="sxs-lookup"><span data-stu-id="0d6b5-110">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9ffab-111">См. также</span><span class="sxs-lookup"><span data-stu-id="9ffab-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0d6b5-111">См. также:</span><span class="sxs-lookup"><span data-stu-id="0d6b5-111">See also</span></span>
 
-- [<span data-ttu-id="9ffab-112">Интерфейс ISymUnmanagedWriter</span><span class="sxs-lookup"><span data-stu-id="9ffab-112">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+- [<span data-ttu-id="0d6b5-112">Интерфейс ISymUnmanagedWriter</span><span class="sxs-lookup"><span data-stu-id="0d6b5-112">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

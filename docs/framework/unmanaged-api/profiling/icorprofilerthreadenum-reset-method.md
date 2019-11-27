@@ -22,25 +22,25 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74447590"
 ---
-# <a name="icorprofilerthreadenumreset-method"></a><span data-ttu-id="617fc-102">Метод ICorProfilerThreadEnum::Reset</span><span class="sxs-lookup"><span data-stu-id="617fc-102">ICorProfilerThreadEnum::Reset Method</span></span>
-<span data-ttu-id="617fc-103">Перемещает курсор перечислителя в начальную позицию последовательности.</span><span class="sxs-lookup"><span data-stu-id="617fc-103">Moves the enumerator's cursor to the starting position of the sequence.</span></span>  
+# <a name="icorprofilerthreadenumreset-method"></a><span data-ttu-id="55ed9-102">Метод ICorProfilerThreadEnum::Reset</span><span class="sxs-lookup"><span data-stu-id="55ed9-102">ICorProfilerThreadEnum::Reset Method</span></span>
+<span data-ttu-id="55ed9-103">Перемещает курсор перечислителя в начальную позицию последовательности.</span><span class="sxs-lookup"><span data-stu-id="55ed9-103">Moves the enumerator's cursor to the starting position of the sequence.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="617fc-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="617fc-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="55ed9-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="55ed9-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT Reset();  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="617fc-105">Требования</span><span class="sxs-lookup"><span data-stu-id="617fc-105">Requirements</span></span>  
- <span data-ttu-id="617fc-106">**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="617fc-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="55ed9-105">Требования</span><span class="sxs-lookup"><span data-stu-id="55ed9-105">Requirements</span></span>  
+ <span data-ttu-id="55ed9-106">**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="55ed9-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="617fc-107">**Заголовок:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="617fc-107">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="55ed9-107">**Заголовок:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="55ed9-107">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="617fc-108">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="617fc-108">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="55ed9-108">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="55ed9-108">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="617fc-109">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="617fc-109">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ <span data-ttu-id="55ed9-109">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="55ed9-109">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="617fc-110">См. также</span><span class="sxs-lookup"><span data-stu-id="617fc-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="55ed9-110">См. также:</span><span class="sxs-lookup"><span data-stu-id="55ed9-110">See also</span></span>
 
-- [<span data-ttu-id="617fc-111">Интерфейс ICorProfilerThreadEnum</span><span class="sxs-lookup"><span data-stu-id="617fc-111">ICorProfilerThreadEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-interface.md)
-- [<span data-ttu-id="617fc-112">Интерфейсы профилирования</span><span class="sxs-lookup"><span data-stu-id="617fc-112">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [<span data-ttu-id="55ed9-111">Интерфейс ICorProfilerThreadEnum</span><span class="sxs-lookup"><span data-stu-id="55ed9-111">ICorProfilerThreadEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-interface.md)
+- [<span data-ttu-id="55ed9-112">Интерфейсы профилирования</span><span class="sxs-lookup"><span data-stu-id="55ed9-112">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)

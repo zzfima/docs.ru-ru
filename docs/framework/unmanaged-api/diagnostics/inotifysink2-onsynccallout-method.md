@@ -22,10 +22,10 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74442502"
 ---
-# <a name="inotifysink2onsynccallout-method"></a><span data-ttu-id="118bd-102">Метод INotifySink2::OnSyncCallOut</span><span class="sxs-lookup"><span data-stu-id="118bd-102">INotifySink2::OnSyncCallOut Method</span></span>
-<span data-ttu-id="118bd-103">Gets invoked when a call is out.</span><span class="sxs-lookup"><span data-stu-id="118bd-103">Gets invoked when a call is out.</span></span>  
+# <a name="inotifysink2onsynccallout-method"></a><span data-ttu-id="5f1f9-102">Метод INotifySink2::OnSyncCallOut</span><span class="sxs-lookup"><span data-stu-id="5f1f9-102">INotifySink2::OnSyncCallOut Method</span></span>
+<span data-ttu-id="5f1f9-103">Вызывается, когда вызывается метод out.</span><span class="sxs-lookup"><span data-stu-id="5f1f9-103">Gets invoked when a call is out.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="118bd-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="118bd-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5f1f9-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="5f1f9-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT OnSyncCallOut  
@@ -36,24 +36,24 @@ HRESULT OnSyncCallOut
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="118bd-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="118bd-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="5f1f9-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="5f1f9-105">Parameters</span></span>  
  `in_CallID`  
- <span data-ttu-id="118bd-106">[in] ID of the call that is out. See [CALL_ID Structure](../../../../docs/framework/unmanaged-api/diagnostics/call-id-structure.md).</span><span class="sxs-lookup"><span data-stu-id="118bd-106">[in] ID of the call that is out. See [CALL_ID Structure](../../../../docs/framework/unmanaged-api/diagnostics/call-id-structure.md).</span></span>  
+ <span data-ttu-id="5f1f9-106">окне Идентификатор выходного вызова. См. раздел [структура CALL_ID](../../../../docs/framework/unmanaged-api/diagnostics/call-id-structure.md).</span><span class="sxs-lookup"><span data-stu-id="5f1f9-106">[in] ID of the call that is out. See [CALL_ID Structure](../../../../docs/framework/unmanaged-api/diagnostics/call-id-structure.md).</span></span>  
   
  `out_ppBuffer`  
- <span data-ttu-id="118bd-107">[out] Call buffer.</span><span class="sxs-lookup"><span data-stu-id="118bd-107">[out] Call buffer.</span></span>  
+ <span data-ttu-id="5f1f9-107">заполняет Буфер вызова.</span><span class="sxs-lookup"><span data-stu-id="5f1f9-107">[out] Call buffer.</span></span>  
   
  `out_pBufferSize`  
- <span data-ttu-id="118bd-108">[out] Size of the call buffer, in bytes.</span><span class="sxs-lookup"><span data-stu-id="118bd-108">[out] Size of the call buffer, in bytes.</span></span>  
+ <span data-ttu-id="5f1f9-108">заполняет Размер буфера вызова в байтах.</span><span class="sxs-lookup"><span data-stu-id="5f1f9-108">[out] Size of the call buffer, in bytes.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="118bd-109">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="118bd-109">Return Value</span></span>  
- <span data-ttu-id="118bd-110">S_OK if the method succeeds.</span><span class="sxs-lookup"><span data-stu-id="118bd-110">S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="5f1f9-109">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="5f1f9-109">Return Value</span></span>  
+ <span data-ttu-id="5f1f9-110">S_OK, если метод выполнен.</span><span class="sxs-lookup"><span data-stu-id="5f1f9-110">S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="118bd-111">Требования</span><span class="sxs-lookup"><span data-stu-id="118bd-111">Requirements</span></span>  
- <span data-ttu-id="118bd-112">**Header:** ProtocolNotify2.idl</span><span class="sxs-lookup"><span data-stu-id="118bd-112">**Header:** ProtocolNotify2.idl</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5f1f9-111">Требования</span><span class="sxs-lookup"><span data-stu-id="5f1f9-111">Requirements</span></span>  
+ <span data-ttu-id="5f1f9-112">**Заголовок:** ProtocolNotify2. idl</span><span class="sxs-lookup"><span data-stu-id="5f1f9-112">**Header:** ProtocolNotify2.idl</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="118bd-113">См. также</span><span class="sxs-lookup"><span data-stu-id="118bd-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5f1f9-113">См. также</span><span class="sxs-lookup"><span data-stu-id="5f1f9-113">See also</span></span>
 
-- [<span data-ttu-id="118bd-114">Интерфейс INotifySink2</span><span class="sxs-lookup"><span data-stu-id="118bd-114">INotifySink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)
-- [<span data-ttu-id="118bd-115">Интерфейс INotifySource2</span><span class="sxs-lookup"><span data-stu-id="118bd-115">INotifySource2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)
-- [<span data-ttu-id="118bd-116">Интерфейс INotifyConnection2</span><span class="sxs-lookup"><span data-stu-id="118bd-116">INotifyConnection2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)
+- [<span data-ttu-id="5f1f9-114">Интерфейс INotifySink2</span><span class="sxs-lookup"><span data-stu-id="5f1f9-114">INotifySink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)
+- [<span data-ttu-id="5f1f9-115">Интерфейс INotifySource2</span><span class="sxs-lookup"><span data-stu-id="5f1f9-115">INotifySource2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)
+- [<span data-ttu-id="5f1f9-116">Интерфейс INotifyConnection2</span><span class="sxs-lookup"><span data-stu-id="5f1f9-116">INotifyConnection2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)

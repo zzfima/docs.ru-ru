@@ -21,10 +21,10 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448759"
 ---
-# <a name="corvalidatormoduletype-enumeration"></a><span data-ttu-id="4d0cb-102">Перечисление CorValidatorModuleType</span><span class="sxs-lookup"><span data-stu-id="4d0cb-102">CorValidatorModuleType Enumeration</span></span>
-<span data-ttu-id="4d0cb-103">Specifies the type of a module.</span><span class="sxs-lookup"><span data-stu-id="4d0cb-103">Specifies the type of a module.</span></span>  
+# <a name="corvalidatormoduletype-enumeration"></a><span data-ttu-id="bdef0-102">Перечисление CorValidatorModuleType</span><span class="sxs-lookup"><span data-stu-id="bdef0-102">CorValidatorModuleType Enumeration</span></span>
+<span data-ttu-id="bdef0-103">Указывает тип модуля.</span><span class="sxs-lookup"><span data-stu-id="bdef0-103">Specifies the type of a module.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4d0cb-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="4d0cb-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="bdef0-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="bdef0-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum  
@@ -39,27 +39,27 @@ typedef enum
 } CorValidatorModuleType;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="4d0cb-105">Члены</span><span class="sxs-lookup"><span data-stu-id="4d0cb-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="bdef0-105">Члены</span><span class="sxs-lookup"><span data-stu-id="bdef0-105">Members</span></span>  
   
-|<span data-ttu-id="4d0cb-106">Член</span><span class="sxs-lookup"><span data-stu-id="4d0cb-106">Member</span></span>|<span data-ttu-id="4d0cb-107">Описание</span><span class="sxs-lookup"><span data-stu-id="4d0cb-107">Description</span></span>|  
+|<span data-ttu-id="bdef0-106">Член</span><span class="sxs-lookup"><span data-stu-id="bdef0-106">Member</span></span>|<span data-ttu-id="bdef0-107">Описание</span><span class="sxs-lookup"><span data-stu-id="bdef0-107">Description</span></span>|  
 |------------|-----------------|  
-|`ValidatorModuleTypeInvalid`|<span data-ttu-id="4d0cb-108">The module is an invalid type.</span><span class="sxs-lookup"><span data-stu-id="4d0cb-108">The module is an invalid type.</span></span>|  
-|`ValidatorModuleTypeMin`|<span data-ttu-id="4d0cb-109">The minimum value of the `CorValidatorModuleType` enum.</span><span class="sxs-lookup"><span data-stu-id="4d0cb-109">The minimum value of the `CorValidatorModuleType` enum.</span></span>|  
-|`ValidatorModuleTypePE`|<span data-ttu-id="4d0cb-110">The module is a portable executable (PE) file.</span><span class="sxs-lookup"><span data-stu-id="4d0cb-110">The module is a portable executable (PE) file.</span></span>|  
-|`ValidatorModuleTypeObj`|<span data-ttu-id="4d0cb-111">The module is a .obj file.</span><span class="sxs-lookup"><span data-stu-id="4d0cb-111">The module is a .obj file.</span></span>|  
-|`ValidatorModuleTypeEnc`|<span data-ttu-id="4d0cb-112">The module is an edit-and-continue debugger session.</span><span class="sxs-lookup"><span data-stu-id="4d0cb-112">The module is an edit-and-continue debugger session.</span></span>|  
-|`ValidatorModuleTypeIncr`|<span data-ttu-id="4d0cb-113">The module is one that has been incrementally built.</span><span class="sxs-lookup"><span data-stu-id="4d0cb-113">The module is one that has been incrementally built.</span></span>|  
-|`ValidatorModuleTypeMax`|<span data-ttu-id="4d0cb-114">The maximum value of the `CorValidatorModuleType` enum.</span><span class="sxs-lookup"><span data-stu-id="4d0cb-114">The maximum value of the `CorValidatorModuleType` enum.</span></span>|  
+|`ValidatorModuleTypeInvalid`|<span data-ttu-id="bdef0-108">Недопустимый тип модуля.</span><span class="sxs-lookup"><span data-stu-id="bdef0-108">The module is an invalid type.</span></span>|  
+|`ValidatorModuleTypeMin`|<span data-ttu-id="bdef0-109">Минимальное значение перечисления `CorValidatorModuleType`.</span><span class="sxs-lookup"><span data-stu-id="bdef0-109">The minimum value of the `CorValidatorModuleType` enum.</span></span>|  
+|`ValidatorModuleTypePE`|<span data-ttu-id="bdef0-110">Модуль является переносимым исполняемым файлом (PE).</span><span class="sxs-lookup"><span data-stu-id="bdef0-110">The module is a portable executable (PE) file.</span></span>|  
+|`ValidatorModuleTypeObj`|<span data-ttu-id="bdef0-111">Модуль является OBJ-файлом.</span><span class="sxs-lookup"><span data-stu-id="bdef0-111">The module is a .obj file.</span></span>|  
+|`ValidatorModuleTypeEnc`|<span data-ttu-id="bdef0-112">Модуль является сеансом отладчика "изменить и продолжить".</span><span class="sxs-lookup"><span data-stu-id="bdef0-112">The module is an edit-and-continue debugger session.</span></span>|  
+|`ValidatorModuleTypeIncr`|<span data-ttu-id="bdef0-113">Модуль — это один из инкрементно построенных.</span><span class="sxs-lookup"><span data-stu-id="bdef0-113">The module is one that has been incrementally built.</span></span>|  
+|`ValidatorModuleTypeMax`|<span data-ttu-id="bdef0-114">Максимальное значение перечисления `CorValidatorModuleType`.</span><span class="sxs-lookup"><span data-stu-id="bdef0-114">The maximum value of the `CorValidatorModuleType` enum.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="4d0cb-115">Требования</span><span class="sxs-lookup"><span data-stu-id="4d0cb-115">Requirements</span></span>  
- <span data-ttu-id="4d0cb-116">**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="4d0cb-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="bdef0-115">Требования</span><span class="sxs-lookup"><span data-stu-id="bdef0-115">Requirements</span></span>  
+ <span data-ttu-id="bdef0-116">**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="bdef0-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="4d0cb-117">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="4d0cb-117">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="bdef0-117">**Заголовок:** COR. h</span><span class="sxs-lookup"><span data-stu-id="bdef0-117">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="4d0cb-118">**Library:** Included as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="4d0cb-118">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="bdef0-118">**Библиотека:** Включается в качестве ресурса в библиотеку MsCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="bdef0-118">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="4d0cb-119">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4d0cb-119">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="bdef0-119">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="bdef0-119">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4d0cb-120">См. также</span><span class="sxs-lookup"><span data-stu-id="4d0cb-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="bdef0-120">См. также:</span><span class="sxs-lookup"><span data-stu-id="bdef0-120">See also</span></span>
 
-- [<span data-ttu-id="4d0cb-121">Перечисления метаданных</span><span class="sxs-lookup"><span data-stu-id="4d0cb-121">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [<span data-ttu-id="bdef0-121">Перечисления метаданных</span><span class="sxs-lookup"><span data-stu-id="bdef0-121">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

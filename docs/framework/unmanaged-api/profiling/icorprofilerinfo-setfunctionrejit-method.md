@@ -22,25 +22,25 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74438603"
 ---
-# <a name="icorprofilerinfosetfunctionrejit-method"></a><span data-ttu-id="f4aab-102">Метод ICorProfilerInfo::SetFunctionReJIT</span><span class="sxs-lookup"><span data-stu-id="f4aab-102">ICorProfilerInfo::SetFunctionReJIT Method</span></span>
-<span data-ttu-id="f4aab-103">Не реализовано.</span><span class="sxs-lookup"><span data-stu-id="f4aab-103">Not implemented.</span></span> <span data-ttu-id="f4aab-104">Не используется.</span><span class="sxs-lookup"><span data-stu-id="f4aab-104">Do not use.</span></span>  
+# <a name="icorprofilerinfosetfunctionrejit-method"></a><span data-ttu-id="d4521-102">Метод ICorProfilerInfo::SetFunctionReJIT</span><span class="sxs-lookup"><span data-stu-id="d4521-102">ICorProfilerInfo::SetFunctionReJIT Method</span></span>
+<span data-ttu-id="d4521-103">Не реализовано.</span><span class="sxs-lookup"><span data-stu-id="d4521-103">Not implemented.</span></span> <span data-ttu-id="d4521-104">Не используйте.</span><span class="sxs-lookup"><span data-stu-id="d4521-104">Do not use.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f4aab-105">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="f4aab-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d4521-105">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="d4521-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT SetFunctionReJIT(  
     [in] FunctionID functionId);  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="f4aab-106">Требования</span><span class="sxs-lookup"><span data-stu-id="f4aab-106">Requirements</span></span>  
- <span data-ttu-id="f4aab-107">**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f4aab-107">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d4521-106">Требования</span><span class="sxs-lookup"><span data-stu-id="d4521-106">Requirements</span></span>  
+ <span data-ttu-id="d4521-107">**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d4521-107">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f4aab-108">**Заголовок:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="f4aab-108">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="d4521-108">**Заголовок:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="d4521-108">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="f4aab-109">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f4aab-109">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="d4521-109">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d4521-109">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="f4aab-110">**.NET Framework Version:** 1.0</span><span class="sxs-lookup"><span data-stu-id="f4aab-110">**.NET Framework Version:** 1.0</span></span>  
+ <span data-ttu-id="d4521-110">**Версия .NET Framework:** 1,0</span><span class="sxs-lookup"><span data-stu-id="d4521-110">**.NET Framework Version:** 1.0</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f4aab-111">См. также</span><span class="sxs-lookup"><span data-stu-id="f4aab-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d4521-111">См. также:</span><span class="sxs-lookup"><span data-stu-id="d4521-111">See also</span></span>
 
-- [<span data-ttu-id="f4aab-112">Интерфейс ICorProfilerInfo</span><span class="sxs-lookup"><span data-stu-id="f4aab-112">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [<span data-ttu-id="d4521-112">Интерфейс ICorProfilerInfo</span><span class="sxs-lookup"><span data-stu-id="d4521-112">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

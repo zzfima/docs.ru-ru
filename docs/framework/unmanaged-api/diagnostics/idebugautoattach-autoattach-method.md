@@ -22,10 +22,10 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445522"
 ---
-# <a name="idebugautoattachautoattach-method"></a><span data-ttu-id="01d3b-102">Метод IDebugAutoAttach::AutoAttach</span><span class="sxs-lookup"><span data-stu-id="01d3b-102">IDebugAutoAttach::AutoAttach Method</span></span>
-<span data-ttu-id="01d3b-103">Performs server-invoked debugger auto attach.</span><span class="sxs-lookup"><span data-stu-id="01d3b-103">Performs server-invoked debugger auto attach.</span></span>  
+# <a name="idebugautoattachautoattach-method"></a><span data-ttu-id="d43f7-102">Метод IDebugAutoAttach::AutoAttach</span><span class="sxs-lookup"><span data-stu-id="d43f7-102">IDebugAutoAttach::AutoAttach Method</span></span>
+<span data-ttu-id="d43f7-103">Выполняет вызванное сервером автоматическое присоединение отладчика.</span><span class="sxs-lookup"><span data-stu-id="d43f7-103">Performs server-invoked debugger auto attach.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="01d3b-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="01d3b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d43f7-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="d43f7-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT AutoAttach  
@@ -38,28 +38,28 @@ HRESULT AutoAttach
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="01d3b-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="01d3b-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="d43f7-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="d43f7-105">Parameters</span></span>  
  `guidPort`  
- <span data-ttu-id="01d3b-106">[in] Always set to `GUID_NULL`.</span><span class="sxs-lookup"><span data-stu-id="01d3b-106">[in] Always set to `GUID_NULL`.</span></span>  
+ <span data-ttu-id="d43f7-106">окне Всегда имеет значение `GUID_NULL`.</span><span class="sxs-lookup"><span data-stu-id="d43f7-106">[in] Always set to `GUID_NULL`.</span></span>  
   
  `dwPid`  
- <span data-ttu-id="01d3b-107">[in] Process ID, normally retrieved with the `GetCurrentProcessId` function.</span><span class="sxs-lookup"><span data-stu-id="01d3b-107">[in] Process ID, normally retrieved with the `GetCurrentProcessId` function.</span></span>  
+ <span data-ttu-id="d43f7-107">окне Идентификатор процесса, обычно полученный с помощью функции `GetCurrentProcessId`.</span><span class="sxs-lookup"><span data-stu-id="d43f7-107">[in] Process ID, normally retrieved with the `GetCurrentProcessId` function.</span></span>  
   
  `dwProgramType`  
- <span data-ttu-id="01d3b-108">[in] Program type: `AUTOATTACH_PROGRAM_WIN32`, `AUTOATTACH_PROGRAM_COMPLUS`, or `AUTOATTACH_PROGRAM_UNKNOWN`.</span><span class="sxs-lookup"><span data-stu-id="01d3b-108">[in] Program type: `AUTOATTACH_PROGRAM_WIN32`, `AUTOATTACH_PROGRAM_COMPLUS`, or `AUTOATTACH_PROGRAM_UNKNOWN`.</span></span>  
+ <span data-ttu-id="d43f7-108">окне Тип программы: `AUTOATTACH_PROGRAM_WIN32`, `AUTOATTACH_PROGRAM_COMPLUS`или `AUTOATTACH_PROGRAM_UNKNOWN`.</span><span class="sxs-lookup"><span data-stu-id="d43f7-108">[in] Program type: `AUTOATTACH_PROGRAM_WIN32`, `AUTOATTACH_PROGRAM_COMPLUS`, or `AUTOATTACH_PROGRAM_UNKNOWN`.</span></span>  
   
  `dwProgramId`  
- <span data-ttu-id="01d3b-109">[in] Program ID.</span><span class="sxs-lookup"><span data-stu-id="01d3b-109">[in] Program ID.</span></span>  
+ <span data-ttu-id="d43f7-109">окне Идентификатор программы.</span><span class="sxs-lookup"><span data-stu-id="d43f7-109">[in] Program ID.</span></span>  
   
  `pszSessionId`  
- <span data-ttu-id="01d3b-110">[in] String passed by the debug verb.</span><span class="sxs-lookup"><span data-stu-id="01d3b-110">[in] String passed by the debug verb.</span></span>  
+ <span data-ttu-id="d43f7-110">окне Строка, передаваемая командой Debug.</span><span class="sxs-lookup"><span data-stu-id="d43f7-110">[in] String passed by the debug verb.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="01d3b-111">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="01d3b-111">Return Value</span></span>  
- <span data-ttu-id="01d3b-112">S_OK if the method succeeds.</span><span class="sxs-lookup"><span data-stu-id="01d3b-112">S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="d43f7-111">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="d43f7-111">Return Value</span></span>  
+ <span data-ttu-id="d43f7-112">S_OK, если метод выполнен.</span><span class="sxs-lookup"><span data-stu-id="d43f7-112">S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="01d3b-113">Требования</span><span class="sxs-lookup"><span data-stu-id="01d3b-113">Requirements</span></span>  
- <span data-ttu-id="01d3b-114">**Header:** DbgAutoAttach.h</span><span class="sxs-lookup"><span data-stu-id="01d3b-114">**Header:** DbgAutoAttach.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d43f7-113">Требования</span><span class="sxs-lookup"><span data-stu-id="d43f7-113">Requirements</span></span>  
+ <span data-ttu-id="d43f7-114">**Заголовок:** Дбгаутоаттач. h</span><span class="sxs-lookup"><span data-stu-id="d43f7-114">**Header:** DbgAutoAttach.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="01d3b-115">См. также</span><span class="sxs-lookup"><span data-stu-id="01d3b-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d43f7-115">См. также:</span><span class="sxs-lookup"><span data-stu-id="d43f7-115">See also</span></span>
 
-- [<span data-ttu-id="01d3b-116">Интерфейс IDebugAutoAttach</span><span class="sxs-lookup"><span data-stu-id="01d3b-116">IDebugAutoAttach Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/idebugautoattach-interface.md)
+- [<span data-ttu-id="d43f7-116">Интерфейс IDebugAutoAttach</span><span class="sxs-lookup"><span data-stu-id="d43f7-116">IDebugAutoAttach Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/idebugautoattach-interface.md)
