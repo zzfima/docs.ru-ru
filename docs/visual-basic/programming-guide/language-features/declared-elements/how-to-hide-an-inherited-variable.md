@@ -20,21 +20,21 @@ ms.locfileid: "74345353"
 ---
 # <a name="how-to-hide-an-inherited-variable-visual-basic"></a>Практическое руководство. Сокрытие наследуемой переменной (Visual Basic)
 
-A derived class inherits all the definitions of its base class. If you want to define a variable using the same name as an element of the base class, you can hide, or *shadow*, that base class element when you define your variable in the derived class. If you do this, code in the derived class accesses your variable unless it explicitly bypasses the shadowing mechanism.
+Производный класс наследует все определения своего базового класса. Если необходимо определить переменную с тем же именем, что и у элемента базового класса, можно скрыть или *затенить*этот элемент базового класса при определении переменной в производном классе. В этом случае код в производном классе получает доступ к переменной, если только явно не обходит механизм теневого копирования.
 
-Another reason you might want to hide an inherited variable is to protect against base class revision. The base class might undergo a change that alters the element you are inheriting. If this happens, the `Shadows` modifier forces references from the derived class to be resolved to your variable, instead of to the base class element.
+Другой причиной, по которой может потребоваться скрыть унаследованную переменную, является защита от редакции базового класса. Базовый класс может повлиять на изменение, изменяющее элемент, который вы наследуете. В этом случае модификатор `Shadows` приводит к разрешении ссылок из производного класса в переменную, а не на элемент базового класса.
 
-## <a name="to-hide-an-inherited-variable"></a>To hide an inherited variable
+## <a name="to-hide-an-inherited-variable"></a>Скрытие унаследованной переменной
 
-1. Be sure the variable you want to hide is declared at class level (outside any procedure). Otherwise, you do not need to hide it.
+1. Убедитесь, что переменная, которую нужно скрыть, объявлена на уровне класса (вне любой процедуры). В противном случае скрыть ее не нужно.
   
-2. Inside your derived class, write a [Dim Statement](../../../language-reference/statements/dim-statement.md) declaring your variable. Use the same name as that of the inherited variable.
+2. Внутри производного класса напишите [оператор Dim](../../../language-reference/statements/dim-statement.md) , объявляющий переменную. Используйте то же имя, что и у унаследованной переменной.
 
-3. Include the [Shadows](../../../language-reference/modifiers/shadows.md) keyword in the declaration.
+3. Включите в объявление ключевое слово [Shadows](../../../language-reference/modifiers/shadows.md) .
 
-     When code in the derived class refers to the variable name, the compiler resolves the reference to your variable.
+     Если код в производном классе ссылается на имя переменной, компилятор разрешает ссылку на переменную.
 
-     The following example illustrates shadowing of an inherited variable:
+     В следующем примере показано затенение наследуемой переменной.
   
     ```vb  
     Public Class ShadowBaseClass  
@@ -50,16 +50,16 @@ Another reason you might want to hide an inherited variable is to protect agains
     End Class  
     ```  
   
-     The preceding example declares the variable `shadowString` in the base class and shadows it in the derived class. The procedure `ShowStrings` in the derived class displays the shadowing version of the string when the name `shadowString` is not qualified. It then displays the shadowed version when `shadowString` is qualified with the `MyBase` keyword.  
+     В предыдущем примере переменная объявляется `shadowString` в базовом классе и скрывается в производном классе. Процедура, `ShowStrings` в производном классе, отображает версию строки с тенью, если имя `shadowString` не является полным. Затем отображается затененная версия, если `shadowString` дополнено ключевым словом `MyBase`.  
   
 ## <a name="robust-programming"></a>Отказоустойчивость
 
-Shadowing introduces more than one version of a variable with the same name. When a code statement refers to the variable name, the version to which the compiler resolves the reference depends on factors such as the location of the code statement and the presence of a qualifying string. This can increase the risk of referring to an unintended version of a shadowed variable. You can lower that risk by fully qualifying all references to a shadowed variable.
+При затенении введено более одной версии переменной с тем же именем. Если инструкция Code ссылается на имя переменной, версия, на которую компилятор разрешает ссылку, зависит от таких факторов, как расположение инструкции Code и наличие подходящих строк. Это может увеличить риск обращения к непреднамеренной версии затененной переменной. Можно снизить этот риск, полностью подполняя все ссылки на затененную переменную.
 
 ## <a name="see-also"></a>См. также
 
 - [Ссылки на объявленные элементы](references-to-declared-elements.md)
-- [Shadowing in Visual Basic](shadowing.md)
+- [Затенение в Visual Basic](shadowing.md)
 - [Различия между затемнением и переопределением](differences-between-shadowing-and-overriding.md)
 - [Практическое руководство. Сокрытие переменной с тем же именем, что и ваша переменная](how-to-hide-a-variable-with-the-same-name-as-your-variable.md)
 - [Практическое руководство. Доступ к переменной, скрытой производным классом](how-to-access-a-variable-hidden-by-a-derived-class.md)

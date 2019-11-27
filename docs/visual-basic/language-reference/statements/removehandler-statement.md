@@ -17,7 +17,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74333039"
 ---
 # <a name="removehandler-statement"></a>Оператор RemoveHandler
-Removes the association between an event and an event handler.  
+Удаляет связь между событием и обработчиком событий.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -29,14 +29,14 @@ RemoveHandler event, AddressOf eventhandler
   
 |Термин|Определение|  
 |---|---|  
-|`event`|The name of the event being handled.|  
-|`eventhandler`|The name of the procedure currently handling the event.|  
+|`event`|Имя обрабатываемого события.|  
+|`eventhandler`|Имя процедуры, которая в настоящее время обрабатывает событие.|  
   
-## <a name="remarks"></a>Заметки  
- The `AddHandler` and `RemoveHandler` statements allow you to start and stop event handling for a specific event at any time during program execution.  
+## <a name="remarks"></a>Примечания  
+ Операторы `AddHandler` и `RemoveHandler` позволяют запускать и прекращать обработку событий для определенного события в любое время во время выполнения программы.  
   
 > [!NOTE]
-> For custom events, the `RemoveHandler` statement invokes the event's `RemoveHandler` accessor. For more information on custom events, see [Event Statement](../../../visual-basic/language-reference/statements/event-statement.md).  
+> Для пользовательских событий оператор `RemoveHandler` вызывает метод доступа `RemoveHandler` события. Дополнительные сведения о пользовательских событиях см. в разделе [оператор Event](../../../visual-basic/language-reference/statements/event-statement.md).  
   
 ## <a name="example"></a>Пример  
  [!code-vb[VbVbalrEvents#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#17)]  

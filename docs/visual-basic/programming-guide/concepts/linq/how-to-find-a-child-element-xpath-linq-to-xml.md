@@ -9,7 +9,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353035"
 ---
-# <a name="how-to-find-a-child-element-xpath-linq-to-xml-visual-basic"></a>How to: Find a Child Element (XPath-LINQ to XML) (Visual Basic)
+# <a name="how-to-find-a-child-element-xpath-linq-to-xml-visual-basic"></a>Как найти дочерний элемент (XPath-LINQ to XML) (Visual Basic)
 В этом разделе сравнивается ось дочерних элементов XPath с методом [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]<xref:System.Xml.Linq.XContainer.Element%2A>.  
   
  Выражение XPath - `DeliveryNotes`.  
@@ -48,4 +48,4 @@ Results are identical
   
 ## <a name="see-also"></a>См. также
 
-- [LINQ to XML for XPath Users (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [LINQ to XML для пользователей XPath (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

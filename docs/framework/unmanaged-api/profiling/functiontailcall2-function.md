@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74427424"
 ---
 # <a name="functiontailcall2-function"></a>Функция FunctionTailcall2
-Notifies the profiler that the currently executing function is about to perform a tail call to another function and provides information about the stack frame.  
+Уведомляет профилировщик о том, что выполняемая в данный момент функция собирается выполнить вызов другой функции с префиксом tail и предоставляет сведения о кадре стека.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -36,37 +36,37 @@ void __stdcall FunctionTailcall2 (
   
 ## <a name="parameters"></a>Параметры  
  `funcId`  
- [in] The identifier of the currently executing function that is about to make a tail call.  
+ окне Идентификатор выполняемой в данный момент функции, которая собирается выполнить вызов с префиксом tail.  
   
  `clientData`  
- [in] The remapped function identifier, which the profiler previously specified via [FunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md), of the currently executing function that is about to make a tail call.  
+ окне Идентификатор повторно сопоставленной функции, который ранее был указан с помощью [FunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md), для выполняемой в данный момент функции, которая собирается выполнить вызов с префиксом tail.  
   
  `func`  
- [in] A `COR_PRF_FRAME_INFO` value that points to information about the stack frame.  
+ окне Значение `COR_PRF_FRAME_INFO`, указывающее на сведения о кадре стека.  
   
- The profiler should treat this as an opaque handle that can be passed back to the execution engine in the [ICorProfilerInfo2::GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) method.  
+ Профилировщик должен рассматривать это как непрозрачный маркер, который можно передать обратно в подсистему выполнения метода [ICorProfilerInfo2:: GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) .  
   
-## <a name="remarks"></a>Заметки  
- The target function of the tail call will use the current stack frame, and will return directly to the caller of the function that made the tail call. This means that a [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md) callback will not be issued for a function that is the target of a tail call.  
+## <a name="remarks"></a>Примечания  
+ Целевая функция вызова с префиксом tail будет использовать текущий кадр стека и будет возвращаться непосредственно вызывающему объекту функции, которая выполнила вызов с префиксом tail. Это означает, что обратный вызов [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md) не будет выдаваться для функции, которая является целевым объектом для вызова с префиксом tail.  
   
- The value of the `func` parameter is not valid after the `FunctionTailcall2` function returns because the value may change or be destroyed.  
+ Значение параметра `func` недопустимо после того, как функция `FunctionTailcall2` возвращает значение, так как оно может измениться или быть уничтожено.  
   
- The `FunctionTailcall2` function is a callback; you must implement it. The implementation must use the `__declspec`(`naked`) storage-class attribute.  
+ Функция `FunctionTailcall2` является обратным вызовом. его необходимо реализовать. Реализация должна использовать атрибут класса хранения `__declspec`(`naked`).  
   
- The execution engine does not save any registers before calling this function.  
+ Подсистема выполнения не сохраняет никакие регистры перед вызовом этой функции.  
   
-- On entry, you must save all registers that you use, including those in the floating-point unit (FPU).  
+- Во время записи необходимо сохранить все используемые регистры, включая те, которые находятся в блоке с плавающей запятой (FPU).  
   
-- On exit, you must restore the stack by popping off all the parameters that were pushed by its caller.  
+- При выходе необходимо восстановить стек, выключив все параметры, которые были переданы его вызывающим.  
   
- The implementation of `FunctionTailcall2` should not block because it will delay garbage collection. The implementation should not attempt a garbage collection because the stack may not be in a garbage collection-friendly state. If a garbage collection is attempted, the runtime will block until `FunctionTailcall2` returns.  
+ Реализация `FunctionTailcall2` не должна блокироваться, так как она приведет к задержке сборки мусора. Реализация не должна пытаться выполнить сборку мусора, так как стек может не находиться в состоянии, понятном для сборки мусора. Если выполняется сборка мусора, среда выполнения блокируется до тех пор, пока не будет возвращено `FunctionTailcall2`.  
   
- Also, the `FunctionTailcall2` function must not call into managed code or in any way cause a managed memory allocation.  
+ Кроме того, функция `FunctionTailcall2` не должна вызывать управляемый код или каким-либо образом приводит к выделению управляемой памяти.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl  
+ **Заголовок:** CorProf. idl  
   
  **Библиотека:** CorGuids.lib  
   

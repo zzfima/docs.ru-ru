@@ -25,34 +25,34 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351764"
 ---
 # <a name="variable-declaration-in-visual-basic"></a>Объявление переменной в Visual Basic
-You declare a variable to specify its name and characteristics. The declaration statement for variables is the [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md). Its location and contents determine the variable's characteristics.  
+Переменная объявляется для указания ее имени и характеристик. Оператор объявления для переменных является [оператором Dim](../../../../visual-basic/language-reference/statements/dim-statement.md). Его расположение и содержимое определяют характеристики переменной.  
   
- For variable naming rules and considerations, see [Declared Element Names](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
+ Правила именования переменных и рекомендации см. в разделе [Имена объявленных элементов](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
   
-## <a name="declaration-levels"></a>Declaration Levels  
+## <a name="declaration-levels"></a>Уровни объявления  
   
-### <a name="local-and-member-variables"></a>Local and Member Variables  
- A *local variable* is one that is declared within a procedure. A *member variable* is a member of a Visual Basic type; it is declared at module level, inside a class, structure, or module, but not within any procedure internal to that class, structure, or module.  
+### <a name="local-and-member-variables"></a>Локальные и переменные членов  
+ *Локальная переменная* — это одна из процедур, объявленная в процедуре. *Переменная-член* является членом типа Visual Basic; Он объявляется на уровне модуля, внутри класса, структуры или модуля, но не внутри какой-либо процедуры, внутренней для этого класса, структуры или модуля.  
   
-### <a name="shared-and-instance-variables"></a>Shared and Instance Variables  
- In a class or structure, the category of a member variable depends on whether or not it is shared. If it is declared with the [Shared](../../../../visual-basic/language-reference/modifiers/shared.md) keyword, it is a *shared variable*, and it exists in a single copy shared among all instances of the class or structure.  
+### <a name="shared-and-instance-variables"></a>Переменные Shared и instance  
+ В классе или структуре категория переменной-члена зависит от того, является ли она общей. Если он объявлен с ключевым словом [Shared](../../../../visual-basic/language-reference/modifiers/shared.md) , то это *Общая переменная*, которая существует в одной копии, совместно используемой всеми экземплярами класса или структуры.  
   
- Otherwise it is an *instance variable*, and a separate copy of it is created for each instance of the class or structure. A given copy of an instance variable is available only to the instance of the class or structure in which it was created. It is independent of a copy of the instance variable in any other instance of the class or structure.  
+ В противном случае это *переменная экземпляра*, и ее отдельная копия создается для каждого экземпляра класса или структуры. Данная копия переменной экземпляра доступна только для экземпляра класса или структуры, в которой он был создан. Он не зависит от копии переменной экземпляра в любом другом экземпляре класса или структуры.  
   
-## <a name="declaring-data-type"></a>Declaring Data Type  
- The [As](../../../../visual-basic/language-reference/statements/as-clause.md) clause in the declaration statement allows you to define the data type or object type of the variable you are declaring. You can specify any of the following types for a variable:  
+## <a name="declaring-data-type"></a>Объявление типа данных  
+ Предложение [as](../../../../visual-basic/language-reference/statements/as-clause.md) в операторе объявления позволяет определить тип данных или тип объекта объявляемой переменной. Для переменной можно указать любой из следующих типов:  
   
-- An elementary data type, such as `Boolean`, `Long`, or `Decimal`  
+- Простейший тип данных, например `Boolean`, `Long`или `Decimal`  
   
-- A composite data type, such as an array or structure  
+- Составной тип данных, например массив или структура  
   
-- An object type, or class, defined either in your application or in another application  
+- Тип объекта или класс, определенный либо в приложении, либо в другом приложении  
   
-- A .NET Framework class, such as <xref:System.Windows.Forms.Label> or <xref:System.Windows.Forms.TextBox>  
+- Класс .NET Framework, например <xref:System.Windows.Forms.Label> или <xref:System.Windows.Forms.TextBox>  
   
-- An interface type, such as <xref:System.IComparable> or <xref:System.IDisposable>  
+- Тип интерфейса, например <xref:System.IComparable> или <xref:System.IDisposable>  
   
- You can declare several variables in one statement without having to repeat the data type. In the following statements, the variables `i`, `j`, and `k` are declared as type `Integer`, `l` and `m` as `Long`, and `x` and `y` as `Single`:  
+ В одной инструкции можно объявить несколько переменных без повторения типа данных. В следующих инструкциях переменные `i`, `j`и `k` объявляются как типы `Integer`, `l` и `m` как `Long`, а `x` и `y` как `Single`:  
   
 ```vb  
 Dim i, j, k As Integer  
@@ -61,21 +61,21 @@ Dim l, m As Long, x, y As Single
 ' In the preceding statement, l and m are Long, x and y are Single.  
 ```  
   
- For more information on data types, see [Data Types](../../../../visual-basic/programming-guide/language-features/data-types/index.md). For more information on objects, see [Objects and Classes](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md) and [Programming with Components](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/0ffkdtkf(v=vs.120)).  
+ Дополнительные сведения о типах данных см. в разделе [типы данных](../../../../visual-basic/programming-guide/language-features/data-types/index.md). Дополнительные сведения об объектах см. в разделе [объекты и классы](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md) и [программирование с помощью компонентов](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/0ffkdtkf(v=vs.120)).  
   
 ## <a name="local-type-inference"></a>Вывод локального типа  
- *Type inference* is used to determine the data types of local variables declared without an `As` clause. The compiler infers the type of the variable from the type of the initialization expression. This enables you to declare variables without explicitly stating a type. In the following example, both `num1` and `num2` are strongly typed as integers.  
+ *Определение типа* используется для определения типов данных локальных переменных, объявленных без предложения `As`. Компилятор выводит тип переменной из типа выражения инициализации. Это позволяет объявлять переменные без явного указания типа. В следующем примере и `num1`, и `num2` строго типизированы как целые числа.  
   
  [!code-vb[VbVbalrTypeInference#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrTypeInference/VB/Class1.vb#1)]  
   
- If you want to use local type inference, `Option Infer` must be set to `On`. Дополнительные сведения см. в разделах [Вывод локального типа](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md) и [Оператор Option Infer](../../../../visual-basic/language-reference/statements/option-infer-statement.md).  
+ Если вы хотите использовать вывод локального типа, `Option Infer` должны иметь значение `On`. Дополнительные сведения см. в разделах [Вывод локального типа](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md) и [Оператор Option Infer](../../../../visual-basic/language-reference/statements/option-infer-statement.md).  
   
-## <a name="characteristics-of-declared-variables"></a>Characteristics of Declared Variables  
- The *lifetime* of a variable is the period of time during which it is available for use. In general, a variable exists as long as the element that declares it (such as a procedure or class) continues to exist. If the variable does not need to continue existing beyond the lifetime of its containing element, you do not need to do anything special in the declaration. If the variable needs to continue to exist longer than its containing element, you can include the `Static` or `Shared` keyword in its `Dim` statement. For more information, see [Lifetime in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md).  
+## <a name="characteristics-of-declared-variables"></a>Характеристики объявленных переменных  
+ Время *существования* переменной — это период времени, в течение которого она доступна для использования. Как правило, переменная существует, пока не будет существовать элемент, объявляющий ее (например, процедуру или класс). Если переменная не должна продолжаться за пределами времени существования содержащего его элемента, не нужно делать ничего особенного в объявлении. Если переменная должна продолжать существовать дольше, чем содержащая ее элемент, можно включить ключевое слово `Static` или `Shared` в его инструкцию `Dim`. Дополнительные сведения см. [в разделе время существования в Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md).  
   
- The *scope* of a variable is the set of all code that can refer to it without qualifying its name. A variable's scope is determined by where it is declared. Code located in a given region can use the variables defined in that region without having to qualify their names. Для получения дополнительной информации см. [Scope in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md).  
+ *Областью действия* переменной является набор всего кода, который может ссылаться на него без уточнения его имени. Область переменной определяется тем, где она объявлена. Код, расположенный в данном регионе, может использовать переменные, определенные в этом регионе, без уточнения их имен. Для получения дополнительной информации см. [Scope in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md).  
   
- A variable's *access level* is the extent of code that has permission to access it. This is determined by the access modifier (such as [Public](../../../../visual-basic/language-reference/modifiers/public.md) or [Private](../../../../visual-basic/language-reference/modifiers/private.md)) that you use in the `Dim` statement. For more information, see [Access levels in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
+ *Уровень доступа* переменной — это область кода, имеющая разрешение на доступ к нему. Это определяется модификатором доступа (например, [Public](../../../../visual-basic/language-reference/modifiers/public.md) или [Private](../../../../visual-basic/language-reference/modifiers/private.md)), который используется в инструкции `Dim`. Дополнительные сведения см. [в разделе уровни доступа в Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
 ## <a name="see-also"></a>См. также
 

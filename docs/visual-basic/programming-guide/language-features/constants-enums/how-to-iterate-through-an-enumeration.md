@@ -1,5 +1,5 @@
 ---
-title: 'How to: Iterate Through An Enumeration'
+title: Пошаговое руководство. перебор перечислений
 ms.date: 07/20/2015
 helpviewer_keywords:
 - arrays [Visual Basic], iterating
@@ -14,18 +14,18 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74354026"
 ---
 # <a name="how-to-iterate-through-an-enumeration-in-visual-basic"></a>Практическое руководство. Перебор элементов перечисления в Visual Basic
-Перечисления — это удобный способ работать с наборами связанных констант и связывать постоянные значения с именами. To iterate through an enumeration, you can move it into an array using the <xref:System.Enum.GetValues%2A> method. You could also iterate through an enumeration using a `For...Each` statement, using the <xref:System.Enum.GetNames%2A> or <xref:System.Enum.GetValues%2A> method to extract the string or numeric value.  
+Перечисления — это удобный способ работать с наборами связанных констант и связывать постоянные значения с именами. Чтобы выполнить итерацию по перечислению, можно переместить его в массив с помощью метода <xref:System.Enum.GetValues%2A>. Можно также выполнить итерацию перечисления с помощью оператора `For...Each`, используя метод <xref:System.Enum.GetNames%2A> или <xref:System.Enum.GetValues%2A> для извлечения строкового или числового значения.  
   
-### <a name="to-iterate-through-an-enumeration"></a>To iterate through an enumeration  
+### <a name="to-iterate-through-an-enumeration"></a>Перебор перечислений  
   
-- Declare an array and convert the enumeration to it with the <xref:System.Enum.GetValues%2A> method before passing the array as you would any other variable. The following example displays each member of the enumeration <xref:Microsoft.VisualBasic.FirstDayOfWeek> as it iterates through the enumeration.  
+- Объявите массив и преобразуйте перечисление в него с помощью метода <xref:System.Enum.GetValues%2A>, прежде чем передавать массив, как и любую другую переменную. В следующем примере каждый элемент перечисления выводится <xref:Microsoft.VisualBasic.FirstDayOfWeek> в процессе итерации по перечислению.  
   
      [!code-vb[VbEnumsTask#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#7)]  
   
 ## <a name="see-also"></a>См. также
 
 - [Общие сведения о перечислениях](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)
-- [How to: Declare an Enumeration](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)
+- [Инструкции. Объявление перечисления](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)
 - [Когда следует использовать перечисление](../../../../visual-basic/programming-guide/language-features/constants-enums/when-to-use-an-enumeration.md)
 - [Практическое руководство. Определение строки, связанной со значением из перечисления](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-determine-the-string-associated-with-an-enumeration-value.md)
 - [Практическое руководство. Ссылка на элемент перечисления](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-refer-to-an-enumeration-member.md)
