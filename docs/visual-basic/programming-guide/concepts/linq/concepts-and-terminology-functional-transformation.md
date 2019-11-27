@@ -9,7 +9,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345699"
 ---
-# <a name="concepts-and-terminology-functional-transformation-visual-basic"></a>Concepts and Terminology (Functional Transformation) (Visual Basic)
+# <a name="concepts-and-terminology-functional-transformation-visual-basic"></a>Основные понятия и терминология (функциональное преобразование) (Visual Basic)
 В данном разделе вводятся основные понятия и терминология чисто функциональных преобразований. Подход с использованием функциональных преобразований для преобразования данных порождает код, который обычно быстрее для программирования, более выразительный и легче для отладки и сопровождения, чем порожденный с использованием традиционного императивного программирования.
 
 Заметим, что темы в данном разделе не претендуют на подробное объяснение функционального программирования. Но при этом они определяют некоторые возможности функционального программирования, которые позволяют легче переводить XML из одной формы в другую.
@@ -25,7 +25,7 @@ ms.locfileid: "74345699"
 > [!IMPORTANT]
 > До конца данного учебника термин «чистая возможность» используется в основном для указания подхода к программированию, а не специальной характеристики языка.
 >
-> Note that pure functions must be implemented as functions in Visual Basic.
+> Обратите внимание, что чистые функции должны реализовываться как функции в Visual Basic.
 >
 > Также не надо путать чистые функции с чисто виртуальными методами в C++. Второй случай показывает, что содержащийся класс абстрактный и текст метода не указан.
 
@@ -33,9 +33,9 @@ ms.locfileid: "74345699"
 
 Термин *функциональное программирование* обозначает такой подход к программированию, при котором непосредственно поддерживаются чисто функциональные преобразования.
 
-Исторически языки функционального программирования общего назначения, такие как ML, Scheme, Haskell и F#, представляли интерес в первую очередь для научного сообщества. Although it has always been possible to write pure functional transformations in Visual Basic, the difficulty of doing so has not made it an attractive option to most programmers. With later versions of Visual Basic, however, new language constructs such as lambda expressions and type inference make it functional programming much easier and more productive.
+Исторически языки функционального программирования общего назначения, такие как ML, Scheme, Haskell и F#, представляли интерес в первую очередь для научного сообщества. Хотя всегда можно написать чисто функциональные преобразования в Visual Basic, сложность этого не стала привлекательным вариантом для большинства программистов. Однако в более поздних версиях Visual Basic новые языковые конструкции, такие как лямбда-выражения и определение типов, делают функциональное программирование гораздо проще и эффективнее.
 
-For more information about functional programming, see [Functional Programming vs. Imperative Programming (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md).
+Дополнительные сведения о функциональном программировании см. в разделе [функциональное программирование и императивное программирование (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md).
 
 #### <a name="domain-specific-fp-languages"></a>Предметные языки функционального программирования
 
@@ -46,9 +46,9 @@ For more information about functional programming, see [Functional Programming v
 Следующие таблицы определяют некоторые термины, связанные с функциональными преобразованиями.
 
 функция высокого порядка (первого класса) \
-Функция, которая может быть интерпретирована как программный объект. Например, функция высокого порядка может быть передана и возвращена другими функциями. In Visual Basic, delegates and lambda expressions are language features that support higher-order functions. Для написания функции высокого порядка необходимо объявить один или несколько аргументов для принятия делегатов, при этом обычно используются лямбда-выражения. Многие стандартные операторы запроса являются функциями высокого порядка.
+Функция, которая может быть интерпретирована как программный объект. Например, функция высокого порядка может быть передана и возвращена другими функциями. В Visual Basic делегаты и лямбда-выражения — это языковые функции, поддерживающие функции более высокого порядка. Для написания функции высокого порядка необходимо объявить один или несколько аргументов для принятия делегатов, при этом обычно используются лямбда-выражения. Многие стандартные операторы запроса являются функциями высокого порядка.
 
-For more information, see [Standard Query Operators Overview (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md).
+Дополнительные сведения см. в статье [Общие сведения о стандартных операторах запросов (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md).
 
 лямбда-выражение \
 По сути это встроенная анонимная функция, которая может использоваться, когда тип делегата неизвестен. Это упрощенное значение лямбда-выражений, однако оно достаточно для целей данного учебника.
@@ -61,21 +61,21 @@ For more information, see [Standard Query Operators Overview (Visual Basic)](../
 кортеж (анонимные типы) \
 Как математическое понятие, кортеж представляет собой конечную последовательность объектов, каждый определенного типа. Кортеж называется также упорядоченным списком. Анонимные типы представляют собой языковую реализацию этой концепции, которая позволяет объявить класс неименованного типа и одновременно создать экземпляр объекта этого типа.
 
-For more information, see  [Anonymous Types](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).
+Дополнительные сведения см. в разделе [анонимные типы](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).
 
 определение типов (скрытое типизирование) \
 Возможность компилятора определить тип переменной при отсутствии явной декларации типа.
 
-For more information, see [Local Type Inference](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).
+Дополнительные сведения см. в разделе [определение локального типа](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).
 
 отложенное исполнение и отложенные вычисления \
 Задержка вычисления выражения до тех пор, пока его результат не станет нужен. В коллекциях поддерживается отложенное исполнение.
 
-For more information, see [Basic Query Operations (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md) and [Deferred Execution and Lazy Evaluation in LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md).
+Дополнительные сведения см. в статьях [основные операции запроса (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md) , [Отложенное выполнение и отложенное вычисление в LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md).
 
 Эти языковые возможности будут использованы в образцах кода на протяжении данного раздела.
 
 ## <a name="see-also"></a>См. также
 
-- [Introduction to Pure Functional Transformations (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
-- [Functional Programming vs. Imperative Programming (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)
+- [Введение в чистые функциональные преобразования (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
+- [Сравнение функционального и императивного программирования (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)

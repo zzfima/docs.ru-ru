@@ -16,58 +16,58 @@ ms.locfileid: "74350375"
 ---
 # <a name="myforms-object"></a>Объект My.Forms
 
-Provides properties for accessing an instance of each Windows form declared in the current project.
+Предоставляет свойства для доступа к экземпляру каждой формы Windows Form, объявленной в текущем проекте.
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Примечания
 
-The `My.Forms` object provides an instance of each form in the current project. The name of the property is the same as the name of the form that the property accesses.
+Объект `My.Forms` предоставляет экземпляр каждой формы в текущем проекте. Имя свойства совпадает с именем формы, к которой обращается свойство.
 
-You can access the forms provided by the `My.Forms` object by using the name of the form, without qualification. Because the property name is the same as the form's type name, this allows you to access a form as if it had a default instance. Например, предложение `My.Forms.Form1.Show` эквивалентно предложению `Form1.Show`.
+Доступ к формам, предоставляемым объектом `My.Forms`, можно получить с помощью имени формы без уточнения. Так как имя свойства совпадает с именем типа формы, это позволяет получить доступ к форме, как если бы она имела экземпляр по умолчанию. Например, предложение `My.Forms.Form1.Show` эквивалентно предложению `Form1.Show`.
 
-The `My.Forms` object exposes only the forms associated with the current project. It does not provide access to forms declared in referenced DLLs. To access a form that a DLL provides, you must use the qualified name of the form, written as *DllName*.*FormName*.
+Объект `My.Forms` предоставляет только формы, связанные с текущим проектом. Он не предоставляет доступ к формам, объявленным в упоминаемых библиотеках DLL. Для доступа к форме, предоставляемой библиотекой DLL, необходимо использовать полное имя формы, записанное как *dllname*. *Формнаме*.
 
-You can use the <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OpenForms%2A> property to get a collection of all the application's open forms.
+Чтобы получить коллекцию всех открытых форм приложения, можно использовать свойство <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OpenForms%2A>.
 
-The object and its properties are available only for Windows applications.
+Объект и его свойства доступны только для приложений Windows.
 
 ## <a name="properties"></a>Свойства
 
-Each property of the `My.Forms` object provides access to an instance of a form in the current project. The name of the property is the same as the name of the form that the property accesses, and the property type is the same as the form's type.
+Каждое свойство объекта `My.Forms` предоставляет доступ к экземпляру формы в текущем проекте. Имя свойства совпадает с именем формы, к которой обращается свойство, а тип свойства совпадает с типом формы.
 
 > [!NOTE]
-> If there is a name collision, the property name to access a form is *RootNamespace*_*Namespace*\_*FormName*. For example, consider two forms named `Form1.`If one of these forms is in the root namespace `WindowsApplication1` and in the namespace `Namespace1`, you would access that form through `My.Forms.WindowsApplication1_Namespace1_Form1`.
+> При конфликте имен имя свойства для доступа к форме — *RootNamespace*_*Namespace*\_*формнаме*. Например, рассмотрим две формы с именем `Form1.`если одна из этих форм находится в корневом пространстве имен `WindowsApplication1` и в пространстве имен `Namespace1`, доступ к этой форме осуществляется через `My.Forms.WindowsApplication1_Namespace1_Form1`.
 
-The `My.Forms` object provides access to the instance of the application's main form that was created on startup. For all other forms, the `My.Forms` object creates a new instance of the form when it is accessed and stores it. Subsequent attempts to access that property return that instance of the form.
+Объект `My.Forms` предоставляет доступ к экземпляру главной формы приложения, созданному при запуске. Для всех других форм объект `My.Forms` создает новый экземпляр формы при доступе к нему и сохраняет его. Последующие попытки доступа к этому свойству возвращают этот экземпляр формы.
 
-You can dispose of a form by assigning `Nothing` to the property for that form. The property setter calls the <xref:System.Windows.Forms.Form.Close%2A> method of the form, and then assigns `Nothing` to the stored value. If you assign any value other than `Nothing` to the property, the setter throws an <xref:System.ArgumentException> exception.
+Вы можете удалить форму, назначив `Nothing` свойству этой формы. Средство задания свойств вызывает метод <xref:System.Windows.Forms.Form.Close%2A> формы, а затем присваивает `Nothing` сохраненному значению. Если присвоить свойству любое значение, отличное от `Nothing`, то метод задания выдаст исключение <xref:System.ArgumentException>.
 
-You can test whether a property of the `My.Forms` object stores an instance of the form by using the `Is` or `IsNot` operator. You can use those operators to check if the value of the property is `Nothing`.
+Можно проверить, сохраняет ли свойство объекта `My.Forms` экземпляр формы с помощью оператора `Is` или `IsNot`. С помощью этих операторов можно проверить, является ли значение свойства `Nothing`.
 
 > [!NOTE]
-> Typically, the `Is` or `IsNot` operator has to read the value of the property to perform the comparison. However, if the property currently stores `Nothing`, the property creates a new instance of the form and then returns that instance. However, the Visual Basic compiler treats the properties of the `My.Forms` object differently and allows the `Is` or `IsNot` operator to check the status of the property without altering its value.
+> Как правило, оператор `Is` или `IsNot` должен считывать значение свойства для выполнения сравнения. Однако если свойство в настоящее время хранит `Nothing`, свойство создает новый экземпляр формы, а затем возвращает этот экземпляр. Однако компилятор Visual Basic обрабатывает свойства объекта `My.Forms` по-разному и позволяет оператору `Is` или `IsNot` проверять состояние свойства без изменения его значения.
 
 ## <a name="example"></a>Пример
 
-This example changes the title of the default `SidebarMenu` form.
+В этом примере изменяется заголовок формы `SidebarMenu` по умолчанию.
 
 [!code-vb[VbVbalrMyForms#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyForms/VB/Class1.vb#2)]
 
-For this example to work, your project must have a form named `SidebarMenu`.
+Чтобы этот пример работал, проект должен иметь форму с именем `SidebarMenu`.
 
-This code will work only in a Windows Application project.
+Этот код будет работать только в проекте приложения Windows.
 
 ## <a name="requirements"></a>Требования
 
-### <a name="availability-by-project-type"></a>Availability by Project Type
+### <a name="availability-by-project-type"></a>Доступность по типу проекта
 
 |Тип проекта|Доступно|
 |---|---|
 |Приложение Windows|**Да**|
 |Библиотека классов|Нет|
 |Консольное приложение|Нет|
-|Windows Control Library|Нет|
-|Web Control Library|Нет|
-|Служба Windows|Нет|
+|Библиотека элементов управления Windows|Нет|
+|Библиотека веб-элементов управления|Нет|
+|Службы Windows|Нет|
 |Веб-сайт|Нет|
 
 ## <a name="see-also"></a>См. также

@@ -39,33 +39,33 @@ HRESULT EnumParams (
   
 ## <a name="parameters"></a>Параметры  
  `phEnum`  
- [in, out] A pointer to the enumerator. This must be NULL for the first call of this method.  
+ [вход, выход] Указатель на перечислитель. При первом вызове этого метода это значение должно быть равно NULL.  
   
  `mb`  
- [in] A MethodDef token representing the method with the parameters to enumerate.  
+ окне Токен MethodDef, представляющий метод с параметрами для перечисления.  
   
  `rParams`  
- [out] The array used to store the ParamDef tokens.  
+ заполняет Массив, используемый для хранения маркеров Парамдеф.  
   
  `cMax`  
  [in] Максимальный размер массива `rParams`.  
   
  `pcTokens`  
- [out] The number of ParamDef tokens returned in `rParams`.  
+ заполняет Число маркеров Парамдеф, возвращаемых в `rParams`.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
   
 |HRESULT|Описание|  
 |-------------|-----------------|  
-|`S_OK`|`EnumParams` returned successfully.|  
-|`S_FALSE`|There are no tokens to enumerate. In that case, `pcTokens` is zero.|  
+|`S_OK`|`EnumParams` успешно возвращено.|  
+|`S_FALSE`|Нет токенов для перечисления. В этом случае `pcTokens` равно нулю.|  
   
 ## <a name="requirements"></a>Требования  
- **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформа:** См. раздел [требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Заголовок:** COR. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Библиотека:** Используется в качестве ресурса в MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

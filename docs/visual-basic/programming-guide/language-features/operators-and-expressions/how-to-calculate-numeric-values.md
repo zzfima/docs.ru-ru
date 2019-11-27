@@ -19,13 +19,13 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348965"
 ---
 # <a name="how-to-calculate-numeric-values-visual-basic"></a>Практическое руководство. Вычисление числовых значений (Visual Basic)
-You can calculate numeric values through the use of numeric expressions. A *numeric expression* is an expression that contains literals, constants, and variables representing numeric values, and operators that act on those values.  
+Числовые значения можно вычислить с помощью числовых выражений. *Числовое выражение* представляет собой выражение, которое содержит литералы, константы и переменные, представляющие числовые значения, и операторы, действующие на эти значения.  
   
-## <a name="calculating-numeric-values"></a>Calculating Numeric Values  
+## <a name="calculating-numeric-values"></a>Вычисление числовых значений  
   
-#### <a name="to-calculate-a-numeric-value"></a>To calculate a numeric value  
+#### <a name="to-calculate-a-numeric-value"></a>Вычисление числового значения  
   
-- Combine one or more numeric literals, constants, and variables into a numeric expression. The following example shows some valid numeric expressions.  
+- Объедините один или несколько числовых литералов, констант и переменных в числовое выражение. В следующем примере показаны некоторые допустимые числовые выражения.  
   
      `93.217`  
   
@@ -35,32 +35,32 @@ You can calculate numeric values through the use of numeric expressions. A *nume
   
      `4 * (67 + i)`  
   
-     The first three lines show a literal, a constant, and a variable. Each one forms a valid numeric expression by itself. The final line shows a combination of a variable with two literals.  
+     Первые три строки показывают литерал, константу и переменную. Каждый из них формирует допустимое числовое выражение самим собой. В последней строке показано сочетание переменной с двумя литералами.  
   
-     Note that a numeric expression does not form a complete Visual Basic statement by itself. You must use the expression as part of a complete statement.  
+     Обратите внимание, что числовое выражение не формирует полную инструкцию Visual Basic сам по себе. Выражение необходимо использовать как часть полной инструкции.  
   
-#### <a name="to-store-a-numeric-value"></a>To store a numeric value  
+#### <a name="to-store-a-numeric-value"></a>Сохранение числового значения  
   
-- You can use an assignment statement to assign the value represented by a numeric expression to a variable, as the following example demonstrates.  
+- Оператор присваивания можно использовать для назначения переменной значения, представленного числовым выражением, как показано в следующем примере.  
   
      [!code-vb[VbVbalrOperators#82](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#82)]  
   
-     In the preceding example, the value of the expression on the right side of the equal operator (`=`) is assigned to the variable `j` on the left side of the operator, so `j` evaluates to 276.  
+     В предыдущем примере значение выражения в правой части оператора равенства (`=`) присваивается переменной `j` в левой части оператора, поэтому `j` вычисляется как 276.  
   
      Дополнительные сведения см. в разделе [Выписки](../../../../visual-basic/language-reference/statements/index.md).  
   
-## <a name="multiple-operators"></a>Multiple Operators  
- If the numeric expression contains more than one operator, the order in which they are evaluated is determined by the rules of operator precedence. To override the rules of operator precedence, you enclose expressions in parentheses, as in the above example; the enclosed expressions are evaluated first.  
+## <a name="multiple-operators"></a>Несколько операторов  
+ Если числовое выражение содержит более одного оператора, порядок их вычисления определяется правилами приоритета операторов. Чтобы переопределить правила приоритета операторов, заключите выражения в круглые скобки, как в приведенном выше примере. выражения, заключенные в кавычки, оцениваются первыми.  
   
-#### <a name="to-override-normal-operator-precedence"></a>To override normal operator precedence  
+#### <a name="to-override-normal-operator-precedence"></a>Переопределение приоритета обычного оператора  
   
-- Use parentheses to enclose the operations you want to be performed first. The following example shows two different results with the same operands and operators.  
+- Используйте круглые скобки, чтобы заключать операции, которые необходимо выполнить первыми. В следующем примере показаны два разных результата с одинаковыми операндами и операторами.  
   
      [!code-vb[VbVbalrOperators#83](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#83)]  
   
-     In the preceding example, the calculation for `j` performs the addition operator (`+`) first because the parentheses around `(67 + i)` override normal precedence, and the value assigned to `j` is 276 (4 times 69). The calculation for `k` performs the operators in their normal precedence (`*` before `+`), and the value assigned to `k` is 270 (268 plus 2).  
+     В предыдущем примере вычисление для `j` выполняет сначала оператор сложения (`+`), так как круглые скобки вокруг `(67 + i)` переопределяют нормальный приоритет, а значение, присваиваемое `j`, — 276 (4 раза 69). Вычисление для `k` выполняет операторы с нормальным приоритетом (`*` до `+`), а значение, назначенное `k`, равно 270 (268 плюс 2).  
   
-     For more information, see [Operator Precedence in Visual Basic](../../../../visual-basic/language-reference/operators/operator-precedence.md).  
+     Дополнительные сведения см. [в разделе приоритет операторов в Visual Basic](../../../../visual-basic/language-reference/operators/operator-precedence.md).  
   
 ## <a name="see-also"></a>См. также
 

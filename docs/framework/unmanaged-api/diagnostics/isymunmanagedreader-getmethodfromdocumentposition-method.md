@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74426734"
 ---
 # <a name="isymunmanagedreadergetmethodfromdocumentposition-method"></a>Метод ISymUnmanagedReader::GetMethodFromDocumentPosition
-Returns the method that contains the breakpoint at the given position in a document.  
+Возвращает метод, содержащий точку останова в заданной позиции в документе.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,22 +37,22 @@ HRESULT GetMethodFromDocumentPosition (
   
 ## <a name="parameters"></a>Параметры  
  `document`  
- [in] The specified document.  
+ окне Указанный документ.  
   
  `line`  
- [in] The line of the specified document.  
+ окне Строка указанного документа.  
   
  `column`  
- [in] The column of the specified document.  
+ окне Столбец указанного документа.  
   
  `pRetVal`  
- [out] A pointer to the address of a [ISymUnmanagedMethod Interface](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md) object that represents the method containing the breakpoint.  
+ заполняет Указатель на адрес объекта [интерфейса ISymUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md) , который представляет метод, содержащий точку останова.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK, если метод выполнен. в противном случае E_FAIL или другой код ошибки.  
   
 ## <a name="requirements"></a>Требования  
- **Header:** CorSym.idl, CorSym.h  
+ **Заголовок:** Корсим. idl, Корсим. h  
   
 ## <a name="see-also"></a>См. также
 

@@ -15,51 +15,51 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350341"
 ---
 # <a name="mywebservices-object"></a>Объект My.WebServices
-Provides properties for creating and accessing a single instance of each XML Web service referenced by the current project.  
+Предоставляет свойства для создания и доступа к одному экземпляру каждой веб-службы XML, на которую ссылается текущий проект.  
   
-## <a name="remarks"></a>Заметки  
- Объект `My.WebServices` предоставляет экземпляр каждой веб-службы, на которую ссылается текущий проект. Каждый экземпляр создается по запросу. Доступ к этим веб-службам можно получить через свойства объекта `My.WebServices`. Имя свойства совпадает с именем веб-службы, к которой обращается свойство. Любой класс, наследуемый от <xref:System.Web.Services.Protocols.SoapHttpClientProtocol>, является веб-службой. For information about adding Web services to a project, see [Accessing Application Web Services](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md).  
+## <a name="remarks"></a>Примечания  
+ Объект `My.WebServices` предоставляет экземпляр каждой веб-службы, на которую ссылается текущий проект. Каждый экземпляр создается по запросу. Доступ к этим веб-службам можно получить через свойства объекта `My.WebServices`. Имя свойства совпадает с именем веб-службы, к которой обращается свойство. Любой класс, наследуемый от <xref:System.Web.Services.Protocols.SoapHttpClientProtocol>, является веб-службой. Сведения о добавлении веб-служб в проект см. в разделе [доступ к веб-службам приложений](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md).  
   
- The `My.WebServices` object exposes only the Web services associated with the current project. It does not provide access to Web services declared in referenced DLLs. To access a Web service that a DLL provides, you must use the qualified name of the Web service, in the form *DllName*.*WebServiceName*. For more information, see [Accessing Application Web Services](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md).  
+ Объект `My.WebServices` предоставляет только веб-службы, связанные с текущим проектом. Он не предоставляет доступ к веб-службам, объявленным в упоминаемых в них библиотеках DLL. Для доступа к веб-службе, предоставляемой библиотекой DLL, необходимо использовать полное имя веб-службы в формате *dllname*. *WebServiceName*. Дополнительные сведения см. в разделе [доступ к веб-службам приложений](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md).  
   
- The object and its properties are not available for Web applications.  
+ Объект и его свойства недоступны для веб-приложений.  
   
 ## <a name="properties"></a>Свойства  
- Each property of the `My.WebServices` object provides access to an instance of a Web service referenced by the current project. The name of the property is the same as the name of the Web service that the property accesses, and the property type is the same as the Web service's type.  
+ Каждое свойство объекта `My.WebServices` предоставляет доступ к экземпляру веб-службы, на которую ссылается текущий проект. Имя свойства совпадает с именем веб-службы, к которой обращается свойство, а тип свойства совпадает с типом веб-службы.  
   
 > [!NOTE]
-> If there is a name collision, the property name for accessing a Web service is *RootNamespace*_*Namespace*\_*ServiceName*. For example, consider two Web services named `Service1`. If one of these services is in the root namespace `WindowsApplication1` and in the namespace `Namespace1`, you would access that service by using `My.WebServices.WindowsApplication1_Namespace1_Service1`.  
+> При конфликте имен имя свойства для доступа к веб-службе — *RootNamespace*_*Namespace*\_*ServiceName*. Например, рассмотрим две веб-службы с именем `Service1`. Если одна из этих служб находится в корневом пространстве имен `WindowsApplication1` и в `Namespace1`пространства имен, доступ к этой службе будет осуществляться с помощью `My.WebServices.WindowsApplication1_Namespace1_Service1`.  
   
- When you first access one of the `My.WebServices` object's properties, it creates a new instance of the Web service and stores it. Subsequent accesses of that property return that instance of the Web service.  
+ При первом доступе к одному из свойств объекта `My.WebServices` он создает новый экземпляр веб-службы и сохраняет его. Последующие обращения к этому свойству возвращают этот экземпляр веб-службы.  
   
- You can dispose of a Web service by assigning `Nothing` to the property for that Web service. The property setter assigns `Nothing` to the stored value. If you assign any value other than `Nothing` to the property, the setter throws an <xref:System.ArgumentException> exception.  
+ Вы можете удалить веб-службу, назначив `Nothing` свойству для этой веб-службы. Метод задания свойства присваивает `Nothing` сохраненному значению. Если присвоить свойству любое значение, отличное от `Nothing`, то метод задания выдаст исключение <xref:System.ArgumentException>.  
   
- You can test whether a property of the `My.WebServices` object stores an instance of the Web service by using the `Is` or `IsNot` operator. You can use those operators to check if the value of the property is `Nothing`.  
+ Проверить, сохраняет ли свойство объекта `My.WebServices` экземпляр веб-службы, можно с помощью оператора `Is` или `IsNot`. С помощью этих операторов можно проверить, является ли значение свойства `Nothing`.  
   
 > [!NOTE]
-> Typically, the `Is` or `IsNot` operator has to read the value of the property to perform the comparison. However, if the property currently stores `Nothing`, the property creates a new instance of the Web service and then returns that instance. However, the Visual Basic compiler treats the properties of the `My.WebServices` object specially, and allows the `Is` or `IsNot` operator to check the status of the property without altering its value.  
+> Как правило, оператор `Is` или `IsNot` должен считывать значение свойства для выполнения сравнения. Однако если свойство в настоящее время хранит `Nothing`, свойство создает новый экземпляр веб-службы, а затем возвращает этот экземпляр. Однако компилятор Visual Basic обрабатывает свойства объекта `My.WebServices` особым образом и позволяет оператору `Is` или `IsNot` проверять состояние свойства без изменения его значения.  
   
 ## <a name="example"></a>Пример  
- This example calls the `FahrenheitToCelsius` method of the `TemperatureConverter` XML Web service, and returns the result.  
+ В этом примере вызывается метод `FahrenheitToCelsius` веб-службы `TemperatureConverter` XML и возвращается результат.  
   
  [!code-vb[VbVbalrMyWebService#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyWebService/VB/Form1.vb#1)]  
   
- For this example to work, your project must reference a Web service named `Converter`, and that Web service must expose the `ConvertTemperature` method. For more information, see [Accessing Application Web Services](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md).  
+ Чтобы этот пример работал, проект должен ссылаться на веб-службу с именем `Converter`, и эта веб-служба должна предоставлять метод `ConvertTemperature`. Дополнительные сведения см. в разделе [доступ к веб-службам приложений](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md).  
   
- This code does not work in a Web application project.  
+ Этот код не работает в проекте веб-приложения.  
   
 ## <a name="requirements"></a>Требования  
   
-### <a name="availability-by-project-type"></a>Availability by Project Type  
+### <a name="availability-by-project-type"></a>Доступность по типу проекта  
   
 |Тип проекта|Доступно|  
 |---|---|  
 |Приложение Windows|**Да**|  
 |Библиотека классов|**Да**|  
 |Консольное приложение|**Да**|  
-|Windows Control Library|**Да**|  
-|Web Control Library|**Да**|  
-|Служба Windows|**Да**|  
+|Библиотека элементов управления Windows|**Да**|  
+|Библиотека веб-элементов управления|**Да**|  
+|Службы Windows|**Да**|  
 |Веб-сайт|Нет|  
   
 ## <a name="see-also"></a>См. также

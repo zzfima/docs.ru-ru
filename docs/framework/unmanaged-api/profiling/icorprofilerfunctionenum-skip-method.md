@@ -33,18 +33,18 @@ HRESULT Skip([in] ULONG celt);
   
 ## <a name="parameters"></a>Параметры  
  `celt`  
- [in] The number of elements to be skipped.  
+ окне Число пропущенных элементов.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Этот метод возвращает следующие конкретные результаты HRESULT, а также ошибки HRESULT, которые указывают на сбой метода.  
   
 |HRESULT|Описание|  
 |-------------|-----------------|  
-|S_OK|`celt` elements were skipped.|  
-|S_FALSE|Fewer than `celt` elements were skipped, which indicates that there are no more elements.|  
+|S_OK|элементы `celt` пропущены.|  
+|S_FALSE|Пропущено менее `celt` элементов, что означает, что больше нет элементов.|  
   
-## <a name="remarks"></a>Заметки  
- The new position of this enumerator's cursor is (current position) + `celt`.  
+## <a name="remarks"></a>Примечания  
+ Новая позиции курсора перечислителя — (Текущая позиции) + `celt`.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  

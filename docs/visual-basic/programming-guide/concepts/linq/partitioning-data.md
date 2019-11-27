@@ -1,5 +1,5 @@
 ---
-title: Разделение данных
+title: Секционирование данных
 ms.date: 07/20/2015
 ms.assetid: 69c59379-b66e-422c-b324-5b5c07760ef7
 ms.openlocfilehash: 2ab4e27ef6d825b9100fc3c15b7a9554ae49e516
@@ -9,7 +9,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353157"
 ---
-# <a name="partitioning-data-visual-basic"></a>Partitioning Data (Visual Basic)
+# <a name="partitioning-data-visual-basic"></a>Секционирование данных (Visual Basic)
 Секционированием в LINQ называют операцию разделения входной последовательности на два раздела без изменения порядка элементов, а затем возвращения одного из разделов.  
   
  На следующем рисунке показаны результаты трех различных операций секционирования в последовательности символов. Первая операция возвращает первые три элемента в последовательности. Вторая операция пропускает первые три элемента и возвращает остальные элементы. Третья операция пропускает первые два элемента в последовательности и возвращает три следующих элемента.  
@@ -20,7 +20,7 @@ ms.locfileid: "74353157"
   
 ## <a name="operators"></a>Операторы  
   
-|Имя оператора|Описание|Visual Basic Query Expression Syntax|Дополнительные сведения|  
+|Название оператора|Описание|Синтаксис выражения запроса Visual Basic|Дополнительные сведения|  
 |-------------------|-----------------|------------------------------------------|----------------------|  
 |Skip|Пропускает элементы до указанной позиции в последовательности.|`Skip`|<xref:System.Linq.Enumerable.Skip%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Skip%2A?displayProperty=nameWithType>|  
 |SkipWhile|Пропускает элементы, пока элемент не удовлетворит условию функции предиката.|`Skip While`|<xref:System.Linq.Enumerable.SkipWhile%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.SkipWhile%2A?displayProperty=nameWithType>|  
@@ -30,22 +30,22 @@ ms.locfileid: "74353157"
 ## <a name="query-expression-syntax-examples"></a>Примеры синтаксиса выражений запросов  
   
 ### <a name="skip"></a>Skip  
- The following code example uses the `Skip` clause in Visual Basic to skip over the first four strings in an array of strings before returning the remaining strings in the array.  
+ В следующем примере кода используется предложение `Skip` в Visual Basic, чтобы пропустить первые четыре строки в массиве строк перед возвратом оставшихся строк в массиве.  
   
  [!code-vb[CsLINQPartitioning#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/CsLINQPartitioning/VB/Partitioning.vb#1)]  
   
 ### <a name="skipwhile"></a>SkipWhile  
- The following code example uses the `Skip While` clause in Visual Basic to skip over the strings in an array while the first letter of the string is "a". The remaining strings in the array are returned.  
+ В следующем примере кода используется предложение `Skip While` в Visual Basic для пропуска строк в массиве, в то время как первая буква строки — a. Остальные строки в массиве возвращаются.  
   
  [!code-vb[CsLINQPartitioning#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/CsLINQPartitioning/VB/Partitioning.vb#2)]  
   
 ### <a name="take"></a>Take  
- The following code example uses the `Take` clause in Visual Basic to return the first two strings in an array of strings.  
+ В следующем примере кода используется предложение `Take` в Visual Basic, чтобы получить первые две строки в массиве строк.  
   
  [!code-vb[CsLINQPartitioning#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/CsLINQPartitioning/VB/Partitioning.vb#3)]  
   
 ### <a name="takewhile"></a>TakeWhile  
- The following code example uses the `Take While` clause in Visual Basic to return strings from an array while the length of the string is five or less.  
+ В следующем примере кода используется предложение `Take While` в Visual Basic для возврата строк из массива, в то время как длина строки не должна превышать 5.  
   
  [!code-vb[CsLINQPartitioning#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/CsLINQPartitioning/VB/Partitioning.vb#4)]  
   

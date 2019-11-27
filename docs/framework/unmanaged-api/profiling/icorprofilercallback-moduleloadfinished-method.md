@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445936"
 ---
 # <a name="icorprofilercallbackmoduleloadfinished-method"></a>Метод ICorProfilerCallback::ModuleLoadFinished
-Notifies the profiler that a module has finished loading.  
+Уведомляет профилировщик о завершении загрузки модуля.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -35,15 +35,15 @@ HRESULT ModuleLoadFinished(
   
 ## <a name="parameters"></a>Параметры  
  `moduleId`  
- [in] The ID of the module that has finished loading.  
+ окне Идентификатор модуля, загрузка которого завершена.  
   
  `hrStatus`  
- [in] An HRESULT that indicates whether the module was loaded successfully.  
+ окне Значение HRESULT, указывающее, успешно ли загружен модуль.  
   
-## <a name="remarks"></a>Заметки  
- The value of `moduleId` is not valid for an information request until the `ModuleLoadFinished` method is called.  
+## <a name="remarks"></a>Примечания  
+ Значение `moduleId` недопустимо для информационного запроса, пока не будет вызван метод `ModuleLoadFinished`.  
   
- Some parts of loading the module might continue after the `ModuleLoadFinished` callback. A failure HRESULT in `hrStatus` indicates a failure. However, a success HRESULT in `hrStatus` indicates only that the first part of loading the module has succeeded.  
+ Некоторые части загрузки модуля могут продолжаться после обратного вызова `ModuleLoadFinished`. Ошибка HRESULT в `hrStatus` указывает на сбой. Однако значение HRESULT успешного выполнения в `hrStatus` указывает только на то, что первая часть загрузки модуля завершилась успешно.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  

@@ -25,20 +25,20 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345876"
 ---
 # <a name="implements-clause-visual-basic"></a>Предложение Implements (Visual Basic)
-Indicates that a class or structure member is providing the implementation for a member defined in an interface.  
+Указывает, что член класса или структуры предоставляет реализацию для члена, определенного в интерфейсе.  
   
-## <a name="remarks"></a>Заметки  
-The `Implements` keyword is not the same as the [Implements Statement](../../../visual-basic/language-reference/statements/implements-statement.md). You use the `Implements` statement to specify that a class or structure implements one or more interfaces, and then for each member you use the `Implements` keyword to specify which interface and which member it implements.
+## <a name="remarks"></a>Примечания  
+Ключевое слово `Implements` не совпадает с [оператором Implements](../../../visual-basic/language-reference/statements/implements-statement.md). Используйте оператор `Implements`, чтобы указать, что класс или структура реализует один или несколько интерфейсов, а затем для каждого элемента вы используете `Implements` ключевое слово, чтобы указать, какой интерфейс и какой член он реализует.
 
-If a class or structure implements an interface, it must include the `Implements` statement immediately after the [Class Statement](../../../visual-basic/language-reference/statements/class-statement.md) or [Structure Statement](../../../visual-basic/language-reference/statements/structure-statement.md), and it must implement all the members defined by the interface.
+Если класс или структура реализует интерфейс, он должен включать инструкцию `Implements` сразу после оператора [Class](../../../visual-basic/language-reference/statements/class-statement.md) или [Structure](../../../visual-basic/language-reference/statements/structure-statement.md), и она должна реализовывать все члены, определенные интерфейсом.
 
-## <a name="reimplementation"></a>Reimplementation  
-In a derived class, you can reimplement an interface member that the base class has already implemented. This is different from overriding the base class member in the following respects:
+## <a name="reimplementation"></a>Воссоздании  
+В производном классе можно повторно реализовать член интерфейса, который уже реализован в базовом классе. Это отличается от переопределения члена базового класса в следующих отношениях.
 
-- The base class member does not need to be [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md) to be reimplemented.
-- You can reimplement the member with a different name.
+- Член базового класса не обязательно должен быть [переопределяемым](../../../visual-basic/language-reference/modifiers/overridable.md) для повторной реализации.
+- Элемент можно повторно реализовать с другим именем.
 
-The `Implements` keyword can be used in the following contexts:
+Ключевое слово `Implements` можно использовать в следующих контекстах:
 
 - [Оператор Event](../../../visual-basic/language-reference/statements/event-statement.md)
 - [Оператор Function](../../../visual-basic/language-reference/statements/function-statement.md)

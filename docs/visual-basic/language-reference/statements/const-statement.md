@@ -15,7 +15,7 @@ ms.locfileid: "74354126"
 ---
 # <a name="const-statement-visual-basic"></a>Оператор Const (Visual Basic)
 
-Declares and defines one or more constants.
+Объявляет и определяет одну или несколько констант.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -27,16 +27,16 @@ Const constantlist
 ## <a name="parts"></a>Части
 
 `attributelist`  
-Необязательный. List of attributes that apply to all the constants declared in this statement. See [Attribute List](../../../visual-basic/language-reference/statements/attribute-list.md) in angle brackets ("`<`" and "`>`").
+Необязательный элемент. Список атрибутов, которые применяются ко всем константам, объявленным в этой инструкции. См. [список атрибутов](../../../visual-basic/language-reference/statements/attribute-list.md) в угловых скобках ("`<`" и "`>`").
 
 `accessmodifier`  
-Необязательный. Use this to specify what code can access these constants. Can be [Public](../../../visual-basic/language-reference/modifiers/public.md), [Protected](../../../visual-basic/language-reference/modifiers/protected.md), [Friend](../../../visual-basic/language-reference/modifiers/friend.md), [Protected Friend](../modifiers/protected-friend.md), [Private](../../../visual-basic/language-reference/modifiers/private.md), or [Private Protected](../../language-reference/modifiers/private-protected.md).
+Необязательный элемент. Используйте его, чтобы указать, какой код может получить доступ к этим константам. Может быть [общедоступным](../../../visual-basic/language-reference/modifiers/public.md), [защищенным](../../../visual-basic/language-reference/modifiers/protected.md), [дружественным](../../../visual-basic/language-reference/modifiers/friend.md), [защищенным дружественным](../modifiers/protected-friend.md), [частным](../../../visual-basic/language-reference/modifiers/private.md)или [частным](../../language-reference/modifiers/private-protected.md).
 
 `Shadows`  
-Необязательный. Use this to redeclare and hide a programming element in a base class. See [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).
+Необязательный элемент. Используйте его для повторного объявления и скрытия программного элемента в базовом классе. См. раздел [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).
 
 `constantlist`  
-Обязательный. List of constants being declared in this statement.
+Обязательно. Список констант, объявляемых в этой инструкции.
 
 `constant` `[ ,` `constant` `... ]`
 
@@ -46,63 +46,63 @@ Const constantlist
 
 |Отделение|Описание|
 |----------|-----------------|
-|`constantname`|Обязательный. Name of the constant. См. раздел [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|
-|`datatype`|Required if `Option Strict` is `On`. Data type of the constant.|
-|`initializer`|Обязательный. Expression that is evaluated at compile time and assigned to the constant.|
+|`constantname`|Обязательно. Имя константы. См. раздел [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|
+|`datatype`|Требуется, если `Option Strict` `On`. Тип данных константы.|
+|`initializer`|Обязательно. Выражение, которое вычисляется во время компиляции и присваивается константе.|
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Примечания
 
-If you have a value that never changes in your application, you can define a named constant and use it in place of a literal value. A name is easier to remember than a value. You can define the constant just once and use it in many places in your code. If in a later version you need to redefine the value, the `Const` statement is the only place you need to make a change.
+Если у вас есть значение, которое никогда не изменяется в приложении, можно определить именованную константу и использовать ее вместо литерального значения. Имя проще запомнить, чем значение. Вы можете определить константу только один раз и использовать ее во многих местах кода. Если в более поздней версии необходимо переопределить значение, то только `Const`ная инструкция является единственным местом, которое необходимо внести в изменение.
 
-You can use `Const` only at module or procedure level. This means the *declaration context* for a variable must be a class, structure, module, procedure, or block, and cannot be a source file, namespace, or interface. Дополнительные сведения см. в разделе [Контексты объявления и уровни доступа по умолчанию](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).
+`Const` можно использовать только на уровне модуля или процедуры. Это означает, что *контекст объявления* для переменной должен быть классом, структурой, модулем, процедурой или блоком и не может быть исходным файлом, пространством имен или интерфейсом. Дополнительные сведения см. в разделе [Контексты объявления и уровни доступа по умолчанию](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).
 
-Local constants (inside a procedure) default to public access, and you cannot use any access modifiers on them. Class and module member constants (outside any procedure) default to private access, and structure member constants default to public access. You can adjust their access levels with the access modifiers.
+Локальные константы (внутри процедуры) по умолчанию имеют открытый доступ, и в них нельзя использовать какие-либо модификаторы доступа. Константы класса и члена модуля (вне любой процедуры) по умолчанию имеют частный доступ, а константы членов структуры по умолчанию имеют открытый доступ. Уровни доступа можно изменить с помощью модификаторов доступа.
 
 ## <a name="rules"></a>Правила
 
-- **Declaration Context.** A constant declared at module level, outside any procedure, is a *member constant*; it is a member of the class, structure, or module that declares it.
+- **Контекст объявления.** Константа, объявленная на уровне модуля вне любой процедуры, является *константой-членом*; Он является членом класса, структуры или модуля, объявляющего его.
 
-  A constant declared at procedure level is a *local constant*; it is local to the procedure or block that declares it.
+  Константа, объявленная на уровне процедуры, является *локальной константой*; Он является локальным для процедуры или блока, объявляющего ее.
 
-- **Attributes.** You can apply attributes only to member constants, not to local constants. An attribute contributes information to the assembly's metadata, which is not meaningful for temporary storage such as local constants.
+- **Атрибута.** Атрибуты можно применять только к константам членов, а не к локальным константам. Атрибут вносит сведения в метаданные сборки, что не имеет смысла для временного хранения, например локальных констант.
 
-- **Modifiers.** By default, all constants are `Shared`, `Static`, and `ReadOnly`. You cannot use any of these keywords when declaring a constant.
+- **Модификаторы.** По умолчанию все константы — это `Shared`, `Static`и `ReadOnly`. При объявлении константы нельзя использовать какие-либо из этих ключевых слов.
 
-  At procedure level, you cannot use `Shadows` or any access modifiers to declare local constants.
+  На уровне процедуры нельзя использовать `Shadows` или модификаторы доступа для объявления локальных констант.
 
-- **Multiple Constants.** You can declare several constants in the same declaration statement, specifying the `constantname` part for each one. Multiple constants are separated by commas.
+- **Несколько констант.** Можно объявить несколько констант в одном операторе объявления, указав `constantname` часть для каждого из них. Несколько констант разделяются запятыми.
 
-## <a name="data-type-rules"></a>Data Type Rules
+## <a name="data-type-rules"></a>Правила типов данных
 
-- **Data Types.** The `Const` statement can declare the data type of a variable. You can specify any data type or the name of an enumeration.
+- **Типы данных.** Оператор `Const` может объявлять тип данных переменной. Можно указать любой тип данных или имя перечисления.
 
-- **Default Type.** If you do not specify `datatype`, the constant takes the data type of `initializer`. If you specify both `datatype` and `initializer`, the data type of `initializer` must be convertible to `datatype`. If neither `datatype` nor `initializer` is present, the data type defaults to `Object`.
+- **Тип по умолчанию.** Если не указать `datatype`, константа принимает тип данных `initializer`. Если заданы и `datatype`, и `initializer`, тип данных `initializer` должен быть преобразован в `datatype`. Если ни `datatype`, ни `initializer` не указаны, по умолчанию используется тип данных `Object`.
 
-- **Different Types.** You can specify different data types for different constants by using a separate `As` clause for each variable you declare. However, you cannot declare several constants to be of the same type by using a common `As` clause.
+- **Различные типы.** Можно указать различные типы данных для разных констант, используя отдельное предложение `As` для каждой объявляемой переменной. Однако нельзя объявить несколько констант, имеющих один и тот же тип, используя общее предложение `As`.
 
-- **Initialization.** You must initialize the value of every constant in `constantlist`. You use `initializer` to supply an expression to be assigned to the constant. The expression can be any combination of literals, other constants that are already defined, and enumeration members that are already defined. You can use arithmetic and logical operators to combine such elements.
+- **Инициализации.** Необходимо инициализировать значение каждой константы в `constantlist`. Используйте `initializer`, чтобы указать выражение, присваиваемое константе. Выражение может быть любым сочетанием литералов, других уже определенных констант и уже определенных элементов перечисления. Для объединения таких элементов можно использовать арифметические и логические операторы.
 
-  You cannot use variables or functions in `initializer`. However, you can use conversion keywords such as `CByte` and `CShort`. You can also use `AscW` if you call it with a constant `String` or `Char` argument, since that can be evaluated at compile time.
+  В `initializer`нельзя использовать переменные или функции. Однако можно использовать ключевые слова преобразования, такие как `CByte` и `CShort`. Можно также использовать `AscW`, если он вызывается с константой `String` или аргументом `Char`, так как это может быть вычислено во время компиляции.
 
 ## <a name="behavior"></a>Поведение
 
-- **Scope.** Local constants are accessible only from within their procedure or block. Member constants are accessible from anywhere within their class, structure, or module.
+- **Которых.** Локальные константы доступны только в пределах их процедуры или блока. Константы членов доступны из любого места в своем классе, структуре или модуле.
 
-- **Qualification.** Code outside a class, structure, or module must qualify a member constant's name with the name of that class, structure, or module. Code outside a procedure or block cannot refer to any local constants within that procedure or block.
+- **Квалификацию.** Код за пределами класса, структуры или модуля должен уточнять имя константы-члена именем этого класса, структуры или модуля. Код за пределами процедуры или блока не может ссылаться на любые локальные константы в этой процедуре или блоке.
 
 ## <a name="example"></a>Пример
 
-The following example uses the `Const` statement to declare constants for use in place of literal values.
+В следующем примере оператор `Const` используется для объявления констант для использования вместо литеральных значений.
 
 [!code-vb[VbVbalrStatements#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#13)]
 
 ## <a name="example"></a>Пример
 
-If you define a constant with data type `Object`, the Visual Basic compiler gives it the type of `initializer`, instead of `Object`. In the following example, the constant `naturalLogBase` has the run-time type `Decimal`.
+Если вы определяете константу с типом данных `Object`, компилятор Visual Basic присваивает ему тип `initializer`, а не `Object`. В следующем примере константа `naturalLogBase` имеет тип времени выполнения `Decimal`.
 
 [!code-vb[VbVbalrStatements#87](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#87)]
 
-The preceding example uses the <xref:System.Type.ToString%2A> method on the <xref:System.Type> object returned by the [GetType Operator](../../../visual-basic/language-reference/operators/gettype-operator.md), because <xref:System.Type> cannot be converted to `String` using `CStr`.
+В предыдущем примере используется метод <xref:System.Type.ToString%2A> для объекта <xref:System.Type>, возвращаемого [оператором GetType](../../../visual-basic/language-reference/operators/gettype-operator.md), так как <xref:System.Type> не может быть преобразован в `String` с помощью `CStr`.
 
 ## <a name="see-also"></a>См. также
 
@@ -115,4 +115,4 @@ The preceding example uses the <xref:System.Type.ToString%2A> method on the <xre
 - [Явные и неявные преобразования](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)
 - [Константы и перечисления](../../../visual-basic/programming-guide/language-features/constants-enums/index.md)
 - [Константы и перечисления](../../../visual-basic/language-reference/constants-and-enumerations.md)
-- [Функции преобразования типов](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [Type Conversion Functions](../../../visual-basic/language-reference/functions/type-conversion-functions.md)

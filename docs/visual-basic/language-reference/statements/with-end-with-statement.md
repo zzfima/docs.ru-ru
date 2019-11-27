@@ -1,5 +1,5 @@
 ---
-title: Оператор With...End With
+title: Оператор With…End With
 ms.date: 07/20/2015
 f1_keywords:
 - vb.With
@@ -38,11 +38,11 @@ End With
 
 |Термин|Определение|
 |---|---|
-|`objectExpression`|Обязательный. Выражение, результатом которого является объект. Выражение может быть произвольно сложным и вычисляется только один раз. Результатом выражения могут быть данные любого типа, включая простейшие типы.|
-|`statements`|Необязательный. Один или несколько операторов между `With` и `End With`, которые могут ссылаться на члены объекта, создаваемого при вычислении выражения `objectExpression`.|
-|`End With`|Обязательный. Завершает определение блока `With`.|
+|`objectExpression`|Обязательно. Выражение, результатом которого является объект. Выражение может быть произвольно сложным и вычисляется только один раз. Результатом выражения могут быть данные любого типа, включая простейшие типы.|
+|`statements`|Необязательный элемент. Один или несколько операторов между `With` и `End With`, которые могут ссылаться на члены объекта, создаваемого при вычислении выражения `objectExpression`.|
+|`End With`|Обязательно. Завершает определение блока `With`.|
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Примечания
 
 С помощью `With...End With` можно выполнять последовательность операторов с указанным объектом без необходимости многократного указания имени объекта. В блоке операторов `With` члены объекта можно указывать начиная с точки, как если бы перед ней стоял объект оператора `With`.
 
@@ -64,10 +64,10 @@ End With
 
 Переходы внутрь блока операторов `With` из другой части программы запрещены.
 
-Если блок не содержит цикла, операторы выполняются только один раз. Возможно вложение структур управления различных типов. For more information, see [Nested Control Structures](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md).
+Если блок не содержит цикла, операторы выполняются только один раз. Возможно вложение структур управления различных типов. Дополнительные сведения см. в разделе [вложенные структуры управления](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md).
 
 > [!NOTE]
-> Ключевое слово `With` можно также использовать в инициализаторах объектов. For more information and examples, see [Object Initializers: Named and Anonymous Types](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md) and [Anonymous Types](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).
+> Ключевое слово `With` можно также использовать в инициализаторах объектов. Дополнительные сведения и примеры см. в разделе [инициализаторы объектов: именованные и анонимные типы](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md) и [анонимные типы](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).
 >
 > Если блок `With` используется исключительно для инициализации свойств или полей только что созданного экземпляра объекта, рекомендуется использовать для этой цели инициализатор объекта.
 

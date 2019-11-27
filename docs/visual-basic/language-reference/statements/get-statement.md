@@ -19,7 +19,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351175"
 ---
 # <a name="get-statement"></a>Оператор Get
-Declares a `Get` property procedure used to retrieve the value of a property.  
+Объявляет процедуру свойства `Get`, используемую для получения значения свойства.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -33,43 +33,43 @@ End Get
   
 |Термин|Определение|  
 |---|---|  
-|`attributelist`|Необязательный. See [Attribute List](../../../visual-basic/language-reference/statements/attribute-list.md).|  
-|`accessmodifier`|Optional on at most one of the `Get` and `Set` statements in this property. Ниже указаны доступные значения.<br /><br /> -   [Protected](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [Private](../../../visual-basic/language-reference/modifiers/private.md)<br />-   `Protected Friend`<br /><br /> См. раздел [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).|  
-|`statements`|Необязательный. One or more statements that run when the `Get` property procedure is called.|  
-|`End Get`|Обязательный. Terminates the definition of the `Get` property procedure.|  
+|`attributelist`|Необязательный элемент. См. [список атрибутов](../../../visual-basic/language-reference/statements/attribute-list.md).|  
+|`accessmodifier`|(Необязательно) не более одного из инструкций `Get` и `Set` в этом свойстве. Ниже указаны доступные значения.<br /><br /> [защищенный](../../../visual-basic/language-reference/modifiers/protected.md) -   <br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [закрытый](../../../visual-basic/language-reference/modifiers/private.md)<br />-   `Protected Friend`<br /><br /> См. раздел [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).|  
+|`statements`|Необязательный элемент. Одна или несколько инструкций, выполняемых при вызове процедуры свойства `Get`.|  
+|`End Get`|Обязательно. Завершает определение процедуры свойства `Get`.|  
   
-## <a name="remarks"></a>Заметки  
- Every property must have a `Get` property procedure unless the property is marked `WriteOnly`. The `Get` procedure is used to return the current value of the property.  
+## <a name="remarks"></a>Примечания  
+ Каждое свойство должно иметь `Get` процедуру свойства, если только свойство не помечено как `WriteOnly`. Процедура `Get` используется для возврата текущего значения свойства.  
   
- Visual Basic automatically calls a property's `Get` procedure when an expression requests the property's value.  
+ Visual Basic автоматически вызывает процедуру `Get` свойства, когда выражение запрашивает значение свойства.  
   
- The body of the property declaration can contain only the property's `Get` and `Set` procedures between the [Property Statement](../../../visual-basic/language-reference/statements/property-statement.md) and the `End Property` statement. It cannot store anything other than those procedures. In particular, it cannot store the property's current value. You must store this value outside the property, because if you store it inside either of the property procedures, the other property procedure cannot access it. The usual approach is to store the value in a [Private](../../../visual-basic/language-reference/modifiers/private.md) variable declared at the same level as the property. You must define a `Get` procedure inside the property to which it applies.  
+ Тело объявления свойства может содержать только `Get` и `Set` процедуры свойства между [оператором Property](../../../visual-basic/language-reference/statements/property-statement.md) и оператором `End Property`. Он не может хранить ничего, Кроме этих процедур. В частности, он не может хранить текущее значение свойства. Это значение необходимо хранить за пределами свойства, так как при хранении в любой из процедур свойств другая процедура свойства не может получить к ней доступ. Обычным подходом является сохранение значения в [закрытой](../../../visual-basic/language-reference/modifiers/private.md) переменной, объявленной на том же уровне, что и свойство. Необходимо определить `Get` процедуру внутри свойства, к которому она применяется.  
   
- The `Get` procedure defaults to the access level of its containing property unless you use `accessmodifier` in the `Get` statement.  
+ `Get` процедура по умолчанию имеет уровень доступа содержащего его свойства, если в инструкции `Get` не используется `accessmodifier`.  
   
 ## <a name="rules"></a>Правила  
   
-- **Mixed Access Levels.** If you are defining a read-write property, you can optionally specify a different access level for either the `Get` or the `Set` procedure, but not both. If you do this, the procedure access level must be more restrictive than the property's access level. For example, if the property is declared `Friend`, you can declare the `Get` procedure `Private`, but not `Public`.  
+- **Уровни смешанного доступа.** Если вы определяете свойство для чтения и записи, при необходимости можно указать другой уровень доступа либо для `Get`, либо для `Set` процедуры, но не для обоих. В этом случае уровень доступа процедуры должен быть более четким, чем уровень доступа свойства. Например, если свойство объявлено `Friend`, можно объявить `Get` процедуру `Private`, но не `Public`.  
   
-     If you are defining a `ReadOnly` property, the `Get` procedure represents the entire property. You cannot declare a different access level for `Get`, because that would set two access levels for the property.  
+     При определении свойства `ReadOnly` `Get` процедура представляет все свойство. Нельзя объявить другой уровень доступа для `Get`, так как для свойства будет задано два уровня доступа.  
   
-- **Return Type.** The [Property Statement](../../../visual-basic/language-reference/statements/property-statement.md) can declare the data type of the value it returns. The `Get` procedure automatically returns that data type. You can specify any data type or the name of an enumeration, structure, class, or interface.  
+- **Тип возвращаемого значения.** [Оператор Property](../../../visual-basic/language-reference/statements/property-statement.md) может объявлять тип данных возвращаемого значения. Процедура `Get` автоматически возвращает этот тип данных. Можно указать любой тип данных или имя перечисления, структуры, класса или интерфейса.  
   
-     If the `Property` statement does not specify `returntype`, the procedure returns `Object`.  
+     Если в инструкции `Property` не указано `returntype`, процедура возвращает `Object`.  
   
 ## <a name="behavior"></a>Поведение  
   
-- **Returning from a Procedure.** When the `Get` procedure returns to the calling code, execution continues within the statement that requested the property value.  
+- **Возврат из процедуры.** Когда `Get` процедура возвращается в вызывающий код, выполнение продолжится в операторе, который запросил значение свойства.  
   
-     `Get` property procedures can return a value using either the [Return Statement](../../../visual-basic/language-reference/statements/return-statement.md) or by assigning the return value to the property name. For more information, see "Return Value" in [Function Statement](../../../visual-basic/language-reference/statements/function-statement.md).  
+     `Get` процедуры свойств могут возвращать значение с помощью [оператора return](../../../visual-basic/language-reference/statements/return-statement.md) или путем присвоения возвращаемого значения имени свойства. Дополнительные сведения см. в разделе "возвращаемое значение" в [операторе Function](../../../visual-basic/language-reference/statements/function-statement.md).  
   
-     The `Exit Property` and `Return` statements cause an immediate exit from a property procedure. Any number of `Exit Property` and `Return` statements can appear anywhere in the procedure, and you can mix `Exit Property` and `Return` statements.  
+     Операторы `Exit Property` и `Return` вызывают немедленный выход из процедуры свойства. Любое число инструкций `Exit Property` и `Return` может использоваться в любом месте процедуры, и можно смешивать `Exit Property` и `Return` операторы.  
   
-- **Return Value.** To return a value from a `Get` procedure, you can either assign the value to the property name or include it in a [Return Statement](../../../visual-basic/language-reference/statements/return-statement.md). The `Return` statement simultaneously assigns the `Get` procedure return value and exits the procedure.  
+- **Возвращаемое значение.** Чтобы вернуть значение из `Get` процедуры, можно либо присвоить значение имени свойства, либо включить его в [оператор return](../../../visual-basic/language-reference/statements/return-statement.md). Оператор `Return` одновременно присваивает возвращаемое значение хранимой процедуры `Get` и завершает процедуру.  
   
-     If you use `Exit Property` without assigning a value to the property name, the `Get` procedure returns the default value for the property's data type. For more information, see "Return Value" in [Function Statement](../../../visual-basic/language-reference/statements/function-statement.md).  
+     Если вы используете `Exit Property` без присвоения значения имени свойства, процедура `Get` возвращает значение по умолчанию для типа данных свойства. Дополнительные сведения см. в разделе "возвращаемое значение" в [операторе Function](../../../visual-basic/language-reference/statements/function-statement.md).  
   
-     The following example illustrates two ways the read-only property `quoteForTheDay` can return the value held in the private variable `quoteValue`.  
+     В следующем примере показаны два способа, которым свойство только для чтения `quoteForTheDay` может возвращать значение, удерживаемое в закрытой переменной `quoteValue`.  
   
      [!code-vb[VbVbalrStatements#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#27)]  
   
@@ -78,7 +78,7 @@ End Get
      [!code-vb[VbVbalrStatements#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#29)]  
   
 ## <a name="example"></a>Пример  
- The following example uses the `Get` statement to return the value of a property.  
+ В следующем примере оператор `Get` используется для получения значения свойства.  
   
  [!code-vb[VbVbalrStatements#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#30)]  
   

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74441763"
 ---
 # <a name="imetadataemitsetclasslayout-method"></a>Метод IMetaDataEmit::SetClassLayout
-Completes the layout of fields for a class that has been defined by a prior call to [DefineTypeDef Method](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md).  
+Завершает компоновку полей для класса, который был определен при предыдущем вызове [метода дефинетипедеф](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,32 +38,32 @@ HRESULT SetClassLayout (
   
 ## <a name="parameters"></a>Параметры  
  `td`  
- [in] An `mdTypeDef` token that specifies the class to be laid out.  
+ окне Токен `mdTypeDef`, указывающий класс для размещения.  
   
  `dwPackSize`  
- [in] The packing size: 1, 2, 4, 8 or 16 bytes. The packing size is the number of bytes between adjacent fields.  
+ окне Размер упаковки: 1, 2, 4, 8 или 16 байт. Размер упаковки — это число байтов между смежными полями.  
   
  `rFieldOffsets`  
- [in] An array of [COR_FIELD_OFFSET](../../../../docs/framework/unmanaged-api/metadata/cor-field-offset-structure.md) structures, each of which specifies a field of the class and the field's offset within the class. Terminate the array with `mdTokenNil`.  
+ окне Массив структур [COR_FIELD_OFFSET](../../../../docs/framework/unmanaged-api/metadata/cor-field-offset-structure.md) , каждый из которых задает поле класса и смещение поля в пределах класса. Завершите работу массива `mdTokenNil`.  
   
  `ulClassSize`  
- [in] The size, in bytes, of the class.  
+ окне Размер класса в байтах.  
   
-## <a name="remarks"></a>Заметки  
- The class is initially defined by calling the [IMetaDataEmit::DefineTypeDef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md) method, and specifying one of three layouts for the fields of the class: automatic, sequential, or explicit. Normally, you would use automatic layout and let the runtime choose the best way to lay out the fields.  
+## <a name="remarks"></a>Примечания  
+ Класс изначально определяется путем вызова метода [IMetaDataEmit::D ефинетипедеф](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md) и указания одного из трех макетов для полей класса: Automatic, последовательный или явный. Как правило, вы используете автоматическую разметку и позволяете среде выполнения выбрать лучший способ размещения полей.  
   
- However, you might want the fields laid out according to the arrangement that unmanaged code uses. In this case, choose either sequential or explicit layout and call `SetClassLayout` to complete the layout of the fields:  
+ Однако может потребоваться, чтобы поля были размещены в соответствии с расположением, используемым неуправляемым кодом. В этом случае выберите последовательный или явный макет и вызовите `SetClassLayout`, чтобы завершить компоновку полей:  
   
-- Sequential layout: Specify the packing size. A field is aligned according to either its natural size or the packing size, whichever results in the smaller offset of the field. Set `rFieldOffsets` and `ulClassSize` to zero.  
+- Последовательный макет: укажите размер упаковки. Поле выстраивается в соответствии с его естественным размером или упаковочным размером, в зависимости от того, что приводит к уменьшению смещения поля. Установите `rFieldOffsets` и `ulClassSize` в ноль.  
   
-- Explicit layout: Either specify the offset of each field or specify the class size and the packing size.  
+- Явный макет. либо укажите смещение каждого поля, либо укажите размер класса и размер упаковки.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Заголовок:** COR. h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **Библиотека:** Используется в качестве ресурса в MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

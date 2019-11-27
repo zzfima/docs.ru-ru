@@ -1,5 +1,5 @@
 ---
-title: Структура COR_NATIVE_LINK
+title: COR_NATIVE_LINK Structure
 ms.date: 03/30/2017
 api_name:
 - COR_NATIVE_LINK
@@ -21,7 +21,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74443957"
 ---
-# <a name="cor_native_link-structure"></a>Структура COR_NATIVE_LINK
+# <a name="cor_native_link-structure"></a>COR_NATIVE_LINK Structure
 Содержит сведения, используемые для связи с машинным кодом.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -39,16 +39,16 @@ typedef struct
   
 |Член|Описание|  
 |------------|-----------------|  
-|`m_linkType`|The type to be linked in native code. This value is one of the [CorNativeLinkType](../../../../docs/framework/unmanaged-api/metadata/cornativelinktype-enumeration.md) values.|  
-|`m_flags`|Flags used by the linker when linking native code. This value is one of the [CorNativeLinkFlags](../../../../docs/framework/unmanaged-api/metadata/cornativelinkflags-enumeration.md) values.|  
-|`m_entryPoint`|The MemberRef metadata token that represents the entry point. The format is `lib:entrypoint`.|  
+|`m_linkType`|Тип, который должен быть связан в машинном коде. Это значение является одним из значений [корнативелинктипе](../../../../docs/framework/unmanaged-api/metadata/cornativelinktype-enumeration.md) .|  
+|`m_flags`|Флаги, используемые компоновщиком при связывании машинного кода. Это значение является одним из значений [CorNativeLinkFlags](../../../../docs/framework/unmanaged-api/metadata/cornativelinkflags-enumeration.md) .|  
+|`m_entryPoint`|Токен метаданных MemberRef, представляющий точку входа. Формат `lib:entrypoint`.|  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Заголовок:** COR. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Библиотека:** Используется в качестве ресурса в MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

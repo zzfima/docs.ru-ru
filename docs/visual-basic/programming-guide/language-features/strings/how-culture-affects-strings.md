@@ -13,73 +13,73 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352480"
 ---
 # <a name="how-culture-affects-strings-in-visual-basic"></a>Влияние языка и региональных параметров на строки в Visual Basic
-This Help page discusses how Visual Basic uses culture information to perform string conversions and comparisons.  
+На этой странице справки обсуждается, как Visual Basic использует сведения о языке и региональных параметрах для преобразования строк и сравнения.  
   
-## <a name="when-to-use-culture-specific-strings"></a>When to Use Culture-Specific Strings  
- Typically, you should use culture-specific strings for all data presented to and read from users, and use culture-invariant strings for your application's internal data.  
+## <a name="when-to-use-culture-specific-strings"></a>Когда следует использовать строки, относящиеся к языку и региональным параметрам  
+ Как правило, следует использовать строки, зависящие от языка и региональных параметров, для всех данных, представленных и считываемых пользователями, и использовать строки инвариантных языка и региональных параметров для внутренних данных приложения.  
   
- For example, if your application asks users to enter a date as a string, it should expect users to format the strings according to their culture, and the application should convert the string appropriately. If your application then presents that date in its user interface, it should present it in the user's culture.  
+ Например, если приложение запрашивает у пользователей ввод даты в виде строки, оно должно предполагать, что пользователи будут форматировать строки в соответствии с их культурой, и приложение должно соответствующим образом преобразовать строку. Если приложение затем представляет эту дату в пользовательском интерфейсе, оно должно быть представлено в культуре пользователя.  
   
- However, if the application uploads the date to a central server, it should format the string according to one specific culture, to prevent confusion between potentially different date formats.  
+ Однако если приложение передает дату на центральный сервер, то она должна отформатировать строку в соответствии с одной конкретной культурой, чтобы предотвратить путаницу между потенциально разными форматами даты.  
   
-## <a name="culture-sensitive-functions"></a>Culture-Sensitive Functions  
- All of the Visual Basic string-conversion functions (except for the `Str` and `Val` functions) use the application's culture information to make sure that the conversions and comparisons are appropriate for the culture of the application's user.  
+## <a name="culture-sensitive-functions"></a>Функции с учетом языка и региональных параметров  
+ Все функции преобразования строк Visual Basic (за исключением функций `Str` и `Val`) используют сведения о языке и региональных параметрах приложения, чтобы гарантировать, что преобразования и сравнения подходят для языка и региональных параметров пользователя приложения.  
   
- The key to successfully using string-conversion functions in applications that run on computers with different culture settings is to understand which functions use a specific culture setting, and which use the current culture setting. Notice that the application's culture settings are, by default, inherited from the culture settings of the operating system. For more information, see <xref:Microsoft.VisualBasic.Strings.Asc%2A>, <xref:Microsoft.VisualBasic.Strings.AscW%2A>, <xref:Microsoft.VisualBasic.Strings.Chr%2A>, <xref:Microsoft.VisualBasic.Strings.ChrW%2A>, <xref:Microsoft.VisualBasic.Strings.Format%2A>, <xref:Microsoft.VisualBasic.Conversion.Hex%2A>, <xref:Microsoft.VisualBasic.Conversion.Oct%2A>, and [Type Conversion Functions](../../../../visual-basic/language-reference/functions/type-conversion-functions.md).  
+ Ключом к успешному использованию функций преобразования строк в приложениях, работающих на компьютерах с различными параметрами языка и региональных параметров, является понимание того, какие функции используют конкретный параметр языка и региональных параметров, и используется текущий параметр языка и региональных параметров. Обратите внимание, что параметры языка и региональных параметров приложения по умолчанию унаследованы от региональных параметров операционной системы. Дополнительные сведения см. в разделе функции <xref:Microsoft.VisualBasic.Strings.Asc%2A>, <xref:Microsoft.VisualBasic.Strings.AscW%2A>, <xref:Microsoft.VisualBasic.Strings.Chr%2A>, <xref:Microsoft.VisualBasic.Strings.ChrW%2A>, <xref:Microsoft.VisualBasic.Strings.Format%2A>, <xref:Microsoft.VisualBasic.Conversion.Hex%2A>, <xref:Microsoft.VisualBasic.Conversion.Oct%2A>и [преобразования типов](../../../../visual-basic/language-reference/functions/type-conversion-functions.md).  
   
- The `Str` (converts numbers to strings) and `Val` (converts strings to numbers) functions do not use the application's culture information when converting between strings and numbers. Instead, they recognize only the period (.) as a valid decimal separator. The culturally-aware analogues of these functions are:  
+ `Str` (преобразует числа в строки) и `Val` (преобразует строки в числа) функции не используют сведения о языке и региональных параметрах приложения при преобразовании между строками и числами. Вместо этого они распознают только точку (.) в качестве допустимого десятичного разделителя. Аналогами этих функций, учитывающими культурные особенности, являются:  
   
-- **Conversions that use the current culture.** The `CStr` and `Format` functions convert a number to a string, and the `CDbl` and `CInt` functions convert a string to a number.  
+- **Преобразования, использующие текущий язык и региональные параметры.** Функции `CStr` и `Format` преобразуют число в строку, а функции `CDbl` и `CInt` преобразуют строку в число.  
   
-- **Conversions that use a specific culture.** Each number object has a `ToString(IFormatProvider)` method that converts a number to a string, and a `Parse(String, IFormatProvider)` method that converts a string to a number. For example, the `Double` type provides the <xref:System.Double.ToString%28System.IFormatProvider%29> and <xref:System.Double.Parse%28System.String%2CSystem.IFormatProvider%29> methods.  
+- **Преобразования, использующие конкретный язык и региональные параметры.** Каждый объект Number имеет `ToString(IFormatProvider)` метод, который преобразует число в строку, и метод `Parse(String, IFormatProvider)`, который преобразует строку в число. Например, тип `Double` предоставляет методы <xref:System.Double.ToString%28System.IFormatProvider%29> и <xref:System.Double.Parse%28System.String%2CSystem.IFormatProvider%29>.  
   
  Дополнительные сведения см. в разделах <xref:Microsoft.VisualBasic.Conversion.Str%2A> и <xref:Microsoft.VisualBasic.Conversion.Val%2A>.  
   
-## <a name="using-a-specific-culture"></a>Using a Specific Culture  
- Imagine that you are developing an application that sends a date (formatted as a string) to a Web service. In this case, your application must use a specific culture for the string conversion. To illustrate why, consider the result of using the date's <xref:System.DateTime.ToString> method: If your application uses that method to format the date July 4, 2005, it returns "7/4/2005 12:00:00 AM" when run with the United States English (en-US) culture, but it returns "04.07.2005 00:00:00" when run with the German (de-DE) culture.  
+## <a name="using-a-specific-culture"></a>Использование определенного языка и региональных параметров  
+ Представьте, что вы разрабатываете приложение, которое отправляет в веб-службу дату (в формате строки). В этом случае приложение должно использовать определенную культуру для преобразования строк. Чтобы проиллюстрировать причину, рассмотрим результат использования метода <xref:System.DateTime.ToString> даты: Если приложение использует этот метод для форматирования даты 4 июля 2005, то при запуске с использованием языка и региональных параметров США English (EN-US) возвращается "7/4/2005 12:00:00 AM", но при запуске с использованием немецкого языка (de-DE) он возвращает "04.07.2005 00:00:00".  
   
- When you need to perform a string conversion in a specific culture format, you should use the `CultureInfo` class that is built into the .NET Framework. You can create a new `CultureInfo` object for a specific culture by passing the culture's name to the <xref:System.Globalization.CultureInfo.%23ctor%2A> constructor. The supported culture names are listed in the <xref:System.Globalization.CultureInfo> class Help page.  
+ Если необходимо выполнить преобразование строк в определенном формате языка и региональных параметров, следует использовать класс `CultureInfo`, встроенный в .NET Framework. Можно создать новый объект `CultureInfo` для определенного языка и региональных параметров, передав имя языка и региональных параметров в конструктор <xref:System.Globalization.CultureInfo.%23ctor%2A>. Поддерживаемые имена языков и региональных параметров перечислены на странице справки <xref:System.Globalization.CultureInfo> класса.  
   
- Alternatively, you can get an instance of the *invariant culture* from the <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> property. The invariant culture is based on the English culture, but there are some differences. For example, the invariant culture specifies a 24-hour clock instead of a 12-hour clock.  
+ Кроме того, можно получить экземпляр *инвариантного языка и региональных параметров* из свойства <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>. Инвариантный язык и региональные параметры основаны на английской культуре, но есть некоторые различия. Например, инвариантный язык и региональные параметры задают 24-часовой формат времени вместо 12-часового.  
   
- To convert a date to the culture's string, pass the <xref:System.Globalization.CultureInfo> object to the date object's <xref:System.DateTime.ToString%28System.IFormatProvider%29> method. For example, the following code displays "07/04/2005 00:00:00", regardless of the application's culture settings.  
+ Чтобы преобразовать дату в строку языка и региональных параметров, передайте объект <xref:System.Globalization.CultureInfo> в метод <xref:System.DateTime.ToString%28System.IFormatProvider%29> объекта Date. Например, следующий код отображает "07/04/2005 00:00:00", независимо от настроек языка и региональных параметров приложения.  
   
  [!code-vb[VbVbalrConcepts#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConcepts/VB/Class1.vb#1)]  
   
 > [!NOTE]
-> Date literals are always interpreted according to the English culture.  
+> Литералы даты всегда обрабатываются в соответствии с языком и региональными параметрами английского языка.  
   
 ## <a name="comparing-strings"></a>Сравнение строк  
- There are two important situations where string comparisons are needed:  
+ Существуют две важные ситуации, в которых требуется сравнение строк:  
   
-- **Sorting data for display to the user.** Use operations based on the current culture so the strings sort appropriately.  
+- **Сортировка данных для просмотра пользователю.** Используйте операции на основе текущего языка и региональных параметров, чтобы строки были отсортированы соответствующим образом.  
   
-- **Determining if two application-internal strings exactly match (typically for security purposes).** Use operations that disregard the current culture.  
+- **Определение точного совпадения двух внутренних строк приложения (обычно в целях безопасности).** Используйте операции, которые не учитывают текущий язык и региональные параметры.  
   
- You can perform both types of comparisons with the Visual Basic <xref:Microsoft.VisualBasic.Strings.StrComp%2A> function. Specify the optional `Compare` argument to control the type of comparison: `Text` for most input and output `Binary` for determining exact matches.  
+ Оба типа сравнений можно выполнять с помощью функции Visual Basic <xref:Microsoft.VisualBasic.Strings.StrComp%2A>. Укажите необязательный аргумент `Compare` для управления типом сравнения: `Text` для большинства входных и выходных данных `Binary` для определения точных совпадений.  
   
- The `StrComp` function returns an integer that indicates the relationship between the two compared strings based on the sorting order. A positive value for the result indicates that the first string is greater than the second string. A negative result indicates the first string is smaller, and zero indicates equality between the strings.  
+ Функция `StrComp` возвращает целое число, указывающее связь между двумя сравниваемыми строками на основе порядка сортировки. Положительное значение для результата указывает, что первая строка больше, чем вторая строка. Отрицательный результат указывает, что первая строка меньше, а нулевое значение указывает на равенство между строками.  
   
  [!code-vb[VbVbalrStrings#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#22)]  
   
- You can also use the .NET Framework partner of the `StrComp` function, the <xref:System.String.Compare%2A?displayProperty=nameWithType> method. This is a static, overloaded method of the base string class. The following example illustrates how this method is used:  
+ Можно также использовать .NET Frameworkный участник функции `StrComp`, метод <xref:System.String.Compare%2A?displayProperty=nameWithType>. Это статический перегруженный метод базового класса String. В следующем примере показано, как используется этот метод:  
   
  [!code-vb[VbVbalrStrings#48](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#48)]  
   
- For finer control over how the comparisons are performed, you can use additional overloads of the <xref:System.String.Compare%2A> method. With the <xref:System.String.Compare%2A?displayProperty=nameWithType> method, you can use the `comparisonType` argument to specify which type of comparison to use.  
+ Для более точного контроля над выполнением сравнений можно использовать дополнительные перегрузки метода <xref:System.String.Compare%2A>. Используя метод <xref:System.String.Compare%2A?displayProperty=nameWithType>, можно использовать аргумент `comparisonType`, чтобы указать тип сравнения для использования.  
   
-|Value for `comparisonType` argument|Type of comparison|Время использования|  
+|Значение аргумента `comparisonType`|Тип сравнения|Время использования|  
 |---|---|---|  
-|`Ordinal`|Comparison based on strings' component bytes.|Use this value when comparing: case-sensitive identifiers, security-related settings, or other non-linguistic identifiers where the bytes must match exactly.|  
-|`OrdinalIgnoreCase`|Comparison based on strings' component bytes.<br /><br /> `OrdinalIgnoreCase` uses the invariant culture information to determine when two characters differ only in capitalization.|Use this value when comparing: case-insensitive identifiers, security-related settings, and data stored in Windows.|  
-|`CurrentCulture` или `CurrentCultureIgnoreCase`|Comparison based on the strings' interpretation in the current culture.|Use these values when comparing: data that is displayed to the user, most user input, and other data that requires linguistic interpretation.|  
-|`InvariantCulture` или `InvariantCultureIgnoreCase`|Comparison based on the strings' interpretation in the invariant culture.<br /><br /> This is different than the `Ordinal` and `OrdinalIgnoreCase`, because the invariant culture treats characters outside its accepted range as equivalent invariant characters.|Use these values only when comparing persisting data or displaying linguistically-relevant data that requires a fixed sort order.|  
+|`Ordinal`|Сравнение на основе байтов компонента строк.|Используйте это значение при сравнении: идентификаторы с учетом регистра, параметры, связанные с безопасностью, или другие нелингвистические идентификаторы, где байты должны точно совпадать.|  
+|`OrdinalIgnoreCase`|Сравнение на основе байтов компонента строк.<br /><br /> `OrdinalIgnoreCase` использует инвариантные сведения о культуре, чтобы определить, когда два символа отличаются только прописными буквами.|Используйте это значение при сравнении: идентификаторы без учета регистра, параметры, связанные с безопасностью, и данные, хранящиеся в Windows.|  
+|`CurrentCulture` или `CurrentCultureIgnoreCase`|Сравнение на основе интерпретации строк в текущем языке и региональных параметрах.|Используйте эти значения при сравнении: данные, отображаемые пользователю, большинство вводимых пользователем данных и другие данные, для которых требуется лингвистическая интерпретация.|  
+|`InvariantCulture` или `InvariantCultureIgnoreCase`|Сравнение на основе интерпретации строк в инвариантном языке и региональных параметрах.<br /><br /> Это отличается от `Ordinal` и `OrdinalIgnoreCase`, поскольку инвариантные язык и региональные параметры рассматривают символы за пределами принятого диапазона как эквивалентные инвариантные символы.|Используйте эти значения только при сравнении сохраняемых данных или при отображении лингвистических релевантных данных, для которых требуется фиксированный порядок сортировки.|  
   
 ### <a name="security-considerations"></a>Вопросы безопасности  
- If your application makes security decisions based on the result of a comparison or case-change operation, then the operation should use the <xref:System.String.Compare%2A?displayProperty=nameWithType> method, and pass `Ordinal` or `OrdinalIgnoreCase` for the `comparisonType` argument.  
+ Если приложение принимает решения по обеспечению безопасности на основе результатов операции сравнения или изменения регистра, то операция должна использовать метод <xref:System.String.Compare%2A?displayProperty=nameWithType> и передавать `Ordinal` или `OrdinalIgnoreCase` аргументу `comparisonType`.  
   
 ## <a name="see-also"></a>См. также
 
 - <xref:System.Globalization.CultureInfo>
 - [Знакомство со строками в Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)
-- [Функции преобразования типов](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [Type Conversion Functions](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)

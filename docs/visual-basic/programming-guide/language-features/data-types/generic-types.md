@@ -48,7 +48,7 @@ ms.locfileid: "74350124"
   
  В качестве аналогии можно привести отвертку со съемными головками. Вы смотрите на шуруп, который нужно завинтить, и выбираете подходящую головку (шлицевую, крестовую или звездообразную). Меняя головки, вы выполняете с помощью отвертки одну и ту же функцию: завинчиваете или вывинчиваете шуруп.  
   
- ![Diagram of a screwdriver set with different heads.](./media/generic-types/generic-screwdriver-set.gif)  
+ ![Схема отвертки с различными заголовками.](./media/generic-types/generic-screwdriver-set.gif)  
   
  При определении универсального типа его можно параметризовать с помощью одного или нескольких типов данных. Это позволяет использовать код, чтобы адаптировать типы данных к его требованиям. В коде можно объявить несколько различных элементов программирования из универсального элемента, каждый из которых действует для разных наборов типов данных. Но все объявленные элементы подчиняются одинаковой логике, независимо от того, какие типы данных они используют.  
   
@@ -73,10 +73,10 @@ ms.locfileid: "74350124"
   
  [!code-vb[VbVbalrDataTypes#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#4)]  
   
- For a more complete example, see [How to: Define a Class That Can Provide Identical Functionality on Different Data Types](../../../../visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md).  
+ Более полный пример см. в разделе [как определить класс, который может обеспечить идентичную функциональность для различных типов данных](../../../../visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md).  
   
 ## <a name="eligible-programming-elements"></a>Допустимые элементы программирования  
- Можно определять и использовать универсальные классы, структуры, интерфейсы, процедуры и делегаты. Note that the .NET Framework defines several generic classes, structures, and interfaces that represent commonly used generic elements. Пространство имен <xref:System.Collections.Generic?displayProperty=nameWithType> предоставляет словари, списки, очереди и стеки. Перед определением собственного универсального элемента посмотрите, не существует ли он уже в <xref:System.Collections.Generic?displayProperty=nameWithType>.  
+ Можно определять и использовать универсальные классы, структуры, интерфейсы, процедуры и делегаты. Обратите внимание, что .NET Framework определяет несколько универсальных классов, структур и интерфейсов, представляющих часто используемые универсальные элементы. Пространство имен <xref:System.Collections.Generic?displayProperty=nameWithType> предоставляет словари, списки, очереди и стеки. Перед определением собственного универсального элемента посмотрите, не существует ли он уже в <xref:System.Collections.Generic?displayProperty=nameWithType>.  
   
  Процедуры не являются типами, но можно определять и использовать универсальные процедуры. См. раздел [Generic Procedures in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md).  
   
@@ -91,7 +91,7 @@ ms.locfileid: "74350124"
   
 - **Безопасность.** Универсальные типы обеспечивают проверку типов во время компиляции. Типы на основе `Object` принимают любой тип данных, и необходимо написать код, чтобы проверить, является ли тип входных данных приемлемым. При использовании универсальных типов компилятор может перехватить несоответствие типов до выполнения.  
   
-- **Производительность.** Универсальные типы не должны *упаковывать* и *распаковывать* данные, так как каждый из них является специальным для одного типа данных. Операции, основанные на `Object` , должны упаковывать типы входных данных для их преобразования в `Object` и распаковать данные, предназначенные для вывода. Упаковка и распаковка снижают производительность.  
+- **Производительность.** Универсальные типы не должны *упаковывать* и *unупаковывать* данные, так как каждый из них является специальным для одного типа данных. Операции, основанные на `Object` , должны упаковывать типы входных данных для их преобразования в `Object` и распаковать данные, предназначенные для вывода. Упаковка и распаковка снижают производительность.  
   
      Типы на основе `Object` имеют позднее связывание, а значит, для доступа к их элементам требуется дополнительный код во время выполнения. Это также снижает производительность.  
   
@@ -116,7 +116,7 @@ ms.locfileid: "74350124"
 ### <a name="types-of-constraints"></a>Типы ограничений  
  Ограничение может содержать приведенные ниже требования в любой комбинации.  
   
-- Аргумент типа должен реализовывать один или несколько интерфейсов.  
+- Аргумент типа должен реализовывать один или несколько интерфейсов  
   
 - Аргумент типа должен наследовать только из одного класса или быть типом только одного класса.  
   
@@ -124,7 +124,7 @@ ms.locfileid: "74350124"
   
 - Аргумент типа должен быть *типом ссылки*или *типом значения*.  
   
- Если нужно задать более одного требования, используйте разделенный запятыми *список ограничений* , заключенный в фигурные скобки (`{ }`). To require an accessible constructor, you include the [New Operator](../../../../visual-basic/language-reference/operators/new-operator.md) keyword in the list. Чтобы требовать ссылочный тип, включите ключевое слово `Class` . Чтобы требовать тип значения, включите ключевое слово `Structure` .  
+ Если нужно задать более одного требования, используйте разделенный запятыми *список ограничений* , заключенный в фигурные скобки (`{ }`). Чтобы запросить доступный конструктор, включите в список ключевое слово [New operator](../../../../visual-basic/language-reference/operators/new-operator.md) . Чтобы требовать ссылочный тип, включите ключевое слово `Class` . Чтобы требовать тип значения, включите ключевое слово `Structure` .  
   
  Дополнительные сведения об ограничениях см. в разделе [Type List](../../../../visual-basic/language-reference/statements/type-list.md).  
   
@@ -150,8 +150,8 @@ ms.locfileid: "74350124"
 
 - [Типы данных](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
 - [Знаки типов](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)
-- [Типы значений и ссылочные типы](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
-- [Type Conversions in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+- [Преобразования типов в Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
 - [Устранение неполадок, связанных с типами данных](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
 - [Типы данных](../../../../visual-basic/language-reference/data-types/index.md)
 - [Of](../../../../visual-basic/language-reference/statements/of-clause.md)

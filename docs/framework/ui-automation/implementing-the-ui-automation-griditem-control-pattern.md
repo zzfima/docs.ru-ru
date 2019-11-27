@@ -29,7 +29,7 @@ ms.locfileid: "74435250"
   
 - Объединенные ячейки будут передавать свои свойства <xref:System.Windows.Automation.Provider.IGridItemProvider.Row%2A> и <xref:System.Windows.Automation.Provider.IGridItemProvider.Column%2A> на основе свойств их базовой ячейки привязки в соответствии с определением в поставщике автоматизации пользовательского интерфейса. Как правило, это будет самая верхняя строка и крайний левый столбец.  
   
-- <xref:System.Windows.Automation.Provider.IGridItemProvider> не предусматривает активные манипуляции с сеткой, такие как объединение или разбиение ячеек.  
+- <xref:System.Windows.Automation.Provider.IGridItemProvider> не обеспечивает активную обработку сетки, например объединение или разбиение ячеек.  
   
 - Элементы управления, реализующие <xref:System.Windows.Automation.Provider.IGridItemProvider>, обычно могут быть пройдены (то есть клиент автоматизации пользовательского интерфейса может переходить в соседние элементы управления) с помощью клавиатуры.  
   
@@ -39,11 +39,11 @@ ms.locfileid: "74435250"
   
 |Обязательные члены|Тип члена|Примечания|  
 |----------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IGridItemProvider.Row%2A>|свойство;|Отсутствуют|  
-|<xref:System.Windows.Automation.Provider.IGridItemProvider.Column%2A>|свойство;|Отсутствуют|  
-|<xref:System.Windows.Automation.Provider.IGridItemProvider.RowSpan%2A>|свойство;|Отсутствуют|  
-|<xref:System.Windows.Automation.Provider.IGridItemProvider.ColumnSpan%2A>|свойство;|Отсутствуют|  
-|<xref:System.Windows.Automation.Provider.IGridItemProvider.ContainingGrid%2A>|свойство;|Отсутствуют|  
+|<xref:System.Windows.Automation.Provider.IGridItemProvider.Row%2A>|Свойство|Нет|  
+|<xref:System.Windows.Automation.Provider.IGridItemProvider.Column%2A>|Свойство|Нет|  
+|<xref:System.Windows.Automation.Provider.IGridItemProvider.RowSpan%2A>|Свойство|Нет|  
+|<xref:System.Windows.Automation.Provider.IGridItemProvider.ColumnSpan%2A>|Свойство|Нет|  
+|<xref:System.Windows.Automation.Provider.IGridItemProvider.ContainingGrid%2A>|Свойство|Нет|  
   
  Этот шаблон элемента управления не имеет связанных методов или событий.  
   

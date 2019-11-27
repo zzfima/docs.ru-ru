@@ -17,33 +17,33 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353965"
 ---
 # <a name="decision-structures-visual-basic"></a>Структуры решений (Visual Basic)
-Visual Basic lets you test conditions and perform different operations depending on the results of that test. You can test for a condition being true or false, for various values of an expression, or for various exceptions generated when you execute a series of statements.  
+Visual Basic позволяет тестировать условия и выполнять различные операции в зависимости от результатов этого теста. Можно проверить наличие условия, которое имеет значение true или false, для различных значений выражения или для различных исключений, создаваемых при выполнении последовательности инструкций.  
   
- The following illustration shows a decision structure that tests for a condition being true and takes different actions depending on whether it is true or false.  
+ На следующем рисунке показана структура принятия решений, которая проверяет истинность условия и принимает различные действия в зависимости от того, имеет ли оно значение true или false.  
   
- ![A flow chart of an If...Then...Else construction.](./media/decision-structures/if-then-else-construction.gif)  
+ ![Блок-схема If...Then...Else.](./media/decision-structures/if-then-else-construction.gif)  
   
-## <a name="ifthenelse-construction"></a>If...Then...Else Construction  
- `If...Then...Else` constructions let you test for one or more conditions and run one or more statements depending on each condition. You can test conditions and take actions in the following ways:  
+## <a name="ifthenelse-construction"></a>If...Then...Else, конструкция  
+ `If...Then...Else`ные конструкции позволяют проверить одно или несколько условий и выполнить одну или несколько инструкций в зависимости от каждого условия. Проверить условия и выполнить действия можно следующими способами.  
   
-- Run one or more statements if a condition is `True`  
+- Выполнить одну или несколько инструкций, если условие имеет значение `True`  
   
-- Run one or more statements if a condition is `False`  
+- Выполнить одну или несколько инструкций, если условие имеет значение `False`  
   
-- Run some statements if a condition is `True` and others if it is `False`  
+- Выполните некоторые инструкции, если условие `True` и другие, если это `False`  
   
-- Test an additional condition if a prior condition is `False`  
+- Протестируйте дополнительное условие, если предыдущие условия `False`  
   
- The control structure that offers all these possibilities is the [If...Then...Else Statement](../../../../visual-basic/language-reference/statements/if-then-else-statement.md). You can use a single-line version if you have just one test and one statement to run. If you have a more complex set of conditions and actions, you can use the multiple-line version.  
+ Структура элемента управления, которая предоставляет все эти возможности, — это [If... Затем... Else, инструкция](../../../../visual-basic/language-reference/statements/if-then-else-statement.md). Можно использовать однострочную версию, если имеется только один тест и один оператор для выполнения. При наличии более сложного набора условий и действий можно использовать версию из нескольких строк.  
   
-## <a name="selectcase-construction"></a>Select...Case Construction  
- The `Select...Case` construction lets you evaluate an expression one time and run different sets of statements based on different possible values. For more information, see [Select...Case Statement](../../../../visual-basic/language-reference/statements/select-case-statement.md).  
+## <a name="selectcase-construction"></a>Select...Case Конструкция  
+ Конструкция `Select...Case` позволяет оценивать выражение один раз и выполнять разные наборы инструкций на основе различных возможных значений. Дополнительные сведения см. в разделе [SELECT... Case, инструкция](../../../../visual-basic/language-reference/statements/select-case-statement.md).  
   
-## <a name="trycatchfinally-construction"></a>Try...Catch...Finally Construction  
- `Try...Catch...Finally` constructions let you run a set of statements under an environment that retains control if any one of your statements causes an exception. You can take different actions for different exceptions. You can optionally specify a block of code that runs before you exit the whole `Try...Catch...Finally` construction, regardless of what occurs. Дополнительные сведения см. в разделе [Оператор Try...Catch...Finally](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).  
+## <a name="trycatchfinally-construction"></a>Try...Catch...Finally, создание  
+ `Try...Catch...Finally`ные конструкции позволяют запускать набор инструкций в среде, сохраняющей управление, если какая-либо из инструкций вызывает исключение. Для разных исключений можно выполнять различные действия. При необходимости можно указать блок кода, который будет выполняться перед выходом из всей `Try...Catch...Finally` построения, независимо от того, что происходит. Дополнительные сведения см. в разделе [Оператор Try...Catch...Finally](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).  
   
 > [!NOTE]
-> For many control structures, when you click a keyword, all of the keywords in the structure are highlighted. For instance, when you click `If` in an `If...Then...Else` construction, all instances of `If`, `Then`, `ElseIf`, `Else`, and `End If` in the construction are highlighted. To move to the next or previous highlighted keyword, press CTRL+SHIFT+DOWN ARROW or CTRL+SHIFT+UP ARROW.  
+> Для многих структур управления при щелчке ключевого слова все ключевые слова в структуре выделяются. Например, если щелкнуть `If` в конструкции `If...Then...Else`, будут выделены все экземпляры `If`, `Then`, `ElseIf`, `Else`и `End If` в конструкции. Чтобы перейти к следующему или предыдущему выделенному ключевому слову, нажмите клавиши CTRL + SHIFT + стрелка вниз или CTRL + SHIFT + стрелка вверх.  
   
 ## <a name="see-also"></a>См. также
 

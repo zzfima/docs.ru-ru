@@ -20,7 +20,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345966"
 ---
 # <a name="optional-parameters-visual-basic"></a>Необязательные параметры (Visual Basic)
-Некоторые аргументы процедуры можно задать как необязательные, тем самым указывая, что их можно не задавать при вызове процедуры. *Optional parameters* are indicated by the `Optional` keyword in the procedure definition. Действуют следующие правила.  
+Некоторые аргументы процедуры можно задать как необязательные, тем самым указывая, что их можно не задавать при вызове процедуры. *Необязательные параметры* указываются с помощью ключевого слова `Optional` в определении процедуры. Действуют следующие правила.  
   
 - Для каждого необязательного параметра в определении процедуры должно быть указано значение по умолчанию.  
   
@@ -43,14 +43,14 @@ Sub name(ByVal parameter1 As datatype1, Optional ByVal parameter2 As datatype2 =
 Sub name(argument 1, , , argument 4)  
 ```  
   
- В следующем примере происходит несколько вызовов функции `MsgBox`. У функции `MsgBox` есть один обязательный параметр и два необязательных параметра.  
+ В следующем примере происходит несколько вызовов функции `MsgBox`. `MsgBox` имеет один обязательный параметр и два необязательных параметра.  
   
  При первом вызове `MsgBox` указываются все три аргумента в том порядке, в котором они определены в `MsgBox`. При втором вызове указывается только обязательный аргумент. При третьем и четвертом вызове указываются первый и третий аргументы. Третий вызов указывает аргумент по позиции, а четвертый — по имени.  
   
  [!code-vb[VbVbcnProcedures#47](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#47)]  
   
 ## <a name="determining-whether-an-optional-argument-is-present"></a>Определение наличия необязательного аргумента  
- Процедура во время выполнения не может отличить пропущенный аргумент от аргумента, для которого в вызывающем коде явным образом задано значение по умолчанию. Если такое различение существенно, можно задать в качестве значения по умолчанию значение, которое вряд ли будет использоваться. The following procedure defines the optional parameter `office`, and tests for its default value, `QJZ`, to see if it has been omitted in the call:  
+ Процедура во время выполнения не может отличить пропущенный аргумент от аргумента, для которого в вызывающем коде явным образом задано значение по умолчанию. Если такое различение существенно, можно задать в качестве значения по умолчанию значение, которое вряд ли будет использоваться. Следующая процедура определяет необязательный параметр `office`и проверяет его значение по умолчанию, `QJZ`, чтобы проверить, пропущен ли он в вызове:  
   
  [!code-vb[VbVbcnProcedures#46](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#46)]  
   
@@ -67,5 +67,5 @@ Sub name(argument 1, , , argument 4)
 - [Передача аргументов по позиции и по имени](./passing-arguments-by-position-and-by-name.md)
 - [Массивы параметров](./parameter-arrays.md)
 - [Перегрузка процедур](./procedure-overloading.md)
-- [Необязательный](../../../../visual-basic/language-reference/modifiers/optional.md)
+- [Optional](../../../../visual-basic/language-reference/modifiers/optional.md)
 - [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md)

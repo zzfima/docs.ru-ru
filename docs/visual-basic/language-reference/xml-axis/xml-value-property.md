@@ -18,7 +18,7 @@ ms.locfileid: "74349420"
 ---
 # <a name="xml-value-property-visual-basic"></a>Свойство значения XML (Visual Basic)
 
-Provides access to the value of the first element of a collection of <xref:System.Xml.Linq.XElement> objects.
+Предоставляет доступ к значению первого элемента коллекции <xref:System.Xml.Linq.XElement> объектов.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -30,30 +30,30 @@ object.Value
 
 |Термин|Определение|  
 |---|---|  
-|`object`|Обязательный. Коллекция объектов <xref:System.Xml.Linq.XElement>.|  
+|`object`|Обязательно. Коллекция объектов <xref:System.Xml.Linq.XElement>.|  
 
 ## <a name="return-value"></a>Возвращаемое значение
 
- A `String` that contains the value of the first element of the collection, or `Nothing` if the collection is empty.
+ `String`, содержащий значение первого элемента коллекции, или `Nothing`, если коллекция пуста.
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Примечания
 
- The <xref:System.Xml.Linq.XElement.Value%2A> property makes it easy to access the value of the first element in a collection of <xref:System.Xml.Linq.XElement> objects. This property first checks whether the collection contains at least one object. If the collection is empty, this property returns `Nothing`. Otherwise, this property returns the value of the <xref:System.Xml.Linq.XElement.Value%2A> property of the first element in the collection.
+ Свойство <xref:System.Xml.Linq.XElement.Value%2A> упрощает доступ к значению первого элемента в коллекции объектов <xref:System.Xml.Linq.XElement>. Это свойство сначала проверяет, содержит ли коллекция хотя бы один объект. Если коллекция пуста, это свойство возвращает `Nothing`. В противном случае это свойство возвращает значение свойства <xref:System.Xml.Linq.XElement.Value%2A> первого элемента в коллекции.
 
 > [!NOTE]
-> When you access the value of an XML attribute using the '\@' identifier, the attribute value is returned as a `String` and you do not need to explicitly specify the <xref:System.Xml.Linq.XAttribute.Value%2A> property.
+> При доступе к значению атрибута XML с помощью идентификатора "\@" значение атрибута возвращается как `String` и не требуется явно указывать свойство <xref:System.Xml.Linq.XAttribute.Value%2A>.
 
- To access other elements in a collection, you can use the XML extension indexer property. For more information, see [Extension Indexer Property](extension-indexer-property.md).
+ Для доступа к другим элементам в коллекции можно использовать свойство индексатора расширения XML. Дополнительные сведения см. в разделе [свойство индексатора расширения](extension-indexer-property.md).
 
 ## <a name="inheritance"></a>Наследование
 
- Most users will not have to implement <xref:System.Collections.Generic.IEnumerable%601>, and can therefore ignore this section.
+ Большинству пользователей не придется реализовывать <xref:System.Collections.Generic.IEnumerable%601>, поэтому этот раздел можно игнорировать.
 
- The <xref:System.Xml.Linq.XElement.Value%2A> property is an extension property for types that implement `IEnumerable(Of XElement)`. The binding of this extension property is like the binding of extension methods: if a type implements one of the interfaces and defines a property that has the name "Value", that property has precedence over the extension property. In other words, this <xref:System.Xml.Linq.XElement.Value%2A> property can be overridden by defining a new property in a class that implements `IEnumerable(Of XElement)`.
+ Свойство <xref:System.Xml.Linq.XElement.Value%2A> является свойством расширения для типов, реализующих `IEnumerable(Of XElement)`. Привязка этого свойства расширения похожа на привязку методов расширения: Если тип реализует один из интерфейсов и определяет свойство с именем "value", это свойство имеет приоритет над свойством расширения. Иными словами, это <xref:System.Xml.Linq.XElement.Value%2A> свойство может быть переопределено путем определения нового свойства в классе, реализующем `IEnumerable(Of XElement)`.
 
 ## <a name="example"></a>Пример
 
- The following example shows how to use the <xref:System.Xml.Linq.XElement.Value%2A> property to access the first node in a collection of <xref:System.Xml.Linq.XElement> objects. The example uses the child axis property to get the collection of all child nodes named `phone` that are in the `contact` object.
+ В следующем примере показано, как использовать свойство <xref:System.Xml.Linq.XElement.Value%2A> для доступа к первому узлу в коллекции объектов <xref:System.Xml.Linq.XElement>. В примере свойство дочерней оси используется для получения коллекции всех дочерних узлов с именем `phone`, которые находятся в объекте `contact`.
 
  [!code-vb[VbXMLSamples#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples7.vb#15)]
 
@@ -63,7 +63,7 @@ object.Value
 
 ## <a name="example"></a>Пример
 
- The following example shows how to get the value of an XML attribute from a collection of <xref:System.Xml.Linq.XAttribute> objects. The example uses the attribute axis property to display the value of the `type` attribute for all of the `phone` elements.
+ В следующем примере показано, как получить значение атрибута XML из коллекции объектов <xref:System.Xml.Linq.XAttribute>. В примере свойство оси атрибута используется для вывода значения атрибута `type` для всех элементов `phone`.
 
  [!code-vb[VbXMLSamples#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples7.vb#16)]
 

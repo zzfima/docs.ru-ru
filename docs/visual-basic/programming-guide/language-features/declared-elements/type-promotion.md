@@ -18,51 +18,51 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345275"
 ---
 # <a name="type-promotion-visual-basic"></a>Повышение типа (Visual Basic)
-When you declare a programming element in a module, Visual Basic promotes its scope to the namespace containing the module. This is known as *type promotion*.  
+При объявлении программного элемента в модуле Visual Basic повышает его область до пространства имен, содержащего модуль. Это называется *повышением типа*.  
   
- The following example shows a skeleton definition of a module and two members of that module.  
+ В следующем примере показано определение каркаса для модуля и два члена этого модуля.  
   
  [!code-vb[VbVbalrDeclaredElements#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDeclaredElements/VB/Class1.vb#1)]  
   
- Within `projModule`, programming elements declared at module level are promoted to `projNamespace`. In the preceding example, `basicEnum` and `innerClass` are promoted, but `numberSub` is not, because it is not declared at module level.  
+ В `projModule`элементы программирования, объявленные на уровне модуля, помещаются в `projNamespace`. В предыдущем примере `basicEnum` и `innerClass` повышены, но `numberSub` не является, так как она не объявлена на уровне модуля.  
   
-## <a name="effect-of-type-promotion"></a>Effect of Type Promotion  
- The effect of type promotion is that a qualification string does not need to include the module name. The following example makes two calls to the procedure in the preceding example.  
+## <a name="effect-of-type-promotion"></a>Результат повышения типа  
+ Результатом повышения типа является то, что Уточняющая строка не обязательно должна включать имя модуля. Следующий пример выполняет два вызова процедуры в предыдущем примере.  
   
  [!code-vb[VbVbalrDeclaredElements#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDeclaredElements/VB/Class1.vb#2)]  
   
- In the preceding example, the first call uses complete qualification strings. However, this is not necessary because of type promotion. The second call also accesses the module's members without including `projModule` in the qualification strings.  
+ В предыдущем примере первый вызов использует полные строки квалификации. Однако это необязательно из-за продвижения типа. Второй вызов также обращается к членам модуля, не включая `projModule` в строках квалификации.  
   
-## <a name="defeat-of-type-promotion"></a>Defeat of Type Promotion  
- If the namespace already has a member with the same name as a module member, type promotion is defeated for that module member. The following example shows a skeleton definition of an enumeration and a module within the same namespace.  
+## <a name="defeat-of-type-promotion"></a>Отмена повышения типа  
+ Если пространство имен уже содержит член с тем же именем, что и у члена модуля, повышение типа для этого члена модуля будет недоступно. В следующем примере показано определение схемы перечисления и модуля в пределах одного пространства имен.  
   
  [!code-vb[VbVbalrDeclaredElements#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDeclaredElements/VB/Class1.vb#3)]  
   
- In the preceding example, Visual Basic cannot promote class `abc` to `thisNameSpace` because there is already an enumeration with the same name at namespace level. To access `abcSub`, you must use the full qualification string `thisNamespace.thisModule.abc.abcSub`. However, class `xyz` is still promoted, and you can access `xyzSub` with the shorter qualification string `thisNamespace.xyz.xyzSub`.  
+ В предыдущем примере Visual Basic не может повысить уровень `abc` класса до `thisNameSpace`, так как на уровне пространства имен уже существует перечисление с тем же именем. Для доступа к `abcSub`необходимо использовать полную строку квалификации `thisNamespace.thisModule.abc.abcSub`. Однако класс `xyz` по-прежнему повышается, и вы можете получить доступ к `xyzSub` с более короткой строкой квалификации `thisNamespace.xyz.xyzSub`.  
   
-### <a name="defeat-of-type-promotion-for-partial-types"></a>Defeat of Type Promotion for Partial Types  
- If a class or structure inside a module uses the [Partial](../../../../visual-basic/language-reference/modifiers/partial.md) keyword, type promotion is automatically defeated for that class or structure, whether or not the namespace has a member with the same name. Other elements in the module are still eligible for type promotion.  
+### <a name="defeat-of-type-promotion-for-partial-types"></a>Отмена повышения типа для разделяемых типов  
+ Если класс или структура внутри модуля использует ключевое слово [partial](../../../../visual-basic/language-reference/modifiers/partial.md) , то продвижение типов автоматически отменяется для этого класса или структуры, независимо от того, имеет ли пространство имен член с таким же именем. Другие элементы в модуле по-прежнему имеют право на повышение типа.  
   
- **Consequences.** Defeat of type promotion of a partial definition can cause unexpected results and even compiler errors. The following example shows skeleton partial definitions of a class, one of which is inside a module.  
+ **Последствия.** Отмена повышения типа частичного определения может привести к непредвиденным результатам и даже к ошибкам компилятора. В следующем примере показана скелетная часть определений класса, один из которых находится внутри модуля.  
   
  [!code-vb[VbVbalrDeclaredElements#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDeclaredElements/VB/Class1.vb#4)]  
   
- In the preceding example, the developer might expect the compiler to merge the two partial definitions of `sampleClass`. However, the compiler does not consider promotion for the partial definition inside `sampleModule`. As a result, it attempts to compile two separate and distinct classes, both named `sampleClass` but with different qualification paths.  
+ В предыдущем примере разработчик может ожидать, что компилятор объединит два частичных определения `sampleClass`. Однако компилятор не учитывает продвижение для частичного определения внутри `sampleModule`. В результате он пытается скомпилировать два отдельных и разных класса, с именем `sampleClass`, но с разными путями уточнения.  
   
  Компилятор объединяет частичные определения, только если их полные пути идентичны.  
   
 ## <a name="recommendations"></a>Рекомендации  
- The following recommendations represent good programming practice.  
+ Следующие рекомендации являются хорошей практикой программирования.  
   
-- **Unique Names.** When you have full control over the naming of programming elements, it is always a good idea to use unique names everywhere. Identical names require extra qualification and can make your code harder to read. They can also lead to subtle errors and unexpected results.  
+- **Уникальные имена.** При наличии полного контроля над именованием программных элементов всегда рекомендуется использовать уникальные имена везде. Идентичные имена нуждаются в дополнительной квалификации и могут усложнить чтение кода. Они также могут привести к незначительным ошибкам и непредвиденным результатам.  
   
-- **Full Qualification.** When you are working with modules and other elements in the same namespace, the safest approach is to always use full qualification for all programming elements. If type promotion is defeated for a module member and you do not fully qualify that member, you could inadvertently access a different programming element.  
+- **Полное уточнение.** При работе с модулями и другими элементами в одном пространстве имен наиболее надежный подход заключается в том, чтобы всегда использовать полную квалификацию для всех программных элементов. Если повышение типа для члена модуля не используется и вы не полностью уточняете этот член, вы можете случайно получить доступ к другому программному элементу.  
   
 ## <a name="see-also"></a>См. также
 
 - [Оператор Module](../../../../visual-basic/language-reference/statements/module-statement.md)
 - [Оператор Namespace](../../../../visual-basic/language-reference/statements/namespace-statement.md)
 - [Partial](../../../../visual-basic/language-reference/modifiers/partial.md)
-- [Scope in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
+- [Область в Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
 - [Практическое руководство. Управление областью действия переменной](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-scope-of-a-variable.md)
 - [Ссылки на объявленные элементы](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)

@@ -13,18 +13,18 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344385"
 ---
 # <a name="how-to-create-a-string-from-an-array-of-char-values-visual-basic"></a>Практическое руководство. Создание строки из значений массива символьного типа (Visual Basic)
-This example creates the string "abcd" from individual characters.  
+В этом примере создается строка «ABCD» из отдельных символов.  
   
 ## <a name="example"></a>Пример  
  [!code-vb[VbVbalrStrings#61](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#61)]  
   
 ## <a name="compiling-the-code"></a>Компиляция кода  
- This method has no special requirements.  
+ Этот метод не имеет особых требований.  
   
- The syntax `"a"c`, where a single `c` follows a single character in quotation marks, is used to create a character literal.  
+ Синтаксис `"a"c`, где один `c` следует за одиночным символом в кавычках, используется для создания символьного литерала.  
   
 ## <a name="robust-programming"></a>Отказоустойчивость  
- Null characters (equivalent to `Chr(0)`) in the string lead to unexpected results when using the string. The null character will be included with the string, but characters following the null character will not be displayed in some situations.  
+ Символы NULL (эквивалентные `Chr(0)`) в строке могут привести к непредвиденным результатам при использовании строки. Символ null будет включаться в строку, но символы, следующие за символом NULL, не будут отображаться в некоторых ситуациях.  
   
 ## <a name="see-also"></a>См. также
 

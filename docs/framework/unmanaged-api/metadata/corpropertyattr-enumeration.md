@@ -42,16 +42,16 @@ typedef enum CorPropertyAttr {
   
 |Член|Описание|  
 |------------|-----------------|  
-|`prSpecialName`|Specifies that the property is special, and that its name describes how.|  
-|`prReservedMask`|Reserved for internal use by the common language runtime.|  
-|`prRTSpecialName`|Specifies that the common language runtime metadata internal APIs should check the encoding of the property name.|  
-|`prHasDefault`|Specifies that the property has a default value.|  
+|`prSpecialName`|Указывает, что свойство является специальным, и что его имя описывает, как это делать.|  
+|`prReservedMask`|Зарезервировано для внутреннего использования средой CLR.|  
+|`prRTSpecialName`|Указывает, что внутренние API метаданных среды CLR должны проверять кодировку имени свойства.|  
+|`prHasDefault`|Указывает, что свойство имеет значение по умолчанию.|  
 |`prUnused`|Не используется.|  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorHdr.h  
+ **Заголовок:** Корхдр. h  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

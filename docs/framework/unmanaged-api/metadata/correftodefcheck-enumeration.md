@@ -40,16 +40,16 @@ typedef enum CorRefToDefCheck {
   
 |Член|Описание|  
 |------------|-----------------|  
-|`MDRefToDefDefault`|Specifies that type references and member references should be converted to definitions. This is the default value (`MDTypeRefToDef` &#124; `MDMemberRefToDef`).|  
-|`MDRefToDefAll`|Specifies that all referenced items should be converted to definitions.|  
-|`MDRefToDefNone`|Specifies that no referenced items should be converted to definitions.|  
-|`MDTypeRefToDef`|Specifies that only type references should be converted to type definitions.|  
-|`MDMemberRefToDef`|Specifies that only member references should be converted to definitions. That is, member references should be converted to either method definitions or field definitions.|  
+|`MDRefToDefDefault`|Указывает, что ссылки на типы и ссылки на элементы должны быть преобразованы в определения. Это значение по умолчанию (`MDTypeRefToDef` &#124; `MDMemberRefToDef`).|  
+|`MDRefToDefAll`|Указывает, что все элементы, на которые указывают ссылки, должны быть преобразованы в определения.|  
+|`MDRefToDefNone`|Указывает, что не нужно преобразовывать элементы, на которые имеются ссылки, в определения.|  
+|`MDTypeRefToDef`|Указывает, что только ссылки на типы должны быть преобразованы в определения типов.|  
+|`MDMemberRefToDef`|Указывает, что только ссылки на элементы должны быть преобразованы в определения. То есть ссылки на элементы должны быть преобразованы в определения методов или определения полей.|  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorHdr.h  
+ **Заголовок:** Корхдр. h  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

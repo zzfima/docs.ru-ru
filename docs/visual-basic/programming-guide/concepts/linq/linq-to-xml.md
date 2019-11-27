@@ -18,7 +18,7 @@ LINQ to XML обеспечивает интерфейс программиров
  [Начало работы (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/getting-started-linq-to-xml.md)  
  Содержит вводные сведения о компоненте LINQ to XML, включая общие сведения о классах <xref:System.Xml.Linq?displayProperty=nameWithType>.  
   
- [Programming Guide (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)  
+ [Руководством по программированию (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)  
  Содержит сведения о программировании с использованием LINQ to XML.  
   
  [Ссылка (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/reference-linq-to-xml.md)  

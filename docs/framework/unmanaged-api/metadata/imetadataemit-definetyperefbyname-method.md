@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74434382"
 ---
 # <a name="imetadataemitdefinetyperefbyname-method"></a>Метод IMetaDataEmit::DefineTypeRefByName
-Gets a metadata token for a type that is defined in the specified scope, which is outside the current scope.  
+Возвращает токен метаданных для типа, определенного в заданной области, которая находится за пределами текущей области.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,30 +37,30 @@ HRESULT DefineTypeRefByName (
   
 ## <a name="parameters"></a>Параметры  
  `tkResolutionScope`  
- [in] The token specifying the resolution scope. The following token types are valid:  
+ окне Токен, указывающий область разрешения. Допустимы следующие типы токенов:  
   
-- `mdModuleRef`, if the type is defined in the same assembly in which the caller is defined.  
+- `mdModuleRef`, если тип определен в той же сборке, в которой определен вызывающий объект.  
   
-- `mdAssemblyRef`, if the type is defined in an assembly other than the one in which the caller is defined.  
+- `mdAssemblyRef`, если тип определен в сборке, отличной от той, в которой определен вызывающий объект.  
   
-- `mdTypeRef`, if the type is a nested type.  
+- `mdTypeRef`, если тип является вложенным типом.  
   
-- `mdModule`, if the type is defined in the same module in which the caller is defined.  
+- `mdModule`, если тип определен в том же модуле, в котором определен вызывающий объект.  
   
-- Null, if the type is defined globally.  
+- Значение null, если тип определен глобально.  
   
  `szName`  
- [in] The name of the target type in Unicode.  
+ окне Имя типа целевого объекта в Юникоде.  
   
  `ptr`  
- [out] A pointer to the `mdTypeRef` token that is assigned to the type.  
+ заполняет Указатель на маркер `mdTypeRef`, назначенный типу.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Заголовок:** COR. h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **Библиотека:** Используется в качестве ресурса в MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

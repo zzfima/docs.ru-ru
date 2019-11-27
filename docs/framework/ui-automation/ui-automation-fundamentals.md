@@ -17,9 +17,9 @@ ms.locfileid: "74441380"
 > [!NOTE]
 > Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Последние сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]см. в разделе [API автоматизации Windows. Автоматизация пользовательского интерфейса](/windows/win32/winauto/entry-uiauto-win32).  
   
- This section contains high-level overviews of the [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] API.  
+ В этом разделе содержатся общие сведения о [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] API.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Общие сведения о модели автоматизации пользовательского интерфейса](ui-automation-overview.md)  
  [Модель автоматизации пользовательского интерфейса и Microsoft Active Accessibility](ui-automation-and-microsoft-active-accessibility.md)  
  [Общие сведения о дереве модели автоматизации пользовательского интерфейса](ui-automation-tree-overview.md)  
@@ -29,7 +29,7 @@ ms.locfileid: "74441380"
  [Общие сведения о безопасности модели автоматизации пользовательского интерфейса](ui-automation-security-overview.md)  
  [Использование модели автоматизации пользовательского интерфейса для автоматизированного тестирования](using-ui-automation-for-automated-testing.md)  
   
-## <a name="reference"></a>Справочник  
+## <a name="reference"></a>Справочные сведения  
  <xref:System.Windows.Automation>  
   
  <xref:System.Windows.Automation.Provider>  

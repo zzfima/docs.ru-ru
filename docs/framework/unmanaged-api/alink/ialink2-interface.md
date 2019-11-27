@@ -14,9 +14,9 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74431369"
 ---
 # <a name="ialink2-interface"></a>Интерфейс IALink2
-Complements the [IALink Interface](ialink-interface.md) by declaring methods that operate on newer metadata interfaces such as [IMetaDataEmit2 Interface](../metadata/imetadataemit2-interface.md). Additionally, IALink2 declares methods that provide additional usage flexibility over the original IALink interfaces.  
+Дополняет [интерфейс иалинк](ialink-interface.md) , объявляя методы, которые работают с более новыми интерфейсами метаданных, такими как [Интерфейс IMetaDataEmit2](../metadata/imetadataemit2-interface.md). Кроме того, IALink2 объявляет методы, которые обеспечивают дополнительную гибкость использования по сравнению с исходными интерфейсами Иалинк.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Метод AddFile2](addfile2-method.md)  
   
  [Метод EmitAssembly](emitassembly-method.md)  

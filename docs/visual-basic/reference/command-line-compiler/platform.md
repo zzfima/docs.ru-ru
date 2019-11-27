@@ -13,7 +13,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352348"
 ---
-# <a name="-platform-visual-basic"></a>-platform (Visual Basic)
+# <a name="-platform-visual-basic"></a>-Platform (Visual Basic)
 Указывает, на какой версии платформы среды CLR может запускаться выходной файл.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -31,9 +31,9 @@ ms.locfileid: "74352348"
 |`Itanium`|Компилирует сбору для запуска в 64-разрядной среде CLR на компьютере с процессором Itanium.|  
 |`arm`|Компилирует сбору для запуска на компьютере с процессором ARM.|  
 |`anycpu`|Компилирует сбору для запуска на любой платформе. Приложение будет выполняться как 32-разрядное приложение в 32-разрядных версиях Windows и как 64-разрядное приложение в 64-разрядных версиях Windows. Этот флаг — значение по умолчанию.|  
-|`anycpu32bitpreferred`|Компилирует сбору для запуска на любой платформе. Приложение будет выполняться как 32-разрядное приложение в 32-разрядных и 64-разрядных версиях Windows. This flag is valid only for executables (.EXE) and requires .NET Framework 4.5.|  
+|`anycpu32bitpreferred`|Компилирует сбору для запуска на любой платформе. Приложение будет выполняться как 32-разрядное приложение в 32-разрядных и 64-разрядных версиях Windows. Этот флаг допустим только для исполняемых объектов (. EXE) и требует .NET Framework 4,5.|  
   
-## <a name="remarks"></a>Заметки  
+## <a name="remarks"></a>Примечания  
  Используйте параметр `-platform`, чтобы указать процессор назначения для выходного файла.  
   
  В целом, сборки .NET Framework, написанные на Visual Basic, будут работать одинаково вне зависимости от платформы. Тем не менее, в некоторых случаях поведение программ на разных платформах может различаться. Вот эти случаи:  
@@ -48,7 +48,7 @@ ms.locfileid: "74352348"
   
 - Использование вызов платформ или взаимодействия СОМ с компонентами, существующими не на всех платформах.  
   
- The **-platform** option will mitigate some issues if you know you have made assumptions about the architecture your code will run on. В частности:  
+ Параметр **-Platform** позволяет устранить некоторые проблемы, если известно, что вы предоставили предположение относительно архитектуры, в которой будет выполняться код. В частности:  
   
 - Если целевой является 64-разрядная платформа, а приложение запущено на 32-разрядном компьютере, сообщение об ошибке появится гораздо раньше и будет более точным, чем сообщение об ошибке, которое появится без этого параметра.  
   
@@ -64,15 +64,15 @@ ms.locfileid: "74352348"
   
 - Исполняемые файлы, скомпилированные с параметром `-platform:anycpu32bitpreferred`, будут выполняться в 32-разрядной среде CLR.  
   
- For more information about how to develop an application to run on a 64-bit version of Windows, see [64-bit Applications](../../../framework/64-bit-apps.md).  
+ Дополнительные сведения о разработке приложения для работы в 64-разрядной версии Windows см. в разделе [64-разрядные приложения](../../../framework/64-bit-apps.md).  
   
-### <a name="to-set--platform-in-the-visual-studio-ide"></a>To set -platform in the Visual Studio IDE  
+### <a name="to-set--platform-in-the-visual-studio-ide"></a>Для Set-Platform в интегрированной среде разработки Visual Studio  
   
-1. In **Solution Explorer**, choose the project, open the **Project** menu, and then click **Properties**.  
+1. В **Обозреватель решений**выберите проект, откройте меню **проект** и выберите пункт **Свойства**.  
   
-2. On the **Compile** tab, select or clear the **Prefer 32-bit** check box, or, in the **Target CPU** list, choose a value.  
+2. На вкладке **Компиляция** установите или снимите флажок **предпочитать 32-разрядный** или выберите значение в списке **целевой ЦП** .  
   
-     For more information, see [Compile Page, Project Designer (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic).  
+     Дополнительные сведения см. в разделе [Страница компиляции, конструктор проектов (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic).  
   
 ## <a name="example"></a>Пример  
  В следующем примере показано использование параметра компилятора `-platform`.  
@@ -83,6 +83,6 @@ vbc -platform:x86 myFile.vb
   
 ## <a name="see-also"></a>См. также
 
-- [-target (Visual Basic)](target.md)
+- [-Target (Visual Basic)](target.md)
 - [Компилятор Visual Basic с интерфейсом командной строки](index.md)
 - [Примеры командных строк компиляции](sample-compilation-command-lines.md)

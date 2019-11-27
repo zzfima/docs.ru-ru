@@ -9,9 +9,9 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353529"
 ---
-# <a name="common-attributes-visual-basic"></a>Common Attributes (Visual Basic)
+# <a name="common-attributes-visual-basic"></a>Общие атрибуты (Visual Basic)
 
-This topic describes the attributes that are most commonly used in Visual Basic programs.
+В этом разделе описываются атрибуты, наиболее часто используемые в Visual Basic программах.
 
 - [Глобальные атрибуты](#Global)
 
@@ -21,7 +21,7 @@ This topic describes the attributes that are most commonly used in Visual Basic 
 
 - [Информационные атрибуты вызывающего объекта](#CallerInfo)
 
-- [Visual Basic Attributes](#VB)
+- [Атрибуты Visual Basic](#VB)
 
 ## <a name="Global"></a> Глобальные атрибуты
 
@@ -31,9 +31,9 @@ This topic describes the attributes that are most commonly used in Visual Basic 
 <Assembly: AssemblyVersion("1.0.0.0")>
 ```
 
-Global attributes appear in the source code after any top-level `Imports` statements and before any type, module, or namespace declarations. Глобальные атрибуты могут содержаться в нескольких исходных файлах, однако эти файлы должны быть скомпилированы за один проход компиляции. For Visual Basic projects, global attributes are generally put in the AssemblyInfo.vb file (the file is created automatically when you create a project in Visual Studio).
+Глобальные атрибуты появляются в исходном коде после любых операторов верхнего уровня `Imports` и перед объявлениями типа, модуля или пространства имен. Глобальные атрибуты могут содержаться в нескольких исходных файлах, однако эти файлы должны быть скомпилированы за один проход компиляции. Для проектов Visual Basic глобальные атрибуты обычно помещаются в файл AssemblyInfo. vb (файл создается автоматически при создании проекта в Visual Studio).
 
-Атрибуты сборки — это значения, которые предоставляют сведения о сборке. Они делятся на следующие категории:
+Атрибуты сборки — это значения, которые предоставляют сведения о сборке. Они подразделяются на следующие категории:
 
 - Атрибуты удостоверения сборки
 
@@ -81,7 +81,7 @@ Global attributes appear in the source code after any top-level `Imports` statem
 
 ## <a name="Obsolete"></a> Атрибут Obsolete
 
-Атрибут `Obsolete` помечает сущность программы как нерекомендуемую для использования. Каждый случай использования сущности, помеченной как устаревшая, будет приводить к созданию предупреждения или сообщения об ошибке в зависимости от настройки атрибута. Пример:
+Атрибут `Obsolete` помечает сущность программы как нерекомендуемую для использования. Каждый случай использования сущности, помеченной как устаревшая, будет приводить к созданию предупреждения или сообщения об ошибке в зависимости от настройки атрибута. Пример.
 
 ```vb
 <System.Obsolete("use class B")>
@@ -224,36 +224,36 @@ End Class
 
 Для получения этих сведений используются атрибуты, которые применяются к необязательным параметрам. Каждый необязательный параметр задает значение по умолчанию. В следующей таблице перечислены информационные атрибуты вызывающего объекта, которые определены в пространстве имен <xref:System.Runtime.CompilerServices?displayProperty=nameWithType>:
 
-|Атрибут|Описание|Type|
+|Атрибут|Описание|Введите|
 |---|---|---|
 |<xref:System.Runtime.CompilerServices.CallerFilePathAttribute>|Полный путь исходного файла, содержащего вызывающий объект. Это путь во время компиляции.|`String`|
 |<xref:System.Runtime.CompilerServices.CallerLineNumberAttribute>|Номер строки в исходном файле, из которого вызывается метод.|`Integer`|
-|<xref:System.Runtime.CompilerServices.CallerMemberNameAttribute>|Имя свойства или метода вызывающего объекта. For more information, see [Caller Information (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md).|`String`|
+|<xref:System.Runtime.CompilerServices.CallerMemberNameAttribute>|Имя свойства или метода вызывающего объекта. Дополнительные сведения см. в разделе [сведения о вызывающем объекте (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md).|`String`|
 
-For more information about the Caller Info attributes, see [Caller Information (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md).
+Дополнительные сведения об атрибутах сведений о вызывающем объекте см. в разделе [сведения о вызывающем объекте (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md).
 
-## <a name="VB"></a> Visual Basic Attributes
+## <a name="VB"></a>Атрибуты Visual Basic
 
-The following table lists the attributes that are specific to Visual Basic.
+В следующей таблице перечислены атрибуты, характерные для Visual Basic.
 
 |Атрибут|Цель|
 |---------------|-------------|
-|<xref:Microsoft.VisualBasic.ComClassAttribute>|Indicates to the compiler that the class should be exposed as a COM object.|
-|<xref:Microsoft.VisualBasic.HideModuleNameAttribute>|Allows module members to be accessed using only the qualification needed for the module.|
-|<xref:Microsoft.VisualBasic.VBFixedStringAttribute>|Specifies the size of a fixed-length string in a structure for use with file input and output functions.|
-|<xref:Microsoft.VisualBasic.VBFixedArrayAttribute>|Specifies the size of a fixed array in a structure for use with file input and output functions.|
+|<xref:Microsoft.VisualBasic.ComClassAttribute>|Указывает компилятору, что класс должен быть представлен в виде COM-объекта.|
+|<xref:Microsoft.VisualBasic.HideModuleNameAttribute>|Разрешает доступ к членам модуля с использованием только квалификации, необходимой для модуля.|
+|<xref:Microsoft.VisualBasic.VBFixedStringAttribute>|Задает размер строки фиксированной длины в структуре для использования с входными и выходными функциями файлов.|
+|<xref:Microsoft.VisualBasic.VBFixedArrayAttribute>|Задает размер фиксированного массива в структуре для использования с входными и выходными функциями файла.|
 
 ### <a name="comclassattribute"></a>COMClassAttribute
 
-Use `COMClassAttribute` to simplify the process of creating COM components from Visual Basic. COM objects are considerably different from .NET Framework assemblies, and without `COMClassAttribute`, you need to follow a number of steps to generate a COM object from Visual Basic. For classes marked with `COMClassAttribute`, the compiler performs many of these steps automatically.
+Используйте `COMClassAttribute`, чтобы упростить процесс создания COM-компонентов из Visual Basic. Объекты COM значительно отличаются от .NET Framework сборок, и без `COMClassAttribute`необходимо выполнить ряд действий по созданию COM-объекта из Visual Basic. Для классов, помеченных `COMClassAttribute`, компилятор выполняет многие из этих шагов автоматически.
 
 ### <a name="hidemodulenameattribute"></a>HideModuleNameAttribute
 
-Use `HideModuleNameAttribute` to allow module members to be accessed by using only the qualification needed for the module.
+Используйте `HideModuleNameAttribute`, чтобы разрешить доступ к членам модуля только с помощью квалификации, необходимой для модуля.
 
 ### <a name="vbfixedstringattribute"></a>VBFixedStringAttribute
 
-Use `VBFixedStringAttribute` to force Visual Basic to create a fixed-length string. Strings are of variable length by default, and this attribute is useful when storing strings to files. The following code demonstrates this:
+Используйте `VBFixedStringAttribute`, чтобы принудительно Visual Basic создать строку фиксированной длины. По умолчанию строки имеют переменную длину, и этот атрибут полезен при хранении строк в файлах. Следующий код демонстрирует это:
 
 ```vb
 Structure Worker
@@ -267,7 +267,7 @@ End Structure
 
 ### <a name="vbfixedarrayattribute"></a>VBFixedArrayAttribute
 
-Use `VBFixedArrayAttribute` to declare arrays that are fixed in size. Like Visual Basic strings, arrays are of variable length by default. This attribute is useful when serializing or writing data to files.
+Используйте `VBFixedArrayAttribute`, чтобы объявить массивы с фиксированным размером. Как и в случае с Visual Basic строками, по умолчанию массивы имеют переменную длину. Этот атрибут полезен при сериализации или записи данных в файлы.
 
 ## <a name="see-also"></a>См. также
 

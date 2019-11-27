@@ -13,22 +13,22 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353215"
 ---
 # <a name="how-to-work-with-activex-controls-visual-basic"></a>Практическое руководство. Работа с элементами ActiveX (Visual Basic)
-ActiveX controls are COM components or objects you can insert into a Web page or other application to reuse packaged functionality someone else has programmed. You can use ActiveX controls developed for Visual Basic 6.0 and earlier versions to add features to the **Toolbox** of Visual Studio.  
+Элементы управления ActiveX — это компоненты COM или объекты, которые можно вставить в веб-страницу или другое приложение для повторного использования упакованных функциональных возможностей, которые запрограммированы для других пользователей. Элементы управления ActiveX, разработанные для Visual Basic 6,0 и более ранних версий, можно использовать для добавления компонентов в **область элементов** Visual Studio.  
   
-### <a name="to-add-activex-controls-to-the-toolbox"></a>To add ActiveX controls to the toolbox  
+### <a name="to-add-activex-controls-to-the-toolbox"></a>Добавление элементов управления ActiveX на панель элементов  
   
-1. On the **Tools** menu, click **Choose Toolbox Items**.  
+1. В меню **Сервис** выберите пункт **выбрать элементы панели элементов**.  
   
-     The **Choose Toolbox** dialog box appears.  
+     Откроется диалоговое окно **Выбор панели элементов** .  
   
-2. Click the **COM Components** tab.  
+2. Перейдите на вкладку **COM-компоненты** .  
   
-3. Select the check box next to the ActiveX control you want to use, and then click **OK**.  
+3. Установите флажок рядом с элементом управления ActiveX, который необходимо использовать, и нажмите кнопку **ОК**.  
   
-     The new control appears with the other tools in the **Toolbox**.  
+     Новый элемент управления появится вместе с другими инструментами на **панели элементов**.  
   
     > [!NOTE]
-    > You can use the Aximp utility to manually create an interop assembly for ActiveX controls. For more information, see [Aximp.exe (Windows Forms ActiveX Control Importer)](../../../framework/tools/aximp-exe-windows-forms-activex-control-importer.md).  
+    > Служебную программу Aximp можно использовать для создания сборки взаимодействия для элементов управления ActiveX вручную. Дополнительные сведения см. в разделе [AxImp. exe (Windows Forms средства импорта элементов управления ActiveX)](../../../framework/tools/aximp-exe-windows-forms-activex-control-importer.md).  
   
 ## <a name="see-also"></a>См. также
 

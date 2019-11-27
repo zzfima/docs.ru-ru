@@ -20,20 +20,20 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351814"
 ---
 # <a name="object-variable-declaration-visual-basic"></a>Объявление переменных объектов (Visual Basic)
-You use a normal declaration statement to declare an object variable. For the data type, you specify either `Object` (that is, the [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)) or a more specific class from which the object is to be created.  
+Для объявления объектной переменной используется стандартный оператор объявления. Для типа данных указывается либо `Object` (то есть [тип данных Object](../../../../visual-basic/language-reference/data-types/object-data-type.md)), либо более конкретный класс, из которого будет создан объект.  
   
- Declaring a variable as `Object` is the same as declaring it as <xref:System.Object?displayProperty=nameWithType>.  
+ Объявление переменной как `Object` аналогично объявлению ее как <xref:System.Object?displayProperty=nameWithType>.  
   
- When you declare a variable with a specific object class, it can access all the methods and properties exposed by that class and the classes from which it inherits. If you declare the variable with <xref:System.Object>, it can access only the members of the <xref:System.Object> class, unless you turn `Option Strict Off` to allow late binding.  
+ При объявлении переменной с конкретным классом объектов он может получить доступ ко всем методам и свойствам, предоставляемым этим классом, и классами, от которых он наследуется. Если переменная объявляется с помощью <xref:System.Object>, она может обращаться только к членам класса <xref:System.Object>, если только вы не включите `Option Strict Off`, чтобы разрешить позднее связывание.  
   
 ## <a name="declaration-syntax"></a>Синтаксис объявления  
- Use the following syntax to declare an object variable:  
+ Для объявления объектной переменной используйте следующий синтаксис:  
   
 ```vb  
 Dim variablename As [New] { objectclass | Object }  
 ```  
   
- You can also specify [Public](../../../../visual-basic/language-reference/modifiers/public.md), [Protected](../../../../visual-basic/language-reference/modifiers/protected.md), [Friend](../../../../visual-basic/language-reference/modifiers/friend.md), `Protected Friend`, [Private](../../../../visual-basic/language-reference/modifiers/private.md), [Shared](../../../../visual-basic/language-reference/modifiers/shared.md), or [Static](../../../../visual-basic/language-reference/modifiers/static.md) in the declaration. The following example declarations are valid:  
+ В объявлении также можно указать [открытые](../../../../visual-basic/language-reference/modifiers/public.md), [защищенные](../../../../visual-basic/language-reference/modifiers/protected.md), [дружественные](../../../../visual-basic/language-reference/modifiers/friend.md), `Protected Friend`, [Private](../../../../visual-basic/language-reference/modifiers/private.md), [Shared](../../../../visual-basic/language-reference/modifiers/shared.md)или [static](../../../../visual-basic/language-reference/modifiers/static.md) . Допустимы следующие примеры объявлений:  
   
 ```vb  
 Private objA As Object  
@@ -41,30 +41,30 @@ Static objB As System.Windows.Forms.Label
 Dim objC As System.OperatingSystem  
 ```  
   
-## <a name="late-binding-and-early-binding"></a>Late Binding and Early Binding  
- Sometimes the specific class is unknown until your code runs. In this case, you must declare the object variable with the `Object` data type. This creates a general reference to any type of object, and the specific class is assigned at run time. This is called *late binding*. Late binding requires additional execution time. It also limits your code to the methods and properties of the class you have most recently assigned to it. This can cause run-time errors if your code attempts to access members of a different class.  
+## <a name="late-binding-and-early-binding"></a>Позднее связывание и раннее связывание  
+ Иногда конкретный класс неизвестен, пока не будет запущен код. В этом случае необходимо объявить объектную переменную с типом данных `Object`. При этом создается общая ссылка на объект любого типа, а конкретный класс назначается во время выполнения. Это называется *поздним связыванием*. Позднее связывание требует дополнительного времени выполнения. Он также ограничивает ваш код методами и свойствами класса, назначенного ему последним. Это может вызвать ошибки времени выполнения, если код пытается получить доступ к членам другого класса.  
   
- When you know the specific class at compile time, you should declare the object variable to be of that class. Этот принцип называется *раннее связывание*. Early binding improves performance and guarantees your code access to all the methods and properties of the specific class. In the preceding example declarations, if variable `objA` uses only objects of class <xref:System.Windows.Forms.Label?displayProperty=nameWithType>, you should specify `As System.Windows.Forms.Label` in its declaration.  
+ Когда вы узнаете конкретный класс во время компиляции, следует объявить переменную объекта для этого класса. Этот принцип называется *раннее связывание*. Раннее связывание повышает производительность и гарантирует доступ кода ко всем методам и свойствам конкретного класса. В приведенных выше примерах объявления, если переменная `objA` использует только объекты класса <xref:System.Windows.Forms.Label?displayProperty=nameWithType>, в его объявлении следует указать `As System.Windows.Forms.Label`.  
   
 ### <a name="advantages-of-early-binding"></a>Преимущества раннего связывания  
- Declaring an object variable as a specific class gives you several advantages:  
+ Объявление объектной переменной в качестве конкретного класса дает несколько преимуществ:  
   
-- Automatic type checking  
+- Автоматическая проверка типов  
   
-- Guaranteed access to all members of the specific class  
+- Гарантированный доступ ко всем членам указанного класса  
   
-- Microsoft IntelliSense support in the Code Editor  
+- Поддержка Microsoft IntelliSense в редакторе кода  
   
-- Improved readability of your code  
+- Улучшенная удобочитаемость кода  
   
-- Fewer errors in your code  
+- Меньше ошибок в коде  
   
-- Errors caught at compile time rather than run time  
+- Ошибки, перехваченные во время компиляции, а не во время выполнения  
   
-- Faster code execution  
+- Ускорение выполнения кода  
   
-## <a name="access-to-object-variable-members"></a>Access to Object Variable Members  
- When `Option Strict` is turned `On`, an object variable can access only the methods and properties of the class with which you declare it. Это показано в следующем примере.  
+## <a name="access-to-object-variable-members"></a>Доступ к членам переменных объектов  
+ Когда `Option Strict` включается `On`, переменная объекта может обращаться только к методам и свойствам класса, с которым он объявлен. Это показано в следующем примере.  
   
 ```vb  
 ' Option statements must precede all other source file lines.  
@@ -86,8 +86,8 @@ End Sub
   
  В этом примере `p` может использовать только члены класса <xref:System.Object> без свойства `Left` . С другой стороны, `q` был объявлен с типом <xref:System.Windows.Forms.Label>, поэтому он может использовать все методы и свойства класса <xref:System.Windows.Forms.Label> в пространстве имен <xref:System.Windows.Forms> .  
   
-## <a name="flexibility-of-object-variables"></a>Flexibility of Object Variables  
- When working with objects in an inheritance hierarchy, you have a choice of which class to use for declaring your object variables. In making this choice, you must balance flexibility of object assignment against access to members of a class. For example, consider the inheritance hierarchy that leads to the <xref:System.Windows.Forms.Form?displayProperty=nameWithType> class:  
+## <a name="flexibility-of-object-variables"></a>Гибкость объектных переменных  
+ При работе с объектами в иерархии наследования можно выбрать, какой класс использовать для объявления переменных объекта. При выборе этого варианта необходимо сбалансировать гибкость назначения объектов для доступа к членам класса. Например, рассмотрим иерархию наследования, которая ведет к классу <xref:System.Windows.Forms.Form?displayProperty=nameWithType>:  
   
  <xref:System.Object>  
   
@@ -103,7 +103,7 @@ End Sub
   
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<xref:System.Windows.Forms.Form>  
   
- Suppose your application defines a form class called `specialForm`, which inherits from class <xref:System.Windows.Forms.Form>. You can declare an object variable that refers specifically to `specialForm`, as the following example shows.  
+ Предположим, что приложение определяет класс формы с именем `specialForm`, который наследуется от класса <xref:System.Windows.Forms.Form>. Можно объявить переменную объекта, которая ссылается на `specialForm`, как показано в следующем примере.  
   
 ```vb  
 Public Class specialForm  
@@ -113,24 +113,24 @@ End Class
 Dim nextForm As New specialForm  
 ```  
   
- The declaration in the preceding example limits the variable `nextForm` to objects of class `specialForm`, but it also makes all the methods and properties of `specialForm` available to `nextForm`, as well as all the members of all the classes from which `specialForm` inherits.  
+ Объявление в предыдущем примере ограничивает переменную `nextForm` объектами класса `specialForm`, но также делает все методы и свойства `specialForm` доступными для `nextForm`, а также всех членов всех классов, из которых наследуется `specialForm`.  
   
- You can make an object variable more general by declaring it to be of type <xref:System.Windows.Forms.Form>, as the following example shows.  
+ Можно сделать переменную объекта более общей, объявив ее как тип <xref:System.Windows.Forms.Form>, как показано в следующем примере.  
   
 ```vb  
 Dim anyForm As System.Windows.Forms.Form  
 ```  
   
- The declaration in the preceding example lets you assign any form in your application to `anyForm`. However, although `anyForm` can access all the members of class <xref:System.Windows.Forms.Form>, it cannot use any of the additional methods or properties defined for specific forms such as `specialForm`.  
+ Объявление в предыдущем примере позволяет назначить любую форму в приложении для `anyForm`. Однако несмотря на то, что `anyForm` имеет доступ ко всем членам класса <xref:System.Windows.Forms.Form>, он не может использовать дополнительные методы или свойства, определенные для конкретных форм, таких как `specialForm`.  
   
- All the members of a base class are available to derived classes, but the additional members of a derived class are unavailable to the base class.  
+ Все члены базового класса доступны для производных классов, но дополнительные члены производного класса недоступны для базового класса.  
   
 ## <a name="see-also"></a>См. также
 
 - [Объектные переменные](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
 - [Присваивание объектных переменных](../../../../visual-basic/programming-guide/language-features/variables/object-variable-assignment.md)
 - [Значения объектных переменных](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)
-- [How to: Declare an Object Variable and Assign an Object to It in Visual Basic](../../../../visual-basic/programming-guide/language-features/variables/how-to-declare-an-object-variable-and-assign-an-object-to-it.md)
+- [Инструкции. Объявление объектной переменной и назначение ей объекта в Visual Basic](../../../../visual-basic/programming-guide/language-features/variables/how-to-declare-an-object-variable-and-assign-an-object-to-it.md)
 - [Практическое руководство. Доступ к членам объекта](../../../../visual-basic/programming-guide/language-features/variables/how-to-access-members-of-an-object.md)
 - [Оператор New](../../../../visual-basic/language-reference/operators/new-operator.md)
 - [Оператор Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md)

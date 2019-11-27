@@ -12,8 +12,8 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352188"
 ---
-# <a name="typeparam-visual-basic"></a>\<typeparam> (Visual Basic)
-Defines a type parameter name and description.  
+# <a name="typeparam-visual-basic"></a>> \<typeparam (Visual Basic)
+Определяет имя и описание параметра типа.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -26,15 +26,15 @@ Defines a type parameter name and description.
  Имя параметра типа. Имя заключается в двойные кавычки (" ").  
   
  `description`  
- A description of the type parameter.  
+ Описание параметра типа.  
   
-## <a name="remarks"></a>Заметки  
- Use the `<typeparam>` tag in the comment for a generic type or generic member declaration to describe one of the type parameters.  
+## <a name="remarks"></a>Примечания  
+ Используйте тег `<typeparam>` в комментарии для объявления универсального типа или универсального члена, чтобы описать один из параметров типа.  
   
  Чтобы обработать комментарии документации и сохранить их в файл, выполняйте сборку с параметром [-doc](../../../visual-basic/reference/command-line-compiler/doc.md).  
   
 ## <a name="example"></a>Пример  
- This example uses the `<typeparam>` tag to describe the `id` parameter.  
+ В этом примере используется тег `<typeparam>` для описания параметра `id`.  
   
  [!code-vb[VbVbcnXmlDocComments#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#8)]  
   

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448494"
 ---
 # <a name="ibindingdisplayinitializeforprocess-method"></a>Метод IBindingDisplay::InitializeForProcess
-Initializes the [IBindingDisplay](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-interface.md) object.  
+Инициализирует объект [ибиндингдисплай](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-interface.md) .  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -35,17 +35,17 @@ HRESULT InitializeForProcess (
   
 ## <a name="parameters"></a>Параметры  
  `pid`  
- [in] The process identifier.  
+ окне Идентификатор процесса.  
   
-## <a name="remarks"></a>Заметки  
- The debugger calls the `InitializeForProcess` method at creation time to initialize the binding display. `InitializeForProcess` must be called at creation time before any other method on `IBindingDisplay` is called.  
+## <a name="remarks"></a>Примечания  
+ Отладчик вызывает метод `InitializeForProcess` во время создания, чтобы инициализировать отображение привязки. `InitializeForProcess` должны вызываться во время создания до вызова любого другого метода в `IBindingDisplay`.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** BindingDisplay.h  
+ **Заголовок:** Биндингдисплай. h  
   
- **Library:** BindingDisplay.idl  
+ **Библиотека:** Биндингдисплай. idl  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

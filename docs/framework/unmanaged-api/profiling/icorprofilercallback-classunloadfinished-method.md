@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74435921"
 ---
 # <a name="icorprofilercallbackclassunloadfinished-method"></a>Метод ICorProfilerCallback::ClassUnloadFinished
-Notifies the profiler that a class has finished unloading.  
+Уведомляет профилировщик о завершении выгрузки класса.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -35,13 +35,13 @@ HRESULT ClassUnloadFinished(
   
 ## <a name="parameters"></a>Параметры  
  `classId`  
- [in] Identifies the class that was unloaded.  
+ окне Идентифицирует выгруженный класс.  
   
  `hrStatus`  
- [in] An HRESULT that indicates whether the class was unloaded successfully.  
+ окне Значение HRESULT, указывающее, успешно ли выгружен класс.  
   
-## <a name="remarks"></a>Заметки  
- Some parts of unloading the class might continue after the `ClassUnloadFinished` callback. A failure HRESULT in `hrStatus` indicates a failure. However, a success HRESULT in `hrStatus` indicates only that the first part of unloading the class has succeeded.  
+## <a name="remarks"></a>Примечания  
+ Некоторые части выгрузки класса могут продолжаться после обратного вызова `ClassUnloadFinished`. Ошибка HRESULT в `hrStatus` указывает на сбой. Однако значение HRESULT успешного выполнения в `hrStatus` указывает только на то, что первая часть выгрузки класса успешно выполнена.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  

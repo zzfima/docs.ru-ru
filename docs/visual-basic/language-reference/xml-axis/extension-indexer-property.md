@@ -29,25 +29,25 @@ object(index)
   
 |Термин|Определение|  
 |---|---|  
-|`object`|Обязательный. A queryable collection. That is, a collection that implements <xref:System.Collections.Generic.IEnumerable%601> or <xref:System.Linq.IQueryable%601>.|  
-|(|Обязательный. Denotes the start of the indexer property.|  
-|`index`|Обязательный. An integer expression that specifies the zero-based position of an element of the collection.|  
-|)|Обязательный. Denotes the end of the indexer property.|  
+|`object`|Обязательно. Запрашиваемая коллекция. То есть коллекция, реализующая <xref:System.Collections.Generic.IEnumerable%601> или <xref:System.Linq.IQueryable%601>.|  
+|(|Обязательно. Обозначает начало свойства индексатора.|  
+|`index`|Обязательно. Целочисленное выражение, указывающее Отсчитываемая от нуля координату элемента коллекции.|  
+|)|Обязательно. Обозначает конец свойства индексатора.|  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- The object from the specified location in the collection, or `Nothing` if the index is out of range.  
+ Объект из указанного расположения в коллекции или `Nothing`, если индекс выходит за пределы допустимого диапазона.  
   
-## <a name="remarks"></a>Заметки  
- You can use the extension indexer property to access individual elements in a collection. This indexer property is typically used on the output of XML axis properties. The XML child and XML descendent axis properties return collections of <xref:System.Xml.Linq.XElement> objects or an attribute value.  
+## <a name="remarks"></a>Примечания  
+ Свойство индексатора расширения можно использовать для доступа к отдельным элементам в коллекции. Это свойство индексатора обычно используется в выходных данных свойств оси XML. Свойства дочерней оси XML и XML-потомков возвращают коллекции <xref:System.Xml.Linq.XElement> объектов или значение атрибута.  
   
- The Visual Basic compiler converts extension indexer properties to calls to the `ElementAtOrDefault` method. Unlike an array indexer, the `ElementAtOrDefault` method returns `Nothing` if the index is out of range. This behavior is useful when you cannot easily determine the number of elements in a collection.  
+ Компилятор Visual Basic преобразует свойства индексатора расширения в вызовы метода `ElementAtOrDefault`. В отличие от индексатора массива, метод `ElementAtOrDefault` возвращает `Nothing`, если индекс выходит за пределы диапазона. Такое поведение полезно в тех случаях, когда невозможно легко определить количество элементов в коллекции.  
   
- This indexer property is like an extension property for collections that implement <xref:System.Collections.Generic.IEnumerable%601> or <xref:System.Linq.IQueryable%601>: it is used only if the collection does not have an indexer or a default property.  
+ Это свойство индексатора похоже на свойство расширения для коллекций, реализующих <xref:System.Collections.Generic.IEnumerable%601> или <xref:System.Linq.IQueryable%601>: оно используется только в том случае, если коллекция не имеет индексатора или свойства по умолчанию.  
   
- To access the value of the first element in a collection of <xref:System.Xml.Linq.XElement> or <xref:System.Xml.Linq.XAttribute> objects, you can use the XML `Value` property. For more information, see [XML Value Property](../../../visual-basic/language-reference/xml-axis/xml-value-property.md).  
+ Чтобы получить доступ к значению первого элемента в коллекции <xref:System.Xml.Linq.XElement> или <xref:System.Xml.Linq.XAttribute> объектов, можно использовать свойство `Value` XML. Дополнительные сведения см. в разделе [свойство значения XML](../../../visual-basic/language-reference/xml-axis/xml-value-property.md).  
   
 ## <a name="example"></a>Пример  
- The following example shows how to use the extension indexer to access the second child node in a collection of <xref:System.Xml.Linq.XElement> objects. The collection is accessed by using the child axis property, which gets all child elements named `phone` in the `contact` object.  
+ В следующем примере показано, как использовать индексатор расширений для доступа ко второму дочернему узлу в коллекции объектов <xref:System.Xml.Linq.XElement>. Доступ к коллекции осуществляется с помощью свойства дочерней оси, которое получает все дочерние элементы с именем `phone` в объекте `contact`.  
   
  [!code-vb[VbXMLSamples#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples11.vb#24)]  
   

@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74427267"
 ---
 # <a name="cor_prf_snapshot_info-enumeration"></a>Перечисление COR_PRF_SNAPSHOT_INFO
-Specifies how much data to pass back with a stack snapshot in each call to the profiler's [StackSnapshotCallback](../../../../docs/framework/unmanaged-api/profiling/stacksnapshotcallback-function.md) function.  
+Указывает объем данных, которые необходимо передать обратно с помощью моментального снимка стека при каждом вызове функции [стаккснапшоткаллбакк](../../../../docs/framework/unmanaged-api/profiling/stacksnapshotcallback-function.md) профилировщика.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,12 +38,12 @@ typedef enum _COR_PRF_SNAPSHOT_INFO {
   
 |Члены|Описание|  
 |-------------|-----------------|  
-|`COR_PRF_SNAPSHOT_DEFAULT`|Indicates that values must be passed for all `StackSnapshotCallback` parameters, except the `context` parameter.|  
-|`COR_PRF_SNAPSHOT_REGISTER_CONTEXT`|Indicates that values must be passed for all `StackSnapshotCallback` parameters, including the `context` parameter.|  
-|`COR_PRF_SNAPSHOT_X86_OPTIMIZED`|Indicates that a simpler, alternative stack-walking algorithm will be used.|  
+|`COR_PRF_SNAPSHOT_DEFAULT`|Указывает, что значения должны передаваться для всех `StackSnapshotCallback` параметров, кроме параметра `context`.|  
+|`COR_PRF_SNAPSHOT_REGISTER_CONTEXT`|Указывает, что значения должны передаваться для всех параметров `StackSnapshotCallback`, включая параметр `context`.|  
+|`COR_PRF_SNAPSHOT_X86_OPTIMIZED`|Указывает, что будет использоваться более простой и альтернативный алгоритм анализа стека.|  
   
-## <a name="remarks"></a>Заметки  
- Values that are provided by the `COR_PRF_SNAPSHOT_INFO` enumeration are passed as parameters to the [DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) method.  
+## <a name="remarks"></a>Примечания  
+ Значения, предоставляемые перечислением `COR_PRF_SNAPSHOT_INFO`, передаются в качестве параметров в метод [DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) .  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  

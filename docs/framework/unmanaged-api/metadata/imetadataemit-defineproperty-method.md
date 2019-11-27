@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74431521"
 ---
 # <a name="imetadataemitdefineproperty-method"></a>Метод IMetaDataEmit::DefineProperty
-Creates a property definition for the specified type, with the specified `get` and `set` method accessors, and gets a token to that property definition.  
+Создает определение свойства для указанного типа с указанными методами доступа `get` и `set` и получает маркер для этого определения свойства.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -46,47 +46,47 @@ HRESULT DefineProperty (
   
 ## <a name="parameters"></a>Параметры  
  `td`  
- [in] The token for class or interface on which the property is being defined.  
+ окне Токен для класса или интерфейса, для которого определяется свойство.  
   
  `szProperty`  
- [in] The name of the property.  
+ окне Имя свойства.  
   
  `dwPropFlags`  
- [in] The property flags.  
+ окне Флаги свойств.  
   
  `pvSig`  
- [in] The property signature.  
+ окне Сигнатура свойства.  
   
  `cbSig`  
- [in] The count of bytes in `pvSig`.  
+ окне Число байтов в `pvSig`.  
   
  `dwCPlusTypeFlag`  
- [in] The type of the property's default value.  
+ окне Тип значения свойства по умолчанию.  
   
  `pValue`  
- [in] The default value for the property.  
+ окне Значение по умолчанию для свойства.  
   
  `cchValue`  
- [in] The count of (Unicode) characters in `pValue`.  
+ окне Число символов Юникода в `pValue`.  
   
  `mdSetter`  
- [in] The method that sets the property value.  
+ окне Метод, который задает значение свойства.  
   
  `mdGetter`  
- [in] The method that gets the property value.  
+ окне Метод, который получает значение свойства.  
   
  `rmdOtherMethods[]`  
- [in] An array of other methods associated with the property. Terminate the array with an `mdTokenNil`.  
+ окне Массив других методов, связанных со свойством. Завершите работу массива с помощью `mdTokenNil`.  
   
  `pmdProp`  
- [out] The `mdProperty` token assigned.  
+ заполняет Назначенный маркер `mdProperty`.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Заголовок:** COR. h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **Библиотека:** Используется в качестве ресурса в MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

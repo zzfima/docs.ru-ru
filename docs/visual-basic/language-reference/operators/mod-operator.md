@@ -19,9 +19,9 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350917"
 ---
-# <a name="mod-operator-visual-basic"></a>Mod operator (Visual Basic)
+# <a name="mod-operator-visual-basic"></a>Оператор Mod (Visual Basic)
 
-Divides two numbers and returns only the remainder.
+Делит два числа и возвращает только остаток.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -32,26 +32,26 @@ result = number1 Mod number2
 ## <a name="parts"></a>Части
 
 `result` \
-Обязательный. Any numeric variable or property.
+Обязательно. Любая числовая переменная или свойство.
 
 `number1` \
-Обязательный. Произвольное числовое выражение.
+Обязательно. Произвольное числовое выражение.
 
 `number2` \
-Обязательный. Произвольное числовое выражение.
+Обязательно. Произвольное числовое выражение.
 
-## <a name="supported-types"></a>Supported types
+## <a name="supported-types"></a>Поддерживаемые типы
 
-все числовые типы. This includes the unsigned and floating-point types and `Decimal`.
+все числовые типы. К ним относятся типы без знака и тип с плавающей запятой и `Decimal`.
 
 ## <a name="result"></a>Результат
 
-The result is the remainder after `number1` is divided by `number2`. For example, the expression `14 Mod 4` evaluates to 2.
+Результат представляет собой остаток после деления `number1` на `number2`. Например, выражение `14 Mod 4` равно 2.
 
 > [!NOTE]
-> There is a difference between *remainder* and *modulus* in mathematics, with different results for negative numbers. The `Mod` operator in Visual Basic, the .NET Framework `op_Modulus` operator, and the underlying [rem](<xref:System.Reflection.Emit.OpCodes.Rem>) IL instruction all perform a remainder operation.
+> Существует разница между *остатком* и *остатком* в математике с различными результатами для отрицательных чисел. Оператор `Mod` в Visual Basic, оператор .NET Framework `op_Modulus` и базовая инструкция [REM](<xref:System.Reflection.Emit.OpCodes.Rem>) Il выполняют операцию остатка.
 
-The result of a `Mod` operation retains the sign of the dividend, `number1`, and so it may be positive or negative. The result is always in the range (-`number2`, `number2`), exclusive. Пример:
+Результат операции `Mod` содержит знак делимого, `number1`, поэтому он может быть положительным или отрицательным. Результат всегда находится в диапазоне (-`number2`, `number2`), исключительно. Пример.
 
 ```vb
 Public Module Example
@@ -69,50 +69,50 @@ End Module
 '      -8 Mod -3 = -2
 ```
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Примечания
 
-If either `number1` or `number2` is a floating-point value, the floating-point remainder of the division is returned. The data type of the result is the smallest data type that can hold all possible values that result from division with the data types of `number1` and `number2`.
+Если либо `number1`, либо `number2` является значением с плавающей запятой, возвращается остаток от деления с плавающей точкой. Тип данных результата является наименьшим типом данных, который может содержать все возможные значения, являющиеся результатом деления с типами данных `number1` и `number2`.
 
-If `number1` or `number2` evaluates to [Nothing](../../../visual-basic/language-reference/nothing.md), it is treated as zero.
+Если `number1` или `number2` принимает значение [Nothing](../../../visual-basic/language-reference/nothing.md), оно считается нулевым.
 
-Related operators include the following:
+К связанным операторам относятся следующие.
 
-- The [\ Operator (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md) returns the integer quotient of a division. For example, the expression `14 \ 4` evaluates to 3.
+- [Оператор \ (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md) возвращает целочисленное частное от деления. Например, выражение `14 \ 4` вычисляется как 3.
 
-- The [/ Operator (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-operator.md) returns the full quotient, including the remainder, as a floating-point number. For example, the expression `14 / 4` evaluates to 3.5.
+- [Оператор/(Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-operator.md) возвращает полное частное, включая остаток, в виде числа с плавающей запятой. Например, выражение `14 / 4` вычисляется как 3,5.
 
-## <a name="attempted-division-by-zero"></a>Attempted division by zero
+## <a name="attempted-division-by-zero"></a>Попыток деления на ноль
 
-If `number2` evaluates to zero, the behavior of the `Mod` operator depends on the data type of the operands:
+Если `number2` равен нулю, поведение оператора `Mod` зависит от типа данных операндов:
 
-- An integral division throws a <xref:System.DivideByZeroException> exception if `number2` cannot be determined in compile-time and generates a compile-time error `BC30542 Division by zero occurred while evaluating this expression` if `number2` is evaluated to zero at compile-time.
-- A floating-point division returns <xref:System.Double.NaN?displayProperty=nameWithType>.
+- Целочисленное деление вызывает исключение <xref:System.DivideByZeroException>, если `number2` не может быть определена во время компиляции и создает ошибку во время компиляции `BC30542 Division by zero occurred while evaluating this expression` если `number2` вычисляется как ноль во время компиляции.
+- Деление с плавающей запятой возвращает <xref:System.Double.NaN?displayProperty=nameWithType>.
 
-## <a name="equivalent-formula"></a>Equivalent formula
+## <a name="equivalent-formula"></a>Эквивалентная формула
 
-The expression `a Mod b` is equivalent to either of the following formulas:
+Выражение `a Mod b` эквивалентно любой из следующих формул:
 
 `a - (b * (a \ b))`
 
 `a - (b * Fix(a / b))`
 
-## <a name="floating-point-imprecision"></a>Floating-point imprecision
+## <a name="floating-point-imprecision"></a>Точность чисел с плавающей запятой
 
-When you work with floating-point numbers, remember that they do not always have a precise decimal representation in memory. This can lead to unexpected results from certain operations, such as value comparison and the `Mod` operator. For more information, see [Troubleshooting Data Types](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).
+При работе с числами с плавающей запятой Помните, что они не всегда имеют точное десятичное представление в памяти. Это может привести к непредвиденным результатам некоторых операций, таких как сравнение значений и оператор `Mod`. Дополнительные сведения см. в разделе [Устранение неполадок типов данных](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).
 
 ## <a name="overloading"></a>Перегрузка
 
-The `Mod` operator can be *overloaded*, which means that a class or structure can redefine its behavior. If your code applies `Mod` to an instance of a class or structure that includes such an overload, be sure you understand its redefined behavior. Для получения дополнительной информации см. [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).
+Оператор `Mod` может быть *перегружен*, а это означает, что класс или структура могут переопределять его поведение. Если код применяет `Mod` к экземпляру класса или структуры, включающей такую перегрузку, убедитесь, что вы понимаете его переопределенное поведение. Для получения дополнительной информации см. [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).
 
 ## <a name="example"></a>Пример
 
-The following example uses the `Mod` operator to divide two numbers and return only the remainder. If either number is a floating-point number, the result is a floating-point number that represents the remainder.
+В следующем примере оператор `Mod` используется для деления двух чисел и возврата только остатка. Если любое число является числом с плавающей запятой, результатом является число с плавающей запятой, представляющее остаток.
 
 [!code-vb[VbVbalrOperators#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#31)]
 
 ## <a name="example"></a>Пример
 
-The following example demonstrates the potential imprecision of floating-point operands. In the first statement, the operands are `Double`, and 0.2 is an infinitely repeating binary fraction with a stored value of 0.20000000000000001. In the second statement, the literal type character `D` forces both operands to `Decimal`, and 0.2 has a precise representation.
+В следующем примере показана потенциальная неточность операндов с плавающей запятой. В первой инструкции операнды являются `Double`, а 0,2 — бесконечно повторяющийся двоичная дробь с сохраненным значением 0.20000000000000001. Во втором операторе символ типа литерала `D` применяет оба операнда `Decimal`, а 0,2 имеет точное представление.
 
 [!code-vb[VbVbalrOperators#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#32)]
 
@@ -124,5 +124,5 @@ The following example demonstrates the potential imprecision of floating-point o
 - [Порядок применения операторов в Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)
 - [Список операторов, сгруппированных по функциональному назначению](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
 - [Устранение неполадок, связанных с типами данных](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
-- [Arithmetic Operators in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
-- [\ Operator (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md)
+- [Арифметические операторы в Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+- [Оператор \ (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md)

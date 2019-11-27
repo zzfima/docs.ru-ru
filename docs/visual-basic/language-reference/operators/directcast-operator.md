@@ -15,31 +15,31 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74331306"
 ---
 # <a name="directcast-operator-visual-basic"></a>Оператор DirectCast (Visual Basic)
-Introduces a type conversion operation based on inheritance or implementation.  
+Вводит операцию преобразования типов на основе наследования или реализации.  
   
-## <a name="remarks"></a>Заметки  
- `DirectCast` does not use the Visual Basic run-time helper routines for conversion, so it can provide somewhat better performance than `CType` when converting to and from data type `Object`.  
+## <a name="remarks"></a>Примечания  
+ `DirectCast` не Visual Basic использует вспомогательные подпрограммы времени выполнения для преобразования, поэтому он может обеспечить более высокую производительность, чем `CType` при преобразовании в `Object`типа данных и из него.  
   
- You use the `DirectCast` keyword similar to the way you use the [CType Function](../../../visual-basic/language-reference/functions/ctype-function.md) and the [TryCast Operator](../../../visual-basic/language-reference/operators/trycast-operator.md) keyword. You supply an expression as the first argument and a type to convert it to as the second argument. `DirectCast` requires an inheritance or implementation relationship between the data types of the two arguments. This means that one type must inherit from or implement the other.  
+ Используйте ключевое слово `DirectCast`, как и при использовании [функции CType](../../../visual-basic/language-reference/functions/ctype-function.md) и ключевого слова [оператора TryCast](../../../visual-basic/language-reference/operators/trycast-operator.md) . Укажите выражение в качестве первого аргумента и тип, чтобы преобразовать его в качестве второго аргумента. для `DirectCast` требуется связь наследования или реализации между типами данных двух аргументов. Это означает, что один тип должен наследовать или реализовывать другой.  
   
-## <a name="errors-and-failures"></a>Errors and Failures  
- `DirectCast` generates a compiler error if it detects that no inheritance or implementation relationship exists. But the lack of a compiler error does not guarantee a successful conversion. If the desired conversion is narrowing, it could fail at run time. If this happens, the runtime throws an <xref:System.InvalidCastException> error.  
+## <a name="errors-and-failures"></a>Ошибки и сбои  
+ `DirectCast` создает ошибку компилятора, если обнаруживается, что связь наследования или реализации не существует. Но отсутствие ошибки компилятора не гарантирует успешного преобразования. Если требуемое преобразование является узким, оно может привести к сбою во время выполнения. Если это происходит, среда выполнения вызывает ошибку <xref:System.InvalidCastException>.  
   
 ## <a name="conversion-keywords"></a>Ключевые слова преобразований  
- A comparison of the type conversion keywords is as follows.  
+ Ниже приведены сравнения ключевых слов преобразования типов.  
   
-|Ключевое слово|Типы данных|Argument relationship|Run-time failure|  
+|Ключевое слово|Типы данных|Отношение аргумента|Сбой во время выполнения|  
 |---|---|---|---|  
-|[Функция CType](../../../visual-basic/language-reference/functions/ctype-function.md)|Any data types|Widening or narrowing conversion must be defined between the two data types|Throws <xref:System.InvalidCastException>|  
-|`DirectCast`|Any data types|One type must inherit from or implement the other type|Throws <xref:System.InvalidCastException>|  
-|[Оператор TryCast](../../../visual-basic/language-reference/operators/trycast-operator.md)|Reference types only|One type must inherit from or implement the other type|Returns [Nothing](../../../visual-basic/language-reference/nothing.md)|  
+|[CType Function](../../../visual-basic/language-reference/functions/ctype-function.md)|Любые типы данных|Для двух типов данных должно быть определено расширяющее или суженное преобразование.|Создает исключение <xref:System.InvalidCastException>|  
+|`DirectCast`|Любые типы данных|Один тип должен наследовать или реализовывать другой тип|Создает исключение <xref:System.InvalidCastException>|  
+|[Оператор TryCast](../../../visual-basic/language-reference/operators/trycast-operator.md)|Только ссылочные типы|Один тип должен наследовать или реализовывать другой тип|[Ничего не](../../../visual-basic/language-reference/nothing.md) возвращает|  
   
 ## <a name="example"></a>Пример  
- The following example demonstrates two uses of `DirectCast`, one that fails at run time and one that succeeds.  
+ В следующем примере показаны два применения `DirectCast`, один из которых завершается сбоем во время выполнения и один из которых завершается успешно.  
   
  [!code-vb[VbVbalrKeywords#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class1.vb#1)]  
   
- In the preceding example, the run-time type of `q` is `Double`. `CType` succeeds because `Double` can be converted to `Integer`. However, the first `DirectCast` fails at run time because the run-time type of `Double` has no inheritance relationship with `Integer`, even though a conversion exists. The second `DirectCast` succeeds because it converts from type <xref:System.Windows.Forms.Form> to type <xref:System.Windows.Forms.Control>, from which <xref:System.Windows.Forms.Form> inherits.  
+ В предыдущем примере тип времени выполнения `q` `Double`. `CType` выполнен, так как `Double` можно преобразовать в `Integer`. Однако первый `DirectCast` завершается ошибкой во время выполнения, так как тип времени выполнения `Double` не имеет связи наследования с `Integer`, даже если существует преобразование. Второй `DirectCast` будет выполнен, так как он преобразует из типа <xref:System.Windows.Forms.Form> в тип <xref:System.Windows.Forms.Control>, из которого <xref:System.Windows.Forms.Form> наследуется.  
   
 ## <a name="see-also"></a>См. также
 

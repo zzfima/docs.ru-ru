@@ -44,41 +44,41 @@ HRESULT GetMethodProps (
   
 ## <a name="parameters"></a>Параметры  
  `mb`  
- [in] The MethodDef token that represents the method to return metadata for.  
+ окне Токен MethodDef, представляющий метод, для которого возвращаются метаданные.  
   
  `pClass`  
- [out] A Pointer to a TypeDef token that represents the type that implements the method.  
+ заполняет Указатель на маркер TypeDef, представляющий тип, реализующий метод.  
   
  `szMethod`  
- [out] A Pointer to a buffer that has the method's name.  
+ заполняет Указатель на буфер с именем метода.  
   
  `cchMethod`  
- [in] The requested size of `szMethod`.  
+ окне Запрошенный размер `szMethod`.  
   
  `pchMethod`  
- [out] A Pointer to the size in wide characters of `szMethod`, or in the case of truncation, the actual number of wide characters in the method name.  
+ заполняет Указатель на размер в расширенных символах `szMethod`или в случае усечения — фактическое число расширенных символов в имени метода.  
   
  `pdwAttr`  
- [out] A pointer to any flags associated with the method.  
+ заполняет Указатель на любые флаги, связанные с методом.  
   
  `ppvSigBlob`  
- [out] A pointer to the binary metadata signature of the method.  
+ заполняет Указатель на сигнатуру двоичных метаданных метода.  
   
  `pcbSigBlob`  
- [out] A Pointer to the size in bytes of `ppvSigBlob`.  
+ заполняет Указатель на размер в байтах `ppvSigBlob`.  
   
  `pulCodeRVA`  
- [out] A pointer to the relative virtual address of the method.  
+ заполняет Указатель на относительный виртуальный адрес метода.  
   
  `pdwImplFlags`  
- [out] A pointer to any implementation flags for the method.  
+ заполняет Указатель на любые флаги реализации метода.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Заголовок:** COR. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

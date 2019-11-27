@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448506"
 ---
 # <a name="ibindingdisplaygetcurrentdisplay-method"></a>Метод IBindingDisplay::GetCurrentDisplay
-Returns the current binding display information.  
+Возвращает текущие отображаемые сведения о привязке.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -35,19 +35,19 @@ HRESULT GetCurrentDisplay (
   
 ## <a name="parameters"></a>Параметры  
  `display`  
- [out, retval] A pointer to a safearray containing the binding display information.  
+ [out, retval] Указатель на массив SafeArray, содержащий сведения, отображаемые при привязке.  
   
-## <a name="remarks"></a>Заметки  
- The [IBindingDisplay::InitializeForProcess](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-initializeforprocess-method.md) method must have previously succeeded, and the program must be stopped by a debugger.  
+## <a name="remarks"></a>Примечания  
+ Метод [ибиндингдисплай:: инитиализефорпроцесс](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-initializeforprocess-method.md) должен быть ранее успешно завершен, и программа должна быть остановлена отладчиком.  
   
- The caller must deallocate the returned `SAFEARRAY` memory by using [SafeArrayDestroy](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-safearraydestroy).  
+ Вызывающий объект должен освободить возвращенную `SAFEARRAY` памяти с помощью [сафеаррайдестрой](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-safearraydestroy).  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** BindingDisplay.h  
+ **Заголовок:** Биндингдисплай. h  
   
- **Library:** BindingDisplay.idl  
+ **Библиотека:** Биндингдисплай. idl  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

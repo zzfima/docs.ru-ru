@@ -33,7 +33,7 @@ ms.locfileid: "74352779"
 ---
 # <a name="type-list-visual-basic"></a>Список типов (Visual Basic)
 
-Specifies the *type parameters* for a *generic* programming element. Multiple parameters are separated by commas. Following is the syntax for one type parameter.
+Задает *Параметры типа* для *универсального* программного элемента. Несколько параметров разделяются запятыми. Ниже приведен синтаксис для одного параметра типа.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -45,55 +45,55 @@ Specifies the *type parameters* for a *generic* programming element. Multiple pa
 
 |Термин|Определение|
 |---|---|
-|`genericmodifier`|Необязательный. Can be used only in generic interfaces and delegates. You can declare a type covariant by using the [Out](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md) keyword or contravariant by using the [In](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md) keyword. См. раздел [Ковариация и контрвариация](../../programming-guide/concepts/covariance-contravariance/index.md).|
-|`typename`|Обязательный. Name of the type parameter. This is a placeholder, to be replaced by a defined type supplied by the corresponding type argument.|
-|`constraintlist`|Необязательный. List of requirements that constrain the data type that can be supplied for `typename`. If you have multiple constraints, enclose them in curly braces (`{ }`) and separate them with commas. You must introduce the constraint list with the [As](../../../visual-basic/language-reference/statements/as-clause.md) keyword. You use `As` only once, at the beginning of the list.|
+|`genericmodifier`|Необязательный элемент. Может использоваться только в универсальных интерфейсах и делегатах. Ковариантность типа можно объявить с помощью ключевого слова [out](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md) или контравариантного с помощью ключевого слова [in](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md) . См. раздел [Ковариация и контрвариация](../../programming-guide/concepts/covariance-contravariance/index.md).|
+|`typename`|Обязательно. Имя параметра типа. Это заполнитель, заменяемый определенным типом, предоставленным соответствующим аргументом типа.|
+|`constraintlist`|Необязательный элемент. Список требований, ограничивающих тип данных, который можно указать для `typename`. При наличии нескольких ограничений заключите их в фигурные скобки (`{ }`) и разделите их запятыми. Список ограничений необходимо ввести с помощью ключевого слова [as](../../../visual-basic/language-reference/statements/as-clause.md) . Вы используете `As` только один раз, в начале списка.|
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Примечания
 
-Every generic programming element must take at least one type parameter. A type parameter is a placeholder for a specific type (a *constructed element*) that client code specifies when it creates an instance of the generic type. You can define a generic class, structure, interface, procedure, or delegate.
+Каждый универсальный программный элемент должен принимать по крайней мере один параметр типа. Параметр типа — это заполнитель для определенного типа ( *сконструированного элемента*), который клиентский код указывает при создании экземпляра универсального типа. Можно определить универсальный класс, структуру, интерфейс, процедуру или делегат.
 
-For more information on when to define a generic type, see [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md). For more information on type parameter names, see [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).
+Дополнительные сведения о том, когда следует определять универсальный тип, см. [в разделе Универсальные типы в Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md). Дополнительные сведения об именах параметров типов см. в разделе [Имена объявленных элементов](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).
 
 ## <a name="rules"></a>Правила
 
-- **Parentheses.** If you supply a type parameter list, you must enclose it in parentheses, and you must introduce the list with the [Of](../../../visual-basic/language-reference/statements/of-clause.md) keyword. You use `Of` only once, at the beginning of the list.
+- **Скобки.** Если вы представите список параметров типа, необходимо заключить его в круглые скобки и ввести в список ключевое слово [of](../../../visual-basic/language-reference/statements/of-clause.md) . Вы используете `Of` только один раз, в начале списка.
 
-- **Constraints.** A list of *constraints* on a type parameter can include the following items in any combination:
+- **Учитывая.** Список *ограничений* для параметра типа может включать в себя следующие элементы в любом сочетании:
 
-  - Any number of interfaces. The supplied type must implement every interface in this list.
+  - Любое количество интерфейсов. Указанный тип должен реализовывать каждый интерфейс в этом списке.
 
-  - At most one class. The supplied type must inherit from that class.
+  - Не более одного класса. Указанный тип должен наследоваться от этого класса.
 
-  - Ключевое слово `New`. The supplied type must expose a parameterless constructor that your generic type can access. This is useful if you constrain a type parameter by one or more interfaces. A type that implements interfaces does not necessarily expose a constructor, and depending on the access level of a constructor, the code within the generic type might not be able to access it.
+  - Ключевое слово `New`. Предоставленный тип должен предоставлять конструктор без параметров, к которому имеет доступ универсальный тип. Это полезно, если параметр типа ограничивается одним или несколькими интерфейсами. Тип, реализующий интерфейсы, не обязательно предоставляет конструктор, и в зависимости от уровня доступа конструктора код в универсальном типе может не иметь возможности получить к нему доступ.
 
-  - Either the `Class` keyword or the `Structure` keyword. The `Class` keyword constrains a generic type parameter to require that any type argument passed to it be a reference type, for example a string, array, or delegate, or an object created from a class. The `Structure` keyword constrains a generic type parameter to require that any type argument passed to it be a value type, for example a structure, enumeration, or elementary data type. You cannot include both `Class` and `Structure` in the same `constraintlist`.
+  - Либо ключевое слово `Class`, либо ключевое слово `Structure`. Ключевое слово `Class` ограничивает параметр универсального типа, требуя, чтобы любой передаваемый аргумент типа был ссылочным типом, например строкой, массивом или делегатом, или объектом, созданным из класса. Ключевое слово `Structure` ограничивает параметр универсального типа, требуя, чтобы любой передаваемый аргумент типа был типом значения, например структурой, перечислением или простым типом данных. В одном `constraintlist`нельзя включать как `Class`, так и `Structure`.
 
-  The supplied type must satisfy every requirement you include in `constraintlist`.
+  Указанный тип должен отвечать всем требованиям, включенным в `constraintlist`.
 
-  Constraints on each type parameter are independent of constraints on other type parameters.
+  Ограничения для каждого параметра типа не зависят от ограничений для других параметров типа.
 
 ## <a name="behavior"></a>Поведение
 
-- **Compile-Time Substitution.** When you create a constructed type from a generic programming element, you supply a defined type for each type parameter. The Visual Basic compiler substitutes that supplied type for every occurrence of `typename` within the generic element.
+- **Подстановка во время компиляции.** При создании сконструированного типа на основе универсального программного элемента вы предоставляете определенный тип для каждого параметра типа. Компилятор Visual Basic замещает указанный тип для каждого вхождения `typename` в пределах универсального элемента.
 
-- **Absence of Constraints.** If you do not specify any constraints on a type parameter, your code is limited to the operations and members supported by the [Object Data Type](../../../visual-basic/language-reference/data-types/object-data-type.md) for that type parameter.
+- **Отсутствие ограничений.** Если не указать какие-либо ограничения на параметр типа, код будет ограничен операциями и элементами, поддерживаемыми [типом данных Object](../../../visual-basic/language-reference/data-types/object-data-type.md) для этого параметра типа.
 
 ## <a name="example"></a>Пример
 
-The following example shows a skeleton definition of a generic dictionary class, including a skeleton function to add a new entry to the dictionary.
+В следующем примере показано определение каркаса универсального класса Dictionary, включая скелет функции для добавления новой записи в словарь.
 
 [!code-vb[VbVbalrStatements#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#3)]
 
 ## <a name="example"></a>Пример
 
-Because `dictionary` is generic, the code that uses it can create a variety of objects from it, each having the same functionality but acting on a different data type. The following example shows a line of code that creates a `dictionary` object with `String` entries and `Integer` keys.
+Поскольку `dictionary` является универсальным, код, который использует его, может создавать разнообразные объекты, каждый из которых имеет одинаковые функциональные возможности, но работает с другим типом данных. В следующем примере показана строка кода, создающая объект `dictionary` с `String` записями и ключами `Integer`.
 
 [!code-vb[VbVbalrStatements#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#4)]
 
 ## <a name="example"></a>Пример
 
-The following example shows the equivalent skeleton definition generated by the preceding example.
+В следующем примере показано эквивалентное определение скелета, созданное в предыдущем примере.
 
 [!code-vb[VbVbalrStatements#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#5)]
 
@@ -101,7 +101,7 @@ The following example shows the equivalent skeleton definition generated by the 
 
 - [Of](../../../visual-basic/language-reference/statements/of-clause.md)
 - [Оператор New](../../../visual-basic/language-reference/operators/new-operator.md)
-- [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
+- [Уровни доступа в Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
 - [Тип данных Object](../../../visual-basic/language-reference/data-types/object-data-type.md)
 - [Оператор Function](../../../visual-basic/language-reference/statements/function-statement.md)
 - [Оператор Structure](../../../visual-basic/language-reference/statements/structure-statement.md)

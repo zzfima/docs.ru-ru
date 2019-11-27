@@ -16,9 +16,9 @@ ms.locfileid: "74351427"
 ---
 # <a name="out-generic-modifier-visual-basic"></a>Out (универсальный модификатор) (Visual Basic)
 
-For generic type parameters, the `Out` keyword specifies that the type is covariant.
+Для параметров универсального типа ключевое слово `Out` указывает, что тип является ковариантным.
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Примечания
 
 Ковариация позволяет использовать производные типы со степенью наследования больше, нежели у типа, заданного универсальным параметром. Благодаря этому можно осуществлять неявное преобразование классов, реализующих вариантные интерфейсы, и неявное преобразование типов делегатов.
 
@@ -37,11 +37,11 @@ For generic type parameters, the `Out` keyword specifies that the type is covari
 
 - Параметр типа не используется в качестве универсального ограничения для методов интерфейса.
 
-In a generic delegate, a type parameter can be declared covariant if it is used only as a method return type and not used for method arguments.
+В универсальном делегате параметр типа может быть объявлен ковариантным, если он используется только в качестве возвращаемого типа метода и не используется для аргументов метода.
 
 Ковариация и контравариантность поддерживаются для ссылочных типов, но не для типов значений.
 
-In Visual Basic, you cannot declare events in covariant interfaces without specifying the delegate type. Also, covariant interfaces cannot have nested classes, enums, or structures, but they can have nested interfaces.
+В Visual Basic нельзя объявлять события в ковариантных интерфейсах без указания типа делегата. Кроме того, ковариантные интерфейсы не могут иметь вложенные классы, перечисления или структуры, но они могут иметь вложенные интерфейсы.
 
 ## <a name="behavior"></a>Поведение
 
@@ -57,7 +57,7 @@ In Visual Basic, you cannot declare events in covariant interfaces without speci
 
 ## <a name="example"></a>Пример
 
-В следующем примере кода показано, как объявить ковариантный универсальный метод-делегат. It also shows how you can use implicit conversion for delegate types.
+В следующем примере кода показано, как объявить ковариантный универсальный метод-делегат. Здесь также показано, как можно использовать неявное преобразование для типов делегатов.
 
 [!code-vb[vbVarianceKeywords#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvariancekeywords/vb/module1.vb#4)]
 

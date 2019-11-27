@@ -36,17 +36,17 @@ HRESULT ResetEnum (
   
 ## <a name="parameters"></a>Параметры  
  `hEnum`  
- [in] The enumerator to reset.  
+ окне Перечислитель для сброса.  
   
  `ulPos`  
- [in] The new position at which to place the enumerator.  
+ окне Новое место для размещения перечислителя.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Заголовок:** COR. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

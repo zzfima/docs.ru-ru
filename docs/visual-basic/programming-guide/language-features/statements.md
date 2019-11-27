@@ -24,227 +24,227 @@ ms.locfileid: "74352505"
 ---
 # <a name="statements-in-visual-basic"></a>Операторы в Visual Basic
 
-A statement in Visual Basic is a complete instruction. It can contain keywords, operators, variables, constants, and expressions. Each statement belongs to one of the following categories:
+Инструкция в Visual Basic является полной инструкцией. Он может содержать ключевые слова, операторы, переменные, константы и выражения. Каждая инструкция принадлежит к одной из следующих категорий:
 
-- **Declaration Statements**, which name a variable, constant, or procedure, and can also specify a data type.
+- **Операторы объявления**, которые наименают переменную, константу или процедуру, а также могут указывать тип данных.
 
-- **Executable Statements**, which initiate actions. These statements can call a method or function, and they can loop or branch through blocks of code. Executable statements include **Assignment Statements**, which assign a value or expression to a variable or constant.
+- **Исполняемые операторы**, инициирующие действия. Эти инструкции могут вызывать метод или функцию, и они могут выполнять цикл или ветвление по блокам кода. Исполняемые операторы включают **Операторы присваивания**, которые присваивают значение или выражение переменной или константе.
 
-This topic describes each category. Also, this topic describes how to combine multiple statements on a single line and how to continue a statement over multiple lines.
+В этом разделе описывается каждая категория. Кроме того, в этом разделе описывается, как объединить несколько инструкций в одной строке и как продолжить выполнение инструкции на нескольких строках.
 
 ## <a name="declaration-statements"></a>Инструкции объявления
 
-You use declaration statements to name and define procedures, variables, properties, arrays, and constants. When you declare a programming element, you can also define its data type, access level, and scope. For more information, see [Declared Element Characteristics](./declared-elements/declared-element-characteristics.md).
+Операторы объявления используются для именования и определения процедур, переменных, свойств, массивов и констант. При объявлении программного элемента можно также определить его тип данных, уровень доступа и область. Дополнительные сведения см. в разделе [Характеристики объявленных элементов](./declared-elements/declared-element-characteristics.md).
 
-The following example contains three declarations.
+Следующий пример содержит три объявления.
 
 [!code-vb[VbVbalrStatements#80](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#80)]
 
-The first declaration is the `Sub` statement. Together with its matching `End Sub` statement, it declares a procedure named `applyFormat`. It also specifies that `applyFormat` is `Public`, which means that any code that can refer to it can call it.
+Первое объявление — это `Sub` оператор. Вместе с соответствующей инструкцией `End Sub` объявляется процедура с именем `applyFormat`. Он также указывает, что `applyFormat` имеет `Public`, что означает, что любой код, который может ссылаться на него, может вызывать его.
 
-The second declaration is the `Const` statement, which declares the constant `limit`, specifying the `Integer` data type and a value of 33.
+Второе объявление — это оператор `Const`, который объявляет константную `limit`, указывая тип данных `Integer` и значение 33.
 
-The third declaration is the `Dim` statement, which declares the variable `thisWidget`. The data type is a specific object, namely an object created from the `Widget` class. You can declare a variable to be of any elementary data type or of any object type that is exposed in the application you are using.
+Третье объявление — это `Dim` оператор, объявляющий переменную `thisWidget`. Тип данных — это конкретный объект, а именно объект, созданный из класса `Widget`. Можно объявить переменную для любого простейшего типа данных или любого типа объекта, предоставляемого в используемом приложении.
 
-### <a name="initial-values"></a>Initial Values
+### <a name="initial-values"></a>Начальные значения
 
-When the code containing a declaration statement runs, Visual Basic reserves the memory required for the declared element. If the element holds a value, Visual Basic initializes it to the default value for its data type. For more information, see "Behavior" in [Dim Statement](../../language-reference/statements/dim-statement.md).
+При выполнении кода, содержащего оператор объявления, Visual Basic резервирует память, необходимую для объявленного элемента. Если элемент содержит значение, Visual Basic инициализирует его значением по умолчанию для его типа данных. Дополнительные сведения см. в разделе «поведение» в [операторе Dim](../../language-reference/statements/dim-statement.md).
 
-You can assign an initial value to a variable as part of its declaration, as the following example illustrates.
+Начальное значение переменной можно присвоить как часть объявления, как показано в следующем примере.
 
 [!code-vb[VbVbalrStatements#81](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#81)]
 
-If a variable is an object variable, you can explicitly create an instance of its class when you declare it by using the [New Operator](../../../visual-basic/language-reference/operators/new-operator.md) keyword, as the following example illustrates.
+Если переменная является объектной переменной, можно явно создать экземпляр его класса при объявлении с помощью ключевого слова [New operator](../../../visual-basic/language-reference/operators/new-operator.md) , как показано в следующем примере.
 
 [!code-vb[VbVbalrStatements#82](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#82)]
 
-Note that the initial value you specify in a declaration statement is not assigned to a variable until execution reaches its declaration statement. Until that time, the variable contains the default value for its data type.
+Обратите внимание, что начальное значение, указанное в операторе объявления, не присваивается переменной до тех пор, пока выполнение не достигнет оператора объявления. До этого времени переменная будет содержать значение по умолчанию для его типа данных.
 
-## <a name="executable-statements"></a>Executable statements
+## <a name="executable-statements"></a>Исполняемые операторы
 
-An executable statement performs an action. It can call a procedure, branch to another place in the code, loop through several statements, or evaluate an expression. An assignment statement is a special case of an executable statement.
+Исполняемый оператор выполняет действие. Он может вызывать процедуру, переходить к другому месту в коде, выполнять перебор нескольких инструкций или оценивать выражение. Оператор присваивания является особым случаем исполняемого оператора.
 
-The following example uses an `If...Then...Else` control structure to run different blocks of code based on the value of a variable. Within each block of code, a `For...Next` loop runs a specified number of times.
+В следующем примере используется структура элемента управления `If...Then...Else` для выполнения различных блоков кода на основе значения переменной. В каждом блоке кода цикл `For...Next` запускается заданное число раз.
 
 [!code-vb[VbVbalrStatements#83](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#83)]
 
-The `If` statement in the preceding example checks the value of the parameter `clockwise`. If the value is `True`, it calls the `spinClockwise` method of `aWidget`. If the value is `False`, it calls the `spinCounterClockwise` method of `aWidget`. The `If...Then...Else` control structure ends with `End If`.
+Оператор `If` в предыдущем примере проверяет значение параметра `clockwise`. Если значение равно `True`, то вызывается метод `spinClockwise` `aWidget`. Если значение равно `False`, то вызывается метод `spinCounterClockwise` `aWidget`. Структура элемента управления `If...Then...Else` заканчивается `End If`.
 
-The `For...Next` loop within each block calls the appropriate method a number of times equal to the value of the `revolutions` parameter.
+Цикл `For...Next` в каждом блоке вызывает соответствующий метод несколько раз, равным значению параметра `revolutions`.
 
-## <a name="assignment-statements"></a>Assignment statements
+## <a name="assignment-statements"></a>Операторы присваивания
 
-Assignment statements carry out assignment operations, which consist of taking the value on the right side of the assignment operator (`=`) and storing it in the element on the left, as in the following example.
+Операторы присваивания выполняют операции присваивания, которые состоят из значения с правой стороны оператора присваивания (`=`) и сохраняют его в элементе слева, как показано в следующем примере.
 
 [!code-vb[VbVbalrStatements#73](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#73)]
 
-In the preceding example, the assignment statement stores the literal value 42 in the variable `v`.
+В предыдущем примере инструкция присваивания сохраняет литеральное значение 42 в переменной `v`.
 
-### <a name="eligible-programming-elements"></a>Eligible programming elements
+### <a name="eligible-programming-elements"></a>Подходящие программные элементы
 
-The programming element on the left side of the assignment operator must be able to accept and store a value. This means it must be a variable or property that is not [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md), or it must be an array element. In the context of an assignment statement, such an element is sometimes called an *lvalue*, for "left value."
+Программный элемент в левой части оператора присваивания должен иметь возможность принимать и сохранять значение. Это означает, что это должна быть переменная или свойство, не предназначенное [только для чтения](../../../visual-basic/language-reference/modifiers/readonly.md)или которое должно быть элементом массива. В контексте оператора присваивания такой элемент иногда называют *левосторонним*значением для «левого значения».
 
-The value on the right side of the assignment operator is generated by an expression, which can consist of any combination of literals, constants, variables, properties, array elements, other expressions, or function calls. Это показано в следующем примере.
+Значение в правой части оператора присваивания формируется выражением, которое может состоять из любого сочетания литералов, констант, переменных, свойств, элементов массива, других выражений или вызовов функций. Это показано в следующем примере.
 
 [!code-vb[VbVbalrStatements#74](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#74)]
 
-The preceding example adds the value held in variable `y` to the value held in variable `z`, and then adds the value returned by the call to function `findResult`. The total value of this expression is then stored in variable `x`.
+В предыдущем примере добавляется значение, содержащееся в переменной `y`, к значению в переменной `z`, а затем добавляется значение, возвращаемое вызовом функции `findResult`. Общее значение этого выражения сохраняется в переменной `x`.
 
-### <a name="data-types-in-assignment-statements"></a>Data types in assignment statements
+### <a name="data-types-in-assignment-statements"></a>Типы данных в операторах присваивания
 
-In addition to numeric values, the assignment operator can also assign `String` values, as the following example illustrates.
+В дополнение к числовым значениям оператор присваивания может также назначать значения `String`, как показано в следующем примере.
 
 [!code-vb[VbVbalrStatements#75](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#75)]
 
-You can also assign `Boolean` values, using either a `Boolean` literal or a `Boolean` expression, as the following example illustrates.
+Можно также назначать `Boolean` значения с помощью `Boolean` литерала или выражения `Boolean`, как показано в следующем примере.
 
 [!code-vb[VbVbalrStatements#76](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#76)]
 
-Similarly, you can assign appropriate values to programming elements of the `Char`, `Date`, or `Object` data type. You can also assign an object instance to an element declared to be of the class from which that instance is created.
+Аналогичным образом можно назначить соответствующие значения для программирования элементов `Char`, `Date`или `Object` типа данных. Можно также назначить экземпляр объекта элементу, объявленному как класс, из которого создается этот экземпляр.
 
-### <a name="compound-assignment-statements"></a>Compound assignment statements
+### <a name="compound-assignment-statements"></a>Составные операторы присваивания
 
-*Compound assignment statements* first perform an operation on an expression before assigning it to a programming element. The following example illustrates one of these operators, `+=`, which increments the value of the variable on the left side of the operator by the value of the expression on the right.
+*Составные операторы присваивания* сначала выполняют операцию над выражением, прежде чем присваивать его элементу программирования. В следующем примере показан один из этих операторов, `+=`, который увеличивает значение переменной слева от оператора на значение выражения в правой части.
 
 [!code-vb[VbVbalrStatements#77](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#77)]
 
-The preceding example adds 1 to the value of `n`, and then stores that new value in `n`. It is a shorthand equivalent of the following statement:
+В предыдущем примере к значению `n`прибавляется 1, а затем это новое значение сохраняется в `n`. Это краткий эквивалент следующей инструкции:
 
 [!code-vb[VbVbalrStatements#78](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#78)]
 
-A variety of compound assignment operations can be performed using operators of this type. For a list of these operators and more information about them, see [Assignment Operators](../../../visual-basic/language-reference/operators/assignment-operators.md).
+С помощью операторов этого типа можно выполнять разнообразные операции составного присваивания. Список этих операторов и дополнительные сведения об этих операторах см. в разделе [Операторы присваивания](../../../visual-basic/language-reference/operators/assignment-operators.md).
 
-The concatenation assignment operator (`&=`) is useful for adding a string to the end of already existing strings, as the following example illustrates.
+Оператор присваивания объединения (`&=`) удобен для добавления строки в конец уже существующих строк, как показано в следующем примере.
 
 [!code-vb[VbVbalrStatements#79](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#79)]
 
-### <a name="type-conversions-in-assignment-statements"></a>Type Conversions in Assignment Statements
+### <a name="type-conversions-in-assignment-statements"></a>Преобразования типов в операторах присваивания
 
-The value you assign to a variable, property, or array element must be of a data type appropriate to that destination element. In general, you should try to generate a value of the same data type as that of the destination element. However, some types can be converted to other types during assignment.
+Значение, присваиваемое переменной, свойству или элементу массива, должно иметь тип данных, соответствующий целевому элементу. В общем случае следует попытаться создать значение того же типа данных, что и у целевого элемента. Однако некоторые типы могут быть преобразованы в другие типы во время назначения.
 
-For information on converting between data types, see [Type Conversions in Visual Basic](./data-types/type-conversions.md). In brief, Visual Basic automatically converts a value of a given type to any other type to which it widens. A *widening conversion* is one in that always succeeds at run time and does not lose any data. For example, Visual Basic converts an `Integer` value to `Double` when appropriate, because `Integer` widens to `Double`. Для получения дополнительной информации см. [Widening and Narrowing Conversions](./data-types/widening-and-narrowing-conversions.md).
+Дополнительные сведения о преобразовании типов данных см. [в разделе преобразования типов в Visual Basic](./data-types/type-conversions.md). Вкратце, Visual Basic автоматически преобразует значение заданного типа в любой другой тип, в который он расширяется. *Расширяющее преобразование* — это одно из, которое всегда выполняется во время выполнения и не теряет никаких данных. Например, Visual Basic преобразует значение `Integer` в `Double` при необходимости, так как `Integer` расширяется до `Double`. Для получения дополнительной информации см. [Widening and Narrowing Conversions](./data-types/widening-and-narrowing-conversions.md).
 
-*Narrowing conversions* (those that are not widening) carry a risk of failure at run time, or of data loss. You can perform a narrowing conversion explicitly by using a type conversion function, or you can direct the compiler to perform all conversions implicitly by setting `Option Strict Off`. For more information, see [Implicit and Explicit Conversions](./data-types/implicit-and-explicit-conversions.md).
+*Сужающие преобразования* (которые не расширяются) приводят к риску сбоя во время выполнения или потери данных. Можно выполнить сужающие преобразования явным образом с помощью функции преобразования типа, или можно направить компилятору выполнить неявное выполнение всех преобразований, задав `Option Strict Off`. Дополнительные сведения см. в разделе [явные и неявные преобразования](./data-types/implicit-and-explicit-conversions.md).
 
-## <a name="putting-multiple-statements-on-one-line"></a>Putting multiple statements on one line
+## <a name="putting-multiple-statements-on-one-line"></a>Размещение нескольких инструкций на одной строке
 
-You can have multiple statements on a single line separated by the colon (`:`) character. Это показано в следующем примере.
+Можно использовать несколько операторов в одной строке, разделенных знаком двоеточия (`:`). Это показано в следующем примере.
 
 [!code-vb[VbVbalrStatements#70](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#70)]
 
-Though occasionally convenient, this form of syntax makes your code hard to read and maintain. Thus, it is recommended that you keep one statement to a line.
+Хотя иногда удобно, такая форма синтаксиса делает код трудным для чтения и обслуживания. Поэтому рекомендуется размещать один оператор в строке.
 
-## <a name="continuing-a-statement-over-multiple-lines"></a>Continuing a statement over multiple lines
+## <a name="continuing-a-statement-over-multiple-lines"></a>Продолжение выполнения инструкции на нескольких строках
 
-A statement usually fits on one line, but when it is too long, you can continue it onto the next line using a line-continuation sequence, which consists of a space followed by an underscore character (`_`) followed by a carriage return. In the following example, the `MsgBox` executable statement is continued over two lines.
+Оператор обычно помещается на одной строке, но если он слишком длинный, его можно продолжить на следующей строке с помощью последовательности продолжения строки, которая состоит из пробела, за которым следует символ подчеркивания (`_`), за которым следует возврат каретки. В следующем примере `MsgBox` исполняемый оператор продолжается над двумя строками.
 
 [!code-vb[VbVbalrStatements#71](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#71)]
 
-### <a name="implicit-line-continuation"></a>Implicit line continuation
+### <a name="implicit-line-continuation"></a>Неявное продолжение строки
 
-In many cases, you can continue a statement on the next consecutive line without using the underscore character (`_`). The following syntax elements implicitly continue the statement on the next line of code.
+Во многих случаях оператор можно продолжить в следующей строке подряд без использования символа подчеркивания (`_`). Следующие элементы синтаксиса неявно пропродолжат оператор в следующей строке кода.
 
-- After a comma (`,`). Пример:
+- После запятой (`,`). Пример.
 
    [!code-vb[VbVbalrLineContinuation#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#1)]
 
-- After an open parenthesis (`(`) or before a closing parenthesis (`)`). Пример:
+- После открывающей скобки (`(`) или перед закрывающей круглой скобкой (`)`). Пример.
 
    [!code-vb[VbVbalrLineContinuation#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#2)]
 
-- After an open curly brace (`{`) or before a closing curly brace (`}`). Пример:
+- После открывающей фигурной скобки (`{`) или перед закрывающей фигурной скобкой (`}`). Пример.
 
     [!code-vb[VbVbalrLineContinuation#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#3)]
 
-    For more information, see [Object Initializers: Named and Anonymous Types](./objects-and-classes/object-initializers-named-and-anonymous-types.md) or [Collection Initializers](./collection-initializers/index.md).
+    Дополнительные сведения см. в разделе [инициализаторы объектов: именованные и анонимные типы](./objects-and-classes/object-initializers-named-and-anonymous-types.md) или [Инициализаторы коллекций](./collection-initializers/index.md).
 
-- After an open embedded expression (`<%=`) or before the close of an embedded expression (`%>`) within an XML literal. Пример:
+- После открытого внедренного выражения (`<%=`) или перед закрытием внедренного выражения (`%>`) в XML-литерале. Пример.
 
    [!code-vb[VbVbalrLineContinuation#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#4)]
 
-   For more information, see [Embedded Expressions in XML](./xml/embedded-expressions-in-xml.md).
+   Дополнительные сведения см. [в разделе внедренные выражения в XML](./xml/embedded-expressions-in-xml.md).
 
-- After the concatenation operator (`&`). Пример:
+- После оператора объединения (`&`). Пример.
 
    [!code-vb[VbVbcnConventions#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/vb/Class1.vb#9)]
 
-   For more information, see [Operators Listed by Functionality](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md).
+   Дополнительные сведения см. [в разделе операторы, перечисленные по функциональным возможностям](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md).
 
-- After assignment operators (`=`, `&=`, `:=`, `+=`, `-=`, `*=`, `/=`, `\=`, `^=`, `<<=`, `>>=`). Пример:
+- После операторов присваивания (`=`, `&=`, `:=`, `+=`, `-=`, `*=`, `/=`, `\=`, `^=`, `<<=`, `>>=`). Пример.
 
    [!code-vb[VbVbalrLineContinuation#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#5)]
 
-   For more information, see [Operators Listed by Functionality](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md).
+   Дополнительные сведения см. [в разделе операторы, перечисленные по функциональным возможностям](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md).
 
-- After binary operators (`+`, `-`, `/`, `*`, `Mod`, `<>`, `<`, `>`, `<=`, `>=`, `^`, `>>`, `<<`, `And`, `AndAlso`, `Or`, `OrElse`, `Like`, `Xor`) within an expression. Пример:
+- После бинарных операторов (`+`, `-`, `/`, `*`, `Mod`, `<>`, `<`, `>`, `<=`, `>=`, `^`, `>>`, `<<`, `And`, `AndAlso`) в выражении.`Or``OrElse``Like``Xor` Пример.
 
    [!code-vb[VbVbalrLineContinuation#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#7)]
 
-   For more information, see [Operators Listed by Functionality](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md).
+   Дополнительные сведения см. [в разделе операторы, перечисленные по функциональным возможностям](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md).
 
-- After the `Is` and `IsNot` operators. Пример:
+- После операторов `Is` и `IsNot`. Пример.
 
    [!code-vb[VbVbalrLineContinuation#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#8)]
 
-   For more information, see [Operators Listed by Functionality](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md).
+   Дополнительные сведения см. [в разделе операторы, перечисленные по функциональным возможностям](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md).
 
-- After a member qualifier character (`.`) and before the member name. Пример:
+- После символа квалификатора члена (`.`) и перед именем элемента. Пример.
 
    [!code-vb[VbVbalrLineContinuation#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#5)]
 
-   However, you must include a line-continuation character (`_`) following a member qualifier character when you are using the `With` statement or supplying values in the initialization list for a type. Consider breaking the line after the assignment operator (for example, `=`) when you are using `With` statements or object initialization lists. Пример:
+   Однако необходимо включить символ продолжения строки (`_`) после символа квалификатора элемента при использовании инструкции `With` или при указании значений в списке инициализации для типа. Рассмотрите возможность разбиения строки после оператора присваивания (например, `=`) при использовании инструкций `With` или списков инициализации объектов. Пример.
 
    [!code-vb[VbVbalrLineContinuation#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#14)]
 
-   For more information, see [With...End With Statement](../../../visual-basic/language-reference/statements/with-end-with-statement.md) or [Object Initializers: Named and Anonymous Types](./objects-and-classes/object-initializers-named-and-anonymous-types.md).
+   Дополнительные сведения см [. в разделе with... End с оператором](../../../visual-basic/language-reference/statements/with-end-with-statement.md) или [инициализаторами объектов: именованные и анонимные типы](./objects-and-classes/object-initializers-named-and-anonymous-types.md).
 
-- After an XML axis property qualifier (`.` or `.@` or `...`). However, you must include a line-continuation character (`_`) when you specify a member qualifier when you are using the `With` keyword. Пример:
+- После квалификатора свойства оси XML (`.` или `.@` или `...`). Однако при использовании ключевого слова `With` необходимо включить символ продолжения строки (`_`) при указании квалификатора элемента. Пример.
 
    [!code-vb[VbVbalrLineContinuation#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#9)]
 
-   For more information, see [XML Axis Properties](../../../visual-basic/language-reference/xml-axis/index.md).
+   Дополнительные сведения см. в разделе [Свойства осей XML](../../../visual-basic/language-reference/xml-axis/index.md).
 
-- After a less-than sign (<) or before a greater-than sign (`>`) when you specify an attribute. Also after a greater-than sign (`>`) when you specify an attribute. However, you must include a line-continuation character (`_`) when you specify assembly-level or module-level attributes. Пример:
+- После знака "меньше" (<) или перед знаком "больше" (`>`) при указании атрибута. Также после знака "больше" (`>`) при указании атрибута. Однако при указании атрибутов уровня сборки или уровня модуля необходимо включить символ продолжения строки (`_`). Пример.
 
    [!code-vb[VbVbalrLineContinuation#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#10)]
 
-   For more information, see [Attributes overview](../../../visual-basic/programming-guide/concepts/attributes/index.md).
+   Дополнительные сведения см. в разделе [Общие сведения об атрибутах](../../../visual-basic/programming-guide/concepts/attributes/index.md).
 
-- Before and after query operators (`Aggregate`, `Distinct`, `From`, `Group By`, `Group Join`, `Join`, `Let`, `Order By`, `Select`, `Skip`, `Skip While`, `Take`, `Take While`, `Where`, `In`, `Into`, `On`, `Ascending`, and `Descending`). You cannot break a line between the keywords of query operators that are made up of multiple keywords (`Order By`, `Group Join`, `Take While`, and `Skip While`). Пример:
+- Операторы запроса Before и After (`Aggregate`, `Distinct`, `From`, `Group By`, `Group Join`, `Join`, `Let`, `Order By`, `Select`, `Skip`, `Skip While`, `Take`, `Take While`, `Where`и `In`).`Into``On``Ascending``Descending` Нельзя разбить строку между ключевыми словами операторов запроса, которые состоят из нескольких ключевых слов (`Order By`, `Group Join`, `Take While`и `Skip While`). Пример.
 
    [!code-vb[VbVbalrLineContinuation#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#11)]
 
-   For more information, see [Queries](../../../visual-basic/language-reference/queries/index.md).
+   Дополнительные сведения см. в разделе [запросы](../../../visual-basic/language-reference/queries/index.md).
 
-- After the `In` keyword in a `For Each` statement. Пример:
+- После ключевого слова `In` в операторе `For Each`. Пример.
 
    [!code-vb[VbVbalrLineContinuation#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#12)]
 
-   For more information, see [For Each...Next Statement](../../../visual-basic/language-reference/statements/for-each-next-statement.md).
+   Дополнительные сведения см. в разделе [For Each... Следующий оператор](../../../visual-basic/language-reference/statements/for-each-next-statement.md).
 
-- After the `From` keyword in a collection initializer. Пример:
+- После ключевого слова `From` в инициализаторе коллекции. Пример.
 
    [!code-vb[VbVbalrLineContinuation#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#13)]
 
    Дополнительные сведения см. в разделе [Инициализаторы коллекций](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md).
 
-## <a name="adding-comments"></a>Adding comments
+## <a name="adding-comments"></a>Добавление комментариев
 
-Source code is not always self-explanatory, even to the programmer who wrote it. To help document their code, therefore, most programmers make liberal use of embedded comments. Comments in code can explain a procedure or a particular instruction to anyone reading or working with it later. Visual Basic ignores comments during compilation, and they do not affect the compiled code.
+Исходный код не всегда говорят сами за себя, даже программисту, который написал его. Для облегчения документирования кода большинство программистов используют внедренные комментарии. Комментарии в коде могут объяснить процедуру или конкретную инструкцию, которая может быть прочитана или обработана другим пользователем позже. Visual Basic игнорирует комментарии во время компиляции и не влияет на скомпилированный код.
 
-Comment lines begin with an apostrophe (`'`) or `REM` followed by a space. They can be added anywhere in code, except within a string. To append a comment to a statement, insert an apostrophe or `REM` after the statement, followed by the comment. Comments can also go on their own separate line. The following example demonstrates these possibilities.
+Строки комментариев начинаются с апострофа (`'`) или `REM` за которым следует пробел. Их можно добавлять в любом месте кода, за исключением строк. Чтобы добавить комментарий к оператору, вставьте апостроф или `REM` после оператора, за которым следует комментарий. Комментарии также можно найти в отдельной строке. В следующем примере демонстрируются эти возможности.
 
 [!code-vb[VbVbalrStatements#72](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#72)]
 
-## <a name="checking-compilation-errors"></a>Checking compilation errors
+## <a name="checking-compilation-errors"></a>Проверка ошибок компиляции
 
-If, after you type a line of code, the line is displayed with a wavy blue underline (an error message may appear as well), there is a syntax error in the statement. You must find out what is wrong with the statement (by looking in the task list, or hovering over the error with the mouse pointer and reading the error message) and correct it. Until you have fixed all syntax errors in your code, your program will fail to compile correctly.
+Если после ввода строки кода линия отображается волнистой синей линией (также может появиться сообщение об ошибке), в инструкции присутствует синтаксическая ошибка. Необходимо выяснить, что именно не так с оператором (просмотрев список задач, или навести указатель мыши на ошибку с помощью указателя и прочитать сообщение об ошибке) и исправить его. До тех пор, пока в коде не будут исправлены все синтаксические ошибки, программа не сможет правильно выполнить компиляцию.
 
 ## <a name="related-sections"></a>Связанные разделы
 
 |Термин|Определение|
 |---|---|
-|[Операторы присваивания](../../../visual-basic/language-reference/operators/assignment-operators.md)|Provides links to language reference pages covering assignment operators such as `=`, `*=`, and `&=`.|
-|[Операторы и выражения](./operators-and-expressions/index.md)|Shows how to combine elements with operators to yield new values.|
-|[Практическое руководство. Разбиение и объединение инструкций в коде](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)|Shows how to break a single statement into multiple lines and how to place multiple statements on the same line.|
-|[Практическое руководство. Операторы меток](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md)|Shows how to label a line of code.|
+|[Операторы присваивания](../../../visual-basic/language-reference/operators/assignment-operators.md)|Ссылки на страницы справочника по языку, охватывающие операторы назначения, такие как `=`, `*=`и `&=`.|
+|[Операторы и выражения](./operators-and-expressions/index.md)|Показывает, как объединить элементы с операторами для получения новых значений.|
+|[Практическое руководство. Разбиение и объединение инструкций в коде](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)|Показывает, как разбить один оператор на несколько строк и поместить несколько инструкций в одну строку.|
+|[Практическое руководство. Операторы меток](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md)|Показывает, как пометить строку кода.|

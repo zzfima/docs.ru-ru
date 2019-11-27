@@ -20,31 +20,31 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345211"
 ---
 # <a name="calling-a-property-or-method-using-a-string-name-visual-basic"></a>Вызов свойства или метода с помощью строкового имени (Visual Basic)
-In most cases, you can discover the properties and methods of an object at design time, and write code to handle them. However, in some cases you may not know about an object's properties and methods in advance, or you may just want the flexibility of enabling an end user to specify properties or execute methods at run time.  
+В большинстве случаев можно обнаружить свойства и методы объекта во время разработки и написать код для их обработки. Однако в некоторых случаях вам не известно о свойствах и методах объекта заранее, или вам может потребоваться гибкость, позволяющая пользователю указывать свойства или выполнять методы во время выполнения.  
   
-## <a name="callbyname-function"></a>CallByName Function  
- Consider, for example, a client application that evaluates expressions entered by the user by passing an operator to a COM component. Suppose you are constantly adding new functions to the component that require new operators. When you use standard object access techniques, you must recompile and redistribute the client application before it could use the new operators. To avoid this, you can use the `CallByName` function to pass the new operators as strings, without changing the application.  
+## <a name="callbyname-function"></a>Функция CallByName  
+ Рассмотрим, например, клиентское приложение, которое оценивает выражения, вводимых пользователем, передавая оператор в COM-компонент. Предположим, что вы постоянно добавляете новые функции в компонент, требующий новых операторов. При использовании методов доступа к стандартным объектам необходимо перекомпилировать и повторно распространить клиентское приложение, прежде чем оно сможет использовать новые операторы. Чтобы избежать этого, можно использовать функцию `CallByName` для передачи новых операторов в виде строк без изменения приложения.  
   
- The `CallByName` function lets you use a string to specify a property or method at run time. The signature for the `CallByName` function looks like this:  
+ Функция `CallByName` позволяет использовать строку для указания свойства или метода во время выполнения. Сигнатура для функции `CallByName` выглядит следующим образом:  
   
- *Result* = `CallByName`(*Object*, *ProcedureName*, *CallType*, *Arguments*())  
+ *Результат* = `CallByName`(*Object*, *ProcedureName*, *каллтипе*, *arguments*())  
   
- The first argument, *Object*, takes the name of the object you want to act upon. The *ProcedureName* argument takes a string that contains the name of the method or property procedure to be invoked. The *CallType* argument takes a constant that represents the type of procedure to invoke: a method (`Microsoft.VisualBasic.CallType.Method`), a property read (`Microsoft.VisualBasic.CallType.Get`), or a property set (`Microsoft.VisualBasic.CallType.Set`). The *Arguments* argument, which is optional, takes an array of type `Object` that contains any arguments to the procedure.  
+ Первый аргумент, *объект*, принимает имя объекта, с которым вы хотите работать. Аргумент *ProcedureName* принимает строку, содержащую имя метода или процедуры свойства, которые необходимо вызвать. Аргумент *каллтипе* принимает константу, представляющую тип вызываемой процедуры: метод (`Microsoft.VisualBasic.CallType.Method`), свойство read (`Microsoft.VisualBasic.CallType.Get`) или набор свойств (`Microsoft.VisualBasic.CallType.Set`). Аргумент *arguments* , который является необязательным, принимает массив типа `Object`, который содержит аргументы для процедуры.  
   
- You can use `CallByName` with classes in your current solution, but it is most often used to access COM objects or objects from .NET Framework assemblies.  
+ В текущем решении можно использовать `CallByName` с классами, но чаще всего они используются для доступа к COM-объектам или объектам из сборок .NET Framework.  
   
- Suppose you add a reference to an assembly that contains a class named `MathClass`, which has a new function named `SquareRoot`, as shown in the following code:  
+ Предположим, что вы добавили ссылку на сборку, содержащую класс с именем `MathClass`, который содержит новую функцию с именем `SquareRoot`, как показано в следующем коде:  
   
  [!code-vb[VbVbalrOOP#53](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#53)]  
   
- Your application could use text box controls to control which method will be called and its arguments. For example, if `TextBox1` contains the expression to be evaluated, and `TextBox2` is used to enter the name of the function, you can use the following code to invoke the `SquareRoot` function on the expression in `TextBox1`:  
+ Приложение может использовать элементы управления "текстовое поле" для управления тем, какой метод будет вызываться, и его аргументы. Например, если `TextBox1` содержит вычисляемое выражение, а `TextBox2` используется для ввода имени функции, можно использовать следующий код для вызова функции `SquareRoot` в выражении в `TextBox1`:  
   
  [!code-vb[VbVbalrOOP#54](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#54)]  
   
- If you enter "64" in `TextBox1`, "SquareRoot" in `TextBox2`, and then call the `CallMath` procedure, the square root of the number in `TextBox1` is evaluated. The code in the example invokes the `SquareRoot` function (which takes a string that contains the expression to be evaluated as a required argument) and returns "8" in `TextBox1` (the square root of 64). Of course, if the user enters an invalid string in `TextBox2`, if the string contains the name of a property instead of a method, or if the method had an additional required argument, a run-time error occurs. You have to add robust error-handling code when you use `CallByName` to anticipate these or any other errors.  
+ Если ввести "64" в `TextBox1`, "SquareRoot" в `TextBox2`, а затем вызвать процедуру `CallMath`, вычисляется квадратный корень числа в `TextBox1`. Код в примере вызывает функцию `SquareRoot` (которая принимает строку, содержащую выражение, которое должно быть оценено как обязательный аргумент) и возвращает значение "8" в `TextBox1` (квадратный корень из 64). Конечно, если пользователь вводит недопустимую строку в `TextBox2`, если строка содержит имя свойства вместо метода или если метод имел дополнительный обязательный аргумент, возникает ошибка времени выполнения. Необходимо добавить надежный код обработки ошибок при использовании `CallByName`, чтобы предвидеть эти или любые другие ошибки.  
   
 > [!NOTE]
-> While the `CallByName` function may be useful in some cases, you must weigh its usefulness against the performance implications — using `CallByName` to invoke a procedure is slightly slower than a late-bound call. If you are invoking a function that is called repeatedly, such as inside a loop, `CallByName` can have a severe effect on performance.  
+> Хотя функция `CallByName` может быть полезной в некоторых случаях, необходимо оценить ее полезность относительно влияния на производительность — использование `CallByName` для вызова процедуры немного медленнее, чем вызов с поздним связыванием. При вызове функции, которая вызывается многократно, например внутри цикла, `CallByName` может сильно влиять на производительность.  
   
 ## <a name="see-also"></a>См. также
 

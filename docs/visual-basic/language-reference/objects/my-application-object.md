@@ -14,21 +14,21 @@ ms.locfileid: "74350738"
 # <a name="myapplication-object"></a>Объект My.Application
 Предоставляет свойства, методы и события, связанные с текущим приложением.  
   
-## <a name="remarks"></a>Заметки  
- For information about the methods and properties of the `My.Application` object, see the following resources:  
+## <a name="remarks"></a>Примечания  
+ Дополнительные сведения о методах и свойствах объекта `My.Application` см. в следующих ресурсах:  
   
-- <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase> for members that are available in all projects.  
+- <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase> для элементов, доступных во всех проектах.  
   
-- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> for members that are available in Windows Forms applications.  
+- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> для членов, доступных в Windows Forms приложениях.  
   
-- <xref:Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase> for members that are available in console applications.  
+- <xref:Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase> для членов, доступных в консольных приложениях.  
   
 ## <a name="requirements"></a>Требования  
  **Пространство имен:** <xref:Microsoft.VisualBasic.ApplicationServices>  
   
- **Class:** <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> (the base class <xref:Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase> provides members available in console applications, and its base class <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase> provides the members that are available in all projects)  
+ **Класс:** <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> (базовый класс <xref:Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase> предоставляет члены, доступные в консольных приложениях, и его базовый класс <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase> предоставляет элементы, доступные во всех проектах).  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **Сборка:** Библиотека времени выполнения Visual Basic (в Microsoft. VisualBasic. dll)  
   
 ## <a name="see-also"></a>См. также
 

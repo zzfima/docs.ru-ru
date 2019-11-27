@@ -1,5 +1,5 @@
 ---
-title: Оператор Option <keyword>
+title: Оператор <keyword> Statement
 ms.date: 07/20/2015
 f1_keywords:
 - vb.option
@@ -13,11 +13,11 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353779"
 ---
-# <a name="option-keyword-statement"></a>Option \<keyword> Statement
-Introduces a statement that specifies a compiler option that applies to the entire source file.  
+# <a name="option-keyword-statement"></a>Option \<ключевое слово > оператор
+Вводит инструкцию, которая указывает параметр компилятора, который применяется ко всему исходному файлу.  
   
-## <a name="remarks"></a>Заметки  
- The compiler options can control whether all variables must be explicitly declared, whether narrowing type conversions must be explicit, or whether strings should be compared as text or as binary quantities.  
+## <a name="remarks"></a>Примечания  
+ Параметры компилятора могут определять, должны ли быть явно объявлены все переменные, должны ли сужающие преобразования типов быть явными или должны сравниваться в виде текста или в виде двоичных значений.  
   
  Ключевое слово `Option` можно использовать в следующих контекстах:  
   

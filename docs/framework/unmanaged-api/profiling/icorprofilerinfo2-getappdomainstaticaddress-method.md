@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74435874"
 ---
 # <a name="icorprofilerinfo2getappdomainstaticaddress-method"></a>Метод ICorProfilerInfo2::GetAppDomainStaticAddress
-Gets the address of the specified application domain-static field that is in the scope of the specified application domain.  
+Возвращает адрес указанного поля статического домена приложения, которое находится в области заданного домена приложения.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,25 +37,25 @@ RESULT GetAppDomainStaticAddress(
   
 ## <a name="parameters"></a>Параметры  
  `classId`  
- [in] The class ID of the class that contains the requested application domain-static field.  
+ окне Идентификатор класса, который содержит запрошенное статическое поле домена приложения.  
   
  `fieldToken`  
- [in] The metadata token for the requested application domain-static field.  
+ окне Токен метаданных для запрошенного статического поля домена приложения.  
   
  `appDomainId`  
- [in] The ID of the application domain that is the scope for the requested static field.  
+ окне Идентификатор домена приложения, который является областью для запрошенного статического поля.  
   
  `ppAddress`  
- [out] A pointer to the address of the static field that is within the specified application domain.  
+ заполняет Указатель на адрес статического поля в пределах указанного домена приложения.  
   
-## <a name="remarks"></a>Заметки  
- The `GetAppDomainStaticAddress` method may return one of the following:  
+## <a name="remarks"></a>Примечания  
+ Метод `GetAppDomainStaticAddress` может возвращать одно из следующих данных:  
   
-- A CORPROF_E_DATAINCOMPLETE HRESULT if the given static field has not been assigned an address in the specified context.  
+- CORPROF_E_DATAINCOMPLETE HRESULT, если заданному статическому полю не назначен адрес в указанном контексте.  
   
-- The addresses of objects that may be in the garbage collection heap. These addresses may become invalid after garbage collection, so after garbage collection, profilers should not assume that they are valid.  
+- Адреса объектов, которые могут находиться в куче сборки мусора. Эти адреса могут стать недействительными после сборки мусора, поэтому после сборки мусора профилировщики не должны считать, что они являются допустимыми.  
   
- Before a class’s class constructor is completed, `GetAppDomainStaticAddress` will return CORPROF_E_DATAINCOMPLETE for all its static fields, although some of the static fields may already be initialized and rooting garbage collection objects.  
+ Перед завершением конструктора класса класса `GetAppDomainStaticAddress` будет возвращать CORPROF_E_DATAINCOMPLETE для всех его статических полей, хотя некоторые статические поля уже могут быть инициализированы и корневыми объектами сборки мусора.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  

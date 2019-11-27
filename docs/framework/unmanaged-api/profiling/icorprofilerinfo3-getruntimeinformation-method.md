@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449682"
 ---
 # <a name="icorprofilerinfo3getruntimeinformation-method"></a>Метод ICorProfilerInfo3::GetRuntimeInformation
-Provides version information about the common language runtime (CLR) that is being profiled.  
+Предоставляет сведения о версии для профилирования среды CLR.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -43,34 +43,34 @@ HRESULT GetRuntimeInformation(
   
 ## <a name="parameters"></a>Параметры  
  `pClrInstanceId`  
- [out] The representative ID of a running CLR instance in a process. This is the same as the `ClrInstanceID` that the event tracing for Windows (ETW) startup event reports.  
+ заполняет Репрезентативный идентификатор выполняющегося экземпляра среды CLR в процессе. Это то же самое, что `ClrInstanceID`, что отчеты о событиях запуска трассировки событий Windows (ETW).  
   
  `pRuntimeType`  
- [out] The runtime type. This parameter returns `COR_PRF_DESKTOP_CLR` for the desktop version of the CLR, or `COR_PRF_CORE_CLR` for the core version of the CLR used in Silverlight.  
+ заполняет Тип среды выполнения. Этот параметр возвращает `COR_PRF_DESKTOP_CLR` для классической версии среды CLR или `COR_PRF_CORE_CLR` для основной версии среды CLR, используемой в Silverlight.  
   
  `pMajorVersion`  
- [out] The major version number of the CLR.  
+ заполняет Основной номер версии среды CLR.  
   
  `pMinorVersion`  
- [out] The minor version number of the CLR.  
+ заполняет Дополнительный номер версии среды CLR.  
   
  `pBuildVersion`  
- [out] The build version number of the CLR.  
+ заполняет Номер версии сборки среды CLR.  
   
  `pQFEVersion`  
- [out] The version number of the CLR that is associated with a software update.  
+ заполняет Номер версии среды CLR, связанной с обновлением программного обеспечения.  
   
  `cchVersionString`  
- [in] The length, in characters, of the buffer that `szVersionString` points to.  
+ окне Длина (в символах) буфера, на который `szVersionString` указывает.  
   
  `pcchVersionString`  
- [out] The length, in characters, of `szVersionString`.  
+ заполняет Длина `szVersionString`в символах.  
   
  `szVersionString`  
- [out] The CLR version string.  
+ заполняет Строка версии среды CLR.  
   
-## <a name="remarks"></a>Заметки  
- You may pass null for any parameter. However, `pcchVersionString` cannot be null unless `szVersionString` is also null.  
+## <a name="remarks"></a>Примечания  
+ Вы можете передать значение NULL для любого параметра. Однако `pcchVersionString` не может иметь значение null, если `szVersionString` также не имеет значение null.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  

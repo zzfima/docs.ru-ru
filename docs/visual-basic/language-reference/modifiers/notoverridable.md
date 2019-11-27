@@ -24,21 +24,21 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351449"
 ---
 # <a name="notoverridable-visual-basic"></a>NotOverridable (Visual Basic)
-Specifies that a property or procedure cannot be overridden in a derived class.  
+Указывает, что свойство или процедура не могут быть переопределены в производном классе.  
   
-## <a name="remarks"></a>Заметки  
- The `NotOverridable` modifier prevents a property or method from being overridden in a derived class.  The [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md) modifier allows a property or method in a class to be overridden in a derived class. Дополнительные сведения см. в статье [Inheritance Basics (Visual Basic)](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md) (Основная информация о наследовании в Visual Basic).  
+## <a name="remarks"></a>Примечания  
+ Модификатор `NotOverridable` предотвращает переопределение свойства или метода в производном классе.  Модификатор [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md) позволяет переопределять свойство или метод в производном классе. Дополнительные сведения см. в статье [Inheritance Basics (Visual Basic)](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md) (Основная информация о наследовании в Visual Basic).  
   
- If the `Overridable` or `NotOverridable` modifier is not specified, the default setting depends on whether the property or method overrides a base class property or method. If the property or method overrides a base class property or method, the default setting is `Overridable`; otherwise, it is `NotOverridable`.  
+ Если модификатор `Overridable` или `NotOverridable` не указан, значение по умолчанию зависит от того, переопределяет ли свойство или метод свойство или метод базового класса. Если свойство или метод переопределяет свойство или метод базового класса, значение по умолчанию — `Overridable`. в противном случае это `NotOverridable`.  
   
- An element that cannot be overridden is sometimes called a *sealed* element.  
+ Элемент, который не может быть переопределен, иногда называется *запечатанным* элементом.  
   
- You can use `NotOverridable` only in a property or procedure declaration statement. You can specify `NotOverridable` only on a property or procedure that overrides another property or procedure, that is, only in combination with `Overrides`.  
+ `NotOverridable` можно использовать только в операторе объявления свойства или процедуры. Можно указать `NotOverridable` только для свойства или процедуры, которые переопределяют другое свойство или процедуру, то есть только в сочетании с `Overrides`.  
   
-## <a name="combined-modifiers"></a>Combined Modifiers  
- You cannot specify `Overridable` or `NotOverridable` for a `Private` method.  
+## <a name="combined-modifiers"></a>Комбинированные модификаторы  
+ Для метода `Private` нельзя указать `Overridable` или `NotOverridable`.  
   
- You cannot specify `NotOverridable` together with `MustOverride`, `Overridable`, or `Shared` in the same declaration.  
+ В одном объявлении нельзя указать `NotOverridable` вместе с `MustOverride`, `Overridable`или `Shared`.  
   
 ## <a name="usage"></a>Использование  
  Модификатор `NotOverridable` можно использовать в следующих контекстах:  
@@ -54,7 +54,7 @@ Specifies that a property or procedure cannot be overridden in a derived class.
 - [Модификаторы](../../../visual-basic/language-reference/modifiers/index.md)
 - [Основы наследования](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)
 - [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md)
-- [Переопределяемые](../../../visual-basic/language-reference/modifiers/overridable.md)
+- [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)
 - [Переопределения](../../../visual-basic/language-reference/modifiers/overrides.md)
 - [Ключевые слова](../../../visual-basic/language-reference/keywords/index.md)
-- [Shadowing in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
+- [Затенение в Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)

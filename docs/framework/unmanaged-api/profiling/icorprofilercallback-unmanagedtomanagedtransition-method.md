@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74439896"
 ---
 # <a name="icorprofilercallbackunmanagedtomanagedtransition-method"></a>Метод ICorProfilerCallback::UnmanagedToManagedTransition
-Notifies the profiler that a transition from unmanaged code to managed code has occurred.  
+Уведомляет профилировщик о том, что произошел переход из неуправляемого кода в управляемый код.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -35,15 +35,15 @@ HRESULT UnmanagedToManagedTransition(
   
 ## <a name="parameters"></a>Параметры  
  `functionId`  
- [in] The ID of the function that is being called.  
+ окне Идентификатор вызываемой функции.  
   
  `reason`  
- [in] A value of the [COR_PRF_TRANSITION_REASON](../../../../docs/framework/unmanaged-api/profiling/cor-prf-transition-reason-enumeration.md) enumeration that indicates whether the transition occurred because of a call into managed code from unmanaged code, or because of a return from an unmanaged function called by a managed one.  
+ окне Значение перечисления [COR_PRF_TRANSITION_REASON](../../../../docs/framework/unmanaged-api/profiling/cor-prf-transition-reason-enumeration.md) , указывающее, произошло ли переход из-за вызова управляемого кода из неуправляемого кода или из-за возврата из неуправляемой функции, вызванной управляемой.  
   
-## <a name="remarks"></a>Заметки  
- If the value of `reason` is COR_PRF_TRANSITION_RETURN and `functionId` is not null, the function ID is that of the unmanaged function, and will never have been compiled using the just-in-time (JIT) compiler. Unmanaged functions have some basic information associated with them, such as a name and some metadata.  
+## <a name="remarks"></a>Примечания  
+ Если значение `reason` равно COR_PRF_TRANSITION_RETURN и `functionId` не равно null, то ИДЕНТИФИКАТОРом функции является неуправляемая функция и никогда не будет компилироваться с помощью JIT-компилятора. С неуправляемыми функциями связаны некоторые основные сведения, такие как имя и некоторые метаданные.  
   
- If the value of `reason` is COR_PRF_TRANSITION_CALL, it may be possible that the called function (that is, the managed function) has not yet been JIT-compiled.  
+ Если значение `reason` имеет COR_PRF_TRANSITION_CALL, возможно, что вызванная функция (то есть управляемая функция) еще не скомпилирована с помощью JIT-компилятора.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  

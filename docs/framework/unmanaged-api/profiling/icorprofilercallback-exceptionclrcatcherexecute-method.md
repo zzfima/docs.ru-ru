@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74444939"
 ---
 # <a name="icorprofilercallbackexceptionclrcatcherexecute-method"></a>Метод ICorProfilerCallback::ExceptionCLRCatcherExecute
-Called when a `catch` block for an exception is executed inside the common language runtime (CLR) itself. This method is obsolete in the .NET Framework version 2.0.  
+Вызывается, когда блок `catch` для исключения выполняется в самой среде CLR. Этот метод является устаревшим в .NET Framework версии 2,0.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,7 +38,7 @@ HRESULT ExceptionCLRCatcherExecute();
   
  **Библиотека:** CorGuids.lib  
   
- **.NET Framework Versions:** 1.1, 1.0  
+ **.NET Framework версии:** 1,1, 1,0  
   
 ## <a name="see-also"></a>См. также
 

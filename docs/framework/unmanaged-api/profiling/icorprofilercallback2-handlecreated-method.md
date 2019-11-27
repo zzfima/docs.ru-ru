@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74439763"
 ---
 # <a name="icorprofilercallback2handlecreated-method"></a>Метод ICorProfilerCallback2::HandleCreated
-Notifies the code profiler that a garbage collection handle has been created.  
+Уведомляет профилировщик кода о создании обработчика сборки мусора.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -35,10 +35,10 @@ HRESULT HandleCreated(
   
 ## <a name="parameters"></a>Параметры  
  `handleId`  
- [in] The ID of the handle for the garbage collection.  
+ окне Идентификатор обработчика для сборки мусора.  
   
  `initialObjectId`  
- [in] The ID of the object for which the garbage collection handle was created.  
+ окне Идентификатор объекта, для которого был создан маркер сборки мусора.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74437681"
 ---
 # <a name="imetadataimportgetcustomattributebyname-method"></a>Метод IMetaDataImport::GetCustomAttributeByName
-Gets the custom attribute, given its name and owner.  
+Возвращает настраиваемый атрибут по его имени и владельцу.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,26 +38,26 @@ HRESULT GetCustomAttributeByName (
   
 ## <a name="parameters"></a>Параметры  
  `tkObj`  
- [in] A metadata token representing the object that owns the custom attribute.  
+ окне Токен метаданных, представляющий объект, которому принадлежит настраиваемый атрибут.  
   
  `szName`  
- [in] The name of the custom attribute.  
+ окне Имя настраиваемого атрибута.  
   
  `ppData`  
- [out] A pointer to an array of data that is the value of the custom attribute.  
+ заполняет Указатель на массив данных, являющийся значением настраиваемого атрибута.  
   
  `pcbData`  
- [out] The size in bytes of the data returned in *`ppData`.  
+ заполняет Размер в байтах данных, возвращаемых в *`ppData`.  
   
-## <a name="remarks"></a>Заметки  
- It is legal to define multiple custom attributes for the same owner; they may even have the same name. However, `GetCustomAttributeByName` returns only one instance. (`GetCustomAttributeByName` returns the first instance that it encounters.) To find all instances of a custom attribute, call the [IMetaDataImport::EnumCustomAttributes](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumcustomattributes-method.md) method.  
+## <a name="remarks"></a>Примечания  
+ Допускается определение нескольких пользовательских атрибутов для одного и того же владельца; они даже могут иметь одно и то же имя. Однако `GetCustomAttributeByName` возвращает только один экземпляр. (`GetCustomAttributeByName` возвращает первый обнаруженный экземпляр.) Чтобы найти все экземпляры настраиваемого атрибута, вызовите метод [IMetaDataImport:: EnumCustomAttributes](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumcustomattributes-method.md) .  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Заголовок:** COR. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -17,7 +17,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351151"
 ---
 # <a name="implements-statement"></a>Оператор Implements
-Specifies one or more interfaces, or interface members, that must be implemented in the class or structure definition in which it appears.  
+Указывает один или несколько интерфейсов или элементов интерфейса, которые должны быть реализованы в определении класса или структуры, в котором они отображаются.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -29,29 +29,29 @@ Implements interfacename.interfacemember [, ...]
   
 ## <a name="parts"></a>Части  
  `interfacename`  
- Обязательный. An interface whose properties, procedures, and events are to be implemented by corresponding members in the class or structure.  
+ Обязательно. Интерфейс, свойства, процедуры и события которого должны быть реализованы соответствующими элементами в классе или структуре.  
   
  `interfacemember`  
- Обязательный. The member of an interface that is being implemented.  
+ Обязательно. Член реализуемого интерфейса.  
   
-## <a name="remarks"></a>Заметки  
- An interface is a collection of prototypes representing the members (properties, procedures, and events) the interface encapsulates. Interfaces contain only the declarations for members; classes and structures implement these members. Дополнительные сведения см. в статье [Интерфейсы](../../../visual-basic/programming-guide/language-features/interfaces/index.md).  
+## <a name="remarks"></a>Примечания  
+ Интерфейс — это коллекция прототипов, представляющих члены (свойства, процедуры и события), которые инкапсулирует интерфейс. Интерфейсы содержат только объявления для членов; классы и структуры реализуют эти члены. Дополнительные сведения см. в статье [Интерфейсы](../../../visual-basic/programming-guide/language-features/interfaces/index.md).  
   
- The `Implements` statement must immediately follow the `Class` or `Structure` statement.  
+ Оператор `Implements` должен следовать непосредственно за инструкцией `Class` или `Structure`.  
   
- When you implement an interface, you must implement all the members declared in the interface. Omitting any member is considered to be a syntax error. To implement an individual member, you specify the [Implements](../../../visual-basic/language-reference/statements/implements-clause.md) keyword (which is separate from the `Implements` statement) when you declare the member in the class or structure. Дополнительные сведения см. в статье [Интерфейсы](../../../visual-basic/programming-guide/language-features/interfaces/index.md).  
+ При реализации интерфейса необходимо реализовать все члены, объявленные в интерфейсе. Пропуск любого члена считается синтаксической ошибкой. Для реализации отдельного элемента необходимо указать ключевое слово [Implements](../../../visual-basic/language-reference/statements/implements-clause.md) (отдельно от оператора `Implements`) при объявлении члена в классе или структуре. Дополнительные сведения см. в статье [Интерфейсы](../../../visual-basic/programming-guide/language-features/interfaces/index.md).  
   
- Classes can use [Private](../../../visual-basic/language-reference/modifiers/private.md) implementations of properties and procedures, but these members are accessible only by casting an instance of the implementing class into a variable declared to be of the type of the interface.  
+ Классы могут использовать [закрытые](../../../visual-basic/language-reference/modifiers/private.md) реализации свойств и процедур, но эти члены доступны только путем приведения экземпляра реализующего класса к переменной, объявленной как тип интерфейса.  
   
 ## <a name="example"></a>Пример  
- The following example shows how to use the `Implements` statement to implement members of an interface. It defines an interface named `ICustomerInfo` with an event, a property, and a procedure. The class `customerInfo` implements all the members defined in the interface.  
+ В следующем примере показано, как использовать оператор `Implements` для реализации членов интерфейса. Он определяет интерфейс с именем `ICustomerInfo` с событием, свойством и процедурой. Класс `customerInfo` реализует все члены, определенные в интерфейсе.  
   
  [!code-vb[VbVbalrStatements#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#33)]  
   
- Note that the class `customerInfo` uses the `Implements` statement on a separate source code line to indicate that the class implements all the members of the `ICustomerInfo` interface. Then each member in the class uses the `Implements` keyword as part of its member declaration to indicate that it implements that interface member.  
+ Обратите внимание, что класс `customerInfo` использует инструкцию `Implements` в отдельной строке исходного кода, чтобы указать, что класс реализует все члены интерфейса `ICustomerInfo`. Затем каждый член класса использует ключевое слово `Implements` как часть его объявления члена, чтобы указать, что он реализует этот член интерфейса.  
   
 ## <a name="example"></a>Пример  
- The following two procedures show how you could use the interface implemented in the preceding example. To test the implementation, add these procedures to your project and call the `testImplements` procedure.  
+ В следующих двух процедурах показано, как можно использовать интерфейс, реализованный в предыдущем примере. Чтобы протестировать реализацию, добавьте эти процедуры в проект и вызовите процедуру `testImplements`.  
   
  [!code-vb[VbVbalrStatements#34](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#34)]  
   

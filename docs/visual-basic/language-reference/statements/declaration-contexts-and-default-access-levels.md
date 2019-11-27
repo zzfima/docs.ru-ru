@@ -17,39 +17,39 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74354104"
 ---
 # <a name="declaration-contexts-and-default-access-levels-visual-basic"></a>Контексты объявления и уровни доступа по умолчанию (Visual Basic)
-This topic describes which Visual Basic types can be declared within which other types, and what their access levels default to if not specified.  
+В этом разделе описано, какие типы Visual Basic могут быть объявлены, в которых можно объявлять другие типы, а также уровни доступа по умолчанию, если они не указаны.  
   
-## <a name="declaration-context-levels"></a>Declaration Context Levels  
- The *declaration context* of a programming element is the region of code in which it is declared. This is often another programming element, which is then called the *containing element*.  
+## <a name="declaration-context-levels"></a>Уровни контекста объявления  
+ *Контекстом объявления* программного элемента является область кода, в которой он объявлен. Часто это другой программный элемент, который затем называется *содержащим элементом*.  
   
- The levels for declaration contexts are the following:  
+ Ниже приведены уровни для контекстов объявления.  
   
-- *Namespace level* — within a source file or namespace but not within a class, structure, module, or interface  
+- *Уровень пространства имен* — в исходном файле или пространстве имен, но не в классе, структуре, модуле или интерфейсе  
   
-- *Module level* — within a class, structure, module, or interface but not within a procedure or block  
+- *Уровень модуля* — в классе, структуре, модуле или интерфейсе, но не внутри процедуры или блока  
   
-- *Procedure level* — within a procedure or block (such as `If` or `For`)  
+- *Уровень процедуры* — внутри процедуры или блока (например, `If` или `For`).  
   
- The following table shows the default access levels for various declared programming elements, depending on their declaration contexts.  
+ В следующей таблице показаны уровни доступа по умолчанию для различных объявленных программных элементов в зависимости от контекстов объявления.  
   
-|Объявленный элемент|Namespace level|Module level|Procedure level|  
+|Объявленный элемент|Уровень пространства имен|Уровень модуля|Уровень процедуры|  
 |----------------------|---------------------|------------------|---------------------|  
-|Variable ([Dim Statement](../../../visual-basic/language-reference/statements/dim-statement.md))|Нельзя использовать|`Private` (`Public` in `Structure`, not allowed in `Interface`)|`Public`|  
-|Constant ([Const Statement](../../../visual-basic/language-reference/statements/const-statement.md))|Нельзя использовать|`Private` (`Public` in `Structure`, not allowed in `Interface`)|`Public`|  
-|Enumeration ([Enum Statement](../../../visual-basic/language-reference/statements/enum-statement.md))|`Friend`|`Public`|Нельзя использовать|  
-|Class ([Class Statement](../../../visual-basic/language-reference/statements/class-statement.md))|`Friend`|`Public`|Нельзя использовать|  
-|Structure ([Structure Statement](../../../visual-basic/language-reference/statements/structure-statement.md))|`Friend`|`Public`|Нельзя использовать|  
-|Module ([Module Statement](../../../visual-basic/language-reference/statements/module-statement.md))|`Friend`|Нельзя использовать|Нельзя использовать|  
-|Interface ([Interface Statement](../../../visual-basic/language-reference/statements/interface-statement.md))|`Friend`|`Public`|Нельзя использовать|  
-|Procedure ([Function Statement](../../../visual-basic/language-reference/statements/function-statement.md), [Sub Statement](../../../visual-basic/language-reference/statements/sub-statement.md))|Нельзя использовать|`Public`|Нельзя использовать|  
-|External reference ([Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md))|Нельзя использовать|`Public` (not allowed in `Interface`)|Нельзя использовать|  
-|Operator ([Operator Statement](../../../visual-basic/language-reference/statements/operator-statement.md))|Нельзя использовать|`Public` (not allowed in `Interface` or `Module`)|Нельзя использовать|  
-|Property ([Property Statement](../../../visual-basic/language-reference/statements/property-statement.md))|Нельзя использовать|`Public`|Нельзя использовать|  
-|Default property ([Default](../../../visual-basic/language-reference/modifiers/default.md))|Нельзя использовать|`Public` (not allowed in `Module`)|Нельзя использовать|  
-|Event ([Event Statement](../../../visual-basic/language-reference/statements/event-statement.md))|Нельзя использовать|`Public`|Нельзя использовать|  
-|Delegate ([Delegate Statement](../../../visual-basic/language-reference/statements/delegate-statement.md))|`Friend`|`Public`|Нельзя использовать|  
+|Variable ([оператор Dim](../../../visual-basic/language-reference/statements/dim-statement.md))|Нельзя использовать|`Private` (`Public` в `Structure`, запрещено в `Interface`)|`Public`|  
+|Constant ([оператор Const](../../../visual-basic/language-reference/statements/const-statement.md))|Нельзя использовать|`Private` (`Public` в `Structure`, запрещено в `Interface`)|`Public`|  
+|Enumeration ([оператор Enum](../../../visual-basic/language-reference/statements/enum-statement.md))|`Friend`|`Public`|Нельзя использовать|  
+|Class ([оператор Class](../../../visual-basic/language-reference/statements/class-statement.md))|`Friend`|`Public`|Нельзя использовать|  
+|Structure ([оператор Structure](../../../visual-basic/language-reference/statements/structure-statement.md))|`Friend`|`Public`|Нельзя использовать|  
+|Module ([оператор Module](../../../visual-basic/language-reference/statements/module-statement.md))|`Friend`|Нельзя использовать|Нельзя использовать|  
+|Interface ([оператор Interface](../../../visual-basic/language-reference/statements/interface-statement.md))|`Friend`|`Public`|Нельзя использовать|  
+|PROCEDURE ([оператор Function](../../../visual-basic/language-reference/statements/function-statement.md), [оператор подвыражения](../../../visual-basic/language-reference/statements/sub-statement.md))|Нельзя использовать|`Public`|Нельзя использовать|  
+|Внешняя ссылка ([Инструкция DECLARE](../../../visual-basic/language-reference/statements/declare-statement.md))|Нельзя использовать|`Public` (не допускается в `Interface`)|Нельзя использовать|  
+|Оператор operator (оператор[operator](../../../visual-basic/language-reference/statements/operator-statement.md))|Нельзя использовать|`Public` (не допускается в `Interface` или `Module`)|Нельзя использовать|  
+|Property ([Оператор Property](../../../visual-basic/language-reference/statements/property-statement.md))|Нельзя использовать|`Public`|Нельзя использовать|  
+|Свойство по умолчанию ([по умолчанию](../../../visual-basic/language-reference/modifiers/default.md))|Нельзя использовать|`Public` (не допускается в `Module`)|Нельзя использовать|  
+|Event ([оператор Event](../../../visual-basic/language-reference/statements/event-statement.md))|Нельзя использовать|`Public`|Нельзя использовать|  
+|Delegate ([оператор Delegate](../../../visual-basic/language-reference/statements/delegate-statement.md))|`Friend`|`Public`|Нельзя использовать|  
   
- For more information, see [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
+ Дополнительные сведения см. [в разделе уровни доступа в Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
 ## <a name="see-also"></a>См. также
 

@@ -51,7 +51,7 @@ HRESULT AttachProfiler(
  [in] Полный путь к загружаемому DLL-файлу профилировщика. Эта строка должна содержать не более 260 символов, включая символ конца строки null. Если в параметре `wszProfilerPath` задана пустая строка или значение null, среда CLR будет пытаться найти местоположение DLL-файла профилировщика путем поиска в реестре CLSID, на который указывает параметр `pClsidProfiler`.  
   
  `pvClientData`  
- [in] A pointer to data to be passed to the profiler by the [ICorProfilerCallback3::InitializeForAttach](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-initializeforattach-method.md) method. Инициирующий процесс может повторно использовать эту память после возврата метода `AttachProfiler`. Если параметр `pvClientData` имеет значение null, параметр `cbClientData` должен иметь значение 0 (ноль).  
+ окне Указатель на данные, передаваемые профилировщику методом [ICorProfilerCallback3:: InitializeForAttach](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-initializeforattach-method.md) . Инициирующий процесс может повторно использовать эту память после возврата метода `AttachProfiler`. Если параметр `pvClientData` имеет значение null, параметр `cbClientData` должен иметь значение 0 (ноль).  
   
  `cbClientData`  
  [in] Размер в байтах данных, на которые указывает `pvClientData`.  
@@ -72,9 +72,9 @@ HRESULT AttachProfiler(
 |HRESULT_FROM_WIN32(ERROR_TIMEOUT)|Время ожидания истекло, а загрузка профилировщика не началась. Можно повторить операцию подключения. Время ожидания истекает, когда метод завершения в целевом процессе выполняется дольше, чем задано в значении времени ожидания.|  
 |E_INVALIDARG|Как минимум один из следующих параметров имеет недопустимое значение.|  
 |E_FAIL|Произошел другой, не указанный сбой.|  
-|Другие коды ошибок|If the profiler’s [ICorProfilerCallback3::InitializeForAttach](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-initializeforattach-method.md) method returns an HRESULT that indicates failure, `AttachProfiler` returns that same HRESULT. В этом случае E_NOTIMPL преобразуется в CORPROF_E_PROFILER_NOT_ATTACHABLE.|  
+|Другие коды ошибок|Если метод [ICorProfilerCallback3:: InitializeForAttach](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-initializeforattach-method.md) профилировщика ВОЗВРАЩАЕТ значение HRESULT, которое указывает на сбой, `AttachProfiler` возвращает то же значение HRESULT. В этом случае E_NOTIMPL преобразуется в CORPROF_E_PROFILER_NOT_ATTACHABLE.|  
   
-## <a name="remarks"></a>Заметки  
+## <a name="remarks"></a>Примечания  
   
 ## <a name="memory-management"></a>Управление памятью  
  В соответствии с соглашениями COM объект, вызывающий метод `AttachProfiler` (например, код триггера, созданный разработчиком профилировщика), отвечает за выделение и освобождение памяти для данных, на которые указывает параметр `pvClientData`. Когда среда CLR выполняет вызов `AttachProfiler`, создается копия памяти, на которую указывает `pvClientData`, которая затем передается в целевой процесс. Когда среда CLR в целевом процессе получает собственную копию блока `pvClientData`, она передает этот блок в профилировщик с помощью метода `InitializeForAttach`, а затем освобождает свою копию блока `pvClientData` в целевом процессе.  

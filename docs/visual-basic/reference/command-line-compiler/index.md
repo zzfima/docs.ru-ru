@@ -1,5 +1,5 @@
 ---
-title: Command-line compiler
+title: Компилятор командной строки
 ms.date: 02/20/2018
 helpviewer_keywords:
 - compilers [Visual Basic], Visual Basic options
@@ -15,19 +15,19 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344227"
 ---
-# <a name="visual-basic-command-line-compiler"></a>Visual Basic command-line compiler
+# <a name="visual-basic-command-line-compiler"></a>Компилятор командной строки Visual Basic
 
-The Visual Basic command-line compiler provides an alternative to compiling programs from within the Visual Studio integrated development environment (IDE). This section contains descriptions for the Visual Basic compiler options.
+Компилятор командной строки Visual Basic предоставляет альтернативу компиляции программ из интегрированной среды разработки (IDE) Visual Studio. В этом разделе содержатся описания параметров компилятора Visual Basic.
 
 [!INCLUDE[compiler-options](~/includes/compiler-options.md)]
   
-## <a name="in-this-section"></a>В данном разделе
+## <a name="in-this-section"></a>В этом разделе
 
 [Построение из командной строки](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)  
-Describes the Visual Basic command-line compiler, which is provided as an alternative to compiling programs from within the Visual Studio IDE.
+Описывает Visual Basic компилятор командной строки, который предоставляется в качестве альтернативы компиляции программ из интегрированной среды разработки Visual Studio.
 
 [Параметры компилятора Visual Basic в алфавитном порядке](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-alphabetically.md)  
-Lists compiler options in an alphabetical table
+Выводит список параметров компилятора в алфавитной таблице
 
 [Параметры компилятора Visual Basic по категориям](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-by-category.md)  
 Параметры компилятора в виде функциональных групп.
@@ -35,4 +35,4 @@ Lists compiler options in an alphabetical table
 ## <a name="related-sections"></a>Связанные разделы
 
 [Руководство по Visual Basic](../../index.md)  
-The starting point for the Visual Basic documentation.
+Начальная точка Visual Basicной документации.

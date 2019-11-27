@@ -16,12 +16,12 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351586"
 ---
 # <a name="byval-visual-basic"></a>ByVal (Visual Basic)
-Specifies that an argument is passed [by value](../../programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md), so that the called procedure or property cannot change the value of a variable underlying the argument in the calling code. If no modifier is specified, ByVal is the default.
+Указывает, что аргумент передается [по значению](../../programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md), поэтому вызываемая процедура или свойство не может изменить значение переменной, которая является базовым аргументом в вызывающем коде. Если модификатор не указан, по умолчанию используется значение ByVal.
 
 > [!NOTE]
-> Because it is the default, you do not have to explicitly specify the `ByVal` keyword in method signatures. It tends to produce noisy code and often leads to the non-default `ByRef` keyword being overlooked.
+> Поскольку это значение по умолчанию, нет необходимости явно указывать ключевое слово `ByVal` в сигнатурах метода. Он, как правило, создает шум и часто приводит к нестандартному ключевому слову `ByRef`.
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Примечания
  Модификатор `ByVal` можно использовать в следующих контекстах:
 
  [Оператор Declare](../../../visual-basic/language-reference/statements/declare-statement.md)
@@ -35,7 +35,7 @@ Specifies that an argument is passed [by value](../../programming-guide/language
  [Оператор Sub](../../../visual-basic/language-reference/statements/sub-statement.md)
 
 ## <a name="example"></a>Пример
- The following example demonstrates the use of the `ByVal` parameter passing mechanism with a reference type argument. In the example, the argument is `c1`, an instance of class `Class1`. `ByVal` prevents the code in the procedures from changing the underlying value of the reference argument, `c1`, but does not protect the accessible fields and properties of `c1`.
+ В следующем примере демонстрируется использование механизма передачи параметров `ByVal` с аргументом ссылочного типа. В примере аргумент имеет `c1`, экземпляр класса `Class1`. `ByVal` не позволяет коду в процедурах изменять базовое значение ссылочного аргумента, `c1`, но не защищает доступные поля и свойства `c1`.
 
  [!code-vb[VbVbalrKeywords#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class5.vb#10)]
 

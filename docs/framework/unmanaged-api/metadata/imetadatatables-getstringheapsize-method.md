@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74426670"
 ---
 # <a name="imetadatatablesgetstringheapsize-method"></a>Метод IMetaDataTables::GetStringHeapSize
-Gets the size, in bytes, of the string heap.  
+Возвращает размер кучи строк (в байтах).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -35,14 +35,14 @@ HRESULT GetStringHeapSize (
   
 ## <a name="parameters"></a>Параметры  
  `pcbStrings`  
- [out] A pointer to the size, in bytes, of the string heap.  
+ заполняет Указатель на размер (в байтах) кучи строк.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Заголовок:** COR. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Библиотека:** Используется в качестве ресурса в MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

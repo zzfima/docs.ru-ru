@@ -13,35 +13,35 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346275"
 ---
 # <a name="types-of-string-manipulation-methods-in-visual-basic"></a>Типы методов для работы со строками в Visual Basic
-There are several different ways to analyze and manipulate your strings. Some of the methods are a part of the Visual Basic language, and others are inherent in the `String` class.  
+Существует несколько различных способов анализа строк и управления ими. Некоторые методы являются частью языка Visual Basic, а другие — в классе `String`.  
   
-## <a name="visual-basic-language-and-the-net-framework"></a>Visual Basic Language and the .NET Framework  
- Visual Basic methods are used as inherent functions of the language. They may be used without qualification in your code. The following example shows typical use of a Visual Basic string-manipulation command:  
+## <a name="visual-basic-language-and-the-net-framework"></a>Язык Visual Basic и .NET Framework  
+ Visual Basic методы используются в качестве встроенных функций языка. Они могут использоваться без уточнения в коде. В следующем примере показано типичное использование Visual Basic команды обработки строк:  
   
  [!code-vb[VbVbalrStrings#44](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#44)]  
   
- In this example, the `Mid` function performs a direct operation on `aString` and assigns the value to `bString`.  
+ В этом примере функция `Mid` выполняет прямую операцию над `aString` и присваивает значение `bString`.  
   
- For a list of Visual Basic string manipulation methods, see [String Manipulation Summary](../../../../visual-basic/language-reference/keywords/string-manipulation-summary.md).  
+ Список методов обработки строк Visual Basic см. в разделе [Сводка манипулирования строками](../../../../visual-basic/language-reference/keywords/string-manipulation-summary.md).  
   
-### <a name="shared-methods-and-instance-methods"></a>Shared Methods and Instance Methods  
- You can also manipulate strings with the methods of the `String` class. There are two types of methods in `String`: *shared* methods and *instance* methods.  
+### <a name="shared-methods-and-instance-methods"></a>Общие методы и методы экземпляров  
+ Можно также управлять строками с помощью методов класса `String`. В `String`есть два типа методов: *Общие* методы и методы *экземпляра* .  
   
-#### <a name="shared-methods"></a>Shared Methods  
- A shared method is a method that stems from the `String` class itself and does not require an instance of that class to work. These methods can be qualified with the name of the class (`String`) rather than with an instance of the `String` class. Пример:  
+#### <a name="shared-methods"></a>Общие методы  
+ Общий метод — это метод, который является производным от класса `String` и не требует работы экземпляра этого класса. Эти методы можно уточнять именем класса (`String`), а не экземпляром класса `String`. Пример.  
   
  [!code-vb[VbVbalrStrings#45](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#45)]  
   
- In the preceding example, the <xref:System.String.Copy%2A?displayProperty=nameWithType> method is a static method, which acts upon an expression it is given and assigns the resulting value to `bString`.  
+ В предыдущем примере метод <xref:System.String.Copy%2A?displayProperty=nameWithType> является статическим методом, который действует на заданное выражение и присваивает результирующее значение `bString`.  
   
-#### <a name="instance-methods"></a>Instance Methods  
- Instance methods, by contrast, stem from a particular instance of `String` and must be qualified with the instance name. Пример:  
+#### <a name="instance-methods"></a>Методы экземпляра  
+ Методы экземпляра, напротив, имеют определенный экземпляр `String` и должны уточняться именем экземпляра. Пример.  
   
  [!code-vb[VbVbalrStrings#46](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#46)]  
   
- In this example, the <xref:System.String.Substring%2A?displayProperty=nameWithType> method is a method of the instance of `String` (that is, `aString`). It performs an operation on `aString` and assigns that value to `bString`.  
+ В этом примере метод <xref:System.String.Substring%2A?displayProperty=nameWithType> является методом экземпляра `String` (то есть `aString`). Он выполняет операцию с `aString` и присваивает этому значению `bString`.  
   
- For more information, see the documentation for the <xref:System.String> class.  
+ Дополнительные сведения см. в документации по классу <xref:System.String>.  
   
 ## <a name="see-also"></a>См. также
 

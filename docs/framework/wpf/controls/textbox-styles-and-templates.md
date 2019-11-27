@@ -22,7 +22,7 @@ ms.locfileid: "74283704"
 ## <a name="textbox-parts"></a>Части текстового поля  
  В следующей таблице перечислены именованные части для элемента управления <xref:System.Windows.Controls.TextBox>.  
   
-|Отделение|Type|Описание|  
+|Отделение|Введите|Описание|  
 |-|-|-|  
 |PART_ContentHost|<xref:System.Windows.FrameworkElement>|Визуальный элемент, который может содержать <xref:System.Windows.FrameworkElement>. Текст <xref:System.Windows.Controls.TextBox> отображается в этом элементе.|  
   
@@ -31,7 +31,7 @@ ms.locfileid: "74283704"
   
 |Имя VisualState|Имя VisualStateGroup|Описание|  
 |----------------------|---------------------------|-----------------|  
-|Норм.|CommonStates|Состояние по умолчанию.|  
+|Нормальный|CommonStates|Состояние по умолчанию.|  
 |MouseOver|CommonStates|Указатель мыши расположен в элементе управления.|  
 |Отключено.|CommonStates|Элемент управления отключен.|  
 |ReadOnly|CommonStates|Пользователь не может изменить текст в <xref:System.Windows.Controls.TextBox>.|  

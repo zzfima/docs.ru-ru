@@ -9,14 +9,14 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353398"
 ---
-# <a name="generation-operations-visual-basic"></a>Generation Operations (Visual Basic)
+# <a name="generation-operations-visual-basic"></a>Операции создания (Visual Basic)
 Под созданием понимается формирование новых последовательностей значений.  
   
  В следующем разделе перечислены методы стандартных операторов запроса, которые выполняют создание.  
   
 ## <a name="methods"></a>Методы  
   
-|Имя метода|Описание|Visual Basic Query Expression Syntax|Дополнительные сведения|  
+|Имя метода|Описание|Синтаксис выражения запроса Visual Basic|Дополнительные сведения|  
 |-----------------|-----------------|------------------------------------------|----------------------|  
 |DefaultIfEmpty|Заменяет пустую коллекцию на одноэлементную коллекцию со значениями по умолчанию.|Неприменимо.|<xref:System.Linq.Enumerable.DefaultIfEmpty%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.DefaultIfEmpty%2A?displayProperty=nameWithType>|  
 |Empty|Возвращает пустую коллекцию.|Неприменимо.|<xref:System.Linq.Enumerable.Empty%2A?displayProperty=nameWithType>|  

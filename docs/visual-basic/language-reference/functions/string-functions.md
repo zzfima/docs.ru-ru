@@ -13,77 +13,77 @@ ms.locfileid: "74349982"
 ---
 # <a name="string-functions-visual-basic"></a>Строковые функции (Visual Basic)
 
-The following table lists the functions that Visual Basic provides in the <xref:Microsoft.VisualBasic.Strings?displayProperty=nameWithType> class to search and manipulate strings. They can be regarded as Visual Basic intrinsic functions; that is, you do not have to call them as explicit members of a class, as the examples show. Additional methods, and in some cases complementary methods, are available in the <xref:System.String?displayProperty=nameWithType> class.
+В следующей таблице перечислены функции, которые Visual Basic предоставляет в классе <xref:Microsoft.VisualBasic.Strings?displayProperty=nameWithType> для поиска строк и управления ими. Их можно рассматривать как Visual Basic встроенных функций; то есть вам не нужно вызывать их как явные члены класса, как показано в примерах. Дополнительные методы и в некоторых случаях дополняют методы, доступны в классе <xref:System.String?displayProperty=nameWithType>.
 
-|.NET Framework method|Описание|
+|Метод .NET Framework|Описание|
 |---------------------------|-----------------|
-|<xref:Microsoft.VisualBasic.Strings.Asc%2A>, <xref:Microsoft.VisualBasic.Strings.AscW%2A>|Returns an `Integer` value representing the character code corresponding to a character.|
-|<xref:Microsoft.VisualBasic.Strings.Chr%2A>, <xref:Microsoft.VisualBasic.Strings.ChrW%2A>|Returns the character associated with the specified character code.|
-|<xref:Microsoft.VisualBasic.Strings.Filter%2A>|Returns a zero-based array containing a subset of a `String` array based on specified filter criteria.|
-|<xref:Microsoft.VisualBasic.Strings.Format%2A>|Returns a string formatted according to instructions contained in a format `String` expression.|
-|<xref:Microsoft.VisualBasic.Strings.FormatCurrency%2A>|Returns an expression formatted as a currency value using the currency symbol defined in the system control panel.|
-|<xref:Microsoft.VisualBasic.Strings.FormatDateTime%2A>|Returns a string expression representing a date/time value.|
-|<xref:Microsoft.VisualBasic.Strings.FormatNumber%2A>|Returns an expression formatted as a number.|
+|<xref:Microsoft.VisualBasic.Strings.Asc%2A>, <xref:Microsoft.VisualBasic.Strings.AscW%2A>|Возвращает значение типа `Integer`, представляющее код символа, соответствующий символу.|
+|<xref:Microsoft.VisualBasic.Strings.Chr%2A>, <xref:Microsoft.VisualBasic.Strings.ChrW%2A>|Возвращает символ, связанный с указанным кодом символа.|
+|<xref:Microsoft.VisualBasic.Strings.Filter%2A>|Возвращает массив с отсчетом от нуля, содержащий подмножество массива `String`, на основе указанных условий фильтра.|
+|<xref:Microsoft.VisualBasic.Strings.Format%2A>|Возвращает строку, отформатированную в соответствии с инструкциями, содержащимися в формате `String` выражении.|
+|<xref:Microsoft.VisualBasic.Strings.FormatCurrency%2A>|Возвращает выражение, отформатированное как денежное значение, используя символ валюты, определенный на панели управления системы.|
+|<xref:Microsoft.VisualBasic.Strings.FormatDateTime%2A>|Возвращает строковое выражение, представляющее значение даты и времени.|
+|<xref:Microsoft.VisualBasic.Strings.FormatNumber%2A>|Возвращает выражение, отформатированное как число.|
 |<xref:Microsoft.VisualBasic.Strings.FormatPercent%2A>|Возвращает выражение в виде процента (умноженное на 100) с символом % в конце.|
-|<xref:Microsoft.VisualBasic.Strings.InStr%2A>|Returns an integer specifying the start position of the first occurrence of one string within another.|
-|<xref:Microsoft.VisualBasic.Strings.InStrRev%2A>|Returns the position of the first occurrence of one string within another, starting from the right side of the string.|
-|<xref:Microsoft.VisualBasic.Strings.Join%2A>|Returns a string created by joining a number of substrings contained in an array.|
-|<xref:Microsoft.VisualBasic.Strings.LCase%2A>|Returns a string or character converted to lowercase.|
-|<xref:Microsoft.VisualBasic.Strings.Left%2A>|Returns a string containing a specified number of characters from the left side of a string.|
-|<xref:Microsoft.VisualBasic.Strings.Len%2A>|Returns an integer that contains the number of characters in a string.|
-|<xref:Microsoft.VisualBasic.Strings.LSet%2A>|Returns a left-aligned string containing the specified string adjusted to the specified length.|
-|<xref:Microsoft.VisualBasic.Strings.LTrim%2A>|Returns a string containing a copy of a specified string with no leading spaces.|
-|<xref:Microsoft.VisualBasic.Strings.Mid%2A>|Returns a string containing a specified number of characters from a string.|
-|<xref:Microsoft.VisualBasic.Strings.Replace%2A>|Returns a string in which a specified substring has been replaced with another substring a specified number of times.|
-|<xref:Microsoft.VisualBasic.Strings.Right%2A>|Returns a string containing a specified number of characters from the right side of a string.|
-|<xref:Microsoft.VisualBasic.Strings.RSet%2A>|Returns a right-aligned string containing the specified string adjusted to the specified length.|
-|<xref:Microsoft.VisualBasic.Strings.RTrim%2A>|Returns a string containing a copy of a specified string with no trailing spaces.|
-|<xref:Microsoft.VisualBasic.Strings.Space%2A>|Returns a string consisting of the specified number of spaces.|
-|<xref:Microsoft.VisualBasic.Strings.Split%2A>|Returns a zero-based, one-dimensional array containing a specified number of substrings.|
-|<xref:Microsoft.VisualBasic.Strings.StrComp%2A>|Returns -1, 0, or 1, based on the result of a string comparison.|
-|<xref:Microsoft.VisualBasic.Strings.StrConv%2A>|Returns a string converted as specified.|
-|<xref:Microsoft.VisualBasic.Strings.StrDup%2A>|Returns a string or object consisting of the specified character repeated the specified number of times.|
-|<xref:Microsoft.VisualBasic.Strings.StrReverse%2A>|Returns a string in which the character order of a specified string is reversed.|
-|<xref:Microsoft.VisualBasic.Strings.Trim%2A>|Returns a string containing a copy of a specified string with no leading or trailing spaces.|
-|<xref:Microsoft.VisualBasic.Strings.UCase%2A>|Returns a string or character containing the specified string converted to uppercase.|
+|<xref:Microsoft.VisualBasic.Strings.InStr%2A>|Возвращает целое число, указывающее начальную точку первого вхождения одной строки в другую.|
+|<xref:Microsoft.VisualBasic.Strings.InStrRev%2A>|Возвращает расположение первого вхождения одной строки в другую, начиная с правой части строки.|
+|<xref:Microsoft.VisualBasic.Strings.Join%2A>|Возвращает строку, созданную путем объединения нескольких подстрок, содержащихся в массиве.|
+|<xref:Microsoft.VisualBasic.Strings.LCase%2A>|Возвращает строку или символ, преобразованные в нижний регистр.|
+|<xref:Microsoft.VisualBasic.Strings.Left%2A>|Возвращает строку, содержащую указанное число символов с левой стороны строки.|
+|<xref:Microsoft.VisualBasic.Strings.Len%2A>|Возвращает целое число, содержащее количество символов в строке.|
+|<xref:Microsoft.VisualBasic.Strings.LSet%2A>|Возвращает строку с выравниванием влево, содержащую указанную строку, скорректированную до указанной длины.|
+|<xref:Microsoft.VisualBasic.Strings.LTrim%2A>|Возвращает строку, содержащую копию указанной строки без начальных пробелов.|
+|<xref:Microsoft.VisualBasic.Strings.Mid%2A>|Возвращает строку, содержащую указанное число символов из строки.|
+|<xref:Microsoft.VisualBasic.Strings.Replace%2A>|Возвращает строку, в которой указанная подстрока была заменена другой подстрокой указанное число раз.|
+|<xref:Microsoft.VisualBasic.Strings.Right%2A>|Возвращает строку, содержащую указанное число символов от правой части строки.|
+|<xref:Microsoft.VisualBasic.Strings.RSet%2A>|Возвращает строку с выравниванием по правому краю, содержащую указанную строку, скорректированную до указанной длины.|
+|<xref:Microsoft.VisualBasic.Strings.RTrim%2A>|Возвращает строку, содержащую копию указанной строки без конечных пробелов.|
+|<xref:Microsoft.VisualBasic.Strings.Space%2A>|Возвращает строку, состоящую из указанного числа пробелов.|
+|<xref:Microsoft.VisualBasic.Strings.Split%2A>|Возвращает одномерный массив (с отсчетом от нуля), содержащий указанное число подстрок.|
+|<xref:Microsoft.VisualBasic.Strings.StrComp%2A>|Возвращает-1, 0 или 1 на основе результата сравнения строк.|
+|<xref:Microsoft.VisualBasic.Strings.StrConv%2A>|Возвращает строку, преобразованную указанным образом.|
+|<xref:Microsoft.VisualBasic.Strings.StrDup%2A>|Возвращает строку или объект, состоящий из указанного символа, повторяемого указанное число раз.|
+|<xref:Microsoft.VisualBasic.Strings.StrReverse%2A>|Возвращает строку, в которой порядок символов в указанной строке изменяется на обратный.|
+|<xref:Microsoft.VisualBasic.Strings.Trim%2A>|Возвращает строку, содержащую копию указанной строки без начальных или конечных пробелов.|
+|<xref:Microsoft.VisualBasic.Strings.UCase%2A>|Возвращает строку или символ, содержащий указанную строку, преобразованную в верхний регистр.|
 
-You can use the [Option Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md) statement to set whether strings are compared using a case-insensitive text sort order determined by your system's locale (`Text`) or by the internal binary representations of the characters (`Binary`). Метод сравнения текста по умолчанию — `Binary`.
+С помощью инструкции [Option Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md) можно задать, сравниваются ли строки с использованием порядка сортировки текста без учета регистра, определенного языковым стандартом системы (`Text`) или внутренними двоичными представлениями символов (`Binary`). Метод сравнения текста по умолчанию — `Binary`.
 
-## <a name="example-ucase"></a>Example: UCase
+## <a name="example-ucase"></a>Пример: Укасе
 
-This example uses the `UCase` function to return an uppercase version of a string.
+В этом примере используется функция `UCase`, которая возвращает версию строки в верхнем регистре.
 [!code-vb[VbVbalrStrings#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#31)]
 
-## <a name="example-ltrim"></a>Example: LTrim
+## <a name="example-ltrim"></a>Пример: LTrim
 
-This example uses the `LTrim` function to strip leading spaces and the `RTrim` function to strip trailing spaces from a string variable. It uses the `Trim` function to strip both types of spaces.
+В этом примере функция `LTrim` используется для удаления начальных пробелов и функции `RTrim` для удаления конечных пробелов из строковой переменной. Для удаления обоих типов пробелов используется функция `Trim`.
 
 [!code-vb[VbVbalrStrings#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#25)]
 
-## <a name="example-mid"></a>Example: Mid
+## <a name="example-mid"></a>Пример: mid
 
-This example uses the `Mid` function to return a specified number of characters from a string.
+В этом примере функция `Mid` используется для возврата указанного числа символов из строки.
 
 [!code-vb[VbVbalrStrings#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#17)]
 
-## <a name="example-len"></a>Example: Len
+## <a name="example-len"></a>Пример: len
 
-This example uses `Len` to return the number of characters in a string.
+В этом примере для возврата числа символов в строке используется `Len`.
 
 [!code-vb[VbVbalrStrings#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#33)]
 
-## <a name="example-instr"></a>Example: InStr
+## <a name="example-instr"></a>Пример: InStr
 
-This example uses the `InStr` function to return the position of the first occurrence of one string within another.
+В этом примере используется функция `InStr`, которая возвращает расположение первого вхождения одной строки в другую.
 
 [!code-vb[VbVbalrStrings#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#8)]
 
-## <a name="example-format"></a>Example: Format
+## <a name="example-format"></a>Пример: Format
 
-This example shows various uses of the `Format` function to format values using both `String` formats and user-defined formats. For the date separator (`/`), time separator (`:`), and the AM/PM indicators (`t` and `tt`), the actual formatted output displayed by your system depends on the locale settings the code is using. When times and dates are displayed in the development environment, the short time format and short date format of the code locale are used.
+В этом примере показаны различные варианты использования функции `Format` для форматирования значений с помощью `String` форматов и пользовательских форматов. Для разделителя даты (`/`), разделителя времени (`:`) и индикаторов AM/PM (`t` и `tt`) фактически отформатированные выходные данные, отображаемые системой, зависят от параметров языкового стандарта, используемых кодом. Если время и даты отображаются в среде разработки, используются короткий формат времени и короткий формат даты языкового стандарта кода.
 
 > [!NOTE]
-> For locales that use a 24-hour clock, the AM/PM indicators (`t` and `tt`) display nothing.
+> Для национальных настроек, в которых используется 24-часовой формат времени, индикаторы AM/PM (`t` и `tt`) ничего не отображают.
 
 [!code-vb[VbVbalrStrings#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#27)]
 
@@ -92,4 +92,4 @@ This example shows various uses of the `Format` function to format values using 
 - [Ключевые слова](../../../visual-basic/language-reference/keywords/index.md)
 - [Члены библиотеки времени выполнения Visual Basic](../../../visual-basic/language-reference/runtime-library-members.md)
 - [Сводка по работе со строками](../../../visual-basic/language-reference/keywords/string-manipulation-summary.md)
-- [System.String class methods](xref:System.String#methods)
+- [Методы класса System. String](xref:System.String#methods)

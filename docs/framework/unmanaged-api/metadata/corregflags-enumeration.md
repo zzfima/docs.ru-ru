@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450115"
 ---
 # <a name="corregflags-enumeration"></a>Перечисление CorRegFlags
-Provides flag values used for registration when installing a module or composite image.  
+Предоставляет значения флагов, используемые для регистрации при установке модуля или составного образа.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,16 +39,16 @@ typedef enum
   
 |Член|Описание|  
 |------------|-----------------|  
-|`regNoCopy`|Specifies that files should not be copied into the destination.|  
-|`regConfig`|Specifies that the module or composite is a configuration.|  
-|`regHasRefs`|Specifies that the module or composite has class references.|  
+|`regNoCopy`|Указывает, что файлы не должны копироваться в место назначения.|  
+|`regConfig`|Указывает, что модуль или составной является конфигурацией.|  
+|`regHasRefs`|Указывает, что модуль или составная ссылка содержит ссылки на классы.|  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Заголовок:** COR. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

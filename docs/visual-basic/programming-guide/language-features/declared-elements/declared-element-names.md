@@ -31,28 +31,28 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345433"
 ---
 # <a name="declared-element-names-visual-basic"></a>Имена объявленных типов (Visual Basic)
-Every declared element has a name, also called an *identifier*, which is what the code uses to refer to it.  
+Каждый объявленный элемент имеет имя, также называемое *идентификатором*, которое используется кодом для ссылки на него.  
   
 ## <a name="rules"></a>Правила  
- An element name in Visual Basic must observe the following rules:  
+ Имя элемента в Visual Basic должно соответствовать следующим правилам.  
   
-- It must begin with an alphabetic character or an underscore (`_`).  
+- Оно должно начинаться с буквы или знака подчеркивания (`_`).  
   
-- It must only contain alphabetic characters, decimal digits, and underscores.  
+- Оно должно содержать только буквы, цифры и знаки подчеркивания.  
   
-- It must contain at least one alphabetic character or decimal digit if it begins with an underscore.  
+- Он должен содержать по крайней мере одну букву или цифру в десятичном формате, если начинается с символа подчеркивания.  
   
-- It must not be more than 1023 characters long.  
+- Длина не должна превышать 1023 символов.  
   
- The length limit of 1023 characters also applies to the entire string of a fully qualified name, such as `outerNamespace.middleNamespace.innerNamespace.thisClass.thisElement`.  
+ Ограничение длины в 1023 символов также применяется ко всей строке полного имени, например `outerNamespace.middleNamespace.innerNamespace.thisClass.thisElement`.  
   
- The following example shows some valid element names.  
+ В следующем примере показаны некоторые допустимые имена элементов.  
   
  `aB123__45`  
   
  `_567`  
   
- The following example shows some invalid element names. The first contains only an underscore, the second begins with a decimal digit, and the third contains an invalid character ($).  
+ В следующем примере показаны некоторые недопустимые имена элементов. Первый содержит только символ подчеркивания, второй начинается с десятичной цифры, а третий содержит недопустимый символ ($).  
   
  `' Three INVALID element names`  
   
@@ -63,31 +63,31 @@ Every declared element has a name, also called an *identifier*, which is what th
  `xyz$wv`  
   
 > [!CAUTION]
-> Element names starting with an underscore (`_`) are not part of the [Language Independence and Language-Independent Components](../../../../standard/language-independence-and-language-independent-components.md) (CLS), so CLS-compliant code cannot use a component that defines such names. However, an underscore in any other position in an element name is CLS-compliant.  
+> Имена элементов, начинающиеся с символа подчеркивания (`_`), не являются частью [независимость от языка и независимых от языка компонентов](../../../../standard/language-independence-and-language-independent-components.md) (CLS), поэтому CLS-совместимый код не может использовать компонент, определяющий такие имена. Однако символ подчеркивания в любой другой должности в имени элемента является CLS-совместимым.  
   
-### <a name="name-length-guidelines"></a>Name Length Guidelines  
- As a practical matter, your name should be as short as possible while still clearly identifying the nature of the element. This improves the readability of your code and reduces line length and source-file size.  
+### <a name="name-length-guidelines"></a>Рекомендации по длине имени  
+ В качестве практического занятия имя должно быть как можно более коротким, а также четко определять природу элемента. Это повышает удобочитаемость кода и сокращает длину строки и размер исходного файла.  
   
- On the other hand, your name should not be so short that it does not adequately describe what the element represents and how your code uses it. This is important for the readability of your code. If somebody else is trying to understand it, or if you yourself are looking at it a long time after you wrote it, suitable element names can save a considerable amount of time.  
+ С другой стороны, ваше имя не должно быть настолько коротким, что оно не имеет адекватного описания того, что представляет элемент и как код использует его. Это важно для удобочитаемости кода. Если кто-то другой пытается понять его, или если вы самостоятельно просматриваете его после написания, подходящие имена элементов могут сэкономить на значительном количестве времени.  
   
-## <a name="escaped-names"></a>Escaped Names  
- Generally, an element name must not match any of the keywords reserved by Visual Basic, such as `Case` or `Friend`. However, you can define an *escaped name*, which is enclosed by brackets (`[ ]`). An escaped name can match any Visual Basic keyword, since the brackets remove any ambiguity. You also use the brackets when you refer to the name later in your code.  
+## <a name="escaped-names"></a>Экранированные имена  
+ Как правило, имя элемента не должно совпадать ни с одним из ключевых слов, зарезервированных Visual Basic, например `Case` или `Friend`. Однако можно определить *escape-имя*, заключенное в квадратные скобки (`[ ]`). Экранированное имя может соответствовать любому ключевому слову Visual Basic, так как квадратные скобки удаляют неоднозначность. Скобки также используются при ссылке на имя позже в коде.  
   
- In general, you should use escaped names only when:  
+ Как правило, экранированные имена следует использовать только в следующих случаях:  
   
-- Your code has migrated from a previous version of Visual Basic that did not reserve the keyword being used as a name; or  
+- Код перенесен из предыдущей версии Visual Basic не зарезервированного ключевого слова, используемого в качестве имени; ни  
   
-- You are working with code written in another language in which the given keyword is not reserved.  
+- Вы работаете с кодом, написанным на другом языке, на котором заданное ключевое слово не зарезервировано.  
   
- Otherwise, you should consider renaming the element if its name conflicts with a keyword. The integrated development environment (IDE) provides an easy way to do this. For more information, see [Refactoring](/visualstudio/ide/refactoring-in-visual-studio).  
+ В противном случае следует рассмотреть возможность переименования элемента, если его имя конфликтует с ключевым словом. Интегрированная среда разработки (IDE) предоставляет простой способ сделать это. Дополнительные сведения см. в разделе [Рефакторинг](/visualstudio/ide/refactoring-in-visual-studio).  
   
-## <a name="case-sensitivity-in-names"></a>Case Sensitivity in Names  
- Element names in Visual Basic are case-insensitive. This means that when the compiler compares two names that differ in alphabetic case only, it interprets them as the same name. Например, он считает, что `ABC` и `abc` являются одним и тем же объявленным элементом.  
+## <a name="case-sensitivity-in-names"></a>Чувствительность к регистру в именах  
+ Имена элементов в Visual Basic не учитывают регистр. Это означает, что при сравнении двух имен, которые различаются только регистром букв, компилятор интерпретирует их как одно и то же имя. Например, он считает, что `ABC` и `abc` являются одним и тем же объявленным элементом.  
   
- However, the common language runtime (CLR) uses case-sensitive binding. Таким образом, при создании сборки или DLL и предоставлении к ней доступа другим сборкам, в именах регистр учитываться не будет. Например, если определен класс с элементом `ABC`и другие сборки используют класс с помощью среды CLR, они должны ссылаться на элемент как на `ABC`. If you subsequently recompile your class and change the element's name to `abc`, the other assemblies using your class could no longer access that element. Таким образом, при выпуске обновленной версии сборки нельзя изменять регистр имен открытых элементов.  
+ Однако среда CLR использует привязку с учетом регистра. Таким образом, при создании сборки или DLL и предоставлении к ней доступа другим сборкам, в именах регистр учитываться не будет. Например, если определен класс с элементом `ABC`и другие сборки используют класс с помощью среды CLR, они должны ссылаться на элемент как на `ABC`. Если впоследствии вы перекомпилируете класс и измените имя элемента на `abc`, другие сборки, использующие ваш класс, больше не смогут получить доступ к этому элементу. Таким образом, при выпуске обновленной версии сборки нельзя изменять регистр имен открытых элементов.  
   
-## <a name="names-and-locales"></a>Names and Locales  
- Comparison of names is independent of locale. If two names match in one locale, they are guaranteed to match in all locales.  
+## <a name="names-and-locales"></a>Имена и языковые стандарты  
+ Сравнение имен не зависит от языкового стандарта. Если два имени совпадают в одном языковом стандарте, они гарантированно будут соответствовать всем языкам.  
   
 ## <a name="see-also"></a>См. также
 

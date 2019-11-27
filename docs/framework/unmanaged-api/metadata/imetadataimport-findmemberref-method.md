@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74437953"
 ---
 # <a name="imetadataimportfindmemberref-method"></a>Метод IMetaDataImport::FindMemberRef
-Gets a pointer to the MemberRef token for the member reference that is enclosed by the specified <xref:System.Type> and that has the specified name and metadata signature.  
+Возвращает указатель на токен MemberRef для ссылки на элемент, заключенный в заданный <xref:System.Type> и имеющий указанное имя и подпись метаданных.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,33 +39,33 @@ HRESULT FindMemberRef (
   
 ## <a name="parameters"></a>Параметры  
  `td`  
- [in] The TypeRef token for the class or interface that encloses the member reference to search for. If this value is `mdTokenNil`, the lookup is done for a global variable or a global-function reference.  
+ окне Токен TypeRef для класса или интерфейса, который заключает в себя ссылку на элемент для поиска. Если это значение равно `mdTokenNil`, поиск выполняется для глобальной переменной или ссылки на глобальную функцию.  
   
  `szName`  
- [in] The name of the member reference to search for.  
+ окне Имя искомой ссылки на член.  
   
  `pvSigBlob`  
- [in] A pointer to the binary metadata signature of the member reference.  
+ окне Указатель на сигнатуру двоичных метаданных ссылки на элемент.  
   
  `cbSigBlob`  
- [in] The size in bytes of `pvSigBlob`.  
+ окне Размер в байтах `pvSigBlob`.  
   
  `pmr`  
- [out] A pointer to the matching MemberRef token.  
+ заполняет Указатель на соответствующий токен MemberRef.  
   
-## <a name="remarks"></a>Заметки  
- You specify the member using its enclosing class or interface (`td`), its name (`szName`), and optionally its signature (`pvSigBlob`).  
+## <a name="remarks"></a>Примечания  
+ Элемент указывается с помощью включающего класса или интерфейса (`td`), его имени (`szName`) и, при необходимости, его сигнатуры (`pvSigBlob`).  
   
- The signature passed to `FindMemberRef` must have been generated in the current scope, because signatures are bound to a particular scope. A signature can embed a token that identifies the enclosing class or value type. The token is an index into the local TypeDef table. You cannot build a run-time signature outside the context of the current scope and use that signature as input to `FindMemberRef`.  
+ Подпись, передаваемая `FindMemberRef`, должна быть создана в текущей области, так как сигнатуры привязаны к определенной области. Сигнатура может внедрять маркер, идентифицирующий включающий класс или тип значения. Токен является индексом локальной таблицы TypeDef. Нельзя построить подпись времени выполнения вне контекста текущей области и использовать эту сигнатуру в качестве входных данных для `FindMemberRef`.  
   
- `FindMemberRef` finds only member references that were defined directly in the class or interface; it does not find inherited member references.  
+ `FindMemberRef` находит только те ссылки на элементы, которые были определены непосредственно в классе или интерфейсе; Он не находит унаследованные ссылки на члены.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Заголовок:** COR. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

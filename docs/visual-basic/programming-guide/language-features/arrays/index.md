@@ -16,15 +16,15 @@ ms.locfileid: "74351869"
 ---
 # <a name="arrays-in-visual-basic"></a>Массивы в Visual Basic
 
-An array is a set of values, which are termed *elements*, that are logically related to each other. For example, an array may consist of the number of students in each grade in a grammar school; each element of the array is the number of students in a single grade. Similarly, an array may consist of a student's grades for a class; each element of the array is a single grade.
+Массив — это набор значений, которые являются терминами *элементы*, логически взаимосвязаны друг с другом. Например, массив может состоять из числа учащихся в словаре грамматики. Каждый элемент массива — это количество учащихся одного уровня. Аналогичным образом массив может состоять из оценок учащегося для класса. Каждый элемент массива является однозначным.
 
-It is possible individual variables to store each of our data items. For example, if our application analyzes student grades, we can use a separate variable for each student's grade, such as `englishGrade1`, `englishGrade2`, etc. This approach has three major limitations:
+Можно хранить отдельные переменные для хранения каждого из наших элементов данных. Например, если наше приложение анализирует оценки учащихся, можно использовать отдельную переменную для каждой категории учащегося, например `englishGrade1`, `englishGrade2`и т. д. Этот подход имеет три основных ограничения:
 
-- We have to know at design time exactly how many grades we have to handle.
-- Handling large numbers of grades quickly becomes unwieldy. This in turn makes an application much more likely to have serious bugs.
-- It is difficult to maintain. Each new grade that we add requires that the application be modified, recompiled, and redeployed.
+- Во время разработки мы должны знать, сколько оценок нужно обменять.
+- Обработка большого количества оценок быстро оказывается неудобной. Это, в свою очередь, значительно повышает вероятность возникновения серьезных ошибок в приложении.
+- Его сложно поддерживать. Для каждого нового добавляемого класса необходимо, чтобы приложение было изменено, перекомпилировано и развернуто.
 
-By using an array, you can refer to these related values by the same name, and use a number that’s called an *index* or *subscript* to identify an individual element based on its position in the array. The indexes of an array range from 0 to one less than the total number of elements in the array. When you use Visual Basic syntax to define the size of an array, you specify its highest index, not the total number of elements in the array. You can work with the array as a unit, and the ability to iterate its elements frees you from needing to know exactly how many elements it contains at design time.
+Используя массив, можно ссылаться на эти связанные значения по одному и тому же имени и использовать число, которое называется *индексом* или *подиндексом* для обозначения отдельного элемента в зависимости от его позиции в массиве. Индексы в диапазоне от 0 до 1 меньше, чем общее число элементов в массиве. При использовании синтаксиса Visual Basic для определения размера массива указывается его самый высокий индекс, а не общее число элементов в массиве. Можно работать с массивом как с единицей, а возможность итерации элементов освобождает вас от необходимости знать, сколько элементов оно содержит во время разработки.
 
 Несколько простых примеров перед подробным описанием:
 
@@ -51,111 +51,111 @@ Dim matrix = New Integer(3, 2) {{1, 2, 3}, {2, 3, 4}, {3, 4, 5}, {4, 5, 6}}
 Dim sales()() As Double = New Double(11)() {}
 ```
 
-## <a name="array-elements-in-a-simple-array"></a>Array elements in a simple array
+## <a name="array-elements-in-a-simple-array"></a>Элементы массива в простом массиве
 
-Let's create an array named `students` to store the number of students in each grade in a grammar school. Индексы элементов находятся в диапазоне от 0 до 6. Using this array is simpler than declaring seven variables.
+Давайте создадим массив с именем `students` для хранения числа учащихся в каждом классе в школе. Индексы элементов находятся в диапазоне от 0 до 6. Использование этого массива проще, чем объявление семи переменных.
 
-The following illustration shows the `students` array. Для каждого элемента массива:
+На следующем рисунке показан массив `students`. Для каждого элемента массива:
 
 - индекс элемента представляет школьный класс (индекс 0 представляет детский сад);
 
 - значение, содержащееся в элементе, представляет число учеников в этом классе.
 
-![Diagram showing an array of the numbers of students](./media/index/students-array-elements.gif)
+![Схема, показывающая массив чисел учащихся](./media/index/students-array-elements.gif)
 
-The following example contains the Visual Basic code that creates and uses the array:
+В следующем примере содержится код Visual Basic, который создает и использует массив:
 
 [!code-vb[simple-array](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/simple-array.vb)]
 
-The example does three things:
+В этом примере выполняется три вещи:
 
-- It declares a `students` array with seven elements. The number `6` in the array declaration indicates the last index in the array; it is one less than the number of elements in the array.
-- It assigns values to each element in the array. Array elements are accessed by using the array name and including the index of the individual element in parentheses.
-- It lists each value of the array. The example uses a [`For`](../../../language-reference/statements/for-next-statement.md) statement to access each element of the array by its index number.
+- Он объявляет массив `students` с семью элементами. Число `6` в объявлении массива указывает последний индекс в массиве; значение на единицу меньше числа элементов в массиве.
+- Он присваивает значения каждому элементу в массиве. Доступ к элементам массива осуществляется с помощью имени массива, включая индекс отдельного элемента в круглых скобках.
+- В нем перечисляются все значения массива. В примере используется оператор [`For`](../../../language-reference/statements/for-next-statement.md) для доступа к каждому элементу массива по номеру индекса.
 
-The `students` array in the preceding example is a one-dimensional array because it uses one index. An array that uses more than one index or subscript is called *multidimensional*. For more information, see the rest of this article and [Array Dimensions in Visual Basic](../../language-features/arrays/array-dimensions.md).
+Массив `students` в предыдущем примере является одномерным массивом, так как он использует один индекс. Массив, использующий более одного индекса или подстрочного, называется *многомерным*. Дополнительные сведения см. в остальной части этой статьи и [в разделе измерения массива в Visual Basic](../../language-features/arrays/array-dimensions.md).
 
-## <a name="creating-an-array"></a>Creating an array
+## <a name="creating-an-array"></a>Создание массива
 
-You can define the size of an array in several ways:
+Размер массива можно определить несколькими способами.
 
-- You can specify the size when the array is declared:
+- Размер можно указать при объявлении массива:
 
   [!code-vb[creating1](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/create-array.vb#1)]
 
-- You can use a `New` clause to supply the size of an array when it’s created:
+- Вы можете использовать предложение `New`, чтобы указать размер массива при его создании:
 
   [!code-vb[creating2](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/create-array.vb#2)]
 
-If you have an existing array, you can redefine its size by using the [`ReDim`](../../../language-reference/statements/redim-statement.md) statement. You can specify that the `ReDim` statement keep the values that are in the array, or you can specify that it create an empty array. В приведенном ниже примере показаны различные варианты использования оператора `ReDim` для изменения размера существующего массива.
+При наличии существующего массива его размер можно переопределить с помощью инструкции [`ReDim`](../../../language-reference/statements/redim-statement.md) . Можно указать, что оператор `ReDim` сохранит значения в массиве, или можно указать, что он создает пустой массив. В приведенном ниже примере показаны различные варианты использования оператора `ReDim` для изменения размера существующего массива.
 
 [!code-vb[redimensioning](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/create-array.vb#3)]
 
-For more information, see the [ReDim Statement](../../../language-reference/statements/redim-statement.md).
+Дополнительные сведения см. в описании [оператора ReDim](../../../language-reference/statements/redim-statement.md).
 
-## <a name="storing-values-in-an-array"></a>Storing values in an array
+## <a name="storing-values-in-an-array"></a>Сохранение значений в массиве
 
-К любой позиции в массиве можно получить доступ, используя индекс типа `Integer`. Вы можете сохранять и извлекать значения массива, ссылаясь на позицию в нем с помощью индекса, заключенного в скобки. Indexes for multidimensional arrays are separated by commas (,). Для каждого измерения массива требуется один индекс.
+К любой позиции в массиве можно получить доступ, используя индекс типа `Integer`. Вы можете сохранять и извлекать значения массива, ссылаясь на позицию в нем с помощью индекса, заключенного в скобки. Индексы для многомерных массивов разделяются запятыми (,). Для каждого измерения массива требуется один индекс.
 
-The following example shows some statements that store and retrieve values in arrays.
+В следующем примере показаны некоторые инструкции, которые хранят и извлекают значения в массивах.
 
 [!code-vb[store-and-retrieve](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/store-and-retrieve.vb)]
 
-## <a name="populating-an-array-with-array-literals"></a>Populating an array with array literals
+## <a name="populating-an-array-with-array-literals"></a>Заполнение массива литералами массива
 
-By using an array literal, you can populate an array with an initial set of values at the same time that you create it. Литерал массива состоит из списка разделенных запятыми значений, заключенных в фигурные скобки (`{}`).
+С помощью литерала массива можно заполнить массив начальным набором значений во время его создания. Литерал массива состоит из списка разделенных запятыми значений, заключенных в фигурные скобки (`{}`).
 
-При создании массива с помощью литерала массива можно либо указать тип массива, либо использовать определение типа для задания типа массива. The following example shows both options.
+При создании массива с помощью литерала массива можно либо указать тип массива, либо использовать определение типа для задания типа массива. В следующем примере показаны оба варианта.
 
 [!code-vb[create-with-literals](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/create-array.vb#4)]
 
-When you use type inference, the type of the array is determined by the *dominant type* in the list of literal values. The dominant type is the type to which all other types in the array can widen. Если такой уникальный тип нельзя определить, то главным будет тип, до которого можно сузить все другие типы массива. Если ни один из указанных уникальных типов нельзя определить, главным типом будет `Object`. Например, если список значений для литерала массива содержит значения типов `Integer`, `Long`и `Double`, результирующий массив будет иметь тип `Double`. Because `Integer` and `Long` widen only to `Double`, `Double` is the dominant type. Для получения дополнительной информации см. [Widening and Narrowing Conversions](../../language-features/data-types/widening-and-narrowing-conversions.md).
+При использовании вывода типа тип массива определяется *главным типом* в списке литеральных значений. Главным типом является тип, к которому могут расширяться все другие типы в массиве. Если такой уникальный тип нельзя определить, то главным будет тип, до которого можно сузить все другие типы массива. Если ни один из указанных уникальных типов нельзя определить, главным типом будет `Object`. Например, если список значений для литерала массива содержит значения типов `Integer`, `Long`и `Double`, результирующий массив будет иметь тип `Double`. Поскольку `Integer` и `Long` расширяются только до `Double`, `Double` является главным типом. Для получения дополнительной информации см. [Widening and Narrowing Conversions](../../language-features/data-types/widening-and-narrowing-conversions.md).
 
 > [!NOTE]
-> You can use type inference only for arrays that are defined as local variables in a type member. If an explicit type definition is absent, arrays defined with array literals at the class level are of type `Object[]`. For more information, see [Local type inference](../variables/local-type-inference.md).
+> Вывод типа можно использовать только для массивов, определенных как локальные переменные в члене типа. Если явное определение типа отсутствует, массивы, определенные с литералами массива на уровне класса, имеют тип `Object[]`. Дополнительные сведения см. в разделе [определение локального типа](../variables/local-type-inference.md).
 
-Note that the previous example defines `values` as an array of type `Double` even though all the array literals are of type `Integer`. You can create this array because the values in the array literal can widen to `Double` values.
+Обратите внимание, что предыдущий пример определяет `values` как массив типа `Double` несмотря на то, что все литералы массива имеют тип `Integer`. Этот массив можно создать, так как значения в литерале массива могут расширяться до `Double` значений.
 
-You can also create and populate a multidimensional array by using *nested array literals*. Nested array literals must have a number of dimensions that’s consistent with the resulting array. The following example creates a two-dimensional array of integers by using nested array literals.
+Можно также создать и заполнить многомерный массив с помощью *вложенных литералов массива*. Вложенные литералы массива должны иметь ряд измерений, которые соответствуют результирующему массиву. В следующем примере создается двухмерный массив целых чисел с помощью вложенных литералов массива.
 
 [!code-vb[nested-array-literals](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/create-array.vb#5)]
 
-When using nested array literals to create and populate an array, an error occurs if the number of elements in the nested array literals don't match. An error also occurs if you explicitly declare the array variable to have a different number of dimensions than the array literals.
+При использовании вложенных литералов массива для создания и заполнения массива возникает ошибка, если число элементов в литералах вложенных массивов не совпадает. Ошибка также возникает, если вы явно объявили переменную массива так, чтобы число измерений не превышало литералы массива.
 
-Just as you can for one-dimensional arrays, you can rely on type inference when creating a multidimensional array with nested array literals. The inferred type is the dominant type for all the values in all the array literals for all nesting level. The following example creates a two-dimensional array of type `Double[,]` from values that are of type `Integer` and `Double`.
+Точно так же, как и для одномерные массивов, при создании многомерного массива с вложенными литералами массива можно полагаться на определение типа. Выводимый тип является главным типом для всех значений во всех литералах массива для всех уровней вложенности. В следующем примере создается двухмерный массив типа `Double[,]` из значений типа `Integer` и `Double`.
 
 [!code-vb[nested-type-inference](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/create-array.vb#6)]
 
 Дополнительные примеры можно найти в статье [How to: Initialize an Array Variable in Visual Basic](../../language-features/arrays/how-to-initialize-an-array-variable.md) (Практическое руководство. Инициализация переменной массива в Visual Basic).
 
-## <a name="iterating-through-an-array"></a>Iterating through an array
+## <a name="iterating-through-an-array"></a>Проход по массиву
 
-When you iterate through an array, you access each element in the array from the lowest index to the highest or from the highest to the lowest. Typically, use either the [For...Next Statement](../../../language-reference/statements/for-next-statement.md) or the [For Each...Next Statement](../../../language-reference/statements/for-each-next-statement.md) to iterate through the elements of an array. When you don't know the upper bounds of the array, you can call the <xref:System.Array.GetUpperBound%2A?displayProperty=nameWithType> method to get the highest value of the index. Although lowest index value is almost always 0, you can call the <xref:System.Array.GetLowerBound%2A?displayProperty=nameWithType> method to get the lowest value of the index.
+При итерации по массиву вы обращаетесь к каждому элементу в массиве от самого низкого индекса к верхнему или от самого низкого. Как правило, используйте [для... Next](../../../language-reference/statements/for-next-statement.md) или [For Each... Оператор Next](../../../language-reference/statements/for-each-next-statement.md) для итерации элементов массива. Если вы не знакомы с верхними границами массива, можно вызвать метод <xref:System.Array.GetUpperBound%2A?displayProperty=nameWithType>, чтобы получить наибольшее значение индекса. Хотя наименьшее значение индекса почти всегда равно 0, можно вызвать метод <xref:System.Array.GetLowerBound%2A?displayProperty=nameWithType>, чтобы получить наименьшее значение индекса.
 
-The following example iterates through a one-dimensional array by using the [`For...Next`](../../../language-reference/statements/for-next-statement.md) statement.
+В следующем примере выполняется перебор одномерного массива с помощью инструкции [`For...Next`](../../../language-reference/statements/for-next-statement.md) .
 
 [!code-vb[iterate-one-dimensional-array](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/iterate1d.vb)]
 
-The following example iterates through a multidimensional array by using a [`For...Next`](../../../language-reference/statements/for-next-statement.md) statement. Метод <xref:System.Array.GetUpperBound%2A> имеет параметр, который определяет измерение. `GetUpperBound(0)` returns the highest index of the first dimension, and `GetUpperBound(1)` returns the highest index of the second dimension.
+В следующем примере выполняется перебор многомерного массива с помощью инструкции [`For...Next`](../../../language-reference/statements/for-next-statement.md) . Метод <xref:System.Array.GetUpperBound%2A> имеет параметр, который определяет измерение. `GetUpperBound(0)` возвращает наибольший индекс первого измерения, а `GetUpperBound(1)` возвращает наибольший индекс второго измерения.
 
 [!code-vb[iterate-two-dimensional-array](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/iterate2d.vb)]
 
-The following example uses a [For Each...Next Statement](../../../language-reference/statements/for-each-next-statement.md)to iterate through a one-dimensional array and a two-dimensional array.
+В следующем примере используется объект [For Each... Оператор Next](../../../language-reference/statements/for-each-next-statement.md)для итерации одномерного массива и двумерного массива.
 
 [!code-vb[iterate-for-each-next](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/iterate-for-each-next.vb)]
 
-## <a name="array-size"></a>Array size
+## <a name="array-size"></a>Размер массива
 
-Размер массива является произведением длин всех его измерений. Он представляет собой общее число элементов, в данный момент содержащихся в массиве.  For example, the following example declares a 2-dimensional array with four elements in each dimension. As the output from the example shows, the array's size is 16 (or (3 + 1) * (3 + 1).
+Размер массива является произведением длин всех его измерений. Он представляет собой общее число элементов, в данный момент содержащихся в массиве.  Например, в следующем примере объявляется двухмерный массив с четырьмя элементами в каждом измерении. Как видно из выходных данных в примере, размер массива равен 16 (или (3 + 1) * (3 + 1).
 
 [!code-vb[array-size](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/array-size.vb)]
 
 > [!NOTE]
-> This discussion of array size does not apply to jagged arrays. For information on jagged arrays and determining the size of a jagged array, see the [Jagged arrays](#jagged-arrays) section.
+> Это обсуждение размера массива не применяется к массивам зубчатых размеров. Сведения о массивах немассивности и определении размера массива массивов см [. в разделе массива массивов](#jagged-arrays) .
 
-Размер массива можно определить с помощью свойства <xref:System.Array.Length%2A?displayProperty=nameWithType>. You can find the length of each dimension of a multidimensional array by using the <xref:System.Array.GetLength%2A?displayProperty=nameWithType> method.
+Размер массива можно определить с помощью свойства <xref:System.Array.Length%2A?displayProperty=nameWithType> . Длину каждого измерения многомерного массива можно узнать с помощью метода <xref:System.Array.GetLength%2A?displayProperty=nameWithType>.
 
-You can resize an array variable by assigning a new array object to it or by using the [`ReDim` Statement](../../../language-reference/statements/redim-statement.md) statement. The following example uses the `ReDim` statement to change a 100-element array to a 51-element array.
+Можно изменить размер переменной массива, назначив ей новый объект массива или выполнив инструкцию [`ReDim`](../../../language-reference/statements/redim-statement.md) . В следующем примере оператор `ReDim` используется для изменения массива 100-element на массив 51-element.
 
 [!code-vb[resize-an-array](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/array-size2.vb)]
 
@@ -163,69 +163,69 @@ You can resize an array variable by assigning a new array object to it or by usi
 
 |||
 |---|---|
-|Длина измерения|The index of each dimension is 0-based, which means it ranges from 0 to its upper bound. Therefore, the length of a given dimension is one greater than the declared upper bound of that dimension.|
-|Ограничения длины|The length of every dimension of an array is limited to the maximum value of the `Integer` data type, which is <xref:System.Int32.MaxValue?displayProperty=nameWithType> or (2 ^ 31) - 1. Однако общий размер массива также ограничен доступной памятью в системе. If you attempt to initialize an array that exceeds the amount of available memory, the runtime throws an <xref:System.OutOfMemoryException>.|
-|Размер и размер элемента|Размер массива не зависит от типа его элементов. The size always represents the total number of elements, not the number of bytes that they consume in memory.|
+|Длина измерения|Индекс каждого измерения основан на 0, что означает, что он находится в диапазоне от 0 до верхней границы. Таким образом, длина данного измерения больше, чем объявленная верхняя граница этого измерения.|
+|Ограничения длины|Длина каждого измерения массива ограничена максимальным значением `Integer` типа данных, который <xref:System.Int32.MaxValue?displayProperty=nameWithType> или (2 ^ 31)-1. Однако общий размер массива также ограничен доступной памятью в системе. При попытке инициализировать массив, размер которого превышает объем доступной памяти, среда выполнения создает <xref:System.OutOfMemoryException>.|
+|Размер и размер элемента|Размер массива не зависит от типа его элементов. Размер всегда представляет общее число элементов, а не число байтов, используемых в памяти.|
 |Затраты памяти|Небезопасно делать какие-либо предположения относительно способа хранения массива в памяти. Хранение зависит от разрядности платформы, поэтому один и тот же массив может занимать больше памяти в 64-разрядных системах, чем в 32-разрядных. В зависимости от конфигурации системы при инициализации массива среда CLR может использовать такие способы хранения, как упаковка элементов максимально близко друг к другу или выравнивание всех элементов по естественным аппаратным границам памяти. Кроме того, массив нуждается в хранении служебной информации, и размер этой информации возрастает при добавлении каждого измерения.|
 
-## <a name="the-array-type"></a>The array type
+## <a name="the-array-type"></a>Тип массива
 
-Every array has a data type, which differs from the data type of its elements. Не существует единого типа данных, подходящего для всех массивов. Вместо этого тип данных массива определяется числом измерений ( *рангом*) массива и типом данных его элементов. Two array variables are of the same data type only when they have the same rank and their elements have the same data type. The lengths of the dimensions of an array do not influence the array data type.
+Каждый массив имеет тип данных, который отличается от типа данных его элементов. Не существует единого типа данных, подходящего для всех массивов. Вместо этого тип данных массива определяется числом измерений ( *рангом*) массива и типом данных его элементов. Две переменные массива имеют один и тот же тип данных, только если они имеют одинаковый ранг и их элементы имеют один и тот же тип данных. Длины измерений массива не влияют на тип данных массива.
 
-Каждый массив наследуется от класса <xref:System.Array?displayProperty=nameWithType>, и вы можете объявить переменную типа `Array`, но не можете создать массив типа `Array`. For example, although the following code declares the `arr` variable to be of type `Array` and calls the <xref:System.Array.CreateInstance%2A?displayProperty=nameWithType> method to instantiate the array, the array's type proves to be Object[].
+Каждый массив наследуется от класса <xref:System.Array?displayProperty=nameWithType> , и вы можете объявить переменную типа `Array`, но не можете создать массив типа `Array`. Например, несмотря на то, что следующий код объявляет переменную `arr` типа `Array` и вызывает метод <xref:System.Array.CreateInstance%2A?displayProperty=nameWithType> для создания экземпляра массива, тип массива доказывается на Object [].
 
 [!code-vb[array-class](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/array-class.vb)]
 
-Кроме того, [оператор ReDim`Array` не может работать с переменной, объявленной с типом ](../../../language-reference/statements/redim-statement.md). For these reasons, and for type safety, it is advisable to declare every array as a specific type.
+Кроме того, [оператор ReDim](../../../language-reference/statements/redim-statement.md) не может работать с переменной, объявленной с типом `Array`. По этим причинам, а для обеспечения безопасности типа рекомендуется объявлять каждый массив как конкретный тип.
 
 Выяснить тип данных массива или его элементов можно несколькими способами.
 
-- You can call the <xref:System.Object.GetType%2A> method on the variable to get a <xref:System.Type> object that represents the run-time type of the variable. Объект <xref:System.Type> содержит подробные сведения в своих свойствах и методах.
-- You can pass the variable to the <xref:Microsoft.VisualBasic.Information.TypeName%2A> function to get a `String` with the name of run-time type.
+- Можно вызвать метод <xref:System.Object.GetType%2A> для переменной, чтобы получить объект <xref:System.Type>, представляющий тип переменной во время выполнения. Объект <xref:System.Type> содержит подробные сведения в своих свойствах и методах.
+- Можно передать переменную функции <xref:Microsoft.VisualBasic.Information.TypeName%2A>, чтобы получить `String` с именем типа времени выполнения.
 
-The following example calls the both the `GetType` method and the `TypeName` function to determine the type of an array. The array type is `Byte(,)`. Note that the <xref:System.Type.BaseType%2A?displayProperty=nameWithType> property also indicates that the base type of the byte array is the <xref:System.Array> class.
+В следующем примере вызывается метод `GetType` и функция `TypeName` для определения типа массива. Тип массива — `Byte(,)`. Обратите внимание, что свойство <xref:System.Type.BaseType%2A?displayProperty=nameWithType> также указывает, что базовый тип массива байтов является классом <xref:System.Array>.
 
 [!code-vb[array-type](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/array-type.vb)]
 
-## <a name="arrays-as-return-values-and-parameters"></a>Arrays as return values and parameters
+## <a name="arrays-as-return-values-and-parameters"></a>Массивы как возвращаемые значения и параметры
 
 Чтобы вернуть массив из процедуры `Function`, укажите тип данных массива и число измерений в качестве типа возвращаемого значения [оператора Function](../../../language-reference/statements/function-statement.md). Внутри функции объявите локальную переменную массива с тем же числом измерений и типом данных. В [оператор Return](../../../language-reference/statements/return-statement.md) включите локальную переменную массива без скобок.
 
-Чтобы задать массив в качестве параметра процедуры `Sub` или `Function` , определите параметр как массив с указанными типом данных и количеством измерений. In the call to the procedure, pass an array variable with the same data type and number of dimensions.
+Чтобы задать массив в качестве параметра процедуры `Sub` или `Function` , определите параметр как массив с указанными типом данных и количеством измерений. В вызове процедуры передайте переменную массива с тем же типом данных и количеством измерений.
 
-In the following example, the `GetNumbers` function returns an `Integer()`, a one-dimensional array of type `Integer`. Процедура `ShowNumbers` принимает аргумент `Integer()` .
+В следующем примере функция `GetNumbers` возвращает `Integer()`одномерный массив типа `Integer`. Процедура `ShowNumbers` принимает аргумент `Integer()` .
 
 [!code-vb[return-value-and-params](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/return-values-and-params.vb)]
 
-In the following example, the `GetNumbersMultiDim` function returns an `Integer(,)`, a two-dimensional array of type `Integer`.  Процедура `ShowNumbersMultiDim` принимает аргумент `Integer(,)` .
+В следующем примере функция `GetNumbersMultiDim` возвращает `Integer(,)`, двухмерный массив типа `Integer`.  Процедура `ShowNumbersMultiDim` принимает аргумент `Integer(,)` .
 
 [!code-vb[multidimensional-return-value](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/return-values-and-params-2d.vb)]
 
 ## <a name="jagged-arrays"></a>Массивы массивов
 
-Иногда структура данных в приложении является двухмерной, но не прямоугольной. For example, you might use an array to store data about the high temperature of each day of the month. The first dimension of the array represents the month, but the second dimension represents the number of days, and the number of days in a month is not uniform. A *jagged array*, which is also called an *array of arrays*, is designed for such scenarios. A jagged array is an array whose elements are also arrays. Массив массивов и каждый элемент в нем могут иметь одно или несколько измерений.
+Иногда структура данных в приложении является двухмерной, но не прямоугольной. Например, массив можно использовать для хранения данных о высокой температуре каждого дня месяца. Первое измерение массива представляет месяц, но второе измерение представляет количество дней, а число дней в месяце является неравномерным. Немассивный *массив*, который также называется *массивом массивов*, предназначен для таких сценариев. Немассивный массив — это массив, элементы которого также являются массивами. Массив массивов и каждый элемент в нем могут иметь одно или несколько измерений.
 
-The following example uses an array of months, each element of which is an array of days. The example uses a jagged array because different months have different numbers of days.  The example shows how to create a jagged array, assign values to it, and retrieve and display its values.
+В следующем примере используется массив месяцев, каждый элемент которого является массивом дней. В примере используется массив массива, поскольку разные месяцы имеют разное количество дней.  В примере показано создание массива массивов, присвоение ему значений, а также извлечение и отображение его значений.
 
 [!code-vb[jagged-arrays](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/jagged.vb)]
 
-The previous example assigns values to the jagged array on an element-by-element basis by using a `For...Next` loop. You can also assign values to the elements of a jagged array by using nested array literals. However, the attempt to use nested array literals (for example, `Dim valuesjagged = {{1, 2}, {2, 3, 4}}`) generates compiler error [BC30568](../../../,,/../misc/bc30568.md). To correct the error, enclose the inner array literals in parentheses. The parentheses force the array literal expression to be evaluated, and the resulting values are used with the outer array literal, as the following example shows.
+В предыдущем примере значения массива массивов применяются к элементу, основанному на элементе, с помощью цикла `For...Next`. Можно также присваивать значения элементам массива массивов с помощью вложенных литералов массива. Однако попытка использовать вложенные литералы массива (например, `Dim valuesjagged = {{1, 2}, {2, 3, 4}}`) приводит к ошибке компилятора [BC30568](../../../,,/../misc/bc30568.md). Чтобы исправить ошибку, заключите внутренние литералы массива в круглые скобки. Круглые скобки принудительно оценивают выражение литерала массива, а результирующие значения используются с литералом внешнего массива, как показано в следующем примере.
 
 [!code-vb[jagged-array-initialization](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/jagged-assign.vb)]
 
-A jagged array is a one-dimensional array whose elements contain arrays. Therefore, the <xref:System.Array.Length%2A?displayProperty=nameWithType> property and the `Array.GetLength(0)` method return the number of elements in the one-dimensional array, and `Array.GetLength(1)` throws an <xref:System.IndexOutOfRangeException> because a jagged array is not multidimensional. You determine the number of elements in each subarray by retrieving the value of each subarray's <xref:System.Array.Length%2A?displayProperty=nameWithType> property. The following example illustrates how to determine the number of elements in a jagged array.
+Массив массива является одномерным массивом, элементы которого содержат массивы. Таким образом, свойство <xref:System.Array.Length%2A?displayProperty=nameWithType> и метод `Array.GetLength(0)` возвращают количество элементов в одномерном массиве, а `Array.GetLength(1)` создает <xref:System.IndexOutOfRangeException>, так как массив массива не является многомерным. Число элементов в каждом подмассиве определяется путем извлечения значения свойства <xref:System.Array.Length%2A?displayProperty=nameWithType> каждого подмассива. В следующем примере показано, как определить количество элементов массива массивов.
 
 [!code-vb[jagged-array-size](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/jagged-length.vb)]
 
-## <a name="zero-length-arrays"></a>Zero-length arrays
+## <a name="zero-length-arrays"></a>Массивы нулевой длины
 
-Visual Basic differentiates between a uninitialized array (an array whose value is `Nothing`) and a *zero-length array* or empty array (an array that has no elements.) An uninitialized array is one that has not been dimensioned or had any values assigned to it. Пример:
+Visual Basic отличает неинициализированный массив (массив, значение которого равно `Nothing`) и *массив нулевой длины* или пустой массив (массив без элементов). Неинициализированный массив — это тот, который не был измерен или имел присвоенные ему значения. Пример.
 
 ```vb
 Dim arr() As String
 ```
 
-A zero-length array is declared with a dimension of -1. Пример:
+Массив нулевой длины объявляется с измерением-1. Пример.
 
 ```vb
 Dim arrZ(-1) As String
@@ -233,64 +233,64 @@ Dim arrZ(-1) As String
 
 Массив нулевой длины может потребоваться создать в указанных ниже случаях.
 
-- Without risking a <xref:System.NullReferenceException> exception, your code must access members of the <xref:System.Array> class, such as <xref:System.Array.Length%2A> or <xref:System.Array.Rank%2A>, or call a Visual Basic function such as <xref:Microsoft.VisualBasic.Information.UBound%2A>.
+- Без риска возникновения исключения <xref:System.NullReferenceException> код должен обращаться к членам класса <xref:System.Array>, например <xref:System.Array.Length%2A> или <xref:System.Array.Rank%2A>или вызвать функцию Visual Basic, например <xref:Microsoft.VisualBasic.Information.UBound%2A>.
 
-- You want to keep your code simple by not having to check for `Nothing` as a special case.
+- Вы хотите, чтобы ваш код был простым, не требуя проверки `Nothing` в качестве специального случая.
 
 - Код взаимодействует с интерфейсом API, который требует передачи массива нулевой длины в одну или несколько процедур или возвращает массив нулевой длины из одной или нескольких процедур.
 
-## <a name="splitting-an-array"></a>Splitting an array
+## <a name="splitting-an-array"></a>Разделение массива
 
-In some cases, you may need to split a single array into multiple arrays. This involves identifying the point or points at which the array is to be split, and then spitting the array into two or more separate arrays.
+В некоторых случаях может потребоваться разделить один массив на несколько массивов. Это включает определение точки или точек, в которых массив должен быть разделен, а затем спиттинг массив в два или более отдельных массива.
 
 > [!NOTE]
-> This section does not discuss splitting a single string into a string array based on some delimiter. For information on splitting a string, see the <xref:System.String.Split%2A?displayProperty=nameWithType> method.
+> В этом разделе не рассматривается разделение одной строки на массив строк, основанный на каком-либо разделителе. Сведения о разбиении строки см. в описании метода <xref:System.String.Split%2A?displayProperty=nameWithType>.
 
-The most common criteria for splitting an array are:
+Ниже приведены наиболее распространенные критерии разделения массива.
 
-- Количество элементов в массиве. For example, you might want to split an array of more than a specified number of elements into a number of approximately equal parts. For this purpose, you can use the value returned by either the <xref:System.Array.Length%2A?displayProperty=nameWithType> or <xref:System.Array.GetLength%2A?displayProperty=nameWithType> method.
+- Количество элементов в массиве. Например, может потребоваться разделить массив больше, чем заданное число элементов, на несколько приблизительно равных частей. Для этой цели можно использовать значение, возвращаемое методом <xref:System.Array.Length%2A?displayProperty=nameWithType> или <xref:System.Array.GetLength%2A?displayProperty=nameWithType>.
 
-- The value of an element, which serves as a delimiter that indicates where the array should be split. You can search for a specific value by calling the <xref:System.Array.FindIndex%2A?displayProperty=nameWithType> and <xref:System.Array.FindLastIndex%2A?displayProperty=nameWithType> methods.
+- Значение элемента, которое служит разделителем, указывающим место разделения массива. Можно выполнить поиск определенного значения, вызвав методы <xref:System.Array.FindIndex%2A?displayProperty=nameWithType> и <xref:System.Array.FindLastIndex%2A?displayProperty=nameWithType>.
 
-Once you've determined the index or indexes at which the array should be split, you can then create the individual arrays by calling the <xref:System.Array.Copy%2A?displayProperty=nameWithType> method.
+После определения индекса или индексов, на которых массив должен быть разделен, можно создать отдельные массивы, вызвав метод <xref:System.Array.Copy%2A?displayProperty=nameWithType>.
 
-The following example splits an array into two arrays of approximately equal size. (If the total number of array elements is odd, the first array has one more element than the second.)
+В следующем примере массив разбивается на два массива приблизительно равного размера. (Если общее число элементов массива нечетное, первый массив содержит еще один элемент, чем второй.)
 
 [!code-vb[splitting-an-array-by-length](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/split1.vb)]
 
-The following example splits a string array into two arrays based on the presence of an element whose value is "zzz", which serves as the array delimiter. The new arrays do not include the element that contains the delimiter.
+В следующем примере массив строк разбивается на два массива на основе наличия элемента, значение которого равно "zzz", которое служит разделителем массива. Новые массивы не включают элемент, содержащий разделитель.
 
 [!code-vb[splitting-an-array-by-delimiter](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/split2.vb)]
 
-## <a name="joining-arrays"></a>Joining arrays
+## <a name="joining-arrays"></a>Соединение массивов
 
-You can also combine a number of arrays into a single larger array. To do this, you also use the <xref:System.Array.Copy%2A?displayProperty=nameWithType> method.
+Можно также объединить несколько массивов в один массив большего размера. Для этого также используется метод <xref:System.Array.Copy%2A?displayProperty=nameWithType>.
 
 > [!NOTE]
-> This section does not discuss joining a string array into a single string. For information on joining a string array, see the <xref:System.String.Join%2A?displayProperty=nameWithType> method.
+> В этом разделе не обсуждается объединение массива строк в одну строку. Сведения о присоединении массива строк см. в описании метода <xref:System.String.Join%2A?displayProperty=nameWithType>.
 
-Before copying the elements of each array into the new array, you must first ensure that you have initialized the array so that it is large enough to accommodate the new array. Это можно сделать одним из двух способов.
+Перед копированием элементов каждого массива в новый массив необходимо убедиться, что массив был инициализирован так, чтобы он был достаточно большим для размещения нового массива. Это можно сделать одним из двух способов.
 
-- Use the [`ReDim Preserve`](../../../language-reference/statements/redim-statement.md) statement to dynamically expand the array before adding new elements to it. This is the easiest technique, but it can result in performance degradation and excessive memory consumption when you are copying large arrays.
-- Calculate the total number of elements needed for the new large array, then add the elements of each source array to it.
+- Используйте инструкцию [`ReDim Preserve`](../../../language-reference/statements/redim-statement.md) для динамического расширения массива перед добавлением в него новых элементов. Это самый простой способ, но это может привести к снижению производительности и чрезмерному потреблению памяти при копировании больших массивов.
+- Вычислите общее число элементов, необходимых для нового большого массива, а затем добавьте в него элементы каждого исходного массива.
 
-The following example uses the second approach to add four arrays with ten elements each to a single array.
+В следующем примере используется второй подход к добавлению четырех массивов с десятью элементами в один массив.
 
 [!code-vb[joining-an-array](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/join.vb)]
 
-Since in this case the source arrays are all small, we can also dynamically expand the array as we add the elements of each new array to it. Эту задачу решает следующий код.
+Поскольку в этом случае исходные массивы невелики, можно также динамически расширять массив по мере добавления элементов каждого нового массива в него. Эту задачу решает следующий код.
 
 [!code-vb[joining-an-array-dynamically](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/join2.vb)]
 
-## <a name="collections-as-an-alternative-to-arrays"></a>Collections as an alternative to arrays
+## <a name="collections-as-an-alternative-to-arrays"></a>Коллекции в качестве альтернативы массивам
 
-Массивы удобнее всего использовать для создания фиксированного числа строго типизированных объектов и работы с ними. Коллекции предоставляют более гибкий способ работы с группами объектов. Unlike arrays, which require that you explicitly change the size of an array with the [`ReDim` Statement](../../../language-reference/statements/redim-statement.md), collections grow and shrink dynamically as the needs of an application change.
+Массивы удобнее всего использовать для создания и работы с фиксированным числом строго типизированных объектов. Коллекции предоставляют более гибкий способ работы с группами объектов. В отличие от массивов, для которых требуется явно изменить размер массива с помощью [инструкции`ReDim`](../../../language-reference/statements/redim-statement.md), коллекции растут и сжимаются динамически по мере необходимости изменения приложения.
 
-When you use `ReDim` to redimension an array, Visual Basic creates a new array and releases the previous one. Это занимает время выполнения. Therefore, if the number of items you are working with changes frequently, or you cannot predict the maximum number of items you need, you'll usually obtain better performance by using a collection.
+При использовании `ReDim` для переизмерения массива Visual Basic создает новый массив и освобождает предыдущий. Это занимает время выполнения. Таким образом, если количество элементов, с которыми вы работаете, часто меняются, или вы не можете предсказать максимальное количество элементов, вы обычно получаете лучшую производительность, используя коллекцию.
 
 Некоторые коллекции допускают назначение ключа любому объекту, который добавляется в коллекцию, чтобы в дальнейшем можно было быстро извлечь связанный с ключом объект из коллекции.
 
-Если коллекция содержит элементы только одного типа данных, можно использовать один из классов в пространстве имен <xref:System.Collections.Generic?displayProperty=nameWithType>. Универсальная коллекция обеспечивает строгую типизацию, так что в нее нельзя добавить другие типы данных.
+Если коллекция содержит элементы только одного типа данных, можно использовать один из классов в пространстве имен <xref:System.Collections.Generic?displayProperty=nameWithType> . Универсальная коллекция обеспечивает строгую типизацию, так что в нее нельзя добавить другие типы данных.
 
 Более подробную информацию о коллекциях см. в статье [Коллекции](../../concepts/collections.md).
 

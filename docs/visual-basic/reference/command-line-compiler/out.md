@@ -26,19 +26,19 @@ ms.locfileid: "74352385"
   
 |Термин|Определение|  
 |---|---|  
-|`filename`|Обязательный. The name of the output file the compiler creates. If the file name contains a space, enclose the name in quotation marks (" ").|  
+|`filename`|Обязательно. Имя выходного файла, создаваемого компилятором. Если имя файла содержит пробел, заключите его в кавычки ("").|  
   
-## <a name="remarks"></a>Заметки  
- Specify the full name and extension of the file to create. If you do not, the .exe file takes its name from the source-code file containing the `Sub Main` procedure, and the .dll file takes its name from the first source-code file.  
+## <a name="remarks"></a>Примечания  
+ Укажите полное имя и расширение создаваемого файла. В противном случае exe-файл принимает имя из файла исходного кода, содержащего процедуру `Sub Main`, а DLL-файл принимает имя из первого файла исходного кода.  
   
- If you specify a file name without an .exe or .dll extension, the compiler automatically adds the extension for you, depending on the value specified for the `-target` compiler option.  
+ Если указать имя файла без расширения EXE или DLL, компилятор автоматически добавит расширение в зависимости от значения, указанного для параметра компилятора `-target`.  
   
-|To set -out in the Visual Studio integrated development environment|  
+|Установка в интегрированной среде разработки Visual Studio|  
 |---|  
-|1.  Have a project selected in **Solution Explorer**. В меню **Проект** выберите пункт **Свойства**. <br />2.  Click the **Application** tab.<br />3.  Modify the value in the **Assembly Name** box.|  
+|1. Выберите проект в **Обозреватель решений**. В меню **Проект** выберите пункт **Свойства**. <br />2. Перейдите на вкладку **приложение** .<br />3. Измените значение в поле **имя сборки** .|  
   
 ## <a name="example"></a>Пример  
- The following code compiles `T2.vb` and creates output file `T2.exe`.  
+ Следующий код компилирует `T2.vb` и создает выходной файл `T2.exe`.  
   
 ```console
 vbc t2.vb -out:t3.exe  
@@ -47,5 +47,5 @@ vbc t2.vb -out:t3.exe
 ## <a name="see-also"></a>См. также
 
 - [Компилятор Visual Basic с интерфейсом командной строки](../../../visual-basic/reference/command-line-compiler/index.md)
-- [-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)
+- [-Target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)
 - [Примеры командных строк компиляции](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

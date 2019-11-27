@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74438728"
 ---
 # <a name="icorprofilerinfoisarrayclass-method"></a>Метод ICorProfilerInfo::IsArrayClass
-Determines whether the specified class is an array class.  
+Определяет, является ли указанный класс классом массива.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,19 +37,19 @@ HRESULT IsArrayClass(
   
 ## <a name="parameters"></a>Параметры  
  `classId`  
- [in] The ID of the class to be examined.  
+ окне Идентификатор анализируемого класса.  
   
  `pBaseElemType`  
- [out] A pointer to a value of the CorElementType enumeration that indicates the type of the array elements.  
+ заполняет Указатель на значение перечисления Корелементтипе, указывающее тип элементов массива.  
   
  `pBaseClassId`  
- [out] A pointer to the class ID of the array elements, when available.  
+ заполняет Указатель на идентификатор класса элементов массива, если он доступен.  
   
  `pcRank`  
- [out] A pointer to an integer that indicates the rank (that is, number of dimensions) of the array.  
+ заполняет Указатель на целое число, указывающее ранг (то есть количество измерений) массива.  
   
-## <a name="remarks"></a>Заметки  
- If the specified class is an array class, the `IsArrayClass` method returns an S_OK HRESULT and values for any non-null output parameters. Otherwise, it returns S_FALSE.  
+## <a name="remarks"></a>Примечания  
+ Если указанный класс является классом массива, метод `IsArrayClass` возвращает S_OK HRESULT и значения для любых выходных параметров, отличных от NULL. В противном случае возвращается S_FALSE.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  

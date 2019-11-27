@@ -18,7 +18,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351238"
 ---
 # <a name="error-statement"></a>Оператор Error
-Simulates the occurrence of an error.  
+Имитирует возникновение ошибки.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -28,29 +28,29 @@ Error errornumber
   
 ## <a name="parts"></a>Части  
  `errornumber`  
- Обязательный. Can be any valid error number.  
+ Обязательно. Может быть любым допустимым номером ошибки.  
   
-## <a name="remarks"></a>Заметки  
- The `Error` statement is supported for backward compatibility. In new code, especially when creating objects, use the `Err` object's `Raise` method to generate run-time errors.  
+## <a name="remarks"></a>Примечания  
+ Оператор `Error` поддерживается для обеспечения обратной совместимости. В новом коде, особенно при создании объектов, используйте метод `Raise` объекта `Err` для создания ошибок времени выполнения.  
   
- If `errornumber` is defined, the `Error` statement calls the error handler after the properties of the `Err` object are assigned the following default values:  
+ Если определено `errornumber`, инструкция `Error` вызывает обработчик ошибок после присвоения свойству объекта `Err` следующих значений по умолчанию:  
   
-|свойство;|значения|  
+|Свойство|значения|  
 |--------------|-----------|  
-|`Number`|Value specified as argument to `Error` statement. Can be any valid error number.|  
-|`Source`|Name of the current Visual Basic project.|  
-|`Description`|String expression corresponding to the return value of the `Error` function for the specified `Number`, if this string exists. If the string does not exist, `Description` contains a zero-length string ("").|  
-|`HelpFile`|The fully qualified drive, path, and file name of the appropriate Visual Basic Help file.|  
-|`HelpContext`|The appropriate Visual Basic Help file context ID for the error corresponding to the `Number` property.|  
-|`LastDLLError`|Zero.|  
+|`Number`|Значение, заданное в качестве аргумента для `Error` инструкции. Может быть любым допустимым номером ошибки.|  
+|`Source`|Имя текущего проекта Visual Basic.|  
+|`Description`|Строковое выражение, соответствующее возвращаемому значению функции `Error` для указанного `Number`, если эта строка существует. Если строка не существует, `Description` содержит строку нулевой длины ("").|  
+|`HelpFile`|Полный диск, путь и имя файла подходящего файла справки Visual Basic.|  
+|`HelpContext`|Соответствующий идентификатор контекста файла справки Visual Basic для ошибки, соответствующей свойству `Number`.|  
+|`LastDLLError`|Нуль.|  
   
- If no error handler exists, or if none is enabled, an error message is created and displayed from the `Err` object properties.  
+ Если обработчик ошибок не существует или не включен, сообщение об ошибке создается и отображается в свойствах объекта `Err`.  
   
 > [!NOTE]
-> Some Visual Basic host applications cannot create objects. See your host application's documentation to determine whether it can create classes and objects.  
+> Некоторые приложения Visual Basic узла не могут создавать объекты. Чтобы определить, может ли он создавать классы и объекты, см. документацию по ведущему приложению.  
   
 ## <a name="example"></a>Пример  
- This example uses the `Error` statement to generate error number 11.  
+ В этом примере используется оператор `Error` для создания номера ошибки 11.  
   
 ```vb  
 On Error Resume Next   ' Defer error handling.  
@@ -58,9 +58,9 @@ Error 11   ' Simulate the "Division by zero" error.
 ```  
   
 ## <a name="requirements"></a>Требования  
- **Namespace:** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
+ **Пространство имен:** [Microsoft. VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **Сборка:** Библиотека времени выполнения Visual Basic (в Microsoft. VisualBasic. dll)  
   
 ## <a name="see-also"></a>См. также
 

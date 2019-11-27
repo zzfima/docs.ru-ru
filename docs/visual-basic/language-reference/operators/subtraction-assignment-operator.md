@@ -18,7 +18,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347812"
 ---
 # <a name="--operator-visual-basic"></a>Оператор -= (Visual Basic)
-Subtracts the value of an expression from the value of a variable or property and assigns the result to the variable or property.  
+Вычитает значение выражения из значения переменной или свойства и присваивает результат переменной или свойству.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -28,27 +28,27 @@ variableorproperty -= expression
   
 ## <a name="parts"></a>Части  
  `variableorproperty`  
- Обязательный. Any numeric variable or property.  
+ Обязательно. Любая числовая переменная или свойство.  
   
  `expression`  
- Обязательный. Произвольное числовое выражение.  
+ Обязательно. Произвольное числовое выражение.  
   
-## <a name="remarks"></a>Заметки  
- The element on the left side of the `-=` operator can be a simple scalar variable, a property, or an element of an array. The variable or property cannot be [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md).  
+## <a name="remarks"></a>Примечания  
+ Элемент в левой части оператора `-=` может быть простой скалярной переменной, свойством или элементом массива. Переменная или свойство не может быть [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md).  
   
- The `-=` operator first subtracts the value of the expression (on the right-hand side of the operator) from the value of the variable or property (on the left-hand side of the operator). The operator then assigns the result of that operation to the variable or property.  
+ Оператор `-=` вначале вычитает значение выражения (в правой части оператора) из значения переменной или свойства (в левой части оператора) (). Затем оператор присваивает результат этой операции переменной или свойству.  
   
 ## <a name="overloading"></a>Перегрузка  
- The [- Operator (Visual Basic)](../../../visual-basic/language-reference/operators/subtraction-operator.md) can be *overloaded*, which means that a class or structure can redefine its behavior when an operand has the type of that class or structure. Overloading the `-` operator affects the behavior of the `-=` operator. If your code uses `-=` on a class or structure that overloads `-`, be sure you understand its redefined behavior. Для получения дополнительной информации см. [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+ [Оператор-operator (Visual Basic)](../../../visual-basic/language-reference/operators/subtraction-operator.md) может быть *перегружен*, что означает, что класс или структура может переопределить свое поведение, если операнд имеет тип этого класса или структуры. Перегрузка оператора `-` влияет на поведение оператора `-=`. Если в коде используется `-=` в классе или структуре, которая перегружает `-`, убедитесь, что вы понимаете его переопределенное поведение. Для получения дополнительной информации см. [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Пример  
- The following example uses the `-=` operator to subtract one `Integer` variable from another and assign the result to the latter variable.  
+ В следующем примере оператор `-=` используется для вычитания одной `Integer`ной переменной из другой и присвоить результат второй переменной.  
   
  [!code-vb[VbVbalrOperators#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#11)]  
   
 ## <a name="see-also"></a>См. также
 
-- [- Operator (Visual Basic)](../../../visual-basic/language-reference/operators/subtraction-operator.md)
+- [Оператор-operator (Visual Basic)](../../../visual-basic/language-reference/operators/subtraction-operator.md)
 - [Операторы присваивания](../../../visual-basic/language-reference/operators/assignment-operators.md)
 - [Арифметические операторы](../../../visual-basic/language-reference/operators/arithmetic-operators.md)
 - [Порядок применения операторов в Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)

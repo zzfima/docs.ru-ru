@@ -18,7 +18,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350875"
 ---
 # <a name="aggregate-clause-visual-basic"></a>Предложение Aggregate (Visual Basic)
-Applies one or more aggregate functions to a collection.  
+Применяет одну или несколько агрегатных функций к коллекции.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -33,88 +33,88 @@ Aggregate element [As type] In collection _
   
 |Термин|Определение|  
 |---|---|  
-|`element`|Обязательный. Variable used to iterate through the elements of the collection.|  
-|`type`|Необязательный. Тип параметра `element`. If no type is specified, the type of `element` is inferred from `collection`.|  
-|`collection`|Обязательный. Refers to the collection to operate on.|  
-|`clause`|Необязательный. One or more query clauses, such as a `Where` clause, to refine the query result to apply the aggregate clause or clauses to.|  
-|`expressionList`|Обязательный. One or more comma-delimited expressions that identify an aggregate function to apply to the collection. You can apply an alias to an aggregate function to specify a member name for the query result. If no alias is supplied, the name of the aggregate function is used. For examples, see the section about aggregate functions later in this topic.|  
+|`element`|Обязательно. Переменная, используемая для прохода по элементам коллекции.|  
+|`type`|Необязательный элемент. Тип параметра `element`. Если тип не указан, тип `element` выводится из `collection`.|  
+|`collection`|Обязательно. Ссылается на коллекцию для обработки.|  
+|`clause`|Необязательный элемент. Одно или несколько предложений запроса, например предложение `Where`, для уточнения результата запроса с целью применения предложения Aggregate или предложений к.|  
+|`expressionList`|Обязательно. Одно или несколько выражений с разделителями-запятыми, которые обозначают агрегатную функцию, применяемую к коллекции. Можно применить псевдоним к агрегатной функции, чтобы указать имя элемента для результата запроса. Если псевдоним не указан, используется имя агрегатной функции. Примеры см. в разделе агрегатные функции далее в этом разделе.|  
   
-## <a name="remarks"></a>Заметки  
- The `Aggregate` clause can be used to include aggregate functions in your queries. Aggregate functions perform checks and computations over a set of values and return a single value. You can access the computed value by using a member of the query result type. The standard aggregate functions that you can use are the `All`, `Any`, `Average`, `Count`, `LongCount`, `Max`, `Min`, and `Sum` functions. These functions are familiar to developers who are familiar with aggregates in SQL. They are described in the following section of this topic.  
+## <a name="remarks"></a>Примечания  
+ Предложение `Aggregate` можно использовать для включения в запросы агрегатных функций. Агрегатные функции выполняют проверки и вычисления для набора значений и возвращают одно значение. Доступ к вычисленному значению можно получить с помощью члена типа результата запроса. Стандартные агрегатные функции, которые можно использовать, — это функции `All`, `Any`, `Average`, `Count`, `LongCount`, `Max`, `Min`и `Sum`. Эти функции знакомы разработчикам, знакомым со статистическими выражениями в SQL. Они описаны в следующем разделе этой статьи.  
   
- The result of an aggregate function is included in the query result as a field of the query result type. You can supply an alias for the aggregate function result to specify the name of the member of the query result type that will hold the aggregate value. If no alias is supplied, the name of the aggregate function is used.  
+ Результат агрегатной функции включается в результат запроса в виде поля типа результата запроса. Можно указать псевдоним для результата агрегатной функции, чтобы указать имя элемента типа результата запроса, который будет содержать статистическое значение. Если псевдоним не указан, используется имя агрегатной функции.  
   
- The `Aggregate` clause can begin a query, or it can be included as an additional clause in a query. If the `Aggregate` clause begins a query, the result is a single value that is the result of the aggregate function specified in the `Into` clause. If more than one aggregate function is specified in the `Into` clause, the query returns a single type with a separate property to reference the result of each aggregate function in the `Into` clause. If the `Aggregate` clause is included as an additional clause in a query, the type returned in the query collection will have a separate property to reference the result of each aggregate function in the `Into` clause.  
+ Предложение `Aggregate` может начать запрос или его можно добавить как дополнительное предложение в запросе. Если предложение `Aggregate` начинает запрос, результатом является единственное значение, которое является результатом агрегатной функции, указанной в предложении `Into`. Если в предложении `Into` указано более одной агрегатной функции, запрос возвращает один тип с отдельным свойством для ссылки на результат каждой агрегатной функции в предложении `Into`. Если предложение `Aggregate` включено в запрос в качестве дополнительного предложения, то тип, возвращаемый в коллекции запросов, будет иметь отдельное свойство для ссылки на результат каждой агрегатной функции в предложении `Into`.  
   
 ## <a name="aggregate-functions"></a>Статистические функции
 
-The following are the standard aggregate functions that can be used with the `Aggregate` clause.  
+Ниже приведены стандартные агрегатные функции, которые можно использовать с предложением `Aggregate`.  
   
 ### <a name="all"></a>Все
 
-Returns `true` if all elements in the collection satisfy a specified condition; otherwise returns `false`. Ниже представлен пример такого кода.
+Возвращает `true`, если все элементы в коллекции соответствуют заданному условию. в противном случае возвращает `false`. Ниже рассматривается пример:
 
  [!code-vb[VbSimpleQuerySamples#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#5)]
 
 ### <a name="any"></a>Любой
 
-Returns `true` if any element in the collection satisfies a specified condition; otherwise returns `false`. Ниже представлен пример такого кода.
+Возвращает `true`, если любой элемент в коллекции удовлетворяет заданному условию. в противном случае возвращает `false`. Ниже рассматривается пример:
 
  [!code-vb[VbSimpleQuerySamples#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#6)]
 
-### <a name="average"></a>Метод Average
+### <a name="average"></a>Average
 
-Computes the average of all elements in the collection, or computes a supplied expression for all elements in the collection. Ниже представлен пример такого кода.
+Вычисляет среднее значение всех элементов в коллекции или вычисляет заданное выражение для всех элементов в коллекции. Ниже рассматривается пример:
 
  [!code-vb[VbSimpleQuerySamples#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#7)]
 
 ### <a name="count"></a>Количество
 
-Counts the number of elements in the collection. You can supply an optional `Boolean` expression to count only the number of elements in the collection that satisfy a condition. Ниже представлен пример такого кода.
+Подсчитывает количество элементов в коллекции. Можно указать необязательное выражение `Boolean`, чтобы подсчитать только число элементов в коллекции, удовлетворяющее условию. Ниже рассматривается пример:
 
  [!code-vb[VbSimpleQuerySamples#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#8)]
 
 ### <a name="group"></a>Группа
 
-Refers to query results that are grouped as a result of a `Group By` or `Group Join` clause. The `Group` function is valid only in the `Into` clause of a `Group By` or `Group Join` clause. For more information and examples, see [Group By Clause](../../../visual-basic/language-reference/queries/group-by-clause.md) and [Group Join Clause](../../../visual-basic/language-reference/queries/group-join-clause.md).
+Относится к результатам запроса, сгруппированным в результате предложения `Group By` или `Group Join`. Функция `Group` допустима только в предложении `Into` предложения `Group By` или `Group Join`. Дополнительные сведения и примеры см. в разделе предложение [Group By](../../../visual-basic/language-reference/queries/group-by-clause.md) и [предложение Group Join](../../../visual-basic/language-reference/queries/group-join-clause.md).
 
 ### <a name="longcount"></a>LongCount
 
-Counts the number of elements in the collection. You can supply an optional `Boolean` expression to count only the number of elements in the collection that satisfy a condition. Returns the result as a `Long`. For an example, see the `Count` aggregate function.
+Подсчитывает количество элементов в коллекции. Можно указать необязательное выражение `Boolean`, чтобы подсчитать только число элементов в коллекции, удовлетворяющее условию. Возвращает результат в виде `Long`. Пример см. в разделе агрегатная функция `Count`.
 
 ### <a name="max"></a>Макс.
 
-Computes the maximum value from the collection, or computes a supplied expression for all elements in the collection. Ниже представлен пример такого кода.
+Вычисление максимального значения из коллекции или вычисление заданного выражения для всех элементов в коллекции. Ниже рассматривается пример:
 
  [!code-vb[VbSimpleQuerySamples#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#9)]
 
 ### <a name="min"></a>Мин.
 
-Computes the minimum value from the collection, or computes a supplied expression for all elements in the collection. Ниже представлен пример такого кода.
+Вычисление минимального значения из коллекции или вычисление заданного выражения для всех элементов в коллекции. Ниже рассматривается пример:
 
  [!code-vb[VbSimpleQuerySamples#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#10)]
 
 ### <a name="sum"></a>Sum
 
-Computes the sum of all elements in the collection, or computes a supplied expression for all elements in the collection. Ниже представлен пример такого кода.
+Вычисляет сумму всех элементов в коллекции или вычисляет заданное выражение для всех элементов в коллекции. Ниже рассматривается пример:
 
  [!code-vb[VbSimpleQuerySamples#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#15)]
 
 ## <a name="example"></a>Пример  
 
-The following example shows how to use the `Aggregate` clause to apply aggregate functions to a query result.  
+В следующем примере показано, как использовать предложение `Aggregate` для применения агрегатных функций к результату запроса.  
   
  [!code-vb[VbSimpleQuerySamples#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#4)]  
   
-## <a name="creating-user-defined-aggregate-functions"></a>Creating User-Defined Aggregate Functions
+## <a name="creating-user-defined-aggregate-functions"></a>Создание определяемых пользователем агрегатных функций
 
- You can include your own custom aggregate functions in a query expression by adding extension methods to the <xref:System.Collections.Generic.IEnumerable%601> type. Your custom method can then perform a calculation or operation on the enumerable collection that has referenced your aggregate function. Дополнительные сведения о методах расширения см. в разделе [Методы расширения](../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md).  
+ В выражение запроса можно включить собственные пользовательские агрегатные функции, добавив методы расширения в тип <xref:System.Collections.Generic.IEnumerable%601>. Пользовательский метод может затем выполнить вычисление или операцию над перечислимой коллекцией, на которую ссылается агрегатная функция. Дополнительные сведения о методах расширения см. в разделе [Методы расширения](../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md).  
   
- For example, the following example shows a custom aggregate function that calculates the median value of a collection of numbers. There are two overloads of the `Median` extension method. The first overload accepts, as input, a collection of type `IEnumerable(Of Double)`. If the `Median` aggregate function is called for a query field of type `Double`, this method will be called. The second overload of the `Median` method can be passed any generic type. The generic overload of the `Median` method takes a second parameter that references the `Func(Of T, Double)` lambda expression to project a value for a type (from a collection) as the corresponding value of type `Double`. It then delegates the calculation of the median value to the other overload of the `Median` method. Дополнительные сведения о лямбда-выражениях см. в разделе [Лямбда-выражения](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).  
+ Например, в следующем примере показана пользовательская агрегатная функция, которая вычисляет медианное значение коллекции чисел. Существует две перегрузки метода расширения `Median`. Первая перегрузка принимает в качестве входных данных коллекцию типов `IEnumerable(Of Double)`. Если для поля запроса типа `Double`вызывается агрегатная функция `Median`, будет вызван этот метод. Второй перегрузкой метода `Median` может быть передан любой универсальный тип. Универсальная перегрузка метода `Median` принимает второй параметр, который ссылается на `Func(Of T, Double)` лямбда-выражение для проецирования значения типа (из коллекции) в качестве соответствующего значения типа `Double`. Затем оно делегирует вычисление значения медианы другой перегрузке метода `Median`. Дополнительные сведения о лямбда-выражениях см. в разделе [Лямбда-выражения](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).  
   
  [!code-vb[VbSimpleQuerySamples#18](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/UserDefinedAggregates.vb#18)]  
   
- The following example shows sample queries that call the `Median` aggregate function on a collection of type `Integer`, and a collection of type `Double`. The query that calls the `Median` aggregate function on the collection of type `Double` calls the overload of the `Median` method that accepts, as input, a collection of type `Double`. The query that calls the `Median` aggregate function on the collection of type `Integer` calls the generic overload of the `Median` method.  
+ В следующем примере показаны образцы запросов, которые вызывают `Median` агрегатную функцию для коллекции типа `Integer`и коллекцию типа `Double`. Запрос, который вызывает агрегатную функцию `Median` для коллекции типа `Double` вызывает перегрузку метода `Median`, который принимает в качестве входных данных коллекцию типов `Double`. Запрос, который вызывает агрегатную функцию `Median` для коллекции типа `Integer` вызывает универсальную перегрузку метода `Median`.  
   
  [!code-vb[VbSimpleQuerySamples#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/UserDefinedAggregates.vb#19)]  
   

@@ -23,7 +23,7 @@ ms.locfileid: "74352783"
 ---
 # <a name="throw-statement-visual-basic"></a>Оператор Throw (Visual Basic)
 
-Throws an exception within a procedure.
+Создает исключение в процедуре.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -34,19 +34,19 @@ Throw [ expression ]
 ## <a name="part"></a>Отделение
 
 `expression`\
-Provides information about the exception to be thrown. Optional when residing in a `Catch` statement, otherwise required.
+Предоставляет сведения о вызываемом исключении. Необязательно, если используется оператор `Catch`, в противном случае —.
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Примечания
 
-The `Throw` statement throws an exception that you can handle with structured exception-handling code (`Try`...`Catch`...`Finally`) or unstructured exception-handling code (`On Error GoTo`). You can use the `Throw` statement to trap errors within your code because Visual Basic moves up the call stack until it finds the appropriate exception-handling code.
+Оператор `Throw` создает исключение, которое можно обработать с помощью структурированного кода обработки исключений (`Try`...`Catch`...`Finally`) или неструктурированного кода обработки исключений (`On Error GoTo`). Можно использовать инструкцию `Throw` для перехвата ошибок в коде, поскольку Visual Basic перемещает стек вызовов до тех пор, пока не найдет соответствующий код обработки исключений.
 
-A `Throw` statement with no expression can only be used in a `Catch` statement, in which case the statement rethrows the exception currently being handled by the `Catch` statement.
+Инструкцию `Throw` без выражения можно использовать только в инструкции `Catch`. в этом случае оператор повторно создает исключение, обрабатываемое в данный момент инструкцией `Catch`.
 
-The `Throw` statement resets the call stack for the `expression` exception. If `expression` is not provided, the call stack is left unchanged. You can access the call stack for the exception through the <xref:System.Exception.StackTrace%2A> property.
+Оператор `Throw` сбрасывает стек вызовов для исключения `expression`. Если `expression` не указан, стек вызовов остается без изменений. Доступ к стеку вызовов для исключения можно получить с помощью свойства <xref:System.Exception.StackTrace%2A>.
 
 ## <a name="example"></a>Пример
 
-The following code uses the `Throw` statement to throw an exception:
+Следующий код использует оператор `Throw` для создания исключения:
 
 [!code-vb[VbVbalrStatements#84](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#84)]
 

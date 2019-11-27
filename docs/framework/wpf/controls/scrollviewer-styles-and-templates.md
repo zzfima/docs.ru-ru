@@ -22,7 +22,7 @@ ms.locfileid: "74283393"
 ## <a name="scrollviewer-parts"></a>ScrollViewer части  
  В следующей таблице перечислены именованные части для элемента управления <xref:System.Windows.Controls.ScrollViewer>.  
   
-|Отделение|Type|Описание|  
+|Отделение|Введите|Описание|  
 |-|-|-|  
 |PART_ScrollContentPresenter|<xref:System.Windows.Controls.ScrollContentPresenter>|Заполнитель для содержимого в <xref:System.Windows.Controls.ScrollViewer>.|  
 |PART_HorizontalScrollBar|<xref:System.Windows.Controls.Primitives.ScrollBar>|<xref:System.Windows.Controls.Primitives.ScrollBar>, используемый для прокрутки содержимого по горизонтали.|  

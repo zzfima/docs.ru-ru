@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445574"
 ---
 # <a name="setassemblyprops-method"></a>Метод SetAssemblyProps
-Assigns assembly-level properties.  
+Назначает свойства уровня сборки.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,22 +37,22 @@ HRESULT SetAssemblyProps(
   
 ## <a name="parameters"></a>Параметры  
  `AssemblyID`  
- ID of the assembly.  
+ Идентификатор сборки.  
   
  `FileToken`  
- File that defines the property. Can be NULL if `AssemblyID` does not indicate an unbound netmodule.  
+ Файл, определяющий свойство. Может иметь значение NULL, если `AssemblyID` не указывает на непривязанный netmodule.  
   
  `Option`  
- Indicates the option to modify.  
+ Указывает изменяемый параметр.  
   
  `Value`  
- New value of the option.  
+ Новое значение параметра.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Returns S_OK if the method succeeds.  
+ Возвращает S_OK, если метод завершается с ошибкой.  
   
 ## <a name="requirements"></a>Требования  
- Requires alink.h.  
+ Требуется ALink. h.  
   
 ## <a name="see-also"></a>См. также
 

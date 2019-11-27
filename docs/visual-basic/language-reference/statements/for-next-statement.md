@@ -1,5 +1,5 @@
 ---
-title: Оператор For...Next
+title: Оператор For…Next
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Step
@@ -32,7 +32,7 @@ ms.locfileid: "74351186"
 ---
 # <a name="fornext-statement-visual-basic"></a>Оператор For... Next (Visual Basic)
 
-Repeats a group of statements a specified number of times.
+Повторяет группу инструкций указанное число раз.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -50,107 +50,107 @@ Next [ counter ]
 
 |Отделение|Описание|
 |----------|-----------------|
-|`counter`|Required in the `For` statement. Numeric variable. The control variable for the loop. For more information, see [Counter Argument](#BKMK_Counter) later in this topic.|
-|`datatype`|Необязательный. Data type of `counter`. For more information, see [Counter Argument](#BKMK_Counter) later in this topic.|
-|`start`|Обязательный. Numeric expression. Начальное значение `counter`.|
-|`end`|Обязательный. Numeric expression. The final value of `counter`.|
-|`step`|Необязательный. Numeric expression. The amount by which `counter` is incremented each time through the loop.|
-|`statements`|Необязательный. One or more statements between `For` and `Next` that run the specified number of times.|
-|`Continue For`|Необязательный. Transfers control to the next loop iteration.|
-|`Exit For`|Необязательный. Transfers control out of the `For` loop.|
-|`Next`|Обязательный. Terminates the definition of the `For` loop.|
+|`counter`|Требуется в операторе `For`. Числовая переменная. Управляющая переменная для цикла. Дополнительные сведения см. в подразделе [аргумент Counter](#BKMK_Counter) далее в этой статье.|
+|`datatype`|Необязательный элемент. Тип данных `counter`. Дополнительные сведения см. в подразделе [аргумент Counter](#BKMK_Counter) далее в этой статье.|
+|`start`|Обязательно. Числовое выражение. Начальное значение `counter`.|
+|`end`|Обязательно. Числовое выражение. Конечное значение `counter`.|
+|`step`|Необязательный элемент. Числовое выражение. Величина, на которую `counter` увеличивается каждый раз с помощью цикла.|
+|`statements`|Необязательный элемент. Одна или несколько инструкций между `For` и `Next`, которые выполняются указанное число раз.|
+|`Continue For`|Необязательный элемент. Передает управление в следующую итерацию цикла.|
+|`Exit For`|Необязательный элемент. Передает управление за пределы цикла `For`.|
+|`Next`|Обязательно. Завершает определение цикла `For`.|
 
 > [!NOTE]
-> The `To` keyword is used in this statement to specify the range for the counter. You can also use this keyword in the [Select...Case Statement](../../../visual-basic/language-reference/statements/select-case-statement.md) and in array declarations. For more information about array declarations, see [Dim Statement](../../../visual-basic/language-reference/statements/dim-statement.md).
+> Ключевое слово `To` используется в этом операторе для указания диапазона счетчика. Это ключевое слово также можно использовать в [SELECT... Оператор Case](../../../visual-basic/language-reference/statements/select-case-statement.md) и в объявлениях массивов. Дополнительные сведения об объявлениях массивов см. в разделе [оператор Dim](../../../visual-basic/language-reference/statements/dim-statement.md).
 
-## <a name="simple-examples"></a>Simple Examples
+## <a name="simple-examples"></a>Простые примеры
 
-You use a `For`...`Next` structure when you want to repeat a set of statements a set number of times.
+Используйте структуру `For`...`Next`, если необходимо повторить набор инструкций заданное число раз.
 
-In the following example, the `index` variable starts with a value of 1 and is incremented with each iteration of the loop, ending after the value of `index` reaches 5.
+В следующем примере переменная `index` начинается со значения 1 и увеличивается при каждой итерации цикла, после чего значение `index` достигает 5.
 
 [!code-vb[VbVbalrStatements#111](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class7.vb#111)]
 
-In the following example, the `number` variable starts at 2 and is reduced by 0.25 on each iteration of the loop, ending after the value of `number` reaches 0. The `Step` argument of `-.25` reduces the value by 0.25 on each iteration of the loop.
+В следующем примере переменная `number` начинается с 2 и уменьшается на 0,25 в каждой итерации цикла, после чего значение `number` достигнет 0. Аргумент `Step` `-.25` сокращает значение на 0,25 в каждой итерации цикла.
 
 [!code-vb[VbVbalrStatements#112](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class7.vb#112)]
 
 > [!TIP]
-> A [While...End While Statement](../../../visual-basic/language-reference/statements/while-end-while-statement.md) or [Do...Loop Statement](../../../visual-basic/language-reference/statements/do-loop-statement.md) works well when you don't know in advance how many times to run the statements in the loop. However, when you expect to run the loop a specific number of times, a `For`...`Next` loop is a better choice. You determine the number of iterations when you first enter the loop.
+> Ответ [... Конец оператора while](../../../visual-basic/language-reference/statements/while-end-while-statement.md) или [Do... Оператор Loop](../../../visual-basic/language-reference/statements/do-loop-statement.md) хорошо работает, если заранее неизвестно, сколько раз нужно выполнять инструкции в цикле. Однако, если вы планируете выполнять цикл определенное количество раз, лучше выбрать цикл `For`...`Next`. Число итераций определяется при первом входе в цикл.
 
-## <a name="nesting-loops"></a>Nesting Loops
+## <a name="nesting-loops"></a>Вложенные циклы
 
-You can nest `For` loops by putting one loop within another. The following example demonstrates nested `For`...`Next` structures that have different step values. The outer loop creates a string for every iteration of the loop. The inner loop decrements a loop counter variable for every iteration of the loop.
+Можно вкладывать `For` циклы, помещая один цикл внутрь другого. В следующем примере показаны вложенные структуры `For`...`Next`, которые имеют разные значения шага. Внешний цикл создает строку для каждой итерации цикла. Внутренний цикл уменьшает переменную счетчика цикла для каждой итерации цикла.
 
 [!code-vb[VbVbalrStatements#113](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class7.vb#113)]
 
-When nesting loops, each loop must have a unique `counter` variable.
+При вложенных циклах каждый цикл должен иметь уникальную переменную `counter`.
 
-You can also nest different kinds control structures within each other. For more information, see [Nested Control Structures](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md).
+Вы также можете вкладывать различные виды управления в друг друга. Дополнительные сведения см. в разделе [вложенные структуры управления](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md).
 
-## <a name="exit-for-and-continue-for"></a>Exit For and Continue For
+## <a name="exit-for-and-continue-for"></a>Выход и продолжение для
 
-The `Exit For` statement immediately exits the `For`…`Next` loop and transfers control to the statement that follows the `Next` statement.
+Инструкция `Exit For` немедленно завершает работу `For`...`Next` выполняет цикл и передает управление оператору, который следует за оператором `Next`.
 
-The `Continue For` statement transfers control immediately to the next iteration of the loop. For more information, see [Continue Statement](../../../visual-basic/language-reference/statements/continue-statement.md).
+Оператор `Continue For` передает управление сразу в следующую итерацию цикла. Дополнительные сведения см. в разделе [оператор continue](../../../visual-basic/language-reference/statements/continue-statement.md).
 
-The following example illustrates the use of the `Continue For` and `Exit For` statements.
+В следующем примере показано использование инструкций `Continue For` и `Exit For`.
 
 [!code-vb[VbVbalrStatements#115](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class7.vb#115)]
 
-You can put any number of `Exit For` statements in a `For`…`Next` loop. When used within nested `For`…`Next` loops, `Exit For` exits the innermost loop and transfers control to the next higher level of nesting.
+В `For`можно разместить любое количество `Exit For` инструкций...`Next` Повторить. При использовании внутри вложенных `For`...`Next` циклы, `Exit For` выходит из внутреннего цикла и передает управление следующему более высокому уровню вложенности.
 
-`Exit For` is often used after you evaluate some condition (for example, in an `If`...`Then`...`Else` structure). You might want to use `Exit For` for the following conditions:
+`Exit For` часто используется после вычисления некоторого условия (например, в структуре `If`...`Then`...`Else`). `Exit For` может потребоваться использовать для следующих условий:
 
-- Continuing to iterate is unnecessary or impossible. An erroneous value or a termination request might create this condition.
+- Продолжение итерации не требуется или невозможно. Это условие может быть создано с помощью ошибочного значения или запроса на завершение.
 
-- A `Try`...`Catch`...`Finally` statement catches an exception. You might use `Exit For` at the end of the `Finally` block.
+- Инструкция `Try`...`Catch`...`Finally` перехватывает исключение. В конце блока `Finally` можно использовать `Exit For`.
 
-- You have an endless loop, which is a loop that could run a large or even infinite number of times. If you detect such a condition, you can use `Exit For` to escape the loop. For more information, see [Do...Loop Statement](../../../visual-basic/language-reference/statements/do-loop-statement.md).
+- У вас есть бесконечный цикл, который может выполняться с большим или даже бесконечным числом раз. При обнаружении такого условия можно использовать `Exit For` для экранирования цикла. Дополнительные сведения см. в разделе [Do... Loop, инструкция](../../../visual-basic/language-reference/statements/do-loop-statement.md).
 
 ## <a name="technical-implementation"></a>Техническая реализация
 
-When a `For`...`Next` loop starts, Visual Basic evaluates `start`, `end`, and `step`. Visual Basic evaluates these values only at this time and then assigns `start` to `counter`. Before the statement block runs, Visual Basic compares `counter` to `end`. If `counter` is already larger than the `end` value (or smaller if `step` is negative), the `For` loop ends and control passes to the statement that follows the `Next` statement. Otherwise, the statement block runs.
+При запуске цикла `For`...`Next` Visual Basic оценивает `start`, `end`и `step`. Visual Basic вычисляет эти значения только в данный момент, а затем присваивает `start` `counter`. Перед выполнением блока операторов Visual Basic сравнивает `counter` с `end`. Если `counter` уже больше `end`ого значения (или меньше, если `step` отрицательно), цикл `For` завершается и управление передается оператору, который следует за инструкцией `Next`. В противном случае выполняется блок операторов.
 
-Each time Visual Basic encounters the `Next` statement, it increments `counter` by `step` and returns to the `For` statement. Again it compares `counter` to `end`, and again it either runs the block or exits the loop, depending on the result. This process continues until `counter` passes `end` or an `Exit For` statement is encountered.
+Каждый раз, когда Visual Basic встречает инструкцию `Next`, она увеличивает `counter` с `step` и возвращает в инструкцию `For`. Опять же, он сравнивает `counter` с `end`и снова выполняет блок или выходит из цикла, в зависимости от результата. Этот процесс будет продолжен до тех пор, пока `counter` не пройдет `end` или не встретится инструкция `Exit For`.
 
-The loop doesn't stop until `counter` has passed `end`. If `counter` is equal to `end`, the loop continues. The comparison that determines whether to run the block is `counter` <= `end` if `step` is positive and `counter` >= `end` if `step` is negative.
+Цикл не останавливается, пока `counter` не пройдет `end`. Если `counter` равно `end`, цикл продолжится. Сравнение, которое определяет, следует ли запускать блок `counter` <= `end`, если `step` является положительным и `counter` >= `end` если `step` является отрицательным.
 
-If you change the value of `counter` while inside a loop, your code might be more difficult to read and debug. Changing the value of `start`, `end`, or `step` doesn't affect the iteration values that were determined when the loop was first entered.
+Если изменить значение `counter` в цикле, код может оказаться труднее для чтения и отладки. Изменение значения `start`, `end`или `step` не влияет на значения итерации, которые были определены при первом входе в цикл.
 
-If you nest loops, the compiler signals an error if it encounters the `Next` statement of an outer nesting level before the `Next` statement of an inner level. However, the compiler can detect this overlapping error only if you specify `counter` in every `Next` statement.
+При вложении циклов компилятор сообщает об ошибке, если обнаруживает оператор `Next` внешнего уровня вложенности перед инструкцией `Next` внутреннего уровня. Однако компилятор может обнаружить эту ошибку перекрытия только в том случае, если указать `counter` в каждой инструкции `Next`.
 
-### <a name="step-argument"></a>Step Argument
+### <a name="step-argument"></a>Аргумент Step
 
-The value of `step` can be either positive or negative. This parameter determines loop processing according to the following table:
+Значение `step` может быть либо положительным, либо отрицательным. Этот параметр определяет обработку цикла в соответствии со следующей таблицей.
 
-|**Step value**|**Loop executes if**|
+|**Значение шага**|**Цикл выполняется, если**|
 |--------------------|--------------------------|
-|Positive or zero|`counter` <= `end`|
+|Положительный или нулевой|`counter` <= `end`|
 |Отрицательное число|`counter` >= `end`|
 
-The default value of `step` is 1.
+Значение по умолчанию `step` равно 1.
 
-### <a name="BKMK_Counter"></a> Counter Argument
+### <a name="BKMK_Counter"></a>Аргумент счетчика
 
-The following table indicates whether `counter` defines a new local variable that’s scoped to the entire `For…Next` loop. This determination depends on whether `datatype` is present and whether `counter` is already defined.
+В следующей таблице показано, определяет ли `counter` новую локальную переменную, ограниченную всем циклом `For…Next`. Это определение зависит от того, существует ли `datatype` и определен ли уже `counter`.
 
-|Is `datatype` present?|Is `counter` already defined?|Result (whether `counter` defines a new local variable that’s scoped to the entire `For...Next` loop)|
+|Имеется `datatype`?|`counter` уже определена?|Результат (`counter` определяет новую локальную переменную, ограниченную всем циклом `For...Next`)|
 |----------------------------|-----------------------------------|-------------------------------------------------------------------------------------------------------------|
-|Нет|Да|No, because `counter` is already defined. If the scope of `counter` isn't local to the procedure, a compile-time warning occurs.|
-|Нет|Нет|Да. The data type is inferred from the `start`, `end`, and `step` expressions. For information about type inference, see [Option Infer Statement](../../../visual-basic/language-reference/statements/option-infer-statement.md) and [Local Type Inference](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).|
-|Да|Да|Yes, but only if the existing `counter` variable is defined outside the procedure. That variable remains separate. If the scope of the existing `counter` variable is local to the procedure, a compile-time error occurs.|
+|Нет|Да|Нет, поскольку `counter` уже определен. Если область `counter` не является локальной для процедуры, возникает предупреждение во время компиляции.|
+|Нет|Нет|Да. Тип данных выводится из выражений `start`, `end`и `step`. Дополнительные сведения о выводе типа см. в разделе [Option Infer](../../../visual-basic/language-reference/statements/option-infer-statement.md) и [определение локального типа](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).|
+|Да|Да|Да, но только в том случае, если существующая переменная `counter` определена за пределами процедуры. Эта переменная остается отдельной. Если область существующей переменной `counter` является локальной для процедуры, возникает ошибка времени компиляции.|
 |Да|Нет|Да.|
 
-The data type of `counter` determines the type of the iteration, which must be one of the following types:
+Тип данных `counter` определяет тип итерации, который должен быть одним из следующих типов:
 
-- A `Byte`, `SByte`, `UShort`, `Short`, `UInteger`, `Integer`, `ULong`, `Long`, `Decimal`, `Single`, or `Double`.
+- `Byte`, `SByte`, `UShort`, `Short`, `UInteger`, `Integer`, `ULong`, `Long`, `Decimal`, `Single`или `Double`.
 
-- An enumeration that you declare by using an [Enum Statement](../../../visual-basic/language-reference/statements/enum-statement.md).
+- Перечисление, объявляемое с помощью [инструкции enum](../../../visual-basic/language-reference/statements/enum-statement.md).
 
 - Объект `Object`.
 
-- A type `T` that has the following operators, where `B` is a type that can be used in a `Boolean` expression.
+- Тип `T`, имеющий следующие операторы, где `B` — это тип, который можно использовать в выражении `Boolean`.
 
   `Public Shared Operator >= (op1 As T, op2 As T) As B`
 
@@ -160,25 +160,25 @@ The data type of `counter` determines the type of the iteration, which must be o
 
   `Public Shared Operator + (op1 As T, op2 As T) As T`
 
-You can optionally specify the `counter` variable in the `Next` statement. This syntax improves the readability of your program, especially if you have nested `For` loops. You must specify the variable that appears in the corresponding `For` statement.
+При необходимости можно указать переменную `counter` в инструкции `Next`. Этот синтаксис повышает удобочитаемость программы, особенно при наличии вложенных циклов `For`. Необходимо указать переменную, которая отображается в соответствующей инструкции `For`.
 
-The `start`, `end`, and `step` expressions can evaluate to any data type that widens to the type of `counter`. If you use a user-defined type for `counter`, you might have to define the `CType` conversion operator to convert the types of `start`, `end`, or `step` to the type of `counter`.
+Выражения `start`, `end`и `step` могут иметь любой тип данных, который расширяется до типа `counter`. Если для `counter`используется определяемый пользователем тип, может потребоваться определить оператор преобразования `CType`, чтобы преобразовать типы `start`, `end`или `step` в тип `counter`.
 
 ## <a name="example"></a>Пример
 
-The following example removes all elements from a generic list. Instead of a [For Each...Next Statement](../../../visual-basic/language-reference/statements/for-each-next-statement.md), the example shows a `For`...`Next` statement that iterates in descending order. The example uses this technique because the `removeAt` method causes elements after the removed element to have a lower index value.
+В следующем примере удаляются все элементы из универсального списка. Вместо a [для каждого... Следующий оператор](../../../visual-basic/language-reference/statements/for-each-next-statement.md). в примере показана инструкция `For`...`Next`, которая выполняет итерацию в убывающем порядке. В этом примере используется этот метод, так как метод `removeAt` заставляет элементы после удаленного элемента иметь меньшее значение индекса.
 
 [!code-vb[VbVbalrStatements#114](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class7.vb#114)]
 
 ## <a name="example"></a>Пример
 
-The following example iterates through an enumeration that's declared by using an [Enum Statement](../../../visual-basic/language-reference/statements/enum-statement.md).
+В следующем примере перебирается перечисление, объявленное с помощью [инструкции enum](../../../visual-basic/language-reference/statements/enum-statement.md).
 
 [!code-vb[VbVbalrStatements#116](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class7.vb#116)]
 
 ## <a name="example"></a>Пример
 
-In the following example, the statement parameters use a class that has operator overloads for the `+`, `-`, `>=`, and `<=` operators.
+В следующем примере параметры инструкции используют класс с перегрузками операторов `+`, `-`, `>=`и `<=`.
 
 [!code-vb[VbVbalrStatements#117](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class7.vb#117)]
 

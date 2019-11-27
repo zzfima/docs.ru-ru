@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436104"
 ---
 # <a name="imetadatatablesgetcolumninfo-method"></a>Метод IMetaDataTables::GetColumnInfo
-Gets data about the specified column in the specified table.  
+Получает данные о указанном столбце в указанной таблице.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -42,55 +42,55 @@ HRESULT GetColumnInfo (
 =======
 
  `ixTbl`  
- [in] The index of the desired table.  
+ окне Индекс требуемой таблицы.  
   
  `ixCol`  
- [in] The index of the desired column.  
+ окне Индекс нужного столбца.  
   
  `poCol`  
- [out] A pointer to the offset of the column in the row.  
+ заполняет Указатель на смещение столбца в строке.  
   
  `pcbCol`  
- [out] A pointer to the size, in bytes, of the column.  
+ заполняет Указатель на размер столбца в байтах.  
   
  `pType`  
- [out] A pointer to the type of the values in the column.  
+ заполняет Указатель на тип значений в столбце.  
   
  `ppName`  
- [out] A pointer to a pointer to the column name.  
+ заполняет Указатель на указатель на имя столбца.  
  
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Примечания
 
-The returned column type falls within a range of values:
+Возвращаемый тип столбца попадает в диапазон значений:
 
-| pType                    | Описание   | Helper function                   |
+| птипе                    | Описание   | Вспомогательная функция                   |
 |--------------------------|---------------|-----------------------------------|
-| `0`..`iRidMax`<br>(0..63)   | Rid           | **IsRidType**<br>**IsRidOrToken** |
-| `iCodedToken`..`iCodedTokenMax`<br>(64..95) | Coded token | **IsCodedTokenType** <br>**IsRidOrToken** |
-| `iSHORT` (96)            | Int16         | **IsFixedType**                   |
-| `iUSHORT` (97)           | UInt16        | **IsFixedType**                   |
-| `iLONG` (98)             | Int32         | **IsFixedType**                   |
-| `iULONG` (99)            | UInt32        | **IsFixedType**                   |
-| `iBYTE` (100)            | Байт          | **IsFixedType**                   |
-| `iSTRING` (101)          | Строковое        | **IsHeapType**                    |
-| `iGUID` (102)            | GUID          | **IsHeapType**                    |
-| `iBLOB` (103)            | Blob          | **IsHeapType**                    |
+| `0`..`iRidMax`<br>(0.. 63)   | Избежать           | **исридтипе**<br>**исридортокен** |
+| `iCodedToken`..`iCodedTokenMax`<br>(64.. 95) | Закодированный маркер | **искодедтокентипе** <br>**исридортокен** |
+| `iSHORT` (96)            | Int16         | **исфикседтипе**                   |
+| `iUSHORT` (97)           | UInt16        | **исфикседтипе**                   |
+| `iLONG` (98)             | Int32         | **исфикседтипе**                   |
+| `iULONG` (99)            | UInt32        | **исфикседтипе**                   |
+| `iBYTE` (100)            | Байт          | **исфикседтипе**                   |
+| `iSTRING` (101)          | Строка        | **ишеаптипе**                    |
+| `iGUID` (102)            | Идентификатор GUID          | **ишеаптипе**                    |
+| `iBLOB` (103)            | Blob          | **ишеаптипе**                    |
 
-Values that are stored in the *heap* (that is, `IsHeapType == true`) can be read using:
+Значения, хранящиеся в *куче* (то есть `IsHeapType == true`), могут быть считаны с помощью:
 
-- `iSTRING`: **IMetadataTables.GetString**
-- `iGUID`: **IMetadataTables.GetGUID**
-- `iBLOB`: **IMetadataTables.GetBlob**
+- `iSTRING`: **IMetadataTables. GetString**
+- `iGUID`: **IMetadataTables... GUID**
+- `iBLOB`: **IMetadataTables. BLOB**
 
 > [!IMPORTANT]
-> To use the constants defined in the table above, include the directive `#define _DEFINE_META_DATA_META_CONSTANTS` provided by the *cor.h* header file.
+> Чтобы использовать константы, определенные в приведенной выше таблице, включите директиву `#define _DEFINE_META_DATA_META_CONSTANTS`, предоставляемую файлом заголовка *COR. h* .
 
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Заголовок:** COR. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Библиотека:** Используется в качестве ресурса в MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

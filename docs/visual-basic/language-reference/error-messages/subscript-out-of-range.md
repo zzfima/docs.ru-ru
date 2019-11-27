@@ -12,11 +12,11 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350797"
 ---
 # <a name="subscript-out-of-range-visual-basic"></a>Индекс вне диапазона (Visual Basic)
-An array subscript is not valid because it falls outside the allowable range. The lowest subscript value for a dimension is always 0, and the highest subscript value is returned by the `GetUpperBound` method for that dimension.  
+Индекс массива является недопустимым, так как он находится за пределами допустимого диапазона. Наименьшее значение индекса для измерения всегда равно 0, а наибольшее значение индекса возвращается методом `GetUpperBound` для этого измерения.  
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  
   
-- Change the subscript so it falls within the valid range.  
+- Измените индекс так, чтобы он попадет в допустимый диапазон.  
   
 ## <a name="see-also"></a>См. также
 

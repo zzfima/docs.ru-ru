@@ -41,32 +41,32 @@ HRESULT GetMemberRefProps (
   
 ## <a name="parameters"></a>Параметры  
  `mr`  
- [in] The MemberRef token to return associated metadata for.  
+ окне Токен MemberRef, для которого возвращаются связанные метаданные.  
   
  `ptk`  
- [out] A TypeDef or TypeRef, or TypeSpec token that represents the class that declares the member, or a ModuleRef token that represents the module class that declares the member, or a MethodDef that represents the member.  
+ заполняет TypeDef или TypeRef, или TypeSpec-токен, представляющий класс, объявляющий член, или токен ModuleRef, представляющий класс Module, объявляющий элемент, или MethodDef, представляющий элемент.  
   
  `szMember`  
- [out] A string buffer for the member's name.  
+ заполняет Строковый буфер для имени члена.  
   
  `cchMember`  
- [in] The requested size in wide characters of `szMember`.  
+ окне Запрошенный размер в расширенных символах `szMember`.  
   
  `pchMember`  
- [out] The returned size in wide characters of `szMember`.  
+ заполняет Возвращаемый размер в расширенных символах `szMember`.  
   
  `ppvSibBlob`  
- [out] A pointer to the binary metadata signature for the member.  
+ заполняет Указатель на сигнатуру двоичных метаданных для элемента.  
   
  `pbSig`  
- [out] The size in bytes of `ppvSigBlob`.  
+ заполняет Размер в байтах `ppvSigBlob`.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Заголовок:** COR. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

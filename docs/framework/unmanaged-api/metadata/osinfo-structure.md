@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74430731"
 ---
 # <a name="osinfo-structure"></a>Структура OSINFO
-Contains details about the operating system for an assembly or module.  
+Содержит сведения об операционной системе для сборки или модуля.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,19 +38,19 @@ typedef struct {
   
 |Член|Описание|  
 |------------|-----------------|  
-|`dwOSPlatformId`|One of the identifier values defined by the Microsoft Windows platform function `GetVersionEx`. The following values are supported:<br /><br /> -   VER_PLATFORM_WIN32s, or 0x0000, to specify Microsoft Windows 3.1.<br />-   VER_PLATFORM_WIN32_WINDOWS, or 0x0001, to specify Windows 95, Windows 98, or operating systems descended from them.<br />-   VER_PLATFORM_WIN32_NT, or 0x0010, to specify Windows NT or operating systems descended from it.|  
-|`dwOSMajorVersion`|The operating system major version, or a NULL value to indicate any version.|  
-|`dwOSMinorVersion`|The operating system minor version, or a NULL value to indicate any version.|  
+|`dwOSPlatformId`|Одно из значений идентификатора, определяемое функцией платформы Microsoft Windows `GetVersionEx`. Поддерживаются следующие значения.<br /><br /> -VER_PLATFORM_WIN32s или символ 0x0000, чтобы указать Microsoft Windows 3,1.<br />-VER_PLATFORM_WIN32_WINDOWS или 0x0001, чтобы указать для Windows 95, Windows 98 или операционных систем по убыванию.<br />-VER_PLATFORM_WIN32_NT или 0x0010, чтобы указать Windows NT или операционные системы в обратном порядке.|  
+|`dwOSMajorVersion`|Основной номер версии операционной системы или значение NULL для указания любой версии.|  
+|`dwOSMinorVersion`|Дополнительный номер версии операционной системы или значение NULL для указания любой версии.|  
   
-## <a name="remarks"></a>Заметки  
- `OSINFO` is based on the `OSVERSIONINFOEX` structure that is used in calls to the Microsoft Windows platform function `GetVersionEx`. This structure is used by the ASSEMBLYMETADATA structure to indicate its operating system support.  
+## <a name="remarks"></a>Примечания  
+ `OSINFO` основан на структуре `OSVERSIONINFOEX`, которая используется в вызовах функции платформы Microsoft Windows `GetVersionEx`. Эта структура используется структурой ASSEMBLYMETADATA для указания поддержки операционной системы.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Заголовок:** COR. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Библиотека:** Используется в качестве ресурса в MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

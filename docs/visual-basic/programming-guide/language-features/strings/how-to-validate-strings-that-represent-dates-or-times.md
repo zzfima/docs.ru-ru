@@ -13,16 +13,16 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344345"
 ---
 # <a name="how-to-validate-strings-that-represent-dates-or-times-visual-basic"></a>Практическое руководство. Проверка строк, представляющих дату или время (Visual Basic)
-The following code example sets a `Boolean` value that indicates whether a string represents a valid date or time.  
+В следующем примере кода задается значение `Boolean`, указывающее, представляет ли строка допустимую дату или время.  
   
 ## <a name="example"></a>Пример  
  [!code-vb[VbVbcnRegEx#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnRegEx/VB/Class1.vb#2)]  
   
 ## <a name="compiling-the-code"></a>Компиляция кода  
- Replace `("01/01/03")` and `"9:30 PM"` with the date and time you want to validate. You can replace the string with another hard-coded string, with a `String` variable, or with a method that returns a string, such as `InputBox`.  
+ Замените `("01/01/03")` и `"9:30 PM"` на дату и время, которые необходимо проверить. Строку можно заменить другой жестко заданной строкой, переменной `String` или методом, возвращающим строку, например `InputBox`.  
   
 ## <a name="robust-programming"></a>Отказоустойчивость  
- Use this method to validate the string before trying to convert the `String` to a `DateTime` variable. By checking the date or time first, you can avoid generating an exception at run time.  
+ Используйте этот метод для проверки строки перед попыткой преобразования `String` в переменную `DateTime`. При проверке даты или времени сначала можно избежать создания исключения во время выполнения.  
   
 ## <a name="see-also"></a>См. также
 

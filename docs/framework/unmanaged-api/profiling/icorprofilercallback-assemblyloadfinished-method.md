@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445169"
 ---
 # <a name="icorprofilercallbackassemblyloadfinished-method"></a>Метод ICorProfilerCallback::AssemblyLoadFinished
-Notifies the profiler that an assembly has finished loading.  
+Уведомляет профилировщик о том, что загрузка сборки завершена.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -35,15 +35,15 @@ HRESULT AssemblyLoadFinished(
   
 ## <a name="parameters"></a>Параметры  
  `assemblyId`  
- [in] Identifies the assembly that was loaded.  
+ окне Определяет загруженную сборку.  
   
  `hrStatus`  
- [in] An HRESULT that indicates whether the assembly finished loading successfully.  
+ окне Значение HRESULT, указывающее, успешно ли завершена загрузка сборки.  
   
-## <a name="remarks"></a>Заметки  
- The value of `assemblyId` is not valid for an information request until the `AssemblyLoadFinished` method is called.  
+## <a name="remarks"></a>Примечания  
+ Значение `assemblyId` недопустимо для информационного запроса, пока не будет вызван метод `AssemblyLoadFinished`.  
   
- Some parts of loading the assembly might continue after the `AssemblyLoadFinished` callback. A failure HRESULT in `hrStatus` indicates a failure. However, a success HRESULT in `hrStatus` indicates only that the first part of loading the assembly has succeeded.  
+ Некоторые части загрузки сборки могут продолжаться после обратного вызова `AssemblyLoadFinished`. Ошибка HRESULT в `hrStatus` указывает на сбой. Однако значение HRESULT успешного выполнения в `hrStatus` указывает только на то, что первая часть загрузки сборки завершилась успешно.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  

@@ -12,23 +12,23 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349580"
 ---
 # <a name="sub-or-function-not-defined-visual-basic"></a>Sub или Function не определена (Visual Basic)
-A `Sub` or `Function` must be defined in order to be called. Возможные причины этой ошибки:  
+Для вызова необходимо определить `Sub` или `Function`. Возможные причины этой ошибки:  
   
-- Misspelling the procedure name.  
+- Ошибка написания имени процедуры.  
   
-- Trying to call a procedure from another project without explicitly adding a reference to that project in the **References** dialog box.  
+- Попытка вызвать процедуру из другого проекта без явного добавления ссылки на этот проект в диалоговом окне " **ссылки** ".  
   
-- Specifying a procedure that is not visible to the calling procedure.  
+- Указание процедуры, которая не является видимой для вызывающей процедуры.  
   
-- Declaring a Windows dynamic-link library (DLL) routine or Macintosh code-resource routine that is not in the specified library or code resource.  
+- Объявление подпрограммы библиотеки динамической компоновки Windows (DLL) или служебной программы-ресурса для Macintosh, которая не находится в указанной библиотеке или ресурсе кода.  
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  
   
-1. Make sure that the procedure name is spelled correctly.  
+1. Убедитесь, что имя процедуры написано правильно.  
   
-2. Find the name of the project containing the procedure you want to call in the **References** dialog box. If it does not appear, click the **Browse** button to search for it. Select the check box to the left of the project name, and then click **OK**.  
+2. Найдите имя проекта, содержащего процедуру, которую необходимо вызвать, в диалоговом окне **ссылки** . Если она не отображается, нажмите кнопку **Обзор** , чтобы найти ее. Установите флажок слева от имени проекта и нажмите кнопку **ОК**.  
   
-3. Check the name of the routine.  
+3. Проверьте имя подпрограммы.  
   
 ## <a name="see-also"></a>См. также
 

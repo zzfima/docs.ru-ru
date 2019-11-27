@@ -34,7 +34,7 @@ HRESULT GetCount (    [out] ULONG * pcelt
   
 ## <a name="parameters"></a>Параметры  
  `celt`  
- [out] The number of threads used by the application.  
+ заполняет Число потоков, используемых приложением.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  

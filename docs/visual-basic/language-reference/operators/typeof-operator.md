@@ -20,7 +20,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350890"
 ---
 # <a name="typeof-operator-visual-basic"></a>Оператор TypeOf (Visual Basic)
-Checks whether the runtime type of an expression's result is type-compatible with the specified type.
+Проверяет, совместим ли тип среды выполнения результата выражения с указанным типом.
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,23 +37,23 @@ result = TypeOf objectexpression IsNot typename
  Возвращено. Значение `Boolean`.  
   
  `objectexpression`  
- Обязательный. Любое выражение, результатом которого является тип ссылки.  
+ Обязательно. Любое выражение, результатом которого является тип ссылки.  
   
  `typename`  
- Обязательный. Любое имя типа данных.  
+ Обязательно. Любое имя типа данных.  
   
-## <a name="remarks"></a>Заметки  
+## <a name="remarks"></a>Примечания  
  Оператор `TypeOf` определяет, совместим ли тип времени выполнения `objectexpression` с `typename`. Совместимость зависит от категории типа `typename`. В следующей таблице показано, как определяется совместимость.  
   
 |Категория типа `typename`|Критерий совместимости|  
 |---------------------------------|-----------------------------|  
-|Class|`objectexpression` типа `typename` или наследует от `typename`|  
-|Структура|`objectexpression` типа `typename`|  
+|Class|`objectexpression` имеет тип `typename` или наследуется от `typename`|  
+|Структура|`objectexpression` имеет тип `typename`|  
 |Интерфейс|`objectexpression` реализует `typename` или наследует от класса, реализующего `typename`|  
   
  Если тип времени выполнения `objectexpression` удовлетворяет критерию совместимости, `result` является `True`. В противном случае `result` является `False`.  Если `objectexpression` имеет значение null, то `TypeOf`...`Is` возвращает `False`, а ...`IsNot` возвращает `True`.  
   
- `TypeOf` всегда используется с ключевым словом `Is` для создания выражения `TypeOf`...`Is` или с ключевым словом `IsNot` для создания выражения `TypeOf`...`IsNot`.  
+ `TypeOf` всегда используется вместе с ключевым словом `Is` для создания выражения `TypeOf`...`Is` или с ключевым словом `IsNot` для создания выражения `TypeOf`...`IsNot`.  
   
 ## <a name="example"></a>Пример  
  В следующем примере выражение `TypeOf`...`Is` используется для проверки на совместимость типов двух переменных ссылок на объекты с различными типами данных.  
@@ -66,7 +66,7 @@ result = TypeOf objectexpression IsNot typename
 
 - [Оператор Is](../../../visual-basic/language-reference/operators/is-operator.md)
 - [Оператор IsNot](../../../visual-basic/language-reference/operators/isnot-operator.md)
-- [Comparison Operators in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
+- [Операторы сравнения в Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
 - [Порядок применения операторов в Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)
 - [Список операторов, сгруппированных по функциональному назначению](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
 - [Операторы и выражения](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445018"
 ---
 # <a name="icorprofilercallbackexceptioncatcherenter-method"></a>Метод ICorProfilerCallback::ExceptionCatcherEnter
-Notifies the profiler that control is being passed to the appropriate `catch` block.  
+Уведомляет профилировщик о том, что управление передается соответствующему блоку `catch`.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -35,17 +35,17 @@ HRESULT ExceptionCatcherEnter(
   
 ## <a name="parameters"></a>Параметры  
  `functionId`  
- [in] The identifier of the function containing the `catch` block.  
+ окне Идентификатор функции, содержащей блок `catch`.  
   
  `objectId`  
- [in] The identifier of the exception being handled.  
+ окне Идентификатор обрабатываемого исключения.  
   
-## <a name="remarks"></a>Заметки  
- The `ExceptionCatcherEnter` method is called only if the catch point is in code compiled with the just-in-time (JIT) compiler. An exception that is caught in unmanaged code or in the internal code of the runtime will not call this notification. The `objectId` value is passed again since a garbage collection could have moved the object since the `ExceptionThrown` notification.  
+## <a name="remarks"></a>Примечания  
+ Метод `ExceptionCatcherEnter` вызывается, только если точка перехвата находится в коде, скомпилированном в JIT-компиляторе. Исключение, перехваченное в неуправляемом коде или во внутреннем коде среды выполнения, не будет вызывать это уведомление. Значение `objectId` передается снова, так как сборщик мусора мог переместить объект с момента `ExceptionThrown` уведомления.  
   
- The profiler should not block in its implementation of this method because the stack may not be in a state that allows garbage collection, and therefore preemptive garbage collection cannot be enabled. If the profiler blocks here and garbage collection is attempted, the runtime will block until this callback returns.  
+ Профилировщик не должен блокировать реализацию этого метода, так как стек может не находиться в состоянии, допускающем сборку мусора, поэтому невозможно включить вытесненную сборку мусора. Если профилировщик блокируется здесь и выполняется сборка мусора, среда выполнения блокируется до тех пор, пока этот обратный вызов не вернет значение.  
   
- The profiler's implementation of this method should not call into managed code or in any way cause a managed-memory allocation.  
+ Реализация этого метода профилировщиком не должна вызывать управляемый код или каким-либо образом приводит к выделению управляемой памяти.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  

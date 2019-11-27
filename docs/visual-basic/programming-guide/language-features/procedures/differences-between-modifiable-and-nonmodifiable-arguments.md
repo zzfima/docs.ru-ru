@@ -1,5 +1,5 @@
 ---
-title: Различия между аргументами Modifiable и Nonmodifiable
+title: Различия между изменяемыми и неизменяемыми аргументами
 ms.date: 07/20/2015
 helpviewer_keywords:
 - procedures [Visual Basic], arguments
@@ -16,26 +16,26 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74341388"
 ---
 # <a name="differences-between-modifiable-and-nonmodifiable-arguments-visual-basic"></a>Различия между аргументами Modifiable и Nonmodifiable (Visual Basic)
-When you call a procedure, you typically pass one or more arguments to it. Each argument corresponds to an underlying programming element. Both the underlying elements and the arguments themselves can be either modifiable or nonmodifiable.  
+При вызове процедуры в нее обычно передается один или несколько аргументов. Каждый аргумент соответствует базовому программному элементу. Как базовые элементы, так и сами аргументы могут быть либо изменяемыми, либо неизменяемыми.  
   
-## <a name="modifiable-and-nonmodifiable-elements"></a>Modifiable and Nonmodifiable Elements  
- A programming element can be either a *modifiable element*, which can have its value changed, or a *nonmodifiable element*, which has a fixed value once it has been created.  
+## <a name="modifiable-and-nonmodifiable-elements"></a>Изменяемые и неизменяемые элементы  
+ Программным элементом может быть *изменяемый элемент*, для которого может быть изменено значение, или *неизменяемый элемент*, имеющий фиксированное значение после создания.  
   
- The following table lists modifiable and nonmodifiable programming elements.  
+ В следующей таблице перечислены изменяемые и неизменяемые элементы программирования.  
   
-|Modifiable elements|Nonmodifiable elements|  
+|Изменяемые элементы|Неизменяемые элементы|  
 |-------------------------|----------------------------|  
-|Local variables (declared inside procedures), including object variables, except for read-only|Read-only variables, fields, and properties|  
-|Fields (member variables of modules, classes, and structures), except for read-only|Constants and literals|  
-|Properties, except for read-only|Enumeration members|  
-|Array elements|Expressions (even if their elements are modifiable)|  
+|Локальные переменные (объявленные в процедурах), включая переменные объекта, за исключением только для чтения|Переменные, поля и свойства только для чтения|  
+|Поля (переменные-члены модулей, классов и структур), кроме только для чтения|Константы и литералы|  
+|Свойства, кроме "только для чтения"|Члены перечисления|  
+|Элементы массива|Выражения (даже если их элементы являются изменяемыми)|  
   
-## <a name="modifiable-and-nonmodifiable-arguments"></a>Modifiable and Nonmodifiable Arguments  
- A *modifiable argument* is one with a modifiable underlying element. The calling code can store a new value at any time, and if you pass the argument [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), the code in the procedure can also modify the underlying element in the calling code.  
+## <a name="modifiable-and-nonmodifiable-arguments"></a>Изменяемые и неизменяемые аргументы  
+ *Изменяемый аргумент* — это один из изменяемых базовых элементов. Вызывающий код может сохранить новое значение в любое время, и при передаче аргумента [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)код в процедуре также может изменить базовый элемент в вызывающем коде.  
   
- A *nonmodifiable argument* either has a nonmodifiable underlying element or is passed [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md). The procedure cannot modify the underlying element in the calling code, even if it is a modifiable element. If it is a nonmodifiable element, the calling code itself cannot modify it.  
+ *Неизменяемый аргумент* либо имеет неизменяемый базовый элемент, либо передается [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md). Процедура не может изменить базовый элемент в вызывающем коде, даже если это изменяемый элемент. Если это неизменяемый элемент, то сам вызывающий код не может изменить его.  
   
- The called procedure might modify its local copy of a nonmodifiable argument, but that modification does not affect the underlying element in the calling code.  
+ Вызванная процедура может изменить свою локальную копию неизменяемого аргумента, но это изменение не влияет на базовый элемент в вызывающем коде.  
   
 ## <a name="see-also"></a>См. также
 
@@ -48,4 +48,4 @@ When you call a procedure, you typically pass one or more arguments to it. Each 
 - [Практическое руководство. Защита аргумента процедуры от изменений значения](./how-to-protect-a-procedure-argument-against-value-changes.md)
 - [Практическое руководство. Принудительная передача аргумента по значению](./how-to-force-an-argument-to-be-passed-by-value.md)
 - [Передача аргументов по позиции и по имени](./passing-arguments-by-position-and-by-name.md)
-- [Типы значений и ссылочные типы](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+- [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)

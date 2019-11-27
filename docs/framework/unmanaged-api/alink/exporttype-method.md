@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74438567"
 ---
 # <a name="exporttype-method"></a>Метод ExportType
-Specifies that a type is exportable.  
+Указывает, что тип является экспортируемым.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,28 +39,28 @@ HRESULT ExportType(
   
 ## <a name="parameters"></a>Параметры  
  `AssemblyID`  
- ID of the assembly to export from.  
+ Идентификатор сборки, из которой необходимо выполнить экспорт.  
   
  `FileToken`  
- File token or assembly ID of file that defines the exportable type.  
+ Маркер файла или идентификатор сборки файла, который определяет экспортируемый тип.  
   
  `TypeToken`  
- Token of type to be made exportable.  
+ Токен типа, который должен быть сделан экспортируемым.  
   
  `pszTypename`  
- Fully qualified type name to be made exportable.  
+ Полное имя типа, которое необходимо сделать экспортируемым.  
   
  `dwFlags`  
- `ComType` flags such as `tdPublic` or `tdNested`. This parameter may be passed to [DefineExportedType Method](../metadata/imetadataassemblyemit-defineexportedtype-method.md).  
+ `ComType` флаги, такие как `tdPublic` или `tdNested`. Этот параметр может быть передан [методу дефиникспортедтипе](../metadata/imetadataassemblyemit-defineexportedtype-method.md).  
   
  `pType`  
- Receives token for exported type.  
+ Получает токен для экспортируемого типа.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Returns S_OK if the method succeeds.  
+ Возвращает S_OK, если метод завершается с ошибкой.  
   
 ## <a name="requirements"></a>Требования  
- Requires alink.h  
+ Требуется ALink. h  
   
 ## <a name="see-also"></a>См. также
 

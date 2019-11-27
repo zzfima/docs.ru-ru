@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445369"
 ---
 # <a name="icorprofilercallbackexceptionsearchfunctionleave-method"></a>Метод ICorProfilerCallback::ExceptionSearchFunctionLeave
-Notifies the profiler that the search phase of exception handling has finished searching a function.  
+Уведомляет профилировщик о завершении фазы поиска обработки исключений при поиске функции.  
   
 ## <a name="syntax"></a>Синтаксис  
   

@@ -36,7 +36,7 @@ ms.locfileid: "74283480"
 ## <a name="menuitem-parts"></a>Части MenuItem  
  В следующей таблице перечислены именованные части для элемента управления <xref:System.Windows.Controls.Menu>.  
   
-|Отделение|Type|Описание|  
+|Отделение|Введите|Описание|  
 |-|-|-|  
 |PART_Popup|<xref:System.Windows.Controls.Primitives.Popup>|Область для подменю.|  
   

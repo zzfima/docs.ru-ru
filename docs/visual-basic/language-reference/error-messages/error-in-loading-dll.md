@@ -12,25 +12,25 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74329558"
 ---
 # <a name="error-in-loading-dll-visual-basic"></a>Ошибка при загрузке библиотеки DLL (Visual Basic)
-A dynamic-link library (DLL) is a library specified in the `Lib` clause of a `Declare` statement. Possible causes for this error include:  
+Библиотека динамической компоновки (DLL) — это библиотека, указанная в предложении `Lib` инструкции `Declare`. Возможные причины этой ошибки:  
   
-- The file is not DLL executable.  
+- Файл не является исполняемым файлом DLL.  
   
-- The file is not a Microsoft Windows DLL.  
+- Файл не является библиотекой Microsoft Windows DLL.  
   
-- The DLL references another DLL that is not present.  
+- Библиотека DLL ссылается на другую несуществующую библиотеку DLL.  
   
-- The DLL or referenced DLL is not in a directory specified in the path.  
+- Библиотека DLL или библиотека DLL, на которую указывает ссылка, не находятся в каталоге, указанном в пути.  
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  
   
-- If the file is a source-text file and therefore not DLL executable, it must be compiled and linked to a DLL-executable form.  
+- Если файл является исходным текстовым файлом и, следовательно, не является исполняемым DLL-файлом, он должен быть скомпилирован и связан с исполняемой формой DLL.  
   
-- If the file is not a Microsoft Windows DLL, obtain the Microsoft Windows equivalent.  
+- Если файл не является библиотекой Microsoft Windows DLL, получите эквивалент Microsoft Windows.  
   
-- If the DLL references another DLL that is not present, obtain the referenced DLL and make it available.  
+- Если библиотека DLL ссылается на другую библиотеку DLL, которая отсутствует, получите указанную библиотеку DLL и сделайте ее доступной.  
   
-- If the DLL or referenced DLL is not in a directory specified by the path, move the DLL to a referenced directory.  
+- Если библиотека DLL или библиотека DLL, на которую указывает ссылка, не находятся в каталоге, указанном в пути, переместите библиотеку DLL в каталог, на который указывает ссылка.  
   
 ## <a name="see-also"></a>См. также
 

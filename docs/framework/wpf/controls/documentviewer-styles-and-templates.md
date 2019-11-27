@@ -22,7 +22,7 @@ ms.locfileid: "74283529"
 ## <a name="documentviewer-parts"></a>DocumentViewer части  
  В следующей таблице перечислены именованные части для элемента управления <xref:System.Windows.Controls.DocumentViewer>.  
   
-|Отделение|Type|Описание|  
+|Отделение|Введите|Описание|  
 |-|-|-|  
 |PART_ContentHost|<xref:System.Windows.Controls.ScrollViewer>|Область содержимого и прокрутки.|  
 |PART_FindToolBarHost|<xref:System.Windows.Controls.ContentControl>|Поле поиска в нижней части по умолчанию.|  

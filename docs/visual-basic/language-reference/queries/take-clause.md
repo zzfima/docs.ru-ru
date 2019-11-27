@@ -26,19 +26,19 @@ Take count
   
 ## <a name="parts"></a>Части  
  `count`  
- Обязательный. A value or an expression that evaluates to the number of elements of the sequence to return.  
+ Обязательно. Значение или выражение, результатом которого является число возвращаемых элементов последовательности.  
   
-## <a name="remarks"></a>Заметки  
- The `Take` clause causes a query to include a specified number of contiguous elements from the start of a results list. The number of elements to include is specified by the `count` parameter.  
+## <a name="remarks"></a>Примечания  
+ Предложение `Take` вызывает включение в запрос указанного числа смежных элементов из начала списка результатов. Число включаемых элементов задается параметром `count`.  
   
- You can use the `Take` clause with the `Skip` clause to return a range of data from any segment of a query. To do this, pass the index of the first element of the range to the `Skip` clause and the size of the range to the `Take` clause. In this case, the `Take` clause must be specified after the `Skip` clause.  
+ Можно использовать предложение `Take` с предложением `Skip`, чтобы получить диапазон данных из любого сегмента запроса. Для этого передайте индекс первого элемента диапазона в предложение `Skip` и размер диапазона в предложение `Take`. В этом случае предложение `Take` должно быть указано после предложения `Skip`.  
   
- When you use the `Take` clause in a query, you may also need to ensure that the results are returned in an order that will enable the `Take` clause to include the intended results. For more information about ordering query results, see [Order By Clause](../../../visual-basic/language-reference/queries/order-by-clause.md).  
+ При использовании предложения `Take` в запросе может также потребоваться убедиться, что результаты возвращены в порядке, который позволит предложению `Take` включить предполагаемые результаты. Дополнительные сведения о упорядочении результатов запроса см. в разделе [предложение ORDER BY](../../../visual-basic/language-reference/queries/order-by-clause.md).  
   
- You can use the `TakeWhile` clause to specify that only certain elements be returned, depending on a supplied condition.  
+ Можно использовать предложение `TakeWhile`, чтобы указать, что возвращаются только определенные элементы, в зависимости от указанного условия.  
   
 ## <a name="example"></a>Пример  
- The following code example uses the `Take` clause together with the `Skip` clause to return data from a query in pages. The GetCustomers function uses the `Skip` clause to bypass the customers in the list until the supplied starting index value, and uses the `Take` clause to return a page of customers starting from that index value.  
+ В следующем примере кода используется предложение `Take` вместе с предложением `Skip` для возврата данных из запроса на страницах. Функция "клиенты" использует предложение `Skip` для обхода клиентов в списке до получения значения начального индекса и использует предложение `Take` для возврата страницы клиентов, начиная с этого значения индекса.  
   
  [!code-vb[VbSimpleQuerySamples#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#1)]  
   

@@ -38,7 +38,7 @@ ms.locfileid: "74346438"
 ---
 # <a name="sub-statement-visual-basic"></a>Оператор Sub (Visual Basic)
 
-Declares the name, parameters, and code that define a `Sub` procedure.
+Объявляет имя, параметры и код, определяющие процедуру `Sub`.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -55,15 +55,15 @@ End Sub
 
 - `attributelist`
 
-  Необязательный. See [Attribute List](attribute-list.md).
+  Необязательный элемент. См. [список атрибутов](attribute-list.md).
 
 - `Partial`
 
-  Необязательный. Indicates definition of a partial method. See [Partial Methods](../../../visual-basic/programming-guide/language-features/procedures/partial-methods.md).
+  Необязательный элемент. Указывает определение разделяемого метода. См. раздел [разделяемые методы](../../../visual-basic/programming-guide/language-features/procedures/partial-methods.md).
 
 - `accessmodifier`
 
-  Необязательный. Ниже указаны доступные значения.
+  Необязательный элемент. Ниже указаны доступные значения.
 
   - [Public](../modifiers/public.md)
 
@@ -81,13 +81,13 @@ End Sub
 
 - `proceduremodifiers`
 
-  Необязательный. Ниже указаны доступные значения.
+  Необязательный элемент. Ниже указаны доступные значения.
 
-  - [Перегрузки](../modifiers/overloads.md)
+  - [Overloads](../modifiers/overloads.md)
 
   - [Переопределения](../modifiers/overrides.md)
 
-  - [Переопределяемые](../modifiers/overridable.md)
+  - [Overridable](../modifiers/overridable.md)
 
   - [NotOverridable](../modifiers/notoverridable.md)
 
@@ -99,31 +99,31 @@ End Sub
 
 - `Shared`
 
-  Необязательный. See [Shared](../modifiers/shared.md).
+  Необязательный элемент. См. раздел [Shared](../modifiers/shared.md).
 
 - `Shadows`
 
-  Необязательный. See [Shadows](../modifiers/shadows.md).
+  Необязательный элемент. См. раздел [Shadows](../modifiers/shadows.md).
 
 - `Async`
 
-  Необязательный. See [Async](../modifiers/async.md).
+  Необязательный элемент. См. статью [Async](../modifiers/async.md).
 
 - `name`
 
-  Обязательный. Name of the procedure. См. раздел [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md). To create a constructor procedure for a class, set the name of a `Sub` procedure to the `New` keyword. For more information, see [Object Lifetime: How Objects Are Created and Destroyed](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md).
+  Обязательно. Имя процедуры. См. раздел [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md). Чтобы создать процедуру конструктора для класса, задайте в качестве имени `Sub` процедуры ключевое слово `New`. Дополнительные сведения см. в разделе [время существования объекта: как создаются и уничтожаются объекты](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md).
 
 - `typeparamlist`
 
-  Необязательный. List of type parameters for a generic procedure. See [Type List](type-list.md).
+  Необязательный элемент. Список параметров типа для универсальной процедуры. См. [список типов](type-list.md).
 
 - `parameterlist`
 
-  Необязательный. List of local variable names representing the parameters of this procedure. See [Parameter List](parameter-list.md).
+  Необязательный элемент. Список имен локальных переменных, представляющих параметры этой процедуры. См. [список параметров](parameter-list.md).
 
 - `Implements`
 
-  Необязательный. Indicates that this procedure implements one or more `Sub` procedures, each one defined in an interface implemented by this procedure's containing class or structure. See [Implements Statement](implements-statement.md).
+  Необязательный элемент. Указывает, что эта процедура реализует одну или несколько `Sub` процедур, каждая из которых определена в интерфейсе, реализуемом классом или структурой этой процедуры. См. [инструкцию Implements](implements-statement.md).
 
 - `implementslist`
 
@@ -137,16 +137,16 @@ End Sub
 
   |Отделение|Описание|
   |---|---|
-  |`interface`|Обязательный. Name of an interface implemented by this procedure's containing class or structure.|
-  |`definedname`|Обязательный. Имя, под которым процедура определена в `interface`.|
+  |`interface`|Обязательно. Имя интерфейса, реализованного классом или структурой, содержащейся в этой процедуре.|
+  |`definedname`|Обязательно. Имя, под которым процедура определена в `interface`.|
 
 - `Handles`
 
-  Необязательный. Indicates that this procedure can handle one or more specific events. See [Handles](handles-clause.md).
+  Необязательный элемент. Указывает, что эта процедура может управлять одним или несколькими конкретными событиями. См. раздел [Handles](handles-clause.md).
 
 - `eventlist`
 
-  Является обязательным, если предоставлен параметр `Handles`. List of events this procedure handles.
+  Является обязательным, если предоставлен параметр `Handles`. Список событий, обрабатываемых этой процедурой.
 
   `eventspecifier [ , eventspecifier ... ]`
 
@@ -156,34 +156,34 @@ End Sub
 
   |Отделение|Описание|
   |---|---|
-  |`eventvariable`|Обязательный. Object variable declared with the data type of the class or structure that raises the event.|
-  |`event`|Обязательный. Name of the event this procedure handles.|
+  |`eventvariable`|Обязательно. Объектная переменная, объявленная с типом данных класса или структуры, которая вызывает событие.|
+  |`event`|Обязательно. Имя события, обрабатываемого этой процедурой.|
 
 - `statements`
 
-  Необязательный. Block of statements to run within this procedure.
+  Необязательный элемент. Блок инструкций для выполнения в рамках этой процедуры.
 
 - `End Sub`
 
-  Terminates the definition of this procedure.
+  Завершает определение этой процедуры.
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Примечания
 
-All executable code must be inside a procedure. Use a `Sub` procedure when you don't want to return a value to the calling code. Use a `Function` procedure when you want to return a value.
+Весь исполняемый код должен находиться внутри процедуры. Если вы не хотите возвращать значение в вызывающий код, используйте процедуру `Sub`. Используйте `Function` процедуру, если требуется вернуть значение.
 
-## <a name="defining-a-sub-procedure"></a>Defining a Sub Procedure
+## <a name="defining-a-sub-procedure"></a>Определение подпроцедуры
 
-You can define a `Sub` procedure only at the module level. The declaration context for a sub procedure must, therefore, be a class, a structure, a module, or an interface and can't be a source file, a namespace, a procedure, or a block. Дополнительные сведения см. в разделе [Контексты объявления и уровни доступа по умолчанию](declaration-contexts-and-default-access-levels.md).
+Процедуру `Sub` можно определить только на уровне модуля. Контекст объявления для процедуры, следовательно, должен быть классом, структурой, модулем или интерфейсом и не может быть исходным файлом, пространством имен, процедурой или блоком. Дополнительные сведения см. в разделе [Контексты объявления и уровни доступа по умолчанию](declaration-contexts-and-default-access-levels.md).
 
-`Sub` procedures default to public access. You can adjust their access levels by using the access modifiers.
+`Sub` процедуры по умолчанию имеют общий доступ. Уровни доступа можно изменить с помощью модификаторов доступа.
 
-If the procedure uses the `Implements` keyword, the containing class or structure must have an `Implements` statement that immediately follows its `Class` or `Structure` statement. The `Implements` statement must include each interface that's specified in `implementslist`. However, the name by which an interface defines the `Sub` (in `definedname`) doesn't have to match the name of this procedure (in `name`).
+Если процедура использует ключевое слово `Implements`, содержащий класс или структуру должны содержать инструкцию `Implements`, которая сразу же следует за инструкцией `Class` или `Structure`. Оператор `Implements` должен содержать каждый интерфейс, указанный в `implementslist`. Однако имя, по которому интерфейс определяет `Sub` (в `definedname`), не обязательно должен совпадать с именем этой процедуры (в `name`).
 
-## <a name="returning-from-a-sub-procedure"></a>Returning from a Sub Procedure
+## <a name="returning-from-a-sub-procedure"></a>Возврат из подпроцедуры
 
-When a `Sub` procedure returns to the calling code, execution continues with the statement after the statement that called it.
+Когда `Sub` процедура возвращается в вызывающий код, выполнение переходит к инструкции после оператора, вызвавшего ее.
 
-The following example shows a return from a `Sub` procedure.
+В следующем примере показан возврат из процедуры `Sub`.
 
 ```vb
 Sub mySub(ByVal q As String)
@@ -191,46 +191,46 @@ Sub mySub(ByVal q As String)
 End Sub
 ```
 
-The `Exit Sub` and `Return` statements cause an immediate exit from a `Sub` procedure. Any number of `Exit Sub` and `Return` statements can appear anywhere in the procedure, and you can mix `Exit Sub` and `Return` statements.
+Операторы `Exit Sub` и `Return` вызывают немедленный выход из процедуры `Sub`. Любое число инструкций `Exit Sub` и `Return` может использоваться в любом месте процедуры, и можно смешивать `Exit Sub` и `Return` операторы.
 
-## <a name="calling-a-sub-procedure"></a>Calling a Sub Procedure
+## <a name="calling-a-sub-procedure"></a>Вызов процедуры подпрограммы
 
-You call a `Sub` procedure by using the procedure name in a statement and then following that name with its argument list in parentheses. You can omit the parentheses only if you don't supply any arguments. However, your code is more readable if you always include the parentheses.
+Процедура `Sub` вызывается с помощью имени процедуры в инструкции и затем после этого имени вместе со списком аргументов в круглых скобках. Скобки можно опустить, только если не указаны аргументы. Однако код является более удобочитаемым, если всегда включать круглые скобки.
 
-A `Sub` procedure and a `Function` procedure  can have parameters and perform a series of statements. However, a `Function` procedure returns a value, and a `Sub` procedure doesn't. Therefore, you can't use a `Sub` procedure in an expression.
+Процедура `Sub` и процедура `Function` могут иметь параметры и выполнять ряд инструкций. Однако процедура `Function` возвращает значение, а `Sub` процедура — нет. Поэтому в выражении нельзя использовать `Sub` процедуру.
 
-You can use the `Call` keyword when you call a `Sub` procedure, but that keyword isn't recommended for most uses. For more information, see [Call Statement](call-statement.md).
+При вызове `Sub` процедуры можно использовать ключевое слово `Call`, но это ключевое слово не рекомендуется для большинства случаев использования. Дополнительные сведения см. в разделе [оператор Call](call-statement.md).
 
-Visual Basic sometimes rearranges arithmetic expressions to increase internal efficiency. For that reason, if your argument list includes expressions that call other procedures, you shouldn't assume that those expressions will be called in a particular order.
+Visual Basic иногда переупорядочивает арифметические выражения для повышения внутренней эффективности. По этой причине, если список аргументов содержит выражения, вызывающие другие процедуры, не следует рассчитывать на то, что эти выражения будут вызываться в определенном порядке.
 
-## <a name="async-sub-procedures"></a>Async Sub Procedures
+## <a name="async-sub-procedures"></a>Процедуры Async
 
-By using the Async feature, you can invoke asynchronous functions without using explicit callbacks or manually splitting your code across multiple functions or lambda expressions.
+С помощью функции Async можно вызывать асинхронные функции без использования явных обратных вызовов или вручную разделить код по нескольким функциям или лямбда-выражениям.
 
-If you mark a procedure with the [Async](../modifiers/async.md) modifier, you can use the [Await](../../../visual-basic/language-reference/operators/await-operator.md) operator in the procedure. When control reaches an `Await` expression in the `Async` procedure, control returns to the caller, and progress in the procedure is suspended until the awaited task completes. When the task is complete, execution can resume in the procedure.
+Если вы пометите процедуру с модификатором [Async](../modifiers/async.md) , то можете использовать оператор [await](../../../visual-basic/language-reference/operators/await-operator.md) в процедуре. Когда управление достигает `Await` выражения в `Async` процедуре, управление возвращается вызывающему объекту, и ход выполнения процедуры приостанавливается до тех пор, пока не завершится ожидаемая задача. После завершения задачи выполнение может быть возобновлено в процедуре.
 
 > [!NOTE]
-> An `Async` procedure returns to the caller when either the first awaited object that’s not yet complete is encountered or the end of the `Async` procedure is reached, whichever occurs first.
+> `Async` процедура возвращается к вызывающему объекту, когда происходит либо первый ожидающий объект, который еще не завершен, либо достигнут конец процедуры `Async`, в зависимости от того, какое событие произойдет раньше.
 
-You can also mark a [Function Statement](function-statement.md) with the `Async` modifier. An `Async` function can have a return type of <xref:System.Threading.Tasks.Task%601> or <xref:System.Threading.Tasks.Task>. An example later in this topic shows an `Async` function that has a return type of <xref:System.Threading.Tasks.Task%601>.
+Можно также пометить [оператор Function](function-statement.md) с помощью модификатора `Async`. Функция `Async` может иметь тип возвращаемого значения <xref:System.Threading.Tasks.Task%601> или <xref:System.Threading.Tasks.Task>. В примере далее в этом разделе показана функция `Async` с типом возвращаемого значения <xref:System.Threading.Tasks.Task%601>.
 
-`Async` `Sub` procedures are primarily used for event handlers, where a value can't be returned. An `Async` `Sub` procedure can't be awaited, and the caller of an `Async` `Sub` procedure can't catch exceptions that the `Sub` procedure throws.
+`Async` процедуры `Sub` в основном используются для обработчиков событий, где значение не может быть возвращено. Процедуру `Async` `Sub` не может быть ожидаемой, и вызывающая процедура `Async` `Sub` не может перехватывать исключения, вызываемые процедурой `Sub`.
 
-An `Async` procedure can't declare any [ByRef](../modifiers/byref.md) parameters.
+Процедура `Async` не может объявлять параметры [ByRef](../modifiers/byref.md) .
 
-For more information about `Async` procedures, see [Asynchronous Programming with Async and Await](../../../visual-basic/programming-guide/concepts/async/index.md), [Control Flow in Async Programs](../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md), and [Async Return Types](../../../visual-basic/programming-guide/concepts/async/async-return-types.md).
+Дополнительные сведения о `Async` процедурах см. в разделе [Асинхронное программирование с использованием Async и await](../../../visual-basic/programming-guide/concepts/async/index.md), [поток управления в асинхронных программах](../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md)и [асинхронные типы возвращаемых](../../../visual-basic/programming-guide/concepts/async/async-return-types.md)данных.
 
 ## <a name="example"></a>Пример
 
-The following example uses the `Sub` statement to define the name, parameters, and code that form the body of a `Sub` procedure.
+В следующем примере оператор `Sub` используется для определения имени, параметров и кода, образующих тело процедуры `Sub`.
 
 [!code-vb[VbVbalrStatements#58](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#58)]
 
 ## <a name="example"></a>Пример
 
-In the following example, `DelayAsync` is an `Async` `Function` that has a return type of <xref:System.Threading.Tasks.Task%601>. `DelayAsync` имеет инструкцию `Return`, которая возвращает целое число. Therefore, the function declaration of `DelayAsync` must have a return type of `Task(Of Integer)`. Because the return type is `Task(Of Integer)`, the evaluation of the `Await` expression in `DoSomethingAsync` produces an integer, as the following statement shows: `Dim result As Integer = Await delayTask`.
+В следующем примере `DelayAsync` является `Async` `Function` с типом возвращаемого значения <xref:System.Threading.Tasks.Task%601>. `DelayAsync` имеет инструкцию `Return` , которая возвращает целое число. Поэтому объявление функции `DelayAsync` должно иметь тип возвращаемого значения `Task(Of Integer)`. Поскольку тип возвращаемого значения — `Task(Of Integer)`, вычисление выражения `Await` в `DoSomethingAsync` создает целое число, как показано в следующей инструкции: `Dim result As Integer = Await delayTask`.
 
-The `startButton_Click` procedure is an example of an `Async Sub` procedure. Because `DoSomethingAsync` is an `Async` function, the task for the call to `DoSomethingAsync` must be awaited, as the following statement shows: `Await DoSomethingAsync()`. The `startButton_Click` `Sub` procedure must be defined with the `Async` modifier because it has an `Await` expression.
+`startButton_Click` процедура является примером процедуры `Async Sub`. Поскольку `DoSomethingAsync` является функцией `Async`, необходимо ожидать, что задача для вызова `DoSomethingAsync` должна быть ожидаемой, как показано в следующей инструкции: `Await DoSomethingAsync()`. Процедура `startButton_Click` `Sub` должна быть определена с помощью модификатора `Async`, так как она содержит выражение `Await`.
 
 [!code-vb[csAsyncMethod#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/csasyncmethod/vb/mainwindow.xaml.vb#1)]
 

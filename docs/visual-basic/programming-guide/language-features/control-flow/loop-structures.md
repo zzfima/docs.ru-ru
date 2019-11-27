@@ -18,23 +18,23 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353919"
 ---
 # <a name="loop-structures-visual-basic"></a>Циклические структуры (Visual Basic)
-Visual Basic loop structures allow you to run one or more lines of code repetitively. You can repeat the statements in a loop structure until a condition is `True`, until a condition is `False`, a specified number of times, or once for each element in a collection.  
+Структуры циклов Visual Basic позволяют многократно выполнять одну или несколько строк кода. Можно повторять операторы в структуре цикла, пока условие не будет `True`, пока условие не будет `False`, указанное число раз или один раз для каждого элемента в коллекции.  
   
- The following illustration shows a loop structure that runs a set of statements until a condition becomes true:  
+ На следующем рисунке показана структура цикла, выполняющая набор инструкций, пока условие не примет значение true:  
   
- ![Flow chart that shows a Do...Until loop.](./media/loop-structures/do-until-loop-true-condition.gif)  
+ ![Блок-схема, на которой показано действие Do... Цикл Until.](./media/loop-structures/do-until-loop-true-condition.gif)  
   
-## <a name="while-loops"></a>While Loops  
- The `While`...`End While` construction runs a set of statements as long as the condition specified in the `While` statement is `True`. For more information, see [While...End While Statement](../../../../visual-basic/language-reference/statements/while-end-while-statement.md).  
+## <a name="while-loops"></a>Циклы while  
+ Конструкция `While`...`End While` запускает набор инструкций, если условие, указанное в инструкции `While`, имеет `True`. Дополнительные сведения см. в разделе [while... Конец оператора while](../../../../visual-basic/language-reference/statements/while-end-while-statement.md).  
   
 ## <a name="do-loops"></a>Do Loops  
- The `Do`...`Loop` construction allows you to test a condition at either the beginning or the end of a loop structure. You can also specify whether to repeat the loop while the condition remains `True` or until it becomes `True`. For more information, see [Do...Loop Statement](../../../../visual-basic/language-reference/statements/do-loop-statement.md).  
+ Конструкция `Do`...`Loop` позволяет проверить условие либо в начале, либо в конце структуры цикла. Можно также указать, следует ли повторять цикл, пока условие остается `True` или пока оно не станет `True`. Дополнительные сведения см. в разделе [Do... Loop, инструкция](../../../../visual-basic/language-reference/statements/do-loop-statement.md).  
   
-## <a name="for-loops"></a>For Loops  
- The `For`...`Next` construction performs the loop a set number of times. It uses a loop control variable, also called a *counter*, to keep track of the repetitions. You specify the starting and ending values for this counter, and you can optionally specify the amount by which it increases from one repetition to the next. For more information, see [For...Next Statement](../../../../visual-basic/language-reference/statements/for-next-statement.md).  
+## <a name="for-loops"></a>Циклы for  
+ Конструкция `For`...`Next` выполняет цикл в заданное число раз. Для наблюдения за повторениями используется управляющая переменная цикла, также называемая *счетчиком*. Вы указываете начальное и конечное значения для этого счетчика, а также можете указать величину, на которую увеличивается от одного повтора до следующего. Дополнительные сведения см. в разделе [for... Следующий оператор](../../../../visual-basic/language-reference/statements/for-next-statement.md).  
   
-## <a name="for-each-loops"></a>For Each Loops  
- The `For Each`...`Next` construction runs a set of statements once for each element in a collection. You specify the loop control variable, but you do not have to determine starting or ending values for it. For more information, see [For Each...Next Statement](../../../../visual-basic/language-reference/statements/for-each-next-statement.md).  
+## <a name="for-each-loops"></a>Циклы for each  
+ Конструкция `For Each`...`Next` запускает набор инструкций один раз для каждого элемента в коллекции. Вы указываете управляющую переменную цикла, но не нужно определять начальные или конечные значения для нее. Дополнительные сведения см. в разделе [For Each... Следующий оператор](../../../../visual-basic/language-reference/statements/for-each-next-statement.md).  
   
 ## <a name="see-also"></a>См. также
 
