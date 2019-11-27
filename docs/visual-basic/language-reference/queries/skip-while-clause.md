@@ -28,17 +28,17 @@ Skip While expression
   
 |Термин|Определение|  
 |---|---|  
-|`expression`|Обязательный. An expression that represents a condition to test elements for. The expression must return a `Boolean` value or a functional equivalent, such as an `Integer` to be evaluated as a `Boolean`.|  
+|`expression`|Обязательно. Выражение, представляющее условие для проверки элементов. Выражение должно возвращать `Boolean` значение или функциональный эквивалент, например `Integer`, который вычисляется как `Boolean`.|  
   
-## <a name="remarks"></a>Заметки  
- The `Skip While` clause bypasses elements from the beginning of a query result until the supplied `expression` returns `false`. After `expression` returns `false`, the query returns all the remaining elements. The `expression` is ignored for the remaining results.  
+## <a name="remarks"></a>Примечания  
+ Предложение `Skip While` обходит элементы из начала результата запроса до тех пор, пока переданный `expression` не возвратит `false`. После того как `expression` возвращает `false`, запрос возвращает все оставшиеся элементы. Для оставшихся результатов `expression` игнорируется.  
   
- The `Skip While` clause differs from the `Where` clause in that the `Where` clause can be used to exclude all elements from a query that do not meet a particular condition. The `Skip While` clause excludes elements only until the first time that the condition is not satisfied. The `Skip While` clause is most useful when you are working with an ordered query result.  
+ Предложение `Skip While` отличается от предложения `Where` в том, что предложение `Where` можно использовать для исключения всех элементов из запроса, которые не соответствуют определенному условию. Предложение `Skip While` исключает элементы только до первого момента, когда условие не будет удовлетворено. Предложение `Skip While` наиболее полезно при работе с упорядоченным результатом запроса.  
   
- You can bypass a specific number of results from the beginning of a query result by using the `Skip` clause.  
+ Можно обойти определенное количество результатов с начала результата запроса с помощью предложения `Skip`.  
   
 ## <a name="example"></a>Пример  
- The following code example uses the `Skip While` clause to bypass results until the first customer from the United States is found.  
+ В следующем примере кода используется предложение `Skip While` для обхода результатов до тех пор, пока не будет найден первый клиент из США.  
   
  [!code-vb[VbSimpleQuerySamples#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#3)]  
   
