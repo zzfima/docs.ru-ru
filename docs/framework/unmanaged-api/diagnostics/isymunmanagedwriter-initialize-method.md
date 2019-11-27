@@ -22,12 +22,12 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74427974"
 ---
-# <a name="isymunmanagedwriterinitialize-method"></a><span data-ttu-id="b68c0-102">Метод ISymUnmanagedWriter::Initialize</span><span class="sxs-lookup"><span data-stu-id="b68c0-102">ISymUnmanagedWriter::Initialize Method</span></span>
-<span data-ttu-id="b68c0-103">Sets the metadata emitter interface with which this writer will be associated, and sets the output file name to which the debugging symbols will be written.</span><span class="sxs-lookup"><span data-stu-id="b68c0-103">Sets the metadata emitter interface with which this writer will be associated, and sets the output file name to which the debugging symbols will be written.</span></span>  
+# <a name="isymunmanagedwriterinitialize-method"></a><span data-ttu-id="fcd93-102">Метод ISymUnmanagedWriter::Initialize</span><span class="sxs-lookup"><span data-stu-id="fcd93-102">ISymUnmanagedWriter::Initialize Method</span></span>
+<span data-ttu-id="fcd93-103">Задает интерфейс передатчика метаданных, с которым будет связан этот модуль записи, и задает имя выходного файла, в который будут записываться отладочные символы.</span><span class="sxs-lookup"><span data-stu-id="fcd93-103">Sets the metadata emitter interface with which this writer will be associated, and sets the output file name to which the debugging symbols will be written.</span></span>  
   
- <span data-ttu-id="b68c0-104">This method can be called only once, and it must be called before any other writer methods.</span><span class="sxs-lookup"><span data-stu-id="b68c0-104">This method can be called only once, and it must be called before any other writer methods.</span></span> <span data-ttu-id="b68c0-105">Some writers may require a file name.</span><span class="sxs-lookup"><span data-stu-id="b68c0-105">Some writers may require a file name.</span></span> <span data-ttu-id="b68c0-106">However, you can always pass a file name to this method without any negative effect on writers that do not use the file name.</span><span class="sxs-lookup"><span data-stu-id="b68c0-106">However, you can always pass a file name to this method without any negative effect on writers that do not use the file name.</span></span>  
+ <span data-ttu-id="fcd93-104">Этот метод может быть вызван только один раз и должен вызываться перед любым другим методом записи.</span><span class="sxs-lookup"><span data-stu-id="fcd93-104">This method can be called only once, and it must be called before any other writer methods.</span></span> <span data-ttu-id="fcd93-105">Некоторым модулям записи может потребоваться имя файла.</span><span class="sxs-lookup"><span data-stu-id="fcd93-105">Some writers may require a file name.</span></span> <span data-ttu-id="fcd93-106">Однако всегда можно передать имя файла этому методу без какого-либо негативного воздействия на модули записи, которые не используют имя файла.</span><span class="sxs-lookup"><span data-stu-id="fcd93-106">However, you can always pass a file name to this method without any negative effect on writers that do not use the file name.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b68c0-107">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="b68c0-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="fcd93-107">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="fcd93-107">Syntax</span></span>  
   
 ```cpp  
 HRESULT Initialize(  
@@ -37,26 +37,26 @@ HRESULT Initialize(
     [in] BOOL         fFullBuild);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="b68c0-108">Параметры</span><span class="sxs-lookup"><span data-stu-id="b68c0-108">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="fcd93-108">Параметры</span><span class="sxs-lookup"><span data-stu-id="fcd93-108">Parameters</span></span>  
  `emitter`  
- <span data-ttu-id="b68c0-109">[in] A pointer to the metadata emitter interface.</span><span class="sxs-lookup"><span data-stu-id="b68c0-109">[in] A pointer to the metadata emitter interface.</span></span>  
+ <span data-ttu-id="fcd93-109">окне Указатель на интерфейс передатчика метаданных.</span><span class="sxs-lookup"><span data-stu-id="fcd93-109">[in] A pointer to the metadata emitter interface.</span></span>  
   
  `filename`  
- <span data-ttu-id="b68c0-110">[in] The file name to which the debugging symbols are written.</span><span class="sxs-lookup"><span data-stu-id="b68c0-110">[in] The file name to which the debugging symbols are written.</span></span> <span data-ttu-id="b68c0-111">Если имя файла задано для модуля записи, который не использует имена файлов, этот параметр пропускается.</span><span class="sxs-lookup"><span data-stu-id="b68c0-111">If a file name is specified for a writer that does not use file names, this parameter is ignored.</span></span>  
+ <span data-ttu-id="fcd93-110">окне Имя файла, в который записываются отладочные символы.</span><span class="sxs-lookup"><span data-stu-id="fcd93-110">[in] The file name to which the debugging symbols are written.</span></span> <span data-ttu-id="fcd93-111">Если имя файла задано для модуля записи, который не использует имена файлов, этот параметр пропускается.</span><span class="sxs-lookup"><span data-stu-id="fcd93-111">If a file name is specified for a writer that does not use file names, this parameter is ignored.</span></span>  
   
  `pIStream`  
- <span data-ttu-id="b68c0-112">[in] If specified, the symbol writer will emit the symbols into the given <xref:System.Runtime.InteropServices.ComTypes.IStream> rather than to the file specified in the `filename` parameter.</span><span class="sxs-lookup"><span data-stu-id="b68c0-112">[in] If specified, the symbol writer will emit the symbols into the given <xref:System.Runtime.InteropServices.ComTypes.IStream> rather than to the file specified in the `filename` parameter.</span></span> <span data-ttu-id="b68c0-113">Параметр `pIStream` является необязательным.</span><span class="sxs-lookup"><span data-stu-id="b68c0-113">The `pIStream` parameter is optional.</span></span>  
+ <span data-ttu-id="fcd93-112">окне Если этот параметр указан, модуль записи символов выдает символы в заданный <xref:System.Runtime.InteropServices.ComTypes.IStream>, а не в файл, указанный в `filename`.</span><span class="sxs-lookup"><span data-stu-id="fcd93-112">[in] If specified, the symbol writer will emit the symbols into the given <xref:System.Runtime.InteropServices.ComTypes.IStream> rather than to the file specified in the `filename` parameter.</span></span> <span data-ttu-id="fcd93-113">Параметр `pIStream` является необязательным.</span><span class="sxs-lookup"><span data-stu-id="fcd93-113">The `pIStream` parameter is optional.</span></span>  
   
  `fFullBuild`  
- <span data-ttu-id="b68c0-114">[in] `true` if this is a full rebuild; `false` if this is an incremental compilation.</span><span class="sxs-lookup"><span data-stu-id="b68c0-114">[in] `true` if this is a full rebuild; `false` if this is an incremental compilation.</span></span>  
+ <span data-ttu-id="fcd93-114">[in] `true`, если это полная перестроение; `false`, если это инкрементная компиляция.</span><span class="sxs-lookup"><span data-stu-id="fcd93-114">[in] `true` if this is a full rebuild; `false` if this is an incremental compilation.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="b68c0-115">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="b68c0-115">Return Value</span></span>  
- <span data-ttu-id="b68c0-116">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="b68c0-116">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="fcd93-115">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="fcd93-115">Return Value</span></span>  
+ <span data-ttu-id="fcd93-116">S_OK, если метод выполнен. в противном случае E_FAIL или другой код ошибки.</span><span class="sxs-lookup"><span data-stu-id="fcd93-116">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b68c0-117">Требования</span><span class="sxs-lookup"><span data-stu-id="b68c0-117">Requirements</span></span>  
- <span data-ttu-id="b68c0-118">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="b68c0-118">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="fcd93-117">Требования</span><span class="sxs-lookup"><span data-stu-id="fcd93-117">Requirements</span></span>  
+ <span data-ttu-id="fcd93-118">**Заголовок:** Корсим. idl, Корсим. h</span><span class="sxs-lookup"><span data-stu-id="fcd93-118">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b68c0-119">См. также</span><span class="sxs-lookup"><span data-stu-id="b68c0-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="fcd93-119">См. также:</span><span class="sxs-lookup"><span data-stu-id="fcd93-119">See also</span></span>
 
-- [<span data-ttu-id="b68c0-120">Интерфейс ISymUnmanagedWriter</span><span class="sxs-lookup"><span data-stu-id="b68c0-120">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
-- [<span data-ttu-id="b68c0-121">Метод Initialize2</span><span class="sxs-lookup"><span data-stu-id="b68c0-121">Initialize2 Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-initialize2-method.md)
+- [<span data-ttu-id="fcd93-120">Интерфейс ISymUnmanagedWriter</span><span class="sxs-lookup"><span data-stu-id="fcd93-120">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+- [<span data-ttu-id="fcd93-121">Метод Initialize2</span><span class="sxs-lookup"><span data-stu-id="fcd93-121">Initialize2 Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-initialize2-method.md)

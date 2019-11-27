@@ -22,10 +22,10 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74435948"
 ---
-# <a name="imetadataemitsave-method"></a><span data-ttu-id="1d368-102">Метод IMetaDataEmit::Save</span><span class="sxs-lookup"><span data-stu-id="1d368-102">IMetaDataEmit::Save Method</span></span>
-<span data-ttu-id="1d368-103">Saves all metadata in the current scope to the file at the specified address.</span><span class="sxs-lookup"><span data-stu-id="1d368-103">Saves all metadata in the current scope to the file at the specified address.</span></span>  
+# <a name="imetadataemitsave-method"></a><span data-ttu-id="303bb-102">Метод IMetaDataEmit::Save</span><span class="sxs-lookup"><span data-stu-id="303bb-102">IMetaDataEmit::Save Method</span></span>
+<span data-ttu-id="303bb-103">Сохраняет все метаданные в текущей области в файле по указанному адресу.</span><span class="sxs-lookup"><span data-stu-id="303bb-103">Saves all metadata in the current scope to the file at the specified address.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1d368-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="1d368-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="303bb-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="303bb-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT Save (   
@@ -34,23 +34,23 @@ HRESULT Save (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="1d368-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="1d368-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="303bb-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="303bb-105">Parameters</span></span>  
  `wzFile`  
- <span data-ttu-id="1d368-106">[in] The name of the file to save to.</span><span class="sxs-lookup"><span data-stu-id="1d368-106">[in] The name of the file to save to.</span></span> <span data-ttu-id="1d368-107">If this value is null, the in-memory copy will be saved to the last location that was used.</span><span class="sxs-lookup"><span data-stu-id="1d368-107">If this value is null, the in-memory copy will be saved to the last location that was used.</span></span>  
+ <span data-ttu-id="303bb-106">окне Имя файла, в который необходимо выполнить сохранение.</span><span class="sxs-lookup"><span data-stu-id="303bb-106">[in] The name of the file to save to.</span></span> <span data-ttu-id="303bb-107">Если это значение равно null, копия в памяти будет сохранена в последнем используемом расположении.</span><span class="sxs-lookup"><span data-stu-id="303bb-107">If this value is null, the in-memory copy will be saved to the last location that was used.</span></span>  
   
  `dwSaveFlags`  
- <span data-ttu-id="1d368-108">[in] Зарезервировано.</span><span class="sxs-lookup"><span data-stu-id="1d368-108">[in] Reserved.</span></span> <span data-ttu-id="1d368-109">Должен равняться нулю.</span><span class="sxs-lookup"><span data-stu-id="1d368-109">Must be zero.</span></span>  
+ <span data-ttu-id="303bb-108">[in] Зарезервировано.</span><span class="sxs-lookup"><span data-stu-id="303bb-108">[in] Reserved.</span></span> <span data-ttu-id="303bb-109">Должен равняться нулю.</span><span class="sxs-lookup"><span data-stu-id="303bb-109">Must be zero.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="1d368-110">Требования</span><span class="sxs-lookup"><span data-stu-id="1d368-110">Requirements</span></span>  
- <span data-ttu-id="1d368-111">**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="1d368-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="303bb-110">Требования</span><span class="sxs-lookup"><span data-stu-id="303bb-110">Requirements</span></span>  
+ <span data-ttu-id="303bb-111">**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="303bb-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="1d368-112">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="1d368-112">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="303bb-112">**Заголовок:** COR. h</span><span class="sxs-lookup"><span data-stu-id="303bb-112">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="1d368-113">**Library:** Used as a resource in MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="1d368-113">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="303bb-113">**Библиотека:** Используется в качестве ресурса в MSCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="303bb-113">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="1d368-114">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1d368-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="303bb-114">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="303bb-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1d368-115">См. также</span><span class="sxs-lookup"><span data-stu-id="1d368-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="303bb-115">См. также</span><span class="sxs-lookup"><span data-stu-id="303bb-115">See also</span></span>
 
-- [<span data-ttu-id="1d368-116">Интерфейс IMetaDataEmit</span><span class="sxs-lookup"><span data-stu-id="1d368-116">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [<span data-ttu-id="1d368-117">Интерфейс IMetaDataEmit2</span><span class="sxs-lookup"><span data-stu-id="1d368-117">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [<span data-ttu-id="303bb-116">Интерфейс IMetaDataEmit</span><span class="sxs-lookup"><span data-stu-id="303bb-116">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="303bb-117">Интерфейс IMetaDataEmit2</span><span class="sxs-lookup"><span data-stu-id="303bb-117">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

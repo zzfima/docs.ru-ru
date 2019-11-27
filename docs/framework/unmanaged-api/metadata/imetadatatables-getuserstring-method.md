@@ -22,11 +22,11 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74431432"
 ---
-# <a name="imetadatatablesgetuserstring-method"></a><span data-ttu-id="bbbeb-102">Метод IMetaDataTables::GetUserString</span><span class="sxs-lookup"><span data-stu-id="bbbeb-102">IMetaDataTables::GetUserString Method</span></span>
+# <a name="imetadatatablesgetuserstring-method"></a><span data-ttu-id="40519-102">Метод IMetaDataTables::GetUserString</span><span class="sxs-lookup"><span data-stu-id="40519-102">IMetaDataTables::GetUserString Method</span></span>
 
-<span data-ttu-id="bbbeb-103">Gets the hard-coded string at the specified index in the string column in the current scope.</span><span class="sxs-lookup"><span data-stu-id="bbbeb-103">Gets the hard-coded string at the specified index in the string column in the current scope.</span></span>
+<span data-ttu-id="40519-103">Получает жестко заданную строку по указанному индексу в строковом столбце текущей области.</span><span class="sxs-lookup"><span data-stu-id="40519-103">Gets the hard-coded string at the specified index in the string column in the current scope.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="bbbeb-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="bbbeb-104">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="40519-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="40519-104">Syntax</span></span>
 
 ```cpp
 HRESULT GetUserString (
@@ -36,28 +36,28 @@ HRESULT GetUserString (
 );
 ```
 
-## <a name="parameters"></a><span data-ttu-id="bbbeb-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="bbbeb-105">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="40519-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="40519-105">Parameters</span></span>
 
 `ixUserString`\
-<span data-ttu-id="bbbeb-106">[in] The index value from which the hard-coded string will be retrieved.</span><span class="sxs-lookup"><span data-stu-id="bbbeb-106">[in] The index value from which the hard-coded string will be retrieved.</span></span>
+<span data-ttu-id="40519-106">окне Значение индекса, из которого будет извлечена жестко заданная строка.</span><span class="sxs-lookup"><span data-stu-id="40519-106">[in] The index value from which the hard-coded string will be retrieved.</span></span>
 
 `pcbData`\
-<span data-ttu-id="bbbeb-107">[out] A pointer to the size of `ppData`.</span><span class="sxs-lookup"><span data-stu-id="bbbeb-107">[out] A pointer to the size of `ppData`.</span></span>
+<span data-ttu-id="40519-107">заполняет Указатель на размер `ppData`.</span><span class="sxs-lookup"><span data-stu-id="40519-107">[out] A pointer to the size of `ppData`.</span></span>
 
 `ppData`\
-<span data-ttu-id="bbbeb-108">[out] A pointer to a pointer to the returned string.</span><span class="sxs-lookup"><span data-stu-id="bbbeb-108">[out] A pointer to a pointer to the returned string.</span></span>
+<span data-ttu-id="40519-108">заполняет Указатель на указатель на возвращаемую строку.</span><span class="sxs-lookup"><span data-stu-id="40519-108">[out] A pointer to a pointer to the returned string.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="bbbeb-109">Требования</span><span class="sxs-lookup"><span data-stu-id="bbbeb-109">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="40519-109">Требования</span><span class="sxs-lookup"><span data-stu-id="40519-109">Requirements</span></span>
 
-<span data-ttu-id="bbbeb-110">**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="bbbeb-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>
+<span data-ttu-id="40519-110">**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="40519-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>
 
-<span data-ttu-id="bbbeb-111">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="bbbeb-111">**Header:** Cor.h</span></span>
+<span data-ttu-id="40519-111">**Заголовок:** COR. h</span><span class="sxs-lookup"><span data-stu-id="40519-111">**Header:** Cor.h</span></span>
 
-<span data-ttu-id="bbbeb-112">**Library:** Used as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="bbbeb-112">**Library:** Used as a resource in MsCorEE.dll</span></span>
+<span data-ttu-id="40519-112">**Библиотека:** Используется в качестве ресурса в MsCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="40519-112">**Library:** Used as a resource in MsCorEE.dll</span></span>
 
-<span data-ttu-id="bbbeb-113">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="bbbeb-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>
+<span data-ttu-id="40519-113">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="40519-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="bbbeb-114">См. также</span><span class="sxs-lookup"><span data-stu-id="bbbeb-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="40519-114">См. также</span><span class="sxs-lookup"><span data-stu-id="40519-114">See also</span></span>
 
-- [<span data-ttu-id="bbbeb-115">Интерфейс IMetaDataTables</span><span class="sxs-lookup"><span data-stu-id="bbbeb-115">IMetaDataTables Interface</span></span>](imetadatatables-interface.md)
-- [<span data-ttu-id="bbbeb-116">Интерфейс IMetaDataTables2</span><span class="sxs-lookup"><span data-stu-id="bbbeb-116">IMetaDataTables2 Interface</span></span>](imetadatatables2-interface.md)
+- [<span data-ttu-id="40519-115">Интерфейс IMetaDataTables</span><span class="sxs-lookup"><span data-stu-id="40519-115">IMetaDataTables Interface</span></span>](imetadatatables-interface.md)
+- [<span data-ttu-id="40519-116">Интерфейс IMetaDataTables2</span><span class="sxs-lookup"><span data-stu-id="40519-116">IMetaDataTables2 Interface</span></span>](imetadatatables2-interface.md)

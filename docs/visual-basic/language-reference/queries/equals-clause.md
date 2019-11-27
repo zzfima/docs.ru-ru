@@ -13,16 +13,16 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74335382"
 ---
-# <a name="equals-clause-visual-basic"></a><span data-ttu-id="3326f-102">Предложение Equals (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="3326f-102">Equals Clause (Visual Basic)</span></span>
-<span data-ttu-id="3326f-103">Compares keys from collections being joined.</span><span class="sxs-lookup"><span data-stu-id="3326f-103">Compares keys from collections being joined.</span></span>  
+# <a name="equals-clause-visual-basic"></a><span data-ttu-id="03259-102">Предложение Equals (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="03259-102">Equals Clause (Visual Basic)</span></span>
+<span data-ttu-id="03259-103">Сравнивает ключи из объединяемых коллекций.</span><span class="sxs-lookup"><span data-stu-id="03259-103">Compares keys from collections being joined.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="3326f-104">Заметки</span><span class="sxs-lookup"><span data-stu-id="3326f-104">Remarks</span></span>  
- <span data-ttu-id="3326f-105">The `Equals` keyword is used in the following contexts:</span><span class="sxs-lookup"><span data-stu-id="3326f-105">The `Equals` keyword is used in the following contexts:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="03259-104">Заметки</span><span class="sxs-lookup"><span data-stu-id="03259-104">Remarks</span></span>  
+ <span data-ttu-id="03259-105">Ключевое слово `Equals` используется в следующих контекстах:</span><span class="sxs-lookup"><span data-stu-id="03259-105">The `Equals` keyword is used in the following contexts:</span></span>  
   
- [<span data-ttu-id="3326f-106">Предложение Group Join</span><span class="sxs-lookup"><span data-stu-id="3326f-106">Group Join Clause</span></span>](../../../visual-basic/language-reference/queries/group-join-clause.md)  
+ [<span data-ttu-id="03259-106">Предложение Group Join</span><span class="sxs-lookup"><span data-stu-id="03259-106">Group Join Clause</span></span>](../../../visual-basic/language-reference/queries/group-join-clause.md)  
   
- [<span data-ttu-id="3326f-107">Предложение Join</span><span class="sxs-lookup"><span data-stu-id="3326f-107">Join Clause</span></span>](../../../visual-basic/language-reference/queries/join-clause.md)  
+ [<span data-ttu-id="03259-107">Предложение Join</span><span class="sxs-lookup"><span data-stu-id="03259-107">Join Clause</span></span>](../../../visual-basic/language-reference/queries/join-clause.md)  
   
-## <a name="see-also"></a><span data-ttu-id="3326f-108">См. также</span><span class="sxs-lookup"><span data-stu-id="3326f-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="03259-108">См. также</span><span class="sxs-lookup"><span data-stu-id="03259-108">See also</span></span>
 
-- [<span data-ttu-id="3326f-109">Ключевые слова</span><span class="sxs-lookup"><span data-stu-id="3326f-109">Keywords</span></span>](../../../visual-basic/language-reference/keywords/index.md)
+- [<span data-ttu-id="03259-109">Ключевые слова</span><span class="sxs-lookup"><span data-stu-id="03259-109">Keywords</span></span>](../../../visual-basic/language-reference/keywords/index.md)

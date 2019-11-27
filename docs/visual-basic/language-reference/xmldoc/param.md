@@ -12,38 +12,38 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352289"
 ---
-# <a name="param-visual-basic"></a><span data-ttu-id="6bc26-101">\<param> (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="6bc26-101">\<param> (Visual Basic)</span></span>
-<span data-ttu-id="6bc26-102">Defines a parameter name and description.</span><span class="sxs-lookup"><span data-stu-id="6bc26-102">Defines a parameter name and description.</span></span>  
+# <a name="param-visual-basic"></a><span data-ttu-id="f01f7-101">> параметров \<(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f01f7-101">\<param> (Visual Basic)</span></span>
+<span data-ttu-id="f01f7-102">Определяет имя и описание параметра.</span><span class="sxs-lookup"><span data-stu-id="f01f7-102">Defines a parameter name and description.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6bc26-103">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="6bc26-103">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f01f7-103">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="f01f7-103">Syntax</span></span>  
   
 ```xml  
 <param name="name">description</param>  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="6bc26-104">Параметры</span><span class="sxs-lookup"><span data-stu-id="6bc26-104">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="f01f7-104">Параметры</span><span class="sxs-lookup"><span data-stu-id="f01f7-104">Parameters</span></span>  
  `name`  
- <span data-ttu-id="6bc26-105">Имя параметра метода.</span><span class="sxs-lookup"><span data-stu-id="6bc26-105">The name of a method parameter.</span></span> <span data-ttu-id="6bc26-106">Имя заключается в двойные кавычки (" ").</span><span class="sxs-lookup"><span data-stu-id="6bc26-106">Enclose the name in double quotation marks (" ").</span></span>  
+ <span data-ttu-id="f01f7-105">Имя параметра метода.</span><span class="sxs-lookup"><span data-stu-id="f01f7-105">The name of a method parameter.</span></span> <span data-ttu-id="f01f7-106">Имя заключается в двойные кавычки (" ").</span><span class="sxs-lookup"><span data-stu-id="f01f7-106">Enclose the name in double quotation marks (" ").</span></span>  
   
  `description`  
- <span data-ttu-id="6bc26-107">Описание параметра.</span><span class="sxs-lookup"><span data-stu-id="6bc26-107">A description for the parameter.</span></span>  
+ <span data-ttu-id="f01f7-107">Описание параметра.</span><span class="sxs-lookup"><span data-stu-id="f01f7-107">A description for the parameter.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="6bc26-108">Заметки</span><span class="sxs-lookup"><span data-stu-id="6bc26-108">Remarks</span></span>  
- <span data-ttu-id="6bc26-109">The `<param>` tag should be used in the comment for a method declaration to describe one of the parameters for the method.</span><span class="sxs-lookup"><span data-stu-id="6bc26-109">The `<param>` tag should be used in the comment for a method declaration to describe one of the parameters for the method.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="f01f7-108">Заметки</span><span class="sxs-lookup"><span data-stu-id="f01f7-108">Remarks</span></span>  
+ <span data-ttu-id="f01f7-109">Тег `<param>` должен использоваться в комментариях для объявления метода, чтобы описать один из параметров для метода.</span><span class="sxs-lookup"><span data-stu-id="f01f7-109">The `<param>` tag should be used in the comment for a method declaration to describe one of the parameters for the method.</span></span>  
   
- <span data-ttu-id="6bc26-110">The text for the `<param>` tag will appear in the following locations:</span><span class="sxs-lookup"><span data-stu-id="6bc26-110">The text for the `<param>` tag will appear in the following locations:</span></span>  
+ <span data-ttu-id="f01f7-110">Текст тега `<param>` будет отображаться в следующих расположениях:</span><span class="sxs-lookup"><span data-stu-id="f01f7-110">The text for the `<param>` tag will appear in the following locations:</span></span>  
   
-- <span data-ttu-id="6bc26-111">Parameter Info of IntelliSense.</span><span class="sxs-lookup"><span data-stu-id="6bc26-111">Parameter Info of IntelliSense.</span></span> <span data-ttu-id="6bc26-112">Дополнительные сведения см. в статье [Using IntelliSense](/visualstudio/ide/using-intellisense) (Использование IntelliSense).</span><span class="sxs-lookup"><span data-stu-id="6bc26-112">For more information, see [Using IntelliSense](/visualstudio/ide/using-intellisense).</span></span>  
+- <span data-ttu-id="f01f7-111">Сведения о параметрах IntelliSense.</span><span class="sxs-lookup"><span data-stu-id="f01f7-111">Parameter Info of IntelliSense.</span></span> <span data-ttu-id="f01f7-112">Дополнительные сведения см. в разделе [Using IntelliSense](/visualstudio/ide/using-intellisense).</span><span class="sxs-lookup"><span data-stu-id="f01f7-112">For more information, see [Using IntelliSense](/visualstudio/ide/using-intellisense).</span></span>  
   
-- <span data-ttu-id="6bc26-113">Object Browser.</span><span class="sxs-lookup"><span data-stu-id="6bc26-113">Object Browser.</span></span> <span data-ttu-id="6bc26-114">Дополнительные сведения см. в разделе [Просмотр структуры кода](/visualstudio/ide/viewing-the-structure-of-code).</span><span class="sxs-lookup"><span data-stu-id="6bc26-114">For more information, see [Viewing the Structure of Code](/visualstudio/ide/viewing-the-structure-of-code).</span></span>  
+- <span data-ttu-id="f01f7-113">Обозреватель объектов.</span><span class="sxs-lookup"><span data-stu-id="f01f7-113">Object Browser.</span></span> <span data-ttu-id="f01f7-114">Дополнительные сведения см. в разделе [Просмотр структуры кода](/visualstudio/ide/viewing-the-structure-of-code).</span><span class="sxs-lookup"><span data-stu-id="f01f7-114">For more information, see [Viewing the Structure of Code](/visualstudio/ide/viewing-the-structure-of-code).</span></span>  
   
- <span data-ttu-id="6bc26-115">Чтобы обработать комментарии документации и сохранить их в файл, выполняйте сборку с параметром [-doc](../../../visual-basic/reference/command-line-compiler/doc.md).</span><span class="sxs-lookup"><span data-stu-id="6bc26-115">Compile with [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) to process documentation comments to a file.</span></span>  
+ <span data-ttu-id="f01f7-115">Чтобы обработать комментарии документации и сохранить их в файл, выполняйте сборку с параметром [-doc](../../../visual-basic/reference/command-line-compiler/doc.md).</span><span class="sxs-lookup"><span data-stu-id="f01f7-115">Compile with [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) to process documentation comments to a file.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="6bc26-116">Пример</span><span class="sxs-lookup"><span data-stu-id="6bc26-116">Example</span></span>  
- <span data-ttu-id="6bc26-117">This example uses the `<param>` tag to describe the `id` parameter.</span><span class="sxs-lookup"><span data-stu-id="6bc26-117">This example uses the `<param>` tag to describe the `id` parameter.</span></span>  
+## <a name="example"></a><span data-ttu-id="f01f7-116">Пример</span><span class="sxs-lookup"><span data-stu-id="f01f7-116">Example</span></span>  
+ <span data-ttu-id="f01f7-117">В этом примере используется тег `<param>` для описания параметра `id`.</span><span class="sxs-lookup"><span data-stu-id="f01f7-117">This example uses the `<param>` tag to describe the `id` parameter.</span></span>  
   
  [!code-vb[VbVbcnXmlDocComments#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#6)]  
   
-## <a name="see-also"></a><span data-ttu-id="6bc26-118">См. также</span><span class="sxs-lookup"><span data-stu-id="6bc26-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f01f7-118">См. также</span><span class="sxs-lookup"><span data-stu-id="f01f7-118">See also</span></span>
 
-- [<span data-ttu-id="6bc26-119">XML-теги для комментариев</span><span class="sxs-lookup"><span data-stu-id="6bc26-119">XML Comment Tags</span></span>](../../../visual-basic/language-reference/xmldoc/index.md)
+- [<span data-ttu-id="f01f7-119">XML-теги для комментариев</span><span class="sxs-lookup"><span data-stu-id="f01f7-119">XML Comment Tags</span></span>](../../../visual-basic/language-reference/xmldoc/index.md)

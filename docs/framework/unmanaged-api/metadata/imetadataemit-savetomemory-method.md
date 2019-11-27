@@ -22,10 +22,10 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74435798"
 ---
-# <a name="imetadataemitsavetomemory-method"></a><span data-ttu-id="c6814-102">Метод IMetaDataEmit::SaveToMemory</span><span class="sxs-lookup"><span data-stu-id="c6814-102">IMetaDataEmit::SaveToMemory Method</span></span>
-<span data-ttu-id="c6814-103">Saves all metadata in the current scope to the specified area of memory.</span><span class="sxs-lookup"><span data-stu-id="c6814-103">Saves all metadata in the current scope to the specified area of memory.</span></span>  
+# <a name="imetadataemitsavetomemory-method"></a><span data-ttu-id="25868-102">Метод IMetaDataEmit::SaveToMemory</span><span class="sxs-lookup"><span data-stu-id="25868-102">IMetaDataEmit::SaveToMemory Method</span></span>
+<span data-ttu-id="25868-103">Сохраняет все метаданные в текущей области в указанную область памяти.</span><span class="sxs-lookup"><span data-stu-id="25868-103">Saves all metadata in the current scope to the specified area of memory.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c6814-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="c6814-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="25868-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="25868-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT SaveToMemory (   
@@ -34,23 +34,23 @@ HRESULT SaveToMemory (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="c6814-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="c6814-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="25868-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="25868-105">Parameters</span></span>  
  `pbData`  
- <span data-ttu-id="c6814-106">[out] The address at which to begin writing metadata.</span><span class="sxs-lookup"><span data-stu-id="c6814-106">[out] The address at which to begin writing metadata.</span></span>  
+ <span data-ttu-id="25868-106">заполняет Адрес, с которого начинается запись метаданных.</span><span class="sxs-lookup"><span data-stu-id="25868-106">[out] The address at which to begin writing metadata.</span></span>  
   
  `cbData`  
- <span data-ttu-id="c6814-107">[in] The size, in bytes, of the allocated memory.</span><span class="sxs-lookup"><span data-stu-id="c6814-107">[in] The size, in bytes, of the allocated memory.</span></span>  
+ <span data-ttu-id="25868-107">окне Размер выделенной памяти в байтах.</span><span class="sxs-lookup"><span data-stu-id="25868-107">[in] The size, in bytes, of the allocated memory.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c6814-108">Требования</span><span class="sxs-lookup"><span data-stu-id="c6814-108">Requirements</span></span>  
- <span data-ttu-id="c6814-109">**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c6814-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="25868-108">Требования</span><span class="sxs-lookup"><span data-stu-id="25868-108">Requirements</span></span>  
+ <span data-ttu-id="25868-109">**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="25868-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c6814-110">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="c6814-110">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="25868-110">**Заголовок:** COR. h</span><span class="sxs-lookup"><span data-stu-id="25868-110">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="c6814-111">**Library:** Used as a resource in MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="c6814-111">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="25868-111">**Библиотека:** Используется в качестве ресурса в MSCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="25868-111">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="c6814-112">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c6814-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="25868-112">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="25868-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c6814-113">См. также</span><span class="sxs-lookup"><span data-stu-id="c6814-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="25868-113">См. также</span><span class="sxs-lookup"><span data-stu-id="25868-113">See also</span></span>
 
-- [<span data-ttu-id="c6814-114">Интерфейс IMetaDataEmit</span><span class="sxs-lookup"><span data-stu-id="c6814-114">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [<span data-ttu-id="c6814-115">Интерфейс IMetaDataEmit2</span><span class="sxs-lookup"><span data-stu-id="c6814-115">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [<span data-ttu-id="25868-114">Интерфейс IMetaDataEmit</span><span class="sxs-lookup"><span data-stu-id="25868-114">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="25868-115">Интерфейс IMetaDataEmit2</span><span class="sxs-lookup"><span data-stu-id="25868-115">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

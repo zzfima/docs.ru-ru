@@ -22,25 +22,25 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74433544"
 ---
-# <a name="icorprofilercallbackruntimeresumestarted-method"></a><span data-ttu-id="6c80f-102">Метод ICorProfilerCallback::RuntimeResumeStarted</span><span class="sxs-lookup"><span data-stu-id="6c80f-102">ICorProfilerCallback::RuntimeResumeStarted Method</span></span>
-<span data-ttu-id="6c80f-103">Notifies the profiler that the runtime is resuming all run-time threads.</span><span class="sxs-lookup"><span data-stu-id="6c80f-103">Notifies the profiler that the runtime is resuming all run-time threads.</span></span>  
+# <a name="icorprofilercallbackruntimeresumestarted-method"></a><span data-ttu-id="4a88a-102">Метод ICorProfilerCallback::RuntimeResumeStarted</span><span class="sxs-lookup"><span data-stu-id="4a88a-102">ICorProfilerCallback::RuntimeResumeStarted Method</span></span>
+<span data-ttu-id="4a88a-103">Уведомляет профилировщик о том, что среда выполнения возобновляет все потоки времени выполнения.</span><span class="sxs-lookup"><span data-stu-id="4a88a-103">Notifies the profiler that the runtime is resuming all run-time threads.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6c80f-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="6c80f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4a88a-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="4a88a-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT RuntimeResumeStarted();  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="6c80f-105">Требования</span><span class="sxs-lookup"><span data-stu-id="6c80f-105">Requirements</span></span>  
- <span data-ttu-id="6c80f-106">**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="6c80f-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4a88a-105">Требования</span><span class="sxs-lookup"><span data-stu-id="4a88a-105">Requirements</span></span>  
+ <span data-ttu-id="4a88a-106">**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="4a88a-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="6c80f-107">**Заголовок:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="6c80f-107">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="4a88a-107">**Заголовок:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="4a88a-107">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="6c80f-108">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="6c80f-108">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="4a88a-108">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="4a88a-108">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="6c80f-109">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6c80f-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="4a88a-109">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4a88a-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6c80f-110">См. также</span><span class="sxs-lookup"><span data-stu-id="6c80f-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4a88a-110">См. также:</span><span class="sxs-lookup"><span data-stu-id="4a88a-110">See also</span></span>
 
-- [<span data-ttu-id="6c80f-111">Интерфейс ICorProfilerCallback</span><span class="sxs-lookup"><span data-stu-id="6c80f-111">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [<span data-ttu-id="6c80f-112">Метод RuntimeResumeFinished</span><span class="sxs-lookup"><span data-stu-id="6c80f-112">RuntimeResumeFinished Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimeresumefinished-method.md)
+- [<span data-ttu-id="4a88a-111">Интерфейс ICorProfilerCallback</span><span class="sxs-lookup"><span data-stu-id="4a88a-111">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="4a88a-112">Метод RuntimeResumeFinished</span><span class="sxs-lookup"><span data-stu-id="4a88a-112">RuntimeResumeFinished Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimeresumefinished-method.md)

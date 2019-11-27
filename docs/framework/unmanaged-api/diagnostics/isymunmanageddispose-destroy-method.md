@@ -22,21 +22,21 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74430705"
 ---
-# <a name="isymunmanageddisposedestroy-method"></a><span data-ttu-id="a23cf-102">Метод ISymUnmanagedDispose::Destroy</span><span class="sxs-lookup"><span data-stu-id="a23cf-102">ISymUnmanagedDispose::Destroy Method</span></span>
-<span data-ttu-id="a23cf-103">Causes the underlying object to release all internal references and return failure on any subsequent method calls.</span><span class="sxs-lookup"><span data-stu-id="a23cf-103">Causes the underlying object to release all internal references and return failure on any subsequent method calls.</span></span>  
+# <a name="isymunmanageddisposedestroy-method"></a><span data-ttu-id="3fce9-102">Метод ISymUnmanagedDispose::Destroy</span><span class="sxs-lookup"><span data-stu-id="3fce9-102">ISymUnmanagedDispose::Destroy Method</span></span>
+<span data-ttu-id="3fce9-103">Заставляет базовый объект освобождать все внутренние ссылки и возвращать ошибку при любом последующем вызове метода.</span><span class="sxs-lookup"><span data-stu-id="3fce9-103">Causes the underlying object to release all internal references and return failure on any subsequent method calls.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a23cf-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="a23cf-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3fce9-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="3fce9-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT Destroy();  
 ```  
   
-## <a name="return-value"></a><span data-ttu-id="a23cf-105">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="a23cf-105">Return Value</span></span>  
- <span data-ttu-id="a23cf-106">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="a23cf-106">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="3fce9-105">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="3fce9-105">Return Value</span></span>  
+ <span data-ttu-id="3fce9-106">S_OK, если метод выполнен. в противном случае E_FAIL или другой код ошибки.</span><span class="sxs-lookup"><span data-stu-id="3fce9-106">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a23cf-107">Требования</span><span class="sxs-lookup"><span data-stu-id="a23cf-107">Requirements</span></span>  
- <span data-ttu-id="a23cf-108">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="a23cf-108">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="3fce9-107">Требования</span><span class="sxs-lookup"><span data-stu-id="3fce9-107">Requirements</span></span>  
+ <span data-ttu-id="3fce9-108">**Заголовок:** Корсим. idl, Корсим. h</span><span class="sxs-lookup"><span data-stu-id="3fce9-108">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a23cf-109">См. также</span><span class="sxs-lookup"><span data-stu-id="a23cf-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3fce9-109">См. также</span><span class="sxs-lookup"><span data-stu-id="3fce9-109">See also</span></span>
 
-- [<span data-ttu-id="a23cf-110">Интерфейс ISymUnmanagedDispose</span><span class="sxs-lookup"><span data-stu-id="a23cf-110">ISymUnmanagedDispose Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddispose-interface.md)
+- [<span data-ttu-id="3fce9-110">Интерфейс ISymUnmanagedDispose</span><span class="sxs-lookup"><span data-stu-id="3fce9-110">ISymUnmanagedDispose Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddispose-interface.md)

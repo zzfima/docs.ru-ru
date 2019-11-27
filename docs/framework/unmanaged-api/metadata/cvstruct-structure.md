@@ -21,10 +21,10 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436424"
 ---
-# <a name="cvstruct-structure"></a><span data-ttu-id="a5fb1-102">Структура CVStruct</span><span class="sxs-lookup"><span data-stu-id="a5fb1-102">CVStruct Structure</span></span>
-<span data-ttu-id="a5fb1-103">Содержит сведения, используемые при установке модуля или составного образа.</span><span class="sxs-lookup"><span data-stu-id="a5fb1-103">Contains information that is used when installing a module or a composite image.</span></span>  
+# <a name="cvstruct-structure"></a><span data-ttu-id="42291-102">Структура CVStruct</span><span class="sxs-lookup"><span data-stu-id="42291-102">CVStruct Structure</span></span>
+<span data-ttu-id="42291-103">Содержит сведения, используемые при установке модуля или составного образа.</span><span class="sxs-lookup"><span data-stu-id="42291-103">Contains information that is used when installing a module or a composite image.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a5fb1-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="a5fb1-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="42291-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="42291-104">Syntax</span></span>  
   
 ```cpp  
 typedef struct {  
@@ -35,24 +35,24 @@ typedef struct {
 } CVStruct;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="a5fb1-105">Члены</span><span class="sxs-lookup"><span data-stu-id="a5fb1-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="42291-105">Члены</span><span class="sxs-lookup"><span data-stu-id="42291-105">Members</span></span>  
   
-|<span data-ttu-id="a5fb1-106">Член</span><span class="sxs-lookup"><span data-stu-id="a5fb1-106">Member</span></span>|<span data-ttu-id="a5fb1-107">Описание</span><span class="sxs-lookup"><span data-stu-id="a5fb1-107">Description</span></span>|  
+|<span data-ttu-id="42291-106">Член</span><span class="sxs-lookup"><span data-stu-id="42291-106">Member</span></span>|<span data-ttu-id="42291-107">Описание</span><span class="sxs-lookup"><span data-stu-id="42291-107">Description</span></span>|  
 |------------|-----------------|  
-|<span data-ttu-id="a5fb1-108">Значительно</span><span class="sxs-lookup"><span data-stu-id="a5fb1-108">Major</span></span>|<span data-ttu-id="a5fb1-109">Major version build number.</span><span class="sxs-lookup"><span data-stu-id="a5fb1-109">Major version build number.</span></span>|  
-|<span data-ttu-id="a5fb1-110">Дополнительный номер</span><span class="sxs-lookup"><span data-stu-id="a5fb1-110">Minor</span></span>|<span data-ttu-id="a5fb1-111">Minor version build number.</span><span class="sxs-lookup"><span data-stu-id="a5fb1-111">Minor version build number.</span></span>|  
-|<span data-ttu-id="a5fb1-112">Sub</span><span class="sxs-lookup"><span data-stu-id="a5fb1-112">Sub</span></span>|<span data-ttu-id="a5fb1-113">Sub-build number.</span><span class="sxs-lookup"><span data-stu-id="a5fb1-113">Sub-build number.</span></span>|  
-|<span data-ttu-id="a5fb1-114">Построить</span><span class="sxs-lookup"><span data-stu-id="a5fb1-114">Build</span></span>|<span data-ttu-id="a5fb1-115">Build number.</span><span class="sxs-lookup"><span data-stu-id="a5fb1-115">Build number.</span></span>|  
+|<span data-ttu-id="42291-108">Значительно</span><span class="sxs-lookup"><span data-stu-id="42291-108">Major</span></span>|<span data-ttu-id="42291-109">Номер сборки основного номера версии.</span><span class="sxs-lookup"><span data-stu-id="42291-109">Major version build number.</span></span>|  
+|<span data-ttu-id="42291-110">Незначительно</span><span class="sxs-lookup"><span data-stu-id="42291-110">Minor</span></span>|<span data-ttu-id="42291-111">Номер сборки дополнительного номера версии.</span><span class="sxs-lookup"><span data-stu-id="42291-111">Minor version build number.</span></span>|  
+|<span data-ttu-id="42291-112">Sub</span><span class="sxs-lookup"><span data-stu-id="42291-112">Sub</span></span>|<span data-ttu-id="42291-113">Номер подсборки.</span><span class="sxs-lookup"><span data-stu-id="42291-113">Sub-build number.</span></span>|  
+|<span data-ttu-id="42291-114">Сборка</span><span class="sxs-lookup"><span data-stu-id="42291-114">Build</span></span>|<span data-ttu-id="42291-115">Номер сборки.</span><span class="sxs-lookup"><span data-stu-id="42291-115">Build number.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="a5fb1-116">Требования</span><span class="sxs-lookup"><span data-stu-id="a5fb1-116">Requirements</span></span>  
- <span data-ttu-id="a5fb1-117">**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a5fb1-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="42291-116">Требования</span><span class="sxs-lookup"><span data-stu-id="42291-116">Requirements</span></span>  
+ <span data-ttu-id="42291-117">**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="42291-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="a5fb1-118">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="a5fb1-118">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="42291-118">**Заголовок:** COR. h</span><span class="sxs-lookup"><span data-stu-id="42291-118">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="a5fb1-119">**Library:** Used as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="a5fb1-119">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="42291-119">**Библиотека:** Используется в качестве ресурса в MsCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="42291-119">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="a5fb1-120">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a5fb1-120">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="42291-120">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="42291-120">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a5fb1-121">См. также</span><span class="sxs-lookup"><span data-stu-id="a5fb1-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="42291-121">См. также</span><span class="sxs-lookup"><span data-stu-id="42291-121">See also</span></span>
 
-- [<span data-ttu-id="a5fb1-122">Структуры метаданных</span><span class="sxs-lookup"><span data-stu-id="a5fb1-122">Metadata Structures</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-structures.md)
+- [<span data-ttu-id="42291-122">Структуры метаданных</span><span class="sxs-lookup"><span data-stu-id="42291-122">Metadata Structures</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-structures.md)

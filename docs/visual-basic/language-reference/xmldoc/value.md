@@ -12,29 +12,29 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352176"
 ---
-# <a name="value-visual-basic"></a><span data-ttu-id="f91a2-101">\<value> (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f91a2-101">\<value> (Visual Basic)</span></span>
-<span data-ttu-id="f91a2-102">Specifies the description of a property.</span><span class="sxs-lookup"><span data-stu-id="f91a2-102">Specifies the description of a property.</span></span>  
+# <a name="value-visual-basic"></a><span data-ttu-id="8148c-101">> значение \<(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8148c-101">\<value> (Visual Basic)</span></span>
+<span data-ttu-id="8148c-102">Задает описание свойства.</span><span class="sxs-lookup"><span data-stu-id="8148c-102">Specifies the description of a property.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f91a2-103">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="f91a2-103">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8148c-103">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="8148c-103">Syntax</span></span>  
   
 ```xml  
 <value>property-description</value>  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="f91a2-104">Параметры</span><span class="sxs-lookup"><span data-stu-id="f91a2-104">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="8148c-104">Параметры</span><span class="sxs-lookup"><span data-stu-id="8148c-104">Parameters</span></span>  
  `property-description`  
- <span data-ttu-id="f91a2-105">Описание свойства.</span><span class="sxs-lookup"><span data-stu-id="f91a2-105">A description for the property.</span></span>  
+ <span data-ttu-id="8148c-105">Описание свойства.</span><span class="sxs-lookup"><span data-stu-id="8148c-105">A description for the property.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="f91a2-106">Заметки</span><span class="sxs-lookup"><span data-stu-id="f91a2-106">Remarks</span></span>  
- <span data-ttu-id="f91a2-107">Use the `<value>` tag to describe a property.</span><span class="sxs-lookup"><span data-stu-id="f91a2-107">Use the `<value>` tag to describe a property.</span></span> <span data-ttu-id="f91a2-108">Note that when you add a property using the code wizard in the Visual Studio development environment, it will add a [\<summary>](../../../visual-basic/language-reference/xmldoc/summary.md) tag for the new property.</span><span class="sxs-lookup"><span data-stu-id="f91a2-108">Note that when you add a property using the code wizard in the Visual Studio development environment, it will add a [\<summary>](../../../visual-basic/language-reference/xmldoc/summary.md) tag for the new property.</span></span> <span data-ttu-id="f91a2-109">You should then manually add a `<value>` tag to describe the value that the property represents.</span><span class="sxs-lookup"><span data-stu-id="f91a2-109">You should then manually add a `<value>` tag to describe the value that the property represents.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="8148c-106">Заметки</span><span class="sxs-lookup"><span data-stu-id="8148c-106">Remarks</span></span>  
+ <span data-ttu-id="8148c-107">Для описания свойства используйте тег `<value>`.</span><span class="sxs-lookup"><span data-stu-id="8148c-107">Use the `<value>` tag to describe a property.</span></span> <span data-ttu-id="8148c-108">Обратите внимание, что при добавлении свойства с помощью мастера кода в среде разработки Visual Studio добавляется [\<сводка >](../../../visual-basic/language-reference/xmldoc/summary.md) тега для нового свойства.</span><span class="sxs-lookup"><span data-stu-id="8148c-108">Note that when you add a property using the code wizard in the Visual Studio development environment, it will add a [\<summary>](../../../visual-basic/language-reference/xmldoc/summary.md) tag for the new property.</span></span> <span data-ttu-id="8148c-109">Затем следует вручную добавить тег `<value>` для описания значения, которое представляет свойство.</span><span class="sxs-lookup"><span data-stu-id="8148c-109">You should then manually add a `<value>` tag to describe the value that the property represents.</span></span>  
   
- <span data-ttu-id="f91a2-110">Чтобы обработать комментарии документации и сохранить их в файл, выполняйте сборку с параметром [-doc](../../../visual-basic/reference/command-line-compiler/doc.md).</span><span class="sxs-lookup"><span data-stu-id="f91a2-110">Compile with [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) to process documentation comments to a file.</span></span>  
+ <span data-ttu-id="8148c-110">Чтобы обработать комментарии документации и сохранить их в файл, выполняйте сборку с параметром [-doc](../../../visual-basic/reference/command-line-compiler/doc.md).</span><span class="sxs-lookup"><span data-stu-id="8148c-110">Compile with [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) to process documentation comments to a file.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="f91a2-111">Пример</span><span class="sxs-lookup"><span data-stu-id="f91a2-111">Example</span></span>  
- <span data-ttu-id="f91a2-112">This example uses the `<value>` tag to describe what value the `Counter` property holds.</span><span class="sxs-lookup"><span data-stu-id="f91a2-112">This example uses the `<value>` tag to describe what value the `Counter` property holds.</span></span>  
+## <a name="example"></a><span data-ttu-id="8148c-111">Пример</span><span class="sxs-lookup"><span data-stu-id="8148c-111">Example</span></span>  
+ <span data-ttu-id="8148c-112">В этом примере используется тег `<value>` для описания значения, которое содержит свойство `Counter`.</span><span class="sxs-lookup"><span data-stu-id="8148c-112">This example uses the `<value>` tag to describe what value the `Counter` property holds.</span></span>  
   
  [!code-vb[VbVbcnXmlDocComments#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#1)]  
   
-## <a name="see-also"></a><span data-ttu-id="f91a2-113">См. также</span><span class="sxs-lookup"><span data-stu-id="f91a2-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8148c-113">См. также</span><span class="sxs-lookup"><span data-stu-id="8148c-113">See also</span></span>
 
-- [<span data-ttu-id="f91a2-114">XML-теги для комментариев</span><span class="sxs-lookup"><span data-stu-id="f91a2-114">XML Comment Tags</span></span>](../../../visual-basic/language-reference/xmldoc/index.md)
+- [<span data-ttu-id="8148c-114">XML-теги для комментариев</span><span class="sxs-lookup"><span data-stu-id="8148c-114">XML Comment Tags</span></span>](../../../visual-basic/language-reference/xmldoc/index.md)

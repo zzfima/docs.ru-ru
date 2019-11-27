@@ -1,5 +1,5 @@
 ---
-title: 'How to: Declare an Object Variable and Assign an Object to It'
+title: Инструкции. Объявление объектной переменной и назначение ей объекта
 ms.date: 07/20/2015
 helpviewer_keywords:
 - object variables [Visual Basic], declaring
@@ -12,41 +12,41 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352908"
 ---
-# <a name="how-to-declare-an-object-variable-and-assign-an-object-to-it-in-visual-basic"></a><span data-ttu-id="aec95-102">Практическое руководство. Объявление объектной переменной в Visual Basic и присвоение ей объекта</span><span class="sxs-lookup"><span data-stu-id="aec95-102">How to: Declare an Object Variable and Assign an Object to It in Visual Basic</span></span>
+# <a name="how-to-declare-an-object-variable-and-assign-an-object-to-it-in-visual-basic"></a><span data-ttu-id="ab013-102">Практическое руководство. Объявление объектной переменной в Visual Basic и присвоение ей объекта</span><span class="sxs-lookup"><span data-stu-id="ab013-102">How to: Declare an Object Variable and Assign an Object to It in Visual Basic</span></span>
 
-<span data-ttu-id="aec95-103">You declare a variable of the [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md) by specifying `As Object` in a [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md).</span><span class="sxs-lookup"><span data-stu-id="aec95-103">You declare a variable of the [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md) by specifying `As Object` in a [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md).</span></span> <span data-ttu-id="aec95-104">You assign an object to such a variable by placing the object after the equal sign (`=`) in an assignment statement or initialization clause.</span><span class="sxs-lookup"><span data-stu-id="aec95-104">You assign an object to such a variable by placing the object after the equal sign (`=`) in an assignment statement or initialization clause.</span></span>
+<span data-ttu-id="ab013-103">Переменная [типа данных Object](../../../../visual-basic/language-reference/data-types/object-data-type.md) объявляется путем указания `As Object` в [операторе Dim](../../../../visual-basic/language-reference/statements/dim-statement.md).</span><span class="sxs-lookup"><span data-stu-id="ab013-103">You declare a variable of the [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md) by specifying `As Object` in a [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md).</span></span> <span data-ttu-id="ab013-104">Вы назначаете объект такой переменной, помещая объект после знака равенства (`=`) в операторе присваивания или в предложении инициализации.</span><span class="sxs-lookup"><span data-stu-id="ab013-104">You assign an object to such a variable by placing the object after the equal sign (`=`) in an assignment statement or initialization clause.</span></span>
 
-## <a name="example"></a><span data-ttu-id="aec95-105">Пример</span><span class="sxs-lookup"><span data-stu-id="aec95-105">Example</span></span>
+## <a name="example"></a><span data-ttu-id="ab013-105">Пример</span><span class="sxs-lookup"><span data-stu-id="ab013-105">Example</span></span>
 
-<span data-ttu-id="aec95-106">The following example declares an `Object` variable and assigns the current instance to it.</span><span class="sxs-lookup"><span data-stu-id="aec95-106">The following example declares an `Object` variable and assigns the current instance to it.</span></span>
+<span data-ttu-id="ab013-106">В следующем примере объявляется переменная `Object` и ей присваивается текущий экземпляр.</span><span class="sxs-lookup"><span data-stu-id="ab013-106">The following example declares an `Object` variable and assigns the current instance to it.</span></span>
 
 ```vb
 Dim thisObject As Object
 thisObject = "This is an Object"
 ```
 
-<span data-ttu-id="aec95-107">You can combine the declaration and assignment by initializing the variable as part of its declaration.</span><span class="sxs-lookup"><span data-stu-id="aec95-107">You can combine the declaration and assignment by initializing the variable as part of its declaration.</span></span> <span data-ttu-id="aec95-108">The following example is equivalent to the preceding example.</span><span class="sxs-lookup"><span data-stu-id="aec95-108">The following example is equivalent to the preceding example.</span></span>
+<span data-ttu-id="ab013-107">Объявление и присваивание можно объединить, инициализируя переменную как часть ее объявления.</span><span class="sxs-lookup"><span data-stu-id="ab013-107">You can combine the declaration and assignment by initializing the variable as part of its declaration.</span></span> <span data-ttu-id="ab013-108">Следующий пример эквивалентен предыдущему примеру.</span><span class="sxs-lookup"><span data-stu-id="ab013-108">The following example is equivalent to the preceding example.</span></span>
 
 ```vb
 Dim thisObject As Object= "This is an Object"
 ```
 
-## <a name="compiling-the-code"></a><span data-ttu-id="aec95-109">Компиляция кода</span><span class="sxs-lookup"><span data-stu-id="aec95-109">Compiling the Code</span></span>
+## <a name="compiling-the-code"></a><span data-ttu-id="ab013-109">Компиляция кода</span><span class="sxs-lookup"><span data-stu-id="ab013-109">Compiling the Code</span></span>
 
-<span data-ttu-id="aec95-110">Для этого примера требуются:</span><span class="sxs-lookup"><span data-stu-id="aec95-110">This example requires:</span></span>
+<span data-ttu-id="ab013-110">Для этого примера требуются:</span><span class="sxs-lookup"><span data-stu-id="ab013-110">This example requires:</span></span>
 
-- <span data-ttu-id="aec95-111">ссылка на пространство имен <xref:System>.</span><span class="sxs-lookup"><span data-stu-id="aec95-111">A reference to the <xref:System> namespace.</span></span>
+- <span data-ttu-id="ab013-111">ссылка на пространство имен <xref:System>.</span><span class="sxs-lookup"><span data-stu-id="ab013-111">A reference to the <xref:System> namespace.</span></span>
 
-- <span data-ttu-id="aec95-112">A class, structure, or module in which to put the `Dim` statement.</span><span class="sxs-lookup"><span data-stu-id="aec95-112">A class, structure, or module in which to put the `Dim` statement.</span></span>
+- <span data-ttu-id="ab013-112">Класс, структура или модуль, в котором будет размещена инструкция `Dim`.</span><span class="sxs-lookup"><span data-stu-id="ab013-112">A class, structure, or module in which to put the `Dim` statement.</span></span>
 
-- <span data-ttu-id="aec95-113">A procedure in which to put the assignment statement.</span><span class="sxs-lookup"><span data-stu-id="aec95-113">A procedure in which to put the assignment statement.</span></span>
+- <span data-ttu-id="ab013-113">Процедура, в которой следует разместить оператор присваивания.</span><span class="sxs-lookup"><span data-stu-id="ab013-113">A procedure in which to put the assignment statement.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="aec95-114">См. также</span><span class="sxs-lookup"><span data-stu-id="aec95-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ab013-114">См. также</span><span class="sxs-lookup"><span data-stu-id="ab013-114">See also</span></span>
 
-- [<span data-ttu-id="aec95-115">Объявление переменных</span><span class="sxs-lookup"><span data-stu-id="aec95-115">Variable Declaration</span></span>](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
-- [<span data-ttu-id="aec95-116">Объектные переменные</span><span class="sxs-lookup"><span data-stu-id="aec95-116">Object Variables</span></span>](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
-- [<span data-ttu-id="aec95-117">Объявление объектной переменной</span><span class="sxs-lookup"><span data-stu-id="aec95-117">Object Variable Declaration</span></span>](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)
-- [<span data-ttu-id="aec95-118">Тип данных Object</span><span class="sxs-lookup"><span data-stu-id="aec95-118">Object Data Type</span></span>](../../../../visual-basic/language-reference/data-types/object-data-type.md)
-- [<span data-ttu-id="aec95-119">Оператор Dim</span><span class="sxs-lookup"><span data-stu-id="aec95-119">Dim Statement</span></span>](../../../../visual-basic/language-reference/statements/dim-statement.md)
-- [<span data-ttu-id="aec95-120">Вывод локального типа</span><span class="sxs-lookup"><span data-stu-id="aec95-120">Local Type Inference</span></span>](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
-- [<span data-ttu-id="aec95-121">Оператор Option Strict</span><span class="sxs-lookup"><span data-stu-id="aec95-121">Option Strict Statement</span></span>](../../../../visual-basic/language-reference/statements/option-strict-statement.md)
+- [<span data-ttu-id="ab013-115">Объявление переменных</span><span class="sxs-lookup"><span data-stu-id="ab013-115">Variable Declaration</span></span>](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
+- [<span data-ttu-id="ab013-116">Объектные переменные</span><span class="sxs-lookup"><span data-stu-id="ab013-116">Object Variables</span></span>](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
+- [<span data-ttu-id="ab013-117">Объявление объектной переменной</span><span class="sxs-lookup"><span data-stu-id="ab013-117">Object Variable Declaration</span></span>](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)
+- [<span data-ttu-id="ab013-118">Тип данных Object</span><span class="sxs-lookup"><span data-stu-id="ab013-118">Object Data Type</span></span>](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+- [<span data-ttu-id="ab013-119">Оператор Dim</span><span class="sxs-lookup"><span data-stu-id="ab013-119">Dim Statement</span></span>](../../../../visual-basic/language-reference/statements/dim-statement.md)
+- [<span data-ttu-id="ab013-120">Вывод локального типа</span><span class="sxs-lookup"><span data-stu-id="ab013-120">Local Type Inference</span></span>](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
+- [<span data-ttu-id="ab013-121">Оператор Option Strict</span><span class="sxs-lookup"><span data-stu-id="ab013-121">Option Strict Statement</span></span>](../../../../visual-basic/language-reference/statements/option-strict-statement.md)

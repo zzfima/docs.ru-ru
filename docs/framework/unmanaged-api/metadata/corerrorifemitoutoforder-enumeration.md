@@ -21,10 +21,10 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74443581"
 ---
-# <a name="corerrorifemitoutoforder-enumeration"></a><span data-ttu-id="5e0e7-102">Перечисление CorErrorIfEmitOutOfOrder</span><span class="sxs-lookup"><span data-stu-id="5e0e7-102">CorErrorIfEmitOutOfOrder Enumeration</span></span>
-<span data-ttu-id="5e0e7-103">Содержит значения флагов, указывающие условия, при которых должно создаваться сообщение об ошибке при беспорядочном выводе метаданных.</span><span class="sxs-lookup"><span data-stu-id="5e0e7-103">Contains flag values that indicate the conditions under which an error message should be generated when metadata is emitted out of order.</span></span>  
+# <a name="corerrorifemitoutoforder-enumeration"></a><span data-ttu-id="158d4-102">Перечисление CorErrorIfEmitOutOfOrder</span><span class="sxs-lookup"><span data-stu-id="158d4-102">CorErrorIfEmitOutOfOrder Enumeration</span></span>
+<span data-ttu-id="158d4-103">Содержит значения флагов, указывающие условия, при которых должно создаваться сообщение об ошибке при беспорядочном выводе метаданных.</span><span class="sxs-lookup"><span data-stu-id="158d4-103">Contains flag values that indicate the conditions under which an error message should be generated when metadata is emitted out of order.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5e0e7-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="5e0e7-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="158d4-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="158d4-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum CorErrorIfEmitOutOfOrder {  
@@ -41,26 +41,26 @@ typedef enum CorErrorIfEmitOutOfOrder {
 } CorErrorIfEmitOutOfOrder;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="5e0e7-105">Члены</span><span class="sxs-lookup"><span data-stu-id="5e0e7-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="158d4-105">Члены</span><span class="sxs-lookup"><span data-stu-id="158d4-105">Members</span></span>  
   
-|<span data-ttu-id="5e0e7-106">Член</span><span class="sxs-lookup"><span data-stu-id="5e0e7-106">Member</span></span>|<span data-ttu-id="5e0e7-107">Описание</span><span class="sxs-lookup"><span data-stu-id="5e0e7-107">Description</span></span>|  
+|<span data-ttu-id="158d4-106">Член</span><span class="sxs-lookup"><span data-stu-id="158d4-106">Member</span></span>|<span data-ttu-id="158d4-107">Описание</span><span class="sxs-lookup"><span data-stu-id="158d4-107">Description</span></span>|  
 |------------|-----------------|  
-|`MDErrorOutOfOrderDefault`|<span data-ttu-id="5e0e7-108">Indicates the default behavior, which does not generate error messages.</span><span class="sxs-lookup"><span data-stu-id="5e0e7-108">Indicates the default behavior, which does not generate error messages.</span></span>|  
-|`MDErrorOutOfOrderNone`|<span data-ttu-id="5e0e7-109">Indicates that the compiler should not generate error messages.</span><span class="sxs-lookup"><span data-stu-id="5e0e7-109">Indicates that the compiler should not generate error messages.</span></span>|  
-|`MDErrorOutOfOrderAll`|<span data-ttu-id="5e0e7-110">Indicates that the compiler should generate an error message when a field, property, event, method, or parameter is emitted out of order.</span><span class="sxs-lookup"><span data-stu-id="5e0e7-110">Indicates that the compiler should generate an error message when a field, property, event, method, or parameter is emitted out of order.</span></span>|  
-|`MDMethodOutOfOrder`|<span data-ttu-id="5e0e7-111">Indicates that the compiler should generate an error message when a method is emitted out of order.</span><span class="sxs-lookup"><span data-stu-id="5e0e7-111">Indicates that the compiler should generate an error message when a method is emitted out of order.</span></span>|  
-|`MDFieldOutOfOrder`|<span data-ttu-id="5e0e7-112">Indicates that the compiler should generate an error message when a field is emitted out of order.</span><span class="sxs-lookup"><span data-stu-id="5e0e7-112">Indicates that the compiler should generate an error message when a field is emitted out of order.</span></span>|  
-|`MDParamOutOfOrder`|<span data-ttu-id="5e0e7-113">Indicates that the compiler should generate an error message when a parameter is emitted out of order.</span><span class="sxs-lookup"><span data-stu-id="5e0e7-113">Indicates that the compiler should generate an error message when a parameter is emitted out of order.</span></span>|  
-|`MDPropertyOutOfOrder`|<span data-ttu-id="5e0e7-114">Indicates that the compiler should generate an error message when a property is emitted out of order.</span><span class="sxs-lookup"><span data-stu-id="5e0e7-114">Indicates that the compiler should generate an error message when a property is emitted out of order.</span></span>|  
-|`MDEventOutOfOrder`|<span data-ttu-id="5e0e7-115">Indicates that the compiler should generate an error message when an event is emitted out of order.</span><span class="sxs-lookup"><span data-stu-id="5e0e7-115">Indicates that the compiler should generate an error message when an event is emitted out of order.</span></span>|  
+|`MDErrorOutOfOrderDefault`|<span data-ttu-id="158d4-108">Указывает поведение по умолчанию, при котором не создаются сообщения об ошибках.</span><span class="sxs-lookup"><span data-stu-id="158d4-108">Indicates the default behavior, which does not generate error messages.</span></span>|  
+|`MDErrorOutOfOrderNone`|<span data-ttu-id="158d4-109">Указывает, что компилятор не должен создавать сообщения об ошибках.</span><span class="sxs-lookup"><span data-stu-id="158d4-109">Indicates that the compiler should not generate error messages.</span></span>|  
+|`MDErrorOutOfOrderAll`|<span data-ttu-id="158d4-110">Указывает, что компилятор должен создать сообщение об ошибке, когда поле, свойство, событие, метод или параметр выдаются в неопределенном порядке.</span><span class="sxs-lookup"><span data-stu-id="158d4-110">Indicates that the compiler should generate an error message when a field, property, event, method, or parameter is emitted out of order.</span></span>|  
+|`MDMethodOutOfOrder`|<span data-ttu-id="158d4-111">Указывает, что компилятор должен создать сообщение об ошибке, если метод выдается не по порядку.</span><span class="sxs-lookup"><span data-stu-id="158d4-111">Indicates that the compiler should generate an error message when a method is emitted out of order.</span></span>|  
+|`MDFieldOutOfOrder`|<span data-ttu-id="158d4-112">Указывает, что компилятор должен создать сообщение об ошибке, если поле выдается не по порядку.</span><span class="sxs-lookup"><span data-stu-id="158d4-112">Indicates that the compiler should generate an error message when a field is emitted out of order.</span></span>|  
+|`MDParamOutOfOrder`|<span data-ttu-id="158d4-113">Указывает, что компилятор должен создать сообщение об ошибке, если параметр выдается не по порядку.</span><span class="sxs-lookup"><span data-stu-id="158d4-113">Indicates that the compiler should generate an error message when a parameter is emitted out of order.</span></span>|  
+|`MDPropertyOutOfOrder`|<span data-ttu-id="158d4-114">Указывает, что компилятор должен создать сообщение об ошибке, если свойство выдается не по порядку.</span><span class="sxs-lookup"><span data-stu-id="158d4-114">Indicates that the compiler should generate an error message when a property is emitted out of order.</span></span>|  
+|`MDEventOutOfOrder`|<span data-ttu-id="158d4-115">Указывает, что компилятор должен создать сообщение об ошибке, если событие выдается не по порядку.</span><span class="sxs-lookup"><span data-stu-id="158d4-115">Indicates that the compiler should generate an error message when an event is emitted out of order.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="5e0e7-116">Требования</span><span class="sxs-lookup"><span data-stu-id="5e0e7-116">Requirements</span></span>  
- <span data-ttu-id="5e0e7-117">**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5e0e7-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="158d4-116">Требования</span><span class="sxs-lookup"><span data-stu-id="158d4-116">Requirements</span></span>  
+ <span data-ttu-id="158d4-117">**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="158d4-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="5e0e7-118">**Header:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="5e0e7-118">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="158d4-118">**Заголовок:** Корхдр. h</span><span class="sxs-lookup"><span data-stu-id="158d4-118">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="5e0e7-119">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5e0e7-119">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="158d4-119">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="158d4-119">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5e0e7-120">См. также</span><span class="sxs-lookup"><span data-stu-id="5e0e7-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="158d4-120">См. также</span><span class="sxs-lookup"><span data-stu-id="158d4-120">See also</span></span>
 
-- [<span data-ttu-id="5e0e7-121">Перечисления метаданных</span><span class="sxs-lookup"><span data-stu-id="5e0e7-121">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [<span data-ttu-id="158d4-121">Перечисления метаданных</span><span class="sxs-lookup"><span data-stu-id="158d4-121">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

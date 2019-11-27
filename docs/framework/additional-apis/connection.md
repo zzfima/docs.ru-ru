@@ -1,5 +1,5 @@
 ---
-title: Connection Class (System.Net)
+title: Класс Connection (System.Net)
 ms.date: 05/01/2017
 ms.technology: dotnet-networking
 topic_type:
@@ -20,25 +20,25 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74429346"
 ---
-# <a name="connection-class"></a><span data-ttu-id="4cbc7-102">Класс Connection</span><span class="sxs-lookup"><span data-stu-id="4cbc7-102">Connection Class</span></span>
+# <a name="connection-class"></a><span data-ttu-id="88bde-102">Класс Connection</span><span class="sxs-lookup"><span data-stu-id="88bde-102">Connection Class</span></span>
 
-<span data-ttu-id="4cbc7-103">The `Connection` class parses server responses, queue requests, and pipeline requests.</span><span class="sxs-lookup"><span data-stu-id="4cbc7-103">The `Connection` class parses server responses, queue requests, and pipeline requests.</span></span>
+<span data-ttu-id="88bde-103">Класс `Connection` анализирует ответы сервера, запросы очереди и конвейерные запросы.</span><span class="sxs-lookup"><span data-stu-id="88bde-103">The `Connection` class parses server responses, queue requests, and pipeline requests.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="4cbc7-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="4cbc7-104">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="88bde-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="88bde-104">Syntax</span></span>
   
 ```csharp  
 internal class Connection : PooledStream
 ```
 
 > [!WARNING]
-> <span data-ttu-id="4cbc7-105">The `Connection` class is internal and is not meant to be used directly in your code.</span><span class="sxs-lookup"><span data-stu-id="4cbc7-105">The `Connection` class is internal and is not meant to be used directly in your code.</span></span>
+> <span data-ttu-id="88bde-105">Класс `Connection` является внутренним и не предназначен для непосредственного использования в коде.</span><span class="sxs-lookup"><span data-stu-id="88bde-105">The `Connection` class is internal and is not meant to be used directly in your code.</span></span>
 > 
-> <span data-ttu-id="4cbc7-106">Microsoft does not support the use of this class in a production application under any circumstance.</span><span class="sxs-lookup"><span data-stu-id="4cbc7-106">Microsoft does not support the use of this class in a production application under any circumstance.</span></span>
+> <span data-ttu-id="88bde-106">Корпорация Майкрософт не поддерживает использование этого класса в рабочем приложении при каких-либо обстоятельствах.</span><span class="sxs-lookup"><span data-stu-id="88bde-106">Microsoft does not support the use of this class in a production application under any circumstance.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="4cbc7-107">Требования</span><span class="sxs-lookup"><span data-stu-id="4cbc7-107">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="88bde-107">Требования</span><span class="sxs-lookup"><span data-stu-id="88bde-107">Requirements</span></span>
 
-<span data-ttu-id="4cbc7-108">**Пространство имен:** <xref:System.Net></span><span class="sxs-lookup"><span data-stu-id="4cbc7-108">**Namespace:** <xref:System.Net></span></span>
+<span data-ttu-id="88bde-108">**Пространство имен:** <xref:System.Net></span><span class="sxs-lookup"><span data-stu-id="88bde-108">**Namespace:** <xref:System.Net></span></span>
 
-<span data-ttu-id="4cbc7-109">**Assembly:** System (in System.dll)</span><span class="sxs-lookup"><span data-stu-id="4cbc7-109">**Assembly:** System (in System.dll)</span></span>
+<span data-ttu-id="88bde-109">**Сборка:** Система (в System. dll)</span><span class="sxs-lookup"><span data-stu-id="88bde-109">**Assembly:** System (in System.dll)</span></span>
 
-<span data-ttu-id="4cbc7-110">**.NET Framework versions:** Available since 2.0.</span><span class="sxs-lookup"><span data-stu-id="4cbc7-110">**.NET Framework versions:** Available since 2.0.</span></span>
+<span data-ttu-id="88bde-110">**.NET Framework версии:** Доступно с 2,0.</span><span class="sxs-lookup"><span data-stu-id="88bde-110">**.NET Framework versions:** Available since 2.0.</span></span>
