@@ -20,29 +20,29 @@ ms.locfileid: "74351266"
 ---
 # <a name="shadows-visual-basic"></a>Shadows (Visual Basic)
 
-Specifies that a declared programming element redeclares and hides an identically named element, or set of overloaded elements, in a base class.
+Указывает, что объявленный программный элемент повторно объявляет и скрывает элемент с идентичным именем или набор перегруженных элементов в базовом классе.
 
 ## <a name="remarks"></a>Заметки
 
-The main purpose of shadowing (which is also known as *hiding by name*) is to preserve the definition of your class members. The base class might undergo a change that creates an element with the same name as one you have already defined. If this happens, the `Shadows` modifier forces references through your class to be resolved to the member you defined, instead of to the new base class element.
+Основное назначение теневого копирования (которое также называется *скрытием по имени*) — сохранение определения членов класса. Базовый класс может быть подвергнут изменениям, создающим элемент с тем же именем, что и у уже определенного. В этом случае модификатор `Shadows` заставляет ссылки через класс разрешаться в определенный член, а не в новый элемент базового класса.
 
-Сокрытие и переопределение заменяют наследуемый элемент, но между этими подходами существуют значительные различия. For more information, see [Shadowing in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).
+Сокрытие и переопределение заменяют наследуемый элемент, но между этими подходами существуют значительные различия. Дополнительные сведения см. [в разделе теневая поддержка в Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).
 
 ## <a name="rules"></a>Правила
 
-- **Declaration Context.** You can use `Shadows` only at class level. This means the declaration context for a `Shadows` element must be a class, and cannot be a source file, namespace, interface, module, structure, or procedure.
+- **Контекст объявления.** `Shadows` можно использовать только на уровне класса. Это означает, что контекст объявления для элемента `Shadows` должен быть классом и не может быть исходным файлом, пространством имен, интерфейсом, модулем, структурой или процедурой.
 
-  You can declare only one shadowing element in a single declaration statement.
+  В одном операторе объявления можно объявить только один элемент с тенью.
 
-- **Combined Modifiers.** You cannot specify `Shadows` together with `Overloads`, `Overrides`, or `Static` in the same declaration.
+- **Комбинированные модификаторы.** В одном объявлении нельзя указать `Shadows` вместе с `Overloads`, `Overrides`или `Static`.
 
-- **Element Types.** Можно скрыть любой тип объявленного элемента, используя любой другой тип. If you shadow a property or procedure with another property or procedure, the parameters and the return type do not have to match those in the base class property or procedure.
+- **Типы элементов.** Можно скрыть любой тип объявленного элемента, используя любой другой тип. При скрытии свойства или процедуры с другим свойством или процедурой параметры и тип возвращаемого значения не должны совпадать с параметрами в свойстве или процедуре базового класса.
 
-- **Accessing.** The shadowed element in the base class is normally unavailable from within the derived class that shadows it. However, the following considerations apply.
+- **Данному.** Затененный элемент в базовом классе обычно недоступен в производном классе, который его затеняет. Однако применимы следующие рекомендации.
 
-  - If the shadowing element is not accessible from the code referring to it, the reference is resolved to the shadowed element. For example, if a `Private` element shadows a base class element, code that does not have permission to access the `Private` element accesses the base class element instead.
+  - Если элемент теневого копирования недоступен из кода, ссылающегося на него, ссылка разрешается в затененный элемент. Например, если элемент `Private` затеняет элемент базового класса, код, который не имеет разрешения на доступ к элементу `Private`, вместо этого обращается к элементу базового класса.
 
-  - If you shadow an element, you can still access the shadowed element through an object declared with the type of the base class. You can also access it through `MyBase`.
+  - При скрытии элемента доступ к затененному элементу по-прежнему можно получить через объект, объявленный с типом базового класса. Вы также можете получить доступ к нему с помощью `MyBase`.
 
 Модификатор `Shadows` можно использовать в следующих контекстах:
 
@@ -79,7 +79,7 @@ The main purpose of shadowing (which is also known as *hiding by name*) is to pr
 - [Основы наследования](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)
 - [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md)
 - [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)
-- [Перегрузки](../../../visual-basic/language-reference/modifiers/overloads.md)
-- [Переопределяемые](../../../visual-basic/language-reference/modifiers/overridable.md)
+- [Overloads](../../../visual-basic/language-reference/modifiers/overloads.md)
+- [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)
 - [Переопределения](../../../visual-basic/language-reference/modifiers/overrides.md)
-- [Shadowing in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
+- [Затенение в Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)

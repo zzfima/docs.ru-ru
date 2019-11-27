@@ -18,9 +18,9 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74444730"
 ---
-# <a name="icorprofilerinfo9getiltonativemapping3-method"></a>ICorProfilerInfo9::GetILToNativeMapping3 Method
+# <a name="icorprofilerinfo9getiltonativemapping3-method"></a>Метод ICorProfilerInfo9:: GetILToNativeMapping3
 
-Given the native code start address, returns the native to IL mapping information for this jitted version of the code.
+С учетом начального адреса машинного кода возвращает сведения о сопоставлении IL для этой откомпилированной версии кода.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -34,24 +34,24 @@ HRESULT GetILToNativeMapping3( [in]  UINT_PTR pNativeCodeStartAddress,
 #### <a name="parameters"></a>Параметры
 
 `pNativeCodeStartAddress` \
-[in] A pointer to the start of a native function.
+окне Указатель на начало собственной функции.
 
 `cMap` \
 [in] Максимальный размер массива `map`.
 
 `pcMap` \
-[out] The total number of available COR_DEBUG_IL_TO_NATIVE_MAP structures.
+[out] Общее количество доступных структур COR_DEBUG_IL_TO_NATIVE_MAP.
 
 `map` \
-[out] An array of [COR_DEBUG_IL_TO_NATIVE_MAP](../debugging/cor-debug-il-to-native-map-structure.md) structures, each of which specifies the offsets. После возврата метода `GetILToNativeMapping3` параметр `map` будет содержать все или некоторые из структур `COR_DEBUG_IL_TO_NATIVE_MAP`.
+заполняет Массив структур [COR_DEBUG_IL_TO_NATIVE_MAP](../debugging/cor-debug-il-to-native-map-structure.md) , каждый из которых задает смещения. После возврата метода `GetILToNativeMapping3` параметр `map` будет содержать все или некоторые из структур `COR_DEBUG_IL_TO_NATIVE_MAP`.
 
 ## <a name="remarks"></a>Заметки
 
-When tiered compilation is enabled, a method may have more than one native code body. [ICorProfilerInfo9::GetNativeCodeStartAddresses](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo9-getnativecodestartaddresses-method.md) will return the start addresses for all of the native code bodies.
+Если включена многоуровневая компиляция, метод может иметь более одного тела машинного кода. [ICorProfilerInfo9:: жетнативекодестартаддрессес](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo9-getnativecodestartaddresses-method.md) будет возвращать начальные адреса для всех частей машинного кода.
 
 ## <a name="requirements"></a>Требования
 
-**Platforms:** See [.NET Core supported operating systems](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows).
+**Платформы:** См. раздел [Поддерживаемые операционные системы .NET Core](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows).
 
 **Заголовок:** CorProf.idl, CorProf.h
 
@@ -61,4 +61,4 @@ When tiered compilation is enabled, a method may have more than one native code 
 
 ## <a name="see-also"></a>См. также
 
-- [ICorProfilerInfo9 Interface](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo9-interface.md)
+- [Интерфейс ICorProfilerInfo9](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo9-interface.md)

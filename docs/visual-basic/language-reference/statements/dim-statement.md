@@ -38,7 +38,7 @@ ms.locfileid: "74343770"
 ---
 # <a name="dim-statement-visual-basic"></a>Оператор Dim (Visual Basic)
 
-Declares and allocates storage space for one or more variables.
+Объявляет и выделяет дисковое пространство для одной или нескольких переменных.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -51,11 +51,11 @@ Dim [ WithEvents ] variablelist
 
 - `attributelist`
 
-  Необязательный. See [Attribute List](../../../visual-basic/language-reference/statements/attribute-list.md).
+  Необязательно. См. [список атрибутов](../../../visual-basic/language-reference/statements/attribute-list.md).
 
 - `accessmodifier`
 
-  Необязательный. Ниже указаны доступные значения.
+  Необязательно. Ниже указаны доступные значения.
 
   - [Public](../../../visual-basic/language-reference/modifiers/public.md)
 
@@ -73,27 +73,27 @@ Dim [ WithEvents ] variablelist
 
 - `Shared`
 
-  Необязательный. See [Shared](../../../visual-basic/language-reference/modifiers/shared.md).
+  Необязательно. См. раздел [Shared](../../../visual-basic/language-reference/modifiers/shared.md).
 
 - `Shadows`
 
-  Необязательный. See [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).
+  Необязательно. См. раздел [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).
 
 - `Static`
 
-  Необязательный. See [Static](../../../visual-basic/language-reference/modifiers/static.md).
+  Необязательно. См. раздел [static](../../../visual-basic/language-reference/modifiers/static.md).
 
 - `ReadOnly`
 
-  Необязательный. See [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md).
+  Необязательно. См. раздел [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md).
 
 - `WithEvents`
 
-Необязательный. Specifies that these are object variables that refer to instances of a class that can raise events. See [WithEvents](../../../visual-basic/language-reference/modifiers/withevents.md).
+Необязательно. Указывает, что это переменные объекта, которые ссылаются на экземпляры класса, которые могут создавать события. См. раздел [WithEvents](../../../visual-basic/language-reference/modifiers/withevents.md).
 
 - `variablelist`
 
-  Обязательный. List of variables being declared in this statement.
+  Обязательно. Список переменных, объявляемых в этой инструкции.
 
   `variable [ , variable ... ]`
 
@@ -103,43 +103,43 @@ Dim [ WithEvents ] variablelist
 
   |Отделение|Описание|
   |---|---|
-  |`variablename`|Обязательный. Имя переменной. См. раздел [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|
-  |`boundslist`|Необязательный. List of bounds of each dimension of an array variable.|
-  |`New`|Необязательный. Creates a new instance of the class when the `Dim` statement runs.|
-  |`datatype`|Необязательный. Data type of the variable.|
-  |`With`|Необязательный. Introduces the object initializer list.|
-  |`propertyname`|Необязательный. The name of a property in the class you are making an instance of.|
-  |`propinitializer`|Required after `propertyname` =. The expression that is evaluated and assigned to the property name.|
-  |`initializer`|Optional if `New` is not specified. Expression that is evaluated and assigned to the variable when it is created.|
+  |`variablename`|Обязательно. Имя переменной. См. раздел [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|
+  |`boundslist`|Необязательно. Список границ каждого измерения переменной массива.|
+  |`New`|Необязательно. Создает новый экземпляр класса при выполнении инструкции `Dim`.|
+  |`datatype`|Необязательно. Тип данных переменной.|
+  |`With`|Необязательно. Представляет список инициализаторов объектов.|
+  |`propertyname`|Необязательно. Имя свойства в классе, экземпляр которого вы вносите.|
+  |`propinitializer`|Требуется после `propertyname` =. Выражение, которое вычисляется и присваивается имени свойства.|
+  |`initializer`|Необязательный, если не указан `New`. Выражение, которое вычисляется и присваивается переменной при ее создании.|
 
 ## <a name="remarks"></a>Заметки
 
-The Visual Basic compiler uses the `Dim` statement to determine the variable's data type and other information, such as what code can access the variable. The following example declares a variable to hold an `Integer` value.
+Компилятор Visual Basic использует инструкцию `Dim` для определения типа данных переменной и других сведений, например кода, который может получить доступ к переменной. В следующем примере объявляется переменная для хранения `Integer` значения.
 
 ```vb
 Dim numberOfStudents As Integer
 ```
 
-You can specify any data type or the name of an enumeration, structure, class, or interface.
+Можно указать любой тип данных или имя перечисления, структуры, класса или интерфейса.
 
 ```vb
 Dim finished As Boolean
 Dim monitorBox As System.Windows.Forms.Form
 ```
 
-For a reference type, you use the `New` keyword to create a new instance of the class or structure that is specified by the data type. If you use `New`, you do not use an initializer expression. Instead, you supply arguments, if they are required, to the constructor of the class from which you are creating the variable.
+Для ссылочного типа используется ключевое слово `New` для создания нового экземпляра класса или структуры, определяемой типом данных. Если используется `New`, выражение инициализатора не используется. Вместо этого вы предоставляете аргументы, если они требуются, в конструктор класса, из которого создается переменная.
 
 ```vb
 Dim bottomLabel As New System.Windows.Forms.Label
 ```
 
-You can declare a variable in a procedure, block, class, structure, or module. You cannot declare a variable in a source file, namespace, or interface. Дополнительные сведения см. в разделе [Контексты объявления и уровни доступа по умолчанию](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).
+Переменную можно объявить в процедуре, блоке, классе, структуре или модуле. Нельзя объявить переменную в исходном файле, пространстве имен или интерфейсе. Дополнительные сведения см. в разделе [Контексты объявления и уровни доступа по умолчанию](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).
 
-A variable that is declared at module level, outside any procedure, is a *member variable* or *field*. Member variables are in scope throughout their class, structure, or module. A variable that is declared at procedure level is a *local variable*. Local variables are in scope only within their procedure or block.
+Переменная, объявленная на уровне модуля вне любой процедуры, является переменной или *полем* *члена* . Переменные членов находятся в области действия класса, структуры или модуля. Переменная, объявленная на уровне процедуры, является *локальной переменной*. Локальные переменные находятся в области действия только в пределах их процедуры или блока.
 
-The following access modifiers are used to declare variables outside a procedure: `Public`, `Protected`, `Friend`, `Protected Friend`, and `Private`. For more information, see [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).
+Следующие модификаторы доступа используются для объявления переменных вне процедуры: `Public`, `Protected`, `Friend`, `Protected Friend`и `Private`. Дополнительные сведения см. [в разделе уровни доступа в Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).
 
-The `Dim` keyword is optional and usually omitted if you specify any of the following modifiers: `Public`, `Protected`, `Friend`, `Protected Friend`, `Private`, `Shared`, `Shadows`, `Static`, `ReadOnly`, or `WithEvents`.
+Ключевое слово `Dim` является необязательным и обычно опускается при указании любого из следующих модификаторов: `Public`, `Protected`, `Friend`, `Protected Friend`, `Private`, `Shared`, `Shadows`, `Static`, `ReadOnly`или `WithEvents`.
 
 ```vb
 Public maximumAllowed As Double
@@ -148,18 +148,18 @@ Private salary As Decimal
 Static runningTotal As Integer
 ```
 
-If `Option Explicit` is on (the default), the compiler requires a declaration for every variable you use. For more information, see [Option Explicit Statement](../../../visual-basic/language-reference/statements/option-explicit-statement.md).
+Если `Option Explicit` имеет значение On (значение по умолчанию), компилятору требуется объявление для каждой используемой переменной. Дополнительные сведения см. в разделе [оператор Option Explicit](../../../visual-basic/language-reference/statements/option-explicit-statement.md).
 
-## <a name="specifying-an-initial-value"></a>Specifying an Initial Value
+## <a name="specifying-an-initial-value"></a>Указание начального значения
 
-You can assign a value to a variable when it is created. For a value type, you use an *initializer* to supply an expression to be assigned to the variable. The expression must evaluate to a constant that can be calculated at compile time.
+При создании переменной можно присвоить значение. Для типа значения используйте *инициализатор* , чтобы указать выражение, присваиваемое переменной. Результатом вычисления выражения должно быть константа, которую можно вычислить во время компиляции.
 
 ```vb
 Dim quantity As Integer = 10
 Dim message As String = "Just started"
 ```
 
-If an initializer is specified and a data type is not specified in an `As` clause, *type inference* is used to infer the data type from the initializer. In the following example, both `num1` and `num2` are strongly typed as integers. In the second declaration, type inference infers the type from the value 3.
+Если инициализатор указан и тип данных не указан в предложении `As`, *Определение* типа используется для получения типа данных из инициализатора. В следующем примере и `num1`, и `num2` строго типизированы как целые числа. Во втором объявлении определение типа выводит тип из значения 3.
 
 ```vb
 ' Use explicit typing.
@@ -169,30 +169,30 @@ Dim num1 As Integer = 3
 Dim num2 = 3
 ```
 
-Type inference applies at the procedure level. It does not apply outside a procedure in a class, structure, module, or interface. For more information about type inference, see [Option Infer Statement](../../../visual-basic/language-reference/statements/option-infer-statement.md) and [Local Type Inference](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).
+Определение типа применяется на уровне процедуры. Он не применяется за пределами процедуры в классе, структуре, модуле или интерфейсе. Дополнительные сведения о выводе типа см. в разделе [Option Infer](../../../visual-basic/language-reference/statements/option-infer-statement.md) и [определение локального типа](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).
 
-For information about what happens when a data type or initializer is not specified, see [Default Data Types and Values](../../../visual-basic/language-reference/statements/dim-statement.md#default) later in this topic.
+Сведения о том, что происходит, если не указан тип данных или инициализатор, см. в подразделе [типы данных и значения по умолчанию](../../../visual-basic/language-reference/statements/dim-statement.md#default) далее в этой статье.
 
-You can use an *object initializer* to declare instances of named and anonymous types. The following code creates an instance of a `Student` class and uses an object initializer to initialize properties.
+*Инициализатор объекта* можно использовать для объявления экземпляров именованных и анонимных типов. Следующий код создает экземпляр класса `Student` и использует инициализатор объекта для инициализации свойств.
 
 ```vb
 Dim student1 As New Student With {.First = "Michael",
                                   .Last = "Tucker"}
 ```
 
-For more information about object initializers, see [How to: Declare an Object by Using an Object Initializer](../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-declare-an-object-by-using-an-object-initializer.md), [Object Initializers: Named and Anonymous Types](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md), and [Anonymous Types](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).
+Дополнительные сведения об инициализаторах объектов см. [в разделе как объявить объект с помощью инициализатора](../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-declare-an-object-by-using-an-object-initializer.md)объекта, [инициализаторов объектов: именованные и анонимные типы](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)и [анонимные типы](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).
 
-## <a name="declaring-multiple-variables"></a>Declaring Multiple Variables
+## <a name="declaring-multiple-variables"></a>Объявление нескольких переменных
 
-You can declare several variables in one declaration statement, specifying the variable name for each one, and following each array name with parentheses. Переменные разделяются запятыми.
+Можно объявить несколько переменных в одном операторе объявления, указав имя переменной для каждой из них, и после каждого имени массива с круглыми скобками. Переменные разделяются запятыми.
 
 ```vb
 Dim lastTime, nextTime, allTimes() As Date
 ```
 
-If you declare more than one variable with one `As` clause, you cannot supply an initializer for that group of variables.
+Если объявить более одной переменной с одним предложением `As`, вы не сможете предоставить инициализатор для этой группы переменных.
 
-You can specify different data types for different variables by using a separate `As` clause for each variable you declare. Each variable takes the data type specified in the first `As` clause encountered after its `variablename` part.
+Можно указать различные типы данных для разных переменных, используя отдельное предложение `As` для каждой объявляемой переменной. Каждая переменная принимает тип данных, указанный в первом предложении `As`, обнаруженном после его части `variablename`.
 
 ```vb
 Dim a, b, c As Single, x, y As Double, i As Integer
@@ -201,26 +201,26 @@ Dim a, b, c As Single, x, y As Double, i As Integer
 
 ## <a name="arrays"></a>Массивы
 
-You can declare a variable to hold an *array*, which can hold multiple values. To specify that a variable holds an array, follow its `variablename` immediately with parentheses. Дополнительные сведения см. в руководстве по работе с [массивами](../../../visual-basic/programming-guide/language-features/arrays/index.md).
+Можно объявить переменную для хранения *массива*, который может содержать несколько значений. Чтобы указать, что переменная содержит массив, следует следовать его `variablename` сразу же с круглыми скобками. Дополнительные сведения см. в руководстве по работе с [массивами](../../../visual-basic/programming-guide/language-features/arrays/index.md).
 
-You can specify the lower and upper bound of each dimension of an array. To do this, include a `boundslist` inside the parentheses. For each dimension, the `boundslist` specifies the upper bound and optionally the lower bound. The lower bound is always zero, whether you specify it or not. Each index can vary from zero through its upper bound value.
+Можно указать нижнюю и верхнюю границы каждого измерения массива. Для этого включите `boundslist` в круглые скобки. Для каждого измерения `boundslist` указывает верхнюю границу и, при необходимости, нижнюю границу. Нижняя граница всегда равна нулю, независимо от того, указана она или нет. Каждый индекс может изменяться от нуля до значения его верхней границы.
 
-The following two statements are equivalent. Each statement declares an array of 21 `Integer` elements. When you access the array, the index can vary from 0 through 20.
+Следующие две инструкции эквивалентны. Каждый оператор объявляет массив из 21 `Integer` элементов. При доступе к массиву индекс может изменяться от 0 до 20.
 
 ```vb
 Dim totals(20) As Integer
 Dim totals(0 To 20) As Integer
 ```
 
-The following statement declares a two-dimensional array of type `Double`. The array has 4 rows (3 + 1) of 6 columns (5 + 1) each. Note that an upper bound represents the highest possible value for the index, not the length of the dimension. The length of the dimension is the upper bound plus one.
+В следующей инструкции объявляется двухмерный массив типа `Double`. Массив содержит 4 строки (3 + 1) из 6 столбцов (5 + 1) каждого. Обратите внимание, что верхняя граница представляет наибольшее возможное значение индекса, а не длину измерения. Длина измерения является верхней границей плюс единица.
 
 ```vb
 Dim matrix2(3, 5) As Double
 ```
 
-An array can have from 1 to 32 dimensions.
+Массив может иметь размер от 1 до 32.
 
-You can leave all the bounds blank in an array declaration. If you do this, the array has the number of dimensions you specify, but it is uninitialized. It has a value of `Nothing` until you initialize at least some of its elements. The `Dim` statement must specify bounds either for all dimensions or for no dimensions.
+Все границы в объявлении массива можно оставить пустыми. В этом случае массив имеет указанное число измерений, но не инициализировано. Он имеет значение `Nothing`, пока не будут инициализированы хотя бы некоторые его элементы. В операторе `Dim` должны быть указаны границы для всех измерений или для отсутствия измерений.
 
 ```vb
 ' Declare an array with blank array bounds.
@@ -229,97 +229,97 @@ Dim messages() As String
 ReDim messages(4)
 ```
 
-If the array has more than one dimension, you must include commas between the parentheses to indicate the number of dimensions.
+Если массив имеет более одного измерения, необходимо включить запятые между круглыми скобками, чтобы указать количество измерений.
 
 ```vb
 Dim oneDimension(), twoDimensions(,), threeDimensions(,,) As Byte
 ```
 
-You can declare a *zero-length array* by declaring one of the array's dimensions to be -1. A variable that holds a zero-length array does not have the value `Nothing`. Zero-length arrays are required by certain common language runtime functions. If you try to access such an array, a runtime exception occurs. Дополнительные сведения см. в статье [Arrays (C++/CLI and C++/CX)](../../../visual-basic/programming-guide/language-features/arrays/index.md) (Массивы (C++/CLI и C++/CX)).
+Можно объявить *массив нулевой длины* , объявляя один из измерений массива равным-1. Переменная, содержащая массив нулевой длины, не имеет значения `Nothing`. Для некоторых функций среды CLR требуются массивы нулевой длины. При попытке доступа к такому массиву возникает исключение времени выполнения. Дополнительные сведения см. в статье [Arrays (C++/CLI and C++/CX)](../../../visual-basic/programming-guide/language-features/arrays/index.md) (Массивы (C++/CLI и C++/CX)).
 
-You can initialize the values of an array by using an array literal. To do this, surround the initialization values with braces (`{}`).
+Значения массива можно инициализировать с помощью литерала массива. Для этого заключите значения инициализации в фигурные скобки (`{}`).
 
 ```vb
 Dim longArray() As Long = {0, 1, 2, 3}
 ```
 
-For multidimensional arrays, the initialization for each separate dimension is enclosed in braces in the outer dimension. The elements are specified in row-major order.
+Для многомерных массивов инициализация каждого отдельного измерения заключается в фигурные скобки во внешнем измерении. Элементы задаются в построчном порядке.
 
 ```vb
 Dim twoDimensions(,) As Integer = {{0, 1, 2}, {10, 11, 12}}
 ```
 
-For more information about array literals, see [Arrays](../../../visual-basic/programming-guide/language-features/arrays/index.md).
+Дополнительные сведения о литералах массивов см. в разделе [массивы](../../../visual-basic/programming-guide/language-features/arrays/index.md).
 
-## <a name="default"></a> Default Data Types and Values
+## <a name="default"></a>Типы данных и значения по умолчанию
 
 В следующей таблице перечислены результаты различных сочетаний заданных типов данных и инициализаторов в операторе `Dim`.
 
 |Указан тип данных?|Указан инициализатор?|Пример|Результат|
 |---|---|---|---|
-|Нет|Нет|`Dim qty`|If [Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md) is off (the default), the variable is set to `Nothing`.<br /><br /> Если параметр `Option Strict` включен, возникает ошибка времени при компиляции.|
-|Нет|Да|`Dim qty = 5`|If [Option Infer](../../../visual-basic/language-reference/statements/option-infer-statement.md) is on (the default), the variable takes the data type of the initializer. See [Local Type Inference](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).<br /><br /> Если параметры `Option Infer` и `Option Strict` отключены, переменная получает тип данных `Object`.<br /><br /> Если параметр `Option Infer` отключен, а параметр `Option Strict` включен, возникает ошибка времени компиляции.|
-|Да|Нет|`Dim qty As Integer`|Переменная инициализируется со значением по умолчанию для типа данных. See the table later in this section.|
+|Нет|Нет|`Dim qty`|Если [параметр optioned](../../../visual-basic/language-reference/statements/option-strict-statement.md) имеет значение OFF (значение по умолчанию), то переменной присваивается значение `Nothing`.<br /><br /> Если параметр `Option Strict` включен, возникает ошибка времени при компиляции.|
+|Нет|Да|`Dim qty = 5`|Если [параметр Infer](../../../visual-basic/language-reference/statements/option-infer-statement.md) имеет значение On (значение по умолчанию), переменная принимает тип данных инициализатора. См. раздел [определение локального типа](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).<br /><br /> Если параметры `Option Infer` и `Option Strict` отключены, переменная получает тип данных `Object`.<br /><br /> Если параметр `Option Infer` отключен, а параметр `Option Strict` включен, возникает ошибка времени компиляции.|
+|Да|Нет|`Dim qty As Integer`|Переменная инициализируется со значением по умолчанию для типа данных. См. таблицу далее в этом разделе.|
 |Да|Да|`Dim qty  As Integer = 5`|Если тип данных инициализатора нельзя преобразовать в указанный тип данных, возникает ошибка времени компиляции.|
 
-If you specify a data type but do not specify an initializer, Visual Basic initializes the variable to the default value for its data type. The following table shows the default initialization values.
+Если указать тип данных, но не указать инициализатор, Visual Basic инициализирует переменную как значение по умолчанию для ее типа данных. В следующей таблице приведены значения инициализации по умолчанию.
 
 |Тип данных|Значение по умолчанию|
 |---|---|
-|All numeric types (including `Byte` and `SByte`)|0|
-|`Char`|Binary 0|
-|All reference types (including `Object`, `String`, and all arrays)|`Nothing`|
+|Все числовые типы (включая `Byte` и `SByte`)|0|
+|`Char`|Двоичный 0|
+|Все ссылочные типы (включая `Object`, `String`и все массивы)|`Nothing`|
 |`Boolean`|`False`|
-|`Date`|12:00 AM of January 1 of the year 1 (01/01/0001 12:00:00 AM)|
+|`Date`|12:00 AM 1 января 1 года (01/01/0001 12:00:00 AM)|
 
-Each element of a structure is initialized as if it were a separate variable. If you declare the length of an array but do not initialize its elements, each element is initialized as if it were a separate variable.
+Каждый элемент структуры инициализируется так, как если бы он был отдельной переменной. Если вы объявили длину массива, но не инициализируйте его элементы, каждый элемент инициализируется так, как если бы он был отдельной переменной.
 
-## <a name="static-local-variable-lifetime"></a>Static Local Variable Lifetime
+## <a name="static-local-variable-lifetime"></a>Время существования статической локальной переменной
 
-A `Static` local variable has a longer lifetime than that of the procedure in which it is declared. The boundaries of the variable's lifetime depend on where the procedure is declared and whether it is `Shared`.
+`Static` локальная переменная имеет более длительное время существования, чем процедура, в которой она объявлена. Границы времени существования переменной зависят от того, где была объявлена процедура и является ли она `Shared`ой.
 
-|Procedure declaration|Variable initialized|Variable stops existing|
+|Объявление процедуры|Переменная инициализирована|Переменная останавливается|
 |---|---|---|
-|In a module|The first time the procedure is called|When your program stops execution|
-|In a class or structure, procedure is `Shared`|The first time the procedure is called either on a specific instance or on the class or structure itself|When your program stops execution|
-|In a class or structure, procedure isn't `Shared`|The first time the procedure is called on a specific instance|When the instance is released for garbage collection (GC)|
+|В модуле|При первом вызове процедуры|При остановке выполнения программы|
+|В классе или структуре процедура `Shared`|При первом вызове процедуры либо в определенном экземпляре, либо в самом классе или структуре.|При остановке выполнения программы|
+|В классе или структуре процедура не `Shared`|При первом вызове процедуры в определенном экземпляре|Когда экземпляр выпускается для сборки мусора (GC)|
 
-## <a name="attributes-and-modifiers"></a>Attributes and Modifiers
+## <a name="attributes-and-modifiers"></a>Атрибуты и модификаторы
 
-You can apply attributes only to member variables, not to local variables. An attribute contributes information to the assembly's metadata, which is not meaningful for temporary storage such as local variables.
+Атрибуты можно применять только к переменным члена, а не к локальным переменным. Атрибут вносит сведения в метаданные сборки, что не имеет смысла для временного хранения, например локальных переменных.
 
-At module level, you cannot use the `Static` modifier to declare member variables. At procedure level, you cannot use `Shared`, `Shadows`, `ReadOnly`, `WithEvents`, or any access modifiers to declare local variables.
+На уровне модуля нельзя использовать модификатор `Static` для объявления переменных члена. На уровне процедуры нельзя использовать `Shared`, `Shadows`, `ReadOnly`, `WithEvents`или модификаторы доступа для объявления локальных переменных.
 
-You can specify what code can access a variable by supplying an `accessmodifier`. Class and module member variables (outside any procedure) default to private access, and structure member variables default to public access. You can adjust their access levels with the access modifiers. You cannot use access modifiers on local variables (inside a procedure).
+Можно указать, какой код может получить доступ к переменной, указав `accessmodifier`. Переменные-члены класса и модуля (вне любой процедуры) по умолчанию имеют частный доступ, а переменные-члены структуры по умолчанию имеют общий доступ. Уровни доступа можно изменить с помощью модификаторов доступа. Нельзя использовать модификаторы доступа для локальных переменных (внутри процедуры).
 
-You can specify `WithEvents` only on member variables, not on local variables inside a procedure. If you specify `WithEvents`, the data type of the variable must be a specific class type, not `Object`. You cannot declare an array with `WithEvents`. For more information about events, see [Events](../../../visual-basic/programming-guide/language-features/events/index.md).
+Можно указать `WithEvents` только для переменных-членов, но не для локальных переменных внутри процедуры. При указании `WithEvents`тип данных переменной должен быть конкретным типом класса, а не `Object`. Нельзя объявить массив с `WithEvents`. Дополнительные сведения о событиях см. в разделе [события](../../../visual-basic/programming-guide/language-features/events/index.md).
 
 > [!NOTE]
-> Code outside a class, structure, or module must qualify a member variable's name with the name of that class, structure, or module. Code outside a procedure or block cannot refer to any local variables within that procedure or block.
+> Код за пределами класса, структуры или модуля должен уточнять имя переменной-члена именем этого класса, структуры или модуля. Код за пределами процедуры или блока не может ссылаться на локальные переменные в этой процедуре или блоке.
 
-## <a name="releasing-managed-resources"></a>Releasing Managed Resources
+## <a name="releasing-managed-resources"></a>Освобождение управляемых ресурсов
 
-The .NET Framework garbage collector disposes of managed resources without any extra coding on your part. However, you can force the disposal of a managed resource instead of waiting for the garbage collector.
+Сборщик мусора .NET Framework уничтожает управляемые ресурсы без дополнительного программирования. Однако можно вызвать принудительное удаление управляемого ресурса вместо ожидания сборщика мусора.
 
-If a class holds onto a particularly valuable and scarce resource (such as a database connection or file handle), you might not want to wait until the next garbage collection to clean up a class instance that's no longer in use. A class may implement the <xref:System.IDisposable> interface to provide a way to release resources before a garbage collection. A class that implements that interface exposes a `Dispose` method that can be called to force valuable resources to be released immediately.
+Если класс принадлежит особому ценному и ограниченному ресурсу (например, к подключению к базе данных или файлу), может возникнуть необходимость в ожидании следующей сборки мусора для очистки экземпляра класса, который больше не используется. Класс может реализовывать интерфейс <xref:System.IDisposable>, чтобы предоставить способ освобождения ресурсов перед сборкой мусора. Класс, реализующий этот интерфейс, предоставляет метод `Dispose`, который может быть вызван для немедленного освобождения ценных ресурсов.
 
-The `Using` statement automates the process of acquiring a resource, executing a set of statements, and then disposing of the resource. However, the resource must implement the <xref:System.IDisposable> interface. Дополнительные сведения см. в разделе [Оператор using](../../../visual-basic/language-reference/statements/using-statement.md).
+Инструкция `Using` автоматизирует процесс получения ресурса, выполнения набора инструкций и последующего удаления ресурса. Однако ресурс должен реализовывать интерфейс <xref:System.IDisposable>. Дополнительные сведения см. в разделе [Оператор using](../../../visual-basic/language-reference/statements/using-statement.md).
 
 ## <a name="example"></a>Пример
 
-The following example declares variables by using the `Dim` statement with various options.
+В следующем примере переменные объявляются с помощью оператора `Dim` с различными параметрами.
 
 [!code-vb[VbVbalrStatements#141](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class11.vb#141)]
 
 ## <a name="example"></a>Пример
 
-The following example lists the prime numbers between 1 and 30. The scope of local variables is described in code comments.
+В следующем примере выводятся простые числа от 1 до 30. Область локальных переменных описывается в разделе Комментарии к коду.
 
 [!code-vb[VbVbalrStatements#142](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class11.vb#142)]
 
 ## <a name="example"></a>Пример
 
-In the following example, the `speedValue` variable is declared at the class level. The `Private` keyword is used to declare the variable. The variable can be accessed by any procedure in the `Car` class.
+В следующем примере переменная `speedValue` объявляется на уровне класса. Ключевое слово `Private` используется для объявления переменной. Доступ к переменной может осуществляться любой процедурой в классе `Car`.
 
 [!code-vb[VbVbalrStatements#144](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class11.vb#144)]
 

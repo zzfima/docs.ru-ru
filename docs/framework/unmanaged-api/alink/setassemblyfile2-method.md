@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445586"
 ---
 # <a name="setassemblyfile2-method"></a>Метод SetAssemblyFile2
-Sets the name of and options for a new assembly. Do not call this method when you produce unbound modules.  
+Задает имя параметров и для новой сборки. Не вызывайте этот метод при создании несвязанных модулей.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,24 +37,24 @@ HRESULT SetAssemblyFile2(
   
 ## <a name="parameters"></a>Параметры  
  `pszFilename`  
- Name of manifest file.  
+ Имя файла манифеста.  
   
  `pEmitter`  
- [IMetaDataEmit2 Interface](../metadata/imetadataemit2-interface.md) interface for this file.  
+ Интерфейс интерфейса [IMetaDataEmit2](../metadata/imetadataemit2-interface.md) для этого файла.  
   
  `afFlags`  
- Options represented by [AssemblyFlags Enumeration](../metadata/assemblyflags-enumeration.md).  
+ Параметры, представленные [перечислением AssemblyFlags](../metadata/assemblyflags-enumeration.md).  
   
  `pAssemblyID`  
- Receives unique ID for the assembly being constructed.  
+ Получает уникальный идентификатор для создаваемой сборки.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Returns S_OK if the method succeeds.  
+ Возвращает S_OK, если метод завершается с ошибкой.  
   
 ## <a name="requirements"></a>Требования  
- Requires alink.h.  
+ Требуется ALink. h.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс IALink2](ialink2-interface.md)
 - [Интерфейс IALink](ialink-interface.md)

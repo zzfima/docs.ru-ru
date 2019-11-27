@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449400"
 ---
 # <a name="freewin32resblob-method"></a>Метод FreeWin32ResBlob
-Releases the Win32 resource blob and associated resources.  
+Освобождает большой двоичный объект ресурсов Win32 и связанные ресурсы.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -34,13 +34,13 @@ HRESULT FreeWin32ResBlob(
   
 ## <a name="parameters"></a>Параметры  
  `ppResBlob`  
- The resource blob to be released. This method assigns the blob pointer to NULL.  
+ Большой двоичный объект ресурса, который необходимо освободить. Этот метод присваивает указатель большого двоичного объекта значению NULL.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Returns S_OK if the method succeeds.  
+ Возвращает S_OK, если метод завершается с ошибкой.  
   
 ## <a name="requirements"></a>Требования  
- Requires alink.h  
+ Требуется ALink. h  
   
 ## <a name="see-also"></a>См. также
 

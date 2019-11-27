@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74440472"
 ---
 # <a name="imetadataemittranslatesigwithscope-method"></a>Метод IMetaDataEmit::TranslateSigWithScope
-Imports an assembly into the current scope and gets a new metadata signature for the merged scope.  
+Импортирует сборку в текущую область и получает новую сигнатуру метаданных для Объединенной области.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -45,44 +45,44 @@ HRESULT TranslateSigWithScope (
   
 ## <a name="parameters"></a>Параметры  
  `pAssemImport`  
- [in] The interface for import assembly (where the signature is defined).  
+ окне Интерфейс для импортируемой сборки (где определена сигнатура).  
   
  `pbHashValue`  
- [in] The hash blob for the assembly.  
+ окне Хэш-объект хэша для сборки.  
   
  `cbHashValue`  
- [in] The count of bytes in `pbHashValue`.  
+ окне Число байтов в `pbHashValue`.  
   
  `import`  
- [in] The interface for import metadata scope.  
+ окне Интерфейс для области действия метаданных импорта.  
   
  `pbSigBlob`  
- [in] The signature to be imported.  
+ окне Импортируемая подпись.  
   
  `cbSigBlob`  
- [in] The size, in bytes, of `pbSigBlob`.  
+ окне Размер `pbSigBlob`в байтах.  
   
  `pAssemEmit`  
- [in] The interface for export assembly.  
+ окне Интерфейс для экспорта сборки.  
   
  `emit`  
- [in] The interface for export metadata scope.  
+ окне Интерфейс для области экспорта метаданных.  
   
  `pvTranslatedSig`  
- [out] The buffer to hold the translated signature blob.  
+ заполняет Буфер для хранения переведенного большого двоичного объекта сигнатуры.  
   
  `cbTranslatedSigMax`  
- [in] The capacity, in bytes, of `pvTranslatedSig`.  
+ окне Емкость (в байтах) `pvTranslatedSig`.  
   
  `pcbTranslatedSig`  
- [out] The number of actual bytes in the translated signature.  
+ заполняет Число фактических байтов в переведенной сигнатуре.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Заголовок:** COR. h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **Библиотека:** Используется в качестве ресурса в MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

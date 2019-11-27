@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450256"
 ---
 # <a name="cormanifestresourceflags-enumeration"></a>Перечисление CorManifestResourceFlags
-Indicates the visibility of resources encoded in an assembly manifest.  
+Указывает видимость ресурсов, закодированных в манифесте сборки.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -41,13 +41,13 @@ typedef enum CorManifestResourceFlags {
 |Член|Описание|  
 |------------|-----------------|  
 |`mrVisibilityMask`|Зарезервировано.|  
-|`mrPublic`|The resources are public.|  
-|`mrPrivate`|The resources are private.|  
+|`mrPublic`|Ресурсы являются общедоступными.|  
+|`mrPrivate`|Ресурсы являются частными.|  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorHdr.h  
+ **Заголовок:** Корхдр. h  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

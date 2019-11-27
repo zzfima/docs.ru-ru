@@ -13,14 +13,14 @@ ms.locfileid: "74351321"
 ---
 # <a name="protected-friend-visual-basic"></a>Protected Friend (Visual Basic)
 
-Комбинация ключевых слов `Protected Friend` является модификатором доступа к члену. It confers both [Friend](friend.md) access and [Protected](protected.md) access on the declared elements, so they are accessible from anywhere in the same assembly, from their own class, and from derived classes. You can specify `Protected Friend` only on members of classes; you cannot apply `Protected Friend` to members of a structure because structures cannot be inherited.
+Комбинация ключевых слов `Protected Friend` является модификатором доступа к члену. Он предоставляет [дружественный](friend.md) доступ и [защищенный](protected.md) доступ к объявленным элементам, поэтому они доступны из любого места в одной сборке, из их собственного класса и из производных классов. Можно указать `Protected Friend` только для членов классов; к членам структуры нельзя применять `Protected Friend`, поскольку структуры не могут наследоваться.
 
 > [!NOTE]
-> In Visual Studio, selecting F1 help on `protected friend` provides help for either [protected](protected.md) or [friend](friend.md). The IDE picks the single token under the cursor rather than the compound word.
+> В Visual Studio выбор справки F1 в `protected friend` предоставляет справку для [защищенного](protected.md) или [дружественного](friend.md)доступа. Интегрированная среда разработки выбирает один маркер под курсором, а не составное слово.
 
 ## <a name="rules"></a>Правила
 
-**Declaration Context.** You can use `Protected Friend` only at the class level. This means the declaration context for a `Protected` element must be a class, and cannot be a source file, namespace, interface, module, structure, or procedure.
+**Контекст объявления.** `Protected Friend` можно использовать только на уровне класса. Это означает, что контекст объявления для элемента `Protected` должен быть классом и не может быть исходным файлом, пространством имен, интерфейсом, модулем, структурой или процедурой.
 
 ## <a name="see-also"></a>См. также
 
@@ -29,7 +29,7 @@ ms.locfileid: "74351321"
 - [Friend](friend.md)
 - [Закрытые](../../../visual-basic/language-reference/modifiers/private.md)
 - [Private Protected](./private-protected.md)
-- [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
+- [Уровни доступа в Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
 - [Процедуры](../../../visual-basic/programming-guide/language-features/procedures/index.md)
 - [Структуры](../../../visual-basic/programming-guide/language-features/data-types/structures.md)
 - [Объекты и классы](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

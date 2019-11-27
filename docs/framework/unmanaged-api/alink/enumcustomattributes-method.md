@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446475"
 ---
 # <a name="enumcustomattributes-method"></a>Метод EnumCustomAttributes
-Retrieves assembly-level custom attributes.  
+Извлекает настраиваемые атрибуты уровня сборки.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,27 +39,27 @@ HRESULT EnumCustomAttributes(
   
 ## <a name="parameters"></a>Параметры  
  `hEnum`  
- Handle of enumerator.  
+ Маркер перечислителя.  
   
  `tkType`  
- Type of attributes to be enumerated. Use `mdTokenNill` for all attributes.  
+ Тип атрибутов для перечисления. Используйте `mdTokenNill` для всех атрибутов.  
   
  `rCustomValues`  
- Receives custom attributes tokens.  
+ Получает маркеры настраиваемых атрибутов.  
   
  `cMax`  
- Specifies size of `rCustomValues` array.  
+ Задает размер массива `rCustomValues`.  
   
  `pcCustomValues`  
- Optionally receives count of token values.  
+ При необходимости получает число значений токена.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Returns S_OK if the method succeeds.  
+ Возвращает S_OK, если метод завершается с ошибкой.  
   
 ## <a name="requirements"></a>Требования  
- Requires alink.h  
+ Требуется ALink. h  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс IALink](ialink-interface.md)
 - [Интерфейс IALink2](ialink2-interface.md)

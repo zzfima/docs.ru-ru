@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449059"
 ---
 # <a name="isymunmanagedencupdategetlocalvariablecount-method"></a>Метод ISymUnmanagedENCUpdate::GetLocalVariableCount
-Gets the number of local variables.  
+Возвращает число локальных переменных.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -35,17 +35,17 @@ HRESULT GetLocalVariableCount(
   
 ## <a name="parameters"></a>Параметры  
  `mdMethodToken`  
- [in] The metadata token of methods.  
+ окне Маркер метаданных методов.  
   
  `pcLocals`  
- [out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the number of local variables.  
+ заполняет Указатель на `ULONG32`, который получает размер буфера (в символах), необходимого для хранения числа локальных переменных.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK, если метод выполнен. в противном случае E_FAIL или другой код ошибки.  
   
 ## <a name="requirements"></a>Требования  
- **Header:** CorSym.idl, CorSym.h  
+ **Заголовок:** Корсим. idl, Корсим. h  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс ISymUnmanagedENCUpdate](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedencupdate-interface.md)

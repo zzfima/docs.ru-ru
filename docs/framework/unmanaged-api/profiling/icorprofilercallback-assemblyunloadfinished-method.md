@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445148"
 ---
 # <a name="icorprofilercallbackassemblyunloadfinished-method"></a>Метод ICorProfilerCallback::AssemblyUnloadFinished
-Notifies the profiler that an assembly has been unloaded.  
+Уведомляет профилировщик о том, что сборка была выгружена.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -35,15 +35,15 @@ HRESULT AssemblyUnloadFinished(
   
 ## <a name="parameters"></a>Параметры  
  `assemblyId`  
- [in] Identifies the assembly that is being unloaded.  
+ окне Определяет выгрузку сборки.  
   
  `hrStatus`  
- [in] An HRESULT that indicates whether the assembly was unloaded successfully.  
+ окне Значение HRESULT, указывающее, успешно ли выгружена сборка.  
   
-## <a name="remarks"></a>Заметки  
- The value of `assemblyId` is not valid for an information request after the [ICorProfilerCallback::AssemblyUnloadStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-assemblyunloadstarted-method.md) method returns.  
+## <a name="remarks"></a>Примечания  
+ Значение `assemblyId` недопустимо для информационного запроса после возврата метода [ICorProfilerCallback:: ассемблюнлоадстартед](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-assemblyunloadstarted-method.md) .  
   
- Some parts of unloading the assembly might continue after the `AssemblyUnloadFinished` callback. A failure HRESULT in `hrStatus` indicates a failure. However, a success HRESULT in `hrStatus` indicates only that the first part of unloading the assembly has succeeded.  
+ Некоторые части выгрузки сборки могут продолжаться после обратного вызова `AssemblyUnloadFinished`. Ошибка HRESULT в `hrStatus` указывает на сбой. Однако значение HRESULT успешного выполнения в `hrStatus` указывает только на то, что первая часть выгрузки сборки завершилась успешно.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
@@ -54,6 +54,6 @@ HRESULT AssemblyUnloadFinished(
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

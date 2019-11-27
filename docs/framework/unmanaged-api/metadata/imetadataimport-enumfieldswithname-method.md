@@ -40,39 +40,39 @@ HRESULT EnumFieldsWithName (
   
 ## <a name="parameters"></a>Параметры  
  `phEnum`  
- [in, out] A pointer to the enumerator.  
+ [вход, выход] Указатель на перечислитель.  
   
  `cl`  
- [in] The token of the type whose fields are to be enumerated.  
+ окне Токен типа, поля которого необходимо перечислить.  
   
  `szName`  
- [in] The field name that limits the scope of the enumeration.  
+ окне Имя поля, ограничивающее область перечисления.  
   
  `rFields`  
- [out] Array used to store the FieldDef tokens.  
+ заполняет Массив, используемый для хранения маркеров FieldDef.  
   
  `cMax`  
  [in] Максимальный размер массива `rFields`.  
   
  `pcTokens`  
- [out] The actual number of FieldDef tokens returned in `rFields`.  
+ заполняет Фактическое число маркеров FieldDef, возвращаемых в `rFields`.  
   
 ## <a name="remarks"></a>Заметки  
- Unlike [IMetaDataImport::EnumFields](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumfields-method.md), `EnumFieldsWithName` discards all field tokens that do not have the specified name.  
+ В отличие от [IMetaDataImport:: EnumFields](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumfields-method.md), `EnumFieldsWithName` отменяет все маркеры полей, у которых нет указанного имени.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
   
 |HRESULT|Описание|  
 |-------------|-----------------|  
-|`S_OK`|`EnumFieldsWithName` returned successfully.|  
-|`S_FALSE`|There are no fields to enumerate. In that case, `pcTokens` is zero.|  
+|`S_OK`|`EnumFieldsWithName` успешно возвращено.|  
+|`S_FALSE`|Нет полей для перечисления. В этом случае `pcTokens` равно нулю.|  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Заголовок:** COR. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

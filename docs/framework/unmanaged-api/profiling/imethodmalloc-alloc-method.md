@@ -24,7 +24,7 @@ ms.locfileid: "74447566"
 ---
 # <a name="imethodmallocalloc-method"></a>Метод IMethodMalloc::Alloc
 
-Attempts to allocate a specified amount of memory for a new Microsoft intermediate language (MSIL) function body.
+Пытается выделить указанный объем памяти для нового текста функции MSIL.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -37,13 +37,13 @@ PVOID Alloc (
 ## <a name="parameters"></a>Параметры
 
 `cb`\
-[in] The number of bytes to allocate for the method body.
+окне Число байтов, которое необходимо выделить для тела метода.
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Примечания
 
- The allocated memory will begin at an address greater than the base address of the module that is associated with this allocator. In other words, each allocator is created for a particular module, and will attempt to allocate memory at a positive offset from its base address. If `Alloc` fails to allocate the requested number of bytes at an address greater than the base address of the module, it returns E_OUTOFMEMORY, regardless of the actual amount of memory space available.
+ Выделенная память будет начинаться с адреса, превышающего базовый адрес модуля, связанного с этим распределителем. Иными словами, каждый распределитель создается для конкретного модуля и пытается выделить память с положительным смещением от его базового адреса. Если `Alloc` не удается выделить запрошенное число байтов по адресу, превышающее базовый адрес модуля, он возвращает E_OUTOFMEMORY, независимо от фактического объема доступной памяти.
 
- The `Alloc` method should be used in conjunction with the [ICorProfilerInfo::SetILFunctionBody](icorprofilerinfo-setilfunctionbody-method.md) method.
+ Метод `Alloc` следует использовать в сочетании с методом [ICorProfilerInfo:: SetILFunctionBody](icorprofilerinfo-setilfunctionbody-method.md) .
 
 ## <a name="requirements"></a>Требования
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).
@@ -54,6 +54,6 @@ PVOID Alloc (
 
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс IMethodMalloc](imethodmalloc-interface.md)

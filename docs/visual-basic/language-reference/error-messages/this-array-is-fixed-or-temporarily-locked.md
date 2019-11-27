@@ -12,21 +12,21 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350787"
 ---
 # <a name="this-array-is-fixed-or-temporarily-locked-visual-basic"></a>Массив имеет фиксированный размер или временно заблокирован (Visual Basic)
-This error has the following possible causes:  
+Эта ошибка может быть вызвана следующими причинами.  
   
-- Using `ReDim` to change the number of elements of a fixed-size array.  
+- Использование `ReDim` для изменения количества элементов массива фиксированного размера.  
   
-- Redimensioning a module-level dynamic array, in which one element has been passed as an argument to a procedure. If an element is passed, the array is locked to prevent deallocating memory for the reference parameter within the procedure.  
+- Переизмерение динамического массива на уровне модуля, в котором один элемент был передан в процедуру в качестве аргумента. Если передается элемент, массив блокируется, чтобы предотвратить освобождение памяти для параметра ссылки в процедуре.  
   
-- Attempting to assign a value to a `Variant` variable containing an array, but the `Variant` is currently locked.  
+- Попытка присвоить значение переменной `Variant`, содержащей массив, но `Variant` в данный момент заблокирован.  
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  
   
-1. Make the original array dynamic rather than fixed by declaring it with `ReDim` (if the array is declared within a procedure), or by declaring it without specifying the number of elements (if the array is declared at the module level.  
+1. Сделайте исходный массив динамическим, а не фиксированным, объявив его с `ReDim` (если массив объявляется в процедуре) или объявив его без указания количества элементов (если массив объявлен на уровне модуля.  
   
-2. Determine whether you really need to pass the element, since it is visible within all procedures in the module.  
+2. Определите, действительно ли нужно передать элемент, так как он видим во всех процедурах в модуле.  
   
-3. Determine what is locking the `Variant` and remedy it.  
+3. Определите, что блокирует `Variant` и исследует его.  
   
 ## <a name="see-also"></a>См. также
 

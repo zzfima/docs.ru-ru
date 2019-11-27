@@ -29,7 +29,7 @@ Provider                                 GUID
 .NET Common Language Runtime    {E13C0D23-CCBC-4E12-931B-D9CC2EEE27E4}.
 ```
 
-Если поставщик среды CLR не указан, его можно установить в Windows Vista и операционных системах более поздних версий с помощью программы командной строки Windows [Wevtutil](/windows-server/administration/windows-commands/wevtutil). Откройте окно командной строки от имени учетной записи администратора. Change the prompt directory to the .NET Framework 4 folder (%WINDIR%\Microsoft.NET\Framework[64]\v4.\<.NET version>\ ). Эта папка содержит файл CLR-ETW.man. Чтобы установить поставщик среды CLR, в командной строке введите следующую команду:
+Если поставщик среды CLR не указан, его можно установить в Windows Vista и операционных системах более поздних версий с помощью программы командной строки Windows [Wevtutil](/windows-server/administration/windows-commands/wevtutil). Откройте окно командной строки от имени учетной записи администратора. Измените каталог подсказки на папку .NET Framework 4 (%WINDIR%\Microsoft.NET\Framework [64] \v4.\<.NET version > \). Эта папка содержит файл CLR-ETW.man. Чтобы установить поставщик среды CLR, в командной строке введите следующую команду:
 
 `wevtutil im CLR-ETW.man`
 
@@ -55,9 +55,9 @@ Provider                                 GUID
 
     - Параметр `-p` задает GUID поставщика.
 
-    - `0x1CCBD` задает категории создаваемых событий.
+    - `0x1CCBD` указывает категории событий, которые будут вызываться.
 
-    - `0x5` задает уровень регистрации (в данном случае подробный (5)).
+    - `0x5` задает уровень ведения журнала (в данном случае Verbose (5)).
 
     - Параметр `-ets` указывает программе Logman отправлять команды сеансам трассировки событий.
 
@@ -113,5 +113,5 @@ Provider                                 GUID
 
 ## <a name="see-also"></a>См. также
 
-- [Windows Performance Toolkit](/windows-hardware/test/wpt/)
+- [Набор средств производительности Windows](/windows-hardware/test/wpt/)
 - [События в среде CLR (трассировка событий Windows)](etw-events-in-the-common-language-runtime.md)

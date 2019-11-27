@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446519"
 ---
 # <a name="emitassembly-method"></a>Метод EmitAssembly
-Creates the assembly. Call this method after all other files are closed except for the assembly file. Do not call this method when producing unbound modules.  
+Создает сборку. Вызывайте этот метод после закрытия всех остальных файлов, кроме файла сборки. Не вызывайте этот метод при создании непривязанных модулей.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -35,13 +35,13 @@ HRESULT EmitAssembly(
   
 ## <a name="parameters"></a>Параметры  
  `AssemblyID`  
- ID of the assembly.  
+ Идентификатор сборки.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Returns S_OK if the method succeeds.  
+ Возвращает S_OK, если метод завершается с ошибкой.  
   
 ## <a name="requirements"></a>Требования  
- Requires alink.h  
+ Требуется ALink. h  
   
 ## <a name="see-also"></a>См. также
 

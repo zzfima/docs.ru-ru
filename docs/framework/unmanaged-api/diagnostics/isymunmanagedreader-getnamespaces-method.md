@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74447731"
 ---
 # <a name="isymunmanagedreadergetnamespaces-method"></a>Метод ISymUnmanagedReader::GetNamespaces
-Gets the namespaces defined at global scope within this symbol store.  
+Возвращает пространства имен, определенные в глобальной области в этом хранилище символов.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,20 +38,20 @@ HRESULT GetNamespaces (
   
 ## <a name="parameters"></a>Параметры  
  `cNameSpaces`  
- [in] The size of the namespaces array.  
+ окне Размер массива пространств имен.  
   
  `pcNameSpaces`  
- [out] A pointer to a variable that receives the length of the namespace list.  
+ заполняет Указатель на переменную, которая получает длину списка пространств имен.  
   
  `namespaces`  
- [out] A pointer to a variable that receives the namespace list.  
+ заполняет Указатель на переменную, которая получает список пространств имен.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK, если метод выполнен. в противном случае E_FAIL или другой код ошибки.  
   
 ## <a name="requirements"></a>Требования  
- **Header:** CorSym.idl, CorSym.h  
+ **Заголовок:** Корсим. idl, Корсим. h  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

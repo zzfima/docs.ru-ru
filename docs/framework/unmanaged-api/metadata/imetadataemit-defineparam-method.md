@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74431687"
 ---
 # <a name="imetadataemitdefineparam-method"></a>Метод IMetaDataEmit::DefineParam
-Creates a parameter definition with the specified signature for the method referenced by the specified token, and gets a token for that parameter definition.  
+Создает определение параметра с указанной сигнатурой для метода, на который ссылается указанный токен, и получает маркер для этого определения параметра.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -42,38 +42,38 @@ HRESULT DefineParam (
   
 ## <a name="parameters"></a>Параметры  
  `md`  
- [in] The token for the method whose parameter is being defined.  
+ окне Токен для метода, параметр которого определяется.  
   
  `ulParamSeq`  
- [in] The parameter sequence number.  
+ окне Порядковый номер параметра.  
   
  `szName`  
- [in] The name of the parameter in Unicode.  
+ окне Имя параметра в Юникоде.  
   
  `dwParamFlags`  
- [in] Flags for the parameter. This is a bitmask of `CorParamAttr` values.  
+ окне Флаги для параметра. Это битовая маска `CorParamAttr` значений.  
   
  `dwCPlusTypeFlag`  
- [in] `ELEMENT_TYPE_` *\** for the constant value.  
+ [in] `ELEMENT_TYPE_` *\** для постоянного значения.  
   
  `pValue`  
- [in] The constant value for the parameter.  
+ окне Постоянное значение для параметра.  
   
  `cchValue`  
- [in] The size, in Unicode characters, of `pValue`.  
+ окне Размер (в символах Юникода) `pValue`.  
   
  `ppd`  
- [out] The `mdParamDef` token assigned.  
+ заполняет Назначенный маркер `mdParamDef`.  
   
 ## <a name="remarks"></a>Заметки  
- The sequence values in `ulParamSeq` begin with 1 for parameters. A return value has a sequence number of 0.  
+ Значения последовательности в `ulParamSeq` начинаются с 1 для параметров. Возвращаемое значение имеет порядковый номер 0.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Заголовок:** COR. h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **Библиотека:** Используется в качестве ресурса в MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

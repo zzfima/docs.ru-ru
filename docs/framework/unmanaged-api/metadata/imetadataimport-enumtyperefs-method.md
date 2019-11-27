@@ -38,33 +38,33 @@ HRESULT EnumTypeRefs (
   
 ## <a name="parameters"></a>Параметры  
  `phEnum`  
- [in, out] A pointer to the enumerator. This must be NULL for the first call of this method.  
+ [вход, выход] Указатель на перечислитель. При первом вызове этого метода это значение должно быть равно NULL.  
   
  `rTypeRefs`  
- [out] The array used to store the TypeRef tokens.  
+ заполняет Массив, используемый для хранения токенов TypeRef.  
   
  `cMax`  
  [in] Максимальный размер массива `rTypeRefs`.  
   
  `pcTypeRefs`  
- [out] A pointer to the number of TypeRef tokens returned in `rTypeRefs`.  
+ заполняет Указатель на число токенов TypeRef, возвращаемых в `rTypeRefs`.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
   
 |HRESULT|Описание|  
 |-------------|-----------------|  
-|`S_OK`|`EnumTypeRefs` returned successfully.|  
-|`S_FALSE`|There are no tokens to enumerate. In that case, `pcTypeRefs` is zero.|  
+|`S_OK`|`EnumTypeRefs` успешно возвращено.|  
+|`S_FALSE`|Нет токенов для перечисления. В этом случае `pcTypeRefs` равно нулю.|  
   
 ## <a name="remarks"></a>Заметки  
- A TypeRef token represents a reference to a type.  
+ Токен TypeRef представляет ссылку на тип.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Заголовок:** COR. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74444225"
 ---
 # <a name="assemblyrefflags-enumeration"></a>Перечисление AssemblyRefFlags
-Contains values that describe features of an assembly reference.  
+Содержит значения, описывающие функции ссылки на сборку.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -36,12 +36,12 @@ typedef enum {
   
 |Член|Описание|  
 |------------|-----------------|  
-|`arfFullOriginator`|Specifies that the assembly reference contains full, unhashed information about the publisher of the assembly.|  
+|`arfFullOriginator`|Указывает, что ссылка на сборку содержит полные нехэшированные сведения об издателе сборки.|  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Заголовок:** COR. h  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

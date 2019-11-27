@@ -19,7 +19,7 @@ ms.locfileid: "74447030"
   
  В этом разделе приводятся рекомендации и соглашения для реализации <xref:System.Windows.Automation.Provider.IWindowProvider>, включая сведения о свойствах, методах и событиях <xref:System.Windows.Automation.WindowPattern> . Ссылки на дополнительные материалы перечислены в конце раздела.  
   
- The <xref:System.Windows.Automation.WindowPattern> control pattern is used to support controls that provide fundamental window-based functionality within a traditional graphical user interface (GUI). Examples of controls that must implement this control pattern include top-level application windows, multiple-document interface (MDI) child windows, resizable split pane controls, modal dialogs and balloon help windows.  
+ Шаблон элемента управления <xref:System.Windows.Automation.WindowPattern> используется для поддержки элементов управления, которые предоставляют фундаментальные функции на основе окна в традиционном графическом интерфейсе пользователя. Примеры элементов управления, которые должны реализовывать этот шаблон элемента управления, включают в себя окна приложений верхнего уровня, дочерние окна многодокументного интерфейса (MDI), элементы управления "область разделения" с изменяемыми размерами, модальные диалоговые окна и окна справки.  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>   
 ## <a name="implementation-guidelines-and-conventions"></a>Правила и соглашения реализации  
@@ -41,17 +41,17 @@ ms.locfileid: "74447030"
   
 |Обязательный член|Тип члена|Примечания|  
 |---------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.InteractionState%2A>|свойство;|Отсутствуют|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.IsModal%2A>|свойство;|Отсутствуют|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.IsTopmost%2A>|свойство;|Отсутствуют|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.Maximizable%2A>|свойство;|Отсутствуют|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.Minimizable%2A>|свойство;|Отсутствуют|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.VisualState%2A>|свойство;|Отсутствуют|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.Close%2A>|Метод|Отсутствуют|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.SetVisualState%2A>|Метод|Отсутствуют|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.WaitForInputIdle%2A>|Метод|Отсутствуют|  
-|<xref:System.Windows.Automation.WindowPattern.WindowClosedEvent>|событие|Отсутствуют|  
-|<xref:System.Windows.Automation.WindowPattern.WindowOpenedEvent>|событие|Отсутствуют|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.InteractionState%2A>|Свойство|Нет|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.IsModal%2A>|Свойство|Нет|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.IsTopmost%2A>|Свойство|Нет|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.Maximizable%2A>|Свойство|Нет|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.Minimizable%2A>|Свойство|Нет|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.VisualState%2A>|Свойство|Нет|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.Close%2A>|Метод|Нет|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.SetVisualState%2A>|Метод|Нет|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.WaitForInputIdle%2A>|Метод|Нет|  
+|<xref:System.Windows.Automation.WindowPattern.WindowClosedEvent>|событие|Нет|  
+|<xref:System.Windows.Automation.WindowPattern.WindowOpenedEvent>|событие|Нет|  
 |<xref:System.Windows.Automation.WindowInteractionState>|событие|Не гарантируется, что будет <xref:System.Windows.Automation.WindowInteractionState.ReadyForUserInteraction>|  
   
 <a name="Exceptions"></a>   
@@ -60,8 +60,8 @@ ms.locfileid: "74447030"
   
 |Тип исключения|Условие|  
 |--------------------|---------------|  
-|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.IWindowProvider.SetVisualState%2A><br /><br /> -   When a control does not support a requested behavior.|  
-|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IWindowProvider.WaitForInputIdle%2A><br /><br /> -   When the parameter is not a valid number.|  
+|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.IWindowProvider.SetVisualState%2A><br /><br /> — Если элемент управления не поддерживает запрошенное поведение.|  
+|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IWindowProvider.WaitForInputIdle%2A><br /><br /> — Если параметр не является допустимым числом.|  
   
 ## <a name="see-also"></a>См. также
 

@@ -15,7 +15,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74354075"
 ---
 # <a name="delegate-statement"></a>Оператор Delegate
-Used to declare a delegate. A delegate is a reference type that refers to a `Shared` method of a type or to an instance method of an object. Any procedure with matching parameter and return types can be used to create an instance of this delegate class. The procedure can then later be invoked by means of the delegate instance.  
+Используется для объявления делегата. Делегат — это ссылочный тип, который ссылается на метод `Shared` типа или на метод экземпляра объекта. Для создания экземпляра этого класса делегата можно использовать любую процедуру с соответствующими параметрами и типами возвращаемых данных. Затем процедуру можно вызвать позже с помощью экземпляра делегата.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -28,20 +28,20 @@ Used to declare a delegate. A delegate is a reference type that refers to a `Sha
   
 |Термин|Определение|  
 |---|---|  
-|`attrlist`|Необязательный. List of attributes that apply to this delegate. Несколько атрибутов разделяются запятыми. You must enclose the [Attribute List](../../../visual-basic/language-reference/statements/attribute-list.md) in angle brackets ("`<`" and "`>`").|  
-|`accessmodifier`|Необязательный. Specifies what code can access the delegate. Ниже указаны доступные значения.<br /><br /> - [Public](../../../visual-basic/language-reference/modifiers/public.md). Any code that can access the element that declares the delegate can access it.<br />-   [Protected](../../../visual-basic/language-reference/modifiers/protected.md). Only code within the delegate's class or a derived class can access it.<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md). Only code within the same assembly can access the delegate.<br />- [Private](../../../visual-basic/language-reference/modifiers/private.md). Only code within the element that declares the delegate can access it.<br /><br /> - [Protected Friend](../../language-reference/modifiers/protected-friend.md) Only code within the delegate's class, a derived class, or the same assembly can access the delegate. <br />- [Private Protected](../../language-reference/modifiers/private-protected.md) Only code within the delegate's class or in a derived class in the same assembly can access the delegate. |  
-|`Shadows`|Необязательный. Indicates that this delegate redeclares and hides an identically named programming element, or set of overloaded elements, in a base class. Можно скрыть любой тип объявленного элемента, используя любой другой тип.<br /><br /> Скрытый элемент недоступен из производного класса, который его скрывает, за исключением тех классов, из которых недоступен скрывающий элемент. For example, if a `Private` element shadows a base class element, code that does not have permission to access the `Private` element accesses the base class element instead.|  
-|`Sub`|Optional, but either `Sub` or `Function` must appear. Declares this procedure as a delegate `Sub` procedure that does not return a value.|  
-|`Function`|Optional, but either `Sub` or `Function` must appear. Declares this procedure as a delegate `Function` procedure that returns a value.|  
-|`name`|Обязательный. Name of the delegate type; follows standard variable naming conventions.|  
-|`typeparamlist`|Необязательный. List of type parameters for this delegate. Multiple type parameters are separated by commas. Optionally, each type parameter can be declared variant by using `In` and `Out` generic modifiers. You must enclose the [Type List](../../../visual-basic/language-reference/statements/type-list.md) in parentheses and introduce it with the `Of` keyword.|  
-|`parameterlist`|Необязательный. List of parameters that are passed to the procedure when it is called. You must enclose the [Parameter List](../../../visual-basic/language-reference/statements/parameter-list.md) in parentheses.|  
-|`type`|Required if you specify a `Function` procedure. Data type of the return value.|  
+|`attrlist`|Необязательно. Список атрибутов, применяемых к этому делегату. Несколько атрибутов разделяются запятыми. [Список атрибутов](../../../visual-basic/language-reference/statements/attribute-list.md) необходимо заключить в угловые скобки ("`<`" и "`>`").|  
+|`accessmodifier`|Необязательно. Указывает, какой код может получить доступ к делегату. Ниже указаны доступные значения.<br /><br /> - [общедоступная](../../../visual-basic/language-reference/modifiers/public.md). Любой код, который может получить доступ к элементу, который объявляет делегат, может получить к нему доступ.<br />-   [защищено](../../../visual-basic/language-reference/modifiers/protected.md). Доступ к нему могут получить только код внутри класса делегата или производного класса.<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md). Доступ к делегату могут получить только код в той же сборке.<br />- [закрытый](../../../visual-basic/language-reference/modifiers/private.md). Только код внутри элемента, объявляющего делегат, может получить к нему доступ.<br /><br /> - [защищенный дружественный](../../language-reference/modifiers/protected-friend.md) код только внутри класса делегата, производного класса или той же сборки может получить доступ к делегату. <br />- [закрытый защищенный](../../language-reference/modifiers/private-protected.md) код в классе делегата или в производном классе в той же сборке может получить доступ к делегату. |  
+|`Shadows`|Необязательно. Указывает, что этот делегат повторно объявляет и скрывает идентично именованный элемент программирования или набор перегруженных элементов в базовом классе. Можно скрыть любой тип объявленного элемента, используя любой другой тип.<br /><br /> Скрытый элемент недоступен из производного класса, который его скрывает, за исключением тех классов, из которых недоступен скрывающий элемент. Например, если элемент `Private` затеняет элемент базового класса, код, который не имеет разрешения на доступ к элементу `Private`, вместо этого обращается к элементу базового класса.|  
+|`Sub`|Необязательно, но должен появиться либо `Sub`, либо `Function`. Объявляет эту процедуру как делегат `Sub` процедуру, которая не возвращает значение.|  
+|`Function`|Необязательно, но должен появиться либо `Sub`, либо `Function`. Объявляет эту процедуру как делегат `Function` процедуру, возвращающую значение.|  
+|`name`|Обязательно. Имя типа делегата; соответствует стандартным соглашениям об именовании переменных.|  
+|`typeparamlist`|Необязательно. Список параметров типа для этого делегата. Несколько параметров типа разделяются запятыми. При необходимости каждый параметр типа можно объявить как Variant с помощью `In` и `Out` универсальных модификаторов. Необходимо заключить [список типов](../../../visual-basic/language-reference/statements/type-list.md) в круглые скобки и ввести ключевое слово `Of`.|  
+|`parameterlist`|Необязательно. Список параметров, которые передаются в процедуру при ее вызове. [Список параметров](../../../visual-basic/language-reference/statements/parameter-list.md) необходимо заключить в круглые скобки.|  
+|`type`|Требуется, если указана процедура `Function`. Тип данных возвращаемого значения.|  
   
 ## <a name="remarks"></a>Заметки  
- The `Delegate` statement defines the parameter and return types of a delegate class. Any procedure with matching parameters and return types can be used to create an instance of this delegate class. The procedure can then later be invoked by means of the delegate instance, by calling the delegate's `Invoke` method.  
+ Оператор `Delegate` определяет параметры и возвращаемые типы класса делегата. Для создания экземпляра этого класса делегата можно использовать любую процедуру с соответствующими параметрами и типами возвращаемых данных. Затем процедуру можно вызвать с помощью экземпляра делегата, вызвав метод `Invoke` делегата.  
   
- Delegates can be declared at the namespace, module, class, or structure level, but not within a procedure.  
+ Делегаты могут быть объявлены на уровне пространства имен, модуля, класса или структуры, но не внутри процедуры.  
   
  Каждый класс делегата определяет конструктор, которому передается спецификация метода объекта. Аргумент конструктора делегата должен быть ссылкой на метод или лямбда-выражение.  
   
@@ -60,7 +60,7 @@ Used to declare a delegate. A delegate is a reference type that refers to a `Sha
  и [делегатах](../../../visual-basic/programming-guide/language-features/delegates/index.md).  
   
 ## <a name="example"></a>Пример  
- The following example uses the `Delegate` statement to declare a delegate for operating on two numbers and returning a number. The `DelegateTest` method takes an instance of a delegate of this type and uses it to operate on pairs of numbers.  
+ В следующем примере оператор `Delegate` используется для объявления делегата для работы с двумя числами и возвращения числа. Метод `DelegateTest` принимает экземпляр делегата этого типа и использует его для работы с парами чисел.  
   
  [!code-vb[VbVbalrDelegates#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#14)]  
   

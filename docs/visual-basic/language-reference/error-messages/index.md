@@ -26,7 +26,7 @@ ms.locfileid: "74353711"
  Сведения о способах устранения некоторых ошибок можно найти в статье [Additional Resources for Visual Basic Programmers](../../../visual-basic/getting-started/additional-resources.md) (Дополнительные ресурсы для программирования на Visual Basic).  
   
 ## <a name="run-time-errors"></a>Ошибки времени выполнения  
- If a Visual Basic application tries to perform an action that the system can't execute, a run-time error occurs, and Visual Basic throws an `Exception` object. Visual Basic can generate custom errors of any data type, including `Exception` objects, by using the `Throw` statement. Приложение может идентифицировать ошибки, отображая номер ошибки и сообщение перехваченного исключения. Если ошибка не будет перехвачена, приложение завершается.  
+ Если Visual Basic приложение пытается выполнить действие, которое система не может выполнить, возникает ошибка времени выполнения, а Visual Basic создает объект `Exception`. Visual Basic могут формировать пользовательские ошибки любого типа данных, включая `Exception` объекты, с помощью инструкции `Throw`. Приложение может идентифицировать ошибки, отображая номер ошибки и сообщение перехваченного исключения. Если ошибка не будет перехвачена, приложение завершается.  
   
  Код может перехватывать и проверять ошибки времени выполнения. Если вы заключите код, создающий ошибку, в блок `Try`, вы сможете перехватить любую созданную ошибку в соответствующем блоке `Catch`. Сведения о том, как в коде отлавливать ошибки во время выполнения и реагировать на них, можно найти в статье [Try...Catch...Finally Statement](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md) (Оператор Try...Catch...Finally).  
   

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449073"
 ---
 # <a name="isymunmanageddocumentwritersetsource-method"></a>Метод ISymUnmanagedDocumentWriter::SetSource
-Sets embedded source for a document that is being written.  
+Задает внедренный источник для записываемого документа.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -35,17 +35,17 @@ HRESULT SetSource(
   
 ## <a name="parameters"></a>Параметры  
  `sourceSize`  
- [in] A `ULONG32` that contains the size of the `source` buffer.  
+ окне `ULONG32`, который содержит размер буфера `source`.  
   
  `source`  
- [in] The buffer that stores the embedded source.  
+ окне Буфер, в котором хранится внедренный источник.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK, если метод выполнен. в противном случае E_FAIL или другой код ошибки.  
   
 ## <a name="requirements"></a>Требования  
- **Header:** CorSym.idl, CorSym.h  
+ **Заголовок:** Корсим. idl, Корсим. h  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс ISymUnmanagedDocumentWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocumentwriter-interface.md)

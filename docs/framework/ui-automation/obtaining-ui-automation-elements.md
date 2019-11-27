@@ -5,16 +5,16 @@ helpviewer_keywords:
 - UI Automation, obtaining elements
 - elements, UI Automation, obtaining
 ms.assetid: c2caaf45-e59c-42a1-bc9b-77a6de520171
-ms.openlocfilehash: 46de1b5de8ef7585919d331e6bf4b1537739ae1d
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 0ae4694e2efb6f6c51b279adf2851baf38785c8b
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71042889"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446887"
 ---
 # <a name="obtaining-ui-automation-elements"></a>Получение элементов автоматизации пользовательского интерфейса
 > [!NOTE]
-> Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Последние сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]см. в разделе [API службы автоматизации Windows: Модель автоматизации](https://go.microsoft.com/fwlink/?LinkID=156746)пользовательского интерфейса.  
+> Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Последние сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]см. в разделе [API автоматизации Windows. Автоматизация пользовательского интерфейса](/windows/win32/winauto/entry-uiauto-win32).  
   
  В этом разделе описываются различные способы получения объектов <xref:System.Windows.Automation.AutomationElement> для элементов [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] .  
   
@@ -22,7 +22,7 @@ ms.locfileid: "71042889"
 > Если клиентское приложение может пытаться искать элементы в собственном пользовательском интерфейсе, вы должны выполнять все вызовы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] в отдельном потоке. Для получения дополнительной информации см. [UI Automation Threading Issues](ui-automation-threading-issues.md).  
   
 <a name="The_Root_Element"></a>   
-## <a name="root-element"></a>Корневой элемент  
+## <a name="root-element"></a>Элемент Root  
  Любой поиск объектов <xref:System.Windows.Automation.AutomationElement> должен иметь отправную точку. Это может быть любой элемент, включая рабочий стол, окно приложения или элемент управления.  
   
  Корневой элемент для рабочего стола, все элементы из которого являются потомками, получается из статического свойства <xref:System.Windows.Automation.AutomationElement.RootElement%2A?displayProperty=nameWithType> .  
@@ -31,12 +31,12 @@ ms.locfileid: "71042889"
 > В целом вы должны пытаться получить только прямые потомки <xref:System.Windows.Automation.AutomationElement.RootElement%2A>. Поиск потомков может выполнять итерацию по сотням или даже тысячам элементов, что может привести к переполнению стека. Если вы пытаетесь получить определенный элемент на более низком уровне, необходимо запустить поиск из окна приложения или из контейнера на более низком уровне.  
   
 <a name="Using_Conditions"></a>   
-## <a name="conditions"></a>Условия  
+## <a name="conditions"></a>Состояния  
  В большинстве методик, которые можно использовать для получения элементов [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , вы должны указывать объект <xref:System.Windows.Automation.Condition>, представляющий собой набор условий, определяющих, какие элементы нужно получить.  
   
  Простейшим условием является <xref:System.Windows.Automation.Condition.TrueCondition>, предопределенный объект, указывающий, что должны быть возвращены все элементы в области поиска. Условие<xref:System.Windows.Automation.Condition.FalseCondition>, противоположное <xref:System.Windows.Automation.Condition.TrueCondition>, менее целесообразно, так как может помешать поиску каких-либо элементов.  
   
- Три прочих предопределенных условия можно использовать отдельно или в сочетании с другими условиями: <xref:System.Windows.Automation.Automation.ContentViewCondition>, <xref:System.Windows.Automation.Automation.ControlViewCondition>и <xref:System.Windows.Automation.Automation.RawViewCondition>. Условие<xref:System.Windows.Automation.Automation.RawViewCondition>, используемое само по себе, эквивалентно <xref:System.Windows.Automation.Condition.TrueCondition>, так как оно не фильтрует элементы по их свойству <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsControlElement%2A> или <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsContentElement%2A>.  
+ Три прочих предопределенных условия можно использовать отдельно или в сочетании с другими условиями: <xref:System.Windows.Automation.Automation.ContentViewCondition>, <xref:System.Windows.Automation.Automation.ControlViewCondition>и <xref:System.Windows.Automation.Automation.RawViewCondition>. Условие<xref:System.Windows.Automation.Automation.RawViewCondition>, используемое само по себе, эквивалентно <xref:System.Windows.Automation.Condition.TrueCondition>, так как оно не фильтрует элементы по их свойству <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsControlElement%2A> или <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsContentElement%2A> .  
   
  Прочие условия создаются из одного или нескольких объектов <xref:System.Windows.Automation.PropertyCondition> , каждый из которых задает значение свойства. Например, <xref:System.Windows.Automation.PropertyCondition> может указывать, что элемент включен или что он поддерживает определенный шаблон элемента управления.  
   
@@ -96,7 +96,7 @@ ms.locfileid: "71042889"
 ### <a name="from-the-focused-control"></a>Из элемента управления с фокусом  
  Вы можете получить <xref:System.Windows.Automation.AutomationElement> , представляющий элемент управления с фокусом, из статического свойства <xref:System.Windows.Automation.AutomationElement.FocusedElement%2A> .  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Нахождение элемента модели автоматизации пользовательского интерфейса в зависимости от состояния свойства](find-a-ui-automation-element-based-on-a-property-condition.md)
 - [Навигация между элементами модели автоматизации пользовательского интерфейса с помощью TreeWalker](navigate-among-ui-automation-elements-with-treewalker.md)

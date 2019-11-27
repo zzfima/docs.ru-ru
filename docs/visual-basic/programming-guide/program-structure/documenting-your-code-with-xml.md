@@ -15,29 +15,29 @@ ms.locfileid: "74347443"
 ---
 # <a name="documenting-your-code-with-xml-visual-basic"></a>Документирование кода с помощью XML (Visual Basic)
 
-In Visual Basic, you can document your code using XML
+В Visual Basic можно документировать код с помощью XML
 
-## <a name="xml-documentation-comments"></a>Комментарии XML-документации
+## <a name="xml-documentation-comments"></a>Комментарии к XML-документации
 
-Visual Basic provides an easy way to automatically create XML documentation for projects. You can automatically generate an XML skeleton for your types and members, and then provide summaries, descriptive documentation for each parameter, and other remarks. With the appropriate setup, the XML documentation is automatically emitted into an XML file with the same name as your project and the .xml extension. Дополнительные сведения см. в разделе [-doc](../../../visual-basic/reference/command-line-compiler/doc.md).
+Visual Basic предоставляет простой способ автоматического создания XML-документации для проектов. Можно автоматически создать XML-схему для типов и членов, а затем предоставить сводные данные, описательную документацию для каждого параметра и другие замечания. При соответствующей настройке XML-документация автоматически отправляется в XML-файл с тем же именем, что и у проекта, и с расширением XML. Дополнительные сведения см. в разделе [-doc](../../../visual-basic/reference/command-line-compiler/doc.md).
 
-The XML file can be consumed or otherwise manipulated as XML. This file is located in the same directory as the output .exe or .dll file of your project.
+XML-файл можно использовать или иным образом манипулировать как XML. Этот файл находится в том же каталоге, что и файл Output. exe или. DLL проекта.
 
-XML documentation starts with `'''`. Обработка этих комментариев имеет некоторые ограничения.
+Документация по XML начинается с `'''`. Обработка этих комментариев имеет некоторые ограничения.
 
-- Документация должна представлять собой XML с правильным форматом. If the XML is not well formed, a warning is generated and the documentation file contains a comment saying that an error was encountered.
+- Документация должна представлять собой XML с правильным форматом. Если XML сформирован неправильно, создается предупреждение, а файл документации содержит комментарий, в котором говорится, что обнаружена ошибка.
 
-- Разработчики могут создавать собственные наборы тегов. There is a recommended set of tags (see "Related Sections" in this topic). Некоторые рекомендуемые теги имеют особые значения.
+- Разработчики могут создавать собственные наборы тегов. Рекомендуемый набор тегов (см. раздел "связанные разделы" в этой статье). Некоторые рекомендуемые теги имеют особые значения.
 
-  - Тег \<param> используется для описания параметров. При использовании этого тега компилятор проверяет, что параметр существует и все параметры описаны в документации. If the verification fails, the compiler issues a warning.
+  - Тег \<param> используется для описания параметров. При использовании этого тега компилятор проверяет, что параметр существует и все параметры описаны в документации. Если проверка завершается неудачно, компилятор выдает предупреждение.
 
-  - Атрибут `cref` может быть присоединен к любому тегу для предоставления ссылки на элемент кода. Компилятор проверяет наличие этого элемента кода. If the verification fails, the compiler issues a warning. The compiler also respects any `Imports` statements when looking for a type described in the `cref` attribute.
+  - Атрибут `cref` может быть присоединен к любому тегу для предоставления ссылки на элемент кода. Компилятор проверяет наличие этого элемента кода. Если проверка завершается неудачно, компилятор выдает предупреждение. Компилятор также учитывает любые операторы `Imports` при поиске типа, описанного в атрибуте `cref`.
 
-  - The \<summary> tag is used by IntelliSense in Visual Studio to display additional information about a type or member.
+  - Тег \<Summary > используется технологией IntelliSense в Visual Studio для отображения дополнительных сведений о типе или члене.
 
 ## <a name="related-sections"></a>Связанные разделы
 
-For details on creating an XML file with documentation comments, see the following topics:
+Дополнительные сведения о создании XML-файла с комментариями к документации см. в следующих разделах:
 
 - [-doc](../../../visual-basic/reference/command-line-compiler/doc.md)
 

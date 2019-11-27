@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446981"
 ---
 # <a name="importfile2-method"></a>Метод ImportFile2
-Imports assemblies and unbound modules. This method is like [ImportFile Method](importfile-method.md), but works even if the file being imported does not exist on disk.  
+Импортирует сборки и непривязанные модули. Этот метод похож на [Метод ImportFile](importfile-method.md), но работает даже в том случае, если импортируемый файл не существует на диске.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,31 +40,31 @@ HRESULT ImportFile2(
   
 ## <a name="parameters"></a>Параметры  
  `pszFilename`  
- Name of file to be imported.  
+ Имя импортируемого файла.  
   
  `pszTargetName`  
- Optional output file name that can be used to rename the file as it is linked into the assembly.  
+ Необязательное имя выходного файла, которое можно использовать для переименования файла, так как он связан с сборкой.  
   
  `pAssemblyScopeIn`  
- Optional scope [IMetaDataAssemblyImport Interface](../metadata/imetadataassemblyimport-interface.md) interface.  
+ Необязательный интерфейс интерфейса [IMetaDataAssemblyImport](../metadata/imetadataassemblyimport-interface.md) с областью действия.  
   
  `fSmartImport`  
- If TRUE, ImportTypes is used, otherwise importing must be performed manually.  
+ Если значение равно TRUE, используется ImportTypes, в противном случае импорт должен выполняться вручную.  
   
  `pImportToken`  
- Receives the ID for the file or assembly.  
+ Получает идентификатор для файла или сборки.  
   
  `ppAssemblyScope`  
- Receives the [IMetaDataAssemblyImport Interface](../metadata/imetadataassemblyimport-interface.md) interface. NULL if the file is not an assembly.  
+ Получает интерфейс [интерфейса IMetaDataAssemblyImport](../metadata/imetadataassemblyimport-interface.md) . Значение NULL, если файл не является сборкой.  
   
  `pdwCountOfScopes`  
- Receives the found of files and/or scopes imported.  
+ Получает найденные файлы и/или импортированные области.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Returns S_OK if the method succeeds.  
+ Возвращает S_OK, если метод завершается с ошибкой.  
   
 ## <a name="requirements"></a>Требования  
- Requires alink.h.  
+ Требуется ALink. h.  
   
 ## <a name="see-also"></a>См. также
 

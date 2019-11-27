@@ -41,38 +41,38 @@ HRESULT SetAssemblyProps (
   
 ## <a name="parameters"></a>Параметры  
  `pma`  
- [in] The metadata token that specifies the `Assembly` metadata structure to be modified.  
+ окне Маркер метаданных, указывающий структуру метаданных `Assembly`, которую необходимо изменить.  
   
  `pbPublicKey`  
- [in] A pointer to the public key of the publisher of the assembly.  
+ окне Указатель на открытый ключ издателя сборки.  
   
  `cbPublicKey`  
- [in] The size in bytes of `pbPublicKey`.  
+ окне Размер в байтах `pbPublicKey`.  
   
  `ulHashAlgId`  
- [in] The identifier for the hash algorithm used to hash the assembly files.  
+ окне Идентификатор хэш-алгоритма, используемого для хэширования файлов сборки.  
   
  `szName`  
- [in] The human-readable text name of the assembly.  
+ окне Понятное для человека текстовое имя сборки.  
   
  `pMetaData`  
- [in] A pointer to the ASSEMBLYMETADATA that contains version, platform, and locale information for the assembly.  
+ окне Указатель на ASSEMBLYMETADATA, содержащий сведения о версии, платформе и локали для сборки.  
   
  `dwAssemblyFlags`  
- [in] A bitwise combination of [AssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyflags-enumeration.md) values that specify various attributes of the assembly.  
+ окне Побитовое сочетание значений [AssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyflags-enumeration.md) , задающих различные атрибуты сборки.  
   
-## <a name="remarks"></a>Заметки  
- To create an `Assembly` metadata structure, use the [IMetaDataAssemblyEmit::DefineAssembly](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineassembly-method.md) method.  
+## <a name="remarks"></a>Примечания  
+ Чтобы создать `Assembly` структуру метаданных, используйте метод [IMetaDataAssemblyEmit::D ефинеассембли](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineassembly-method.md) .  
   
 ## <a name="requirements"></a>Требования  
- **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформа:** См. раздел [требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Заголовок:** COR. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Библиотека:** Используется в качестве ресурса в MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс IMetaDataAssemblyEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445522"
 ---
 # <a name="idebugautoattachautoattach-method"></a>Метод IDebugAutoAttach::AutoAttach
-Performs server-invoked debugger auto attach.  
+Выполняет вызванное сервером автоматическое присоединение отладчика.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,26 +40,26 @@ HRESULT AutoAttach
   
 ## <a name="parameters"></a>Параметры  
  `guidPort`  
- [in] Always set to `GUID_NULL`.  
+ окне Всегда имеет значение `GUID_NULL`.  
   
  `dwPid`  
- [in] Process ID, normally retrieved with the `GetCurrentProcessId` function.  
+ окне Идентификатор процесса, обычно полученный с помощью функции `GetCurrentProcessId`.  
   
  `dwProgramType`  
- [in] Program type: `AUTOATTACH_PROGRAM_WIN32`, `AUTOATTACH_PROGRAM_COMPLUS`, or `AUTOATTACH_PROGRAM_UNKNOWN`.  
+ окне Тип программы: `AUTOATTACH_PROGRAM_WIN32`, `AUTOATTACH_PROGRAM_COMPLUS`или `AUTOATTACH_PROGRAM_UNKNOWN`.  
   
  `dwProgramId`  
- [in] Program ID.  
+ окне Идентификатор программы.  
   
  `pszSessionId`  
- [in] String passed by the debug verb.  
+ окне Строка, передаваемая командой Debug.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- S_OK if the method succeeds.  
+ S_OK, если метод выполнен.  
   
 ## <a name="requirements"></a>Требования  
- **Header:** DbgAutoAttach.h  
+ **Заголовок:** Дбгаутоаттач. h  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс IDebugAutoAttach](../../../../docs/framework/unmanaged-api/diagnostics/idebugautoattach-interface.md)

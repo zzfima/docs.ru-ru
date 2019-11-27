@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74426649"
 ---
 # <a name="imetadatatablesgetuserstringheapsize-method"></a>Метод IMetaDataTables::GetUserStringHeapSize
-Gets the size, in bytes, of the user string heap.  
+Возвращает размер (в байтах) кучи пользовательской строки.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -35,14 +35,14 @@ HRESULT GetUserStringHeapSize (
   
 ## <a name="parameters"></a>Параметры  
  `pcbBlobs`  
- [out] A pointer to the size, in bytes, of the user string heap.  
+ заполняет Указатель на размер (в байтах) кучи пользовательской строки.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Заголовок:** COR. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Библиотека:** Используется в качестве ресурса в MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74447240"
 ---
 # <a name="getpublickeytoken-method"></a>Метод GetPublicKeyToken
-Retrieves the public key token for a given keyfile or key container.  
+Извлекает токен открытого ключа для данного ключа или контейнера ключей.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,24 +37,24 @@ HRESULT GetPublicKeyToken(
   
 ## <a name="parameters"></a>Параметры  
  `pszKeyFile`  
- Filename of the key.  
+ Имя файла ключа.  
   
  `pszKeyContainer`  
- Name of the key container.  
+ Имя контейнера ключей.  
   
  `pvPublicKeyToken`  
- Address where key token is to be stored.  
+ Адрес, по которому должен храниться токен ключа.  
   
  `pcbPublicKeyToken`  
- Specifies the size, in bytes, of the buffer indicated by `pvPublicKeyToken`. Upon return, contains actual number of bytes used.  
+ Задает размер (в байтах) буфера, указанного `pvPublicKeyToken`. После возврата содержит фактическое число используемых байтов.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Returns S_OK if the method succeeds.  
+ Возвращает S_OK, если метод завершается с ошибкой.  
   
 ## <a name="requirements"></a>Требования  
- Requires alink.h.  
+ Требуется ALink. h.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс IALink2](ialink2-interface.md)
 - [Интерфейс IALink](ialink-interface.md)

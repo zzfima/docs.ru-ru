@@ -59,12 +59,12 @@ HRESULT GetModuleInfo2(
  [out] Указатель на идентификатор родительской сборки модуля.  
   
  `pdwModuleFlags`  
- [out] A bitmask of values from the [COR_PRF_MODULE_FLAGS](../../../../docs/framework/unmanaged-api/profiling/cor-prf-module-flags-enumeration.md) enumeration that specify the properties of the module.  
+ заполняет Битовая маска значений из перечисления [COR_PRF_MODULE_FLAGS](../../../../docs/framework/unmanaged-api/profiling/cor-prf-module-flags-enumeration.md) , определяющая свойства модуля.  
   
 ## <a name="remarks"></a>Заметки  
- Для динамических модулей параметр `szName` является именем метаданных модуля, а базовый адрес равен 0 (нулю). Имя метаданных — это значение в столбце Name таблицы Module в метаданных. This is also exposed as the <xref:System.Reflection.Module.ScopeName%2A?displayProperty=nameWithType> property to managed code, and as the `szName` parameter of the [IMetaDataImport::GetScopeProps](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-getscopeprops-method.md) method to unmanaged metadata client code.  
+ Для динамических модулей параметр `szName` является именем метаданных модуля, а базовый адрес равен 0 (нулю). Имя метаданных — это значение в столбце Name таблицы Module в метаданных. Это также предоставляется в качестве свойства <xref:System.Reflection.Module.ScopeName%2A?displayProperty=nameWithType> для управляемого кода, а также в качестве параметра `szName` метода [IMetaDataImport:: жетскопепропс](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-getscopeprops-method.md) в неуправляемый клиентский код метаданных.  
   
- Although the `GetModuleInfo2` method may be called as soon as the module's ID exists, the ID of the parent assembly will not be available until the profiler receives the [ICorProfilerCallback::ModuleAttachedToAssembly](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleattachedtoassembly-method.md) callback.  
+ Несмотря на то, что метод `GetModuleInfo2` может вызываться сразу после существования идентификатора модуля, идентификатор родительской сборки будет недоступен до тех пор, пока профилировщик не получит обратный вызов [ICorProfilerCallback:: модулеаттачедтоассембли](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleattachedtoassembly-method.md) .  
   
  После возврата метода `GetModuleInfo2` необходимо убедиться, что буфер `szName` был достаточно велик, чтобы вместить в себя полное имя файла модуля. Для этого сравните значение, на которое указывает параметр `pcchName`, со значением параметра `cchName`. Если параметр `pcchName` указывает на значение, превышающее значение `cchName`, выделите буфер `szName` большего размера, обновите параметр `cchName`, задав новый, больший размер, и вызовите метод `GetModuleInfo2` снова.  
   

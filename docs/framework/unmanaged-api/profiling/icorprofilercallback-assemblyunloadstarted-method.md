@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445138"
 ---
 # <a name="icorprofilercallbackassemblyunloadstarted-method"></a>Метод ICorProfilerCallback::AssemblyUnloadStarted
-Notifies the profiler that an assembly is being unloaded.  
+Уведомляет профилировщик о выгрузке сборки.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -34,10 +34,10 @@ HRESULT AssemblyUnloadStarted(
   
 ## <a name="parameters"></a>Параметры  
  `assemblyId`  
- [in] Identifies the assembly that is being unloaded.  
+ окне Определяет выгрузку сборки.  
   
 ## <a name="remarks"></a>Заметки  
- The value of `assemblyId` is not valid for an information request after the `AssemblyUnloadStarted` method returns — this is the profiler's last chance to get information about this assembly.  
+ Значение `assemblyId` недопустимо для информационного запроса после возврата метода `AssemblyUnloadStarted` — это последний шанс профилировщика получить сведения об этой сборке.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  

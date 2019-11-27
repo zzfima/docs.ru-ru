@@ -22,27 +22,27 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74341212"
 ---
 # <a name="differences-between-properties-and-variables-in-visual-basic"></a>Различия между свойствами и переменными в Visual Basic
-Variables and properties both represent values that you can access. However, there are differences in storage and implementation.  
+Переменные и свойства представляют значения, к которым можно получить доступ. Однако существуют различия в хранении и реализации.  
   
 ## <a name="variables"></a>Переменные  
- A *variable* corresponds directly to a memory location. You define a variable with a single declaration statement. A variable can be a *local variable*, defined inside a procedure and available only within that procedure, or it can be a *member variable*, defined in a module, class, or structure but not inside any procedure. A member variable is also called a *field*.  
+ *Переменная* непосредственно соответствует расположению в памяти. Переменная определяется с помощью одного оператора объявления. Переменной может быть *Локальная переменная*, определенная внутри процедуры и доступная только внутри этой процедуры, или *переменная-член*, определенная в модуле, классе или структуре, но не внутри какой-либо процедуры. Переменная-член также называется *полем*.  
   
 ## <a name="properties"></a>Свойства  
- A *property* is a data element defined on a module, class, or structure. You define a property with a code block between the `Property` and `End Property` statements. The code block contains a `Get` procedure, a `Set` procedure, or both. These procedures are called *property procedures* or *property accessors*. In addition to retrieving or storing the property's value, they can also perform custom actions, such as updating an access counter.  
+ *Свойство* — это элемент данных, определенный для модуля, класса или структуры. Вы определяете свойство с блоком кода между операторами `Property` и `End Property`. Блок кода содержит `Get`ую процедуру, `Set`ую процедуру или и то, и другое. Эти процедуры называются *процедурами свойств* или *методами доступа к свойствам*. Помимо извлечения или сохранения значения свойства, они также могут выполнять пользовательские действия, такие как обновление счетчика доступа.  
   
-## <a name="differences"></a>Differences  
- The following table shows some important differences between variables and properties.  
+## <a name="differences"></a>Разница  
+ В следующей таблице показаны некоторые важные различия между переменными и свойствами.  
   
-|Point of difference|Переменная|свойство;|  
+|Точка разности|Переменная|Свойство|  
 |-------------------------|--------------|--------------|  
-|Объявление|Single declaration statement|Series of statements in a code block|  
-|Реализация|Single storage location|Executable code (property procedures)|  
-|Хранилище|Directly associated with variable's value|Typically has internal storage not available outside the property's containing class or module<br /><br /> Property's value might or might not exist as a stored element <sup>1</sup>|  
-|Executable code|Отсутствуют|Must have at least one procedure|  
-|Read and write access|Read/write or read-only|Read/write, read-only, or write-only|  
-|Custom actions (in addition to accepting or returning value)|Not possible|Can be performed as part of setting or retrieving property value|  
+|Объявление|Оператор Single объявления|Последовательность операторов в блоке кода|  
+|Реализация|Одно место хранения|Исполняемый код (процедуры свойств)|  
+|Хранилище|Напрямую связано со значением переменной|Обычно внутренне хранилище недоступно за пределами класса или модуля, содержащего свойство<br /><br /> Значение свойства может быть или не существовать как сохраненный элемент <sup>1</sup>|  
+|Исполняемый код|Нет|Должен иметь по крайней мере одну процедуру|  
+|Доступ для чтения и записи|Чтение, запись или только чтение|Чтение и запись, только чтение или только запись|  
+|Пользовательские действия (в дополнение к принятию или возврату значения)|Невозможно|Может выполняться как часть задания или извлечения значения свойства|  
   
- <sup>1</sup> Unlike a variable, the value of a property might not correspond directly to a single item of storage. The storage might be split into pieces for convenience or security, or the value might be stored in an encrypted form. In these cases the `Get` procedure would assemble the pieces or decrypt the stored value, and the `Set` procedure would encrypt the new value or split it into the constituent storage. A property value might be ephemeral, like time of day, in which case the `Get` procedure would calculate it on the fly each time you access the property.  
+ <sup>1</sup> в отличие от переменной, значение свойства может не соответствовать непосредственно одному элементу хранилища. Хранилище может быть разбито на части для удобства или безопасности, а значение может храниться в зашифрованном виде. В этих случаях `Get` процедура собрала фрагменты или расшифрует сохраненное значение, а процедура `Set` будет шифровать новое значение или разбить его на составное хранилище. Значение свойства может быть временным, как и время суток. в этом случае `Get` процедура будет вычислять ее при каждом обращении к свойству.  
   
 ## <a name="see-also"></a>См. также
 
@@ -53,6 +53,6 @@ Variables and properties both represent values that you can access. However, the
 - [Практическое руководство. Создание свойства](./how-to-create-a-property.md)
 - [Практическое руководство. Объявление свойства со смешанным уровнем доступа](./how-to-declare-a-property-with-mixed-access-levels.md)
 - [Практическое руководство. Вызов процедуры свойства](./how-to-call-a-property-procedure.md)
-- [How to: Declare and Call a Default Property in Visual Basic](./how-to-declare-and-call-a-default-property.md)
+- [Инструкции. объявление и вызов свойства по умолчанию в Visual Basic](./how-to-declare-and-call-a-default-property.md)
 - [Практическое руководство. Запись значения в свойство](./how-to-put-a-value-in-a-property.md)
 - [Практическое руководство. Получение значения из свойства](./how-to-get-a-value-from-a-property.md)

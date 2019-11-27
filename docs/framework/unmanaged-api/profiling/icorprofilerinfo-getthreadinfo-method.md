@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449891"
 ---
 # <a name="icorprofilerinfogetthreadinfo-method"></a>Метод ICorProfilerInfo::GetThreadInfo
-Gets the current Win32 thread identity for the specified thread.  
+Возвращает текущее удостоверение потока Win32 для указанного потока.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -35,10 +35,10 @@ HRESULT GetThreadInfo(
   
 ## <a name="parameters"></a>Параметры  
  `threadId`  
- [in] The ID of the thread for which to get the current Win32 ID.  
+ окне Идентификатор потока, для которого необходимо получить текущий идентификатор Win32.  
   
  `pdwWin32ThreadId`  
- [out] A pointer to the specified thread's current Win32 thread ID.  
+ заполняет Указатель на текущий идентификатор потока Win32 указанного потока.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
@@ -49,6 +49,6 @@ HRESULT GetThreadInfo(
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

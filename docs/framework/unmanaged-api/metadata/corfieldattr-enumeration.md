@@ -60,30 +60,30 @@ typedef enum CorFieldAttr {
   
 |Член|Описание|  
 |------------|-----------------|  
-|`fdFieldAccessMask`|Specifies accessibility information.|  
-|`fdPrivateScope`|Specifies that the field cannot be referenced.|  
-|`fdPrivate`|Specifies that the field is accessible only by its parent type.|  
-|`fdFamANDAssem`|Specifies that the field is accessible by derived classes in its assembly.|  
-|`fdAssembly`|Specifies that the field is accessible by all types in its assembly.|  
-|`fdFamily`|Specifies that the field is accessible only by its type and derived classes.|  
-|`fdFamORAssem`|Specifies that the field is accessible by derived classes and by all types in its assembly.|  
-|`fdPublic`|Specifies that the field is accessible by all types with visibility of this scope.|  
-|`fdStatic`|Specifies that the field is a member of its type rather than an instance member.|  
-|`fdInitOnly`|Specifies that the field cannot be changed after it is initialized.|  
-|`fdLiteral`|Specifies that the field value is a compile-time constant.|  
-|`fdNotSerialized`|Specifies that the field is not serialized when its type is remoted.|  
-|`fdSpecialName`|Specifies that the field is special, and that its name describes how.|  
-|`fdPinvokeImpl`|Specifies that the field implementation is forwarded through PInvoke.|  
-|`fdReservedMask`|Reserved for internal use by the common language runtime.|  
-|`fdRTSpecialName`|Specifies that the common language runtime metadata internal APIs should check the encoding of the name.|  
-|`fdHasFieldMarshal`|Specifies that the field contains marshaling information.|  
-|`fdHasDefault`|Specifies that the field has a default value.|  
-|`fdHasFieldRVA`|Specifies that the field has a relative virtual address.|  
+|`fdFieldAccessMask`|Указывает сведения о специальных возможностях.|  
+|`fdPrivateScope`|Указывает, что на поле нельзя ссылаться.|  
+|`fdPrivate`|Указывает, что поле доступно только для его родительского типа.|  
+|`fdFamANDAssem`|Указывает, что поле доступно для производных классов в его сборке.|  
+|`fdAssembly`|Указывает, что поле доступно для всех типов в его сборке.|  
+|`fdFamily`|Указывает, что поле доступно только для его типа и производных классов.|  
+|`fdFamORAssem`|Указывает, что поле доступно для производных классов и всех типов в его сборке.|  
+|`fdPublic`|Указывает, что поле доступно для всех типов с видимостью этой области.|  
+|`fdStatic`|Указывает, что поле является членом его типа, а не членом экземпляра.|  
+|`fdInitOnly`|Указывает, что поле нельзя изменить после его инициализации.|  
+|`fdLiteral`|Указывает, что значение поля является константой времени компиляции.|  
+|`fdNotSerialized`|Указывает, что поле не сериализуется при удаленном типе.|  
+|`fdSpecialName`|Указывает, что поле является специальным, и что его имя описывает, как это делать.|  
+|`fdPinvokeImpl`|Указывает, что реализация поля пересылается через PInvoke.|  
+|`fdReservedMask`|Зарезервировано для внутреннего использования средой CLR.|  
+|`fdRTSpecialName`|Указывает, что внутренние API метаданных среды CLR должны проверять кодировку имени.|  
+|`fdHasFieldMarshal`|Указывает, что поле содержит сведения о маршалировании.|  
+|`fdHasDefault`|Указывает, что поле имеет значение по умолчанию.|  
+|`fdHasFieldRVA`|Указывает, что поле имеет относительный виртуальный адрес.|  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorHdr.h  
+ **Заголовок:** Корхдр. h  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

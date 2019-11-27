@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446433"
 ---
 # <a name="isymunmanagedreader2getmethodsindocument-method"></a>Метод ISymUnmanagedReader2::GetMethodsInDocument
-Gets every method that has line information in the provided document.  
+Возвращает каждый метод, имеющий сведения о строке в указанном документе.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,22 +38,22 @@ HRESULT GetMethodsInDocument(
   
 ## <a name="parameters"></a>Параметры  
  `document`  
- [in] A pointer to the document.  
+ окне Указатель на документ.  
   
  `cMethod`  
- [in] A `ULONG32` that indicates the size of the  `pRetVal` array.  
+ окне `ULONG32`, указывающий размер массива `pRetVal`.  
   
  `pcMethod`  
- [out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the methods.  
+ заполняет Указатель на `ULONG32`, который получает размер буфера, необходимый для хранения методов.  
   
  `pRetVal`  
- [out] A pointer to the buffer that receives the methods.  
+ заполняет Указатель на буфер, который получает методы.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK, если метод выполнен. в противном случае E_FAIL или другой код ошибки.  
   
 ## <a name="requirements"></a>Требования  
- **Header:** CorSym.idl, CorSym.h  
+ **Заголовок:** Корсим. idl, Корсим. h  
   
 ## <a name="see-also"></a>См. также
 

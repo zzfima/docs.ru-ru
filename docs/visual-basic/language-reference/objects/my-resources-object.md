@@ -16,64 +16,64 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350330"
 ---
 # <a name="myresources-object"></a>Объект My.Resources
-Provides properties and classes for accessing the application's resources.  
+Предоставляет свойства и классы для доступа к ресурсам приложения.  
   
 ## <a name="remarks"></a>Заметки  
- The `My.Resources` object provides access to the application's resources and lets you dynamically retrieve resources for your application. For more information, see [Managing Application Resources (.NET)](/visualstudio/ide/managing-application-resources-dotnet).  
+ Объект `My.Resources` предоставляет доступ к ресурсам приложения и позволяет динамически получать ресурсы для приложения. Дополнительные сведения см. в разделе [Управление ресурсами приложения (.NET)](/visualstudio/ide/managing-application-resources-dotnet).  
   
- The `My.Resources` object exposes only global resources. It does not provide access to resource files associated with forms. You must access the form resources from the form.  
+ Объект `My.Resources` предоставляет только глобальные ресурсы. Он не предоставляет доступ к файлам ресурсов, связанным с формами. Необходимо получить доступ к ресурсам формы из формы.  
   
- You can access the application's culture-specific resource files from the `My.Resources` object. By default, the `My.Resources` object looks up resources from the resource file that matches the culture in the <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.UICulture%2A> property. However, you can override this behavior and specify a particular culture to use for the resources. Дополнительные сведения см. в разделе [Ресурсы в приложениях для настольных систем](../../../framework/resources/index.md).  
+ Доступ к файлам ресурсов, относящимся к языку и региональным параметрам приложения, можно получить из объекта `My.Resources`. По умолчанию объект `My.Resources` ищет ресурсы из файла ресурсов, соответствующие языку и региональным параметрам в свойстве <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.UICulture%2A>. Однако это поведение можно переопределить и указать конкретный язык и региональные параметры, которые будут использоваться для ресурсов. Дополнительные сведения см. в разделе [Ресурсы в приложениях для настольных систем](../../../framework/resources/index.md).  
   
 ## <a name="properties"></a>Свойства  
- The properties of the `My.Resources` object provide read-only access to your application's resources. To add or remove resources, use the **Project Designer**. You can access resources added through the **Project Designer** by using `My.Resources.`*resourceName*.  
+ Свойства объекта `My.Resources` предоставляют доступ только для чтения к ресурсам приложения. Чтобы добавить или удалить ресурсы, используйте **Конструктор проектов**. Доступ к ресурсам, добавленным с помощью **конструктора проектов** , можно получить с помощью `My.Resources.`*resourceName*.  
   
- You can also add or remove resource files by selecting your project in **Solution Explorer** and clicking **Add New Item** or **Add Existing Item** from the **Project** menu. You can access resources added in this manner by using `My.Resources.`*resourceFileName*`.`*resourceName*.  
+ Можно также добавлять или удалять файлы ресурсов, выбрав проект в **Обозреватель решений** и выбрав пункт **Добавить новый элемент** или **Добавить существующий элемент** в меню **проект** . Доступ к ресурсам, добавленным таким способом, можно получить с помощью `My.Resources.`*ресаурцефиленаме*`.`*resourceName*.  
   
- Each resource has a name, category, and value, and these resource settings determine how the property to access the resource appears in the `My.Resources` object. For resources added in the **Project Designer**:  
+ Каждый ресурс имеет имя, категорию и значение, и эти параметры ресурсов определяют, как свойство для доступа к ресурсу отображается в объекте `My.Resources`. Для ресурсов, добавленных в **конструкторе проектов**:  
   
-- The name determines the name of the property,  
+- Имя определяет имя свойства,  
   
-- The resource data is the value of the property,  
+- Данные ресурса являются значением свойства,  
   
-- The category determines the type of the property:  
+- Категория определяет тип свойства:  
   
-|Категория|Property data type|  
+|Категория|Тип данных свойства|  
 |---|---|  
 |**Строки**|[String](../../../visual-basic/language-reference/data-types/string-data-type.md)|  
 |**Изображения**|<xref:System.Drawing.Bitmap>|  
 |**Значки**|<xref:System.Drawing.Icon>|  
-|**Звук**|<xref:System.IO.UnmanagedMemoryStream><br /><br /> The <xref:System.IO.UnmanagedMemoryStream> class derives from the <xref:System.IO.Stream> class, so it can be used with methods that take streams, such as the <xref:Microsoft.VisualBasic.Devices.Audio.Play%2A> method.|  
-|**Файлы**|-   [String](../../../visual-basic/language-reference/data-types/string-data-type.md) for text files.<br />-   <xref:System.Drawing.Bitmap> for image files.<br />-   <xref:System.Drawing.Icon> for icon files.<br />-   <xref:System.IO.UnmanagedMemoryStream> for sound files.|  
-|**Другое**|Determined by the information in the designer's **Type** column.|  
+|**Звук**|<xref:System.IO.UnmanagedMemoryStream><br /><br /> Класс <xref:System.IO.UnmanagedMemoryStream> является производным от класса <xref:System.IO.Stream>, поэтому его можно использовать с методами, принимающими потоки, например метод <xref:Microsoft.VisualBasic.Devices.Audio.Play%2A>.|  
+|**Файлы**|-   [строка](../../../visual-basic/language-reference/data-types/string-data-type.md) для текстовых файлов.<br />-   <xref:System.Drawing.Bitmap> для файлов изображений.<br />для файлов значков -   <xref:System.Drawing.Icon>.<br />-   <xref:System.IO.UnmanagedMemoryStream> звуковых файлов.|  
+|**Другое**|Определяется сведениями в столбце **типа** конструктора.|  
   
 ## <a name="classes"></a>Классы  
- The `My.Resources` object exposes each resource file as a class with shared properties. The class name is the same as the name of the resource file. As described in the previous section, the resources in a resource file are exposed as properties in the class.  
+ Объект `My.Resources` предоставляет каждый файл ресурсов как класс с общими свойствами. Имя класса совпадает с именем файла ресурсов. Как описано в предыдущем разделе, ресурсы в файле ресурсов предоставляются как свойства в классе.  
   
 ## <a name="example"></a>Пример  
- This example sets the title of a form to the string resource named `Form1Title` in the application resource file. For the example to work, the application must have a string named `Form1Title` in its resource file.  
+ В этом примере заголовок формы задается строковым ресурсом с именем `Form1Title` в файле ресурсов приложения. Чтобы пример работал, приложение должно иметь строку с именем `Form1Title` в файле ресурсов.  
   
  [!code-vb[VbVbalrMyResources#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyResources/VB/Form1.vb#1)]  
   
 ## <a name="example"></a>Пример  
- This example sets the icon of the form to the icon named `Form1Icon` that is stored in the application's resource file. For the example to work, the application must have an icon named `Form1Icon` in its resource file.  
+ В этом примере значок формы задается значком с именем `Form1Icon`, который хранится в файле ресурсов приложения. Чтобы пример работал, приложение должно иметь значок с именем `Form1Icon` в файле ресурсов.  
   
  [!code-vb[VbVbalrMyResources#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyResources/VB/Form1.vb#2)]  
   
 ## <a name="example"></a>Пример  
- This example sets the background image of a form to the image resource named `Form1Background`, which is in the application resource file. For this example to work, the application must have an image resource named `Form1Background` in its resource file.  
+ В этом примере для фонового изображения формы задается ресурс изображения с именем `Form1Background`, который находится в файле ресурсов приложения. Чтобы этот пример работал, приложение должно иметь ресурс образа с именем `Form1Background` в файле ресурсов.  
   
  [!code-vb[VbVbalrMyResources#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyResources/VB/Form1.vb#3)]  
   
 ## <a name="example"></a>Пример  
- This example plays the sound that is stored as an audio resource named `Form1Greeting` in the application's resource file. For the example to work, the application must have an audio resource named `Form1Greeting` in its resource file. The `My.Computer.Audio.Play` method is available only for Windows Forms applications.  
+ В этом примере воспроизводится звук, который хранится в виде звукового ресурса с именем `Form1Greeting` в файле ресурсов приложения. Чтобы пример работал, приложение должно иметь звуковой ресурс с именем `Form1Greeting` в файле ресурсов. Метод `My.Computer.Audio.Play` доступен только для Windows Forms приложений.  
   
  [!code-vb[VbVbalrMyResources#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyResources/VB/Form1.vb#4)]  
   
 ## <a name="example"></a>Пример  
- This example retrieves the French-culture version of a  string resource of the application. The resource is named `Message`. To change the culture that the `My.Resources` object uses, the example uses <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.ChangeUICulture%2A>.  
+ В этом примере извлекается версия строкового ресурса приложения на французском языке. Ресурс называется `Message`. Чтобы изменить язык и региональные параметры, используемые объектом `My.Resources`, в примере используется <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.ChangeUICulture%2A>.  
   
- For this example to work, the application must have a string named `Message` in its resource file, and the application should have the French-culture version of that resource file, Resources.fr-FR.resx. If the application does not have the French-culture version of the resource file, the `My.Resource` object retrieves the resource from the default-culture resource file.  
+ Чтобы этот пример работал, приложение должно иметь строку с именем `Message` в файле ресурсов, а приложение должно иметь французскую версию языка и региональных параметров этого файла ресурсов, Resources.fr-FR. resx. Если приложение не имеет версию файла ресурсов для французского языка и региональных параметров, объект `My.Resource` извлекает ресурс из файла ресурсов языка и региональных параметров по умолчанию.  
   
  [!code-vb[VbVbalrMyResources#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyResources/VB/Form1.vb#10)]  
   

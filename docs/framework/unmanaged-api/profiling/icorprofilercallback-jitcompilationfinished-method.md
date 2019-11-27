@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449919"
 ---
 # <a name="icorprofilercallbackjitcompilationfinished-method"></a>Метод ICorProfilerCallback::JITCompilationFinished
-Notifies the profiler that the just-in-time (JIT) compiler has finished compiling a function.  
+Уведомляет профилировщик о том, что JIT-компилятор завершил компиляцию функции.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -36,15 +36,15 @@ HRESULT JITCompilationFinished(
   
 ## <a name="parameters"></a>Параметры  
  `functionId`  
- [in] The ID of the function that was compiled.  
+ окне Идентификатор скомпилированной функции.  
   
  `hrStatus`  
- [in] A value indicating whether compilation was successful.  
+ окне Значение, указывающее, успешно ли выполнена компиляция.  
   
  `fIsSafeToBlock`  
- [in] A value indicating to the profiler whether blocking will affect the operation of the runtime. The value is `true` if blocking may cause the runtime to wait for the calling thread to return from this callback; otherwise, `false`.  
+ окне Значение, указывающее профилировщику, будет ли блокировка влиять на работу среды выполнения. Значение `true`, если блокировка может привести к тому, что среда выполнения будет ожидать возврата вызывающим потоком из этого обратного вызова. в противном случае `false`.  
   
- Although a value of `true` will not harm the runtime, it can skew the profiling results.  
+ Хотя значение `true` не будет нанести вред среде выполнения, оно может исказить результаты профилирования.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
@@ -55,7 +55,7 @@ HRESULT JITCompilationFinished(
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
 - [Метод JITCompilationStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationstarted-method.md)

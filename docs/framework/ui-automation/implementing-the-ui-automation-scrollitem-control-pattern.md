@@ -31,9 +31,9 @@ ms.locfileid: "74447139"
 ## <a name="required-members-for-iscrollitemprovider"></a>Обязательные члены для IScrollItemProvider  
  Следующий метод является обязательным для реализации интерфейса IScrollProvider.  
   
-|Обязательные члены|Тип члена|Примечания|  
+|Обязательные члены|Тип элемента|Примечания|  
 |----------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IScrollItemProvider.ScrollIntoView%2A>|-   Method|Отсутствуют|  
+|<xref:System.Windows.Automation.Provider.IScrollItemProvider.ScrollIntoView%2A>|-Method|Нет|  
   
  Этот шаблон элемента управления не имеет связанных свойств или событий.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "74447139"
 |--------------------|---------------|  
 |<xref:System.InvalidOperationException>|Если элемент не может быть прокручен в представлении:<br /><br /> -   <xref:System.Windows.Automation.ScrollItemPattern.ScrollIntoView%2A>|  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Общие сведения о шаблонах элементов управления модели автоматизации пользовательского интерфейса](ui-automation-control-patterns-overview.md)
 - [Поддержка шаблонов элементов управления в поставщике автоматизации пользовательского интерфейса](support-control-patterns-in-a-ui-automation-provider.md)

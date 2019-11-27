@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448107"
 ---
 # <a name="icorprofilerinfogetclassfromtoken-method"></a>Метод ICorProfilerInfo::GetClassFromToken
-Gets the ID of the class, given the metadata token. This method is obsolete in the .NET Framework version 2.0. Use [ICorProfilerInfo2::GetClassFromTokenAndTypeArgs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getclassfromtokenandtypeargs-method.md) instead.  
+Возвращает идентификатор класса по заданному маркеру метаданных. Этот метод является устаревшим в .NET Framework версии 2,0. Вместо этого используйте [ICorProfilerInfo2:: GetClassFromTokenAndTypeArgs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getclassfromtokenandtypeargs-method.md) .  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -36,16 +36,16 @@ HRESULT GetClassFromToken(
   
 ## <a name="parameters"></a>Параметры  
  `moduleID`  
- [in] The ID of the module that contains the class.  
+ окне Идентификатор модуля, содержащего класс.  
   
  `typeDef`  
- [in] An `mdTypeDef` metadata token that references the class.  
+ окне Токен метаданных `mdTypeDef`, ссылающийся на класс.  
   
  `cTypeArgs`  
- [out] A pointer to the class ID.  
+ заполняет Указатель на идентификатор класса.  
   
 ## <a name="remarks"></a>Заметки  
- This method is obsolete; instead, use `ICorProfilerInfo2::GetClassFromTokenAndTypeArgs` for all types.  
+ Этот метод устарел; Вместо этого используйте `ICorProfilerInfo2::GetClassFromTokenAndTypeArgs` для всех типов.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
@@ -54,7 +54,7 @@ HRESULT GetClassFromToken(
   
  **Библиотека:** CorGuids.lib  
   
- **.NET Framework Versions:** 1.0, 1.1  
+ **.NET Framework версии:** 1,0, 1,1  
   
 ## <a name="see-also"></a>См. также
 

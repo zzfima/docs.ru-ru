@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445301"
 ---
 # <a name="icorprofilercallbackexceptionunwindfinallyleave-method"></a>Метод ICorProfilerCallback::ExceptionUnwindFinallyLeave
-Notifies the profiler that the unwind phase of exception handling has left a `finally` clause.  
+Уведомляет профилировщик о том, что фаза очистки в обработке исключений оставлена предложением `finally`.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -32,9 +32,9 @@ HRESULT ExceptionUnwindFinallyLeave();
 ```  
   
 ## <a name="remarks"></a>Заметки  
- The profiler should not block during this call because the stack may not be in a state that allows garbage collection, and therefore preemptive garbage collection cannot be enabled. If the profiler blocks here and a garbage collection is attempted, the runtime will block until this callback returns.  
+ Профилировщик не должен блокироваться во время этого вызова, так как стек может не находиться в состоянии, допускающем сборку мусора, поэтому невозможно включить вытесненную сборку мусора. Если профилировщик блокируется здесь и выполняется сборка мусора, среда выполнения будет блокироваться до тех пор, пока этот обратный вызов не вернет значение.  
   
- Also, during this call, the profiler must not call into managed code or in any way cause a managed-memory allocation.  
+ Кроме того, во время этого вызова профилировщик не должен вызывать управляемый код или каким-либо образом вызывает выделение управляемой памяти.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  

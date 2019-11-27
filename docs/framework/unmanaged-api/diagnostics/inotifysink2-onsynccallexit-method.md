@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448678"
 ---
 # <a name="inotifysink2onsynccallexit-method"></a>Метод INotifySink2::OnSyncCallExit
-Gets invoked when exiting a call.  
+Вызывается при выходе из вызова.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,21 +38,21 @@ HRESULT OnSyncCallExit
   
 ## <a name="parameters"></a>Параметры  
  `in_CallID`  
- [in] ID of the call being exited. See [CALL_ID Structure](../../../../docs/framework/unmanaged-api/diagnostics/call-id-structure.md).  
+ окне Идентификатор выходного вызова. См. раздел [структура CALL_ID](../../../../docs/framework/unmanaged-api/diagnostics/call-id-structure.md).  
   
  `out_ppBuffer`  
- [out] Call buffer.  
+ заполняет Буфер вызова.  
   
  `out_pBufferSize`  
- [out] Size of the call buffer, in bytes.  
+ заполняет Размер буфера вызова в байтах.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- S_OK if the method succeeds.  
+ S_OK, если метод выполнен.  
   
 ## <a name="requirements"></a>Требования  
- **Header:** ProtocolNotify2.idl  
+ **Заголовок:** ProtocolNotify2. idl  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс INotifySink2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)
 - [Интерфейс INotifySource2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)

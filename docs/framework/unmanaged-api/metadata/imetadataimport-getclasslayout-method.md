@@ -40,33 +40,33 @@ HRESULT GetClassLayout  (
   
 ## <a name="parameters"></a>Параметры  
  `td`  
- [in] The TypeDef token for the class with the layout to return.  
+ окне Токен TypeDef для класса с макетом, который должен быть возвращен.  
   
  `pdwPackSize`  
- [out] One of the values 1, 2, 4, 8, or 16, representing the pack size of the class.  
+ заполняет Одно из значений 1, 2, 4, 8 или 16, представляющее размер пакета класса.  
   
  `rFieldOffset`  
- [out] An array of [COR_FIELD_OFFSET](../../../../docs/framework/unmanaged-api/metadata/cor-field-offset-structure.md) values.  
+ заполняет Массив значений [COR_FIELD_OFFSET](../../../../docs/framework/unmanaged-api/metadata/cor-field-offset-structure.md) .  
   
  `cMax`  
  [in] Максимальный размер массива `rFieldOffset`.  
   
  `pcFieldOffset`  
- [out] The number of elements returned in `rFieldOffset`.  
+ заполняет Число элементов, возвращаемых в `rFieldOffset`.  
   
  `pulClassSize`  
- [out] The size in bytes of the class represented by `td`.  
+ заполняет Размер в байтах класса, представленного `td`.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Заголовок:** COR. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [Интерфейс IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

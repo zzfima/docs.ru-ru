@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74438603"
 ---
 # <a name="icorprofilerinfosetfunctionrejit-method"></a>Метод ICorProfilerInfo::SetFunctionReJIT
-Не реализовано. Не используется.  
+Не реализовано. Не используйте.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,8 +39,8 @@ HRESULT SetFunctionReJIT(
   
  **Библиотека:** CorGuids.lib  
   
- **.NET Framework Version:** 1.0  
+ **Версия .NET Framework:** 1,0  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

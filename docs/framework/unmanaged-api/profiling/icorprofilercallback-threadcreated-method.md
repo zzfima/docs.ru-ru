@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446924"
 ---
 # <a name="icorprofilercallbackthreadcreated-method"></a>Метод ICorProfilerCallback::ThreadCreated
-Notifies the profiler that a thread has been created.  
+Уведомляет профилировщик о том, что поток был создан.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -34,10 +34,10 @@ HRESULT ThreadCreated(
   
 ## <a name="parameters"></a>Параметры  
  `threadId`  
- [in] The ID of the thread that has been created.  
+ окне Идентификатор созданного потока.  
   
 ## <a name="remarks"></a>Заметки  
- The `threadId` value is immediately valid.  
+ Значение `threadId` является действительным немедленно.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  

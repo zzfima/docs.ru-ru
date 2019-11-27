@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445388"
 ---
 # <a name="icorprofilercallbackexceptionsearchcatcherfound-method"></a>Метод ICorProfilerCallback::ExceptionSearchCatcherFound
-Notifies the profiler that the search phase of exception handling has located a handler for the exception that was thrown.  
+Уведомляет профилировщик о том, что на фазе поиска исключений обнаружен обработчик для созданного исключения.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -34,7 +34,7 @@ RESULT ExceptionSearchCatcherFound(
   
 ## <a name="parameters"></a>Параметры  
  `functionId`  
- [in] The ID of the function that contains the exception handler.  
+ окне Идентификатор функции, которая содержит обработчик исключений.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
@@ -45,6 +45,6 @@ RESULT ExceptionSearchCatcherFound(
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

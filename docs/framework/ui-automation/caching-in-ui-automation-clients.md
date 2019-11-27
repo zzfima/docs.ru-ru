@@ -20,7 +20,7 @@ ms.locfileid: "74433937"
   
  В [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]кэширование означает предварительное получение данных. Затем к этим данным можно осуществлять доступ без дальнейшего взаимодействия между процессами. Кэширование обычно используется клиентскими приложениями модели автоматизации пользовательского интерфейса для массового извлечения свойств и шаблонов элементов управления. Затем по мере необходимости информация извлекается из кэша. Приложение периодически обновляет кэш, обычно в ответ на события, указывающие на изменение чего-нибудь в [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] .  
   
- The benefits of caching are most noticeable with Windows Presentation Foundation (WPF) controls and custom controls that have server-side UI Automation providers. При доступе к клиентским поставщикам, таким как поставщики по умолчанию для элементов управления [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] , преимущества кэширования не столь заметны.  
+ Преимущества кэширования наиболее заметны при использовании элементов управления Windows Presentation Foundation (WPF) и пользовательских элементов управления с поставщиками автоматизации пользовательского интерфейса на стороне сервера. При доступе к клиентским поставщикам, таким как поставщики по умолчанию для элементов управления [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] , преимущества кэширования не столь заметны.  
   
  Кэширование происходит, когда приложение активирует <xref:System.Windows.Automation.CacheRequest> , а затем использует какой-либо метод или свойство для возврата <xref:System.Windows.Automation.AutomationElement>; например <xref:System.Windows.Automation.AutomationElement.FindFirst%2A>, <xref:System.Windows.Automation.AutomationElement.FindAll%2A>. Исключением являются методы класса <xref:System.Windows.Automation.TreeWalker> ; кэширование выполняется только в том случае, если указан <xref:System.Windows.Automation.CacheRequest> как параметр (например, <xref:System.Windows.Automation.TreeWalker.GetFirstChild%28System.Windows.Automation.AutomationElement%2CSystem.Windows.Automation.CacheRequest%29?displayProperty=nameWithType>.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "74433937"
 ## <a name="activating-the-cacherequest"></a>Активация CacheRequest  
  Кэширование выполняется, только когда объекты <xref:System.Windows.Automation.AutomationElement> извлекаются при активном <xref:System.Windows.Automation.CacheRequest> для текущего потока. Существует два способа активации <xref:System.Windows.Automation.CacheRequest>.  
   
- Обычно вызывается метод <xref:System.Windows.Automation.CacheRequest.Activate%2A>. Этот метод возвращает объект, реализующий <xref:System.IDisposable>. Запрос остается активным, пока объект <xref:System.IDisposable> существует. The easiest way to control the lifetime of the object is to enclose the call within a `using` (C#) or `Using` (Visual Basic) block. Это гарантирует, что запрос будет извлекаться из стека, даже если возникнет исключение.  
+ Обычно вызывается метод <xref:System.Windows.Automation.CacheRequest.Activate%2A>. Этот метод возвращает объект, реализующий <xref:System.IDisposable>. Запрос остается активным, пока объект <xref:System.IDisposable> существует. Самый простой способ управления временем существования объекта заключается в том, чтобы заключить вызов в блок `using`C#() или `Using` (Visual Basic). Это гарантирует, что запрос будет извлекаться из стека, даже если возникнет исключение.  
   
  Другим способом, который подходит, когда требуется вкладывать запросы кэширования, является вызов метода <xref:System.Windows.Automation.CacheRequest.Push%2A>. Этот вызов помещает запрос в стек и активирует его. Запрос остается активным, пока он не будет удален из стека методом <xref:System.Windows.Automation.CacheRequest.Pop%2A>. Запрос становится временно неактивным, если другой запрос помещается в стек; активен только верхний запрос в стеке.  
   
@@ -101,8 +101,8 @@ ms.locfileid: "74433937"
   
  Обновление кэша не изменяет свойства существующих ссылок <xref:System.Windows.Automation.AutomationElement> .  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [События модели автоматизации пользовательского интерфейса для клиентов](ui-automation-events-for-clients.md)
 - [Использование кэширования в модели автоматизации пользовательского интерфейса](use-caching-in-ui-automation.md)
-- [FetchTimer Sample](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771456(v=vs.90))
+- [Пример Фетчтимер](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771456(v=vs.90))

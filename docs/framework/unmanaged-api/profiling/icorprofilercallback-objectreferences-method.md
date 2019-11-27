@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445886"
 ---
 # <a name="icorprofilercallbackobjectreferences-method"></a>Метод ICorProfilerCallback::ObjectReferences
-Notifies the profiler about objects in memory that are being referenced by the specified object.  
+Уведомляет профилировщик об объектах в памяти, на которые ссылается указанный объект.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,25 +37,25 @@ HRESULT ObjectReferences(
   
 ## <a name="parameters"></a>Параметры  
  `objectId`  
- [in] The ID of the object that is referencing objects.  
+ окне Идентификатор объекта, ссылающегося на объекты.  
   
  `classId`  
- [in] The ID of the class that the specified object is an instance of.  
+ окне Идентификатор класса, экземпляр которого является указанным объектом.  
   
  `cObjectRefs`  
- [in] The number of objects referenced by the specified object (that is, the number of elements in the `objectRefIds` array).  
+ окне Количество объектов, на которые ссылается указанный объект (то есть количество элементов в массиве `objectRefIds`).  
   
  `objectRefIds`  
- [in] An array of IDs of objects that are being referenced by `objectId`.  
+ окне Массив идентификаторов объектов, на которые ссылается `objectId`.  
   
 ## <a name="remarks"></a>Заметки  
- The `ObjectReferences` method is called for each object remaining in the heap after a garbage collection has completed. If the profiler returns an error from this callback, the profiling services will discontinue invoking this callback until the next garbage collection.  
+ Метод `ObjectReferences` вызывается для каждого объекта, остающегося в куче после завершения сборки мусора. Если профилировщик возвращает ошибку из этого обратного вызова, службы профилирования будут прекращены вызовом этого обратного вызова до следующей сборки мусора.  
   
- The `ObjectReferences` callback can be used in conjunction with the [ICorProfilerCallback::RootReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-rootreferences-method.md) callback to create a complete object reference graph for the runtime. The common language runtime (CLR) ensures that each object reference is reported only once by the `ObjectReferences` method.  
+ Обратный вызов `ObjectReferences` можно использовать в сочетании с обратным вызовом [ICorProfilerCallback:: RootReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-rootreferences-method.md) , чтобы создать полный граф ссылки на объект для среды выполнения. Среда CLR гарантирует, что каждая ссылка на объект выводится только один раз методом `ObjectReferences`.  
   
- The object IDs returned by `ObjectReferences` are not valid during the callback itself, because the garbage collection might be in the middle of moving objects. Therefore, profilers must not attempt to inspect objects during an `ObjectReferences` call. When [ICorProfilerCallback2::GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) is called, the garbage collection is complete and inspection can be safely done.  
+ Идентификаторы объектов, возвращаемые `ObjectReferences`, недопустимы во время обратного вызова, так как сборка мусора может находиться в середине перемещения объектов. Таким образом, профилировщики не должны пытаться проверять объекты во время вызова `ObjectReferences`. При вызове [ICorProfilerCallback2:: GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) сборка мусора завершается, и проверка может быть безопасно выполнена.  
   
- A null `ClassId` indicates that `objectId` has a type that is unloading.  
+ Значение NULL `ClassId` указывает, что `objectId` имеет тип, выгружаемый.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  

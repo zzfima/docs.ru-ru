@@ -38,37 +38,37 @@ HRESULT EnumTypeDefs (
   
 ## <a name="parameters"></a>Параметры  
  `phEnum`  
- [out] A pointer to the new enumerator. This must be NULL for the first call of this method.  
+ заполняет Указатель на новый перечислитель. При первом вызове этого метода это значение должно быть равно NULL.  
   
  `rTypeDefs`  
- [in] The array used to store the TypeDef tokens.  
+ окне Массив, используемый для хранения токенов TypeDef.  
   
  `cMax`  
  [in] Максимальный размер массива `rTypeDefs`.  
   
  `pcTypeDefs`  
- [out] The number of TypeDef tokens returned in `rTypeDefs`.  
+ заполняет Число токенов TypeDef, возвращаемых в `rTypeDefs`.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
   
 |HRESULT|Описание|  
 |-------------|-----------------|  
-|`S_OK`|`EnumTypeDefs` returned successfully.|  
-|`S_FALSE`|There are no tokens to enumerate. In that case, `pcTypeDefs` is zero.|  
+|`S_OK`|`EnumTypeDefs` успешно возвращено.|  
+|`S_FALSE`|Нет токенов для перечисления. В этом случае `pcTypeDefs` равно нулю.|  
   
-## <a name="remarks"></a>Заметки  
- The TypeDef token represents a type such as a class or an interface, as well as any type added via an extensibility mechanism.  
+## <a name="remarks"></a>Примечания  
+ Маркер TypeDef представляет тип, например класс или интерфейс, а также любой тип, добавленный с помощью механизма расширяемости.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Заголовок:** COR. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [Интерфейс IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

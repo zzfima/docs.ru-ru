@@ -20,7 +20,7 @@ ms.locfileid: "74346760"
 ---
 # <a name="property-statement"></a>Property Statement
 
-Declares the name of a property, and the property procedures used to store and retrieve the value of the property.
+Объявляет имя свойства и процедуры свойства, используемые для хранения и извлечения значения свойства.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -45,15 +45,15 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
 
 - `attributelist`
 
-  Необязательный. List of attributes that apply to this property or `Get` or `Set` procedure. See [Attribute List](attribute-list.md).
+  Необязательно. Список атрибутов, применяемых к этому свойству, `Get` или `Set` процедуре. См. [список атрибутов](attribute-list.md).
 
 - `Default`
 
-  Необязательный. Specifies that this property is the default property for the class or structure on which it is defined. Default properties must accept parameters and can be set and retrieved without specifying the property name. If you declare the property as `Default`, you cannot use `Private` on the property or on either of its property procedures.
+  Необязательно. Указывает, что это свойство является свойством по умолчанию для класса или структуры, в которой он определен. Свойства по умолчанию должны принимать параметры и могут быть заданы и получены без указания имени свойства. Если свойство объявляется как `Default`, нельзя использовать `Private` в свойстве или в любой из его процедур свойств.
 
 - `accessmodifier`
 
-  Optional on the `Property` statement and on at most one of the `Get` and `Set` statements. Ниже указаны доступные значения.
+  Необязательно для оператора `Property` и только для одной из `Get` и `Set` инструкций. Ниже указаны доступные значения.
 
   - [Public](../modifiers/public.md)
 
@@ -71,13 +71,13 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
 
 - `propertymodifiers`
 
-  Необязательный. Ниже указаны доступные значения.
+  Необязательно. Ниже указаны доступные значения.
 
-  - [Перегрузки](../modifiers/overloads.md)
+  - [Overloads](../modifiers/overloads.md)
 
   - [Переопределения](../modifiers/overrides.md)
 
-  - [Переопределяемые](../modifiers/overridable.md)
+  - [Overridable](../modifiers/overridable.md)
 
   - [NotOverridable](../modifiers/notoverridable.md)
 
@@ -89,43 +89,43 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
 
 - `Shared`
 
-  Необязательный. See [Shared](../modifiers/shared.md).
+  Необязательно. См. раздел [Shared](../modifiers/shared.md).
 
 - `Shadows`
 
-  Необязательный. See [Shadows](../modifiers/shadows.md).
+  Необязательно. См. раздел [Shadows](../modifiers/shadows.md).
 
 - `ReadOnly`
 
-  Необязательный. See [ReadOnly](../modifiers/readonly.md).
+  Необязательно. См. раздел [ReadOnly](../modifiers/readonly.md).
 
 - `WriteOnly`
 
-  Необязательный. See [WriteOnly](../modifiers/writeonly.md).
+  Необязательно. См. раздел [WriteOnly](../modifiers/writeonly.md).
 
 - `Iterator`
 
-  Необязательный. See [Iterator](../modifiers/iterator.md).
+  Необязательно. См. [итератор](../modifiers/iterator.md).
 
 - `name`
 
-  Обязательный. Имя свойства. См. раздел [Declared Element Names](../../programming-guide/language-features/declared-elements/declared-element-names.md).
+  Обязательно. Имя свойства. См. раздел [Declared Element Names](../../programming-guide/language-features/declared-elements/declared-element-names.md).
 
 - `parameterlist`
 
-  Необязательный. List of local variable names representing the parameters of this property, and possible additional parameters of the `Set` procedure. See [Parameter List](parameter-list.md).
+  Необязательно. Список имен локальных переменных, представляющих параметры этого свойства, и возможные дополнительные параметры процедуры `Set`. См. [список параметров](parameter-list.md).
 
 - `returntype`
 
-  Required if `Option Strict` is `On`. Data type of the value returned by this property.
+  Требуется, если `Option Strict` `On`. Тип данных значения, возвращаемого этим свойством.
 
 - `Implements`
 
-  Необязательный. Indicates that this property implements one or more properties, each one defined in an interface implemented by this property's containing class or structure. See [Implements Statement](implements-statement.md).
+  Необязательно. Указывает, что это свойство реализует одно или несколько свойств, каждое из которых определено в интерфейсе, реализуемом классом или структурой этого свойства. См. [инструкцию Implements](implements-statement.md).
 
 - `implementslist`
 
-  Является обязательным, если предоставлен параметр `Implements`. List of properties being implemented.
+  Является обязательным, если предоставлен параметр `Implements`. Список реализуемых свойств.
 
   `implementedproperty [ , implementedproperty ... ]`
 
@@ -135,70 +135,70 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
 
   |Отделение|Описание|
   |---|---|
-  |`interface`|Обязательный. Name of an interface implemented by this property's containing class or structure.|
-  |`definedname`|Обязательный. Name by which the property is defined in `interface`.|
+  |`interface`|Обязательно. Имя интерфейса, реализованного в классе или структуре этого свойства.|
+  |`definedname`|Обязательно. Имя, по которому свойство определяется в `interface`.|
 
 - `Get`
 
-  Необязательный. Required if the property is marked `ReadOnly`. Starts a `Get` property procedure that is used to return the value of the property.  The `Get` statement is not used with [auto-implemented properties](../../programming-guide/language-features/procedures/auto-implemented-properties.md).
+  Необязательно. Требуется, если свойство помечено как `ReadOnly`. Запускает `Get` процедуру свойства, которая используется для возврата значения свойства.  Инструкция `Get` не используется с [автоматической реализацией свойств](../../programming-guide/language-features/procedures/auto-implemented-properties.md).
 
 - `statements`
 
-  Необязательный. Block of statements to run within the `Get` or `Set` procedure.
+  Необязательно. Блок инструкций для выполнения в рамках процедуры `Get` или `Set`.
 
 - `End Get`
 
-  Terminates the `Get` property procedure.
+  Завершает процедуру свойства `Get`.
 
 - `Set`
 
-  Необязательный. Required if the property is marked `WriteOnly`. Starts a `Set` property procedure that is used to store the value of the property.  The `Set` statement is not used with [auto-implemented properties](../../programming-guide/language-features/procedures/auto-implemented-properties.md).
+  Необязательно. Требуется, если свойство помечено как `WriteOnly`. Запускает `Set` процедуру свойства, используемую для хранения значения свойства.  Инструкция `Set` не используется с [автоматической реализацией свойств](../../programming-guide/language-features/procedures/auto-implemented-properties.md).
 
 - `End Set`
 
-  Terminates the `Set` property procedure.
+  Завершает процедуру свойства `Set`.
 
 - `End Property`
 
-  Terminates the definition of this property.
+  Завершает определение этого свойства.
 
 ## <a name="remarks"></a>Заметки
 
-The `Property` statement introduces the declaration of a property. A property can have a `Get` procedure (read only), a `Set` procedure (write only), or both (read-write). You can omit the `Get` and `Set` procedure when using an auto-implemented property. Дополнительные сведения см. в разделе [Автоматически реализуемые свойства](../../programming-guide/language-features/procedures/auto-implemented-properties.md).
+Оператор `Property` вводит объявление свойства. Свойство может иметь `Get`ую процедуру (только для чтения), `Set`ую процедуру (только запись) или и то, и другое (чтение и запись). При использовании автоматического реализуемого свойства можно опустить `Get` и `Set` процедуру. Дополнительные сведения см. в разделе [Автоматически реализуемые свойства](../../programming-guide/language-features/procedures/auto-implemented-properties.md).
 
-You can use `Property` only at class level. This means the *declaration context* for a property must be a class, structure, module, or interface, and cannot be a source file, namespace, procedure, or block. Дополнительные сведения см. в разделе [Контексты объявления и уровни доступа по умолчанию](declaration-contexts-and-default-access-levels.md).
+`Property` можно использовать только на уровне класса. Это означает, что *контекст объявления* для свойства должен быть классом, структурой, модулем или интерфейсом и не может быть исходным файлом, пространством имен, процедурой или блоком. Дополнительные сведения см. в разделе [Контексты объявления и уровни доступа по умолчанию](declaration-contexts-and-default-access-levels.md).
 
-By default, properties use public access. You can adjust a property's access level with an access modifier on the `Property` statement, and you can optionally adjust one of its property procedures to a more restrictive access level.
+По умолчанию свойства используют общий доступ. Уровень доступа свойства можно настроить с помощью модификатора доступа в операторе `Property`. при необходимости можно изменить одну из процедур свойств на более ограниченный уровень доступа.
 
-Visual Basic passes a parameter to the `Set` procedure during property assignments. If you do not supply a parameter for `Set`, the integrated development environment (IDE) uses an implicit parameter named `value`. This parameter holds the value to be assigned to the property. You typically store this value in a private local variable and return it whenever the `Get` procedure is called.
+Visual Basic передает параметр в процедуру `Set` во время назначения свойств. Если параметр для `Set`не указан, в интегрированной среде разработки (IDE) используется неявный параметр с именем `value`. Этот параметр содержит значение, присваиваемое свойству. Обычно это значение сохраняется в закрытой локальной переменной и возвращается при каждом вызове процедуры `Get`.
 
 ## <a name="rules"></a>Правила
 
-- **Mixed Access Levels.** If you are defining a read-write property, you can optionally specify a different access level for either the `Get` or the `Set` procedure, but not both. If you do this, the procedure access level must be more restrictive than the property's access level. For example, if the property is declared `Friend`, you can declare the `Set` procedure `Private`, but not `Public`.
+- **Уровни смешанного доступа.** Если вы определяете свойство для чтения и записи, при необходимости можно указать другой уровень доступа либо для `Get`, либо для `Set` процедуры, но не для обоих. В этом случае уровень доступа процедуры должен быть более четким, чем уровень доступа свойства. Например, если свойство объявлено `Friend`, можно объявить `Set` процедуру `Private`, но не `Public`.
 
-  If you are defining a `ReadOnly` or `WriteOnly` property, the single property procedure (`Get` or `Set`, respectively) represents all of the property. You cannot declare a different access level for such a procedure, because that would set two access levels for the property.
+  Если вы определяете свойство `ReadOnly` или `WriteOnly`, то процедура с одним свойством (`Get` или `Set`соответственно) представляет все свойство. Для такой процедуры нельзя объявить другой уровень доступа, поскольку в этом случае для свойства будет задано два уровня доступа.
 
-- **Return Type.** The `Property` statement can declare the data type of the value it returns. You can specify any data type or the name of an enumeration, structure, class, or interface.
+- **Тип возвращаемого значения.** Оператор `Property` может объявлять тип данных возвращаемого значения. Можно указать любой тип данных или имя перечисления, структуры, класса или интерфейса.
 
-  If you do not specify `returntype`, the property returns `Object`.
+  Если не указать `returntype`, свойство возвращает `Object`.
 
-- **Implementation.** If this property uses the `Implements` keyword, the containing class or structure must have an `Implements` statement immediately following its `Class` or `Structure` statement. The `Implements` statement must include each interface specified in `implementslist`. However, the name by which an interface defines the `Property` (in `definedname`) does not have to be the same as the name of this property (in `name`).
+- **Реализации.** Если в этом свойстве используется ключевое слово `Implements`, содержащий класс или структуру должны содержать инструкцию `Implements`, непосредственно следующую за инструкцией `Class` или `Structure`. Оператор `Implements` должен содержать каждый интерфейс, указанный в `implementslist`. Однако имя, по которому интерфейс определяет `Property` (в `definedname`) не обязательно должно совпадать с именем этого свойства (в `name`).
 
 ## <a name="behavior"></a>Поведение
 
-- **Returning from a Property Procedure.** When the `Get` or `Set` procedure returns to the calling code, execution continues with the statement following the statement that invoked it.
+- **Возврат из процедуры свойства.** Когда процедура `Get` или `Set` возвращается в вызывающий код, выполнение продолжится с оператора, следующего за оператором, вызвавшим ее.
 
-  The `Exit Property` and `Return` statements cause an immediate exit from a property procedure. Any number of `Exit Property` and `Return` statements can appear anywhere in the procedure, and you can mix `Exit Property` and `Return` statements.
+  Операторы `Exit Property` и `Return` вызывают немедленный выход из процедуры свойства. Любое число инструкций `Exit Property` и `Return` может использоваться в любом месте процедуры, и можно смешивать `Exit Property` и `Return` операторы.
 
-- **Return Value.** To return a value from a `Get` procedure, you can either assign the value to the property name or include it in a `Return` statement. The following example assigns the return value to the property name `quoteForTheDay` and then uses the `Exit Property` statement to return.
+- **Возвращаемое значение.** Чтобы вернуть значение из `Get` процедуры, можно либо присвоить значение имени свойства, либо включить его в инструкцию `Return`. В следующем примере возвращаемое значение присваивается имени свойства `quoteForTheDay` а затем используется инструкция `Exit Property` для возврата.
 
   [!code-vb[VbVbalrStatements#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#27)]
 
   [!code-vb[VbVbalrStatements#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#28)]
 
-  If you use `Exit Property` without assigning a value to `name`, the `Get` procedure returns the default value for the property's data type.
+  Если вы используете `Exit Property` без присвоения значения `name`, процедура `Get` возвращает значение по умолчанию для типа данных свойства.
 
-  The `Return` statement at the same time assigns the `Get` procedure return value and exits the procedure. The following example shows this.
+  Оператор `Return` в то же время присваивает возвращаемое значение процедуры `Get` и завершает процедуру. Это показано в следующем примере.
 
   [!code-vb[VbVbalrStatements#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#27)]
 
@@ -206,7 +206,7 @@ Visual Basic passes a parameter to the `Set` procedure during property assignmen
 
 ## <a name="example"></a>Пример
 
-The following example declares a property in a class.
+В следующем примере объявляется свойство в классе.
 
 [!code-vb[VbVbalrStatements#51](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#51)]
 

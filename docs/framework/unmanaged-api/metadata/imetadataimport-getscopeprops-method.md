@@ -38,30 +38,30 @@ HRESULT GetScopeProps (
   
 ## <a name="parameters"></a>Параметры  
  `szName`  
- [out] A buffer for the assembly or module name.  
+ заполняет Буфер для имени сборки или модуля.  
   
  `cchName`  
- [in] The size in wide characters of `szName`.  
+ окне Размер в расширенных символах `szName`.  
   
  `pchName`  
- [out] The number of wide characters returned in `szName`.  
+ заполняет Число расширенных символов, возвращаемых в `szName`.  
   
  `pmvid`  
- [out, optional] A pointer to a GUID that uniquely identifies the version of the assembly or module.  
+ [out, необязательно] Указатель на идентификатор GUID, однозначно определяющий версию сборки или модуля.  
   
-## <a name="remarks"></a>Заметки  
- The [IMetaDataEmit::SetModuleProps](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setmoduleprops-method.md) method is used to set these properties.  
+## <a name="remarks"></a>Примечания  
+ Для задания этих свойств используется метод [IMetaDataEmit:: сетмодулепропс](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setmoduleprops-method.md) .  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Заголовок:** COR. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [Интерфейс IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

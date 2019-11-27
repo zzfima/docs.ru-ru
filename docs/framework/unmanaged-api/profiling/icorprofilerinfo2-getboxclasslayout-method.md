@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436019"
 ---
 # <a name="icorprofilerinfo2getboxclasslayout-method"></a>Метод ICorProfilerInfo2::GetBoxClassLayout
-Gets information about where the specified value type is located when it is boxed.  
+Возвращает сведения о расположении указанного типа значения при его упаковке.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -35,13 +35,13 @@ HRESULT GetBoxClassLayout(
   
 ## <a name="parameters"></a>Параметры  
  `classId`  
- [in] The ID of the class that describes the value type that is boxed.  
+ окне Идентификатор класса, который описывает упакованный тип значения.  
   
  `pBufferOffset`  
- [out] An integer that is the offset, relative to the boxed object ID pointer, of the value type.  
+ заполняет Целое число, которое является смещением относительно указателя на идентификатор упакованного объекта для типа значения.  
   
 ## <a name="remarks"></a>Заметки  
- The `pBufferOffset` value is the location of the value type within a box. After `pBufferOffset` is applied to a boxed object, the value type's class layout can be used to interpret the object's value.  
+ `pBufferOffset` значение — это расположение типа значения в поле. После применения `pBufferOffset` к упакованному объекту можно использовать макет класса типа значения для интерпретации значения объекта.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  

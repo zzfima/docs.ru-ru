@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448924"
 ---
 # <a name="isymunmanagedmethodgetranges-method"></a>Метод ISymUnmanagedMethod::GetRanges
-Given a position in a document, returns an array of start and end offset pairs that correspond to the ranges of Microsoft intermediate language (MSIL) that the position covers within this method. The array is an array of integers and has the format [start, end, start, end]. The number of range pairs is the length of the array divided by 2.  
+При наличии позиции в документе возвращает массив пар начального и конечного смещения, соответствующих диапазонам промежуточного языка MSIL, которые находятся в этом методе. Массив является массивом целых чисел и имеет формат [начало, конец, начало, конец]. Число пар диапазонов — это длина массива, деленная на 2.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,29 +40,29 @@ HRESULT GetRanges(
   
 ## <a name="parameters"></a>Параметры  
  `document`  
- [in] The document for which the offset is requested.  
+ окне Документ, для которого запрашивается смещение.  
   
  `line`  
- [in] The document line corresponding to the ranges.  
+ окне Строка документа, соответствующая диапазонам.  
   
  `column`  
- [in] The document column corresponding to the ranges.  
+ окне Столбец документа, соответствующий диапазонам.  
   
  `cRanges`  
  [in] Размер массива `ranges`.  
   
  `pcRanges`  
- [out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the ranges.  
+ заполняет Указатель на `ULONG32`, который получает размер буфера, необходимый для хранения диапазонов.  
   
  `ranges`  
- [out] A pointer to the buffer that receives the ranges.  
+ заполняет Указатель на буфер, который получает диапазоны.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK, если метод выполнен. в противном случае E_FAIL или другой код ошибки.  
   
 ## <a name="requirements"></a>Требования  
- **Header:** CorSym.idl, CorSym.h  
+ **Заголовок:** Корсим. idl, Корсим. h  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс ISymUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)

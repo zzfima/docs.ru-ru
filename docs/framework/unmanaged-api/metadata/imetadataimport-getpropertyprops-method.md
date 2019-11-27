@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74437058"
 ---
 # <a name="imetadataimportgetpropertyprops-method"></a>Метод IMetaDataImport::GetPropertyProps
-Gets the metadata for the property represented by the specified token.  
+Возвращает метаданные для свойства, представленного указанным токеном.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -50,59 +50,59 @@ HRESULT GetPropertyProps (
   
 ## <a name="parameters"></a>Параметры  
  `prop`  
- [in] A token that represents the property to return metadata for.  
+ окне Токен, представляющий свойство, для которого необходимо вернуть метаданные.  
   
  `pClass`  
- [out] A pointer to the TypeDef token that represents the type that implements the property.  
+ заполняет Указатель на маркер TypeDef, представляющий тип, реализующий свойство.  
   
  `szProperty`  
- [out] A buffer to hold the property name.  
+ заполняет Буфер для хранения имени свойства.  
   
  `cchProperty`  
- [in] The size in wide characters of `szProperty`.  
+ окне Размер в расширенных символах `szProperty`.  
   
  `pchProperty`  
- [out] The number of wide characters returned in `szProperty`.  
+ заполняет Число расширенных символов, возвращаемых в `szProperty`.  
   
  `pdwPropFlags`  
- [out] A pointer to any attribute flags applied to the property. This value is a bitmask from the [CorPropertyAttr](../../../../docs/framework/unmanaged-api/metadata/corpropertyattr-enumeration.md) enumeration.  
+ заполняет Указатель на любые флаги атрибутов, применяемые к свойству. Это значение является битовой маской из перечисления [CorPropertyAttr](../../../../docs/framework/unmanaged-api/metadata/corpropertyattr-enumeration.md) .  
   
  `ppvSig`  
- [out] A pointer to the metadata signature of the property.  
+ заполняет Указатель на сигнатуру метаданных свойства.  
   
  `pbSig`  
- [out] The number of bytes returned in `ppvSig`.  
+ заполняет Число байтов, возвращенных в `ppvSig`.  
   
  `pdwCPlusTypeFlag`  
- [out] A flag specifying the type of the constant that is the default value of the property. This value is from the CorElementType enumeration.  
+ заполняет Флаг, указывающий тип константы, которая является значением свойства по умолчанию. Это значение из перечисления Корелементтипе.  
   
  `ppDefaultValue`  
- [out] A pointer to the bytes that store the default value for this property.  
+ заполняет Указатель на байты, в которых хранится значение по умолчанию для этого свойства.  
   
  `pcchDefaultValue`  
- [out] The size in wide characters of `ppDefaultValue`, if `pdwCPlusTypeFlag` is ELEMENT_TYPE_STRING; otherwise, this value is not relevant. In that case, the length of `ppDefaultValue` is inferred from the type that is specified by `pdwCPlusTypeFlag`.  
+ заполняет Размер в расширенных символах `ppDefaultValue`, если `pdwCPlusTypeFlag` ELEMENT_TYPE_STRING; в противном случае это значение не является значимым. В этом случае длина `ppDefaultValue` выводится из типа, указанного `pdwCPlusTypeFlag`.  
   
  `pmdSetter`  
- [out] A pointer to the MethodDef token that represents the set accessor method for the property.  
+ заполняет Указатель на токен MethodDef, представляющий метод доступа set для свойства.  
   
  `pmdGetter`  
- [out] A pointer to the MethodDef token that represents the get accessor method for the property.  
+ заполняет Указатель на токен MethodDef, представляющий метод доступа get для свойства.  
   
  `rmdOtherMethod`  
- [out] An array of MethodDef tokens that represent other methods associated with the property.  
+ заполняет Массив токенов MethodDef, которые представляют другие методы, связанные со свойством.  
   
  `cMax`  
- [in] Максимальный размер массива `rmdOtherMethod`. If you do not provide an array large enough to hold all the methods, they are skipped without warning.  
+ [in] Максимальный размер массива `rmdOtherMethod`. Если массив не является достаточно большим, чтобы вместить все методы, они пропускаются без предупреждения.  
   
  `pcOtherMethod`  
- [out] The number of MethodDef tokens returned in `rmdOtherMethod`.  
+ заполняет Число маркеров MethodDef, возвращаемых в `rmdOtherMethod`.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Заголовок:** COR. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446517"
 ---
 # <a name="emitassemblycustomattribute-method"></a>Метод EmitAssemblyCustomAttribute
-Call to set assembly-level custom attributes.  
+Вызовите метод, чтобы установить настраиваемые атрибуты уровня сборки.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -41,31 +41,31 @@ HRESULT EmitAssemblyCustomAttribute(
   
 ## <a name="parameters"></a>Параметры  
  `AssemblyID`  
- ID of the assembly.  
+ Идентификатор сборки.  
   
  `FileToken`  
- File that defiles the attribute. Can be NULL if `AssemblyID` does not indicate an unbound netmodule.  
+ Файл, который разфайлет атрибут. Может иметь значение NULL, если `AssemblyID` не указывает на непривязанный netmodule.  
   
  `tkType`  
- Type of the custom attribute.  
+ Тип настраиваемого атрибута.  
   
  `pCustomValue`  
- Custom value data.  
+ Пользовательские данные значения.  
   
  `cbCustomValue`  
- Length of custom value data.  
+ Длина данных пользовательского значения.  
   
  `bSecurity`  
- TRUE if the custom attribute is related to assembly signing.  
+ Значение TRUE, если настраиваемый атрибут связан с подписыванием сборки.  
   
  `bAllowMulti`  
- TRUE if multiple attributes are to be emitted.  
+ Значение TRUE, если требуется выдавать несколько атрибутов.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Returns S_OK if the method succeeds.  
+ Возвращает S_OK, если метод завершается с ошибкой.  
   
 ## <a name="requirements"></a>Требования  
- Requires alink.h  
+ Требуется ALink. h  
   
 ## <a name="see-also"></a>См. также
 

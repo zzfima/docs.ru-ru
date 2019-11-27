@@ -12,7 +12,7 @@ ms.locfileid: "74344419"
 # <a name="language-integrated-query-linq-visual-basic"></a>LINQ (Visual Basic)
 LINQ — это набор функций, который предлагает мощные возможности создания запросов для синтаксиса языка Visual Basic. LINQ включает стандартные, легко запоминающиеся шаблоны для выполнения запросов и изменения данных. Эта технология потенциально способна обеспечить поддержку любого типа хранилища данных.  Платформа .NET Framework содержит сборки поставщика LINQ, позволяющие использовать LINQ с коллекциями .NET Framework, базами данных SQL Server, наборами данных ADO.NET Dataset и документами в формате XML.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Знакомство с LINQ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-linq.md)  
  Общие сведения о доступных для создания приложениях и о проблемах, которые можно решить с помощью запросов LINQ.  
   

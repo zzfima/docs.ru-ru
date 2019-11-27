@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74430105"
 ---
 # <a name="icorprofilercallback4rejiterror-method"></a>Метод ICorProfilerCallback4::ReJITError
-Notifies the profiler that the just-in-time (JIT) compiler encountered an error in the recompilation process.  
+Уведомляет профилировщик о том, что компилятор JIT обнаружил ошибку в процессе перекомпиляции.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,16 +37,16 @@ HRESULT ReJITError(
   
 ## <a name="parameters"></a>Параметры  
  `moduleID`  
- [in] The `ModuleID` in which the failed recompilation attempt was made.  
+ окне `ModuleID`, в котором была выполнена попытка повторной компиляции с ошибкой.  
   
  `methodId`  
- [in] The `MethodDef` of the method on which the failed recompilation attempt was made.  
+ окне `MethodDef` метода, для которого была выполнена попытка повторной компиляции.  
   
  `functionId`  
- [in] The function instance that is being recompiled or marked for recompilation. This value may be `NULL` if the failure occurred on a per-method basis instead of a per-instantiation basis (for example, if the profiler specified an invalid metadata token for the method to be recompiled).  
+ окне Экземпляр функции, который перекомпилируется или помечен для повторной компиляции. Это значение может быть `NULL`, если ошибка возникла для каждого метода, а не для отдельных экземпляров (например, если профилировщик указал недопустимый токен метаданных для повторной компиляции метода).  
   
  `hrStatus`  
- [in] An HRESULT that indicates the nature of the failure. See the Status HRESULTS section for a list of values.  
+ окне Значение HRESULT, указывающее природу сбоя. Список значений см. в разделе Status HRESULTs.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Значения, возвращаемые из этого обратного вызова, игнорируются.  
@@ -55,12 +55,12 @@ HRESULT ReJITError(
   
 |Массив значений HRESULT для состояния|Описание|  
 |--------------------------|-----------------|  
-|E_INVALIDARG|The `moduleID` or `methodDef` token is `NULL`.|  
+|E_INVALIDARG|Маркер `moduleID` или `methodDef` `NULL`.|  
 |CORPROF_E_DATAINCOMPLETE|Модуль еще не полностью загружен или находится в процессе выгрузки.|  
-|CORPROF_E_MODULE_IS_DYNAMIC|The specified module was dynamically generated (for example, by `Reflection.Emit`), and is thus not supported by this method.|  
-|CORPROF_E_FUNCTION_IS_COLLECTIBLE|The method is instantiated into a collectible assembly, and is therefore not able to be recompiled. Note that types and functions defined in a non-reflection context (for example, `List<MyCollectibleStruct>`) can be instantiated into a collectible assembly.|  
-|E_OUTOFMEMORY|The CLR ran out of memory while trying to mark the specified method for JIT recompilation.|  
-|Другой|Операционная система возвратила сбой за пределами среды CLR. For example, if a system call to change the access protection of a page of memory fails, the operating system error is displayed.|  
+|CORPROF_E_MODULE_IS_DYNAMIC|Указанный модуль был динамически создан (например, с `Reflection.Emit`) и поэтому не поддерживается этим методом.|  
+|CORPROF_E_FUNCTION_IS_COLLECTIBLE|Экземпляр метода создается в собираемой сборке и поэтому не может быть перекомпилирован. Обратите внимание, что типы и функции, определенные в контексте без отражения (например, `List<MyCollectibleStruct>`), можно создать в собираемой сборке.|  
+|E_OUTOFMEMORY|В среде CLR возникла нехватка памяти при попытке пометить указанный метод для повторной компиляции JIT.|  
+|Прочее|Операционная система возвратила сбой за пределами среды CLR. Например, если системный вызов для изменения защиты доступа к странице памяти завершается ошибкой, отображается сообщение об ошибке операционной системы.|  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  

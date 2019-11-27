@@ -51,7 +51,7 @@ ms.locfileid: "74446908"
 
 - IronPython. Доступен в качестве программного обеспечения с открытым исходным кодом на веб-сайте [GitHub](https://github.com/IronLanguages/ironpython2).
 
-- IronRuby. Available as open-source software from the [IronRuby](http://ironruby.net/) website.
+- IronRuby. Доступно как программное обеспечение с открытым исходным кодом на веб-сайте [IronRuby](http://ironruby.net/) .
 
 ## <a name="primary-dlr-advantages"></a>Основные преимущества среды DLR
  Среда DLR предоставляет следующие преимущества.
@@ -74,7 +74,7 @@ ms.locfileid: "74446908"
 ## <a name="dlr-architecture"></a>Архитектура среды DLR
  Ниже показана архитектура среды DLR.
 
- ![Dynamic Language Runtime Architecture Overview](./media/dlr-archoverview.png "DLR_ArchOverview") DLR architecture
+ ![Общие сведения об архитектуре среды выполнения динамического языка](./media/dlr-archoverview.png "DLR_ArchOverview") Архитектура DLR
 
  Среда DLR добавляет в среду CLR ряд служб для лучшей поддержки динамических языков. К ним относятся перечисленные ниже службы.
 
@@ -94,6 +94,6 @@ ms.locfileid: "74446908"
 - <xref:System.Dynamic.ExpandoObject>
 - <xref:System.Dynamic.DynamicObject>
 - [Общеязыковая среда выполнения](../../standard/clr.md)
-- [Expression Trees (C#)](../../csharp/programming-guide/concepts/expression-trees/index.md) (Деревья выражений (C#))
+- [Деревья выражений (C#)](../../csharp/programming-guide/concepts/expression-trees/index.md)
 - [Expression Trees (Visual Basic)](../../visual-basic/programming-guide/concepts/expression-trees/index.md) (Деревья выражений (Visual Basic))
 - [Пошаговое руководство. Создание и использование динамических объектов](../../csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)

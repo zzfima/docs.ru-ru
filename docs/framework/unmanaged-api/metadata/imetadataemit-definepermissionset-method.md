@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74431570"
 ---
 # <a name="imetadataemitdefinepermissionset-method"></a>Метод IMetaDataEmit::DefinePermissionSet
-Creates a definition for a permission set with the specified metadata signature, and gets a token to that permission set definition.  
+Создает определение для набора разрешений с указанной сигнатурой метаданных и получает маркер для этого определения набора разрешений.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,30 +39,30 @@ HRESULT DefinePermissionSet (
   
 ## <a name="parameters"></a>Параметры  
  `tk`  
- [in] The object to be decorated.  
+ окне Объект для декорирования.  
   
  `dwAction`  
- [in] A [CorDeclSecurity](../../../../docs/framework/unmanaged-api/metadata/cordeclsecurity-enumeration.md) value that specifies the type of declarative security to be used.  
+ окне Значение [кордеклсекурити](../../../../docs/framework/unmanaged-api/metadata/cordeclsecurity-enumeration.md) , указывающее тип используемой декларативной безопасности.  
   
  `pvPermission`  
- [in] The permission BLOB.  
+ окне Большой двоичный объект разрешений.  
   
  `cbPermission`  
- [in] The size, in bytes, of `pvPermission`.  
+ окне Размер `pvPermission`в байтах.  
   
  `ppm`  
- [out] The returned permission token.  
+ заполняет Возвращаемый маркер разрешения.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Заголовок:** COR. h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **Библиотека:** Используется в качестве ресурса в MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [Интерфейс IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

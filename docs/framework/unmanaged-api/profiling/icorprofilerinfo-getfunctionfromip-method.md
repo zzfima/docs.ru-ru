@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74439207"
 ---
 # <a name="icorprofilerinfogetfunctionfromip-method"></a>Метод ICorProfilerInfo::GetFunctionFromIP
-Maps a managed code instruction pointer to a `FunctionID`.  
+Сопоставляет указатель инструкции управляемого кода с `FunctionID`.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -35,10 +35,10 @@ HRESULT GetFunctionFromIP(
   
 ## <a name="parameters"></a>Параметры  
  `ip`  
- [in] The instruction pointer in managed code.  
+ окне Указатель инструкции в управляемом коде.  
   
  `pFunctionId`  
- [out] The returned function ID.  
+ заполняет Возвращаемый идентификатор функции.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
@@ -49,6 +49,6 @@ HRESULT GetFunctionFromIP(
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

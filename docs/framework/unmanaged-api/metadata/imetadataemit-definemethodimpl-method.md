@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445261"
 ---
 # <a name="imetadataemitdefinemethodimpl-method"></a>Метод IMetaDataEmit::DefineMethodImpl
-Creates a definition for implementation of a method inherited from an interface, and returns a token to that method-implementation definition.  
+Создает определение для реализации метода, унаследованного от интерфейса, и возвращает маркер для этого определения реализации метода.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,20 +37,20 @@ HRESULT DefineMethodImpl (
   
 ## <a name="parameters"></a>Параметры  
  `td`  
- [in] The `mdTypedef` token of the implementing class.  
+ окне Токен `mdTypedef` реализующего класса.  
   
  `tkBody`  
- [in] The `mdMethodDef` or `mdMemberRef` token of the code body.  
+ окне Маркер `mdMethodDef` или `mdMemberRef` текста кода.  
   
  `tkDecl`  
- [in] The `mdMethodDef` or `mdMemberRef` token of the interface method being implemented.  
+ окне Токен `mdMethodDef` или `mdMemberRef` реализуемого метода интерфейса.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Заголовок:** COR. h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **Библиотека:** Используется в качестве ресурса в MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

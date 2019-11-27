@@ -40,43 +40,43 @@ HRESULT EnumMethodsWithName (
   
 ## <a name="parameters"></a>Параметры  
  `phEnum`  
- [in, out] A pointer to the enumerator. This must be NULL for the first call of this method.  
+ [вход, выход] Указатель на перечислитель. При первом вызове этого метода это значение должно быть равно NULL.  
   
  `cl`  
- [in] A TypeDef token representing the type whose methods to enumerate.  
+ окне Токен TypeDef, представляющий тип, методы которого необходимо перечислить.  
   
  `szName`  
- [in] The name that limits the scope of the enumeration.  
+ окне Имя, ограничивающее область перечисления.  
   
  `rMethods`  
- [out] The array used to store the MethodDef tokens.  
+ заполняет Массив, используемый для хранения маркеров MethodDef.  
   
  `cMax`  
  [in] Максимальный размер массива `rMethods`.  
   
  `pcTokens`  
- [out] The number of MethodDef tokens returned in `rMethods`.  
+ заполняет Число маркеров MethodDef, возвращаемых в `rMethods`.  
   
-## <a name="remarks"></a>Заметки  
- This method enumerates fields and methods, but not properties or events. Unlike [IMetaDataImport::EnumMethods](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enummethods-method.md), `EnumMethodsWithName` discards all method tokens that do not have the specified name.  
+## <a name="remarks"></a>Примечания  
+ Этот метод перечисляет поля и методы, но не свойства или события. В отличие от метода [IMetaDataImport:: enummethods-](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enummethods-method.md), `EnumMethodsWithName` удаляет все маркеры методов, у которых нет указанного имени.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
   
 |HRESULT|Описание|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMethodsWithName` returned successfully.|  
-|`S_FALSE`|There are no tokens to enumerate. In that case, `pcTokens` is zero.|  
+|`S_OK`|`EnumMethodsWithName` успешно возвращено.|  
+|`S_FALSE`|Нет токенов для перечисления. В этом случае `pcTokens` равно нулю.|  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Заголовок:** COR. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [Интерфейс IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

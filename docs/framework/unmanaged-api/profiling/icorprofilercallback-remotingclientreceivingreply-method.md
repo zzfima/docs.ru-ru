@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445807"
 ---
 # <a name="icorprofilercallbackremotingclientreceivingreply-method"></a>Метод ICorProfilerCallback::RemotingClientReceivingReply
-Notifies the profiler that the server-side portion of a remoting call has completed and the client is now receiving and about to process the reply.  
+Уведомляет профилировщик, что серверная часть вызова удаленного взаимодействия завершена, клиент принимает ответ и готов к его обработке.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -35,18 +35,18 @@ HRESULT RemotingClientReceivingReply(
   
 ## <a name="parameters"></a>Параметры  
  `pCookie`  
- [in] A value that will correspond with the value provided in [ICorProfilerCallback::RemotingServerSendingReply](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserversendingreply-method.md) under these conditions:  
+ окне Значение, которое будет соответствовать значению, указанному в параметре [ICorProfilerCallback:: RemotingServerSendingReply](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserversendingreply-method.md) в следующих условиях:  
   
-- Remoting GUID cookies are active.  
+- Файлы Cookie GUID удаленного взаимодействия активны.  
   
-- The channel succeeds in transmitting the message.  
+- Канал проходит успешную передачу сообщения.  
   
-- GUID cookies are active on the server-side process.  
+- Файлы Cookie GUID активны в процессе на стороне сервера.  
   
- This allows easy pairing of remoting calls.  
+ Это позволяет легко связывать вызовы удаленного взаимодействия.  
   
  `fIsAsync`  
- [in] A value that is `true` if the call is asynchronous; otherwise, `false`.  
+ окне Значение, которое `true`, если вызов является асинхронным; в противном случае `false`.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  

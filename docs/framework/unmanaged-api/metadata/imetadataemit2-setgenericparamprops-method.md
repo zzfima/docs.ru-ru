@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74440440"
 ---
 # <a name="imetadataemit2setgenericparamprops-method"></a>Метод IMetaDataEmit2::SetGenericParamProps
-Sets property values for the generic parameter definition referenced by the specified token.  
+Задает значения свойств для определения универсального параметра, на которое ссылается указанный токен.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,26 +39,26 @@ HRESULT SetGenericParamProps (
   
 ## <a name="parameters"></a>Параметры  
  `gp`  
- [in] The token for the generic parameter definition for which to set values.  
+ окне Токен для определения универсального параметра, для которого задаются значения.  
   
  `dwParamFlags`  
- [in] A value of the [CorGenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md) enumeration that describes the type for the generic parameter.  
+ окне Значение перечисления [корженерикпараматтр](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md) , описывающее тип универсального параметра.  
   
  `szName`  
- [в] Необязательно. The name of the parameter for which to set values.  
+ [в] Необязательно. Имя параметра, для которого задаются значения.  
   
  `reserved`  
- [in] Reserved for future extensibility.  
+ окне Зарезервировано для будущего расширения.  
   
  `rtkConstraints`  
- [в] Необязательно. A zero-terminated array of type constraints. Array members must be an `mdTypeDef`, `mdTypeRef`, or `mdTypeSpec` metadata token.  
+ [в] Необязательно. Массив ограничений типа, заканчивающийся нулем. Элементы массива должны быть `mdTypeDef`, `mdTypeRef`или маркером метаданных `mdTypeSpec`.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Заголовок:** COR. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Библиотека:** Используется в качестве ресурса в MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

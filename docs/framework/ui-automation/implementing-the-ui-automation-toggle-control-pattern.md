@@ -37,10 +37,10 @@ ms.locfileid: "74447070"
 ## <a name="required-members-for-itoggleprovider"></a>Обязательные члены для IToggleProvider  
  Следующие свойства и методы обязательны для реализации <xref:System.Windows.Automation.Provider.IToggleProvider>.  
   
-|Обязательный член|Тип члена|Примечания|  
+|Обязательный член|Тип элемента|Примечания|  
 |---------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.TogglePattern.Toggle%2A>|Метод|Отсутствуют|  
-|<xref:System.Windows.Automation.TogglePatternIdentifiers.ToggleStateProperty>|свойство;|Отсутствуют|  
+|<xref:System.Windows.Automation.TogglePattern.Toggle%2A>|Метод|Нет|  
+|<xref:System.Windows.Automation.TogglePatternIdentifiers.ToggleStateProperty>|Свойство|Нет|  
   
  Этот шаблон элемента управления не имеет связанных событий.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "74447070"
 ## <a name="exceptions"></a>Исключения  
  Этот шаблон элемента управления не имеет связанных исключений.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Общие сведения о шаблонах элементов управления модели автоматизации пользовательского интерфейса](ui-automation-control-patterns-overview.md)
 - [Поддержка шаблонов элементов управления в поставщике автоматизации пользовательского интерфейса](support-control-patterns-in-a-ui-automation-provider.md)

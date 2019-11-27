@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448874"
 ---
 # <a name="isymunmanagedmethodgetsequencepoints-method"></a>Метод ISymUnmanagedMethod::GetSequencePoints
-Gets all the sequence points within this method.  
+Возвращает все точки следования в этом методе.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -41,35 +41,35 @@ HRESULT GetSequencePoints(
   
 ## <a name="parameters"></a>Параметры  
  `cPoints`  
- [in] A `ULONG32` that receives the size of the `offsets`, `documents`, `lines`, `columns`, `endLines`, and `endColumns` arrays.  
+ окне `ULONG32`, получающий размер массивов `offsets`, `documents`, `lines`, `columns`, `endLines`и `endColumns`.  
   
  `pcPoints`  
- [out] A pointer to a `ULONG32` that receives the length of the buffer required to contain the sequence points.  
+ заполняет Указатель на `ULONG32`, который получает длину буфера, необходимую для хранения точек следования.  
   
  `offsets`  
- [in] An array in which to store the Microsoft intermediate language (MSIL) offsets from the beginning of the method for the sequence points.  
+ окне Массив, в котором хранятся смещения MSIL от начала метода для точек следования.  
   
  `documents`  
- [in] An array in which to store the documents in which the sequence points are located.  
+ окне Массив, в котором хранятся документы, в которых находятся точки следования.  
   
  `lines`  
- [in] An array in which to store the lines in the documents at which the sequence points are located.  
+ окне Массив, в котором хранятся строки в документах, где находятся точки следования.  
   
  `columns`  
- [in] An array in which to store the columns in the documents at which the sequence points are located.  
+ окне Массив, в котором хранятся столбцы в документах, где находятся точки следования.  
   
  `endLines`  
- [in] The array of lines in the documents at which the sequence points end.  
+ окне Массив строк в документах, в которых заканчивается точка следования.  
   
  `endColumns`  
- [in] The array of columns in the documents at which the sequence points end.  
+ окне Массив столбцов в документах, в которых находятся конечные точки последовательности.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK, если метод выполнен. в противном случае E_FAIL или другой код ошибки.  
   
 ## <a name="requirements"></a>Требования  
- **Header:** CorSym.idl, CorSym.h  
+ **Заголовок:** Корсим. idl, Корсим. h  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс ISymUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)

@@ -25,7 +25,7 @@ ms.locfileid: "74439238"
 # <a name="icorprofilerinfogetcodeinfo-method"></a>Метод ICorProfilerInfo::GetCodeInfo
 Получает экстент машинного кода, связанного с указанным идентификатором функции.  
   
- Этот метод устарел. Use the [ICorProfilerInfo2::GetCodeInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getcodeinfo2-method.md) method instead.  
+ Этот метод устарел. Используйте вместо этого метод [ICorProfilerInfo2:: GetCodeInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getcodeinfo2-method.md) .  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -58,7 +58,7 @@ HRESULT GetCodeInfo(
   
  **Библиотека:** CorGuids.lib  
   
- **.NET Framework Versions:** 1.0  
+ **.NET Framework версии:** 1,0  
   
 ## <a name="see-also"></a>См. также
 

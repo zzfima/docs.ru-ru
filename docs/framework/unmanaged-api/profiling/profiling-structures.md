@@ -16,7 +16,7 @@ ms.locfileid: "74447692"
 # <a name="profiling-structures"></a>Структуры профилирования
 В этом разделе описаны неуправляемые структуры, которые использует API профилирования.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Структура COR_PRF_ASSEMBLY_REFERENCE_INFO](../../../../docs/framework/unmanaged-api/profiling/cor-prf-assembly-reference-info-structure.md)  
  Обеспечивает среду CLR информацией о ссылке на сборку, которую ей следует учитывать при выполнении обхода замыкания.  
   

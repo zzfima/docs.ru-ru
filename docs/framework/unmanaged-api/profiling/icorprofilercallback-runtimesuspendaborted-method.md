@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74430608"
 ---
 # <a name="icorprofilercallbackruntimesuspendaborted-method"></a>Метод ICorProfilerCallback::RuntimeSuspendAborted
-Notifies the profiler that the runtime has aborted the runtime suspension that was occurring.  
+Уведомляет профилировщик о том, что среда выполнения прервал приостановленную приостановку среды выполнения.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -32,11 +32,11 @@ HRESULT RuntimeSuspendAborted();
 ```  
   
 ## <a name="remarks"></a>Заметки  
- The run-time suspension might be aborted if two threads simultaneously attempt to suspend the runtime.  
+ Приостановка во время выполнения может быть прервана, если два потока одновременно пытаются приостановить выполнение.  
   
- Either the [ICorProfilerCallback::RuntimeSuspendFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendfinished-method.md) callback or the `RuntimeSuspendAborted` callback will occur on a single thread following a [ICorProfilerCallback::RuntimeSuspendStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendstarted-method.md) callback.  
+ Обратный вызов [ICorProfilerCallback:: RuntimeSuspendFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendfinished-method.md) или обратный вызов `RuntimeSuspendAborted` выполняется в одном потоке после обратного вызова [ICorProfilerCallback:: рунтимесуспендстартед](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendstarted-method.md) .  
   
- The `RuntimeSuspendAborted` callback is guaranteed to occur on the same thread as the `RuntimeSuspendStarted` callback.  
+ Функция обратного вызова `RuntimeSuspendAborted` будет гарантированно выполняться в том же потоке, что и обратный вызов `RuntimeSuspendStarted`.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  

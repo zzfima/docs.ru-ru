@@ -37,24 +37,24 @@ HRESULT GetNativeCallConvFromSig (
   
 ## <a name="parameters"></a>Параметры  
  `pvSig`  
- [in] A pointer to the metadata signature of the method to return the calling convention for.  
+ окне Указатель на сигнатуру метаданных метода, для которого возвращается соглашение о вызовах.  
   
  `cbSig`  
- [in] The size in bytes of `pvSig`.  
+ окне Размер в байтах `pvSig`.  
   
  `pCallConv`  
- [out] A pointer to the native calling convention.  
+ заполняет Указатель на собственное соглашение о вызовах.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Заголовок:** COR. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - <xref:System.Runtime.InteropServices.CallingConvention>
 - [Интерфейс IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)

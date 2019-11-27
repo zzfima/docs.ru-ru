@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449313"
 ---
 # <a name="isymunmanagedbinder3getreaderfromcallback-method"></a>Метод ISymUnmanagedBinder3::GetReaderFromCallback
-Allows the user to implement or supply via callback either an `IID_IDiaReadExeAtRVACallback` or `IID_IDiaReadExeAtOffsetCallback` to obtain the debug directory information from memory.  
+Позволяет пользователю реализовать или предоставить обратный вызов с помощью обратного вызова либо `IID_IDiaReadExeAtRVACallback`, либо `IID_IDiaReadExeAtOffsetCallback`, чтобы получить сведения о каталоге отладки из памяти.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,29 +39,29 @@ HRESULT GetReaderFromCallback(
   
 ## <a name="parameters"></a>Параметры  
  `importer`  
- [in] A pointer to the metadata import interface.  
+ окне Указатель на интерфейс импорта метаданных.  
   
  `fileName`  
- [in] A pointer to the file name.  
+ окне Указатель на имя файла.  
   
  `searchPath`  
- [in] A pointer to the search path.  
+ окне Указатель на путь поиска.  
   
  `searchPolicy`  
- [in] A value of the [CorSymSearchPolicyAttributes](../../../../docs/framework/unmanaged-api/diagnostics/corsymsearchpolicyattributes-enumeration.md) enumeration that specifies the policy to be used when doing a search for a symbol reader.  
+ окне Значение перечисления [корсимсеарчполициаттрибутес](../../../../docs/framework/unmanaged-api/diagnostics/corsymsearchpolicyattributes-enumeration.md) , указывающее политику, используемую при поиске средства чтения символов.  
   
  `callback`  
- [in] A pointer to the callback function.  
+ окне Указатель на функцию обратного вызова.  
   
  `pRetVal`  
- [out] A pointer that is set to the returned [ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md) interface.  
+ заполняет Указатель, которому присваивается возвращаемый интерфейс [ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md) .  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK, если метод выполнен. в противном случае E_FAIL или другой код ошибки.  
   
 ## <a name="requirements"></a>Требования  
- **Header:** CorSym.idl  
+ **Заголовок:** Корсим. idl  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс ISymUnmanagedBinder3](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-interface.md)

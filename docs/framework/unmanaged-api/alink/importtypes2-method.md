@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445662"
 ---
 # <a name="importtypes2-method"></a>Метод ImportTypes2
-Initiates the import of types. Call this method to begin importing types from each scope imported via [ImportFile Method](importfile-method.md).  
+Инициирует импорт типов. Вызовите этот метод, чтобы начать импорт типов из каждой области, импортированной с помощью [метода ImportFile](importfile-method.md).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,28 +39,28 @@ HRESULT ImportTypes2(
   
 ## <a name="parameters"></a>Параметры  
  `AssemblyID`  
- ID of assembly into which to import.  
+ Идентификатор сборки, в которую необходимо выполнить импорт.  
   
  `FileToken`  
- ID of file to from which to import.  
+ Идентификатор файла для импорта.  
   
  `dwScope`  
- Zero-based scope from which to import.  
+ Отсчитываемая от нуля область, из которой производится импорт.  
   
  `phEnum`  
- Receives enumerator handle for the types in the given scope.  
+ Получает обработчик перечислителя для типов в заданной области.  
   
  `ppImportScope`  
- Optionally receives [IMetaDataImport2 Interface](../metadata/imetadataimport2-interface.md) interface.  
+ При необходимости получает интерфейс интерфейса [IMetaDataImport2](../metadata/imetadataimport2-interface.md) .  
   
  `pdwCountOfTypes`  
- Optionally receives count of types in the specified scope.  
+ При необходимости получает число типов в указанной области.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Returns S_OK if the method succeeds.  
+ Возвращает S_OK, если метод завершается с ошибкой.  
   
 ## <a name="requirements"></a>Требования  
- Requires alink.h  
+ Требуется ALink. h  
   
 ## <a name="see-also"></a>См. также
 

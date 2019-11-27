@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74440367"
 ---
 # <a name="imetadataimportcountenum-method"></a>Метод IMetaDataImport::CountEnum
-Gets the number of elements in the enumeration that was retrieved by the specified enumerator.  
+Возвращает количество элементов в перечислении, полученных указанным перечислителем.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -36,20 +36,20 @@ HRESULT CountEnum (
   
 ## <a name="parameters"></a>Параметры  
  `hEnum`  
- [in] The handle for the enumerator.  
+ окне Маркер для перечислителя.  
   
  `pulCount`  
- [out] The number of elements enumerated.  
+ заполняет Число перечисленных элементов.  
   
 ## <a name="remarks"></a>Заметки  
- The handle specified by `hEnum` is obtained from a previous `Enum`*Name* call (for example, [IMetaDataImport::EnumTypeDefs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumtypedefs-method.md)).  
+ Маркер, заданный `hEnum`, получается из предыдущего вызова *имени* `Enum`(например, [IMetaDataImport:: EnumTypeDefs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumtypedefs-method.md)).  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Заголовок:** COR. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

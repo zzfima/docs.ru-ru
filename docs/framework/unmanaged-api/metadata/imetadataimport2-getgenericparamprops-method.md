@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74427295"
 ---
 # <a name="imetadataimport2getgenericparamprops-method"></a>Метод IMetaDataImport2::GetGenericParamProps
-Gets the metadata associated with the generic parameter represented by the specified token.  
+Возвращает метаданные, связанные с универсальным параметром, представленным указанным токеном.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -42,35 +42,35 @@ HRESULT GetGenericParamProps (
   
 ## <a name="parameters"></a>Параметры  
  `gp`  
- [in] The token that represents the generic parameter for which to return metadata.  
+ окне Токен, представляющий универсальный параметр, для которого возвращаются метаданные.  
   
  `pulParamSeq`  
- [out] The ordinal position of the `Type` parameter in the parent constructor or method.  
+ заполняет Порядковый номер параметра `Type` в родительском конструкторе или методе.  
   
  `pdwParamFlags`  
- [out] A value of the [CorGenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md) enumeration that describes the `Type` for the generic parameter.  
+ заполняет Значение перечисления [корженерикпараматтр](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md) , описывающее `Type` для универсального параметра.  
   
  `ptOwner`  
- [out] A TypeDef or MethodDef token that represents the owner of the parameter.  
+ заполняет Токен TypeDef или MethodDef, представляющий владельца параметра.  
   
  `reserved`  
- [out] Reserved for future extensibility.  
+ заполняет Зарезервировано для будущего расширения.  
   
  `wzName`  
- [out] The name of the generic parameter.  
+ заполняет Имя универсального параметра.  
   
  `cchName`  
- [in] The size of the `wzName` buffer.  
+ окне Размер буфера `wzName`.  
   
  `pchName`  
- [out] The returned size of the name, in wide characters.  
+ заполняет Возвращаемый размер имени в расширенных символах.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Заголовок:** COR. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Библиотека:** Используется в качестве ресурса в MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

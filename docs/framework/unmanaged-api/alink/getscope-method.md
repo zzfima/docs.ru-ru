@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74447205"
 ---
 # <a name="getscope-method"></a>Метод GetScope
-Gets an import scope.  
+Возвращает область импорта.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,22 +37,22 @@ HRESULT GetScope(
   
 ## <a name="parameters"></a>Параметры  
  `AssemblyID`  
- Unique ID of assembly to import to.  
+ Уникальный идентификатор сборки для импорта.  
   
  `FileToken`  
- Unique ID of the file to import from.  
+ Уникальный идентификатор файла для импорта.  
   
  `dwScope`  
- Zero-based scope to import.  
+ Отсчитываемая от нуля область для импорта.  
   
  `ppImportScope`  
- Receives [IMetaDataImport Interface](../metadata/imetadataimport-interface.md) interface for the scope.  
+ Получает интерфейс [интерфейса IMetaDataImport](../metadata/imetadataimport-interface.md) для области.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Returns S_OK if the method succeeds.  
+ Возвращает S_OK, если метод завершается с ошибкой.  
   
 ## <a name="requirements"></a>Требования  
- Requires alink.h  
+ Требуется ALink. h  
   
 ## <a name="see-also"></a>См. также
 

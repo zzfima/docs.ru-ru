@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449108"
 ---
 # <a name="isymunmanageddocumenthasembeddedsource-method"></a>Метод ISymUnmanagedDocument::HasEmbeddedSource
-Returns `true` if the document has source embedded in the debugging symbols; otherwise, returns `false`.  
+Возвращает `true`, если документ содержит исходный код, внедренный в отладочные символы; в противном случае возвращает `false`.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -34,11 +34,11 @@ HRESULT HasEmbeddedSource(
   
 ## <a name="parameters"></a>Параметры  
  `pRetVal`  
- [out] A pointer to a variable that indicates whether the document has source embedded in the debugging symbols.  
+ заполняет Указатель на переменную, которая указывает, имеет ли документ исходный код, внедренный в отладочные символы.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- S_OK if the method succeeds.  
+ S_OK, если метод выполнен.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс ISymUnmanagedDocument](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

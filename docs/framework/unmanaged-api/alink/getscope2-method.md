@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74447188"
 ---
 # <a name="getscope2-method"></a>Метод GetScope2
-Gets an import scope.  
+Возвращает область импорта.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,24 +37,24 @@ HRESULT GetScope2(
   
 ## <a name="parameters"></a>Параметры  
  `AssemblyID`  
- ID of target assembly.  
+ Идентификатор целевой сборки.  
   
  `FileToken`  
- ID of file from which to import.  
+ Идентификатор файла, из которого необходимо выполнить импорт.  
   
  `dwScope`  
- Zero-based scope to import.  
+ Отсчитываемая от нуля область для импорта.  
   
  `ppImportScope`  
- Receives pointer to [IMetaDataImport2 Interface](../metadata/imetadataimport2-interface.md) interface for indicated scope.  
+ Получает указатель на интерфейс интерфейса [IMetaDataImport2](../metadata/imetadataimport2-interface.md) для указанной области.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Returns S_OK if the method succeeds.  
+ Возвращает S_OK, если метод завершается с ошибкой.  
   
 ## <a name="requirements"></a>Требования  
- Requires alink.h.  
+ Требуется ALink. h.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс IALink2](ialink2-interface.md)
 - [Интерфейс IALink](ialink-interface.md)

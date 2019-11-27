@@ -1,5 +1,5 @@
 ---
-title: GCLOHThreshold element
+title: Гклохсрешолд, элемент
 ms.date: 11/20/2019
 helpviewer_keywords:
 - GCLOHThreshold element
@@ -11,13 +11,13 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74451326"
 ---
-# <a name="gclohthreshold-element"></a>GCLOHThreshold element
+# <a name="gclohthreshold-element"></a>Гклохсрешолд, элемент
 
-Specifies the threshold size, in bytes, that causes the garbage collector to put objects on the large object heap (LOH).
+Указывает пороговый размер (в байтах), который заставляет сборщик мусора разместить объекты в куче больших объектов (LOH).
 
 [\<configuration>](../configuration-element.md)\
-&nbsp;&nbsp;[\<runtime>](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;\<GCLOHThreshold>
+[> среды выполнения\<](runtime-element.md) &nbsp;&nbsp;\
+&nbsp;&nbsp;&nbsp;&nbsp;\<Гклохсрешолд >
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -30,17 +30,17 @@ Specifies the threshold size, in bytes, that causes the garbage collector to put
 
 |Атрибут|Описание|
 |---------------|-----------------|
-|`enabled`|Обязательный атрибут.<br /><br />Specifies the threshold size that causes objects to go on the large object heap.|
+|`enabled`|Обязательный атрибут.<br /><br />Указывает пороговый размер, который приводит к тому, что объекты попадают в кучу больших объектов.|
 
-### <a name="enabled-attribute"></a>enabled attribute
+### <a name="enabled-attribute"></a>Включенный атрибут
 
 |значения|Описание|
 |-----------|-----------------|
-|`nnnn`|The threshold size, in bytes, that causes objects to go on the large object heap.|
+|`nnnn`|Пороговый размер (в байтах), который приводит к тому, что объекты попадают в кучу больших объектов.|
 
 ## <a name="child-elements"></a>Дочерние элементы
 
-Отсутствует.
+Нет.
 
 ## <a name="parent-elements"></a>Родительские элементы
 
@@ -51,11 +51,11 @@ Specifies the threshold size, in bytes, that causes the garbage collector to put
 
 ## <a name="remarks"></a>Заметки
 
-This setting was introduced in .NET Framework 4.8.
+Этот параметр появился в .NET Framework 4,8.
 
 ## <a name="see-also"></a>См. также
 
-- [Run-time settings schema](index.md)
+- [Схема параметров времени выполнения](index.md)
 - [Схема файла конфигурации](../index.md)
 - [Основы сборки мусора](../../../../standard/garbage-collection/fundamentals.md)
-- [NET Core run-time config options for GC](../../../../core/run-time-config/garbage-collector.md)
+- [Параметры конфигурации среды выполнения NET Core для GC](../../../../core/run-time-config/garbage-collector.md)

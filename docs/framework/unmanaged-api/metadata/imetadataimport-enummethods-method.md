@@ -39,33 +39,33 @@ HRESULT EnumMethods (
   
 ## <a name="parameters"></a>Параметры  
  `phEnum`  
- [in, out] A pointer to the enumerator. This must be NULL for the first call of this method.  
+ [вход, выход] Указатель на перечислитель. При первом вызове этого метода это значение должно быть равно NULL.  
   
  `cl`  
- [in] A TypeDef token representing the type with the methods to enumerate.  
+ окне Токен TypeDef, представляющий тип с методами для перечисления.  
   
  `rMethods`  
- [out] The array to store the MethodDef tokens.  
+ заполняет Массив для хранения токенов MethodDef.  
   
  `cMax`  
- [in] The maximum size of the MethodDef `rMethods` array.  
+ окне Максимальный размер MethodDef `rMethods` массиве.  
   
  `pcTokens`  
- [out] The number of MethodDef tokens returned in `rMethods`.  
+ заполняет Число маркеров MethodDef, возвращаемых в `rMethods`.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
   
 |HRESULT|Описание|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMethods` returned successfully.|  
-|`S_FALSE`|There are no MethodDef tokens to enumerate. In that case, `pcTokens` is zero.|  
+|`S_OK`|`EnumMethods` успешно возвращено.|  
+|`S_FALSE`|Отсутствуют токены MethodDef для перечисления. В этом случае `pcTokens` равно нулю.|  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Заголовок:** COR. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

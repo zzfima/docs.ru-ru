@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448759"
 ---
 # <a name="corvalidatormoduletype-enumeration"></a>Перечисление CorValidatorModuleType
-Specifies the type of a module.  
+Указывает тип модуля.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -43,23 +43,23 @@ typedef enum
   
 |Член|Описание|  
 |------------|-----------------|  
-|`ValidatorModuleTypeInvalid`|The module is an invalid type.|  
-|`ValidatorModuleTypeMin`|The minimum value of the `CorValidatorModuleType` enum.|  
-|`ValidatorModuleTypePE`|The module is a portable executable (PE) file.|  
-|`ValidatorModuleTypeObj`|The module is a .obj file.|  
-|`ValidatorModuleTypeEnc`|The module is an edit-and-continue debugger session.|  
-|`ValidatorModuleTypeIncr`|The module is one that has been incrementally built.|  
-|`ValidatorModuleTypeMax`|The maximum value of the `CorValidatorModuleType` enum.|  
+|`ValidatorModuleTypeInvalid`|Недопустимый тип модуля.|  
+|`ValidatorModuleTypeMin`|Минимальное значение перечисления `CorValidatorModuleType`.|  
+|`ValidatorModuleTypePE`|Модуль является переносимым исполняемым файлом (PE).|  
+|`ValidatorModuleTypeObj`|Модуль является OBJ-файлом.|  
+|`ValidatorModuleTypeEnc`|Модуль является сеансом отладчика "изменить и продолжить".|  
+|`ValidatorModuleTypeIncr`|Модуль — это один из инкрементно построенных.|  
+|`ValidatorModuleTypeMax`|Максимальное значение перечисления `CorValidatorModuleType`.|  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Заголовок:** COR. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Перечисления метаданных](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

@@ -38,26 +38,26 @@ HRESULT SetFileProps (
   
 ## <a name="parameters"></a>Параметры  
  `file`  
- [in] The metadata token that specifies the `File` metadata structure to be modified.  
+ окне Маркер метаданных, указывающий структуру метаданных `File`, которую необходимо изменить.  
   
  `pbHashValue`  
- [in] A pointer to the hash data associated with the file.  
+ окне Указатель на хэш-данные, связанные с файлом.  
   
  `cbHashValue`  
- [in] The size in bytes of `pbHashValue`.  
+ окне Размер в байтах `pbHashValue`.  
   
  `dwFileFlags`  
- [in] A bitwise combination of [CorFileFlags](../../../../docs/framework/unmanaged-api/metadata/corfileflags-enumeration.md) values that specify various attributes of the file.  
+ окне Побитовое сочетание значений [корфилефлагс](../../../../docs/framework/unmanaged-api/metadata/corfileflags-enumeration.md) , задающих различные атрибуты файла.  
   
 ## <a name="remarks"></a>Заметки  
- To create a `File` metadata structure, use the [IMetaDataAssemblyEmit::DefineFile](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md) method.  
+ Чтобы создать `File` структуру метаданных, используйте метод [IMetaDataAssemblyEmit::D ефинефиле](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md) .  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Заголовок:** COR. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Библиотека:** Используется в качестве ресурса в MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

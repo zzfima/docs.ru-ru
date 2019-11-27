@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74434053"
 ---
 # <a name="imetadatatablesgetcodedtokeninfo-method"></a>Метод IMetaDataTables::GetCodedTokenInfo
-Gets a pointer to an array of tokens associated with the specified row index.  
+Возвращает указатель на массив токенов, связанных с указанным индексом строки.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,27 +38,27 @@ HRESULT GetCodedTokenInfo (
   
 ## <a name="parameters"></a>Параметры  
  `ixCdTkn`  
- [in] The kind of coded token to return.  
+ окне Тип возвращаемого закодированного токена.  
   
  `pcTokens`  
- [out] A pointer to the length of `ppTokens`.  
+ заполняет Указатель на длину `ppTokens`.  
   
  `ppTokens`  
- [out] A pointer to a pointer to an array that contains the list of returned tokens.  
+ заполняет Указатель на указатель на массив, содержащий список возвращенных токенов.  
   
  `ppName`  
- [out] A pointer to a pointer to the name of the token at `ixCdTkn`.  
+ заполняет Указатель на указатель на имя маркера в `ixCdTkn`.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Заголовок:** COR. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Библиотека:** Используется в качестве ресурса в MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс IMetaDataTables](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
 - [Интерфейс IMetaDataTables2](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)

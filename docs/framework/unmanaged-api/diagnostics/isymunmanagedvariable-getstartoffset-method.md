@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446002"
 ---
 # <a name="isymunmanagedvariablegetstartoffset-method"></a>Метод ISymUnmanagedVariable::GetStartOffset
-Gets the start offset of this variable within its parent. If this is a local variable within a scope, the start offset will fall within the offsets defined for the scope.  
+Возвращает начальное смещение этой переменной в родительском элементе. Если это локальная переменная в области, начальное смещение будет находиться в пределах смещений, определенных для области.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -34,13 +34,13 @@ HRESULT GetStartOffset(
   
 ## <a name="parameters"></a>Параметры  
  `pRetVal`  
- [out] A pointer to a `ULONG32` that receives the start offset.  
+ заполняет Указатель на `ULONG32`, который получает начальное смещение.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK, если метод выполнен. в противном случае E_FAIL или другой код ошибки.  
   
 ## <a name="requirements"></a>Требования  
- **Header:** CorSym.idl, CorSym.h  
+ **Заголовок:** Корсим. idl, Корсим. h  
   
 ## <a name="see-also"></a>См. также
 

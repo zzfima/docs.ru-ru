@@ -24,7 +24,7 @@ ms.locfileid: "74343849"
 ---
 # <a name="const-directive"></a>Директива #Const
 
-Defines conditional compiler constants for Visual Basic.  
+Определяет константы условной компилятора для Visual Basic.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -35,16 +35,16 @@ Defines conditional compiler constants for Visual Basic.
 ## <a name="parts"></a>Части  
 
  `constname`  
- Обязательный. Name of the constant being defined.  
+ Обязательно. Имя определяемой константы.  
   
  `expression`  
- Обязательный. Literal, other conditional compiler constant, or any combination that includes any or all arithmetic or logical operators except `Is`.  
+ Обязательно. Литерал, другая условная константа компилятора или любое сочетание, включающее любые или все арифметические или логические операторы, кроме `Is`.  
   
 ## <a name="remarks"></a>Заметки  
 
- Conditional compiler constants are always private to the file in which they appear. You cannot create public compiler constants using the `#Const` directive; you can create them only in the user interface or with the `/define` compiler option.  
+ Константы условной компиляции всегда являются частными для файла, в котором они отображаются. Нельзя создавать открытые константы компилятора с помощью директивы `#Const`; их можно создавать только в пользовательском интерфейсе или с помощью параметра компилятора `/define`.  
   
- You can use only conditional compiler constants and literals in `expression`. Using a standard constant defined with `Const` causes an error. Conversely, you can use constants defined with the `#Const` keyword only for conditional compilation. Constants can also be undefined, in which case they have a value of `Nothing`.  
+ В `expression`можно использовать только константы условной компиляции и литералы. Использование стандартной константы, определенной в `Const`, приводит к ошибке. И наоборот, константы, определенные с помощью ключевого слова `#Const`, можно использовать только для условной компиляции. Константы также могут быть неопределенными, в этом случае они имеют значение `Nothing`.  
   
 ## <a name="example"></a>Пример  
 
