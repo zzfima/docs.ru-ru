@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74435990"
 ---
 # <a name="imetadatadispenserexgetoption-method"></a>Метод IMetaDataDispenserEx::GetOption
-Gets the value of the specified option for the current metadata scope. The option controls how calls to the current metadata scope are handled.  
+Возвращает значение указанного параметра для текущей области метаданных. Параметр определяет, как обрабатываются вызовы к текущей области метаданных.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -36,38 +36,38 @@ HRESULT GetOption (
   
 ## <a name="parameters"></a>Параметры  
  `optionId`  
- [in] A pointer to a GUID that specifies the option to be retrieved. See the Remarks section for a list of supported GUIDs.  
+ окне Указатель на идентификатор GUID, указывающий параметр, который необходимо получить. Список поддерживаемых идентификаторов GUID см. в разделе "Примечания".  
   
  `pValue`  
- [out] The value of the returned option. The type of this value will be a variant of the specified option's type.  
+ заполняет Значение возвращаемого параметра. Тип этого значения будет представлять собой вариант типа указанного параметра.  
   
-## <a name="remarks"></a>Заметки  
- The following list shows the GUIDs that are supported for this method. For descriptions, see the [IMetaDataDispenserEx::SetOption](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-setoption-method.md) method. If `optionId` is not in this list, this method returns HRESULT `E_INVALIDARG`, indicating an incorrect parameter.  
+## <a name="remarks"></a>Примечания  
+ В следующем списке показаны идентификаторы GUID, которые поддерживаются для этого метода. Описание см. в описании метода [IMetaDataDispenserEx:: SetOption](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-setoption-method.md) . Если `optionId` отсутствует в этом списке, этот метод возвращает значение HRESULT `E_INVALIDARG`, указывающее на неверный параметр.  
   
-- MetaDataCheckDuplicatesFor  
+- метадатачеккдупликатесфор  
   
-- MetaDataRefToDefCheck  
+- метадатарефтодефчекк  
   
-- MetaDataNotificationForTokenMovement  
+- метадатанотификатионфортокенмовемент  
   
-- MetaDataSetENC  
+- метадатасетенк  
   
-- MetaDataErrorIfEmitOutOfOrder  
+- метадатаеррорифемитаутофордер  
   
-- MetaDataGenerateTCEAdapters  
+- метадатаженератетцеадаптерс  
   
-- MetaDataLinkerOptions  
+- метадаталинкероптионс  
   
 ## <a name="requirements"></a>Требования  
- **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформа:** См. раздел [требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Заголовок:** COR. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Библиотека:** Используется в качестве ресурса в MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс IMetaDataDispenserEx](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)
 - [Интерфейс IMetaDataDispenser](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)

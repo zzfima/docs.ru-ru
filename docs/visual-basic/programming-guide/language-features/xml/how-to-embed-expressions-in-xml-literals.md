@@ -13,17 +13,17 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74332931"
 ---
 # <a name="how-to-embed-expressions-in-xml-literals-visual-basic"></a>Практическое руководство. Внедрение выражений в XML-литералы (Visual Basic)
-You can combine XML literals with embedded expressions to create an XML document, fragment, or element that contains content created at run time. The following examples demonstrate how to use embedded expressions to populate element content, attributes, and element names at run time.  
+Литералы XML можно объединять с внедренными выражениями для создания XML-документа, фрагмента или элемента, содержащего содержимое, созданное во время выполнения. В следующих примерах показано, как использовать внедренные выражения для заполнения содержимого, атрибутов и имен элементов во время выполнения.  
   
- The syntax for an embedded expression is `<%=` `exp` `%>`, which is the same syntax that ASP.NET uses. For more information, see [Embedded Expressions in XML](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md).  
+ Синтаксис для внедренного выражения `<%=` `exp` `%>`— тот же синтаксис, который ASP.NET использует. Дополнительные сведения см. [в разделе внедренные выражения в XML](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md).  
   
- You can also use the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] APIs to create [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] objects. Для получения дополнительной информации см. <xref:System.Xml.Linq.XElement>.  
+ Для создания [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] объектов также можно использовать [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] интерфейсы API. Дополнительные сведения см. в разделе <xref:System.Xml.Linq.XElement>.  
   
 ## <a name="procedures"></a>Процедуры  
   
-#### <a name="to-insert-text-as-element-content"></a>To insert text as element content  
+#### <a name="to-insert-text-as-element-content"></a>Вставка текста в качестве содержимого элемента  
   
-- The following example shows how to insert the text that is contained in the `contactName` variable between the opening and closing name elements.  
+- В следующем примере показано, как вставить текст, содержащийся в переменной `contactName`, между открывающим и закрывающим элементами Name.  
   
      [!code-vb[VbXMLSamples#39](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples14.vb#39)]  
   
@@ -35,9 +35,9 @@ You can combine XML literals with embedded expressions to create an XML document
     </contact>  
     ```  
   
-#### <a name="to-insert-text-as-an-attribute-value"></a>To insert text as an attribute value  
+#### <a name="to-insert-text-as-an-attribute-value"></a>Вставка текста в качестве значения атрибута  
   
-- The following example shows how to insert the text that is contained in the `phoneType` variable as the value of the `type` attribute.  
+- В следующем примере показано, как вставить текст, содержащийся в переменной `phoneType`, в качестве значения атрибута `type`.  
   
      [!code-vb[VbXMLSamples#40](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples14.vb#40)]  
   
@@ -49,11 +49,11 @@ You can combine XML literals with embedded expressions to create an XML document
     </contact>  
     ```  
   
-#### <a name="to-insert-text-for-an-element-name"></a>To insert text for an element name  
+#### <a name="to-insert-text-for-an-element-name"></a>Вставка текста для имени элемента  
   
-- The following example shows how to insert the text that is contained in the `elementName` variable as the name of an element.  
+- В следующем примере показано, как вставить текст, содержащийся в переменной `elementName`, в качестве имени элемента.  
   
-     When creating elements by using this technique, you must close them with the \</> tag.  
+     При создании элементов с помощью этого метода их необходимо закрыть с помощью тега \</>.  
   
      [!code-vb[VbXMLSamples#41](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples14.vb#41)]  
   

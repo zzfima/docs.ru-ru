@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74444268"
 ---
 # <a name="assemblymetadata-structure"></a>Структура ASSEMBLYMETADATA
-Contains information about the referenced assembly, including its version and its level of support for locales, processors, and operating systems.  
+Содержит сведения о сборке, на которую имеется ссылка, включая ее версию и уровень поддержки языковых стандартов, процессоров и операционных систем.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -45,23 +45,23 @@ typedef struct {
   
 |Член|Описание|  
 |------------|-----------------|  
-|`usMajorVersion`|The major version number of the referenced assembly. This value cannot be zero. If all the bits of `usMajorVersion` are set, the major version is not specified.|  
-|`usMinorVersion`|The minor version number of the referenced assembly. This value cannot be zero. If all the bits of `usMinorVersion` are set, the minor version is not specified.|  
-|`usBuildNumber`|The build number of the referenced assembly. This value cannot be zero. If all the bits of `usBuildNumber` are set, the build number is not specified.|  
-|`usRevisionNumber`|The revision number of the referenced assembly. This value cannot be zero. If all the bits of `usRevisionNumber` are set, the revision number is not specified.|  
-|`szLocale`|A list of locale names conforming to the RFC1766 specification, separated by semicolons, specifying the locales supported by the referenced assembly. A null value indicates locale independence. **Note:**  In the .NET Framework version 1.0 you cannot specify more than one locale.|  
-|`cbLocale`|The size in wide characters of `szLocale`.|  
-|`rdwProcessor`|An array of identifiers, as defined in Winnt.h, for the processor types that are supported by the referenced assembly. A NULL value indicates processor independence.|  
-|`ulProcessor`|The length of the `rdwProcessor` array.|  
-|`rOS`|An array of [OSINFO](../../../../docs/framework/unmanaged-api/metadata/osinfo-structure.md) instances specifying the operating systems that are supported by the referenced assembly. A NULL value indicates operating-system independence.|  
-|`ulOS`|The length of the `rOS` array.|  
+|`usMajorVersion`|Основной номер версии сборки, на которую указывает ссылка. Это значение не может быть нулевым. Если заданы все биты `usMajorVersion`, основной номер версии не указывается.|  
+|`usMinorVersion`|Дополнительный номер версии сборки, на которую указывает ссылка. Это значение не может быть нулевым. Если заданы все биты `usMinorVersion`, дополнительный номер версии не указывается.|  
+|`usBuildNumber`|Номер сборки упоминаемой сборки. Это значение не может быть нулевым. Если заданы все биты `usBuildNumber`, номер сборки не указывается.|  
+|`usRevisionNumber`|Номер редакции сборки, на которую указывает ссылка. Это значение не может быть нулевым. Если заданы все биты `usRevisionNumber`, номер редакции не указывается.|  
+|`szLocale`|Список имен языковых стандартов, которым соответствует спецификация RFC1766, разделенные точкой с запятой, с указанием языковых стандартов, поддерживаемых сборкой, на которую указывает ссылка. Значение NULL указывает на независимость от языкового стандарта. **Примечание.**  В .NET Framework версии 1,0 нельзя указать более одного языкового стандарта.|  
+|`cbLocale`|Размер в расширенных символах `szLocale`.|  
+|`rdwProcessor`|Массив идентификаторов, как определено в Winnt. h, для типов процессоров, поддерживаемых сборкой, на которую указывает ссылка. Значение NULL указывает на независимость от процессора.|  
+|`ulProcessor`|Длина массива `rdwProcessor`.|  
+|`rOS`|Массив экземпляров [OSInfo](../../../../docs/framework/unmanaged-api/metadata/osinfo-structure.md) , указывающих операционные системы, поддерживаемые сборкой, на которую указывает ссылка. Значение NULL указывает на независимость от операционной системы.|  
+|`ulOS`|Длина массива `rOS`.|  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Заголовок:** COR. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Библиотека:** Используется в качестве ресурса в MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

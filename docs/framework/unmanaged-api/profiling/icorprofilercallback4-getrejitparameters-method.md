@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74439435"
 ---
 # <a name="icorprofilercallback4getrejitparameters-method"></a>Метод ICorProfilerCallback4::GetReJITParameters
-Allows the code profiler to set alternate code generation flags for a new recompiled method body.  
+Позволяет профилировщику кода устанавливать альтернативные флаги создания кода для нового текста перекомпилированного метода.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -33,16 +33,16 @@ HRESULT GetReJITParameters(     [in] ModuleID moduleId,     [in] mdMethodDef met
   
 ## <a name="parameters"></a>Параметры  
  `moduleID`  
- [in] The module that contains the method for which the CLR needs JIT recompilation parameters.  
+ окне Модуль, содержащий метод, для которого среда CLR требует параметры JIT-компиляции.  
   
  `methodId`  
- [in] The `MethodDef` of the method for which the CLR needs JIT recompilation parameters.  
+ окне `MethodDef` метода, для которого среда CLR требует параметры JIT-компиляции.  
   
  `pFunctionControl`  
- [in] A pointer to an [ICorProfilerFunctionControl](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-interface.md) interface that the profiler can use to provide JIT recompilation information for the method being recompiled.  
+ окне Указатель на интерфейс [икорпрофилерфунктионконтрол](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-interface.md) , который профилировщик может использовать для предоставления сведений о JIT-компиляции для метода, для которого выполняется повторная компиляция.  
   
 ## <a name="remarks"></a>Заметки  
- The CLR issues a `GetReJITParameters` callback so that the profiler can specify the parameters for recompiling a given method. The `GetReJITParameters` callback is issued only once per function; the parameters supplied by the profiler apply to all instances of that function.  
+ Среда CLR выдает ответный вызов `GetReJITParameters`, чтобы профилировщик мог указать параметры для перекомпиляции данного метода. Обратный вызов `GetReJITParameters` выдается только один раз для каждой функции; параметры, предоставляемые профилировщиком, применяются ко всем экземплярам этой функции.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  

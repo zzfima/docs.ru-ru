@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74440237"
 ---
 # <a name="imetadataimportenumcustomattributes-method"></a>Метод IMetaDataImport::EnumCustomAttributes
-Enumerates custom attribute-definition tokens associated with the specified type or member.  
+Перечисляет токены определения пользовательских атрибутов, связанные с указанным типом или членом.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,36 +40,36 @@ HRESULT EnumCustomAttributes (
   
 ## <a name="parameters"></a>Параметры  
  `phEnum`  
- [in, out] A pointer to the returned enumerator.  
+ [вход, выход] Указатель на возвращаемый перечислитель.  
   
  `tk`  
- [in] A token for the scope of the enumeration, or zero for all custom attributes.  
+ окне Токен для области перечисления или ноль для всех настраиваемых атрибутов.  
   
  `tkType`  
- [in] A token for the constructor of the type of the attributes to be enumerated, or `null` for all types.  
+ окне Токен для конструктора типа атрибутов для перечисления или `null` для всех типов.  
   
  `rCustomAttributes`  
- [out] An array of custom attribute tokens.  
+ заполняет Массив токенов настраиваемых атрибутов.  
   
  `cMax`  
  [in] Максимальный размер массива `rCustomAttributes`.  
   
  `pcCustomAttributes`  
- [out, optional] The actual number of token values returned in `rCustomAttributes`.  
+ [out, необязательно] Фактическое число значений токенов, возвращаемых в `rCustomAttributes`.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
   
 |HRESULT|Описание|  
 |-------------|-----------------|  
-|`S_OK`|`EnumCustomAttributes` returned successfully.|  
-|`S_FALSE`|There are no custom attributes to enumerate. In that case, `pcCustomAttributes` is zero.|  
+|`S_OK`|`EnumCustomAttributes` успешно возвращено.|  
+|`S_FALSE`|Нет настраиваемых атрибутов для перечисления. В этом случае `pcCustomAttributes` равно нулю.|  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Заголовок:** COR. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

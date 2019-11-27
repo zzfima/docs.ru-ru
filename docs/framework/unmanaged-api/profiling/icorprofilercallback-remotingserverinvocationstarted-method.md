@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445770"
 ---
 # <a name="icorprofilercallbackremotingserverinvocationstarted-method"></a>Метод ICorProfilerCallback::RemotingServerInvocationStarted
-Notifies the profiler that the process is invoking a method in response to a remote method invocation request.  
+Уведомляет профилировщик о том, что процесс вызывает метод в ответ на запрос удаленного вызова метода.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,6 +40,6 @@ HRESULT RemotingServerInvocationStarted();
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74439138"
 ---
 # <a name="icorprofilerinfogetfunctionfromtoken-method"></a>Метод ICorProfilerInfo::GetFunctionFromToken
-Gets the ID of a function. This method is obsolete in the .NET Framework version 2.0. Use the [ICorProfilerInfo2::GetFunctionFromTokenAndTypeArgs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctionfromtokenandtypeargs-method.md) method instead.  
+Возвращает идентификатор функции. Этот метод является устаревшим в .NET Framework версии 2,0. Используйте вместо этого метод [ICorProfilerInfo2:: жетфунктионфромтокенандтипеаргс](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctionfromtokenandtypeargs-method.md) .  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -35,7 +35,7 @@ HRESULT GetFunctionFromToken(
 ```  
   
 ## <a name="remarks"></a>Заметки  
- The `GetFunctionFromToken` method will not work for generic functions or functions in generic types; it is now obsolete. Use `ICorProfilerInfo2::GetFunctionFromTokenAndTypeArgs` for all functions.  
+ Метод `GetFunctionFromToken` не будет работать для универсальных функций или функций в универсальных типах. Теперь она устарела. Используйте `ICorProfilerInfo2::GetFunctionFromTokenAndTypeArgs` для всех функций.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
@@ -44,7 +44,7 @@ HRESULT GetFunctionFromToken(
   
  **Библиотека:** CorGuids.lib  
   
- **.NET Framework Versions:** 1.1, 1.0  
+ **.NET Framework версии:** 1,1, 1,0  
   
 ## <a name="see-also"></a>См. также
 

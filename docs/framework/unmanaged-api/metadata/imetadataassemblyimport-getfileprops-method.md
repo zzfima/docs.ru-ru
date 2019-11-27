@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74447212"
 ---
 # <a name="imetadataassemblyimportgetfileprops-method"></a>Метод IMetaDataAssemblyImport::GetFileProps
-Gets the properties of the file with the specified metadata signature.  
+Возвращает свойства файла с указанной сигнатурой метаданных.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -41,32 +41,32 @@ HRESULT GetFileProps (
   
 ## <a name="parameters"></a>Параметры  
  `mdf`  
- [in] The `mdFile` metadata token that represents the file for which to get the properties.  
+ окне `mdFile` маркер метаданных, представляющий файл, для которого необходимо получить свойства.  
   
  `szName`  
- [out] The simple name of the file.  
+ заполняет Простое имя файла.  
   
  `cchName`  
- [in] The size, in wide chars, of `szName`.  
+ окне Размер `szName`в расширенных символах.  
   
  `pchName`  
- [out] The number of wide chars actually returned in `szName`.  
+ заполняет Число расширенных символов, фактически возвращаемых в `szName`.  
   
  `ppbHashValue`  
- [out] A pointer to the hash value. This is the hash, using the SHA-1 algorithm, of the file.  
+ заполняет Указатель на хэш-значение. Это хэш-код с использованием алгоритма SHA-1 файла.  
   
  `pcbHashValue`  
- [out] The number of wide chars in the returned hash value.  
+ заполняет Число расширенных символов в возвращенном хэш-значении.  
   
  `pdwFileFlags`  
- [out] A pointer to the flags that describe the metadata applied to a file. The flags value is a combination of one or more [CorFileFlags](../../../../docs/framework/unmanaged-api/metadata/corfileflags-enumeration.md) values.  
+ заполняет Указатель на флаги, описывающие метаданные, примененные к файлу. Значение Flags является сочетанием одного или нескольких значений [корфилефлагс](../../../../docs/framework/unmanaged-api/metadata/corfileflags-enumeration.md) .  
   
 ## <a name="requirements"></a>Требования  
- **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформа:** См. раздел [требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Заголовок:** COR. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Библиотека:** Используется в качестве ресурса в MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

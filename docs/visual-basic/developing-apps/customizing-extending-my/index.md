@@ -15,31 +15,31 @@ ms.locfileid: "74330338"
 ---
 # <a name="customizing-projects-and-extending-my-with-visual-basic"></a>Настройка проектов и расширение объекта My в Visual Basic
 
-You can customize project templates to provide additional `My` objects. This makes it easy for other developers to find and use your objects.
+Можно настроить шаблоны проектов для предоставления дополнительных `My` объектов. Это облегчает другим разработчикам Поиск и использование объектов.
 
-## <a name="in-this-section"></a>В данном разделе
+## <a name="in-this-section"></a>В этом разделе
 
 - [Расширение пространства имен My в Visual Basic](extending-the-my-namespace.md)  
- Describes how to add custom members and values to the `My` namespace in Visual Basic.
+ Описывает добавление пользовательских элементов и значений в пространство имен `My` в Visual Basic.
 - [Упаковка и развертывание пользовательских расширений пространства имен My](packaging-and-deploying-custom-my-extensions.md)  
- Describes how to publish custom `My` namespace extensions by using Visual Studio templates.
+ Описание публикации пользовательских расширений пространства имен `My` с помощью шаблонов Visual Studio.
 - [Расширение модели приложения Visual Basic](extending-the-visual-basic-application-model.md)  
- Describes how to specify your own extensions to the application model by overriding members of the <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> class.
+ Описывает, как указать собственные расширения для модели приложения путем переопределения членов класса <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>.
 - [Настройка доступа к объектам через My](customizing-which-objects-are-available-in-my.md)  
- Describes how to control which `My` objects are enabled by setting your project's \_MYTYPE conditional-compilation constant.
+ Описывает, как управлять тем, какие `My` объекты включены, настроив константу условной компиляции \_MYTYPE для проекта.
 
 ## <a name="related-sections"></a>Связанные разделы
 
 - [Разработка с использованием My](../development-with-my/index.md)  
- Describes which `My` objects are available in different project types by default.
+ Описывает, какие объекты `My` доступны в разных типах проектов по умолчанию.
 - [Обзор модели приложения в Visual Basic](../development-with-my/overview-of-the-visual-basic-application-model.md)  
- Describes Visual Basic's model for controlling the behavior of Windows Forms applications.
+ Описание модели Visual Basic для управления поведением Windows Forms приложений.
 - [Зависимость My от типа проекта](../development-with-my/how-my-depends-on-project-type.md)  
- Describes which `My` objects are available in different project types by default.
+ Описывает, какие объекты `My` доступны в разных типах проектов по умолчанию.
 - [Условная компиляция](../../programming-guide/program-structure/conditional-compilation.md)  
- Discusses how the compiler uses conditional-compilation to select particular sections of code to compile and exclude other sections.
+ Описывает, как компилятор использует условную компиляцию для выбора определенных разделов кода для компиляции и исключения других разделов.
 - <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>  
- Describes the `My` object that provides properties, methods, and events related to the current application.
+ Описывает объект `My`, предоставляющий свойства, методы и события, связанные с текущим приложением.
 
 ## <a name="see-also"></a>См. также
 

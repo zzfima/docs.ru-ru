@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445237"
 ---
 # <a name="imetadataimport2getpekind-method"></a>Метод IMetaDataImport2::GetPEKind
-Gets a value identifying the nature of the code in the portable executable (PE) file, typically a DLL or EXE file, that is defined in the current metadata scope.  
+Возвращает значение, определяющее природу кода в переносимом исполняемом (PE) файле (обычно это DLL или EXE-файл), который определен в текущей области метаданных.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -36,30 +36,30 @@ HRESULT GetPEKind (
   
 ## <a name="parameters"></a>Параметры  
  `pdwPEKind`  
- [out] A pointer to a value of the [CorPEKind](../../../../docs/framework/unmanaged-api/metadata/corpekind-enumeration.md) enumeration that describes the PE file.  
+ заполняет Указатель на значение перечисления [CorPEKind](../../../../docs/framework/unmanaged-api/metadata/corpekind-enumeration.md) , ОПИСЫВАЮЩее PE-файл.  
   
  `pdwMachine`  
- [out] A pointer to a value that identifies the architecture of the machine. See the next section for possible values.  
+ заполняет Указатель на значение, идентифицирующее архитектуру компьютера. Возможные значения см. в следующем разделе.  
   
-## <a name="remarks"></a>Заметки  
- The value referenced by the `pdwMachine` parameter can be one of the following.  
+## <a name="remarks"></a>Примечания  
+ Значение, на которое ссылается параметр `pdwMachine`, может быть одним из следующих.  
   
-|значения|Machine architecture|  
+|Значение|Архитектура компьютера|  
 |-----------|--------------------------|  
 |IMAGE_FILE_MACHINE_I386<br /><br /> 0x014C|x86|  
 |IMAGE_FILE_MACHINE_IA64<br /><br /> 0x0200|Intel IPF|  
-|IMAGE_FILE_MACHINE_AMD64<br /><br /> 0x8664|X64|  
+|IMAGE_FILE_MACHINE_AMD64<br /><br /> 0x8664|x64|  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Заголовок:** COR. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Библиотека:** Используется в качестве ресурса в MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
 - [Интерфейс IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)

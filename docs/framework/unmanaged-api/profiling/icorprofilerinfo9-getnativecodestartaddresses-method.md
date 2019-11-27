@@ -1,5 +1,5 @@
 ---
-title: ICorProfilerInfo9::GetNativeCodeStartAddresses
+title: 'ICorProfilerInfo9:: Жетнативекодестартаддрессес'
 ms.date: 08/06/2019
 dev_langs:
 - cpp
@@ -18,9 +18,9 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74444719"
 ---
-# <a name="icorprofilerinfo9getnativecodestartaddresses-method"></a>ICorProfilerInfo9::GetNativeCodeStartAddresses Method
+# <a name="icorprofilerinfo9getnativecodestartaddresses-method"></a>Метод ICorProfilerInfo9:: Жетнативекодестартаддрессес
 
-Given a functionId and rejitId, enumerates the native code start address of all jitted versions of this code that currently exist.
+При наличии кода functionId и Режитид перечисляются начальные адреса всех откомпилированных версий этого кода, которые в настоящее время существуют.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -35,7 +35,7 @@ HRESULT GetNativeCodeStartAddresses( [in]  FunctionID functionID,
 #### <a name="parameters"></a>Параметры
 
 `functionId` \
-[in] The ID of the function whose native code start addresses should be returned.
+окне Идентификатор функции, для которой должны возвращаться начальные адреса машинного кода.
 
 `reJitId` \
 [in] Идентификатор функции, перекомпилированной с помощью JIT-компилятора.
@@ -44,25 +44,25 @@ HRESULT GetNativeCodeStartAddresses( [in]  FunctionID functionID,
 [in] Максимальный размер массива `codeStartAddresses`.
 
 `pcCodeStartAddresses` \
-[out] The number of available addresses.
+заполняет Количество доступных адресов.
 
 `codeStartAddresses` \
-[out] An array of `UINT_PTR`, each one of which is the start address for a native body for the specified function.
+заполняет Массив `UINT_PTR`, каждый из которых является начальным адресом для собственного тела для указанной функции.
 
 ## <a name="remarks"></a>Заметки
 
-When tiered compilation is enabled, a function may have more than one native code body.
+Если включена многоуровневая компиляция, функция может иметь более одного тела машинного кода.
 
 ## <a name="requirements"></a>Требования
 
-**Platforms:** See [.NET Core supported operating systems](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows).
+**Платформы:** См. раздел [Поддерживаемые операционные системы .NET Core](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows).
 
 **Заголовок:** CorProf.idl, CorProf.h
 
 **Библиотека:** CorGuids.lib
 
-**.NET Versions:** [!INCLUDE[net_core_22](../../../../includes/net-core-22-md.md)]
+**Версии .NET:** [!INCLUDE[net_core_22](../../../../includes/net-core-22-md.md)]
 
 ## <a name="see-also"></a>См. также
 
-- [ICorProfilerInfo9 Interface](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo9-interface.md)
+- [Интерфейс ICorProfilerInfo9](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo9-interface.md)

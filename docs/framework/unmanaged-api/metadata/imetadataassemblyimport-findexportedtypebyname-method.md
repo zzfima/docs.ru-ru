@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449450"
 ---
 # <a name="imetadataassemblyimportfindexportedtypebyname-method"></a>Метод IMetaDataAssemblyImport::FindExportedTypeByName
-Gets a pointer to an exported type, given its name and enclosing type.  
+Возвращает указатель на экспортированный тип по заданному имени и включающему его типу.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,27 +37,27 @@ HRESULT FindExportedTypeByName (
   
 ## <a name="parameters"></a>Параметры  
  `szName`  
- [in] The name of the exported type.  
+ окне Имя экспортированного типа.  
   
  `mdtExportedType`  
- [in] The metadata token for the enclosing class of the exported type. This value is `mdExportedTypeNil` if the requested exported type is not a nested type.  
+ окне Токен метаданных для включающего класса экспортируемого типа. Это значение `mdExportedTypeNil`, если запрошенный экспортированный тип не является вложенным типом.  
   
  `ptkExportedType`  
- [out] A pointer to the `mdExportedType` token that represents the exported type.  
+ заполняет Указатель на маркер `mdExportedType`, представляющий экспортируемый тип.  
   
-## <a name="remarks"></a>Заметки  
- The `FindExportedTypeByName` method uses the standard rules employed by the common language runtime for resolving references.  
+## <a name="remarks"></a>Примечания  
+ Метод `FindExportedTypeByName` использует стандартные правила, используемые средой CLR для разрешения ссылок.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Заголовок:** COR. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Библиотека:** Используется в качестве ресурса в MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс IMetaDataAssemblyImport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
 - [Обнаружение сборок в среде выполнения](../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)

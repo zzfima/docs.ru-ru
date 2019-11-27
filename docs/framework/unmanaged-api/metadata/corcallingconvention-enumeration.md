@@ -52,24 +52,24 @@ typedef enum CorCallingConvention
   
 |Член|Описание|  
 |------------|-----------------|  
-|`IMAGE_CEE_CS_CALLCONV_DEFAULT`|Indicates a default calling convention.|  
-|`IMAGE_CEE_CS_CALLCONV_VARARG`|Indicates that the method takes a variable number of parameters.|  
-|`IMAGE_CEE_CS_CALLCONV_FIELD`|Indicates that the call is to a field.|  
-|`IMAGE_CEE_CS_CALLCONV_LOCAL_SIG`|Indicates that the call is to a local method.|  
-|`IMAGE_CEE_CS_CALLCONV_PROPERTY`|Indicates that the call is to a property.|  
-|`IMAGE_CEE_CS_CALLCONV_UNMGD`|Indicates that the call is unmanaged.|  
-|`IMAGE_CEE_CS_CALLCONV_GENERICINST`|Indicates a generic method instantiation.|  
-|`IMAGE_CEE_CS_CALLCONV_NATIVEVARARG`|Indicates a 64-bit PInvoke call to a method that takes a variable number of parameters.|  
-|`IMAGE_CEE_CS_CALLCONV_MAX`|Describes an invalid 4-bit value.|  
-|`IMAGE_CEE_CS_CALLCONV_MASK`|Indicates that the calling convention is described by the bottom four bits.|  
-|`IMAGE_CEE_CS_CALLCONV_HASTHIS`|Indicates that the top bit describes a `this` parameter.|  
-|`IMAGE_CEE_CS_CALLCONV_EXPLICITTHIS`|Indicates that a `this` parameter is explicitly described in the signature.|  
-|`IMAGE_CEE_CS_CALLCONV_GENERIC`|Indicates a generic method signature with an explicit number of type arguments. This precedes an ordinary parameter count.|  
+|`IMAGE_CEE_CS_CALLCONV_DEFAULT`|Указывает соглашение о вызовах по умолчанию.|  
+|`IMAGE_CEE_CS_CALLCONV_VARARG`|Указывает, что метод принимает переменное число параметров.|  
+|`IMAGE_CEE_CS_CALLCONV_FIELD`|Указывает, что вызов относится к полю.|  
+|`IMAGE_CEE_CS_CALLCONV_LOCAL_SIG`|Указывает, что вызов осуществляется в локальный метод.|  
+|`IMAGE_CEE_CS_CALLCONV_PROPERTY`|Указывает, что вызов относится к свойству.|  
+|`IMAGE_CEE_CS_CALLCONV_UNMGD`|Указывает, что вызов является неуправляемым.|  
+|`IMAGE_CEE_CS_CALLCONV_GENERICINST`|Указывает на создание экземпляра универсального метода.|  
+|`IMAGE_CEE_CS_CALLCONV_NATIVEVARARG`|Обозначает 64-разрядный вызов PInvoke для метода, принимающего переменное число параметров.|  
+|`IMAGE_CEE_CS_CALLCONV_MAX`|Описывает недопустимое 4-битовое значение.|  
+|`IMAGE_CEE_CS_CALLCONV_MASK`|Указывает, что соглашение о вызовах описывается четырьмя нижними битами.|  
+|`IMAGE_CEE_CS_CALLCONV_HASTHIS`|Указывает, что верхний бит описывает параметр `this`.|  
+|`IMAGE_CEE_CS_CALLCONV_EXPLICITTHIS`|Указывает, что параметр `this` явно описан в сигнатуре.|  
+|`IMAGE_CEE_CS_CALLCONV_GENERIC`|Указывает сигнатуру универсального метода с явным числом аргументов типа. Это значение предшествует обычному числу параметров.|  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorHdr.h  
+ **Заголовок:** Корхдр. h  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

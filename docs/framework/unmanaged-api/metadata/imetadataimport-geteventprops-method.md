@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74437587"
 ---
 # <a name="imetadataimportgeteventprops-method"></a>Метод IMetaDataImport::GetEventProps
-Gets metadata information for the event represented by the specified event token, including the declaring type, the add and remove methods for delegates, and any flags and other associated data.  
+Возвращает сведения о метаданных для события, представленного указанным маркером события, включая объявляющий тип, методы добавления и удаления для делегатов, а также любые флаги и другие связанные данные.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -47,47 +47,47 @@ HRESULT GetEventProps (
   
 ## <a name="parameters"></a>Параметры  
  `ev`  
- [in] The event metadata token representing the event to get metadata for.  
+ окне Токен метаданных события, представляющий событие, для которого необходимо получить метаданные.  
   
  `pClass`  
- [out] A pointer to the TypeDef token representing the class that declares the event.  
+ заполняет Указатель на маркер TypeDef, представляющий класс, объявляющий событие.  
   
  `szEvent`  
- [out] The name of the event referenced by `ev`.  
+ заполняет Имя события, на которое ссылается `ev`.  
   
  `pchEvent`  
- [in] The requested length in wide characters of `szEvent`.  
+ окне Запрошенная длина в расширенных символах `szEvent`.  
   
  `pdwEventFlags`  
- [out] The returned length in wide characters of `szEvent`.  
+ заполняет Возвращаемая длина в расширенных символах `szEvent`.  
   
  `ptkEventType`  
- [out] A pointer to a TypeRef or TypeDef metadata token representing the <xref:System.Delegate> type of the event.  
+ заполняет Указатель на маркер метаданных TypeRef или TypeDef, представляющий тип <xref:System.Delegate> события.  
   
  `pmdAddOn`  
- [out] A pointer to the metadata token representing the method that adds handlers for the event.  
+ заполняет Указатель на маркер метаданных, представляющий метод, который добавляет обработчики для события.  
   
  `pmdRemoveOn`  
- [out] A pointer to the metadata token representing the method that removes handlers for the event.  
+ заполняет Указатель на маркер метаданных, представляющий метод, который удаляет обработчики для события.  
   
  `pmdFire`  
- [out] A pointer to the metadata token representing the method that raises the event.  
+ заполняет Указатель на маркер метаданных, представляющий метод, который вызывает событие.  
   
  `rmdOtherMethod`  
- [out] An array of token pointers to other methods associated with the event.  
+ заполняет Массив указателей токенов на другие методы, связанные с событием.  
   
  `cMax`  
  [in] Максимальный размер массива `rmdOtherMethod`.  
   
  `pcOtherMethod`  
- [out] The number of tokens returned in `rmdOtherMethod`.  
+ заполняет Число токенов, возвращаемых в `rmdOtherMethod`.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Заголовок:** COR. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

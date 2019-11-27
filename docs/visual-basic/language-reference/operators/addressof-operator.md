@@ -16,7 +16,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350279"
 ---
 # <a name="addressof-operator-visual-basic"></a>Оператор AddressOf (Visual Basic)
-Creates a delegate instance that references the specific procedure.  
+Создает экземпляр делегата, который ссылается на определенную процедуру.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -26,20 +26,20 @@ AddressOf procedurename
   
 ## <a name="parts"></a>Части  
  `procedurename`  
- Обязательный. Specifies the procedure to be referenced by the newly created delegate.  
+ Обязательно. Задает процедуру, на которую ссылается только что созданный делегат.  
   
 ## <a name="remarks"></a>Заметки  
- The `AddressOf` operator creates a delegate that points to the sub or function specified by `procedurename`. When the specified procedure is an instance method then the delegate refers to both the instance and the method. Then, when the  delegate is invoked the specified method of the specified instance is called.  
+ Оператор `AddressOf` создает делегат, указывающий на подпрограмму или функцию, указанную в `procedurename`. Если указанная процедура является методом экземпляра, то делегат ссылается на экземпляр и метод. Затем при вызове делегата вызывается указанный метод указанного экземпляра.  
   
- The `AddressOf` operator can be used as the operand of a delegate constructor or it can be used in a context in which the type of the delegate can be determined by the compiler.  
+ Оператор `AddressOf` можно использовать в качестве операнда конструктора делегата или его можно использовать в контексте, в котором тип делегата может быть определен компилятором.  
   
 ## <a name="example"></a>Пример  
- This example uses the `AddressOf` operator to designate a delegate to handle the `Click` event of a button.  
+ В этом примере оператор `AddressOf` используется для обозначения делегата, обрабатывающего событие `Click` кнопки.  
   
  [!code-vb[VbVbalrDelegates#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#8)]  
   
 ## <a name="example"></a>Пример  
- The following example uses the `AddressOf` operator to designate the startup function for a thread.  
+ В следующем примере оператор `AddressOf` используется для обозначения функции запуска для потока.  
   
  [!code-vb[VbVbalrDelegates#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#9)]  
   

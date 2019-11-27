@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445115"
 ---
 # <a name="icorprofilercallbackclassloadfinished-method"></a>Метод ICorProfilerCallback::ClassLoadFinished
-Notifies the profiler that a class has finished loading.  
+Уведомляет профилировщик о том, что загрузка класса завершена.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -35,15 +35,15 @@ HRESULT ClassLoadFinished(
   
 ## <a name="parameters"></a>Параметры  
  `classId`  
- [in] Identifies the class that was loaded.  
+ окне Идентифицирует загруженный класс.  
   
  `hrStatus`  
- [in] An HRESULT that indicates whether the class loaded successfully.  
+ окне Значение HRESULT, указывающее, успешно ли загружен класс.  
   
 ## <a name="remarks"></a>Заметки  
- The value of `classId` is not valid for an information request until the `ClassLoadFinished` method is called.  
+ Значение `classId` недопустимо для информационного запроса, пока не будет вызван метод `ClassLoadFinished`.  
   
- Some parts of loading the class might continue after the `ClassLoadFinished` callback. A failure HRESULT in `hrStatus` indicates a failure. However, a success HRESULT in `hrStatus` indicates only that the first part of loading the class has succeeded.  
+ Некоторые части загрузки класса могут продолжаться после обратного вызова `ClassLoadFinished`. Ошибка HRESULT в `hrStatus` указывает на сбой. Однако значение HRESULT успешного выполнения в `hrStatus` указывает только на то, что первая часть загрузки класса завершилась успешно.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  

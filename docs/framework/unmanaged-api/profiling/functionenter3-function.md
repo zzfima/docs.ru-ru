@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74440777"
 ---
 # <a name="functionenter3-function"></a>Функция FunctionEnter3
-Notifies the profiler that control is being passed to a function.  
+Уведомляет профилировщик о передаче управления в функцию.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -32,23 +32,23 @@ void __stdcall FunctionEnter3(FunctionOrRemappedID functionOrRemappedID);
   
 ## <a name="parameters"></a>Параметры  
  `functionOrRemappedID`  
- [in] The identifier of the function to which control is passed.  
+ окне Идентификатор функции, которой передается элемент управления.  
   
 ## <a name="remarks"></a>Заметки  
- The `FunctionEnter3` callback function notifies the profiler as functions are being called, but does not support argument inspection. Use the [ICorProfilerInfo3::SetEnterLeaveFunctionHooks3 method](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-setenterleavefunctionhooks3-method.md) to register your implementation of this function.  
+ Функция обратного вызова `FunctionEnter3` уведомляет профилировщик о вызове функций, но не поддерживает проверку аргументов. Чтобы зарегистрировать реализацию этой функции, используйте [метод ICorProfilerInfo3:: SetEnterLeaveFunctionHooks3](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-setenterleavefunctionhooks3-method.md) .  
   
- The `FunctionEnter3` function is a callback; you must implement it. The implementation must use the `__declspec(naked)` storage-class attribute.  
+ Функция `FunctionEnter3` является обратным вызовом. его необходимо реализовать. Реализация должна использовать атрибут класса хранения `__declspec(naked)`.  
   
- The execution engine does not save any registers before calling this function.  
+ Подсистема выполнения не сохраняет никакие регистры перед вызовом этой функции.  
   
-- On entry, you must save all registers that you use, including those in the floating-point unit (FPU).  
+- Во время записи необходимо сохранить все используемые регистры, включая те, которые находятся в блоке с плавающей запятой (FPU).  
   
-- On exit, you must restore the stack by popping off all the parameters that were pushed by its caller.  
+- При выходе необходимо восстановить стек, выключив все параметры, которые были переданы его вызывающим.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl  
+ **Заголовок:** CorProf. idl  
   
  **Библиотека:** CorGuids.lib  
   

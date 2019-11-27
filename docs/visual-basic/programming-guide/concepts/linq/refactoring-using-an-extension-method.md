@@ -9,8 +9,8 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346506"
 ---
-# <a name="refactoring-using-an-extension-method-visual-basic"></a>Refactoring Using an Extension Method (Visual Basic)
-This example builds on the previous example, [Retrieving the Text of the Paragraphs (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md), by refactoring the concatenation of strings using a pure function that is implemented as an extension method.  
+# <a name="refactoring-using-an-extension-method-visual-basic"></a>Рефакторинг с помощью метода расширения (Visual Basic)
+Этот пример строится на предыдущем примере, [получая текст абзацев (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md)путем рефакторинга сцепления строк с помощью чистой функции, реализованной как метод расширения.  
   
  В предыдущем примере использовался стандартный оператор запроса <xref:System.Linq.Enumerable.Aggregate%2A> для объединения нескольких строк в одну. Однако более удобно записывать для этого метод расширения, так как результирующий запрос становится меньше и проще.  
   
@@ -19,7 +19,7 @@ This example builds on the previous example, [Retrieving the Text of the Paragra
   
  В примере представлено несколько перегруженных вариантов метода `StringConcatenate`.  
   
- You can find instructions for creating the source document for this example in [Creating the Source Office Open XML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
+ Инструкции по созданию исходного документа для этого примера можно найти в статье [Создание исходного документа Office Open XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
   
  В этом примере используются классы из сборки WindowsBase. Используются типы из пространства имен <xref:System.IO.Packaging?displayProperty=nameWithType>.  
   
@@ -216,7 +216,7 @@ Module Module1
 End Module  
 ```  
   
- This example produces the following output when applied to the document described in [Creating the Source Office Open XML Document (Visual Basic)](creating-the-source-office-open-xml-document.md).
+ В этом примере при применении к документу, описанному в разделе [Создание исходного документа Office Open XML (Visual Basic)](creating-the-source-office-open-xml-document.md), выводится следующий результат.
   
 ```console  
 StyleName:Heading1 >Parsing WordprocessingML with LINQ to XML<  
@@ -238,12 +238,12 @@ StyleName:Code >Hello World<
   
  Обратите внимание, что данная оптимизация кода является вариантом оптимизации кода в чистую функцию. В следующем разделе принципы разбиения на чистые функции рассматриваются более подробно.  
   
-## <a name="next-steps"></a>Следующие шаги  
+## <a name="next-steps"></a>Дальнейшие шаги  
  В следующем примере показано, как обеспечить оптимизацию данного кода другим способом, с использованием чистых функций:  
   
 - [Рефакторинг с использованием чистых функций (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-a-pure-function.md)  
   
 ## <a name="see-also"></a>См. также
 
-- [Tutorial: Manipulating Content in a WordprocessingML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
-- [Refactoring Into Pure Functions (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)
+- [Руководство. Управление содержимым в документе WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [Рефакторинг в чистые функции (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)

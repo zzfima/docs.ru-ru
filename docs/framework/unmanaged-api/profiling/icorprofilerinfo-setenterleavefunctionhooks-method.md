@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74438644"
 ---
 # <a name="icorprofilerinfosetenterleavefunctionhooks-method"></a>Метод ICorProfilerInfo::SetEnterLeaveFunctionHooks
-Specifies profiler-implemented functions to be called on "enter", "leave", and "tailcall" hooks of managed functions.  
+Задает реализованные профилировщиком функции, которые должны вызываться для обработчиков "Ввод", "Leave" и "таилкалл" управляемых функций.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -36,20 +36,20 @@ HRESULT SetEnterLeaveFunctionHooks(
   
 ## <a name="parameters"></a>Параметры  
  `pFuncEnter`  
- [in] A pointer to the implementation to be used as the [FunctionEnter](../../../../docs/framework/unmanaged-api/profiling/functionenter-function.md) callback.  
+ окне Указатель на реализацию, которая будет использоваться в качестве обратного вызова [FunctionEnter](../../../../docs/framework/unmanaged-api/profiling/functionenter-function.md) .  
   
  `pFuncLeave`  
- [in] A pointer to the implementation to be used as the [FunctionLeave](../../../../docs/framework/unmanaged-api/profiling/functionleave-function.md) callback.  
+ окне Указатель на реализацию, которая будет использоваться в качестве обратного вызова [FunctionLeave](../../../../docs/framework/unmanaged-api/profiling/functionleave-function.md) .  
   
  `pFuncTailcall`  
- [in] A pointer to the implementation to be used as the [FunctionTailcall](../../../../docs/framework/unmanaged-api/profiling/functiontailcall-function.md) callback.  
+ окне Указатель на реализацию, которая будет использоваться в качестве обратного вызова [функтионтаилкалл](../../../../docs/framework/unmanaged-api/profiling/functiontailcall-function.md) .  
   
 ## <a name="remarks"></a>Заметки  
- In the .NET Framework version 1.0, each function pointer can be null to disable that corresponding callback.  
+ В .NET Framework версии 1,0 каждый указатель функции может иметь значение null, чтобы отключить соответствующий обратный вызов.  
   
- Only one set of callbacks can be active at a time. Thus, if a profiler calls both `SetEnterLeaveFunctionHooks` and [ICorProfilerInfo2::SetEnterLeaveFunctionHooks2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-setenterleavefunctionhooks2-method.md), then `SetEnterLeaveFunctionHooks2` takes precedence.  
+ Одновременно может быть активным только один набор обратных вызовов. Таким образом, если профилировщик вызывает как `SetEnterLeaveFunctionHooks`, так и [ICorProfilerInfo2:: SetEnterLeaveFunctionHooks2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-setenterleavefunctionhooks2-method.md), то `SetEnterLeaveFunctionHooks2` имеет приоритет.  
   
- The `SetEnterLeaveFunctionHooks` method can be called only from the profiler's [ICorProfilerCallback::Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md) callback.  
+ Метод `SetEnterLeaveFunctionHooks` может быть вызван только из обратного вызова [ICorProfilerCallback:: Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md) профилировщика.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  

@@ -42,22 +42,22 @@ typedef enum
   
 |Член|Описание|  
 |------------|-----------------|  
-|`nltNone`|Indicates that none of the keywords are specified.|  
-|`nltAnsi`|Indicates that an ANSI keyword is specified.|  
-|`nltUnicode`|Indicates that a Unicode keyword is specified|  
-|`nltAuto`|Indicates that an auto keyword is specified.|  
-|`nltOle`|Indicates that an OLE keyword is specified.|  
+|`nltNone`|Указывает, что ни одно из ключевых слов не указано.|  
+|`nltAnsi`|Указывает, что указано ключевое слово ANSI.|  
+|`nltUnicode`|Указывает, что указано ключевое слово Юникода|  
+|`nltAuto`|Указывает, что указано ключевое слово auto.|  
+|`nltOle`|Указывает, что указано ключевое слово OLE.|  
 |`nltMaxValue`|Не используется.|  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Заголовок:** COR. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Перечисления метаданных](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

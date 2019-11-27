@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74439938"
 ---
 # <a name="icorprofilercallbackthreaddestroyed-method"></a>Метод ICorProfilerCallback::ThreadDestroyed
-Notifies the profiler that a thread has been destroyed.  
+Уведомляет профилировщик о том, что поток был уничтожен.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -34,10 +34,10 @@ HRESULT ThreadDestroyed(
   
 ## <a name="parameters"></a>Параметры  
  `threadId`  
- [in] The ID of the thread that has been destroyed.  
+ окне Идентификатор уничтоженного потока.  
   
 ## <a name="remarks"></a>Заметки  
- The `threadId` value is no longer valid at the time of this call.  
+ Значение `threadId` больше не является допустимым во время этого вызова.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  

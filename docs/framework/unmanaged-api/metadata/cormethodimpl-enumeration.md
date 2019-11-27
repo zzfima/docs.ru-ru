@@ -56,27 +56,27 @@ typedef enum CorMethodImpl {
   
 |Член|Описание|  
 |------------|-----------------|  
-|`miCodeTypeMask`|Flags that describe code type.|  
-|`miIL`|Specifies that the method implementation is Microsoft intermediate language (MSIL).|  
+|`miCodeTypeMask`|Флаги, описывающие тип кода.|  
+|`miIL`|Указывает, что реализация метода является промежуточным языком Майкрософт (MSIL).|  
 |`miNative`|Указывает, что для метода используется стандартная реализация.|  
-|`miOPTIL`|Specifies that the method implementation is OPTIL.|  
-|`miRuntime`|Specifies that the method implementation is provided by the common language runtime.|  
-|`miManagedMask`|Flags that indicate whether the code is managed or unmanaged.|  
-|`miUnmanaged`|Specifies that the method implementation is unmanaged.|  
-|`miManaged`|Specifies that the method implementation is managed.|  
-|`miForwardRef`|Specifies that the method is defined. This flag is used primarily in merge scenarios.|  
-|`miPreserveSig`|Specifies that the method signature cannot be mangled for an HRESULT conversion.|  
-|`miInternalCall`|Reserved for internal use by the common language runtime.|  
-|`miSynchronized`|Specifies that the method is single-threaded through its body.|  
+|`miOPTIL`|Указывает, что реализация метода — OPIL.|  
+|`miRuntime`|Указывает, что реализация метода предоставляется средой CLR.|  
+|`miManagedMask`|Флаги, указывающие, является ли код управляемым или неуправляемым.|  
+|`miUnmanaged`|Указывает, что реализация метода является неуправляемой.|  
+|`miManaged`|Указывает, что реализация метода является управляемой.|  
+|`miForwardRef`|Указывает, что метод определен. Этот флаг используется в основном в сценариях слияния.|  
+|`miPreserveSig`|Указывает, что подпись метода не может быть искажена для преобразования HRESULT.|  
+|`miInternalCall`|Зарезервировано для внутреннего использования средой CLR.|  
+|`miSynchronized`|Указывает, что метод является однопотоковым через его тело.|  
 |`miNoInlining`|Указывает, что метод нельзя выполнять как встроенный.|  
-|`miAggressiveInlining`|Specifies that the method should be inlined if possible.|  
-|`miNoOptimization`|Specifies that the method should not be optimized.|  
-|`miMaxMethodImplVal`|The maximum valid value for a `CorMethodImpl`.|  
+|`miAggressiveInlining`|Указывает, что метод должен быть встроенным, если это возможно.|  
+|`miNoOptimization`|Указывает, что метод не должен быть оптимизирован.|  
+|`miMaxMethodImplVal`|Максимальное допустимое значение для `CorMethodImpl`.|  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorHdr.h  
+ **Заголовок:** Корхдр. h  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74434288"
 ---
 # <a name="imetadataemitgettokenfromtypespec-method"></a>Метод IMetaDataEmit::GetTokenFromTypeSpec
-Gets a metadata token for the type with the specified metadata signature.  
+Возвращает токен метаданных для типа с указанной сигнатурой метаданных.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,24 +37,24 @@ HRESULT GetTokenFromTypeSpec (
   
 ## <a name="parameters"></a>Параметры  
  `pvSig`  
- [in] The signature being defined.  
+ окне Определяемая сигнатура.  
   
  `cbSig`  
- [in] The count of bytes in `pvSig`.  
+ окне Число байтов в `pvSig`.  
   
  `ptypespec`  
- [out] The `mdTypeSpec` token assigned.  
+ заполняет Назначенный маркер `mdTypeSpec`.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Заголовок:** COR. h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **Библиотека:** Используется в качестве ресурса в MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [Интерфейс IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

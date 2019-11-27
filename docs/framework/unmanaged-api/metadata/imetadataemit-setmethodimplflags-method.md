@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74432537"
 ---
 # <a name="imetadataemitsetmethodimplflags-method"></a>Метод IMetaDataEmit::SetMethodImplFlags
-Sets or updates the metadata signature of the inherited method implementation that is referenced by the specified token.  
+Задает или обновляет сигнатуру метаданных реализации унаследованного метода, на которую ссылается указанный токен.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -36,17 +36,17 @@ HRESULT SetMethodImplFlags (
   
 ## <a name="parameters"></a>Параметры  
  `md`  
- [in] The token for the method to be changed.  
+ окне Токен для изменяемого метода.  
   
  `dwImplFlags`  
- [in] A combination of the values of the [CorMethodImpl](../../../../docs/framework/unmanaged-api/metadata/cormethodimpl-enumeration.md) enumeration that specifies the method implementation features.  
+ окне Сочетание значений перечисления [кормесодимпл](../../../../docs/framework/unmanaged-api/metadata/cormethodimpl-enumeration.md) , определяющих функции реализации метода.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Заголовок:** COR. h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **Библиотека:** Используется в качестве ресурса в MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448292"
 ---
 # <a name="imetadataassemblyimportfindassembliesbyname-method"></a>Метод IMetaDataAssemblyImport::FindAssembliesByName
-Gets an array of assemblies with the specified `szAssemblyName` parameter, using the standard rules employed by the common language runtime (CLR) for resolving references.  
+Возвращает массив сборок с указанным параметром `szAssemblyName`, используя стандартные правила, используемые средой CLR для разрешения ссылок.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,45 +40,45 @@ HRESULT FindAssembliesByName (
   
 ## <a name="parameters"></a>Параметры  
  `szAppBase`  
- [in] The root directory in which to search for the given assembly. If this value is set to `null`, `FindAssembliesByName` will look only in the global assembly cache for the assembly.  
+ окне Корневой каталог, в котором выполняется поиск данной сборки. Если это значение равно `null`, `FindAssembliesByName` будет искать сборку только в глобальном кэше сборок.  
   
  `szPrivateBin`  
- [in] A list of semicolon-delimited subdirectories (for example, "bin;bin2"), under the root directory, in which to search for the assembly. These directories are probed in addition to those specified in the default probing rules.  
+ окне Список подкаталогов, разделенных точкой с запятой (например, "bin; BIN2"), в корневом каталоге, в котором выполняется поиск сборки. Эти каталоги проверяются в дополнение к тем, которые указаны в правилах проверки по умолчанию.  
   
  `szAssemblyName`  
- [in] The name of the assembly to find. The format of this string is defined in the class reference page for <xref:System.Reflection.AssemblyName>.  
+ окне Имя искомой сборки. Формат этой строки определяется на странице ссылки на класс для <xref:System.Reflection.AssemblyName>.  
   
  `ppIUnk`  
- [in] An array of type [IUnknown](/cpp/atl/iunknown) in which to put the `IMetadataAssemblyImport` interface pointers.  
+ окне Массив типа [IUnknown](/cpp/atl/iunknown) , в который помещаются указатели интерфейса `IMetadataAssemblyImport`.  
   
  `cMax`  
- [out] The maximum number of interface pointers that can be placed in `ppIUnk`.  
+ заполняет Максимальное число указателей интерфейса, которые могут быть помещены в `ppIUnk`.  
   
  `pcAssemblies`  
- [out] The number of interface pointers returned. That is, the number of interface pointers actually placed in `ppIUnk`.  
+ заполняет Число возвращаемых указателей на интерфейс. То есть число указателей интерфейса, фактически помещенных в `ppIUnk`.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
   
 |HRESULT|Описание|  
 |-------------|-----------------|  
-|`S_OK`|`FindAssembliesByName` returned successfully.|  
-|`S_FALSE`|There are no assemblies.|  
+|`S_OK`|`FindAssembliesByName` успешно возвращено.|  
+|`S_FALSE`|Нет сборок.|  
   
 ## <a name="remarks"></a>Заметки  
- Given an assembly name, the `FindAssembliesByName` method finds the assembly by following the standard rules for resolving assembly references. (For more information, see [How the Runtime Locates Assemblies](../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).) `FindAssembliesByName` allows the caller to configure various aspects of the assembly resolver context, such as application base and private search path.  
+ При наличии имени сборки метод `FindAssembliesByName` находит сборку, следуя стандартным правилам разрешения ссылок на сборки. (Дополнительные сведения см. [в разделе Обнаружение сборок в среде выполнения](../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).) `FindAssembliesByName` позволяет вызывающему объекту настраивать различные аспекты контекста сопоставителя сборок, такие как базовый и частный путь поиска приложения.  
   
- The `FindAssembliesByName` method requires the CLR to be initialized in the process in order to invoke the assembly resolution logic. Therefore, you must call [CoInitializeEE](../../../../docs/framework/unmanaged-api/hosting/coinitializeee-function.md) (passing COINITEE_DEFAULT) before calling `FindAssembliesByName`, and then follow with a call to [CoUninitializeCor](../../../../docs/framework/unmanaged-api/hosting/couninitializecor-function.md).  
+ Метод `FindAssembliesByName` требует инициализации среды CLR в процессе для вызова логики разрешения сборки. Поэтому необходимо вызвать [CoInitialize](../../../../docs/framework/unmanaged-api/hosting/coinitializeee-function.md) (передав COINITEE_DEFAULT) перед вызовом `FindAssembliesByName`, а затем выполнить вызов [каунинитиализекор](../../../../docs/framework/unmanaged-api/hosting/couninitializecor-function.md).  
   
- `FindAssembliesByName` returns an [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) pointer to the file containing the assembly manifest for the assembly name that is passed in. If the given assembly name is not fully specified (for example, if it does not include a version), multiple assemblies might be returned.  
+ `FindAssembliesByName` возвращает указатель [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) на файл, содержащий манифест сборки для переданного имени сборки. Если заданное имя сборки не указано полностью (например, если оно не включает версию), может возвращаться несколько сборок.  
   
- `FindAssembliesByName` is commonly used by a compiler that attempts to find a referenced assembly at compile time.  
+ `FindAssembliesByName` часто используется компилятором, который пытается найти ссылочную сборку во время компиляции.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Заголовок:** COR. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Библиотека:** Используется в качестве ресурса в MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

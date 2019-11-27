@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448125"
 ---
 # <a name="imetadataemitsetcustomattributevalue-method"></a>Метод IMetaDataEmit::SetCustomAttributeValue
-Sets or updates the value of a custom attribute defined by a prior call to [IMetaDataEmit::DefineCustomAttribute](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definecustomattribute-method.md).  
+Задает или обновляет значение настраиваемого атрибута, определенного при предыдущем вызове метода [IMetaDataEmit::D ефинекустоматтрибуте](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definecustomattribute-method.md).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,20 +37,20 @@ HRESULT SetCustomAttributeValue (
   
 ## <a name="parameters"></a>Параметры  
  `pcv`  
- [in] The token of the target custom attribute.  
+ окне Токен целевого настраиваемого атрибута.  
   
  `pCustomAttribute`  
- [in] A pointer to the array that contains the custom attribute.  
+ окне Указатель на массив, содержащий настраиваемый атрибут.  
   
  `cbCustomAttribute`  
- [in] The size, in bytes, of the custom attribute.  
+ окне Размер настраиваемого атрибута в байтах.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Заголовок:** COR. h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **Библиотека:** Используется в качестве ресурса в MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

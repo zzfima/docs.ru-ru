@@ -10,9 +10,9 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74441189"
 ---
 # <a name="ui-automation-specification-and-community-promise"></a>Спецификация модели автоматизации пользовательского интерфейса и обязательство сообщества
-UI Automation provides programmatic access to most user interface (UI) elements on the desktop, enabling assistive technology products such as screen readers to provide information about the UI to end users and to manipulate the UI by means other than standard input.  
+Модель автоматизации пользовательского интерфейса обеспечивает программный доступ к большинству элементов пользовательского интерфейса на рабочем столе, позволяя продуктам с поддержкой специальных возможностей, таким как средства чтения с экрана, предоставлять сведения о пользовательском интерфейсе для конечных пользователей и управлять пользовательским интерфейсом средствами, отличными от стандартных входных данных. .  
   
 ## <a name="see-also"></a>См. также
 
-- [UI Automation Specification](https://developer.microsoft.com/windows/accessible-apps)
-- [UI Automation Community Promise](https://developer.microsoft.com/windows/accessible-apps)
+- [Спецификация модели автоматизации пользовательского интерфейса](https://developer.microsoft.com/windows/accessible-apps)
+- [Обязательство сообщества по автоматизации пользовательского интерфейса](https://developer.microsoft.com/windows/accessible-apps)

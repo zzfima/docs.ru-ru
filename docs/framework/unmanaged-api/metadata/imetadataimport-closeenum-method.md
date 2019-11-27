@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74440118"
 ---
 # <a name="imetadataimportcloseenum-method"></a>Метод IMetaDataImport::CloseEnum
-Closes the enumerator that is identified by the specified handle.  
+Закрывает перечислитель, идентифицируемый указанным маркером.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -35,17 +35,17 @@ void CloseEnum (
   
 ## <a name="parameters"></a>Параметры  
  `hEnum`  
- [in] The handle for the enumerator to close.  
+ окне Маркер для закрытия перечислителя.  
   
 ## <a name="remarks"></a>Заметки  
- The handle specified by `hEnum` is obtained from a previous `Enum`*Name* call (for example, [IMetaDataImport::EnumTypeDefs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumtypedefs-method.md)).  
+ Маркер, заданный `hEnum`, получается из предыдущего вызова *имени* `Enum`(например, [IMetaDataImport:: EnumTypeDefs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumtypedefs-method.md)).  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Заголовок:** COR. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -46,60 +46,60 @@ ms.locfileid: "74343997"
 ---
 # <a name="data-type-summary-visual-basic"></a>Сводка типов данных (Visual Basic)
 
-The following table shows the Visual Basic data types, their supporting common language runtime types, their nominal storage allocation, and their value ranges.  
+В следующей таблице показаны типы данных Visual Basic, Поддерживаемые типы среды CLR, их номинальное выделение памяти и диапазоны значений.  
   
-|Visual Basic type|Common language runtime type structure|Nominal storage allocation|Диапазон значений|  
+|Тип Visual Basic|Структура типа среды CLR|Номинальное выделение памяти|Диапазон значений|  
 |-----------------------|--------------------------------------------|--------------------------------|-----------------|  
-|[Boolean](../../../visual-basic/language-reference/data-types/boolean-data-type.md)|<xref:System.Boolean>|Depends on implementing platform|`True` или `False`|  
-|[Byte](../../../visual-basic/language-reference/data-types/byte-data-type.md)|<xref:System.Byte>|1 байт|0 through 255 (unsigned)|  
-|[Char](../../../visual-basic/language-reference/data-types/char-data-type.md) (single character)|<xref:System.Char>|2 байта|0 through 65535 (unsigned)|  
-|[Date](../../../visual-basic/language-reference/data-types/date-data-type.md)|<xref:System.DateTime>|8 байт|0:00:00 (midnight) on January 1, 0001 through 11:59:59 PM on December 31, 9999|  
-|[Decimal](../../../visual-basic/language-reference/data-types/decimal-data-type.md)|<xref:System.Decimal>|16 байт|0 through +/-79,228,162,514,264,337,593,543,950,335 (+/-7.9...E+28) <sup>†</sup> with no decimal point; 0 through +/-7.9228162514264337593543950335 with 28 places to the right of the decimal;<br /><br /> smallest nonzero number is +/-0.0000000000000000000000000001 (+/-1E-28) <sup>†</sup>|  
-|[Double](../../../visual-basic/language-reference/data-types/double-data-type.md) (double-precision floating-point)|<xref:System.Double>|8 байт|-1.79769313486231570E+308 through -4.94065645841246544E-324 <sup>†</sup> for negative values;<br /><br /> 4.94065645841246544E-324 through 1.79769313486231570E+308 <sup>†</sup> for positive values|  
-|[Integer](../../../visual-basic/language-reference/data-types/integer-data-type.md)|<xref:System.Int32>|4 байта|-2,147,483,648 through 2,147,483,647 (signed)|  
-|[Long](../../../visual-basic/language-reference/data-types/long-data-type.md) (long integer)|<xref:System.Int64>|8 байт|-9,223,372,036,854,775,808 through 9,223,372,036,854,775,807 (9.2...E+18 <sup>†</sup>) (signed)|  
-|[Объект](../../../visual-basic/language-reference/data-types/object-data-type.md)|<xref:System.Object> (class)|4 bytes on 32-bit platform<br /><br /> 8 bytes on 64-bit platform|Any type can be stored in a variable of type `Object`|  
-|[SByte](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)|<xref:System.SByte>|1 байт|-128 through 127 (signed)|  
-|[Short](../../../visual-basic/language-reference/data-types/short-data-type.md) (short integer)|<xref:System.Int16>|2 байта|-32,768 through 32,767 (signed)|  
-|[Single](../../../visual-basic/language-reference/data-types/single-data-type.md) (single-precision floating-point)|<xref:System.Single>|4 байта|-3.4028235E+38 through -1.401298E-45 <sup>†</sup> for negative values;<br /><br /> 1.401298E-45 through 3.4028235E+38 <sup>†</sup> for positive values|  
-|[String](../../../visual-basic/language-reference/data-types/string-data-type.md) (variable-length)|<xref:System.String> (class)|Depends on implementing platform|0 to approximately 2 billion Unicode characters|  
-|[UInteger](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)|<xref:System.UInt32>|4 байта|0 through 4,294,967,295 (unsigned)|  
-|[ULong](../../../visual-basic/language-reference/data-types/ulong-data-type.md)|<xref:System.UInt64>|8 байт|0 through 18,446,744,073,709,551,615 (1.8...E+19 <sup>†</sup>) (unsigned)|  
-|[User-Defined](../../../visual-basic/language-reference/data-types/user-defined-data-type.md) (structure)|(inherits from <xref:System.ValueType>)|Depends on implementing platform|Each member of the structure has a range determined by its data type and independent of the ranges of the other members|  
-|[UShort](../../../visual-basic/language-reference/data-types/ushort-data-type.md)|<xref:System.UInt16>|2 байта|0 through 65,535 (unsigned)|  
+|[Boolean](../../../visual-basic/language-reference/data-types/boolean-data-type.md)|<xref:System.Boolean>|Зависит от реализации платформы|`True` или `False`|  
+|[Byte](../../../visual-basic/language-reference/data-types/byte-data-type.md)|<xref:System.Byte>|1 байт|от 0 до 255 (без знака)|  
+|[Char](../../../visual-basic/language-reference/data-types/char-data-type.md) (одиночный символ)|<xref:System.Char>|2 байта|от 0 до 65535 (без знака)|  
+|[Date](../../../visual-basic/language-reference/data-types/date-data-type.md)|<xref:System.DateTime>|8 байт|0:00:00 (полночь) 1 января 0001 г. по 11:59:59 – 31 декабря 9999|  
+|[Decimal](../../../visual-basic/language-reference/data-types/decimal-data-type.md)|<xref:System.Decimal>|16 байт|от 0 до +/-79,228,162,514,264,337,593,543,950,335 (+/-7.9...E + 28) <sup>†</sup> без десятичной запятой; от 0 до +/-7.9228162514264337593543950335 с 28 разрядами справа от десятичного разделителя;<br /><br /> наименьшее ненулевое число — +/-0,0000000000000000000000000001 (+/-1E-28) <sup>†</sup>|  
+|[Double](../../../visual-basic/language-reference/data-types/double-data-type.md) (число с плавающей запятой двойной точности)|<xref:System.Double>|8 байт|-1.79769313486231570 e + 308 до-4.94065645841246544 E-324 <sup>†</sup> для отрицательных значений;<br /><br /> 4.94065645841246544 e-324 до 1.79769313486231570 E + 308 <sup>†</sup> для положительных значений|  
+|[Integer](../../../visual-basic/language-reference/data-types/integer-data-type.md)|<xref:System.Int32>|4 байта|от-2 147 483 648 до 2 147 483 647 (подписано)|  
+|[Long](../../../visual-basic/language-reference/data-types/long-data-type.md) (длинное целое)|<xref:System.Int64>|8 байт|от-9223372036854775808 до 9 223 372 036 854 775 807 (от а до 18 <sup>†</sup>) (подписано)|  
+|[Объект](../../../visual-basic/language-reference/data-types/object-data-type.md)|<xref:System.Object> (класс)|4 байта на 32-разрядной платформе<br /><br /> 8 байт на 64-разрядной платформе|Любой тип может храниться в переменной типа `Object`|  
+|[SByte](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)|<xref:System.SByte>|1 байт|от-128 до 127 (подписано)|  
+|[Short](../../../visual-basic/language-reference/data-types/short-data-type.md) (короткое целое)|<xref:System.Int16>|2 байта|от-32 768 до 32 767 (подписано)|  
+|[Single](../../../visual-basic/language-reference/data-types/single-data-type.md) (с плавающей запятой одиночной точности)|<xref:System.Single>|4 байта|-4028235E e + 38 – 1.401298 E-45 <sup>†</sup> для отрицательных значений;<br /><br /> 1.401298 e-45 до 4028235E E + 38 <sup>†</sup> для положительных значений|  
+|[Строка](../../../visual-basic/language-reference/data-types/string-data-type.md) (переменная длина)|<xref:System.String> (класс)|Зависит от реализации платформы|от 0 до приблизительно 2 000 000 000 символов Юникода|  
+|[UInteger](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)|<xref:System.UInt32>|4 байта|от 0 до 4 294 967 295 (без знака)|  
+|[ULong](../../../visual-basic/language-reference/data-types/ulong-data-type.md)|<xref:System.UInt64>|8 байт|от 0 до 18446744073709551615 (1.8... E + 19 <sup>†</sup>) (без знака)|  
+|[Определяемый пользователем](../../../visual-basic/language-reference/data-types/user-defined-data-type.md) (структура)|(наследуется от <xref:System.ValueType>)|Зависит от реализации платформы|Каждый элемент структуры имеет диапазон, определяемый типом данных и не зависящий от диапазонов других элементов.|  
+|[UShort](../../../visual-basic/language-reference/data-types/ushort-data-type.md)|<xref:System.UInt16>|2 байта|от 0 до 65 535 (без знака)|  
   
- <sup>†</sup> In *scientific notation*, "E" refers to a power of 10. So 3.56E+2 signifies 3.56 x 10<sup>2</sup> or 356, and 3.56E-2 signifies 3.56 / 10<sup>2</sup> or 0.0356.  
+ <sup>†</sup> В *экспоненциальном представлении*"E" означает степень числа 10. Итак, 3.56 E<sup>+ 2 означает 3,56 x 10 или</sup> 356, а 3.56 e-2 — 3,56/10<sup>2</sup> или 0,0356.  
   
 > [!NOTE]
-> For strings containing text, use the <xref:Microsoft.VisualBasic.Strings.StrConv%2A> function to convert from one text format to another.  
+> Для строк, содержащих текст, используйте функцию <xref:Microsoft.VisualBasic.Strings.StrConv%2A> для преобразования одного текстового формата в другой.  
   
- In addition to specifying a data type in a declaration statement, you can force the data type of some programming elements by using a type character. See [Type Characters](../../../visual-basic/programming-guide/language-features/data-types/type-characters.md).  
+ Помимо указания типа данных в операторе объявления, можно принудительно задать тип данных некоторых элементов программирования с помощью символа типа. См. раздел [символы типа](../../../visual-basic/programming-guide/language-features/data-types/type-characters.md).  
   
 ## <a name="memory-consumption"></a>Затраты памяти  
 
- When you declare an elementary data type, it is not safe to assume that its memory consumption is the same as its nominal storage allocation. This is due to the following considerations:  
+ При объявлении простейшего типа данных нельзя считать, что его потребление памяти совпадает с номинальным выделением хранилища. Это обусловлено следующими соображениями.  
   
-- **Storage Assignment.** The common language runtime can assign storage based on the current characteristics of the platform on which your application is executing. If memory is nearly full, it might pack your declared elements as closely together as possible. In other cases it might align their memory addresses to natural hardware boundaries to optimize performance.  
+- **Назначение хранилища.** Среда CLR может назначать хранилище на основе текущих характеристик платформы, в которой выполняются приложения. Если память почти заполнена, она может упаковать объявленные элементы как можно ближе друг к другу. В других случаях адреса памяти могут быть согласованы с естественными аппаратными границами для оптимизации производительности.  
   
-- **Platform Width.** Storage assignment on a 64-bit platform is different from assignment on a 32-bit platform.  
+- **Ширина платформы.** Назначение хранилища на 64-разрядной платформе отличается от назначения на 32-разрядной платформе.  
   
 ### <a name="composite-data-types"></a>Составные типы данных  
 
- The same considerations apply to each member of a composite data type, such as a structure or an array. You cannot rely on simply adding together the nominal storage allocations of the type's members. Furthermore, there are other considerations, such as the following:  
+ Те же рекомендации применимы к каждому элементу составного типа данных, такому как структура или массив. Вы не можете полагаться на простое сложение номинальных выделений памяти для членов типа. Кроме того, существуют и другие рекомендации, например следующие:  
   
-- **Overhead.** Some composite types have additional memory requirements. For example, an array uses extra memory for the array itself and also for each dimension. On a 32-bit platform, this overhead is currently 12 bytes plus 8 bytes for each dimension. On a 64-bit platform this requirement is doubled.  
+- **За.** Некоторые составные типы предъявляют дополнительные требования к памяти. Например, массив использует дополнительную память для самого массива, а также для каждого измерения. На 32-разрядной платформе этот объем накладных расходов в настоящее время составляет 12 байт плюс 8 байт для каждого измерения. На 64-разрядной платформе это требование удваивается.  
   
-- **Storage Layout.** You cannot safely assume that the order of storage in memory is the same as your order of declaration. You cannot even make assumptions about byte alignment, such as a 2-byte or 4-byte boundary. If you are defining a class or structure and you need to control the storage layout of its members, you can apply the <xref:System.Runtime.InteropServices.StructLayoutAttribute> attribute to the class or structure.  
+- **Структура хранилища.** Нельзя безопасно предположить, что порядок хранения в памяти совпадает с порядком объявления. Вы даже не можете делать предположения относительно выравнивания байтов, например 2-байтовой или 4-байтовой границы. При определении класса или структуры и необходимости управления структурой хранения его элементов можно применить атрибут <xref:System.Runtime.InteropServices.StructLayoutAttribute> к классу или структуре.  
   
-### <a name="object-overhead"></a>Object Overhead  
+### <a name="object-overhead"></a>Издержки объекта  
 
- An `Object` referring to any elementary or composite data type uses 4 bytes in addition to the data contained in the data type.  
+ В `Object`, ссылающемся на любой простой или составной тип данных, в дополнение к данным, содержащимся в типе данных, используется 4 байта.  
   
 ## <a name="see-also"></a>См. также
 
 - <xref:Microsoft.VisualBasic.Strings.StrConv%2A>
 - <xref:System.Runtime.InteropServices.StructLayoutAttribute>
-- [Функции преобразования типов](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [Type Conversion Functions](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
 - [Сводка по преобразованию](../../../visual-basic/language-reference/keywords/conversion-summary.md)
 - [Знаки типов](../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)
 - [Эффективное использование типов данных](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

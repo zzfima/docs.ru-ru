@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74438420"
 ---
 # <a name="exportnestedtype-method"></a>Метод ExportNestedType
-Specifies nested types as exportable. The [ExportType Method](exporttype-method.md) can also export nested types, but this method is faster.  
+Указывает вложенные типы как экспортируемые. [Метод ExportType](exporttype-method.md) также может экспортировать вложенные типы, но этот метод выполняется быстрее.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -41,33 +41,33 @@ HRESULT ExportNestedType(
   
 ## <a name="parameters"></a>Параметры  
  `AssemblyID`  
- ID of assembly to export from.  
+ Идентификатор сборки, из которой производится экспорт.  
   
  `FileToken`  
- File token or Assembly of file that defines the type to be made exportable.  
+ Маркер файла или сборка файла, определяющая тип, который должен быть сделан экспортируемым.  
   
  `TypeToken`  
- Type token of type to be made exportable.  
+ Токен типа, который должен быть доступен для экспорта.  
   
  `ParentType`  
- Token of parent type.  
+ Токен родительского типа.  
   
  `pszTypename`  
- Fully qualified type name to export.  
+ Полное имя типа для экспорта.  
   
  `dwFlags`  
- `ComType` flags such as `tdPublic` or `tdNested`. This value may be passed to [DefineExportedType Method](../metadata/imetadataassemblyemit-defineexportedtype-method.md).  
+ `ComType` флаги, такие как `tdPublic` или `tdNested`. Это значение может быть передано [методу дефиникспортедтипе](../metadata/imetadataassemblyemit-defineexportedtype-method.md).  
   
  `pType`  
- Receives token for exported type.  
+ Получает токен для экспортируемого типа.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Returns S_OK if the method succeeds.  
+ Возвращает S_OK, если метод завершается с ошибкой.  
   
 ## <a name="requirements"></a>Требования  
- Requires alink.h  
+ Требуется ALink. h  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс IALink](ialink-interface.md)
 - [Интерфейс IALink2](ialink2-interface.md)

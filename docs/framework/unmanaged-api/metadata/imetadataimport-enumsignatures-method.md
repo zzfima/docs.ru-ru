@@ -38,33 +38,33 @@ HRESULT EnumSignatures (
   
 ## <a name="parameters"></a>Параметры  
  `phEnum`  
- [in, out] A pointer to the enumerator. This must be NULL for the first call of this method.  
+ [вход, выход] Указатель на перечислитель. При первом вызове этого метода это значение должно быть равно NULL.  
   
  `rSignatures`  
- [out] The array used to store the Signature tokens.  
+ заполняет Массив, используемый для хранения маркеров подписи.  
   
  `cMax`  
  [in] Максимальный размер массива `rSignatures`.  
   
  `pcSignatures`  
- [out] The number of Signature tokens returned in `rSignatures`.  
+ заполняет Число маркеров подписи, возвращаемых в `rSignatures`.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
   
 |HRESULT|Описание|  
 |-------------|-----------------|  
-|`S_OK`|`EnumSignatures` returned successfully.|  
-|`S_FALSE`|There are no tokens to enumerate. In that case, `pcSignatures` is zero.|  
+|`S_OK`|`EnumSignatures` успешно возвращено.|  
+|`S_FALSE`|Нет токенов для перечисления. В этом случае `pcSignatures` равно нулю.|  
   
 ## <a name="remarks"></a>Заметки  
- The Signature tokens are created by the [IMetaDataEmit::GetTokenFromSig](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-gettokenfromsig-method.md) method.  
+ Маркеры подписи создаются методом [IMetaDataEmit:: жеттокенфромсиг](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-gettokenfromsig-method.md) .  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Заголовок:** COR. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

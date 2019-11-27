@@ -20,7 +20,7 @@ ms.locfileid: "74446846"
 
 В этом разделе описывается реализация серверного поставщика автоматизации пользовательского интерфейса для пользовательского элемента управления.
 
-The implementation for Windows Presentation Foundation (WPF) elements and non-[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] elements (such as those designed for [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]) is fundamentally different. Элементы[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] обеспечивают поддержку [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] с помощью класса, производного от <xref:System.Windows.Automation.Peers.AutomationPeer>. Элементы, отличные от[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] , обеспечивает поддержку с помощью реализаций интерфейсов поставщика.
+Реализация элементов Windows Presentation Foundation (WPF) и элементов, отличных от[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] (например, тех, которые предназначены для [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]), является принципиально отличающимся. Элементы[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] обеспечивают поддержку [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] с помощью класса, производного от <xref:System.Windows.Automation.Peers.AutomationPeer>. Элементы, отличные от[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] , обеспечивает поддержку с помощью реализаций интерфейсов поставщика.
 
 <a name="Security_Considerations"></a>
 
@@ -77,7 +77,7 @@ The implementation for Windows Presentation Foundation (WPF) elements and non-[!
 
 Для взаимодействия с [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]элемент управления должен реализовать следующие основные функциональные области:
 
-|Функция|Реализация|
+|функциональное назначение;|Реализация|
 |-------------------|--------------------|
 |Предоставление поставщика для [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|В ответ на сообщение WM_GETOBJECT, отправленное окну элемента управления, возвращается объект, реализующий <xref:System.Windows.Automation.Provider.IRawElementProviderSimple> (или производный интерфейс). Для фрагментов это должен быть поставщик для корневого фрагмента.|
 |Указание значений свойств|Реализуйте <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.GetPropertyValue%2A> для предоставления или переопределения значений.|
@@ -115,7 +115,7 @@ The implementation for Windows Presentation Foundation (WPF) elements and non-[!
 - <xref:System.Windows.Automation.AutomationElementIdentifiers.RuntimeIdProperty>
 
 > [!NOTE]
-> Простой элемент <xref:System.Windows.Automation.AutomationElementIdentifiers.RuntimeIdProperty> или корневой элемент фрагмента, размещенного в окне, извлекается из окна. Однако элементам фрагмента ниже корневого элемента (например, элементы списка в поле со списком) необходимо предоставлять собственные идентификаторы. Для получения дополнительной информации см. <xref:System.Windows.Automation.Provider.IRawElementProviderFragment.GetRuntimeId%2A>.
+> Простой элемент <xref:System.Windows.Automation.AutomationElementIdentifiers.RuntimeIdProperty> или корневой элемент фрагмента, размещенного в окне, извлекается из окна. Однако элементам фрагмента ниже корневого элемента (например, элементы списка в поле со списком) необходимо предоставлять собственные идентификаторы. Дополнительные сведения см. в разделе <xref:System.Windows.Automation.Provider.IRawElementProviderFragment.GetRuntimeId%2A>.
 >
 > Для поставщиков, размещенных в элементе управления <xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty> , должен возвращаться [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] . В этом случае поставщику окна по умолчанию может не удастся получить правильное значение.
 >
@@ -132,7 +132,7 @@ The implementation for Windows Presentation Foundation (WPF) elements and non-[!
 |Метод|Описание|
 |------------|-----------------|
 |<xref:System.Windows.Automation.Provider.AutomationInteropProvider.RaiseAutomationEvent%2A>|Создает различные события, включая события, вызываемые шаблонами элементов управления.|
-|<xref:System.Windows.Automation.Provider.AutomationInteropProvider.RaiseAutomationPropertyChangedEvent%2A>|Вызывает событие при изменении свойства [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] .|
+|<xref:System.Windows.Automation.Provider.AutomationInteropProvider.RaiseAutomationPropertyChangedEvent%2A>|Вызывает событие при изменении свойства [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)].|
 |<xref:System.Windows.Automation.Provider.AutomationInteropProvider.RaiseStructureChangedEvent%2A>|Вызывает событие при изменении структуры дерева [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , например при удалении или добавлении элемента.|
 
 Событие предназначено для уведомления клиента о каких-то действиях, происходящих в [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)], независимо от того, инициируется ли действие самой системой [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] . Например, событие, обозначенное <xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent> , должно инициироваться при каждом вызове элемента управления, например когда пользователь вводит данные или клиентское приложение вызывает <xref:System.Windows.Automation.InvokePattern.Invoke%2A>.

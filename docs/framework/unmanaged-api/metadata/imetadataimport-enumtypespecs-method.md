@@ -38,33 +38,33 @@ HRESULT EnumTypeSpecs (
   
 ## <a name="parameters"></a>Параметры  
  `phEnum`  
- [in, out] A pointer to the enumerator. This value must be NULL for the first call of this method.  
+ [вход, выход] Указатель на перечислитель. При первом вызове этого метода это значение должно быть равно NULL.  
   
  `rTypeSpecs`  
- [out] The array used to store the TypeSpec tokens.  
+ заполняет Массив, используемый для хранения токенов TypeSpec.  
   
  `cMax`  
  [in] Максимальный размер массива `rTypeSpecs`.  
   
  `pcTypeSpecs`  
- [out] The number of TypeSpec tokens returned in `rTypeSpecs`.  
+ заполняет Число токенов TypeSpec, возвращаемых в `rTypeSpecs`.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
   
 |HRESULT|Описание|  
 |-------------|-----------------|  
-|`S_OK`|`EnumTypeSpecs` returned successfully.|  
-|`S_FALSE`|There are no tokens to enumerate. In that case, `pcTypeSpecs` is zero.|  
+|`S_OK`|`EnumTypeSpecs` успешно возвращено.|  
+|`S_FALSE`|Нет токенов для перечисления. В этом случае `pcTypeSpecs` равно нулю.|  
   
 ## <a name="remarks"></a>Заметки  
- The TypeSpec tokens are created by the [IMetaDataEmit::GetTokenFromTypeSpec](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-gettokenfromtypespec-method.md) method.  
+ Токены TypeSpec создаются методом [IMetaDataEmit:: жеттокенфромтипеспек](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-gettokenfromtypespec-method.md) .  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Заголовок:** COR. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

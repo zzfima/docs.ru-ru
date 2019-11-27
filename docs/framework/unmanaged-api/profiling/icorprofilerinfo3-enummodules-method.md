@@ -33,9 +33,9 @@ HRESULT EnumModules([out] ICorProfilerModuleEnum** ppEnum);
   
 ## <a name="parameters"></a>Параметры  
  `ppEnum`  
- [out] A pointer to an [ICorProfilerModuleEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilermoduleenum-interface.md) interface.  
+ заполняет Указатель на интерфейс [ICorProfilerModuleEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilermoduleenum-interface.md) .  
   
-## <a name="remarks"></a>Заметки  
+## <a name="remarks"></a>Примечания  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
@@ -46,7 +46,7 @@ HRESULT EnumModules([out] ICorProfilerModuleEnum** ppEnum);
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс ICorProfilerFunctionEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-interface.md)
 - [Интерфейс ICorProfilerInfo3](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)

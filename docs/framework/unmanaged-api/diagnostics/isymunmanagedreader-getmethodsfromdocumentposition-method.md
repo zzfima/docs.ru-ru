@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74441808"
 ---
 # <a name="isymunmanagedreadergetmethodsfromdocumentposition-method"></a>Метод ISymUnmanagedReader::GetMethodsFromDocumentPosition
-Returns an array of methods, each of which contains the breakpoint at the given position in a document.  
+Возвращает массив методов, каждый из которых содержит точку останова в заданной позиции в документе.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,29 +40,29 @@ HRESULT GetMethodsFromDocumentPosition (
   
 ## <a name="parameters"></a>Параметры  
  `document`  
- [in] The specified document.  
+ окне Указанный документ.  
   
  `line`  
- [in] The line of the specified document.  
+ окне Строка указанного документа.  
   
  `column`  
- [in] The column of the specified document.  
+ окне Столбец указанного документа.  
   
  `cMethod`  
  [in] Размер массива `pRetVal`.  
   
  `pcMethod`  
- [out] A pointer to a variable that receives the number of elements returned in the `pRetVal` array.  
+ заполняет Указатель на переменную, которая получает количество элементов, возвращенных в массиве `pRetVal`.  
   
  `pRetVal`  
- [out] An array of pointers, each of which points to an [ISymUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md) object that represents a method containing the breakpoint.  
+ заполняет Массив указателей, каждый из которых указывает на объект [ISymUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md) , представляющий метод, содержащий точку останова.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK, если метод выполнен. в противном случае E_FAIL или другой код ошибки.  
   
 ## <a name="requirements"></a>Требования  
- **Header:** CorSym.idl, CorSym.h  
+ **Заголовок:** Корсим. idl, Корсим. h  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

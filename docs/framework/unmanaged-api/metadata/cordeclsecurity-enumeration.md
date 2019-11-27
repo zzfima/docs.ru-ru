@@ -62,14 +62,14 @@ typedef enum CorDeclSecurity {
 |`dclActionNil`|Зарезервировано.|  
 |`dclRequest`|Зарезервировано.|  
 |`dclDemand`|Всем вызывающим объектам выше в стеке вызовов должно быть предоставлено разрешение, заданное текущим объектом разрешений.|  
-|`dclAssert`|The calling code can access the resource identified by the current permission object, even if callers higher in the stack have not been granted permission to access the resource|  
-|`dclDeny`|The ability to access the resource specified by the current permission object is denied to callers, even if they have been granted permission to access it.|  
+|`dclAssert`|Вызывающий код может получить доступ к ресурсу, определяемому текущим объектом разрешения, даже если вызывающим объектам выше в стеке не предоставлено разрешение на доступ к ресурсу.|  
+|`dclDeny`|Доступ к ресурсу, указанному текущим объектом разрешения, запрещен для вызывающих объектов, даже если им предоставлено разрешение на доступ к нему.|  
 |`dclPermitOnly`|Доступ можно получить только к ресурсам, указанным данным объектом разрешения, даже если коду предоставлено разрешение на доступ к другим ресурсам.|  
-|`dclLinktimeCheck`|The immediate caller is required to have been granted the specified permission for a given period of time.|  
-|`dclInheritanceCheck`|The derived class inheriting another class or overriding a method is required to have been granted the specified permission.|  
-|`dclRequestMinimum`|The caller can request for the minimum permissions required for code to run. Это действие может использоваться только в пределах сборки.|  
-|`dclRequestOptional`|The caller can request for additional permissions that are optional (not required to run). Этот запрос неявно отклоняет все прочие разрешения, не запрошенные специально. Это действие может использоваться только в пределах сборки.|  
-|`dclRequestRefuse`|The caller's request for permissions that might be misused will not be granted. Это действие может использоваться только в пределах сборки.|  
+|`dclLinktimeCheck`|Непосредственный вызывающий объект должен предоставить указанное разрешение в течение заданного периода времени.|  
+|`dclInheritanceCheck`|Производный класс, наследующий от другого класса или переопределяющий метод, должен предоставить указанное разрешение.|  
+|`dclRequestMinimum`|Вызывающий объект может запросить минимальные разрешения, необходимые для выполнения кода. Это действие может использоваться только в пределах сборки.|  
+|`dclRequestOptional`|Вызывающий объект может запросить дополнительные разрешения, которые являются необязательными (не требуются для запуска). Этот запрос неявно отклоняет все прочие разрешения, не запрошенные специально. Это действие может использоваться только в пределах сборки.|  
+|`dclRequestRefuse`|Запрос вызывающего объекта для разрешений, которые могут быть неправильно использованы, не будет предоставлен. Это действие может использоваться только в пределах сборки.|  
 |`dclPrejitGrant`|Зарезервировано.|  
 |`dclPrejitDenied`|Зарезервировано.|  
 |`dclNonCasDemand`|Зарезервировано.|  
@@ -83,10 +83,10 @@ typedef enum CorDeclSecurity {
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorHdr.h  
+ **Заголовок:** Корхдр. h  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Перечисления метаданных](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

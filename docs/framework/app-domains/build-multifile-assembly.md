@@ -1,5 +1,5 @@
 ---
-title: 'How to: Build a multifile assembly'
+title: Как построить многофайловую сборку
 ms.date: 08/20/2019
 helpviewer_keywords:
 - assemblies [.NET Framework], multifile
@@ -24,7 +24,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74429566"
 ---
-# <a name="how-to-build-a-multifile-assembly"></a>How to: Build a multifile assembly
+# <a name="how-to-build-a-multifile-assembly"></a>Как построить многофайловую сборку
 
 В этой статье рассматривается порядок создания многофайловой сборки и приводится код, иллюстрирующий каждый шаг процедуры.
 
@@ -224,6 +224,6 @@ ms.locfileid: "74429566"
 ## <a name="see-also"></a>См. также
 
 - [Создание сборок](../../standard/assembly/create.md)
-- [How to: View assembly contents](../../standard/assembly/view-contents.md)
+- [Как просмотреть содержимое сборки](../../standard/assembly/view-contents.md)
 - [Обнаружение сборок в среде выполнения](../deployment/how-the-runtime-locates-assemblies.md)
 - [Многофайловые сборки](multifile-assemblies.md)

@@ -26,11 +26,11 @@ ms.locfileid: "74447950"
   
 <a name="Property_Identifiers"></a>   
 ## <a name="property-identifiers"></a>Идентификаторы свойств  
- Каждое свойство определяется номером и именем. Имена свойств используются только для отладки и диагностики. Providers use the numeric IDs to identify incoming property requests. Однако клиентские приложения используют для идентификации свойств, которые им требуется получить, только ссылку <xref:System.Windows.Automation.AutomationProperty>, которая включает номер и имя.  
+ Каждое свойство определяется номером и именем. Имена свойств используются только для отладки и диагностики. Поставщики используют числовые идентификаторы для идентификации входящих запросов свойств. Однако клиентские приложения используют для идентификации свойств, которые им требуется получить, только ссылку <xref:System.Windows.Automation.AutomationProperty>, которая включает номер и имя.  
   
  Объекты<xref:System.Windows.Automation.AutomationProperty> , представляющие конкретные свойства, доступны как поля в различных классах. По соображениям безопасности поставщики автоматизации пользовательского интерфейса получают эти объекты из отдельного набора классов, содержащихся в Uiautomationtypes.dll.  
   
- The following table categorizes properties by the classes that contain the <xref:System.Windows.Automation.AutomationProperty>IDs.  
+ В следующей таблице перечислены свойства классов, содержащих идентификаторы <xref:System.Windows.Automation.AutomationProperty>.  
   
 |Виды свойств|Клиенты получают идентификаторы из|Поставщики получают идентификаторы из|  
 |-------------------------|--------------------------|----------------------------|  
@@ -53,24 +53,24 @@ ms.locfileid: "74447950"
   
 <a name="Properties_by_Category"></a>   
 ## <a name="properties-by-category"></a>Свойства по категориям  
- The following tables categorize the properties whose IDs are found in <xref:System.Windows.Automation.AutomationElement> and <xref:System.Windows.Automation.AutomationElementIdentifiers>. Эти свойства являются общими для всех элементов управления. Почти все из них, скорее всего, будут статическими во время существования приложения поставщика; большинство динамических свойств связано с шаблонами элементов управления.  
+ В следующих таблицах указаны свойства, идентификаторы которых находятся в <xref:System.Windows.Automation.AutomationElement> и <xref:System.Windows.Automation.AutomationElementIdentifiers>. Эти свойства являются общими для всех элементов управления. Почти все из них, скорее всего, будут статическими во время существования приложения поставщика; большинство динамических свойств связано с шаблонами элементов управления.  
   
  В столбце **Доступ к свойству** перечислены другие методы доступа для каждого свойства, в дополнение к <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A> и <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>. Дополнительные сведения о получении свойств в клиентском приложении см. в разделе [UI Automation Properties for Clients](ui-automation-properties-for-clients.md).  
   
 > [!NOTE]
 > Чтобы получить сведения о конкретном свойстве, используйте ссылку в столбце **Доступ к свойству** .  
   
-### <a name="display-characteristics"></a>Характеристики отображения  
+### <a name="display-characteristics"></a>Отобразить характеристики  
   
 |Идентификатор свойства|Доступ к свойству|  
 |-------------------------|---------------------|  
 |<xref:System.Windows.Automation.AutomationElement.BoundingRectangleProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.BoundingRectangle%2A>|  
-|<xref:System.Windows.Automation.AutomationElement.CultureProperty>|Н/Д|  
+|<xref:System.Windows.Automation.AutomationElement.CultureProperty>|н/д|  
 |<xref:System.Windows.Automation.AutomationElement.HelpTextProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.HelpText%2A>|  
 |<xref:System.Windows.Automation.AutomationElement.IsOffscreenProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsOffscreen%2A>|  
 |<xref:System.Windows.Automation.AutomationElement.OrientationProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.Orientation%2A>|  
   
-### <a name="element-type"></a>Тип элемента  
+### <a name="element-type"></a>Элемент Type  
   
 |Идентификатор свойства|Доступ к свойству|  
 |-------------------------|---------------------|  
@@ -159,7 +159,7 @@ ms.locfileid: "74447950"
   
  Клиенты прослушивают события, подписавшись на их. Подписка на события означает создание методов делегата, могущих обрабатывать эти события, и затем передачу этих методов в [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] вместе с конкретными событиями, которые будут обработаны в этих методах. В частности, для событий изменения свойств клиенты должны реализовать <xref:System.Windows.Automation.AutomationPropertyChangedEventHandler>.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Кэширование в клиентах автоматизации пользовательского интерфейса](caching-in-ui-automation-clients.md)
 - [Свойства автоматизации пользовательского интерфейса для клиентов](ui-automation-properties-for-clients.md)

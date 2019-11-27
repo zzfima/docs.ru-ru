@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450176"
 ---
 # <a name="imetadataemitdefineuserstring-method"></a>Метод IMetaDataEmit::DefineUserString
-Gets a metadata token for the specified literal string.  
+Возвращает токен метаданных для указанной литеральной строки.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,24 +37,24 @@ HRESULT DefineUserString (
   
 ## <a name="parameters"></a>Параметры  
  `szString`  
- [in] The user string to store.  
+ окне Пользовательская строка для хранения.  
   
  `cchString`  
- [in] The count of wide characters in `szString`.  
+ окне Число расширенных символов в `szString`.  
   
  `pstk`  
- [out] The string token assigned.  
+ заполняет Назначенный токен строки.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Заголовок:** COR. h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **Библиотека:** Используется в качестве ресурса в MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [Интерфейс IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

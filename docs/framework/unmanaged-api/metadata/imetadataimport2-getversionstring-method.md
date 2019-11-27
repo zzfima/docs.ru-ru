@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445224"
 ---
 # <a name="imetadataimport2getversionstring-method"></a>Метод IMetaDataImport2::GetVersionString
-Gets the version number of the runtime that was used to build the assembly.  
+Возвращает номер версии среды выполнения, которая использовалась для построения сборки.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,27 +37,27 @@ HRESULT GetVersionString (
   
 ## <a name="parameters"></a>Параметры  
  `pwzBuf`  
- [out] An array to store the string that specifies the version.  
+ заполняет Массив для хранения строки, указывающей версию.  
   
  `ccBufSize`  
- [in] The size, in wide characters, of the `pwzBuf` array.  
+ окне Размер массива `pwzBuf` в расширенных символах.  
   
  `pccBufSize`  
- [out] The number of wide characters, including a null terminator, returned in the `pwzBuf` array.  
+ заполняет Число расширенных символов, включая знак завершения null, возвращенный в массиве `pwzBuf`.  
   
-## <a name="remarks"></a>Заметки  
- The `GetVersionString` method gets the built-for version of the current metadata scope. If the scope has never been saved, it will not have a built-for version, and an empty string will be returned.  
+## <a name="remarks"></a>Примечания  
+ Метод `GetVersionString` получает встроенную версию текущей области метаданных. Если область не была сохранена, она не будет иметь встроенной версии и будет возвращена пустая строка.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Заголовок:** COR. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Библиотека:** Используется в качестве ресурса в MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
 - [Интерфейс IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)

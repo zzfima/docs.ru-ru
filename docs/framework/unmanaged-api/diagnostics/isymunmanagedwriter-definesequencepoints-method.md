@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74427981"
 ---
 # <a name="isymunmanagedwriterdefinesequencepoints-method"></a>Метод ISymUnmanagedWriter::DefineSequencePoints
-Определяет группу точек следования в текущем методе. Each starting line and starting column define the start of a statement within a method. Each ending line and ending column define the end of a statement within a method. The arrays should be sorted in increasing order of offsets. The offset is always measured from the start of the method, in bytes.  
+Определяет группу точек следования в текущем методе. Каждая начальная строка и начальный столбец определяют начало инструкции в методе. Каждая конечная строка и конечный столбец определяют конец оператора в методе. Массивы должны быть отсортированы в порядке возрастания смещений. Смещение всегда измеряется от начала метода в байтах.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,31 +40,31 @@ HRESULT DefineSequencePoints(
   
 ## <a name="parameters"></a>Параметры  
  `document`  
- [in] The document object for which the sequence points are being defined.  
+ окне Объект документа, для которого определяются точки следования.  
   
  `spCount`  
- [in] A `ULONG32` that indicates the size of each of the `offsets`, `lines`, `columns`, `endLines`, and `endColumns` buffers.  
+ окне `ULONG32`, указывающий размер каждого из буферов `offsets`, `lines`, `columns`, `endLines`и `endColumns`.  
   
  `offsets`  
- [in] The offset of the sequence points measured from the beginning of the method.  
+ окне Смещение точек последовательности, измеряемое от начала метода.  
   
  `lines`  
- [in] The starting line numbers of the sequence points.  
+ окне Начальные номера строк точек следования.  
   
  `columns`  
- [in] The starting column numbers of the sequence points.  
+ окне Начальные номера столбцов точек следования.  
   
  `endLines`  
- [in] The ending line numbers of the sequence points. Этот параметр является необязательным.  
+ окне Номера конечных строк точек следования. Этот параметр является необязательным.  
   
  `endColumns`  
- [in] The ending column numbers of the sequence points. Этот параметр является необязательным.  
+ окне Конечные номера столбцов точек следования. Этот параметр является необязательным.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK, если метод выполнен. в противном случае E_FAIL или другой код ошибки.  
   
 ## <a name="requirements"></a>Требования  
- **Header:** CorSym.idl, CorSym.h  
+ **Заголовок:** Корсим. idl, Корсим. h  
   
 ## <a name="see-also"></a>См. также
 

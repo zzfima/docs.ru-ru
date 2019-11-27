@@ -1,5 +1,5 @@
 ---
-title: Syntax used by DebugView property
+title: Синтаксис, используемый свойством DebugView
 description: В этой статье описывается специальный синтаксис, используемый свойством DebugView для получения строкового представления деревьев выражений.
 author: zspitz
 ms.author: wiwagn
@@ -19,7 +19,7 @@ ms.locfileid: "74346869"
 
 Свойство `DebugView` (доступно только при отладке) предоставляет строковое представление деревьев выражений. Большая часть синтаксиса достаточно проста для понимания; особые случаи описаны в разделах ниже.
 
-Each example is followed by a comment block containing the `DebugView`.
+За каждым примером следует блок комментариев, содержащий `DebugView`.
 
 ## <a name="parameterexpression"></a>ParameterExpression
 
@@ -45,15 +45,15 @@ Dim numParam As ParameterExpression = Expression.Parameter(GetType(Integer))
 
 Для объектов <xref:System.Linq.Expressions.ConstantExpression?displayProperty=nameWithType>, представляющих целочисленные значения, строки и `null`, отображается значение константы.
 
-For some numeric types, a suffix is added to the value:
+Для некоторых числовых типов суффикс добавляется к значению:
 
-| Type | Ключевое слово | Суффикс |
+| Тип | Ключевое слово | Суффикс |
 |--|--|--|
 | <xref:System.UInt32> | [UInteger](../../../language-reference/data-types/uinteger-data-type.md) | U |
 | <xref:System.Int64> | [Long](../../../language-reference/data-types/long-data-type.md) | L |
 | <xref:System.UInt64> | [ULong](../../../language-reference/data-types/ulong-data-type.md) | UL |
 | <xref:System.Double> | [Double](../../../language-reference/data-types/double-data-type.md) | D |
-| <xref:System.Single> | [Single](../../../language-reference/data-types/single-data-type.md) | C |
+| <xref:System.Single> | [Single](../../../language-reference/data-types/single-data-type.md) | F |
 | <xref:System.Decimal> | [Decimal](../../../language-reference/data-types/decimal-data-type.md) | M |
 
 ### <a name="examples"></a>Примеры

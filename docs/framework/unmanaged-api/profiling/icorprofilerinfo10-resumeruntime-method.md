@@ -1,5 +1,5 @@
 ---
-title: ICorProfilerInfo10::ResumeRuntime
+title: 'ICorProfilerInfo10:: Ресумерунтиме'
 ms.date: 08/06/2019
 dev_langs:
 - cpp
@@ -18,9 +18,9 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449799"
 ---
-# <a name="icorprofilerinfo10resumeruntime-method"></a>ICorProfilerInfo10::ResumeRuntime Method
+# <a name="icorprofilerinfo10resumeruntime-method"></a>Метод ICorProfilerInfo10:: Ресумерунтиме
 
-Resumes the runtime without performing a GC.
+Возобновляет работу среды выполнения без выполнения сборки мусора.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -30,14 +30,14 @@ HRESULT ResumeRuntime();
 
 ## <a name="requirements"></a>Требования
 
-**Platforms:** See [.NET Core supported operating systems](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows).
+**Платформы:** См. раздел [Поддерживаемые операционные системы .NET Core](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows).
 
 **Заголовок:** CorProf.idl, CorProf.h
 
 **Библиотека:** CorGuids.lib
 
-**.NET Versions:** [!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]
+**Версии .NET:** [!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]
 
 ## <a name="see-also"></a>См. также
 
-- [ICorProfilerInfo10 Interface](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo10-interface.md)
+- [Интерфейс ICorProfilerInfo10](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo10-interface.md)

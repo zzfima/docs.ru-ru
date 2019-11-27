@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74447888"
 ---
 # <a name="imetadataemit2savedeltatomemory-method"></a>Метод IMetaDataEmit2::SaveDeltaToMemory
-Saves changes from the current edit-and-continue session to memory.  
+Сохраняет изменения из текущего сеанса "изменить и продолжить" в память.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -36,17 +36,17 @@ HRESULT SaveDeltaToMemory (
   
 ## <a name="parameters"></a>Параметры  
  `pbData`  
- [out] The address at which to begin writing the metadata delta.  
+ заполняет Адрес, с которого начинается запись разностных метаданных.  
   
  `cbData`  
- [in] The size of the changes. Use [IMetaDataEmit2::GetDeltaSaveSize](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-getdeltasavesize-method.md) to determine the size.  
+ окне Размер изменений. Чтобы определить размер, используйте [IMetaDataEmit2:: жетделтасавесизе](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-getdeltasavesize-method.md) .  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Заголовок:** COR. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Библиотека:** Используется в качестве ресурса в MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

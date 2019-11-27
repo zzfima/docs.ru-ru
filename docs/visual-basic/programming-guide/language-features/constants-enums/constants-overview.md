@@ -12,37 +12,37 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74338339"
 ---
 # <a name="constants-overview-visual-basic"></a>Общие сведения о константах (Visual Basic)
-A constant is a meaningful name that takes the place of a number or string that does not change. Constants store values that, as the name implies, remain the same throughout the execution of an application. You can greatly improve the readability of your code and make it easier to maintain by using constants. Use them in code that contains values that reappear or that depends on certain numbers that are difficult to remember or have no obvious meaning.  
+Константа — это понятное имя, которое принимает позицию числа или строки, которые не меняются. Константы хранят значения, которые, как предполагается в названии, остаются одинаковыми в ходе выполнения приложения. Можно значительно повысить удобочитаемость кода и упростить его поддержку с помощью констант. Используйте их в коде, который содержит значения, которые снова появляются или зависят от определенных чисел, которые трудно запомнить или которые не имеют очевидного значения.  
   
-## <a name="how-to-create-and-use-constants"></a>How to Create and Use Constants  
- Visual Basic contains a number of predefined constants, mainly using for printing and displaying. You can also create your own constants with the `Const` statement, using the same guidelines you would for creating a variable name. If `Option Strict` is `On`, you must explicitly declare the constant type.  
+## <a name="how-to-create-and-use-constants"></a>Создание и использование констант  
+ Visual Basic содержит ряд предопределенных констант, в основном использующих для печати и отображения. Вы также можете создавать собственные константы с помощью инструкции `Const`, используя те же рекомендации, что и при создании имени переменной. Если `Option Strict` `On`, необходимо явно объявить константный тип.  
   
- A constant's scope, which is the set of all code that can refer to it without qualifying its name, is the same as that of a variable declared in the same location. To create a constant that exists within the scope of a particular procedure, declare it inside that procedure. To create a constant that is available throughout an application, declare it using the `Public` keyword in the declarations section of the class.  
+ Область константы, которая представляет собой набор всего кода, который может ссылаться на него без уточнения его имени, совпадает с переменной, объявленной в том же расположении. Чтобы создать константу, которая существует в области действия конкретной процедуры, объявите ее внутри этой процедуры. Чтобы создать константу, доступную во всем приложении, объявите ее с помощью ключевого слова `Public` в разделе объявлений класса.  
   
 > [!NOTE]
-> Although constants somewhat resemble variables, you cannot modify them or assign new values to them as you can to variables.  
+> Несмотря на то, что константы немного похожи на переменные, их нельзя изменить или присвоить им новые значения, как это можно сделать переменным.  
   
- The constants you use in your code can be defined by the object model for controls or components you work with, or they can be user-defined (that is, those you create yourself).  
+ Константы, используемые в коде, можно определить с помощью объектной модели для элементов управления или компонентов, с которыми вы работаете, или определяемых пользователем (то есть созданных вами).  
   
-## <a name="compile-time-and-run-time-constants"></a>Compile-time and Run-time Constants  
- A compile-time constant is computed at the time the code is compiled, while a run-time constant can only be computed while the application is running. A compile-time constant will have the same value each time an application runs, while a run-time constant may change each time. Compile-time constants are required for cases such as array bounds, case expressions, or enumerator initializers.  
+## <a name="compile-time-and-run-time-constants"></a>Константы времени компиляции и времени выполнения  
+ Константа времени компиляции вычисляются во время компиляции кода, а константа времени выполнения может вычисляться только во время выполнения приложения. Константа времени компиляции будет иметь одинаковое значение при каждом запуске приложения, а константа времени выполнения может измениться каждый раз. Константы времени компиляции необходимы для таких случаев, как границы массива, выражения CASE или инициализаторы перечислителя.  
   
-## <a name="in-this-section"></a>Содержание  
-  
-|Определение|Термин|  
-|---|---|  
-|[Практическое руководство. Объявление константы](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-a-constant.md)|Explains how to use the `Const` statement to declare a constant and set its value; by declaring a constant, you assign a meaningful name to the value.|  
-|[Константы, определенные пользователем](../../../../visual-basic/programming-guide/language-features/constants-enums/user-defined-constants.md)|Describes how to create your own constants, including information on scoping and how to avoid circular references.|  
-|[Типы данных констант и литералов](../../../../visual-basic/programming-guide/language-features/constants-enums/constant-and-literal-data-types.md)|Provides information on how the Visual Basic compiler initializes constants when `Option Explicit` is turned off.|  
-|[Практическое руководство. Группирование значений связанных констант](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-group-related-constant-values-together.md)|Demonstrates how to group constant values that are related.|  
-  
-## <a name="reference"></a>Справочник  
+## <a name="in-this-section"></a>В этом разделе  
   
 |Определение|Термин|  
 |---|---|  
-|[Константы и перечисления](../../../../visual-basic/language-reference/constants-and-enumerations.md)|Lists the constants predefined by Visual Basic.|  
-|[Оператор Const](../../../../visual-basic/language-reference/statements/const-statement.md)|Describes the `Const` statement and its use.|  
-|[Оператор Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md)|Describes the `Option Strict` statement and its use.|  
+|[Практическое руководство. Объявление константы](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-a-constant.md)|Объясняет, как использовать оператор `Const` для объявления константы и задания ее значения. Объявляя константу, вы присваиваете этому значению понятное имя.|  
+|[Константы, определенные пользователем](../../../../visual-basic/programming-guide/language-features/constants-enums/user-defined-constants.md)|Описывает, как создавать собственные константы, включая сведения о области и способах избежать циклических ссылок.|  
+|[Типы данных констант и литералов](../../../../visual-basic/programming-guide/language-features/constants-enums/constant-and-literal-data-types.md)|Содержит сведения о том, как компилятор Visual Basic инициализирует константы при отключенном `Option Explicit`.|  
+|[Практическое руководство. Группирование значений связанных констант](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-group-related-constant-values-together.md)|Демонстрирует группирование связанных значений констант.|  
+  
+## <a name="reference"></a>Справочные сведения  
+  
+|Определение|Термин|  
+|---|---|  
+|[Константы и перечисления](../../../../visual-basic/language-reference/constants-and-enumerations.md)|Перечисляет константы, предопределенные с помощью Visual Basic.|  
+|[Оператор Const](../../../../visual-basic/language-reference/statements/const-statement.md)|Описывает инструкцию `Const` и ее использование.|  
+|[Оператор Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md)|Описывает инструкцию `Option Strict` и ее использование.|  
   
 ## <a name="see-also"></a>См. также
 

@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445677"
 ---
 # <a name="importtypes-method"></a>Метод ImportTypes
-Initiates the importing of types from each scope imported via [ImportFile Method](importfile-method.md).  
+Инициирует импорт типов из каждой области, импортированной с помощью [метода ImportFile](importfile-method.md).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,30 +39,30 @@ HRESULT ImportTypes(
   
 ## <a name="parameters"></a>Параметры  
  `AssemblyID`  
- ID of the assembly to import to.  
+ Идентификатор сборки, в которую необходимо выполнить импорт.  
   
  `FileToken`  
- ID of the file to import from.  
+ Идентификатор файла, из которого необходимо выполнить импорт.  
   
  `dwScope`  
- Zero-based scope to import.  
+ Отсчитываемая от нуля область для импорта.  
   
  `phEnum`  
- Receives enumerator handle for the types in this scope.  
+ Получает обработчики перечислителя для типов в этой области.  
   
  `ppImportScope`  
- Optionally receives [IMetaDataImport Interface](../metadata/imetadataimport-interface.md) interface.  
+ При необходимости получает интерфейс [интерфейса IMetaDataImport](../metadata/imetadataimport-interface.md) .  
   
  `pdwCountOfTypes`  
- Optionally receives count of types in the indicated scope.  
+ При необходимости получает число типов в указанной области.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Returns S_OK if the method succeeds.  
+ Возвращает S_OK, если метод завершается с ошибкой.  
   
 ## <a name="requirements"></a>Требования  
- Requires alink.h  
+ Требуется ALink. h  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс IALink](ialink-interface.md)
 - [Интерфейс IALink2](ialink2-interface.md)

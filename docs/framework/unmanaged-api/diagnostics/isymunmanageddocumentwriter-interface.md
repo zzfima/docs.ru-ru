@@ -29,11 +29,11 @@ ms.locfileid: "74449086"
 |Метод|Описание|  
 |------------|-----------------|  
 |[Метод SetCheckSum](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocumentwriter-setchecksum-method.md)|Задает сведения о контрольной сумме.|  
-|[Метод SetSource](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocumentwriter-setsource-method.md)|Sets embedded source for a document that is being written.|  
+|[Метод SetSource](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocumentwriter-setsource-method.md)|Задает внедренный источник для записываемого документа.|  
   
 ## <a name="requirements"></a>Требования  
- **Header:** CorSym.idl, CorSym.h  
+ **Заголовок:** Корсим. idl, Корсим. h  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейсы хранилища символов диагностики](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)

@@ -15,26 +15,26 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350851"
 ---
-# <a name="sample-compilation-command-lines-visual-basic"></a>Sample compilation command lines (Visual Basic)
+# <a name="sample-compilation-command-lines-visual-basic"></a>Примеры командных строк компиляции (Visual Basic)
 
-As an alternative to compiling Visual Basic programs from within Visual Studio, you can compile from the command line to produce executable (.exe) files or dynamic-link library (.dll) files.
+В качестве альтернативы компиляции Visual Basic программ из Visual Studio можно выполнить компиляцию из командной строки, чтобы создать исполняемые файлы (exe) или файлы библиотеки динамической компоновки (DLL).
 
-The Visual Basic command-line compiler supports a complete set of options that control input and output files, assemblies, and debug and preprocessor options. Each option is available in two interchangeable forms: `-option` and `/option`. This documentation shows only the `-option` form.
+Компилятор командной строки Visual Basic поддерживает полный набор параметров, управляющих входными и выходными файлами, сборками, параметрами отладки и препроцессором. Каждый параметр доступен в двух взаимозаменяемых формах: `-option` и `/option`. В этой документации показана только форма `-option`.
 
-The following table lists some sample command lines you can modify for your own use.
+В следующей таблице перечислены некоторые примеры командных строк, которые можно изменить для собственного использования.
 
-|Целевой тип|Использовать|
+|Чтобы|Чтобы подключить или изменить свойства уже подключенной группы управления, используйте узел|
 |--------|---------|
-|Compile File.vb and create File.exe|`vbc -reference:Microsoft.VisualBasic.dll File.vb`|
-|Compile File.vb and create File.dll|`vbc -target:library File.vb`|
-|Compile File.vb and create My.exe|`vbc -out:My.exe File.vb`|
-|Compile File.vb and create both a library and a reference assembly named File.dll|`vbc -target:library -ref:.\debug\bin\ref\file.dll File.vb`|
-|Compile all Visual Basic files in the current directory, with optimizations on and the `DEBUG` symbol defined, producing File2.exe|`vbc -define:DEBUG=1 -optimize -out:File2.exe *.vb`|
-|Compile all Visual Basic files in the current directory, producing a debug version of File2.dll without displaying the logo or warnings|`vbc -target:library -out:File2.dll -nowarn -nologo -debug *.vb`|
-|Compile all Visual Basic files in the current directory to Something.dll|`vbc -target:library -out:Something.dll *.vb`|
+|Скомпилируйте файл File. vb и создайте файл. exe|`vbc -reference:Microsoft.VisualBasic.dll File.vb`|
+|Скомпилируйте файл File. vb и создайте файл. dll|`vbc -target:library File.vb`|
+|Скомпилируйте файл File. vb и создайте My. exe|`vbc -out:My.exe File.vb`|
+|Скомпилируйте файл File. vb и создайте библиотеку и ссылочную сборку с именем file. dll|`vbc -target:library -ref:.\debug\bin\ref\file.dll File.vb`|
+|Компилировать все файлы Visual Basic в текущем каталоге с оптимизацией и `DEBUG` определенным символом, создавая file2. exe.|`vbc -define:DEBUG=1 -optimize -out:File2.exe *.vb`|
+|Компилировать все файлы Visual Basic в текущем каталоге, создавая отладочную версию file2. DLL без отображения логотипа или предупреждений|`vbc -target:library -out:File2.dll -nowarn -nologo -debug *.vb`|
+|Компилировать все файлы Visual Basic в текущем каталоге в файл. dll|`vbc -target:library -out:Something.dll *.vb`|
 
 > [!TIP]
-> When you build a project by using the Visual Studio IDE, you can display information about the associated **vbc** command with its compiler options in the output window. To display this information, open the [Options Dialog Box,  Projects and Solutions, Build and Run](/visualstudio/ide/reference/options-dialog-box-projects-and-solutions-build-and-run), and then set the **MSBuild project build output verbosity** to **Normal** or a higher level of verbosity.
+> При построении проекта с помощью интегрированной среды разработки Visual Studio можно отобразить сведения о связанной команде **vbc** с ее параметрами компилятора в окне вывода. Чтобы отобразить эти сведения, откройте [диалоговое окно Параметры, проекты и решения, сборка и запуск](/visualstudio/ide/reference/options-dialog-box-projects-and-solutions-build-and-run), а затем задайте для параметра **уровень детализации выходных данных сборки проекта MSBuild** значение **обычное** или более высокий уровень детализации.
 
 ## <a name="see-also"></a>См. также
 

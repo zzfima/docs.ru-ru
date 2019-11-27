@@ -16,7 +16,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350191"
 ---
 # <a name="addhandler-statement"></a>Оператор AddHandler
-Associates an event with an event handler at run time.  
+Связывает событие с обработчиком событий во время выполнения.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -27,19 +27,19 @@ AddHandler event, AddressOf eventhandler
 ## <a name="parts"></a>Части  
 |||
 |---|---|
-|событие|The name of the event to handle.|  
-|`eventhandler`|The name of a procedure that handles the event.|
+|событие|Имя обрабатываемого события.|  
+|`eventhandler`|Имя процедуры, которая обрабатывает событие.|
 |||
   
 ## <a name="remarks"></a>Заметки  
- The `AddHandler` and `RemoveHandler` statements allow you to start and stop event handling at any time during program execution.  
+ Операторы `AddHandler` и `RemoveHandler` позволяют запускать и прекращать обработку событий в любое время во время выполнения программы.  
   
- The signature of the `eventhandler` procedure must match the signature of the event `event`.  
+ Сигнатура процедуры `eventhandler` должна соответствовать сигнатуре `event`событий.  
   
- Как ключевое слово `Handles` так и оператор `AddHandler` позволяют задать обработку определенных событий конкретными процедурами, но между ними существуют различия. Оператор `AddHandler` подключает процедуры к событиям во время выполнения. Используйте ключевое слово `Handles` при определении процедуры, чтобы указать, что она обрабатывает определенное событие. For more information, see [Handles](../../../visual-basic/language-reference/statements/handles-clause.md).  
+ Как ключевое слово `Handles` так и оператор `AddHandler` позволяют задать обработку определенных событий конкретными процедурами, но между ними существуют различия. Оператор `AddHandler` подключает процедуры к событиям во время выполнения. Используйте ключевое слово `Handles` при определении процедуры, чтобы указать, что она обрабатывает определенное событие. Дополнительные сведения см. в разделе [Handles](../../../visual-basic/language-reference/statements/handles-clause.md).  
   
 > [!NOTE]
-> For custom events, the `AddHandler` statement invokes the event's `AddHandler` accessor. For more information on custom events, see [Event Statement](../../../visual-basic/language-reference/statements/event-statement.md).  
+> Для пользовательских событий оператор `AddHandler` вызывает метод доступа `AddHandler` события. Дополнительные сведения о пользовательских событиях см. в разделе [оператор Event](../../../visual-basic/language-reference/statements/event-statement.md).  
   
 ## <a name="example"></a>Пример  
  [!code-vb[VbVbalrEvents#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#17)]  

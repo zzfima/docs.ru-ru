@@ -15,20 +15,20 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448538"
 ---
 # <a name="diagnostics-symbol-store-enumerations"></a>Перечисления хранилища символов диагностики
-This topic describes the unmanaged enumerations that the diagnostics symbol store API uses.  
+В этом разделе описываются неуправляемые перечисления, используемые API хранилища диагностических символов.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Перечисление CorSymAddrKind](../../../../docs/framework/unmanaged-api/diagnostics/corsymaddrkind-enumeration.md)  
- Indicates the type of memory address.  
+ Указывает тип адреса памяти.  
   
  [Перечисление CorSymSearchPolicyAttributes](../../../../docs/framework/unmanaged-api/diagnostics/corsymsearchpolicyattributes-enumeration.md)  
- Specifies the policy to be used when doing a search for a symbol reader.  
+ Указывает политику, используемую при поиске средства чтения символов.  
   
  [Перечисление CorSymVarFlag](../../../../docs/framework/unmanaged-api/diagnostics/corsymvarflag-enumeration.md)  
- Indicates whether a variable is compiler-generated.  
+ Указывает, создается ли переменная компилятором.  
   
  [Перечисление NOTIFY_FILTER](../../../../docs/framework/unmanaged-api/diagnostics/notify-filter-enumeration.md)  
- Identifies callbacks for debugger functions.  
+ Определяет обратные вызовы для функций отладчика.  
   
 ## <a name="related-sections"></a>Связанные разделы  
  [Интерфейсы хранилища символов диагностики](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)  

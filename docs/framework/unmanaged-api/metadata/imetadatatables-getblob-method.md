@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445428"
 ---
 # <a name="imetadatatablesgetblob-method"></a>Метод IMetaDataTables::GetBlob
-Gets a pointer to the binary large object (BLOB) at the specified column index.  
+Возвращает указатель на большой двоичный объект (BLOB) по указанному индексу столбца.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,20 +37,20 @@ HRESULT GetBlob (
   
 ## <a name="parameters"></a>Параметры  
  `ixBlob`  
- [in] The memory address from which to get `ppData`.  
+ окне Адрес памяти, из которого необходимо получить `ppData`.  
   
  `pcbData`  
- [out] A pointer to the size, in bytes, of `ppData`.  
+ заполняет Указатель на размер `ppData`в байтах.  
   
  `ppData`  
- [out] A pointer to a pointer to the binary data retrieved.  
+ заполняет Указатель на указатель на извлекаемые двоичные данные.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Заголовок:** COR. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Библиотека:** Используется в качестве ресурса в MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

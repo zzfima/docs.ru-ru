@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449533"
 ---
 # <a name="imetadataimportenuminterfaceimpls-method"></a>Метод IMetaDataImport::EnumInterfaceImpls
-Enumerates all interfaces implemented by the specified `TypeDef`. 
+Перечисляет все интерфейсы, реализованные указанным `TypeDef`. 
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,37 +39,37 @@ HRESULT EnumInterfaceImpls (
   
 ## <a name="parameters"></a>Параметры  
  `phEnum`  
- [in, out] A pointer to the enumerator.  
+ [вход, выход] Указатель на перечислитель.  
   
  `td`  
- [in] The token of the TypeDef whose MethodDef tokens representing interface implementations are to be enumerated.  
+ окне Токен TypeDef, маркеры MethodDef которого представляют реализации интерфейса для перечисления.  
   
  `rImpls`  
- [out] The array used to store the MethodDef tokens.  
+ заполняет Массив, используемый для хранения маркеров MethodDef.  
   
  `cMax`  
  [in] Максимальный размер массива `rImpls`.  
   
  `pcImpls`  
- [out] The actual number of tokens returned in `rImpls`.  
+ заполняет Фактическое число токенов, возвращаемых в `rImpls`.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
   
 |HRESULT|Описание|  
 |-------------|-----------------|  
-|`S_OK`|`EnumInterfaceImpls` returned successfully.|  
-|`S_FALSE`|There are no MethodDef tokens to enumerate. In that case, `pcImpls` is set to zero.|  
+|`S_OK`|`EnumInterfaceImpls` успешно возвращено.|  
+|`S_FALSE`|Отсутствуют токены MethodDef для перечисления. В этом случае `pcImpls` имеет значение 0.|  
 
 ## <a name="remarks"></a>Заметки
 
-The enumeration returns a collection of `mdInterfaceImpl` tokens for each interface implemented by the specified `TypeDef`. Interface tokens are returned in the order the interfaces were specified (through `DefineTypeDef` or `SetTypeDefProps`). Properties of the returned `mdInterfaceImpl` tokens can be queried using [GetInterfaceImplProps](imetadataimport-getinterfaceimplprops-method.md).
+Перечисление Возвращает коллекцию токенов `mdInterfaceImpl` для каждого интерфейса, реализованного с помощью указанного `TypeDef`. Маркеры интерфейса возвращаются в том порядке, в котором были указаны интерфейсы (с помощью `DefineTypeDef` или `SetTypeDefProps`). Свойства возвращенных маркеров `mdInterfaceImpl` можно запрашивать с помощью [жетинтерфацеимплпропс](imetadataimport-getinterfaceimplprops-method.md).
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Заголовок:** COR. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

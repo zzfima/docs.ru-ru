@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74442276"
 ---
 # <a name="imetadataemitsetfieldmarshal-method"></a>Метод IMetaDataEmit::SetFieldMarshal
-Sets the PInvoke marshaling information for the field, method return, or method parameter referenced by the specified token.  
+Задает сведения о маршалировании PInvoke для поля, возвращаемого метода или параметра метода, на который ссылается указанный токен.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,20 +37,20 @@ HRESULT SetFieldMarshal (
   
 ## <a name="parameters"></a>Параметры  
  `tk`  
- [in] The token for target data item. This is either a `mdFieldDef` or a `mdParamDef` token.  
+ окне Токен для целевого элемента данных. Это либо `mdFieldDef`, либо маркер `mdParamDef`.  
   
  `pvNativeType`  
- [in] The signature for unmanaged type.  
+ окне Сигнатура для неуправляемого типа.  
   
  `cbNativeType`  
- [in] The count of bytes in `pvNativeType`.  
+ окне Число байтов в `pvNativeType`.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Заголовок:** COR. h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **Библиотека:** Используется в качестве ресурса в MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

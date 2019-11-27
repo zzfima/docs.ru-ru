@@ -33,7 +33,7 @@ HRESULT GetCount([out] ULONG * pcelt);
   
 ## <a name="parameters"></a>Параметры  
  `celt`  
- [out] The number of functions that were loaded.  
+ заполняет Число загруженных функций.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
@@ -44,7 +44,7 @@ HRESULT GetCount([out] ULONG * pcelt);
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс ICorProfilerFunctionEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-interface.md)
 - [Интерфейсы профилирования](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)

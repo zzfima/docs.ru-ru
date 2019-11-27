@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448225"
 ---
 # <a name="imetadataassemblyimportgetassemblyrefprops-method"></a>Метод IMetaDataAssemblyImport::GetAssemblyRefProps
-Gets the set of properties for the assembly reference with the specified metadata signature.  
+Возвращает набор свойств для ссылки на сборку с указанной сигнатурой метаданных.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -44,47 +44,47 @@ HRESULT GetAssemblyRefProps (
   
 ## <a name="parameters"></a>Параметры  
  `mdar`  
- [in] The `mdAssemblyRef` metadata token that represents the assembly reference for which to get the properties.  
+ окне `mdAssemblyRef` маркер метаданных, представляющий ссылку на сборку, для которой необходимо получить свойства.  
   
  `ppbPublicKeyOrToken`  
- [out] A pointer to the public key or the metadata token.  
+ заполняет Указатель на открытый ключ или маркер метаданных.  
   
  `pcbPublicKeyOrToken`  
- [out] The number of bytes in the returned public key or token.  
+ заполняет Число байтов в возвращенном открытом ключе или токене.  
   
  `szName`  
- [out] The simple name of the assembly.  
+ заполняет Простое имя сборки.  
   
  `cchName`  
- [in] The size, in wide chars, of `szName`.  
+ окне Размер `szName`в расширенных символах.  
   
  `pchName`  
- [out] A pointer to the number of wide chars actually returned in `szName`.  
+ заполняет Указатель на число расширенных символов, фактически возвращаемых в `szName`.  
   
  `pMetaData`  
- [out] A pointer to an ASSEMBLYMETADATA structure that contains the assembly metadata.  
+ заполняет Указатель на структуру ASSEMBLYMETADATA, содержащую метаданные сборки.  
   
  `ppbHashValue`  
- [out] A pointer to the hash value. This is the hash, using the SHA-1 algorithm, of the `PublicKey` property of the assembly being referenced, unless the arfFullOriginator flag of the [AssemblyRefFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyrefflags-enumeration.md) enumeration is set.  
+ заполняет Указатель на хэш-значение. Это хэш с использованием алгоритма SHA-1 `PublicKey` свойства сборки, на которую указывает ссылка, если не задан флаг Арффуллоригинатор перечисления [ассемблиреффлагс](../../../../docs/framework/unmanaged-api/metadata/assemblyrefflags-enumeration.md) .  
   
  `pcbHashValue`  
- [out] The number of wide chars in the returned hash value.  
+ заполняет Число расширенных символов в возвращенном хэш-значении.  
   
  `pdwAssemblyRefFlags`  
- [out] A pointer to flags that describe the metadata applied to an assembly. The flags value is a combination of one or more [CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) values.  
+ заполняет Указатель на флаги, описывающие метаданные, примененные к сборке. Значение Flags является сочетанием одного или нескольких значений [корассемблифлагс](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) .  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- This method returns S_OK if it succeeds; otherwise, it returns one of the error codes defined in the Winerror.h header file.  
+ Этот метод возвращает S_OK, если он выполнен. в противном случае возвращается один из кодов ошибок, определенных в файле заголовка Winerror. h.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Заголовок:** COR. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Библиотека:** Используется в качестве ресурса в MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс IMetaDataAssemblyImport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

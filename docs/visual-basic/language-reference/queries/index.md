@@ -13,50 +13,50 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350443"
 ---
 # <a name="queries-visual-basic"></a>Запросы (Visual Basic)
-Visual Basic enables you to create [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] expressions in your code.  
+Visual Basic позволяет создавать выражения [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] в коде.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Предложение Aggregate](../../../visual-basic/language-reference/queries/aggregate-clause.md)  
- Describes the `Aggregate` clause, which applies one or more aggregate functions to a collection.  
+ Описывает предложение `Aggregate`, которое применяет одну или несколько агрегатных функций к коллекции.  
   
  [Предложение Distinct](../../../visual-basic/language-reference/queries/distinct-clause.md)  
- Describes the `Distinct` clause, which restricts the values of the current range variable to eliminate duplicate values in query results.  
+ Описывает предложение `Distinct`, которое позволяет ограничивать значения текущей переменной диапазона, чтобы исключить дублирующиеся значения в результатах запроса.  
   
  [Предложение From](../../../visual-basic/language-reference/queries/from-clause.md)  
- Describes the `From` clause, which specifies a collection and a range variable for a query.  
+ Описывает предложение `From`, которое задает коллекцию и переменную диапазона для запроса.  
   
  [Предложение Group By](../../../visual-basic/language-reference/queries/group-by-clause.md)  
- Describes the `Group By` clause, which groups the elements of a query result and can be used to apply aggregate functions to each group.  
+ Описывает предложение `Group By`, которое группирует элементы результата запроса и может использоваться для применения агрегатных функций к каждой группе.  
   
  [Предложение Group Join](../../../visual-basic/language-reference/queries/group-join-clause.md)  
- Describes the `Group Join` clause, which combines two collections into a single hierarchical collection.  
+ Описывает предложение `Group Join`, объединяющее две коллекции в одну иерархическую коллекцию.  
   
  [Предложение Join](../../../visual-basic/language-reference/queries/join-clause.md)  
- Describes the `Join` clause, which combines two collections into a single collection.  
+ Описывает предложение `Join`, объединяющее две коллекции в одной коллекции.  
   
  [Предложение Let](../../../visual-basic/language-reference/queries/let-clause.md)  
- Describes the `Let` clause, which computes a value and assigns it to a new variable in the query.  
+ Описывает предложение `Let`, которое выполняет вычисление значения и присваивает его новой переменной в запросе.  
   
  [Предложение Order By](../../../visual-basic/language-reference/queries/order-by-clause.md)  
- Describes the `Order By` clause, which specifies the sort order for columns in a query.  
+ Описывает предложение `Order By`, которое указывает порядок сортировки для столбцов в запросе.  
   
  [Предложение Select](../../../visual-basic/language-reference/queries/select-clause.md)  
- Describes the `Select` clause, which declares a set of range variables for a query.  
+ Описывает предложение `Select`, которое объявляет набор переменных диапазона для запроса.  
   
  [Предложение Skip](../../../visual-basic/language-reference/queries/skip-clause.md)  
- Describes the `Skip` clause, which bypasses a specified number of elements in a collection and then returns the remaining elements.  
+ Описывает предложение `Skip`, которое обходит указанное число элементов в коллекции, а затем возвращает остальные элементы.  
   
  [Предложение Skip While](../../../visual-basic/language-reference/queries/skip-while-clause.md)  
- Describes the `Skip While` clause, which bypasses elements in a collection as long as a specified condition is `true` and then returns the remaining elements.  
+ Описывает предложение `Skip While`, которое обходит элементы в коллекции, пока заданное условие `true`, а затем возвращает оставшиеся элементы.  
   
  [Предложение Take](../../../visual-basic/language-reference/queries/take-clause.md)  
- Describes the `Take` clause, which returns a specified number of contiguous elements from the start of a collection.  
+ Описывает предложение `Take`, которое возвращает указанное количество смежных элементов с начала коллекции.  
   
  [Предложение Take While](../../../visual-basic/language-reference/queries/take-while-clause.md)  
- Describes the `Take While` clause, which includes elements in a collection as long as a specified condition is `true` and bypasses the remaining elements.  
+ Описывает предложение `Take While`, которое включает в себя элементы в коллекции, пока заданное условие `true` и обходит оставшиеся элементы.  
   
  [Предложения Where](../../../visual-basic/language-reference/queries/where-clause.md)  
- Describes the `Where` clause, which specifies a filtering condition for a query.  
+ Описывает предложение `Where`, которое указывает условие фильтрации для запроса.  
   
 ## <a name="see-also"></a>См. также
 

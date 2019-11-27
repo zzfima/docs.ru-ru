@@ -23,9 +23,9 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74426130"
 ---
 # <a name="iceegentruncatesection-method"></a>Метод ICeeGen::TruncateSection
-Truncates the specified code section by the specified length.  
+Усекает указанный раздел кода на заданную длину.  
   
- This method is obsolete and should not be used.  
+ Этот метод устарел и не должен использоваться.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,23 +38,23 @@ HRESULT TruncateSection (
   
 ## <a name="parameters"></a>Параметры  
  `section`  
- [in] The section to truncate.  
+ окне Раздел для усечения.  
   
  `len`  
- [in] The length, in bytes, by which to truncate the section.  
+ окне Длина усечения раздела в байтах.  
   
-## <a name="remarks"></a>Заметки  
- Call `TruncateSection` only if you have special section requirements that are not handled by other methods.  
+## <a name="remarks"></a>Примечания  
+ Вызывайте `TruncateSection` только при наличии особых требований к разделам, которые не обрабатываются другими методами.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Заголовок:** COR. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Библиотека:** Используется в качестве ресурса в MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

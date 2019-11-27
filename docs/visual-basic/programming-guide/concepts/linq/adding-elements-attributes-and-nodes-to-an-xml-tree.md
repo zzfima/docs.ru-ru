@@ -9,7 +9,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345814"
 ---
-# <a name="adding-elements-attributes-and-nodes-to-an-xml-tree-visual-basic"></a>Adding Elements, Attributes, and Nodes to an XML Tree (Visual Basic)
+# <a name="adding-elements-attributes-and-nodes-to-an-xml-tree-visual-basic"></a>Добавление элементов, атрибутов и узлов в XML-дерево (Visual Basic)
 Можно добавлять содержимое (элементы, атрибуты, комментарии, инструкции по обработке, текст и CDATA) к существующему XML-дереву.  
   
 ## <a name="methods-for-adding-content"></a>Методы добавления содержимого  
@@ -82,4 +82,4 @@ Console.WriteLine(xmlTree)
   
 ## <a name="see-also"></a>См. также
 
-- [Modifying XML Trees (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)
+- [Изменение деревьев XML (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)

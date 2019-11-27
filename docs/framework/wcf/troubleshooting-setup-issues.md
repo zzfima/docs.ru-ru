@@ -25,7 +25,7 @@ ms.locfileid: "74281611"
   
 - HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MSDTC Bridge 3.0.0.0  
   
- их невозможно будет восстановить с помощью функции восстановления установщика .NET Framework 3.0, запускаемого из компонента **Установка и удаление программ** в **Панели управления**. Чтобы правильно восстановить эти разделы, необходимо удалить платформу .NET Framework 3.0, а затем установить ее снова.  
+ Ключи не создаются повторно, если вы запускаете восстановление с помощью установщика .NET Framework 3,0, запускаемого из программы установки **и удаления программ** на **панели управления**. Чтобы правильно восстановить эти разделы, необходимо удалить платформу .NET Framework 3.0, а затем установить ее снова.  
   
 ## <a name="wmi-service-corruption-blocks-installation-of-the-windows-communication-foundation-wmi-provider-during-installation-of-net-framework-30-package"></a>Повреждение службы WMI блокирует установку поставщика инструментария WMI для Windows Communication Foundation во время установки пакета .NET Framework 3.0  
  Повреждение службы WMI может заблокировать установку поставщика инструментария WMI для Windows Communication Foundation. Во время установки установщику Windows Communication Foundation не удается зарегистрировать MOF-файл WCF с помощью компонента mofcomp.exe. Ниже приведен список признаков возникновения такой ситуации.  
@@ -54,7 +54,7 @@ ms.locfileid: "74281611"
   
 1. Запустите [служебная программа для диагностики WMI версии 2,0,](https://go.microsoft.com/fwlink/?LinkId=94685) чтобы восстановить службу WMI. Дополнительные сведения об использовании этого средства см. в разделе [служебная программа для диагностики WMI](https://go.microsoft.com/fwlink/?LinkId=94686) .  
   
- Восстановите установку .NET Framework 3.0 с помощью компонента **Установка и удаление программ** в **Панели управления** или удалите и заново установите .NET Framework 3.0.  
+ Восстановите установку .NET Framework 3,0 с помощью приложения **Установка и удаление программ** , расположенного в **панели управления**, или удалите или переустановите .NET Framework 3,0.  
   
 ## <a name="repairing-net-framework-30-after-net-framework-35-installation-removes-configuration-elements-introduced-by-net-framework-35-in-machineconfig"></a>Восстановление .NET Framework 3.0, после того как в процессе установки .NET Framework 3.5 из файла machine.config будут удалены элементы конфигурации, добавленные .NET Framework 3.5  
  При восстановлении .NET Framework 3,0 после установки .NET Framework 3,5 элементы конфигурации, появившиеся .NET Framework 3,5 в Machine. config, удаляются. Однако файл web.config остается без изменений. Чтобы решить эту проблему, восстановите .NET Framework 3,5 после этого через ARP или используйте [средство регистрации службы рабочего процесса (WFServicesReg. exe)](workflow-service-registration-tool-wfservicesreg-exe.md) с параметром `/c`.  

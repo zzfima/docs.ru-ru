@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445558"
 ---
 # <a name="setmanifestfile-method"></a>Метод SetManifestFile
-Enables you to specify or reset the manifest file that the linker uses when it creates the assembly.  
+Позволяет указать или сбросить файл манифеста, используемый компоновщиком при создании сборки.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -35,18 +35,18 @@ HRESULT SetManifestFile(
 ## <a name="parameters"></a>Параметры  
  `pszFile`  
   
- The name of the manifest file whose contents are put into the Win32 resources blob.  
+ Имя файла манифеста, содержимое которого помещается в большой двоичный объект Win32 Resources.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Returns S_OK if the method succeeds.  
+ Возвращает S_OK, если метод завершается с ошибкой.  
   
-## <a name="remarks"></a>Заметки  
- Call this before asking for the Win32ResBlob. The value of the `pszFile` parameter is the name of the manifest file whose contents are read and put in the Win32 resources with ID of RT_MANIFEST. When called by using a parameter of NULL, any previously read manifest is cleared. This enables one to reset the state of the linker to that of initialization time.  
+## <a name="remarks"></a>Примечания  
+ Вызовите этот метод, прежде чем запрашивать Win32ResBlob. Значением параметра `pszFile` является имя файла манифеста, содержимое которого считывается и помещается в ресурсы Win32 с ИДЕНТИФИКАТОРом RT_MANIFEST. При вызове с помощью параметра NULL все ранее прочитанные манифесты очищаются. Это позволяет сбросить состояние компоновщика до значения времени инициализации.  
   
 ## <a name="requirements"></a>Требования  
- Requires aLink.h  
+ Требуется aLink. h  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс IALink3](ialink3-interface.md)
 - [API ALink](index.md)

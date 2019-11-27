@@ -13,17 +13,17 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349798"
 ---
 # <a name="information-and-interaction-summary-visual-basic"></a>Сводка по сведениям и взаимодействию (Visual Basic)
-Visual Basic language keywords and run-time library members are organized by purpose and use.  
+Ключевые слова языка Visual Basic и элементы библиотеки времени выполнения упорядочены по целям и использованию.  
   
 |Действие|Элемент языка|  
 |------------|----------------------|  
-|Run other programs.|<xref:Microsoft.VisualBasic.Interaction.AppActivate%2A>, <xref:Microsoft.VisualBasic.Interaction.Shell%2A>|  
-|Call a method or property.|<xref:Microsoft.VisualBasic.Interaction.CallByName%2A>|  
-|Sound a beep from computer.|<xref:Microsoft.VisualBasic.Interaction.Beep%2A>|  
-|Provide a command-line string.|<xref:Microsoft.VisualBasic.Interaction.Command%2A>|  
-|Manipulate COM objects.|<xref:Microsoft.VisualBasic.Interaction.CreateObject%2A>, <xref:Microsoft.VisualBasic.Interaction.GetObject%2A>|  
-|Retrieve color information.|<xref:Microsoft.VisualBasic.Information.QBColor%2A>, <xref:Microsoft.VisualBasic.Information.RGB%2A>|  
-|Control dialog boxes|<xref:Microsoft.VisualBasic.Interaction.InputBox%2A>, <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A>|  
+|Запустите другие программы.|<xref:Microsoft.VisualBasic.Interaction.AppActivate%2A>, <xref:Microsoft.VisualBasic.Interaction.Shell%2A>|  
+|Вызовите метод или свойство.|<xref:Microsoft.VisualBasic.Interaction.CallByName%2A>|  
+|Звуковой сигнал с компьютера.|<xref:Microsoft.VisualBasic.Interaction.Beep%2A>|  
+|Введите строку командной строки.|<xref:Microsoft.VisualBasic.Interaction.Command%2A>|  
+|Работа с COM-объектами.|<xref:Microsoft.VisualBasic.Interaction.CreateObject%2A>, <xref:Microsoft.VisualBasic.Interaction.GetObject%2A>|  
+|Получение сведений о цвете.|<xref:Microsoft.VisualBasic.Information.QBColor%2A>, <xref:Microsoft.VisualBasic.Information.RGB%2A>|  
+|Диалоговые окна элемента управления|<xref:Microsoft.VisualBasic.Interaction.InputBox%2A>, <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A>|  
   
 ## <a name="see-also"></a>См. также
 
