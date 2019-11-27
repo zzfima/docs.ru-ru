@@ -22,26 +22,26 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446396"
 ---
-# <a name="isymunmanagedreadersymbolsearchinfogetsymbolsearchinfocount-method"></a><span data-ttu-id="335cc-102">Метод ISymUnmanagedReaderSymbolSearchInfo::GetSymbolSearchInfoCount</span><span class="sxs-lookup"><span data-stu-id="335cc-102">ISymUnmanagedReaderSymbolSearchInfo::GetSymbolSearchInfoCount Method</span></span>
-<span data-ttu-id="335cc-103">Gets a count of symbol search information.</span><span class="sxs-lookup"><span data-stu-id="335cc-103">Gets a count of symbol search information.</span></span>  
+# <a name="isymunmanagedreadersymbolsearchinfogetsymbolsearchinfocount-method"></a><span data-ttu-id="f45f2-102">Метод ISymUnmanagedReaderSymbolSearchInfo::GetSymbolSearchInfoCount</span><span class="sxs-lookup"><span data-stu-id="f45f2-102">ISymUnmanagedReaderSymbolSearchInfo::GetSymbolSearchInfoCount Method</span></span>
+<span data-ttu-id="f45f2-103">Возвращает число сведений о поиске символов.</span><span class="sxs-lookup"><span data-stu-id="f45f2-103">Gets a count of symbol search information.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="335cc-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="335cc-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f45f2-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="f45f2-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetSymbolSearchInfoCount(  
     [out] ULONG32 *pcSearchInfo);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="335cc-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="335cc-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="f45f2-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="f45f2-105">Parameters</span></span>  
  `pcSearchInfo`  
- <span data-ttu-id="335cc-106">]out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the search information.</span><span class="sxs-lookup"><span data-stu-id="335cc-106">]out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the search information.</span></span>  
+ <span data-ttu-id="f45f2-106">] out] указатель на `ULONG32`, который получает размер буфера, необходимый для хранения сведений для поиска.</span><span class="sxs-lookup"><span data-stu-id="f45f2-106">]out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the search information.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="335cc-107">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="335cc-107">Return Value</span></span>  
- <span data-ttu-id="335cc-108">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="335cc-108">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="f45f2-107">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="f45f2-107">Return Value</span></span>  
+ <span data-ttu-id="f45f2-108">S_OK, если метод выполнен. в противном случае E_FAIL или другой код ошибки.</span><span class="sxs-lookup"><span data-stu-id="f45f2-108">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="335cc-109">Требования</span><span class="sxs-lookup"><span data-stu-id="335cc-109">Requirements</span></span>  
- <span data-ttu-id="335cc-110">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="335cc-110">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f45f2-109">Требования</span><span class="sxs-lookup"><span data-stu-id="f45f2-109">Requirements</span></span>  
+ <span data-ttu-id="f45f2-110">**Заголовок:** Корсим. idl, Корсим. h</span><span class="sxs-lookup"><span data-stu-id="f45f2-110">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="335cc-111">См. также</span><span class="sxs-lookup"><span data-stu-id="335cc-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f45f2-111">См. также:</span><span class="sxs-lookup"><span data-stu-id="f45f2-111">See also</span></span>
 
-- [<span data-ttu-id="335cc-112">Интерфейс ISymUnmanagedReaderSymbolSearchInfo</span><span class="sxs-lookup"><span data-stu-id="335cc-112">ISymUnmanagedReaderSymbolSearchInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreadersymbolsearchinfo-interface.md)
+- [<span data-ttu-id="f45f2-112">Интерфейс ISymUnmanagedReaderSymbolSearchInfo</span><span class="sxs-lookup"><span data-stu-id="f45f2-112">ISymUnmanagedReaderSymbolSearchInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreadersymbolsearchinfo-interface.md)

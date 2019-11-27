@@ -22,10 +22,10 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446653"
 ---
-# <a name="addimport-method"></a><span data-ttu-id="dd90f-102">Метод AddImport</span><span class="sxs-lookup"><span data-stu-id="dd90f-102">AddImport Method</span></span>
-<span data-ttu-id="dd90f-103">Adds imports to the assembly.</span><span class="sxs-lookup"><span data-stu-id="dd90f-103">Adds imports to the assembly.</span></span>  
+# <a name="addimport-method"></a><span data-ttu-id="3783c-102">Метод AddImport</span><span class="sxs-lookup"><span data-stu-id="3783c-102">AddImport Method</span></span>
+<span data-ttu-id="3783c-103">Добавляет в сборку импорты.</span><span class="sxs-lookup"><span data-stu-id="3783c-103">Adds imports to the assembly.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="dd90f-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="dd90f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3783c-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="3783c-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT AddImport(  
@@ -36,27 +36,27 @@ HRESULT AddImport(
 ) PURE;  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="dd90f-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="dd90f-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="3783c-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="3783c-105">Parameters</span></span>  
  `AssemblyID`  
- <span data-ttu-id="dd90f-106">Unique ID of assembly to be augmented.</span><span class="sxs-lookup"><span data-stu-id="dd90f-106">Unique ID of assembly to be augmented.</span></span>  
+ <span data-ttu-id="3783c-106">Уникальный идентификатор сборки для дополнения.</span><span class="sxs-lookup"><span data-stu-id="3783c-106">Unique ID of assembly to be augmented.</span></span>  
   
  `ImportToken`  
- <span data-ttu-id="dd90f-107">Unique ID, retrieved from [ImportFile Method](importfile-method.md), of file to be imported.</span><span class="sxs-lookup"><span data-stu-id="dd90f-107">Unique ID, retrieved from [ImportFile Method](importfile-method.md), of file to be imported.</span></span>  
+ <span data-ttu-id="3783c-107">Уникальный идентификатор, полученный из [метода ImportFile](importfile-method.md)импортируемого файла.</span><span class="sxs-lookup"><span data-stu-id="3783c-107">Unique ID, retrieved from [ImportFile Method](importfile-method.md), of file to be imported.</span></span>  
   
  `dwFlags`  
- <span data-ttu-id="dd90f-108">COM+ FileDef flags such as `ffContainsNoMetaData` and `ffWriteable`.</span><span class="sxs-lookup"><span data-stu-id="dd90f-108">COM+ FileDef flags such as `ffContainsNoMetaData` and `ffWriteable`.</span></span> <span data-ttu-id="dd90f-109">`dwFlags` is passed to [DefineFile Method](../metadata/imetadataassemblyemit-definefile-method.md).</span><span class="sxs-lookup"><span data-stu-id="dd90f-109">`dwFlags` is passed to [DefineFile Method](../metadata/imetadataassemblyemit-definefile-method.md).</span></span>  
+ <span data-ttu-id="3783c-108">Флаги COM+ Филедеф, такие как `ffContainsNoMetaData` и `ffWriteable`.</span><span class="sxs-lookup"><span data-stu-id="3783c-108">COM+ FileDef flags such as `ffContainsNoMetaData` and `ffWriteable`.</span></span> <span data-ttu-id="3783c-109">`dwFlags` передается в [метод дефинефиле](../metadata/imetadataassemblyemit-definefile-method.md).</span><span class="sxs-lookup"><span data-stu-id="3783c-109">`dwFlags` is passed to [DefineFile Method](../metadata/imetadataassemblyemit-definefile-method.md).</span></span>  
   
  `pFileToken`  
- <span data-ttu-id="dd90f-110">Pointer to token that receives the ID for the resulting file.</span><span class="sxs-lookup"><span data-stu-id="dd90f-110">Pointer to token that receives the ID for the resulting file.</span></span>  
+ <span data-ttu-id="3783c-110">Указатель на токен, который получает идентификатор для результирующего файла.</span><span class="sxs-lookup"><span data-stu-id="3783c-110">Pointer to token that receives the ID for the resulting file.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="dd90f-111">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="dd90f-111">Return Value</span></span>  
- <span data-ttu-id="dd90f-112">Returns S_OK if the method succeeds.</span><span class="sxs-lookup"><span data-stu-id="dd90f-112">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="3783c-111">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="3783c-111">Return Value</span></span>  
+ <span data-ttu-id="3783c-112">Возвращает S_OK, если метод завершается с ошибкой.</span><span class="sxs-lookup"><span data-stu-id="3783c-112">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="dd90f-113">Требования</span><span class="sxs-lookup"><span data-stu-id="dd90f-113">Requirements</span></span>  
- <span data-ttu-id="dd90f-114">Requires alink.h</span><span class="sxs-lookup"><span data-stu-id="dd90f-114">Requires alink.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="3783c-113">Требования</span><span class="sxs-lookup"><span data-stu-id="3783c-113">Requirements</span></span>  
+ <span data-ttu-id="3783c-114">Требуется ALink. h</span><span class="sxs-lookup"><span data-stu-id="3783c-114">Requires alink.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="dd90f-115">См. также</span><span class="sxs-lookup"><span data-stu-id="dd90f-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3783c-115">См. также:</span><span class="sxs-lookup"><span data-stu-id="3783c-115">See also</span></span>
 
-- [<span data-ttu-id="dd90f-116">Интерфейс IALink</span><span class="sxs-lookup"><span data-stu-id="dd90f-116">IALink Interface</span></span>](ialink-interface.md)
-- [<span data-ttu-id="dd90f-117">Интерфейс IALink2</span><span class="sxs-lookup"><span data-stu-id="dd90f-117">IALink2 Interface</span></span>](ialink2-interface.md)
-- [<span data-ttu-id="dd90f-118">API ALink</span><span class="sxs-lookup"><span data-stu-id="dd90f-118">ALink API</span></span>](index.md)
+- [<span data-ttu-id="3783c-116">Интерфейс IALink</span><span class="sxs-lookup"><span data-stu-id="3783c-116">IALink Interface</span></span>](ialink-interface.md)
+- [<span data-ttu-id="3783c-117">Интерфейс IALink2</span><span class="sxs-lookup"><span data-stu-id="3783c-117">IALink2 Interface</span></span>](ialink2-interface.md)
+- [<span data-ttu-id="3783c-118">API ALink</span><span class="sxs-lookup"><span data-stu-id="3783c-118">ALink API</span></span>](index.md)

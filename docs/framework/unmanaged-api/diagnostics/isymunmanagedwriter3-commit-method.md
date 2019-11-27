@@ -22,21 +22,21 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74438264"
 ---
-# <a name="isymunmanagedwriter3commit-method"></a><span data-ttu-id="377d3-102">Метод ISymUnmanagedWriter3::Commit</span><span class="sxs-lookup"><span data-stu-id="377d3-102">ISymUnmanagedWriter3::Commit Method</span></span>
-<span data-ttu-id="377d3-103">Commits the changes written so far to the stream.</span><span class="sxs-lookup"><span data-stu-id="377d3-103">Commits the changes written so far to the stream.</span></span>  
+# <a name="isymunmanagedwriter3commit-method"></a><span data-ttu-id="2e786-102">Метод ISymUnmanagedWriter3::Commit</span><span class="sxs-lookup"><span data-stu-id="2e786-102">ISymUnmanagedWriter3::Commit Method</span></span>
+<span data-ttu-id="2e786-103">Фиксирует изменения, записанные на данный момент в поток.</span><span class="sxs-lookup"><span data-stu-id="2e786-103">Commits the changes written so far to the stream.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="377d3-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="377d3-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2e786-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="2e786-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT Commit();  
 ```  
   
-## <a name="return-value"></a><span data-ttu-id="377d3-105">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="377d3-105">Return Value</span></span>  
- <span data-ttu-id="377d3-106">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="377d3-106">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="2e786-105">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="2e786-105">Return Value</span></span>  
+ <span data-ttu-id="2e786-106">S_OK, если метод выполнен. в противном случае E_FAIL или другой код ошибки.</span><span class="sxs-lookup"><span data-stu-id="2e786-106">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="377d3-107">Требования</span><span class="sxs-lookup"><span data-stu-id="377d3-107">Requirements</span></span>  
- <span data-ttu-id="377d3-108">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="377d3-108">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="2e786-107">Требования</span><span class="sxs-lookup"><span data-stu-id="2e786-107">Requirements</span></span>  
+ <span data-ttu-id="2e786-108">**Заголовок:** Корсим. idl, Корсим. h</span><span class="sxs-lookup"><span data-stu-id="2e786-108">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="377d3-109">См. также</span><span class="sxs-lookup"><span data-stu-id="377d3-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2e786-109">См. также:</span><span class="sxs-lookup"><span data-stu-id="2e786-109">See also</span></span>
 
-- [<span data-ttu-id="377d3-110">Интерфейс ISymUnmanagedWriter3</span><span class="sxs-lookup"><span data-stu-id="377d3-110">ISymUnmanagedWriter3 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter3-interface.md)
+- [<span data-ttu-id="2e786-110">Интерфейс ISymUnmanagedWriter3</span><span class="sxs-lookup"><span data-stu-id="2e786-110">ISymUnmanagedWriter3 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter3-interface.md)

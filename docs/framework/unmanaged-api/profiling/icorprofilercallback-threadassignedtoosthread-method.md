@@ -22,10 +22,10 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74440021"
 ---
-# <a name="icorprofilercallbackthreadassignedtoosthread-method"></a><span data-ttu-id="c9941-102">Метод ICorProfilerCallback::ThreadAssignedToOSThread</span><span class="sxs-lookup"><span data-stu-id="c9941-102">ICorProfilerCallback::ThreadAssignedToOSThread Method</span></span>
-<span data-ttu-id="c9941-103">Notifies the profiler that a managed thread is being implemented using a particular operating system thread.</span><span class="sxs-lookup"><span data-stu-id="c9941-103">Notifies the profiler that a managed thread is being implemented using a particular operating system thread.</span></span>  
+# <a name="icorprofilercallbackthreadassignedtoosthread-method"></a><span data-ttu-id="72080-102">Метод ICorProfilerCallback::ThreadAssignedToOSThread</span><span class="sxs-lookup"><span data-stu-id="72080-102">ICorProfilerCallback::ThreadAssignedToOSThread Method</span></span>
+<span data-ttu-id="72080-103">Уведомляет профилировщик о том, что управляемый поток реализуется с помощью определенного потока операционной системы.</span><span class="sxs-lookup"><span data-stu-id="72080-103">Notifies the profiler that a managed thread is being implemented using a particular operating system thread.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c9941-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="c9941-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="72080-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="72080-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT ThreadAssignedToOSThread(  
@@ -33,25 +33,25 @@ HRESULT ThreadAssignedToOSThread(
     [in] DWORD    osThreadId);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="c9941-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="c9941-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="72080-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="72080-105">Parameters</span></span>  
  `managedThreadId`  
- <span data-ttu-id="c9941-106">[in] The identifier of the managed thread.</span><span class="sxs-lookup"><span data-stu-id="c9941-106">[in] The identifier of the managed thread.</span></span>  
+ <span data-ttu-id="72080-106">окне Идентификатор управляемого потока.</span><span class="sxs-lookup"><span data-stu-id="72080-106">[in] The identifier of the managed thread.</span></span>  
   
  `osThreadId`  
- <span data-ttu-id="c9941-107">[in] The identifier of the operating system thread.</span><span class="sxs-lookup"><span data-stu-id="c9941-107">[in] The identifier of the operating system thread.</span></span>  
+ <span data-ttu-id="72080-107">окне Идентификатор потока операционной системы.</span><span class="sxs-lookup"><span data-stu-id="72080-107">[in] The identifier of the operating system thread.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="c9941-108">Заметки</span><span class="sxs-lookup"><span data-stu-id="c9941-108">Remarks</span></span>  
- <span data-ttu-id="c9941-109">The `ThreadAssignedToOSThread` callback exists so that the profiler can maintain an accurate mapping across fibers of operating system threads to managed threads.</span><span class="sxs-lookup"><span data-stu-id="c9941-109">The `ThreadAssignedToOSThread` callback exists so that the profiler can maintain an accurate mapping across fibers of operating system threads to managed threads.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="72080-108">Примечания</span><span class="sxs-lookup"><span data-stu-id="72080-108">Remarks</span></span>  
+ <span data-ttu-id="72080-109">Функция обратного вызова `ThreadAssignedToOSThread` существует, чтобы профилировщик мог поддерживать точное сопоставление по волокнам потоков операционной системы с управляемыми потоками.</span><span class="sxs-lookup"><span data-stu-id="72080-109">The `ThreadAssignedToOSThread` callback exists so that the profiler can maintain an accurate mapping across fibers of operating system threads to managed threads.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c9941-110">Требования</span><span class="sxs-lookup"><span data-stu-id="c9941-110">Requirements</span></span>  
- <span data-ttu-id="c9941-111">**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c9941-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="72080-110">Требования</span><span class="sxs-lookup"><span data-stu-id="72080-110">Requirements</span></span>  
+ <span data-ttu-id="72080-111">**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="72080-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c9941-112">**Заголовок:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="c9941-112">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="72080-112">**Заголовок:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="72080-112">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="c9941-113">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c9941-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="72080-113">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="72080-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="c9941-114">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c9941-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="72080-114">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="72080-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c9941-115">См. также</span><span class="sxs-lookup"><span data-stu-id="c9941-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="72080-115">См. также:</span><span class="sxs-lookup"><span data-stu-id="72080-115">See also</span></span>
 
-- [<span data-ttu-id="c9941-116">Интерфейс ICorProfilerCallback</span><span class="sxs-lookup"><span data-stu-id="c9941-116">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="72080-116">Интерфейс ICorProfilerCallback</span><span class="sxs-lookup"><span data-stu-id="72080-116">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

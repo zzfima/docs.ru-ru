@@ -22,21 +22,21 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449017"
 ---
-# <a name="isymunmanagedencupdateinitializeforenc-method"></a><span data-ttu-id="ab52a-102">Метод ISymUnmanagedENCUpdate::InitializeForEnc</span><span class="sxs-lookup"><span data-stu-id="ab52a-102">ISymUnmanagedENCUpdate::InitializeForEnc Method</span></span>
-<span data-ttu-id="ab52a-103">Allows method boundaries to be computed before the first call to the [ISymUnmanagedENCUpdate::UpdateSymbolStore2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedencupdate-updatesymbolstore2-method.md) method.</span><span class="sxs-lookup"><span data-stu-id="ab52a-103">Allows method boundaries to be computed before the first call to the [ISymUnmanagedENCUpdate::UpdateSymbolStore2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedencupdate-updatesymbolstore2-method.md) method.</span></span>  
+# <a name="isymunmanagedencupdateinitializeforenc-method"></a><span data-ttu-id="8af90-102">Метод ISymUnmanagedENCUpdate::InitializeForEnc</span><span class="sxs-lookup"><span data-stu-id="8af90-102">ISymUnmanagedENCUpdate::InitializeForEnc Method</span></span>
+<span data-ttu-id="8af90-103">Позволяет вычислять границы методов перед первым вызовом метода [ISymUnmanagedENCUpdate:: UpdateSymbolStore2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedencupdate-updatesymbolstore2-method.md) .</span><span class="sxs-lookup"><span data-stu-id="8af90-103">Allows method boundaries to be computed before the first call to the [ISymUnmanagedENCUpdate::UpdateSymbolStore2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedencupdate-updatesymbolstore2-method.md) method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ab52a-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="ab52a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8af90-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="8af90-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT InitializeForEnc();  
 ```  
   
-## <a name="return-value"></a><span data-ttu-id="ab52a-105">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="ab52a-105">Return Value</span></span>  
- <span data-ttu-id="ab52a-106">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="ab52a-106">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="8af90-105">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="8af90-105">Return Value</span></span>  
+ <span data-ttu-id="8af90-106">S_OK, если метод выполнен. в противном случае E_FAIL или другой код ошибки.</span><span class="sxs-lookup"><span data-stu-id="8af90-106">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ab52a-107">Требования</span><span class="sxs-lookup"><span data-stu-id="ab52a-107">Requirements</span></span>  
- <span data-ttu-id="ab52a-108">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="ab52a-108">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8af90-107">Требования</span><span class="sxs-lookup"><span data-stu-id="8af90-107">Requirements</span></span>  
+ <span data-ttu-id="8af90-108">**Заголовок:** Корсим. idl, Корсим. h</span><span class="sxs-lookup"><span data-stu-id="8af90-108">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ab52a-109">См. также</span><span class="sxs-lookup"><span data-stu-id="ab52a-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8af90-109">См. также:</span><span class="sxs-lookup"><span data-stu-id="8af90-109">See also</span></span>
 
-- [<span data-ttu-id="ab52a-110">Интерфейс ISymUnmanagedENCUpdate</span><span class="sxs-lookup"><span data-stu-id="ab52a-110">ISymUnmanagedENCUpdate Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedencupdate-interface.md)
+- [<span data-ttu-id="8af90-110">Интерфейс ISymUnmanagedENCUpdate</span><span class="sxs-lookup"><span data-stu-id="8af90-110">ISymUnmanagedENCUpdate Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedencupdate-interface.md)

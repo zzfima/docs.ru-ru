@@ -13,19 +13,19 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74441792"
 ---
-# <a name="ialink3-interface"></a><span data-ttu-id="9efe0-102">Интерфейс IALink3</span><span class="sxs-lookup"><span data-stu-id="9efe0-102">IALink3 Interface</span></span>
-<span data-ttu-id="9efe0-103">Provides a single method, `SetManifestFile`, which enables you to specify or reset the manifest file the linker will use when it creates an assembly.</span><span class="sxs-lookup"><span data-stu-id="9efe0-103">Provides a single method, `SetManifestFile`, which enables you to specify or reset the manifest file the linker will use when it creates an assembly.</span></span>  
+# <a name="ialink3-interface"></a><span data-ttu-id="5861c-102">Интерфейс IALink3</span><span class="sxs-lookup"><span data-stu-id="5861c-102">IALink3 Interface</span></span>
+<span data-ttu-id="5861c-103">Предоставляет единственный метод, `SetManifestFile`, который позволяет указать или сбросить файл манифеста, который будет использоваться компоновщиком при создании сборки.</span><span class="sxs-lookup"><span data-stu-id="5861c-103">Provides a single method, `SetManifestFile`, which enables you to specify or reset the manifest file the linker will use when it creates an assembly.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="9efe0-104">Содержание</span><span class="sxs-lookup"><span data-stu-id="9efe0-104">In This Section</span></span>  
- [<span data-ttu-id="9efe0-105">Метод SetManifestFile</span><span class="sxs-lookup"><span data-stu-id="9efe0-105">SetManifestFile Method</span></span>](setmanifestfile-method.md)  
- <span data-ttu-id="9efe0-106">Enables you to specify or reset the manifest file that the linker will use when it creates the assembly.</span><span class="sxs-lookup"><span data-stu-id="9efe0-106">Enables you to specify or reset the manifest file that the linker will use when it creates the assembly.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="5861c-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="5861c-104">In This Section</span></span>  
+ [<span data-ttu-id="5861c-105">Метод SetManifestFile</span><span class="sxs-lookup"><span data-stu-id="5861c-105">SetManifestFile Method</span></span>](setmanifestfile-method.md)  
+ <span data-ttu-id="5861c-106">Позволяет указать или сбросить файл манифеста, который будет использоваться компоновщиком при создании сборки.</span><span class="sxs-lookup"><span data-stu-id="5861c-106">Enables you to specify or reset the manifest file that the linker will use when it creates the assembly.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="9efe0-107">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="9efe0-107">Related Sections</span></span>  
- [<span data-ttu-id="9efe0-108">API ALink</span><span class="sxs-lookup"><span data-stu-id="9efe0-108">ALink API</span></span>](index.md)  
- <span data-ttu-id="9efe0-109">Поддерживает создание сборок и несвязанных модулей .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="9efe0-109">Supports creating .NET Framework assemblies and unbound modules.</span></span>  
+## <a name="related-sections"></a><span data-ttu-id="5861c-107">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="5861c-107">Related Sections</span></span>  
+ [<span data-ttu-id="5861c-108">API ALink</span><span class="sxs-lookup"><span data-stu-id="5861c-108">ALink API</span></span>](index.md)  
+ <span data-ttu-id="5861c-109">Поддерживает создание сборок и несвязанных модулей .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="5861c-109">Supports creating .NET Framework assemblies and unbound modules.</span></span>  
   
- [<span data-ttu-id="9efe0-110">Интерфейс IALink</span><span class="sxs-lookup"><span data-stu-id="9efe0-110">IALink Interface</span></span>](ialink-interface.md)  
- <span data-ttu-id="9efe0-111">Helps in constructing .NET Framework assemblies.</span><span class="sxs-lookup"><span data-stu-id="9efe0-111">Helps in constructing .NET Framework assemblies.</span></span>  
+ [<span data-ttu-id="5861c-110">Интерфейс IALink</span><span class="sxs-lookup"><span data-stu-id="5861c-110">IALink Interface</span></span>](ialink-interface.md)  
+ <span data-ttu-id="5861c-111">Помогает при построении сборок .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="5861c-111">Helps in constructing .NET Framework assemblies.</span></span>  
   
- [<span data-ttu-id="9efe0-112">Al.exe (компоновщик сборок)</span><span class="sxs-lookup"><span data-stu-id="9efe0-112">Al.exe (Assembly Linker)</span></span>](../../tools/al-exe-assembly-linker.md)  
- <span data-ttu-id="9efe0-113">Generates a file that has an assembly manifest from one or more files that are either modules or resource files.</span><span class="sxs-lookup"><span data-stu-id="9efe0-113">Generates a file that has an assembly manifest from one or more files that are either modules or resource files.</span></span>
+ [<span data-ttu-id="5861c-112">Al.exe (компоновщик сборок)</span><span class="sxs-lookup"><span data-stu-id="5861c-112">Al.exe (Assembly Linker)</span></span>](../../tools/al-exe-assembly-linker.md)  
+ <span data-ttu-id="5861c-113">Создает файл, содержащий манифест сборки из одного или нескольких файлов, которые являются модулями или файлами ресурсов.</span><span class="sxs-lookup"><span data-stu-id="5861c-113">Generates a file that has an assembly manifest from one or more files that are either modules or resource files.</span></span>

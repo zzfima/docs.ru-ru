@@ -22,10 +22,10 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446218"
 ---
-# <a name="isymunmanagedsourceservermodulegetsourceserverdata-method"></a><span data-ttu-id="f7ac7-102">Метод ISymUnmanagedSourceServerModule::GetSourceServerData</span><span class="sxs-lookup"><span data-stu-id="f7ac7-102">ISymUnmanagedSourceServerModule::GetSourceServerData Method</span></span>
-<span data-ttu-id="f7ac7-103">Returns the source server data for the module.</span><span class="sxs-lookup"><span data-stu-id="f7ac7-103">Returns the source server data for the module.</span></span> <span data-ttu-id="f7ac7-104">The caller must free resources by using `CoTaskMemFree`.</span><span class="sxs-lookup"><span data-stu-id="f7ac7-104">The caller must free resources by using `CoTaskMemFree`.</span></span>  
+# <a name="isymunmanagedsourceservermodulegetsourceserverdata-method"></a><span data-ttu-id="03606-102">Метод ISymUnmanagedSourceServerModule::GetSourceServerData</span><span class="sxs-lookup"><span data-stu-id="03606-102">ISymUnmanagedSourceServerModule::GetSourceServerData Method</span></span>
+<span data-ttu-id="03606-103">Возвращает данные исходного сервера для модуля.</span><span class="sxs-lookup"><span data-stu-id="03606-103">Returns the source server data for the module.</span></span> <span data-ttu-id="03606-104">Вызывающий объект должен освободить ресурсы с помощью `CoTaskMemFree`.</span><span class="sxs-lookup"><span data-stu-id="03606-104">The caller must free resources by using `CoTaskMemFree`.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f7ac7-105">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="f7ac7-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="03606-105">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="03606-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetSourceServerData(  
@@ -33,19 +33,19 @@ HRESULT GetSourceServerData(
     [out, size_is (, *pDataByteCount)] BYTE** ppData);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="f7ac7-106">Параметры</span><span class="sxs-lookup"><span data-stu-id="f7ac7-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="03606-106">Параметры</span><span class="sxs-lookup"><span data-stu-id="03606-106">Parameters</span></span>  
  `pDataByteCount`  
- <span data-ttu-id="f7ac7-107">[out] A pointer to a `ULONG32` that receives the size, in bytes, of the source server data.</span><span class="sxs-lookup"><span data-stu-id="f7ac7-107">[out] A pointer to a `ULONG32` that receives the size, in bytes, of the source server data.</span></span>  
+ <span data-ttu-id="03606-107">заполняет Указатель на `ULONG32`, который получает размер (в байтах) данных сервера-источника.</span><span class="sxs-lookup"><span data-stu-id="03606-107">[out] A pointer to a `ULONG32` that receives the size, in bytes, of the source server data.</span></span>  
   
  `ppData`  
- <span data-ttu-id="f7ac7-108">[out] A pointer to the returned `pDataByteCount` value.</span><span class="sxs-lookup"><span data-stu-id="f7ac7-108">[out] A pointer to the returned `pDataByteCount` value.</span></span>  
+ <span data-ttu-id="03606-108">заполняет Указатель на возвращаемое значение `pDataByteCount`.</span><span class="sxs-lookup"><span data-stu-id="03606-108">[out] A pointer to the returned `pDataByteCount` value.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="f7ac7-109">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="f7ac7-109">Return Value</span></span>  
- <span data-ttu-id="f7ac7-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="f7ac7-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="03606-109">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="03606-109">Return Value</span></span>  
+ <span data-ttu-id="03606-110">S_OK, если метод выполнен. в противном случае E_FAIL или другой код ошибки.</span><span class="sxs-lookup"><span data-stu-id="03606-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f7ac7-111">Требования</span><span class="sxs-lookup"><span data-stu-id="f7ac7-111">Requirements</span></span>  
- <span data-ttu-id="f7ac7-112">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="f7ac7-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="03606-111">Требования</span><span class="sxs-lookup"><span data-stu-id="03606-111">Requirements</span></span>  
+ <span data-ttu-id="03606-112">**Заголовок:** Корсим. idl, Корсим. h</span><span class="sxs-lookup"><span data-stu-id="03606-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f7ac7-113">См. также</span><span class="sxs-lookup"><span data-stu-id="f7ac7-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="03606-113">См. также:</span><span class="sxs-lookup"><span data-stu-id="03606-113">See also</span></span>
 
-- [<span data-ttu-id="f7ac7-114">Интерфейс ISymUnmanagedSourceServerModule</span><span class="sxs-lookup"><span data-stu-id="f7ac7-114">ISymUnmanagedSourceServerModule Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedsourceservermodule-interface.md)
+- [<span data-ttu-id="03606-114">Интерфейс ISymUnmanagedSourceServerModule</span><span class="sxs-lookup"><span data-stu-id="03606-114">ISymUnmanagedSourceServerModule Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedsourceservermodule-interface.md)

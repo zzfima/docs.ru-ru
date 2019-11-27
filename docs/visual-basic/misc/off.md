@@ -14,18 +14,18 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74331939"
 ---
-# <a name="off-visual-basic"></a><span data-ttu-id="c9bda-102">Off (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c9bda-102">Off (Visual Basic)</span></span>
-<span data-ttu-id="c9bda-103">Turns a compiler option off.</span><span class="sxs-lookup"><span data-stu-id="c9bda-103">Turns a compiler option off.</span></span>  
+# <a name="off-visual-basic"></a><span data-ttu-id="d0d74-102">Off (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d0d74-102">Off (Visual Basic)</span></span>
+<span data-ttu-id="d0d74-103">Отключает параметр компилятора.</span><span class="sxs-lookup"><span data-stu-id="d0d74-103">Turns a compiler option off.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="c9bda-104">Заметки</span><span class="sxs-lookup"><span data-stu-id="c9bda-104">Remarks</span></span>  
- <span data-ttu-id="c9bda-105">Ключевое слово `Off` можно использовать в следующих контекстах:</span><span class="sxs-lookup"><span data-stu-id="c9bda-105">The `Off` keyword can be used in these contexts:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="d0d74-104">Примечания</span><span class="sxs-lookup"><span data-stu-id="d0d74-104">Remarks</span></span>  
+ <span data-ttu-id="d0d74-105">Ключевое слово `Off` можно использовать в следующих контекстах:</span><span class="sxs-lookup"><span data-stu-id="d0d74-105">The `Off` keyword can be used in these contexts:</span></span>  
   
- [<span data-ttu-id="c9bda-106">Оператор Option Explicit</span><span class="sxs-lookup"><span data-stu-id="c9bda-106">Option Explicit Statement</span></span>](../../visual-basic/language-reference/statements/option-explicit-statement.md)  
+ [<span data-ttu-id="d0d74-106">Оператор Option Explicit</span><span class="sxs-lookup"><span data-stu-id="d0d74-106">Option Explicit Statement</span></span>](../../visual-basic/language-reference/statements/option-explicit-statement.md)  
   
- [<span data-ttu-id="c9bda-107">Оператор Option Strict</span><span class="sxs-lookup"><span data-stu-id="c9bda-107">Option Strict Statement</span></span>](../../visual-basic/language-reference/statements/option-strict-statement.md)  
+ [<span data-ttu-id="d0d74-107">Оператор Option Strict</span><span class="sxs-lookup"><span data-stu-id="d0d74-107">Option Strict Statement</span></span>](../../visual-basic/language-reference/statements/option-strict-statement.md)  
   
- [<span data-ttu-id="c9bda-108">Оператор Option Infer</span><span class="sxs-lookup"><span data-stu-id="c9bda-108">Option Infer Statement</span></span>](../../visual-basic/language-reference/statements/option-infer-statement.md)  
+ [<span data-ttu-id="d0d74-108">Оператор Option Infer</span><span class="sxs-lookup"><span data-stu-id="d0d74-108">Option Infer Statement</span></span>](../../visual-basic/language-reference/statements/option-infer-statement.md)  
   
-## <a name="see-also"></a><span data-ttu-id="c9bda-109">См. также</span><span class="sxs-lookup"><span data-stu-id="c9bda-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d0d74-109">См. также:</span><span class="sxs-lookup"><span data-stu-id="d0d74-109">See also</span></span>
 
-- [<span data-ttu-id="c9bda-110">Ключевые слова</span><span class="sxs-lookup"><span data-stu-id="c9bda-110">Keywords</span></span>](../../visual-basic/language-reference/keywords/index.md)
+- [<span data-ttu-id="d0d74-110">Ключевые слова</span><span class="sxs-lookup"><span data-stu-id="d0d74-110">Keywords</span></span>](../../visual-basic/language-reference/keywords/index.md)

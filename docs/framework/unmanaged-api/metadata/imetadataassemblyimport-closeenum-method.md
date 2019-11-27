@@ -22,10 +22,10 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446034"
 ---
-# <a name="imetadataassemblyimportcloseenum-method"></a><span data-ttu-id="7ee6d-102">Метод IMetaDataAssemblyImport::CloseEnum</span><span class="sxs-lookup"><span data-stu-id="7ee6d-102">IMetaDataAssemblyImport::CloseEnum Method</span></span>
-<span data-ttu-id="7ee6d-103">Releases a reference to the specified enumeration instance.</span><span class="sxs-lookup"><span data-stu-id="7ee6d-103">Releases a reference to the specified enumeration instance.</span></span>  
+# <a name="imetadataassemblyimportcloseenum-method"></a><span data-ttu-id="7b330-102">Метод IMetaDataAssemblyImport::CloseEnum</span><span class="sxs-lookup"><span data-stu-id="7b330-102">IMetaDataAssemblyImport::CloseEnum Method</span></span>
+<span data-ttu-id="7b330-103">Освобождает ссылку на указанный экземпляр перечисления.</span><span class="sxs-lookup"><span data-stu-id="7b330-103">Releases a reference to the specified enumeration instance.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="7ee6d-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="7ee6d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7b330-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="7b330-104">Syntax</span></span>  
   
 ```cpp  
 void CloseEnum (  
@@ -33,19 +33,19 @@ void CloseEnum (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="7ee6d-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="7ee6d-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="7b330-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="7b330-105">Parameters</span></span>  
  `hEnum`  
- <span data-ttu-id="7ee6d-106">[in] The enumeration instance to be closed.</span><span class="sxs-lookup"><span data-stu-id="7ee6d-106">[in] The enumeration instance to be closed.</span></span>  
+ <span data-ttu-id="7b330-106">окне Экземпляр перечисления, который должен быть закрыт.</span><span class="sxs-lookup"><span data-stu-id="7b330-106">[in] The enumeration instance to be closed.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="7ee6d-107">Требования</span><span class="sxs-lookup"><span data-stu-id="7ee6d-107">Requirements</span></span>  
- <span data-ttu-id="7ee6d-108">**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7ee6d-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7b330-107">Требования</span><span class="sxs-lookup"><span data-stu-id="7b330-107">Requirements</span></span>  
+ <span data-ttu-id="7b330-108">**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7b330-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="7ee6d-109">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="7ee6d-109">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="7b330-109">**Заголовок:** COR. h</span><span class="sxs-lookup"><span data-stu-id="7b330-109">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="7ee6d-110">**Library:** Used as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="7ee6d-110">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="7b330-110">**Библиотека:** Используется в качестве ресурса в MsCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="7b330-110">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="7ee6d-111">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7ee6d-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="7b330-111">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7b330-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7ee6d-112">См. также</span><span class="sxs-lookup"><span data-stu-id="7ee6d-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7b330-112">См. также:</span><span class="sxs-lookup"><span data-stu-id="7b330-112">See also</span></span>
 
-- [<span data-ttu-id="7ee6d-113">Интерфейс IMetaDataAssemblyImport</span><span class="sxs-lookup"><span data-stu-id="7ee6d-113">IMetaDataAssemblyImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+- [<span data-ttu-id="7b330-113">Интерфейс IMetaDataAssemblyImport</span><span class="sxs-lookup"><span data-stu-id="7b330-113">IMetaDataAssemblyImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

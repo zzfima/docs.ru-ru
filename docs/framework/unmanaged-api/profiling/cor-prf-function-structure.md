@@ -21,33 +21,33 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428326"
 ---
-# <a name="cor_prf_function-structure"></a><span data-ttu-id="c0ca5-102">Структура COR_PRF_FUNCTION</span><span class="sxs-lookup"><span data-stu-id="c0ca5-102">COR_PRF_FUNCTION Structure</span></span>
-<span data-ttu-id="c0ca5-103">Выдает уникальное представление функции, объединяя ее идентификатор с идентификатором перекомпилированной версии этой функции.</span><span class="sxs-lookup"><span data-stu-id="c0ca5-103">Provides a unique representation of a function by combining its ID with the ID of its recompiled version.</span></span>  
+# <a name="cor_prf_function-structure"></a><span data-ttu-id="37f9d-102">Структура COR_PRF_FUNCTION</span><span class="sxs-lookup"><span data-stu-id="37f9d-102">COR_PRF_FUNCTION Structure</span></span>
+<span data-ttu-id="37f9d-103">Выдает уникальное представление функции, объединяя ее идентификатор с идентификатором перекомпилированной версии этой функции.</span><span class="sxs-lookup"><span data-stu-id="37f9d-103">Provides a unique representation of a function by combining its ID with the ID of its recompiled version.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c0ca5-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="c0ca5-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="37f9d-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="37f9d-104">Syntax</span></span>  
   
 ```cpp  
 typedef struct _COR_PRF_FUNCTION {    FunctionID functionId;    ReJITID    reJitId;} COR_PRF_FUNCTION;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="c0ca5-105">Члены</span><span class="sxs-lookup"><span data-stu-id="c0ca5-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="37f9d-105">Члены</span><span class="sxs-lookup"><span data-stu-id="37f9d-105">Members</span></span>  
   
-|<span data-ttu-id="c0ca5-106">Член</span><span class="sxs-lookup"><span data-stu-id="c0ca5-106">Member</span></span>|<span data-ttu-id="c0ca5-107">Описание</span><span class="sxs-lookup"><span data-stu-id="c0ca5-107">Description</span></span>|  
+|<span data-ttu-id="37f9d-106">Член</span><span class="sxs-lookup"><span data-stu-id="37f9d-106">Member</span></span>|<span data-ttu-id="37f9d-107">Описание</span><span class="sxs-lookup"><span data-stu-id="37f9d-107">Description</span></span>|  
 |------------|-----------------|  
-|`functionId`|<span data-ttu-id="c0ca5-108">The ID of the function.</span><span class="sxs-lookup"><span data-stu-id="c0ca5-108">The ID of the function.</span></span>|  
-|`reJitId`|<span data-ttu-id="c0ca5-109">The ID of the recompiled function.</span><span class="sxs-lookup"><span data-stu-id="c0ca5-109">The ID of the recompiled function.</span></span> <span data-ttu-id="c0ca5-110">A value of 0 (zero) represents the original version of the function.</span><span class="sxs-lookup"><span data-stu-id="c0ca5-110">A value of 0 (zero) represents the original version of the function.</span></span>|  
+|`functionId`|<span data-ttu-id="37f9d-108">Идентификатор функции.</span><span class="sxs-lookup"><span data-stu-id="37f9d-108">The ID of the function.</span></span>|  
+|`reJitId`|<span data-ttu-id="37f9d-109">Идентификатор перекомпилированной функции.</span><span class="sxs-lookup"><span data-stu-id="37f9d-109">The ID of the recompiled function.</span></span> <span data-ttu-id="37f9d-110">Значение 0 (ноль) представляет исходную версию функции.</span><span class="sxs-lookup"><span data-stu-id="37f9d-110">A value of 0 (zero) represents the original version of the function.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="c0ca5-111">Заметки</span><span class="sxs-lookup"><span data-stu-id="c0ca5-111">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="37f9d-111">Примечания</span><span class="sxs-lookup"><span data-stu-id="37f9d-111">Remarks</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c0ca5-112">Требования</span><span class="sxs-lookup"><span data-stu-id="c0ca5-112">Requirements</span></span>  
- <span data-ttu-id="c0ca5-113">**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c0ca5-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="37f9d-112">Требования</span><span class="sxs-lookup"><span data-stu-id="37f9d-112">Requirements</span></span>  
+ <span data-ttu-id="37f9d-113">**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="37f9d-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c0ca5-114">**Header:** CorProf.idl</span><span class="sxs-lookup"><span data-stu-id="c0ca5-114">**Header:** CorProf.idl</span></span>  
+ <span data-ttu-id="37f9d-114">**Заголовок:** CorProf. idl</span><span class="sxs-lookup"><span data-stu-id="37f9d-114">**Header:** CorProf.idl</span></span>  
   
- <span data-ttu-id="c0ca5-115">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c0ca5-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="37f9d-115">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="37f9d-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="c0ca5-116">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c0ca5-116">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ <span data-ttu-id="37f9d-116">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="37f9d-116">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c0ca5-117">См. также</span><span class="sxs-lookup"><span data-stu-id="c0ca5-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="37f9d-117">См. также:</span><span class="sxs-lookup"><span data-stu-id="37f9d-117">See also</span></span>
 
-- [<span data-ttu-id="c0ca5-118">Структуры профилирования</span><span class="sxs-lookup"><span data-stu-id="c0ca5-118">Profiling Structures</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)
+- [<span data-ttu-id="37f9d-118">Структуры профилирования</span><span class="sxs-lookup"><span data-stu-id="37f9d-118">Profiling Structures</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)

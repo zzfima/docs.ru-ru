@@ -12,5 +12,5 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353302"
 ---
-# <a name="visual-basic-compiler-messages"></a><span data-ttu-id="b2dfe-102">Сообщения компилятора Visual Basic</span><span class="sxs-lookup"><span data-stu-id="b2dfe-102">Visual Basic Compiler Messages</span></span>
-<span data-ttu-id="b2dfe-103">This section contains the Visual Basic error messages that occur at compile time.</span><span class="sxs-lookup"><span data-stu-id="b2dfe-103">This section contains the Visual Basic error messages that occur at compile time.</span></span>
+# <a name="visual-basic-compiler-messages"></a><span data-ttu-id="8d5e2-102">Сообщения компилятора Visual Basic</span><span class="sxs-lookup"><span data-stu-id="8d5e2-102">Visual Basic Compiler Messages</span></span>
+<span data-ttu-id="8d5e2-103">В этом разделе содержатся Visual Basic сообщения об ошибках, возникающие во время компиляции.</span><span class="sxs-lookup"><span data-stu-id="8d5e2-103">This section contains the Visual Basic error messages that occur at compile time.</span></span>

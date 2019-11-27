@@ -1,5 +1,5 @@
 ---
-title: The remote server machine does not exist or is unavailable
+title: Удаленный сервер не существует или недоступен
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID462
@@ -11,13 +11,13 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348184"
 ---
-# <a name="the-remote-server-machine-does-not-exist-or-is-unavailable-visual-basic"></a><span data-ttu-id="538e7-102">Удаленный сервер не существует или недоступен (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="538e7-102">The remote server machine does not exist or is unavailable (Visual Basic)</span></span>
-<span data-ttu-id="538e7-103">Вы пытаетесь подключиться к удаленному серверу, который недоступен или не существует.</span><span class="sxs-lookup"><span data-stu-id="538e7-103">You are trying to connect to a remote server that is unavailable or does not exist.</span></span> <span data-ttu-id="538e7-104">Эта ошибка может быть вызвана потерей сетевого подключения.</span><span class="sxs-lookup"><span data-stu-id="538e7-104">This error may be caused by your network connection being lost.</span></span>  
+# <a name="the-remote-server-machine-does-not-exist-or-is-unavailable-visual-basic"></a><span data-ttu-id="d80a6-102">Удаленный сервер не существует или недоступен (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d80a6-102">The remote server machine does not exist or is unavailable (Visual Basic)</span></span>
+<span data-ttu-id="d80a6-103">Вы пытаетесь подключиться к удаленному серверу, который недоступен или не существует.</span><span class="sxs-lookup"><span data-stu-id="d80a6-103">You are trying to connect to a remote server that is unavailable or does not exist.</span></span> <span data-ttu-id="d80a6-104">Эта ошибка может быть вызвана потерей сетевого подключения.</span><span class="sxs-lookup"><span data-stu-id="d80a6-104">This error may be caused by your network connection being lost.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="538e7-105">Исправление ошибки</span><span class="sxs-lookup"><span data-stu-id="538e7-105">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="d80a6-105">Исправление ошибки</span><span class="sxs-lookup"><span data-stu-id="d80a6-105">To correct this error</span></span>  
   
-- <span data-ttu-id="538e7-106">Еще раз подключитесь к сети и повторите попытку.</span><span class="sxs-lookup"><span data-stu-id="538e7-106">Reconnect to the network and try again.</span></span>  
+- <span data-ttu-id="d80a6-106">Еще раз подключитесь к сети и повторите попытку.</span><span class="sxs-lookup"><span data-stu-id="d80a6-106">Reconnect to the network and try again.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="538e7-107">См. также</span><span class="sxs-lookup"><span data-stu-id="538e7-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d80a6-107">См. также:</span><span class="sxs-lookup"><span data-stu-id="d80a6-107">See also</span></span>
 
-- [<span data-ttu-id="538e7-108">Типы ошибок</span><span class="sxs-lookup"><span data-stu-id="538e7-108">Error Types</span></span>](../../visual-basic/programming-guide/language-features/error-types.md)
+- [<span data-ttu-id="d80a6-108">Типы ошибок</span><span class="sxs-lookup"><span data-stu-id="d80a6-108">Error Types</span></span>](../../visual-basic/programming-guide/language-features/error-types.md)

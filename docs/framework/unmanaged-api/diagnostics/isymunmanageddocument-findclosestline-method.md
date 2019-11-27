@@ -22,10 +22,10 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449216"
 ---
-# <a name="isymunmanageddocumentfindclosestline-method"></a><span data-ttu-id="93a38-102">Метод ISymUnmanagedDocument::FindClosestLine</span><span class="sxs-lookup"><span data-stu-id="93a38-102">ISymUnmanagedDocument::FindClosestLine Method</span></span>
-<span data-ttu-id="93a38-103">Returns the closest line that is a sequence point, given a line in this document that may or may not be a sequence point.</span><span class="sxs-lookup"><span data-stu-id="93a38-103">Returns the closest line that is a sequence point, given a line in this document that may or may not be a sequence point.</span></span>  
+# <a name="isymunmanageddocumentfindclosestline-method"></a><span data-ttu-id="80dbf-102">Метод ISymUnmanagedDocument::FindClosestLine</span><span class="sxs-lookup"><span data-stu-id="80dbf-102">ISymUnmanagedDocument::FindClosestLine Method</span></span>
+<span data-ttu-id="80dbf-103">Возвращает ближайшую строку, которая является точкой последовательности, с учетом строки в этом документе, которая может быть или не являться точкой последовательности.</span><span class="sxs-lookup"><span data-stu-id="80dbf-103">Returns the closest line that is a sequence point, given a line in this document that may or may not be a sequence point.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="93a38-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="93a38-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="80dbf-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="80dbf-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT FindClosestLine(  
@@ -33,16 +33,16 @@ HRESULT FindClosestLine(
     [out, retval] ULONG32*  pRetVal);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="93a38-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="93a38-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="80dbf-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="80dbf-105">Parameters</span></span>  
  `line`  
- <span data-ttu-id="93a38-106">[in] A line in this document.</span><span class="sxs-lookup"><span data-stu-id="93a38-106">[in] A line in this document.</span></span>  
+ <span data-ttu-id="80dbf-106">окне Строка в этом документе.</span><span class="sxs-lookup"><span data-stu-id="80dbf-106">[in] A line in this document.</span></span>  
   
  `pRetVal`  
- <span data-ttu-id="93a38-107">[out] A pointer to a variable that receives the line.</span><span class="sxs-lookup"><span data-stu-id="93a38-107">[out] A pointer to a variable that receives the line.</span></span>  
+ <span data-ttu-id="80dbf-107">заполняет Указатель на переменную, которая получает строку.</span><span class="sxs-lookup"><span data-stu-id="80dbf-107">[out] A pointer to a variable that receives the line.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="93a38-108">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="93a38-108">Return Value</span></span>  
- <span data-ttu-id="93a38-109">S_OK if the method succeeds; otherwise, an error code.</span><span class="sxs-lookup"><span data-stu-id="93a38-109">S_OK if the method succeeds; otherwise, an error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="80dbf-108">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="80dbf-108">Return Value</span></span>  
+ <span data-ttu-id="80dbf-109">S_OK, если метод выполнен. в противном случае — код ошибки.</span><span class="sxs-lookup"><span data-stu-id="80dbf-109">S_OK if the method succeeds; otherwise, an error code.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="93a38-110">См. также</span><span class="sxs-lookup"><span data-stu-id="93a38-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="80dbf-110">См. также:</span><span class="sxs-lookup"><span data-stu-id="80dbf-110">See also</span></span>
 
-- [<span data-ttu-id="93a38-111">Интерфейс ISymUnmanagedDocument</span><span class="sxs-lookup"><span data-stu-id="93a38-111">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
+- [<span data-ttu-id="80dbf-111">Интерфейс ISymUnmanagedDocument</span><span class="sxs-lookup"><span data-stu-id="80dbf-111">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

@@ -22,12 +22,12 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74427962"
 ---
-# <a name="isymunmanagedwritergetdebuginfo-method"></a><span data-ttu-id="6fef4-102">Метод ISymUnmanagedWriter::GetDebugInfo</span><span class="sxs-lookup"><span data-stu-id="6fef4-102">ISymUnmanagedWriter::GetDebugInfo Method</span></span>
-<span data-ttu-id="6fef4-103">Returns the information necessary for a compiler to write the debug directory entry in the portable executable (PE) file header.</span><span class="sxs-lookup"><span data-stu-id="6fef4-103">Returns the information necessary for a compiler to write the debug directory entry in the portable executable (PE) file header.</span></span> <span data-ttu-id="6fef4-104">The symbol writer fills out all fields except for `TimeDateStamp` and `PointerToRawData`.</span><span class="sxs-lookup"><span data-stu-id="6fef4-104">The symbol writer fills out all fields except for `TimeDateStamp` and `PointerToRawData`.</span></span> <span data-ttu-id="6fef4-105">(The compiler is responsible for setting these two fields appropriately.)</span><span class="sxs-lookup"><span data-stu-id="6fef4-105">(The compiler is responsible for setting these two fields appropriately.)</span></span>  
+# <a name="isymunmanagedwritergetdebuginfo-method"></a><span data-ttu-id="b154e-102">Метод ISymUnmanagedWriter::GetDebugInfo</span><span class="sxs-lookup"><span data-stu-id="b154e-102">ISymUnmanagedWriter::GetDebugInfo Method</span></span>
+<span data-ttu-id="b154e-103">Возвращает сведения, необходимые компилятору для записи записи каталога отладки в заголовке переносимого исполняемого файла (PE).</span><span class="sxs-lookup"><span data-stu-id="b154e-103">Returns the information necessary for a compiler to write the debug directory entry in the portable executable (PE) file header.</span></span> <span data-ttu-id="b154e-104">Средство записи символов заполняет все поля, кроме `TimeDateStamp` и `PointerToRawData`.</span><span class="sxs-lookup"><span data-stu-id="b154e-104">The symbol writer fills out all fields except for `TimeDateStamp` and `PointerToRawData`.</span></span> <span data-ttu-id="b154e-105">(Компилятор отвечает за установку этих двух полей соответствующим образом.)</span><span class="sxs-lookup"><span data-stu-id="b154e-105">(The compiler is responsible for setting these two fields appropriately.)</span></span>  
   
- <span data-ttu-id="6fef4-106">A compiler should call this method, emit the data blob to the PE file, set the `PointerToRawData` field in the IMAGE_DEBUG_DIRECTORY to point to the emitted data, and write the IMAGE_DEBUG_DIRECTORY to the PE file.</span><span class="sxs-lookup"><span data-stu-id="6fef4-106">A compiler should call this method, emit the data blob to the PE file, set the `PointerToRawData` field in the IMAGE_DEBUG_DIRECTORY to point to the emitted data, and write the IMAGE_DEBUG_DIRECTORY to the PE file.</span></span> <span data-ttu-id="6fef4-107">The compiler should also set the `TimeDateStamp` field to equal the `TimeDateStamp` of the PE file being generated.</span><span class="sxs-lookup"><span data-stu-id="6fef4-107">The compiler should also set the `TimeDateStamp` field to equal the `TimeDateStamp` of the PE file being generated.</span></span>  
+ <span data-ttu-id="b154e-106">Компилятор должен вызывать этот метод, выдавать большой двоичный объект данных в PE-файл, устанавливать поле `PointerToRawData` в IMAGE_DEBUG_DIRECTORY, чтобы указывать на выпущенные данные, и записывать IMAGE_DEBUG_DIRECTORY в PE-файл.</span><span class="sxs-lookup"><span data-stu-id="b154e-106">A compiler should call this method, emit the data blob to the PE file, set the `PointerToRawData` field in the IMAGE_DEBUG_DIRECTORY to point to the emitted data, and write the IMAGE_DEBUG_DIRECTORY to the PE file.</span></span> <span data-ttu-id="b154e-107">Компилятор также должен установить `TimeDateStamp` поле, равное `TimeDateStamp` создаваемого PE.</span><span class="sxs-lookup"><span data-stu-id="b154e-107">The compiler should also set the `TimeDateStamp` field to equal the `TimeDateStamp` of the PE file being generated.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6fef4-108">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="6fef4-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b154e-108">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="b154e-108">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetDebugInfo(  
@@ -38,25 +38,25 @@ HRESULT GetDebugInfo(
         length_is(*pcData)] BYTE data[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="6fef4-109">Параметры</span><span class="sxs-lookup"><span data-stu-id="6fef4-109">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="b154e-109">Параметры</span><span class="sxs-lookup"><span data-stu-id="b154e-109">Parameters</span></span>  
  `pIDD`  
- <span data-ttu-id="6fef4-110">[in, out] A pointer to an IMAGE_DEBUG_DIRECTORY that the symbol writer will fill out.</span><span class="sxs-lookup"><span data-stu-id="6fef4-110">[in, out] A pointer to an IMAGE_DEBUG_DIRECTORY that the symbol writer will fill out.</span></span>  
+ <span data-ttu-id="b154e-110">[вход, выход] Указатель на IMAGE_DEBUG_DIRECTORY, который средство записи символов будет заполнять.</span><span class="sxs-lookup"><span data-stu-id="b154e-110">[in, out] A pointer to an IMAGE_DEBUG_DIRECTORY that the symbol writer will fill out.</span></span>  
   
  `cData`  
- <span data-ttu-id="6fef4-111">[in] A `DWORD` that contains the size of the debug data.</span><span class="sxs-lookup"><span data-stu-id="6fef4-111">[in] A `DWORD` that contains the size of the debug data.</span></span>  
+ <span data-ttu-id="b154e-111">окне `DWORD`, который содержит размер отладочных данных.</span><span class="sxs-lookup"><span data-stu-id="b154e-111">[in] A `DWORD` that contains the size of the debug data.</span></span>  
   
  `pcData`  
- <span data-ttu-id="6fef4-112">[out] A pointer to a `DWORD` that receives the size of the buffer required to contain the debug data.</span><span class="sxs-lookup"><span data-stu-id="6fef4-112">[out] A pointer to a `DWORD` that receives the size of the buffer required to contain the debug data.</span></span>  
+ <span data-ttu-id="b154e-112">заполняет Указатель на `DWORD`, который получает размер буфера, необходимого для хранения данных отладки.</span><span class="sxs-lookup"><span data-stu-id="b154e-112">[out] A pointer to a `DWORD` that receives the size of the buffer required to contain the debug data.</span></span>  
   
  `data`  
- <span data-ttu-id="6fef4-113">[out] A pointer to a buffer that is large enough to hold the debug data for the symbol store.</span><span class="sxs-lookup"><span data-stu-id="6fef4-113">[out] A pointer to a buffer that is large enough to hold the debug data for the symbol store.</span></span>  
+ <span data-ttu-id="b154e-113">заполняет Указатель на буфер, достаточно большой для хранения отладочных данных для хранилища символов.</span><span class="sxs-lookup"><span data-stu-id="b154e-113">[out] A pointer to a buffer that is large enough to hold the debug data for the symbol store.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="6fef4-114">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="6fef4-114">Return Value</span></span>  
- <span data-ttu-id="6fef4-115">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="6fef4-115">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="b154e-114">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="b154e-114">Return Value</span></span>  
+ <span data-ttu-id="b154e-115">S_OK, если метод выполнен. в противном случае E_FAIL или другой код ошибки.</span><span class="sxs-lookup"><span data-stu-id="b154e-115">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="6fef4-116">Требования</span><span class="sxs-lookup"><span data-stu-id="6fef4-116">Requirements</span></span>  
- <span data-ttu-id="6fef4-117">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="6fef4-117">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b154e-116">Требования</span><span class="sxs-lookup"><span data-stu-id="b154e-116">Requirements</span></span>  
+ <span data-ttu-id="b154e-117">**Заголовок:** Корсим. idl, Корсим. h</span><span class="sxs-lookup"><span data-stu-id="b154e-117">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6fef4-118">См. также</span><span class="sxs-lookup"><span data-stu-id="6fef4-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b154e-118">См. также:</span><span class="sxs-lookup"><span data-stu-id="b154e-118">See also</span></span>
 
-- [<span data-ttu-id="6fef4-119">Интерфейс ISymUnmanagedWriter</span><span class="sxs-lookup"><span data-stu-id="6fef4-119">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+- [<span data-ttu-id="b154e-119">Интерфейс ISymUnmanagedWriter</span><span class="sxs-lookup"><span data-stu-id="b154e-119">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

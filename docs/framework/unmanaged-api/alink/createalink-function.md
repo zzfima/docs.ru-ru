@@ -22,10 +22,10 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446557"
 ---
-# <a name="createalink-function"></a><span data-ttu-id="8eccb-102">Функция CreateALink</span><span class="sxs-lookup"><span data-stu-id="8eccb-102">CreateALink Function</span></span>
-<span data-ttu-id="8eccb-103">Creates an instance of the Assembly Linker and sets a pointer to the specified interface.</span><span class="sxs-lookup"><span data-stu-id="8eccb-103">Creates an instance of the Assembly Linker and sets a pointer to the specified interface.</span></span>  
+# <a name="createalink-function"></a><span data-ttu-id="0900d-102">Функция CreateALink</span><span class="sxs-lookup"><span data-stu-id="0900d-102">CreateALink Function</span></span>
+<span data-ttu-id="0900d-103">Создает экземпляр компоновщика сборок и задает указатель на указанный интерфейс.</span><span class="sxs-lookup"><span data-stu-id="0900d-103">Creates an instance of the Assembly Linker and sets a pointer to the specified interface.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8eccb-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="8eccb-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0900d-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="0900d-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT CreateALink (  
@@ -34,16 +34,16 @@ HRESULT CreateALink (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="8eccb-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="8eccb-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="0900d-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="0900d-105">Parameters</span></span>  
   
-|<span data-ttu-id="8eccb-106">Параметр</span><span class="sxs-lookup"><span data-stu-id="8eccb-106">Parameter</span></span>|<span data-ttu-id="8eccb-107">Описание</span><span class="sxs-lookup"><span data-stu-id="8eccb-107">Description</span></span>|  
+|<span data-ttu-id="0900d-106">Параметр</span><span class="sxs-lookup"><span data-stu-id="0900d-106">Parameter</span></span>|<span data-ttu-id="0900d-107">Описание</span><span class="sxs-lookup"><span data-stu-id="0900d-107">Description</span></span>|  
 |---------------|-----------------|  
-|`riid`|<span data-ttu-id="8eccb-108">The physical name of one of the Assembly Linker interfaces.</span><span class="sxs-lookup"><span data-stu-id="8eccb-108">The physical name of one of the Assembly Linker interfaces.</span></span>|  
-|`ppInterface`|<span data-ttu-id="8eccb-109">The location that on successful completion contains a pointer to the `riid` interface.</span><span class="sxs-lookup"><span data-stu-id="8eccb-109">The location that on successful completion contains a pointer to the `riid` interface.</span></span>|  
+|`riid`|<span data-ttu-id="0900d-108">Физическое имя одного из интерфейсов компоновщика сборок.</span><span class="sxs-lookup"><span data-stu-id="0900d-108">The physical name of one of the Assembly Linker interfaces.</span></span>|  
+|`ppInterface`|<span data-ttu-id="0900d-109">Расположение, которое в случае успешного завершения содержит указатель на интерфейс `riid`.</span><span class="sxs-lookup"><span data-stu-id="0900d-109">The location that on successful completion contains a pointer to the `riid` interface.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="8eccb-110">Требования</span><span class="sxs-lookup"><span data-stu-id="8eccb-110">Requirements</span></span>  
- <span data-ttu-id="8eccb-111">**Library**: alink.dll</span><span class="sxs-lookup"><span data-stu-id="8eccb-111">**Library**: alink.dll</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0900d-110">Требования</span><span class="sxs-lookup"><span data-stu-id="0900d-110">Requirements</span></span>  
+ <span data-ttu-id="0900d-111">**Библиотека**: ALink. dll</span><span class="sxs-lookup"><span data-stu-id="0900d-111">**Library**: alink.dll</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8eccb-112">См. также</span><span class="sxs-lookup"><span data-stu-id="8eccb-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0900d-112">См. также:</span><span class="sxs-lookup"><span data-stu-id="0900d-112">See also</span></span>
 
-- [<span data-ttu-id="8eccb-113">Al.exe (компоновщик сборок)</span><span class="sxs-lookup"><span data-stu-id="8eccb-113">Al.exe (Assembly Linker)</span></span>](../../tools/al-exe-assembly-linker.md)
+- [<span data-ttu-id="0900d-113">Al.exe (компоновщик сборок)</span><span class="sxs-lookup"><span data-stu-id="0900d-113">Al.exe (Assembly Linker)</span></span>](../../tools/al-exe-assembly-linker.md)

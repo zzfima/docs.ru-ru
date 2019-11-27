@@ -21,27 +21,27 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74441623"
 ---
-# <a name="imetadataerror-interface"></a><span data-ttu-id="3ddae-102">Интерфейс IMetaDataError</span><span class="sxs-lookup"><span data-stu-id="3ddae-102">IMetaDataError Interface</span></span>
-<span data-ttu-id="3ddae-103">Provides a callback mechanism for reporting errors during the metadata merge.</span><span class="sxs-lookup"><span data-stu-id="3ddae-103">Provides a callback mechanism for reporting errors during the metadata merge.</span></span>  
+# <a name="imetadataerror-interface"></a><span data-ttu-id="085d7-102">Интерфейс IMetaDataError</span><span class="sxs-lookup"><span data-stu-id="085d7-102">IMetaDataError Interface</span></span>
+<span data-ttu-id="085d7-103">Предоставляет механизм обратного вызова для сообщения об ошибках во время слияния метаданных.</span><span class="sxs-lookup"><span data-stu-id="085d7-103">Provides a callback mechanism for reporting errors during the metadata merge.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="3ddae-104">The `IMetaDataError` interface must be implemented by the client.</span><span class="sxs-lookup"><span data-stu-id="3ddae-104">The `IMetaDataError` interface must be implemented by the client.</span></span>  
+> <span data-ttu-id="085d7-104">Клиент должен реализовать интерфейс `IMetaDataError`.</span><span class="sxs-lookup"><span data-stu-id="085d7-104">The `IMetaDataError` interface must be implemented by the client.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="3ddae-105">Методы</span><span class="sxs-lookup"><span data-stu-id="3ddae-105">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="085d7-105">Методы</span><span class="sxs-lookup"><span data-stu-id="085d7-105">Methods</span></span>  
   
-|<span data-ttu-id="3ddae-106">Метод</span><span class="sxs-lookup"><span data-stu-id="3ddae-106">Method</span></span>|<span data-ttu-id="3ddae-107">Описание</span><span class="sxs-lookup"><span data-stu-id="3ddae-107">Description</span></span>|  
+|<span data-ttu-id="085d7-106">Метод</span><span class="sxs-lookup"><span data-stu-id="085d7-106">Method</span></span>|<span data-ttu-id="085d7-107">Описание</span><span class="sxs-lookup"><span data-stu-id="085d7-107">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="3ddae-108">Метод OnError</span><span class="sxs-lookup"><span data-stu-id="3ddae-108">OnError Method</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataerror-onerror-method.md)|<span data-ttu-id="3ddae-109">Provides notification of errors that occur during the metadata merge.</span><span class="sxs-lookup"><span data-stu-id="3ddae-109">Provides notification of errors that occur during the metadata merge.</span></span>|  
+|[<span data-ttu-id="085d7-108">Метод OnError</span><span class="sxs-lookup"><span data-stu-id="085d7-108">OnError Method</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataerror-onerror-method.md)|<span data-ttu-id="085d7-109">Предоставляет уведомление об ошибках, возникающих во время слияния метаданных.</span><span class="sxs-lookup"><span data-stu-id="085d7-109">Provides notification of errors that occur during the metadata merge.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="3ddae-110">Требования</span><span class="sxs-lookup"><span data-stu-id="3ddae-110">Requirements</span></span>  
- <span data-ttu-id="3ddae-111">**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="3ddae-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="085d7-110">Требования</span><span class="sxs-lookup"><span data-stu-id="085d7-110">Requirements</span></span>  
+ <span data-ttu-id="085d7-111">**Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="085d7-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="3ddae-112">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="3ddae-112">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="085d7-112">**Заголовок:** COR. h</span><span class="sxs-lookup"><span data-stu-id="085d7-112">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="3ddae-113">**Library:** Used as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="3ddae-113">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="085d7-113">**Библиотека:** Используется в качестве ресурса в MsCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="085d7-113">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="3ddae-114">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3ddae-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="085d7-114">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="085d7-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3ddae-115">См. также</span><span class="sxs-lookup"><span data-stu-id="3ddae-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="085d7-115">См. также:</span><span class="sxs-lookup"><span data-stu-id="085d7-115">See also</span></span>
 
-- [<span data-ttu-id="3ddae-116">Интерфейсы метаданных</span><span class="sxs-lookup"><span data-stu-id="3ddae-116">Metadata Interfaces</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)
+- [<span data-ttu-id="085d7-116">Интерфейсы метаданных</span><span class="sxs-lookup"><span data-stu-id="085d7-116">Metadata Interfaces</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)
