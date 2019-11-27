@@ -39,7 +39,7 @@ ms.locfileid: "74346784"
 > [!NOTE]
 > Не допускается одновременно использовать инициализатор и набора и объекта для инициализации одного и того же объекта коллекции. Инициализаторы объекта можно использовать для инициализации объектов в инициализаторе набора.
 
-## <a name="creating-a-collection-by-using-a-collection-initializer"></a>Creating a Collection by Using a Collection Initializer
+## <a name="creating-a-collection-by-using-a-collection-initializer"></a>Создание коллекции с помощью инициализатора коллекции
 
 При создании коллекции с помощью инициализатора набора каждое указываемое в инициализаторе значение передается в соответствующий метод `Add` коллекции. Например, при создании <xref:System.Collections.Generic.List%601> с помощью инициализатора набора строковое значение в инициализаторе передается методу <xref:System.Collections.Generic.List%601.Add%2A>. Если вы хотите создать коллекцию с помощью инициализатора набора, следует указать допустимый тип коллекции. Примеры допустимых типов коллекций — классы, которые реализуют интерфейс <xref:System.Collections.Generic.IEnumerable%601> или наследуют от класса <xref:System.Collections.CollectionBase>. Указанный тип должен также предоставлять метод `Add`, отвечающий следующим условиям.
 
@@ -73,14 +73,14 @@ ms.locfileid: "74346784"
 
 Методу `Add` типа коллекции передаются только списки вложенных значений первого уровня вложения. Более глубокие уровни вложения обрабатываются как литералы массива, а списки вложенных значений не сопоставляются с методом `Add` ни в одной из коллекций.
 
-## <a name="related-topics"></a>См. также
+## <a name="related-topics"></a>Связанные разделы
 
 |Заголовок|Описание|
 |---|---|
 |[Практическое руководство. Создание метода расширения Add, используемого инициализатором набора](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-an-add-extension-method-used-by-a-collection-initializer.md)|Описывает создание метода расширения `Add`, который можно использовать для заполнения коллекции значениями из инициализатора набора.|
 |[Практическое руководство. Создание коллекции, используемой инициализатором набора](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-a-collection-used-by-a-collection-initializer.md)|Описывает, как активировать использование инициализатора набора, включив метод `Add` в класс коллекции, реализующий `IEnumerable`.|
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Коллекции](../../../../visual-basic/programming-guide/concepts/collections.md)
 - [Массивы](../../../../visual-basic/programming-guide/language-features/arrays/index.md)

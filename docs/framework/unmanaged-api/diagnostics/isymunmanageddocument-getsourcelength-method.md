@@ -34,11 +34,11 @@ HRESULT GetSourceLength(
   
 ## <a name="parameters"></a>Параметры  
  `pRetVal`  
- [out] A pointer to a variable that indicates the length, in bytes, of the embedded source.  
+ заполняет Указатель на переменную, которая указывает длину внедренного источника в байтах.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- S_OK if the method succeeds.  
+ S_OK, если метод выполнен.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс ISymUnmanagedDocument](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

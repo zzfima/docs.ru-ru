@@ -15,23 +15,23 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350741"
 ---
 # <a name="withevents-visual-basic"></a>WithEvents (Visual Basic)
-Specifies that one or more declared member variables refer to an instance of a class that can raise events.
+Указывает, что одна или несколько объявленных переменных-членов ссылаются на экземпляр класса, который может создавать события.
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Примечания
 
-When a variable is defined using `WithEvents`, you can declaratively specify that a method handles the variable's events using the `Handles` keyword.
+Если переменная определена с помощью `WithEvents`, можно декларативно указать, что метод обрабатывает события переменной с помощью ключевого слова `Handles`.
 
-You can use `WithEvents` only at class or module level. This means the declaration context for a `WithEvents` variable must be a class or module and cannot be a source file, namespace, structure, or procedure.
+`WithEvents` можно использовать только на уровне класса или модуля. Это означает, что контекст объявления для переменной `WithEvents` должен быть классом или модулем и не может быть исходным файлом, пространством имен, структурой или процедурой.
 
-You cannot use `WithEvents` on a structure member.
+Нельзя использовать `WithEvents` в члене структуры.
 
-You can declare only individual variables—not arrays—with `WithEvents`.
+С помощью `WithEvents`можно объявлять только отдельные переменные (а не массивы).
 
 ## <a name="rules"></a>Правила
 
-**Element Types.** You must declare `WithEvents` variables to be object variables so that they can accept class instances. However, you cannot declare them as `Object`. You must declare them as the specific class that can raise the events.
+**Типы элементов.** Необходимо объявить переменные `WithEvents` как переменные объекта, чтобы они могли принимать экземпляры класса. Однако их нельзя объявить как `Object`. Их необходимо объявить в качестве конкретного класса, который может вызывать события.
 
-The `WithEvents` modifier can be used in this context: [Dim Statement](../../../visual-basic/language-reference/statements/dim-statement.md)
+Модификатор `WithEvents` можно использовать в этом контексте: [оператор Dim](../../../visual-basic/language-reference/statements/dim-statement.md)
 
 ## <a name="example"></a>Пример
 
@@ -39,7 +39,7 @@ The `WithEvents` modifier can be used in this context: [Dim Statement](../../../
 Dim WithEvents app As Application
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Handles](../../../visual-basic/language-reference/statements/handles-clause.md)
 - [Ключевые слова](../../../visual-basic/language-reference/keywords/index.md)

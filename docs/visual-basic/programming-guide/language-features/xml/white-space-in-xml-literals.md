@@ -13,30 +13,30 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74336006"
 ---
 # <a name="white-space-in-xml-literals-visual-basic"></a>Пробелы в XML-литералах (Visual Basic)
-The Visual Basic compiler incorporates only the significant white space characters from an XML literal when it creates a [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] object. The insignificant white space characters are not incorporated.  
+Компилятор Visual Basic включает только значащие символы пробела из XML-литерала при создании объекта [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Незначащие символы пробела не включаются.  
   
-## <a name="significant-and-insignificant-white-space"></a>Significant and Insignificant White Space  
- White space characters in XML literals are significant in only three areas:  
+## <a name="significant-and-insignificant-white-space"></a>Значительные и незначащие пробелы  
+ Символы пробелов в XML-литералах являются значимыми только в трех областях:  
   
-- When they are in an attribute value.  
+- Если они находятся в значении атрибута.  
   
-- When they are part of an element's text content and the text also contains other characters.  
+- Если они являются частью текстового содержимого элемента, а текст также содержит другие символы.  
   
-- When they are in an embedded expression for an element's text content.  
+- Если они находятся в внедренном выражении для текстового содержимого элемента.  
   
- Otherwise, the compiler treats white space characters as insignificant and does not include then in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] object for the literal.  
+ В противном случае компилятор считает символы пробела незначащими и не включает в объект [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] для литерала.  
   
- To include insignificant white space in an XML literal, use an embedded expression that contains a string literal with the white space.  
+ Чтобы включить незначащие пробелы в XML-литерал, используйте внедренное выражение, содержащее строковый литерал с пробелом.  
   
 > [!NOTE]
-> If the `xml:space` attribute appears in an XML element literal, the Visual Basic compiler includes the attribute in the <xref:System.Xml.Linq.XElement> object, but adding this attribute does not change how the compiler treats white space.  
+> Если атрибут `xml:space` отображается в литерале XML-элемента, компилятор Visual Basic включает атрибут в объект <xref:System.Xml.Linq.XElement>, но добавление этого атрибута не влияет на то, как компилятор обрабатывает пробелы.  
   
 ## <a name="examples"></a>Примеры  
- The following example contains two XML elements, outer and inner. Both elements contain white space in their text content. The white space in the outer element is insignificant because it contains only white space and an XML element. The white space in the inner element is significant because it contains white space and text.  
+ В следующем примере содержатся два XML-элемента: OUTER и Inner. Оба элемента содержат пробелы в текстовом содержимом. Пробелы во внешнем элементе являются незначащими, так как содержат только пробелы и XML-элементы. Пробел во внутреннем элементе важен, так как он содержит пробелы и текст.  
   
  [!code-vb[VbXMLSamples#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#29)]  
   
- When run, this code displays the following text.  
+ При запуске этот код отображает следующий текст.  
   
 ```xml  
 <outer>  
@@ -46,6 +46,6 @@ The Visual Basic compiler incorporates only the significant white space characte
 </outer>  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Создание XML в Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)

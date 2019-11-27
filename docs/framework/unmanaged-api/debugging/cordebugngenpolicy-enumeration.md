@@ -36,12 +36,12 @@ enum CorDebugNGENPolicy {
   
 ## <a name="members"></a>Члены  
   
-|Имя члена|Описание|  
+|Имя элемента|Описание|  
 |-----------------|-----------------|  
-|`DISABLE_LOCAL_NIC`|In a Windows 8.x Store app, the use of images from the local native image cache is disabled. In a desktop app, this setting has no effect.|  
+|`DISABLE_LOCAL_NIC`|В приложении для Магазина Windows 8. x использование образов из локального кэша образов в машинном кодах отключено. В классическом приложении этот параметр не действует.|  
   
-## <a name="remarks"></a>Заметки  
- The `CorDebugNGENPolicy` enumeration is used by the [ICorDebugProcess5::EnableNGENPolicy](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enablengenpolicy-method.md) method. Disabling the use of images from the local native image cache provides for a consistent debugging experience by ensuring that the debugger loads debuggable JIT-compiled images instead of optimized native images.  
+## <a name="remarks"></a>Примечания  
+ Перечисление `CorDebugNGENPolicy` используется методом [метод ICorDebugProcess5:: EnableNGENPolicy](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enablengenpolicy-method.md) . Отключение использования образов из локального кэша образов в машинном код обеспечивает единообразную отладку, гарантируя, что отладчик загружает отладочные скомпилированные КОМПИЛЯТОРом изображения вместо оптимизированных образов в машинном код.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
@@ -52,6 +52,6 @@ enum CorDebugNGENPolicy {
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Перечисления отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

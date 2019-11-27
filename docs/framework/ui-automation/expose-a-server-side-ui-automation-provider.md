@@ -28,7 +28,7 @@ ms.locfileid: "74433622"
  [!code-csharp[UIAFragmentProvider_snip#116](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAFragmentProvider_snip/CSharp/ListFragment.cs#116)]
  [!code-vb[UIAFragmentProvider_snip#116](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAFragmentProvider_snip/VisualBasic/ListFragment.vb#116)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Общие сведения о поставщиках автоматизации пользовательского интерфейса](ui-automation-providers-overview.md)
 - [Реализация поставщика автоматизации пользовательского интерфейса на стороне сервера](server-side-ui-automation-provider-implementation.md)

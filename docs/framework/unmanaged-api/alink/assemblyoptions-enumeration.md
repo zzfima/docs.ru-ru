@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446588"
 ---
 # <a name="assemblyoptions-enumeration"></a>Перечисление AssemblyOptions
-Enumerates the assembly options.  
+Перечисляет параметры сборки.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -56,32 +56,32 @@ typedef enum _AssemblyOptions {
   
 |Поле|Описание|  
 |-----------|-----------------|  
-|optAssemTitle|String - Represents the assembly title.|  
-|optAssemDescription|String - Contains the assembly description.|  
-|optAssemConfig|String - Contains the assembly configuration.|  
-|optAssemOS|String - Encoded as: "dwOSPlatformId.dwOSMajorVersion.dwOSMinorVersion".|  
-|optAssemProcessor|ULONG|  
-|optAssemLocale|String - Contains the assembly locale.|  
-|optAssemVersion|String - Encoded as: "Major.Minor.Build.Revision".|  
-|optAssemCompany|String - Contains the company.|  
-|optAssemProduct|String - Contains the product name.|  
-|optAssemProductVersion|String (also known as InformationalVersion).|  
-|optAssemCopyright|String - Contains the copyright information.|  
-|optAssemTrademark|String - Contains the trademark information.|  
-|optAssemKeyFile|String (file name).|  
-|optAssemKeyName|String (The key name).|  
-|optAssemAlgID|ULONG|  
-|optAssemFlags|ULONG|  
-|optAssemHalfSign|Bool (Also known as DelaySign).|  
-|optAssemFileVersion|String - Encoded as "Major.Minor.Build.Revision"--same as ProductVersion.|  
-|optAssemSatelliteVer|String - Encoded as "Major.Minor.Build.Revision".|  
-|optLastAssemOption|A counter of the number of elements.|  
+|оптассемтитле|Строка — представляет заголовок сборки.|  
+|оптассемдескриптион|Строка — содержит описание сборки.|  
+|оптассемконфиг|Строка — содержит конфигурацию сборки.|  
+|оптассемос|Строка в кодировке: "Двосплатформид. Двосмажорверсион. Двосминорверсион".|  
+|оптассемпроцессор|ULONG|  
+|оптассемлокале|Строка — содержит языковой стандарт сборки.|  
+|оптассемверсион|Строка в кодировке: "основная. Дополнительная. сборка. Редакция".|  
+|оптассемкомпани|Строка — содержит компанию.|  
+|оптассемпродукт|Строка — содержит имя продукта.|  
+|оптассемпродуктверсион|Строка (также известная как Информатионалверсион).|  
+|оптассемкопиригхт|Строка — содержит сведения об авторских правах.|  
+|оптассемтрадемарк|Строка — содержит сведения о товарном знаке.|  
+|оптассемкэйфиле|Строка (имя файла).|  
+|оптассемкэйнаме|Строка (имя ключа).|  
+|оптассемалгид|ULONG|  
+|оптассемфлагс|ULONG|  
+|оптассемхалфсигн|Bool (также называется DelaySign).|  
+|оптассемфилеверсион|Строка, закодированная как "основная. Дополнительная. сборка. Редакция"--то же, что и ProductVersion.|  
+|оптассемсателлитевер|Строка, закодированная как "основная. Дополнительная. сборка. Редакция".|  
+|оптластассемоптион|Счетчик числа элементов.|  
   
 ## <a name="requirements"></a>Требования  
- **Header:** alink.h  
+ **Заголовок:** ALink. h  
   
- **Library**: alink.dll  
+ **Библиотека**: ALink. dll  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Al.exe (компоновщик сборок)](../../tools/al-exe-assembly-linker.md)

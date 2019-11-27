@@ -9,7 +9,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346809"
 ---
-# <a name="how-to-find-descendant-elements-xpath-linq-to-xml-visual-basic"></a>How to: Find Descendant Elements (XPath-LINQ to XML) (Visual Basic)
+# <a name="how-to-find-descendant-elements-xpath-linq-to-xml-visual-basic"></a>Руководство. Поиск элементов-потомков (XPath-LINQ to XML) (Visual Basic)
 В этом разделе рассказывается, как возвращать элементы-потомки с определенным именем.  
   
  Выражение XPath - `//Name`.  
@@ -51,6 +51,6 @@ Results are identical
 <Name>Jessica Arnold</Name>  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [LINQ to XML for XPath Users (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [LINQ to XML для пользователей XPath (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

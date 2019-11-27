@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448068"
 ---
 # <a name="icorprofilercallbackmoduleattachedtoassembly-method"></a>Метод ICorProfilerCallback::ModuleAttachedToAssembly
-Notifies the profiler that a module is being attached to its parent assembly.  
+Уведомляет профилировщик о том, что модуль присоединен к своей родительской сборке.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -35,13 +35,13 @@ HRESULT ModuleAttachedToAssembly(
   
 ## <a name="parameters"></a>Параметры  
  `moduleId`  
- [in] The ID of the module that is being attached.  
+ окне Идентификатор присоединяемого модуля.  
   
  `AssemblyId`  
- [in] The ID of the parent assembly to which the module is attached.  
+ окне ИДЕНТИФИКАТОР родительской сборки, к которой присоединен модуль.  
   
-## <a name="remarks"></a>Заметки  
- A module can be loaded through an import address table (IAT), through a call to `LoadLibrary`, or through a metadata reference. As a result, the common language runtime (CLR) loader has multiple code paths for determining the assembly in which a module lives. Therefore, it is possible that after [ICorProfilerCallback::ModuleLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md) is called, the module does not know what assembly it is in and getting the parent assembly ID is not possible. The `ModuleAttachedToAssembly` method is called when the module is attached to its parent assembly and its parent assembly ID can be obtained.  
+## <a name="remarks"></a>Примечания  
+ Модуль можно загрузить через таблицу адресов импорта (IAT) с помощью вызова `LoadLibrary`или через ссылку на метаданные. В результате загрузчик среды CLR имеет несколько путей кода для определения сборки, в которой находится модуль. Таким образом, после вызова метода [ICorProfilerCallback:: ModuleLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md) модуль не знает, в какой сборке он находится, и получение идентификатора родительской сборки невозможно. Метод `ModuleAttachedToAssembly` вызывается, когда модуль присоединяется к своей родительской сборке и может быть получен идентификатор его родительской сборки.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
@@ -52,6 +52,6 @@ HRESULT ModuleAttachedToAssembly(
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

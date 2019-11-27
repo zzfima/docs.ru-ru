@@ -12,13 +12,13 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74430478"
 ---
-# <a name="gccpugroup-element"></a>\<GCCpuGroup> Element
+# <a name="gccpugroup-element"></a>\<Гккпуграуп > элемент
 
 Определяет, поддерживает ли сборка мусора несколько групп ЦП.
 
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<runtime>** ](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<GCCpuGroup>**
+[ **> среды выполнения\<** ](runtime-element.md) &nbsp;&nbsp;\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<гккпуграуп >**
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -29,7 +29,7 @@ ms.locfileid: "74430478"
 
 ## <a name="attributes-and-elements"></a>Атрибуты и элементы
 
-В следующих разделах описаны атрибуты, дочерние и родительские элементы.
+Следующие разделы описывают атрибуты, дочерние элементы и родительские элементы.
 
 ### <a name="attributes"></a>Атрибуты
 
@@ -39,14 +39,14 @@ ms.locfileid: "74430478"
 
 ## <a name="enabled-attribute"></a>Атрибут enabled
 
-|значения|Описание|
+|Значение|Описание|
 |-----------|-----------------|
-|`false`|Garbage collection does not support multiple CPU groups. Это значение по умолчанию.|
-|`true`|Garbage collection supports multiple CPU groups, if server garbage collection is enabled.|
+|`false`|Сборка мусора не поддерживает несколько групп ЦП. Это значение по умолчанию.|
+|`true`|Сборка мусора поддерживает несколько групп ЦП, если включена сборка мусора сервера.|
 
 ### <a name="child-elements"></a>Дочерние элементы
 
-Отсутствует.
+Нет
 
 ### <a name="parent-elements"></a>Родительские элементы
 
@@ -55,16 +55,16 @@ ms.locfileid: "74430478"
 |`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.|
 |`runtime`|Содержит сведения о привязке сборок и сборке мусора.|
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Примечания
 
-When a computer has multiple CPU groups and server garbage collection is enabled (see the [\<gcServer>](gcserver-element.md) element), enabling this element extends garbage collection across all CPU groups and takes all cores into account when creating and balancing heaps.
+Если на компьютере установлено несколько групп ЦП и включена сборка мусора сервера (см. элемент [\<gcServer >](gcserver-element.md) ), включение этого элемента расширяет сбор мусора во всех группах ЦП и учитывает все ядра при создании и балансировке куч.
 
 > [!NOTE]
-> This element applies only to garbage collection threads. To enable the runtime to distribute user threads across all CPU groups, you must also enable the [\<Thread_UseAllCpuGroups>](thread-useallcpugroups-element.md) element.
+> Этот элемент применяется только к потокам сборки мусора. Чтобы среда выполнения распространяла пользовательские потоки во всех группах ЦП, необходимо также включить элемент [\<Thread_UseAllCpuGroups >](thread-useallcpugroups-element.md) .
 
 ## <a name="example"></a>Пример
 
-The following example shows how to enable garbage collection for multiple CPU groups.
+В следующем примере показано, как включить сбор мусора для нескольких групп ЦП.
 
 ```xml
 <configuration>
@@ -75,9 +75,9 @@ The following example shows how to enable garbage collection for multiple CPU gr
 </configuration>
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Схема параметров среды выполнения](index.md)
 - [Схема файла конфигурации](../index.md)
-- [To disable concurrent garbage collection](gcconcurrent-element.md#to-disable-background-garbage-collection)
+- [Отключение параллельной сборки мусора](gcconcurrent-element.md#to-disable-background-garbage-collection)
 - [Сборка мусора рабочей станции и сборка мусора сервера](../../../../standard/garbage-collection/fundamentals.md#workstation-and-server-garbage-collection)

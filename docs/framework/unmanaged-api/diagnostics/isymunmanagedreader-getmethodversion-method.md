@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436009"
 ---
 # <a name="isymunmanagedreadergetmethodversion-method"></a>Метод ISymUnmanagedReader::GetMethodVersion
-Gets the method version. The method version starts at 1 and is incremented each time the method is recompiled. Recompilation can happen without changes to the method.  
+Возвращает версию метода. Версия метода начинается с 1 и увеличивается каждый раз при повторной компиляции метода. Перекомпиляция может произойти без изменения метода.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -35,17 +35,17 @@ HRESULT GetMethodVersion (
   
 ## <a name="parameters"></a>Параметры  
  `pMethod`  
- [in] The method for which to get the version.  
+ окне Метод, для которого необходимо получить версию.  
   
  `version`  
- [out] A pointer to a variable that receives the method version.  
+ заполняет Указатель на переменную, которая получает версию метода.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK, если метод выполнен. в противном случае E_FAIL или другой код ошибки.  
   
 ## <a name="requirements"></a>Требования  
- **Header:** CorSym.idl, CorSym.h  
+ **Заголовок:** Корсим. idl, Корсим. h  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

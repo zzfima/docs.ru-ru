@@ -1,5 +1,5 @@
 ---
-title: The remote server machine does not exist or is unavailable
+title: Удаленный сервер не существует или недоступен
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID462
@@ -18,6 +18,6 @@ ms.locfileid: "74348184"
   
 - Еще раз подключитесь к сети и повторите попытку.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Типы ошибок](../../visual-basic/programming-guide/language-features/error-types.md)

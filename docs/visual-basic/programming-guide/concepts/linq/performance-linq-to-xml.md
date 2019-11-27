@@ -9,22 +9,22 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353143"
 ---
-# <a name="performance-linq-to-xml-visual-basic"></a>Performance (LINQ to XML) (Visual Basic)
+# <a name="performance-linq-to-xml-visual-basic"></a>Производительность (LINQ to XML) (Visual Basic)
 В данном разделе содержатся сведения о производительности в [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], касающиеся в основном производительности функционального построения и запросов.  
   
-## <a name="in-this-section"></a>Содержание  
- [Performance of Chained Queries (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/performance-of-chained-queries-linq-to-xml.md)  
+## <a name="in-this-section"></a>В этом разделе  
+ [Производительность цепочек запросов (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/performance-of-chained-queries-linq-to-xml.md)  
  Содержит сведения о производительности цепочек запросов [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
   
- [Atomized XName and XNamespace Objects (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/atomized-xname-and-xnamespace-objects-linq-to-xml.md)  
+ [Атомарные объекты XName и XNamespace (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/atomized-xname-and-xnamespace-objects-linq-to-xml.md)  
  Предоставляет сведения о производительности при атомизации объектов <xref:System.Xml.Linq.XName> и <xref:System.Xml.Linq.XNamespace>.  
   
- [Pre-Atomization of XName Objects (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/pre-atomization-of-xname-objects-linq-to-xml.md)  
+ [Предварительное разъединение объектов XName (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/pre-atomization-of-xname-objects-linq-to-xml.md)  
  Содержит описание техники предварительной атомизации объектов <xref:System.Xml.Linq.XName> и <xref:System.Xml.Linq.XNamespace>. В определенных сценариях это значительно повышает производительность.  
   
- [Statically Compiled Queries (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/statically-compiled-queries-linq-to-xml.md)  
+ [Статически скомпилированные запросы (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/statically-compiled-queries-linq-to-xml.md)  
  Содержит сведения о производительности статически скомпилированных запросов, которые противопоставляются анализу и обработке в средстве оценки выражений XPath.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Programming Guide (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)
+- [Руководством по программированию (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

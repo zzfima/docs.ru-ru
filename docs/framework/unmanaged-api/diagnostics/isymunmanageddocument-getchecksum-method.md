@@ -36,17 +36,17 @@ HRESULT GetCheckSum(
   
 ## <a name="parameters"></a>Параметры  
  `cData`  
- [in] The length of the buffer provided by the `data` parameter  
+ окне Длина буфера, предоставленного параметром `data`  
   
  `pcData`  
- [out] The size and length of the checksum, in bytes.  
+ заполняет Размер и длина контрольной суммы в байтах.  
   
  `data`  
- [out] The buffer that receives the checksum.  
+ заполняет Буфер, получающий контрольную сумму.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- S_OK if the method succeeds; otherwise, an error code.  
+ S_OK, если метод выполнен. в противном случае — код ошибки.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс ISymUnmanagedDocument](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

@@ -18,11 +18,11 @@ ms.locfileid: "74447664"
 # <a name="etw-events-in-the-common-language-runtime"></a>События в среде CLR (трассировка событий Windows)
 В общеязыковой среде выполнения (CLR) реализован полезный механизм трассировки событий (ETW), который позволяет получать диагностические сведения для широкого спектра событий отладки и профилирования. События трассировки событий Windows в среде CLR используют систему трассировки Windows ETW, дополняя существующие средства профилирования и отладки, реализованные в общеязыковой среде выполнения.  
   
- More information about ETW is available in the [Improve Debugging and Performance Tuning with ETW](https://docs.microsoft.com/archive/msdn-magazine/2007/april/event-tracing-improve-debugging-and-performance-tuning-with-etw) article. Сведения о программе Xperf можно найти в записи [Windows Performance Toolkit — Xperf](https://blogs.msdn.microsoft.com/ntdebugging/2008/04/03/windows-performance-toolkit-xperf/) блога NTDebugging.  
+ Дополнительные сведения о трассировке событий Windows доступны в статье [улучшение отладки и настройки производительности с помощью ETW](https://docs.microsoft.com/archive/msdn-magazine/2007/april/event-tracing-improve-debugging-and-performance-tuning-with-etw) . Сведения о программе Xperf можно найти в записи [Windows Performance Toolkit — Xperf](https://blogs.msdn.microsoft.com/ntdebugging/2008/04/03/windows-performance-toolkit-xperf/) блога NTDebugging.  
   
- The .NET Framework 4 or later is required for all the events described in the event topics. Минимальный поддерживаемый клиент — операционная система Windows Vista; минимальный поддерживаемый сервер — Windows Server 2008.  
+ Для всех событий, описанных в разделах о событиях, требуется .NET Framework 4 или более поздней версии. Минимальный поддерживаемый клиент — операционная система Windows Vista; минимальный поддерживаемый сервер — Windows Server 2008.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Контроль ведения журнала .NET Framework](controlling-logging.md)  
  Описывает средства и команды для захвата и просмотра событий трассировки событий Windows.  
   
@@ -35,6 +35,6 @@ ms.locfileid: "74447664"
  [События трассировки событий Windows в среде CLR](clr-etw-events.md)  
  Содержит подробные сведения о событиях трассировки событий Windows в среде CLR, а также соответствующих ключевых словах, уровнях и данных событий.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [События трассировки событий Windows в .NET Framework](etw-events.md)

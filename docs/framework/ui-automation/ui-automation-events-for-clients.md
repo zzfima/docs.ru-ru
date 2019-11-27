@@ -18,14 +18,14 @@ ms.locfileid: "74441508"
   
  В этом разделе описывается, как события [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] используются клиентами автоматизации пользовательского интерфейса.  
   
- В модели [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] клиенты могут подписываться на интересующие события. Это позволяет повысить производительность, устраняя необходимость постоянного опроса всех элементов [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] в системе на предмет изменения каких-либо сведений, структуры или состояния.  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] позволяет клиентам подписываться на интересующие события. Это позволяет повысить производительность, устраняя необходимость постоянного опроса всех элементов [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] в системе на предмет изменения каких-либо сведений, структуры или состояния.  
   
  Эффективность также повышается благодаря возможности прослушивания событий только в заданной области. Например, клиент может прослушивать события изменения фокуса во всех элементах [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] в дереве или только в одном элементе и его потомках.  
   
 > [!NOTE]
 > Не следует думать, что все возможные события вызываются поставщиком [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]. Например, не все изменения свойств приводят к созданию событий стандартными поставщиками прокси для элементов управления [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] и [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)].  
   
- For a broader view of [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] events, see [UI Automation Events Overview](ui-automation-events-overview.md).  
+ Более широкое представление [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] событий см. в разделе [Общие сведения о событиях модели автоматизации пользовательского интерфейса](ui-automation-events-overview.md).  
   
 <a name="Subscribing_to_Events"></a>   
 ## <a name="subscribing-to-events"></a>Подписка на события  
@@ -55,11 +55,11 @@ ms.locfileid: "74441508"
 |<xref:System.Windows.Automation.Automation.RemoveAutomationPropertyChangedEventHandler%2A>|Отменяет регистрацию обработчика событий, который был зарегистрирован с помощью <xref:System.Windows.Automation.Automation.AddAutomationPropertyChangedEventHandler%2A>.|  
 |<xref:System.Windows.Automation.Automation.RemoveAllEventHandlers%2A>|Отменяет регистрацию всех зарегистрированных обработчиков событий.|  
   
- For example code, see [Subscribe to UI Automation Events](subscribe-to-ui-automation-events.md).  
+ Пример кода см. [в разделе Подписка на события модели автоматизации пользовательского интерфейса](subscribe-to-ui-automation-events.md).  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Подписка на события модели автоматизации пользовательского интерфейса](subscribe-to-ui-automation-events.md)
 - [Общие сведения о событиях модели автоматизации пользовательского интерфейса](ui-automation-events-overview.md)
 - [Общие сведения о свойствах модели автоматизации пользовательского интерфейса](ui-automation-properties-overview.md)
-- [TrackFocus Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/FocusTracker)
+- [Пример Траккфокус](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/FocusTracker)

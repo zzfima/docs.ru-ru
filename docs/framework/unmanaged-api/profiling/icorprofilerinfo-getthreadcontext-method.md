@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74438761"
 ---
 # <a name="icorprofilerinfogetthreadcontext-method"></a>Метод ICorProfilerInfo::GetThreadContext
-Gets the context identity currently associated with the specified thread.  
+Возвращает удостоверение контекста, которое в настоящее время связано с указанным потоком.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -35,10 +35,10 @@ HRESULT GetThreadContext(
   
 ## <a name="parameters"></a>Параметры  
  `threadId`  
- [in] The ID of the thread.  
+ окне Идентификатор потока.  
   
  `pContextId`  
- [out] A pointer to the context ID currently associated with the specified thread. If the thread has no context currently associated with it, this function will return CORPROF_E_DATAINCOMPLETE.  
+ заполняет Указатель на идентификатор контекста, который в настоящее время связан с указанным потоком. Если с потоком не связан ни один контекст, эта функция возвратит CORPROF_E_DATAINCOMPLETE.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
@@ -49,6 +49,6 @@ HRESULT GetThreadContext(
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

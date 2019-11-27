@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448331"
 ---
 # <a name="isymunmanagedreadergetdocuments-method"></a>Метод ISymUnmanagedReader::GetDocuments
-Returns an array of all the documents defined in the symbol store.  
+Возвращает массив всех документов, определенных в хранилище символов.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,17 +40,17 @@ HRESULT GetDocuments (
  [in] Размер массива `pDocs`.  
   
  `pcDocs`  
- [out] A pointer to a variable that receives the array length.  
+ заполняет Указатель на переменную, которая получает длину массива.  
   
  `pDocs`  
- [out] A pointer to a variable that receives the document array.  
+ заполняет Указатель на переменную, которая получает массив документов.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK, если метод выполнен. в противном случае E_FAIL или другой код ошибки.  
   
 ## <a name="requirements"></a>Требования  
- **Header:** CorSym.idl, CorSym.h  
+ **Заголовок:** Корсим. idl, Корсим. h  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

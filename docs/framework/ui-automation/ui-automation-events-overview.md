@@ -28,7 +28,7 @@ ms.locfileid: "74441490"
 ## <a name="types-of-events"></a>Типы событий  
  События[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] делятся на следующие категории.  
   
-|событие|Описание|  
+|Событие|Описание|  
 |-----------|-----------------|  
 |Изменение свойства|Возникает, когда свойство элемента [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] или шаблона элемента управления изменяется. Например, если клиент должен отслеживать элемент управления "Флажок" приложения, он может зарегистрироваться для прослушивания события изменения свойства <xref:System.Windows.Automation.TogglePattern.TogglePatternInformation.ToggleState%2A> . Когда флажок устанавливается или снимается, поставщик вызывает событие и клиент может выполнить необходимые действия.|  
 |Действие элемента|Возникает при изменении результатов [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] конечным пользователем или программой, например при нажатии кнопки или ее вызове с помощью <xref:System.Windows.Automation.InvokePattern>.|  
@@ -81,7 +81,7 @@ ms.locfileid: "74441490"
   
  Список идентификаторов событий см. в разделе [UI Automation Events for Clients](ui-automation-events-for-clients.md).  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [События модели автоматизации пользовательского интерфейса для клиентов](ui-automation-events-for-clients.md)
 - [Реализация поставщика автоматизации пользовательского интерфейса на стороне сервера](server-side-ui-automation-provider-implementation.md)

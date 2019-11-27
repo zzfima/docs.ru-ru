@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448616"
 ---
 # <a name="isymencunmanagedmethodgetsourceextentindocument-method"></a>Метод ISymENCUnmanagedMethod::GetSourceExtentInDocument
-Gets the smallest start line and largest end line for the method in a specific document.  
+Возвращает наименьшую начальную строку и самую новую конечную строку для метода в определенном документе.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -36,20 +36,20 @@ HRESULT GetSourceExtentInDocument(
   
 ## <a name="parameters"></a>Параметры  
  `document`  
- [in] A pointer to the document.  
+ окне Указатель на документ.  
   
  `pstartLine`  
- [out] A pointer to a `ULONG32` that receives the start line.  
+ заполняет Указатель на `ULONG32`, который получает начальную строку.  
   
  `pendLine`  
- [out] A pointer to a `ULONG32` that receives the end line.  
+ заполняет Указатель на `ULONG32`, который получает конечную строку.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK, если метод выполнен. в противном случае E_FAIL или другой код ошибки.  
   
 ## <a name="requirements"></a>Требования  
- **Header:** CorSym.idl, CorSym.h  
+ **Заголовок:** Корсим. idl, Корсим. h  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс ISymENCUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)

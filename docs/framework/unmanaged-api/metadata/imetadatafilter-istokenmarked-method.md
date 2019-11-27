@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74440433"
 ---
 # <a name="imetadatafilteristokenmarked-method"></a>Метод IMetaDataFilter::IsTokenMarked
-Gets a value indicating whether the specified metadata token has been marked as processed.  
+Возвращает значение, указывающее, помечен ли заданный маркер метаданных как обработанный.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -36,20 +36,20 @@ HRESULT IsTokenMarked (
   
 ## <a name="parameters"></a>Параметры  
  `tk`  
- [in] The token to examine for a processing mark.  
+ окне Токен для проверки на наличие метки обработки.  
   
  `pIsMarked`  
- [out] A value that is `true` if `tk` has been processed; otherwise `false`.  
+ заполняет Значение, которое `true` при обработке `tk`. в противном случае `false`.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Заголовок:** COR. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Библиотека:** Используется в качестве ресурса в MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс IMetaDataFilter](../../../../docs/framework/unmanaged-api/metadata/imetadatafilter-interface.md)

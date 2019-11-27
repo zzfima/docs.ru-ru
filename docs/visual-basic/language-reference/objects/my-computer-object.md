@@ -14,17 +14,17 @@ ms.locfileid: "74332112"
 # <a name="mycomputer-object"></a>Объект My.Computer
 Включает свойства для управления компонентами компьютера, такими как звук, часы, клавиатура, файловая система и т. д.  
   
-## <a name="remarks"></a>Заметки  
- Сведения о методах и свойствах объекта `My.Computer` см. в разделе <xref:Microsoft.VisualBasic.Devices.Computer>. The base class <xref:Microsoft.VisualBasic.Devices.ServerComputer> provides the members that are available in all projects.  
+## <a name="remarks"></a>Примечания  
+ Сведения о методах и свойствах объекта `My.Computer` см. в разделе <xref:Microsoft.VisualBasic.Devices.Computer>. Базовый класс <xref:Microsoft.VisualBasic.Devices.ServerComputer> предоставляет элементы, доступные во всех проектах.  
   
 ## <a name="requirements"></a>Требования  
  **Пространство имен:** <xref:Microsoft.VisualBasic.Devices>  
   
- **Class:** <xref:Microsoft.VisualBasic.Devices.Computer> (the base class <xref:Microsoft.VisualBasic.Devices.ServerComputer> provides the members that are available in all projects).  
+ **Класс:** <xref:Microsoft.VisualBasic.Devices.Computer> (базовый класс <xref:Microsoft.VisualBasic.Devices.ServerComputer> предоставляет элементы, доступные во всех проектах).  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **Сборка:** Библиотека времени выполнения Visual Basic (в Microsoft. VisualBasic. dll)  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Объект My.Computer.Audio](../../../visual-basic/language-reference/objects/my-computer-audio-object.md)
 - [Объект My.Computer.Clipboard](../../../visual-basic/language-reference/objects/my-computer-clipboard-object.md)

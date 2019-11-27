@@ -12,16 +12,16 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347007"
 ---
 # <a name="permission-denied-visual-basic"></a>Доступ запрещен (Visual Basic)
-An attempt was made to write to a write-protected disk or to access a locked file.  
+Предпринята попытка записи на диск, защищенный с помощью записи, или для доступа к заблокированному файлу.  
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  
   
-1. To open a write-protected file, change the write-protection attribute of the file.  
+1. Чтобы открыть защищенный от записи файл, измените атрибут защиты записи файла.  
   
-2. Make sure that another process has not locked the file, and wait to open the file until the other process releases it.  
+2. Убедитесь, что файл не заблокирован другим процессом, и дождитесь открытия файла, пока другой процесс не выпустит его.  
   
-3. To access the registry, check that your user permissions include this type of registry access.  
+3. Чтобы получить доступ к реестру, убедитесь, что разрешения пользователя включают этот тип доступа к реестру.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Типы ошибок](../../../visual-basic/programming-guide/language-features/error-types.md)

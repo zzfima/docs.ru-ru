@@ -1,5 +1,5 @@
 ---
-title: AssemblyAttributesGoHereM Class (System.Runtime.CompilerServices)
+title: Класс Ассембляттрибутесгохерем (System. Runtime. CompilerServices)
 ms.date: 03/30/2017
 api_name:
 - System.Runtime.CompilerServices.AssemblyAttributesGoHereM
@@ -22,7 +22,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446635"
 ---
-# <a name="assemblyattributesgoherem-class"></a>AssemblyAttributesGoHereM Class
+# <a name="assemblyattributesgoherem-class"></a>Класс Ассембляттрибутесгохерем
 
 Используется ALink как заполнитель для хранения сведений о пользовательских атрибутах.
 
@@ -32,19 +32,19 @@ ms.locfileid: "74446635"
 internal sealed class AssemblyAttributesGoHereM
 ```
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Примечания
 
 Ссылки на этот тип можно включать в модули NETMODULE, источник которых содержат пользовательские атрибуты сборки. При построении манифеста сборки из одного или нескольких файлов, содержащих ссылки на эти NETMODULE, ALink использует сведения, подключенные к этим ссылкам, для выдачи фактических пользовательских атрибутов. Таким образом, экземпляр этого типа никогда не создается, а ссылки на него используются только как часть процесса сборки и бесполезны в окончательной сборке.
 
 Ссылки на этот тип указывают пользовательские атрибуты, не связанные с безопасностью, но многократного использования.
 
-These types are marked "internal" within the .NET Framework and are located in the <xref:System.Runtime.CompilerServices> namespace.
+Эти типы помечены как "внутренние" в .NET Framework и находятся в пространстве имен <xref:System.Runtime.CompilerServices>.
 
 ## <a name="requirements"></a>Требования
 
 mscorlib.dll
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [AssemblyAttributesGoHere](assemblyattributesgohere.md)
 - [AssemblyAttributesGoHereS](assemblyattributesgoheres.md)

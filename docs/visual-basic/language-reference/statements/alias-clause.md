@@ -14,17 +14,17 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349150"
 ---
 # <a name="alias-clause-visual-basic"></a>Предложение Alias (Visual Basic)
-Indicates that an external procedure has another name in its DLL.  
+Указывает, что у внешней процедуры есть другое имя в своей библиотеке DLL.  
   
-## <a name="remarks"></a>Заметки  
- The `Alias` keyword can be used in this context:  
+## <a name="remarks"></a>Примечания  
+ В этом контексте можно использовать ключевое слово `Alias`:  
   
  [Оператор Declare](../../../visual-basic/language-reference/statements/declare-statement.md)  
   
- In the following example, the `Alias` keyword is used to provide the name of the function in advapi32.dll, `GetUserNameA`, that `getUserName` is used in place of in this example. Function `getUserName` is called in sub `getUser`, which displays the name of the current user.  
+ В следующем примере ключевое слово `Alias` используется для предоставления имени функции в advapi32. dll, `GetUserNameA`, которая `getUserName` используется вместо в этом примере. Функция `getUserName` вызывается в под`getUser`, которая отображает имя текущего пользователя.  
   
  [!code-vb[VbVbalrStatements#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#15)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Ключевые слова](../../../visual-basic/language-reference/keywords/index.md)

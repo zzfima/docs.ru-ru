@@ -23,9 +23,9 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74434877"
 ---
 # <a name="iceegengetsectionblock-method"></a>Метод ICeeGen::GetSectionBlock
-Gets a section block of the code base.  
+Возвращает блок базы кода.  
   
- This method is obsolete and should not be used.  
+ Этот метод устарел и не должен использоваться.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,29 +40,29 @@ HRESULT GetSectionBlock (
   
 ## <a name="parameters"></a>Параметры  
  `section`  
- [in] The section from which to retrieve a block of the code base.  
+ окне Раздел, из которого извлекается блок базы кода.  
   
  `len`  
- [in] The length of the block to be retrieved.  
+ окне Длина извлекаемого блока.  
   
  `align`  
- [in] The byte, relative to the beginning of the section, with which to align the first byte of the block. This is the position of the block within the section.  
+ окне Байт относительно начала раздела, с которым будет выравняться первый байт блока. Это расположение блока в разделе.  
   
  `ppBytes`  
- [out] A pointer to a location that receives the address of the retrieved block.  
+ заполняет Указатель на расположение, которое получает адрес полученного блока.  
   
-## <a name="remarks"></a>Заметки  
- Call `GetSectionBlock` only if you have special section requirements that are not handled by other methods.  
+## <a name="remarks"></a>Примечания  
+ Вызывайте `GetSectionBlock` только при наличии особых требований к разделам, которые не обрабатываются другими методами.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Заголовок:** COR. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Библиотека:** Используется в качестве ресурса в MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

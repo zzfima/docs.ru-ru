@@ -23,9 +23,9 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74427962"
 ---
 # <a name="isymunmanagedwritergetdebuginfo-method"></a>Метод ISymUnmanagedWriter::GetDebugInfo
-Returns the information necessary for a compiler to write the debug directory entry in the portable executable (PE) file header. The symbol writer fills out all fields except for `TimeDateStamp` and `PointerToRawData`. (The compiler is responsible for setting these two fields appropriately.)  
+Возвращает сведения, необходимые компилятору для записи записи каталога отладки в заголовке переносимого исполняемого файла (PE). Средство записи символов заполняет все поля, кроме `TimeDateStamp` и `PointerToRawData`. (Компилятор отвечает за установку этих двух полей соответствующим образом.)  
   
- A compiler should call this method, emit the data blob to the PE file, set the `PointerToRawData` field in the IMAGE_DEBUG_DIRECTORY to point to the emitted data, and write the IMAGE_DEBUG_DIRECTORY to the PE file. The compiler should also set the `TimeDateStamp` field to equal the `TimeDateStamp` of the PE file being generated.  
+ Компилятор должен вызывать этот метод, выдавать большой двоичный объект данных в PE-файл, устанавливать поле `PointerToRawData` в IMAGE_DEBUG_DIRECTORY, чтобы указывать на выпущенные данные, и записывать IMAGE_DEBUG_DIRECTORY в PE-файл. Компилятор также должен установить `TimeDateStamp` поле, равное `TimeDateStamp` создаваемого PE.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,23 +40,23 @@ HRESULT GetDebugInfo(
   
 ## <a name="parameters"></a>Параметры  
  `pIDD`  
- [in, out] A pointer to an IMAGE_DEBUG_DIRECTORY that the symbol writer will fill out.  
+ [вход, выход] Указатель на IMAGE_DEBUG_DIRECTORY, который средство записи символов будет заполнять.  
   
  `cData`  
- [in] A `DWORD` that contains the size of the debug data.  
+ окне `DWORD`, который содержит размер отладочных данных.  
   
  `pcData`  
- [out] A pointer to a `DWORD` that receives the size of the buffer required to contain the debug data.  
+ заполняет Указатель на `DWORD`, который получает размер буфера, необходимого для хранения данных отладки.  
   
  `data`  
- [out] A pointer to a buffer that is large enough to hold the debug data for the symbol store.  
+ заполняет Указатель на буфер, достаточно большой для хранения отладочных данных для хранилища символов.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK, если метод выполнен. в противном случае E_FAIL или другой код ошибки.  
   
 ## <a name="requirements"></a>Требования  
- **Header:** CorSym.idl, CorSym.h  
+ **Заголовок:** Корсим. idl, Корсим. h  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

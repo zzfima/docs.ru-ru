@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74432450"
 ---
 # <a name="imetadataemitsetparent-method"></a>Метод IMetaDataEmit::SetParent
-Establishes that the specified member, as defined by a prior call to [IMetaDataEmit::DefineMemberRef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definememberref-method.md), is a member of the specified type, as defined by a prior call to [IMetaDataEmit::DefineTypeDef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md).  
+Устанавливает, что указанный элемент, как определено в предыдущем вызове [IMetaDataEmit::D ефинемемберреф](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definememberref-method.md), является членом указанного типа, как определено в предыдущем вызове [IMetaDataEmit::D ефинетипедеф](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -36,21 +36,21 @@ HRESULT SetParent (
   
 ## <a name="parameters"></a>Параметры  
  `mr`  
- [in] The `mdMemberRef` token to receive a new parent.  
+ окне Токен `mdMemberRef` для получения нового родителя.  
   
  `tk`  
- [in] The `mdToken` for the new parent.  
+ окне `mdToken` для нового родителя.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Заголовок:** COR. h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **Библиотека:** Используется в качестве ресурса в MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [Интерфейс IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

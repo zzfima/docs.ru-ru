@@ -65,8 +65,8 @@ End Class
 
 ## <a name="compiling-the-code"></a>Компиляция кода
 
-Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.
+Создайте проект консольного приложения VB.NET с помощью инструкции `Imports` для пространства имен System. LINQ.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [LINQ and Strings (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [LINQ и строки (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)

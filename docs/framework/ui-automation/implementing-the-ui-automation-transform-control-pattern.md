@@ -37,14 +37,14 @@ ms.locfileid: "74447053"
 ## <a name="required-members-for-itransformprovider"></a>Обязательные члены для ITransformProvider  
  Следующие свойства и методы обязательны для реализации <xref:System.Windows.Automation.Provider.ITransformProvider>.  
   
-|Обязательные члены|Тип члена|Примечания|  
+|Обязательные члены|Тип элемента|Примечания|  
 |----------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.ITransformProvider.CanMove%2A>|свойство;|Отсутствуют|  
-|<xref:System.Windows.Automation.Provider.ITransformProvider.CanResize%2A>|свойство;|Отсутствуют|  
-|<xref:System.Windows.Automation.Provider.ITransformProvider.CanRotate%2A>|свойство;|Отсутствуют|  
-|<xref:System.Windows.Automation.Provider.ITransformProvider.Move%2A>|Метод|Отсутствуют|  
-|<xref:System.Windows.Automation.Provider.ITransformProvider.Resize%2A>|Метод|Отсутствуют|  
-|<xref:System.Windows.Automation.Provider.ITransformProvider.Rotate%2A>|Метод|Отсутствуют|  
+|<xref:System.Windows.Automation.Provider.ITransformProvider.CanMove%2A>|Свойство|Нет|  
+|<xref:System.Windows.Automation.Provider.ITransformProvider.CanResize%2A>|Свойство|Нет|  
+|<xref:System.Windows.Automation.Provider.ITransformProvider.CanRotate%2A>|Свойство|Нет|  
+|<xref:System.Windows.Automation.Provider.ITransformProvider.Move%2A>|Метод|Нет|  
+|<xref:System.Windows.Automation.Provider.ITransformProvider.Resize%2A>|Метод|Нет|  
+|<xref:System.Windows.Automation.Provider.ITransformProvider.Rotate%2A>|Метод|Нет|  
   
  Этот шаблон элемента управления не имеет связанных событий.  
   
@@ -54,11 +54,11 @@ ms.locfileid: "74447053"
   
 |Тип исключения|Условие|  
 |--------------------|---------------|  
-|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.ITransformProvider.Move%2A><br /><br /> -   If the <xref:System.Windows.Automation.TransformPatternIdentifiers.CanMoveProperty> is false.|  
-|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.ITransformProvider.Resize%2A><br /><br /> -   If the <xref:System.Windows.Automation.TransformPatternIdentifiers.CanResizeProperty> is false.|  
-|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.ITransformProvider.Rotate%2A><br /><br /> -   If the <xref:System.Windows.Automation.TransformPatternIdentifiers.CanRotateProperty> is false.|  
+|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.ITransformProvider.Move%2A><br /><br /> — Если <xref:System.Windows.Automation.TransformPatternIdentifiers.CanMoveProperty> имеет значение false.|  
+|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.ITransformProvider.Resize%2A><br /><br /> — Если <xref:System.Windows.Automation.TransformPatternIdentifiers.CanResizeProperty> имеет значение false.|  
+|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.ITransformProvider.Rotate%2A><br /><br /> — Если <xref:System.Windows.Automation.TransformPatternIdentifiers.CanRotateProperty> имеет значение false.|  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Общие сведения о шаблонах элементов управления модели автоматизации пользовательского интерфейса](ui-automation-control-patterns-overview.md)
 - [Поддержка шаблонов элементов управления в поставщике автоматизации пользовательского интерфейса](support-control-patterns-in-a-ui-automation-provider.md)

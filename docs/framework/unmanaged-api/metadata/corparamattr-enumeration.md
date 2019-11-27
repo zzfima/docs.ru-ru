@@ -46,21 +46,21 @@ typedef enum CorParamAttr {
   
 |Член|Описание|  
 |------------|-----------------|  
-|`pdIn`|Specifies that the parameter is passed into the method call.|  
-|`pdOut`|Specifies that the parameter is passed from the method return.|  
-|`pdOptional`|Specifies that the parameter is optional.|  
-|`pdReservedMask`|Reserved for internal use by the common language runtime.|  
-|`pdHasDefault`|Specifies that the parameter has a default value.|  
-|`pdHasFieldMarshal`|Specifies that the parameter has marshaling information.|  
+|`pdIn`|Указывает, что параметр передается в вызов метода.|  
+|`pdOut`|Указывает, что параметр передается из возвращаемого методом значения.|  
+|`pdOptional`|Указывает, что параметр является необязательным.|  
+|`pdReservedMask`|Зарезервировано для внутреннего использования средой CLR.|  
+|`pdHasDefault`|Указывает, что параметр имеет значение по умолчанию.|  
+|`pdHasFieldMarshal`|Указывает, что параметр содержит сведения об упаковке.|  
 |`pdUnused`|Не используется.|  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorHdr.h  
+ **Заголовок:** Корхдр. h  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Перечисления метаданных](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448594"
 ---
 # <a name="call_id-structure"></a>Структура CALL_ID
-Provides information to a debugger about a function that is being called. See the [INotifySink2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md) interface for more information.  
+Предоставляет сведения отладчику о вызываемой функции. Дополнительные сведения см. в интерфейсе [INotifySink2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md) .  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -42,17 +42,17 @@ typedef struct tagCALL_ID
   
 |Член|Описание|  
 |------------|-----------------|  
-|`szMachine`|Identifies the machine that is making the call.|  
-|`dwPid`|Identifies the machine processor.|  
-|`pUserThread`|Identifies the thread that is executing the call.|  
-|`addrStackPointer`|Specifies the address of the call stack.|  
-|`szEntryPoint`|Specifies the address of the call.|  
-|`szDestinationMachine`|Identifies the machine that will execute the call.|  
+|`szMachine`|Идентифицирует компьютер, выполняющий вызов.|  
+|`dwPid`|Идентифицирует процессор компьютера.|  
+|`pUserThread`|Идентифицирует поток, который исполняет вызов.|  
+|`addrStackPointer`|Задает адрес стека вызовов.|  
+|`szEntryPoint`|Задает адрес вызова.|  
+|`szDestinationMachine`|Определяет компьютер, который будет выполнять вызов.|  
   
 ## <a name="requirements"></a>Требования  
- **Header:** ProtocolNotify2.idl  
+ **Заголовок:** ProtocolNotify2. idl  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс INotifySink2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)
 - [Структуры хранилища символов диагностики](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-structures.md)

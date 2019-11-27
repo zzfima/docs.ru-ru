@@ -9,7 +9,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349355"
 ---
-# <a name="serializing-to-an-xmlreader-invoking-xslt-visual-basic"></a>Serializing to an XmlReader (Invoking XSLT) (Visual Basic)
+# <a name="serializing-to-an-xmlreader-invoking-xslt-visual-basic"></a>Сериализация в XmlReader (вызов XSLT) (Visual Basic)
 При использовании средств взаимодействия <xref:System.Xml?displayProperty=nameWithType>, реализованных в [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], можно применять <xref:System.Xml.Linq.XNode.CreateReader%2A> для создания <xref:System.Xml.XmlReader>. Модуль, считывающий из этого <xref:System.Xml.XmlReader>, считывает узлы XML-дерева и обрабатывает их соответствующим образом.  
   
 ## <a name="invoking-an-xslt-transformation"></a>Запуск преобразования XSLT  
@@ -60,6 +60,6 @@ Console.WriteLine(newTree)
 </Root>  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Serializing XML Trees (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/serializing-xml-trees.md)
+- [Сериализация деревьев XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/serializing-xml-trees.md)

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448385"
 ---
 # <a name="isymencunmanagedmethodgetdocumentsformethod-method"></a>Метод ISymENCUnmanagedMethod::GetDocumentsForMethod
-Gets the documents that this method has lines in.  
+Возвращает документы, в которых у этого метода есть строки.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -36,20 +36,20 @@ HRESULT GetDocumentsForMethod(
   
 ## <a name="parameters"></a>Параметры  
  `cDocs`  
- [in] The length of the buffer pointed to by `pcDocs`.  
+ окне Длина буфера, на который указывает `pcDocs`.  
   
  `pcDocs`  
- [out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the documents.  
+ заполняет Указатель на `ULONG32`, который получает размер (в символах) буфера, необходимого для хранения документов.  
   
  `documents`  
- [in] The buffer that contains the documents.  
+ окне Буфер, содержащий документы.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- S_OK if the method succeeds; otherwise, an error code.  
+ S_OK, если метод выполнен. в противном случае — код ошибки.  
   
 ## <a name="requirements"></a>Требования  
- **Header:** CorSym.idl, CorSym.h  
+ **Заголовок:** Корсим. idl, Корсим. h  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс ISymENCUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)

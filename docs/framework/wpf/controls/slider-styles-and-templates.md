@@ -22,7 +22,7 @@ ms.locfileid: "74283391"
 ## <a name="slider-parts"></a>Элементы Slider  
  В следующей таблице перечислены именованные части для элемента управления <xref:System.Windows.Controls.Slider>.  
   
-|Отделение|Type|Описание|  
+|Отделение|Тип|Описание|  
 |-|-|-|  
 |PART_Track|<xref:System.Windows.Controls.Primitives.Track>|Контейнер для элемента, указывающий расположение <xref:System.Windows.Controls.Slider>.|  
 |PART_SelectionRange|<xref:System.Windows.FrameworkElement>|Элемент, отображающий диапазон выбора по <xref:System.Windows.Controls.Slider>.  Диапазон выбора виден только в том случае, если свойство <xref:System.Windows.Controls.Slider.IsSelectionRangeEnabled%2A> имеет значение `true`.|  
@@ -32,12 +32,12 @@ ms.locfileid: "74283391"
   
 |Имя VisualState|Имя VisualStateGroup|Описание|  
 |----------------------|---------------------------|-----------------|  
-|Норм.|CommonStates|Состояние по умолчанию.|  
+|Нормальный|CommonStates|Состояние по умолчанию.|  
 |MouseOver|CommonStates|Указатель мыши расположен в элементе управления.|  
 |Отключено.|CommonStates|Элемент управления отключен.|  
 |Focused|FocusStates|Элемент управления имеет фокус.|  
 |Без фокуса ввода|FocusStates|Элемент управления не имеет фокуса.|  
-|Valid|ValidationStates|Элемент управления использует класс <xref:System.Windows.Controls.Validation>, а <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> присоединенным свойством является `false`.|  
+|Допустимо|ValidationStates|Элемент управления использует класс <xref:System.Windows.Controls.Validation>, а <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> присоединенным свойством является `false`.|  
 |InvalidFocused|ValidationStates|Присоединенное <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> свойство имеет `true` элемент управления имеет фокус.|  
 |InvalidUnfocused|ValidationStates|Присоединенное <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> свойство имеет `true` элемент управления не имеет фокуса.|  
   
@@ -52,7 +52,7 @@ ms.locfileid: "74283391"
   
  Полный пример см. в разделе [Пример задания стиля с помощью ControlTemplates](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - <xref:System.Windows.FrameworkElement.Style%2A>
 - <xref:System.Windows.Controls.ControlTemplate>

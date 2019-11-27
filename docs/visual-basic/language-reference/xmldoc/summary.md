@@ -12,8 +12,8 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352201"
 ---
-# <a name="summary-visual-basic"></a>\<summary> (Visual Basic)
-Specifies the summary of the member.  
+# <a name="summary-visual-basic"></a>> \<сводки (Visual Basic)
+Указывает сводку элемента.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -25,18 +25,18 @@ Specifies the summary of the member.
  `description`  
  Сводка объекта.  
   
-## <a name="remarks"></a>Заметки  
- Use the `<summary>` tag to describe a type or a type member. Чтобы добавить дополнительную информацию в описание типа, используйте [\<remarks>](../../../visual-basic/language-reference/xmldoc/remarks.md).  
+## <a name="remarks"></a>Примечания  
+ Используйте тег `<summary>` для описания типа или члена типа. Чтобы добавить дополнительную информацию в описание типа, используйте [\<remarks>](../../../visual-basic/language-reference/xmldoc/remarks.md).  
   
- The text for the `<summary>` tag is the only source of information about the type in IntelliSense, and is also displayed in the Object Browser. For information about the Object Browser, see [Viewing the Structure of Code](/visualstudio/ide/viewing-the-structure-of-code).  
+ Текст для тега `<summary>` является единственным источником сведений о типе в IntelliSense и также отображается в обозревателе объектов. Дополнительные сведения об обозревателе объектов см. [в разделе Просмотр структуры кода](/visualstudio/ide/viewing-the-structure-of-code).  
   
  Чтобы обработать комментарии документации и сохранить их в файл, выполняйте сборку с параметром [-doc](../../../visual-basic/reference/command-line-compiler/doc.md).  
   
 ## <a name="example"></a>Пример  
- This example uses the `<summary>` tag to describe the `ResetCounter` method and `Counter` property.  
+ В этом примере используется тег `<summary>` для описания метода `ResetCounter` и свойства `Counter`.  
   
  [!code-vb[VbVbcnXmlDocComments#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#1)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [XML-теги для комментариев](../../../visual-basic/language-reference/xmldoc/index.md)

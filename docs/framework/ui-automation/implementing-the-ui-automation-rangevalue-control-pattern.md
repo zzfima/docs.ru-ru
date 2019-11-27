@@ -29,21 +29,21 @@ ms.locfileid: "74435104"
   
 - Элементы управления, имеющие неоднозначные значения диапазона, такие как индикаторы выполнения или ползунки, должны нормализовать эти значения.  
   
- ![Progress bar.](./media/uia-rangevaluepattern-progress-bar.PNG "UIA_RangeValuePattern_Progress_Bar")  
+ ![Индикатор выполнения.](./media/uia-rangevaluepattern-progress-bar.PNG "UIA_RangeValuePattern_Progress_Bar")  
 Пример индикатора выполнения, где значение имеет тип Integer, а минимальное и максимальное значения свойства нормализованы до 0 и 100 соответственно  
   
 <a name="Required_Members_for_the_IRangeValueProvider"></a>   
 ## <a name="required-members-for-irangevalueprovider"></a>Обязательные члены для IRangeValueProvider  
   
-|Обязательный член|Тип члена|Примечания|  
+|Обязательный член|Тип элемента|Примечания|  
 |---------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.RangeValuePattern.IsReadOnlyProperty>|свойство;|Отсутствуют|  
-|<xref:System.Windows.Automation.RangeValuePattern.ValueProperty>|свойство;|Отсутствуют|  
-|<xref:System.Windows.Automation.RangeValuePattern.LargeChangeProperty>|свойство;|Отсутствуют|  
-|<xref:System.Windows.Automation.RangeValuePattern.SmallChangeProperty>|свойство;|Отсутствуют|  
-|<xref:System.Windows.Automation.RangeValuePattern.MaximumProperty>|свойство;|Отсутствуют|  
-|<xref:System.Windows.Automation.RangeValuePattern.MinimumProperty>|свойство;|Отсутствуют|  
-|<xref:System.Windows.Automation.RangeValuePattern.SetValue%2A>|Методы|Отсутствуют|  
+|<xref:System.Windows.Automation.RangeValuePattern.IsReadOnlyProperty>|Свойство|Нет|  
+|<xref:System.Windows.Automation.RangeValuePattern.ValueProperty>|Свойство|Нет|  
+|<xref:System.Windows.Automation.RangeValuePattern.LargeChangeProperty>|Свойство|Нет|  
+|<xref:System.Windows.Automation.RangeValuePattern.SmallChangeProperty>|Свойство|Нет|  
+|<xref:System.Windows.Automation.RangeValuePattern.MaximumProperty>|Свойство|Нет|  
+|<xref:System.Windows.Automation.RangeValuePattern.MinimumProperty>|Свойство|Нет|  
+|<xref:System.Windows.Automation.RangeValuePattern.SetValue%2A>|Методы|Нет|  
   
  Этот шаблон элемента управления не имеет связанных событий.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "74435104"
 |--------------------|---------------|  
 |<xref:System.ArgumentOutOfRangeException>|Метод<xref:System.Windows.Automation.RangeValuePattern.SetValue%2A> вызывается со значением либо больше, чем <xref:System.Windows.Automation.RangeValuePattern.MaximumProperty> , либо меньше, чем <xref:System.Windows.Automation.RangeValuePattern.MinimumProperty>.|  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Общие сведения о шаблонах элементов управления модели автоматизации пользовательского интерфейса](ui-automation-control-patterns-overview.md)
 - [Поддержка шаблонов элементов управления в поставщике автоматизации пользовательского интерфейса](support-control-patterns-in-a-ui-automation-provider.md)

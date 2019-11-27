@@ -23,9 +23,9 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448097"
 ---
 # <a name="iceegengetsectioncreate-method"></a>Метод ICeeGen::GetSectionCreate
-Generates and gets a code section using the specified name and flag values.  
+Создает и получает раздел кода, используя указанные значения имени и флага.  
   
- This method is obsolete and should not be used.  
+ Этот метод устарел и не должен использоваться.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,26 +39,26 @@ HRESULT GetSectionCreate (
   
 ## <a name="parameters"></a>Параметры  
  `name`  
- [in] A pointer to a string that specifies the name of the section to be created.  
+ окне Указатель на строку, указывающую имя создаваемого раздела.  
   
  `flags`  
- [in] Flags that specify options.  
+ окне Флаги, указывающие параметры.  
   
  `section`  
- [out] A pointer to the newly created code section.  
+ заполняет Указатель на только что созданный раздел кода.  
   
-## <a name="remarks"></a>Заметки  
- Call `GetSectionCreate` only if you have special section requirements that are not handled by other methods.  
+## <a name="remarks"></a>Примечания  
+ Вызывайте `GetSectionCreate` только при наличии особых требований к разделам, которые не обрабатываются другими методами.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Заголовок:** COR. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Библиотека:** Используется в качестве ресурса в MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

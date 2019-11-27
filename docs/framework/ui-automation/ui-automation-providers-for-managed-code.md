@@ -19,9 +19,9 @@ ms.locfileid: "74441481"
 > [!NOTE]
 > Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Последние сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]см. в разделе [API автоматизации Windows. Автоматизация пользовательского интерфейса](/windows/win32/winauto/entry-uiauto-win32).  
   
- This section contains overviews and how-to topics that describe how to write [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] providers for custom [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] elements.  
+ Этот раздел содержит обзоры и инструкции, описывающие написание поставщиков [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] для пользовательских элементов [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)].  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Реализация поставщика автоматизации пользовательского интерфейса на стороне сервера](server-side-ui-automation-provider-implementation.md)  
  [Общие сведения о поставщиках автоматизации пользовательского интерфейса](ui-automation-providers-overview.md)  
  [Реализация клиентского поставщика автоматизации пользовательского интерфейса](client-side-ui-automation-provider-implementation.md)  

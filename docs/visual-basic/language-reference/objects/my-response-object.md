@@ -15,19 +15,19 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350655"
 ---
 # <a name="myresponse-object"></a>Объект My.Response
-Gets the <xref:System.Web.HttpResponse> object associated with the <xref:System.Web.UI.Page>. Этот объект позволяет отправлять клиенту данные HTTP-ответа и содержит сведения об этом ответе.  
+Возвращает объект <xref:System.Web.HttpResponse>, связанный с <xref:System.Web.UI.Page>. Этот объект позволяет отправлять клиенту данные HTTP-ответа и содержит сведения об этом ответе.  
   
-## <a name="remarks"></a>Заметки  
- The `My.Response` object contains the current <xref:System.Web.HttpResponse> object associated with the page.  
+## <a name="remarks"></a>Примечания  
+ Объект `My.Response` содержит текущий объект <xref:System.Web.HttpResponse>, связанный со страницей.  
   
- The `My.Response` object is only available for ASP.NET applications.  
+ Объект `My.Response` доступен только для приложений ASP.NET.  
   
 ## <a name="example"></a>Пример  
- The following example gets the header collection from the `My.Request` object and uses the `My.Response` object to write it to the ASP.NET page.  
+ Следующий пример получает коллекцию заголовков из объекта `My.Request` и использует объект `My.Response` для записи на страницу ASP.NET.  
   
  [!code-aspx-vb[VbVbalrMyWeb#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyWeb/VB/Default.aspx#1)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - <xref:System.Web.HttpResponse>
 - [Объект My.Request](../../../visual-basic/language-reference/objects/my-request-object.md)

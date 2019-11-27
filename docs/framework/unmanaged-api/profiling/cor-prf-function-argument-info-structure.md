@@ -38,26 +38,26 @@ typedef struct _COR_PRF_FUNCTION_ARGUMENT_INFO {
   
 |Член|Описание|  
 |------------|-----------------|  
-|`numRanges`|The number of blocks of arguments. That is, this value is the number of [COR_PRF_FUNCTION_ARGUMENT_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-range-structure.md) structures in the `ranges` array.|  
-|`totalArgumentSize`|The total size of all arguments. In other words, this value is the sum of the argument lengths.|  
-|`ranges`|An array of `COR_PRF_FUNCTION_ARGUMENT_RANGE` structures, each of which represents one block of function arguments.|  
+|`numRanges`|Число блоков аргументов. То есть это значение равно количеству структур [COR_PRF_FUNCTION_ARGUMENT_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-range-structure.md) в массиве `ranges`.|  
+|`totalArgumentSize`|Общий размер всех аргументов. Иными словами, это значение является суммой длин аргументов.|  
+|`ranges`|Массив структур `COR_PRF_FUNCTION_ARGUMENT_RANGE`, каждый из которых представляет один блок аргументов функции.|  
   
-## <a name="remarks"></a>Заметки  
- A function may have many arguments. Those arguments might not be stored contiguously in memory. You might have a block of three arguments in one place, a block of two arguments in another place, and a final block of one argument in a different place. These arguments are all for the same function; they're just stored in different places.  
+## <a name="remarks"></a>Примечания  
+ У функции может быть несколько аргументов. Эти аргументы могут не храниться непрерывно в памяти. У вас может быть блок из трех аргументов в одном месте, блок из двух аргументов в другом месте и последний блок одного аргумента в другом месте. Все эти аргументы используются для одной и той же функции. они просто хранятся в разных местах.  
   
- The `COR_PRF_FUNCTION_ARGUMENT_INFO` structure represents all the arguments of a single function. It uses an array to reference all the blocks of function arguments. So, for a single function, you have a single `COR_PRF_FUNCTION_ARGUMENT_INFO` structure, which references multiple `COR_PRF_FUNCTION_ARGUMENT_RANGE` structures, each of which points to one or more function arguments.  
+ Структура `COR_PRF_FUNCTION_ARGUMENT_INFO` представляет все аргументы одной функции. Он использует массив для ссылки на все блоки аргументов функции. Таким образом, для одной функции имеется одна структура `COR_PRF_FUNCTION_ARGUMENT_INFO`, которая ссылается на несколько `COR_PRF_FUNCTION_ARGUMENT_RANGE`ных структур, каждая из которых указывает на один или несколько аргументов функции.  
   
- Arguments that are stored in registers are spilled into memory to build the structures.  
+ Аргументы, хранимые в регистрах, загружаются в память для построения структур.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl  
+ **Заголовок:** CorProf. idl  
   
  **Библиотека:** CorGuids.lib  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Структуры профилирования](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)

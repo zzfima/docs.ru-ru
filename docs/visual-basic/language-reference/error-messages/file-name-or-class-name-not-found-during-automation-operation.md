@@ -12,12 +12,12 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353727"
 ---
 # <a name="file-name-or-class-name-not-found-during-automation-operation-visual-basic"></a>Имя файла или класса не найдено в ходе выполнения операции автоматизации (Visual Basic)
-The name specified for file name or class in a call to the `GetObject` function could not be found.  
+Не удалось найти имя, указанное для имени файла или класса в вызове функции `GetObject`.  
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  
   
-- Check the names and try again. Make sure the name used for the `class` parameter matches that registered with the system.  
+- Проверьте имена и повторите попытку. Убедитесь, что имя, используемое для параметра `class`, совпадает с именем, зарегистрированным в системе.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Типы ошибок](../../../visual-basic/programming-guide/language-features/error-types.md)

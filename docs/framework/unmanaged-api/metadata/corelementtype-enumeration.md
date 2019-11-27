@@ -23,7 +23,7 @@ ms.locfileid: "74443631"
 ---
 # <a name="corelementtype-enumeration"></a>Перечисление CorElementType
 
-Specifies a common language runtime <xref:System.Type>, a type modifier, or information about a type in a metadata type signature.
+Задает <xref:System.Type>среды CLR, модификатор типа или сведения о типе в сигнатуре типа метаданных.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -79,73 +79,73 @@ typedef enum CorElementType {
 
 |Член|Описание|
 |------------|-----------------|
-|`ELEMENT_TYPE_END`|Used internally.|
-|`ELEMENT_TYPE_VOID`|A void type.|
-|`ELEMENT_TYPE_BOOLEAN`|A Boolean type|
+|`ELEMENT_TYPE_END`|Используется внутренним образом.|
+|`ELEMENT_TYPE_VOID`|Тип void.|
+|`ELEMENT_TYPE_BOOLEAN`|Логический тип|
 |`ELEMENT_TYPE_CHAR`|Тип символа.|
-|`ELEMENT_TYPE_I1`|A signed 1-byte integer.|
+|`ELEMENT_TYPE_I1`|1-байтовое целое число со знаком.|
 |`ELEMENT_TYPE_U1`|1-байтовое целое число без знака.|
-|`ELEMENT_TYPE_I2`|A signed 2-byte integer.|
-|`ELEMENT_TYPE_U2`|An unsigned 2-byte integer.|
-|`ELEMENT_TYPE_I4`|A signed 4-byte integer.|
-|`ELEMENT_TYPE_U4`|An unsigned 4-byte integer.|
-|`ELEMENT_TYPE_I8`|A signed 8-byte integer.|
-|`ELEMENT_TYPE_U8`|An unsigned 8-byte integer.|
-|`ELEMENT_TYPE_R4`|A 4-byte floating point.|
-|`ELEMENT_TYPE_R8`|An 8-byte floating point.|
-|`ELEMENT_TYPE_STRING`|A System.String type.|
-|`ELEMENT_TYPE_PTR`|A pointer type modifier.|
-|`ELEMENT_TYPE_BYREF`|A reference type modifier.|
-|`ELEMENT_TYPE_VALUETYPE`|A value type modifier.|
-|`ELEMENT_TYPE_CLASS`|A class type modifier.|
-|`ELEMENT_TYPE_VAR`|A class variable type modifier.|
-|`ELEMENT_TYPE_ARRAY`|A multi-dimensional array type modifier.|
-|`ELEMENT_TYPE_GENERICINST`|A type modifier for generic types.|
+|`ELEMENT_TYPE_I2`|2-байтовое целое число со знаком.|
+|`ELEMENT_TYPE_U2`|2-байтовое целое число без знака.|
+|`ELEMENT_TYPE_I4`|4-байтовое целое число со знаком.|
+|`ELEMENT_TYPE_U4`|4-байтовое целое число без знака.|
+|`ELEMENT_TYPE_I8`|8-байтовое целое число со знаком.|
+|`ELEMENT_TYPE_U8`|8-байтовое целое число без знака.|
+|`ELEMENT_TYPE_R4`|4-байтовое число с плавающей запятой.|
+|`ELEMENT_TYPE_R8`|8-байтная плавающая точка.|
+|`ELEMENT_TYPE_STRING`|Тип System. String.|
+|`ELEMENT_TYPE_PTR`|Модификатор типа указателя.|
+|`ELEMENT_TYPE_BYREF`|Модификатор ссылочного типа.|
+|`ELEMENT_TYPE_VALUETYPE`|Модификатор типа значения.|
+|`ELEMENT_TYPE_CLASS`|Модификатор типа класса.|
+|`ELEMENT_TYPE_VAR`|Модификатор типа переменной класса.|
+|`ELEMENT_TYPE_ARRAY`|Модификатор многомерного типа массива.|
+|`ELEMENT_TYPE_GENERICINST`|Модификатор типа для универсальных типов.|
 |`ELEMENT_TYPE_TYPEDBYREF`|Типизированная ссылка.|
-|`ELEMENT_TYPE_I`|Size of a native integer.|
-|`ELEMENT_TYPE_U`|Size of an unsigned native integer.|
-|`ELEMENT_TYPE_FNPTR`|A pointer to a function.|
-|`ELEMENT_TYPE_OBJECT`|A System.Object type.|
-|`ELEMENT_TYPE_SZARRAY`|A single-dimensional, zero lower-bound array type modifier.|
-|`ELEMENT_TYPE_MVAR`|A method variable type modifier.|
-|`ELEMENT_TYPE_CMOD_REQD`|A C language required modifier.|
-|`ELEMENT_TYPE_CMOD_OPT`|A C language optional modifier.|
-|`ELEMENT_TYPE_INTERNAL`|Used internally.|
+|`ELEMENT_TYPE_I`|Размер собственного целого числа.|
+|`ELEMENT_TYPE_U`|Размер целого числа без знака в машинном кодах.|
+|`ELEMENT_TYPE_FNPTR`|Указатель на функцию.|
+|`ELEMENT_TYPE_OBJECT`|Тип System. Object.|
+|`ELEMENT_TYPE_SZARRAY`|Модификатор одномерного типа массива с нулевой нижней границей.|
+|`ELEMENT_TYPE_MVAR`|Модификатор типа переменной метода.|
+|`ELEMENT_TYPE_CMOD_REQD`|Обязательный модификатор языка C.|
+|`ELEMENT_TYPE_CMOD_OPT`|Необязательный модификатор языка C.|
+|`ELEMENT_TYPE_INTERNAL`|Используется внутренним образом.|
 |`ELEMENT_TYPE_MAX`|Недопустимый тип.|
-|`ELEMENT_TYPE_MODIFIER`|Used internally.|
-|`ELEMENT_TYPE_SENTINEL`|A type modifier that is a sentinel for a list of a variable number of parameters.|
-|`ELEMENT_TYPE_PINNED`|Used internally.|
+|`ELEMENT_TYPE_MODIFIER`|Используется внутренним образом.|
+|`ELEMENT_TYPE_SENTINEL`|Модификатор типа, который является Sentinel для списка переменного числа параметров.|
+|`ELEMENT_TYPE_PINNED`|Используется внутренним образом.|
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Примечания
 
-The type modifiers form the basis for representing more complex types. A `CorElementType` type modifier value is applied to the value that immediately follows it in the type signature. The value that follows the `CorElementType` type modifier value can be a `CorElementType` simple type value, a metadata token, or other value, as specified in the following table.
+Модификаторы типа формируют базу для представления более сложных типов. Значение модификатора типа `CorElementType` применяется к значению, которое непосредственно следует за ним в сигнатуре типа. Значение, следующее за значением модификатора типа `CorElementType`, может быть `CorElementType` простым значением типа, маркером метаданных или другим значением, как указано в следующей таблице.
 
 > [!NOTE]
-> All numbers (*number*, *argument Count*, *metadata token*, *rank*, *count*, and *bound*) are stored as compressed integers. See [Standard ECMA-335 - Common Language Infrastructure (CLI)](https://go.microsoft.com/fwlink/?LinkID=116487) on the ECMA Web site for details.
+> Все числа (*число*, число *аргументов*, *маркер метаданных*, *ранг*, *количество*и *граница*) хранятся в виде сжатых целых чисел. Дополнительные сведения см. в статье [стандартный ECMA-335-Common Language Infrastructure (CLI)](https://go.microsoft.com/fwlink/?LinkID=116487) на веб-сайте ECMA.
 
-|Type modifier|Формат|
+|Модификатор типа|Формат|
 |-------------------|------------|
-|`ELEMENT_TYPE_PTR`|ELEMENT_TYPE_PTR \<a `CorElementType` value>|
-|`ELEMENT_TYPE_BYREF`|ELEMENT_TYPE_BYREF \<a `CorElementType` value>|
-|`ELEMENT_TYPE_VALUETYPE`|ELEMENT_TYPE_VALUETYPE \<an `mdTypeDef` metadata token>|
-|`ELEMENT_TYPE_CLASS`|ELEMENT_TYPE_CLASS \<an `mdTypeDef` metadata token>|
-|`ELEMENT_TYPE_VAR`|ELEMENT_TYPE_VAR \<number>|
-|`ELEMENT_TYPE_ARRAY`|ELEMENT_TYPE_ARRAY \<a `CorElementType` value> \<rank> \<count1> \<bound1> ... \<countN> \<boundN>|
-|`ELEMENT_TYPE_GENERICINST`|ELEMENT_TYPE_GENERICINST \<an `mdTypeDef` metadata token> \<argument Count> \<arg1> ... \<argN>|
-|`ELEMENT_TYPE_FNPTR`|ELEMENT_TYPE_FNPTR \<complete signature for the function, including calling convention>|
-|`ELEMENT_TYPE_SZARRAY`|ELEMENT_TYPE_SZARRAY \<a `CorElementType` value>|
-|`ELEMENT_TYPE_MVAR`|ELEMENT_TYPE_MVAR \<number>|
-|`ELEMENT_TYPE_CMOD_REQD`|ELEMENT_TYPE_\<a `mdTypeRef` or `mdTypeDef` metadata token>|
-|`ELEMENT_TYPE_CMOD_OPT`|E_T_CMOD_OPT \<a `mdTypeRef` or `mdTypeDef` metadata token>|
+|`ELEMENT_TYPE_PTR`|ELEMENT_TYPE_PTR \<`CorElementType` значение >|
+|`ELEMENT_TYPE_BYREF`|ELEMENT_TYPE_BYREF \<`CorElementType` значение >|
+|`ELEMENT_TYPE_VALUETYPE`|ELEMENT_TYPE_VALUETYPE \<`mdTypeDef` маркера метаданных >|
+|`ELEMENT_TYPE_CLASS`|ELEMENT_TYPE_CLASS \<`mdTypeDef` маркера метаданных >|
+|`ELEMENT_TYPE_VAR`|ELEMENT_TYPE_VAR номер \<>|
+|`ELEMENT_TYPE_ARRAY`|ELEMENT_TYPE_ARRAY \<`CorElementType` значение > \<Rank > \<count1 > \<bound1 >... \<Каунтн > \<Баундн >|
+|`ELEMENT_TYPE_GENERICINST`|ELEMENT_TYPE_GENERICINST \<`mdTypeDef` маркера метаданных > \<аргумент Count > \<arg1 >... \<argN >|
+|`ELEMENT_TYPE_FNPTR`|ELEMENT_TYPE_FNPTR \<полную сигнатуру для функции, включая соглашение о вызовах >|
+|`ELEMENT_TYPE_SZARRAY`|ELEMENT_TYPE_SZARRAY \<`CorElementType` значение >|
+|`ELEMENT_TYPE_MVAR`|ELEMENT_TYPE_MVAR номер \<>|
+|`ELEMENT_TYPE_CMOD_REQD`|ELEMENT_TYPE_\<`mdTypeRef` или `mdTypeDef` маркера метаданных >|
+|`ELEMENT_TYPE_CMOD_OPT`|E_T_CMOD_OPT \<`mdTypeRef` или `mdTypeDef` маркера метаданных >|
 
 ## <a name="requirements"></a>Требования
 
 **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).
 
-**Header:** CorHdr.h
+**Заголовок:** Корхдр. h
 
 **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Перечисления метаданных](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

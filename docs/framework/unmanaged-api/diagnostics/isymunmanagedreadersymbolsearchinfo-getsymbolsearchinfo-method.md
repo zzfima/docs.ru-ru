@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446411"
 ---
 # <a name="isymunmanagedreadersymbolsearchinfogetsymbolsearchinfo-method"></a>Метод ISymUnmanagedReaderSymbolSearchInfo::GetSymbolSearchInfo
-Gets symbol search information.  
+Возвращает сведения о поиске символов.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,20 +37,20 @@ HRESULT GetSymbolSearchInfo(
   
 ## <a name="parameters"></a>Параметры  
  `cSearchInfo`  
- [in] A `ULONG32` that indicates the size of `rgpSearchInfo`.  
+ окне `ULONG32`, указывающий размер `rgpSearchInfo`.  
   
  `pcSearchInfo`  
- [out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the search information.  
+ заполняет Указатель на `ULONG32`, который получает размер буфера, необходимый для хранения сведений о поиске.  
   
  `rgpSearchInfo`  
- [out] A pointer that is set to the returned [ISymUnmanagedSymbolSearchInfo](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedsymbolsearchinfo-interface.md) interface.  
+ заполняет Указатель, которому присваивается возвращаемый интерфейс [исимунманажедсимболсеарчинфо](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedsymbolsearchinfo-interface.md) .  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK, если метод выполнен. в противном случае E_FAIL или другой код ошибки.  
   
 ## <a name="requirements"></a>Требования  
- **Header:** CorSym.idl, CorSym.h  
+ **Заголовок:** Корсим. idl, Корсим. h  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс ISymUnmanagedReaderSymbolSearchInfo](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreadersymbolsearchinfo-interface.md)

@@ -23,10 +23,10 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445329"
 ---
 # <a name="icorprofilercallbackexceptionthrown-method"></a>Метод ICorProfilerCallback::ExceptionThrown
-Notifies the profiler that an exception has been thrown.  
+Уведомляет профилировщик о том, что было создано исключение.  
   
 > [!NOTE]
-> This function is called only if the exception reaches managed code.  
+> Эта функция вызывается, только если исключение достигает управляемого кода.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,12 +37,12 @@ HRESULT ExceptionThrown(
   
 ## <a name="parameters"></a>Параметры  
  `thrownObjectId`  
- [in] The ID of the object that caused the exception to be thrown.  
+ окне Идентификатор объекта, который вызвал исключение.  
   
-## <a name="remarks"></a>Заметки  
- The profiler should not block in its implementation of this method because the stack may not be in a state that allows garbage collection, and therefore preemptive garbage collection cannot be enabled. If the profiler blocks here and garbage collection is attempted, the runtime will block until this callback returns.  
+## <a name="remarks"></a>Примечания  
+ Профилировщик не должен блокировать реализацию этого метода, так как стек может не находиться в состоянии, допускающем сборку мусора, поэтому невозможно включить вытесненную сборку мусора. Если профилировщик блокируется здесь и выполняется сборка мусора, среда выполнения блокируется до тех пор, пока этот обратный вызов не вернет значение.  
   
- The profiler's implementation of this method should not call into managed code or in any way cause a managed-memory allocation.  
+ Реализация этого метода профилировщиком не должна вызывать управляемый код или каким-либо образом приводит к выделению управляемой памяти.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
@@ -53,6 +53,6 @@ HRESULT ExceptionThrown(
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

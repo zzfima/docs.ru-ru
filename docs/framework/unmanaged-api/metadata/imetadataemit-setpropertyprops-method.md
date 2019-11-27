@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74440549"
 ---
 # <a name="imetadataemitsetpropertyprops-method"></a>Метод IMetaDataEmit::SetPropertyProps
-Sets the features stored in metadata for a property defined by a prior call to [DefineProperty Method](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineproperty-method.md).  
+Задает функции, хранимые в метаданных для свойства, определенного при предыдущем вызове [метода DefineProperty](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineproperty-method.md).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -42,39 +42,39 @@ HRESULT SetPropertyProps (
   
 ## <a name="parameters"></a>Параметры  
  `pr`  
- [in] The token for the property to be changed  
+ окне Токен изменяемого свойства  
   
  `dwPropFlags`  
- [in] Property flags.  
+ окне Флаги свойств.  
   
  `dwCPlusTypeFlag`  
- [in] The type of the property's default value.  
+ окне Тип значения свойства по умолчанию.  
   
  `pValue`  
- [in] The default value for the property.  
+ окне Значение по умолчанию для свойства.  
   
  `cchValue`  
- [in] The count of (Unicode) characters in `pValue`.  
+ окне Число символов Юникода в `pValue`.  
   
  `mdSetter`  
- [in] The method that sets the property value.  
+ окне Метод, который задает значение свойства.  
   
  `mdGetter`  
- [in] The method that gets the property value.  
+ окне Метод, который получает значение свойства.  
   
  `rmdOtherMethods[]`  
- [in] An array of other methods associated with the property. Terminate this array with an `mdTokenNil` token.  
+ окне Массив других методов, связанных со свойством. Завершите этот массив маркером `mdTokenNil`.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Заголовок:** COR. h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **Библиотека:** Используется в качестве ресурса в MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [Интерфейс IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

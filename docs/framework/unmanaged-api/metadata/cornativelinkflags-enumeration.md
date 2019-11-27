@@ -40,20 +40,20 @@ typedef enum
   
 |Член|Описание|  
 |------------|-----------------|  
-|`nlfNone`|Indicates no flags.|  
-|`nlfLastError`|Indicates a `setLastError` keyword.|  
-|`nlfNoMangle`|Indicates a `nomangle` keyword.|  
+|`nlfNone`|Указывает, что флаги отсутствуют.|  
+|`nlfLastError`|Указывает ключевое слово `setLastError`.|  
+|`nlfNoMangle`|Указывает ключевое слово `nomangle`.|  
 |`nlfMaxValue`|Не используется.|  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Заголовок:** COR. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Перечисления метаданных](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

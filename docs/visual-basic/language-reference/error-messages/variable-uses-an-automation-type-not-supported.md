@@ -1,5 +1,5 @@
 ---
-title: Variable uses an Automation type not supported
+title: Переменная использует неподдерживаемый тип автоматизации
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID458
@@ -13,16 +13,16 @@ ms.locfileid: "74344832"
 ---
 # <a name="variable-uses-an-automation-type-not-supported-in-visual-basic"></a>Переменная использует тип автоматизации, не поддерживаемый в Visual Basic
 
-You tried to use a variable defined in a type library or object library that has a data type not supported by Visual Basic.
+Предпринята попытка использовать переменную, определенную в библиотеке типов или библиотеке объектов, которая имеет тип данных, не поддерживаемый Visual Basic.
 
 ## <a name="to-correct-this-error"></a>Исправление ошибки
 
-- Use a variable of a type recognized by Visual Basic.
+- Используйте переменную типа, распознаваемый Visual Basic.
 
-     \- или -
+     -или-
 
-- If you encounter this error while using `FileGet` or `FileGetObject`, make sure the file you are trying to use was written to with `FilePut` or `FilePutObject`.
+- Если эта ошибка возникает при использовании `FileGet` или `FileGetObject`, убедитесь, что файл, который вы пытаетесь использовать, записан с помощью `FilePut` или `FilePutObject`.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Типы данных](../../../visual-basic/language-reference/data-types/index.md)

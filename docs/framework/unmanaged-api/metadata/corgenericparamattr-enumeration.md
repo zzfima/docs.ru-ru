@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450281"
 ---
 # <a name="corgenericparamattr-enumeration"></a>Перечисление CorGenericParamAttr
-Contains values that describe the <xref:System.Type> parameters for generic types, as used in calls to [IMetaDataEmit2::DefineGenericParam](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-definegenericparam-method.md).  
+Содержит значения, описывающие параметры <xref:System.Type> для универсальных типов, которые используются в вызовах метода [IMetaDataEmit2::D ефинеженерикпарам](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-definegenericparam-method.md).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -47,23 +47,23 @@ typedef enum CorGenericParamAttr {
   
 |Член|Описание|  
 |------------|-----------------|  
-|`gpVarianceMask`|Parameter variance applies only to generic parameters for interfaces and delegates.|  
-|`gpNonVariant`|Indicates the absence of variance.|  
-|`gpCovariant`|Indicates covariance.|  
-|`gpContravariant`|Indicates contravariance.|  
-|`gpSpecialConstraintMask`|Special constraints can apply to any <xref:System.Type> parameter.|  
-|`gpNoSpecialConstraint`|Indicates that no constraint applies to the <xref:System.Type> parameter.|  
-|`gpReferenceTypeConstraint`|Indicates that the <xref:System.Type> parameter must be a reference type.|  
-|`gpNotNullableValueTypeConstraint`|Indicates that the <xref:System.Type> parameter must be a value type that cannot be a null value.|  
-|`gpDefaultConstructorConstraint`|Indicates that the <xref:System.Type> parameter must have a default public constructor that takes no parameters.|  
+|`gpVarianceMask`|Дисперсия параметров применяется только к универсальным параметрам для интерфейсов и делегатов.|  
+|`gpNonVariant`|Указывает отсутствие дисперсии.|  
+|`gpCovariant`|Указывает ковариацию.|  
+|`gpContravariant`|Указывает контрвариация.|  
+|`gpSpecialConstraintMask`|Специальные ограничения могут применяться к любому параметру <xref:System.Type>.|  
+|`gpNoSpecialConstraint`|Указывает, что ограничение не применяется к параметру <xref:System.Type>.|  
+|`gpReferenceTypeConstraint`|Указывает, что параметр <xref:System.Type> должен быть ссылочным типом.|  
+|`gpNotNullableValueTypeConstraint`|Указывает, что параметр <xref:System.Type> должен быть типом значения, который не может иметь значение null.|  
+|`gpDefaultConstructorConstraint`|Указывает, что параметр <xref:System.Type> должен иметь открытый конструктор по умолчанию, который не принимает параметров.|  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorHdr.h  
+ **Заголовок:** Корхдр. h  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Перечисления метаданных](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

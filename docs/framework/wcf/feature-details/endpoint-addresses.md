@@ -137,7 +137,7 @@ ms.locfileid: "74283220"
   
  В некоторых сценариях конечная точка получает все сообщения, которые приходят через соответствующий транспорт, а не только те, у которых есть соответствующий заголовок `To`. Чтобы включить такой режим, можно воспользоваться классом <xref:System.ServiceModel.Dispatcher.MatchAllMessageFilter>.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Указание адреса конечной точки](../../../../docs/framework/wcf/specifying-an-endpoint-address.md)
 - [Идентификация и проверка подлинности службы](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)

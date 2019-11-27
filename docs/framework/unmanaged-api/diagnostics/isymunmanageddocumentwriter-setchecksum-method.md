@@ -36,20 +36,20 @@ HRESULT SetCheckSum(
   
 ## <a name="parameters"></a>Параметры  
  `algorithmId`  
- [in] The GUID that represents the algorithm identifier.  
+ окне Идентификатор GUID, представляющий идентификатор алгоритма.  
   
  `checkSumSize`  
- [in] A `ULONG32` that indicates the size, in bytes, of the `checkSum` buffer.  
+ окне `ULONG32`, указывающий размер буфера `checkSum` в байтах.  
   
  `checkSum`  
- [in] The buffer that stores the checksum information.  
+ окне Буфер, в котором хранятся сведения о контрольной сумме.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK, если метод выполнен. в противном случае E_FAIL или другой код ошибки.  
   
 ## <a name="requirements"></a>Требования  
- **Header:** CorSym.idl, CorSym.h  
+ **Заголовок:** Корсим. idl, Корсим. h  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс ISymUnmanagedDocumentWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocumentwriter-interface.md)

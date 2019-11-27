@@ -20,7 +20,7 @@ ms.locfileid: "74448802"
   
  В этом разделе содержатся обзоры и практические руководства, помогающие разрабатывать клиенты автоматизации пользовательского интерфейса.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Модель автоматизации пользовательского интерфейса и масштабирование экрана](ui-automation-and-screen-scaling.md)  
  [Поддержка автоматизации пользовательского интерфейса для стандартных элементов управления](ui-automation-support-for-standard-controls.md)  
  [События модели автоматизации пользовательского интерфейса для клиентов](ui-automation-events-for-clients.md)  
@@ -32,5 +32,5 @@ ms.locfileid: "74448802"
  [Проблемы потока модели автоматизации пользовательского интерфейса](ui-automation-threading-issues.md)  
  [Разделы практического руководства](ui-automation-clients-for-managed-code-how-to-topics.md)  
   
-## <a name="reference"></a>Справочник  
+## <a name="reference"></a>Ссылки  
  <xref:System.Windows.Automation>

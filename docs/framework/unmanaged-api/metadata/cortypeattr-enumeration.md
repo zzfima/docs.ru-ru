@@ -77,47 +77,47 @@ typedef enum CorTypeAttr {
   
 |Член|Описание|  
 |------------|-----------------|  
-|`tdVisibilityMask`|Used for type visibility information.|  
-|`tdNotPublic`|Specifies that the type is not in public scope.|  
-|`tdPublic`|Specifies that the type is in public scope.|  
-|`tdNestedPublic`|Specifies that the type is nested with public visibility.|  
-|`tdNestedPrivate`|Specifies that the type is nested with private visibility.|  
-|`tdNestedFamily`|Specifies that the type is nested with family visibility.|  
-|`tdNestedAssembly`|Specifies that the type is nested with assembly visibility.|  
-|`tdNestedFamANDAssem`|Specifies that the type is nested with family and assembly visibility.|  
-|`tdNestedFamORAssem`|Specifies that the type is nested with family or assembly visibility.|  
-|`tdLayoutMask`|Gets layout information for the type.|  
-|`tdAutoLayout`|Specifies that the fields of this type are laid out automatically.|  
-|`tdSequentialLayout`|Specifies that the fields of this type are laid out sequentially.|  
-|`tdExplicitLayout`|Specifies that field layout is supplied explicitly.|  
-|`tdClassSemanticsMask`|Gets semantic information about the type.|  
+|`tdVisibilityMask`|Используется для сведений о видимости типа.|  
+|`tdNotPublic`|Указывает, что тип не находится в общедоступной области.|  
+|`tdPublic`|Указывает, что тип находится в общедоступной области.|  
+|`tdNestedPublic`|Указывает, что тип является вложенным с открытой видимостью.|  
+|`tdNestedPrivate`|Указывает, что тип является вложенным с закрытой видимостью.|  
+|`tdNestedFamily`|Указывает, что тип является вложенным с видимостью в семействе.|  
+|`tdNestedAssembly`|Указывает, что тип является вложенным с видимостью сборки.|  
+|`tdNestedFamANDAssem`|Указывает, что тип является вложенным с видимостью в семействе и сборке.|  
+|`tdNestedFamORAssem`|Указывает, что тип является вложенным с видимостью семейства или сборки.|  
+|`tdLayoutMask`|Возвращает сведения о макете для типа.|  
+|`tdAutoLayout`|Указывает, что поля этого типа размещаются автоматически.|  
+|`tdSequentialLayout`|Указывает, что поля этого типа располагаются последовательно.|  
+|`tdExplicitLayout`|Указывает, что макет поля указан явно.|  
+|`tdClassSemanticsMask`|Возвращает семантическую информацию о типе.|  
 |`tdClass`|Указывает, что данный тип является классом.|  
 |`tdInterface`|Указывает, что данный тип является интерфейсом.|  
 |`tdAbstract`|Указывает, что данный тип является абстрактным.|  
-|`tdSealed`|Specifies that the type cannot be extended.|  
-|`tdSpecialName`|Specifies that the class name is special. Its name describes how.|  
-|`tdImport`|Specifies that the type is imported.|  
-|`tdSerializable`|Specifies that the type is serializable.|  
-|`tdWindowsRuntime`|Specifies that this type is a Windows Runtime type.|  
-|`tdStringFormatMask`|Gets information about how strings are encoded and formatted.|  
-|`tdAnsiClass`|Specifies that this type interprets an LPTSTR as ANSI.|  
-|`tdUnicodeClass`|Specifies that this type interprets an LPTSTR as Unicode.|  
-|`tdAutoClass`|Specifies that this type interprets an LPTSTR automatically.|  
-|`tdCustomFormatClass`|Specifies that the type has a non-standard encoding, as specified by `CustomFormatMask`.|  
-|`tdCustomFormatMask`|Use this mask to get non-standard encoding information for native interop. The meaning of the values of these two bits is unspecified.|  
-|`tdBeforeFieldInit`|Specifies that the type must be initialized before the first attempt to access a static field.|  
-|`tdForwarder`|Specifies that the type is exported, and a type forwarder.|  
-|`tdReservedMask`|This flag and the flags below are used internally by the common language runtime.|  
-|`tdRTSpecialName`|Specifies that the common language runtime should check the name encoding.|  
-|`tdHasSecurity`|Specifies that the type has security associated with it.|  
+|`tdSealed`|Указывает, что тип не может быть расширен.|  
+|`tdSpecialName`|Указывает, что имя класса является специальным. Его имя описывает, как это делать.|  
+|`tdImport`|Указывает, что тип импортирован.|  
+|`tdSerializable`|Указывает, что тип является сериализуемым.|  
+|`tdWindowsRuntime`|Указывает, что этот тип является типом среда выполнения Windows.|  
+|`tdStringFormatMask`|Получает сведения о кодировке и форматировании строк.|  
+|`tdAnsiClass`|Указывает, что этот тип интерпретирует LPTSTR как ANSI.|  
+|`tdUnicodeClass`|Указывает, что этот тип интерпретирует LPTSTR как Юникод.|  
+|`tdAutoClass`|Указывает, что этот тип интерпретирует LPTSTR автоматически.|  
+|`tdCustomFormatClass`|Указывает, что тип имеет нестандартную кодировку, как указано в `CustomFormatMask`.|  
+|`tdCustomFormatMask`|Используйте эту маску для получения нестандартных сведений о кодировке для собственного взаимодействия. Значение этих двух битов не определено.|  
+|`tdBeforeFieldInit`|Указывает, что тип должен быть инициализирован перед первой попыткой доступа к статическому полю.|  
+|`tdForwarder`|Указывает, что тип экспортирован и является пересылкой типа.|  
+|`tdReservedMask`|Этот флаг и указанные ниже флаги используются внутри среды CLR.|  
+|`tdRTSpecialName`|Указывает, что среда CLR должна проверять кодировку имен.|  
+|`tdHasSecurity`|Указывает, что с типом связана безопасность.|  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorHdr.h  
+ **Заголовок:** Корхдр. h  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Перечисления метаданных](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

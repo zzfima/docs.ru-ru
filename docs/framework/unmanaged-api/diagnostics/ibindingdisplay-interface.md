@@ -22,24 +22,24 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448470"
 ---
 # <a name="ibindingdisplay-interface"></a>Интерфейс IBindingDisplay
-Provides methods that display current binding information about the running application.  
+Предоставляет методы, отображающие текущие сведения о привязке для выполняющегося приложения.  
   
 ## <a name="methods"></a>Методы  
   
 |Метод|Описание|  
 |------------|-----------------|  
-|[Метод GetCurrentDisplay](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-getcurrentdisplay-method.md)|Returns the current binding display information.|  
-|[Метод InitializeForProcess](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-initializeforprocess-method.md)|Initializes the `IBindingDisplay` object.|  
+|[Метод GetCurrentDisplay](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-getcurrentdisplay-method.md)|Возвращает текущие отображаемые сведения о привязке.|  
+|[Метод InitializeForProcess](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-initializeforprocess-method.md)|Инициализирует объект `IBindingDisplay`.|  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** BindingDisplay.h  
+ **Заголовок:** Биндингдисплай. h  
   
- **Library:** BindingDisplay.idl  
+ **Библиотека:** Биндингдисплай. idl  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейсы хранилища символов диагностики](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)

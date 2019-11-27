@@ -1,5 +1,5 @@
 ---
-title: Справочник
+title: Ссылки
 ms.date: 07/20/2015
 helpviewer_keywords:
 - language reference
@@ -12,28 +12,28 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352880"
 ---
-# <a name="reference-visual-basic"></a>Справочник по Visual Basic
-This section provides links to reference information about various aspects of Visual Basic programming.  
+# <a name="reference-visual-basic"></a>Справочник (Visual Basic)
+В этом разделе содержатся ссылки на справочные сведения о различных аспектах Visual Basic программирования.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Справочник по языку Visual Basic](../../visual-basic/language-reference/index.md)  
- Provides reference information for various aspects of the Visual Basic language.  
+ Содержит справочные сведения о различных аспектах языка Visual Basic.  
   
  [Компилятор Visual Basic с интерфейсом командной строки](../../visual-basic/reference/command-line-compiler/index.md)  
  Ссылки на сведения о компиляторе командной строки, который служит альтернативой программам компиляции в составе интегрированной среды разработки Visual Studio.  
   
  [Справочная документация по .NET Framework](../../visual-basic/reference/net-framework-reference-information.md)  
- Provides links to information on working with the .NET Framework class library.  
+ Содержит ссылки на сведения о работе с библиотекой классов .NET Framework.  
   
  [Спецификация языка Visual Basic](../../visual-basic/reference/language-specification/index.md)  
- Provides links to the complete Visual Basic language specification, which contains detailed information on all aspects of the language.  
+ Содержит ссылки на полную спецификацию языка Visual Basic, которая содержит подробные сведения обо всех аспектах языка.  
   
 ## <a name="related-sections"></a>Связанные разделы  
  [Общие элементы пользовательского интерфейса (Visual Studio)](/visualstudio/ide/reference/general-user-interface-elements-visual-studio)  
- Contains topics for dialog boxes and windows used in Visual Studio.  
+ Содержит разделы для диалоговых окон и окон, используемых в Visual Studio.  
   
  [Средства XML в Visual Studio](/visualstudio/xml-tools/xml-tools-in-visual-studio)  
- Provides links to topics on various XML tools available in Visual Studio.  
+ Содержит ссылки на разделы, посвященные различным инструментам XML, доступным в Visual Studio.  
   
  [Справочник по автоматизации и возможностям расширения среды](/visualstudio/extensibility/extensibility-in-visual-studio?view=vs-2015)  
- Provides links to topics covering automation and extensibility in Visual Studio, for both shared and language-specific components.
+ Содержит ссылки на разделы, охватывающие автоматизацию и расширяемость в Visual Studio для общих и зависящих от языка компонентов.

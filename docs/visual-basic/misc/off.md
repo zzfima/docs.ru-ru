@@ -15,9 +15,9 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74331939"
 ---
 # <a name="off-visual-basic"></a>Off (Visual Basic)
-Turns a compiler option off.  
+Отключает параметр компилятора.  
   
-## <a name="remarks"></a>Заметки  
+## <a name="remarks"></a>Примечания  
  Ключевое слово `Off` можно использовать в следующих контекстах:  
   
  [Оператор Option Explicit](../../visual-basic/language-reference/statements/option-explicit-statement.md)  
@@ -26,6 +26,6 @@ Turns a compiler option off.
   
  [Оператор Option Infer](../../visual-basic/language-reference/statements/option-infer-statement.md)  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Ключевые слова](../../visual-basic/language-reference/keywords/index.md)

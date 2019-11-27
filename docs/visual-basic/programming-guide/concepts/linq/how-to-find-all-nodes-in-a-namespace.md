@@ -9,7 +9,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352973"
 ---
-# <a name="how-to-find-all-nodes-in-a-namespace-visual-basic"></a>How to: Find All Nodes in a Namespace (Visual Basic)
+# <a name="how-to-find-all-nodes-in-a-namespace-visual-basic"></a>Как найти все узлы в пространстве имен (Visual Basic)
 Для поиска всех узлов в отдельном пространстве имен можно применить к нему фильтр по каждому элементу или атрибуту.  
   
 ## <a name="example"></a>Пример  
@@ -109,6 +109,6 @@ End Module
 </Root>  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Basic Queries (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+- [Основные запросы (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74438264"
 ---
 # <a name="isymunmanagedwriter3commit-method"></a>Метод ISymUnmanagedWriter3::Commit
-Commits the changes written so far to the stream.  
+Фиксирует изменения, записанные на данный момент в поток.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -32,11 +32,11 @@ HRESULT Commit();
 ```  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK, если метод выполнен. в противном случае E_FAIL или другой код ошибки.  
   
 ## <a name="requirements"></a>Требования  
- **Header:** CorSym.idl, CorSym.h  
+ **Заголовок:** Корсим. idl, Корсим. h  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс ISymUnmanagedWriter3](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter3-interface.md)

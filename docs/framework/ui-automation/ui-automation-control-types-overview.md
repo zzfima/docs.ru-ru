@@ -112,6 +112,6 @@ ms.locfileid: "74442627"
   
 - [Поддержка модели автоматизации пользовательского интерфейса для типа элемента управления Window](ui-automation-support-for-the-window-control-type.md)  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - <xref:System.Windows.Automation.ControlType>

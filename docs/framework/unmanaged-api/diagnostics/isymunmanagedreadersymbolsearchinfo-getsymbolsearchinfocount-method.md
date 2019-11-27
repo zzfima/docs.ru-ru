@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446396"
 ---
 # <a name="isymunmanagedreadersymbolsearchinfogetsymbolsearchinfocount-method"></a>Метод ISymUnmanagedReaderSymbolSearchInfo::GetSymbolSearchInfoCount
-Gets a count of symbol search information.  
+Возвращает число сведений о поиске символов.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -34,14 +34,14 @@ HRESULT GetSymbolSearchInfoCount(
   
 ## <a name="parameters"></a>Параметры  
  `pcSearchInfo`  
- ]out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the search information.  
+ ] out] указатель на `ULONG32`, который получает размер буфера, необходимый для хранения сведений для поиска.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK, если метод выполнен. в противном случае E_FAIL или другой код ошибки.  
   
 ## <a name="requirements"></a>Требования  
- **Header:** CorSym.idl, CorSym.h  
+ **Заголовок:** Корсим. idl, Корсим. h  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс ISymUnmanagedReaderSymbolSearchInfo](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreadersymbolsearchinfo-interface.md)

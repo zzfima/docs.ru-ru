@@ -9,7 +9,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344597"
 ---
-# <a name="how-to-generate-xml-from-csv-files-visual-basic"></a>How to: Generate XML from CSV Files (Visual Basic)
+# <a name="how-to-generate-xml-from-csv-files-visual-basic"></a>Как создавать XML-файлы из CSV-файлов (Visual Basic)
 В этом примере показано, как [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] и [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] используются для создания XML-документа из файла с разделителями-запятыми (.csv).  
   
 ## <a name="example"></a>Пример  
@@ -107,6 +107,6 @@ Console.WriteLine(cust)
 </Root>  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Projections and Transformations (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+- [Проекции и преобразования (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)

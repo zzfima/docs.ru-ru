@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445216"
 ---
 # <a name="icorprofilercallbackappdomaincreationstarted-method"></a>Метод ICorProfilerCallback::AppDomainCreationStarted
-Notifies the profiler that an application domain is being created.  
+Уведомляет профилировщик о том, что создается домен приложения.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -34,10 +34,10 @@ HRESULT AppDomainCreationStarted(
   
 ## <a name="parameters"></a>Параметры  
  `appDomainId`  
- [in] Identifies the domain which is being created.  
+ окне Определяет создаваемый домен.  
   
-## <a name="remarks"></a>Заметки  
- The ID is not valid for any information request until the [ICorProfilerCallback::AppDomainCreationFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-appdomaincreationfinished-method.md) method is called.  
+## <a name="remarks"></a>Примечания  
+ Идентификатор не является допустимым для запроса информации до вызова метода [ICorProfilerCallback:: аппдомаинкреатионфинишед](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-appdomaincreationfinished-method.md) .  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
@@ -48,6 +48,6 @@ HRESULT AppDomainCreationStarted(
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

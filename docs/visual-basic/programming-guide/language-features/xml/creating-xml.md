@@ -14,20 +14,20 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351739"
 ---
 # <a name="creating-xml-in-visual-basic"></a>Создание XML в Visual Basic
-Visual Basic enables you to use *XML literals* directly in your code. The XML literal syntax represents [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] objects, and it is similar to the XML 1.0 syntax. This makes it easier to create XML elements, documents, and fragments programmatically because your code has the same structure as the final XML.  
+Visual Basic позволяет использовать *XML-литералы* непосредственно в коде. Синтаксис XML-литерала представляет [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] объекты и аналогичен синтаксису XML 1,0. Это упрощает создание XML-элементов, документов и фрагментов программным способом, так как код имеет ту же структуру, что и окончательный XML.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
   
 |Термин|Определение|  
 |---|---|  
-|[Общие сведения об XML-литералах](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-overview.md)|Introduction to XML literals and how they relate to [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].|  
-|[Встроенные выражения в XML](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)|Describes how to use embedded expressions in XML literals.|  
-|[Практическое руководство. Создание XML-литералов](../../../../visual-basic/programming-guide/language-features/xml/how-to-create-xml-literals.md)|Describes how to create an XML element in code by using an XML literal.|  
-|[Пробелы в XML-литералах](../../../../visual-basic/programming-guide/language-features/xml/white-space-in-xml-literals.md)|Describes how Visual Basic treats white space in XML literals.|  
-|[XML-литералы и спецификация XML 1.0](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-and-the-xml-1-0-specification.md)|Describes how the XML literal syntax in Visual Basic relates to the XML 1.0 specification.|  
-|[Практическое руководство. Внедрение выражений в XML-литералы](../../../../visual-basic/programming-guide/language-features/xml/how-to-embed-expressions-in-xml-literals.md)|Describes how to use embedded expressions in XML literals to create content at run time.|  
-|[Имена объявленных элементов и атрибутов XML](../../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)|Describes guidelines for naming XML elements and attributes.|  
+|[Общие сведения об XML-литералах](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-overview.md)|Знакомство с XML-литералами и их связь с [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].|  
+|[Встроенные выражения в XML](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)|Описывает использование внедренных выражений в XML-литералах.|  
+|[Практическое руководство. Создание XML-литералов](../../../../visual-basic/programming-guide/language-features/xml/how-to-create-xml-literals.md)|Описывает создание XML-элемента в коде с помощью XML-литерала.|  
+|[Пробелы в XML-литералах](../../../../visual-basic/programming-guide/language-features/xml/white-space-in-xml-literals.md)|Описывает, как Visual Basic обрабатывает пробелы в XML-литералах.|  
+|[XML-литералы и спецификация XML 1.0](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-and-the-xml-1-0-specification.md)|Описывает, как синтаксис XML-литерала в Visual Basic относится к спецификации XML 1,0.|  
+|[Практическое руководство. Внедрение выражений в XML-литералы](../../../../visual-basic/programming-guide/language-features/xml/how-to-embed-expressions-in-xml-literals.md)|Описывает использование внедренных выражений в XML-литералах для создания содержимого во время выполнения.|  
+|[Имена объявленных элементов и атрибутов XML](../../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)|Описывает правила именования XML-элементов и атрибутов.|  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)

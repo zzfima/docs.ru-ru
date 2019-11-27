@@ -32,7 +32,7 @@ ms.locfileid: "74283081"
 ```  
   
 ## <a name="attributes-and-elements"></a>Атрибуты и элементы  
- В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
+ Следующие разделы описывают атрибуты, дочерние элементы и родительские элементы.  
   
 ### <a name="attributes"></a>Атрибуты  
   
@@ -41,7 +41,7 @@ ms.locfileid: "74283081"
 |`enabled`|Указывает, включены ли счетчики производительности сети. Значение по умолчанию — `false`.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
- Нет.  
+ Нет  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
@@ -49,7 +49,7 @@ ms.locfileid: "74283081"
 |-------------|-----------------|  
 |[Параметры](settings-element-network-settings.md)|Настраивает основные параметры сети для пространства имен <xref:System.Net>.|  
   
-## <a name="remarks"></a>Заметки  
+## <a name="remarks"></a>Примечания  
  Этот элемент может использоваться в файле конфигурации приложения или в файле конфигурации компьютера (Machine.config).  
   
  Счетчики производительности сети необходимо включить для использования в файле конфигурации. Все счетчики производительности сети включаются и отключаются с помощью одного параметра в файле конфигурации. Включить или отключить отдельные счетчики производительности сети невозможно. Дополнительные сведения о конкретных счетчиках производительности сети см. в разделе [Сетевые счетчики производительности](../../../debug-trace-profile/performance-counters.md#networking-performance-counters).  
@@ -73,7 +73,7 @@ ms.locfileid: "74283081"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - <xref:System.Net.Configuration.PerformanceCountersElement?displayProperty=nameWithType>
 - <xref:System.Net.Configuration.PerformanceCountersElement.Enabled%2A?displayProperty=nameWithType>

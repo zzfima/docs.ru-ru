@@ -21,7 +21,7 @@ ms.locfileid: "74343835"
 ---
 # <a name="externalsource-directive"></a>Директива #ExternalSource
 
-Indicates a mapping between specific lines of source code and text external to the source.  
+Указывает сопоставление между конкретными строками исходного кода и текстом, внешним по отношению к источнику.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -34,25 +34,25 @@ Indicates a mapping between specific lines of source code and text external to t
 ## <a name="parts"></a>Части  
 
  `StringLiteral`  
- The path to the external source.  
+ Путь к внешнему источнику.  
   
  `IntLiteral`  
- The line number of the first line of the external source.  
+ Номер строки первой строки внешнего источника.  
   
  `LogicalLine`  
- The line where the error occurs in the external source.  
+ Строка, в которой возникла ошибка во внешнем источнике.  
   
  `#End ExternalSource`  
  Завершает блок `#ExternalSource`.  
   
-## <a name="remarks"></a>Заметки  
+## <a name="remarks"></a>Примечания  
 
- This directive is used only by the compiler and the debugger.  
+ Эта директива используется только компилятором и отладчиком.  
   
- A source file may include external source directives, which indicate a mapping between specific lines of code in the source file and text external to the source, such as an .aspx file. If errors are encountered in the designated source code during compilation, they are identified as coming from the external source.  
+ Исходный файл может содержать директивы External Source, которые указывают на сопоставление между конкретными строками кода в исходном файле и внешним по отношению к источнику текстом, например ASPX-файлу. Если во время компиляции обнаружены ошибки в указанном исходном коде, они определяются как поступающие из внешнего источника.  
   
- External source directives have no effect on compilation and cannot be nested. They are intended for internal use by the application only.  
+ Директивы External Source не влияют на компиляцию и не могут быть вложенными. Они предназначены только для внутреннего использования приложением.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Условная компиляция](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)

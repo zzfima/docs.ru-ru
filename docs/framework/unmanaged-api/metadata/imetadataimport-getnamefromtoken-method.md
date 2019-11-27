@@ -36,24 +36,24 @@ HRESULT GetNameFromToken (
   
 ## <a name="parameters"></a>Параметры  
  `tk`  
- [in] The token representing the object to return the name for.  
+ окне Токен, представляющий объект, для которого возвращается имя.  
   
  `pszUtf8NamePtr`  
- [out] A pointer to the UTF-8 object name in the heap.  
+ заполняет Указатель на имя объекта UTF-8 в куче.  
   
-## <a name="remarks"></a>Заметки  
- `GetNameFromToken` устарел. As an alternative, call a method to get the properties of the particular type of token required, such as `GetFieldProps` for a field or `GetMethodProps` for a method.  
+## <a name="remarks"></a>Примечания  
+ `GetNameFromToken` устарел. В качестве альтернативы можно вызвать метод для получения свойств определенного типа токена, например `GetFieldProps` для поля или `GetMethodProps` для метода.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Заголовок:** COR. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MsCorEE. dll  
   
- **.NET Framework Versions:** 1.0  
+ **.NET Framework версии:** 1,0  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [Интерфейс IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

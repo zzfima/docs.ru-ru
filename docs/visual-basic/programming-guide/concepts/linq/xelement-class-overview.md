@@ -9,7 +9,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349311"
 ---
-# <a name="xelement-class-overview-visual-basic"></a>XElement Class Overview (Visual Basic)
+# <a name="xelement-class-overview-visual-basic"></a>Общие сведения о классе XElement (Visual Basic)
 Класс <xref:System.Xml.Linq.XElement> - это один из фундаментальных классов в [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Он обозначает элемент XML. Этот класс можно использовать для создания элементов, изменения содержимого элемента, добавления, изменения или удаления дочерних элементов, добавления к элементам атрибутов или сериализации содержимого элемента в текстовой форме. Можно также настроить взаимодействие с другими классами в <xref:System.Xml?displayProperty=nameWithType>, например <xref:System.Xml.XmlReader>, <xref:System.Xml.XmlWriter> и <xref:System.Xml.Xsl.XslCompiledTransform>.  
   
 ## <a name="xelement-functionality"></a>Функциональные особенности класса XElement  
@@ -18,11 +18,11 @@ ms.locfileid: "74349311"
 ### <a name="constructing-xml-trees"></a>Создание XML-деревьев  
  Можно создавать XML-деревья несколькими способами.  
   
-- Можно создать XML-дерево при помощи кода. For more information, see [Creating XML Trees (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md).  
+- Можно создать XML-дерево при помощи кода. Дополнительные сведения см. в разделе [Создание деревьев XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md).  
   
-- Можно выполнить синтаксический анализ XML из нескольких источников, в том числе из <xref:System.IO.TextReader>, текстовых файлов или веб-адреса (URL-адреса). For more information, see [Parsing XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md).  
+- Можно выполнить синтаксический анализ XML из нескольких источников, в том числе из <xref:System.IO.TextReader>, текстовых файлов или веб-адреса (URL-адреса). Дополнительные сведения см. в разделе [анализ XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md).  
   
-- Для распределения контента по дереву можно использовать <xref:System.Xml.XmlReader>. Для получения дополнительной информации см. <xref:System.Xml.Linq.XNode.ReadFrom%2A>.  
+- Для распределения контента по дереву можно использовать <xref:System.Xml.XmlReader>. Дополнительные сведения см. в разделе <xref:System.Xml.Linq.XNode.ReadFrom%2A>.  
   
 - Если установлен модуль, позволяющий заносить содержимое в средство <xref:System.Xml.XmlWriter>, то можно использовать метод <xref:System.Xml.Linq.XContainer.CreateWriter%2A>, чтобы создать модуль записи, передать его этому модулю, после чего использовать контент, записанный в систему <xref:System.Xml.XmlWriter>, чтобы заполнить XML-дерево.  
   
@@ -81,23 +81,23 @@ Console.WriteLine(xmlTree)
 ### <a name="serializing-xml-trees"></a>Сериализация деревьев XML  
  Можно сериализовать XML-дерево в <xref:System.IO.File>, <xref:System.IO.TextWriter> или в <xref:System.Xml.XmlWriter>.  
   
- For more information, see [Serializing XML Trees (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/serializing-xml-trees.md).  
+ Дополнительные сведения см. в разделе [сериализация XML-деревьев (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/serializing-xml-trees.md).  
   
 ### <a name="retrieving-xml-data-via-axis-methods"></a>Получение XML-данных через методы оси  
  Можно воспользоваться методами оси для получения свойств, дочерних элементов, элементов-потомков и элементов-предков. При выполнении запросов [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] используются методы оси и обеспечиваются гибкие и эффективные способы навигации по XML-дереву, а также его обработки.  
   
- For more information, see [LINQ to XML Axes (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md).  
+ Дополнительные сведения см. в разделе [оси LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md).  
   
 ### <a name="querying-xml-trees"></a>Выполнение запросов деревьям XML  
  Вы можете создавать запросы [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], которые извлекают данные из дерева XML.  
   
- For more information, see [Querying XML Trees (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/querying-xml-trees.md).  
+ Дополнительные сведения см. в разделе [запросы к деревьям XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/querying-xml-trees.md).  
   
 ### <a name="modifying-xml-trees"></a>Изменение деревьев XML  
  Один и тот же элемент можно изменить несколькими способами, в том числе изменив содержимое или атрибуты. Можно также удалить элемент из родительской структуры.  
   
- For more information, see [Modifying XML Trees (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md).  
+ Дополнительные сведения см. в разделе [изменение деревьев XML (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md).  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [LINQ to XML Programming Overview (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)
+- [Общие сведения о программировании LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)

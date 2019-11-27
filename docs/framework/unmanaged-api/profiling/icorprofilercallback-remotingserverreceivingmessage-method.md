@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445758"
 ---
 # <a name="icorprofilercallbackremotingserverreceivingmessage-method"></a>Метод ICorProfilerCallback::RemotingServerReceivingMessage
-Notifies the profiler that the process has received a remote method invocation or activation request.  
+Уведомляет профилировщик о том, что процесс получил удаленный вызов метода или запрос на активацию.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -35,21 +35,21 @@ HRESULT RemotingClientSendingMessage(
   
 ## <a name="parameters"></a>Параметры  
  `pCookie`  
- [in] A value that will correspond with the value provided in [ICorProfilerCallback::RemotingClientSendingMessage](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientsendingmessage-method.md) under these conditions:  
+ окне Значение, которое будет соответствовать значению, указанному в параметре [ICorProfilerCallback:: RemotingClientSendingMessage](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientsendingmessage-method.md) в следующих условиях:  
   
-- Remoting GUID cookies are active.  
+- Файлы Cookie GUID удаленного взаимодействия активны.  
   
-- The channel succeeds in transmitting the message.  
+- Канал проходит успешную передачу сообщения.  
   
-- GUID cookies are active on the client-side process.  
+- Файлы Cookie GUID активны в процессе на стороне клиента.  
   
- This allows easy pairing of remoting calls and the creation of a logical call stack.  
+ Это позволяет легко связывать вызовы удаленного взаимодействия и создавать логические стеки вызовов.  
   
  `fIsAsync`  
- [in] A value that is `true` if the call is asynchronous; otherwise, `false`.  
+ окне Значение, которое `true`, если вызов является асинхронным; в противном случае `false`.  
   
-## <a name="remarks"></a>Заметки  
- If the message request is asynchronous, the request can be serviced by any arbitrary thread.  
+## <a name="remarks"></a>Примечания  
+ Если запрос сообщения является асинхронным, запрос может обслуживаться любым произвольным потоком.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
@@ -60,6 +60,6 @@ HRESULT RemotingClientSendingMessage(
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

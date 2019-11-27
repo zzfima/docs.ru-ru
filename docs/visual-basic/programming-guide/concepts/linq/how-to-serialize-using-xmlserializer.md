@@ -9,7 +9,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352358"
 ---
-# <a name="how-to-serialize-using-xmlserializer-visual-basic"></a>How to: Serialize Using XmlSerializer (Visual Basic)
+# <a name="how-to-serialize-using-xmlserializer-visual-basic"></a>Инструкции. сериализация с помощью XmlSerializer (Visual Basic)
 Этот раздел показывает пример сериализации и десериализации с помощью <xref:System.Xml.Serialization.XmlSerializer>.  
   
 ## <a name="example"></a>Пример  
@@ -80,6 +80,6 @@ Testing for type: XElementContainer
   Deserialized type: XElementContainer  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Serializing Object Graphs that Contain XElement Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/serializing-object-graphs-that-contain-xelement-objects.md)
+- [Сериализация графов объектов, содержащих объекты XElement (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/serializing-object-graphs-that-contain-xelement-objects.md)

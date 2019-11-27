@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428359"
 ---
 # <a name="cor_prf_codegen_flags-enumeration"></a>Перечисление COR_PRF_CODEGEN_FLAGS
-Defines the code generation flags that can be set with the [ICorProfilerFunctionControl::SetCodegenFlags](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-setcodegenflags-method.md) method.  
+Определяет флаги создания кода, которые можно задать с помощью метода [икорпрофилерфунктионконтрол:: SetCodegenFlags](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-setcodegenflags-method.md) .  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,11 +37,11 @@ typedef enum {
   
 |Член|Описание|  
 |------------|-----------------|  
-|`COR_PRF_CODEGEN_DISABLE_INLINING`|No functions will be inlined into this function’s body. However, the function itself may be inlined into its callers.|  
-|`COR_PRF_CODEGEN_DISABLE_ALL_OPTIMIZATIONS`|All optimizations will be disabled for this function’s body. However, the function itself may still be inlined into its callers.|  
+|`COR_PRF_CODEGEN_DISABLE_INLINING`|Никакие функции не будут встроены в текст этой функции. Однако сама функция может быть встроена в ее вызывающие объекты.|  
+|`COR_PRF_CODEGEN_DISABLE_ALL_OPTIMIZATIONS`|Для текста этой функции будут отключены все оптимизации. Однако сама функция по-прежнему может быть встроена в ее вызывающие объекты.|  
   
-## <a name="remarks"></a>Заметки  
- The `COR_PRF_CODEGEN_FLAGS` enumeration is used by the [ICorProfilerFunctionControl::SetCodegenFlags](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-setcodegenflags-method.md) method to enable the profiler to control the code generation for the JIT-recompiled function.  
+## <a name="remarks"></a>Примечания  
+ Перечисление `COR_PRF_CODEGEN_FLAGS` используется методом [икорпрофилерфунктионконтрол:: SetCodegenFlags](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-setcodegenflags-method.md) , чтобы позволить профилировщику управлять созданием кода для JIT-перекомпилированной функции.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
@@ -52,6 +52,6 @@ typedef enum {
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Перечисления профилирования](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

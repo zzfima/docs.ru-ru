@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450165"
 ---
 # <a name="imetadataemitdeleteclasslayout-method"></a>Метод IMetaDataEmit::DeleteClassLayout
-Destroys the class layout metadata signature for the type represented by the specified token.  
+Уничтожает сигнатуру метаданных макета класса для типа, представленного указанным токеном.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -35,18 +35,18 @@ HRESULT DeleteClassLayout (
   
 ## <a name="parameters"></a>Параметры  
  `td`  
- [in] An `mdTypeDef` metadata token that represents the type for which the class layout will be deleted.  
+ окне `mdTypeDef`ный маркер метаданных, представляющий тип, для которого будет удален макет класса.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Заголовок:** COR. h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **Библиотека:** Используется в качестве ресурса в MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [Интерфейс IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

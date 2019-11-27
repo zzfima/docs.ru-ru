@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446313"
 ---
 # <a name="isymunmanagedscopegetmethod-method"></a>Метод ISymUnmanagedScope::GetMethod
-Gets the method that contains this scope.  
+Возвращает метод, содержащий эту область.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -34,14 +34,14 @@ HRESULT GetMethod(
   
 ## <a name="parameters"></a>Параметры  
  `pRetVal`  
- [out] A pointer to the returned [ISymUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md) interface.  
+ заполняет Указатель на возвращаемый интерфейс [ISymUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md) .  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK, если метод выполнен. в противном случае E_FAIL или другой код ошибки.  
   
 ## <a name="requirements"></a>Требования  
- **Header:** CorSym.idl, CorSym.h  
+ **Заголовок:** Корсим. idl, Корсим. h  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс ISymUnmanagedScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)

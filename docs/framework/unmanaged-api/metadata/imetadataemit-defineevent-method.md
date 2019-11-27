@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74432563"
 ---
 # <a name="imetadataemitdefineevent-method"></a>Метод IMetaDataEmit::DefineEvent
-Creates a definition for an event with the specified metadata signature, and gets a token to that event definition.  
+Создает определение для события с указанной сигнатурой метаданных и получает маркер для этого определения события.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -43,42 +43,42 @@ HRESULT DefineEvent (
   
 ## <a name="parameters"></a>Параметры  
  `td`  
- [in] The token for the target class or interface. This is either a `mdTypeDef` or `mdTypeDefNil` token.  
+ окне Токен для целевого класса или интерфейса. Это либо маркер `mdTypeDef`, либо `mdTypeDefNil`.  
   
  `szEvent`  
- [in] The name of the event.  
+ окне Имя события.  
   
  `dwEventFlags`  
- [in] Event flags.  
+ окне Флаги событий.  
   
  `tkEventType`  
- [in] The token for the event class. This is a `mdTypeDef`, a `mdTypeRef`, or a `mdTokenNil` token.  
+ окне Токен для класса событий. Это `mdTypeDef`, `mdTypeRef`или токен `mdTokenNil`.  
   
  `mdAddOn`  
- [in] The method used to subscribe to the event, or null.  
+ окне Метод, используемый для подписки на событие, или значение null.  
   
  `mdRemoveOn`  
- [in] The method used to unsubscribe to the event, or null.  
+ окне Метод, используемый для отмены подписки на событие или значение null.  
   
  `mdFire`  
- [in] The method used (by a derived class) to raise the event.  
+ окне Метод, используемый (производным классом) для вызова события.  
   
  `rmdOtherMethods[]`  
- [in] An array of tokens for other methods associated with the event. The array is terminated with a `mdMethodDefNil` token.  
+ окне Массив токенов для других методов, связанных с событием. Массив завершается маркером `mdMethodDefNil`.  
   
  `pmdEvent`  
- [out] The metadata token assigned to the event.  
+ заполняет Маркер метаданных, назначенный событию.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Заголовок:** COR. h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **Библиотека:** Используется в качестве ресурса в MSCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [Интерфейс IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

@@ -57,32 +57,32 @@ typedef enum CorAssemblyFlags {
   
 |Член|Описание|  
 |------------|-----------------|  
-|`afPublicKey`|Indicates that the assembly reference holds the full, unhashed public key.|  
-|`afPA_None`|Indicates that the processor architecture is unspecified.|  
-|`afPA_MSIL`|Indicates that the processor architecture is neutral (PE32).|  
-|`afPA_x86`|Indicates that the processor architecture is x86 (PE32).|  
-|`afPA_IA64`|Indicates that the processor architecture is Itanium (PE32+).|  
-|`afPA_AMD64`|Indicates that the processor architecture is AMD X64 (PE32+).|  
-|`afPA_ARM`|Indicates that the processor architecture is ARM (PE32).|  
-|`afPA_NoPlatform`|Indicates that the assembly is a reference assembly; that is, it applies to any architecture but cannot run on any architecture. Thus, the flag is the same as `afPA_Mask`.|  
-|`afPA_Specified`|Indicates that the processor architecture flags should be propagated to the `AssemblyRef` record.|  
-|`afPA_Mask`|A mask that describes the processor architecture.|  
-|`afPA_FullMask`|Specifies that the processor architecture description is included.|  
-|`afPA_Shift`|Indicates a shift count in the processor architecture flags to and from the index.|  
-|`afEnableJITcompileTracking`|Indicates the corresponding value from the <xref:System.Diagnostics.DebuggableAttribute.DebuggingModes> of the <xref:System.Diagnostics.DebuggableAttribute>.|  
-|`afDisableJITcompileOptimizer`|Indicates the corresponding value from the <xref:System.Diagnostics.DebuggableAttribute.DebuggingModes> of the <xref:System.Diagnostics.DebuggableAttribute>.|  
-|`afRetargetable`|Indicates that the assembly can be retargeted at run time to an assembly from a different publisher.|  
-|`afContentType_Mask`|A mask that describes the content type.|  
-|`afContentType_Default`|Indicates the default content type.|  
-|`afContentType_WindowsRuntime`|Indicates the Windows Runtime content type.|  
+|`afPublicKey`|Указывает, что ссылка на сборку содержит полный, нехэшированный открытый ключ.|  
+|`afPA_None`|Указывает, что архитектура процессора не определена.|  
+|`afPA_MSIL`|Указывает, что архитектура процессора нейтральна (формат PE32).|  
+|`afPA_x86`|Указывает, что архитектура процессора — x86 (формат PE32).|  
+|`afPA_IA64`|Указывает, что архитектура процессора — Itanium (формат PE32 +).|  
+|`afPA_AMD64`|Указывает, что архитектура процессора — это AMD x64 (формат PE32 +).|  
+|`afPA_ARM`|Указывает, что архитектура процессора — ARM (формат PE32).|  
+|`afPA_NoPlatform`|Указывает, что сборка является ссылочной сборкой; то есть он применяется к любой архитектуре, но не может работать в любой архитектуре. Таким образом, флаг будет таким же, как `afPA_Mask`.|  
+|`afPA_Specified`|Указывает, что флаги архитектуры процессора должны распространяться на запись `AssemblyRef`.|  
+|`afPA_Mask`|Маска, описывающая архитектуру процессора.|  
+|`afPA_FullMask`|Указывает, что включено описание архитектуры процессора.|  
+|`afPA_Shift`|Указывает число смещений в флагах архитектуры процессора в индекс и из него.|  
+|`afEnableJITcompileTracking`|Указывает соответствующее значение из <xref:System.Diagnostics.DebuggableAttribute.DebuggingModes> <xref:System.Diagnostics.DebuggableAttribute>.|  
+|`afDisableJITcompileOptimizer`|Указывает соответствующее значение из <xref:System.Diagnostics.DebuggableAttribute.DebuggingModes> <xref:System.Diagnostics.DebuggableAttribute>.|  
+|`afRetargetable`|Указывает, что сборка может быть перенацелена во время выполнения в сборку из другого издателя.|  
+|`afContentType_Mask`|Маска, описывающая тип содержимого.|  
+|`afContentType_Default`|Указывает тип содержимого по умолчанию.|  
+|`afContentType_WindowsRuntime`|Указывает тип содержимого среда выполнения Windows.|  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorHdr.h  
+ **Заголовок:** Корхдр. h  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Перечисления метаданных](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

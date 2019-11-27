@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446218"
 ---
 # <a name="isymunmanagedsourceservermodulegetsourceserverdata-method"></a>Метод ISymUnmanagedSourceServerModule::GetSourceServerData
-Returns the source server data for the module. The caller must free resources by using `CoTaskMemFree`.  
+Возвращает данные исходного сервера для модуля. Вызывающий объект должен освободить ресурсы с помощью `CoTaskMemFree`.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -35,17 +35,17 @@ HRESULT GetSourceServerData(
   
 ## <a name="parameters"></a>Параметры  
  `pDataByteCount`  
- [out] A pointer to a `ULONG32` that receives the size, in bytes, of the source server data.  
+ заполняет Указатель на `ULONG32`, который получает размер (в байтах) данных сервера-источника.  
   
  `ppData`  
- [out] A pointer to the returned `pDataByteCount` value.  
+ заполняет Указатель на возвращаемое значение `pDataByteCount`.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK, если метод выполнен. в противном случае E_FAIL или другой код ошибки.  
   
 ## <a name="requirements"></a>Требования  
- **Header:** CorSym.idl, CorSym.h  
+ **Заголовок:** Корсим. idl, Корсим. h  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс ISymUnmanagedSourceServerModule](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedsourceservermodule-interface.md)

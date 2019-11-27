@@ -37,8 +37,8 @@ typedef enum {
   
 |Член|Описание|  
 |------------|-----------------|  
-|`COR_PRF_GC_INDUCED`|The garbage collection was induced by a <xref:System.GC.Collect%2A> method.|  
-|`COR_PRF_GC_OTHER`|The reason is unspecified.|  
+|`COR_PRF_GC_INDUCED`|Сборка мусора была вызвана методом <xref:System.GC.Collect%2A>.|  
+|`COR_PRF_GC_OTHER`|Причина не указана.|  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
@@ -49,6 +49,6 @@ typedef enum {
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Перечисления профилирования](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

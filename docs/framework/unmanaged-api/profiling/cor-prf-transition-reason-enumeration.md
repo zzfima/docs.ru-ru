@@ -37,11 +37,11 @@ typedef enum {
   
 |Член|Описание|  
 |------------|-----------------|  
-|`COR_PRF_TRANSITION_CALL`|The transition is due to a call into a function.|  
-|`COR_PRF_TRANSITION_RETURN`|The transition is due to a return from a function.|  
+|`COR_PRF_TRANSITION_CALL`|Переход происходит из-за вызова функции.|  
+|`COR_PRF_TRANSITION_RETURN`|Переход происходит из-за возврата из функции.|  
   
-## <a name="remarks"></a>Заметки  
- When a transition occurs, the profiler receives an [ICorProfilerCallback::ManagedToUnmanagedTransition](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-managedtounmanagedtransition-method.md) or [ICorProfilerCallback::UnmanagedToManagedTransition](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-unmanagedtomanagedtransition-method.md) callback, either of which provides a value of the `COR_PRF_TRANSITION_REASON` enumeration to indicate the reason for the transition.  
+## <a name="remarks"></a>Примечания  
+ Когда происходит переход, профилировщик получает обратный вызов [ICorProfilerCallback:: манажедтаунманажедтранситион](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-managedtounmanagedtransition-method.md) или [ICorProfilerCallback:: унманажедтоманажедтранситион](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-unmanagedtomanagedtransition-method.md) , который предоставляет значение перечисления `COR_PRF_TRANSITION_REASON`, чтобы указать причину перехода.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  

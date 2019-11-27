@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445603"
 ---
 # <a name="setassemblyfile-method"></a>Метод SetAssemblyFile
-Assigns the name of the assembly to be built. Not for use when producing unbound modules.  
+Присваивает имя сборки, которая должна быть построена. Не предназначен для использования при создании непривязанных модулей.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,24 +37,24 @@ HRESULT SetAssemblyFile(
   
 ## <a name="parameters"></a>Параметры  
  `pszFilename`  
- Fully qualified name of the manifest file.  
+ Полное имя файла манифеста.  
   
  `pEmitter`  
- Pointer to [IMetaDataEmit Interface](../metadata/imetadataemit-interface.md) interface.  
+ Указатель на интерфейс [интерфейса IMetaDataEmit](../metadata/imetadataemit-interface.md) .  
   
  `afFlags`  
- Flags as defined in [AssemblyFlags Enumeration](../metadata/assemblyflags-enumeration.md).  
+ Флаги, определенные в [перечислении AssemblyFlags](../metadata/assemblyflags-enumeration.md).  
   
  `pAssemblyID`  
- Pointer to ID of resulting assembly.  
+ Указатель на идентификатор результирующей сборки.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Returns S_OK if the method succeeds.  
+ Возвращает S_OK, если метод завершается с ошибкой.  
   
 ## <a name="requirements"></a>Требования  
- Requires alink.h.  
+ Требуется ALink. h.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс IALink](ialink-interface.md)
 - [Интерфейс IALink2](ialink2-interface.md)

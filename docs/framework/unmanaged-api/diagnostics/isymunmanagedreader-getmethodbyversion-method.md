@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74426751"
 ---
 # <a name="isymunmanagedreadergetmethodbyversion-method"></a>Метод ISymUnmanagedReader::GetMethodByVersion
-Gets a symbol reader method, given a method token and an edit-and-copy version number. Version numbers start at 1 and are incremented each time the method is changed as a result of an edit-and-copy operation.  
+Возвращает метод чтения символов по заданному маркеру метода и номеру версии для редактирования и копирования. Номера версий начинаются с 1 и увеличиваются каждый раз при изменении метода в результате операции редактирования и копирования.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -36,20 +36,20 @@ HRESULT GetMethodByVersion (
   
 ## <a name="parameters"></a>Параметры  
  `token`  
- [in] The method token.  
+ окне Токен метода.  
   
  `version`  
- [in] The method version.  
+ окне Версия метода.  
   
  `pRetVal`  
- [out] A pointer to the returned interface.  
+ заполняет Указатель на возвращаемый интерфейс.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK, если метод выполнен. в противном случае E_FAIL или другой код ошибки.  
   
 ## <a name="requirements"></a>Требования  
- **Header:** CorSym.idl, CorSym.h  
+ **Заголовок:** Корсим. idl, Корсим. h  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

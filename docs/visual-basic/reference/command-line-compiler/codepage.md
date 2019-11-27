@@ -26,16 +26,16 @@ ms.locfileid: "74343548"
   
 |Термин|Определение|  
 |---|---|  
-|`id`|Обязательный. The compiler uses the code page specified by `id` to interpret the encoding of the source files.|  
+|`id`|Обязательное. Компилятор использует кодовую страницу, указанную `id`, для интерпретации кодировки исходных файлов.|  
   
-## <a name="remarks"></a>Заметки  
- To compile source code saved with a specific encoding, you can use `-codepage` to specify which code page should be used. The `-codepage` option applies to all source-code files in your compilation. For more information, see [Character Encoding in the .NET Framework](../../../standard/base-types/character-encoding.md).  
+## <a name="remarks"></a>Примечания  
+ Чтобы скомпилировать исходный код, сохраненный с определенной кодировкой, можно использовать `-codepage`, чтобы указать, какую кодовую страницу следует использовать. Параметр `-codepage` применяется ко всем файлам исходного кода при компиляции. Дополнительные сведения см. [в разделе кодировка символов в .NET Framework](../../../standard/base-types/character-encoding.md).  
   
- The `-codepage` option is not needed if the source-code files were saved using the current ANSI code page, Unicode, or UTF-8 with a signature. Visual Studio saves all source-code files with the current ANSI code page by default, unless the user specifies another encoding in the **Encoding** dialog box. Visual Studio uses the **Encoding** dialog box to open source-code files saved with a different code page.  
+ Параметр `-codepage` не требуется, если файлы исходного кода были сохранены с помощью текущей кодовой страницы ANSI, Юникода или UTF-8 с подписью. Visual Studio по умолчанию сохраняет все файлы исходного кода с текущей кодовой страницей ANSI, если пользователь не задает другую кодировку в диалоговом окне **Кодировка** . Visual Studio использует диалоговое окно **Кодировка** для открытия файлов исходного кода, сохраненных с другой кодовой страницей.  
   
 > [!NOTE]
-> The `-codepage` option is not available from within the Visual Studio development environment; it is available only when compiling from the command line.  
+> Параметр `-codepage` недоступен в среде разработки Visual Studio; Он доступен только при компиляции из командной строки.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Компилятор Visual Basic с интерфейсом командной строки](../../../visual-basic/reference/command-line-compiler/index.md)

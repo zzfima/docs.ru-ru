@@ -38,19 +38,19 @@ typedef enum CorSaveSize {
   
 |Член|Описание|  
 |------------|-----------------|  
-|`cssAccurate`|Specifies that the return value should be exact.|  
-|`cssQuick`|Specifies that the return value should be estimated.|  
-|`cssDiscardTransientCAs`|Specifies that discardable types should be removed.|  
+|`cssAccurate`|Указывает, что возвращаемое значение должно быть точным.|  
+|`cssQuick`|Указывает, что возвращаемое значение должно быть оценено.|  
+|`cssDiscardTransientCAs`|Указывает, что удаляемые типы должны быть удалены.|  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorHdr.h  
+ **Заголовок:** Корхдр. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Библиотека:** Используется в качестве ресурса в MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Перечисления метаданных](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

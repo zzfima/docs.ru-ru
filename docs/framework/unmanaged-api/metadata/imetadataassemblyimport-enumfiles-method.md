@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74443543"
 ---
 # <a name="imetadataassemblyimportenumfiles-method"></a>Метод IMetaDataAssemblyImport::EnumFiles
-Enumerates the files referenced in the current assembly manifest.  
+Перечисляет файлы, на которые ссылается текущий манифест сборки.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,33 +38,33 @@ HRESULT EnumFiles (
   
 ## <a name="parameters"></a>Параметры  
  `phEnum`  
- [in, out] A pointer to the enumerator. This must be a null value for the first call of this method.  
+ [вход, выход] Указатель на перечислитель. При первом вызове этого метода это значение должно быть нулевым.  
   
  `rFiles`  
- [out] The array used to store the `mdFile` metadata tokens.  
+ заполняет Массив, используемый для хранения маркеров метаданных `mdFile`.  
   
  `cMax`  
- [in] The maximum number of `mdFile` tokens that can be placed in `rFiles`.  
+ окне Максимальное число маркеров `mdFile`, которые могут быть помещены в `rFiles`.  
   
  `pcTokens`  
- [out] The number of `mdFile` tokens actually placed in `rFiles`.  
+ заполняет Число маркеров `mdFile`, фактически помещаемых в `rFiles`.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
   
 |HRESULT|Описание|  
 |-------------|-----------------|  
-|`S_OK`|`EnumFiles` returned successfully.|  
-|`S_FALSE`|There are no tokens to enumerate. In this case, `pcTokens` is set to zero.|  
+|`S_OK`|`EnumFiles` успешно возвращено.|  
+|`S_FALSE`|Нет токенов для перечисления. В этом случае `pcTokens` имеет значение 0.|  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Заголовок:** COR. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Библиотека:** Используется в качестве ресурса в MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс IMetaDataAssemblyImport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

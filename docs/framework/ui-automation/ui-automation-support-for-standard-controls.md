@@ -41,26 +41,26 @@ ms.locfileid: "74441221"
 |Кнопка|CheckBox|  
 |ComboBoxEx32|ComboBox|  
 |ComboBox|ComboBox|  
-|Правка|Document|  
+|Правка|Документ|  
 |Правка|Правка|  
 |SysLink|Гиперссылка|  
-|Статические|Text|  
-|Статические|Изображение|  
+|Static|Text|  
+|Static|Изображение|  
 |SysIPAddress32|Другой|  
 |SysHeader32|Header/HeaderItem|  
 |SysListView32|DataGrid|  
-|SysListView32|Списка|  
-|ListBox|Списка|  
+|SysListView32|List|  
+|ListBox|List|  
 |ListBox|ListItem|  
 |#32768|Меню|  
 |#32768|MenuItem|  
 |msctls_progress32|ProgressBar|  
 |RichEdit|Документ. См. примечание.|  
-|RichEdit20A|Document|  
-|RichEdit20W|Document|  
-|RichEdit50W|Document|  
-|ScrollBar|Slider|  
-|msctls_trackbar32|Slider|  
+|RichEdit20A|Документ|  
+|RichEdit20W|Документ|  
+|RichEdit50W|Документ|  
+|ScrollBar|Ползунок|  
+|msctls_trackbar32|Ползунок|  
 |msctls_updown32|Spinner|  
 |msctls_statusbar32|StatusBar|  
 |SysTabControl32|Вкладка|  
@@ -70,14 +70,14 @@ ms.locfileid: "74441221"
 |ToolbarWindow32|Кнопка|  
 |ToolbarWindow32|CheckBox|  
 |ToolbarWindow32|RadioButton|  
-|ToolbarWindow32|Separator|  
+|ToolbarWindow32|Разделитель|  
 |tooltips_class32|ToolTip|  
 |#32774|ToolTip|  
 |ReBarWindow32|Toolbar|  
 |SysTreeView32|Дерево|  
 |SysTreeView32|TreeItem|  
   
- **Note** The RichEdit control is supported only for versions shipped with Windows Vista (in RichEd20.dll version 3.1 and later, and MsftEdit.dll version 4.1 and later).  
+ **Примечание** . Элемент управления RichEdit поддерживается только для версий, поставляемых с Windows Vista (в библиотеки RICHED20. dll версии 3,1 и более поздних версий и Мсфтедит. dll версии 4,1 и более поздних версий).  
   
  Следующие элементы управления не поддерживаются.  
   
@@ -87,16 +87,16 @@ ms.locfileid: "74441221"
 |SysPager|Spinner|  
 |SysDateTimePick32|Другой|  
 |SysMonthCal32|Календарь|  
-|MS_WINNOTE|ToolTip|  
-|VBBubble|ToolTip|  
-|ScrollBar (при использовании в качестве отдельного элемента управления)|Slider|  
+|MS_WINNOTE|Подсказка|  
+|VBBubble|Подсказка|  
+|ScrollBar (при использовании в качестве отдельного элемента управления)|Ползунок|  
 |SuperGrid|Другой|  
   
 <a name="Windows_Forms_Controls"></a>   
 ## <a name="windows-forms-controls"></a>Элементы управления Windows Forms  
- Windows Forms controls are exposed to [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] through client-side providers in UIAutomationClientsideProviders.dll. Эта сборка автоматически регистрируется для использования с приложениями клиента автоматизации пользовательского интерфейса.  
+ Windows Forms элементы управления предоставляются для [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] с помощью поставщиков на стороне клиента в UIAutomationClientsideProviders. dll. Эта сборка автоматически регистрируется для использования с приложениями клиента автоматизации пользовательского интерфейса.  
   
- Typically, Windows Forms controls that are managed wrappers for [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] common controls are supported by [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]. Поддерживаются следующие элементы управления.  
+ Как правило, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]поддерживаются элементы управления Windows Forms, которые являются управляемыми оболочками для [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] стандартных элементов управления. Поддерживаются следующие элементы управления.  
   
 |Имя класса|  
 |----------------|  
@@ -136,7 +136,7 @@ ms.locfileid: "74441221"
 |VscrollBar|  
 |Веб-браузер|  
   
- The following controls are exposed to [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] only through their support for Microsoft Active Accessibility. Некоторые функциональные возможности могут оказаться недоступными.  
+ Следующие элементы управления доступны для [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] только с помощью поддержки Microsoft Active Accessibility. Некоторые функциональные возможности могут оказаться недоступными.  
   
 |Имя элемента|  
 |------------------|  
@@ -163,10 +163,10 @@ ms.locfileid: "74441221"
 |ToolStrip|  
 |TableLayoutPanel|  
 |SplitContainer/SplitterPanel|  
-|Разделитель|  
+|Функции разделения|  
 |RaftingContainer|  
 |StatusStrip|  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Типы элементов управления автоматизации пользовательского интерфейса](ui-automation-control-types.md)

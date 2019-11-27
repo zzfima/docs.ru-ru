@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74447766"
 ---
 # <a name="icorprofilerinfoendinprocdebugging-method"></a>Метод ICorProfilerInfo::EndInprocDebugging
-Shuts down an in-process debugging session. This method is obsolete in the .NET Framework version 2.0.  
+Завершает работу внутрипроцессного сеанса отладки. Этот метод является устаревшим в .NET Framework версии 2,0.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -34,12 +34,12 @@ HRESULT EndInprocDebugging(
   
 ## <a name="parameters"></a>Параметры  
  `dwProfilerContext`  
- [in] A value that identifies the debugging session. This value must be the same as that received in the [ICorProfilerInfo::BeginInprocDebugging](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-begininprocdebugging-method.md) method.  
+ окне Значение, идентифицирующее сеанс отладки. Это значение должно совпадать со значением, полученным в методе [ICorProfilerInfo:: BeginInprocDebugging](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-begininprocdebugging-method.md) .  
   
-## <a name="remarks"></a>Заметки  
- You must call [ICorProfilerInfo::BeginInprocDebugging](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-begininprocdebugging-method.md) and `EndInprocDebugging` within the same callback method.  
+## <a name="remarks"></a>Примечания  
+ Необходимо вызвать метод [ICorProfilerInfo:: BeginInprocDebugging](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-begininprocdebugging-method.md) и `EndInprocDebugging` в том же методе обратного вызова.  
   
- The CLR debugging services supported limited in-process debugging in the .NET Framework versions 1.0 and 1.1. In-process debugging enabled a profiler to use the inspection portions of the debugging API. However, due to customer feedback, in-process debugging has been removed from the .NET Framework in version 2.0, and replaced with a set of functionality that is more in line with the profiling API.  
+ Службы отладки CLR поддерживали ограниченную внутрипроцессную отладку в .NET Framework версиях 1,0 и 1,1. В процессе отладки с помощью профилировщика можно использовать части проверки для API отладки. Однако из-за отзывов клиентов внутрипроцессный процесс отладки был удален из .NET Framework в версии 2,0 и заменен набором функциональных возможностей, которые более подробно описаны в API профилирования.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
@@ -48,8 +48,8 @@ HRESULT EndInprocDebugging(
   
  **Библиотека:** CorGuids.lib  
   
- **.NET Framework Version:** 1.0  
+ **Версия .NET Framework:** 1,0  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

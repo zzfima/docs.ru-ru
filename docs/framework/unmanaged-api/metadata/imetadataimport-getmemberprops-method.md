@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74437518"
 ---
 # <a name="imetadataimportgetmemberprops-method"></a>Метод IMetaDataImport::GetMemberProps
-Gets information stored in the metadata for a specified member definition, including the name, binary signature, and relative virtual address, of the <xref:System.Type> member referenced by the specified metadata token. This is a simple helper method: if *mb* is a MethodDef, then **GetMethodProps** is called; if *mb* is a FieldDef, then **GetFieldProps** is called. See these other methods for details. 
+Возвращает сведения, хранящиеся в метаданных для указанного определения элемента, включая имя, двоичную подпись и относительный виртуальный адрес элемента <xref:System.Type>, на который ссылается указанный маркер метаданных. Это простой вспомогательный метод: Если *МБ* является MethodDef, то вызывается **жетмесодпропс** . Если *МБ* является FieldDef, вызывается **жетфиелдпропс** . Дополнительные сведения см. в этих других методах. 
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -47,54 +47,54 @@ HRESULT GetMemberProps (
   
 ## <a name="parameters"></a>Параметры  
  `mb`  
- [in] The token that references the member to get the associated metadata for.  
+ окне Токен, ссылающийся на элемент, для которого необходимо получить связанные метаданные.  
   
  `pClass`  
- [out] A pointer to the metadata token that represents the class of the member.  
+ заполняет Указатель на маркер метаданных, представляющий класс члена.  
   
  `szMember`  
- [out] The name of the member.  
+ заполняет Имя элемента.  
   
  `cchMember`  
- [in] The size in wide characters of the `szMember` buffer.  
+ окне Размер в расширенных символах буфера `szMember`.  
   
  `pchMember`  
- [out] The size in wide characters of the returned name.  
+ заполняет Размер в расширенных символах возвращаемого имени.  
   
  `pdwAttr`  
- [out] Any flag values applied to the member.  
+ заполняет Все значения флагов, примененные к элементу.  
   
  `ppvSigBlob`  
- [out] A pointer to the binary metadata signature of the member.  
+ заполняет Указатель на сигнатуру двоичных метаданных элемента.  
   
  `pcbSigBlob`  
- [out] The size in bytes of `ppvSigBlob`.  
+ заполняет Размер в байтах `ppvSigBlob`.  
   
  `pulCodeRVA`  
- [out] A pointer to the relative virtual address of the member.  
+ заполняет Указатель на относительный виртуальный адрес элемента.  
   
  `pdwImplFlags`  
- [out] Any method implementation flags associated with the member.  
+ заполняет Любые флаги реализации метода, связанные с элементом.  
   
  `pdwCPlusTypeFlag`  
- [out] A flag that marks a <xref:System.ValueType>. It is one of the `ELEMENT_TYPE_*` values.
+ заполняет Флаг, помечающий <xref:System.ValueType>. Это одно из значений `ELEMENT_TYPE_*`.
   
  `ppValue`  
- [out] A constant string value returned by this member.  
+ заполняет Константное строковое значение, возвращаемое этим элементом.  
   
  `pcchValue`  
- [out] The size in characters of `ppValue`, or zero if `ppValue` does not hold a string.  
+ заполняет Размер в символах `ppValue`или нуль, если `ppValue` не содержит строку.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Заголовок:** COR. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [Интерфейс IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

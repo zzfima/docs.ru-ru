@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448276"
 ---
 # <a name="isymunmanagedreadergetmethod-method"></a>Метод ISymUnmanagedReader::GetMethod
-Gets a symbol reader method, given a method token.  
+Возвращает метод чтения символов по заданному токену метода.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -35,17 +35,17 @@ HRESULT GetMethod (
   
 ## <a name="parameters"></a>Параметры  
  `token`  
- [in] The method token.  
+ окне Токен метода.  
   
  `pRetVal`  
- [out] A pointer to the returned interface.  
+ заполняет Указатель на возвращаемый интерфейс.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK, если метод выполнен. в противном случае E_FAIL или другой код ошибки.  
   
 ## <a name="requirements"></a>Требования  
- **Header:** CorSym.idl, CorSym.h  
+ **Заголовок:** Корсим. idl, Корсим. h  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

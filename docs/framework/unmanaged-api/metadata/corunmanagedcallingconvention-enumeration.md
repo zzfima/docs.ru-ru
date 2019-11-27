@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74442449"
 ---
 # <a name="corunmanagedcallingconvention-enumeration"></a>Перечисление CorUnmanagedCallingConvention
-Specifies the calling conventions for unmanaged code.  
+Указывает соглашения о вызовах для неуправляемого кода.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -46,25 +46,25 @@ typedef enum CorUnmanagedCallingConvention {
   
 |Член|Описание|  
 |------------|-----------------|  
-|`IMAGE_CEE_UNMANAGED_CALLCONV_C`|The C language calling convention.|  
-|`IMAGE_CEE_UNMANAGED_CALLCONV_STDCALL`|The standard calling convention.|  
-|`IMAGE_CEE_UNMANAGED_CALLCONV_THISCALL`|The "this" calling convention.|  
-|`IMAGE_CEE_UNMANAGED_CALLCONV_FASTCALL`|The "fast" calling convention.|  
+|`IMAGE_CEE_UNMANAGED_CALLCONV_C`|Соглашение о вызовах языка C.|  
+|`IMAGE_CEE_UNMANAGED_CALLCONV_STDCALL`|Стандартное соглашение о вызовах.|  
+|`IMAGE_CEE_UNMANAGED_CALLCONV_THISCALL`|Соглашение о вызовах "this".|  
+|`IMAGE_CEE_UNMANAGED_CALLCONV_FASTCALL`|Соглашение о вызовах "Fast".|  
 |`IMAGE_CEE_CS_CALLCONV_C`|Не используется.|  
 |`IMAGE_CEE_CS_CALLCONV_STDCALL`|Не используется.|  
 |`IMAGE_CEE_CS_CALLCONV_THISCALL`|Не используется.|  
 |`IMAGE_CEE_CS_CALLCONV_FASTCALL`|Не используется.|  
   
-## <a name="remarks"></a>Заметки  
- The CLR does not support the "fast" calling convention in the .NET Framework version 1.0.  
+## <a name="remarks"></a>Примечания  
+ Среда CLR не поддерживает "быстрое" соглашение о вызовах в .NET Framework версии 1,0.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorHdr.h  
+ **Заголовок:** Корхдр. h  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Перечисления метаданных](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

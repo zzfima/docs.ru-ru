@@ -14,7 +14,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352870"
 ---
 # <a name="visual-basic-language-specification"></a>Спецификация языка Visual Basic
-The Visual Basic Language Specification is the authoritative source for answers to all questions about Visual Basic grammar and syntax. It contains detailed information about the language, including many points not covered in the Visual Basic reference documentation.  
+Спецификация языка Visual Basic является полномочным источником ответов на все вопросы о Visual Basic грамматике и синтаксисе. Он содержит подробные сведения о языке, включая множество точек, не описываемых в справочной документации по Visual Basic.  
   
  Спецификация доступна в [Центре загрузки Майкрософт](https://go.microsoft.com/fwlink/?LinkId=188623).  
   
@@ -22,9 +22,9 @@ The Visual Basic Language Specification is the authoritative source for answers 
 
 Найденные в спецификации проблемы следует публиковать в репозитории [dotnet/vblang](https://github.com/dotnet/vblang/issues). Если же вам интересно исправить какие-то из найденных вами ошибок, вы можете отправить [запрос на вытягивание](https://github.com/dotnet/vblang/pulls) в тот же репозиторий.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Справочник по языку Visual Basic](../../../visual-basic/language-reference/index.md)
 
 >[!div class="step-by-step"]
->[Вперед](../../../../_vblang/spec/introduction.md)
+>[Далее](../../../../_vblang/spec/introduction.md)

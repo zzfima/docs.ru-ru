@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74430714"
 ---
 # <a name="icorprofilercallbackremotingserversendingreply-method"></a>Метод ICorProfilerCallback::RemotingServerSendingReply
-Notifies the profiler that the process has finished processing a remote method invocation request and is about to transmit the reply through a channel.  
+Уведомляет профилировщик о том, что процесс завершил обработку запроса удаленного вызова метода и собирается передать ответ через канал.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -35,18 +35,18 @@ HRESULT RemotingServerSendingReply(
   
 ## <a name="parameters"></a>Параметры  
  `pCookie`  
- [in] A pointer to a GUID that will correspond with the value provided in [ICorProfilerCallback::RemotingClientReceivingReply](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientreceivingreply-method.md) under these conditions:  
+ окне Указатель на идентификатор GUID, который будет соответствовать значению, указанному в параметре [ICorProfilerCallback:: ремотингклиентрецеивингрепли](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientreceivingreply-method.md) в следующих условиях:  
   
-- Remoting GUID cookies are active.  
+- Файлы Cookie GUID удаленного взаимодействия активны.  
   
-- The channel succeeds in transmitting the message.  
+- Канал проходит успешную передачу сообщения.  
   
-- GUID cookies are active on the client-side process.  
+- Файлы Cookie GUID активны в процессе на стороне клиента.  
   
- This allows easy pairing of remoting calls and the creation of a logical call stack.  
+ Это позволяет легко связывать вызовы удаленного взаимодействия и создавать логические стеки вызовов.  
   
  `fIsAsync`  
- [in] A value that is `true` if the call is asynchronous; otherwise, `false`.  
+ окне Значение, которое `true`, если вызов является асинхронным; в противном случае `false`.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
@@ -57,6 +57,6 @@ HRESULT RemotingServerSendingReply(
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

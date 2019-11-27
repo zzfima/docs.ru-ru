@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450332"
 ---
 # <a name="imetadataassemblyimportenumexportedtypes-method"></a>Метод IMetaDataAssemblyImport::EnumExportedTypes
-Enumerates the exported types referenced in the assembly manifest in the current metadata scope.  
+Перечисляет экспортированные типы, на которые ссылается манифест сборки в текущей области метаданных.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,33 +38,33 @@ HRESULT EnumExportedTypes (
   
 ## <a name="parameters"></a>Параметры  
  `phEnum`  
- [in, out] A pointer to the enumerator. This must be a null value when the `EnumExportedTypes` method is called for the first time.  
+ [вход, выход] Указатель на перечислитель. Это значение должно быть null, если метод `EnumExportedTypes` вызывается в первый раз.  
   
  `rExportedTypes`  
- [out] The enumeration of `mdExportedType` metadata tokens.  
+ заполняет Перечисление `mdExportedType` маркеров метаданных.  
   
  `cMax`  
- [in] The maximum number of `mdExportedType` tokens that can be placed in the `rExportedTypes` array.  
+ окне Максимальное число маркеров `mdExportedType`, которые могут быть помещены в массив `rExportedTypes`.  
   
  `pcTokens`  
- [out] The number of `mdExportedType` tokens actually placed in `rExportedTypes`.  
+ заполняет Число маркеров `mdExportedType`, фактически помещаемых в `rExportedTypes`.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
   
 |HRESULT|Описание|  
 |-------------|-----------------|  
-|`S_OK`|`EnumExportedTypes` returned successfully.|  
-|`S_FALSE`|There are no tokens to enumerate. In this case, `pcTokens` is set to zero.|  
+|`S_OK`|`EnumExportedTypes` успешно возвращено.|  
+|`S_FALSE`|Нет токенов для перечисления. В этом случае `pcTokens` имеет значение 0.|  
   
 ## <a name="requirements"></a>Требования  
- **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформа:** См. раздел [требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Заголовок:** COR. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Библиотека:** Используется в качестве ресурса в MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс IMetaDataAssemblyImport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

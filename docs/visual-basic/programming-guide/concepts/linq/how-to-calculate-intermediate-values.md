@@ -9,7 +9,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353354"
 ---
-# <a name="how-to-calculate-intermediate-values-visual-basic"></a>How to: Calculate Intermediate Values (Visual Basic)
+# <a name="how-to-calculate-intermediate-values-visual-basic"></a>Инструкции. Вычисление промежуточных значений (Visual Basic)
 В этом примере показано, как вычислять промежуточные значения, которые используются в сортировке, фильтрации и выборке.  
   
 ## <a name="example"></a>Пример  
@@ -41,7 +41,7 @@ Next
 ```  
   
 ## <a name="example"></a>Пример  
- Следующий пример демонстрирует тот же запрос XML, что и в пространстве имен. For more information, see [Namespaces Overview (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).  
+ Следующий пример демонстрирует тот же запрос XML, что и в пространстве имен. Дополнительные сведения см. в разделе [Общие сведения о пространствах имен (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).  
   
  В этом примере используется следующий XML-документ: [Пример XML-файла. Числовые данные пространства имен](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-in-a-namespace.md).  
   
@@ -74,6 +74,6 @@ End Module
 435.00  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Basic Queries (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+- [Основные запросы (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

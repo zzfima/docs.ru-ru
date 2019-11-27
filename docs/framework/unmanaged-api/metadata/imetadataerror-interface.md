@@ -22,26 +22,26 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74441623"
 ---
 # <a name="imetadataerror-interface"></a>Интерфейс IMetaDataError
-Provides a callback mechanism for reporting errors during the metadata merge.  
+Предоставляет механизм обратного вызова для сообщения об ошибках во время слияния метаданных.  
   
 > [!NOTE]
-> The `IMetaDataError` interface must be implemented by the client.  
+> Клиент должен реализовать интерфейс `IMetaDataError`.  
   
 ## <a name="methods"></a>Методы  
   
 |Метод|Описание|  
 |------------|-----------------|  
-|[Метод OnError](../../../../docs/framework/unmanaged-api/metadata/imetadataerror-onerror-method.md)|Provides notification of errors that occur during the metadata merge.|  
+|[Метод OnError](../../../../docs/framework/unmanaged-api/metadata/imetadataerror-onerror-method.md)|Предоставляет уведомление об ошибках, возникающих во время слияния метаданных.|  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Заголовок:** COR. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Библиотека:** Используется в качестве ресурса в MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейсы метаданных](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)

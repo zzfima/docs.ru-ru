@@ -15,7 +15,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74343701"
 ---
 # <a name="erase-statement-visual-basic"></a>Оператор Erase (Visual Basic)
-Used to release array variables and deallocate the memory used for their elements.  
+Используется для высвобождения переменных массива и освобождения памяти, используемой для их элементов.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -25,19 +25,19 @@ Erase arraylist
   
 ## <a name="parts"></a>Части  
  `arraylist`  
- Обязательный. List of array variables to be erased. Переменные разделяются запятыми.  
+ Обязательное. Список переменных массива для удаления. Переменные разделяются запятыми.  
   
-## <a name="remarks"></a>Заметки  
- The `Erase` statement can appear only at procedure level. This means you can release arrays inside a procedure but not at class or module level.  
+## <a name="remarks"></a>Примечания  
+ Оператор `Erase` может использоваться только на уровне процедуры. Это означает, что массивы можно освобождать внутри процедуры, но не на уровне класса или модуля.  
   
- The `Erase` statement is equivalent to assigning `Nothing` to each array variable.  
+ Оператор `Erase` эквивалентен назначению `Nothing` каждой переменной массива.  
   
 ## <a name="example"></a>Пример  
- The following example uses the `Erase` statement to clear two arrays and free their memory (1000 and 100 storage elements, respectively). The `ReDim` statement then assigns a new array instance to the three-dimensional array.  
+ В следующем примере используется оператор `Erase` для очистки двух массивов и освобождения памяти (1000 и 100, соответственно). Затем оператор `ReDim` присваивает новый экземпляр массива трехмерному массиву.  
   
  [!code-vb[VbVbalrStatements#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#19)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Nothing](../../../visual-basic/language-reference/nothing.md)
 - [Оператор reDim](../../../visual-basic/language-reference/statements/redim-statement.md)

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445008"
 ---
 # <a name="icorprofilercallbackexceptioncatcherleave-method"></a>Метод ICorProfilerCallback::ExceptionCatcherLeave
-Notifies the profiler that control is being passed out of the appropriate `catch` block.  
+Уведомляет профилировщик о том, что управление передается из соответствующего блока `catch`.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -31,10 +31,10 @@ Notifies the profiler that control is being passed out of the appropriate `catch
 HRESULT ExceptionCatcherLeave();  
 ```  
   
-## <a name="remarks"></a>Заметки  
- The profiler should not block in its implementation of this method because the stack may not be in a state that allows garbage collection, and therefore preemptive garbage collection cannot be enabled. If the profiler blocks here and garbage collection is attempted, the runtime will block until this callback returns.  
+## <a name="remarks"></a>Примечания  
+ Профилировщик не должен блокировать реализацию этого метода, так как стек может не находиться в состоянии, допускающем сборку мусора, поэтому невозможно включить вытесненную сборку мусора. Если профилировщик блокируется здесь и выполняется сборка мусора, среда выполнения блокируется до тех пор, пока этот обратный вызов не вернет значение.  
   
- The profiler's implementation of this method should not call into managed code or in any way cause a managed-memory allocation.  
+ Реализация этого метода профилировщиком не должна вызывать управляемый код или каким-либо образом приводит к выделению управляемой памяти.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
@@ -45,7 +45,7 @@ HRESULT ExceptionCatcherLeave();
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
 - [Метод ExceptionCatcherEnter](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptioncatcherenter-method.md)

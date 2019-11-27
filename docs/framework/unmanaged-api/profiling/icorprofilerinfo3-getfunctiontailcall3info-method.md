@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449702"
 ---
 # <a name="icorprofilerinfo3getfunctiontailcall3info-method"></a>Метод ICorProfilerInfo3::GetFunctionTailcall3Info
-Provides the stack frame of the function that is being reported to the profiler by the [FunctionTailcall3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3withinfo-function.md) function. Этот метод может быть вызван только во время обратного вызова `FunctionTailcall3WithInfo`.  
+Предоставляет кадр стека функции, о которой сообщается профилировщику функцией [FunctionTailcall3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3withinfo-function.md) . Этот метод может быть вызван только во время обратного вызова `FunctionTailcall3WithInfo`.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -36,15 +36,15 @@ HRESULT GetFunctionTailcall3Info(
   
 ## <a name="parameters"></a>Параметры  
  `functionId`  
- [in] The `FunctionID` of the function that is returning.  
+ окне `FunctionID` возвращаемой функции.  
   
  `eltInfo`  
- [in] Непрозрачный дескриптор, представляющий сведения об указанном кадре стека. The profiler should provide the same `eltInfo` that was given to the profiler by the `FunctionTailcall3WithInfo` function.  
+ [in] Непрозрачный дескриптор, представляющий сведения об указанном кадре стека. Профилировщик должен предоставлять те же `eltInfo`, которые были переданы профилировщику функцией `FunctionTailcall3WithInfo`.  
   
  `pFrameInfo`  
  [out] Непрозрачный дескриптор, представляющий универсальные сведения об указанном кадре стека. Этот дескриптор допустим только во время обратного вызова `FunctionTailcall3WithInfo`, в котором профилировщик вызывал метод `GetFunctionTailcall3Info`.  
   
-## <a name="remarks"></a>Заметки  
+## <a name="remarks"></a>Примечания  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
@@ -55,7 +55,7 @@ HRESULT GetFunctionTailcall3Info(
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [FunctionEnter3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md)
 - [FunctionLeave3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md)

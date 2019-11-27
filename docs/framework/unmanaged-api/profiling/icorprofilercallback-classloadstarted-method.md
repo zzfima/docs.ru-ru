@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445082"
 ---
 # <a name="icorprofilercallbackclassloadstarted-method"></a>Метод ICorProfilerCallback::ClassLoadStarted
-Notifies the profiler that a class is being loaded.  
+Уведомляет профилировщик о загрузке класса.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -34,10 +34,10 @@ HRESULT ClassLoadStarted(
   
 ## <a name="parameters"></a>Параметры  
  `classId`  
- [in] Identifies the class that is being loaded.  
+ окне Определяет загружаемый класс.  
   
-## <a name="remarks"></a>Заметки  
- The value of `classId` is not valid for an information request until the [ICorProfilerCallback::ClassLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classloadfinished-method.md) method is called.  
+## <a name="remarks"></a>Примечания  
+ Значение `classId` недопустимо для информационного запроса, пока не вызван метод [ICorProfilerCallback:: класслоадфинишед](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classloadfinished-method.md) .  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
@@ -48,6 +48,6 @@ HRESULT ClassLoadStarted(
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

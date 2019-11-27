@@ -39,7 +39,7 @@ ms.locfileid: "74350460"
 
 Цифровые подписи обычно применяются к хэш-значениям, которые представляют массивы данных большого размера. В примере ниже демонстрируется применение цифровой подписи к хэш-значению. Сначала создается экземпляр класса <xref:System.Security.Cryptography.RSACryptoServiceProvider> с целью формирования набора, состоящего из открытого и закрытого ключей. Затем экземпляр <xref:System.Security.Cryptography.RSACryptoServiceProvider> передается в новый экземпляр класса <xref:System.Security.Cryptography.RSAPKCS1SignatureFormatter> . При этом экземпляру <xref:System.Security.Cryptography.RSAPKCS1SignatureFormatter>передается закрытый ключ, который и создает цифровую подпись. Перед тем как подписать хэш-код, вам необходимо указать используемый хэш-алгоритм. В этом примере используется алгоритм SHA1. Наконец, вызывается метод <xref:System.Security.Cryptography.AsymmetricSignatureFormatter.CreateSignature%2A> для выполнения подписи.
 
-Due to collision problems with SHA1, Microsoft recommends SHA256 or better.
+Из-за проблем с алгоритмом SHA1 Корпорация Майкрософт рекомендует использовать SHA256 или более высокий уровень.
 
 ```vb
 Imports System.Security.Cryptography
@@ -118,7 +118,7 @@ class Class1
 
 - хэш-алгоритм, который использовался при создании подписи.
 
-Для проверки подписи, созданной с помощью класса <xref:System.Security.Cryptography.RSAPKCS1SignatureFormatter> , используется класс <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> . Классу <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> необходимо предоставить открытый ключ подписывающей стороны. Для указания открытого ключа нужно знать значения модуля и экспоненты. (The party that generated the public/private key pair should provide these values.) First create an <xref:System.Security.Cryptography.RSACryptoServiceProvider> object to hold the public key that will verify the signature, and then initialize an <xref:System.Security.Cryptography.RSAParameters> structure to the modulus and exponent values that specify the public key.
+Для проверки подписи, созданной с помощью класса <xref:System.Security.Cryptography.RSAPKCS1SignatureFormatter> , используется класс <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> . Классу <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> необходимо предоставить открытый ключ подписывающей стороны. Для указания открытого ключа нужно знать значения модуля и экспоненты. (Эти значения должны быть предоставлены стороной, создавшей пару открытого и закрытого ключей.) Сначала создайте объект <xref:System.Security.Cryptography.RSACryptoServiceProvider> для хранения открытого ключа, который будет проверять подпись, а затем инициализирует структуру <xref:System.Security.Cryptography.RSAParameters> для значений модуля и экспоненты, задающих открытый ключ.
 
 В следующем примере кода показано создание структуры <xref:System.Security.Cryptography.RSAParameters> . Свойству `Modulus` присваивается байтовый массив `modulusData` , а свойству `Exponent` — байтовый массив `exponentData`.
 
@@ -136,7 +136,7 @@ rsaKeyInfo.Exponent = exponentData;
 
 После создания объекта <xref:System.Security.Cryptography.RSAParameters> можно инициализировать новый экземпляр класса <xref:System.Security.Cryptography.RSACryptoServiceProvider> значениями, указанными в <xref:System.Security.Cryptography.RSAParameters>. Экземпляр <xref:System.Security.Cryptography.RSACryptoServiceProvider> , в свою очередь, передается в конструктор класса <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> для передачи ключа.
 
-Этот процесс показан в приведенном ниже примере. В этом коде `hashValue` и `signedHashValue` — байтовые массивы, предоставленные удаленной стороной. Удаленная сторона подписала объект `hashValue` с помощью алгоритма SHA1, создающего цифровую подпись `signedHashValue`. The <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter.VerifySignature%2A?displayProperty=nameWithType> method verifies that the digital signature is valid and was used to sign the `hashValue`.
+Этот процесс показан в приведенном ниже примере. В этом коде `hashValue` и `signedHashValue` — байтовые массивы, предоставленные удаленной стороной. Удаленная сторона подписала объект `hashValue` с помощью алгоритма SHA1, создающего цифровую подпись `signedHashValue`. Метод <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter.VerifySignature%2A?displayProperty=nameWithType> проверяет, является ли цифровая подпись допустимой и использовалась для подписывания `hashValue`.
 
 ```vb
 Dim rsa As New RSACryptoServiceProvider()
@@ -167,6 +167,6 @@ else
 
 Если подпись действительна, этот фрагмент кода выдаст сообщение «`The signature is valid`», а в противном случае — сообщение «`The signature is not valid`».
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Службы криптографии](../../../docs/standard/security/cryptographic-services.md)
+- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)

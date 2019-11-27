@@ -43,20 +43,20 @@ typedef enum CorMethodSemanticsAttr {
   
 |Член|Описание|  
 |------------|-----------------|  
-|`msSetter`|Specifies that the method is a `set` accessor for a property.|  
-|`msGetter`|Specifies that the method is a `get` accessor for a property.|  
-|`msOther`|Specifies that the method has a relationship to a property or an event other than those defined here.|  
-|`msAddOn`|Specifies that the method adds handler methods for an event.|  
-|`msRemoveOn`|Specifies that the method removes handler methods for an event.|  
-|`msFire`|Specifies that the method raises an event.|  
+|`msSetter`|Указывает, что метод является `set`ным методом доступа для свойства.|  
+|`msGetter`|Указывает, что метод является `get`ным методом доступа для свойства.|  
+|`msOther`|Указывает, что метод имеет связь со свойством или событием, отличным от указанных здесь.|  
+|`msAddOn`|Указывает, что метод добавляет методы обработчика для события.|  
+|`msRemoveOn`|Указывает, что метод удаляет методы обработчика для события.|  
+|`msFire`|Указывает, что метод вызывает событие.|  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorHdr.h  
+ **Заголовок:** Корхдр. h  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Перечисления метаданных](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

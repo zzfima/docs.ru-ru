@@ -9,7 +9,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346420"
 ---
-# <a name="creating-the-source-office-open-xml-document-visual-basic"></a>Creating the Source Office Open XML Document (Visual Basic)
+# <a name="creating-the-source-office-open-xml-document-visual-basic"></a>Создание исходного документа Office Open XML (Visual Basic)
 В этом разделе показано создание документа Office Open XML WordprocessingML, который используется в примерах этого учебника. Если следовать приведенным ниже инструкциям, выходные данные будут соответствовать выходным данным каждого примера.  
   
  Тем не менее примеры в этом учебнике работают с любым допустимым документом WordprocessingML.  
@@ -44,7 +44,7 @@ ms.locfileid: "74346420"
   
 3. Отформатируйте первую строку стилем «Заголовок 1».  
   
-4. Select the lines that contain the Visual Basic code. Первая строка начинается с ключевого слова `Imports`. The last line is "End Class". Отформатируйте эти строки шрифтом courier. Создайте из них новый стиль и присвойте ему имя «Code».  
+4. Выберите строки, которые содержат код Visual Basic. Первая строка начинается с ключевого слова `Imports`. Последняя строка — "конечный класс". Отформатируйте эти строки шрифтом courier. Создайте из них новый стиль и присвойте ему имя «Code».  
   
 5. Наконец, выделите всю строку, содержащую выходные данные, и отформатируйте ее стилем `Code`.  
   
@@ -53,6 +53,6 @@ ms.locfileid: "74346420"
     > [!NOTE]
     > Если используется Microsoft Word 2003, в раскрывающемся списке **Тип файла** выберите **Документ Word 2007**.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Tutorial: Manipulating Content in a WordprocessingML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [Руководство. Управление содержимым в документе WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)

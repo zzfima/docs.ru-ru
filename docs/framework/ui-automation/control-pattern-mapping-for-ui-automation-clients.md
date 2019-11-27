@@ -34,48 +34,48 @@ ms.locfileid: "74433857"
   
 |Тип элемента управления|Поддерживается|Условно поддерживается|Не поддерживается|  
 |------------------|---------------|-------------------------|-------------------|  
-|Кнопка|Отсутствуют|Invoke, Toggle, Expand Collapse|Отсутствуют|  
-|Календарь|Grid, Table|Selection, Scroll|значения|  
-|Флажок|Toggle|Отсутствуют|Отсутствуют|  
+|Кнопка|Нет|Invoke, Toggle, Expand Collapse|Нет|  
+|Календарь|Grid, Table|Selection, Scroll|Значение|  
+|Флажок|Toggle|Нет|Нет|  
 |Combo Box|Развернуть свернуть|Selection, Value|Scroll|  
-|Data Grid|Grid|Scroll, Selection, Table|Отсутствуют|  
-|Data Item|Selection Item|Expand Collapse, Grid Item, Scroll Item, Table, Toggle, Value|Отсутствуют|  
-|Document|Text|Scroll, Value|Отсутствуют|  
-|Правка|Отсутствуют|Text, Range Value, Value|Отсутствуют|  
-|Группа|Отсутствуют|Развернуть свернуть|Отсутствуют|  
-|Header|Отсутствуют|Обработка|Отсутствуют|  
-|элемент заголовка|Отсутствуют|Transform, Invoke|Отсутствуют|  
-|Гиперссылка|Вызвать|значения|Отсутствуют|  
-|Изображение|Отсутствуют|Grid Item, Table Item|Invoke, Selection Item|  
-|Списка|Отсутствуют|Grid, Multiple View, Scroll, Selection|Таблица|  
-|List Item|Selection Item|Expand Collapse, Grid Item, Invoke, Scroll Item, Toggle, Value|Отсутствуют|  
-|Меню|Отсутствуют|Отсутствуют|Отсутствуют|  
-|Menu Bar|Отсутствуют|Expand Collapse, Dock, Transform|Отсутствуют|  
-|Menu Item|Отсутствуют|Expand Collapse, Invoke, Selection Item, Toggle|Отсутствуют|  
-|Панель|Отсутствуют|Dock Scroll, Transform|Окно|  
-|Progress Bar|Отсутствуют|Range Value, Value|Отсутствуют|  
-|Radio Button|Selection Item|Отсутствуют|Toggle|  
-|Scroll Bar|Отсутствуют|Range Value|Scroll|  
-|Separator|Отсутствуют|Отсутствуют|Отсутствуют|  
-|Slider|Отсутствуют|Range Value, Selection, Value|Отсутствуют|  
-|Spinner|Отсутствуют|Range Value, Selection, Value|Отсутствуют|  
-|Разворачивающаяся кнопка|Invoke, Expand Collapse|Отсутствуют|Отсутствуют|  
-|Status Bar|Отсутствуют|Grid|Отсутствуют|  
-|Вкладка|Выбранное|Scroll|Отсутствуют|  
-|Tab Item|Selection Item|Отсутствуют|Вызвать|  
-|Таблица|Grid, Grid Item, Table, Table Item|Отсутствуют|Отсутствуют|  
-|Text|Отсутствуют|Grid Item, Table Item, Text|значения|  
-|Бегунок|Обработка|Отсутствуют|Отсутствуют|  
-|Title Bar|Отсутствуют|Отсутствуют|Отсутствуют|  
-|Tool Bar|Отсутствуют|Dock, Expand Collapse, Transform|Отсутствуют|  
-|Tool Tip|Отсутствуют|Text, Window|Отсутствуют|  
-|Дерево|Отсутствуют|Scroll, Selection|Отсутствуют|  
-|Tree Item|Развернуть свернуть|Invoke, Scroll Item, Selection Item, Toggle|Отсутствуют|  
-|Окно|Transform, Window|Закрепить|Отсутствуют|  
+|Data Grid|Grid|Scroll, Selection, Table|Нет|  
+|Data Item|Selection Item|Expand Collapse, Grid Item, Scroll Item, Table, Toggle, Value|Нет|  
+|Документ|Text|Scroll, Value|Нет|  
+|Правка|Нет|Text, Range Value, Value|Нет|  
+|Группа|Нет|Развернуть свернуть|Нет|  
+|Header|Нет|Обработка|Нет|  
+|элемент заголовка|Нет|Transform, Invoke|Нет|  
+|Гиперссылка|Вызов|Значение|Нет|  
+|Изображение|Нет|Grid Item, Table Item|Invoke, Selection Item|  
+|List|Нет|Grid, Multiple View, Scroll, Selection|Table|  
+|List Item|Selection Item|Expand Collapse, Grid Item, Invoke, Scroll Item, Toggle, Value|Нет|  
+|Меню|Нет|Нет|Нет|  
+|Строка меню|Нет|Expand Collapse, Dock, Transform|Нет|  
+|Menu Item|Нет|Expand Collapse, Invoke, Selection Item, Toggle|Нет|  
+|Панель|Нет|Dock Scroll, Transform|Окно|  
+|Progress Bar|Нет|Range Value, Value|Нет|  
+|Переключатель|Selection Item|Нет|Toggle|  
+|Scroll Bar|Нет|Range Value|Scroll|  
+|Разделитель|Нет|Нет|Нет|  
+|Ползунок|Нет|Range Value, Selection, Value|Нет|  
+|Spinner|Нет|Range Value, Selection, Value|Нет|  
+|Разворачивающаяся кнопка|Invoke, Expand Collapse|Нет|Нет|  
+|Строка состояния|Нет|Grid|Нет|  
+|Вкладка|Выбранное|Scroll|Нет|  
+|Tab Item|Selection Item|Нет|Вызов|  
+|Table|Grid, Grid Item, Table, Table Item|Нет|Нет|  
+|Text|Нет|Grid Item, Table Item, Text|Значение|  
+|Бегунок|Обработка|Нет|Нет|  
+|Заголовок окна|Нет|Нет|Нет|  
+|Tool Bar|Нет|Dock, Expand Collapse, Transform|Нет|  
+|Tool Tip|Нет|Text, Window|Нет|  
+|Дерево|Нет|Scroll, Selection|Нет|  
+|Tree Item|Развернуть свернуть|Invoke, Scroll Item, Selection Item, Toggle|Нет|  
+|Окно|Transform, Window|Закрепить|Нет|  
   
 > [!NOTE]
 > Если тип элемента управления не имеет поддерживаемых шаблонов элементов управления в списке, но имеет один или несколько условно поддерживаемых шаблонов элементов управления, то один из этих условных шаблонов элементов управления будет поддерживаться все время.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Общие сведения о модели автоматизации пользовательского интерфейса](ui-automation-overview.md)

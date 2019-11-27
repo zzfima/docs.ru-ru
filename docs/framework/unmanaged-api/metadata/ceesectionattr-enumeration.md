@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74444249"
 ---
 # <a name="ceesectionattr-enumeration"></a>Перечисление CeeSectionAttr
-Provides values that specify attributes of a section for use by the [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) interface.  
+Предоставляет значения, указывающие атрибуты раздела для использования интерфейсом [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) .  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -41,20 +41,20 @@ typedef enum  {
   
 |Член|Описание|  
 |------------|-----------------|  
-|`sdNone`|Section has no attributes.|  
-|`sdReadOnly`|Section contains initialized data that can be only read, not updated.|  
-|`sdReadWrite`|Section contains initialized data that can be read or updated.|  
-|`sdExecute`|Section contains executable code that is allowed to be read and executed.|  
+|`sdNone`|Раздел не имеет атрибутов.|  
+|`sdReadOnly`|Раздел содержит инициализированные данные, которые могут быть только считаны, но не обновлены.|  
+|`sdReadWrite`|Раздел содержит инициализированные данные, которые могут быть считаны или обновлены.|  
+|`sdExecute`|Раздел содержит исполняемый код, который может быть прочитан и выполнен.|  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Заголовок:** COR. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Перечисления метаданных](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

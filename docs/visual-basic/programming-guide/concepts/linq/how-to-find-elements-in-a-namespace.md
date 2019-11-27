@@ -9,7 +9,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344665"
 ---
-# <a name="how-to-find-elements-in-a-namespace-xpath-linq-to-xml-visual-basic"></a>How to: Find Elements in a Namespace (XPath-LINQ to XML) (Visual Basic)
+# <a name="how-to-find-elements-in-a-namespace-xpath-linq-to-xml-visual-basic"></a>Пошаговое руководство. Поиск элементов в пространстве имен (XPath-LINQ to XML) (Visual Basic)
 Выражения XPath позволяют находить узлы в конкретном пространстве имен. Для указания пространств имен в выражениях XPath используются префиксы пространств имен. Для синтаксического анализа выражения XPath, содержащего префиксы пространств имен, необходимо передать объект методу XPath, реализующему <xref:System.Xml.IXmlNamespaceResolver>. В этом примере используется <xref:System.Xml.XmlNamespaceManager>.  
   
  Выражение XPath:  
@@ -80,6 +80,6 @@ Results are identical
   </aw:PurchaseOrder>  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [LINQ to XML for XPath Users (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [LINQ to XML для пользователей XPath (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

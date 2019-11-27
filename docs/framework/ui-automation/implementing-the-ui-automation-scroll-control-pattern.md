@@ -21,7 +21,7 @@ ms.locfileid: "74447156"
   
  Шаблон элемента управления <xref:System.Windows.Automation.ScrollPattern> используется для поддержки элемента управления, который выступает в качестве прокручиваемого контейнера для коллекции дочерних объектов. Этому элементу управления не обязательно использовать полосы прокрутки для поддержки функции прокрутки, хотя обычно это делается.  
   
- ![Scroll control without scrollbars.](./media/uia-scrollpattern-without-scrollbars.PNG "UIA_ScrollPattern_Without_Scrollbars")  
+ ![Элемент управления Scroll без полос прокрутки.](./media/uia-scrollpattern-without-scrollbars.PNG "UIA_ScrollPattern_Without_Scrollbars")  
 Пример элемента управления прокрутки, не использующего полосы прокрутки  
   
  Примеры элементов управления, реализующих данный шаблон элемента управления, см. в разделе [Control Pattern Mapping for UI Automation Clients](control-pattern-mapping-for-ui-automation-clients.md).  
@@ -46,16 +46,16 @@ ms.locfileid: "74447156"
 ## <a name="required-members-for-iscrollprovider"></a>Обязательные члены для IScrollProvider  
  Следующие свойства и методы обязательны для реализации <xref:System.Windows.Automation.Provider.IScrollProvider>.  
   
-|Обязательный член|Тип члена|Примечания|  
+|Обязательный член|Тип элемента|Примечания|  
 |---------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IScrollProvider.HorizontalScrollPercent%2A>|свойство;|Отсутствуют|  
-|<xref:System.Windows.Automation.Provider.IScrollProvider.VerticalScrollPercent%2A>|свойство;|Отсутствуют|  
-|<xref:System.Windows.Automation.Provider.IScrollProvider.HorizontalViewSize%2A>|свойство;|Отсутствуют|  
-|<xref:System.Windows.Automation.Provider.IScrollProvider.VerticalViewSize%2A>|свойство;|Отсутствуют|  
-|<xref:System.Windows.Automation.Provider.IScrollProvider.HorizontallyScrollable%2A>|свойство;|Отсутствуют|  
-|<xref:System.Windows.Automation.Provider.IScrollProvider.VerticallyScrollable%2A>|свойство;|Отсутствуют|  
-|<xref:System.Windows.Automation.Provider.IScrollProvider.Scroll%2A>|Метод|Отсутствуют|  
-|<xref:System.Windows.Automation.Provider.IScrollProvider.SetScrollPercent%2A>|Метод|Отсутствуют|  
+|<xref:System.Windows.Automation.Provider.IScrollProvider.HorizontalScrollPercent%2A>|Свойство|Нет|  
+|<xref:System.Windows.Automation.Provider.IScrollProvider.VerticalScrollPercent%2A>|Свойство|Нет|  
+|<xref:System.Windows.Automation.Provider.IScrollProvider.HorizontalViewSize%2A>|Свойство|Нет|  
+|<xref:System.Windows.Automation.Provider.IScrollProvider.VerticalViewSize%2A>|Свойство|Нет|  
+|<xref:System.Windows.Automation.Provider.IScrollProvider.HorizontallyScrollable%2A>|Свойство|Нет|  
+|<xref:System.Windows.Automation.Provider.IScrollProvider.VerticallyScrollable%2A>|Свойство|Нет|  
+|<xref:System.Windows.Automation.Provider.IScrollProvider.Scroll%2A>|Метод|Нет|  
+|<xref:System.Windows.Automation.Provider.IScrollProvider.SetScrollPercent%2A>|Метод|Нет|  
   
  Этот шаблон элемента управления не имеет связанных событий.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "74447156"
 |<xref:System.ArgumentOutOfRangeException>|Метод<xref:System.Windows.Automation.Provider.IScrollProvider.SetScrollPercent%2A> создает исключение, если переданное значение меньше 0 или больше 100 (за исключением -1, что эквивалентно <xref:System.Windows.Automation.ScrollPatternIdentifiers.NoScroll>).|  
 |<xref:System.InvalidOperationException>|Оба метода, <xref:System.Windows.Automation.Provider.IScrollProvider.Scroll%2A> и <xref:System.Windows.Automation.Provider.IScrollProvider.SetScrollPercent%2A> , вызывают это исключение при попытке прокрутки в неподдерживаемом направлении.|  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Общие сведения о шаблонах элементов управления модели автоматизации пользовательского интерфейса](ui-automation-control-patterns-overview.md)
 - [Поддержка шаблонов элементов управления в поставщике автоматизации пользовательского интерфейса](support-control-patterns-in-a-ui-automation-provider.md)

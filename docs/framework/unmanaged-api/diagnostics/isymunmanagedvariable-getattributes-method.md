@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446086"
 ---
 # <a name="isymunmanagedvariablegetattributes-method"></a>Метод ISymUnmanagedVariable::GetAttributes
-Gets the attribute flags for this variable.  
+Возвращает флаги атрибута для этой переменной.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -34,14 +34,14 @@ HRESULT GetAttributes(
   
 ## <a name="parameters"></a>Параметры  
  `pRetVal`  
- [out] A pointer to a `ULONG32` that receives the attributes. The returned value will be one of the values defined in the [CorSymVarFlag](../../../../docs/framework/unmanaged-api/diagnostics/corsymvarflag-enumeration.md) enumeration.  
+ заполняет Указатель на `ULONG32`, который получает атрибуты. Возвращаемое значение будет одним из значений, определенных в перечислении [CorSymVarFlag](../../../../docs/framework/unmanaged-api/diagnostics/corsymvarflag-enumeration.md) .  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK, если метод выполнен. в противном случае E_FAIL или другой код ошибки.  
   
 ## <a name="requirements"></a>Требования  
- **Header:** CorSym.idl, CorSym.h  
+ **Заголовок:** Корсим. idl, Корсим. h  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс ISymUnmanagedVariable](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-interface.md)

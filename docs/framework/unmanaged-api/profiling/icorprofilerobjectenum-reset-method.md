@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428139"
 ---
 # <a name="icorprofilerobjectenumreset-method"></a>Метод ICorProfilerObjectEnum::Reset
-Moves this enumerator's cursor to the starting position of the sequence.  
+Перемещает курсор перечислителя в начальную позицию последовательности.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,6 +40,6 @@ HRESULT Reset ();
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс ICorProfilerObjectEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerobjectenum-interface.md)

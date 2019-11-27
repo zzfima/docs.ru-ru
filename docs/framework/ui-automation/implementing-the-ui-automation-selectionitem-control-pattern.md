@@ -19,7 +19,7 @@ ms.locfileid: "74447109"
   
  В этом разделе приводятся рекомендации и соглашения для реализации <xref:System.Windows.Automation.Provider.ISelectionItemProvider>, включая сведения о свойствах, методах и событиях. Ссылки на дополнительные материалы перечислены в конце раздела.  
   
- Шаблон элемента управления <xref:System.Windows.Automation.SelectionItemPattern> используется для поддержки элементов управления, которые действуют как отдельные выбираемые дочерние элементы контейнерных элементов управления, реализующих <xref:System.Windows.Automation.Provider.ISelectionProvider>. For examples of controls that implement the SelectionItem control pattern, see [Control Pattern Mapping for UI Automation Clients](control-pattern-mapping-for-ui-automation-clients.md)  
+ Шаблон элемента управления <xref:System.Windows.Automation.SelectionItemPattern> используется для поддержки элементов управления, которые действуют как отдельные выбираемые дочерние элементы контейнерных элементов управления, реализующих <xref:System.Windows.Automation.Provider.ISelectionProvider>. Примеры элементов управления, реализующих шаблон элемента управления SelectionItem, см. в разделе [Управление сопоставлением шаблонов для клиентов автоматизации пользовательского интерфейса](control-pattern-mapping-for-ui-automation-clients.md) .  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>   
 ## <a name="implementation-guidelines-and-conventions"></a>Правила и соглашения реализации  
@@ -31,12 +31,12 @@ ms.locfileid: "74447109"
 ## <a name="required-members-for-iselectionitemprovider"></a>Обязательные члены для ISelectionItemProvider  
  Следующие свойства, методы и события обязательны для реализации <xref:System.Windows.Automation.Provider.ISelectionItemProvider>.  
   
-|Обязательные члены|Тип члена|Примечания|  
+|Обязательные члены|Тип элемента|Примечания|  
 |----------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.ISelectionProvider.CanSelectMultiple%2A>|свойство;|Отсутствуют|  
-|<xref:System.Windows.Automation.Provider.ISelectionProvider.IsSelectionRequired%2A>|свойство;|Отсутствуют|  
-|<xref:System.Windows.Automation.Provider.ISelectionProvider.GetSelection%2A>|Метод|Отсутствуют|  
-|<xref:System.Windows.Automation.SelectionPatternIdentifiers.InvalidatedEvent>|событие|Вызывается, когда выбор в контейнере существенно изменился и требуется отправить больше событий <xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementSelectedEvent> и <xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementRemovedFromSelectionEvent> , чем позволяет константа <xref:System.Windows.Automation.Provider.AutomationInteropProvider.InvalidateLimit> .|  
+|<xref:System.Windows.Automation.Provider.ISelectionProvider.CanSelectMultiple%2A>|Свойство|Нет|  
+|<xref:System.Windows.Automation.Provider.ISelectionProvider.IsSelectionRequired%2A>|Свойство|Нет|  
+|<xref:System.Windows.Automation.Provider.ISelectionProvider.GetSelection%2A>|Метод|Нет|  
+|<xref:System.Windows.Automation.SelectionPatternIdentifiers.InvalidatedEvent>|Событие|Вызывается, когда выбор в контейнере существенно изменился и требуется отправить больше событий <xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementSelectedEvent> и <xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementRemovedFromSelectionEvent> , чем позволяет константа <xref:System.Windows.Automation.Provider.AutomationInteropProvider.InvalidateLimit> .|  
   
 - Если результатом метода <xref:System.Windows.Automation.SelectionItemPattern.Select%2A>, <xref:System.Windows.Automation.SelectionItemPattern.AddToSelection%2A>или <xref:System.Windows.Automation.SelectionItemPattern.RemoveFromSelection%2A> является один выбранный элемент, должно вызываться событие <xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementSelectedEvent> ; в противном случае отправьте <xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementAddedToSelectionEvent>/ <xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementRemovedFromSelectionEvent> соответствующим образом.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "74447109"
 |--------------------|---------------|  
 |<xref:System.InvalidOperationException>|Когда предпринимается попытка выполнить одно из следующих действий:<br /><br /> -   <xref:System.Windows.Automation.Provider.ISelectionItemProvider.RemoveFromSelection%2A> в контейнере с поддержкой единственного выбора, где <xref:System.Windows.Automation.SelectionPattern.IsSelectionRequiredProperty> = `true` , и элемент уже выбран;<br />-   <xref:System.Windows.Automation.Provider.ISelectionItemProvider.RemoveFromSelection%2A> в контейнере с поддержкой множественного выбора, где <xref:System.Windows.Automation.SelectionPattern.IsSelectionRequiredProperty> = `true` , и выбран только один элемент;<br />-   <xref:System.Windows.Automation.Provider.ISelectionItemProvider.AddToSelection%2A> в контейнере с поддержкой единственного выбора, где <xref:System.Windows.Automation.SelectionPattern.CanSelectMultipleProperty> = `false` , и другой элемент уже выбран.|  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Общие сведения о шаблонах элементов управления модели автоматизации пользовательского интерфейса](ui-automation-control-patterns-overview.md)
 - [Поддержка шаблонов элементов управления в поставщике автоматизации пользовательского интерфейса](support-control-patterns-in-a-ui-automation-provider.md)
@@ -56,4 +56,4 @@ ms.locfileid: "74447109"
 - [Реализация шаблона элемента управления Selection модели автоматизации пользовательского интерфейса](implementing-the-ui-automation-selection-control-pattern.md)
 - [Общие сведения о дереве модели автоматизации пользовательского интерфейса](ui-automation-tree-overview.md)
 - [Использование кэширования в модели автоматизации пользовательского интерфейса](use-caching-in-ui-automation.md)
-- [Fragment Provider Sample](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771502(v=vs.90))
+- [Пример поставщика фрагментов](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771502(v=vs.90))

@@ -42,41 +42,41 @@ HRESULT SetAssemblyRefProps (
   
 ## <a name="parameters"></a>Параметры  
  `ar`  
- [in] The metadata token that specifies the `AssemblyRef` metadata structure to be modified.  
+ окне Маркер метаданных, указывающий структуру метаданных `AssemblyRef`, которую необходимо изменить.  
   
  `pbPublicKeyOrToken`  
- [in] The public key of the publisher of the referenced assembly.  
+ окне Открытый ключ издателя сборки, на которую указывает ссылка.  
   
  `cbPublicKeyOrToken`  
- [in] The size in bytes of `pbPublicKeyOrToken`.  
+ окне Размер в байтах `pbPublicKeyOrToken`.  
   
  `szName`  
- [in] The human-readable text name of the assembly.  
+ окне Понятное для человека текстовое имя сборки.  
   
  `pMetaData`  
- [in] A pointer to an ASSEMBLYMETADATA instance that contains the version, platform, and locale information for the assembly.  
+ окне Указатель на экземпляр ASSEMBLYMETADATA, содержащий сведения о версии, платформе и локали для сборки.  
   
  `pbHashValue`  
- [in] A pointer to the hash data associated with the assembly.  
+ окне Указатель на хэш-данные, связанные со сборкой.  
   
  `cbHashValue`  
- [in] The size in bytes of `pbHashValue`.  
+ окне Размер в байтах `pbHashValue`.  
   
  `dwAssemblyRefFlags`  
- [in] A bitwise combination of [AssemblyRefFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyrefflags-enumeration.md) values that specify attributes of the referenced assembly.  
+ окне Побитовое сочетание значений [ассемблиреффлагс](../../../../docs/framework/unmanaged-api/metadata/assemblyrefflags-enumeration.md) , задающих атрибуты упоминаемой сборки.  
   
-## <a name="remarks"></a>Заметки  
- To create an `AssemblyRef` metadata structure, use the [IMetaDataAssemblyEmit::DefineAssemblyRef](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineassemblyref-method.md) method.  
+## <a name="remarks"></a>Примечания  
+ Чтобы создать `AssemblyRef` структуру метаданных, используйте метод [IMetaDataAssemblyEmit::D ефинеассемблиреф](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineassemblyref-method.md) .  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Заголовок:** COR. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Библиотека:** Используется в качестве ресурса в MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс IMetaDataAssemblyEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

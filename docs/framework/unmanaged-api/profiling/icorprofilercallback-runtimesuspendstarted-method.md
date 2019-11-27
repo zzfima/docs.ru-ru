@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74433507"
 ---
 # <a name="icorprofilercallbackruntimesuspendstarted-method"></a>Метод ICorProfilerCallback::RuntimeSuspendStarted
-Notifies the profiler that the runtime is about to suspend all runtime threads.  
+Уведомляет профилировщик о том, что среда выполнения собирается приостановить все потоки среды выполнения.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -34,10 +34,10 @@ HRESULT RuntimeSuspendStarted(
   
 ## <a name="parameters"></a>Параметры  
  `suspendReason`  
- [in] A value of the [COR_PRF_SUSPEND_REASON](../../../../docs/framework/unmanaged-api/profiling/cor-prf-suspend-reason-enumeration.md) enumeration that indicates the reason for the suspension.  
+ окне Значение перечисления [COR_PRF_SUSPEND_REASON](../../../../docs/framework/unmanaged-api/profiling/cor-prf-suspend-reason-enumeration.md) , указывающее причину приостановки.  
   
-## <a name="remarks"></a>Заметки  
- All runtime threads that are in unmanaged code are allowed to continue running until they try to re-enter the runtime. At that point they will also be suspended until the runtime resumes. This also applies to new threads that enter the runtime. All threads in the runtime are either suspended immediately if they are already in interruptible code, or they are asked to suspend when they reach interruptible code.  
+## <a name="remarks"></a>Примечания  
+ Все потоки среды выполнения, наявляющиеся в неуправляемом коде, могут продолжать выполняться до тех пор, пока они не попытаются повторно войти в среду выполнения. На этом этапе они также будут приостановлены до тех пор, пока среда выполнения не возобновит работу. Это также относится к новым потокам, которые вводят среду выполнения. Все потоки в среде выполнения либо приостанавливаются немедленно, если они уже находятся в коде для преобразования, либо если они запросят приостановить работу в случае, если они достигают кода источника.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
@@ -48,7 +48,7 @@ HRESULT RuntimeSuspendStarted(
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
 - [Метод RuntimeSuspendAborted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendaborted-method.md)

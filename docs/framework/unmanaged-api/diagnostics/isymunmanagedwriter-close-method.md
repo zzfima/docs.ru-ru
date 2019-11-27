@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428111"
 ---
 # <a name="isymunmanagedwriterclose-method"></a>Метод ISymUnmanagedWriter::Close
-Closes the symbol writer after committing the symbols to the symbol store.  
+Закрывает модуль записи символов после фиксации символов в хранилище символов.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -32,14 +32,14 @@ HRESULT Close();
 ```  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK, если метод выполнен. в противном случае E_FAIL или другой код ошибки.  
   
-## <a name="remarks"></a>Заметки  
- After this call, the symbol writer becomes invalid for further updates. To close the symbol writer without committing the symbols, use the [ISymUnmanagedWriter::Abort](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-abort-method.md) method instead.  
+## <a name="remarks"></a>Примечания  
+ После этого вызова средство записи символов станет недействительным для последующих обновлений. Чтобы закрыть средство записи символов без фиксации символов, следует использовать метод [ISymUnmanagedWriter:: Abort](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-abort-method.md) .  
   
 ## <a name="requirements"></a>Требования  
- **Header:** CorSym.idl, CorSym.h  
+ **Заголовок:** Корсим. idl, Корсим. h  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

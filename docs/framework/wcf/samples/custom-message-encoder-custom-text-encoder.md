@@ -44,7 +44,7 @@ ms.locfileid: "74281686"
 
 2. Убедитесь, что вы выполнили [однократную процедуру настройки для Windows Communication Foundation примеров](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
 
-3. При построении решения следуйте инструкциям в разделе [Сборка образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).
+3. Чтобы выполнить сборку решения, следуйте инструкциям в разделе [Создание примеров Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).
 
 4. Чтобы запустить пример в конфигурации с одним или несколькими компьютерами, следуйте инструкциям в разделе [выполнение примеров Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).
 

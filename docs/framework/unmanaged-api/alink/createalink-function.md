@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446557"
 ---
 # <a name="createalink-function"></a>Функция CreateALink
-Creates an instance of the Assembly Linker and sets a pointer to the specified interface.  
+Создает экземпляр компоновщика сборок и задает указатель на указанный интерфейс.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,12 +38,12 @@ HRESULT CreateALink (
   
 |Параметр|Описание|  
 |---------------|-----------------|  
-|`riid`|The physical name of one of the Assembly Linker interfaces.|  
-|`ppInterface`|The location that on successful completion contains a pointer to the `riid` interface.|  
+|`riid`|Физическое имя одного из интерфейсов компоновщика сборок.|  
+|`ppInterface`|Расположение, которое в случае успешного завершения содержит указатель на интерфейс `riid`.|  
   
 ## <a name="requirements"></a>Требования  
- **Library**: alink.dll  
+ **Библиотека**: ALink. dll  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Al.exe (компоновщик сборок)](../../tools/al-exe-assembly-linker.md)

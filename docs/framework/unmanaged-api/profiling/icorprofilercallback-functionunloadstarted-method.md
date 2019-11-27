@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448015"
 ---
 # <a name="icorprofilercallbackfunctionunloadstarted-method"></a>Метод ICorProfilerCallback::FunctionUnloadStarted
-Notifies the profiler that the runtime has started to unload a function.  
+Уведомляет профилировщик о запуске среды выполнения для выгрузки функции.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -34,10 +34,10 @@ HRESULT FunctionUnloadStarted(
   
 ## <a name="parameters"></a>Параметры  
  `functionId`  
- [in] The ID of the function that is being unloaded.  
+ окне Идентификатор выгрузки функции.  
   
-## <a name="remarks"></a>Заметки  
- The value of the `functionId` parameter is no longer valid after this method returns to the caller.  
+## <a name="remarks"></a>Примечания  
+ Значение параметра `functionId` больше не является допустимым после возврата этим методом вызывающему объекту.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
@@ -48,6 +48,6 @@ HRESULT FunctionUnloadStarted(
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

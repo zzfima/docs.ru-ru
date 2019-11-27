@@ -34,20 +34,20 @@ typedef struct _COR_PRF_FUNCTION {    FunctionID functionId;    ReJITID    reJit
   
 |Член|Описание|  
 |------------|-----------------|  
-|`functionId`|The ID of the function.|  
-|`reJitId`|The ID of the recompiled function. A value of 0 (zero) represents the original version of the function.|  
+|`functionId`|Идентификатор функции.|  
+|`reJitId`|Идентификатор перекомпилированной функции. Значение 0 (ноль) представляет исходную версию функции.|  
   
-## <a name="remarks"></a>Заметки  
+## <a name="remarks"></a>Примечания  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl  
+ **Заголовок:** CorProf. idl  
   
  **Библиотека:** CorGuids.lib  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Структуры профилирования](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)

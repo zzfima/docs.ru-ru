@@ -23,9 +23,9 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436408"
 ---
 # <a name="iceegenaddsectionreloc-method"></a>Метод ICeeGen::AddSectionReloc
-Adds a .reloc instruction to the code base.  
+Добавляет инструкцию. reloc в базу кода.  
   
- This method is obsolete and should not be used.  
+ Этот метод устарел и не должен использоваться.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,26 +40,26 @@ HRESULT AddSectionReloc (
   
 ## <a name="parameters"></a>Параметры  
  `section`  
- [in] The section of in-memory code to which to add a .reloc instruction.  
+ окне Раздел кода в памяти, к которому добавляется инструкция. reloc.  
   
  `offset`  
- [in] The offset of the section.  
+ окне Смещение раздела.  
   
  `relativeTo`  
- [in] The section to which `offset` refers.  
+ окне Раздел, к которому относится `offset`.  
   
  `relocType`  
- [in] One of the [CeeSectionRelocType](../../../../docs/framework/unmanaged-api/metadata/ceesectionreloctype-enumeration.md) values, indicating the kind of .reloc instruction to add.  
+ окне Одно из значений [цеесектионрелоктипе](../../../../docs/framework/unmanaged-api/metadata/ceesectionreloctype-enumeration.md) , указывающее тип добавляемой инструкции. reloc.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Заголовок:** COR. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Библиотека:** Используется в качестве ресурса в MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

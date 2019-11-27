@@ -36,20 +36,20 @@ HRESULT ValidatorInit (
   
 ## <a name="parameters"></a>Параметры  
  `dwModule`  
- [in] A value of the [CorValidatorModuleType](../../../../docs/framework/unmanaged-api/metadata/corvalidatormoduletype-enumeration.md) enumeration that specifies the type of the module in the current metadata scope.  
+ окне Значение перечисления [корвалидатормодулетипе](../../../../docs/framework/unmanaged-api/metadata/corvalidatormoduletype-enumeration.md) , указывающее тип модуля в текущей области метаданных.  
   
  `pUnk`  
- [in] A pointer to an [IUnknown](/cpp/atl/iunknown) instance that serves as a function callback for validation errors.  
+ окне Указатель на экземпляр [IUnknown](/cpp/atl/iunknown) , который служит функцией обратного вызова функции для ошибок проверки.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Заголовок:** COR. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Библиотека:** Используется в качестве ресурса в MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс IMetaDataValidate](../../../../docs/framework/unmanaged-api/metadata/imetadatavalidate-interface.md)

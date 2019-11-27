@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448952"
 ---
 # <a name="isymunmanagedmethodgetparameters-method"></a>Метод ISymUnmanagedMethod::GetParameters
-Gets the parameters for this method. The parameters are returned in the order in which they are defined within the method's signature.  
+Возвращает параметры для этого метода. Параметры возвращаются в том порядке, в котором они определены в сигнатуре метода.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,17 +40,17 @@ HRESULT GetParameters(
  [in] Размер массива `params`.  
   
  `pcParams`  
- [in] A pointer to a `ULONG32` that receives the size of the buffer that is required to contain the parameters.  
+ окне Указатель на `ULONG32`, который получает размер буфера, который требуется для хранения параметров.  
   
  `params`  
- [out] A pointer to the buffer that receives the parameters.  
+ заполняет Указатель на буфер, который получает параметры.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK, если метод выполнен. в противном случае E_FAIL или другой код ошибки.  
   
 ## <a name="requirements"></a>Требования  
- **Header:** CorSym.idl, CorSym.h  
+ **Заголовок:** Корсим. idl, Корсим. h  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс ISymUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)

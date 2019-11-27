@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446653"
 ---
 # <a name="addimport-method"></a>Метод AddImport
-Adds imports to the assembly.  
+Добавляет в сборку импорты.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,24 +38,24 @@ HRESULT AddImport(
   
 ## <a name="parameters"></a>Параметры  
  `AssemblyID`  
- Unique ID of assembly to be augmented.  
+ Уникальный идентификатор сборки для дополнения.  
   
  `ImportToken`  
- Unique ID, retrieved from [ImportFile Method](importfile-method.md), of file to be imported.  
+ Уникальный идентификатор, полученный из [метода ImportFile](importfile-method.md)импортируемого файла.  
   
  `dwFlags`  
- COM+ FileDef flags such as `ffContainsNoMetaData` and `ffWriteable`. `dwFlags` is passed to [DefineFile Method](../metadata/imetadataassemblyemit-definefile-method.md).  
+ Флаги COM+ Филедеф, такие как `ffContainsNoMetaData` и `ffWriteable`. `dwFlags` передается в [метод дефинефиле](../metadata/imetadataassemblyemit-definefile-method.md).  
   
  `pFileToken`  
- Pointer to token that receives the ID for the resulting file.  
+ Указатель на токен, который получает идентификатор для результирующего файла.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Returns S_OK if the method succeeds.  
+ Возвращает S_OK, если метод завершается с ошибкой.  
   
 ## <a name="requirements"></a>Требования  
- Requires alink.h  
+ Требуется ALink. h  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс IALink](ialink-interface.md)
 - [Интерфейс IALink2](ialink2-interface.md)

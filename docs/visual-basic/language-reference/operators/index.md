@@ -13,23 +13,23 @@ ms.locfileid: "74330987"
 ---
 # <a name="operators-visual-basic"></a>Операторы (Visual Basic)
 
-## <a name="in-this-section"></a>В данном разделе
+## <a name="in-this-section"></a>В этом разделе
 
-- [Operator precedence in Visual Basic](operator-precedence.md)
-- [Operators listed by functionality](operators-listed-by-functionality.md)
-- [Data types of operator results](data-types-of-operator-results.md)
-- [DirectCast operator](directcast-operator.md)
-- [TryCast operator](trycast-operator.md)
-- [NameOf operator](nameof.md)
-- [New operator](new-operator.md)
-- [Null-conditional operators](null-conditional-operators.md)
+- [Приоритет операторов в Visual Basic](operator-precedence.md)
+- [Операторы, перечисленные по функциональным возможностям](operators-listed-by-functionality.md)
+- [Типы данных результатов операторов](data-types-of-operator-results.md)
+- [Оператор DirectCast](directcast-operator.md)
+- [Оператор TryCast](trycast-operator.md)
+- [Оператор NameOf](nameof.md)
+- [Оператор New](new-operator.md)
+- [Условные операторы null](null-conditional-operators.md)
 - [Арифметические операторы](arithmetic-operators.md)
 - [Операторы присваивания](assignment-operators.md)
-- [Bit Shift operators](bit-shift-operators.md)
+- [Операторы поразрядного сдвига](bit-shift-operators.md)
 - [Операторы сравнения](comparison-operators.md)
-- [Concatenation operators](concatenation-operators.md)
-- [Logical/Bitwise operators](logical-bitwise-operators.md)
-- [Miscellaneous operators](miscellaneous-operators.md)
+- [Операторы объединения](concatenation-operators.md)
+- [Логические и битовые операторы](logical-bitwise-operators.md)
+- [Прочие операторы](miscellaneous-operators.md)
 
 ## <a name="related-sections"></a>Связанные разделы
 

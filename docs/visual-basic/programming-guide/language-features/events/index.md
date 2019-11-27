@@ -1,5 +1,5 @@
 ---
-title: события
+title: События
 ms.date: 07/20/2015
 helpviewer_keywords:
 - events [Visual Basic], about events
@@ -13,12 +13,12 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345122"
 ---
 # <a name="events-visual-basic"></a>События (Visual Basic)
-While you might visualize a Visual Studio project as a series of procedures that execute in a sequence, in reality, most programs are event driven—meaning the flow of execution is determined by external occurrences called *events*.  
+Хотя вы можете визуализировать проект Visual Studio как последовательность процедур, выполняемых в последовательности, на самом деле большинство программ управляются событиями, то есть поток выполнения определяется внешними *событиями*, которые называются событием.  
   
  Событие — это сигнал, который сообщает приложению, что произошло нечто важное. Например, когда пользователь щелкает элемент управления на форме, эта форма инициирует событие `Click` и вызывает процедуру обработки события. События позволяют отдельным задачам взаимодействовать друг с другом. Давайте представим, что приложение выполняет задачу по сортировке в отдельном процессе. Если пользователь отменит эту сортировку, приложение отправит событие отмены, по которому процесс сортировки завершит свою работу.  
   
 ## <a name="event-terms-and-concepts"></a>Термины и основные понятия для событий  
- This section describes the terms and concepts used with events in Visual Basic.  
+ В этом разделе описываются термины и понятия, используемые для событий в Visual Basic.  
   
 ### <a name="declaring-events"></a>Объявление событий  
  События объявляются внутри классов, структур, модулей и интерфейсов с помощью ключевого слова `Event`, как показано в следующем примере:  
@@ -26,7 +26,7 @@ While you might visualize a Visual Studio project as a series of procedures that
  [!code-vb[VbVbalrEvents#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#24)]  
   
 ### <a name="raising-events"></a>Создание событий  
- Событие действует как сообщение о том, что произошло нечто важное. Рассылка такого сообщения называется *созданием* события. In Visual Basic, you raise events with the `RaiseEvent` statement, as in the following example:  
+ Событие действует как сообщение о том, что произошло нечто важное. Рассылка такого сообщения называется *созданием* события. В Visual Basic события инициируются с помощью инструкции `RaiseEvent`, как показано в следующем примере:  
   
  [!code-vb[VbVbalrEvents#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#25)]  
   
@@ -38,7 +38,7 @@ While you might visualize a Visual Studio project as a series of procedures that
 ### <a name="event-handlers"></a>Обработчики событий  
  *Обработчики событий* — это процедуры, вызываемые при создании определенного события. В качестве обработчика событий можно использовать любую допустимую подпрограмму с подходящей сигнатурой. Но в качестве обработчика событий нельзя использовать функцию, поскольку она не может возвращать значение источнику события.  
   
- Visual Basic uses a standard naming convention for event handlers that combines the name of the event sender, an underscore, and the name of the event. Например, событие `Click` для кнопки с именем `button1` будет называться `Sub button1_Click`.  
+ Visual Basic использует стандартное соглашение об именовании для обработчиков событий, объединяющее имя отправителя события, символ подчеркивания и имя события. Например, событие `Click` для кнопки с именем `button1` будет называться `Sub button1_Click`.  
   
 > [!NOTE]
 > Мы рекомендуем придерживаться этого соглашения об именовании при создании обработчиков событий и для пользовательских событий. Но это не обязательное условие, вы можете использовать любое допустимое имя процедуры.  
@@ -55,7 +55,7 @@ While you might visualize a Visual Studio project as a series of procedures that
   
 - Нельзя использовать переменную `WithEvents` в качестве переменной объекта. То есть вы не можете объявить ее как `Object`. При объявлении переменной необходимо указать имя класса.  
   
-- Because shared events are not tied to class instances, you cannot use `WithEvents` to declaratively handle shared events. Аналогично, нельзя использовать `WithEvents` или `Handles` для обработки событий от `Structure`. В обоих случаях для обработки таких событий можно использовать инструкцию `AddHandler`.  
+- Поскольку общие события не привязаны к экземплярам класса, нельзя использовать `WithEvents` для декларативной обработке общих событий. Аналогично, нельзя использовать `WithEvents` или `Handles` для обработки событий от `Structure`. В обоих случаях для обработки таких событий можно использовать инструкцию `AddHandler`.  
   
 - Вы не можете создавать массивы переменных типа `WithEvents`.  
   
@@ -63,7 +63,7 @@ While you might visualize a Visual Studio project as a series of procedures that
   
  Предложение `Handles` является стандартным способом связывания события с обработчиком событий, но оно ограничено тем, что может связывать события с обработчиками событий только во время компиляции.  
   
- In some cases, such as with events associated with forms or controls, Visual Basic automatically stubs out an empty event handler and associates it with an event. For example, when you double-click a command button on a form in design mode, Visual Basic creates an empty event handler and a `WithEvents` variable for the command button, as in the following code:  
+ В некоторых случаях, например с событиями, связанными с формами или элементами управления, Visual Basic автоматически задействует пустой обработчик событий и связывает его с событием. Например, если дважды щелкнуть кнопку команды в форме в режиме конструктора, Visual Basic создает пустой обработчик событий и переменную `WithEvents` для кнопки, как показано в следующем коде:  
   
  [!code-vb[VbVbalrEvents#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#26)]  
   
@@ -74,7 +74,7 @@ While you might visualize a Visual Studio project as a series of procedures that
   
  [!code-vb[VbVbalrEvents#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#28)]  
   
- Инструкция `RemoveHandler`, которая отсоединяет событие от обработчика событий, использует такой же синтаксис, как `AddHandler`. Пример:  
+ Инструкция `RemoveHandler`, которая отсоединяет событие от обработчика событий, использует такой же синтаксис, как `AddHandler`. Например:  
   
  [!code-vb[VbVbalrEvents#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#29)]  
   
@@ -91,7 +91,7 @@ While you might visualize a Visual Studio project as a series of procedures that
   
 ### <a name="to-handle-events-from-a-base-class"></a>Обработка событий из базового класса  
   
-- Объявите обработчик событий в производном классе, добавив инструкцию `Handles MyBase.`*eventname* в строку объявления процедуры обработчика событий, где *eventname* — это имя события в базовом классе, которое вы хотите обрабатывать. Пример:  
+- Объявите обработчик событий в производном классе, добавив инструкцию `Handles MyBase.`*eventname* в строку объявления процедуры обработчика событий, где *eventname* — это имя события в базовом классе, которое вы хотите обрабатывать. Например:  
   
      [!code-vb[VbVbalrEvents#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#12)]  
   

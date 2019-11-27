@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446281"
 ---
 # <a name="isymunmanagedscopegetstartoffset-method"></a>Метод ISymUnmanagedScope::GetStartOffset
-Gets the start offset for this scope.  
+Возвращает начальное смещение для этой области.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -34,15 +34,15 @@ HRESULT GetStartOffset(
   
 ## <a name="parameters"></a>Параметры  
  `pRetVal`  
- [out] A pointer to a `ULONG32` that contains the starting offset.  
+ заполняет Указатель на `ULONG32`, содержащий начальное смещение.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK, если метод выполнен. в противном случае E_FAIL или другой код ошибки.  
   
 ## <a name="requirements"></a>Требования  
- **Header:** CorSym.idl, CorSym.h  
+ **Заголовок:** Корсим. idl, Корсим. h  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс ISymUnmanagedScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)
 - [Метод GetEndOffset](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-getendoffset-method.md)

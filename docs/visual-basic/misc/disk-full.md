@@ -1,5 +1,5 @@
 ---
-title: Disk full
+title: Диск полон
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID61
@@ -18,6 +18,6 @@ ms.locfileid: "74351115"
   
 - Освободите место на диске, переместив некоторые файлы на другой диск или удалив их.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Типы ошибок](../../visual-basic/programming-guide/language-features/error-types.md)

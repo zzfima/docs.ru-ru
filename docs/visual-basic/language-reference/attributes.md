@@ -13,15 +13,15 @@ ms.locfileid: "74347860"
 ---
 # <a name="attributes-visual-basic"></a>Атрибуты (Visual Basic)
 
-Visual Basic provides several attributes that allow objects to interoperate with unmanaged code and one attribute that enables module members to be accessed without the module name. The following table lists the attributes used by Visual Basic.  
+Visual Basic предоставляет несколько атрибутов, которые позволяют объектам взаимодействовать с неуправляемым кодом и одним атрибутом, который позволяет обращаться к членам модуля без имени модуля. В следующей таблице перечислены атрибуты, используемые Visual Basic.  
   
 |||  
 |---|---|  
-|<xref:Microsoft.VisualBasic.ComClassAttribute>|Instructs the compiler to add metadata that allows a class to be exposed as a COM object.|
-|<xref:Microsoft.VisualBasic.HideModuleNameAttribute>|Allows the module members to be accessed using only the qualification needed for the module.|
-|<xref:Microsoft.VisualBasic.VBFixedArrayAttribute>|Indicates that an array in a structure or non-local variable should be treated as a fixed-length array.|
-|<xref:Microsoft.VisualBasic.VBFixedStringAttribute>|Indicates that a string should be treated as if it were fixed length.|
+|<xref:Microsoft.VisualBasic.ComClassAttribute>|Предписывает компилятору добавлять метаданные, позволяющие предоставить класс в качестве COM-объекта.|
+|<xref:Microsoft.VisualBasic.HideModuleNameAttribute>|Разрешает доступ к членам модуля только по квалификации, необходимой для модуля.|
+|<xref:Microsoft.VisualBasic.VBFixedArrayAttribute>|Указывает, что массив в структуре или нелокальной переменной должен рассматриваться как массив фиксированной длины.|
+|<xref:Microsoft.VisualBasic.VBFixedStringAttribute>|Указывает, что строка должна рассматриваться как фиксированная длина.|
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Обзор атрибутов](../../visual-basic/programming-guide/concepts/attributes/index.md)

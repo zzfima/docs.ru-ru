@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445912"
 ---
 # <a name="icorprofilercallbackmoduleunloadfinished-method"></a>Метод ICorProfilerCallback::ModuleUnloadFinished
-Notifies the profiler that a module has finished unloading.  
+Уведомляет профилировщик о завершении выгрузки модуля.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -35,15 +35,15 @@ HRESULT ModuleUnloadFinished(
   
 ## <a name="parameters"></a>Параметры  
  `moduleId`  
- [in] The ID of the module that was unloaded.  
+ окне Идентификатор выгруженного модуля.  
   
  `hrStatus`  
- [in] An HRESULT that indicates whether the module was unloaded successfully.  
+ окне Значение HRESULT, указывающее, успешно ли выгружен модуль.  
   
-## <a name="remarks"></a>Заметки  
- The value of `moduleId` is not valid for an information request after the [ICorProfilerCallback::ModuleUnloadStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleunloadstarted-method.md) method returns.  
+## <a name="remarks"></a>Примечания  
+ Значение `moduleId` недопустимо для информационного запроса после возврата метода [ICorProfilerCallback:: ModuleUnloadStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleunloadstarted-method.md) .  
   
- Some parts of unloading the class might continue after the `ModuleUnloadFinished` callback. A failure HRESULT in `hrStatus` indicates a failure. However, a success HRESULT in `hrStatus` indicates only that the first part of unloading the module has succeeded.  
+ Некоторые части выгрузки класса могут продолжаться после обратного вызова `ModuleUnloadFinished`. Ошибка HRESULT в `hrStatus` указывает на сбой. Однако значение HRESULT успешного выполнения в `hrStatus` указывает только на то, что первая часть выгрузки модуля успешно выполнена.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
@@ -54,6 +54,6 @@ HRESULT ModuleUnloadFinished(
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

@@ -1,5 +1,5 @@
 ---
-title: Юникод
+title: Unicode
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Unicode
@@ -17,23 +17,23 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344226"
 ---
 # <a name="unicode-visual-basic"></a>Юникод (Visual Basic)
-Specifies that Visual Basic should marshal all strings to Unicode values regardless of the name of the external procedure being declared.  
+Указывает, что Visual Basic должны маршалировать все строки в значения Юникода независимо от имени объявляемой внешней процедуры.  
   
- When you call a procedure defined outside your project, the Visual Basic compiler does not have access to the information it must have in order to call the procedure correctly. This information includes where the procedure is located, how it is identified, its calling sequence and return type, and the string character set it uses. The [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md) creates a reference to an external procedure and supplies this necessary information.  
+ При вызове процедуры, определенной вне проекта, Visual Basic компилятор не имеет доступа к информации, которая необходима для правильного вызова процедуры. Эти сведения включают в себя расположение процедуры, способ ее определения, последовательность вызова и тип возвращаемого значения, а также используемую строковую кодировку. [Инструкция DECLARE](../../../visual-basic/language-reference/statements/declare-statement.md) создает ссылку на внешнюю процедуру и предоставляет эти необходимые сведения.  
   
- The `charsetmodifier` part in the `Declare` statement supplies the character set information to marshal strings during a call to the external procedure. It also affects how Visual Basic searches the external file for the external procedure name. The `Unicode` modifier specifies that Visual Basic should marshal all strings to Unicode values and should look up the procedure without modifying its name during the search.  
+ `charsetmodifier` часть в инструкции `Declare` предоставляет сведения о кодировке для маршалирования строк во время вызова внешней процедуры. Он также влияет на то, как Visual Basic ищет имя внешней процедуры во внешнем файле. Модификатор `Unicode` указывает, что Visual Basic должен маршалировать все строки в значения Юникода и выполнять поиск процедуры, не изменяя ее имя во время поиска.  
   
- If no character set modifier is specified, `Ansi` is the default.  
+ Если модификатор кодировки не указан, по умолчанию используется `Ansi`.  
   
-## <a name="remarks"></a>Заметки  
- The `Unicode` modifier can be used in this context:  
+## <a name="remarks"></a>Примечания  
+ Модификатор `Unicode` можно использовать в этом контексте:  
   
  [Оператор Declare](../../../visual-basic/language-reference/statements/declare-statement.md)  
   
-## <a name="smart-device-developer-notes"></a>Smart Device Developer Notes  
- This keyword is not supported.  
+## <a name="smart-device-developer-notes"></a>Примечания для разработчиков смарт-устройств  
+ Это ключевое слово не поддерживается.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [ANSI](../../../visual-basic/language-reference/modifiers/ansi.md)
 - [Auto](../../../visual-basic/language-reference/modifiers/auto.md)

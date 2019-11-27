@@ -21,65 +21,65 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347286"
 ---
 # <a name="program-structure-and-code-conventions-visual-basic"></a>Соглашения о структуре программы и коде (Visual Basic)
-This section introduces the typical Visual Basic program structure, provides a simple Visual Basic program, "Hello, World", and discusses Visual Basic code conventions. Code conventions are suggestions that focus not on a program's logic but on its physical structure and appearance. Following them makes your code easier to read, understand, and maintain. Code conventions can include, among others:  
+В этом разделе представлен типичная структура программы Visual Basic, предусмотрена простая Visual Basicная программа, "Hello, World" и обсуждаются Visual Basic соглашения о коде. Соглашения о коде — это рекомендации, которые касаются не логики программы, а ее физической структуры и внешнего вида. После этого код упрощает чтение, понимание и обслуживание. Соглашения о коде могут включать, среди прочего:  
   
-- Standardized formats for labeling and commenting code.  
+- Стандартизированные форматы для добавления меток и комментирования кода.  
   
-- Guidelines for spacing, formatting, and indenting code.  
+- Рекомендации по расстоянию, форматированию и отступу кода.  
   
-- Naming conventions for objects, variables, and procedures.  
+- Соглашения об именовании для объектов, переменных и процедур.  
   
- The following topics present a set of programming guidelines for Visual Basic programs, along with examples of good usage.  
+ В следующих разделах представлен набор руководств по программированию для Visual Basic программ, а также примеры хорошего использования.  
   
-## <a name="in-this-section"></a>Содержание  
- [Structure of a Visual Basic Program](../../../visual-basic/programming-guide/program-structure/structure-of-a-visual-basic-program.md)  
- Provides an overview of the elements that make up a Visual Basic program.  
+## <a name="in-this-section"></a>В этом разделе  
+ [Структура программы Visual Basic](../../../visual-basic/programming-guide/program-structure/structure-of-a-visual-basic-program.md)  
+ Содержит общие сведения об элементах, составляющих программу Visual Basic.  
   
- [Main Procedure in Visual Basic](../../../visual-basic/programming-guide/program-structure/main-procedure.md)  
- Discusses the procedure that serves as the starting point and overall control for your application.  
+ [Главная процедура в Visual Basic](../../../visual-basic/programming-guide/program-structure/main-procedure.md)  
+ Описание процедуры, которая служит начальной точкой и общим элементом управления для приложения.  
   
  [Ссылки и оператор Imports](../../../visual-basic/programming-guide/program-structure/references-and-the-imports-statement.md)  
- Discusses how to reference objects in other assemblies.  
+ Описывает, как ссылаться на объекты в других сборках.  
   
- [Namespaces in Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md)  
- Describes how namespaces organize objects within assemblies.  
+ [Пространства имен в Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md)  
+ Описывает, как пространства имен упорядочивают объекты в сборках.  
   
- [Visual Basic Naming Conventions](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)  
- Includes general guidelines for naming procedures, constants, variables, arguments, and objects.  
+ [Соглашения об именовании Visual Basic](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)  
+ Содержит общие рекомендации по именованию процедур, констант, переменных, аргументов и объектов.  
   
  [Соглашения о написании кода в Visual Basic](../../../visual-basic/programming-guide/program-structure/coding-conventions.md)  
- Reviews the guidelines used in developing the samples in this documentation.  
+ Просматривает рекомендации, используемые при разработке примеров в этой документации.  
   
  [Условная компиляция](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)  
- Describes how to compile particular blocks of code selectively while directing the compiler to ignore others.  
+ Описывает, как можно выборочно компилировать определенные блоки кода, направляя компилятору возможность игнорировать другие.  
   
  [Практическое руководство. Разбиение и объединение инструкций в коде](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)  
- Shows how to divide long statements into multiple lines and combine short statements on one line.  
+ Показывает, как разделить длинные операторы на несколько строк и объединить короткие операторы в одной строке.  
   
  [Практическое руководство. Сворачивание и скрытие частей кода](../../../visual-basic/programming-guide/program-structure/how-to-collapse-and-hide-sections-of-code.md)  
- Shows how to collapse and hide sections of code in the Visual Basic code editor.  
+ Показывает, как сворачивать и скрывать разделы кода в редакторе кода Visual Basic.  
   
  [Практическое руководство. Операторы меток](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md)  
- Shows how to mark a line of code to identify it for use with statements such as `On Error Goto`.  
+ Показывает, как пометить строку кода, чтобы она определялась для использования с такими инструкциями, как `On Error Goto`.  
   
  [Специальные символы в коде](../../../visual-basic/programming-guide/program-structure/special-characters-in-code.md)  
- Shows how and where to use non-numeric and non-alphabetic characters.  
+ Показывает, как и где следует использовать нечисловые и неалфавитные символы.  
   
  [Комментарии в коде](../../../visual-basic/programming-guide/program-structure/comments-in-code.md)  
- Discusses how to add descriptive comments to your code.  
+ Описывает, как добавлять описательные комментарии в код.  
   
  [Ключевые слова как имена элементов в коде](../../../visual-basic/programming-guide/program-structure/keywords-as-element-names-in-code.md)  
- Describes how to use brackets (`[]`) to delimit variable names that are also Visual Basic keywords.  
+ Описывает использование квадратных скобок (`[]`) для разделения имен переменных, которые также Visual Basic ключевые слова.  
   
  [Me, My, MyBase и MyClass](../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)  
- Describes various ways to refer to elements of a Visual Basic program.  
+ Описывает различные способы ссылки на элементы программы Visual Basic.  
   
- [Visual Basic Limitations](../../../visual-basic/programming-guide/program-structure/limitations.md)  
- Discusses the removal of known coding limits within Visual Basic.  
+ [Ограничения Visual Basic](../../../visual-basic/programming-guide/program-structure/limitations.md)  
+ Обсуждается удаление известных ограничений на написание кода в Visual Basic.  
   
 ## <a name="related-sections"></a>Связанные разделы  
  [Условные обозначения и соглашения о коде](../../../visual-basic/language-reference/typographic-and-code-conventions.md)  
- Provides standard coding conventions for Visual Basic.  
+ Предоставляет стандартные соглашения о кодировании для Visual Basic.  
   
  [Создание кода](/visualstudio/ide/writing-code-in-the-code-and-text-editor)  
- Describes features that make it easier for you to write and manage your code.
+ Описание функций, упрощающих написание кода и управление им.

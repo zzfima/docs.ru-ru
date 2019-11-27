@@ -45,7 +45,7 @@ ms.locfileid: "74344158"
 |[Объект My.WebServices](../../../visual-basic/language-reference/objects/my-webservices-object.md)|Предлагает свойства для создания экземпляров каждой веб-службы, на которую ссылается текущий проект, а также для доступа к этим экземплярам.|  
 |<xref:Microsoft.VisualBasic.FileIO.TextFieldParser>|Предоставляет методы и свойства для анализа структурированных текстовых файлов.|  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Справочник по языку Visual Basic](../../../visual-basic/language-reference/index.md)
 - [Visual Basic](../../../visual-basic/index.md)

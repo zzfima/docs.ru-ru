@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74439568"
 ---
 # <a name="icorprofilercallback2threadnamechanged-method"></a>Метод ICorProfilerCallback2::ThreadNameChanged
-Notifies the code profiler that the name of a thread has changed.  
+Уведомляет профилировщик кода о том, что имя потока изменилось.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -36,13 +36,13 @@ HRESULT ThreadNameChanged(
   
 ## <a name="parameters"></a>Параметры  
  `threadId`  
- [in] The ID of the thread.  
+ окне Идентификатор потока.  
   
  `cchName`  
- [in] The length of the new name of the thread.  
+ окне Длина нового имени потока.  
   
  `name`  
- [in] The new name of the thread. The name is not null-terminated.  
+ окне Новое имя потока. Имя не завершается нулем.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
@@ -53,7 +53,7 @@ HRESULT ThreadNameChanged(
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
 - [Интерфейс ICorProfilerCallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)

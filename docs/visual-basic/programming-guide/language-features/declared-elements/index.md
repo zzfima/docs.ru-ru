@@ -42,7 +42,7 @@ ms.locfileid: "74345333"
   
 - [Оператор Delegate](../../../../visual-basic/language-reference/statements/delegate-statement.md)  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Имена объявленных элементов](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)  
  Именование элементов и использование строчных и прописных букв.  
   

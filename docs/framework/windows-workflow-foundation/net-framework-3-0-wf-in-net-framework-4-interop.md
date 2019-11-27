@@ -13,7 +13,7 @@ ms.locfileid: "74283193"
 Действие <xref:System.Activities.Statements.Interop> — это действие [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] (WF 4,5), которое служит оболочкой для действия .NET Framework 3,5 (WF 3,5) в рамках рабочего процесса [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]. Действие WF 3 может быть отдельным действием или целым деревом действий. Выполнение (включая отмену и обработку исключений) и сохраняемость действия .NET Framework 3,5 происходит в контексте выполняемого экземпляра рабочего процесса [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)].  
   
 > [!NOTE]
-> Действие <xref:System.Activities.Statements.Interop> не отображается в области элементов конструктора рабочих процессов, если параметру **Целевая версия .NET Framework** в проекте рабочего процесса не присвоено значение **.NET Framework 4.5**.  
+> Действие <xref:System.Activities.Statements.Interop> не отображается на панели элементов конструктора рабочих процессов, если для проекта рабочего процесса не задан параметр **целевой платформы** **.NET Framework 4,5**.  
   
 ## <a name="criteria-for-using-a-wf-3-activity-with-an-interop-activity"></a>Условия использования действия WF 3 совместно с действием взаимодействия (Interop)  
  Для успешного выполнения действия WF 3 в действии <xref:System.Activities.Statements.Interop> необходимо соблюдение следующих условий:  

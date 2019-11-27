@@ -32,41 +32,41 @@ ms.locfileid: "74343868"
 ---
 # <a name="user-defined-data-type"></a>Тип данных, определенный пользователем
 
-Holds data in a format you define. The `Structure` statement defines the format.
+Хранит данные в определенном формате. Оператор `Structure` определяет формат.
 
-Previous versions of Visual Basic support the user-defined type (UDT). The current version expands the UDT to a *structure*. A structure is a concatenation of one or more *members* of various data types. Visual Basic treats a structure as a single unit, although you can also access its members individually.
+Предыдущие версии Visual Basic поддерживают определяемый пользователем тип (UDT). Текущая версия расширяет определяемый пользователем тип на *структуру*. Структура — это объединение одного или нескольких *элементов* различных типов данных. Visual Basic обрабатывает структуру как единое целое, хотя вы также можете обращаться к ее членам по отдельности.
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Примечания
 
-Define and use a structure data type when you need to combine various data types into a single unit, or when none of the elementary data types serve your needs.
+Определяйте и используйте тип данных Structure, если необходимо объединить различные типы данных в один блок или если ни один из простейших типов данных не подходит для ваших нужд.
 
-The default value of a structure data type consists of the combination of the default values of each of its members.
+Значение по умолчанию для типа данных Structure состоит из сочетания значений по умолчанию для каждого из его элементов.
 
-## <a name="declaration-format"></a>Declaration Format
+## <a name="declaration-format"></a>Формат объявления
 
-A structure declaration starts with the [Structure Statement](../../../visual-basic/language-reference/statements/structure-statement.md) and ends with the `End Structure` statement. The `Structure` statement supplies the name of the structure, which is also the identifier of the data type the structure is defining. Other parts of the code can use this identifier to declare variables, parameters, and function return values to be of this structure's data type.
+Объявление структуры начинается с [оператора Structure](../../../visual-basic/language-reference/statements/structure-statement.md) и заканчивается оператором `End Structure`. Инструкция `Structure` предоставляет имя структуры, которая также является идентификатором типа данных, определяемого структурой. Другие части кода могут использовать этот идентификатор для объявления переменных, параметров и возвращаемых значений функций в качестве типа данных этой структуры.
 
-The declarations between the `Structure` and `End Structure` statements define the members of the structure.
+Объявления между операторами `Structure` и `End Structure` определяют элементы структуры.
 
-## <a name="member-access-levels"></a>Member Access Levels
+## <a name="member-access-levels"></a>Уровни доступа к членам
 
-You must declare every member using a [Dim Statement](../../../visual-basic/language-reference/statements/dim-statement.md) or a statement that specifies access level, such as [Public](../../../visual-basic/language-reference/modifiers/public.md), [Friend](../../../visual-basic/language-reference/modifiers/friend.md), or [Private](../../../visual-basic/language-reference/modifiers/private.md). If you use a `Dim` statement, the access level defaults to public.
+Каждый член необходимо объявить с помощью [оператора Dim](../../../visual-basic/language-reference/statements/dim-statement.md) или оператора, определяющего уровень доступа, например [Public](../../../visual-basic/language-reference/modifiers/public.md), [Friend](../../../visual-basic/language-reference/modifiers/friend.md)или [Private](../../../visual-basic/language-reference/modifiers/private.md). При использовании оператора `Dim` уровень доступа по умолчанию равен public.
 
 ## <a name="programming-tips"></a>Советы по программированию
 
-- **Memory Consumption.** As with all composite data types, you cannot safely calculate the total memory consumption of a structure by adding together the nominal storage allocations of its members. Furthermore, you cannot safely assume that the order of storage in memory is the same as your order of declaration. If you need to control the storage layout of a structure, you can apply the <xref:System.Runtime.InteropServices.StructLayoutAttribute> attribute to the `Structure` statement.
+- **Потребление памяти.** Как и для всех составных типов данных, вы не можете безопасно вычислить общее потребление памяти для структуры, добавив в них номинальные объемы выделяемого пространства для его членов. Кроме того, нельзя безопасно предположить, что порядок хранения в памяти совпадает с порядком объявления. Если необходимо управлять структурой хранилища структуры, можно применить атрибут <xref:System.Runtime.InteropServices.StructLayoutAttribute> к инструкции `Structure`.
 
-- **Interop Considerations.** If you are interfacing with components not written for the .NET Framework, for example Automation or COM objects, keep in mind that user-defined types in other environments are not compatible with Visual Basic structure types.
+- **Вопросы взаимодействия.** Если вы взаимодействуете с компонентами, которые не написаны для .NET Framework, например автоматизации или COM-объекты, помните, что определяемые пользователем типы в других средах несовместимы с типами структуры Visual Basic.
 
-- **Widening.** There is no automatic conversion to or from any structure data type. You can define conversion operators on your structure using the [Operator Statement](../../../visual-basic/language-reference/statements/operator-statement.md), and you can declare each conversion operator to be `Widening` or `Narrowing`.
+- **Расширяющие.** Автоматическое преобразование в любой тип данных структуры или из него отсутствует. Операторы преобразования в структуре можно определить с помощью оператора [оператора](../../../visual-basic/language-reference/statements/operator-statement.md), а каждый оператор преобразования можно объявить `Widening` или `Narrowing`.
 
-- **Type Characters.** Structure data types have no literal type character or identifier type character.
+- **Символы типа.** Типы данных структуры не имеют символа литерального типа или символа типа идентификатора.
 
-- **Framework Type.** There is no corresponding type in the .NET Framework. All structures inherit from the .NET Framework class <xref:System.ValueType?displayProperty=nameWithType>, but no individual structure corresponds to <xref:System.ValueType?displayProperty=nameWithType>.
+- **Тип платформы.** В .NET Framework нет соответствующего типа. Все структуры наследуют от класса .NET Framework <xref:System.ValueType?displayProperty=nameWithType>, но никакие отдельные структуры не соответствуют <xref:System.ValueType?displayProperty=nameWithType>.
 
 ## <a name="example"></a>Пример
 
-The following paradigm shows the outline of the declaration of a structure.
+В следующей парадигме показана структура объявления структуры.
 
 ```vb
 [Public | Protected | Friend | Protected Friend | Private] Structure structname
@@ -76,12 +76,12 @@ The following paradigm shows the outline of the declaration of a structure.
 End Structure
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - <xref:System.ValueType>
 - <xref:System.Runtime.InteropServices.StructLayoutAttribute>
 - [Типы данных](../../../visual-basic/language-reference/data-types/index.md)
-- [Функции преобразования типов](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [Type Conversion Functions](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
 - [Сводка по преобразованию](../../../visual-basic/language-reference/keywords/conversion-summary.md)
 - [Оператор Structure](../../../visual-basic/language-reference/statements/structure-statement.md)
 - [Расширение](../../../visual-basic/language-reference/modifiers/widening.md)

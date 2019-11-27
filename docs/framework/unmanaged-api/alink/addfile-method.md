@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446681"
 ---
 # <a name="addfile-method"></a>Метод AddFile
-Adds files to the assembly. Can also be used to create unbound modules.  
+Добавляет файлы в сборку. Также можно использовать для создания непривязанных модулей.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,27 +39,27 @@ HRESULT AddFile(
   
 ## <a name="parameters"></a>Параметры  
  `AssemblyID`  
- Unique ID of the assembly to be augmented.  
+ Уникальный идентификатор сборки, подлежащая дополну.  
   
  `pszFilename`  
- Fully qualified name of file to be added.  
+ Полное имя добавляемого файла.  
   
  `dwFlags`  
- COM+ FileDef flags such as `ffContainsNoMetaData` and `ffWriteable`. `dwFlags` is passed to [DefineFile Method](../metadata/imetadataassemblyemit-definefile-method.md).  
+ Флаги COM+ Филедеф, такие как `ffContainsNoMetaData` и `ffWriteable`. `dwFlags` передается в [метод дефинефиле](../metadata/imetadataassemblyemit-definefile-method.md).  
   
  `pEmitter`  
- [IMetaDataEmit Interface](../metadata/imetadataemit-interface.md) interface to be used to emit metadata, if necessary.  
+ Интерфейс [IMetaDataEmit](../metadata/imetadataemit-interface.md) , используемый для выдачи метаданных при необходимости.  
   
  `pFileToken`  
- Pointer to where the unique ID of the added file will be stored.  
+ Указатель на место, где будет храниться уникальный идентификатор добавленного файла.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Returns S_OK if the method succeeds.  
+ Возвращает S_OK, если метод завершается с ошибкой.  
   
 ## <a name="requirements"></a>Требования  
- Requires alink.h.  
+ Требуется ALink. h.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс IALink](ialink-interface.md)
 - [Интерфейс IALink2](ialink2-interface.md)

@@ -25,7 +25,7 @@ ms.locfileid: "74447344"
 Указывает результат кэшированной функции поиска.  
   
 > [!NOTE]
-> `COR_PRF_CACHED_FUNCTION_FOUND` has a value of zero, so `COR_PRF_JIT_CACHE` cannot be used as a Boolean surrogate.  
+> `COR_PRF_CACHED_FUNCTION_FOUND` имеет нулевое значение, поэтому `COR_PRF_JIT_CACHE` нельзя использовать в качестве логического суррогата.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,8 +40,8 @@ typedef enum {
   
 |Член|Описание|  
 |------------|-----------------|  
-|`COR_PRF_FUNCTION_FOUND`|The search found the function.|  
-|`COR_PRF_FUNCTION_NOT_FOUND`|The search did not find the function.|  
+|`COR_PRF_FUNCTION_FOUND`|Поиск обнаружил функцию.|  
+|`COR_PRF_FUNCTION_NOT_FOUND`|Поиск не нашел функцию.|  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
@@ -52,6 +52,6 @@ typedef enum {
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Перечисления профилирования](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

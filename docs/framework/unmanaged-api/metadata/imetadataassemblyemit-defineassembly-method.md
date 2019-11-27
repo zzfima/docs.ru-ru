@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74432118"
 ---
 # <a name="imetadataassemblyemitdefineassembly-method"></a>Метод IMetaDataAssemblyEmit::DefineAssembly
-Creates an `Assembly` structure containing metadata for the specified assembly and returns the associated metadata token.  
+Создает структуру `Assembly`, содержащую метаданные для указанной сборки, и возвращает связанный маркер метаданных.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -41,38 +41,38 @@ HRESULT DefineAssembly (
   
 ## <a name="parameters"></a>Параметры  
  `pbPublicKey`  
- [in] The public key that identifies the publisher of the assembly, or NULL if the assembly is not strongly named.  
+ окне Открытый ключ, определяющий издателя сборки, или значение NULL, если сборка не имеет строгого имени.  
   
  `cbPublicKey`  
- [in] The size in bytes of `pbPublicKey`.  
+ окне Размер в байтах `pbPublicKey`.  
   
  `uHashAlgId`  
- [in] The identifier of the hashing algorithm to use to encrypt the files in the assembly, or NULL to specify the SHA-1 algorithm.  
+ окне Идентификатор алгоритма хэширования, используемого для шифрования файлов в сборке, или значение NULL для указания алгоритма SHA-1.  
   
  `szName`  
- [in] The human-readable text name of the assembly. This value must not exceed 1024 characters.  
+ окне Понятное для человека текстовое имя сборки. Это значение не должно превышать 1024 символов.  
   
  `pMetaData`  
- [in] A pointer to an ASSEMBLYMETADATA instance that contains the version, platform, and locale information for the assembly.  
+ окне Указатель на экземпляр ASSEMBLYMETADATA, содержащий сведения о версии, платформе и локали для сборки.  
   
  `dwAssemblyFlags`  
- [in] A combination of [CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) values that describe features of the assembly.  
+ окне Сочетание значений [корассемблифлагс](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) , описывающих функции сборки.  
   
  `pmda`  
- [out] A pointer to the metadata token.  
+ заполняет Указатель на маркер метаданных.  
   
-## <a name="remarks"></a>Заметки  
- Only one `Assembly` metadata structure can be defined within a manifest.  
+## <a name="remarks"></a>Примечания  
+ В манифесте может быть определена только одна структура метаданных `Assembly`.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Заголовок:** COR. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс IMetaDataAssemblyEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

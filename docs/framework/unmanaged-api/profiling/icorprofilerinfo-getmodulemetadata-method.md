@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74439826"
 ---
 # <a name="icorprofilerinfogetmodulemetadata-method"></a>Метод ICorProfilerInfo::GetModuleMetaData
-Gets a metadata interface instance that maps to the specified module.  
+Возвращает экземпляр интерфейса метаданных, сопоставляемый с указанным модулем.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,21 +37,21 @@ HRESULT GetModuleMetaData(
   
 ## <a name="parameters"></a>Параметры  
  `moduleId`  
- [in] The ID of the module to which the interface instance will be mapped.  
+ окне Идентификатор модуля, с которым будет сопоставлен экземпляр интерфейса.  
   
  `dwOpenFlags`  
- [in] A value of the [CorOpenFlags](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md) enumeration that specifies the mode for opening manifest files. Only the `ofRead`, `ofWrite` and `ofNoTransform` bits are valid.  
+ окне Значение перечисления [коропенфлагс](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md) , указывающее режим открытия файлов манифеста. Допустимы только `ofRead`, `ofWrite` и `ofNoTransform` разрядов.  
   
  `riid`  
- [in] The reference ID (GUID) of the metadata interface whose instance will be retrieved. See [Metadata Interfaces](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md) for a list of the interfaces.  
+ окне Идентификатор ссылки (GUID) интерфейса метаданных, экземпляр которого будет извлечен. Список интерфейсов см. в разделе [интерфейсы метаданных](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md) .  
   
  `ppOut`  
- [out] A pointer to the address of the metadata interface instance.  
+ заполняет Указатель на адрес экземпляра интерфейса метаданных.  
   
-## <a name="remarks"></a>Заметки  
- You may ask for the metadata to be opened in read/write mode, but this will result in slower metadata execution of the program, because changes made to the metadata cannot be optimized as they were from the compiler.  
+## <a name="remarks"></a>Примечания  
+ Можно запросить открытие метаданных в режиме чтения/записи, но это приведет к более медленному выполнению метаданных программы, так как изменения метаданных не могут быть оптимизированы по мере их постановки в компилятор.  
   
- Some modules (such as resource modules) have no metadata. In those cases, `GetModuleMetaData` will return an HRESULT value of S_FALSE, and a null in *`ppOut`.  
+ Некоторые модули (например, модули ресурсов) не имеют метаданных. В таких случаях `GetModuleMetaData` возвратит значение HRESULT S_FALSE и значение NULL в *`ppOut`.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
@@ -62,6 +62,6 @@ HRESULT GetModuleMetaData(
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

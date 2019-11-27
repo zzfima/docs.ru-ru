@@ -1,5 +1,5 @@
 ---
-title: Необязательный
+title: Необязательно
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Optional
@@ -17,13 +17,13 @@ ms.locfileid: "74351440"
 ---
 # <a name="optional-visual-basic"></a>Optional (Visual Basic)
 
-Specifies that a procedure argument can be omitted when the procedure is called.
+Указывает, что аргумент процедуры может быть пропущен при вызове процедуры.
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Примечания
 
-For each optional parameter, you must specify a constant expression as the default value of that parameter. If the expression evaluates to [Nothing](../../../visual-basic/language-reference/nothing.md), the default value of the value data type is used as the default value of the parameter.
+Для каждого необязательного параметра необходимо указать константное выражение в качестве значения по умолчанию для этого параметра. Если результат вычисления выражения равен [Nothing](../../../visual-basic/language-reference/nothing.md), в качестве значения по умолчанию для параметра используется значение по умолчанию типа данных value.
 
-If the parameter list contains an optional parameter, every parameter that follows it must also be optional.
+Если список параметров содержит необязательный параметр, то каждый параметр, следующий за ним, также должен быть необязательным.
 
 Модификатор `Optional` можно использовать в следующих контекстах:
 
@@ -36,14 +36,14 @@ If the parameter list contains an optional parameter, every parameter that follo
 - [Оператор Sub](../../../visual-basic/language-reference/statements/sub-statement.md)
 
 > [!NOTE]
-> When calling a procedure with or without optional parameters, you can pass arguments by position or by name. For more information, see [Passing Arguments by Position and by Name](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md).
+> При вызове процедуры с необязательными параметрами или без них можно передавать аргументы по положению или по имени. Дополнительные сведения см. в разделе [Передача аргументов по положению и по имени](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md).
 
 > [!NOTE]
-> You can also define a procedure with optional parameters by using overloading. If you have one optional parameter, you can define two overloaded versions of the procedure, one that accepts the parameter and one that doesn’t. Дополнительные сведения см. в разделе [Procedure Overloading](../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md).
+> Можно также определить процедуру с необязательными параметрами с помощью перегрузки. Если имеется один необязательный параметр, можно определить две перегруженные версии процедуры, одна из которых принимает параметр, а другая — нет. Дополнительные сведения см. в разделе [Procedure Overloading](../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md).
 
 ## <a name="example"></a>Пример
 
-The following example defines a procedure that has an optional parameter.
+В следующем примере определяется процедура, имеющая необязательный параметр.
 
 ```vb
 Public Function FindMatches(ByRef values As List(Of String),
@@ -66,11 +66,11 @@ End Function
 
 ## <a name="example"></a>Пример
 
-The following example demonstrates how to call a procedure with arguments passed by position and with arguments passed by name. The procedure has two optional parameters.
+В следующем примере показано, как вызвать процедуру с аргументами, передаваемыми по положению, и с аргументами, передаваемыми по имени. Процедура имеет два необязательных параметра.
 
 [!code-vb[VbVbalrKeywords#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/class8.vb#21)]
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Список параметров](../../../visual-basic/language-reference/statements/parameter-list.md)
 - [Необязательные параметры](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)

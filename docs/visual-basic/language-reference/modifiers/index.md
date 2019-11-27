@@ -12,10 +12,10 @@ ms.locfileid: "74351543"
 # <a name="modifiers-visual-basic"></a>Модификаторы (Visual Basic)
 В статьях этого раздела описываются модификаторы времени выполнения Visual Basic.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [ANSI](../../../visual-basic/language-reference/modifiers/ansi.md)  
   
- [Assembly](../../../visual-basic/language-reference/modifiers/assembly.md)  
+ [Сборка](../../../visual-basic/language-reference/modifiers/assembly.md)  
   
  [Async](../../../visual-basic/language-reference/modifiers/async.md)  
   
@@ -47,13 +47,13 @@ ms.locfileid: "74351543"
   
  [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)  
   
- [Необязательный](../../../visual-basic/language-reference/modifiers/optional.md)  
+ [Optional](../../../visual-basic/language-reference/modifiers/optional.md)  
   
  [Out](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)  
   
- [Перегрузки](../../../visual-basic/language-reference/modifiers/overloads.md)  
+ [Overloads](../../../visual-basic/language-reference/modifiers/overloads.md)  
   
- [Переопределяемые](../../../visual-basic/language-reference/modifiers/overridable.md)  
+ [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)  
   
  [Переопределения](../../../visual-basic/language-reference/modifiers/overrides.md)  
   

@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448548"
 ---
 # <a name="corsymvarflag-enumeration"></a>Перечисление CorSymVarFlag
-Indicates whether a variable is compiler-generated.  
+Указывает, создается ли переменная компилятором.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,11 +37,11 @@ typedef enum CorSymVarFlag
   
 |Член|Описание|  
 |------------|-----------------|  
-|`VAR_IS_COMP_GEN`|Indicates that the given variable is compiler-generated.|  
+|`VAR_IS_COMP_GEN`|Указывает, что заданная переменная создается компилятором.|  
   
 ## <a name="requirements"></a>Требования  
- **Header:** CorSym.idl, CorSym.h  
+ **Заголовок:** Корсим. idl, Корсим. h  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Перечисления хранилища символов диагностики](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)

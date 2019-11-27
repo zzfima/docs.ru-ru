@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445638"
 ---
 # <a name="init-method"></a>Метод Init
-Prepares objects implementing the [IALink Interface](ialink-interface.md) for use.  
+Подготавливает объекты, реализующие [интерфейс иалинк](ialink-interface.md) для использования.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -35,18 +35,18 @@ HRESULT Init(
   
 ## <a name="parameters"></a>Параметры  
  `pDispenser`  
- [IMetaDataDispenserEx Interface](../metadata/imetadatadispenserex-interface.md) pointer to the metadata dispenser.  
+ Указатель [интерфейса IMetaDataDispenserEx](../metadata/imetadatadispenserex-interface.md) на распределитель метаданных.  
   
  `pErrorHandler`  
- [IMetaDataError Interface](../metadata/imetadataerror-interface.md) pointer to an optional error handling interface.  
+ Указатель [интерфейса IMetaDataError](../metadata/imetadataerror-interface.md) на необязательный интерфейс обработки ошибок.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Returns S_OK if the method succeeds.  
+ Возвращает S_OK, если метод завершается с ошибкой.  
   
 ## <a name="requirements"></a>Требования  
- Requires alink.h  
+ Требуется ALink. h  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс IALink](ialink-interface.md)
 - [Интерфейс IALink2](ialink2-interface.md)

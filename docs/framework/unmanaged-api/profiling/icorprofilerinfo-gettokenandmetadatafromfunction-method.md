@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74438744"
 ---
 # <a name="icorprofilerinfogettokenandmetadatafromfunction-method"></a>Метод ICorProfilerInfo::GetTokenAndMetadataFromFunction
-Gets the metadata token and a metadata interface instance that can be used against the token for the specified function.  
+Возвращает маркер метаданных и экземпляр интерфейса метаданных, который может использоваться для токена указанной функции.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,16 +37,16 @@ HRESULT GetTokenAndMetaDataFromFunction(
   
 ## <a name="parameters"></a>Параметры  
  `functionId`  
- [in] The ID of the function for which to get the metadata token and metadata interface.  
+ окне Идентификатор функции, для которой необходимо получить токен метаданных и интерфейс метаданных.  
   
  `riid`  
- [in] The reference ID of the metadata interface to get the instance of.  
+ окне Идентификатор ссылки интерфейса метаданных для получения экземпляра.  
   
  `ppImport`  
- [out] A pointer to the address of the metadata interface instance that can be used against the token for the specified function.  
+ заполняет Указатель на адрес экземпляра интерфейса метаданных, который может использоваться с токеном для указанной функции.  
   
  `pToken`  
- [out] A pointer to the metadata token for the specified function.  
+ заполняет Указатель на маркер метаданных для указанной функции.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
@@ -57,6 +57,6 @@ HRESULT GetTokenAndMetaDataFromFunction(
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

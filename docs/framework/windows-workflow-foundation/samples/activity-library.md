@@ -12,7 +12,7 @@ ms.locfileid: "74283155"
 # <a name="activity-library"></a>Библиотека действий
 Этот раздел содержит примеры, демонстрирующие Расширенные пользовательские действия в Windows Workflow Foundation (WF).  
   
-## <a name="in-this-section"></a>в этом разделе
+## <a name="in-this-section"></a>В этом разделе
 
  [Настраиваемое действие SendMail](sendmail-custom-activity.md)  
  В этом примере описывается создание настраиваемого действия, которое является производным от <xref:System.Activities.AsyncCodeActivity>, для отправки почты с помощью SMTP для работы в приложении рабочего процесса.  

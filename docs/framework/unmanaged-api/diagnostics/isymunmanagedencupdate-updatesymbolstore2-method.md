@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448980"
 ---
 # <a name="isymunmanagedencupdateupdatesymbolstore2-method"></a>Метод ISymUnmanagedENCUpdate::UpdateSymbolStore2
-Allows a compiler to omit functions that have not been modified from the program database (PDB) stream, provided the line information meets the requirements. The correct line information can be determined with the old PDB line information and one delta for all lines in the function.  
+Позволяет компилятору опускать функции, которые не были изменены из потока базы данных программы (PDB), при условии, что сведения о строке соответствуют требованиям. Правильная информация о строке может быть определена со старыми сведениями о строке PDB и одной разностью для всех строк в функции.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -36,20 +36,20 @@ HRESULT UpdateSymbolStore2(
   
 ## <a name="parameters"></a>Параметры  
  `pIStream`  
- [in] A pointer to an [IStream](/windows/desktop/api/objidl/nn-objidl-istream) that contains the line information.  
+ окне Указатель на объект [IStream](/windows/desktop/api/objidl/nn-objidl-istream) , содержащий сведения о строке.  
   
  `pDeltaLines`  
- [in] A pointer to a [SYMLINEDELTA](../../../../docs/framework/unmanaged-api/diagnostics/symlinedelta-structure.md) structure that contains the lines that have changed.  
+ окне Указатель на структуру [SYMLINEDELTA](../../../../docs/framework/unmanaged-api/diagnostics/symlinedelta-structure.md) , содержащую измененные строки.  
   
  `cDeltaLines`  
- [in] A `ULONG` that represents the number of lines that have changed.  
+ окне `ULONG`, представляющая число измененных строк.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK, если метод выполнен. в противном случае E_FAIL или другой код ошибки.  
   
 ## <a name="requirements"></a>Требования  
- **Header:** CorSym.idl, CorSym.h  
+ **Заголовок:** Корсим. idl, Корсим. h  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс ISymUnmanagedENCUpdate](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedencupdate-interface.md)

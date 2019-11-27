@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449188"
 ---
 # <a name="isymunmanageddocumentgetdocumenttype-method"></a>Метод ISymUnmanagedDocument::GetDocumentType
-Gets the document type of this document.  
+Возвращает тип документа этого документа.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -34,11 +34,11 @@ HRESULT GetDocumentType(
   
 ## <a name="parameters"></a>Параметры  
  `pRetVal`  
- [out] Pointer to a variable that receives the document type.  
+ заполняет Указатель на переменную, которая получает тип документа.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- S_OK if the method succeeds.  
+ S_OK, если метод выполнен.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс ISymUnmanagedDocument](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449885"
 ---
 # <a name="icorprofilerinfosetilfunctionbody-method"></a>Метод ICorProfilerInfo::SetILFunctionBody
-Replaces the body of the specified function in the specified module.  
+Заменяет тело указанной функции в указанном модуле.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -36,20 +36,20 @@ HRESULT SetILFunctionBody(
   
 ## <a name="parameters"></a>Параметры  
  `moduleId`  
- [in] The ID of the module in which the function resides.  
+ окне Идентификатор модуля, в котором находится функция.  
   
  `methodid`  
- [in] The token of the function for which to replace the body.  
+ окне Токен функции, для которой заменяется текст.  
   
  `pbNewILMethodHeader`  
- [in] The new header for the function.  
+ окне Новый заголовок для функции.  
   
-## <a name="remarks"></a>Заметки  
- The `SetILFunctionBody` method replaces the relative virtual address of the function in the metadata so that it points to the new function body, and adjusts any internal data structures as required.  
+## <a name="remarks"></a>Примечания  
+ Метод `SetILFunctionBody` заменяет относительный виртуальный адрес функции в метаданных таким образом, чтобы он указывал на новый текст функции, и при необходимости корректирует все внутренние структуры данных.  
   
- The `SetILFunctionBody` method can be called on only those functions that have never been compiled by a just-in-time (JIT) compiler.  
+ Метод `SetILFunctionBody` можно вызывать только для тех функций, которые не были скомпилированы JIT-компилятором.  
   
- Use the [ICorProfilerInfo::GetILFunctionBodyAllocator](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getilfunctionbodyallocator-method.md) method to allocate space for the new method to ensure that the buffer is compatible.  
+ Используйте метод [ICorProfilerInfo:: GetILFunctionBodyAllocator](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getilfunctionbodyallocator-method.md) , чтобы выделить пространство для нового метода, чтобы обеспечить совместимость буфера.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
@@ -60,6 +60,6 @@ HRESULT SetILFunctionBody(
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

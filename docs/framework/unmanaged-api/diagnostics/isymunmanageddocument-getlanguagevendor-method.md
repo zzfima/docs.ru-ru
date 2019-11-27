@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449169"
 ---
 # <a name="isymunmanageddocumentgetlanguagevendor-method"></a>Метод ISymUnmanagedDocument::GetLanguageVendor
-Gets the language vendor of this document.  
+Получает поставщика языка этого документа.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -34,11 +34,11 @@ HRESULT GetLanguageVendor(
   
 ## <a name="parameters"></a>Параметры  
  `pRetVal`  
- [out] A pointer to a variable that receives the language vendor.  
+ заполняет Указатель на переменную, которая получает поставщик языка.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- S_OK if the method succeeds.  
+ S_OK, если метод выполнен.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс ISymUnmanagedDocument](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

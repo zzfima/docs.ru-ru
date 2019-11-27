@@ -21,7 +21,7 @@ ms.locfileid: "74435434"
   
  Шаблон элемента управления <xref:System.Windows.Automation.DockPattern> используется для предоставления свойств закрепления элемента управления в контейнере закрепления. Контейнер закрепления — это элемент управления, который позволяет упорядочить дочерние элементы по горизонтали и по вертикали друг относительно друга. Примеры элементов управления, реализующих данный шаблон элемента управления, см. в разделе [Control Pattern Mapping for UI Automation Clients](control-pattern-mapping-for-ui-automation-clients.md).  
   
- ![Docking container with two docked children.](./media/uia-dockpattern-dockingexample.PNG "UIA_DockPattern_DockingExample")  
+ ![Контейнер закрепления с двумя закрепленными дочерними элементами.](./media/uia-dockpattern-dockingexample.PNG "UIA_DockPattern_DockingExample")  
 Пример закрепления из Visual Studio, где окно "Представление классов" — DockPosition.Right, а окно "Список ошибок" — DockPosition.Bottom  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>   
@@ -40,10 +40,10 @@ ms.locfileid: "74435434"
 ## <a name="required-members-for-idockprovider"></a>Обязательные члены для IDockProvider  
  Следующие свойства и методы обязательны для реализации интерфейса IDockProvider.  
   
-|Обязательные члены|Тип члена|Примечания|  
+|Обязательные члены|Тип элемента|Примечания|  
 |----------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IDockProvider.DockPosition%2A>|свойство;|Отсутствуют|  
-|<xref:System.Windows.Automation.Provider.IDockProvider.SetDockPosition%2A>|Метод|Отсутствуют|  
+|<xref:System.Windows.Automation.Provider.IDockProvider.DockPosition%2A>|Свойство|Нет|  
+|<xref:System.Windows.Automation.Provider.IDockProvider.SetDockPosition%2A>|Метод|Нет|  
   
  Этот шаблон элемента управления не имеет связанных событий.  
   
@@ -53,9 +53,9 @@ ms.locfileid: "74435434"
   
 |Тип исключения|Условие|  
 |--------------------|---------------|  
-|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.IDockProvider.SetDockPosition%2A><br /><br /> -   When a control is not able to execute the requested dock style.|  
+|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.IDockProvider.SetDockPosition%2A><br /><br /> — Когда элемент управления не может выполнить запрошенный стиль закрепления.|  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Общие сведения о шаблонах элементов управления модели автоматизации пользовательского интерфейса](ui-automation-control-patterns-overview.md)
 - [Поддержка шаблонов элементов управления в поставщике автоматизации пользовательского интерфейса](support-control-patterns-in-a-ui-automation-provider.md)

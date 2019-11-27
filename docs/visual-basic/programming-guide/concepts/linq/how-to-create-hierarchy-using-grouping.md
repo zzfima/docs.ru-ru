@@ -9,7 +9,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74341597"
 ---
-# <a name="how-to-create-hierarchy-using-grouping-visual-basic"></a>How to: Create Hierarchy Using Grouping (Visual Basic)
+# <a name="how-to-create-hierarchy-using-grouping-visual-basic"></a>Инструкции. Создание иерархии с помощью группирования (Visual Basic)
 Этот пример показывает, как группировать данные и затем создавать код XML на основе группирования.  
   
 ## <a name="example"></a>Пример  
@@ -79,6 +79,6 @@ Console.WriteLine(newData)
 </Root>  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Advanced Query Techniques (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+- [Дополнительные методы запросов (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449440"
 ---
 # <a name="imetadataassemblyimportgetassemblyprops-method"></a>Метод IMetaDataAssemblyImport::GetAssemblyProps
-Gets the set of properties for the assembly with the specified metadata signature.  
+Возвращает набор свойств для сборки с указанной сигнатурой метаданных.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -43,41 +43,41 @@ HRESULT GetAssemblyProps (
   
 ## <a name="parameters"></a>Параметры  
  `mda`  
- [in]. The `mdAssembly` metadata token that represents the assembly for which to get the properties.  
+ [in]. `mdAssembly` маркер метаданных, представляющий сборку, для которой необходимо получить свойства.  
   
  `ppbPublicKey`  
- [out] A pointer to the public key or the metadata token.  
+ заполняет Указатель на открытый ключ или маркер метаданных.  
   
  `pcbPublicKey`  
- [out] The number of bytes in the returned public key.  
+ заполняет Число байтов в возвращенном открытом ключе.  
   
  `pulHashAlgId`  
- [out] A pointer to the algorithm used to hash the files in the assembly.  
+ заполняет Указатель на алгоритм, используемый для хэширования файлов в сборке.  
   
  `szName`  
- [out] The simple name of the assembly.  
+ заполняет Простое имя сборки.  
   
  `cchName`  
- [in] The size, in wide chars, of `szName`.  
+ окне Размер `szName`в расширенных символах.  
   
  `pchName`  
- [out] The number of wide chars actually returned in `szName`.  
+ заполняет Число расширенных символов, фактически возвращаемых в `szName`.  
   
  `pMetaData`  
- [out] A pointer to an ASSEMBLYMETADATA structure that contains the assembly metadata.  
+ заполняет Указатель на структуру ASSEMBLYMETADATA, содержащую метаданные сборки.  
   
  `pdwAssemblyFlags`  
- [out] Flags that describe the metadata applied to an assembly. This value is a combination of one or more [CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) values.  
+ заполняет Флаги, описывающие метаданные, применяемые к сборке. Это значение представляет собой сочетание одного или нескольких значений [корассемблифлагс](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) .  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Заголовок:** COR. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Библиотека:** Используется в качестве ресурса в MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс IMetaDataAssemblyImport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

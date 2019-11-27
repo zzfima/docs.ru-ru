@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74440021"
 ---
 # <a name="icorprofilercallbackthreadassignedtoosthread-method"></a>Метод ICorProfilerCallback::ThreadAssignedToOSThread
-Notifies the profiler that a managed thread is being implemented using a particular operating system thread.  
+Уведомляет профилировщик о том, что управляемый поток реализуется с помощью определенного потока операционной системы.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -35,13 +35,13 @@ HRESULT ThreadAssignedToOSThread(
   
 ## <a name="parameters"></a>Параметры  
  `managedThreadId`  
- [in] The identifier of the managed thread.  
+ окне Идентификатор управляемого потока.  
   
  `osThreadId`  
- [in] The identifier of the operating system thread.  
+ окне Идентификатор потока операционной системы.  
   
-## <a name="remarks"></a>Заметки  
- The `ThreadAssignedToOSThread` callback exists so that the profiler can maintain an accurate mapping across fibers of operating system threads to managed threads.  
+## <a name="remarks"></a>Примечания  
+ Функция обратного вызова `ThreadAssignedToOSThread` существует, чтобы профилировщик мог поддерживать точное сопоставление по волокнам потоков операционной системы с управляемыми потоками.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
@@ -52,6 +52,6 @@ HRESULT ThreadAssignedToOSThread(
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

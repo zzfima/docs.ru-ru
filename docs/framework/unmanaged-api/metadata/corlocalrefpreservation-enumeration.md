@@ -39,17 +39,17 @@ typedef enum CorLocalRefPreservation
   
 |Член|Описание|  
 |------------|-----------------|  
-|`MDPreserveLocalRefsNone`|Preserve no local references.|  
-|`MDPreserveLocalTypeRef`|Preserve local type references.|  
-|`MDPreserveLocalMemberRef`|Preserve local member references.|  
+|`MDPreserveLocalRefsNone`|Не сохранять локальные ссылки.|  
+|`MDPreserveLocalTypeRef`|Сохранение ссылок на локальные типы.|  
+|`MDPreserveLocalMemberRef`|Сохранение ссылок на локальные члены.|  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorHdr.h  
+ **Заголовок:** Корхдр. h  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Перечисления метаданных](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428277"
 ---
 # <a name="icorprofilerobjectenumclone-method"></a>Метод ICorProfilerObjectEnum::Clone
-Gets an interface pointer to a copy of this [ICorProfilerObjectEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerobjectenum-interface.md) interface.  
+Получает указатель интерфейса на копию этого интерфейса [ICorProfilerObjectEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerobjectenum-interface.md) .  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -34,7 +34,7 @@ HRESULT Clone (
   
 ## <a name="parameters"></a>Параметры  
  `ppEnum`  
- [out] A pointer to the interface pointer that in turn points to the copy of this `ICorProfilerObjectEnum` interface. The copy maintains its own enumeration state separately from this one. However, the copy's initial cursor position will be the same as this enumerator's current cursor position.  
+ заполняет Указатель на указатель интерфейса, который, в свою очередь, указывает на копию данного интерфейса `ICorProfilerObjectEnum`. Копия хранит собственное состояние перечисления отдельно от этого экземпляра. Однако начальная позиции курсора копии будет совпадать с текущей позицией курсора этого перечислителя.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
@@ -45,6 +45,6 @@ HRESULT Clone (
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс ICorProfilerObjectEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerobjectenum-interface.md)

@@ -9,7 +9,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351927"
 ---
-# <a name="linq-to-xml-events-visual-basic"></a>LINQ to XML Events (Visual Basic)
+# <a name="linq-to-xml-events-visual-basic"></a>События LINQ to XML (Visual Basic)
 События [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] позволяют получать уведомления, когда изменяется дерево XML.  
   
  Можно добавить события в экземпляр любого объекта <xref:System.Xml.Linq.XObject>. Обработчик события будет получать уведомления об изменениях объекта <xref:System.Xml.Linq.XObject> и всех его потомков. Например, можно добавить обработчик события в корень дерева и обрабатывать все изменения дерева в этом обработчике события.  
@@ -19,14 +19,14 @@ ms.locfileid: "74351927"
 ## <a name="types-and-events"></a>Типы и события  
  Используйте следующие типы при работе с событиями.  
   
-|Type|Описание|  
+|Тип|Описание|  
 |----------|-----------------|  
 |<xref:System.Xml.Linq.XObjectChange>|Задает тип события, когда событие вызывается объектом <xref:System.Xml.Linq.XObject>.|  
 |<xref:System.Xml.Linq.XObjectChangeEventArgs>|Предоставляет данные для событий <xref:System.Xml.Linq.XObject.Changing> и <xref:System.Xml.Linq.XObject.Changed>.|  
   
  При изменении дерева XML возникают следующие события.  
   
-|событие|Описание|  
+|Событие|Описание|  
 |-----------|-----------------|  
 |<xref:System.Xml.Linq.XObject.Changing>|Возникает непосредственно перед тем, как объект <xref:System.Xml.Linq.XObject> или какой-либо его потомок изменяется.|  
 |<xref:System.Xml.Linq.XObject.Changed>|Возникает, когда изменился объект <xref:System.Xml.Linq.XObject> или один из его потомков.|  
@@ -92,7 +92,7 @@ Module Module1
 End Module  
 ```  
   
-### <a name="comments"></a>Комментарии  
+### <a name="comments"></a>Comments  
  Этот код выводит следующие результаты:  
   
 ```console  
@@ -114,6 +114,6 @@ Total:308
 </Root>  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Advanced LINQ to XML Programming (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+- [Расширенное программирование LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

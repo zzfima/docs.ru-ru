@@ -15,21 +15,21 @@ ms.locfileid: "74350694"
 # <a name="mycomputerregistry-object"></a>Объект My.Computer.Registry
 Включает свойства и методы для управления реестром.  
   
-## <a name="remarks"></a>Заметки  
+## <a name="remarks"></a>Примечания  
  Сведения о методах и свойствах объекта `My.Computer.Registry` см. в разделе <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>.  
   
- For more information, see [Reading from and Writing to the Registry](../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md).  
+ Дополнительные сведения см. в разделе [чтение и запись в реестр](../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md).  
   
 > [!NOTE]
-> You can also manipulate the registry by using methods of the <xref:Microsoft.Win32.Registry?displayProperty=nameWithType> class.  
+> Вы также можете управлять реестром с помощью методов класса <xref:Microsoft.Win32.Registry?displayProperty=nameWithType>.  
   
 ## <a name="requirements"></a>Требования  
  **Пространство имен:** <xref:Microsoft.VisualBasic.MyServices>  
   
- **Class:** <xref:Microsoft.VisualBasic.MyServices.RegistryProxy> (provides access to <xref:Microsoft.Win32.Registry>)  
+ **Класс:** <xref:Microsoft.VisualBasic.MyServices.RegistryProxy> (предоставляет доступ к <xref:Microsoft.Win32.Registry>)  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **Сборка:** Библиотека времени выполнения Visual Basic (в Microsoft. VisualBasic. dll)  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Объект My.Computer](../../../visual-basic/language-reference/objects/my-computer-object.md)

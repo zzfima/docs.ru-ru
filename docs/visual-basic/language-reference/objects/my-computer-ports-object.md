@@ -15,21 +15,21 @@ ms.locfileid: "74332007"
 # <a name="mycomputerports-object"></a>Объект My.Computer.Ports
 Предлагает свойство и метод для доступа к последовательным портам компьютера.  
   
-## <a name="remarks"></a>Заметки  
+## <a name="remarks"></a>Примечания  
  Сведения о методах и свойствах объекта `My.Computer.Ports` см. в разделе <xref:Microsoft.VisualBasic.Devices.Ports>.  
   
- For more information, see [Accessing the Computer's Ports](../../../visual-basic/developing-apps/programming/computer-resources/accessing-the-computer-s-ports.md).  
+ Дополнительные сведения см. [в разделе доступ к портам компьютера](../../../visual-basic/developing-apps/programming/computer-resources/accessing-the-computer-s-ports.md).  
   
 > [!NOTE]
-> You can also use properties and methods of the <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType> class to access the computer's serial ports.  
+> Для доступа к последовательным портам компьютера можно также использовать свойства и методы класса <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType>.  
   
 ## <a name="requirements"></a>Требования  
  **Пространство имен:** <xref:Microsoft.VisualBasic.Devices>  
   
  **Класс:** <xref:Microsoft.VisualBasic.Devices.Ports>  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **Сборка:** Библиотека времени выполнения Visual Basic (в Microsoft. VisualBasic. dll)  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Объект My.Computer](../../../visual-basic/language-reference/objects/my-computer-object.md)

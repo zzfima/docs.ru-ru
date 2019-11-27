@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74434404"
 ---
 # <a name="endmerge-method"></a>Метод EndMerge
-Indicates that all custom attributes have been merged into the emit scope.  
+Указывает, что все пользовательские атрибуты были объединены в область действия Emit.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -35,15 +35,15 @@ HRESULT EndMerge(
   
 ## <a name="parameters"></a>Параметры  
  `AssemblyID`  
- ID of the assembly.  
+ Идентификатор сборки.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Returns S_OK if the method succeeds.  
+ Возвращает S_OK, если метод завершается с ошибкой.  
   
 ## <a name="requirements"></a>Требования  
- Requires alink.h  
+ Требуется ALink. h  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс IALink](ialink-interface.md)
 - [Интерфейс IALink2](ialink2-interface.md)

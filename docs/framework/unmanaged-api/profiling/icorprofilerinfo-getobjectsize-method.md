@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74438829"
 ---
 # <a name="icorprofilerinfogetobjectsize-method"></a>Метод ICorProfilerInfo::GetObjectSize
-Gets the size of a specified object.  
+Возвращает размер указанного объекта.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -35,23 +35,23 @@ HRESULT GetObjectSize(
   
 ## <a name="parameters"></a>Параметры  
  `objectId`  
- [in] The ID of the object.  
+ окне Идентификатор объекта.  
   
  `pcSize`  
- [out] A pointer to the object's size, in bytes.  
+ заполняет Указатель на размер объекта в байтах.  
   
-## <a name="remarks"></a>Заметки  
+## <a name="remarks"></a>Примечания  
   
 > [!IMPORTANT]
-> Этот метод устарел. It returns COR_E_OVERFLOW for objects greater than 4GB on 64-bit platforms. Use the  [ICorProfilerInfo4::GetObjectSize2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-getobjectsize2-method.md) method instead.  
+> Этот метод устарел. Он Возвращает COR_E_OVERFLOW для объектов размером более 4 ГБ на 64-разрядных платформах. Используйте вместо этого метод [метод icorprofilerinfo4:: GetObjectSize2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-getobjectsize2-method.md) .  
   
- Different objects of the same types often have the same size. However, some types, such as arrays or strings, may have a different size for each object.  
+ Различные объекты одних и тех же типов часто имеют одинаковый размер. Однако некоторые типы, такие как массивы или строки, могут иметь разные размеры для каждого объекта.  
   
- The size returned by the `GetObjectSize` method does not include any alignment padding that may appear after the object is on the garbage collection heap. If you use the `GetObjectSize` method to advance from object to object on the garbage collection heap, add alignment padding manually, as necessary.  
+ Размер, возвращаемый методом `GetObjectSize`, не включает заполнение выравнивания, которое может появиться после того, как объект находится в куче сборки мусора. Если для перехода от объекта к объекту в куче сборки мусора используется метод `GetObjectSize`, то при необходимости добавьте заполнение выравнивания вручную.  
   
-- On 32-bit Windows, COR_PRF_GC_GEN_0, COR_PRF_GC_GEN_1, and COR_PRF_GC_GEN_2 use 4-byte alignment, and COR_PRF_GC_LARGE_OBJECT_HEAP uses 8-byte alignment.  
+- В 32-разрядных Windows, COR_PRF_GC_GEN_0, COR_PRF_GC_GEN_1 и COR_PRF_GC_GEN_2 использовать 4-байтовый выравнивание, а COR_PRF_GC_LARGE_OBJECT_HEAP использует 8-байтное выравнивание.  
   
-- On 64-bit Windows, the alignment is always 8 bytes.  
+- В 64-разрядной Windows выравнивание всегда равно 8 байтам.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
@@ -62,6 +62,6 @@ HRESULT GetObjectSize(
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

@@ -10,7 +10,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350992"
 ---
 # <a name="working-with-global-namespaces-visual-basic-linq-to-xml"></a>Работа с глобальными пространствами имен (Visual Basic) (LINQ to XML)
-One of the key features of XML literals in Visual Basic is the capability to declare XML namespaces by using the `Imports` statement. Используя эту возможность, можно объявить либо пространство имен XML, использующее префикс, либо пространство имен XML по умолчанию.  
+Одной из основных функций литералов XML в Visual Basic является возможность объявлять пространства имен XML с помощью инструкции `Imports`. Используя эту возможность, можно объявить либо пространство имен XML, использующее префикс, либо пространство имен XML по умолчанию.  
   
  Данная возможность полезна в двух ситуациях. Во-первых, пространства имен, объявленные в XML-литералах, не переносятся во внедренные выражения. Применение деклараций глобальных пространств имен способствует снижению объема работы, которую необходимо выполнить в целях использования внедренных выражений с пространствами имен. Во-вторых, необходимо объявить глобальные пространства имен в целях использования пространств имен с XML-свойствами.  
   
@@ -197,6 +197,6 @@ End Module
 http://www.adventure-works.com  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Namespaces Overview (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)
+- [Общие сведения о пространствах имен (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)

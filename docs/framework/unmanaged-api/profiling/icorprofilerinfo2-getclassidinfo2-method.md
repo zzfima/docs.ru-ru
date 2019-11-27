@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74433435"
 ---
 # <a name="icorprofilerinfo2getclassidinfo2-method"></a>Метод ICorProfilerInfo2::GetClassIDInfo2
-Gets the parent module and metadata token for the open generic definition of the specified class, the `ClassID` of its parent class, and the `ClassID` for each type argument, if present, of the class.  
+Получает родительский модуль и маркер метаданных для открытого универсального определения указанного класса, `ClassID` его родительского класса и `ClassID` для каждого аргумента типа, если он имеется, класса.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -43,10 +43,10 @@ HRESULT GetClassIDInfo2(
  [in] Идентификатор класса, для которого будут извлекаться сведения.  
   
  `pModuleId`  
- [out] Pointer to the ID of the parent module for the open generic definition of the specified class.  
+ заполняет Указатель на идентификатор родительского модуля для открытого универсального определения указанного класса.  
   
  `pTypeDefToken`  
- [out] Pointer to the metadata token for the open generic definition of the specified class.  
+ заполняет Указатель на маркер метаданных для открытого универсального определения указанного класса.  
   
  `pParentClassId`  
  [out] Указатель на идентификатор родительского класса.  
@@ -60,10 +60,10 @@ HRESULT GetClassIDInfo2(
  `typeArgs`  
  [out] Массив значений `ClassID`, каждое из которых представляет идентификатор аргумента типа класса. При возврате метода в массиве `typeArgs` будут содержаться все или некоторые доступные значения `ClassID`.  
   
-## <a name="remarks"></a>Заметки  
- The `GetClassIDInfo2` method is similar to the [ICorProfilerInfo::GetClassIDInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getclassidinfo-method.md) method, but `GetClassIDInfo2` obtains additional information about a generic type.  
+## <a name="remarks"></a>Примечания  
+ Метод `GetClassIDInfo2` аналогичен методу [ICorProfilerInfo:: жетклассидинфо](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getclassidinfo-method.md) , но `GetClassIDInfo2` получает дополнительные сведения о универсальном типе.  
   
- The profiler code can call [ICorProfilerInfo::GetModuleMetaData](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getmodulemetadata-method.md) to obtain a [metadata](../../../../docs/framework/unmanaged-api/metadata/index.md) interface for a given module. Токен метаданных, возвращенный в расположение, на которое ссылается `pTypeDefToken`, можно впоследствии использовать для доступа к метаданным класса.  
+ Чтобы получить интерфейс [метаданных](../../../../docs/framework/unmanaged-api/metadata/index.md) для заданного модуля, код профилировщика может вызвать метод [ICorProfilerInfo:: жетмодулеметадата](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getmodulemetadata-method.md) . Токен метаданных, возвращенный в расположение, на которое ссылается `pTypeDefToken`, можно впоследствии использовать для доступа к метаданным класса.  
   
  После возврата метода `GetClassIDInfo2` необходимо убедиться, что буфер `typeArgs` был достаточно велик, чтобы вместить в себя все значения `ClassID`. Для этого сравните значение, на которое указывает параметр `pcNumTypeArgs`, со значением параметра `cNumTypeArgs`. Если параметр `pcNumTypeArgs` указывает на значение, превышающее значение `cNumTypeArgs`, выделите буфер `typeArgs` большего размера, обновите параметр `cNumTypeArgs`, задав новый, больший размер, и вызовите метод `GetClassIDInfo2` снова.  
   
@@ -78,7 +78,7 @@ HRESULT GetClassIDInfo2(
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
 - [Интерфейс ICorProfilerInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)

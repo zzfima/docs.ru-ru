@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449216"
 ---
 # <a name="isymunmanageddocumentfindclosestline-method"></a>Метод ISymUnmanagedDocument::FindClosestLine
-Returns the closest line that is a sequence point, given a line in this document that may or may not be a sequence point.  
+Возвращает ближайшую строку, которая является точкой последовательности, с учетом строки в этом документе, которая может быть или не являться точкой последовательности.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -35,14 +35,14 @@ HRESULT FindClosestLine(
   
 ## <a name="parameters"></a>Параметры  
  `line`  
- [in] A line in this document.  
+ окне Строка в этом документе.  
   
  `pRetVal`  
- [out] A pointer to a variable that receives the line.  
+ заполняет Указатель на переменную, которая получает строку.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- S_OK if the method succeeds; otherwise, an error code.  
+ S_OK, если метод выполнен. в противном случае — код ошибки.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс ISymUnmanagedDocument](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Фильтрация по атрибутам (XPath-LINQ to XML)
+title: Практическое руководство. Фильтрация по атрибуту (XPath-LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: ffefb9d6-45ec-4677-a396-dd9c2b36298f
 ms.openlocfilehash: f8a804fa7937d8d27b38bba7a294f1c760101de8
@@ -9,7 +9,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353060"
 ---
-# <a name="how-to-filter-on-an-attribute-xpath-linq-to-xml-visual-basic"></a>How to: Filter on an Attribute (XPath-LINQ to XML) (Visual Basic)
+# <a name="how-to-filter-on-an-attribute-xpath-linq-to-xml-visual-basic"></a>Как выполнить фильтрацию по атрибуту (XPath-LINQ to XML) (Visual Basic)
 В этом разделе показано, как получать элементы-потомки с указанным именем и атрибут с заданным значением.  
   
  Выражение XPath:  
@@ -75,6 +75,6 @@ Results are identical
 </Address>  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [LINQ to XML for XPath Users (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [LINQ to XML для пользователей XPath (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

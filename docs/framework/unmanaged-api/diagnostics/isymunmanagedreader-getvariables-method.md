@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74429760"
 ---
 # <a name="isymunmanagedreadergetvariables-method"></a>Метод ISymUnmanagedReader::GetVariables
-Returns a non-local variable, given its parent and name.  
+Возвращает нелокальную переменную с учетом ее родителя и имени.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,23 +38,23 @@ HRESULT GetVariables (
   
 ## <a name="parameters"></a>Параметры  
  `parent`  
- [in] The parent of the variable.  
+ окне Родительский объект переменной.  
   
  `cVars`  
  [in] Размер массива `pVars`.  
   
  `pcVars`  
- [out] A pointer to the variable that receives the number of variables returned in `pVars`.  
+ заполняет Указатель на переменную, которая получает количество переменных, возвращаемых в `pVars`.  
   
  `pVars`  
- [out] A pointer to the variable that receives the variables.  
+ заполняет Указатель на переменную, которая получает переменные.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK, если метод выполнен. в противном случае E_FAIL или другой код ошибки.  
   
 ## <a name="requirements"></a>Требования  
- **Header:** CorSym.idl, CorSym.h  
+ **Заголовок:** Корсим. idl, Корсим. h  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

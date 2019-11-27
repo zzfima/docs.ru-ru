@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448626"
 ---
 # <a name="cor_prf_gc_generation-enumeration"></a>Перечисление COR_PRF_GC_GENERATION
-Identifies a garbage-collection generation.  
+Определяет создание коллекции мусора.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,17 +39,17 @@ typedef enum {
   
 |Член|Описание|  
 |------------|-----------------|  
-|`COR_PRF_GC_GEN_0`|The object is stored as generation 0.|  
-|`COR_PRF_GC_GEN_1`|The object is stored as generation 1.|  
-|`COR_PRF_GC_GEN_2`|The object is stored as generation 2.|  
-|`COR_PRF_GC_LARGE_OBJECT_HEAP`|The object is stored in the large-object heap.|  
+|`COR_PRF_GC_GEN_0`|Объект сохраняется как поколение 0.|  
+|`COR_PRF_GC_GEN_1`|Объект сохраняется как поколение 1.|  
+|`COR_PRF_GC_GEN_2`|Объект сохраняется как поколение 2.|  
+|`COR_PRF_GC_LARGE_OBJECT_HEAP`|Объект хранится в куче больших объектов.|  
   
-## <a name="remarks"></a>Заметки  
- The garbage collector improves memory management performance by dividing objects into generations based on age. The garbage collector currently uses three generations, numbered 0, 1, and 2, plus a special heap segment that is used for large objects. Objects whose size is larger than a particular value are stored in the large-object heap. Other allocated objects start out belonging to generation 0. All objects that exist after garbage collection occurs in generation 0 are promoted to generation 1. Objects that exist after garbage collection occurs in generation 1 move into generation 2.  
+## <a name="remarks"></a>Примечания  
+ Сборщик мусора повышает производительность управления памятью, разделив объекты на поколения на основе возраста. Сборщик мусора в настоящее время использует три поколения, нумерованный 0, 1 и 2, а также специальный сегмент кучи, используемый для больших объектов. Объекты, размер которых больше определенного значения, хранятся в куче больших объектов. Другие выделенные объекты начинают принадлежать к поколению 0. Все объекты, существующие после сборки мусора в поколении 0, переходят в поколение 1. Объекты, существующие после сборки мусора в поколении 1, переходят в поколение 2.  
   
- The use of generations means that the garbage collector has to work with only a subset of the allocated objects at any one time.  
+ Использование поколений означает, что сборщик мусора должен работать только с подмножеством выделенных объектов в один момент времени.  
   
- The `COR_PRF_GC_GENERATION` enumeration is used by the [COR_PRF_GC_GENERATION_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-range-structure.md) structure.  
+ Перечисление `COR_PRF_GC_GENERATION` используется структурой [COR_PRF_GC_GENERATION_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-range-structure.md) .  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
@@ -60,6 +60,6 @@ typedef enum {
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Перечисления профилирования](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

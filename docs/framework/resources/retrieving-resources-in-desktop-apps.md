@@ -27,7 +27,7 @@ ms.locfileid: "74445739"
 ---
 # <a name="retrieving-resources-in-desktop-apps"></a>Извлечение ресурсов в приложениях для настольных систем
 
-При работе с локализованными ресурсами в классических приложениях .NET Framework желательно упаковывать ресурсы для нейтральной или стандартной комбинации языка и региональных параметров в основную сборку и создавать отдельную вспомогательную сборку для каждого языка или каждой комбинации языка и региональных параметров, поддерживаемых вашим приложением. Затем можно использовать класс <xref:System.Resources.ResourceManager> для доступа к именованным ресурсам, как описано в следующем разделе. Если вы решили не внедрять ресурсы в основную и вспомогательные сборки, можно обратиться к двоичным файлам RESOURCES напрямую, как описано в разделе [Извлечение ресурсов из файлов RESOURCES](#from_file) далее в этой статье.  To retrieve resources in Windows 8.x Store apps, see [Creating and retrieving resources in Windows Store apps](https://docs.microsoft.com/previous-versions/windows/apps/hh694557(v=vs.140)).  
+При работе с локализованными ресурсами в классических приложениях .NET Framework желательно упаковывать ресурсы для нейтральной или стандартной комбинации языка и региональных параметров в основную сборку и создавать отдельную вспомогательную сборку для каждого языка или каждой комбинации языка и региональных параметров, поддерживаемых вашим приложением. Затем можно использовать класс <xref:System.Resources.ResourceManager> для доступа к именованным ресурсам, как описано в следующем разделе. Если вы решили не внедрять ресурсы в основную и вспомогательные сборки, можно обратиться к двоичным файлам RESOURCES напрямую, как описано в разделе [Извлечение ресурсов из файлов RESOURCES](#from_file) далее в этой статье.  Сведения о получении ресурсов в приложениях для Магазина Windows 8. x см. [в статье Создание и извлечение ресурсов в приложениях для Магазина Windows](https://docs.microsoft.com/previous-versions/windows/apps/hh694557(v=vs.140)).  
   
 <a name="from_assembly"></a>   
 ## <a name="retrieving-resources-from-assemblies"></a>Извлечение ресурсов из сборок  
@@ -88,7 +88,7 @@ al -embed:strings.ru-RU.resources -culture:ru-RU -out:ru-RU\GetString.resources.
  [!code-csharp[Conceptual.Resources.Retrieving#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.retrieving/cs/createresources.cs#4)]
  [!code-vb[Conceptual.Resources.Retrieving#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.retrieving/vb/createresources.vb#4)]  
   
- Следующий код извлекает ресурс и отображает изображение в элементе управления <xref:System.Windows.Forms.PictureBox>.  
+ Следующий код извлекает ресурс и отображает изображение в элементе управления <xref:System.Windows.Forms.PictureBox> .  
   
  [!code-csharp[Conceptual.Resources.Retrieving#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.retrieving/cs/getstream.cs#5)]
  [!code-vb[Conceptual.Resources.Retrieving#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.retrieving/vb/getstream.vb#5)]  
@@ -104,7 +104,7 @@ resgen AppResources.resx
 csc GetStream.cs -resource:AppResources.resources  
 ```  
   
- В следующем примере для десериализации настраиваемого объекта используется метод <xref:System.Resources.ResourceManager.GetObject%28System.String%29?displayProperty=nameWithType> . Пример включает файл исходного кода UIElements.cs (UIElements.vb для Visual Basic), который определяет следующую структуру с именем `PersonTable`. Эта структура предназначена для использования подпрограммой общего отображения таблиц, которая отображает локализованные имена для столбцов таблиц. Обратите внимание, что структура `PersonTable` помечена атрибутом <xref:System.SerializableAttribute>.  
+ В следующем примере для десериализации настраиваемого объекта используется метод <xref:System.Resources.ResourceManager.GetObject%28System.String%29?displayProperty=nameWithType> . Пример включает файл исходного кода UIElements.cs (UIElements.vb для Visual Basic), который определяет следующую структуру с именем `PersonTable`. Эта структура предназначена для использования подпрограммой общего отображения таблиц, которая отображает локализованные имена для столбцов таблиц. Обратите внимание, что структура `PersonTable` помечена атрибутом <xref:System.SerializableAttribute> .  
   
  [!code-csharp[Conceptual.Resources.Retrieving#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.retrieving/cs/example.cs#6)]
  [!code-vb[Conceptual.Resources.Retrieving#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.retrieving/vb/example.vb#6)]  
@@ -189,7 +189,7 @@ Prompt=Как вас зовут?
  [!code-csharp[Conceptual.Resources.Retrieving#9](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.retrieving/cs/example3.cs#9)]
  [!code-vb[Conceptual.Resources.Retrieving#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.retrieving/vb/example3.vb#9)]  
   
- Версию примера на языке C# можно скомпилировать, запустив следующий пакетный файл. Если используется Visual Basic, замените `csc` на `vbc` и расширение `.cs` на `.vb`.  
+ Версию примера на языке C# можно скомпилировать, запустив следующий пакетный файл. Если используется Visual Basic, замените `csc` на `vbc`и расширение `.cs` на `.vb`.  
   
 ```console
 Md Resources  
@@ -200,7 +200,7 @@ Resgen Strings.ru-RU.txt Resources\Strings.ru-RU.resources
 csc Example.cs  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - <xref:System.Resources.ResourceManager>
 - [Ресурсы в приложениях для настольных систем](index.md)

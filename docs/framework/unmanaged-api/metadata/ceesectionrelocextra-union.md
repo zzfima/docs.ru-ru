@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74444175"
 ---
 # <a name="ceesectionrelocextra-union"></a>Объединение CeeSectionRelocExtra
-Represents an address offset that is used by the [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) interface to relocate a section.  
+Представляет смещение адреса, используемое интерфейсом [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) для перемещения раздела.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -36,17 +36,17 @@ typedef union  {
   
 |Член|Описание|  
 |------------|-----------------|  
-|`highAdj`|The upper address adjustment for the section.|  
+|`highAdj`|Корректировка верхнего адреса для раздела.|  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Заголовок:** COR. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Библиотека:** Включается в качестве ресурса в библиотеку MsCorEE. dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Объединения метаданных](../../../../docs/framework/unmanaged-api/metadata/metadata-unions.md)

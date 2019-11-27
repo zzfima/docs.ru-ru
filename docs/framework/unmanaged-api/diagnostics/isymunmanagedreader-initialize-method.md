@@ -23,10 +23,10 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74429747"
 ---
 # <a name="isymunmanagedreaderinitialize-method"></a>Метод ISymUnmanagedReader::Initialize
-Initializes the symbol reader with the metadata importer interface that this reader will be associated with, along with the file name of the module.  
+Инициализирует средство чтения символов с помощью интерфейса средства импорта метаданных, с которым будет связан этот модуль чтения, вместе с именем файла модуля.  
   
 > [!NOTE]
-> This method can be called only once, and must be called before any other reader methods.  
+> Этот метод может быть вызван только один раз и должен вызываться до любых других методов чтения.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,26 +40,26 @@ HRESULT Initialize (
   
 ## <a name="parameters"></a>Параметры  
  `importer`  
- [in] The metadata importer interface with which this reader will be associated.  
+ окне Интерфейс средства импорта метаданных, с которым будет связан этот модуль чтения.  
   
  `filename`  
- [in] The file name of the module. You can use the `pIStream` parameter instead.  
+ окне Имя файла модуля. Вместо этого можно использовать параметр `pIStream`.  
   
  `searchPath`  
- [in] The path to search. Этот параметр является необязательным.  
+ окне Путь для поиска. Этот параметр является необязательным.  
   
  `pIStream`  
- [in] The file stream, used as an alternative to the filename parameter.  
+ окне Файловый поток, используемый в качестве альтернативы параметру filename.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK, если метод выполнен. в противном случае E_FAIL или другой код ошибки.  
   
-## <a name="remarks"></a>Заметки  
- You need to specify only one of the `filename` or the `pIStream` parameters, not both. Параметр `searchPath` является необязательным.  
+## <a name="remarks"></a>Примечания  
+ Необходимо указать только один из параметров `filename` или `pIStream`, но не оба. Параметр `searchPath` является необязательным.  
   
 ## <a name="requirements"></a>Требования  
- **Header:** CorSym.idl, CorSym.h  
+ **Заголовок:** Корсим. idl, Корсим. h  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
