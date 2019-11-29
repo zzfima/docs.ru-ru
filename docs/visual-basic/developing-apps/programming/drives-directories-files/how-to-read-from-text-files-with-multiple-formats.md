@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Чтение текстовых файлов различных форматов в Visual Basic
+title: Практическое руководство. Чтение из текстовых файлов различных форматов
 ms.date: 07/20/2015
 helpviewer_keywords:
 - TextFieldParser object, reading from a file
@@ -11,20 +11,20 @@ helpviewer_keywords:
 - I/O [Visual Basic], reading text files
 - text files [Visual Basic], reading
 ms.assetid: 8d185eb2-79ca-42cd-95a7-d3ff44a5a0f8
-ms.openlocfilehash: dc726f7648c1c0a564594331023f03d20569d766
-ms.sourcegitcommit: 878ca7550b653114c3968ef8906da2b3e60e3c7a
+ms.openlocfilehash: b36c781d5f8333749d346bb8f19540f0d1bd1692
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71736825"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74334568"
 ---
-# <a name="how-to-read-from-fext-files-with-multiple-formats-in-visual-basic"></a><span data-ttu-id="bfe52-102">Практическое руководство. Чтение текстовых файлов различных форматов в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="bfe52-102">How to: Read from fext files with multiple formats in Visual Basic</span></span>
+# <a name="how-to-read-from-fext-files-with-multiple-formats-in-visual-basic"></a><span data-ttu-id="34f90-102">Практическое руководство. Чтение текстовых файлов различных форматов в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="34f90-102">How to: Read from fext files with multiple formats in Visual Basic</span></span>
 
-<span data-ttu-id="bfe52-103">Объект <xref:Microsoft.VisualBasic.FileIO.TextFieldParser> позволяет легко и эффективно анализировать структурированные текстовые файлы, например файлы журналов.</span><span class="sxs-lookup"><span data-stu-id="bfe52-103">The <xref:Microsoft.VisualBasic.FileIO.TextFieldParser> object provides a way to easily and efficiently parse structured text files, such as logs.</span></span> <span data-ttu-id="bfe52-104">Обработать файл, имеющий содержимое в нескольких форматах, можно с помощью метода `PeekChars`, который позволяет определять формат каждой анализируемой строки на протяжении всего файла.</span><span class="sxs-lookup"><span data-stu-id="bfe52-104">You can process a file with multiple formats by using the `PeekChars` method to determine the format of each line as you parse through the file.</span></span>
+<span data-ttu-id="34f90-103">Объект <xref:Microsoft.VisualBasic.FileIO.TextFieldParser> позволяет легко и эффективно анализировать структурированные текстовые файлы, например файлы журналов.</span><span class="sxs-lookup"><span data-stu-id="34f90-103">The <xref:Microsoft.VisualBasic.FileIO.TextFieldParser> object provides a way to easily and efficiently parse structured text files, such as logs.</span></span> <span data-ttu-id="34f90-104">Обработать файл, имеющий содержимое в нескольких форматах, можно с помощью метода `PeekChars`, который позволяет определять формат каждой анализируемой строки на протяжении всего файла.</span><span class="sxs-lookup"><span data-stu-id="34f90-104">You can process a file with multiple formats by using the `PeekChars` method to determine the format of each line as you parse through the file.</span></span>
   
-### <a name="to-parse-a-text-file-with-multiple-formats"></a><span data-ttu-id="bfe52-105">Анализ текстового файла с содержимым в нескольких форматах</span><span class="sxs-lookup"><span data-stu-id="bfe52-105">To parse a text file with multiple formats</span></span>
+### <a name="to-parse-a-text-file-with-multiple-formats"></a><span data-ttu-id="34f90-105">Анализ текстового файла с содержимым в нескольких форматах</span><span class="sxs-lookup"><span data-stu-id="34f90-105">To parse a text file with multiple formats</span></span>
 
-1. <span data-ttu-id="bfe52-106">Добавьте текстовый файл с именем *testfile.txt* в проект.</span><span class="sxs-lookup"><span data-stu-id="bfe52-106">Add a text file named *testfile.txt* to your project.</span></span> <span data-ttu-id="bfe52-107">Добавьте в текстовый файл следующее содержимое:</span><span class="sxs-lookup"><span data-stu-id="bfe52-107">Add the following content to the text file:</span></span>
+1. <span data-ttu-id="34f90-106">Добавьте текстовый файл с именем *testfile.txt* в проект.</span><span class="sxs-lookup"><span data-stu-id="34f90-106">Add a text file named *testfile.txt* to your project.</span></span> <span data-ttu-id="34f90-107">Добавьте в текстовый файл следующее содержимое:</span><span class="sxs-lookup"><span data-stu-id="34f90-107">Add the following content to the text file:</span></span>
 
     ```text
     Err  1001 Cannot access resource.
@@ -35,39 +35,39 @@ ms.locfileid: "71736825"
     Acc  10/04/2009User2      Standard user.
     ```
 
-2. <span data-ttu-id="bfe52-108">Определите ожидаемый формат и формат, используемый при сообщении об ошибке.</span><span class="sxs-lookup"><span data-stu-id="bfe52-108">Define the expected format and the format used when an error is reported.</span></span> <span data-ttu-id="bfe52-109">Последним элементом в каждом массиве является -1, поэтому предполагается, что ширина последнего поля может изменяться.</span><span class="sxs-lookup"><span data-stu-id="bfe52-109">The last entry in each array is -1, therefore the last field is assumed to be of variable width.</span></span> <span data-ttu-id="bfe52-110">Это происходит, когда последний элемент массива меньше или равен нулю.</span><span class="sxs-lookup"><span data-stu-id="bfe52-110">This occurs when the last entry in the array is less than or equal to 0.</span></span>
+2. <span data-ttu-id="34f90-108">Определите ожидаемый формат и формат, используемый при сообщении об ошибке.</span><span class="sxs-lookup"><span data-stu-id="34f90-108">Define the expected format and the format used when an error is reported.</span></span> <span data-ttu-id="34f90-109">Последним элементом в каждом массиве является -1, поэтому предполагается, что ширина последнего поля может изменяться.</span><span class="sxs-lookup"><span data-stu-id="34f90-109">The last entry in each array is -1, therefore the last field is assumed to be of variable width.</span></span> <span data-ttu-id="34f90-110">Это происходит, когда последний элемент массива меньше или равен нулю.</span><span class="sxs-lookup"><span data-stu-id="34f90-110">This occurs when the last entry in the array is less than or equal to 0.</span></span>
 
      [!code-vb[VbFileIORead#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#4)]
 
-3. <span data-ttu-id="bfe52-111">Создайте объект <xref:Microsoft.VisualBasic.FileIO.TextFieldParser>, определив ширину и формат.</span><span class="sxs-lookup"><span data-stu-id="bfe52-111">Create a new <xref:Microsoft.VisualBasic.FileIO.TextFieldParser> object, defining the width and format.</span></span>
+3. <span data-ttu-id="34f90-111">Создайте объект <xref:Microsoft.VisualBasic.FileIO.TextFieldParser>, определив ширину и формат.</span><span class="sxs-lookup"><span data-stu-id="34f90-111">Create a new <xref:Microsoft.VisualBasic.FileIO.TextFieldParser> object, defining the width and format.</span></span>
 
      [!code-vb[VbFileIORead#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#5)]
 
-4. <span data-ttu-id="bfe52-112">Переберите в цикле строки, проверяя формат перед чтением.</span><span class="sxs-lookup"><span data-stu-id="bfe52-112">Loop through the rows, testing for format before reading.</span></span>
+4. <span data-ttu-id="34f90-112">Переберите в цикле строки, проверяя формат перед чтением.</span><span class="sxs-lookup"><span data-stu-id="34f90-112">Loop through the rows, testing for format before reading.</span></span>
 
      [!code-vb[VbFileIORead#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#6)]
 
-5. <span data-ttu-id="bfe52-113">Выведите сообщения об ошибках на консоль.</span><span class="sxs-lookup"><span data-stu-id="bfe52-113">Write errors to the console.</span></span>
+5. <span data-ttu-id="34f90-113">Выведите сообщения об ошибках на консоль.</span><span class="sxs-lookup"><span data-stu-id="34f90-113">Write errors to the console.</span></span>
 
      [!code-vb[VbFileIORead#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#7)]
 
-## <a name="example"></a><span data-ttu-id="bfe52-114">Пример</span><span class="sxs-lookup"><span data-stu-id="bfe52-114">Example</span></span>
+## <a name="example"></a><span data-ttu-id="34f90-114">Пример</span><span class="sxs-lookup"><span data-stu-id="34f90-114">Example</span></span>
 
-<span data-ttu-id="bfe52-115">Далее приведен полный пример, считывающий из файла `testfile.txt`:</span><span class="sxs-lookup"><span data-stu-id="bfe52-115">The following is the complete example that reads from the file `testfile.txt`:</span></span>
+<span data-ttu-id="34f90-115">Далее приведен полный пример, считывающий из файла `testfile.txt`:</span><span class="sxs-lookup"><span data-stu-id="34f90-115">The following is the complete example that reads from the file `testfile.txt`:</span></span>
 
  [!code-vb[VbFileIORead#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#8)]
 
-## <a name="robust-programming"></a><span data-ttu-id="bfe52-116">Отказоустойчивость</span><span class="sxs-lookup"><span data-stu-id="bfe52-116">Robust programming</span></span>
+## <a name="robust-programming"></a><span data-ttu-id="34f90-116">Отказоустойчивость</span><span class="sxs-lookup"><span data-stu-id="34f90-116">Robust programming</span></span>
 
-<span data-ttu-id="bfe52-117">При следующих условиях возможно возникновение исключения:</span><span class="sxs-lookup"><span data-stu-id="bfe52-117">The following conditions may cause an exception:</span></span>  
+<span data-ttu-id="34f90-117">При следующих условиях возможно возникновение исключения:</span><span class="sxs-lookup"><span data-stu-id="34f90-117">The following conditions may cause an exception:</span></span>  
   
-- <span data-ttu-id="bfe52-118">Строка не может быть проанализирована с использованием указанного формата (<xref:Microsoft.VisualBasic.FileIO.MalformedLineException>).</span><span class="sxs-lookup"><span data-stu-id="bfe52-118">A row cannot be parsed using the specified format (<xref:Microsoft.VisualBasic.FileIO.MalformedLineException>).</span></span> <span data-ttu-id="bfe52-119">Сообщение исключения содержит строку, вызвавшую исключение, а свойство <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.ErrorLine%2A> присвоено тексту, который содержится в этой строке.</span><span class="sxs-lookup"><span data-stu-id="bfe52-119">The exception message specifies the line causing the exception, while the <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.ErrorLine%2A> property is assigned to the text contained in the line.</span></span>
-- <span data-ttu-id="bfe52-120">Указанный файл не существует (<xref:System.IO.FileNotFoundException>).</span><span class="sxs-lookup"><span data-stu-id="bfe52-120">The specified file does not exist (<xref:System.IO.FileNotFoundException>).</span></span>
-- <span data-ttu-id="bfe52-121">Ситуация частичного доверия, в которой пользователь не имеет достаточных разрешений для доступа к файлу.</span><span class="sxs-lookup"><span data-stu-id="bfe52-121">A partial-trust situation in which the user does not have sufficient permissions to access the file.</span></span> <span data-ttu-id="bfe52-122">(<xref:System.Security.SecurityException>).</span><span class="sxs-lookup"><span data-stu-id="bfe52-122">(<xref:System.Security.SecurityException>).</span></span>
-- <span data-ttu-id="bfe52-123">Слишком длинный путь (<xref:System.IO.PathTooLongException>).</span><span class="sxs-lookup"><span data-stu-id="bfe52-123">The path is too long (<xref:System.IO.PathTooLongException>).</span></span>
-- <span data-ttu-id="bfe52-124">У пользователя нет необходимых разрешений для доступа к файлу (<xref:System.UnauthorizedAccessException>).</span><span class="sxs-lookup"><span data-stu-id="bfe52-124">The user does not have sufficient permissions to access the file (<xref:System.UnauthorizedAccessException>).</span></span>
+- <span data-ttu-id="34f90-118">Строка не может быть проанализирована с использованием указанного формата (<xref:Microsoft.VisualBasic.FileIO.MalformedLineException>).</span><span class="sxs-lookup"><span data-stu-id="34f90-118">A row cannot be parsed using the specified format (<xref:Microsoft.VisualBasic.FileIO.MalformedLineException>).</span></span> <span data-ttu-id="34f90-119">Сообщение исключения содержит строку, вызвавшую исключение, а свойство <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.ErrorLine%2A> присвоено тексту, который содержится в этой строке.</span><span class="sxs-lookup"><span data-stu-id="34f90-119">The exception message specifies the line causing the exception, while the <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.ErrorLine%2A> property is assigned to the text contained in the line.</span></span>
+- <span data-ttu-id="34f90-120">Указанный файл не существует (<xref:System.IO.FileNotFoundException>).</span><span class="sxs-lookup"><span data-stu-id="34f90-120">The specified file does not exist (<xref:System.IO.FileNotFoundException>).</span></span>
+- <span data-ttu-id="34f90-121">Ситуация частичного доверия, в которой пользователь не имеет достаточных разрешений для доступа к файлу.</span><span class="sxs-lookup"><span data-stu-id="34f90-121">A partial-trust situation in which the user does not have sufficient permissions to access the file.</span></span> <span data-ttu-id="34f90-122">(<xref:System.Security.SecurityException>).</span><span class="sxs-lookup"><span data-stu-id="34f90-122">(<xref:System.Security.SecurityException>).</span></span>
+- <span data-ttu-id="34f90-123">Слишком длинный путь (<xref:System.IO.PathTooLongException>).</span><span class="sxs-lookup"><span data-stu-id="34f90-123">The path is too long (<xref:System.IO.PathTooLongException>).</span></span>
+- <span data-ttu-id="34f90-124">У пользователя нет необходимых разрешений для доступа к файлу (<xref:System.UnauthorizedAccessException>).</span><span class="sxs-lookup"><span data-stu-id="34f90-124">The user does not have sufficient permissions to access the file (<xref:System.UnauthorizedAccessException>).</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="bfe52-125">См. также</span><span class="sxs-lookup"><span data-stu-id="bfe52-125">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="34f90-125">См. также</span><span class="sxs-lookup"><span data-stu-id="34f90-125">See also</span></span>
 
 - <xref:Microsoft.VisualBasic.FileIO.TextFieldParser?displayProperty=nameWithType>
 - <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.PeekChars%2A>
@@ -75,6 +75,6 @@ ms.locfileid: "71736825"
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A>
 - <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.EndOfData%2A>
 - <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.TextFieldType%2A>
-- [<span data-ttu-id="bfe52-126">Практическое руководство. Чтение из текстовых файлов с разделителями-запятыми</span><span class="sxs-lookup"><span data-stu-id="bfe52-126">How to: Read From Comma-Delimited Text Files</span></span>](how-to-read-from-comma-delimited-text-files.md)
-- [<span data-ttu-id="bfe52-127">Практическое руководство. Чтение из текстовых файлов с полями фиксированного размера</span><span class="sxs-lookup"><span data-stu-id="bfe52-127">How to: Read From Fixed-width Text Files</span></span>](how-to-read-from-fixed-width-text-files.md)
-- [<span data-ttu-id="bfe52-128">Анализ текстовых файлов с помощью объекта TextFieldParser</span><span class="sxs-lookup"><span data-stu-id="bfe52-128">Parsing Text Files with the TextFieldParser Object</span></span>](parsing-text-files-with-the-textfieldparser-object.md)
+- [<span data-ttu-id="34f90-126">Практическое руководство. Чтение из текстовых файлов с разделителями-запятыми</span><span class="sxs-lookup"><span data-stu-id="34f90-126">How to: Read From Comma-Delimited Text Files</span></span>](how-to-read-from-comma-delimited-text-files.md)
+- [<span data-ttu-id="34f90-127">Практическое руководство. Чтение из текстовых файлов с полями фиксированного размера</span><span class="sxs-lookup"><span data-stu-id="34f90-127">How to: Read From Fixed-width Text Files</span></span>](how-to-read-from-fixed-width-text-files.md)
+- [<span data-ttu-id="34f90-128">Анализ текстовых файлов с помощью объекта TextFieldParser</span><span class="sxs-lookup"><span data-stu-id="34f90-128">Parsing Text Files with the TextFieldParser Object</span></span>](parsing-text-files-with-the-textfieldparser-object.md)
