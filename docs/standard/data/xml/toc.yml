@@ -170,19 +170,19 @@
                   href: script-blocks-using-msxsl-script.md
             - name: Устранимые ошибки XSLT
               href: recoverable-xslt-errors.md
-            - name: Как выполнить Преобразование фрагмента узла
+            - name: Практическое руководство. Преобразование фрагмента узла
               href: how-to-transform-a-node-fragment.md
         - name: Миграция с класса XslTransform
           href: migrating-from-the-xsltransform-class.md
           items:
-            - name: Как выполнить Как провести миграцию кода XslTransform
+            - name: Практическое руководство. Как провести миграцию кода XslTransform
               href: how-to-migrate-your-xsltransform-code.md
         - name: Рекомендации по безопасности XSLT
           href: xslt-security-considerations.md
         - name: XSLT-компилятор (xsltc.exe)
           href: xslt-compiler-xsltc-exe.md
           items:
-            - name: Как выполнить Выполнение XSLT-преобразования с помощью сборки
+            - name: Практическое руководство. Выполнение XSLT-преобразования с помощью сборки
               href: how-to-perform-an-xslt-transformation-by-using-an-assembly.md
         - name: XSLT-преобразования с помощью класса XslTransform
           href: xslt-transformations-with-the-xsltransform-class.md
