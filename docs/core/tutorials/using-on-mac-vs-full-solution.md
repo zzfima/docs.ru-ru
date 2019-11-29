@@ -4,12 +4,12 @@ description: Этот раздел описывает, как сборку ре�
 author: mairaw
 ms.date: 06/12/2017
 ms.custom: seodec18
-ms.openlocfilehash: 46d118cc4dc54e34db0f964aa3f8d76f0ad67249
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 0081463c0a99acc5cb4e02bb96e2218bbcf61131
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70925995"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428624"
 ---
 # <a name="building-a-complete-net-core-solution-on-macos-using-visual-studio-for-mac"></a>Создание полноценного решения .NET Core на базе macOS с помощью Visual Studio для Mac
 
@@ -25,11 +25,11 @@ Visual Studio для Mac предоставляет полнофункциона
 
 ## <a name="prerequisites"></a>Предварительные требования
 
-- OpenSSL (если запущено .NET Core 1.1). См. раздел с перечислением [необходимых компонентов для .NET Core в Mac](../macos-prerequisites.md).
+- OpenSSL (если запущено .NET Core 1.1). См. статью [Зависимости и требования для .NET Core](../install/dependencies.md?tabs=netcore30&pivots=os-macos).
 - [Пакет SDK для .NET Core 1.1.или более поздней версии](https://dotnet.microsoft.com/download).
 - [Visual Studio 2017 для Mac](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link)
 
-Дополнительные сведения о необходимых компонентах см. в разделе [Необходимые компоненты для .NET Core на Mac](../macos-prerequisites.md). Полный список требований к Visual Studio 2017 для Mac см. в статье [Требования к системе Visual Studio 2017 для Mac](/visualstudio/productinfo/vs2017-system-requirements-mac).
+Дополнительные сведения о предварительных требованиях см. в статье [Зависимости и требования для .NET Core](../install/dependencies.md?tabs=netcore30&pivots=os-macos). Полный список требований к Visual Studio 2017 для Mac см. в статье [Требования к системе Visual Studio 2017 для Mac](/visualstudio/productinfo/vs2017-system-requirements-mac).
 
 ## <a name="building-a-library"></a>Создание библиотеки
 

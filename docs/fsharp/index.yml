@@ -1,0 +1,69 @@
+### YamlMime:Landing
+title: F#по
+summary: Узнайте, как написать любое приложение с помощью F# языка программирования на платформе .NET.
+metadata:
+  title: F#Документация — начало работы, учебники, справочные материалы.
+  description: Знакомство F# с программированием — для F#разработчиков, знакомых с разработчиками и опытными F# специалистами и .NET
+  ms.topic: landing-page
+  author: cartermp
+  ms.author: phcart
+  ms.date: 11/25/2019
+  ms.openlocfilehash: 7aef8012a5ef58c1c0a142dce8baf7ccb73f50fa
+  ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+  ms.translationtype: HT
+  ms.contentlocale: ru-RU
+  ms.lasthandoff: 11/27/2019
+  ms.locfileid: "74553065"
+landingContent:
+- title: Обучение программированиюF#
+  linkLists:
+  - linkListType: get-started
+    links:
+    - text: Что такое F#?
+      url: what-is-fsharp.md
+    - text: Установка F#
+      url: get-started/install-fsharp.md
+    - text: Начало работы с F# Visual Studio
+      url: get-started/get-started-visual-studio.md
+    - text: Начало работы с F# в Visual Studio Code
+      url: get-started/get-started-vscode.md
+  - linkListType: download
+    links:
+    - text: Скачивание пакет SDK для .NET Core
+      url: https://dotnet.microsoft.com/download
+- title: F#основы
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Обзор языка F#
+      url: tour.md
+    - text: Введение в функциональное программирование на F#
+      url: introduction-to-functional-programming/index.md
+    - text: Функции первого класса
+      url: introduction-to-functional-programming/first-class-functions.md
+  - linkListType: concept
+    links:
+    - text: Руководство по стилю для F#
+      url: style-guide/index.md
+    - text: Рекомендации по форматированию кода F#
+      url: style-guide/formatting.md
+    - text: Соглашения о написании кода на F#
+      url: style-guide/conventions.md
+  - linkListType: tutorial
+    links:
+    - text: Асинхронное программирование вF#
+      url: tutorials/asynchronous-and-concurrent-programming/async.md
+- title: F#Справочник по языку
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: Справочник по языку
+      url: language-reference/index.md
+    - text: Справочник по ключевым словам
+      url: language-reference/keyword-reference.md
+    - text: Справочник по символам и операторам
+      url: language-reference/symbol-and-operator-reference/index.md
+    - text: Функции
+      url: language-reference/functions/index.md
+    - text: F#типов
+      url: language-reference/fsharp-types.md

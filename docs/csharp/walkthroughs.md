@@ -6,12 +6,12 @@ helpviewer_keywords:
 - walkthroughs [Visual Studio], Visual C#
 - Visual C#, walkthroughs
 ms.assetid: 2d07b972-ef69-4676-9aef-e1784728e1ff
-ms.openlocfilehash: 757cbce98c73821a19ee162b7828fa4ad952de3c
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: a997cc62b03a0d92d5ef76173981f5a9e287b13a
+ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73195489"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74204587"
 ---
 # <a name="c-walkthroughs"></a>Пошаговые руководства по C#
 В пошаговых руководствах содержатся инструкции по выполнению стандартных сценариев, что делает их удобным инструментом для начала изучения продукта в целом или его отдельных возможностей.  
@@ -24,7 +24,7 @@ ms.locfileid: "73195489"
  Демонстрирует создание асинхронных решений с помощью ключевых слов [Async](./language-reference/keywords/async.md) и [Await](./language-reference/operators/await.md).  
   
  [Создание компонента среды выполнения Windows на C# или в Visual Basic и его вызов из JavaScript](/windows/uwp/winrt-components/walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript)  
- Описание процесса создания типа среды выполнения Windows, его упаковки в компонент среды выполнения Windows и последующего вызова компонента из приложения [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)], разработанного для Windows с помощью JavaScript.  
+ Описывается создание типа среды выполнения Windows, его упаковка в компонент среды выполнения Windows и последующий вызов компонента из приложения Магазина Windows 8.x, разработанного для Windows с помощью JavaScript.  
   
  [Программирование для Office (C# и Visual Basic)](./programming-guide/interop/walkthrough-office-programming.md)  
  Описание процесса создания книги Excel и документа Word с помощью C# и Visual Basic.  

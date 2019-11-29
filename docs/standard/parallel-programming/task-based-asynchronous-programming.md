@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - parallelism, task
 ms.assetid: 458b5e69-5210-45e5-bc44-3888f86abd6f
-ms.openlocfilehash: 36ff76db984a864a201313ddb7478cc1e93888fd
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 51292d977f2be87cec7c3481f5004fe5fe756224
+ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73139985"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74204541"
 ---
 # <a name="task-based-asynchronous-programming"></a>Асинхронное программирование на основе задач
 
@@ -268,7 +268,7 @@ ms.locfileid: "73139985"
 
 Наследование из <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> или <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> не рекомендуется. Вместо этого рекомендуется с помощью свойства <xref:System.Threading.Tasks.Task.AsyncState%2A> связать дополнительные данные или состояние с объектом <xref:System.Threading.Tasks.Task> или <xref:System.Threading.Tasks.Task%601>. Можно также использовать методы расширения для расширения функциональных возможностей классов <xref:System.Threading.Tasks.Task> и <xref:System.Threading.Tasks.Task%601>. Дополнительные сведения о методах расширения см. в разделах [Методы расширения](../../csharp/programming-guide/classes-and-structs/extension-methods.md) и [Методы расширения](../../visual-basic/programming-guide/language-features/procedures/extension-methods.md).
 
-Если необходимо наследовать от <xref:System.Threading.Tasks.Task> или <xref:System.Threading.Tasks.Task%601>, классы <xref:System.Threading.Tasks.Task.Run%2A>, <xref:System.Threading.Tasks.Task.Run%2A>, <xref:System.Threading.Tasks.TaskFactory?displayProperty=nameWithType>, <xref:System.Threading.Tasks.TaskFactory%601?displayProperty=nameWithType> и <xref:System.Threading.Tasks.TaskCompletionSource%601?displayProperty=nameWithType> нельзя использовать для создания экземпляров настраиваемого типа задач, поскольку эти механизмы создают только объекты <xref:System.Threading.Tasks.Task> и <xref:System.Threading.Tasks.Task%601>. Кроме того, механизмы продолжения задачи, работу которых обеспечивают <xref:System.Threading.Tasks.Task>, <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.TaskFactory> и <xref:System.Threading.Tasks.TaskFactory%601>, нельзя использовать для создания экземпляров настраиваемого типа задач, поскольку эти механизмы также создают только объекты <xref:System.Threading.Tasks.Task> и <xref:System.Threading.Tasks.Task%601>.
+Если необходимо наследовать от <xref:System.Threading.Tasks.Task> или <xref:System.Threading.Tasks.Task%601>, классы <xref:System.Threading.Tasks.Task.Run%2A>, <xref:System.Threading.Tasks.TaskFactory?displayProperty=nameWithType>, <xref:System.Threading.Tasks.TaskFactory%601?displayProperty=nameWithType> и <xref:System.Threading.Tasks.TaskCompletionSource%601?displayProperty=nameWithType> нельзя использовать для создания экземпляров настраиваемого типа задач, так как эти механизмы создают только объекты <xref:System.Threading.Tasks.Task> и <xref:System.Threading.Tasks.Task%601>. Кроме того, механизмы продолжения задачи, работу которых обеспечивают <xref:System.Threading.Tasks.Task>, <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.TaskFactory> и <xref:System.Threading.Tasks.TaskFactory%601>, нельзя использовать для создания экземпляров настраиваемого типа задач, поскольку эти механизмы также создают только объекты <xref:System.Threading.Tasks.Task> и <xref:System.Threading.Tasks.Task%601>.
 
 ## <a name="related-topics"></a>См. также
 

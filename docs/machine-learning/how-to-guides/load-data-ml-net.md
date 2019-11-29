@@ -1,20 +1,22 @@
 ---
 title: Загрузка данных из файлов и других источников
-description: В этой инструкции показано, как загружать данные для обработки и обучения в ML.NET. Изначально данные хранились в файлах или других источниках данных, таких как базы данных, JSON, XML или коллекции в памяти.
-ms.date: 09/11/2019
+description: Узнайте, как загружать данные для обработки и обучения в ML.NET с помощью интерфейса API. Данные хранятся в файлах, базах данных, JSON, XML или коллекциях в памяти.
+ms.date: 11/07/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc,how-to, title-hack-0625
-ms.openlocfilehash: 4008f38bf4a20113a3f5c865e38222e5b82f2acc
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 83aaae2d2e75b3076841750bf5d505390a538bc0
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991366"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344759"
 ---
 # <a name="load-data-from-files-and-other-sources"></a>Загрузка данных из файлов и других источников
 
-В этой инструкции показано, как загружать данные для обработки и обучения в ML.NET. Изначально данные хранились в файлах или других источниках данных, таких как базы данных, JSON, XML или коллекции в памяти.
+Узнайте, как загружать данные для обработки и обучения в ML.NET с помощью интерфейса API. Изначально данные хранились в файлах или других источниках данных, таких как базы данных, JSON, XML или коллекции в памяти.
+
+Если вы используете построитель моделей, см. руководство по [загрузке обучающих данных в построитель моделей](load-data-model-builder.md).
 
 ## <a name="create-the-data-model"></a>Создание модели данных
 
@@ -107,18 +109,19 @@ IDataView data = textLoader.Load("DataFolder/SubFolder1/1.txt", "DataFolder/SubF
 
 ## <a name="load-data-from-a-relational-database"></a>Загрузка данных из реляционной базы данных
 
-> [!NOTE]
-> Сейчас DatabaseLoader находится на этапе предварительной версии. Его можно использовать, указав ссылки на пакеты NuGet [Microsoft.ML.Experimental](https://www.nuget.org/packages/Microsoft.ML.Experimental/0.16.0-preview) и [System.Data.SqlClient](https://www.nuget.org/packages/System.Data.SqlClient/4.6.1).
-
 ML.NET поддерживает загрузку данных из различных реляционных баз данных , поддерживаемых [`System.Data`](xref:System.Data), включая SQL Server, базу данных SQL Azure, Oracle, SQLite, PostgreSQL, Progress, IBM DB2 и многие другие.
+
+> [!NOTE]
+> Чтобы использовать `DatabaseLoader`, необходимо сослаться на пакет NuGet [System.Data.SqlClient](https://www.nuget.org/packages/System.Data.SqlClient).
 
 Имеется база данных с таблицей `House` и следующей схемой:
 
 ```SQL
 CREATE TABLE [House] (
-    [HouseId] int NOT NULL IDENTITY,
-    [Size] real NOT NULL,
-    [Price] real NOT NULL
+    [HouseId] INT NOT NULL IDENTITY,
+    [Size] INT NOT NULL,
+    [NumBed] INT NOT NULL,
+    [Price] REAL NOT NULL
     CONSTRAINT [PK_House] PRIMARY KEY ([HouseId])
 );
 ```
@@ -129,6 +132,8 @@ CREATE TABLE [House] (
 public class HouseData
 {
     public float Size { get; set; }
+
+    public float NumBed { get; set; }
 
     public float Price { get; set; }
 }
@@ -147,12 +152,14 @@ DatabaseLoader loader = mlContext.Data.CreateDatabaseLoader<HouseData>();
 ```csharp
 string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=<YOUR-DB-FILEPATH>;Database=<YOUR-DB-NAME>;Integrated Security=True;Connect Timeout=30";
 
-string sqlCommand = "SELECT Size,Price FROM House";
+string sqlCommand = "SELECT Size, CAST(NumBed as REAL) as NumBed, Price FROM House";
 
-DatabaseSource dbSource = new DatabaseSource(SqlClientFactory.Instance,connectionString,sqlCommand);
+DatabaseSource dbSource = new DatabaseSource(SqlClientFactory.Instance, connectionString, sqlCommand);
 ```
 
-Наконец, используйте метод `Load` для загрузки данных в [`IDataView`](xref:Microsoft.ML.IDataView).
+Числовые данные, не являющиеся типами [`Real`](xref:System.Data.SqlDbType), необходимо преобразовать в [`Real`](xref:System.Data.SqlDbType). Тип [`Real`](xref:System.Data.SqlDbType) представлен значением с плавающей запятой одиночной точности или [`Single`](xref:System.Single) (тип входных данных, ожидаемый алгоритмами ML.NET). В этом примере столбец `NumBed` является целым числом в базе данных. С помощью встроенной функции `CAST` выполняется преобразование в [`Real`](xref:System.Data.SqlDbType). Так как свойство `Price` уже имеет тип [`Real`](xref:System.Data.SqlDbType), оно загружается как есть.
+
+Используйте метод `Load` для загрузки данных в [`IDataView`](xref:Microsoft.ML.IDataView).
 
 ```csharp
 IDataView data = loader.Load(dbSource);
@@ -205,3 +212,8 @@ MLContext mlContext = new MLContext();
 //Load Data
 IDataView data = mlContext.Data.LoadFromEnumerable<HousingData>(inMemoryCollection);
 ```
+
+## <a name="next-steps"></a>Следующие шаги
+
+- Сведения об очистке или иной обработке данных см. в статье [Подготовка данных для построения модели](prepare-data-ml-net.md).
+- Когда вы будете готовы к созданию модели, обратитесь к статье [Обучение и оценка модели](train-machine-learning-model-ml-net.md).

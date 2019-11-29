@@ -12,12 +12,12 @@ helpviewer_keywords:
 - case statement [C#]
 - default keyword [C#]
 ms.assetid: 44bae8b8-8841-4d85-826b-8a94277daecb
-ms.openlocfilehash: 76c778d1e2d45990793b5d9c7d4a8ee5a99fed46
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 012fa5b4d5f39b4dfa4d1c77bc3d6fbe181e78a6
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73422300"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428492"
 ---
 # <a name="switch-c-reference"></a>switch (справочник по C#)
 
@@ -43,10 +43,10 @@ ms.locfileid: "73422300"
 
 В C# 6 и более ранних версий выражение соответствия должно возвращать значение следующих типов:
 
-- [char](char.md);
+- [char](../builtin-types/char.md);
 - [string](../builtin-types/reference-types.md);
 - [bool](bool.md);
-- целочисленное значение, например [int](../builtin-types/integral-numeric-types.md) или [long](../builtin-types/integral-numeric-types.md);
+- [целочисленное](../builtin-types/integral-numeric-types.md) значение, например `int` или `long`;
 - значение [enum](enum.md).
 
 Начиная с C# 7.0 выражение соответствия может быть любым выражением, отличным от NULL.
@@ -121,10 +121,10 @@ switch (caseSwitch)
 здесь *constant* — это значение для проверки. Значением *constant* может быть любое из следующих константных выражений:
 
 - литерал [bool](bool.md), `true` или `false`;
-- любой целочисленный тип, такой как [int](../builtin-types/integral-numeric-types.md), [long](../builtin-types/integral-numeric-types.md) или [byte](../builtin-types/integral-numeric-types.md);
+- любая [целочисленная](../builtin-types/integral-numeric-types.md) константа, например `int`, `long` или `byte`;
 - имя объявленной переменной `const`;
 - константа перечисления;
-- литерал [char](char.md);
+- литерал [char](../builtin-types/char.md);
 - литерал [string](../builtin-types/reference-types.md).
 
 Константное выражение вычисляется следующим образом.

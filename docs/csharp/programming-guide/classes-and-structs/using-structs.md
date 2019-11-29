@@ -5,16 +5,16 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - structs [C#], using
 ms.assetid: cea4a459-9eb9-442b-8d08-490e0797ba38
-ms.openlocfilehash: 8b2810af81a57cf21b9a2e2438f7f6aa2cb7a669
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 491ee0224ffa39262992f7f42d20e5f97560b73f
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72772074"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74429492"
 ---
 # <a name="using-structs-c-programming-guide"></a>Использование структур (руководство по программированию на C#)
 
-Тип `struct` подходит для представления простых объектов, таких как `Point`, `Rectangle`и `Color`. Хотя point удобно представить в виде [класса](../../language-reference/keywords/class.md) с [автоматически реализуемыми свойствами](./auto-implemented-properties.md), в некоторых сценариях [структура](../../language-reference/keywords/struct.md) может оказаться более эффективной. Например, при объявлении массива из 1000 объектов `Point` потребуется выделить дополнительную память для ссылки на каждый объект. В этом случае использование структуры будет более экономичным вариантом. Поскольку платформа .NET Framework содержит объект с именем <xref:System.Drawing.Point>, структура в этом примере называется `Coords`.
+Тип `struct` подходит для представления простых объектов, таких как `Point`, `Rectangle`и `Color`. Хотя point удобно представить в виде [класса](../../language-reference/keywords/class.md) с [автоматически реализуемыми свойствами](./auto-implemented-properties.md), в некоторых сценариях [структура](../../language-reference/keywords/struct.md) может оказаться более эффективной. Например, при объявлении массива из 1000 объектов `Point` потребуется выделить дополнительную память для ссылки на каждый объект. В этом случае использование структуры будет более экономичным вариантом. Так как .NET уже содержит объект с именем <xref:System.Drawing.Point>, структура в этом примере называется `Coords`.
 
 [!code-csharp[csProgGuideObjects#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#1)]
 

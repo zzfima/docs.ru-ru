@@ -2,12 +2,12 @@
 title: Сетевая изоляция для приложений Магазина Windows
 ms.date: 03/30/2017
 ms.assetid: b064497c-d956-46b8-838d-7a0223c7e200
-ms.openlocfilehash: 0d08b09f4ed0314d4f235f10b69bbf1343935841
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 34b8865781079f45a68d3dd1aab7fbd66c703d50
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59333266"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447417"
 ---
 # <a name="network-isolation-for-windows-store-apps"></a>Сетевая изоляция для приложений Магазина Windows
 Классы в пространствах имен <xref:System.Net>, <xref:System.Net.Http> и <xref:System.Net.Http.Headers> можно использовать для разработки классических приложений или приложений для Магазина Windows. При использовании в приложениях для Магазина Windows к классам из этих пространств имен применяется сетевая изоляция, которая является одной из составляющих модели обеспечения безопасности приложений в [!INCLUDE[win8](../../../includes/win8-md.md)]. Чтобы обеспечить доступ к сети, в манифесте приложения для Магазина Windows необходимо включить соответствующие сетевые возможности.  
@@ -23,13 +23,13 @@ ms.locfileid: "59333266"
   
 4. Разверните и запустите приложение, чтобы проверить его с использованием средств сетевой изоляции, предусмотренных для устранения неполадок.  
   
- Дополнительные сведения о средствах настройки сетевых возможностей и изоляции, которые используются для устранения неполадок с сетевой изоляцией, см. в разделе [Практическое руководство. Настройка возможностей сетевой изоляции](https://go.microsoft.com/fwlink/?LinkID=228265) в документации разработчика [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)].  
+ Дополнительные сведения о средствах настройки сетевых возможностей и изоляции, которые используются для устранения неполадок с сетевой изоляцией, см. в статье [Практическое руководство. Настройка возможностей сетевой изоляции](https://docs.microsoft.com/previous-versions/windows/apps/hh770532(v=win.10)) в документации разработчика для Магазина Windows 8.x.
   
 ## <a name="see-also"></a>См. также
 
-- [Соединение с веб-службой](https://go.microsoft.com/fwlink/?LinkID=245696)
-- [Рекомендации и контрольный список для настройки сетевой изоляции](https://go.microsoft.com/fwlink/?LinkID=228265)
-- [Краткое руководство. Подключение с помощью HttpClient](https://go.microsoft.com/fwlink/?LinkId=245697)
-- [Как использовать обработчики HttpClient](https://go.microsoft.com/fwlink/?LinkId=245699)
-- [Как защитить подключения HttpClient](https://go.microsoft.com/fwlink/?LinkId=245698)
-- [Пример HttpClient](https://go.microsoft.com/fwlink/?LinkId=242550)
+- [Соединение с веб-службой](https://docs.microsoft.com/previous-versions/windows/apps/hh761504(v=win.10))
+- [Рекомендации и контрольный список для настройки сетевой изоляции](https://docs.microsoft.com/previous-versions/windows/apps/hh770532(v=win.10))
+- [Краткое руководство. Подключение с помощью HttpClient](https://docs.microsoft.com/previous-versions/windows/apps/hh781239(v=win.10))
+- [Как использовать обработчики HttpClient](https://docs.microsoft.com/previous-versions/windows/apps/hh781241(v=win.10))
+- [Как защитить подключения HttpClient](https://docs.microsoft.com/previous-versions/windows/apps/hh781240(v=win.10))
+- [Пример HttpClient](https://code.msdn.microsoft.com/windowsapps/HttpClient-sample-55700664)

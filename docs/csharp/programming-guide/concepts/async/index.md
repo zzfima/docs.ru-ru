@@ -2,12 +2,12 @@
 title: Асинхронное программирование на C#
 description: Общие сведения о языковой поддержке асинхронного программирования в C# с помощью async, await, задач и Task<T>
 ms.date: 03/18/2019
-ms.openlocfilehash: 4ed48a2e74dde5ae0f24ebd680ace133e05e15d4
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: 633da9485c5f74efb6e57234a31f0404e39605ec
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70167894"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552432"
 ---
 # <a name="asynchronous-programming-with-async-and-await"></a>Асинхронное программирование с использованием ключевых слов async и await
 
@@ -65,8 +65,8 @@ ms.locfileid: "70167894"
 ```csharp
 Coffee cup = PourCoffee();
 Console.WriteLine("coffee is ready");
-Task<Egg> eggTask = FryEggs(2);
-Egg eggs = await eggTask;
+Task<Egg> eggsTask = FryEggs(2);
+Egg eggs = await eggsTask;
 Console.WriteLine("eggs are ready");
 Task<Bacon> baconTask = FryBacon(3);
 Bacon bacon = await baconTask;
@@ -87,7 +87,7 @@ Console.WriteLine("Breakfast is ready!");
 ```csharp
 Coffee cup = PourCoffee();
 Console.WriteLine("coffee is ready");
-Task<Egg> eggTask = FryEggs(2);
+Task<Egg> eggsTask = FryEggs(2);
 Task<Bacon> baconTask = FryBacon(3);
 Task<Toast> toastTask = ToastBread(2);
 Toast toast = await toastTask;
@@ -97,7 +97,7 @@ Console.WriteLine("toast is ready");
 Juice oj = PourOJ();
 Console.WriteLine("oj is ready");
 
-Egg eggs = await eggTask;
+Egg eggs = await eggsTask;
 Console.WriteLine("eggs are ready");
 Bacon bacon = await baconTask;
 Console.WriteLine("bacon is ready");
@@ -129,7 +129,7 @@ Console.WriteLine("Breakfast is ready!");
 Ряд инструкций `await` в конце приведенного выше кода можно улучшить с помощью методов класса `Task`. Один из этих API — <xref:System.Threading.Tasks.Task.WhenAll%2A>, который возвращает <xref:System.Threading.Tasks.Task>; она завершается после завершения всех задач в списке аргументов, как показано в следующем коде:
 
 ```csharp
-await Task.WhenAll(eggTask, baconTask, toastTask);
+await Task.WhenAll(eggsTask, baconTask, toastTask);
 Console.WriteLine("eggs are ready");
 Console.WriteLine("bacon is ready");
 Console.WriteLine("toast is ready");

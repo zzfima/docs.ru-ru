@@ -4,12 +4,12 @@ description: Ресурсы, посвященные созданию прило�
 author: thraka
 ms.author: adegeo
 ms.date: 09/19/2019
-ms.openlocfilehash: 7dc134696e7dacf531fa6c7f4d84b63eb785ef25
-ms.sourcegitcommit: 3ac05b2c386c8cc5e73f4c7665f6c0a7ed3da1bd
+ms.openlocfilehash: 78066f2904f6a874b71165e4fe1769b6b778ae41
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71151506"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428866"
 ---
 # <a name="get-started-with-net-core"></a>Начало работы с .NET Core
 
@@ -21,7 +21,7 @@ ms.locfileid: "71151506"
 
 Сначала скачайте и установите [пакет SDK для .NET Core](https://dotnet.microsoft.com/download) на компьютер.
 
-Затем откройте окно терминала, например **PowerShell**, **командную строку** или **bash**. Для создания и запуска приложения C# введите следующие команды `dotnet`.
+Затем откройте окно терминала, например **PowerShell**, **командную строку** или **bash**. Для создания и запуска приложения C# введите следующие команды `dotnet`:
 
 ```dotnetcli
 dotnet new console --output sample1
@@ -44,46 +44,35 @@ Hello World!
 
 # <a name="windowstabwindows"></a>[Windows](#tab/windows)
 
-* [Создание приложения Hello World на C# с помощью .NET Core в Visual Studio 2017.](./tutorials/with-visual-studio.md)
+- [Создание приложения Hello World на C# с помощью .NET Core в Visual Studio 2017.](./tutorials/with-visual-studio.md)
+- [Создание библиотеки классов C# с помощью .NET Core в Visual Studio 2017.](./tutorials/library-with-visual-studio.md)
+- [Создание приложения Hello World на Visual Basic с помощью .NET Core в Visual Studio 2017.](./tutorials/vb-with-visual-studio.md)
+- [Создание библиотеки классов с помощью Visual Basic и .NET Core в Visual Studio 2017.](./tutorials/vb-library-with-visual-studio.md)  
+- Посмотрите видео о том, [как установить и использовать Visual Studio Code и .NET Core](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core/).
+- Посмотрите видео о том, [как установить и использовать Visual Studio 2017 и .NET Core](https://channel9.msdn.com/Blogs/dotnet/Get-Started-NET-Core-Visual-Studio-2017/).
+- [Начало работы с .NET Core с помощью командной строки.](tutorials/using-with-xplat-cli.md)
 
-* [Создание библиотеки классов C# с помощью .NET Core в Visual Studio 2017.](./tutorials/library-with-visual-studio.md)
-
-* [Создание приложения Hello World на Visual Basic с помощью .NET Core в Visual Studio 2017.](./tutorials/vb-with-visual-studio.md)
-
-* [Создание библиотеки классов с помощью Visual Basic и .NET Core в Visual Studio 2017.](./tutorials/vb-library-with-visual-studio.md)  
-
-* Посмотрите видео о том, [как установить и использовать Visual Studio Code и .NET Core](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core/).
-
-* Посмотрите видео о том, [как установить и использовать Visual Studio 2017 и .NET Core](https://channel9.msdn.com/Blogs/dotnet/Get-Started-NET-Core-Visual-Studio-2017/).
-
-* [Начало работы с .NET Core с помощью командной строки.](tutorials/using-with-xplat-cli.md)
-
-Список поддерживаемых версий Windows см. в статье [Предварительные требования для разработки в Windows](windows-prerequisites.md).
+Список поддерживаемых версий Windows см. в статье [Зависимости и требования для .NET Core](install/dependencies.md?tabs=netcore30&pivots=os-windows).
 
 # <a name="linuxtablinux"></a>[Linux](#tab/linux)
 
-Чтобы приступить к разработке приложения .NET Core, воспользуйтесь следующими пошаговыми руководствами.
+Чтобы приступить к разработке приложения .NET Core, воспользуйтесь следующими пошаговыми руководствами:
 
-* [Начало работы с .NET Core с помощью командной строки.](tutorials/using-with-xplat-cli.md)
+- [Начало работы с .NET Core с помощью командной строки.](tutorials/using-with-xplat-cli.md)
+- Посмотрите видео о [начале работы с Visual Studio Code с использованием C# и .NET Core в Ubuntu](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-Csharp-dotnet-Core-Ubuntu).
 
-* Посмотрите видео о [начале работы с Visual Studio Code с использованием C# и .NET Core в Ubuntu](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-Csharp-dotnet-Core-Ubuntu).
-
-Список поддерживаемых версий и дистрибутивов Linux см. в статье [Необходимые компоненты для .NET Core в Linux](linux-prerequisites.md).
+Список поддерживаемых дистрибутивов и версий Linux см. в статье [Зависимости и требования для .NET Core](install/dependencies.md?tabs=netcore30&pivots=os-linux).
 
 # <a name="macostabmacos"></a>[macOS](#tab/macos)
 
-Чтобы приступить к разработке приложения .NET Core, воспользуйтесь следующими пошаговыми руководствами.
+Чтобы приступить к разработке приложения .NET Core, воспользуйтесь следующими пошаговыми руководствами:
 
-* Посмотрите видео о [начале работы с Visual Studio Code с использованием C# и .NET Core в macOS](https://channel9.msdn.com/Blogs/dotnet/Get-started-VSCode-NET-Core-Mac).
+- Посмотрите видео о [начале работы с Visual Studio Code с использованием C# и .NET Core в macOS](https://channel9.msdn.com/Blogs/dotnet/Get-started-VSCode-NET-Core-Mac).
+- [Начало работы с .NET Core в macOS с помощью Visual Studio Code.](tutorials/using-on-macos.md)
+- [Начало работы с .NET Core с помощью командной строки.](tutorials/using-with-xplat-cli.md)
+- [Начало работы с .NET Core в macOS с помощью Visual Studio для Mac.](tutorials/using-on-mac-vs.md)
+- [Создание полноценного решения .NET Core на базе macOS с помощью Visual Studio для Mac.](tutorials/using-on-mac-vs-full-solution.md)
 
-* [Начало работы с .NET Core в macOS с помощью Visual Studio Code.](tutorials/using-on-macos.md)
-
-* [Начало работы с .NET Core с помощью командной строки.](tutorials/using-with-xplat-cli.md)
-
-* [Начало работы с .NET Core в macOS с помощью Visual Studio для Mac.](tutorials/using-on-mac-vs.md)
-
-* [Создание полноценного решения .NET Core на базе macOS с помощью Visual Studio для Mac.](tutorials/using-on-mac-vs-full-solution.md)
-
-Список поддерживаемых версий OS X и macOS см. в статье [Предварительные требования для разработки в macOS](macos-prerequisites.md).
+Список поддерживаемых версий OS X и macOS см. в статье [Зависимости и требования для .NET Core](install/dependencies.md?tabs=netcore30&pivots=os-macos).
 
 ---

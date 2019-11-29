@@ -9,16 +9,16 @@ helpviewer_keywords:
 - operator associativity [C#]
 - expressions [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 78233b9a18f4369ebb086f2016af3f945b6a654a
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 11c544e7fc923b0820141fb2e096ef7707f0a95f
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039018"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552478"
 ---
 # <a name="c-operators-c-reference"></a>Операторы C# (справочник по C#)
 
-C# предоставляет ряд операторов, поддерживаемых встроенными типами. Например [арифметические операторы](arithmetic-operators.md) выполняют арифметические операции с числовыми операндами, а [логические операторы](boolean-logical-operators.md) выполняют логические операции с операндами [bool](../keywords/bool.md). Большинство операторов могут быть [перегружены](operator-overloading.md). С помощью перегрузки операторов можно указать поведение оператора для операндов определяемого пользователем типа.
+C# предоставляет ряд операторов, поддерживаемых встроенными типами. Например [арифметические операторы](arithmetic-operators.md) выполняют арифметические операции с числовыми операндами, а [логические операторы](boolean-logical-operators.md) выполняют логические операции с операндами [bool](../builtin-types/bool.md). Большинство операторов могут быть [перегружены](operator-overloading.md). С помощью перегрузки операторов можно указать поведение оператора для операндов определяемого пользователем типа.
 
 В [выражении](../../programming-guide/statements-expressions-operators/expressions.md) приоритет и ассоциативность операторов определяют порядок выполнения операций. Порядок вычисления, определяемый приоритетом и ассоциативностью операторов, можно изменить с помощью скобок.
 

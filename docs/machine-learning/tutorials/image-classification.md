@@ -1,17 +1,17 @@
 ---
 title: Учебник. Создание модели классификации изображений ML.NET на основе предварительно обученной модели TensorFlow
 description: Узнайте, как передавать знания из существующей модели TensorFlow в новую модель классификации изображений ML.NET. Модель TensorFlow была обучена для классификации изображений по тысячам категорий. Модель ML.NET использует передачу обучения, чтобы классифицировать изображения по меньшему количеству более широких категорий.
-ms.date: 10/30/2019
+ms.date: 11/15/2019
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0612
 author: natke
 ms.author: nakersha
-ms.openlocfilehash: bd25a24e467148c46958b6e7ce7b18e181dab5fd
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 952ce5c52bcd09b8c4e4e40d5ddf85835a26478d
+ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73129602"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74204988"
 ---
 # <a name="tutorial-generate-an-mlnet-image-classification-model-from-a-pre-trained-tensorflow-model"></a>Учебник. Создание модели классификации изображений ML.NET на основе предварительно обученной модели TensorFlow
 
@@ -40,13 +40,7 @@ ms.locfileid: "73129602"
 ## <a name="prerequisites"></a>Предварительные требования
 
 * [Visual Studio 2017 версии 15.6 или более поздней](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) с установленной рабочей нагрузкой "Кроссплатформенная разработка .NET Core".
-
-* Пакет Nuget для Microsoft.ML 1.3.1.
-* Пакет Nuget для Microsoft.ML.ImageAnalytics 1.3.1.
-* Пакет Nuget для Microsoft.ML.TensorFlow 1.3.1.
-
 * [ZIP-файл каталога ресурсов руководства.](https://github.com/dotnet/samples/blob/master/machine-learning/tutorials/TransferLearningTF/image-classifier-assets.zip)
-
 * [Модель машинного обучения Inception версии 1](https://storage.googleapis.com/download.tensorflow.org/models/inception5h.zip)
 
 ## <a name="select-the-right-machine-learning-task"></a>Выбор типа задачи машинного обучения
@@ -130,10 +124,10 @@ toaster2.png    appliance
 
     * В обозревателе решений щелкните проект правой кнопкой мыши и выберите **Управление пакетами NuGet**.
     * Выберите nuget.org в качестве источника пакета, откройте вкладку "Обзор" и выполните поиск **Microsoft.ML**.
-    * Щелкните раскрывающийся список **Версия**, выберите пакет **1.3.1** в списке и нажмите кнопку **Установить**.
+    * Щелкните раскрывающийся список **Версия**, выберите пакет **1.4.0** и нажмите кнопку **Установить**.
     * Нажмите кнопку **ОК** в диалоговом окне **Предварительный просмотр изменений**.
     * Нажмите кнопку **Принимаю** в диалоговом окне **Принятие условий лицензионного соглашения**, если вы согласны с условиями лицензионного соглашения для указанных пакетов.
-    * Повторите эти шаги для пакетов **Microsoft.ML.ImageAnalytics версии 1.3.1** и **Microsoft.ML.TensorFlow версии 1.3.1**.
+    * Повторите эти шаги для пакетов **Microsoft.ML.ImageAnalytics v1.4.0**, **SciSharp.TensorFlow.Redist v1.15.0** и **Microsoft.ML.TensorFlow v1.4.0**.
 
 ### <a name="download-assets"></a>Скачивание ресурсов
 

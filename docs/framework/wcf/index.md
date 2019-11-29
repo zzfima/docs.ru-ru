@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF]
 - WCF [WCF]
 ms.assetid: 149348a6-bf82-4ccc-9604-fa7cc88c0749
-ms.openlocfilehash: 34c6cb8cbe815e33658f38ee0e6aff581ea0ff74
-ms.sourcegitcommit: 9b2ef64c4fc10a4a10f28a223d60d17d7d249ee8
+ms.openlocfilehash: 836913dd35d127d181c753341a7c39c453242a8f
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "72961168"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552686"
 ---
 # <a name="develop-service-oriented-applications-with-wcf"></a>Разработка ориентированных на службы приложений с помощью WCF
 
@@ -71,9 +71,6 @@ ms.locfileid: "72961168"
 
  [Общие справочные](general-reference.md)\
  В разделе описаны элементы, используемые для настройки клиентов и служб Windows Communication Foundation.
-
- [Отзывы и\ сообщества](feedback-and-community.md)
- Сведения о том, как оставлять отзывы и комментарии о библиотеке Windows Communication Foundation
 
  [Сведения о конфиденциальности](privacy-information.md)\
  Сведения о конфиденциальности, касающиеся использования WCF

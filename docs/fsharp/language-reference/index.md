@@ -2,12 +2,12 @@
 title: Справочник по языку F#
 description: Найдите F# сведения о компонентах языка на основе этой ссылки на маркеры языка, основные понятия, типы, выражения и разделы, поддерживаемые компилятором.
 ms.date: 05/16/2016
-ms.openlocfilehash: ac7e268b28d6bb654e4443d04695cb15fe756e9f
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: bd9894176fa736b9eed939d72972e676e2bd2671
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424993"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552906"
 ---
 # <a name="f-language-reference"></a>Справочник по языку F#
 
@@ -110,7 +110,3 @@ ms.locfileid: "73424993"
 |[Параметры компилятора](compiler-options.md)|Описывает параметры командной строки для компилятора F#.|
 |[Директивы компилятора](compiler-directives.md)|Описывает директивы процессора и компилятора.|
 |[Идентификаторы Source Line, File и Path](source-line-file-path-identifiers.md)|Описывает идентификаторы `__LINE__`, `__SOURCE_DIRECTORY__` и `__SOURCE_FILE__`, представляющие собой встроенные значения, которые позволяют получить доступ к номеру исходной строки, каталогу и имени файла в коде.|
-
-## <a name="see-also"></a>См. также
-
-- [Visual F#](../index.md)

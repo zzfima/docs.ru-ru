@@ -1,16 +1,16 @@
 ---
-title: Анализаторы безопасности .NET — .NET
-description: Сведения об использовании анализаторов безопасности .NET в пакете анализаторов .NET Framework для поиска и устранения угроз безопасности
+title: Анализаторы .NET Framework — .NET
+description: Сведения об использовании анализаторов .NET Framework в пакете анализаторов .NET Framework для поиска и устранения угроз безопасности
 author: billwagner
 ms.author: wiwagn
 ms.date: 01/25/2018
 ms.technology: dotnet-standard
-ms.openlocfilehash: 03268375739b34a43f38c60fbfd2c993da9f3840
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 7e64b00eb6fd2c2dbb12c54a2c725590b4d22e15
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73197959"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345950"
 ---
 # <a name="the-net-framework-analyzer"></a>Анализатор .NET Framework
 
@@ -20,7 +20,7 @@ ms.locfileid: "73197959"
 
 ## <a name="installing-and-configuring-the-net-framework-analyzer"></a>Установка и настройка анализатора .NET Framework
 
-Анализаторы безопасности .NET устанавливаются в виде пакета NuGet в каждом проекте, где они будут запускаться. Добавлять их в проект должен один разработчик. Пакет анализатора является зависимостью проекта и будет выполняться на каждом компьютере разработчика с обновленным решением.
+Анализаторы .NET Framework устанавливаются в виде пакета NuGet в каждом проекте, где они будут запускаться. Добавлять их в проект должен один разработчик. Пакет анализатора является зависимостью проекта и будет выполняться на каждом компьютере разработчика с обновленным решением.
 
 Анализатор .NET Framework входит в пакет NuGet [Microsoft.NetFramework.Analyzers](https://www.nuget.org/packages/Microsoft.NetFramework.Analyzers/). Этот пакет содержит только анализаторы, соответствующие .NET Framework, в число которых входят анализаторы безопасности. В большинстве случаев требуется пакет NuGet [Microsoft.CodeAnalysis.FxCopAnalyzers](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers). Пакет FxCopAnalyzers содержит все анализаторы платформы, включенные в пакет Framework.Analyzers, а также следующие анализаторы:
 

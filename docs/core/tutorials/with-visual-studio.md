@@ -5,28 +5,28 @@ author: BillWagner
 ms.author: wiwagn
 ms.date: 09/13/2017
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: b42a71993cb120c88b90e867b7af23873b99d280
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: cc7d78006998b79fe9d522e71883ce1af817c051
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71039599"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428558"
 ---
 # <a name="build-a-c-hello-world-application-with-the-net-core-sdk-in-visual-studio-2017"></a>Создание приложения Hello World на C# с помощью пакета SDK для .NET Core в Visual Studio 2017
 
-В этой статье содержится пошаговое описание процессов сборки, отладки и публикации простого консольного приложения .NET Core на C# с помощью Visual Studio 2017. Visual Studio 2017 предоставляет полнофункциональную среду для разработки приложений .NET Core. Если само приложение не имеет зависимостей от конкретной платформы, его можно выполнять на любой официально поддерживаемой платформе .NET Core и в любой системе, в которой установлена .NET Core.
+В этой статье описано, как выполнить сборку, отладку и публикацию простого консольного приложения .NET Core на C# с помощью Visual Studio 2017. Visual Studio 2017 предоставляет полнофункциональную среду для разработки приложений .NET Core. Если само приложение не имеет зависимостей от конкретной платформы, его можно выполнять на любой официально поддерживаемой платформе .NET Core и в любой системе, в которой установлена .NET Core.
 
 ## <a name="prerequisites"></a>Предварительные требования
 
-[Visual Studio 2017](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) с установленной рабочей нагрузкой "Кроссплатформенная разработка .NET Core". Приложение можно разработать с помощью .NET Core версии 2.1 или выше.
+[Visual Studio 2017 или более поздней версии](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) с установленной рабочей нагрузкой "Кроссплатформенная разработка .NET Core". Приложение можно разработать с помощью .NET Core версии 2.1 или выше.
 
-Дополнительные сведения см. в разделе [Необходимые компоненты для .NET Core в Windows](../windows-prerequisites.md).
+Дополнительные сведения см. в статье [Зависимости и требования для .NET Core](../install/sdk.md?tabs=netcore30&pivots=os-windows#install-with-visual-studio).
 
 ## <a name="a-simple-hello-world-application"></a>Простое приложение Hello World
 
 Для начала создадим простое консольное приложение Hello World. Выполните следующие действия.
 
-1. Запустите Visual Studio 2017. Выберите **Файл** > **Создать** > **Проект** в меню. В диалоговом окне *Новый проект* * выберите узел **Visual C#** , а затем — узел **.NET Core**. Выберите шаблон проекта **Консольное приложение (.NET Core)** . В текстовом поле **Имя** введите "HelloWorld". Нажмите кнопку **OK**.
+1. Запустите Visual Studio. Выберите **Файл** > **Создать** > **Проект** в меню. В диалоговом окне **Новый проект** выберите узел **Visual C#** , а затем — узел **.NET Core**. Выберите шаблон проекта **Консольное приложение (.NET Core)** . В текстовом поле **Имя** введите "HelloWorld". Нажмите кнопку **OK**.
 
    ![Диалоговое окно создания проекта, в котором выбран шаблон проекта консольного приложения](./media/with-visual-studio/visual-studio-new-project.png)
 
@@ -57,9 +57,9 @@ ms.locfileid: "71039599"
 
 Давайте расширим приложение. Теперь у пользователя будет запрашиваться имя, которое затем будет отображаться с датой и временем. Выполните следующие действия, чтобы изменить и протестировать программу.
 
-1. Введите следующий код C# в окно редактирования кода между первой открывающей скобкой за строкой `static void Main(string[] args)` и первой закрывающей скобкой:
+1. Введите следующий код C# в окно редактирования кода между первой открывающей скобкой за строкой `static void Main(string[] args)` и первой закрывающей фигурной скобкой:
 
-   [!code-csharp[GettingStarted#1](../../../samples/snippets/csharp/getting_started/with_visual_studio/helloworld.cs#1)]
+   [!code-csharp[GettingStarted#1](~/samples/snippets/csharp/getting_started/with_visual_studio/helloworld.cs#1)]
 
    Этот код заменяет содержимое метода `Main`.
 
@@ -81,7 +81,7 @@ ms.locfileid: "71039599"
 
 - См. дополнительные сведения о [разработке и публикации распространяемой версии приложения Hello World .NET Core с помощью Visual Studio 2017](publishing-with-visual-studio.md).
 
-## <a name="related-topics"></a>См. также
+## <a name="related-articles"></a>Связанные статьи
 
 Вместо консольного приложения .NET Core и Visual Studio 2017 позволяют создать библиотеку классов. Пошаговое описание этого процесса вы найдете в статье [Building a class library with C# and .NET Core in Visual Studio 2017](library-with-visual-studio.md) (Создание библиотеки классов с помощью C# и .NET Core в Visual Studio 2017).
 
