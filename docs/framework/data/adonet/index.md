@@ -2,17 +2,17 @@
 title: ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 5b96ed06-9759-4966-a797-a1d5f6ee50ca
-ms.openlocfilehash: 24b7a11d031502b9a6b825f49d97214f68f92176
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 130265070e82245de4bdd49599df9fa9f435f5ed
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70783810"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74569412"
 ---
 # <a name="adonet"></a>ADO.NET
 ADO.NET — это набор классов, предоставляющих службы доступа к данным программистам, которые используют платформу .NET Framework. ADO.NET имеет богатый набор компонентов для создания распределенных приложений, совместно использующих данные. Это неотъемлемая часть платформы .NET Framework, которая предоставляет доступ к реляционным данным, XML-данным и данным приложений. ADO.NET удовлетворяет различные потребности разработчиков, включая создание клиентских приложений баз данных, а также бизнес-объектов среднего уровня, используемых приложениями, средствами, языками и браузерам.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>Содержание  
  [Новые возможности в ADO.NET](whats-new.md)  
  Представляет новые возможности ADO.NET.  
   
@@ -51,7 +51,7 @@ ADO.NET — это набор классов, предоставляющих с
  Содержит ссылки на разделы и примеры LINQ с помощью Visual Basic.  
   
  [Службы данных WCF 4.5](../wcf/index.md)  
- Описывает, как использовать [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] для развертывания служб данных в Интернете или интрасети, которые реализуют протокол Open Data Protocol (OData).  
+ Описывает использование WCF Data Services для развертывания служб данных в Интернете или интрасети, которые реализуют Open Data Protocol (OData).  
   
  [Руководство по разработке для .NET Framework](../../development-guide.md)  
  Приводит ссылки на сведения о стандартных задачах разработки с применением платформы .NET Framework.  
@@ -59,7 +59,7 @@ ADO.NET — это набор классов, предоставляющих с
  [Примеры и руководства](../../../samples-and-tutorials/index.md)  
  Содержит список примеров и учебников по .NET.
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Доступ к данным в Visual Studio](/visualstudio/data-tools/accessing-data-in-visual-studio)
 - [Общие сведения об ADO.NET](ado-net-overview.md)

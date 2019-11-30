@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Выполнение запросов службы данных (WCF Data Services)
+title: Практическое руководство. Выполнение запросов к службе данных (службы данных WCF)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,15 +9,15 @@ helpviewer_keywords:
 - WCF Data Services, querying
 - WCF Data Services, accessing data
 ms.assetid: 62997821-e0c6-4c4d-9fb7-1273fb5e5d18
-ms.openlocfilehash: 984bba9f31ddaee68c6997ba6da09a511e42b4ce
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: b06a21a45dcf6e67c41287c4cd59cdda4aa7b447
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70780075"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74569081"
 ---
-# <a name="how-to-execute-data-service-queries-wcf-data-services"></a>Практическое руководство. Выполнение запросов службы данных (WCF Data Services)
-Службы [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] позволяют выполнять запросы к службе данных из клиентского приложения на основе .NET Framework с использованием сформированных клиентских классов службы данных. Выполнять запросы можно одним из следующих способов.  
+# <a name="how-to-execute-data-service-queries-wcf-data-services"></a>Практическое руководство. Выполнение запросов к службе данных (службы данных WCF)
+WCF Data Services позволяет запрашивать службу данных из клиентского приложения на основе .NET Framework с помощью созданных клиентских классов службы данных. Выполнять запросы можно одним из следующих способов.  
   
 - Выполнение запроса LINQ к именованному объекту <xref:System.Data.Services.Client.DataServiceQuery%601>, который получен из контекста <xref:System.Data.Services.Client.DataServiceContext>, сформированного программой `Add Data Service Reference`.  
   
@@ -47,6 +47,6 @@ ms.locfileid: "70780075"
  [!code-csharp[Astoria Northwind Client#GetAllCustomersExplicit](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#getallcustomersexplicit)]
  [!code-vb[Astoria Northwind Client#GetAllCustomersExplicit](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#getallcustomersexplicit)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Практическое руководство. Добавление параметров запроса в запрос службы данных](how-to-add-query-options-to-a-data-service-query-wcf-data-services.md)
+- [Практическое руководство. Добавление параметров запроса к запросу службы данных](how-to-add-query-options-to-a-data-service-query-wcf-data-services.md)

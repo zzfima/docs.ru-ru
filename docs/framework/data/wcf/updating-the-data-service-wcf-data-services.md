@@ -8,15 +8,15 @@ helpviewer_keywords:
 - WCF Data Services, changing data
 - WCF Data Services, client library
 ms.assetid: 00d993be-ffed-4dea-baf7-6eea982cdb54
-ms.openlocfilehash: 02bcb8f12cd7f230d60c3b3c58174a54405ff955
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 060cdab4f486782e6ad60511fadad95a41255dec
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975114"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74568819"
 ---
 # <a name="updating-the-data-service-wcf-data-services"></a>Обновление службы данных (службы данных WCF)
-При использовании клиентской библиотеки [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] для использования канала Open Data Protocol (OData) библиотека преобразует записи в канале в экземпляры классов клиентских служб данных. Эти классы службы данных отслеживаются с помощью объекта <xref:System.Data.Services.Client.DataServiceContext>, которому принадлежит объект <xref:System.Data.Services.Client.DataServiceQuery%601>. Клиент отслеживает изменения сущностей, указанных с помощью методов объекта <xref:System.Data.Services.Client.DataServiceContext>. Эти методы позволяют клиенту отслеживать добавленные и удаленные сущности, а также изменения, вносимые в значения свойств или в связи между экземплярами сущностей. При вызове метода <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> отслеженные изменения отправляются назад в службу данных в виде операций, основанных на REST.  
+При использовании клиентской библиотеки WCF Data Services для использования канала Open Data Protocol (OData) библиотека преобразует записи в канале в экземпляры классов клиентских служб данных. Эти классы службы данных отслеживаются с помощью объекта <xref:System.Data.Services.Client.DataServiceContext>, которому принадлежит объект <xref:System.Data.Services.Client.DataServiceQuery%601>. Клиент отслеживает изменения сущностей, указанных с помощью методов объекта <xref:System.Data.Services.Client.DataServiceContext>. Эти методы позволяют клиенту отслеживать добавленные и удаленные сущности, а также изменения, вносимые в значения свойств или в связи между экземплярами сущностей. При вызове метода <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> отслеженные изменения отправляются назад в службу данных в виде операций, основанных на REST.  
   
 > [!NOTE]
 > При использовании экземпляра класса <xref:System.Data.Services.Client.DataServiceCollection%601> для привязки данных к элементам управления, изменения, внесенные в данные с помощью привязанного элемента управления, автоматически передаются объекту <xref:System.Data.Services.Client.DataServiceContext>. Дополнительные сведения см. [в разделе Привязка данных к элементам управления](binding-data-to-controls-wcf-data-services.md).  
@@ -67,7 +67,7 @@ ms.locfileid: "73975114"
 ## <a name="creating-and-modifying-relationship-links"></a>Создание и изменение ссылок на связи  
  При добавлении новой сущности с помощью метода <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A> или соответствующего метода *AddTo* класса <xref:System.Data.Services.Client.DataServiceContext>, создаваемого диалоговым окном **Добавление ссылки на службу** , любые связи между новой сущностью и связанными сущностями не определяются автоматически.  
   
- Пользователь может создать и изменить связи между экземплярами сущностей и отразить эти изменения в службе данных с помощью клиентской библиотеки. Связи между сущностями определяются как ассоциации модели, а объект <xref:System.Data.Services.Client.DataServiceContext> отслеживает каждую связь в виде объекта ссылки в контексте. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] предоставляет следующие методы класса <xref:System.Data.Services.Client.DataServiceContext> для создания, изменения и удаления этих ссылок:  
+ Пользователь может создать и изменить связи между экземплярами сущностей и отразить эти изменения в службе данных с помощью клиентской библиотеки. Связи между сущностями определяются как ассоциации модели, а объект <xref:System.Data.Services.Client.DataServiceContext> отслеживает каждую связь в виде объекта ссылки в контексте. WCF Data Services предоставляет следующие методы класса <xref:System.Data.Services.Client.DataServiceContext> для создания, изменения и удаления этих ссылок:  
   
 |Метод|Описание|  
 |------------|-----------------|  
@@ -93,7 +93,7 @@ ms.locfileid: "73975114"
 ## <a name="saving-changes"></a>Сохранение изменений  
  Изменения отслеживаются в экземпляре <xref:System.Data.Services.Client.DataServiceContext>, но не отправляются на сервер немедленно. После завершения изменений для указанного действия вызовите метод <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A>, чтобы передать все изменения в службу данных. Дополнительные сведения см. [в разделе Управление контекстом службы данных](managing-the-data-service-context-wcf-data-services.md). Изменения можно сохранить и асинхронно с помощью методов <xref:System.Data.Services.Client.DataServiceContext.BeginSaveChanges%2A> и <xref:System.Data.Services.Client.DataServiceContext.EndSaveChanges%2A>. Дополнительные сведения см. в разделе [асинхронные операции](asynchronous-operations-wcf-data-services.md).  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Библиотека клиентов служб данных WCF](wcf-data-services-client-library.md)
 - [Выполнение запросов к службе данных](querying-the-data-service-wcf-data-services.md)

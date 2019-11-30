@@ -9,16 +9,16 @@ helpviewer_keywords:
 - WCF Data Services, querying
 - WCF Data Services, accessing data
 ms.assetid: 823e9444-27aa-4f1f-be8e-0486d67f54c0
-ms.openlocfilehash: e37a1654bdc62937bbb27c293a110293c9928645
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 99fe377e8fff193c4f8bb566946b95c61c1b3693
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975168"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74568885"
 ---
 # <a name="querying-the-data-service-wcf-data-services"></a>Выполнение запросов к службе данных (службы данных WCF)
 
-Клиентская библиотека служб [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] позволяет выполнять запросы службы данных, используя знакомые шаблоны программирования .NET Framework, включая использование языка LINQ. Клиентская библиотека преобразует запрос, определенный на клиенте как экземпляр класса <xref:System.Data.Services.Client.DataServiceQuery%601>, в сообщение запроса HTTP GET. Библиотека получает ответное сообщение и преобразует его в экземпляры клиентских классов службы данных. Эти классы отслеживаются с помощью <xref:System.Data.Services.Client.DataServiceContext>, которому принадлежит объект <xref:System.Data.Services.Client.DataServiceQuery%601>.
+Клиентская библиотека WCF Data Services позволяет выполнять запросы к службе данных с помощью привычных .NET Framework шаблонов программирования, включая использование LINQ. Клиентская библиотека преобразует запрос, определенный на клиенте как экземпляр класса <xref:System.Data.Services.Client.DataServiceQuery%601>, в сообщение запроса HTTP GET. Библиотека получает ответное сообщение и преобразует его в экземпляры клиентских классов службы данных. Эти классы отслеживаются с помощью <xref:System.Data.Services.Client.DataServiceContext>, которому принадлежит объект <xref:System.Data.Services.Client.DataServiceQuery%601>.
 
 ## <a name="data-service-queries"></a>Запросы к службе данных
 
@@ -45,11 +45,11 @@ ms.locfileid: "73975168"
 
 Дополнительные сведения см. [в разделе инструкции. выполнение запросов службы данных](how-to-execute-data-service-queries-wcf-data-services.md).
 
-Клиент [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] поддерживает запросы для объектов с поздним связыванием, например при использовании *динамического* типа в C#. Тем не менее в силу влияния на производительность для службы данных необходимо всегда составлять строго типизированные запросы. Тип <xref:System.Tuple> и динамические объекты не поддерживаются клиентом.
+Клиент WCF Data Services поддерживает запросы для объектов с поздним связыванием, например при использовании *динамического* типа в C#. Тем не менее в силу влияния на производительность для службы данных необходимо всегда составлять строго типизированные запросы. Тип <xref:System.Tuple> и динамические объекты не поддерживаются клиентом.
 
 ## <a name="linq-queries"></a>Запросы LINQ
 
-Поскольку класс <xref:System.Data.Services.Client.DataServiceQuery%601> реализует интерфейс <xref:System.Linq.IQueryable%601>, определенный LINQ, клиентская библиотека [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] может преобразовать запросы LINQ к данным набора сущностей в URI, представляющий выражение запроса, вычисляемое для ресурса службы данных. В следующем примере показан запрос LINQ, эквивалентный предыдущему объекту <xref:System.Data.Services.Client.DataServiceQuery%601>, который возвращает объект `Orders` со стоимостью транспортировки более 30 долларов и упорядочивает результаты по стоимости транспортировки.
+Поскольку класс <xref:System.Data.Services.Client.DataServiceQuery%601> реализует интерфейс <xref:System.Linq.IQueryable%601>, определенный LINQ, клиентская библиотека WCF Data Services может преобразовать запросы LINQ к данным набора сущностей в URI, представляющий выражение запроса, вычисляемое для ресурса службы данных. В следующем примере показан запрос LINQ, эквивалентный предыдущему объекту <xref:System.Data.Services.Client.DataServiceQuery%601>, который возвращает объект `Orders` со стоимостью транспортировки более 30 долларов и упорядочивает результаты по стоимости транспортировки.
 
 [!code-csharp[Astoria Northwind Client#AddQueryOptionsLinqSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#addqueryoptionslinqspecific)]
 [!code-vb[Astoria Northwind Client#AddQueryOptionsLinqSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#addqueryoptionslinqspecific)]
@@ -67,7 +67,7 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
 
 ## <a name="adding-query-options"></a>Добавление параметров запроса
 
-Запросы службы данных поддерживают все параметры запроса, которые предоставляют службы [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]. Метод <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> вызывается для присоединения параметров запроса к экземпляру <xref:System.Data.Services.Client.DataServiceQuery%601>. <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> возвращает новый экземпляр <xref:System.Data.Services.Client.DataServiceQuery%601>, эквивалентный исходному запросу, но с новым набором параметров запроса. Следующий запрос, если он выполняется, возвращает объект `Orders`, отфильтрованный по значению `Freight` и упорядоченный по `OrderID` по убыванию.
+Запросы службы данных поддерживают все параметры запросов, предоставляемые службой WCF Data Service. Метод <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> вызывается для присоединения параметров запроса к экземпляру <xref:System.Data.Services.Client.DataServiceQuery%601>. <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> возвращает новый экземпляр <xref:System.Data.Services.Client.DataServiceQuery%601>, эквивалентный исходному запросу, но с новым набором параметров запроса. Следующий запрос, если он выполняется, возвращает объект `Orders`, отфильтрованный по значению `Freight` и упорядоченный по `OrderID` по убыванию.
 
 [!code-csharp[Astoria Northwind Client#AddQueryOptionsSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#addqueryoptionsspecific)]
 [!code-vb[Astoria Northwind Client#AddQueryOptionsSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#addqueryoptionsspecific)]
@@ -118,7 +118,7 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
 
 - <xref:System.Data.Services.Client.QueryOperationResponse.GetContinuation%2A> — возвращает объект <xref:System.Data.Services.Client.DataServiceQueryContinuation>, который содержит URI следующей страницы результатов.
 
-По умолчанию [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] возвращает только те данные, которые явно выбраны с помощью URI запроса. Это дает возможность явно загрузить дополнительные данные из службы данных, если это необходимо. Запрос отправляется в службу данных при каждой явной загрузке данных из службы данных. Данные, которые можно явно загрузить, включают связанные сущности, разбитые на страницы данные ответа и потоки двоичных данных.
+По умолчанию WCF Data Services возвращает только те данные, которые явно выбраны с помощью URI запроса. Это дает возможность явно загрузить дополнительные данные из службы данных, если это необходимо. Запрос отправляется в службу данных при каждой явной загрузке данных из службы данных. Данные, которые можно явно загрузить, включают связанные сущности, разбитые на страницы данные ответа и потоки двоичных данных.
 
 > [!NOTE]
 > Поскольку служба данных может возвратить разбитый на страницы ответ, рекомендуется, чтобы приложение использовало шаблон программирования для обработки разбитого на страницы ответа службы данных. Дополнительные сведения см. в разделе [Загрузка отложенного содержимого](loading-deferred-content-wcf-data-services.md).
@@ -151,6 +151,6 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
 
 - [Практическое руководство. Проекция результатов запроса](how-to-project-query-results-wcf-data-services.md)
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Библиотека клиентов служб данных WCF](wcf-data-services-client-library.md)

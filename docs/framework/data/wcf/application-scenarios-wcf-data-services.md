@@ -5,16 +5,16 @@ helpviewer_keywords:
 - WCF Data Services, learn more
 - WCF Data Services, scenarios
 ms.assetid: 7c82658f-e7c0-46b6-834d-6592f67ab5ea
-ms.openlocfilehash: 50e481dd67a56233fcbb3714c86d71dd7e5307e8
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 38bba2e9f63ab6cce0ede1a82658b6a21f5d4a4b
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975421"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74569396"
 ---
 # <a name="application-scenarios-wcf-data-services"></a>Сценарии приложений (службы данных WCF)
 
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] поддерживает основной набор сценариев для предоставления и использования данных в качестве веб-каналов Open Data Protocol (OData). В этом подразделе описываются разделы, относящиеся к этим сценариям.
+WCF Data Services поддерживает основной набор сценариев для предоставления и использования данных в качестве веб-каналов Open Data Protocol (OData). В этом подразделе описываются разделы, относящиеся к этим сценариям.
 
 Предоставление реляционных данных из базы данных в качестве веб-канала OData.
 
@@ -98,7 +98,7 @@ ms.locfileid: "73975421"
 
 - [Операции служб](service-operations-wcf-data-services.md)
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Краткое руководство](quickstart-wcf-data-services.md)
 - [Ресурсы](wcf-data-services-resources.md)

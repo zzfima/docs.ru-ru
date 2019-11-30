@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Определение количества сущностей, возвращаемых запросом (WCF Data Services)
+title: Практическое руководство. Определение количества сущностей, возвращаемых запросом (службы данных WCF)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,15 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, row count
 ms.assetid: 03d41a82-df95-40ac-8439-a6c327d37ba8
-ms.openlocfilehash: 942fc6d6cbfb35d836ca5881958e7c9965a7d08b
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 43833566d59b15ef382872b0c40f452192b59bac
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70779837"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74568928"
 ---
-# <a name="how-to-determine-the-number-of-entities-returned-by-a-query-wcf-data-services"></a>Практическое руководство. Определение количества сущностей, возвращаемых запросом (WCF Data Services)
-В [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] можно определить число сущностей в наборе сущностей, заданном в URI запроса. Это число можно включить в результат запроса или представить как целое значение. Дополнительные сведения см. [в разделе запросы к службе данных](querying-the-data-service-wcf-data-services.md).  
+# <a name="how-to-determine-the-number-of-entities-returned-by-a-query-wcf-data-services"></a>Практическое руководство. Определение количества сущностей, возвращаемых запросом (службы данных WCF)
+С помощью WCF Data Services можно определить количество сущностей, которые находятся в наборе сущностей, заданном с помощью URI запроса. Это число можно включить в результат запроса или представить как целое значение. Дополнительные сведения см. [в разделе запросы к службе данных](querying-the-data-service-wcf-data-services.md).  
   
  Пример в этом разделе использует образец службы данных Northwind и автоматически сформированные клиентские классы службы данных. Эта служба и классы данных клиента создаются при завершении [краткого руководства по WCF Data Services](quickstart-wcf-data-services.md).  
   
@@ -31,6 +31,6 @@ ms.locfileid: "70779837"
  [!code-csharp[Astoria Northwind Client#CountAllCustomersValueOnly](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#countallcustomersvalueonly)]
  [!code-vb[Astoria Northwind Client#CountAllCustomersValueOnly](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#countallcustomersvalueonly)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Выполнение запросов к службе данных](querying-the-data-service-wcf-data-services.md)

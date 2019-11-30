@@ -5,18 +5,18 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - WCF Data Services, querying
 ms.assetid: f0dbf7b0-0292-4e31-9ae4-b98288336dc1
-ms.openlocfilehash: 68b04ac59d1b73d6e66a5a7836ce1bfe30d9c681
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 7a2b201e5690c4304e663e9429c54f377e05f556
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975193"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74568908"
 ---
 # <a name="object-materialization-wcf-data-services"></a>Материализация объектов (службы данных WCF)
 
 При использовании диалогового окна **Добавление ссылки на службу** для использования канала Open Data Protocol (OData) в клиентском приложении на основе .NET Framework для каждого типа сущностей в модели данных, предоставляемой веб-каналом, создаются эквивалентные классы данных. Дополнительные сведения см. [в разделе Создание клиентской библиотеки службы данных](generating-the-data-service-client-library-wcf-data-services.md). Данные сущности, возвращаемые запросом, материализуются в экземпляр одного из созданных классов клиентской службы данных. Сведения о параметрах слияния и разрешении идентификаторов для отслеживания объектов см. [в разделе Управление контекстом службы данных](managing-the-data-service-context-wcf-data-services.md).
 
-Службы [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] позволяют также определять собственные классы клиентской службы данных, а не использовать формируемые средством классы данных. Это позволяет разработчикам использовать собственные классы данных, также называемые классами данных POCO (Plain Old CLR Object). При использовании этих типов пользовательских классов данных следует присвоить классу данных либо <xref:System.Data.Services.Common.DataServiceKeyAttribute>, либо <xref:System.Data.Services.Common.DataServiceEntityAttribute> и убедиться, что имена типов в клиенте совпадают с именами типов в модели данных службы данных.
+WCF Data Services также позволяет определять собственные классы клиентских служб данных вместо использования созданных средством классов данных. Это позволяет разработчикам использовать собственные классы данных, также называемые классами данных POCO (Plain Old CLR Object). При использовании этих типов пользовательских классов данных следует присвоить классу данных либо <xref:System.Data.Services.Common.DataServiceKeyAttribute>, либо <xref:System.Data.Services.Common.DataServiceEntityAttribute> и убедиться, что имена типов в клиенте совпадают с именами типов в модели данных службы данных.
 
 После того как библиотека получает ответное сообщение запроса, она преобразует возвращенные данные из канала OData в экземпляры классов клиентских служб данных, которые имеют тип запроса. Обычно общий процесс материализации этих объектов происходит следующим образом.
 
@@ -47,7 +47,7 @@ ms.locfileid: "73975193"
 
 5. Клиентская библиотека присоединяет объект к контексту <xref:System.Data.Services.Client.DataServiceContext>. Если параметр <xref:System.Data.Services.Client.MergeOption> равен <xref:System.Data.Services.Client.MergeOption.NoTracking>, объект не присоединяется.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Выполнение запросов к службе данных](querying-the-data-service-wcf-data-services.md)
 - [Проекции запросов](query-projections-wcf-data-services.md)

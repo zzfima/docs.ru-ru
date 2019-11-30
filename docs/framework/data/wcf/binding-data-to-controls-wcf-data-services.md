@@ -9,15 +9,15 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - data binding, WCF Data Services
 ms.assetid: b32e1d49-c214-4cb1-867e-88fbb3d08c8d
-ms.openlocfilehash: 605ff7a9acaaa217f0e482579968757dd451aed9
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: ab75380738064a001b12e79d1481d053622077ef
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974832"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74569320"
 ---
 # <a name="binding-data-to-controls-wcf-data-services"></a>Привязка данных к элементам управления (службы данных WCF)
-С помощью служб [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] можно привязывать элементы управления, такие как `ComboBox` и `ListView`, к экземпляру класса <xref:System.Data.Services.Client.DataServiceCollection%601>. Эта коллекция, которая наследуется от класса <xref:System.Collections.ObjectModel.ObservableCollection%601>, содержит данные из канала Open Data Protocol (OData). Этот класс представляет коллекцию динамических данных, обеспечивающих выдачу уведомлений при добавлении и удалении элементов. При использовании экземпляра <xref:System.Data.Services.Client.DataServiceCollection%601> для привязки данных, [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] клиентские библиотеки обрабатывали эти события, чтобы гарантировать, что объекты, которые отписываются <xref:System.Data.Services.Client.DataServiceContext>, будут синхронизированы с данными в связанном элементе пользовательского интерфейса.  
+С помощью WCF Data Services можно привязывать элементы управления, такие как `ComboBox` и `ListView`, к экземпляру класса <xref:System.Data.Services.Client.DataServiceCollection%601>. Эта коллекция, которая наследуется от класса <xref:System.Collections.ObjectModel.ObservableCollection%601>, содержит данные из канала Open Data Protocol (OData). Этот класс представляет коллекцию динамических данных, обеспечивающих выдачу уведомлений при добавлении и удалении элементов. При использовании экземпляра <xref:System.Data.Services.Client.DataServiceCollection%601> для привязки данных, WCF Data Services клиентские библиотеки обрабатывали эти события, чтобы гарантировать, что объекты, которые отписываются <xref:System.Data.Services.Client.DataServiceContext>, будут синхронизированы с данными в связанном элементе пользовательского интерфейса.  
   
  Класс <xref:System.Data.Services.Client.DataServiceCollection%601> реализует интерфейс <xref:System.Collections.Specialized.INotifyCollectionChanged> (не напрямую) для оповещения контекста о добавлении и удалении объектов в коллекции. Объекты типа службы данных, используемые с коллекцией <xref:System.Data.Services.Client.DataServiceCollection%601>, должны также реализовать интерфейс <xref:System.ComponentModel.INotifyPropertyChanged> для оповещения объекта <xref:System.Data.Services.Client.DataServiceCollection%601> об изменении свойств объектов в привязанной коллекции.  
   
@@ -86,7 +86,7 @@ ms.locfileid: "73974832"
 - `entityCollectionChanged` — метод, вызываемый при добавлении или удалении объекта из коллекции привязок. Делегат <xref:System.Func%602> принимает объект <xref:System.Data.Services.Client.EntityCollectionChangedParams> и возвращает логическое значение, указывающее, должно ли по-прежнему применяться поведение по умолчанию, то есть вызов метода <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A> для действия <xref:System.Collections.Specialized.NotifyCollectionChangedAction.Add> или метода <xref:System.Data.Services.Client.DataServiceContext.DeleteObject%2A> для действия <xref:System.Collections.Specialized.NotifyCollectionChangedAction.Remove> применительно к контексту <xref:System.Data.Services.Client.DataServiceContext>.  
   
 > [!NOTE]
-> Службы [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] не выполняют никаких проверок специализированного поведения, реализованного в этих делегатах.  
+> WCF Data Services не выполняет проверку пользовательских поведений, реализованных в этих делегатах.  
   
  В следующем примере задано специализированное действие <xref:System.Collections.Specialized.NotifyCollectionChangedAction.Remove>, вызывающее метод <xref:System.Data.Services.Client.DataServiceContext.DeleteLink%2A> и <xref:System.Data.Services.Client.DataServiceContext.DeleteObject%2A> для удаления сущностей `Orders_Details`, принадлежащих удаленной сущности `Orders`. Это специализированное действие выполняется, поскольку зависимые сущности не удаляются автоматически при удалении родительской сущности.  
   
@@ -113,7 +113,7 @@ ms.locfileid: "73974832"
   
  Дополнительные сведения см. [в разделе Обновление службы данных](updating-the-data-service-wcf-data-services.md).  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Практическое руководство. Создание клиентских классов служб данных вручную](how-to-manually-generate-client-data-service-classes-wcf-data-services.md)
 - [Практическое руководство. Добавление ссылки на службу данных](how-to-add-a-data-service-reference-wcf-data-services.md)

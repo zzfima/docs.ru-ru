@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Выполнение запросов асинхронной службы данных (WCF Data Services)
+title: Практическое руководство. Выполнение асинхронных запросов к службе данных (службы данных WCF)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,15 +8,15 @@ helpviewer_keywords:
 - WCF Data Services, asynchronous operations
 - asynchronous operations [WCF Data Services]
 ms.assetid: 902a2dc1-d0e9-4b00-90a8-becc4cb1f6a7
-ms.openlocfilehash: 14bfc138c5ece45184fb939f19aaf3d7e73e7294
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 68e2035315780b7c6dd60e93ae6eb10d252aabb3
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70790573"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74569071"
 ---
-# <a name="how-to-execute-asynchronous-data-service-queries-wcf-data-services"></a>Практическое руководство. Выполнение запросов асинхронной службы данных (WCF Data Services)
-При использовании клиентской библиотеки служб [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] операции «клиент-сервер», например выполнение запросов и сохранение изменений, можно выполнять асинхронно. Дополнительные сведения см. в разделе [асинхронные операции](asynchronous-operations-wcf-data-services.md).  
+# <a name="how-to-execute-asynchronous-data-service-queries-wcf-data-services"></a>Практическое руководство. Выполнение асинхронных запросов к службе данных (службы данных WCF)
+С помощью клиентской библиотеки WCF Data Services можно асинхронно выполнять операции типа "клиент-сервер", такие как выполнение запросов и сохранение изменений. Дополнительные сведения см. в разделе [асинхронные операции](asynchronous-operations-wcf-data-services.md).  
   
 > [!NOTE]
 > В приложении, в котором метод обратного вызова должен быть вызван из определенного потока, необходимо выполнить явный маршалинг выполнения метода <xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A>. Дополнительные сведения см. в разделе [асинхронные операции](asynchronous-operations-wcf-data-services.md).  
@@ -29,6 +29,6 @@ ms.locfileid: "70790573"
  [!code-csharp[Astoria Northwind Client#ExecuteQueryAsync](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#executequeryasync)]
  [!code-vb[Astoria Northwind Client#ExecuteQueryAsync](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#executequeryasync)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Библиотека клиентов служб данных WCF](wcf-data-services-client-library.md)

@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Добавление, изменение и удаление сущностей (WCF Data Services)
+title: Практическое руководство. Добавление, изменение и удаление сущностей (службы данных WCF)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,15 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, changing data
 ms.assetid: a00f8933-b232-4445-95ba-adc634f055d8
-ms.openlocfilehash: 13c59bee9fc58dbe8c5b8c768fe9ff8b31d72e76
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 501bec59a61b51ec4bece4b0ce2f941189b35ed0
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70780256"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74569196"
 ---
-# <a name="how-to-add-modify-and-delete-entities-wcf-data-services"></a>Практическое руководство. Добавление, изменение и удаление сущностей (WCF Data Services)
-С помощью <xref:System.Data.Services.Client.DataServiceContext>клиентских библиотек можно создавать, обновлять и удалять данные сущностей в службе данных, выполняя эквивалентные действия с объектами в. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Дополнительные сведения см. [в разделе Обновление службы данных](updating-the-data-service-wcf-data-services.md).  
+# <a name="how-to-add-modify-and-delete-entities-wcf-data-services"></a>Практическое руководство. Добавление, изменение и удаление сущностей (службы данных WCF)
+С помощью клиентских библиотек WCF Data Services можно создавать, обновлять и удалять данные сущностей в службе данных, выполняя аналогичные действия с объектами в <xref:System.Data.Services.Client.DataServiceContext>. Дополнительные сведения см. [в разделе Обновление службы данных](updating-the-data-service-wcf-data-services.md).  
   
  Пример в этом разделе использует образец службы данных Northwind и автоматически сформированные клиентские классы службы данных. Эта служба и классы данных клиента создаются при завершении [краткого руководства по WCF Data Services](quickstart-wcf-data-services.md).  
   
@@ -43,9 +43,9 @@ ms.locfileid: "70780256"
  [!code-csharp[Astoria Northwind Client#AddOrderDetailToOrderAuto](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#addorderdetailtoorderauto)]
  [!code-vb[Astoria Northwind Client#AddOrderDetailToOrderAuto](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#addorderdetailtoorderauto)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Библиотека клиентов служб данных WCF](wcf-data-services-client-library.md)
-- [Практическое руководство. Присоединение существующей сущности к DataServiceContext](attach-an-existing-entity-to-dc-wcf-data.md)
-- [Практическое руководство. Определение связей между сущностями](how-to-define-entity-relationships-wcf-data-services.md)
+- [Практическое руководство. Присоединение существующей сущности к контексту DataServiceContext](attach-an-existing-entity-to-dc-wcf-data.md)
+- [Практическое руководство. Определение связей сущностей](how-to-define-entity-relationships-wcf-data-services.md)
 - [Пакетные операции](batching-operations-wcf-data-services.md)

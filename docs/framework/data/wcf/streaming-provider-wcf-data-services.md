@@ -10,12 +10,12 @@ helpviewer_keywords:
 - streaming data provider [WCF Data Services]
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-ms.openlocfilehash: da575c65902ec8751c12482d0c8d0abd523623e4
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: a5793eae92ffdfa65872c93273bd7cfefdc6f674
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975123"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74568811"
 ---
 # <a name="streaming-provider-wcf-data-services"></a>Потоковый поставщик (службы WCF Data Services)
 
@@ -25,7 +25,7 @@ ms.locfileid: "73975123"
 
 - Запись медиассылки — это сущность, содержащая ссылку на соответствующий поток медиаресурса.
 
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] позволяет определить двоичный поток ресурса путем определения поставщика потоковых данных. Реализация поставщика потоковой передачи предоставляет службе данных поток ресурсов мультимедиа, связанный с определенной сущностью в качестве объекта <xref:System.IO.Stream>. Эта реализация позволяет службе данных принимать и возвращать медиаресурсы по протоколу HTTP в виде потоков двоичных данных с указанным типом MIME.
+С помощью WCF Data Services вы определяете поток двоичных ресурсов, реализуя поставщик потоковых данных. Реализация поставщика потоковой передачи предоставляет службе данных поток ресурсов мультимедиа, связанный с определенной сущностью в качестве объекта <xref:System.IO.Stream>. Эта реализация позволяет службе данных принимать и возвращать медиаресурсы по протоколу HTTP в виде потоков двоичных данных с указанным типом MIME.
 
 Настройка службы данных для поддержки потоков двоичных данных состоит из следующих этапов.
 
@@ -67,7 +67,7 @@ ms.locfileid: "73975123"
 
 Для создания потоковой службы данных, которая поддерживает двоичные потоки данных, необходимо реализовать интерфейс <xref:System.Data.Services.Providers.IDataServiceStreamProvider>. Эта реализация позволяет службе данных возвращать клиенту двоичные данные в виде потока и получать двоичные данные в виде потока от клиента. В службе данных экземпляр этого интерфейса создается каждый раз, когда возникает необходимость получить доступ к двоичным данным как к потоку. Интерфейс <xref:System.Data.Services.Providers.IDataServiceStreamProvider> определяет следующие члены.
 
-|Имя члена|Описание|
+|Имя элемента|Описание|
 |-----------------|-----------------|
 |<xref:System.Data.Services.Providers.IDataServiceStreamProvider.DeleteStream%2A>|Этот метод вызывается службой данных для удаления соответствующего медиаресурса при удалении относящейся к нему медиассылки. При реализации <xref:System.Data.Services.Providers.IDataServiceStreamProvider> этот метод содержит код для удаления медиаресурса, связанного с поставляемой медиассылкой.|
 |<xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetReadStream%2A>|Этот метод вызывается службой данных для возвращения медиаресурса в виде потока. При реализации <xref:System.Data.Services.Providers.IDataServiceStreamProvider> этот метод содержит код, создающий поток, используемый службой данных для возвращения медиаресурса, связанного с предоставленной медиассылкой.|
@@ -79,7 +79,7 @@ ms.locfileid: "73975123"
 
 ## <a name="creating-the-streaming-data-service"></a>Создание потоковой службы данных
 
-Для предоставления среде выполнения [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] доступа к реализации <xref:System.Data.Services.Providers.IDataServiceStreamProvider> необходимо, чтобы создаваемая служба данных реализовывала также интерфейс <xref:System.IServiceProvider>. В следующем примере показана реализация метода <xref:System.IServiceProvider.GetService%2A>, который возвращает экземпляр класса `PhotoServiceStreamProvider`, реализующего <xref:System.Data.Services.Providers.IDataServiceStreamProvider>.
+Чтобы предоставить среде выполнения WCF Data Services доступ к реализации <xref:System.Data.Services.Providers.IDataServiceStreamProvider>, создаваемая служба данных также должна реализовывать интерфейс <xref:System.IServiceProvider>. В следующем примере показана реализация метода <xref:System.IServiceProvider.GetService%2A>, который возвращает экземпляр класса `PhotoServiceStreamProvider`, реализующего <xref:System.Data.Services.Providers.IDataServiceStreamProvider>.
 
 [!code-csharp[Astoria Photo Streaming Service#PhotoServiceStreamingProvider](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_photo_streaming_service/cs/photodata.svc.cs#photoservicestreamingprovider)]
 [!code-vb[Astoria Photo Streaming Service#PhotoServiceStreamingProvider](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_photo_streaming_service/vb/photodata.svc.vb#photoservicestreamingprovider)]
@@ -99,7 +99,7 @@ ms.locfileid: "73975123"
 
 ## <a name="using-data-streams-in-a-client-application"></a>Использование потоков данных в клиентском приложении
 
-Клиентская библиотека [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] позволяет и получать и обновлять эти предоставленные ресурсы в виде двоичных потоков на клиенте. Дополнительные сведения см. в разделе [Работа с двоичными данными](working-with-binary-data-wcf-data-services.md).
+Клиентская библиотека WCF Data Services позволяет получать и обновлять эти ресурсы как двоичные потоки на клиенте. Дополнительные сведения см. в разделе [Работа с двоичными данными](working-with-binary-data-wcf-data-services.md).
 
 ## <a name="considerations-for-working-with-a-streaming-provider"></a>Вопросы по работе с потоковым поставщиком
 
@@ -137,7 +137,7 @@ ms.locfileid: "73975123"
 
 Дополнительные сведения см. в разделе [Управление версиями службы данных](data-service-versioning-wcf-data-services.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Поставщики служб данных](data-services-providers-wcf-data-services.md)
 - [Специализированные поставщики служб данных](custom-data-service-providers-wcf-data-services.md)

@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Настройка поведения привязки данных (WCF Data Services)
+title: Практическое руководство. Настройка поведения привязки данных (службы данных WCF)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,15 +8,15 @@ helpviewer_keywords:
 - WCF Data Services, customizing
 - WCF Data Services, data binding
 ms.assetid: 40476b89-8941-4771-8d21-2fe430c85a9d
-ms.openlocfilehash: c878096cba7d31e0b48727213ee1bb8239b8f690
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 453562dd1b86756bf9fc1684dc649dba1c24c578
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70790760"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74569167"
 ---
-# <a name="how-to-customize-data-binding-behaviors-wcf-data-services"></a>Практическое руководство. Настройка поведения привязки данных (WCF Data Services)
-Службы [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] позволяют добавлять специализированную логику, которая вызывается коллекцией <xref:System.Data.Services.Client.DataServiceCollection%601> при добавлении или удалении объекта из коллекции привязок или при изменении значения свойства. Эта пользовательская логика предоставляется в виде методов, <xref:System.Func%602> на которые ссылаются как делегаты, `false` которые возвращают значение, если поведение по умолчанию должно быть выполнено при завершении пользовательского метода и `true` при последующей обработке событие должно быть остановлено.  
+# <a name="how-to-customize-data-binding-behaviors-wcf-data-services"></a>Практическое руководство. Настройка поведения привязки данных (службы данных WCF)
+С помощью WCF Data Services можно указать пользовательскую логику, вызываемую <xref:System.Data.Services.Client.DataServiceCollection%601> при добавлении или удалении объекта из коллекции привязки или при обнаружении изменения свойства. Эта пользовательская логика предоставляется как методы, на которые имеются ссылки как на <xref:System.Func%602> делегаты, которые возвращают значение `false`, когда поведение по умолчанию должно выполняться по завершении настраиваемого метода и `true` при последующей обработке события.  
   
  Примеры в этом разделе добавляют специализированные методы для обоих параметров `entityChanged` и `entityCollectionChanged` коллекции <xref:System.Data.Services.Client.DataServiceCollection%601>. Примеры в этом разделе используют образец службы данных Northwind и автоматически сформированные клиентские классы службы данных. Эта служба и классы данных клиента создаются при завершении [краткого руководства по WCF Data Services](quickstart-wcf-data-services.md).  
   
@@ -32,6 +32,6 @@ ms.locfileid: "70790760"
   
  [!code-xaml[Astoria Northwind Client#WpfDataBindingCustomXaml](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/customerorderscustom.xaml#wpfdatabindingcustomxaml)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Библиотека клиентов служб данных WCF](wcf-data-services-client-library.md)

@@ -2,12 +2,12 @@
 title: Настройка служб WCF в коде
 ms.date: 03/30/2017
 ms.assetid: 193c725d-134f-4d31-a8f8-4e575233bff6
-ms.openlocfilehash: c6bcf08511470d28e1087108d95e477683b0338b
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 5d05fe5f70f4e2b1490c728cc019430cd94ff925
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320633"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74569509"
 ---
 # <a name="configuring-wcf-services-in-code"></a>Настройка служб WCF в коде
 Windows Communication Foundation (WCF) позволяет разработчикам настраивать службы с помощью файлов конфигурации или кода.  Файлы конфигурации используются, если необходимо настроить службу после ее развертывания. При использовании файлов конфигурации ИТ-работнику требуется только обновить файл конфигурации без необходимости выполнять повторную компиляцию. Файлы конфигурации, однако, могут быть сложными и требовать больших усилий при обслуживании. Отсутствует поддержка отладки файлов конфигурации, и ссылки на элементы конфигурации осуществляются по именам, что усложняет работу и способствует совершению ошибок при создании файлов конфигурации. WCF также позволяет настраивать службы в коде. В более ранних версиях WCF (4,0 и более ранних версий) Настройка служб в коде была непростой в собственных сценариях, класс <xref:System.ServiceModel.ServiceHost> позволял вам настроить конечные точки и поведения до вызова ServiceHost. Open. Однако в сценариях с размещением в Интернете нет прямого доступа к классу <xref:System.ServiceModel.ServiceHost>. Чтобы настроить службу, размещенную в сети, приходилось создавать класс `System.ServiceModel.ServiceHostFactory`, который создавал <xref:System.ServiceModel.Activation.ServiceHostFactory> и выполнял необходимые настройки. Начиная с .NET 4,5, WCF предоставляет более простой способ настройки автономных и размещенных в Интернете служб в коде.  
@@ -68,7 +68,7 @@ public class Service1 : IService1
        config.Description.Behaviors.Add( new ServiceMetadataBehavior { HttpGetEnabled = true });   
        // set up support for http, https, net.tcp, net.pipe   
        config.EnableProtocol(new BasicHttpBinding());   
-       config.EnableProtocol(new BasicHttpBinding());   
+       config.EnableProtocol(new BasicHttpsBinding());   
        config.EnableProtocol(new NetTcpBinding());   
        config.EnableProtocol(new NetNamedPipeBinding());   
        // add an extra BasicHttpBinding endpoint at http:///basic   
@@ -91,7 +91,7 @@ public class Service1 : IService1
 ```  
   
 > [!IMPORTANT]
-> Обратите внимание, что <xref:System.ServiceModel.ServiceConfiguration.LoadFromConfiguration%2A> игнорирует параметры <`host`> в теге <`service`>.`system.serviceModel` По сути <`host`> — это конфигурация узла, а не конфигурация службы, которая загружается перед выполнением метода Configure.  
+> Обратите внимание, что <xref:System.ServiceModel.ServiceConfiguration.LoadFromConfiguration%2A> игнорирует параметры <`host`> в теге <`service`>. По сути <`host`> — это конфигурация узла, а не конфигурация службы, которая загружается перед выполнением метода Configure.  
   
 ## <a name="see-also"></a>См. также:
 

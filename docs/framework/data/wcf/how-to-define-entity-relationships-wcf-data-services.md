@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Определение связей между сущностями (WCF Data Services)
+title: Практическое руководство. Определение связей сущностей (службы данных WCF)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,15 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, changing data
 ms.assetid: cc255524-1534-4fae-b83c-250933d5a72b
-ms.openlocfilehash: 63714f97e691b2ba0177a36a599b62ca7681dcf6
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: f693579883ae03a6c8df3e9a9f4941e1f9940a4c
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70790651"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74569122"
 ---
-# <a name="how-to-define-entity-relationships-wcf-data-services"></a>Практическое руководство. Определение связей между сущностями (WCF Data Services)
-После добавления новой сущности в службах [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] связи между нею и связанными сущностями не определяются автоматически. Пользователь может создать и изменить связи между экземплярами сущностей и отразить эти изменения в службе данных с помощью клиентской библиотеки. Дополнительные сведения см. [в разделе Обновление службы данных](updating-the-data-service-wcf-data-services.md).  
+# <a name="how-to-define-entity-relationships-wcf-data-services"></a>Практическое руководство. Определение связей сущностей (службы данных WCF)
+При добавлении новой сущности в WCF Data Services любые связи между новой сущностью и связанными сущностями не определяются автоматически. Пользователь может создать и изменить связи между экземплярами сущностей и отразить эти изменения в службе данных с помощью клиентской библиотеки. Дополнительные сведения см. [в разделе Обновление службы данных](updating-the-data-service-wcf-data-services.md).  
   
  Пример в этом разделе использует образец службы данных Northwind и автоматически сформированные клиентские классы службы данных. Эта служба и классы данных клиента создаются при завершении [краткого руководства по WCF Data Services](quickstart-wcf-data-services.md).  
   
@@ -31,7 +31,7 @@ ms.locfileid: "70790651"
  [!code-csharp[Astoria Northwind Client#AddOrderDetailToOrder](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#addorderdetailtoorder)]
  [!code-vb[Astoria Northwind Client#AddOrderDetailToOrder](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#addorderdetailtoorder)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Библиотека клиентов служб данных WCF](wcf-data-services-client-library.md)
 - [Практическое руководство. Добавление, изменение и удаление сущностей](how-to-add-modify-and-delete-entities-wcf-data-services.md)
