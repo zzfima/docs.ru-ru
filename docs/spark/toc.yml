@@ -21,7 +21,9 @@
   items:
     - name: Отладка приложения
       href: how-to-guides/debug.md
-- name: Справочник
+    - name: Отправка заданий в HDInsight
+      href: how-to-guides/hdinsight-deploy-methods.md
+- name: Ссылка
   items:
     - name: Справочник по интерфейсам API
       href: 'https://docs.microsoft.com/dotnet/api/?view=spark-dotnet'
