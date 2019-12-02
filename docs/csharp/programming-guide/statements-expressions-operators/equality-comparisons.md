@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - object equality [C#]
 ms.assetid: 10b865ea-4e7b-4127-9242-c9b8f57d9f04
-ms.openlocfilehash: bc3ce4b94bfc72e058d4660d01eb16ef0e0f11db
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: a6876cb98a8c1b1e58e61eb650416d412467ae3d
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69588713"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552425"
 ---
 # <a name="equality-comparisons-c-programming-guide"></a>Проверка равенства (руководство по программированию на C#)
 
@@ -28,7 +28,7 @@ ms.locfileid: "69588713"
 
 ## <a name="value-equality"></a>Равенство значений
 
- Равенство значений означает, что два объекта содержат одинаковое значение или одинаковые значения. Для примитивных типов значений, таких как [int](../../language-reference/builtin-types/integral-numeric-types.md) или [bool](../../language-reference/keywords/bool.md), проверка на равенство значений представляет собой очевидную задачу. Можно использовать оператор [==](../../language-reference/operators/equality-operators.md#equality-operator-), как показано в следующем примере.  
+ Равенство значений означает, что два объекта содержат одинаковое значение или одинаковые значения. Для примитивных типов значений, таких как [int](../../language-reference/builtin-types/integral-numeric-types.md) или [bool](../../language-reference/builtin-types/bool.md), проверка на равенство значений представляет собой очевидную задачу. Можно использовать оператор [==](../../language-reference/operators/equality-operators.md#equality-operator-), как показано в следующем примере.  
   
 ```csharp  
 int a = GetOriginalValue();  
@@ -51,7 +51,7 @@ if( b == a)
   
 ## <a name="related-topics"></a>См. также  
   
-|Заголовок|ОПИСАНИЕ|  
+|Заголовок|Описание|  
 |-----------|-----------------|  
 |[Практическое руководство. Проверка на ссылочное равенство (идентичность)](./how-to-test-for-reference-equality-identity.md)|Описание процедуры проверки равенства ссылок двух переменных.|  
 |[Практическое руководство. Определение равенства значений для типа](./how-to-define-value-equality-for-a-type.md)|Описание предоставления пользовательского определения равенства значений для типа.|  

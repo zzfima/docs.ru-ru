@@ -6,16 +6,16 @@ helpviewer_keywords:
 - false operator [C#]
 - true operator [C#]
 ms.assetid: 81a888fd-011e-4589-b242-6c261fea505e
-ms.openlocfilehash: 780c63e5a8f3f0d82559565b3319fe54507e3d21
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: f65ed3b362080d7a8afe89e22bd132d1fc190b06
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73036129"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552460"
 ---
 # <a name="true-and-false-operators-c-reference"></a>Операторы true и false (справочник по C#)
 
-Оператор `true` возвращает значение [bool](../keywords/bool.md) `true`, указывая, что его операнд имеет значение true. Оператор `false` возвращает значение `bool` `true`, указывая, что его операнд имеет значение false. Операторы `true` и `false` не обязательно дополняют друг друга. То есть оба оператора `true` и `false` могут вернуть значение `bool` `false` для одного операнда. Если тип определяет один из двух операторов, он должен также определять другой оператор.
+Оператор `true` возвращает значение [bool](../builtin-types/bool.md) `true`, указывая, что его операнд имеет значение true. Оператор `false` возвращает значение `bool` `true`, указывая, что его операнд имеет значение false. Операторы `true` и `false` не обязательно дополняют друг друга. То есть оба оператора `true` и `false` могут вернуть значение `bool` `false` для одного операнда. Если тип определяет один из двух операторов, он должен также определять другой оператор.
 
 > [!TIP]
 > Используйте тип `bool?`, если вам нужно использовать трехзначную логику (например, при работе с базами данных, которые поддерживают трехзначный логический тип). В C# предоставляются операторы `&` и `|`, которые поддерживают троичную логику с операндами `bool?`. См. подробнее о [логических операторах, поддерживающих значение NULL](boolean-logical-operators.md#nullable-boolean-logical-operators) в описании [логических операторов](boolean-logical-operators.md).
@@ -45,5 +45,3 @@ Wait!
 
 - [справочник по C#](../index.md)
 - [Операторы в C#](index.md)
-- [Литерал true](../keywords/true-literal.md)
-- [Литерал false](../keywords/false-literal.md)

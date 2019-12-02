@@ -6,12 +6,12 @@ ms.date: 07/29/2019
 helpviewer_keywords:
 - default [C#]
 - parameterless constructor [C#]
-ms.openlocfilehash: 2f1ad5cc029b93261153e46d854cd8bf3e31ce92
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 48aa294fa9e37e2e138444e493faa5474011097e
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428534"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74551827"
 ---
 # <a name="default-values-table-c-reference"></a>Таблица значений по умолчанию (справочник по C#)
 
@@ -22,7 +22,7 @@ ms.locfileid: "74428534"
 |любой ссылочный тип;|`null`|
 |Любой [встроенный целочисленный тип](../builtin-types/integral-numeric-types.md)|Ноль (0)|
 |Любой [встроенный тип с плавающей запятой](../builtin-types/floating-point-numeric-types.md)|Ноль (0)|
-|[bool](bool.md)|`false`|
+|[bool](../builtin-types/bool.md)|`false`|
 |[char](../builtin-types/char.md)|`'\0'` (U+0000)|
 |[enum](enum.md)|Значение, создаваемое выражением `(E)0`, где `E` — это идентификатор перечисления.|
 |[struct](struct.md)|Значение, создаваемое путем установки значений по умолчанию для всех полей с типами значений и значений `null` для всех полей ссылочного типа.|

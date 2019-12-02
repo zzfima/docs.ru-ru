@@ -18,12 +18,12 @@ helpviewer_keywords:
 - floating-point numbers [C#], float keyword
 - double data type [C#]
 - decimal keyword [C#]
-ms.openlocfilehash: 4d71f7eea3f574e483dc4250f5c87e1ffd551f2f
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 23aa33c6887db48a12f995efc5e1e2220d30216c
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72771902"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552282"
 ---
 # <a name="floating-point-numeric-types-c-reference"></a>Числовые типы с плавающей запятой (справочник по C#)
 
@@ -52,8 +52,8 @@ System.Double b = 12.3;
 
 В одном и том же выражении можно сочетать и [целочисленные типы](integral-numeric-types.md), и типы с плавающей запятой. В этом случае целочисленные типы преобразуются в типы с плавающей запятой. Выражение вычисляется по следующим правилам:
 
-- Если одним из типов с плавающей запятой является `double`, выражение оценивается как `double` или [bool](../keywords/bool.md) в реляционных сравнениях или сравнениях на равенство.
-- Если в выражении нет типа `double`, оно оценивается как `float` или [bool](../keywords/bool.md) в реляционных сравнениях или сравнениях на равенство.
+- Если одним из типов с плавающей запятой является `double`, выражение оценивается как `double` или [bool](bool.md) в реляционных сравнениях или сравнениях на равенство.
+- Если в выражении нет типа `double`, оно оценивается как `float` или [bool](bool.md) в реляционных сравнениях или сравнениях на равенство.
 
 Выражение с плавающей запятой может содержать следующие наборы значений:
 

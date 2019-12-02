@@ -7,12 +7,12 @@ helpviewer_keywords:
 - types [C#], built-in
 - built-in C# types
 ms.assetid: 54f901f2-bf2f-472c-ae8d-73e8ecfc57fe
-ms.openlocfilehash: 77a927a7735d565390c8a5560312ee36b9e48925
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: dc324b5d79d3b09f7131cbdf901b64c544bdc104
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428545"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552293"
 ---
 # <a name="built-in-types-table-c-reference"></a>Таблица встроенных типов (Справочник по C#)
 
@@ -20,7 +20,7 @@ ms.locfileid: "74428545"
 
 |Тип C#|Тип .NET|  
 |--------------|-------------------------|  
-|[bool](bool.md)|<xref:System.Boolean?displayProperty=nameWithType>|  
+|[bool](../builtin-types/bool.md)|<xref:System.Boolean?displayProperty=nameWithType>|  
 |[byte](../builtin-types/integral-numeric-types.md)|<xref:System.Byte?displayProperty=nameWithType>|  
 |[sbyte](../builtin-types/integral-numeric-types.md)|<xref:System.SByte?displayProperty=nameWithType>|  
 |[char](../builtin-types/char.md)|<xref:System.Char?displayProperty=nameWithType>|  

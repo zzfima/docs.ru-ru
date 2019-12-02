@@ -6,12 +6,12 @@ helpviewer_keywords:
 - fixed size buffers [C#]
 - unsafe buffers [C#]
 - unsafe code [C#], fixed size buffers
-ms.openlocfilehash: 33af43a69587ffaadd7fcb42fa1d30ee9fc41989
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: deb057929871ffb50da466e3628c34f336ffd5ee
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74429402"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552399"
 ---
 # <a name="fixed-size-buffers-c-programming-guide"></a>Буферы фиксированного размера (Руководство по программированию на C#)
 
@@ -37,7 +37,7 @@ private fixed char name[30];
 
 В предыдущем примере демонстрировался доступ к полям `fixed` без закрепления в памяти, доступный в C#, начиная с версии 7.3.
 
-Еще одним распространенным массивом фиксированного размера является массив [bool](../../language-reference/keywords/bool.md). Элементы в массиве `bool` всегда имеют размер в один байт. Массивы `bool` не подходят для создания битовых массивов или буферов.
+Еще одним распространенным массивом фиксированного размера является массив [bool](../../language-reference/builtin-types/bool.md). Элементы в массиве `bool` всегда имеют размер в один байт. Массивы `bool` не подходят для создания битовых массивов или буферов.
 
 > [!NOTE]
 > За исключением памяти, созданной с помощью [stackalloc](../../language-reference/operators/stackalloc.md), компилятор C# и среда CLR не выполняют проверку переполнения буфера безопасности. Как и при работе с любым небезопасным кодом, следует проявлять осторожность.

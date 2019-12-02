@@ -9,12 +9,12 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: b264be5d2589455562a19ef55b5ddf1a4e74ce15
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: c797b1e9a80030ce6a97fccb14da2c51d753a1dc
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428451"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552330"
 ---
 # <a name="value-types-c-reference"></a>Типы значений (справочник по C#)
 
@@ -42,7 +42,7 @@ ms.locfileid: "74428451"
 
 - [Целочисленные типы](../builtin-types/integral-numeric-types.md): типы целого числа и тип [char](../builtin-types/char.md).
 - [Типы с плавающей запятой](../builtin-types/floating-point-numeric-types.md)
-- [bool](bool.md)
+- [bool](../builtin-types/bool.md)
 
 Простые типы определяются с помощью ключевых слов, но эти ключевые слова являются просто псевдонимами для предопределенных типов структур в пространстве имен <xref:System>. Например, [int](../builtin-types/integral-numeric-types.md) является псевдонимом типа <xref:System.Int32?displayProperty=nameWithType>. Полный список псевдонимов см. в разделе [Таблица встроенных типов (Справочник по C#)](built-in-types-table.md).
 
