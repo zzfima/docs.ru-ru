@@ -5,12 +5,12 @@ author: richlander
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 7b77b6c1-8367-4602-bff3-91e4c05ac643
-ms.openlocfilehash: ba3d5209571019f8ac38702939332fd953307202
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: bfa9c24ef4cd2c418c91e00318aa47b889078d40
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448000"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552659"
 ---
 # <a name="framework-libraries"></a>Библиотеки платформы
 
@@ -32,7 +32,7 @@ ms.locfileid: "74448000"
 * <xref:System.Single?displayProperty=nameWithType> ([float](../csharp/language-reference/builtin-types/floating-point-numeric-types.md)) — 32-разрядный тип с плавающей запятой.
 * <xref:System.Decimal?displayProperty=nameWithType> ([decimal](../csharp/language-reference/builtin-types/floating-point-numeric-types.md)) — 128-разрядный десятичный тип.
 * <xref:System.Byte?displayProperty=nameWithType> ([byte](../csharp/language-reference/builtin-types/integral-numeric-types.md)) — 8-разрядное целое число без знака, которое представляет байт памяти.
-* <xref:System.Boolean?displayProperty=nameWithType> ([bool](../csharp/language-reference/keywords/bool.md)) — логический тип, представляющий `true` или `false`.
+* <xref:System.Boolean?displayProperty=nameWithType> ([bool](../csharp/language-reference/builtin-types/bool.md)) — логический тип, представляющий `true` или `false`.
 * <xref:System.Char?displayProperty=nameWithType> ([char](../csharp/language-reference/builtin-types/char.md)) — 16-разрядный числовой тип, который представляет символ в Юникоде.
 * <xref:System.String?displayProperty=nameWithType> ([string](../csharp/language-reference/builtin-types/reference-types.md#the-string-type)) — представляет набор символов. Отличается от `char[]`, но позволяет индексировать по каждому отдельному `char` в `string`.
 

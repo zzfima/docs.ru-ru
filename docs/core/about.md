@@ -2,12 +2,12 @@
 title: Сведения о .NET Core
 description: Дополнительные сведения о .NET Core.
 ms.date: 09/17/2019
-ms.openlocfilehash: a1127a39d67b6c24994a2957298c62d87703950d
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 4fe16475e18eb88e88fb33d30508f9ef5c9f2cd5
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73416744"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552243"
 ---
 # <a name="about-net-core"></a>Сведения о .NET Core
 
@@ -29,14 +29,14 @@ ms.locfileid: "73416744"
 - [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp)
 - Sublime Text
 - Vim
- 
+
 Интеграция возможна во многом благодаря участникам проектов [OmniSharp](https://www.omnisharp.net/) и [Ionide](http://ionide.io).
 
 ## <a name="apis"></a>API - интерфейсы
 
 .NET Core предоставляет API-интерфейсы для множества сценариев, в некоторых из которых используются:
 
-- Примитивные типы, такие как [bool](../csharp/language-reference/keywords/bool.md) и [int](../csharp/language-reference/builtin-types/integral-numeric-types.md).
+- Примитивные типы, например <xref:System.Boolean?displayProperty=nameWithType> и <xref:System.Int32?displayProperty=nameWithType>.
 - Коллекции, такие как <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> и <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType>.
 - Служебные типы, такие как <xref:System.Net.Http.HttpClient?displayProperty=nameWithType> и <xref:System.IO.FileStream?displayProperty=nameWithType>.
 - Типы данных, такие как <xref:System.Data.DataSet?displayProperty=nameWithType> и [DbSet](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore/).

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - case statement [C#]
 - default keyword [C#]
 ms.assetid: 44bae8b8-8841-4d85-826b-8a94277daecb
-ms.openlocfilehash: 012fa5b4d5f39b4dfa4d1c77bc3d6fbe181e78a6
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 6f0a2cfd5a6de9c8c05bc3daea1e242183ebf03e
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428492"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552344"
 ---
 # <a name="switch-c-reference"></a>switch (справочник по C#)
 
@@ -45,7 +45,7 @@ ms.locfileid: "74428492"
 
 - [char](../builtin-types/char.md);
 - [string](../builtin-types/reference-types.md);
-- [bool](bool.md);
+- [bool](../builtin-types/bool.md);
 - [целочисленное](../builtin-types/integral-numeric-types.md) значение, например `int` или `long`;
 - значение [enum](enum.md).
 
@@ -120,7 +120,7 @@ switch (caseSwitch)
 
 здесь *constant* — это значение для проверки. Значением *constant* может быть любое из следующих константных выражений:
 
-- литерал [bool](bool.md), `true` или `false`;
+- литерал [bool](../builtin-types/bool.md): `true` или `false`;
 - любая [целочисленная](../builtin-types/integral-numeric-types.md) константа, например `int`, `long` или `byte`;
 - имя объявленной переменной `const`;
 - константа перечисления;

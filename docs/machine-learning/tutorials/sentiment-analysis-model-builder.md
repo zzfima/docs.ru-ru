@@ -1,17 +1,17 @@
 ---
 title: Учебник. Анализ тональности (двоичная классификация)
 description: В этом руководстве показано, как создать консольное приложение Razor Pages, которое определяет тональность комментариев на веб-сайте, и предпринимает соответствующие действия. Двоичный классификатор тональности использует построитель моделей в Visual Studio.
-ms.date: 10/08/2019
+ms.date: 11/21/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 5e5b60a53db70b33ed798bcf33497b74911ba727
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: e919341130c6778207f324dd9eb3b3f54c8a9c68
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974797"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74551851"
 ---
 # <a name="tutorial-analyze-sentiment-of-website-comments-in-a-web-application-using-mlnet-model-builder"></a>Учебник. Анализ тональности комментариев на веб-сайте в веб-приложении с помощью построителя моделей ML.NET
 
@@ -48,7 +48,7 @@ ms.locfileid: "73974797"
     1. В диалоговом окне "Новый проект" щелкните узел **Visual C#** , а затем — **Веб**.
     1. Затем, выберите шаблон проекта **Веб-приложение ASP.NET Core**.
     1. В текстовом поле **Имя** введите SentimentRazor.
-    1. Флажок **Создать каталог для решения** должен быть установлен по умолчанию. Если это не так, установите его.
+    1. Убедитесь, что флажок **Поместить решение и проект в одной папке** **снят** (VS 2019) или флажок **Создать каталог для решения** **установлен** (VS 2017).
     1. Нажмите кнопку **OK**.
     1. Выберите **Web Application** (Веб-приложение) в окне с разными типами проектов ASP.NET Core и нажмите кнопку **ОК**.
 

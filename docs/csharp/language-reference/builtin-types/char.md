@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - char data type [C#]
 ms.assetid: b51cf4fb-124c-4067-af48-afbac122b228
-ms.openlocfilehash: 3b2eec4f0e17aa329fe3865fb3ef453ee030c6a7
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: ab49b8cbddac2569d6063a5f312105bef3033e84
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74450844"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552305"
 ---
 # <a name="char-c-reference"></a>char (Справочник по C#)
 
@@ -21,6 +21,8 @@ ms.locfileid: "74450844"
 |Тип|Диапазон|Размер|Тип .NET|
 |----------|-----------|----------|-------------------------|
 |`char`|От U+0000 до U+FFFF|16 разрядов|<xref:System.Char?displayProperty=nameWithType>|
+
+Значение по умолчанию для типа `char` — `\0`, то есть U+0000.
 
 Тип [string](reference-types.md#the-string-type) представляет текст как последовательность значений `char`.
 

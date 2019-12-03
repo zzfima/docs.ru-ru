@@ -6,12 +6,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 10/22/2019
-ms.openlocfilehash: 9cb2568aa36af9ced0525660962966375d69e35b
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: 8c2d586a444412abd67198ad7f295e81cb3101fb
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74140680"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74567326"
 ---
 # <a name="whats-new-in-net-core-30"></a>Новые возможности .NET Core 3.0
 
@@ -520,4 +520,4 @@ System.Console.WriteLine($"RuntimeInformation.FrameworkDescription: {System.Runt
 ## <a name="next-steps"></a>Следующие шаги
 
 - [Изучите критические отличия между версиями между .NET Core 2.2 и 3.0.](../compatibility/2.2-3.0.md)
-- [Изучите критические отличия между версиями между .NET Framework и .NET Core 3.0.](../compatibility/framework-core.md)
+- [Изучите критические отличия между версиями .NET Framework и .NET Core 3.0 для приложений Windows Forms.](../porting/winforms-breaking-changes.md)

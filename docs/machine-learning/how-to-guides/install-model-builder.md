@@ -3,14 +3,14 @@ title: Установка построителя моделей
 description: Сведения об установке построителя моделей ML.NET
 author: luisquintanilla
 ms.author: luquinta
-ms.date: 06/21/2019
+ms.date: 11/21/2019
 ms.custom: mvc, how-to
-ms.openlocfilehash: a1034d294012b8df5ec778fc40602fe52223961d
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: b87f712ad7a8b2229c1d42db4bad1fe511475ac7
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774571"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552939"
 ---
 # <a name="how-to-install-mlnet-model-builder"></a>Установка построителя моделей ML.NET
 
@@ -19,10 +19,13 @@ ms.locfileid: "72774571"
 > [!NOTE]
 > Построитель моделей в настоящее время находится на этапе предварительной версии.
 
-## <a name="pre-requisites"></a>Предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 - Visual Studio 2017 версии 15.9.12 или более поздней/Visual Studio 2019
-- Пакет SDK для .NET Core 2.1 или более поздней версии
+- Пакет SDK для .NET Core 2.1 или более поздней версии.
+
+> [!NOTE]
+> Пакет SDK для .NET Core 3.0 сейчас не поддерживается.
 
 ## <a name="limitations"></a>Ограничения
 
