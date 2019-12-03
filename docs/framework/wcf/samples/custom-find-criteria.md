@@ -2,12 +2,12 @@
 title: Пользовательские критерии поиска
 ms.date: 03/30/2017
 ms.assetid: b2723929-8829-424d-8015-a37ba2ab4f68
-ms.openlocfilehash: 236cce194d89409ab19732c239459418cddd251b
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: a7f1b5996f3aefe1ccd77d3ddc117bc7c53ed2aa
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70039946"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715460"
 ---
 # <a name="custom-find-criteria"></a>Пользовательские критерии поиска
 В этом образце показано, как создать логику сопоставления пользовательских областей и реализовать пользовательскую службу обнаружения. Клиенты используют функции сопоставления пользовательских областей, чтобы расширить функции поиска, предоставляемые системой WCF Discovery. В этом образце реализован следующий сценарий.  
@@ -39,13 +39,13 @@ ms.locfileid: "70039946"
   
  Откройте проект службы. Для реализации пользовательской службы обнаружения используются три файла.  
   
-1. **AsyncResult.CS**: Это реализация `AsyncResult` , необходимая методам обнаружения.  
+1. **AsyncResult.CS**: это реализация `AsyncResult`, которая необходима методам обнаружения.  
   
-2. **CustomDiscoveryService.CS**: Этот файл реализует пользовательскую службу обнаружения. В реализации расширяется класс <xref:System.ServiceModel.Discovery.DiscoveryService> и переопределяются необходимые методы. Обратите внимание на реализацию метода <xref:System.ServiceModel.Discovery.DiscoveryService.OnBeginFind%2A>. Метод проверяет, задано ли клиентом правило сопоставления пользовательских областей. Это тот же пользовательский URI, который клиент указывал ранее. Если задано настраиваемое правило, то будет следовать путь кода, реализующий логику соответствия "или".  
+2. **CustomDiscoveryService.CS**: этот файл реализует пользовательскую службу обнаружения. В реализации расширяется класс <xref:System.ServiceModel.Discovery.DiscoveryService> и переопределяются необходимые методы. Обратите внимание на реализацию метода <xref:System.ServiceModel.Discovery.DiscoveryService.OnBeginFind%2A>. Метод проверяет, задано ли клиентом правило сопоставления пользовательских областей. Это тот же пользовательский URI, который клиент указывал ранее. Если задано настраиваемое правило, то будет следовать путь кода, реализующий логику соответствия "или".  
   
      Эта пользовательская логика проходит по всем областям в каждой из конечных точек, входящих в службу. Если области конечной точки совпадают с любыми из областей, указанных клиентом, служба обнаружения добавляет конечную точку в ответ, который отправляется обратно клиенту.  
   
-3. **CustomDiscoveryExtension.CS**: Последним шагом в реализации службы обнаружения является подключение этой реализации пользовательской службы обнаружения к узлу службы. Здесь используется вспомогательный класс `CustomDiscoveryExtension`. Этот класс расширяет класс <xref:System.ServiceModel.Discovery.DiscoveryServiceExtension>. Пользователь должен переопределить метод <xref:System.ServiceModel.Discovery.DiscoveryServiceExtension.GetDiscoveryService%2A>. В этом случае метод возвращает экземпляр пользовательской службы обнаружения, который был создан ранее. `PublishedEndpoints` - коллекция <xref:System.Collections.ObjectModel.ReadOnlyCollection%601>, которая содержит все конечные точки приложения, добавленные в <xref:System.ServiceModel.ServiceHost>. Пользовательская служба обнаружения использует эту коллекцию для заполнения внутреннего списка. Пользователь может добавлять и другие метаданные конечных точек.  
+3. **CustomDiscoveryExtension.CS**. Последний шаг в реализации службы обнаружения заключается в подключении этой реализации пользовательской службы обнаружения к узлу службы. Здесь используется вспомогательный класс `CustomDiscoveryExtension`. Этот класс расширяет класс <xref:System.ServiceModel.Discovery.DiscoveryServiceExtension>. Пользователь должен переопределить метод <xref:System.ServiceModel.Discovery.DiscoveryServiceExtension.GetDiscoveryService%2A>. В этом случае метод возвращает экземпляр пользовательской службы обнаружения, который был создан ранее. `PublishedEndpoints` - коллекция <xref:System.Collections.ObjectModel.ReadOnlyCollection%601>, которая содержит все конечные точки приложения, добавленные в <xref:System.ServiceModel.ServiceHost>. Пользовательская служба обнаружения использует эту коллекцию для заполнения внутреннего списка. Пользователь может добавлять и другие метаданные конечных точек.  
   
  Наконец, откройте файл Program.cs. Заметьте, что в узел добавляются объекты <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> и `CustomDiscoveryExtension`. После этого, когда в узле есть конечная точка, через которую принимаются сообщения обнаружения, приложение может использовать пользовательскую службу обнаружения.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "70039946"
   
 1. Откройте решение, содержащее проект.  
   
-2. Выполните построение проекта.  
+2. Постройте проект.  
   
 3. Запустите приложение службы.  
   
@@ -66,6 +66,6 @@ ms.locfileid: "70039946"
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Если этот каталог не существует, перейдите к [примерам Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] и примеры. Этот образец расположен в следующем каталоге.  
+> Если этот каталог не существует, перейдите к [примерам Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , чтобы скачать все Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Samples. Этот образец расположен в следующем каталоге.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\CustomFindCriteria`

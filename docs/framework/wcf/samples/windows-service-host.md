@@ -5,12 +5,12 @@ helpviewer_keywords:
 - NT Service
 - NT Service Host Sample [Windows Communication Foundation]
 ms.assetid: 1b2f45c5-2bed-4979-b0ee-8f9efcfec028
-ms.openlocfilehash: 2f2024a984111a826adab31ca15f1a46f9733de5
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 4d5e29f51ab49c142beb97060b719f26b050e767
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045409"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715017"
 ---
 # <a name="windows-service-host"></a>Узел службы Windows
 В этом примере демонстрируется служба Windows Communication Foundation (WCF), размещенная в управляемой службе Windows. Управление службами Windows осуществляется с помощью приложения "службы" на **панели управления** и может быть настроено для автоматического запуска после перезагрузки системы. Этот образец состоит из клиентской программы и программы службы Windows. Служба реализуется как программа EXE и содержит свой собственный код размещения. В других средах размещения, таких как служба активации Windows (WAS) или IIS, писать код размещения необязательно.
@@ -23,15 +23,15 @@ ms.locfileid: "70045409"
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Если этот каталог не существует, перейдите к [примерам Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] и примеры. Этот образец расположен в следующем каталоге.  
+> Если этот каталог не существует, перейдите к [примерам Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , чтобы скачать все Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Samples. Этот образец расположен в следующем каталоге.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Hosting\WindowsService`  
   
- После построения этой службы ее необходимо установить с помощью служебной программы Installutil.exe, как и все остальные службы Windows. Если предполагается вносить изменения в службу, необходимо сначала удалить ее с помощью команды `installutil /u`. Входящие в состав этого образца файлы Setup.bat и Cleanup.bat содержат команды для установки и запуска службы Windows, а также для отключения и удаления службы Windows. Служба WCF может отвечать только на клиенты, если запущена служба Windows. Если вы останавливаете службу Windows с помощью приложения "службы" на **панели управления** и запускаете клиент, <xref:System.ServiceModel.EndpointNotFoundException> возникает исключение, когда клиент пытается получить доступ к службе. Если перезапустить службу Windows и клиент, обращение произойдет успешно.  
+ После построения этой службы ее необходимо установить с помощью служебной программы Installutil.exe, как и все остальные службы Windows. Если предполагается вносить изменения в службу, необходимо сначала удалить ее с помощью команды `installutil /u`. Входящие в состав этого образца файлы Setup.bat и Cleanup.bat содержат команды для установки и запуска службы Windows, а также для отключения и удаления службы Windows. Служба WCF может отвечать только на клиенты, если запущена служба Windows. Если вы останавливаете службу Windows с помощью приложения "службы" на **панели управления** и запускаете клиент, <xref:System.ServiceModel.EndpointNotFoundException> исключение возникает, когда клиент пытается получить доступ к службе. Если перезапустить службу Windows и клиент, обращение произойдет успешно.  
   
- Код службы включает класс установщика, класс реализации службы WCF, который реализует контракт ICalculator, и класс службы Windows, который выступает в качестве узла времени выполнения. Класс установщика, унаследованный от класса <xref:System.Configuration.Install.Installer>, позволяет устанавливать программу как службу NT с помощью средства Installutil.exe. Класс реализации службы, `WcfCalculatorService`, — это служба WCF, которая реализует базовый контракт службы. Эта служба WCF размещается внутри класса службы Windows с `WindowsCalculatorService`именем. Чтобы считаться службой Windows, этот класс наследует от класса <xref:System.ServiceProcess.ServiceBase> и реализует методы <xref:System.ServiceProcess.ServiceBase.OnStart%28System.String%5B%5D%29> и <xref:System.ServiceProcess.ServiceBase.OnStop>. В методе <xref:System.ServiceProcess.ServiceBase.OnStart%28System.String%5B%5D%29> создается и открывается объект <xref:System.ServiceModel.ServiceHost> для типа `WcfCalculatorService`. В методе <xref:System.ServiceProcess.ServiceBase.OnStop> объект ServiceHost закрывается путем вызова метода <xref:System.ServiceModel.Channels.CommunicationObject.Close%28System.TimeSpan%29> объекта <xref:System.ServiceModel.ServiceHost>. Базовый адрес узла настраивается с помощью [ \<элемента Add >](../../../../docs/framework/configure-apps/file-schema/wcf/add-of-baseaddresses.md) , который [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/baseaddresses.md)является дочерним для baseAddresses [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/host.md) >, который является дочерним элементом элемента > узла, который является дочерним по отношению к [ \<элементуэлемент > службы](../../../../docs/framework/configure-apps/file-schema/wcf/service.md) .  
+ Код службы включает класс установщика, класс реализации службы WCF, который реализует контракт ICalculator, и класс службы Windows, который выступает в качестве узла времени выполнения. Класс установщика, унаследованный от класса <xref:System.Configuration.Install.Installer>, позволяет устанавливать программу как службу NT с помощью средства Installutil.exe. Класс реализации службы, `WcfCalculatorService`, — это служба WCF, которая реализует базовый контракт службы. Эта служба WCF размещается внутри класса службы Windows с именем `WindowsCalculatorService`. Чтобы считаться службой Windows, этот класс наследует от класса <xref:System.ServiceProcess.ServiceBase> и реализует методы <xref:System.ServiceProcess.ServiceBase.OnStart%28System.String%5B%5D%29> и <xref:System.ServiceProcess.ServiceBase.OnStop>. В методе <xref:System.ServiceProcess.ServiceBase.OnStart%28System.String%5B%5D%29> создается и открывается объект <xref:System.ServiceModel.ServiceHost> для типа `WcfCalculatorService`. В методе <xref:System.ServiceProcess.ServiceBase.OnStop> объект ServiceHost закрывается путем вызова метода <xref:System.ServiceModel.Channels.CommunicationObject.Close%28System.TimeSpan%29> объекта <xref:System.ServiceModel.ServiceHost>. Базовый адрес узла настраивается с помощью элемента [\<add >](../../../../docs/framework/configure-apps/file-schema/wcf/add-of-baseaddresses.md) , который является дочерним элементом [\<baseAddresses >](../../../../docs/framework/configure-apps/file-schema/wcf/baseaddresses.md), который является дочерним элементом\<[узла](../../../../docs/framework/configure-apps/file-schema/wcf/host.md) >, который является дочерним элементом элемента\<[Service](../../../../docs/framework/configure-apps/file-schema/wcf/service.md) >.  
   
- Определенная конечная точка использует базовый адрес и [ \<WSHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md). В следующем образце показана конфигурация базового адреса, а также конечной точки, предоставляющей службу CalculatorService.  
+ Определенная конечная точка использует базовый адрес и [\<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md). В следующем образце показана конфигурация базового адреса, а также конечной точки, предоставляющей службу CalculatorService.  
   
 ```xml  
 <services>  
@@ -63,6 +63,6 @@ ms.locfileid: "70045409"
   
 4. Чтобы запустить пример в конфигурации с одним или несколькими компьютерами, следуйте инструкциям в разделе [выполнение примеров Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Примеры размещения и сохраняемости AppFabric](https://go.microsoft.com/fwlink/?LinkId=193961)

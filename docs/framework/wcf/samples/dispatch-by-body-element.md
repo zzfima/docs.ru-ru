@@ -2,12 +2,12 @@
 title: Передача по элементу тела сообщения
 ms.date: 03/30/2017
 ms.assetid: f64a3c04-62b4-47b2-91d9-747a3af1659f
-ms.openlocfilehash: f1ff6d099ad0aee0c17b011000fe78f961293a82
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 307d6bbbab118392ef079942eae367a4c6792c22
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70039759"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74712033"
 ---
 # <a name="dispatch-by-body-element"></a>Передача по элементу тела сообщения
 В образце демонстрируется реализация альтернативного алгоритма для присвоения операциям входящих сообщений.  
@@ -120,9 +120,9 @@ public void ApplyDispatchBehavior(ContractDescription contractDescription, Servi
 ## <a name="implementing-the-service"></a>Реализация службы  
  Реализованное в этом образце поведение непосредственно влияет на то, как сообщения из канала связи интерпретируется и отправляется, что является функцией контракта службы. В результате поведение должно быть объявлено на уровне контракта службы в реализации любой службы, которая выбирает его для своего использования.  
   
- Пример службы проекта применяет `DispatchByBodyElementBehaviorAttribute` поведение контракта `IDispatchedByBody` к контракту службы и помечает каждую из этих операций `OperationForBodyA()` и `OperationForBodyB()` `DispatchBodyElementAttribute` поведение операции. Когда открыт узел службы, который реализует этот контракт, эти метаданные используются конструктором диспетчера в соответствии с приведенным описанием.  
+ Пример службы проекта применяет `DispatchByBodyElementBehaviorAttribute`ное поведение контракта к контракту службы `IDispatchedByBody` и помечает каждую из двух операций `OperationForBodyA()` и `OperationForBodyB()` с поведением `DispatchBodyElementAttribute` операции. Когда открыт узел службы, который реализует этот контракт, эти метаданные используются конструктором диспетчера в соответствии с приведенным описанием.  
   
- Поскольку селектор операции при направлении принимает во внимание только элемент тела сообщений и игнорирует заголовок "Действие", требуется указать среде выполнения не проверять заголовок "Действие" возвращаемых ответов путем присвоения подстановочного знака "*" свойству `ReplyAction` класса <xref:System.ServiceModel.OperationContractAttribute>. Кроме того, необходимо иметь операцию по умолчанию, для которой свойству Action задано значение подстановочного знака "\*". Операция по умолчанию получает все сообщения, которые не могут быть отправлены и не имеют `DispatchBodyElementAttribute`.  
+ Поскольку селектор операции при направлении принимает во внимание только элемент тела сообщений и игнорирует заголовок "Действие", требуется указать среде выполнения не проверять заголовок "Действие" возвращаемых ответов путем присвоения подстановочного знака "*" свойству `ReplyAction` класса <xref:System.ServiceModel.OperationContractAttribute>. Кроме того, необходимо иметь операцию по умолчанию, для которой свойству Action присвоено значение подстановочного знака «\*». Операция по умолчанию получает все сообщения, которые не могут быть отправлены и не имеют `DispatchBodyElementAttribute`.  
   
 ```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples"),  
@@ -175,6 +175,6 @@ public interface IDispatchedByBody
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Если этот каталог не существует, перейдите к [примерам Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] и примеры. Этот образец расположен в следующем каталоге.  
+> Если этот каталог не существует, перейдите к [примерам Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , чтобы скачать все Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Samples. Этот образец расположен в следующем каталоге.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Interop\AdvancedDispatchByBody`  

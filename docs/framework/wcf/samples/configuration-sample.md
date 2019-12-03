@@ -2,12 +2,12 @@
 title: Образец конфигурации
 ms.date: 03/30/2017
 ms.assetid: 75515b4a-8d70-44c8-99e0-7423df41380e
-ms.openlocfilehash: 87afeb0c562254e0f4cf6a85946a765a740c79ec
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 78108dc9b28657f0479e9e39ad134f03cf6c877b
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70990070"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74714959"
 ---
 # <a name="configuration-sample"></a>Образец конфигурации
 Этот образец демонстрирует, как при помощи файла конфигурации можно сделать службу доступной для обнаружения.  
@@ -20,11 +20,11 @@ ms.locfileid: "70990070"
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Если этот каталог не существует, перейдите к [примерам Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] и примеры. Этот образец расположен в следующем каталоге.  
+> Если этот каталог не существует, перейдите к [примерам Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , чтобы скачать все Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Samples. Этот образец расположен в следующем каталоге.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\Configuration`  
   
-## <a name="service-configuration"></a>Конфигурация службы  
+## <a name="service-configuration"></a>Настройка службы  
  Файл конфигурации в данном образце иллюстрирует две возможности.  
   
 - Обеспечение доступности обнаружения службы через стандартную конечную точку <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>.  

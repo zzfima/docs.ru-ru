@@ -2,12 +2,12 @@
 title: HttpCookieSession
 ms.date: 03/30/2017
 ms.assetid: 101cb624-8303-448a-a3af-933247c1e109
-ms.openlocfilehash: af624305e4ab4678938b7f63c4e4056404de0bc9
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 9e47959314ba161ff07a37f3d45088d038557c9e
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71393138"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74711593"
 ---
 # <a name="httpcookiesession"></a>HttpCookieSession
 В этом образце показано, как построить пользовательский канал протокола, который использует для управления сеансами протокол HTTP. Этот канал обеспечивает взаимодействие между службами Windows Communication Foundation (WCF) и клиентами ASMX или между клиентами WCF и службами ASMX.  
@@ -29,7 +29,7 @@ ms.locfileid: "71393138"
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Если этот каталог не существует, перейдите к [примерам Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] и примеры. Этот образец расположен в следующем каталоге.  
+> Если этот каталог не существует, перейдите к [примерам Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , чтобы скачать все Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Samples. Этот образец расположен в следующем каталоге.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\HttpCookieSession`  
   
@@ -66,7 +66,7 @@ ms.locfileid: "71393138"
     Dictionary<string, IReplySessionChannel> channelMapping;  
     ```  
   
- `HttpCookieReplySessionChannel` Класс реализует<xref:System.ServiceModel.Channels.IReplySessionChannel>. Более высокие уровня стека каналов вызывают метод <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A> для чтения запросов для этого сеанса. У каждого канала сеанса имеется закрытая очередь сообщений, заполняемая каналом службы.  
+ Класс `HttpCookieReplySessionChannel` реализует <xref:System.ServiceModel.Channels.IReplySessionChannel>. Более высокие уровня стека каналов вызывают метод <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A> для чтения запросов для этого сеанса. У каждого канала сеанса имеется закрытая очередь сообщений, заполняемая каналом службы.  
   
 ```csharp  
 InputQueue<RequestContext> requestQueue;  
@@ -101,7 +101,7 @@ InputQueue<RequestContext> requestQueue;
  В этом образце имеется два канала, делающие канал доступным через конфигурацию. Первый - элемент <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> для `HttpCookieSessionBindingElement`. Основная часть реализации делегируется классу `HttpCookieSessionBindingConfigurationElement`, наследуемому от класса <xref:System.ServiceModel.Configuration.StandardBindingElement>. Элемент `HttpCookieSessionBindingConfigurationElement` имеет свойства, которые соответствуют свойствам элемента `HttpCookieSessionBindingElement`.  
   
 ### <a name="binding-element-extension-section"></a>Раздел расширения элемента привязки  
- Раздел `HttpCookieSessionBindingElementSection` представляет собой <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> , который предоставляет `HttpCookieSessionBindingElement` системе конфигурации. С помощью нескольких простых переопределений определяется имя раздела конфигурации, тип элемента привязки и способ создания элемента привязки. Мы можем затем зарегистрировать раздел расширения в файле конфигурации следующим образом.  
+ Раздел `HttpCookieSessionBindingElementSection` — это <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>, который предоставляет `HttpCookieSessionBindingElement` системе конфигурации. С помощью нескольких простых переопределений определяется имя раздела конфигурации, тип элемента привязки и способ создания элемента привязки. Мы можем затем зарегистрировать раздел расширения в файле конфигурации следующим образом.  
   
 ```xml  
 <configuration>        
@@ -130,7 +130,7 @@ InputQueue<RequestContext> requestQueue;
 ```  
   
 ## <a name="test-code"></a>Тестовый код  
- Тестовый код для использования этого примера транспорта находится в каталогах Client и Service. Он состоит из двух тестов — один тест использует привязку с `allowCookies` `true` параметром, равным, на клиенте. Второй тест включает на привязке явное отключение (с помощью обмена сообщениями завершения).  
+ Тестовый код для использования этого примера транспорта находится в каталогах Client и Service. Он состоит из двух тестов: один тест использует привязку с `allowCookies` установленным для `true` на клиенте. Второй тест включает на привязке явное отключение (с помощью обмена сообщениями завершения).  
   
  При запуске примера результат должен выглядеть следующим образом:  
   

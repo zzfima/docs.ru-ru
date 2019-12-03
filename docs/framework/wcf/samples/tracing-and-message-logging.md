@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Tracing and logging
 ms.assetid: a4f39bfc-3c5e-4d51-a312-71c5c3ce0afd
-ms.openlocfilehash: a58541b7d50d83d1e39d7c9dd9c58be4111ec494
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: f6f2fd0bbbc191d466ac600bd9639c8955d5b7fe
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70038740"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715682"
 ---
 # <a name="tracing-and-message-logging"></a>Трассировка и ведение журнала сообщений
 В этом образце показано, как включить трассировку и ведение журнала сообщений. Результирующие трассировки и журналы сообщений просматриваются с помощью [средства Service Trace Viewer (SvcTraceViewer. exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md). Этот образец основан на [Начало работы](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
@@ -18,7 +18,7 @@ ms.locfileid: "70038740"
 > Процедура настройки и инструкции по построению для данного образца приведены в конце этого раздела.  
   
 ## <a name="tracing"></a>Трассировка  
- Windows Communication Foundation (WCF) использует механизм трассировки, определенный в <xref:System.Diagnostics> пространстве имен. В этой модели трассировки данные трассировки создаются источниками трассировки, реализуемыми приложениями. Каждый источник определяется именем. Потребители трассировки создают прослушиватели трассировки для источников трассировки, для которых необходимо извлечь информацию. Чтобы получить данные трассировки, необходимо создать прослушиватель для источника трассировки. В WCF это можно сделать, добавив следующий код в файл конфигурации службы или клиента, установив источник `switchValue`трассировки модели службы:  
+ Windows Communication Foundation (WCF) использует механизм трассировки, определенный в пространстве имен <xref:System.Diagnostics>. В этой модели трассировки данные трассировки создаются источниками трассировки, реализуемыми приложениями. Каждый источник определяется именем. Потребители трассировки создают прослушиватели трассировки для источников трассировки, для которых необходимо извлечь информацию. Чтобы получить данные трассировки, необходимо создать прослушиватель для источника трассировки. В WCF это можно сделать, добавив следующий код в файл конфигурации службы или клиента путем установки `switchValue`источника трассировки модели службы:  
   
 ```xml  
 <system.diagnostics>  
@@ -46,7 +46,7 @@ ms.locfileid: "70038740"
  Дополнительные сведения об источниках трассировки см. в разделе Источник трассировки статьи [Настройка трассировки](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md) .  
   
 ## <a name="activity-tracing-and-propagation"></a>Трассировка и распространение действий  
- Включение и `propagateActivity` Установка`true` в в`system.ServiceModel` источниках трассировки для клиента и службы предоставляют корреляцию трассировок внутри логических единиц обработки (действий) между действиями в конечных точках ( `ActivityTracing` посредством передачи действий) и между действиями, охватывающими несколько конечных точек (с помощью распространения идентификатора действия).  
+ Если `ActivityTracing` включены и `propagateActivity` задано значение `true` в источниках трассировки `system.ServiceModel` для клиента и службы предоставляют корреляцию трассировок в логических единицах обработки (действиях), между действиями в конечных точках (посредством передачи действий) и между действиями, охватывающими несколько конечных точек (с помощью распространения идентификатора действия).  
   
  Эти три механизма (действия, перенаправление и распространение) могут помочь быстрее найти первопричину ошибки с использованием программы Service Trace Viewer. Дополнительные сведения см. [в разделе Использование Service Trace Viewer для просмотра коррелированных трассировок и устранения неполадок](../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md).  
   
@@ -128,11 +128,11 @@ ms.locfileid: "70038740"
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Если этот каталог не существует, перейдите к [примерам Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] и примеры. Этот образец расположен в следующем каталоге.  
+> Если этот каталог не существует, перейдите к [примерам Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , чтобы скачать все Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Samples. Этот образец расположен в следующем каталоге.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\TracingAndLogging`  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Трассировка](../../../../docs/framework/wcf/diagnostics/tracing/index.md)
 - [Примеры мониторинга AppFabric](https://go.microsoft.com/fwlink/?LinkId=193959)
