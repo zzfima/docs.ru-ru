@@ -6,16 +6,16 @@ helpviewer_keywords:
 - testing, UI Automation
 - UI Automation, automated testing
 ms.assetid: 3a0435c0-a791-4ad7-ba92-a4c1d1231fde
-ms.openlocfilehash: a22474d943212e35310a0e8bcf6643c4a99c0389
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 2da0f994e809ff0ea9cd3165cd788ac467a87aef
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039413"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74800781"
 ---
 # <a name="using-ui-automation-for-automated-testing"></a>Использование Автоматизации Пользовательского Интерфейса для автоматизированного тестирования
 > [!NOTE]
-> Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Последние сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]см. в разделе [API автоматизации Windows. Автоматизация пользовательского интерфейса](https://go.microsoft.com/fwlink/?LinkID=156746).  
+> Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Последние сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]см. в разделе [API автоматизации Windows. Автоматизация пользовательского интерфейса](/windows/win32/winauto/entry-uiauto-win32).  
   
  В этом обзоре описывается, как можно использовать [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] в качестве платформы для программного доступа в скриптах автоматического тестирования.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "73039413"
 > В других моделях специальных возможностей разработчики должны собирать сведения непосредственно из отдельных кнопок, меню и других элементов управления. К несчастью, каждый тип элемента управления поставляется в десятках вспомогательных вариантов. Другими словами, даже если десять вариантов кнопки работают одинаково и выполняют ту же функцию, все они должны рассматриваться как отдельные элементы управления. Нет способа узнать, что эти элементы управления функционально эквивалентны. Шаблоны элементов управления были разработаны для представления такого общего поведения элементов управления. Для получения дополнительной информации см. [UI Automation Control Patterns Overview](ui-automation-control-patterns-overview.md).  
   
 ### <a name="implementing-ui-automation"></a>Реализация автоматизации пользовательского интерфейса  
- Как упоминалось ранее, без единой модели, предоставляемой [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], средствам тестирования и разработчикам необходимо знать информацию о среде, чтобы представлять свойства и поведение элементов управления в этой среде. Поскольку в любой момент времени в операционных системах Windows можно использовать несколько различных платформ пользовательского интерфейса, включая [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)], [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]и Windows Presentation Foundation (WPF), это может быть сложной задачей для тестирования нескольких приложений с помощью элементов управления, которые похоже на. Например, в следующей таблице перечислены относящиеся к конкретной инфраструктуре имена свойств, необходимые для извлечения имени (или текста), связанного с элементом управления "Кнопка", и приведено единственное эквивалентное свойство [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] .  
+ Как упоминалось ранее, без единой модели, предоставляемой [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], средствам тестирования и разработчикам необходимо знать информацию о среде, чтобы представлять свойства и поведение элементов управления в этой среде. Так как в любой момент времени в операционных системах Windows можно использовать несколько различных платформ пользовательского интерфейса, в том числе [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)], [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]и Windows Presentation Foundation (WPF), это может оказаться сложной задачей для тестирования нескольких приложений с помощью элементов управления, которые выглядят похожими. Например, в следующей таблице перечислены относящиеся к конкретной инфраструктуре имена свойств, необходимые для извлечения имени (или текста), связанного с элементом управления "Кнопка", и приведено единственное эквивалентное свойство [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] .  
   
 |Тип элемента управления модели автоматизации пользовательского интерфейса|Инфраструктура пользовательского интерфейса|Свойство инфраструктуры|Свойство модели автоматизации пользовательского интерфейса|  
 |--------------------------------|------------------|---------------------------------|----------------------------|  
@@ -100,9 +100,9 @@ ms.locfileid: "73039413"
   
 - Мсаабридже предоставляет сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] для Active Accessibility клиентов. Основная цель моста [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] к Active Accessibility — разрешить существующим клиентам Active Accessibility возможность взаимодействия с любой платформой, реализованной [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)].  
   
-## <a name="security"></a>Безопасность  
+## <a name="security"></a>по безопасности  
  Сведения о безопасности см. в разделе [UI Automation Security Overview](ui-automation-security-overview.md).  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Основы модели автоматизации пользовательского интерфейса](index.md)

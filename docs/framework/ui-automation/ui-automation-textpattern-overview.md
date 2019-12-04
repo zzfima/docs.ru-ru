@@ -6,17 +6,17 @@ helpviewer_keywords:
 - TextPattern class
 - classes, TextPattern
 ms.assetid: 41787927-df1f-4f4a-aba3-641662854fc4
-ms.openlocfilehash: 2f417aaba5361bea3bf2493001bca938d9dd08cb
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: b7e378d79109d33859a38ea398cffd2193044abd
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975482"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74800196"
 ---
 # <a name="ui-automation-textpattern-overview"></a>Общие сведения о TextPattern модели автоматизации пользовательского интерфейса
 
 > [!NOTE]
-> Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Последние сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]см. в разделе [API автоматизации Windows. Автоматизация пользовательского интерфейса](https://go.microsoft.com/fwlink/?LinkID=156746).
+> Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Последние сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]см. в разделе [API автоматизации Windows. Автоматизация пользовательского интерфейса](/windows/win32/winauto/entry-uiauto-win32).
 
 В этом обзоре описывается использование [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] для предоставления текстового содержимого, в том числе атрибутов формата и стиля, текстовых элементов управления на платформах, поддерживаемых [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]. Эти элементы управления включают, но не ограничиваются Microsoft .NET Framework <xref:System.Windows.Controls.TextBox> и <xref:System.Windows.Controls.RichTextBox>, а также их [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] эквиваленты.
 
@@ -41,7 +41,7 @@ ms.locfileid: "73975482"
 
 ## <a name="control-types"></a>Типы элементов управления
 
-### <a name="text"></a>Text
+### <a name="text"></a>Текст
 
 Элемент управления «Текст» является базовым элементом, представляющим фрагмент текста на экране.
 
@@ -50,7 +50,7 @@ ms.locfileid: "73975482"
 > [!NOTE]
 > Элементы управления "Текст" могут не отображаться в представлении содержимого дерева [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] (см. раздел [UI Automation Tree Overview](ui-automation-tree-overview.md)). Это объясняется тем, что элементы управления «Текст» часто отображаются посредством свойства «Имя» другого элемента управления. Например текст, который используется для метки элемента управления «Поле ввода», предоставляется посредством свойства «Имя» элемента управления «Поле ввода». Поскольку элемент управления «Поле ввода» находится в представлении содержимого дерева [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , сам текстовый элемент не обязательно должен присутствовать в этом представлении дерева [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] . Единственный текст, который отображается в представлении содержимого, это текст, не являющийся избыточными сведениями. Это позволяет любой вспомогательной технологии быстро отфильтровывать только те части сведений, которые нужны пользователям.
 
-### <a name="edit"></a>Правка
+### <a name="edit"></a>Edit
 
 Элементы управления «Поле ввода» предоставляют пользователям возможность просматривать и редактировать одну строку текста.
 
@@ -94,7 +94,7 @@ ms.locfileid: "73975482"
 
 <a name="Security"></a>
 
-## <a name="security"></a>Безопасность
+## <a name="security"></a>по безопасности
 
 Классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] разработана с учетом безопасности (см. раздел [UI Automation Security Overview](ui-automation-security-overview.md)). Однако для классов TextPattern, рассматриваемых в этом обзоре, требуются некоторые особые рекомендации по обеспечению безопасности.
 
@@ -143,7 +143,7 @@ ms.locfileid: "73975482"
 <xref:System.Windows.Automation.Text.TextUnit>\
 Предопределенная единица текста (символ, слово, строка или абзац), используемая для навигации по логическим сегментам текстового диапазона.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Шаблоны элементов управления модели автоматизации пользовательского интерфейса для клиентов](ui-automation-control-patterns-for-clients.md)
 - [Общие сведения о шаблонах элементов управления модели автоматизации пользовательского интерфейса](ui-automation-control-patterns-overview.md)

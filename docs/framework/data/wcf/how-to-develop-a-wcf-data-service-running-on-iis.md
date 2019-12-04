@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Разработка службы данных WCF Data Service, работающей на IIS
+title: Как разработать службу данных WCF Data Service, работающую на IIS
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - WCF Data Services, deploying
 - WCF Data Services, hosting
 ms.assetid: f6f768c5-4989-49e3-a36f-896ab4ded86e
-ms.openlocfilehash: 89be7aa8339a4edf6d6ab9c0c243e4320d2fdfa8
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 684361dbb97e70296a3061f71102662023f88d9a
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052976"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74800513"
 ---
-# <a name="how-to-develop-a-wcf-data-service-running-on-iis"></a>Практическое руководство. Разработка службы данных WCF, работающей на IIS
+# <a name="how-to-develop-a-wcf-data-service-running-on-iis"></a>Руководство. Разработка службы данных WCF, работающей на сервере IIS
 
 В этом разделе показано, как использовать WCF Data Services для создания службы данных, основанной на образце базы данных Northwind, которая размещена в веб-приложении ASP.NET, работающем на службы IIS (IIS). Пример создания одной и той же службы данных Northwind как веб-приложения ASP.NET, выполняемого на ASP.NET Development Server, см. в [кратком руководстве по WCF Data Services](quickstart-wcf-data-services.md).
 
@@ -25,15 +25,15 @@ ms.locfileid: "71052976"
 
 Данный раздел иллюстрирует создание службы данных с помощью поставщика Entity Framework. Доступны другие поставщики служб данных. Дополнительные сведения см. в разделе [поставщики служб данных](data-services-providers-wcf-data-services.md).
 
-После создания службы требуется явно предоставить доступ к ресурсам службы данных. Дополнительные сведения см. в разделе [Практическое руководство. Разрешение доступа к службе](how-to-enable-access-to-the-data-service-wcf-data-services.md)данных.
+После создания службы требуется явно предоставить доступ к ресурсам службы данных. Дополнительные сведения см. [в разделе инструкции. Включение доступа к службе данных](how-to-enable-access-to-the-data-service-wcf-data-services.md).
 
 ## <a name="create-the-aspnet-web-application-that-runs-on-iis"></a>Создание веб-приложения ASP.NET, которое выполняется в службах IIS
 
-1. В Visual Studio в меню **файл** выберите пункт **создать** > **проект**.
+1. В Visual Studio в меню **Файл** выберите пункты **Создать** > **Проект**.
 
 2. В диалоговом окне **Новый проект** выберите **установленный** > [**Visual C#**  или **Visual Basic**] > **веб-** категорию.
 
-3. Выберите шаблон **веб-приложение ASP.NET** .
+3. Выберите шаблон **Веб-приложение ASP.NET** .
 
 4. Введите `NorthwindService` в качестве имени проекта.
 
@@ -47,7 +47,7 @@ ms.locfileid: "71052976"
 
 9. С помощью командной строки с правами администратора выполните одну из следующих команд (в зависимости от операционной системы).
 
-    - 32-разрядные системы:
+    - Для 32-разрядных систем:
 
         ```console
         "%windir%\Microsoft.NET\Framework\v3.0\Windows Communication Foundation\ServiceModelReg.exe" -i
@@ -63,7 +63,7 @@ ms.locfileid: "71052976"
 
 10. С помощью командной строки с правами администратора выполните одну из следующих команд (в зависимости от операционной системы).
 
-    - 32-разрядные системы:
+    - Для 32-разрядных систем:
 
         ```console
         "%windir%\Microsoft.NET\Framework\v4.0.30319\aspnet_regiis.exe" -i -enable
@@ -81,7 +81,7 @@ ms.locfileid: "71052976"
 
     1. Откройте диспетчер IIS и перейдите к приложению службы приложений на **веб-сайте по умолчанию**.
 
-    2. В **представлении "функции**" дважды щелкните **Проверка подлинности**.
+    2. В окне **Просмотр возможностей** дважды щелкните элемент **Проверка подлинности**.
 
     3. На странице **Проверка подлинности** выберите **Анонимная проверка подлинности**.
 
@@ -132,7 +132,7 @@ ms.locfileid: "71052976"
 
 5. Подключите модель данных к базе данных, выполнив одно из следующих действий, а затем нажмите кнопку **Далее**.
 
-    - Если подключение к базе данных уже не настроено, щелкните **создать соединение** и создайте новое соединение. Дополнительные сведения см. в разделе [Практическое руководство. Создание подключений к SQL Server базам](https://go.microsoft.com/fwlink/?LinkId=123631)данных. Этот экземпляр SQL Server должен содержать присоединенный образец базы данных Northwind.
+    - Если подключение к базе данных уже не настроено, щелкните **создать соединение** и создайте новое соединение. Дополнительные сведения см. в разделе [How to: Create Connections to SQL Server Databases](https://go.microsoft.com/fwlink/?LinkId=123631). Этот экземпляр SQL Server должен содержать присоединенный образец базы данных Northwind.
 
          \- или -
 
@@ -151,7 +151,7 @@ ms.locfileid: "71052976"
    ![Шаблон элемента службы данных WCF в Visual Studio 2015](./media/wcf-data-service-item-template.png)
 
    > [!NOTE]
-   > Шаблон **службы данных WCF** доступен в visual Studio 2015, но не в visual Studio 2017.
+   > Шаблон **службы данных WCF** доступен в visual Studio 2015, но не в visual Studio 2017 или более поздней версии.
 
 3. В качестве имени службы введите `Northwind`.
 
@@ -162,6 +162,6 @@ ms.locfileid: "71052976"
      [!code-csharp[Astoria Quickstart Service#ServiceDefinition](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_quickstart_service/cs/northwind.svc.cs#servicedefinition)]
      [!code-vb[Astoria Quickstart Service#ServiceDefinition](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_quickstart_service/vb/northwind.svc.vb#servicedefinition)]
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Предоставление данных как службы](exposing-your-data-as-a-service-wcf-data-services.md)
