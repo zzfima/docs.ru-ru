@@ -17,6 +17,8 @@
       href: tutorials/amazon-emr-spark-deployment.md
     - name: Развертывание в Databricks
       href: tutorials/databricks-deployment.md
+    - name: Структурированные потоки
+      href: tutorials/streaming.md
 - name: Практические руководства
   items:
     - name: Отладка приложения

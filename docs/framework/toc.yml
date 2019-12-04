@@ -42,8 +42,6 @@
       href: configure-apps/
     - name: Компиляция приложений с помощью машинного кода .NET
       href: net-native/
-    - name: Windows Identity Foundation
-      href: security/
     - name: 'Отладка, трассировка и профилирование'
       href: debug-trace-profile/
     - name: Развертывание
