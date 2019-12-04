@@ -1,19 +1,19 @@
 ---
-title: Неуниверсальное действие ParallelForEach
+title: Не универсальный ParallelForEach
 ms.date: 03/30/2017
 ms.assetid: de17e7a2-257b-48b3-91a1-860e2e9bf6e6
-ms.openlocfilehash: 52b851686ea2fdc8c573a0622fe91ca5e205edeb
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 33e0c8ef8c04b7d58815760ae1152f63891fdfd5
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65637738"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715647"
 ---
-# <a name="non-generic-parallelforeach"></a>Неуниверсальное действие ParallelForEach
+# <a name="non-generic-parallelforeach"></a>Не универсальный ParallelForEach
 
 В область элементов [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] входит набор действий потока управления, включая элемент <xref:System.Activities.Statements.ParallelForEach%601>, который позволяет проходить по коллекциям <xref:System.Collections.Generic.IEnumerable%601>.
 
-<xref:System.Activities.Statements.ParallelForEach%601> требуется его <xref:System.Activities.Statements.ParallelForEach%601.Values%2A> свойство типа <xref:System.Collections.Generic.IEnumerable%601>. Это запрещает пользователям проходить по структурам данных, в которых реализован интерфейс <xref:System.Collections.Generic.IEnumerable%601> (например, <xref:System.Collections.ArrayList>). Неуниверсальная версия <xref:System.Activities.Statements.ParallelForEach%601> выполняет это требование за счет большей гибкости во время выполнения, чтобы обеспечить совместимость типов значений в коллекции.
+для <xref:System.Activities.Statements.ParallelForEach%601> требуется, чтобы свойство <xref:System.Activities.Statements.ParallelForEach%601.Values%2A> было типа <xref:System.Collections.Generic.IEnumerable%601>. Это запрещает пользователям проходить по структурам данных, в которых реализован интерфейс <xref:System.Collections.Generic.IEnumerable%601> (например, <xref:System.Collections.ArrayList>). Неуниверсальная версия <xref:System.Activities.Statements.ParallelForEach%601> выполняет это требование за счет большей гибкости во время выполнения, чтобы обеспечить совместимость типов значений в коллекции.
 
 В этом образце показано, как реализовать неуниверсальное действие <xref:System.Activities.Statements.ParallelForEach%601> и конструктор для него. Это действие позволяет проходить по <xref:System.Collections.ArrayList>.
 
@@ -46,13 +46,13 @@ public class ParallelForEach : NativeActivity
 }
 ```
 
-Содержание (необязательно) \
+Текст (необязательно) \
 Действие <xref:System.Activities.ActivityAction> типа <xref:System.Object>, которое выполняется для каждого элемента в коллекции. Каждый отдельный элемент передается в текст через свойство Argument.
 
 Значения (необязательно) \
 Коллекция элементов, по которой выполняется проход. Проверка совместимости типов для всех элементов коллекции проводится во время выполнения.
 
-CompletionCondition (необязательно) \
+Комплетионкондитион (необязательно) \
 Свойство <xref:System.Activities.Statements.ParallelForEach%601.CompletionCondition%2A> вычисляется после завершения каждой итерации. Если результат оценки равен `true`, то запланированные ожидающие итерации отменяются. Если это свойство не задано, все действия в коллекции ветвей выполняются до завершения.
 
 ## <a name="example-of-using-parallelforeach"></a>Пример использования ParallelForEach
@@ -81,7 +81,7 @@ Activity sampleUsage =
 
 ## <a name="parallelforeach-designer"></a>Конструктор ParallelForEach
 
-Конструктор действий для образца аналогичен конструктору, предоставляемому для встроенного действия <xref:System.Activities.Statements.ParallelForEach%601>. Конструктор отображается в области элементов в **примеры**, **неуниверсальные действия** категории. Конструктор называется **ParallelForEachWithBodyFactory** на панели элементов, поскольку это действие предоставляет <xref:System.Activities.Presentation.IActivityTemplateFactory> в области элементов, который создает действие с настроенным <xref:System.Activities.ActivityAction>.
+Конструктор действий для образца аналогичен конструктору, предоставляемому для встроенного действия <xref:System.Activities.Statements.ParallelForEach%601>. Конструктор появится в области элементов в категории **примеры**, **неуниверсальные действия** . Конструктор называется **параллелфореачвисбодифактори** на панели элементов, так как действие предоставляет <xref:System.Activities.Presentation.IActivityTemplateFactory> на панели элементов, который создает действие с правильно настроенным <xref:System.Activities.ActivityAction>.
 
 ```csharp
 public sealed class ParallelForEachWithBodyFactory : IActivityTemplateFactory
@@ -106,9 +106,9 @@ public sealed class ParallelForEachWithBodyFactory : IActivityTemplateFactory
 
 1. Установите выбранный проект в качестве проекта для запуска решения.
 
-    1. **CodeTestClient** показано, как с помощью действия, с помощью кода.
+    1. **Кодетестклиент** показывает, как использовать действие с помощью кода.
 
-    2. **DesignerTestClient** показано, как с помощью действия в конструкторе.
+    2. **Десигнертестклиент** показывает, как использовать действие в конструкторе.
 
 2. Постройте и запустите проект.
 
@@ -117,6 +117,6 @@ public sealed class ParallelForEachWithBodyFactory : IActivityTemplateFactory
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] примеры. Этот образец расположен в следующем каталоге.
+> Если этот каталог не существует, перейдите к [примерам Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , чтобы скачать все Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Samples. Этот образец расположен в следующем каталоге.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\NonGenericParallelForEach`

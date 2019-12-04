@@ -2,18 +2,18 @@
 title: Образец службы AJAX, использующей сложные типы
 ms.date: 03/30/2017
 ms.assetid: 88242b99-4811-4cbe-8201-52ddf48fb174
-ms.openlocfilehash: dce3e89449a036de7c4936963cfa0b36f3f08451
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: be8db36be7ed1639d839113174fdb95505466534
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045819"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716239"
 ---
 # <a name="ajax-service-using-complex-types-sample"></a>Образец службы AJAX, использующей сложные типы
 
 В этом примере демонстрируется использование Windows Communication Foundation (WCF) для создания асинхронной службы JavaScript и XML (AJAX) ASP.NET, которая создает экземпляры сложных типов и отправляет их между службой и клиентом как нотация объектов JavaScript (JSON). К службе AJAX можно обращаться с помощью кода JavaScript из веб-браузера. Этот пример основан на образце [базовой службы AJAX](../../../../docs/framework/wcf/samples/basic-ajax-service.md) .
 
-Поддержка AJAX в WCF оптимизирована для использования с ASP.NET AJAX через <xref:System.Web.UI.ScriptManager> элемент управления. Пример использования WCF с ASP.NET AJAX см. в разделе [примеры AJAX](ajax.md).
+Поддержка AJAX в WCF оптимизирована для использования с ASP.NET AJAX через элемент управления <xref:System.Web.UI.ScriptManager>. Пример использования WCF с ASP.NET AJAX см. в разделе [примеры AJAX](ajax.md).
 
 > [!NOTE]
 > Процедура настройки и инструкции по построению для данного образца приведены в конце этого раздела.
@@ -56,17 +56,17 @@ function onSuccess(mathResult){
 
 2. Создайте решение Комплекстипеажакссервице. sln, как описано в разделе [Создание примеров Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).
 
-3. Перейдите к `http://localhost/ServiceModelSamples/ComplexTypeClientPage.aspx` (не открывайте комплекстипеклиентпаже. aspx в браузере из каталога проекта).
+3. Перейдите к `http://localhost/ServiceModelSamples/ComplexTypeClientPage.aspx` (не открывайте Комплекстипеклиентпаже. aspx в браузере из каталога проекта).
 
 > [!IMPORTANT]
 > Образцы уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Если этот каталог не существует, перейдите к [примерам Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] и примеры. Этот образец расположен в следующем каталоге.
+> Если этот каталог не существует, перейдите к [примерам Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , чтобы скачать все Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Samples. Этот образец расположен в следующем каталоге.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Ajax\ComplexTypeAjaxService`
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Базовая служба AJAX](../../../../docs/framework/wcf/samples/basic-ajax-service.md)

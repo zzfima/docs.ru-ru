@@ -2,12 +2,12 @@
 title: Использование стандартных конечных точек
 ms.date: 03/30/2017
 ms.assetid: ecd6a62f-9619-4778-a497-6f888087a9ea
-ms.openlocfilehash: a2af1ae793166d1ed3742782b911ded30d0b9d35
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2b210bfe683669aeebf54a1701f07d492e6abdb4
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662395"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715346"
 ---
 # <a name="usage-of-standard-endpoints"></a>Использование стандартных конечных точек
 
@@ -139,34 +139,34 @@ public class CustomEndpoint : ServiceEndpoint
 
 #### <a name="to-use-this-sample"></a>Использование этого образца
 
-1. С помощью Visual Studio 2012, откройте файл StandardEndpoints.sln.
+1. С помощью Visual Studio 2012 откройте файл Стандардендпоинтс. sln.
 
 2. Разрешите запуск нескольких проектов.
 
-    1. В **обозревателе решений**, щелкните правой кнопкой мыши решение стандартные конечные точки, а затем выберите **свойства**.
+    1. В **Обозреватель решений**щелкните правой кнопкой мыши решение стандартные конечные точки и выберите пункт **свойства**.
 
-    2. В **общие свойства**выберите **запускаемым проектом**, а затем нажмите кнопку **несколько запускаемых проектов**.
+    2. В окне **Общие свойства**выберите **запускаемый проект**и щелкните **Несколько запускаемых проектов**.
 
-    3. Переместить в начало списка, в проект службы с **действие** присвоено **запустить**.
+    3. Переместите проект службы в начало списка, указав для параметра **действие** значение **Запуск**.
 
-    4. Переместить в клиентский проект после в проект службы, также с **действие** присвоено **запустить**.
+    4. Переместите проект клиента после проекта службы, а также задайте для параметра **действие** значение **Запуск**.
 
          Это указывает, что проект «Client» выполняется после проекта «Service».
 
 3. Чтобы запустить решение, нажмите клавишу F5.
 
 > [!NOTE]
-> Если эти шаги не работают, убедитесь в том, что вашей среде должным образом настроен, выполнив следующие действия:
+> Если эти действия не работают, убедитесь, что среда настроена правильно, выполнив следующие действия.
 >
-> 1. Убедитесь, что вы выполнили [выполняемая однократно процедура настройки для образцов Windows Communication Foundation](one-time-setup-procedure-for-the-wcf-samples.md).
-> 2. Чтобы построить решение, следуйте инструкциям в [сборка образцов Windows Communication Foundation](building-the-samples.md).
-> 3. Чтобы запустить пример одного или нескольких конфигураций компьютеров, следуйте инструкциям в [выполнение образцов Windows Communication Foundation](running-the-samples.md).
+> 1. Убедитесь, что вы выполнили [однократную процедуру настройки для Windows Communication Foundation примеров](one-time-setup-procedure-for-the-wcf-samples.md).
+> 2. Чтобы выполнить сборку решения, следуйте инструкциям в разделе [Создание примеров Windows Communication Foundation](building-the-samples.md).
+> 3. Чтобы запустить пример в конфигурации с одним или несколькими компьютерами, следуйте инструкциям в разделе [Запуск примеров Windows Communication Foundation](running-the-samples.md).
 
 > [!IMPORTANT]
 > Образцы уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] примеры. Этот образец расположен в следующем каталоге.
+> Если этот каталог не существует, перейдите к [примерам Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , чтобы скачать все Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Samples. Этот образец расположен в следующем каталоге.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\StandardEndpoints`

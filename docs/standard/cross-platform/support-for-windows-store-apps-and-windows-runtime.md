@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6fa7d044-ae12-4c54-b8ee-50915607a565
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 15d6262fb5e7dfb99759f0f85c9a197157713300
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.openlocfilehash: 4629139a7c89c0808e97bbe64b7d02441aec1dea
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74204952"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74714490"
 ---
 # <a name="net-framework-support-for-windows-store-apps-and-windows-runtime"></a>Поддержка приложений для Магазина Windows и среды выполнения Windows в .NET Framework
 
@@ -32,7 +32,7 @@ ms.locfileid: "74204952"
 
 ## <a name="the-basics"></a>Основы
 
-.NET Framework поддерживает три приведенных выше сценария разработки, предоставляя [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]и поддерживая среда выполнения Windows.
+.NET Framework поддерживает три сценария разработки, перечисленных выше, предоставляя .NET для приложений Магазина Windows 8. x и обеспечивая сам среда выполнения Windows.
 
 - [Пространства имен .NET Framework и среда выполнения Windows](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140)#net-framework-and-windows-runtime-namespaces) предоставляют упрощенное представление библиотек классов .NET Framework и включают только типы и члены, которые можно использовать для создания приложений Магазина Windows 8. x и компонентов Среда выполнения Windows.
 
@@ -42,7 +42,7 @@ ms.locfileid: "74204952"
 
   - Функции, которые просто заключают в оболочку API операционной системы, также удаляются, поскольку среда выполнения Windows легко вызывать из управляемого кода.
 
-  Дополнительные сведения о [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]см. в статье [Общие сведения о приложениях для Магазина Windows в .NET](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140)). Сведения о процессе выбора API см. в разделе " [.NET для приложений в стиле Metro](https://devblogs.microsoft.com/dotnet/net-for-metro-style-apps/) " в блоге .NET.
+  Дополнительные сведения о приложениях для магазина .NET для Windows 8. x см. в статье [Общие сведения о приложениях для Магазина Windows в .NET](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140)). Сведения о процессе выбора API см. в разделе " [.NET для приложений в стиле Metro](https://devblogs.microsoft.com/dotnet/net-for-metro-style-apps/) " в блоге .NET.
 
 - [Среда выполнения Windows](/uwp/api/) предоставляет элементы пользовательского интерфейса для создания приложений Магазина Windows 8. x и предоставляет доступ к функциям операционной системы. Как C# и .NET Framework, среда выполнения Windows содержит метаданные, позволяющие компиляторам и Visual Basic использовать среда выполнения Windows, используя .NET Framework библиотеки классов. .NET Framework упрощает использование среда выполнения Windows, скрывая некоторые различия:
 
@@ -88,7 +88,7 @@ ms.locfileid: "74204952"
 
 В среда выполнения Windows `IMap<K, V>` и `IMapView<K, V>` проходят итерации с помощью `IKeyValuePair`. При передаче этих типов в управляемый код они представляются как `IDictionary<TKey, TValue>` и `IReadOnlyDictionary<TKey, TValue>`, поэтому для их перебора можно обычным образом использовать `System.Collections.Generic.KeyValuePair<TKey, TValue>`.
 
-Представление интерфейсов в управляемом коде влияет на представление типов, реализующих эти интерфейсы. Например, класс `PropertySet` реализует `IMap<K, V>`, который представлен в управляемом коде как `IDictionary<TKey, TValue>`. `PropertySet` выглядит так, как если бы он был реализован `IDictionary<TKey, TValue>` вместо `IMap<K, V>`, поэтому в управляемом коде он имеет метод `Add`, который ведет себя как метод `Add` для .NET Framework словарей. А метода `Insert` у этого типа нет.
+Представление интерфейсов в управляемом коде влияет на представление типов, реализующих эти интерфейсы. Например, класс `PropertySet` реализует `IMap<K, V>`, который представлен в управляемом коде как `IDictionary<TKey, TValue>`. `PropertySet` представляет себя как реализующего `IDictionary<TKey, TValue>` вместо `IMap<K, V>`, поэтому в управляемом коде у него присутствует метод `Add`, который ведет себя как метод `Add` в словарях .NET Framework. А метода `Insert` у этого типа нет.
 
 Дополнительные сведения об использовании .NET Framework для создания среда выполнения Windows компонента и пошаговое руководство, в котором показано, как использовать такой компонент с JavaScript, см. [в разделе Создание компонентов C# среда выполнения Windows в и Visual Basic](/windows/uwp/winrt-components/creating-windows-runtime-components-in-csharp-and-visual-basic).
 
@@ -155,7 +155,7 @@ ms.locfileid: "74204952"
 
 Вы можете упаковать управляемый код из существующих классических приложений в качестве автономного компонента среда выполнения Windows. Это позволяет использовать компонент в приложениях для Магазина Windows 8. x, созданных с помощью C++ или JavaScript, а также в приложениях Магазина Windows 8. x, созданных с C# помощью или Visual Basic. Используйте управление версиями, если этот код будет использоваться в нескольких местах.
 
-## <a name="related-topics"></a>Связанные разделы
+## <a name="related-topics"></a>См. также
 
 |Заголовок|Описание|
 |-----------|-----------------|

@@ -1,15 +1,15 @@
 ---
-title: Фрагментирование канала
+title: Фрагментация канала
 ms.date: 03/30/2017
 ms.assetid: e4d53379-b37c-4b19-8726-9cc914d5d39f
-ms.openlocfilehash: 6bd7f1f31426c2d355b42f04ad770aac60183838
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 3811f7e7229dec1a46585a558b96f94bb202902f
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70990112"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716033"
 ---
-# <a name="chunking-channel"></a>Фрагментирование канала
+# <a name="chunking-channel"></a>Фрагментация канала
 
 При отправке больших сообщений с помощью Windows Communication Foundation (WCF) часто желательно ограничить объем памяти, используемой для буферизации этих сообщений. Одним из возможных решений является потоковая передача тела сообщения (предполагая, что основной объем данных содержится в теле сообщения). Однако для некоторых протоколов требуется буферизация всего сообщения. Например, при надежном обмене сообщениями и необходимости обеспечения безопасности. Другим возможным решением является разделение большого сообщения на маленькие, называемые фрагментами, и отправка этих фрагментов поочередно с последующим восстановлением большого сообщения на получающей стороне. Приложение может выполнить фрагментацию и дефрагментацию самостоятельно или воспользоваться пользовательским каналом. В примере канала фрагментации показано, как можно использовать пользовательский протокол или многоуровневый канал для фрагментации и дефрагментации сообщений произвольного большого размера.
 
@@ -23,7 +23,7 @@ ms.locfileid: "70990112"
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Если этот каталог не существует, перейдите к [примерам Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] и примеры. Этот образец расположен в следующем каталоге.
+> Если этот каталог не существует, перейдите к [примерам Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , чтобы скачать все Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Samples. Этот образец расположен в следующем каталоге.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\ChunkingChannel`
 
@@ -256,7 +256,7 @@ interface ITestService
 
 - Время ожидания, передаваемое в метод отправки, используется как время ожидания выполнения всей операции отправки, то есть отправки всех фрагментов.
 
-- Пользовательская разработка <xref:System.Xml.XmlDictionaryWriter> выбрана с целью избежать буферизации всего тела исходного сообщения. При необходимости применить <xref:System.Xml.XmlDictionaryReader> к телу сообщения, используя `message.GetReaderAtBodyContents`, была бы выполнена буферизация всего тела сообщения. Вместо этого у нас есть пользовательский <xref:System.Xml.XmlDictionaryWriter> объект, который передается в. `message.WriteBodyContents` Так как сообщение вызывает WriteBase64 для средства записи, средство записи упаковывает фрагменты в сообщения и отправляет их по внутреннему каналу. WriteBase64 выполняет блокировку пока фрагмент не будет отправлен.
+- Пользовательская разработка <xref:System.Xml.XmlDictionaryWriter> выбрана с целью избежать буферизации всего тела исходного сообщения. При необходимости применить <xref:System.Xml.XmlDictionaryReader> к телу сообщения, используя `message.GetReaderAtBodyContents`, была бы выполнена буферизация всего тела сообщения. Вместо этого у нас есть пользовательский <xref:System.Xml.XmlDictionaryWriter>, который передается `message.WriteBodyContents`. Так как сообщение вызывает WriteBase64 для средства записи, средство записи упаковывает фрагменты в сообщения и отправляет их по внутреннему каналу. WriteBase64 выполняет блокировку пока фрагмент не будет отправлен.
 
 ## <a name="implementing-the-receive-operation"></a>Реализация операции получения
 
@@ -282,7 +282,7 @@ interface ITestService
 
 ### <a name="onclose"></a>OnClose
 
-`OnClose` сначала задает `stopReceive` значение `true`, чтобы указать, что требуется остановить выполняющийся `ReceiveChunkLoop`. Затем он ожидает `receiveStopped` <xref:System.Threading.ManualResetEvent>, который задается при `ReceiveChunkLoop` остановке. Предполагая, что `ReceiveChunkLoop` остановится в течение заданного времени ожидания, `OnClose` вызывает `innerChannel.Close` с остающимся временем ожидания.
+`OnClose` сначала задает `stopReceive` значение `true`, чтобы указать, что требуется остановить выполняющийся `ReceiveChunkLoop`. Затем он ожидает `receiveStopped` <xref:System.Threading.ManualResetEvent>, который задается при остановке `ReceiveChunkLoop`. Предполагая, что `ReceiveChunkLoop` остановится в течение заданного времени ожидания, `OnClose` вызывает `innerChannel.Close` с остающимся временем ожидания.
 
 ### <a name="onabort"></a>OnAbort
 
@@ -306,9 +306,9 @@ interface ITestService
 
 ## <a name="implementing-binding-element-and-binding"></a>Реализация элемента привязки и привязки
 
-Элемент `ChunkingBindingElement` отвечает за создание фабрики `ChunkingChannelFactory` и прослушивателя `ChunkingChannelListener`. \< `CanBuildChannelFactory` \< `CanBuildChannelListener`Проверяет, относится ли t в t > и t > к типу `IDuplexSessionChannel` (единственный канал, поддерживаемый каналом фрагментирования), и что другие элементы привязки в привязке поддерживают это `ChunkingBindingElement` Тип канала.
+Элемент `ChunkingBindingElement` отвечает за создание фабрики `ChunkingChannelFactory` и прослушивателя `ChunkingChannelListener`. `ChunkingBindingElement` проверяет, что T в `CanBuildChannelFactory`\<T > и `CanBuildChannelListener`\<T > относится к типу `IDuplexSessionChannel` (единственный канал, поддерживаемый каналом фрагментирования) и что другие элементы привязки в привязке поддерживают этот тип канала.
 
-`BuildChannelFactory`\<T > сначала проверяет, можно ли построить запрошенный тип канала, а затем получает список действий с сообщениями, которые должны быть фрагментированы. Дополнительные сведения см. в следующем разделе. Затем метод создает новую фабрику `ChunkingChannelFactory`, передавая ей фабрику внутренних каналов (возвращенную из `context.BuildInnerChannelFactory<IDuplexSessionChannel>`), список действий фрагментируемых сообщений и максимальное количество буферизуемых фрагментов. Максимальное количество фрагментов определяется свойством `MaxBufferedChunks`, предоставляемым `ChunkingBindingElement`.
+`BuildChannelFactory`\<T > сначала проверяет, можно ли построить запрошенный тип канала, а затем получает список действий с сообщениями, которые будут фрагментированы. Дополнительные сведения см. в следующем разделе. Затем метод создает новую фабрику `ChunkingChannelFactory`, передавая ей фабрику внутренних каналов (возвращенную из `context.BuildInnerChannelFactory<IDuplexSessionChannel>`), список действий фрагментируемых сообщений и максимальное количество буферизуемых фрагментов. Максимальное количество фрагментов определяется свойством `MaxBufferedChunks`, предоставляемым `ChunkingBindingElement`.
 
 `BuildChannelListener<T>` имеет аналогичную реализацию для создания прослушивателя `ChunkingChannelListener` и передаче его прослушивателю внутреннего канала.
 
@@ -320,7 +320,7 @@ interface ITestService
 
 Канал фрагментации фрагментирует только сообщения, определенные посредством атрибута `ChunkingBehavior`. Класс `ChunkingBehavior` реализует метод `IOperationBehavior` и реализуется с помощью вызова метода `AddBindingParameter`. В этом методе `ChunkingBehavior` проверяет значение свойства `AppliesTo` (`InMessage`, `OutMessage` или обоих), чтобы определить, какие сообщения следует фрагментировать. Затем он возвращает действие для каждого сообщения (из коллекции сообщений в `OperationDescription`) и добавляет их в коллекцию строк, содержащуюся в экземпляре `ChunkingBindingParameter`. Затем он добавляет этот параметр `ChunkingBindingParameter` в предоставленную коллекцию `BindingParameterCollection`.
 
-`BindingParameterCollection` передается внутри `BindingContext` каждому элементу привязки в привязке при построении этим элементом привязки фабрики каналов или прослушивателя каналов. `ChunkingBindingElement` Реализация`BuildChannelListener<T>` и извлечение этого`ChunkingBindingParameter` объекта из s.`BindingContext’` `BuildChannelFactory<T>` `BindingParameterCollection` Коллекция действий, содержащихся в параметре `ChunkingBindingParameter`, затем передается в фабрику `ChunkingChannelFactory` или прослушиватель `ChunkingChannelListener`, которые, в свою очередь, передают ее в канал `ChunkingDuplexSessionChannel`.
+`BindingParameterCollection` передается внутри `BindingContext` каждому элементу привязки в привязке при построении этим элементом привязки фабрики каналов или прослушивателя каналов. Реализация `ChunkingBindingElement``BuildChannelFactory<T>` и `BuildChannelListener<T>` извлекать это `ChunkingBindingParameter` из `BindingContext’`, `BindingParameterCollection`. Коллекция действий, содержащихся в параметре `ChunkingBindingParameter`, затем передается в фабрику `ChunkingChannelFactory` или прослушиватель `ChunkingChannelListener`, которые, в свою очередь, передают ее в канал `ChunkingDuplexSessionChannel`.
 
 ## <a name="running-the-sample"></a>Запуск примера
 
@@ -369,7 +369,7 @@ Press enter when service is available
  < Received chunk 10 of message 5b226ad5-c088-4988-b737-6a565e0563dd
 ```
 
-Сервер:
+Сервер.
 
 ```console
 Service started, press enter to exit

@@ -2,12 +2,12 @@
 title: Использование действия Pick
 ms.date: 03/30/2017
 ms.assetid: b89be812-a247-4025-b0e3-ffb20db027a6
-ms.openlocfilehash: 03b9ff7f552ad0cdcfbe9c46121a2f46f35de52a
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: b0997254615ca962fd386dea70c67a8edb36c90a
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70037883"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715529"
 ---
 # <a name="using-the-pick-activity"></a>Использование действия Pick
 Этот образец демонстрирует применение действия <xref:System.Activities.Statements.Pick>.
@@ -24,17 +24,17 @@ ms.locfileid: "70037883"
 
  Рабочий процесс конструктора в версии примера конструктора демонстрируется создание рабочего процесса в конструкторе. Включаются следующие файлы.
 
-- Program.cs: `Main` Включает функцию, которая выполняет пример рабочего процесса.
+- Program.cs: содержит функцию `Main`, выполняющую образец рабочего процесса.
 
-- ReadString.cs: Пользовательское действие, считывающее некоторые входные данные из консоли.
+- ReadString.cs: настраиваемое действие, считывающее входные данные с консоли.
 
-- Sequence1. XAML: Рабочий процесс, созданный с помощью конструктора, использующего выбор.
+- Sequence1.xaml: рабочий процесс, созданный с помощью конструктора, использующего действие Pick.
 
  Закодированный рабочий процесс в кодированной версии примера показано, как создать рабочий процесс в конструкторе. Включаются следующие файлы.
 
-- Program.cs: `Main` Включает функцию, которая выполняет пример рабочего процесса.
+- Program.cs: содержит функцию `Main`, выполняющую образец рабочего процесса.
 
-- ReadString.cs: Пользовательское действие, считывающее некоторые входные данные из консоли.
+- ReadString.cs: настраиваемое действие, считывающее входные данные с консоли.
 
 #### <a name="to-use-this-sample"></a>Использование этого образца
 
@@ -49,6 +49,6 @@ ms.locfileid: "70037883"
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Если этот каталог не существует, перейдите к [примерам Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] и примеры. Этот образец расположен в следующем каталоге.  
+> Если этот каталог не существует, перейдите к [примерам Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , чтобы скачать все Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Samples. Этот образец расположен в следующем каталоге.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\Pick`

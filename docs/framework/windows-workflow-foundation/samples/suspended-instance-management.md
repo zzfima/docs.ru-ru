@@ -2,12 +2,12 @@
 title: Управление приостановленным экземпляром
 ms.date: 03/30/2017
 ms.assetid: f5ca3faa-ba1f-4857-b92c-d927e4b29598
-ms.openlocfilehash: 7a2f36ac2c127376eea56601f54aa5e571d66a55
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 3f1f4f8edcbe0e05067d3ca739ef3d5f4fe4d798
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70037894"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715945"
 ---
 # <a name="suspended-instance-management"></a>Управление приостановленным экземпляром
 Этот образец демонстрирует управление экземплярами рабочего процесса, которые были приостановлены.  Действием по умолчанию для поведения <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior> является `AbandonAndSuspend`. Это означает, что по умолчанию при появлении необработанных исключений, сформированных экземпляром рабочего процесса, который размещен на узле <xref:System.ServiceModel.WorkflowServiceHost>, экземпляр удаляется из памяти (отбрасывается) и устойчивая/сохраненная версия экземпляра отмечается как приостановленная. Приостановленный экземпляр рабочего процесса не будет в состоянии выполняться до отмены приостановки.
@@ -15,7 +15,7 @@ ms.locfileid: "70037894"
  Этот образец показывает, как можно реализовать программу командной строки для выполнения запроса приостановленных экземпляров и как дать пользователю возможность возобновлять или завершать работу экземпляра. В этом образце служба рабочего процесса преднамеренно вызывает исключение, в результате чего она приостанавливается. Затем с помощью программы командной строки можно будет запросить экземпляр, а после этого возобновить или завершить его работу.
 
 ## <a name="demonstrates"></a>Демонстрации
- <xref:System.ServiceModel.WorkflowServiceHost>с <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior> помощью <xref:System.ServiceModel.Activities.WorkflowControlEndpoint> и в Windows Workflow Foundation (WF).
+ <xref:System.ServiceModel.WorkflowServiceHost> с <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior> и <xref:System.ServiceModel.Activities.WorkflowControlEndpoint> в Windows Workflow Foundation (WF).
 
 ## <a name="discussion"></a>Обсуждение
  Программа командной строки, реализованная в этом образце, предназначена для работы с реализацией хранилища экземпляра SQL Server, который поставляется в [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]. Если имеется пользовательская реализация хранилища экземпляра, то можно приспособить и эту программу, заменяя в образце реализации `WorkflowInstanceCommand` реализациями, которые относятся к применяемому хранилищу экземпляра.
@@ -28,7 +28,7 @@ ms.locfileid: "70037894"
 
     1. Сервер очереди сообщений (Майкрософт) (MSMQ)
 
-    2. SQL Server Express
+    2. SQL Server, экспресс-выпуск
 
 2. Установка базы данных SQL Server.
 
@@ -48,7 +48,7 @@ ms.locfileid: "70037894"
 
     3. Нажмите клавишу **Ввод** , чтобы прерывать самплеворкфловапп.
 
-    4. Откройте консоль «Управление компьютером», выполнив команду Compmgmt.msc из командной строки.
+    4. Откройте консоль Управление компьютером, выполнив команду Compmgmt.msc из командной строки.
 
     5. Разверните узел **служба и приложения**, **очередь сообщений**, **частные очереди**.
 
@@ -81,6 +81,6 @@ ms.locfileid: "70037894"
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Если этот каталог не существует, перейдите к [примерам Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] и примеры. Этот образец расположен в следующем каталоге.  
+> Если этот каталог не существует, перейдите к [примерам Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , чтобы скачать все Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Samples. Этот образец расположен в следующем каталоге.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WF\Application\SuspendedInstanceManagement`

@@ -2,12 +2,12 @@
 title: Действия доступа к базе данных
 ms.date: 03/30/2017
 ms.assetid: 174a381e-1343-46a8-a62c-7c2ae2c4f0b2
-ms.openlocfilehash: 31794a583e87b5948457fac754cb5bf66fafa09c
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.openlocfilehash: eec368803eeacb2bab729bcd6d57cc7fc6107256
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70016039"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74710862"
 ---
 # <a name="database-access-activities"></a>Действия доступа к базе данных
 
@@ -18,7 +18,7 @@ ms.locfileid: "70016039"
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Если этот каталог не существует, перейдите на страницу (страница загрузки), чтобы скачать все Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] и примеры. Этот образец расположен в следующем каталоге.
+> Если этот каталог не существует, перейдите на страницу (страница загрузки), чтобы скачать все Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Samples. Этот образец расположен в следующем каталоге.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\DbActivities`
 
@@ -77,7 +77,7 @@ Public class DbUpdate: AsyncCodeActivity
 |ProviderName|Неизменяемое имя поставщика ADO.NET. Если этот аргумент задан, то необходимо задать и аргумент `ConnectionString`.|
 |ConnectionString|Строка соединения для подключения к базе данных. Если этот аргумент задан, то необходимо задать и аргумент `ProviderName`.|
 |ConfigName|Имя раздела файла конфигурации, в котором хранятся сведения о соединении. Если этот аргумент задан, то аргументы `ProviderName` и `ConnectionString` не требуются.|
-|CommandType|Тип выполняемой команды <xref:System.Data.Common.DbCommand>.|
+|Тип команды|Тип выполняемой команды <xref:System.Data.Common.DbCommand>.|
 |Sql|Выполняемая команда SQL.|
 |Параметры|Коллекция параметров SQL-запроса.|
 |AffectedRecords|Количество записей, на которые повлияла последняя операция.|
@@ -92,7 +92,7 @@ Public class DbUpdate: AsyncCodeActivity
 
 Запрос для выполнения настраивается в свойстве `Sql`, а параметры передаются через коллекцию `Parameters`.
 
-После `DbQueryScalar` выполнения, скаляр возвращается `Result out` в аргументе (типа `TResult`, который определен в базовом классе <xref:System.Activities.AsyncCodeActivity%601>).
+После выполнения `DbQueryScalar` скаляр возвращается в `Result out` аргументе (типа `TResult`, который определен в базовом классе <xref:System.Activities.AsyncCodeActivity%601>).
 
 ```csharp
 public class DbQueryScalar<TResult> : AsyncCodeActivity<TResult>
@@ -131,20 +131,20 @@ public class DbQueryScalar<TResult> : AsyncCodeActivity<TResult>
 |ProviderName|Неизменяемое имя поставщика ADO.NET. Если этот аргумент задан, то необходимо задать и аргумент `ConnectionString`.|
 |ConnectionString|Строка соединения для подключения к базе данных. Если этот аргумент задан, то необходимо задать и аргумент `ProviderName`.|
 |ConfigName|Имя раздела файла конфигурации, в котором хранятся сведения о соединении. Если этот аргумент задан, то аргументы `ProviderName` и `ConnectionString` не требуются.|
-|CommandType|Тип выполняемой команды <xref:System.Data.Common.DbCommand>.|
+|Тип команды|Тип выполняемой команды <xref:System.Data.Common.DbCommand>.|
 |Sql|Выполняемая команда SQL.|
 |Параметры|Коллекция параметров SQL-запроса.|
 |Результат|Скаляр, полученный после выполнения запроса. Этот аргумент имеет тип `TResult`.|
 
 ## <a name="dbquery"></a>DbQuery
 
-Выполняет запрос, который возвращает список объектов. После выполнения <xref:System.Func%601>запроса выполняется функция сопоставления (она может быть `DbDataReader` <xref:System.Activities.ActivityFunc%601> `DbDataReader` <, `TResult`> или <, `TResult`>). Эта функция сопоставления получает запись в `DbDataReader` и сопоставляет ее возвращаемому объекту.
+Выполняет запрос, который возвращает список объектов. После выполнения запроса выполняется функция сопоставления (ее можно <xref:System.Func%601><`DbDataReader`, `TResult`> или <xref:System.Activities.ActivityFunc%601><`DbDataReader`, `TResult`>). Эта функция сопоставления получает запись в `DbDataReader` и сопоставляет ее возвращаемому объекту.
 
 Чтобы настроить сведения о соединении, можно задать неизменяемое имя поставщика (`ProviderName`) и строку соединения (`ConnectionString`) или использовать имя конфигурации строки соединения (`ConfigFileSectionName`) из файла конфигурации приложения.
 
 Запрос для выполнения настраивается в свойстве `Sql`, а параметры передаются через коллекцию `Parameters`.
 
-Результаты SQL-запроса извлекаются с использованием `DbDataReader`. Действие выполняет перебор по `DbDataReader` и сопоставляет строки в `DbDataReader` с экземпляром `TResult`. `DbQuery` Пользователь `TResult`должен предоставить код сопоставления, и это можно сделать двумя способами: < <xref:System.Func%601> `DbDataReader`с помощью, `TResult`> или <xref:System.Activities.ActivityFunc%601> < `DbDataReader`>. В первом случае сопоставление совершается на одном шаге выполнения. Поэтому этот способ быстрее, но сериализация в XAML невозможна. Во втором случае сопоставление выполняется в несколько шагов. Поэтому может потребоваться больше времени, зато возможны сериализация в XAML и декларативное авторство (любое существующее действие может участвовать в сопоставлении).
+Результаты SQL-запроса извлекаются с использованием `DbDataReader`. Действие выполняет перебор по `DbDataReader` и сопоставляет строки в `DbDataReader` с экземпляром `TResult`. Пользователь `DbQuery` должен предоставить код сопоставления, и это можно сделать двумя способами: с помощью <xref:System.Func%601><`DbDataReader`, `TResult`> или <xref:System.Activities.ActivityFunc%601><`DbDataReader`, `TResult`>. В первом случае сопоставление совершается на одном шаге выполнения. Поэтому этот способ быстрее, но сериализация в XAML невозможна. Во втором случае сопоставление выполняется в несколько шагов. Поэтому может потребоваться больше времени, зато возможны сериализация в XAML и декларативное авторство (любое существующее действие может участвовать в сопоставлении).
 
 ```csharp
 public class DbQuery<TResult> : AsyncCodeActivity<IList<TResult>> where TResult : class
@@ -191,22 +191,22 @@ public class DbQuery<TResult> : AsyncCodeActivity<IList<TResult>> where TResult 
 |ProviderName|Неизменяемое имя поставщика ADO.NET. Если этот аргумент задан, то необходимо задать и аргумент `ConnectionString`.|
 |ConnectionString|Строка соединения для подключения к базе данных. Если этот аргумент задан, то необходимо задать и аргумент `ProviderName`.|
 |ConfigName|Имя раздела файла конфигурации, в котором хранятся сведения о соединении. Если этот аргумент задан, то аргументы `ProviderName` и `ConnectionString` не требуются.|
-|CommandType|Тип выполняемой команды <xref:System.Data.Common.DbCommand>.|
+|Тип команды|Тип выполняемой команды <xref:System.Data.Common.DbCommand>.|
 |Sql|Выполняемая команда SQL.|
 |Параметры|Коллекция параметров SQL-запроса.|
-|Сопоставитель|Функция сопоставления (<xref:System.Func%601>< `DataReader` , >), которая принимает запись в полученном виде в результате выполнения запроса и возвращает экземпляр объекта типа `TResult` для добавления в `TResult``DbDataReader` `Result` коллекция.<br /><br /> В этом случае сопоставление совершается на одном шаге выполнения, но декларативное авторство с использованием конструктора невозможно.|
-|MapperFunc|Функция сопоставления (<xref:System.Activities.ActivityFunc%601>< `DataReader` , >), которая принимает запись в полученном виде в результате выполнения запроса и возвращает экземпляр объекта типа `TResult` для добавления в `TResult``DbDataReader` `Result` коллекция.<br /><br /> В этом случае сопоставление совершается в несколько шагов выполнения. Для этой функции возможны сериализация в XAML и декларативное авторство (любое существующее действие может участвовать в сопоставлении).|
+|Сопоставитель|Функция сопоставления (<xref:System.Func%601><`DbDataReader`, `TResult`>), которая принимает запись в `DataReader`, полученную в результате выполнения запроса, и возвращает экземпляр объекта типа `TResult`, добавляемого в коллекцию `Result`.<br /><br /> В этом случае сопоставление совершается на одном шаге выполнения, но декларативное авторство с использованием конструктора невозможно.|
+|MapperFunc|Функция сопоставления (<xref:System.Activities.ActivityFunc%601><`DbDataReader`, `TResult`>), которая принимает запись в `DataReader`, полученную в результате выполнения запроса, и возвращает экземпляр объекта типа `TResult`, добавляемого в коллекцию `Result`.<br /><br /> В этом случае сопоставление совершается в несколько шагов выполнения. Для этой функции возможны сериализация в XAML и декларативное авторство (любое существующее действие может участвовать в сопоставлении).|
 |Результат|Список объектов, полученный в результате выполнения запроса и выполнения функции сопоставления для каждой записи в `DataReader`.|
 
 ## <a name="dbquerydataset"></a>DbQueryDataSet
 
-Выполняет запрос, который возвращает <xref:System.Data.DataSet>. Этот класс выполняет работу асинхронно. Он является производным <xref:System.Activities.AsyncCodeActivity>от < `TResult`> и использует его асинхронные возможности.
+Выполняет запрос, который возвращает <xref:System.Data.DataSet>. Этот класс выполняет работу асинхронно. Он является производным от <xref:System.Activities.AsyncCodeActivity><`TResult`> и использует его асинхронные возможности.
 
 Чтобы настроить сведения о соединении, можно задать неизменяемое имя поставщика (`ProviderName`) и строку соединения (`ConnectionString`) или использовать имя конфигурации строки соединения (`ConfigFileSectionName`) из файла конфигурации приложения.
 
 Запрос для выполнения настраивается в свойстве `Sql`, а параметры передаются через коллекцию `Parameters`.
 
-`Result out` `TResult`После выполнения объект возвращается в аргументе (типа, который определен в базовом классе <xref:System.Activities.AsyncCodeActivity%601>). `DataSet` `DbQueryDataSet`
+После выполнения `DbQueryDataSet` `DataSet` возвращается в аргументе `Result out` (типа `TResult`, который определен в базовом классе <xref:System.Activities.AsyncCodeActivity%601>).
 
 ```csharp
 public class DbQueryDataSet : AsyncCodeActivity<DataSet>
@@ -245,7 +245,7 @@ public class DbQueryDataSet : AsyncCodeActivity<DataSet>
 |ProviderName|Неизменяемое имя поставщика ADO.NET. Если этот аргумент задан, то необходимо задать и аргумент `ConnectionString`.|
 |ConnectionString|Строка соединения для подключения к базе данных. Если этот аргумент задан, то необходимо задать и аргумент `ProviderName`.|
 |ConfigName|Имя раздела файла конфигурации, в котором хранятся сведения о соединении. Если этот аргумент задан, то аргументы `ProviderName` и `ConnectionString` не требуются.|
-|CommandType|Тип выполняемой команды <xref:System.Data.Common.DbCommand>.|
+|Тип команды|Тип выполняемой команды <xref:System.Data.Common.DbCommand>.|
 |Sql|Выполняемая команда SQL.|
 |Параметры|Коллекция параметров SQL-запроса.|
 |Результат|<xref:System.Data.DataSet>, полученный после выполнения запроса.|
@@ -254,7 +254,7 @@ public class DbQueryDataSet : AsyncCodeActivity<DataSet>
 
 Все DbActivities используют одни и те же параметры конфигурации. Их можно настроить двумя способами.
 
-- `ConnectionString + InvariantName`: Задайте неизменяемое имя поставщика ADO.NET и строку подключения.
+- `ConnectionString + InvariantName`: Укажите неизменяемое имя поставщика ADO.NET и строку соединения.
 
   ```csharp
   Activity dbSelectCount = new DbQueryScalar<DateTime>()
@@ -267,7 +267,7 @@ public class DbQueryDataSet : AsyncCodeActivity<DataSet>
   };
   ```
 
-- `ConfigName`: Задайте имя раздела конфигурации, содержащего сведения о соединении.
+- `ConfigName`: Укажите имя раздела конфигурации, в котором содержатся сведения о соединении.
 
   ```xml
   <connectionStrings>
@@ -333,6 +333,6 @@ public class DbQueryDataSet : AsyncCodeActivity<DataSet>
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Если этот каталог не существует, перейдите к [примерам Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] и примеры. Этот образец расположен в следующем каталоге.
+> Если этот каталог не существует, перейдите к [примерам Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , чтобы скачать все Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Samples. Этот образец расположен в следующем каталоге.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\DbActivities`

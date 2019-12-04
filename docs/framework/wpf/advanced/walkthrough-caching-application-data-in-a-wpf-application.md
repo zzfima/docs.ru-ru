@@ -9,12 +9,12 @@ helpviewer_keywords:
 - caching [.NET Framework]
 - caching [WPF]
 ms.assetid: dac2c9ce-042b-4d23-91eb-28f584415cef
-ms.openlocfilehash: f0082bd99b154f87ab90bee7a89afdb8405f6623
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: 922d91466731b331cc409cc362c4ada2c287916a
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920316"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715890"
 ---
 # <a name="walkthrough-caching-application-data-in-a-wpf-application"></a>Пошаговое руководство. Кэширование данных приложения WPF
 Кэширование позволяет хранить данные в памяти для быстрого доступа. При повторном доступе к данным приложения могут получать их из кэша вместо извлечения из исходного источника. Это может повысить производительность и масштабируемость. Кроме того, кэширование обеспечивает доступность данных при временной недоступности источника данных.
@@ -78,7 +78,7 @@ ms.locfileid: "72920316"
      Конструктор WPF откроется в режиме **конструктора** и отобразит файл MainWindow. XAML. Visual Studio создаст папку **My Project** , файл Application. XAML и файл MainWindow. XAML.
 
 ## <a name="targeting-the-net-framework-and-adding-a-reference-to-the-caching-assemblies"></a>Нацеливание на .NET Framework и Добавление ссылки на сборки кэширования
- По умолчанию приложения WPF предназначены для [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]. Чтобы использовать пространство имен <xref:System.Runtime.Caching> в приложении WPF, приложение должно быть предназначено для .NET Framework 4 (а не [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]) и должно включать ссылку на пространство имен.
+ По умолчанию приложения WPF ориентированы на клиентский профиль .NET Framework 4. Чтобы использовать пространство имен <xref:System.Runtime.Caching> в приложении WPF, приложение должно быть предназначено для .NET Framework 4 (а не для клиентского профиля .NET Framework 4) и должно включать ссылку на пространство имен.
 
  Поэтому следующим шагом является изменение целевого объекта .NET Framework и Добавление ссылки на пространство имен <xref:System.Runtime.Caching>.
 
@@ -97,7 +97,7 @@ ms.locfileid: "72920316"
 
      Откроется диалоговое окно **Дополнительные параметры компилятора** .
 
-4. В списке **Целевая платформа (все конфигурации)** выберите .NET Framework 4. (Не выбирайте [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)].)
+4. В списке **Целевая платформа (все конфигурации)** выберите .NET Framework 4. (Не выбирайте .NET Framework 4-клиентский профиль.)
 
 5. Нажмите кнопку **ОК**.
 
@@ -325,7 +325,7 @@ ms.locfileid: "72920316"
  [!code-csharp[CachingWPFApplications#1](~/samples/snippets/csharp/VS_Snippets_Wpf/CachingWPFApplications/CSharp/MainWindow.xaml.cs#1)]
  [!code-vb[CachingWPFApplications#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CachingWPFApplications/VisualBasic/MainWindow.xaml.vb#1)]
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - <xref:System.Runtime.Caching.MemoryCache>
 - <xref:System.Runtime.Caching.ObjectCache>

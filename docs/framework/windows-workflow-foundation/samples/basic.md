@@ -2,17 +2,17 @@
 title: Basic — WF
 ms.date: 03/30/2017
 ms.assetid: 84a315b6-3f96-4959-8306-49be37936a23
-ms.openlocfilehash: be8dc4fc66a2adc337ddcd0bcfd0b67fdf9fae41
-ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
+ms.openlocfilehash: 5e7084a405dce0f57cb4ef391415b69041b6de6e
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68869032"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716776"
 ---
 # <a name="basic"></a>Basic
 В этом разделе приводятся примеры, демонстрирующие основные функциональные возможности Windows Workflow Foundation (WF).  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>Содержание  
  [Встроенные действия](built-in-activities.md)  
  Содержит образцы, использующие встроенную библиотеку действий.  
   
@@ -20,7 +20,7 @@ ms.locfileid: "68869032"
  Содержит образцы, демонстрирующие создание пользовательских действий.  
   
  [Конструктор](designer.md)  
- Содержит образцы использования [!INCLUDE[wfd1](../../../../includes/wfd1-md.md)].  
+ Содержит примеры, демонстрирующие использование конструктор рабочих процессов Windows.  
   
  [Повторное размещение конструктора](designer-rehosting.md)  
  Содержит образцы, демонстрирующие перемещение конструктора действий на другой узел.  

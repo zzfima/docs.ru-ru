@@ -2,12 +2,12 @@
 title: Базовая служба HTTP
 ms.date: 03/30/2017
 ms.assetid: 27048b43-8a54-4f2a-9952-594bbfab10ad
-ms.openlocfilehash: ec716b41efb3dde6e5afdb386d797e402d924b56
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 8dfcd5a751bcef6aa24b5cb4a200c8820c43fe81
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045162"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716093"
 ---
 # <a name="basic-http-service"></a>Базовая служба HTTP
 
@@ -15,13 +15,13 @@ ms.locfileid: "70045162"
 
 ## <a name="sample-details"></a>Подробные сведения об образце
 
-Служба WCF предоставляет две операции, `EchoWithGet` и `EchoWithPost`, которая возвращает строку, переданную в качестве входных данных.
+Служба WCF предоставляет 2 операции, `EchoWithGet` и `EchoWithPost`, которые возвращают строку, переданную в качестве входных данных.
 
 К операции `EchoWithGet` добавляется заметка <xref:System.ServiceModel.Web.WebGetAttribute>, указывающим на обработку операцией HTTP-запросов `GET`. Поскольку <xref:System.ServiceModel.Web.WebGetAttribute> не указывает явно <xref:System.UriTemplate>, оператор ожидает передачи входной строки с помощью параметра строки запроса с именем `s`. Обратите внимание, что формат URI, ожидаемого службой, может быть изменен с помощью свойства <xref:System.ServiceModel.Web.WebGetAttribute.UriTemplate%2A>.
 
 К операции `EchoWithPost` добавляется заметка <xref:System.ServiceModel.Web.WebInvokeAttribute>, указывающая на то, что это не является операцией `GET` (имеющей побочные эффекты). Поскольку <xref:System.ServiceModel.Web.WebInvokeAttribute> не указывает явно `Method`, операция обрабатывает HTTP-запросы `POST`, содержащие строку в тексте запроса (например, в формате XML). Обратите внимание, что метод HTTP и формат URI запроса можно изменить с помощью свойств <xref:System.ServiceModel.Web.WebInvokeAttribute.Method%2A> и <xref:System.ServiceModel.Web.WebInvokeAttribute.UriTemplate> соответственно.
 
-Файл App.config настраивает для службы WCF конечную точку по умолчанию <xref:System.ServiceModel.Description.WebHttpEndpoint>, для свойства которого <xref:System.ServiceModel.Description.WebHttpEndpoint.HelpEnabled%2A> задано значение `true`. В результате инфраструктура WCF создает автоматическую HTML-страницу справки на `http://localhost:8000/Customers/help` , которая содержит сведения о том, как создавать HTTP-запросы к службе и как использовать HTTP-ответ службы.
+Файл App.config настраивает для службы WCF конечную точку по умолчанию <xref:System.ServiceModel.Description.WebHttpEndpoint>, для свойства которого <xref:System.ServiceModel.Description.WebHttpEndpoint.HelpEnabled%2A> задано значение `true`. В результате инфраструктура WCF создает автоматическую HTML-страницу справки на `http://localhost:8000/Customers/help`, которая предоставляет сведения о том, как создавать HTTP-запросы к службе и как использовать HTTP-ответ службы.
 
 Program.cs демонстрирует, как фабрику каналов WCF можно использовать для выполнения вызовов службы и обработки ответов. Заметьте, что это лишь один из способов доступа к WCF-службе. Также возможен доступ к службе с помощью других классов .NET Framework, например <xref:System.Net.HttpWebRequest> и <xref:System.Net.WebClient>.
 
@@ -40,6 +40,6 @@ Program.cs демонстрирует, как фабрику каналов WCF 
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Если этот каталог не существует, перейдите к [примерам Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] и примеры. Этот образец расположен в следующем каталоге.
+> Если этот каталог не существует, перейдите к [примерам Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , чтобы скачать все Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Samples. Этот образец расположен в следующем каталоге.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Web\BasicHttpService`

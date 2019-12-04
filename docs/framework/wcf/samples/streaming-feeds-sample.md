@@ -2,12 +2,12 @@
 title: Пример потоковой передачи каналов
 ms.date: 03/30/2017
 ms.assetid: 1f1228c0-daaa-45f0-b93e-c4a158113744
-ms.openlocfilehash: ede1dbb4f5c682b8182dda4888a9cbd373b95dd8
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 9d40a07b81474a283a8edbeb7aca1aa7ab3993b2
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976374"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716638"
 ---
 # <a name="streaming-feeds-sample"></a>Пример потоковой передачи каналов
 В этом образце показано, как управлять веб-каналами синдикации, содержащими большое число элементов. На стороне сервера этот пример показывает, как откладывать создание отдельных объектов <xref:System.ServiceModel.Syndication.SyndicationItem> в веб-канале до момента записи элемента в сетевой поток.  
@@ -18,7 +18,7 @@ ms.locfileid: "73976374"
   
  В демонстрации используются визуальные C# итераторы (с использованием `yield return` конструкции ключевого слова). Дополнительные сведения о итераторах см. в разделе "использование итераторов" на сайте MSDN.  
   
-## <a name="service"></a>Служба  
+## <a name="service"></a>Service  
  Служба реализует базовый контракт <xref:System.ServiceModel.Web.WebGetAttribute>, состоящий из одной операции, как показано в следующем примере кода.  
   
 ```csharp  
@@ -67,7 +67,7 @@ public Atom10FeedFormatter StreamedFeed()
   
  В результате поток элементов никогда не помещается в буфер памяти целиком. Это поведение можно проследить, установив точку останова в операторе `yield return` в методе `ItemGenerator.GenerateItems()` и отметив, что эта точка останова встречается в первый раз после того, как служба возвращала результат метода `StreamedFeed()`.  
   
-## <a name="client"></a>"Клиент";  
+## <a name="client"></a>Клиент  
  Клиент в этом образце применяет пользовательскую реализацию <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter>, которая задерживает воссоздание отдельных элементов в веб-канале вместо их записи в буфер в памяти. Пользовательский экземпляр `StreamedAtom10FeedFormatter` используется следующим образом.  
   
 ```csharp  
@@ -114,10 +114,10 @@ private IEnumerable<SyndicationItem> DelayReadItems(XmlReader reader, Syndicatio
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Если этот каталог не существует, перейдите к [примерам Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Samples. Этот образец расположен в следующем каталоге.  
+> Если этот каталог не существует, перейдите к [примерам Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , чтобы скачать все Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Samples. Этот образец расположен в следующем каталоге.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Syndication\StreamingFeeds`  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Автономный веб-канал диагностики](../../../../docs/framework/wcf/samples/stand-alone-diagnostics-feed-sample.md)

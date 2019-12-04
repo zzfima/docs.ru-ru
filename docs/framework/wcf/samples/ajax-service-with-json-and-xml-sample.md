@@ -2,12 +2,12 @@
 title: Пример службы AJAX с JSON и XML
 ms.date: 03/30/2017
 ms.assetid: 8ea5860d-0c42-4ae9-941a-e07efdd8e29c
-ms.openlocfilehash: eadb884667a0b29ef36056f0c3bec4675b7f1b05
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: ca9bdbfa135ac7dc0b69589d4f8fce07bc4c4afe
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70895147"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716219"
 ---
 # <a name="ajax-service-with-json-and-xml-sample"></a>Пример службы AJAX с JSON и XML
 
@@ -20,7 +20,7 @@ ms.locfileid: "70895147"
 > [!NOTE]
 > Процедура настройки и инструкции по построению для данного образца приведены в конце этого раздела.
 
-Чтобы разрешить использование клиентов, не являющихся клиентами ASP.NET AJAX, используйте <xref:System.ServiceModel.Activation.WebServiceHostFactory> (а не <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory>) в SVC-файле. Объект <xref:System.ServiceModel.Activation.WebServiceHostFactory> добавляет стандартную конечную точку <xref:System.ServiceModel.Description.WebHttpEndpoint> в службу. Конечная точка настраивается по пустому адресу относительно SVC-файла; Это означает, что адрес службы — `http://localhost/ServiceModelSamples/service.svc`, без дополнительных суффиксов, отличных от имени операции.
+Чтобы разрешить использование клиентов, не являющихся клиентами ASP.NET AJAX, используйте <xref:System.ServiceModel.Activation.WebServiceHostFactory> (а не <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory>) в SVC-файле. Объект <xref:System.ServiceModel.Activation.WebServiceHostFactory> добавляет стандартную конечную точку <xref:System.ServiceModel.Description.WebHttpEndpoint> в службу. Конечная точка настраивается по пустому адресу относительно SVC-файла; Это означает, что адрес службы `http://localhost/ServiceModelSamples/service.svc`, без дополнительных суффиксов, отличных от имени операции.
 
 `<%@ServiceHost language="c#" Debug="true" Service="Microsoft.Samples.XmlAjaxService.CalculatorService" Factory="System.ServiceModel.Activation.WebServiceHostFactory" %>`
 
@@ -37,7 +37,7 @@ ms.locfileid: "70895147"
 </system.serviceModel>
 ```
 
-Формат данных по умолчанию <xref:System.ServiceModel.Description.WebHttpEndpoint> для XML, а формат данных по умолчанию <xref:System.ServiceModel.Description.WebScriptEndpoint> для — JSON. Дополнительные сведения см. в разделе [Создание служб AJAX WCF без ASP.NET](../../../../docs/framework/wcf/feature-details/creating-wcf-ajax-services-without-aspnet.md).
+Формат данных по умолчанию для <xref:System.ServiceModel.Description.WebHttpEndpoint> — XML, а формат данных по умолчанию для <xref:System.ServiceModel.Description.WebScriptEndpoint> — JSON. Дополнительные сведения см. в разделе [Создание служб AJAX WCF без ASP.NET](../../../../docs/framework/wcf/feature-details/creating-wcf-ajax-services-without-aspnet.md).
 
 Служба в следующем примере представляет собой стандартную службу WCF с двумя операциями. Обе операции требуют использования основного стиля <xref:System.ServiceModel.Web.WebMessageBodyStyle.Wrapped> в <xref:System.ServiceModel.Web.WebGetAttribute> или атрибутов <xref:System.ServiceModel.Web.WebInvokeAttribute>, которые относятся к поведению `webHttp` и не влияют на переключение формата данных JSON/XML.
 
@@ -47,7 +47,7 @@ ms.locfileid: "70895147"
 MathResult DoMathXml(double n1, double n2);
 ```
 
-Формат ответа для операции указан в формате XML, который является значением по умолчанию для [ \<поведения > HTTP](../../../../docs/framework/configure-apps/file-schema/wcf/webhttp.md) . Тем не менее, рекомендуется явно указывать формат ответа.
+Формат ответа для операции указан в формате XML, который является значением по умолчанию для\<поведения [> HTTP](../../../../docs/framework/configure-apps/file-schema/wcf/webhttp.md) . Тем не менее, рекомендуется явно указывать формат ответа.
 
 Другая операция использует атрибут `WebInvokeAttribute` и явно указывает JSON вместо XML для ответа.
 
@@ -57,7 +57,7 @@ MathResult DoMathXml(double n1, double n2);
 MathResult DoMathJson(double n1, double n2);
 ```
 
-Обратите внимание, что в обоих случаях операции возвращают сложный `MathResult`тип, который является стандартным типом контракта данных WCF.
+Обратите внимание, что в обоих случаях операции возвращают сложный тип, `MathResult`, который является стандартным типом контракта данных WCF.
 
 Клиентская веб-страница Ксмлажаксклиентпаже. htm содержит код JavaScript, который вызывает одну из двух предыдущих операций, когда пользователь щелкает на странице команду **выполнить вычисление (вернуть JSON)** или **выполнить вычисление (возврат XML)** . Код, вызывающий службу, создает тело JSON и отправляет его с помощью HTTP POST. Запрос создается вручную в JavaScript, в отличие от примера [базовой службы AJAX](../../../../docs/framework/wcf/samples/basic-ajax-service.md) и других примеров, использующих ASP.NET AJAX.
 
@@ -98,7 +98,7 @@ xmlHttp.onreadystatechange=function(){
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Если этот каталог не существует, перейдите к [примерам Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] и примеры. Этот образец расположен в следующем каталоге.
+> Если этот каталог не существует, перейдите к [примерам Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , чтобы скачать все Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Samples. Этот образец расположен в следующем каталоге.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\AJAX\XmlAjaxService`
 
@@ -108,8 +108,8 @@ xmlHttp.onreadystatechange=function(){
 
 2. Создайте решение Ксмлажакссервице. sln, как описано в разделе [Создание примеров Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).
 
-3. Перейдите к `http://localhost/ServiceModelSamples/XmlAjaxClientPage.htm` разделу (не открывайте ксмлажаксклиентпаже. htm в браузере из каталога проекта).
+3. Перейдите к `http://localhost/ServiceModelSamples/XmlAjaxClientPage.htm` (не открывайте Ксмлажаксклиентпаже. htm в браузере из каталога проекта).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Служба AJAX с использованием HTTP POST](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md)

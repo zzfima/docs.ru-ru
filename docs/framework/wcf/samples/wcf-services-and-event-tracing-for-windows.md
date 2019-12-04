@@ -2,12 +2,12 @@
 title: Службы WCF и средство отслеживания событий для Windows
 ms.date: 03/30/2017
 ms.assetid: eda4355d-0bd0-4dc9-80a2-d2c832152272
-ms.openlocfilehash: e1ee7154e2ad5b22ff0debcdd15d5809fc55df13
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 93663cbc33b6fab9b34bb02187e5b04192f5c13d
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044521"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715264"
 ---
 # <a name="wcf-services-and-event-tracing-for-windows"></a>Службы WCF и средство отслеживания событий для Windows
 В этом примере показано, как использовать аналитическую трассировку в Windows Communication Foundation (WCF) для создания событий в трассировке событий Windows (ETW). Аналитические трассировки — это события, генерируемые в ключевых точках стека WCF, которые позволяют устранять неполадки служб WCF в рабочей среде.
@@ -30,11 +30,11 @@ ms.locfileid: "70044521"
 
 4. Запустите тестовый клиент WCF (клиент WcfTestClient. exe).
 
-     Тестовый клиент WCF (клиент WcfTestClient. exe) находится в `\<Visual Studio 2012 Install Dir>\Common7\IDE\WcfTestClient.exe`папке.  Каталог установки Visual Studio 2012 по умолчанию `C:\Program Files\Microsoft Visual Studio 10.0`—.
+     Тестовый клиент WCF (клиент WcfTestClient. exe) находится по адресу `\<Visual Studio 2012 Install Dir>\Common7\IDE\WcfTestClient.exe`.  Каталог установки Visual Studio 2012 по умолчанию `C:\Program Files\Microsoft Visual Studio 10.0`.
 
 5. В тестовом клиенте WCF добавьте службу, выбрав **файл**, а затем **Добавить службу**.
 
-     Добавьте адрес конечной точки в поле ввода. Значение по умолчанию — `http://localhost:1378/Calculator.svc`.
+     Добавьте адрес конечной точки в поле ввода. Значение по умолчанию: `http://localhost:1378/Calculator.svc`.
 
 6. Откройте приложение просмотра событий.
 
@@ -48,7 +48,7 @@ ms.locfileid: "70044521"
 
 9. Включите **аналитический** журнал.
 
-     В древовидном представлении в Просмотр событий перейдите к **Просмотр событий**, **журналы приложений и служб**, **Microsoft**, **Windows**, а затем **сервер приложений — приложения**. Щелкните правой кнопкой мыши аналитика и выберите **Включить журнал**.
+     В древовидном представлении в Просмотр событий перейдите к **Просмотр событий**, **журналы приложений и служб**, **Microsoft**, **Windows**, а затем **сервер приложений — приложения**. Щелкните правой кнопкой мыши **аналитика** и выберите **Включить журнал**.
 
 #### <a name="to-test-the-service"></a>Проверка службы
 
@@ -58,7 +58,7 @@ ms.locfileid: "70044521"
 
 2. Просмотрите события, переданные из службы.
 
-     Вернитесь к Просмотр событий и перейдите в раздел **Просмотр событий**, **журналы приложений и служб**, **Microsoft**, **Windows**, а затем **сервер приложений — приложения**. Щелкните правой кнопкой мыши аналитика и выберите **Обновить**.
+     Вернитесь к Просмотр событий и перейдите в раздел **Просмотр событий**, **журналы приложений и служб**, **Microsoft**, **Windows**, а затем **сервер приложений — приложения**. Щелкните правой кнопкой мыши **аналитика** и выберите **Обновить**.
 
      События аналитического отслеживания WCF отображаются в средстве просмотра событий. Обратите внимание, что для возникшей ошибки в средстве просмотра событий отображается событие аналитического отслеживания.
 
@@ -70,11 +70,11 @@ ms.locfileid: "70044521"
 
 #### <a name="to-cleanup-optional"></a>Очистка (необязательно)
 
-1. Откройте средство просмотра событий.
+1. Откройте окно Просмотр событий.
 
-2. Перейдите к **Просмотр событий**, **журналам приложений и служб**, **Microsoft**, **Windows**, а затем **Application-Servers-Applications**. Щелкните правой кнопкой мыши аналитика и выберите **Отключить журнал**.
+2. Перейдите к **Просмотр событий**, **журналам приложений и служб**, **Microsoft**, **Windows**, а затем **Application-Servers-Applications**. Щелкните правой кнопкой мыши **аналитика** и выберите **Отключить журнал**.
 
-3. Перейдите к **Просмотр событий**, **журналам приложений и служб**, **Microsoft**, **Windows**, а затем **Application-Servers-Applications**. Щелкните правой кнопкой мыши аналитика и выберите **Очистить журнал**.
+3. Перейдите к **Просмотр событий**, **журналам приложений и служб**, **Microsoft**, **Windows**, а затем **Application-Servers-Applications**. Щелкните правой кнопкой мыши **аналитика** и выберите **Очистить журнал**.
 
 4. Выберите параметр **clear (очистить** ), чтобы очистить события.
 
@@ -83,10 +83,10 @@ ms.locfileid: "70044521"
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Если этот каталог не существует, перейдите к [примерам Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] и примеры. Этот образец расположен в следующем каталоге.  
+> Если этот каталог не существует, перейдите к [примерам Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , чтобы скачать все Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Samples. Этот образец расположен в следующем каталоге.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\ETWTracing`  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Примеры мониторинга AppFabric](https://go.microsoft.com/fwlink/?LinkId=193959)

@@ -2,12 +2,12 @@
 title: Надежный защищенный профиль
 ms.date: 03/30/2017
 ms.assetid: 921edc41-e91b-40f9-bde9-b6148b633e61
-ms.openlocfilehash: d7cfc028c5cf1ba5cfba009cd29c89f07c64fd9c
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: ee94dc5be2c50f9e383a42d435996b2fd35df4a4
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044806"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716506"
 ---
 # <a name="reliable-secure-profile"></a>Надежный защищенный профиль
 В этом примере показано, как создать WCF и [надежный защищенный профиль](https://go.microsoft.com/fwlink/?LinkId=178140) (RSP). В этом примере демонстрируется реализация канала [подключения](https://go.microsoft.com/fwlink/?LinkId=178141) , который может состоять вместе с надежным обменом сообщениями и, при необходимости, защищенным каналом для создания надежной безопасной привязки на основе спецификации RSP.  
@@ -17,7 +17,7 @@ ms.locfileid: "70044806"
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Если этот каталог не существует, перейдите к [примерам Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] и примеры. Этот образец расположен в следующем каталоге.  
+> Если этот каталог не существует, перейдите к [примерам Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , чтобы скачать все Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Samples. Этот образец расположен в следующем каталоге.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\ReliableSecureProfile`  
   
@@ -28,9 +28,9 @@ ms.locfileid: "70044806"
   
 1. Откройте решение **релиаблесекурепрофиле** .  
   
-2. Щелкните правой кнопкой мыши проект **службы** в **Обозреватель решений**,выберите Отладка, **запустить новый экземпляр** из контекстного меню. Запустится узел службы.  
+2. Щелкните правой кнопкой мыши проект **службы** в **Обозреватель решений**, выберите **Отладка**, **запустить новый экземпляр** из контекстного меню. Запустится узел службы.  
   
-3. Щелкните правой кнопкой мыши клиентский проект в **Обозреватель решений**, выберите **Отладка**, **запустите новый экземпляр** из контекстного меню. Запустится клиент.  
+3. Щелкните правой кнопкой мыши **клиентский** проект в **Обозреватель решений**, выберите **Отладка**, **запустите новый экземпляр** из контекстного меню. Запустится клиент.  
   
 4. Введите в окне консоли клиента любую строку и нажмите клавишу ВВОД. Введенная строка отправится в службу, которая вычислит для нее хэш.  
   

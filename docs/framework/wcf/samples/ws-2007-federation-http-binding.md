@@ -2,12 +2,12 @@
 title: Привязка HTTP для федерации WS 2007
 ms.date: 03/30/2017
 ms.assetid: 91c1b477-a96e-4bf5-9330-5e9312113371
-ms.openlocfilehash: ad56665b5b6648fb93a9f31f18167a964b4cba92
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 2f924bdcbf9082d9d43e02d82c9d00c32ebcaacf
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834656"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74714974"
 ---
 # <a name="ws-2007-federation-http-binding"></a>Привязка HTTP для федерации WS 2007
 
@@ -37,7 +37,7 @@ ms.locfileid: "71834656"
 </bindings>
 ```
 
-На [> \<security](../../configure-apps/file-schema/wcf/security-element-of-ws2007federationhttpbinding.md)значение `security` указывает, какой режим безопасности следует использовать. В этом примере используется `message`, поэтому [\<message >](../../configure-apps/file-schema/wcf/message-element-of-ws2007federationhttpbinding.md) задается в [> \<security](../../configure-apps/file-schema/wcf/security-element-of-ws2007federationhttpbinding.md). Элемент [\<issuer >](../../configure-apps/file-schema/wcf/issuer.md) внутри [> \<message](../../configure-apps/file-schema/wcf/message-element-of-ws2007federationhttpbinding.md) указывает адрес и привязку для STS, которая выдает маркер безопасности клиенту, чтобы клиент мог пройти проверку подлинности в службе `ICalculator`.
+В [\<> безопасности](../../configure-apps/file-schema/wcf/security-element-of-ws2007federationhttpbinding.md)значение `security` указывает, какой режим безопасности следует использовать. В этом примере используется `message` безопасность, поэтому [\<сообщение >](../../configure-apps/file-schema/wcf/message-element-of-ws2007federationhttpbinding.md) задается в [\<> безопасности](../../configure-apps/file-schema/wcf/security-element-of-ws2007federationhttpbinding.md). Элемент [\<issuer >](../../configure-apps/file-schema/wcf/issuer.md) в [сообщении\<](../../configure-apps/file-schema/wcf/message-element-of-ws2007federationhttpbinding.md) указывает адрес и привязку для STS, которая выдает клиенту маркер безопасности, чтобы клиент мог пройти проверку подлинности в службе `ICalculator`.
   
 Конфигурация этой привязки в службе показана в следующем коде:
 
@@ -64,7 +64,7 @@ ms.locfileid: "71834656"
 </bindings>
 ```
 
-На [> \<security](../../configure-apps/file-schema/wcf/security-element-of-ws2007federationhttpbinding.md)значение `security` указывает, какой режим безопасности следует использовать. В этом примере используется `message`, поэтому [\<message >](../../configure-apps/file-schema/wcf/message-element-of-ws2007federationhttpbinding.md) задается в [> \<security](../../configure-apps/file-schema/wcf/security-element-of-ws2007federationhttpbinding.md). Элемент [\<issuerMetadata >](../../configure-apps/file-schema/wcf/issuermetadata.md) из `ws2007FederationHttpBinding` в [\<message >](../../configure-apps/file-schema/wcf/message-element-of-ws2007federationhttpbinding.md) указывает адрес и идентификатор для конечной точки, которые могут использоваться для получения метаданных для службы маркеров безопасности.
+В [\<> безопасности](../../configure-apps/file-schema/wcf/security-element-of-ws2007federationhttpbinding.md)значение `security` указывает, какой режим безопасности следует использовать. В этом примере используется `message` безопасность, поэтому [\<сообщение >](../../configure-apps/file-schema/wcf/message-element-of-ws2007federationhttpbinding.md) задается в [\<> безопасности](../../configure-apps/file-schema/wcf/security-element-of-ws2007federationhttpbinding.md). Элемент [\<issuerMetadata >](../../configure-apps/file-schema/wcf/issuermetadata.md) `ws2007FederationHttpBinding` в [сообщении\<](../../configure-apps/file-schema/wcf/message-element-of-ws2007federationhttpbinding.md) указывает адрес и удостоверение для конечной точки, которые можно использовать для получения метаданных для службы маркеров безопасности.
 
 Поведение службы показано в следующем коде:
 
@@ -93,7 +93,7 @@ ms.locfileid: "71834656"
 </behaviors>
 ```
   
-[@No__t-1issuedTokenAuthentication >](../../configure-apps/file-schema/wcf/issuedtokenauthentication-of-servicecredentials.md)> позволяет службе указывать ограничения на токены, которые она разрешает клиентам во время проверки подлинности. Эта конфигурация указывает, что маркеры, подписанные сертификатом, у которых имя субъекта CN=STS, принимаются службой.
+[\<иссуедтокенаусентикатион >](../../configure-apps/file-schema/wcf/issuedtokenauthentication-of-servicecredentials.md)> позволяет службе указывать ограничения на токены, которые она разрешает клиентам во время проверки подлинности. Эта конфигурация указывает, что маркеры, подписанные сертификатом, у которых имя субъекта CN=STS, принимаются службой.
 
 Служба маркеров безопасности делает единственную конечную точку доступной с помощью стандартной привязки <xref:System.ServiceModel.WS2007HttpBinding>. Служба отвечает на запросы маркеров от клиентов. Если клиент прошел проверку подлинности с использованием учетной записи Windows, служба выдает маркер, содержащий имя пользователя клиента в качестве утверждения. В одной из частей процедуры создания маркера служба маркеров безопасности подписывает маркер с использованием закрытого ключа, связанного с сертификатом CN=STS. Дополнительно она создает симметричный ключ и шифрует его с использованием открытого ключа, связанного с сертификатом CN=localhost. При возврате маркера клиенту служба маркеров безопасности также возвращает симметричный ключ. Клиент предъявляет выданный маркер службе `ICalculator` и подтверждает свое знание симметричного ключа, подписывая сообщение этим ключом.
 
@@ -119,13 +119,13 @@ Press <ENTER> to terminate client.
 
 1. Чтобы создать выпуск решения на языке C# или Visual Basic .NET, следуйте инструкциям в разделе [Building the Windows Communication Foundation Samples](building-the-samples.md).
 
-2. Чтобы запустить пример в конфигурации с одним или несколькими компьютерами, следуйте инструкциям в разделе [выполнение примеров Windows Communication Foundation](running-the-samples.md). Если вы используете [!INCLUDE[windowsver](../../../../includes/windowsver-md.md)], необходимо запустить *Service. exe*, *Client. exe*и *SecurityTokenService. exe* с повышенными привилегиями (щелкните файлы правой кнопкой мыши и выберите команду **Запуск от имени администратора**).
+2. Чтобы запустить пример в конфигурации с одним или несколькими компьютерами, следуйте инструкциям в разделе [выполнение примеров Windows Communication Foundation](running-the-samples.md). Если вы используете [!INCLUDE[windowsver](../../../../includes/windowsver-md.md)], необходимо запустить *Service. exe*, *Client. exe*и *SecurityTokenService. exe* с повышенными привилегиями (щелкните правой кнопкой мыши файлы и выберите команду **Запуск от имени администратора**).
 
 > [!IMPORTANT]
 > Образцы уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).
 > 
 > `<InstallDrive>:\WF_WCF_Samples`
 > 
-> Если этот каталог не существует, перейдите к [примерам Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] и примеры. Этот образец находится в следующем каталоге:
+> Если этот каталог не существует, перейдите к [примерам Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , чтобы скачать все Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Samples. Этот образец находится в следующем каталоге:
 > 
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\WS\WS2007FederationHttp`

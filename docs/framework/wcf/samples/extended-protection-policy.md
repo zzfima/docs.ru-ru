@@ -2,12 +2,12 @@
 title: Расширенная политика защиты
 ms.date: 03/30/2017
 ms.assetid: e2616a10-317e-4c34-8023-0c015a80a82f
-ms.openlocfilehash: c7c2e85872c158facb2de91a7413ac5a04491d7f
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 1cb6d44e8f6ee8f54f776453e5a1783ab0cfa4f0
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044988"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716425"
 ---
 # <a name="extended-protection-policy"></a>Расширенная политика защиты
 Расширенная защита - это инициатива, направленная на отражение атак типа «злоумышленник в середине» (MITM). Атака MITM - это угроза безопасности, при которой злоумышленник перехватывает учетные данные клиента и переправляет их на сервер.  
@@ -28,7 +28,7 @@ ms.locfileid: "70044988"
   
 1. Установите службы IIS с **панели управления**, компонента **Установка и удаление программ**, **компоненты Windows**.  
   
-2. Установите **проверку подлинности Windows** в **компонентах Windows**, **службы IIS**, службах Интернета, **безопасности**и **проверки подлинности Windows**.  
+2. Установите **проверку подлинности Windows** в **компонентах Windows**, **службы IIS**, **службах**Интернета, **безопасности**и **проверки подлинности Windows**.  
   
 3. Установите **Windows Communication Foundation активацию HTTP** в **компонентах Windows**, **Microsoft .NET Framework 3.5.1**и **Windows Communication Foundation активации HTTP**.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "70044988"
   
 7. Откройте диспетчер IIS. Щелкните правой кнопкой мыши виртуальный каталог (**екстендедпротектион**), созданный на предыдущем шаге. Выберите **преобразовать в приложение**.  
   
-8. Откройте модуль **проверки** подлинности в диспетчере IIS для этого виртуального каталога и включите **проверку подлинности Windows**.  
+8. Откройте модуль **проверки подлинности** в диспетчере IIS для этого виртуального каталога и включите **проверку подлинности Windows**.  
   
 9. Откройте **Дополнительные параметры** в разделе **Проверка подлинности Windows** для этого виртуального каталога и задайте для него значение **обязательно**.  
   
@@ -59,6 +59,6 @@ ms.locfileid: "70044988"
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Если этот каталог не существует, перейдите к [примерам Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] и примеры. Этот образец расположен в следующем каталоге.  
+> Если этот каталог не существует, перейдите к [примерам Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , чтобы скачать все Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Samples. Этот образец расположен в следующем каталоге.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Security\ExtendedProtection`

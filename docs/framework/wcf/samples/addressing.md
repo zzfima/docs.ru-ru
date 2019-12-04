@@ -2,12 +2,12 @@
 title: Адресация
 ms.date: 03/30/2017
 ms.assetid: d438e6f2-d0f3-43aa-b259-b51b5bda2e64
-ms.openlocfilehash: a94e6dd50fb4a7326666c7843e20964b35f957c6
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 2a737552ef5ea2a8e4544f9ec2c2f84b4b994a75
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70990210"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715878"
 ---
 # <a name="addressing"></a>Адресация
 В образце адресации показаны различные аспекты и возможности адресов конечных точек. Образец основан на [Начало работы](../../../../docs/framework/wcf/samples/getting-started-sample.md). В этом образце служба является резидентной. Как служба, так и клиент являются консольными приложениями. Служба определяет несколько конечных точек, используя сочетание их относительных и абсолютных адресов.  
@@ -40,7 +40,7 @@ ms.locfileid: "70990210"
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- В этом случае относительный адрес пустой (""), поэтому адрес конечной точки совпадает с базовым адресом. Фактический адрес конечной точки `http://localhost:8000/servicemodelsamples/service`—.
+ В этом случае относительный адрес пустой (""), поэтому адрес конечной точки совпадает с базовым адресом. Фактический адрес конечной точки — `http://localhost:8000/servicemodelsamples/service`.
   
  Во втором определении конечной точки также задается относительный адрес, как показано в следующем образце конфигурации.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "70990210"
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- Относительный адрес, "test", присоединяется к базовому адресу. Фактический адрес конечной точки `http://localhost:8000/servicemodelsamples/service/test`—.
+ Относительный адрес, "test", присоединяется к базовому адресу. Фактический адрес конечной точки — `http://localhost:8000/servicemodelsamples/service/test`.
   
  В третьем определении конечной точки задается абсолютный адрес, как показано в следующем образце конфигурации.  
   
@@ -63,9 +63,9 @@ ms.locfileid: "70990210"
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- Базовый адрес не играет никакой роли в этом адресе. Фактический адрес конечной точки `http://localhost:8001/hello/servicemodelsamples`—.
+ Базовый адрес не играет никакой роли в этом адресе. Фактический адрес конечной точки — `http://localhost:8001/hello/servicemodelsamples`.
   
- В четвертом определении конечной точки задаются абсолютный адрес и другой транспорт - TCP. Базовый адрес не играет никакой роли в этом адресе. Фактический адрес конечной точки `net.tcp://localhost:9000/servicemodelsamples/service`—.
+ В четвертом определении конечной точки задаются абсолютный адрес и другой транспорт - TCP. Базовый адрес не играет никакой роли в этом адресе. Фактический адрес конечной точки — `net.tcp://localhost:9000/servicemodelsamples/service`.
   
 ```xml  
 <!-- The absolute address specified, different transport: -->  
@@ -132,6 +132,6 @@ Press <ENTER> to terminate client.
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Если этот каталог не существует, перейдите к [примерам Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] и примеры. Этот образец расположен в следующем каталоге.  
+> Если этот каталог не существует, перейдите к [примерам Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , чтобы скачать все Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Samples. Этот образец расположен в следующем каталоге.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Addressing`  
