@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Net Profile Named Pipe
 ms.assetid: e78e845f-c325-46e2-927d-81616f97f7d5
-ms.openlocfilehash: 95007a323bd71b89d2037896129c6be1b19ac377
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 5904a5b61c0cc472c40eb2b4967815d5e6add195
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70039168"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74714662"
 ---
 # <a name="netnamedpipebinding"></a>NetNamedPipeBinding
 В этом образце показана привязка `netNamedPipeBinding`, обеспечивающая обмен данными между процессами одного компьютера. Использование именованных каналов для обмена данными между компьютерами не поддерживается. Этот образец основан на службе калькулятора [Начало работы](../../../../docs/framework/wcf/samples/getting-started-sample.md) .  
@@ -19,7 +19,7 @@ ms.locfileid: "70039168"
 > [!NOTE]
 > Процедура настройки и инструкции по построению для данного образца приведены в конце этого раздела.  
   
- Привязка задается в файлах конфигурации для клиента и службы. Тип привязки указывается в `binding` атрибуте [ \<](../../configure-apps/file-schema/wcf/endpoint-element.md) [ \< конечнойточки>иликонечной>элемента>клиента,какпоказановследующемобразцеконфигурации:\<](../../configure-apps/file-schema/wcf/endpoint-of-client.md)  
+ Привязка задается в файлах конфигурации для клиента и службы. Тип привязки указывается в атрибуте `binding` [\<конечной точки >](../../configure-apps/file-schema/wcf/endpoint-element.md) или [\<конечной точки > \<Client >](../../configure-apps/file-schema/wcf/endpoint-of-client.md) , как показано в следующем образце конфигурации:  
   
 ```xml  
 <endpoint address="net.pipe://localhost/ServiceModelSamples/service"  
@@ -90,6 +90,6 @@ Press <ENTER> to terminate client.
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Если этот каталог не существует, перейдите к [примерам Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] и примеры. Этот образец расположен в следующем каталоге.  
+> Если этот каталог не существует, перейдите к [примерам Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , чтобы скачать все Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Samples. Этот образец расположен в следующем каталоге.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\NamedPipe`  
