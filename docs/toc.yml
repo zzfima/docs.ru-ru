@@ -11,9 +11,9 @@
 - name: 'Руководство по C#'
   href: csharp/index.yml
 - name: 'Руководство по языку F#'
-  href: fsharp/
+  href: fsharp/index.yml
 - name: Руководство по Visual Basic
-  href: visual-basic/
+  href: visual-basic/index.yml
 - name: Руководство по ML.NET
   href: machine-learning/index.yml
 - name: Руководство по .NET для Apache Spark
