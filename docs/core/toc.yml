@@ -47,21 +47,21 @@
   items:
     - name: 'Начало работы с C# и Visual Studio Code'
       href: tutorials/with-visual-studio-code.md
-    - name: "Создание приложения Hello World на C# с помощью .NET Core в Visual Studio\_2017"
+    - name: 'Создание приложения Hello World на C# в Visual Studio'
       href: tutorials/with-visual-studio.md
-    - name: "Создание приложения Hello World на Visual Basic с помощью .NET Core в Visual Studio\_2017"
+    - name: Создание приложения Hello World на Visual Basic в Visual Studio
       href: tutorials/vb-with-visual-studio.md
-    - name: 'Отладка приложения .NET Core Hello World на C# или Visual с помощью Visual Studio 2017'
+    - name: Отладка приложения с помощью Visual Studio
       href: tutorials/debugging-with-visual-studio.md
-    - name: "Публикация приложения Hello World с помощью Visual Studio\_2017"
+    - name: Публикация приложения с помощью Visual Studio
       href: tutorials/publishing-with-visual-studio.md
-    - name: "Создание библиотеки .NET\_Standard с помощью C# и .NET\_Core в Visual Studio\_2017"
+    - name: 'Создание библиотеки .NET Standard на C# в Visual Studio'
       href: tutorials/library-with-visual-studio.md
-    - name: "Создание библиотеки .NET\_Standard с помощью Visual\_Basic и .NET\_Core в Visual Studio\_2017"
+    - name: Создание библиотеки .NET Standard на Visual Basic в Visual Studio
       href: tutorials/vb-library-with-visual-studio.md
-    - name: "Тестирование библиотеки .NET\_Standard с помощью .NET\_Core в Visual Studio\_2017"
+    - name: "Тестирование библиотеки .NET\_Standard в Visual Studio"
       href: tutorials/testing-library-with-visual-studio.md
-    - name: "Использование библиотеки .NET\_Standard в Visual Studio\_2017"
+    - name: "Использование библиотеки .NET\_Standard в Visual Studio"
       href: tutorials/consuming-library-with-visual-studio.md
 - name: Новые возможности .NET Core
   items:
@@ -153,7 +153,7 @@
       href: docker/introduction.md
     - name: Контейнеризация приложения .NET Core
       href: docker/build-container.md
-    - name: Средства для контейнеров в Visual Studio
+    - name: "Средства Visual\_Studio для контейнеров"
       href: /visualstudio/containers/overview
 - name: Диагностические средства
   items:
@@ -220,7 +220,7 @@
     - name: Инструменты
       expanded: true
       items:
-        - name: Глобальные инструменты
+        - name: Глобальные средства
           expanded: true
           items:
             - name: Обзор

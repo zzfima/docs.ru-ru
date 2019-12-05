@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 889271ca41fb84b44757adfffc61ffbfbc0a03a8
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.openlocfilehash: d59ff7f66076fc56ebb27841105fad07a7c7fee1
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74204800"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716271"
 ---
 # <a name="file-and-stream-io"></a>Файловый и потоковый ввод-вывод
 
@@ -143,11 +143,11 @@ ms.locfileid: "74204800"
 
 ## <a name="io-operations-in-windows-store-apps"></a>Операции ввода-вывода в приложениях Microsoft Store
 
-[!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] содержат множество типов для чтения и записи в потоки, однако этот набор содержит не все типы ввода-вывода платформы .NET Framework.
+.NET для приложений Магазина Windows 8.x содержит множество типов для чтения и записи в потоки, однако этот набор содержит не все типы ввода-вывода платформы .NET Framework.
 
 Следует отметить некоторые важные различия в использовании операций ввода-вывода в приложениях Microsoft Store для Windows 8.x:
 
-- Специальные типы, относящиеся к операциям с файлами, такие как <xref:System.IO.File>, <xref:System.IO.FileInfo>, <xref:System.IO.Directory> и <xref:System.IO.DirectoryInfo>, не включены в [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]. Вместо этого используйте типы в пространстве имен <xref:Windows.Storage?displayProperty=nameWithType> среды выполнения Windows, например <xref:Windows.Storage.StorageFile> и <xref:Windows.Storage.StorageFolder>.
+- Специальные типы, относящиеся к операциям с файлами, такие как <xref:System.IO.File>, <xref:System.IO.FileInfo>, <xref:System.IO.Directory> и <xref:System.IO.DirectoryInfo>, не включены в .NET для приложений Магазина Windows 8.x. Вместо этого используйте типы в пространстве имен <xref:Windows.Storage?displayProperty=nameWithType> среды выполнения Windows, например <xref:Windows.Storage.StorageFile> и <xref:Windows.Storage.StorageFolder>.
 
 - Изолированное хранилище недоступно; вместо этого используйте [данные приложения](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)).
 

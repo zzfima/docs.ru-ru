@@ -8,7 +8,7 @@
   href: framework/
 - name: "Руководство по классическим приложениям .NET\_— WPF"
   href: desktop-wpf/
-- name: 'Руководство по языку C#'
+- name: 'Руководство по C#'
   href: csharp/index.yml
 - name: 'Руководство по языку F#'
   href: fsharp/
@@ -16,9 +16,9 @@
   href: visual-basic/
 - name: Руководство по ML.NET
   href: machine-learning/index.yml
-- name: Руководство по.NET для Apache Spark
+- name: Руководство по .NET для Apache Spark
   href: spark/index.yml
 - name: Руководство по архитектуре приложений .NET
   href: architecture/index.yml
-- name: Примеры и учебники
+- name: примеры и учебники;
   href: samples-and-tutorials/index.md

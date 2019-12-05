@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
-ms.openlocfilehash: ffcb288995975433bdd915362fccca03f345b5f5
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: c651f5c02bd49acc593c585395bc52e9ee64f870
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74281651"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74714498"
 ---
 # <a name="whats-new-in-the-net-framework"></a>Новые возможности .NET Framework
 
@@ -2116,13 +2116,13 @@ WPF включает [пакет NuGet](https://go.microsoft.com/fwlink/?LinkID=
 
 <a name="tailored" />
 
-### [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]
+### <a name="net-for-windows-8x-store-apps"></a>.NET для приложений Магазина Windows 8.x
 
-Приложения для Магазина Windows 8.x разрабатываются для конкретных форм-факторов и в полной мере используют возможности операционной системы Windows. Предоставляется подмножество .NET Framework 4.5 или 4.5.1 для разработки приложений для Магазина Windows 8.x с использованием C# или Visual Basic. Это подмножество называется [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] и рассматривается в [обзорной статье](https://go.microsoft.com/fwlink/?LinkId=228491) в Центре разработки для Windows.
+Приложения для Магазина Windows 8.x разрабатываются для конкретных форм-факторов и в полной мере используют возможности операционной системы Windows. Предоставляется подмножество .NET Framework 4.5 или 4.5.1 для разработки приложений для Магазина Windows 8.x с использованием C# или Visual Basic. Это подмножество называется .NET для Магазина Windows 8.x. Оно подробно рассматривается в [обзорной статье](https://go.microsoft.com/fwlink/?LinkId=228491) в Центре разработки для Windows.
 
 ### <a name="portable-class-libraries-a-nameportable-"></a>Переносимые библиотеки классов <a name="portable" />
 
-Проект "Переносимая библиотека классов" для Visual Studio 2012 (и более поздних версий) позволяет писать и собирать управляемые сборки, работающие на нескольких платформах .NET Framework. Используя проект "Переносимая библиотека классов", можно выбирать платформы для ориентирования (например, Windows Phone и [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]). Доступные типы и члены в проекте автоматически ограничиваются типами и членами, общими для этих платформ. Дополнительные сведения см. в статье [Переносимая библиотека классов](../../standard/cross-platform/cross-platform-development-with-the-portable-class-library.md).
+Проект "Переносимая библиотека классов" для Visual Studio 2012 (и более поздних версий) позволяет писать и собирать управляемые сборки, работающие на нескольких платформах .NET Framework. Используя проект "Переносимая библиотека классов", вы можете создавать приложения для конкретных платформ (например, для Windows Phone или .NET для приложений Магазина Windows 8.x). Доступные типы и члены в проекте автоматически ограничиваются типами и членами, общими для этих платформ. Дополнительные сведения см. в статье [Переносимая библиотека классов](../../standard/cross-platform/cross-platform-development-with-the-portable-class-library.md).
 
 ## <a name="see-also"></a>См. также
 
