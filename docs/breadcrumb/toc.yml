@@ -19,7 +19,7 @@
             - name: Электронная книга по архитектуре микрослужб .NET
               tocHref: /dotnet/architecture/microservices/
               topicHref: /dotnet/architecture/microservices/index
-            - name: Полностью облачные решения
+            - name: Собственные решения в облаке
               tocHref: /dotnet/architecture/cloud-native/
               topicHref: /dotnet/architecture/cloud-native/index
             - name: Электронная книга по модернизации приложений .NET
@@ -75,7 +75,7 @@
             - name: Рекомендации по разработке платформы
               tocHref: /dotnet/standard/design-guidelines/
               topicHref: /dotnet/standard/design-guidelines/index
-            - name: Обработка и вызов событий
+            - name: Обработка и инициация событий
               tocHref: /dotnet/standard/events/
               topicHref: /dotnet/standard/events/index
             - name: Обработка и создание исключений
@@ -115,18 +115,57 @@
           tocHref: /dotnet/core/
           topicHref: /dotnet/core/index
           items:
-            - name: Критические изменения
-              tocHref: /dotnet/core/compatibility/
-              topicHref: /dotnet/core/compatibility/index
-            - name: Конфигурация среды выполнения
-              tocHref: /dotnet/core/run-time-config/
-              topicHref: /dotnet/core/run-time-config/index
-            - name: Инструменты
-              tocHref: /dotnet/core/tools/
-              topicHref: /dotnet/core/tools/index
             - name: Руководство по установке
               tocHref: /dotnet/core/install/
               topicHref: /dotnet/core/install/index
+            - name: Новые возможности
+              tocHref: /dotnet/core/whats-new/
+              topicHref: /dotnet/core/whats-new/dotnet-core-3-0
+            - name: Критические изменения
+              tocHref: /dotnet/core/compatibility/
+              topicHref: /dotnet/core/compatibility/index
+            - name: Учебники
+              tocHref: /dotnet/core/tutorials/
+              topicHref: /dotnet/core/tutorials/index
+            - name: Конфигурация среды выполнения
+              tocHref: /dotnet/core/run-time-config/
+              topicHref: /dotnet/core/run-time-config/index
+            - name: Взаимодействие на уровне машинного кода
+              tocHref: /dotnet/core/native-interop/
+              topicHref: /dotnet/core/native-interop/expose-components-to-com
+            - name: Миграция
+              tocHref: /dotnet/core/migration/
+              topicHref: /dotnet/core/migration/index
+            - name: Развертывание
+              tocHref: /dotnet/core/deploying/
+              topicHref: /dotnet/core/deploying/index
+            - name: Docker
+              tocHref: /dotnet/core/docker/
+              topicHref: /dotnet/core/docker/introduction
+            - name: Диагностические средства
+              tocHref: /dotnet/core/diagnostics/
+              topicHref: /dotnet/core/diagnostics/index
+            - name: Модульное тестирование
+              tocHref: /dotnet/core/testing/
+              topicHref: /dotnet/core/testing/index
+            - name: Управление версиями
+              tocHref: /dotnet/core/versions/
+              topicHref: /dotnet/core/versions/index
+            - name: Инструменты
+              tocHref: /dotnet/core/tools/
+              topicHref: /dotnet/core/tools/index
+            - name: Дополнительные средства
+              tocHref: /dotnet/core/additional-tools/
+              topicHref: /dotnet/core/additional-tools/index
+            - name: Перенос
+              tocHref: /dotnet/core/porting/
+              topicHref: /dotnet/core/porting/index
+            - name: Загрузка зависимостей
+              tocHref: /dotnet/core/dependency-loading/
+              topicHref: /dotnet/core/dependency-loading/overview
+            - name: Сборка .NET Core
+              tocHref: /dotnet/core/build/
+              topicHref: /dotnet/core/build/index
         - name: .NET Framework
           tocHref: /dotnet/framework/
           topicHref: /dotnet/framework/index
@@ -166,7 +205,7 @@
                     - name: Схема параметров трассировки и отладки
                       tocHref: /dotnet/framework/configure-apps/file-schema/trace-debug/
                       topicHref: /dotnet/framework/configure-apps/file-schema/trace-debug/index
-                    - name: Схем конфигурации WCF
+                    - name: Схема конфигурации WCF
                       tocHref: /dotnet/framework/configure-apps/file-schema/wcf/
                       topicHref: /dotnet/framework/configure-apps/file-schema/wcf/index
                     - name: Синтаксис директив WCF
@@ -224,7 +263,7 @@
             - name: Развертывание приложений .NET Framework с помощью Docker
               tocHref: /dotnet/framework/docker/
               topicHref: /dotnet/framework/docker/index
-            - name: Приступая к работе
+            - name: Начало работы
               tocHref: /dotnet/framework/get-started/
               topicHref: /dotnet/framework/get-started/index
             - name: Руководство по установке
@@ -236,7 +275,7 @@
             - name: Managed Extensibility Framework (MEF)
               tocHref: /dotnet/framework/mef/
               topicHref: /dotnet/framework/mef/index
-            - name: Руководства по миграции
+            - name: Руководство по миграции
               tocHref: /dotnet/framework/migration-guide/
               topicHref: /dotnet/framework/migration-guide/index
             - name: Компиляция приложений с помощью машинного кода .NET
@@ -267,31 +306,31 @@
               tocHref: /dotnet/framework/unmanaged-api/
               topicHref: /dotnet/framework/unmanaged-api/index
               items:
-                - name: ALink API (ссылка неуправляемого API)
+                - name: ALink API (справочник по неуправляемым API)
                   tocHref: /dotnet/framework/unmanaged-api/alink/
                   topicHref: /dotnet/framework/unmanaged-api/alink/index
-                - name: Authenticode (справочник по неуправляемым интерфейсам API)
+                - name: Authenticode (справочник по неуправляемым API)
                   tocHref: /dotnet/framework/unmanaged-api/authenticode/
                   topicHref: /dotnet/framework/unmanaged-api/authenticode/index
-                - name: Отладка (ссылка неуправляемого API)
+                - name: Отладка (справочник по неуправляемым API)
                   tocHref: /dotnet/framework/unmanaged-api/debugging/
                   topicHref: /dotnet/framework/unmanaged-api/debugging/index
-                - name: Хранилище диагностических символов (ссылка неуправляемого API)
+                - name: Хранилище диагностических символов (справочник по неуправляемым API)
                   tocHref: /dotnet/framework/unmanaged-api/diagnostics/
                   topicHref: /dotnet/framework/unmanaged-api/diagnostics/index
-                - name: Fusion (справочник по неуправляемому API)
+                - name: Fusion (справочник по неуправляемым API)
                   tocHref: /dotnet/framework/unmanaged-api/fusion/
                   topicHref: /dotnet/framework/unmanaged-api/fusion/index
-                - name: Размещение (справочник по неуправляемым интерфейсам API)
+                - name: Размещение (справочник по неуправляемым API)
                   tocHref: /dotnet/framework/unmanaged-api/hosting/
                   topicHref: /dotnet/framework/unmanaged-api/hosting/index
-                - name: Метаданные (справочник по неуправляемым интерфейсам API)
+                - name: Метаданные (справочник по неуправляемым API)
                   tocHref: /dotnet/framework/unmanaged-api/metadata/
                   topicHref: /dotnet/framework/unmanaged-api/metadata/index
-                - name: Профилирование (справочник по неуправляемым интерфейсам API)
+                - name: Профилирование (справочник по неуправляемым API)
                   tocHref: /dotnet/framework/unmanaged-api/profiling/
                   topicHref: /dotnet/framework/unmanaged-api/profiling/index
-                - name: Строгое именование (справочник по управляемым API)
+                - name: Строгое именование (справочник по неуправляемым API)
                   tocHref: /dotnet/framework/unmanaged-api/strong-naming/
                   topicHref: /dotnet/framework/unmanaged-api/strong-naming/index
                 - name: Вспомогательные функции Tlbexp (справочник по неуправляемым API)
@@ -305,7 +344,7 @@
                   tocHref: /dotnet/framework/wcf/diagnostics/
                   topicHref: /dotnet/framework/wcf/diagnostics/index
                   items:
-                    - name: Аналитическое отслеживание ETW
+                    - name: Аналитическая трассировка с помощью ETW
                       tocHref: /dotnet/framework/wcf/diagnostics/etw/
                       topicHref: /dotnet/framework/wcf/diagnostics/etw/index
                     - name: Ведение журнала событий в WCF
@@ -320,7 +359,7 @@
                     - name: Трассировка
                       tocHref: /dotnet/framework/wcf/diagnostics/tracing/
                       topicHref: /dotnet/framework/wcf/diagnostics/tracing/index
-                    - name: Использование Windows Management Instrumentation для диагностики
+                    - name: Использование инструментария управления Windows для диагностики
                       tocHref: /dotnet/framework/wcf/diagnostics/wmi/
                       topicHref: /dotnet/framework/wcf/diagnostics/wmi/index
                 - name: Расширение WCF
@@ -335,7 +374,7 @@
             - name: Новые возможности .NET Framework
               tocHref: /dotnet/framework/whats-new/
               topicHref: /dotnet/framework/whats-new/index
-            - name: Разработка служебных приложений Windows
+            - name: Разработка приложений служб Windows
               tocHref: /dotnet/framework/windows-services/
               topicHref: /dotnet/framework/windows-services/index
             - name: Windows Workflow Foundation
@@ -359,7 +398,7 @@
               tocHref: /dotnet/framework/wpf/
               topicHref: /dotnet/framework/wpf/index
               items:
-                - name: Дополнительные сведения (Windows Presentation Foundation)
+                - name: Дополнительно
                   tocHref: /dotnet/framework/wpf/advanced/
                   topicHref: /dotnet/framework/wpf/advanced/index
                 - name: Разработка приложений
@@ -368,10 +407,10 @@
                 - name: Элементы управления
                   tocHref: /dotnet/framework/wpf/controls/
                   topicHref: /dotnet/framework/wpf/controls/index
-                - name: Данные
+                - name: Data
                   tocHref: /dotnet/framework/wpf/data/
                   topicHref: /dotnet/framework/wpf/data/index
-                - name: Приступая к работе (WPF)
+                - name: Начало работы (WPF)
                   tocHref: /dotnet/framework/wpf/getting-started/
                   topicHref: /dotnet/framework/wpf/getting-started/index
                 - name: Графика и мультимедиа
@@ -390,10 +429,10 @@
             - name: Миграция
               tocHref: /dotnet/desktop-wpf/migration
               topicHref: /dotnet/desktop-wpf/migration/index
-            - name: Привязка данных
+            - name: 'привязка данных,'
               tocHref: /dotnet/desktop-wpf/data
               topicHref: /dotnet/desktop-wpf/data/index
-        - name: 'Руководство по языку C#'
+        - name: 'Руководство по C#'
           tocHref: /dotnet/csharp/
           topicHref: /dotnet/csharp/index
           items:
@@ -640,7 +679,7 @@
                 - name: XML
                   tocHref: /dotnet/visual-basic/programming-guide/language-features/xml/
                   topicHref: /dotnet/visual-basic/programming-guide/language-features/xml/index
-            - name: COM-взаимодействие
+            - name: взаимодействие COM
               tocHref: /dotnet/visual-basic/programming-guide/com-interop/
               topicHref: /dotnet/visual-basic/programming-guide/com-interop/index
             - name: Справочник по языку
@@ -662,6 +701,6 @@
             - name: Учебники
               tocHref: /dotnet/machine-learning/tutorials/
               topicHref: /dotnet/machine-learning/tutorials/index
-        - name: Руководство по.NET для Apache Spark
+        - name: Руководство по .NET для Apache Spark
           tocHref: /dotnet/spark/
           topicHref: /dotnet/spark/index
