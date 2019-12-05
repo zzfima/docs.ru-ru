@@ -13,12 +13,12 @@ helpviewer_keywords:
 - XBAP security [WPF]
 - Internet Explorer security settings [WPF]
 ms.assetid: ee1baea0-3611-4e36-9ad6-fcd5205376fb
-ms.openlocfilehash: 939c9c6b8a8a8822174f08d5c0b50ef051264ee1
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 75e6c7b4886bd490c462e9128eca7ec13f233824
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802095"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837302"
 ---
 # <a name="security-wpf"></a>Безопасность (WPF)
 <a name="introduction"></a>При разработке изолированных приложений Windows Presentation Foundation (WPF) и обозревателей, размещенных в браузере, необходимо учитывать модель безопасности. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] автономные приложения выполняются с неограниченными разрешениями (набор разрешений**FULLTRUST** CAS), будь то развертывание с помощью установщик Windows (. msi), XCOPY или ClickOnce. Развертывание автономных приложений WPF с частичным доверием с помощью ClickOnce не поддерживается. Однако ведущее приложение с полным доверием может создать <xref:System.AppDomain> частичного доверия с помощью модели надстройки .NET Framework. Дополнительные сведения см. в разделе [Общие сведения о](./app-development/wpf-add-ins-overview.md)надстройках WPF.  
@@ -87,7 +87,7 @@ ms.locfileid: "74802095"
   
 <a name="InternetExplorerSecuritySettings"></a>   
 ## <a name="web-browsing-software-security-settings"></a>Параметры безопасности программного обеспечения для просмотра веб-страниц  
- Параметры безопасности компьютера определяют уровень доступа, который предоставляется программному обеспечению для просмотра веб-страниц. Программное обеспечение для обзора веб-страниц включает в себя любое приложение или компонент, использующие API [WinInet](https://go.microsoft.com/fwlink/?LinkId=179379) или [UrlMon](https://go.microsoft.com/fwlink/?LinkId=179383) , включая Internet Explorer и PresentationHost. exe.  
+ Параметры безопасности компьютера определяют уровень доступа, который предоставляется программному обеспечению для просмотра веб-страниц. Программное обеспечение для обзора веб-страниц включает в себя любое приложение или компонент, использующие API [WinInet](/windows/win32/wininet/portal) или [UrlMon](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa767916(v=vs.85)) , включая Internet Explorer и PresentationHost. exe.  
   
  Internet Explorer предоставляет механизм, с помощью которого можно настроить функциональные возможности, разрешенные для выполнения в Internet Explorer, включая следующие.  
   
@@ -148,14 +148,14 @@ ms.locfileid: "74802095"
   
 <a name="webbrowser_control_and_feature_controls"></a>   
 ## <a name="webbrowser-control-and-feature-controls"></a>Элемент управления WebBrowser и элементы управления функциями  
- Элемент управления <xref:System.Windows.Controls.WebBrowser> WPF можно использовать для размещения веб-содержимого. Элемент управления <xref:System.Windows.Controls.WebBrowser> WPF служит оболочкой для базового элемента управления ActiveX WebBrowser. WPF обеспечивает некоторую поддержку защиты приложения при использовании элемента управления <xref:System.Windows.Controls.WebBrowser> WPF для размещения ненадежного веб-содержимого. Однако некоторые функции безопасности должны быть применены непосредственно приложениями с помощью элемента управления <xref:System.Windows.Controls.WebBrowser>. Дополнительные сведения об элементе управления ActiveX WebBrowser см. в разделе [WebBrowser Control обзоры и учебники](https://go.microsoft.com/fwlink/?LinkId=179388).  
+ Элемент управления <xref:System.Windows.Controls.WebBrowser> WPF можно использовать для размещения веб-содержимого. Элемент управления <xref:System.Windows.Controls.WebBrowser> WPF служит оболочкой для базового элемента управления ActiveX WebBrowser. WPF обеспечивает некоторую поддержку защиты приложения при использовании элемента управления <xref:System.Windows.Controls.WebBrowser> WPF для размещения ненадежного веб-содержимого. Однако некоторые функции безопасности должны быть применены непосредственно приложениями с помощью элемента управления <xref:System.Windows.Controls.WebBrowser>. Дополнительные сведения об элементе управления ActiveX WebBrowser см. в разделе [WebBrowser Control обзоры и учебники](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa752041(v=vs.85)).  
   
 > [!NOTE]
 > Этот раздел также относится к элементу управления <xref:System.Windows.Controls.Frame>, так как он использует <xref:System.Windows.Controls.WebBrowser> для перехода к содержимому HTML.  
   
  Если элемент управления WPF <xref:System.Windows.Controls.WebBrowser> используется для размещения ненадежного веб-содержимого, приложение должно использовать <xref:System.AppDomain> частичного доверия для облегчения изоляции кода приложения от потенциально вредоносного кода HTML-скрипта. Это особенно верно, если приложение взаимодействует с размещенным скриптом с помощью метода <xref:System.Windows.Controls.WebBrowser.InvokeScript%2A> и свойства <xref:System.Windows.Controls.WebBrowser.ObjectForScripting%2A>. Дополнительные сведения см. в разделе [Общие сведения о](./app-development/wpf-add-ins-overview.md)надстройках WPF.  
   
- Если приложение использует элемент управления WPF <xref:System.Windows.Controls.WebBrowser>, еще один способ повышения безопасности и устранения атак — включить элементы управления функциями Internet Explorer. Элементы управления функциями — это дополнения к Internet Explorer, позволяющие администраторам и разработчикам настраивать функции Internet Explorer и приложений, на которых размещается элемент управления ActiveX WebBrowser, который является элементом управления WPF <xref:System.Windows.Controls.WebBrowser>. Элементы управления функциями можно настраивать с помощью функции [коинтернетсетфеатуринаблед](https://go.microsoft.com/fwlink/?LinkId=179394) или изменяя значения в реестре. Дополнительные сведения об элементах управления функциями см. [в разделе Введение в элементы управления функциями](https://go.microsoft.com/fwlink/?LinkId=179390) и [элементы управления функциями Интернета](https://go.microsoft.com/fwlink/?LinkId=179392).  
+ Если приложение использует элемент управления WPF <xref:System.Windows.Controls.WebBrowser>, еще один способ повышения безопасности и устранения атак — включить элементы управления функциями Internet Explorer. Элементы управления функциями — это дополнения к Internet Explorer, позволяющие администраторам и разработчикам настраивать функции Internet Explorer и приложений, на которых размещается элемент управления ActiveX WebBrowser, который является элементом управления WPF <xref:System.Windows.Controls.WebBrowser>. Элементы управления функциями можно настраивать с помощью функции [коинтернетсетфеатуринаблед](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms537168(v=vs.85)) или изменяя значения в реестре. Дополнительные сведения об элементах управления функциями см. [в разделе Введение в элементы управления функциями](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms537184(v=vs.85)) и [элементы управления функциями Интернета](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/general-info/ee330720(v=vs.85)).  
   
  При разработке автономного приложения WPF, использующего элемент управления WPF <xref:System.Windows.Controls.WebBrowser>, WPF автоматически включает следующие элементы управления функциями для приложения.  
   
@@ -184,7 +184,7 @@ ms.locfileid: "74802095"
  Элементы управления функциями применяются процессом, создающим экземпляр объекта ActiveX WebBrowser. Таким образом, при создании автономного приложения, которое может переходить к ненадежному содержимому, следует рассмотреть возможность включения дополнительных элементов управления функциями.  
   
 > [!NOTE]
-> Эта рекомендация основана на общих рекомендациях по безопасности узлов MSHTML и SHDOCVW. Дополнительные сведения см. [в разделе вопросы и ответы по безопасности главного узла MSHTML: часть I из II](https://go.microsoft.com/fwlink/?LinkId=179396) и [часто задаваемые вопросы о безопасности узла MSHTML: часть II из II](https://go.microsoft.com/fwlink/?LinkId=179415).  
+> Эта рекомендация основана на общих рекомендациях по безопасности узлов MSHTML и SHDOCVW. Дополнительные сведения см. [в разделе вопросы и ответы по безопасности главного узла MSHTML: часть I из II](https://msrc-blog.microsoft.com/archive/2009/04/02/the-mshtml-host-security-faq.aspx) и [часто задаваемые вопросы о безопасности узла MSHTML: часть II из II](https://msrc-blog.microsoft.com/archive/2009/04/03/the-mshtml-host-security-faq-part-ii-of-ii.aspx).  
   
  Для исполняемого файла можно включить следующие элементы управления функциями путем установки значения реестра равным 1.  
   
@@ -209,7 +209,7 @@ ms.locfileid: "74802095"
   
  При запуске приложения браузера XAML (XBAP) с частичным доверием, которое включает элемент управления WPF <xref:System.Windows.Controls.WebBrowser> в Windows Internet Explorer, WPF размещает элемент управления ActiveX WebBrowser в адресном пространстве процесса Internet Explorer. Так как элемент управления ActiveX WebBrowser размещается в процессе Internet Explorer, все элементы управления функциями для Internet Explorer также включены для элемента управления ActiveX WebBrowser.  
   
- XBAP-приложения, выполняющиеся в Internet Explorer, также получают более высокий уровень безопасности по сравнению с обычными автономными приложениями. Такая дополнительная безопасность заключается в том, что Internet Explorer и, следовательно, элемент управления ActiveX WebBrowser работает в защищенном режиме по умолчанию в Windows Vista и Windows 7. Дополнительные сведения о защищенном режиме см. [в разделе понимание и работа в защищенном режиме Internet Explorer](https://go.microsoft.com/fwlink/?LinkId=179393).  
+ XBAP-приложения, выполняющиеся в Internet Explorer, также получают более высокий уровень безопасности по сравнению с обычными автономными приложениями. Такая дополнительная безопасность заключается в том, что Internet Explorer и, следовательно, элемент управления ActiveX WebBrowser работает в защищенном режиме по умолчанию в Windows Vista и Windows 7. Дополнительные сведения о защищенном режиме см. [в разделе понимание и работа в защищенном режиме Internet Explorer](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/).  
   
 > [!NOTE]
 > При попытке запустить XBAP, включающий элемент управления WPF <xref:System.Windows.Controls.WebBrowser> в браузере Firefox, в зоне Интернета будет выдано <xref:System.Security.SecurityException>. Это связано с политикой безопасности WPF.  
@@ -266,7 +266,7 @@ ms.locfileid: "74802095"
   
 |Область|Resource|  
 |----------|--------------|  
-|Управляемый код|[Шаблоны и рекомендации по обеспечению безопасности приложений](https://go.microsoft.com/fwlink/?LinkId=117426)|  
+|Управляемый код|[Шаблоны и рекомендации по обеспечению безопасности приложений](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10))|  
 |CAS|[Управление доступом для кода](../misc/code-access-security.md)|  
 |ClickOnce|[Развертывание и безопасность технологии ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment)|  
 |[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]|[Безопасность частичного доверия в WPF](wpf-partial-trust-security.md)|  
@@ -276,7 +276,7 @@ ms.locfileid: "74802095"
 - [Безопасность частичного доверия в WPF](wpf-partial-trust-security.md)
 - [Стратегия безопасности WPF — безопасность платформы](wpf-security-strategy-platform-security.md)
 - [Стратегия безопасности WPF — проектирование безопасности](wpf-security-strategy-security-engineering.md)
-- [Шаблоны и рекомендации по обеспечению безопасности приложений](https://go.microsoft.com/fwlink/?LinkId=117426)
+- [Шаблоны и рекомендации по обеспечению безопасности приложений](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10))
 - [Управление доступом для кода](../misc/code-access-security.md)
 - [Развертывание и безопасность технологии ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment)
 - [Общие сведения о языке XAML (WPF)](../../desktop-wpf/fundamentals/xaml.md)

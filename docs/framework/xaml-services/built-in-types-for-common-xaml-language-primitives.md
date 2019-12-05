@@ -15,12 +15,12 @@ helpviewer_keywords:
 - x:Single [XAML Services]
 - x:Int32 [XAML Services]
 ms.assetid: 11de2f08-5b95-4989-b5ec-5178eb968184
-ms.openlocfilehash: 85fd0c04a40b9de64979e4da1459dbf8953a93bf
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: c6af46fe2ea21d081e693ee83949651bd388a045
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053879"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837276"
 ---
 # <a name="built-in-types-for-common-xaml-language-primitives"></a>Встроенные типы для общих примитивов языка XAML
 В XAML 2009 появилась поддержка уровня языка XAML для некоторых типов данных, которые являются часто используемыми примитивами в среде CLR и в других языках программирования. В XAML 2009 добавлена поддержка следующих примитивов: `x:Object`, `x:Boolean`, `x:Char`, `x:String`, `x:Decimal`, `x:Single`, `x:Double`, `x:Int16`, `x:Int32`, `x:Int64`, `x:TimeSpan`, `x:Uri`, `x:Byte`и `x:Array`  
@@ -51,24 +51,24 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
 ### <a name="xboolean"></a>x:Boolean  
  Для резервирования CLR примитив `x:Boolean` соответствует <xref:System.Boolean>.  
   
- XAML анализирует значения `x:Boolean` без учета регистра. Обратите внимание, что `x:Bool` не является допустимой альтернативой. Определение спецификации языка XAML см [ \[. в разделах, посвященных 5.2.17 и 5.4.11 в\] MS-XAML](https://go.microsoft.com/fwlink/?LinkId=114525).  
+ XAML анализирует значения `x:Boolean` без учета регистра. Обратите внимание, что `x:Bool` не является допустимой альтернативой. Определение спецификации языка XAML см. в [разделах\[MS-XAML\] Sections 5.2.17 and 5.4.11](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10)).  
   
 ### <a name="xchar"></a>x:Char  
  Для резервирования CLR примитив `x:Char` соответствует <xref:System.Char>.  
   
- Строковые и символьные типы взаимодействуют со всей кодировкой файла на уровне XML. Определение спецификации языка XAML см [ \[. в разделах, посвященных 5.2.7 и 5.4.1 в\] MS-XAML](https://go.microsoft.com/fwlink/?LinkId=114525).  
+ Строковые и символьные типы взаимодействуют со всей кодировкой файла на уровне XML. Определение спецификации языка XAML см. в [разделах\[MS-XAML\] Sections 5.2.7 and 5.4.1](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10)).  
   
 ### <a name="xstring"></a>x:String  
  Для резервирования CLR примитив `x:String` соответствует <xref:System.String>.  
   
- Строковые и символьные типы взаимодействуют со всей кодировкой файла на уровне XML. Определение спецификации языка XAML см [ \[. в разделе 5.2.6 в разделе\] MS-XAML](https://go.microsoft.com/fwlink/?LinkId=114525).  
+ Строковые и символьные типы взаимодействуют со всей кодировкой файла на уровне XML. Определение спецификации языка XAML см. в разделе [\[MS-XAML\] Sections 5.2.6](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10)).  
   
 ### <a name="xdecimal"></a>x:Decimal  
  Для резервирования CLR примитив `x:Decimal` соответствует <xref:System.Decimal>.  
   
  Обратите внимание, что анализ XAML по существу выполняется в рамках языка и региональных параметров `en-US` . В рамках языка и региональных параметров `en-US` правильным разделителем компонентов десятичного числа всегда является точка (`.`), независимо от региональных параметров среды разработки или конечного клиентского компьютера, на котором во время выполнения загружается XAML.  
   
- Определение спецификации языка XAML см [ \[. в разделах, посвященных 5.2.14 и 5.4.8 в\] MS-XAML](https://go.microsoft.com/fwlink/?LinkId=114525).  
+ Определение спецификации языка XAML см. в [разделах\[MS-XAML\] Sections 5.2.14 and 5.4.8](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10)).  
   
 ### <a name="xsingle"></a>x:Single  
  Для резервирования CLR примитив `x:Single` соответствует <xref:System.Single>.  
@@ -77,7 +77,7 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
   
  `x:Single` может поддерживать значения в экспоненциальном представлении, если первый символ в текстовом синтаксисе `e` или `E`.  
   
- Определение спецификации языка XAML см [ \[. в разделах, посвященных 5.2.8 и 5.4.2 в\] MS-XAML](https://go.microsoft.com/fwlink/?LinkId=114525).  
+ Определение спецификации языка XAML см. в [разделах\[MS-XAML\] Sections 5.2.8 and 5.4.2](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10)).  
   
 ### <a name="xdouble"></a>x:Double  
  Для резервирования CLR примитив `x:Double` соответствует <xref:System.Double>.  
@@ -86,48 +86,48 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
   
  `x:Double` может поддерживать значения в экспоненциальном представлении. Чтобы представить часть экспоненты, используйте символ `e` или `E` .  
   
- Определение спецификации языка XAML см [ \[. в разделах, посвященных 5.2.9 и 5.4.3 в\] MS-XAML](https://go.microsoft.com/fwlink/?LinkId=114525).  
+ Определение спецификации языка XAML см. в [разделах\[MS-XAML\] Sections 5.2.9 and 5.4.3](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10)).  
   
 ### <a name="xint16"></a>x:Int16  
  Для резервирования CLR примитив `x:Int16` , соответствующий <xref:System.Int16> и `x:Int16` , обрабатывается как имеющий знак. В XAML отсутствие знака плюс (`+`) в текстовом синтаксисе означает положительное значение.  
   
- Определение спецификации языка XAML см [ \[. в разделах, посвященных 5.2.11 и 5.4.5 в\] MS-XAML](https://go.microsoft.com/fwlink/?LinkId=114525).  
+ Определение спецификации языка XAML см. в [разделах\[MS-XAML\] Sections 5.2.11 and 5.4.5](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10)).  
   
 ### <a name="xint32"></a>x:Int32  
  Для резервирования CLR примитив `x:Int32` соответствует <xref:System.Int32>. `x:Int32` рассматривается как имеющий знак. В XAML отсутствие знака плюс (`+`) в текстовом синтаксисе означает положительное значение.  
   
- Определение спецификации языка XAML см [ \[. в разделах, посвященных 5.2.12 и 5.4.6 в\] MS-XAML](https://go.microsoft.com/fwlink/?LinkId=114525).  
+ Определение спецификации языка XAML см. в [разделах\[MS-XAML\] Sections 5.2.12 and 5.4.6](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10)).  
   
 ### <a name="xint64"></a>x:Int64  
  Для резервирования CLR примитив `x:Int64` соответствует <xref:System.Int64>. `x:Int64` рассматривается как имеющий знак. В XAML отсутствие знака плюс (`+`) в текстовом синтаксисе означает положительное значение.  
   
- Определение спецификации языка XAML см [ \[. в разделах, посвященных 5.2.13 и 5.4.7 в\] MS-XAML](https://go.microsoft.com/fwlink/?LinkId=114525).  
+ Определение спецификации языка XAML см. в [разделах\[MS-XAML\] Sections 5.2.13 and 5.4.7](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10)).  
   
 ### <a name="xtimespan"></a>x:TimeSpan  
  Для резервирования CLR примитив `x:TimeSpan` соответствует <xref:System.TimeSpan>.  
   
  Обратите внимание, что анализ XAML для формата даты-времени по существу выполняется в рамках языка и региональных параметров `en-US` .  
   
- Определение спецификации языка XAML см [ \[. в разделах, посвященных 5.2.16 и 5.4.10 в\] MS-XAML](https://go.microsoft.com/fwlink/?LinkId=114525).  
+ Определение спецификации языка XAML см. в [разделах\[MS-XAML\] Sections 5.2.16 and 5.4.10](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10)).  
   
 ### <a name="xuri"></a>x:Uri  
  Для резервирования CLR примитив `x:Uri` соответствует <xref:System.Uri>.  
   
  Проверка протоколов не является частью определения XAML для `x:Uri`.  
   
- Определение спецификации языка XAML см [ \[. в разделах, посвященных 5.2.15 и 5.4.9 в\] MS-XAML](https://go.microsoft.com/fwlink/?LinkId=114525).  
+ Определение спецификации языка XAML см. в [разделах\[MS-XAML\] Sections 5.2.15 and 5.4.9](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10)).  
   
 ### <a name="xbyte"></a>x:Byte  
- Для резервирования CLR примитив `x:Byte` соответствует <xref:System.Byte>. Объект <xref:System.Byte>  /  рассматривается как`x:Byte` неподписанный.  
+ Для резервирования CLR примитив `x:Byte` соответствует <xref:System.Byte>. <xref:System.Byte> / `x:Byte` считается неподписанным.  
   
- Определение спецификации языка XAML см [ \[. в разделах, посвященных 5.2.10 и 5.4.4 в\] MS-XAML](https://go.microsoft.com/fwlink/?LinkId=114525).  
+ Определение спецификации языка XAML см. в [разделах\[MS-XAML\] Sections 5.2.10 and 5.4.4](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10)).  
   
 ### <a name="xarray"></a>x:Array  
  Для резервирования CLR примитив `x:Array` соответствует <xref:System.Array>.  
   
  Можно определить массив в XAML 2006 г. с помощью синтаксиса расширения разметки; однако синтаксис XAML 2009 является определенным языком примитивом, которому не требуется доступ к расширению разметки. Дополнительные сведения о поддержке XAML 2006 см. в разделе [x:Array Markup Extension](x-array-markup-extension.md).  
   
- Определение спецификации языка XAML см [ \[. в разделе 5.2.18 в разделе\] MS-XAML](https://go.microsoft.com/fwlink/?LinkId=114525).  
+ Определение спецификации языка XAML см. в разделе [\[MS-XAML\] Sections 5.2.18](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10)).  
   
 <a name="wpf_support"></a>   
 ## <a name="wpf-support"></a>Поддержка WPF  

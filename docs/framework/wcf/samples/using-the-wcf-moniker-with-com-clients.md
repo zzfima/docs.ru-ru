@@ -2,12 +2,12 @@
 title: Использование моникера WCF с клиентами COM
 ms.date: 03/30/2017
 ms.assetid: e2799bfe-88bd-49d7-9d6d-ac16a9b16b04
-ms.openlocfilehash: faaf8e80402ddaef85dcf8d7bfe9b1da202227c9
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: bcac9e344e2d981f9f165480cb84ac37c99fa5b0
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715292"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837783"
 ---
 # <a name="using-the-wcf-moniker-with-com-clients"></a>Использование моникера WCF с клиентами COM
 В этом примере демонстрируется использование моникера службы Windows Communication Foundation (WCF) для интеграции веб-служб в среды разработки на основе COM, такие как Microsoft Office Visual Basic для приложений (Office VBA) или Visual Basic 6,0. Этот образец содержит клиент сервера скриптов Windows (VBS), поддерживающую библиотеку клиента (DLL) и библиотеку службы (DLL), размещенные службами IIS. Служба представляет собой службу калькулятора, а клиент COM вызывает для службы математические операции (сложение, вычитание, умножение и деление). Действия клиента отображаются в окнах сообщений.  
@@ -191,7 +191,7 @@ WScript.Echo "MEX service moniker: 9 * 81.25 = " & mexServiceMoniker.Multiply(9,
 3. В Командная строка разработчика для Visual Studio откройте папку \client\bin\ в папке для конкретного языка.  
   
     > [!NOTE]
-    > Если используется [!INCLUDE[wv](../../../../includes/wv-md.md)], [!INCLUDE[lserver](../../../../includes/lserver-md.md)], Windows 7 или Windows Server 2008 R2, командную строку необходимо запустить с привилегиями администратора.  
+    > Если вы используете Windows Vista, [!INCLUDE[lserver](../../../../includes/lserver-md.md)], Windows 7 или Windows Server 2008 R2, убедитесь, что запущена командная строка с правами администратора.  
   
 4. Введите `tlbexp.exe client.dll /out:CalcProxy.tlb`, чтобы экспортировать библиотеку DLL в TLB-файл. Появится сообщение "Предупреждение программы экспорта библиотек типов", однако это не свидетельствует о наличии проблем, поскольку универсальный тип не требуется.  
   
@@ -221,7 +221,7 @@ WScript.Echo "MEX service moniker: 9 * 81.25 = " & mexServiceMoniker.Multiply(9,
   
 6. Скопируйте в каталог на клиентском компьютере библиотеку Client.dll из папки \client\bin\ в языковой папке.  
   
-7. В командной строке перейдите в каталог назначения на клиентском компьютере. При использовании [!INCLUDE[wv](../../../../includes/wv-md.md)] или [!INCLUDE[lserver](../../../../includes/lserver-md.md)] обязательно запускайте командную строку от имени администратора.  
+7. В командной строке перейдите в каталог назначения на клиентском компьютере. При использовании Windows Vista или [!INCLUDE[lserver](../../../../includes/lserver-md.md)]убедитесь, что запущена командная строка от имени администратора.  
   
 8. Введите `tlbexp.exe client.dll /out:CalcProxy.tlb`, чтобы экспортировать библиотеку DLL в TLB-файл. Появится сообщение "Предупреждение программы экспорта библиотек типов", однако это не свидетельствует о наличии проблем, поскольку универсальный тип не требуется.  
   

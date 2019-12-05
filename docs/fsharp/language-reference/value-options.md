@@ -1,13 +1,13 @@
 ---
 title: Параметры значений
 description: Сведения о типе F# параметра value, который является структурной версией типа параметра.
-ms.date: 02/06/2019
-ms.openlocfilehash: 4dc3f7217943345b7aaf1165fd648ab2e01bd727
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.date: 12/04/2019
+ms.openlocfilehash: 0e9882ab4acdf2757705ef6022516d3572d87ef2
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424021"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837120"
 ---
 # <a name="value-options"></a>Параметры значений
 
@@ -63,16 +63,14 @@ match (result1, result2) with
 
 ## <a name="value-option-functions"></a>Функции параметров значений
 
-В настоящее время существует одна функция, привязанная к модулю, для параметров значения `defaultValueArg`:
+Модуль `ValueOption` в FSharp. Core содержит эквивалентные функции для модуля `Option`. Существует несколько отличий в имени, например `defaultValueArg`:
 
 ```fsharp
 val defaultValueArg : arg:'T voption -> defaultValue:'T -> 'T
 ```
 
-Как и в случае с функцией `defaultArg`, `defaultValueArg` Возвращает базовое значение данного параметра значения, если оно существует; в противном случае возвращается указанное значение по умолчанию.
+Это действует так же, как `defaultArg` в модуле `Option`, но работает вместо параметра значения.
 
-В настоящее время нет других функций, привязанных к модулю, для параметров значения.
-
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Параметры](options.md)

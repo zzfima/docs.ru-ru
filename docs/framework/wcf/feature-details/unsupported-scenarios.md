@@ -2,15 +2,15 @@
 title: Неподдерживаемые сценарии
 ms.date: 03/30/2017
 ms.assetid: 72027d0f-146d-40c5-9d72-e94392c8bb40
-ms.openlocfilehash: cc40ccbf83e92404dca07344fae0a6f56f92cefa
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 67a4e64208e00f9124b3cdc53d743c060274dac2
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69955323"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837978"
 ---
 # <a name="unsupported-scenarios"></a>Неподдерживаемые сценарии
-По различным причинам Windows Communication Foundation (WCF) не поддерживает некоторые конкретные сценарии безопасности. Например, [!INCLUDE[wxp](../../../../includes/wxp-md.md)] в основном выпуске не реализованы протоколы проверки подлинности SSPI или Kerberos, поэтому WCF не поддерживает запуск службы с проверкой подлинности Windows на этой платформе. Другие механизмы проверки подлинности, такие как имя пользователя и пароль и встроенная проверка подлинности HTTP/HTTPS, поддерживаются при запуске WCF в Windows XP Home Edition.  
+По различным причинам Windows Communication Foundation (WCF) не поддерживает некоторые конкретные сценарии безопасности. Например, [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition не реализует протоколы проверки подлинности SSPI или Kerberos, поэтому WCF не поддерживает запуск службы с проверкой подлинности Windows на этой платформе. Другие механизмы проверки подлинности, такие как имя пользователя и пароль и встроенная проверка подлинности HTTP/HTTPS, поддерживаются при запуске WCF в Windows XP Home Edition.  
   
 ## <a name="impersonation-scenarios"></a>Сценарии олицетворения  
   
@@ -18,7 +18,7 @@ ms.locfileid: "69955323"
  Если клиент WCF выполняет асинхронные вызовы службы WCF, используя проверку подлинности Windows при олицетворении, может иметь место проверка подлинности с удостоверением клиентского процесса, а не олицетворенным удостоверением.  
   
 ### <a name="windows-xp-and-secure-context-token-cookie-enabled"></a>Windows XP и включенные файлы Cookie маркера контекста безопасности  
- WCF не поддерживает олицетворение, а <xref:System.InvalidOperationException> исключение возникает, если выполняются следующие условия.  
+ WCF не поддерживает олицетворение, и при выполнении следующих условий возникает <xref:System.InvalidOperationException>.  
   
 - Операционной системой является [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
   
@@ -28,15 +28,15 @@ ms.locfileid: "69955323"
   
 - Создан маркер контекста безопасности с отслеживанием состояния (SCT) (по умолчанию создание отключено).  
   
- Маркер SCT с отслеживанием состояния создается только с использованием пользовательской привязки. Дополнительные сведения см. в разделе [Практическое руководство. Создайте маркер контекста безопасности для безопасного сеанса](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).) В коде маркер включается путем создания элемента привязки безопасности (<xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> или <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>) с помощью метода <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSspiNegotiationBindingElement%28System.Boolean%29?displayProperty=nameWithType> или <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSecureConversationBindingElement%28System.ServiceModel.Channels.SecurityBindingElement%2CSystem.Boolean%29?displayProperty=nameWithType> и присвоения параметру `requireCancellation` значения `false`. Параметр относится к кэшированию маркера SCT. Задание значения `false` включает функцию маркера SCT с отслеживанием состояния.  
+ Маркер SCT с отслеживанием состояния создается только с использованием пользовательской привязки. Дополнительные сведения см. [в разделе инструкции. Создание маркера контекста безопасности для безопасного сеанса](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md). В коде маркер включается путем создания элемента привязки безопасности (<xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> или <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>) с помощью <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSspiNegotiationBindingElement%28System.Boolean%29?displayProperty=nameWithType> или метода <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSecureConversationBindingElement%28System.ServiceModel.Channels.SecurityBindingElement%2CSystem.Boolean%29?displayProperty=nameWithType> и установки для параметра `requireCancellation` значения `false`. Параметр относится к кэшированию маркера SCT. Задание значения `false` включает функцию маркера SCT с отслеживанием состояния.  
   
- Кроме того, в конфигурации маркер включается путем создания <`customBinding`>, добавления `authenticationMode` элемента <`security`> и присвоения атрибуту значения SecureConversation и `requireSecurityContextCancellation` атрибута `true`.  
+ Кроме того, в конфигурации маркер включается путем создания <`customBinding`>, добавления <`security`> и присвоения атрибуту `authenticationMode` значения SecureConversation, а `requireSecurityContextCancellation` — `true`.  
   
 > [!NOTE]
 > Эти требования зависят от конкретной ситуации. Например, метод <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A> создает элемент привязки, который имеет результатом удостоверение Windows, однако не устанавливает маркер SCT. Поэтому его можно использовать с параметром `Required` в ОС [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
   
 ### <a name="possible-aspnet-conflict"></a>Возможный конфликт ASP.NET  
- WCF и ASP.NET могут включать и отключать олицетворение. Когда ASP.NET размещает приложение WCF, между параметрами конфигурации WCF и ASP.NET может существовать конфликт. В случае конфликта параметру WCF присваивается приоритет, если только <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> свойство не имеет <xref:System.ServiceModel.ImpersonationOption.NotAllowed>значение, а в этом случае параметр олицетворения ASP.NET имеет приоритет.  
+ WCF и ASP.NET могут включать и отключать олицетворение. Когда ASP.NET размещает приложение WCF, между параметрами конфигурации WCF и ASP.NET может существовать конфликт. В случае конфликта параметру WCF присваивается приоритет, если только свойство <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> не имеет значение <xref:System.ServiceModel.ImpersonationOption.NotAllowed>. в этом случае параметр олицетворения ASP.NET имеет приоритет.  
   
 ### <a name="assembly-loads-may-fail-under-impersonation"></a>Возможный сбой загрузки сборки при олицетворении  
  Если олицетворенный контекст не имеет прав доступа для загрузки сборки и если это первая попытка загрузки этой сборки в среде CLR для этого домена приложения, в <xref:System.AppDomain> кэшируется ошибка. Последующие попытки загрузки сборки (или сборок) также окажутся неудачными, даже если олицетворение отменено, а восстановленный контекст имеет права доступа для загрузки сборки. Это обусловлено тем, что в среде CLR не производится повторная попытка загрузки после изменения контекста пользователя. Для восстановления после сбоя необходимо повторно запустить домен приложения.  
@@ -62,7 +62,7 @@ ms.locfileid: "69955323"
  FIPS-совместимый алгоритм шифрования AES не работает в дуплексных обратных вызовах при олицетворении на уровне идентификации.  
   
 ### <a name="cngksp-certificates"></a>Сертификаты CNG и KSP  
- *API шифрования: Следующее поколение (CNG)* — это долгосрочная замена CryptoAPI. Этот API доступен в неуправляемом коде в [!INCLUDE[wv](../../../../includes/wv-md.md)] [!INCLUDE[lserver](../../../../includes/lserver-md.md)] и более поздних версиях Windows.  
+ *API шифрования: следующее поколение (CNG)* — это долгосрочная замена интерфейса CryptoAPI. Этот API доступен в неуправляемом коде в Windows Vista, [!INCLUDE[lserver](../../../../includes/lserver-md.md)] и более поздних версий Windows.  
   
  .NET Framework 4.6.1 и более ранние версии не поддерживают эти сертификаты, так как они используют устаревший интерфейс CryptoAPI для работы с сертификатами CNG и KSP. Использование этих сертификатов с .NET Framework 4.6.1 и более ранними версиями вызовет исключение.  
   
@@ -70,14 +70,14 @@ ms.locfileid: "69955323"
   
 - Сделайте платформозависимый вызов `p/invoke` функции `CertGetCertificateContextProperty` и проверьте свойство `dwProvType` возвращенного объекта `CertGetCertificateContextProperty`.  
   
-- `certutil` Используйте команду из командной строки для запроса сертификатов. Дополнительные сведения см. в [статье certutil Tasks for устранение неполадок сертификатов](https://go.microsoft.com/fwlink/?LinkId=120056).  
+- Используйте команду `certutil` из командной строки для запроса сертификатов. Дополнительные сведения см. в [статье certutil Tasks for устранение неполадок сертификатов](https://go.microsoft.com/fwlink/?LinkId=120056).  
   
 ## <a name="message-security-fails-if-using-aspnet-impersonation-and-aspnet-compatibility-is-required"></a>Сбой безопасности сообщений при использовании олицетворения ASP.NET и режима совместимости ASP.NET  
  WCF не поддерживает следующие сочетания параметров, так как они могут препятствовать проверке подлинности клиента:  
   
-- ASP.NET олицетворение включено. Это можно сделать в файле Web. config, задав `impersonate` атрибуту элемента `true`<`identity`> значение.  
+- ASP.NET олицетворение включено. Это можно сделать в файле Web. config, установив атрибут `impersonate` элемента <`identity`> в значение `true`.  
   
-- Режим совместимости ASP.NET включается путем присвоения `aspNetCompatibilityEnabled` атрибуту [ \<serviceHostingEnvironment >](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md) `true`значения.  
+- Режим совместимости ASP.NET включается путем установки атрибута `aspNetCompatibilityEnabled` [\<serviceHostingEnvironment >](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md) `true`.  
   
 - Используется режим безопасности сообщения.  
   
@@ -93,11 +93,11 @@ ms.locfileid: "69955323"
   
  Ниже приведен пример службы с тремя адресами конечных точек:  
   
-- `http://localhost/CalculatorService/service`(служба)  
+- `http://localhost/CalculatorService/service` (служба)  
   
-- `http://localhost/CalculatorService/issue_ticket`(STS)  
+- `http://localhost/CalculatorService/issue_ticket` (STS)  
   
-- `http://localhost/CalculatorService/mex`(конечная точка метаданных)  
+- `http://localhost/CalculatorService/mex` (конечная точка метаданных)  
   
  В этом случае создается исключение.  
   
@@ -108,7 +108,7 @@ ms.locfileid: "69955323"
   
  Для устранения этой проблемы необходимо изменить привязку непосредственно в клиенте после выполнения импорта.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Вопросы безопасности](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
 - [Раскрытие информации](../../../../docs/framework/wcf/feature-details/information-disclosure.md)

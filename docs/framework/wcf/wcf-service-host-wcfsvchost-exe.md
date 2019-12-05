@@ -2,12 +2,12 @@
 title: Узел службы WCF (WcfSvcHost.exe)
 ms.date: 03/30/2017
 ms.assetid: 8643a63d-a357-4c39-bd6c-cdfdf71e370e
-ms.openlocfilehash: c855fe7cc804fac14348990b7a6f5f84a0956b0c
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: b8fb32111a80178f5eb92411eb4990decb645bb6
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802412"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837744"
 ---
 # <a name="wcf-service-host-wcfsvchostexe"></a>Узел службы WCF (WcfSvcHost.exe)
 
@@ -113,7 +113,7 @@ ms.locfileid: "74802412"
 
 Чтобы разрешить пользователям без прав администратора для разработки служб WCF, в ходе установки Visual Studio для пространства имен "http://+:8731/Design_Time_Addresses" создается список управления доступом (ACL). Список управления доступом определяется пользовательским интерфейсом, который включает всех пользователей, выполнивших вход в систему. Администраторы могут добавлять или удалять пользователей из списка ACL или открывать дополнительные порты. Этот список ACL позволяет пользователям использовать автоматическое размещение службы WCF (wcfSvcHost. exe) без предоставления прав администратора.
 
-Можно изменить доступ используя средство netsh.exe в [!INCLUDE[wv](../../../includes/wv-md.md)] под учетной записью администратора. Ниже приведен пример использования средства netsh.exe.
+Вы можете изменить доступ с помощью средства Netsh. exe в Windows Vista в учетной записи администратора с повышенными правами. Ниже приведен пример использования средства netsh.exe.
 
 ```console
 netsh http add urlacl url=http://+:8001/MyService user=<domain>\<user>

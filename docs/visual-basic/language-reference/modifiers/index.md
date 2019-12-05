@@ -2,20 +2,20 @@
 title: Модификаторы
 ms.date: 07/20/2015
 ms.assetid: a49a0e51-d700-4705-9196-3e0eb582dda6
-ms.openlocfilehash: 0379a0d0571a66bda4df06f5c2d3282d80034cae
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 2056cdc69c7d89b78e9b269fc919a0e0f6b76bf4
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74351543"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74838290"
 ---
 # <a name="modifiers-visual-basic"></a>Модификаторы (Visual Basic)
 В статьях этого раздела описываются модификаторы времени выполнения Visual Basic.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>Содержание  
  [ANSI](../../../visual-basic/language-reference/modifiers/ansi.md)  
   
- [Сборка](../../../visual-basic/language-reference/modifiers/assembly.md)  
+ [Assembly](../../../visual-basic/language-reference/modifiers/assembly.md)  
   
  [Async](../../../visual-basic/language-reference/modifiers/async.md)  
   
@@ -47,13 +47,13 @@ ms.locfileid: "74351543"
   
  [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)  
   
- [Optional](../../../visual-basic/language-reference/modifiers/optional.md)  
+ [Необязательный](../../../visual-basic/language-reference/modifiers/optional.md)  
   
  [Out](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)  
   
- [Overloads](../../../visual-basic/language-reference/modifiers/overloads.md)  
+ [Перегрузки](../../../visual-basic/language-reference/modifiers/overloads.md)  
   
- [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)  
+ [Переопределяемые](../../../visual-basic/language-reference/modifiers/overridable.md)  
   
  [Переопределения](../../../visual-basic/language-reference/modifiers/overrides.md)  
   
@@ -89,5 +89,3 @@ ms.locfileid: "74351543"
   
 ## <a name="related-sections"></a>Связанные разделы  
  [Справочник по языку Visual Basic](../../../visual-basic/language-reference/index.md)  
-  
- [Visual Basic](../../../visual-basic/index.md)

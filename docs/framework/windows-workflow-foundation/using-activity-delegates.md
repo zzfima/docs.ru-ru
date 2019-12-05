@@ -2,12 +2,12 @@
 title: Использование делегатов действий
 ms.date: 03/30/2017
 ms.assetid: e33cf876-8979-440b-9b23-4a12d1139960
-ms.openlocfilehash: 63f550549456404b237067c98afdb18a8758dd7a
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: cbcc8f8e498be4f79f8fed5af7cd3557d7c55981
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70989086"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837575"
 ---
 # <a name="using-activity-delegates"></a>Использование делегатов действий
 Делегаты действий позволяют создателям действий предоставлять обратные вызовы с определенными сигнатурами, для которых пользователи действия могут предоставить обработчики, основанные на действиях. Доступны два типа делегатов действия: <xref:System.Activities.ActivityAction%601> используется для определения делегатов действий, которые не возвращают значение, а <xref:System.Activities.ActivityFunc%601> используется для определения делегатов действий, которые возвращают значение.
@@ -30,9 +30,9 @@ HelloWorld.
 
 [!code-csharp[CFX_ActivityExample#7](~/samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#7)]
 
-Дополнительные сведения об инициализаторах объектов см. в [разделе как Инициализация объектов без вызова конструктора (C# руководство по программированию [)](https://go.microsoft.com/fwlink/?LinkId=161015) и инструкции: Объявите объект с помощью инициализатора](https://go.microsoft.com/fwlink/?LinkId=161016)объекта.
+Дополнительные сведения об инициализаторах объектов см. [в разделе как инициализировать объекты без вызова конструктораC# (руководство по программированию)](../../csharp/programming-guide/classes-and-structs/how-to-initialize-objects-by-using-an-object-initializer.md) и [как объявить объект с помощью инициализатора объекта (Visual Basic)](../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-declare-an-object-by-using-an-object-initializer.md).
 
-В следующем примере действие <xref:System.Activities.Statements.TryCatch> используется в рабочем процессе. <xref:System.ApplicationException> вызывается рабочим процессом и обрабатывается действием <xref:System.Activities.Statements.Catch%601>. Обработчик <xref:System.Activities.Statements.Catch%601> действия действия <xref:System.Activities.Statements.WriteLine> является действием, и сведения об исключении передаются в него с помощью `ex`. <xref:System.Activities.DelegateInArgument%601>
+В следующем примере действие <xref:System.Activities.Statements.TryCatch> используется в рабочем процессе. <xref:System.ApplicationException> вызывается рабочим процессом и обрабатывается действием <xref:System.Activities.Statements.Catch%601>. Обработчик действия <xref:System.Activities.Statements.Catch%601> действия — это <xref:System.Activities.Statements.WriteLine> действие, и сведения об исключении передаются в него с помощью `ex` <xref:System.Activities.DelegateInArgument%601>.
 
 [!code-csharp[CFX_WorkflowApplicationExample#33](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#33)]
 

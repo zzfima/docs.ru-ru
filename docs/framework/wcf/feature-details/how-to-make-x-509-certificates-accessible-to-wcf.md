@@ -9,12 +9,12 @@ helpviewer_keywords:
 - certificates [WCF], making X.509 certificates accessible to WCF
 - X.509 certificates [WCF], making accessible to WCF
 ms.assetid: a54e407c-c2b5-4319-a648-60e43413664b
-ms.openlocfilehash: 401371bf01a62a20f2834cb76df19d9ddaacf83d
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: abd074701ca667abe4590f4f17a044b34325e874
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972356"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837406"
 ---
 # <a name="how-to-make-x509-certificates-accessible-to-wcf"></a>Практическое руководство. Предоставление доступа к сертификатам X.509 для WCF
 Чтобы сделать сертификат X. 509 доступным для Windows Communication Foundation (WCF), код приложения должен указать имя и расположение хранилища сертификатов. В некоторых случаях идентификатор процесса должен иметь доступ к файлу, который содержит закрытый ключ, связанный с сертификатом X.509. Чтобы получить закрытый ключ, связанный с сертификатом X. 509 в хранилище сертификатов, WCF должен иметь разрешение на это. По умолчанию доступ к закрытому ключу сертификата имеют только владелец и системная учетная запись.  
@@ -43,9 +43,9 @@ ms.locfileid: "70972356"
   
     3. Определите, где закрытый ключ сертификата находится на компьютере с помощью средства [FindPrivateKey](../../../../docs/framework/wcf/samples/findprivatekey.md) .  
   
-         Для средства [FindPrivateKey](../../../../docs/framework/wcf/samples/findprivatekey.md) требуется имя хранилища сертификатов, расположение хранилища сертификатов и что-то, уникально идентифицирующее сертификат. Средство принимает имя субъекта сертификата или его отпечаток в качестве уникального идентификатора. Дополнительные сведения о том, как определить отпечаток для сертификата, см [. в разделе как Получение отпечатка сертификата](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md).  
+         Для средства [FindPrivateKey](../../../../docs/framework/wcf/samples/findprivatekey.md) требуется имя хранилища сертификатов, расположение хранилища сертификатов и что-то, уникально идентифицирующее сертификат. Средство принимает имя субъекта сертификата или его отпечаток в качестве уникального идентификатора. Дополнительные сведения о том, как определить отпечаток для сертификата, см. в разделе [как получить отпечаток сертификата](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md).  
   
-         В следующем примере кода используется средство [FindPrivateKey](../../../../docs/framework/wcf/samples/findprivatekey.md) , чтобы определить расположение закрытого ключа для сертификата в `My` хранилище в `CurrentUser` с отпечатком `46 dd 0e 7a ed 0b 7a 31 9b 02 a3 a0 43 7a d8 3f 60 40 92 9d`.  
+         В следующем примере кода используется средство [FindPrivateKey](../../../../docs/framework/wcf/samples/findprivatekey.md) для определения расположения закрытого ключа для сертификата в хранилище `My` в `CurrentUser` с отпечатком `46 dd 0e 7a ed 0b 7a 31 9b 02 a3 a0 43 7a d8 3f 60 40 92 9d`.  
   
         ```console
         findprivatekey.exe My CurrentUser -t "46 dd 0e 7a ed 0b 7a 31 9b 02 a3 a0 43 7a d8 3f 60 40 92 9d" -a  
@@ -59,7 +59,7 @@ ms.locfileid: "70972356"
         |--------------|----------------------|  
         |Клиент (консоль или приложение WinForms).|Текущий пользователь.|  
         |Служба, являющаяся резидентной.|Текущий пользователь.|  
-        |Служба, размещенная в IIS 6.0 ([!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]) или IIS 7.0 ([!INCLUDE[wv](../../../../includes/wv-md.md)]).|NETWORK SERVICE|  
+        |Служба, размещенная в IIS 6,0 ([!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]) или IIS 7,0 (Windows Vista).|NETWORK SERVICE|  
         |Служба, размещенная в IIS 5.X ([!INCLUDE[wxp](../../../../includes/wxp-md.md)]).|Управляется с помощью элемента `<processModel>` в файле Machine.config. По умолчанию используется учетная запись ASPNET.|  
   
     5. Предоставьте доступ на чтение к файлу, содержащему закрытый ключ, для учетной записи, от имени которой выполняется WCF, используя такой инструмент, как icacls. exe.  
@@ -70,8 +70,8 @@ ms.locfileid: "70972356"
         icacls.exe "C:\Documents and Settings\All Users\Application Data\Microsoft\Crypto\RSA\MachineKeys\8aeda5eb81555f14f8f9960745b5a40d_38f7de48-5ee9-452d-8a5a-92789d7110b1" /grant "NETWORK SERVICE":R  
         ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [FindPrivateKey](../../../../docs/framework/wcf/samples/findprivatekey.md)
-- [Практическое руководство. Получение отпечатка сертификата](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)
+- [Практическое руководство. Извлечение отпечатка сертификата](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)
 - [Работа с сертификатами](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)

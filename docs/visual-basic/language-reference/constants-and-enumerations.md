@@ -6,12 +6,12 @@ helpviewer_keywords:
 - constants [Visual Basic]
 - constants [Visual Basic], list of
 ms.assetid: 309c0ad5-83e4-4f96-99ea-83cd95107417
-ms.openlocfilehash: de03ce61535d4695a00d0c4b8998ef4b81583425
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: e47fd1c606f7d4cd0cf2fa6398beaa183ed95076
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74347872"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74838160"
 ---
 # <a name="constants-and-enumerations-visual-basic"></a>Константы и перечисления (Visual Basic)
 
@@ -43,7 +43,7 @@ Visual Basic предоставляет разработчикам ряд пре
 |`vbNewLine`|Символ новой строки.|  
 |`vbNullChar`|Символ null.|  
 |`vbNullString`|Не то же, что и строка нулевой длины (""); используется для вызова внешних процедур.|  
-|`vbObjectError`|Номер ошибки. Определяемые пользователем номера ошибок должны быть больше этого значения. Пример.<br /><br /> `Err.Raise(Number) = vbObjectError + 1000`|  
+|`vbObjectError`|Номер ошибки. Определяемые пользователем номера ошибок должны быть больше этого значения. Например:<br /><br /> `Err.Raise(Number) = vbObjectError + 1000`|  
 |`vbTab`|Символ табуляции.|  
 |`vbBack`|Символ Backspace.|  
 |`vbFormFeed`|Не используется в Microsoft Windows.|  
@@ -81,9 +81,8 @@ Visual Basic предоставляет разработчикам ряд пре
 |<xref:Microsoft.VisualBasic.VariantType>|Указывает тип объекта Variant, возвращаемого функцией <xref:Microsoft.VisualBasic.Information.VarType%2A>.|  
 |<xref:Microsoft.VisualBasic.VbStrConv>|Указывает, преобразование какого типа следует выполнить при вызове функции <xref:Microsoft.VisualBasic.Strings.StrConv%2A>.|  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Справочник по языку Visual Basic](../../visual-basic/language-reference/index.md)
-- [Visual Basic](../../visual-basic/index.md)
 - [Общие сведения о константах](../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)
 - [Общие сведения о перечислениях](../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)

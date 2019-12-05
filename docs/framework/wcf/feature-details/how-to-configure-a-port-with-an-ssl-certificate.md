@@ -9,21 +9,21 @@ helpviewer_keywords:
 - WCF, security mode
 - WCF, security
 ms.assetid: b8abcc8e-a5f5-4317-aca5-01e3c40ab24d
-ms.openlocfilehash: 6e21311802b0a3ce4e415b14686b101d31f18035
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: d2fe9a73f79408db08ef48d380940fcf6bb831c0
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70893315"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74838004"
 ---
 # <a name="how-to-configure-a-port-with-an-ssl-certificate"></a>Практическое руководство. Настройка порта с использованием SSL-сертификата
-При создании автономной службы Windows Communication Foundation (WCF) с <xref:System.ServiceModel.WSHttpBinding> классом, использующим безопасность транспорта, необходимо также настроить порт с помощью сертификата X. 509. При создании нерезидентной службы можно разместить ее в службах IIS. Дополнительные сведения см. в разделе [Безопасность транспорта HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
+При создании автономной службы Windows Communication Foundation (WCF) с классом <xref:System.ServiceModel.WSHttpBinding>, использующим безопасность транспорта, необходимо также настроить порт с помощью сертификата X. 509. При создании нерезидентной службы можно разместить ее в службах IIS. Дополнительные сведения см. в разделе [Безопасность транспорта HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
   
  Выбор средства для настройки порта зависит от операционной системы компьютера.  
   
- При работе в [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] или [!INCLUDE[wxp](../../../../includes/wxp-md.md)] следует использовать средство HttpCfg.exe. Это средство установлено в [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]. В [!INCLUDE[wxp](../../../../includes/wxp-md.md)]можно загрузить средство в [средствах поддержки Windows XP с пакетом обновления 2](https://go.microsoft.com/fwlink/?LinkId=88606)(SP2). Дополнительные сведения см. в разделе [Общие сведения об HttpCfg](https://go.microsoft.com/fwlink/?LinkId=88605). В [документации по средствам поддержки Windows](https://go.microsoft.com/fwlink/?LinkId=94840) описывается синтаксис средства Httpcfg. exe.  
+ При работе в [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] или [!INCLUDE[wxp](../../../../includes/wxp-md.md)] следует использовать средство HttpCfg.exe. Это средство установлено в [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]. С [!INCLUDE[wxp](../../../../includes/wxp-md.md)]можно загрузить средство в [средствах поддержки Windows XP с пакетом обновления 2](https://go.microsoft.com/fwlink/?LinkId=88606)(SP2). Дополнительные сведения см. в разделе [Общие сведения об HttpCfg](https://go.microsoft.com/fwlink/?LinkId=88605). В [документации по средствам поддержки Windows](https://go.microsoft.com/fwlink/?LinkId=94840) описывается синтаксис средства Httpcfg. exe.  
   
- При работе в [!INCLUDE[wv](../../../../includes/wv-md.md)] следует использовать установленное средство Netsh.exe.  
+ Если вы используете Windows Vista, используйте уже установленное средство Netsh. exe.  
   
  В этом разделе описывается выполнение нескольких процедур.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "70893315"
     httpcfg query ssl  
     ```  
   
-2. Для просмотра текущей конфигурации портов в [!INCLUDE[wv](../../../../includes/wv-md.md)] следует использовать средство Netsh.exe, как показано в следующем примере.  
+2. В Windows Vista используйте средство Netsh. exe для просмотра текущей конфигурации порта, как показано в следующем примере.  
   
     ```console  
     netsh http show sslcert  
@@ -55,9 +55,9 @@ ms.locfileid: "70893315"
   
 ### <a name="to-get-a-certificates-thumbprint"></a>Возвращение отпечатка сертификата  
   
-1. С помощью оснастки MMC найдите сертификат X.509, который используется для проверки подлинности клиента. Дополнительные сведения см. в разделе [Практическое руководство. Просмотр сертификатов с помощью оснастки](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md)MMC.  
+1. С помощью оснастки MMC найдите сертификат X.509, который используется для проверки подлинности клиента. (Дополнительные сведения см. в разделе [Практическое руководство. Просмотр сертификатов с помощью оснастки консоли MMC](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).)  
   
-2. Получите доступ к отпечатку сертификата. Дополнительные сведения см. в разделе [Практическое руководство. Получение отпечатка сертификата](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md).  
+2. Получите доступ к отпечатку сертификата. Дополнительные сведения см. в статье [Практическое руководство. Извлечение отпечатка сертификата](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md).  
   
 3. Скопируйте отпечаток сертификата в текстовый редактор, например "Блокнот".  
   
@@ -71,11 +71,11 @@ ms.locfileid: "70893315"
     httpcfg set ssl -i 0.0.0.0:8012 -h 0000000000003ed9cd0c315bbb6dc1c08da5e6  
     ```  
   
-    - Параметр **-i** имеет следующий синтаксис `IP`:`port` и указывает средству установить сертификат на порт 8012 компьютера. Дополнительно, четыре нуля, предшествующие номеру, можно заменить на фактический IP-адрес компьютера.  
+    - Параметр **-i** имеет синтаксис `IP`:`port` и указывает средству установить сертификат на порт 8012 компьютера. Дополнительно, четыре нуля, предшествующие номеру, можно заменить на фактический IP-адрес компьютера.  
   
     - Параметр **-h** указывает отпечаток сертификата.  
   
-2. В [!INCLUDE[wv](../../../../includes/wv-md.md)] следует использовать средство Netsh.exe, как показано в следующем примере.  
+2. В Windows Vista используйте средство Netsh. exe, как показано в следующем примере.  
   
     ```console  
     netsh http add sslcert ipport=0.0.0.0:8000 certhash=0000000000003ed9cd0c315bbb6dc1c08da5e6 appid={00112233-4455-6677-8899-AABBCCDDEEFF}   
@@ -95,9 +95,9 @@ ms.locfileid: "70893315"
     httpcfg set ssl -i 0.0.0.0:8012 -h 0000000000003ed9cd0c315bbb6dc1c08da5e6 -f 2  
     ```  
   
-     Параметр **-f** имеет синтаксис `n` , где n — число от 1 до 7. Как показано в предыдущем примере, значение 2 включает сертификаты клиента на транспортном уровне. Значение 3 включает сертификаты клиента и сопоставляет их учетной записи Windows. Поведение других значений описано в справке средства HttpCfg.exe.  
+     Параметр **-f** имеет синтаксис `n` где n — число от 1 до 7. Как показано в предыдущем примере, значение 2 включает сертификаты клиента на транспортном уровне. Значение 3 включает сертификаты клиента и сопоставляет их учетной записи Windows. Поведение других значений описано в справке средства HttpCfg.exe.  
   
-2. В [!INCLUDE[wv](../../../../includes/wv-md.md)] для поддержки клиентов, проходящих проверку подлинности с сертификатами X.509 на транспортном уровне, необходимо выполнить вышеописанные процедуры, используя дополнительный параметр, как показано в следующем примере.  
+2. В Windows Vista для поддержки клиентов, которые проходят проверку подлинности с помощью сертификатов X. 509 на транспортном уровне, выполните предыдущую процедуру, но с дополнительным параметром, как показано в следующем примере.  
   
     ```console  
     netsh http add sslcert ipport=0.0.0.0:8000 certhash=0000000000003ed9cd0c315bbb6dc1c08da5e6 appid={00112233-4455-6677-8899-AABBCCDDEEFF} clientcertnegotiation=enable  
@@ -111,13 +111,13 @@ ms.locfileid: "70893315"
     httpcfg query ssl>myMachinePorts.txt  
     ```
   
-2. В [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] или [!INCLUDE[wxp](../../../../includes/wxp-md.md)]используйте средство HttpCfg. exe с ключевыми словами **Delete** и **SSL** . Используйте параметр **-i** , чтобы указать значение `IP`:`port` Number, и параметр **-h** , чтобы указать отпечаток.  
+2. В [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] или [!INCLUDE[wxp](../../../../includes/wxp-md.md)]используйте средство HttpCfg. exe с ключевыми словами **Delete** и **SSL** . Используйте параметр **-i** , чтобы указать `IP`:`port` Number, и параметр **-h** , чтобы указать отпечаток.  
   
     ```console  
     httpcfg delete ssl -i 0.0.0.0:8005 -h 0000000000003ed9cd0c315bbb6dc1c08da5e6  
     ```  
   
-3. В [!INCLUDE[wv](../../../../includes/wv-md.md)] следует использовать средство Netsh.exe, как показано в следующем примере.  
+3. В Windows Vista используйте средство Netsh. exe, как показано в следующем примере.  
   
     ```console  
     Netsh http delete sslcert ipport=0.0.0.0:8005  
@@ -129,6 +129,6 @@ ms.locfileid: "70893315"
  [!code-csharp[c_WsHttpService#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_wshttpservice/cs/source.cs#3)]
  [!code-vb[c_WsHttpService#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_wshttpservice/vb/source.vb#3)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Безопасность транспорта HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md)
