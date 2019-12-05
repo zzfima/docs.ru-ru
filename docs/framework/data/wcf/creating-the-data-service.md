@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 34d1d971-5e18-4c22-9bf6-d3612e27ea59
-ms.openlocfilehash: d30b2e30639837730ecb185a2c0f659a63955004
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 72e3b35465968674a20aa48262d3425a2190ff74
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975396"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802277"
 ---
 # <a name="create-the-data-service"></a>Создание службы данных
 
@@ -26,7 +26,7 @@ ms.locfileid: "73975396"
 
 ## <a name="create-the-aspnet-web-app"></a>Создание веб-приложения ASP.NET
 
-1. В Visual Studio в меню **файл** выберите пункт **создать**  > **проект**.
+1. В Visual Studio в меню **Файл** выберите пункты **Создать** > **Проект**.
 
 1. В диалоговом окне **Новый проект** в разделе Visual Basic или Visual C# выберите категорию **веб-сайта** , а затем выберите **ASP.NET Web Application (веб-приложение**).
 
@@ -71,7 +71,7 @@ ms.locfileid: "73975396"
    ![Шаблон элемента службы данных WCF в Visual Studio 2015](./media/wcf-data-service-item-template.png)
 
    > [!NOTE]
-   > Шаблон **службы данных WCF** доступен в visual Studio 2015, но не в visual Studio 2017.
+   > Шаблон **службы данных WCF** доступен в visual Studio 2015, но не в visual Studio 2017 или более поздней версии.
 
 3. В качестве имени службы введите `Northwind`.
 
@@ -101,6 +101,6 @@ ms.locfileid: "73975396"
 > [!div class="nextstepaction"]
 > [Доступ к службе из веб-браузера](accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md)
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Средства EDM ADO.NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))

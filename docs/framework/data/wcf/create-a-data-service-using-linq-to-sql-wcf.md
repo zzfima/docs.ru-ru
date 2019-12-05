@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Создание службы данных с помощью LINQ to SQL источника данных (WCF Data Services)
+title: Практическое руководство. Создание службы данных с использованием источника данных LINQ to SQL (службы данных WCF)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,20 +8,20 @@ helpviewer_keywords:
 - WCF Data Services, LINQ to SQL
 - WCF Data Services, providers
 ms.assetid: 3b01c2fd-8c6e-4bf5-b38f-9e61bdc3c328
-ms.openlocfilehash: 6489e451f3790e38ea821104fd2aca5a8c091ba6
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: cde5b9903a1fd164ce106a6a408ac4bb79976642
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053005"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802279"
 ---
-# <a name="how-to-create-a-data-service-using-a-linq-to-sql-data-source-wcf-data-services"></a>Практическое руководство. Создание службы данных с помощью LINQ to SQL источника данных (WCF Data Services)
+# <a name="how-to-create-a-data-service-using-a-linq-to-sql-data-source-wcf-data-services"></a>Практическое руководство. Создание службы данных с использованием источника данных LINQ to SQL (службы данных WCF)
 
-WCF Data Services предоставляет данные сущности в качестве службы данных. Поставщик отражения позволяет определить модель данных, основанную на любом классе, который предоставляет члены, возвращающие <xref:System.Linq.IQueryable%601> реализацию. Для выполнения обновлений данных в источнике данных эти классы должны также реализовать интерфейс <xref:System.Data.Services.IUpdatable>. Дополнительные сведения см. в разделе [поставщики служб данных](data-services-providers-wcf-data-services.md). В этом разделе показано, как создать классы LINQ to SQL, обращающиеся к образцу базы данных Northwind с помощью поставщика, а также как создать службу данных на основе этих классов.
+WCF Data Services предоставляет данные сущности в качестве службы данных. Поставщик отражения позволяет определить модель данных, основанную на любом классе, который предоставляет члены, возвращающие реализацию <xref:System.Linq.IQueryable%601>. Для выполнения обновлений данных в источнике данных эти классы должны также реализовать интерфейс <xref:System.Data.Services.IUpdatable>. Дополнительные сведения см. в разделе [поставщики служб данных](data-services-providers-wcf-data-services.md). В этом разделе показано, как создать классы LINQ to SQL, обращающиеся к образцу базы данных Northwind с помощью поставщика, а также как создать службу данных на основе этих классов.
 
 ## <a name="to-add-linq-to-sql-classes-to-a-project"></a>Добавление в проект объектов классов LINQ to SQL
 
-1. В Visual Basic C# или приложении в меню **проект** выберите команду **добавить** > **новый элемент**.
+1. C# В Visual Basic или приложении в меню **проект** выберите команду **добавить** > **новый элемент**.
 
 2. Щелкните шаблон **LINQ to SQL классы** .
 
@@ -31,7 +31,7 @@ WCF Data Services предоставляет данные сущности в к
 
      Файл Northwind.dbml добавляется в проект и открывается реляционный конструктор объектов.
 
-5. В**Обозреватель базы данных** **сервера**/в разделе Northwind разверните узел **таблицы** и перетащите `Customers` таблицу на Реляционный конструктор объектов (конструктор O/R).
+5. В **обозреватель базы данных**/**сервера** в разделе Northwind разверните узел **таблицы** и перетащите `Customers` таблицу на Реляционный конструктор объектов (реляционный конструктор R).
 
      При этом в области конструктора создается и отображается класс сущностей `Customer`.
 
@@ -55,7 +55,7 @@ WCF Data Services предоставляет данные сущности в к
    ![Шаблон элемента службы данных WCF в Visual Studio 2015](./media/wcf-data-service-item-template.png)
 
    > [!NOTE]
-   > Шаблон **службы данных WCF** доступен в visual Studio 2015, но не в visual Studio 2017.
+   > Шаблон **службы данных WCF** доступен в visual Studio 2015, но не в visual Studio 2017 или более поздней версии.
 
 3. Укажите имя службы и нажмите кнопку **ОК**.
 
@@ -72,8 +72,8 @@ WCF Data Services предоставляет данные сущности в к
 
 6. Чтобы протестировать службу данных Northwind. svc с помощью веб-браузера, следуйте инструкциям в разделе [обращение к службе из веб-браузера](accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Практическое руководство. Создание службы данных с помощью источника данных ADO.NET Entity Framework](create-a-data-service-using-an-adonet-ef-data-wcf.md)
-- [Практическое руководство. Создание службы данных с помощью поставщика отражения](create-a-data-service-using-rp-wcf-data-services.md)
+- [Практическое руководство. Создание службы данных с использованием источника данных Entity Framework ADO.NET](create-a-data-service-using-an-adonet-ef-data-wcf.md)
+- [Практическое руководство. Создание службы данных с использованием поставщика отражений](create-a-data-service-using-rp-wcf-data-services.md)
 - [Поставщики служб данных](data-services-providers-wcf-data-services.md)

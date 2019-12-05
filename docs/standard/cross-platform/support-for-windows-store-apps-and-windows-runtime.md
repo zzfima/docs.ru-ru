@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6fa7d044-ae12-4c54-b8ee-50915607a565
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4629139a7c89c0808e97bbe64b7d02441aec1dea
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: dd7e045bf54b09fe2a229efefc0218eb3f2f731a
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74714490"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802756"
 ---
 # <a name="net-framework-support-for-windows-store-apps-and-windows-runtime"></a>Поддержка приложений для Магазина Windows и среды выполнения Windows в .NET Framework
 
@@ -112,7 +112,7 @@ ms.locfileid: "74714490"
 
 ### <a name="other-differences"></a>Другие различия
 
-В некоторых случаях .NET Framework типы отображаются в коде, а не среда выполнения Windows типы требуют действия в вашей части. Например, класс <xref:Windows.Foundation.Uri?displayProperty=nameWithType> отображается как <xref:System.Uri?displayProperty=nameWithType> в .NET Frameworkном коде. <xref:System.Uri?displayProperty=nameWithType> допускает относительный URI, но для <xref:Windows.Foundation.Uri?displayProperty=nameWithType> требуется абсолютный URI. Поэтому при передаче URI в метод среда выполнения Windows необходимо убедиться, что он является абсолютным. См. раздел [Передача URI в среда выполнения Windows](../../../docs/standard/cross-platform/passing-a-uri-to-the-windows-runtime.md).
+В некоторых случаях .NET Framework типы отображаются в коде, а не среда выполнения Windows типы требуют действия в вашей части. Например, класс <xref:Windows.Foundation.Uri?displayProperty=nameWithType> отображается как <xref:System.Uri?displayProperty=nameWithType> в .NET Frameworkном коде. <xref:System.Uri?displayProperty=nameWithType> допускает относительный URI, но для <xref:Windows.Foundation.Uri?displayProperty=nameWithType> требуется абсолютный URI. Поэтому при передаче URI в метод среда выполнения Windows необходимо убедиться, что он является абсолютным. См. раздел [Передача URI в среду выполнения Windows](../../../docs/standard/cross-platform/passing-a-uri-to-the-windows-runtime.md).
 
 <a name="WindowsRuntimeComponents"></a>
 
@@ -137,7 +137,7 @@ ms.locfileid: "74714490"
 - Типы в компоненте могут быть производными от типов среда выполнения Windows. Элементы управления могут быть производными от типов элементов управления-примитивов в пространстве имен <xref:Windows.UI.Xaml.Controls.Primitives> или из более готовых элементов управления, таких как <xref:Windows.UI.Xaml.Controls.Button>.
 
   > [!IMPORTANT]
-  > Начиная с [!INCLUDE[win8](../../../includes/win8-md.md)] и .NET Framework 4,5 все открытые типы в управляемом компоненте среда выполнения Windows должны быть запечатанными. Тип в другом компоненте среда выполнения Windows не может быть производным от них. Если необходимо предоставить полиморфное расширения функциональности в компоненте, можно создать интерфейс и реализовать его в полиморфных типах.
+  > Начиная с Windows 8 и .NET Framework 4,5, все открытые типы в управляемом компоненте среда выполнения Windows должны быть запечатанными. Тип в другом компоненте среда выполнения Windows не может быть производным от них. Если необходимо предоставить полиморфное расширения функциональности в компоненте, можно создать интерфейс и реализовать его в полиморфных типах.
 
 - Все типы параметров и возвращаемых типов в общедоступных типах в компоненте должны быть среда выполнения Windows типами (включая типы среда выполнения Windows, определяемые компонентом).
 

@@ -2,12 +2,12 @@
 title: Шаблоны WCF в Visual Studio
 ms.date: 03/30/2017
 ms.assetid: 6a608575-3535-4190-89da-911e24c8374f
-ms.openlocfilehash: 1b4a600e4ed19b967bcaeb6d880ea181b7c2d61f
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: ec73036921632bc855e79239f1fc578587de7ca3
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73197188"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802349"
 ---
 # <a name="wcf-visual-studio-templates"></a>Шаблоны WCF в Visual Studio
 Шаблоны Windows Communication Foundation (WCF) Visual Studio — это стандартные шаблоны проектов и элементов, которые можно использовать в Visual Studio для быстрого создания служб WCF и окружающих приложений.  
@@ -72,7 +72,7 @@ ms.locfileid: "73197188"
  При изменении адреса веб-канала необходимо также изменить адрес на вкладке **Отладка** . Если этого не сделать, Internet Explorer пытается открыть веб-канал по адресу по умолчанию и завершается ошибкой.  
   
 ### <a name="ajax-enabled-wcf-service-item-template"></a>Шаблон элемента службы WCF с поддержкой AJAX  
- Этот шаблон предоставляет элемент управления AJAX в качестве службы WCF. Дополнительные сведения об элементах управления AJAX см. в [документации по элементу управления AJAX](https://go.microsoft.com/fwlink/?LinkId=96717).  
+ Этот шаблон предоставляет элемент управления AJAX в качестве службы WCF. Дополнительные сведения об элементах управления AJAX см. в [документации по элементу управления AJAX](https://docs.microsoft.com/aspnet/ajax/).  
   
 ### <a name="silverlight-enabled-wcf-service-item-template"></a>Шаблон элемента службы WCF с поддержкой Silverlight  
  Этот шаблон создает веб-службу, которая предоставляет данные клиенту Silverlight или внешнему интерфейсу. Шаблон можно добавить к веб-сайту или проекту веб-приложения, чтобы создать службу WCF, которая включает код службы и конфигурацию, поддерживающую взаимодействие с клиентом Silverlight. Затем можно использовать **Добавление ссылки на службу** , чтобы добавить клиентский прокси службы к клиенту и обмениваться данными между клиентом Silverlight и службой WCF с поддержкой Silverlight.  
@@ -82,7 +82,7 @@ ms.locfileid: "73197188"
 > [!NOTE]
 > Служба WCF с поддержкой Silverlight предоставляет доступ к конечной точке `basicHttpBinding` без применения параметров безопасности. Поэтому сведения о службе могут быть получены всеми клиентами, которые подключены к этой службе. Сообщения, которыми обмениваются служба и клиент, также не подписываются и не шифруются. Для защиты конечной точки необходимо использовать проверку подлинности ASP.NET, протокол HTTPS или другие механизмы.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Узел службы WCF (WcfSvcHost.exe)](wcf-service-host-wcfsvchost-exe.md)
 - [Тестовый клиент WCF (WcfTestClient.exe)](wcf-test-client-wcftestclient-exe.md)

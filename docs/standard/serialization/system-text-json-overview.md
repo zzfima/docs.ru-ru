@@ -9,16 +9,16 @@ helpviewer_keywords:
 - serialization
 - objects, serializing
 ms.assetid: 4d1111c0-9447-4231-a997-96a2b74b3453
-ms.openlocfilehash: 5ce98a7908470a402779436db43333d46f5101fc
-ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
+ms.openlocfilehash: b43c3f6fd8ca56aaa99fffd40317920ee7600a2c
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72180157"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802717"
 ---
 # <a name="json-serialization-in-net---overview"></a>Сериализация JSON в .NET — обзор
 
-Пространство имен `System.Text.Json` предоставляет функции для сериализации и десериализации из нотация объектов JavaScript (JSON).
+`System.Text.Json` пространство имен предоставляет функциональные возможности для сериализации и десериализации из нотация объектов JavaScript (JSON).
 
 Структура библиотеки подчеркивает высокую производительность и низкое выделение памяти по расширенному набору функций. Встроенная поддержка UTF-8 оптимизирует процесс чтения и записи текста JSON, закодированного как UTF-8, который является наиболее распространенной кодировкой для данных в Интернете и файлах на диске.
 
@@ -35,10 +35,10 @@ ms.locfileid: "72180157"
 ## <a name="additional-resources"></a>Дополнительные ресурсы
 
 * [Использование библиотеки](system-text-json-how-to.md)
-* [Исходный код](https://github.com/dotnet/corefx/tree/master/src/System.Text.Json)
+* [Исходный код](https://github.com/dotnet/runtime/tree/master/src/libraries/System.Text.Json)
 * [Справочник по API](xref:System.Text.Json)
-* [Стратегия развития](https://github.com/dotnet/corefx/blob/master/src/System.Text.Json/roadmap/README.md)
+* [Стратегия развития](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Text.Json/roadmap/README.md)
 * Проблемы GitHub в репозитории DotNet/corefx
-  * [Обсуждение разработки System. Text. JSON](https://github.com/dotnet/corefx/issues/33115)
-  * [Все проблемы System. Text. JSON](https://github.com/dotnet/corefx/issues?q=is%3Aopen+is%3Aissue+label%3Aarea-System.Text.Json)
-  * [Проблемы в System. Text. JSON с меткой JSON-функциональность-doc](https://github.com/dotnet/corefx/labels/json-functionality-doc)
+  * [Обсуждение разработки System. Text. JSON](https://github.com/dotnet/corefx/issues/33115) <!-- TODO: Issues are still not moved to the new repo-->
+  * [Все проблемы System. Text. JSON](https://github.com/dotnet/runtime/issues?q=is%3Aopen+is%3Aissue+label%3Aarea-System.Text.Json)
+  * [Проблемы в System. Text. JSON с меткой JSON-функциональность-doc](https://github.com/dotnet/runtime/labels/json-functionality-doc)

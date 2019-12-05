@@ -2,12 +2,12 @@
 title: Настройка отслеживания рабочего процесса
 ms.date: 03/30/2017
 ms.assetid: 905adcc9-30a0-4918-acd6-563f86db988a
-ms.openlocfilehash: 25edef2edc23a3823a892c64809df21f333478db
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 97b25873e9f20d5d390b7a59531b3a5af32296df
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458897"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802678"
 ---
 # <a name="configuring-tracking-for-a-workflow"></a>Настройка отслеживания рабочего процесса
 
@@ -134,7 +134,7 @@ if (null != workflowServiceHost)
 ```
 
 > [!NOTE]
-> Дополнительные сведения о профилях отслеживания см. в статье [Профили отслеживания](https://go.microsoft.com/fwlink/?LinkId=201310).
+> Дополнительные сведения о профилях отслеживания см. в статье [Профили отслеживания](tracking-profiles.md).
 
 ### <a name="configuring-tracking-using-workflowinvoker"></a>Конфигурирование отслеживания с помощью WorkflowInvoker
 
@@ -222,7 +222,7 @@ WF 4 предоставляет участника отслеживания, к�
 
 6. Сформируйте DLL-библиотеку ресурсов, выполнив следующие действия.
 
-    1. Установите пакет Windows SDK. Windows SDK включает компилятор сообщений ([MC. exe](https://go.microsoft.com/fwlink/?LinkId=184606)) и компилятор ресурсов ([RC. exe](https://go.microsoft.com/fwlink/?LinkId=184605)).
+    1. Установите пакет Windows SDK. Windows SDK включает компилятор сообщений ([MC. exe](/windows/win32/wes/message-compiler--mc-exe-)) и компилятор ресурсов ([RC. exe](/windows/win32/menurc/using-rc-the-rc-command-line-)).
 
     2. В командной строке Windows SDK примените команду run mc.exe к новому файлу манифеста.
 
@@ -250,13 +250,13 @@ WF 4 предоставляет участника отслеживания, к�
         <provider name="Microsoft-Windows-Application Server-Applications_Provider1" guid="{2720e974-9fe9-477a-bb60-81fe3bf91eec}" symbol="Microsoft_Windows_ApplicationServer_ApplicationEvents" resourceFileName="<dll directory>\Microsoft.Windows.ApplicationServer.Applications_Provider1.dll" messageFileName="<dll directory>\Microsoft.Windows.ApplicationServer.Applications_Provider1.dll">
         ```
 
-    7. Для регистрации манифеста используйте средство [wevtutil](https://go.microsoft.com/fwlink/?LinkId=184608) .
+    7. Для регистрации манифеста используйте средство [wevtutil](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732848(v=ws.10)) .
 
         ```console
         wevtutil im Microsoft.Windows.ApplicationServer.Applications_Provider1.man
         ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Мониторинг Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=201273)
-- [Мониторинг приложений с помощью App Fabric](https://go.microsoft.com/fwlink/?LinkId=201275)
+- [Мониторинг Windows Server App Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677251(v=azure.10))
+- [Мониторинг приложений с помощью App Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677276(v=azure.10))

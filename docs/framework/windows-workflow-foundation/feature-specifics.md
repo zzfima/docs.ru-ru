@@ -2,12 +2,12 @@
 title: Особенности возможностей Windows Workflow Foundation
 ms.date: 03/30/2017
 ms.assetid: e84d12da-a055-45f6-b4d1-878d127b46b6
-ms.openlocfilehash: 0c312eed1a5ba064771e7cc4c260b43d97b16315
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: 869d6108edaa7f32101b6fe8d077e4eba7eef6b5
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74141880"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802600"
 ---
 # <a name="windows-workflow-foundation-feature-specifics"></a>Особенности возможностей Windows Workflow Foundation
 
@@ -95,15 +95,15 @@ ms.locfileid: "74141880"
 
 ### <a name="getting-started"></a>Начало работы
 
-- [Руководством разработчика по WCF 4,0](https://go.microsoft.com/fwlink/?LinkId=204940)
+- [Руководством разработчика по WCF 4,0](https://docs.microsoft.com/previous-versions/dotnet/articles/ee354381(v=msdn.10))
 
-- [Производство канала настройки](https://go.microsoft.com/fwlink/?LinkId=204941)
+- [Производство канала настройки](xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601)
 
-- [Стандартный элемент конечной точки](https://go.microsoft.com/fwlink/?LinkId=204942)
+- [Стандартный элемент конечной точки](xref:System.ServiceModel.Configuration.StandardEndpointElement)
 
-- [Улучшения конфигурации службы в .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=204943)
+- [Улучшения конфигурации службы в .NET Framework 4](https://blogs.msdn.microsoft.com/endpoint/2009/06/30/service-configuration-improvements-in-net-4/)
 
-- [Типичная ошибка пользователя в .NET 4: невводимое имя конфигурации службы WF/WCF](https://go.microsoft.com/fwlink/?LinkId=204944)
+- [Типичная ошибка пользователя в .NET 4: невводимое имя конфигурации службы WF/WCF](https://blogs.msdn.microsoft.com/endpoint/2009/11/09/common-user-mistake-in-net-4-mistyping-the-wfwcf-service-configuration-name/)
 
 ### <a name="simplified-configuration-scenarios"></a>Сценарии упрощенной конфигурации
 
@@ -125,9 +125,9 @@ ms.locfileid: "74141880"
 
 ### <a name="getting-started"></a>Начало работы
 
-- [Документация по API сопоставителя контрактов данных](https://go.microsoft.com/fwlink/?LinkId=204946)
+- [Документация по API сопоставителя контрактов данных](xref:System.Runtime.Serialization.DataContractResolver)
 
-- [Знакомство с арбитром контрактов данных](https://go.microsoft.com/fwlink/?LinkId=204947)
+- [Знакомство с арбитром контрактов данных](https://blogs.msdn.microsoft.com/youssefm/2009/06/05/configuring-known-types-dynamically-introducing-the-datacontractresolver/)
 
 - Образцы:
 
@@ -287,7 +287,7 @@ ms.locfileid: "74141880"
 
 2. Примеры: [примеры&#93; WCF &#91;служб маршрутизации](../wcf/samples/routing-services.md)
 
-3. Блог. [правила маршрутизации](https://go.microsoft.com/fwlink/?LinkId=204956) .
+3. Блог. [правила маршрутизации](https://blogs.msdn.microsoft.com/RoutingRules/) .
 
 ### <a name="routing-scenarios"></a>Сценарии маршрутизации
 

@@ -2,12 +2,12 @@
 title: Разработка рабочих процессов, действий и выражений с помощью императивного кода
 ms.date: 03/30/2017
 ms.assetid: cefc9cfc-2882-4eb9-8c94-7a6da957f2b2
-ms.openlocfilehash: 22f5928dda55d77fde2ee518510eb2890e55b446
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 97f57067e72be2ed2fb6b3846e2ab876c13e049f
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69940889"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802704"
 ---
 # <a name="authoring-workflows-activities-and-expressions-using-imperative-code"></a>Разработка рабочих процессов, действий и выражений с помощью императивного кода
 Определение рабочего процесса представляет собой дерево настроенных объектов действий. Это дерево действий можно определить многими способами, включая редактирование XAML вручную и использование конструктора рабочих процессов для создания XAML. Но использование XAML не является обязательным. Определения рабочих процессов могут быть также созданы вручную. В этом разделе представлены общие сведения о создании определений, действий и выражений рабочего процесса с помощью кода. Примеры работы с рабочими процессами XAML с помощью кода см. [в разделе Сериализация рабочих процессов и действий в XAML и обратно](serializing-workflows-and-activities-to-and-from-xaml.md).  
@@ -29,7 +29,7 @@ ms.locfileid: "69940889"
   
  [!code-csharp[CFX_WorkflowApplicationExample#49](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#49)]  
   
- Дополнительные сведения об инициализаторах объектов см. в [разделе как Инициализация объектов без вызова конструктора (C# руководство по программированию [)](https://go.microsoft.com/fwlink/?LinkId=161015) и инструкции: Объявите объект с помощью инициализатора](https://go.microsoft.com/fwlink/?LinkId=161016)объекта.  
+ Дополнительные сведения об инициализаторах объектов см. [в разделе как инициализировать объекты без вызова конструктора (C# руководство по программированию)](../../csharp/programming-guide/classes-and-structs/how-to-initialize-objects-by-using-an-object-initializer.md) и [как объявить объект с помощью инициализатора объекта](../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-declare-an-object-by-using-an-object-initializer.md).  
   
 ### <a name="working-with-variables-literal-values-and-expressions"></a>Работа с переменными, литеральными значениями и выражениями  
  При создании определения рабочего процесса с помощью кода необходимо помнить, какая часть кода выполняется как часть создания определения рабочего процесса и какая часть кода выполняется как часть выполнения экземпляра рабочего процесса. Например, следующий рабочий процесс должен создавать случайное число и записывать его в консоль.  
@@ -50,7 +50,7 @@ new Assign<int>
 }  
 ```  
   
- Выражения C# необходимо компилировать до того, как будет вызван рабочий процесс, содержащий их. Если C# выражения не компилируются, вызывается исключение <xref:System.NotSupportedException> , если рабочий процесс вызывается с сообщением следующего вида: `Expression Activity type 'CSharpValue`1 "требуется компиляция для выполнения.  Убедитесь, что этот рабочий процесс был скомпилирован. в большинстве сценариев, в которых используются рабочие процессы, созданные в C# Visual Studio, выражения компилируются автоматически, но в некоторых сценариях, таких как рабочие C# процессы кода, выражения должны быть вручную компилирует. Пример компиляции C# выражений см. в разделе [использование C# выражений в рабочих процессах кода](csharp-expressions.md#CodeWorkflows) в разделе [ C# выражения](csharp-expressions.md) .  
+ Выражения C# необходимо компилировать до того, как будет вызван рабочий процесс, содержащий их. Если выражения C# не компилируются, выдается метод <xref:System.NotSupportedException>, когда рабочий процесс вызывается с помощью сообщения следующего вида: ``Expression Activity type 'CSharpValue`1' requires compilation in order to run.  Please ensure that the workflow has been compiled.`` В большинстве сценариев вызова рабочих процессов, созданных в Visual Studio, выражения C# компилируются автоматически, но в определенных случаях, например для рабочих процессов кода, выражения C# необходимо скомпилировать вручную. Пример компиляции C# выражений см. в разделе [ C# использование выражений в рабочих процессах кода](csharp-expressions.md#CodeWorkflows) в разделе [ C# выражения](csharp-expressions.md) .  
   
  <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> представляет выражение в синтаксисе Visual Basic, которое может быть использовано в качестве правостороннего значения в выражении, а <xref:Microsoft.CSharp.Activities.CSharpValue%601> представляет выражение в синтаксисе Visual C#, которое может быть использовано в качестве правостороннего значения в выражении. Значения этих выражений вычисляются каждый раз при выполнении содержащего их действия. Результат выражения назначается переменной рабочего процесса `n`, и эти результаты используются следующим действием в рабочем процессе. Для получения доступа к значению переменной рабочего процесса `n` во время выполнения необходим контекст <xref:System.Activities.ActivityContext>. Доступ может быть получен с помощью следующего лямбда-выражения.  
   
@@ -61,9 +61,9 @@ new Assign<int>
   
  [!code-csharp[CFX_WorkflowApplicationExample#52](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#52)]  
   
- Дополнительные сведения о лямбда-выражениях см. в разделе [лямбда-выраженияC# (руководством по программированию)](https://go.microsoft.com/fwlink/?LinkID=152436) или [лямбда-выражения (Visual Basic)](https://go.microsoft.com/fwlink/?LinkID=152437).  
+ Дополнительные сведения о лямбда-выражениях см. в разделе [лямбда-выражения (C# руководством по программированию)](../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md) или [лямбда-выражения (Visual Basic)](../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).  
   
- Лямбда-выражения не могут быть сериализованы в формат XAML. Если выполняется попытка сериализовать рабочий процесс с лямбда-выражениями, <xref:System.Activities.Expressions.LambdaSerializationException> создается исключение со следующим сообщением: "Этот рабочий процесс содержит лямбда-выражения, указанные в коде. Эти выражения XAML-несериализуемы. Чтобы сделать рабочий процесс XAML-сериализуемым, используйте или VisualBasicValue/VisualBasicReference, или ExpressionServices.Convert(lambda). При этом лямбда-выражения будут преобразованы в действия выражений». Чтобы обеспечить совместимость этого выражения с XAML, используйте <xref:System.Activities.Expressions.ExpressionServices> и <xref:System.Activities.Expressions.ExpressionServices.Convert%2A>, как показано в следующем примере.  
+ Лямбда-выражения не могут быть сериализованы в формат XAML. При попытке сериализовать рабочий процесс лямбда-выражениями возникает исключение <xref:System.Activities.Expressions.LambdaSerializationException> со следующим сообщением: «Этот рабочий процесс содержит указанные в коде лямбда-выражения. Эти выражения XAML-несериализуемы. Чтобы сделать рабочий процесс XAML-сериализуемым, используйте или VisualBasicValue/VisualBasicReference, или ExpressionServices.Convert(lambda). При этом лямбда-выражения будут преобразованы в действия выражений». Чтобы обеспечить совместимость этого выражения с XAML, используйте <xref:System.Activities.Expressions.ExpressionServices> и <xref:System.Activities.Expressions.ExpressionServices.Convert%2A>, как показано в следующем примере.  
   
  [!code-csharp[CFX_WorkflowApplicationExample#53](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#53)]  
   
@@ -97,7 +97,7 @@ new Assign
 },  
 ```  
   
- При проверке рабочего процесса, содержащего это действие, возвращается следующая ошибка проверки: "Literal поддерживает только типы значений и неизменяемый тип System. String. Тип System.Collections.Generic.List`1[System.String] нельзя использовать в качестве литерала». Если вызывается рабочий процесс, появляется уведомление <xref:System.Activities.InvalidWorkflowException>, содержащее сообщение об ошибке проверки. Это ошибка проверки, поскольку при создании литерального выражения со ссылочным типом не создается новый экземпляр ссылочного типа для каждого из экземпляров рабочего процесса. Чтобы устранить эту проблему, замените литеральное выражение таким, которое создает и возвращает новый экземпляр ссылочного типа.  
+ Когда рабочий процесс, содержащий это действие, проверяется, возникает следующая ошибка проверки: «Литералы поддерживают лишь типы значений и неизменяемый тип System.String. Тип System.Collections.Generic.List`1[System.String] нельзя использовать в качестве литерала». Если вызывается рабочий процесс, появляется уведомление <xref:System.Activities.InvalidWorkflowException>, содержащее сообщение об ошибке проверки. Это ошибка проверки, поскольку при создании литерального выражения со ссылочным типом не создается новый экземпляр ссылочного типа для каждого из экземпляров рабочего процесса. Чтобы устранить эту проблему, замените литеральное выражение таким, которое создает и возвращает новый экземпляр ссылочного типа.  
   
 ```csharp  
 new Assign  
@@ -142,7 +142,7 @@ new InvokeMethod<int>
 ## <a name="compiled-activities"></a>Скомпилированные действия  
  Динамические действия - это один из способов определить действие, которое содержит аргументы в коде, но действия также можно создавать в коде и компилировать в типы. Можно создавать простые действия, производные от класса <xref:System.Activities.CodeActivity>, и асинхронные действия, производные от класса <xref:System.Activities.AsyncCodeActivity>. Эти действия могут иметь аргументы и возвращаемые значения и задают логику с помощью императивного кода. Примеры создания таких типов действий см. в статьях [базовый класс CodeActivity](workflow-activity-authoring-using-the-codeactivity-class.md) и [Создание асинхронных действий](creating-asynchronous-activities-in-wf.md).  
   
- Действия, производные от <xref:System.Activities.NativeActivity>, могут определять свою логику с помощью императивного кода и содержать дочерние действия, определяющие логику. Кроме того, они имеют полный доступ к возможностям среды выполнения, таким как создание закладок. Примеры создания <xref:System.Activities.NativeActivity>действия на основе см. в разделе [базовый класс NativeActivity](nativeactivity-base-class.md), как [ Создание действия](how-to-create-an-activity.md)и выборка настраиваемого составного элемента [с помощью собственного действия](./samples/custom-composite-using-native-activity.md) .  
+ Действия, производные от <xref:System.Activities.NativeActivity>, могут определять свою логику с помощью императивного кода и содержать дочерние действия, определяющие логику. Кроме того, они имеют полный доступ к возможностям среды выполнения, таким как создание закладок. Примеры создания действия на основе <xref:System.Activities.NativeActivity>см. в разделе [базовый класс NativeActivity](nativeactivity-base-class.md), [инструкции: Создание действия](how-to-create-an-activity.md)и пример [пользовательской составной модели с использованием собственного действия](./samples/custom-composite-using-native-activity.md) .  
   
  Действия, производные от <xref:System.Activities.Activity>, задают логику исключительно с помощью дочерних действий. Эти действия обычно создаются с помощью конструктора рабочих процессов, а также могут быть заданы с помощью кода. В следующем примере определяется действие `Square`, являющееся производным от `Activity<int>`. Действие `Square` содержит класс <xref:System.Activities.InArgument%601> с именем `Value` и задает его логику, указав действие <xref:System.Activities.Statements.Sequence> с помощью свойства <xref:System.Activities.Activity.Implementation%2A>. Действие <xref:System.Activities.Statements.Sequence> содержит действие <xref:System.Activities.Statements.WriteLine> и действие <xref:System.Activities.Statements.Assign%601>. Совместно эти три действия реализуют логику действия `Square`.  
   
@@ -183,5 +183,5 @@ Console.WriteLine("Result: {0}", result);
   
  При вызове рабочего процесса на консоль выводятся следующие данные:  
   
- **Возведение в возведение значения: 5.0**  
-**Результат размером**
+ **Возведение в возведение значения: 5**  
+**Результат: 25**

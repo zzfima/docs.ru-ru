@@ -8,12 +8,12 @@ helpviewer_keywords:
 - service contracts [WCF], synchronous operations
 - service contracts [WCF], asynchronous operations
 ms.assetid: db8a51cb-67e6-411b-9035-e5821ed350c9
-ms.openlocfilehash: 39a7db3fb7dc3651f2cf6c850e7ebb5525e24963
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 143cc0f4566d86f1d42ebd11063f9af3c1ec331f
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74281635"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802444"
 ---
 # <a name="synchronous-and-asynchronous-operations"></a>Синхронные и асинхронные операции
 В этом разделе описывается реализация и вызов асинхронных операций службы.  
@@ -56,7 +56,7 @@ ms.locfileid: "74281635"
 3. асинхронная модель IAsyncResult.  
   
 #### <a name="task-based-asynchronous-pattern"></a>Асинхронная модель на основе задач  
- Асинхронная модель на основе задач - это предпочтительный способ реализации асинхронных операций в силу его чрезвычайного удобства и простоты. Чтобы использовать этот метод, реализуйте операцию службы и укажите для нее тип возвращаемого значения Task\<T>, где T — это тип, возвращенный логической операцией. Пример.  
+ Асинхронная модель на основе задач - это предпочтительный способ реализации асинхронных операций в силу его чрезвычайного удобства и простоты. Чтобы использовать этот метод, реализуйте операцию службы и укажите для нее тип возвращаемого значения Task\<T>, где T — это тип, возвращенный логической операцией. Например:  
   
 ```csharp  
 public class SampleService:ISampleService   
@@ -107,7 +107,7 @@ public class AsyncExample
 }  
 ```  
   
- Дополнительные сведения об асинхронной модели на основе событий см. в [этой статье](https://go.microsoft.com/fwlink/?LinkId=232515).  
+ Дополнительные сведения об асинхронной модели на основе событий см. в [этой статье](../../standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md).  
   
 #### <a name="iasyncresult-asynchronous-pattern"></a>Асинхронная модель IAsyncResult  
  Операцию службы можно реализовать асинхронно с помощью .NET Framework шаблона асинхронного программирования и пометить метод `<Begin>` свойством <xref:System.ServiceModel.OperationContractAttribute.AsyncPattern%2A>, для которого задано значение `true`. В этом случае асинхронная операция доступна в метаданных так же, как и синхронная операция: она предоставляется в виде одной операции с сообщением запроса и согласованным с ним сообщением ответа. В этом случае имеется возможность выбора одной из двух моделей программирования клиента. Этот шаблон может быть представлен в них в виде синхронной или асинхронной операции, поскольку при вызове службы имеет место обмен сообщениями "запрос-ответ".  
@@ -192,7 +192,7 @@ svcutil http://localhost:8000/servicemodelsamples/service/mex /async
   
  Если требуется получать объект сообщения как свойство `Result`, чтобы возвращаемые значения были свойствами этого объекта, следует использовать параметр командной строки **/messageContract**. При этом формируется сигнатура, которая возвращает ответное сообщение как свойство `Result` объекта <xref:System.EventArgs>. Все внутренние возвращаемые значения тогда будут свойствами объекта ответного сообщения.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A>
 - <xref:System.ServiceModel.OperationContractAttribute.AsyncPattern%2A>

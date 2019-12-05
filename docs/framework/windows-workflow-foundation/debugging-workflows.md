@@ -2,16 +2,16 @@
 title: Отладка рабочих процессов
 ms.date: 03/30/2017
 ms.assetid: b23b4814-ebb1-4c51-b7a9-469f4da7a96d
-ms.openlocfilehash: 3947e61161b0e2108fa48fbc7e33fb7601645a1b
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: 2bfc50215697636f1771d6bb35510fbf9e0b435d
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291487"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802639"
 ---
 # <a name="debugging-workflows"></a>Отладка рабочих процессов
 
-[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] предлагает несколько вариантов для отладки выполняющихся рабочих процессов из среды разработки. Отладку рабочих процессов можно выполнять в конструкторе, XAML или в коде.
+[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] обеспечивает несколько возможностей отладки выполняемых рабочих процессов из среды разработки. Отладку рабочих процессов можно выполнять в конструкторе, XAML или в коде.
 
 ## <a name="debugging-in-the-workflow-designer"></a>Отладка в конструкторе рабочих процессов
 
@@ -29,9 +29,9 @@ ms.locfileid: "72291487"
 
 Отладка рабочих процессов поддерживает также использование инфраструктуры Visual Studio для присоединения к процессу. Это позволяет автору рабочего процесса выполнять отладку рабочего процесса, запущенного в другой среде узла, например в службах IIS 7.0.
 
-## <a name="remote-debugging"></a>Удаленная отладка
+## <a name="remote-debugging"></a>Remote Debugging
 
-Функция удаленной отладки Windows Workflow Foundation (WF) аналогична удаленной отладке для других компонентов Visual Studio. Сведения об использовании удаленной отладки см. [в разделе как включить удаленную отладку](https://go.microsoft.com/fwlink/?LinkId=196257).
+Функция удаленной отладки Windows Workflow Foundation (WF) аналогична удаленной отладке для других компонентов Visual Studio. Сведения об использовании удаленной отладки см. [в разделе как включить удаленную отладку](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/febz73k0(v=vs.100)).
 
 > [!NOTE]
 > Если приложение рабочего процесса предназначено для архитектуры x86 и размещено на компьютере под управлением 64-разрядной операционной системы, то удаленная отладка не будет работать, если на удаленном компьютере не установлена среда Visual Studio или если целевой объект для приложения рабочего процесса изменен на **любой ЦП**.

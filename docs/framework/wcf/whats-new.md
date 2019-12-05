@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF [WCF], what's new
 - Windows Communication Foundation [WCF], what's new
 ms.assetid: 7e93fe73-af93-46b5-9f63-32f761ee40cf
-ms.openlocfilehash: 0a065676d81b36f32729bb08c23025825e94d3bc
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: e01b3a39a004e963e5bb66c5fa71433cb4e7204a
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320460"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802379"
 ---
 # <a name="whats-new-in-windows-communication-foundation-45"></a>Новые возможности в Windows Communication Foundation 4.5
 
@@ -40,7 +40,7 @@ WCF теперь поддерживает разработку в соответ
 
 ### <a name="aspnet-compatibility-mode-default-changed"></a>Изменились значения по умолчанию для режима совместимости с ASP.NET
 
-WCF предоставляет режим совместимости с ASP.NET, дающий разработчикам при создании служб WCF полный доступ к функциям HTTP-конвейера ASP.NET. Чтобы использовать этот режим, необходимо присвоить атрибуту `aspNetCompatibilityEnabled` значение true в разделе [\<serviceHostingEnvironment >](../configure-apps/file-schema/wcf/servicehostingenvironment.md) файла Web. config. Кроме того, любая служба в этом appDomain должна иметь свойство `RequirementsMode` для <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute>, установленное в значение <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed> или <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Required>. По умолчанию <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> теперь имеет значение <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed>. Дополнительные сведения см. в разделе [WCF Services and ASP.NET](./feature-details/wcf-services-and-aspnet.md).
+WCF предоставляет режим совместимости с ASP.NET, дающий разработчикам при создании служб WCF полный доступ к функциям HTTP-конвейера ASP.NET. Чтобы использовать этот режим, необходимо присвоить атрибуту `aspNetCompatibilityEnabled` значение true в разделе [\<serviceHostingEnvironment >](../configure-apps/file-schema/wcf/servicehostingenvironment.md) файла Web. config. Кроме того, любая служба в этом appDomain должна иметь свойство `RequirementsMode` в своем <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute>е, для которого задано значение <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed> или <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Required>. По умолчанию <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> теперь имеет значение <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed>. Дополнительные сведения см. в разделе [WCF Services and ASP.NET](./feature-details/wcf-services-and-aspnet.md).
 
 ### <a name="new-transport-default-values"></a>Новые значения по умолчанию для свойств транспорта
 
@@ -78,11 +78,11 @@ WebSockets - это технология, которая обеспечивае�
 
 В следующей таблице описываются измененные настройки и разделы, в которых можно найти дополнительные сведения.
 
-|свойство;|включить|Новое значение по умолчанию|Дополнительные сведения см. в разделах|
+|свойство;|On|Новое значение по умолчанию|Дополнительные сведения см. в разделе .|
 |--------------|--------|-----------------|------------------------------|
 |channelInitializationTimeout|<xref:System.ServiceModel.NetTcpBinding>|30 секунд|<xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.ChannelInitializationTimeout%2A>|
 |listenBacklog|<xref:System.ServiceModel.NetTcpBinding>|12 * количество процессоров|<xref:System.ServiceModel.NetTcpBinding.ListenBacklog%2A>|
-|maxPendingAccepts|ConnectionOrientedTransportBindingElement<br /><br /> SMSvcHost.exe|2 * количество процессоров для транспорта<br /><br /> 4 \* число процессоров для SMSvcHost. exe|<xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.MaxPendingAccepts%2A> [Настройка службы совместного использования портов net. TCP](./feature-details/configuring-the-net-tcp-port-sharing-service.md)|
+|maxPendingAccepts|ConnectionOrientedTransportBindingElement<br /><br /> SMSvcHost.exe|2 * количество процессоров для транспорта<br /><br /> 4 \* число процессоров для SMSvcHost. exe|<xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.MaxPendingAccepts%2A> [настройке службы совместного использования портов net. TCP](./feature-details/configuring-the-net-tcp-port-sharing-service.md)|
 |maxPendingConnections|ConnectionOrientedTransportBindingElement|12 * количество процессоров|<xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.MaxPendingConnections%2A>|
 |receiveTimeout|SMSvcHost.exe|30 секунд|[Настройка службы совместного использования портов Net.TCP](./feature-details/configuring-the-net-tcp-port-sharing-service.md)|
 
@@ -126,7 +126,7 @@ Windows Communication Foundation (WCF) позволяет разработчик
 
 ## <a name="httpclient"></a>HttpClient
 
-Был добавлен новый класс <xref:System.Net.Http.HttpClient>, существенного облегчающий работу с HTTP-запросами. Дополнительные сведения см. в разделе [Создание приложений в социальных сетях и подключение к службам HTTP](https://go.microsoft.com/fwlink/?LinkId=231886) и [Пример HTTP-клиента](https://code.msdn.microsoft.com/windowsapps/HttpClient-sample-55700664).
+Был добавлен новый класс <xref:System.Net.Http.HttpClient>, существенного облегчающий работу с HTTP-запросами. Дополнительные сведения см. в разделе [Создание приложений в социальных сетях и подключение к службам HTTP](https://channel9.msdn.com/Events/BUILD/BUILD2011/PLAT-581T) и [Пример HTTP-клиента](https://code.msdn.microsoft.com/windowsapps/HttpClient-sample-55700664).
 
 ## <a name="configuration-intellisense"></a>Технология Intellisense в файлах конфигурации
 

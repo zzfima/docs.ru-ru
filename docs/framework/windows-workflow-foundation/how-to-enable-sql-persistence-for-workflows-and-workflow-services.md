@@ -2,18 +2,18 @@
 title: Как включить сохраняемость SQL для рабочих процессов и служб рабочих процессов
 ms.date: 03/30/2017
 ms.assetid: ca7bf77f-3e5d-4b23-b17a-d0b60f46411d
-ms.openlocfilehash: 4dc5648d748372828c5b9a36441bfb02eef045e1
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: bef95dbeaaa96678a66ba94494a0207c7314c326
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460878"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802587"
 ---
 # <a name="how-to-enable-sql-persistence-for-workflows-and-workflow-services"></a>Как включить сохраняемость SQL для рабочих процессов и служб рабочих процессов
 
 В данном разделе описано, как настроить возможность хранилища экземпляров рабочих процессов SQL для включения сохраняемости рабочих процессов и служб рабочих процессов программно и с помощью файла конфигурации.
 
-Windows Server App Fabric упрощает процесс настройки сохраняемости. Дополнительные сведения см. в статье [Конфигурация сохраняемости в App Fabric](https://go.microsoft.com/fwlink/?LinkId=201204).
+Windows Server App Fabric упрощает процесс настройки сохраняемости. Дополнительные сведения см. в статье [Конфигурация сохраняемости в App Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee790848(v=azure.10)).
 
 Перед использованием возможности хранилища экземпляров рабочих процессов SQL необходимо создать базу данных, которая используется возможностью для сохранения экземпляров рабочих процессов. Программа установки [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] копирует файлы скрипта SQL, связанные с функцией хранилища экземпляров рабочих процессов SQL, в папку %WINDIR%\Microsoft.NET\Framework\v4.xxx\SQL\EN. Выполните эти файлы скрипта в базе данных SQL Server 2005 или SQL Server 2008, которая должна использоваться в хранилище экземпляров рабочих процессов SQL для сохранения экземпляров рабочих процессов. Сначала запустите файл SqlWorkflowInstanceStoreSchema.sql, а затем файл SqlWorkflowInstanceStoreLogic.sql.
 
@@ -152,7 +152,7 @@ workflowServiceHost.DurableInstancingOptions.InstanceStore = sqlInstanceStoreObj
 ```
 
 > [!IMPORTANT]
-> В файле Web.config не рекомендуется сохранять конфиденциальные сведения, такие как имена и пароли пользователей. При сохранении в файле Web.config конфиденциальных сведений необходимо обеспечить защиту доступа к файлу Web.config с помощью списков управления доступом файловой системы. Кроме того, можно защитить значения конфигурации в файле конфигурации, как упоминалось в этой области, [с помощью защищенной конфигурации](https://go.microsoft.com/fwlink/?LinkId=178419).
+> В файле Web.config не рекомендуется сохранять конфиденциальные сведения, такие как имена и пароли пользователей. При сохранении в файле Web.config конфиденциальных сведений необходимо обеспечить защиту доступа к файлу Web.config с помощью списков управления доступом файловой системы. Кроме того, можно защитить значения конфигурации в файле конфигурации, как упоминалось в этой области, [с помощью защищенной конфигурации](https://docs.microsoft.com/en-us/previous-versions/aspnet/53tyfkaw(v=vs.100)).
 
 ### <a name="machineconfig-elements-related-to-the-sql-workflow-instance-store-feature"></a>Элементы Machine.config, связанные с функцией хранилища экземпляров рабочих процессов SQL
 
