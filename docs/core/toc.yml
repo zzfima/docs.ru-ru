@@ -96,7 +96,7 @@
     - name: Создание полноценного решения .NET Core в macOS
       href: tutorials/using-on-mac-vs-full-solution.md
     - name: Начало работы с .NET Core с помощью средств интерфейса командной строки
-      href: tutorials/using-with-xplat-cli.md
+      href: tutorials/cli-create-console-app.md
     - name: Организация и тестирование проектов с помощью инструментов командной строки .NET Core
       href: tutorials/testing-with-cli.md
     - name: Разработка библиотек с помощью кроссплатформенных средств
