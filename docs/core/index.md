@@ -2,14 +2,14 @@
 title: Руководство по .NET Core
 description: .NET Core — это модульная высокопроизводительная реализация .NET для создания приложений Windows, Linux и Mac. Для начала получите дополнительную информацию о .NET Core.
 author: richlander
-ms.date: 09/23/2019
+ms.date: 12/04/2019
 ms.custom: updateeachrelease
-ms.openlocfilehash: 95f18ca09852ce139a4b99ed7aef4802d4883e13
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: b2622dba53d64c9dcf58e852d57de117fe79eb2e
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216218"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837016"
 ---
 # <a name="net-core-guide"></a>Руководство по .NET Core
 
@@ -25,9 +25,9 @@ ms.locfileid: "71216218"
 
 Если вам нужна другая версия .NET Core, все версии доступны на [странице скачиваемых файлов .NET Core](https://dotnet.microsoft.com/download/dotnet-core).
 
-## <a name="net-core-30"></a>.NET Core 3.0
+## <a name="net-core-31"></a>.NET Core 3.1
 
-.NET Core 3.0 является последней версией. Новые возможности включают поддержку Windows Desktop в Windows Presentation Foundation (WPF) и Windows Forms, комплексную разработку веб-приложений C# с помощью Blazor, новые усовершенствования SignalR и службы SignalR Azure, новые функции языка C# 8 и многое другое. См. [полный список новых возможностей .NET Core 3.0](./whats-new/dotnet-core-3-0.md).
+.NET Core 3.1 является последней версией. В нее входят незначительные улучшения версии .NET Core 3.0. Однако .NET Core 3.1 является долгосрочным поддерживаемым выпуском. Дополнительные сведения о выпуске .NET Core 3.1 см. в разделе [Новые возможности .NET Core 3.1](./whats-new/dotnet-core-3-1.md).
 
 ## <a name="create-your-first-application"></a>Создание первого приложения
 

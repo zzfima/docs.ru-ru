@@ -3,14 +3,14 @@ title: Добро пожаловать в .NET
 description: Начало работы с семейством технологий .NET
 author: mairaw
 ms.author: mairaw
-ms.date: 09/23/2019
+ms.date: 12/03/2019
 ms.custom: updateeachrelease
-ms.openlocfilehash: ccff6256b56daccdf8105fd5ad31e81bb892c2a8
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: 15daaafed02ab1132a3c82c12efa6fad0e0a6db2
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552952"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74838134"
 ---
 # <a name="welcome-to-net"></a>Добро пожаловать в .NET
 
@@ -29,9 +29,9 @@ ms.locfileid: "74552952"
 
 Также следите за последними событиями, связанными с .NET:
 
+- [Microsoft Ignite](https://www.microsoft.com/ignite)
 - [Microsoft Build](https://www.microsoft.com/build)
 - [.NET Conf](https://www.dotnetconf.net/)
-- [Microsoft Connect()](https://www.microsoft.com/connectevent)
 
 Сведения о последних функциях, добавленных в реализации .NET, и поддерживаемых языках см. в следующих статьях:
 
@@ -49,7 +49,7 @@ ms.locfileid: "74552952"
 - [Руководство по .NET Framework](framework/index.md)
 - [Руководство по языку C#](csharp/index.yml)
 - [Руководство по языку F#](fsharp/index.yml)
-- [Руководство по Visual Basic](visual-basic/index.md)
+- [Руководство по Visual Basic](visual-basic/index.yml)
 - [Руководство по ML.NET](machine-learning/index.yml)
 - [.NET для Apache Spark](spark/index.yml)
 - [Архитектура приложений .NET](architecture/index.yml)
@@ -67,11 +67,10 @@ ms.locfileid: "74552952"
 В этой документации используется полностью [открытый исходный код](https://github.com/dotnet/docs). Вы можете внести свой вклад в проект любым удобным способом — сообщив о проблеме или приняв участие в создании документации. Кроме того, большая часть самой платформы .NET также имеет открытый исходный код. В следующем списке показаны основные репозитории .NET GitHub:
 
 - [Домашняя страница .NET Core](https://github.com/dotnet/core)
-- [Библиотеки .NET](https://github.com/dotnet/corefx)
-- [Среда выполнения .NET Core](https://github.com/dotnet/coreclr)
-- [Интерфейс командной строки .NET Core](https://github.com/dotnet/cli)
+- [Среда выполнения .NET Core](https://github.com/dotnet/runtime)
+- [Пакет SDK для .NET Core](https://github.com/dotnet/sdk)
 - [Платформа компилятора Roslyn (C# и Visual Basic) и средства IDE](https://github.com/dotnet/roslyn)
-- [Компилятор F# и средства IDE](https://github.com/microsoft/visualfsharp)
+- [Компилятор F# и средства IDE](https://github.com/dotnet/fsharp)
 - [Windows Forms](https://github.com/dotnet/winforms)
 - [WPF](https://github.com/dotnet/wpf)
 

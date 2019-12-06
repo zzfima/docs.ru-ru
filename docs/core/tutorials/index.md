@@ -5,12 +5,12 @@ author: richlander
 ms.date: 03/16/2017
 titleSuffix: ''
 ms.custom: seodec18
-ms.openlocfilehash: 7b6265cb652e6f3db702584295fac948d06ad5fc
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 1355b3b0fa72a13263229848b3de2c6b9ccb3392
+ms.sourcegitcommit: 68a4b28242da50e1d25aab597c632767713a6f81
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73420845"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74884206"
 ---
 # <a name="learn-net-core-and-the-net-core-sdk-tools-by-exploring-these-tutorials"></a>См. дополнительные сведения о средствах пакета SDK для .NET Core и .NET Core
 
@@ -39,7 +39,7 @@ ms.locfileid: "73420845"
 
 ## <a name="building-applications-with-the-net-core-cli-tools"></a>Создание приложений с помощью инструментов командной строки .NET Core
 
-- [Начало работы с .NET Core в Windows, Linux и macOS с помощью средств интерфейса командной строки .NET Core](using-with-xplat-cli.md)
+- [Начало работы с .NET Core в Windows, Linux и macOS с помощью средств интерфейса командной строки .NET Core](cli-create-console-app.md)
 - [Организация и тестирование проектов с помощью инструментов командной строки .NET Core](testing-with-cli.md)
 - [Начало работы с F#](../../fsharp/get-started/get-started-command-line.md)
 

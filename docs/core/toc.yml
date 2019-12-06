@@ -65,6 +65,8 @@
       href: tutorials/consuming-library-with-visual-studio.md
 - name: Новые возможности .NET Core
   items:
+    - name: "Новые возможности .NET Core\_3.1"
+      href: whats-new/dotnet-core-3-1.md
     - name: Новые возможности .NET Core 3.0
       href: whats-new/dotnet-core-3-0.md
     - name: Новые возможности .NET Core 2.2
@@ -109,8 +111,18 @@
   items:
     - name: Параметры
       href: run-time-config/index.md
+    - name: Параметры компиляции
+      href: run-time-config/compilation.md
+    - name: Параметры отладки и профилирования
+      href: run-time-config/debugging-profiling.md
     - name: Параметры сборщика мусора
       href: run-time-config/garbage-collector.md
+    - name: Параметры глобализации
+      href: run-time-config/globalization.md
+    - name: Параметры сети
+      href: run-time-config/networking.md
+    - name: Параметры потоков
+      href: run-time-config/threading.md
 - name: Взаимодействие на уровне машинного кода
   items:
     - name: Предоставление доступа к компонентам .NET Core для COM

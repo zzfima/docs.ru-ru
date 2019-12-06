@@ -4,12 +4,12 @@ description: Сведения о примерах и руководствах д
 author: BillWagner
 ms.author: wiwagn
 ms.date: 04/11/2017
-ms.openlocfilehash: 7953d178e9a24fc42f11b6bc5c866805ec381137
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 5132415a6be03787111aaed8d027d436bb6820fe
+ms.sourcegitcommit: 68a4b28242da50e1d25aab597c632767713a6f81
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423573"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74884440"
 ---
 # <a name="net-samples-and-tutorials"></a>Примеры и руководства .NET
 
@@ -25,7 +25,7 @@ ms.locfileid: "73423573"
 
 ### <a name="tutorials"></a>Учебники
 
-**[Написание консольных приложений .NET Core с помощью средств командной строки: пошаговое руководство](../core/tutorials/using-with-xplat-cli.md)**
+**[Написание консольных приложений .NET Core с помощью средств командной строки: пошаговое руководство](../core/tutorials/cli-create-console-app.md)**
 
 В этом руководстве показано, как с помощью средств интерфейса командной строки в .NET Core создавать кроссплатформенные консольные приложения. Мы начнем с самого простого консольного приложения, а затем охватим несколько проектов, включая тестирование. Пошаговое добавление функций позволит наращивать знания в ходе работы. [Готовый пример](https://github.com/dotnet/samples/tree/master/core/console-apps) доступен в репозитории dotnet/samples на сайте GitHub.
 

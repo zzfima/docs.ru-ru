@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
-ms.openlocfilehash: c651f5c02bd49acc593c585395bc52e9ee64f870
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 82a2c1780c6e0e1d94a206b9b959d8e1944fd0a9
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74714498"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802323"
 ---
 # <a name="whats-new-in-the-net-framework"></a>Новые возможности .NET Framework
 
@@ -800,7 +800,7 @@ API-интерфейсы WPF для печати в классе <xref:System.Pr
 
 - [Усовершенствования отладки](#Debug462)
 
-См. подробнее об [изменениях списка API в .NET Framework 4.6.2](https://github.com/Microsoft/dotnet/blob/master/releases/net462/dotnet462-api-changes.md) на сайте GitHub. См. подробнее об [улучшенных функциях и исправленных ошибках в .NET Framework 4.6.2](https://go.microsoft.com/fwlink/?LinkId=708778) на сайте GitHub.  Дополнительные сведения см. в разделе [Объявление о выпуске .NET Framework 4.6.2](https://devblogs.microsoft.com/dotnet/announcing-net-framework-4-6-2/) в блоге .NET.
+См. подробнее об [изменениях списка API в .NET Framework 4.6.2](https://github.com/Microsoft/dotnet/blob/master/releases/net462/dotnet462-api-changes.md) на сайте GitHub. См. подробнее об [улучшенных функциях и исправленных ошибках в .NET Framework 4.6.2](https://github.com/Microsoft/dotnet/blob/master/releases/net462/dotnet462-changes.md) на сайте GitHub. Дополнительные сведения см. в разделе [Объявление о выпуске .NET Framework 4.6.2](https://devblogs.microsoft.com/dotnet/announcing-net-framework-4-6-2/) в блоге .NET.
 
 <a name="ASPNET462" />
 
@@ -1196,7 +1196,7 @@ AppContext.SetSwitch(disableCngCertificates, False)
 
 **Поддержка выражений C# и IntelliSense в повторно размещаемом конструкторе WF**
 
-Начиная с .NET Framework 4.5 WF поддерживает выражения C# в конструкторе Visual Studio и рабочих процессах кода. Повторно размещаемый конструктор рабочих процессов является ключевой возможностью WF, позволяющей размещать конструкторы рабочих процессов в приложении вне среды Visual Studio (например, в WPF).  Windows Workflow Foundation поддерживает выражения C# и IntelliSense в повторно размещаемом конструкторе рабочих процессов. Дополнительные сведения см. в [блоге по Windows Workflow Foundation](https://go.microsoft.com/fwlink/?LinkID=809042&clcid=0x409).
+Начиная с .NET Framework 4.5 WF поддерживает выражения C# в конструкторе Visual Studio и рабочих процессах кода. Повторно размещаемый конструктор рабочих процессов является ключевой возможностью WF, позволяющей размещать конструкторы рабочих процессов в приложении вне среды Visual Studio (например, в WPF).  Windows Workflow Foundation поддерживает выражения C# и IntelliSense в повторно размещаемом конструкторе рабочих процессов. Дополнительные сведения см. в [блоге по Windows Workflow Foundation](https://blogs.msdn.microsoft.com/workflowteam/2016/07/20/building-c-expressions-support-and-intellisense-in-the-rehosted-workflow-designer/).
 
 `Availability of IntelliSense when a customer rebuilds a workflow project from Visual Studio` В версиях .NET Framework до версии 4.6.2 в случае перестроения проекта рабочего процесса из Visual Studio происходит нарушение работы IntelliSense конструктора WF. Несмотря на успешное построение проекта, типы рабочих процессов отсутствуют в конструкторе, и в окне **Список ошибок** отображаются предупреждения из IntelliSense о недостающих типах рабочего процесса. В .NET Framework 4.6.2 эта проблема решена и IntelliSense работает.
 
@@ -1262,11 +1262,11 @@ AppContext.SetSwitch(disableCngCertificates, False)
 
 Дополнительные сведения о версии .NET Framework 4.6.1 приведены в следующих статьях:
 
-- [Список изменений в .NET Framework 4.6.1](https://go.microsoft.com/fwlink/?LinkId=622964)
+- [Список изменений в .NET Framework 4.6.1](https://github.com/Microsoft/dotnet/blob/master/releases/net461/dotnet461-changes.md)
 
 - [Совместимость приложений в 4.6.1](../migration-guide/application-compatibility.md)
 
-- [Различия между API .NET Framework](https://go.microsoft.com/fwlink/?LinkId=622989) (GitHub)
+- [Различия между API .NET Framework](https://github.com/Microsoft/dotnet/blob/master/releases/net461/dotnet461-api-changes.md) (GitHub)
 
 <a name="Crypto" />
 
@@ -1324,7 +1324,7 @@ Windows Presentation Foundation содержит ряд улучшений и и
 
 - язык и региональные параметры текущего потока.
 
-Дополнительные сведения о языковой поддержке в WPF см. в [публикации в блоге WPF, посвященной компонентам .NET Framework 4.6.1](https://go.microsoft.com/fwlink/?LinkID=691819).
+Дополнительные сведения о языковой поддержке в WPF см. в [публикации в блоге WPF, посвященной компонентам .NET Framework 4.6.1](https://devblogs.microsoft.com/wpf/wpf-in-net-4-6-1/).
 
 **Дополнительная поддержка индивидуально настраиваемых словарей**
 
@@ -1349,7 +1349,7 @@ Windows Presentation Foundation содержит ряд улучшений и и
 
 **Расширения DirectX**
 
-WPF включает [пакет NuGet](https://go.microsoft.com/fwlink/?LinkID=691342), предоставляющий новые реализации <xref:System.Windows.Interop.D3DImage>, которые упрощают взаимодействие с содержимым DX10 и Dx11. Код для этого пакета открыт и доступен [на GitHub](https://github.com/Microsoft/WPFDXInterop).
+WPF включает [пакет NuGet](https://www.nuget.org/packages/Microsoft.Wpf.Interop.DirectX-x86/), предоставляющий новые реализации <xref:System.Windows.Interop.D3DImage>, которые упрощают взаимодействие с содержимым DX10 и Dx11. Код для этого пакета открыт и доступен [на GitHub](https://github.com/Microsoft/WPFDXInterop).
 
 <a name="WWF461" />
 
@@ -1755,7 +1755,7 @@ WPF включает [пакет NuGet](https://go.microsoft.com/fwlink/?LinkID=
 
 - **Пакеты .NET Framework с открытым исходным кодом**
 
-  Пакеты .NET Core, такие как неизменяемые коллекции, [API SIMD](https://go.microsoft.com/fwlink/?LinkID=518639) и API-интерфейсы сетевых подключений, например из пространства имен <xref:System.Net.Http>, теперь доступны в виде пакетов с открытым исходным кодом на сайте [GitHub](https://github.com/). Сведения о доступе к этому коду см. в разделе [CoreFx на GitHub](https://github.com/dotnet/corefx). Дополнительные сведения и инструкции, как принять участие в этих пакетах, см. в разделе [Ядро .NET и открытый исходный код](../get-started/net-core-and-open-source.md)[домашней странице .NET на GitHub](https://github.com/dotnet/home).
+  Пакеты .NET Core, такие как неизменяемые коллекции, [API SIMD](https://www.nuget.org/packages/Microsoft.Bcl.Simd) и API-интерфейсы сетевых подключений, например из пространства имен <xref:System.Net.Http>, теперь доступны в виде пакетов с открытым исходным кодом на сайте [GitHub](https://github.com/). Сведения о доступе к этому коду см. в разделе [CoreFx на GitHub](https://github.com/dotnet/corefx). Дополнительные сведения и инструкции, как принять участие в этих пакетах, см. в разделе [Ядро .NET и открытый исходный код](../get-started/net-core-and-open-source.md)[домашней странице .NET на GitHub](https://github.com/dotnet/home).
 
 <a name="v452" />
 
@@ -1892,7 +1892,7 @@ WPF включает [пакет NuGet](https://go.microsoft.com/fwlink/?LinkID=
 
 - Отладка с поддержкой асинхронности. Чтобы упростить отладку асинхронных приложений в Visual Studio 2013, стеке вызовов скрывает код инфраструктуры, предоставляемый компиляторами для поддержки асинхронного программирования, а также цепочки логических родительских кадров, что упрощает прослеживание логики выполнения программы. В окне "Задачи", которое заменяет собой окно "Параллельные задачи", отображаются задачи, относящиеся к определенной точке останова, а также все другие задачи, которые в данный момент активны или запланированы в приложении. Вы можете прочесть об этой возможности в разделе "Отладка с поддержкой асинхронности" [объявления о выходе .NET Framework 4.5.1](https://devblogs.microsoft.com/dotnet/announcing-the-net-framework-4-5-1-preview/).
 
-- Усовершенствованная поддержка исключений для компонентов среды выполнения Windows. В [!INCLUDE[win81](../../../includes/win81-md.md)] исключения, возникающие в приложениях для Магазина Windows, сохраняют сведения об ошибке, которая вызвала исключение, даже при переходе через границу языка. Вы можете прочесть об этой возможности в разделе "Разработка приложений для Магазина Windows" [объявления о выходе .NET Framework 4.5.1](https://devblogs.microsoft.com/dotnet/announcing-the-net-framework-4-5-1-preview/).
+- Усовершенствованная поддержка исключений для компонентов среды выполнения Windows. В Windows 8.1 все исключения, возникающие в приложениях для Магазина Windows, сохраняют сведения об ошибке, которая вызвала исключение, даже при переходе через границы языков. Вы можете прочесть об этой возможности в разделе "Разработка приложений для Магазина Windows" [объявления о выходе .NET Framework 4.5.1](https://devblogs.microsoft.com/dotnet/announcing-the-net-framework-4-5-1-preview/).
 
 Начиная с Visual Studio 2013 вы можете использовать [Управляемое средство профильной оптимизации (Mpgo.exe)](../tools/mpgo-exe-managed-profile-guided-optimization-tool.md) для оптимизации приложений для Магазина Windows 8.x и для настольных систем.
 
@@ -1926,9 +1926,9 @@ WPF включает [пакет NuGet](https://go.microsoft.com/fwlink/?LinkID=
 
 - Возможность настраивать контекст отражения для переопределения поведения отражения по умолчанию с помощью класса <xref:System.Reflection.Context.CustomReflectionContext>.
 
-- Поддержка версии 2008 стандарта интернационализированных доменных имен в приложениях (Internationalized Domain Names in Applications, IDNA) при использовании класса <xref:System.Globalization.IdnMapping?displayProperty=nameWithType> в [!INCLUDE[win8](../../../includes/win8-md.md)].
+- Поддержка версии 2008 стандарта интернационализированных доменных имен в приложениях (Internationalized Domain Names in Applications, IDNA) при использовании класса <xref:System.Globalization.IdnMapping?displayProperty=nameWithType> в Windows 8.
 
-- Делегирование сравнения строк операционной системе, которая реализует Юникод 6.0, при использовании .NET Framework в [!INCLUDE[win8](../../../includes/win8-md.md)]. При работе на других платформах .NET Framework включает собственные данные сравнения строк, которые реализуют Юникод 5.x. См. класс <xref:System.String> и раздел "Примечания" в описании класса <xref:System.Globalization.SortVersion>.
+- Делегирование сравнения строк операционной системе, которая реализует Юникод 6.0, при использовании .NET Framework в среде Windows 8. При работе на других платформах .NET Framework включает собственные данные сравнения строк, которые реализуют Юникод 5.x. См. класс <xref:System.String> и раздел "Примечания" в описании класса <xref:System.Globalization.SortVersion>.
 
 - Возможность вычисления хэш-кодов для строк для каждого домена приложения. См. раздел [Элемент \<UseRandomizedStringHashAlgorithm>](../configure-apps/file-schema/runtime/userandomizedstringhashalgorithm-element.md).
 
@@ -1944,7 +1944,7 @@ WPF включает [пакет NuGet](https://go.microsoft.com/fwlink/?LinkID=
 
 - Множественные области действия.
 
-- Подмножество MEF, которое можно использовать при создании приложений для Магазина Windows 8.x. Это подмножество доступно как [загружаемый пакет](https://go.microsoft.com/fwlink/?LinkId=256238) из коллекции NuGet. Чтобы установить пакет, откройте проект в Visual Studio, выберите **Управление пакетами NuGet** в меню **Проект** и выполните поиск пакета `Microsoft.Composition` в Интернете.
+- Подмножество MEF, которое можно использовать при создании приложений для Магазина Windows 8.x. Это подмножество доступно как [загружаемый пакет](https://www.nuget.org/packages/Microsoft.Composition) из коллекции NuGet. Чтобы установить пакет, откройте проект в Visual Studio, выберите **Управление пакетами NuGet** в меню **Проект** и выполните поиск пакета `Microsoft.Composition` в Интернете.
 
 Дополнительные сведения см. в разделе [Managed Extensibility Framework](../mef/index.md).
 
@@ -1964,7 +1964,7 @@ WPF включает [пакет NuGet](https://go.microsoft.com/fwlink/?LinkID=
 
 ### <a name="parallel-computing"></a>Параллельные вычисления
 
-В .NET Framework 4.5 предусмотрено несколько новых возможностей и усовершенствований для параллельных вычислений. К ним относятся повышение производительности, повышение управляемости, улучшенная поддержка асинхронного программирования, новая библиотека потоков данных и улучшенная поддержка параллельной отладки и анализа производительности. См. запись [Новые возможности параллелизма в .NET 4.5](https://go.microsoft.com/fwlink/?LinkId=235061) в блоге, посвященном параллельному программированию в .NET.
+В .NET Framework 4.5 предусмотрено несколько новых возможностей и усовершенствований для параллельных вычислений. К ним относятся повышение производительности, повышение управляемости, улучшенная поддержка асинхронного программирования, новая библиотека потоков данных и улучшенная поддержка параллельной отладки и анализа производительности. См. запись [Новые возможности параллелизма в .NET 4.5](https://devblogs.microsoft.com/pfxteam/whats-new-for-parallelism-in-net-4-5/) в блоге, посвященном параллельному программированию в .NET.
 
 <a name="web" />
 
@@ -2058,7 +2058,7 @@ WPF включает [пакет NuGet](https://go.microsoft.com/fwlink/?LinkID=
 
 - Поддержка служб WCF, использующих интернационализированные доменные имена (IDN).
 
-Дополнительные сведения см. в разделе [Новые возможности в Windows Communication Foundation](https://go.microsoft.com/fwlink/?LinkId=228173).
+Дополнительные сведения см. в разделе [Новые возможности в Windows Communication Foundation](../wcf/whats-new.md).
 
 <a name="windows_workflow_foundation" />
 
@@ -2066,7 +2066,7 @@ WPF включает [пакет NuGet](https://go.microsoft.com/fwlink/?LinkID=
 
 В .NET Framework 4.5 для Windows Workflow Foundation (WF) добавлено несколько новых возможностей, в том числе следующие.
 
-- Рабочие процессы конечного автомата, впервые добавленные в .NET Framework 4.0.1 ([обновление 1 для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkID=215092)). В это обновление вошло несколько новых классов и действий, позволивших разработчикам создавать рабочие процессы конечного автомата. В .NET Framework 4.5 эти классы и действия были обновлены и теперь включают в себя следующие возможности.
+- Рабочие процессы конечного автомата, впервые добавленные в .NET Framework 4.0.1 ([обновление 1 для .NET Framework 4](https://blogs.msdn.microsoft.com/endpoint/2011/04/18/microsoft-net-framework-4-platform-update-1/)). В это обновление вошло несколько новых классов и действий, позволивших разработчикам создавать рабочие процессы конечного автомата. В .NET Framework 4.5 эти классы и действия были обновлены и теперь включают в себя следующие возможности.
 
   - Возможность установки точек останова на состояниях.
 
@@ -2112,13 +2112,13 @@ WPF включает [пакет NuGet](https://go.microsoft.com/fwlink/?LinkID=
 
 - Разработка служб рабочего процесса в соответствии с парадигмой "сначала контракт", что обеспечивает поддержку автоматического создания действий в соответствии с существующим контрактом службы.
 
-Дополнительные сведения см. в разделе [Новые возможности Windows Workflow Foundation](https://go.microsoft.com/fwlink/?LinkId=228176).
+Дополнительные сведения см. в разделе [Новые возможности Windows Workflow Foundation](../windows-workflow-foundation/whats-new-in-wf-in-dotnet.md).
 
 <a name="tailored" />
 
 ### <a name="net-for-windows-8x-store-apps"></a>.NET для приложений Магазина Windows 8.x
 
-Приложения для Магазина Windows 8.x разрабатываются для конкретных форм-факторов и в полной мере используют возможности операционной системы Windows. Предоставляется подмножество .NET Framework 4.5 или 4.5.1 для разработки приложений для Магазина Windows 8.x с использованием C# или Visual Basic. Это подмножество называется .NET для Магазина Windows 8.x. Оно подробно рассматривается в [обзорной статье](https://go.microsoft.com/fwlink/?LinkId=228491) в Центре разработки для Windows.
+Приложения для Магазина Windows 8.x разрабатываются для конкретных форм-факторов и в полной мере используют возможности операционной системы Windows. Предоставляется подмножество .NET Framework 4.5 или 4.5.1 для разработки приложений для Магазина Windows 8.x с использованием C# или Visual Basic. Это подмножество называется .NET для Магазина Windows 8.x. Оно подробно рассматривается в [обзорной статье](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140)).
 
 ### <a name="portable-class-libraries-a-nameportable-"></a>Переносимые библиотеки классов <a name="portable" />
 
@@ -2129,5 +2129,6 @@ WPF включает [пакет NuGet](https://go.microsoft.com/fwlink/?LinkID=
 - [.NET Framework и отдельные выпуски](../get-started/the-net-framework-and-out-of-band-releases.md)
 - [Улучшения специальных возможностей в .NET Framework](whats-new-in-accessibility.md)
 - [Новые возможности Visual Studio 2017](/visualstudio/ide/whats-new-visual-studio-2017)
+- [Новые возможности Visual Studio 2019](/visualstudio/ide/whats-new-visual-studio-2019)
 - [ASP.NET](/aspnet)
 - [Новые возможности C++ в Visual Studio](/cpp/what-s-new-for-visual-cpp-in-visual-studio)

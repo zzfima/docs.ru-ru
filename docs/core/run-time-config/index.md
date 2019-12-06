@@ -2,12 +2,12 @@
 title: Конфигурация во время выполнения
 description: Узнайте, как настроить приложения .NET Core с помощью параметров конфигурации среды выполнения.
 ms.date: 11/13/2019
-ms.openlocfilehash: e3922f6df81198b5e122f16d5cfc4b6d15cbb4ae
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 2665026347e94d26026821beb2bfcf8441f755f6
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74567392"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74801915"
 ---
 # <a name="net-core-run-time-configuration-settings"></a>Параметры конфигурации среды выполнения .NET Core
 
@@ -26,11 +26,11 @@ ms.locfileid: "74567392"
 
 - [Переменные среды](#environment-variables)
 
-Статьи в этом разделе документации упорядочены по категориям, например, "отладка" и "сборка мусора". Приведены доступные параметры конфигурации для файла *runtimeconfig.json* (только .NET Core), для файла *app.config* (только .NET Framework) и для переменных среды.
+Статьи в этом разделе документации упорядочены по категориям, например, "отладка" и "сборка мусора". По возможности приведены параметры конфигурации для файла *runtimeconfig.json* (только .NET Core), для файла *app.config* (только .NET Framework) и для переменных среды.
 
 ## <a name="runtimeconfigjson"></a>runtimeconfig.json
 
-Укажите параметры конфигурации среды выполнения в разделе **configProperties** файла *runtimeconfig.json*. Этот раздел имеет следующий вид:
+Укажите параметры конфигурации среды выполнения в разделе **configProperties** файла приложения *runtimeconfig.json*. Этот раздел имеет следующий вид:
 
 ```json
 {
