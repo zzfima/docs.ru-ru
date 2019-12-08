@@ -4,12 +4,12 @@ description: Ресурсы, посвященные созданию прило�
 author: thraka
 ms.author: adegeo
 ms.date: 09/19/2019
-ms.openlocfilehash: 78066f2904f6a874b71165e4fe1769b6b778ae41
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 89db6d79336c01315983133d9041904d88cba301
+ms.sourcegitcommit: 68a4b28242da50e1d25aab597c632767713a6f81
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428866"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74884258"
 ---
 # <a name="get-started-with-net-core"></a>Начало работы с .NET Core
 
@@ -50,7 +50,7 @@ Hello World!
 - [Создание библиотеки классов с помощью Visual Basic и .NET Core в Visual Studio 2017.](./tutorials/vb-library-with-visual-studio.md)  
 - Посмотрите видео о том, [как установить и использовать Visual Studio Code и .NET Core](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core/).
 - Посмотрите видео о том, [как установить и использовать Visual Studio 2017 и .NET Core](https://channel9.msdn.com/Blogs/dotnet/Get-Started-NET-Core-Visual-Studio-2017/).
-- [Начало работы с .NET Core с помощью командной строки.](tutorials/using-with-xplat-cli.md)
+- [Начало работы с .NET Core с помощью командной строки.](tutorials/cli-create-console-app.md)
 
 Список поддерживаемых версий Windows см. в статье [Зависимости и требования для .NET Core](install/dependencies.md?tabs=netcore30&pivots=os-windows).
 
@@ -58,7 +58,7 @@ Hello World!
 
 Чтобы приступить к разработке приложения .NET Core, воспользуйтесь следующими пошаговыми руководствами:
 
-- [Начало работы с .NET Core с помощью командной строки.](tutorials/using-with-xplat-cli.md)
+- [Начало работы с .NET Core с помощью командной строки.](tutorials/cli-create-console-app.md)
 - Посмотрите видео о [начале работы с Visual Studio Code с использованием C# и .NET Core в Ubuntu](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-Csharp-dotnet-Core-Ubuntu).
 
 Список поддерживаемых дистрибутивов и версий Linux см. в статье [Зависимости и требования для .NET Core](install/dependencies.md?tabs=netcore30&pivots=os-linux).
@@ -69,7 +69,7 @@ Hello World!
 
 - Посмотрите видео о [начале работы с Visual Studio Code с использованием C# и .NET Core в macOS](https://channel9.msdn.com/Blogs/dotnet/Get-started-VSCode-NET-Core-Mac).
 - [Начало работы с .NET Core в macOS с помощью Visual Studio Code.](tutorials/using-on-macos.md)
-- [Начало работы с .NET Core с помощью командной строки.](tutorials/using-with-xplat-cli.md)
+- [Начало работы с .NET Core с помощью командной строки.](tutorials/cli-create-console-app.md)
 - [Начало работы с .NET Core в macOS с помощью Visual Studio для Mac.](tutorials/using-on-mac-vs.md)
 - [Создание полноценного решения .NET Core на базе macOS с помощью Visual Studio для Mac.](tutorials/using-on-mac-vs-full-solution.md)
 

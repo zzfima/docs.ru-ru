@@ -4,12 +4,12 @@ description: Узнайте, как развернуть приложение .N
 ms.date: 05/17/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: c1c1a57fb2b79826218f8ed94d568b37d4689560
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: e79b4c5bf38416cf45776488559bd0b2d5582361
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73454273"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716469"
 ---
 # <a name="tutorial-deploy-a-net-for-apache-spark-application-to-databricks"></a>Учебник. Развертывание приложения .NET для Apache Spark в Databricks
 
@@ -50,7 +50,7 @@ ms.locfileid: "73454273"
     |---------|---------|
     |**Имя рабочей области**     | Укажите имя рабочей области Databricks.        |
     |**Подписка**     | Выберите подписку Azure в раскрывающемся списке.        |
-    |**группа ресурсов**     | Укажите, следует ли создать новую группу ресурсов или использовать имеющуюся. Группа ресурсов — это контейнер, содержащий связанные ресурсы для решения Azure. Дополнительные сведения см. в [обзоре группы ресурсов Azure](/azure/azure-databricks/azure-resource-manager/resource-group-overview). |
+    |**группа ресурсов**     | Укажите, следует ли создать новую группу ресурсов или использовать имеющуюся. Группа ресурсов — это контейнер, содержащий связанные ресурсы для решения Azure. Дополнительные сведения см. в [обзоре группы ресурсов Azure](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview). |
     |**Расположение**     | Выберите предпочитаемый регион. Доступные регионы см. в статье о [доступности служб Azure по регионам](https://azure.microsoft.com/regions/services/).        |
     |**Ценовая категория**     |  Вы можете выбрать уровень **Стандартный** или **Премиум** или воспользоваться **бесплатной пробной версией**. Дополнительные сведения об этих ценовых категориях см. на [странице цен на Databricks](https://azure.microsoft.com/pricing/details/databricks/).       |
     |**Виртуальная сеть**     |   Нет       |
