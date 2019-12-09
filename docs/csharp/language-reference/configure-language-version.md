@@ -38,7 +38,7 @@ ms.locfileid: "71698810"
 
 - Вручную изменить [файл проекта](#edit-the-project-file).
 - Задать версию языка [для нескольких проектов в подкаталоге](#configure-multiple-projects).
-- Установить [параметра компилятора `-langversion`](compiler-options/langversion-compiler-option.md).
+- Установить [параметр компилятора `-langversion`](compiler-options/langversion-compiler-option.md).
 
 ### <a name="edit-the-project-file"></a>Изменение файла проекта
 
