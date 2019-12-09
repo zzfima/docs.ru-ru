@@ -5,12 +5,12 @@ author: cartermp
 ms.author: mairaw
 ms.date: 08/23/2017
 ms.technology: dotnet-standard
-ms.openlocfilehash: 4e787377bf954de3be499ae0fc74ef274a61e129
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: 543f05cd52e62166b8a5ee318a588dee1e8ef76a
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552877"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74838199"
 ---
 # <a name="net-architectural-components"></a>Архитектурные компоненты .NET
 
@@ -112,4 +112,4 @@ UWP представляет собой реализацию .NET, котора�
 - [Руководство по .NET Framework](../framework/index.md)
 - [Руководство по языку C#](../csharp/index.yml)
 - [Руководство по языку F#](../fsharp/index.yml)
-- [Руководство по VB .NET](../visual-basic/index.md)
+- [Руководство по VB .NET](../visual-basic/index.yml)

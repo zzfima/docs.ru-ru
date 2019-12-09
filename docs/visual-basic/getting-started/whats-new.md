@@ -8,12 +8,12 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-ms.openlocfilehash: 1efcee0ac3bdba1b7e1379a0ac072ea714add756
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 45763504c2d25596b0adfb4b8a0236b332d89e8c
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423919"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802048"
 ---
 # <a name="whats-new-for-visual-basic"></a>Новые возможности Visual Basic
 
@@ -292,3 +292,4 @@ End Interface
 ## <a name="see-also"></a>См. также
 
 - [Новые возможности Visual Studio 2017](/visualstudio/ide/whats-new-visual-studio-2017)
+- [Новые возможности Visual Studio 2019](/visualstudio/ide/whats-new-visual-studio-2019)
