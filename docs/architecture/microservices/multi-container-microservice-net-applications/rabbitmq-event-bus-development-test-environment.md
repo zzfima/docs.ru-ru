@@ -2,12 +2,12 @@
 title: Реализация шины событий с помощью RabbitMQ для среды разработки или тестирования
 description: Архитектура микрослужб .NET для упакованных в контейнеры приложений .NET | Использование RabbitMQ для реализации сообщений шины событий для событий интеграции для сред разработки или тестирования.
 ms.date: 10/02/2018
-ms.openlocfilehash: 211348caec3c101435fcdd99bd96fd8e17a6456b
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: ba1cea9384893955ae0743ac8d6a34c350224cd5
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739511"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74711200"
 ---
 # <a name="implementing-an-event-bus-with-rabbitmq-for-the-development-or-test-environment"></a>Реализация шины событий с помощью RabbitMQ для среды разработки или тестирования
 
@@ -108,6 +108,20 @@ public class EventBusRabbitMQ : IEventBus, IDisposable
 
 Метод Subscribe принимает объект IIntegrationEventHandler, который похож на метод обратного вызова в текущей микрослужбе, а также связанный с ним объект IntegrationEvent. Затем добавляется обработчик событий в список обработчиков событий, которые может иметь каждый тип событий интеграции в клиентской микрослужбе. Если код клиента еще не подписался на событие, для данного типа событий создается канал, который позволяет получать события из RabbitMQ принудительным образом, когда они публикуются из любой другой службы.
 
+Как упоминалось выше, шина событий, реализованная в eShopOnContainers, предназначена только для образовательных целей, так как она обрабатывает только основные сценарии и не готова к рабочей среде.
+
+Сведения о рабочих сценариях просмотрите в дополнительных ресурсах о RabbitMQ и разделе [Реализация связи на основе событий между микрослужбами](./integration-event-based-microservice-communications.md#additional-resources).
+
+## <a name="additional-resources"></a>Дополнительные ресурсы
+
+Готовые к работе решения с поддержкой RabbitMQ.
+
+- **EasyNetQ** — клиент API .NET для RabbitMQ с открытым кодом.
+  <http://easynetq.com/>
+
+- **MassTransit** \
+  <https://masstransit-project.com/>
+  
 >[!div class="step-by-step"]
 >[Назад](integration-event-based-microservice-communications.md)
 >[Вперед](subscribe-events.md)

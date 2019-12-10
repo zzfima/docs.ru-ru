@@ -16,12 +16,12 @@ helpviewer_keywords:
 - code, runtime functionality
 ms.assetid: 059a624e-f7db-4134-ba9f-08b676050482
 ms.custom: updateeachrelease
-ms.openlocfilehash: c866e3d1a4de31361843f5c071510fd18247cb39
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6f9ad8aafc37039b55ae3bf6eb743e07ad8e2235
+ms.sourcegitcommit: 68a4b28242da50e1d25aab597c632767713a6f81
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132814"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74884414"
 ---
 # <a name="common-language-runtime-clr-overview"></a>Обзор среды CLR
 
@@ -62,20 +62,7 @@ ms.locfileid: "73132814"
 
 ## <a name="clr-versions"></a>Версии CLR
 
-Номер версии платформы .NET Framework не всегда соответствует номеру версии среды CLR, которую он содержит. В следующей таблице показано, как они соотносятся:
-
-|Версия платформы .NET Framework|Содержит версию среды CLR|
-|----------------------------|--------------------------|
-|1.0|1.0|
-|1.1|1.1|
-|2.0|2.0|
-|3.0|2.0|
-|3.5|2.0|
-|4|4|
-|4.5 (включая 4.5.1 и 4.5.2)|4|
-|4.6 (включая 4.6.1 и 4.6.2)|4|
-|4.7 (включая 4.7.1 и 4.7.2)|4|
-|4.8|4|
+Номер версии платформы .NET Framework не всегда соответствует номеру версии среды CLR, которую он содержит. Список версий .NET Framework и соответствующих версий среды CLR см. в разделе [Версии и зависимости платформы .NET Framework](../framework/migration-guide/versions-and-dependencies.md). Выпуски .NET Core имеют одну версию продукта, т. е. не существует отдельной версии среды CLR. Список версий .NET Core см. в разделе [Загрузка .NET Core](https://dotnet.microsoft.com/download/dotnet-core).
 
 ## <a name="related-topics"></a>См. также
 
@@ -85,7 +72,3 @@ ms.locfileid: "73132814"
 |[Автоматическое управление памятью](automatic-memory-management.md)|Описание выделения и освобождения памяти сборщиком мусора.|
 |[Общие сведения о платформе .NET Framework](../framework/get-started/overview.md)|Описание ключевых понятий платформы .NET Framework: системы общих типов CTS, межъязыкового взаимодействия, управляемого выполнения, доменов приложений и сборок.|
 |[Система общих типов CTS](./base-types/common-type-system.md)|Описание того, как типы объявляются, используются и контролируются в среде выполнения в рамках поддержки межъязыковой интеграции.|
-
-## <a name="see-also"></a>См. также
-
-- [Версии и зависимости](../framework/migration-guide/versions-and-dependencies.md)

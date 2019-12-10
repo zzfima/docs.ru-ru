@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: aff939d7-9e49-46f2-a8cd-938d3020e94e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 94d435d8f50683c24e7ca28100fbf5abf0fdcc19
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.openlocfilehash: 33583f430e5af2f3fa7027233febd9ec61f85a3f
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74204782"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802457"
 ---
 # <a name="isolated-storage"></a>Изолированное хранилище
 <a name="top"></a> Если речь идет о классических приложениях, изолированное хранилище — это механизм хранения данных, обеспечивающий изоляцию и безопасность путем определения стандартизованных способов сопоставления кода с сохраненными данными. Стандартизация также имеет и другие преимущества. Администраторы могут использовать инструменты управления изолированным хранением для конфигурирования пространства хранения файлов, установки политики безопасности и удаления неиспользуемых данных. При изолированном хранении нет необходимости указывать уникальные пути для безопасного размещения кода в файловой системе, и данные защищены от других приложений, имеющих доступ только к изолированному хранению. Нет необходимости в аппаратно закодированной информации, указывающей место размещения области хранения данных приложения.
@@ -118,7 +118,7 @@ ms.locfileid: "74204782"
 |Windows 2000, Windows XP, Windows Server 2003 (обновление Windows NT 4.0)|Перемещаемые хранилища =<br /><br /> \<КОРНЕВОЙ КАТАЛОГ СИСТЕМЫ>\Profiles\\<имя пользователя\>\Application Data<br /><br /> Неперемещаемые хранилища =<br /><br /> \<КОРНЕВОЙ КАТАЛОГ СИСТЕМЫ>\Profiles\\<имя пользователя\>\Local Settings\Application Data|
 |Windows 2000 — чистая установка (и обновление с Windows 98 и Windows NT 3.51)|Перемещаемые хранилища =<br /><br /> \<СИСТЕМНЫЙ ДИСК>\Documents and Settings\\<имя пользователя\>\Application Data<br /><br /> Неперемещаемые хранилища =<br /><br /> \<СИСТЕМНЫЙ ДИСК>\Documents and Settings\\<имя пользователя\>\Local Settings\Application Data|
 |Windows XP, Windows Server 2003 — чистая установка (или обновление с Windows 2000 и Windows 98)|Перемещаемые хранилища =<br /><br /> \<СИСТЕМНЫЙ ДИСК>\Documents and Settings\\<имя пользователя\>\Application Data<br /><br /> Неперемещаемые хранилища =<br /><br /> \<СИСТЕМНЫЙ ДИСК>\Documents and Settings\\<имя пользователя\>\Local Settings\Application Data|
-|[!INCLUDE[win8](../../../includes/win8-md.md)], Windows 7, Windows Server 2008, Windows Vista|Перемещаемые хранилища =<br /><br /> \<СИСТЕМНЫЙ ДИСК>\Users\\<имя пользователя\>\AppData\Roaming<br /><br /> Неперемещаемые хранилища =<br /><br /> \<СИСТЕМНЫЙ ДИСК>\Users\\<имя пользователя\>\AppData\Local|
+|Windows 8, Windows 7, Windows Server 2008, Windows Vista|Перемещаемые хранилища =<br /><br /> \<СИСТЕМНЫЙ ДИСК>\Users\\<имя пользователя\>\AppData\Roaming<br /><br /> Неперемещаемые хранилища =<br /><br /> \<СИСТЕМНЫЙ ДИСК>\Users\\<имя пользователя\>\AppData\Local|
 
 <a name="isolated_storage_tasks"></a>
 

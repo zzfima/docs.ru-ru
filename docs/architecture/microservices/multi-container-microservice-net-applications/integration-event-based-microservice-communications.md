@@ -2,12 +2,12 @@
 title: Реализация взаимодействия между микрослужбами на основе событий (события интеграции)
 description: Архитектура микрослужб .NET для контейнерных приложений .NET | События интеграции для реализации взаимодействия между микрослужбами на основе событий.
 ms.date: 10/02/2018
-ms.openlocfilehash: 70566745dc084ba9016a850ad749fefb958e89ec
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: a355ba9ede4e3390edd858d173dd88548e876202
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73737153"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74711227"
 ---
 # <a name="implementing-event-based-communication-between-microservices-integration-events"></a>Реализация взаимодействия между микрослужбами на основе событий (события интеграции)
 
@@ -126,6 +126,19 @@ public interface IEventBus
 Метод `Publish` достаточно прост. Шина событий передает полученное событие интеграции всем микрослужбам и даже внешним приложениям, которые подписаны на это событие. Этот метод используется микрослужбой, которая публикует событие.
 
 Методы `Subscribe` (возможны различные реализации в зависимости от аргументов) используются микрослужбами, которые хотят получать события. У этого метода есть два аргумента. Первый — это событие интеграции, на которое он подписан (`IntegrationEvent`). Второй аргумент — обработчик события интеграции (или метод обратного вызова) с именем `IIntegrationEventHandler<T>`, который будет выполнен, когда микрослужба-получатель получит сообщение об этом событии интеграции.
+
+## <a name="additional-resources"></a>Дополнительные ресурсы
+
+Некоторые решения для обмена сообщениями, готовые для рабочей среды:
+
+- **Служебная шина Azure** \
+  <https://docs.microsoft.com/azure/service-bus-messaging/>
+  
+- **NServiceBus** \
+  <https://particular.net/nservicebus>
+  
+- **MassTransit** \
+  <https://masstransit-project.com/>
 
 > [!div class="step-by-step"]
 > [Назад](database-server-container.md)

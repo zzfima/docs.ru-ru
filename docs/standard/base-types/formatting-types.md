@@ -25,12 +25,12 @@ helpviewer_keywords:
 - custom formatting [.NET Framework]
 - strings [.NET Framework], formatting
 ms.assetid: 0d1364da-5b30-4d42-8e6b-03378343343f
-ms.openlocfilehash: e362ad75fd9989cc87751286f83918d340a58820
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 20aa7ecd354ef1a8982ae75eda87275c80cdaaf6
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73141483"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802470"
 ---
 # <a name="format-types-in-net"></a>Форматирование типов в .NET
 
@@ -85,7 +85,7 @@ ms.locfileid: "73141483"
 [!code-vb[Conceptual.Formatting.Overview#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/default1.vb#1)]
 
 > [!WARNING]
-> Начиная с [!INCLUDE[win81](../../../includes/win81-md.md)] среда выполнения Windows включает интерфейс <xref:Windows.Foundation.IStringable> с единственным методом [IStringable.ToString](xref:Windows.Foundation.IStringable.ToString%2A), который обеспечивает поддержку форматирования по умолчанию. Однако рекомендуется, чтобы управляемые типы не реализовывали интерфейс `IStringable` . Дополнительные сведения см. в подразделе "Среда выполнения Windows и интерфейс `IStringable`" справочных сведений о методе <xref:System.Object.ToString%2A?displayProperty=nameWithType>.
+> Начиная с Windows 8.1 среда выполнения Windows включает интерфейс <xref:Windows.Foundation.IStringable> с единственным методом [IStringable.ToString](xref:Windows.Foundation.IStringable.ToString%2A), который обеспечивает поддержку форматирования по умолчанию. Однако рекомендуется, чтобы управляемые типы не реализовывали интерфейс `IStringable` . Дополнительные сведения см. в подразделе "Среда выполнения Windows и интерфейс `IStringable`" справочных сведений о методе <xref:System.Object.ToString%2A?displayProperty=nameWithType>.
 
 Поскольку производными от <xref:System.Object>являются все типы, кроме интерфейсов, данная функциональность автоматически присутствует в пользовательских классах и структурах. Тем не менее функциональные возможности, предлагаемые по умолчанию методом `ToString`, ограничены: хотя он определяет тип, он не предоставляет никакой информации о экземпляра типа. Для формирования строкового представления объекта, позволяющего получить сведения о конкретном объекте, следует переопределить метод `ToString` .
 
