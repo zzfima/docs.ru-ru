@@ -5,12 +5,12 @@ helpviewer_keywords:
 - controls, UI Automation support for
 - UI Automation, support for standard controls
 ms.assetid: 3770ea8a-2655-4add-9c59-fe0610ad5084
-ms.openlocfilehash: c59352f908c5f4a1fd2ca6dd631d26bb5d69f09a
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 314526c1164f70e6b261df1a6f11ddce2b5fa240
+ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74441221"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74960081"
 ---
 # <a name="ui-automation-support-for-standard-controls"></a>Поддержка автоматизации пользовательского интерфейса для стандартных элементов управления
 > [!NOTE]
@@ -26,7 +26,7 @@ ms.locfileid: "74441221"
 ## <a name="win32-controls"></a>Элементы управления Win32  
  Большинство элементов управления [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] предоставляется в [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] через поставщики на стороне клиента в UIAutomationClientsideProviders.dll. Эта сборка автоматически регистрируется для использования с приложениями клиента автоматизации пользовательского интерфейса.  
   
- Полная поддержка предоставляется только для элементов управления с версии 6 ComCtrl32.dll (доступной в [!INCLUDE[TLA#tla_winxp](../../../includes/tlasharptla-winxp-md.md)] и более поздних версиях).  
+ Полная поддержка предоставляется только для элементов управления из *ComCtrl32. dll*версии 6.  
   
  Поддерживаются следующие элементы управления.  
   
@@ -41,26 +41,26 @@ ms.locfileid: "74441221"
 |Кнопка|CheckBox|  
 |ComboBoxEx32|ComboBox|  
 |ComboBox|ComboBox|  
-|Правка|Документ|  
-|Правка|Правка|  
+|Edit|Document|  
+|Edit|Edit|  
 |SysLink|Гиперссылка|  
-|Static|Text|  
-|Static|Изображение|  
+|Статические|Текст|  
+|Статические|Изображение|  
 |SysIPAddress32|Другой|  
 |SysHeader32|Header/HeaderItem|  
 |SysListView32|DataGrid|  
-|SysListView32|List|  
-|ListBox|List|  
+|SysListView32|Список|  
+|ListBox|Список|  
 |ListBox|ListItem|  
 |#32768|Меню|  
 |#32768|MenuItem|  
 |msctls_progress32|ProgressBar|  
 |RichEdit|Документ. См. примечание.|  
-|RichEdit20A|Документ|  
-|RichEdit20W|Документ|  
-|RichEdit50W|Документ|  
-|ScrollBar|Ползунок|  
-|msctls_trackbar32|Ползунок|  
+|RichEdit20A|Document|  
+|RichEdit20W|Document|  
+|RichEdit50W|Document|  
+|ScrollBar|Slider|  
+|msctls_trackbar32|Slider|  
 |msctls_updown32|Spinner|  
 |msctls_statusbar32|StatusBar|  
 |SysTabControl32|Вкладка|  
@@ -70,9 +70,9 @@ ms.locfileid: "74441221"
 |ToolbarWindow32|Кнопка|  
 |ToolbarWindow32|CheckBox|  
 |ToolbarWindow32|RadioButton|  
-|ToolbarWindow32|Разделитель|  
-|tooltips_class32|ToolTip|  
-|#32774|ToolTip|  
+|ToolbarWindow32|Separator|  
+|tooltips_class32|Подсказка|  
+|#32774|Подсказка|  
 |ReBarWindow32|Toolbar|  
 |SysTreeView32|Дерево|  
 |SysTreeView32|TreeItem|  
@@ -87,9 +87,9 @@ ms.locfileid: "74441221"
 |SysPager|Spinner|  
 |SysDateTimePick32|Другой|  
 |SysMonthCal32|Календарь|  
-|MS_WINNOTE|Подсказка|  
-|VBBubble|Подсказка|  
-|ScrollBar (при использовании в качестве отдельного элемента управления)|Ползунок|  
+|MS_WINNOTE|ToolTip|  
+|VBBubble|ToolTip|  
+|ScrollBar (при использовании в качестве отдельного элемента управления)|Slider|  
 |SuperGrid|Другой|  
   
 <a name="Windows_Forms_Controls"></a>   
@@ -130,7 +130,7 @@ ms.locfileid: "74441221"
 |TextBox|  
 |Таймер|  
 |Toolbar|  
-|ToolTip|  
+|Подсказка|  
 |TrackBar|  
 |TreeView|  
 |VscrollBar|  

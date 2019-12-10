@@ -9,12 +9,12 @@ helpviewer_keywords:
 - templates [WPF], ComboBox
 - parts [WPF], ComboBox
 ms.assetid: b0662fa1-16d7-4320-b26b-c1804e565a44
-ms.openlocfilehash: 92671001733f525188ba3c7bcf3ed3c55615e301
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 887698bdaebf7bc5ddac8997167589d9fbd3dd4d
+ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74283791"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74960380"
 ---
 # <a name="combobox-styles-and-templates"></a>Стили и шаблоны элемента ComboBox
 В этом разделе описываются стили и шаблоны для элемента управления <xref:System.Windows.Controls.ComboBox>. Можно изменить <xref:System.Windows.Controls.ControlTemplate> по умолчанию, чтобы обеспечить уникальность внешнего вида элемента управления. Дополнительные сведения см. в разделе [Создание шаблона для элемента управления](../../../desktop-wpf/themes/how-to-create-apply-template.md).  
@@ -22,7 +22,7 @@ ms.locfileid: "74283791"
 ## <a name="combobox-parts"></a>Части поля со списком  
  В следующей таблице перечислены именованные части для элемента управления <xref:System.Windows.Controls.ComboBox>.  
   
-|Отделение|Введите|Описание|  
+|Часть|Тип|Описание|  
 |-|-|-|  
 |PART_EditableTextBox|<xref:System.Windows.Controls.TextBox>|Содержит текст <xref:System.Windows.Controls.ComboBox>.|  
 |PART_Popup|<xref:System.Windows.Controls.Primitives.Popup>|Раскрывающийся список, содержащий элементы в поле со списком.|  
@@ -40,7 +40,7 @@ ms.locfileid: "74283791"
 |Focused|FocusStates|Элемент управления имеет фокус.|  
 |Без фокуса ввода|FocusStates|Элемент управления не имеет фокуса.|  
 |фокуседдропдовн|FocusStates|Раскрывающийся список для <xref:System.Windows.Controls.ComboBox> имеет фокус.|  
-|Valid|ValidationStates|Элемент управления использует класс <xref:System.Windows.Controls.Validation>, а <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> присоединенным свойством является `false`.|  
+|Допустимо|ValidationStates|Элемент управления использует класс <xref:System.Windows.Controls.Validation>, а <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> присоединенным свойством является `false`.|  
 |InvalidFocused|ValidationStates|Присоединенное <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> свойство имеет `true` элемент управления имеет фокус.|  
 |InvalidUnfocused|ValidationStates|Присоединенное <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> свойство имеет `true` элемент управления не имеет фокуса.|  
 |Editable|едитстатес|Значение свойства <xref:System.Windows.Controls.ComboBox.IsEditable%2A> — `true`.|  
@@ -56,13 +56,13 @@ ms.locfileid: "74283791"
 |-|-|-|  
 |Нормальный|CommonStates|Состояние по умолчанию.|  
 |Отключено.|CommonStates|Элемент управления отключен.|  
-|MouseOver|CommonStates|Указатель мыши находится над элементом управления <xref:System.Windows.Controls.ComboBox>.|  
+|MouseOver|CommonStates|Указатель мыши находится над элементом управления <xref:System.Windows.Controls.ComboBoxItem>.|  
 |Focused|FocusStates|Элемент управления имеет фокус.|  
 |Без фокуса ввода|FocusStates|Элемент управления не имеет фокуса.|  
 |Выбранные|SelectionStates|Элемент выбран в данный момент.|  
 |Unselected|SelectionStates|Элемент не выбран.|  
 |SelectedUnfocused|SelectionStates|Элемент выбран, но не имеет фокуса.|  
-|Valid|ValidationStates|Элемент управления использует класс <xref:System.Windows.Controls.Validation>, а <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> присоединенным свойством является `false`.|  
+|Допустимо|ValidationStates|Элемент управления использует класс <xref:System.Windows.Controls.Validation>, а <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> присоединенным свойством является `false`.|  
 |InvalidFocused|ValidationStates|Присоединенное <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> свойство имеет `true` элемент управления имеет фокус.|  
 |InvalidUnfocused|ValidationStates|Присоединенное <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> свойство имеет `true` элемент управления не имеет фокуса.|  
   
@@ -77,7 +77,7 @@ ms.locfileid: "74283791"
   
  Полный пример см. в разделе [Пример задания стиля с помощью ControlTemplates](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - <xref:System.Windows.FrameworkElement.Style%2A>
 - <xref:System.Windows.Controls.ControlTemplate>

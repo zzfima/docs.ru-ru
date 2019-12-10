@@ -9,12 +9,12 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - message loops [WPF]
 ms.assetid: f440c23f-fa5d-4d5a-852f-ba61150e6405
-ms.openlocfilehash: f3cddcd6cd90e7e43ea6af67725e709673f7650f
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 46d8f00f9328e9c0a4df596b709195ae42d651bf
+ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73978342"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74960127"
 ---
 # <a name="troubleshooting-hybrid-applications"></a>Устранение неполадок смешанных приложений
 <a name="introduction"></a> В этом разделе перечислены некоторые общие проблемы, которые могут возникать при создании смешанных приложений, одновременно использующих технологии [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] и [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)].  
@@ -86,7 +86,7 @@ ms.locfileid: "73978342"
   
 <a name="enabling_visual_styles"></a>   
 ## <a name="enabling-visual-styles"></a>Включение стилей оформления  
- Визуальные стили [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] в элементе управления [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] могут быть недоступны. Метод <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> вызывается в шаблоне для приложения [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]. Хотя этот метод не вызывается по умолчанию, если вы используете Visual Studio для создания проекта, вы получите [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] визуальные стили для элементов управления, если доступна версия 6,0 для Comctl32. dll. Перед созданием дескрипторов в потоке необходимо вызвать метод <xref:System.Windows.Forms.Application.EnableVisualStyles%2A>. Дополнительные сведения см. в разделе [Практическое руководство. Включение визуальных стилей в гибридном приложении](how-to-enable-visual-styles-in-a-hybrid-application.md).  
+ Возможно, стили оформления Microsoft Windows XP в элементе управления [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] не включены. Метод <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> вызывается в шаблоне для приложения [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]. Хотя этот метод не вызывается по умолчанию, если вы используете Visual Studio для создания проекта, вы получаете визуальные стили Microsoft Windows XP для элементов управления, если доступна версия Comctl32. dll версии 6,0. Перед созданием дескрипторов в потоке необходимо вызвать метод <xref:System.Windows.Forms.Application.EnableVisualStyles%2A>. Дополнительные сведения см. в разделе [Практическое руководство. Включение визуальных стилей в гибридном приложении](how-to-enable-visual-styles-in-a-hybrid-application.md).  
   
 <a name="licensed_controls"></a>   
 ## <a name="licensed-controls"></a>Лицензированные элементы управления  
@@ -95,7 +95,7 @@ ms.locfileid: "73978342"
  Элемент <xref:System.Windows.Forms.Integration.WindowsFormsHost> является производным от класса <xref:System.Windows.Interop.HwndHost>, а маркер дочернего элемента управления создается внутри метода <xref:System.Windows.Forms.Integration.WindowsFormsHost.BuildWindowCore%2A>. Класс <xref:System.Windows.Interop.HwndHost> не разрешает обработку сообщений в методе <xref:System.Windows.Forms.Integration.WindowsFormsHost.BuildWindowCore%2A>, но отображение диалогового окна приводит к отправке сообщений. Чтобы включить этот сценарий лицензирования, вызовите метод <xref:System.Windows.Forms.Control.CreateControl%2A?displayProperty=nameWithType> для элемента управления перед тем, как назначить его дочернему элементу <xref:System.Windows.Forms.Integration.WindowsFormsHost>.  
   
 <a name="wpf_designer"></a>   
-## <a name="wpf-designer"></a>Конструктор WPF  
+## <a name="wpf-designer"></a>сред. Конструктор WPF  
  Вы можете спроектировать содержимое WPF с помощью конструктора WPF для Visual Studio. В следующих разделах перечислены некоторые распространенные проблемы, которые могут возникнуть при создании гибридных приложений с помощью конструктора WPF.  
   
 ### <a name="backcolortransparent-is-ignored-at-design-time"></a>Во время разработки игнорируется BackColorTransparent  
@@ -112,7 +112,7 @@ ms.locfileid: "73978342"
 ## <a name="elementhost-and-ime"></a>ElementHost и IME  
  Элементы управления WPF, размещенные в <xref:System.Windows.Forms.Integration.ElementHost>, в настоящее время не поддерживают свойство <xref:System.Windows.Forms.Control.ImeMode%2A>. Изменения <xref:System.Windows.Forms.Control.ImeMode%2A> будут игнорироваться размещаемыми элементами управления.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>

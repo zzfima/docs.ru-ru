@@ -8,12 +8,12 @@ helpviewer_keywords:
 - troubleshooting graphics rendering [WPF]
 - graphics [WPF], rendering
 ms.assetid: f4b41b42-327d-407c-b398-3ed5f505df8b
-ms.openlocfilehash: a7a11029c4e896b0486311bc3caf42fab53d1ea6
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: adb4848e844ff091c45ec9a8a2e6d36f01c3cf91
+ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802098"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74960151"
 ---
 # <a name="graphics-rendering-registry-settings"></a>Настройки реестра графической отрисовки
 В этом разделе содержится обзор параметров графической отрисовки [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] в реестре, которые влияют на приложения [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -24,7 +24,7 @@ ms.locfileid: "74802098"
   
 <a name="xpdmandwddm"></a>   
 ## <a name="what-are-xpdm-and-wddm"></a>Что такое XPDM и WDDM?  
- Некоторые из параметров реестра для графической отрисовки имеют разные значения по умолчанию, в зависимости от того, использует ли видеокарта драйвер XPDM или WDDM. XPDM — модель видеодрайвера [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)], а WDDM — модель видеодрайвера Windows. Модель WDDM доступна на компьютерах под управлением Windows Vista и Windows 7. XPDM доступен на компьютерах под управлением Windows Vista, [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)]и [!INCLUDE[TLA#tla_winnetsvrfam](../../../../includes/tlasharptla-winnetsvrfam-md.md)]. Дополнительную информацию о WDDM см. в разделе [Руководство по проектированию для модели видеодрайвера Windows Vista](https://go.microsoft.com/fwlink/?LinkId=178394).  
+ Некоторые из параметров реестра для графической отрисовки имеют разные значения по умолчанию, в зависимости от того, использует ли видеокарта драйвер XPDM или WDDM. XPDM — это модель драйвера экрана Microsoft Windows XP, а WDDM — это модель Windows для видеодрайверов. Модель WDDM доступна на компьютерах под управлением Windows Vista и Windows 7. XPDM доступен на компьютерах под управлением Windows Vista, Microsoft Windows XP и [!INCLUDE[TLA#tla_winnetsvrfam](../../../../includes/tlasharptla-winnetsvrfam-md.md)]. Дополнительную информацию о WDDM см. в разделе [Руководство по проектированию для модели видеодрайвера Windows Vista](https://go.microsoft.com/fwlink/?LinkId=178394).  
   
 <a name="registry_settings"></a>   
 ## <a name="registry-settings"></a>Параметры реестра  
@@ -57,7 +57,7 @@ ms.locfileid: "74802098"
 |------------------|----------------|  
 |`HKEY_CURRENT_USER\SOFTWARE\Microsoft\Avalon.Graphics\MaxMultisampleType`|DWORD|  
   
- **Максимальное многовыборочное значение** позволяет настроить максимальное количество сглаживания трехмерного содержимого. Используйте этот уровень, чтобы отключить трехмерное сглаживание в Windows Vista или включить его в [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)].  
+ **Максимальное многовыборочное значение** позволяет настроить максимальное количество сглаживания трехмерного содержимого. Используйте этот уровень для отключения трехмерного сглаживания в Windows Vista.  
   
  Параметр **максимальное значение мультисэмплинга** является значением типа DWORD в диапазоне от 0 до 16. Значение 0 указывает, что мультисэмплинговое сглаживание трехмерного содержимого должно быть отключено, а при значении 16 будет выполняться попытка использования 16-кратного мультисэмплингового сглаживания, если это поддерживается видеоадаптером. Учтите, что установка этого значения раздела реестра на компьютерах, использующих драйверы XPDM, приведет к тому, что приложения будут использовать большой объем дополнительной видеопамяти, снизить производительность трехмерной отрисовки и привести к появлению ошибок визуализации и стабильности. проблемы.  
   
