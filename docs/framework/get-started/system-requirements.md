@@ -10,12 +10,12 @@ helpviewer_keywords:
 - operating systems supported
 - hardware requirements
 ms.assetid: 298275e2-da1d-4618-9f74-6a3567832350
-ms.openlocfilehash: f2c22f13f74698b8cbd1474b331d65dcedfa4889
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d171a1aafe2d7e69dfbc9b16577b2d56672fdd3f
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73114562"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802203"
 ---
 # <a name="net-framework-system-requirements"></a>Требования к системе для .NET Framework
 
@@ -62,8 +62,8 @@ ms.locfileid: "73114562"
 | Юбилейное обновление Windows 10 Anniversary Update | 32- и 64-разрядные версии | .NET Framework 4.6.2 |.NET Framework 4.7<br/><br/>.NET Framework 4.7.1<br/><br/>.NET Framework 4.7.2<br/><br/>.NET Framework 4.8  |
 | Ноябрьское обновление Windows 10 | 32- и 64-разрядные версии | .NET Framework 4.6.1 | .NET Framework 4.6.2 |
 | Windows 10 | 32- и 64-разрядные версии | .NET Framework 4.6 | .NET Framework 4.6.1 <br/><br/> .NET Framework 4.6.2 |
-| [!INCLUDE[win81](../../../includes/win81-md.md)] | 32-разрядная версия, 64-разрядная версия и ARM | .NET Framework 4.5.1 | .NET Framework 4.5.2<br /><br /> .NET Framework 4.6<br /><br /> .NET Framework 4.6.1<br /><br /> .NET Framework 4.6.2<br /><br />.NET Framework 4.7<br/><br/>.NET Framework 4.7.1<br/><br/>.NET Framework 4.7.2<br/><br/>.NET Framework 4.8 |
-| [!INCLUDE[win8](../../../includes/win8-md.md)] | 32-разрядная версия, 64-разрядная версия и ARM | .NET Framework 4,5 | .NET Framework 4.5.1<br /><br />.NET Framework 4.5.2<br /><br /> .NET Framework 4.6<br /><br /> .NET Framework 4.6.1 |
+| Windows 8.1 | 32-разрядная версия, 64-разрядная версия и ARM | .NET Framework 4.5.1 | .NET Framework 4.5.2<br /><br /> .NET Framework 4.6<br /><br /> .NET Framework 4.6.1<br /><br /> .NET Framework 4.6.2<br /><br />.NET Framework 4.7<br/><br/>.NET Framework 4.7.1<br/><br/>.NET Framework 4.7.2<br/><br/>.NET Framework 4.8 |
+| Windows 8 | 32-разрядная версия, 64-разрядная версия и ARM | .NET Framework 4,5 | .NET Framework 4.5.1<br /><br />.NET Framework 4.5.2<br /><br /> .NET Framework 4.6<br /><br /> .NET Framework 4.6.1 |
 | Windows 7 SP1|32- и 64-разрядные версии | -- | .NET Framework 4<br /><br /> .NET Framework 4,5<br /><br /> .NET Framework 4.5.1<br /><br /> .NET Framework 4.5.2<br /><br /> .NET Framework 4.6<br /><br /> .NET Framework 4.6.1<br /><br /> .NET Framework 4.6.2<br /><br />.NET Framework 4.7<br/><br/>.NET Framework 4.7.1<br/><br/>.NET Framework 4.7.2<br/><br/>.NET Framework 4.8 |
 | Windows Vista SP2|32- и 64-разрядные версии | -- | .NET Framework 4<br /><br /> .NET Framework 4,5<br /><br /> .NET Framework 4.5.1<br /><br /> .NET Framework 4.5.2<br /><br /> .NET Framework 4.6 |
 | Windows XP |32- и 64-разрядные версии | -- | .NET Framework 4 |
@@ -76,7 +76,7 @@ ms.locfileid: "73114562"
 
 - .NET Framework 4 также поддерживает платформу IA64.
 
-- Для обеспечения оптимального уровня совместимости и безопасности на всех платформах рекомендуется установить последнюю версию пакета обновления Windows и все критические обновления, доступные на [веб-сайте Центра обновления Windows](https://go.microsoft.com/fwlink/?LinkId=168461).
+- Для обеспечения оптимального уровня совместимости и безопасности на всех платформах рекомендуется установить последнюю версию пакета обновления Windows и все критические обновления, доступные в [Центре обновления Windows](https://support.microsoft.com/help/12373/windows-update-faq).
 
 - В 64-разрядных операционных системах платформа .NET Framework поддерживает как среду WOW64 (32-разрядная обработка на 64-разрядном компьютере), так и собственную 64-разрядную обработку.
 
@@ -104,7 +104,7 @@ ms.locfileid: "73114562"
 
 - В Windows Server 2008 с пакетом обновления 2 (SP2) платформа .NET Framework не поддерживается в роли Server Core.
 
-- Для обеспечения оптимального уровня совместимости и безопасности на всех платформах рекомендуется установить последнюю версию пакета обновления Windows и все критические обновления, доступные на [веб-сайте Центра обновления Windows](https://go.microsoft.com/fwlink/?LinkId=168461). В некоторых операционных системах может потребоваться установить последний пакет обновления Windows.
+- Для обеспечения оптимального уровня совместимости и безопасности на всех платформах рекомендуется выполнить обновление до последней версии пакета обновления Windows и всех критических обновлений, доступных в [Центре обновления Windows](https://support.microsoft.com/help/12373/windows-update-faq). В некоторых операционных системах может потребоваться установить последний пакет обновления Windows.
 
 - В 64-разрядных операционных системах платформа .NET Framework поддерживает как среду WOW64 (32-разрядная обработка на 64-разрядном компьютере), так и собственную 64-разрядную обработку.
 

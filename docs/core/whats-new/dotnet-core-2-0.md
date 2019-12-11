@@ -2,12 +2,12 @@
 title: Новые возможности .NET Core 2.0
 description: Дополнительные сведения о новых возможностях .NET Core.
 ms.date: 08/13/2017
-ms.openlocfilehash: fcac4255e7370f31ea6c26771fdd7d341bafe38b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 115b3adc72b6798c6a7bac9cc18044a8822808a6
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73100845"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74801895"
 ---
 # <a name="whats-new-in-net-core-20"></a>Новые возможности .NET Core 2.0
 
@@ -136,7 +136,7 @@ ms.locfileid: "73100845"
 
 При изменении кода функция Live Unit Testing автоматически запускает все затронутые модульные тесты в фоновом режиме и отображает результаты и объем протестированного кода в активном состоянии в среде Visual Studio. Теперь .NET Core 2.0 поддерживает функцию Live Unit Testing. Ранее функция Live Unit Testing была доступна только для приложений .NET Framework.
 
-Дополнительные сведения см. в статье [Функция Live Unit Testing в Visual Studio 2017](/visualstudio/test/live-unit-testing) и [Часто задаваемые вопросы о функции Live Unit Testing](/visualstudio/test/live-unit-testing-faq).
+См. [вопросы и ответы о Live Unit Testing](/visualstudio/test/live-unit-testing-faq) и сведения об [использовании Live Unit Testing в Visual Studio 2017](/visualstudio/test/live-unit-testing).
 
 ### <a name="better-support-for-multiple-target-frameworks"></a>Улучшенная поддержка нескольких целевых платформ
 

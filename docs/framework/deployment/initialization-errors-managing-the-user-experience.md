@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 680a7382-957f-4f6e-b178-4e866004a07e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3cd881044d45a276ec361d24097b59b8ce76b7e4
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: cadcb5c2e85f046b5c1c561c17663b7c94829f4f
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975697"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802245"
 ---
 # <a name="net-framework-initialization-errors-managing-the-user-experience"></a>Ошибки инициализации платформы .NET Framework: управление пользовательской средой
 
@@ -80,14 +80,14 @@ Windows предоставляет функцию [SetErrorMode](/windows/win32/
 
 ## <a name="windows-8-behavior-and-ui"></a>Поведение и пользовательский интерфейс Windows 8
 
-Система активации CLR обеспечивает такое же поведение и пользовательского интерфейса в [!INCLUDE[win8](../../../includes/win8-md.md)], как и в других версиях операционной системы Windows, за исключением случаев возникновения проблем при загрузке CLR 2.0. [!INCLUDE[win8](../../../includes/win8-md.md)] включает в себя .NET Framework 4.5, использующий среду CLR 4.5. Но [!INCLUDE[win8](../../../includes/win8-md.md)] не включает в себя .NET Framework 2.0, 3.0 или 3.5, где используется среда CLR 2.0. В результате приложения, зависящие от среды CLR 2.0, по умолчанию не будут работать в [!INCLUDE[win8](../../../includes/win8-md.md)]. Вместо этого выводится следующее диалоговое окно, позволяющее установить платформу .NET Framework 3.5. Пользователи также могут включить платформу .NET Framework 3.5 из панели управления. Обе возможности рассматриваются в статье [Установка платформы .NET Framework 3.5 в Windows 10, Windows 8.1 и Windows 8](../install/dotnet-35-windows-10.md).
+Система активации CLR обеспечивает такое же поведение и пользовательского интерфейса в Windows 8, как и в других версиях операционной системы Windows, за исключением ситуаций с возникающими при загрузке CLR 2.0 проблемами. Windows 8 включает .NET Framework 4.5 с поддержкой CLR 4.5. Но Windows 8 не включает .NET Framework 2.0, 3.0 или 3.5 с поддержкой CLR 2.0. В результате приложения, зависящие от CLR 2.0, по умолчанию не будут работать в Windows 8. Вместо этого выводится следующее диалоговое окно, позволяющее установить платформу .NET Framework 3.5. Пользователи также могут включить платформу .NET Framework 3.5 из панели управления. Обе возможности рассматриваются в статье [Установка платформы .NET Framework 3.5 в Windows 10, Windows 8.1 и Windows 8](../install/dotnet-35-windows-10.md).
 
 ![Диалоговое окно установки версии 3.5 в Windows 8](./media/initialization-errors-managing-the-user-experience/install-framework-on-demand-dialog.png "Приглашение для установки .NET Framework 3.5 по запросу")
 
 > [!NOTE]
-> .NET Framework 4.5 заменяет .NET Framework 4 (среда CLR 4) на компьютере пользователя. Поэтому приложения платформы .NET Framework версии 4 без проблем выполняются в [!INCLUDE[win8](../../../includes/win8-md.md)] без отображения этого диалогового окна.
+> .NET Framework 4.5 заменяет .NET Framework 4 (среда CLR 4) на компьютере пользователя. Поэтому приложения .NET Framework 4 без проблем выполняются в Windows 8 без отображения этого диалогового окна.
 
-В случае установки .NET Framework 3.5 пользователи могут запускать на своих компьютерах с [!INCLUDE[win8](../../../includes/win8-md.md)] приложения, которые зависят от платформ .NET Framework 2.0, 3.0 или 3.5. Они также могут запускать приложения платформы .NET Framework 1.0 и 1.1, если эти приложения не настроены явным образом для запуска только на платформе .NET Framework 1.0 или 1.1. См. раздел [Миграция с платформы .NET Framework 1.1](../migration-guide/migrating-from-the-net-framework-1-1.md).
+В случае установки .NET Framework 3.5 пользователи могут запускать на своих компьютерах Windows 8 приложения, которые зависят от .NET Framework 2.0, 3.0 или 3.5. Они также могут запускать приложения платформы .NET Framework 1.0 и 1.1, если эти приложения не настроены явным образом для запуска только на платформе .NET Framework 1.0 или 1.1. См. раздел [Миграция с платформы .NET Framework 1.1](../migration-guide/migrating-from-the-net-framework-1-1.md).
 
 Начиная с .NET Framework 4.5 ведение журналов активации среды CLR было улучшено для включения записей журнала, которые регистрируют, когда и почему было отображено сообщение об ошибке инициализации. Дополнительные сведения см. в разделе [Практическое руководство. Отладка проблем при активации среды CLR](how-to-debug-clr-activation-issues.md).
 

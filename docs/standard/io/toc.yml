@@ -64,5 +64,7 @@
           href: how-to-use-named-pipes-for-network-interprocess-communication.md
     - name: Конвейеры
       href: pipelines.md
+    - name: Работа с буферами
+      href: buffers.md
     - name: Сопоставленные в памяти файлы
       href: memory-mapped-files.md

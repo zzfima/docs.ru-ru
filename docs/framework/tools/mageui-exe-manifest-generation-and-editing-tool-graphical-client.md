@@ -5,16 +5,16 @@ helpviewer_keywords:
 - Manifest Generation and Editing tool
 - MageUI.exe
 ms.assetid: f9e130a6-8117-49c4-839c-c988f641dc14
-ms.openlocfilehash: 99f522181232d16b9913ba3c55f34274b75d8966
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 7d09e1283be8ec75df89957e91f0d8411c125b3b
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449416"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74714460"
 ---
 # <a name="mageuiexe-manifest-generation-and-editing-tool-graphical-client"></a>MageUI.exe (средство создания и редактирования манифестов, графический клиент)
 
-Средство MageUI.exe поддерживает те же функциональные возможности, что и средство командной строки Mage.exe, но имеет пользовательский интерфейс Windows. С его помощью можно создавать, редактировать и подписывать манифесты развертывания и приложения. Целевой платформой новых манифестов, созданных с помощью MageUI.exe, является [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)]. Для предыдущих версий .NET Framework следует использовать предыдущие версии MageUI.exe. При добавлении и удалении сборок из манифеста, а также повторной подписи существующих манифестов MageUI.exe не обновляет манифест, чтобы его целевой платформой стала [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)]. Дополнительные сведения см. в разделе [Mage.exe (средство создания и редактирования манифеста)](mage-exe-manifest-generation-and-editing-tool.md).
+Средство MageUI.exe поддерживает те же функциональные возможности, что и средство командной строки Mage.exe, но имеет пользовательский интерфейс Windows. С его помощью можно создавать, редактировать и подписывать манифесты развертывания и приложения. Целевой платформой новых манифестов, созданных с помощью MageUI.exe, является клиентский профиль NET Framework 4. Для предыдущих версий .NET Framework следует использовать предыдущие версии MageUI.exe. При добавлении и удалении сборок из манифеста, а также повторной подписи существующих манифестов MageUI.exe не обновляет манифест для использования клиентского профиля NET Framework 4. Дополнительные сведения см. в разделе [Mage.exe (средство создания и редактирования манифеста)](mage-exe-manifest-generation-and-editing-tool.md).
 
  Эта программа автоматически устанавливается вместе с Visual Studio. Чтобы применить этот инструмент, воспользуйтесь командной строкой разработчика для Visual Studio (или командной строкой Visual Studio в Windows 7). Дополнительные сведения см. в разделе [Командные строки](developer-command-prompt-for-vs.md).
 

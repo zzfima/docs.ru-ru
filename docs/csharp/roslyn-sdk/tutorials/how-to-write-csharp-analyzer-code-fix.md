@@ -3,12 +3,12 @@ title: Учебник. Создание средства для анализа �
 description: В этом руководстве описано, как создать анализатор и исправление кода с помощью пакета SDK для .NET Compiler Platform (API Roslyn).
 ms.date: 08/01/2018
 ms.custom: mvc
-ms.openlocfilehash: d6645a2a6e83f68c1959c255756393c9251dc1ba
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 7bd0fda9fb717a48c09aafde47f9b7f4f360c357
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105761"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837055"
 ---
 # <a name="tutorial-write-your-first-analyzer-and-code-fix"></a>Учебник. Создание средства для анализа и исправления кода
 
@@ -21,7 +21,7 @@ ms.locfileid: "70105761"
 - [Visual Studio 2017](https://visualstudio.microsoft.com/vs/older-downloads/#visual-studio-2017-and-other-products)
 - [Visual Studio 2019](https://www.visualstudio.com/downloads)
 
-Необходимо установить **пакет SDK для .NET Compiler Platform** через установщик Visual Studio:
+Необходимо установить **пакет SDK для .NET Compiler Platform** через Visual Studio Installer:
 
 [!INCLUDE[interactive-note](~/includes/roslyn-installation.md)]
 
@@ -427,7 +427,7 @@ foreach (var variable in localDeclaration.Declaration.Variables)
 
 [!code-csharp[Mismatched types don't raise diagnostics](~/samples/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#DeclarationIsInvalid "When the variable type and the constant type don't match, there's no diagnostic")]
 
-Кроме того, ссылочные типы обрабатываются неправильно. Единственное допустимое значение константы для ссылочного типа — `null`, кроме случаев с <xref:System.String?displayProperty=nameWIthType>, в которых работают строковые литералы. Другими словами, `const string s = "abc"` является допустимым, а `const object s = "abc"` — нет. Этот фрагмент кода проверяет это условие:
+Кроме того, ссылочные типы обрабатываются неправильно. Единственное допустимое значение константы для ссылочного типа — `null`, кроме случаев с <xref:System.String?displayProperty=nameWithType>, в которых работают строковые литералы. Другими словами, `const string s = "abc"` является допустимым, а `const object s = "abc"` — нет. Этот фрагмент кода проверяет это условие:
 
 [!code-csharp[Reference types don't raise diagnostics](~/samples/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#DeclarationIsntString "When the variable type is a reference type other than string, there's no diagnostic")]
 

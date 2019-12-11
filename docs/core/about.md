@@ -2,12 +2,12 @@
 title: Сведения о .NET Core
 description: Дополнительные сведения о .NET Core.
 ms.date: 09/17/2019
-ms.openlocfilehash: 4fe16475e18eb88e88fb33d30508f9ef5c9f2cd5
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: 22530e861f6a13a6930b2fb35c91b4f7a95a17c7
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552243"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74801949"
 ---
 # <a name="about-net-core"></a>Сведения о .NET Core
 
@@ -40,7 +40,7 @@ ms.locfileid: "74552243"
 - Коллекции, такие как <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> и <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType>.
 - Служебные типы, такие как <xref:System.Net.Http.HttpClient?displayProperty=nameWithType> и <xref:System.IO.FileStream?displayProperty=nameWithType>.
 - Типы данных, такие как <xref:System.Data.DataSet?displayProperty=nameWithType> и [DbSet](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore/).
-- Высокопроизводительные типы, такие как <xref:System.Numerics.Vector?displayProperty=nameWithType> и[ Pipelines](https://devblogs.microsoft.com/dotnet/system-io-pipelines-high-performance-io-in-net/).
+- Высокопроизводительные типы, такие как <xref:System.Numerics.Vector?displayProperty=nameWithType> и[ Pipelines](../standard/io/pipelines.md).
 
 Благодаря поддержке спецификации [.NET Standard](../standard/net-standard.md) платформа .NET Core совместима с .NET Framework и API-интерфейсами Mono.
 
@@ -56,7 +56,7 @@ ms.locfileid: "74552243"
 
 .NET Core состоит из перечисленных ниже компонентов.
 
-- [Среда выполнения .NET Core](https://github.com/dotnet/coreclr) предоставляет систему типов, функции загрузки сборок, сборщик мусора, собственные функции взаимодействия и другие базовые службы. [Библиотеки платформы .NET Core](https://github.com/dotnet/corefx) предоставляют примитивные типы данных, типы компоновки приложений и базовые служебные программы.
+- [Среда выполнения .NET Core](https://github.com/dotnet/runtime/tree/master/src/coreclr) предоставляет систему типов, функции загрузки сборок, сборщик мусора, собственные функции взаимодействия и другие базовые службы. [Библиотеки платформы .NET Core](https://github.com/dotnet/runtime/tree/master/src/libraries) предоставляют примитивные типы данных, типы компоновки приложений и базовые служебные программы.
 - [Среда выполнения ASP.NET](https://github.com/aspnet/home) предоставляет платформу для создания современных облачных приложений, подключенных к Интернету: веб-приложений, приложений Интернета вещей, серверной части мобильных решений и многого другого.
 - [Средства .NET Core CLI](https://github.com/dotnet/cli) и компиляторы языков ([Roslyn](https://github.com/dotnet/roslyn) и [F#](https://github.com/microsoft/visualfsharp)) реализуют возможности разработки .NET Core.
 - [Средство dotnet](https://github.com/dotnet/core-setup) используется для запуска приложений .NET Core и инструментов командной строки. Оно выбирает среду выполнения, размещает ее, предоставляет политику загрузки сборок и запускает приложения и инструменты.
@@ -79,17 +79,17 @@ ms.locfileid: "74552243"
 
 Люди часто спрашивают, как реализована поддержка нескольких операционных систем в .NET Core. Часто задают вопрос, имеются ли отдельные реализации или используется [условная компиляция](https://en.wikipedia.org/wiki/Conditional_compilation). Используются оба подхода, но с явным уклоном в сторону условной компиляции.
 
-На приведенной ниже диаграмме видно, что [CoreFX](https://github.com/dotnet/corefx) в основном представляет собой независимый от платформы код, который используется на всех платформах. Независимый от платформы код можно реализовать в виде одной переносимой сборки для всех платформ.
+На приведенной ниже диаграмме видно, что [библиотеки .NET Core](https://github.com/dotnet/runtime/tree/master/src/libraries) в основном представляют собой неспециализированный код, который используется на всех платформах. Независимый от платформы код можно реализовать в виде одной переносимой сборки для всех платформ.
 
 ![CoreFX: строки кода для каждой платформы](../images/corefx-platforms-loc.png)
 
-Реализации для Windows и Unix имеют сходный размер. Размер реализации для Windows больше, так как CoreFX реализует некоторые возможности, относящиеся только к Windows, такие как [Microsoft.Win32.Registry](https://github.com/dotnet/corefx/tree/master/src/Microsoft.Win32.Registry), но пока не реализует многие функции, характерные только для Unix. Также видно, что реализации для Linux и Mac OS используются в реализации для Unix, в то время как сами они имеют примерно одинаковый размер.
+Реализации для Windows и Unix имеют сходный размер. Размер реализации для Windows больше, так как библиотеки .NET Core реализуют некоторые возможности, относящиеся только к Windows, такие как [Microsoft.Win32.Registry](https://github.com/dotnet/runtime/tree/master/src/libraries/Microsoft.Win32.Registry), но пока не реализует многие функции, характерные только для UNIX. Также видно, что реализации для Linux и Mac OS используются в реализации для Unix, в то время как сами они имеют примерно одинаковый размер.
 
 Платформа .NET Core состоит из сочетания зависимых и независимых от платформы библиотек. Это можно проследить на ряде примеров.
 
-- Библиотека [CoreCLR](https://github.com/dotnet/coreclr) зависит от платформы. Она построена на основе подсистем ОС, таких как диспетчер памяти и планировщик потоков.
-- Библиотеки [System.IO](https://github.com/dotnet/corefx/tree/master/src/System.IO) и [System.Security.Cryptography.Algorithms](https://github.com/dotnet/corefx/tree/master/src/System.Security.Cryptography.Algorithms) зависят от платформ, так как API-интерфейсы хранения и шифрования данных различаются в каждой ОС.
-- Библиотеки [System.Collections](https://github.com/dotnet/corefx/tree/master/src/System.Collections) и [System.Linq](https://github.com/dotnet/corefx/tree/master/src/System.Linq) не зависят от платформы, так как они создают структуры данных и работают с ними.
+- Библиотека [CoreCLR](https://github.com/dotnet/runtime/tree/master/src/coreclr) зависит от платформы. Она построена на основе подсистем ОС, таких как диспетчер памяти и планировщик потоков.
+- Библиотеки [System.IO](https://github.com/dotnet/runtime/tree/master/src/libraries/System.IO) и [System.Security.Cryptography.Algorithms](https://github.com/dotnet/runtime/tree/master/src/libraries/System.Security.Cryptography.Algorithms) зависят от платформ, так как API-интерфейсы хранения и шифрования данных различаются в каждой ОС.
+- Библиотеки [System.Collections](https://github.com/dotnet/runtime/tree/master/src/libraries/System.Collections) и [System.Linq](https://github.com/dotnet/runtime/tree/master/src/libraries/System.Linq) не зависят от платформы, так как они создают структуры данных и работают с ними.
 
 ## <a name="comparisons-to-other-net-implementations"></a>Сравнение с другими реализациями .NET
 
