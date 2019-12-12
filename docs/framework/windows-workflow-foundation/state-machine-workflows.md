@@ -21,7 +21,7 @@ ms.locfileid: "74710912"
   
 - <xref:System.Activities.Statements.Transition>  
   
- В ходе создания рабочего процесса конечного автомата состояния добавляются к действию <xref:System.Activities.Statements.StateMachine>, а переходы используются для управления переключением между состояниями. На следующем снимке экрана [Начало работы](getting-started-tutorial.md) пошаговое руководство [. Создание рабочего процесса конечного автомата.](how-to-create-a-state-machine-workflow.md)в этом примере показан рабочий процесс конечного автомата с тремя состояниями и тремя переходами. **Целевой объект инициализации** является начальным состоянием и представляет первое состояние в рабочем процессе. Это означает строка, которая начинается с **начального** узла. Конечное состояние в рабочем процессе называется **FinalState**и представляет точку, в которой завершается рабочий процесс.  
+ В ходе создания рабочего процесса конечного автомата состояния добавляются к действию <xref:System.Activities.Statements.StateMachine>, а переходы используются для управления переключением между состояниями. На следующем снимке экрана [Начало работы шага учебника](getting-started-tutorial.md) [: Создание рабочего процесса конечного автомата](how-to-create-a-state-machine-workflow.md), показывает рабочий процесс конечного автомата с тремя состояниями и тремя переходами. **Целевой объект инициализации** является начальным состоянием и представляет первое состояние в рабочем процессе. Это означает строка, которая начинается с **начального** узла. Конечное состояние в рабочем процессе называется **FinalState**и представляет точку, в которой завершается рабочий процесс.  
   
  ![Иллюстрация, показывающая Завершенный рабочий процесс конечного автомата.](./media/state-machine-workflows/complete-state-machine-workflow.jpg)  
   
@@ -59,12 +59,12 @@ ms.locfileid: "74710912"
 > [!NOTE]
 > Обратите внимание, что если состояние <xref:System.Activities.Statements.Transition.Condition%2A> перехода оценивается как `False` (или все условия общего перехода триггера оцениваются как `False`), переход не выполняется, а все триггеры для всех переходов из состояния будут запланированы заново.  
   
- Дополнительные сведения о создании рабочих процессов конечного автомата см. в разделе [как создать рабочий процесс конечного автомата](how-to-create-a-state-machine-workflow.md), [конструктор действий StateMachine](/visualstudio/workflow-designer/statemachine-activity-designer), конструктор действий [состояния](/visualstudio/workflow-designer/state-activity-designer), конструктор действий [FinalState](/visualstudio/workflow-designer/finalstate-activity-designer)и [конструктор действий перехода](/visualstudio/workflow-designer/transition-activity-designer).  
+ Дополнительные сведения о создании рабочих процессов конечного автомата см. в разделе [. Создайте рабочий процесс конечного автомата](how-to-create-a-state-machine-workflow.md), [конструктор действий StateMachine](/visualstudio/workflow-designer/statemachine-activity-designer), [конструктор действий состояния](/visualstudio/workflow-designer/state-activity-designer), [конструктор действий FinalState](/visualstudio/workflow-designer/finalstate-activity-designer)и [конструктор действий перехода](/visualstudio/workflow-designer/transition-activity-designer).  
   
 ## <a name="state-machine-terminology"></a>Терминология конечного автомата  
  В этом разделе описывается словарь конечного автомата, используемый на протяжении данного раздела.  
   
- Область  
+ State  
  Блок, который составляет основу конечного автомата. Конечный автомат может находиться в одном определенном состоянии в любой момент времени.  
   
  Действие входа  
@@ -100,7 +100,7 @@ ms.locfileid: "74710912"
  Конечное состояние  
  Состояние, представляющее завершение конечного автомата.  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 - [Практическое руководство. Создание рабочего процесса конечного автомата](how-to-create-a-state-machine-workflow.md)
 - [Конструктор действия StateMachine](/visualstudio/workflow-designer/statemachine-activity-designer)
