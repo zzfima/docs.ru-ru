@@ -6,12 +6,12 @@ helpviewer_keywords:
 - .NET Framework, troubleshooting blocked installations
 - blocked .NET Framework installations, troubleshooting
 ms.assetid: c3fdfbc1-ed99-4202-a2b0-8c4f1646385d
-ms.openlocfilehash: d0f3d857a90aca763121595151a2193125b47c6c
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: df7eaf971f3a54057758dc7d974ae00cd4797ad7
+ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975632"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74960028"
 ---
 # <a name="troubleshoot-blocked-net-framework-installations-and-uninstallations"></a>Устранение неполадок заблокированных установок и удалений .NET Framework
 
@@ -48,7 +48,7 @@ ms.locfileid: "73975632"
 |.NET Framework 4.5.x/4.6.x/4.7.x/4.8. уже существует в этой операционной системе. Устанавливать распространяемый пакет .NET Framework 4.5.x/4.6.x/4.7.x/4.8. не нужно.|Никаких действий не требуется.<br /><br /> Чтобы определить, какие версии платформы .NET Framework установлены в системе, см. статью [Практическое руководство. Определение установленных версий платформы .NET Framework](../migration-guide/how-to-determine-which-versions-are-installed.md). Список поддерживаемых операционных систем см. в разделе [Требования к системе](../get-started/system-requirements.md).|  
 |.NET Framework 4.5.x/4.6.x/4.7.x/4.8. не поддерживается в этой операционной системе.|Список поддерживаемых операционных систем см. в разделе [Требования к системе](../get-started/system-requirements.md).<br /><br /> Для неудачных установок платформы .NET Framework в Windows 7 это сообщение обычно указывает на то, что не установлен пакет обновления 1 (SP1) для Windows 7. В системах Windows 7 платформе .NET Framework требуется пакет обновления 1 (SP1) для Windows 7. Если вы используете Windows 7 и еще не установили пакет обновления 1 (SP1), это необходимо сделать перед установкой платформы .NET Framework. Сведения об установке Windows 7 с пакетом обновления 1 (SP1) см. в разделе [Сведения об установке Windows 7 с пакетом обновления 1 (SP1)](https://windows.microsoft.com/windows7/install-windows-7-service-pack-1).|  
 |На компьютере установлена версия Server Core операционной системы Windows Server 2008. Для работы .NET Framework 4.5.x требуется полный выпуск операционной системы или Server Core 2008 R2 с пакетом обновления 1 (SP1). Установите полную версию Windows Server 2008 с пакетом обновления 2 (SP2), Windows Server 2008 R2 с пакетом обновления 1 (SP1) или Server Core 2008 R2 с пакетом обновления 1 (SP1) и перезапустите программу установки .NET Framework 4.5.x.|.NET Framework поддерживается в роли Server Core с Windows Server 2008 R2 с пакетом обновления 1 (SP1) или более поздней версии. См. раздел [Требования к системе](../get-started/system-requirements.md).|  
-|.NET Framework 4.5.x уже входит в состав операционной системы, но в настоящее время этот компонент отключен (только для [!INCLUDE[winserver8](../../../includes/winserver8-md.md)]).| Чтобы включить платформу .NET Framework 4.5.x, используйте раздел **Включение или отключение компонентов Windows** на **панели управления**. |  
+|.NET Framework 4.5.x уже входит в состав операционной системы, но пока этот компонент отключен (только для Windows Server 2012).| Чтобы включить платформу .NET Framework 4.5.x, используйте раздел **Включение или отключение компонентов Windows** на **панели управления**. |  
 |Для этой программы установки требуется компьютер с процессором x86. Ее нельзя запускать на компьютерах с процессорами x64 или IA64.|См. раздел [Требования к системе](../get-started/system-requirements.md).|  
 |Для этой программы установки требуется компьютер с процессором x64 или x86. Ее невозможно установить на компьютер с процессором IA64.|См. раздел [Требования к системе](../get-started/system-requirements.md).|  
 

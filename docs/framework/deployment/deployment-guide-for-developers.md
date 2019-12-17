@@ -6,12 +6,12 @@ helpviewer_keywords:
 - developer's guide, deploying .NET Framework
 - deployment [.NET Framework], developer's guide
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
-ms.openlocfilehash: 62777356dae6e2dce9753b832f08ab2fa2cb5881
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 1b7fccc673f82986a53dcb3dfcb68e8575b99dfd
+ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74801886"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74959999"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>Руководство по развертыванию .NET Framework для разработчиков
 В этом разделе приводятся сведения для разработчиков, которые планируют устанавливать вместе с приложениями любую версию платформы с .NET Framework 4.5 по [!INCLUDE[net_current](../../../includes/net-current-version.md)].
@@ -51,7 +51,7 @@ ms.locfileid: "74801886"
 
 - Для установки .NET Framework 4.5 и ее доработанных выпусков требуются права администратора.
 
-- .NET Framework 4.5 входит в состав в Windows 8 и [!INCLUDE[winserver8](../../../includes/winserver8-md.md)], поэтому эту платформу не нужно развертывать вместе с приложением в этих операционных системах. Аналогично, .NET Framework 4.5.1 входит в состав в Windows 8.1 и Windows Server 2012 R2. Платформа .NET Framework 4.5.2 не входит в состав операционных систем. .NET Framework 4.6 входит в состав Windows 10, .NET Framework 4.6.1 — в состав ноябрьского обновления Windows 10, а .NET Framework 4.6.2 — в состав юбилейного обновления Windows 10.  .NET Framework 4.7 входит в состав обновления Windows 10 Creators Update, .NET Framework 4.7.1 — в состав Windows 10 Fall Creators Update, а .NET Framework 4.7.2 — в обновления Windows 10 за октябрь и за апрель 2018 г. Платформа .NET Framework 4.8 входит в состав обновления Windows 10 за май 2019 г. Полный список требований к оборудованию и программному обеспечению см. в разделе [Требования к системе для .NET Framework](../get-started/system-requirements.md).
+- .NET Framework 4.5 входит в состав в Windows 8 и Windows Server 2012, поэтому этот компонент не нужно развертывать вместе с приложением в этих операционных системах. Аналогично, .NET Framework 4.5.1 входит в состав в Windows 8.1 и Windows Server 2012 R2. Платформа .NET Framework 4.5.2 не входит в состав операционных систем. .NET Framework 4.6 входит в состав Windows 10, .NET Framework 4.6.1 — в состав ноябрьского обновления Windows 10, а .NET Framework 4.6.2 — в состав юбилейного обновления Windows 10.  .NET Framework 4.7 входит в состав обновления Windows 10 Creators Update, .NET Framework 4.7.1 — в состав Windows 10 Fall Creators Update, а .NET Framework 4.7.2 — в обновления Windows 10 за октябрь и за апрель 2018 г. Платформа .NET Framework 4.8 входит в состав обновления Windows 10 за май 2019 г. Полный список требований к оборудованию и программному обеспечению см. в разделе [Требования к системе для .NET Framework](../get-started/system-requirements.md).
 
 - Начиная с .NET Framework 4.5, пользователи могут просматривать список запущенных приложений .NET Framework во время установки и легко закрывать их. Это помогает избежать перезапуска системы, вызываемого установкой .NET Framework. См. раздел [Уменьшение перезапусков системы](reducing-system-restarts.md).
 

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - managed execution process
 - common language runtime, managed execution process
 ms.assetid: 476b03dc-2b12-49a7-b067-41caeaa2f533
-ms.openlocfilehash: 5ead3d1ac37b3c7ee50f18a81530720205678de2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 0ce7182af33a795188d01ac457b9d45b8ad305dd
+ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122004"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74960384"
 ---
 # <a name="managed-execution-process"></a>Процесс выполнения управляемого кода
 <a name="introduction"></a> Процесс управляемого исполнения включает следующие шаги, которые подробно разбираются позднее в этом разделе:  
@@ -95,7 +95,7 @@ ms.locfileid: "73122004"
   
  Во время выполнения для управляемого кода доступны такие службы, как сборка мусора, обеспечение безопасности, взаимодействие с неуправляемым кодом, поддержка отладки на нескольких языках, а также поддержка расширенного развертывания и управления версиями.  
   
- В Microsoft [!INCLUDE[winxp](../../includes/winxp-md.md)] и [!INCLUDE[windowsver](../../includes/windowsver-md.md)]загрузчик операционной системы выполняет поиск управляемых модулей путем анализа бита в заголовке COFF. Установленный бит обозначает управляемый модуль. При обнаружении управляемых модулей загружается библиотека Mscoree.dll, а подпрограммы `_CorValidateImage` и `_CorImageUnloading` уведомляют загрузчик о загрузке и выгрузке образов управляемых модулей. Подпрограмма`_CorValidateImage` выполняет следующие действия:  
+ В Microsoft Windows Vista загрузчик операционной системы выполняет поиск управляемых модулей, анализируя бит в заголовке COFF. Установленный бит обозначает управляемый модуль. При обнаружении управляемых модулей загружается библиотека Mscoree.dll, а подпрограммы `_CorValidateImage` и `_CorImageUnloading` уведомляют загрузчик о загрузке и выгрузке образов управляемых модулей. Подпрограмма`_CorValidateImage` выполняет следующие действия:  
   
 1. Проверяет, является ли код допустимым управляемым кодом.  
   
