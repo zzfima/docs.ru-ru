@@ -116,7 +116,7 @@ public class EventBusRabbitMQ : IEventBus, IDisposable
 
 Готовые к работе решения с поддержкой RabbitMQ.
 
-- **EasyNetQ** — клиент API .NET для RabbitMQ с открытым кодом.
+- **EasyNetQ** — клиент API .NET для RabbitMQ с открытым кодом \
   <http://easynetq.com/>
 
 - **MassTransit** \
