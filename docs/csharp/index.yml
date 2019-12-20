@@ -1,0 +1,111 @@
+### YamlMime:Landing
+title: Документация по C#
+summary: Узнайте, как написать любое приложение на языке программирования C# на платформе .NET.
+metadata:
+  title: Документация по C#. Начало работы, руководства, справочные материалы.
+  description: Программирование на C#. Документация для начинающих разработчиков, для тех, кто только начинает работать на C#, а также для опытных разработчиков C# и .NET
+  ms.topic: landing-page
+  ms.date: 11/19/2019
+  ms.openlocfilehash: fa778c4610dbfe8320d488098b5bfd39de8e4705
+  ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+  ms.translationtype: HT
+  ms.contentlocale: ru-RU
+  ms.lasthandoff: 12/05/2019
+  ms.locfileid: "75303420"
+landingContent:
+- title: Обучение программированию на C#
+  linkLists:
+  - linkListType: get-started
+    links:
+    - text: Интерактивная программа Hello World
+      url: tutorials/intro-to-csharp/hello-world.yml
+    - text: Математические значения и числа в C#
+      url: tutorials/intro-to-csharp/numbers-in-csharp.yml
+    - text: Вводные руководства
+      url: tutorials/intro-to-csharp/index.md
+    - text: Создание приложений на C# с помощью Visual Studio
+      url: https://docs.microsoft.com/visualstudio/get-started/csharp/tutorial-console
+  - linkListType: video
+    links:
+    - text: Что такое C#?
+      url: https://channel9.msdn.com/Series/CSharp-101/What-is-C/player
+    - text: Видеоматериалы по C# 101
+      url: https://aka.ms/dotnet3-csharp
+  - linkListType: download
+    links:
+    - text: Скачивание пакета SDK для .NET Core
+      url: https://dotnet.microsoft.com/download
+- title: Основы C#
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Обзор C#
+      url: tour-of-csharp/index.md
+    - text: Структура программы C#
+      url: programming-guide/inside-a-program/index.md
+    - text: Main() и аргументы командной строки
+      url: programming-guide/main-and-command-args/index.md
+  - linkListType: concept
+    links:
+    - text: Система типов C# и .NET
+      url: programming-guide/types/index.md
+    - text: Синтаксис LINQ
+      url: linq/index.md
+    - text: async и await
+      url: programming-guide/concepts/async/index.md
+  - linkListType: tutorial
+    links:
+    - text: Объектно-ориентированное наследование
+      url: tutorials/inheritance.md
+    - text: Использование LINQ для обращения к данным
+      url: tutorials/working-with-linq.md
+    - text: Форматирование текста с помощью интерполяции строк
+      url: tutorials/string-interpolation.md
+    - text: Просмотреть все руководства
+      url: tutorials/index.md
+- title: Новые возможности в C# 8.0
+  linkLists:
+  - linkListType: whats-new
+    links:
+    - text: Новые возможности C# 8.0
+      url: whats-new/csharp-8.md
+  - linkListType: overview
+    links:
+    - text: Регулярные выражения
+      url: pattern-matching.md
+    - text: Ссылочные типы, допускающие значение null
+      url: nullable-references.md
+  - linkListType: concept
+    links:
+    - text: Добавление заметок API в связи с допустимостью значений NULL
+      url: nullable-attributes.md
+  - linkListType: tutorial
+    links:
+    - text: Использование и создание асинхронных потоков
+      url: tutorials/generate-consume-asynchronous-stream.md
+    - text: Разработка с использованием ссылочных типов, допускающих значение NULL
+      url: tutorials/nullable-reference-types.md
+    - text: Перенос существующего кода для использования ссылочных типов, допускающих значение null
+      url: tutorials/upgrade-to-nullable-references.md
+    - text: Использование сопоставления шаблонов для более выразительных алгоритмов
+      url: tutorials/pattern-matching.md
+    - text: Безопасное управление версиями интерфейсов с использованием элементов интерфейса по умолчанию
+      url: tutorials/default-interface-methods-versions.md
+    - text: Комбинирование функциональных возможностей с использованием членов интерфейса по умолчанию
+      url: tutorials/mixins-with-default-interface-methods.md
+    - text: Работа с подмножествами с использованием диапазонов и индексов
+      url: tutorials/ranges-indexes.md
+- title: Справочник по языку C#
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: Справочник по языку
+      url: language-reference/index.md
+    - text: Ключевые слова в C#
+      url: language-reference/keywords/index.md
+    - text: Операторы в C#
+      url: language-reference/operators/index.md
+    - text: Настройка версии языка
+      url: language-reference/configure-language-version.md
+    - text: Спецификация языка C#
+      url: ../../_csharplang/spec/introduction.md

@@ -1,0 +1,69 @@
+### YamlMime:Landing
+title: Документация по Visual Basic
+summary: Visual Basic используется для эффективного создания типобезопасных и объектно-ориентированных приложений. Visual Basic — это быстрый и простой способ создания приложений .NET.
+metadata:
+  title: Документация по Visual Basic. Начало работы, руководства, справочные материалы.
+  description: Программирование с помощью Visual Basic в .NET. Документация для начинающих и опытных разработчиков Visual Basic
+  ms.topic: landing-page
+  ms.date: 11/27/2019
+  ms.openlocfilehash: 9019ed13a6e9a02710ec063a6538a406f4940e21
+  ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+  ms.translationtype: HT
+  ms.contentlocale: ru-RU
+  ms.lasthandoff: 12/05/2019
+  ms.locfileid: "75303432"
+landingContent:
+- title: Начало работы
+  linkLists:
+  - linkListType: get-started
+    links:
+    - text: Создание приложения Hello World на C# с помощью .NET Core
+      url: ../core/tutorials/vb-with-visual-studio.md
+    - text: Создание библиотеки классов с помощью .NET Standard
+      url: ../core/tutorials/vb-library-with-visual-studio.md
+    - text: Дополнительные ресурсы
+      url: getting-started/additional-resources.md
+    - text: Пошаговые руководства
+      url: walkthroughs.md
+- title: Основы Visual Basic
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Основные понятия программирования
+      url: programming-guide/concepts/index.md
+  - linkListType: concept
+    links:
+    - text: Соглашения о структуре программы и коде
+      url: programming-guide/program-structure/program-structure-and-code-conventions.md
+    - text: Разработка приложений с помощью Visual Basic
+      url: developing-apps/index.md
+    - text: Соглашения о структуре программы и коде
+      url: programming-guide/program-structure/program-structure-and-code-conventions.md
+    - text: Возможности языка
+      url: programming-guide/language-features/index.md
+    - text: взаимодействие COM
+      url: programming-guide/com-interop/index.md
+- title: Популярные сценарии
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Пользовательские делегаты и события Windows Forms
+      url: https://social.technet.microsoft.com/wiki/contents/articles/53470.vb-net-windows-forms-custom-delegates-and-events.aspx
+    - text: Изменение значений таблицы базы данных с помощью DataGrid WPF
+      url: https://social.msdn.microsoft.com/Forums/vstudio/10a3dd61-7dcc-48f3-a6e0-f7386d06f9f1/edit-database-table-values-via-wpf-datagrid-visual-basic?forum=wpf
+    - text: 'ListView Windows Forms: Анализ подробного представления с помощью SQL Server'
+      url: https://social.technet.microsoft.com/wiki/contents/articles/53356.windows-forms-listview-examining-detail-view-with-sql-server.aspx
+    - text: Как открыть книгу Excel 2016 с помощью OleDbConnection
+      url: https://social.msdn.microsoft.com/Forums/vstudio/70a45808-9aaf-4320-a5fc-04cbbabf6e4d/how-to-open-excel-2016-workbook-through-oledbconnection?forum=vbgeneral
+- title: Справочник по языку Visual Basic
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: Справочник по языку
+      url: language-reference/index.md
+    - text: Ключевые слова
+      url: language-reference/keywords/index.md
+    - text: Операторы
+      url: language-reference/operators/index.md
+    - text: Спецификация языка
+      url: reference/language-specification/index.md
