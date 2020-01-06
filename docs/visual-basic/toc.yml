@@ -5,8 +5,6 @@
 - name: Приступая к работе
   href: getting-started/index.md
   items:
-    - name: Критические изменения Visual Basic в Visual Studio
-      href: getting-started/breaking-changes-in-visual-studio.md
     - name: 'Дополнительные ресурсы для программистов, использующих Visual Basic'
       href: getting-started/additional-resources.md
 - name: Разработка приложений
@@ -401,7 +399,7 @@
           href: language-reference/modifiers/notinheritable.md
         - name: NotOverridable
           href: language-reference/modifiers/notoverridable.md
-        - name: Optional
+        - name: Необязательный
           href: language-reference/modifiers/optional.md
         - name: out (универсальный модификатор)
           href: language-reference/modifiers/out-generic-modifier.md
@@ -1285,7 +1283,7 @@
           href: language-reference/error-messages/xml-literals-and-xml-properties-are-not-supported-in-embedded-code-in-aspnet.md
         - name: URI-код пространства имен XML <uri> может быть связан только с префиксом xmlns
           href: language-reference/error-messages/xml-namespace-uri-uri-can-be-bound-only-to-xmlns.md
-- name: Ссылка
+- name: Справочник
   href: reference/index.md
   items:
     - name: Компилятор с интерфейсом командной строки

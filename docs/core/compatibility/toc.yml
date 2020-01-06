@@ -5,6 +5,7 @@
 - name: Селекторы страниц
   href: breaking-changes.md
 - name: По версии
+  expanded: true
   items:
     - name: "С версии\_3.0 на\_3.1"
       href: 3.0-3.1.md
@@ -12,7 +13,10 @@
       href: 2.2-3.1.md
     - name: "С версии\_2.2 на\_3.0"
       href: 2.2-3.0.md
+    - name: "С версии\_2.0 на\_2.1"
+      href: 2.0-2.1.md
 - name: По областям
+  expanded: true
   items:
     - name: ASP.NET Core
       href: aspnetcore.md
