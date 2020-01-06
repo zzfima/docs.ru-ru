@@ -2,12 +2,12 @@
 title: Самостоятельные приложения gRPC — gRPC для разработчиков WCF
 description: Развертывание ASP.NET Core gRPC приложений как самостоятельных служб.
 ms.date: 09/02/2019
-ms.openlocfilehash: 59f6275dbf85442bca3a98a1521597ef40e9675b
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 00b4ad50eae629b5b36a890d1eecf7119386c74c
+ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73967211"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75545063"
 ---
 # <a name="self-hosted-grpc-applications"></a>Приложения gRPC с самостоятельным размещением
 
@@ -34,7 +34,7 @@ public static IHostBuilder CreateHostBuilder(string[] args) =>
 
 Теперь опубликуйте приложение из Visual Studio, щелкнув проект правой кнопкой мыши и выбрав пункт *опубликовать* в контекстном меню или .NET Core CLI.
 
-При публикации приложения .NET Core можно создать *зависимое от платформы* развертывание или *автономное* развертывание. Для развертываний, зависящих от платформы, требуется, чтобы общая среда выполнения .NET Core была установлена на узле, где они выполняются. Автономные развертывания публикуются с полной копией среды выполнения и платформы .NET Core и могут выполняться на любом узле. Дополнительные сведения, включая преимущества и недостатки каждого подхода, см. в документации по [развертыванию приложений .NET Core](https://docs.microsoft.com/dotnet/core/deploying/) .
+При публикации приложения .NET Core можно создать *зависимое от платформы* развертывание или *автономное* развертывание. Для развертываний, зависящих от платформы, требуется, чтобы общая среда выполнения .NET Core была установлена на узле, где они выполняются. Автономные развертывания публикуются с полной копией среды выполнения и платформы .NET Core и могут выполняться на любом узле. Дополнительные сведения, включая преимущества и недостатки каждого подхода, см. в документации по [развертыванию приложений .NET Core](../../core/deploying/index.md) .
 
 Чтобы опубликовать автономную сборку приложения, которая не требует установки среды выполнения .NET Core 3,0 на узле, укажите среду выполнения, которая будет включена в приложение, используя флаг `-r` (или `--runtime`).
 
@@ -150,7 +150,7 @@ sudo journalctl -u myapp
 
 При запуске приложения gRPC в рабочей среде следует использовать сертификат TLS из доверенного центра сертификации (ЦС). Этот ЦС может быть общедоступным или внутренним центром для вашей организации.
 
-На узлах Windows сертификат может быть загружен из защищенного [хранилища сертификатов](https://docs.microsoft.com/windows/win32/seccrypto/managing-certificates-with-certificate-stores) с помощью [класса X509Store](https://docs.microsoft.com/dotnet/api/system.security.cryptography.x509certificates.x509store?view=netcore-3.0). Класс `X509Store` также можно использовать с хранилищем ключей OpenSSL на некоторых узлах Linux.
+На узлах Windows сертификат может быть загружен из защищенного [хранилища сертификатов](/windows/win32/seccrypto/managing-certificates-with-certificate-stores) с помощью класса <xref:System.Security.Cryptography.X509Certificates.X509Store>. Класс `X509Store` также можно использовать с хранилищем ключей OpenSSL на некоторых узлах Linux.
 
 Сертификаты также могут быть созданы с помощью одного из [конструкторов X509Certificate2](https://docs.microsoft.com/dotnet/api/system.security.cryptography.x509certificates.x509certificate.-ctor?view=netcore-3.0)либо из файла (например, `.pfx` файла, защищенного надежным паролем), либо из двоичных данных, полученных из службы безопасного хранения, например [Azure Key Vault](https://azure.microsoft.com/services/key-vault/).
 

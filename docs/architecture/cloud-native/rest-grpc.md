@@ -3,12 +3,12 @@ title: REST и gRPC
 description: Узнайте о gRPC, ее роли в собственных приложениях в облаке и о том, как она отличается от протокола HTTP RESTFUL.
 author: robvet
 ms.date: 09/08/2019
-ms.openlocfilehash: 80960a9042b1514fb78e7a8c993a1854067407e8
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: c77343e7a594d34cbd2c00ce11281bd6bf4000c1
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73842053"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337075"
 ---
 # <a name="rest-and-grpc"></a>REST и gRPC
 
@@ -26,7 +26,7 @@ gRPC — это современная платформа RPC, которая я
 - Хотя HTTP 1,1 ограничена обработкой одного запроса или ответа приема-передачи за раз, HTTP/2 поддерживает мультиплексирование или несколько параллельных запросов по одному соединению.
 - HTTP/2 поддерживает дуплексную или двунаправленную связь, где как клиент, так и сервер могут обмениваться данными в одно и то же время. Клиент может отправлять данные запроса одновременно с отправкой данных ответа сервером.
 - Потоковая передача встроена в HTTP/2, что означает, что запросы и ответы могут асинхронно потокировать большие наборы данных.
-- Сочетание gRPC и HTTP/2 значительно повышает производительность. В [Windows Communication Foundation (WCF)](https://docs.microsoft.com/dotnet/framework/wcf/whats-wcf) терминах производительность gRPC соответствует и превышает скорость и эффективность [привязок NetTcp](https://docs.microsoft.com/dotnet/api/system.servicemodel.nettcpbinding?view=netframework-4.8). Однако, в отличие от NetTCP, gRPC не ограничивается такими языками Майкрософт, C# как или VB.NET.
+- Сочетание gRPC и HTTP/2 значительно повышает производительность. В [Windows Communication Foundation (WCF)](https://docs.microsoft.com/dotnet/framework/wcf/whats-wcf) терминах производительность gRPC соответствует и превышает скорость и эффективность [привязок NetTcp](https://docs.microsoft.com/dotnet/api/system.servicemodel.nettcpbinding?view=netframework-4.8). Однако, в отличие от NetTCP, gRPC не ограничивается такими языками Майкрософт, C# как или Visual Basic.
 
 gRPC поддерживается на самых популярных платформах, включая Java, C#, Golang и NodeJS.
 
