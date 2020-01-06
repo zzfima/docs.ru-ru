@@ -57,7 +57,7 @@
     - name: Справочник по неуправляемым API
       href: unmanaged-api/
     - name: Службы XAML
-      href: xaml-services/
+      href: ../desktop-wpf/xaml-services/
 - name: Инструменты
   href: tools/
 - name: Дополнительные библиотеки классов и API-интерфейсы
