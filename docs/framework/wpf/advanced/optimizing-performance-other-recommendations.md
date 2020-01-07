@@ -11,12 +11,12 @@ helpviewer_keywords:
 - ScrollBarVisibility enumeration [WPF]
 - brushes [WPF], performance
 ms.assetid: d028cc65-7e97-4a4f-9859-929734eaf40d
-ms.openlocfilehash: 6b4a5379145ebdffde0d5b76d8c7b9ab57261007
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: b6d99d90a3da232e1873ebe8433e01ceb2977de6
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975792"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636436"
 ---
 # <a name="optimizing-performance-other-recommendations"></a>Оптимизация производительности. Дополнительные рекомендации
 <a name="introduction"></a> В этом разделе содержатся рекомендации по улучшению производительности в дополнение к описанным в разделах статьи [Улучшение производительности приложений WPF](optimizing-wpf-application-performance.md).  
@@ -64,15 +64,15 @@ ms.locfileid: "73975792"
   
 <a name="Avoid_Using_ScrollBarVisibility"></a>   
 ## <a name="avoid-using-scrollbarvisibilityauto"></a>Избегайте использования ScrollBarVisibility=Auto  
- По возможности избегайте использования значения <xref:System.Windows.Controls.ScrollBarVisibility.Auto?displayProperty=nameWithType> для свойств `HorizontalScrollBarVisibility` и `VerticalScrollBarVisibility`. Эти свойства определяются для <xref:System.Windows.Controls.RichTextBox>, <xref:System.Windows.Controls.ScrollViewer> и <xref:System.Windows.Controls.TextBox> объектов, а также как вложенное свойство для объекта <xref:System.Windows.Controls.ListBox>. Вместо этого задайте для <xref:System.Windows.Controls.ScrollBarVisibility> значение <xref:System.Windows.Controls.ScrollBarVisibility.Disabled>, <xref:System.Windows.Controls.ScrollBarVisibility.Hidden> или <xref:System.Windows.Controls.ScrollBarVisibility.Visible>.  
+ По возможности избегайте использования значения <xref:System.Windows.Controls.ScrollBarVisibility.Auto?displayProperty=nameWithType> для свойств `HorizontalScrollBarVisibility` и `VerticalScrollBarVisibility`. Эти свойства определяются для <xref:System.Windows.Controls.RichTextBox>, <xref:System.Windows.Controls.ScrollViewer>и <xref:System.Windows.Controls.TextBox> объектов, а также как вложенное свойство для объекта <xref:System.Windows.Controls.ListBox>. Вместо этого задайте для <xref:System.Windows.Controls.ScrollBarVisibility> значение <xref:System.Windows.Controls.ScrollBarVisibility.Disabled>, <xref:System.Windows.Controls.ScrollBarVisibility.Hidden>или <xref:System.Windows.Controls.ScrollBarVisibility.Visible>.  
   
  Значение <xref:System.Windows.Controls.ScrollBarVisibility.Auto> предназначено для случаев, когда пространство ограничено, а полосы прокрутки должны отображаться только при необходимости. Например, может быть полезно использовать это <xref:System.Windows.Controls.ScrollBarVisibility> значение с <xref:System.Windows.Controls.ListBox> 30 элементами, а не <xref:System.Windows.Controls.TextBox> с сотнями строк текста.  
   
 <a name="FontCache"></a>   
 ## <a name="configure-font-cache-service-to-reduce-start-up-time"></a>Настройка службы кэширования шрифтов для сокращения времени загрузки  
- Служба кэширования шрифтов [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] используется для совместной обработки данных шрифтов приложениями [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. Первое запускаемое приложение [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] запускает эту службу, если она еще не запущена. Если вы используете Windows Vista, можно задать для свойства "Windows Presentation Foundation (WPF) кэша шрифтов 3.0.0.0" (по умолчанию) значение "автоматически (отложенный запуск)", чтобы сократить начальное время запуска [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] приложений.  
+ Служба кэша шрифтов WPF совместно использует данные шрифтов между приложениями WPF. Первое запускаемое приложение WPF запускает эту службу, если она еще не запущена. Если вы используете Windows Vista, можно задать для свойства "Windows Presentation Foundation (WPF) кэша шрифтов 3.0.0.0" (по умолчанию) значение "автоматически (отложенный запуск)", чтобы сократить начальное время запуска приложений WPF.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Планирование производительности приложения](planning-for-application-performance.md)
 - [Использование преимуществ оборудования](optimizing-performance-taking-advantage-of-hardware.md)
@@ -80,6 +80,6 @@ ms.locfileid: "73975792"
 - [Двумерная графика и изображения](optimizing-performance-2d-graphics-and-imaging.md)
 - [Поведение объекта](optimizing-performance-object-behavior.md)
 - [Ресурсы приложений](optimizing-performance-application-resources.md)
-- [Текст](optimizing-performance-text.md)
+- [Text](optimizing-performance-text.md)
 - [Привязка данных](optimizing-performance-data-binding.md)
 - [Советы и рекомендации по анимации](../graphics-multimedia/animation-tips-and-tricks.md)

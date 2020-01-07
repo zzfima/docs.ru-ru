@@ -28,18 +28,18 @@ helpviewer_keywords:
 - modal dialog boxes [WPF]
 - displaying XAML pages [WPF]
 ms.assetid: 737d04ec-8861-46c3-8d44-fa11d3528d23
-ms.openlocfilehash: 87d5ff67a9e95c5ec5385802d09d667ee8b6e0f9
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 3bc31391d30b0724a480152aa7f1d0dc93380b8c
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740678"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636410"
 ---
 # <a name="wpf-windows-overview"></a>Общие сведения об окнах WPF
-Пользователи взаимодействуют с автономными приложениями Windows Presentation Foundation (WPF) через Windows. Основная цель окна — разместить содержимое, которое визуализирует данные и позволяет пользователям взаимодействовать с ними. Автономные [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] приложения предоставляют собственные окна с помощью класса <xref:System.Windows.Window>. В этом разделе представлены <xref:System.Windows.Window>, прежде чем изобретаться основы создания и управления окнами в автономных приложениях.  
+Пользователи взаимодействуют с автономными приложениями Windows Presentation Foundation (WPF) через Windows. Основная цель окна — разместить содержимое, которое визуализирует данные и позволяет пользователям взаимодействовать с ними. Автономные приложения WPF предоставляют собственные окна с помощью класса <xref:System.Windows.Window>. В этом разделе представлены <xref:System.Windows.Window>, прежде чем изобретаться основы создания и управления окнами в автономных приложениях.  
   
 > [!NOTE]
-> Размещенные в браузере [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] приложения, включая приложения браузера XAML (XBAP) и свободные [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] страницы, не предоставляют собственные окна. Вместо этого они размещаются в Windows, предоставляемых Windows Internet Explorer. См. раздел [Общие сведения о приложениях браузера WPF XAML](wpf-xaml-browser-applications-overview.md).  
+> Размещенные в браузере приложения WPF, включая приложения браузера XAML (XBAP) и свободные [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] страницы, не предоставляют собственные окна. Вместо этого они размещаются в Windows, предоставляемых Windows Internet Explorer. См. раздел [Общие сведения о приложениях браузера WPF XAML](wpf-xaml-browser-applications-overview.md).  
 
 <a name="TheWindowClass"></a>   
 ## <a name="the-window-class"></a>Класс окна  
@@ -49,7 +49,7 @@ ms.locfileid: "73740678"
   
  Окно разделено на две области: неклиентскую и клиентскую.  
   
- *Неклиентская область* окна реализуется [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] и включает части окна, которые являются общими для большинства окон, в том числе следующие:  
+ *Неклиентская область* окна реализуется WPF и включает части окна, которые являются общими для большинства окон, в том числе следующие:  
   
 - Граница.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "73740678"
   
  *Клиентская область* окна — это область внутри неклиентской области окна, которая используется разработчиками для добавления содержимого, зависящего от приложения, таких как строки меню, панели инструментов и элементы управления.  
   
- В [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]окно инкапсулируется классом <xref:System.Windows.Window>, который используется для следующих действий:  
+ В WPF окно инкапсулируется классом <xref:System.Windows.Window>, который используется для следующих действий:  
   
 - Отобразить окно.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "73740678"
   
 <a name="DefiningAWindow"></a>   
 ## <a name="implementing-a-window"></a>Реализация окна  
- Реализация типичного окна состоит как из внешнего вида, так и поведения, где *внешний вид* определяет, как окно будет выглядеть для пользователей и их *поведение* определяет способ работы окна при взаимодействии пользователей с ним. В [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]можно реализовать внешний вид и поведение окна, используя либо код, либо [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] разметку.  
+ Реализация типичного окна состоит как из внешнего вида, так и поведения, где *внешний вид* определяет, как окно будет выглядеть для пользователей и их *поведение* определяет способ работы окна при взаимодействии пользователей с ним. В WPF можно реализовать внешний вид и поведение окна с помощью кода или [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] разметки.  
   
  Однако в общем случае внешний вид окна реализуется с помощью [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] разметки, а его поведение реализуется с помощью кода программной части, как показано в следующем примере.  
   
@@ -124,7 +124,7 @@ ms.locfileid: "73740678"
 </Project>  
 ```  
   
- Сведения о создании [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] приложений см. [в разделе Создание приложения WPF](building-a-wpf-application-wpf.md).  
+ Сведения о создании приложений WPF см. [в разделе Создание приложения WPF](building-a-wpf-application-wpf.md).  
   
 <a name="WindowLifetime"></a>   
 ## <a name="window-lifetime"></a>Время существования окна  
@@ -325,13 +325,13 @@ ms.locfileid: "73740678"
   
  Если вы хотите, чтобы ширина и высота окна имели размер, соответствующий размеру содержимого окна, можно использовать свойство <xref:System.Windows.Window.SizeToContent%2A>, которое имеет следующие значения:  
   
-- <xref:System.Windows.SizeToContent.Manual> Нет эффекта (по умолчанию).  
+- <xref:System.Windows.SizeToContent.Manual>. Нет эффекта (по умолчанию).  
   
-- <xref:System.Windows.SizeToContent.Width> По ширине содержимого, что оказывает тот же результат, что и установка <xref:System.Windows.FrameworkElement.MinWidth%2A> и <xref:System.Windows.FrameworkElement.MaxWidth%2A> ширины содержимого.  
+- <xref:System.Windows.SizeToContent.Width>. По ширине содержимого, что оказывает тот же результат, что и установка <xref:System.Windows.FrameworkElement.MinWidth%2A> и <xref:System.Windows.FrameworkElement.MaxWidth%2A> ширины содержимого.  
   
-- <xref:System.Windows.SizeToContent.Height> По высоте содержимого, что оказывает тот же результат, что и установка <xref:System.Windows.FrameworkElement.MinHeight%2A> и <xref:System.Windows.FrameworkElement.MaxHeight%2A> к высоте содержимого.  
+- <xref:System.Windows.SizeToContent.Height>. По высоте содержимого, что оказывает тот же результат, что и установка <xref:System.Windows.FrameworkElement.MinHeight%2A> и <xref:System.Windows.FrameworkElement.MaxHeight%2A> к высоте содержимого.  
   
-- <xref:System.Windows.SizeToContent.WidthAndHeight> По ширине и высоте содержимого, которая имеет тот же результат, что и установка <xref:System.Windows.FrameworkElement.MinHeight%2A> и <xref:System.Windows.FrameworkElement.MaxHeight%2A> к высоте содержимого, и установка <xref:System.Windows.FrameworkElement.MinWidth%2A> и <xref:System.Windows.FrameworkElement.MaxWidth%2A> ширины содержимого.  
+- <xref:System.Windows.SizeToContent.WidthAndHeight>. По ширине и высоте содержимого, которая имеет тот же результат, что и установка <xref:System.Windows.FrameworkElement.MinHeight%2A> и <xref:System.Windows.FrameworkElement.MaxHeight%2A> к высоте содержимого, и установка <xref:System.Windows.FrameworkElement.MinWidth%2A> и <xref:System.Windows.FrameworkElement.MaxWidth%2A> ширины содержимого.  
   
  В следующем примере показано окно, размеры которого автоматически устанавливаются равными его содержимому по вертикали и по горизонтали при первом отображении.  
   
@@ -401,7 +401,7 @@ ms.locfileid: "73740678"
 
 <a name="Resize_Mode"></a>   
 ### <a name="resize-mode"></a>Режим изменения размера  
- В зависимости от свойства <xref:System.Windows.Window.WindowStyle%2A> можно управлять тем, как пользователи могут изменять размер окна (и, если). Выбранный стиль окна влияет на то, может ли пользователь изменять размер окна, перетаскивая его границу мышью, отображаются ли кнопки **сворачивания**, **развернуть**и **изменить размер** в неклиентской области, и если они отображаются, то доступной.  
+ В зависимости от свойства <xref:System.Windows.Window.WindowStyle%2A> можно управлять тем, как пользователи могут изменять размер окна (и, если). Выбранный стиль окна влияет на то, может ли пользователь изменять размер окна, перетаскивая его границу с помощью мыши, появляются ли кнопки **сворачивания**, **развернуть**и **изменить размер** в неклиентской области и, если они отображаются, включены ли они.  
   
  Можно настроить изменение размера окна, задав его свойство <xref:System.Windows.Window.ResizeMode%2A>, которое может быть одним из следующих <xref:System.Windows.ResizeMode> перечисляемых значений:  
   
@@ -479,7 +479,7 @@ ms.locfileid: "73740678"
   
  Диалоговые окна — это окна, которые часто используются для сбора информации от пользователя для выполнения функции. Например, когда пользователь хочет открыть файл, диалоговое окно **Открытие файла** обычно отображается приложением для получения имени файла от пользователя. Дополнительные сведения см. в разделе [Общие сведения о диалоговых окнах](dialog-boxes-overview.md).  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - <xref:System.Windows.Window>
 - <xref:System.Windows.MessageBox>

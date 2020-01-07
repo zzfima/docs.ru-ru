@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, configuring
 ms.assetid: 59efd4c8-cc7a-4800-a0a4-d3f8abe6c55c
-ms.openlocfilehash: 80878c18143eaa603e624c8be63f11af91cfcfb6
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 6d6ce6ace41894672d285ff8f0733c1b9d52562c
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74569305"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346141"
 ---
 # <a name="configuring-the-data-service-wcf-data-services"></a>Настройка службы данных (службы данных WCF)
 С помощью WCF Data Services можно создавать службы данных, предоставляющие доступ к каналам Open Data Protocol (OData). В этих каналах могут находиться данные из различных источников данных. WCF Data Services использует поставщики данных для предоставления этих данных в качестве веб-канала OData. В число таких поставщиков входят поставщик Entity Framework, поставщик отражения, а также набор пользовательских интерфейсов поставщиков служб данных. Реализация поставщика определяет модель данных для службы. Дополнительные сведения см. в разделе [поставщики служб данных](data-services-providers-wcf-data-services.md).  
@@ -29,15 +29,15 @@ ms.locfileid: "74569305"
   
 |Член|Поведение|  
 |------------|--------------|  
-|<xref:System.Data.Services.DataServiceBehavior.AcceptCountRequests%2A>|Позволяет отключить запросы количества, передаваемые службе данных при использовании сегмента пути `$count` и параметра запроса `$inlinecount`. Дополнительные сведения см. в разделе [OData: соглашения об URI](https://go.microsoft.com/fwlink/?LinkId=185564).|  
-|<xref:System.Data.Services.DataServiceBehavior.AcceptProjectionRequests%2A>|Позволяет отключить поддержку проекции данных в запросах, передаваемых службе данных при использовании параметра запроса `$select`. Дополнительные сведения см. в разделе [OData: соглашения об URI](https://go.microsoft.com/fwlink/?LinkId=185564).|  
+|<xref:System.Data.Services.DataServiceBehavior.AcceptCountRequests%2A>|Позволяет отключить запросы количества, передаваемые службе данных при использовании сегмента пути `$count` и параметра запроса `$inlinecount`. Дополнительные сведения см. в разделе [OData: соглашения об URI](https://www.odata.org/documentation/odata-version-2-0/uri-conventions/).|  
+|<xref:System.Data.Services.DataServiceBehavior.AcceptProjectionRequests%2A>|Позволяет отключить поддержку проекции данных в запросах, передаваемых службе данных при использовании параметра запроса `$select`. Дополнительные сведения см. в разделе [OData: соглашения об URI](https://www.odata.org/documentation/odata-version-2-0/uri-conventions/).|  
 |<xref:System.Data.Services.DataServiceConfiguration.EnableTypeAccess%2A>|Включает тип данных, предоставляемый в метаданных для динамического поставщика метаданных, определенного с помощью интерфейса <xref:System.Data.Services.Providers.IDataServiceMetadataProvider>.|  
 |<xref:System.Data.Services.DataServiceConfiguration.EnableTypeConversion%2A>|Позволяет указать, должна ли среда выполнения службы данных преобразовывать тип, содержащийся в полезных данных, в фактический тип свойства, указанный в запросе.|  
 |<xref:System.Data.Services.DataServiceBehavior.InvokeInterceptorsOnLinkDelete%2A>|Позволяет указать, следует ли вызывать перехватчиков зарегистрированных изменений для связанных сущностей при удалении ссылки связи между двумя сущностями.|  
-|<xref:System.Data.Services.DataServiceConfiguration.MaxBatchCount%2A>|Позволяет ограничить число наборов изменений и операций запросов, разрешенных в одном пакете. Дополнительные сведения см. в разделе [OData: пакетная](https://go.microsoft.com/fwlink/?LinkId=185602) обработка и [операции пакетной обработки](batching-operations-wcf-data-services.md).|  
+|<xref:System.Data.Services.DataServiceConfiguration.MaxBatchCount%2A>|Позволяет ограничить число наборов изменений и операций запросов, разрешенных в одном пакете. Дополнительные сведения см. в разделе [OData: пакетная](https://www.odata.org/documentation/odata-version-2-0/batch-processing/) обработка и [операции пакетной обработки](batching-operations-wcf-data-services.md).|  
 |<xref:System.Data.Services.DataServiceConfiguration.MaxChangesetCount%2A>|Позволяет ограничить количество изменений, которые могут быть включены в один набор изменений. Дополнительные сведения см. [в разделе Практические руководства. Включение разбиения результатов службы данных](how-to-enable-paging-of-data-service-results-wcf-data-services.md).|  
-|<xref:System.Data.Services.DataServiceConfiguration.MaxExpandCount%2A>|Позволяет ограничить размер ответа путем ограничения количества связанных сущностей, которые могут быть включены в один запрос при использовании оператора запроса `$expand`. Дополнительные сведения см. в разделе [OData: соглашения об URI](https://go.microsoft.com/fwlink/?LinkId=185564) и [Загрузка отложенного содержимого](loading-deferred-content-wcf-data-services.md).|  
-|<xref:System.Data.Services.DataServiceConfiguration.MaxExpandDepth%2A>|Позволяет ограничить размер ответа путем ограничения глубины графа связанных сущностей, которые могут быть включены в один запрос при использовании оператора запроса `$expand`. Дополнительные сведения см. в разделе [OData: соглашения об URI](https://go.microsoft.com/fwlink/?LinkId=185564) и [Загрузка отложенного содержимого](loading-deferred-content-wcf-data-services.md).|  
+|<xref:System.Data.Services.DataServiceConfiguration.MaxExpandCount%2A>|Позволяет ограничить размер ответа путем ограничения количества связанных сущностей, которые могут быть включены в один запрос при использовании оператора запроса `$expand`. Дополнительные сведения см. в разделе [OData: соглашения об URI](https://www.odata.org/documentation/odata-version-2-0/uri-conventions/) и [Загрузка отложенного содержимого](loading-deferred-content-wcf-data-services.md).|  
+|<xref:System.Data.Services.DataServiceConfiguration.MaxExpandDepth%2A>|Позволяет ограничить размер ответа путем ограничения глубины графа связанных сущностей, которые могут быть включены в один запрос при использовании оператора запроса `$expand`. Дополнительные сведения см. в разделе [OData: соглашения об URI](https://www.odata.org/documentation/odata-version-2-0/uri-conventions/) и [Загрузка отложенного содержимого](loading-deferred-content-wcf-data-services.md).|  
 |<xref:System.Data.Services.DataServiceConfiguration.MaxObjectCountOnInsert%2A>|Позволяет ограничить количество вставляемых сущностей, которые могут содержаться в одном запросе POST.|  
 |<xref:System.Data.Services.DataServiceBehavior.MaxProtocolVersion%2A>|Определяет версию протокола Atom, используемую службой данных. Если для параметра <xref:System.Data.Services.DataServiceBehavior.MaxProtocolVersion%2A> задано значение меньше максимального значения <xref:System.Data.Services.Common.DataServiceProtocolVersion>, то последняя функциональность WCF Data Services недоступна для клиентов, обращающихся к службе данных. Дополнительные сведения см. в разделе [Управление версиями службы данных](data-service-versioning-wcf-data-services.md).|  
 |<xref:System.Data.Services.DataServiceConfiguration.MaxResultsPerCollection%2A>|Позволяет ограничить размер ответа путем ограничения количества сущностей в каждом наборе сущностей, возвращаемом в виде канала данных.|  
