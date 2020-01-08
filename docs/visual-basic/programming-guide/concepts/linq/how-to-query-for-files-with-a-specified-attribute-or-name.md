@@ -2,17 +2,17 @@
 title: Практическое руководство. Запрос файлов с указанными атрибутами или именем
 ms.date: 07/20/2015
 ms.assetid: b26026a3-3f43-448f-a582-259997af6be0
-ms.openlocfilehash: 68b8f02e3c7f53092ef91f2b8b96736a644a7fd1
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 970fb862b843016425e3a0f0c2bcf00e6fcba3a6
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74347691"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75342143"
 ---
-# <a name="how-to-query-for-files-with-a-specified-attribute-or-name-visual-basic"></a><span data-ttu-id="bb049-102">Как запросить файлы с указанным атрибутом или именем (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="bb049-102">How to: Query for Files with a Specified Attribute or Name (Visual Basic)</span></span>
-<span data-ttu-id="bb049-103">В этом примере показано, как обнаружить все файлы с указанным расширением (например, TXT) в заданном дереве каталогов.</span><span class="sxs-lookup"><span data-stu-id="bb049-103">This example shows how to find all files that have a specified file name extension (for example ".txt") in a specified directory tree.</span></span> <span data-ttu-id="bb049-104">Кроме того, он показывает, как обнаружить самый новый или самый старый файл в дереве, используя время создания.</span><span class="sxs-lookup"><span data-stu-id="bb049-104">It also shows how to return either the newest or oldest file in the tree based on the creation time.</span></span>  
+# <a name="how-to-query-for-files-with-a-specified-attribute-or-name-visual-basic"></a><span data-ttu-id="b6622-102">Как запросить файлы с указанным атрибутом или именем (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b6622-102">How to: Query for Files with a Specified Attribute or Name (Visual Basic)</span></span>
+<span data-ttu-id="b6622-103">В этом примере показано, как обнаружить все файлы с указанным расширением (например, TXT) в заданном дереве каталогов.</span><span class="sxs-lookup"><span data-stu-id="b6622-103">This example shows how to find all files that have a specified file name extension (for example ".txt") in a specified directory tree.</span></span> <span data-ttu-id="b6622-104">Кроме того, он показывает, как обнаружить самый новый или самый старый файл в дереве, используя время создания.</span><span class="sxs-lookup"><span data-stu-id="b6622-104">It also shows how to return either the newest or oldest file in the tree based on the creation time.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="bb049-105">Пример</span><span class="sxs-lookup"><span data-stu-id="bb049-105">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="b6622-105">Пример</span><span class="sxs-lookup"><span data-stu-id="b6622-105">Example</span></span>  
   
 ```vb  
 Module FindFileByExtension  
@@ -60,10 +60,10 @@ Module FindFileByExtension
 End Module  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="bb049-106">Компиляция кода</span><span class="sxs-lookup"><span data-stu-id="bb049-106">Compiling the Code</span></span>  
-<span data-ttu-id="bb049-107">Создайте проект консольного приложения VB.NET с помощью инструкции `Imports` для пространства имен System. LINQ.</span><span class="sxs-lookup"><span data-stu-id="bb049-107">Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.</span></span>
+## <a name="compile-the-code"></a><span data-ttu-id="b6622-106">Компиляция кода</span><span class="sxs-lookup"><span data-stu-id="b6622-106">Compile the code</span></span>  
+<span data-ttu-id="b6622-107">Создайте Visual Basic проект консольного приложения, используя инструкцию `Imports` для пространства имен System. LINQ.</span><span class="sxs-lookup"><span data-stu-id="b6622-107">Create a Visual Basic console application project, with an `Imports` statement for the System.Linq namespace.</span></span>
   
-## <a name="see-also"></a><span data-ttu-id="bb049-108">См. также</span><span class="sxs-lookup"><span data-stu-id="bb049-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b6622-108">См. также:</span><span class="sxs-lookup"><span data-stu-id="b6622-108">See also</span></span>
 
-- [<span data-ttu-id="bb049-109">LINQ to Objects (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="bb049-109">LINQ to Objects (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
-- [<span data-ttu-id="bb049-110">LINQ и каталоги файлов (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="bb049-110">LINQ and File Directories (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [<span data-ttu-id="b6622-109">LINQ to Objects (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b6622-109">LINQ to Objects (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
+- [<span data-ttu-id="b6622-110">LINQ и каталоги файлов (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b6622-110">LINQ and File Directories (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
