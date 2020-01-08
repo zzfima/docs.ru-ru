@@ -2,13 +2,12 @@
 title: Разработка приложений .NET Core
 description: См. дополнительные сведения о развертывании приложения .NET Core.
 ms.date: 12/03/2018
-ms.custom: seodec18
-ms.openlocfilehash: fd15d41065b0a6ecb1a0bf04a0f0ab292a0a5fb7
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 41c5285f2a9ddf38e4be7326bd5cba1c58370fe7
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73089199"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740818"
 ---
 # <a name="net-core-application-deployment"></a>Развертывание приложений .NET Core
 
@@ -64,7 +63,7 @@ ms.locfileid: "73089199"
 
 - Пакет развертывания имеет относительно большой размер, так как в него необходимо включить платформу .NET Core в дополнение к приложению и зависимостям сторонних разработчиков.
 
-  Начиная с версии .NET Core 2.0 можно уменьшить размер развертывания в системах Linux примерно на 28 МБ с помощью [ *инвариантного режима глобализации* ](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md) в .NET Core. Как правило, .NET Core использует в Linux [библиотеки ICU](http://icu-project.org) для поддержки глобализации. В инвариантном режиме библиотеки не включаются в развертывание и все языки и региональные параметры используются как [инвариантные](xref:System.Globalization.CultureInfo.InvariantCulture?displayProperty=nameWithType).
+  Начиная с версии .NET Core 2.0 можно уменьшить размер развертывания в системах Linux примерно на 28 МБ с помощью [*инвариантного режима глобализации* ](https://github.com/dotnet/runtime/blob/master/docs/design/features/globalization-invariant-mode.md) в .NET Core. Как правило, .NET Core использует в Linux [библиотеки ICU](http://icu-project.org) для поддержки глобализации. В инвариантном режиме библиотеки не включаются в развертывание и все языки и региональные параметры используются как [инвариантные](xref:System.Globalization.CultureInfo.InvariantCulture?displayProperty=nameWithType).
 
 - При развертывании множества автономных приложений .NET Core в системе может использоваться значительный объем дискового пространства, так как каждое приложение создает копии файлов .NET Core.
 

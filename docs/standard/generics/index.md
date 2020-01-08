@@ -26,14 +26,12 @@ helpviewer_keywords:
 - generic types
 - generic type parameters
 ms.assetid: 2994d786-c5c7-4666-ab23-4c83129fe39c
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 0eb88b8f46d425ae840c2bf8ed8eb479971d1cbc
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: f04b6fcd1641a53efe75d38ab7122967bff6a58d
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974666"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75708375"
 ---
 # <a name="generics-in-net"></a>Универсальные шаблоны в .NET
 
@@ -133,7 +131,7 @@ ms.locfileid: "73974666"
 
 ## <a name="related-topics"></a>См. также  
   
-|Заголовок|ОПИСАНИЕ|  
+|Заголовок|Описание|  
 |-----------|-----------------|  
 |[Универсальные коллекции в .NET](../../../docs/standard/generics/collections.md)|Описание классов универсальных коллекций и других универсальных типов в составе .NET.|  
 |[Универсальные методы-делегаты для управления массивами и списками](../../../docs/standard/generics/delegates-for-manipulating-arrays-and-lists.md)|Описание универсальных делегатов для преобразований, предикатов поиска и действий, осуществляемых с элементами массива или коллекции.|  
@@ -142,11 +140,11 @@ ms.locfileid: "73974666"
 |[Часто используемые типы коллекций](../../../docs/standard/collections/commonly-used-collection-types.md)|Предоставление сводных данных о характеристиках и сценариях использования типов коллекций в составе .NET, включая универсальные типы.|  
 |[Когда следует использовать универсальные коллекции](../../../docs/standard/collections/when-to-use-generic-collections.md)|Описание общих правил для определения ситуаций, когда следует использовать универсальные типы коллекций.|  
 |[Практическое руководство. Определение универсального типа с порождаемым отражением](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)|Описание способов создания динамических сборок, содержащих универсальные типы и методы.|  
-|[Универсальные типы в Visual Basic](../../visual-basic/programming-guide/language-features/data-types/generic-types.md)|Описание универсальных шаблонов для пользователей Visual Basic, включая практические руководства об использовании и определении универсальных типов.|  
+|[Generic Types in Visual Basic](../../visual-basic/programming-guide/language-features/data-types/generic-types.md)|Описание универсальных шаблонов для пользователей Visual Basic, включая практические руководства об использовании и определении универсальных типов.|  
 |[Введение в универсальные шаблоны](../../csharp/programming-guide/generics/index.md)|Общие сведения об определении и использовании универсальных типов для пользователей C#.|  
 |[Обзор универсальных типов в Visual C++](/cpp/windows/overview-of-generics-in-visual-cpp)|Описание универсальных шаблонов для пользователей C++, включая описание различий между шаблонами и универсальными шаблонами.|  
 
-## <a name="reference"></a>Ссылка  
+## <a name="reference"></a>Справочник  
  <xref:System.Collections.Generic>  
   
  <xref:System.Collections.ObjectModel>  

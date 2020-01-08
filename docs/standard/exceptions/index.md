@@ -11,14 +11,12 @@ helpviewer_keywords:
 - exceptions [.NET]
 - common language runtime, exceptions
 ms.assetid: f99a1d29-a2a8-47af-9707-9909f9010735
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a417e964c2f44c291892f9ddec6e32438fbff9a1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8e78b2a8d7a815637e143eeb88bcfb51ded33771
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945435"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741355"
 ---
 # <a name="handling-and-throwing-exceptions-in-net"></a>Обработка и создание исключений в .NET
 
@@ -69,4 +67,4 @@ ms.locfileid: "61945435"
 - [Практическое руководство. Использование блоков Finally](how-to-use-finally-blocks.md)
 - [Обработка исключений COM-взаимодействия](handling-com-interop-exceptions.md)
 - [Рекомендации по обработке исключений](best-practices-for-exceptions.md)
-- [What Every Dev needs to Know About Exceptions in the Runtime](https://github.com/dotnet/coreclr/blob/master/Documentation/botr/exceptions.md) (Что нужно знать всем разработчикам об исключениях в среде выполнения).
+- [What Every Dev needs to Know About Exceptions in the Runtime](https://github.com/dotnet/runtime/blob/master/docs/design/coreclr/botr/exceptions.md) (Что нужно знать всем разработчикам об исключениях в среде выполнения).

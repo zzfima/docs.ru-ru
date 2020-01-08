@@ -2,13 +2,12 @@
 title: Средства интерфейса командной строки (CLI) .NET Core
 description: Обзор средств и возможностей интерфейса командной строки (CLI)NET Core.
 ms.date: 08/14/2017
-ms.custom: seodec18
-ms.openlocfilehash: 4ff5cfd6c5a70c92387911ab87ddea5cee80275e
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: b3bffb47ff973bd0da90e3f943e817756e563138
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117397"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714139"
 ---
 # <a name="net-core-command-line-interface-cli-tools"></a>Средства интерфейса командной строки (CLI) .NET Core
 
@@ -128,7 +127,7 @@ dotnet /build_output/my_app.dll
 
 Для запуска платформозависимого приложения укажите его драйвера, например `dotnet /path/to/my_app.dll`. При выполнении команды из папки, где находится библиотека DLL приложения, просто выполните `dotnet my_app.dll`. Если вы хотите использовать конкретную версию среды выполнения .NET Core, используйте параметр `--fx-version <VERSION>` (см. справку по [команде dotnet](dotnet.md)).
 
-При указании команды для драйвера `dotnet.exe` запускает процесс выполнения команды CLI. Например:
+При указании команды для драйвера `dotnet.exe` запускает процесс выполнения команды CLI. Пример:
 
 ```dotnetcli
 dotnet build
