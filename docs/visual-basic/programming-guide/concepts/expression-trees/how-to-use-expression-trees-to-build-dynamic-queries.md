@@ -2,12 +2,12 @@
 title: Практическое руководство. Использование деревьев выражений для построения динамических запросов
 ms.date: 07/20/2015
 ms.assetid: 16278787-7532-4b65-98b2-7a412406c4ee
-ms.openlocfilehash: bf15880c1988ac5639dd80ba56d330372dc3803b
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 616aa3eba1e07a92983bb5d2048a9dbae936e77c
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344714"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346054"
 ---
 # <a name="how-to-use-expression-trees-to-build-dynamic-queries-visual-basic"></a>Как использовать деревья выражений для построения динамических запросов (Visual Basic)
 
@@ -101,7 +101,7 @@ Next
 
 Этот код использует фиксированное число выражений в предикате, передаваемом в метод `Queryable.Where`. Тем не менее можно написать приложение, которое будет сочетать переменное число выражений предиката, зависящих от вводимых пользователем данных. Также можно изменять стандартные операторы запросов, которые вызываются в запросе, в зависимости от входных данных от пользователя.
 
-## <a name="compiling-the-code"></a>Компиляция кода
+## <a name="compile-the-code"></a>Компиляция кода
 
 - Создайте новый проект **консольного приложения**.
 
@@ -109,7 +109,7 @@ Next
 
 - Скопируйте код из примера и вставьте его в `Main` `Sub` процедуру.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Expression Trees (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/index.md) (Деревья выражений (Visual Basic))
 - [Инструкции. Выполнение деревьев выражений (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)

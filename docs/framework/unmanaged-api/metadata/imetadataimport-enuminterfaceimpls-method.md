@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ba6e178f-128b-4e47-a13c-b4be73eb106c
 topic_type:
 - apiref
-ms.openlocfilehash: 4c819bff50e6644a733374e9863d670d3323ee68
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: ef7057ad19fd34750bd15d358e9c1ebb1289cd44
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449533"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75338063"
 ---
 # <a name="imetadataimportenuminterfaceimpls-method"></a>Метод IMetaDataImport::EnumInterfaceImpls
 Перечисляет все интерфейсы, реализованные указанным `TypeDef`. 
@@ -48,7 +48,7 @@ HRESULT EnumInterfaceImpls (
  заполняет Массив, используемый для хранения маркеров MethodDef.  
   
  `cMax`  
- [in] Максимальный размер массива `rImpls`.  
+ окне Максимальная длина массива `rImpls`.  
   
  `pcImpls`  
  заполняет Фактическое число токенов, возвращаемых в `rImpls`.  
@@ -73,7 +73,7 @@ HRESULT EnumInterfaceImpls (
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [Интерфейс IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

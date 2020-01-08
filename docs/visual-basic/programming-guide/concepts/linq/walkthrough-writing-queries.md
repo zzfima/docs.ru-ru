@@ -7,18 +7,18 @@ helpviewer_keywords:
 - LINQ [Visual Basic], writing queries
 - writing LINQ queries [Visual Basic]
 ms.assetid: f0045808-b9fe-4d31-88d1-473d9957211e
-ms.openlocfilehash: 6a9f229697ce3d6328c6fb09d18d4cc2627eab10
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 6d2e472cc996c42aa091ed95c6954d0879c98372
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74351019"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636761"
 ---
 # <a name="walkthrough-writing-queries-in-visual-basic"></a>Пошаговое руководство. Написание запросов в Visual Basic
 
-В этом пошаговом руководстве показано, как можно использовать функции языка Visual Basic для написания [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] выражений запросов. В этом пошаговом руководстве показано, как создавать запросы к списку объектов Student, выполнять запросы и изменять их. Запросы включают в себя несколько функций, включая инициализаторы объектов, определение локального типа и анонимные типы.
+В этом пошаговом руководстве показано, как можно использовать функции языка Visual Basic для написания выражений запросов LINQ. В этом пошаговом руководстве показано, как создавать запросы к списку объектов Student, выполнять запросы и изменять их. Запросы включают в себя несколько функций, включая инициализаторы объектов, определение локального типа и анонимные типы.
 
-После завершения этого пошагового руководства вы будете готовы перейти к образцам и документации для конкретного интересующего вас поставщика [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. поставщики [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] включают [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], LINQ to DataSet и [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].
+После завершения этого пошагового руководства вы будете готовы перейти к образцам и документации для конкретного интересующего поставщика LINQ. Поставщики LINQ включают [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], LINQ to DataSet и [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].
 
 ## <a name="create-a-project"></a>Создание проекта
 
@@ -133,13 +133,13 @@ ms.locfileid: "74351019"
 
 ## <a name="additional-examples"></a>Дополнительные примеры
 
-Теперь, когда вы понимаете основы, ниже приведен список дополнительных примеров, иллюстрирующих гибкость и мощь [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] запросов. Каждому примеру предшествует краткое описание того, что он делает. Наведите указатель мыши на переменную результата запроса для каждого запроса, чтобы увидеть выведенный тип. Для получения результатов используйте цикл `For Each`.
+Теперь, когда вы понимаете основы, ниже приведен список дополнительных примеров для демонстрации гибкости и возможностей запросов LINQ. Каждому примеру предшествует краткое описание того, что он делает. Наведите указатель мыши на переменную результата запроса для каждого запроса, чтобы увидеть выведенный тип. Для получения результатов используйте цикл `For Each`.
 
 [!code-vb[VbLINQWalkthrough#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQWalkthrough/VB/Class1.vb#7)]
 
 ## <a name="additional-information"></a>Дополнительные сведения
 
-После ознакомления с основными понятиями работы с запросами вы можете ознакомиться с документацией и примерами для конкретного типа поставщика [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], который вас интересует:
+После ознакомления с основными понятиями работы с запросами вы можете ознакомиться с документацией и примерами для конкретного типа поставщика LINQ, который вас интересует:
 
 - [LINQ to Objects](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
 
@@ -149,7 +149,7 @@ ms.locfileid: "74351019"
 
 - [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md)
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Синтаксис LINQ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/index.md)
 - [Приступая к работе с LINQ в Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)

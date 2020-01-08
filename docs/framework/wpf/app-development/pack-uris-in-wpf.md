@@ -9,12 +9,12 @@ helpviewer_keywords:
 - loading non-resource files
 - application management [WPF]
 ms.assetid: 43adb517-21a7-4df3-98e8-09e9cdf764c4
-ms.openlocfilehash: efaf55220a41526b8952f01b8225f8336a4e8657
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: e20053c451d12c6a8493d5d7fcfc72fe3d3d764e
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459668"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636384"
 ---
 # <a name="pack-uris-in-wpf"></a>URI типа "pack" в WPF
 
@@ -38,7 +38,7 @@ ms.locfileid: "73459668"
 
 - Исходный узел приложения.
 
-Чтобы обеспечить единообразный механизм идентификации и загрузки этих типов файлов из этих расположений, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] использует расширяемость *схемы URI*типа "Pack". В этом разделе приводятся общие сведения о схеме, описывается создание URI типа "Pack" для различных сценариев, обсуждаются абсолютные и относительные URI и разрешение URI, прежде чем показано, как использовать URI типа "Pack" из разметки и кода.
+Чтобы обеспечить единообразный механизм идентификации и загрузки этих типов файлов из этих расположений, WPF использует расширяемость *схемы URI*типа "Pack". В этом разделе приводятся общие сведения о схеме, описывается создание URI типа "Pack" для различных сценариев, обсуждаются абсолютные и относительные URI и разрешение URI, прежде чем показано, как использовать URI типа "Pack" из разметки и кода.
 
 <a name="The_Pack_URI_Scheme"></a>
 
@@ -52,7 +52,7 @@ ms.locfileid: "73459668"
 
 Схема, заданная с помощью URI, определяется его префиксом. HTTP, FTP и файлы — это хорошо известные примеры. В схеме универсального кода ресурса (URI) типа "Pack" в качестве схемы содержится два компонента: Authority и Path. Ниже приведен формат URI типа pack.
 
-*путь* /*центра* Pack://
+*путь*/*центра* Pack://
 
 *Центр* определяет тип пакета, который содержится в части, а *путь* указывает расположение части в пакете.
 
@@ -72,7 +72,7 @@ ms.locfileid: "73459668"
 
 - Файлы исходного узла.
 
-Для доступа к этим типам файлов [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] поддерживает два органа: application:///и siteoforigin:///. Центр application:/// определяет файлы данных приложения, известные во время компиляции, включая файлы ресурсов и файлы содержимого. Центр siteoforigin:/// определяет файлы исходного узла. На следующем рисунке показана область каждого центра.
+Для доступа к этим типам файлов WPF поддерживает два центра: application:///и siteoforigin:///. Центр application:/// определяет файлы данных приложения, известные во время компиляции, включая файлы ресурсов и файлы содержимого. Центр siteoforigin:/// определяет файлы исходного узла. На следующем рисунке показана область каждого центра.
 
 ![Схема URI типа “pack”](./media/pack-uris-in-wpf/wpf-pack-uri-scheme.png)
 
@@ -139,7 +139,7 @@ URI типа "Pack" для файла ресурсов, компилируемо
 
 `pack://application:,,,/ReferencedAssembly;v1.0.0.1;component/ResourceFile.xaml`
 
-Обратите внимание, что синтаксис URI типа "Pack" для файлов ресурсов сборки, на которые указывают ссылки, можно использовать только с центром application:///. Например, в [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]не поддерживается следующее.
+Обратите внимание, что синтаксис URI типа "Pack" для файлов ресурсов сборки, на которые указывают ссылки, можно использовать только с центром application:///. Например, в WPF не поддерживается следующее.
 
 `pack://siteoforigin:,,,/SomeAssembly;component/ResourceFile.xaml`
 
@@ -251,7 +251,7 @@ URI типа "Pack" для файла исходного узла использ
 
 `/ResourceOrContentFile.xaml`
 
-Чтобы определить тип файла, на который ссылается URI типа "Pack", [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] разрешает URI для файлов ресурсов в локальных сборках и файлах содержимого, используя следующие эвристики:
+Чтобы определить тип файла, на который ссылается URI типа Pack, WPF разрешает URI для файлов ресурсов в локальных сборках и файлах содержимого, используя следующие эвристики:
 
 1. Проверяет метаданные сборки для атрибута <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute>, соответствующего URI типа pack.
 
@@ -265,7 +265,7 @@ URI типа "Pack" для файла исходного узла использ
 
 Разрешение URI не применяется для URI, которые ссылаются на следующие:
 
-- Файлы содержимого в сборках, на которые имеются ссылки: эти типы файлов не поддерживаются [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].
+- Файлы содержимого в сборках, на которые имеются ссылки: эти типы файлов не поддерживаются в WPF.
 
 - Внедренные файлы в упоминаемых сборках: URI, которые их определяют, являются уникальными, так как включают имя сборки, на которую указывает ссылка, и суффикс `;component`.
 
@@ -277,7 +277,7 @@ URI типа "Pack" для файла исходного узла использ
 
 ## <a name="programming-with-pack-uris"></a>Программирование с использованием URI типа "pack"
 
-Многие классы [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] реализуют свойства, которые можно задать с помощью URI типа Pack, в том числе:
+Многие классы WPF реализуют свойства, которые можно задать с помощью URI типа Pack, в том числе:
 
 - <xref:System.Windows.Application.StartupUri%2A?displayProperty=nameWithType>
 
@@ -297,7 +297,7 @@ URI типа "Pack" для файла исходного узла использ
 
 ### <a name="using-pack-uris-in-markup"></a>Использование URI типа "pack" в разметке
 
-URI типа "Pack" указывается в разметке путем задания элемента атрибута с URI типа "Pack". Пример:
+URI типа "Pack" указывается в разметке путем задания элемента атрибута с URI типа "Pack". Например:
 
 `<element attribute="pack://application:,,,/File.xaml" />`
 
@@ -305,7 +305,7 @@ URI типа "Pack" указывается в разметке путем зад
 
 Таблица 1. Абсолютные URI типа "pack" в разметке
 
-|Файл|Абсолютный URI типа Pack|
+|File|Абсолютный URI типа Pack|
 |----------|-------------------------------------------------------------------------------------------------------------------------|
 |Файл ресурсов — локальная сборка|`"pack://application:,,,/ResourceFile.xaml"`|
 |Файл ресурсов в подпапке — локальная сборка|`"pack://application:,,,/Subfolder/ResourceFile.xaml"`|
@@ -321,7 +321,7 @@ URI типа "Pack" указывается в разметке путем зад
 
 Таблица 2. Относительные URI типа "pack" в разметке
 
-|Файл|Относительный URI типа Pack|
+|File|Относительный URI типа Pack|
 |----------|-------------------------------------------------------------------------------------------------------------------------|
 |Файл ресурсов в локальной сборке|`"/ResourceFile.xaml"`|
 |Файл ресурсов в подпапке — локальная сборка|`"/Subfolder/ResourceFile.xaml"`|
@@ -368,7 +368,7 @@ Uri uri = new Uri(userProvidedUriTextBox.Text, UriKind.RelativeOrAbsolute);
 
 Таблица 3. Абсолютные URI типа "pack" в коде
 
-|Файл|Абсолютный URI типа Pack|
+|File|Абсолютный URI типа Pack|
 |----------|-------------------------------------------------------------------------------------------------------------------------|
 |Файл ресурсов — локальная сборка|`Uri uri = new Uri("pack://application:,,,/ResourceFile.xaml", UriKind.Absolute);`|
 |Файл ресурсов в подпапке — локальная сборка|`Uri uri = new Uri("pack://application:,,,/Subfolder/ResourceFile.xaml", UriKind.Absolute);`|
@@ -384,7 +384,7 @@ Uri uri = new Uri(userProvidedUriTextBox.Text, UriKind.RelativeOrAbsolute);
 
 Таблица 4. Относительные URI типа "pack" в коде
 
-|Файл|Относительный URI типа Pack|
+|File|Относительный URI типа Pack|
 |----------|-------------------------------------------------------------------------------------------------------------------------|
 |Файл ресурсов — локальная сборка|`Uri uri = new Uri("/ResourceFile.xaml", UriKind.Relative);`|
 |Файл ресурсов в подпапке — локальная сборка|`Uri uri = new Uri("/Subfolder/ResourceFile.xaml", UriKind.Relative);`|
@@ -397,13 +397,13 @@ Uri uri = new Uri(userProvidedUriTextBox.Text, UriKind.RelativeOrAbsolute);
 
 ### <a name="common-pack-uri-scenarios"></a>Типичные сценарии URI типа "pack"
 
-В предыдущих разделах обсуждалось создание URI типа "Pack" для указания файлов ресурсов, содержимого и исходного узла. В [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]эти конструкции используются различными способами, и в следующих разделах рассматриваются некоторые распространенные способы использования.
+В предыдущих разделах обсуждалось создание URI типа "Pack" для указания файлов ресурсов, содержимого и исходного узла. В WPF эти конструкции используются различными способами, и в следующих разделах рассматриваются некоторые распространенные способы использования.
 
 <a name="Specifying_the_UI_to_Show_when_an_Application_Starts"></a>
 
 #### <a name="specifying-the-ui-to-show-when-an-application-starts"></a>Указание пользовательского интерфейса для отображения при запуске приложения
 
-<xref:System.Windows.Application.StartupUri%2A> указывает первый [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], отображаемый при запуске приложения [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. Для автономных приложений [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] может быть окном, как показано в следующем примере.
+<xref:System.Windows.Application.StartupUri%2A> указывает первый [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], отображаемый при запуске приложения WPF. Для автономных приложений [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] может быть окном, как показано в следующем примере.
 
 [!code-xaml[PackURIOverviewSnippets#StartupUriWindow](~/samples/snippets/csharp/VS_Snippets_Wpf/PackURIOverviewSnippets/CS/Copy of App.xaml#startupuriwindow)]
 
@@ -411,7 +411,7 @@ Uri uri = new Uri(userProvidedUriTextBox.Text, UriKind.RelativeOrAbsolute);
 
 [!code-xaml[PackURIOverviewSnippets#StartupUriPage](~/samples/snippets/csharp/VS_Snippets_Wpf/PackURIOverviewSnippets/CS/App.xaml#startupuripage)]
 
-Если приложение является автономным и страница указана с помощью <xref:System.Windows.Application.StartupUri%2A>, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] открывает <xref:System.Windows.Navigation.NavigationWindow> для размещения страницы. Для XBAP страница отображается в браузере узла.
+Если приложение является автономным и страница указана с помощью <xref:System.Windows.Application.StartupUri%2A>, WPF откроет <xref:System.Windows.Navigation.NavigationWindow> для размещения страницы. Для XBAP страница отображается в браузере узла.
 
 <a name="Navigating_to_a_Page"></a>
 
@@ -423,7 +423,7 @@ Uri uri = new Uri(userProvidedUriTextBox.Text, UriKind.RelativeOrAbsolute);
 [!code-xaml[NavigationOverviewSnippets#HyperlinkXAML2](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/PageWithHyperlink.xaml#hyperlinkxaml2)]
 [!code-xaml[NavigationOverviewSnippets#HyperlinkXAML3](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/PageWithHyperlink.xaml#hyperlinkxaml3)]
 
-Дополнительные сведения о различных способах перехода по [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]см. в разделе [Общие сведения о навигации](navigation-overview.md).
+Дополнительные сведения о различных способах навигации в WPF см. в разделе [Общие сведения о навигации](navigation-overview.md).
 
 <a name="Specifying_a_Window_Icon"></a>
 
@@ -439,7 +439,7 @@ Uri uri = new Uri(userProvidedUriTextBox.Text, UriKind.RelativeOrAbsolute);
 
 #### <a name="loading-image-audio-and-video-files"></a>Загрузка файлов изображения, аудио и видео файлов
 
-[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] позволяет приложениям использовать разнообразные типы мультимедиа, которые можно определить и загрузить с помощью URI типа "Pack", как показано в следующих примерах.
+WPF позволяет приложениям использовать разнообразные типы мультимедиа, которые можно идентифицировать и загрузить с помощью URI типа Pack, как показано в следующих примерах.
 
 [!code-xaml[MediaPlayerVideoSample#VideoPackURIAtSOO](~/samples/snippets/csharp/VS_Snippets_Wpf/MediaPlayerVideoSample/CS/HomePage.xaml#videopackuriatsoo)]
 
@@ -457,8 +457,8 @@ Uri uri = new Uri(userProvidedUriTextBox.Text, UriKind.RelativeOrAbsolute);
 
 [!code-xaml[ResourceDictionarySnippets#ResourceDictionaryPackURI](~/samples/snippets/csharp/VS_Snippets_Wpf/ResourceDictionarySnippets/CS/App.xaml#resourcedictionarypackuri)]
 
-Общие сведения о темах в [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]см. в разделе [Стилизация и создание шаблонов](../../../desktop-wpf/fundamentals/styles-templates-overview.md).
+Общие сведения о темах в WPF см. в разделе [Стилизация и создание шаблонов](../../../desktop-wpf/fundamentals/styles-templates-overview.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Файлы ресурсов, контента и данных WPF-приложения](wpf-application-resource-content-and-data-files.md)
+- [Файлы ресурсов, содержимого и данных WPF-приложения](wpf-application-resource-content-and-data-files.md)

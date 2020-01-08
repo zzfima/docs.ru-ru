@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, providers
 ms.assetid: 650b5eb6-c71d-4dc1-8b64-b6beaf752114
-ms.openlocfilehash: 0b75e9645f05e5e83ff76cc138ee37e90600769a
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: b6d49f20f72282ac2ce51c26fc4eb941b7ef6734
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74569267"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346098"
 ---
 # <a name="entity-framework-provider-wcf-data-services"></a>Поставщик Entity Framework (службы данных WCF)
-Как и WCF Data Services, Entity Framework ADO.NET основывается на EDM, который является типом модели отношений сущностей. Entity Framework преобразует операции в свою реализацию EDM, которая называется *концептуальной моделью*, в эквивалентные операции с источником данных. Это делает Entity Framework идеальным поставщиком для служб данных, основанных на реляционных данных, и любой базы данных с поставщиком данных, поддерживающим Entity Framework, можно использовать с WCF Data Services. Список источников данных, которые в настоящее время поддерживают Entity Framework, см. [в разделе сторонние поставщики для Entity Framework](https://go.microsoft.com/fwlink/?LinkId=143699).  
+Как и WCF Data Services, Entity Framework ADO.NET основывается на EDM, который является типом модели отношений сущностей. Entity Framework преобразует операции в свою реализацию EDM, которая называется *концептуальной моделью*, в эквивалентные операции с источником данных. Это делает Entity Framework идеальным поставщиком для служб данных, основанных на реляционных данных, и любой базы данных с поставщиком данных, поддерживающим Entity Framework, можно использовать с WCF Data Services. Список источников данных, которые в настоящее время поддерживают Entity Framework, см. в разделе [поставщики Entity Framework](/ef/ef6/fundamentals/providers/).
   
  В концептуальной модели контейнер сущностей является корнем службы. Прежде чем данные могут быть предоставлены службой данных, необходимо определить концептуальную модель Entity Framework. Дополнительные сведения см. [в разделе инструкции. Создание службы данных с помощью источника данных ADO.NET Entity Framework](create-a-data-service-using-an-adonet-ef-data-wcf.md).  
   

@@ -2,18 +2,18 @@
 title: Практическое руководство. Объединение и сравнение коллекций строк (LINQ)
 ms.date: 07/20/2015
 ms.assetid: 243cfafc-9eaa-4354-a9df-d329f1d39913
-ms.openlocfilehash: e9bc8a5f88585bd8625633c54796a1c658c7a7af
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 2df5db16e51e8f9de8a8e3506eb1f7b737065a14
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74348428"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337569"
 ---
 # <a name="how-to-combine-and-compare-string-collections-linq-visual-basic"></a>Практические руководства. объединение и сравнение коллекций строк (LINQ) (Visual Basic)
 
 В этом примере показано объединение файлов, содержащих строки текста, и последующая сортировка результатов. В частности, показано выполнение простого сцепления, объединения и пересечения в двух наборах строк текста.
 
-### <a name="to-set-up-the-project-and-the-text-files"></a>Настройка проекта и текстовых файлов
+## <a name="set-up-the-project-and-the-text-files"></a>Настройка проекта и текстовых файлов
 
 1. Скопируйте эти имена в текстовый файл с именем names1.txt и сохраните его в папке проекта:
 
@@ -163,11 +163,11 @@ End Class
 ' 2 total names in list
 ```
 
-## <a name="compiling-the-code"></a>Компиляция кода
+## <a name="compile-the-code"></a>Компиляция кода
 
-Создайте проект консольного приложения VB.NET с помощью инструкции `Imports` для пространства имен System. LINQ.
+Создайте проект консольного приложения Visual Basic. Добавьте оператор `Imports` для пространства имен System. LINQ.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [LINQ и строки (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
 - [LINQ и каталоги файлов (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

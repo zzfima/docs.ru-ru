@@ -2,12 +2,12 @@
 title: Практическое руководство. Проецирование графа объекта
 ms.date: 07/20/2015
 ms.assetid: 9451eb47-6a31-49d7-84df-73368c618422
-ms.openlocfilehash: 68b58226dbf30f82709a39e96bef0f8cce95d0ec
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 71d41b515983e19f90e163f76ca400248d3cc848
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74347763"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636683"
 ---
 # <a name="how-to-project-an-object-graph-visual-basic"></a>Руководство. Проецирование графа объектов (Visual Basic)
 Данный раздел иллюстрирует способ проецирования, или наполнения, из XML графа объектов.  
@@ -296,7 +296,7 @@ Sub Main()
 End Sub  
 ```  
   
- В данном примере результат запроса [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] возвращается в виде <xref:System.Collections.Generic.IEnumerable%601> класса `PurchaseOrderItem`. Элементы в классе `PurchaseOrder` относятся к типу <xref:System.Collections.Generic.IEnumerable%601> класса `PurchaseOrderItem`. В коде используется метод расширения <xref:System.Linq.Enumerable.ToList%2A> для создания коллекции <xref:System.Collections.Generic.List%601> исходя из результатов запроса.  
+ В этом примере результат запроса LINQ возвращается в виде <xref:System.Collections.Generic.IEnumerable%601> `PurchaseOrderItem`. Элементы в классе `PurchaseOrder` относятся к типу <xref:System.Collections.Generic.IEnumerable%601> класса `PurchaseOrderItem`. В коде используется метод расширения <xref:System.Linq.Enumerable.ToList%2A> для создания коллекции <xref:System.Collections.Generic.List%601> исходя из результатов запроса.  
   
  Пример выводит следующие результаты:  
   
@@ -337,7 +337,7 @@ USPrice: 39.98
 ShipDate: 5/21/1999  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - <xref:System.Linq.Enumerable.Select%2A>
 - <xref:System.Linq.Enumerable.ToList%2A>

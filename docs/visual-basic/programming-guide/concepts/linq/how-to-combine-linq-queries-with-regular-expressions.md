@@ -2,12 +2,12 @@
 title: Практическое руководство. Объединение запросов LINQ с регулярными выражениями
 ms.date: 07/20/2015
 ms.assetid: 3da1bd10-b0d8-4d5b-a637-966891c13592
-ms.openlocfilehash: 27fc46056ad78567339ca0c5818aef38d0fbb9a6
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: a091418be1f7cc30d42a98f80ebae2d36d29b5d8
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74348422"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337549"
 ---
 # <a name="how-to-combine-linq-queries-with-regular-expressions-visual-basic"></a>Как сочетать запросы LINQ с помощью регулярных выражений (Visual Basic)
 
@@ -84,11 +84,11 @@ End Class
 
 Обратите внимание, что можно также запросить объект <xref:System.Text.RegularExpressions.MatchCollection>, возвращаемый поиском `RegEx`. В этом примере в результатах создается только значение каждого совпадения. Тем не менее вы можете использовать LINQ для выполнения всех видов фильтрации, сортировки и группировки в этой коллекции. Так как <xref:System.Text.RegularExpressions.MatchCollection> является неуниверсальной коллекцией <xref:System.Collections.IEnumerable>, необходимо явно указать тип переменной диапазона в запросе.
 
-## <a name="compiling-the-code"></a>Компиляция кода
+## <a name="compile-the-code"></a>Компиляция кода
 
-Создайте проект консольного приложения VB.NET, скопируйте и вставьте пример кода и измените значение объекта Startup в свойствах проекта.
+Создайте Visual Basic проект консольного приложения, скопируйте и вставьте пример кода и измените значение объекта Startup в свойствах проекта.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [LINQ и строки (Visual Basic)](linq-and-strings.md)
 - [LINQ и каталоги файлов (Visual Basic)](linq-and-file-directories.md)

@@ -2,12 +2,12 @@
 title: Практическое руководство. Изменение документа в формате Office Open XML
 ms.date: 07/20/2015
 ms.assetid: 1cefd7f5-8e39-44c4-869c-f8021538a777
-ms.openlocfilehash: 623376a68ee2f032fb53d51b61c4c5881b0b9e18
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: a6d546b064afe7020e5d3287351e946e182f03e6
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74336017"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337894"
 ---
 # <a name="how-to-modify-an-office-open-xml-document-visual-basic"></a>Как изменить документ Office Open XML (Visual Basic)
 В этом разделе представлен пример, в котором открывается документ Office Open XML, затем он изменяется и сохраняется.  
@@ -67,7 +67,7 @@ Module Module1
         Return (e.<w:r>.<w:t>).StringConcatenate(Function(element) CStr(element))  
     End Function  
   
-    ' Following function is required because VB does not support short circuit evaluation  
+    ' Following function is required because Visual Basic does not support short circuit evaluation  
     Private Function GetStyleOfParagraph(ByVal styleNode As XElement, _  
                                          ByVal defaultStyle As String) As String  
         If (styleNode Is Nothing) Then  
@@ -143,6 +143,6 @@ End Module
 New first paragraph: >PARSING WORDPROCESSINGML WITH LINQ TO XML<  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Дополнительные методы запросов (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

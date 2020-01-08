@@ -2,12 +2,12 @@
 title: Инструкции брандмауэра
 ms.date: 03/30/2017
 ms.assetid: a7dc429f-65ac-4faf-974a-77d5fb977fe1
-ms.openlocfilehash: 3c94f0edbb244b6c378cc32f05c34fd029d253ff
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: e2c4dd8e784599a5e110e7454d9d0e709cbc5776
+ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837848"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75544781"
 ---
 # <a name="firewall-instructions"></a>Инструкции брандмауэра
 Необходимо включить несколько портов или программ в брандмауэре, чтобы образцы Windows Communication Foundation (WCF) могли работать. Многие из образцов сообщаются с использованием портов в диапазоне 8000-8003 и порта 9000. По умолчанию брандмауэр включен и запрещает доступ к этим портам. Чтобы включить брандмауэр для примеров, завершите одну из следующих операций, в зависимости от требований и среды безопасности.  
@@ -36,7 +36,7 @@ ms.locfileid: "74837848"
   
     - В Windows 7 или Windows Server 2008 R2 щелкните **Разрешить программу или компонент через брандмауэр Windows**. Щелкните **изменить параметры**, разрешить **другую программу...**  
   
-    - В Windows Vista или [!INCLUDE[lserver](../../../../includes/lserver-md.md)]щелкните **Разрешить программу через брандмауэр Windows**.  
+    - В Windows Vista или Windows Server 2008 щелкните **Разрешить программу через брандмауэр Windows**.  
   
 4. На вкладке **исключения** нажмите кнопку **Добавить программу**.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "74837848"
   
     10. Щелкните **правила для исходящих подключений** и повторите шаги c до h.  
   
-3. В Windows Vista или [!INCLUDE[lserver](../../../../includes/lserver-md.md)]выполните следующие действия.  
+3. В Windows Vista или Windows Server 2008 выполните следующие действия.  
   
     1. Щелкните **Разрешение запуска программы через брандмауэр Windows**.  
   

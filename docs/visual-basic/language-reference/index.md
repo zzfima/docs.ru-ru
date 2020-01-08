@@ -10,18 +10,18 @@ helpviewer_keywords:
 - language reference, Visual Basic
 - Visual Basic, language reference
 ms.assetid: 5c6bd31a-9542-4f3e-bfd5-e951af58f0f2
-ms.openlocfilehash: ba611be8e63380f2bff958e37b72ffe8e0f90d9a
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 90cd1984ceb3bdb9de62450e86184f493e7417f0
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837094"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636722"
 ---
 # <a name="visual-basic-language-reference"></a>Справочник по языку Visual Basic
 
 В этом разделе содержатся справочные сведения о различных аспектах языка Visual Basic.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
 
  [Условные обозначения и соглашения о коде](../../visual-basic/language-reference/typographic-and-code-conventions.md)  
  Суммирует сведения о том, как ключевые слова, заполнители и другие элементы языка форматируются в документации по Visual Basic.  
@@ -66,7 +66,7 @@ ms.locfileid: "74837094"
  Документирует свойства, доступные в Visual Basic.  
   
  [Запросы](../../visual-basic/language-reference/queries/index.md)  
- Приводит справочную информацию об использовании в коде выражений [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)].  
+ Содержит справочные сведения об использовании выражений LINQ в коде.  
   
  [Операторы](../../visual-basic/language-reference/statements/index.md)  
  Документирует объявления и исполняемые операторы, доступные в Visual Basic.  
