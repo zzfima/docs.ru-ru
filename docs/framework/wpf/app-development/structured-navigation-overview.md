@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - structured navigation [WPF]
 ms.assetid: 025d30ef-fec5-436d-ad7a-5d5483331c26
-ms.openlocfilehash: 09c3c57f3ac1009416a5c67b37c035fe30cd5b5e
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 5e8c27d017ed4bf8a7dcc2dda18877c9ed8dba69
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73425331"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636345"
 ---
 # <a name="structured-navigation-overview"></a>Общие сведения о структурной навигации
 
@@ -135,7 +135,7 @@ ms.locfileid: "73425331"
 
   - Получение и использование параметров, хранимых в <xref:System.Windows.Application.Properties%2A>.
 
-Однако вскоре вы увидите, что и в этом случае потребуется код для создания экземпляра и перехода к вызываемой странице для сбора данных, возвращаемых вызываемой страницей. По этой причине <xref:System.Windows.Navigation.PageFunction%601> необходимо поддерживать в активном состоянии. в противном случае при следующем переходе к <xref:System.Windows.Navigation.PageFunction%601>[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] создает экземпляр <xref:System.Windows.Navigation.PageFunction%601> с помощью конструктора без параметров.
+Однако вскоре вы увидите, что и в этом случае потребуется код для создания экземпляра и перехода к вызываемой странице для сбора данных, возвращаемых вызываемой страницей. По этой причине <xref:System.Windows.Navigation.PageFunction%601> необходимо поддерживать в активном состоянии. в противном случае при следующем переходе к <xref:System.Windows.Navigation.PageFunction%601>WPF создает экземпляр <xref:System.Windows.Navigation.PageFunction%601> с помощью конструктора без параметров.
 
 Однако до возврата вызываемой страницы она должна вернуть данные, которые могут быть получены вызывающей страницей.
 
@@ -179,7 +179,7 @@ ms.locfileid: "73425331"
 
 В других случаях для эффективной работы приложения могут иметь сложные топологии переходов, зависящие от структурной навигации. Дополнительную информацию см. в разделе [Общие сведения о топологиях навигации](navigation-topologies-overview.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - <xref:System.Windows.Navigation.PageFunction%601>
 - <xref:System.Windows.Navigation.NavigationService>

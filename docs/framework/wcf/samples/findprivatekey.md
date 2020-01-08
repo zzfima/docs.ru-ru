@@ -1,15 +1,15 @@
 ---
-title: Пример FindPrivateKey — WCF
+title: Пример FindPrivateKey
 ms.date: 12/04/2017
 helpviewer_keywords:
 - FindPrivateKey
 ms.assetid: 16b54116-0ceb-4413-af0c-753bb2a785a6
-ms.openlocfilehash: 4ba4316489c1494da9421bea5c513e44c6eb50a7
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 0ed1e5e81a5d2f7f3586e5dce306e8244b5ebd48
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70989875"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346016"
 ---
 # <a name="findprivatekey-sample"></a>Пример FindPrivateKey
 
@@ -46,13 +46,13 @@ cacls.exe "C:\Documents and Settings\All Users\Application Data\Microsoft\Crypto
 
 Чтобы скачать проект, перейдите на страницу [примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459).
 
-1. Откройте проводник и перейдите в папку *WF_WCF_Samples\WCF\Setup\FindPrivateKey\CS* , расположенную в каталоге, где был установлен пример.
+1. Откройте проводник и перейдите в папку *WF_WCF_Samples \вкф\сетуп\финдприватекэй\кс* в каталоге, где был установлен пример.
 
 2. Дважды щелкните значок файла с расширением SLN, чтобы открыть файл в Visual Studio.
 
 3. В меню **Сборка** выберите **Перестроить решение**.
 
-4. При построении решения файл создается следующим образом: FindPrivateKey. exe.
+4. В результате построения решения будет создан файл FindPrivateKey.exe.
 
 ## <a name="conventionscommand-line-entries"></a>Соглашения — записи командной строки
 
@@ -64,7 +64,7 @@ cacls.exe "C:\Documents and Settings\All Users\Application Data\Microsoft\Crypto
 
  "\<*значение*>" представляет значение параметра, которое необходимо указать.
 
-## <a name="usage"></a>Использование
+## <a name="usage"></a>Метрики
 
 ```console
 FindPrivateKey <storeName> <storeLocation> [{ {-n <subjectName>} | {-t <thumbprint>} } [-f | -d | -a]]

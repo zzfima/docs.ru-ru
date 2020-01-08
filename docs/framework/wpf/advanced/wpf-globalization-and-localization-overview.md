@@ -5,12 +5,12 @@ helpviewer_keywords:
 - globalization [WPF], about globalization
 - localization [WPF], about localization
 ms.assetid: 56e5a5c8-6c96-4d19-b8e1-a5be1dc564af
-ms.openlocfilehash: b8777e1402bef1708136a5f81a641beb8c761905
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: c2b78b990969fb5bc9814ebda8ffcf38efa458b1
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740713"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559928"
 ---
 # <a name="wpf-globalization-and-localization-overview"></a>Общие сведения о глобализации и локализации WPF
 
@@ -42,7 +42,7 @@ ms.locfileid: "73740713"
 
 - Включите <xref:System.Windows.Controls.TextBlock.TextWrapping%2A> на <xref:System.Windows.Controls.TextBlock>, чтобы избежать обрезки.
 
-- Задайте атрибут `xml:lang` . Этот атрибут описывает язык и региональные параметры определенного элемента и его дочерних элементов. Значение этого свойства изменяет поведение нескольких функций в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Например, изменяется процесс переноса по слогам, проверки орфографии, подстановки чисел, формирования сложных скриптов и подмены шрифта. Дополнительные сведения о настройке [обработки XML: lang в XAML](../../xaml-services/xml-lang-handling-in-xaml.md)см. в разделе [глобализация для WPF](globalization-for-wpf.md) .
+- Задайте атрибут `xml:lang` . Этот атрибут описывает язык и региональные параметры определенного элемента и его дочерних элементов. Значение этого свойства изменяет поведение нескольких функций в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Например, изменяется процесс переноса по слогам, проверки орфографии, подстановки чисел, формирования сложных скриптов и подмены шрифта. Дополнительные сведения о настройке [обработки XML: lang в XAML](../../../desktop-wpf/xaml-services/xml-language-handling.md)см. в разделе [глобализация для WPF](globalization-for-wpf.md) .
 
 - Создайте настраиваемый составной шрифт, чтобы улучшить управление шрифтами, используемыми для разных языков. По умолчанию [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] использует шрифт Глобалусеринтерфаце. Composite в каталоге Windows\fonts.
 
@@ -148,7 +148,7 @@ ms.locfileid: "73740713"
 
 `xml:lang="en-US"`
 
-Обратите внимание на [обработку XML: lang в XAML](../../xaml-services/xml-lang-handling-in-xaml.md) , размещенную в корневом элементе [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. Это свойство описывает язык и региональные параметры конкретного элемента и его потомков. Это значение используется несколькими компонентами в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] и должно быть соответствующим образом изменено во время локализации. Это значение изменяется в зависимости от того, какой языковой словарь используется для расстановки переносов и проверки орфографии слов. Оно также влияет на отображение цифр и на то, как система подмены шрифтов выбирает шрифт для использования. Наконец, это свойство влияет на способ отображения чисел и на способ написания текста в сложных скриптах. По умолчанию используется значение en-US.
+Обратите внимание на [обработку XML: lang в XAML](../../../desktop-wpf/xaml-services/xml-language-handling.md) , размещенную в корневом элементе [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. Это свойство описывает язык и региональные параметры конкретного элемента и его потомков. Это значение используется несколькими компонентами в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] и должно быть соответствующим образом изменено во время локализации. Это значение изменяется в зависимости от того, какой языковой словарь используется для расстановки переносов и проверки орфографии слов. Оно также влияет на отображение цифр и на то, как система подмены шрифтов выбирает шрифт для использования. Наконец, это свойство влияет на способ отображения чисел и на способ написания текста в сложных скриптах. По умолчанию используется значение en-US.
 
 **Создание вспомогательной сборки ресурсов**
 
@@ -178,27 +178,27 @@ ms.locfileid: "73740713"
 
 Для редактирования этого файла можно воспользоваться любым редактором CSV, поддерживающим Юникод. Исключите все записи с категорией локализации "Нет". Должны остаться следующие записи.
 
-|Ключ ресурса|Категория локализации|значения|
+|Ключ ресурса|Категория локализации|{2&gt;Value&lt;2}|
 |-|-|-|
 |Button_1:System.Windows.Controls.Button.$Content|Кнопка|ОК|
 |Button_2:System.Windows.Controls.Button.$Content|Кнопка|Cancel|
 |Button_3:System.Windows.Controls.Button.$Content|Кнопка|Обзор...|
 |ComboBox_1:System.Windows.Controls.ComboBox.$Content|ComboBox||
-|TextBlock_1:System.Windows.Controls.TextBlock.$Content|Text|Введите имя программы, папки, документа или ресурса Интернета, и Windows откроет их.|
-|TextBlock_2:System.Windows.Controls.TextBlock.$Content|Text|Открыть:|
-|Window_1:System.Windows.Window.Title|Заголовок|Выполнить|
+|TextBlock_1:System.Windows.Controls.TextBlock.$Content|Текст|Введите имя программы, папки, документа или ресурса Интернета, и Windows откроет их.|
+|TextBlock_2:System.Windows.Controls.TextBlock.$Content|Текст|Открыть.|
+|Window_1:System.Windows.Window.Title|Заголовок|Запуск|
 
 Для локализации приложений в немецком языке потребуются следующие переводы.
 
-|Ключ ресурса|Категория локализации|значения|
+|Ключ ресурса|Категория локализации|{2&gt;Value&lt;2}|
 |-|-|-|
 |Button_1:System.Windows.Controls.Button.$Content|Кнопка|ОК|
 |Button_2:System.Windows.Controls.Button.$Content|Кнопка|Abbrechen|
 |Button_3:System.Windows.Controls.Button.$Content|Кнопка|Durchsuchen…|
 |ComboBox_1:System.Windows.Controls.ComboBox.$Content|ComboBox||
-|TextBlock_1:System.Windows.Controls.TextBlock.$Content|Text|Geben Sie den Namen eines Programms, Ordners, Dokuments oder einer Internetresource an.|
-|TextBlock_2:System.Windows.Controls.TextBlock.$Content|Text|Öффнен:|
-|Window_1:System.Windows.Window.Title|Заголовок|Выполнить|
+|TextBlock_1:System.Windows.Controls.TextBlock.$Content|Текст|Geben Sie den Namen eines Programms, Ordners, Dokuments oder einer Internetresource an.|
+|TextBlock_2:System.Windows.Controls.TextBlock.$Content|Текст|Открыть.|
+|Window_1:System.Windows.Window.Title|Заголовок|Запуск|
 
 **Создание**
 
@@ -265,11 +265,11 @@ ms.locfileid: "73740713"
 
 [!code-xaml[GlobalizationHomepage#LocalizationComment](~/samples/snippets/csharp/VS_Snippets_Wpf/GlobalizationHomepage/CS/Homepage.xaml#localizationcomment)]
 
-Этот комментарий связан с содержимым TextBlock_1's и в случае средства LocBaml (см. раздел [Локализация приложения](how-to-localize-an-application.md)) оно может отображаться в шестом столбце строки TextBlock_1 в файле Output. csv:
+Этот комментарий связан с содержимым TextBlock_1 и в случае средства LocBaml (см. раздел [Локализация приложения](how-to-localize-an-application.md)) оно может отображаться в шестом столбце строки TextBlock_1 в файле Output. csv.
 
-|Ключ ресурса|Категория|Доступен для чтения|Изменяемый|Добавление примечаний|значения|
+|Ключ ресурса|Категория|Доступен для чтения|Возможность изменения|Комментарий|{2&gt;Value&lt;2}|
 |-|-|-|-|-|-|
-|TextBlock_1:System.Windows.Controls.TextBlock.$Content|Text|true|true|Этот символ используется в качестве декоративного правила.|&#124;|
+|TextBlock_1:System.Windows.Controls.TextBlock.$Content|Текст|true|true|Этот символ используется в качестве декоративного правила.|&#124;|
 
 Комментарии могут быть помещены в содержимое или в свойство любого элемента посредством следующего синтаксиса.
 
@@ -285,7 +285,7 @@ ms.locfileid: "73740713"
 
 [!code-xaml[LocalizationComAtt#LocalizationAttributesOverridden](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizationComAtt/CSharp/Attributes.xaml#localizationattributesoverridden)]
 
-Атрибуты локализации по умолчанию, которые [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] предоставляют, также могут быть переопределены с помощью кода, поэтому можно правильно задать значения по умолчанию для пользовательских элементов управления. Пример:
+Атрибуты локализации по умолчанию, которые [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] предоставляют, также могут быть переопределены с помощью кода, поэтому можно правильно задать значения по умолчанию для пользовательских элементов управления. Например:
 
 ```csharp
 [Localizability(Readability = Readability.Readable, Modifiability=Modifiability.Unmodifiable, LocalizationCategory.None)]
