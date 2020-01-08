@@ -8,12 +8,12 @@ helpviewer_keywords:
 - platform invoke, accessing APIs with C#
 - C# language, interoperability
 ms.assetid: 238bb95a-e962-4026-bbd5-197055bdb8ee
-ms.openlocfilehash: 560218361f470266654734971a12de7862722a46
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 64fac0245dcf5976786b51e0d96b795b8b1e5d68
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423182"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635201"
 ---
 # <a name="interoperability-c-programming-guide"></a>Взаимодействие (Руководство по программированию в C#)
 Возможность взаимодействия позволяет использовать уже созданный неуправляемый код, экономя средства на разработку. Код, который выполняется под управлением среды CLR, называется *управляемым кодом*, а код, который выполняется вне среды CLR, называется *неуправляемым кодом*. COM, COM +, компоненты C++, компоненты ActiveX и Microsoft Windows API являются примерами неуправляемого кода.  
@@ -24,13 +24,13 @@ ms.locfileid: "73423182"
  [Общие сведения о взаимодействии](./interoperability-overview.md)  
  Описывает способы взаимодействия между управляемым кодом C# и неуправляемым кодом.  
   
- [Практическое руководство. Доступ к объектам взаимодействия Office с помощью функций языка Visual C#](./how-to-access-office-onterop-objects.md)  
+ [Практическое руководство. Доступ к объектам взаимодействия Office с помощью функций языка C#](./how-to-access-office-onterop-objects.md)  
  Описывает возможности, представленные в Visual C#, которые упрощают программирование для Office.  
   
  [Практическое руководство. Использование индексированных свойств в программировании COM-взаимодействия](./how-to-use-indexed-properties-in-com-interop-rogramming.md)  
  Описывает использование индексированных свойств для доступа к свойствам COM, которые имеют параметры.  
   
- [Практическое руководство. Использование вызова неуправляемого кода для воспроизведения звукового файла](./how-to-use-platform-invoke-to-play-a-wave-file.md)  
+ [Практическое руководство. Использование вызова неуправляемого кода для воспроизведения WAV-файла](./how-to-use-platform-invoke-to-play-a-wave-file.md)  
  Описывает, как использовать платформу вызова служб, чтобы воспроизвести звуковой WAV-файл в операционной системе Windows.  
   
  [Пошаговое руководство. Программирование для Office](./walkthrough-office-programming.md)  
@@ -48,4 +48,4 @@ ms.locfileid: "73423182"
 - <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A?displayProperty=nameWithType>
 - [Руководство по программированию на C#](../index.md)
 - [Взаимодействие с неуправляемым кодом](../../../framework/interop/index.md)
-- [Пошаговое руководство. Программирование для Office](./walkthrough-office-programming.md)
+- [Пошаговое руководство: Программирование для Office](./walkthrough-office-programming.md)

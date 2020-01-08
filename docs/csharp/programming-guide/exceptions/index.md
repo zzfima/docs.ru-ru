@@ -7,12 +7,12 @@ helpviewer_keywords:
 - exceptions [C#]
 - C# language, exceptions
 ms.assetid: 0001887f-4fa2-47e2-8034-2819477e2344
-ms.openlocfilehash: 3506406a441cb2028c00d5b8ed87b57cc6dff38b
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 9229c1524a400112a1b48bc40866d6dd1b7cf21b
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423257"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346241"
 ---
 # <a name="exceptions-and-exception-handling-c-programming-guide"></a>Исключения и обработка исключений (Руководство по программированию в C#)
 
@@ -47,7 +47,7 @@ ms.locfileid: "73423257"
 - [Обработка исключений](exception-handling.md)
 - [Создание и порождение исключений](creating-and-throwing-exceptions.md)
 - [Исключения, создаваемые компилятором](compiler-generated-exceptions.md)
-- [Практическое руководство. Руководство по программированию на C#. Обработка исключений с помощью блока try-catch](how-to-handle-an-exception-using-try-catch.md)
+- [Практическое руководство. Обработка исключений с помощью блока try-catch (руководство по программированию на C#)](how-to-handle-an-exception-using-try-catch.md)
 - [Практическое руководство. Выполнение кода очистки с использованием блока finally](how-to-execute-cleanup-code-using-finally.md)
 - [Практическое руководство. Перехват несовместимого с CLS исключения](how-to-catch-a-non-cls-exception.md)
 

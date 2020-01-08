@@ -8,21 +8,21 @@
           href: viewing-type-information.md
         - name: Отражение и универсальные типы
           href: reflection-and-generic-types.md
-        - name: 'Практическое руководство: Изучение универсальных типов и создание их экземпляров при помощи отражения'
+        - name: Практическое руководство. Изучение универсальных типов и создание их экземпляров при помощи отражения
           href: how-to-examine-and-instantiate-generic-types-with-reflection.md
         - name: Соображения о безопасности для отражения
           href: security-considerations-for-reflection.md
         - name: Динамическая загрузка и использование типов
           href: dynamically-loading-and-using-types.md
-        - name: 'Практическое руководство: Загрузка сборок в контекст, предназначенный только для отражения'
+        - name: 'Практическое руководство. Загрузка сборок в контекст, предназначенный только для отражения'
           href: how-to-load-assemblies-into-the-reflection-only-context.md
-        - name: 'Практическое руководство: Получение сведений о типах и членах с помощью отражения'
+        - name: Практическое руководство. Получение сведений о типах и членах с помощью отражения
           href: get-type-member-information.md
         - name: Доступ к пользовательским атрибутам
           href: accessing-custom-attributes.md
         - name: Указание полных имен типов
           href: specifying-fully-qualified-type-names.md
-        - name: 'Практическое руководство: Подключение делегата с помощью отражения'
+        - name: Практическое руководство. Подключение делегата с помощью отражения
           href: how-to-hook-up-a-delegate-using-reflection.md
         - name: Отражение в .NET Framework для приложений для Магазина Windows
           href: reflection-for-windows-store-apps.md
@@ -31,26 +31,27 @@
       items:
         - name: Вопросы безопасности в порождаемом отражении
           href: security-issues-in-reflection-emit.md
-        - name: Пошаговое руководство Выпуск кода в сценариях частичного доверия
+        - name: Пошаговое руководство. Выпуск кода в сценариях частичного доверия
           href: walkthrough-emitting-code-in-partial-trust-scenarios.md
-        - name: 'Практическое руководство: Определение и выполнение динамических методов'
+        - name: Практическое руководство. Определение и выполнение динамических методов
           href: how-to-define-and-execute-dynamic-methods.md
-        - name: 'Практическое руководство: Определение универсального типа с порождаемым отражением'
+        - name: Практическое руководство. Определение универсального типа с порождаемым отражением
           href: how-to-define-a-generic-type-with-reflection-emit.md
-        - name: 'Практическое руководство: Определение универсального метода с порождаемым отражением'
+        - name: Практическое руководство. Определение универсального метода с порождаемым отражением
           href: how-to-define-a-generic-method-with-reflection-emit.md
         - name: Забираемые сборки для динамической генерации типа
           href: collectible-assemblies.md
     - name: Общие сведения о среде DLR
       href: dynamic-language-runtime-overview.md
     - name: Динамическое создание и компиляция исходного кода
-      href: dynamic-source-code-generation-and-compilation.md
       items:
+        - name: Обзор
+          href: dynamic-source-code-generation-and-compilation.md
         - name: Использование CodeDOM
           href: using-the-codedom.md
         - name: Создание и компиляция исходного кода из графа CodeDOM
           href: generating-and-compiling-source-code-from-a-codedom-graph.md
-        - name: 'Практическое руководство: Создание XML-файла документации с использованием CodeDOM'
+        - name: Создание XML-файла документации с использованием CodeDOM
           href: how-to-create-an-xml-documentation-file-using-codedom.md
-        - name: 'Практическое руководство: Создание класса с помощью CodeDOM'
+        - name: Создание класса с помощью CodeDOM
           href: how-to-create-a-class-using-codedom.md

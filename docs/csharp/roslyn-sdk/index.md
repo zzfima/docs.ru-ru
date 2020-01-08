@@ -3,12 +3,12 @@ title: Пакет SDK для платформы компилятора .NET (API
 description: Узнайте, как использовать пакет SDK для .NET Compiler Platform (другое название — API-интерфейсы Roslyn), чтобы анализировать код .NET, находить ошибки и исправлять их.
 ms.date: 10/10/2017
 ms.custom: mvc
-ms.openlocfilehash: ea733d4c5c54c18e510a028f3a724f89490db9dd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3a202d977237ce716e3f8c0cf906894efd02196d
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61706550"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346955"
 ---
 # <a name="the-net-compiler-platform-sdk"></a>Пакет SDK для .NET Compiler Platform
 
@@ -29,8 +29,8 @@ ms.locfileid: "61706550"
 
 Есть три основных сценария использования анализаторов и средств исправления кода:
 
-1. [*Применение стандартов кодирования в команде.*](#enforce-team-coding-standards)
-1. [*Предоставление рекомендаций с пакетами библиотек.*](#provide-guidance-with-library-packages)
+1. [*Применение стандартов кодирования в команде.* ](#enforce-team-coding-standards)
+1. [*Предоставление рекомендаций с пакетами библиотек.* ](#provide-guidance-with-library-packages)
 1. [*Предоставление общих рекомендаций*](#provide-general-guidance)
 
 ## <a name="enforce-team-coding-standards"></a>Применение стандартов кодирования в команде

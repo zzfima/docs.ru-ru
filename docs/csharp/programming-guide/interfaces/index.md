@@ -6,12 +6,12 @@ helpviewer_keywords:
 - interfaces [C#]
 - C# language, interfaces
 ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
-ms.openlocfilehash: 77326b37baebc3ade12336b1b3735ed1da497afc
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d03917353a9e6879ccb3b368d7d190aeeacb702c
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120154"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635240"
 ---
 # <a name="interfaces-c-programming-guide"></a>Интерфейсы (Руководство по программированию в C#)
 
@@ -62,17 +62,17 @@ ms.locfileid: "73120154"
 [Явная реализация интерфейса](explicit-interface-implementation.md)  
  В этом разделе объясняется, как создать член класса, который относится к интерфейсу.  
   
- [Практическое руководство. Явная реализация элементов интерфейса](how-to-explicitly-implement-interface-members.md)  
+ [Практическое руководство. Явная реализация членов интерфейса](how-to-explicitly-implement-interface-members.md)  
  В этом разделе содержится пример явной реализации членов интерфейсов.  
   
- [Практическое руководство. Явная реализация элементов двух интерфейсов](how-to-explicitly-implement-members-of-two-interfaces.md)  
+ [Практическое руководство. Явная реализация членов двух интерфейсов](how-to-explicitly-implement-members-of-two-interfaces.md)  
  В этом разделе содержится пример явной реализации членов интерфейсов с помощью наследования.  
   
 ## <a name="BKMK_RelatedSections"></a> Связанные разделы
 
 - [Свойства интерфейса](../classes-and-structs/interface-properties.md)  
 - [Индексаторы в интерфейсах](../indexers/indexers-in-interfaces.md)  
-- [Практическое руководство.  Реализация событий интерфейса](../events/how-to-implement-interface-events.md)  
+- [Практическое руководство. Реализация событий интерфейса](../events/how-to-implement-interface-events.md)
 - [Классы и структуры](../classes-and-structs/index.md)  
 - [Наследование](../classes-and-structs/inheritance.md)  
 - [Методы](../classes-and-structs/methods.md)  

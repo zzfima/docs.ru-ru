@@ -1,34 +1,32 @@
 - name: Windows Presentation Foundation (WPF) для .NET Core
+  href: overview/index.md
+- name: Начало работы
   items:
-    - name: Обзор
+    - name: Создание приложения WPF
+      href: 'https://docs.microsoft.com/visualstudio/get-started/csharp/tutorial-wpf?toc=/dotnet/desktop-wpf/toc.json&bc=/dotnet/breadcrumb/toc.json'
+- name: Миграция
+  items:
+    - name: Отличия от платформы .NET Framework
+      href: migration/differences-from-net-framework.md
+    - name: Переход с Framework на Core
+      href: migration/convert-project-from-net-framework.md
+- name: Основы
+  items:
+    - name: XAML
+      href: fundamentals/xaml.md
+    - name: Определение ресурсов
+      href: fundamentals/xaml-resources-define.md
+    - name: Стили и шаблоны
       items:
-        - name: Что такое WPF?
-          href: overview/index.md
-    - name: Начало работы
-      items:
-        - name: Создание приложения WPF
-          href: 'https://docs.microsoft.com/visualstudio/get-started/csharp/tutorial-wpf?toc=/dotnet/desktop-wpf/toc.json&bc=/dotnet/breadcrumb/toc.json'
-    - name: Миграция
-      items:
-        - name: Отличия от платформы .NET Framework
-          href: migration/differences-from-net-framework.md
-        - name: Переход с Framework на Core
-          href: migration/convert-project-from-net-framework.md
-    - name: Основы
-      items:
-        - name: XAML
-          href: fundamentals/xaml.md
-        - name: Определение ресурсов
-          href: fundamentals/xaml-resources-define.md
-        - name: Стили и шаблоны
-          items:
-            - name: Обзор
-              href: fundamentals/styles-templates-overview.md
-            - name: Создание и применение стиля
-              href: fundamentals/styles-templates-create-apply-style.md
-            - name: Создание и применение шаблона
-              href: themes/how-to-create-apply-template.md
-    - name: Работа с данными
-      items:
-        - name: Общие сведения о привязке данных
-          href: data/data-binding-overview.md
+        - name: Обзор
+          href: fundamentals/styles-templates-overview.md
+        - name: Создание и применение стиля
+          href: fundamentals/styles-templates-create-apply-style.md
+        - name: Создание и применение шаблона
+          href: themes/how-to-create-apply-template.md
+    - name: Справочник по языку XAML
+      href: xaml-services/
+- name: Работа с данными
+  items:
+    - name: Общие сведения о привязке данных
+      href: data/data-binding-overview.md

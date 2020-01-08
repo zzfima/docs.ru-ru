@@ -19,7 +19,7 @@
             - name: Электронная книга по архитектуре микрослужб .NET
               tocHref: /dotnet/architecture/microservices/
               topicHref: /dotnet/architecture/microservices/index
-            - name: Собственные решения в облаке
+            - name: Полностью облачные
               tocHref: /dotnet/architecture/cloud-native/
               topicHref: /dotnet/architecture/cloud-native/index
             - name: Электронная книга по модернизации приложений .NET
@@ -66,6 +66,9 @@
             - name: "Разработка с помощью\_.NET для множества платформ"
               tocHref: /dotnet/standard/cross-platform/
               topicHref: /dotnet/standard/cross-platform/index
+            - name: Microsoft.Data.Sqlite
+              tocHref: /dotnet/standard/data/sqlite/
+              topicHref: /dotnet/standard/data/sqlite/index
             - name: XML-документы и данные
               tocHref: /dotnet/standard/data/xml/
               topicHref: /dotnet/standard/data/xml/index
@@ -173,7 +176,7 @@
             - name: Надстройки и расширения среды
               tocHref: /dotnet/framework/add-ins/
               topicHref: /dotnet/framework/add-ins/index
-            - name: дополнительные программные интерфейсы;
+            - name: Дополнительные API
               tocHref: /dotnet/framework/additional-apis/
               topicHref: /dotnet/framework/additional-apis/index
             - name: Домены приложений и сборки
@@ -223,7 +226,7 @@
                     - name: Раздел конфигурации Windows Forms
                       tocHref: /dotnet/framework/configure-apps/file-schema/winforms/
                       topicHref: /dotnet/framework/configure-apps/file-schema/winforms/index
-            - name: Данные и модели в .NET Framework
+            - name: Данные и моделирование
               tocHref: /dotnet/framework/data/
               topicHref: /dotnet/framework/data/index
               items:
@@ -281,13 +284,13 @@
             - name: Компиляция приложений с помощью машинного кода .NET
               tocHref: /dotnet/framework/net-native/
               topicHref: /dotnet/framework/net-native/index
-            - name: Сетевое программирование в .NET Framework
+            - name: Сетевое программирование
               tocHref: /dotnet/framework/network-programming/
               topicHref: /dotnet/framework/network-programming/index
             - name: Производительность .NET Framework
               tocHref: /dotnet/framework/performance/
               topicHref: /dotnet/framework/performance/index
-            - name: Динамическое программирование в .NET Framework
+            - name: Динамическое программирование
               tocHref: /dotnet/framework/reflection-and-codedom/
               topicHref: /dotnet/framework/reflection-and-codedom/index
             - name: Ресурсы в приложениях для настольных систем
@@ -429,7 +432,7 @@
             - name: 'привязка данных,'
               tocHref: /dotnet/desktop-wpf/data
               topicHref: /dotnet/desktop-wpf/data/index
-        - name: 'Руководство по C#'
+        - name: 'Руководство по языку C#'
           tocHref: /dotnet/csharp/
           topicHref: /dotnet/csharp/index
           items:
@@ -488,7 +491,7 @@
                 - name: Индексаторы
                   tocHref: /dotnet/csharp/programming-guide/indexers/
                   topicHref: /dotnet/csharp/programming-guide/indexers/index
-                - name: 'интерфейсов,'
+                - name: Интерфейсы
                   tocHref: /dotnet/csharp/programming-guide/interfaces/
                   topicHref: /dotnet/csharp/programming-guide/interfaces/index
                 - name: Взаимодействие
@@ -682,7 +685,7 @@
             - name: Справочник по языку
               tocHref: /dotnet/visual-basic/language-reference/
               topicHref: /dotnet/visual-basic/language-reference/index
-            - name: Ссылка
+            - name: Справочник
               tocHref: /dotnet/visual-basic/reference/
               topicHref: /dotnet/visual-basic/reference/index
         - name: Руководство по ML.NET

@@ -6,12 +6,12 @@ metadata:
   description: Программирование на C#. Документация для начинающих разработчиков, для тех, кто только начинает работать на C#, а также для опытных разработчиков C# и .NET
   ms.topic: landing-page
   ms.date: 11/19/2019
-  ms.openlocfilehash: fa778c4610dbfe8320d488098b5bfd39de8e4705
-  ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+  ms.openlocfilehash: 2bec49d0832a7d00d0fea247166a9ec073f37e11
+  ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
   ms.translationtype: HT
   ms.contentlocale: ru-RU
-  ms.lasthandoff: 12/05/2019
-  ms.locfileid: "75303420"
+  ms.lasthandoff: 12/25/2019
+  ms.locfileid: "75339162"
 landingContent:
 - title: Обучение программированию на C#
   linkLists:
@@ -33,7 +33,7 @@ landingContent:
       url: https://aka.ms/dotnet3-csharp
   - linkListType: download
     links:
-    - text: Скачивание пакета SDK для .NET Core
+    - text: Скачать пакет SDK .NET Core
       url: https://dotnet.microsoft.com/download
 - title: Основы C#
   linkLists:
@@ -95,6 +95,10 @@ landingContent:
       url: tutorials/mixins-with-default-interface-methods.md
     - text: Работа с подмножествами с использованием диапазонов и индексов
       url: tutorials/ranges-indexes.md
+  - linkListType: reference
+    links:
+    - text: Критические изменения в компиляторе C#
+      url: whats-new/breaking-changes.md
 - title: Справочник по языку C#
   linkLists:
   - linkListType: reference

@@ -1,5 +1,7 @@
 - name: Приветствие
   href: welcome.md
+- name: Новые возможности в документации по .NET
+  href: whats-new/index.yml
 - name: "Руководство по\_.NET"
   href: standard/
 - name: Руководство по .NET Core
@@ -8,7 +10,7 @@
   href: framework/
 - name: "Руководство по классическим приложениям .NET\_— WPF"
   href: desktop-wpf/
-- name: 'Руководство по C#'
+- name: 'Руководство по языку C#'
   href: csharp/index.yml
 - name: 'Руководство по языку F#'
   href: fsharp/index.yml

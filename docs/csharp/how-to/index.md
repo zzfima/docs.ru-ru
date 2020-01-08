@@ -2,12 +2,12 @@
 title: Статьи с практическими руководствами (руководств по языку C#)
 description: Коллекция советов и кратких конкретных примеров кода
 ms.date: 12/20/2017
-ms.openlocfilehash: 855ea90d22174c2b7c0b53a526c47a5edbe5496d
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: e6cb657726b82a1710bbcd596fe48037b5c26352
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73736888"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75339219"
 ---
 # <a name="how-to-c"></a>Практическое руководство (C#)
 
@@ -15,13 +15,13 @@ ms.locfileid: "73736888"
 
 ## <a name="general-c-concepts"></a>Основные понятия C#
 
-Существует несколько общих советов и рекомендаций для разработчиков на C#.
+Существует несколько общих советов и рекомендаций для разработчиков на C#:
 
 - [Инициализация объектов с помощью инициализатора объектов](../programming-guide/classes-and-structs/how-to-initialize-objects-by-using-an-object-initializer.md).
 - [Различия между передачей структуры и класса в метод](../programming-guide/classes-and-structs/how-to-know-the-difference-passing-a-struct-and-passing-a-class-to-a-method.md).
 - [Использование перегрузки операторов](../language-reference/operators/operator-overloading.md).
 - [Реализация и вызов пользовательского метода расширения](../programming-guide/classes-and-structs/how-to-implement-and-call-a-custom-extension-method.md).
-- Даже программистам на C# может потребоваться [использовать пространство имен `My` из VB](../programming-guide/namespaces/how-to-use-the-my-namespace.md).
+- Даже программистам на C# может потребоваться [использовать пространство имен `My` из Visual Basic](../programming-guide/namespaces/how-to-use-the-my-namespace.md).
 - [Создание метода для типа `enum` с помощью методов расширения](../programming-guide/classes-and-structs/how-to-create-a-new-method-for-an-enumeration.md).
 
 ### <a name="class-and-struct-members"></a>Члены класса и структуры

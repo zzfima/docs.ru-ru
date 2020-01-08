@@ -78,3 +78,5 @@
           href: ../../../../_csharplang/proposals/csharp-8.0/null-coalescing-assignment.md
         - name: Члены экземпляров с доступом только на чтение
           href: ../../../../_csharplang/proposals/csharp-8.0/readonly-instance-members.md
+        - name: Вложенная функция stackalloc
+          href: ../../../../_csharplang/proposals/csharp-8.0/nested-stackalloc.md

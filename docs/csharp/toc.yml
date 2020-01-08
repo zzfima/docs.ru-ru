@@ -86,8 +86,6 @@
       href: tour-of-csharp/arrays.md
     - name: Интерфейсы
       href: tour-of-csharp/interfaces.md
-    - name: Перечисления
-      href: tour-of-csharp/enums.md
     - name: Делегаты
       href: tour-of-csharp/delegates.md
     - name: Атрибуты
@@ -106,6 +104,8 @@
       href: whats-new/csharp-7.md
     - name: 'C# 6'
       href: whats-new/csharp-6.md
+    - name: Критические изменения в компиляторе
+      href: whats-new/breaking-changes.md
     - name: 'Журнал версий C#'
       href: whats-new/csharp-version-history.md
     - name: Связи между языком и платформой
@@ -166,7 +166,7 @@
           href: modern-events.md
         - name: Различия между делегатами и событиями
           href: distinguish-delegates-events.md
-    - name: Синтаксис LINQ
+    - name: LINQ
       items:
         - name: Обзор LINQ
           href: linq/index.md
@@ -466,11 +466,11 @@
                       href: programming-guide/concepts/linq/how-to-count-occurrences-of-a-word-in-a-string-linq.md
                     - name: 'Практическое руководство. Запрос к предложениям, содержащим указанный набор слов (LINQ)'
                       href: programming-guide/concepts/linq/how-to-query-for-sentences-that-contain-a-specified-set-of-words-linq.md
-                    - name: Практическое руководство. Запрос символов в строке (LINQ)
+                    - name: Практическое руководство. Запрос знаков в строке (LINQ)
                       href: programming-guide/concepts/linq/how-to-query-for-characters-in-a-string-linq.md
                     - name: Практическое руководство. Объединение запросов LINQ с регулярными выражениями
                       href: programming-guide/concepts/linq/how-to-combine-linq-queries-with-regular-expressions.md
-                    - name: Практическое руководство. Нахождение разности множеств между двумя списками (LINQ)
+                    - name: Практическое руководство. Нахождение разности наборов между двумя списками (LINQ)
                       href: programming-guide/concepts/linq/how-to-find-the-set-difference-between-two-lists-linq.md
                     - name: Практическое руководство. Сортировка или фильтрация текстовых данных по любому слову или полю (LINQ)
                       href: programming-guide/concepts/linq/how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md
@@ -488,13 +488,13 @@
                       href: programming-guide/concepts/linq/how-to-compute-column-values-in-a-csv-text-file-linq.md
                 - name: LINQ и отражение
                   href: programming-guide/concepts/linq/linq-and-reflection.md
-                - name: Практическое руководство. Запрос к метаданным сборки при помощи отражения (LINQ)
+                - name: Практическое руководство. Выполнение запроса к метаданным сборки при помощи отражения (LINQ)
                   href: programming-guide/concepts/linq/how-to-query-an-assembly-s-metadata-with-reflection-linq.md
                 - name: LINQ и каталоги файлов
                   items:
                     - name: Обзор
                       href: programming-guide/concepts/linq/linq-and-file-directories.md
-                    - name: Практическое руководство. Запрос файлов с указанным атрибутом или именем
+                    - name: Практическое руководство. Запрос файлов с указанными атрибутами или именем
                       href: programming-guide/concepts/linq/how-to-query-for-files-with-a-specified-attribute-or-name.md
                     - name: Практическое руководство. Группировка файлов по расширению (LINQ)
                       href: programming-guide/concepts/linq/how-to-group-files-by-extension-linq.md
@@ -504,7 +504,7 @@
                       href: programming-guide/concepts/linq/how-to-compare-the-contents-of-two-folders-linq.md
                     - name: Практическое руководство. Запрос самого большого файла или файлов в дереве папок (LINQ)
                       href: programming-guide/concepts/linq/how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq.md
-                    - name: Практическое руководство. Запрос повторяющихся файлов в дереве папок (LINQ)
+                    - name: Практическое руководство. Запрос повторяющихся файлов в дереве каталогов (LINQ)
                       href: programming-guide/concepts/linq/how-to-query-for-duplicate-files-in-a-directory-tree-linq.md
                     - name: Практическое руководство. Запрос содержимого файлов в папке (LINQ)
                       href: programming-guide/concepts/linq/how-to-query-the-contents-of-files-in-a-folder-lin.md
@@ -558,9 +558,9 @@
                               href: programming-guide/concepts/linq/how-to-create-a-tree-from-an-xmlreader.md
                             - name: Практическое руководство. Потоковая передача фрагментов XML из XmlReader
                               href: programming-guide/concepts/linq/how-to-stream-xml-fragments-from-an-xmlreader.md
-                        - name: "Практическое руководство. Заполнение дерева XML с помощью XmlWriter (LINQ\_to\_XML)"
+                        - name: Практическое руководство. Заполнение дерева XML с помощью XmlWriter (LINQ to XML)
                           href: programming-guide/concepts/linq/how-to-populate-an-xml-tree-with-an-xmlwriter-linq-to-xml.md
-                        - name: "Практическое руководство. Проверка с использованием XSD (LINQ\_to\_XML)"
+                        - name: Практическое руководство. Проверка с использованием XSD (LINQ to XML)
                           href: programming-guide/concepts/linq/how-to-validate-using-xsd-linq-to-xml.md
                         - name: Допустимое содержимое объектов XElement и XDocument
                           href: programming-guide/concepts/linq/valid-content-of-xelement-and-xdocument-objects3.md
@@ -590,23 +590,23 @@
                       items:
                         - name: Общие сведения об осях LINQ to XML
                           href: programming-guide/concepts/linq/linq-to-xml-axes-overview.md
-                        - name: "Практическое руководство. Извлечение коллекции элементов (LINQ\_to\_XML)"
+                        - name: Практическое руководство. Извлечение коллекции элементов (LINQ to XML)
                           href: programming-guide/concepts/linq/how-to-retrieve-a-collection-of-elements-linq-to-xml.md
-                        - name: "Практическое руководство. Извлечение значений элемента (LINQ\_to\_XML)"
+                        - name: Практическое руководство. Извлечение значений элемента (LINQ to XML)
                           href: programming-guide/concepts/linq/how-to-retrieve-the-value-of-an-element-linq-to-xml.md
                         - name: Практическое руководство. Фильтрация по именам элементов (LINQ to XML)
                           href: programming-guide/concepts/linq/how-to-filter-on-element-names-linq-to-xml.md
                         - name: Практическое руководство. Связанные вызовы метода оси (LINQ to XML)
                           href: programming-guide/concepts/linq/how-to-chain-axis-method-calls-linq-to-xml.md
-                        - name: "Практическое руководство. Извлечение одного дочернего элемента (LINQ\_to\_XML)"
+                        - name: Практическое руководство. Извлечение одного дочернего элемента (LINQ to XML)
                           href: programming-guide/concepts/linq/how-to-retrieve-a-single-child-element-linq-to-xml.md
-                        - name: "Практическое руководство. Извлечение коллекции атрибутов (LINQ\_to\_XML)"
+                        - name: Практическое руководство. Извлечение коллекции атрибутов (LINQ to XML)
                           href: programming-guide/concepts/linq/how-to-retrieve-a-collection-of-attributes-linq-to-xml.md
-                        - name: "Практическое руководство. Извлечение одного атрибута (LINQ\_to\_XML)"
+                        - name: Практическое руководство. Извлечение одного атрибута (LINQ to XML)
                           href: programming-guide/concepts/linq/how-to-retrieve-a-single-attribute-linq-to-xml.md
-                        - name: Практическое руководство. Извлечение значения атрибута (LINQ to XML)
+                        - name: Практическое руководство. Извлечение значений атрибута (LINQ to XML)
                           href: programming-guide/concepts/linq/how-to-retrieve-the-value-of-an-attribute-linq-to-xml.md
-                        - name: Практическое руководство. Извлечение поверхностного значения элемента
+                        - name: Практическое руководство. Извлечение поверхностных значений элемента
                           href: programming-guide/concepts/linq/how-to-retrieve-the-shallow-value-of-an-element.md
                     - name: Выполнение запросов деревьям XML
                       items:
@@ -630,7 +630,7 @@
                               href: programming-guide/concepts/linq/how-to-find-all-nodes-in-a-namespace.md
                             - name: Практическое руководство. Сортировка элементов
                               href: programming-guide/concepts/linq/how-to-sort-elements.md
-                            - name: Практическое руководство. Сортировка элементов по нескольким ключам
+                            - name: Практическое руководство. Сортировка элементов по множеству ключей
                               href: programming-guide/concepts/linq/how-to-sort-elements-on-multiple-keys.md
                             - name: Практическое руководство. Вычисление промежуточных значений
                               href: programming-guide/concepts/linq/how-to-calculate-intermediate-values.md
@@ -654,19 +654,19 @@
                               href: programming-guide/concepts/linq/how-to-project-an-anonymous-type.md
                             - name: Практическое руководство. Создание текстовых файлов из XML
                               href: programming-guide/concepts/linq/how-to-generate-text-files-from-xml.md
-                            - name: Практическое руководство. Создание XML из CSV-файлов
+                            - name: Практическое руководство. Создание кода XML из CSV-файлов
                               href: programming-guide/concepts/linq/how-to-generate-xml-from-csv-files.md
                         - name: Дополнительные способы создания запросов (LINQ to XML)
                           items:
-                            - name: "Практическое руководство. Объединение двух коллекций (LINQ\_to\_XML)"
+                            - name: Практическое руководство. Объединение двух коллекций (LINQ to XML)
                               href: programming-guide/concepts/linq/how-to-join-two-collections-linq-to-xml.md
                             - name: Практическое руководство. Создание иерархии с помощью группировки
                               href: programming-guide/concepts/linq/how-to-create-hierarchy-using-grouping.md
                             - name: Практическое руководство. Запрос LINQ to XML с использованием XPath
                               href: programming-guide/concepts/linq/how-to-query-linq-to-xml-using-xpath.md
-                            - name: Практическое руководство. Написание метода оси LINQ to XML
+                            - name: Практическое руководство. Запись метода оси LINQ to XML
                               href: programming-guide/concepts/linq/how-to-write-a-linq-to-xml-axis-method.md
-                            - name: Практическое руководство. Как выполнять потоковые преобразования текста в XML
+                            - name: Практическое руководство. Выполнение потоковых преобразований текста в XML
                               href: programming-guide/concepts/linq/how-to-perform-streaming-transformations-of-text-to-xml.md
                             - name: Практическое руководство. Перечисление всех узлов в дереве
                               href: programming-guide/concepts/linq/how-to-list-all-nodes-in-a-tree.md
@@ -780,7 +780,7 @@
                                       href: programming-guide/concepts/linq/example-that-outputs-office-open-xml-document-parts.md
                     - name: Изменение деревьев XML (LINQ to XML)
                       items:
-                        - name: Сравнение изменения XML-дерева в памяти с Функциональная сборка (LINQ to XML)
+                        - name: Сравнение изменения XML-дерева в памяти с Функциональное сборка (LINQ to XML)
                           href: programming-guide/concepts/linq/in-memory-xml-tree-modification-vs-functional-construction-linq-to-xml.md
                         - name: 'Добавление элементов, атрибутов и узлов в дерево XML'
                           href: programming-guide/concepts/linq/adding-elements-attributes-and-nodes-to-an-xml-tree.md
@@ -816,11 +816,11 @@
                           href: programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md
                         - name: Практическое руководство. Выполнение потокового преобразования крупных XML-документов
                           href: programming-guide/concepts/linq/how-to-perform-streaming-transform-of-large-xml-documents.md
-                        - name: Практическое руководство. Чтение и запись закодированного документа
+                        - name: Практическое руководство. Чтение и запись кодированного документа
                           href: programming-guide/concepts/linq/how-to-read-and-write-an-encoded-document.md
                         - name: Использование XSLT для преобразования дерева XML
                           href: programming-guide/concepts/linq/using-xslt-to-transform-an-xml-tree.md
-                        - name: "Практическое руководство. Использование заметок для преобразования деревьев LINQ\_to\_XML в стиль XSLT"
+                        - name: Практическое руководство. Использование примечаний для преобразования деревьев LINQ to XML в стиль XSLT
                           href: programming-guide/concepts/linq/how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style.md
                         - name: 'Сериализация графов объектов, содержащих объекты XElement'
                           items:
@@ -1034,9 +1034,9 @@
           href: programming-guide/classes-and-structs/destructors.md
         - name: Инициализаторы объектов и коллекций
           href: programming-guide/classes-and-structs/object-and-collection-initializers.md
-        - name: Инициализация объектов с помощью инициализатора объектов
+        - name: Практическое руководство. Инициализация объектов с помощью инициализатора объектов
           href: programming-guide/classes-and-structs/how-to-initialize-objects-by-using-an-object-initializer.md
-        - name: Практическое руководство. Инициализация словаря с помощью инициализатора коллекций
+        - name: Практическое руководство. Инициализация словаря с помощью инициализатора коллекции
           href: programming-guide/classes-and-structs/how-to-initialize-a-dictionary-with-a-collection-initializer.md
         - name: Вложенные типы
           href: programming-guide/classes-and-structs/nested-types.md
@@ -1052,12 +1052,10 @@
           href: programming-guide/interfaces/index.md
         - name: Явная реализация интерфейса
           href: programming-guide/interfaces/explicit-interface-implementation.md
-        - name: Как выполнить явную реализацию членов интерфейса
+        - name: Практическое руководство. Явная реализация членов интерфейса
           href: programming-guide/interfaces/how-to-explicitly-implement-interface-members.md
-        - name: Как выполнить явную реализацию членов двух интерфейсов
+        - name: Практическое руководство. Явная реализация членов двух интерфейсов
           href: programming-guide/interfaces/how-to-explicitly-implement-members-of-two-interfaces.md
-    - name: Типы перечислений
-      href: programming-guide/enumeration-types.md
     - name: Делегаты
       items:
         - name: Обзор
@@ -1066,7 +1064,7 @@
           href: programming-guide/delegates/using-delegates.md
         - name: Делегаты с именованными методами и Анонимные методы
           href: programming-guide/delegates/delegates-with-named-vs-anonymous-methods.md
-        - name: 'Практическое руководство. Руководство по программированию на C#. Объединение делегатов (многоадресные делегаты)'
+        - name: 'Практическое руководство. Объединение делегатов (многоадресные делегаты) (руководство по программированию на C#)'
           href: programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md
         - name: 'Практическое руководство. Объявление, создание и использование делегата'
           href: programming-guide/delegates/how-to-declare-instantiate-and-use-a-delegate.md
@@ -1092,7 +1090,7 @@
       items:
         - name: Программирование со строками
           href: programming-guide/strings/index.md
-        - name: 'Практическое руководство. Как определить, представляет ли строка числовое значение'
+        - name: Практическое руководство. Определение представления числового значения в строке
           href: programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md
     - name: Индексаторы
       items:
@@ -1110,13 +1108,13 @@
           href: programming-guide/events/index.md
         - name: Практическое руководство. Подписка и отмена подписки на события
           href: programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md
-        - name: Как публиковать события в соответствии с рекомендациями по .NET Framework
+        - name: 'Практическое руководство. Публикация событий, соответствующих рекомендациям .NET Framework'
           href: programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md
-        - name: Как создавать события базового класса в производных классах
+        - name: Практическое руководство. Создание событий базового класса в производных классах
           href: programming-guide/events/how-to-raise-base-class-events-in-derived-classes.md
-        - name: Как реализовать события интерфейса
+        - name: Практическое руководство. Реализация событий интерфейса
           href: programming-guide/events/how-to-implement-interface-events.md
-        - name: Практическое руководство. реализовать пользовательские методы доступа к событиям
+        - name: Практическое руководство. Реализация пользовательских методов доступа к событиям
           href: programming-guide/events/how-to-implement-custom-event-accessors.md
     - name: Универсальные шаблоны
       items:
@@ -1176,7 +1174,7 @@
           href: programming-guide/xmldoc/processing-the-xml-file.md
         - name: Разделители для тегов документации
           href: programming-guide/xmldoc/delimiters-for-documentation-tags.md
-        - name: Практическое руководство. Использование возможностей XML-документации
+        - name: Практическое руководство. Использование XML-документации
           href: programming-guide/xmldoc/how-to-use-the-xml-documentation-features.md
         - name: Справочник по тегам документации
           items:
@@ -1240,7 +1238,7 @@
       items:
         - name: Обзор
           href: programming-guide/file-system/index.md
-        - name: Практическое руководство. Обход дерева каталогов
+        - name: Практическое руководство. Перебор дерева папок
           href: programming-guide/file-system/how-to-iterate-through-a-directory-tree.md
         - name: 'Практическое руководство. Получение сведений о файлах, папках и дисках'
           href: programming-guide/file-system/how-to-get-information-about-files-folders-and-drives.md
@@ -1248,15 +1246,15 @@
           href: programming-guide/file-system/how-to-create-a-file-or-folder.md
         - name: 'Практическое руководство. Копирование, удаление и перемещение файлов и папок'
           href: programming-guide/file-system/how-to-copy-delete-and-move-files-and-folders.md
-        - name: Практическое руководство. Отображение диалогового окна хода выполнения для операций с файлами
+        - name: Практическое руководство. Предоставление диалогового окна "Ход выполнения" для операций с файлами
           href: programming-guide/file-system/how-to-provide-a-progress-dialog-box-for-file-operations.md
         - name: Практическое руководство. Запись в текстовый файл
           href: programming-guide/file-system/how-to-write-to-a-text-file.md
         - name: Практическое руководство. Чтение из текстового файла
           href: programming-guide/file-system/how-to-read-from-a-text-file.md
-        - name: "Практическое руководство. Построчное чтение текстового файла (Visual\_C#)"
+        - name: Практическое руководство. Построчное чтение текстового файла
           href: programming-guide/file-system/how-to-read-a-text-file-one-line-at-a-time.md
-        - name: 'Практическое руководство. Создание раздела в реестре (Visual C#)'
+        - name: Практическое руководство. Создание раздела в реестре
           href: programming-guide/file-system/how-to-create-a-key-in-the-registry.md
     - name: Взаимодействие
       items:
@@ -1264,11 +1262,11 @@
           href: programming-guide/interop/index.md
         - name: Общие сведения о взаимодействии
           href: programming-guide/interop/interoperability-overview.md
-        - name: 'Практическое руководство. Доступ к объектам взаимодействия Office с помощью возможностей Visual C#'
+        - name: 'Практическое руководство. Доступ к объектам взаимодействия Office с помощью функций языка C#'
           href: programming-guide/interop/how-to-access-office-onterop-objects.md
         - name: Практическое руководство. Использование индексированных свойств в программировании COM-взаимодействия
           href: programming-guide/interop/how-to-use-indexed-properties-in-com-interop-rogramming.md
-        - name: Практическое руководство. Использование вызова неуправляемого кода для воспроизведения звукового файла
+        - name: Практическое руководство. Использование вызова неуправляемого кода для воспроизведения WAV-файла
           href: programming-guide/interop/how-to-use-platform-invoke-to-play-a-wave-file.md
         - name: 'Пошаговое руководство. Программирование для Office (C# и Visual Basic)'
           href: programming-guide/interop/walkthrough-office-programming.md
@@ -1304,8 +1302,9 @@
                 - name: char
                   href: language-reference/builtin-types/char.md
                   displayName: 'Unicode, character, UTF-16'
-                - name: enum
-                  href: language-reference/keywords/enum.md
+                - name: Типы перечисления.
+                  href: language-reference/builtin-types/enum.md
+                  displayName: 'enum, bit flags, bit field'
                 - name: struct
                   href: language-reference/keywords/struct.md
                 - name: 'Типы значений, допускающие значение NULL'
@@ -1515,7 +1514,7 @@
               href: language-reference/keywords/set.md
             - name: when (условие фильтра)
               href: language-reference/keywords/when.md
-            - name: value
+            - name: значение
               href: language-reference/keywords/value.md
             - name: yield
               href: language-reference/keywords/yield.md

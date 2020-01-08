@@ -1,0 +1,95 @@
+- name: Справочник по языку XAML
+  href: index.md
+  items:
+    - name: 'Пространство имен XAML (x:) Возможности языка'
+      href: namespace-language-features.md
+      items:
+        - name: "Функции языка XAML\_2009 (не WPF)"
+          href: xaml-2009-language-features.md
+          items:
+            - name: Встроенные типы для общих примитивов языка XAML
+              href: types-for-primitives.md
+            - name: 'Директива x:Arguments'
+              href: xarguments-directive.md
+            - name: 'Директива x:FactoryMethod'
+              href: xfactorymethod-directive.md
+            - name: 'расширение разметки x:Reference'
+              href: xreference-markup-extension.md
+        - name: 'Расширение разметки x:Array'
+          href: xarray-markup-extension.md
+        - name: 'Директива x:Class'
+          href: xclass-directive.md
+        - name: 'Директива x:ClassModifier'
+          href: xclassmodifier-directive.md
+        - name: 'Встроенный тип XAML x:Code'
+          href: xcode-intrinsic-xaml-type.md
+        - name: 'Директива x:FieldModifier'
+          href: xfieldmodifier-directive.md
+        - name: 'Директива x:Key'
+          href: xkey-directive.md
+        - name: 'Директива x:Member'
+          href: xmember-directive.md
+        - name: 'Директива x:Members'
+          href: xmembers-directive.md
+        - name: 'Директива x:Name'
+          href: xname-directive.md
+        - name: 'Расширение разметки x:NULL'
+          href: xnull-markup-extension.md
+        - name: 'Директива x:Property'
+          href: xproperty-directive.md
+        - name: 'Атрибут x:Shared'
+          href: xshared-attribute.md
+        - name: 'Расширение разметки x:Static'
+          href: xstatic-markup-extension.md
+        - name: 'Директива x:Subclass'
+          href: xsubclass-directive.md
+        - name: 'Расширение разметки x:Type'
+          href: xtype-markup-extension.md
+        - name: 'Директива x:TypeArguments'
+          href: xtypearguments-directive.md
+        - name: 'Директива x:Uid'
+          href: xuid-directive.md
+        - name: 'Встроенный тип XAML x:XData'
+          href: xdata-intrinsic-xaml-type.md
+        - name: Грамматика XamlName
+          href: xamlname-grammar.md
+        - name: '{}Escape-последовательность/расширение разметки'
+          href: escape-sequence-markup-extension.md
+        - name: 'Обработка xml:lang в XAML'
+          href: xml-language-handling.md
+        - name: 'Обработка xml:space в языке XAML'
+          href: xml-space-handling.md
+    - name: 'Типы, перенесенные из WPF в System.Xaml'
+      href: types-migrated-from-wpf-to-system.md
+    - name: Общее представление о понятиях и структурах потока узлов XAML
+      href: understanding-xaml-node-stream-structures-and-concepts.md
+    - name: Класс XAMLServices и чтение или запись базового кода XAML
+      href: basic-reading-writing.md
+    - name: Преобразователи типов или расширения разметки для XAML
+      href: type-converters-and-markup-extensions.md
+      items:
+        - name: Общие сведения о расширениях разметки для XAML
+          href: markup-extensions-overview.md
+        - name: Общие сведения о преобразователях типов для XAML
+          href: type-converters-overview.md
+        - name: 'Служебные контексты, доступные для расширений разметки и преобразователей типов'
+          href: service-contexts-with-type-converters-and-markup-extensions.md
+    - name: Универсальные шаблоны в XAML
+      href: generics.md
+    - name: Определение пользовательских типов для использования со службами XAML .NET Framework
+      href: define-custom-types.md
+      items:
+        - name: Относящиеся к XAML атрибуты среды CLR для пользовательских типов и библиотек
+          href: clr-attributes-with-custom-types-and-libraries.md
+        - name: Коллекции и типы коллекций для XAML
+          href: collections-and-types.md
+    - name: Пространства имен языка XAML
+      href: namespaces.md
+    - name: Контекст схемы языка XAML по умолчанию и контекст схемы языка XAML WPF
+      href: default-schema-context.md
+    - name: Соображения безопасности XAML
+      href: security-considerations.md
+    - name: Обработка пробелов в XAML
+      href: white-space-processing.md
+    - name: Сущности знаков XML и XAML
+      href: xml-character-entities.md

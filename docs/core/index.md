@@ -1,15 +1,15 @@
 ---
 title: Руководство по .NET Core
-description: .NET Core — это модульная высокопроизводительная реализация .NET для создания приложений Windows, Linux и Mac. Для начала получите дополнительную информацию о .NET Core.
+description: .NET Core — это модульная высокопроизводительная реализация .NET для создания приложений Windows, Linux и macOS. Для начала получите дополнительную информацию о .NET Core.
 author: richlander
 ms.date: 12/04/2019
 ms.custom: updateeachrelease
-ms.openlocfilehash: b2622dba53d64c9dcf58e852d57de117fe79eb2e
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 80a3b12972e24c3022ac2aa14406aa60635815a3
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837016"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75341358"
 ---
 # <a name="net-core-guide"></a>Руководство по .NET Core
 
@@ -27,7 +27,7 @@ ms.locfileid: "74837016"
 
 ## <a name="net-core-31"></a>.NET Core 3.1
 
-.NET Core 3.1 является последней версией. В нее входят незначительные улучшения версии .NET Core 3.0. Однако .NET Core 3.1 является долгосрочным поддерживаемым выпуском. Дополнительные сведения о выпуске .NET Core 3.1 см. в разделе [Новые возможности .NET Core 3.1](./whats-new/dotnet-core-3-1.md).
+.NET Core 3.1 является последней версией. В версии 3.1 были представлены незначительные улучшения по сравнению с .NET Core 3.0, однако именно .NET Core 3.1 является [долгосрочно поддерживаемой версией](https://dotnet.microsoft.com/platform/support/policy/dotnet-core). Дополнительные сведения о выпуске .NET Core 3.1 см. в разделе [Новые возможности .NET Core 3.1](./whats-new/dotnet-core-3-1.md).
 
 ## <a name="create-your-first-application"></a>Создание первого приложения
 

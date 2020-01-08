@@ -1,0 +1,59 @@
+- name: Обзор
+  href: index.md
+- name: Строки подключения
+  href: connection-strings.md
+- name: Типы данных
+  href: types.md
+- name: Параметры
+  href: parameters.md
+- name: Ошибки базы данных
+  displayName: 'Busy, locked, retries, timeouts'
+  href: database-errors.md
+- name: Транзакции
+  href: transactions.md
+- name: Пакетная обработка
+  href: batching.md
+- name: Метаданные
+  href: metadata.md
+- name: Функции SQLite
+  items:
+    - name: Базы данных в памяти
+      href: in-memory-databases.md
+    - name: Шифрование
+      href: encryption.md
+    - name: Резервное копирование в сети
+      href: backup.md
+    - name: Определяемые пользователем функции
+      displayName: UDFs
+      href: user-defined-functions.md
+    - name: Пользовательские версии SQLite
+      href: custom-versions.md
+    - name: Параметры сортировки
+      href: collation.md
+    - name: Ввод-вывод больших двоичных объектов
+      displayName: Streams
+      href: blob-io.md
+    - name: Взаимодействие
+      href: interop.md
+    - name: Расширения
+      href: extensions.md
+- name: Ограничения
+  items:
+    - name: ADO.NET
+      href: adonet-limitations.md
+    - name: Async
+      href: async.md
+    - name: Массовая вставка
+      href: bulk-insert.md
+    - name: Entity Framework Core
+      href: /ef/core/providers/sqlite/limitations
+    - name: Dapper
+      href: dapper-limitations.md
+    - name: System.Data.SQLite
+      href: compare.md
+    - name: Xamarin
+      href: xamarin.md
+- name: Справочник по API >>
+  href: /dotnet/api/?view=msdata-sqlite-3.0.0
+- name: Синтаксис SQL >>
+  href: 'https://www.sqlite.org/lang.html'
