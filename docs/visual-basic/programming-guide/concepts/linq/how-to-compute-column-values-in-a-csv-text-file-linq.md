@@ -2,12 +2,12 @@
 title: Практическое руководство. Вычисление значений столбцов в текстовом CSV-файле (LINQ)
 ms.date: 07/20/2015
 ms.assetid: 88b2b9f3-c82e-41f3-b1b4-26ede5973a02
-ms.openlocfilehash: 9ce6ec4c8d109fa06e672e967ac36c615a8fb38e
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 230bb26d04a85decc401abaa6c7fd7fc8a6b4806
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74348397"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75338506"
 ---
 # <a name="how-to-compute-column-values-in-a-csv-text-file-linq-visual-basic"></a>Руководство. Вычисление значений столбцов в текстовом файле CSV (LINQ) (Visual Basic)
 
@@ -143,11 +143,11 @@ End Class
 
 Запрос работает с использованием метода <xref:System.String.Split%2A> для преобразования каждой строки текста в массив. Каждый элемент массива представляет столбец. И наконец, текст в каждом столбце преобразуется в свое числовое представление. Если файл является файлом с разделением знаками табуляции, просто измените аргумент в методе `Split` на `\t`.
 
-## <a name="compiling-the-code"></a>Компиляция кода
+## <a name="compile-the-code"></a>Компиляция кода
 
-Создайте проект консольного приложения VB.NET с помощью инструкции `Imports` для пространства имен System. LINQ.
+Создайте Visual Basic проект консольного приложения, используя инструкцию `Imports` для пространства имен System. LINQ.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [LINQ и строки (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
 - [LINQ и каталоги файлов (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

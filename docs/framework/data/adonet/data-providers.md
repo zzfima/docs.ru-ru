@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 03a9fc62-2d24-491a-9fe6-d6bdb6dcb131
-ms.openlocfilehash: 3891cae272d93c2bb1ba8929a40fbdb8c332765c
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 2c986aab33f2c4dcefb5924ea61e8b9f6b3c50a3
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70785649"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347814"
 ---
 # <a name="net-framework-data-providers"></a>Поставщики данных .NET Framework
 Поставщик данных .NET Framework используется для подключения к базе данных, исполнения команд и получения результатов. Эти результаты обрабатываются непосредственно, помещаются в <xref:System.Data.DataSet> , чтобы по мере необходимости они были доступны для пользователей вместе с данными из нескольких источников, либо распределяются между уровнями. .NET Framework поставщики данных являются облегченными, создавая минимальный уровень между источником данных и кодом, повышая производительность без ущерба для функциональности.  
@@ -22,14 +22,14 @@ ms.locfileid: "70785649"
 |Поставщик данных .NET Framework для SQL Server|Предоставляет доступ к данным для Microsoft SQL Server. Использует пространство имен <xref:System.Data.SqlClient> .|  
 |Поставщик данных .NET Framework для OLE DB|Для источников данных OLE DB. Использует пространство имен <xref:System.Data.OleDb> .|  
 |Поставщик данных .NET Framework для ODBC|Для источников данных ODBC. Использует пространство имен <xref:System.Data.Odbc> .|  
-|Поставщик данных .NET Framework для Oracle|Для источников данных Oracle. Поставщик данных .NET Framework для Oracle поддерживает клиентское программное обеспечение Oracle версии 8.1.7 и более поздних <xref:System.Data.OracleClient> версий, а также использует пространство имен.|  
+|Поставщик данных .NET Framework для Oracle|Для источников данных Oracle. Поставщик данных .NET Framework для Oracle поддерживает клиентское программное обеспечение Oracle версии 8.1.7 и более поздних версий и использует пространство имен <xref:System.Data.OracleClient>.|  
 |EntityClient - поставщик|Предоставляет доступ к данным для приложений модели EDM (Entity Data Model). Использует пространство имен <xref:System.Data.EntityClient> .|  
 |Поставщик данных .NET Framework для SQL Server Compact 4,0.|Предоставляет доступ к данным для Microsoft SQL Server Compact 4,0. Использует пространство имен [System.Data.SqlServerCe](https://docs.microsoft.com/previous-versions/sql/compact/sql-server-compact-4.0/ec4st0e3(v=vs.100)) .|  
   
 ## <a name="core-objects-of-net-framework-data-providers"></a>Основные объекты поставщиков данных .NET Framework  
  В следующей таблице приведены четыре основных объекта, которые составляют поставщик данных .NET Framework.  
   
-|Object|Описание|  
+|Объект служб|Описание|  
 |------------|-----------------|  
 |`Connection`|Устанавливает соединение с конкретным источником данных. Базовым классом для всех объектов `Connection` является <xref:System.Data.Common.DbConnection> .|  
 |`Command`|Выполняет команду в источнике данных. Обеспечивает доступность `Parameters` и может выполнять команды в области `Transaction` из `Connection`. Базовым классом для всех объектов `Command` является <xref:System.Data.Common.DbCommand> .|  
@@ -38,7 +38,7 @@ ms.locfileid: "70785649"
   
  Помимо основных классов, перечисленных в таблице выше в этом документе, .NET Framework поставщик данных также содержит классы, перечисленные в следующей таблице.  
   
-|Object|Описание|  
+|Объект служб|Описание|  
 |------------|-----------------|  
 |`Transaction`|Прикрепляет команды к транзакциям в источнике данных. Базовым классом для всех объектов `Transaction` является <xref:System.Data.Common.DbTransaction> . ADO.NET также поддерживает транзакции, использующие классы в пространстве имен <xref:System.Transactions> .|  
 |`CommandBuilder`|Объект помощника, автоматически формирующий свойства команд `DataAdapter` или извлекающий сведения о параметрах из хранимой процедуры и заполняющий коллекцию `Parameters` объекта `Command` . Базовым классом для всех объектов `CommandBuilder` является <xref:System.Data.Common.DbCommandBuilder> .|  
@@ -57,7 +57,7 @@ ms.locfileid: "70785649"
  ![Поставщики данных](./media/netdataproviders-bpuedev11.gif "NETDataProviders_bpuedev11")  
 Сравнение поставщика данных .NET Framework для SQL Server и поставщика данных .NET Framework для OLE DB  
   
- Поставщик данных .NET Framework для SQL Server классов находится в <xref:System.Data.SqlClient> пространстве имен.  
+ Поставщик данных .NET Framework для SQL Server классов находится в пространстве имен <xref:System.Data.SqlClient>.  
   
  Поставщик данных .NET Framework для SQL Server поддерживает как локальные, так и распределенные транзакции. Для распределенных транзакций поставщик данных .NET Framework для SQL Server по умолчанию автоматически закрепляется в транзакции и получает сведения о транзакциях из служб компонентов Windows или <xref:System.Transactions>. Дополнительные сведения см. в разделе [Transactions and Concurrency](transactions-and-concurrency.md).  
   
@@ -89,7 +89,7 @@ using System.Data.SqlClient;
   
  Поставщик данных .NET Framework для OLE DB не работает с поставщиком OLE DB для ODBC (MSDASQL). Чтобы получить доступ к источнику данных ODBC с помощью ADO.NET, используйте поставщик данных .NET Framework для ODBC.  
   
- Поставщик данных .NET Framework для OLE DB классов находится в <xref:System.Data.OleDb> пространстве имен. Следующий пример кода показывает, как включать в приложения пространство имен `System.Data.OleDb` .  
+ Поставщик данных .NET Framework для OLE DB классов находится в пространстве имен <xref:System.Data.OleDb>. Следующий пример кода показывает, как включать в приложения пространство имен `System.Data.OleDb` .  
   
 ```vb  
 Imports System.Data.OleDb  
@@ -110,7 +110,7 @@ using System.Data.OleDb;
 |Microsoft ODBC для Oracle|  
 |Драйвер Microsoft Access (*.mdb)|  
   
- Поставщик данных .NET Framework для классов ODBC находится в <xref:System.Data.Odbc> пространстве имен.  
+ Поставщик данных .NET Framework для классов ODBC находится в пространстве имен <xref:System.Data.Odbc>.  
   
  Следующий пример кода показывает, как включать в приложения пространство имен `System.Data.Odbc` .  
   
@@ -123,14 +123,14 @@ using System.Data.Odbc;
 ```  
   
 > [!NOTE]
-> Поставщик данных .NET Framework для ODBC требует наличия MDAC 2,6 или более поздней версии, и рекомендуется использовать MDAC 2,8 SP1. Компоненты MDAC 2.8 с пакетом обновления 1 (SP1) можно скачать на веб-сайте [Data Access and Storage Developer Center](https://go.microsoft.com/fwlink/?linkid=4173)(центр разработчиков средств доступа к данным и их хранения).  
+> Поставщик данных .NET Framework для ODBC требует наличия MDAC 2,6 или более поздней версии, и рекомендуется использовать MDAC 2,8 SP1. Загрузить MDAC 2,8 с пакетом обновления 1 (SP1) можно в [центре загрузки Майкрософт](https://www.microsoft.com/download/details.aspx?id=5793).
   
 ## <a name="net-framework-data-provider-for-oracle"></a>Поставщик данных .NET Framework для Oracle  
  Поставщик данных .NET Framework для Oracle (OracleClient) обеспечивает доступ к источникам данных Oracle через клиентское по Oracle Software Connectivity. Поставщик данных поддерживает клиентское ПО Oracle версии 8.1.7 или более поздней версии. Поставщик данных поддерживает как локальные, так и распределенные транзакции. Дополнительные сведения см. в разделе [Transactions and Concurrency](transactions-and-concurrency.md).  
   
  Для работы поставщика данных .NET Framework для Oracle требуется клиентское программное обеспечение Oracle (версия 8.1.7 или более поздняя) в системе, прежде чем можно будет подключиться к источнику данных Oracle.  
   
- Поставщик данных .NET Framework для классов Oracle находится в <xref:System.Data.OracleClient> пространстве имен и содержится `System.Data.OracleClient.dll` в сборке. При компиляции приложения, использующего этот источник данных, необходимо ссылаться как на `System.Data.dll` , так и на `System.Data.OracleClient.dll` .  
+ Поставщик данных .NET Framework для классов Oracle расположен в пространстве имен <xref:System.Data.OracleClient> и содержится в сборке `System.Data.OracleClient.dll`. При компиляции приложения, использующего этот источник данных, необходимо ссылаться как на `System.Data.dll` , так и на `System.Data.OracleClient.dll` .  
   
  Следующий пример кода показывает, как включать в приложения пространство имен `System.Data.OracleClient` .  
   
@@ -157,7 +157,7 @@ using System.Data.OracleClient;
 ## <a name="entityclient-provider"></a>EntityClient - поставщик  
  Поставщик EntityClient используется для доступа к данным на основе модели EDM (Entity Data Model). В отличие от других поставщиков данных .NET этот поставщик не взаимодействует с источником данных непосредственно. Вместо этого для взаимодействия с соответствующим поставщиком данных используется язык Entity SQL. Дополнительные сведения см. [в разделе Поставщик EntityClient для Entity Framework](./ef/entityclient-provider-for-the-entity-framework.md).  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Общие сведения об ADO.NET](ado-net-overview.md)
 - [Извлечение и изменение данных в ADO.NET](retrieving-and-modifying-data.md)

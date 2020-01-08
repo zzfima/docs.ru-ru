@@ -21,12 +21,12 @@ helpviewer_keywords:
 - decoding image formats [WPF]
 - rotating images [WPF]
 ms.assetid: 72aad87a-e6f3-4937-94cd-a18b7766e990
-ms.openlocfilehash: b60f2871062a12d3bee91a9c6d9883222b3034f4
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: a4151ff610c67ac762f0096c6a136f4475317782
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73733566"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636644"
 ---
 # <a name="imaging-overview"></a>Общие сведения об обработке изображений
 В этом разделе приводятся общие сведения о компоненте работы с образами Microsoft Windows Presentation Foundation. Создание образов WPF позволяет разработчикам отображать, преобразовывать и форматировать изображения.  
@@ -48,7 +48,7 @@ ms.locfileid: "73733566"
   
 - Поддержка собственных метаданных в файле.  
   
-- Управляемый компонент использует неуправляемую инфраструктуру для обеспечения плавной интеграции изображений с другими функциями [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], такими как [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)], анимация и графика. Управляемый компонент также имеет преимущества от модели расширения кодека Windows Presentation Foundation (WPF) для создания образов, которая обеспечивает автоматическое распознавание новых форматов изображений в [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] приложениях.  
+- Управляемый компонент использует неуправляемую инфраструктуру для обеспечения беспрепятственной интеграции образов с другими функциями WPF, такими как [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)], анимация и графика. Управляемый компонент также имеет преимущества от модели расширения кодека Windows Presentation Foundation (WPF) для создания образов, которая обеспечивает автоматическое распознавание новых форматов изображений в приложениях WPF.  
   
  Большая часть управляемого API для работы с образами WPF находится в пространстве имен <xref:System.Windows.Media.Imaging?displayProperty=nameWithType>, хотя несколько важных типов, таких как <xref:System.Windows.Media.ImageBrush> и <xref:System.Windows.Media.ImageDrawing>, находятся в пространстве имен <xref:System.Windows.Media?displayProperty=nameWithType> и <xref:System.Windows.Controls.Image> находятся в пространстве имен <xref:System.Windows.Controls?displayProperty=nameWithType>.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "73733566"
 
  Для кодирования и декодирования конкретного формата мультимедиа используются кодеки. Изображения WPF включают кодек для форматов изображений BMP, JPEG, PNG, TIFF, Windows Media Photo, GIF и ICON. Каждый из этих кодеков позволяет приложениям декодировать и, за исключением формата ICON, кодировать изображения соответствующих форматов.  
   
- <xref:System.Windows.Media.Imaging.BitmapSource> является важным классом, используемым при декодировании и кодировании образов. Это базовый Стандартный блок конвейера создания образов WPF, который представляет один постоянный набор пикселей с определенным размером и разрешением. <xref:System.Windows.Media.Imaging.BitmapSource> может быть отдельным кадром изображения в нескольких кадрах или результатом преобразования, выполненного в <xref:System.Windows.Media.Imaging.BitmapSource>. Он является родительским для многих основных классов, используемых в [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] создания образов, таких как <xref:System.Windows.Media.Imaging.BitmapFrame>.  
+ <xref:System.Windows.Media.Imaging.BitmapSource> является важным классом, используемым при декодировании и кодировании образов. Это базовый Стандартный блок конвейера создания образов WPF, который представляет один постоянный набор пикселей с определенным размером и разрешением. <xref:System.Windows.Media.Imaging.BitmapSource> может быть отдельным кадром изображения в нескольких кадрах или результатом преобразования, выполненного в <xref:System.Windows.Media.Imaging.BitmapSource>. Он является родительским для многих основных классов, используемых в обработке изображений WPF, таких как <xref:System.Windows.Media.Imaging.BitmapFrame>.  
   
  <xref:System.Windows.Media.Imaging.BitmapFrame> используется для хранения данных с фактическим растровым изображением формата изображения. Многие форматы изображений поддерживают только один <xref:System.Windows.Media.Imaging.BitmapFrame>, хотя форматы, такие как GIF и TIFF, поддерживают несколько кадров на изображение. Кадры используются декодерами в качестве входных данных и передаются кодировщикам для создания файлов изображений.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "73733566"
  [!code-vb[BitmapFrameExample#10](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BitmapFrameExample/VB/BitmapFrame.vb#10)]  
   
 ### <a name="image-format-decoding"></a>Декодирование изображений разных форматов  
- Декодирование изображения — это преобразование изображения в некотором формате в данные изображения, которые могут быть использованы системой. Данные изображения затем могут использоваться для отображения, обработки или кодирования в другой формат. Выбор декодера зависит от формата изображения. Выбор кодека производится автоматически, если не указан определенный декодер. Примеры в разделе [Отображение изображений в WPF](#_displayingimages) демонстрируют автоматическое декодирование. Декодеры пользовательских форматов, разработанные с помощью неуправляемых интерфейсов обработки изображений WPF и зарегистрированных в системе, автоматически участвуют в выборе декодера. Благодаря этому пользовательские форматы могут автоматически отображаться в приложениях [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
+ Декодирование изображения — это преобразование изображения в некотором формате в данные изображения, которые могут быть использованы системой. Данные изображения затем могут использоваться для отображения, обработки или кодирования в другой формат. Выбор декодера зависит от формата изображения. Выбор кодека производится автоматически, если не указан определенный декодер. Примеры в разделе [Отображение изображений в WPF](#_displayingimages) демонстрируют автоматическое декодирование. Декодеры пользовательских форматов, разработанные с помощью неуправляемых интерфейсов обработки изображений WPF и зарегистрированных в системе, автоматически участвуют в выборе декодера. Это позволяет автоматически отображать пользовательские форматы в приложениях WPF.  
   
  В следующем примере демонстрируется использование декодера точечных рисунков для декодирования изображения формата BMP.  
   
@@ -91,7 +91,7 @@ ms.locfileid: "73733566"
  Существует несколько способов отобразить изображение в приложении Windows Presentation Foundation (WPF). Изображения могут отображаться с помощью элемента управления <xref:System.Windows.Controls.Image>, закрашены на визуальном элементе с помощью <xref:System.Windows.Media.ImageBrush>или нарисованы с помощью <xref:System.Windows.Media.ImageDrawing>.  
   
 ### <a name="using-the-image-control"></a>Использование элемента управления Image  
- <xref:System.Windows.Controls.Image> является элементом платформы и основным способом для вывода изображений в приложениях. В [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]<xref:System.Windows.Controls.Image> можно использовать двумя способами. синтаксис атрибута или свойства. В следующем примере показано, как можно отобразить изображение размером 200 пикселей в ширину, используя синтаксис атрибута и синтаксис тега свойства. Дополнительные сведения о синтаксисе атрибутов и синтаксисе свойств см. в разделе [Общие сведения о свойствах зависимостей](../advanced/dependency-properties-overview.md).  
+ <xref:System.Windows.Controls.Image> является элементом платформы и основным способом для вывода изображений в приложениях. В [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]<xref:System.Windows.Controls.Image> можно использовать двумя способами. синтаксис атрибута или свойства. В следующем примере показано, как можно отобразить изображение размером 200 пикселей в ширину, используя синтаксис атрибута и синтаксис тега свойства. Дополнительные сведения о синтаксисе атрибутов и синтаксисе свойства см. в разделе [Общие сведения о свойствах зависимостей](../advanced/dependency-properties-overview.md).  
   
  [!code-xaml[ImageElementExample_snip#ImageSimpleExampleInlineMarkup](~/samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample_snip/CSharp/ImageSimpleExample.xaml#imagesimpleexampleinlinemarkup)]  
   
@@ -106,7 +106,7 @@ ms.locfileid: "73733566"
  [!code-vb[ImageElementExample_snip#ImageSimpleExampleInlineCode1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ImageElementExample_snip/VB/ImageSimpleExample.xaml.vb#imagesimpleexampleinlinecode1)]  
   
 #### <a name="rotating-converting-and-cropping-images"></a>Вращение, преобразование и обрезка изображений  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] позволяет пользователям преобразовывать изображения с помощью свойств <xref:System.Windows.Media.Imaging.BitmapImage> или с помощью дополнительных <xref:System.Windows.Media.Imaging.BitmapSource> объектов, таких как <xref:System.Windows.Media.Imaging.CroppedBitmap> или <xref:System.Windows.Media.Imaging.FormatConvertedBitmap>. С помощью этих преобразований можно масштабировать или поворачивать изображения, изменять формат пикселей изображения и обрезать изображения.  
+ WPF позволяет пользователям преобразовывать изображения с помощью свойств <xref:System.Windows.Media.Imaging.BitmapImage> или с помощью дополнительных объектов <xref:System.Windows.Media.Imaging.BitmapSource>, таких как <xref:System.Windows.Media.Imaging.CroppedBitmap> или <xref:System.Windows.Media.Imaging.FormatConvertedBitmap>. С помощью этих преобразований можно масштабировать или поворачивать изображения, изменять формат пикселей изображения и обрезать изображения.  
   
  Поворот изображения выполняется с помощью свойства <xref:System.Windows.Media.Imaging.BitmapImage.Rotation%2A> <xref:System.Windows.Media.Imaging.BitmapImage>. Вращение возможно только с шагом 90 градусов. В следующем примере изображение поворачивается на 90 градусов.  
   
@@ -181,14 +181,14 @@ ms.locfileid: "73733566"
   
 <a name="_extensibility"></a>   
 ## <a name="codec-extensibility"></a>Расширяемость кодеков  
- Основной функцией работы с образами WPF является модель расширяемости для новых кодеков изображений. Эти неуправляемые интерфейсы позволяют разработчикам кодеков интегрировать кодеки в [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. Благодаря этому новые форматы изображений могут автоматически использоваться приложениями [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
+ Основной функцией работы с образами WPF является модель расширяемости для новых кодеков изображений. Эти неуправляемые интерфейсы позволяют разработчикам кодеков интегрировать кодеки в WPF, поэтому новые форматы изображений могут автоматически использоваться приложениями WPF.  
   
  Пример API расширяемости см. в [примере кодека Win32](https://go.microsoft.com/fwlink/?LinkID=160052). В этом примере показано создание декодера и кодировщика для пользовательского формата изображения.  
   
 > [!NOTE]
 > Чтобы система могла распознать кодек, он должен иметь цифровую подпись.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - <xref:System.Windows.Media.Imaging.BitmapSource>
 - <xref:System.Windows.Media.Imaging.BitmapImage>

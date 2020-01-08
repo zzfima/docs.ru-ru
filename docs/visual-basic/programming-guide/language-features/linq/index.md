@@ -4,19 +4,19 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - what's new [Visual Basic]
 ms.assetid: ddba5545-ff6e-46c3-8967-5c4280db5aca
-ms.openlocfilehash: ea6754d9d93a7d400ac3494b01b850374e9ec02d
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 50d6c9ffb484dfbc6d33ed1a3e9a1f03f240990b
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74354182"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636540"
 ---
 # <a name="linq-in-visual-basic"></a>LINQ в Visual Basic
-Этот раздел содержит обзоры, примеры и общие сведения, которые помогут вам освоить и использовать Visual Basic и [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)].  
+В этом разделе содержатся обзоры, примеры и общие сведения, которые помогут вам понять и использовать Visual Basic и LINQ.  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Introduction to LINQ in Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md) (Знакомство с LINQ в Visual Basic)  
- Знакомит с концепциями поставщиков, операторов [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], описывает структуру запросов и функции языка.  
+ Содержит вводные сведения о поставщиках LINQ, операторах, структуре запросов и функциях языка.  
   
  [How to: Query a Database](../../../../visual-basic/programming-guide/language-features/linq/how-to-query-a-database-by-using-linq.md) (Практическое руководство. Выполнение запросов к базе данных)  
  Предоставляет пример подключения к базе данных SQL Server и выполнения запроса с помощью LINQ.  
@@ -45,7 +45,7 @@ ms.locfileid: "74354182"
  [Практическое руководство. Возвращение результата запроса LINQ в виде определенного типа](../../../../visual-basic/programming-guide/language-features/linq/how-to-return-a-linq-query-result-as-a-specific-type.md)  
  Предлагает пример, в котором результаты запроса LINQ возвращаются с определенным типом, а не как анонимный тип.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Встроенный язык запросов LINQ](../../../../visual-basic/programming-guide/concepts/linq/index.md)
 - [Общие сведения о LINQ to XML в Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)

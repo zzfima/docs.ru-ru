@@ -10,12 +10,12 @@ helpviewer_keywords:
 - initializers [Visual Basic]
 - named types [Visual Basic]
 ms.assetid: e2df3807-a70f-49dd-ac94-f1e07f472b1b
-ms.openlocfilehash: 20e46d7ecc206abb28240075d9ec5f764ab78d01
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: e6ffc649d7eb841c2d009b0ec1237975f46e2d2d
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346133"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636813"
 ---
 # <a name="object-initializers-named-and-anonymous-types-visual-basic"></a>Инициализаторы объектов: именованные и анонимные типы (Visual Basic)
 Инициализаторы объектов позволяют задавать свойства для сложного объекта с помощью одного выражения. Они могут использоваться для создания экземпляров именованных типов и анонимных типов.  
@@ -105,7 +105,7 @@ ms.locfileid: "74346133"
   
  Поскольку имя типа недоступно, нельзя использовать предложение `As` для объявления `cust13`. Его тип должен быть определен. Без использования позднего связывания это ограничивает использование анонимных типов локальными переменными.  
   
- Анонимные типы обеспечивают важную поддержку запросов [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. Дополнительные сведения об использовании анонимных типов в запросах см. в разделе [анонимные типы](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md) и [Введение в LINQ в Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md).  
+ Анонимные типы обеспечивают важную поддержку запросов LINQ. Дополнительные сведения об использовании анонимных типов в запросах см. в разделе [анонимные типы](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md) и [Введение в LINQ в Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md).  
   
 ### <a name="remarks-about-anonymous-types"></a>Примечания о анонимных типах  
   
@@ -127,7 +127,7 @@ ms.locfileid: "74346133"
   
      Дополнительные сведения о параметрах определения свойств в анонимных типах см. [в разделе как вывести имена и типы свойств в объявлениях анонимного типа](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md).  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Вывод локального типа](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
 - [Анонимные типы](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - lifetime [Visual Basic], Visual Basic
 - lifetime [Visual Basic]
 ms.assetid: bd91e390-690a-469a-9946-8dca70bc14e7
-ms.openlocfilehash: 05a39388e8aa9681af60cf86a3df8346d744b69e
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 293537ad33c8e751d49d820fc57ea525e68bc203
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74345317"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347766"
 ---
 # <a name="lifetime-in-visual-basic"></a>Время существования в Visual Basic
 Время *существования* объявленного элемента — это период времени, в течение которого он доступен для использования. Переменные — это единственные элементы, имеющие время существования. Для этой цели компилятор обрабатывает параметры и функции процедуры как особые случаи использования переменных. Время существования переменной представляет собой период времени, в течение которого она может содержать значение. Его значение может меняться в течение времени существования, но оно всегда содержит какое бы то ни было значение.  
@@ -60,18 +60,18 @@ ms.locfileid: "74345317"
 ### <a name="code"></a>Код  
  [!code-vb[VbVbalrKeywords#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/class7.vb#13)]  
   
-### <a name="comments"></a>Комментарии  
+### <a name="comments"></a>Comments  
  В предыдущем примере переменная `applesSold` сохраняется после того, как процедура `runningTotal` возвращается в вызывающий код. При следующем вызове `runningTotal` `applesSold` сохраняется ранее вычисленное значение.  
   
  Если `applesSold` было объявлено без использования `Static`, то предыдущие накопленные значения не будут сохранены в вызовах `runningTotal`. В следующий раз при вызове `runningTotal` `applesSold` было бы повторно создано и инициализировано как 0, а `runningTotal` бы возвращало то же значение, с которым он был вызван.  
   
-### <a name="compiling-the-code"></a>Компиляция кода  
+### <a name="compile-the-code"></a>Компиляция кода  
  Значение статической локальной переменной можно инициализировать как часть ее объявления. Если массив объявляется `Static`, можно инициализировать его ранг (число измерений), длину каждого измерения и значения отдельных элементов.  
   
-### <a name="security"></a>Безопасность  
+### <a name="security"></a>по безопасности  
  В предыдущем примере можно создать то же время существования, объявляя `applesSold` на уровне модуля. Однако если изменить область переменной таким образом, процедура больше не будет иметь монопольный доступ к ней. Так как другие процедуры могут получить доступ к `applesSold` и изменить ее значение, промежуточное Итого может быть ненадежным, а код может быть труднее поддерживать.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Общие](../../../../visual-basic/language-reference/modifiers/shared.md)
 - [Nothing](../../../../visual-basic/language-reference/nothing.md)
@@ -82,4 +82,4 @@ ms.locfileid: "74345317"
 - [Переменные](../../../../visual-basic/programming-guide/language-features/variables/index.md)
 - [Объявление переменных](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
 - [Устранение неполадок, связанных с типами данных](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
-- [Статические](../../../../visual-basic/language-reference/modifiers/static.md)
+- [Static](../../../../visual-basic/language-reference/modifiers/static.md)

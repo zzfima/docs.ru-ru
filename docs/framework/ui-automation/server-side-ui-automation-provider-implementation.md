@@ -6,12 +6,12 @@ helpviewer_keywords:
 - UI Automation, server-side provider implementation
 - provider implementation, UI Automation
 ms.assetid: 6acc6d08-bd67-4e2e-915c-9c1d34eb86fe
-ms.openlocfilehash: 35754d49bf223e7afcdec32e8b24cfb749f48aa6
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 25f22d5e8caacc69643f6d79e109ebaa94159d80
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446846"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75632321"
 ---
 # <a name="server-side-ui-automation-provider-implementation"></a>Реализация поставщика автоматизации пользовательского интерфейса на стороне сервера
 
@@ -20,7 +20,7 @@ ms.locfileid: "74446846"
 
 В этом разделе описывается реализация серверного поставщика автоматизации пользовательского интерфейса для пользовательского элемента управления.
 
-Реализация элементов Windows Presentation Foundation (WPF) и элементов, отличных от[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] (например, тех, которые предназначены для [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]), является принципиально отличающимся. Элементы[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] обеспечивают поддержку [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] с помощью класса, производного от <xref:System.Windows.Automation.Peers.AutomationPeer>. Элементы, отличные от[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] , обеспечивает поддержку с помощью реализаций интерфейсов поставщика.
+Реализация для элементов Windows Presentation Foundation (WPF) и элементов, отличных от WPF (например, разработанных для [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]), является принципиально отличающимся. Элементы WPF обеспечивают поддержку [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] через класс, производный от <xref:System.Windows.Automation.Peers.AutomationPeer>. Элементы, не являющиеся элементами WPF, обеспечивают поддержку через реализации интерфейсов поставщиков.
 
 <a name="Security_Considerations"></a>
 
@@ -40,7 +40,7 @@ ms.locfileid: "74446846"
 
 ## <a name="provider-implementation-by-non-wpf-elements"></a>Реализация поставщика элементами, отличными от WPF
 
-Пользовательские элементы управления, которые не являются частью платформы [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] , но написаны в управляемом коде (чаще всего это элементы управления [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] ), обеспечивают поддержку [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] за счет реализации интерфейсов. Каждый элемент должен реализовывать по крайней мере один из интерфейсов, перечисленных в первой таблице в следующем разделе. Кроме того, если элемент поддерживает один или несколько шаблонов элементов управления, он должен реализовать соответствующий интерфейс для каждого шаблона элемента управления.
+Пользовательские элементы управления, которые не являются частью платформы WPF, но написаны в управляемом коде (чаще всего это [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] элементы управления), обеспечивают поддержку [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] путем реализации интерфейсов. Каждый элемент должен реализовывать по крайней мере один из интерфейсов, перечисленных в первой таблице в следующем разделе. Кроме того, если элемент поддерживает один или несколько шаблонов элементов управления, он должен реализовать соответствующий интерфейс для каждого шаблона элемента управления.
 
 Проект поставщика [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] должен содержать ссылки на следующие сборки:
 
@@ -77,7 +77,7 @@ ms.locfileid: "74446846"
 
 Для взаимодействия с [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]элемент управления должен реализовать следующие основные функциональные области:
 
-|функциональное назначение;|Реализация|
+|Функция|Реализация|
 |-------------------|--------------------|
 |Предоставление поставщика для [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|В ответ на сообщение WM_GETOBJECT, отправленное окну элемента управления, возвращается объект, реализующий <xref:System.Windows.Automation.Provider.IRawElementProviderSimple> (или производный интерфейс). Для фрагментов это должен быть поставщик для корневого фрагмента.|
 |Указание значений свойств|Реализуйте <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.GetPropertyValue%2A> для предоставления или переопределения значений.|
@@ -115,7 +115,7 @@ ms.locfileid: "74446846"
 - <xref:System.Windows.Automation.AutomationElementIdentifiers.RuntimeIdProperty>
 
 > [!NOTE]
-> Простой элемент <xref:System.Windows.Automation.AutomationElementIdentifiers.RuntimeIdProperty> или корневой элемент фрагмента, размещенного в окне, извлекается из окна. Однако элементам фрагмента ниже корневого элемента (например, элементы списка в поле со списком) необходимо предоставлять собственные идентификаторы. Дополнительные сведения см. в разделе <xref:System.Windows.Automation.Provider.IRawElementProviderFragment.GetRuntimeId%2A>.
+> Простой элемент <xref:System.Windows.Automation.AutomationElementIdentifiers.RuntimeIdProperty> или корневой элемент фрагмента, размещенного в окне, извлекается из окна. Однако элементам фрагмента ниже корневого элемента (например, элементы списка в поле со списком) необходимо предоставлять собственные идентификаторы. Для получения дополнительной информации см. <xref:System.Windows.Automation.Provider.IRawElementProviderFragment.GetRuntimeId%2A>.
 >
 > Для поставщиков, размещенных в элементе управления <xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty> , должен возвращаться [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] . В этом случае поставщику окна по умолчанию может не удастся получить правильное значение.
 >
@@ -142,7 +142,7 @@ ms.locfileid: "74446846"
 |Метод|Описание|
 |------------|-----------------|
 |<xref:System.Windows.Automation.Provider.AutomationInteropProvider.ClientsAreListening%2A>|Это статическое свойство указывает, подписано ли какое-либо клиентское приложение на события [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] .|
-|<xref:System.Windows.Automation.Provider.IRawElementProviderAdviseEvents>|Реализация поставщика этого интерфейса в корневом элементе фрагмента позволяет ему знать, когда клиенты регистрируют и отменяют регистрацию обработчиков событий для событий в фрагменте.|
+|<xref:System.Windows.Automation.Provider.IRawElementProviderAdviseEvents>|Реализация поставщика этого интерфейса в корневом элементе фрагмента позволяет ему знать, когда клиенты регистрируют и отменяют регистрацию обработчиков событий для событий фрагмента.|
 
 <a name="Non_WPF_Provider_Navigation"></a>
 
@@ -189,7 +189,7 @@ ms.locfileid: "74446846"
 
 Для этого поставщик корневого элемента фрагмента главной панели предоставляет набор дочерних элементов, представляющих зоны. У каждой зоны один поставщик, который может предоставлять свойства и шаблоны. В своей реализации <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.HostRawElementProvider%2A>поставщик зоны возвращает поставщика окна по умолчанию для HWND элемента управления, который он получает путем вызова <xref:System.Windows.Automation.Provider.AutomationInteropProvider.HostProviderFromHandle%2A>, передавая дескриптор окна элемента управления. Наконец, поставщик корневого элемента фрагмента главной панели реализует интерфейс <xref:System.Windows.Automation.Provider.IRawElementProviderHwndOverride> и в своей реализации <xref:System.Windows.Automation.Provider.IRawElementProviderHwndOverride.GetOverrideProviderForHwnd%2A> возвращает соответствующий внешний поставщик для элемента управления, размещенного в указанном HWND.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Общие сведения о поставщиках автоматизации пользовательского интерфейса](ui-automation-providers-overview.md)
 - [Предоставление серверного поставщика автоматизации пользовательского интерфейса](expose-a-server-side-ui-automation-provider.md)

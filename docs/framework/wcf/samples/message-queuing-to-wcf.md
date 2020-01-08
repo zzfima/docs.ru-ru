@@ -2,21 +2,22 @@
 title: Передача сообщений из приложения MSMQ в приложение Windows Communication Foundation
 ms.date: 03/30/2017
 ms.assetid: 6d718eb0-9f61-4653-8a75-d2dac8fb3520
-ms.openlocfilehash: 4daa3694287f93aa42a139ed701578e26433bc44
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 08ab6468ed638b4e9f1ca2fdbac1c55076eafe99
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74714838"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337622"
 ---
 # <a name="message-queuing-to-windows-communication-foundation"></a>Передача сообщений из приложения MSMQ в приложение Windows Communication Foundation
-В этом примере показано, как приложение очереди сообщений (MSMQ) может отправить сообщение MSMQ в службу Windows Communication Foundation (WCF). Служба представляет собой резидентное консольное приложение, позволяющее наблюдать за получением службой сообщений из очереди.  
-  
+
+В этом примере показано, как приложение очереди сообщений (MSMQ) может отправить сообщение MSMQ в службу Windows Communication Foundation (WCF). Служба представляет собой резидентное консольное приложение, позволяющее наблюдать за получением службой сообщений из очереди.
+
  Контракт службы `IOrderProcessor` определяет одностороннюю службу, которую можно использовать с очередями. Сообщение MSMQ не содержит заголовка Action, поэтому автоматически соотнести различные сообщения MSMQ с контрактами операций невозможно. Поэтому может существовать только один контракт операции. Если нужно определить для службы несколько контрактов операций, приложение должно сообщать, какой заголовок сообщения MSMQ (например, метку или correlationID) можно использовать для выбора контракта операции.
-  
- Сообщение MSMQ не содержит сведений о том, какие заголовки соответствуют различным параметрам контракта операции. Параметр имеет тип <xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601>(`MsmqMessage<T>`), содержащий сообщение MSMQ. Тип "T" в классе <xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601>(`MsmqMessage<T>`) представляет данные, сериализованные в основную часть сообщения MSMQ. В этом образце тип `PurchaseOrder` сериализован в основную часть сообщения MSMQ.  
-  
- В следующем образце кода показан контракт службы, обрабатывающей заказы.  
+
+ Сообщение MSMQ не содержит сведений о том, какие заголовки соответствуют различным параметрам контракта операции. Параметр имеет тип <xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601>(`MsmqMessage<T>`), содержащий сообщение MSMQ. Тип "T" в классе <xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601>(`MsmqMessage<T>`) представляет данные, сериализованные в основную часть сообщения MSMQ. В этом образце тип `PurchaseOrder` сериализован в основную часть сообщения MSMQ.
+
+ В следующем образце кода показан контракт службы, обрабатывающей заказы.
 
 ```csharp
 // Define a service contract.
@@ -112,7 +113,7 @@ Console.ReadLine();
 
  При выполнении образца действия клиента и службы отображаются в окнах консоли как службы, так и клиента. Можно видеть, как служба получает сообщения от клиента. Нажмите клавишу ВВОД в каждом окне консоли, чтобы закрыть службу и клиент. Обратите внимание, что поскольку используется очередь, клиенту и службе не обязательно быть запущенными и работать одновременно. Например, можно запустить клиент, выключить его, а затем запустить службу и все равно получить сообщения клиента.
 
-### <a name="to-setup-build-and-run-the-sample"></a>Настройка, сборка и выполнение образца
+## <a name="set-up-build-and-run-the-sample"></a>Настройка, сборка и запуск примера
 
 1. Убедитесь, что вы выполнили [однократную процедуру настройки для Windows Communication Foundation примеров](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
 
@@ -132,7 +133,7 @@ Console.ReadLine();
 
 4. Чтобы запустить пример в конфигурации с одним компьютером, следуйте инструкциям в разделе [выполнение примеров Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).
 
-### <a name="to-run-the-sample-across-computers"></a>Запуск образца на нескольких компьютерах
+## <a name="run-the-sample-across-computers"></a>Запуск примера на нескольких компьютерах
 
 1. Скопируйте на компьютер службы файлы служебной программы из папки \service\bin\ в папку языка.
 
@@ -145,14 +146,14 @@ Console.ReadLine();
 5. На клиентском компьютере из командной строки запустите программу Client.exe.
 
 > [!IMPORTANT]
-> Образцы уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).  
->   
-> `<InstallDrive>:\WF_WCF_Samples`  
->   
-> Если этот каталог не существует, перейдите к [примерам Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , чтобы скачать все Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Samples. Этот образец расположен в следующем каталоге.  
->   
-> `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\MsmqToWcf`  
-  
+> Образцы уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).
+>
+> `<InstallDrive>:\WF_WCF_Samples`
+>
+> Если этот каталог не существует, перейдите к [примерам Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , чтобы скачать все Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Samples. Этот образец расположен в следующем каталоге.
+>
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\MsmqToWcf`
+
 ## <a name="see-also"></a>См. также:
 
 - [Очереди в WCF](../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)

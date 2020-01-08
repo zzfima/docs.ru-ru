@@ -2,17 +2,17 @@
 title: Практическое руководство. Потоковая передача фрагментов XML с доступом к сведениям заголовка
 ms.date: 07/20/2015
 ms.assetid: effd10df-87c4-4d7a-8a9a-1434d829dca5
-ms.openlocfilehash: 489e128e86a47e0e7f76c14a6cf1baf80fb0c406
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 325609b9f8cf1feebcb4be1fcfd0122e12100156
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74332455"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636696"
 ---
 # <a name="how-to-stream-xml-fragments-with-access-to-header-information-visual-basic"></a>Последующее: потоковая передача фрагментов XML с доступом к сведениям заголовка (Visual Basic)
 Иногда приходится считывать достаточно большие XML-файлы и разрабатывать приложения таким образом, чтобы объем памяти, используемой этим приложением, был прогнозируемым. Если попытаться заполнить XML-дерево большим XML-файлом, используемый объем памяти будет пропорционален размеру файла, то есть излишним. Поэтому следует вместо этого использовать потоки.  
   
- Одна из возможностей состоит в том, чтобы разработать приложение с использованием метода <xref:System.Xml.XmlReader>. При этом для запроса XML-дерева можно использовать метод [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. В этом случае можно написать собственный пользовательский метод оси. Дополнительные сведения см. в разделе [инструкции. написание метода оси LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-write-a-linq-to-xml-axis-method.md).  
+ Одна из возможностей состоит в том, чтобы разработать приложение с использованием метода <xref:System.Xml.XmlReader>. Однако может потребоваться использовать LINQ для запроса XML-дерева. В этом случае можно написать собственный пользовательский метод оси. Дополнительные сведения см. в разделе [инструкции. написание метода оси LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-write-a-linq-to-xml-axis-method.md).  
   
  Чтобы написать собственный метод оси, нужно написать небольшой метод, который использует метод <xref:System.Xml.XmlReader> для считывания узлов, до тех пор пока не достигнет одного из интересующих вас узлов. Затем метод вызывает метод <xref:System.Xml.Linq.XNode.ReadFrom%2A>, который читает из объекта <xref:System.Xml.XmlReader> и создает экземпляр фрагмента XML. После этого можно написать запросы в LINQ на основе пользовательского метода оси.  
   

@@ -1,13 +1,13 @@
 ---
-title: Запрос содержимого файлов в папке (LINQ)
+title: Практическое руководство. Запрос содержимого файлов в папке (LINQ)
 ms.date: 07/20/2015
 ms.assetid: edacbcd3-f3e4-4429-a8be-28a58dc0dd70
-ms.openlocfilehash: 02ffa398c495ca5af77685d62299c59cfc3b9d9c
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 3ad5fd6c893d590d46be67e6320ac5b915829f4b
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74347615"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346037"
 ---
 # <a name="how-to-query-the-contents-of-files-in-a-folder-linq-visual-basic"></a>Запрос содержимого файлов в папке (LINQ) (Visual Basic)
 
@@ -73,11 +73,11 @@ Module Module1
 End Module
 ```
 
-## <a name="compiling-the-code"></a>Компиляция кода
+## <a name="compile-the-code"></a>Компиляция кода
 
-Создайте проект консольного приложения VB.NET, скопируйте и вставьте пример кода и измените значение объекта Startup в свойствах проекта.
+Создайте Visual Basic проект консольного приложения, скопируйте и вставьте пример кода и измените значение объекта Startup в свойствах проекта.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [LINQ to Objects (Visual Basic)](linq-to-objects.md)
 - [LINQ и каталоги файлов (Visual Basic)](linq-and-file-directories.md)

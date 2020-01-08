@@ -15,15 +15,15 @@ helpviewer_keywords:
 - grouping data [LINQ in Visual Basic]
 - Select clause [LINQ in Visual Basic]
 ms.assetid: 1146f6d0-fcb8-4f4d-8223-c9db52620d21
-ms.openlocfilehash: e9a646d60bb22507f4c6bcbcdf9222fd0ed18f02
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: b9216dba23f49e4d9fd99687e38f5c13addde8fb
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74345749"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636878"
 ---
 # <a name="basic-query-operations-visual-basic"></a>Основные операции запроса (Visual Basic)
-В этом разделе приведены краткие сведения о [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] выражениях в Visual Basic и о некоторых типичных операциях, выполняемых в запросе. Дополнительные сведения см. в следующих разделах:  
+В этом разделе приведены краткие сведения о выражениях LINQ в Visual Basic и некоторых типичных операциях, выполняемых в запросе. Дополнительные сведения см. в следующих разделах:  
   
  [Introduction to LINQ in Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md) (Знакомство с LINQ в Visual Basic)  
   
@@ -32,7 +32,7 @@ ms.locfileid: "74345749"
  [Пошаговое руководство. Написание запросов в Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/walkthrough-writing-queries.md)  
   
 ## <a name="specifying-the-data-source-from"></a>Указание источника данных (из)  
- В [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] запросе первым шагом является указание источника данных, к которому необходимо выполнить запрос. Таким образом, предложение `From` в запросе всегда происходит первым. Операторы запросов выбирают и формируют результат на основе типа источника.  
+ В запросе LINQ первым шагом является указание источника данных, к которому необходимо выполнить запрос. Таким образом, предложение `From` в запросе всегда происходит первым. Операторы запросов выбирают и формируют результат на основе типа источника.  
   
  [!code-vb[VbLINQBasicOps#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#1)]  
   
@@ -124,7 +124,7 @@ Where cust.City = "London" Or cust.City = "Paris"
   
  Гарсиа, Хьюго  
   
- Гарсиа, Дебра  
+ Garcia, Debra  
   
  Туккер, Лэнс  
   
@@ -152,7 +152,7 @@ Where cust.City = "London" Or cust.City = "Paris"
   
  Дополнительные сведения о `Group By`см. в разделе [предложение GROUP BY](../../../../visual-basic/language-reference/queries/group-by-clause.md).  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - <xref:System.Collections.Generic.IEnumerable%601>
 - [Приступая к работе с LINQ в Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)

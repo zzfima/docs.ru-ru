@@ -2,12 +2,12 @@
 title: 'Транспорт: TCP-взаимодействие WSE 3.0'
 ms.date: 03/30/2017
 ms.assetid: 5f7c3708-acad-4eb3-acb9-d232c77d1486
-ms.openlocfilehash: 6541ddf322a2084601daf2f1271ac5c888073f8f
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 8166e1c378bc745eb8c9f37d6982642e754813cb
+ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423876"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75544622"
 ---
 # <a name="transport-wse-30-tcp-interoperability"></a>Транспорт: TCP-взаимодействие WSE 3.0
 В примере транспорта TCP-взаимодействия WSE 3,0 показано, как реализовать дуплексный сеанс TCP в качестве настраиваемого транспорта Windows Communication Foundation (WCF). Также демонстрируется использование расширяемости уровня канала для создания интерфейса по сети с существующими развернутыми системами. Ниже показано, как создать этот настраиваемый транспорт WCF.  
@@ -157,7 +157,7 @@ Received Body: to me.
 Press enter.  
 ```  
   
- Сервер:  
+ Сервер.  
   
 ```console  
 Listening for messages at soap://stockservice.contoso.com/wse/samples/2003/06/TcpSyncStockService  
@@ -175,7 +175,7 @@ Symbols:
 1. Для выполнения этого примера необходимо, чтобы были установлены WSE 3.0 и пример WSE `TcpSyncStockService`. Вы можете скачать [WSE 3,0 с сайта MSDN](https://go.microsoft.com/fwlink/?LinkId=95000).  
   
 > [!NOTE]
-> Так как WSE 3.0 не поддерживается в [!INCLUDE[lserver](../../../../includes/lserver-md.md)], пример `TcpSyncStockService` невозможно установить или выполнить в этой операционной системе.  
+> Поскольку WSE 3,0 не поддерживается в Windows Server 2008, вы не можете установить или запустить образец `TcpSyncStockService` в этой операционной системе.  
   
 1. После установки примера `TcpSyncStockService` выполните следующие операции.  
   

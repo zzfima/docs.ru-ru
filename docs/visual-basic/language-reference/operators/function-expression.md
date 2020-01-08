@@ -6,12 +6,12 @@ helpviewer_keywords:
 - functions [Visual Basic], function expressions
 - lambda expressions [Visual Basic], function expression
 ms.assetid: e8a47a45-4b8a-4f45-a623-7653625dffbc
-ms.openlocfilehash: d14d7c9bc701b5e06c51202c07c3b79832aba7cc
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 454c4e3d926640934a8edc4fcb16e4308a89dd50
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74331083"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75632341"
 ---
 # <a name="function-expression-visual-basic"></a>Выражение Function (Visual Basic)
 Объявляет параметры и код, определяющие лямбда-выражение функции.  
@@ -30,11 +30,11 @@ End Function
   
 |Термин|Определение|  
 |---|---|  
-|`parameterlist`|Необязательный элемент. Список имен локальных переменных, представляющих параметры этой процедуры. Круглые скобки должны присутствовать, даже если список пуст. См. [список параметров](../../../visual-basic/language-reference/statements/parameter-list.md).|  
-|`expression`|Обязательно. Одно выражение. Тип выражения является типом возвращаемого значения функции.|  
-|`statements`|Обязательно. Список инструкций, которые возвращают значение с помощью оператора `Return`. (См. раздел [оператор return](../../../visual-basic/language-reference/statements/return-statement.md).) Тип возвращаемого значения — это возвращаемый тип функции.|  
+|`parameterlist`|(Необязательный аргумент) Список имен локальных переменных, представляющих параметры этой процедуры. Круглые скобки должны присутствовать, даже если список пуст. См. [список параметров](../../../visual-basic/language-reference/statements/parameter-list.md).|  
+|`expression`|Обязательное Одно выражение. Тип выражения является типом возвращаемого значения функции.|  
+|`statements`|Обязательное Список инструкций, которые возвращают значение с помощью оператора `Return`. (См. раздел [оператор return](../../../visual-basic/language-reference/statements/return-statement.md).) Тип возвращаемого значения — это возвращаемый тип функции.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
  *Лямбда-выражение* — это функция без имени, которая вычисляет и возвращает значение. Лямбда-выражение можно использовать в любом месте, где можно использовать тип делегата, за исключением того, что в качестве аргумента для `RemoveHandler`. Дополнительные сведения о делегатах и использовании лямбда-выражений с делегатами см. в разделе [оператор Delegate](../../../visual-basic/language-reference/statements/delegate-statement.md) и [Преобразование неявного делегата](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md).  
   
 ## <a name="lambda-expression-syntax"></a>Синтаксис лямбда-выражений  
@@ -72,7 +72,7 @@ End Function
  [!code-vb[VbVbalrLambdas#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#14)]  
   
 ## <a name="example"></a>Пример  
- Лямбда-выражения лежат в основе многих операторов запроса в [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]и могут использоваться явно в запросах на основе методов. В следующем примере показан типичный [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] запрос, а затем перевод запроса в формат метода.  
+ Лямбда-выражения лежат в основе многих операторов запросов в LINQ и могут использоваться явным образом в запросах, основанных на методах. В следующем примере показан типичный запрос LINQ, а затем перевод запроса в формат метода.  
   
 ```vb  
 Dim londonCusts = From cust In db.Customers  
@@ -87,7 +87,7 @@ Dim londonCusts = db.Customers.
   
  Дополнительные сведения о методах запросов см. в разделе [запросы](../../../visual-basic/language-reference/queries/index.md). Дополнительные сведения о стандартных операторах запросов см. в разделе [Общие сведения о стандартных операторах запросов](../../programming-guide/concepts/linq/standard-query-operators-overview.md).  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Оператор Function](../../../visual-basic/language-reference/statements/function-statement.md)
 - [Лямбда-выражения](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)

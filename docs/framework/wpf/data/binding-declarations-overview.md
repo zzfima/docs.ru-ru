@@ -12,12 +12,12 @@ helpviewer_keywords:
 - syntax [WPF], object elements
 - binding declarations [WPF]
 ms.assetid: b97fd626-4c0d-4761-872a-2bca5820da2c
-ms.openlocfilehash: bc3a139db80066c9cad5199c7734fe66a8639400
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 8fea61c463928ee69ef5dd0dfbf107f89c5384ff
+ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460027"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75544463"
 ---
 # <a name="binding-declarations-overview"></a>Общие сведения об объявлении привязок
 
@@ -25,7 +25,7 @@ ms.locfileid: "73460027"
 
 <a name="Prereq"></a>
 
-## <a name="prerequisites"></a>Необходимые компоненты
+## <a name="prerequisites"></a>Prerequisites
 
 Важно, чтобы перед прочтением этого раздела вы были знакомы с основными понятиями и принципами использования расширений разметки. Подробнее о расширениях разметки см. в разделе [Расширения разметки и XAML WPF](../advanced/markup-extensions-and-wpf-xaml.md).
 
@@ -106,13 +106,13 @@ ms.locfileid: "73460027"
 
 ### <a name="escaping-mechanism"></a>Механизм экранирования
 
-- Внутри индексаторов ([ ]) символ каретки (^) служит escape-символом для следующего символа.
+- Внутри индексаторов ([]) знак крышки (^) задает экранирование следующего символа.
 
 - Если вы задали <xref:System.Windows.Data.Binding.Path%2A> в XAML, необходимо также экранировать (с помощью сущностей XML) определенные символы, которые являются специальными для определения языка XML:
 
-  - Используйте `&` в качестве escape-символа для символа &.
+  - Используйте `&amp;` для экранирования символа "&".
 
-  - Используйте `>` в качестве escape-символа для символа >.
+  - Используйте `&gt;` для экранирования закрывающего тега ">".
 
 - Кроме того, если вы задаете всю привязку в атрибуте, используя синтаксис расширения разметки, необходимо экранировать (с помощью обратной косой черты \\) символы, которые являются специфическими для синтаксического анализатора расширения разметки [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].
 
@@ -140,9 +140,9 @@ ms.locfileid: "73460027"
 
 - Значение <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> по умолчанию зависит от <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged> и <xref:System.Windows.Data.UpdateSourceTrigger.LostFocus> в зависимости от привязанного свойства зависимостей. Значение по умолчанию для большинства свойств зависимостей — <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged>, а свойство <xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=nameWithType> имеет значение по умолчанию <xref:System.Windows.Data.UpdateSourceTrigger.LostFocus>.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Общие сведения о привязке данных](../../../desktop-wpf/data/data-binding-overview.md)
-- [Разделы практического руководства](data-binding-how-to-topics.md)
+- [Практические руководства](data-binding-how-to-topics.md)
 - [Привязка данных](../advanced/optimizing-performance-data-binding.md)
 - [Синтаксис PropertyPath в XAML](../advanced/propertypath-xaml-syntax.md)

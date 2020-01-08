@@ -2,12 +2,12 @@
 title: Программа регистрации служб WorkFlow (WFServicesReg.exe)
 ms.date: 03/30/2017
 ms.assetid: 9e92c87b-99c5-4e8d-9d53-7944cc2b47d3
-ms.openlocfilehash: cf5ea345c900dec0e4859d81fcb272c1ba3d3df6
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 182bef75bff1785905d77d3bc497e0701e297912
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837757"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346594"
 ---
 # <a name="workflow-service-registration-tool-wfservicesregexe"></a>Программа регистрации служб WorkFlow (WFServicesReg.exe)
 Средство регистрации служб Workflow Services (WFServicesReg.exe) - это автономное средство, которое можно использовать для добавления, удаления или восстановления элементов конфигурации для служб Windows Workflow Foundation.  
@@ -56,7 +56,7 @@ WFServicesReg.exe [-c | -r | -v | -m | -i]
   
  Средство также регистрирует карты скриптов и обработчики XOML и RULES в метабазе IIS.  
   
- На компьютерах [!INCLUDE[ws2003](../../../includes/ws2003-md.md)] и [!INCLUDE[wxp](../../../includes/wxp-md.md)] (IIS 5,1 и IIS 6,0) регистрируется один набор сценариев. XOML и Rules.  
+ На компьютерах под Windows Server 2003 и [!INCLUDE[wxp](../../../includes/wxp-md.md)] (IIS 5,1 и IIS 6,0) регистрируется один набор сценариев. XOML и Rules.  
   
  На 64-разрядных компьютерах средство регистрирует карты скриптов режима WOW, если включен переключатель `Enable32BitAppOnWin64`, или собственные 64-разрядные карты скриптов, если переключатель `Enable32BitAppOnWin64` отключен.  
   
@@ -70,17 +70,17 @@ WFServicesReg.exe [-c | -r | -v | -m | -i]
 ## <a name="usage-scenarios"></a>Сценарии использования  
   
 ### <a name="installing-iis-after-net-framework-35-is-installed"></a>Установка IIS после установки .NET Framework 3.5  
- На [!INCLUDE[ws2003](../../../includes/ws2003-md.md)] компьютере .NET Framework 3,5 устанавливается до установки IIS. Из-за недоступности метабазы IIS установка .NET Framework 3,5 будет выполнена без установки скриптов scriptmap и Rules.  
+ На компьютере под Windows Server 2003 .NET Framework 3,5 устанавливается до установки IIS. Из-за недоступности метабазы IIS установка .NET Framework 3,5 будет выполнена без установки скриптов scriptmap и Rules.  
   
  После установки IIS можно воспользоваться средством WFServicesReg.exe с переключателем `/c` для установки этих карт скриптов.  
   
 ### <a name="repairing-the-scriptmaps"></a>Восстановление карт скриптов  
   
 #### <a name="scriptmap-deleted-under-web-sites-node"></a>Карта скрипта удалена из узла "Веб-сайты"  
- На компьютере под управлением [!INCLUDE[ws2003](../../../includes/ws2003-md.md)] XOML- и RULES-файлы были случайно удалены из узла "Веб-сайты". Чтобы выполнить восстановление, запустите средство WFServicesReg.exe с переключателем `/c`.  
+ На компьютере с Windows Server 2003. XOML или. rules случайно удаляются из узла "веб-сайты". Чтобы выполнить восстановление, запустите средство WFServicesReg.exe с переключателем `/c`.  
   
 #### <a name="scriptmap-deleted-under-a-particular-web-site"></a>Карта скрипта удалена из конкретного веб-сайта  
- На компьютере под управлением [!INCLUDE[ws2003](../../../includes/ws2003-md.md)] XOML- и RULES-файлы были случайно удалены из конкретного веб-сайта (например, из веб-сайта по умолчанию), а не из узла "Веб-сайты".  
+ На компьютере с Windows Server 2003. XOML или. rules случайно удаляются с определенного веб-сайта (например, веб-сайта по умолчанию), а не из узла веб-сайты.  
   
  Чтобы восстановить удаленные обработчики для определенного веб-сайта, следует выполнить команду "WFServicesReg. exe/r", чтобы удалить обработчики со всех веб-сайтов, а затем выполнить команду "WFServicesReg. exe/c", чтобы создать соответствующие обработчики для всех веб-сайтов.  
   

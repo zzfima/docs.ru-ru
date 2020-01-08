@@ -2,15 +2,15 @@
 title: LINQ to SQL
 ms.date: 03/30/2017
 ms.assetid: 73d13345-eece-471a-af40-4cc7a2f11655
-ms.openlocfilehash: fbb2f8cf37bd05864dc93b8ebbd33466a9a2c55e
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 4553be9eeab8792197503d0b1de872f4494277b6
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70793078"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75634629"
 ---
 # <a name="linq-to-sql"></a>LINQ to SQL
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]является компонентом .NET Framework версии 3,5, предоставляющей инфраструктуру времени выполнения для управления реляционными данными как объектами.  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] является компонентом .NET Framework версии 3,5, предоставляющей инфраструктуру времени выполнения для управления реляционными данными как объектами.  
   
 > [!NOTE]
 > Реляционные данные отображаются в виде коллекции двумерных таблиц (*отношений* или *плоских файлов*),где общие столбцы связывают таблицы друг с другом. Для эффективного использования [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] необходимо ознакомиться с основными принципами реляционных баз данных.  
@@ -19,7 +19,7 @@ ms.locfileid: "70793078"
   
  Разработчики, использующие Visual Studio, обычно используют реляционный конструктор объектов, который предоставляет пользовательский интерфейс для реализации многих функций [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
   
- Документация, включенная в эту версию [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], описывает основные строительные блоки, процессы и методики, необходимые для построения приложений [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. Можно также выполнить поиск по Документация Майкрософт для конкретных проблем, и вы можете принять участие в [форуме LINQ](https://go.microsoft.com/fwlink/?LinkId=76488), где вы сможете обсуждать более сложные темы подробно с экспертами. Наконец, [LINQ to SQL: запрос к языку .NET для реляционных данных](https://go.microsoft.com/fwlink/?LinkId=93205) , содержащий технические сведения [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] о технологии, завершенный с C# Visual Basic и примерами кода.  
+ Документация, включенная в эту версию [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], описывает основные строительные блоки, процессы и методики, необходимые для построения приложений [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. Можно также выполнить поиск по Документация Майкрософт для конкретных проблем, и вы можете принять участие в [форуме LINQ](https://go.microsoft.com/fwlink/?LinkId=76488), где вы сможете обсуждать более сложные темы подробно с экспертами. Наконец, [LINQ to SQL: запрос на языке .NET для реляционных данных —](https://go.microsoft.com/fwlink/?LinkId=93205) технический документ с подробными сведениями [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] технологии, полный C# код с Visual Basic и примерами кода.  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Начало работы](getting-started.md)  
@@ -35,14 +35,14 @@ ms.locfileid: "70793078"
  Содержит ссылки на Visual Basic и C# примеры.  
   
 ## <a name="related-sections"></a>Связанные разделы  
- [Интегрированный в язык запрос (LINQ) —C#](../../../../../csharp/programming-guide/concepts/linq/index.md)\
+ [LINQ — C# ](../../../../../csharp/programming-guide/concepts/linq/index.md)\
  Предоставляет обзоры технологий LINQ в C#.
  
  [LINQ — Visual Basic](../../../../../visual-basic/programming-guide/concepts/linq/index.md)  
  Предоставляет обзоры технологий LINQ в Visual Basic.
   
  [LINQ](../../../../../visual-basic/programming-guide/language-features/linq/index.md)  
- Описание [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] технологий для Visual Basic пользователей.  
+ Описывает технологии LINQ для Visual Basic пользователей.  
   
  [LINQ и ADO.NET](../../linq-and-ado-net.md)  
  Ссылки на портал ADO.NET.  
@@ -54,4 +54,4 @@ ms.locfileid: "70793078"
  Содержит инструкции по загрузке примеров баз данных, используемых в документации.  
   
  [Обзор серверного веб-элемента управления LinqDataSource](https://docs.microsoft.com/previous-versions/aspnet/bb547113(v=vs.100))  
- Описывает, как <xref:System.Web.UI.WebControls.LinqDataSource> элемент управления [!INCLUDE[vbteclinqext](../../../../../../includes/vbteclinqext-md.md)] предоставляет веб-разработчикам через архитектуру управления источниками данных ASP.NET.
+ Описывает, как элемент управления <xref:System.Web.UI.WebControls.LinqDataSource> предоставляет LINQ для веб-разработчиков через архитектуру управления источниками данных ASP.NET.

@@ -2,18 +2,18 @@
 title: Общие сведения о классе XAttribute
 ms.date: 07/20/2015
 ms.assetid: 7781580a-9583-4a1b-ae1e-91c5936eb0b1
-ms.openlocfilehash: 00aeeec3f251ecd1d21a313290326b3ba49d63d3
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: ceafe5478e41fb4c2038fd9300ef7b1ee6cb8411
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349328"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636657"
 ---
 # <a name="xattribute-class-overview-visual-basic"></a>Общие сведения о классе XAttribute (Visual Basic)
 Атрибуты - это пары «имя-значение», ассоциированные с элементом. Класс <xref:System.Xml.Linq.XAttribute> представляет XML-атрибуты.  
   
 ## <a name="overview"></a>Обзор  
- Работа с атрибутами [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] аналогична работе с элементами. Они имеют аналогичные конструкторы. Аналогичны и методы, используемые для получения их коллекций. По своему виду выражение запроса [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] для коллекции атрибутов весьма напоминает выражение запроса [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] для коллекции элементов.  
+ Работа с атрибутами [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] аналогична работе с элементами. Они имеют аналогичные конструкторы. Аналогичны и методы, используемые для получения их коллекций. Выражение запроса LINQ для коллекции атрибутов очень похоже на выражение запроса LINQ для коллекции элементов.  
   
  Порядок, в котором атрибуты добавлялись к элементу, сохраняется. Иначе говоря, при просмотре атрибутов они отображаются в том же порядке, в каком были добавлены.  
   

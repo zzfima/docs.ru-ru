@@ -1,19 +1,19 @@
 ---
-title: Запросы
+title: запросы,
 ms.date: 07/20/2015
 helpviewer_keywords:
 - queries [Visual Basic]
 - LINQ, queries
 ms.assetid: 8edc717c-4a24-4cbc-9c16-11f479c935db
-ms.openlocfilehash: a4a926d089a8bec1abaa47404f6c9112687e6df2
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: d23e18527fadce031f56bed3ae4c5a5c17b12e18
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350443"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636735"
 ---
 # <a name="queries-visual-basic"></a>Запросы (Visual Basic)
-Visual Basic позволяет создавать выражения [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] в коде.  
+Visual Basic позволяет создавать LINQ-выражения в коде.  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Предложение Aggregate](../../../visual-basic/language-reference/queries/aggregate-clause.md)  
@@ -58,7 +58,7 @@ Visual Basic позволяет создавать выражения [!INCLUDE[
  [Предложения Where](../../../visual-basic/language-reference/queries/where-clause.md)  
  Описывает предложение `Where`, которое указывает условие фильтрации для запроса.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [LINQ](../../../visual-basic/programming-guide/language-features/linq/index.md)
 - [Introduction to LINQ in Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md) (Знакомство с LINQ в Visual Basic)

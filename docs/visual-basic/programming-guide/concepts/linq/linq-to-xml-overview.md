@@ -2,17 +2,17 @@
 title: Общие сведения о LINQ to XML
 ms.date: 07/20/2015
 ms.assetid: 502661e0-bc5d-438d-94c2-7efb63bb6fbd
-ms.openlocfilehash: ef3fca844dc98440eb4816110a5a78482cfa4f4e
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: a30340e06a3f8eac9fe2b7718b14ba20363d682f
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346794"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636475"
 ---
 # <a name="linq-to-xml-overview-visual-basic"></a>Обзор LINQ to XML (Visual Basic)
 XML широко используется для форматирования данных в целом ряде контекстов. Примеры XML можно обнаружить в веб-среде, в файлах конфигурации, в файлах Microsoft Office Word и в базах данных.  
   
- В [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] реализован современный пересмотренный подход к программированию средствами XML. Кроме того, реализованы встроенные в память возможности модификации документов модели DOM, поддерживаются выражения запросов [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. Хотя в синтаксическом отношении эти выражения запросов отличаются от XPath, они предоставляют аналогичные функциональные возможности.  
+ В [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] реализован современный пересмотренный подход к программированию средствами XML. Она предоставляет возможности изменения документов в памяти в модель DOM (DOM) и поддерживает выражения запросов LINQ. Хотя в синтаксическом отношении эти выражения запросов отличаются от XPath, они предоставляют аналогичные функциональные возможности.  
   
 ## <a name="linq-to-xml-developers"></a>Разработчики, использующие LINQ to XML  
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] предназначен для различных категорий разработчиков. С точки зрения среднестатистического разработчика, заинтересованного в решении той или иной задачи, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] облегчает обработку XML, поскольку дает возможность получить опыт работы с запросами, аналогичный опыту работы с языком SQL. Посвятив совсем немного времени изучению предмета, программисты могут научиться составлять сжатые и мощные запросы на предпочитаемом ими языке программирования.  
@@ -24,7 +24,7 @@ XML широко используется для форматирования д
   
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] подобен модели DOM в том отношении, что загружает XML-документ в память. К такому документу можно направить запрос, его можно изменить, а после изменения его можно сохранить в файле или сериализовать и передать через Интернет. Однако [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] отличается от DOM: она предоставляет новую объектную модель, которая более проста и удобна для работы с, и использует преимущества языковых функций в Visual Basic.  
   
- Важнейшее достоинство [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] состоит в его интеграции с [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]. Эта интеграция дает возможность создавать запросы к загруженному в память XML-документу с целью получения коллекций элементов и атрибутов. По своей функциональности (но не по синтаксису) реализованные в [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] возможности формирования запросов сопоставимы с возможностями XPath и XQuery. Интеграция [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] в Visual Basic обеспечивает более надежную типизацию, проверку во время компиляции и улучшенную поддержку отладчика.  
+ Наиболее важным преимуществом [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] является его интеграция с запросом, интегрированным с языком (LINQ). Эта интеграция дает возможность создавать запросы к загруженному в память XML-документу с целью получения коллекций элементов и атрибутов. По своей функциональности (но не по синтаксису) реализованные в [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] возможности формирования запросов сопоставимы с возможностями XPath и XQuery. Интеграция LINQ в Visual Basic обеспечивает более надежную типизацию, проверку во время компиляции и улучшенную поддержку отладчика.  
   
  Другим преимуществом [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] является то, что возможность использования результатов запросов в качестве параметров конструкторов объектов <xref:System.Xml.Linq.XElement> и <xref:System.Xml.Linq.XAttribute> позволяет применять мощный подход для создания XML-деревьев. Этот подход, известный как *функциональное построение*, дает разработчикам возможность легко преобразовывать деревья XML из одной формы в другую.  
   
@@ -47,7 +47,7 @@ Order By item.<PartNumber>.Value _
 Select item  
 ```  
   
- В дополнение к функциям, реализованным в [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] предоставляет усовершенствованный интерфейс программирования XML. Благодаря [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] появляются следующие возможности:  
+ Помимо этих возможностей LINQ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] предоставляет улучшенный интерфейс программирования XML. Благодаря [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] появляются следующие возможности:  
   
 - Загрузка XML из файлов или из потоков.  
   
@@ -87,7 +87,7 @@ Dim contacts = _
   
  Дополнительные сведения см. в разделе [Создание деревьев XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md).  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - <xref:System.Xml.Linq>
 - [Начало работы (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/getting-started-linq-to-xml.md)

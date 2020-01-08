@@ -2,12 +2,12 @@
 title: Неподдерживаемые сценарии
 ms.date: 03/30/2017
 ms.assetid: 72027d0f-146d-40c5-9d72-e94392c8bb40
-ms.openlocfilehash: 67a4e64208e00f9124b3cdc53d743c060274dac2
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 87c0d9984fe823eae0e3cc281ebda55bc33a541e
+ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837978"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75544791"
 ---
 # <a name="unsupported-scenarios"></a>Неподдерживаемые сценарии
 По различным причинам Windows Communication Foundation (WCF) не поддерживает некоторые конкретные сценарии безопасности. Например, [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition не реализует протоколы проверки подлинности SSPI или Kerberos, поэтому WCF не поддерживает запуск службы с проверкой подлинности Windows на этой платформе. Другие механизмы проверки подлинности, такие как имя пользователя и пароль и встроенная проверка подлинности HTTP/HTTPS, поддерживаются при запуске WCF в Windows XP Home Edition.  
@@ -62,7 +62,7 @@ ms.locfileid: "74837978"
  FIPS-совместимый алгоритм шифрования AES не работает в дуплексных обратных вызовах при олицетворении на уровне идентификации.  
   
 ### <a name="cngksp-certificates"></a>Сертификаты CNG и KSP  
- *API шифрования: следующее поколение (CNG)* — это долгосрочная замена интерфейса CryptoAPI. Этот API доступен в неуправляемом коде в Windows Vista, [!INCLUDE[lserver](../../../../includes/lserver-md.md)] и более поздних версий Windows.  
+ *API шифрования: следующее поколение (CNG)* — это долгосрочная замена интерфейса CryptoAPI. Этот API доступен в неуправляемом коде в Windows Vista, Windows Server 2008 и более поздних версиях Windows.  
   
  .NET Framework 4.6.1 и более ранние версии не поддерживают эти сертификаты, так как они используют устаревший интерфейс CryptoAPI для работы с сертификатами CNG и KSP. Использование этих сертификатов с .NET Framework 4.6.1 и более ранними версиями вызовет исключение.  
   

@@ -9,17 +9,17 @@ helpviewer_keywords:
 - documents [WPF], annotations
 - sticky notes [WPF]
 ms.assetid: 716bf474-29bd-4c74-84a4-8e0744bdad62
-ms.openlocfilehash: dc9c4125f9ac3c44be41efe92b9e495599e5c130
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: b82c7e7300ebc295ca06d565c2fb5f6f2b28e92c
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72004046"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636514"
 ---
 # <a name="annotations-overview"></a>Общие сведения о заметках
 Добавление заметок или примечаний на печатные документы — это настолько обыденное действие, что мы воспринимаем его как должное. Такие примечания или комментарии являются "заметками", которые мы добавляем в документ для пометки информации или выделения интересующих элементов, к которым будем обращаться в дальнейшем. Хотя написание заметок на печатных документах является простым и обыденным, возможность добавлять личные примечания в электронные документы, как правило, очень ограниченна, если вообще доступна.  
   
- В этом разделе рассматриваются некоторые распространенные типы заметок, специально записки и особенности, а также показано, как платформа Microsoft Annotations упрощает эти типы заметок в приложениях с помощью Windows Presentation Foundation (WPF ) элементы управления для просмотра документов.  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] элементы управления для просмотра документов, поддерживающие заметки, включают <xref:System.Windows.Controls.FlowDocumentReader> и <xref:System.Windows.Controls.FlowDocumentScrollViewer>, а также элементы управления, производные от <xref:System.Windows.Controls.Primitives.DocumentViewerBase>, таких как <xref:System.Windows.Controls.DocumentViewer> и <xref:System.Windows.Controls.FlowDocumentPageViewer>.  
+ В этом разделе рассматриваются некоторые распространенные типы заметок, специально записки и особенности, а также показано, как платформа Microsoft Annotations упрощает эти типы заметок в приложениях с помощью Windows Presentation Foundation (WPF ) элементы управления для просмотра документов.  Элементы управления для просмотра документов WPF, поддерживающие заметки, включают <xref:System.Windows.Controls.FlowDocumentReader> и <xref:System.Windows.Controls.FlowDocumentScrollViewer>, а также элементы управления, производные от <xref:System.Windows.Controls.Primitives.DocumentViewerBase>, такие как <xref:System.Windows.Controls.DocumentViewer> и <xref:System.Windows.Controls.FlowDocumentPageViewer>.  
 
 <a name="caf1_type_stickynotes"></a>   
 ## <a name="sticky-notes"></a>Записки  
@@ -27,7 +27,7 @@ ms.locfileid: "72004046"
   
  Ниже показаны некоторые примеры заметок: выделение, текстовая записка и рукописная записка.  
   
- ![Выделение, текстовая и рукописная записка](./media/caf-stickynote.jpg "CAF_StickyNote")  
+ ![Выделение, ввод текста и рукописных заметок.](./media/caf-stickynote.jpg "CAF_StickyNote")  
   
  В следующем примере показан метод, который можно использовать для включения поддержки заметок в приложении.  
   
@@ -36,11 +36,11 @@ ms.locfileid: "72004046"
   
 <a name="caf1_type_callouts"></a>   
 ## <a name="highlights"></a>Главное  
- Люди используют различные способы для привлечения внимания к интересующим элементам в бумажном документе, такие как подчеркивание, выделение, заключение слов в предложении в кружок или рисование пометок и примечаний на полях.  Выделение заметок в Microsoft Annotations Framework предоставляет аналогичную функцию для пометки сведений, отображаемых в [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] элементов управления для просмотра документов.  
+ Люди используют различные способы для привлечения внимания к интересующим элементам в бумажном документе, такие как подчеркивание, выделение, заключение слов в предложении в кружок или рисование пометок и примечаний на полях.  Выделение заметок в Microsoft Annotations Framework предоставляет аналогичную функцию для пометки информации, отображаемой в элементах управления просмотром документов WPF.  
   
  На следующем рисунке показан пример заметки-выделения.  
   
- ![Заметка-выделение](./media/caf-callouts.png "CAF_Callouts")  
+ ![Выделить заметку](./media/caf-callouts.png "CAF_Callouts")  
   
  Пользователи обычно создают аннотации, сначала выбирая какой-либо текст или интересующий элемент, а затем щелкая правой кнопкой мыши для вывода <xref:System.Windows.Controls.ContextMenu> параметров аннотации.  В следующем примере показаны [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], которые можно использовать для объявления <xref:System.Windows.Controls.ContextMenu> с перенаправляемыми командами, к которым пользователи могут получать доступ для создания заметок и управления ими.  
   

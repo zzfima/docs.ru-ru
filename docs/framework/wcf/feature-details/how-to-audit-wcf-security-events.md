@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - security [WCF], auditing events
 ms.assetid: e71e9587-3336-46a2-9a9e-d72a1743ecec
-ms.openlocfilehash: b96c68c06099db2f396d16772cfaa8aee37390fe
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 7071aaf88346ee217226632501ebd6c82cfc1cb8
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74838017"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346761"
 ---
 # <a name="how-to-audit-windows-communication-foundation-security-events"></a>Практическое руководство. Аудит событий безопасности Windows Communication Foundation
 Windows Communication Foundation (WCF) позволяет регистрировать события безопасности в журнале событий Windows, который можно просмотреть с помощью Просмотр событий Windows. В этом разделе описано, как настроить приложение, чтобы события безопасности регистрировались в журнале. Дополнительные сведения об аудите WCF см. в разделе [Audit](../../../../docs/framework/wcf/feature-details/auditing-security-events.md).  
@@ -24,7 +24,7 @@ Windows Communication Foundation (WCF) позволяет регистриров
      [!code-csharp[AuditingSecurityEvents#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/auditingsecurityevents/cs/auditingsecurityevents.cs#2)]
      [!code-vb[AuditingSecurityEvents#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/auditingsecurityevents/vb/auditingsecurityevents.vb#2)]  
   
-     Перечисление <xref:System.ServiceModel.AuditLogLocation> имеет три значения: `Application`, `Security`или `Default`. Эти значения определяют один журналов, доступных в средстве "Просмотр событий" - журнал безопасности или журнал приложения. Если установлено значение `Default`, выбор журнала будет зависеть от параметров операционной системы, в которой выполняется приложение. Если аудит включен, а расположение журнала аудита не задано, по умолчанию для платформ, поддерживающих ведение журнала безопасности, используется значение `Security`; в противном случае используется значение `Application`. Только [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] и Windows Vista поддерживают запись в журнал безопасности по умолчанию.  
+     Перечисление <xref:System.ServiceModel.AuditLogLocation> имеет три значения: `Application`, `Security`или `Default`. Эти значения определяют один журналов, доступных в средстве "Просмотр событий" - журнал безопасности или журнал приложения. Если установлено значение `Default`, выбор журнала будет зависеть от параметров операционной системы, в которой выполняется приложение. Если аудит включен, а расположение журнала аудита не задано, по умолчанию для платформ, поддерживающих ведение журнала безопасности, используется значение `Security`; в противном случае используется значение `Application`. Только Windows Server 2003 и Windows Vista поддерживают запись в журнал безопасности по умолчанию.  
   
 2. Настройте типы событий для аудита. Возможен одновременный аудит событий уровня службы и событий авторизации уровня сообщений. Для этого присвойте свойству <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.ServiceAuthorizationAuditLevel%2A> или свойству <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.MessageAuthenticationAuditLevel%2A> одно из значений перечисления <xref:System.ServiceModel.AuditLevel>, как показано в следующем примере кода.  
   
@@ -78,7 +78,7 @@ Windows Communication Foundation (WCF) позволяет регистриров
  [!code-csharp[AuditingSecurityEvents#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/auditingsecurityevents/cs/auditingsecurityevents.cs#1)]
  [!code-vb[AuditingSecurityEvents#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/auditingsecurityevents/vb/auditingsecurityevents.vb#1)]  
   
-## <a name="net-framework-security"></a>Безопасность .NET Framework  
+## <a name="net-framework-security"></a>Безопасность платформы .NET Framework  
  Если для свойства <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> задать значение `true`, все неудачные попытки создания аудита безопасности будут подавляться (если задано значение `false`, будет создаваться исключение). Однако если включить следующее свойство **локального параметра безопасности** Windows, ошибка создания событий аудита приведет к немедленному завершению работы Windows:  
   
  **Аудит: немедленное завершение работы системы, если не удается зарегистрировать аудит безопасности**  

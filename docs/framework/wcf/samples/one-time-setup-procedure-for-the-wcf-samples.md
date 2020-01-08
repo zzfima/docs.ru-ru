@@ -2,12 +2,12 @@
 title: Процедура однократной настройки образцов Windows Communication Foundation
 ms.date: 03/30/2017
 ms.assetid: a5848ffd-3eb5-432d-812e-bd948ccb6bca
-ms.openlocfilehash: 95bba89546e6667cc36fa06a0090aa8e9570fc7e
-ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
+ms.openlocfilehash: b0f452ba7aabcaa5ea995acba1873029c67f0f5d
+ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74960137"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75544662"
 ---
 # <a name="one-time-setup-procedure-for-the-windows-communication-foundation-samples"></a>Процедура однократной настройки образцов Windows Communication Foundation
 
@@ -63,7 +63,7 @@ ms.locfileid: "74960137"
     > [!NOTE]
     > Если этот шаг не выполнен, построение всех образцов, размещенных в службах IIS, завершится с ошибкой. Убедитесь, что разрешения заданы правильно, или запустите и командную строку пакета SDK, и командную строку Visual Studio (2012) от имени администратора.
 
-11. Создайте на компьютере каталог C:\logs. Некоторые образцы могут ожидать его наличия. Убедитесь, что соответствующая учетная запись имеет разрешение на запись в этот каталог. Для Windows 7, Windows Vista и Windows Server 2008 R2 эта учетная запись является **сетевой службой**. Для [!INCLUDE[lserver](../../../../includes/lserver-md.md)] это учетная запись NT Authority\Network Service. Для [!INCLUDE[wxp](../../../../includes/wxp-md.md)] и [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] это учетная запись ASPNET.
+11. Создайте на компьютере каталог C:\logs. Некоторые образцы могут ожидать его наличия. Убедитесь, что соответствующая учетная запись имеет разрешение на запись в этот каталог. Для Windows 7, Windows Vista и Windows Server 2008 R2 эта учетная запись является **сетевой службой**. Для Windows Server 2008 учетная запись — NT Authority\Network Service. Для [!INCLUDE[wxp](../../../../includes/wxp-md.md)] и Windows Server 2003 учетная запись — ASPNET.
 
 12. Запустите файл Setupcerttool.bat. Этот файл находится в папке \<InstallPath > \ WF_WCF_Samples \Вкф\сетуп\.  Этот скрипт выполнит следующие задачи.
 

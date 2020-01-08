@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Private keyword [Visual Basic]
 - Private keyword [Visual Basic], syntax
 ms.assetid: aba74a2e-5824-4613-bf63-b9ec7787f4e6
-ms.openlocfilehash: 5600744aeca79a54f51a1f9ecd0ef00fed4b00fd
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 0c855c4e08b365b4cb75ab062d2ec304a79612ab
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74351335"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347918"
 ---
 # <a name="private-visual-basic"></a>Private (Visual Basic)
 Указывает, что один или несколько объявленных программных элементов доступны только в контексте объявления, включая из любых содержащихся в них типов.  
@@ -39,7 +39,7 @@ ms.locfileid: "74351335"
   
  [Оператор Const](../../../visual-basic/language-reference/statements/const-statement.md)  
   
- [Оператор Declare](../../../visual-basic/language-reference/statements/declare-statement.md)  
+ [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md)  
   
  [Оператор Delegate](../../../visual-basic/language-reference/statements/delegate-statement.md)  
   
@@ -59,13 +59,14 @@ ms.locfileid: "74351335"
   
  [Оператор Sub](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Public](../../../visual-basic/language-reference/modifiers/public.md)
 - [Protected](../../../visual-basic/language-reference/modifiers/protected.md)
 - [Friend](../../../visual-basic/language-reference/modifiers/friend.md)
 - [Private Protected](./private-protected.md)
-- Уровни доступа [Protected Friend](./protected-friend.md)[в Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
+- [Protected Friend](./protected-friend.md)
+- [Уровни доступа в Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
 - [Процедуры](../../../visual-basic/programming-guide/language-features/procedures/index.md)
 - [Структуры](../../../visual-basic/programming-guide/language-features/data-types/structures.md)
 - [Объекты и классы](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

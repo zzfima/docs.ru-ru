@@ -10,12 +10,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], overloading
 - procedures [Visual Basic], multiple versions
 ms.assetid: c7042de2-2422-4039-94e8-ac298896af69
-ms.openlocfilehash: 047d566c13f03803d2e5c3bc6cce0db56df4a3f0
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 94f12b4cc6cb35864fefbb3b5bb1378bec5e974c
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74345846"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347564"
 ---
 # <a name="how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters-visual-basic"></a>Практическое руководство. Перегрузка процедуры, принимающей неопределенное число параметров (Visual Basic)
 Если процедура имеет параметр [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) , нельзя определить перегруженную версию, принимающую одномерный массив для массива параметров. Дополнительные сведения см. в разделе "Неявные перегрузки для параметра ParamArray" раздела [рекомендации по перегрузке процедур](./considerations-in-overloading-procedures.md).  
@@ -47,13 +47,13 @@ ms.locfileid: "74345846"
   
  Код в перегруженных версиях не должен проверять, предоставлен ли вызывающему коду одно или несколько значений для параметра `ParamArray` или, если да, сколько. Visual Basic передает управление версии, соответствующей списку аргументов вызова.  
   
-## <a name="compiling-the-code"></a>Компиляция кода  
+## <a name="compile-the-code"></a>Компиляция кода  
  Так как процедура с параметром `ParamArray` эквивалентна набору перегруженных версий, нельзя перегружать такую процедуру со списком параметров, соответствующим любому из этих неявных перегрузок. Дополнительные сведения см. [в разделе рекомендации по перегрузке процедур](./considerations-in-overloading-procedures.md).  
   
 ## <a name="net-framework-security"></a>Безопасность платформы .NET Framework  
  Всякий раз при работе с массивом, который может быть неограниченным большим, существует риск перегрузки внутренней емкости приложения. Если вы принимаете массив параметров, следует проверить длину массива, которому был передан вызывающий код, и предпринять соответствующие шаги, если оно слишком велико для вашего приложения.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Процедуры](./index.md)
 - [Параметры и аргументы процедуры](./procedure-parameters-and-arguments.md)

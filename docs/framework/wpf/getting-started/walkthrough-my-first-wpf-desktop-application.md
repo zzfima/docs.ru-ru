@@ -9,15 +9,15 @@ helpviewer_keywords:
 - WPF [WPF], getting started
 ms.assetid: b96bed40-8946-4285-8fe4-88045ab854ed
 ms.topic: tutorial
-ms.custom: vs-dotnet
+ms.custom: mvc,vs-dotnet
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0d45932f6a8822ec2aaa40cd52431d9981ab8fa1
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 7b5f74448ffce448740937c06a476a29c8659879
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73453759"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75336811"
 ---
 # <a name="tutorial-create-your-first-wpf-application-in-visual-studio-2019"></a>Руководство. Создание первого приложения WPF в Visual Studio 2019
 
@@ -41,7 +41,7 @@ ms.locfileid: "73453759"
 >
 > Язык кода образца кода можно переключать между C# и Visual Basic с помощью селектора языка в верхней части этой страницы.
 
-## <a name="prerequisites"></a>Необходимые компоненты
+## <a name="prerequisites"></a>Prerequisites
 
 - [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) с установленной рабочей нагрузкой " **Разработка классических приложений .NET** ".
 
@@ -61,7 +61,7 @@ ms.locfileid: "73453759"
       
    3. Выберите шаблон **приложения WPF (.NET Framework)** и нажмите кнопку **Далее**. 
      
-      ![Диалоговое окно создания нового проекта](./media/walkthrough-my-first-wpf-desktop-application/create-new-project-dialog.png)
+      ![Диалоговое окно создания проекта](./media/walkthrough-my-first-wpf-desktop-application/create-new-project-dialog.png)
     
       Откроется диалоговое окно **Настройка нового проекта** .
 
@@ -83,7 +83,7 @@ ms.locfileid: "73453759"
 
     [!code-xaml[ExpenseIt#1](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt/App.xaml#1)]
 
-3. Откройте файл *MainWindow. XAML*.
+3. Откройте файл *MainWindow.xaml*.
 
     Этот XAML-файл является главным окном приложения и отображает содержимое, созданное на страницах. Класс <xref:System.Windows.Window> определяет свойства окна, такие как заголовок, размер или значок, а также обрабатывает события, такие как закрытие или скрытие.
 
@@ -151,7 +151,7 @@ ms.locfileid: "73453759"
 
     [!code-xaml[ExpenseIt#6](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt2/ExpenseItHome.xaml#6)]
 
-1. Откройте файл *MainWindow. XAML*.
+1. Откройте файл *MainWindow.xaml*.
 
 1. Добавьте свойство <xref:System.Windows.Navigation.NavigationWindow.Source%2A> в элемент <xref:System.Windows.Navigation.NavigationWindow> и задайте для него значение "`ExpenseItHome.xaml`".
 
@@ -263,7 +263,7 @@ ms.locfileid: "73453759"
 
     [!code-xaml[ExpenseIt#9](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt3/ExpenseItHome.xaml#9)]
 
-## <a name="add-controls"></a>Добавить элементы управления
+## <a name="add-controls"></a>Добавление элементов управления
 
 В этом разделе вы обновите пользовательский интерфейс домашней страницы, чтобы отобразить список людей, в которых вы выбрали одного пользователя для отображения отчета о расходах. Элементы управления — это объекты пользовательского интерфейса, позволяющие пользователям взаимодействовать с приложением. Более подробную информацию см. в разделе [Элементы управления](../controls/index.md).
 
@@ -494,7 +494,7 @@ ms.locfileid: "73453759"
 - [Графика и мультимедиа](../graphics-multimedia/index.md)
 - [Документы в WPF](../advanced/documents-in-wpf.md)
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Обзор панелей](../controls/panels-overview.md)
 - [Общие сведения о шаблонах данных](../data/data-templating-overview.md)

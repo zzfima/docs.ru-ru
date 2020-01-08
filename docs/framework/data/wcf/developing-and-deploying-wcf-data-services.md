@@ -7,12 +7,12 @@ helpviewer_keywords:
 - deploying [WCF Data Services
 - developing applications [WCF Data Services]
 ms.assetid: 6557c0e3-5aea-4f6e-bc14-77ad317a168b
-ms.openlocfilehash: d6d0f6f357feba903e8345fc45251c146c5406db
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: d3a3539904c5d8b5db23b99ca6128bf5860a1917
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975320"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346110"
 ---
 # <a name="develop-and-deploy-wcf-data-services"></a>Разработка и развертывание WCF Data Services
 
@@ -70,7 +70,7 @@ ms.locfileid: "73975320"
 
 3. **Среда разработки Microsoft Azure**
 
-     Инструменты Windows Azure для Visual Studio включают в себя интегрированный набор средств для разработки служб Windows Azure в Visual Studio. С помощью этих средств можно разрабатывать службы данных, которые могут развертываться на Microsoft Azure, а также тестировать службу данных на локальном компьютере перед развертыванием. Используйте эти средства при разработке службы данных, работающей на платформе Windows Azure, с помощью Visual Studio. Вы можете скачать инструменты Windows Azure для Visual Studio из [центра загрузки Майкрософт](https://go.microsoft.com/fwlink/?LinkID=201848). Дополнительные сведения о разработке службы данных, работающей в Windows Azure, см. в разделе Публикация [службы OData в Windows Azure](https://go.microsoft.com/fwlink/?LinkId=201847).
+     Инструменты Windows Azure для Visual Studio включают в себя интегрированный набор средств для разработки служб Windows Azure в Visual Studio. С помощью этих средств можно разрабатывать службы данных, которые могут развертываться на Microsoft Azure, а также тестировать службу данных на локальном компьютере перед развертыванием. Используйте эти средства при разработке службы данных, работающей на платформе Windows Azure, с помощью Visual Studio. Вы можете скачать инструменты Windows Azure для Visual Studio из [центра загрузки Майкрософт](https://go.microsoft.com/fwlink/?LinkID=201848). Дополнительные сведения о разработке службы данных, работающей в Windows Azure, см. в разделе Публикация [службы OData в Windows Azure](https://blogs.msdn.microsoft.com/astoriateam/2010/07/20/deploying-an-odata-service-in-windows-azure/).
 
 ### <a name="development-tips"></a>Советы по разработке
 
@@ -80,7 +80,7 @@ ms.locfileid: "73975320"
 
 - Программа проверки HTTP может быть очень полезной при развертывании службы данных, позволяя проверять содержимое сообщений запросов и ответов. Любой планировщик сетевых пакетов, способный отображать необработанные пакеты, можно использовать для проверки HTTP-запросов к службе данных и ответов от нее.
 
-- При отладке службы данных может потребоваться получить дополнительные сведения об ошибке из службы данных, чем во время обычной работы. Дополнительные сведения об ошибках можно получить из службы данных, установив свойство <xref:System.Data.Services.DataServiceConfiguration.UseVerboseErrors%2A> в <xref:System.Data.Services.DataServiceConfiguration> значение `true` , а свойство <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A> атрибута <xref:System.ServiceModel.Description.ServiceDebugBehavior> класса службы данных — в значение `true`. Дополнительные сведения см. в разделе Post [Debugging WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=201868). Можно также включить трассировку в WCF для просмотра исключений, возникающих на уровне HTTP-сообщений. Для получения дополнительной информации см. [Configuring Tracing](../../wcf/diagnostics/tracing/configuring-tracing.md).
+- При отладке службы данных может потребоваться получить дополнительные сведения об ошибке из службы данных, чем во время обычной работы. Дополнительные сведения об ошибках можно получить из службы данных, установив свойство <xref:System.Data.Services.DataServiceConfiguration.UseVerboseErrors%2A> в <xref:System.Data.Services.DataServiceConfiguration> значение `true` , а свойство <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A> атрибута <xref:System.ServiceModel.Description.ServiceDebugBehavior> класса службы данных — в значение `true`. Дополнительные сведения см. в разделе Post [Debugging WCF Data Services](https://blogs.msdn.microsoft.com/phaniraj/?m=20086). Можно также включить трассировку в WCF для просмотра исключений, возникающих на уровне HTTP-сообщений. Для получения дополнительной информации см. [Configuring Tracing](../../wcf/diagnostics/tracing/configuring-tracing.md).
 
 - Служба данных обычно разрабатывается как проект приложения ASP.NET, но вы также можете создать службу данных в качестве проекта веб-сайта ASP.NET в Visual Studio. Сведения о различиях между двумя типами проектов см. [в разделе проекты веб-приложений и проекты веб-сайтов в Visual Studio](https://docs.microsoft.com/previous-versions/aspnet/dd547590(v=vs.110)).
 
@@ -115,7 +115,7 @@ ms.locfileid: "73975320"
 
 - **Microsoft Azure**
 
-     Вы можете развернуть службу данных в Windows Azure с помощью инструментов Windows Azure для Visual Studio. Вы можете скачать инструменты Windows Azure для Visual Studio из [центра загрузки Майкрософт](https://go.microsoft.com/fwlink/?LinkID=201848). Дополнительные сведения о развертывании службы данных в Windows Azure см. в разделе Публикация [службы OData в Windows Azure](https://go.microsoft.com/fwlink/?LinkId=201847).
+     Вы можете развернуть службу данных в Windows Azure с помощью инструментов Windows Azure для Visual Studio. Вы можете скачать инструменты Windows Azure для Visual Studio из [центра загрузки Майкрософт](https://go.microsoft.com/fwlink/?LinkID=201848). Дополнительные сведения о развертывании службы данных в Windows Azure см. в разделе Публикация [службы OData в Windows Azure](https://blogs.msdn.microsoft.com/astoriateam/2010/07/20/deploying-an-odata-service-in-windows-azure/).
 
 ### <a name="deployment-considerations"></a>Требования к развертыванию
 
@@ -123,9 +123,9 @@ ms.locfileid: "73975320"
 
 - При развертывании службы данных, которая использует поставщик Entity Framework для доступа к базе данных SQL Server, может также потребоваться распространить структуры данных, данные или и то, и другое вместе с развертыванием службы данных. Visual Studio может автоматически создавать скрипты (SQL-файлы), чтобы сделать это в целевой базе данных, и эти скрипты можно добавить в пакет веб-развертывания приложения ASP.NET. Дополнительные сведения см. [в разделе руководство. Развертывание базы данных с помощью проекта веб-приложения](https://docs.microsoft.com/previous-versions/dd465343(v=vs.100)). Для веб-сайта ASP.NET это можно сделать с помощью **мастера публикации баз данных** в Visual Studio. Дополнительные сведения см. [в разделе Публикация базы данных SQL](https://docs.microsoft.com/previous-versions/aspnet/bb907585(v=vs.100)).
 
-- Поскольку WCF Data Services включает базовую реализацию WCF, можно использовать Windows Server AppFabric для мониторинга службы данных, развернутой в службах IIS, работающих на Windows Server. Дополнительные сведения об использовании Windows Server AppFabric для мониторинга службы данных см. в подразделе " [Отслеживание после WCF Data Services с помощью Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=202005)".
+- Поскольку WCF Data Services включает базовую реализацию WCF, можно использовать Windows Server AppFabric для мониторинга службы данных, развернутой в службах IIS, работающих на Windows Server. Дополнительные сведения об использовании Windows Server AppFabric для мониторинга службы данных см. в подразделе " [Отслеживание после WCF Data Services с помощью Windows Server AppFabric](https://blogs.msdn.microsoft.com/rjacobs/2010/06/09/tracking-wcf-data-services-with-windows-server-appfabric/)".
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Размещение служб данных](hosting-the-data-service-wcf-data-services.md)
 - [Защита служб WCF Data Services](securing-wcf-data-services.md)

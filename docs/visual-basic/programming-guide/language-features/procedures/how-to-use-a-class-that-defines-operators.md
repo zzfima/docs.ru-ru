@@ -11,12 +11,12 @@ helpviewer_keywords:
 - return values [Visual Basic], Operator procedures
 - operator overloading
 ms.assetid: 7ccce94a-6ca0-47d1-9f3f-13385d34f5d5
-ms.openlocfilehash: 9ec4b4c07910100dd02cc86e882b44aa7dbd2ced
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 455c839702b90738ec5aea37c1b09d72eba42ff4
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346040"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347889"
 ---
 # <a name="how-to-use-a-class-that-defines-operators-visual-basic"></a>Практическое руководство. Использование класса, в котором определяются операторы (Visual Basic)
 При использовании класса или структуры, определяющей собственные операторы, можно получить доступ к этим операторам из Visual Basic.  
@@ -32,14 +32,14 @@ ms.locfileid: "74346040"
   
  Структура <xref:System.Data.SqlTypes.SqlString> определяет оператор преобразования ([функцию CType](../../../../visual-basic/language-reference/functions/ctype-function.md)) от `String` до <xref:System.Data.SqlTypes.SqlString>, а другой — от <xref:System.Data.SqlTypes.SqlString> до `String`. Инструкция, которая присваивает `title` `jobTitle` использует первый оператор, а <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> вызов функции использует второй метод.  
   
-## <a name="compiling-the-code"></a>Компиляция кода  
+## <a name="compile-the-code"></a>Компиляция кода  
  Убедитесь, что используемый класс или структура определяет оператор, который вы хотите использовать. Не следует считать, что класс или структура определили все операторы, доступные для перегрузки. Список доступных операторов см. в разделе Оператор [operator](../../../../visual-basic/language-reference/statements/operator-statement.md).  
   
  Включите соответствующую инструкцию `Imports` для строки SQL в начало исходного файла (в данном случае <xref:System.Data.SqlTypes>).  
   
  Проект должен иметь ссылки на System. Data и System. XML.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Процедуры операторов](./operator-procedures.md)
 - [Практическое руководство. Определение оператора](./how-to-define-an-operator.md)

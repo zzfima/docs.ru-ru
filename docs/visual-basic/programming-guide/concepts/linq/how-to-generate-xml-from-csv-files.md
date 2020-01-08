@@ -2,18 +2,18 @@
 title: Практическое руководство. Создание кода XML из CSV-файлов
 ms.date: 07/20/2015
 ms.assetid: fe4dbc87-7b0d-40bf-88c3-5d706ee89a4d
-ms.openlocfilehash: 2e2d76fdae8473e47e397f2559f3051c47a180fd
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 79b609c3a706db4c8b4c082fbeaf143632a75033
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344597"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636826"
 ---
 # <a name="how-to-generate-xml-from-csv-files-visual-basic"></a>Как создавать XML-файлы из CSV-файлов (Visual Basic)
-В этом примере показано, как [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] и [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] используются для создания XML-документа из файла с разделителями-запятыми (.csv).  
+В этом примере показано, как использовать LINQ и [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] для создания XML-файла из файла значений с разделителями-запятыми (CSV).  
   
 ## <a name="example"></a>Пример  
- В следующем коде выполняется запрос [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] по массиву строк.  
+ Следующий код выполняет запрос LINQ к массиву строк.  
   
 ```vb  
       ' Create the text file.  

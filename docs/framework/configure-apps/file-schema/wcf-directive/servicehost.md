@@ -2,12 +2,12 @@
 title: '@ServiceHost'
 ms.date: 03/30/2017
 ms.assetid: 96ba6967-00f2-422f-9aa7-15de4d33ebf3
-ms.openlocfilehash: dd3dd026749ccc299cd922b79dcae8ccbcc722d8
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 3c7da8d5a473b801da8c48d1cb1504b95cc6c769
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73968828"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75342134"
 ---
 # <a name="servicehost"></a>\@ServiceHost
 Связывает фабрику, используемую для создания узла службы, с размещаемой службой и другими элементами программирования, необходимыми для доступа или компиляции кода размещения, представленного в SVC-файле.  
@@ -26,7 +26,7 @@ CodeBehind = "CodeBehind"
   
 ## <a name="attributes"></a>Атрибуты  
   
-#### <a name="service"></a>Служба  
+#### <a name="service"></a>Service  
  Имя типа CLR размещенной службы. Это должно быть полное имя типа, который реализует один или несколько контактов службы.  
   
 #### <a name="factory"></a>Factory  
@@ -35,8 +35,8 @@ CodeBehind = "CodeBehind"
 #### <a name="debug"></a>Отладка  
  Указывает, должна ли служба Windows Communication Foundation (WCF) компилироваться с отладочными символами. `true`, если служба WCF должна быть скомпилирована с отладочными символами; в противном случае `false`.  
   
-#### <a name="language"></a>Язык  
- Задает язык, используемый при компиляции всего встроенного кода в файле (SVC). Значения данного атрибута могут представлять любой язык, поддерживаемый .NET, включая C#, VB и JS, что соответствует языкам C#, Visual Basic .NET и JScript .NET. Этот атрибут является необязательным.  
+#### <a name="language"></a>Language  
+ Задает язык, используемый при компиляции всего встроенного кода в файле (SVC). Значения могут представлять любые. NET — поддерживаемый язык, включая `C#`, `VB`и `JS`, которые ссылаются на C#, Visual Basic и JScript .NET соответственно. Этот атрибут является необязательным.  
   
 #### <a name="codebehind"></a>CodeBehind  
  Определяет файл исходного кода, реализующего веб-службу XML, если реализующий ее класс находится в другом файле и не был скомпилирован в сборку и помещен в каталог «\Bin».  
@@ -67,6 +67,6 @@ Factory="WebScriptServiceHostFactory"
 %>  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Пользовательский узел службы](../../../wcf/samples/custom-service-host.md)

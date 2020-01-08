@@ -2,24 +2,24 @@
 title: ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 5b96ed06-9759-4966-a797-a1d5f6ee50ca
-ms.openlocfilehash: 130265070e82245de4bdd49599df9fa9f435f5ed
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 5b7246350478bbc8907bb9f52e425821402f8806
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74569412"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346229"
 ---
 # <a name="adonet"></a>ADO.NET
 ADO.NET — это набор классов, предоставляющих службы доступа к данным программистам, которые используют платформу .NET Framework. ADO.NET имеет богатый набор компонентов для создания распределенных приложений, совместно использующих данные. Это неотъемлемая часть платформы .NET Framework, которая предоставляет доступ к реляционным данным, XML-данным и данным приложений. ADO.NET удовлетворяет различные потребности разработчиков, включая создание клиентских приложений баз данных, а также бизнес-объектов среднего уровня, используемых приложениями, средствами, языками и браузерам.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Новые возможности в ADO.NET](whats-new.md)  
  Представляет новые возможности ADO.NET.  
   
  [Общие сведения об ADO.NET](ado-net-overview.md)  
  Содержит введение в структуру и компоненты ADO.NET.  
   
- [Entity Framework](https://go.microsoft.com/fwlink/?LinkID=213876)  
+ [Entity Framework](/ef/ef6/index)  
  Описывается процесс создания приложений с помощью платформы Entity Framework.  
   
  [Защита приложений ADO.NET](securing-ado-net-applications.md)  

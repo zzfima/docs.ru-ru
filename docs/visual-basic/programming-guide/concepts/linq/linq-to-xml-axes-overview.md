@@ -2,12 +2,12 @@
 title: Общие сведения об осях LINQ to XML
 ms.date: 07/20/2015
 ms.assetid: 9161f151-cfa8-4408-94ba-08a9ba3a486d
-ms.openlocfilehash: 47e95fcca251212475c925a24d382ba2dceedd62
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 0cf3c20266d0ca9d861eec963afda8f2e71a55a3
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74352028"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636488"
 ---
 # <a name="linq-to-xml-axes-overview-visual-basic"></a>Общие сведения об осях LINQ to XML (Visual Basic)
 После создания XML-дерева или загрузки XML-документа в XML-дерево можно опросить его для поиска элементов и атрибутов и извлечения их значений. Коллекции получают с помощью *методов оси*, называемых также *осями*. Некоторые оси являются методами в классах <xref:System.Xml.Linq.XElement> и <xref:System.Xml.Linq.XDocument>, которые возвращают коллекции <xref:System.Collections.Generic.IEnumerable%601>. Некоторые оси являются методами расширений в классе <xref:System.Xml.Linq.Extensions>. Оси, которые реализованы как методы расширений, работают с коллекциями и возвращают коллекции.  
@@ -16,7 +16,7 @@ ms.locfileid: "74352028"
   
  В дополнение к методам оси, которые возвращают коллекции, есть еще два метода, которые обычно используются в запросах [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Метод <xref:System.Xml.Linq.XContainer.Element%2A> возвращает одиночный <xref:System.Xml.Linq.XElement>. Метод <xref:System.Xml.Linq.XElement.Attribute%2A> возвращает одиночный <xref:System.Xml.Linq.XAttribute>.  
   
- Во многих случаях запросы [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] обеспечивают самый эффективный способ проверки и преобразования дерева и извлечения из него данных. Запросы [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] работают с объектами, которые реализуют <xref:System.Collections.Generic.IEnumerable%601>, а оси [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] возвращают <xref:System.Collections.Generic.IEnumerable%601> коллекций <xref:System.Xml.Linq.XElement> и <xref:System.Collections.Generic.IEnumerable%601> коллекций <xref:System.Xml.Linq.XAttribute>. Эти коллекции нужны для выполнения запросов.  
+ Во многих целях запросы LINQ предоставляют наиболее эффективный способ проверки дерева, извлечения данных из него и его преобразования. Запросы LINQ работают с объектами, которые реализуют <xref:System.Collections.Generic.IEnumerable%601>, а [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] оси возвращают <xref:System.Collections.Generic.IEnumerable%601> из <xref:System.Xml.Linq.XElement> коллекций и <xref:System.Collections.Generic.IEnumerable%601> коллекций <xref:System.Xml.Linq.XAttribute>. Эти коллекции нужны для выполнения запросов.  
   
  В дополнение к методам оси, получающим коллекции элементов и атрибутов, существуют методы оси, которые позволяют проходить по всему дереву максимально подробно. Например, вместо того чтобы иметь дело с элементами и атрибутами, можно работать с узлами дерева. Узлы - это более глубокий уровень гранулярности, чем элементы и атрибуты. При работе с узлами можно просматривать комментарии XML, текстовые узлы XML, инструкции по обработке XML и др. Эти возможности важны, например, для разработчика текстового процессора, который хочет сохранить документы как XML. Обычно большинство программистов на XML в первую очередь связаны с элементами, атрибутами и их значениями.  
   
@@ -54,6 +54,6 @@ ms.locfileid: "74352028"
 |------------|-----------------|  
 |<xref:System.Xml.Linq.XElement.Attribute%2A?displayProperty=nameWithType>|Возвращает атрибут <xref:System.Xml.Linq.XAttribute>, имеющий указанный атрибут <xref:System.Xml.Linq.XName>.|  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Оси LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)

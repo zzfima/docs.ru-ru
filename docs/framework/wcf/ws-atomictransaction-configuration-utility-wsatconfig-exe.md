@@ -2,12 +2,12 @@
 title: Программа конфигурации WS-AtomicTransaction (wsatConfig.exe)
 ms.date: 03/30/2017
 ms.assetid: 1c56cf98-3963-46d5-a4e1-482deae58c58
-ms.openlocfilehash: 429e11cdafc154b6913ab9de76dabe9c5b81d924
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: c57d0266102c5ad79657e875cb0107a2c11cabca
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837718"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337600"
 ---
 # <a name="ws-atomictransaction-configuration-utility-wsatconfigexe"></a>Программа конфигурации WS-AtomicTransaction (wsatConfig.exe)
 Программа настройки WS-AtomicTransaction используется для настройки основных параметров поддержки WS-AtomicTransaction.  
@@ -25,7 +25,7 @@ wsatConfig [Options]
   
  %SystemRoot%\Microsoft.Net\Framework\v3.0\Windows Communication Foundation\wsatConfig.exe  
   
- Если используется [!INCLUDE[wxp](../../../includes/wxp-md.md)] или [!INCLUDE[ws2003](../../../includes/ws2003-md.md)], необходимо выполнить загрузку и обновление перед запуском WsatConfig.exe. Дополнительные сведения об этом обновлении см. в [статье обновление для Windows Communication Foundation (KB912817)](https://www.microsoft.com/download/details.aspx?id=21520).  
+ Если вы используете [!INCLUDE[wxp](../../../includes/wxp-md.md)] или Windows Server 2003, необходимо загрузить обновление перед запуском WsatConfig. exe. Дополнительные сведения об этом обновлении см. в [статье обновление для Windows Communication Foundation (KB912817)](https://www.microsoft.com/download/details.aspx?id=21520).  
   
  В следующей таблице представлены параметры, которые можно использовать с программой настройки WS-AtomicTransaction (wsatConfig.exe).  
   

@@ -5,15 +5,15 @@ helpviewer_keywords:
 - Visual Basic, LINQ features
 - LINQ [Visual Basic], features supporting LINQ
 ms.assetid: c821bb50-b6f6-4cf9-8aba-2717e465bd3a
-ms.openlocfilehash: e81d0434aa60e0c7b316b72fb78ebfe2a3782cbb
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 57c0566f9a76715e48b20f2e6493aa1a506c64be
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353520"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636865"
 ---
 # <a name="visual-basic-features-that-support-linq"></a>Возможности Visual Basic, поддерживающие LINQ
-Имя [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] относится к технологии в Visual Basic, которая поддерживает синтаксис запросов и другие языковые конструкции непосредственно на языке. С [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]не нужно изучать новый язык для запроса к внешнему источнику данных. С помощью Visual Basic можно выполнять запросы к данным в реляционных базах данных, хранилищах XML или объектах. Такая интеграция возможностей запросов в язык обеспечивает проверку синтаксических ошибок и безопасности типов во время компиляции. Эта интеграция также гарантирует, что вы уже знакомы с большинством возможностей для написания сложных, разнообразных запросов в Visual Basic.  
+Языковой интегрированный запрос (LINQ) относится к технологии в Visual Basic, которая поддерживает синтаксис запросов и другие языковые конструкции непосредственно на языке. При использовании LINQ нет необходимости изучать новый язык для запроса к внешнему источнику данных. С помощью Visual Basic можно выполнять запросы к данным в реляционных базах данных, хранилищах XML или объектах. Такая интеграция возможностей запросов в язык обеспечивает проверку синтаксических ошибок и безопасности типов во время компиляции. Эта интеграция также гарантирует, что вы уже знакомы с большинством возможностей для написания сложных, разнообразных запросов в Visual Basic.  
   
  В следующих разделах описаны языковые конструкции, которые поддерживают LINQ в достаточно подробном виде, чтобы начать чтение вводной документации, примеры кода и примеры приложений. Вы также можете щелкнуть ссылки, чтобы найти более подробное объяснение того, как функции языка объединены, чтобы включить запросы, интегрированные в язык. Лучше всего начать с [пошагового руководства: написание запросов в Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/walkthrough-writing-queries.md).  
   
@@ -56,7 +56,7 @@ ms.locfileid: "74353520"
  Дополнительные сведения см. в разделе [Анонимные типы](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).  
   
 ## <a name="extension-methods"></a>Методы расширения  
- Методы расширения позволяют добавлять методы к типу данных или интерфейсу извне определения. Эта функция позволяет, по сути, добавлять новые методы к существующему типу без фактического изменения типа. Стандартные операторы запросов сами по себе представляют собой набор методов расширения, которые предоставляют [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] функции запросов для любого типа, реализующего <xref:System.Collections.Generic.IEnumerable%601>. Другие расширения для <xref:System.Collections.Generic.IEnumerable%601> включают <xref:System.Linq.Enumerable.Count%2A>, <xref:System.Linq.Enumerable.Union%2A>и <xref:System.Linq.Enumerable.Intersect%2A>.  
+ Методы расширения позволяют добавлять методы к типу данных или интерфейсу извне определения. Эта функция позволяет, по сути, добавлять новые методы к существующему типу без фактического изменения типа. Стандартные операторы запросов сами по себе представляют собой набор методов расширения, которые предоставляют функциональность запросов LINQ для любого типа, реализующего <xref:System.Collections.Generic.IEnumerable%601>. Другие расширения для <xref:System.Collections.Generic.IEnumerable%601> включают <xref:System.Linq.Enumerable.Count%2A>, <xref:System.Linq.Enumerable.Union%2A>и <xref:System.Linq.Enumerable.Intersect%2A>.  
   
  Следующий метод расширения добавляет метод Print в класс <xref:System.String>.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "74353520"
   
  [!code-vb[VbLINQVbFeatures#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQVbFeatures/VB/Class1.vb#7)]  
   
- Дополнительные сведения см. в статье [Методы расширения](../../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md).  
+ Дополнительные сведения см. в разделе [Методы расширения](../../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md).  
   
 ## <a name="lambda-expressions"></a>Лямбда-выражения  
  Лямбда-выражение — это функция без имени, которая вычисляет и возвращает одно значение. В отличие от именованных функций лямбда-выражение может быть определено и выполнено одновременно. В следующем примере отображается 4.  
@@ -77,7 +77,7 @@ ms.locfileid: "74353520"
   
  [!code-vb[VbLINQVbFeatures#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQVbFeatures/VB/Class1.vb#12)]  
   
- В [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]лямбда-выражения лежат во многих стандартных операторах запросов. Компилятор создает лямбда-выражения для записи вычислений, определенных в основных методах запроса, таких как `Where`, `Select`, `Order By`, `Take While`и других.  
+ В LINQ лямбда-выражения лежат во многих стандартных операторах запросов. Компилятор создает лямбда-выражения для записи вычислений, определенных в основных методах запроса, таких как `Where`, `Select`, `Order By`, `Take While`и других.  
   
  Например, следующий код определяет запрос, который возвращает всех старших учащихся из списка учащихся.  
   
@@ -93,7 +93,7 @@ ms.locfileid: "74353520"
   
  Дополнительные сведения см. в разделе [Лямбда-выражения](../../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Синтаксис LINQ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/index.md)
 - [Приступая к работе с LINQ в Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)

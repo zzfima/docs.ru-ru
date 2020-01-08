@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - basic samples [WCF], getting started
 ms.assetid: 967a3d94-0261-49ff-b85a-20bb07f1af20
-ms.openlocfilehash: 59f9edf67c03fb7d8670058eca8ea672a6f64c02
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 12568b2bb86257ed7075f2dc83b8077714a1318e
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837874"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347042"
 ---
 # <a name="getting-started-sample"></a>Пример для начала работы
 
@@ -34,7 +34,7 @@ ms.locfileid: "74837874"
 
 Клиент содержит определение контракта службы и прокси-класс для доступа к службе. Код прокси-сервера создается на основе метаданных службы с помощью [средства служебной программы метаданных ServiceModel (Svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).
 
-В Windows Vista служба размещается в службе активации Windows (WAS). В [!INCLUDE[wxp](../../../../includes/wxp-md.md)] и [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] она размещается в службах IIS и ASP.NET. Размещение службы в IIS или WAS позволяет активировать службу автоматически при первом доступе к ней.
+В Windows Vista служба размещается в службе активации Windows (WAS). На [!INCLUDE[wxp](../../../../includes/wxp-md.md)] и Windows Server 2003 он размещается на службы IIS (IIS) и ASP.NET. Размещение службы в IIS или WAS позволяет активировать службу автоматически при первом доступе к ней.
 
 > [!NOTE]
 > Если вы предпочитаете приступить к работе с примером, в котором размещена служба, в консольном приложении, а не IIS, см. пример с помощью [узла для самостоятельного размещения](../../../../docs/framework/wcf/samples/self-host.md) .

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - arguments [Visual Basic], ByRef
 - arguments [Visual Basic], changing value
 ms.assetid: d2b7c766-ce16-4d2c-8d79-3fc0e7ba2227
-ms.openlocfilehash: 36092eb597b5b20e1da42cd9d15ab8633636cfb1
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 75c718c83f36e2f0b2c4cfb5504c2d740eaa3520
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344861"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347905"
 ---
 # <a name="how-to-protect-a-procedure-argument-against-value-changes-visual-basic"></a>Практическое руководство. Защита аргумента процедуры от изменения значения (Visual Basic)
 Если процедура объявляет параметр как [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), Visual Basic предоставляет коду процедуры прямую ссылку на программный элемент, лежащий в основе аргумента в вызывающем коде. Это позволяет процедуре изменять значение, которое является базовым для аргумента в вызывающем коде. В некоторых случаях вызывающему коду может потребоваться защититься от такого изменения.  
@@ -39,10 +39,10 @@ ms.locfileid: "74344861"
   
  Во втором вызове `MsgBox` отображается "After Replace (n): 11, 21, 31, 41". Поскольку `n` передается `ByVal`, `replace` не может изменить переменную `n` в вызывающем коде, назначив ей новый массив. Когда `replace` создает новый экземпляр массива `k` и присваивает его локальной переменной `a`, он теряет ссылку на `n`, переданный вызывающим кодом. При изменении членов `a`затрагивается только локальный `k` массива. Таким образом, `replace` не увеличивает значения массива `n` в вызывающем коде.  
   
-## <a name="compiling-the-code"></a>Компиляция кода  
+## <a name="compile-the-code"></a>Компиляция кода  
  По умолчанию в Visual Basic передаются аргументы по значению. Однако рекомендуется включать ключевое слово [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) или [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) с каждым объявленным параметром. Это упрощает чтение кода.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Процедуры](./index.md)
 - [Параметры и аргументы процедуры](./procedure-parameters-and-arguments.md)
