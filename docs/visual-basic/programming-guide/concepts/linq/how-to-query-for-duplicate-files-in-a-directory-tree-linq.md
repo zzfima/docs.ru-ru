@@ -2,12 +2,12 @@
 title: Практическое руководство. Запрос повторяющихся файлов в дереве каталогов (LINQ)
 ms.date: 07/20/2015
 ms.assetid: 387d7c97-95dd-4a50-9761-7e9cf8ae9e6a
-ms.openlocfilehash: 9be0d1e7be70569e1fac0033414400a85071bfec
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 9870ccae327bccb0f6f93d49e3b2fc77d72f95cd
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74347710"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75342182"
 ---
 # <a name="how-to-query-for-duplicate-files-in-a-directory-tree-linq-visual-basic"></a>Как запросить дубликаты файлов в дереве каталогов (LINQ) (Visual Basic)
 Иногда файлы с одинаковыми именами могут находиться в нескольких папках. Например, в папке установки Visual Studio несколько папок содержат файл readme.htm. В этом примере показано, как запросить такие повторяющиеся имена файлов в указанной корневой папке. Во втором примере показано, как запросить файлы, размер и время создания которых также совпадают.  
@@ -100,10 +100,10 @@ End Module
   
  В первом запросе используется простой ключ для определения соответствия; при этом выполняется поиск файлов, которые имеют то же имя, однако их содержимое может быть другим. Второй запрос использует составной ключ для сравнения трех свойств объекта <xref:System.IO.FileInfo>. Этот запрос дает гораздо больше шансов найти файлы, имеющие одинаковые имена и схожее или идентичное содержимое.  
   
-## <a name="compiling-the-code"></a>Компиляция кода  
-Создайте проект консольного приложения VB.NET с помощью инструкции `Imports` для пространства имен System. LINQ.
+## <a name="compile-the-code"></a>Компиляция кода  
+Создайте Visual Basic проект консольного приложения, используя инструкцию `Imports` для пространства имен System. LINQ.
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
 - [LINQ и каталоги файлов (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

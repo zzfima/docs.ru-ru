@@ -7,12 +7,12 @@ helpviewer_keywords:
 - international user interface [WPF], XAML
 - globalization [WPF]
 ms.assetid: 4571ccfe-8a60-4f06-9b37-7ac0b1c2d10f
-ms.openlocfilehash: 1d6430ba5969d8a05db47baf9521d2409e596c23
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 769afe4d301a7b0fafd26018255f98b6faa29887
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740863"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559439"
 ---
 # <a name="globalization-for-wpf"></a>Глобализация для WPF
 В этом разделе рассматриваются проблемы, которые следует учитывать при написании [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] приложений для глобального рынка. Элементы программирования глобализации определяются в .NET в пространстве имен <xref:System.Globalization>.
@@ -36,7 +36,7 @@ ms.locfileid: "73740863"
 ```
 
 <a name="encoding"></a>
-### <a name="encoding"></a>кодировка
+### <a name="encoding"></a>Encoding
  В [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] поддерживается кодировка ASCII, Юникод UTF-16 и UTF-8. Оператор Encoding находится в начале [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] документа. Если атрибут кодировки и порядок байтов отсутствуют, по умолчанию в средстве синтаксического анализа используется кодировка UTF-8. Предпочтительные кодировки: UTF-8 и UTF-16. UTF-7 не поддерживается. В следующем примере показано, как задать кодировку UTF-8 в файле [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].
 
 ```xaml
@@ -45,7 +45,7 @@ ms.locfileid: "73740863"
 
 <a name="lang_attrib"></a>
 ### <a name="language-attribute"></a>Атрибут Language
- [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] использует [XML: lang](../../xaml-services/xml-lang-handling-in-xaml.md) для представления атрибута language элемента.  Чтобы воспользоваться преимуществами класса <xref:System.Globalization.CultureInfo>, значение атрибута language должно быть одним из имен языков и региональных параметров, предопределенных <xref:System.Globalization.CultureInfo>. [xml:lang](../../xaml-services/xml-lang-handling-in-xaml.md) наследуется в дереве элементов (правилами XML, не обязательно из-за наследования свойства зависимости), и его значение по умолчанию — пустая строка, если оно не назначено явно.
+ [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] использует [XML: lang](../../../desktop-wpf/xaml-services/xml-language-handling.md) для представления атрибута language элемента.  Чтобы воспользоваться преимуществами класса <xref:System.Globalization.CultureInfo>, значение атрибута language должно быть одним из имен языка и региональных параметров, предопределенных <xref:System.Globalization.CultureInfo>. [xml:lang](../../../desktop-wpf/xaml-services/xml-language-handling.md) наследуется в дереве элементов (правилами XML, не обязательно из-за наследования свойства зависимости), и его значение по умолчанию — пустая строка, если оно не назначено явно.
 
  Атрибут языка полезно использовать для задания диалектов. Например, французский язык имеет разные написание, словарь и произношение во Франции, Квебеке, Бельгии и Швейцарии. Кроме того, на китайском, японском и корейском языках кодовые точки в Юникоде, но идеографические фигуры отличаются и используют совершенно разные шрифты.
 
@@ -56,7 +56,7 @@ ms.locfileid: "73740863"
 ```
 
 <a name="unicode"></a>
-### <a name="unicode"></a>Юникод
+### <a name="unicode"></a>Unicode
  [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] поддерживает все функции Юникода, включая суррогаты. Если кодировка может быть сопоставлена с Юникодом, она поддерживается. Например, GB18030 представляет определенные символы, которые сопоставляются расширениям A и B и парам суррогатов китайского, японского и корейского. Следовательно, этот набор символов полностью поддерживается. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] приложение может использовать <xref:System.Globalization.StringInfo> для управления строками, не зная, есть ли у них суррогатные пары или самостоятельные символы.
 
 <a name="design_intl_ui_with_xaml"></a>
@@ -171,13 +171,13 @@ ms.locfileid: "73740863"
 ## <a name="using-clickonce-with-localized-applications"></a>Использование ClickOnce с локализованными приложениями
  ClickOnce — это новая технология развертывания Windows Forms, которая будет поставляться в Visual Studio 2005. Она позволяет устанавливать и обновлять веб-приложения. При локализации приложения, которое было развернуто с помощью ClickOnce, просмотреть его можно только на локализованном языке и с соответствующими региональными параметрами. Например, если развернутое приложение локализовано на японский язык, его можно просмотреть только на японском языке Microsoft Windows, а не на английском. Это представляет проблему, поскольку это распространенный сценарий для японского пользователя запускать английскую версию Windows.
 
- Чтобы решить эту проблему, можно задать резервный атрибут нейтрального языка. Разработчик приложения может при необходимости удалить ресурсы из основной сборки и указать, что ресурсы можно найти во вспомогательной сборке, соответствующей определенной культуре. Для управления этим процессом используйте <xref:System.Resources.NeutralResourcesLanguageAttribute>. Конструктор класса <xref:System.Resources.NeutralResourcesLanguageAttribute> имеет две сигнатуры, один из которых принимает параметр <xref:System.Resources.UltimateResourceFallbackLocation>, чтобы указать расположение, где <xref:System.Resources.ResourceManager> должен извлечь резервные ресурсы: основную или вспомогательную сборку. В следующем примере показано использование атрибута. Для конечного расположения резервного запаса код <xref:System.Resources.ResourceManager> ищет ресурсы в подкаталоге "de" каталога выполняемой в данный момент сборки.
+ Чтобы решить эту проблему, можно задать резервный атрибут нейтрального языка. Разработчик приложения может при необходимости удалить ресурсы из основной сборки и указать, что ресурсы можно найти во вспомогательной сборке, соответствующей определенной культуре. Для управления этим процессом используйте <xref:System.Resources.NeutralResourcesLanguageAttribute>. Конструктор класса <xref:System.Resources.NeutralResourcesLanguageAttribute> имеет две сигнатуры, которые принимают параметр <xref:System.Resources.UltimateResourceFallbackLocation>, чтобы указать расположение, в которое <xref:System.Resources.ResourceManager> должен извлекать резервные ресурсы: основную или вспомогательную сборку. В следующем примере показано использование атрибута. Для конечного расположения резервной копии код приводит к тому, что <xref:System.Resources.ResourceManager> ищет ресурсы в подкаталоге «de» каталога выполняемой в данный момент сборки.
 
 ```csharp
 [assembly: NeutralResourcesLanguageAttribute(
     "de" , UltimateResourceFallbackLocation.Satellite)]
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Общие сведения о глобализации и локализации WPF](wpf-globalization-and-localization-overview.md)

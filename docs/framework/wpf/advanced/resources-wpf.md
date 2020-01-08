@@ -8,29 +8,29 @@ helpviewer_keywords:
 - resources [WPF]
 - reusing commonly defined objects [WPF]
 ms.assetid: 12ae4b67-cd0c-4c4d-a188-2c3de173bbb9
-ms.openlocfilehash: 8f3ab7a11757ba1936aae6e63ace28c4b336292b
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 50e21f2d23054e58079f97466aea5d2d7d9f659e
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458707"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559733"
 ---
 # <a name="resources-wpf"></a>Ресурсы WPF.
 Ресурс — это объект, который можно повторно использовать в разных местах приложения. WPF поддерживает различные типы ресурсов. Эти ресурсы в основном являются двумя типами ресурсов: ресурсы XAML и файлы данных ресурсов. Примеры ресурсов XAML включают в себя кисти и стили. Файлы данных ресурсов являются неисполняемыми файлами данных, которые требуются приложению.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Ресурсы XAML](../../../desktop-wpf/fundamentals/xaml-resources-define.md)  
- [Файлы ресурсов, контента и данных WPF-приложения](../app-development/wpf-application-resource-content-and-data-files.md)  
+ [Файлы ресурсов, содержимого и данных WPF-приложения](../app-development/wpf-application-resource-content-and-data-files.md)  
  [URI типа "pack" в WPF](../app-development/pack-uris-in-wpf.md)  
   
-## <a name="reference"></a>Справочники  
+## <a name="reference"></a>Справочные сведения  
  <xref:System.Windows.ResourceDictionary>  
   
  [Расширение разметки StaticResource](staticresource-markup-extension.md)  
   
  [Расширение разметки DynamicResource](dynamicresource-markup-extension.md)  
   
- [Директива x:Key](../../xaml-services/x-key-directive.md)  
+ [Директива x:Key](../../../desktop-wpf/xaml-services/xkey-directive.md)  
   
 ## <a name="related-sections"></a>Связанные разделы  
  [XAML в WPF](xaml-in-wpf.md)

@@ -6,15 +6,15 @@ helpviewer_keywords:
 - Visual Basic code, XML
 - XML [Visual Basic], manipulating
 ms.assetid: da32cffb-198d-41b1-9af3-260fe32e3b7d
-ms.openlocfilehash: 2565f43c1014bf0fa9fab1618fedfd1bd6bdb7ca
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: bb5aed5099d81f8c8898cd61523b90a43f27db78
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74330446"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636163"
 ---
 # <a name="manipulating-xml-in-visual-basic"></a>Обработка XML в Visual Basic
-*XML-литералы* можно использовать для загрузки XML из внешнего источника, такого как строка, файл или поток. Затем можно использовать [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] для управления XML и использования [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] для запроса XML.  
+*XML-литералы* можно использовать для загрузки XML из внешнего источника, такого как строка, файл или поток. Затем можно использовать [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] для управления XML и использования LINQ для запроса XML.  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Практическое руководство. Загрузка XML-кода из файла, строки или потока](../../../../visual-basic/programming-guide/language-features/xml/how-to-load-xml-from-a-file-string-or-stream.md)  
@@ -42,7 +42,7 @@ ms.locfileid: "74330446"
  [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)  
  Содержит ссылки на разделы, в которых описывается использование [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] в Visual Basic.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)
 - [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)

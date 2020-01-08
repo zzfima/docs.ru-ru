@@ -8,12 +8,12 @@ helpviewer_keywords:
 - XAML [WPF], DynamicResource markup extension
 - DynamicResource markup extensions [WPF]
 ms.assetid: 7324f243-03af-4c2b-b0db-26ac6cdfcbe4
-ms.openlocfilehash: a04e1569f77fed73a480fda3d63cabf6dbc30664
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: f8b05f314be84e6104f1a9c7fe2edfdf826e51da
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460517"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559452"
 ---
 # <a name="dynamicresource-markup-extension"></a>Расширение разметки DynamicResource
 Предоставляет значение для любого атрибута свойства [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], откладывая это значение как ссылку на определенный ресурс. Поведение поиска для этого ресурса аналогично поиску во время выполнения.  
@@ -38,7 +38,7 @@ ms.locfileid: "73460517"
   
 |||  
 |-|-|  
-|`key`|Ключ для запрашиваемого ресурса. Этот ключ изначально был назначен [директивой x:Key](../../xaml-services/x-key-directive.md) , если ресурс был создан в разметке, или был предоставлен в качестве параметра `key` при вызове <xref:System.Windows.ResourceDictionary.Add%2A?displayProperty=nameWithType>, если ресурс был создан в коде.|  
+|`key`|Ключ для запрашиваемого ресурса. Этот ключ изначально был назначен [директивой x:Key](../../../desktop-wpf/xaml-services/xkey-directive.md) , если ресурс был создан в разметке, или был предоставлен в качестве параметра `key` при вызове <xref:System.Windows.ResourceDictionary.Add%2A?displayProperty=nameWithType>, если ресурс был создан в коде.|  
   
 ## <a name="remarks"></a>Заметки  
  `DynamicResource` создаст временное выражение во время начальной компиляции и, таким же, откладывает Поиск ресурсов до тех пор, пока запрошенное значение ресурса не будет действительно необходимо для создания объекта. Это потенциально может быть после загрузки страницы [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Значение ресурса будет найдено на основе поиска по ключу для всех активных словарей ресурсов, начиная с текущей области страницы, и заменяется на выражение заполнителя из компиляции.  
@@ -48,9 +48,9 @@ ms.locfileid: "73460517"
   
  Некоторые сценарии доступа к ресурсам особенно подходят для `DynamicResource`, а не [расширения разметки StaticResource](staticresource-markup-extension.md). Сведения о относительных показателях и влиянии `DynamicResource` и `StaticResource`см. в статье [ресурсы XAML](xaml-resources.md) .  
   
- Указанный <xref:System.Windows.DynamicResourceExtension.ResourceKey%2A> должен соответствовать существующему ресурсу, определяемому [директивой x:Key](../../xaml-services/x-key-directive.md) на определенном уровне на странице, приложении, доступных темах элементов управления, внешних ресурсах или системных ресурсах, а поиск ресурсов произойдет в Этот порядок. Дополнительные сведения о поиске ресурсов для статических и динамических ресурсов см. в разделе [ресурсы XAML](xaml-resources.md).  
+ Указанный <xref:System.Windows.DynamicResourceExtension.ResourceKey%2A> должен соответствовать существующему ресурсу, определяемому [директивой x:Key](../../../desktop-wpf/xaml-services/xkey-directive.md) на определенном уровне на странице, приложении, доступных темах элементов управления и внешних ресурсах или системных ресурсах, а поиск ресурсов будет выполняться в таком порядке. Дополнительные сведения о поиске ресурсов для статических и динамических ресурсов см. в разделе [ресурсы XAML](xaml-resources.md).  
   
- Ключ ресурса может быть любой строкой, определенной в [грамматике имяxaml](../../xaml-services/xamlname-grammar.md). Ключ ресурса также может быть другими типами объектов, например <xref:System.Type>. <xref:System.Type> ключом является фундаментальный способ стиля элементов управления с помощью тем. Дополнительные сведения см. в разделе [Общие сведения о разработке элементов управления](../controls/control-authoring-overview.md).  
+ Ключ ресурса может быть любой строкой, определенной в [грамматике имяxaml](../../../desktop-wpf/xaml-services/xamlname-grammar.md). Ключ ресурса также может быть другими типами объектов, например <xref:System.Type>. <xref:System.Type> ключом является фундаментальный способ стиля элементов управления с помощью тем. Дополнительные сведения см. в разделе [Общие сведения о разработке элементов управления](../controls/control-authoring-overview.md).  
   
  API для поиска значений ресурсов, таких как <xref:System.Windows.FrameworkElement.FindResource%2A>, следуют той же логике поиска ресурсов, которая используется `DynamicResource`.  
   
@@ -72,11 +72,11 @@ ms.locfileid: "73460517"
   
  `DynamicResource` является расширением разметки. Расширения разметки обычно реализуются, если требуется заменить значения атрибутов на нелитеральные значения или имена обработчиков и если требуется больше, чем простая настройка преобразователей типов на работу с определенными типами или свойствами. Все расширения разметки в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] используют символы "{" и "}" в синтаксисе их атрибутов, который является соглашением, по которому обработчик [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] распознает, что расширение разметки должно обработать атрибут. Дополнительные сведения см. в разделе [Расширения разметки и XAML WPF](markup-extensions-and-wpf-xaml.md).  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Ресурсы XAML](xaml-resources.md)
 - [Ресурсы и код](resources-and-code.md)
-- [Директива x:Key](../../xaml-services/x-key-directive.md)
+- [Директива x:Key](../../../desktop-wpf/xaml-services/xkey-directive.md)
 - [Общие сведения о языке XAML (WPF)](../../../desktop-wpf/fundamentals/xaml.md)
 - [Расширения разметки и XAML WPF](markup-extensions-and-wpf-xaml.md)
 - [Расширение разметки StaticResource](staticresource-markup-extension.md)

@@ -2,12 +2,12 @@
 title: Устранение неполадок обмена сообщениями с использованием очередей
 ms.date: 03/30/2017
 ms.assetid: a5f2836f-018d-42f5-a571-1e97e64ea5b0
-ms.openlocfilehash: 2999d1ab4129c72c231b6dc80480d8bfef5186fa
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: ed114cc9a37fff549e8bfc874765252fd18893a9
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837315"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345593"
 ---
 # <a name="troubleshooting-queued-messaging"></a>Устранение неполадок обмена сообщениями с использованием очередей
 
@@ -25,7 +25,7 @@ ms.locfileid: "74837315"
 
 **Вопрос.** Нужно ли обновлять MSMQ для использования привязок <xref:System.ServiceModel.NetMsmqBinding> и `MsmqIntegration`?
 
-**Ответ.** Нет. Обе привязки работают с MSMQ 3.0 в [!INCLUDE[wxp](../../../../includes/wxp-md.md)] и [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]. Некоторые функции привязок становятся доступными при обновлении до MSMQ 4,0 в Windows Vista.
+**Ответ.** Нет. Обе привязки работают с MSMQ 3,0 на [!INCLUDE[wxp](../../../../includes/wxp-md.md)] и Windows Server 2003. Некоторые функции привязок становятся доступными при обновлении до MSMQ 4,0 в Windows Vista.
 
 **Вопрос.** Какие функции привязок <xref:System.ServiceModel.NetMsmqBinding> и <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> доступны в MSMQ 4,0, но не в MSMQ 3,0?
 

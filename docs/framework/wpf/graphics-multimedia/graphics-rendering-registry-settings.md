@@ -8,12 +8,12 @@ helpviewer_keywords:
 - troubleshooting graphics rendering [WPF]
 - graphics [WPF], rendering
 ms.assetid: f4b41b42-327d-407c-b398-3ed5f505df8b
-ms.openlocfilehash: adb4848e844ff091c45ec9a8a2e6d36f01c3cf91
-ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
+ms.openlocfilehash: 53f25be3bc38d88aa7723f6a0858317ee5ce6143
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74960151"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559655"
 ---
 # <a name="graphics-rendering-registry-settings"></a>Настройки реестра графической отрисовки
 В этом разделе содержится обзор параметров графической отрисовки [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] в реестре, которые влияют на приложения [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -24,7 +24,7 @@ ms.locfileid: "74960151"
   
 <a name="xpdmandwddm"></a>   
 ## <a name="what-are-xpdm-and-wddm"></a>Что такое XPDM и WDDM?  
- Некоторые из параметров реестра для графической отрисовки имеют разные значения по умолчанию, в зависимости от того, использует ли видеокарта драйвер XPDM или WDDM. XPDM — это модель драйвера экрана Microsoft Windows XP, а WDDM — это модель Windows для видеодрайверов. Модель WDDM доступна на компьютерах под управлением Windows Vista и Windows 7. XPDM доступен на компьютерах под управлением Windows Vista, Microsoft Windows XP и [!INCLUDE[TLA#tla_winnetsvrfam](../../../../includes/tlasharptla-winnetsvrfam-md.md)]. Дополнительную информацию о WDDM см. в разделе [Руководство по проектированию для модели видеодрайвера Windows Vista](https://go.microsoft.com/fwlink/?LinkId=178394).  
+ Некоторые из параметров реестра для графической отрисовки имеют разные значения по умолчанию, в зависимости от того, использует ли видеокарта драйвер XPDM или WDDM. XPDM — это модель драйвера экрана Microsoft Windows XP, а WDDM — это модель Windows для видеодрайверов. Модель WDDM доступна на компьютерах под управлением Windows Vista и Windows 7. XPDM доступен на компьютерах под управлением Windows Vista, Microsoft Windows XP и Microsoft Windows Server 2003. Дополнительную информацию о WDDM см. в разделе [Руководство по проектированию для модели видеодрайвера Windows Vista](https://go.microsoft.com/fwlink/?LinkId=178394).  
   
 <a name="registry_settings"></a>   
 ## <a name="registry-settings"></a>Параметры реестра  
@@ -68,7 +68,7 @@ ms.locfileid: "74960151"
   
 |Раздел реестра|Тип значения|  
 |------------------|----------------|  
-|`HKEY_CURRENT_USER\SOFTWARE\Microsoft\Avalon.Graphics\RequiredVideoDriverDate`|Строковое|  
+|`HKEY_CURRENT_USER\SOFTWARE\Microsoft\Avalon.Graphics\RequiredVideoDriverDate`|Строка|  
   
  В ноябре 2004 Корпорация Майкрософт выпустила новую версию рекомендаций по тестированию драйверов. драйверы, написанные после этой даты, обеспечивают лучшую стабильность. По умолчанию [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] будет использовать для таких драйверов конвейер аппаратного ускорения и вернется к программной отрисовке для драйверов XPDM, опубликованных до этой даты.  
   
@@ -78,7 +78,7 @@ ms.locfileid: "74960151"
   
 | |  
 |-|  
-|*ГГГГ* `/` *ММ* `/` *ДД*|  
+|*Гггг* `/` *мм* `/` *дд*|  
   
  Где *ГГГГ* — четырехзначный год, *MM* — месяц из двух цифр и *ДД* — день из двух цифр. Если это значение не задано, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] использует ноябрь 2004 года в качестве требуемой даты видеодрайвера.  
   

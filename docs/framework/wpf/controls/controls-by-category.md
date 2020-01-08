@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [WPF], listed by category
 ms.assetid: f8a1f78e-d9fa-4367-9ec6-f084577e83bb
-ms.openlocfilehash: 41cbe57f1e3711bb4e18b2b4da28c26ebbd2bc60
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 5958793015d409678b67cdc7eedcb4289f5e885c
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72005703"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636215"
 ---
 # <a name="controls-by-category"></a>Категории элементов управления
 Элементы управления Windows Presentation Foundation (WPF) можно логически сгруппировать в несколько категорий. Эти категории можно использовать для выбора соответствующего элемента управления для сценария, что поможет увидеть, какие элементы управления имеют схожие шаблоны использования или функциональные возможности.  
@@ -56,7 +56,7 @@ ms.locfileid: "72005703"
 - <xref:System.Windows.Controls.WrapPanel>  
   
 ## <a name="buttons"></a>Кнопки  
- Кнопки являются одним из основных элементов управления пользовательского интерфейса. Приложения обычно выполняют определенную задачу в событии <xref:System.Windows.Controls.Primitives.ButtonBase.Click>, когда пользователь щелкает их.  
+ Кнопки являются одним из основных элементов управления пользовательского интерфейса. Приложения обычно выполняют определенную задачу в <xref:System.Windows.Controls.Primitives.ButtonBase.Click> событие, когда пользователь щелкает их.  
   
 - <xref:System.Windows.Controls.Button>  
   
@@ -100,7 +100,7 @@ ms.locfileid: "72005703"
   
 - <xref:System.Windows.Controls.Slider>  
   
-## <a name="navigation"></a>Навигация  
+## <a name="navigation"></a>Навигация в  
  Элементы управления навигацией расширяют возможности навигации приложения, создавая внешний вид конечных фреймов или вкладок приложения.  
   
 - <xref:System.Windows.Controls.Frame>  
@@ -139,8 +139,8 @@ ms.locfileid: "72005703"
   
 - <xref:System.Windows.Controls.ToolTip>  
   
-## <a name="documents"></a>Documents  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] включает несколько специализированных элементов управления для просмотра документов. Эти элементы управления оптимизируют процесс чтения, основываясь на целевом пользовательском сценарии.  
+## <a name="documents"></a>Документы  
+ WPF включает несколько специализированных элементов управления для просмотра документов. Эти элементы управления оптимизируют процесс чтения, основываясь на целевом пользовательском сценарии.  
   
 - <xref:System.Windows.Controls.DocumentViewer>  
   
@@ -152,7 +152,7 @@ ms.locfileid: "72005703"
   
 - <xref:System.Windows.Controls.StickyNoteControl>  
   
-## <a name="input"></a>Ввод  
+## <a name="input"></a>Input  
  Элементы управления вводом позволяют пользователю вводить текст и другое содержимое.  
   
 - <xref:System.Windows.Controls.TextBox>  
@@ -161,8 +161,8 @@ ms.locfileid: "72005703"
   
 - <xref:System.Windows.Controls.PasswordBox>  
   
-## <a name="media"></a>Мультимедиа  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] включает интегрированную поддержку для размещения как аудио- и видеоконтента, так и [кодеков] для большинства популярных форматов изображений.  
+## <a name="media"></a>Носитель  
+ В состав WPF входит интегрированная поддержка размещения аудио и видеосодержимого, а также [кодеки] для большинства популярных форматов изображений.  
   
 - <xref:System.Windows.Controls.Image>  
   
@@ -177,6 +177,6 @@ ms.locfileid: "72005703"
   
 - <xref:System.Windows.Controls.InkPresenter>  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Библиотека элементов управления](control-library.md)

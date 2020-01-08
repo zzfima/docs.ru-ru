@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - service contracts [WCF], data transfer
 ms.assetid: 7c5a26c8-89c9-4bcb-a4bc-7131e6d01f0c
-ms.openlocfilehash: 47544cf74b4fa09fd8ee868ea940ef24a453840e
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 50f2444764ddb212513550ff0a62fcfecab2c45a
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834636"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347995"
 ---
 # <a name="specifying-data-transfer-in-service-contracts"></a>Задание передачи данных в контрактах служб
 Windows Communication Foundation (WCF) можно рассматривать как инфраструктуру обмена сообщениями. Операции служб могут получать сообщения, обрабатывать их и отправлять. Сообщения описываются с помощью контрактов операций. Например, рассмотрим следующий контракт:  
@@ -147,7 +147,7 @@ public float GetAirfare(
   
  `public int GetCurrentTemperature();`  
   
- Например, в VB.  
+ Например, в Visual Basic:  
   
  `<OperationContract()>`  
   
@@ -432,7 +432,7 @@ End Class
 ## <a name="specifying-the-use-and-style"></a>Указание назначения и стиля  
  Для описания служб с помощью языка WSDL наиболее часто используются следующие две службы: Document и RPC (удаленный вызов процедуры). В стиле Document тело сообщения полностью описывается с помощью схемы, а в языке WSDL различные части тела сообщения описываются ссылками на элементы в этой схеме. В стиле RPC код WSDL ссылается на тип схемы для каждой части сообщения, а не элемент. В некоторых случаях необходимо выбрать один из этих типов вручную. Для этого можно применить атрибут <xref:System.ServiceModel.DataContractFormatAttribute> и задать свойство `Style` (когда используется <xref:System.Runtime.Serialization.DataContractSerializer>) или задать `Style` атрибуту <xref:System.ServiceModel.XmlSerializerFormatAttribute> (когда используется <xref:System.Xml.Serialization.XmlSerializer>).  
   
- Кроме того, <xref:System.Xml.Serialization.XmlSerializer> поддерживает две формы сериализованного XML: `Literal` и `Encoded`. `Literal` является наиболее часто принятой формой, а является единственной формой, которую поддерживает <xref:System.Runtime.Serialization.DataContractSerializer>. `Encoded` является устаревшей формой, описанной в разделе 5 спецификации SOAP, и не рекомендуется для новых служб. Чтобы перейти в режим `Encoded`, задайте свойству `Use` атрибута <xref:System.ServiceModel.XmlSerializerFormatAttribute> значение `Encoded`.  
+ Кроме того, <xref:System.Xml.Serialization.XmlSerializer> поддерживает две формы сериализованного XML: `Literal` и `Encoded`. `Literal` - наиболее распространенная форма, а также единственная форма, которую поддерживает <xref:System.Runtime.Serialization.DataContractSerializer>. `Encoded` - это форма из прежних версий, описанная в разделе 5 спецификации протокола SOAP. Не рекомендуется для использования в новых службах. Чтобы перейти в режим `Encoded`, задайте свойству `Use` атрибута <xref:System.ServiceModel.XmlSerializerFormatAttribute> значение `Encoded`.  
   
  В большинстве случаев лучше не изменять параметры по умолчанию для свойств `Style` и `Use`.  
   

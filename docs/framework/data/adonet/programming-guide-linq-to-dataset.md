@@ -2,12 +2,12 @@
 title: Руководство по программированию (LINQ to DataSet)
 ms.date: 03/30/2017
 ms.assetid: 977aedd7-0084-46a0-b56f-345787a55da1
-ms.openlocfilehash: c971f0a92829df40a14631aaff353a268f277f11
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: dc13af06cf6c439d739d76904f206ebc50ba3187
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70783202"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75634811"
 ---
 # <a name="programming-guide-linq-to-dataset"></a>Руководство по программированию (LINQ to DataSet)
 В этом разделе приводятся общие сведения и примеры программирования с помощью LINQ to DataSet.  
@@ -23,9 +23,9 @@ ms.locfileid: "70783202"
  Объясняет, как использовать объект <xref:System.Data.DataRowComparer> для сравнения строк данных.  
   
  [Создание DataTable из запроса](creating-a-datatable-from-a-query-linq-to-dataset.md)  
- Содержит сведения о создании <xref:System.Data.DataTable> из LINQ to DataSet запроса с <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> помощью метода.  
+ Содержит сведения о создании <xref:System.Data.DataTable> из LINQ to DataSet запроса с помощью метода <xref:System.Data.DataTableExtensions.CopyToDataTable%2A>.  
   
- [Практическое руководство. Реализуйте\<CopyToDataTable T >, где универсальный тип T не является DataRow](implement-copytodatatable-where-type-not-a-datarow.md)  
+ [Как реализовать CopyToDataTable\<T >, где универсальный тип T не является DataRow](implement-copytodatatable-where-type-not-a-datarow.md)  
  Описывает процедуру применения пользовательского метода `CopyToDataTable<T>`, где общий параметр T не принадлежит к типу <xref:System.Data.DataRow>.  
   
  [Универсальные методы Field и SetField](generic-field-and-setfield-methods-linq-to-dataset.md)  
@@ -37,13 +37,13 @@ ms.locfileid: "70783202"
  [Отладка запросов в LINQ to DataSet](debugging-linq-to-dataset-queries.md)  
  Содержит сведения об отладке и устранении неполадок LINQ to DataSet запросов.  
   
- [Безопасность](security-linq-to-dataset.md)  
+ [Security](security-linq-to-dataset.md)  
  Описание проблем безопасности в LINQ to DataSet.  
   
  [Примеры LINQ to DataSet](linq-to-dataset-examples.md)  
- Содержит примеры запросов, использующих операторы [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)].  
+ Приводятся примеры запросов с использованием операторов LINQ.  
   
-## <a name="reference"></a>Ссылка  
+## <a name="reference"></a>Справочные сведения  
  <xref:System.Data.DataRowComparer>  
   
  <xref:System.Data.DataRowExtensions>  
@@ -52,7 +52,7 @@ ms.locfileid: "70783202"
   
  <xref:System.Data.DataView>  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [LINQ и ADO.NET](linq-and-ado-net.md)
 - [LINQ](../../../csharp/programming-guide/concepts/linq/index.md)

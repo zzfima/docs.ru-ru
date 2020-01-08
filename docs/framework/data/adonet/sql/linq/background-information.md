@@ -2,12 +2,12 @@
 title: Основные сведения
 ms.date: 03/30/2017
 ms.assetid: 724888f2-d3f1-4bea-b9a1-a0adb8a00f3b
-ms.openlocfilehash: d4466085419830e8fd91a3421271fde4e7e3a174
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: deb4d59dc2fb40b63e0362a9a4ee4b84c08dce49
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70248093"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75634733"
 ---
 # <a name="background-information"></a>Основные сведения
 Темы данного раздела содержат описания принципов и процедур, расширяющих базовую функциональность [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
@@ -18,7 +18,7 @@ ms.locfileid: "70248093"
   
 - Примите участие в [форуме LINQ](https://go.microsoft.com/fwlink/?LinkId=76488), где вы сможете обсуждать более сложные темы подробно с экспертами.  
   
-- Изучите технический документ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] с описанием технологий, а C# также с Visual Basic и примерами кода. Дополнительные сведения см. в разделе [LINQ to SQL: интегрированный в язык .NET запрос для реляционных данных](https://go.microsoft.com/fwlink/?LinkId=93205).  
+- Изучите технический документ с подробными сведениями [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] технологии C# , а также с Visual Basic и примерами кода. Дополнительные сведения см. в разделе [LINQ to SQL: интегрированный в язык .NET запрос для реляционных данных](https://go.microsoft.com/fwlink/?LinkId=93205).  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [ADO.NET и LINQ to SQL](ado-net-and-linq-to-sql.md)  
@@ -31,7 +31,7 @@ ms.locfileid: "70248093"
  Содержит сведения о добавлении кода проверки и других настроек.  
   
  [Привязка данных](data-binding.md)  
- Описывает, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] как <xref:System.ComponentModel.IListSource> использует для поддержки привязки данных.  
+ Описывает, как [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] использует <xref:System.ComponentModel.IListSource> для поддержки привязки данных.  
   
  [Поддержка наследования](inheritance-support.md)  
  Содержит описание роли наследования в объектной модели [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] и сведения об использовании связанных операторов в запросах.  
@@ -51,11 +51,11 @@ ms.locfileid: "70248093"
  [Состояния объектов и отслеживание изменений](object-states-and-change-tracking.md)  
  Содержит подробные сведения об отслеживании изменений в [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
   
- [Оптимистичный параллелизм: обзор](optimistic-concurrency-overview.md)  
+ [Общие сведения об оптимистической блокировке](optimistic-concurrency-overview.md)  
  Содержит описание понятия оптимистического параллелизма и определение терминов.  
   
  [Основные принципы запросов](query-concepts.md)  
- Содержит описание аспектов работы с запросами в [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], которые отличаются от запросов в [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)].  
+ Описывает аспекты запросов в [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], которые отличаются от запросов в LINQ.  
   
  [Получение объектов из кэша идентификации](retrieving-objects-from-the-identity-cache.md)  
  Описывает типы запросов, которые получают объекты из кэша идентификаторов.  

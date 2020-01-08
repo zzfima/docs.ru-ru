@@ -2,12 +2,12 @@
 title: Особенности возможностей Windows Workflow Foundation
 ms.date: 03/30/2017
 ms.assetid: e84d12da-a055-45f6-b4d1-878d127b46b6
-ms.openlocfilehash: 869d6108edaa7f32101b6fe8d077e4eba7eef6b5
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: c534575fcf70035bc728642dbb65b05db1fd4686
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802600"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345109"
 ---
 # <a name="windows-workflow-foundation-feature-specifics"></a>Особенности возможностей Windows Workflow Foundation
 
@@ -189,7 +189,7 @@ ms.locfileid: "74802600"
 
 ## <a name="procedural-activities-sequence-if-foreach-switch-assign-dowhile-while"></a>Процедурные действия (Sequence, If, ForEach, Switch, Assign, DoWhile, While)
 
-Процедурные действия предоставляют механизм моделирования последовательного потока управления, используя знакомые программистам концепции. Эти действия используют традиционно структурированные конструкции языка программирования и при необходимости предоставляют соответствие с распространенными процедурными языками, такими как C# и VB.
+Процедурные действия предоставляют механизм моделирования последовательного потока управления, используя знакомые программистам концепции. Эти действия включают в себя стандартные конструкции языка программирования и, при необходимости, обеспечивают языковую четность с помощью распространенных процедурных C# языков, таких как и Visual Basic.
 
 ### <a name="getting-started"></a>Начало работы
 
@@ -231,7 +231,7 @@ ms.locfileid: "74802600"
 
 ## <a name="error-handling-activities"></a>Действия по обработке ошибок
 
-Действие <xref:System.Activities.Statements.TryCatch> предоставляет механизм для перехвата исключений, возникающих во время выполнения набора содержащихся действий (аналогично конструкции Try/Catch в C# и VB). <xref:System.Activities.Statements.TryCatch> обеспечивает обработку исключений на уровне рабочего процесса. При возникновении необработанного исключения рабочий процесс прерывается и блок Finally не будет выполнен. Такое поведение согласуется с C#.
+Действие <xref:System.Activities.Statements.TryCatch> предоставляет механизм для перехвата исключений, происходящих во время выполнения набора вложенных операций (аналогично конструкции try/catch в C# и Visual Basic). <xref:System.Activities.Statements.TryCatch> обеспечивает обработку исключений на уровне рабочего процесса. При возникновении необработанного исключения рабочий процесс прерывается и блок Finally не будет выполнен. Такое поведение согласуется с C#.
 
 ### <a name="getting-started"></a>Начало работы
 

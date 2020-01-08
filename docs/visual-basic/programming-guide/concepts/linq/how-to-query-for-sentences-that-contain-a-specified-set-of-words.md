@@ -2,12 +2,12 @@
 title: Практическое руководство. Запрос к предложениям, содержащим указанный набор слов (LINQ)
 ms.date: 07/20/2015
 ms.assetid: a5ae8ced-61fe-4c10-bb8a-95630e50f603
-ms.openlocfilehash: 4a068f4f5500da5fd26e3dea753ec9591b6c7f5f
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 6595932fae9737a0ac482c952b29bfde429de76f
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74347677"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344152"
 ---
 # <a name="how-to-query-for-sentences-that-contain-a-specified-set-of-words-linq-visual-basic"></a>Практическое руководство. Запрос к предложениям, содержащим указанный набор слов (LINQ) (Visual Basic)
 
@@ -63,9 +63,9 @@ End Class
 
 В вызове <xref:System.String.Split%2A> знаки пунктуации используются как разделители для того, чтобы удалить их из строки. Если этого не сделать, то, например, можно получить строку "Historically," которая не будет совпадать с "Historically" в массиве `wordsToMatch`. В зависимости от знаков препинания в исходном тексте может потребоваться использовать дополнительные разделители.
 
-## <a name="compiling-the-code"></a>Компиляция кода
+## <a name="compile-the-code"></a>Компиляция кода
 
-Создайте проект консольного приложения VB.NET с помощью инструкции `Imports` для пространства имен System. LINQ.
+Создайте Visual Basic проект консольного приложения, используя инструкцию `Imports` для пространства имен System. LINQ.
 
 ## <a name="see-also"></a>См. также:
 

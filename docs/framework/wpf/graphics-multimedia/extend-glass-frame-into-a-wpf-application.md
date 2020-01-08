@@ -10,12 +10,12 @@ helpviewer_keywords:
 - extending glass frames into applications [WPF]
 - glass frames [WPF], extending into applications
 ms.assetid: 74388a3a-4b69-4a9d-ba1f-e107636bd660
-ms.openlocfilehash: ae4d7f23729f5bd39558902a58d33c6c45572d85
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: a702456895cfdbd44a58059befefb69deee5afa3
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73977018"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636202"
 ---
 # <a name="extend-glass-frame-into-a-wpf-application"></a>Использование стеклянной рамки в приложении WPF
 
@@ -30,7 +30,7 @@ ms.locfileid: "73977018"
 
 ![Снимок экрана: стеклянная рамка, расширенная за адресной строкой IE7.](./media/extend-glass-frame-into-a-wpf-application/internet-explorer-glass-frame-extended-address-bar.png)
 
-Чтобы расширить стеклянный фрейм на [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] приложении, требуется доступ к неуправляемому API. В следующем примере кода выполняется вызов платформы (PInvoke) для двух API, необходимых для расширения рамки в клиентскую область. Каждый из этих API объявлен в классе с именем **нонклиентрегионапи**.
+Для расширения стеклянного фрейма в приложении WPF требуется доступ к неуправляемому API. В следующем примере кода выполняется вызов платформы (PInvoke) для двух API, необходимых для расширения рамки в клиентскую область. Каждый из этих API объявлен в классе с именем **нонклиентрегионапи**.
 
 ```csharp
 [StructLayout(LayoutKind.Sequential)]
@@ -66,7 +66,7 @@ End Function
 
 ## <a name="example"></a>Пример
 
-Для использования функции [DwmExtendFrameIntoClientArea](/windows/desktop/api/dwmapi/nf-dwmapi-dwmextendframeintoclientarea) необходимо получить дескриптор окна. В [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]маркер окна можно получить из свойства <xref:System.Windows.Interop.HwndSource.Handle%2A> <xref:System.Windows.Interop.HwndSource>. В следующем примере фрейм расширяется в клиентскую область на <xref:System.Windows.FrameworkElement.Loaded> событие окна.
+Для использования функции [DwmExtendFrameIntoClientArea](/windows/desktop/api/dwmapi/nf-dwmapi-dwmextendframeintoclientarea) необходимо получить дескриптор окна. В WPF маркер окна можно получить из свойства <xref:System.Windows.Interop.HwndSource.Handle%2A> <xref:System.Windows.Interop.HwndSource>. В следующем примере фрейм расширяется в клиентскую область на <xref:System.Windows.FrameworkElement.Loaded> событие окна.
 
 ```csharp
 void OnLoaded(object sender, RoutedEventArgs e)
@@ -145,11 +145,11 @@ void OnLoaded(object sender, RoutedEventArgs e)
 </Window>
 ```
 
-На следующем рисунке показана стеклянная рамка, расширенная в [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] приложении:
+На следующем рисунке показана стеклянная рамка, расширенная в приложение WPF:
 
 ![Снимок экрана, показывающий стеклянную рамку, расширенную в приложение WPF.](./media/extend-glass-frame-into-a-wpf-application/glass-frame-extended-wpf-application.png)
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Обзор диспетчер окон рабочего стола](/windows/desktop/dwm/dwm-overview)
 - [Общие сведения об размытии диспетчер окон рабочего стола](/windows/desktop/dwm/blur-ovw)

@@ -2,12 +2,12 @@
 title: Рефакторинг с использованием метода расширения
 ms.date: 07/20/2015
 ms.assetid: d87ae99a-cfa9-4a31-a5e4-9d6437be6810
-ms.openlocfilehash: 1045a649907f877bddd0ec2d8c0e5dfa2a5d0830
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: c66fb90f9949ee3e47105498b211c857d5d63804
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346506"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75348020"
 ---
 # <a name="refactoring-using-an-extension-method-visual-basic"></a>Рефакторинг с помощью метода расширения (Visual Basic)
 Этот пример строится на предыдущем примере, [получая текст абзацев (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md)путем рефакторинга сцепления строк с помощью чистой функции, реализованной как метод расширения.  
@@ -135,7 +135,7 @@ Module Module1
         Return sb.ToString()  
     End Function  
   
-    ' Following function is required because VB does not support short circuit evaluation  
+    ' Following function is required because Visual Basic does not support short circuit evaluation  
     Private Function GetStyleOfParagraph(ByVal styleNode As XElement, _  
                                          ByVal defaultStyle As String) As String  
         If (styleNode Is Nothing) Then  
@@ -238,12 +238,12 @@ StyleName:Code >Hello World<
   
  Обратите внимание, что данная оптимизация кода является вариантом оптимизации кода в чистую функцию. В следующем разделе принципы разбиения на чистые функции рассматриваются более подробно.  
   
-## <a name="next-steps"></a>Дальнейшие шаги  
+## <a name="next-steps"></a>Дальнейшие действия  
  В следующем примере показано, как обеспечить оптимизацию данного кода другим способом, с использованием чистых функций:  
   
 - [Рефакторинг с использованием чистых функций (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-a-pure-function.md)  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Руководство. Управление содержимым в документе WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
 - [Рефакторинг в чистые функции (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)

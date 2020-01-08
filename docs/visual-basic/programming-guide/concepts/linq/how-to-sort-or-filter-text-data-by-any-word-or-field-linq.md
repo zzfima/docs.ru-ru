@@ -2,12 +2,12 @@
 title: Практическое руководство. Сортировка или фильтрация текстовых данных по любому слову или полю (LINQ)
 ms.date: 07/20/2015
 ms.assetid: 9df137fe-335b-46e0-aecf-ea8a9eddd4e3
-ms.openlocfilehash: 15e7666a5fcb5a16628216354c18599f87c7d905
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: f0eeda77a721d482ec7a2b8562c0a71f34c5a3ae
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74341520"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75348050"
 ---
 # <a name="how-to-sort-or-filter-text-data-by-any-word-or-field-linq-visual-basic"></a>Практическое руководство. Сортировка или фильтрация текстовых данных по любому слову или полю (LINQ) (Visual Basic)
 
@@ -72,9 +72,9 @@ End Class
 
 В этом примере также показано, как вернуть переменную запроса из функции.
 
-## <a name="compiling-the-code"></a>Компиляция кода
+## <a name="compile-the-code"></a>Компиляция кода
 
-Создайте проект консольного приложения VB.NET с помощью инструкции `Imports` для пространства имен System. LINQ.
+Создайте Visual Basic проект консольного приложения, используя инструкцию `Imports` для пространства имен System. LINQ.
 
 ## <a name="see-also"></a>См. также:
 

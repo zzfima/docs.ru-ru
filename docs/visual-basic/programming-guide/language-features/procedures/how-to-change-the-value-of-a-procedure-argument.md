@@ -13,12 +13,12 @@ helpviewer_keywords:
 - arguments [Visual Basic], ByRef
 - arguments [Visual Basic], changing value
 ms.assetid: 6fad2368-5da7-4c07-8bf8-0f4e65a1be67
-ms.openlocfilehash: e562c0f5ec01380c792b4dc064554171cfb007e7
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: deac87ca4690990a4d00f63d0ea9b843c3f9a9c4
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74339959"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344480"
 ---
 # <a name="how-to-change-the-value-of-a-procedure-argument-visual-basic"></a>Практическое руководство. Изменение значения аргумента процедуры (Visual Basic)
 При вызове процедуры каждый указываемый аргумент соответствует одному из параметров, определенных в процедуре. В некоторых случаях код процедуры может изменить значение, которое является базовым для аргумента в вызывающем коде. В других случаях процедура может изменить только локальную копию аргумента.  
@@ -69,7 +69,7 @@ ms.locfileid: "74339959"
   
  Можно запретить процедуре изменять саму переменную в вызывающем коде. См. раздел [как защитить аргумент процедуры от изменения значения](./how-to-protect-a-procedure-argument-against-value-changes.md).  
   
-## <a name="compiling-the-code"></a>Компиляция кода  
+## <a name="compile-the-code"></a>Компиляция кода  
  При передаче переменной по ссылке необходимо использовать ключевое слово `ByRef` для указания этого механизма.  
   
  По умолчанию в Visual Basic передаются аргументы по значению. Однако рекомендуется включать ключевое слово [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) или [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) с каждым объявленным параметром. Это упрощает чтение кода.  
@@ -77,7 +77,7 @@ ms.locfileid: "74339959"
 ## <a name="net-framework-security"></a>Безопасность платформы .NET Framework  
  Всегда существует потенциальный риск, позволяющий процедуре изменять значение, которое является базовым для аргумента в вызывающем коде. Убедитесь, что это значение было изменено, и будьте готовы проверить его на допустимость перед его использованием.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Процедуры](./index.md)
 - [Параметры и аргументы процедуры](./procedure-parameters-and-arguments.md)

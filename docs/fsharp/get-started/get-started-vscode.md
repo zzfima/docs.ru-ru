@@ -2,12 +2,12 @@
 title: Начало работы с F# в Visual Studio Code
 description: Узнайте, как использовать F# с Visual Studio Code и набором подключаемых модулей Ionide.
 ms.date: 12/23/2018
-ms.openlocfilehash: 2802438144eb2352c3abeeccfc126b16c6a87d8f
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.openlocfilehash: 91265303c2954387df0f500940c9af68b3c97dac
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74204914"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559668"
 ---
 # <a name="get-started-with-f-in-visual-studio-code"></a>Начало работы с F# в Visual Studio Code
 
@@ -20,7 +20,7 @@ ms.locfileid: "74204914"
 Чтобы создать новый F# проект, откройте командную строку и создайте новый проект с .NET Core CLI:
 
 ```dotnetcli
-dotnet new console -lang F# -o FirstIonideProject
+dotnet new console -lang "F#" -o FirstIonideProject
 ```
 
 После завершения измените каталог на проект и откройте Visual Studio Code:
@@ -42,7 +42,7 @@ code .
 
 В настоящее время это необходимо из-за некоторых устаревших поведений в сценариях на основе .NET Framework, которые не работают с сценариями .NET Core, и Ionide в настоящее время выполняет эту обратную совместимость. В будущем скрипты .NET Core станут значением по умолчанию.
 
-### <a name="write-your-first-script"></a>Напишите первый скрипт
+### <a name="write-your-first-script"></a>Написание первого скрипта
 
 После настройки Visual Studio Code для использования сценариев .NET Core перейдите в представление обозревателя в Visual Studio Code и создайте новый файл. Назовите его *мифирстскрипт. fsx*.
 
@@ -133,7 +133,7 @@ val toPigLatin : word:string -> string
 
 Затем создайте новый [`module`](../language-reference/modules.md) с именем `PigLatin` и скопируйте в него созданную ранее функцию `toPigLatin`:
 
-[!code-fsharp[ToPigLatin](~/samples/snippets/fsharp/getting-started/pig-latin.fs#L1-L14)]
+[!code-fsharp[ToPigLatin](~/samples/snippets/fsharp/getting-started/pig-latin.fs#L3-L14)]
 
 Этот модуль должен быть выше `main` функции и под объявлением `open System`. Порядок объявлений имеет значение F#, поэтому необходимо определить функцию перед вызовом ее в файле.
 
@@ -151,7 +151,7 @@ let main argv =
 
 Теперь вы можете запустить консольное приложение из командной строки:
 
-```console
+```dotnetcli
 dotnet run apple banana
 ```
 
@@ -164,7 +164,7 @@ dotnet run apple banana
 1. Чтобы получить возможности редактирования кода Ionide, необходимо сохранить F# файлы на диске и в папке, открытой в Visual Studio Code рабочей области.
 1. Если вы внесли изменения в систему или установили необходимые компоненты Ionide с Visual Studio Code открыть, перезапустите Visual Studio Code.
 1. Если в каталогах проекта есть недопустимые символы, Ionide может не работать.  Переименуйте каталоги проектов, если это так.
-1. Если ни одна из команд Ionide не работает, проверьте [Visual Studio Code сочетания клавиш](https://code.visualstudio.com/docs/customization/keybindings#_customizing-shortcuts) , чтобы узнать, не переопределяете их случайно.
+1. Если ни одна из команд Ionide не работает, проверьте [Visual Studio Codeные привязки ключей](https://code.visualstudio.com/docs/getstarted/keybindings#_advanced-customization) , чтобы увидеть, не переопределяете их случайно.
 1. Если Ionide не работает на компьютере и ни один из указанных выше проблем не устранил проблему, попробуйте удалить `ionide-fsharp`ный каталог на компьютере и переустановить набор подключаемых модулей.
 1. Если не удалось загрузить проект ( F# Обозреватель решений покажет это), щелкните правой кнопкой мыши этот проект и выберите команду **Просмотреть подробности** , чтобы получить дополнительные диагностические сведения.
 

@@ -7,17 +7,17 @@ helpviewer_keywords:
 - LINQ to XML [Visual Basic], XML literals
 - literals [Visual Basic], XML
 ms.assetid: 37987c15-4ab8-471b-bd45-399816bfb57f
-ms.openlocfilehash: e5d2465d145f4059600121c6cef30bb2c74a8c1c
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 4eaa9399ca0038e3142886abf2161266f8c77782
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346198"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636085"
 ---
 # <a name="xml-literals-overview-visual-basic"></a>Общие сведения об XML-литералах (Visual Basic)
 *XML-литерал* позволяет внедрять XML непосредственно в код Visual Basic. Синтаксис XML-литерала представляет [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] объекты, и он аналогичен синтаксису XML 1,0. Это упрощает создание XML-элементов и документов программным способом, так как код имеет ту же структуру, что и окончательный XML.  
   
- Visual Basic компилирует XML-литералы в объекты [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] предоставляет простую объектную модель для создания XML-кода и управления им, и эта модель хорошо интегрируется с [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]. Дополнительные сведения см. в разделе <xref:System.Xml.Linq.XElement>.  
+ Visual Basic компилирует XML-литералы в объекты [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] предоставляет простую объектную модель для создания XML-кода и управления им, и эта модель хорошо интегрируется с запросом, интегрированным с языком (LINQ). Для получения дополнительной информации см. <xref:System.Xml.Linq.XElement>.  
   
  Выражение Visual Basic можно внедрить в XML-литерал. Во время выполнения приложение создает объект [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] для каждого литерала, включая значения внедренных выражений. Это позволяет указать динамическое содержимое в XML-литерале. Дополнительные сведения см. [в разделе внедренные выражения в XML](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md).  
   
@@ -54,7 +54,7 @@ ms.locfileid: "74346198"
   
  [!code-vb[VbXMLSamples#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples2.vb#6)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - <xref:System.Xml.Linq.XElement>
 - [Создание XML в Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)

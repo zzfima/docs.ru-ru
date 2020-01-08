@@ -11,12 +11,12 @@ helpviewer_keywords:
 - procedural code [WPF], accessing resources from
 - resources [WPF], creating with procedural code
 ms.assetid: c1cfcddb-e39c-41c8-a7f3-60984914dfae
-ms.openlocfilehash: 3d504467c137c1e3f494e120217957661f4e75a3
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 11903a9bae25b0646d944fb11038e07434996015
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458753"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559759"
 ---
 # <a name="resources-and-code"></a>Ресурсы и код
 Этот обзор посвящен преимущественно доступу к ресурсам [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] и их созданию с использованием кода, а не синтаксиса [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]. Дополнительные сведения об общем использовании ресурсов и ресурсах с точки зрения синтаксиса [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] см. в разделе [Ресурсы XAML](xaml-resources.md).  
@@ -42,9 +42,9 @@ ms.locfileid: "73458753"
   
 <a name="objectaskey"></a>   
 ## <a name="using-objects-as-keys"></a>Использование объектов в качестве ключей  
- В большинстве случаев использования ресурса ключ ресурса устанавливается в виде строки. Однако различные функции [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] намеренно не используют строковый тип для указания ключей, вместо этого параметр является объектом. Возможность доступа объекта к ресурсу по ключу используется в поддержке стилей и тем [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Стили в темах, которые становятся стилем по умолчанию для элемента управления, не относящегося к стилю, имеют каждый из ключевых <xref:System.Type> элемента управления, к которому они должны применяться. Ввод с помощью ключа по типу обеспечивает надежный механизм поиска, который работает со стандартными экземплярами каждого типа элемента управления, а тип может быть обнаружен отражением и использоваться для создания стилей производных классов, даже если у производного типа нет стиля по умолчанию. Вы можете указать <xref:System.Type> ключ для ресурса, определенного в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], с помощью [расширения разметки x:Type](../../xaml-services/x-type-markup-extension.md). Аналогичные расширения существуют для других случаев использования нестрокового ключа, поддерживающих функции [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], такие как [Расширение разметки ComponentResourceKey](componentresourcekey-markup-extension.md).  
+ В большинстве случаев использования ресурса ключ ресурса устанавливается в виде строки. Однако различные функции [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] намеренно не используют строковый тип для указания ключей, вместо этого параметр является объектом. Возможность доступа объекта к ресурсу по ключу используется в поддержке стилей и тем [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Стили в темах, которые становятся стилем по умолчанию для элемента управления, не относящегося к стилю, имеют каждый из ключевых <xref:System.Type> элемента управления, к которому они должны применяться. Ввод с помощью ключа по типу обеспечивает надежный механизм поиска, который работает со стандартными экземплярами каждого типа элемента управления, а тип может быть обнаружен отражением и использоваться для создания стилей производных классов, даже если у производного типа нет стиля по умолчанию. Вы можете указать <xref:System.Type> ключ для ресурса, определенного в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], с помощью [расширения разметки x:Type](../../../desktop-wpf/xaml-services/xtype-markup-extension.md). Аналогичные расширения существуют для других случаев использования нестрокового ключа, поддерживающих функции [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], такие как [Расширение разметки ComponentResourceKey](componentresourcekey-markup-extension.md).  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Ресурсы XAML](xaml-resources.md)
 - [Стилизация и использование шаблонов](../../../desktop-wpf/fundamentals/styles-templates-overview.md)

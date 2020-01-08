@@ -17,21 +17,21 @@ helpviewer_keywords:
 - application development [WPF], files
 - application management [WPF]
 ms.assetid: 7ad2943b-3961-41d3-8fc6-1582d43f5d99
-ms.openlocfilehash: a31dc2c5431c8201607462e8bdef4b8bae0fb41d
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: d966116db09c2baef7deabf5d01138e8445098be
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460910"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636267"
 ---
 # <a name="wpf-application-resource-content-and-data-files"></a>Ресурсы, Содержимое и Файлы данных WPF-приложения
 Приложения Microsoft Windows часто зависят от файлов, которые содержат неисполняемые данные, такие как [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], изображения, видео и звук. Windows Presentation Foundation (WPF) предлагает специальную поддержку для настройки, идентификации и использования этих типов файлов данных, которые называются файлами данных приложения. Эта поддержка относится к определенному набору типов файлов данных приложения, включая следующие:  
   
-- **Файлы ресурсов**. файлы данных, компилируемые в исполняемый файл или библиотеку [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] сборки.  
+- **Файлы ресурсов**. файлы данных, компилируемые в исполняемый файл или СБОРКУ библиотеки WPF.  
   
-- **Файлы содержимого**: автономные файлы данных с явной связью с исполняемым [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] сборкой.  
+- **Файлы содержимого**: автономные файлы данных с явной связью с исполняемой сборкой WPF.  
   
-- **Файлы исходного узла**: автономные файлы данных, не имеющие связи с исполняемым [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] сборкой.  
+- **Файлы исходного узла**: автономные файлы данных, не имеющие связи с исполняемой сборкой WPF.  
   
  Важным отличием между этими тремя типами файлов является то, что файлы ресурсов и файлы содержимого известны во время построения. Сборка содержит информацию о них. Однако для файлов исходного узла сборка может вообще не иметь сведений о них или неявного набора знаний через универсальный код ресурса (URI) типа pack. в последнем случае нет никакой гарантии, что файл исходного узла, на который указывает ссылка, фактически существует.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "73460910"
 > Файлы ресурсов, описанные в этом разделе, отличаются от файлов ресурсов, описанных в [ресурсах XAML](../../../desktop-wpf/fundamentals/xaml-resources-define.md) , и отличаются от внедренных или связанных ресурсов, описанных в статье [Управление ресурсами приложения (.NET)](/visualstudio/ide/managing-application-resources-dotnet).  
   
 ### <a name="configuring-resource-files"></a>Настройка файлов ресурсов  
- В [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]файл ресурсов — это файл, который включается в проект Microsoft Build Engine (MSBuild) как элемент `Resource`.  
+ В WPF файл ресурсов — это файл, который включается в проект Microsoft Build Engine (MSBuild) как элемент `Resource`.  
   
 ```xml  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ... >  
@@ -80,7 +80,7 @@ ms.locfileid: "73460910"
  [!code-csharp[WPFAssemblyResourcesSnippets#LoadAPageResourceFileManuallyCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/ApplicationGetResourceStreamSnippetWindow.xaml.cs#loadapageresourcefilemanuallycode)]
  [!code-vb[WPFAssemblyResourcesSnippets#LoadAPageResourceFileManuallyCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/VisualBasic/ResourcesSample/ApplicationGetResourceStreamSnippetWindow.xaml.vb#loadapageresourcefilemanuallycode)]  
   
- При вызове <xref:System.Windows.Application.GetResourceStream%2A> предоставляет доступ к <xref:System.IO.Stream>, необходимо выполнить дополнительную работу по преобразованию в тип свойства, которое будет задано. Вместо этого можно разрешить [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] позаботиться об открытии и преобразовании <xref:System.IO.Stream>, загрузив файл ресурсов непосредственно в свойство типа с помощью кода.  
+ При вызове <xref:System.Windows.Application.GetResourceStream%2A> предоставляет доступ к <xref:System.IO.Stream>, необходимо выполнить дополнительную работу по преобразованию в тип свойства, которое будет задано. Вместо этого можно разрешить WPF открывать и преобразовывать <xref:System.IO.Stream>, загружая файл ресурсов непосредственно в свойство типа с помощью кода.  
   
  В следующем примере показано, как загрузить <xref:System.Windows.Controls.Page> непосредственно в <xref:System.Windows.Controls.Frame> (`pageFrame`) с помощью кода.  
   
@@ -92,7 +92,7 @@ ms.locfileid: "73460910"
  [!code-xaml[WPFAssemblyResourcesSnippets#LoadPageResourceFileFromXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/ApplicationGetResourceStreamSnippetWindow.xaml#loadpageresourcefilefromxaml)]  
   
 ### <a name="application-code-files-as-resource-files"></a>Файлы кода приложения как файлы ресурсов  
- На Специальный набор [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] файлов кода приложения можно ссылаться с помощью URI типа "Pack", включая окна, страницы, документы нефиксированного формата и словари ресурсов. Например, можно задать свойство <xref:System.Windows.Application.StartupUri%2A?displayProperty=nameWithType> с URI типа Pack, который ссылается на окно или страницу, которые вы хотите загрузить при запуске приложения.  
+ На Специальный набор файлов кода приложения WPF можно ссылаться с помощью URI типа "Pack", включая окна, страницы, документы нефиксированного формата и словари ресурсов. Например, можно задать свойство <xref:System.Windows.Application.StartupUri%2A?displayProperty=nameWithType> с URI типа Pack, который ссылается на окно или страницу, которые вы хотите загрузить при запуске приложения.  
   
  [!code-xaml[WPFAssemblyResourcesSnippets#SetApplicationStartupURI](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/App.xaml#setapplicationstartupuri)]  
   
@@ -117,7 +117,7 @@ ms.locfileid: "73460910"
 > Если [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] файл настроен как элемент `Resource` и не имеет файла кода программной части, то необработанный [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] компилируется в сборку, а не в двоичную версию необработанного [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  
   
 <a name="Content_Files"></a>   
-## <a name="content-files"></a>Файлы с содержимым  
+## <a name="content-files"></a>Файлы содержимого  
  *Файл содержимого* распространяется в виде свободного файла вместе с исполняемой сборкой. Несмотря на то, что они не компилируются в сборку, сборки компилируются с метаданными, которые устанавливают связь с каждым файлом содержимого.  
   
  Файлы содержимого необходимо использовать, если приложению требуется определенный набор файлов данных приложения, которые нужно обновлять без повторной компиляции использующей их сборки.  
@@ -160,7 +160,7 @@ ms.locfileid: "73460910"
  [!code-csharp[WPFAssemblyResourcesSnippets#LoadAPageContentFileManuallyCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/ApplicationGetContentStreamSnippetWindow.xaml.cs#loadapagecontentfilemanuallycode)]
  [!code-vb[WPFAssemblyResourcesSnippets#LoadAPageContentFileManuallyCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/VisualBasic/ResourcesSample/ApplicationGetContentStreamSnippetWindow.xaml.vb#loadapagecontentfilemanuallycode)]  
   
- При вызове <xref:System.Windows.Application.GetContentStream%2A> предоставляет доступ к <xref:System.IO.Stream>, необходимо выполнить дополнительную работу по преобразованию в тип свойства, которое будет задано. Вместо этого можно разрешить [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] позаботиться об открытии и преобразовании <xref:System.IO.Stream>, загрузив файл ресурсов непосредственно в свойство типа с помощью кода.  
+ При вызове <xref:System.Windows.Application.GetContentStream%2A> предоставляет доступ к <xref:System.IO.Stream>, необходимо выполнить дополнительную работу по преобразованию в тип свойства, которое будет задано. Вместо этого можно разрешить WPF открывать и преобразовывать <xref:System.IO.Stream>, загружая файл ресурсов непосредственно в свойство типа с помощью кода.  
   
  В следующем примере показано, как загрузить <xref:System.Windows.Controls.Page> непосредственно в <xref:System.Windows.Controls.Frame> (`pageFrame`) с помощью кода.  
   
@@ -195,7 +195,7 @@ ms.locfileid: "73460910"
 > Файлы исходного узла не кэшируются с помощью приложения браузера XAML (XBAP) на клиентском компьютере, а файлы содержимого —. Следовательно, они загружаются только по специальному запросу. Если приложение браузера XAML (XBAP) имеет большие файлы мультимедиа, их настройка в качестве файлов исходного узла означает, что начальный запуск приложения выполняется гораздо быстрее, а файлы загружаются по требованию.  
   
 ### <a name="configuring-site-of-origin-files"></a>Настройка файлов исходного узла  
- Если файлы исходного сайта не существуют или неизвестны во время компиляции, необходимо использовать традиционные механизмы развертывания для обеспечения доступности необходимых файлов во время выполнения, в том числе с помощью программы командной строки `XCopy` или Microsoft Windows. Необходимость.  
+ Если файлы исходного сайта не являются несуществующими или неизвестны во время компиляции, необходимо использовать традиционные механизмы развертывания для обеспечения доступности необходимых файлов во время выполнения, в том числе с помощью программы командной строки `XCopy` или Microsoft установщик Windows.  
   
  Если во время компиляции вы узнаете, какие файлы необходимо найти на исходном узле, но все равно хотите избежать явной зависимости, можно добавить эти файлы в проект MSBuild как `None` элемент. Как и в случае с файлами содержимого, необходимо задать атрибут `CopyToOutputDirectory` MSBuild, чтобы указать, что файл исходного сайта копируется в расположение относительно сборки, указав либо значение `Always`, либо значение `PreserveNewest`.  
   
@@ -222,7 +222,7 @@ ms.locfileid: "73460910"
  [!code-csharp[WPFAssemblyResourcesSnippets#LoadAPageSOOFileManuallyCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/SOOPage.xaml.cs#loadapagesoofilemanuallycode)]
  [!code-vb[WPFAssemblyResourcesSnippets#LoadAPageSOOFileManuallyCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/VisualBasic/ResourcesSample/SOOPage.xaml.vb#loadapagesoofilemanuallycode)]  
   
- При вызове <xref:System.Windows.Application.GetRemoteStream%2A> предоставляет доступ к <xref:System.IO.Stream>, необходимо выполнить дополнительную работу по преобразованию в тип свойства, которое будет задано. Вместо этого можно разрешить [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] позаботиться об открытии и преобразовании <xref:System.IO.Stream>, загрузив файл ресурсов непосредственно в свойство типа с помощью кода.  
+ При вызове <xref:System.Windows.Application.GetRemoteStream%2A> предоставляет доступ к <xref:System.IO.Stream>, необходимо выполнить дополнительную работу по преобразованию в тип свойства, которое будет задано. Вместо этого можно разрешить WPF открывать и преобразовывать <xref:System.IO.Stream>, загружая файл ресурсов непосредственно в свойство типа с помощью кода.  
   
  В следующем примере показано, как загрузить <xref:System.Windows.Controls.Page> непосредственно в <xref:System.Windows.Controls.Frame> (`pageFrame`) с помощью кода.  
   
@@ -237,6 +237,6 @@ ms.locfileid: "73460910"
 ## <a name="rebuilding-after-changing-build-type"></a>Повторное построение после изменения типа построения  
  После изменения типа построения файла данных приложения необходимо перестроить все приложение, чтобы обеспечить применение этих изменений. Если просто выполнить построение приложения, изменения не применяются.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [URI типа "pack" в WPF](pack-uris-in-wpf.md)

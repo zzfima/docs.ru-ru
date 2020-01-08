@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data binding [WPF], binding to XML data using XmlDataProvider queries
 - binding [WPF], to XML data using XmlDataProvider queries
 ms.assetid: 7dcd018f-16aa-4870-8e47-c1b4ea31e574
-ms.openlocfilehash: f075d646539de5d68e1c9c75d9664451125e9919
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: a5ad7d8bce9bc0a760868e483278d1836f9472af
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73733560"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559707"
 ---
 # <a name="how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries"></a>Практическое руководство. Привязка к данным xml с помощью XMLDataProvider и запросов XPath
 В этом примере показано, как выполнить привязку к XML-данным с помощью <xref:System.Windows.Data.XmlDataProvider>.  
@@ -26,7 +26,7 @@ ms.locfileid: "73733560"
   
  [!code-xaml[XMLDataSource#1](~/samples/snippets/csharp/VS_Snippets_Wpf/XmlDataSource/CS/Window1.xaml#1)]  
   
- Как показано в следующем примере, для создания такого же объявления привязки в синтаксисе атрибутов необходимо экранировать специальные символы правильно. Дополнительные сведения см. в разделе [Сущности знаков XML и XAML](../../xaml-services/xml-character-entities-and-xaml.md).  
+ Как показано в следующем примере, для создания такого же объявления привязки в синтаксисе атрибутов необходимо экранировать специальные символы правильно. Дополнительные сведения см. в разделе [Сущности знаков XML и XAML](../../../desktop-wpf/xaml-services/xml-character-entities.md).  
   
  При выполнении этого примера в <xref:System.Windows.Controls.ListBox> будут показаны следующие элементы. Это *заголовки* всех элементов в группе *Книги* со значением *Stock*, равным *out*, или значением *Number*, равным 3 или больше или равным 8. Обратите внимание, что элементы *компакт-диска* не возвращаются, поскольку значение <xref:System.Windows.Data.XmlDataProvider.XPath%2A>, установленное на <xref:System.Windows.Data.XmlDataProvider> указывает, что должны быть предоставлены только элементы *книги* (по сути, установка фильтра).  
   
@@ -58,11 +58,11 @@ ms.locfileid: "73733560"
 <XmlDataProvider x:Key="BookData" Source="http://MyUrl" XPath="Books"/>  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - <xref:System.Windows.Data.ObjectDataProvider>
 - [Привязка к XDocument, XElement или LINQ для результатов запросов XML](how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md)
 - [Использование шаблона "Основной/подробности" с иерархическими XML-данными](how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md)
 - [Общие сведения об источниках привязки](binding-sources-overview.md)
 - [Общие сведения о привязке данных](../../../desktop-wpf/data/data-binding-overview.md)
-- [Разделы практического руководства](data-binding-how-to-topics.md)
+- [Практические руководства](data-binding-how-to-topics.md)

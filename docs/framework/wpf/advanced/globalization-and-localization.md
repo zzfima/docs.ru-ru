@@ -11,15 +11,15 @@ helpviewer_keywords:
 - WPF [WPF], localization
 - Windows Presentation Foundation [WPF], localization
 ms.assetid: e96f9764-4e3f-4d1c-bf20-3fb890118aae
-ms.openlocfilehash: 0d01f7536c120f51372961d944804cfe0063fb9f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 80e0bf641c46eb1461769f5a85950982258c78f5
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62010284"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559426"
 ---
 # <a name="globalization-and-localization"></a>Глобализация и локализация
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] предоставляет расширенную поддержку разработки международных приложений.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] предоставляет обширную поддержку для разработки приложений, готовых к международному использованию.  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Общие сведения о глобализации и локализации WPF](wpf-globalization-and-localization-overview.md)  
@@ -27,15 +27,15 @@ ms.locfileid: "62010284"
  [Обзор использования автоматической разметки](use-automatic-layout-overview.md)  
  [Атрибуты и комментарии локализации](localization-attributes-and-comments.md)  
  [Общие сведения о двусторонних возможностях в WPF](bidirectional-features-in-wpf-overview.md)  
- [Разделы практического руководства](globalization-and-localization-how-to-topics.md)  
+ [Практические руководства](globalization-and-localization-how-to-topics.md)  
   
-## <a name="reference"></a>Ссылка  
+## <a name="reference"></a>Справочные сведения  
  <xref:System.Globalization>  
   
  <xref:System.Windows.FrameworkElement.FlowDirection%2A>  
   
  <xref:System.Resources.NeutralResourcesLanguageAttribute>  
   
- [Обработка xml:lang в XAML](../../xaml-services/xml-lang-handling-in-xaml.md)  
+ [Обработка xml:lang в XAML](../../../desktop-wpf/xaml-services/xml-language-handling.md)  
   
 ## <a name="related-sections"></a>Связанные разделы

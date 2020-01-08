@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ComponentResourceKey markup extension [WPF]
 - XAML [WPF], ComponentResourceKey markup extension
 ms.assetid: d6bcdbe6-61b3-40a7-b381-4e02185b5a85
-ms.openlocfilehash: 85e6862d59284df1b51bf5ea7fbba786fe0492d7
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 2ccc4f3154996a4e442a4092833f5c9ed9c8938a
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458972"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559465"
 ---
 # <a name="componentresourcekey-markup-extension"></a>Расширение разметки ComponentResourceKey
 Определяет и ссылается на ключи для ресурсов, загружаемых из внешних сборок. Это позволяет подстановке ресурсов указывать целевой тип в сборке, а не явный словарь ресурсов в сборке или классе.  
@@ -47,7 +47,7 @@ ms.locfileid: "73458972"
 |||  
 |-|-|  
 |`targetTypeName`|Имя общедоступного типа общеязыковой среды выполнения (CLR), определенного в сборке ресурсов.|  
-|`targetID`|Ключ для ресурса. При поиске ресурсов `targetID` будет аналогом [директивы x:Key](../../xaml-services/x-key-directive.md) ресурса.|  
+|`targetID`|Ключ для ресурса. При поиске ресурсов `targetID` будет аналогом [директивы x:Key](../../../desktop-wpf/xaml-services/xkey-directive.md) ресурса.|  
   
 ## <a name="remarks"></a>Заметки  
  Как показано в описании выше, использование расширения разметки {`ComponentResourceKey`} находится в двух местах:  
@@ -66,7 +66,7 @@ ms.locfileid: "73458972"
   
  Приведенный синтаксис Compact основан на сигнатуре конструктора <xref:System.Windows.ComponentResourceKey.%23ctor%2A?displayProperty=nameWithType> и использовании позиционированного параметра для расширения разметки. Порядок, в котором задаются `targetTypeName` и `targetID`, важен. Подробный синтаксис основан на <xref:System.Windows.ComponentResourceKey.%23ctor%2A?displayProperty=nameWithType> конструкторе без параметров, а затем задает <xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A> и <xref:System.Windows.ComponentResourceKey.ResourceId%2A> способом, аналогичным синтаксису атрибута true для объектного элемента. В подробном синтаксисе порядок, в котором задаются свойства, не важен. Отношения и механизмы этих двух вариантов (компактный и подробный) более подробно описаны в разделе [расширения разметки и XAML WPF](markup-extensions-and-wpf-xaml.md).  
   
- Технически, значение для `targetID` может быть любым объектом, оно не обязательно должно быть строкой. Однако наиболее распространенным применением в WPF является согласование `targetID` значения с формами, которые являются строками, и если такие строки допустимы в [грамматике имяxaml](../../xaml-services/xamlname-grammar.md).  
+ Технически, значение для `targetID` может быть любым объектом, оно не обязательно должно быть строкой. Однако наиболее распространенным применением в WPF является согласование `targetID` значения с формами, которые являются строками, и если такие строки допустимы в [грамматике имяxaml](../../../desktop-wpf/xaml-services/xamlname-grammar.md).  
   
  `ComponentResourceKey` можно использовать в синтаксисе объектного элемента. В этом случае для правильной инициализации расширения требуется указать значения свойств <xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A> и <xref:System.Windows.ComponentResourceKey.ResourceId%2A>.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "73458972"
   
  `ComponentResourceKey` является расширением разметки. Расширения разметки обычно реализуются, если требуется заменить значения атрибутов на нелитеральные значения или имена обработчиков и если требуется больше, чем простая настройка преобразователей типов на работу с определенными типами или свойствами. Все расширения разметки в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] используют символы "{" и "}" в синтаксисе их атрибутов, который является соглашением, по которому обработчик [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] распознает, что расширение разметки должно обработать атрибут. Дополнительные сведения см. в разделе [Расширения разметки и XAML WPF](markup-extensions-and-wpf-xaml.md).  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - <xref:System.Windows.ComponentResourceKey>
 - <xref:System.Windows.Controls.ControlTemplate>

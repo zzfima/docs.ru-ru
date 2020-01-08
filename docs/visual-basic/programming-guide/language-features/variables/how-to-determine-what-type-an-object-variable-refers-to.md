@@ -6,12 +6,12 @@ helpviewer_keywords:
 - variables [Visual Basic], object
 - object variables [Visual Basic], determining type
 ms.assetid: 6f6a138d-58a4-40d1-9f4e-0a3c598eaf81
-ms.openlocfilehash: 9f9b89e2fea0bd69cba6d50fa1d1fb9cc3927685
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: b3778a170759f685db78e7dcde219138196f9eca
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74348620"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344198"
 ---
 # <a name="how-to-determine-what-type-an-object-variable-refers-to-visual-basic"></a>Практическое руководство. Определение типа, на который указывает объектная переменная (Visual Basic)
 
@@ -50,11 +50,11 @@ ms.locfileid: "74348620"
 
     Критерий совместимости зависит от того, является ли указанный тип классом, структурой или интерфейсом. Как правило, типы являются совместимыми, если объект имеет тот же тип, что и, наследует от или реализует указанный тип. Дополнительные сведения см. в разделе [оператор typeof](../../../../visual-basic/language-reference/operators/typeof-operator.md).
 
-## <a name="compiling-the-code"></a>Компиляция кода
+## <a name="compile-the-code"></a>Компиляция кода
 
 Обратите внимание, что указанный тип не может быть переменной или выражением. Это должно быть имя определенного типа, например класса, структуры или интерфейса. Сюда входят встроенные типы, такие как `Integer` и `String`.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - <xref:System.Object.GetType%2A>
 - <xref:System.Type?displayProperty=nameWithType>
@@ -62,4 +62,4 @@ ms.locfileid: "74348620"
 - <xref:System.TypeCode>
 - [Объектные переменные](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
 - [Значения объектных переменных](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)
-- [Тип данных Object](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+- [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)

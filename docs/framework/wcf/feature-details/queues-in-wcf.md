@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - queues [WCF]
 ms.assetid: 43008409-1bb4-4bd4-85d7-862c8f10ae20
-ms.openlocfilehash: e921084ed28cb4e846cb269e57e58a194e9437a5
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: fbe3a546fd431beb5ddf1d71153d38580a19ecc9
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837341"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75348341"
 ---
 # <a name="queues-in-windows-communication-foundation"></a>Очереди в Windows Communication Foundation
 В подразделах этого раздела описывается поддержка Windows Communication Foundation (WCF) для очередей. WCF обеспечивает поддержку очереди, используя службу очередей сообщений Майкрософт (ранее известной как MSMQ) в качестве транспорта и обеспечивающую следующие сценарии:  
@@ -24,7 +24,7 @@ ms.locfileid: "74837341"
   
  Чтобы использовать функцию очередей в приложении WCF, можно использовать одну из стандартных привязок или создать пользовательскую привязку, если одна из стандартных привязок не удовлетворяет вашим требованиям. Дополнительные сведения о соответствующих стандартных привязках и способах ее выбора см. [в разделе как обмениваться сообщениями с конечными точками WCF и приложениями очереди сообщений](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md). Дополнительные сведения о создании настраиваемых привязок см. в разделе [Пользовательские привязки](../../../../docs/framework/wcf/extending/custom-bindings.md).  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Общие сведения об очередях](../../../../docs/framework/wcf/feature-details/queues-overview.md)  
  Обзор понятий очереди сообщений.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "74837341"
  Описание процедуры обработки подозрительных сообщений (превышено максимальное количество попыток доставки сообщений в принимающее приложение).  
   
  [Различия в возможностях очередей в Windows Vista, Windows Server 2003 и Windows XP](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md)  
- Суммирует различия в функциях очередей WCF между Windows Vista, [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]и [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
+ Содержит сводку различий в функциях очередей WCF между Windows Vista, Windows Server 2003 и [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
   
  [Защита сообщений с использованием средств обеспечения безопасности транспорта](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)  
  Описание способов защиты сообщений в очереди с помощью безопасности транспорта.  

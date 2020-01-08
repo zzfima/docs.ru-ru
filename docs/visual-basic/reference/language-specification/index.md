@@ -6,25 +6,26 @@ helpviewer_keywords:
 - Visual Basic code, specifications
 - specifications, Visual Basic
 ms.assetid: 42c30017-19d0-442e-87a2-850b66ddc3df
-ms.openlocfilehash: 0df3f0a49d1dc84f5a6f3218b23f20ce3d43a1fc
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 4148cac9d0ba9ec6851de5babcd37d175be84645
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74352870"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345062"
 ---
 # <a name="visual-basic-language-specification"></a>Спецификация языка Visual Basic
+
 Спецификация языка Visual Basic является полномочным источником ответов на все вопросы о Visual Basic грамматике и синтаксисе. Он содержит подробные сведения о языке, включая множество точек, не описываемых в справочной документации по Visual Basic.  
   
- Спецификация доступна в [Центре загрузки Майкрософт](https://go.microsoft.com/fwlink/?LinkId=188623).  
+Спецификация доступна в [Центре загрузки Майкрософт](https://go.microsoft.com/fwlink/?LinkId=188623).  
   
-На этом сайте содержится [спецификация по VB 11](../../../../_vblang/spec/introduction.md). Она создана на основе файлов Markdown, содержащихся в [GitHub-репозитории dotnet/vblang](https://github.com/dotnet/vblang/blob/master/spec/README.md).
+Этот сайт содержит [спецификацию Visual Basic 11](../../../../_vblang/spec/introduction.md). Она создана на основе файлов Markdown, содержащихся в [GitHub-репозитории dotnet/vblang](https://github.com/dotnet/vblang/blob/master/spec/README.md).
 
-Найденные в спецификации проблемы следует публиковать в репозитории [dotnet/vblang](https://github.com/dotnet/vblang/issues). Если же вам интересно исправить какие-то из найденных вами ошибок, вы можете отправить [запрос на вытягивание](https://github.com/dotnet/vblang/pulls) в тот же репозиторий.
+Найденные в спецификации проблемы следует публиковать в репозитории [dotnet/vblang](https://github.com/dotnet/vblang/issues). Или, если вы заинтересованы в устранении найденных ошибок, вы можете отправить запрос на [вытягивание](https://github.com/dotnet/vblang/pulls) в тот же репозиторий.
 
 ## <a name="see-also"></a>См. также:
 
 - [Справочник по языку Visual Basic](../../../visual-basic/language-reference/index.md)
 
 >[!div class="step-by-step"]
->[Далее](../../../../_vblang/spec/introduction.md)
+>[Вперед](../../../../_vblang/spec/introduction.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - XAML [WPF], code-behind
 - code-behind files [WPF], XAML
 ms.assetid: 9df6d3c9-aed3-471c-af36-6859b19d999f
-ms.openlocfilehash: c18cce1898b8834c20d5e4af70c1b010e4b96e11
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 00427004448997aa234b335b397390f9fabe1bd5
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740905"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559915"
 ---
 # <a name="code-behind-and-xaml-in-wpf"></a>Код программной части и XAML в WPF
 <a name="introduction"></a>Код программной части — это термин, используемый для описания кода, который объединяется с объектами, определенными разметкой, при компиляции разметки [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]ной страницы. В этом разделе описываются требования к коду программной части, а также альтернативный механизм встроенного кода для кода в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  
@@ -28,12 +28,12 @@ ms.locfileid: "73740905"
 - [Ограничения встроенного кода](#Inline_Code_Limitations)  
   
 <a name="Prerequisites"></a>   
-## <a name="prerequisites"></a>Необходимые компоненты  
+## <a name="prerequisites"></a>Prerequisites  
  В этом разделе предполагается, что вы прочитали [Общие сведения о XAML (WPF)](../../../desktop-wpf/fundamentals/xaml.md) и имеете некоторые базовые знания о среде CLR и объектно-ориентированном программировании.  
   
 <a name="codebehind_and_the_xaml_language"></a>   
 ## <a name="code-behind-and-the-xaml-language"></a>Код программной части и язык XAML  
- Язык XAML включает функции уровня языка, позволяющие связывать файлы кода с файлами разметки с стороны файла разметки. В частности, язык XAML определяет [директиву](../../xaml-services/x-class-directive.md)Language Features X:Class, [директиву x:Subclass](../../xaml-services/x-subclass-directive.md)и [директиву КС:классмодифиер](../../xaml-services/x-classmodifier-directive.md). Точно то, как должен быть создан код и как интегрировать разметку и код, не является частью того, что указывает язык XAML. Она остается в таких платформах, как WPF, для определения способа интеграции кода, использования XAML в моделях приложения и программирования, а также действий сборки или другой поддержки, которые требуются для всех этих платформ.  
+ Язык XAML включает функции уровня языка, позволяющие связывать файлы кода с файлами разметки с стороны файла разметки. В частности, язык XAML определяет [директиву](../../../desktop-wpf/xaml-services/xclass-directive.md)Language Features X:Class, [директиву x:Subclass](../../../desktop-wpf/xaml-services/xsubclass-directive.md)и [директиву КС:классмодифиер](../../../desktop-wpf/xaml-services/xclassmodifier-directive.md). Точно то, как должен быть создан код и как интегрировать разметку и код, не является частью того, что указывает язык XAML. Она остается в таких платформах, как WPF, для определения способа интеграции кода, использования XAML в моделях приложения и программирования, а также действий сборки или другой поддержки, которые требуются для всех этих платформ.  
   
 <a name="Code_behind__Event_Handler__and_Partial_Class"></a>   
 ## <a name="code-behind-event-handler-and-partial-class-requirements-in-wpf"></a>Код программной части, обработчик событий и требования к разделяемому классу в WPF  
@@ -50,17 +50,17 @@ ms.locfileid: "73740905"
   
 <a name="x_Code"></a>   
 ## <a name="xcode"></a>x:Code  
- [x:Code](../../xaml-services/x-code-intrinsic-xaml-type.md) — это элемент директивы, определенный в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Элемент директивы `x:Code` может содержать встроенный код программирования. Код, определенный встроенным, может взаимодействовать с [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] на той же странице. В следующем примере показан встроенный C# код. Обратите внимание, что код находится внутри элемента `x:Code` и что код должен быть заключен в `<CDATA[`...`]]>` для экранирования содержимого для XML, чтобы процессор [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] (интерпретируемый как [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] схему, так и схема [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]) не пытался интерпретировать содержимое буквально как XML.  
+ [x:Code](../../../desktop-wpf/xaml-services/xcode-intrinsic-xaml-type.md) — это элемент директивы, определенный в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Элемент директивы `x:Code` может содержать встроенный код программирования. Код, определенный встроенным, может взаимодействовать с [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] на той же странице. В следующем примере показан встроенный C# код. Обратите внимание, что код находится внутри элемента `x:Code` и что код должен быть заключен в `<CDATA[`...`]]>` для экранирования содержимого для XML, чтобы обработчик [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] (интерпретируемый как [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] схему, так и схема [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]) не пытался интерпретировать содержимое буквально как XML.  
   
  [!code-xaml[XAMLOvwSupport#ButtonWithInlineCode](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page4.xaml#buttonwithinlinecode)]  
   
 <a name="Inline_Code_Limitations"></a>   
 ## <a name="inline-code-limitations"></a>Ограничения встроенного кода  
- Рекомендуется избегать или ограничивать использование встроенного кода. С точки зрения архитектуры и философии программирования, обеспечение разделения между разметкой и кодом программной части обеспечивает гораздо более отличающиеся роли конструктора и разработчика. На более техническом уровне код, написанный для встроенного кода, может быть неудобным для записи, так как вы всегда пишете в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] созданном разделяемом классе и можете использовать только сопоставления пространства имен XML по умолчанию. Так как вы не можете добавлять `using` операторы, необходимо полностью определить множество вызовов API. Сопоставления [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] по умолчанию включают большинство, но не все пространства имен CLR, которые имеются в сборках [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Вам придется полностью квалифицировать вызовы типов и членов, содержащихся в других пространствах имен CLR. Кроме того, нельзя определить что-либо за пределами разделяемого класса во встроенном коде, и все сущности кода пользователя, на которые вы ссылаетесь, должны существовать в виде члена или переменной в созданном разделяемом классе. Другие функции программирования, такие как макросы или `#ifdef` с глобальными переменными или переменные сборки, также недоступны. Дополнительные сведения см. в разделе Тип данных, [встроенный в x:Code](../../xaml-services/x-code-intrinsic-xaml-type.md).  
+ Рекомендуется избегать или ограничивать использование встроенного кода. С точки зрения архитектуры и философии программирования, обеспечение разделения между разметкой и кодом программной части обеспечивает гораздо более отличающиеся роли конструктора и разработчика. На более техническом уровне код, написанный для встроенного кода, может быть неудобным для записи, так как вы всегда пишете в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] созданном разделяемом классе и можете использовать только сопоставления пространства имен XML по умолчанию. Так как вы не можете добавлять `using` операторы, необходимо полностью определить множество вызовов API. Сопоставления [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] по умолчанию включают большинство, но не все пространства имен CLR, которые имеются в сборках [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Вам придется полностью квалифицировать вызовы типов и членов, содержащихся в других пространствах имен CLR. Кроме того, нельзя определить что-либо за пределами разделяемого класса во встроенном коде, и все сущности кода пользователя, на которые вы ссылаетесь, должны существовать в виде члена или переменной в созданном разделяемом классе. Другие функции программирования, такие как макросы или `#ifdef` с глобальными переменными или переменные сборки, также недоступны. Дополнительные сведения см. в разделе Тип данных, [встроенный в x:Code](../../../desktop-wpf/xaml-services/xcode-intrinsic-xaml-type.md).  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Общие сведения о языке XAML (WPF)](../../../desktop-wpf/fundamentals/xaml.md)
-- [Встроенный тип XAML x:Code](../../xaml-services/x-code-intrinsic-xaml-type.md)
+- [Встроенный тип XAML x:Code](../../../desktop-wpf/xaml-services/xcode-intrinsic-xaml-type.md)
 - [Построение приложения WPF](../app-development/building-a-wpf-application-wpf.md)
 - [Подробное описание синтаксиса XAML](xaml-syntax-in-detail.md)

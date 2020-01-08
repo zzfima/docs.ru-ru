@@ -9,12 +9,12 @@ helpviewer_keywords:
 - DataGrid [WPF], group
 - DataGrid [WPF], filter
 ms.assetid: 03345e85-89e3-4aec-9ed0-3b80759df770
-ms.openlocfilehash: 2632566b5b55ae641d2750e903bf94cdc681f8f8
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 622b64fd7738b02cd72131e7e9fe91c04314b1d0
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460237"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559478"
 ---
 # <a name="how-to-group-sort-and-filter-data-in-the-datagrid-control"></a>Как группировать, сортировать и фильтровать данные в элементе управления DataGrid
 
@@ -42,9 +42,9 @@ ms.locfileid: "73460237"
     [!code-csharp[DataGrid_GroupSortFilter#101](~/samples/snippets/csharp/VS_Snippets_Wpf/DataGrid_GroupSortFilter/CS/MainWindow.xaml.cs#101)]
     [!code-vb[DataGrid_GroupSortFilter#101](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DataGrid_GroupSortFilter/VB/MainWindow.xaml.vb#101)]
 
-2. В XAML создайте экземпляр класса Collection и задайте [директиву x:Key](../../xaml-services/x-key-directive.md).
+2. В XAML создайте экземпляр класса Collection и задайте [директиву x:Key](../../../desktop-wpf/xaml-services/xkey-directive.md).
 
-3. В XAML создайте экземпляр класса <xref:System.Windows.Data.CollectionViewSource>, установите [директиву x:Key](../../xaml-services/x-key-directive.md)и задайте экземпляр класса коллекции в качестве <xref:System.Windows.Data.CollectionViewSource.Source%2A>.
+3. В XAML создайте экземпляр класса <xref:System.Windows.Data.CollectionViewSource>, установите [директиву x:Key](../../../desktop-wpf/xaml-services/xkey-directive.md)и задайте экземпляр класса коллекции в качестве <xref:System.Windows.Data.CollectionViewSource.Source%2A>.
 
     [!code-xaml[DataGrid_GroupSortFilter#201](~/samples/snippets/csharp/VS_Snippets_Wpf/DataGrid_GroupSortFilter/CS/WindowSnips1.xaml#201)]
 
@@ -144,7 +144,7 @@ ms.locfileid: "73460237"
 [!code-csharp[DataGrid_GroupSortFilter#100](~/samples/snippets/csharp/VS_Snippets_Wpf/DataGrid_GroupSortFilter/CS/MainWindow.xaml.cs#100)]
 [!code-vb[DataGrid_GroupSortFilter#100](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DataGrid_GroupSortFilter/VB/MainWindow.xaml.vb#100)]
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Общие сведения о привязке данных](../../../desktop-wpf/data/data-binding-overview.md)
 - [Создание и привязка ObservableCollection](../data/how-to-create-and-bind-to-an-observablecollection.md)

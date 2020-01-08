@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Storyboards [WPF], animations
 - animations [WPF], overview
 ms.assetid: bd9ce563-725d-4385-87c9-d7ee38cf79ea
-ms.openlocfilehash: 870fc1d1f02dca7d4488a27385fcfeaec8098ced
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: f0f55c948d10c61ebab57f47e3461531ccf5f610
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039177"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559720"
 ---
 # <a name="animation-overview"></a>Общие сведения об эффектах анимации
 
@@ -201,7 +201,7 @@ ms.locfileid: "73039177"
 
 Поскольку анимация создает значения свойств, для различных типов свойств существуют различные типы анимации. Чтобы анимировать свойство, которое принимает <xref:System.Double>, например свойство <xref:System.Windows.FrameworkElement.Width%2A> элемента, используйте анимацию, которая создает значения <xref:System.Double>. Чтобы анимировать свойство, которое принимает <xref:System.Windows.Point>, используйте анимацию, создающую <xref:System.Windows.Point> значения и т. д. Из-за количества различных типов свойств в <xref:System.Windows.Media.Animation> пространстве имен существует несколько классов анимации. Имена классов следуют строгому соглашению, благодаря чему их легко различать.
 
-- Анимация > *типа*\<
+- \<*Type*>Animation
 
   Такая анимация называется "базовой" (или From/To/By) и производится либо от начального до конечного значения, либо посредством добавления значения смещения к начальному значению.
 
@@ -213,17 +213,17 @@ ms.locfileid: "73039177"
 
   В примерах этого раздела используются анимации этого класса, поскольку они являются наиболее простыми в использовании. Сведения об анимации From/To/By подробно описаны в обзоре анимации From/To/By.
 
-- *тип*\<> AnimationUsingKeyFrames
+- \<*Type*>AnimationUsingKeyFrames
 
   Анимация с использованием ключевых кадров является более эффективным средством, чем анимация класса From/To/By, поскольку при ее использовании можно задать любое число конечных значений, а также управлять методами их интерполяции. Некоторые типы могут быть анимированы только с помощью анимации с ключевыми кадрами. Анимация по ключевым кадрам подробно описана в разделе [Общие сведения об анимации по ключевым кадрам](key-frame-animations-overview.md).
 
-- *тип*\<> аниматионусингпас
+- \<*Type*>AnimationUsingPath
 
   Анимация с использованием пути позволяет использовать геометрический путь для создания анимации значений.
 
-- *тип*\<> AnimationBase
+- \<*Type*>AnimationBase
 
-  Абстрактный класс, который при реализации реализует анимацию *типа*\<> значение. Этот класс выступает в качестве базового класса для \<*типа*> анимации и \<*типа*> классов AnimationUsingKeyFrames. Эти классы используются непосредственно только для создания пользовательской анимации. В противном случае используйте *тип*\<> анимации или опорного кадра\<*типа*> анимации.
+  Абстрактный класс, при реализации которого анимируется значение типа \<*Type*>. Этот класс служит базовым классом для классов \<*Type*>Animation и \<*Type*>AnimationUsingKeyFrames. Эти классы используются непосредственно только для создания пользовательской анимации. В противном случае следует использовать классы \<*Type*>Animation или KeyFrame\<*Type*>Animation.
 
 В большинстве случаев потребуется использовать \<*тип*> класс анимации, например <xref:System.Windows.Media.Animation.DoubleAnimation> и <xref:System.Windows.Media.Animation.ColorAnimation>.
 
@@ -254,7 +254,7 @@ ms.locfileid: "73039177"
 
 Следующий синтаксис демонстрирует упрощенную версию синтаксиса атрибута [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] для свойства <xref:System.Windows.Media.Animation.Timeline.Duration%2A>.
 
-*часы* `:` *минуты* `:` *секунды*
+*часов* `:` *минут* `:` *секунд*
 
 В следующей таблице показано несколько параметров <xref:System.Windows.Duration> и их результирующих значений.
 
@@ -292,7 +292,7 @@ ms.locfileid: "73039177"
 
 - Чтобы создать <xref:System.Windows.FrameworkElement> цели анимации, присвойте ей имя, задав его свойство <xref:System.Windows.FrameworkElement.Name%2A>. В коде также необходимо использовать метод <xref:System.Windows.FrameworkElement.RegisterName%2A>, чтобы зарегистрировать имя элемента со страницей, к которой он принадлежит.
 
-- Чтобы сделать объект <xref:System.Windows.Freezable> целевым объектом анимации в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], используйте [директиву x:Name](../../xaml-services/x-name-directive.md) , чтобы присвоить ей имя. В коде просто используется метод <xref:System.Windows.FrameworkElement.RegisterName%2A> для регистрации объекта со страницей, к которой он принадлежит.
+- Чтобы сделать объект <xref:System.Windows.Freezable> целевым объектом анимации в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], используйте [директиву x:Name](../../../desktop-wpf/xaml-services/xname-directive.md) , чтобы присвоить ей имя. В коде просто используется метод <xref:System.Windows.FrameworkElement.RegisterName%2A> для регистрации объекта со страницей, к которой он принадлежит.
 
 В следующих разделах приводится пример именования элемента в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] и коде. Более подробные сведения об именовании и нацеливании см. в разделе [Общие сведения о раскадровках](storyboards-overview.md).
 
@@ -355,7 +355,7 @@ ms.locfileid: "73039177"
 
 В следующих примерах описывается порядок добавления анимации в приложения.
 
-- [Пример целевых значений анимации From, To, By](https://go.microsoft.com/fwlink/?LinkID=159988)
+- [Пример целевых значений анимации From, To и By](https://go.microsoft.com/fwlink/?LinkID=159988)
 
   Описание различных параметров анимации From/To/By.
 
@@ -380,14 +380,14 @@ ms.locfileid: "73039177"
 |[Общие сведения о раскадровке](storyboards-overview.md)|Описание способов использования раскадровок с несколькими временными шкалами для создания сложных анимаций.|
 |[Общие сведения о характере поведения во времени](timing-behaviors-overview.md)|Описывает типы <xref:System.Windows.Media.Animation.Timeline> и свойства, используемые в анимации.|
 |[Общие сведения о временных событиях](timing-events-overview.md)|Описание событий, доступных в <xref:System.Windows.Media.Animation.Timeline> и <xref:System.Windows.Media.Animation.Clock> объектов для выполнения кода в точках временной шкалы, таких как begin, пауза, возобновление, пропуск или остановка.|
-|[Разделы практического руководства](animation-and-timing-how-to-topics.md)|Примеры кода для использования анимаций и временных шкал в приложении.|
+|[Практические руководства](animation-and-timing-how-to-topics.md)|Примеры кода для использования анимаций и временных шкал в приложении.|
 |[Разделы руководства, посвященные часам](clocks-how-to-topics.md)|Содержит примеры кода для использования объекта <xref:System.Windows.Media.Animation.Clock> в приложении.|
 |[Практические руководства, посвященные анимации по ключевым кадрам](key-frame-animation-how-to-topics.md)|Примеры кода для использования покадровой анимации в приложении.|
 |[Практические руководства, посвященные анимации по контуру](path-animation-how-to-topics.md)|Примеры кода для применения анимации с использованием пути в приложении.|
 
 <a name="reference"></a>
 
-## <a name="reference"></a>Ссылки
+## <a name="reference"></a>Справочные сведения
 
 - <xref:System.Windows.Media.Animation.Timeline>
 

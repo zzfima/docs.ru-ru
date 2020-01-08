@@ -5,15 +5,15 @@ helpviewer_keywords:
 - WPF applications [WPF], deployment
 - deployment [WPF], applications
 ms.assetid: 12cadca0-b32c-4064-9a56-e6a306dcc76d
-ms.openlocfilehash: a1441f0cc3a7ac715a173be12e68c055ce36ff00
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: d67919ba38c2e306672966ddc2f62140ef92b638
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460132"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636306"
 ---
 # <a name="deploying-a-wpf-application-wpf"></a>Развертывание приложений WPF
-После сборки приложений Windows Presentation Foundation (WPF) их необходимо развернуть. Windows и .NET Framework включают несколько технологий развертывания. Технология развертывания, используемая для развертывания приложения [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], зависит от типа приложения. Этот раздел содержит краткое описание каждой из технологий развертывания и их использования в сочетании с требованиями к развертыванию для каждого типа приложения [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
+После сборки приложений Windows Presentation Foundation (WPF) их необходимо развернуть. Windows и .NET Framework включают несколько технологий развертывания. Технология развертывания, используемая для развертывания приложения WPF, зависит от типа приложения. В этом разделе представлен краткий обзор каждой технологии развертывания и их использование в сочетании с требованиями к развертыванию каждого типа приложения WPF.  
 
 <a name="Deployment_Technologies"></a>   
 ## <a name="deployment-technologies"></a>Технологии развертывания  
@@ -63,7 +63,7 @@ ms.locfileid: "73460132"
   
 <a name="Deploying_WPF_Applications"></a>   
 ## <a name="deploying-wpf-applications"></a>Развертывание приложений WPF  
- Параметры развертывания для приложения [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] зависят от типа приложения. В плане развертывания технология [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] поддерживает три основных типа приложений:  
+ Параметры развертывания для приложения WPF зависят от типа приложения. С точки зрения развертывания WPF имеет три основных типа приложений:  
   
 - автономные приложения;  
   
@@ -79,7 +79,7 @@ ms.locfileid: "73460132"
 ### <a name="deploying-markup-only-xaml-applications"></a>Развертывание приложений XAML, содержащих только разметку  
  Страницы, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] только разметки, обычно публикуются на веб-серверах, например HTML-страницах, и их можно просматривать с помощью Internet Explorer. Страницы [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], содержащие только разметку, запускаются в изолированной среде (в режиме безопасности с частичным доверием) с ограничениями, которые определяются набором разрешений зоны Интернета. Это обеспечивает эквивалентную изолированную среду безопасности для веб-приложений на основе HTML.  
   
- Дополнительные сведения о безопасности приложений [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] см. в разделе [Безопасность](../security-wpf.md).  
+ Дополнительные сведения о безопасности приложений WPF см. в разделе [Security](../security-wpf.md).  
   
  Страницы [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] только разметки могут быть установлены в локальную файловую систему с помощью XCopy или установщик Windows. Эти страницы можно просмотреть с помощью Internet Explorer или проводника Windows.  
   
@@ -111,8 +111,8 @@ ms.locfileid: "73460132"
  Дополнительные сведения о развертывании приложений браузера XAML (XBAP) см. в разделе [Общие сведения о приложениях браузера WPF XAML](wpf-xaml-browser-applications-overview.md).  
   
 <a name="Installing__NET_Framework_3_0"></a>   
-## <a name="installing-the-net-framework"></a>Установка .NET Framework  
- Для запуска [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] приложения на клиенте должна быть установлена платформа Microsoft .NET Framework. Internet Explorer автоматически определяет, устанавливаются ли клиенты с .NET Framework при просмотре [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] приложений, размещаемых в браузере. Если .NET Framework не установлен, Internet Explorer предлагает пользователям установить его.  
+## <a name="installing-the-net-framework"></a>Установка платформы .NET Framework  
+ Для запуска приложения WPF на клиенте должна быть установлена платформа Microsoft .NET Framework. Internet Explorer автоматически определяет, устанавливаются ли клиенты с .NET Framework при просмотре приложений, размещаемых в браузере WPF. Если .NET Framework не установлен, Internet Explorer предлагает пользователям установить его.  
   
  Чтобы определить, установлена ли .NET Framework, Internet Explorer включает приложение загрузчика, зарегистрированное в качестве обработчика MIME для файлов содержимого со следующими расширениями: XAML, XPS, XBAP. и. Application. Если вы перейдете к этим типам файлов и на клиенте не установлен .NET Framework, приложение начального загрузчика запрашивает разрешение на его установку. Если разрешение не предоставлено, ни .NET Framework, ни приложение не установлено.  
   
@@ -120,7 +120,7 @@ ms.locfileid: "73460132"
   
  Дополнительные сведения см. в разделе [Развертывание .NET Framework и приложений](../../deployment/index.md).  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Построение приложения WPF](building-a-wpf-application-wpf.md)
 - [Security](../security-wpf.md)

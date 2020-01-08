@@ -9,12 +9,12 @@ helpviewer_keywords:
 - fonts [WPF], system fonts
 - classes [WPF], SystemFonts
 ms.assetid: 3f46a4ec-2225-408a-8123-8838a8f7057a
-ms.openlocfilehash: 63ba7a6fb1c8776cc35c0e6f07a6b78f5b3d93d0
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 157565ceb9057049aef8b2bf274847d58c6b8dc8
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459507"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559967"
 ---
 # <a name="how-to-use-systemfonts"></a>Практическое руководство. Использование SystemFonts
 В этом примере показано, как использовать статические ресурсы класса <xref:System.Windows.SystemFonts>, чтобы изменить стиль или настроить кнопку.  
@@ -36,13 +36,13 @@ ms.locfileid: "73459507"
  [!code-csharp[SystemRes_snip#FontResourcesCode](~/samples/snippets/csharp/VS_Snippets_Wpf/SystemRes_snip/CSharp/Pane1.xaml.cs#fontresourcescode)]
  [!code-vb[SystemRes_snip#FontResourcesCode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SystemRes_snip/VisualBasic/Pane1.xaml.vb#fontresourcescode)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - <xref:System.Windows.SystemFonts>
 - [Заливка области с помощью системной кисти](../graphics-multimedia/how-to-paint-an-area-with-a-system-brush.md)
 - [Использование SystemParameters](how-to-use-systemparameters.md)
 - [Использование разделов системных шрифтов](how-to-use-system-fonts-keys.md)
-- [Разделы практического руководства](resources-how-to-topics.md)
-- [Расширение разметки x:Static](../../xaml-services/x-static-markup-extension.md)
+- [Практические руководства](resources-how-to-topics.md)
+- [Расширение разметки x:Static](../../../desktop-wpf/xaml-services/xstatic-markup-extension.md)
 - [Ресурсы XAML](../../../desktop-wpf/fundamentals/xaml-resources-define.md)
 - [Расширение разметки DynamicResource](dynamicresource-markup-extension.md)
