@@ -17,6 +17,8 @@
       href: tutorials/amazon-emr-spark-deployment.md
     - name: Развертывание в Databricks
       href: tutorials/databricks-deployment.md
+    - name: Пакетная обработка
+      href: tutorials/batch-processing.md
     - name: Структурированные потоки
       href: tutorials/streaming.md
 - name: Практические руководства
@@ -27,7 +29,7 @@
       href: how-to-guides/hdinsight-deploy-methods.md
     - name: Отправка заданий в Databricks
       href: how-to-guides/databricks-deploy-methods.md
-- name: Ссылка
+- name: Справочник
   items:
     - name: Справочник по интерфейсам API
       href: 'https://docs.microsoft.com/dotnet/api/?view=spark-dotnet'

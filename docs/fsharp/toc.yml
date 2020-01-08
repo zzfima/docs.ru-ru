@@ -2,18 +2,18 @@
   href: index.yml
 - name: "Что такое\_F#"
   href: what-is-fsharp.md
-- name: Приступая к работе
+- name: Начало работы
   href: get-started/index.md
   items:
     - name: 'Установка F#'
       href: get-started/install-fsharp.md
-    - name: 'Начало работы с F# в Visual Studio'
+    - name: 'F# в Visual Studio'
       href: get-started/get-started-visual-studio.md
-    - name: 'Начало работы с F# в Visual Studio Code'
+    - name: 'F# в Visual Studio Code'
       href: get-started/get-started-vscode.md
-    - name: 'Начало работы с F# в .NET Core CLI'
+    - name: 'F# с .NET Core CLI'
       href: get-started/get-started-command-line.md
-    - name: 'Начало работы с F# в Visual Studio для Mac'
+    - name: 'F# в Visual Studio для Mac'
       href: get-started/get-started-with-visual-studio-for-mac.md
 - name: 'Обзор языка F#'
   href: tour.md
@@ -265,7 +265,7 @@
       href: style-guide/conventions.md
     - name: 'Рекомендации по проектированию компонентов F#'
       href: style-guide/component-design-guidelines.md
-- name: 'Использование языка F# в Azure'
+- name: "Использование языка\_F# в Azure"
   href: using-fsharp-on-azure/index.md
   items:
     - name: "Начало работы с хранилищем BLOB-объектов Azure с помощью языка\_F#"

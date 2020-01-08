@@ -119,7 +119,7 @@
   href: datetime/
 - name: События
   href: events/
-- name: Процесс выполнения управляемого кода
+- name: Процесс управляемого выполнения
   href: managed-execution-process.md
 - name: Метаданные и компоненты с самоописанием
   href: metadata-and-self-describing-components.md
@@ -135,6 +135,8 @@
   href: attributes/
 - name: Рекомендации по разработке платформы
   href: design-guidelines/
+- name: Microsoft.Data.Sqlite
+  href: data/sqlite/
 - name: XML-документы и данные
   href: data/xml/
 - name: Безопасность
