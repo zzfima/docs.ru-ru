@@ -4,12 +4,12 @@ description: Узнайте, как создавать повторно испо
 author: danroth27
 ms.author: daroth
 ms.date: 09/18/2019
-ms.openlocfilehash: 5e5ca128bea2e77d795cede17df73963d9b49a48
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: b34bdf61a425807030cf7648df245cc7a01c95de
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75337401"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705734"
 ---
 # <a name="build-reusable-ui-components-with-blazor"></a>Создание повторно используемых компонентов пользовательского интерфейса с помощью Блазор
 
@@ -269,7 +269,7 @@ public partial class Counter : System.Web.UI.UserControl
 После обработки события компонент подготавливается к просмотру для учета изменений состояния компонента. При использовании асинхронных обработчиков событий компонент подготавливается к просмотру сразу после завершения выполнения обработчика. После завершения асинхронного `Task` компонент *снова* готовится к просмотру. Этот асинхронный режим выполнения позволяет визуализировать какой-либо соответствующий пользовательский интерфейс во время выполнения асинхронного `Task`.
 
 ```razor
-<button @onclick="Get message">Get message</button>
+<button @onclick="ShowMessage">Get message</button>
 
 @if (showMessage)
 {
