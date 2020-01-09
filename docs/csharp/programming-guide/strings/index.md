@@ -1,17 +1,16 @@
 ---
 title: Руководство по программированию на C#. Строки
-ms.custom: seodec18
 ms.date: 06/27/2019
 helpviewer_keywords:
 - C# language, strings
 - strings [C#]
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
-ms.openlocfilehash: 46820fe4137f5080b956cd1345d3e95c2e06f9ca
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: dd76450c2a6a1726d630285f652d252c5f66183f
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75635084"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711913"
 ---
 # <a name="strings-c-programming-guide"></a>Строки (Руководство по программированию на C#)
 Строка — это объект типа <xref:System.String>, значением которого является текст. Внутри программы текст хранится в виде упорядоченной коллекции объектов <xref:System.Char> только для чтения. В конце строки C# нет нуль-символов. Поэтому строка C# может содержать любое число внедренных нуль-символов ('\0'). Свойство <xref:System.String.Length%2A> строки соответствует числу содержащихся в ней объектов `Char`, но не числу символов Юникода. Для доступа к отдельным кодовым точкам Юникода в строке используйте объект <xref:System.Globalization.StringInfo>.  

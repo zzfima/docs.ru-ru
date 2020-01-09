@@ -1,18 +1,17 @@
 ---
 title: Руководство по программированию на C#. События
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - classes [C#], events
 - C# language, events
 - events [C#]
 ms.assetid: a8e51b22-d294-44fb-9539-0072f06c4cb3
-ms.openlocfilehash: 84a7eba7bf71f5ef5a0f46eb5863952e1af37c86
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 183f53a579bdd9f70deb16ca9157c377fa3aff3f
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75635435"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712316"
 ---
 # <a name="events-c-programming-guide"></a>События (Руководство по программированию в C#)
 События позволяют [классу](../../language-reference/keywords/class.md) или объекту уведомлять другие классы или объекты о возникновении каких-либо ситуаций. Класс, отправляющий (или *порождающий*) событие, называется *издателем* , а классы, принимающие (или *обрабатывающие*) событие, называются *подписчиками*.  

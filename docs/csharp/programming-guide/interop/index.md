@@ -1,6 +1,5 @@
 ---
 title: Руководство по программированию на C#. Взаимодействие
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - COM interop
@@ -8,12 +7,12 @@ helpviewer_keywords:
 - platform invoke, accessing APIs with C#
 - C# language, interoperability
 ms.assetid: 238bb95a-e962-4026-bbd5-197055bdb8ee
-ms.openlocfilehash: 64fac0245dcf5976786b51e0d96b795b8b1e5d68
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 3a70d2ae077552bab536e96367cab0fda1661310
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75635201"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712056"
 ---
 # <a name="interoperability-c-programming-guide"></a>Взаимодействие (Руководство по программированию в C#)
 Возможность взаимодействия позволяет использовать уже созданный неуправляемый код, экономя средства на разработку. Код, который выполняется под управлением среды CLR, называется *управляемым кодом*, а код, который выполняется вне среды CLR, называется *неуправляемым кодом*. COM, COM +, компоненты C++, компоненты ActiveX и Microsoft Windows API являются примерами неуправляемого кода.  

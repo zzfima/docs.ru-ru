@@ -1,17 +1,16 @@
 ---
 title: Руководство по программированию на C#. Делегаты
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, delegates
 - delegates [C#]
 ms.assetid: 97de039b-c76b-4b9c-a27d-8c1e1c8d93da
-ms.openlocfilehash: ca660e6485c492ea7883503be4a98e1b7000427a
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: c0f28716926d4c9d74cde58fd00e27d1fdfa7ce1
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346369"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705370"
 ---
 # <a name="delegates-c-programming-guide"></a>Делегаты (Руководство по программированию на C#)
 [Делегат](../../language-reference/builtin-types/reference-types.md) — это тип, который представляет ссылки на методы с определенным списком параметров и типом возвращаемого значения. При создании экземпляра делегата этот экземпляр можно связать с любым методом с совместимой сигнатурой и типом возвращаемого значения. Метод можно вызвать (активировать) с помощью экземпляра делегата.  

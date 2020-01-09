@@ -3,13 +3,12 @@ title: Управление версиями среды выполнения п�
 description: В этой статье описано, как осуществляется управление версиями среды выполнения и пакета SDK для .NET Core.
 author: bleroy
 ms.date: 07/26/2018
-ms.custom: seodec18
-ms.openlocfilehash: cc3a834fdb6347f2cfd93b2c8daeae5bcc222575
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 5096ec0e4e60569b774711d95f4a69e4f8d2d2cc
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75342918"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713969"
 ---
 # <a name="overview-of-how-net-core-is-versioned"></a>Общие сведения об управлении версиями в .NET Core
 
