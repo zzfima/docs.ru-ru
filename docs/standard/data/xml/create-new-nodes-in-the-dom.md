@@ -3,14 +3,12 @@ title: Создание новых узлов в модели DOM
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 6c2b9789-b61a-49f9-b33f-db01a945edf2
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 59ac88b2e7c6b3ecd4d06c0183a2f8a7f4a9e2d4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: f48990286405baee347becef87d0511cd42e9e77
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64590253"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711003"
 ---
 # <a name="create-new-nodes-in-the-dom"></a>Создание новых узлов в модели DOM
 К классе <xref:System.Xml.XmlDocument> доступен метод для создания всех типов узлов. Для создания узла методу нужно передать имя (если необходимо) и содержимое или другие параметры для узлов, имеющих содержимое (например, текстовый узел). Далее представлены методы, которым необходимо передать имя и некоторые другие параметры для создания нужного узла.  
@@ -51,6 +49,6 @@ ms.locfileid: "64590253"
 |<xref:System.Xml.XmlNode.PrependChild%2A>|Добавляет узел в начало списка дочерних узлов заданного узла. Если добавляемый узел представляет собой <xref:System.Xml.XmlDocumentFragment>, все содержимое фрагмента документа перемещается в дочерний список этого узла. Дополнительные сведения см. в описании метода <xref:System.Xml.XmlNode.PrependChild%2A>.|  
 |<xref:System.Xml.XmlAttributeCollection.Append%2A>|Добавляет узел <xref:System.Xml.XmlAttribute> в конец коллекции атрибутов, связанной с элементом. Дополнительные сведения см. в описании метода <xref:System.Xml.XmlAttributeCollection.Append%2A>.|  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Модель объектов документов XML (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

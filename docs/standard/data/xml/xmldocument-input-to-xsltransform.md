@@ -6,14 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 97115892-410a-4657-ab47-1e14dfba73f8
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 60b9b66ea9b1c74dc34e2e99dcf651f9dac1725e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: c7819c3cb6b1430dcdb8a78c43f7138f64e691a8
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69915972"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709846"
 ---
 # <a name="xmldocument-input-to-xsltransform"></a>Ввод XmlDocument в XslTransform
 Класс <xref:System.Xml.XmlDocument> представляет возможности изменения XML-документа. Если нужно изменить XML-документ перед передачей методу <xref:System.Xml.Xsl.XslTransform.Transform%2A>, загрузите XML-документ в объект <xref:System.Xml.XmlDocument>, измените его и отправьте в объект <xref:System.Xml.Xsl.XslTransform>.  
@@ -47,7 +45,7 @@ XmlReader rdr = trans.Transform(doc, null, null);
 while (rdr.Read()) {}  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - <xref:System.Xml.XmlDocument>
 - [XSLT-преобразования с помощью класса XslTransform](../../../../docs/standard/data/xml/xslt-transformations-with-the-xsltransform-class.md)

@@ -6,14 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 500335af-f9b5-413b-968a-e6d9a824478c
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d534553fcc6ee63d560e731a535d44c3acd1a214
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 5f670fa5e83d1802496c0cc6972a7e3af7cae374
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74347894"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709651"
 ---
 # <a name="xslt-transformations-with-the-xsltransform-class"></a>XSLT-преобразования с помощью класса XslTransform
 
@@ -94,7 +92,7 @@ public class Sample
 }
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - <xref:System.Xml.Xsl.XslTransform>
 - [Реализация классом XslTransform XSLT-процессора](xsltransform-class-implements-the-xslt-processor.md)

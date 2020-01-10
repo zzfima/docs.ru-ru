@@ -1,15 +1,13 @@
 ---
 title: Настройка маршалинга параметров — .NET
 description: Из этой статьи вы узнаете, как настроить способ, с помощью которого .NET маршалирует ваши параметры в собственное представление.
-author: jkoritzinsky
-ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: 877eb00c18c9108fe6bcfb50104ff5ed813e85f3
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
-ms.translationtype: HT
+ms.openlocfilehash: 36fb8c105a8836d77b862095a616de3ba641073c
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65065977"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706365"
 ---
 # <a name="customizing-parameter-marshaling"></a>Настройка маршалинга параметров
 
@@ -23,7 +21,7 @@ ms.locfileid: "65065977"
 
 Каждый из этих форматов передает строку, которая оканчивается значением NULL, в машинный код. Они различаются кодировкой собственной строки.
 
-| Значение`System.Runtime.InteropServices.UnmanagedType`  | кодировка |
+| Значение`System.Runtime.InteropServices.UnmanagedType` | Encoding |
 |------------------------------------------------------|----------|
 | LPStr | ANSI |
 | LPUTF8Str | UTF-8 | 

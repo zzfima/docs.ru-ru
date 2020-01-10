@@ -3,14 +3,12 @@ title: Навигация по узлам атрибутов и простран
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 23975f88-e0af-4b88-93de-9e20e11880ad
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4188896fb36d8535f86b245c3b1942f5a058da9b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 6809a2a47a9ca25a16a9be75a0a8a8b03f98a21d
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69936837"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711159"
 ---
 # <a name="attribute-and-namespace-node-navigation-using-xpathnavigator"></a>Навигация по узлам атрибутов и пространств имен с помощью XPathNavigator
 Класс <xref:System.Xml.XPath.XPathNavigator> предоставляет два набора методов навигации. Методы первого набора, описанные в руководстве по [навигации в наборах узлов с помощью XPathNavigator](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md), используются для навигации в *наборах узлов* в объекте <xref:System.Xml.XPath.XPathDocument> или <xref:System.Xml.XmlDocument>. Методы второго набора, рассматриваемые в этом разделе, используются для навигации в *узлах атрибутов и пространств имен* в объекте <xref:System.Xml.XPath.XPathDocument> или <xref:System.Xml.XmlDocument>.  
@@ -96,7 +94,7 @@ ms.locfileid: "69936837"
 > [!NOTE]
 > Класс <xref:System.Xml.XPath.XPathNavigator> возвращает узлы пространства имен в обратном порядке документа. Поэтому <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A> существенно перемещается к последнему узлу пространства имен в текущей области видимости.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - <xref:System.Xml.XmlDocument>
 - <xref:System.Xml.XPath.XPathDocument>

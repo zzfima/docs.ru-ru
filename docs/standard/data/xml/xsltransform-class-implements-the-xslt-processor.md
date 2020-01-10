@@ -6,21 +6,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 88373fe2-4a6b-44f9-8a62-8a3e348e3a46
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 8cc3eb3e3f147d8ed15587946af743c96739a9b1
-ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.openlocfilehash: 73a432db9a3fcb6587184e27e6dfe9ba49010e92
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71956855"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709612"
 ---
 # <a name="xsltransform-class-implements-the-xslt-processor"></a>Реализация классом XslTransform XSLT-процессора
 
 > [!NOTE]
 > Класс <xref:System.Xml.Xsl.XslTransform> явлется устаревшим в версии .NET Framework 2.0. Можно выполнять XSLT-преобразование, используя класс <xref:System.Xml.Xsl.XslCompiledTransform>. См. дополнительные сведения об [использовании класса XslCompiledTransform](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) и [миграции из класса XslTransform](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md).
 
-Класс <xref:System.Xml.Xsl.XslTransform> является XSLT-процессором, реализующим рекомендации по XSL-преобразованиям (XSLT) версии 1.0. Метод <xref:System.Xml.Xsl.XslTransform.Load%2A> находит и считывает таблицы стилей, а метод <xref:System.Xml.Xsl.XslTransform.Transform%2A> преобразует исходный документ. В качестве исходного документа для метода <xref:System.Xml.XPath.IXPathNavigable> может служить любое хранилище, реализующее интерфейс <xref:System.Xml.Xsl.XslTransform>. Платформа .NET Framework в настоящее время реализует интерфейс <xref:System.Xml.XPath.IXPathNavigable> в классах <xref:System.Xml.XmlDocument> <xref:System.Xml.XmlDataDocument> и <xref:System.Xml.XPath.XPathDocument>, поэтому все они могут использоваться в качестве источника документов для преобразования.
+Класс <xref:System.Xml.Xsl.XslTransform> является XSLT-процессором, реализующим рекомендации по XSL-преобразованиям (XSLT) версии 1.0. Метод <xref:System.Xml.Xsl.XslTransform.Load%2A> находит и считывает таблицы стилей, а метод <xref:System.Xml.Xsl.XslTransform.Transform%2A> преобразует исходный документ. В качестве исходного документа для метода <xref:System.Xml.XPath.IXPathNavigable> может служить любое хранилище, реализующее интерфейс <xref:System.Xml.Xsl.XslTransform>. Платформа .NET Framework в настоящее время реализует интерфейс <xref:System.Xml.XPath.IXPathNavigable> в классах <xref:System.Xml.XmlDocument><xref:System.Xml.XmlDataDocument> и <xref:System.Xml.XPath.XPathDocument>, поэтому все они могут использоваться в качестве источника документов для преобразования.
 
 Объект <xref:System.Xml.Xsl.XslTransform> в платформе .NET Framework поддерживает только спецификацию XSLT 1.0, определенную со следующим пространством имен:
 
@@ -82,7 +80,7 @@ public void Load(XPathNavigator, XmlResolver, Evidence);
 
 Сведения об уровнях безопасности и свидетельстве, а также об их влиянии на функцию `document()` см. в статье [Разрешение внешних таблиц стилей XSLT и документов](../../../../docs/standard/data/xml/resolving-external-xslt-style-sheets-and-documents.md).
 
-Таблицу стилей можно предоставить с рядом входных параметров. Таблица стилей может также вызывать функции в объектах расширения. Как параметры, так и объекты расширения предоставляются таблице стилей с помощью объекта <xref:System.Xml.Xsl.XsltArgumentList>. Дополнительные сведения о веб-службе <xref:System.Xml.Xsl.XsltArgumentList> см. в разделе <xref:System.Xml.Xsl.XsltArgumentList>.
+Таблицу стилей можно предоставить с рядом входных параметров. Таблица стилей может также вызывать функции в объектах расширения. Как параметры, так и объекты расширения предоставляются таблице стилей с помощью объекта <xref:System.Xml.Xsl.XsltArgumentList>. Дополнительные сведения о <xref:System.Xml.Xsl.XsltArgumentList> см. в разделе <xref:System.Xml.Xsl.XsltArgumentList>.
 
 ## <a name="recommended-secure-use-of-xsltransform-class"></a>Рекомендованное безопасное использование класса XslTransform
 
@@ -237,7 +235,7 @@ print_root.xsl
 
 Свойство <xref:System.Xml.Xsl.XslTransform.XmlResolver%2A?displayProperty=nameWithType> в платформе .NET Framework версии 1.1 является устаревшим. Используйте вместо него новые перегрузки <xref:System.Xml.Xsl.XslTransform.Transform%2A>, принимающие объект <xref:System.Xml.XmlResolver>.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - <xref:System.Xml.Xsl.XslTransform>
 - [XSLT-преобразования с помощью класса XslTransform](../../../../docs/standard/data/xml/xslt-transformations-with-the-xsltransform-class.md)

@@ -3,14 +3,12 @@ title: Разрешение внешних таблиц стилей XSLT и д�
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 920cfe3b-d525-4bb2-abf6-9431651f9cf9
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 381b7c1eb091bafbcdc8ea842597c539c6be3a57
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 504519532d9a6988209cf04fd6b6196796f929f8
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69945635"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710301"
 ---
 # <a name="resolving-external-xslt-style-sheets-and-documents"></a>Разрешение внешних таблиц стилей XSLT и документов
 В некоторых случаях в процессе преобразования может потребоваться разрешение внешних ресурсов.  
@@ -43,7 +41,7 @@ ms.locfileid: "69945635"
   
  При вызове метода <xref:System.Xml.Xsl.XslTransform.Transform%2A> разрешения вычисляются с учетом свидетельств, предоставленных во время загрузки, и этот набор разрешений назначается всему процессу преобразования. Если функция `document()` пытается инициировать действие, для которого требуются разрешения, отсутствующие в наборе, вызывается исключение.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [XSLT-преобразования с помощью класса XslTransform](../../../../docs/standard/data/xml/xslt-transformations-with-the-xsltransform-class.md)
 - [Реализация классом XslTransform XSLT-процессора](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)

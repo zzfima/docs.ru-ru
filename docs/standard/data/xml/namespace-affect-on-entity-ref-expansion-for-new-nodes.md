@@ -3,14 +3,12 @@ title: Влияние пространства имен на раскрытие 
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 64359aee-aab0-4042-9a32-d19789af6ca7
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 1a92f1b08719c926e6384c220e3695de26dbb4fd
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 4772e3f7365069c537c4ec3bc8571f2f710bc9fc
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69967331"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710626"
 ---
 # <a name="namespace-affect-on-entity-reference-expansion-for-new-nodes-containing-elements-and-attributes"></a>Влияние пространства имен на раскрытие ссылок на сущности для новых узлов, содержащих элементы и атрибуты
 Так как содержимое декларации сущности может содержать абсолютно все, существует вероятность, что содержимое может содержать элемент типа `<!ENTITY aname "<elem>test</elem>">`.  
@@ -20,6 +18,6 @@ ms.locfileid: "69967331"
 > [!NOTE]
 > После того, как раскрывание произошло в заново созданном узле ссылки сущности, оно никогда повторно не происходит. Поэтому пространства имен, используемые в тексте замены для элемента, привязываются во время задания родительского узла. Тем не менее пространство имен может быть изменено для существующих узлов ссылки сущности, и они могут быть вставлены куда-либо еще, или для узлов ссылки сущности, которые копируются с помощью метода **CloneNode**.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Модель объектов документов XML (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

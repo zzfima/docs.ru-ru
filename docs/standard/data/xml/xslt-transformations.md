@@ -3,14 +3,12 @@ title: Преобразования XSLT
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 202f8820-224c-494f-b61e-cd127eac6e03
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 93d45b58433dc3c7231cea741aa7ea67dfab2d7a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 4bbecfbf1b163a9d7bfe6957806095b5b17fbab7
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69912040"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709638"
 ---
 # <a name="xslt-transformations"></a>Преобразования XSLT
 Язык XSLT позволяет преобразовать содержимое исходного XML-документа в другой документ, отличный по формату или структуре. Например, с помощью XSLT можно преобразовать XML в HTML для использования на веб-узле или преобразовать в документ, в котором будут только поля, необходимые приложению. Этот процесс преобразования описывается в [документации консорциума W3C по преобразованиям XSLT версии 1.0](https://www.w3.org/TR/xslt-10/).  
@@ -33,7 +31,7 @@ ms.locfileid: "69912040"
  [XSLT-преобразования с помощью класса XslTransform](../../../../docs/standard/data/xml/xslt-transformations-with-the-xsltransform-class.md)  
  Содержит сведения об использовании класса <xref:System.Xml.Xsl.XslTransform>.  
   
-## <a name="reference"></a>Справочник  
+## <a name="reference"></a>Справочные сведения  
  <xref:System.Xml.Xsl.XslCompiledTransform>  
  <xref:System.Xml.Xsl.XsltArgumentList>  
  <xref:System.Xml.Xsl.XsltSettings>  

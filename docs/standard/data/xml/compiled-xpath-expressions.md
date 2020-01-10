@@ -6,14 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e25dd95f-b64c-4d8b-a3a4-379e1aa0ad55
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: fb6e3677d79f3131432c3daebeee4d166b5450b2
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: b4675765849299050eb6cddeaaa497bc6cdc620a
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69916658"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711107"
 ---
 # <a name="compiled-xpath-expressions"></a>Скомпилированные выражения XPath
 Объект <xref:System.Xml.XPath.XPathExpression> представляет скомпилированный запрос XPath, возвращаемый либо статическим методом <xref:System.Xml.XPath.XPathExpression.Compile%2A> класса <xref:System.Xml.XPath.XPathExpression>, либо методом <xref:System.Xml.XPath.XPathNavigator.Compile%2A> класса <xref:System.Xml.XPath.XPathNavigator>.  
@@ -37,7 +35,7 @@ ms.locfileid: "69916658"
   
  В следующей таблице описаны возвращаемые типы W3C XPath и их эквиваленты в платформе Microsoft .NET Framework, а также методы, с которыми можно использовать объект <xref:System.Xml.XPath.XPathExpression> в зависимости от возвращаемого им типа.  
   
-|Тип возвращаемого значения W3C XPath|Эквивалентный тип в .NET Framework|ОПИСАНИЕ|Методы|  
+|Тип возвращаемого значения W3C XPath|Эквивалентный тип в .NET Framework|Описание|Методы|  
 |---------------------------|------------------------------------|-----------------|-------------|  
 |`Node set`|<xref:System.Xml.XPath.XPathNodeIterator>|Неупорядоченная коллекция узлов без повторяющихся узлов, созданная в порядке документа.|<xref:System.Xml.XPath.XPathNavigator.Select%2A> или <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A>|  
 |`Boolean`|<xref:System.Boolean>|Значение `true` или `false`.|<xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> или<br /><br /> <xref:System.Xml.XPath.XPathNavigator.Matches%2A>|  
@@ -119,7 +117,7 @@ Console.WriteLine(nodes.Current.Value);
   
  Дополнительные сведения о методах перемещения по набору узлов в классе <xref:System.Xml.XPath.XPathNavigator> см. в руководстве по [перемещению по узлам с помощью XPathNavigator](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md).  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - <xref:System.Xml.XmlDocument>
 - <xref:System.Xml.XPath.XPathDocument>

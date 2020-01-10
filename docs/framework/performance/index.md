@@ -5,14 +5,12 @@ helpviewer_keywords:
 - performance [.NET Framework]
 - reliability [.NET Framework]
 ms.assetid: c1676cca-3f1a-41ec-b469-9029566074fc
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b3f3d035ebf6472788e2c7d6e11cb1a39708367b
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: ccff2318355ae2d5b606ee283d45d05afd35310d
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74800325"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716045"
 ---
 # <a name="net-framework-performance"></a>Производительность .NET Framework
 Если вы хотите создавать приложения, отличающиеся высокой производительностью, вам следует закладывать эту производительность при планировании и проектировании наравне с другими возможностями приложения. Вы можете использовать средства, предоставляемые корпорацией Майкрософт, для измерения уровня производительности приложения и внесения усовершенствований в использование памяти, пропускную способность кода и скорость реагирования. В этом разделе перечислены средства анализа производительности, предоставляемые корпорацией Майкрософт, и приведены ссылки на другие разделы, описывающие аспекты производительности для разных областей разработки.  
@@ -50,7 +48,7 @@ ms.locfileid: "74800325"
 |Windows Presentation Foundation (WPF)|[WPF Performance Suite](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa969767(v=vs.100))|  
 |ASP.NET|[Общие сведения о производительности ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/cc668225(v=vs.100))|  
   
-## <a name="related-topics"></a>См. также  
+## <a name="related-topics"></a>Связанные разделы  
   
 |Заголовок|Описание|  
 |-----------|-----------------|  

@@ -1,21 +1,19 @@
 ---
-title: Практическое руководство. Как провести миграцию кода XslTransform
+title: Как осуществить перенос кода XslTransform
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 ms.assetid: 910beb2f-cfb3-4e8e-9936-f7e0c5f4064a
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 7022a0f55cd7994141148bc6b2faefb10bfea416
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 2bc5cbc1b0857a82d3b0a11f05a4eb5756724546
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966984"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710847"
 ---
-# <a name="how-to-migrate-your-xsltransform-code"></a>Практическое руководство. Как провести миграцию кода XslTransform
+# <a name="how-to-migrate-your-xsltransform-code"></a>Как осуществить перенос кода XslTransform
 Новые классы XSLT разработаны так, чтобы быть похожими на существующие классы. Класс <xref:System.Xml.Xsl.XslCompiledTransform> заменяет класс <xref:System.Xml.Xsl.XslTransform>. Таблицы стилей компилируются с помощью метода <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A>. Преобразования выполняются с помощью метода <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A>. В следующей процедуре показаны распространенные XSLT-задачи, а сравнивается код использования классов <xref:System.Xml.Xsl.XslTransform> и <xref:System.Xml.Xsl.XslCompiledTransform>.  
   
 ### <a name="to-transform-a-file-and-output-to-a-uri"></a>Преобразование файла и вывод в URI  
@@ -93,7 +91,7 @@ ms.locfileid: "69966984"
      [!code-csharp[XML_Migration#18](../../../../samples/snippets/csharp/VS_Snippets_Data/XML_Migration/CS/migration.cs#18)]
      [!code-vb[XML_Migration#18](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XML_Migration/VB/migration.vb#18)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Миграция с класса XslTransform](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md)
 - [Использование класса XslCompiledTransform](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md)

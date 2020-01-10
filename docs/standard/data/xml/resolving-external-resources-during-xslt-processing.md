@@ -6,14 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3a59d31c-0ec5-4de6-a2a9-558531c8116e
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 0bcd45a97ab0f0b0ac462d50c18fb68f9d7bd386
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 58407d5f0c6e602af15f5b19b9a19cc6379b9af7
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64590028"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710288"
 ---
 # <a name="resolving-external-resources-during-xslt-processing"></a>Разрешение внешних ресурсов в ходе обработки XSLT
 Во время XSLT-преобразования может понадобиться несколько раз разрешать внешние ресурсы.  
@@ -23,8 +21,8 @@ ms.locfileid: "64590028"
   
 |Задача XSLT|Зачем используется класс XmlResolver|  
 |---------------|--------------------------------------|  
-|Компиляция таблицы стилей|Разрешение URI таблицы стилей.<br /><br /> - и -<br /><br /> Разрешение URI-ссылок в любых элементах `xsl:import` или `xsl:include`.|  
-|Выполнение таблицы стилей.|Разрешение URI документа контекста.<br /><br /> - и -<br /><br /> Разрешение URI-ссылок в любых функциях XSLT `document()`.|  
+|Компиляция таблицы стилей|Разрешение URI таблицы стилей.<br /><br /> -и-<br /><br /> Разрешение URI-ссылок в любых элементах `xsl:import` или `xsl:include`.|  
+|Выполнение таблицы стилей.|Разрешение URI документа контекста.<br /><br /> -и-<br /><br /> Разрешение URI-ссылок в любых функциях XSLT `document()`.|  
   
  Методы <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> и <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> включают в себя перегружаемые, принимающие объект <xref:System.Xml.XmlResolver> в качестве одного из аргументов. Если <xref:System.Xml.XmlResolver> не указан, используется <xref:System.Xml.XmlUrlResolver> по умолчанию без учетных данных.  
   
@@ -44,7 +42,7 @@ ms.locfileid: "64590028"
  [!code-csharp[XslCompiledTransform.Load#11](../../../../samples/snippets/csharp/VS_Snippets_Data/XslCompiledTransform.Load/CS/Xslt_Load_v2.cs#11)]
  [!code-vb[XslCompiledTransform.Load#11](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XslCompiledTransform.Load/VB/Xslt_Load_v2.vb#11)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - <xref:System.Xml.Xsl.XslCompiledTransform>
 - <xref:System.Xml.Xsl.XsltSettings>

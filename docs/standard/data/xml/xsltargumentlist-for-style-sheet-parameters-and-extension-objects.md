@@ -6,14 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: de2f0dce-6b98-4908-bba7-ed150cc50355
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 9d08399933f37c4110639bf1f4a81f222dd597b4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 5cd733d557dabe66145fdbb848c473411d63c62b
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910322"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709625"
 ---
 # <a name="xsltargumentlist-for-style-sheet-parameters-and-extension-objects"></a>XsltArgumentList для параметров таблицы стилей и объектов расширения
 Класс <xref:System.Xml.Xsl.XsltArgumentList> содержит параметры языка XSLT и объекты расширения XSLT. При передаче в метод <xref:System.Xml.Xsl.XslTransform.Transform%2A> эти параметры и объекты расширения могут вызываться из таблиц стилей.  
@@ -40,9 +38,9 @@ ms.locfileid: "69910322"
   
 |Тип W3C|Эквивалентный класс (тип) .NET Framework|Тип XPath или тип XSLT|  
 |--------------|----------------------------------------------|-----------------------------|  
-|String|System.String|XPath|  
-|Boolean|System.Boolean|XPath|  
-|Число|System.Double|XPath|  
+|Строка|System.String|XPath|  
+|Логическое значение .|System.Boolean|XPath|  
+|Числовой|System.Double|XPath|  
 |Фрагмент дерева результатов|System.Xml.XPath.XPathNavigator|XSLT|  
 |Набор узлов|System.Xml.XPath.XPathNodeIterator|XPath|  
   
@@ -139,7 +137,7 @@ public class Sample
 }  
 ```  
   
-### <a name="input"></a>Входные данные  
+### <a name="input"></a>Input  
  order.xml  
   
 ```xml  
@@ -307,7 +305,7 @@ public class Sample
 }  
 ```  
   
-### <a name="input"></a>Входные данные  
+### <a name="input"></a>Input  
  number.xml  
   
 ```xml  
@@ -364,6 +362,6 @@ public class Sample
   
  `</circles>`  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Реализация классом XslTransform XSLT-процессора](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)

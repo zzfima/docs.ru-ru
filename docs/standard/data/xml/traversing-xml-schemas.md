@@ -7,14 +7,12 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: cce69574-5861-4a30-b730-2e18d915d8ee
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6040a7aa8f3244ea0ce2e66042537bc45c347b05
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
-ms.translationtype: HT
+ms.openlocfilehash: dbe02242f9bb8654e3f12d87b6ff6c2aea1f76b1
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70037856"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710119"
 ---
 # <a name="traversing-xml-schemas"></a>Обход XML-схем
 
@@ -24,7 +22,7 @@ ms.locfileid: "70037856"
 
 Следующие свойства класса <xref:System.Xml.Schema.XmlSchema> предоставляют доступ к коллекции глобальных объектов, добавляемых к схеме XML.
 
-|Свойство.|Тип объекта, хранимого в коллекции или массиве|
+|Идентификаторы|Тип объекта, хранимого в коллекции или массиве|
 |--------------|---------------------------------------------------|
 |<xref:System.Xml.Schema.XmlSchema.Elements%2A>|<xref:System.Xml.Schema.XmlSchemaElement>|
 |<xref:System.Xml.Schema.XmlSchema.Attributes%2A>|<xref:System.Xml.Schema.XmlSchemaAttribute>|
@@ -33,7 +31,7 @@ ms.locfileid: "70037856"
 |<xref:System.Xml.Schema.XmlSchema.Includes%2A>|<xref:System.Xml.Schema.XmlSchemaExternal>, <xref:System.Xml.Schema.XmlSchemaInclude>, <xref:System.Xml.Schema.XmlSchemaImport> или <xref:System.Xml.Schema.XmlSchemaRedefine>|
 |<xref:System.Xml.Schema.XmlSchema.Items%2A>|<xref:System.Xml.Schema.XmlSchemaObject> (предоставляет доступ ко всем элементам, атрибутам и типам глобального уровня).|
 |<xref:System.Xml.Schema.XmlSchema.Notations%2A>|<xref:System.Xml.Schema.XmlSchemaNotation>|
-|<xref:System.Xml.Schema.XmlSchema.SchemaTypes%2A>|<xref:System.Xml.Schema.XmlSchemaType>, <xref:System.Xml.Schema.XmlSchemaSimpleType>, <xref:System.Xml.Schema.XmlSchemaComplexType>|
+|<xref:System.Xml.Schema.XmlSchema.SchemaTypes%2A>|<xref:System.Xml.Schema.XmlSchemaType>значение <xref:System.Xml.Schema.XmlSchemaSimpleType>значение <xref:System.Xml.Schema.XmlSchemaComplexType>|
 |<xref:System.Xml.Schema.XmlSchema.UnhandledAttributes%2A>|<xref:System.Xml.XmlAttribute> (предоставляет доступ к атрибутам, не принадлежащим к пространству имен схемы).|
 
 > [!NOTE]
@@ -69,7 +67,7 @@ ms.locfileid: "70037856"
 
 Пример кода в руководстве по [созданию схемы XML](../../../../docs/standard/data/xml/building-xml-schemas.md) использует коллекцию <xref:System.Xml.Schema.XmlSchemaComplexType.Attributes%2A?displayProperty=nameWithType> для добавления атрибута `CustomerId` к элементу `Customer`. Это свойство доступно до компиляции схемы. Соответствующее свойство PSCI (доступное только после компиляции схемы) представляет собой коллекцию <xref:System.Xml.Schema.XmlSchemaComplexType.AttributeUses%2A?displayProperty=nameWithType>, которая хранит все атрибуты сложного типа, в том числе унаследованные.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Общие сведения об модели объектов XML-схемы](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)
 - [Чтение и запись XML-схем](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)

@@ -4,14 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - CLR ETW events, logging
 ms.assetid: ce13088e-3095-4f0e-9f6b-fad30bbd3d41
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 924d209cd1177ffc1702ebe958c58bfc29c22c38
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 180cce516a1209711430429a46cb5b718b29f1d9
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447688"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716109"
 ---
 # <a name="controlling-net-framework-logging"></a>Контроль ведения журнала .NET Framework
 
@@ -55,9 +53,9 @@ Provider                                 GUID
 
     - Параметр `-p` задает GUID поставщика.
 
-    - `0x1CCBD` указывает категории событий, которые будут вызываться.
+    - `0x1CCBD` задает категории создаваемых событий.
 
-    - `0x5` задает уровень ведения журнала (в данном случае Verbose (5)).
+    - `0x5` задает уровень регистрации (в данном случае подробный (5)).
 
     - Параметр `-ets` указывает программе Logman отправлять команды сеансам трассировки событий.
 
@@ -111,7 +109,7 @@ Provider                                 GUID
 
      Эта команда XPerf помещает события в дамп в виде файла с разделителями-запятыми (CSV-файл), который впоследствии можно просмотреть. Поскольку у разных событий поля разные, этот CSV-файл содержит несколько строк заголовков, расположенных перед данными. Первое поле каждой строки является типом события с указанием заголовка, который должен использоваться для определения остальных полей.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Набор средств производительности Windows](/windows-hardware/test/wpt/)
+- [Windows Performance Toolkit](/windows-hardware/test/wpt/)
 - [События в среде CLR (трассировка событий Windows)](etw-events-in-the-common-language-runtime.md)

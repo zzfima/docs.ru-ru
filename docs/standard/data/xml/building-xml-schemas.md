@@ -7,14 +7,12 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: 8a5ea56c-0140-4b51-8997-875ae6a8e0cb
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e8c8e1b0d9a79ff22f3194e86cd580f3a7e199b2
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: c921331b00fe137d4ad52d62951e8c161768dfae
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69962032"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711146"
 ---
 # <a name="building-xml-schemas"></a>Построение XML-схем
 Классы в пространстве имен <xref:System.Xml.Schema?displayProperty=nameWithType> сопоставляются со структурами, определенными в рекомендациях по схемам XML консорциума W3C, и могут использоваться для сборки схем XML в памяти.  
@@ -88,7 +86,7 @@ ms.locfileid: "69962032"
 </xs:schema>  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Общие сведения об модели объектов XML-схемы](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)
 - [Чтение и запись XML-схем](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)

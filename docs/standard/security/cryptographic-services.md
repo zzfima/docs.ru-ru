@@ -1,5 +1,5 @@
 ---
-title: службы шифрования
+title: Службы криптографии
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -24,16 +24,14 @@ helpviewer_keywords:
 - cryptography [.NET Framework], about
 - random number generation
 ms.assetid: f96284bc-7b73-44b5-ac59-fac613ad09f8
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6f0e268995449bc27b93c92ac8654c09fca9cd14
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 66af8126ab61d37065b9a328d5e088ed7bf4cbef
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975828"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709209"
 ---
-# <a name="cryptographic-services"></a>службы шифрования
+# <a name="cryptographic-services"></a>Службы криптографии
 
 Общедоступные сети, такие как Интернет, не предоставляют средств обеспечения защищенного взаимодействия между объектами. При взаимодействии через такие сети может происходить чтение или даже изменение передаваемой информации неправомочными третьими лицами. Использование криптографии обеспечивает защиту данных от просмотра, обнаружение изменения данных и безопасный обмен данными на основе незащищенных каналов. Например, данные могут быть зашифрованы с помощью некоторого криптографического алгоритма, переданы в зашифрованном виде, а затем расшифрованы лицом, которому они предназначались. Если зашифрованные данные будут перехвачены третьим лицом, расшифровать их будет трудно.
 
@@ -59,7 +57,7 @@ ms.locfileid: "73975828"
 
 Для достижения этих целей можно использовать алгоритмы и правила, известные как криптографические примитивы, для создания криптографической схемы. В таблице ниже приведены криптографические примитивы и описано их использование.
 
-|Криптографический примитив|Использовать|
+|Криптографический примитив|Использование|
 |-----------------------------|---------|
 |Шифрование с закрытым ключом (симметричное шифрование)|Осуществляет преобразование данных с целью предотвращения их просмотра третьей стороной. При таком способе шифрования для шифрования и расшифровки данных используется один общий закрытый ключ.|
 |Шифрование с открытым ключом (асимметричное шифрование)|Осуществляет преобразование данных с целью предотвращения их просмотра третьей стороной. При таком способе шифрования для шифрования и расшифровки данных используется набор, состоящий из открытого и закрытого ключей.|
@@ -90,15 +88,15 @@ ms.locfileid: "73975828"
 
 - <xref:System.Security.Cryptography.AesManaged> (введено в .NET Framework 3,5).
 
-- <xref:System.Security.Cryptography.DESCryptoServiceProvider>
+- <xref:System.Security.Cryptography.DESCryptoServiceProvider>.
 
 - <xref:System.Security.Cryptography.HMACSHA1> (Технически это алгоритм с закрытым ключом, так как он представляет собой код проверки подлинности сообщений, вычисляемый на основе хэш-функции шифрования и закрытого ключа. См. подраздел [Хэш-значения](#hash-values)ниже.)
 
-- <xref:System.Security.Cryptography.RC2CryptoServiceProvider>
+- <xref:System.Security.Cryptography.RC2CryptoServiceProvider>.
 
-- <xref:System.Security.Cryptography.RijndaelManaged>
+- <xref:System.Security.Cryptography.RijndaelManaged>.
 
-- <xref:System.Security.Cryptography.TripleDESCryptoServiceProvider>
+- <xref:System.Security.Cryptography.TripleDESCryptoServiceProvider>.
 
 ## <a name="public-key-encryption"></a>Шифрование с открытым ключом
 
@@ -187,21 +185,21 @@ RSA допускает как шифрование, так и подписыва
 
 .NET Framework предоставляет следующие классы, реализующие алгоритмы хэширования:
 
-- <xref:System.Security.Cryptography.HMACSHA1>
+- <xref:System.Security.Cryptography.HMACSHA1>.
 
-- <xref:System.Security.Cryptography.MACTripleDES>
+- <xref:System.Security.Cryptography.MACTripleDES>.
 
-- <xref:System.Security.Cryptography.MD5CryptoServiceProvider>
+- <xref:System.Security.Cryptography.MD5CryptoServiceProvider>.
 
-- <xref:System.Security.Cryptography.RIPEMD160>
+- <xref:System.Security.Cryptography.RIPEMD160>.
 
-- <xref:System.Security.Cryptography.SHA1Managed>
+- <xref:System.Security.Cryptography.SHA1Managed>.
 
-- <xref:System.Security.Cryptography.SHA256Managed>
+- <xref:System.Security.Cryptography.SHA256Managed>.
 
-- <xref:System.Security.Cryptography.SHA384Managed>
+- <xref:System.Security.Cryptography.SHA384Managed>.
 
-- <xref:System.Security.Cryptography.SHA512Managed>
+- <xref:System.Security.Cryptography.SHA512Managed>.
 
 - Разновидности HMAC всех алгоритмов SHA, MD5 и RIPEMD-160
 
@@ -268,7 +266,7 @@ RSA допускает как шифрование, так и подписыва
 
 - <xref:System.Security.Cryptography.CngProperty> поддерживает часто используемые свойства ключей.
 
-## <a name="related-topics"></a>См. также
+## <a name="related-topics"></a>Связанные разделы
 
 |Заголовок|Описание|
 |-----------|-----------------|

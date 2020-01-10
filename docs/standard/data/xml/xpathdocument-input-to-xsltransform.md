@@ -6,14 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7d1bbe8b-ed43-4e62-a5ba-d602d244f4ae
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 3c7c8f6739fc5132af2c8cf1af2c111d51565db0
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: e19e0d18dc0f4aceb38bf006c3b9b80276455510
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69923306"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709768"
 ---
 # <a name="xpathdocument-input-to-xsltransform"></a>Ввод XPathDocument в XslTransform
 Объект <xref:System.Xml.XPath.XPathDocument> является кэшем только для чтения, который предназначен для обработки документов с помощью <xref:System.Xml.Xsl.XslTransform>. Он структурно аналогичен модели XML DOM, но значительно оптимизирован для обработки XSLT и модели данных языка XPath с помощью функций оптимизации XPath в классе <xref:System.Xml.XPath.XPathNavigator>.  
@@ -39,6 +37,6 @@ StringWriter fs = new StringWriter();
 Xslt.Transform(doc, null, fs, null);  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Реализация классом XslTransform XSLT-процессора](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)

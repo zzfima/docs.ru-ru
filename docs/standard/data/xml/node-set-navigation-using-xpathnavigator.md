@@ -3,14 +3,12 @@ title: Навигация в наборе узлов с помощью XPathNavi
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 1a954b41-7173-40bc-8544-d430f209b1e5
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 44b102cf160dcc4b3f188451d42d3b8dbefa5d1f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 91115af03b635d7660721fac5ce8bd749953e4ff
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64590184"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710574"
 ---
 # <a name="node-set-navigation-using-xpathnavigator"></a>Навигация в наборе узлов с помощью XPathNavigator
 Навигацию по узлам в объекте <xref:System.Xml.XPath.XPathDocument> или <xref:System.Xml.XmlDocument> обеспечивают методы просмотра набора узлов класса <xref:System.Xml.XPath.XPathNavigator>. Возможен просмотр всех узлов или набора выбранных узлов, возвращаемого одним из методов выбора класса <xref:System.Xml.XPath.XPathNavigator>.  
@@ -52,7 +50,7 @@ ms.locfileid: "64590184"
   
 - <xref:System.Xml.XPath.XPathNavigator.MoveToId%2A>  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - <xref:System.Xml.XmlDocument>
 - <xref:System.Xml.XPath.XPathDocument>

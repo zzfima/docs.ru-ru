@@ -5,14 +5,12 @@ helpviewer_keywords:
 - stack event [.NET Framework]
 - ETW, stack event (CLR)
 ms.assetid: f612fa5b-4b62-4593-a19e-85c9b1018dce
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 5dc23f5105b589d5b74c9ea6b7f40b84c2b04e6a
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: f3014a04ba7cacbe37b6706e2919ffd7de19aa65
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71046158"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715907"
 ---
 # <a name="stack-etw-event"></a>События стека (трассировка событий Windows)
 Событие стека должно использоваться вместе с другими событиями для создания трассировок стека после вызова события. Оно регистрируется при включенном поставщике среды выполнения. Это очень часто случающееся событие, так как оно сопровождает создание другого события времени выполнения. По этой причине рекомендуется использовать его с осторожностью.  
@@ -25,7 +23,7 @@ ms.locfileid: "71046158"
   
  В таблице ниже представлены сведения о событии.  
   
-|событие|Идентификатор события|Условие вызова|  
+|Event|Код события|Условие вызова|  
 |-----------|--------------|-----------------|  
 |`CLRStackWalk`|82|Вместе с другими событиями для создания трассировок стека после этого события.|  
   
@@ -39,6 +37,6 @@ ms.locfileid: "71046158"
 |FrameCount|win:UInt32|Число кадров в трассировке стека.|  
 |Стек|win:Pointer|Столбцы указателей инструкций.|  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [События трассировки событий Windows в среде CLR](clr-etw-events.md)

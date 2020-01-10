@@ -5,14 +5,12 @@ helpviewer_keywords:
 - security events [.NET Framework]
 - ETW, security events (CLR)
 ms.assetid: 0ed69f73-5c01-4514-bd63-979c6e38d41d
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b1dad042595608a805f978673858acaa5c01130f
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: c443bda8cdc2c6b32760e9dcba8b81a29d81660b
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974883"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715942"
 ---
 # <a name="security-etw-events"></a>События безопасности (трассировка событий Windows)
 
@@ -27,7 +25,7 @@ ms.locfileid: "73974883"
   
  В таблице ниже представлены сведения о событии.  
   
-|событие|Код события|Условие вызова|  
+|Event|Код события|Условие вызова|  
 |-----------|--------------|-----------------|  
 |`StrongNameVerificationStart_V1`|181|Начало проверки строгого имени.|  
 |`StrongNameVerificationStop_V1`|182|Окончание проверки строгого имени.|  
@@ -50,7 +48,7 @@ ms.locfileid: "73974883"
   
  В таблице ниже представлены сведения о событии.  
   
-|событие|Код события|Условие вызова|  
+|Event|Код события|Условие вызова|  
 |-----------|--------------|-----------------|  
 |`AuthenticodeVerificationStart_V1`|183|Начало проверки Authenticode.|  
 |`AuthenticodeVerificationStop_V1`|184|Окончание проверки Authenticode.|  
@@ -64,6 +62,6 @@ ms.locfileid: "73974883"
 |ModulePath|win:UnicodeString|Путь к модулю.|  
 |ClrInstanceID|win:UInt16|Уникальный идентификатор экземпляра CLR или CoreCLR.|  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [События трассировки событий Windows в среде CLR](clr-etw-events.md)

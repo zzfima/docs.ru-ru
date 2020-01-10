@@ -6,14 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ad0b5717-3d32-41ad-a4d7-072c3e492b82
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 0fb14f919d0737b9d9c25bcd62a3cfb7228ff432
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 1ab6dec2b99b01db04333c5d47176e40ed033fa7
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69916080"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709898"
 ---
 # <a name="xml-schema-xsd-validation-with-xmlschemacollection"></a>Проверка по XML-схеме (XSD) с помощью XmlSchemaCollection
 Объект <xref:System.Xml.Schema.XmlSchemaCollection> можно использовать для проверки XML-документа по схемам на языке XSD. Объект <xref:System.Xml.Schema.XmlSchemaCollection> повышает производительность за счет сохранения схем в коллекции, чтобы они не загружались в память при каждой проверке. Если схема существует в коллекции схем, для ее поиска в коллекции используется атрибут `schemaLocation`.  
@@ -208,7 +206,7 @@ while(vr.Read()) {
 </xs:schema>  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - <xref:System.Xml.XmlParserContext>
 - <xref:System.Xml.XmlValidatingReader.ValidationEventHandler?displayProperty=nameWithType>

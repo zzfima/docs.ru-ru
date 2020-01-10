@@ -16,14 +16,12 @@ helpviewer_keywords:
 - decryption
 - data [.NET Framework], encryption
 ms.assetid: 606698b0-cb1a-42ca-beeb-0bea34205d20
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 1dc8c75d3c8c91d974388779528deff16453d852
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0efd677f11189b28b8efc184c04b30a047ab942b
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64602543"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706036"
 ---
 # <a name="how-to-use-data-protection"></a>Практическое руководство. Использование защиты данных
 Платформа .NET Framework предоставляет доступ к API защиты данных (DPAPI), который позволяет шифровать данные, используя сведения из текущей учетной записи пользователя или с текущего компьютера.  Использование API защиты данных позволяет упростить сложную задачу явного создания и хранения криптографического ключа.  
@@ -66,7 +64,7 @@ ms.locfileid: "64602543"
   
 - Включите пространство имен <xref:System>, <xref:System.IO>, <xref:System.Security.Cryptography> и <xref:System.Text>.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - <xref:System.Security.Cryptography.ProtectedMemory>
 - <xref:System.Security.Cryptography.ProtectedData>

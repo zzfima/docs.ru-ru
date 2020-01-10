@@ -3,14 +3,12 @@ title: Интеграция XML с реляционными данными и AD
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: f6ebb1a1-f2ca-49b9-92c9-0150940cf6e6
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6c37e494431eae9d17f442b2c32dea5f0b4bcf2b
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
-ms.translationtype: HT
+ms.openlocfilehash: 373e28d1fffd8c47acb4acb70271db056aa3a27b
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67397790"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709937"
 ---
 # <a name="xml-integration-with-relational-data-and-adonet"></a>Интеграция XML с реляционными данными и ADO.NET
 Класс **XmlDataDocument** является производным от класса **XmlDocument** и содержит XML-данные. Класс **XmlDataDocument** полезен тем, что он организует связь между реляционными и иерархическими данными. Этот класс **XmlDocument** можно привязать к объекту **DataSet**, после чего любые изменения их данных будут одновременно отображаться в обоих классах. Класс **XmlDocument**, привязанный к объекту **DataSet**, позволяет интегрировать XML-данные с реляционными данными, не преобразуя все данные в формат XML или в реляционный формат. Можно использовать оба формата, не ограничиваясь единым способом представления данных.  
@@ -47,6 +45,6 @@ ms.locfileid: "67397790"
   
  Если нужно загружать данные в объект **DataSet** из класса **XmlDataDocument**, переходите к документу о [синхронизации объекта DataSet с XML-документом](../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md).  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Использование XML в наборах данных](../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)

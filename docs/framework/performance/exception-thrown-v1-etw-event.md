@@ -5,14 +5,12 @@ helpviewer_keywords:
 - ExceptionThrown_V1 event [.NET Framework]
 - ETW, ExceptionThrown_V1 event (CLR)
 ms.assetid: 0d3da389-6b7b-40f6-a877-fac546d6019c
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 3f0e968053c87319bf90bf3de0f21d750ec899ab
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 80faf6e607755ee79c7ec17f2d7d3d5bdce822b7
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447627"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716053"
 ---
 # <a name="exception-thrown_v1-etw-event"></a>Событие ExceptionThrown_V1 (трассировка событий Windows)
 Это событие захватывает информацию о вызванных исключениях.  
@@ -25,7 +23,7 @@ ms.locfileid: "74447627"
   
  В таблице ниже представлены сведения о событии.  
   
-|событие|Код события|Условие вызова|  
+|Event|Код события|Условие вызова|  
 |-----------|--------------|-----------------|  
 |`ExceptionThrown_V1`|80|Возникло управляемое исключение.|  
   
@@ -40,6 +38,6 @@ ms.locfileid: "74447627"
 |ExceptionFlags|win:UInt16|0x01: HasInnerException (см. раздел [События трассировки событий Windows в среде CLR](clr-etw-events.md) в документации по Visual Basic).<br /><br /> 0x02: IsNestedException.<br /><br /> 0x04: IsRethrownException.<br /><br /> 0x08: Искорруптедстатиксцептион (указывает, что состояние процесса повреждено; см. раздел [обработка исключений поврежденного состояния](https://docs.microsoft.com/archive/msdn-magazine/2009/february/clr-inside-out-handling-corrupted-state-exceptions)).<br /><br /> 0x10: IsCLSCompliant (исключение, производное от <xref:System.Exception>, является CLS-совместимым; в противном случае такое исключение не является CLS-совместимым).|  
 |ClrInstanceID|win:UInt16|Уникальный идентификатор экземпляра CLR или CoreCLR.|  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [События трассировки событий Windows в среде CLR](clr-etw-events.md)

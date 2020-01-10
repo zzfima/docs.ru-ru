@@ -12,13 +12,12 @@ helpviewer_keywords:
 - parameterless constructors
 - static constructors
 ms.assetid: b4496afe-5fa7-4bb0-85ca-70b0ef21e6fc
-author: KrzysztofCwalina
-ms.openlocfilehash: a43ec815275e58f4bc6462fb4f5cb4733267de31
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 823bc893c9384bb687e5f9a196abe497db14f4db
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68972106"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709482"
 ---
 # <a name="constructor-design"></a>Разработка конструктора
 
@@ -76,11 +75,11 @@ ms.locfileid: "68972106"
 
 **✓ CONSIDER** Инициализация встроенного статических полей, а не явно с использованием статических конструкторов, так как среда выполнения может оптимизировать производительность типов, которые не являются явно определенного статического конструктора.
 
-*Фрагменты: © Корпорация Майкрософт (Microsoft Corporation), 2005, 2009. Все права защищены.*
+*Части © 2005, 2009 Корпорация Майкрософт. Все права защищены.*
 
-*Перепечаталось по разрешениям Пирсона, Inc. [, из руководства по проектированию платформы: Соглашения, идиомы и закономерности для многократно используемых библиотек .NET, 2](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) -го выпуска, Крзисзтоф квалина и Михаил Abrams), опубликован 22 октября, 2008 by Addison-Wesley Professional в рамках серии разработки Microsoft Windows.*
+*Перепечатано с разрешения Pearson Education, Inc. из книги [Инфраструктура программных проектов. Соглашения, идиомы и шаблоны для многократно используемых библиотек .NET (2-е издание)](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619), авторы: Кржиштоф Цвалина (Krzysztof Cwalina) и Брэд Абрамс (Brad Abrams). Книга опубликована 22 октября 2008 г. издательством Addison-Wesley Professional в рамках серии, посвященной разработке для Microsoft Windows.*
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Правила разработки членов](../../../docs/standard/design-guidelines/member.md)
 - [Рекомендации по проектированию на основе Framework](../../../docs/standard/design-guidelines/index.md)

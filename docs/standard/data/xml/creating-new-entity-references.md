@@ -3,14 +3,12 @@ title: Создание новых ссылок на сущности
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: a42f81b3-0403-4e34-b346-7d2129804e54
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 1d8d4e9e1e2dfd9882504c935912bcf235608485
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 8c81aae89bbe5979dffdc47a369349bd2b3f2df7
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69965899"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710990"
 ---
 # <a name="creating-new-entity-references"></a>Создание новых ссылок на сущности
 Метод **CreateEntityReference** создает новый узел **XmlEntityReference**. Модель DOM определяет, было ли уже декларировано имя сущности, на которую указывает ссылка. Если было, то дочерние узлы узла **XmlEntityReference** копируются из узла декларации сущности. Если совпадающая декларация сущности отсутствует, пустой текстовый узел прикрепляется как единственный дочерний узел узла ссылки на сущность. Так как дочерние узлы узла **XmlEntityReference** являются копиями других узлов, они доступны только для чтения и не могут быть изменены.  
@@ -22,6 +20,6 @@ ms.locfileid: "69965899"
   
  Хотя класс **XmlDataDocument** является производным от класса **XmlDocument**, класс **XmlDataDocument** не поддерживает создание ссылок на сущности. Это связано с тем, что дочерние узлы **EntityReference** доступны только для чтения. Дочерние узлы узла **EntityReference** могут принадлежать к нескольким областям. В этом случае часть строки, связанная с областью, которая содержит часть узла **EntityReference**, будет доступна только для чтения.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Модель объектов документов XML (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

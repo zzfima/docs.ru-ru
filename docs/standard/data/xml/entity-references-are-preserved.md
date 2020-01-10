@@ -3,14 +3,12 @@ title: Сохраняемые ссылки на сущности
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 000a6cae-5972-40d6-bd6c-a9b7d9649b3c
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e512f2077c2e6b9feba5024c4eabc2568357ecab
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 0fd427388a065bd4c689d087c22fd6d69046b8a9
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69965918"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710925"
 ---
 # <a name="entity-references-are-preserved"></a>Сохраняемые ссылки на сущности
 Если ссылки на сущности не разворачиваются, а сохраняются, модель XML DOM строит узел **XmlEntityReference**, когда обнаруживает ссылку на сущность.  
@@ -34,6 +32,6 @@ ms.locfileid: "69965918"
   
  По умолчанию сохраняются сущности общего вида, такие как `&abc;`, и всегда создаются узлы **XmlEntityReference**.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Модель объектов документов XML (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

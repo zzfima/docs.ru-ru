@@ -3,14 +3,12 @@ title: Параметры вывода в классе XslCompiledTransform
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 91ce8cba-386c-411e-bb38-0891a0393c0a
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 0f56e27b2ae9a32385aa9a44db631d2909023206
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 504057bd5e10498d39b2bce908742fc20b112c52
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647845"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710509"
 ---
 # <a name="output-options-on-the-xslcompiledtransform-class"></a>Параметры вывода в классе XslCompiledTransform
 В этом разделе рассматриваются доступные параметры вывода XSLT. Параметры вывода можно указать в таблице стилей или методе <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A>.  
@@ -22,11 +20,11 @@ ms.locfileid: "64647845"
   
 |Имя атрибута|Поведение|  
 |--------------------|--------------|  
-|метод|Поддерживается.|  
-|version|Не обрабатывается. Версия всегда 1.0 для XML и 4.0 для HTML.|  
+|method|Поддерживается.|  
+|Версия|Пропускается. Версия всегда 1.0 для XML и 4.0 для HTML.|  
 |encoding|Не учитывается при выводе в объект <xref:System.IO.TextWriter>. Вместо него используется свойство <xref:System.IO.TextWriter.Encoding%2A?displayProperty=nameWithType>.|  
 |omit-xml-declaration|Поддерживается.|  
-|Автономный|Поддерживается.|  
+|standalone|Поддерживается.|  
 |doctype-public|Поддерживается.|  
 |doctype-system|Поддерживается.|  
 |cdata-section-elements|Поддерживается.|  
@@ -42,10 +40,10 @@ ms.locfileid: "64647845"
 #### <a name="xmlwriter"></a>XmlWriter  
  Класс <xref:System.Xml.XmlWriter> записывает потоки или файлы XML. С помощью класса <xref:System.Xml.XmlWriter> можно указать возможности, поддерживающие объект <xref:System.Xml.XmlWriterSettings>, включая параметры вывода. Класс <xref:System.Xml.XmlWriter> представляет собой неотъемлемую часть платформы <xref:System.Xml>. Используйте этот тип вывода для передачи выходных результатов в другой процесс XML.  
   
-#### <a name="string"></a>String  
+#### <a name="string"></a>Строка  
  Используйте этот тип вывода, чтобы указать URI выходного файла.  
   
-#### <a name="stream"></a>Поток  
+#### <a name="stream"></a>Stream  
  Поток - это абстракция последовательности байтов, например файла, устройства ввода-вывода, межпроцессного канала связи или сокета TCP/IP. Класс <xref:System.IO.Stream> и его производные классы обеспечивают универсальное представление различных типов ввода и вывода, изолируя программиста от конкретных особенностей операционной системы и базовых устройств.  
   
  Используйте этот тип вывода для пересылки данных в объекты <xref:System.IO.FileStream>, <xref:System.IO.MemoryStream> или выходной поток (`Response.OutputStream`).  
@@ -57,6 +55,6 @@ ms.locfileid: "64647845"
   
 - При записи пустых тегов между последним символом имени элемента и обратной косой чертой записывается пробел, например `<myElement />`. Это позволяет правильно отобразить сформированные HTML-страницы в старых браузерах.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Преобразования XSLT](../../../../docs/standard/data/xml/xslt-transformations.md)

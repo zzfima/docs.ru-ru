@@ -13,19 +13,17 @@ helpviewer_keywords:
 - hardware encryption
 - CspParameters
 ms.assetid: b0e734df-6eb4-4b16-b48c-6f0fe82d5f17
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 9c16c994e3976fb3ee569799461db1d1789a6186
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d6ee22fd9fb0c11e22ac01ff83b3269e37e37763
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64654379"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706179"
 ---
 # <a name="how-to-access-hardware-encryption-devices"></a>Практическое руководство. Доступ к устройствам аппаратного шифрования
 Класс <xref:System.Security.Cryptography.CspParameters> можно использовать для доступа к устройствам аппаратного шифрования. Например, этот класс можно использовать для интеграции приложения со смарт-картой, аппаратным генератором случайных чисел или аппаратной реализацией определенного алгоритма шифрования.  
   
- Класс <xref:System.Security.Cryptography.CspParameters> создает поставщик служб шифрования (CSP), который обращается к правильно установленному устройству аппаратного шифрования.  Можно проверить доступность CSP, изучив следующий раздел реестра с помощью редактора реестра (Regedit.exe):  HKEY_LOCAL_MACHINE\Software\Microsoft\Cryptography\Defaults\Provider.  
+ Класс <xref:System.Security.Cryptography.CspParameters> создает поставщик служб шифрования (CSP), который обращается к правильно установленному устройству аппаратного шифрования.  Можно проверить доступность CSP, изучив следующий раздел реестра при помощи редактора реестра (Regedit.exe): HKEY_LOCAL_MACHINE\Software\Microsoft\Cryptography\Defaults\Provider.  
   
 ### <a name="to-sign-data-using-a-key-card"></a>Подпись данных при помощи карты с ключом  
   

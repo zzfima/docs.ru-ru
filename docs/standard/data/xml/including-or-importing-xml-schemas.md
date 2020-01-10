@@ -7,14 +7,12 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: fe1b4a11-37f4-4e1a-93c9-239f4fe736c0
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 45f6b402ae01b7f762f8ef10dcfb0bc46f949db6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: d9a18876d8a5ba3067aa35c617b1e20fce0411f5
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59343575"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710782"
 ---
 # <a name="including-or-importing-xml-schemas"></a>Включение или импорт XML-схем
 Схема XML может содержать элементы `<xs:import />`, `<xs:include />` и `<xs:redefine />`. Эти элементы схемы ссылаются на другие схемы XML, которые можно использовать в дополнение к структуре схемы, их включающей или импортирующей. Классы <xref:System.Xml.Schema.XmlSchemaImport>, <xref:System.Xml.Schema.XmlSchemaInclude> и <xref:System.Xml.Schema.XmlSchemaRedefine> сопоставляются с этими элементами в API модели SOM.  
@@ -99,7 +97,7 @@ ms.locfileid: "59343575"
   
  Дополнительные сведения об элементах `<xs:import />`, `<xs:include />` и `<xs:redefine />`, а также классах <xref:System.Xml.Schema.XmlSchemaImport>, <xref:System.Xml.Schema.XmlSchemaInclude> и <xref:System.Xml.Schema.XmlSchemaRedefine> см. в [документации консорциума W3C по схемам XML](https://www.w3.org/XML/Schema) и в справочной документации по классу пространства имен <xref:System.Xml.Schema?displayProperty=nameWithType>.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Общие сведения об модели объектов XML-схемы](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)
 - [Чтение и запись XML-схем](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)

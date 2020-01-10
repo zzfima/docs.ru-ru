@@ -15,23 +15,21 @@ helpviewer_keywords:
 - encryption [.NET Framework], asymmetric keys
 - decryption keys
 ms.assetid: 0dbcbd8d-0dcf-40e9-9f0c-e3f162d35ccc
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 8edb88d13732650e00292d63ad4e1975a97ac704
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: 8ca4c4c5b1257411ecdf86858040bf428a9e6ce0
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291629"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706062"
 ---
 # <a name="how-to-store-asymmetric-keys-in-a-key-container"></a>Практическое руководство. Хранение асимметричных ключей в контейнере ключей
 Асимметричные закрытые ключи никогда не следует хранить буквальной форме или в формате обычного текста на локальном компьютере. Если необходимо хранить закрытый ключ, следует использовать для этого контейнер ключа. Дополнительные сведения о контейнерах ключей см. в разделе [Общие сведения о контейнерах ключей RSA уровня компьютера и пользователя](https://docs.microsoft.com/previous-versions/aspnet/f5cs0acs(v=vs.100)).  
   
 ### <a name="to-create-an-asymmetric-key-and-save-it-in-a-key-container"></a>Порядок создания асимметричного ключа и сохранения его в контейнере ключей  
   
-1. Создайте новый экземпляр класса <xref:System.Security.Cryptography.CspParameters> и передайте имя, для которого необходимо вызвать контейнер ключей, в поле <xref:System.Security.Cryptography.CspParameters.KeyContainerName?displayProperty=nameWithType>.  
+1. Создайте новый экземпляр класса <xref:System.Security.Cryptography.CspParameters> и передайте имя, которое будет вызывать контейнер ключей, в поле <xref:System.Security.Cryptography.CspParameters.KeyContainerName?displayProperty=nameWithType>.  
   
-2. Создайте новый экземпляр класса, производного от класса <xref:System.Security.Cryptography.AsymmetricAlgorithm> (обычно **RSACryptoServiceProvider** или **DSACryptoServiceProvider**), и передайте ранее созданный объект **CspParameters** в конструктор.  
+2. Создайте новый экземпляр класса, производного от класса <xref:System.Security.Cryptography.AsymmetricAlgorithm> (обычно **RSACryptoServiceProvider** или **DSACryptoServiceProvider**) и передайте ранее созданный объект **CspParameters** в свой конструктор.  
   
 ### <a name="to-delete-the-key-from-a-key-container"></a>Порядок удаления ключа из контейнера ключей  
   
@@ -223,7 +221,7 @@ Key added to container:
 Key deleted.  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Создание ключей для шифрования и расшифровки](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)
 - [Шифрование данных](../../../docs/standard/security/encrypting-data.md)

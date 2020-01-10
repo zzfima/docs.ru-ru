@@ -6,19 +6,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0fe844e3-5b6f-4fe7-ad15-22459501738b
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 9d26872fb97551e5392eb3f6a1a0825728046553
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: ecbed7e57628b4e140e0f4dbcd600643617b075a
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69965889"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710899"
 ---
 # <a name="event-handling-in-an-xml-document-using-the-xmlnodechangedeventargs"></a>Обработка событий в XML-документе с помощью XmlNodeChangedEventArgs
 Класс **XmlNodeChangedEventArgs** инкапсулирует аргументы, передаваемые обработчикам событий, которые зарегистрированы в объекте **XmlDocument** для обработки событий. События и описания условий их срабатывания приведены в следующей таблице.  
   
-|событие|Срабатывание|  
+|Event|Срабатывание|  
 |-----------|-----------|  
 |<xref:System.Xml.XmlDocument.NodeInserting>|Перед вставкой узла, принадлежащего текущему документу, в другой узел.|  
 |<xref:System.Xml.XmlDocument.NodeInserted>|После вставки узла, принадлежащего текущему документу, в другой узел.|  
@@ -206,8 +204,8 @@ public class Sample
 } // End class   
 ```  
   
- Дополнительные сведения см. в разделах <xref:System.Xml.XmlNodeChangedEventArgs> и <xref:System.Xml.XmlNodeChangedEventHandler>.  
+ Дополнительные сведения см. в разделах <xref:System.Xml.XmlNodeChangedEventArgs> и <xref:System.Xml.XmlNodeChangedEventHandler>.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Модель объектов документов XML (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

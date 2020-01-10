@@ -6,14 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 095b0987-ee4b-4595-a160-da1c956ad576
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f789317defe3f4b44b37e6d94d37b974d003bcae
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 627da3c8c45d007e677c4f92f4d5cd602d34ae84
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966995"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710860"
 ---
 # <a name="extract-xml-data-using-xpathnavigator"></a>Извлечение XML-данных с помощью XPathNavigator
 В платформе Microsoft .NET Framework есть несколько способов представления XML-документа. К ним относится использование класса <xref:System.String>, <xref:System.Xml.XmlReader>, <xref:System.Xml.XmlWriter>, <xref:System.Xml.XmlDocument> или <xref:System.Xml.XPath.XPathDocument>. Чтобы ускорить перемещение между различными представлениями XML-документа, в классе <xref:System.Xml.XPath.XPathNavigator> предусмотрено несколько методов и свойств для извлечения XML как объекта <xref:System.String>, <xref:System.Xml.XmlReader> или <xref:System.Xml.XmlWriter>.  
@@ -162,7 +160,7 @@ book.Close();
   
  В данном примере в качестве входного файла используется указанный выше файл `books.xml`.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - <xref:System.Xml.XmlDocument>
 - <xref:System.Xml.XPath.XPathDocument>

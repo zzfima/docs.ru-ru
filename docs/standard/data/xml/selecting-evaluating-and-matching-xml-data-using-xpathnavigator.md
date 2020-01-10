@@ -3,14 +3,12 @@ title: Выбор, вычисление и отбор XML-данных с пом
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 46e059f8-4dc8-4185-9236-784be95228ed
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 03c7d3f777aa903bf75a62830b3f337ae37ce437
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: HT
+ms.openlocfilehash: 1a76edf22483c0df8871badcb5e162dd3e66001f
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54669235"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710145"
 ---
 # <a name="selecting-evaluating-and-matching-xml-data-using-xpathnavigator"></a>Выбор, вычисление и отбор XML-данных с помощью XPathNavigator
 Класс <xref:System.Xml.XPath.XPathNavigator> предоставляет методы для выбора узлов в объекте <xref:System.Xml.XPath.XPathDocument> или <xref:System.Xml.XmlDocument> с помощью запроса XPath, проверки и анализа результатов выражения XPath и определения соответствия узла в объекте <xref:System.Xml.XPath.XPathDocument> или <xref:System.Xml.XmlDocument> данному выражению XPath. Эти и другие основные понятия, связанные с выбором, оценкой и сопоставлением узлов в объекте <xref:System.Xml.XPath.XPathDocument> или <xref:System.Xml.XmlDocument>, описаны в следующих разделах.  
@@ -34,7 +32,7 @@ ms.locfileid: "54669235"
  [Скомпилированные выражения XPath](../../../../docs/standard/data/xml/compiled-xpath-expressions.md)  
  Описывает класс <xref:System.Xml.XPath.XPathExpression>, который представляет скомпилированный запрос XPath.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - <xref:System.Xml.XmlDocument>
 - <xref:System.Xml.XPath.XPathDocument>

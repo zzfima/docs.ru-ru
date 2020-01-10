@@ -6,14 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fde6f43f-c594-486f-abcb-2211197fae20
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 1488fb6b7671acd86286bcac6fbfce8bee9429ad
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: a63452df16e452a90eff3977ac8726cc0a5ac439
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69939592"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710197"
 ---
 # <a name="script-blocks-using-msxslscript"></a>Блоки скриптов с использованием msxsl:script
 Класс <xref:System.Xml.Xsl.XslCompiledTransform> поддерживает внедренные скрипты с помощью элемента `msxsl:script`. После загрузки таблицы стилей все определенные функции компилируются в MSIL с помощью модели CodeDOM и выполняются во время выполнения. Сборка, создаваемая из блока внедренного скрипта, располагается отдельно от сборки, создаваемой для таблицы стилей.  
@@ -94,7 +92,7 @@ ms.locfileid: "69939592"
 #### <a name="namespaces"></a>Пространства имен  
  По умолчанию включаются следующие пространства имен:  
   
-- Система  
+- System  
   
 - System.Collection  
   
@@ -148,7 +146,7 @@ ms.locfileid: "69939592"
 </circles>  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Преобразования XSLT](../../../../docs/standard/data/xml/xslt-transformations.md)
 - [Динамическое создание и компиляция исходного кода](../../../../docs/framework/reflection-and-codedom/dynamic-source-code-generation-and-compilation.md)

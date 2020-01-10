@@ -2,18 +2,18 @@
 title: Новые возможности в F# 4,5- F# Guide
 description: Ознакомьтесь с обзором новых функций, доступных в F# 4,5.
 ms.date: 11/27/2019
-ms.openlocfilehash: 780b33a564432aae5ec99c70ff8620988b553fd1
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: b699165125d345ad783b24da8a0a994cba72d4ba
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74644160"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715688"
 ---
 # <a name="whats-new-in-f-45"></a>Новые возможности в F# 4,5
 
 F#4,5 добавляет несколько улучшений в F# язык. Многие из этих функций были добавлены вместе, что позволяет писать эффективный код в F# , а также обеспечивать безопасность этого кода. Это означает добавление нескольких концепций к языку и значительного объема анализа компилятора при использовании этих конструкций.
 
-## <a name="get-started"></a>Начало работы
+## <a name="get-started"></a>Приступая к работе
 
 F#4,5 доступна во всех дистрибутивах .NET Core и средствах Visual Studio. Дополнительные сведения см. в статье Приступая к [работе с F# ](../get-started/index.md) .
 
@@ -77,7 +77,7 @@ type S(count1: int, count2: int) =
     member x.Count2 = count2
 ```
 
-Это не позволяет объявить изменяемый элемент в структуре и выдает метаданные, которые позволяют F# и C# обрабатывать его как ReadOnly при использовании из сборки. Дополнительные сведения см. в разделе [структуры только для чтения](../language-reference/structures.md#readonly-structs) .
+Это не позволяет объявить изменяемый элемент в структуре и выдает метаданные, которые позволяют F# и C# обрабатывать его как ReadOnly при использовании из сборки. Дополнительные сведения см. в разделе [структуры только для чтения](../language-reference/structures.md#readonly-structs).
 
 ## <a name="void-pointers"></a>Указатели void
 
@@ -88,7 +88,7 @@ type S(count1: int, count2: int) =
 
 Это полезно при взаимодействии с собственным компонентом, который использует указатели void.
 
-## <a name="the-match-keyword"></a>Ключевое слово `match!`
+## <a name="the-match-keyword"></a>Ключевое слово `match!`.
 
 Ключевое слово `match!` улучшает сопоставление шаблонов в вычислительном выражении:
 
@@ -113,9 +113,9 @@ let funcWithString (s: string) =
 
 Это позволяет сократить код, который часто включает в себя смешение параметров (или других типов) с вычислительными выражениями, такими как async. Дополнительные сведения см. в разделе [Match!](../language-reference/computation-expressions.md#match).
 
-## <a name="relaxed-upcasting-requirements-in-array-list-and-sequence-expressions"></a>Relaxed upcasting requirements in array, list, and sequence expressions
+## <a name="relaxed-upcasting-requirements-in-array-list-and-sequence-expressions"></a>Ослабленные требования к преобразованию в выражениях массивов, списков и последовательностей
 
-Mixing types where one may inherit from another inside of array, list, and sequence expressions has traditionally required you to upcast any derived type to its parent type with `:>` or `upcast`. This is now relaxed, demonstrated as follows:
+Смешивание типов, которые могут наследовать друг от друга в выражениях массивов, списков и последовательностей, традиционно требовали преобразования любого производного типа в его родительский тип с `:>` или `upcast`. Теперь это неявное, как показано ниже.
 
 ```fsharp
 let x0 : obj list  = [ "a" ] // ok pre-F# 4.5
@@ -125,9 +125,9 @@ let x2 : obj list  = [ yield "a" :> obj ] // ok pre-F# 4.5
 let x3 : obj list  = [ yield "a" ] // Now ok for F# 4.5, and can replace x2
 ```
 
-## <a name="indentation-relaxation-for-array-and-list-expressions"></a>Indentation relaxation for array and list expressions
+## <a name="indentation-relaxation-for-array-and-list-expressions"></a>Ослабление отступов для выражений массива и списка
 
-Prior to F# 4.5, you needed to excessively indent array and list expressions when passed as arguments to method calls. This is no longer required:
+До F# 4,5 требовалось слишком много отступов массивов и выражений списка при передаче в качестве аргументов в вызовы методов. Это больше не требуется:
 
 ```fsharp
 module NoExcessiveIndenting = 

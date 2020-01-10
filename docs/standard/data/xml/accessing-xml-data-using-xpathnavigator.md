@@ -3,14 +3,12 @@ title: Доступ к XML-данным с помощью класса XPathNavi
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: c57b46e6-5c77-408f-bc4e-67a5dcc9cc05
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 1827d93925b3ff2322d246f3d7d214cb57ac02fe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: HT
+ms.openlocfilehash: c8466e78458d344a872aac7cdebc155342b13e0f
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54707908"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711172"
 ---
 # <a name="accessing-xml-data-using-xpathnavigator"></a>Доступ к XML-данным с помощью класса XPathNavigator
 Класс <xref:System.Xml.XPath.XPathNavigator> предоставляет методы для перемещения по узлам, извлечения XML-данных, доступа к строго типизированным XML-данным в объектах <xref:System.Xml.XPath.XPathDocument> и <xref:System.Xml.XmlDocument>.  
@@ -31,7 +29,7 @@ ms.locfileid: "54707908"
  [Определяемые пользователем функции и переменные](../../../../docs/standard/data/xml/user-defined-functions-and-variables.md)  
  Описывает реализацию пользовательского класса <xref:System.Xml.Xsl.XsltContext> с интерфейсами <xref:System.Xml.Xsl.IXsltContextFunction> и <xref:System.Xml.Xsl.IXsltContextVariable>, которые поддерживают функции и переменные расширения.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - <xref:System.Xml.XmlDocument>
 - <xref:System.Xml.XPath.XPathDocument>

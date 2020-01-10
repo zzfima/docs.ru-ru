@@ -3,14 +3,12 @@ title: Работа с XML-схемами
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: bbbcc70c-bf9a-4f6a-af72-1bab5384a187
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 83fddd00f44b184fa066f6c47b90b01fac7ef7bc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 0fd7313e800024ebb7e3563cb4323c5780cbf1c3
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33570657"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710015"
 ---
 # <a name="working-with-xml-schemas"></a>Работа с XML-схемами
 Чтобы определить структуру XML-документа, связи его элементов, типы данных, ограничения на содержимое, используется определение типа документа (DTD) или схема XSD. XML-документ имеет правильный формат, если он соответствует всем синтаксическим требованиям Рекомендации консорциума W3C по языку XML 1.0. Однако документ считается допустимым только в том случае, если он одновременно имеет правильный формат и соответствует ограничениям, заданным определением DTD или схемой. Следовательно, хотя все допустимые XML-документы имеют правильный формат, не все XML-документы правильного формата, являются допустимыми.  
@@ -30,7 +28,7 @@ ms.locfileid: "33570657"
  [Выведение XML-схемы](../../../../docs/standard/data/xml/inferring-an-xml-schema.md)  
  Обсуждается применение класса <xref:System.Xml.Schema.XmlSchemaInference> для выведения схемы XSD из структуры XML-документа.  
   
-## <a name="reference"></a>Ссылка  
+## <a name="reference"></a>Справочные сведения  
  <xref:System.Xml.Schema.XmlSchemaSet> &#124; <xref:System.Xml.Schema.XmlSchemaInference> &#124; <xref:System.Xml.XmlReader>  
   
 ## <a name="related-sections"></a>Связанные разделы  

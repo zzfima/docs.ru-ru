@@ -6,16 +6,15 @@ helpviewer_keywords:
 - parameters, names
 - names [.NET Framework], parameters
 ms.assetid: ca3c956e-725a-441b-b4e3-eab5d472f41c
-author: KrzysztofCwalina
-ms.openlocfilehash: 0e5b33839372e303b96bd6b84949f9a82da2f689
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0bb67056bb39b6a5f372191a1d0b0bb0dc1fe4d1
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62026315"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709183"
 ---
 # <a name="naming-parameters"></a>Именование параметров
-Помимо очевидная причина восприятия очень важно следовать рекомендациям для имен параметров, так как параметры отображаются в документации и в конструкторе, когда средства визуального проектирования предоставляют Intellisense и функции просмотра классов.  
+Помимо очевидной причины удобочитаемости, важно следовать рекомендациям по именам параметров, так как параметры отображаются в документации и в конструкторе, когда визуальные средства проектирования предоставляют функции IntelliSense и просмотра классов.  
   
  **✓ DO** использовать camelCasing в именах параметров.  
   
@@ -32,11 +31,11 @@ ms.locfileid: "62026315"
   
  **X DO NOT** использования сокращений и числовые индексы для оператора перегрузки имена параметров.  
   
- *Фрагменты: © Корпорация Майкрософт (Microsoft Corporation), 2005, 2009. Все права защищены.*  
+ *Части © 2005, 2009 Корпорация Майкрософт. Все права защищены.*  
   
- *Перепечатано разрешением Пирсона для образовательных учреждений, Inc. из [рекомендации по разработке Framework: Условные обозначения, стили и шаблоны для библиотеки .NET для повторного использования, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Кшиштов Квалина и Брэд Абрамс, опубликованных 22 октября 2008 г., издательство Addison-Wesley Professional как части цикла разработки Microsoft Windows.*  
+ *Перепечатано с разрешения Pearson Education, Inc. из книги [Инфраструктура программных проектов. Соглашения, идиомы и шаблоны для многократно используемых библиотек .NET (2-е издание)](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619), авторы: Кржиштоф Цвалина (Krzysztof Cwalina) и Брэд Абрамс (Brad Abrams). Книга опубликована 22 октября 2008 г. издательством Addison-Wesley Professional в рамках серии, посвященной разработке для Microsoft Windows.*  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Рекомендации по проектированию на основе Framework](../../../docs/standard/design-guidelines/index.md)
 - [Правила именования](../../../docs/standard/design-guidelines/naming-guidelines.md)

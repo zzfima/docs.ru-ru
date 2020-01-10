@@ -3,14 +3,12 @@ title: Изменение XML-данных с помощью XPathNavigator
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: b1f91616-3115-4264-9821-c66589d11d11
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ef68511e425e047fa853e47bd4d463d9662c740c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: HT
+ms.openlocfilehash: 3b9225f1efcca0f4874a98f2b83d1964aacef735
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54495676"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710964"
 ---
 # <a name="editing-xml-data-using-xpathnavigator"></a>Изменение XML-данных с помощью XPathNavigator
 Класс <xref:System.Xml.XPath.XPathNavigator> предоставляет методы для вставки, изменения и удаления узлов и значений из XML-документа, содержащегося в объекте <xref:System.Xml.XmlDocument>. Чтобы использовать любой из этих методов для вставки, изменения или удаления узлов и значений, объект <xref:System.Xml.XPath.XPathNavigator> должен быть доступен для изменения, то есть, его свойство <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> должно иметь значение true.  
@@ -25,7 +23,7 @@ ms.locfileid: "54495676"
  [Удаление XML-данных с помощью XPathNavigator](../../../../docs/standard/data/xml/remove-xml-data-using-xpathnavigator.md)  
  Описывает, как удалять узлы и значения из объекта <xref:System.Xml.XmlDocument> с помощью класса <xref:System.Xml.XPath.XPathNavigator>.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - <xref:System.Xml.XmlDocument>
 - <xref:System.Xml.XPath.XPathDocument>

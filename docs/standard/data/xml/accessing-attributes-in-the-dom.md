@@ -6,14 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ce2df341-a1a4-4e97-8e1b-cd45b8e3e71e
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 9b456dc407f634e7f40f69bbac9b6d932f1f4420
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: dd3292620cafc4e5d2494b3b5e18e04691910dc4
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350713"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711198"
 ---
 # <a name="accessing-attributes-in-the-dom"></a>Доступ к атрибутам в модели DOM
 
@@ -117,7 +115,7 @@ public class Sample
 
 Этот пример выводит следующие данные:
 
-**Output**
+**Вывод**
 
 Отображает все атрибуты из коллекции.
 
@@ -133,7 +131,7 @@ sale item
 
 **XmlAttributeCollection** является коллекцией, которую можно обходить по имени или индексу. В этом примере мы выбираем из коллекции первый атрибут по индексу (нумерация начинается с нуля) и применяем файл **baseuri.xml** в качестве источника входных данных.
 
-### <a name="input"></a>Ввод
+### <a name="input"></a>Input
 
 ```xml
 <!-- XML fragment -->

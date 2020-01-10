@@ -6,14 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5412c90f-2703-4aa8-a9c4-1b8a35183c37
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4e4847dd6bc05127799cb6d8424a8fdb63fbc0f7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 72e866e43b556d8534024a219d924b1f372ed073
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64590061"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710522"
 ---
 # <a name="ordered-node-retrieval-by-index"></a>Упорядоченное извлечение узлов по индексу
 Модель DOM XML-документа консорциума W3C описывает класс NodeList, который позволяет обрабатывать упорядоченные списки узлов, в отличие от неупорядоченного набора, обрабатываемого с помощью класса **XmlNamedNodeMap**. Класс NodeList в платформе Microsoft .NET Framework называется **XmlNodeList**. Методы и свойства, которые возвращают класс **XmlNodeList**:  
@@ -94,6 +92,6 @@ End While
   
  Дополнительные сведения о доступных методах и свойствах класса **XmlNodeList** см. в описании <xref:System.Xml.XmlNodeList>.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Модель объектов документов XML (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

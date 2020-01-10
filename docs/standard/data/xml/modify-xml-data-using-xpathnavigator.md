@@ -7,14 +7,12 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: 03a7c5a1-b296-4af4-b209-043c958dc0a5
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ba6393d19909d8be762ee38b4c925987528d6304
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 906de1ded4961b7c67d48a010555d139df97cded
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69967357"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710639"
 ---
 # <a name="modify-xml-data-using-xpathnavigator"></a>Изменение XML-данных с помощью класса XPathNavigator
 Класс <xref:System.Xml.XPath.XPathNavigator> предоставляет набор методов для изменения узлов и значений в XML-документе. Для использования этих методов необходимо сделать редактируемым объект <xref:System.Xml.XPath.XPathNavigator>, то есть установить для свойства <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> значение `true`.  
@@ -248,7 +246,7 @@ Console.WriteLine(navigator.OuterXml);
 ## <a name="saving-an-xml-document"></a>Сохранение XML-документа  
  Сохранение изменений, внесенных в объект <xref:System.Xml.XmlDocument> с помощью описанных в данном разделе методов, выполняется с помощью методов класса <xref:System.Xml.XmlDocument>. Дополнительные сведения о сохранении изменений, внесенных в объект <xref:System.Xml.XmlDocument>, см. в руководстве по [созданию и сохранению документов](../../../../docs/standard/data/xml/saving-and-writing-a-document.md).  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - <xref:System.Xml.XmlDocument>
 - <xref:System.Xml.XPath.XPathDocument>

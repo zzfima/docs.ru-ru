@@ -5,14 +5,12 @@ helpviewer_keywords:
 - ETW, application domain monitoring events
 - application domain monitoring events [.NET Framework]
 ms.assetid: d38ff268-a2ee-434e-b504-d570880e0289
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6e1c2a38be6f2c15a118b35925570119b474f096
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 0e453b2bafffd9e07a1bdddd97282c5b97f5483d
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040567"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716213"
 ---
 # <a name="application-domain-resource-monitoring-arm-etw-events"></a>События отслеживания ресурсов домена приложения (трассировка событий Windows)
 
@@ -31,7 +29,7 @@ ms.locfileid: "73040567"
 
 В таблице ниже представлены сведения о событии.
 
-|событие|Код события|Условие вызова|
+|Event|Код события|Условие вызова|
 |-----------|--------------|-----------------|
 |`ThreadCreated`|85|Поток создан для домена приложения.|
 
@@ -56,7 +54,7 @@ ms.locfileid: "73040567"
 
 В таблице ниже представлены сведения о событии.
 
-|событие|Код события|Условие вызова|
+|Event|Код события|Условие вызова|
 |-----------|--------------|-----------------|
 |`AppDomainMemAllocated`|83|В домене приложения выделяются каждые 4 МБ памяти (приблизительно).|
 
@@ -78,7 +76,7 @@ ms.locfileid: "73040567"
 
 В таблице ниже представлены сведения о событии.
 
-|событие|Код события|Условие вызова|
+|Event|Код события|Условие вызова|
 |-----------|--------------|-----------------|
 |`AppDomainMemSurvived`|84|Все сборки мусора закончены.|
 
@@ -102,7 +100,7 @@ ms.locfileid: "73040567"
 
 В таблице ниже представлены сведения о событии.
 
-|событие|Код события|Условие вызова|
+|Event|Код события|Условие вызова|
 |-----------|--------------|-----------------|
 |`ThreadAppDomainEnter`|87|Поток входит в домен приложения.|
 
@@ -125,7 +123,7 @@ ms.locfileid: "73040567"
 
 В таблице ниже представлены сведения о событии.
 
-|событие|Код события|Условие вызова|
+|Event|Код события|Условие вызова|
 |-----------|--------------|-----------------|
 |`ThreadTerminated`|86|Поток завершается.|
 
@@ -137,6 +135,6 @@ ms.locfileid: "73040567"
 |AppDomainID|win:UInt64|Идентификатор домена приложения.|
 |ClrInstanceID|win:UInt16|Уникальный идентификатор экземпляра CLR или CoreCLR.|
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [События трассировки событий Windows в среде CLR](clr-etw-events.md)

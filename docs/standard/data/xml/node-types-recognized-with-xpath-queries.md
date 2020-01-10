@@ -3,14 +3,12 @@ title: Типы узлов, распознаваемые запросами XPat
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 1d33e22d-18e5-43f8-a466-2e3d0a8dd094
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: aa004f0def04c7efe2ba7450050a899760b0bbcd
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: cc1aa668ccf6fc7f210f48a28cf76b364459c784
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64590189"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710548"
 ---
 # <a name="node-types-recognized-with-xpath-queries"></a>Типы узлов, распознаваемые запросами XPath
 Типы узлов, распознаваемые в запросе XPath, отличаются от типов узлов в модели DOM XML-документа.  
@@ -46,7 +44,7 @@ ms.locfileid: "64590189"
   
  См. дополнительные сведения о навигации в руководствах по [навигации по наборам улов](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md) и [улов атрибутов и пространств имен](../../../../docs/standard/data/xml/attribute-and-namespace-node-navigation-using-xpathnavigator.md) с помощью XPathNavigator.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - <xref:System.Xml.XmlDocument>
 - <xref:System.Xml.XPath.XPathDocument>

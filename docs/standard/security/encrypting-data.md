@@ -11,14 +11,12 @@ helpviewer_keywords:
 - cryptography [.NET Framework], asymmetric
 - asymmetric encryption
 ms.assetid: 7ecce51f-db5f-4bd4-9321-cceb6fcb2a77
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d37f7980c3024fa545e5395a4614dcd41a111794
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: b335e0d39c1809b028e2005a472fe77729e9d267
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71353197"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706218"
 ---
 # <a name="encrypting-data"></a>Шифрование данных
 Симметричное и асимметричное шифрования выполняются с использованием различных процессов. Симметричное шифрование выполняется в рамках потоков, поэтому его удобно применять для шифрования больших объемов данных. Асимметричное шифрование выполняется в рамках небольшого числа байтов, поэтому его удобно применять для шифрования только небольших объемов данных.  
@@ -262,7 +260,7 @@ class Class1
 }  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Создание ключей для шифрования и расшифровки](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)
 - [Расшифровка данных](../../../docs/standard/security/decrypting-data.md)

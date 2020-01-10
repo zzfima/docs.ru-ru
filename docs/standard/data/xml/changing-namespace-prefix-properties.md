@@ -6,14 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d5c87cbe-4d69-429f-aad5-3103c2ca2770
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4a6597a3a57cd68c4dd17c4fbae882590f373709
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
-ms.translationtype: HT
+ms.openlocfilehash: e6b811d58ef9d98c51e9a45a46a1965c4fa12b55
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46525708"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711120"
 ---
 # <a name="changing-namespace-prefix-properties"></a>Изменение свойств префикса пространства имен
 Класс **XmlNode** позволяет изменять префикс пространства имен, связанный с данным узлом. Изменение префикса элемента показано в следующем фрагменте кода.  
@@ -66,6 +64,6 @@ Console.WriteLine(doc.InnerXml);
   
  При сохранении дерева в виде строки с помощью метода **doc.InnerXml** был добавлен атрибут `xmlns:a='123'`, чтобы сохранить пространство имен элемента `test`. Он имел значение `'123'` и сохранил `'123'`.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Модель объектов документов XML (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

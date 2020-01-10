@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -l compiler option [Visual Basic]
 - /l compiler option [Visual Basic]
 ms.assetid: 1885f24a-86f5-486c-a064-9fb7e455ccec
-ms.openlocfilehash: ecb7b0448b8ee9c1c1fc1eb9542b693d60a38ffd
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: c15f55f3a3c2b4e404767ddf96e258bc1e9771d7
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74335850"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716755"
 ---
 # <a name="-link-visual-basic"></a>-Link (Visual Basic)
 Дает компилятору указание сделать всю информацию о типах COM из указанных сборок доступной компилируемому проекту.  
@@ -27,17 +27,17 @@ ms.locfileid: "74335850"
 -link:fileList  
 ```
 
-или диспетчер конфигурации служб  
+или  
 
 ```console
 -l:fileList  
 ```  
   
-## <a name="arguments"></a>Аргументы  
+## <a name="arguments"></a>Arguments  
   
 |Термин|Определение|  
 |---|---|  
-|`fileList`|Обязательно. Список всех имен файлов сборки, разделенных запятыми. Если имя файла содержит пробел, заключите его в кавычки.|  
+|`fileList`|Обязательное Список всех имен файлов сборки, разделенных запятыми. Если имя файла содержит пробел, заключите его в кавычки.|  
   
 ## <a name="remarks"></a>Заметки  
  Параметр `-link` позволяет развернуть приложение, содержащее внедренные сведения о типе. После этого приложение может использовать типы из сборки среды выполнения, реализующей информацию о внедренных типах, без ссылки на эту сборку. Если опубликовано несколько версий сборки среды выполнения, приложение, содержащее сведения о внедренных типах, может работать с различными версиями без перекомпиляции. Пример см. в разделе [Пошаговое руководство. Внедрение данных о типах из управляемых сборок](../../../standard/assembly/embed-types-visual-studio.md).  
@@ -86,10 +86,10 @@ ms.locfileid: "74335850"
  Следующая командная строка компилирует исходный файл `OfficeApp.vb` и ссылочные сборки из `COMData1.dll` и `COMData2.dll` для создания `OfficeApp.exe`.  
   
 ```console  
-vbc -link:COMData1.dll,COMData2.dll /out:OfficeApp.exe OfficeApp.vb  
+vbc -link:COMData1.dll,COMData2.dll -out:OfficeApp.exe OfficeApp.vb  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Компилятор Visual Basic с интерфейсом командной строки](index.md)
 - [Пошаговое руководство. Внедрение данных о типах из управляемых сборок](../../../standard/assembly/embed-types-visual-studio.md)

@@ -3,13 +3,12 @@ title: Уязвимость расшифровки CBC
 description: Узнайте, как обнаруживать и устранять временные уязвимости с помощью симметричной расшифровки в режиме Cipher-Block-chaining (CBC) с использованием заполнения.
 ms.date: 06/12/2018
 author: blowdart
-ms.author: mairaw
-ms.openlocfilehash: 1d570cf3da197e7af5c1a1ab4e4df0d21f2cb2d7
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
-ms.translationtype: HT
+ms.openlocfilehash: 87f8e3c53e4d06f6a4edc7670891ac83ec8d65ab
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75347234"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705851"
 ---
 # <a name="timing-vulnerabilities-with-cbc-mode-symmetric-decryption-using-padding"></a>Уязвимости в учете времени при симметричной расшифровке в режиме CBC с использованием заполнения
 

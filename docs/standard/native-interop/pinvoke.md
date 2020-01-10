@@ -1,15 +1,13 @@
 ---
 title: Вызов неуправляемого кода (P/Invoke)
 description: Сведения о вызове собственных функций с помощью P/Invoke в .NET.
-author: jkoritzinsky
-ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: cda738a173cbe61cf49f79ceef78c533a5a879d9
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
-ms.translationtype: HT
+ms.openlocfilehash: fa8b43edfba50fbc620f257c4e7caf1673f83235
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70106789"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706309"
 ---
 # <a name="platform-invoke-pinvoke"></a>Вызов неуправляемого кода (P/Invoke)
 

@@ -5,14 +5,12 @@ helpviewer_keywords:
 - JIT tracing events [.NET Framework]
 - ETW, JIT tracing events (CLR)
 ms.assetid: 926adde2-c123-452e-bf4f-4b977bf06ffb
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4daa0fc0d689815e3a2c65df09c6c046d06a25c4
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 37bfd09516589f3422ee005233e576b110ef1288
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975501"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716006"
 ---
 # <a name="jit-tracing-etw-events"></a>События трассировки JIT-компилятора (трассировка событий Windows)
 Эти события собирают сведения, относящиеся к успешному или неудачному встраиванию кода JIT и вызовам с префиксом tail в JIT.
@@ -28,7 +26,7 @@ ms.locfileid: "73975501"
   
  В таблице ниже представлены сведения о событии.  
   
-|событие|Код события|Условие вызова|  
+|Event|Код события|Условие вызова|  
 |-----------|--------------|-----------------|  
 |`MethodJitInliningFailed`|186|Встраивание кода JIT не удалось.|  
   
@@ -58,7 +56,7 @@ ms.locfileid: "73975501"
   
  В таблице ниже представлены сведения о событии.  
   
-|событие|Код события|Условие вызова|  
+|Event|Код события|Условие вызова|  
 |-----------|--------------|-----------------|  
 |`MethodJitInliningSucceeded`|185|Встраивание метода выполнено успешно.|  
   
@@ -88,7 +86,7 @@ ms.locfileid: "73975501"
   
  В таблице ниже представлены сведения о событии.  
   
-|событие|Код события|Условие вызова|  
+|Event|Код события|Условие вызова|  
 |-----------|--------------|-----------------|  
 |`MethodJitTailCallFailed`|189|Сбой вызова метода с префиксом tail.|  
   
@@ -118,7 +116,7 @@ ms.locfileid: "73975501"
   
  В таблице ниже представлены сведения о событии.  
   
-|событие|Код события|Условие вызова|  
+|Event|Код события|Условие вызова|  
 |-----------|--------------|-----------------|  
 |`MethodJitTailCallSucceeded`|188|Успешное завершение вызова метода с префиксом tail.|  
   
@@ -139,6 +137,6 @@ ms.locfileid: "73975501"
 |TailCallType|win:UnicodeString|Тип вызова с префиксом tail.|  
 |ClrInstanceID|win:UInt16|Уникальный идентификатор экземпляра CLR или CoreCLR.|  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [События трассировки событий Windows в среде CLR](clr-etw-events.md)

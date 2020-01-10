@@ -3,14 +3,12 @@ title: Параметры обработки XML
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 33ced8ee-1745-4e71-8dee-ebe70ec067c7
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 3fc7def48bff71935fce7c6ed914ad20c66e5182
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 1707ed10d944a518872132dded40751026a4c8e7
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73425178"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709924"
 ---
 # <a name="xml-processing-options"></a>Параметры обработки XML
 В следующих таблицах приведен список технологий Microsoft, с помощью которых можно обрабатывать XML-данные.  
@@ -33,7 +31,7 @@ ms.locfileid: "73425178"
 |[XmlLite](https://docs.microsoft.com/previous-versions/windows/desktop/ms752872(v=vs.85))|— Быстрое и безопасное средство последовательного синтаксического анализа XML, которое позволяет создавать высокопроизводительные XML-приложения.<br />— Работает с любым языком, который поддерживает динамически загружаемые библиотеки (DLL); мы рекомендуем использовать C++.|  
 |[MSXML](https://docs.microsoft.com/previous-versions/windows/desktop/ms763742(v=vs.85))|— Основанная на модели COM технология обработки XML, включенная в операционную систему Windows.<br />— Обеспечивает собственную реализацию DOM с поддержкой XPath и XSLT.<br />— Содержит основанное на событиях средство синтаксического анализа SAX2.|  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Обработка XML-данных с использованием модели DOM](../../../../docs/standard/data/xml/process-xml-data-using-the-dom-model.md)
 - [Обработка XML-данных с использованием модели данных XPath](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)

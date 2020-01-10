@@ -5,14 +5,12 @@ helpviewer_keywords:
 - .NET Framework ETW events
 - ETW events in the .NET Framework
 ms.assetid: d186276f-6afb-4dfd-bf3c-4251edc2c299
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f810b4424574f016f13dc5fa46f785d866dda53e
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 93add45f0684b69a66f643499da61f9054ec7b37
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71046572"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716078"
 ---
 # <a name="etw-events-in-the-net-framework"></a>ETW Events in the .NET Framework
 Трассировка событий Windows (ETW) — это высокоэффективная масштабируемая система трассировки с минимальными затратами ресурсов, реализуемая в операционных системах Windows. Она дополняет механизмы профилирования и отладки, предоставляемые платформой .NET Framework, и может применяться для устранения неполадок в самых разных сценариях.  
@@ -26,7 +24,7 @@ ms.locfileid: "71046572"
  [События в среде CLR (трассировка событий Windows)](etw-events-in-the-common-language-runtime.md)  
  Описывает, как события трассировки событий Windows в среде CLR дополняют механизмы профилирования и отладки, предоставляемые общеязыковой средой выполнения.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [События трассировки событий Windows в среде CLR](clr-etw-events.md)
 - [Библиотека параллельных задач (TPL)](../../standard/parallel-programming/task-parallel-library-tpl.md)

@@ -4,14 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - tasks, ETW events
 ms.assetid: 87a9cff5-d86f-4e44-a06e-d12764d0dce2
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f1926d2699357163dbb8685b7ea875e369ca29b7
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 93fcd3215bdcbb30960f19e23ae15f32bb9ddd84
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71046659"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716100"
 ---
 # <a name="etw-events-in-task-parallel-library-and-plinq"></a>События трассировки событий Windows в библиотеке параллельных задач и PLINQ
 
@@ -29,9 +27,9 @@ EVENT_DESCRIPTOR.Task = 1
 
 EVENT_DESCRIPTOR.Id = 1
 
-#### <a name="user-data"></a>Данные пользователя
+#### <a name="user-data"></a>Пользовательские данные
 
-|**Name**|**Type**|**Описание**|
+|**Имя**|**Type**|**Описание**|
 |--------------|--------------|---------------------|
 |OriginatingTaskSchedulerID|<xref:System.Int32?displayProperty=nameWithType>|Идентификатор объекта TaskScheduler, который начал цикл.|
 |OriginatingTaskID|<xref:System.Int32?displayProperty=nameWithType>|Идентификатор задачи, которая начала цикл.|
@@ -45,9 +43,9 @@ EVENT_DESCRIPTOR.Id = 1
 
  EVENT_DESCRIPTOR.Id = 2
 
-#### <a name="user-data"></a>Данные пользователя
+#### <a name="user-data"></a>Пользовательские данные
 
-|**Name**|**Type**|**Описание**|
+|**Имя**|**Type**|**Описание**|
 |--------------|--------------|---------------------|
 |OriginatingTaskSchedulerID|<xref:System.Int32?displayProperty=nameWithType>|Идентификатор объекта TaskScheduler, который начал цикл.|
 |OriginatingTaskID|<xref:System.Int32?displayProperty=nameWithType>|Идентификатор задачи, которая начала цикл.|
@@ -59,9 +57,9 @@ EVENT_DESCRIPTOR.Id = 1
 
  EVENT_DESCRIPTOR.Id = 3
 
-#### <a name="user-data"></a>Данные пользователя
+#### <a name="user-data"></a>Пользовательские данные
 
-|**Name**|**Type**|**Описание**|
+|**Имя**|**Type**|**Описание**|
 |--------------|--------------|---------------------|
 |OriginatingTaskSchedulerID|<xref:System.Int32?displayProperty=nameWithType>|Идентификатор объекта TaskScheduler, который начал цикл.|
 |OriginatingTaskID|<xref:System.Int32?displayProperty=nameWithType>|Идентификатор задачи, которая начала цикл.|
@@ -75,9 +73,9 @@ EVENT_DESCRIPTOR.Id = 1
 
  EVENT_DESCRIPTOR.Id = 4
 
-#### <a name="user-data"></a>Данные пользователя
+#### <a name="user-data"></a>Пользовательские данные
 
-|**Name**|**Type**|**Описание**|
+|**Имя**|**Type**|**Описание**|
 |--------------|--------------|---------------------|
 |OriginatingTaskSchedulerID|<xref:System.Int32?displayProperty=nameWithType>|Идентификатор объекта TaskScheduler, который начал цикл.|
 |OriginatingTaskID|<xref:System.Int32?displayProperty=nameWithType>|Идентификатор задачи, которая начала цикл.|
@@ -93,9 +91,9 @@ EVENT_DESCRIPTOR.Id = 1
 
  EVENT_DESCRIPTOR.Id = 1
 
-#### <a name="user-data"></a>Данные пользователя
+#### <a name="user-data"></a>Пользовательские данные
 
-|**Name**|**Type**|**Описание**|
+|**Имя**|**Type**|**Описание**|
 |--------------|--------------|---------------------|
 |OriginatingTaskSchedulerID|<xref:System.Int32?displayProperty=nameWithType>|Идентификатор объекта TaskScheduler, который начал цикл.|
 |OriginatingTaskID|<xref:System.Int32?displayProperty=nameWithType>|Идентификатор задачи, которая начала цикл.|
@@ -106,15 +104,15 @@ EVENT_DESCRIPTOR.Id = 1
 
  EVENT_DESCRIPTOR.Id = 2
 
-#### <a name="user-data"></a>Данные пользователя
+#### <a name="user-data"></a>Пользовательские данные
 
-|**Name**|**Type**|**Описание**|
+|**Имя**|**Type**|**Описание**|
 |--------------|--------------|---------------------|
 |OriginatingTaskSchedulerID|<xref:System.Int32?displayProperty=nameWithType>|Идентификатор объекта TaskScheduler, который начал цикл.|
 |OriginatingTaskID|<xref:System.Int32?displayProperty=nameWithType>|Идентификатор задачи, которая начала цикл.|
 |QueryID|<xref:System.Int32?displayProperty=nameWithType>|Уникальный идентификатор запроса.|
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [События трассировки событий Windows в .NET Framework](etw-events.md)
 - [Библиотека параллельных задач (TPL)](../../standard/parallel-programming/task-parallel-library-tpl.md)

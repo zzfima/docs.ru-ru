@@ -6,14 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 60e2541b-0cea-4b2e-a4fa-85f4c50f1bef
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d3d1658b47d2cda344e2ec1fe7b48c929005563b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 01e11ed62b0855b9027dfd7999f8b787c075028a
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69912052"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709677"
 ---
 # <a name="xslt-stylesheet-scripting-using-msxslscript"></a>Создание скриптов таблиц стилей XSLT с помощью \<msxsl:script>
 Класс <xref:System.Xml.Xsl.XslTransform> поддерживает внедрение скриптов с помощью элемента `script`.  
@@ -31,7 +29,7 @@ ms.locfileid: "69912052"
   
  , где `msxsl` является префиксом, привязанным к пространству имен `urn:schemas-microsoft-com:xslt`.  
   
- Атрибут `language` не является обязательным, но если он указан, его значение должно быть одним из следующих: C#, VB, JScript, JavaScript, VisualBasic или CSharp. Если не указан, значение по умолчанию - JScript. Атрибут `language-name` нечувствителен к регистру, так что значения «JavaScript» и «javascript» не различаются.  
+ Атрибут `language` не является обязательным, но если он указан, его значение должно быть одним из следующих: `C#`, `VB`, `JScript`, `JavaScript`, `VisualBasic`или `CSharp`. Если не указан, значение по умолчанию - JScript. Атрибут `language-name` нечувствителен к регистру, так что значения «JavaScript» и «javascript» не различаются.  
   
  Атрибут `implements-prefix` обязателен. Этот атрибут используется для объявления пространства имен и связывания его с блоком скрипта. Значением этого атрибута является префикс, соответствующий пространству имен. Пространство имен может быть определено где-то в таблице стилей.  
   
@@ -49,9 +47,9 @@ ms.locfileid: "69912052"
   
  Функции можно объявлять внутри элемента `msxsl:script`. В следующей таблице показаны пространства имен, поддерживаемые по умолчанию. Можно использовать классы вне перечисленных пространств имен. Однако эти классы должны указываться полными именами.  
   
-|Пространства имен по умолчанию|ОПИСАНИЕ|  
+|Пространства имен по умолчанию|Описание|  
 |------------------------|-----------------|  
-|Система|Системный класс.|  
+|System|Системный класс.|  
 |System.Collection|Классы коллекций.|  
 |System.Text|Классы текста.|  
 |System.Text.RegularExpressions|Классы регулярных выражений.|  
@@ -66,13 +64,13 @@ ms.locfileid: "69912052"
   
 |Тип|Эквивалентный класс (или тип) .NET Framework|Тип XPath или тип XSLT|  
 |----------|----------------------------------------------|-----------------------------|  
-|String|System.String|XPath|  
-|Boolean|System.Boolean|XPath|  
-|Число|System.Double|XPath|  
+|Строка|System.String|XPath|  
+|Логическое значение .|System.Boolean|XPath|  
+|Числовой|System.Double|XPath|  
 |Фрагмент дерева результатов|System.Xml.XPath.XPathNavigator|XSLT|  
 |Набор узлов|System.Xml.XPath.XPathNodeIterator|XPath|  
   
- Если функция скрипта использует один из следующих числовых типов: Int16, UInt16, Int32, UInt32, Int64, UInt64, Single или Decimal, — они приводятся к типу Double, который преобразуется в тип number W3C XPath. Все другие типы принудительно приводятся к типу string с помощью метода `ToString`.  
+ Если функция скрипта использует один из числовых типов (Int16, UInt16, Int32, UInt32, Int64, UInt64, Single или Decimal), то он приводится к типу Double, который сопоставлен с числовым типом W3C XPath. Все другие типы принудительно приводятся к типу string с помощью метода `ToString`.  
   
  Если функция скрипта использует тип, отличный от перечисленных выше, или функция не компилируется при загрузке таблицы стилей в объект <xref:System.Xml.Xsl.XslTransform>, возникает исключение.  
   
@@ -167,7 +165,7 @@ public class Sample
 }  
 ```  
   
-## <a name="input"></a>Входные данные  
+## <a name="input"></a>Input  
  number.xml  
   
 ```xml  
@@ -231,6 +229,6 @@ public class Sample
 </circles>    
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Реализация классом XslTransform XSLT-процессора](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)

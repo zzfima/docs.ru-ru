@@ -1,21 +1,19 @@
 ---
 title: Маршалинг типов — .NET
 description: Из этой статьи вы узнаете, как платформа .NET маршалирует ваши типы данных в собственное представление.
-author: jkoritzinsky
-ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: bc44a2c63dfa3fde3e3c4197e5d1fe79857ea717
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
-ms.translationtype: HT
+ms.openlocfilehash: 91b8f3d6cb53fd7a0adea7ea9669e7459e81445f
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929068"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706270"
 ---
 # <a name="type-marshaling"></a>Маршалинг типов
 
 **Маршалинг** — это процесс преобразования типов при переходе от управляемого кода к машинному.
 
-Необходимость в маршалинге вызвана различием типов в управляемом и неуправляемом коде. Например, в управляемом коде имеется `String`, а в неуправляемом строки могут иметь различный формат: Юникод, отличный от Юникода, с конечным символом NULL, ASCII и т. д. По умолчанию подсистема P/Invoke пытается выбрать правильное решение в зависимости от реакции на событие по умолчанию, описанной в этой статье. Однако в ситуациях, когда требуется дополнительный контроль, можно применить атрибут [MarshalAs](xref:System.Runtime.InteropServices.MarshalAsAttribute), чтобы указать ожидаемый тип на стороне неуправляемого кода. Например, если строку нужно передать в виде строки ANSI с конечным символом NULL, это можно сделать следующим образом:
+Необходимость в маршалинге вызвана различием типов в управляемом и неуправляемом коде. Например, в управляемом коде имеется `String`, в то время как в неуправляемых строках может использоваться Юникод ("Wide"), не в Юникоде, с завершающим нулем, ASCII и т. д. По умолчанию подсистема P/Invoke пытается выполнить нужное действие в зависимости от поведения по умолчанию, описанного в этой статье. Однако в ситуациях, когда требуется дополнительный контроль, можно применить атрибут [MarshalAs](xref:System.Runtime.InteropServices.MarshalAsAttribute), чтобы указать ожидаемый тип на стороне неуправляемого кода. Например, если строку нужно передать в виде строки ANSI с конечным символом NULL, это можно сделать следующим образом:
 
 ```csharp
 [DllImport("somenativelibrary.dll")]
@@ -64,9 +62,9 @@ static extern int MethodA([MarshalAs(UnmanagedType.LPStr)] string parameter);
 |-----------|-------------------------|---------------------|
 | `object`  | `VARIANT`               | `IUnknown*`         |
 | `System.Array` | Интерфейс COM | Нельзя использовать без атрибута `[MarshalAs]` |
-| `System.ArgIterator` | `va_list` | Нельзя использовать |
-| `System.Collections.IEnumerator` | `IEnumVARIANT*` | Нельзя использовать |
-| `System.Collections.IEnumerable` | `IDispatch*` | Нельзя использовать |
+| `System.ArgIterator` | `va_list` | Запрещено |
+| `System.Collections.IEnumerator` | `IEnumVARIANT*` | Запрещено |
+| `System.Collections.IEnumerable` | `IDispatch*` | Запрещено |
 | `System.DateTimeOffset` | `int64_t` — число тактов начиная с полуночи 1 января 1601 года. || `int64_t` — число тактов начиная с полуночи 1 января 1601 года. |
 
 Некоторые типы можно маршалировать только как параметры и нельзя — как поля. Эти типы перечислены в следующей таблице.
@@ -92,7 +90,7 @@ static extern int MethodA([MarshalAs(UnmanagedType.LPStr)] string parameter);
 | Тип делегатов | `_Delegate*` в .NET Framework. Не разрешены в .NET Core. |
 | `System.Drawing.Color` | `OLECOLOR`        |
 | Массив .NET | `SAFEARRAY`                   |
-| `string[]` | `SAFEARRAY` `BSTR`        |
+| `string[]` | `SAFEARRAY``BSTR`        |
 
 ## <a name="marshaling-classes-and-structs"></a>Маршалинг классов и структур
 

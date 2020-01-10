@@ -3,17 +3,15 @@ title: Изменение узлов, содержимого и значений
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 761773e0-db72-4986-b9f5-a522213d8397
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 976c34d72f9fcc89193658e50727a0ad365f2dd8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 4a53ba4fe16a3653b1be380da49e6b75cb347a28
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647886"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710678"
 ---
 # <a name="modifying-nodes-content-and-values-in-an-xml-document"></a>Изменение узлов, содержимого и значений в XML-документе
-Существует множество способов изменения узлов и содержимого в документе. Можно выполнить следующие действия.  
+Существует множество способов изменения узлов и содержимого в документе. Вы можете выполнить следующие действия.  
   
 - изменять значение узлов с помощью свойства <xref:System.Xml.XmlNode.Value%2A>;  
   
@@ -33,7 +31,7 @@ ms.locfileid: "64647886"
 |CDATASection.|Содержимое CDATASection.|  
 |Комментарий|Содержимое комментария.|  
 |ProcessingInstruction;|Содержимое, за исключением цели.|  
-|Text|Содержимое текстового узла.|  
+|Текст|Содержимое текста.|  
 |XmlDeclaration|Содержимое декларации, за исключением разметки `<?xml` и `?>`.|  
 |Whitespace|Значение символа пробела. В качестве значения можно задать один из четырех различаемых в XML пробельных символов: пробел, табуляция, CR или LF.|  
 |SignificantWhitespace|Значение значащих пробелов. В качестве значения можно задать один из четырех различаемых в XML пробельных символов: пробел, табуляция, CR или LF.|  
@@ -46,6 +44,6 @@ ms.locfileid: "64647886"
   
  Допустимо добавлять дочерний узел, доступный только для чтения, в узел, поддерживающий изменение, или удалять из него. Однако при попытке изменить сам узел, доступный только для чтения, вызывается исключение <xref:System.InvalidOperationException>. Примером может служить изменение потомков узла <xref:System.Xml.XmlEntityReference>. Потомки доступны только для чтения, и их нельзя изменить. Любая попытка изменить вызывает исключение <xref:System.InvalidOperationException>.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Модель объектов документов XML (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

@@ -6,14 +6,12 @@ helpviewer_keywords:
 - ETW, common language runtime
 - ETW, CLR events
 ms.assetid: ef2b31c3-7426-43e7-9924-92339b96556d
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 951941af2568e72fe093860801bd2595b3037e41
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 3763e93ff3a14819f59102a01cf3285e85afd12d
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428163"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716201"
 ---
 # <a name="clr-etw-events"></a>События трассировки событий Windows в среде CLR
 В этом разделе описываются события трассировки событий Windows (ETW). С каждым событием связаны ключевое слово и уровень, которые описываются в разделе [Ключевые слова и уровни среды CLR (трассировка событий Windows)](clr-etw-keywords-and-levels.md). В среде CLR предусмотрены два поставщика событий:  
@@ -63,7 +61,7 @@ ms.locfileid: "74428163"
   
 ## <a name="see-also"></a>См. также:
 
-- [Улучшение отладки и настройки производительности с помощью ETW](https://docs.microsoft.com/archive/msdn-magazine/2007/april/event-tracing-improve-debugging-and-performance-tuning-with-etw)
+- [Усовершенствованные отладка и настройка производительности с помощью приложения ETW](https://docs.microsoft.com/archive/msdn-magazine/2007/april/event-tracing-improve-debugging-and-performance-tuning-with-etw)
 - [Блог о производительности Windows](https://blogs.msdn.microsoft.com/pigscanfly/tag/xperf/)
 - [Контроль ведения журнала .NET Framework](controlling-logging.md)
 - [Поставщики трассировки событий Windows в среде CLR](clr-etw-providers.md)

@@ -7,14 +7,12 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: f3d97d53-614d-4a04-a174-87965b7405f6
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 0b4727ead8abb9b3618f8b9dda8f7a9eb4b2321f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: HT
+ms.openlocfilehash: 5c2d997d9006a3f1eb971eac20982b9dd5677ebf
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54742478"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710756"
 ---
 # <a name="inferring-schemas-from-xml-documents"></a>Выведение схем из XML-документов
 В этом разделе описывается, как использовать класс <xref:System.Xml.Schema.XmlSchemaInference> для выведения схемы XSD из структуры XML-документа.  
@@ -82,7 +80,7 @@ ms.locfileid: "54742478"
 ## <a name="schemas-that-cannot-be-refined"></a>Неуточняемые схемы  
  В схемах W3C XML существуют такие конструкции, которые процесс <xref:System.Xml.Schema.XmlSchemaInference> для схемы XSD не может обработать, если задан тип для уточнения, и которые приводят к созданию исключения. Например, сложный тип, на верхнем уровне которого находится компоновщик, отличный от sequence. В модели SOM это соответствует типу <xref:System.Xml.Schema.XmlSchemaComplexType>, свойством <xref:System.Xml.Schema.XmlSchemaComplexType.Particle%2A> которого не является экземпляр <xref:System.Xml.Schema.XmlSchemaSequence>.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - <xref:System.Xml.Schema.XmlSchemaInference>
 - [Модель объектов схемы XML (SOM)](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)

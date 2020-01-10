@@ -9,12 +9,12 @@ helpviewer_keywords:
 - reference compiler option [Visual Basic]
 - -r compiler option [Visual Basic]
 ms.assetid: 66bdfced-bbf6-43d1-a554-bc0990315737
-ms.openlocfilehash: 8b57affa05c77d8ed20bfead7de767a8dd994241
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 35e02d1ad4409e754c2466f7d0ae7e68214772e6
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74348587"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716703"
 ---
 # <a name="-reference-visual-basic"></a>-Reference (Visual Basic)
 Заставляет компилятор предоставлять сведения о типах в указанных сборках, доступных для компилируемого в данный момент проекта.  
@@ -31,13 +31,13 @@ ms.locfileid: "74348587"
 -r:fileList  
 ```  
   
-## <a name="arguments"></a>Аргументы  
+## <a name="arguments"></a>Arguments  
   
 |Термин|Определение|  
 |---|---|  
-|`fileList`|Обязательно. Список всех имен файлов сборки, разделенных запятыми. Если имя файла содержит пробел, заключите его в кавычки.|  
+|`fileList`|Обязательное Список всех имен файлов сборки, разделенных запятыми. Если имя файла содержит пробел, заключите его в кавычки.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Заметки  
  Импортируемые файлы должны содержать метаданные сборки. За пределами сборки видны только открытые типы. Параметр [-addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md) импортирует метаданные из модуля.  
   
  При ссылке на сборку (сборку A), которая сама ссылается на другую сборку (сборка B), необходимо ссылаться на сборку б, если:  
@@ -52,7 +52,7 @@ ms.locfileid: "74348587"
   
  Файл ответов Vbc. rsp, который ссылается на часто используемые .NET Framework сборки, используется по умолчанию. Используйте `-noconfig`, если не нужно, чтобы компилятор использовал Vbc. rsp.  
   
- Краткой формой `-reference` является `/r`.  
+ Краткой формой `-reference` является `-r`.  
   
 ## <a name="example"></a>Пример  
  Следующая команда компилирует исходный файл `Input.vb` и ссылочные сборки из `Metad1.dll` и `Metad2.dll` для создания `Out.exe`.  
@@ -61,7 +61,7 @@ ms.locfileid: "74348587"
 vbc -reference:metad1.dll,metad2.dll -out:out.exe input.vb  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Компилятор Visual Basic с интерфейсом командной строки](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)

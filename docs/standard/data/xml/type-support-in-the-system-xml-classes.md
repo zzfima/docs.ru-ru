@@ -3,14 +3,12 @@ title: Поддержка типов в классах System.Xml
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 63570538-06e3-4401-ad4d-ac50be90c7bf
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 954ff12ae1ac8b4d601c35fcd76ea35b2bb3acbf
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: cec47d40a0353639bc17b880265f7c15f2f53ac4
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69939442"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710106"
 ---
 # <a name="type-support-in-the-systemxml-classes"></a>Поддержка типов в классах System.Xml
 На платформе .NET Framework версии 2.0 основные классы XML были улучшены, чтобы включить функции поддержки типов. Классы <xref:System.Xml.XmlReader>, <xref:System.Xml.XmlWriter> и <xref:System.Xml.XPath.XPathNavigator> включают возможности поддержки типов, включая возможность преобразования между собой типов схемы XML и типов CLR.  

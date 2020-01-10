@@ -6,14 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fe60aaa0-ae43-4b1c-9be1-426af66ba757
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e76e0f35dd95c34d3a6fc81c2f6f3504591387cf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: cc412042e69a43bbecec9dbe68618e2d307ca793
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59306319"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709703"
 ---
 # <a name="xslt-parameters"></a>Параметры XSLT
 Параметры XSLT добавляются в <xref:System.Xml.Xsl.XsltArgumentList> с помощью метода <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A>. В это время с объектом параметра связываются полное имя и URI-код пространства имен.  
@@ -50,7 +48,7 @@ ms.locfileid: "59306319"
  [!code-csharp[XSLT_Param#1](../../../../samples/snippets/csharp/VS_Snippets_Data/XSLT_Param/CS/xsltparam.cs#1)]
  [!code-vb[XSLT_Param#1](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XSLT_Param/VB/xsltparam.vb#1)]  
   
-### <a name="input"></a>Входные данные  
+### <a name="input"></a>Input  
   
 ##### <a name="orderxml"></a>order.xml  
  [!code-xml[XSLT_Param#2](../../../../samples/snippets/xml/VS_Snippets_Data/XSLT_Param/XML/order.xml#2)]  
@@ -68,6 +66,6 @@ ms.locfileid: "59306319"
 </order>  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Преобразования XSLT](../../../../docs/standard/data/xml/xslt-transformations.md)

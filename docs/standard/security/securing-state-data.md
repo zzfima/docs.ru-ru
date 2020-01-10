@@ -8,14 +8,12 @@ helpviewer_keywords:
 - secure coding, state data
 - state data security
 ms.assetid: 12671309-2877-43fe-a3df-6863507e712d
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 85a12fb52efe32083d21b9aad50f2d9c1d6f0785
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c30bd2fe9e1ed371be2db60739d3b329fea788c7
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64602508"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705903"
 ---
 # <a name="securing-state-data"></a>Обеспечение безопасности данных
 Приложения, работающие с конфиденциальными данными или принимающие любые решения по организации безопасности, должны сохранять эти данные под своим непосредственным управлением и не должны позволять потенциально вредоносному коду напрямую получать доступ к данным. Лучшим способом защиты данных в памяти является объявление этих данных как закрытых или внутренних переменных (с областью, ограниченной той же сборкой). Однако не следует забывать, что даже к этим данным применяются права доступа.  
@@ -28,6 +26,6 @@ ms.locfileid: "64602508"
   
  Убедитесь, что ни один из ваших собственных методов или свойств не предоставляет непреднамеренно эти значения.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Правила написания безопасного кода](../../../docs/standard/security/secure-coding-guidelines.md)

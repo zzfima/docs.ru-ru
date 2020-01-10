@@ -1,19 +1,17 @@
 ---
 title: Как сериализовать и десериализовать JSON с C# помощью-.NET
-author: tdykstra
-ms.author: tdykstra
 ms.date: 09/16/2019
 helpviewer_keywords:
 - JSON serialization
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 3d3dc0011562e25854938aff857f2832a5978b49
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: a9c690e736a08c729a4099d5e7a519ed17ec282c
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74283336"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705799"
 ---
 # <a name="how-to-serialize-and-deserialize-json-in-net"></a>Как сериализовать и десериализовать JSON в .NET
 
@@ -184,7 +182,7 @@ using System.Text.Json.Serialization;
 
 ## <a name="customize-json-names-and-values"></a>Настройка имен и значений JSON
 
-По умолчанию имена и ключи словарей не изменяются в выходных данных JSON, включая регистр. Значения перечисления представлены в виде чисел. В этом разделе объясняется, как выполнять следующие задачи:
+По умолчанию имена и ключи словарей не изменяются в выходных данных JSON, включая регистр. Значения перечисления представлены в виде чисел. В этом разделе объясняется, как выполнить такие задачи:
 
 * [Настройка отдельных имен свойств](#customize-individual-property-names)
 * [Преобразовать все имена свойств в неоднородный регистр](#use-camel-case-for-all-json-property-names)
@@ -377,9 +375,9 @@ using System.Text.Json.Serialization;
 
 Ниже приведен пример объекта для сериализации и вывода JSON.
 
-|Свойство |значения  |
+|Идентификаторы |{2&gt;Value&lt;2}  |
 |---------|---------|
-| Дата    | 8/1/2019 12:00:00 AM-07:00|
+| дата.    | 8/1/2019 12:00:00 AM-07:00|
 | температурецелсиус| 25 |
 | Сводка| null|
 
@@ -460,7 +458,7 @@ using System.Text.Json.Serialization;
 
 ## <a name="serialize-properties-of-derived-classes"></a>Сериализация свойств производных классов
 
-Сериализация с помощью полиморфизма не поддерживается при указании во время компиляции типа для сериализации. Например, предположим, что у вас есть класс `WeatherForecast` и производный класс `WeatherForecastWithWind`:
+Сериализация с помощью полиморфизма не поддерживается при указании во время компиляции типа для сериализации. Например, предположим, что у вас есть класс `WeatherForecast` и производный класс `WeatherForecastDerived`:
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/WeatherForecast.cs?name=SnippetWF)]
 
@@ -470,7 +468,7 @@ using System.Text.Json.Serialization;
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/SerializePolymorphic.cs?name=SnippetSerializeDefault)]
 
-В этом сценарии свойство `WindSpeed` не сериализуется, даже если объект `weatherForecast` фактически является `WeatherForecastWithWind`ным объектом. Сериализуются только свойства базового класса:
+В этом сценарии свойство `WindSpeed` не сериализуется, даже если объект `weatherForecast` фактически является `WeatherForecastDerived`ным объектом. Сериализуются только свойства базового класса:
 
 ```json
 {
@@ -571,9 +569,9 @@ using System.Text.Json.Serialization;
 
 При десериализации JSON, показанного ранее, в этот тип данных дополнительные данные становятся парами "ключ-значение" свойства `ExtensionData`:
 
-|Свойство |значения  |Примечания  |
+|Идентификаторы |{2&gt;Value&lt;2}  |Примечания  |
 |---------|---------|---------|
-| Дата    | 8/1/2019 12:00:00 AM-07:00||
+| дата.    | 8/1/2019 12:00:00 AM-07:00||
 | температурецелсиус| 0 | Несовпадение с учетом регистра (`temperatureCelsius` в JSON), поэтому свойство не задано. |
 | Сводка | Высокий ||
 | ExtensionData | Температурецелсиус: 25 |Так как регистр не соответствует, это свойство JSON является дополнительным и становится парой "ключ-значение" в словаре.|

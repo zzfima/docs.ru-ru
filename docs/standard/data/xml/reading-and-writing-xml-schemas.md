@@ -7,14 +7,12 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: b5757c4a-ea59-467e-ac62-be2bfe24eb77
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f80157ddf394fdd058793830bfe3052b41ad1e40
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: HT
+ms.openlocfilehash: 889c5f85a2ea3fc08dadefda5509de0fcfab76ec
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54576490"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710418"
 ---
 # <a name="reading-and-writing-xml-schemas"></a>Чтение и запись XML-схем
 API модели SOM можно использовать для чтения и записи схем на языке XSD из файлов или других источников, а также строить схемы XML в памяти с помощью классов в пространстве имен <xref:System.Xml.Schema?displayProperty=nameWithType>, которые сопоставляются со структурами, определенными в рекомендациях W3C по схемам XML.  
@@ -47,7 +45,7 @@ API модели SOM можно использовать для чтения и 
 </xs:schema>  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Общие сведения об модели объектов XML-схемы](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)
 - [Построение XML-схем](../../../../docs/standard/data/xml/building-xml-schemas.md)

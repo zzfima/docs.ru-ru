@@ -6,14 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: dd6dc920-b011-418a-b3db-f1580a7d9251
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e9445f16b6470b1d2066fcae749b1623ec5e11ac
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: 79a3390933256ed862d35c90db0aab2177cdfc41
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74138948"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711016"
 ---
 # <a name="creating-new-attributes-for-elements-in-the-dom"></a>Создание новых атрибутов для элементов в модели DOM
 
@@ -104,7 +102,7 @@ doc.DocumentElement.SetAttributeNode(attr)
 doc.DocumentElement.SetAttributeNode(attr);
 ```
 
-**Выходные данные:**
+**Вывод**
 
 ```xml
 <book genre="novel" ISBN="1-861001-57-5" publisher="WorldWide Publishing">
@@ -126,6 +124,6 @@ doc.DocumentElement.SetAttributeNode(attr);
 
 Значение узла атрибута становится его дочерними узлами. Существует только два типа допустимых дочерних узлов: узлы **xmltext** и узел **XmlEntityReference** . Они являются дочерними узлами в том смысле, что такие методы, как **FirstChild** и **LastChild**, обрабатывают их как дочерние узлы. Это отличие атрибута, имеющего дочерние узлы, становится важным во время удаления атрибута или его дочерних узлов. Дополнительные сведения см. в статье [Удаление атрибутов из узла элемента в модели DOM](removing-attributes-from-an-element-node-in-the-dom.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Модель объектов документов XML (DOM)](xml-document-object-model-dom.md)

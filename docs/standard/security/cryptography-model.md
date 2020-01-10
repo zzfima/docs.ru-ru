@@ -6,14 +6,12 @@ helpviewer_keywords:
 - cryptography [.NET Framework], model
 - encryption [.NET Framework], model
 ms.assetid: 12fecad4-fbab-432a-bade-2f05976a2971
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 42e5c7018f83f3849f46f33e09e09ea1749e7c70
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f0c00e4cc866c537fe26dd1ad466d6cde95bc608
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64753283"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706231"
 ---
 # <a name="net-framework-cryptography-model"></a>Модель криптографии .NET Framework
 
@@ -55,7 +53,7 @@ ms.locfileid: "64753283"
 
 ## <a name="cryptographic-configuration"></a>Криптографическая конфигурация
 
-Криптографическая конфигурация позволяет разрешить определенную реализацию алгоритма до имени алгоритма, что обеспечивает расширяемость криптографических классов .NET Framework. Вы можете добавить свою собственную аппаратную или программную реализацию алгоритма и сопоставить ее с необходимым именем алгоритма. Если алгоритм не задан в файле конфигурации, используются параметры по умолчанию. Дополнительные сведения о криптографической конфигурации см. в разделе [Настройка криптографических классов](../../../docs/framework/configure-apps/configure-cryptography-classes.md).
+Криптографическая конфигурация позволяет разрешить определенную реализацию алгоритма до имени алгоритма, что обеспечивает расширяемость криптографических классов .NET Framework. Вы можете добавить свою собственную аппаратную или программную реализацию алгоритма и сопоставить ее с необходимым именем алгоритма. Если алгоритм не задан в файле конфигурации, используются параметры по умолчанию. Дополнительные сведения о конфигурации криптографии см. в разделе [Настройка криптографических классов](../../../docs/framework/configure-apps/configure-cryptography-classes.md).
 
 ## <a name="choosing-an-algorithm"></a>Выбор алгоритма
 
@@ -73,7 +71,7 @@ ms.locfileid: "64753283"
 
   - <xref:System.Security.Cryptography.HMACSHA512>
 
-- Цифровая подпись:
+- Цифровая подпись.
 
   - <xref:System.Security.Cryptography.ECDsa>
 
@@ -93,6 +91,6 @@ ms.locfileid: "64753283"
 
   - <xref:System.Security.Cryptography.Rfc2898DeriveBytes>
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)

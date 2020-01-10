@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Шифрование XML-элементов с помощью симметричного ключа
+title: Практическое руководство. Шифрование XML-элементов при помощи симметричных ключей
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -16,16 +16,14 @@ helpviewer_keywords:
 - Advanced Encryption Standard algorithm
 - Rijndael
 ms.assetid: d8461a44-aa2c-4ef4-b3e4-ab7cbaaee1b5
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b792fd6eea0a33b0143fafa03641a78947d7e127
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: cda5a32e9a7421cd65b2046b403fde9e05230493
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458070"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706088"
 ---
-# <a name="how-to-encrypt-xml-elements-with-symmetric-keys"></a>Практическое руководство. Шифрование XML-элементов с помощью симметричного ключа
+# <a name="how-to-encrypt-xml-elements-with-symmetric-keys"></a>Практическое руководство. Шифрование XML-элементов при помощи симметричных ключей
 Классы можно использовать в пространстве имен <xref:System.Security.Cryptography.Xml> для шифрования элемента XML-документа.  Шифрование XML-данных позволяет хранить или передавать важные XML-данные, не беспокоясь о том, что они могут быть прочитаны.  Эта процедура шифрует XML-элемент с помощью алгоритма AES (AES), также известного как Rijndael.  
   
  Дополнительные сведения о расшифровке XML-элемента, который был зашифрован с помощью этой процедуры, см. [в разделе как расшифровывать XML-элементы с симметричными ключами](../../../docs/standard/security/how-to-decrypt-xml-elements-with-symmetric-keys.md).  
@@ -101,7 +99,7 @@ ms.locfileid: "73458070"
   
  После завершения работы с криптографическим ключом очистите его из памяти, установив для каждого байта нулевое значение или вызвав метод <xref:System.Security.Cryptography.SymmetricAlgorithm.Clear%2A> управляемого класса шифрования.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - <xref:System.Security.Cryptography.Xml>
 - [Практическое руководство. Расшифровка XML-элементов с помощью симметричных ключей](../../../docs/standard/security/how-to-decrypt-xml-elements-with-symmetric-keys.md)

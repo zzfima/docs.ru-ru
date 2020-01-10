@@ -3,14 +3,12 @@ title: Обработка XML-данных в памяти
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 1bbb4d05-ead7-4bda-8ece-f86d35c57ad4
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 7fee2b5f4950efedc6ee335d5fbd417b8c178fbd
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 038bcfcb9d40ee6087efa3487b6f27f252393f2c
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424407"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710431"
 ---
 # <a name="processing-xml-data-in-memory"></a>Обработка XML-данных в памяти
 Платформа Microsoft .NET Framework включает три модели обработки XML-данных: классы <xref:System.Xml.XmlDocument>, класс <xref:System.Xml.XPath.XPathDocument>, а также [LINQ to XML (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md) и [LINQ to XML (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md).  
@@ -21,7 +19,7 @@ ms.locfileid: "73424407"
   
  [LINQ to XML](../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md) — это модель для обработки XML-данных, представленная на платформе .NET Framework версии 3.5. Это размещаемая в памяти модель, которая использует синтаксис [LINQ](../../../csharp/programming-guide/concepts/linq/index.md). LINQ расширяет синтаксис C# и Visual Basic, обеспечивая новые возможности запросов.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Обработка XML-данных с использованием модели DOM](../../../../docs/standard/data/xml/process-xml-data-using-the-dom-model.md)  
  Описывает использование класса <xref:System.Xml.XmlDocument> и связанных с ним классов для обработки XML-данных.  
   

@@ -6,14 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 81fa0e41-d9c9-46f0-b22b-50da839c77f5
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 0199efb172466305af22c4ade7c47115a5cefd8f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: bfcbf7306e896af54808c49e25f95d0631f5bcc0
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69939617"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710210"
 ---
 # <a name="schema-validation-using-xpathnavigator"></a>Проверка по схеме с помощью XPathNavigator
 С помощью класса <xref:System.Xml.XmlDocument> можно проверять XML-содержимое в объекте <xref:System.Xml.XmlDocument> двумя способами. Первый способ проверки XML- содержимого заключается в использовании проверяющего объекта <xref:System.Xml.XmlReader>, а второй - в вызове метода <xref:System.Xml.XmlDocument.Validate%2A> класса <xref:System.Xml.XmlDocument>. Можно также выполнить проверку XML-содержимого «только для чтения» с помощью класса <xref:System.Xml.XPath.XPathDocument>.  
@@ -359,7 +357,7 @@ class ValidatingReaderExample
   
  Дополнительные сведения о доступных только для чтения и изменяемых объектах <xref:System.Xml.XPath.XPathNavigator> см. в руководстве по [чтению данных XML с помощью XPathDocument и XmlDocument](../../../../docs/standard/data/xml/reading-xml-data-using-xpathdocument-and-xmldocument.md).  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - <xref:System.Xml.XmlDocument>
 - <xref:System.Xml.XPath.XPathDocument>

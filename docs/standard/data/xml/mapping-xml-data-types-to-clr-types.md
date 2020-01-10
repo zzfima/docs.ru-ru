@@ -3,14 +3,12 @@ title: Сопоставление типов XML-данных с типами CL
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: cabdfcad-f359-479b-b71c-8b2fad42ca49
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 48ec3a5b719b05112b257871f64a34f2bc21eeab
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: HT
+ms.openlocfilehash: 536c8dcd03d98879e24ae62d2b8a47e36564aaf6
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364142"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710665"
 ---
 # <a name="mapping-xml-data-types-to-clr-types"></a>Сопоставление типов XML-данных с типами CLR
 
@@ -70,14 +68,14 @@ ms.locfileid: "57364142"
 |`xdt:untypedAtomic`|<xref:System.String>|
 |`xdt:anyAtomicType`|<xref:System.Object>|
 |`xs:anySimpleType`|<xref:System.String>|
-|Узел документа|<xref:System.Xml.XPath.XPathNavigator>|
+|Узел Document|<xref:System.Xml.XPath.XPathNavigator>|
 |Узел элемента|<xref:System.Xml.XPath.XPathNavigator>|
-|Узел атрибута|<xref:System.Xml.XPath.XPathNavigator>|
+|Узел Attribute|<xref:System.Xml.XPath.XPathNavigator>|
 |Узел пространства имен|<xref:System.Xml.XPath.XPathNavigator>|
-|Текстовый узел|<xref:System.Xml.XPath.XPathNavigator>|
+|Узел Text|<xref:System.Xml.XPath.XPathNavigator>|
 |Узел комментария|<xref:System.Xml.XPath.XPathNavigator>|
 |Узел инструкции по обработке|<xref:System.Xml.XPath.XPathNavigator>|
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Поддержка типов в классах System.Xml](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md)

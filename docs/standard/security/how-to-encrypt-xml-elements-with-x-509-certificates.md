@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Шифрование XML-элементов с помощью сертификатов X.509
+title: Практическое руководство. Шифрование XML-элементов при помощи сертификатов X.509
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -14,16 +14,14 @@ helpviewer_keywords:
 - X.509 certificates
 - certificates, X.509 certificates
 ms.assetid: 761f1c66-631c-47af-aa86-ad9c50cfa453
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d569d3c020e7329d987e957f181b34c8cfbf941a
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 7f74e4e46ba760b7a943b2e2728e487ee87ae204
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71353864"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706075"
 ---
-# <a name="how-to-encrypt-xml-elements-with-x509-certificates"></a>Практическое руководство. Шифрование XML-элементов с помощью сертификатов X.509
+# <a name="how-to-encrypt-xml-elements-with-x509-certificates"></a>Практическое руководство. Шифрование XML-элементов при помощи сертификатов X.509
 Классы можно использовать в пространстве имен <xref:System.Security.Cryptography.Xml> для шифрования элемента XML-документа.  Шифрование XML-данных — это стандартный способ обмена зашифрованными XML-данными и их хранения, позволяющий не беспокоиться о том, что эти данные могут быть прочитаны.  Дополнительные сведения о стандарте шифрования XML см. в спецификации консорциум W3C (W3C) для XML-шифрования, расположенного по адресу <https://www.w3.org/TR/xmldsig-core/>.  
   
  При помощи шифрования XML-данных можно заменить любой XML-элемент или документ элементом <`EncryptedData`>, содержащим зашифрованные XML-данные. Элемент <`EncryptedData`> может включать в себя вложенные элементы, содержащие сведения о ключах и процессах, использованных при шифровании.  Шифрование XML-данных позволяет документу содержать несколько зашифрованных элементов, а также позволяет шифровать элемент несколько раз.  В примере кода в данной процедуре показано создание элемента <`EncryptedData`> наряду с несколькими вложенными элементами, которые можно использовать позже при расшифровке.  
@@ -113,7 +111,7 @@ ms.locfileid: "71353864"
   
 - Включите следующие пространства имен: <xref:System.Xml>, <xref:System.Security.Cryptography> и <xref:System.Security.Cryptography.Xml>.  
   
-## <a name="net-framework-security"></a>Безопасность .NET Framework  
+## <a name="net-framework-security"></a>Безопасность платформы .NET Framework  
  Используемый в этом примере сертификат X.509 предназначен исключительно для тестирования.  Приложения должны использовать сертификат X.509, созданный доверенным центром сертификации или сервером сертификатов Microsoft Windows.  
   
 ## <a name="see-also"></a>См. также:

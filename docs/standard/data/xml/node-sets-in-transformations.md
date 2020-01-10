@@ -3,14 +3,12 @@ title: Наборы узлов в преобразованиях
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: ad034f0e-ff8b-4a71-9a4c-528c754263c4
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: fbcd9b93f63d48229c174b0f6518fd0150e98e18
-ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.openlocfilehash: 2828b95f6a4050dd05b38e7ab6ef740ee4eb16b4
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71957034"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710561"
 ---
 # <a name="node-sets-in-transformations"></a>Наборы узлов в преобразованиях
 Наборы узлов - это один из четырех базовых типов данных, возвращаемых из выражений на языке XPath. Набор узлов, представляющий собой неупорядоченную коллекцию узлов без повторов, созданную в порядке документа, может быть назначен переменной в таблице стилей.  
@@ -40,7 +38,7 @@ ms.locfileid: "71957034"
 </xsl:stylesheet>  
 ```  
   
-## <a name="input"></a>Ввод  
+## <a name="input"></a>Input  
   
 ```xml  
 <bookstore>  
@@ -58,7 +56,7 @@ ms.locfileid: "71957034"
 </bookstore>  
 ```  
   
-## <a name="output"></a>Output  
+## <a name="output"></a>Вывод  
   
 ```output  
 ******  
@@ -74,7 +72,7 @@ History of Trenton Vol 3
 ******  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - <xref:System.Xml.XPath.XPathNodeIterator>
 - [XSLT-преобразования с помощью класса XslTransform](../../../../docs/standard/data/xml/xslt-transformations-with-the-xsltransform-class.md)

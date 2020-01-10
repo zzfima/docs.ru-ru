@@ -3,14 +3,12 @@ title: Правила выведения структуры и типов узл
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: d74ce896-717d-4871-8fd9-b070e2f53cb0
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6c68cd98b496143e6b964383f8fa0c3af5d2c87d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 6d66384dea7018bcc3b2dd8fde96f4fa2653f8e8
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69939644"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710249"
 ---
 # <a name="rules-for-inferring-schema-node-types-and-structure"></a>Правила выведения структуры и типов узлов схемы
 В данном разделе описывается, как в процессе вывода схемы различные типы узлов XML-документа преобразуются в структуру языка XSD.  
@@ -135,18 +133,18 @@ ms.locfileid: "69939644"
 ## <a name="other-node-type-inference-rules"></a>Другие правила определения типов узлов  
  В следующей таблице описаны правила вывода для инструкций по обработке, комментариев, ссылок на сущности, данных типа CDATA, типа документа и узлов пространства имен.  
   
-|Тип узла|Перевод|  
+|Тип узла|Преобразование|  
 |---------------|-----------------|  
-|Инструкция по обработке|Не обрабатывается.|  
-|Комментарий|Не обрабатывается.|  
+|Инструкция по обработке|Пропускается.|  
+|Комментарий|Пропускается.|  
 |Ссылка на сущность|Класс <xref:System.Xml.Schema.XmlSchemaInference> не обрабатывает ссылки на сущности. Если XML-документ содержит ссылки на сущности, нужно использовать модуль чтения данных, разворачивающий сущности. Например, можно передать в качестве параметра объект <xref:System.Xml.XmlTextReader>, у которого свойство <xref:System.Xml.XmlTextReader.EntityHandling%2A> имеет значение <xref:System.Xml.EntityHandling.ExpandEntities>. Если обнаружены ссылки на сущности и модуль чтения данных не разворачивает сущности, будет вызвано исключение.|  
 |CDATA|Все разделы `<![CDATA[ … ]]` в XML-документе будут выведены как `xs:string`.|  
-|Тип документа|Не обрабатывается.|  
-|Пространства имен|Не обрабатывается.|  
+|Тип документа|Пропускается.|  
+|Пространства имен|Пропускается.|  
   
  См. дополнительные сведения о [выведении схем из XML-документов](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md).  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - <xref:System.Xml.Schema.XmlSchemaInference>
 - [Модель объектов схемы XML (SOM)](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)
