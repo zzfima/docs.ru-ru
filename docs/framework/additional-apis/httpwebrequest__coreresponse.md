@@ -1,5 +1,5 @@
 ---
-title: Поле HttpWebRequest._CoreResponse
+title: HttpWebRequest. _CoreResponse поле
 ms.date: 01/29/2018
 topic_type:
 - apiref
@@ -10,32 +10,32 @@ api_location:
 api_type:
 - Assembly
 author: stevewhims
-ms.openlocfilehash: 3627c9bf0d72ccec3a0d6d9c7c89b62f83dcd4b4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d16936f6984e73a886f5f48e05b53501ced63c1b
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61706069"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740447"
 ---
-# <a name="httpwebrequestcoreresponse-field"></a><span data-ttu-id="c91f7-102">HttpWebRequest. \_CoreResponse поля</span><span class="sxs-lookup"><span data-stu-id="c91f7-102">HttpWebRequest.\_CoreResponse Field</span></span>
+# <a name="httpwebrequest_coreresponse-field"></a><span data-ttu-id="f6c10-102">HttpWebRequest.\_поле Коререспонсе</span><span class="sxs-lookup"><span data-stu-id="f6c10-102">HttpWebRequest.\_CoreResponse Field</span></span>
 
-<span data-ttu-id="c91f7-103">`HttpWebRequest._CoreResponse` — Это объект (либо [CoreResponseData](coreresponsedata.md) или <xref:System.Exception>) содержащее результат синтаксического анализа ответа HTTP.</span><span class="sxs-lookup"><span data-stu-id="c91f7-103">`HttpWebRequest._CoreResponse` is an object (either a [CoreResponseData](coreresponsedata.md) or an <xref:System.Exception>) containing the result of HTTP response parsing.</span></span>
+<span data-ttu-id="f6c10-103">`HttpWebRequest._CoreResponse` — это объект ( [коререспонседата](coreresponsedata.md) или <xref:System.Exception>), содержащий результат синтаксического анализа ответа HTTP.</span><span class="sxs-lookup"><span data-stu-id="f6c10-103">`HttpWebRequest._CoreResponse` is an object (either a [CoreResponseData](coreresponsedata.md) or an <xref:System.Exception>) containing the result of HTTP response parsing.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="c91f7-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="c91f7-104">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="f6c10-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="f6c10-104">Syntax</span></span>
   
 ```csharp
 private object _CoreResponse
 ```
 
 > [!WARNING]
-> <span data-ttu-id="c91f7-105">Этот API не предназначен для непосредственного использования в коде.</span><span class="sxs-lookup"><span data-stu-id="c91f7-105">This API is not meant to be used directly in your code.</span></span> <span data-ttu-id="c91f7-106">Вместо этого следует использовать <xref:System.Diagnostics.DiagnosticSource> для подключения сетевого кода.</span><span class="sxs-lookup"><span data-stu-id="c91f7-106">Instead, you should use a <xref:System.Diagnostics.DiagnosticSource> to hook networking code.</span></span> <span data-ttu-id="c91f7-107">См. в разделе [руководство пользователя DiagnosticSource](https://github.com/dotnet/corefx/blob/master/src/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md).</span><span class="sxs-lookup"><span data-stu-id="c91f7-107">See [DiagnosticSource User's Guide](https://github.com/dotnet/corefx/blob/master/src/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md).</span></span>
+> <span data-ttu-id="f6c10-105">Этот API не предназначен для непосредственного использования в коде.</span><span class="sxs-lookup"><span data-stu-id="f6c10-105">This API is not meant to be used directly in your code.</span></span> <span data-ttu-id="f6c10-106">Вместо этого следует использовать <xref:System.Diagnostics.DiagnosticSource> для подключения сетевого кода.</span><span class="sxs-lookup"><span data-stu-id="f6c10-106">Instead, you should use a <xref:System.Diagnostics.DiagnosticSource> to hook networking code.</span></span> <span data-ttu-id="f6c10-107">Ознакомьтесь с [руководством пользователя DiagnosticSource](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md).</span><span class="sxs-lookup"><span data-stu-id="f6c10-107">See [DiagnosticSource User's Guide](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md).</span></span>
 > 
-> <span data-ttu-id="c91f7-108">Майкрософт не поддерживает использование этого класса в рабочем приложении ни при каких обстоятельствах.</span><span class="sxs-lookup"><span data-stu-id="c91f7-108">Microsoft does not support the use of this class in a production application under any circumstance.</span></span>
+> <span data-ttu-id="f6c10-108">Корпорация Майкрософт не поддерживает использование этого класса в рабочем приложении при каких-либо обстоятельствах.</span><span class="sxs-lookup"><span data-stu-id="f6c10-108">Microsoft does not support the use of this class in a production application under any circumstance.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="c91f7-109">Требования</span><span class="sxs-lookup"><span data-stu-id="c91f7-109">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="f6c10-109">Требования</span><span class="sxs-lookup"><span data-stu-id="f6c10-109">Requirements</span></span>
 
-<span data-ttu-id="c91f7-110">**Пространство имен:** <xref:System.Net></span><span class="sxs-lookup"><span data-stu-id="c91f7-110">**Namespace:** <xref:System.Net></span></span>
+<span data-ttu-id="f6c10-110">**Пространство имен:** <xref:System.Net></span><span class="sxs-lookup"><span data-stu-id="f6c10-110">**Namespace:** <xref:System.Net></span></span>
 
-<span data-ttu-id="c91f7-111">**Сборка:** Системы (в System.dll)</span><span class="sxs-lookup"><span data-stu-id="c91f7-111">**Assembly:** System (in System.dll)</span></span>
+<span data-ttu-id="f6c10-111">**Сборка:** Система (в System. dll)</span><span class="sxs-lookup"><span data-stu-id="f6c10-111">**Assembly:** System (in System.dll)</span></span>
 
-<span data-ttu-id="c91f7-112">**Версии платформы .NET framework:** Доступно с версии 2.0.</span><span class="sxs-lookup"><span data-stu-id="c91f7-112">**.NET Framework versions:** Available since 2.0.</span></span>
+<span data-ttu-id="f6c10-112">**.NET Framework версии:** Доступно с 2,0.</span><span class="sxs-lookup"><span data-stu-id="f6c10-112">**.NET Framework versions:** Available since 2.0.</span></span>
