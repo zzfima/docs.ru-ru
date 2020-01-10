@@ -10,12 +10,12 @@ helpviewer_keywords:
 - UI (user interface), automation
 - UI Automation
 ms.assetid: 4380cad7-e509-448f-b9a5-6de042605fd4
-ms.openlocfilehash: ceab7db1f9eeb47ec020e220ec702af8181855e2
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 645c44998812453008fc91d5cf4b8463c51bef9a
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74442483"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741725"
 ---
 # <a name="ui-automation-and-screen-scaling"></a>Модель автоматизации пользовательского интерфейса и масштабирование экрана
 > [!NOTE]
@@ -58,14 +58,14 @@ ms.locfileid: "74442483"
   
  Решение состоит из двух частей.  
   
-1. Во-первых, сделайте так, чтобы клиентское приложение было ориентировано на dpi. Для этого вызовите функцию [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] `SetProcessDPIAware` во время запуска. В управляемом коде следующее объявление сделает эту функцию доступной.  
+1. Во-первых, сделайте так, чтобы клиентское приложение было ориентировано на dpi. Для этого вызовите функцию Win32 `SetProcessDPIAware` при запуске. В управляемом коде следующее объявление сделает эту функцию доступной.  
   
      [!code-csharp[Highlighter#101](../../../samples/snippets/csharp/VS_Snippets_Wpf/Highlighter/CSharp/NativeMethods.cs#101)]
      [!code-vb[Highlighter#101](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Highlighter/VisualBasic/NativeMethods.vb#101)]  
   
-     Эта функция выполняет весь процесс, учитывающий dpi, что означает, что все окна, принадлежащие процессу, не масштабируются. Например, в [образце маркера](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/Highlighter)четыре окна, составляющие прямоугольник выделения, расположены в физических координатах, полученных из модели автоматизации пользовательского интерфейса, а не логических координат. Если в примере не учитывается dpi, выделение будет выводиться по логическим координатам на рабочем столе, что привело бы к неправильному размещению в среде, отличной от 96 dpi.  
+     Эта функция выполняет весь процесс, учитывающий dpi, что означает, что все окна, принадлежащие процессу, не масштабируются. Например, в [Highlighter Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/Highlighter) четыре окна, составляющие прямоугольник выделения, расположены в физических координатах, полученных из модели автоматизации пользовательского интерфейса, а не логических координат. Если в примере не учитывается dpi, выделение будет выводиться по логическим координатам на рабочем столе, что привело бы к неправильному размещению в среде, отличной от 96 dpi.  
   
-2. Чтобы получить координаты курсора, вызовите функцию [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] `GetPhysicalCursorPos`. В следующем примере показано, как объявлять и использовать эту функцию.  
+2. Чтобы получить координаты курсора, вызовите функцию Win32 `GetPhysicalCursorPos`. В следующем примере показано, как объявлять и использовать эту функцию.  
   
      [!code-csharp[UIAClient_snip#185](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAClient_snip/CSharp/ClientForm.cs#185)]
      [!code-vb[UIAClient_snip#185](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAClient_snip/VisualBasic/ClientForm.vb#185)]  
@@ -73,7 +73,7 @@ ms.locfileid: "74442483"
 > [!CAUTION]
 > Не используйте <xref:System.Windows.Forms.Cursor.Position%2A?displayProperty=nameWithType>. Поведение этого свойства вне клиентских окон в масштабируемой среде не определено.  
   
- Если приложение выполняет прямое межпроцессное взаимодействие с приложениями, не поддерживающими разрешение dpi, возможно преобразование между логическими и физическими координатами с помощью функций [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] `PhysicalToLogicalPoint` и `LogicalToPhysicalPoint`.  
+ Если приложение выполняет прямое межпроцессное взаимодействие с приложениями, не поддерживающими разрешение dpi, то можно выполнить преобразование между логическими и физическими координатами с помощью функций Win32 `PhysicalToLogicalPoint` и `LogicalToPhysicalPoint`.  
   
 ## <a name="see-also"></a>См. также:
 

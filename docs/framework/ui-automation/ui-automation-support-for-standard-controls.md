@@ -5,18 +5,18 @@ helpviewer_keywords:
 - controls, UI Automation support for
 - UI Automation, support for standard controls
 ms.assetid: 3770ea8a-2655-4add-9c59-fe0610ad5084
-ms.openlocfilehash: 314526c1164f70e6b261df1a6f11ddce2b5fa240
-ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
+ms.openlocfilehash: ed5e4f6ab23fe9ae77c94616a668da8accb46d4b
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74960081"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741699"
 ---
 # <a name="ui-automation-support-for-standard-controls"></a>Поддержка автоматизации пользовательского интерфейса для стандартных элементов управления
 > [!NOTE]
 > Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Последние сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]см. в разделе [API автоматизации Windows. Автоматизация пользовательского интерфейса](/windows/win32/winauto/entry-uiauto-win32).  
   
- В этом разделе содержатся сведения о поддержке [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] стандартных элементов управления в приложениях, разработанных для платформ [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)], [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)]и [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] .  
+ В этом разделе содержатся сведения о поддержке [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] для стандартных элементов управления в приложениях, разработанных для платформ [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)], Win32 и [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)].  
   
 <a name="Windows_Presentation_Foundation_Controls"></a>   
 ## <a name="windows-presentation-foundation-controls"></a>Элементы представления Windows Presentation Foundation  
@@ -24,7 +24,7 @@ ms.locfileid: "74960081"
   
 <a name="Win32_Controls"></a>   
 ## <a name="win32-controls"></a>Элементы управления Win32  
- Большинство элементов управления [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] предоставляется в [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] через поставщики на стороне клиента в UIAutomationClientsideProviders.dll. Эта сборка автоматически регистрируется для использования с приложениями клиента автоматизации пользовательского интерфейса.  
+ Большинство элементов управления Win32 доступны для [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] с помощью поставщиков на стороне клиента в UIAutomationClientsideProviders. dll. Эта сборка автоматически регистрируется для использования с приложениями клиента автоматизации пользовательского интерфейса.  
   
  Полная поддержка предоставляется только для элементов управления из *ComCtrl32. dll*версии 6.  
   
@@ -44,8 +44,8 @@ ms.locfileid: "74960081"
 |Edit|Document|  
 |Edit|Edit|  
 |SysLink|Гиперссылка|  
-|Статические|Текст|  
-|Статические|Изображение|  
+|Static|Текст|  
+|Static|Изображение|  
 |SysIPAddress32|Другой|  
 |SysHeader32|Header/HeaderItem|  
 |SysListView32|DataGrid|  
@@ -63,7 +63,7 @@ ms.locfileid: "74960081"
 |msctls_trackbar32|Slider|  
 |msctls_updown32|Spinner|  
 |msctls_statusbar32|StatusBar|  
-|SysTabControl32|Вкладка|  
+|SysTabControl32|Tab|  
 |SysTabControl32|TabItem|  
 |ToolbarWindow32|ToolBar|  
 |ToolbarWindow32|MenuItem|  
@@ -73,7 +73,7 @@ ms.locfileid: "74960081"
 |ToolbarWindow32|Separator|  
 |tooltips_class32|Подсказка|  
 |#32774|Подсказка|  
-|ReBarWindow32|Toolbar|  
+|ReBarWindow32|ToolBar|  
 |SysTreeView32|Дерево|  
 |SysTreeView32|TreeItem|  
   
@@ -96,7 +96,7 @@ ms.locfileid: "74960081"
 ## <a name="windows-forms-controls"></a>Элементы управления Windows Forms  
  Windows Forms элементы управления предоставляются для [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] с помощью поставщиков на стороне клиента в UIAutomationClientsideProviders. dll. Эта сборка автоматически регистрируется для использования с приложениями клиента автоматизации пользовательского интерфейса.  
   
- Как правило, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]поддерживаются элементы управления Windows Forms, которые являются управляемыми оболочками для [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] стандартных элементов управления. Поддерживаются следующие элементы управления.  
+ Обычно [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]поддерживают элементы управления Windows Forms, которые являются управляемыми оболочками для стандартных элементов управления Win32. Поддерживаются следующие элементы управления.  
   
 |Имя класса|  
 |----------------|  
@@ -129,7 +129,7 @@ ms.locfileid: "74960081"
 |TabControl/TabPage|  
 |TextBox|  
 |Таймер|  
-|Toolbar|  
+|ToolBar|  
 |Подсказка|  
 |TrackBar|  
 |TreeView|  
@@ -169,4 +169,4 @@ ms.locfileid: "74960081"
   
 ## <a name="see-also"></a>См. также:
 
-- [Типы элементов управления автоматизации пользовательского интерфейса](ui-automation-control-types.md)
+- [UI Automation Control Types](ui-automation-control-types.md)
