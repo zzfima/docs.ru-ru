@@ -6,64 +6,64 @@ helpviewer_keywords:
 - Windows Forms [WPF], WPF interoperation
 - interoperability [WPF], Windows Forms
 ms.assetid: 8a157e6b-8054-46db-a5cf-a78966acc7a1
-ms.openlocfilehash: acb8095b32364f1e22330f22df60085016bdc664
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: e80379700b43ed5d0e74ea890c2a0eafe67159e6
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66834030"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740227"
 ---
 # <a name="windows-forms-controls-and-equivalent-wpf-controls"></a>Элементы управления Windows Forms и эквивалентные элементы управления WPF
-Многие [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] элементы управления имеют эквивалентные [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] элементов управления, однако некоторые [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] элементы не имеют эквивалентов в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. В этом разделе сравниваются типы элементов управления, предоставляемые эти две технологии.  
+Многие элементы управления [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] имеют эквивалентные элементы управления [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], но некоторые элементы управления [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] не имеют эквивалентов в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. В этом разделе сравниваются типы элементов управления, предоставляемые двумя технологиями.  
   
  Вы всегда можете использовать взаимодействие для размещения элементов управления [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)], которые не имеют эквивалентов, в ваших [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-приложениях.  
   
  В следующей таблице показаны элементы управления и компоненты [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)], для которых имеются элементы эквивалентной функциональности в[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]  
   
-|элемент управления Windows Forms|Эквивалентный элемент управления WPF|Примечания|  
+|элемент управления Windows Forms|Эквивалентный элемент управления WPF|Заметки|  
 |---------------------------|----------------------------|-------------|  
-|<xref:System.Windows.Forms.BindingNavigator>|Эквивалент отсутствует.||  
+|<xref:System.Windows.Forms.BindingNavigator>|Эквивалентный элемент управления отсутствует.||  
 |<xref:System.Windows.Forms.BindingSource>|<xref:System.Windows.Data.CollectionViewSource>||  
 |<xref:System.Windows.Forms.Button>|<xref:System.Windows.Controls.Button>||  
 |<xref:System.Windows.Forms.CheckBox>|<xref:System.Windows.Controls.CheckBox>||  
 |<xref:System.Windows.Forms.CheckedListBox>|<xref:System.Windows.Controls.ListBox>с использованием композиции.||  
-|<xref:System.Windows.Forms.ColorDialog>|Эквивалент отсутствует.||  
+|<xref:System.Windows.Forms.ColorDialog>|Эквивалентный элемент управления отсутствует.||  
 |<xref:System.Windows.Forms.ComboBox>|<xref:System.Windows.Controls.ComboBox>|<xref:System.Windows.Controls.ComboBox> не поддерживает автоматическое завершение.|  
 |<xref:System.Windows.Forms.ContextMenuStrip>|<xref:System.Windows.Controls.ContextMenu>||  
 |<xref:System.Windows.Forms.DataGridView>|<xref:System.Windows.Controls.DataGrid>||  
 |<xref:System.Windows.Forms.DateTimePicker>|<xref:System.Windows.Controls.DatePicker>||  
-|<xref:System.Windows.Forms.DomainUpDown>|<xref:System.Windows.Controls.TextBox> с двумя элементами управления <xref:System.Windows.Controls.Primitives.RepeatButton>||  
-|<xref:System.Windows.Forms.ErrorProvider>|Эквивалент отсутствует.||  
+|<xref:System.Windows.Forms.DomainUpDown>|<xref:System.Windows.Controls.TextBox> и два элемента управления <xref:System.Windows.Controls.Primitives.RepeatButton>.||  
+|<xref:System.Windows.Forms.ErrorProvider>|Эквивалентный элемент управления отсутствует.||  
 |<xref:System.Windows.Forms.FlowLayoutPanel>|<xref:System.Windows.Controls.WrapPanel> или <xref:System.Windows.Controls.StackPanel>||  
-|<xref:System.Windows.Forms.FolderBrowserDialog>|Эквивалент отсутствует.||  
-|<xref:System.Windows.Forms.FontDialog>|Эквивалент отсутствует.||  
+|<xref:System.Windows.Forms.FolderBrowserDialog>|Эквивалентный элемент управления отсутствует.||  
+|<xref:System.Windows.Forms.FontDialog>|Эквивалентный элемент управления отсутствует.||  
 |<xref:System.Windows.Forms.Form>|<xref:System.Windows.Window>|<xref:System.Windows.Window> не поддерживает дочерние окна.|  
 |<xref:System.Windows.Forms.GroupBox>|<xref:System.Windows.Controls.GroupBox>||  
-|<xref:System.Windows.Forms.HelpProvider>|Эквивалент отсутствует.|Отсутствует справка F1. Справка "Что это такое" заменяется всплывающей подсказкой.|  
+|<xref:System.Windows.Forms.HelpProvider>|Эквивалентный элемент управления отсутствует.|Справка F1 отсутствует. Текст справки «что это такое» заменяется подсказками.|  
 |<xref:System.Windows.Forms.HScrollBar>|<xref:System.Windows.Controls.Primitives.ScrollBar>|Прокрутка встроена в контейнерные элементы управления.|  
-|<xref:System.Windows.Forms.ImageList>|Эквивалент отсутствует.||  
+|<xref:System.Windows.Forms.ImageList>|Эквивалентный элемент управления отсутствует.||  
 |<xref:System.Windows.Forms.Label>|<xref:System.Windows.Controls.Label>||  
-|<xref:System.Windows.Forms.LinkLabel>|Эквивалент отсутствует.|Можно использовать класс <xref:System.Windows.Documents.Hyperlink> для хранения гиперссылок в содержимом нефиксированного формата.|  
+|<xref:System.Windows.Forms.LinkLabel>|Эквивалентный элемент управления отсутствует.|Для размещения гиперссылок внутри содержимого нефиксированного формата можно использовать класс <xref:System.Windows.Documents.Hyperlink>.|  
 |<xref:System.Windows.Forms.ListBox>|<xref:System.Windows.Controls.ListBox>||  
-|<xref:System.Windows.Forms.ListView>|<xref:System.Windows.Controls.ListView>|<xref:System.Windows.Controls.ListView> Управления содержит представления сведения только для чтения.|  
-|<xref:System.Windows.Forms.MaskedTextBox>|Эквивалент отсутствует.||  
-|<xref:System.Windows.Forms.MenuStrip>|<xref:System.Windows.Controls.Menu>|Стили элемента управления <xref:System.Windows.Controls.Menu> могут использоваться для имитации поведения и внешнего вида класса <xref:System.Windows.Forms.ToolStripProfessionalRenderer?displayProperty=nameWithType>|  
+|<xref:System.Windows.Forms.ListView>|<xref:System.Windows.Controls.ListView>|Элемент управления <xref:System.Windows.Controls.ListView> предоставляет представление сведений только для чтения.|  
+|<xref:System.Windows.Forms.MaskedTextBox>|Эквивалентный элемент управления отсутствует.||  
+|<xref:System.Windows.Forms.MenuStrip>|<xref:System.Windows.Controls.Menu>|стиль <xref:System.Windows.Controls.Menu> элементов управления может приблизительно повлиять на поведение и внешний вид класса <xref:System.Windows.Forms.ToolStripProfessionalRenderer?displayProperty=nameWithType>.|  
 |<xref:System.Windows.Forms.MonthCalendar>|<xref:System.Windows.Controls.Calendar>||  
-|<xref:System.Windows.Forms.NotifyIcon>|Эквивалент отсутствует.||  
-|<xref:System.Windows.Forms.NumericUpDown>|<xref:System.Windows.Controls.TextBox> с двумя элементами управления <xref:System.Windows.Controls.Primitives.RepeatButton>||  
-|<xref:System.Windows.Forms.OpenFileDialog>|<xref:Microsoft.Win32.OpenFileDialog>|<xref:Microsoft.Win32.OpenFileDialog>Класс [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] оболочка[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] для элемента управления|  
-|<xref:System.Windows.Forms.PageSetupDialog>|Эквивалент отсутствует.||  
+|<xref:System.Windows.Forms.NotifyIcon>|Эквивалентный элемент управления отсутствует.||  
+|<xref:System.Windows.Forms.NumericUpDown>|<xref:System.Windows.Controls.TextBox> и два элемента управления <xref:System.Windows.Controls.Primitives.RepeatButton>.||  
+|<xref:System.Windows.Forms.OpenFileDialog>|<xref:Microsoft.Win32.OpenFileDialog>|Класс <xref:Microsoft.Win32.OpenFileDialog> является [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]ной оболочкой вокруг элемента управления Win32.|  
+|<xref:System.Windows.Forms.PageSetupDialog>|Эквивалентный элемент управления отсутствует.||  
 |<xref:System.Windows.Forms.Panel>|<xref:System.Windows.Controls.Canvas>||  
 |<xref:System.Windows.Forms.PictureBox>|<xref:System.Windows.Controls.Image>||  
 |<xref:System.Windows.Forms.PrintDialog>|<xref:System.Windows.Controls.PrintDialog>||  
-|<xref:System.Drawing.Printing.PrintDocument>|Эквивалент отсутствует.||  
+|<xref:System.Drawing.Printing.PrintDocument>|Эквивалентный элемент управления отсутствует.||  
 |<xref:System.Windows.Forms.PrintPreviewControl>|<xref:System.Windows.Controls.DocumentViewer>||  
-|<xref:System.Windows.Forms.PrintPreviewDialog>|Эквивалент отсутствует.||  
+|<xref:System.Windows.Forms.PrintPreviewDialog>|Эквивалентный элемент управления отсутствует.||  
 |<xref:System.Windows.Forms.ProgressBar>|<xref:System.Windows.Controls.ProgressBar>||  
-|<xref:System.Windows.Forms.PropertyGrid>|Эквивалент отсутствует.||  
+|<xref:System.Windows.Forms.PropertyGrid>|Эквивалентный элемент управления отсутствует.||  
 |<xref:System.Windows.Forms.RadioButton>|<xref:System.Windows.Controls.RadioButton>||  
 |<xref:System.Windows.Forms.RichTextBox>|<xref:System.Windows.Controls.RichTextBox>||  
-|<xref:System.Windows.Forms.SaveFileDialog>|<xref:Microsoft.Win32.SaveFileDialog>|<xref:Microsoft.Win32.SaveFileDialog>Класс [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] оболочка[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] для элемента управления|  
+|<xref:System.Windows.Forms.SaveFileDialog>|<xref:Microsoft.Win32.SaveFileDialog>|Класс <xref:Microsoft.Win32.SaveFileDialog> является [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]ной оболочкой вокруг элемента управления Win32.|  
 |<xref:System.Windows.Forms.ScrollableControl>|<xref:System.Windows.Controls.ScrollViewer>||  
 |<xref:System.Media.SoundPlayer>|<xref:System.Windows.Media.MediaPlayer>||  
 |<xref:System.Windows.Forms.SplitContainer>|<xref:System.Windows.Controls.GridSplitter>||  
@@ -82,13 +82,13 @@ ms.locfileid: "66834030"
 |<xref:System.Windows.Forms.TreeView>|<xref:System.Windows.Controls.TreeView>||  
 |<xref:System.Windows.Forms.UserControl>|<xref:System.Windows.Controls.UserControl>||  
 |<xref:System.Windows.Forms.VScrollBar>|<xref:System.Windows.Controls.Primitives.ScrollBar>|Прокрутка встроена в контейнерные элементы управления.|  
-|<xref:System.Windows.Forms.WebBrowser>|<xref:System.Windows.Controls.Frame>, <xref:System.Windows.Controls.WebBrowser?displayProperty=nameWithType>|<xref:System.Windows.Controls.Frame> Управления может разместить HTML-страницы.<br /><br /> Начиная с .NET Framework 3.5 SP1, <xref:System.Windows.Controls.WebBrowser?displayProperty=nameWithType> управления может разместить HTML-страницы, а также обратных <xref:System.Windows.Controls.Frame> элемента управления.|  
+|<xref:System.Windows.Forms.WebBrowser>|<xref:System.Windows.Controls.Frame>, <xref:System.Windows.Controls.WebBrowser?displayProperty=nameWithType>|Элемент управления <xref:System.Windows.Controls.Frame> может размещать HTML-страницы.<br /><br /> Начиная с .NET Framework 3,5 с пакетом обновления 1 (SP1), элемент управления <xref:System.Windows.Controls.WebBrowser?displayProperty=nameWithType> может размещать HTML-страницы и также выполнять резервное копирование элемента управления <xref:System.Windows.Controls.Frame>.|  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [Конструктор WPF для разработчиков Windows Forms](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/cc165605(v=vs.100))
-- [Пошаговое руководство: Размещение элемента управления Windows Forms в WPF](walkthrough-hosting-a-windows-forms-control-in-wpf.md)
-- [Пошаговое руководство: Размещение составного элемента управления WPF в Windows Forms](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
+- [Пошаговое руководство. Размещение элемента управления Windows Forms в приложении WPF](walkthrough-hosting-a-windows-forms-control-in-wpf.md)
+- [Пошаговое руководство. Размещение составного элемента управления WPF в форме Windows Forms](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
 - [Миграция и взаимодействие систем](migration-and-interoperability.md)

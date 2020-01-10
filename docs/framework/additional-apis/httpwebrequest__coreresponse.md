@@ -1,5 +1,5 @@
 ---
-title: Поле HttpWebRequest._CoreResponse
+title: HttpWebRequest. _CoreResponse поле
 ms.date: 01/29/2018
 topic_type:
 - apiref
@@ -10,16 +10,16 @@ api_location:
 api_type:
 - Assembly
 author: stevewhims
-ms.openlocfilehash: 3627c9bf0d72ccec3a0d6d9c7c89b62f83dcd4b4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d16936f6984e73a886f5f48e05b53501ced63c1b
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61706069"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740447"
 ---
-# <a name="httpwebrequestcoreresponse-field"></a>HttpWebRequest. \_CoreResponse поля
+# <a name="httpwebrequest_coreresponse-field"></a>HttpWebRequest.\_поле Коререспонсе
 
-`HttpWebRequest._CoreResponse` — Это объект (либо [CoreResponseData](coreresponsedata.md) или <xref:System.Exception>) содержащее результат синтаксического анализа ответа HTTP.
+`HttpWebRequest._CoreResponse` — это объект ( [коререспонседата](coreresponsedata.md) или <xref:System.Exception>), содержащий результат синтаксического анализа ответа HTTP.
 
 ## <a name="syntax"></a>Синтаксис
   
@@ -28,14 +28,14 @@ private object _CoreResponse
 ```
 
 > [!WARNING]
-> Этот API не предназначен для непосредственного использования в коде. Вместо этого следует использовать <xref:System.Diagnostics.DiagnosticSource> для подключения сетевого кода. См. в разделе [руководство пользователя DiagnosticSource](https://github.com/dotnet/corefx/blob/master/src/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md).
+> Этот API не предназначен для непосредственного использования в коде. Вместо этого следует использовать <xref:System.Diagnostics.DiagnosticSource> для подключения сетевого кода. Ознакомьтесь с [руководством пользователя DiagnosticSource](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md).
 > 
-> Майкрософт не поддерживает использование этого класса в рабочем приложении ни при каких обстоятельствах.
+> Корпорация Майкрософт не поддерживает использование этого класса в рабочем приложении при каких-либо обстоятельствах.
 
 ## <a name="requirements"></a>Требования
 
 **Пространство имен:** <xref:System.Net>
 
-**Сборка:** Системы (в System.dll)
+**Сборка:** Система (в System. dll)
 
-**Версии платформы .NET framework:** Доступно с версии 2.0.
+**.NET Framework версии:** Доступно с 2,0.

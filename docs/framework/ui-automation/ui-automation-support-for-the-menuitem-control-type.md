@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Menu Item control type
 - UI Automation, Menu Item control type
 ms.assetid: 54bce311-3d23-40b9-ba90-1bdbdaf8fbba
-ms.openlocfilehash: c65e30ffea64a9b577cfee7535fd92e489bc7632
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 6e8755292d97e88ff97e039fa2fbafc60ebc4eae
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446704"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741579"
 ---
 # <a name="ui-automation-support-for-the-menuitem-control-type"></a>Поддержка автоматизации пользовательского интерфейса для типа элемента управления MenuItem
 
@@ -22,7 +22,7 @@ ms.locfileid: "74446704"
 
 Элемент управления "Меню" позволяет иерархически организовать элементы, связанные с командами и обработчиками событий. В типичном приложении Microsoft Windows строка меню содержит несколько пунктов меню (например, **файл**, **Правка**и **окно**), и каждый пункт меню отображает меню. Меню содержит набор пунктов меню (таких как **Создать**, **Открыть**и **Закрыть**), которые можно развернуть, чтобы отобразить дополнительные пункты меню или выполнить определенное действие, нажав соответствующий пункт. Пункт меню может размещаться в меню, строке меню или панели инструментов.
 
-В следующих разделах описывается требуемая древовидная структура [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , свойства, шаблоны элементов управления и события для типа элемента управления MenuItem. Требования [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] применяются ко всем элементам управления "Список", будь это [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)]или [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)].
+В следующих разделах описывается требуемая древовидная структура [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , свойства, шаблоны элементов управления и события для типа элемента управления MenuItem. Требования к [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] применяются ко всем элементам управления "список", будь то [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Win32 или [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)].
 
 <a name="Required_UI_Automation_Tree_Structure"></a>
 
@@ -30,7 +30,7 @@ ms.locfileid: "74446704"
 
 В следующей таблице описывается представление элемента управления и представление содержимого дерева [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , относящиеся к элементам управления "Пункт меню", и показывается, что может содержаться в каждом представлении. Дополнительные сведения о дереве [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] см. в разделе [UI Automation Tree Overview](ui-automation-tree-overview.md).
 
-|Представление элемента управления|Представление содержимого|
+|Представление элемента управления|Представление контента|
 |------------------|------------------|
 |MenuItem "Справка"<br /><br /> <ul><li>Menu (подменю из меню "Справка")<br /><br /> <ul><li>MenuItem "Вызов справки"</li><li>MenuItem "О Блокноте"</li></ul></li></ul>|MenuItem "Справка"<br /><br /> -MenuItem "разделы справки"<br />-MenuItem "о Блокноте"|
 
@@ -44,7 +44,7 @@ ms.locfileid: "74446704"
 
 В следующей таблице перечислены свойства [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , значение или определение которых в первую очередь относится к элементам управления "Пункт меню". Дополнительные сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] свойствах см. в разделе [Свойства модели автоматизации пользовательского интерфейса для клиентов](ui-automation-properties-for-clients.md).
 
-|Свойство|значения|Описание|
+|Идентификаторы|{2&gt;Value&lt;2}|Описание|
 |--------------|-----------|-----------------|
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|См. примечания.|Значение этого свойства должно быть уникальным среди всех элементов управления в приложении.|
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|См. примечания.|Внешний прямоугольник, содержащий весь элемент управления.|
@@ -76,7 +76,7 @@ ms.locfileid: "74446704"
 
 В следующей таблице перечислены события [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] , связанные с элементом управления "Пункт меню".
 
-|событие|Поддержка|Объяснение|
+|Event|Поддержка|Пояснение|
 |-----------|-------------|-----------------|
 |<xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent>|Зависит от обстоятельств|Должно вызываться, если элемент управления поддерживает шаблон элемента управления Invoke.|
 |Событие изменения свойства<xref:System.Windows.Automation.TogglePatternIdentifiers.ToggleStateProperty>|Зависит от обстоятельств|Должно вызываться, если элемент управления поддерживает шаблон элемента управления Toggle.|
@@ -107,9 +107,9 @@ ms.locfileid: "74446704"
 
 ## <a name="legacy-issues"></a>Проблемы прежних версий
 
-Шаблон Toggle будет поддерживаться только в том случае, если пункт меню [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] отмечен и если можно программными средствами определить необходимость поддержки шаблона Toggle. Поскольку пункт меню [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] не раскрывает, имеет ли он возможность быть отмеченным, шаблон Invoke будет поддерживаться, когда этот пункт меню не отмечен. Исключение будет сделано, чтобы всегда поддерживать шаблон Invoke, даже для пунктов меню, которые должны поддерживать только шаблон Toggle. Это делается для того, чтобы клиенты ошибочно не думали, что элемент, который поддерживал шаблон Invoke (когда пункт меню не был отмечен), больше не поддерживает этот шаблон, когда становится отмеченным.
+Шаблон переключения будет поддерживаться только в том случае, если выбран пункт меню Win32, и его можно определить программно, чтобы обеспечить поддержку шаблона переключателя. Поскольку элемент меню Win32 не предоставляет возможность проверки, шаблон Invoke будет поддерживаться, если пункт меню не выбран. Исключение будет сделано, чтобы всегда поддерживать шаблон Invoke, даже для пунктов меню, которые должны поддерживать только шаблон Toggle. Это делается для того, чтобы клиенты ошибочно не думали, что элемент, который поддерживал шаблон Invoke (когда пункт меню не был отмечен), больше не поддерживает этот шаблон, когда становится отмеченным.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - <xref:System.Windows.Automation.ControlType.MenuItem>
 - [Общие сведения о шаблонах элементов управления модели автоматизации пользовательского интерфейса](ui-automation-control-patterns-overview.md)

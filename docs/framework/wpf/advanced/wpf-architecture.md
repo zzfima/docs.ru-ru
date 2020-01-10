@@ -16,12 +16,12 @@ helpviewer_keywords:
 - data templates [WPF]
 - thread [WPF], affinity
 ms.assetid: 8579c10b-76ab-4c52-9691-195ce02333c8
-ms.openlocfilehash: 04e6c6fb5dd903e0f52a29bb2c0739d899ce2bb1
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 382facef15e79c4ce49fdedaeb1a072b7591e4a0
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636358"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740211"
 ---
 # <a name="wpf-architecture"></a>Архитектура WPF
 В этом разделе представлен обзор иерархии классов Windows Presentation Foundation (WPF). Он охватывает большинство основных подсистем WPF и описывает их взаимодействие. В нем также подробно описаны некоторые варианты, сделанные архитекторами WPF.  
@@ -38,7 +38,7 @@ ms.locfileid: "75636358"
   
 <a name="System_Threading_DispatcherObject"></a>   
 ## <a name="systemthreadingdispatcherobject"></a>System.Threading.DispatcherObject  
- Большинство объектов в WPF являются производными от <xref:System.Windows.Threading.DispatcherObject>, которые предоставляют базовые конструкции для работы с параллелизмом и многопоточностью. WPF основан на системе обмена сообщениями, реализованной диспетчером. Это работает во многом подобно привычному [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)]ному конвейеру сообщений; фактически диспетчер WPF использует сообщения User32 для выполнения вызовов между потоками.  
+ Большинство объектов в WPF являются производными от <xref:System.Windows.Threading.DispatcherObject>, которые предоставляют базовые конструкции для работы с параллелизмом и многопоточностью. WPF основан на системе обмена сообщениями, реализованной диспетчером. Это работает почти так же, как и привычный конвейер сообщений Win32. фактически диспетчер WPF использует сообщения User32 для выполнения вызовов между потоками.  
   
  Существует два основных понятия, которые следует учитывать при обсуждении параллелизма в WPF — механизме диспетчеризации и сходства потоков.  
   

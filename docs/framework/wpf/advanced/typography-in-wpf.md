@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - typography [WPF], about typography
 ms.assetid: 06cbf17b-6eff-4fe5-949d-2dd533e4e1f4
-ms.openlocfilehash: 0ba4e8ff639cdfbbec596da45a6e950fff921974
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 0c98d0e7363e7732f44f2edf238b9cb6d2bf11fb
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740719"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740284"
 ---
 # <a name="typography-in-wpf"></a>Оформление в WPF
 В этом разделе содержатся вводные сведения об основных типографических возможностях [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Эти функции включают повышение качества и производительности отрисовки текста, поддержку типографских шрифтов OpenType, расширенный международный текст, расширенную поддержку шрифта и новые интерфейсы программирования текстовых приложений (API).  
@@ -59,7 +59,7 @@ ms.locfileid: "73740719"
   
 - Поведение шрифта зависит от глобальных настроек, таких как язык системы.  
   
-- Отдельные типы <xref:System.Windows.FontWeight>, <xref:System.Windows.FontStretch>и <xref:System.Windows.FontStyle> для определения <xref:System.Windows.Media.FontFamily>. Это обеспечивает большую гибкость, чем в программировании [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)], в котором логические сочетания курсивного и полужирного шрифта используются для определения семейства шрифтов.  
+- Отдельные типы <xref:System.Windows.FontWeight>, <xref:System.Windows.FontStretch>и <xref:System.Windows.FontStyle> для определения <xref:System.Windows.Media.FontFamily>. Это обеспечивает большую гибкость, чем в программировании Win32, при котором для определения семейства шрифтов используются логические сочетания курсива и полужирного шрифта.  
   
 - Направление письма (горизонтальное или вертикальное) обрабатывается в зависимости от имени шрифта.  
   
@@ -148,7 +148,7 @@ ms.locfileid: "73740719"
   
  Дополнительные сведения о создании пользовательского макета текста см. в разделе [Дополнительное форматирование текста](advanced-text-formatting.md).  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - <xref:System.Windows.Media.FormattedText>
 - <xref:System.Windows.Media.TextFormatting.TextFormatter>
@@ -156,5 +156,5 @@ ms.locfileid: "73740719"
 - [Возможности шрифта OpenType](opentype-font-features.md)
 - [Рисование форматированного текста](drawing-formatted-text.md)
 - [Дополнительное форматирование текста](advanced-text-formatting.md)
-- [Текст](optimizing-performance-text.md)
+- [Text](optimizing-performance-text.md)
 - [Типография Майкрософт](https://docs.microsoft.com/typography/)

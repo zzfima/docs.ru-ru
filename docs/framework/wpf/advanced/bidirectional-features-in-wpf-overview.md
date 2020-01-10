@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Span elements [WPF]
 - bidirectional features [WPF]
 ms.assetid: fd850e25-7dba-408c-b521-8873e51dc968
-ms.openlocfilehash: 385ce8d263991361512371dcacff52fcf0bbe738
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 19fb15a6310eba19792d7bd0744c2ae87f47c6fa
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740945"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740422"
 ---
 # <a name="bidirectional-features-in-wpf-overview"></a>Общие сведения о двусторонних возможностях в WPF
 
@@ -54,7 +54,7 @@ ms.locfileid: "73740945"
 
 ## <a name="flowdocument"></a>FlowDocument
 
-Многие платформы разработки, такие как HTML, [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] и Java, обеспечивают специальную поддержку для разработки двунаправленного содержимого. Языки разметки, такие как HTML, предоставляют авторам содержимого необходимую разметку для вывода текста в любом требуемом направлении, например HTML 4,0, «dir», который принимает значения «RTL» или «LTR» в качестве значений. Этот тег похож на свойство <xref:System.Windows.FrameworkElement.FlowDirection%2A>, но свойство <xref:System.Windows.FrameworkElement.FlowDirection%2A> работает более продвинутым способом разметки текстового содержимого и может использоваться для содержимого, отличного от Text.
+Многие платформы разработки, такие как HTML, Win32 и Java, предоставляют специальную поддержку для разработки двунаправленного содержимого. Языки разметки, такие как HTML, предоставляют авторам содержимого необходимую разметку для вывода текста в любом требуемом направлении, например HTML 4,0, «dir», который принимает значения «RTL» или «LTR» в качестве значений. Этот тег похож на свойство <xref:System.Windows.FrameworkElement.FlowDirection%2A>, но свойство <xref:System.Windows.FrameworkElement.FlowDirection%2A> работает более продвинутым способом разметки текстового содержимого и может использоваться для содержимого, отличного от Text.
 
 В [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<xref:System.Windows.Documents.FlowDocument> является универсальным элементом [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], который может содержать сочетание текста, таблиц, изображений и других элементов. Этот элемент используется в примерах, описанных ниже.
 
@@ -78,7 +78,7 @@ ms.locfileid: "73740945"
 
 ## <a name="span-elements"></a>Элементы Span
 
-Элемент <xref:System.Windows.Documents.Span> работает как разделитель границ между текстами с различными направлениями потока.  Даже <xref:System.Windows.Documents.Span> элементы с одинаковым направлением потока считаются разными двунаправленными областями, то есть элементы <xref:System.Windows.Documents.Span> упорядочиваются в <xref:System.Windows.FlowDirection> контейнера, а только содержимое внутри элемента <xref:System.Windows.Documents.Span> соответствует <xref:System.Windows.FlowDirection> @no__ t_5.
+Элемент <xref:System.Windows.Documents.Span> работает как разделитель границ между текстами с различными направлениями потока.  Даже <xref:System.Windows.Documents.Span> элементы с одинаковым направлением потока считаются разными двунаправленными областями, то есть элементы <xref:System.Windows.Documents.Span> упорядочиваются в <xref:System.Windows.FlowDirection>контейнера, а только содержимое внутри элемента <xref:System.Windows.Documents.Span> соответствует <xref:System.Windows.FlowDirection> <xref:System.Windows.Documents.Span>.
 
 На следующем рисунке показано направление потока для нескольких <xref:System.Windows.Controls.TextBlock> элементов.
 
@@ -118,13 +118,13 @@ ms.locfileid: "73740945"
 
 ![Рисунок, на котором показана панель инструментов с градиентом слева направо.](./media/bidirectional-features-in-wpf-overview/toolbar-left-right-gradient.png)
 
-После установки <xref:System.Windows.FlowDirection> для <xref:System.Windows.FlowDirection.RightToLeft> не только кнопки <xref:System.Windows.Controls.ToolBar> упорядочены справа налево, но даже <xref:System.Windows.Media.LinearGradientBrush> переупорядочивает свои смещения для передачи справа налево.
+После установки <xref:System.Windows.FlowDirection> для <xref:System.Windows.FlowDirection.RightToLeft>не только кнопки <xref:System.Windows.Controls.ToolBar> упорядочены справа налево, но даже <xref:System.Windows.Media.LinearGradientBrush> переупорядочивает свои смещения для передачи справа налево.
 
 На следующем рисунке показано перевыравнивание <xref:System.Windows.Media.LinearGradientBrush>.
 
 ![Рисунок, на котором показана панель инструментов с градиентом справа налево.](./media/bidirectional-features-in-wpf-overview/toolbar-right-left-gradient.png)
 
-В следующем примере рисуется <xref:System.Windows.FlowDirection.RightToLeft> <xref:System.Windows.Controls.ToolBar>. (Чтобы нарисовать его слева направо, удалите атрибут <xref:System.Windows.FlowDirection> в <xref:System.Windows.Controls.ToolBar>.
+В следующем примере рисуется <xref:System.Windows.FlowDirection.RightToLeft><xref:System.Windows.Controls.ToolBar>. (Чтобы нарисовать его слева направо, удалите атрибут <xref:System.Windows.FlowDirection> в <xref:System.Windows.Controls.ToolBar>.
 
 [!code-xaml[Gradient#Gradient](~/samples/snippets/csharp/VS_Snippets_Wpf/Gradient/CS/Window1.xaml#gradient)]
 
@@ -152,13 +152,13 @@ ms.locfileid: "73740945"
 [!code-xaml[Image#Image](~/samples/snippets/csharp/VS_Snippets_Wpf/Image/CS/Window1.xaml#image)]
 
 > [!NOTE]
-> В файлы для загрузки входит файл **ms_logo. jpg** . В коде предполагается, что JPG-файл находится не внутри проекта, а где-нибудь на диске C:\. Необходимо скопировать JPG-файл из файлов проекта на диск C:\ или изменить код так, чтобы выполнялся поиск файла внутри проекта. Для этого измените `Source="file://c:/ms_logo.jpg"` на `Source="ms_logo.jpg"`.
+> В файлы для загрузки включен файл **ms_logo JPG** . В коде предполагается, что JPG-файл находится не внутри проекта, а где-нибудь на диске C:\. Необходимо скопировать JPG-файл из файлов проекта на диск C:\ или изменить код так, чтобы выполнялся поиск файла внутри проекта. Для этого измените `Source="file://c:/ms_logo.jpg"` на `Source="ms_logo.jpg"`.
 
 **Paths**
 
-В дополнение к <xref:System.Windows.Controls.Image> другой интересный элемент <xref:System.Windows.Shapes.Path>. Контур — это объект, который может нарисовать последовательность соединенных линий и кривых. Он ведет себя так же, как <xref:System.Windows.Controls.Image> относительно <xref:System.Windows.FlowDirection>; Например, его <xref:System.Windows.FlowDirection.RightToLeft> <xref:System.Windows.FlowDirection> является горизонтальным зеркалом <xref:System.Windows.FlowDirection.LeftToRight> его. Однако, в отличие от <xref:System.Windows.Controls.Image>, <xref:System.Windows.Shapes.Path> наследует <xref:System.Windows.FlowDirection> от контейнера, и ему не нужно явно указывать его.
+В дополнение к <xref:System.Windows.Controls.Image>другой интересный элемент <xref:System.Windows.Shapes.Path>. Контур — это объект, который может нарисовать последовательность соединенных линий и кривых. Он ведет себя так же, как <xref:System.Windows.Controls.Image> относительно <xref:System.Windows.FlowDirection>; Например, его <xref:System.Windows.FlowDirection.RightToLeft><xref:System.Windows.FlowDirection> является горизонтальным зеркалом <xref:System.Windows.FlowDirection.LeftToRight> его. Однако, в отличие от <xref:System.Windows.Controls.Image>, <xref:System.Windows.Shapes.Path> наследует <xref:System.Windows.FlowDirection> от контейнера, и ему не нужно явно указывать его.
 
-В следующем примере рисуется простая стрелка, использующая три линии. Первая стрелка наследует <xref:System.Windows.FlowDirection.RightToLeft> направление потока от <xref:System.Windows.Controls.StackPanel>, чтобы ее начальная и конечная точки измерялись от корня справа. Вторая стрелка, которая имеет явное <xref:System.Windows.FlowDirection.RightToLeft> <xref:System.Windows.FlowDirection>, также начинается с правой стороны. Однако третья стрелка начинается от корня с левой стороны. Дополнительные сведения о рисовании см. в разделе <xref:System.Windows.Media.LineGeometry> и <xref:System.Windows.Media.GeometryGroup>.
+В следующем примере рисуется простая стрелка, использующая три линии. Первая стрелка наследует <xref:System.Windows.FlowDirection.RightToLeft> направление потока от <xref:System.Windows.Controls.StackPanel>, чтобы ее начальная и конечная точки измерялись от корня справа. Вторая стрелка, которая имеет явное <xref:System.Windows.FlowDirection.RightToLeft><xref:System.Windows.FlowDirection>, также начинается с правой стороны. Однако третья стрелка начинается от корня с левой стороны. Дополнительные сведения о рисовании см. в разделе <xref:System.Windows.Media.LineGeometry> и <xref:System.Windows.Media.GeometryGroup>.
 
 [!code-xaml[Paths#Paths](~/samples/snippets/csharp/VS_Snippets_Wpf/Paths/CS/Window1.xaml#paths)]
 
@@ -224,9 +224,9 @@ ms.locfileid: "73740945"
 
 Если вы хотите внести изменения в зависимости от состояния приложения, используйте другие функции, предоставляемые [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].
 
-Сначала задайте `NumberSubstitution.CultureSource="Text"` компонента приложения. Использование этого параметра гарантирует, что параметры не поступают из [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] для текстовых элементов, которые по умолчанию имеют значение "User", например <xref:System.Windows.Controls.TextBlock>.
+Сначала задайте `NumberSubstitution.CultureSource="Text"`компонента приложения. Использование этого параметра гарантирует, что параметры не поступают из [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] для текстовых элементов, которые по умолчанию имеют значение "User", например <xref:System.Windows.Controls.TextBlock>.
 
-Пример:
+Например:
 
 ```xaml
 <TextBlock
@@ -267,6 +267,6 @@ text1.Language = System.Windows.Markup.XmlLanguage.GetLanguage(System.Globalizat
 
 В некоторых случаях может потребоваться создание универсального приложения, например с европейскими цифрами для всех пользователей. Или арабские цифры в <xref:System.Windows.Documents.Table>ных ячейках с конкретным <xref:System.Windows.Style>. Одним из простых способов является использование свойства <xref:System.Windows.Media.NumberSubstitution.Substitution%2A>.
 
-В следующем примере в первом <xref:System.Windows.Controls.TextBlock> не задано свойство <xref:System.Windows.Media.NumberSubstitution.Substitution%2A>, поэтому алгоритм отображает арабские цифры, как ожидалось. Однако во второй <xref:System.Windows.Controls.TextBlock> подстановка устанавливается в Европейский, переопределяющий подстановку по умолчанию для арабских чисел, и выводятся европейские цифры.
+В следующем примере в первом <xref:System.Windows.Controls.TextBlock> не задано свойство <xref:System.Windows.Media.NumberSubstitution.Substitution%2A>, поэтому алгоритм отображает арабские цифры, как ожидалось. Однако во второй <xref:System.Windows.Controls.TextBlock>подстановка устанавливается в Европейский, переопределяющий подстановку по умолчанию для арабских чисел, и выводятся европейские цифры.
 
 [!code-xaml[Numbers3#Numbers3](~/samples/snippets/csharp/VS_Snippets_Wpf/Numbers3/CS/Window1.xaml#numbers3)]

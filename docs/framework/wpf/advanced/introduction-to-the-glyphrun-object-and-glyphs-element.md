@@ -9,12 +9,12 @@ helpviewer_keywords:
 - glyphs [WPF]
 - typography [WPF], GlyphRun object
 ms.assetid: 746ca769-a331-4435-9b95-f72a883b67c1
-ms.openlocfilehash: 2f7bb3fb4f28b063c78dde9f9f354b38a5e707f3
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 9af07d48877fee0e94f8e5fa2556c4361795df6a
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72581890"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740353"
 ---
 # <a name="introduction-to-the-glyphrun-object-and-glyphs-element"></a>Знакомство с объектом GlyphRun и элементом Glyphs
 В этом разделе описывается объект <xref:System.Windows.Media.GlyphRun> и элемент <xref:System.Windows.Documents.Glyphs>.  
@@ -31,7 +31,7 @@ ms.locfileid: "72581890"
   
     - Средство записи документов XPS (Майкрософт).  
   
-    - Предыдущие драйверы принтера, вывод из приложений [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] в фиксированный формат.  
+    - Предыдущие драйверы принтера, вывод из приложений Win32 в фиксированный формат.  
   
     - Формат очереди печати.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "72581890"
   
  <xref:System.Windows.Media.GlyphRun> включает как сведения о шрифтах, такие как <xref:System.Windows.Documents.Glyphs.Indices%2A> глифов, так и отдельные позиции глифов. Он также включает исходные кодовые точки Юникода, из которых был создан запуск, сведения о сопоставлении смещения буфера символов и глифов, а также флаги отдельных символов и глифов.  
   
- <xref:System.Windows.Media.GlyphRun> имеет соответствующий высокоуровневый <xref:System.Windows.FrameworkElement>, <xref:System.Windows.Documents.Glyphs>. <xref:System.Windows.Documents.Glyphs> можно использовать в дереве элементов и в разметке [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] для представления выходных данных <xref:System.Windows.Media.GlyphRun>.  
+ <xref:System.Windows.Media.GlyphRun> имеет соответствующий высокоуровневый <xref:System.Windows.FrameworkElement><xref:System.Windows.Documents.Glyphs>. <xref:System.Windows.Documents.Glyphs> можно использовать в дереве элементов и в разметке [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] для представления выходных данных <xref:System.Windows.Media.GlyphRun>.  
   
 <a name="text_glyphrunovw_glyphselement"></a>   
 ## <a name="the-glyphs-element"></a>Элемент Glyphs  
@@ -56,7 +56,7 @@ ms.locfileid: "72581890"
   
  Следующие определения свойств соответствуют первым четырем атрибутам в примере разметки.  
   
-|свойство;|Описание|  
+|Идентификаторы|Описание|  
 |--------------|-----------------|  
 |<xref:System.Windows.Documents.Glyphs.FontUri%2A>|Указывает идентификатор ресурса: имя файла, универсальный код ресурса (URI) или ссылку на ресурс в файле Application. exe или контейнере.|  
 |<xref:System.Windows.Documents.Glyphs.FontRenderingEmSize%2A>|Указывает размер шрифта в единицах графической поверхности (по умолчанию — 0,96 дюйма).|  
@@ -93,8 +93,8 @@ ms.locfileid: "72581890"
   
  [!code-xaml[GlyphsOvwSamp2#1](~/samples/snippets/csharp/VS_Snippets_Wpf/GlyphsOvwSamp2/CS/default.xaml#1)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Оформление в WPF](typography-in-wpf.md)
 - [Документы в WPF](documents-in-wpf.md)
-- [Текст](optimizing-performance-text.md)
+- [Text](optimizing-performance-text.md)
