@@ -6,19 +6,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2bc6ddc6-674a-4f75-b264-abc35e4e5857
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b191114731b63916d1bc9ecca4eee01f83c4fa48
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 63beeb3ca9d3f3cb6e6bde418e99ee2bd0a12e20
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64615337"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709742"
 ---
-# <a name="xpathnodeiterator-in-transformations"></a><span data-ttu-id="6263f-102">XPathNodeIterator в преобразованиях</span><span class="sxs-lookup"><span data-stu-id="6263f-102">XPathNodeIterator in Transformations</span></span>
-<span data-ttu-id="6263f-103">Класс <xref:System.Xml.XPath.XPathNodeIterator> обеспечивает методы перебора набора узлов, созданного в результате выполнения запроса XPath или в результате преобразования фрагмента результирующего дерева в набор узлов с помощью метода node-set.</span><span class="sxs-lookup"><span data-stu-id="6263f-103">The <xref:System.Xml.XPath.XPathNodeIterator> provides methods to iterate over a set of nodes created as the result of an XML Path Language (XPath) query or a result tree fragment converted to a node set by use of the node-set method.</span></span> <span data-ttu-id="6263f-104">Класс <xref:System.Xml.XPath.XPathNodeIterator> дает возможность перебирать узлы внутри этого набора узлов.</span><span class="sxs-lookup"><span data-stu-id="6263f-104">The <xref:System.Xml.XPath.XPathNodeIterator> enables you to iterate over the nodes within that node set.</span></span> <span data-ttu-id="6263f-105">По получении набора узлов класс <xref:System.Xml.XPath.XPathNodeIterator> предоставляет однопроходные курсоры только для чтения к выделенному набору узлов.</span><span class="sxs-lookup"><span data-stu-id="6263f-105">Once a node set is retrieved, the <xref:System.Xml.XPath.XPathNodeIterator> class provides a read-only, forward-only cursor to the selected set of nodes.</span></span> <span data-ttu-id="6263f-106">Набор узлов создается в порядке расположения узлов в документе, поэтому вызов этого метода приводит к переходу на следующий узел документа.</span><span class="sxs-lookup"><span data-stu-id="6263f-106">The node set is created in document order, so calling this method moves to the next node in document order.</span></span> <span data-ttu-id="6263f-107">Класс <xref:System.Xml.XPath.XPathNodeIterator> не выполняет построение дерева узлов для всех узлов набора.</span><span class="sxs-lookup"><span data-stu-id="6263f-107"><xref:System.Xml.XPath.XPathNodeIterator> does not build a node tree of all the nodes in the set.</span></span> <span data-ttu-id="6263f-108">Вместо этого он предоставляет окно данных размером в один узел, в котором при переходе от одного элемента дерева к другому отображается базовый узел, на который указывает итератор.</span><span class="sxs-lookup"><span data-stu-id="6263f-108">Instead, it provides a single node window into the data, exposing the underlying node it points to as you move around in the tree.</span></span> <span data-ttu-id="6263f-109">Методы и свойства класса <xref:System.Xml.XPath.XPathNodeIterator> дают возможность получать сведения из текущего узла.</span><span class="sxs-lookup"><span data-stu-id="6263f-109">The methods and properties available from the <xref:System.Xml.XPath.XPathNodeIterator> class enable you to get information from the current node.</span></span> <span data-ttu-id="6263f-110">Список доступных методов и свойств см. здесь: <xref:System.Windows.Forms.ToolBar>.</span><span class="sxs-lookup"><span data-stu-id="6263f-110">For a list of the available methods and properties, see <xref:System.Windows.Forms.ToolBar>.</span></span>  
+# <a name="xpathnodeiterator-in-transformations"></a><span data-ttu-id="1e540-102">XPathNodeIterator в преобразованиях</span><span class="sxs-lookup"><span data-stu-id="1e540-102">XPathNodeIterator in Transformations</span></span>
+<span data-ttu-id="1e540-103">Класс <xref:System.Xml.XPath.XPathNodeIterator> обеспечивает методы перебора набора узлов, созданного в результате выполнения запроса XPath или в результате преобразования фрагмента результирующего дерева в набор узлов с помощью метода node-set.</span><span class="sxs-lookup"><span data-stu-id="1e540-103">The <xref:System.Xml.XPath.XPathNodeIterator> provides methods to iterate over a set of nodes created as the result of an XML Path Language (XPath) query or a result tree fragment converted to a node set by use of the node-set method.</span></span> <span data-ttu-id="1e540-104">Класс <xref:System.Xml.XPath.XPathNodeIterator> дает возможность перебирать узлы внутри этого набора узлов.</span><span class="sxs-lookup"><span data-stu-id="1e540-104">The <xref:System.Xml.XPath.XPathNodeIterator> enables you to iterate over the nodes within that node set.</span></span> <span data-ttu-id="1e540-105">По получении набора узлов класс <xref:System.Xml.XPath.XPathNodeIterator> предоставляет однопроходные курсоры только для чтения к выделенному набору узлов.</span><span class="sxs-lookup"><span data-stu-id="1e540-105">Once a node set is retrieved, the <xref:System.Xml.XPath.XPathNodeIterator> class provides a read-only, forward-only cursor to the selected set of nodes.</span></span> <span data-ttu-id="1e540-106">Набор узлов создается в порядке расположения узлов в документе, поэтому вызов этого метода приводит к переходу на следующий узел документа.</span><span class="sxs-lookup"><span data-stu-id="1e540-106">The node set is created in document order, so calling this method moves to the next node in document order.</span></span> <span data-ttu-id="1e540-107">Класс <xref:System.Xml.XPath.XPathNodeIterator> не выполняет построение дерева узлов для всех узлов набора.</span><span class="sxs-lookup"><span data-stu-id="1e540-107"><xref:System.Xml.XPath.XPathNodeIterator> does not build a node tree of all the nodes in the set.</span></span> <span data-ttu-id="1e540-108">Вместо этого он предоставляет окно данных размером в один узел, в котором при переходе от одного элемента дерева к другому отображается базовый узел, на который указывает итератор.</span><span class="sxs-lookup"><span data-stu-id="1e540-108">Instead, it provides a single node window into the data, exposing the underlying node it points to as you move around in the tree.</span></span> <span data-ttu-id="1e540-109">Методы и свойства класса <xref:System.Xml.XPath.XPathNodeIterator> дают возможность получать сведения из текущего узла.</span><span class="sxs-lookup"><span data-stu-id="1e540-109">The methods and properties available from the <xref:System.Xml.XPath.XPathNodeIterator> class enable you to get information from the current node.</span></span> <span data-ttu-id="1e540-110">Список доступных методов и свойств см. здесь: <xref:System.Windows.Forms.ToolBar>.</span><span class="sxs-lookup"><span data-stu-id="1e540-110">For a list of the available methods and properties, see <xref:System.Windows.Forms.ToolBar>.</span></span>  
   
- <span data-ttu-id="6263f-111">Поскольку <xref:System.Xml.XPath.XPathNodeIterator> перемещается по набору узлов, созданному в ходе выполнения запроса Xpath, и при этом движется только вперед, перемещение осуществляется с использованием метода <xref:System.Xml.XPath.XPathNodeIterator.MoveNext%2A>.</span><span class="sxs-lookup"><span data-stu-id="6263f-111">Since an <xref:System.Xml.XPath.XPathNodeIterator> moves over a set of nodes created from an XPath query and moves forward only, the way to move is by using the <xref:System.Xml.XPath.XPathNodeIterator.MoveNext%2A> method.</span></span> <span data-ttu-id="6263f-112">При использовании этого метода возвращаемое значение имеет тип `Boolean`. Значение `true` возвращается при перемещении к следующему выделенному узлу, а значение `false` - если выделенных узлов больше нет.</span><span class="sxs-lookup"><span data-stu-id="6263f-112">The return type of this method is `Boolean`, returning `true` if it moves to the next selected node, and `false` if there are no more selected nodes.</span></span> <span data-ttu-id="6263f-113">При возвращении значения `true` доступны свойства, перечисленные в следующем списке:</span><span class="sxs-lookup"><span data-stu-id="6263f-113">If it returns `true`, the following list shows the properties available:</span></span>  
+ <span data-ttu-id="1e540-111">Поскольку <xref:System.Xml.XPath.XPathNodeIterator> перемещается по набору узлов, созданному в ходе выполнения запроса Xpath, и при этом движется только вперед, перемещение осуществляется с использованием метода <xref:System.Xml.XPath.XPathNodeIterator.MoveNext%2A>.</span><span class="sxs-lookup"><span data-stu-id="1e540-111">Since an <xref:System.Xml.XPath.XPathNodeIterator> moves over a set of nodes created from an XPath query and moves forward only, the way to move is by using the <xref:System.Xml.XPath.XPathNodeIterator.MoveNext%2A> method.</span></span> <span data-ttu-id="1e540-112">При использовании этого метода возвращаемое значение имеет тип `Boolean`. Значение `true` возвращается при перемещении к следующему выделенному узлу, а значение `false` - если выделенных узлов больше нет.</span><span class="sxs-lookup"><span data-stu-id="1e540-112">The return type of this method is `Boolean`, returning `true` if it moves to the next selected node, and `false` if there are no more selected nodes.</span></span> <span data-ttu-id="1e540-113">При возвращении значения `true` доступны свойства, перечисленные в следующем списке:</span><span class="sxs-lookup"><span data-stu-id="1e540-113">If it returns `true`, the following list shows the properties available:</span></span>  
   
 - <xref:System.Xml.XPath.XPathNodeIterator.Current%2A>  
   
@@ -26,9 +24,9 @@ ms.locfileid: "64615337"
   
 - <xref:System.Xml.XPath.XPathNodeIterator.Count%2A>  
   
- <span data-ttu-id="6263f-114">Если набор узлов просматривается впервые, для размещения <xref:System.Xml.XPath.XPathNodeIterator.MoveNext%2A> на первом узле выделенного набора необходимо вызвать метод <xref:System.Xml.XPath.XPathNodeIterator>.</span><span class="sxs-lookup"><span data-stu-id="6263f-114">When you are looking at a node set for the first time, a call to <xref:System.Xml.XPath.XPathNodeIterator.MoveNext%2A> must be made to position the <xref:System.Xml.XPath.XPathNodeIterator> on the first node of the selected set.</span></span> <span data-ttu-id="6263f-115">Это дает возможность написать цикл while.</span><span class="sxs-lookup"><span data-stu-id="6263f-115">This allows a while loop to be written.</span></span>  
+ <span data-ttu-id="1e540-114">Если набор узлов просматривается впервые, для размещения <xref:System.Xml.XPath.XPathNodeIterator.MoveNext%2A> на первом узле выделенного набора необходимо вызвать метод <xref:System.Xml.XPath.XPathNodeIterator>.</span><span class="sxs-lookup"><span data-stu-id="1e540-114">When you are looking at a node set for the first time, a call to <xref:System.Xml.XPath.XPathNodeIterator.MoveNext%2A> must be made to position the <xref:System.Xml.XPath.XPathNodeIterator> on the first node of the selected set.</span></span> <span data-ttu-id="1e540-115">Это дает возможность написать цикл while.</span><span class="sxs-lookup"><span data-stu-id="1e540-115">This allows a while loop to be written.</span></span>  
   
- <span data-ttu-id="6263f-116">Следующий пример кода показывает, как передавать объект <xref:System.Xml.XPath.XPathNodeIterator> объекту <xref:System.Xml.Xsl.XslTransform> в виде параметра в списке <xref:System.Xml.Xsl.XsltArgumentList>.</span><span class="sxs-lookup"><span data-stu-id="6263f-116">The following code example shows how to pass an <xref:System.Xml.XPath.XPathNodeIterator> to an <xref:System.Xml.Xsl.XslTransform> as a parameter in the <xref:System.Xml.Xsl.XsltArgumentList>.</span></span> <span data-ttu-id="6263f-117">Входные данные для этого кода находятся в файле **books.xml**, а таблица стилей — в файле **text.xsl**.</span><span class="sxs-lookup"><span data-stu-id="6263f-117">The input to the code is **books.xml**, and the style sheet is **text.xsl**.</span></span> <span data-ttu-id="6263f-118">Файл **test.xml** представляет собой <xref:System.Xml.XPath.XPathDocument>.</span><span class="sxs-lookup"><span data-stu-id="6263f-118">The file **test.xml** is the <xref:System.Xml.XPath.XPathDocument>.</span></span>  
+ <span data-ttu-id="1e540-116">Следующий пример кода показывает, как передавать объект <xref:System.Xml.XPath.XPathNodeIterator> объекту <xref:System.Xml.Xsl.XslTransform> в виде параметра в списке <xref:System.Xml.Xsl.XsltArgumentList>.</span><span class="sxs-lookup"><span data-stu-id="1e540-116">The following code example shows how to pass an <xref:System.Xml.XPath.XPathNodeIterator> to an <xref:System.Xml.Xsl.XslTransform> as a parameter in the <xref:System.Xml.Xsl.XsltArgumentList>.</span></span> <span data-ttu-id="1e540-117">Входные данные для этого кода находятся в файле **books.xml**, а таблица стилей — в файле **text.xsl**.</span><span class="sxs-lookup"><span data-stu-id="1e540-117">The input to the code is **books.xml**, and the style sheet is **text.xsl**.</span></span> <span data-ttu-id="1e540-118">Файл **test.xml** представляет собой <xref:System.Xml.XPath.XPathDocument>.</span><span class="sxs-lookup"><span data-stu-id="1e540-118">The file **test.xml** is the <xref:System.Xml.XPath.XPathDocument>.</span></span>  
   
 ```vb  
 Imports System  
@@ -89,7 +87,7 @@ public class sample
 }  
 ```  
   
-## <a name="booksxml"></a><span data-ttu-id="6263f-119">books.xml</span><span class="sxs-lookup"><span data-stu-id="6263f-119">books.xml</span></span>  
+## <a name="booksxml"></a><span data-ttu-id="1e540-119">books.xml</span><span class="sxs-lookup"><span data-stu-id="1e540-119">books.xml</span></span>  
   
 ```xml  
 <?xml version='1.0'?>  
@@ -122,7 +120,7 @@ public class sample
 </bookstore>  
 ```  
   
-## <a name="testxsl"></a><span data-ttu-id="6263f-120">test.xsl</span><span class="sxs-lookup"><span data-stu-id="6263f-120">test.xsl</span></span>  
+## <a name="testxsl"></a><span data-ttu-id="1e540-120">test.xsl</span><span class="sxs-lookup"><span data-stu-id="1e540-120">test.xsl</span></span>  
   
 ```xml  
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"  
@@ -142,13 +140,13 @@ xmlns:msxsl="urn:schemas-microsoft-com:xslt" exclude-result-prefixes="msxsl">
 </xsl:stylesheet>  
 ```  
   
-## <a name="testxml"></a><span data-ttu-id="6263f-121">test.xml</span><span class="sxs-lookup"><span data-stu-id="6263f-121">test.xml</span></span>  
+## <a name="testxml"></a><span data-ttu-id="1e540-121">test.xml</span><span class="sxs-lookup"><span data-stu-id="1e540-121">test.xml</span></span>  
   
 ```xml  
 <Title attr="Test">this is a test</Title>  
 ```  
   
-## <a name="output-outxml"></a><span data-ttu-id="6263f-122">Выходные данные (out.xml)</span><span class="sxs-lookup"><span data-stu-id="6263f-122">Output (out.xml)</span></span>  
+## <a name="output-outxml"></a><span data-ttu-id="1e540-122">Выходные данные (out.xml)</span><span class="sxs-lookup"><span data-stu-id="1e540-122">Output (out.xml)</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -158,6 +156,6 @@ xmlns:msxsl="urn:schemas-microsoft-com:xslt" exclude-result-prefixes="msxsl">
 </out>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="6263f-123">См. также</span><span class="sxs-lookup"><span data-stu-id="6263f-123">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1e540-123">См. также:</span><span class="sxs-lookup"><span data-stu-id="1e540-123">See also</span></span>
 
-- [<span data-ttu-id="6263f-124">Реализация классом XslTransform XSLT-процессора</span><span class="sxs-lookup"><span data-stu-id="6263f-124">XslTransform Class Implements the XSLT Processor</span></span>](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)
+- [<span data-ttu-id="1e540-124">Реализация классом XslTransform XSLT-процессора</span><span class="sxs-lookup"><span data-stu-id="1e540-124">XslTransform Class Implements the XSLT Processor</span></span>](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)
