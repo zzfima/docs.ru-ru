@@ -3,13 +3,12 @@ title: Сборка .NET Core из исходного кода
 description: Узнайте, как выполнять сборку .NET Core и интерфейса командной строки .NET Core из исходного кода.
 author: bleroy
 ms.date: 06/28/2017
-ms.custom: seodec18
-ms.openlocfilehash: dcd7c909325eec5a79db74098d7ac880000eafa1
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: fe5431667d861d830c2ec56252e6e3e2ca08a866
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105384"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740914"
 ---
 # <a name="build-net-core-from-source"></a>Сборка .NET Core из исходного кода
 
@@ -18,7 +17,7 @@ ms.locfileid: "70105384"
 
 ## <a name="build-the-clr-from-source"></a>Сборка среды CLR из исходного кода
 
-Исходный код .NET CoreCLR можно найти в репозитории [dotnet/coreclr](https://github.com/dotnet/coreclr/) на сайте GitHub.
+Исходный код .NET CoreCLR можно найти в репозитории [dotnet/runtime](https://github.com/dotnet/runtime/) на сайте GitHub.
 
 Для сборки сейчас необходимо следующее:
 
@@ -27,7 +26,7 @@ ms.locfileid: "70105384"
 - [Python](https://www.python.org/)
 - Компилятор C++
 
-После установки необходимых компонентов вы можете выполнить сборку CLR, запустив скрипт (`build.cmd` в Windows или `build.sh` в Linux и macOS) в базовой ветке репозитория [dotnet/coreclr](https://github.com/dotnet/coreclr/).
+После установки необходимых компонентов вы можете выполнить сборку CLR, запустив скрипт (`build.cmd` в Windows или `build.sh` в Linux и macOS) в базовой ветке репозитория [dotnet/runtime](https://github.com/dotnet/runtime/).
 
 Устанавливаемые компоненты отличаются в зависимости от операционной системы (ОС). Инструкции по сборке для конкретных ОС:
 
@@ -72,13 +71,13 @@ ms.locfileid: "70105384"
 Существует два основных метода использования новой среды выполнения:
 
  1. **Использование dotnet.exe и NuGet для создания приложения**.
-    Воспользуйтесь указаниями на странице [Using Your Build](https://github.com/dotnet/coreclr/blob/master/Documentation/workflow/UsingYourBuild.md) (Использование сборки), чтобы создать программу, использующую вашу новую среду выполнения, на основе только что созданных вами пакетов NuGet и интерфейса командной строки dotnet. Разработчики, не работающие в среде выполнения, скорее всего будут взаимодействовать с вашей новой средой выполнения именно таким способом.
+    Воспользуйтесь указаниями на странице [Using Your Build](https://github.com/dotnet/runtime/blob/master/docs/workflow/testing/using-your-build.md) (Использование сборки), чтобы создать программу, использующую вашу новую среду выполнения, на основе только что созданных вами пакетов NuGet и интерфейса командной строки dotnet. Разработчики, не работающие в среде выполнения, скорее всего будут взаимодействовать с вашей новой средой выполнения именно таким способом.
 
  2. **Использование corerun.exe для запуска приложения с помощью неупакованных библиотек DLL**.
     Этот репозиторий также задает простое основное приложение corerun.exe, у которого НЕТ зависимостей в NuGet.
     Необходимо сообщить этому приложению, где получить именно те библиотеки DLL, которые вы используете. Вам нужно будет собрать эти библиотеки вместе вручную.
-    Этот метод используется во всех тестах в репозитории [dotnet/coreclr](https://github.com/dotnet/coreclr). Его можно использовать для быстрого локального проведения цикла "правка — компиляция — отладка", например при предварительном модульном тестировании.
-    Подробнее об использовании этого метода см. в статье [Executing .NET Core Apps with CoreRun.exe](https://github.com/dotnet/coreclr/blob/master/Documentation/workflow/UsingCoreRun.md) (Запуск приложений .NET Core с помощью CoreRun.exe).
+    Этот метод используется во всех тестах в репозитории [dotnet/runtime](https://github.com/dotnet/runtime). Его можно использовать для быстрого локального проведения цикла "правка — компиляция — отладка", например при предварительном модульном тестировании.
+    Подробнее об использовании этого метода см. в статье [Executing .NET Core Apps with CoreRun.exe](https://github.com/dotnet/runtime/blob/master/docs/workflow/testing/using-corerun.md) (Запуск приложений .NET Core с помощью CoreRun.exe).
 
 ## <a name="build-the-cli-from-source"></a>Сборка интерфейса командной строки из исходного кода
 
@@ -101,6 +100,6 @@ ms.locfileid: "70105384"
 
 ## <a name="see-also"></a>См. также
 
-- [Общеязыковая среда выполнения .NET Core (CoreCLR)](https://github.com/dotnet/coreclr/blob/master/README.md)
+- [Среда выполнения .NET](https://github.com/dotnet/runtime/blob/master/README.md)
 - [Руководство разработчика по интерфейсу командной строки .NET Core](https://github.com/dotnet/cli/blob/master/Documentation/project-docs/developer-guide.md)
 - [Упаковка дистрибутивов .NET Core](./distribution-packaging.md)

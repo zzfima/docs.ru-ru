@@ -2,12 +2,12 @@
 title: Модернизация существующих приложений .NET с помощью облака Azure и контейнеров Windows (2-е издание)
 description: В этой электронной книге вы узнаете, как переместить и модернизировать существующие приложения в облако Azure и контейнеры.
 ms.date: 04/28/2018
-ms.openlocfilehash: 67b1c7743697832684e96225e3d365da625ce6a3
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: fa20e606c9a1364fbdf8c9a58c8703420d9e65a9
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73089769"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714571"
 ---
 # <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containers-2nd-edition"></a>Модернизация существующих приложений .NET с помощью облака Azure и контейнеров Windows (2-е издание)
 
@@ -25,7 +25,7 @@ Redmond, Washington 98052-6399
 
 Эту книгу можно получить бесплатно в электронном виде по нескольким каналам Майкрософт, например на сайте <https://dot.net/architecture>.
 
-Если у вас есть вопросы, связанные с этой книгой, обращайтесь по адресу [dotnet-architecture-ebooks-feedback@service.microsoft.com](mailto:dotnet-architecture-ebooks-feedback@service.microsoft.com?subject=Feedback%20for%20.NET%20Container%20&%20Microservices%20Architecture%20book)
+Если у вас есть вопросы, связанные с этой книгой, обращайтесь по адресу [dotnet-architecture-ebooks-feedback@service.microsoft.com](mailto:dotnet-architecture-ebooks-feedback@service.microsoft.com?subject=Feedback%20for%20.NET%20Container%20&%20Microservices%20Architecture%20book).
 
 Эта книга предоставляется на условиях "как есть" и выражает взгляды и мнения автора. Взгляды, мнения и сведения, содержащиеся в этой книге, включая URL-адреса и другие ссылки на веб-сайты, могут изменяться без уведомления.
 
@@ -199,7 +199,7 @@ Microsoft и товарные знаки, перечисленные на стр
 
 ## <a name="send-your-feedback"></a>Отправить отзыв
 
-Это руководство поможет вам понять возможные варианты усовершенствования и модернизации существующих веб-приложений .NET. Руководство и связанные примеры приложений постоянно дорабатываются. Будем рады вашим отзывам! Если у вас есть замечания касательно того, как можно улучшить этот документ, направляйте их по адресу [dotnet-architecture-ebooks-feedback@service.microsoft.com](mailto:dotnet-architecture-ebooks-feedback@service.microsoft.com?subject=Feedback%20for%20.NET%20Container%20&%20Microservices%20Architecture%20book).
+Это руководство поможет вам понять возможные варианты усовершенствования и модернизации существующих веб-приложений .NET. Руководство и связанные примеры приложений постоянно дорабатываются. Мы будем рады вашим отзывам! Если у вас есть замечания касательно того, как можно улучшить этот документ, направляйте их по адресу [dotnet-architecture-ebooks-feedback@service.microsoft.com](mailto:dotnet-architecture-ebooks-feedback@service.microsoft.com?subject=Feedback%20for%20.NET%20Container%20&%20Microservices%20Architecture%20book).
 
 >[!div class="step-by-step"]
 >[Вперед](lift-and-shift-existing-apps-azure-iaas.md) <!-- Next Chapter -->

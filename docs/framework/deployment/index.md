@@ -9,14 +9,12 @@ helpviewer_keywords:
 - .NET Framework, deploying
 - .NET Framework application deployment
 ms.assetid: 238d8284-6042-4a38-a7f6-1ee8efd719da
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 04cbfb8d41135b57c3e090959e041f95fcda2840
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: b1ba9810b4b0d5a1688318db1093a9ce9bdf8fda
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975684"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716466"
 ---
 # <a name="deploying-the-net-framework-and-applications"></a>Развертывание .NET Framework и приложений
 
@@ -160,12 +158,12 @@ ms.locfileid: "73975684"
 
 ## <a name="related-topics"></a>См. также
 
-|Заголовок|ОПИСАНИЕ|
+|Заголовок|Описание|
 |-----------|-----------------|
 |[Обнаружение сборок в среде выполнения](how-the-runtime-locates-assemblies.md)|Описывается то, как среда CLR определяет, какую сборку следует использовать для выполнения запроса привязки.|
 |[Рекомендации для загрузки сборок](best-practices-for-assembly-loading.md)|Описывается, как избежать проблем с идентификацией типов, которые могут привести к возникновению исключений <xref:System.InvalidCastException> и <xref:System.MissingMethodException> и других ошибок.|
 |[Уменьшение числа перезагрузок при установке платформы .NET Framework 4.5](reducing-system-restarts.md)|Описывается диспетчер перезапуска, который по возможности предотвращает перезагрузки, и его преимущества для приложений, устанавливающих платформу .NET Framework.|
-|[Руководство по развертыванию для администраторов](guide-for-administrators.md)|Описывается развертывание платформы .NET Framework и ее системных зависимостей в сети с помощью System Center Configuration Manager (SCCM).|
+|[Руководство по развертыванию для администраторов](guide-for-administrators.md)|Инструкции для системного администратора по развертыванию платформы .NET Framework и ее системных зависимостей в сети с помощью Microsoft Endpoint Configuration Manager.|
 |[Руководство по развертыванию для разработчиков](deployment-guide-for-developers.md)|Описываются способы установки .NET Framework на компьютеры пользователей вместе с приложениями.|
 |[Развертывание приложений, служб и компонентов](/visualstudio/deployment/deploying-applications-services-and-components)|Рассматриваются варианты развертывания в Visual Studio, включая инструкции по публикации приложения с помощью технологии ClickOnce и установщика Windows.|
 |[Публикация приложений ClickOnce](/visualstudio/deployment/publishing-clickonce-applications)|Описывается, как упаковать приложение Windows Forms и развернуть его на клиентских компьютерах в сети с помощью технологии ClickOnce.|

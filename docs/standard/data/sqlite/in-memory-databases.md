@@ -2,12 +2,12 @@
 title: Базы данных в памяти
 ms.date: 12/13/2019
 description: Узнайте, как использовать базы данных SQLite в памяти.
-ms.openlocfilehash: b125ff5aa4128bd4c3ff558c5573b7d11802090a
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 16a9b6536fbfede203c24b757e96e28e7c49dc05
+ms.sourcegitcommit: cbdc0f4fd39172b5191a35200c33d5030774463c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75450468"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75777412"
 ---
 # <a name="in-memory-databases"></a>Базы данных в памяти
 
@@ -19,7 +19,7 @@ Data Source=:memory:
 
 ## <a name="shareable-in-memory-databases"></a>Совместное использование баз данных в памяти
 
-Базы данных в памяти могут совместно использоваться несколькими подключениями с помощью `Mode=Memory` и `Cache=Shared` в строке подключения. Ключевое слово `Data Source` используется для присвоения имени базе данных в памяти. Строки подключения, использующие одно и то же имя, будут обращаться к одной и той же базе данных в памяти. База данных сохраняется, пока по крайней мере одно подключение к ней остается открытым. [Пример](https://github.com/dotnet/samples/blob/master/samples/snippets/standard/data/sqlite/InMemorySample/Program.cs) , демонстрирующий это, можно найти на сайте GitHub.
+Базы данных в памяти могут совместно использоваться несколькими подключениями с помощью `Mode=Memory` и `Cache=Shared` в строке подключения. Ключевое слово `Data Source` используется для присвоения имени базе данных в памяти. Строки подключения, использующие одно и то же имя, будут обращаться к одной и той же базе данных в памяти. База данных сохраняется, пока по крайней мере одно подключение к ней остается открытым. [Пример](https://github.com/dotnet/samples/blob/master/snippets/standard/data/sqlite/InMemorySample/Program.cs) , демонстрирующий это, можно найти на сайте GitHub.
 
 ```ConnectionString
 Data Source=InMemorySample;Mode=Memory;Cache=Shared
