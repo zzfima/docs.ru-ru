@@ -194,7 +194,7 @@ using System.Text.Json.Serialization;
 
 ### <a name="customize-individual-property-names"></a>Настройка отдельных имен свойств
 
-Чтобы задать имя отдельных свойств, используйте атрибут [[жсонпропертинаме]](xref:System.Text.Json.Serialization.JsonPropertyNameAttribute) .
+Чтобы задать имя отдельных свойств, используйте атрибут [[JsonPropertyName]](xref:System.Text.Json.Serialization.JsonPropertyNameAttribute) .
 
 Ниже приведен пример типа для сериализации и результирующего JSON:
 
