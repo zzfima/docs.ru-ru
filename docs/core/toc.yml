@@ -339,8 +339,9 @@
     - name: Генератор сериализации XML
       href: additional-tools/xml-serializer-generator.md
 - name: Перенос из .NET Framework
-  href: porting/index.md
   items:
+    - name: Обзор
+      href: porting/index.md
     - name: "Технологии .NET\_Framework, недоступные в .NET\_Core"
       href: porting/net-framework-tech-unavailable.md
     - name: Анализ зависимостей сторонних производителей

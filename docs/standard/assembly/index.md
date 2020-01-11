@@ -12,12 +12,12 @@ helpviewer_keywords:
 - assemblies [.NET Framework]
 - version boundaries
 - type boundaries
-ms.openlocfilehash: 8e68d2dbb13d226ba738bdf8455418c9e771d6a6
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 9fd0c55294815c191f1e116dd4e16a44693f3565
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73733151"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75900597"
 ---
 # <a name="assemblies-in-net"></a>Сборки в .NET
 
@@ -91,7 +91,7 @@ ms.locfileid: "73733151"
 
 ## <a name="related-content"></a>Связанная информация
 
-|Заголовок|ОПИСАНИЕ|
+|Заголовок|Описание|
 |-----------|-----------------|
 |[Содержимое сборок](contents.md)|Элементы, составляющие сборку.|
 |[Манифест сборки](manifest.md)|Данные в манифесте сборки и способ их хранения в сборках.|
@@ -104,14 +104,13 @@ ms.locfileid: "73733151"
 |[Предоставление динамических методов и сборок](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)|Способы создания динамических сборок.|
 |[Обнаружение сборок в среде выполнения](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)|Способы разрешения платформой .NET Framework ссылок на сборки во время выполнения.|
 
-## <a name="reference"></a>Ссылка
+## <a name="reference"></a>Справочник
 
 <xref:System.Reflection.Assembly?displayProperty=nameWithType>
 
 ## <a name="see-also"></a>См. также
 
 - [Формат файла сборки .NET](file-format.md)
-- [Сборки в .NET](index.md)
 - [Дружественные сборки](friend.md)
 - [Ссылочные сборки](reference-assemblies.md)
 - [Практическое руководство. Загрузка и выгрузка сборок](load-unload.md)

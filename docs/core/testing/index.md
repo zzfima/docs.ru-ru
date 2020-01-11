@@ -4,12 +4,12 @@ description: В этой статье представлен краткий об
 author: ardalis
 ms.author: wiwagn
 ms.date: 08/30/2017
-ms.openlocfilehash: 776a430868c7a4829e11a2958fb998c11315c43d
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 41f4457e636ca495b78109803ca66680e72d007e
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714301"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75899887"
 ---
 # <a name="unit-testing-in-net-core-and-net-standard"></a>Модульное тестирование в .NET Core и .NET Standard
 
@@ -28,7 +28,7 @@ ms.locfileid: "75714301"
 Также обратите внимание, что для написания тестов есть рекомендации. Например, [разработка на основе тестирования](https://deviq.com/test-driven-development/) выполняется, когда модульный тест написан до кода, который ему нужно проверить. Разработка на основе тестирования похожа на план книги. Она помогает разработчикам писать более простой, удобочитаемый и эффективный код. 
 
 > [!NOTE]
-> Команда ASP.NET следует [этим соглашениям](https://github.com/aspnet/Home/wiki/Engineering-guidelines#unit-tests-and-functional-tests), чтобы разработчики могли придумать понятные имена тестовых классов и методов.
+> Команда ASP.NET следует [этим соглашениям](https://github.com/dotnet/aspnetcore/wiki/Engineering-guidelines#unit-tests-and-functional-tests), чтобы разработчики могли придумать понятные имена тестовых классов и методов.
 
 Попробуйте не создавать зависимости в инфраструктуре при написании модульных тестов. Из-за этого тесты выполняются медленно и нестабильно. Зависимости следует использовать в интеграционных тестах. Чтобы избежать появления зависимостей в коде приложения, следуйте [принципу явных зависимостей](https://deviq.com/explicit-dependencies-principle/) и используйте [внедрение зависимостей](/aspnet/core/fundamentals/dependency-injection). Вы также можете разместить модульные тесты в отдельном проекте, не содержащем интеграционных тестов. Это гарантирует отсутствие в проекте модульного теста ссылок на пакеты инфраструктуры или зависимостей от них.
 
