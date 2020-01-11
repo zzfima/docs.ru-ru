@@ -2,12 +2,12 @@
 title: Сравнение с System. Data. SQLite
 ms.date: 12/13/2019
 description: Описывает некоторые различия между библиотеками Microsoft. Data. SQLite и System. Data. SQLite.
-ms.openlocfilehash: dee90c132b108f2c876c0d8becc1b02035a47b61
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 076bbc6f746cf9296c96ec73047397a21a3b2558
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75450282"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75900714"
 ---
 # <a name="comparison-to-systemdatasqlite"></a>Сравнение с System. Data. SQLite
 
@@ -63,15 +63,15 @@ Microsoft. Data. SQLite имеет гораздо меньше ключевых 
 
 ## <a name="authorization"></a>Авторизация
 
-Microsoft. Data. SQLite не имеет API, предоставляющего обратный вызов авторизации SQLite. Чтобы отправить отзыв об этой функции, используйте [#13835](https://github.com/aspnet/EntityFrameworkCore/issues/13835) выпуска.
+Microsoft. Data. SQLite не имеет API, предоставляющего обратный вызов авторизации SQLite. Чтобы отправить отзыв об этой функции, используйте [#13835](https://github.com/dotnet/efcore/issues/13835) выпуска.
 
 ## <a name="data-change-notifications"></a>Уведомления об изменении данных
 
-Microsoft. Data. SQLite не имеет интерфейсов API, предоставляя уведомления об изменении данных SQLite. Чтобы отправить отзыв об этой функции, используйте [#13827](https://github.com/aspnet/EntityFrameworkCore/issues/13827) выпуска.
+Microsoft. Data. SQLite не имеет интерфейсов API, предоставляя уведомления об изменении данных SQLite. Чтобы отправить отзыв об этой функции, используйте [#13827](https://github.com/dotnet/efcore/issues/13827) выпуска.
 
 ## <a name="virtual-table-modules"></a>Модули виртуальной таблицы
 
-Microsoft. Data. SQLite не имеет API для создания виртуальных модулей таблиц. Чтобы отправить отзыв об этой функции, используйте [#13823](https://github.com/aspnet/EntityFrameworkCore/issues/13823) выпуска.
+Microsoft. Data. SQLite не имеет API для создания виртуальных модулей таблиц. Чтобы отправить отзыв об этой функции, используйте [#13823](https://github.com/dotnet/efcore/issues/13823) выпуска.
 
 ## <a name="see-also"></a>См. также:
 

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b6128694-11ed-46e7-bd4e-49ea1914c46a
 topic_type:
 - apiref
-ms.openlocfilehash: 8812a98b0f28dd1336903dc34682f638a291f53b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a69fb861f7c2671a5c26245aa544ee99bcbdb56b
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73110993"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901012"
 ---
 # <a name="icordebugcreateprocess-method"></a>Метод ICorDebug::CreateProcess
 Запускает процесс и его основной поток под управлением отладчика.  
@@ -61,7 +61,7 @@ HRESULT CreateProcess (
  окне Задайте значение `true`, чтобы указать, что каждый наследуемый дескриптор в вызывающем процессе наследуется запущенным процессом, или `false`, чтобы указать, что дескрипторы не наследуются. Унаследованные дескрипторы имеют те же значения и права доступа, что и исходные дескрипторы.  
   
  `dwCreationFlags`  
- окне Побитовое сочетание [флагов создания процесса Win32](https://go.microsoft.com/fwlink/?linkid=69981) , управляющих классом приоритета и поведением запущенного процесса.  
+ окне Побитовое сочетание [флагов создания процесса Win32](/windows/win32/procthread/process-creation-flags) , управляющих классом приоритета и поведением запущенного процесса.  
   
  `lpEnvironment`  
  окне Указатель на блок среды для нового процесса.  
@@ -99,6 +99,6 @@ HRESULT CreateProcess (
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейс ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)

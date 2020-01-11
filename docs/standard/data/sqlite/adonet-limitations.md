@@ -2,12 +2,12 @@
 title: Ограничения ADO.NET
 ms.date: 12/13/2019
 description: Описание некоторых ограничений ADO.NET, которые могут возникнуть.
-ms.openlocfilehash: b58fd3a9ea324e9c17ad21479e53e45f5982db9d
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 8664b73071fc859ed30080f549b05e7d6ed020f4
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75450342"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901255"
 ---
 # <a name="adonet-limitations"></a>Ограничения ADO.NET
 
@@ -25,13 +25,13 @@ Microsoft. Data. SQLite предоставляет реализации мног
 
 Microsoft. Data. SQLite пока еще не поддерживает System. Transactions. Вместо этого используйте транзакции ADO.NET. Дополнительные сведения см. в разделе [Transactions](transactions.md).
 
-Предоставьте отзыв о нехватке поддержки для System. Transactions в [#13825](https://github.com/aspnet/EntityFrameworkCore/issues/13825)выпуска.
+Предоставьте отзыв о нехватке поддержки для System. Transactions в [#13825](https://github.com/dotnet/efcore/issues/13825)выпуска.
 
 ## <a name="data-adapters"></a>Адаптеры данных
 
 `DbDataAdapter` еще не реализована Microsoft. Data. SQLite. Это означает, что вы можете использовать только ADO.NET `DataSet` и `DataTable` для загрузки данных и не обновлять их.
 
-Чтобы оставить отзыв о реализации `DbDataAdapter`, используйте [#13838](https://github.com/aspnet/EntityFrameworkCore/issues/13838) выпуска.
+Чтобы оставить отзыв о реализации `DbDataAdapter`, используйте [#13838](https://github.com/dotnet/efcore/issues/13838) выпуска.
 
 ## <a name="output-parameters"></a>Параметры вывода
 

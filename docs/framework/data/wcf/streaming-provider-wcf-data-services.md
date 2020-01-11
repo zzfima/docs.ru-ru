@@ -10,12 +10,12 @@ helpviewer_keywords:
 - streaming data provider [WCF Data Services]
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-ms.openlocfilehash: a5793eae92ffdfa65872c93273bd7cfefdc6f674
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 1eb1267ae0b08d558d5afc41d03270917473a669
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74568811"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75900912"
 ---
 # <a name="streaming-provider-wcf-data-services"></a>Потоковый поставщик (службы WCF Data Services)
 
@@ -39,7 +39,7 @@ ms.locfileid: "74568811"
 
 5. Включите доступ к двоичным ресурсам на сервере или в источнике данных.
 
-Примеры в этом разделе основаны на образце службы Photo Streaming, которая подробно обсуждается в [серии поставщиков потоковой передачи служб данных: реализация поставщика потоковой передачи (часть 1)](https://go.microsoft.com/fwlink/?LinkID=198989). Исходный код для этого примера службы доступен на [странице образец службы данных для передачи фотографий](https://go.microsoft.com/fwlink/?LinkID=198988) в галерее кода MSDN.
+Примеры в этом разделе основаны на образце службы Photo Streaming, которая подробно обсуждается в [серии поставщиков потоковой передачи служб данных: реализация поставщика потоковой передачи (часть 1)](https://docs.microsoft.com/archive/blogs/astoriateam/data-services-streaming-provider-series-implementing-a-streaming-provider-part-1). Исходный код для образца службы данных для передачи фотографий доступен на сайте [GitHub](https://github.com/microsoftarchive/msdn-code-gallery-community-s-z/tree/master/Streaming%20Photo%20OData%20Service%20Sample).
 
 ## <a name="defining-a-media-link-entry-in-the-data-model"></a>Определение медиассылки в модели данных
 
@@ -53,7 +53,7 @@ ms.locfileid: "74568811"
 
 Необходимо также добавить пространство имен `xmlns:m=http://schemas.microsoft.com/ado/2007/08/dataservices/metadata` либо в сущность, либо в корень EDMX- или CSDL-файла, определяющего модель данных.
 
-Пример службы данных, использующей поставщик Entity Framework и предоставляющий ресурс мультимедиа, см. в [серии поставщиков потоковой передачи служб данных. Реализация поставщика потоковой передачи (часть 1)](https://go.microsoft.com/fwlink/?LinkID=198989).
+Пример службы данных, использующей поставщик Entity Framework и предоставляющий ресурс мультимедиа, см. в [серии поставщиков потоковой передачи служб данных. Реализация поставщика потоковой передачи (часть 1)](https://docs.microsoft.com/archive/blogs/astoriateam/data-services-streaming-provider-series-implementing-a-streaming-provider-part-1).
 
 **Поставщик отражений**
 
