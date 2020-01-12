@@ -3,13 +3,13 @@ title: Добавление ссылки на Веб-службу WCF
 description: Обзор инструмента Microsoft WCF Web Service Reference Provider, который расширяет функциональные возможности проектов .NET Core и ASP.NET Core аналогично функции "Добавление ссылки на службу" для проектов .NET Framework.
 author: dasetser
 ms.date: 10/29/2019
-ms.custom: mvc, seodec18
-ms.openlocfilehash: feecf374e1af48f349495c13ea91b810c6b0a1c3
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.custom: mvc
+ms.openlocfilehash: cdd6b457d289dd7b752c97c5645f0797f24b72aa
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73191899"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715675"
 ---
 # <a name="use-the-wcf-web-service-reference-provider-tool"></a>Использование инструмента WCF Web Service Reference Provider
 

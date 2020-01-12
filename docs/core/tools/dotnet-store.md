@@ -3,13 +3,12 @@ title: Команда dotnet store
 description: Команда dotnet store сохраняет указанные сборки в хранилище пакетов среды выполнения.
 author: bleroy
 ms.date: 05/29/2018
-ms.custom: seodec18
-ms.openlocfilehash: 58889039d117a2231cda693e4aca7790f018d1b5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3a81e06f36ffbed68b7cc35de47aa5dca32bab6e
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54606755"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714201"
 ---
 # <a name="dotnet-store"></a>dotnet store
 

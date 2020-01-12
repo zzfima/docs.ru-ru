@@ -2,12 +2,12 @@
 title: Скрипты dotnet-install
 description: Сведения о скриптах dotnet-install, которые служат для установки средств CLI .NET Core и общей среды выполнения.
 ms.date: 01/16/2019
-ms.openlocfilehash: 867be93b5a4c66258df438ce718dabbd4ef2891c
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: f72e12fc415824a9c69eba6f52e3c01717cf654c
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70849574"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740530"
 ---
 # <a name="dotnet-install-scripts-reference"></a>Справка по скриптам dotnet-install
 
@@ -25,7 +25,7 @@ Mac OS и Linux:
 
 `dotnet-install.sh [--channel] [--version] [--install-dir] [--architecture] [--runtime] [--dry-run] [--no-path] [--verbose] [--azure-feed] [--uncached-feed] [--no-cdn] [--feed-credential] [--runtime-id] [--skip-non-versioned-files] [--help]`
 
-## <a name="description"></a>ОПИСАНИЕ
+## <a name="description"></a>Описание
 
 Скрипты `dotnet-install` используются для установки пакета SDK для .NET Core без прав администратора. Этот пакет включает общую среду выполнения и средства .NET Core CLI.
 
@@ -195,7 +195,7 @@ Mac OS и Linux:
   Mac OS и Linux:
 
   ```bash
-  curl -sSL https://dot.net/v1/dotnet-install.sh | bash /dev/stdin <additional install-script args>
+  curl -ssl https://dot.net/v1/dotnet-install.sh | bash /dev/stdin <additional install-script args>
   ```
 
 ## <a name="see-also"></a>См. также

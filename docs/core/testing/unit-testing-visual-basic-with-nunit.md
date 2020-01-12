@@ -3,13 +3,12 @@ title: Модульное тестирование Visual Basic в .NET Core с 
 description: Сведения о концепциях модульного тестирования в .NET Core в рамках пошаговой процедуры по созданию примера Visual Basic решения с помощью NUnit.
 author: rprouse
 ms.date: 10/04/2018
-ms.custom: seodec18
-ms.openlocfilehash: 4776916c316e18de954c8ccaa985075dc2ea0fc5
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 8f05d25a0add76f5c552f5b9ac1eb310c3d6407a
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428722"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715404"
 ---
 # <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-nunit"></a>Модульное тестирование библиотек .NET Core в Visual Basic с использованием dotnet test и NUnit
 

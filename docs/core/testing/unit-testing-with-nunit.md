@@ -3,13 +3,12 @@ title: Модульное тестирование кода C# с использ
 description: Сведения о концепциях модульного тестирования в C# и .NET Core в рамках пошаговой процедуры по созданию примера решения с помощью команды dotnet test и NUnit.
 author: rprouse
 ms.date: 08/31/2018
-ms.custom: seodec18
-ms.openlocfilehash: 20f81981458b7e805a917202edce671ced69d89a
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 1ea17d9f830d8ac20e2bad79eebab5db767e0af8
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117309"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714218"
 ---
 # <a name="unit-testing-c-with-nunit-and-net-core"></a>Модульное тестирование кода C# с использованием NUnit и .NET Core
 

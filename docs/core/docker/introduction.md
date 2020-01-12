@@ -2,13 +2,13 @@
 title: Введение в Docker
 description: Эта статья содержит общие сведения об использовании Docker в контексте приложения .NET Core.
 ms.date: 03/20/2019
-ms.custom: mvc, seodec18
-ms.openlocfilehash: 22c8fa4cda5cfd6564695d3b86072c64f22fa335
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.custom: mvc
+ms.openlocfilehash: 278c921de83282d61b25f4d44e91535981285e83
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74087390"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715552"
 ---
 # <a name="introduction-to-net-and-docker"></a>Введение в .NET и Docker
 

@@ -3,12 +3,12 @@ title: Параметры конфигурации глобализации
 description: Вы можете узнать о параметрах времени выполнения, настраивающих аспекты глобализации для приложения .NET Core, например способа анализа дат на японском языке.
 ms.date: 11/27/2019
 ms.topic: reference
-ms.openlocfilehash: 0571c64eff5b38aafa37026fb2ba7f4aef778beb
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 76cd4a0a0f93f4df3ff243c6024b952576e8e6cb
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74998843"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740540"
 ---
 # <a name="run-time-configuration-options-for-globalization"></a>Параметры конфигурации времени выполнения для глобализации
 
@@ -16,7 +16,7 @@ ms.locfileid: "74998843"
 
 - Определяет, выполняется ли приложение .NET Core в инвариантном режиме глобализации без доступа к данным и поведению, зависящим от языка и региональных параметров, и имеет ли оно доступ к данным языка и региональных параметров.
 - По умолчанию: выполнение приложения с доступом к данным языка и региональных параметров (`false`).
-- Дополнительные сведения см. в статье [Инвариантный режим глобализации .NET Core](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md).
+- Дополнительные сведения см. в статье [Инвариантный режим глобализации .NET Core](https://github.com/dotnet/runtime/blob/master/docs/design/features/globalization-invariant-mode.md).
 
 | | Имя параметра | Значения |
 | - | - | - |
