@@ -1,15 +1,14 @@
 ---
 title: Выбор алгоритма ML.NET
 description: Сведения о выборе алгоритма ML.NET для модели машинного обучения
-author: natke
 ms.topic: overview
 ms.date: 06/05/2019
-ms.openlocfilehash: 0721418d8b0b3c9ab645eb9885b0f4951c37762e
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 0fed33203c02303e37e47f548e08ec131eeb1c77
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976700"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75739997"
 ---
 # <a name="how-to-choose-an-mlnet-algorithm"></a>Выбор алгоритма ML.NET
 

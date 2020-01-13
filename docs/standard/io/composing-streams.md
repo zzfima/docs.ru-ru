@@ -13,14 +13,12 @@ helpviewer_keywords:
 - base streams
 - streams, backing stores
 ms.assetid: da761658-a535-4f26-a452-b30df47f73d5
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 452071e9726a95b4b3d9bb9cefe720d39bbc3e0c
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.openlocfilehash: 689cc9537cd7a5fe6a677d42e5790bbcf1b3aefa
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55674351"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75708152"
 ---
 # <a name="compose-streams"></a>Создание потоков
 *Резервное хранилище* — это устройство хранения информации, например диск или память. Каждое из резервных хранилищ использует собственную реализацию потока, основанную на классе <xref:System.IO.Stream>. 
@@ -34,13 +32,13 @@ ms.locfileid: "55674351"
 >[!IMPORTANT]
 >В примерах предполагается, что файл с именем *MyFile.txt* уже существует в той же папке, что и приложение.  
 
-## <a name="example-use-streamreader"></a>Пример Использование StreamReader
+## <a name="example-use-streamreader"></a>Пример. Использование StreamReader
 В следующем примере создается <xref:System.IO.StreamReader> для чтения символов из **FileStream** и передается в качестве аргумента конструктора в **StreamReader**. <xref:System.IO.StreamReader.ReadLine%2A?displayProperty=nameWithType> выполняет чтение, пока <xref:System.IO.StreamReader.Peek%2A?displayProperty=nameWithType> обнаруживает символы.  
   
  [!code-csharp[System.IO.StreamReader#20](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.StreamReader/CS/source2.cs#20)]
  [!code-vb[System.IO.StreamReader#20](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.StreamReader/VB/source2.vb#20)]  
   
-## <a name="example-use-binaryreader"></a>Пример Использование BinaryReader
+## <a name="example-use-binaryreader"></a>Пример. Использование BinaryReader
 В следующем примере создается <xref:System.IO.BinaryReader> для чтения байтов из **FileStream** и передается в качестве аргумента конструктора в **BinaryReader**. <xref:System.IO.BinaryReader.ReadByte%2A> выполняет чтение, пока <xref:System.IO.BinaryReader.PeekChar%2A> обнаруживает байты.  
   
  [!code-csharp[System.IO.StreamReader#21](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.StreamReader/CS/source3.cs#21)]

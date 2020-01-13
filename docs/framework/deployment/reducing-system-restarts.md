@@ -6,14 +6,12 @@ helpviewer_keywords:
 - installing .NET Framework
 - installation [.NET Framework]
 ms.assetid: 7aa8cb72-dee9-4716-ac54-b17b9ae8218f
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e2b030508897f13cce1fc6439809b98bbae17813
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 6261a883e7b99b7fd38da2a17ab4820c81552506
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975675"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716428"
 ---
 # <a name="reducing-system-restarts-during-net-framework-45-installations"></a>Уменьшение числа перезагрузок при установке платформы .NET Framework 4.5
 Установщик .NET Framework 4.5 использует [Диспетчер перезагрузки](/windows/win32/rstmgr/about-restart-manager) для предотвращения перезагрузки системы во время установки, если это возможно. Если программа установки устанавливает платформу .NET Framework, она может взаимодействовать с диспетчером перезапуска, чтобы воспользоваться преимуществами этой функции. Дополнительные сведения см. в разделе [Практическое руководство. Получение хода выполнения установщика .NET Framework 4.5](how-to-get-progress-from-the-dotnet-installer.md).  

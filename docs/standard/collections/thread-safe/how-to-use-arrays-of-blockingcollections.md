@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Использование массивов для блокировки коллекций в конвейере
+title: Практическое руководство. Использование массивов коллекций с функцией блокировки в конвейере
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,14 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - thread-safe collections, blocking collections in pipeline
 ms.assetid: a39c7ec3-3ad7-4f4d-8fe4-b3e9dbabe2ed
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a4667d78fdf91a3e62c22d88c7cbe9effaae57d5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 397c438bacd1cfed1613efef61e9d7266d55ea47
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54627204"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711263"
 ---
 # <a name="how-to-use-arrays-of-blocking-collections-in-a-pipeline"></a>Практическое руководство. Использование массивов для блокировки коллекций в конвейере
 В приведенном ниже примере показано, как использовать массивы объектов <xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType> со статическими методами, например методами <xref:System.Collections.Concurrent.BlockingCollection%601.TryAddToAny%2A> и <xref:System.Collections.Concurrent.BlockingCollection%601.TryTakeFromAny%2A>, для реализации быстрой и гибкой передачи данных между компонентами.  

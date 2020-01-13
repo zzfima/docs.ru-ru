@@ -2,16 +2,15 @@
 title: Формат файла сборки .NET
 description: Сведения о формате файла сборки .NET, который используется для описания и размещения приложений и библиотек .NET.
 author: richlander
-ms.author: mairaw
 ms.date: 08/20/2019
 ms.technology: dotnet-standard
 ms.assetid: 6520323e-ff28-4c8a-ba80-e64a413199e6
-ms.openlocfilehash: c9396c45e3c6cdbc9360485f6286a1746bf81fdd
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 4cf6522d66d7a1efccde45078768a773db6e6cb0
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70970155"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711588"
 ---
 # <a name="net-assembly-file-format"></a>Формат файла сборки .NET
 

@@ -18,13 +18,12 @@ helpviewer_keywords:
 - comparing strings
 - strings [.NET Framework],comparing
 ms.assetid: b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7
-ms.custom: seodec18
-ms.openlocfilehash: cd6b24a6dd893f0c522573a0e19914164c15141f
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: c88776ea9d8ba17d86767b704e8b0eaff5b6cb89
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73973945"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711484"
 ---
 # <a name="best-practices-for-using-strings-in-net"></a>Рекомендации по использованию строк в .NET
 
@@ -57,7 +56,7 @@ ms.locfileid: "73973945"
 
 Большинство методов обработки строк в .NET являются перегруженными. Как правило, одна или несколько перегрузок принимают настройки по умолчанию, а другие — нет и вместо этого определяют требуемый точный способ сравнения и обработки строк. Большинство методов, не использующих значения по умолчанию, включают параметр типа <xref:System.StringComparison>, который представляет собой перечисление, явно задающее правила сравнения строк по языку, региональным параметрам и регистру. В следующей таблице описаны элементы перечисления <xref:System.StringComparison> .
 
-|Элемент StringComparison|ОПИСАНИЕ|
+|Элемент StringComparison|Описание|
 |-----------------------------|-----------------|
 |<xref:System.StringComparison.CurrentCulture>|Выполняет сравнение с учетом регистра, используя текущий язык и региональные параметры.|
 |<xref:System.StringComparison.CurrentCultureIgnoreCase>|Выполняет сравнение без учета регистра, используя текущий язык и региональные параметры.|
@@ -112,7 +111,7 @@ ms.locfileid: "73973945"
 - Перегрузки<xref:System.String.Compare%2A?displayProperty=nameWithType> , не включающие параметр <xref:System.StringComparison> .
 - Перегрузки<xref:System.String.CompareTo%2A?displayProperty=nameWithType> .
 - Метод по умолчанию <xref:System.String.StartsWith%28System.String%29?displayProperty=nameWithType> и метод <xref:System.String.StartsWith%28System.String%2CSystem.Boolean%2CSystem.Globalization.CultureInfo%29?displayProperty=nameWithType> с параметром `null`<xref:System.Globalization.CultureInfo> .
-- Метод по умолчанию <xref:System.String.EndsWith%28System.String%29?displayProperty=nameWithType> и метод <xref:System.String.EndsWith%28System.String%2CSystem.Boolean%2CSystem.Globalization.CultureInfo%29?displayProperty=nameWithType> с параметром `null`<xref:System.Globalization.CultureInfo> .
+- Метод <xref:System.String.EndsWith%28System.String%29?displayProperty=nameWithType> по умолчанию и метод <xref:System.String.EndsWith%28System.String%2CSystem.Boolean%2CSystem.Globalization.CultureInfo%29?displayProperty=nameWithType> с параметром `null`<xref:System.Globalization.CultureInfo>.
 - Перегрузки<xref:System.String.IndexOf%2A?displayProperty=nameWithType> , принимающие в качестве параметра поиска <xref:System.String> и не имеющие параметра <xref:System.StringComparison> .
 - Перегрузки<xref:System.String.LastIndexOf%2A?displayProperty=nameWithType> , принимающие в качестве параметра поиска <xref:System.String> и не имеющие параметра <xref:System.StringComparison> .
 
@@ -200,7 +199,7 @@ InvariantCulture: a + ̊ = å
 
 В следующей таблице приведено сопоставление семантического контекста строк с элементом перечисления <xref:System.StringComparison>:
 
-|Data|Поведение|Соответствующее сравнение System.StringComparison<br /><br /> value|
+|Data|Поведение|Соответствующее сравнение System.StringComparison<br /><br /> значение|
 |----------|--------------|-----------------------------------------------------|
 |Внутренние идентификаторы с учетом регистра<br /><br /> Идентификаторы с учетом регистра в таких стандартах, как XML и HTTP.<br /><br /> Параметры безопасности с учетом регистра.|Нелингвистические идентификаторы с точным соответствием байтов.|<xref:System.StringComparison.Ordinal>|
 |Внутренние идентификаторы без учета регистра.<br /><br /> Идентификаторы без учета регистра в таких стандартах, как XML и HTTP.<br /><br /> Пути к файлам.<br /><br /> Ключи реестра и значения.<br /><br /> Переменные среды.<br /><br /> Идентификаторы ресурсов (например, имена дескрипторов).<br /><br /> Параметры безопасности без учета регистра.|Нелингвистический идентификатор, в котором регистр не учитывается; особенно данные, хранящиеся в большинстве системных служб Windows.|<xref:System.StringComparison.OrdinalIgnoreCase>|

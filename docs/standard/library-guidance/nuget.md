@@ -1,15 +1,13 @@
 ---
 title: NuGet и библиотеки .NET
 description: Практические рекомендации по упаковке библиотек .NET с помощью NuGet.
-author: jamesnk
-ms.author: mairaw
 ms.date: 01/15/2019
-ms.openlocfilehash: 9288bf440692302c3a0b1954236540af6363f367
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 71c380f6062c09a8951769009b29b567fddfddfc
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72775315"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706482"
 ---
 # <a name="nuget"></a>NuGet
 
@@ -46,7 +44,7 @@ NuGet — это диспетчер пакетов для экосистемы .
 
 Пакет NuGet поддерживает многие [свойства метаданных](/nuget/reference/nuspec). В следующей таблице собраны основные метаданные, которые должен предоставлять каждый пакет на NuGet.org.
 
-| Имя свойства MSBuild              | Имя Nuspec              | ОПИСАНИЕ  |
+| Имя свойства MSBuild              | Имя Nuspec              | Описание  |
 | ---------------------------------- | ------------------------ | ------------ |
 | `PackageId`                        | `id`                       | Идентификатор пакета. Можно зарезервировать префикс из идентификатора, если он удовлетворяет [критериям](/nuget/reference/id-prefix-reservation). |
 | `PackageVersion`                   | `version`                  | Версия пакета NuGet. См. сведения о [версии пакета NuGet](./versioning.md#nuget-package-version).             |

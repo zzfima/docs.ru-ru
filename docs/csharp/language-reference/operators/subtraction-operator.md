@@ -1,6 +1,5 @@
 ---
 title: '- Операторы - и -=. Справочник по C#'
-ms.custom: seodec18
 ms.date: 05/27/2019
 f1_keywords:
 - -_CSharpKeyword
@@ -13,12 +12,12 @@ helpviewer_keywords:
 - event unsubscription [C#]
 - -= operator [C#]
 ms.assetid: 4de7a4fa-c69d-48e6-aff1-3130af970b2d
-ms.openlocfilehash: cf642fcac7233d27f2ed9052829c145038e93419
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 775f06b05d75078e53ab777d09713d69467ace14
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73038874"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712615"
 ---
 # <a name="--and---operators-c-reference"></a>Операторы - и -= (справочник по C#)
 

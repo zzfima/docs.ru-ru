@@ -10,14 +10,12 @@ helpviewer_keywords:
 - compression
 - compress files
 ms.assetid: e9876165-3c60-4c84-a272-513e47acf579
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 9a4ea4c32f5b73b283a5982f16e55a4d078171c1
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 6345b467e9ade085a38de6dc9758b1bd99d1ae62
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55255007"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75708106"
 ---
 # <a name="how-to-compress-and-extract-files"></a>Практическое руководство. Сжатие и извлечение файлов
 

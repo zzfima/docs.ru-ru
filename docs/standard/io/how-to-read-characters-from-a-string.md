@@ -13,25 +13,23 @@ helpviewer_keywords:
 - reading data, strings
 - streams, reading characters from string
 ms.assetid: 27ea5e52-6db8-42d8-980a-50bcfc7fd270
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e890e4172e645e9919ea88ec5835aaed7432c0c6
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 0c3516c4abadfd22609c3568beffc14e027ef69e
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835204"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706677"
 ---
 # <a name="how-to-read-characters-from-a-string"></a>Практическое руководство. Считывание символов из строки
 Следующий пример кода демонстрирует синхронное и асинхронное чтение символов из строки.  
   
-## <a name="example-read-characters-synchronously"></a>Пример Синхронное чтение символов 
+## <a name="example-read-characters-synchronously"></a>Пример. Синхронное чтение символов 
  Этот пример синхронным образом считывает 13 символов из строки, сохраняет их в массиве и отображает. Затем он считывает остальные символы строки, сохраняет их в массив, начиная с шестого элемента, и отображает содержимое массива.  
   
  [!code-csharp[Conceptual.StringReader#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.stringreader/cs/source.cs#1)]
  [!code-vb[Conceptual.StringReader#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.stringreader/vb/source.vb#1)]  
   
-## <a name="example-read-characters-asynchronously"></a>Пример Асинхронное чтение символов  
+## <a name="example-read-characters-asynchronously"></a>Пример. Асинхронное чтение символов  
  Ниже приведен пример кода за приложением WPF. При загрузке окна пример асинхронным способом считывает все символы из элемента управления <xref:System.Windows.Controls.TextBox> и сохраняет их в массиве. Затем он асинхронно записывает все буквы и пробелы в элемент управления <xref:System.Windows.Controls.TextBlock>, размещая их на отдельных строках.  
   
  [!code-csharp[Conceptual.StringReader#2](../../../samples/snippets/csharp/VS_Snippets_Wpf/StringReaderWriter/MainWindow.xaml.cs)]

@@ -5,14 +5,12 @@ ms.technology: dotnet-standard
 helpviewer_keywords:
 - thread-safe collections, when to upgrade
 ms.assetid: a9babe97-e457-4ff3-b528-a1bc940d5320
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e18dd5370143dfe4faaffb49017d0a8f62c87433
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 5a0abef6de9f932f44fc7e3239b98c3a27846580
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490989"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711224"
 ---
 # <a name="when-to-use-a-thread-safe-collection"></a>Преимущества использования потокобезопасных коллекций
 В .NET Framework 4 представлено пять новых типов коллекций, специально разработанных для поддержки многопотоковых операций добавления и удаления. Для достижения потокобезопасности эти новые типы используют различные типы эффективных механизмов синхронизации с блокировкой и без блокировки. Синхронизация добавляет к операции издержки. Значения издержек зависят от используемого типа синхронизации, выполняемого типа операции и других факторов, например количества потоков, которые одновременно пытаются получить доступ к коллекции.  

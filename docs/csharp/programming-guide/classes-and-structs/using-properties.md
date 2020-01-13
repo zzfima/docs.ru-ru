@@ -1,18 +1,17 @@
 ---
 title: Руководство по программированию на C#. Использование свойств
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - set accessor [C#]
 - get accessor [C#]
 - properties [C#], about properties
 ms.assetid: f7f67b05-0983-4cdb-96af-1855d24c967c
-ms.openlocfilehash: 3b10c24645dad842f498fb49c60b3272829cce29
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 5f4697ea518e7fe03df4ecac9d748386a8ac6313
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72579160"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705409"
 ---
 # <a name="using-properties-c-programming-guide"></a>Использование свойств (Руководство по программированию в C#)
 
@@ -22,7 +21,7 @@ ms.locfileid: "72579160"
 
 Свойства нашли широкое применение в программировании. Их можно использовать для проверки данных перед подтверждением изменения; для прозрачного предоставления доступа к данным класса, которые фактически извлекаются из других источников, например из базы данных; для выполнения действия при изменении данных (например, в этом случае может создаваться событие или изменяться значение других полей).
 
-При объявлении свойств в блоке класса указывается уровень доступа поля, затем тип и имя свойства, а после этого блок кода, в котором объявляются методы доступа `get` и (или) `set`. Например:
+При объявлении свойств в блоке класса указывается уровень доступа поля, затем тип и имя свойства, а после этого блок кода, в котором объявляются методы доступа `get` и (или) `set`. Пример:
 
 [!code-csharp[csProgGuideProperties#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#7)]
 
@@ -36,7 +35,7 @@ ms.locfileid: "72579160"
 
 [!code-csharp[csProgGuideProperties#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#8)]
 
-При ссылке на свойство (кроме случаев, когда свойство является целью присваивания) вызывается метод доступа `get`, который считывает значение свойства. Например:
+При ссылке на свойство (кроме случаев, когда свойство является целью присваивания) вызывается метод доступа `get`, который считывает значение свойства. Пример:
 
 [!code-csharp[csProgGuideProperties#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#9)]
 
@@ -46,7 +45,7 @@ ms.locfileid: "72579160"
 
 [!code-csharp[csProgGuideProperties#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#10)]
 
-Метод доступа `get` можно использовать для возврата значения поля напрямую или после вычисления. Например:
+Метод доступа `get` можно использовать для возврата значения поля напрямую или после вычисления. Пример:
 
 [!code-csharp[csProgGuideProperties#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#11)]
 
@@ -58,7 +57,7 @@ ms.locfileid: "72579160"
 
 [!code-csharp[csProgGuideProperties#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#12)]
 
-При присвоении значения свойству вызывается метод доступа `set` с аргументом, содержащим новое значение. Например:
+При присвоении значения свойству вызывается метод доступа `set` с аргументом, содержащим новое значение. Пример:
 
 [!code-csharp[csProgGuideProperties#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#13)]
 

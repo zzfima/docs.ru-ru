@@ -1,15 +1,13 @@
 ---
 title: Преобразования данных
 description: Изучите компоненты проектирования признаков, поддерживаемые в ML.NET.
-author: natke
-ms.author: nakersha
 ms.date: 04/02/2019
-ms.openlocfilehash: cb191b1688dce8f703bdabcd220eb39efe68fd48
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: ca410b475c556db5ad4c3862fb79755b455d6830
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73977236"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75739587"
 ---
 # <a name="data-transformations"></a>Преобразования данных
 
@@ -23,7 +21,7 @@ ms.locfileid: "73977236"
 
 Некоторым преобразованиям данных требуются данные для обучения, чтобы вычислять их параметры. Например, преобразователь <xref:Microsoft.ML.NormalizationCatalog.NormalizeMeanVariance%2A> позволяет вычислить среднее значение и дисперсию данных для обучения при выполнении операции `Fit()` и использует эти параметры в операции `Transform()`.
 
-Другим преобразованиям данных не требуются данные для обучения. Например, преобразование <xref:Microsoft.ML.ImageEstimatorsCatalog.ConvertToGrayscale*> позволяет выполнять операцию `Transform()` без изучения данных для обучения при выполнении операции `Fit()`.
+Другим преобразованиям данных не требуются данные для обучения. Например, преобразование <xref:Microsoft.ML.ImageEstimatorsCatalog.ConvertToGrayscale%2A> позволяет выполнять операцию `Transform()` без изучения данных для обучения при выполнении операции `Fit()`.
 
 ## <a name="column-mapping-and-grouping"></a>Сопоставление и группирование столбцов
 
@@ -51,85 +49,85 @@ ms.locfileid: "73977236"
 | Transform | Определение |
 | --- | --- |
 | <xref:Microsoft.ML.ConversionsExtensionsCatalog.ConvertType%2A> | Преобразование типа входного столбца в новый тип |
-| <xref:Microsoft.ML.ConversionsExtensionsCatalog.MapValue*> | Сопоставление значений с ключами (категориями) на основе предоставленного словаря сопоставлений |
-| <xref:Microsoft.ML.ConversionsExtensionsCatalog.MapValueToKey*> | Сопоставление значений с ключами (категориями) путем создания сопоставлений на основе входных данных |
-| <xref:Microsoft.ML.ConversionsExtensionsCatalog.MapKeyToValue*> | Обратное преобразование ключей в исходное значение |
-| <xref:Microsoft.ML.ConversionsExtensionsCatalog.MapKeyToVector*> | Обратное преобразование ключей в векторы исходных значений |
-| <xref:Microsoft.ML.ConversionsCatalog.MapKeyToBinaryVector*> | Обратное преобразование ключей в двоичный вектор исходных значений |
-| <xref:Microsoft.ML.ConversionsExtensionsCatalog.Hash*> | Хэширование значения во входном столбце |
+| <xref:Microsoft.ML.ConversionsExtensionsCatalog.MapValue%2A> | Сопоставление значений с ключами (категориями) на основе предоставленного словаря сопоставлений |
+| <xref:Microsoft.ML.ConversionsExtensionsCatalog.MapValueToKey%2A> | Сопоставление значений с ключами (категориями) путем создания сопоставлений на основе входных данных |
+| <xref:Microsoft.ML.ConversionsExtensionsCatalog.MapKeyToValue%2A> | Обратное преобразование ключей в исходное значение |
+| <xref:Microsoft.ML.ConversionsExtensionsCatalog.MapKeyToVector%2A> | Обратное преобразование ключей в векторы исходных значений |
+| <xref:Microsoft.ML.ConversionsCatalog.MapKeyToBinaryVector%2A> | Обратное преобразование ключей в двоичный вектор исходных значений |
+| <xref:Microsoft.ML.ConversionsExtensionsCatalog.Hash%2A> | Хэширование значения во входном столбце |
 
 ## <a name="text-transformations"></a>Преобразования текста
 
 | Transform | Определение |
 | --- | --- |
-| <xref:Microsoft.ML.TextCatalog.FeaturizeText*> | Преобразование текстового столбца в массив float счетчиков нормализованных n-грамм и символьных n-грамм |
-| <xref:Microsoft.ML.TextCatalog.TokenizeIntoWords*> | Разбиение одного или нескольких текстовых столбцов на отдельные слова |
-| <xref:Microsoft.ML.TextCatalog.TokenizeIntoCharactersAsKeys*> | Разбиение одного или нескольких текстовых столбцов на отдельные массивы float в пределах набора тем |
-| <xref:Microsoft.ML.TextCatalog.NormalizeText*> | Изменение регистра, удаление диакритических знаков, знаков препинания и цифр |
-| <xref:Microsoft.ML.TextCatalog.ProduceNgrams*> | Преобразование текстового столбца в контейнер n-грамм (ряд последовательных слов)|
-| <xref:Microsoft.ML.TextCatalog.ProduceWordBags*> | Преобразование текстового столбца в контейнер векторов n-грамм |
-| <xref:Microsoft.ML.TextCatalog.ProduceHashedNgrams*> | Преобразование текстового столбца в вектор счетчиков хэшированных n-грамм |
-| <xref:Microsoft.ML.TextCatalog.ProduceHashedWordBags*> | Преобразование текстового столбца в контейнер счетчиков хэшированных n-грамм |
-| <xref:Microsoft.ML.TextCatalog.RemoveDefaultStopWords*>  | Удаление стоп-слов по умолчанию для указанного языка из входных столбцов |
-| <xref:Microsoft.ML.TextCatalog.RemoveStopWords*> | Удаление указанного стоп-слова из входных столбцов |
-| <xref:Microsoft.ML.TextCatalog.LatentDirichletAllocation*> | Преобразование документа (в виде вектора значений с плавающей запятой) в вектор значений с плавающей запятой на основе набора тем |
-| <xref:Microsoft.ML.TextCatalog.ApplyWordEmbedding*> | Преобразование векторов токенов текста в векторы предложений с помощью предварительно обученной модели |
+| <xref:Microsoft.ML.TextCatalog.FeaturizeText%2A> | Преобразование текстового столбца в массив float счетчиков нормализованных n-грамм и символьных n-грамм |
+| <xref:Microsoft.ML.TextCatalog.TokenizeIntoWords%2A> | Разбиение одного или нескольких текстовых столбцов на отдельные слова |
+| <xref:Microsoft.ML.TextCatalog.TokenizeIntoCharactersAsKeys%2A> | Разбиение одного или нескольких текстовых столбцов на отдельные массивы float в пределах набора тем |
+| <xref:Microsoft.ML.TextCatalog.NormalizeText%2A> | Изменение регистра, удаление диакритических знаков, знаков препинания и цифр |
+| <xref:Microsoft.ML.TextCatalog.ProduceNgrams%2A> | Преобразование текстового столбца в контейнер n-грамм (ряд последовательных слов)|
+| <xref:Microsoft.ML.TextCatalog.ProduceWordBags%2A> | Преобразование текстового столбца в контейнер векторов n-грамм |
+| <xref:Microsoft.ML.TextCatalog.ProduceHashedNgrams%2A> | Преобразование текстового столбца в вектор счетчиков хэшированных n-грамм |
+| <xref:Microsoft.ML.TextCatalog.ProduceHashedWordBags%2A> | Преобразование текстового столбца в контейнер счетчиков хэшированных n-грамм |
+| <xref:Microsoft.ML.TextCatalog.RemoveDefaultStopWords%2A>  | Удаление стоп-слов по умолчанию для указанного языка из входных столбцов |
+| <xref:Microsoft.ML.TextCatalog.RemoveStopWords%2A> | Удаление указанного стоп-слова из входных столбцов |
+| <xref:Microsoft.ML.TextCatalog.LatentDirichletAllocation%2A> | Преобразование документа (в виде вектора значений с плавающей запятой) в вектор значений с плавающей запятой на основе набора тем |
+| <xref:Microsoft.ML.TextCatalog.ApplyWordEmbedding%2A> | Преобразование векторов токенов текста в векторы предложений с помощью предварительно обученной модели |
 
 ## <a name="image-transformations"></a>Преобразование изображений
 
 | Transform | Определение |
 | --- | --- |
-| <xref:Microsoft.ML.ImageEstimatorsCatalog.ConvertToGrayscale*> | Преобразование изображения в оттенки серого |
-| <xref:Microsoft.ML.ImageEstimatorsCatalog.ConvertToImage*> | Преобразование вектора пикселей в <xref:Microsoft.ML.Transforms.Image.ImageDataViewType> |
-| <xref:Microsoft.ML.ImageEstimatorsCatalog.ExtractPixels*> | Преобразование пикселей из входного изображения в вектор чисел |
-| <xref:Microsoft.ML.ImageEstimatorsCatalog.LoadImages*> | Загрузка изображений из папки в память |
-| <xref:Microsoft.ML.ImageEstimatorsCatalog.ResizeImages*> | Изменение размеров изображений |
-| <xref:Microsoft.ML.OnnxCatalog.DnnFeaturizeImage*> | Применяет предварительно обученную модель глубокой нейронной сети (DNN) для преобразования входного изображения в вектор признаков. |
+| <xref:Microsoft.ML.ImageEstimatorsCatalog.ConvertToGrayscale%2A> | Преобразование изображения в оттенки серого |
+| <xref:Microsoft.ML.ImageEstimatorsCatalog.ConvertToImage%2A> | Преобразование вектора пикселей в <xref:Microsoft.ML.Transforms.Image.ImageDataViewType> |
+| <xref:Microsoft.ML.ImageEstimatorsCatalog.ExtractPixels%2A> | Преобразование пикселей из входного изображения в вектор чисел |
+| <xref:Microsoft.ML.ImageEstimatorsCatalog.LoadImages%2A> | Загрузка изображений из папки в память |
+| <xref:Microsoft.ML.ImageEstimatorsCatalog.ResizeImages%2A> | Изменение размеров изображений |
+| <xref:Microsoft.ML.OnnxCatalog.DnnFeaturizeImage%2A> | Применяет предварительно обученную модель глубокой нейронной сети (DNN) для преобразования входного изображения в вектор признаков. |
 
 ## <a name="categorical-data-transformations"></a>Преобразование категориальных данных
 
 | Transform | Определение |
 | --- | --- |
-| <xref:Microsoft.ML.CategoricalCatalog.OneHotEncoding*> | Преобразование одного или нескольких текстовых столбцов в векторы с использованием [прямой](https://en.wikipedia.org/wiki/One-hot) кодировки |
-| <xref:Microsoft.ML.CategoricalCatalog.OneHotHashEncoding*> | Преобразование одного или нескольких текстовых столбцов в векторы с использованием прямой кодировки на основе хэша |
+| <xref:Microsoft.ML.CategoricalCatalog.OneHotEncoding%2A> | Преобразование одного или нескольких текстовых столбцов в векторы с использованием [прямой](https://en.wikipedia.org/wiki/One-hot) кодировки |
+| <xref:Microsoft.ML.CategoricalCatalog.OneHotHashEncoding%2A> | Преобразование одного или нескольких текстовых столбцов в векторы с использованием прямой кодировки на основе хэша |
 
 ## <a name="time-series-data-transformations"></a>Преобразования данных временных рядов
 
 | Transform | Определение |
 | --- | --- |
-| <xref:Microsoft.ML.TimeSeriesCatalog.DetectAnomalyBySrCnn*> | Обнаружение аномалий во входных данных временных рядов с помощью алгоритма спектрального остатка (SR) |
-| <xref:Microsoft.ML.TimeSeriesCatalog.DetectChangePointBySsa*> | Обнаружение точек изменений в данных временных рядов с помощью анализа сингулярного спектра (SSA) |
-| <xref:Microsoft.ML.TimeSeriesCatalog.DetectIidChangePoint*> | Обнаружение точек изменения в независимых и одинаково распределенных (IID) данных временных рядов с использованием адаптивных оценок плотности ядра и показателей мартингала |
-| <xref:Microsoft.ML.TimeSeriesCatalog.ForecastBySsa*> | Прогнозирование данных временных рядов с помощью анализа сингулярного спектра (SSA) |
-| <xref:Microsoft.ML.TimeSeriesCatalog.DetectSpikeBySsa*> | Обнаружение пиков данных временных рядов с помощью анализа сингулярного спектра (SSA) |
-| <xref:Microsoft.ML.TimeSeriesCatalog.DetectIidSpike*> | Обнаружение пиков в независимых и одинаково распределенных (IID) данных временных рядов с использованием адаптивных оценок плотности ядра и показателей мартингала |
+| <xref:Microsoft.ML.TimeSeriesCatalog.DetectAnomalyBySrCnn%2A> | Обнаружение аномалий во входных данных временных рядов с помощью алгоритма спектрального остатка (SR) |
+| <xref:Microsoft.ML.TimeSeriesCatalog.DetectChangePointBySsa%2A> | Обнаружение точек изменений в данных временных рядов с помощью анализа сингулярного спектра (SSA) |
+| <xref:Microsoft.ML.TimeSeriesCatalog.DetectIidChangePoint%2A> | Обнаружение точек изменения в независимых и одинаково распределенных (IID) данных временных рядов с использованием адаптивных оценок плотности ядра и показателей мартингала |
+| <xref:Microsoft.ML.TimeSeriesCatalog.ForecastBySsa%2A> | Прогнозирование данных временных рядов с помощью анализа сингулярного спектра (SSA) |
+| <xref:Microsoft.ML.TimeSeriesCatalog.DetectSpikeBySsa%2A> | Обнаружение пиков данных временных рядов с помощью анализа сингулярного спектра (SSA) |
+| <xref:Microsoft.ML.TimeSeriesCatalog.DetectIidSpike%2A> | Обнаружение пиков в независимых и одинаково распределенных (IID) данных временных рядов с использованием адаптивных оценок плотности ядра и показателей мартингала |
 
 ## <a name="missing-values"></a>Отсутствующие значения
 
 | Transform | Определение |
 | --- | --- |
-| <xref:Microsoft.ML.ExtensionsCatalog.IndicateMissingValues*> | Создание логического выходного столбца, который будет иметь значение true, если во входном столбце не указано значение |
-| <xref:Microsoft.ML.ExtensionsCatalog.ReplaceMissingValues*> | Создание выходного столбца, значение которого будет задано по умолчанию, если отсутствует значение из входного столбца. В противном случае по умолчанию будет задано значение из входного столбца. |
+| <xref:Microsoft.ML.ExtensionsCatalog.IndicateMissingValues%2A> | Создание логического выходного столбца, который будет иметь значение true, если во входном столбце не указано значение |
+| <xref:Microsoft.ML.ExtensionsCatalog.ReplaceMissingValues%2A> | Создание выходного столбца, значение которого будет задано по умолчанию, если отсутствует значение из входного столбца. В противном случае по умолчанию будет задано значение из входного столбца. |
 
 ## <a name="feature-selection"></a>Выбор признаков
 
 | Transform | Определение |
 | --- | --- |
-| <xref:Microsoft.ML.FeatureSelectionCatalog.SelectFeaturesBasedOnCount*> | Выбор признаков, у которых значения, заданные не по умолчанию, превышают порог |
-| <xref:Microsoft.ML.FeatureSelectionCatalog.SelectFeaturesBasedOnMutualInformation*> | Выбор признаков, от которых больше всего зависят данные в столбце метки |
+| <xref:Microsoft.ML.FeatureSelectionCatalog.SelectFeaturesBasedOnCount%2A> | Выбор признаков, у которых значения, заданные не по умолчанию, превышают порог |
+| <xref:Microsoft.ML.FeatureSelectionCatalog.SelectFeaturesBasedOnMutualInformation%2A> | Выбор признаков, от которых больше всего зависят данные в столбце метки |
 
 ## <a name="feature-transformations"></a>Преобразования признаков
 
 | Transform | Определение |
 | --- | --- |
-| <xref:Microsoft.ML.KernelExpansionCatalog.ApproximatedKernelMap*> | Сопоставление каждого входного вектора с пространством признаков нижнего измерения, где внутренние продукты приближены к функции ядра, чтобы эти признаки можно было использовать в качестве входных для линейных алгоритмов. |
-| <xref:Microsoft.ML.PcaCatalog.ProjectToPrincipalComponents*> | Уменьшение измерений входного вектора признаков путем применения алгоритма анализа основных компонентов. |
+| <xref:Microsoft.ML.KernelExpansionCatalog.ApproximatedKernelMap%2A> | Сопоставление каждого входного вектора с пространством признаков нижнего измерения, где внутренние продукты приближены к функции ядра, чтобы эти признаки можно было использовать в качестве входных для линейных алгоритмов. |
+| <xref:Microsoft.ML.PcaCatalog.ProjectToPrincipalComponents%2A> | Уменьшение измерений входного вектора признаков путем применения алгоритма анализа основных компонентов. |
 
 ## <a name="explainability-transformations"></a>Преобразования объясняемости
 
 | Transform | Определение |
 | --- | --- |
-| <xref:Microsoft.ML.ExplainabilityCatalog.CalculateFeatureContribution*> | Вычисление результатов вклада для каждого элемента вектора признаков |
+| <xref:Microsoft.ML.ExplainabilityCatalog.CalculateFeatureContribution%2A> | Вычисление результатов вклада для каждого элемента вектора признаков |
 
 ## <a name="calibration-transformations"></a>Преобразования калибровки
 
@@ -137,18 +135,18 @@ ms.locfileid: "73977236"
 | --- | --- |
 |<xref:Microsoft.ML.BinaryClassificationCatalog.CalibratorsCatalog.Platt%28System.String%2CSystem.String%2CSystem.String%29> | Преобразует необработанный показатель двоичного классификатора в вероятность класса с помощью логистической регрессии с параметрами, оцененными с помощью обучающих данных |
 | <xref:Microsoft.ML.BinaryClassificationCatalog.CalibratorsCatalog.Platt%28System.Double%2CSystem.Double%2CSystem.String%29> | Преобразует необработанный показатель двоичного классификатора в вероятность класса с помощью логистической регрессии с фиксированными параметрами |
-| <xref:Microsoft.ML.BinaryClassificationCatalog.CalibratorsCatalog.Naive*> | Преобразует необработанный показатель двоичного классификатора в вероятность класса путем назначения оценки ячейкам и вычисления вероятности на основе распределения между ячейками. |
-| <xref:Microsoft.ML.BinaryClassificationCatalog.CalibratorsCatalog.Isotonic*> | Преобразует необработанную оценку двоичного классификатора в вероятность класса путем назначения оценки ячейкам, где расположение границ и размер ячеек оцениваются с помощью обучающих данных.  |
+| <xref:Microsoft.ML.BinaryClassificationCatalog.CalibratorsCatalog.Naive%2A> | Преобразует необработанный показатель двоичного классификатора в вероятность класса путем назначения оценки ячейкам и вычисления вероятности на основе распределения между ячейками. |
+| <xref:Microsoft.ML.BinaryClassificationCatalog.CalibratorsCatalog.Isotonic%2A> | Преобразует необработанную оценку двоичного классификатора в вероятность класса путем назначения оценки ячейкам, где расположение границ и размер ячеек оцениваются с помощью обучающих данных.  |
 
 ## <a name="deep-learning-transformations"></a>Преобразование глубокого обучения
 
 | Transform | Определение |
 | --- | --- |
-| <xref:Microsoft.ML.OnnxCatalog.ApplyOnnxModel*> | Преобразование входных данных в импортированную модель ONNX |
-| <xref:Microsoft.ML.TensorflowCatalog.LoadTensorFlowModel*> | Преобразование входных данных в импортированную модель TensorFlow |
+| <xref:Microsoft.ML.OnnxCatalog.ApplyOnnxModel%2A> | Преобразование входных данных в импортированную модель ONNX |
+| <xref:Microsoft.ML.TensorflowCatalog.LoadTensorFlowModel%2A> | Преобразование входных данных в импортированную модель TensorFlow |
 
 ## <a name="custom-transformations"></a>Пользовательские преобразования
 
 | Transform | Определение |
 | --- | --- |
-| <xref:Microsoft.ML.CustomMappingCatalog.CustomMapping*> | Преобразование существующих столбцов в новые с помощью пользовательского сопоставления |
+| <xref:Microsoft.ML.CustomMappingCatalog.CustomMapping%2A> | Преобразование существующих столбцов в новые с помощью пользовательского сопоставления |

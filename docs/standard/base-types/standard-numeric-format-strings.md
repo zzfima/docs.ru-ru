@@ -16,12 +16,12 @@ helpviewer_keywords:
 - standard numeric format strings
 - formatting numbers [.NET Framework]
 - format specifiers, standard numeric format strings
-ms.openlocfilehash: c654ff2856891331f5680c673ac52f64ee2be141
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 04ac99c6b5100c3749eefc219e51b4d0084bef06
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73121756"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346644"
 ---
 # <a name="standard-numeric-format-strings"></a>Строки стандартных числовых форматов
 
@@ -51,7 +51,7 @@ ms.locfileid: "73121756"
 
 <a name="table"></a> В следующей таблице приведены описатели стандартного числового формата и примеры выходных данных, формируемых каждым описателем формата. Дополнительные сведения о использовании строк стандартных числовых форматов см. в разделе [Примечания](#NotesStandardFormatting). Обширную демонстрацию их использования см. в разделе [Пример](#example).
 
-|Описатель формата|name|ОПИСАНИЕ|Примеры|
+|Описатель формата|name|Описание|Примеры|
 |----------------------|----------|-----------------|--------------|
 |"C" или "c"|Валюта|Результат: ; значение валюты.<br /><br /> Поддерживается в: все числовые типы.<br /><br /> Описатель точности: число десятичных разрядов.<br /><br /> Описатель точности по умолчанию: Определяется в <xref:System.Globalization.NumberFormatInfo.CurrencyDecimalDigits%2A?displayProperty=nameWithType>.<br /><br /> Дополнительная информация: [Описатель формата валюты ("C")](#CFormatString).|123.456 ("C", en-US) -> \\$123.46<br /><br /> 123.456 ("C", fr-FR) -> 123,46 €<br /><br /> 123.456 ("C", ja-JP) -> ¥123<br /><br /> -123.456 ("C3", en-US) -> (\\$123.456)<br /><br /> -123.456 ("C3", fr-FR) -> -123,456 €<br /><br /> -123.456 ("C3", ja-JP) -> -¥123.456|
 |"D" или "d"|Decimal|Результат: ; целочисленные цифры с необязательным отрицательным знаком.<br /><br /> Поддерживается в: только целочисленные типы.<br /><br /> Описатель точности: минимальное число разрядов.<br /><br /> Описатель точности по умолчанию: минимальное требуемое число разрядов.<br /><br /> Дополнительная информация: [Описатель десятичного формата ("D")](#DFormatString).|1234 ("D") -> 1234<br /><br /> -1234 ("D6") -> -001234|
@@ -104,7 +104,7 @@ ms.locfileid: "73121756"
 
 Форматирование результирующей строки определяется сведениями о форматировании в текущем объекте <xref:System.Globalization.NumberFormatInfo>. В следующей таблице представлены свойства <xref:System.Globalization.NumberFormatInfo>, обеспечивающие управление форматированием возвращаемой строки.
 
-|Свойство NumberFormatInfo|ОПИСАНИЕ|
+|Свойство NumberFormatInfo|Описание|
 |-------------------------------|-----------------|
 |<xref:System.Globalization.NumberFormatInfo.CurrencyPositivePattern%2A>|Определяет положение символа валюты в положительных значениях.|
 |<xref:System.Globalization.NumberFormatInfo.CurrencyNegativePattern%2A>|Определяет положение символа валюты в отрицательных значениях и указывает, как именно представляется отрицательный знак: круглыми скобками или свойством <xref:System.Globalization.NumberFormatInfo.NegativeSign%2A>.|
@@ -133,7 +133,7 @@ ms.locfileid: "73121756"
 
 Форматирование результирующей строки определяется сведениями о форматировании в текущем объекте <xref:System.Globalization.NumberFormatInfo>. Как показано в следующей таблице, управление форматированием результирующей строки осуществляется с помощью одного свойства.
 
-|Свойство NumberFormatInfo|ОПИСАНИЕ|
+|Свойство NumberFormatInfo|Описание|
 |-------------------------------|-----------------|
 |<xref:System.Globalization.NumberFormatInfo.NegativeSign%2A>|Определяет строку, указывающую, что число является отрицательным.|
 
@@ -157,7 +157,7 @@ ms.locfileid: "73121756"
 
 Форматирование результирующей строки определяется сведениями о форматировании в текущем объекте <xref:System.Globalization.NumberFormatInfo>. В следующей таблице представлены свойства <xref:System.Globalization.NumberFormatInfo>, обеспечивающие управление форматированием возвращаемой строки.
 
-|Свойство NumberFormatInfo|ОПИСАНИЕ|
+|Свойство NumberFormatInfo|Описание|
 |-------------------------------|-----------------|
 |<xref:System.Globalization.NumberFormatInfo.NegativeSign%2A>|Определяет строку, указывающую на то, что число является отрицательным (как мантисса, так и экспонента).|
 |<xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A>|Определяет строку, разделяющую целую и дробную части мантиссы.|
@@ -181,7 +181,7 @@ ms.locfileid: "73121756"
 
 Форматирование результирующей строки определяется сведениями о форматировании в текущем объекте <xref:System.Globalization.NumberFormatInfo>. В следующей таблице представлены свойства объекта <xref:System.Globalization.NumberFormatInfo>, обеспечивающие управление форматированием результирующей строки.
 
-|Свойство NumberFormatInfo|ОПИСАНИЕ|
+|Свойство NumberFormatInfo|Описание|
 |-------------------------------|-----------------|
 |<xref:System.Globalization.NumberFormatInfo.NegativeSign%2A>|Определяет строку, указывающую, что число является отрицательным.|
 |<xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A>|Определяет строку, разделяющую целую и дробную части числа.|
@@ -228,7 +228,7 @@ ms.locfileid: "73121756"
 
 Форматирование результирующей строки определяется сведениями о форматировании в текущем объекте <xref:System.Globalization.NumberFormatInfo>. В следующей таблице представлены свойства <xref:System.Globalization.NumberFormatInfo>, обеспечивающие управление форматированием результирующей строки.
 
-|Свойство NumberFormatInfo|ОПИСАНИЕ|
+|Свойство NumberFormatInfo|Описание|
 |-------------------------------|-----------------|
 |<xref:System.Globalization.NumberFormatInfo.NegativeSign%2A>|Определяет строку, указывающую, что число является отрицательным.|
 |<xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A>|Определяет строку, разделяющую целую и дробную части числа.|
@@ -250,7 +250,7 @@ ms.locfileid: "73121756"
 
 Форматирование результирующей строки определяется сведениями о форматировании в текущем объекте <xref:System.Globalization.NumberFormatInfo>. В следующей таблице представлены свойства <xref:System.Globalization.NumberFormatInfo>, обеспечивающие управление форматированием результирующей строки.
 
-|Свойство NumberFormatInfo|ОПИСАНИЕ|
+|Свойство NumberFormatInfo|Описание|
 |-------------------------------|-----------------|
 |<xref:System.Globalization.NumberFormatInfo.NegativeSign%2A>|Определяет строку, указывающую, что число является отрицательным.|
 |<xref:System.Globalization.NumberFormatInfo.NumberNegativePattern%2A>|Определяет формат отрицательных значений и указывает, как именно представляется отрицательный знак: круглыми скобками или свойством <xref:System.Globalization.NumberFormatInfo.NegativeSign%2A>.|
@@ -275,7 +275,7 @@ ms.locfileid: "73121756"
 
 В следующей таблице представлены свойства <xref:System.Globalization.NumberFormatInfo>, обеспечивающие управление форматированием возвращаемой строки.
 
-|Свойство NumberFormatInfo|ОПИСАНИЕ|
+|Свойство NumberFormatInfo|Описание|
 |-------------------------------|-----------------|
 |<xref:System.Globalization.NumberFormatInfo.PercentPositivePattern%2A>|Определяет положение символа процента в положительных значениях.|
 |<xref:System.Globalization.NumberFormatInfo.PercentNegativePattern%2A>|Определяет положение символа процента и отрицательного знака в отрицательных значениях.|
@@ -307,7 +307,7 @@ ms.locfileid: "73121756"
 Хотя описатель точности можно указать, он будет проигнорирован. Приведенные указатели приема-передачи в данном случае имеют преимущество перед указателем точности.
 Форматирование результирующей строки определяется сведениями о форматировании в текущем объекте <xref:System.Globalization.NumberFormatInfo>. В следующей таблице представлены свойства <xref:System.Globalization.NumberFormatInfo>, обеспечивающие управление форматированием результирующей строки.
 
-|Свойство NumberFormatInfo|ОПИСАНИЕ|
+|Свойство NumberFormatInfo|Описание|
 |-------------------------------|-----------------|
 |<xref:System.Globalization.NumberFormatInfo.NegativeSign%2A>|Определяет строку, указывающую, что число является отрицательным.|
 |<xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A>|Определяет строку, разделяющую целую и дробную части числа.|

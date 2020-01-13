@@ -14,13 +14,12 @@ helpviewer_keywords:
 - uppercase
 - lowercase
 ms.assetid: 6805f81b-e9ad-4387-9f4c-b9bdb21b87c0
-ms.custom: seodec18
-ms.openlocfilehash: a8eb45e45a905f0b366642050f4845460e14aaf8
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 91fc0022eae3f036e0ec046ea12446871926ab27
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132903"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711471"
 ---
 # <a name="changing-case-in-net"></a>Смена регистра в .NET
 При написании приложения, которое принимает входные данные от пользователя, невозможно предугадать, какой регистр будет использоваться для ввода данных. Часто требуется обеспечить согласованность регистра строк, особенно если они отображаются в пользовательском интерфейсе. В таблице ниже описаны три метода изменения регистра. Для первых двух методов имеются перегруженные варианты, учитывающие язык и региональные параметры.  

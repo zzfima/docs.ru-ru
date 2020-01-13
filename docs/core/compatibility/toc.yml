@@ -16,7 +16,11 @@
     - name: "С версии\_2.0 на\_2.1"
       href: 2.0-2.1.md
     - name: Из .NET Framework в .NET Core
-      href: fx-core.md
+      items:
+        - name: Критические изменения
+          href: fx-core.md
+        - name: 'API-интерфейсы, создающие исключения'
+          href: unsupported-apis.md
 - name: По областям
   expanded: true
   items:

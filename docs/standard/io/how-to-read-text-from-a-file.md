@@ -12,14 +12,12 @@ helpviewer_keywords:
 - data streams, reading text from files
 - I/O [.NET Framework], reading text from files
 ms.assetid: ed180baa-dfc6-4c69-a725-46e87edafb27
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 7330c209ce6514459d3ab1dd58dc1c80b1978a56
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 49ea989a2b11c6572dc08970cf96e2df5f4fa024
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56834957"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706664"
 ---
 # <a name="how-to-read-text-from-a-file"></a>Практическое руководство. Чтение текста из файла
 В следующих примерах демонстрируется синхронное и асинхронное чтение текста из текстового файла с использованием .NET для классических приложений. В обоих примерах при создании экземпляра класса <xref:System.IO.StreamReader> указывается относительный или абсолютный путь к файлу. 
@@ -27,7 +25,7 @@ ms.locfileid: "56834957"
 > [!NOTE]
 > Эти примеры кода не относятся к разработке приложений Universal Windows (UWP), поскольку в среде выполнения Windows используются разные типы потоков для чтения и записи файлов. Пример чтения текста из файла в приложении UWP см. в разделе [Краткое руководство. Чтение и запись файлов](https://docs.microsoft.com/previous-versions/windows/apps/hh758325(v=win.10)). Примеры, демонстрирующие преобразование потоков .NET Framework в потоки среды выполнения Windows и наоборот, см. в разделе [Практическое руководство. Преобразование между потоками .NET Framework и потоками среды выполнения Windows](../../../docs/standard/io/how-to-convert-between-dotnet-streams-and-winrt-streams.md).  
   
-## <a name="example-synchronous-read-in-a-console-app"></a>Пример Синхронное чтение в консольном приложении  
+## <a name="example-synchronous-read-in-a-console-app"></a>Пример. Синхронное чтение в консольном приложении  
 Следующий пример иллюстрирует синхронную операцию чтения в консольном приложении. В этом примере текстовый файл открывается с помощью модуля чтения потока, содержимое копируется в строку, а строка выводится в консоли.  
   
 > [!IMPORTANT]
@@ -36,7 +34,7 @@ ms.locfileid: "56834957"
  [!code-csharp[Conceptual.BasicIO.TextFiles#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.basicio.textfiles/cs/source3.cs#3)]
  [!code-vb[Conceptual.BasicIO.TextFiles#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.basicio.textfiles/vb/source3.vb#3)]  
   
-## <a name="example-asynchronous-read-in-a-wpf-app"></a>Пример Асинхронное чтение в приложении WPF 
+## <a name="example-asynchronous-read-in-a-wpf-app"></a>Пример. Асинхронное чтение в приложении WPF 
  Следующий пример иллюстрирует асинхронную операцию чтения в приложении Windows Presentation Foundation (WPF).  
   
 > [!IMPORTANT]

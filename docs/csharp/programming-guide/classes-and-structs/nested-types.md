@@ -1,19 +1,18 @@
 ---
 title: Руководство по программированию на C#. Вложенные типы
-ms.custom: seodec18
 ms.date: 07/10/2017
 helpviewer_keywords:
 - nested types [C#]
 ms.assetid: f2e1b315-e3d1-48ce-977f-7bae0960ba99
-ms.openlocfilehash: de2e369702c48047835bc49b98df8f48fbd13480
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 982eeceb2088dd6e1e57fe796b38e46c0f2d4de8
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69596521"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705500"
 ---
 # <a name="nested-types-c-programming-guide"></a>Вложенные типы (Руководство по программированию на C#)
-Тип, определенный внутри [класса](../../language-reference/keywords/class.md) или [структуры](../../language-reference/keywords/struct.md), называется вложенным типом. Например:  
+Тип, определенный внутри [класса](../../language-reference/keywords/class.md) или [структуры](../../language-reference/keywords/struct.md), называется вложенным типом. Пример:  
   
  [!code-csharp[csProgGuideObjects#68](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#68)]  
   

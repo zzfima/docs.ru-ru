@@ -2,12 +2,12 @@
 title: Использование HttpClientFactory для реализации устойчивых HTTP-запросов
 description: Узнайте, как использовать фабрику HttpClientFactory, доступную в .NET Core, начиная с версии 2.1, для создания экземпляров `HttpClient`, чтобы облегчить их применение в ваших приложениях.
 ms.date: 08/08/2019
-ms.openlocfilehash: 9eff4a01361b3dc6f7471bc012c945d048b9a276
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 1a6d65509d669166e73ad907b506bae7fa26536d
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73737743"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75900315"
 ---
 # <a name="use-httpclientfactory-to-implement-resilient-http-requests"></a>Использование HttpClientFactory для реализации устойчивых HTTP-запросов
 
@@ -37,7 +37,7 @@ ms.locfileid: "73737743"
 - Управление временем существования `HttpClientMessageHandlers`, чтобы избежать упомянутых проблем, которые могут возникнуть при управлении временем существования `HttpClient` самостоятельно.
 
 > [!NOTE]
-> `HttpClientFactory` тесно привязывается к реализации внедрения зависимостей (DI) в пакете NuGet `Microsoft.Extensions.DependencyInjection`. См. сведения об использовании других контейнеров внедрения зависимостей в этом [обсуждении GitHub](https://github.com/aspnet/Extensions/issues/1345).
+> `HttpClientFactory` тесно привязывается к реализации внедрения зависимостей (DI) в пакете NuGet `Microsoft.Extensions.DependencyInjection`. См. сведения об использовании других контейнеров внедрения зависимостей в этом [обсуждении GitHub](https://github.com/dotnet/extensions/issues/1345).
 
 ## <a name="multiple-ways-to-use-httpclientfactory"></a>Способы применения HttpClientFactory
 
@@ -60,7 +60,7 @@ ms.locfileid: "73737743"
 
 **Рис. 8-4**. Использование HttpClientFactory с классами типизированных клиентов.
 
-На изображении выше ClientService (применяется контроллером или в коде клиента) использует объект `HttpClient`, созданный зарегистрированной фабрикой `IHttpClientFactory`. Эта фабрика назначает `HttpClient` `HttpMessageHandler` из пула, которым она управляет. `HttpClient` можно настроить с помощью политик Polly при регистрации фабрики `IHttpClientFactory` в контейнере внедрения зависимостей, используя метод расширения `AddHttpClient`.
+На изображении выше ClientService (применяется контроллером или в коде клиента) использует объект `HttpClient`, созданный зарегистрированной фабрикой `IHttpClientFactory`. Эта фабрика назначает `HttpClient``HttpMessageHandler` из пула, которым она управляет. `HttpClient` можно настроить с помощью политик Polly при регистрации фабрики `IHttpClientFactory` в контейнере внедрения зависимостей, используя метод расширения `AddHttpClient`.
 
 Чтобы настроить такую структуру, добавьте `HttpClientFactory` в приложение, установив пакет NuGet `Microsoft.Extensions.Http`, который содержит метод расширения `AddHttpClient()` для `IServiceCollection`. Этот метод расширения регистрирует класс `DefaultHttpClientFactory`, который будет использоваться как класс-одиночка для интерфейса `IHttpClientFactory`. Он определяет временную конфигурацию для `HttpMessageHandlerBuilder`. Этот обработчик сообщений (объект `HttpMessageHandler`), взятый из пула, используется классом `HttpClient`, который возвращается фабрикой.
 
@@ -119,7 +119,7 @@ services.AddHttpClient<ICatalogService, CatalogService>()
 
 ### <a name="implement-your-typed-client-classes-that-use-the-injected-and-configured-httpclient"></a>Реализация классов типизированных клиентов, использующих внедренный и настроенный HttpClient
 
-Вы уже должны были уже определить классы типизированных клиентов, например классы в примере кода, такие как BasketService, CatalogService, OrderingService и т. д. Типизированный клиент — это класс, который принимает объект `HttpClient` (внедренный через конструктор) и использует его для вызова удаленной службы HTTP. Например:
+Вы уже должны были уже определить классы типизированных клиентов, например классы в примере кода, такие как BasketService, CatalogService, OrderingService и т. д. Типизированный клиент — это класс, который принимает объект `HttpClient` (внедренный через конструктор) и использует его для вызова удаленной службы HTTP. Пример:
 
 ```csharp
 public class CatalogService : ICatalogService
@@ -188,14 +188,14 @@ namespace Microsoft.eShopOnContainers.WebMVC.Controllers
 - **Использование HttpClientFactory в .NET Core**  
   [https://docs.microsoft.com/aspnet/core/fundamentals/http-requests](/aspnet/core/fundamentals/http-requests)
 
-- **Исходный код HttpClientFactory в репозитории GitHub `aspnet/Extensions`**  
-  <https://github.com/aspnet/Extensions/tree/master/src/HttpClientFactory>
+- **Исходный код HttpClientFactory в репозитории GitHub `dotnet/extensions`**  
+  <https://github.com/dotnet/extensions/tree/master/src/HttpClientFactory>
 
 - **Polly (библиотека для обеспечения отказоустойчивости .NET и обработки временных сбоев)**  
   <http://www.thepollyproject.org/>
   
 - **Использование HttpClientFactory без внедрения зависимостей (проблема GitHub)**  
-  <https://github.com/aspnet/Extensions/issues/1345>
+  <https://github.com/dotnet/extensions/issues/1345>
 
 >[!div class="step-by-step"]
 >[Назад](explore-custom-http-call-retries-exponential-backoff.md)

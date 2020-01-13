@@ -12,14 +12,12 @@ helpviewer_keywords:
 - Collections classes
 - generic collections
 ms.assetid: f5d4c6a4-0d7b-4944-a9fb-3b12d9ebfd55
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c21a1303cd67f5f5de42241f4d5ada929e68bf2c
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 1004a2f9a0594d9150d147dec1e16b56205e0d13
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65589889"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711406"
 ---
 # <a name="commonly-used-collection-types"></a>Часто используемые типы коллекций
 Типы коллекций — это распространенные виды коллекций данных, такие как хэш-таблицы, очереди, стеки, контейнеры, словари и списки.  
@@ -41,7 +39,7 @@ ms.locfileid: "65589889"
 |[Отсортированные типы коллекций](../../../docs/standard/collections/sorted-collection-types.md)|Описание классов, которые предоставляют функции сортировки списков и наборов.|  
 |[Универсальные шаблоны](../../../docs/standard/generics/index.md)|Описание возможности универсальных шаблонов, в том числе универсальных коллекций, делегатов и интерфейсов, предоставляемых платформой .NET Framework. Ссылки на документацию по C#, Visual Basic и Visual C++, а также на вспомогательные технологии, такие как Reflection.|  
   
-## <a name="reference"></a>Ссылка  
+## <a name="reference"></a>Справочник  
  <xref:System.Collections?displayProperty=nameWithType>  
   
  <xref:System.Collections.Generic?displayProperty=nameWithType>  

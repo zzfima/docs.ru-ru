@@ -5,14 +5,12 @@ helpviewer_keywords:
 - .NET Framework, deploying
 - deployment [.NET Framework]
 ms.assetid: 19df26c5-4008-461d-a7d7-18f4506312d2
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6906ccf5b639d6b90b921b5d471aa723aeb4da78
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: cc4f9c38138a37b6068d33ffa4229a955db08c07
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052170"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716544"
 ---
 # <a name="deploying-the-net-framework"></a>Развертывание .NET Framework
 В этом разделе документации по платформе .NET Framework предоставлены сведения для разработчиков, которые хотят установить платформу .NET Framework для своих приложений, и для разработчиков, которые хотят развернуть платформу .NET Framework по сети. В ней также рассмотрены вопросы активации и перезапуска, связанные с развертыванием, и описано, как отслеживать ход установки .NET Framework.  
@@ -22,7 +20,7 @@ ms.locfileid: "71052170"
  Описываются способы установки .NET Framework на компьютеры пользователей вместе с приложениями.  
   
  [Руководство по развертыванию для администраторов](guide-for-administrators.md)  
- Описывается развертывание платформы .NET Framework и ее системных зависимостей в сети с помощью System Center Configuration Manager (SCCM).  
+ Инструкции для системного администратора по развертыванию платформы .NET Framework и ее системных зависимостей в сети с помощью Microsoft Endpoint Configuration Manager.  
   
  [Уменьшение числа перезагрузок при установке платформы .NET Framework 4.5](reducing-system-restarts.md)  
  Описывается диспетчер перезапуска, который по возможности предотвращает перезагрузки, и его преимущества для приложений, устанавливающих платформу .NET Framework.  

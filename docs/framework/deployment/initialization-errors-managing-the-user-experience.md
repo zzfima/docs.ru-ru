@@ -6,14 +6,12 @@ helpviewer_keywords:
 - initialization errors [.NET Framework]
 - .NET Framework, initialization errors
 ms.assetid: 680a7382-957f-4f6e-b178-4e866004a07e
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: cadcb5c2e85f046b5c1c561c17663b7c94829f4f
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 73a0ffd4a39b144a61bf559ac424414728fb9a3f
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802245"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716452"
 ---
 # <a name="net-framework-initialization-errors-managing-the-user-experience"></a>Ошибки инициализации платформы .NET Framework: управление пользовательской средой
 
@@ -71,7 +69,7 @@ Windows предоставляет функцию [SetErrorMode](/windows/win32/
 
 Среда CLR включает в себя набор узлов для различных сценариев. Все эти узлы отображают сообщение об ошибке при возникновении проблем с загрузкой необходимой версии среды выполнения. В следующей таблице приводится список узлов и их политик сообщений об ошибках.
 
-|Узел CLR|Описание:|Политика сообщения об ошибках|Можно ли отключить сообщение об ошибке?|
+|Узел CLR|Описание|Политика сообщения об ошибках|Можно ли отключить сообщение об ошибке?|
 |--------------|-----------------|--------------------------|------------------------------------|
 |Узел управляемых EXE-файлов|Запускает управляемые EXE-файлы.|Отображается в случае отсутствия версии платформы .NET Framework|Нет|
 |Узел управляемого COM|Загружает управляемые компоненты COM в процесс.|Отображается в случае отсутствия версии платформы .NET Framework|Да, установив флаг SEM_FAILCRITICALERRORS|

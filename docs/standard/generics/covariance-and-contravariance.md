@@ -11,14 +11,12 @@ helpviewer_keywords:
 - covariance and contravariance in generics
 - generic type parameters
 ms.assetid: 2678dc63-c7f9-4590-9ddc-0a4df684d42e
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ee8cc1b677ad6f6c2718c155edbba632df38dbd3
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 909b03588d2a41f667bfa117a5cecb420b125088
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974699"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75708401"
 ---
 # <a name="covariance-and-contravariance-in-generics"></a>Ковариантность и контрвариантность в универсальных шаблонах
 Термины "ковариантность" и "контрвариантность" относятся к возможности использовать более производный (более конкретный) или менее производный (менее конкретный) тип, чем задано изначально. Параметры универсальных типов поддерживают ковариантность и контрвариантность и обеспечивают большую гибкость в назначении и использовании универсальных типов. Ниже приведены определения терминов "ковариантность", "контрвариантность" и "инвариантность" в контексте системы типов. В этих примерах предполагается наличие базового класса с именем `Base` и производного класса с именем `Derived`.  
@@ -71,7 +69,7 @@ ms.locfileid: "73974699"
 ## <a name="generic-interfaces-with-covariant-type-parameters"></a>Универсальные интерфейсы с ковариантными параметрами типа  
  Начиная с .NET Framework 4 несколько универсальных интерфейсов имеют ковариантные параметры типа; например: <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.Generic.IEnumerator%601>, <xref:System.Linq.IQueryable%601> и <xref:System.Linq.IGrouping%602>. Эти интерфейсы имеют только параметры ковариантного типа. Таким образом, параметры типа используются только для возвращаемых типов в членах.  
   
- В следующем примере демонстрируются ковариантные параметры типа. В примере определяются два типа: `Base` имеет статический метод с именем `PrintBases` , принимающий `IEnumerable<Base>` (`IEnumerable(Of Base)` в Visual Basic) и выводящий эти элементы. Тип`Derived` наследуется от типа `Base`. В примере создается пустой список `List<Derived>` (`List(Of Derived)` в Visual Basic) и показывается, что этот тип может быть передан методу `PrintBases` и назначен переменной типа `IEnumerable<Base>` без приведения. Класс<xref:System.Collections.Generic.List%601> реализует интерфейс <xref:System.Collections.Generic.IEnumerable%601>, который имеет единственный параметр ковариантного типа. Параметр ковариантного типа — это причина, по которой экземпляр `IEnumerable<Derived>` может быть использован вместо `IEnumerable<Base>`.  
+ В следующем примере демонстрируются ковариантные параметры типа. В примере определяются два типа: `Base` имеет статический метод с именем `PrintBases` , принимающий `IEnumerable<Base>` (`IEnumerable(Of Base)` в Visual Basic) и выводящий эти элементы. Тип `Derived` наследуется от типа `Base`. В примере создается пустой список `List<Derived>` (`List(Of Derived)` в Visual Basic) и показывается, что этот тип может быть передан методу `PrintBases` и назначен переменной типа `IEnumerable<Base>` без приведения. Класс<xref:System.Collections.Generic.List%601> реализует интерфейс <xref:System.Collections.Generic.IEnumerable%601>, который имеет единственный параметр ковариантного типа. Параметр ковариантного типа — это причина, по которой экземпляр `IEnumerable<Derived>` может быть использован вместо `IEnumerable<Base>`.  
   
  [!code-csharp[CoContravarianceInClrGenericI#1](../../../samples/snippets/csharp/VS_Snippets_CLR/cocontravarianceinclrgenerici/cs/example.cs#1)]
  [!code-vb[CoContravarianceInClrGenericI#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/cocontravarianceinclrgenerici/vb/example.vb#1)]  
@@ -146,13 +144,13 @@ ms.locfileid: "73974699"
 ## <a name="list-of-variant-generic-interface-and-delegate-types"></a>Список вариантных универсальных интерфейсов и типов делегатов
  В .NET Framework 4 следующие типы интерфейсов и делегатов имеют параметры ковариантного и (или) контравариантного типа.  
   
-|Тип|Параметры ковариантного типа|Параметры контравариантного типа|  
+|Type|Параметры ковариантного типа|Параметры контравариантного типа|  
 |----------|-------------------------------|-----------------------------------|  
-|<xref:System.Action%601> — <xref:System.Action%6016>||Yes|  
+|<xref:System.Action%601> — <xref:System.Action%6016>||Да|  
 |<xref:System.Comparison%601>||Да|  
 |<xref:System.Converter%602>|Да|Да|  
-|<xref:System.Func%601>|Yes||  
-|<xref:System.Func%602> — <xref:System.Func%6017>|Yes|Да|  
+|<xref:System.Func%601>|Да||  
+|<xref:System.Func%602> — <xref:System.Func%6017>|Да|Да|  
 |<xref:System.IComparable%601>||Да|  
 |<xref:System.Predicate%601>||Да|  
 |<xref:System.Collections.Generic.IComparer%601>||Да|  
@@ -162,7 +160,7 @@ ms.locfileid: "73974699"
 |<xref:System.Linq.IGrouping%602>|Да||  
 |<xref:System.Linq.IOrderedEnumerable%601>|Да||  
 |<xref:System.Linq.IOrderedQueryable%601>|Да||  
-|<xref:System.Linq.IQueryable%601>|Yes||  
+|<xref:System.Linq.IQueryable%601>|Да||  
   
 ## <a name="see-also"></a>См. также
 

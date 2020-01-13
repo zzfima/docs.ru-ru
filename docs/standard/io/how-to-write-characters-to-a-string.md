@@ -11,25 +11,23 @@ helpviewer_keywords:
 - streams, writing characters to strings
 - I/O [.NET Framework], writing characters to strings
 ms.assetid: 1222cbeb-0760-44bf-9888-914a2a37174b
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: eb35c61b34fa571f35da6691ebe7fa2516eb2df1
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.openlocfilehash: b53513ef0b373cdde7703eddcd182ab7fd15cb9b
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55674754"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706625"
 ---
 # <a name="how-to-write-characters-to-a-string"></a>Практическое руководство. Запись символов в строку
 Следующий пример кода демонстрирует синхронную или асинхронную запись символов из массива символов в строку.  
   
-## <a name="example-write-characters-synchronously-in-a-console-app"></a>Пример Синхронная запись символов в консольном приложении  
+## <a name="example-write-characters-synchronously-in-a-console-app"></a>Пример. Синхронная запись символов в консольном приложении  
  В следующем примере используется <xref:System.IO.StringWriter> для синхронной записи пяти символов в объект <xref:System.Text.StringBuilder>. 
   
  [!code-csharp[Conceptual.StringBuilder#9](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.StringBuilder/cs/example2.cs#9)]
  [!code-vb[Conceptual.StringBuilder#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.StringBuilder/vb/example2.vb#9)]  
   
-## <a name="example-write-characters-asynchronously-in-a-wpf-app"></a>Пример Запись символов в асинхронном режиме в приложении WPF 
+## <a name="example-write-characters-asynchronously-in-a-wpf-app"></a>Пример. Запись символов в асинхронном режиме в приложении WPF 
  Ниже приведен пример кода за приложением WPF. При загрузке окна пример асинхронным способом считывает все символы из элемента управления <xref:System.Windows.Controls.TextBox> и сохраняет их в массиве. Затем он асинхронно записывает все буквы и пробелы в элемент управления <xref:System.Windows.Controls.TextBlock>, размещая их на отдельных строках.  
   
  [!code-csharp[StreamReaderWriter](../../../samples/snippets/csharp/VS_Snippets_Wpf/StringReaderWriter/MainWindow.xaml.cs)]

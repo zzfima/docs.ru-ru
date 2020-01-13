@@ -25,12 +25,12 @@ helpviewer_keywords:
 - custom formatting [.NET Framework]
 - strings [.NET Framework], formatting
 ms.assetid: 0d1364da-5b30-4d42-8e6b-03378343343f
-ms.openlocfilehash: 20aa7ecd354ef1a8982ae75eda87275c80cdaaf6
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: a1f4d9107427140bcfa6b49bc8a850432fb204f7
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802470"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75348251"
 ---
 # <a name="format-types-in-net"></a>Форматирование типов в .NET
 
@@ -101,7 +101,7 @@ ms.locfileid: "74802470"
 
 В .NET метод `ToString` переопределен для всех типов-примитивов значений: вместо имени он отображает значение объекта. В следующей таблице показаны переопределения для всех типов-примитивов. Обратите внимание, что большинство переопределенных методов вызывают другую перегрузку метода `ToString` и передают ей описатель формата "G", который задает общий формат типа, и объект <xref:System.IFormatProvider> , представляющий текущий язык и региональные параметры.
 
-|Тип|Переопределение ToString|
+|Type|Переопределение ToString|
 |----------|-----------------------|
 |<xref:System.Boolean>|Возвращает <xref:System.Boolean.TrueString?displayProperty=nameWithType> или <xref:System.Boolean.FalseString?displayProperty=nameWithType>.|
 |<xref:System.Byte>|Вызывает метод `Byte.ToString("G", NumberFormatInfo.CurrentInfo)` , чтобы отформатировать значение <xref:System.Byte> в соответствии с текущим языком и региональными параметрами.|
@@ -362,7 +362,7 @@ ms.locfileid: "74802470"
 |[Выполнение операций форматирования](../../../docs/standard/base-types/performing-formatting-operations.md)|Перечень разделов, содержащих пошаговые инструкции для выполнения конкретных операций форматирования.|
 |[Parsing Strings](../../../docs/standard/base-types/parsing-strings.md)|Описание способов инициализации объектов со значениями, описанными строковыми представлениями этих объектов. Разбор является операцией, обратной форматированию.|
 
-## <a name="reference"></a>Ссылка
+## <a name="reference"></a>Справочник
 
 - <xref:System.IFormattable?displayProperty=nameWithType>
 - <xref:System.IFormatProvider?displayProperty=nameWithType>

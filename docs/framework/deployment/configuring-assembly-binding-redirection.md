@@ -5,14 +5,12 @@ helpviewer_keywords:
 - side-by-side execution, assembly binding redirection
 - assemblies [.NET Framework], binding redirection
 ms.assetid: d266cbd8-bf91-41d1-baf0-afbc481a741f
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 7e2add2756106234227c7b2dd62ae107adc58854
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: c7b9dcb99e08a1ef2844c5811897aa87ff86f866
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052178"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716556"
 ---
 # <a name="configuring-assembly-binding-redirection"></a>Настройка перенаправления привязки сборок
 По умолчанию приложение использует набор сборок .NET Framework, поставляемых вместе с версией среды выполнения, которая использовалась для компиляции приложения. Чтобы перенаправить ссылки привязки сборок на определенную версию сборок .NET Framework, можно использовать атрибут **appliesTo** элемента [\<assemblyBinding>](../configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md) в файле конфигурации приложения. Этот необязательный атрибут содержит номер версии .NET Framework, к которой применяется перенаправление. Если атрибут **appliesTo** не указан, элемент **\<assemblyBinding>** применяется ко всем версиям платформы .NET Framework.  

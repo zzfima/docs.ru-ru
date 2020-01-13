@@ -1,17 +1,16 @@
 ---
 title: Руководство по программированию на C#. Свойства интерфейса
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - properties [C#], on interfaces
 - interfaces [C#], properties
 ms.assetid: 6503e9ed-33d7-44ec-b4c1-cc16c084b795
-ms.openlocfilehash: fad674c6d56011afcccbe9ce2a88e7af411fe0a2
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: ff892a35f4be6600c00bc0c72c2f789ef6eb4408
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72579157"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705539"
 ---
 # <a name="interface-properties-c-programming-guide"></a>Свойства интерфейса (Руководство по программированию на C#)
 
@@ -25,7 +24,7 @@ ms.locfileid: "72579157"
 
 В этом примере интерфейс `IEmployee` содержит доступное для чтения и записи свойство `Name`, а также свойство `Counter`, предназначенное только для чтения. Класс `Employee` реализует интерфейс `IEmployee` и использует эти два свойства. Программа считывает имя нового сотрудника и текущее число сотрудников, после чего отображает имя сотрудника и его рассчитанный номер.
 
-Вы можете использовать полное имя свойства, которое ссылается на интерфейс, где был объявлен член. Например:
+Вы можете использовать полное имя свойства, которое ссылается на интерфейс, где был объявлен член. Пример:
 
 [!code-csharp[csProgGuideProperties#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#16)]
 

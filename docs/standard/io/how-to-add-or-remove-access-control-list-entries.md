@@ -1,5 +1,5 @@
 ---
-title: Как выполнить добавление или удаление записей списка управления доступом (только для .NET Framework)
+title: Практическое руководство. добавление или удаление записей списка управления доступом (только для .NET Framework)
 ms.date: 01/14/2019
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,16 +13,14 @@ helpviewer_keywords:
 - I/O [.NET Framework], access control list entries
 - access control lists [.NET Framework]
 ms.assetid: 53758b39-bd9b-4640-bb04-cad5ed8d0abf
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 351d8325cc0fc1a1b551b6d513cad02f1291daab
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 5f41c518b8732adff95593cab29d7085adcc9ab3
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59772951"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75708132"
 ---
-# <a name="how-to-add-or-remove-access-control-list-entries-net-framework-only"></a>Как выполнить добавление или удаление записей списка управления доступом (только для .NET Framework)
+# <a name="how-to-add-or-remove-access-control-list-entries-net-framework-only"></a>Практическое руководство. добавление или удаление записей списка управления доступом (только для .NET Framework)
 Для добавления или удаления записей списка управления доступом (ACL) из файла или каталога получите объект <xref:System.Security.AccessControl.FileSecurity> или <xref:System.Security.AccessControl.DirectorySecurity> из файла или каталога. Измените объект, а затем примените его к файлу или каталогу.  
   
 ## <a name="add-or-remove-an-acl-entry-from-a-file"></a>Добавление или удаление элемента списка ACL из файла  

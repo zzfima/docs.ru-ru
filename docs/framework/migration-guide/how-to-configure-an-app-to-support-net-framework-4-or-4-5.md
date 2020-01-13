@@ -5,14 +5,12 @@ helpviewer_keywords:
 - configuring apps to support .NET Framework
 - .NET Framework, configuring apps
 ms.assetid: 63c6b9a8-0088-4077-9aa3-521ab7290f79
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: cd267de1e632fdc40dc50e8acdeba7d16bf8e61a
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 586f39fc9b50dcd45bb959ebd0063e3c38d9c3ed
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70779479"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716251"
 ---
 # <a name="how-to-configure-an-app-to-support-net-framework-4-or-later-versions"></a>Практическое руководство. Настройка приложения для включения поддержки .NET Framework версии 4 и выше
 
@@ -73,7 +71,7 @@ ms.locfileid: "70779479"
 
 |Параметр файла app.config|На компьютере с установленной версией 3.5|На компьютере с версиями 3.5 и 4 или более поздними|На компьютере с версией 4 или более поздними|
 |-|-|-|-|
-|Нет|Запускается в 3.5|Запускается в 3.5|Выводит сообщение об ошибке, предлагая пользователю установить нужную версию *|
+|Отсутствуют|Запускается в 3.5|Запускается в 3.5|Выводит сообщение об ошибке, предлагая пользователю установить нужную версию *|
 |`<supportedRuntime version="v2.0.50727"/>`|Запускается в 3.5|Запускается в 3.5|Выводит сообщение об ошибке, предлагая пользователю установить нужную версию *|
 |`<supportedRuntime version="v2.0.50727"/>` <br /> `<supportedRuntime version="v4.0"/>`|Запускается в 3.5|Запускается в 3.5|Запускается в 4 или более поздней версии|
 |`<supportedRuntime version="v4.0"/>` <br /> `<supportedRuntime version="v2.0.50727"/>`|Запускается в 3.5|Запускается в 4 или более поздней версии|Запускается в 4 или более поздней версии|

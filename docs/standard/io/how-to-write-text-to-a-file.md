@@ -11,14 +11,12 @@ helpviewer_keywords:
 - streams, writing text to files
 - data streams, writing text to files
 ms.assetid: 060cbe06-2adf-4337-9e7b-961a5c840208
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 9d2fb5a30e165b78fef797bf8bfe536b66cae9a1
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 42b758eeb36a4c319c3e1f24676cb600d580902e
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65640749"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706612"
 ---
 # <a name="how-to-write-text-to-a-file"></a>Практическое руководство. Запись текста в файл
 В этом разделе показаны различные способы записи текста в файл для приложения .NET. 
@@ -34,28 +32,28 @@ ms.locfileid: "65640749"
 > [!NOTE]
 > Нижеприведенные примеры демонстрируют минимальный объем необходимого кода. Реальное приложение обычно обеспечивает более надежную проверку ошибок и обработку исключений.  
   
-## <a name="example-synchronously-write-text-with-streamwriter"></a>Пример Синхронная запись текста с помощью StreamWriter
+## <a name="example-synchronously-write-text-with-streamwriter"></a>Пример. Синхронная запись текста с помощью StreamWriter
 
 В следующем примере показано, как синхронно записать текст в новый файл с помощью класса <xref:System.IO.StreamWriter> по одной строке за раз. Поскольку объект <xref:System.IO.StreamWriter> объявляется и создается в инструкции `using`, вызывается метод <xref:System.IO.StreamWriter.Dispose%2A>, который автоматически выполняет очистку и закрывает поток.  
 
 [!code-csharp[Conceptual.BasicIO.TextFiles#WriteLine](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.basicio.textfiles/cs/write.cs)] 
 [!code-vb[Conceptual.BasicIO.TextFiles#WriteLine](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.basicio.textfiles/vb/write.vb)]  
 
-## <a name="example-synchronously-append-text-with-streamwriter"></a>Пример Синхронное добавление текста с помощью StreamWriter
+## <a name="example-synchronously-append-text-with-streamwriter"></a>Пример. Синхронное добавление текста с помощью StreamWriter
 
 В следующем примере показано, как использовать класс <xref:System.IO.StreamWriter>, чтобы синхронно добавить текст в текстовый файл, созданный в первом примере.   
 
 [!code-csharp[Conceptual.BasicIO.TextFiles#WriteLine](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.basicio.textfiles/cs/append.cs)] 
 [!code-vb[Conceptual.BasicIO.TextFiles#WriteLine](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.basicio.textfiles/vb/append.vb)]  
 
-## <a name="example-asynchronously-write-text-with-streamwriter"></a>Пример Асинхронная запись текста с помощью StreamWriter
+## <a name="example-asynchronously-write-text-with-streamwriter"></a>Пример. Асинхронная запись текста с помощью StreamWriter
 
 В следующем примере показано, как асинхронно записать текст в новый файл с помощью класса <xref:System.IO.StreamWriter> . Вызов метода <xref:System.IO.StreamWriter.WriteAsync%2A> должен находиться в методе `async`. Для примера на C# требуется C# 7.1 или более поздней версии, где добавлена поддержка модификатора `async` для точки входа программы. 
 
 [!code-csharp[Conceptual.BasicIO.TextFiles#WriteLine](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.basicio.textfiles/cs/async.cs)] 
 [!code-vb[Conceptual.BasicIO.TextFiles#WriteLine](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.basicio.textfiles/vb/async.vb)]  
 
-## <a name="example-write-and-append-text-with-the-file-class"></a>Пример Запись и добавление текста с помощью класса File
+## <a name="example-write-and-append-text-with-the-file-class"></a>Пример. Запись и добавление текста с помощью класса File
 
 В следующем примере показано, как записать текст в новый файл и добавить новые строки текста в тот же файл с помощью класса <xref:System.IO.File> . Методы <xref:System.IO.File.WriteAllText%2A> и <xref:System.IO.File.AppendAllLines%2A> открывают и закрывают файл автоматически. Если предоставленный в методе <xref:System.IO.File.WriteAllText%2A> путь уже существует, файл будет перезаписан.  
 
