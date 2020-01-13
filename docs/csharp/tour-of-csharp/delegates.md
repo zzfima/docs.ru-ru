@@ -3,12 +3,12 @@ title: Делегаты в C#. Краткий обзор языка C#
 description: Информация о позднем связывании с помощью делегатов в C#
 ms.date: 08/10/2016
 ms.assetid: 3cc27357-3ac2-43a1-aad0-86a77b88f884
-ms.openlocfilehash: 35a1e212b50e77eb43271a657c8abb21eb6cfb4a
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 317d3ee6fb1350824fa9b3b4d0e3e851780ce4d4
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634634"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346871"
 ---
 # <a name="delegates"></a>Делегаты
 
@@ -29,5 +29,5 @@ ms.locfileid: "65634634"
 Также стоит упомянуть о такой интересной и полезной особенности делегата, что он не имеет информации или ограничений в отношении того, к какому классу относится указанный в нем метод. Достаточно лишь, чтобы указанный метод имел такие же типы параметров и возвращаемого значения, которые назначены для делегата.
 
 >[!div class="step-by-step"]
->[Назад](enums.md)
+>[Назад](interfaces.md)
 >[Вперед](attributes.md)

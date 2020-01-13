@@ -1,16 +1,15 @@
 ---
 title: Руководство по программированию на C#. Массивы как объекты
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - arrays [C#], as objects
 ms.assetid: f76d4403-bd0a-42a0-9bc8-694c55b2c926
-ms.openlocfilehash: 9905168662496c46d20f191c04f21d8630d02fa2
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: d8b929eccf9be259874d03dd93f49a49798bb349
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72772110"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715090"
 ---
 # <a name="arrays-as-objects-c-programming-guide"></a>Массивы как объекты (Руководство по программированию на C#)
 
