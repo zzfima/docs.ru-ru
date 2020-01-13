@@ -2,17 +2,17 @@
 title: Пример DataContractJsonSerializer
 ms.date: 03/30/2017
 ms.assetid: 3c2c4747-7510-4bdf-b4fe-64f98428ef4a
-ms.openlocfilehash: 1cc9560f291858e9f94f69201f4dac2ba0ed2c4c
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 52e10ee28137b16bd90e6f3f3ac41f839528f334
+ms.sourcegitcommit: dfad244ba549702b649bfef3bb057e33f24a8fb2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715732"
+ms.lasthandoff: 01/12/2020
+ms.locfileid: "75904543"
 ---
 # <a name="datacontractjsonserializer-sample"></a>Пример DataContractJsonSerializer
 
 > [!NOTE]
-> Этот пример предназначен для <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>. В большинстве сценариев, в которых участвует сериализация и десериализация JSON, рекомендуется использовать средства из [пространства имен System. Text. JSON](../../../standard/serialization/system-text-json-overview.md). 
+> Этот пример предназначен для <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>. В большинстве сценариев, в которых участвует сериализация и десериализация JSON, мы рекомендуем использовать интерфейсы API в [пространстве имен System. Text. JSON](../../../standard/serialization/system-text-json-overview.md). 
 
 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> поддерживает те же типы, что и <xref:System.Runtime.Serialization.DataContractSerializer>. Формат данных JSON бывает особенно полезен при написании веб-приложений AJAX (Asynchronous JavaScript and XML). Поддержка AJAX в Windows Communication Foundation (WCF) оптимизирована для использования с ASP.NET AJAX через элемент управления ScriptManager. Примеры использования Windows Communication Foundation (WCF) с ASP.NET AJAX см. в разделе [примеры AJAX](ajax.md).  
   

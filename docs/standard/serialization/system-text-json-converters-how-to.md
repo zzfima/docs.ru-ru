@@ -1,20 +1,20 @@
 ---
 title: Написание пользовательских преобразователей для сериализации JSON — .NET
-ms.date: 10/16/2019
+ms.date: 01/10/2020
 helpviewer_keywords:
 - JSON serialization
 - serializing objects
 - serialization
 - objects, serializing
 - converters
-ms.openlocfilehash: efbaf852f07b2b59111f0e330cf52470e3eca4c3
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 8a2af76ca64359c12fafce6678def14d11d9f029
+ms.sourcegitcommit: dfad244ba549702b649bfef3bb057e33f24a8fb2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75705812"
+ms.lasthandoff: 01/12/2020
+ms.locfileid: "75904567"
 ---
-# <a name="how-to-write-custom-converters-for-json-serialization-in-net"></a>Написание пользовательских преобразователей для сериализации JSON в .NET
+# <a name="how-to-write-custom-converters-for-json-serialization-marshalling-in-net"></a>Написание пользовательских преобразователей для сериализации JSON (маршалирование) в .NET
 
 В этой статье показано, как создать пользовательские преобразователи для классов сериализации JSON, предоставляемых в пространстве имен <xref:System.Text.Json>. Общие сведения о `System.Text.Json`см. [в статье сериализация и десериализация JSON в .NET](system-text-json-how-to.md).
 
@@ -23,7 +23,7 @@ ms.locfileid: "75705812"
 * Переопределение поведения по умолчанию встроенного преобразователя. Например, может потребоваться, чтобы `DateTime` значения были представлены в формате мм/дд/гггг вместо формата ISO 8601-1:2019 по умолчанию.
 * Для поддержки пользовательского типа значения. Например, структура `PhoneNumber`.
 
-Можно также написать пользовательские преобразователи для расширения `System.Text.Json` с функциональностью, не входящей в текущий выпуск. Далее в этой статье рассматриваются следующие сценарии.
+Можно также написать пользовательские преобразователи для настройки или расширения `System.Text.Json` с функциональностью, не входящей в текущий выпуск. Далее в этой статье рассматриваются следующие сценарии.
 
 * [Десериализация выводимых типов в свойства объекта](#deserialize-inferred-types-to-object-properties).
 * [Словарь поддержки с ключом, не являющимся строкой](#support-dictionary-with-non-string-key).
@@ -70,7 +70,7 @@ ms.locfileid: "75705812"
 * Переопределите метод `Write`, чтобы сериализовать входящий объект типа `T`. Используйте <xref:System.Text.Json.Utf8JsonWriter>, передаваемый в метод для записи JSON.
 * Переопределяйте метод `CanConvert` только при необходимости. Реализация по умолчанию возвращает `true`, если тип для преобразования имеет тип `T`. Поэтому для преобразователей, поддерживающих только тип `T` не требуется переопределять этот метод. Пример преобразователя, в котором требуется переопределить этот метод, см. в подразделе « [полиморфизм десериализации](#support-polymorphic-deserialization) » далее в этой статье.
 
-В качестве эталонных реализаций для написания пользовательских преобразователей можно обратиться к [исходному коду встроенных преобразователей](https://github.com/dotnet/corefx/tree/master/src/System.Text.Json/src/System/Text/Json/Serialization/Converters/) .
+В качестве эталонных реализаций для написания пользовательских преобразователей можно обратиться к [исходному коду встроенных преобразователей](https://github.com/dotnet/runtime/tree/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/src/System/Text/Json/Serialization/Converters/) .
 
 ## <a name="steps-to-follow-the-factory-pattern"></a>Действия по шаблону фабрики
 
@@ -179,14 +179,15 @@ Path: $.Date | LineNumber: 1 | BytePositionInLine: 37.
 
 ### <a name="deserialize-inferred-types-to-object-properties"></a>Десериализация выводимых типов в свойства объекта
 
-При десериализации свойства типа `Object`создается объект `JsonElement`. Причина заключается в том, что десериализатор не знает, какой тип CLR создать, и не пытается угадать. Например, если свойство JSON имеет значение "true", десериализатор не определит, что значение является `Boolean`, а если у элемента есть "01/01/2019", десериализатор не определит, что это `DateTime`.
+При десериализации свойства типа `object`создается объект `JsonElement`. Причина заключается в том, что десериализатор не знает, какой тип CLR создать, и не пытается угадать. Например, если свойство JSON имеет значение "true", десериализатор не определит, что значение является `Boolean`, а если у элемента есть "01/01/2019", десериализатор не определит, что это `DateTime`.
 
 Вывод типа может быть неточным. Если десериализатор анализирует номер JSON, не имеющий десятичного разделителя, в качестве `long`, это может привести к проблемам вне диапазона, если значение первоначально было сериализовано как `ulong` или `BigInteger`. Анализ числа с десятичной запятой в качестве `double` может привести к потере точности, если это число было первоначально сериализовано как `decimal`.
 
-В сценариях, требующих вывода типа, в следующем коде показан пользовательский преобразователь для `Object` свойств. Код преобразует:
+В сценариях, требующих вывода типа, в следующем коде показан пользовательский преобразователь для `object` свойств. Код преобразует:
 
 * `true` и `false` `Boolean`
-* Числа для `long` или `double`
+* Числа без десятичного разделителя для `long`
+* Числа с десятичным числом для `double`
 * Даты для `DateTime`
 * Строки для `string`
 * Все остальное для `JsonElement`
@@ -195,9 +196,9 @@ Path: $.Date | LineNumber: 1 | BytePositionInLine: 37.
 
 Следующий код регистрирует преобразователь:
 
-[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/ConvertInferredTypesToObject.cs?name=SnippetRegister)]
+[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/DeserializeInferredTypesToObject.cs?name=SnippetRegister)]
 
-Ниже приведен пример типа с `Object` свойствами.
+Ниже приведен пример типа с `object` свойствами.
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/WeatherForecast.cs?name=SnippetWFWithObjectProperties)]
 
@@ -213,7 +214,7 @@ Path: $.Date | LineNumber: 1 | BytePositionInLine: 37.
 
 Без пользовательского преобразователя десериализация помещает `JsonElement` в каждое свойство.
 
-В [папке Unit Tests](https://github.com/dotnet/corefx/blob/master/src/System.Text.Json/tests/Serialization/) в пространстве имен `System.Text.Json.Serialization` есть дополнительные примеры пользовательских преобразователей, которые обрабатывали свойства объекта.
+[Папка Unit Tests](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/tests/Serialization/) в пространстве имен `System.Text.Json.Serialization` содержит дополнительные примеры пользовательских преобразователей, которые обрабатывали десериализацию для `object` свойств.
 
 ### <a name="support-dictionary-with-non-string-key"></a>Словарь поддержки с ключом, не являющимся строкой
 
@@ -225,7 +226,7 @@ Path: $.Date | LineNumber: 1 | BytePositionInLine: 37.
 
 Следующий код регистрирует преобразователь:
 
-[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/ConvertDictionaryTkeyEnumTValue.cs?name=SnippetRegister)]
+[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/RoundtripDictionaryTkeyEnumTValue.cs?name=SnippetRegister)]
 
 Преобразователь может сериализовать и десериализовать свойство `TemperatureRanges` следующего класса, который использует следующие `Enum`:
 
@@ -245,11 +246,11 @@ Path: $.Date | LineNumber: 1 | BytePositionInLine: 37.
 }
 ```
 
-В [папке Unit Tests](https://github.com/dotnet/corefx/blob/master/src/System.Text.Json/tests/Serialization/) в пространстве имен `System.Text.Json.Serialization` есть дополнительные примеры пользовательских преобразователей, обрабатывающих словари, не являющиеся строковыми.
+В [папке Unit Tests](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/tests/Serialization/) в пространстве имен `System.Text.Json.Serialization` есть дополнительные примеры пользовательских преобразователей, обрабатывающих словари, не являющиеся строковыми.
 
 ### <a name="support-polymorphic-deserialization"></a>Поддержка полиморфизма
 
-Для сериализации с помощью [полиморфизма](system-text-json-how-to.md#serialize-properties-of-derived-classes) не требуется пользовательский преобразователь, но для десериализации требуется пользовательский преобразователь.
+Встроенные функции предоставляют ограниченный диапазон [полиморфизмной сериализации](system-text-json-how-to.md#serialize-properties-of-derived-classes) , но не поддерживают десериализацию. Для десериализации требуется пользовательский преобразователь.
 
 Предположим, например, что имеется `Person` абстрактный базовый класс с `Employee` и `Customer` производными классами. Полиморфизм десериализации означает, что во время разработки можно указать `Person` в качестве цели десериализации, а `Customer` и `Employee` объекты в JSON правильно десериализовать во время выполнения. Во время десериализации необходимо найти подсказки, которые указывают требуемый тип в JSON. В каждом сценарии доступны различные виды подкатегории. Например, может быть доступно свойство дискриминатора, или может потребоваться полагаться на присутствие или отсутствие конкретного свойства. В текущем выпуске `System.Text.Json` не предоставлены атрибуты для указания способов управления сценариями десериализации, поэтому требуются пользовательские преобразователи.
 
@@ -261,7 +262,7 @@ Path: $.Date | LineNumber: 1 | BytePositionInLine: 37.
 
 Следующий код регистрирует преобразователь:
 
-[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/ConvertPolymorphic.cs?name=SnippetRegister)]
+[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/RoundtripPolymorphic.cs?name=SnippetRegister)]
 
 Преобразователь может десериализовать JSON, созданный с помощью того же преобразователя, для сериализации, например:
 
@@ -282,22 +283,25 @@ Path: $.Date | LineNumber: 1 | BytePositionInLine: 37.
 
 ## <a name="other-custom-converter-samples"></a>Другие примеры пользовательских преобразователей
 
-[Папка Unit Tests](https://github.com/dotnet/corefx/blob/master/src/System.Text.Json/tests/Serialization/) в исходном коде `System.Text.Json.Serialization` содержит другие примеры пользовательских преобразователей, например:
+В статье [Миграция из Newtonsoft. JSON в System. Text. JSON](system-text-json-migrate-from-newtonsoft-how-to.md) содержатся дополнительные образцы пользовательских преобразователей.
 
-* преобразователь `Int32`, который преобразует значение NULL в 0 при десериализации
-* преобразователь `Int32`, допускающий строковые и числовые значения при десериализации
-* преобразователь `Enum`
-* преобразователь `List<T>`, принимающий внешние данные
-* преобразователь `Long[]`, который работает с разделенным запятыми списком чисел 
+[Папка Unit Tests](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/tests/Serialization/) в исходном коде `System.Text.Json.Serialization` содержит другие примеры пользовательских преобразователей, например:
+
+* [Преобразователь Int32, который преобразует значение NULL в 0 при десериализации](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/tests/Serialization/CustomConverterTests.NullValueType.cs)
+* [Преобразователь Int32, который допускает как строковые, так и числовые значения при десериализации](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/tests/Serialization/CustomConverterTests.Int32.cs)
+* [Преобразователь перечислений](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/tests/Serialization/CustomConverterTests.Enum.cs)
+* [Перечисление\<преобразования >, принимающего внешние данные](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/tests/Serialization/CustomConverterTests.List.cs)
+* [Преобразователь long [], который работает с разделенным запятыми списком чисел](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/tests/Serialization/CustomConverterTests.Array.cs) 
+
+Если необходимо сделать преобразователь, изменяющий поведение существующего встроенного преобразователя, можно получить [Исходный код существующего преобразователя](https://github.com/dotnet/runtime/tree/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/src/System/Text/Json/Serialization/Converters) , который будет служить отправной точкой для настройки.
 
 ## <a name="additional-resources"></a>Дополнительные ресурсы
 
+* [Исходный код для встроенных преобразователей](https://github.com/dotnet/runtime/tree/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/src/System/Text/Json/Serialization/Converters)
+* [Поддержка DateTime и DateTimeOffset в System. Text. JSON](../datetime/system-text-json-support.md)
 * [Общие сведения о System. Text. JSON](system-text-json-overview.md)
-* [Справочник по API System. Text. JSON](xref:System.Text.Json)
 * [Использование System. Text. JSON](system-text-json-how-to.md)
-* [Исходный код для встроенных преобразователей](https://github.com/dotnet/corefx/tree/master/src/System.Text.Json/src/System/Text/Json/Serialization/Converters/)
-* Проблемы GitHub, связанные с пользовательскими преобразователями для `System.Text.Json`
-  * [36639. Введение в пользовательские конвертеры](https://github.com/dotnet/corefx/issues/36639)
-  * [38713 о десериализации в объект](https://github.com/dotnet/corefx/issues/38713)
-  * [40120 о словарях, не являющихся строковыми ключами](https://github.com/dotnet/corefx/issues/40120)
-  * [37787 о полиморфизме](https://github.com/dotnet/corefx/issues/37787)
+* [Как выполнить миграцию из Newtonsoft. JSON](system-text-json-migrate-from-newtonsoft-how-to.md)
+* [Справочник по API System. Text. JSON](xref:System.Text.Json)
+* [Справочник по API-интерфейсам System. Text. JSON. Serialization](xref:System.Text.Json.Serialization)
+<!-- * [System.Text.Json roadmap](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/roadmap/README.md)-->

@@ -1,5 +1,6 @@
 ---
 title: Рекомендации по разработке платформы
+titleSuffix: ''
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - class library design guidelines [.NET Framework], about
 - class library design guidelines [.NET Framework]
 ms.assetid: 5fbcaf4f-ea2a-4d20-b0d6-e61dee202b4b
-ms.openlocfilehash: 623391de63891c1695a63482a424bb76a861deba
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 8abe64476a5d3d1319dfa30dd7a06dc2bb541a0f
+ms.sourcegitcommit: dfad244ba549702b649bfef3bb057e33f24a8fb2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75709313"
+ms.lasthandoff: 01/12/2020
+ms.locfileid: "75904616"
 ---
 # <a name="framework-design-guidelines"></a>Рекомендации по разработке платформы
 В этом разделе приводятся рекомендации по проектированию библиотек, которые расширяют и взаимодействуют с .NET Framework. Цель состоит в том, чтобы помочь дизайнерам библиотек обеспечить согласованность и простоту использования API, предоставляя унифицированную модель программирования, которая не зависит от языка программирования, используемого для разработки. При разработке классов и компонентов, расширяющих .NET Framework, рекомендуется следовать этим рекомендациям по проектированию. Непоследовательная структура библиотеки негативно влияет на производительность разработки и не дорекомендует внедрения.  
