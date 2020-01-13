@@ -1,14 +1,16 @@
 - name: 'Документация по C#'
   href: index.yml
-- name: Приступая к работе
+- name: Начало работы
   items:
     - name: Обзор
+      displayName: get started
       href: getting-started/index.md
     - name: 'Введение в язык C# и платформу .NET Framework'
       href: getting-started/introduction-to-the-csharp-language-and-the-net-framework.md
 - name: Учебники
   items:
     - name: Обзор
+      displayName: tutorials
       href: tutorials/index.md
     - name: 'Введение в программирование на C#'
       items:
@@ -93,6 +95,7 @@
 - name: 'Новые возможности C#'
   items:
     - name: 'C# 8.0'
+      displayName: what's new
       href: whats-new/csharp-8.md
     - name: "C#\_7.3"
       href: whats-new/csharp-7-3.md
@@ -238,9 +241,10 @@
       href: codedoc.md
     - name: Управление версиями
       href: versioning.md
-- name: 'Практические руководства по языку C#'
+- name: 'Статьи с практическими инструкциями по C#'
   items:
-    - name: Указатель раздела
+    - name: Индекс статьи
+      displayName: how to's
       href: how-to/index.md
     - name: Синтаксический анализ строк с помощью `String.Split`
       href: how-to/parse-strings-using-split.md
@@ -282,13 +286,14 @@
       items:
         - name: Создание средства для анализа и исправления кода
           href: roslyn-sdk/tutorials/how-to-write-csharp-analyzer-code-fix.md
-- name: 'Руководство по программированию на C#'
+- name: "Руководство по программированию на\_C#"
   items:
     - name: Обзор
+      displayName: programming guide
       href: programming-guide/index.md
-    - name: 'Структура программы C#'
+    - name: "Структура программы\_C#"
       items:
-        - name: "Структура программы\_C#"
+        - name: 'Структура программы C#'
           href: programming-guide/inside-a-program/index.md
         - name: Hello World — Создаем первую программу
           href: programming-guide/inside-a-program/hello-world-your-first-program.md
@@ -301,6 +306,7 @@
     - name: Main() и аргументы командной строки
       items:
         - name: Обзор
+          displayName: main method
           href: programming-guide/main-and-command-args/index.md
         - name: Аргументы командной строки
           href: programming-guide/main-and-command-args/command-line-arguments.md
@@ -311,10 +317,12 @@
     - name: Основные понятия программирования
       items:
         - name: Обзор
+          displayName: programming concepts
           href: programming-guide/concepts/index.md
         - name: Асинхронное программирование с использованием ключевых слов async и await
           items:
             - name: Обзор
+              displayName: asynchronous programming
               href: programming-guide/concepts/async/index.md
             - name: Асинхронная модель программирования
               href: programming-guide/concepts/async/task-asynchronous-programming-model.md
@@ -347,6 +355,7 @@
         - name: Атрибуты
           items:
             - name: Обзор
+              displayName: attributes
               href: programming-guide/concepts/attributes/index.md
             - name: Создание настраиваемых атрибутов
               href: programming-guide/concepts/attributes/creating-custom-attributes.md
@@ -358,20 +367,21 @@
               href: programming-guide/concepts/attributes/how-to-create-a-c-cpp-union-by-using-attributes.md
             - name: Общие атрибуты
               href: programming-guide/concepts/attributes/common-attributes.md
-        - name: Сведения о вызывающем
+        - name: Сведения о вызывающем объекте
           href: programming-guide/concepts/caller-information.md
         - name: Коллекции
           href: programming-guide/concepts/collections.md
-        - name: Ковариация и контрвариация
+        - name: Ковариантность и контрвариантность
           items:
             - name: Обзор
+              displayName: covariance and contravariance
               href: programming-guide/concepts/covariance-contravariance/index.md
             - name: Вариативность в универсальных интерфейсах
               href: programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md
               items:
                 - name: Создание вариативных универсальных интерфейсов
                   href: programming-guide/concepts/covariance-contravariance/creating-variant-generic-interfaces.md
-                - name: Использование расхождения в интерфейсах для универсальных коллекций
+                - name: Использование вариативности в интерфейсах для универсальных коллекций
                   href: programming-guide/concepts/covariance-contravariance/using-variance-in-interfaces-for-generic-collections.md
             - name: Вариативность в делегатах
               href: programming-guide/concepts/covariance-contravariance/variance-in-delegates.md
@@ -383,6 +393,7 @@
         - name: Деревья выражений
           items:
             - name: Обзор
+              displayName: expression trees
               href: programming-guide/concepts/expression-trees/index.md
             - name: Выполнение деревьев выражений
               href: programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md
@@ -399,6 +410,7 @@
         - name: LINQ
           items:
             - name: Обзор
+              displayName: LINQ overview
               href: programming-guide/concepts/linq/index.md
             - name: 'Приступая к работе с LINQ в C#'
               items:
@@ -873,6 +885,7 @@
         - name: 'Сериализация (C#)'
           items:
             - name: Обзор
+              displayName: serialization
               href: programming-guide/concepts/serialization/index.md
             - name: Практическое руководство. Запись данных объекта в XML-файл
               href: programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md
@@ -883,6 +896,7 @@
     - name: 'Инструкции, выражения и операторы'
       items:
         - name: Обзор
+          displayName: 'statements, expressions, operators'
           href: programming-guide/statements-expressions-operators/index.md
         - name: Операторы
           href: programming-guide/statements-expressions-operators/statements.md
@@ -927,6 +941,7 @@
     - name: Классы и структуры
       items:
         - name: Обзор
+          displayName: classes structs
           href: programming-guide/classes-and-structs/index.md
         - name: Классы
           href: programming-guide/classes-and-structs/classes.md
@@ -935,6 +950,7 @@
         - name: Структуры
           items:
             - name: Обзор
+              displayName: structs
               href: programming-guide/classes-and-structs/structs.md
             - name: Использование структур
               href: programming-guide/classes-and-structs/using-structs.md
@@ -943,6 +959,7 @@
         - name: Полиморфизм
           items:
             - name: Обзор
+              displayName: polymorphism
               href: programming-guide/classes-and-structs/polymorphism.md
             - name: Управление версиями с помощью ключевых слов Override и New
               href: programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md
@@ -1049,6 +1066,7 @@
     - name: Интерфейсы
       items:
         - name: Обзор
+          displayName: interfaces
           href: programming-guide/interfaces/index.md
         - name: Явная реализация интерфейса
           href: programming-guide/interfaces/explicit-interface-implementation.md
@@ -1059,6 +1077,7 @@
     - name: Делегаты
       items:
         - name: Обзор
+          displayName: delegates
           href: programming-guide/delegates/index.md
         - name: Использование делегатов
           href: programming-guide/delegates/using-delegates.md
@@ -1071,6 +1090,7 @@
     - name: Массивы
       items:
         - name: Обзор
+          displayName: arrays
           href: programming-guide/arrays/index.md
         - name: Массивы как объекты
           href: programming-guide/arrays/arrays-as-objects.md
@@ -1095,6 +1115,7 @@
     - name: Индексаторы
       items:
         - name: Обзор
+          displayName: indexers
           href: programming-guide/indexers/index.md
         - name: Использование индексаторов
           href: programming-guide/indexers/using-indexers.md
@@ -1105,6 +1126,7 @@
     - name: События
       items:
         - name: Обзор
+          displayName: events
           href: programming-guide/events/index.md
         - name: Практическое руководство. Подписка и отмена подписки на события
           href: programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md
@@ -1119,6 +1141,7 @@
     - name: Универсальные шаблоны
       items:
         - name: Обзор
+          displayName: generics
           href: programming-guide/generics/index.md
         - name: Параметры универсального типа
           href: programming-guide/generics/generic-type-parameters.md
@@ -1145,6 +1168,7 @@
     - name: Пространства имен
       items:
         - name: Обзор
+          displayName: namespaces
           href: programming-guide/namespaces/index.md
         - name: Использование пространств имен
           href: programming-guide/namespaces/using-namespaces.md
@@ -1153,12 +1177,14 @@
     - name: Небезопасный код и указатели
       items:
         - name: Обзор и ограничения
+          displayName: unsafe code pointers
           href: programming-guide/unsafe-code-pointers/index.md
         - name: Буферы фиксированного размера
           href: programming-guide/unsafe-code-pointers/fixed-size-buffers.md
         - name: типы указателей
           items:
             - name: Обзор
+              displayName: pointer types
               href: programming-guide/unsafe-code-pointers/pointer-types.md
             - name: Преобразования указателей
               href: programming-guide/unsafe-code-pointers/pointer-conversions.md
@@ -1167,6 +1193,7 @@
     - name: Комментарии XML-документации
       items:
         - name: Обзор
+          displayName: xml documentation comments
           href: programming-guide/xmldoc/index.md
         - name: Рекомендуемые теги для комментариев документации
           href: programming-guide/xmldoc/recommended-tags-for-documentation-comments.md
@@ -1219,6 +1246,7 @@
     - name: Исключения и обработка исключений
       items:
         - name: Обзор
+          displayName: exceptions
           href: programming-guide/exceptions/index.md
         - name: Использование исключений
           href: programming-guide/exceptions/using-exceptions.md
@@ -1237,6 +1265,7 @@
     - name: Файловая система и реестр
       items:
         - name: Обзор
+          displayName: file system registry
           href: programming-guide/file-system/index.md
         - name: Практическое руководство. Перебор дерева папок
           href: programming-guide/file-system/how-to-iterate-through-a-directory-tree.md
@@ -1275,12 +1304,14 @@
 - name: Справочник по языку
   items:
     - name: Обзор
+      displayName: language reference
       href: language-reference/index.md
     - name: Настройка версии языка
       href: language-reference/configure-language-version.md
     - name: 'Ключевые слова в C#'
       items:
         - name: Обзор
+          displayName: keywords
           href: language-reference/keywords/index.md
         - name: Встроенные типы
           items:
@@ -1435,6 +1466,7 @@
             - name: Checked и Unchecked
               items:
                 - name: Обзор
+                  displayName: checked unchecked
                   href: language-reference/keywords/checked-and-unchecked.md
                 - name: checked
                   href: language-reference/keywords/checked.md
@@ -1499,6 +1531,7 @@
         - name: Контекстные ключевые слова
           items:
             - name: Краткий справочник
+              displayName: contextual keywords
               href: language-reference/keywords/contextual-keywords.md
             - name: add
               href: language-reference/keywords/add.md
@@ -1521,6 +1554,7 @@
         - name: Ключевые слова запроса
           items:
             - name: Краткий справочник
+              displayName: query keywords
               href: language-reference/keywords/query-keywords.md
             - name: Предложение from
               href: language-reference/keywords/from-clause.md
@@ -1631,6 +1665,7 @@
     - name: 'Специальные символы C#'
       items:
         - name: Обзор
+          displayName: special characters
           href: language-reference/tokens/index.md
         - name: $ — интерполяция строк
           href: language-reference/tokens/interpolated.md
@@ -1639,6 +1674,7 @@
     - name: "Директивы препроцессора\_C#"
       items:
         - name: Обзор
+          displayName: preprocessor directives
           href: language-reference/preprocessor-directives/index.md
         - name: '#if'
           href: language-reference/preprocessor-directives/preprocessor-if.md
@@ -1671,6 +1707,7 @@
     - name: 'Параметры компилятора C#'
       items:
         - name: Обзор
+          displayName: compiler options
           href: language-reference/compiler-options/index.md
         - name: Построение из командной строки с помощью csc.exe
           href: language-reference/compiler-options/command-line-building-with-csc-exe.md
