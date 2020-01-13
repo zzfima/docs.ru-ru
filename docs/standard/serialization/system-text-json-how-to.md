@@ -657,7 +657,7 @@ using System.Text.Json.Serialization;
 
 [!code-json[](~/samples/snippets/core/system-text-json/csharp/GradesPrettyPrint.json)]
 
-## <a name="use-jsondocument-to-write-json"></a>Использование Жсондокумент для записи JSON
+## <a name="use-jsondocument-to-write-json"></a>Использование класса JsonDocument для записи JSON
 
 В следующем примере показано, как записать JSON из <xref:System.Text.Json.JsonDocument>.
 
