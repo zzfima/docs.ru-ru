@@ -1,6 +1,5 @@
 ---
 title: <typeparam> — Руководство по программированию на C#
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - typeparam
@@ -8,41 +7,41 @@ helpviewer_keywords:
 - <typeparam> C# XML tag
 - typeparam C# XML tag
 ms.assetid: 9b99d400-e911-4e55-99c6-64367c96aa4f
-ms.openlocfilehash: e5e0d7be46e02bd30799b54246db729ae63ca300
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 04145b82cbed0e9a5cae38ff9ef33d061ee792c9
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72523283"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75694534"
 ---
-# <a name="typeparam-c-programming-guide"></a><span data-ttu-id="680f2-102">\<typeparam> (руководство по программированию на C#)</span><span class="sxs-lookup"><span data-stu-id="680f2-102">\<typeparam> (C# Programming Guide)</span></span>
-## <a name="syntax"></a><span data-ttu-id="680f2-103">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="680f2-103">Syntax</span></span>  
+# <a name="typeparam-c-programming-guide"></a><span data-ttu-id="432ab-102">\<typeparam> (руководство по программированию на C#)</span><span class="sxs-lookup"><span data-stu-id="432ab-102">\<typeparam> (C# Programming Guide)</span></span>
+## <a name="syntax"></a><span data-ttu-id="432ab-103">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="432ab-103">Syntax</span></span>  
   
 ```xml  
 <typeparam name="name">description</typeparam>  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="680f2-104">Параметры</span><span class="sxs-lookup"><span data-stu-id="680f2-104">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="432ab-104">Параметры</span><span class="sxs-lookup"><span data-stu-id="432ab-104">Parameters</span></span>  
  `name`  
- <span data-ttu-id="680f2-105">Имя параметра типа.</span><span class="sxs-lookup"><span data-stu-id="680f2-105">The name of the type parameter.</span></span> <span data-ttu-id="680f2-106">Имя заключается в двойные кавычки (" ").</span><span class="sxs-lookup"><span data-stu-id="680f2-106">Enclose the name in double quotation marks (" ").</span></span>  
+ <span data-ttu-id="432ab-105">Имя параметра типа.</span><span class="sxs-lookup"><span data-stu-id="432ab-105">The name of the type parameter.</span></span> <span data-ttu-id="432ab-106">Имя заключается в двойные кавычки (" ").</span><span class="sxs-lookup"><span data-stu-id="432ab-106">Enclose the name in double quotation marks (" ").</span></span>  
   
  `description`  
- <span data-ttu-id="680f2-107">Описание параметра типа.</span><span class="sxs-lookup"><span data-stu-id="680f2-107">A description for the type parameter.</span></span>  
+ <span data-ttu-id="432ab-107">Описание параметра типа.</span><span class="sxs-lookup"><span data-stu-id="432ab-107">A description for the type parameter.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="680f2-108">Примечания</span><span class="sxs-lookup"><span data-stu-id="680f2-108">Remarks</span></span>  
- <span data-ttu-id="680f2-109">Тег `<typeparam>` следует использовать в комментариях к объявлению универсального типа или метода для описания параметра типа.</span><span class="sxs-lookup"><span data-stu-id="680f2-109">The `<typeparam>` tag should be used in the comment for a generic type or method declaration to describe a type parameter.</span></span> <span data-ttu-id="680f2-110">Добавьте такой тег для каждого параметра типа универсального типа или метода.</span><span class="sxs-lookup"><span data-stu-id="680f2-110">Add a tag for each type parameter of the generic type or method.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="432ab-108">Примечания</span><span class="sxs-lookup"><span data-stu-id="432ab-108">Remarks</span></span>  
+ <span data-ttu-id="432ab-109">Тег `<typeparam>` следует использовать в комментариях к объявлению универсального типа или метода для описания параметра типа.</span><span class="sxs-lookup"><span data-stu-id="432ab-109">The `<typeparam>` tag should be used in the comment for a generic type or method declaration to describe a type parameter.</span></span> <span data-ttu-id="432ab-110">Добавьте такой тег для каждого параметра типа универсального типа или метода.</span><span class="sxs-lookup"><span data-stu-id="432ab-110">Add a tag for each type parameter of the generic type or method.</span></span>  
   
- <span data-ttu-id="680f2-111">Дополнительные сведения см. в статье [Универсальные шаблоны](../generics/index.md).</span><span class="sxs-lookup"><span data-stu-id="680f2-111">For more information, see [Generics](../generics/index.md).</span></span>  
+ <span data-ttu-id="432ab-111">Дополнительные сведения см. в статье [Универсальные шаблоны](../generics/index.md).</span><span class="sxs-lookup"><span data-stu-id="432ab-111">For more information, see [Generics](../generics/index.md).</span></span>  
   
- <span data-ttu-id="680f2-112">Текст тега `<typeparam>` будет отображаться в IntelliSense, (веб-отчет по комментариям к коду в [окне обозревателя объектов](/visualstudio/ide/viewing-the-structure-of-code#BKMK_ObjectBrowser)).</span><span class="sxs-lookup"><span data-stu-id="680f2-112">The text for the `<typeparam>` tag will be displayed in IntelliSense, the [Object Browser Window](/visualstudio/ide/viewing-the-structure-of-code#BKMK_ObjectBrowser) code comment web report.</span></span>  
+ <span data-ttu-id="432ab-112">Текст тега `<typeparam>` будет отображаться в IntelliSense, (веб-отчет по комментариям к коду в [окне обозревателя объектов](/visualstudio/ide/viewing-the-structure-of-code#BKMK_ObjectBrowser)).</span><span class="sxs-lookup"><span data-stu-id="432ab-112">The text for the `<typeparam>` tag will be displayed in IntelliSense, the [Object Browser Window](/visualstudio/ide/viewing-the-structure-of-code#BKMK_ObjectBrowser) code comment web report.</span></span>  
   
- <span data-ttu-id="680f2-113">Чтобы обработать комментарии документации и сохранить их в файл, выполняйте сборку с параметром [-doc](../../language-reference/compiler-options/doc-compiler-option.md).</span><span class="sxs-lookup"><span data-stu-id="680f2-113">Compile with [-doc](../../language-reference/compiler-options/doc-compiler-option.md) to process documentation comments to a file.</span></span>  
+ <span data-ttu-id="432ab-113">Чтобы обработать комментарии документации и сохранить их в файл, выполняйте сборку с параметром [-doc](../../language-reference/compiler-options/doc-compiler-option.md).</span><span class="sxs-lookup"><span data-stu-id="432ab-113">Compile with [-doc](../../language-reference/compiler-options/doc-compiler-option.md) to process documentation comments to a file.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="680f2-114">Пример</span><span class="sxs-lookup"><span data-stu-id="680f2-114">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="432ab-114">Пример</span><span class="sxs-lookup"><span data-stu-id="432ab-114">Example</span></span>  
  [!code-csharp[csProgGuideDocComments#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#13)]  
   
-## <a name="see-also"></a><span data-ttu-id="680f2-115">См. также</span><span class="sxs-lookup"><span data-stu-id="680f2-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="432ab-115">См. также</span><span class="sxs-lookup"><span data-stu-id="432ab-115">See also</span></span>
 
-- [<span data-ttu-id="680f2-116">Справочник по C#</span><span class="sxs-lookup"><span data-stu-id="680f2-116">C# Reference</span></span>](../../language-reference/index.md)
-- [<span data-ttu-id="680f2-117">Руководство по программированию на C#</span><span class="sxs-lookup"><span data-stu-id="680f2-117">C# Programming Guide</span></span>](../index.md)
-- [<span data-ttu-id="680f2-118">Рекомендуемые теги для комментариев документации</span><span class="sxs-lookup"><span data-stu-id="680f2-118">Recommended Tags for Documentation Comments</span></span>](./recommended-tags-for-documentation-comments.md)
+- [<span data-ttu-id="432ab-116">Справочник по C#</span><span class="sxs-lookup"><span data-stu-id="432ab-116">C# Reference</span></span>](../../language-reference/index.md)
+- [<span data-ttu-id="432ab-117">Руководство по программированию на C#</span><span class="sxs-lookup"><span data-stu-id="432ab-117">C# Programming Guide</span></span>](../index.md)
+- [<span data-ttu-id="432ab-118">Рекомендуемые теги для комментариев документации</span><span class="sxs-lookup"><span data-stu-id="432ab-118">Recommended Tags for Documentation Comments</span></span>](./recommended-tags-for-documentation-comments.md)

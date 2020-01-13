@@ -1,6 +1,5 @@
 ---
 title: <include> — Руководство по программированию на C#
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - include
@@ -9,44 +8,44 @@ helpviewer_keywords:
 - <include> C# XML tag
 - include C# XML tag
 ms.assetid: a8a70302-6196-4643-bd09-ef33f411f18f
-ms.openlocfilehash: 26241dab70a3b6a0cf80b374868fa759647cd8d9
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 125ab9476507babae9a707a6c42d24adda632267
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69587999"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75696562"
 ---
-# <a name="include-c-programming-guide"></a><span data-ttu-id="40017-102">\<include> (руководство по программированию на C#)</span><span class="sxs-lookup"><span data-stu-id="40017-102">\<include> (C# Programming Guide)</span></span>
-## <a name="syntax"></a><span data-ttu-id="40017-103">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="40017-103">Syntax</span></span>  
+# <a name="include-c-programming-guide"></a><span data-ttu-id="81491-102">\<include> (руководство по программированию на C#)</span><span class="sxs-lookup"><span data-stu-id="81491-102">\<include> (C# Programming Guide)</span></span>
+## <a name="syntax"></a><span data-ttu-id="81491-103">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="81491-103">Syntax</span></span>  
   
 ```xml  
 <include file='filename' path='tagpath[@name="id"]' />  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="40017-104">Параметры</span><span class="sxs-lookup"><span data-stu-id="40017-104">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="81491-104">Параметры</span><span class="sxs-lookup"><span data-stu-id="81491-104">Parameters</span></span>  
  `filename`  
- <span data-ttu-id="40017-105">Имя XML-файла, содержащего документацию.</span><span class="sxs-lookup"><span data-stu-id="40017-105">The name of the XML file containing the documentation.</span></span> <span data-ttu-id="40017-106">Имя файла может быть квалифицировано с помощью относительного пути к файлу исходного кода.</span><span class="sxs-lookup"><span data-stu-id="40017-106">The file name can be qualified with a path relative to the source code file.</span></span> <span data-ttu-id="40017-107">`filename` необходимо заключать в одинарные кавычки (' ').</span><span class="sxs-lookup"><span data-stu-id="40017-107">Enclose `filename` in single quotation marks (' ').</span></span>  
+ <span data-ttu-id="81491-105">Имя XML-файла, содержащего документацию.</span><span class="sxs-lookup"><span data-stu-id="81491-105">The name of the XML file containing the documentation.</span></span> <span data-ttu-id="81491-106">Имя файла может быть квалифицировано с помощью относительного пути к файлу исходного кода.</span><span class="sxs-lookup"><span data-stu-id="81491-106">The file name can be qualified with a path relative to the source code file.</span></span> <span data-ttu-id="81491-107">`filename` необходимо заключать в одинарные кавычки (' ').</span><span class="sxs-lookup"><span data-stu-id="81491-107">Enclose `filename` in single quotation marks (' ').</span></span>  
   
  `tagpath`  
- <span data-ttu-id="40017-108">Путь тегов в `filename`, который ведет к тегу `name`.</span><span class="sxs-lookup"><span data-stu-id="40017-108">The path of the tags in `filename` that leads to the tag `name`.</span></span> <span data-ttu-id="40017-109">Путь необходимо заключать в одинарные кавычки (' ').</span><span class="sxs-lookup"><span data-stu-id="40017-109">Enclose the path in single quotation marks (' ').</span></span>  
+ <span data-ttu-id="81491-108">Путь тегов в `filename`, который ведет к тегу `name`.</span><span class="sxs-lookup"><span data-stu-id="81491-108">The path of the tags in `filename` that leads to the tag `name`.</span></span> <span data-ttu-id="81491-109">Путь необходимо заключать в одинарные кавычки (' ').</span><span class="sxs-lookup"><span data-stu-id="81491-109">Enclose the path in single quotation marks (' ').</span></span>  
   
  `name`  
- <span data-ttu-id="40017-110">Спецификатор имени в теге, предшествующий комментариям. `name` будет иметь идентификатор `id`.</span><span class="sxs-lookup"><span data-stu-id="40017-110">The name specifier in the tag that precedes the comments; `name` will have an `id`.</span></span>  
+ <span data-ttu-id="81491-110">Спецификатор имени в теге, предшествующий комментариям. `name` будет иметь идентификатор `id`.</span><span class="sxs-lookup"><span data-stu-id="81491-110">The name specifier in the tag that precedes the comments; `name` will have an `id`.</span></span>  
   
  `id`  
- <span data-ttu-id="40017-111">Идентификатор тега, который предшествует комментариям.</span><span class="sxs-lookup"><span data-stu-id="40017-111">The ID for the tag that precedes the comments.</span></span> <span data-ttu-id="40017-112">Идентификатор заключается в двойные кавычки (" ").</span><span class="sxs-lookup"><span data-stu-id="40017-112">Enclose the ID in double quotation marks (" ").</span></span>  
+ <span data-ttu-id="81491-111">Идентификатор тега, который предшествует комментариям.</span><span class="sxs-lookup"><span data-stu-id="81491-111">The ID for the tag that precedes the comments.</span></span> <span data-ttu-id="81491-112">Идентификатор заключается в двойные кавычки (" ").</span><span class="sxs-lookup"><span data-stu-id="81491-112">Enclose the ID in double quotation marks (" ").</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="40017-113">Примечания</span><span class="sxs-lookup"><span data-stu-id="40017-113">Remarks</span></span>  
- <span data-ttu-id="40017-114">Тег \<include> позволяет задать ссылку на комментарии в другом файле, которые описывают типы и члены вашего исходного кода.</span><span class="sxs-lookup"><span data-stu-id="40017-114">The \<include> tag lets you refer to comments in another file that describe the types and members in your source code.</span></span> <span data-ttu-id="40017-115">Этот способ является альтернативой размещению комментариев документации непосредственно в файле исходного кода.</span><span class="sxs-lookup"><span data-stu-id="40017-115">This is an alternative to placing documentation comments directly in your source code file.</span></span> <span data-ttu-id="40017-116">Помещая комментарии документации в отдельный файл, вы можете реализовать управление их версиями отдельно от версий исходного кода.</span><span class="sxs-lookup"><span data-stu-id="40017-116">By putting the documentation in a separate file, you can apply source control to the documentation separately from the source code.</span></span> <span data-ttu-id="40017-117">В этом случае файл исходного кода может быть извлечен для изменения одним пользователем, а файл документации — другим.</span><span class="sxs-lookup"><span data-stu-id="40017-117">One person can have the source code file checked out and someone else can have the documentation file checked out.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="81491-113">Примечания</span><span class="sxs-lookup"><span data-stu-id="81491-113">Remarks</span></span>  
+ <span data-ttu-id="81491-114">Тег \<include> позволяет задать ссылку на комментарии в другом файле, которые описывают типы и члены вашего исходного кода.</span><span class="sxs-lookup"><span data-stu-id="81491-114">The \<include> tag lets you refer to comments in another file that describe the types and members in your source code.</span></span> <span data-ttu-id="81491-115">Этот способ является альтернативой размещению комментариев документации непосредственно в файле исходного кода.</span><span class="sxs-lookup"><span data-stu-id="81491-115">This is an alternative to placing documentation comments directly in your source code file.</span></span> <span data-ttu-id="81491-116">Помещая комментарии документации в отдельный файл, вы можете реализовать управление их версиями отдельно от версий исходного кода.</span><span class="sxs-lookup"><span data-stu-id="81491-116">By putting the documentation in a separate file, you can apply source control to the documentation separately from the source code.</span></span> <span data-ttu-id="81491-117">В этом случае файл исходного кода может быть извлечен для изменения одним пользователем, а файл документации — другим.</span><span class="sxs-lookup"><span data-stu-id="81491-117">One person can have the source code file checked out and someone else can have the documentation file checked out.</span></span>  
   
- <span data-ttu-id="40017-118">Тег \<include> использует XML-синтаксис XPath.</span><span class="sxs-lookup"><span data-stu-id="40017-118">The \<include> tag uses the XML XPath syntax.</span></span> <span data-ttu-id="40017-119">Сведения об использовании тега \<include> см. в документации по XPath.</span><span class="sxs-lookup"><span data-stu-id="40017-119">Refer to XPath documentation for ways to customize your \<include> use.</span></span>  
+ <span data-ttu-id="81491-118">Тег \<include> использует XML-синтаксис XPath.</span><span class="sxs-lookup"><span data-stu-id="81491-118">The \<include> tag uses the XML XPath syntax.</span></span> <span data-ttu-id="81491-119">Сведения об использовании тега \<include> см. в документации по XPath.</span><span class="sxs-lookup"><span data-stu-id="81491-119">Refer to XPath documentation for ways to customize your \<include> use.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="40017-120">Пример</span><span class="sxs-lookup"><span data-stu-id="40017-120">Example</span></span>  
- <span data-ttu-id="40017-121">В этом примере представлено несколько файлов.</span><span class="sxs-lookup"><span data-stu-id="40017-121">This is a multifile example.</span></span> <span data-ttu-id="40017-122">Ниже показан первый файл, в котором используется тег \<include>:</span><span class="sxs-lookup"><span data-stu-id="40017-122">The first file, which uses \<include>, is listed below:</span></span>  
+## <a name="example"></a><span data-ttu-id="81491-120">Пример</span><span class="sxs-lookup"><span data-stu-id="81491-120">Example</span></span>  
+ <span data-ttu-id="81491-121">В этом примере представлено несколько файлов.</span><span class="sxs-lookup"><span data-stu-id="81491-121">This is a multifile example.</span></span> <span data-ttu-id="81491-122">Ниже показан первый файл, в котором используется тег \<include>:</span><span class="sxs-lookup"><span data-stu-id="81491-122">The first file, which uses \<include>, is listed below:</span></span>  
   
  [!code-csharp[csProgGuideDocComments#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#5)]  
   
- <span data-ttu-id="40017-123">Второй файл (xml_include_tag.doc) содержит следующие комментарии документации:</span><span class="sxs-lookup"><span data-stu-id="40017-123">The second file, xml_include_tag.doc, contains the following documentation comments:</span></span>  
+ <span data-ttu-id="81491-123">Второй файл (xml_include_tag.doc) содержит следующие комментарии документации:</span><span class="sxs-lookup"><span data-stu-id="81491-123">The second file, xml_include_tag.doc, contains the following documentation comments:</span></span>  
   
 ```xml  
 <MyDocs>  
@@ -66,8 +65,8 @@ The summary for this other type.
 </MyDocs>  
 ```  
   
-## <a name="program-output"></a><span data-ttu-id="40017-124">Выходные данные программы</span><span class="sxs-lookup"><span data-stu-id="40017-124">Program Output</span></span>  
- <span data-ttu-id="40017-125">При компиляции классов Test и Test2 с использованием следующей команды в командной строке создаются следующие выходные данные: `/doc:DocFileName.xml.` В Visual Studio параметр "Комментарии XML-документа" задается в области построения конструктора проектов.</span><span class="sxs-lookup"><span data-stu-id="40017-125">The following output is generated when you compile the Test and Test2 classes with the following command line: `/doc:DocFileName.xml.` In Visual Studio, you specify the XML doc comments option in the Build pane of the Project Designer.</span></span> <span data-ttu-id="40017-126">При обнаружении тега \<include> компилятор C# ведет поиск комментариев документации в файле xml_include_tag.doc вместо текущего файла исходного кода.</span><span class="sxs-lookup"><span data-stu-id="40017-126">When the C# compiler sees the \<include> tag, it will search for documentation comments in xml_include_tag.doc instead of the current source file.</span></span> <span data-ttu-id="40017-127">После этого компилятор создает файл DocFileName.xml, который будет использоваться средствами для работы с документацией, такими как [DocFX](https://dotnet.github.io/docfx/) и [Sandcastle](https://github.com/EWSoftware/SHFB), для подготовки окончательной версии документации.</span><span class="sxs-lookup"><span data-stu-id="40017-127">The compiler then generates DocFileName.xml, and this is the file that is consumed by documentation tools such as [DocFX](https://dotnet.github.io/docfx/) and [Sandcastle](https://github.com/EWSoftware/SHFB) to produce the final documentation.</span></span>  
+## <a name="program-output"></a><span data-ttu-id="81491-124">Выходные данные программы</span><span class="sxs-lookup"><span data-stu-id="81491-124">Program Output</span></span>  
+ <span data-ttu-id="81491-125">При компиляции классов Test и Test2 с использованием следующей команды в командной строке создаются следующие выходные данные: `/doc:DocFileName.xml.` В Visual Studio параметр "Комментарии XML-документа" задается в области построения конструктора проектов.</span><span class="sxs-lookup"><span data-stu-id="81491-125">The following output is generated when you compile the Test and Test2 classes with the following command line: `/doc:DocFileName.xml.` In Visual Studio, you specify the XML doc comments option in the Build pane of the Project Designer.</span></span> <span data-ttu-id="81491-126">При обнаружении тега \<include> компилятор C# ведет поиск комментариев документации в файле xml_include_tag.doc вместо текущего файла исходного кода.</span><span class="sxs-lookup"><span data-stu-id="81491-126">When the C# compiler sees the \<include> tag, it will search for documentation comments in xml_include_tag.doc instead of the current source file.</span></span> <span data-ttu-id="81491-127">После этого компилятор создает файл DocFileName.xml, который будет использоваться средствами для работы с документацией, такими как [DocFX](https://dotnet.github.io/docfx/) и [Sandcastle](https://github.com/EWSoftware/SHFB), для подготовки окончательной версии документации.</span><span class="sxs-lookup"><span data-stu-id="81491-127">The compiler then generates DocFileName.xml, and this is the file that is consumed by documentation tools such as [DocFX](https://dotnet.github.io/docfx/) and [Sandcastle](https://github.com/EWSoftware/SHFB) to produce the final documentation.</span></span>  
   
 ```xml  
 <?xml version="1.0"?>   
@@ -90,7 +89,7 @@ The summary for this other type.
 </doc>   
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="40017-128">См. также</span><span class="sxs-lookup"><span data-stu-id="40017-128">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="81491-128">См. также</span><span class="sxs-lookup"><span data-stu-id="81491-128">See also</span></span>
 
-- [<span data-ttu-id="40017-129">Руководство по программированию на C#</span><span class="sxs-lookup"><span data-stu-id="40017-129">C# Programming Guide</span></span>](../index.md)
-- [<span data-ttu-id="40017-130">Рекомендуемые теги для комментариев документации</span><span class="sxs-lookup"><span data-stu-id="40017-130">Recommended Tags for Documentation Comments</span></span>](./recommended-tags-for-documentation-comments.md)
+- [<span data-ttu-id="81491-129">Руководство по программированию на C#</span><span class="sxs-lookup"><span data-stu-id="81491-129">C# Programming Guide</span></span>](../index.md)
+- [<span data-ttu-id="81491-130">Рекомендуемые теги для комментариев документации</span><span class="sxs-lookup"><span data-stu-id="81491-130">Recommended Tags for Documentation Comments</span></span>](./recommended-tags-for-documentation-comments.md)
