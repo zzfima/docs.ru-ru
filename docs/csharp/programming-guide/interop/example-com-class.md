@@ -1,17 +1,16 @@
 ---
 title: Руководство по программированию на C#. Пример COM-класса
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - examples [C#], COM classes
 - COM, exposing Visual C# objects to
 ms.assetid: 6504dea9-ad1c-4993-a794-830fec5270af
-ms.openlocfilehash: 461d5a2afb197596c1c52daeeca0583b7b5e9693
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 6af85d0314a44acbde0996cecbe6dad82cdcc8db
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69589138"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712082"
 ---
 # <a name="example-com-class-c-programming-guide"></a>Пример COM-класса (Руководство по программированию на C#)
 Далее приведен пример класса, который можно предоставить в качестве COM-объекта. После помещения этого кода в CS-файл и добавления в проект свойства **Регистрация для COM-взаимодействия** необходимо присвоить значение **Истина**. Дополнительные сведения см. в разделе [Практическое руководство. Register a Component for COM Interop](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w29wacsy(v=vs.100)) (Практическое руководство. Регистрация компонента для COM-взаимодействия).

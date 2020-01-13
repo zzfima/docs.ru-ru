@@ -12,12 +12,12 @@ helpviewer_keywords:
 - case statement [C#]
 - default keyword [C#]
 ms.assetid: 44bae8b8-8841-4d85-826b-8a94277daecb
-ms.openlocfilehash: 6f0a2cfd5a6de9c8c05bc3daea1e242183ebf03e
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: e5580e81b9175cd95491fdba724bacbffa692a5e
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552344"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345393"
 ---
 # <a name="switch-c-reference"></a>switch (справочник по C#)
 
@@ -47,7 +47,7 @@ ms.locfileid: "74552344"
 - [string](../builtin-types/reference-types.md);
 - [bool](../builtin-types/bool.md);
 - [целочисленное](../builtin-types/integral-numeric-types.md) значение, например `int` или `long`;
-- значение [enum](enum.md).
+- значение [enum](../builtin-types/enum.md).
 
 Начиная с C# 7.0 выражение соответствия может быть любым выражением, отличным от NULL.
 

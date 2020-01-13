@@ -1,6 +1,5 @@
 ---
 title: Справочник по C#. Ключевое слово this
-ms.custom: seodec18
 description: Ключевое слово this (справочник по C#)
 ms.date: 07/20/2015
 f1_keywords:
@@ -9,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - this keyword [C#]
 ms.assetid: d4f827fe-4710-410b-89b8-867dad44b8a3
-ms.openlocfilehash: 4a3342e73fef3effd54f72e68283eb6085eef5b5
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 2a2c487ad93e6fc75ecf95c541e859b8b60bb5b5
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69608447"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715106"
 ---
 # <a name="this-c-reference"></a>this (Справочник по C#)
 

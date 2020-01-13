@@ -1,22 +1,21 @@
 ---
 title: Контекстные ключевые слова. Справочник по C#
-ms.custom: seodec18
 ms.date: 03/07/2017
 helpviewer_keywords:
 - contextual keywords [C#]
 ms.assetid: 7c76bc29-a754-4389-b0ab-f6b441018298
-ms.openlocfilehash: 9197ebb1fa48011c60a6d224497e57a604870fc3
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 1de8fbccfa9485a546689233ea8a601a8bd697a5
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73422873"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713646"
 ---
 # <a name="contextual-keywords-c-reference"></a>Контекстные ключевые слова (Справочник по C#)
 
 Контекстное ключевое слово используется для предоставления конкретного значения в коде, но оно не является зарезервированным словом в C#. В этом разделе представлены следующие контекстные ключевые слова:  
   
-|Ключевое слово|ОПИСАНИЕ|  
+|Ключевое слово|Описание|  
 |-------------|-----------------|  
 |[add](./add.md)|Определяет метод доступа настраиваемого события, который вызывается, когда клиентский код подписывается на событие.|  
 |[async](./async.md)|Указывает на то, что измененный метод, лямбда-выражение или анонимный метод является асинхронным.|  

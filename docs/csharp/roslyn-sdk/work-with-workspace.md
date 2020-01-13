@@ -3,12 +3,12 @@ title: Использование модели рабочей области п�
 description: Данный обзор описывает тип, используемый для отправки запросов к рабочей области и проектам для вашего кода и управления ими.
 ms.date: 10/15/2017
 ms.custom: mvc
-ms.openlocfilehash: 7d450b31cbf2c83c79552d1ace3a1ae692bfdd88
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a2e69129a869707eaec3516310a72f1fc918ca26
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33354807"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346912"
 ---
 # <a name="work-with-a-workspace"></a>Использование рабочей области
 

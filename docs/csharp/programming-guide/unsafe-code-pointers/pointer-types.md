@@ -1,16 +1,15 @@
 ---
 title: Руководство по программированию на C#. Типы указателей
-ms.custom: seodec18
 ms.date: 04/20/2018
 helpviewer_keywords:
 - unsafe code [C#], pointers
 - pointers [C#]
-ms.openlocfilehash: b9b9f145f8f2d945fa06d53efa89f5754766963f
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: fe0eacbd67917826c88c5ef68bb8d8aeab9ba251
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423130"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711822"
 ---
 # <a name="pointer-types-c-programming-guide"></a>Типы указателей (Руководство по программированию на C#)
 
@@ -25,7 +24,7 @@ void* identifier; //allowed but not recommended
 
 Типы указателей не наследуются от [объекта](../../language-reference/builtin-types/reference-types.md), а типы указателей не преобразуются в `object`. Кроме того, упаковка-преобразование и распаковка-преобразование не поддерживают указатели. Однако можно выполнять преобразования между различными типами указателей, а также между типами указателей и целочисленными типами.
 
-При объявлении нескольких указателей в одном объявлении знак * указывается только с базовым типом; он не используется в качестве префикса для каждого имени указателя. Например:
+При объявлении нескольких указателей в одном объявлении знак * указывается только с базовым типом; он не используется в качестве префикса для каждого имени указателя. Пример:
 
 ```csharp
 int* p1, p2, p3;   // Ok
@@ -36,7 +35,7 @@ int *p1, *p2, *p3;   // Invalid in C#
 
 Значением переменной-указателя типа `myType*` является адрес переменной типа `myType`. Ниже приведены примеры объявлений типов указателей.
 
-|Пример|ОПИСАНИЕ|
+|Пример|Описание|
 |-------------|-----------------|
 |`int* p`|`p` — указатель на целое число.|
 |`int** p`|`p` — указатель на указатель на целое число.|
@@ -87,5 +86,6 @@ int* myVariable;
 - [Руководство по программированию на C#](../index.md)
 - [Небезопасный код и указатели](index.md)
 - [Преобразования указателей](pointer-conversions.md)
-- [Типы](/dotnet/csharp/language-reference/keywords)
+- [Ссылочные типы](../../language-reference/keywords/reference-types.md)
+- [Типы значений](../../language-reference/keywords/value-types.md)
 - [unsafe](../../language-reference/keywords/unsafe.md)

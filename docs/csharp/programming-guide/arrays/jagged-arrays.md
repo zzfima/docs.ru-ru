@@ -1,17 +1,16 @@
 ---
 title: Руководство по программированию на C#. Массивы массивов
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - jagged arrays [C#]
 - arrays [C#], jagged
 ms.assetid: 537c65a6-0e0a-4a00-a2b8-086f38519c70
-ms.openlocfilehash: 8d1be351e3aabea44138323d04c922dd1cccb78a
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 56013f0143d5efcb31a476909cb6e92504ff0dbc
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69597339"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705708"
 ---
 # <a name="jagged-arrays-c-programming-guide"></a>Массивы массивов (Руководство по программированию на C#)
 
@@ -27,7 +26,7 @@ ms.locfileid: "69597339"
   
  Каждый элемент представляет собой одномерный массив целых чисел. Первый из них содержит 5 целых чисел, второй — 4, а третий — 2.  
   
- Кроме того, с помощью инициализаторов можно заполнять элементы массива значениями (при этом вам не потребуется знать размер массива). Например:  
+ Кроме того, с помощью инициализаторов можно заполнять элементы массива значениями (при этом вам не потребуется знать размер массива). Пример:  
   
  [!code-csharp[csProgGuideArrays#21](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#21)]  
   

@@ -1,18 +1,17 @@
 ---
 title: Руководство по программированию на C#. Методы завершения
-ms.custom: seodec18
 ms.date: 10/08/2018
 helpviewer_keywords:
 - ~ [C#], in finalizers
 - C# language, finalizers
 - finalizers [C#]
 ms.assetid: 1ae6e46d-a4b1-4a49-abe5-b97f53d9e049
-ms.openlocfilehash: f7cb9bd05d08a33be53abad58b78b39e36c6dffe
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 9c00f14da9d79418e4fb204bac30e539b234197f
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73419362"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715012"
 ---
 # <a name="finalizers-c-programming-guide"></a>Методы завершения (руководство по программированию в C#)
 Методы завершения (также называемые **деструкторами**) используются для любой необходимой окончательной очистки, когда сборщик мусора окончательно удаляет экземпляра класса.  
@@ -85,7 +84,7 @@ protected override void Finalize()
   
 ## <a name="c-language-specification"></a>Спецификация языка C#  
 
-Дополнительные сведения см. в разделе [Деструкторы](~/_csharplang/spec/classes.md#destructors) [спецификация языка C# 6.0](/dotnet/csharp/language-reference/language-specification/introduction).
+Дополнительные сведения см. в разделе [Деструкторы](~/_csharplang/spec/classes.md#destructors)[спецификация языка C# 6.0](/dotnet/csharp/language-reference/language-specification/introduction).
   
 ## <a name="see-also"></a>См. также
 

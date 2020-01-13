@@ -1,17 +1,16 @@
 ---
 title: Справочник по C#. Уровни доступности
-ms.custom: seodec18
 ms.date: 12/06/2017
 helpviewer_keywords:
 - access modifiers [C#], accessibility levels
 - accessibility levels
 ms.assetid: dc083921-0073-413e-8936-a613e8bb7df4
-ms.openlocfilehash: 2d6605a305e5003e19f4fe1dd260746302691215
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 26fbc2a6d86aead537465c304146630f8bcd3ad4
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69602385"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713818"
 ---
 # <a name="accessibility-levels-c-reference"></a>Уровни доступности (Справочник по C#)
 
@@ -38,9 +37,9 @@ ms.locfileid: "69602385"
   
 |Члены типа|Уровень доступности членов по умолчанию|Допустимые объявленные уровни доступности члена|  
 |----------------|----------------------------------|--------------------------------------------------|  
-|`enum`|`public`|Нет|  
+|`enum`|`public`|Отсутствуют|  
 |`class`|`private`|`public`<br /><br /> `protected`<br /><br /> `internal`<br /><br /> `private`<br /><br /> `protected internal` <br /><br />`private protected`|  
-|`interface`|`public`|Нет|  
+|`interface`|`public`|Отсутствуют|  
 |`struct`|`private`|`public`<br /><br /> `internal`<br /><br /> `private`|  
   
  Доступность вложенного типа зависит от [домена доступности](./accessibility-domain.md), который определяется объявленным уровнем доступности члена и доменом доступности непосредственно вмещающего его типа. Однако домен доступности вложенного типа не может выходить за границы домена доступности содержащего его типа.  

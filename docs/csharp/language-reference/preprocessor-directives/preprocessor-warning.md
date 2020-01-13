@@ -1,21 +1,20 @@
 ---
 title: '#warning. Справочник по C#'
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - '#warning'
 helpviewer_keywords:
 - '#warning directive [C#]'
 ms.assetid: e6fb496d-bb8b-4018-baf6-5b60a0c8902b
-ms.openlocfilehash: 3d09cd95ef4d53e3f11d9feb9675ebba22d6f857
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 38c3807a696599390667060d3bf374c68845fed0
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69608528"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715072"
 ---
 # <a name="warning-c-reference"></a>#warning (справочник по C#)
-`#warning` позволяет создать предупреждение компилятора [CS1030](../../misc/cs1030.md) первого уровня из определенного места в коде. Например:  
+`#warning` позволяет создать предупреждение компилятора [CS1030](../../misc/cs1030.md) первого уровня из определенного места в коде. Пример:  
   
 ```csharp
 #warning Deprecated code in this method.  

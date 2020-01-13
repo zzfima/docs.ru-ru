@@ -1,6 +1,5 @@
 ---
 title: $ — интерполяция строк — справочные материалы по C#
-ms.custom: seodec18
 description: Интерполяция строк предоставляет более понятный и удобный синтаксис для форматирования строковых выходных данных, чем традиционное составное форматирование строк.
 ms.date: 09/02/2019
 f1_keywords:
@@ -11,12 +10,12 @@ helpviewer_keywords:
 - string interpolation [C#]
 - interpolated string [C#]
 author: pkulikov
-ms.openlocfilehash: cda8582da9ca8262ec2ce6bcfbb76e2e2f5f6006
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: b32bbbb0bd99878822d7ca5abdba80b46539846a
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73421859"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715082"
 ---
 # <a name="---string-interpolation-c-reference"></a>$ — интерполяция строк (справочные материалы по C#)
 
@@ -38,7 +37,7 @@ ms.locfileid: "73421859"
 
 Элементы в квадратных скобках являются необязательными. Каждый из элементов описан в таблице ниже:
 
-|Элемент|ОПИСАНИЕ|
+|Элемент|Описание|
 |-------------|-----------------|
 |`interpolationExpression`|Выражение, создающее форматируемый результат. Строковое представление `null` является <xref:System.String.Empty?displayProperty=nameWithType>.|
 |`alignment`|Константное выражение, значение которого определяет минимальное количество символов в строковом представлении результата выражения. Если оно положительное, строковое представление выравнивается по правому краю, если отрицательное — по левому краю. Дополнительные сведения см. в разделе [Компонент выравнивания](../../../standard/base-types/composite-formatting.md#alignment-component).|
@@ -95,7 +94,7 @@ ms.locfileid: "73421859"
 
 ## <a name="c-language-specification"></a>Спецификация языка C#
 
-Дополнительные сведения см. в разделе [Интерполированные строки](~/_csharplang/spec/expressions.md#interpolated-strings) [спецификации языка C#](~/_csharplang/spec/introduction.md).
+Дополнительные сведения см. в разделе [Интерполированные строки](~/_csharplang/spec/expressions.md#interpolated-strings)[спецификации языка C#](~/_csharplang/spec/introduction.md).
 
 ## <a name="see-also"></a>См. также
 

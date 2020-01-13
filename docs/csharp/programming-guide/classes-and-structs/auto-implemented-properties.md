@@ -1,17 +1,16 @@
 ---
 title: Руководство по программированию на C#. Автоматически реализуемые свойства
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - auto-implemented properties [C#]
 - properties [C#], auto-implemented
 ms.assetid: aa55fa97-ccec-431f-b5e9-5ac789fd32b7
-ms.openlocfilehash: 92d20ec305fcbc824a929459ff69a29c22b2ff34
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 76f16a66fbc01a6a69d91136cfbfe5805b91aea3
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73971281"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705643"
 ---
 # <a name="auto-implemented-properties-c-programming-guide"></a>Автоматически реализуемые свойства (Руководство по программированию на C#)
 В C# 3.0 и более поздних версиях автоматически реализуемые свойства делают объявление свойств более лаконичным, когда в методах доступа к свойствам не требуется дополнительная логика. Они также позволяют клиентскому коду создавать объекты. При объявлении свойства, как показано в следующем примере, компилятор создает закрытое анонимное резервное поле, которое может быть доступно только через методы доступа `get` и `set` свойства.  

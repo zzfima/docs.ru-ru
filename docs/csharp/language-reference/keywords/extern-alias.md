@@ -1,6 +1,5 @@
 ---
 title: Псевдоним extern. Справочник по C#
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - alias_CSharpKeyword
@@ -9,12 +8,12 @@ helpviewer_keywords:
 - aliases [C#], extern keyword
 - aliases, extern keyword
 ms.assetid: f487bf4f-c943-4fca-851b-e540c83d9027
-ms.openlocfilehash: 09d1247c51f0e600973840cfef2d3b396d9bf0d0
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 86202333484933d7449b0c4d8c5a3f1a63cd7775
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72520287"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713545"
 ---
 # <a name="extern-alias-c-reference"></a>Псевдоним extern (Справочник по C#)
 Иногда может потребоваться сослаться на две версии сборок, которые имеют одинаковые полные имена типов. Например, если необходимо использовать две или более версии сборки в одном приложении. Используя внешний псевдоним сборки, пространства имен для каждой сборки можно перенести внутрь пространств имен корневого уровня с именованием по псевдониму, что позволяет использовать их в одном файле.  
@@ -28,7 +27,7 @@ ms.locfileid: "72520287"
   
  `/r:GridV2=grid20.dll`  
   
- При этом создаются внешние псевдонимы `GridV1` и `GridV2`. Чтобы использовать эти псевдонимы в программе, сошлитесь на них с помощью ключевого слова `extern`. Например:  
+ При этом создаются внешние псевдонимы `GridV1` и `GridV2`. Чтобы использовать эти псевдонимы в программе, сошлитесь на них с помощью ключевого слова `extern`. Пример:  
   
  `extern alias GridV1;`  
   

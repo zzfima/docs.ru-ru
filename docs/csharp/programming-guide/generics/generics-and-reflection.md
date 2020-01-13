@@ -1,17 +1,16 @@
 ---
 title: Руководство по программированию на C#. Универсальные типы и отражение
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - generics [C#], reflection
 - reflection [C#], generic types
 ms.assetid: 162fd9b4-dd5b-4abb-8c9b-e44e21e2f451
-ms.openlocfilehash: be4b72414af8e5a18145330f5c44ae9a79a567cb
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 4893bf5ebe73988bb6535cc2a85591ff0dde6ebd
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69659889"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712173"
 ---
 # <a name="generics-and-reflection-c-programming-guide"></a>Универсальные типы и отражение (Руководство по программированию в C#)
 Поскольку среда CLR имеет доступ к данным универсальных типов во время выполнения, вы можете использовать отражение для получения сведений об универсальных типах точно так же, как и для неуниверсальных типов. Дополнительные сведения см. в разделе [Универсальные типы во время выполнения](./generics-in-the-run-time.md).  
@@ -20,7 +19,7 @@ ms.locfileid: "69659889"
   
  Список неизменяемых условий для терминов, используемых в отражении универсальных типов, см. в примечаниях к описанию свойства <xref:System.Type.IsGenericType%2A>.  
   
-|Имя члена System.Type|ОПИСАНИЕ|  
+|Имя члена System.Type|Описание|  
 |-----------------------------|-----------------|  
 |<xref:System.Type.IsGenericType%2A>|Возвращает значение true, если тип является универсальным.|  
 |<xref:System.Type.GetGenericArguments%2A>|Возвращает массив объектов `Type`, которые представляют аргументы типа, предоставленные для создаваемого типа, или параметры определения универсального типа.|  
@@ -36,7 +35,7 @@ ms.locfileid: "69659889"
   
  Кроме того, члены класса <xref:System.Reflection.MethodInfo> обеспечивают данные времени выполнения для универсальных методов. Список неизменяемых условий для терминов, используемых для отражения универсальных методов, см. в примечаниях к описанию свойства <xref:System.Reflection.MethodBase.IsGenericMethod%2A>.  
   
-|Имя члена System.Reflection.MemberInfo|ОПИСАНИЕ|  
+|Имя члена System.Reflection.MemberInfo|Описание|  
 |----------------------------------------------|-----------------|  
 |<xref:System.Reflection.MethodBase.IsGenericMethod%2A>|Возвращает значение true, если метод является универсальным.|  
 |<xref:System.Reflection.MethodInfo.GetGenericArguments%2A>|Возвращает массив объектов Type, которые представляют аргументы создаваемого универсального метода, относящиеся к типу, или параметры типа определения универсального метода.|  

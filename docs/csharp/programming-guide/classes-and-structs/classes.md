@@ -1,18 +1,17 @@
 ---
 title: Руководство по программированию на C#. Классы
-ms.custom: seodec18
 description: Сведения о типах классов и их создании
 ms.date: 08/21/2018
 helpviewer_keywords:
 - classes [C#]
 - C# language, classes
 ms.assetid: e8848524-7273-429f-8aba-c658d5eff5ad
-ms.openlocfilehash: 193446ff98edce3b7c078c6eeba07cf9acdadaf0
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 832095e1d9712c85ad588836e8eba8f523719021
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69597172"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714981"
 ---
 # <a name="classes-c-programming-guide"></a>Классы (Руководство по программированию на C#)
 

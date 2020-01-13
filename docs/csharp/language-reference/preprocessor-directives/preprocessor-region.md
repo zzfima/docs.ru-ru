@@ -1,18 +1,17 @@
 ---
 title: '#region. Справочник по C#'
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - '#region'
 helpviewer_keywords:
 - '#region directive [C#]'
 ms.assetid: 672c87d1-9771-4f64-ab3f-0ad3d4ffb2b4
-ms.openlocfilehash: ba5b47d77c69761a77b05ac6079e1b003af336b3
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 723a904d18955caceea9e0d485ab51f84366c66e
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69608754"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715118"
 ---
 # <a name="region-c-reference"></a>#region (Справочник по C#)
 Директива `#region` позволяет указать блок кода, который можно разворачивать и сворачивать с помощью функции [структурирования](/visualstudio/ide/outlining) в редакторе кода Visual Studio. В больших файлах кода удобно сворачивать или скрывать одну или несколько областей, чтобы не отвлекаться от той части файла, над которой в настоящее время идет работа. В следующем примере показано, как определить область:  

@@ -1,17 +1,16 @@
 ---
 title: Руководство по программированию на C#. Использование оператора foreach с массивами
-ms.custom: seodec18
 ms.date: 05/23/2018
 helpviewer_keywords:
 - arrays [C#], foreach
 - foreach statement [C#], using with arrays
 ms.assetid: 5f2da2a9-1f56-4de5-94cc-e07f4f7a0244
-ms.openlocfilehash: a22cb939370b38780881eca0d9585a14002c8250
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: bb121b0f5d990ef6e596b34a45606e2abde6811a
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56966415"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705682"
 ---
 # <a name="using-foreach-with-arrays-c-programming-guide"></a>Использование оператора foreach с массивами (Руководство по программированию на C#)
 

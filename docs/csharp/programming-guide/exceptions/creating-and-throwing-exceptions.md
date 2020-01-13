@@ -1,6 +1,5 @@
 ---
 title: Руководство по программированию C#. Создание и генерация исключений
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - catching exceptions [C#]
@@ -8,12 +7,12 @@ helpviewer_keywords:
 - exceptions [C#], creating
 - exceptions [C#], throwing
 ms.assetid: 6bbba495-a115-4c6d-90cc-1f4d7b5f39e2
-ms.openlocfilehash: dfc852722531c06f986f54221ad094b13496561f
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: f775a0917560a219f24329adcb1542f605d47dc2
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73417941"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712303"
 ---
 # <a name="creating-and-throwing-exceptions-c-programming-guide"></a>Создание и генерация исключений (Руководство по программированию C#)
 Исключения позволяют обозначить, что во время выполнения программы произошла ошибка. Объекты исключений, описывающие ошибку, создаются и затем *вызываются* с помощью ключевого слова [throw](../../language-reference/keywords/throw.md). Далее среда выполнения ищет наиболее совместимый обработчик исключений.  
@@ -56,7 +55,7 @@ ms.locfileid: "73417941"
 - Не рекомендуется создавать исключения, которые могут вызываться в режиме отладки, а не в режиме выпуска. Чтобы определить ошибки времени выполнения на этапе разработки, используйте Debug Assert.  
   
 ## <a name="defining-exception-classes"></a>Определение классов исключений  
- Программы могут вызывать предопределенный класс исключений в пространстве имен <xref:System> (кроме указанных ранее случаев) или создавать собственные классы исключений путем наследования от <xref:System.Exception>. Производные классы должны определять по крайней мере четыре конструктора: один конструктор без параметров, один конструктор, задающий свойство сообщения, и еще один, задающий свойства <xref:System.Exception.Message%2A> и <xref:System.Exception.InnerException%2A>. Четвертый конструктор служит для сериализации исключения. Новые классы исключений должны быть сериализуемыми. Например:  
+ Программы могут вызывать предопределенный класс исключений в пространстве имен <xref:System> (кроме указанных ранее случаев) или создавать собственные классы исключений путем наследования от <xref:System.Exception>. Производные классы должны определять по крайней мере четыре конструктора: один конструктор без параметров, один конструктор, задающий свойство сообщения, и еще один, задающий свойства <xref:System.Exception.Message%2A> и <xref:System.Exception.InnerException%2A>. Четвертый конструктор служит для сериализации исключения. Новые классы исключений должны быть сериализуемыми. Пример:  
   
  [!code-csharp[csProgGuideExceptions#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#15)]  
   

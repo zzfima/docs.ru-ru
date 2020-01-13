@@ -29,12 +29,12 @@ helpviewer_keywords:
 - ^ operator [C#]
 - bitwise logical OR operator [C#]
 - '| operator [C#]'
-ms.openlocfilehash: 27f7cf46bd3e344503f74527df34506d38ad4545
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: f14b92aba270eab845ca50e5407da3502b5c4087
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428446"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345346"
 ---
 # <a name="bitwise-and-shift-operators-c-reference"></a>Побитовые операторы и операторы сдвига (справочник по C#)
 
@@ -136,7 +136,7 @@ x = x op y
 
 [!code-csharp-interactive[compound assignment](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#CompoundAssignment)]
 
-Из-за [числовых повышений уровня](~/_csharplang/spec/expressions.md#numeric-promotions) результат операции `op` может не быть явно преобразуемым в тип `T` `x`. В этом случае, если `op` является предопределенным оператором, и результат операции является явно преобразуемым в тип `T` `x`, выражение составного присваивания формы `x op= y` эквивалентно `x = (T)(x op y)`, за исключением того, что `x` вычисляется только один раз. В следующем примере продемонстрировано такое поведение.
+Из-за [числовых повышений уровня](~/_csharplang/spec/expressions.md#numeric-promotions) результат операции `op` может не быть явно преобразуемым в тип `T``x`. В этом случае, если `op` является предопределенным оператором, и результат операции является явно преобразуемым в тип `T``x`, выражение составного присваивания формы `x op= y` эквивалентно `x = (T)(x op y)`, за исключением того, что `x` вычисляется только один раз. В следующем примере продемонстрировано такое поведение.
 
 [!code-csharp-interactive[compound assignment with cast](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#CompoundAssignmentWithCast)]
 
@@ -172,9 +172,9 @@ x = x op y
 
 ## <a name="enumeration-logical-operators"></a>Логические операторы перечисления
 
-Операторы `~`, `&`, `|` и `^` также поддерживаются для любого типа [перечисления](../keywords/enum.md). Для операндов одного типа перечисления логическая операция выполняется по соответствующим значениям базового целочисленного типа. Например, для любого `x` и `y` типа перечисления `T` с базовым типом `U` выражение `x & y` дает тот же результат, что и выражение `(T)((U)x & (U)y)`.
+Операторы `~`, `&`, `|` и `^` также поддерживаются для любого типа [перечисления](../builtin-types/enum.md). Для операндов одного типа перечисления логическая операция выполняется по соответствующим значениям базового целочисленного типа. Например, для любого `x` и `y` типа перечисления `T` с базовым типом `U` выражение `x & y` дает тот же результат, что и выражение `(T)((U)x & (U)y)`.
 
-Побитовые логические операторы обычно используются с типом перечисления, который определяется с помощью атрибута [Flags](xref:System.FlagsAttribute). Дополнительные сведения см. в разделе [Типы перечислений как битовые флаги](../../programming-guide/enumeration-types.md#enumeration-types-as-bit-flags) в статье [Типы перечислений](../../programming-guide/enumeration-types.md).
+Побитовые логические операторы обычно используются с типом перечисления, который определяется с помощью атрибута [Flags](xref:System.FlagsAttribute). Дополнительные сведения см. в разделе [Типы перечислений как битовые флаги](../builtin-types/enum.md#enumeration-types-as-bit-flags) в статье [Типы перечислений](../builtin-types/enum.md).
 
 ## <a name="operator-overloadability"></a>Возможность перегрузки оператора
 

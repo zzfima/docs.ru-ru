@@ -1,6 +1,5 @@
 ---
 title: Ключевое слово namespace. Справочник по C#
-ms.custom: seoapril2019
 ms.date: 07/20/2015
 f1_keywords:
 - namespace_CSharpKeyword
@@ -9,12 +8,12 @@ helpviewer_keywords:
 - namespace keyword [C#]
 - scope [C#]
 ms.assetid: 0a788423-9110-42e0-97d9-bda41ca4870f
-ms.openlocfilehash: d1e30162cbce65193783d2fb0607900f209cc648
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 1eaec05289ad1146ac3dcd6479442a6fae067cc9
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73422688"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713368"
 ---
 # <a name="namespace-c-reference"></a>namespace (Справочник по C#)
 
@@ -34,9 +33,9 @@ ms.locfileid: "73422688"
 
 - [struct](struct.md)
 
-- [enum](enum.md)
+- [enum](../builtin-types/enum.md)
 
-- [delegate](../builtin-types/reference-types.md)
+- [delegate](../builtin-types/reference-types.md#the-delegate-type)
 
 Независимо от того, было ли пространство имен объявлено явным образом в исходном файле на языке C#, компилятор добавляет пространство имен по умолчанию. Это безымянное пространство имен, иногда называемое глобальным пространством имен, существует в каждом файле. Любой идентификатор в глобальном пространстве имен доступен для использования в именованном пространстве имен.
 

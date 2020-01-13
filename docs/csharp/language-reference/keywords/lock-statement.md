@@ -1,6 +1,5 @@
 ---
 title: Инструкция lock. Справочник по C#
-ms.custom: seodec18
 description: Синхронизация доступа потоков к общему ресурсу с помощью оператора блокировки C#
 ms.date: 10/01/2018
 f1_keywords:
@@ -9,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - lock keyword [C#]
 ms.assetid: 656da1a4-707e-4ef6-9c6e-6d13b646af42
-ms.openlocfilehash: 70fcd8041946f2b1db3b37de79318b87771ee676
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: 467881dd36c97b6b18b7f31d4e4af25152b0d012
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70168777"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713390"
 ---
 # <a name="lock-statement-c-reference"></a>Инструкция lock. (Справочник по C#)
 
