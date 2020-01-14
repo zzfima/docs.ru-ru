@@ -2,12 +2,12 @@
 title: Особенности возможностей Windows Workflow Foundation
 ms.date: 03/30/2017
 ms.assetid: e84d12da-a055-45f6-b4d1-878d127b46b6
-ms.openlocfilehash: c534575fcf70035bc728642dbb65b05db1fd4686
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 197b2e0d6586e001a4970cf8cb3f8e6b2a372af2
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75345109"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75936797"
 ---
 # <a name="windows-workflow-foundation-feature-specifics"></a>Особенности возможностей Windows Workflow Foundation
 
@@ -101,9 +101,9 @@ ms.locfileid: "75345109"
 
 - [Стандартный элемент конечной точки](xref:System.ServiceModel.Configuration.StandardEndpointElement)
 
-- [Улучшения конфигурации службы в .NET Framework 4](https://blogs.msdn.microsoft.com/endpoint/2009/06/30/service-configuration-improvements-in-net-4/)
+- [Улучшения конфигурации службы в .NET Framework 4](https://docs.microsoft.com/archive/blogs/endpoint/service-configuration-improvements-in-net-4)
 
-- [Типичная ошибка пользователя в .NET 4: невводимое имя конфигурации службы WF/WCF](https://blogs.msdn.microsoft.com/endpoint/2009/11/09/common-user-mistake-in-net-4-mistyping-the-wfwcf-service-configuration-name/)
+- [Типичная ошибка пользователя в .NET 4: невводимое имя конфигурации службы WF/WCF](https://docs.microsoft.com/archive/blogs/endpoint/common-user-mistake-in-net-4-mistyping-the-wfwcf-service-configuration-name)
 
 ### <a name="simplified-configuration-scenarios"></a>Сценарии упрощенной конфигурации
 
@@ -127,7 +127,7 @@ ms.locfileid: "75345109"
 
 - [Документация по API сопоставителя контрактов данных](xref:System.Runtime.Serialization.DataContractResolver)
 
-- [Знакомство с арбитром контрактов данных](https://blogs.msdn.microsoft.com/youssefm/2009/06/05/configuring-known-types-dynamically-introducing-the-datacontractresolver/)
+- [Знакомство с арбитром контрактов данных](https://docs.microsoft.com/archive/blogs/youssefm/configuring-known-types-dynamically-introducing-the-datacontractresolver)
 
 - Образцы:
 
@@ -287,7 +287,7 @@ ms.locfileid: "75345109"
 
 2. Примеры: [примеры&#93; WCF &#91;служб маршрутизации](../wcf/samples/routing-services.md)
 
-3. Блог. [правила маршрутизации](https://blogs.msdn.microsoft.com/RoutingRules/) .
+3. Блог. [правила маршрутизации](https://docs.microsoft.com/archive/blogs/RoutingRules/) .
 
 ### <a name="routing-scenarios"></a>Сценарии маршрутизации
 

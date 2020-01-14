@@ -6,12 +6,12 @@ helpviewer_keywords:
 - caching [.NET Framework]
 - caching [ASP.NET]
 ms.assetid: c4b47ee0-4b82-4124-9bce-818088385e34
-ms.openlocfilehash: 2a0d138151722a76133da45c166c51d7f3bb0a31
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 8fe2a386da8cdb4bb075b67a5e52c840a7b66c77
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428200"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75935287"
 ---
 # <a name="caching-in-net-framework-applications"></a>Кэширование в приложениях платформы .NET Framework
 Кэширование позволяет хранить данные в памяти для быстрого доступа. При повторном доступе к данным приложения могут получать их из кэша вместо извлечения из исходного источника. Это может повысить производительность и масштабируемость. Кроме того, кэширование обеспечивает доступность данных при временной недоступности источника данных.  
@@ -52,7 +52,7 @@ ms.locfileid: "74428200"
 > [!NOTE]
 > При разработке новых приложений рекомендуется использовать класс <xref:System.Runtime.Caching.MemoryCache>. Интерфейс API, предоставленный в пространстве имен <xref:System.Runtime.Caching>, подобен API, предоставленному в пространстве имен <xref:System.Web.Caching.Cache>. Следовательно, этот API будет знаком вам, если вы использовали кэширование в более ранних версиях ASP.NET. Пример использования кэширования в приложениях ASP.NET см. в разделе [Пошаговое руководство. Кэширование данных приложения в ASP.NET](https://docs.microsoft.com/previous-versions/ff477235(v=vs.100)).  
   
-### <a name="output-caching"></a>Кэширование выводимых данных  
+### <a name="output-caching"></a>Кэширование выходных данных  
  Для ручного кэширования данных приложения можно использовать класс <xref:System.Runtime.Caching.MemoryCache> в ASP.NET. ASP.NET также поддерживает кэширование выходных данных, при котором в памяти сохраняются созданные выходные данные страниц, элементов управления и HTTP-ответов. Кэширование выходных данных можно настроить декларативно на веб-странице ASP.NET или с помощью параметров в файле Web.config. Дополнительные сведения см. в разделе [Элемент outputCache для элемента caching (схема параметров ASP.NET)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms228124(v=vs.100)).  
   
  ASP.NET позволяет расширить кэширование выходных данных путем создания пользовательских поставщиков кэша выходных данных. С помощью пользовательских поставщиков можно хранить кэшированное содержимое на других запоминающих устройствах, таких как диски, облачные хранилища и распределенные модули кэширования. Для создания пользовательского поставщика кэша выходных данных необходимо создать класс, производный от класса <xref:System.Web.Caching.OutputCacheProvider>, и настроить для приложения использование пользовательского поставщика кэша выходных данных.  
@@ -69,7 +69,7 @@ ms.locfileid: "74428200"
   
 - Создайте пользовательский класс, производный от класса <xref:System.Runtime.Caching.ObjectCache>, а затем предоставьте в нем пользовательскую реализацию кэша.  
   
-- Создайте класс, производный от класса <xref:System.Runtime.Caching.MemoryCache>, и настройте или расширьте его. Пример того, как это сделать, см. в записи блога [Кэширование данных приложений с помощью нескольких объектов кэша в приложении ASP.NET](https://blogs.msdn.microsoft.com/aspnetue/2010/03/22/caching-application-data-by-using-multiple-cache-objects-in-an-asp-net-application/).  
+- Создайте класс, производный от класса <xref:System.Runtime.Caching.MemoryCache>, и настройте или расширьте его. Пример того, как это сделать, см. в записи блога [Кэширование данных приложений с помощью нескольких объектов кэша в приложении ASP.NET](https://docs.microsoft.com/archive/blogs/aspnetue/caching-application-data-by-using-multiple-cache-objects-in-an-asp-net-application).  
   
 - Создайте класс, производный от класса <xref:System.Web.Caching.OutputCacheProvider>, и настройте для приложения использование пользовательского поставщика кэша выходных данных.  
   

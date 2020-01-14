@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7123a89b-eb9b-463a-a552-a081e33b0a3a
 topic_type:
 - apiref
-ms.openlocfilehash: 82fa0903474ee04b767fd9c68812efe7f0cc4fa0
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: adbb5eca3b7ffa36d0c963d0dacc3b2afdb664d4
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73124159"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75935562"
 ---
 # <a name="loadtypelibwithresolver-function"></a>Функция LoadTypeLibWithResolver
 Загружает библиотеку типов и использует предоставляемый [интерфейс итипелибресолвер](itypelibresolver-interface.md) для разрешения любых библиотек типов, на которые имеются ссылки.  
@@ -39,7 +39,7 @@ HRESULT LoadTypeLibWithResolver(
  окне Путь к файлу библиотеки типов.  
   
  `regkind`  
- окне Флаг [перечисления регкинд](https://docs.microsoft.com/windows/win32/api/oleauto/ne-oleauto-regkind) , управляющий регистрацией библиотеки типов. Возможные значения:  
+ окне Флаг [перечисления регкинд](/windows/win32/api/oleauto/ne-oleauto-regkind) , управляющий регистрацией библиотеки типов. Возможные значения:  
   
 - `REGKIND_DEFAULT`: использование поведения регистрации по умолчанию.  
   
@@ -91,7 +91,7 @@ HRESULT LoadTypeLibWithResolver(
   
  **Версия .NET Framework:** 3,5, 3,0, 2,0  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Вспомогательные функции Tlbexp](index.md)
 - [Функция Лоадтипелибекс](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-loadtypelibex)
