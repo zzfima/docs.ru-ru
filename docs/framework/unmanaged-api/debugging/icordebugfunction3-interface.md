@@ -10,17 +10,17 @@ api_type:
 ms.assetid: b22717b9-ead5-4eea-887e-789b52d613dc
 topic_type:
 - apiref
-ms.openlocfilehash: fc50fd7180aaf5c1cff2147268d34921eec39e8f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: b74008e0a183d46d82c5262209d582537fd155c7
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73137762"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75938086"
 ---
 # <a name="icordebugfunction3-interface"></a>Интерфейс ICorDebugFunction3
 [Поддерживается в .NET Framework 4.5.2 и более поздних версиях.]  
   
- Логически расширяет интерфейс ICorDebugFunction, чтобы предоставить доступ к коду из запроса ReJIT.  
+ Логически расширяет интерфейс ICorDebugFunction для предоставления доступа к коду из запроса ReJIT.  
   
 ## <a name="methods"></a>Методы  
   
@@ -39,8 +39,8 @@ ms.locfileid: "73137762"
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
 - [Отладка](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [ReJIT: руководство](https://blogs.msdn.microsoft.com/davbr/2011/10/12/rejit-a-how-to-guide/)
+- [ReJIT: руководство](https://docs.microsoft.com/archive/blogs/davbr/rejit-a-how-to-guide)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 123457ac-4223-4273-bb58-3bc0e4957e9d
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 90e57c3d332155d42a38b8a01aba7dbb2c812d62
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: c320d004b05e58fc7c239cd8c1f3bcec84ad8f78
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458035"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937910"
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>Разработка больших, быстро реагирующих приложений .NET Framework
 
@@ -281,7 +281,7 @@ private static string GetStringAndReleaseBuilder(StringBuilder sb)
   
  **Пример 5: лямбда-выражения, List\<T> и IEnumerable\<T>**  
   
- В этом примере [LINQ и код в функциональном стиле](https://blogs.msdn.microsoft.com/charlie/2007/01/27/anders-hejlsberg-on-linq-and-functional-programming/) применяются для поиска символа в модели компилятора при заданной строке имени:  
+ В этом примере [LINQ и код в функциональном стиле](https://docs.microsoft.com/archive/blogs/charlie/anders-hejlsberg-on-linq-and-functional-programming) применяются для поиска символа в модели компилятора при заданной строке имени:  
   
 ```csharp  
 class Symbol {  
@@ -305,7 +305,7 @@ Func<Symbol, bool> predicate = s => s.Name == name;
      return symbols.FirstOrDefault(predicate);  
 ```  
   
- В первой строке [лямбда-выражение](../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md) `s => s.Name == name` [закрывается](https://blogs.msdn.microsoft.com/ericlippert/2003/09/17/what-are-closures/) в локальной переменной `name`. Это означает, что в дополнение к выделению объекта для [делегата](../../csharp/language-reference/builtin-types/reference-types.md#the-delegate-type), содержащегося в `predicate`, код выделяет статический класс для среды, которая перехватывает значение `name`. Компилятор формирует код, аналогичный следующему:  
+ В первой строке [лямбда-выражение](../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md) `s => s.Name == name` [закрывается](https://docs.microsoft.com/archive/blogs/ericlippert/what-are-closures) в локальной переменной `name`. Это означает, что в дополнение к выделению объекта для [делегата](../../csharp/language-reference/builtin-types/reference-types.md#the-delegate-type), содержащегося в `predicate`, код выделяет статический класс для среды, которая перехватывает значение `name`. Компилятор формирует код, аналогичный следующему:  
   
 ```csharp  
 // Compiler-generated class to hold environment state for lambda  
@@ -462,7 +462,7 @@ class Compilation { /*...*/
   
 - Выделения памяти значат больше всего — именно на них команда разработчиков платформы компиляторов потратила больше всего времени, стремясь повысить производительность новых компиляторов. 
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Видеоролик с представлением этого раздела](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2013/DEV-B333)
 - [Руководство по профилированию производительности для начинающих](/visualstudio/profiling/beginners-guide-to-performance-profiling)

@@ -2,12 +2,12 @@
 title: Доступ к службам WCF из клиентского приложения Магазина Windows
 ms.date: 03/30/2017
 ms.assetid: e2002ef4-5dee-4a54-9d87-03b33d35fc52
-ms.openlocfilehash: f5cc18973231f327ee161946a235cb8b8b2ea5a7
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 77dc5d19bc40dc09148a8d2368c56e522bfafc1a
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73978185"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75938174"
 ---
 # <a name="accessing-wcf-services-with-a-windows-store-client-app"></a>Доступ к службам WCF из клиентского приложения Магазина Windows
 В Windows 8 появился новый тип приложения - приложения Магазина Windows. Эти приложения предназначены для работы с сенсорным экраном. .NET Framework 4.5 позволяет приложениям Магазина Windows вызывать службы WCF.  
@@ -16,7 +16,7 @@ ms.locfileid: "73978185"
  Подмножество функций WCF доступно из приложения Магазина Windows. Дополнительную информацию см. в следующих разделах.  
   
 > [!IMPORTANT]
-> Используйте API-синдикации WinRT вместо методов, доступных через службу WCF. Дополнительные сведения см. в разделе [API синдикации WinRT](https://go.microsoft.com/fwlink/?LinkId=236265)  
+> Используйте API-синдикации WinRT вместо методов, доступных через службу WCF. Дополнительные сведения см. в разделе [API синдикации WinRT](xref:Windows.Web.Syndication)  
   
 > [!WARNING]
 > Использование диалогового окна «Добавление ссылки на службу» для добавления ссылки на веб-службу в компонент среды выполнения Windows не поддерживается.  
@@ -106,7 +106,7 @@ public partial class Service1Client : System.ServiceModel.ClientBase<MetroWcfCli
 > [!WARNING]
 > XmlDictionaryWriter.Write (DateTime) теперь записывает объект DateTime в виде строки.  
   
-### <a name="security"></a>Безопасность  
+### <a name="security"></a>по безопасности  
 
 В приложениях Магазина Windows поддерживаются следующие режимы безопасности:
   
@@ -120,7 +120,7 @@ public partial class Service1Client : System.ServiceModel.ClientBase<MetroWcfCli
   
 В приложениях Магазина Windows поддерживаются следующие типы учетных данных клиента:
   
-1. Отсутствуют  
+1. Нет  
   
 2. Basic  
   
@@ -130,7 +130,7 @@ public partial class Service1Client : System.ServiceModel.ClientBase<MetroWcfCli
   
 5. NTLM  
   
-6. Windows  
+6. Портал  
   
 7. Имя пользователя (безопасность сообщений)  
   
@@ -174,11 +174,11 @@ void async SomeMethod()
   
  Обратите внимание на использование ключевого слова async при асинхронном вызове, а также ключевого слова await при вызове асинхронного метода.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Блог по WCF в приложениях для Магазина Windows](https://blogs.msdn.microsoft.com/piyushjo/2011/09/21/wcf-in-windows-8-metro-styled-apps-absolutely-supported/)
-- [Клиенты и безопасность магазина Windows в WCF](https://blogs.msdn.microsoft.com/piyushjo/2011/10/11/calling-a-wcf-service-from-a-metro-application-adding-security/)
-- [Приложения Магазина Windows и вызовы между компьютерами](https://blogs.msdn.microsoft.com/piyushjo/2011/10/21/calling-a-wcf-service-from-a-metro-application-cross-machine-scenario/)
-- [Вызов службы WCF, развернутой в Azure, из приложения Магазина Windows](https://blogs.msdn.com/b/piyushjo/archive/2011/10/22/calling-a-wcf-service-from-a-metro-application-cross-machine-scenario.aspx)
+- [Блог по WCF в приложениях для Магазина Windows](https://docs.microsoft.com/archive/blogs/piyushjo/wcf-in-windows-8-metro-styled-apps-absolutely-supported)
+- [Клиенты и безопасность магазина Windows в WCF](https://docs.microsoft.com/archive/blogs/piyushjo/calling-a-wcf-service-from-a-metro-application-adding-security)
+- [Приложения Магазина Windows и вызовы между компьютерами](https://docs.microsoft.com/archive/blogs/piyushjo/calling-a-wcf-service-from-a-metro-application-cross-machine-scenario)
+- [Вызов службы WCF, развернутой в Azure, из приложения Магазина Windows](https://docs.microsoft.com/archive/blogs/piyushjo/calling-a-wcf-service-from-a-metro-application-cross-machine-scenario)
 - [Программирование безопасности WCF](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)
 - [Привязки](../../../../docs/framework/wcf/bindings.md)

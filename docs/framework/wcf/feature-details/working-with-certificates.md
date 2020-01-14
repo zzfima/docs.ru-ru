@@ -7,18 +7,18 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-ms.openlocfilehash: 65990c699bafa8eec1ba7dcbce624c88316cbb72
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 0764ca29fc959092e77629ff3888e65f0d68d70c
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74283281"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75938051"
 ---
 # <a name="working-with-certificates"></a>Работа с сертификатами
 
 Для программирования безопасности Windows Communication Foundation (WCF) обычно используются цифровые сертификаты X.509, с помощью которых выполняется проверка подлинности клиентов и серверов, шифрование и создание цифровой подписи для сообщений. В этом разделе содержится краткое описание возможностей для работы с цифровыми сертификатами X.509 и порядка использования этих возможностей в WCF. Кроме того, этот раздел включает ссылки на другие разделы с более подробным объяснением основных понятий и порядка выполнения общих задач с использованием WCF и сертификатов.
 
-Вкратце, цифровой сертификат является частью *инфраструктуры открытых ключей* (PKI), представляющей собой систему цифровых сертификатов, центров сертификации и других центров регистрации, которые используются для проверки подлинности каждой стороны, участвующей в электронной транзакции, посредством использования шифрования с открытым ключом. Сертификаты выдаются центрами сертификации, и каждый сертификат имеет набор полей, в которых содержатся такие данные, как *субъект* (сущность, которой выдается сертификат), срок действия (период времени, в течение которого сертификат является действительным), издатель (лицо, выдавшее сертификат) и открытый ключ. В WCF каждое из этих свойств обрабатывается как утверждение <xref:System.IdentityModel.Claims.Claim>, и каждое утверждение затем подразделяется на два типа: удостоверение и право. Дополнительные сведения о сертификатах X.509 см. в разделе [Сертификаты открытого ключа X.509](/windows/desktop/SecCertEnroll/about-x-509-public-key-certificates). Дополнительные сведения об утверждениях и авторизации в WCF см. в разделе [Управление утверждениями и авторизацией с помощью модели удостоверения](managing-claims-and-authorization-with-the-identity-model.md). Дополнительные сведения о реализации PKI см. в статье [Enterprise PKI с Windows Server 2012 R2 Active Directory Certificate Services](https://blogs.technet.microsoft.com/yungchou/2013/10/21/enterprise-pki-with-windows-server-2012-r2-active-directory-certificate-services-part-1-of-2/).
+Вкратце, цифровой сертификат является частью *инфраструктуры открытых ключей* (PKI), представляющей собой систему цифровых сертификатов, центров сертификации и других центров регистрации, которые используются для проверки подлинности каждой стороны, участвующей в электронной транзакции, посредством использования шифрования с открытым ключом. Сертификаты выдаются центрами сертификации, и каждый сертификат имеет набор полей, в которых содержатся такие данные, как *субъект* (сущность, которой выдается сертификат), срок действия (период времени, в течение которого сертификат является действительным), издатель (лицо, выдавшее сертификат) и открытый ключ. В WCF каждое из этих свойств обрабатывается как утверждение <xref:System.IdentityModel.Claims.Claim>, и каждое утверждение затем подразделяется на два типа: удостоверение и право. Дополнительные сведения о сертификатах X.509 см. в разделе [Сертификаты открытого ключа X.509](/windows/desktop/SecCertEnroll/about-x-509-public-key-certificates). Дополнительные сведения об утверждениях и авторизации в WCF см. в разделе [Управление утверждениями и авторизацией с помощью модели удостоверения](managing-claims-and-authorization-with-the-identity-model.md). Дополнительные сведения о реализации PKI см. в статье [Enterprise PKI с Windows Server 2012 R2 Active Directory Certificate Services](https://docs.microsoft.com/archive/blogs/yungchou/enterprise-pki-with-windows-server-2012-r2-active-directory-certificate-services-part-1-of-2).
 
 Основной функцией сертификата является удостоверение подлинности владельца сертификата для других сторон. В сертификате содержится *открытый ключ* владельца, в то время как закрытый ключ хранится у владельца. Открытый ключ можно использовать для зашифровывания сообщений, передаваемых владельцу сертификата. Доступ к закрытому ключу имеет только владелец сертификата, поэтому только он может расшифровать эти сообщения.
 
@@ -72,7 +72,7 @@ ms.locfileid: "74283281"
 
 При создании новой службы пользователь может использовать сертификат, который был выдан центром сертификации, отличным от доверенного, или сертификат издателя может отсутствовать в хранилище «Доверенные корневые центры сертификации». Предусмотрена возможность временного отключения механизма, проверяющего цепочку сертификатов для заданного сертификата; эта возможность должна использоваться только в процессе разработки. Чтобы отключить данный механизм, задайте для свойства `CertificateValidationMode` значение `PeerTrust` или `PeerOrChainTrust`. Эти режимы определяют, что сертификат может быть либо самостоятельно выданным (доверие одноранговой группы), либо являться частью цепочки доверия. Указанное свойство можно задать для любого из следующих классов.
 
-|Class|Свойство|
+|Класс|Идентификаторы|
 |-----------|--------------|
 |<xref:System.ServiceModel.Security.X509ClientCertificateAuthentication>|<xref:System.ServiceModel.Security.X509ClientCertificateAuthentication.CertificateValidationMode%2A?displayProperty=nameWithType>|
 |<xref:System.ServiceModel.Security.X509PeerCertificateAuthentication>|<xref:System.ServiceModel.Security.X509PeerCertificateAuthentication.CertificateValidationMode%2A?displayProperty=nameWithType>|
@@ -141,7 +141,7 @@ ms.locfileid: "74283281"
 
 В WCF часто требуется задать сертификат или набор сертификатов, который служба или клиент будут использовать для проверки подлинности, шифрования или подписи сообщения. Это можно сделать программно с помощью метода `SetCertificate` различных классов, представляющих сертификаты X.509. Следующие классы используют метод `SetCertificate` для задания сертификата.
 
-|Class|Метод|
+|Класс|Метод|
 |-----------|------------|
 |<xref:System.ServiceModel.Security.PeerCredential>|<xref:System.ServiceModel.Security.PeerCredential.SetCertificate%2A>|
 |<xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential>|<xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A>|
@@ -188,10 +188,10 @@ ms.locfileid: "74283281"
 
 В первом выпуске WCF сопоставление выполняется без обращения к политике домена. Поэтому более старые приложения, которые работали при использовании первого выпуска, могут не работать, если включено сопоставление и сертификат X.509 не удовлетворяет требованиям политики домена.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - <xref:System.ServiceModel.Channels>
 - <xref:System.ServiceModel.Security>
 - <xref:System.ServiceModel>
 - <xref:System.Security.Cryptography.X509Certificates.X509FindType>
-- [Защита служб и клиентов](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [Securing Services and Clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

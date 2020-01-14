@@ -4,12 +4,12 @@ ms.date: 04/12/2018
 helpviewer_keywords:
 - Visual Basic compiler, options
 ms.assetid: e67febba-bacf-4e1f-a143-c141e063f90e
-ms.openlocfilehash: c529c03fd3856bbd3d3b26371415907c94ca8d30
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 85fb07f46c2d885491db7358f24b3b50836c2ca8
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74343518"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937760"
 ---
 # <a name="visual-basic-compiler-options-listed-alphabetically"></a>Visual Basic параметров компилятора в алфавитном порядке
 Компилятор командной строки Visual Basic предоставляется в качестве альтернативы компиляции программ из интегрированной среды разработки Visual Studio (IDE). Ниже приведен список параметров компилятора командной строки Visual Basic отсортированных в алфавитном порядке.  
@@ -57,7 +57,7 @@ ms.locfileid: "74343518"
 |[-optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)|Включает использование локального определения типов в различных объявлениях.|  
 |[-optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)|Требовать строгой семантики языка.|  
 |[-out](../../../visual-basic/reference/command-line-compiler/out.md)|Задает выходной файл.|  
-|`-parallel[+&#124;-]`|Указывает, следует ли использовать параллельную сборку (+).|  
+|<code>-parallel[+&#124;-]</code>|Указывает, следует ли использовать параллельную сборку (+).|  
 |[-platform](../../../visual-basic/reference/command-line-compiler/platform.md)|Указывает компилятору платформу процессора для выходного файла.|  
 |`-preferreduilang`|Укажите имя предпочтительного языка вывода.|  
 |[-quiet](../../../visual-basic/reference/command-line-compiler/quiet.md)|Запрещает компилятору показывать код синтаксических ошибок и предупреждений.|  
@@ -80,7 +80,7 @@ ms.locfileid: "74343518"
 |[-win32manifest](../../../visual-basic/reference/command-line-compiler/win32manifest.md)|Определяет пользовательский файл манифеста приложения Win32 для внедрения в переносимый исполняемый файл проекта (PE-файл).|  
 |[-win32resource](../../../visual-basic/reference/command-line-compiler/win32resource.md)|Внедряет ресурс Win32 в выходной файл.|  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Параметры компилятора Visual Basic по категориям](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-by-category.md)
 - [Управление свойствами проектов и решений](/visualstudio/ide/managing-project-and-solution-properties)

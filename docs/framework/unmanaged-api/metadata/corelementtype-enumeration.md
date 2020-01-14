@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c3809c8f-1737-4f0f-9442-0c01ee689871
 topic_type:
 - apiref
-ms.openlocfilehash: 0ce84e1545523302cd47e60b9f047bc470e6bf0f
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: a4e9268d292004f447b30c82f1db4d0fe58404fe
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74443631"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937949"
 ---
 # <a name="corelementtype-enumeration"></a>Перечисление CorElementType
 
@@ -75,11 +75,11 @@ typedef enum CorElementType {
 } CorElementType;
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 |Член|Описание|
 |------------|-----------------|
-|`ELEMENT_TYPE_END`|Используется внутренним образом.|
+|`ELEMENT_TYPE_END`|Для внутреннего использования.|
 |`ELEMENT_TYPE_VOID`|Тип void.|
 |`ELEMENT_TYPE_BOOLEAN`|Логический тип|
 |`ELEMENT_TYPE_CHAR`|Тип символа.|
@@ -110,18 +110,18 @@ typedef enum CorElementType {
 |`ELEMENT_TYPE_MVAR`|Модификатор типа переменной метода.|
 |`ELEMENT_TYPE_CMOD_REQD`|Обязательный модификатор языка C.|
 |`ELEMENT_TYPE_CMOD_OPT`|Необязательный модификатор языка C.|
-|`ELEMENT_TYPE_INTERNAL`|Используется внутренним образом.|
+|`ELEMENT_TYPE_INTERNAL`|Для внутреннего использования.|
 |`ELEMENT_TYPE_MAX`|Недопустимый тип.|
-|`ELEMENT_TYPE_MODIFIER`|Используется внутренним образом.|
+|`ELEMENT_TYPE_MODIFIER`|Для внутреннего использования.|
 |`ELEMENT_TYPE_SENTINEL`|Модификатор типа, который является Sentinel для списка переменного числа параметров.|
-|`ELEMENT_TYPE_PINNED`|Используется внутренним образом.|
+|`ELEMENT_TYPE_PINNED`|Для внутреннего использования.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
 Модификаторы типа формируют базу для представления более сложных типов. Значение модификатора типа `CorElementType` применяется к значению, которое непосредственно следует за ним в сигнатуре типа. Значение, следующее за значением модификатора типа `CorElementType`, может быть `CorElementType` простым значением типа, маркером метаданных или другим значением, как указано в следующей таблице.
 
 > [!NOTE]
-> Все числа (*число*, число *аргументов*, *маркер метаданных*, *ранг*, *количество*и *граница*) хранятся в виде сжатых целых чисел. Дополнительные сведения см. в статье [стандартный ECMA-335-Common Language Infrastructure (CLI)](https://go.microsoft.com/fwlink/?LinkID=116487) на веб-сайте ECMA.
+> Все числа (*число*, число *аргументов*, *маркер метаданных*, *ранг*, *количество*и *граница*) хранятся в виде сжатых целых чисел. Дополнительные сведения см. в статье [стандартный ECMA-335-Common Language Infrastructure (CLI)](http://www.ecma-international.org/publications/standards/Ecma-335.htm) на веб-сайте ECMA.
 
 |Модификатор типа|Формат|
 |-------------------|------------|
@@ -129,12 +129,12 @@ typedef enum CorElementType {
 |`ELEMENT_TYPE_BYREF`|ELEMENT_TYPE_BYREF \<`CorElementType` значение >|
 |`ELEMENT_TYPE_VALUETYPE`|ELEMENT_TYPE_VALUETYPE \<`mdTypeDef` маркера метаданных >|
 |`ELEMENT_TYPE_CLASS`|ELEMENT_TYPE_CLASS \<`mdTypeDef` маркера метаданных >|
-|`ELEMENT_TYPE_VAR`|ELEMENT_TYPE_VAR номер \<>|
+|`ELEMENT_TYPE_VAR`|ELEMENT_TYPE_VAR номер \<|
 |`ELEMENT_TYPE_ARRAY`|ELEMENT_TYPE_ARRAY \<`CorElementType` значение > \<Rank > \<count1 > \<bound1 >... \<Каунтн > \<Баундн >|
 |`ELEMENT_TYPE_GENERICINST`|ELEMENT_TYPE_GENERICINST \<`mdTypeDef` маркера метаданных > \<аргумент Count > \<arg1 >... \<argN >|
 |`ELEMENT_TYPE_FNPTR`|ELEMENT_TYPE_FNPTR \<полную сигнатуру для функции, включая соглашение о вызовах >|
 |`ELEMENT_TYPE_SZARRAY`|ELEMENT_TYPE_SZARRAY \<`CorElementType` значение >|
-|`ELEMENT_TYPE_MVAR`|ELEMENT_TYPE_MVAR номер \<>|
+|`ELEMENT_TYPE_MVAR`|ELEMENT_TYPE_MVAR номер \<|
 |`ELEMENT_TYPE_CMOD_REQD`|ELEMENT_TYPE_\<`mdTypeRef` или `mdTypeDef` маркера метаданных >|
 |`ELEMENT_TYPE_CMOD_OPT`|E_T_CMOD_OPT \<`mdTypeRef` или `mdTypeDef` маркера метаданных >|
 

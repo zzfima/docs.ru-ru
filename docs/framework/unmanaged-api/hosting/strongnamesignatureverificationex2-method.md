@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: dfd4133f-a074-4db3-a7ee-4f250fe9ad3a
 topic_type:
 - apiref
-ms.openlocfilehash: cf8d6b7e45c0012d223173c85a92fac4fb044c6c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 81640e8e34335898f4dd7f4f43eafbd3ef191d19
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73141411"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75938159"
 ---
 # <a name="strongnamesignatureverificationex2-method"></a>Метод StrongNameSignatureVerificationEx2
 Проверяет подпись сборки со строгим именем и обеспечивает сопоставление ключа ECMA с реальным ключом.  
@@ -53,7 +53,7 @@ HRESULT StrongNameSignatureVerificationEx (
  [out] `true`, если подпись строгого имени была проверена; в противном случае `false`. Этот параметр также имеет значение `false`, если проверка прошла успешно из-за параметров реестра.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- `S_OK`, если проверка прошла успешно; в противном случае — значение HRESULT, указывающее на сбой (см. раздел [Общие значения HRESULT](https://go.microsoft.com/fwlink/?LinkId=213878) для списка).  
+ `S_OK`, если проверка прошла успешно; в противном случае — значение HRESULT, указывающее на сбой (см. раздел [Общие значения HRESULT](/windows/win32/seccrypto/common-hresult-values) для списка).  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
@@ -64,7 +64,7 @@ HRESULT StrongNameSignatureVerificationEx (
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Метод StrongNameSignatureVerification](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverification-method.md)
 - [Метод StrongNameSignatureVerificationEx](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverificationex-method.md)

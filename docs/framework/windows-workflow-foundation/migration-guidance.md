@@ -2,12 +2,12 @@
 title: Руководство по миграции
 ms.date: 03/30/2017
 ms.assetid: cb65c132-58c9-4028-b3d4-1efc71d5e60e
-ms.openlocfilehash: 672ed1a93b4409f491d76ffeeaaac5f67a1c4b6e
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: f0c21d32b745a51bada9133230dd0c87be9c915e
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802613"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937968"
 ---
 # <a name="migration-guidance"></a>Руководство по миграции
 
@@ -21,7 +21,8 @@ ms.locfileid: "74802613"
   
  Таким решением, решение об принятии .NET Framework 4 отделено от вашего решения о переходе на WF4 (System. Activity.\*) из WF3 (System. Workflow.\*). В этом разделе приведены ссылки на руководство по миграции в WF, в котором описывается работа с WF3 и WF4.  
   
-## <a name="wf-migration-whitepapers-and-cookbooks"></a>Техническая документация и рецепты по миграции WF.  
+## <a name="wf-migration-white-papers-and-cookbooks"></a>Технические документы и справочники по переносу WF
+
  В разделе [Обзор миграции WF](https://docs.microsoft.com/previous-versions/appfabric/ff383417(v=azure.10)) представлен общий обзор отношений между WF3 и WF4 и стратегиями миграции. В сопутствующих разделах описываются следующие темы.  
   
  [Общие сведения о миграции WF](https://docs.microsoft.com/previous-versions/appfabric/ff383417(v=azure.10))  

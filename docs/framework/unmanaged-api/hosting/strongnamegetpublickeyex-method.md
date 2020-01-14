@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 63d8260c-fb32-4f8f-a357-768afd570f68
 topic_type:
 - apiref
-ms.openlocfilehash: 700bcc5b818c452d3642d325fb6fe19cbb162474
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 834292192aa447a113372bc8807041954b39a115
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73141447"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937773"
 ---
 # <a name="strongnamegetpublickeyex-method"></a>Метод StrongNameGetPublicKeyEx
 Получает открытый ключ из пары открытого и закрытого ключей и задает алгоритм хеширования и алгоритм подписи.  
@@ -66,7 +66,7 @@ HRESULT StrongNameGetPublicKey (
  окне Зарезервировано для будущего использования; по умолчанию принимает значение null.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- `S_OK`, если метод успешно выполнен; в противном случае — значение HRESULT, указывающее на сбой (см. раздел [Общие значения HRESULT](https://go.microsoft.com/fwlink/?LinkId=213878) для списка).  
+ `S_OK`, если метод успешно выполнен; в противном случае — значение HRESULT, указывающее на сбой (см. раздел [Общие значения HRESULT](/windows/win32/seccrypto/common-hresult-values) для списка).  
   
 ## <a name="remarks"></a>Заметки  
  Открытый ключ содержится в структуре [публиккэйблоб](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md) .  
@@ -74,9 +74,9 @@ HRESULT StrongNameGetPublicKey (
 ## <a name="remarks"></a>Заметки  
  В следующей таблице показан набор допустимых значений для параметра `uHashAlgId`.  
   
-|Название|значения|  
+|Name|{2&gt;Value&lt;2}|  
 |----------|-----------|  
-|Отсутствуют|0|  
+|Нет|0|  
 |SHA-1|0x8004|  
 |SHA-256|0x800c|  
 |SHA-384|0x800d|  
@@ -91,7 +91,7 @@ HRESULT StrongNameGetPublicKey (
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Метод StrongNameTokenFromPublicKey](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfrompublickey-method.md)
 - [Структура PublicKeyBlob](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md)
