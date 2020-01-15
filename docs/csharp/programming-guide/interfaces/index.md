@@ -5,12 +5,12 @@ helpviewer_keywords:
 - interfaces [C#]
 - C# language, interfaces
 ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
-ms.openlocfilehash: 3187b8b94c6e46ec13312fc31ac1ed9852199d6b
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 43e37dc4b0977542add05c8cc13e2d7fa47b19bf
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714612"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937493"
 ---
 # <a name="interfaces-c-programming-guide"></a>Интерфейсы (Руководство по программированию в C#)
 
@@ -22,7 +22,7 @@ ms.locfileid: "75714612"
   
  [!code-csharp[csProgGuideInheritance#47](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#47)]  
 
-Имя структуры должно быть допустимым [именем идентификатора](../inside-a-program/identifier-names.md) C#. По соглашению имена интерфейсов начинаются с заглавной буквы `I`.
+Имя интерфейса должно быть допустимым [именем идентификатора](../inside-a-program/identifier-names.md) C#. По соглашению имена интерфейсов начинаются с заглавной буквы `I`.
 
 Любой объект (класс или структура), реализующий интерфейс <xref:System.IEquatable%601>, должен содержать определение для метода <xref:System.IEquatable%601.Equals%2A>, соответствующее сигнатуре, которую задает интерфейс. В результате вы можете быть уверены, что класс, реализующий `IEquatable<T>`, содержит метод `Equals`, с помощью которого экземпляр этого класса может определить, равен ли он другому экземпляру того же класса.  
   

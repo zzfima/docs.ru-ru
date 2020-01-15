@@ -3,12 +3,12 @@ title: Перенос кода из .NET Framework в .NET Core
 description: Общие сведения о процессе переноса и инструментах, которые могут оказаться полезными при переносе проектов .NET Framework в .NET Core.
 author: cartermp
 ms.date: 10/22/2019
-ms.openlocfilehash: b5b010acbccf134afe800aa5bb98a0ae6e9ffa25
-ms.sourcegitcommit: cbdc0f4fd39172b5191a35200c33d5030774463c
+ms.openlocfilehash: e483bb6e48dad6c3bf71bfa81e704a137fc02094
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2020
-ms.locfileid: "75777361"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937315"
 ---
 # <a name="overview-of-porting-from-net-framework-to-net-core"></a>Общие сведения о переносе кода в .NET Core из .NET Framework
 
@@ -29,9 +29,9 @@ ms.locfileid: "75777361"
 
    Средство анализатора переносимости API позволяет проанализировать скомпилированные сборки и создать отчет. В этом отчете представлена сводная информация о переносимости и разбивка по каждому используемому API, недоступному в .NET Core.
 
-3. Установите [анализатор API .NET](../../standard/analyzers/api-analyzer.md) в проектах, чтобы узнать, какие интерфейсы API выдают исключение <xref:System.PlatformNotSupportedException> на отдельных платформах и другие потенциальные проблемы совместимости.
+3. Установите [анализатор API .NET](../../standard/analyzers/api-analyzer.md) в проектах, чтобы узнать, какие интерфейсы API вызывают исключение <xref:System.PlatformNotSupportedException> на отдельных платформах и другие потенциальные проблемы совместимости.
 
-   Это средство подобно анализатору переносимости. Но вместо анализа того, можно ли создать элементы на платформе .NET Core, оно анализирует использование API на предмет действий, которые могут вызвать <xref:System.PlatformNotSupportedException> во время выполнения. Хотя такая проверка обычно не выполняется при переходе с .NET Framework 4.7.2 и более поздних версий, ее стоит выполнить.
+   Это средство подобно анализатору переносимости. Но вместо анализа возможности создания кода на платформе .NET Core оно анализирует вероятность использования API на предмет действий, которые могут вызвать <xref:System.PlatformNotSupportedException> во время выполнения. Хотя такая проверка обычно не выполняется при переходе с .NET Framework 4.7.2 и более поздних версий, ее стоит выполнить. Дополнительные сведения об API, вызывающих исключения в .NET Core, см. в статье [APIs that always throw exceptions on .NET Core](../compatibility/unsupported-apis.md) (API, которые всегда создают исключения в .NET Core).
 
 4. Преобразуйте все зависимости `packages.config` в формат [PackageReference](/nuget/consume-packages/package-references-in-project-files) с помощью [средства преобразования в Visual Studio](/nuget/consume-packages/migrate-packages-config-to-package-reference).
 
@@ -50,4 +50,4 @@ ms.locfileid: "75777361"
 ## <a name="next-steps"></a>Следующие шаги
 
 >[!div class="nextstepaction"]
->[Недоступные в .NET Core технологии](net-framework-tech-unavailable.md)
+>[Анализ зависимостей](third-party-deps.md)
