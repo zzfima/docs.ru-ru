@@ -38,10 +38,6 @@
               href: how-to-define-and-use-custom-numeric-format-providers.md
             - name: Практическое руководство. Сохранение и восстановление значения даты и времени
               href: how-to-round-trip-date-and-time-values.md
-            - name: 'Практическое руководство. Преобразование числовых данных, введенных пользователем в веб-элементах управления, в числа'
-              href: how-to-convert-numeric-user-input-in-web-controls-to-numbers.md
-            - name: Практическое руководство. Отображение сведений о локализованной дате и времени для веб-пользователей
-              href: how-to-display-localized-date-and-time-information-to-web-users.md
             - name: Практическое руководство. Отображение миллисекунд в значениях даты и времени
               href: how-to-display-milliseconds-in-date-and-time-values.md
             - name: 'Практическое руководство. Отображение дат в календарях, отличных от григорианского'

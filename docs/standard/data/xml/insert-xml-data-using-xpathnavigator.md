@@ -7,14 +7,12 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: 2ed8c28b-b88d-4be7-9c87-92df01f0821f
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4ff9232272124c8706e64162d096eced8640c806
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 68c003467d837fe79d5e275968e47fa5dc3490cc
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966952"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710730"
 ---
 # <a name="insert-xml-data-using-xpathnavigator"></a>Вставка XML-данных с помощью XPathNavigator
 Класс <xref:System.Xml.XPath.XPathNavigator> предоставляет набор методов для вставки в XML-документ одноуровневых узлов, дочерних узлов и узлов атрибутов. Для использования этих методов необходимо сделать редактируемым объект <xref:System.Xml.XPath.XPathNavigator>, то есть установить для свойства <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> значение `true`.  
@@ -240,7 +238,7 @@ navigator.SetTypedValue(DateTime.Now);
   
  Ниже перечислены возможные конфликты деклараций `xml:lang`.  
   
-- Если атрибут `xml:lang` существует в контексте объекта <xref:System.Xml.XmlReader>, но отсутствует в контексте объекта <xref:System.Xml.XPath.XPathNavigator>, то к вновь добавленному узлу добавляется атрибут `xml:lang`, значение которого берется из объекта <xref:System.Xml.XmlReader>.  
+- Если атрибут `xml:lang` существует в контексте объекта <xref:System.Xml.XmlReader>, но отсутствует в контексте объекта <xref:System.Xml.XPath.XPathNavigator>, то к вновь добавленному узлу добавляется атрибут `xml:lang`, значение которого берется из объекта<xref:System.Xml.XmlReader>.  
   
 - Если атрибут `xml:lang` существует в контексте обоих объектов, <xref:System.Xml.XmlReader> и <xref:System.Xml.XPath.XPathNavigator>, но его значения там различаются, то к вновь добавленному узлу добавляется атрибут `xml:lang`, значение которого берется из объекта <xref:System.Xml.XmlReader>.  
   
@@ -256,7 +254,7 @@ navigator.SetTypedValue(DateTime.Now);
   
  В следующей таблице описаны методы класса <xref:System.Xml.XmlWriter>, которые не поддерживаются в классе <xref:System.Xml.XPath.XPathNavigator>.  
   
-|Метод|ОПИСАНИЕ|  
+|Метод|Описание|  
 |------------|-----------------|  
 |<xref:System.Xml.XmlWriter.WriteEntityRef%2A>|Формирует исключение <xref:System.NotSupportedException>.|  
 |<xref:System.Xml.XmlWriter.WriteDocType%2A>|Не обрабатывается на корневом уровне и формирует исключение <xref:System.NotSupportedException> при вызове на любом другом уровне XML-документа.|  
@@ -330,7 +328,7 @@ document.Save("book.xml");
 ## <a name="saving-an-xml-document"></a>Сохранение XML-документа  
  Сохранение изменений, внесенных в объект <xref:System.Xml.XmlDocument> в результате выполнения описанных в данном разделе методов, выполняется с помощью методов класса <xref:System.Xml.XmlDocument>. Дополнительные сведения о сохранении изменений, внесенных в объект <xref:System.Xml.XmlDocument>, см. в руководстве по [созданию и сохранению документов](../../../../docs/standard/data/xml/saving-and-writing-a-document.md).  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - <xref:System.Xml.XmlDocument>
 - <xref:System.Xml.XPath.XPathDocument>

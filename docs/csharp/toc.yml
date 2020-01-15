@@ -1358,14 +1358,14 @@
               href: language-reference/keywords/var.md
             - name: Неуправляемые типы
               href: language-reference/builtin-types/unmanaged-types.md
+            - name: Значения по умолчанию
+              href: language-reference/builtin-types/default-values.md
             - name: Справочные таблицы по типам
               items:
                 - name: Таблица встроенных типов
                   href: language-reference/keywords/built-in-types-table.md
                 - name: Таблица типов значений
                   href: language-reference/keywords/value-types-table.md
-                - name: Таблица значений по умолчанию
-                  href: language-reference/keywords/default-values-table.md
                 - name: Таблица форматирования числовых результатов
                   href: language-reference/keywords/formatting-numeric-results-table.md
         - name: Модификаторы
