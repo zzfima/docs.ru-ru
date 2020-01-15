@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Await operator [Visual Basic]
 - Await [Visual Basic]
 ms.assetid: 6b1ce283-e92b-4ba7-b081-7be7b3d37af9
-ms.openlocfilehash: e0c617ce32f80bdde1bcfda31da40ae610e07452
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: b5943e509bb850abc6c74e1b97ccd5fb0038f1e0
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74712353"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964336"
 ---
 # <a name="await-operator-visual-basic"></a>Оператор Await (Visual Basic)
 
@@ -58,7 +58,7 @@ Await AsyncMethodThatReturnsTask()
 
 `Await` выражение или оператор не блокирует поток, в котором он выполняется. Вместо этого компилятор регистрирует оставшуюся часть асинхронного метода после `Await` выражения в качестве продолжения ожидаемой задачи. Затем управление возвращается в объект, вызывающий асинхронный метод. Когда задача завершается, она вызывает свое продолжение и выполнение асинхронного метода возобновляется с того момента, где оно было остановлено.
 
-Выражение `Await` может находиться только в теле метода или лямбда-выражения, которое помечено модификатором `Async`. Термин *await* выступает в качестве ключевого слова только в этом контексте. В другом месте он интерпретируется как идентификатор. В асинхронном методе или лямбда-выражении выражение `Await` не может встречаться в выражении запроса, в блоке `catch` или `finally` блока [try... Перехватить... Finally](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md) , в выражении переменной цикла управления цикла `For` или `For Each` или в теле оператора [SyncLock](../../../visual-basic/language-reference/statements/synclock-statement.md) .
+Выражение `Await` может находиться только в теле метода или лямбда-выражения, которое помечено модификатором `Async`. Термин *await* выступает в качестве ключевого слова только в этом контексте. В другом месте он интерпретируется как идентификатор. В методе `Async` или лямбда-выражении выражение `Await` не может встречаться в выражении запроса, в блоке `Catch` или `Finally` блока [try... Перехватить... Finally](../statements/try-catch-finally-statement.md), в выражении переменной цикла управления цикла `For` или `For Each` или в теле оператора [SyncLock](../statements/synclock-statement.md) .
 
 ## <a name="exceptions"></a>Исключения
 

@@ -8,17 +8,17 @@ helpviewer_keywords:
 - WCF, authentication
 - WCF, Windows authentication
 ms.assetid: 181be4bd-79b1-4a66-aee2-931887a6d7cc
-ms.openlocfilehash: 52e968706ef4ca703a26e613e681cff3c30ba181
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 45e4926905bbf3b5a24af15de153afc7bd2a4823
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74838030"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964567"
 ---
 # <a name="debugging-windows-authentication-errors"></a>Отладка ошибок проверки подлинности Windows
 При использовании в качестве механизма обеспечения безопасности проверки подлинности Windows процессы безопасности обрабатываются интерфейсом поставщика поддержки безопасности SSPI. При возникновении ошибок безопасности на уровне SSPI они выводятся Windows Communication Foundation (WCF). В этом разделе описаны общие принципы и некоторые вопросы, помогающие диагностировать такие ошибки.  
   
- Общие сведения о протоколе Kerberos см. в статье [Описание](https://go.microsoft.com/fwlink/?LinkID=86946)протокола Kerberos. Общие сведения о SSPI см. в разделе [SSPI](https://go.microsoft.com/fwlink/?LinkId=88941).  
+ Общие сведения о протоколе Kerberos см. в статье [Описание](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-2000-server/bb742516(v=technet.10))протокола Kerberos. Общие сведения о SSPI см. в разделе [SSPI](/windows/win32/secauthn/sspi).  
   
  Для проверки подлинности Windows в WCF обычно используется поставщик услуг безопасности *Negotiate* , который выполняет взаимную проверку подлинности Kerberos между клиентом и службой. Если протокол Kerberos недоступен, WCF по умолчанию переходит к диспетчеру NT LAN Manager (NTLM). Однако можно настроить WCF для использования только протокола Kerberos (и исключения, если протокол Kerberos недоступен). Можно также настроить WCF для использования ограниченных форм протокола Kerberos.  
   
@@ -49,9 +49,9 @@ ms.locfileid: "74838030"
   
 - локальная система: встроенная учетная запись SYSTEM на входящем в состав домена компьютере;  
   
-- пользователь домена: учетная запись пользователя в домене Windows. Пример: `DomainName\ProfileName`.  
+- пользователь домена: учетная запись пользователя в домене Windows. Например, `DomainName\ProfileName`.  
   
-- компьютер домена: процесс с удостоверением компьютера, выполняющийся на компьютере, который входит в состав домена Windows. Пример: `MachineName\Network Service`.  
+- компьютер домена: процесс с удостоверением компьютера, выполняющийся на компьютере, который входит в состав домена Windows. Например, `MachineName\Network Service`.  
   
 > [!NOTE]
 > Получение учетных данных службы происходит при вызове метода <xref:System.ServiceModel.ICommunicationObject.Open%2A> класса <xref:System.ServiceModel.ServiceHost>. Чтение учетных данных клиента происходит всякий раз, когда клиент отправляет сообщение.  
@@ -66,7 +66,7 @@ ms.locfileid: "74838030"
   
  В сценариях с балансировкой нагрузки, например при использовании веб-ферм или веб-садов, распространена практика определения уникальной учетной записи для каждого из приложений, назначения этой учетной записи имени участника-службы и контроль за тем, чтобы все службы приложения выполнялись от имени этой учетной записи.  
   
- Чтобы получить для учетной записи службы имя участника-службы, нужны права администратора домена Active Directory. Дополнительные сведения см. в статье [техническое дополнение Kerberos для Windows](https://go.microsoft.com/fwlink/?LinkID=88330).  
+ Чтобы получить для учетной записи службы имя участника-службы, нужны права администратора домена Active Directory. Дополнительные сведения см. в статье [техническое дополнение Kerberos для Windows](https://docs.microsoft.com/previous-versions/msp-n-p/ff649429(v=pandp.10)).  
   
 #### <a name="kerberos-protocol-direct-requires-the-service-to-run-under-a-domain-machine-account"></a>Для непосредственного применения протокола Kerberos необходимо, чтобы служба выполнялась от имени учетной записи компьютера домена  
  Такая ситуация возникает, когда свойство `ClientCredentialType` имеет значение `Windows`, а свойство <xref:System.ServiceModel.MessageSecurityOverHttp.NegotiateServiceCredential%2A> - `false`, как показано в следующем примере кода.  

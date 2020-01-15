@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b044b1c9-c1e5-4c9f-84d8-0f02f4537f8b
-ms.openlocfilehash: ad1fb7d289dea3396b4edb4d3b3e9fb7fb1891e3
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 204aa9ce86e8798c1f2d8de664f53ad2a86555de
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972419"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964791"
 ---
 # <a name="how-to-host-a-wcf-service-in-iis"></a>Практическое руководство. Размещение службы WCF в IIS
-В этом разделе описаны основные шаги, необходимые для создания службы Windows Communication Foundation (WCF), размещенной в службы IIS (IIS). Предполагается, что читатель знаком со службами IIS и может использовать средство управления IIS для создания приложений служб IIS и управления такими приложениями. Дополнительные сведения о службах IIS см. в разделе [службы IIS](https://go.microsoft.com/fwlink/?LinkId=132449). Служба WCF, работающая в среде IIS, обладает всеми преимуществами функций IIS, таких как перезапуск процессов, выключение в режиме простоя, мониторинг работоспособности процессов и активация на основе сообщений. Для реализации этого варианта размещения требуется правильно настроить службу IIS, но не требуется включать в приложение код размещения. Размещение в службах IIS возможно только при использовании транспорта HTTP.  
+В этом разделе описаны основные шаги, необходимые для создания службы Windows Communication Foundation (WCF), размещенной в службы IIS (IIS). Предполагается, что читатель знаком со службами IIS и может использовать средство управления IIS для создания приложений служб IIS и управления такими приложениями. Дополнительные сведения о службах IIS см. в разделе [службы IIS](https://www.iis.net/). Служба WCF, работающая в среде IIS, обладает всеми преимуществами функций IIS, таких как перезапуск процессов, выключение в режиме простоя, мониторинг работоспособности процессов и активация на основе сообщений. Для реализации этого варианта размещения требуется правильно настроить службу IIS, но не требуется включать в приложение код размещения. Размещение в службах IIS возможно только при использовании транспорта HTTP.  
   
  Дополнительные сведения о взаимодействии WCF и ASP.NET см. в разделе [WCF Services and ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md). Дополнительные сведения о настройке безопасности см. в разделе [Безопасность](../../../../docs/framework/wcf/feature-details/security.md).  
   
@@ -21,11 +21,11 @@ ms.locfileid: "70972419"
   
 ### <a name="to-create-a-service-hosted-by-iis"></a>Создание службы, размещенной в IIS  
   
-1. Убедитесь, что службы IIS установлены и выполняются на компьютере. Дополнительные сведения об установке и настройке IIS см. в разделе [Установка и Настройка служб iis 7,0](https://go.microsoft.com/fwlink/?LinkID=132128) .  
+1. Убедитесь, что службы IIS установлены и выполняются на компьютере. Дополнительные сведения об установке и настройке IIS см. в разделе [Установка и Настройка служб iis 7,0](https://docs.microsoft.com/iis/install/installing-iis-7/installing-necessary-iis-components-on-windows-vista) .  
   
 2. Создайте новую папку для файлов приложения с именем "Иишостедкалксервице", убедитесь, что ASP.NET имеет доступ к содержимому папки, и используйте средство управления IIS для создания нового приложения IIS, физически расположенного в этом каталоге приложения. Создайте для каталога приложения псевдоним «IISHostedCalc».  
   
-3. Создайте в каталоге приложения новый файл с именем «service.svc». Измените этот файл, добавив следующий @ServiceHost элемент.  
+3. Создайте в каталоге приложения новый файл с именем «service.svc». Измените этот файл, добавив следующий элемент @ServiceHost.  
   
    ```
    <%@ServiceHost language=c# Debug="true" Service="Microsoft.ServiceModel.Samples.CalculatorService"%>
@@ -75,10 +75,10 @@ ms.locfileid: "70972419"
  [!code-vb[C_HowTo_HostInIIS#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_hostiniis/vb/source.vb#1)] 
  [!code-xml[c_HowTo_HostInIIS#100](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostiniis/common/web.config#100)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Размещение в службах IIS](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)
 - [Размещение служб](../../../../docs/framework/wcf/hosting-services.md)
 - [Службы WCF и ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)
-- [Безопасность](../../../../docs/framework/wcf/feature-details/security.md)
-- [Функции размещения Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=201276)
+- [Security](../../../../docs/framework/wcf/feature-details/security.md)
+- [Функции размещения Windows Server App Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))

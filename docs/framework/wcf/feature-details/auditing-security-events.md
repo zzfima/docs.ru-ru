@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - auditing security events [WCF]
 ms.assetid: 5633f61c-a3c9-40dd-8070-1c373b66a716
-ms.openlocfilehash: 62b218a7259d824930a2eb2c7f810b480034e2b6
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 6505cc027b2983fd61ae53ca7ae43319024c74f7
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75338021"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964711"
 ---
 # <a name="auditing-security-events"></a>Аудит событий безопасности
 Приложения, созданные с помощью Windows Communication Foundation (WCF), могут регистрировать события безопасности (успех, сбой или и то, и другое) с помощью функции аудита. События записываются в журнал системных событий Windows, и их можно просматривать при помощи средства просмотра событий.  
@@ -76,7 +76,7 @@ ms.locfileid: "75338021"
  Если аудит включен и параметр `auditLogLocation` не задан, для систем, поддерживающих запись в журнал безопасности, по умолчанию используется журнал "Security"; в противном случае используется журнал "Application". Запись в журнал безопасности поддерживают только операционные системы Windows Server 2003 и Windows Vista. Дополнительные сведения см. в подразделе «операционная система» далее в этом разделе.  
   
 ## <a name="security-considerations"></a>Вопросы безопасности  
- Если злоумышленник знает о том, что включен аудит, он может отправить недопустимые сообщения, приводящие к внесению записей аудита в журнал. Если это приводит к заполнению журнала аудита, система аудита дает сбой. Для решения этой проблемы задайте свойству <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> значение `true` и используйте свойства средства «Просмотр событий» для управления поведением аудита. Дополнительные сведения см. в служба поддержки Майкрософт статье о просмотре журналов событий и управлении ими с помощью Просмотр событий в Windows XP, где содержатся [сведения о просмотре журналов событий в Просмотр событий и управлении ими в Windows XP](https://go.microsoft.com/fwlink/?LinkId=89150).  
+ Если злоумышленник знает о том, что включен аудит, он может отправить недопустимые сообщения, приводящие к внесению записей аудита в журнал. Если это приводит к заполнению журнала аудита, система аудита дает сбой. Для решения этой проблемы задайте свойству <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> значение `true` и используйте свойства средства «Просмотр событий» для управления поведением аудита.  
   
  События аудита, записанные в журнал приложения в [!INCLUDE[wxp](../../../../includes/wxp-md.md)], видны всем авторизованным пользователям.  
   
@@ -107,4 +107,4 @@ ms.locfileid: "75338021"
 - [Практическое руководство. Аудит событий безопасности](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)
 - [\<serviceSecurityAudit>](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md)
 - [\<поведений >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)
-- [Модель безопасности для Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Модель безопасности для Windows Server App Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

@@ -9,19 +9,19 @@ helpviewer_keywords:
 - WCF, security mode
 - WCF, security
 ms.assetid: b8abcc8e-a5f5-4317-aca5-01e3c40ab24d
-ms.openlocfilehash: d56da60f174933af789a6abd7d8aa90f3f29d9c1
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 1ea7680d092a4270b8c0969c50db8accf7c23d49
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75344630"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75963310"
 ---
 # <a name="how-to-configure-a-port-with-an-ssl-certificate"></a>Практическое руководство. Настройка порта с использованием SSL-сертификата
 При создании автономной службы Windows Communication Foundation (WCF) с классом <xref:System.ServiceModel.WSHttpBinding>, использующим безопасность транспорта, необходимо также настроить порт с помощью сертификата X. 509. При создании нерезидентной службы можно разместить ее в службах IIS. Дополнительные сведения см. в разделе [Безопасность транспорта HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
   
  Выбор средства для настройки порта зависит от операционной системы компьютера.  
   
- Если вы используете Windows Server 2003 или [!INCLUDE[wxp](../../../../includes/wxp-md.md)], используйте средство HttpCfg. exe. В Windows Server 2003 это средство установлено. С [!INCLUDE[wxp](../../../../includes/wxp-md.md)]можно загрузить средство в [средствах поддержки Windows XP с пакетом обновления 2](https://go.microsoft.com/fwlink/?LinkId=88606)(SP2). Дополнительные сведения см. в разделе [Общие сведения об HttpCfg](https://go.microsoft.com/fwlink/?LinkId=88605). В [документации по средствам поддержки Windows](https://go.microsoft.com/fwlink/?LinkId=94840) описывается синтаксис средства Httpcfg. exe.  
+ Если вы используете Windows Server 2003 или [!INCLUDE[wxp](../../../../includes/wxp-md.md)], используйте средство HttpCfg. exe. В Windows Server 2003 это средство установлено. С [!INCLUDE[wxp](../../../../includes/wxp-md.md)]можно загрузить средство в [средствах поддержки Windows XP с пакетом обновления 2](https://go.microsoft.com/fwlink/?LinkId=88606)(SP2). Дополнительные сведения см. в разделе [Общие сведения об HttpCfg](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc787508(v=ws.10)). В [документации по средствам поддержки Windows](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc781601(v=ws.10)) описывается синтаксис средства Httpcfg. exe.  
   
  Если вы используете Windows Vista, используйте уже установленное средство Netsh. exe.  
   

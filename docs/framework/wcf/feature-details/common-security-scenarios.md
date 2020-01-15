@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - security [WCF], scenarios
 ms.assetid: 201923b5-5162-4a8a-8d4c-e7bd242748d5
-ms.openlocfilehash: af58d6b529fba32380bedb9a892a2b1fd4807d96
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 578ec2d7d5abe1285007ad22d8bacd69e695b1d3
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61857575"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964283"
 ---
 # <a name="common-security-scenarios"></a>Типовые сценарии безопасности
 В подразделах этого раздела рассматривается множество возможных конфигураций безопасности клиентов и служб. Конфигурация зависит от ряда факторов: например, находится ли служба или клиент в интрасети, или чем обеспечивается безопасность - Windows или транспортом (таким как HTTPS).  
@@ -19,7 +19,7 @@ ms.locfileid: "61857575"
  Пример общедоступных, незащищенных клиента и службы.  
   
  [Незащищенные интранет-клиент и служба](../../../../docs/framework/wcf/feature-details/intranet-unsecured-client-and-service.md)  
- Базовой службы Windows Communication Foundation (WCF) разработан для предоставления информации о защищенной частной сети для приложения WCF.  
+ Служба Basic Windows Communication Foundation (WCF), разработанная для предоставления информации о защищенной частной сети приложению WCF.  
   
  [Безопасность транспорта с обычной проверкой подлинности](../../../../docs/framework/wcf/feature-details/transport-security-with-basic-authentication.md)  
  Приложение, позволяющее клиентам входить в систему с использованием пользовательской проверки подлинности.  
@@ -34,7 +34,7 @@ ms.locfileid: "61857575"
  Клиент и служба, защищенные сертификатом.  
   
  [Безопасность сообщений с анонимным клиентом](../../../../docs/framework/wcf/feature-details/message-security-with-an-anonymous-client.md)  
- Показывает, клиент и служба, защищенные механизмом безопасности сообщений WCF.  
+ Показывает клиент и службу, защищенные с помощью безопасности сообщений WCF.  
   
  [Безопасность сообщений при использовании клиентом учетных данных пользователя](../../../../docs/framework/wcf/feature-details/message-security-with-a-user-name-client.md)  
  Клиент - приложение Windows Forms, позволяющее клиентам входить в систему с использованием имени пользователя и пароля домена.  
@@ -57,7 +57,7 @@ ms.locfileid: "61857575"
  [Доверенная подсистема](../../../../docs/framework/wcf/feature-details/trusted-subsystem.md)  
  Клиент обращается к одной или нескольким веб-службам, распределенным по сети. Веб-службы обращаются к дополнительным ресурсам (таким как базы данных или другие веб-службы), которые должны быть защищены.  
   
-## <a name="reference"></a>Ссылка  
+## <a name="reference"></a>Справочные сведения  
  <xref:System.ServiceModel>  
   
 ## <a name="related-sections"></a>Связанные разделы  
@@ -65,13 +65,13 @@ ms.locfileid: "61857575"
   
  [Общие сведения о безопасности](../../../../docs/framework/wcf/feature-details/security-overview.md)  
   
- [Безопасность](../../../../docs/framework/wcf/feature-details/security.md)  
+ [Security](../../../../docs/framework/wcf/feature-details/security.md)  
   
  [Привязки и безопасность](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)  
   
- [Защита служб и клиентов](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
+ [Securing Services and Clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
   
- [Authentication](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)  
+ [Проверка подлинности](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)  
   
  [Авторизация](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)  
   
@@ -79,7 +79,7 @@ ms.locfileid: "61857575"
   
  [Аудит](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Руководство и рекомендации по безопасности](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)
-- [Модель безопасности для Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Модель безопасности для Windows Server App Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

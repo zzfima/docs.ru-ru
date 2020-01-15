@@ -2,15 +2,16 @@
 title: Поддержка кэширования для веб-служб HTTP WCF
 ms.date: 03/30/2017
 ms.assetid: 7f8078e0-00d9-415c-b8ba-c1b6d5c31799
-ms.openlocfilehash: 7c60deab635c29785398a1b50f9cf14c0f688420
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: 5964c58ce28f67815774741815bba0fcbe3b2de7
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74141788"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964224"
 ---
 # <a name="caching-support-for-wcf-web-http-services"></a>Поддержка кэширования для веб-служб HTTP WCF
-[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] позволяет использовать механизм декларативного кэширования, уже доступный в ASP.NET в веб-службах HTTP WCF. Это позволяет кэшировать ответы от операций службы WCF Web HTTP. Когда пользователь отправляет инструкцию HTTP GET службе, настроенной для кэширования, ASP.NET отправляет обратно кэшированный ответ, метод службы при этом не вызывается. По истечении срока действия кэш в следующий раз, когда пользователь отправит инструкцию HTTP GET, будет вызван метод службы и ответ будет снова кэширован. Дополнительные сведения о кэшировании ASP.NET см. в разделе [Общие сведения о кэшировании ASP.NET](https://go.microsoft.com/fwlink/?LinkId=152534) .  
+
+[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] позволяет использовать механизм декларативного кэширования, уже доступный в ASP.NET в веб-службах HTTP WCF. Это позволяет кэшировать ответы от операций службы WCF Web HTTP. Когда пользователь отправляет инструкцию HTTP GET службе, настроенной для кэширования, ASP.NET отправляет обратно кэшированный ответ, метод службы при этом не вызывается. По истечении срока действия кэш в следующий раз, когда пользователь отправит инструкцию HTTP GET, будет вызван метод службы и ответ будет снова кэширован. Дополнительные сведения о кэшировании ASP.NET см. в разделе [Общие сведения о кэшировании ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/ms178597(v=vs.100)).  
   
 ## <a name="basic-web-http-service-caching"></a>Кэширование базовой службы Web HTTP  
  Чтобы включить кэширование службы WEB http, необходимо сначала включить совместимость с ASP.NET, применив к службе атрибут <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> и установив <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute.RequirementsMode%2A> для <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed> или <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Required>.  
@@ -122,10 +123,10 @@ public class Service
  В данном случае длительность кэширования ― 60 секунд, параметр `varyByParam` установлен в значение «none», а в параметре `sqlDependency` содержится список (через точку с запятой) пар «база данных-таблица», где значения разделяются двоеточием. При изменении данных в `MyTable` ответ для операции службы удаляется из кэша. При вызове операции формируется новый ответ (путем вызова операции службы), который помещается в кэш и возвращается клиенту.  
   
 > [!IMPORTANT]
-> Чтобы ASP.NET получить доступ к базе данных SQL, необходимо использовать [средство регистрации ASP.NET SQL Server](https://go.microsoft.com/fwlink/?LinkId=152536). Помимо этого, необходимо разрешить соответствующей учетной записи пользователя доступ к базе данных и таблице. Дополнительные сведения см. в разделе [доступ к SQL Server из веб-приложения](https://go.microsoft.com/fwlink/?LinkId=178988).  
+> Чтобы ASP.NET получить доступ к базе данных SQL, необходимо использовать [средство регистрации ASP.NET SQL Server](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms229862(v=vs.90)). Помимо этого, необходимо разрешить соответствующей учетной записи пользователя доступ к базе данных и таблице. Дополнительные сведения см. в разделе [доступ к SQL Server из веб-приложения](https://docs.microsoft.com/previous-versions/aspnet/ht43wsex(v=vs.100)).  
   
 ## <a name="conditional-http-get-based-caching"></a>Условное кэширование на основе HTTP GET  
- В сценариях Web HTTP условный HTTP-запрос GET часто используется службами для реализации интеллектуального кэширования HTTP, как описано в [спецификации HTTP](https://go.microsoft.com/fwlink/?LinkId=165800). Для этого служба должна задать значение заголовка ETag в ответе HTTP. Также необходимо посмотреть заголовок If-None-Match в запросе HTTP, чтобы проверить, совпадает ли какой-либо элемент ETag с текущим элементом ETag.  
+ В сценариях Web HTTP условный HTTP-запрос GET часто используется службами для реализации интеллектуального кэширования HTTP, как описано в [спецификации HTTP](https://www.w3.org/Protocols/rfc2616/rfc2616.html). Для этого служба должна задать значение заголовка ETag в ответе HTTP. Также необходимо посмотреть заголовок If-None-Match в запросе HTTP, чтобы проверить, совпадает ли какой-либо элемент ETag с текущим элементом ETag.  
   
  Для запросов GET и HEAD метод <xref:System.ServiceModel.Web.IncomingWebRequestContext.CheckConditionalRetrieve%2A> получает значение ETag и сравнивает его с заголовком If-None-Match запроса. Если заголовок присутствует и совпадение найдено, то возникает исключение <xref:System.ServiceModel.Web.WebFaultException> с кодом состояния HTTP 304 (нет изменений), после чего заголовок ETag добавляется к ответу с совпадающим элементом ETag.  
   
