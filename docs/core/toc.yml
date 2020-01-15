@@ -342,24 +342,20 @@
   items:
     - name: Обзор
       href: porting/index.md
-    - name: "Технологии .NET\_Framework, недоступные в .NET\_Core"
-      href: porting/net-framework-tech-unavailable.md
     - name: Анализ зависимостей сторонних производителей
       href: porting/third-party-deps.md
     - name: Перенос библиотек
       href: porting/libraries.md
     - name: Организация проектов для .NET Core
       href: porting/project-structure.md
+    - name: Недоступные технологии
+      href: porting/net-framework-tech-unavailable.md
     - name: Инструменты
       href: porting/tools.md
     - name: Использование пакета обеспечения совместимости Windows
       href: porting/windows-compat-pack.md
     - name: Перенос проектов Windows Forms
-      items:
-        - name: Перенос проекта
-          href: porting/winforms.md
-        - name: Критические изменения
-          href: porting/winforms-breaking-changes.md
+      href: porting/winforms.md
     - name: Перенос проектов WPF
       href: porting/wpf.md
 - name: Загрузка зависимостей
