@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 99d7a528-7ae4-4d39-a0f9-3066ea237de0
-ms.openlocfilehash: bd64531116b1588683c2f5c8964e78e41e371ecf
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e784e254fb9314e69457d81a70400f7be30d9c13
+ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69955346"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76211996"
 ---
 # <a name="message-security-with-mutual-certificates"></a>Безопасность сообщений с использованием взаимных сертификатов
 В следующем сценарии показана служба Windows Communication Foundation (WCF) и клиент защищены с помощью режима безопасности сообщений. Проверка подлинности клиента и службы выполняется с помощью сертификатов.  
@@ -24,7 +24,7 @@ ms.locfileid: "69955346"
   
 |Характеристика|Описание|  
 |--------------------|-----------------|  
-|Режим безопасности|Сообщение|  
+|Режим безопасности|Message|  
 |Взаимодействие|Да, с клиентами и службами, совместимыми с профилем маркера WS-Security и сертификата X.509.|  
 |Проверка подлинности|Взаимная проверка подлинности сервера и клиента.|  
 |Целостность|Да|  
@@ -32,7 +32,7 @@ ms.locfileid: "69955346"
 |Transport|HTTP|  
 |Привязка|<xref:System.ServiceModel.WSHttpBinding>|  
   
-## <a name="service"></a>Служба  
+## <a name="service"></a>Service  
  Предполагается, что представленные ниже код и конфигурация выполняются независимо. Выполните одно из следующих действий.  
   
 - Создайте автономную службу, используя код без конфигурации.  
@@ -107,7 +107,7 @@ ms.locfileid: "69955346"
  [!code-vb[C_SecurityScenarios#20](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#20)]  
   
 ### <a name="configuration"></a>Конфигурация  
- Следующий код служит для настройки клиента. Сертификат клиента должен быть указан с помощью [ \<> clientcertificate](../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-clientcredentials-element.md). Кроме того, сертификат службы указывается с помощью [ \<> дефаултцертификате](../../../../docs/framework/configure-apps/file-schema/wcf/defaultcertificate-element.md).  
+ Следующий код служит для настройки клиента. Сертификат клиента должен быть указан с помощью [\<clientCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-clientcredentials-element.md). Кроме того, сертификат службы указывается с помощью [\<дефаултцертификате >](../../../../docs/framework/configure-apps/file-schema/wcf/defaultcertificate-element.md).  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -158,8 +158,8 @@ ms.locfileid: "69955346"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Общие сведения о безопасности](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [Модель безопасности для Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
-- [Практическое руководство. Создание и Установка временных сертификатов в WCF для обеспечения безопасности транспорта во время разработки](https://go.microsoft.com/fwlink/?LinkId=244264)
+- [Модель безопасности для Windows Server App Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [Как создавать и устанавливать временные сертификаты в WCF для обеспечения безопасности транспорта во время разработки](https://docs.microsoft.com/previous-versions/msp-n-p/ff648498(v=pandp.10))

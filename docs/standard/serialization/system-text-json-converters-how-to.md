@@ -1,43 +1,46 @@
 ---
-title: Написание пользовательских преобразователей для сериализации JSON — .NET
+title: How to write custom converters for JSON serialization - .NET
 ms.date: 01/10/2020
+no-loc:
+- System.Text.Json
+- Newtonsoft.Json
 helpviewer_keywords:
 - JSON serialization
 - serializing objects
 - serialization
 - objects, serializing
 - converters
-ms.openlocfilehash: 0f8b89ec7d7b1677de085631958b888e154aa4fa
-ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
+ms.openlocfilehash: f72d2d83d701b20648140900d65c9098a8abb721
+ms.sourcegitcommit: 5d769956a04b6d68484dd717077fabc191c21da5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76116712"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76164064"
 ---
-# <a name="how-to-write-custom-converters-for-json-serialization-marshalling-in-net"></a>Написание пользовательских преобразователей для сериализации JSON (маршалирование) в .NET
+# <a name="how-to-write-custom-converters-for-json-serialization-marshalling-in-net"></a>How to write custom converters for JSON serialization (marshalling) in .NET
 
-В этой статье показано, как создать пользовательские преобразователи для классов сериализации JSON, предоставляемых в пространстве имен <xref:System.Text.Json>. Общие сведения о `System.Text.Json`см. [в статье сериализация и десериализация JSON в .NET](system-text-json-how-to.md).
+This article shows how to create custom converters for the JSON serialization classes that are provided in the <xref:System.Text.Json> namespace. For an introduction to `System.Text.Json`, see [How to serialize and deserialize JSON in .NET](system-text-json-how-to.md).
 
-*Преобразователь* — это класс, который преобразует объект или значение в JSON и обратно. Пространство имен `System.Text.Json` содержит встроенные преобразователи для большинства типов-примитивов, которые сопоставляются с примитивами JavaScript. Вы можете создавать пользовательские преобразователи:
+A *converter* is a class that converts an object or a value to and from JSON. The `System.Text.Json` namespace has built-in converters for most primitive types that map to JavaScript primitives. You can write custom converters:
 
-* Переопределение поведения по умолчанию встроенного преобразователя. Например, может потребоваться, чтобы `DateTime` значения были представлены в формате мм/дд/гггг вместо формата ISO 8601-1:2019 по умолчанию.
-* Для поддержки пользовательского типа значения. Например, структура `PhoneNumber`.
+* To override the default behavior of a built-in converter. For example, you might want `DateTime` values to be represented by mm/dd/yyyy format instead of the default  ISO 8601-1:2019 format.
+* To support a custom value type. For example, a `PhoneNumber` struct.
 
-Можно также написать пользовательские преобразователи для настройки или расширения `System.Text.Json` с функциональностью, не входящей в текущий выпуск. Далее в этой статье рассматриваются следующие сценарии.
+You can also write custom converters to customize or extend `System.Text.Json` with functionality not included in the current release. The following scenarios are covered later in this article:
 
-* [Десериализация выводимых типов в свойства объекта](#deserialize-inferred-types-to-object-properties).
-* [Словарь поддержки с ключом, не являющимся строкой](#support-dictionary-with-non-string-key).
-* [Поддержка полиморфизма](#support-polymorphic-deserialization).
+* [Deserialize inferred types to object properties](#deserialize-inferred-types-to-object-properties).
+* [Support Dictionary with non-string key](#support-dictionary-with-non-string-key).
+* [Support polymorphic deserialization](#support-polymorphic-deserialization).
 
-## <a name="custom-converter-patterns"></a>Пользовательские шаблоны преобразователя
+## <a name="custom-converter-patterns"></a>Custom converter patterns
 
-Существует два шаблона создания пользовательского преобразователя: базовый шаблон и шаблон фабрики. Шаблон фабрики предназначен для преобразователей, обрабатывающих `Enum` типов или открытых универсальных шаблонов. Базовый шаблон предназначен для неуниверсальных и закрытых универсальных типов.  Например, для преобразователей следующих типов требуется шаблон фабрики:
+There are two patterns for creating a custom converter: the basic pattern and the factory pattern. The factory pattern is for converters that handle type `Enum` or open generics. The basic pattern is for non-generic and closed generic types.  For example, converters for the following types require the factory pattern:
 
 * `Dictionary<TKey, TValue>`
 * `Enum`
 * `List<T>`
 
-Ниже приведены некоторые примеры типов, которые могут быть обработаны базовым шаблоном.
+Some examples of types that can be handled by the basic pattern include:
 
 * `Dictionary<int, string>`
 * `WeekdaysEnum`
@@ -45,17 +48,17 @@ ms.locfileid: "76116712"
 * `DateTime`
 * `Int32`
 
-Базовый шаблон создает класс, который может работать с одним типом. Шаблон фабрики создает класс, который определяет в среде выполнения, какой необходим конкретный тип, и динамически создает соответствующий преобразователь.
+The basic pattern creates a class that can handle one type. The factory pattern creates a class that determines at runtime which specific type is required and dynamically creates the appropriate converter.
 
-## <a name="sample-basic-converter"></a>Образец базового преобразователя
+## <a name="sample-basic-converter"></a>Sample basic converter
 
-Следующий пример представляет собой преобразователь, который переопределяет сериализацию по умолчанию для существующего типа данных. Для `DateTimeOffset` свойств преобразователь использует формат мм/дд/гггг.
+The following sample is a converter that overrides default serialization for an existing data type. The converter uses mm/dd/yyyy format for `DateTimeOffset` properties.
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/DateTimeOffsetConverter.cs)]
 
-## <a name="sample-factory-pattern-converter"></a>Образец преобразователя шаблона фабрики
+## <a name="sample-factory-pattern-converter"></a>Sample factory pattern converter
 
-В следующем коде показан пользовательский преобразователь, работающий с `Dictionary<Enum,TValue>`. Код соответствует шаблону фабрики, так как первый параметр универсального типа является `Enum`, а второй — открытым. Метод `CanConvert` возвращает `true` только для `Dictionary` с двумя универсальными параметрами, первый из которых является типом `Enum`. Внутренний преобразователь получает существующий преобразователь для работы с любым типом, предоставленным во время выполнения для `TValue`. 
+The following code shows a custom converter that works with `Dictionary<Enum,TValue>`. The code follows the factory pattern because the first generic type parameter is `Enum` and the second is open. The `CanConvert` method returns `true` only for a `Dictionary` with two generic parameters, the first of which is an `Enum` type. Внутренний преобразователь получает существующий преобразователь для работы с любым типом, предоставленным во время выполнения для `TValue`. 
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/DictionaryTKeyEnumTValueConverter.cs)]
 
@@ -285,7 +288,7 @@ Path: $.Date | LineNumber: 1 | BytePositionInLine: 37.
 
 ## <a name="other-custom-converter-samples"></a>Другие примеры пользовательских преобразователей
 
-В статье [Миграция из Newtonsoft. JSON в System. Text. JSON](system-text-json-migrate-from-newtonsoft-how-to.md) содержатся дополнительные образцы пользовательских преобразователей.
+В статье [Миграция из Newtonsoft.Json в System.Text.Json](system-text-json-migrate-from-newtonsoft-how-to.md) содержатся дополнительные образцы пользовательских преобразователей.
 
 [Папка Unit Tests](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/tests/Serialization/) в исходном коде `System.Text.Json.Serialization` содержит другие примеры пользовательских преобразователей, например:
 
@@ -300,10 +303,10 @@ Path: $.Date | LineNumber: 1 | BytePositionInLine: 37.
 ## <a name="additional-resources"></a>Дополнительные ресурсы
 
 * [Исходный код для встроенных преобразователей](https://github.com/dotnet/runtime/tree/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/src/System/Text/Json/Serialization/Converters)
-* [Поддержка DateTime и DateTimeOffset в System. Text. JSON](../datetime/system-text-json-support.md)
-* [Общие сведения о System. Text. JSON](system-text-json-overview.md)
-* [Использование System. Text. JSON](system-text-json-how-to.md)
-* [Как выполнить миграцию из Newtonsoft. JSON](system-text-json-migrate-from-newtonsoft-how-to.md)
-* [Справочник по API System. Text. JSON](xref:System.Text.Json)
-* [Справочник по API-интерфейсам System. Text. JSON. Serialization](xref:System.Text.Json.Serialization)
+* [Поддержка DateTime и DateTimeOffset в System.Text.Json](../datetime/system-text-json-support.md)
+* [Обзор System.Text.Json](system-text-json-overview.md)
+* [Использование System.Text.Json](system-text-json-how-to.md)
+* [Переход с Newtonsoft.Json](system-text-json-migrate-from-newtonsoft-how-to.md)
+* [Справочник по System.Text.Json API](xref:System.Text.Json)
+* [System.Text.Json. Справочник по API сериализации](xref:System.Text.Json.Serialization)
 <!-- * [System.Text.Json roadmap](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/roadmap/README.md)-->

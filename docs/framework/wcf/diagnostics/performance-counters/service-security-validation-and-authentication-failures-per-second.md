@@ -1,16 +1,16 @@
 ---
-title: 'Служба: Количество сбоев при проверке безопасности и проверке подлинности в секунду'
+title: 'Служба: количество сбоев при проверке безопасности и проверке подлинности в секунду'
 ms.date: 03/30/2017
 ms.assetid: 4af18009-e778-490b-9ba6-e76485285830
-ms.openlocfilehash: 2caebed85a28004ef038beee7d07c05a23da53c0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f3f27100afb7390a68d99421cad6f43d9abaccd5
+ms.sourcegitcommit: 5d769956a04b6d68484dd717077fabc191c21da5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64613682"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76163869"
 ---
-# <a name="service-security-validation-and-authentication-failures-per-second"></a>Служба: Количество сбоев при проверке безопасности и проверке подлинности в секунду
-Имя счетчика: При проверке безопасности и сбои проверки подлинности в секунду.  
+# <a name="service-security-validation-and-authentication-failures-per-second"></a>Служба: количество сбоев при проверке безопасности и проверке подлинности в секунду
+Имя счетчика: Security Validation and Authentication Failures Per Second.  
   
 ## <a name="description"></a>Описание  
  Значение этого счетчика увеличивается всякий раз, когда сообщение отклоняется из-за проблемы безопасности, не относящейся к счетчику "Security Calls Not Authorized". К таким проблемам относятся следующие.  
@@ -29,6 +29,6 @@ ms.locfileid: "64613682"
   
 - Во время подтверждения TLSNEGO/SPNEGO произошли ошибки.  
   
- Этот счетчик является счетчиком производительности типа [PERF_COUNTER_COUNTER](https://go.microsoft.com/fwlink/?LinkID=94649), значение которого вычисляется по следующей формуле  
+ Этот счетчик имеет тип счетчика производительности [PERF_COUNTER_COUNTER](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc740048(v=ws.10)), значение которого вычисляется по следующей формуле:  
   
  (N 1 - N 0 ) / ( (D 1 -D 0 ) / F)

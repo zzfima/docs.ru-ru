@@ -1,20 +1,20 @@
 ---
-title: 'Конечная точка: Количество поступивших транзакций в секунду'
+title: 'Конечная точка: количество поступивших транзакций в секунду'
 ms.date: 03/30/2017
 ms.assetid: 0f370ff1-a913-450b-bccb-c279ad165b3d
-ms.openlocfilehash: 79f50b6706facd040ec2d325c676f210d5327bf8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 39458dcb6ac033fd5084b5f2e760e0e26c345da7
+ms.sourcegitcommit: 5d769956a04b6d68484dd717077fabc191c21da5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61916257"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76163557"
 ---
-# <a name="endpoint-transactions-flowed-per-second"></a>Конечная точка: Количество поступивших транзакций в секунду
-Имя счетчика: Количество поступивших транзакций в секунду.  
+# <a name="endpoint-transactions-flowed-per-second"></a>Конечная точка: количество поступивших транзакций в секунду
+Имя счетчика: Transactions Flowed Per Second.  
   
 ## <a name="description"></a>Описание  
  Количество транзакций, поступивших в операции в этой конечной точке в секунду. Значение этого счетчика увеличивается каждый раз, когда в сообщении, отправленном в эту конечную точку, содержится идентификатор транзакции.  
   
- Этот счетчик является счетчиком производительности типа [PERF_COUNTER_COUNTER](https://go.microsoft.com/fwlink/?LinkID=94649), значение которого вычисляется по следующей формуле.  
+ Этот счетчик имеет тип счетчика производительности [PERF_COUNTER_COUNTER](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc740048(v=ws.10)), значение которого вычисляется с помощью следующей формулы.  
   
  (N 1 - N 0 ) / ( (D 1 -D 0 ) / F)

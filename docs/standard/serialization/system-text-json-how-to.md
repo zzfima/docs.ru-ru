@@ -1,17 +1,20 @@
 ---
 title: Как сериализовать и десериализовать JSON с C# помощью-.NET
 ms.date: 01/10/2020
+no-loc:
+- System.Text.Json
+- Newtonsoft.Json
 helpviewer_keywords:
 - JSON serialization
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 047d5b5c6fa339089d2054eb6bfe8b3066c1d00c
-ms.sourcegitcommit: dfad244ba549702b649bfef3bb057e33f24a8fb2
+ms.openlocfilehash: fdca8d957bb2453e90652af1dfe5ef99b33b1b2c
+ms.sourcegitcommit: 5d769956a04b6d68484dd717077fabc191c21da5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/12/2020
-ms.locfileid: "75904662"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76163206"
 ---
 # <a name="how-to-serialize-and-deserialize-marshal-and-unmarshal-json-in-net"></a>Сериализация и десериализация (маршалирование и распаковки) JSON в .NET
 
@@ -563,7 +566,7 @@ using System.Text.Json.Serialization;
 }
 ```
 
-Дополнительные сведения о полиморфизме **сериализации**и сведения о **десериализации**см. в разделе [Миграция из Newtonsoft. JSON в System. Text. JSON](system-text-json-migrate-from-newtonsoft-how-to.md#polymorphic-serialization).
+Дополнительные сведения о **сериализации**с полиморфизмом и сведения о **десериализации**см. в разделе [миграция с Newtonsoft.Json на System.Text.Json](system-text-json-migrate-from-newtonsoft-how-to.md#polymorphic-serialization).
 
 ## <a name="allow-comments-and-trailing-commas"></a>Разрешить комментарии и завершающие запятые
 
@@ -719,7 +722,7 @@ using System.Text.Json.Serialization;
 
 [!code-json[](~/samples/snippets/core/system-text-json/csharp/GradesPrettyPrint.json)]
 
-## <a name="use-jsondocument-to-write-json"></a>Использование класса JsonDocument для записи JSON
+## <a name="use-jsondocument-to-write-json"></a>Использование Жсондокумент для записи JSON
 
 В следующем примере показано, как записать JSON из <xref:System.Text.Json.JsonDocument>.
 
@@ -777,9 +780,9 @@ using System.Text.Json.Serialization;
 
 ## <a name="additional-resources"></a>Дополнительные ресурсы
 
-* [Общие сведения о System. Text. JSON](system-text-json-overview.md)
+* [Обзор System.Text.Json](system-text-json-overview.md)
 * [Написание пользовательских преобразователей](system-text-json-converters-how-to.md)
-* [Как выполнить миграцию из Newtonsoft. JSON](system-text-json-migrate-from-newtonsoft-how-to.md)
-* [Поддержка DateTime и DateTimeOffset в System. Text. JSON](../datetime/system-text-json-support.md)
-* [Справочник по API System. Text. JSON](xref:System.Text.Json)
+* [Переход с Newtonsoft.Json](system-text-json-migrate-from-newtonsoft-how-to.md)
+* [Поддержка DateTime и DateTimeOffset в System.Text.Json](../datetime/system-text-json-support.md)
+* [Справочник по System.Text.Json API](xref:System.Text.Json)
 <!-- * [System.Text.Json roadmap](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/roadmap/README.md)-->
