@@ -8,12 +8,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 8b3ffc885691264548a19f694d159ce07aba7550
-ms.sourcegitcommit: dfad244ba549702b649bfef3bb057e33f24a8fb2
+ms.openlocfilehash: 01f94bcfce97da8c71b1b709baa34c2b7509a5e5
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/12/2020
-ms.locfileid: "75904698"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76116685"
 ---
 # <a name="how-to-migrate-from-newtonsoftjson-to-systemtextjson"></a>Переход с Newtonsoft. JSON на System. Text. JSON
 
@@ -136,17 +136,6 @@ The JSON value could not be converted to System.String.
 ### <a name="maximum-depth"></a>Максимальная глубина
 
 значение по умолчанию для `Newtonsoft.Json` не равно максимальной глубины. Для <xref:System.Text.Json> существует ограничение по умолчанию 64, которое можно настроить, установив <xref:System.Text.Json.JsonSerializerOptions.MaxDepth?displayProperty=nameWithType>.
-
-### <a name="stack-type-handling"></a>Обработка типов стека
-
-В <xref:System.Text.Json>порядок содержимого стека изменяется при сериализации. Это поведение относится к следующим типам и интерфейсу и определяемым пользователем типам, производным от них:
-
-* <xref:System.Collections.Stack>
-* <xref:System.Collections.Generic.Stack%601>
-* <xref:System.Collections.Immutable.ImmutableStack%601>
-* <xref:System.Collections.Immutable.IImmutableStack%601>
-
-Можно реализовать пользовательский преобразователь для сохранения содержимого стека в том же порядке.
 
 ### <a name="omit-null-value-properties"></a>Опустить свойства значения NULL
 
