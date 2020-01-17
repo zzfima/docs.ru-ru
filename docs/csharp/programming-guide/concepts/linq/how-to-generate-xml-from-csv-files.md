@@ -1,19 +1,19 @@
 ---
-title: Практическое руководство. Создание XML из CSV-файлов (C#)
+title: Создание XML из CSV-файлов (C#)
 ms.date: 07/20/2015
 ms.assetid: 57b9ccde-f983-4a21-ae61-70ecede30307
-ms.openlocfilehash: bcae061bd5899f4ae5cbb89f8e05079bc9222312
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 643c05cb440165c4461c3e9c80e69701241ab8d1
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66486783"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635812"
 ---
-# <a name="how-to-generate-xml-from-csv-files-c"></a>Практическое руководство. Создание XML из CSV-файлов (C#)
-В этом примере показано, как [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] и [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] используются для создания XML-документа из файла с разделителями-запятыми (.csv).  
+# <a name="how-to-generate-xml-from-csv-files-c"></a>Создание XML из CSV-файлов (C#)
+В этом примере показано, как использовать LINQ и [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] для создания XML-документа из файла с разделителями-запятыми (.csv).  
   
 ## <a name="example"></a>Пример  
- В следующем коде выполняется запрос [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] по массиву строк.  
+ В следующем коде выполняется запрос LINQ к массиву строк.  
   
  Запрос использует предложение `let`, чтобы разбить каждую строку на массив полей.  
   

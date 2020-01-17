@@ -1,15 +1,15 @@
 ---
-title: Практическое руководство. Заполнение коллекций объектов из нескольких источников (LINQ) (C#)
+title: Заполнение коллекций объектов из нескольких источников (LINQ) (C#)
 ms.date: 06/12/2018
 ms.assetid: 8ad7d480-b46c-4ccc-8c57-76f2d04ccc6d
-ms.openlocfilehash: c00257db7f3c06cab55cd48f7472f07dd7b2a664
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 3d841e5ca25afde94674af0fedc9a824c382be5b
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69593051"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345760"
 ---
-# <a name="how-to-populate-object-collections-from-multiple-sources-linq-c"></a>Практическое руководство. Заполнение коллекций объектов из нескольких источников (LINQ) (C#)
+# <a name="how-to-populate-object-collections-from-multiple-sources-linq-c"></a>Заполнение коллекций объектов из нескольких источников (LINQ) (C#)
 
 В этом примере показано, как объединить данные из разных источников в последовательность новых типов.
 
@@ -18,7 +18,7 @@ ms.locfileid: "69593051"
 
 ## <a name="to-create-the-data-file"></a>Создание файла данных
 
-Скопируйте файлы names.csv и scores.csv в папку проекта, как описано в разделе [Практическое руководство. Объединение содержимого из файлов разных форматов (LINQ) (C#)](./how-to-join-content-from-dissimilar-files-linq.md).
+Скопируйте файлы names.csv и scores.csv в папку проекта, как описано в руководстве [по объединению содержимого из файлов разных форматов (LINQ) (C#)](./how-to-join-content-from-dissimilar-files-linq.md).
 
 ## <a name="example"></a>Пример
 
@@ -41,8 +41,8 @@ class PopulateCollection
 {
     static void Main()
     {
-        // These data files are defined in How to: Join Content from
-        // Dissimilar Files (LINQ).
+        // These data files are defined in How to join content from
+        // dissimilar files (LINQ).
 
         // Each line of names.csv consists of a last name, a first name, and an
         // ID number, separated by commas. For example, Omelchenko,Svetlana,111

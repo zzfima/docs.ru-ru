@@ -5,12 +5,12 @@ ms.date: 04/29/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc
-ms.openlocfilehash: 8bb47102ede8e135090b1381eb815dccd512e03d
-ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
+ms.openlocfilehash: 8f3b283de378a37bfe429688207ea9fb52f9ca7f
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65557811"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75739585"
 ---
 # <a name="improve-mlnet-model-accuracy"></a>Повышение уровня точности модели ML.NET
 
@@ -32,7 +32,7 @@ ms.locfileid: "65557811"
 
 Несмотря на то что дополнительные образцы данных и признаки помогут повысить точность модели, они также добавляют шум, так как не все данные и признаки являются значимыми. Важно понимать, какие признаки в наибольшей степени влияют на решения, вынесенные алгоритмом. С помощью таких методов, как перестановка важности признаков (PFI), можно определить эти ключевые признаки и не только лучше объяснить модель, но и использовать результат для отбора признаков с целью уменьшить объем признаков в процессе обучения.
 
-Узнайте, как использовать PFI, по следующей [ссылке](../how-to-guides/explain-machine-learning-model-permutation-feature-importance-ml-net.md).
+Дополнительные сведения см. в статье [Объяснение прогнозов модели с помощью функции PFI](../how-to-guides/explain-machine-learning-model-permutation-feature-importance-ml-net.md).
 
 ## <a name="cross-validation"></a>Кросс-валидация
 

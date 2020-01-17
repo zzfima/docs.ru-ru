@@ -2,12 +2,12 @@
 title: Интерполяция строк. Руководство по C#
 description: В этом руководстве показано, как использовать функцию интерполяции строк в C# для включения форматированных результатов выражений в строку.
 ms.date: 10/23/2018
-ms.openlocfilehash: 53b9afa4c5ccdcb1f18d2947981aee6571b73134
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 593f3a77370da73dfd5f090be98112327b86b1f7
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120116"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346782"
 ---
 # <a name="use-string-interpolation-to-construct-formatted-strings"></a>Создание форматированных строк с помощью интерполяции
 
@@ -46,7 +46,7 @@ Console.WriteLine($"Hello, {name}. It's a pleasure to meet you!");
 
 В предыдущем разделе вы использовали интерполяцию строк для вставки одной строки внутрь другой. При этом интерполированное выражение может относиться к любому типу данных. Давайте включим в интерполированную строку значения разных типов данных.
 
-В приведенном ниже примере сначала мы определим тип данных для [класса](../../programming-guide/classes-and-structs/classes.md) `Vegetable`, обладающего [свойством](../../properties.md) `Name` и [методом](../../methods.md) `ToString`. Этот метод [переопределяет](../../language-reference/keywords/override.md) поведение метода <xref:System.Object.ToString?displayProperty=nameWithType>. [Модификатор доступа ](../../language-reference/keywords/public.md)`public` делает этот метод доступным любому клиентскому коду и позволяет получить строковое представление экземпляра `Vegetable`. В нашем примере метод `Vegetable.ToString` возвращает значение свойства `Name`, которое инициализируется в [конструкторе](../../programming-guide/classes-and-structs/constructors.md) `Vegetable`.
+В приведенном ниже примере сначала мы определим тип данных для [класса](../../programming-guide/classes-and-structs/classes.md)`Vegetable`, обладающего [свойством](../../properties.md) `Name` и [методом](../../methods.md) `ToString`. Этот метод [переопределяет](../../language-reference/keywords/override.md) поведение метода <xref:System.Object.ToString?displayProperty=nameWithType>. [Модификатор доступа ](../../language-reference/keywords/public.md)`public` делает этот метод доступным любому клиентскому коду и позволяет получить строковое представление экземпляра `Vegetable`. В примере метод `Vegetable.ToString` возвращает значение свойства `Name`, которое инициализируется в [конструкторе](../../programming-guide/classes-and-structs/constructors.md) `Vegetable`.
 
 ```csharp
 public Vegetable(string name) => Name = name;
@@ -58,7 +58,7 @@ public Vegetable(string name) => Name = name;
 var item = new Vegetable("eggplant");
 ```
 
-Наконец, переменная `item` включается в интерполированную строку, которая также содержит значение <xref:System.DateTime>, значение <xref:System.Decimal> и значение [перечисления](../../programming-guide/enumeration-types.md) `Unit`. Замените весь код C# в редакторе следующим кодом, а затем используйте команду `dotnet run`, чтобы запустить его:
+Наконец, переменная `item` включается в интерполированную строку, которая также содержит значение <xref:System.DateTime>, значение <xref:System.Decimal> и значение [перечисления](../../language-reference/builtin-types/enum.md) `Unit`. Замените весь код C# в редакторе следующим кодом, а затем используйте команду `dotnet run`, чтобы запустить его:
 
 ```csharp
 using System;

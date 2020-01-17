@@ -1,15 +1,14 @@
 ---
-title: Использование пакета SDK и средств .NET Core при непрерывной интеграции (CI)
-description: Сведения об использовании пакета SDK для .NET Core и входящих в него средств на сервере сборки.
+title: Непрерывная интеграция (CI) с использованием пакета SDK для .NET Core и его средств
+description: Узнайте, как использовать пакет SDK для .NET Core и его средства на сервере сборки с непрерывной интеграцией.
 author: mairaw
 ms.date: 05/18/2017
-ms.custom: seodec18
-ms.openlocfilehash: 481d54904192ee82da1f9d34bbf62fa8ffe1cd3b
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 65d062fce2f364932ebf8091bd9c6cdef561b633
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428592"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714118"
 ---
 # <a name="using-net-core-sdk-and-tools-in-continuous-integration-ci"></a>Использование пакета SDK и средств .NET Core при непрерывной интеграции (CI)
 

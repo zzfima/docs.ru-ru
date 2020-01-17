@@ -5,14 +5,14 @@ author: mgroves
 ms.technology: csharp-fundamentals
 ms.date: 03/06/2017
 ms.assetid: b152cf36-76e4-43a5-b805-1a1952e53b79
-ms.openlocfilehash: 54eb3038594e1d4becf8a1bddd58b1e0e6464d68
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 9f08e362ada032e7193d83a73fbbf05259bd2259
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039293"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75694560"
 ---
-# <a name="using-attributes-in-c"></a>Использование атрибутов в C\#
+# <a name="use-attributes-in-c"></a>Использование атрибутов в C\#
 
 Атрибуты предоставляют возможность декларативно связать информацию с кодом. Также этот элемент можно многократно использовать повторно для разнообразных целевых объектов.
 
@@ -22,7 +22,8 @@ ms.locfileid: "73039293"
 
 ## <a name="prerequisites"></a>Предварительные требования
 Компьютер должен быть настроен для выполнения .NET Core. Инструкции по установке см. на странице [скачиваемых файлов .NET Core](https://dotnet.microsoft.com/download).
-Это приложение можно запустить в ОС Windows, Ubuntu Linux, macOS или в контейнере Docker. Вам потребуется редактор кода, но вы можете выбрать любой привычный для вас. В примерах ниже используется кроссплатформенный редактор [Visual Studio Code](https://code.visualstudio.com/) с открытым исходным кодом. Вы можете заменить его на любое другое средство, с которым вам удобно работать.
+Это приложение можно запустить в ОС Windows, Ubuntu Linux, macOS или в контейнере Docker.
+Вам потребуется редактор кода, но вы можете выбрать любой привычный для вас. В примерах ниже используется кроссплатформенный редактор [Visual Studio Code](https://code.visualstudio.com/) с открытым исходным кодом. Вы можете заменить его на любое другое средство, с которым вам удобно работать.
 
 ## <a name="create-the-application"></a>Создание приложения
 
@@ -30,7 +31,7 @@ ms.locfileid: "73039293"
 
 `dotnet new console`
 
-Эта команда создает скелет файлов проекта для .NET Core. Нужно также выполнить команду `dotnet restore`, чтобы восстановить зависимости, необходимые для компиляции проекта.
+Эта команда создает простые файлы проекта для .NET Core. Нужно также выполнить команду `dotnet restore`, чтобы восстановить зависимости, необходимые для компиляции проекта.
 
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
@@ -41,7 +42,7 @@ ms.locfileid: "73039293"
 В C# атрибуты представляют собой классы, наследующие от базового класса `Attribute`. Любой класс, который наследует от `Attribute`, можно использовать как своего рода "тег" на другие части кода.
 Например, существует атрибут с именем `ObsoleteAttribute`. С его помощью можно обозначить, что код устарел и больше не должен использоваться. Этот атрибут можно поместить в класс, используя квадратные скобки.
 
-[!code-csharp[Obsolete attribute example](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#ObsoleteExample1)]  
+[!code-csharp[Obsolete attribute example](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#ObsoleteExample1)]
 
 Обратите внимание, что полное название класса — `ObsoleteAttribute`, но в коде достаточно указать только `[Obsolete]`. Это стандартное соглашение в C#.
 При желании вы можете использовать полное имя `[ObsoleteAttribute]`.
@@ -111,7 +112,7 @@ ms.locfileid: "73039293"
 
 Чтобы находить атрибуты и реагировать на них, обычно используется [отражение](../programming-guide/concepts/reflection.md). Мы не будем здесь подробно описывать отражения, ограничимся лишь основной идеей: отражение позволяет написать на C# код, который проверяет другой код.
 
-Например, с помощью отражения можно получить сведения о классе (добавьте `using System.Reflection;` в начало кода): 
+Например, с помощью отражения можно получить сведения о классе (добавьте `using System.Reflection;` в начало кода):
 
 [!code-csharp[Getting type information with Reflection](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#ReflectionExample1)]
 

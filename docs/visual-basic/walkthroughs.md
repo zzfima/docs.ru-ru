@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Visual Basic code, walkthroughs
 - walkthroughs [Visual Basic]
 ms.assetid: e4e1f849-e1ce-4cf7-8483-d9b4c4887a8e
-ms.openlocfilehash: a6e45e31e2678ce05dc0f637ed1121b54d8d6cbb
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 76f9b428bc5f613296e24d893f49f124bb13c089
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74352844"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636046"
 ---
 # <a name="visual-basic-language-walkthroughs"></a>Пошаговые руководства для Visual Basic
 
@@ -26,7 +26,7 @@ ms.locfileid: "74352844"
  В этом пошаговом руководстве описывается, каким образом объявляются и вызываются события в Visual Basic.
 
 - [Обработка событий](programming-guide/language-features/events/walkthrough-handling-events.md)  
- В этом пошаговом руководстве описывается обработка событий с помощью стандартного ключевого слова `WithEvents` или новых ключевых слов `AddHandler` / `RemoveHandler`.
+ В этом пошаговом руководстве описывается обработка событий с помощью стандартного ключевого слова `WithEvents` или новых ключевых слов `AddHandler`/`RemoveHandler`.
 
 - [Создание и реализация интерфейсов](programming-guide/language-features/interfaces/walkthrough-creating-and-implementing-interfaces.md)  
  В этом пошаговом руководстве описывается объявление и реализация интерфейсов в Visual Basic.
@@ -35,7 +35,7 @@ ms.locfileid: "74352844"
  В этом пошаговом руководстве описывается объявление класса и его полей, а также свойств, методов и событий.
 
 - [Написание запросов в Visual Basic](programming-guide/concepts/linq/walkthrough-writing-queries.md)  
- В этом пошаговом руководстве описывается, как использовать возможности языка Visual Basic для написания выражений запросов [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)].
+ В этом пошаговом руководстве описывается, как использовать возможности языка Visual Basic для написания выражений запросов на языке LINQ.
 
 - [Реализация IEnumerable(Of T) в Visual Basic](programming-guide/language-features/control-flow/walkthrough-implementing-ienumerable-of-t.md)  
  В этом пошаговом руководстве описывается создание класса, реализующего интерфейс `IEnumerable(Of String)` и класс, реализующий интерфейс `IEnumerator(Of String)` для считывания текстового файла строка за строкой.

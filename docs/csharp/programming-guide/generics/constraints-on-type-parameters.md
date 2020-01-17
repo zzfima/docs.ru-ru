@@ -1,24 +1,23 @@
 ---
 title: Руководство по программированию на C#. Ограничения параметров типа
-ms.custom: seodec18
 ms.date: 04/12/2018
 helpviewer_keywords:
 - generics [C#], type constraints
 - type constraints [C#]
 - type parameters [C#], constraints
 - unbound type parameter [C#]
-ms.openlocfilehash: d05307735506db0f0e4abab067334e4f0466ee6a
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.openlocfilehash: 3ce68ecc1f0740fdb43ccf22b636dcd4bc05ea0a
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74204640"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712238"
 ---
 # <a name="constraints-on-type-parameters-c-programming-guide"></a>Ограничения параметров типа (руководство по программированию на C#)
 
 Ограничения сообщают компилятору о характеристиках, которые должен иметь аргумент типа. Без ограничений аргумент типа может быть любым типом. Компилятор может только предполагать членов <xref:System.Object?displayProperty=nameWithType>, который является главным базовым классом для всех типов .NET. Дополнительные сведения см. в статье [Зачем использовать ограничения](#why-use-constraints). Если в клиентском коде для создания экземпляра класса используется недопустимый тип, возникает ошибка времени компиляции. Ограничения задаются с помощью контекстного ключевого слова `where`. В следующей таблице описываются семь типов ограничений:
 
-|Ограничение|ОПИСАНИЕ|
+|Ограничение|Описание|
 |----------------|-----------------|
 |`where T : struct`|Аргумент типа должен быть типом значения, не допускающим значения NULL. См. дополнительные сведения о [типах значений, допускающих значение NULL](../../language-reference/builtin-types/nullable-value-types.md). Поскольку все типы значений имеют доступный конструктор без параметров, ограничение `struct` подразумевает наличие ограничения `new()` и не может применяться в сочетании с ограничением `new()`. Также ограничение `struct` нельзя использовать вместе с ограничением `unmanaged`.|
 |`where T : class`|Аргумент типа должен быть ссылочным типом. Это ограничение также применяется к любому типу класса, интерфейса, делегата или массива.|
@@ -107,15 +106,15 @@ ms.locfileid: "74204640"
 
 Начиная с C# 7.3 можно указать тип <xref:System.Enum?displayProperty=nameWithType> в качестве ограничения базового класса. В среде CLR это ограничение всегда было разрешено, но в языке C# оно было запрещено. Универсальные шаблоны с `System.Enum` предоставляют типобезопасное программирование для кэширования результатов использования статических методов в `System.Enum`. В следующем примере выполняется поиск всех допустимых значений для типа перечисления и создается словарь, который сопоставляет эти значения с их строковым представлением.
 
-[!code-csharp[using the unmanaged constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#18)]
+[!code-csharp[using the enum constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#18)]
 
 В этих методах используется отражение, которое влияет на производительность. Вы можете вызвать этот метод для создания коллекции, которая кэшируется и используется повторно, вместо того, чтобы повторять вызовы, требующие отражения.
 
 Вы можете использовать его, как показано в следующем примере, для создания перечисления и словаря имен и значений:
 
-[!code-csharp[using the unmanaged constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#19)]
+[!code-csharp[enum definition](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#19)]
 
-[!code-csharp[using the unmanaged constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#20)]
+[!code-csharp[using the enum constrained method](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#20)]
 
 ## <a name="see-also"></a>См. также
 

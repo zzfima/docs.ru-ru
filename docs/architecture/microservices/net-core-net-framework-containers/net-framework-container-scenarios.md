@@ -2,12 +2,12 @@
 title: Выбор .NET Framework для контейнеров Docker
 description: Архитектура микрослужб .NET для упакованных в контейнеры приложений .NET | Выбор .NET Framework для контейнеров Docker
 ms.date: 01/07/2019
-ms.openlocfilehash: 9e5b18e8e3482eb86c0d9dea5de56fb12f9d6256
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: e60572f33bda93663080b9d2e3504f0987b8483e
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73966894"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75899705"
 ---
 # <a name="when-to-choose-net-framework-for-docker-containers"></a>Выбор .NET Framework для контейнеров Docker
 
@@ -39,7 +39,7 @@ ms.locfileid: "73966894"
 
 - Службы, связанные с рабочим процессом. Службы Windows Workflow Foundation (WF), Workflow Services (WCF и WF в одной службе) и WCF Data Services (известные как службы данных ADO.NET) доступны только в среде .NET Framework. В настоящий момент не планируется их перенос в .NET Core.
 
-В дополнение к технологиям, перечисленным в официальном [плане по .NET Core](https://github.com/aspnet/Home/wiki/Roadmap), в платформу .NET Core могут быть перенесены и другие функции. Все такие компоненты помечены на сайте CoreFX GitHub отметкой [перенос в ядро](https://github.com/dotnet/corefx/issues?q=is%3Aopen+is%3Aissue+label%3Aport-to-core). Однако следует иметь в виду, что наличие этих компонентов в списке не означает, что корпорация Майкрософт намеревается добавлять их в среду .NET Core. Компоненты, присутствующие в списке, лишь отражают запросы от пользователей сообщества. Если вас заинтересовал какой-либо из перечисленных выше компонентов, примите участие в обсуждениях на сайте GitHub и выразите свое мнение. Если вы думаете, что чего-то не хватает, [отправьте новый вопрос в репозиторий CoreFX](https://github.com/dotnet/corefx/issues/new).
+В дополнение к технологиям, перечисленным в официальном [плане по .NET Core](https://github.com/dotnet/aspnetcore/wiki/Roadmap), в платформу .NET Core могут быть перенесены и другие функции. Все такие компоненты помечены на сайте CoreFX GitHub отметкой [перенос в ядро](https://github.com/dotnet/corefx/issues?q=is%3Aopen+is%3Aissue+label%3Aport-to-core). Однако следует иметь в виду, что наличие этих компонентов в списке не означает, что корпорация Майкрософт намеревается добавлять их в среду .NET Core. Компоненты, присутствующие в списке, лишь отражают запросы от пользователей сообщества. Если вас заинтересовал какой-либо из перечисленных выше компонентов, примите участие в обсуждениях на сайте GitHub и выразите свое мнение. Если вы думаете, что чего-то не хватает, [отправьте новый вопрос в репозитории Runtime](https://github.com/dotnet/runtime/issues/new).
 
 Несмотря на то, что выпуск .NET Core 3 (который находится в стадии разработки на момент написания этой статьи) будет поддерживать многие существующие API-интерфейсы для .NET Framework, они рассчитаны на работу на настольных компьютерах и неприменимы в контейнерных средах.
 

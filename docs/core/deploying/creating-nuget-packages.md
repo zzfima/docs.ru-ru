@@ -1,16 +1,15 @@
 ---
-title: Создание пакета NuGet с помощью средств интерфейса командной строки (CLI) .NET Core
+title: Создание пакета NuGet с помощью .NET Core CLI
 description: Узнайте, как создать пакет NuGet с помощью команды dotnet pack.
 author: cartermp
 ms.date: 06/20/2016
 ms.technology: dotnet-cli
-ms.custom: seodec18
-ms.openlocfilehash: 2d876f921d079972e2a638788195aa69a2423c49
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: ddc19faa7547637036686146f8600f40713541a8
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72771945"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740860"
 ---
 # <a name="how-to-create-a-nuget-package-with-net-core-command-line-interface-cli-tools"></a>Как создать пакет NuGet с помощью средств интерфейса командной строки (CLI) .NET Core
 

@@ -2,12 +2,12 @@
 title: LINQ to XML или Другие XML-технологии3
 ms.date: 07/20/2015
 ms.assetid: 01b8e746-12d3-471d-b811-7539e4547784
-ms.openlocfilehash: 1cafa8b690afb753dfdb0301dc6a19f5f257e9c0
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 4cade6ecbee95ee288db34246986858609697731
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69591873"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635682"
 ---
 # <a name="linq-to-xml-vs-other-xml-technologies"></a>LINQ to XML или Другие XML-технологии
 В этом разделе [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] сравнивается со следующими XML-технологиями: <xref:System.Xml.XmlReader>, XSLT, MSXML и XmlLite. Данные сведения могут помочь в выборе технологии.  
@@ -50,7 +50,7 @@ ms.locfileid: "69591873"
   
  Основным преимуществом такого средства синтаксического анализа XML, как XmlLite, является его простота, быстродействие и безопасность в большинстве сценариев. Его контактная зона, подверженная угрозам, очень мала. Если требуется проведение анализа документов, не заслуживающих доверия, и необходимо защититься от атак типа «отказ в обслуживании» или раскрытия данных, то XmlLite является хорошим выбором.  
   
- XmlLite не поддерживает интеграцию с [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]. Применение этого инструмента, в отличие от технологии [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], не приводит к повышению производительности программиста, что является одним из побудительных мотивов к использованию этой технологии.  
+ XmlLite не поддерживает интеграцию с LINQ. Применение этого инструмента не приводит к повышению продуктивности программиста, что является одним из побудительных мотивов к использованию LINQ.  
   
 ## <a name="see-also"></a>См. также
 

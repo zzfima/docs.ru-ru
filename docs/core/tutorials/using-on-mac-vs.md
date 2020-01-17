@@ -1,19 +1,17 @@
 ---
-title: Начало работы с .NET Core в macOS с помощью Visual Studio для Mac
+title: Начало работы с .NET Core с помощью Visual Studio для Mac
 description: В этом разделе рассматривается создание простого консольного приложения с помощью Visual Studio для Mac и .NET Core.
-author: mairaw
-ms.date: 07/11/2019
-ms.custom: seodec18
-ms.openlocfilehash: feaed88e902080c5c3b07578b78f8437489a690c
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.date: 12/19/2019
+ms.openlocfilehash: 4cd7e311411bce62698e291e763227496877ea39
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428587"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740489"
 ---
 # <a name="get-started-with-net-core-on-macos-using-visual-studio-for-mac"></a>Начало работы с .NET Core в macOS с помощью Visual Studio для Mac
 
-Visual Studio для Mac предоставляет полнофункциональную интегрированную среду для разработки приложений .NET Core. В этом разделе рассматривается создание простого консольного приложения с помощью Visual Studio для Mac и .NET Core.
+Visual Studio для Mac предоставляет полнофункциональную интегрированную среду для разработки приложений .NET Core. В этой статье показано, как создать простое консольное приложение с помощью Visual Studio для Mac и .NET Core.
 
 > [!NOTE]
 > Ваш отзыв очень важен. Вы можете отправить отзыв о Visual Studio для Mac команде разработчиков двумя способами.
@@ -23,7 +21,7 @@ Visual Studio для Mac предоставляет полнофункциона
 
 ## <a name="prerequisites"></a>Предварительные требования
 
-См. статью [Зависимости и требования для .NET Core](../install/dependencies.md?tabs=netcore30&pivots=os-macos).
+См. описание [зависимостей и требований для .NET Core](../install/dependencies.md?pivots=os-macos).
 
 Просмотрите статью о [поддержке .NET Core](/visualstudio/mac/net-core-support) и убедитесь в том, что вы используете поддерживаемую версию .NET Core.
 
@@ -35,7 +33,7 @@ Visual Studio для Mac предоставляет полнофункциона
 
 ## <a name="creating-a-project"></a>Создание проекта
 
-1. Нажмите кнопку **Создать** в окне запуска.
+1. Щелкните **Создать** в окне запуска.
 
    ![Кнопка "Создать" на экране запуска Visual Studio для Mac](./media/using-on-mac-vs/visual-studio-mac-new-project.png)
 

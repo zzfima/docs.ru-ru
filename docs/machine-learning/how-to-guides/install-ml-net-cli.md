@@ -1,18 +1,19 @@
 ---
 title: Установка средства ML.NET CLI
-description: Обзор и установка средства ML.NET CLI.
-ms.date: 04/16/2019
-ms.custom: ''
-ms.openlocfilehash: feeb4832b5bbd39f28ac2c6f6caa40d60b4f3aa9
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+description: Узнайте, как установить, обновить, удалить средство ML.NET CLI, или вернутся к его предыдущей версии.
+ms.date: 12/18/2019
+ms.openlocfilehash: 350122f2d2d2f03484ab6e272b482adf2094495c
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73977083"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75739966"
 ---
 # <a name="how-to-install-the-mlnet-command-line-interface-cli-tool"></a>Установка средства ML.NET CLI
 
-Для создания качественных моделей и исходного кода ML.NET на основе предоставляемых наборов обучающих данных средство ML.NET CLI (программу командной строки) можно запускать в любой командной строке (Windows, Mac или Linux).
+Узнайте, как установить ML.NET CLI (интерфейс командной строки) в Windows, Mac или Linux.
+
+ML.NET CLI создает качественные модели ML.NET и исходный код с помощью автоматизированного машинного обучения (AutoML) и набора данных для обучения.
 
 > [!NOTE]
 > Этот раздел относится к ML.NET CLI и ML.NET AutoML, находящимся в данный момент в предварительной версии; материалы могут быть изменены.
@@ -23,9 +24,9 @@ ms.locfileid: "73977083"
 
 - (Необязательно) [Visual Studio 2017 или 2019](https://visualstudio.microsoft.com/vs/)
 
-Вы можете запускать проекты, написанные на C#, из Visual Studio по нажатию F5 или с помощью `dotnet run` (.NET Core CLI).
+Вы можете запускать проекты, написанные на C#, из Visual Studio по нажатию кнопки `F5` или с помощью `dotnet run` (.NET Core CLI).
 
-Примечание. Если после установки [пакета SDK для .NET Core 2.2](https://dotnet.microsoft.com/download/dotnet-core/2.2) `dotnet tool` команда не работает, выйдите из Windows и снова войдите в систему.
+Примечание. Если после установки [пакета SDK для .NET Core 2.2](https://dotnet.microsoft.com/download/dotnet-core/2.2)`dotnet tool` команда не работает, выйдите из Windows и снова войдите в систему.
 
 ## <a name="install"></a>Установка
 
@@ -134,7 +135,7 @@ ML.NET CLI можно установить в каталоге по умолча
 
 ## <a name="see-also"></a>См. также
 
-- [Руководство по началу работы со средством ML.NET CLI](../tutorials/mlnet-cli.md)
-- [Автоматическое обучение моделей с помощью средства ML.NET CLI](../automate-training-with-cli.md)
+- [Обзор ML.NET CLI](../automate-training-with-cli.md)
+- [Учебник. Проанализируйте тональность с помощью ML.NET CLI](../tutorials/sentiment-analysis-cli.md)
 - [Справочное руководство по команде auto-train в ML.NET CLI](../reference/ml-net-cli-reference.md)
 - [Данные телеметрии в интерфейсе командной строки ML.NET](../resources/ml-net-cli-telemetry.md)

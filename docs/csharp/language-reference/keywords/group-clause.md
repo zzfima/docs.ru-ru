@@ -1,6 +1,5 @@
 ---
 title: Справочник по C#. Предложение group
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - group
@@ -9,12 +8,12 @@ helpviewer_keywords:
 - group keyword [C#]
 - group clause [C#]
 ms.assetid: c817242e-b12c-4baa-a57e-73ee138f34d1
-ms.openlocfilehash: dd14a4baf9967f41690e7978b8b6cf57c9275e36
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 75a366ec24e4e48af7e87d3372950aad8d76435b
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428500"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713474"
 ---
 # <a name="group-clause-c-reference"></a>Предложение group (Справочник по C#)
 
@@ -54,7 +53,7 @@ ms.locfileid: "74428500"
 
 ### <a name="grouping-by-numeric-range"></a>Группировка по числовому диапазону
 
-В следующем примере с помощью выражения создаются числовые ключи групп, обозначающие диапазоны значений в выборке. Обратите внимание на удобное использование [let](let-clause.md) для хранения результатов вызова метода, чтобы в предложении `group` не приходилось вызывать метод дважды. Дополнительные сведения о безопасном использовании методов в выражениях запросов см. в практическом руководстве по [ обработке исключений в выражениях запросов](../../linq/handle-exceptions-in-query-expressions.md).
+В следующем примере с помощью выражения создаются числовые ключи групп, обозначающие диапазоны значений в выборке. Обратите внимание на удобное использование [let](let-clause.md) для хранения результатов вызова метода, чтобы в предложении `group` не приходилось вызывать метод дважды. См. сведения о безопасном использовании методов в выражениях запросов в руководстве по [обработке исключений в выражениях запросов](../../linq/handle-exceptions-in-query-expressions.md).
 
 [!code-csharp[cscsrefQueryKeywords#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Group.cs#15)]
 
@@ -66,7 +65,7 @@ ms.locfileid: "74428500"
 group person by new {name = person.surname, city = person.city};
 ```
 
-Если требуется передать переменную запроса другому методу, следует использовать именованные типы. Создайте особый класс, используя автоматически реализуемые свойства для ключей, а затем переопределите методы <xref:System.Object.Equals%2A> и <xref:System.Object.GetHashCode%2A>. Можно также воспользоваться структурой, чтобы избежать необходимости переопределять эти методы. Дополнительные сведения см. в статьях [Практическое руководство. Реализация облегченного класса с автоматически реализуемыми свойствами](../../programming-guide/classes-and-structs/how-to-implement-a-lightweight-class-with-auto-implemented-properties.md) и [Практическое руководство. выполнению запросов повторяющихся файлов в дереве каталогов](../../programming-guide/concepts/linq/how-to-query-for-duplicate-files-in-a-directory-tree-linq.md). В последней статье имеется пример кода, демонстрирующий использование составных ключей с именованным типом.
+Если требуется передать переменную запроса другому методу, следует использовать именованные типы. Создайте особый класс, используя автоматически реализуемые свойства для ключей, а затем переопределите методы <xref:System.Object.Equals%2A> и <xref:System.Object.GetHashCode%2A>. Можно также воспользоваться структурой, чтобы избежать необходимости переопределять эти методы. См. сведения в руководствах по [реализации облегченного класса с автоматически реализуемыми свойствами](../../programming-guide/classes-and-structs/how-to-implement-a-lightweight-class-with-auto-implemented-properties.md) и [получению повторяющихся файлов в дереве каталогов](../../programming-guide/concepts/linq/how-to-query-for-duplicate-files-in-a-directory-tree-linq.md). В последней статье имеется пример кода, демонстрирующий использование составных ключей с именованным типом.
 
 ## <a name="example"></a>Пример
 

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - base types, parsing strings
 - DateTime object
 - time strings
-ms.openlocfilehash: 9957c38ad625a27395a3bcc3ddd9ce0b4797b93d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 16daa0ef3133b6cd04dc48b7f79fd365098e4bdf
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73127607"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75348074"
 ---
 # <a name="parsing-date-and-time-strings-in-net"></a>Синтаксический анализ строк даты и времени в .NET
 
@@ -56,7 +56,7 @@ ms.locfileid: "73127607"
 > Все примеры C# в этой статье выполняются в браузере. Нажмите кнопку **Выполнить**, чтобы просмотреть выходные данные. Вы можете поэкспериментировать, изменяя их значения.
 
 > [!NOTE]
-> Эти примеры для [C#](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/conversions) и [Visual Basic](https://github.com/dotnet/samples/tree/master/snippets/visualbasic/how-to/conversions) вы можете найти в репозитории документации GitHub. Вы также можете загрузить проект в виде ZIP-файла для [C#](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/conversions.zip) или [Visual Basic](https://github.com/dotnet/samples/raw/master/snippets/visualbasic/how-to/conversions.zip).
+> Эти примеры для [C#](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/conversions) и [Visual Basic](https://github.com/dotnet/samples/tree/master/snippets/visualbasic/how-to/conversions) см. в репозитории с документацией GitHub. Вы также можете скачать проект в виде ZIP-файла для [C#](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/conversions.zip) или [Visual Basic](https://github.com/dotnet/samples/raw/master/snippets/visualbasic/how-to/conversions.zip).
 
 [!code-csharp-interactive[Parsing.DateAndTime#1](../../../samples/snippets/csharp/how-to/conversions/StringToDateTime.cs#1)]
 [!code-vb[Parsing.DateAndTime#1](../../../samples/snippets/visualbasic/how-to/conversions/Program.vb#1)]

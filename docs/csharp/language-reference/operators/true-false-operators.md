@@ -1,21 +1,20 @@
 ---
 title: Операторы true и false. Справочник по C#
-ms.custom: seodec18
 ms.date: 12/10/2018
 helpviewer_keywords:
 - false operator [C#]
 - true operator [C#]
 ms.assetid: 81a888fd-011e-4589-b242-6c261fea505e
-ms.openlocfilehash: f65ed3b362080d7a8afe89e22bd132d1fc190b06
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: 498f8698401e91845b14ee1dbcda84ba7166bd14
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552460"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712602"
 ---
 # <a name="true-and-false-operators-c-reference"></a>Операторы true и false (справочник по C#)
 
-Оператор `true` возвращает значение [bool](../builtin-types/bool.md) `true`, указывая, что его операнд имеет значение true. Оператор `false` возвращает значение `bool` `true`, указывая, что его операнд имеет значение false. Операторы `true` и `false` не обязательно дополняют друг друга. То есть оба оператора `true` и `false` могут вернуть значение `bool` `false` для одного операнда. Если тип определяет один из двух операторов, он должен также определять другой оператор.
+Оператор `true` возвращает значение [bool](../builtin-types/bool.md)`true`, указывая, что его операнд имеет значение true. Оператор `false` возвращает значение `bool``true`, указывая, что его операнд имеет значение false. Операторы `true` и `false` не обязательно дополняют друг друга. То есть оба оператора `true` и `false` могут вернуть значение `bool``false` для одного операнда. Если тип определяет один из двух операторов, он должен также определять другой оператор.
 
 > [!TIP]
 > Используйте тип `bool?`, если вам нужно использовать трехзначную логику (например, при работе с базами данных, которые поддерживают трехзначный логический тип). В C# предоставляются операторы `&` и `|`, которые поддерживают троичную логику с операндами `bool?`. См. подробнее о [логических операторах, поддерживающих значение NULL](boolean-logical-operators.md#nullable-boolean-logical-operators) в описании [логических операторов](boolean-logical-operators.md).

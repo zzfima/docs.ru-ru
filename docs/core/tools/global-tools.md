@@ -3,13 +3,12 @@ title: Глобальные средства .NET Core
 description: Обзор глобальных средств .NET Core и доступных для них команд .NET Core CLI.
 author: KathleenDollard
 ms.date: 05/29/2018
-ms.custom: seodec18
-ms.openlocfilehash: 116739f80d5157632a8e44a19cbef6ba7971d339
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 0df3c1b615adfeaaf41542dc8252a8f14f49f6f9
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72318304"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75899862"
 ---
 # <a name="net-core-global-tools-overview"></a>Обзор глобальных средств .NET Core
 
@@ -35,7 +34,7 @@ ms.locfileid: "72318304"
 
 * Глобальные средства .NET Core можно найти в [NuGet](https://www.nuget.org). При этом NuGet пока не позволяет выполнять поиск конкретных глобальных средств .NET Core.
 * Вы можете найти рекомендации средств в записях блога или в репозитории GitHub [natemcmaster/dotnet-tools](https://github.com/natemcmaster/dotnet-tools).
-* Кроме того, в репозитории GitHub [aspnet/DotNetTools](https://github.com/aspnet/DotNetTools/) вам доступен исходный код для глобальных средств, созданных командой разработчиков для ASP.NET.
+* Кроме того, в репозитории GitHub [dotnet/aspnetcore](https://github.com/dotnet/aspnetcore/tree/master/src/Tools) вам доступен исходный код для глобальных средств, созданных командой разработчиков ASP.NET.
 * Дополнительные сведения о средствах диагностики см. в разделе [Глобальные средства диагностики dotnet в .NET Core](../diagnostics/index.md#net-core-dotnet-diagnostic-global-tools).
 
 ## <a name="check-the-author-and-statistics"></a>Проверка автора и статистики

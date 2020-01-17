@@ -10,27 +10,27 @@ helpviewer_keywords:
 - WCF, custom bindings
 - WCF, security
 ms.assetid: 8b847e91-69a3-49e1-9e5f-0c455e50d804
-ms.openlocfilehash: a41c53e87d82452eac8d7535a422b7aa4bd4e270
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 450a99fc6604ccb3fa796e8a73e1ddc3e3adff9e
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626889"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964660"
 ---
 # <a name="how-to-enable-message-replay-detection"></a>Практическое руководство. Включение обнаружения повтора сообщений
 Атака воспроизведения заключается в том, что злоумышленник копирует поток сообщений между двумя сторонами и воспроизводит его для одной или нескольких сторон. Если не приняты ответные меры, атакованные компьютеры обрабатывают этот поток как надлежащие сообщения, что приводит к ряду негативных последствий, таких как повторные заказы одного элемента.  
   
- Дополнительные сведения об обнаружении воспроизведения сообщений см. в разделе [обнаружение воспроизведения сообщений](https://go.microsoft.com/fwlink/?LinkId=88536).  
+ Дополнительные сведения об обнаружении воспроизведения сообщений см. в разделе [обнаружение воспроизведения сообщений](https://docs.microsoft.com/previous-versions/msp-n-p/ff649371(v=pandp.10)).  
   
- Следующая процедура показывает различные свойства, которые можно использовать управление обнаружением воспроизведения с помощью Windows Communication Foundation (WCF).  
+ В следующей процедуре показаны различные свойства, которые можно использовать для управления обнаружением воспроизведения с помощью Windows Communication Foundation (WCF).  
   
 ### <a name="to-control-replay-detection-on-the-client-using-code"></a>Управление обнаружением воспроизведения на стороне клиента с помощью кода  
   
-1. Создайте элемент <xref:System.ServiceModel.Channels.SecurityBindingElement> для использования в привязке <xref:System.ServiceModel.Channels.CustomBinding>. Дополнительные сведения см. в разделе [Как Создание пользовательской привязки с использованием элемента SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md). В следующем примере используется объект <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>, созданный с помощью объекта <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A> класса <xref:System.ServiceModel.Channels.SecurityBindingElement>.  
+1. Создайте элемент <xref:System.ServiceModel.Channels.SecurityBindingElement> для использования в привязке <xref:System.ServiceModel.Channels.CustomBinding>. Дополнительные сведения см. в разделе [инструкции. Создание пользовательской привязки с помощью SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md). В следующем примере используется объект <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>, созданный с помощью объекта <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A> класса <xref:System.ServiceModel.Channels.SecurityBindingElement>.  
   
 2. С помощью свойства <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalClientSettings%2A> получите ссылку на класс <xref:System.ServiceModel.Channels.LocalClientSecuritySettings> и задайте некоторые из следующих свойств согласно необходимости:  
   
-    1. `DetectReplay`. Значение типа Boolean. Управляет тем, пытается ли клиент обнаружить воспроизведение сообщений сервера. Значение по умолчанию — `true`.  
+    1. `DetectReplay`. Значение Boolean. Управляет тем, пытается ли клиент обнаружить воспроизведение сообщений сервера. Значение по умолчанию — `true`.  
   
     2. `MaxClockSkew`. Значение <xref:System.TimeSpan>. Задает максимальную разницу по времени, допускаемую механизмом обнаружения воспроизведения между клиентом и сервером. Механизм безопасности проверяет отправленную отметку времени и определяет, не слишком ли давно она отправлена. Значение по умолчанию — 5 минут.  
   
@@ -46,13 +46,13 @@ ms.locfileid: "64626889"
   
 ### <a name="to-control-replay-detection-in-configuration-for-the-client-or-service"></a>Управление обнаружением воспроизведения с помощью конфигурации для клиента или службы  
   
-1. Создание [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).  
+1. Создайте [\<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).  
   
 2. Создайте элемент `<security>`.  
   
-3. Создание [ \<localClientSettings >](../../../../docs/framework/configure-apps/file-schema/wcf/localclientsettings-element.md) или [ \<localServiceSettings >](../../../../docs/framework/configure-apps/file-schema/wcf/localservicesettings-element.md).  
+3. Создайте [\<локалклиентсеттингс >](../../../../docs/framework/configure-apps/file-schema/wcf/localclientsettings-element.md) или [\<локалсервицесеттингс >](../../../../docs/framework/configure-apps/file-schema/wcf/localservicesettings-element.md).  
   
-4. Задайте следующие значение атрибутов (согласно необходимости): `detectReplays`, `maxClockSkew`, `replayWindow` и `replayCacheSize`. В следующем примере задаются атрибуты для обоих элементов: `<localServiceSettings>` и`<localClientSettings>`.  
+4. Задайте следующие значение атрибутов (согласно необходимости): `detectReplays`, `maxClockSkew`, `replayWindow` и `replayCacheSize`. В следующем примере задаются атрибуты для обоих элементов: `<localServiceSettings>`&lt;localClientSettings&gt; и`<localClientSettings>`.  
   
     ```xml  
     <customBinding>  
@@ -75,12 +75,12 @@ ms.locfileid: "64626889"
     ```  
   
 ## <a name="example"></a>Пример  
- В следующем примере создается элемент <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> с помощью метода <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A>.  
+ В следующем примере создается элемент <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> с помощью метода <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A> и задает свойства воспроизведения привязки.  
   
  [!code-csharp[c_ReplayDetection#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_replaydetection/cs/source.cs#1)]
  [!code-vb[c_ReplayDetection#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_replaydetection/vb/source.vb#1)]  
   
-## <a name="scope-of-replay-message-security-only"></a>Область воспроизведения: Только безопасность сообщений  
+## <a name="scope-of-replay-message-security-only"></a>Область воспроизведения: только для режима безопасности сообщений  
  Обратите внимание, что следующие процедуры применяются только для режима безопасности сообщений. В режиме транспорта и в режиме транспорта с учетными данными сообщения воспроизведение обнаруживает транспортный механизм.  
   
 ## <a name="secure-conversation-notes"></a>Примечания о безопасном диалоге  
@@ -102,10 +102,10 @@ ms.locfileid: "64626889"
   
 - <xref:System.ServiceModel.Channels>  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - <xref:System.ServiceModel.Channels.LocalClientSecuritySettings>
 - <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings>
 - [Безопасные диалоги и безопасные сеансы](../../../../docs/framework/wcf/feature-details/secure-conversations-and-secure-sessions.md)
-- [\<localClientSettings >](../../../../docs/framework/configure-apps/file-schema/wcf/localclientsettings-element.md)
+- [\<Локалклиентсеттингс >](../../../../docs/framework/configure-apps/file-schema/wcf/localclientsettings-element.md)
 - [Практическое руководство. Создание пользовательской привязки с использованием элемента SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)

@@ -4,12 +4,12 @@ description: Рекомендации по использованию реали
 author: cartermp
 ms.author: mairaw
 ms.date: 06/19/2018
-ms.openlocfilehash: e5df362231b0786a58a4c3c9ae8f5a167930a12e
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: b2b9e15cfdfd63d070ae94c29a9f2d1a5b5c87b2
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70799252"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75738673"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>Выбор между .NET Core и .NET Framework для серверных приложений
 
@@ -95,7 +95,7 @@ ms.locfileid: "70799252"
 
 - Поддержка языков. Сейчас в среде .NET Core поддерживаются Visual Basic и F#, но не для всех типов проектов. Список поддерживаемых шаблонов проектов см. в статье о [параметрах шаблона для dotnet new](../core/tools/dotnet-new.md#arguments).
 
-Кроме платформ, указанных в официальной стратегии, существуют и другие платформы, которые можно перенести в среду .NET Core. Полный список см. в репозитории CoreFX. Эти платформы помечены как [port-to-core](https://github.com/dotnet/corefx/issues?q=is%3Aopen+is%3Aissue+label%3Aport-to-core). Корпорация Майкрософт не намеревается добавлять эти компоненты в среду .NET Core. Компоненты, добавленные в список, отражают желания пользователей сообщества. Тем не менее, если вас заинтересовал любой из компонентов, помеченный как `port-to-core`, примите участие в обсуждениях на сайте GitHub. Если вы думаете, что чего-то не хватает, отправьте новый вопрос в [репозиторий CoreFX](https://github.com/dotnet/corefx/issues/new).
+Кроме платформ, указанных в официальной стратегии, существуют и другие платформы, которые можно перенести в среду .NET Core. Полный список см. в репозитории CoreFX. Эти платформы помечены как [port-to-core](https://github.com/dotnet/corefx/issues?q=is%3Aopen+is%3Aissue+label%3Aport-to-core). Корпорация Майкрософт не намеревается добавлять эти компоненты в среду .NET Core. Компоненты, добавленные в список, отражают желания пользователей сообщества. Тем не менее, если вас заинтересовал любой из компонентов, помеченный как `port-to-core`, примите участие в обсуждениях на сайте GitHub. Если вы думаете, что чего-то не хватает, отправьте новый вопрос в [репозитории .NET](https://github.com/dotnet/runtime/issues/new).
 
 ### <a name="a-need-to-use-a-platform-that-doesnt-support-net-core"></a>Использование платформы, не поддерживающей .NET Core
 

@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, introduction to
 ms.assetid: eaa720d8-8999-4eb7-8df5-3c19ca61cad0
-ms.openlocfilehash: 938bae09eab4e95c0ec875a8681cc276325b976b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: ed1b2df57c118a0ebb6b5ffa4326b3e2eac81dec
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73129045"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75632367"
 ---
 # <a name="introduction-to-plinq"></a>Введение в PLINQ
 
@@ -21,7 +21,7 @@ ms.locfileid: "73129045"
 
 Встроенный язык запросов (LINQ) был впервые представлен в .NET Framework 3.5. Он поддерживает унифицированную модель для запросов к любому источнику данных <xref:System.Collections.IEnumerable?displayProperty=nameWithType> или <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> типобезопасным образом. LINQ to Objects — это запросы LINQ, выполняемые с коллекциями в памяти (например, <xref:System.Collections.Generic.List%601>) или массивами. В этой статье предполагается, что у вас уже есть общие представления о LINQ. Дополнительные сведения см. в разделе [LINQ — C#](../../csharp/programming-guide/concepts/linq/index.md) или [LINQ — Visual Basic](../../visual-basic/programming-guide/concepts/linq/index.md).
 
-Parallel LINQ (PLINQ) является параллельной реализацией шаблона LINQ. Запрос PLINQ во многом напоминает непараллельный запрос LINQ to Objects. Запросы PLINQ, как и последовательные запросы [!INCLUDE[vbteclinq](../../../includes/vbteclinq-md.md)], работают с любым источником данных <xref:System.Collections.IEnumerable> или <xref:System.Collections.Generic.IEnumerable%601> в памяти и поддерживают отложенное выполнение, т. е. выполнение только по завершении перечисления запроса. Основное различие состоит в том, что PLINQ пытается задействовать сразу все процессоры в системе. Для этого он разбивает источник данных на сегменты, а затем запрашивается каждый сегмент в отдельном рабочем потоке сразу, используя сразу несколько процессоров. Во многих случаях параллельное выполнение значительно сокращает время выполнения запроса.
+Parallel LINQ (PLINQ) является параллельной реализацией шаблона LINQ. Запрос PLINQ во многом напоминает непараллельный запрос LINQ to Objects. Запросы PLINQ, как и последовательные запросы LINQ, работают с любым источником данных <xref:System.Collections.IEnumerable> или <xref:System.Collections.Generic.IEnumerable%601> в памяти и поддерживают отложенное выполнение, т. е. выполнение только по завершении перечисления запроса. Основное различие состоит в том, что PLINQ пытается задействовать сразу все процессоры в системе. Для этого он разбивает источник данных на сегменты, а затем запрашивается каждый сегмент в отдельном рабочем потоке сразу, используя сразу несколько процессоров. Во многих случаях параллельное выполнение значительно сокращает время выполнения запроса.
 
 Благодаря параллельному выполнению PLINQ позволяет существенно повысить производительность некоторых видов запросов по сравнению с устаревшим кодом. Часто для этого достаточно добавить к источнику данных оператор запроса <xref:System.Linq.ParallelEnumerable.AsParallel%2A>. Тем не менее параллелизм может представлять свои собственные сложности, и не все операции запросов в PLINQ выполняются быстрее. Некоторые запросы при применении параллелизма только замедляются. В связи с этим необходимо понимать, как влияют на параллельные запросы такие аспекты, как упорядочение. Дополнительные сведения см. в разделе [Общее представление об ускорении выполнения в PLINQ](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md).
 
@@ -34,11 +34,11 @@ Parallel LINQ (PLINQ) является параллельной реализац
 
 Класс <xref:System.Linq.ParallelEnumerable?displayProperty=nameWithType> предоставляет почти все функциональные возможности PLINQ. Этот класс и остальные типы пространства имен <xref:System.Linq?displayProperty=nameWithType> компилируются в сборку System.Core.dll. Проекты C# и Visual Basic по умолчанию в Visual Studio ссылаются на сборку и импортируют пространство имен.
 
-<xref:System.Linq.ParallelEnumerable> содержит реализации всех стандартных операторов запроса, поддерживаемых LINQ to Objects, но не все из них пытается выполнять параллельно. Если вы не знакомы с [!INCLUDE[vbteclinq](../../../includes/vbteclinq-md.md)], см. разделы [Введение в LINQ (C#)](../../csharp/programming-guide/concepts/linq/index.md) и [Введение в LINQ (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/introduction-to-linq.md).
+<xref:System.Linq.ParallelEnumerable> содержит реализации всех стандартных операторов запроса, поддерживаемых LINQ to Objects, но не все из них пытается выполнять параллельно. Если вы не использовали LINQ, см. общие сведения о LINQ для [C#](../../csharp/programming-guide/concepts/linq/index.md) и [Visual Basic](../../visual-basic/programming-guide/concepts/linq/introduction-to-linq.md).
 
 Помимо стандартных операторов запроса, класс <xref:System.Linq.ParallelEnumerable> содержит набор методов для реализации функций, характерных для параллельного выполнения. Методы, характерные для PLINQ, перечислены в следующей таблице.
 
-|Класс ParallelEnumerable|ОПИСАНИЕ|
+|Класс ParallelEnumerable|Описание|
 |---------------------------------|-----------------|
 |<xref:System.Linq.ParallelEnumerable.AsParallel%2A>|Точка входа для PLINQ. Указывает, что по возможности остальная часть запроса должна быть параллелизована.|
 |<xref:System.Linq.ParallelEnumerable.AsSequential%2A>|Указывает, что остальная часть запроса должна выполняться последовательно, как непараллельный запрос LINQ.|
@@ -94,7 +94,7 @@ Parallel LINQ (PLINQ) является параллельной реализац
 
 ## <a name="the-forall-operator"></a>Оператор ForAll
 
-В последовательных запросах [!INCLUDE[vbteclinq](../../../includes/vbteclinq-md.md)] выполнение откладывается до того момента, когда завершится перечисление запроса в цикле `foreach` (`For Each` в Visual Basic) или будет вызван метод <xref:System.Linq.ParallelEnumerable.ToList%2A>, <xref:System.Linq.ParallelEnumerable.ToArray%2A> или <xref:System.Linq.ParallelEnumerable.ToDictionary%2A>. Кроме того, для выполнения запроса и итерации результатов в PLINQ можно использовать `foreach`. При этом сам оператор `foreach` параллельно не выполняется, а значит результаты всех параллельных задач необходимо снова объединить с тем потоком, в котором выполняется цикл. Оператор `foreach` можно использовать в PLINQ, если вам нужно сохранить окончательный порядок результатов запроса, а также при любой последовательной обработке результатов (например, при вызове `Console.WriteLine` для каждого элемента). Чтобы ускорить выполнение запроса в ситуации, когда сохранение порядка не требуется и обработка результатов допускает параллелизацию, используйте для выполнения запроса PLINQ метод <xref:System.Linq.ParallelEnumerable.ForAll%2A>. <xref:System.Linq.ParallelEnumerable.ForAll%2A> не выполняет этот заключительный шаг слияния. В следующем примере кода показано применение метода <xref:System.Linq.ParallelEnumerable.ForAll%2A>. <xref:System.Collections.Concurrent.ConcurrentBag%601?displayProperty=nameWithType> используется здесь потому, что он оптимизирован для одновременного добавления данных из нескольких потоков и не пытается удалять элементы.
+В последовательных запросах LINQ выполнение откладывается до того момента, когда завершится перечисление запроса в цикле `foreach` (`For Each` в Visual Basic) или будет вызван метод <xref:System.Linq.ParallelEnumerable.ToList%2A>, <xref:System.Linq.ParallelEnumerable.ToArray%2A> или <xref:System.Linq.ParallelEnumerable.ToDictionary%2A>. Кроме того, для выполнения запроса и итерации результатов в PLINQ можно использовать `foreach`. При этом сам оператор `foreach` параллельно не выполняется, а значит результаты всех параллельных задач необходимо снова объединить с тем потоком, в котором выполняется цикл. Оператор `foreach` можно использовать в PLINQ, если вам нужно сохранить окончательный порядок результатов запроса, а также при любой последовательной обработке результатов (например, при вызове `Console.WriteLine` для каждого элемента). Чтобы ускорить выполнение запроса в ситуации, когда сохранение порядка не требуется и обработка результатов допускает параллелизацию, используйте для выполнения запроса PLINQ метод <xref:System.Linq.ParallelEnumerable.ForAll%2A>. <xref:System.Linq.ParallelEnumerable.ForAll%2A> не выполняет этот заключительный шаг слияния. В следующем примере кода показано применение метода <xref:System.Linq.ParallelEnumerable.ForAll%2A>. <xref:System.Collections.Concurrent.ConcurrentBag%601?displayProperty=nameWithType> используется здесь потому, что он оптимизирован для одновременного добавления данных из нескольких потоков и не пытается удалять элементы.
 
 [!code-csharp[PLINQ#4](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinq2_cs.cs#4)]
 [!code-vb[PLINQ#4](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinq2_vb.vb#4)]

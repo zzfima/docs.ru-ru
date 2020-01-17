@@ -2,12 +2,12 @@
 title: Общие сведения о классе XElement (C#)
 ms.date: 07/20/2015
 ms.assetid: 2b9f0cd8-a1d1-4037-accf-0f38a410fa11
-ms.openlocfilehash: e742741f56f3e39f93b9f1d6be30a54a4ede67f3
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: d77c725b3c786b8a8fa2b0eeab4bc4b30f298218
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69590885"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635474"
 ---
 # <a name="xelement-class-overview-c"></a>Общие сведения о классе XElement (C#)
 Класс <xref:System.Xml.Linq.XElement> - это один из фундаментальных классов в [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Он обозначает элемент XML. Этот класс можно использовать для создания элементов, изменения содержимого элемента, добавления, изменения или удаления дочерних элементов, добавления к элементам атрибутов или сериализации содержимого элемента в текстовой форме. Можно также настроить взаимодействие с другими классами в <xref:System.Xml?displayProperty=nameWithType>, например <xref:System.Xml.XmlReader>, <xref:System.Xml.XmlWriter> и <xref:System.Xml.Xsl.XslCompiledTransform>.  
@@ -21,7 +21,7 @@ ms.locfileid: "69590885"
   
 - Можно выполнить синтаксический анализ XML из нескольких источников, в том числе из <xref:System.IO.TextReader>, текстовых файлов или веб-адреса (URL-адреса). Дополнительные сведения см. в разделе [Анализ XML (C#)](./how-to-parse-a-string.md).  
   
-- Для распределения контента по дереву можно использовать <xref:System.Xml.XmlReader>. Дополнительные сведения можно найти по адресу: <xref:System.Xml.Linq.XNode.ReadFrom%2A>.  
+- Для распределения контента по дереву можно использовать <xref:System.Xml.XmlReader>. Для получения дополнительной информации см. <xref:System.Xml.Linq.XNode.ReadFrom%2A>.  
   
 - Если установлен модуль, позволяющий заносить содержимое в средство <xref:System.Xml.XmlWriter>, то можно использовать метод <xref:System.Xml.Linq.XContainer.CreateWriter%2A>, чтобы создать модуль записи, передать его этому модулю, после чего использовать контент, записанный в систему <xref:System.Xml.XmlWriter>, чтобы заполнить XML-дерево.  
   
@@ -43,7 +43,7 @@ XElement contacts =
     );  
 ```  
   
- Другим распространенным способом создания дерева XML является использование результатов запроса [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] для заполнения дерева XML, как показано в следующем примере:  
+ Другим распространенным способом создания дерева XML является использование результатов запроса LINQ для заполнения дерева XML, как показано в следующем примере:  
   
 ```csharp  
 XElement srcTree = new XElement("Root",  
@@ -81,12 +81,12 @@ Console.WriteLine(xmlTree);
  Дополнительные сведения см. в разделе [Сериализация XML-деревьев (C#)](./preserving-white-space-while-serializing.md).  
   
 ## <a name="retrieving-xml-data-via-axis-methods"></a>Получение XML-данных через методы оси  
- Можно воспользоваться методами оси для получения свойств, дочерних элементов, элементов-потомков и элементов-предков. При выполнении запросов [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] используются методы оси и обеспечиваются гибкие и эффективные способы навигации по XML-дереву, а также его обработки.  
+ Можно воспользоваться методами оси для получения свойств, дочерних элементов, элементов-потомков и элементов-предков. При выполнении запросов LINQ используются методы оси и обеспечиваются гибкие и эффективные способы навигации по XML-дереву, а также его обработки.  
   
  Дополнительные сведения см. в разделе [Оси LINQ to XML (C#)](./linq-to-xml-axes-overview.md).  
   
 ## <a name="querying-xml-trees"></a>Выполнение запросов деревьям XML  
- Вы можете создавать запросы [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], которые извлекают данные из дерева XML.  
+ Вы можете создавать запросы LINQ, которые извлекают данные из дерева XML.  
   
  Дополнительные сведения см. в разделе [Выполнение запросов к деревьям XML (C#)](./how-to-find-an-element-with-a-specific-attribute.md).  
   

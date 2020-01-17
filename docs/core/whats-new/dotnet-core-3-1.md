@@ -6,18 +6,18 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 12/04/2019
-ms.openlocfilehash: 08ae824b79ba6a1ff5a92a0b4306eabe5ccadfd2
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: a9f47c2909375251460b45792822e491d56fb242
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74838311"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75342853"
 ---
 # <a name="whats-new-in-net-core-31"></a>Новые возможности .NET Core 3.1
 
 В этой статье описаны новые возможности в .NET Core 3.1. Этот выпуск содержит небольшие улучшения относительно .NET Core 3.0. Внимание уделялось нескольким небольшим, но важным исправлениям. Основная особенность .NET Core 3.1 заключается в том, что это выпуск [долгосрочной поддержки (LTS)](#long-term-support).
 
-Если вы используете Visual Studio 2019, для работы с проектами .NET Core 3.1 необходимо выполнить обновление до [Visual Studio 2019 16.4](https://visualstudio.microsoft.com/downloads/). Дополнительные сведения о новых возможностях Visual Studio см. в [блоге о Visual Studio](https://devblogs.microsoft.com/visualstudio/tis-the-season-visual-studio-2019/).
+Если вы используете Visual Studio 2019, для работы с проектами .NET Core 3.1 необходимо обновить Visual Studio 2019 до [версии 16.4](https://visualstudio.microsoft.com/downloads/). Дополнительные сведения о новых возможностях Visual Studio см. в [блоге о Visual Studio](https://devblogs.microsoft.com/visualstudio/tis-the-season-visual-studio-2019/).
 
 Visual Studio для Mac также поддерживает и содержит .NET Core 3.1 в канале предварительной версии Visual Studio для Mac 8.4. Вам потребуется перейти на канал предварительной версии, чтобы использовать .NET Core 3.1.
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - walkthroughs [Visual Studio], Visual C#
 - Visual C#, walkthroughs
 ms.assetid: 2d07b972-ef69-4676-9aef-e1784728e1ff
-ms.openlocfilehash: a997cc62b03a0d92d5ef76173981f5a9e287b13a
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.openlocfilehash: 11a58ddf246c77cf4372e940b184413054b10778
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74204587"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75634928"
 ---
 # <a name="c-walkthroughs"></a>Пошаговые руководства по C#
 В пошаговых руководствах содержатся инструкции по выполнению стандартных сценариев, что делает их удобным инструментом для начала изучения продукта в целом или его отдельных возможностей.  
@@ -48,7 +48,7 @@ ms.locfileid: "74204587"
  Описание некоторых наиболее типичных задач, таких как добавление или удаление вкладки в элементе управления `TabControl`, закрепление элемента управления в родительском элементе и изменение ориентации элемента управления `SplitContainer`.  
   
  [Написание запросов на C# (LINQ)](./programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)  
- Описание возможностей C#, которые служат для написания выражений запросов [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)].  
+ Описание возможностей C#, которые служат для написания выражений запросов LINQ.  
   
  [Обработка данных (C#) (LINQ to SQL)](../framework/data/adonet/sql/linq/walkthrough-manipulating-data-csharp.md)  
  Описание сценария [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] для добавления, изменения и удаления данных в базе данных.  

@@ -1,18 +1,17 @@
 ---
-title: Практическое руководство. Отображение диалогового окна хода выполнения для операций с файлами (руководство по программированию на C#)
-ms.custom: seodec18
+title: Руководство по программированию на C#. Отображение диалогового окна хода выполнения для операций с файлами
 ms.date: 07/20/2015
 helpviewer_keywords:
 - progress dialog [C#]
 ms.assetid: 01b71fe7-8178-4dc8-aeb1-12053be7b51c
-ms.openlocfilehash: 028e779f3cd8a17f162a79791b0c84abae14cf44
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 30ab84054d26f5b32a3f042a8d35d5ef1211d928
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69590053"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705136"
 ---
-# <a name="how-to-provide-a-progress-dialog-box-for-file-operations-c-programming-guide"></a>Практическое руководство. Отображение диалогового окна хода выполнения для операций с файлами (руководство по программированию на C#)
+# <a name="how-to-provide-a-progress-dialog-box-for-file-operations-c-programming-guide"></a>Руководство по программированию на C#. Отображение диалогового окна хода выполнения для операций с файлами
 Вы можете предоставить стандартное диалоговое окно, в котором будет отображаться ход выполнения операций с файлами в Windows, при использовании метода <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyFile%28System.String%2CSystem.String%2CMicrosoft.VisualBasic.FileIO.UIOption%29> из пространства имен <xref:Microsoft.VisualBasic?displayProperty=nameWithType>.  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  

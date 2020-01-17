@@ -1,23 +1,22 @@
 ---
 title: Руководство по программированию на C#. Методы расширения
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - methods [C#], adding to existing types
 - extension methods [C#]
 - methods [C#], extension
 ms.assetid: 175ce3ff-9bbf-4e64-8421-faeb81a0bb51
-ms.openlocfilehash: 5cce8eb3ad36208c3d376bc8c94da484e9f9181e
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 1ab831b10b4152e8713cdfba4962822042c15673
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73971050"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714946"
 ---
 # <a name="extension-methods-c-programming-guide"></a>Методы расширения (Руководство по программированию в C#)
 Методы расширения позволяют "добавлять" методы в существующие типы без создания нового производного типа, перекомпиляции и иного изменения первоначального типа. Методы расширения представляют собой особую разновидность статического метода, но вызываются так же, как методы экземпляра в расширенном типе. Для клиентского кода, написанного на языках C#, F# и Visual Basic, нет видимого различия между вызовом метода расширения и вызовом методов, фактически определенных в типе.  
   
- Самые обычные методы расширения — стандартные операторы запросов [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], которые добавляют функции запросов в существующие типы <xref:System.Collections.IEnumerable?displayProperty=nameWithType> и <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>. Для использования стандартных операторов запросов их необходимо ввести в область действия с помощью директивы `using System.Linq`. Тогда каждый тип, реализующий тип <xref:System.Collections.Generic.IEnumerable%601>, будет иметь методы экземпляра, в частности <xref:System.Linq.Enumerable.GroupBy%2A>, <xref:System.Linq.Enumerable.OrderBy%2A>, <xref:System.Linq.Enumerable.Average%2A> и т. д. Эти дополнительные методы можно видеть в завершении операторов IntelliSense при вводе точки после экземпляра типа <xref:System.Collections.Generic.IEnumerable%601>, например <xref:System.Collections.Generic.List%601> или <xref:System.Array>.  
+ Самые распространенные методы расширения — стандартные операторы запросов LINQ, которые добавляют функции запросов в существующие типы <xref:System.Collections.IEnumerable?displayProperty=nameWithType> и <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>. Для использования стандартных операторов запросов их необходимо ввести в область действия с помощью директивы `using System.Linq`. Тогда каждый тип, реализующий тип <xref:System.Collections.Generic.IEnumerable%601>, будет иметь методы экземпляра, в частности <xref:System.Linq.Enumerable.GroupBy%2A>, <xref:System.Linq.Enumerable.OrderBy%2A>, <xref:System.Linq.Enumerable.Average%2A> и т. д. Эти дополнительные методы можно видеть в завершении операторов IntelliSense при вводе точки после экземпляра типа <xref:System.Collections.Generic.IEnumerable%601>, например <xref:System.Collections.Generic.List%601> или <xref:System.Array>.  
   
  В следующем примере показано, как вызывать метод стандартного оператора запроса `OrderBy` для массива целых чисел. Выражение в скобках называется лямбда-выражением. Многие стандартные операторы запроса принимают лямбда-выражения в качестве параметров, но это необязательно для методов расширения. Дополнительные сведения см. в разделе [Лямбда-выражения](../statements-expressions-operators/lambda-expressions.md).  
   

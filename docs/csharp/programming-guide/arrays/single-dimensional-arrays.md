@@ -1,17 +1,16 @@
 ---
 title: Руководство по программированию на C#. Одномерные массивы
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - single-dimensional arrays [C#]
 - arrays [C#], single-dimensional
 ms.assetid: 2cec1196-1de0-49d2-baf2-c607c33310e8
-ms.openlocfilehash: 5559acd162b26a94b009ec21691d1501c90db290
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 07c6061bfc66b1640d0eacca217302feff1a390a
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73419530"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715033"
 ---
 # <a name="single-dimensional-arrays-c-programming-guide"></a>Одномерные массивы (Руководство по программированию на C#)
 
@@ -21,13 +20,13 @@ ms.locfileid: "73419530"
   
  Этот массив содержит элементы с `array[0]` по `array[4]`. С помощью оператора [new](../../language-reference/operators/new-operator.md) можно создать массив и инициализировать его элементы, используя значения по умолчанию. В этом примере при инициализации всем элементам массива присваиваются нулевые значения.  
   
- Таким же образом можно объявить массив, в котором хранятся строковые элементы. Например:  
+ Таким же образом можно объявить массив, в котором хранятся строковые элементы. Пример:  
   
  [!code-csharp[csProgGuideArrays#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#5)]  
   
 ## <a name="array-initialization"></a>Инициализация массива
 
- Массив можно инициализировать при объявлении. В этом случае не требуется спецификатор длины, поскольку он уже задан по числу элементов в списке инициализации. Например:  
+ Массив можно инициализировать при объявлении. В этом случае не требуется спецификатор длины, поскольку он уже задан по числу элементов в списке инициализации. Пример:  
   
  [!code-csharp[csProgGuideArrays#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#6)]  
   
@@ -41,7 +40,7 @@ ms.locfileid: "73419530"
   
  [!code-csharp[csProgGuideArrays#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#8)]  
   
- Переменную массива можно объявить без инициализации, однако при присвоении массива этой переменной необходимо использовать оператор `new`. Например:  
+ Переменную массива можно объявить без инициализации, однако при присвоении массива этой переменной необходимо использовать оператор `new`. Пример:  
   
  [!code-csharp[csProgGuideArrays#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#9)]  
   
@@ -55,7 +54,7 @@ ms.locfileid: "73419530"
   
  Результат этого оператора зависит от того, является ли `SomeType` типом значения или ссылочным типом. Если это тип значения, оператор создает массив из 10 элементов, каждый из которых имеет тип `SomeType`. Если `SomeType` является ссылочным типом, этот оператор создает массив из 10 элементов, каждый из которых инициализируется с использованием ссылки NULL.  
   
- Дополнительные сведения о типах значений и ссылочных типах см. в разделе [Типы](/dotnet/csharp/language-reference/keywords).  
+См. дополнительные сведения о [типах значений](../../language-reference/keywords/value-types.md) и [ссылочных типах](../../language-reference/keywords/reference-types.md).
   
 ## <a name="see-also"></a>См. также
 

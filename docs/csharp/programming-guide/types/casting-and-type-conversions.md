@@ -1,6 +1,5 @@
 ---
 title: Руководство по программированию на C#. Приведение и преобразование типов
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - type conversion [C#]
@@ -10,12 +9,12 @@ helpviewer_keywords:
 - casting [C#]
 - converting types [C#]
 ms.assetid: 568df58a-d292-4b55-93ba-601578722878
-ms.openlocfilehash: 33195ef77e2f51e52cd9ed69a11b12bed8d9ead1
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 252d509617ab5dbc53b282bac52e356396d82fab
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73969616"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711900"
 ---
 # <a name="casting-and-type-conversions-c-programming-guide"></a>Руководство по программированию на C#. Приведение и преобразование типов
 
@@ -34,7 +33,7 @@ i = "Hello"; // error CS0029: Cannot implicitly convert type 'string' to 'int'
   
 - **Пользовательские преобразования**. Такие преобразования выполняются специальными методами, которые можно определить для включения явных и неявных преобразований между пользовательскими типами без связи "базовый класс — производный класс". Дополнительные сведения см. в разделе [Операторы пользовательского преобразования](../../language-reference/operators/user-defined-conversion-operators.md).  
   
-- **Преобразования с использованием вспомогательных классов**. Чтобы выполнить преобразование между несовместимыми типами, например целыми числами и объектами <xref:System.DateTime?displayProperty=nameWithType> или шестнадцатеричными строками и массивами байтов, можно использовать классы <xref:System.BitConverter?displayProperty=nameWithType> и <xref:System.Convert?displayProperty=nameWithType>, а также методы `Parse` встроенных числовых типов, такие как <xref:System.Int32.Parse%2A?displayProperty=nameWithType>. Дополнительные сведения см. в разделе [Практическое руководство. преобразованию массива байтов в значение типа int](./how-to-convert-a-byte-array-to-an-int.md), [ преобразованию строки в число](./how-to-convert-a-string-to-a-number.md) и [ преобразованию из шестнадцатеричных строк в числовые типы](./how-to-convert-between-hexadecimal-strings-and-numeric-types.md).  
+- **Преобразования с использованием вспомогательных классов**. Чтобы выполнить преобразование между несовместимыми типами, например целыми числами и объектами <xref:System.DateTime?displayProperty=nameWithType> или шестнадцатеричными строками и массивами байтов, можно использовать классы <xref:System.BitConverter?displayProperty=nameWithType> и <xref:System.Convert?displayProperty=nameWithType>, а также методы `Parse` встроенных числовых типов, такие как <xref:System.Int32.Parse%2A?displayProperty=nameWithType>. Дополнительные сведения см. в руководствах по [преобразованию массива байтов в значение типа int](./how-to-convert-a-byte-array-to-an-int.md), [преобразованию строки в число](./how-to-convert-a-string-to-a-number.md) и [преобразованию из шестнадцатеричных строк в числовые типы](./how-to-convert-between-hexadecimal-strings-and-numeric-types.md).
   
 ## <a name="implicit-conversions"></a>Неявные преобразования
 
@@ -87,7 +86,7 @@ Giraffe g2 = (Giraffe) a;
   
 ## <a name="c-language-specification"></a>Спецификация языка C#
 
-Дополнительные сведения см. в разделе [Преобразования](~/_csharplang/spec/conversions.md) [спецификация языка C#](~/_csharplang/spec/introduction.md).
+Дополнительные сведения см. в разделе [Преобразования](~/_csharplang/spec/conversions.md)[спецификация языка C#](~/_csharplang/spec/introduction.md).
 
 ## <a name="see-also"></a>См. также
 

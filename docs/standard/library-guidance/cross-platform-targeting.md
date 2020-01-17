@@ -1,15 +1,13 @@
 ---
 title: Кроссплатформенное нацеливание для библиотек .NET
 description: Рекомендации по созданию кроссплатформенных библиотек .NET.
-author: jamesnk
-ms.author: mairaw
-ms.date: 10/02/2018
-ms.openlocfilehash: 6bd310f2e4b7a9bd7bb550ed9c7da9ebabdf64ba
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 08/12/2019
+ms.openlocfilehash: 45eb67837c924558ec51381dd924abf9fd0fa315
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129718"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706521"
 ---
 # <a name="cross-platform-targeting"></a>Кроссплатформенное нацеливание
 
@@ -51,7 +49,7 @@ ms.locfileid: "53129718"
 
 Чтобы пользователям не приходилось компилировать проект под разные платформы, старайтесь писать код под NET Standard плюс под еще одну или несколько определенных платформ. В случае с многоплатформенным нацеливанием все сборки упаковываются в один пакет NuGet. Таким образом пользователи будут ссылаться на один пакет, а NuGet будет выбирать подходящую реализацию. Библиотека .NET Standard выступает в качестве резервной. Она используется всегда, за исключением случаев, когда пакет NuGet предлагает реализацию под определенную платформу. Многоплатформенное нацеливание позволяет использовать условную компиляцию кода и вызывать API-интерфейсы определенных платформ.
 
-![Пакет NuGet с несколькими сборками](./media/cross-platform-targeting/nuget-package-multiple-assemblies.png "NuGet package with multiple assemblies")
+![Пакет NuGet с несколькими сборками](./media/cross-platform-targeting/nuget-package-multiple-assemblies.png "Пакет NuGet с несколькими сборками")
 
 **✔️ ДОПУСТИМО.** Помимо нацеливания на .NET Standard, рекомендуем также указать реализации .NET.
 
@@ -59,11 +57,42 @@ ms.locfileid: "53129718"
 >
 > При этом не стоит исключать .NET Standard. Вместо этого выдайте исключение из реализации и предложите использовать API, поддерживающие нужные возможности. Таким образом библиотека окажется универсальной и будет поддерживать активацию функций в среде выполнения.
 
-**❌ НЕЖЕЛАТЕЛЬНО** использовать многоплатформенное нацеливание, а также нацеливание с помощью .NET Standard, если исходный код будет одинаковым для всех платформ.
+```csharp
+public static class GpsLocation
+{
+    // This project uses multi-targeting to expose device-specific APIs to .NET Standard.
+    public static async Task<(double latitude, double longitude)> GetCoordinatesAsync()
+    {
+#if NET461
+        return CallDotNetFramworkApi();
+#elif WINDOWS_UWP
+        return CallUwpApi();
+#else
+        throw new PlatformNotSupportedException();
+#endif
+    }
+
+    // Allows callers to check without having to catch PlatformNotSupportedException
+    // or replicating the OS check.
+    public static bool IsSupported
+    {
+        get
+        {
+#if NET461 || WINDOWS_UWP
+            return true;
+#else
+            return false;
+#endif
+        }
+    }
+}
+```
+
+**❌ НЕЖЕЛАТЕЛЬНО.** Не используйте многоплатформенное нацеливание, а также нацеливание с помощью .NET Standard, если исходный код будет одинаковым для всех платформ.
 
 > NuGet будет автоматически использовать сборку .NET Standard. Нацеливание на отдельные реализации .NET увеличивает размер файла `*.nupkg`, не давая взамен никаких преимуществ.
 
-**✔️ ДОПУСТИМО.** Если вы предлагает целевую платформу `netstandard2.0`, попробуйте добавить целевую платформу для `net461`. 
+**✔️ ДОПУСТИМО.** Если вы предлагает целевую платформу `netstandard2.0`, попробуйте добавить целевую платформу для `net461`.
 
 > Некоторые проблемы с использованием .NET Standard 2.0 в .NET Framework были устраненные в .NET Framework версии 4.7.2. Можно улучшить работу разработчиков, которые по-прежнему используют .NET Framework версий 4.6.1 — 4.7.1, предложив им двоичный файл, скомпилированный для .NET Framework 4.6.1.
 

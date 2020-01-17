@@ -4,13 +4,13 @@ description: Сведения об использовании ML.NET при кл
 author: pkulikov
 ms.date: 11/15/2019
 ms.topic: tutorial
-ms.custom: mvc, seodec18, title-hack-0516
-ms.openlocfilehash: a7199ce2e5217eaadfa10893eb1fbb3417e9be20
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.custom: mvc, title-hack-0516
+ms.openlocfilehash: cc3a1ae984289eb01ad8fdee9741f3f9788196c7
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74204840"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716237"
 ---
 # <a name="tutorial-categorize-iris-flowers-using-k-means-clustering-with-mlnet"></a>Учебник. Категоризация цветов ириса с использованием кластеризации k-средних в ML.NET
 
@@ -118,9 +118,9 @@ ms.locfileid: "74204840"
 
 Класс <xref:Microsoft.ML.MLContext?displayProperty=nameWithType> представляет среду машинного обучения и предоставляет механизмы для ведения журнала и точек входа для загрузки данных, обучения модели, прогнозирования и других задач. Концептуально это сопоставимо с использованием `DbContext` в Entity Framework.
 
-## <a name="setup-data-loading"></a>Настройка загрузки данных
+## <a name="set-up-data-loading"></a>Настройка загрузки данных
 
-Добавьте следующий код к методу `Main` для настройки способа загрузки данных:
+Добавьте следующий код к методу `Main`, чтобы настроить способ загрузки данных:
 
 [!code-csharp[Create text loader](~/samples/machine-learning/tutorials/IrisFlowerClustering/Program.cs#CreateDataView)]
 

@@ -1,14 +1,14 @@
 ---
 title: Параметры конфигурации сборщика мусора
 description: Сведения о параметрах времени выполнения, определяющих, как сборщик мусора управляет памятью для приложений .NET Core.
-ms.date: 11/13/2019
+ms.date: 01/09/2020
 ms.topic: reference
-ms.openlocfilehash: e7f6877a3cbc7f28776a93b9126f4b64026487fa
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 24e5c47de781e7eed5f76d2c551cac2dce1e8f05
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74998819"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75900098"
 ---
 # <a name="run-time-configuration-options-for-garbage-collection"></a>Параметры конфигурации времени выполнения для сборки мусора
 
@@ -20,7 +20,7 @@ ms.locfileid: "74998819"
 >
 > - Эти параметры также могут динамически изменяться приложением во время его выполнения, поэтому любые заданные параметры времени выполнения могут быть переопределены.
 > - Некоторые параметры, такие как [уровень задержки](../../standard/garbage-collection/latency.md), обычно задаются только через API во время разработки. Такие параметры будут пропущены на этой странице.
-> - Для числовых значений используйте десятичную нотацию для параметров в файле *runtimeconfig.json* и шестнадцатеричную нотацию для параметров переменных среды.
+> - Для числовых значений используйте десятичную нотацию для параметров в файле *runtimeconfig.json* и шестнадцатеричную нотацию для параметров переменных среды. Шестнадцатеричные значения можно указать с помощью префикса "0x" или без него.
 
 ## <a name="flavors-of-garbage-collection"></a>Варианты сборки мусора
 
@@ -41,6 +41,18 @@ ms.locfileid: "74998819"
 | **Переменная среды** | `COMPlus_gcServer` | `0` — рабочая станция<br/>`1` — сервер | .NET Core 1.0 |
 | **app.config для .NET Framework** | [GCServer](../../framework/configure-apps/file-schema/runtime/gcserver-element.md) | `false` — рабочая станция<br/>`true` — сервер |  |
 
+Пример.
+
+```json
+{
+   "runtimeOptions": {
+      "configProperties": {
+         "System.GC.Server": true
+      }
+   }
+}
+```
+
 ### <a name="systemgcconcurrentcomplus_gcconcurrent"></a>System.GC.Concurrent/COMPlus_gcConcurrent
 
 - Указывает, включена ли фоновая (параллельная) сборка мусора.
@@ -52,6 +64,18 @@ ms.locfileid: "74998819"
 | **runtimeconfig.json** | `System.GC.Concurrent` | `true` —фоновая сборка мусора<br/>`false` — непараллельная сборка мусора | .NET Core 1.0 |
 | **Переменная среды** | `COMPlus_gcConcurrent` | `true` —фоновая сборка мусора<br/>`false` — непараллельная сборка мусора | .NET Core 1.0 |
 | **app.config для .NET Framework** | [gcConcurrent](../../framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) | `true` —фоновая сборка мусора<br/>`false` — непараллельная сборка мусора |  |
+
+Пример.
+
+```json
+{
+   "runtimeOptions": {
+      "configProperties": {
+         "System.GC.Concurrent": false
+      }
+   }
+}
+```
 
 ## <a name="manage-resource-usage"></a>Управление использованием ресурсов
 
@@ -71,23 +95,47 @@ ms.locfileid: "74998819"
 | - | - | - | - |
 | **runtimeconfig.json** | `System.GC.HeapCount` | *Десятичное значение* | .NET Core 3.0 |
 | **Переменная среды** | `COMPlus_GCHeapCount` | *Шестнадцатеричное значение* | .NET Core 3.0 |
-| **app.config для .NET Framework** | [GCHeapCount](../../framework/configure-apps/file-schema/runtime/gcheapcount-element.md) | *Десятичное значение* | 4.6.2 |
+| **app.config для .NET Framework** | [GCHeapCount](../../framework/configure-apps/file-schema/runtime/gcheapcount-element.md) | *Десятичное значение* | .NET Framework 4.6.2 |
+
+Пример.
+
+```json
+{
+   "runtimeOptions": {
+      "configProperties": {
+         "System.GC.HeapCount": 16
+      }
+   }
+}
+```
 
 > [!TIP]
-> Если вы задаете параметр в *runtimeconfig.json*, укажите десятичное значение. Если вы задаете параметр в виде переменной среды, укажите шестнадцатеричное значение. Например, чтобы ограничить число куч значением 16, для JSON-файла нужно указать 16, а для переменной среды — 10.
+> Если вы задаете параметр в *runtimeconfig.json*, укажите десятичное значение. Если вы задаете параметр в виде переменной среды, укажите шестнадцатеричное значение. Например, чтобы ограничить число куч значением 16, для JSON-файла нужно указать 16, а для переменной среды — 0x10 или 10.
 
 ### <a name="systemgcheapaffinitizemaskcomplus_gcheapaffinitizemask"></a>System.GC.HeapAffinitizeMask/COMPlus_GCHeapAffinitizeMask
 
 - Указывает конкретные процессоры, которые должны использоваться потоками сборщика мусора.
 - Если сходство процессоров отключено посредством задания значения `true` для `System.GC.NoAffinitize`, этот параметр игнорируется.
 - Применяется только к сборке мусора сервера.
-- Это значение представляет собой битовую маску, которая определяет доступные процессу процессоры. Например, десятичное значение 1023 (или шестнадцатеричное значение 3FF, если вы используете переменную среды), равно 0011 1111 1111 в двоичной нотации. При этом будут использоваться первые 10 процессоров. Чтобы указать следующие 10 процессоров, то есть процессоры 10–19, задайте десятичное значение 1047552 (или шестнадцатеричное значение FFC00), которое эквивалентно двоичному значению 1111 1111 1100 0000 0000.
+- Это значение представляет собой битовую маску, которая определяет доступные процессу процессоры. Например, десятичное значение 1023 (или шестнадцатеричное значение 0x3FF или 3FF, если вы используете переменную среды), равно 0011 1111 1111 в двоичной нотации. При этом будут использоваться первые 10 процессоров. Чтобы указать следующие 10 процессоров, то есть процессоры 10–19, задайте десятичное значение 1047552 (или шестнадцатеричное значение 0xFFC00 или FFC00), которое эквивалентно двоичному значению 1111 1111 1100 0000 0000.
 
 | | Имя параметра | Значения | Представленная версия |
 | - | - | - | - |
 | **runtimeconfig.json** | `System.GC.HeapAffinitizeMask` | *Десятичное значение* | .NET Core 3.0 |
 | **Переменная среды** | `COMPlus_GCHeapAffinitizeMask` | *Шестнадцатеричное значение* | .NET Core 3.0 |
-| **app.config для .NET Framework** | [GCHeapAffinitizeMask](../../framework/configure-apps/file-schema/runtime/gcheapaffinitizemask-element.md) | *Десятичное значение* | 4.6.2 |
+| **app.config для .NET Framework** | [GCHeapAffinitizeMask](../../framework/configure-apps/file-schema/runtime/gcheapaffinitizemask-element.md) | *Десятичное значение* | .NET Framework 4.6.2 |
+
+Пример.
+
+```json
+{
+   "runtimeOptions": {
+      "configProperties": {
+         "System.GC.HeapAffinitizeMask": 1023
+      }
+   }
+}
+```
 
 ### <a name="systemgcgcheapaffinitizerangescomplus_gcheapaffinitizeranges"></a>System.GC.GCHeapAffinitizeRanges/COMPlus_GCHeapAffinitizeRanges
 
@@ -102,6 +150,18 @@ ms.locfileid: "74998819"
 | - | - | - | - |
 | **runtimeconfig.json** | `System.GC.GCHeapAffinitizeRanges` | Разделенный запятыми список номеров процессоров или диапазонов номеров процессоров.<br/>Пример для Unix: "1-10,12,50-52,70"<br/>Пример для Windows: "0:1-10,0:12,1:50-52,1:70" | .NET Core 3.0 |
 | **Переменная среды** | `COMPlus_GCHeapAffinitizeRanges` | Разделенный запятыми список номеров процессоров или диапазонов номеров процессоров.<br/>Пример для Unix: "1-10,12,50-52,70"<br/>Пример для Windows: "0:1-10,0:12,1:50-52,1:70" | .NET Core 3.0 |
+
+Пример.
+
+```json
+{
+   "runtimeOptions": {
+      "configProperties": {
+         "System.GC.GCHeapAffinitizeRanges": "0:1-10,0:12,1:50-52,1:70"
+      }
+   }
+}
+```
 
 ### <a name="complus_gccpugroup"></a>COMPlus_GCCpuGroup
 
@@ -132,7 +192,19 @@ ms.locfileid: "74998819"
 | - | - | - | - |
 | **runtimeconfig.json** | `System.GC.NoAffinitize` | `false` — реализовать сходство<br/>`true` — не реализовывать сходство | .NET Core 3.0 |
 | **Переменная среды** | `COMPlus_GCNoAffinitize` | `0` — реализовать сходство<br/>`1` — не реализовывать сходство | .NET Core 3.0 |
-| **app.config для .NET Framework** | [GCNoAffinitize](../../framework/configure-apps/file-schema/runtime/gcnoaffinitize-element.md) | `false` — реализовать сходство<br/>`true` — не реализовывать сходство | 4.6.2 |
+| **app.config для .NET Framework** | [GCNoAffinitize](../../framework/configure-apps/file-schema/runtime/gcnoaffinitize-element.md) | `false` — реализовать сходство<br/>`true` — не реализовывать сходство | .NET Framework 4.6.2 |
+
+Пример.
+
+```json
+{
+   "runtimeOptions": {
+      "configProperties": {
+         "System.GC.NoAffinitize": true
+      }
+   }
+}
+```
 
 ### <a name="systemgcheaphardlimitcomplus_gcheaphardlimit"></a>System.GC.HeapHardLimit/COMPlus_GCHeapHardLimit
 
@@ -143,8 +215,20 @@ ms.locfileid: "74998819"
 | **runtimeconfig.json** | `System.GC.HeapHardLimit` | *Десятичное значение* | .NET Core 3.0 |
 | **Переменная среды** | `COMPlus_GCHeapHardLimit` | *Шестнадцатеричное значение* | .NET Core 3.0 |
 
+Пример.
+
+```json
+{
+   "runtimeOptions": {
+      "configProperties": {
+         "System.GC.HeapHardLimit": 209715200
+      }
+   }
+}
+```
+
 > [!TIP]
-> Если вы задаете параметр в *runtimeconfig.json*, укажите десятичное значение. Если вы задаете параметр в виде переменной среды, укажите шестнадцатеричное значение. Например, чтобы задать для куч жесткое ограничение в 80 000 байт, для JSON-файла нужно указать значение 80000, а для переменной среды — значение 13880.
+> Если вы задаете параметр в *runtimeconfig.json*, укажите десятичное значение. Если вы задаете параметр в виде переменной среды, укажите шестнадцатеричное значение. Например, чтобы задать для куч жесткое ограничение в 200 мебибайт (Миб), для JSON-файла нужно указать значение 209715200, а для переменной среды — значение 0xC800000 или C800000.
 
 ### <a name="systemgcheaphardlimitpercentcomplus_gcheaphardlimitpercent"></a>System.GC.HeapHardLimitPercent/COMPlus_GCHeapHardLimitPercent
 
@@ -155,8 +239,20 @@ ms.locfileid: "74998819"
 | **runtimeconfig.json** | `System.GC.HeapHardLimitPercent` | *Десятичное значение* | .NET Core 3.0 |
 | **Переменная среды** | `COMPlus_GCHeapHardLimitPercent` | *Шестнадцатеричное значение* | .NET Core 3.0 |
 
+Пример.
+
+```json
+{
+   "runtimeOptions": {
+      "configProperties": {
+         "System.GC.HeapHardLimitPercent": 30
+      }
+   }
+}
+```
+
 > [!TIP]
-> Если вы задаете параметр в *runtimeconfig.json*, укажите десятичное значение. Если вы задаете параметр в виде переменной среды, укажите шестнадцатеричное значение. Например, чтобы ограничить использование кучи значением 30 %, для JSON-файла нужно указать 30, а для переменной среды — 1E.
+> Если вы задаете параметр в *runtimeconfig.json*, укажите десятичное значение. Если вы задаете параметр в виде переменной среды, укажите шестнадцатеричное значение. Например, чтобы ограничить использование кучи значением 30 %, для JSON-файла нужно указать 30, а для переменной среды — 0x1E или 1E.
 
 ### <a name="systemgcretainvmcomplus_gcretainvm"></a>System.GC.RetainVM/COMPlus_GCRetainVM
 
@@ -167,6 +263,18 @@ ms.locfileid: "74998819"
 | - | - | - | - |
 | **runtimeconfig.json** | `System.GC.RetainVM` | `false` — возвращение операционной системе<br/>`true` — помещение в режим ожидания| .NET Core 1.0 |
 | **Переменная среды** | `COMPlus_GCRetainVM` | `0` — возвращение операционной системе<br/>`1` — помещение в режим ожидания | .NET Core 1.0 |
+
+Пример.
+
+```json
+{
+   "runtimeOptions": {
+      "configProperties": {
+         "System.GC.RetainVM": true
+      }
+   }
+}
+```
 
 ## <a name="large-pages"></a>Большие страницы
 
@@ -209,15 +317,27 @@ ms.locfileid: "74998819"
 | **Переменная среды** | `COMPlus_GCLOHThreshold` | *Шестнадцатеричное значение* | .NET Core 1.0 |
 | **app.config для .NET Framework** | [GCLOHThreshold](../../framework/configure-apps/file-schema/runtime/gclohthreshold-element.md) | *Десятичное значение* | .NET Framework 4.8 |
 
+Пример.
+
+```json
+{
+   "runtimeOptions": {
+      "configProperties": {
+         "System.GC.LOHThreshold": 120000
+      }
+   }
+}
+```
+
 > [!TIP]
-> Если вы задаете параметр в *runtimeconfig.json*, укажите десятичное значение. Если вы задаете параметр в виде переменной среды, укажите шестнадцатеричное значение. Например, чтобы задать порог размера в 120 000 байт, для JSON-файла нужно указать значение 120000, а для переменной среды — значение 1D4C0.
+> Если вы задаете параметр в *runtimeconfig.json*, укажите десятичное значение. Если вы задаете параметр в виде переменной среды, укажите шестнадцатеричное значение. Например, чтобы задать порог размера в 120 000 байт, для JSON-файла нужно указать значение 120000, а для переменной среды — значение 0x1D4C0 или 1D4C0.
 
 ## <a name="standalone-gc"></a>Автономный сборщик мусора
 
 ### <a name="complus_gcname"></a>COMPlus_GCName
 
 - Указывает путь к библиотеке, содержащей сборщик мусора, который среда выполнения намеревается загрузить.
-- Дополнительные сведения см. в статье [Проектирования загрузчика автономного сборщика мусора](https://github.com/dotnet/coreclr/blob/master/Documentation/design-docs/standalone-gc-loading.md).
+- Дополнительные сведения см. в статье [Проектирования загрузчика автономного сборщика мусора](https://github.com/dotnet/runtime/blob/master/docs/design/features/standalone-gc-loading.md).
 
 | | Имя параметра | Значения | Представленная версия |
 | - | - | - | - |

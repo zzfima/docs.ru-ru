@@ -2,12 +2,12 @@
 title: Сведения о .NET Core
 description: Дополнительные сведения о .NET Core.
 ms.date: 09/17/2019
-ms.openlocfilehash: 22530e861f6a13a6930b2fb35c91b4f7a95a17c7
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 12611c2cd0b872a683d070ff17dcf9f111578627
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74801949"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75900620"
 ---
 # <a name="about-net-core"></a>Сведения о .NET Core
 
@@ -57,8 +57,8 @@ ms.locfileid: "74801949"
 .NET Core состоит из перечисленных ниже компонентов.
 
 - [Среда выполнения .NET Core](https://github.com/dotnet/runtime/tree/master/src/coreclr) предоставляет систему типов, функции загрузки сборок, сборщик мусора, собственные функции взаимодействия и другие базовые службы. [Библиотеки платформы .NET Core](https://github.com/dotnet/runtime/tree/master/src/libraries) предоставляют примитивные типы данных, типы компоновки приложений и базовые служебные программы.
-- [Среда выполнения ASP.NET](https://github.com/aspnet/home) предоставляет платформу для создания современных облачных приложений, подключенных к Интернету: веб-приложений, приложений Интернета вещей, серверной части мобильных решений и многого другого.
-- [Средства .NET Core CLI](https://github.com/dotnet/cli) и компиляторы языков ([Roslyn](https://github.com/dotnet/roslyn) и [F#](https://github.com/microsoft/visualfsharp)) реализуют возможности разработки .NET Core.
+- [Среда выполнения ASP.NET Core](https://github.com/dotnet/aspnetcore) — это платформа для создания современных облачных приложений, подключенных к Интернету: веб-приложений, приложений Интернета вещей, серверной части мобильных решений и многого другого.
+- [Средства .NET Core CLI](https://github.com/dotnet/sdk) и компиляторы языков ([Roslyn](https://github.com/dotnet/roslyn) и [F#](https://github.com/microsoft/visualfsharp)) реализуют возможности разработки .NET Core.
 - [Средство dotnet](https://github.com/dotnet/core-setup) используется для запуска приложений .NET Core и инструментов командной строки. Оно выбирает среду выполнения, размещает ее, предоставляет политику загрузки сборок и запускает приложения и инструменты.
 
 Эти компоненты распределены следующим образом:
@@ -113,7 +113,7 @@ ms.locfileid: "74801949"
 
 ### <a name="comparison-with-mono"></a>Сравнение с Mono
 
-[Mono](https://www.mono-project.com/) — это первая кроссплатформенная реализация .NET. Изначально она создавалась как альтернатива платформе .NET Framework с [открытым кодом](https://github.com/mono/mono), но с ростом популярности устройств iOS и Android была переориентирована на мобильные устройства. Ее можно считать аналогом .NET Framework, предоставляемым сообществом. Команда проекта Mono использовала открытые [стандарты .NET](https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/dotnet-standards.md) (в частности, ECMA 335), опубликованные корпорацией Майкрософт, для предоставления совместимой реализации.
+[Mono](https://www.mono-project.com/) — это первая кроссплатформенная реализация .NET. Изначально она создавалась как альтернатива платформе .NET Framework с [открытым кодом](https://github.com/mono/mono), но с ростом популярности устройств iOS и Android была переориентирована на мобильные устройства. Ее можно считать аналогом .NET Framework, предоставляемым сообществом. Команда проекта Mono использовала открытые [стандарты .NET](https://github.com/dotnet/runtime/blob/master/docs/project/dotnet-standards.md) (в частности, ECMA 335), опубликованные корпорацией Майкрософт, для предоставления совместимой реализации.
 
 Основные различия между .NET Core и Mono
 

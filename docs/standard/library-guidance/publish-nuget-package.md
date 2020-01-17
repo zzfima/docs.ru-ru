@@ -1,15 +1,13 @@
 ---
 title: Публикация пакета NuGet
 description: Рекомендации по публикации .NET-библиотек в NuGet.
-author: jamesnk
-ms.author: mairaw
 ms.date: 10/02/2018
-ms.openlocfilehash: 9c8442b52ed2c54d2fb3368a2e886c5fc2b19148
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: e567fe3f7e00bf322cdd50786e50128961107469
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65640775"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706469"
 ---
 # <a name="publishing-a-nuget-package"></a>Публикация пакета NuGet
 

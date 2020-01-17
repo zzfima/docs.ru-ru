@@ -2,12 +2,12 @@
 title: Функциональное построение (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 57a82bcf-de03-4f1c-a0c8-9a76e989d542
-ms.openlocfilehash: 46cf4dbaf190182467cbbe1094070b2da0854c68
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: e55b0010a5f75eee8137d1e9bcefc573b5e07e72
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66486038"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635760"
 ---
 # <a name="functional-construction-linq-to-xml-c"></a>Функциональное построение (LINQ to XML) (C#)
 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] предоставляет эффективный способ создания XML-элементов, который называется *функциональным построением*. Функциональное построение — это возможность создать XML-дерево одной инструкцией.  
@@ -18,7 +18,7 @@ ms.locfileid: "66486038"
   
 - Конструктор <xref:System.Xml.Linq.XElement> принимает массив `params` типа <xref:System.Object>, так что этому конструктору можно передать любое количество объектов. Это позволяет создавать элементы со сложным содержимым.  
   
-- Если объект реализует интерфейс <xref:System.Collections.Generic.IEnumerable%601>, коллекция в этом объекте перечисляется и добавляются все элементы коллекции. Если коллекция содержит объекты <xref:System.Xml.Linq.XElement> или <xref:System.Xml.Linq.XAttribute>, каждый ее элемент добавляется отдельно. Это важно, так как позволяет передавать результаты запроса [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] конструктору.  
+- Если объект реализует интерфейс <xref:System.Collections.Generic.IEnumerable%601>, коллекция в этом объекте перечисляется и добавляются все элементы коллекции. Если коллекция содержит объекты <xref:System.Xml.Linq.XElement> или <xref:System.Xml.Linq.XAttribute>, каждый ее элемент добавляется отдельно. Это важно, так как позволяет передавать результаты запроса LINQ конструктору.  
   
  Эти возможности позволяют использовать код для создания XML-деревьев. Ниже представлен пример такого кода.  
   
@@ -38,7 +38,7 @@ XElement contacts =
     );  
 ```  
   
- Эти возможности позволяют также написать код, в котором используются результаты запросов [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] при создании дерева XML, как показано ниже.  
+ Эти возможности позволяют также написать код, в котором используются результаты запросов LINQ при создании дерева XML, как показано ниже.  
   
 ```csharp  
 XElement srcTree = new XElement("Root",  

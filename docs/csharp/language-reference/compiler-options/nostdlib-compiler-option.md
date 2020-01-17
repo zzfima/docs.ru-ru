@@ -1,6 +1,6 @@
 ---
 title: -nostdlib (параметры компилятора C#)
-ms.date: 07/20/2015
+ms.date: 12/20/2019
 f1_keywords:
 - /nostdlib
 helpviewer_keywords:
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -nostdlib compiler option [C#]
 - /nostdlib compiler option [C#]
 ms.assetid: ec197989-fa49-4725-a455-e06b551eb65f
-ms.openlocfilehash: 486539d7abdc3e65847a0bc0e228b1b20a2b2c37
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: ad8a2b5fc87dd7beee86d96331cf3961315be533
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69602685"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345081"
 ---
 # <a name="-nostdlib-c-compiler-options"></a>-nostdlib (параметры компилятора C#)
 
@@ -34,7 +34,7 @@ ms.locfileid: "69602685"
 ### <a name="to-set-this-compiler-option-in-visual-studio"></a>Установка параметра компилятора в Visual Studio
 
 > [!NOTE]
-> Следующие инструкции применимы только к Visual Studio 2015 (и более ранних версий). Свойство сборки **Не ссылаться на mscorlib.dll** не существует в Visual Studio 2017.
+> Следующие инструкции применимы только к Visual Studio 2015 (и более ранних версий). Свойство сборки **Не ссылаться на mscorlib.dll** отсутствует в более поздних версиях Visual Studio.
 
 1. Откройте страницу **свойств** для проекта.
 

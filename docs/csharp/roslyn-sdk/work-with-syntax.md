@@ -3,12 +3,12 @@ title: Использование модели синтаксиса пакета
 description: Данный обзор описывает типы, используемые для получения сведений о синтаксических узлах и управления ими.
 ms.date: 10/15/2017
 ms.custom: mvc
-ms.openlocfilehash: 940d2756ef7735ee96d38d0286f99fadf7b81dc6
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: fc1b1f5ae5ec985425c8d6aec49ef7f830ea9162
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774103"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740475"
 ---
 # <a name="work-with-syntax"></a>Работа с синтаксисом
 
@@ -65,13 +65,13 @@ ms.locfileid: "72774103"
 
 Каждому узлу, токену или элементу trivia известно его место в тексте исходного кода и число символов, из которых он состоит. Положение в тексте представлено в виде 32-разрядного целого числа, являющегося отсчитываемым от нуля индексом `char`. Объект <xref:Microsoft.CodeAnalysis.Text.TextSpan> обозначает начальное положение и количество символов, представленные в виде целых чисел. Если <xref:Microsoft.CodeAnalysis.Text.TextSpan> имеет нулевую длину, он обозначает расположение между двумя символами.
 
-У каждого узла есть два свойства <xref:Microsoft.CodeAnalysis.Text.TextSpan>: <xref:Microsoft.CodeAnalysis.SyntaxNode.Span*> и <xref:Microsoft.CodeAnalysis.SyntaxNode.FullSpan*>.
+У каждого узла есть два свойства <xref:Microsoft.CodeAnalysis.Text.TextSpan>: <xref:Microsoft.CodeAnalysis.SyntaxNode.Span%2A> и <xref:Microsoft.CodeAnalysis.SyntaxNode.FullSpan%2A>.
 
-Свойство <xref:Microsoft.CodeAnalysis.SyntaxNode.Span*> является текстовым диапазоном от начала первого токена в поддереве узла до конца последнего токена. Этот диапазон не включает в себя никакие начальные или конечные элементы trivia.
+Свойство <xref:Microsoft.CodeAnalysis.SyntaxNode.Span%2A> является текстовым диапазоном от начала первого токена в поддереве узла до конца последнего токена. Этот диапазон не включает в себя никакие начальные или конечные элементы trivia.
 
-Свойство <xref:Microsoft.CodeAnalysis.SyntaxNode.FullSpan*> является текстовым диапазоном, включающим в себя обычный диапазон узла, а также диапазон любых начальных или конечных элементов trivia.
+Свойство <xref:Microsoft.CodeAnalysis.SyntaxNode.FullSpan%2A> является текстовым диапазоном, включающим в себя обычный диапазон узла, а также диапазон любых начальных или конечных элементов trivia.
 
-Например:
+Пример:
 
 ``` csharp
       if (x > 3)
@@ -85,11 +85,11 @@ ms.locfileid: "72774103"
 
 ## <a name="kinds"></a>Типы
 
-Каждый узел, токен или элемент trivia имеет свойство <xref:Microsoft.CodeAnalysis.SyntaxNode.RawKind?displayProperty=nameWithType> типа <xref:System.Int32?displayProperty=nameWithType>, определяющее конкретный представленный элемент синтаксиса. Это значение можно привести к перечислению конкретного языка. Каждый язык, C# или VB имеет одно перечисление `SyntaxKind` (<xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind?displayProperty=nameWithType> и <xref:Microsoft.CodeAnalysis.VisualBasic.SyntaxKind?displayProperty=nameWithType>, соответственно), содержащее все возможные узлы, токены и элементы trivia в грамматике. Это преобразование может выполняться автоматически с помощью методов расширения <xref:Microsoft.CodeAnalysis.CSharp.CSharpExtensions.Kind*?displayProperty=nameWithType> или <xref:Microsoft.CodeAnalysis.VisualBasic.VisualBasicExtensions.Kind*?displayProperty=nameWithType>.
+Каждый узел, токен или элемент trivia имеет свойство <xref:Microsoft.CodeAnalysis.SyntaxNode.RawKind?displayProperty=nameWithType> типа <xref:System.Int32?displayProperty=nameWithType>, определяющее конкретный представленный элемент синтаксиса. Это значение можно привести к перечислению определенного языка. Каждый язык, C# или Visual Basic имеет одно перечисление `SyntaxKind` (<xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind?displayProperty=nameWithType> и <xref:Microsoft.CodeAnalysis.VisualBasic.SyntaxKind?displayProperty=nameWithType> соответственно), содержащее все возможные узлы, токены и другие элементы грамматики. Это преобразование может выполняться автоматически с помощью методов расширения <xref:Microsoft.CodeAnalysis.CSharp.CSharpExtensions.Kind%2A?displayProperty=nameWithType> или <xref:Microsoft.CodeAnalysis.VisualBasic.VisualBasicExtensions.Kind%2A?displayProperty=nameWithType>.
 
 Свойство <xref:Microsoft.CodeAnalysis.SyntaxToken.RawKind> позволяет легко устранить неоднозначность типов синтаксических узлов, которые используют один класс узлов. Для токенов и элементов trivia это свойство является единственным способом отличить один тип элемента от другого.
 
-Например, один класс <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax> имеет дочерние элементы <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.Left>, <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.OperatorToken> и <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.Right>. Свойство <xref:Microsoft.CodeAnalysis.CSharp.CSharpExtensions.Kind*> позволяет определить, имеет ли этот синтаксический узел тип <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind.AddExpression>, <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind.SubtractExpression> или <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind.MultiplyExpression>.
+Например, один класс <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax> имеет дочерние элементы <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.Left>, <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.OperatorToken> и <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.Right>. Свойство <xref:Microsoft.CodeAnalysis.CSharp.CSharpExtensions.Kind%2A> позволяет определить, имеет ли этот синтаксический узел тип <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind.AddExpression>, <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind.SubtractExpression> или <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind.MultiplyExpression>.
 
 ## <a name="errors"></a>Ошибки
 

@@ -3,30 +3,30 @@ title: Технологии .NET Framework, недоступные в .NET Core
 description: Узнайте о технологиях .NET Framework, недоступных в .NET Core
 author: cartermp
 ms.date: 04/30/2019
-ms.openlocfilehash: 47f93268c44682afeba87cde17fe9c39811b37bf
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: d474b694b80b2f0e74dd2916106016802f7e0c68
+ms.sourcegitcommit: cbdc0f4fd39172b5191a35200c33d5030774463c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739712"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75777301"
 ---
 # <a name="net-framework-technologies-unavailable-on-net-core"></a>Технологии .NET Framework, недоступные в .NET Core
 
 Некоторые технологии для библиотек .NET Framework недоступны для использования с .NET Core, например домены приложений, удаленное взаимодействие, управление доступом для кода (CAS), прозрачность безопасности и System.EnterpriseServices. Если в библиотеках применяются такие технологии, рассмотрите альтернативные подходы, описанные ниже. Дополнительные сведения о совместимости API см. в статье [Критические изменения .NET Core](../compatibility/breaking-changes.md).
 
-Тот факт, что API или технология сейчас не реализуются, не означает, что они намеренно не поддерживаются. Сначала поищите .NET Core в репозиториях GitHub, чтобы узнать, не существует ли эта проблема намеренно. Если вы не можете ее найти, сообщите о проблеме в [проблемах репозитория dotnet/corefx](https://github.com/dotnet/corefx/issues) в GitHub, чтобы запросить определенные API и технологии. К [запросам на перенос кода на этой странице](https://github.com/dotnet/corefx/labels/port-to-core) добавляется метка `port-to-core`.
+Тот факт, что API или технология сейчас не реализуются, не означает, что они намеренно не поддерживаются. Выполните поиск в репозиториях GitHub по .NET Core, чтобы выяснить, не является ли конкретная проблема, с которой вы столкнулись, преднамеренной. Если вы не нашли такого признака, отправьте запрос в [репозиторий dotnet/runtime](https://github.com/dotnet/runtime/issues), чтобы запросить конкретные API и функции. Проблемы при попытке переноса помечены меткой [port-to-core](https://github.com/dotnet/runtime/labels/port-to-core).
 
 ## <a name="appdomains"></a>Домены приложений
 
-Домены приложений позволяют изолировать приложения друг от друга. Для этих доменов требуется поддержка среды выполнения и, как правило, они довольно дорого стоят. Создание дополнительных доменов приложений не поддерживается. И мы не планируем добавлять эту возможность в будущем. Вместо нее для изоляции кода мы рекомендуем использовать отдельные процессы или контейнеры. Для динамической загрузки сборок рекомендуется использовать новый класс <xref:System.Runtime.Loader.AssemblyLoadContext>.
+Домены приложений позволяют изолировать приложения друг от друга. Для этих доменов требуется поддержка среды выполнения и, как правило, они довольно дорого стоят. Создание дополнительных доменов приложений не поддерживается, и в будущем эта возможность не планируется. Для изоляции кода используйте в качестве альтернативы отдельные процессы или контейнеры. Для динамической загрузки сборок используйте класс <xref:System.Runtime.Loader.AssemblyLoadContext>.
 
-Чтобы упростить перенос кода из .NET Framework, .NET Core предоставляет некоторые рабочие области API <xref:System.AppDomain>. Некоторые API-интерфейсы работают без изменений (например, <xref:System.AppDomain.UnhandledException?displayProperty=nameWithType>), одни элементы не выполняют никаких действий (например, <xref:System.AppDomain.SetCachePath%2A>), а другие создают исключение <xref:System.PlatformNotSupportedException> (например, <xref:System.AppDomain.CreateDomain%2A>). Просмотрите типы, используемые для [эталонного исходного кода `System.AppDomain`](https://github.com/dotnet/corefx/blob/master/src/Common/src/CoreLib/System/AppDomain.cs) в [репозитории DotNet и CoreFX на сайте GitHub](https://github.com/dotnet/corefx), и выберите ветвь, которая соответствует реализованной версии.
+Чтобы упростить перенос кода из .NET Framework, .NET Core предоставляет некоторые рабочие области API <xref:System.AppDomain>. Некоторые API-интерфейсы работают без изменений (например, <xref:System.AppDomain.UnhandledException?displayProperty=nameWithType>), одни элементы не выполняют никаких действий (например, <xref:System.AppDomain.SetCachePath%2A>), а другие создают исключение <xref:System.PlatformNotSupportedException> (например, <xref:System.AppDomain.CreateDomain%2A>). Проверьте типы, используемые для [`System.AppDomain` источника ссылки](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Private.CoreLib/src/System/AppDomain.cs) в [репозитории GitHub dotnet/runtime](https://github.com/dotnet/runtime). Убедитесь, что выбрана ветвь, соответствующая реализованной версии.
 
 ## <a name="remoting"></a>Удаленное взаимодействие
 
 Архитектура удаленного взаимодействия .NET считается проблемной. Она используется для взаимодействия доменов приложений, которое больше не поддерживается. Кроме того, для удаленного взаимодействия требуется поддержка среды выполнения, обслуживание которой дорого обходится. Поэтому в .NET Core удаленное взаимодействие .NET не поддерживается, и его поддержка не планируется в будущем.
 
-Для взаимодействия между процессами вместо удаленного взаимодействия можно применять механизмы межпроцессного взаимодействия (IPC), например пространство имен <xref:System.IO.Pipes> или класс <xref:System.IO.MemoryMappedFiles.MemoryMappedFile>.
+Для взаимодействия между процессами вместо удаленного взаимодействия можно применять механизмы межпроцессного взаимодействия (IPC), например класс <xref:System.IO.Pipes> или <xref:System.IO.MemoryMappedFiles.MemoryMappedFile>.
 
 Для взаимодействия между компьютерами в качестве альтернативы можно использовать сетевое решение, желательно протокол на основе обычного текста с низкими издержками, например HTTP. Еще один вариант — [веб-сервер Kestrel](https://docs.microsoft.com/aspnet/core/fundamentals/servers/kestrel), используемый платформой ASP.NET Core. Кроме того, для сценариев взаимодействия между компьютерами по сети можно использовать пространство имен <xref:System.Net.Sockets>. Другие варианты см. в разделе об обмене сообщениями статьи [.NET Open Source Developer Projects ](https://github.com/Microsoft/dotnet/blob/master/dotnet-developer-projects.md#messaging) (Проекты разработки с открытым кодом в .NET).
 
@@ -38,7 +38,7 @@ ms.locfileid: "73739712"
 
 ## <a name="security-transparency"></a>Прозрачность безопасности
 
-Аналогично CAS, прозрачность безопасности позволяет декларативно отделить изолированный код от кода, критически важного с точки зрения безопасности, но [больше не поддерживается как ограничение безопасности](../../framework/misc/security-transparent-code.md). Эта функция часто используется в Silverlight. 
+Аналогично CAS, прозрачность безопасности позволяет декларативно отделить изолированный код от кода, критически важного с точки зрения безопасности, но [больше не поддерживается как ограничение безопасности](../../framework/misc/security-transparent-code.md). Эта функция часто используется в Silverlight.
 
 Чтобы свести к минимуму требуемый набор прав, применяйте ограничения безопасности, предусмотренные в операционной системе, например виртуализацию, контейнеры или учетные записи пользователей.
 
@@ -46,5 +46,7 @@ ms.locfileid: "73739712"
 
 Платформа .NET Core не поддерживает System.EnterpriseServices (COM+).
 
->[!div class="step-by-step"]
->[Вперед](third-party-deps.md)
+## <a name="next-steps"></a>Следующие шаги
+
+>[!div class="nextstepaction"]
+>[Анализ зависимостей](third-party-deps.md)
