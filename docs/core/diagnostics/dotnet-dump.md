@@ -1,15 +1,13 @@
 ---
 title: dotnet-dump (.NET Core)
 description: Установка и использование программы командной строки dotnet-dump.
-author: sdmaclea
-ms.author: stmaclea
 ms.date: 10/14/2019
-ms.openlocfilehash: bb4f7827f898431c55603b070f5b7a23fe44cba5
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: dcd5dd42620010c1a9b6dffd3365fc1b777c0eeb
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73973457"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740772"
 ---
 # <a name="dump-collection-and-analysis-utility-dotnet-dump"></a>Программа для сбора и анализа дампов (`dotnet-dump`)
 
@@ -20,7 +18,7 @@ ms.locfileid: "73973457"
 
 ## <a name="installing-dotnet-dump"></a>Установка `dotnet-dump`
 
-Чтобы установить последнюю версию `dotnet-dump` [пакета NuGet](https://www.nuget.org/packages/dotnet-dump), используйте команду [dotnet tool install](../tools/dotnet-tool-install.md).
+Чтобы установить последнюю версию [пакета NuGet](https://www.nuget.org/packages/dotnet-dump) `dotnet-dump`, используйте команду [dotnet tool install](../tools/dotnet-tool-install.md).
 
 ```dotnetcli
 dotnet tool install -g dotnet-dump
@@ -32,7 +30,7 @@ dotnet tool install -g dotnet-dump
 dotnet-dump [-h|--help] [--version] <command>
 ```
 
-## <a name="description"></a>ОПИСАНИЕ
+## <a name="description"></a>Описание
 
 `dotnet-dump` — это средство сбора и анализа дампов в Windows и Linux, которое не задействует собственный отладчик системы (как, например, `lldb` в Linux). Это средство имеет важное значение на таких платформах, как Alpine Linux, где отсутствует полноценно работающее средство `lldb`. Средство `dotnet-dump` позволяет выполнять команды SOS для анализа сбоев и сборщика мусора (GC), но не поддерживает некоторые функции, как, например, отображение собственных кадров стека, потому что не является встроенным отладчиком.
 
@@ -160,7 +158,7 @@ dotnet-dump analyze <dump_path> [-h|--help] [-c|--command]
 
 ## <a name="using-dotnet-dump"></a>Использование `dotnet-dump`
 
-Первым шагом является сборка дампа. Этот шаг можно пропустить, если уже создан основной дамп. Основные дампы могут создавать как операционная система, так и встроенная в среду выполнения .NET Core [функция создания дампа](https://github.com/dotnet/coreclr/blob/master/Documentation/botr/xplat-minidump-generation.md#configurationpolicy).
+Первым шагом является сборка дампа. Этот шаг можно пропустить, если уже создан основной дамп. Основные дампы могут создавать как операционная система, так и встроенная в среду выполнения .NET Core [функция создания дампа](https://github.com/dotnet/runtime/blob/master/docs/design/coreclr/botr/xplat-minidump-generation.md).
 
 ```console
 $ dotnet-dump collect --process-id 1902

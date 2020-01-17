@@ -1,15 +1,13 @@
 ---
 title: Ведение журнала и трассировка (.NET Core)
 description: Общие сведения о ведении журнала и трассировке в .NET Core.
-author: sdmaclea
-ms.author: stmaclea
 ms.date: 08/05/2019
-ms.openlocfilehash: 46e64a7f60b88c26ceef9ac817be885bfa180c8e
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 392b88c9ea3c31c919a605ac0a5c886f7d63f79a
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "72303656"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714414"
 ---
 # <a name="net-core-logging-and-tracing"></a>Ведение журнала и трассировка в .NET Core
 
@@ -31,7 +29,7 @@ ms.locfileid: "72303656"
 
 Классы <xref:System.Console?displayProperty=nameWithType>, <xref:System.Diagnostics.Trace?displayProperty=nameWithType> и <xref:System.Diagnostics.Debug?displayProperty=nameWithType> предоставляют похожие API-интерфейсы стиля печати, удобные для ведения журнала.
 
-Вы можете выбрать любой из этих API стиля печати. Ниже описаны основные различия.
+Вы можете выбрать любой из этих API стиля печати. Основные отличия указаны далее.
 
 - <xref:System.Console?displayProperty=nameWithType>
   - Всегда включен и всегда записывает данные в консоль.
@@ -70,7 +68,7 @@ ms.locfileid: "72303656"
   - Предоставляет однозначный метод идентификации сообщений журнала, создаваемых по определенному действию или транзакции. Этот объект можно использовать для согласования журналов из нескольких служб.
 
 - <xref:System.Diagnostics.EventLog?displayProperty=nameWithType>
-  - Только Windows.
+  - Только для Windows.
   - Сохраняет сообщения в журнал событий Windows.
   - Системные администраторы ожидают, что сообщения об ошибках, приводящих к сбоям приложений, будут отображаться в журнале событий Windows.
 

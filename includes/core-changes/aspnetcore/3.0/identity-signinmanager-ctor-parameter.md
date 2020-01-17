@@ -1,14 +1,14 @@
 ---
-ms.openlocfilehash: 56b394c4698f60baeb70d3c17d1abee5d867deb7
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 6f8e6d2786d20e055c9bef63891db4d6f88bc64b
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72394083"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901992"
 ---
-### <a name="identity-signinmanager-constructor-accepts-new-parameter"></a>Удостоверение: конструктор SignInManager принимает новый параметр
+### <a name="identity-signinmanager-constructor-accepts-new-parameter"></a>Удостоверение. конструктор SignInManager принимает новый параметр
 
-Начиная с ASP.NET Core 3.0 в конструктор `SignInManager` был добавлен новый параметр `IUserConfirmation<TUser>`. Подробную информацию см. на странице [aspnet/AspNetCore#8356](https://github.com/aspnet/AspNetCore/issues/8356).
+Начиная с ASP.NET Core 3.0 в конструктор `SignInManager` был добавлен новый параметр `IUserConfirmation<TUser>`. Подробную информацию см. на странице [dotnet/aspnetcore#8356](https://github.com/dotnet/aspnetcore/issues/8356).
 
 #### <a name="version-introduced"></a>Представленная версия
 
@@ -18,7 +18,7 @@ ms.locfileid: "72394083"
 
 Изменение позволит добавить поддержку новых потоков сообщений электронной почты и подтверждений в удостоверении.
 
-#### <a name="recommended-action"></a>Рекомендуемое действие
+#### <a name="recommended-action"></a>Рекомендованное действие
 
 При создании `SignInManager` вручную предоставьте реализацию `IUserConfirmation` или воспользуйтесь реализацией из внедрения зависимостей.
 

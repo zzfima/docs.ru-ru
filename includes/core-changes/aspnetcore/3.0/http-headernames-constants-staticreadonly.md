@@ -1,16 +1,16 @@
 ---
-ms.openlocfilehash: e0d0a680915f14c2d33f1864ad5ad05aff3dde5f
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 31e7f84a787d255a474f4c2b1fa3068903dbed52
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72394079"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901754"
 ---
 ### <a name="http-headernames-constants-changed-to-static-readonly"></a>HTTP. Изменение констант HeaderNames изменены на статические только для чтения
 
 Начиная с ASP.NET Core 3.0 (предварительная версия 5), поля в <xref:Microsoft.Net.Http.Headers.HeaderNames?displayProperty=fullName> изменились с `const` на `static readonly`.
 
-Обсуждение этого вопроса см. на странице [aspnet/AspNetCore#9514](https://github.com/aspnet/AspNetCore/issues/9514).
+Обсуждение этого вопроса см. на странице [dotnet/aspnetcore#9514](https://github.com/dotnet/aspnetcore/issues/9514).
 
 #### <a name="version-introduced"></a>Представленная версия
 
@@ -31,7 +31,7 @@ ms.locfileid: "72394079"
 * предотвращает встраивание значений между границами сборки, что позволяет корректировать значения по мере необходимости.
 * обеспечивает более быстрые проверки равенства ссылок.
 
-#### <a name="recommended-action"></a>Рекомендуемое действие
+#### <a name="recommended-action"></a>Рекомендованное действие
 
 Выполните перекомпиляцию для версии 3.0. Исходный код, использующий эти поля следующими способами, больше не поддерживает эту возможность:
 

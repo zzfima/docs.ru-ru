@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 04e5ca41374fc333a31f0422bc2e89f54b3cb049
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 82103d82a6f68c62f3532608718bc71b0ba126bf
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72394294"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901910"
 ---
 ### <a name="hosting-aspnetcoremodule-v1-removed-from-windows-hosting-bundle"></a>Размещение. Модуль AspNetCoreModule версии 1 не входит в пакет размещения Windows
 
@@ -12,7 +12,7 @@ ms.locfileid: "72394294"
 
 ANCM версии 2 обеспечивает обратную совместимость с ANCM OutOfProcess и рекомендуется для использования с приложениями ASP.NET Core 3.0.
 
-Обсуждение этого вопроса см. на странице [aspnet/AspNetCore#7095](https://github.com/aspnet/AspNetCore/issues/7095).
+Обсуждение этого вопроса см. на странице [dotnet/aspnetcore#7095](https://github.com/dotnet/aspnetcore/issues/7095).
 
 #### <a name="version-introduced"></a>Представленная версия
 
@@ -30,7 +30,7 @@ ANCM версии 1 не входит в состав пакета размещ�
 
 ANCM версии 2 обеспечивает обратную совместимость с ANCM OutOfProcess и рекомендуется для использования с приложениями ASP.NET Core 3.0.
 
-#### <a name="recommended-action"></a>Рекомендуемое действие
+#### <a name="recommended-action"></a>Рекомендованное действие
 
 Используйте ANCM версии 2 с приложениями ASP.NET Core 3.0.
 
@@ -47,7 +47,7 @@ ASP.NET Core
 
 #### <a name="affected-apis"></a>Затронутые API
 
-Нет
+Отсутствуют
 
 <!-- 
 

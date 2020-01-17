@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: acef6d7177ee5ad7e18dc8ba1e383d6f76263623
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: f202b39f1a45f740625827be25e72df0e403d605
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72394444"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901896"
 ---
 ### <a name="signalr-javascript-client-package-name-changed"></a>SignalR. Имя пакета клиента JavaScript изменено
 
@@ -12,7 +12,7 @@ ms.locfileid: "72394444"
 
 Чтобы отреагировать на это изменение, измените ссылки в файлах *package.JSON*, а также инструкциях `require` и `import` ECMAScript. Это переименование не повлияет на API.
 
-Обсуждение этого вопроса см. на странице [aspnet/AspNetCore#11637](https://github.com/aspnet/AspNetCore/issues/11637).
+Обсуждение этого вопроса см. на странице [dotnet/aspnetcore#11637](https://github.com/dotnet/aspnetcore/issues/11637).
 
 #### <a name="version-introduced"></a>Представленная версия
 
@@ -30,7 +30,7 @@ ms.locfileid: "72394444"
 
 Изменение имени отражает тот факт, что SignalR используется не только в приложениях ASP.NET Core благодаря поддержке Службы Azure SignalR.
 
-#### <a name="recommended-action"></a>Рекомендуемое действие
+#### <a name="recommended-action"></a>Рекомендованное действие
 
 Переключитесь на новый пакет `@microsoft/signalr`.
 
@@ -40,7 +40,7 @@ ASP.NET Core
 
 #### <a name="affected-apis"></a>Затронутые API
 
-Нет
+Отсутствуют
 
 <!-- 
 

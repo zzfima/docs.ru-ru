@@ -1,15 +1,15 @@
 ---
-title: Практическое руководство. Чтение и запись закодированного документа (C#)
+title: Чтение и запись закодированного документа (C#)
 ms.date: 07/20/2015
 ms.assetid: 84f64e71-39a6-42c6-ad68-f052bb158a03
-ms.openlocfilehash: a611fe064401c0da80d76ef8c64cd58d9b0fb5d6
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: fa28c26845a0c6019943e0532ea0692a6dffd5a9
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253474"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347667"
 ---
-# <a name="how-to-read-and-write-an-encoded-document-c"></a>Практическое руководство. Чтение и запись закодированного документа (C#)
+# <a name="how-to-read-and-write-an-encoded-document-c"></a>Чтение и запись закодированного документа (C#)
 Чтобы создать закодированный XML-документ, следует добавить объект <xref:System.Xml.Linq.XDeclaration> в XML-дерево, задав требуемое имя кодовой страницы для кодировки.  
   
  Любое значение, возвращенное методом <xref:System.Text.Encoding.WebName%2A>, является допустимым.  

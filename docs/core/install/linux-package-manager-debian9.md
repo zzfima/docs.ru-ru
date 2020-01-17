@@ -4,12 +4,12 @@ description: Используйте диспетчер пакетов для у�
 author: thraka
 ms.author: adegeo
 ms.date: 12/04/2019
-ms.openlocfilehash: b8b6a3039efcc2fbd15e0c3948984086c619bd44
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 7a9d4524661e1230af7d1d50a4d8a60ad7774a68
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74998969"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740706"
 ---
 # <a name="debian-9-package-manager---install-net-core"></a>Диспетчер пакетов Debian 9 — установка .NET Core
 

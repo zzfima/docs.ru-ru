@@ -1,16 +1,16 @@
 ---
-ms.openlocfilehash: 74b989a2413d2192f7cf5208e400eaed879ea096
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 58dbb73902c0226fa81acf1a70de2160f406f6c6
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73198545"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901907"
 ---
-### <a name="authorization-iauthorizationpolicyprovider-implementations-require-new-method"></a>Авторизация: Требование нового метода для реализаций IAuthorizationPolicyProvider
+### <a name="authorization-iauthorizationpolicyprovider-implementations-require-new-method"></a>Авторизация. Требование нового метода для реализаций IAuthorizationPolicyProvider
 
 В ASP.NET Core 3.0 в `IAuthorizationPolicyProvider` был добавлен новый метод `GetFallbackPolicyAsync`. Эта политика отката используется ПО промежуточного слоя для авторизации, если не указана другая политика.
 
-Подробную информацию см. на странице [aspnet/AspNetCore#9759](https://github.com/aspnet/AspNetCore/pull/9759).
+Подробную информацию см. на странице [dotnet/aspnetcore#9759](https://github.com/dotnet/aspnetcore/pull/9759).
 
 #### <a name="version-introduced"></a>Представленная версия
 
@@ -28,7 +28,7 @@ ms.locfileid: "73198545"
 
 Новый метод требуется для использования нового ПО `AuthorizationMiddleware`, если политика не указана.
 
-#### <a name="recommended-action"></a>Рекомендуемое действие
+#### <a name="recommended-action"></a>Рекомендованное действие
 
 Добавьте метод `GetFallbackPolicyAsync` в реализации `IAuthorizationPolicyProvider`.
 

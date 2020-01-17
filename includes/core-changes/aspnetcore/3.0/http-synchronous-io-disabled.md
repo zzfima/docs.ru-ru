@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: c861d61cbbe8075db4b17a702e863336ea621f2b
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 53d2c989120c92f4e2d18f50ce4b364bd4c9b604
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73198546"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901989"
 ---
 ### <a name="http-synchronous-io-disabled-in-all-servers"></a>HTTP. Отключение синхронного ввода-вывода на всех серверах
 
@@ -29,7 +29,7 @@ ms.locfileid: "73198546"
 
 Каждый сервер имеет параметр `AllowSynchronousIO`, который управляет этим поведением, и по умолчанию для всех из них используется значение `false`.
 
-Также в качестве временного решения можно переопределять это поведение для каждого запроса. Например:
+Также в качестве временного решения можно переопределять это поведение для каждого запроса. Пример:
 
 ```csharp
 var syncIOFeature = HttpContext.Features.Get<IHttpBodyControlFeature>();
@@ -41,7 +41,7 @@ if (syncIOFeature != null)
 
 Если у вас возникают проблемы с `TextWriter` или другим потоком, который вызывает синхронный API в `Dispose`, обращайтесь вместо него к новому API-интерфейсу `DisposeAsync`.
 
-Обсуждение этого вопроса см. на странице [aspnet/AspNetCore#7644](https://github.com/aspnet/AspNetCore/issues/7644).
+Обсуждение этого вопроса см. на странице [dotnet/aspnetcore#7644](https://github.com/dotnet/aspnetcore/issues/7644).
 
 #### <a name="version-introduced"></a>Представленная версия
 
@@ -65,7 +65,7 @@ if (syncIOFeature != null)
 
 Эти синхронные API-интерфейсы долго были причиной нехватки потоков и зависания приложений. Начиная с ASP.NET Core 3.0 предварительной версии 3, синхронные операции сервера по умолчанию отключены.
 
-#### <a name="recommended-action"></a>Рекомендуемое действие
+#### <a name="recommended-action"></a>Рекомендованное действие
 
 Используйте асинхронные версии этих методов. Также в качестве временного решения можно переопределять это поведение для каждого запроса.
 
