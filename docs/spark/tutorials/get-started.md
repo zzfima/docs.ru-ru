@@ -4,145 +4,145 @@ description: Узнайте, как запустить приложение .NET
 ms.date: 11/04/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 1b736e078eea40e399882c0df020062b6aa758ad
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 934b91a258937a976804109c71df232b8ce6d6d7
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740528"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337592"
 ---
-# <a name="tutorial-get-started-with-net-for-apache-spark"></a><span data-ttu-id="2a308-103">Учебник. Начало работы с .NET для Apache Spark</span><span class="sxs-lookup"><span data-stu-id="2a308-103">Tutorial: Get started with .NET for Apache Spark</span></span>
+# <a name="tutorial-get-started-with-net-for-apache-spark"></a><span data-ttu-id="2e563-103">Учебник. Начало работы с .NET для Apache Spark</span><span class="sxs-lookup"><span data-stu-id="2e563-103">Tutorial: Get started with .NET for Apache Spark</span></span>
 
-<span data-ttu-id="2a308-104">В этом руководстве описывается, как запустить приложение .NET для Apache Spark с помощью .NET Core в Windows.</span><span class="sxs-lookup"><span data-stu-id="2a308-104">This tutorial teaches you how to run a .NET for Apache Spark app using .NET Core on Windows.</span></span>
+<span data-ttu-id="2e563-104">В этом руководстве описывается, как запустить приложение .NET для Apache Spark с помощью .NET Core в Windows.</span><span class="sxs-lookup"><span data-stu-id="2e563-104">This tutorial teaches you how to run a .NET for Apache Spark app using .NET Core on Windows.</span></span>
 
-<span data-ttu-id="2a308-105">В этом руководстве вы узнаете, как:</span><span class="sxs-lookup"><span data-stu-id="2a308-105">In this tutorial, you learn how to:</span></span>
+<span data-ttu-id="2e563-105">В этом руководстве вы узнаете, как:</span><span class="sxs-lookup"><span data-stu-id="2e563-105">In this tutorial, you learn how to:</span></span>
 
 > [!div class="checklist"]
 >
-> * <span data-ttu-id="2a308-106">Подготовка среды Windows для .NET для Apache Spark</span><span class="sxs-lookup"><span data-stu-id="2a308-106">Prepare your Windows environment for .NET for Apache Spark</span></span>
-> * <span data-ttu-id="2a308-107">написать свое первое приложение .NET для Apache Spark;</span><span class="sxs-lookup"><span data-stu-id="2a308-107">Write your first .NET for Apache Spark application</span></span>
-> * <span data-ttu-id="2a308-108">скомпилировать и запустить простое приложение .NET для Apache Spark.</span><span class="sxs-lookup"><span data-stu-id="2a308-108">Build and run your simple .NET for Apache Spark application</span></span>
+> * <span data-ttu-id="2e563-106">Подготовка среды Windows для .NET для Apache Spark</span><span class="sxs-lookup"><span data-stu-id="2e563-106">Prepare your Windows environment for .NET for Apache Spark</span></span>
+> * <span data-ttu-id="2e563-107">написать свое первое приложение .NET для Apache Spark;</span><span class="sxs-lookup"><span data-stu-id="2e563-107">Write your first .NET for Apache Spark application</span></span>
+> * <span data-ttu-id="2e563-108">скомпилировать и запустить простое приложение .NET для Apache Spark.</span><span class="sxs-lookup"><span data-stu-id="2e563-108">Build and run your simple .NET for Apache Spark application</span></span>
 
-## <a name="prepare-your-environment"></a><span data-ttu-id="2a308-109">Подготовка среды</span><span class="sxs-lookup"><span data-stu-id="2a308-109">Prepare your environment</span></span>
+## <a name="prepare-your-environment"></a><span data-ttu-id="2e563-109">Подготовка среды</span><span class="sxs-lookup"><span data-stu-id="2e563-109">Prepare your environment</span></span>
 
-<span data-ttu-id="2a308-110">Прежде чем приступать к написанию приложения, нужно настроить некоторые необходимые зависимости.</span><span class="sxs-lookup"><span data-stu-id="2a308-110">Before you begin writing your app, you need to setup some prerequisite dependencies.</span></span> <span data-ttu-id="2a308-111">Если вы можете выполнить `dotnet`, `java`, `mvn`, `spark-shell` из среды командной строки, то ваша среда уже подготовлена, и вы можете перейти к следующему разделу.</span><span class="sxs-lookup"><span data-stu-id="2a308-111">If you can run `dotnet`, `java`, `mvn`, `spark-shell` from your command line environment, then your environment is already prepared and you can skip to the next section.</span></span> <span data-ttu-id="2a308-112">Если эти команды или хотя бы одну из них выполнить не получается, сделайте следующее.</span><span class="sxs-lookup"><span data-stu-id="2a308-112">If you cannot run any or all of the commands, do the following steps.</span></span>
+<span data-ttu-id="2e563-110">Прежде чем приступить к написанию приложения, нужно настроить некоторые необходимые зависимости.</span><span class="sxs-lookup"><span data-stu-id="2e563-110">Before you begin writing your app, you need to set up some prerequisite dependencies.</span></span> <span data-ttu-id="2e563-111">Если вы можете выполнить `dotnet`, `java`, `mvn`, `spark-shell` из среды командной строки, то ваша среда уже подготовлена, и вы можете перейти к следующему разделу.</span><span class="sxs-lookup"><span data-stu-id="2e563-111">If you can run `dotnet`, `java`, `mvn`, `spark-shell` from your command line environment, then your environment is already prepared and you can skip to the next section.</span></span> <span data-ttu-id="2e563-112">Если эти команды или хотя бы одну из них выполнить не получается, сделайте следующее.</span><span class="sxs-lookup"><span data-stu-id="2e563-112">If you cannot run any or all of the commands, do the following steps.</span></span>
 
-### <a name="1-install-net"></a><span data-ttu-id="2a308-113">1. Установка .NET</span><span class="sxs-lookup"><span data-stu-id="2a308-113">1. Install .NET</span></span>
+### <a name="1-install-net"></a><span data-ttu-id="2e563-113">1. Установка .NET</span><span class="sxs-lookup"><span data-stu-id="2e563-113">1. Install .NET</span></span>
 
-<span data-ttu-id="2a308-114">Чтобы приступить к созданию приложений .NET, необходимо загрузить и установить пакет средств разработки программного обеспечения (SDK) для .NET.</span><span class="sxs-lookup"><span data-stu-id="2a308-114">To start building .NET apps, you need to download and install the .NET SDK (Software Development Kit).</span></span>
+<span data-ttu-id="2e563-114">Чтобы приступить к созданию приложений .NET, необходимо загрузить и установить пакет средств разработки программного обеспечения (SDK) для .NET.</span><span class="sxs-lookup"><span data-stu-id="2e563-114">To start building .NET apps, you need to download and install the .NET SDK (Software Development Kit).</span></span>
 
-<span data-ttu-id="2a308-115">Скачайте и установите [пакет SDK для .NET Core](https://dotnet.microsoft.com/download/dotnet-core/3.0).</span><span class="sxs-lookup"><span data-stu-id="2a308-115">Download and install the [.NET Core SDK](https://dotnet.microsoft.com/download/dotnet-core/3.0).</span></span> <span data-ttu-id="2a308-116">При установке пакета SDK в переменную PATH добавляется цепочка инструментов `dotnet`.</span><span class="sxs-lookup"><span data-stu-id="2a308-116">Installing the SDK adds the `dotnet` toolchain to your PATH.</span></span> 
+<span data-ttu-id="2e563-115">Скачайте и установите [пакет SDK для .NET Core](https://dotnet.microsoft.com/download/dotnet-core/3.0).</span><span class="sxs-lookup"><span data-stu-id="2e563-115">Download and install the [.NET Core SDK](https://dotnet.microsoft.com/download/dotnet-core/3.0).</span></span> <span data-ttu-id="2e563-116">При установке пакета SDK в переменную PATH добавляется цепочка инструментов `dotnet`.</span><span class="sxs-lookup"><span data-stu-id="2e563-116">Installing the SDK adds the `dotnet` toolchain to your PATH.</span></span>
 
-<span data-ttu-id="2a308-117">После установки пакета SDK для .NET Core, откройте новую командную строку и выполните команду `dotnet`.</span><span class="sxs-lookup"><span data-stu-id="2a308-117">Once you've installed the .NET Core SDK, open a new command prompt and run `dotnet`.</span></span>
+<span data-ttu-id="2e563-117">После установки пакета SDK для .NET Core, откройте новую командную строку и выполните команду `dotnet`.</span><span class="sxs-lookup"><span data-stu-id="2e563-117">Once you've installed the .NET Core SDK, open a new command prompt and run `dotnet`.</span></span>
 
-<span data-ttu-id="2a308-118">Если команда выполняется и выводит сведения об использовании dotnet, можно перейти к следующему шагу.</span><span class="sxs-lookup"><span data-stu-id="2a308-118">If the command runs and prints out information about how to use dotnet, can move to the next step.</span></span> <span data-ttu-id="2a308-119">При возникновении ошибки `'dotnet' is not recognized as an internal or external command` убедитесь, что вы открыли **новую** командную строку перед выполнением команды.</span><span class="sxs-lookup"><span data-stu-id="2a308-119">If you receive a `'dotnet' is not recognized as an internal or external command` error, make sure you opened a **new** command prompt before running the command.</span></span> 
+<span data-ttu-id="2e563-118">Если команда выполняется и выводит сведения об использовании dotnet, можно перейти к следующему шагу.</span><span class="sxs-lookup"><span data-stu-id="2e563-118">If the command runs and prints out information about how to use dotnet, can move to the next step.</span></span> <span data-ttu-id="2e563-119">При возникновении ошибки `'dotnet' is not recognized as an internal or external command` убедитесь, что вы открыли **новую** командную строку перед выполнением команды.</span><span class="sxs-lookup"><span data-stu-id="2e563-119">If you receive a `'dotnet' is not recognized as an internal or external command` error, make sure you opened a **new** command prompt before running the command.</span></span>
 
-### <a name="2-install-java"></a><span data-ttu-id="2a308-120">2. Установка Java</span><span class="sxs-lookup"><span data-stu-id="2a308-120">2. Install Java</span></span>
+### <a name="2-install-java"></a><span data-ttu-id="2e563-120">2. Установка Java</span><span class="sxs-lookup"><span data-stu-id="2e563-120">2. Install Java</span></span>
 
-<span data-ttu-id="2a308-121">Установите [Java 8.1](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html).</span><span class="sxs-lookup"><span data-stu-id="2a308-121">Install [Java 8.1](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html).</span></span>
+<span data-ttu-id="2e563-121">Установите [Java 8.1](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html).</span><span class="sxs-lookup"><span data-stu-id="2e563-121">Install [Java 8.1](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html).</span></span>
 
-<span data-ttu-id="2a308-122">Выберите соответствующую версию для вашей операционной системы.</span><span class="sxs-lookup"><span data-stu-id="2a308-122">Select the appropriate version for your operating system.</span></span> <span data-ttu-id="2a308-123">Например, для компьютера с 64-разрядной версией Windows выберите **jdk-8u201-windows-x64.exe**.</span><span class="sxs-lookup"><span data-stu-id="2a308-123">For example, select **jdk-8u201-windows-x64.exe** for a Windows x64 machine.</span></span> <span data-ttu-id="2a308-124">Затем используйте команду `java`, чтобы проверить установку.</span><span class="sxs-lookup"><span data-stu-id="2a308-124">Then, use the command `java` to verify the installation.</span></span>
-   
+<span data-ttu-id="2e563-122">Выберите соответствующую версию для вашей операционной системы.</span><span class="sxs-lookup"><span data-stu-id="2e563-122">Select the appropriate version for your operating system.</span></span> <span data-ttu-id="2e563-123">Например, для компьютера с 64-разрядной версией Windows выберите **jdk-8u201-windows-x64.exe**.</span><span class="sxs-lookup"><span data-stu-id="2e563-123">For example, select **jdk-8u201-windows-x64.exe** for a Windows x64 machine.</span></span> <span data-ttu-id="2e563-124">Затем используйте команду `java`, чтобы проверить установку.</span><span class="sxs-lookup"><span data-stu-id="2e563-124">Then, use the command `java` to verify the installation.</span></span>
+
 ![Скачать Java](https://dotnet.microsoft.com/static/images/java-jdk-downloads-windows.png?v=6BbJHoNyDO-PyYVciImr5wzh2AW_YHNcyb3p093AwPA)
 
-### <a name="3-install-7-zip"></a><span data-ttu-id="2a308-126">3. Установка 7-Zip</span><span class="sxs-lookup"><span data-stu-id="2a308-126">3. Install 7-zip</span></span>
+### <a name="3-install-7-zip"></a><span data-ttu-id="2e563-126">3. Установка 7-Zip</span><span class="sxs-lookup"><span data-stu-id="2e563-126">3. Install 7-zip</span></span>
 
-<span data-ttu-id="2a308-127">Apache Spark загружается как сжатый файл TGZ.</span><span class="sxs-lookup"><span data-stu-id="2a308-127">Apache Spark is downloaded as a compressed .tgz file.</span></span> <span data-ttu-id="2a308-128">Чтобы извлечь файл, используйте программу-архиватор, например 7-Zip.</span><span class="sxs-lookup"><span data-stu-id="2a308-128">Use an extraction program, like 7-zip, to extract the file.</span></span>
+<span data-ttu-id="2e563-127">Apache Spark загружается как сжатый файл TGZ.</span><span class="sxs-lookup"><span data-stu-id="2e563-127">Apache Spark is downloaded as a compressed .tgz file.</span></span> <span data-ttu-id="2e563-128">Чтобы извлечь файл, используйте программу-архиватор, например 7-Zip.</span><span class="sxs-lookup"><span data-stu-id="2e563-128">Use an extraction program, like 7-zip, to extract the file.</span></span>
 
-* <span data-ttu-id="2a308-129">Посетите [страницу загрузок 7-Zip](https://www.7-zip.org/).</span><span class="sxs-lookup"><span data-stu-id="2a308-129">Visit [7-Zip downloads](https://www.7-zip.org/).</span></span>
-* <span data-ttu-id="2a308-130">В первой таблице на странице выберите загрузку 32-разрядной (x86) или 64-разрядной версии (x64) в зависимости от вашей операционной системы.</span><span class="sxs-lookup"><span data-stu-id="2a308-130">In the first table on the page, select the 32-bit x86 or 64-bit x64 download, depending on your operating system.</span></span>
-* <span data-ttu-id="2a308-131">После завершения загрузки запустите установщик.</span><span class="sxs-lookup"><span data-stu-id="2a308-131">When the download completes, run the installer.</span></span>
-   
+* <span data-ttu-id="2e563-129">Посетите [страницу загрузок 7-Zip](https://www.7-zip.org/).</span><span class="sxs-lookup"><span data-stu-id="2e563-129">Visit [7-Zip downloads](https://www.7-zip.org/).</span></span>
+* <span data-ttu-id="2e563-130">В первой таблице на странице выберите загрузку 32-разрядной (x86) или 64-разрядной версии (x64) в зависимости от вашей операционной системы.</span><span class="sxs-lookup"><span data-stu-id="2e563-130">In the first table on the page, select the 32-bit x86 or 64-bit x64 download, depending on your operating system.</span></span>
+* <span data-ttu-id="2e563-131">После завершения загрузки запустите установщик.</span><span class="sxs-lookup"><span data-stu-id="2e563-131">When the download completes, run the installer.</span></span>
+
 ![Скачать 7-Zip](https://dotnet.microsoft.com/static/images/7-zip-downloads.png?v=W6qWtFC1tTMKv3YGXz7lBa9F3M22uWyTvkMmunyroNk)
 
-### <a name="4-install-apache-spark"></a><span data-ttu-id="2a308-133">4. Установка Apache Spark</span><span class="sxs-lookup"><span data-stu-id="2a308-133">4. Install Apache Spark</span></span>
+### <a name="4-install-apache-spark"></a><span data-ttu-id="2e563-133">4. Установка Apache Spark</span><span class="sxs-lookup"><span data-stu-id="2e563-133">4. Install Apache Spark</span></span>
 
-<span data-ttu-id="2a308-134">[Скачайте и установите Apache Spark](https://spark.apache.org/downloads.html).</span><span class="sxs-lookup"><span data-stu-id="2a308-134">[Download and install Apache Spark](https://spark.apache.org/downloads.html).</span></span> <span data-ttu-id="2a308-135">Вам потребуется выбрать одну из следующих версий: 2.3.\* либо 2.4.0, 2.4.1, 2.4.3 или 2.4.4 (.NET для Apache Spark несовместима с другими версиями Apache Spark).</span><span class="sxs-lookup"><span data-stu-id="2a308-135">You'll need to select from version 2.3.\* or 2.4.0, 2.4.1, 2.4.3, or 2.4.4 (.NET for Apache Spark is not compatible with other versions of Apache Spark).</span></span>  
+<span data-ttu-id="2e563-134">[Скачайте и установите Apache Spark](https://spark.apache.org/downloads.html).</span><span class="sxs-lookup"><span data-stu-id="2e563-134">[Download and install Apache Spark](https://spark.apache.org/downloads.html).</span></span> <span data-ttu-id="2e563-135">Вам потребуется выбрать одну из следующих версий: 2.3.\* либо 2.4.0, 2.4.1, 2.4.3 или 2.4.4 (.NET для Apache Spark несовместима с другими версиями Apache Spark).</span><span class="sxs-lookup"><span data-stu-id="2e563-135">You'll need to select from version 2.3.\* or 2.4.0, 2.4.1, 2.4.3, or 2.4.4 (.NET for Apache Spark is not compatible with other versions of Apache Spark).</span></span>
 
-<span data-ttu-id="2a308-136">Команды, используемые на следующих этапах, подразумевают, что [скачана и установлена версия Apache Spark 2.4.1](https://archive.apache.org/dist/spark/spark-2.4.1/spark-2.4.1-bin-hadoop2.7.tgz).</span><span class="sxs-lookup"><span data-stu-id="2a308-136">The commands used in the following steps assume you have [downloaded and installed Apache Spark 2.4.1](https://archive.apache.org/dist/spark/spark-2.4.1/spark-2.4.1-bin-hadoop2.7.tgz).</span></span> <span data-ttu-id="2a308-137">Если вы хотите использовать другую версию, замените **2.4.1** на соответствующий номер версии.</span><span class="sxs-lookup"><span data-stu-id="2a308-137">If you wish to use a different version, replace **2.4.1** with the appropriate version number.</span></span> <span data-ttu-id="2a308-138">Затем извлеките файл **TAR** и файлы Apache Spark.</span><span class="sxs-lookup"><span data-stu-id="2a308-138">Then, extract the **.tar** file and the Apache Spark files.</span></span>
+<span data-ttu-id="2e563-136">Команды, используемые на следующих этапах, подразумевают, что [скачана и установлена версия Apache Spark 2.4.1](https://archive.apache.org/dist/spark/spark-2.4.1/spark-2.4.1-bin-hadoop2.7.tgz).</span><span class="sxs-lookup"><span data-stu-id="2e563-136">The commands used in the following steps assume you have [downloaded and installed Apache Spark 2.4.1](https://archive.apache.org/dist/spark/spark-2.4.1/spark-2.4.1-bin-hadoop2.7.tgz).</span></span> <span data-ttu-id="2e563-137">Если вы хотите использовать другую версию, замените **2.4.1** на соответствующий номер версии.</span><span class="sxs-lookup"><span data-stu-id="2e563-137">If you wish to use a different version, replace **2.4.1** with the appropriate version number.</span></span> <span data-ttu-id="2e563-138">Затем извлеките файл **TAR** и файлы Apache Spark.</span><span class="sxs-lookup"><span data-stu-id="2e563-138">Then, extract the **.tar** file and the Apache Spark files.</span></span>
 
-<span data-ttu-id="2a308-139">Чтобы извлечь вложенный файл **TAR**:</span><span class="sxs-lookup"><span data-stu-id="2a308-139">To extract the nested **.tar** file:</span></span>
+<span data-ttu-id="2e563-139">Чтобы извлечь вложенный файл **TAR**:</span><span class="sxs-lookup"><span data-stu-id="2e563-139">To extract the nested **.tar** file:</span></span>
 
-* <span data-ttu-id="2a308-140">Найдите скачанный файл **spark-2.4.1-bin-hadoop2.7.tgz**.</span><span class="sxs-lookup"><span data-stu-id="2a308-140">Locate the **spark-2.4.1-bin-hadoop2.7.tgz** file that you downloaded.</span></span>
-* <span data-ttu-id="2a308-141">Щелкните файл правой кнопкой мыши и выберите **7-Zip -> Извлечь сюда**.</span><span class="sxs-lookup"><span data-stu-id="2a308-141">Right click on the file and select **7-Zip -> Extract here**.</span></span>
-* <span data-ttu-id="2a308-142">**spark-2.4.1-bin-hadoop2.7.tar** будет создан рядом со скачанным файлом **TGZ**.</span><span class="sxs-lookup"><span data-stu-id="2a308-142">**spark-2.4.1-bin-hadoop2.7.tar** is created alongside the **.tgz** file you downloaded.</span></span>
+* <span data-ttu-id="2e563-140">Найдите скачанный файл **spark-2.4.1-bin-hadoop2.7.tgz**.</span><span class="sxs-lookup"><span data-stu-id="2e563-140">Locate the **spark-2.4.1-bin-hadoop2.7.tgz** file that you downloaded.</span></span>
+* <span data-ttu-id="2e563-141">Щелкните файл правой кнопкой мыши и выберите **7-Zip -> Извлечь сюда**.</span><span class="sxs-lookup"><span data-stu-id="2e563-141">Right click on the file and select **7-Zip -> Extract here**.</span></span>
+* <span data-ttu-id="2e563-142">**spark-2.4.1-bin-hadoop2.7.tar** будет создан рядом со скачанным файлом **TGZ**.</span><span class="sxs-lookup"><span data-stu-id="2e563-142">**spark-2.4.1-bin-hadoop2.7.tar** is created alongside the **.tgz** file you downloaded.</span></span>
 
-<span data-ttu-id="2a308-143">Чтобы извлечь файлы Apache Spark:</span><span class="sxs-lookup"><span data-stu-id="2a308-143">To extract the Apache Spark files:</span></span>
+<span data-ttu-id="2e563-143">Чтобы извлечь файлы Apache Spark:</span><span class="sxs-lookup"><span data-stu-id="2e563-143">To extract the Apache Spark files:</span></span>
 
-* <span data-ttu-id="2a308-144">Щелкните правой кнопкой мыши **spark-2.4.1-bin-hadoop2.7.tar** и выберите **7-Zip-> Извлечь файлы…**</span><span class="sxs-lookup"><span data-stu-id="2a308-144">Right click on **spark-2.4.1-bin-hadoop2.7.tar** and select **7-Zip -> Extract files...**</span></span>
-* <span data-ttu-id="2a308-145">Введите **C:\bin** в поле **Извлечь в**.</span><span class="sxs-lookup"><span data-stu-id="2a308-145">Enter **C:\bin** in the **Extract to** field.</span></span>
-* <span data-ttu-id="2a308-146">Снимите флажок под полем **Извлечь в**.</span><span class="sxs-lookup"><span data-stu-id="2a308-146">Uncheck the checkbox below the **Extract to** field.</span></span>
-* <span data-ttu-id="2a308-147">Нажмите кнопку **ОК**.</span><span class="sxs-lookup"><span data-stu-id="2a308-147">Select **OK**.</span></span>
-* <span data-ttu-id="2a308-148">Файлы Apache Spark будут извлечены в папку C:\bin\spark-2.4.1-bin-hadoop2.7</span><span class="sxs-lookup"><span data-stu-id="2a308-148">The Apache Spark files are extracted to C:\bin\spark-2.4.1-bin-hadoop2.7</span></span>\
-      
+* <span data-ttu-id="2e563-144">Щелкните правой кнопкой мыши **spark-2.4.1-bin-hadoop2.7.tar** и выберите **7-Zip-> Извлечь файлы…**</span><span class="sxs-lookup"><span data-stu-id="2e563-144">Right click on **spark-2.4.1-bin-hadoop2.7.tar** and select **7-Zip -> Extract files...**</span></span>
+* <span data-ttu-id="2e563-145">Введите **C:\bin** в поле **Извлечь в**.</span><span class="sxs-lookup"><span data-stu-id="2e563-145">Enter **C:\bin** in the **Extract to** field.</span></span>
+* <span data-ttu-id="2e563-146">Снимите флажок под полем **Извлечь в**.</span><span class="sxs-lookup"><span data-stu-id="2e563-146">Uncheck the checkbox below the **Extract to** field.</span></span>
+* <span data-ttu-id="2e563-147">Нажмите кнопку **ОК**.</span><span class="sxs-lookup"><span data-stu-id="2e563-147">Select **OK**.</span></span>
+* <span data-ttu-id="2e563-148">Файлы Apache Spark будут извлечены в папку C:\bin\spark-2.4.1-bin-hadoop2.7</span><span class="sxs-lookup"><span data-stu-id="2e563-148">The Apache Spark files are extracted to C:\bin\spark-2.4.1-bin-hadoop2.7</span></span>\
+
 ![Установка Spark](https://dotnet.microsoft.com/static/images/spark-extract-with-7-zip.png?v=YvjUv54LIxI9FbALPC3h8zSQdyMtK2-NKbFOliG-f8M)
-    
-<span data-ttu-id="2a308-150">Выполните следующие команды, чтобы задать переменные среды, используемые для размещения Apache Spark:</span><span class="sxs-lookup"><span data-stu-id="2a308-150">Run the following commands to set the environment variables used to locate Apache Spark:</span></span>
+
+<span data-ttu-id="2e563-150">Выполните следующие команды, чтобы задать переменные среды, используемые для размещения Apache Spark:</span><span class="sxs-lookup"><span data-stu-id="2e563-150">Run the following commands to set the environment variables used to locate Apache Spark:</span></span>
 
 ```console
 setx HADOOP_HOME C:\bin\spark-2.4.1-bin-hadoop2.7\
 setx SPARK_HOME C:\bin\spark-2.4.1-bin-hadoop2.7\
 ```
 
-<span data-ttu-id="2a308-151">После установки всего необходимого и настройки переменных среды, откройте **новую** командную строку и выполните следующую команду:</span><span class="sxs-lookup"><span data-stu-id="2a308-151">Once you've installed everything and set your environment variables, open a **new** command prompt and run the following command:</span></span>
+<span data-ttu-id="2e563-151">После установки всего необходимого и настройки переменных среды, откройте **новую** командную строку и выполните следующую команду:</span><span class="sxs-lookup"><span data-stu-id="2e563-151">Once you've installed everything and set your environment variables, open a **new** command prompt and run the following command:</span></span>
 
 `%SPARK_HOME%\bin\spark-submit --version`
 
-<span data-ttu-id="2a308-152">Если команда выполняется и выводит сведения о версии, можно перейти к следующему шагу.</span><span class="sxs-lookup"><span data-stu-id="2a308-152">If the command runs and prints version information, you can move to the next step.</span></span>
+<span data-ttu-id="2e563-152">Если команда выполняется и выводит сведения о версии, можно перейти к следующему шагу.</span><span class="sxs-lookup"><span data-stu-id="2e563-152">If the command runs and prints version information, you can move to the next step.</span></span>
 
-<span data-ttu-id="2a308-153">При возникновении ошибки `'spark-submit' is not recognized as an internal or external command` убедитесь, что вы открыли **новую** командную строку.</span><span class="sxs-lookup"><span data-stu-id="2a308-153">If you receive a `'spark-submit' is not recognized as an internal or external command` error, make sure you opened a **new** command prompt.</span></span>
+<span data-ttu-id="2e563-153">При возникновении ошибки `'spark-submit' is not recognized as an internal or external command` убедитесь, что вы открыли **новую** командную строку.</span><span class="sxs-lookup"><span data-stu-id="2e563-153">If you receive a `'spark-submit' is not recognized as an internal or external command` error, make sure you opened a **new** command prompt.</span></span>
 
-### <a name="5-install-net-for-apache-spark"></a><span data-ttu-id="2a308-154">5. Установка .NET для Apache Spark</span><span class="sxs-lookup"><span data-stu-id="2a308-154">5. Install .NET for Apache Spark</span></span>
+### <a name="5-install-net-for-apache-spark"></a><span data-ttu-id="2e563-154">5. Установка .NET для Apache Spark</span><span class="sxs-lookup"><span data-stu-id="2e563-154">5. Install .NET for Apache Spark</span></span>
 
-<span data-ttu-id="2a308-155">Загрузите выпуск [Microsoft.Spark.Worker](https://github.com/dotnet/spark/releases) со страницы выпусков .NET для Apache Spark в GitHub.</span><span class="sxs-lookup"><span data-stu-id="2a308-155">Download the [Microsoft.Spark.Worker](https://github.com/dotnet/spark/releases) release from the .NET for Apache Spark GitHub.</span></span> <span data-ttu-id="2a308-156">Например, если у вас компьютер Windows и вы планируете использовать .NET Core, [загрузите выпуск netcoreapp 2.1 для Windows x64 ](https://github.com/dotnet/spark/releases/download/v0.5.0/Microsoft.Spark.Worker.netcoreapp2.1.win-x64-0.6.0.zip).</span><span class="sxs-lookup"><span data-stu-id="2a308-156">For example if you're on a Windows machine and plan to use .NET Core, [download the Windows x64 netcoreapp2.1 release](https://github.com/dotnet/spark/releases/download/v0.5.0/Microsoft.Spark.Worker.netcoreapp2.1.win-x64-0.6.0.zip).</span></span>
+<span data-ttu-id="2e563-155">Загрузите выпуск [Microsoft.Spark.Worker](https://github.com/dotnet/spark/releases) со страницы выпусков .NET для Apache Spark в GitHub.</span><span class="sxs-lookup"><span data-stu-id="2e563-155">Download the [Microsoft.Spark.Worker](https://github.com/dotnet/spark/releases) release from the .NET for Apache Spark GitHub.</span></span> <span data-ttu-id="2e563-156">Например, если у вас компьютер Windows и вы планируете использовать .NET Core, [загрузите выпуск netcoreapp 2.1 для Windows x64 ](https://github.com/dotnet/spark/releases/download/v0.5.0/Microsoft.Spark.Worker.netcoreapp2.1.win-x64-0.6.0.zip).</span><span class="sxs-lookup"><span data-stu-id="2e563-156">For example if you're on a Windows machine and plan to use .NET Core, [download the Windows x64 netcoreapp2.1 release](https://github.com/dotnet/spark/releases/download/v0.5.0/Microsoft.Spark.Worker.netcoreapp2.1.win-x64-0.6.0.zip).</span></span>
 
-<span data-ttu-id="2a308-157">Для извлечения Microsoft.Spark.Worker:</span><span class="sxs-lookup"><span data-stu-id="2a308-157">To extract the Microsoft.Spark.Worker:</span></span>
+<span data-ttu-id="2e563-157">Для извлечения Microsoft.Spark.Worker:</span><span class="sxs-lookup"><span data-stu-id="2e563-157">To extract the Microsoft.Spark.Worker:</span></span>
 
-* <span data-ttu-id="2a308-158">Найдите скачанный файл **Microsoft.Spark.Worker.netcoreapp2.1.win-x64-0.6.0.zip**.</span><span class="sxs-lookup"><span data-stu-id="2a308-158">Locate the **Microsoft.Spark.Worker.netcoreapp2.1.win-x64-0.6.0.zip** file that you downloaded.</span></span>
-* <span data-ttu-id="2a308-159">Щелкните правой кнопкой мыши и выберите **7-Zip -> Извлечь файлы…** .</span><span class="sxs-lookup"><span data-stu-id="2a308-159">Right click and select **7-Zip -> Extract files...**.</span></span>
-* <span data-ttu-id="2a308-160">Введите **C:\bin** в поле **Извлечь в**.</span><span class="sxs-lookup"><span data-stu-id="2a308-160">Enter **C:\bin** in the **Extract to** field.</span></span>
-* <span data-ttu-id="2a308-161">Снимите флажок под полем **Извлечь в**.</span><span class="sxs-lookup"><span data-stu-id="2a308-161">Uncheck the checkbox below the **Extract to** field.</span></span>
-* <span data-ttu-id="2a308-162">Нажмите кнопку **ОК**.</span><span class="sxs-lookup"><span data-stu-id="2a308-162">Select **OK**.</span></span>
-  
+* <span data-ttu-id="2e563-158">Найдите скачанный файл **Microsoft.Spark.Worker.netcoreapp2.1.win-x64-0.6.0.zip**.</span><span class="sxs-lookup"><span data-stu-id="2e563-158">Locate the **Microsoft.Spark.Worker.netcoreapp2.1.win-x64-0.6.0.zip** file that you downloaded.</span></span>
+* <span data-ttu-id="2e563-159">Щелкните правой кнопкой мыши и выберите **7-Zip -> Извлечь файлы…** .</span><span class="sxs-lookup"><span data-stu-id="2e563-159">Right click and select **7-Zip -> Extract files...**.</span></span>
+* <span data-ttu-id="2e563-160">Введите **C:\bin** в поле **Извлечь в**.</span><span class="sxs-lookup"><span data-stu-id="2e563-160">Enter **C:\bin** in the **Extract to** field.</span></span>
+* <span data-ttu-id="2e563-161">Снимите флажок под полем **Извлечь в**.</span><span class="sxs-lookup"><span data-stu-id="2e563-161">Uncheck the checkbox below the **Extract to** field.</span></span>
+* <span data-ttu-id="2e563-162">Нажмите кнопку **ОК**.</span><span class="sxs-lookup"><span data-stu-id="2e563-162">Select **OK**.</span></span>
+
 ![Установка .NET Spark](https://dotnet.microsoft.com/static/images/dotnet-for-spark-extract-with-7-zip.png?v=jwCyum9mL0mGIi4V5zC7yuvLfcj1_nL-QFFD8TClhZk)
 
-### <a name="6-install-winutils"></a><span data-ttu-id="2a308-164">6.  Установка WinUtils</span><span class="sxs-lookup"><span data-stu-id="2a308-164">6. Install WinUtils</span></span>
+### <a name="6-install-winutils"></a><span data-ttu-id="2e563-164">6.  Установка WinUtils</span><span class="sxs-lookup"><span data-stu-id="2e563-164">6. Install WinUtils</span></span>
 
-<span data-ttu-id="2a308-165">.NET для Apache Spark требует установки WinUtils вместе с Apache Spark.</span><span class="sxs-lookup"><span data-stu-id="2a308-165">.NET for Apache Spark requires WinUtils to be installed alongside Apache Spark.</span></span> <span data-ttu-id="2a308-166">[Скачайте winutils.exe](https://github.com/steveloughran/winutils/blob/master/hadoop-2.7.1/bin/winutils.exe).</span><span class="sxs-lookup"><span data-stu-id="2a308-166">[Download winutils.exe](https://github.com/steveloughran/winutils/blob/master/hadoop-2.7.1/bin/winutils.exe).</span></span> <span data-ttu-id="2a308-167">Затем скопируйте WinUtils в папку **C:\bin\spark-2.4.1-bin-hadoop2.7\bin**.</span><span class="sxs-lookup"><span data-stu-id="2a308-167">Then, copy WinUtils into **C:\bin\spark-2.4.1-bin-hadoop2.7\bin**.</span></span>
+<span data-ttu-id="2e563-165">.NET для Apache Spark требует установки WinUtils вместе с Apache Spark.</span><span class="sxs-lookup"><span data-stu-id="2e563-165">.NET for Apache Spark requires WinUtils to be installed alongside Apache Spark.</span></span> <span data-ttu-id="2e563-166">[Скачайте winutils.exe](https://github.com/steveloughran/winutils/blob/master/hadoop-2.7.1/bin/winutils.exe).</span><span class="sxs-lookup"><span data-stu-id="2e563-166">[Download winutils.exe](https://github.com/steveloughran/winutils/blob/master/hadoop-2.7.1/bin/winutils.exe).</span></span> <span data-ttu-id="2e563-167">Затем скопируйте WinUtils в папку **C:\bin\spark-2.4.1-bin-hadoop2.7\bin**.</span><span class="sxs-lookup"><span data-stu-id="2e563-167">Then, copy WinUtils into **C:\bin\spark-2.4.1-bin-hadoop2.7\bin**.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="2a308-168">Если вы используете другую версию Hadoop, которая указывается в конце имени папки установки Spark, [выберите версию WinUtils](https://github.com/steveloughran/winutils), совместимую с вашей версией Hadoop.</span><span class="sxs-lookup"><span data-stu-id="2a308-168">If you are using a different version of Hadoop, which is annotated at the end of your Spark install folder name, [select the version of WinUtils](https://github.com/steveloughran/winutils) that's compatible with your version of Hadoop.</span></span> 
+> <span data-ttu-id="2e563-168">Если вы используете другую версию Hadoop, которая указывается в конце имени папки установки Spark, [выберите версию WinUtils](https://github.com/steveloughran/winutils), совместимую с вашей версией Hadoop.</span><span class="sxs-lookup"><span data-stu-id="2e563-168">If you are using a different version of Hadoop, which is annotated at the end of your Spark install folder name, [select the version of WinUtils](https://github.com/steveloughran/winutils) that's compatible with your version of Hadoop.</span></span>
 
-### <a name="7-set-dotnet_worker_dir-and-check-dependencies"></a><span data-ttu-id="2a308-169">7. Установка DOTNET_WORKER_DIR и проверка зависимостей</span><span class="sxs-lookup"><span data-stu-id="2a308-169">7. Set DOTNET_WORKER_DIR and check dependencies</span></span>
+### <a name="7-set-dotnet_worker_dir-and-check-dependencies"></a><span data-ttu-id="2e563-169">7. Установка DOTNET_WORKER_DIR и проверка зависимостей</span><span class="sxs-lookup"><span data-stu-id="2e563-169">7. Set DOTNET_WORKER_DIR and check dependencies</span></span>
 
-<span data-ttu-id="2a308-170">Выполните следующую команду, чтобы задать переменную среды `DOTNET_WORKER_DIR`, которая используется приложениями .NET для обнаружения .NET для Apache Spark:</span><span class="sxs-lookup"><span data-stu-id="2a308-170">Run the following command to set the `DOTNET_WORKER_DIR` Environment Variable, which is used by .NET apps to locate .NET for Apache Spark:</span></span>
+<span data-ttu-id="2e563-170">Выполните следующую команду, чтобы задать переменную среды `DOTNET_WORKER_DIR`, которая используется приложениями .NET для обнаружения .NET для Apache Spark:</span><span class="sxs-lookup"><span data-stu-id="2e563-170">Run the following command to set the `DOTNET_WORKER_DIR` Environment Variable, which is used by .NET apps to locate .NET for Apache Spark:</span></span>
 
 `setx DOTNET_WORKER_DIR "C:\bin\Microsoft.Spark.Worker-0.6.0"`
 
-<span data-ttu-id="2a308-171">Наконец, перед переходом к следующему разделу еще раз проверьте, можно ли выполнять команды `dotnet`, `java`, `mvn` и `spark-shell` из командной строки.</span><span class="sxs-lookup"><span data-stu-id="2a308-171">Finally, double-check that you can run `dotnet`, `java`, `mvn`, `spark-shell` from your command line before you move to the next section.</span></span>
+<span data-ttu-id="2e563-171">Наконец, перед переходом к следующему разделу еще раз проверьте, можно ли выполнять команды `dotnet`, `java`, `mvn` и `spark-shell` из командной строки.</span><span class="sxs-lookup"><span data-stu-id="2e563-171">Finally, double-check that you can run `dotnet`, `java`, `mvn`, `spark-shell` from your command line before you move to the next section.</span></span>
 
-## <a name="write-a-net-for-apache-spark-app"></a><span data-ttu-id="2a308-172">Написание приложения .NET для Apache Spark</span><span class="sxs-lookup"><span data-stu-id="2a308-172">Write a .NET for Apache Spark app</span></span>
+## <a name="write-a-net-for-apache-spark-app"></a><span data-ttu-id="2e563-172">Написание приложения .NET для Apache Spark</span><span class="sxs-lookup"><span data-stu-id="2e563-172">Write a .NET for Apache Spark app</span></span>
 
-### <a name="1-create-a-console-app"></a><span data-ttu-id="2a308-173">1. Создание консольного приложения</span><span class="sxs-lookup"><span data-stu-id="2a308-173">1. Create a console app</span></span>
+### <a name="1-create-a-console-app"></a><span data-ttu-id="2e563-173">1. Создание консольного приложения</span><span class="sxs-lookup"><span data-stu-id="2e563-173">1. Create a console app</span></span>
 
-<span data-ttu-id="2a308-174">В командной строке выполните следующие команды, чтобы создать новое консольное приложение:</span><span class="sxs-lookup"><span data-stu-id="2a308-174">In your command prompt, run the following commands to create a new console application:</span></span>
+<span data-ttu-id="2e563-174">В командной строке выполните следующие команды, чтобы создать новое консольное приложение:</span><span class="sxs-lookup"><span data-stu-id="2e563-174">In your command prompt, run the following commands to create a new console application:</span></span>
 
 ```console
 dotnet new console -o mySparkApp
 cd mySparkApp
 ```
 
-<span data-ttu-id="2a308-175">Команда `dotnet` создаст для вас приложение `new` типа `console`.</span><span class="sxs-lookup"><span data-stu-id="2a308-175">The `dotnet` command creates a `new` application of type `console` for you.</span></span> <span data-ttu-id="2a308-176">Параметр `-o` создаст каталог с именем *mySparkApp*, в котором хранится приложение и используемые им файлы.</span><span class="sxs-lookup"><span data-stu-id="2a308-176">The `-o` parameter creates a directory named *mySparkApp* where your app is stored and populates it with the required files.</span></span> <span data-ttu-id="2a308-177">Команда `cd mySparkApp` изменит каталог на только что созданный каталог приложения.</span><span class="sxs-lookup"><span data-stu-id="2a308-177">The `cd mySparkApp` command changes the directory to the app directory you just created.</span></span>
+<span data-ttu-id="2e563-175">Команда `dotnet` создаст для вас приложение `new` типа `console`.</span><span class="sxs-lookup"><span data-stu-id="2e563-175">The `dotnet` command creates a `new` application of type `console` for you.</span></span> <span data-ttu-id="2e563-176">Параметр `-o` создаст каталог с именем *mySparkApp*, в котором хранится приложение и используемые им файлы.</span><span class="sxs-lookup"><span data-stu-id="2e563-176">The `-o` parameter creates a directory named *mySparkApp* where your app is stored and populates it with the required files.</span></span> <span data-ttu-id="2e563-177">Команда `cd mySparkApp` изменит каталог на только что созданный каталог приложения.</span><span class="sxs-lookup"><span data-stu-id="2e563-177">The `cd mySparkApp` command changes the directory to the app directory you just created.</span></span>
 
-### <a name="2-install-nuget-package"></a><span data-ttu-id="2a308-178">2. Установка пакета NuGet</span><span class="sxs-lookup"><span data-stu-id="2a308-178">2. Install NuGet package</span></span>
+### <a name="2-install-nuget-package"></a><span data-ttu-id="2e563-178">2. Установка пакета NuGet</span><span class="sxs-lookup"><span data-stu-id="2e563-178">2. Install NuGet package</span></span>
 
-<span data-ttu-id="2a308-179">Чтобы использовать .NET для Apache Spark в приложении, установите пакет Microsoft.Spark.</span><span class="sxs-lookup"><span data-stu-id="2a308-179">To use .NET for Apache Spark in an app, install the Microsoft.Spark package.</span></span> <span data-ttu-id="2a308-180">В командной строке выполните следующую команду:</span><span class="sxs-lookup"><span data-stu-id="2a308-180">In your command prompt, run the following command:</span></span>
+<span data-ttu-id="2e563-179">Чтобы использовать .NET для Apache Spark в приложении, установите пакет Microsoft.Spark.</span><span class="sxs-lookup"><span data-stu-id="2e563-179">To use .NET for Apache Spark in an app, install the Microsoft.Spark package.</span></span> <span data-ttu-id="2e563-180">В командной строке выполните следующую команду:</span><span class="sxs-lookup"><span data-stu-id="2e563-180">In your command prompt, run the following command:</span></span>
 
 `dotnet add package Microsoft.Spark --version 0.6.0`
 
-### <a name="3-code-your-app"></a><span data-ttu-id="2a308-181">3. Написание кода приложения</span><span class="sxs-lookup"><span data-stu-id="2a308-181">3. Code your app</span></span>
+### <a name="3-code-your-app"></a><span data-ttu-id="2e563-181">3. Написание кода приложения</span><span class="sxs-lookup"><span data-stu-id="2e563-181">3. Code your app</span></span>
 
-<span data-ttu-id="2a308-182">Откройте *Program.cs* в Visual Studio Code или любом текстовом редакторе и замените весь код следующим:</span><span class="sxs-lookup"><span data-stu-id="2a308-182">Open *Program.cs* in Visual Studio Code, or any text editor, and replace all of the code with the following:</span></span>
+<span data-ttu-id="2e563-182">Откройте *Program.cs* в Visual Studio Code или любом текстовом редакторе и замените весь код следующим:</span><span class="sxs-lookup"><span data-stu-id="2e563-182">Open *Program.cs* in Visual Studio Code, or any text editor, and replace all of the code with the following:</span></span>
 
 ```csharp
 using Microsoft.Spark.Sql;
@@ -181,9 +181,9 @@ namespace MySparkApp
 }
 ```
 
-### <a name="4-add-data-file"></a><span data-ttu-id="2a308-183">4. Добавление файла данных</span><span class="sxs-lookup"><span data-stu-id="2a308-183">4. Add data file</span></span>
+### <a name="4-add-data-file"></a><span data-ttu-id="2e563-183">4. Добавление файла данных</span><span class="sxs-lookup"><span data-stu-id="2e563-183">4. Add data file</span></span>
 
-<span data-ttu-id="2a308-184">Ваше приложение обрабатывает файл, содержащий строки текста.</span><span class="sxs-lookup"><span data-stu-id="2a308-184">Your app processes a file containing lines of text.</span></span> <span data-ttu-id="2a308-185">Создайте файл *input.txt* в каталоге *mySparkApp*, содержащий следующий текст:</span><span class="sxs-lookup"><span data-stu-id="2a308-185">Create an *input.txt* file in your *mySparkApp* directory, containing the following text:</span></span>
+<span data-ttu-id="2e563-184">Ваше приложение обрабатывает файл, содержащий строки текста.</span><span class="sxs-lookup"><span data-stu-id="2e563-184">Your app processes a file containing lines of text.</span></span> <span data-ttu-id="2e563-185">Создайте файл *input.txt* в каталоге *mySparkApp*, содержащий следующий текст:</span><span class="sxs-lookup"><span data-stu-id="2e563-185">Create an *input.txt* file in your *mySparkApp* directory, containing the following text:</span></span>
 
 ```text
 Hello World
@@ -191,35 +191,35 @@ This .NET app uses .NET for Apache Spark
 This .NET app counts words with Apache Spark
 ```
 
-## <a name="run-your-net-for-apache-spark-app"></a><span data-ttu-id="2a308-186">Запуск приложения .NET для Apache Spark</span><span class="sxs-lookup"><span data-stu-id="2a308-186">Run your .NET for Apache Spark app</span></span>
+## <a name="run-your-net-for-apache-spark-app"></a><span data-ttu-id="2e563-186">Запуск приложения .NET для Apache Spark</span><span class="sxs-lookup"><span data-stu-id="2e563-186">Run your .NET for Apache Spark app</span></span>
 
-1. <span data-ttu-id="2a308-187">Запустите сборку приложения с помощью следующей команды:</span><span class="sxs-lookup"><span data-stu-id="2a308-187">Run the following command to build your application:</span></span>
+1. <span data-ttu-id="2e563-187">Запустите сборку приложения с помощью следующей команды:</span><span class="sxs-lookup"><span data-stu-id="2e563-187">Run the following command to build your application:</span></span>
 
    ```dotnetcli
    dotnet build
    ```
 
-2. <span data-ttu-id="2a308-188">Отправьте приложение для запуска на Apache Spark с помощью следующей команды:</span><span class="sxs-lookup"><span data-stu-id="2a308-188">Run the following command to submit your application to run on Apache Spark:</span></span>
+2. <span data-ttu-id="2e563-188">Отправьте приложение для запуска на Apache Spark с помощью следующей команды:</span><span class="sxs-lookup"><span data-stu-id="2e563-188">Run the following command to submit your application to run on Apache Spark:</span></span>
 
    ```powershell
    %SPARK_HOME%\bin\spark-submit --class org.apache.spark.deploy.dotnet.DotnetRunner --master local bin\Debug\netcoreapp3.0\microsoft-spark-2.4.x-0.6.0.jar dotnet bin\Debug\netcoreapp3.0\mySparkApp.dll
    ```
 
-3. <span data-ttu-id="2a308-189">При запуске приложения данные подсчета слов из файла *input.txt* записываются в консоль.</span><span class="sxs-lookup"><span data-stu-id="2a308-189">When your app runs, the word count data of the *input.txt* file is written to the console.</span></span>
+3. <span data-ttu-id="2e563-189">При запуске приложения данные подсчета слов из файла *input.txt* записываются в консоль.</span><span class="sxs-lookup"><span data-stu-id="2e563-189">When your app runs, the word count data of the *input.txt* file is written to the console.</span></span>
 
-<span data-ttu-id="2a308-190">Поздравляем!</span><span class="sxs-lookup"><span data-stu-id="2a308-190">Congratulations!</span></span> <span data-ttu-id="2a308-191">Вы успешно создали и запустили приложение .NET для Apache Spark.</span><span class="sxs-lookup"><span data-stu-id="2a308-191">You successfully authored and ran a .NET for Apache Spark app.</span></span>
+<span data-ttu-id="2e563-190">Поздравляем!</span><span class="sxs-lookup"><span data-stu-id="2e563-190">Congratulations!</span></span> <span data-ttu-id="2e563-191">Вы успешно создали и запустили приложение .NET для Apache Spark.</span><span class="sxs-lookup"><span data-stu-id="2e563-191">You successfully authored and ran a .NET for Apache Spark app.</span></span>
 
-## <a name="next-steps"></a><span data-ttu-id="2a308-192">Следующие шаги</span><span class="sxs-lookup"><span data-stu-id="2a308-192">Next steps</span></span>
+## <a name="next-steps"></a><span data-ttu-id="2e563-192">Следующие шаги</span><span class="sxs-lookup"><span data-stu-id="2e563-192">Next steps</span></span>
 
-<span data-ttu-id="2a308-193">В этом руководстве вы узнали, как:</span><span class="sxs-lookup"><span data-stu-id="2a308-193">In this tutorial, you learned how to:</span></span>
+<span data-ttu-id="2e563-193">В этом руководстве вы узнали, как:</span><span class="sxs-lookup"><span data-stu-id="2e563-193">In this tutorial, you learned how to:</span></span>
 > [!div class="checklist"]
 >
-> * <span data-ttu-id="2a308-194">Подготовка среды Windows для .NET для Apache Spark</span><span class="sxs-lookup"><span data-stu-id="2a308-194">Prepare your Windows environment for .NET for Apache Spark</span></span>
-> * <span data-ttu-id="2a308-195">написать свое первое приложение .NET для Apache Spark;</span><span class="sxs-lookup"><span data-stu-id="2a308-195">Write your first .NET for Apache Spark application</span></span>
-> * <span data-ttu-id="2a308-196">скомпилировать и запустить простое приложение .NET для Apache Spark.</span><span class="sxs-lookup"><span data-stu-id="2a308-196">Build and run your simple .NET for Apache Spark application</span></span>
+> * <span data-ttu-id="2e563-194">Подготовка среды Windows для .NET для Apache Spark</span><span class="sxs-lookup"><span data-stu-id="2e563-194">Prepare your Windows environment for .NET for Apache Spark</span></span>
+> * <span data-ttu-id="2e563-195">написать свое первое приложение .NET для Apache Spark;</span><span class="sxs-lookup"><span data-stu-id="2e563-195">Write your first .NET for Apache Spark application</span></span>
+> * <span data-ttu-id="2e563-196">скомпилировать и запустить простое приложение .NET для Apache Spark.</span><span class="sxs-lookup"><span data-stu-id="2e563-196">Build and run your simple .NET for Apache Spark application</span></span>
 
-<span data-ttu-id="2a308-197">Видео, подробнее объясняющее приведенные выше шаги, можно найти в серии видео [.NET for Apache Spark 101](https://channel9.msdn.com/Series/NET-for-Apache-Spark-101/Run-Your-First-NET-for-Apache-Spark-App) (Введение в .NET для Apache Spark).</span><span class="sxs-lookup"><span data-stu-id="2a308-197">To see a video explaining the steps above, checkout the [.NET for Apache Spark 101 video series](https://channel9.msdn.com/Series/NET-for-Apache-Spark-101/Run-Your-First-NET-for-Apache-Spark-App).</span></span>
+<span data-ttu-id="2e563-197">Видео, подробнее объясняющее приведенные выше шаги, можно найти в серии видео [.NET for Apache Spark 101](https://channel9.msdn.com/Series/NET-for-Apache-Spark-101/Run-Your-First-NET-for-Apache-Spark-App) (Введение в .NET для Apache Spark).</span><span class="sxs-lookup"><span data-stu-id="2e563-197">To see a video explaining the steps above, checkout the [.NET for Apache Spark 101 video series](https://channel9.msdn.com/Series/NET-for-Apache-Spark-101/Run-Your-First-NET-for-Apache-Spark-App).</span></span>
 
-<span data-ttu-id="2a308-198">Дополнительные сведения см. на странице ресурсов.</span><span class="sxs-lookup"><span data-stu-id="2a308-198">Check out the resources page to learn more.</span></span>
+<span data-ttu-id="2e563-198">Дополнительные сведения см. на странице ресурсов.</span><span class="sxs-lookup"><span data-stu-id="2e563-198">Check out the resources page to learn more.</span></span>
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="2a308-199">Ресурсы по .NET для Apache Spark</span><span class="sxs-lookup"><span data-stu-id="2a308-199">.NET for Apache Spark Resources</span></span>](../resources/index.md)
+> [<span data-ttu-id="2e563-199">Ресурсы по .NET для Apache Spark</span><span class="sxs-lookup"><span data-stu-id="2e563-199">.NET for Apache Spark Resources</span></span>](../resources/index.md)
